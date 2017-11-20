@@ -1,52 +1,50 @@
 ---
-title: "unary_delegate_noreturn (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::unary_delegate_noreturn"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_delegate_noreturn (fonction) (STL/CLR)"
+title: unary_delegate_noreturn (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::unary_delegate_noreturn
+dev_langs: C++
+helpviewer_keywords: unary_delegate_noreturn function [STL/CLR]
 ms.assetid: 3c3fb143-f60f-4e28-a66b-690e3a7b2f9b
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5c7513955a99c12456960d68d8c4a35baa51f860
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# unary_delegate_noreturn (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe générique décrit un délégué à un argument qui retourne `void`.  Vous l'utilisez pour spécifier un délégué en ce qui concerne ses types d'arguments.  
+# <a name="unarydelegatenoreturn-stlclr"></a>unary_delegate_noreturn (STL/CLR)
+La classe genereic décrit un délégué à un argument qui renvoie `void`. Vous l’utilisez spécifier en termes de son type d’argument d’un délégué.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 generic<typename Arg>  
     delegate void unary_delegate_noreturn(Arg);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  Arg  
- Type de l'argument.  
+ Type de l’argument.  
   
-## Notes  
- Le délégué générique décrit une fonction d'un argument qui retourne `void`.  
+## <a name="remarks"></a>Remarques  
+ Le délégué genereic décrit une fonction d’un argument qui renvoie `void`.  
   
- Notez que pour :  
+ Notez que pour :  
   
  `unary_delegare_noreturn<int> Fun1;`  
   
  `unary_delegare_noreturn<int> Fun2;`  
   
- les types `Fun1` et `Fun2` sont synonymes, tandis que pour:  
+ les types `Fun1` et `Fun2` sont des synonymes, tandis que pour :  
   
  `delegate void Fun1(int);`  
   
@@ -54,7 +52,7 @@ generic<typename Arg>
   
  ils ne sont pas du même type.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_unary_delegate_noreturn.cpp   
@@ -79,14 +77,17 @@ int main()
   
 ```  
   
-  **hash\(a\) \= 5**  
-**hash\(b\) \= 22**   
-## Configuration requise  
- **En\-tête :** \<cliext\/functional\>  
+```Output  
+hash(a) = 5  
+hash(b) = 22  
+```  
   
- **Espace de nom :** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/fonctionnel >  
   
-## Voir aussi  
- [binary\_delegate](../dotnet/binary-delegate-stl-clr.md)   
- [binary\_delegate\_noreturn](../dotnet/binary-delegate-noreturn-stl-clr.md)   
- [unary\_delegate](../dotnet/unary-delegate-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [binary_delegate (STL/CLR)](../dotnet/binary-delegate-stl-clr.md)   
+ [binary_delegate_noreturn (STL/CLR)](../dotnet/binary-delegate-noreturn-stl-clr.md)   
+ [unary_delegate (STL/CLR)](../dotnet/unary-delegate-stl-clr.md)

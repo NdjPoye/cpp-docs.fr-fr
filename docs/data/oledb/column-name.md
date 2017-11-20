@@ -1,32 +1,30 @@
 ---
-title: "COLUMN_NAME | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COLUMN_NAME"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COLUMN_NAME (macro)"
+title: NOM_COLONNE | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: COLUMN_NAME
+dev_langs: C++
+helpviewer_keywords: COLUMN_NAME macro
 ms.assetid: a213b9a0-2148-4a08-9111-d9fa8fdec462
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 31d6de0a537ffc6971e6d59d167959e41221d1f0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# COLUMN_NAME
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Représente une liaison entre l'ensemble de lignes et une colonne spécifique dans l'ensemble de lignes.  Similaire à [COLUMN\_ENTRY](../../data/oledb/column-entry.md), sauf que la macro prend le nom de colonne au lieu du numéro de colonne.  
+# <a name="columnname"></a>COLUMN_NAME
+Représente une liaison sur l’ensemble de lignes à la colonne dans l’ensemble de lignes. Semblable à [COLUMN_ENTRY](../../data/oledb/column-entry.md), sauf que cette macro prend le nom de colonne au lieu du numéro de colonne.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -38,39 +36,39 @@ data
   
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `pszName`  
- \[in\] Un pointeur sur le nom de colonne.  Le nom doit être une chaîne Unicode.  Vous pouvez y parvenir en mettant un « L » devant le nom, par exemple : `L"MyColumn"`.  
+ [in] Pointeur vers le nom de colonne. Le nom doit être une chaîne Unicode. Vous pouvez le faire en plaçant un « L » devant le nom, par exemple : `L"MyColumn"`.  
   
  `data`  
- \[in\] Le membre de données correspondant dans l'article utilisateur.  
+ [in] Le membre de données correspondant dans l’enregistrement utilisateur.  
   
-## Notes  
- Les macros de **COLUMN\_NAME\_\*** dans le même site comme [COLUMN\_ENTRY](../../data/oledb/column-entry.md):  
+## <a name="remarks"></a>Remarques  
+ Le **COLUMN_NAME_\***  sont utilisées dans les mêmes emplacements que [COLUMN_ENTRY](../../data/oledb/column-entry.md):  
   
--   Entre [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md) et les macros [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md).  
+-   Entre le [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP](../../data/oledb/end-column-map.md) macros.  
   
--   Entre [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md) et les macros [END\_ACCESSOR](../../data/oledb/end-accessor.md).  
+-   Entre le [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR](../../data/oledb/end-accessor.md) macros.  
   
--   Entre [BEGIN\_PARAM\_MAP](../../data/oledb/begin-param-map.md) et les macros [END\_PARAM\_MAP](../../data/oledb/end-param-map.md).  
+-   Entre le [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) macros.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Macros et fonctions globales pour les modèles du consommateur OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md)   
- [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md)   
- [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)   
- [COLUMN\_NAME\_EX](../../data/oledb/column-name-ex.md)   
- [COLUMN\_NAME\_LENGTH](../../data/oledb/column-name-length.md)   
- [COLUMN\_NAME\_LENGTH\_STATUS](../../data/oledb/column-name-length-status.md)   
- [COLUMN\_NAME\_STATUS](../../data/oledb/column-name-status.md)   
- [COLUMN\_NAME\_PS](../../data/oledb/column-name-ps.md)   
- [COLUMN\_NAME\_PS\_LENGTH](../../data/oledb/column-name-ps-length.md)   
- [COLUMN\_NAME\_PS\_STATUS](../../data/oledb/column-name-ps-status.md)   
- [COLUMN\_NAME\_PS\_LENGTH\_STATUS](../../data/oledb/column-name-ps-length-status.md)   
- [COLUMN\_NAME\_TYPE](../../data/oledb/column-name-type.md)   
- [COLUMN\_NAME\_TYPE\_PS](../../data/oledb/column-name-type-ps.md)   
- [COLUMN\_NAME\_TYPE\_SIZE](../../data/oledb/column-name-type-size.md)   
- [COLUMN\_NAME\_TYPE\_STATUS](../../data/oledb/column-name-type-status.md)
+ [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
+ [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
+ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
+ [COLUMN_NAME_EX](../../data/oledb/column-name-ex.md)   
+ [COLUMN_NAME_LENGTH](../../data/oledb/column-name-length.md)   
+ [COLUMN_NAME_LENGTH_STATUS](../../data/oledb/column-name-length-status.md)   
+ [COLUMN_NAME_STATUS](../../data/oledb/column-name-status.md)   
+ [COLUMN_NAME_PS](../../data/oledb/column-name-ps.md)   
+ [COLUMN_NAME_PS_LENGTH](../../data/oledb/column-name-ps-length.md)   
+ [COLUMN_NAME_PS_STATUS](../../data/oledb/column-name-ps-status.md)   
+ [COLUMN_NAME_PS_LENGTH_STATUS](../../data/oledb/column-name-ps-length-status.md)   
+ [COLUMN_NAME_TYPE](../../data/oledb/column-name-type.md)   
+ [COLUMN_NAME_TYPE_PS](../../data/oledb/column-name-type-ps.md)   
+ [COLUMN_NAME_TYPE_SIZE](../../data/oledb/column-name-type-size.md)   
+ [COLUMN_NAME_TYPE_STATUS](../../data/oledb/column-name-type-status.md)

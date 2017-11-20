@@ -1,33 +1,30 @@
 ---
-title: "operator&gt; (pair) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::pair::operator>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator> (membre) (STL/CLR)"
+title: "opérateur&gt; (paire) (STL/CLR) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::pair::operator>
+dev_langs: C++
+helpviewer_keywords: operator> member [STL/CLR]
 ms.assetid: c392a696-3425-49c8-9ddf-be2f2d2dd42e
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 399286325a38ac7272e2159d24f8ed4cb9360f62
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# operator&gt; (pair) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Comparaison « supérieur à ».  
+# <a name="operatorgt-pair-stlclr"></a>opérateur&gt; (paire) (STL/CLR)
+Supérieure à la comparaison de la paire.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Value1,  
@@ -36,17 +33,17 @@ template<typename Value1,
         pair<Value1, Value2>% right);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  left  
- Paire gauche à comparer.  
+ Paire de gauche à comparer.  
   
- right  
- Paire droite à comparer.  
+ droite  
+ Paire de droit à comparer.  
   
-## Notes  
- La fonction d'opérateur retourne `right` `<` `left`.  Vous l'utilisez pour tester si `left` est pas ordonné après `right` lorsque les deux paires d'éléments sont comparées élément par élément.  
+## <a name="remarks"></a>Remarques  
+ La fonction d’opérateur retourne `right` `<` `left`. Il permet de tester si `left` est trié après `right` lorsque deux paires sont comparé élément par élément.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_pair_operator_gt.cpp   
@@ -69,19 +66,22 @@ int main()
   
 ```  
   
-  **\[x, 3\]**  
-**\[x, 4\]**  
-**\[x 3\] \> \[x 3\] est Faux**  
-**\[x 4\] \> \[x 3\] est Vrai**   
-## Configuration requise  
- **En\-tête :** \<cliext\/utility\>  
+```Output  
+[x, 3]  
+[x, 4]  
+[x 3] > [x 3] is False  
+[x 4] > [x 3] is True  
+```  
   
- **Espace de noms :** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/utilitaire >  
   
-## Voir aussi  
- [paire](../dotnet/pair-stl-clr.md)   
- [operator\=\= \(pair\)](../dotnet/operator-equality-pair-stl-clr.md)   
- [operator\!\= \(pair\)](../dotnet/operator-inequality-pair-stl-clr.md)   
- [operator\< \(pair\)](../dotnet/operator-less-than-pair-stl-clr.md)   
- [operator\>\= \(pair\)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)   
- [operator\<\= \(pair\)](../dotnet/operator-less-or-equal-pair-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [paire (STL/CLR)](../dotnet/pair-stl-clr.md)   
+ [opérateur == (pair) (STL/CLR)](../dotnet/operator-equality-pair-stl-clr.md)   
+ [opérateur ! = (paire) (STL/CLR)](../dotnet/operator-inequality-pair-stl-clr.md)   
+ [opérateur\< (paire) (STL/CLR)](../dotnet/operator-less-than-pair-stl-clr.md)   
+ [opérateur > = (paire) (STL/CLR)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)   
+ [operator<= (pair) (STL/CLR)](../dotnet/operator-less-or-equal-pair-stl-clr.md)

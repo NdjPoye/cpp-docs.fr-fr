@@ -1,32 +1,30 @@
 ---
-title: "collection_adapter (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "collection_adapter (classe) (STL/CLR)"
+title: collection_adapter (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter
+dev_langs: C++
+helpviewer_keywords: collection_adapter class [STL/CLR]
 ms.assetid: 31964058-1f50-48bf-82c2-b0b3cc8a7887
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 79dbc2ff2e47e7aa277a2176dbd8605c5a78c749
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Encapsule une collection de .NET pour une utilisation comme conteneur STL ou CLR.  Une `collection_adapter` est une classe de modèle qui décrit un objet simple de conteneur STL ou CLR.  Elle inclut une interface de \(BCL\) de la bibliothèque de classes de base, et renvoie une paire d'itérateurs utilisée pour manipuler la séquence contrôlée.  
+# <a name="collectionadapter-stlclr"></a>collection_adapter (STL/CLR)
+Encapsule une collection de .NET à utiliser comme un conteneur STL/CLR. A `collection_adapter` est une classe de modèle qui décrit un objet de conteneur STL/CLR simple. Il inclut une interface de bibliothèque de classes de Base (BCL) et retourne une paire itérateur qui vous permet de manipuler la séquence contrôlée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Coll>  
@@ -59,56 +57,56 @@ template<typename Key,
         System::Collections::Generic::IDictionary<Key, Value>>;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  Coll  
  Le type de la collection encapsulée.  
   
-## Spécialisations  
+## <a name="specializations"></a>Spécialisations  
   
 |Spécialisation|Description|  
 |--------------------|-----------------|  
-|IEnumerable|Parcoure les éléments.|  
-|ICollection|Entretient un groupe d'éléments .|  
-|IList|Entretient un ensemble ordonné d'éléments.|  
-|IDictionary|Conservez un ensemble de paires {clé,valeur}.|  
-|IEnumerable\<Value\>|Parcoure les éléments typés.|  
-|ICollection\<Value\>|Maintient un groupe d'éléments typés.|  
-|IList\<Value\>|Entretient un groupe ordonné d'éléments typés.|  
-|IDictionary\<Value\>|Contient un ensemble de paires typées {clé,valeur}.|  
+|IEnumerable|Séquences dans les éléments.|  
+|ICollection|Gère un groupe d’éléments.|  
+|IList|Gère un groupe ordonné d’éléments.|  
+|IDictionary|Conserver un jeu de {clé, valeur} paires.|  
+|IEnumerable\<valeur >|Séquences via les éléments typés.|  
+|ICollection\<valeur >|Gère un groupe d’éléments typés.|  
+|IList\<valeur >|Gère un groupe ordonné d’éléments typés.|  
+|IDictionary\<valeur >|Gère un ensemble de typé {clé, valeur} paires.|  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-|Définition de type|Description|  
-|------------------------|-----------------|  
-|[collection\_adapter::difference\_type](../dotnet/collection-adapter-difference-type-stl-clr.md)|Type d'une distance signée entre deux éléments.|  
-|[collection\_adapter::iterator](../dotnet/collection-adapter-iterator-stl-clr.md)|Type d'un itérateur pour la séquence contrôlée.|  
-|[collection\_adapter::key\_type](../dotnet/collection-adapter-key-type-stl-clr.md)|Le type de clé de dictionnaire.|  
-|[collection\_adapter::mapped\_type](../dotnet/collection-adapter-mapped-type-stl-clr.md)|Le type de valeur du dictionnaire.|  
-|[collection\_adapter::reference](../dotnet/collection-adapter-reference-stl-clr.md)|Type d'une référence à un élément.|  
-|[collection\_adapter::size\_type](../dotnet/collection-adapter-size-type-stl-clr.md)|Type d'une distance signée entre deux éléments.|  
-|[collection\_adapter::value\_type](../dotnet/collection-adapter-value-type-stl-clr.md)|Le type d'un élément.|  
+|Définition de types|Description|  
+|---------------------|-----------------|  
+|[collection_adapter::difference_type (STL/CLR)](../dotnet/collection-adapter-difference-type-stl-clr.md)|Type d'une distance signée entre deux éléments.|  
+|[collection_adapter::iterator (STL/CLR)](../dotnet/collection-adapter-iterator-stl-clr.md)|Type d'un itérateur pour la séquence contrôlée.|  
+|[collection_adapter::key_type (STL/CLR)](../dotnet/collection-adapter-key-type-stl-clr.md)|Le type d’une clé de dictionnaire.|  
+|[collection_adapter::mapped_type (STL/CLR)](../dotnet/collection-adapter-mapped-type-stl-clr.md)|Le type d’une valeur de dictionnaire.|  
+|[collection_adapter::reference (STL/CLR)](../dotnet/collection-adapter-reference-stl-clr.md)|Type d'une référence à un élément.|  
+|[collection_adapter::size_type (STL/CLR)](../dotnet/collection-adapter-size-type-stl-clr.md)|Type d'une distance signée entre deux éléments.|  
+|[collection_adapter::value_type (STL/CLR)](../dotnet/collection-adapter-value-type-stl-clr.md)|Type d’un élément.|  
   
 |Fonction membre|Description|  
 |---------------------|-----------------|  
-|[collection\_adapter::base](../dotnet/collection-adapter-base-stl-clr.md)|Indique l'interface encapsulée de BCL.|  
-|[collection\_adapter::begin](../dotnet/collection-adapter-begin-stl-clr.md)|Désigne le début de la séquence contrôlée.|  
-|[collection\_adapter::collection\_adapter](../dotnet/collection-adapter-collection-adapter-stl-clr.md)|Construit un objet adaptateur.|  
-|[collection\_adapter::end](../dotnet/collection-adapter-end-stl-clr.md)|Désigne la fin de la séquence contrôlée.|  
-|[collection\_adapter::size](../dotnet/collection-adapter-size-stl-clr.md)|Compte le nombre d'éléments.|  
-|[collection\_adapter::swap](../dotnet/collection-adapter-swap-stl-clr.md)|Échange le contenu de deux conteneurs.|  
+|[collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)|Désigne l’interface BCL encapsulée.|  
+|[collection_adapter::begin (STL/CLR)](../dotnet/collection-adapter-begin-stl-clr.md)|Désigne le début de la séquence contrôlée.|  
+|[collection_adapter::collection_adapter (STL/CLR)](../dotnet/collection-adapter-collection-adapter-stl-clr.md)|Construit un objet d’adaptateur.|  
+|[collection_adapter::end (STL/CLR)](../dotnet/collection-adapter-end-stl-clr.md)|Désigne la fin de la séquence contrôlée.|  
+|[collection_adapter::size (STL/CLR)](../dotnet/collection-adapter-size-stl-clr.md)|Compte le nombre d'éléments.|  
+|[collection_adapter::swap (STL/CLR)](../dotnet/collection-adapter-swap-stl-clr.md)|Échange le contenu de deux conteneurs.|  
   
 |Opérateur|Description|  
-|---------------|-----------------|  
-|[collection\_adapter::operator\=](../dotnet/collection-adapter-operator-assign-stl-clr.md)|Remplace le descripteur BCL stocké.|  
+|--------------|-----------------|  
+|[collection_adapter::operator= (STL/CLR)](../dotnet/collection-adapter-operator-assign-stl-clr.md)|Remplace le handle BCL stocké.|  
   
-## Notes  
- Vous utilisez cette classe de modèle pour manipuler un conteneur de BCL comme conteneur STL ou CLR.  Le `collection_adapter` enregistre un descripteur vers une interface de BCL, qui contrôle après une séquence d'éléments.  Un objet `X` d' `collection_adapter` renvoie une paire d'itérateurs d'entrée `X.begin()` et `X.end()` que vous utilisez pour visiter les éléments, dans l'ordre.  Certaines spécialisations vous permettent également d'écrire `X.size()` pour déterminer la longueur de la séquence contrôlée.  
+## <a name="remarks"></a>Remarques  
+ Cette classe de modèle vous permet de manipuler un conteneur BCL comme un conteneur STL/CLR. La `collection_adapter` stocke un handle vers une interface BCL, qui à son tour contrôle une séquence d’éléments. A `collection_adapter` objet `X` retourne une paire d’itérateurs d’entrée `X.begin()` et `X.end()` que vous utilisez pour consulter des éléments dans l’ordre. Parmi les spécialisations vous permettent également d’écrire `X.size()` pour déterminer la longueur de la séquence contrôlée.  
   
-## Configuration requise  
- **En\-tête :** \<cliext\/adapter\>  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/carte >  
   
- **Espace de noms** cliext  
+ **Namespace :** cliext  
   
-## Voir aussi  
- [range\_adapter](../dotnet/range-adapter-stl-clr.md)   
- [make\_collection](../dotnet/make-collection-stl-clr.md)
+## <a name="see-also"></a>Voir aussi  
+ [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)   
+ [make_collection (STL/CLR)](../dotnet/make-collection-stl-clr.md)

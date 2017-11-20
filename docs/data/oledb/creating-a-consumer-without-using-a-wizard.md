@@ -1,33 +1,31 @@
 ---
-title: "Cr&#233;ation d&#39;un consommateur sans utiliser l&#39;Assistant | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "consommateurs OLE DB, créer"
+title: "Création d’un consommateur sans utiliser d’Assistant | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9e718ce1d009dbcf21c784640c2cab66ab1b81ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Cr&#233;ation d&#39;un consommateur sans utiliser l&#39;Assistant
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'exemple suivant suppose que vous ajoutez la prise en charge d'un consommateur OLE DB à un projet ATL existant.  Si vous souhaitez ajouter la prise en charge d'un consommateur OLE DB à une application MFC, vous devez exécuter l'Assistant Application MFC, qui crée la prise en charge nécessaire et appelle les routines MFC indispensables à l'exécution de l'application.  
+# <a name="creating-a-consumer-without-using-a-wizard"></a>Création d'un consommateur sans utiliser l'Assistant
+L’exemple suivant suppose que vous ajoutez la prise en charge du consommateur OLE DB à un projet ATL existant. Si vous souhaitez ajouter la prise en charge du consommateur OLE DB à une application MFC, vous devez exécuter l’Assistant Application MFC, qui crée la prise en charge nécessaire et appelle les routines MFC nécessaires pour l’exécution de l’application.  
   
- Pour ajouter la prise en charge du consommateur OLE DB sans utiliser l'Assistant Consommateur OLE DB ATL :  
+ Pour ajouter la prise en charge du consommateur OLE DB sans utiliser l’Assistant Consommateur OLE DB ATL :  
   
--   Dans votre fichier Stdafx.h, ajoutez les instructions `#include` suivantes :  
+-   Dans votre fichier Stdafx.h, ajoutez le code suivant `#include` instructions :  
   
     ```  
     #include <atlbase.h>  
@@ -35,14 +33,14 @@ L'exemple suivant suppose que vous ajoutez la prise en charge d'un consommateur 
     #include <atldbsch.h> // if you are using schema templates  
     ```  
   
- Un consommateur exécute généralement, par programme, la séquence d'opérations suivante :  
+ Par programme, un consommateur exécute généralement la séquence d’opérations suivante :  
   
--   Création d'une classe d'enregistrement utilisateur qui lie les colonnes aux variables locales.  Dans cet exemple, `CMyTableNameAccessor` est la classe d'enregistrement utilisateur \(consultez [Enregistrements utilisateur](../../data/oledb/user-records.md)\).  Cette classe contient le mappage de colonnes et le mappage de paramètres.  Déclaration d'une donnée membre dans la classe d'enregistrement utilisateur pour chaque champ spécifié dans le mappage de colonnes ; pour chacune de ces données membres, déclaration aussi d'une donnée membre d'état et d'une donnée membre de longueur.  Pour plus d'informations, consultez [Données membres de l'état des champs dans les accesseurs générés par l'Assistant](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
+-   Créez une classe d’enregistrement utilisateur qui lie les colonnes aux variables locales. Dans cet exemple, `CMyTableNameAccessor` est la classe d’enregistrement utilisateur (consultez [enregistrements utilisateur](../../data/oledb/user-records.md)). Cette classe contient le mappage de colonnes et le mappage de paramètre. Déclarez un membre de données dans la classe d’enregistrement utilisateur pour chaque champ que vous spécifiez dans le mappage de colonnes ; pour chacun de ces membres de données, également déclarer un membre de données d’état et un membre de données de longueur. Pour plus d’informations, consultez [données membres de l’état des champs dans les accesseurs](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
   
     > [!NOTE]
-    >  Si vous écrivez votre propre consommateur, les variables de données doivent précéder les variables d'état et de longueur.  
+    >  Si vous écrivez votre propre consommateur, les variables de données doivent précéder les variables d’état et de longueur.  
   
--   Instanciation d'une source de données et d'une session.  Détermination du type d'accesseur et de jeu de lignes à utiliser, puis instanciation d'un jeu de lignes à l'aide de [CCommand](../../data/oledb/ccommand-class.md) ou de [CTable](../../data/oledb/ctable-class.md) :  
+-   Instancier une source de données et d’une session. Détermination du type d’accesseur et ensemble de lignes à utiliser, puis instanciation d’un ensemble de lignes à l’aide de [CCommand](../../data/oledb/ccommand-class.md) ou [CTable](../../data/oledb/ctable-class.md):  
   
     ```  
     CDataSource ds;  
@@ -50,15 +48,15 @@ L'exemple suivant suppose que vous ajoutez la prise en charge d'un consommateur 
     class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor> >  
     ```  
   
--   Appel de **CoInitialize** pour initialiser COM.  Cet appel est habituellement effectué dans le code principal.  Par exemple :  
+-   Appelez **CoInitialize** initialiser COM. Cela est généralement appelé dans le code principal. Exemple :  
   
     ```  
     HRESULT hr = CoInitialize(NULL);  
     ```  
   
--   Appel de [CDataSource::Open](../../data/oledb/cdatasource-open.md) ou de l'une de ses variantes.  
+-   Appelez [CDataSource::Open](../../data/oledb/cdatasource-open.md) ou l’une de ses variantes.  
   
--   Ouverture d'une connexion à la source de données, ouverture de la session, puis ouverture et initialisation du jeu de lignes \(et exécution également, s'il s'agit d'une commande\) :  
+-   Ouvrir une connexion à la source de données, ouvrez la session et ouvrir et initialiser l’ensemble de lignes (et si une commande, l’exécuter également) :  
   
     ```  
     hr = ds.Open();  
@@ -66,11 +64,11 @@ L'exemple suivant suppose que vous ajoutez la prise en charge d'un consommateur 
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
--   Définition \(facultative\) des propriétés rowset en utilisant `CDBPropSet::AddProperty` et leur passation en tant que paramètre à `rs.Open`.  Pour obtenir un exemple, consultez GetRowsetProperties dans [Méthodes de consommateur générées par l'Assistant](../../data/oledb/consumer-wizard-generated-methods.md).  
+-   Si vous le souhaitez, définition des propriétés de jeu de lignes à l’aide de `CDBPropSet::AddProperty` et les passer en tant que paramètre à `rs.Open`. Pour obtenir un exemple de cette procédure, consultez GetRowsetProperties dans [Consumer Wizard-Generated méthodes](../../data/oledb/consumer-wizard-generated-methods.md).  
   
--   Vous pouvez à présent utiliser le jeu de lignes pour récupérer\/manipuler les données.  
+-   Vous pouvez maintenant utiliser l’ensemble de lignes pour extraire/manipuler les données.  
   
--   Une fois l'application terminée, fermeture de la connexion, de la session et du jeu de lignes :  
+-   Lorsque votre application est terminée, fermez la connexion, une session et un ensemble de lignes :  
   
     ```  
     rs.Close();  
@@ -78,13 +76,13 @@ L'exemple suivant suppose que vous ajoutez la prise en charge d'un consommateur 
     ds.Close();  
     ```  
   
-     Si vous utilisez une commande, vous pouvez si vous le souhaitez appeler `ReleaseCommand` après **Close**.  L'exemple de code [CCommand::Close](../../data/oledb/ccommand-close.md) illustre comment appeler **Close** et `ReleaseCommand`.  
+     Si vous utilisez une commande, vous pouvez souhaiter appeler `ReleaseCommand` après **fermer**. L’exemple de code [CCommand::Close](../../data/oledb/ccommand-close.md) montre comment appeler **fermer** et `ReleaseCommand`.  
   
--   Appel de **CoUnInitialize** pour initialiser COM.  Cet appel est habituellement effectué dans le code principal.  
+-   Appelez **CoUnInitialize** annuler l’initialisation de COM. Cela est généralement appelé dans le code principal.  
   
     ```  
     CoUninitialize();  
     ```  
   
-## Voir aussi  
- [Création d'un consommateur OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
+## <a name="see-also"></a>Voir aussi  
+ [Création d’un consommateur OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)

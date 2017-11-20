@@ -1,49 +1,47 @@
 ---
-title: "vector::resize (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::resize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre resize [STL/CLR]"
+title: Vector::Resize (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::resize
+dev_langs: C++
+helpviewer_keywords: resize member [STL/CLR]
 ms.assetid: a3556fbc-67d9-463a-9ffc-cb43ee15657f
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 43616dbc6bf0cd0eca6493d4f474ce20d02b8e2d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# vector::resize (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Change le nombre d'éléments.  
+# <a name="vectorresize-stlclr"></a>vector::resize (STL/CLR)
+Modifie le nombre d’éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void resize(size_type new_size);  
 void resize(size_type new_size, value_type val);  
 ```  
   
-#### Paramètres  
- nouvelle\_taille  
+#### <a name="parameters"></a>Paramètres  
+ NEW_SIZE  
  Nouvelle taille de la séquence contrôlée.  
   
- val  
- Valeur de l'élément de remplissage.  
+ Val  
+ Valeur de l’élément de remplissage.  
   
-## Notes  
- Les deux fonctions membres s'assurent que [vector::size](../dotnet/vector-size-stl-clr.md)`()` retourne dorénavant `new_size`.  Si elle doit rendre la séquence contrôlée plus longue, la première fonction membre ajoute les éléments de valeur `value_type()`, tandis que la deuxième fonction membre ajoute les éléments de valeur `val`.  Pour rendre la séquence contrôlée plus courte, les deux fonctions membres effacent en pratique le dernier élément de [vector::size](../dotnet/vector-size-stl-clr.md)`() -` `new_size` fois.  Vous l'utilisez pour faire en sorte que la séquence contrôlée est de taille `new_size`, en effectuant soit du rognage, soit du remplissage de la séquence contrôlée actuelle.  
+## <a name="remarks"></a>Remarques  
+ Les deux fonctions membres Vérifiez que [vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `()` retourne désormais `new_size`. Si elle doit rallonger la séquence contrôlée, la première fonction membre ajoute des éléments avec la valeur `value_type()`, tandis que la deuxième fonction membre ajoute des éléments avec la valeur `val`. Pour rendre la séquence contrôlée plus courte, les deux fonctions membres effacement efficacement le dernier élément [vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `() -` `new_size` fois. Vous l’utilisez pour vous assurer que la séquence contrôlée est de taille `new_size`, par la suppression ou la séquence contrôlée en cours de remplissage.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_vector_resize.cpp   
@@ -74,17 +72,20 @@ int main()
   
 ```  
   
-  **taille\(\) \= 0**  
- **0 0 0 0**  
-**taille\(\) \= 0**  
- **x x x x x**   
-## Configuration requise  
- **En\-tête :** \<cliext\/vector\>  
+```Output  
+size() = 0  
+ 0 0 0 0  
+size() = 0  
+ x x x x x  
+```  
   
- **Espace de nom** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/vector >  
   
-## Voir aussi  
- [vecteur](../dotnet/vector-stl-clr.md)   
- [vector::clear](../dotnet/vector-clear-stl-clr.md)   
- [vector::erase](../dotnet/vector-erase-stl-clr.md)   
- [vector::insert](../dotnet/vector-insert-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [vecteur (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Vector::Clear (STL/CLR)](../dotnet/vector-clear-stl-clr.md)   
+ [Vector::Erase (STL/CLR)](../dotnet/vector-erase-stl-clr.md)   
+ [vector::insert (STL/CLR)](../dotnet/vector-insert-stl-clr.md)

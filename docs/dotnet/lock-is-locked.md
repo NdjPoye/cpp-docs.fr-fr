@@ -1,46 +1,45 @@
 ---
-title: "lock::is_locked | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "is_locked"
-  - "msclr::lock::is_locked"
-  - "lock::is_locked"
-  - "msclr::lock.is_locked"
-  - "lock.is_locked"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock::is_locked"
+title: Lock::is_locked | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- is_locked
+- msclr::lock::is_locked
+- lock::is_locked
+- msclr::lock.is_locked
+- lock.is_locked
+dev_langs: C++
+helpviewer_keywords: lock::is_locked
 ms.assetid: d888827c-8052-47c6-87a2-8c42f60a688d
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bd0865b66d934920a1c74912d482a3d57030a115
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# lock::is_locked
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indicates whether a lock is being held.  
+# <a name="lockislocked"></a>lock::is_locked
+Indique si l’utilisateur est actuellement un verrou.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 bool is_locked();  
 ```  
   
-## Valeur de retour  
- `true` if a lock is held, `false` otherwise.  
+## <a name="return-value"></a>Valeur de retour  
+ `true`Si un verrou est maintenu, `false` dans le cas contraire.  
   
-## Exemple  
- This example uses a single instance of a class across multiple threads.  The class uses a lock on itself to ensure that accesses to its internal data are consistent for each thread.  The main application thread uses a lock on the same instance of the class to periodically check to see if any worker threads still exist, and waits to exit until all worker threads have completed their tasks.  
+## <a name="example"></a>Exemple  
+ Cet exemple utilise une seule instance d’une classe sur plusieurs threads.  La classe utilise un verrou sur lui-même pour vous assurer que l’accès à ses données internes sont cohérents pour chaque thread.  Le thread d’application principale utilise un verrou sur la même instance de la classe à vérifier régulièrement si les threads de travail existent toujours, et attend de quitter jusqu'à ce que tous les threads de travail ont terminé leurs tâches.  
   
 ```  
 // msl_lock_is_locked.cpp  
@@ -115,22 +114,25 @@ int main() {
 }  
 ```  
   
-  **In thread 3, Counter \= 0**  
-**In thread 3, Counter \= 10**  
-**In thread 5, Counter \= 0**  
-**In thread 5, Counter \= 10**  
-**In thread 4, Counter \= 0**  
-**In thread 4, Counter \= 10**  
-**In thread 7, Counter \= 0**  
-**In thread 7, Counter \= 10**  
-**In thread 6, Counter \= 0**  
-**In thread 6, Counter \= 10**  
-**All threads completed.**   
-## Configuration requise  
- **Header file** \<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
+  
+## <a name="requirements"></a>Spécifications  
+ **Fichier d’en-tête** \<msclr\lock.h >  
   
  **Namespace** msclr  
   
-## Voir aussi  
- [lock, membres](../dotnet/lock-members.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Lock, membres](../dotnet/lock-members.md)   
  [lock::operator bool](../dotnet/lock-operator-bool.md)

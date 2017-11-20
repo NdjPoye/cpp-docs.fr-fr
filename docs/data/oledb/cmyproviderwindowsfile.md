@@ -1,31 +1,30 @@
 ---
-title: "CMyProviderWindowsFile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cmyproviderwindowsfile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMyProviderWindowsFile (classe)"
-  - "fournisseurs OLE DB, fichiers générés par l'Assistant"
+title: CMyProviderWindowsFile | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: cmyproviderwindowsfile
+dev_langs: C++
+helpviewer_keywords:
+- CMyProviderWindowsFile class
+- OLE DB providers, wizard-generated files
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 63143532c5f5ad770c6234a24fbedf1b478ba143
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# CMyProviderWindowsFile
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'Assistant crée une classe devant contenir une ligne de données ; en l'occurrence, elle s'appelle `CMyProviderWindowsFile`.  Le code suivant pour `CMyProviderWindowsFile` est généré par un Assistant et répertorie tous les fichiers dans un répertoire à l'aide de la structure **WIN32\_FIND\_DATA**.  `CMyProviderWindowsFile` hérite de la structure **WIN32\_FIND\_DATA** :  
+# <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
+L’Assistant crée une classe pour contenir une ligne de données ; Dans ce cas, il est appelé `CMyProviderWindowsFile`. Le code suivant pour `CMyProviderWindowsFile` est généré par un Assistant et répertorie tous les fichiers dans un répertoire à l’aide de la **WIN32_FIND_DATA** structure. `CMyProviderWindowsFile`hérite de la **WIN32_FIND_DATA** structure :  
   
 ```  
 /////////////////////////////////////////////////////////////////////  
@@ -45,9 +44,9 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- `CMyProviderWindowsFile` est appelée [classe de l'enregistrement utilisateur](../../data/oledb/user-record.md) car elle contient également un mappage décrivant les colonnes dans le jeu de lignes du fournisseur.  Le mappage de colonnes du fournisseur contient une entrée pour chaque champ dans le jeu de lignes en utilisant les macros PROVIDER\_COLUMN\_ENTRY.  Ces macros spécifient le nom de colonne, l'ordinal et l'offset pour une entrée de structure.  Dans le code ci\-dessus, les entrées de colonnes du fournisseur contiennent des offsets dans la structure **WIN32\_FIND\_DATA**.  Quand le consommateur appelle **IRowset::GetData**, les données sont transférées dans une mémoire tampon contiguë.  Au lieu de vous obliger à faire des opérations arithmétiques sur les pointeurs, le mappage vous permet de spécifier des données membres.  
+ `CMyProviderWindowsFile`est appelé le [classe d’enregistrement utilisateur](../../data/oledb/user-record.md) car elle contient également un mappage décrivant les colonnes dans l’ensemble de lignes du fournisseur. Le mappage de colonnes du fournisseur contient une entrée pour chaque champ dans l’ensemble de lignes à l’aide de macros PROVIDER_COLUMN_ENTRY. Les macros de spécifient le nom de colonne ordinal et l’offset à une entrée de la structure. Dans le code ci-dessus, les entrées de colonnes du fournisseur contiennent des offsets dans le **WIN32_FIND_DATA** structure. Lorsque le consommateur appelle **IRowset::GetData**, les données sont transférées dans une mémoire tampon contiguë. Plutôt que d’effectuer d’effectuer l’opération arithmétique de pointeur, le mappage permet de spécifier un membre de données.  
   
- La classe `CMyProviderRowset` contient aussi la méthode `Execute`.  `Execute` est l'élément qui effectue la lecture des données dans la source native.  Le code suivant montre la méthode `Execute` générée par l'Assistant.  La fonction utilise les API Win32 **FindFirstFile** et `FindNextFile` pour récupérer des informations sur les fichiers dans le répertoire et les placer dans des instances de la classe `CMyProviderWindowsFile`.  
+ Le `CMyProviderRowset` classe contient également le `Execute` (méthode). `Execute`est en fait, ce qui lit les données dans la source native. Le code suivant illustre la générées par l’Assistant `Execute` (méthode). La fonction utilise Win32 **FindFirstFile** et `FindNextFile` API pour extraire des informations sur les fichiers dans le répertoire et les placer dans des instances de la `CMyProviderWindowsFile` classe.  
   
 ```  
 /////////////////////////////////////////////////////////////////////  
@@ -80,9 +79,9 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
 }  
 ```  
   
- Le répertoire à explorer est représenté par `m_strCommandText`, qui contient le texte désigné par l'interface `ICommandText` dans l'objet command.  Si aucun répertoire n'est spécifié, le répertoire en cours est utilisé par défaut.  
+ Le répertoire à Explorer est représenté par `m_strCommandText`; il contient le texte représenté par le `ICommandText` interface dans l’objet de commande. Si aucun répertoire n’est spécifié, il utilise le répertoire actif.  
   
- La méthode crée une entrée pour chaque fichier \(correspondant à une ligne\) et la place dans les données membres **m\_rgRowData**.  La classe `CRowsetImpl` définit les données membres **m\_rgRowData**.  Les données de ce tableau représentent la table entière et sont utilisées dans tous les modèles.  
+ La méthode crée une entrée pour chaque fichier (correspondant à une ligne) et le place dans le **m_rgRowData** membre de données. Le `CRowsetImpl` classe définit les **m_rgRowData** membre de données. Les données de ce tableau représentent la table entière et sont utilisées dans tous les modèles.  
   
-## Voir aussi  
- [Fichiers générés par l'Assistant Fournisseur](../../data/oledb/provider-wizard-generated-files.md)
+## <a name="see-also"></a>Voir aussi  
+ [Fichiers générés par l’Assistant Fournisseur](../../data/oledb/provider-wizard-generated-files.md)

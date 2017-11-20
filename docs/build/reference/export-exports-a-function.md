@@ -1,72 +1,72 @@
 ---
-title: "/EXPORT (Exporter une fonction) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.ExportFunctions"
-  - "/export"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/EXPORT (option de l'éditeur de liens)"
-  - "EXPORT (option de l'éditeur de liens)"
-  - "-EXPORT (option de l'éditeur de liens)"
+title: -EXPORT (exporter une fonction) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.ExportFunctions
+- /export
+dev_langs: C++
+helpviewer_keywords:
+- /EXPORT linker option
+- EXPORT linker option
+- -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0d3b1dd8f3bac22fc2359b447a69f42d7bcfafdb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /EXPORT (Exporter une fonction)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="export-exports-a-function"></a>/EXPORT (Exporter une fonction)
 ```  
 /EXPORT:entryname[,@ordinal[,NONAME]][,DATA]  
 ```  
   
-## Notes  
- Avec cette option, vous pouvez exporter une fonction à partir de votre programme afin de permettre à d'autres programmes de l'appeler.  Vous pouvez également exporter des données.  Les exportations sont généralement définies dans une DLL.  
+## <a name="remarks"></a>Remarques  
+ Avec cette option, vous pouvez exporter une fonction à partir de votre programme afin que d’autres programmes peuvent appeler la fonction. Vous pouvez également exporter des données. Les exportations sont généralement définies dans une DLL.  
   
- L'argument *entryname* est le nom de la fonction ou de l'élément de données tel qu'il doit être utilisé par le programme appelant.  `ordinal` spécifie un index dans la table d'exportations qui est compris entre 1 et 65 535 ; si vous ne spécifiez pas `ordinal`, LINK assigne la valeur 1.  Le mot clé **NONAME** exporte la fonction uniquement comme ordinal, sans *entryname*.  
+ Le *nom d’entrée* est le nom de l’élément de données ou de la fonction tel qu’il doit être utilisé par le programme appelant. `ordinal`Spécifie un index dans la table d’exportations compris entre 1 et 65 535 ; Si vous ne spécifiez pas `ordinal`, assigne un. Le **NONAME** mot clé exporte la fonction uniquement comme ordinal, sans une *nom d’entrée*.  
   
- Le mot clé **DATA** spécifie que l'élément exporté est un élément de données.  L'élément de données du programme client doit être déclaré à l'aide de **extern \_\_declspec\(dllimport\)**.  
+ Le **données** mot clé indique que l’élément exporté est un élément de données. L’élément de données dans le programme client doit être déclaré à l’aide de **extern __declspec (dllimport)**.  
   
- Il existe trois méthodes d'exportation d'une définition, présentées dans l'ordre recommandé pour leur utilisation :  
+ Il existe trois méthodes pour l’exportation d’une définition, répertoriées dans l’ordre d’utilisation recommandé :  
   
-1.  [\_\_declspec\(dllexport\)](../../cpp/dllexport-dllimport.md) dans le code source ;  
+1.  [__declspec (dllexport)](../../cpp/dllexport-dllimport.md) dans le code source  
   
-2.  une instruction [EXPORTS](../../build/reference/exports.md) dans un fichier .def ;  
+2.  Un [exportations](../../build/reference/exports.md) instruction dans un fichier .def  
   
-3.  une spécification \/EXPORT dans une commande LINK.  
+3.  Une spécification /EXPORT dans une commande LINK  
   
- Les trois méthodes peuvent être utilisées dans le même programme.  Quand LINK génère un programme contenant des exportations, il crée également une bibliothèque d'importation, sauf si un fichier .exp est utilisé lors de la génération.  
+ Les trois méthodes peuvent être utilisés dans le même programme. Quand LINK génère un programme contenant des exportations, il crée également une bibliothèque d’importation, sauf si un fichier .exp est utilisé dans la build.  
   
- LINK utilise les formes décorées des identificateurs.  Le compilateur décore un identificateur lorsqu'il crée le fichier .obj.  Si l'argument *entryname* est spécifié dans l'éditeur de liens sous sa forme non décorée \(tel qu'il apparaît dans le code source\), LINK tente d'établir une correspondance avec le nom.  En l'absence de correspondance unique, LINK émet un message d'erreur.  Utilisez l'outil [DUMPBIN](../../build/reference/dumpbin-reference.md) pour obtenir la forme de [Noms décorés](../../build/reference/decorated-names.md) d'un identificateur lorsque vous devez le spécifier à l'éditeur de liens.  
+ LINK utilise les formes décorées des identificateurs. Le compilateur décore un identificateur lorsqu’il crée le fichier .obj. Si *nom d’entrée* est spécifiée pour l’éditeur de liens dans son non décoré écran (tel qu’il apparaît dans le code source), LINK tente de correspondre au nom. Si elle ne peut pas trouver une correspondance unique, LINK émet un message d’erreur. Utilisez le [DUMPBIN](../../build/reference/dumpbin-reference.md) outil pour obtenir le [noms décorés](../../build/reference/decorated-names.md) forme d’un identificateur lorsque vous devez spécifier à l’éditeur de liens.  
   
 > [!NOTE]
->  Ne spécifiez pas la forme décorée des identificateurs en langage C qui sont déclarés sous la forme `__cdecl` ou `__stdcall`.  
+>  Ne spécifiez pas la forme décorée d’identificateurs en langage C qui sont déclarés `__cdecl` ou `__stdcall`.  
   
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Définition des propriétés de projets Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Cliquez sur le dossier **Éditeur de liens**.  
+2.  Cliquez sur le **l’éditeur de liens** dossier.  
   
-3.  Cliquez sur la page de propriétés **Ligne de commande**.  
+3.  Cliquez sur la page de propriétés **Ligne de commande** .  
   
-4.  Tapez l'option dans la zone **Options supplémentaires**.  
+4.  Tapez l’option dans le **des Options supplémentaires** boîte.  
   
-### Pour définir cette option de l'éditeur de liens par programme  
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)

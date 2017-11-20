@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -41,38 +40,21 @@ f1_keywords:
 - ATLCOLL/ATL::CAtlList::RemoveTailNoReturn
 - ATLCOLL/ATL::CAtlList::SetAt
 - ATLCOLL/ATL::CAtlList::SwapElements
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlList class
+dev_langs: C++
+helpviewer_keywords: CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b1ed350da625695f610980f9f48a6ae11394d3c8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 80f8f66787d2268c6543f8f7a66ca7d13ae167ff
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="catllist-class"></a>CAtlList (classe)
-Cette classe fournit des méthodes pour la création et la gestion d’un objet de liste.  
+# <a name="catllist-class"></a>Classe de CAtlList
+Cette classe fournit des méthodes pour créer et gérer un objet de liste.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -86,7 +68,7 @@ class CAtlList
  Type de l’élément.  
   
  `ETraits`  
- Le code utilisé pour copier ou déplacer des éléments. Consultez la page [CElementTraits classe](../../atl/reference/celementtraits-class.md) pour plus de détails.  
+ Le code utilisé pour copier ou déplacer des éléments. Consultez [CElementTraits classe](../../atl/reference/celementtraits-class.md) pour plus d’informations.  
   
 ## <a name="members"></a>Membres  
   
@@ -108,7 +90,7 @@ class CAtlList
 |Nom|Description|  
 |----------|-----------------|  
 |[CAtlList::AddHead](#addhead)|Appelez cette méthode pour ajouter un élément au début de la liste.|  
-|[CAtlList::AddHeadList](#addheadlist)|Appelez cette méthode pour ajouter une liste existante à la tête de la liste.|  
+|[CAtlList::AddHeadList](#addheadlist)|Appelez cette méthode pour ajouter une liste existante vers le début de la liste.|  
 |[CAtlList::AddTail](#addtail)|Appelez cette méthode pour ajouter un élément à la fin de cette liste.|  
 |[CAtlList::AddTailList](#addtaillist)|Appelez cette méthode pour ajouter une liste existante à la fin de cette liste.|  
 |[CAtlList::AssertValid](#assertvalid)|Appelez cette méthode pour confirmer la validité de la liste.|  
@@ -119,7 +101,7 @@ class CAtlList
 |[CAtlList::GetHead](#gethead)|Appelez cette méthode pour retourner l’élément au début de la liste.|  
 |[CAtlList::GetHeadPosition](#getheadposition)|Appelez cette méthode pour obtenir la position de la tête de la liste.|  
 |[CAtlList::GetNext](#getnext)|Appelez cette méthode pour retourner l’élément suivant dans la liste.|  
-|[CAtlList::GetPrev](#getprev)|Appelez cette méthode pour renvoyer l’élément précédent de la liste.|  
+|[CAtlList::GetPrev](#getprev)|Appelez cette méthode pour retourner l’élément précédent dans la liste.|  
 |[CAtlList::GetTail](#gettail)|Appelez cette méthode pour retourner l’élément à la fin de la liste.|  
 |[CAtlList::GetTailPosition](#gettailposition)|Appelez cette méthode pour obtenir la position de la fin de la liste.|  
 |[CAtlList::InsertAfter](#insertafter)|Appelez cette méthode pour insérer un nouvel élément dans la liste après la position spécifiée.|  
@@ -139,7 +121,7 @@ class CAtlList
 ## <a name="remarks"></a>Remarques  
  La `CAtlList` classe prend en charge les listes ordonnées d’objets non uniques accessibles séquentiellement ou par valeur. `CAtlList`listes se comportent comme une liste doublement liée. Chaque liste a un début et une fin, et les nouveaux éléments (ou les listes dans certains cas) peuvent être ajoutés à chaque extrémité de la liste, ou insérer avant ou après des éléments spécifiques.  
   
- La plupart de la `CAtlList` méthodes utilisent une valeur de position. Cette valeur est utilisée par les méthodes pour référencer l’emplacement mémoire réel dans lequel les éléments sont stockés et pas de calculer ou prédite directement. S’il est nécessaire pour accéder à la *n*ième élément dans la liste, la méthode [CAtlList::FindIndex](#findindex) renvoie la valeur correspondante de la position d’un index donné. Les méthodes [CAtlList::GetNext](#getnext) et [CAtlList::GetPrev](#getprev) peut être utilisé pour parcourir les objets dans la liste.  
+ La plupart de la `CAtlList` méthodes utilisent une valeur de position. Cette valeur est utilisée par les méthodes pour faire référence à l’emplacement mémoire réel où les éléments sont stockés et ne doivent pas être calculées ou prédit directement. S’il est nécessaire pour accéder à la  *n* élément th dans la liste, la méthode [CAtlList::FindIndex](#findindex) retournera la valeur correspondante de la position d’un index donné. Les méthodes [CAtlList::GetNext](#getnext) et [CAtlList::GetPrev](#getprev) peut être utilisé pour effectuer une itération au sein des objets de la liste.  
   
  Pour plus d’informations sur les classes de collection disponibles avec ATL, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
   
@@ -159,16 +141,16 @@ POSITION AddHead(INARGTYPE element);
  Le nouvel élément.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la position de l’élément nouvellement ajouté.  
+ Retourne la position de l’élément qui vient d’être ajouté.  
   
 ### <a name="remarks"></a>Remarques  
  Si la première version est utilisée, un élément vide est créé à l’aide de son constructeur par défaut, plutôt que son constructeur de copie.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities&#13;](../../atl/codesnippet/cpp/catllist-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#13](../../atl/codesnippet/cpp/catllist-class_1.cpp)]  
   
 ##  <a name="addheadlist"></a>CAtlList::AddHeadList  
- Appelez cette méthode pour ajouter une liste existante à la tête de la liste.  
+ Appelez cette méthode pour ajouter une liste existante vers le début de la liste.  
   
 ```
 void AddHeadList(const CAtlList<E, ETraits>* plNew);
@@ -179,10 +161,10 @@ void AddHeadList(const CAtlList<E, ETraits>* plNew);
  La liste à ajouter.  
   
 ### <a name="remarks"></a>Remarques  
- La liste vers laquelle pointe `plNew` est inséré au début de la liste existante. Dans les versions debug, un échec d’assertion se produit si `plNew` est égal à NULL.  
+ La liste désignée par `plNew` est inséré au début de la liste existante. Dans les versions debug, un échec d’assertion se produit si `plNew` est égal à NULL.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities&#14;](../../atl/codesnippet/cpp/catllist-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#14](../../atl/codesnippet/cpp/catllist-class_2.cpp)]  
   
 ##  <a name="addtail"></a>CAtlList::AddTail  
  Appelez cette méthode pour ajouter un élément à la fin de cette liste.  
@@ -197,13 +179,13 @@ POSITION AddTail(INARGTYPE element);
  Élément à ajouter.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la POSITION de l’élément nouvellement ajouté.  
+ Retourne la POSITION de l’élément qui vient d’être ajouté.  
   
 ### <a name="remarks"></a>Remarques  
  Si la première version est utilisée, un élément vide est créé à l’aide de son constructeur par défaut, plutôt que son constructeur de copie. L’élément est ajouté à la fin de la liste, et par conséquent, il devient alors la fin. Cette méthode peut être utilisée avec une liste vide.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities&#15;](../../atl/codesnippet/cpp/catllist-class_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#15](../../atl/codesnippet/cpp/catllist-class_3.cpp)]  
   
 ##  <a name="addtaillist"></a>CAtlList::AddTailList  
  Appelez cette méthode pour ajouter une liste existante à la fin de cette liste.  
@@ -216,11 +198,11 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
  `plNew`  
  La liste à ajouter.  
   
-### <a name="remarks"></a>Notes  
- La liste vers laquelle pointe `plNew` est inséré après le dernier élément (le cas échéant) de l’objet de liste. Le dernier élément dans le `plNew` liste devient donc la fin. Dans les versions debug, un échec d’assertion se produit si *plNew* est égal à NULL.  
+### <a name="remarks"></a>Remarques  
+ La liste désignée par `plNew` est inséré après le dernier élément (le cas échéant) de l’objet de liste. Le dernier élément dans le `plNew` liste devient donc la fin. Dans les versions debug, un échec d’assertion se produit si *plNew* est égal à NULL.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities&#16;](../../atl/codesnippet/cpp/catllist-class_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#16](../../atl/codesnippet/cpp/catllist-class_4.cpp)]  
   
 ##  <a name="assertvalid"></a>CAtlList::AssertValid  
  Appelez cette méthode pour confirmer la validité de la liste.  
@@ -230,10 +212,10 @@ void AssertValid() const;
 ```  
   
 ### <a name="remarks"></a>Remarques  
- Dans les versions debug, un échec d’assertion se produit si l’objet de liste n’est pas valide. Pour être valide, une liste vide doit avoir à la fois les emplacements qui pointe sur la valeur NULL, et une liste qui n’est pas vide doit avoir à la fois les emplacements qui pointe vers les adresses valides.  
+ Dans les versions debug, un échec d’assertion se produit si l’objet de liste n’est pas valide. Pour être valide, une liste vide doit avoir à la fois les emplacements qui pointe sur la valeur NULL, et une liste qui n’est pas vide doit avoir à la fois les emplacements pointant vers des adresses valides.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities&#17;](../../atl/codesnippet/cpp/catllist-class_5.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#17](../../atl/codesnippet/cpp/catllist-class_5.cpp)]  
   
 ##  <a name="catllist"></a>CAtlList::CAtlList  
  Constructeur.  
@@ -250,7 +232,7 @@ CAtlList(UINT nBlockSize = 10) throw();
  Le constructeur de la `CAtlList` objet. La taille de bloc est une mesure de la quantité de mémoire allouée lorsqu’un nouvel élément est requis. Tailles de bloc supérieures réduisent les appels aux routines d’allocation de mémoire, mais utilisent davantage de ressources.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities&#18;](../../atl/codesnippet/cpp/catllist-class_6.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#18](../../atl/codesnippet/cpp/catllist-class_6.cpp)]  
   
 ##  <a name="dtor"></a>CAtlList :: ~ CAtlList  
  Destructeur.  
@@ -273,19 +255,19 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
   
 ### <a name="parameters"></a>Paramètres  
  `element`  
- L’élément à rechercher dans la liste.  
+ L’élément à trouver dans la liste.  
   
  `posStartAfter`  
- La position de départ pour la recherche. Si aucune valeur n’est spécifiée, la recherche commence par l’élément head.  
+ La position de début de la recherche. Si aucune valeur n’est spécifiée, la recherche commence par l’élément head.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur de la POSITION de l’élément si existe, sinon retourne NULL.  
+ Retourne la valeur POSITION de l’élément s’il existe, sinon retourne NULL.  
   
-### <a name="remarks"></a>Notes  
- Dans les versions debug, un échec d’assertion se produit si l’objet de liste n’est pas valide ou si la `posStartAfter` est hors limites.  
+### <a name="remarks"></a>Remarques  
+ Dans les versions debug, un échec d’assertion se produit si l’objet de liste n’est pas valide, ou si le `posStartAfter` est hors limites.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities n °&19;](../../atl/codesnippet/cpp/catllist-class_7.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#19](../../atl/codesnippet/cpp/catllist-class_7.cpp)]  
   
 ##  <a name="findindex"></a>CAtlList::FindIndex  
  Appelez cette méthode pour obtenir la position d’un élément, une valeur d’index.  
@@ -296,18 +278,18 @@ POSITION FindIndex(size_t iElement) const throw();
   
 ### <a name="parameters"></a>Paramètres  
  `iElement`  
- Index de base zéro de l’élément de liste requis.  
+ Index de base zéro de l’élément de liste requise.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur POSITION correspondante, ou NULL si `iElement` est hors limites.  
+ Retourne la valeur de la POSITION correspondante, ou NULL si `iElement` est hors limites.  
   
 ### <a name="remarks"></a>Remarques  
- Cette méthode retourne la POSITION correspondant à une valeur d’index donnée, permettant d’accéder à la *n*ième élément dans la liste.  
+ Cette méthode retourne la POSITION correspondant à une valeur d’index donnée, ce qui permet d’accéder à la  *n* élément th dans la liste.  
   
  Dans les versions debug, un échec d’assertion se produit si l’objet de liste n’est pas valide.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities&#20;](../../atl/codesnippet/cpp/catllist-class_8.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#20](../../atl/codesnippet/cpp/catllist-class_8.cpp)]  
   
 ##  <a name="getat"></a>CAtlList::GetAt  
  Appelez cette méthode pour retourner l’élément à la position spécifiée dans la liste.  
@@ -319,15 +301,15 @@ const E& GetAt(POSITION pos) const throw();
   
 ### <a name="parameters"></a>Paramètres  
  `pos`  
- La valeur de POSITION spécifiant un élément particulier.  
+ La valeur de POSITION en spécifiant un élément particulier.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à, ou une copie de l’élément.  
   
-### <a name="remarks"></a>Notes  
- Si la liste est **const**, `GetAt` retourne une copie de l’élément. Cela permet à la méthode doit être utilisé uniquement sur le côté droit d’une instruction d’assignation et protège la liste de toute modification.  
+### <a name="remarks"></a>Remarques  
+ Si la liste est **const**, `GetAt` retourne une copie de l’élément. Cela permet à la méthode à être utilisé uniquement sur le côté droit d’une instruction d’assignation et protège la liste à partir de la modification.  
   
- Si la liste n’est pas **const**, `GetAt` renvoie une référence à l’élément. Cela permet la méthode à utiliser sur chaque côté d’une instruction d’assignation et donc les entrées de liste à modifier.  
+ Si la liste n’est pas **const**, `GetAt` retourne une référence à l’élément. Cela permet la méthode à utiliser sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
   
  Dans les versions debug, un échec d’assertion se produit si `pos` est égal à NULL.  
   
@@ -356,12 +338,12 @@ const E& GetHead() const throw();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne une référence ou une copie de l’élément au début de la liste.  
+ Retourne une référence, ou une copie de l’élément au début de la liste.  
   
 ### <a name="remarks"></a>Remarques  
- Si la liste est **const**, `GetHead` retourne une copie de l’élément au début de la liste. Cela permet à la méthode doit être utilisé uniquement sur le côté droit d’une instruction d’assignation et protège la liste de toute modification.  
+ Si la liste est **const**, `GetHead` retourne une copie de l’élément au début de la liste. Cela permet à la méthode à être utilisé uniquement sur le côté droit d’une instruction d’assignation et protège la liste à partir de la modification.  
   
- Si la liste n’est pas **const**, `GetHead` renvoie une référence à l’élément au début de la liste. Cela permet la méthode à utiliser sur chaque côté d’une instruction d’assignation et donc les entrées de liste à modifier.  
+ Si la liste n’est pas **const**, `GetHead` retourne une référence à l’élément au début de la liste. Cela permet la méthode à utiliser sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
   
  Dans les versions debug, un échec d’assertion se produit si le début de la liste de pointe avec la valeur NULL.  
   
@@ -378,11 +360,11 @@ POSITION GetHeadPosition() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur POSITION correspondant à l’élément au début de la liste.  
   
-### <a name="remarks"></a>Notes  
- Si la liste est vide, la valeur renvoyée est NULL.  
+### <a name="remarks"></a>Remarques  
+ Si la liste est vide, la valeur retournée est NULL.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities n °&21;](../../atl/codesnippet/cpp/catllist-class_9.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#21](../../atl/codesnippet/cpp/catllist-class_9.cpp)]  
   
 ##  <a name="getnext"></a>CAtlList::GetNext  
  Appelez cette méthode pour retourner l’élément suivant dans la liste.  
@@ -394,12 +376,12 @@ const E& GetNext(POSITION& pos) const throw();
   
 ### <a name="parameters"></a>Paramètres  
  `pos`  
- Une valeur POSITION, retournée par un appel précédent à `GetNext`, [CAtlList::GetHeadPosition](#getheadposition), ou d’autres `CAtlList` méthode.  
+ Une valeur POSITION, retournée par un appel précédent à `GetNext`, [CAtlList::GetHeadPosition](#getheadposition), ou d’autres `CAtlList` (méthode).  
   
 ### <a name="return-value"></a>Valeur de retour  
- Si la liste est **const**, `GetNext` retourne une copie de l’élément suivant de la liste. Cela permet à la méthode doit être utilisé uniquement sur le côté droit d’une instruction d’assignation et protège la liste de toute modification.  
+ Si la liste est **const**, `GetNext` retourne une copie de l’élément suivant de la liste. Cela permet à la méthode à être utilisé uniquement sur le côté droit d’une instruction d’assignation et protège la liste à partir de la modification.  
   
- Si la liste n’est pas **const**, `GetNext` renvoie une référence à l’élément suivant de la liste. Cela permet la méthode à utiliser sur chaque côté d’une instruction d’assignation et donc les entrées de liste à modifier.  
+ Si la liste n’est pas **const**, `GetNext` retourne une référence à l’élément suivant de la liste. Cela permet la méthode à utiliser sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
   
 ### <a name="remarks"></a>Remarques  
  Le compteur de POSITION, `pos`, est mis à jour pour pointer vers l’élément suivant dans la liste, ou NULL si aucun élément plus. Dans les versions debug, un échec d’assertion se produit si `pos` est égal à NULL.  
@@ -408,7 +390,7 @@ const E& GetNext(POSITION& pos) const throw();
  Consultez l’exemple de [CAtlList::GetHeadPosition](#getheadposition).  
   
 ##  <a name="getprev"></a>CAtlList::GetPrev  
- Appelez cette méthode pour renvoyer l’élément précédent de la liste.  
+ Appelez cette méthode pour retourner l’élément précédent dans la liste.  
   
 ```
 E& GetPrev(POSITION& pos) throw();
@@ -417,12 +399,12 @@ const E& GetPrev(POSITION& pos) const throw();
   
 ### <a name="parameters"></a>Paramètres  
  `pos`  
- Une valeur POSITION, retournée par un appel précédent à `GetPrev`, [CAtlList::GetTailPosition](#gettailposition), ou d’autres `CAtlList` méthode.  
+ Une valeur POSITION, retournée par un appel précédent à `GetPrev`, [CAtlList::GetTailPosition](#gettailposition), ou d’autres `CAtlList` (méthode).  
   
 ### <a name="return-value"></a>Valeur de retour  
- Si la liste est **const**, `GetPrev` retourne une copie d’un élément de la liste. Cela permet à la méthode doit être utilisé uniquement sur le côté droit d’une instruction d’assignation et protège la liste de toute modification.  
+ Si la liste est **const**, `GetPrev` retourne une copie d’un élément de la liste. Cela permet à la méthode à être utilisé uniquement sur le côté droit d’une instruction d’assignation et protège la liste à partir de la modification.  
   
- Si la liste n’est pas **const**, `GetPrev` renvoie une référence à un élément de la liste. Cela permet la méthode à utiliser sur chaque côté d’une instruction d’assignation et donc les entrées de liste à modifier.  
+ Si la liste n’est pas **const**, `GetPrev` retourne une référence à un élément de la liste. Cela permet la méthode à utiliser sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
   
 ### <a name="remarks"></a>Remarques  
  Le compteur de POSITION, `pos`, est mis à jour pour pointer vers l’élément précédent dans la liste, ou NULL si aucun élément plus. Dans les versions debug, un échec d’assertion se produit si `pos` est égal à NULL.  
@@ -439,12 +421,12 @@ const E& GetTail() const throw();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne une référence ou une copie de l’élément à la fin de la liste.  
+ Retourne une référence, ou une copie de l’élément à la fin de la liste.  
   
 ### <a name="remarks"></a>Remarques  
- Si la liste est **const**, `GetTail` retourne une copie de l’élément au début de la liste. Cela permet à la méthode doit être utilisé uniquement sur le côté droit d’une instruction d’assignation et protège la liste de toute modification.  
+ Si la liste est **const**, `GetTail` retourne une copie de l’élément au début de la liste. Cela permet à la méthode à être utilisé uniquement sur le côté droit d’une instruction d’assignation et protège la liste à partir de la modification.  
   
- Si la liste n’est pas **const**, `GetTail` renvoie une référence à l’élément au début de la liste. Cela permet la méthode à utiliser sur chaque côté d’une instruction d’assignation et donc les entrées de liste à modifier.  
+ Si la liste n’est pas **const**, `GetTail` retourne une référence à l’élément au début de la liste. Cela permet la méthode à utiliser sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
   
  Dans les versions debug, un échec d’assertion se produit si la fin de la liste de pointe avec la valeur NULL.  
   
@@ -462,10 +444,10 @@ POSITION GetTailPosition() const throw();
  Retourne la valeur POSITION correspondant à l’élément à la fin de la liste.  
   
 ### <a name="remarks"></a>Remarques  
- Si la liste est vide, la valeur renvoyée est NULL.  
+ Si la liste est vide, la valeur retournée est NULL.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities&#22;](../../atl/codesnippet/cpp/catllist-class_10.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#22](../../atl/codesnippet/cpp/catllist-class_10.cpp)]  
   
 ##  <a name="inargtype"></a>CAtlList::INARGTYPE  
  Type utilisé lorsqu’un élément est passé comme argument d’entrée.  
@@ -483,7 +465,7 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
   
 ### <a name="parameters"></a>Paramètres  
  `pos`  
- La valeur de POSITION après lequel le nouvel élément est inséré.  
+ La valeur de POSITION après lequel le nouvel élément doit être inséré.  
   
  `element`  
  L’élément à insérer.  
@@ -495,7 +477,7 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
  Dans les versions debug, un échec d’assertion se produit si la liste n’est pas valide, si l’insertion échoue, ou si une tentative est faite pour insérer l’élément après la fin.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities n °&23;](../../atl/codesnippet/cpp/catllist-class_11.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#23](../../atl/codesnippet/cpp/catllist-class_11.cpp)]  
   
 ##  <a name="insertbefore"></a>CAtlList::InsertBefore  
  Appelez cette méthode pour insérer un nouvel élément dans la liste avant la position spécifiée.  
@@ -518,7 +500,7 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
  Dans les versions debug, un échec d’assertion se produit si la liste n’est pas valide, si l’insertion échoue, ou si une tentative est faite pour insérer l’élément avant le début.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities&#24;](../../atl/codesnippet/cpp/catllist-class_12.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#24](../../atl/codesnippet/cpp/catllist-class_12.cpp)]  
   
 ##  <a name="isempty"></a>CAtlList::IsEmpty  
  Appelez cette méthode pour déterminer si la liste est vide.  
@@ -528,10 +510,10 @@ bool IsEmpty() const throw();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne true si la liste ne contient aucun objet, sinon false.  
+ Retourne la valeur true si la liste ne contient pas d’objets, sinon, false.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities&#25;](../../atl/codesnippet/cpp/catllist-class_13.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#25](../../atl/codesnippet/cpp/catllist-class_13.cpp)]  
   
 ##  <a name="movetohead"></a>CAtlList::MoveToHead  
  Appelez cette méthode pour déplacer l’élément spécifié au début de la liste.  
@@ -544,11 +526,11 @@ void MoveToHead(POSITION pos) throw();
  `pos`  
  La valeur de la POSITION de l’élément à déplacer.  
   
-### <a name="remarks"></a>Notes  
- L’élément spécifié est déplacé de sa position actuelle vers le début de la liste. Dans les versions debug, un échec d’assertion se produit si `pos` est égal à NULL.  
+### <a name="remarks"></a>Remarques  
+ L’élément spécifié est déplacée depuis sa position actuelle vers le début de la liste. Dans les versions debug, un échec d’assertion se produit si `pos` est égal à NULL.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities&#26;](../../atl/codesnippet/cpp/catllist-class_14.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#26](../../atl/codesnippet/cpp/catllist-class_14.cpp)]  
   
 ##  <a name="movetotail"></a>CAtlList::MoveToTail  
  Appelez cette méthode pour déplacer l’élément spécifié à la fin de la liste.  
@@ -562,7 +544,7 @@ void MoveToTail(POSITION pos) throw();
  La valeur de la POSITION de l’élément à déplacer.  
   
 ### <a name="remarks"></a>Remarques  
- L’élément spécifié est déplacé de sa position actuelle et la fin de la liste. Dans les versions debug, un échec d’assertion se produit si `pos` est égal à NULL.  
+ L’élément spécifié est déplacée depuis sa position actuelle et la fin de la liste. Dans les versions debug, un échec d’assertion se produit si `pos` est égal à NULL.  
   
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CAtlList::MoveToHead](#movetohead).  
@@ -574,8 +556,8 @@ void MoveToTail(POSITION pos) throw();
 void RemoveAll() throw();
 ```  
   
-### <a name="remarks"></a>Notes  
- Cette méthode supprime tous les éléments de la liste et libère la mémoire allouée. Dans les versions débogue une ATLASSERT ; sera déclenchée si tous les éléments ne sont pas supprimées ou si la structure de liste a été endommagée.  
+### <a name="remarks"></a>Remarques  
+ Cette méthode supprime tous les éléments de la liste et libère la mémoire allouée. Dans les versions débogue un ATLASSERT ; sera déclenchée si tous les éléments ne sont pas supprimés, ou si la structure de liste a été endommagée.  
   
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CAtlList::IsEmpty](#isempty).  
@@ -591,13 +573,13 @@ void RemoveAt(POSITION pos) throw();
  `pos`  
  La valeur de la POSITION de l’élément à supprimer.  
   
-### <a name="remarks"></a>Notes  
- L’élément référencé par `pos` est supprimé, et la mémoire est libérée. Il est acceptable d’utiliser `RemoveAt` pour supprimer l’en-tête ou la fin de la liste.  
+### <a name="remarks"></a>Remarques  
+ L’élément référencé par `pos` est supprimé, et la mémoire est libérée. Il est acceptable d’utiliser `RemoveAt` pour supprimer la tête ou queue de la liste.  
   
- Dans les versions debug, un échec d’assertion se produit si la liste n’est pas valide ou si la suppression de l’élément, la liste de mémoire qui ne fait pas partie de la structure de la liste.  
+ Dans les versions debug, un échec d’assertion se produit si la liste n’est pas valide ou si la liste de mémoire qui ne fait pas partie de la structure de la liste entraîne une suppression de l’élément.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[27 NVC_ATL_Utilities](../../atl/codesnippet/cpp/catllist-class_15.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#27](../../atl/codesnippet/cpp/catllist-class_15.cpp)]  
   
 ##  <a name="removehead"></a>CAtlList::RemoveHead  
  Appelez cette méthode pour supprimer l’élément au début de la liste.  
@@ -613,7 +595,7 @@ E RemoveHead();
  L’élément head est supprimé de la liste, et la mémoire est libérée. Une copie de l’élément est retournée. Dans les versions debug, un échec d’assertion se produit si la liste est vide.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities&#28;](../../atl/codesnippet/cpp/catllist-class_16.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#28](../../atl/codesnippet/cpp/catllist-class_16.cpp)]  
   
 ##  <a name="removeheadnoreturn"></a>CAtlList::RemoveHeadNoReturn  
  Appelez cette méthode pour supprimer l’élément au début de la liste sans retourner une valeur.  
@@ -638,11 +620,11 @@ E RemoveTail();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’élément à la fin de la liste.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  L’élément de fin est supprimé de la liste, et la mémoire est libérée. Une copie de l’élément est retournée. Dans les versions debug, un échec d’assertion se produit si la liste est vide.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities&#29;](../../atl/codesnippet/cpp/catllist-class_17.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#29](../../atl/codesnippet/cpp/catllist-class_17.cpp)]  
   
 ##  <a name="removetailnoreturn"></a>CAtlList::RemoveTailNoReturn  
  Appelez cette méthode pour supprimer l’élément à la fin de la liste sans retourner une valeur.  
@@ -672,10 +654,10 @@ void SetAt(POSITION pos, INARGTYPE element);
  La nouvelle valeur de l’élément.  
   
 ### <a name="remarks"></a>Remarques  
- Remplace la valeur existante par `element`. Dans les versions debug, un échec d’assertion se produit si `pos` est égal à NULL.  
+ Remplace la valeur existante avec `element`. Dans les versions debug, un échec d’assertion se produit si `pos` est égal à NULL.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[30 NVC_ATL_Utilities](../../atl/codesnippet/cpp/catllist-class_18.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#30](../../atl/codesnippet/cpp/catllist-class_18.cpp)]  
   
 ##  <a name="swapelements"></a>CAtlList::SwapElements  
  Appelez cette méthode pour remplacer les éléments de la liste.  
@@ -691,13 +673,12 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
  *pos2*  
  La deuxième valeur POSITION.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Échange les éléments à deux positions spécifiées. Dans les versions debug, un échec d’assertion se produit si une valeur de position est égale à NULL.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities&#31;](../../atl/codesnippet/cpp/catllist-class_19.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#31](../../atl/codesnippet/cpp/catllist-class_19.cpp)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [CList (classe)](../../mfc/reference/clist-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

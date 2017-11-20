@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- frexp
+apiname: frexp
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - frexp
 - _frexpl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _frexpl function
 - mantissas, floating-point variables
@@ -36,30 +33,15 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: c281f59ebf90030abf2046e8639135aa47fc6058
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: f463ee2e077d4d1cc90e4fe2fc04eeda025bb6a2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="frexp"></a>frexp
 Obtient la mantisse et l’exposant d’un nombre à virgule flottante.  
@@ -91,8 +73,8 @@ long double frexp(
 ## <a name="return-value"></a>Valeur de retour  
  `frexp` retourne la mantisse. Si `x` a la valeur 0, la fonction retourne 0 pour la mantisse et l’exposant. Si `expptr` a la valeur `NULL`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, cette fonction affecte à `errno` la valeur `EINVAL` et retourne 0.  
   
-## <a name="remarks"></a>Notes  
- La fonction `frexp` décompose la valeur à virgule flottante (`x`) en une mantisse (`m`) et un exposant (`n`), de manière à ce que la valeur absolue de `m` soit supérieure ou égale à 0,5 et inférieure à 1,0 et que soit respectée l’égalité `x` = `m`*2<sup>n</sup>. L’exposant entier `n` est stocké à l’emplacement désigné par `expptr`.  
+## <a name="remarks"></a>Remarques  
+ Le `frexp` fonction décompose la valeur à virgule flottante (`x`) dans une mantisse (`m`) et un exposant (`n`), telle que la valeur absolue de `m` est supérieur ou égal à 0,5 et inférieur à 1,0 et `x`  =  `m`* 2<sup>n</sup>. L’exposant entier `n` est stocké à l’emplacement désigné par `expptr`.  
   
  C++ autorisant la surcharge, vous pouvez appeler des surcharges de `frexp`. Dans un programme C, `frexp` accepte un double et un entier et retourne un double systématiquement.  
   

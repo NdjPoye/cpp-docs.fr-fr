@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,38 +26,21 @@ apitype: DLLExport
 f1_keywords:
 - _mbstowcs_s_l
 - mbstowcs_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mbstowcs_s_l function
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 8858827e65ad342f2c48dba26b3be7f7f9dd2ca3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: 4501b310f71921c9e79910f0585d85eb647f3e4f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s, _mbstowcs_s_l
 Convertit une séquence de caractères multioctets en séquence correspondante de caractères larges. Versions de [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md) intégrant les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -142,9 +124,9 @@ errno_t _mbstowcs_s_l(
   
  Si `count` correspond à la valeur spéciale [_TRUNCATE](../../c-runtime-library/truncate.md), `mbstowcs_s` convertit la plus grande partie possible de la chaîne en fonction de la capacité de la mémoire tampon de destination, tout en laissant de l’espace pour une marque de fin Null.  
   
- Si la fonction `mbstowcs_s` convertit correctement la chaîne source, elle place la taille en caractères larges de la chaîne convertie, y compris la marque de fin Null, dans `*``pReturnValue` (à condition que `pReturnValue` n’ait pas la valeur `NULL`). Cela se produit même si l'argument `wcstr` a la valeur `NULL`, et permet de déterminer la taille de mémoire tampon requise. Notez que si `wcstr` a la valeur `NULL`, `count` est ignoré et `sizeInWords` doit avoir la valeur 0.  
+ Si la fonction `mbstowcs_s` convertit correctement la chaîne source, elle place la taille en caractères larges de la chaîne convertie, y compris la marque de fin Null, dans `*pReturnValue` (à condition que `pReturnValue` n’ait pas la valeur `NULL`). Cela se produit même si l'argument `wcstr` a la valeur `NULL`, et permet de déterminer la taille de mémoire tampon requise. Notez que si `wcstr` a la valeur `NULL`, `count` est ignoré et `sizeInWords` doit avoir la valeur 0.  
   
- Si la fonction `mbstowcs_s` rencontre un caractère multioctet non valide, elle affecte la valeur 0 à `*``pReturnValue`, définit la mémoire tampon de destination sur une chaîne vide, affecte à `errno` la valeur `EILSEQ` et retourne `EILSEQ`.  
+ Si la fonction `mbstowcs_s` rencontre un caractère multioctet non valide, elle affecte la valeur 0 à `*pReturnValue`, définit la mémoire tampon de destination sur une chaîne vide, affecte à `errno` la valeur `EILSEQ` et retourne `EILSEQ`.  
   
  Si les séquences pointées par `mbstr` et `wcstr` se chevauchent, le comportement de `mbstowcs_s` n'est pas défini.  
   

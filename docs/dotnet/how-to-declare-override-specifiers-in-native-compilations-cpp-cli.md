@@ -1,41 +1,39 @@
 ---
-title: "Comment&#160;: d&#233;clarer des sp&#233;cificateurs de substitution dans les compilations natives (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "spécificateurs de remplacement dans une compilation native, remplacer"
+title: "Comment : déclarer des spécificateurs de substitution (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 07d612e97a6aaf3ff53116415b8eedc7324f78ea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: d&#233;clarer des sp&#233;cificateurs de substitution dans les compilations natives (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[sceller](../windows/sealed-cpp-component-extensions.md), [résumer](../windows/abstract-cpp-component-extensions.md), et [substituter](../windows/override-cpp-component-extensions.md) sont disponibles dans les compilations qui n'utilisent pas **\/ZW** ou [\/clr](../build/reference/clr-common-language-runtime-compilation.md).  
+# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Comment : déclarer des spécificateurs de substitution dans les compilations natives (C++/CLI)
+[sealed](../windows/sealed-cpp-component-extensions.md), [abstraite](../windows/abstract-cpp-component-extensions.md), et [remplacer](../windows/override-cpp-component-extensions.md) sont disponibles dans les compilations qui n’utilisent pas **/ZW** ou [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
   
 > [!NOTE]
->  La langue norme ISO C\+\+11 a l'identification de [substitution](../cpp/override-specifier.md) et l'identification d' [édition intégrale](../cpp/final-specifier.md), et les deux sont pris en charge dans l'utilisateur Visual Studio `final` au lieu de `sealed` dans le code qui est destiné à être compilé comme étant réservé au format natif.  
+>  La norme ISO C ++ 11 Standard langue a la [remplacer](../cpp/override-specifier.md) identificateur et le [final](../cpp/final-specifier.md) identificateur et les deux sont pris en charge dans Visual Studio utilisez `final` au lieu de `sealed` dans le code qui est destiné à être compilé en mode natif uniquement.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Description  
- L'exemple suivant indique que `sealed` est valide dans des compilations natives.  
+### <a name="description"></a>Description  
+ L’exemple suivant montre que `sealed` n’est valide dans les compilations natives.  
   
-### Code  
+### <a name="code"></a>Code  
   
-```  
+```cpp  
 // sealed_native_keyword.cpp  
 #include <stdio.h>  
 __interface I1 {  
@@ -56,14 +54,14 @@ public:
 };  
 ```  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Description  
- Le prochain exemple indique que `override` est valide dans des compilations natives.  
+### <a name="description"></a>Description  
+ L’exemple suivant montre que `override` n’est valide dans les compilations natives.  
   
-### Code  
+### <a name="code"></a>Code  
   
-```  
+```cpp  
 // override_native_keyword.cpp  
 #include <stdio.h>  
 __interface I1 {  
@@ -77,14 +75,14 @@ public:
 };  
 ```  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Description  
- Cet exemple indique que `abstract` est valide dans des compilations natives.  
+### <a name="description"></a>Description  
+ Cet exemple montre que `abstract` n’est valide dans les compilations natives.  
   
-### Code  
+### <a name="code"></a>Code  
   
-```  
+```cpp  
 // abstract_native_keyword.cpp  
 class X abstract {};  
   
@@ -93,5 +91,5 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Spécificateurs de substitution](../windows/override-specifiers-cpp-component-extensions.md)

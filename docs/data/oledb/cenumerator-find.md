@@ -1,55 +1,54 @@
 ---
-title: "CEnumerator::Find | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CEnumerator::Find"
-  - "ATL::CEnumerator::Find"
-  - "ATL.CEnumerator.Find"
-  - "CEnumerator.Find"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Find (méthode)"
+title: CEnumerator::Find | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CEnumerator::Find
+- ATL::CEnumerator::Find
+- ATL.CEnumerator.Find
+- CEnumerator.Find
+dev_langs: C++
+helpviewer_keywords: Find method
 ms.assetid: 69a153af-d6c3-40fd-9018-27c7d2f344c6
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8accf88c6391d782aacbc691f75433b7c6398e56
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# CEnumerator::Find
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Recherche le nom spécifié parmi les fournisseurs disponibles.  
+# <a name="cenumeratorfind"></a>CEnumerator::Find
+Recherche d’un nom spécifié parmi les fournisseurs disponibles.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      bool Find(   
-   TCHAR* szSearchName    
+      bool Find(   
+   TCHAR* szSearchName    
 ) throw( );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *szSearchName*  
- \[in\] Nom à rechercher.  
+ [in] Le nom à rechercher.  
   
-## Valeur de retour  
- **true** si le nom est trouvé.  sinon, **false**.  
+## <a name="return-value"></a>Valeur de retour  
+ **true** si le nom a été trouvé. dans le cas contraire, **false**.  
   
-## Notes  
- Les cartes de ce nom au membre de **SOURCES\_NAME** de l'interface [ISourcesRowset](https://msdn.microsoft.com/en-us/library/ms715969.aspx).  
+## <a name="remarks"></a>Remarques  
+ Ce nom correspond à la **SOURCES_NAME** membre de la [ISourcesRowset](https://msdn.microsoft.com/en-us/library/ms715969.aspx) interface.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CEnumerator, classe](../../data/oledb/cenumerator-class.md)

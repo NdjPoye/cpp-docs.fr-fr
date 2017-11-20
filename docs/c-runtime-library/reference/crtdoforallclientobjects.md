@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtDoForAllClientObjects
+apiname: _CrtDoForAllClientObjects
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,36 +24,20 @@ f1_keywords:
 - _CrtDoForAllClientObjects
 - CrtDoForAllClientObjects
 - crtdbg/_CrdDoForAllClientObjects
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CrtDoForAllClientObjects function
 - CrtDoForAllClientObjects function
 ms.assetid: d0fdb835-3cdc-45f1-9a21-54208e8df248
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: df96a24b04473099daaca29472f90c9770181e82
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: a5f48fd19e4170ede161935ea39197741586b66e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
 Appelle une fonction fournie par l'application pour tous les types `_CLIENT_BLOCK` du tas (version de débogage uniquement).  

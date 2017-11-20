@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,37 +23,21 @@ f1_keywords:
 - ATLWIN/ATL::CContainedWindowT::m_lpszClassName
 - ATLWIN/ATL::CContainedWindowT::m_pfnSuperWindowProc
 - ATLWIN/ATL::CContainedWindowT::m_pObject
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CContainedWindow class
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ab2b20591ded82dd17a38f5258dfe593f7e88fc8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: d3f54b8ea828513dfbf25e5af1eeea38751c7c2b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccontainedwindowt-class"></a>Classe de CContainedWindowT
 Cette classe implémente une fenêtre contenue dans un autre objet.  
@@ -121,20 +104,20 @@ class CContainedWindowT : public TBase
   
  Lorsque vous utilisez la **ajouter un contrôle basé sur** option dans l’Assistant Projet ATL, l’Assistant ajoute automatiquement un `CContainedWindowT` membre de données à la classe implémentant le contrôle. L’exemple suivant montre comment la fenêtre contenue est déclarée :  
   
- [!code-cpp[NVC_ATL_Windowing #38](../../atl/codesnippet/cpp/ccontainedwindowt-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#38](../../atl/codesnippet/cpp/ccontainedwindowt-class_1.h)]  
   
- [!code-cpp[NVC_ATL_Windowing #39](../../atl/codesnippet/cpp/ccontainedwindowt-class_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#39](../../atl/codesnippet/cpp/ccontainedwindowt-class_2.h)]  
   
- [!code-cpp[# NVC_ATL_Windowing 40](../../atl/codesnippet/cpp/ccontainedwindowt-class_3.h)]  
+ [!code-cpp[NVC_ATL_Windowing#40](../../atl/codesnippet/cpp/ccontainedwindowt-class_3.h)]  
   
 |Pour plus d'informations sur|Voir|  
 |--------------------------------|---------|  
 |Création de contrôles|[Didacticiel ATL](../../atl/active-template-library-atl-tutorial.md)|  
 |Utilisation de fenêtres dans ATL|[ATL, classes de fenêtre](../../atl/atl-window-classes.md)|  
 |Assistant Projet ATL|[Création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595) et les rubriques suivantes dans le[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]|  
+|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595) et les rubriques suivantes dans le SDK Windows|  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `TBase`  
   
  `CContainedWindowT`  
@@ -237,10 +220,10 @@ HWND Create(
  [in] Spécifie le nom de la fenêtre. La valeur par défaut est **NULL**.  
   
  `dwStyle`  
- [in] Le style de la fenêtre. La valeur par défaut est **WS_CHILD | WS_VISIBLE**. Pour obtenir la liste des valeurs possibles, consultez [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Le style de la fenêtre. La valeur par défaut est **WS_CHILD &#124; WS_VISIBLE**. Pour obtenir la liste des valeurs possibles, consultez [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) dans le Kit de développement logiciel Windows.  
   
  `dwExStyle`  
- [in] Le style de fenêtre étendus. La valeur par défaut est 0, ce qui signifie aucun style étendu. Pour obtenir la liste des valeurs possibles, consultez [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Le style de fenêtre étendus. La valeur par défaut est 0, ce qui signifie aucun style étendu. Pour obtenir la liste des valeurs possibles, consultez [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le Kit de développement logiciel Windows.  
   
  `MenuOrID`  
  [in] Pour une fenêtre enfant, l’identificateur de la fenêtre. Pour une fenêtre de niveau supérieur, un descripteur de menu de la fenêtre. La valeur par défaut est **0 u**.  
@@ -251,7 +234,7 @@ HWND Create(
 ### <a name="return-value"></a>Valeur de retour  
  En cas de réussite, le handle de fenêtre qui vient d’être créé ; dans le cas contraire, **NULL**.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Le nom de classe de fenêtre existante est enregistré dans [m_lpszClassName](#m_lpszclassname). **Créer** crée ensuite une fenêtre basée sur cette nouvelle classe. La fenêtre qui vient d’être créée est automatiquement joint à la `CContainedWindowT` objet.  
   
 > [!NOTE]
@@ -304,7 +287,7 @@ const _ATL_MSG* GetCurrentMessage();
 DWORD m_dwMsgMapID;
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette table des messages doit être déclarée dans l’objet conteneur.  
   
  La table des messages par défaut déclarée avec [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), est toujours identifié par zéro. Une autre table des messages déclarée avec [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), est identifié par `msgMapID`.  
@@ -318,7 +301,7 @@ DWORD m_dwMsgMapID;
 LPTSTR m_lpszClassName;
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Lorsque vous créez une fenêtre, [créer](#create) enregistre une nouvelle classe de fenêtre qui est basée sur cette classe existante mais utilise [CContainedWindowT::WindowProc](#windowproc).  
   
  `m_lpszClassName`est initialisé par le constructeur. Pour obtenir un exemple, consultez la [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) vue d’ensemble.  
@@ -381,7 +364,7 @@ BOOL SubclassWindow(HWND hWnd);
 >  N’appelez pas `SubclassWindow` si vous avez déjà appelé [créer](#create).  
   
 ##  <a name="switchmessagemap"></a>CContainedWindowT::SwitchMessageMap  
- Modifie le mappage de message qui permet de traiter les messages de la fenêtre de la relation contenant-contenu.  
+ Modifie le mappage de message est utilisé pour traiter les messages de la fenêtre de la relation contenant-contenu.  
   
 ```
 void SwitchMessageMap(DWORD dwMsgMapID);
@@ -391,7 +374,7 @@ void SwitchMessageMap(DWORD dwMsgMapID);
  `dwMsgMapID`  
  [in] Identificateur de la carte de message. Pour utiliser le mappage de message par défaut déclarée avec [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), transférez la valeur zéro. Pour utiliser une autre table des messages déclarée avec [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), passer `msgMapID`.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  La table des messages doit être définie dans l’objet conteneur.  
   
  Initialement, vous spécifiez l’identificateur de carte dans le constructeur.  
@@ -440,7 +423,7 @@ static LRESULT CALLBACK WindowProc(
 ### <a name="return-value"></a>Valeur de retour  
  Le résultat du traitement du message.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  `WindowProc`Indique les messages à la table des messages identifié par [m_dwMsgMapID](#m_dwmsgmapid). Si nécessaire, `WindowProc` appelle [DefWindowProc](#defwindowproc) pour le traitement des messages supplémentaires.  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -450,4 +433,3 @@ static LRESULT CALLBACK WindowProc(
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

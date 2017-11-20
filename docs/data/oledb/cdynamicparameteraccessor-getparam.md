@@ -1,77 +1,76 @@
 ---
-title: "CDynamicParameterAccessor::GetParam | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicParameterAccessor::GetParam"
-  - "ATL.CDynamicParameterAccessor.GetParam"
-  - "CDynamicParameterAccessor::GetParam<ctype>"
-  - "CDynamicParameterAccessor.GetParam"
-  - "GetParam"
-  - "ATL::CDynamicParameterAccessor::GetParam<ctype>"
-  - "ATL::CDynamicParameterAccessor::GetParam"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetParam (méthode)"
+title: CDynamicParameterAccessor::GetParam | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicParameterAccessor::GetParam
+- ATL.CDynamicParameterAccessor.GetParam
+- CDynamicParameterAccessor::GetParam<ctype>
+- CDynamicParameterAccessor.GetParam
+- GetParam
+- ATL::CDynamicParameterAccessor::GetParam<ctype>
+- ATL::CDynamicParameterAccessor::GetParam
+dev_langs: C++
+helpviewer_keywords: GetParam method
 ms.assetid: 893a6bf8-7b55-4f6d-8a10-a43b13be7f56
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c03e57dd492263ef9ad170e08b49c3bd54d3b556
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicParameterAccessor::GetParam
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retrieves the nonstring data for a specified parameter from the parameter buffer.  
+# <a name="cdynamicparameteraccessorgetparam"></a>CDynamicParameterAccessor::GetParam
+Récupère les données de chaîne pour un paramètre spécifique à partir de la mémoire tampon de paramètre.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      template < class ctype > bool GetParam(   
-   DBORDINAL nParam,   
-   ctype* pData    
+      template < class ctype > bool GetParam(   
+   DBORDINAL nParam,   
+   ctype* pData    
 ) const throw( );  
-template < class ctype > bool GetParam(   
-   TCHAR* pParamName,   
-   ctype* pData    
+template < class ctype > bool GetParam(   
+   TCHAR* pParamName,   
+   ctype* pData    
 ) const throw( );  
-void* GetParam(   
-   DBORDINAL nParam    
+void* GetParam(   
+   DBORDINAL nParam    
 ) const throw( );  
-void* GetParam(   
-   TCHAR* pParamName    
+void* GetParam(   
+   TCHAR* pParamName    
 ) const throw( );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `ctype`  
- A templated parameter that is the data type.  
+ Un paramètre basé sur un modèle qui est le type de données.  
   
  `nParam`  
- \[in\] The parameter number \(offset from 1\).  Parameter 0 is reserved for return values.  The parameter number is the index of the parameter based on its order in the SQL or stored procedure call.  See [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) for an example.  
+ [in] Le numéro de paramètre (offset à partir de 1). Le paramètre 0 est réservé pour les valeurs de retournés. Le paramètre est l’index du paramètre en fonction de son ordre dans le SQL ou d’un appel de procédure stockée. Consultez [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) pour obtenir un exemple.  
   
  `pParamName`  
- \[in\] Nom du paramètre.  
+ [in] Le nom du paramètre.  
   
  `pData`  
- \[out\] The pointer to the memory containing the data retrieved from the buffer.  
+ [out] Pointeur vers la mémoire contenant les données extraites de la mémoire tampon.  
   
-## Valeur de retour  
- For nontemplated versions, points to the memory containing the data retrieved from the buffer.  For templated versions, returns **true** on success or **false** on failure.  
+## <a name="return-value"></a>Valeur de retour  
+ Pour les versions non, pointe vers la mémoire contenant les données récupérées à partir de la mémoire tampon. Pour les versions basées sur un modèle, retourne **true** en cas de réussite ou **false** en cas d’échec.  
   
- Use `GetParam` to retrieve nonstring parameter data from the buffer.  Use [GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md) to retrieve string parameter data from the buffer.  
+ Utilisez `GetParam` pour récupérer des données de paramètre de chaîne à partir de la mémoire tampon. Utilisez [GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md) pour récupérer les données de paramètre de chaîne à partir de la mémoire tampon.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CDynamicParameterAccessor, classe](../../data/oledb/cdynamicparameteraccessor-class.md)

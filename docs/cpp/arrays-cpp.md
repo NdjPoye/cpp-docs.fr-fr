@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: efd124254ece8f863afee13e132eea7945525a0e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d925165e7345d715d74cdd213b01d3108be8e35d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="arrays-c"></a>Tableaux (C++)
 Un tableau est une collection d’objets similaires. Le cas le plus simple d'un tableau est celui d'un vecteur, qui peut être déclaré par la séquence suivante :  
@@ -56,7 +53,7 @@ decl-specifier identifier [ constant-expression ]
   
  3. Initialiseur facultatif.  Consultez [initialiseurs](../cpp/initializers.md).  
   
- Le nombre d'éléments du tableau est fourni par l'expression constante. Le premier élément du tableau est l’élément 0, et le dernier élément est le (*n*-1) élément, où * n * est le nombre d’éléments du tableau peut contenir. Le *expression constante* doit être de type intégral et doit être supérieure à 0. Un tableau de taille zéro est autorisé uniquement lorsque le tableau est le dernier champ dans un `struct` ou **union** et que les extensions Microsoft (/Ze) sont activées.  
+ Le nombre d'éléments du tableau est fourni par l'expression constante. Le premier élément du tableau est l’élément 0, et le dernier élément est le (*n*-1) élément, où  *n*  est le nombre d’éléments du tableau peut contenir. Le *expression constante* doit être de type intégral et doit être supérieure à 0. Un tableau de taille zéro est autorisé uniquement lorsque le tableau est le dernier champ dans un `struct` ou **union** et que les extensions Microsoft (/Ze) sont activées.  
   
  L'exemple suivant montre comment définir un tableau au moment de l'exécution :  
   

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -35,8 +34,7 @@ f1_keywords:
 - cosh
 - cosl
 - coshf
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - cosines
 - cosl function
@@ -50,30 +48,15 @@ helpviewer_keywords:
 - coshl function
 - hyperbolic functions
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: f1fb949ba33299a8d18c41341b5fd76a776ee387
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: c37223f67e5c6d03aa7401870fb7ccbbd111cee3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cos-cosf-cosl-cosh-coshf-coshl"></a>cos, cosf, cosl, cosh, coshf, coshl
 Calcule le cosinus (`cos`, `cosf` ou `cosl`), ou le cosinus hyperbolique (`cosh`, `coshf` ou `coshl`).  

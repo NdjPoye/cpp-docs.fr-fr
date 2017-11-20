@@ -1,42 +1,42 @@
 ---
-title: "Avoidance of Heap Contention | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "heap contention"
+title: "Éviter la Contention de tas | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: heap contention
 ms.assetid: 797129d7-5f8c-4b0e-8974-bb93217e9ab5
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 73858235f949c07da646944efcae6e846a96d900
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avoidance of Heap Contention
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="avoidance-of-heap-contention"></a>Éviter la Contention de tas
+Les gestionnaires de chaînes par défaut fournis par MFC et ATL sont des wrappers simples sur un segment de mémoire globale. Ce tas global est complètement thread-safe, ce qui signifie que plusieurs threads peuvent allouer et libérer de la mémoire simultanément sans endommager le tas. Pour accroître la sécurité des threads, le tas doit sérialiser l’accès à lui-même. Cela est généralement effectuée avec une section critique ou d’un mécanisme de verrouillage semblable. Chaque fois que deux threads essaient d’accéder au tas simultanément, un thread est bloqué jusqu'à la fin de la demande de l’autre thread. Pour de nombreuses applications, cette situation se produit rarement et l’impact sur les performances du tas mécanisme de verrouillage est négligeable. Toutefois, pour les applications qui accèdent fréquemment au tas à partir de plusieurs threads contention pour le verrouillage du tas peut ralentir l’application de s’exécuter plus lentement que s’il s’agit monothread (même sur les ordinateurs avec plusieurs unités centrales).  
+  
+ Les applications qui utilisent [CStringT](../atl-mfc-shared/reference/cstringt-class.md) sont particulièrement sensibles à la contention de tas, car les opérations sur `CStringT` objets nécessitent souvent les opérations de réallocation de la mémoire tampon de chaîne.  
+  
+ Une façon de réduire la contention de tas entre les threads est de sorte que chaque thread alloue des chaînes à partir d’un segment de mémoire privée, locales de thread. Tant que les chaînes allouées avec allocateur d’un thread particulier sont utilisées uniquement dans ce thread, l’allocateur pas besoin d’être thread-safe.  
+  
+## <a name="example"></a>Exemple  
+ L’exemple ci-dessous illustre une procédure de thread qui alloue son propre tas non thread-safe à utiliser pour les chaînes sur ce thread :  
+  
+ [!code-cpp[NVC_ATLMFC_Utilities#182](../atl-mfc-shared/codesnippet/cpp/avoidance-of-heap-contention_1.cpp)]  
+  
+## <a name="comments"></a>Commentaires  
+ Plusieurs threads peuvent être exécutés à l’aide de cette même procédure de thread, mais dans la mesure où chaque thread possède son propre tas il n’existe aucun conflit entre les threads. En outre, le fait que chaque segment de mémoire n’est pas thread-safe donne une augmentation des performances mesurable, même si une seule copie du thread est en cours d’exécution. Voici le résultat du tas ne pas à l’aide d’opérations verrouillées coûteuses pour vous protéger contre les accès simultanés.  
+  
+ Pour une procédure de thread plus complexe, il peut être judicieux de stocker un pointeur vers le Gestionnaire de chaînes du thread dans un emplacement de stockage local (TLS) du thread. Cela permet aux autres fonctions appelées par la procédure de thread pour accéder au Gestionnaire de chaîne du thread.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Gestion de la mémoire avec CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
 
-Les gestionnaires de chaînes par défaut fournis par les MFC et ATL sont des wrappers simples sur un tas global.  Le tas global est complètement thread\-safe, ce qui signifie que plusieurs threads peuvent allouer et libérer de la mémoire de celle\-ci simultanément sans endommager le tas.  Pour fournir la sécurité des threads, le tas doit sérialiser l'accès à lui\-même.  Cela est généralement faire avec une section critique ou un dispositif de verrouillage similaire.  Chaque fois que le test de deux threads pour accéder au tas en même temps, un thread est bloqué jusqu'à ce que de l'autre la demande thread soit terminé.  Pour de nombreuses applications, cette situation se produit rarement et l'impact sur les performances du module de verrouillage du tas est négligeable.  Toutefois, pour les applications qui accèdent souvent le tas de conflit de threads de verrouillage du tas peut provoquer l'application d'exécuter plus lentement que s'il était monothread \(même sur les ordinateurs avec plusieurs processeurs\).  
-  
- Les applications qui utilisent [CStringT](../atl-mfc-shared/reference/cstringt-class.md) sont particulièrement susceptibles de conflit de tas car les opérations sur les objets d' `CStringT` requièrent souvent une redistribution de la mémoire tampon de chaîne.  
-  
- Une façon d'alléger le conflit de tas entre les threads consiste à allouer chaque thread les chaînes d'un privé, tas de thread local.  Comme les chaînes allouées avec l'allocateur d'un thread particulier sont utilisées uniquement dans ce thread, l'allocateur n'a pas besoin d'être thread\-safe.  
-  
-## Exemple  
- L'exemple suivant affiche une procédure de thread qui alloue son propre tas privé non thread\-safe à utiliser pour les chaînes sur ce thread :  
-  
- [!code-cpp[NVC_ATLMFC_Utilities#182](../atl-mfc-shared/codesnippet/CPP/avoidance-of-heap-contention_1.cpp)]  
-  
-## Commentaires  
- Les threads peuvent exécuter à l'aide de cette même procédure de thread mais étant donné que chaque thread possède son propre tas aucun conflit entre les threads.  En outre, le fait que chaque tas n'est pas thread\-safe donne une augmentation des performances mesurable même si une seule copie du thread s'exécute.  C'est le résultat du tas pas à des opérations verrouillées chères protéger l'accès simultané.  
-  
- Pour une procédure plus complexe de thread, il peut être utile de stocker un pointeur vers le gestionnaire de chaînes du thread dans un emplacement de \(TLS\) de stockage local des threads.  Cela permet d'autres fonctions appelées par la procédure de thread pour accéder au gestionnaire de chaînes du thread.  
-  
-## Voir aussi  
- [Memory Management with CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)

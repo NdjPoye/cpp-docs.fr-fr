@@ -1,32 +1,30 @@
 ---
-title: "BEGIN_PARAM_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_PARAM_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_PARAM_MAP (macro)"
+title: BEGIN_PARAM_MAP | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_PARAM_MAP
+dev_langs: C++
+helpviewer_keywords: BEGIN_PARAM_MAP macro
 ms.assetid: 32f3f70e-c7c6-4b80-ab98-e02c8eb3a894
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0afb13e4d9d89f819b4f88138e8ac8cbc650c7a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# BEGIN_PARAM_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Marque le début des entrées de mappage de paramètres.  
+# <a name="beginparammap"></a>BEGIN_PARAM_MAP
+Marque le début des entrées de mappage de paramètre.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -36,20 +34,20 @@ x
   
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *x*  
- \[in\] Le nom de la classe d'enregistrement d'utilisateur.  
+ [in] Nom de la classe d’enregistrement utilisateur.  
   
-## Notes  
- Les paramètres sont utilisés par des [commandes](https://msdn.microsoft.com/en-us/library/ms724608.aspx).  
+## <a name="remarks"></a>Remarques  
+ Les paramètres sont utilisés par [commandes](https://msdn.microsoft.com/en-us/library/ms724608.aspx).  
   
-## Exemple  
- Consultez l'exemple de la macro [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md).  
+## <a name="example"></a>Exemple  
+ Consultez l’exemple de la [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) (macro).  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Macros et fonctions globales pour les modèles du consommateur OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [END\_PARAM\_MAP](../../data/oledb/end-param-map.md)   
- [SET\_PARAM\_TYPE](../../data/oledb/set-param-type.md)
+ [END_PARAM_MAP](../../data/oledb/end-param-map.md)   
+ [SET_PARAM_TYPE](../../data/oledb/set-param-type.md)

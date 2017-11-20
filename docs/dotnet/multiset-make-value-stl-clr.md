@@ -1,45 +1,43 @@
 ---
-title: "multiset::make_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::make_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_value (membre) (STL/CLR)"
+title: multiset::make_value (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::make_value
+dev_langs: C++
+helpviewer_keywords: make_value member [STL/CLR]
 ms.assetid: 385ded5b-65bf-4806-8c3d-a4129a05f612
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9d9a5113de1dc1fd9ed8729dba544dc9f654bfc0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::make_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multisetmakevalue-stlclr"></a>multiset::make_value (STL/CLR)
 Construit un objet de valeur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 static value_type make_value(key_type key);  
 ```  
   
-#### Paramètres  
- key  
- Valeur clé à utiliser.  
+#### <a name="parameters"></a>Paramètres  
+ clé  
+ Valeur de clé à utiliser.  
   
-## Notes  
- La méthode retourne un objet `value_type` dont la clé est `key`.  Vous l'utilisez pour composer un objet utilisable avec plusieurs autres méthodes.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre retourne un `value_type` objet dont la clé est `key`. Il permet de composer un objet pouvant être utilisé avec plusieurs autres fonctions membres.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_multiset_make_value.cpp   
@@ -63,13 +61,16 @@ int main()
   
 ```  
   
-  **a b c**   
-## Configuration requise  
- **En\-tête :** \<cliext\/set\>  
+```Output  
+a b c  
+```  
   
- **Espace de nom :** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/set >  
   
-## Voir aussi  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::key\_type](../dotnet/multiset-key-type-stl-clr.md)   
- [multiset::value\_type](../dotnet/multiset-value-type-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::KEY_TYPE (STL/CLR)](../dotnet/multiset-key-type-stl-clr.md)   
+ [multiset::value_type (STL/CLR)](../dotnet/multiset-value-type-stl-clr.md)

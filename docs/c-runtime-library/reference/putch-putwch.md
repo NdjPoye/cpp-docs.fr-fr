@@ -1,58 +1,58 @@
 ---
-title: "_putch, _putwch | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_putwch"
-  - "_putch"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-conio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_putch"
-  - "putwch"
-  - "_putwch"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_putch (fonction)"
-  - "_putwch (fonction)"
-  - "caractères, écrire"
-  - "console, écrire des caractères dans"
-  - "putch (fonction)"
-  - "putwch (fonction)"
+title: _putch, _putwch | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _putwch
+- _putch
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-conio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _putch
+- putwch
+- _putwch
+dev_langs: C++
+helpviewer_keywords:
+- _putch function
+- characters, writing
+- putwch function
+- _putwch function
+- putch function
+- console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 74a864aba662d17a5b69d6cc0bdaf6f260e15872
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# _putch, _putwch
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="putch-putwch"></a>_putch, _putwch
 Écrit un caractère dans la console.  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime.  Pour plus d'informations, consultez [Fonctions CRT non prises en charge avec \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -60,44 +60,44 @@ caps.handback.revision: 19
 int c   
 );  
 wint_t _putwch(  
-   wchar_t c  
+   wchar_t c  
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `c`  
- Caractère à envoyer en sortie.  
+ Caractère à sortir.  
   
-## Valeur de retour  
- En cas de réussite, retourne `c`.  Si `_putch` échoue, elle retourne `EOF`; si **\_putwch** échoue, elle retourne **WEOF**.  
+## <a name="return-value"></a>Valeur de retour  
+ Retourne `c` en cas de réussite. Si `_putch` échoue, la valeur `EOF` est retournée ; si **_putwch** échoue, la valeur retournée est **WEOF**.  
   
-## Notes  
- Ces fonctions écrivent le caractère `c` directement dans la console, sans le mettre en mémoire tampon.  Dans Windows NT, **\_putwch**écrit les caractères Unicode à l'aide des paramètres régionaux de console.  
+## <a name="remarks"></a>Notes  
+ Ces fonctions écrivent le caractère `c` directement, sans mise en mémoire tampon, dans la console. Dans Windows NT, **_putwch** écrit des caractères Unicode en utilisant les paramètres régionaux actifs de la console.  
   
- Les versions avec le suffixe **\_nolock** sont identiques mais elles ne sont pas protégées contre les interférences en provenance d'autres threads.  Pour plus d'informations, consultez `_putch_nolock`, `_putwch_nolock`.  
+ Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles ne sont pas protégées contre les interférences avec d’autres threads. Pour plus d'informations, consultez `_putch_nolock`, `_putwch_nolock`.  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine Tchar.h|\_UNICODE et \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|-------------------------------------|-------------------|----------------------|  
-|**\_puttch**|`_putch`|`_putch`|**\_putwch**|  
+|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
+|**_puttch**|`_putch`|`_putch`|**_putwch**|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_putch`|\<conio.h\>|  
-|**\_putwch**|\<conio.h\>|  
+|`_putch`|\<conio.h>|  
+|**_putwch**|\<conio.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Bibliothèques  
+## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemple  
- Consultez l'exemple de [\_getch](../../c-runtime-library/reference/getch-getwch.md).  
+## <a name="example"></a>Exemple  
+ Consultez l’exemple relatif à [_getch](../../c-runtime-library/reference/getch-getwch.md).  
   
-## Voir aussi  
- [Console et port E\/S](../../c-runtime-library/console-and-port-i-o.md)   
- [\_cprintf, \_cprintf\_l, \_cwprintf, \_cwprintf\_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [\_getch, \_getwch](../../c-runtime-library/reference/getch-getwch.md)
+## <a name="see-also"></a>Voir aussi  
+ [E/S de console et de port](../../c-runtime-library/console-and-port-i-o.md)   
+ [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
+ [_getch, _getwch](../../c-runtime-library/reference/getch-getwch.md)

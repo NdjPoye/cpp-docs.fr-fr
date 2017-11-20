@@ -1,32 +1,30 @@
 ---
-title: "hash_map::insert (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre insert [STL/CLR]"
+title: hash_map::Insert (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::insert
+dev_langs: C++
+helpviewer_keywords: insert member [STL/CLR]
 ms.assetid: 52926ec7-ad4e-4791-a043-46136ee40a69
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f50f2791a7d40f6ccc39d3fef221eeb7faa689b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::insert (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmapinsert-stlclr"></a>hash_map::insert (STL/CLR)
 Ajoute des éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 cliext::pair<iterator, bool> insert(value_type val);  
@@ -36,36 +34,36 @@ template<typename InIter>
 void insert(System::Collections::Generic::IEnumerable<value_type>^ right);  
 ```  
   
-#### Paramètres  
- premièrement  
- Début de la série à insérer.  
+#### <a name="parameters"></a>Paramètres  
+ premier  
+ Début de la plage à insérer.  
   
  last  
- Fin de la série à insérer.  
+ Fin de la plage à insérer.  
   
- right  
- Enumération à insérer.  
+ droite  
+ Énumération à insérer.  
   
- val  
- Valeur clé à insérer.  
+ Val  
+ Valeur de clé à insérer.  
   
- where  
- Endroit dans le conteneur où insérer \(indication seulement\).  
+ où  
+ Emplacement dans le conteneur à insérer (hint uniquement).  
   
-## Notes  
- Chacune des fonctions membres insère une séquence spécifiée par les opérandes restantes.  
+## <a name="remarks"></a>Remarques  
+ Chacune des fonctions membres insère une séquence spécifiée par les opérandes restants.  
   
- La première fonction membre s'efforce d'insérer un élément avec la valeur `val`, et renvoie une paire de valeurs `X`.  Si `X.second` est vrai, `X.first` désigne un élément récemment ajouté ; sinon `X.first` désigne un élément avec un ordonnement équivalent qui existe déjà et aucun élément déjà inséré.  Vous l'utilisez pour insérer un élément seul.  
+ La première fonction membre s’efforce insérer un élément avec la valeur `val`et retourne une paire de valeurs `X`. Si `X.second` a la valeur true, `X.first` désigne l’élément nouvellement inséré ; sinon `X.first` désigne un élément avec les équivalents classement déjà existe et qu’aucun nouvel élément est inséré. Il permet d’insérer un élément unique.  
   
- La deuxième fonction membre insère un élément avec la valeur `val`, en utilisant `where` comme indice \(pour améliorer les performances\), et renvoie un itérateur qui désigne l'élément dernièrement inséré.  Vous l'utilisez pour insérer un seul élément qui peut être adjacent à un élément que vous connaissez.  
+ La deuxième fonction membre insère un élément avec la valeur `val`, à l’aide `where` en tant qu’indicateur (pour améliorer les performances) et retourne un itérateur qui désigne l’élément nouvellement inséré. Il permet d’insérer un élément unique qui peut être adjacent à un élément que vous connaissez.  
   
- La troisième fonction membre insère une séquence `[``first``,` `last``)`.  Vous l'utilisez pour insérer zéro ou plus d'éléments copiés à partir d'une autre séquence.  
+ La troisième fonction membre insère la séquence [`first`, `last`). Il permet d’insérer de zéro ou plusieurs des éléments copiés à partir d’une autre séquence.  
   
- La quatrième fonction membre insère la séquence désignée par `right`.  Utilisez\-le pour insérer une séquence décrite par l'énumérateur.  
+ La quatrième fonction membre insère la séquence désignée par le `right`. Il permet d’insérer une séquence décrite par l’énumérateur.  
   
- Chaque d'insertion d'élément prend un temps proportionnel au logarithme du nombre d'éléments dans la séquence contrôlée.  L'insertion peut arriver dans un temps constant amorti, malgré le fait que l'indication désigne un élément adjacent au point d'insertion.  
+ Chaque insertion des éléments du temps proportionnel au logarithme du nombre d’éléments dans la séquence contrôlée. Insertion peut se produire dans le temps fixe amorti, toutefois, étant donné un indicateur qui désigne un élément adjacent au point d’insertion.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_map_insert.cpp   
@@ -130,18 +128,21 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**insert\(\[L'x' 24\]\) \= \[x 24\] True**  
-**insert\(\[L'b' 2\]\) \= \[b 2\] False**  
- **\[a 1\] \[b 2\] \[c 3\] \[x 24\]**  
-**insert\(begin\(\), \[L'y' 25\]\) \= \[y 25\]**  
- **\[a 1\] \[b 2\] \[c 3\] \[x 24\] \[y 25\]**  
- **\[a 1\] \[b 2\] \[c 3\] \[x 24\]**  
- **\[a 1\] \[b 2\] \[c 3\] \[x 24\] \[y 25\]**   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+insert([L'x' 24]) = [x 24] True  
+insert([L'b' 2]) = [b 2] False  
+ [a 1] [b 2] [c 3] [x 24]  
+insert(begin(), [L'y' 25]) = [y 25]  
+ [a 1] [b 2] [c 3] [x 24] [y 25]  
+ [a 1] [b 2] [c 3] [x 24]  
+ [a 1] [b 2] [c 3] [x 24] [y 25]  
+```  
   
- **Espace de noms:** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/hash_map >  
   
-## Voir aussi  
- [hash\_map](../dotnet/hash-map-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)

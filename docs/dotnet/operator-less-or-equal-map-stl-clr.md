@@ -1,33 +1,30 @@
 ---
-title: "operator&lt;= (map) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::operator<="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator<= (membre) (STL/CLR)"
+title: "opérateur&lt;= (map) (STL/CLR) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::operator<=
+dev_langs: C++
+helpviewer_keywords: operator<= member [STL/CLR]
 ms.assetid: 8209ce40-0b2d-470d-9c64-97743e305902
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fd3e89c4d766d4533e1711119cc63bf6e11a578d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# operator&lt;= (map) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Comparaison structurelle d'infériorité ou d'égalité  
+# <a name="operatorlt-map-stlclr"></a>opérateur&lt;= (map) (STL/CLR)
+Inférieur ou égal liste comparaison.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Key,  
@@ -36,17 +33,17 @@ template<typename Key,
         map<Key, Mapped>% right);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  left  
  Conteneur de gauche à comparer.  
   
- right  
+ droite  
  Conteneur de droite à comparer.  
   
-## Notes  
- La fonction d'opérateur retourne `!(``right` `<` `left``)`.  Vous l'utilisez pour tester si `left` n'est pas ordonné après `right` lorsque les deux multimaps sont comparées élément par élément.  
+## <a name="remarks"></a>Remarques  
+ La fonction d’opérateur retourne `!(right < left)`. Il permet de tester si `left` n’est pas ordonné après `right` lorsque les deux cartes sont comparé élément par élément.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_map_operator_le.cpp   
@@ -86,19 +83,22 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[d 4\]**  
-**\[a b c\] \<\= \[a b c\] est Vrai**  
-**\[a b c\] \<\= \[a b d\] est Faux**   
-## Configuration requise  
- **En\-tête :** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [d 4]  
+[a b c] <= [a b c] is True  
+[a b d] <= [a b c] is False  
+```  
   
- **Espace de nommage** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/map >  
   
-## Voir aussi  
- [map](../dotnet/map-stl-clr.md)   
- [operator\=\= \(map\)](../dotnet/operator-equality-map-stl-clr.md)   
- [operator\!\= \(map\)](../dotnet/operator-inequality-map-stl-clr.md)   
- [operator\< \(map\)](../dotnet/operator-less-than-map-stl-clr.md)   
- [operator\>\= \(map\)](../dotnet/operator-greater-or-equal-map-stl-clr.md)   
- [operator\> \(map\)](../dotnet/operator-greater-than-map-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [carte (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [opérateur == (map) (STL/CLR)](../dotnet/operator-equality-map-stl-clr.md)   
+ [opérateur ! = (map) (STL/CLR)](../dotnet/operator-inequality-map-stl-clr.md)   
+ [opérateur\< (map) (STL/CLR)](../dotnet/operator-less-than-map-stl-clr.md)   
+ [opérateur > = (map) (STL/CLR)](../dotnet/operator-greater-or-equal-map-stl-clr.md)   
+ [operator> (map) (STL/CLR)](../dotnet/operator-greater-than-map-stl-clr.md)

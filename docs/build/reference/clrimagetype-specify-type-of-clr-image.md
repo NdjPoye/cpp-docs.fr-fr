@@ -1,64 +1,64 @@
 ---
-title: "/CLRIMAGETYPE (Sp&#233;cifier le type d&#39;une image CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/CLRIMAGETYPE"
-  - "VC.Project.VCLinkerTool.CLRImageType"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/CLRIMAGETYPE (option de l'éditeur de liens)"
-  - "-CLRIMAGETYPE (option de l'éditeur de liens)"
+title: "-/CLRIMAGETYPE (spécifier le Type d’Image CLR) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /CLRIMAGETYPE
+- VC.Project.VCLinkerTool.CLRImageType
+dev_langs: C++
+helpviewer_keywords:
+- /CLRIMAGETYPE linker option
+- -CLRIMAGETYPE linker option
 ms.assetid: 04c60ee6-9dd7-4391-bc03-6926ad0fa116
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6f11684f71e874d2dbb439ed1f9dfc46b543a63e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /CLRIMAGETYPE (Sp&#233;cifier le type d&#39;une image CLR)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="clrimagetype-specify-type-of-clr-image"></a>/CLRIMAGETYPE (Spécifier le type d'une image CLR)
 ```  
 /CLRIMAGETYPE:{IJW|PURE|SAFE|SAFE32BITPREFERRED}  
 ```  
   
-## Notes  
- L'éditeur de liens accepte des objets natifs et également des objets MSIL qui sont compilés à l'aide de [\/clr](../../build/reference/clr-common-language-runtime-compilation.md), \/clr:pure, ou \/clr:safe.  Lorsque des objets mixtes dans la même version sont passés, la vérifiabilité du fichier de sortie résultant est, par défaut, au niveau le plus bas de vérifiabilité des modules d'entrée.  Par exemple, si un module safe et un module pure sont passés à l'éditeur de liens, le fichier de sortie sera pure.  Si vous passez une image native et une image en mode mixte \(compilée à l'aide de **\/clr**\), l'image résultante sera une image en mode mixte.  
+## <a name="remarks"></a>Remarques  
+ L’éditeur de liens accepte des objets natifs, et également MSIL objets qui sont compilées à l’aide de [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), / CLR : pure ou/CLR : safe. Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015. Lorsque des objets mixtes dans la même build sont transmis, la vérifiabilité du fichier de sortie résultant est, par défaut, égale à niveau le plus bas de vérifiabilité des modules d’entrée. Par exemple, si vous passez un coffre-fort et un module de code à l’éditeur de liens, le fichier de sortie sera pur. Si vous passez une image native et une image en mode mixte (compilée à l’aide de **/CLR**), l’image résultante est une image en mode mixte.  
   
- Utilisez \/CLRIMAGETYPE pour spécifier un niveau de vérifiabilité inférieur, si c'est ce dont vous avez besoin.  
+ Vous pouvez utiliser CLRIMAGETYPE pour spécifier un niveau inférieur de vérifiabilité, si c’est ce dont vous avez besoin.  
   
- Dans le .NET 4.5, \/CLRIMAGETYPE prend en charge une option SAFE32BITPREFERRED.  Cela paramètre—dans l'en\-tête PE de l'image—des indicateurs image qui montrent les objets MSIL sont sécurisés et peuvent être exécutés sur toutes les plateformes, mais que des environnements 32 bits d'exécution sont préférés.  Cette option permet à une application de s'exécuter sur les plateformes ARM et spécifie également qu'elle devrait fonctionner sous WOW64 sur les systèmes d'exploitation 64 bits au lieu d'utiliser l'environnement 64 bits d'exécution.  
+ Dans .NET 4.5, CLRIMAGETYPE prend en charge une option SAFE32BITPREFERRED. Cela permet de définir, dans l’en-tête PE de l’image : indicateurs qui indiquent que les objets MSIL sont sécurisés et peuvent être exécutent sur toutes les plateformes, mais que les environnements d’exécution de 32 bits sont par défaut. Cette option permet à une application de s’exécuter sur les plateformes ARM et indique également qu’il doit s’exécuter sous WOW64 sur les systèmes d’exploitation 64 bits au lieu d’utiliser l’environnement d’exécution de 64 bits.  
   
- Lors de l'exécution sur un système d'exploitation 64 bits d'un fichier .exe qui a été compilé à l'aide de **\/clr** ou de **\/clr:pure**, l'application s'exécute sous WOW64, permettant ainsi à une application 32 bits de s'exécuter sur un système d'exploitation 64 bits.  Par défaut, un .exe qui est compilé à l'aide de **\/clr:safe** est exécuté sous la prise en charge 64 bits du système d'exploitation.  Toutefois, il est possible que votre application safe charge un composant 32 bits.  Dans ce cas, une image safe qui s'exécute sous la prise en charge 64 bits du système d'exploitation échoue lors du chargement de l'application 32 bits.  Pour vérifier qu'une image sécurisée continue à fonctionner lorsqu'elle charge un composant 32 bits sur un système d'exploitation 64 bits, utilisez l'option \/CLRIMAGETYPE:SAFE32BITPREFERRED.  Si votre code ne doit pas nécessairement s'exécuter sur des plateformes ARM, spécifiez l'option d'\/CLRIMAGETYPE:PURE afin de modifier les métadonnées \(.corflags\), indiquant qu'elle doit s'exécuter sous WOW64 \(et en substituant votre propre symbole d'entrée\) :  
+ Lorsqu’un .exe qui a été compilé à l’aide de **/CLR** ou **/CLR : pure** est exécuté sur un système d’exploitation 64 bits, l’application est exécutée sous WOW64, ce qui permet à une application 32 bits pour s’exécuter sur un système d’exploitation de 64 bits. Par défaut, un .exe compilé à l’aide de **/CLR : safe** est exécuté sous la prise en charge de 64 bits du système d’exploitation. Toutefois, il est possible que votre application safe charge un composant 32 bits. Dans ce cas, une image safe s’exécutant sous la prise en charge de 64 bits du système d’exploitation échoue lors du chargement de l’application 32 bits. Pour vous assurer qu’une image safe continuera à s’exécuter lors du chargement d’un composant 32 bits sur un système d’exploitation de 64 bits, utilisez l’option /CLRIMAGETYPE:SAFE32BITPREFERRED. Si votre code ne doit pas s’exécuter sur les plateformes ARM, vous pouvez spécifier le CLRIMAGETYPE : PURE permettant de modifier les métadonnées (.corflags), le marquage qu’elles s’exécutent sous WOW64 (et en substituant votre propre symbole d’entrée) :  
   
- **cl \/clr:safe t.cpp \/link \/clrimagetype:pure \/entry:?main@@$$HYMHXZ \/subsystem:console**  
+ **cl /clr:safe t.cpp /link /clrimagetype:pure /entry:?main@@$$HYMHXZ /subsystem:console**  
   
- Pour plus d'informations sur la façon de déterminer le type d'image CLR d'un fichier, consultez [\/CLRHEADER](../../build/reference/clrheader.md).  
+ Pour plus d’informations sur la façon de déterminer le type d’image CLR d’un fichier, consultez [/CLRHEADER](../../build/reference/clrheader.md).  
   
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Comment : ouvrir les pages de propriétés d'un projet](../../misc/how-to-open-project-property-pages.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
-2.  Développez le nœud **Propriétés de configuration**.  
+2.  Développez le **propriétés de Configuration** nœud.  
   
-3.  Développez le nœud **Éditeur de liens**.  
+3.  Développez le **l’éditeur de liens** nœud.  
   
-4.  Sélectionnez la page de propriétés **Avancé**.  
+4.  Sélectionnez le **avancé** page de propriétés.  
   
-5.  Modifiez la propriété **Type d'image CLR**.  
+5.  Modifier la **Type d’Image CLR** propriété.  
   
-### Pour définir cette option de l'éditeur de liens par programme  
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   
 1.  Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRImageType%2A>.  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)

@@ -1,34 +1,32 @@
 ---
-title: "Comment&#160;: utiliser safe_cast dans C++/CLI | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "safe_cast (mot clé C++), cast ascendant"
+title: "Comment : utiliser safe_cast dans c++ / CLI | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: safe_cast keyword [C++], upcasting
 ms.assetid: 0fbc87d8-ecdf-4cd5-81f4-0d8cc18e2aff
-caps.latest.revision: 18
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f7b15eddc8aa7454d98122b92ffc03c07a315390
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: utiliser safe_cast dans C++/CLI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cet article explique comment utiliser le safe\_cast dans les applications ODBC [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)].  Pour plus d'informations sur le safe\_cast dans [!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)], consultez [safe\_cast](../windows/safe-cast-cpp-component-extensions.md).  
+# <a name="how-to-use-safecast-in-ccli"></a>Comment : utiliser safe_cast dans C++/CLI
+Cet article explique comment utiliser safe_cast dans c++ / applications de CLI. Pour plus d’informations sur safe_cast dans [!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)], consultez [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
   
-## Cast ascendant  
- Un upcast est une conversion d'un type dérivé en une de ses classes de base.  Cette conversion est sécurisé et ne nécessite pas une notation de conversion explicite.  L'exemple suivant montre comment effectuer un upcast, avec `safe_cast` et sans lui.  
+## <a name="upcasting"></a>Cast ascendant  
+ Un upcast est un cast d’un type dérivé à une de ses classes de base. Ce cast est sécurisé et ne nécessite pas d’une notation de cast explicite. L’exemple suivant montre comment effectuer un upcast, avec `safe_cast` et sans elle.  
   
-```  
+```cpp  
 // safe_upcast.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -68,14 +66,17 @@ int main() {
 }  
 ```  
   
-  **dans C::Test**  
-**dans B::Test2**  
-**dans C::Test**  
-**dans B::Test2**   
-## Cast descendant  
- Une conversion aval est un cast de la classe de base pour une classe dérivée de la classe de base.  Une conversion aval n'est sécurisée que si l'objet qui est traité au moment de l'exécution adresse en fait un objet de la classe dérivée.  Contrairement à `static_cast`, `safe_cast` effectue une vérification dynamique et lève <xref:System.InvalidCastException> si la conversion échoue.  
-  
+```Output  
+in C::Test  
+in B::Test2  
+in C::Test  
+in B::Test2  
 ```  
+  
+## <a name="downcasting"></a>Cast descendant  
+ Un cast aval est un cast d’une classe de base à une classe qui est dérivée de la classe de base.  Un cast aval est sûr uniquement si l’objet qui est résolu lors de l’exécution d’adressage est en fait un objet de classe dérivée.  Contrairement aux `static_cast`, `safe_cast` effectue une vérification dynamique et lève <xref:System.InvalidCastException> si la conversion échoue.  
+  
+```cpp  
 // safe_downcast.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -118,13 +119,16 @@ int main() {
 }  
 ```  
   
-  **dans C::Test\(\)**  
-**dans C::Test\(\)**  
-**dans B::Test2\(\)**   
-## safe\_cast avec des conversions définies par l'utilisateur.  
- L'exemple suivant montre comment utiliser `safe_cast` pour appeler des conversions définies par l'utilisateur.  
-  
+```Output  
+in C::Test()  
+in C::Test()  
+in B::Test2()  
 ```  
+  
+## <a name="safecast-with-user-defined-conversions"></a>safe_cast avec des conversions définies par l’utilisateur  
+ L’exemple suivant montre comment vous pouvez utiliser `safe_cast` pour appeler des conversions définies par l’utilisateur.  
+  
+```cpp  
 // safe_cast_udc.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -170,16 +174,20 @@ int main() {
 }  
 ```  
   
-  **dans l'opérateur R^ \(V& v**  
-**dans l'opérateur R^ \(R^ R\)**   
-## opérations de safe\_cast et de boxing  
- **Boxing**  
-  
- Le boxing est défini comme une conversion injectée par le compilateur et définie par l'utilisateur.  Par conséquent, vous pouvez utiliser `safe_cast` pour encadrer une valeur sur le segment CLR.  
-  
- L'exemple suivant montre le boxing avec des types de valeur simples et définis par l'utilisateur.  Un `safe_cast` enferme un type de valeur de variable qui se trouve dans la pile native afin qu'il puisse être affecté à une variable sur le segment récupérés par le garbage collector.  
-  
+```Output  
+in operator R^(V& v  
+in operator V^(R^ r)  
 ```  
+  
+## <a name="safecast-and-boxing-operations"></a>opérations safe_cast et boxing  
+  
+### <a name="boxing"></a>Boxing  
+  
+ Conversion boxing est définie comme une conversion définie par l’utilisateur injectées par le compilateur.  Par conséquent, vous pouvez utiliser `safe_cast` boxing d’une valeur sur le tas CLR.  
+  
+ L’exemple suivant montre un boxing des types de valeur simple et définie par l’utilisateur.  A `safe_cast` zones d’une variable de type valeur qui se trouve sur la pile native afin qu’il peut être affecté à une variable sur le tas de garbage collection.  
+  
+```cpp  
 // safe_cast_boxing.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -203,9 +211,9 @@ int main() {
 }  
 ```  
   
- L'exemple suivant montre que le boxing est prioritaire sur une conversion définie par l'utilisateur dans une opération de `safe_cast`.  
+ L’exemple suivant montre que la conversion boxing a priorité sur une conversion définie par l’utilisateur dans un `safe_cast` opération.  
   
-```  
+```cpp  
 // safe_cast_boxing_2.cpp  
 // compile with: /clr  
 static bool fRetval = true;  
@@ -236,13 +244,13 @@ int main() {
 }  
 ```  
   
- **Unboxing**  
+### <a name="unboxing"></a>Unboxing  
   
- L'unboxing est défini comme une conversion injectée par le compilateur et définie par l'utilisateur.  Par conséquent, vous pouvez utiliser `safe_cast` pour désencadrer une valeur sur le segment CLR.  
+ Unboxing est définie comme une conversion définie par l’utilisateur injectées par le compilateur.  Par conséquent, vous pouvez utiliser `safe_cast` extraction d’une valeur sur le tas CLR.  
   
- La conversion unboxing est une conversion définie par l'utilisateur, mais contrairement au boxing, la conversion unboxing doit être explicite\- autrement dit, elle doit être effectuée par un cast `static_cast` de type C, ou un `safe_cast` ; l'unboxing ne peut pas être exécuté de manière implicite.  
+ Unboxing est une conversion définie par l’utilisateur, mais contrairement à une conversion boxing, unboxing doit être explicite, autrement dit, il doit être effectuée par un `static_cast`, C-style cast, ou `safe_cast`; unboxing ne peut pas être exécutée implicitement.  
   
-```  
+```cpp  
 // safe_cast_unboxing.cpp  
 // compile with: /clr  
 int main() {  
@@ -251,9 +259,9 @@ int main() {
 }  
 ```  
   
- L'exemple suivant illustre la conversion unboxing avec les types de valeurs et les types de primitive.  
+ L’exemple suivant montre l’unboxing avec les types valeur et les types primitifs.  
   
-```  
+```cpp  
 // safe_cast_unboxing_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -297,10 +305,10 @@ int main() {
 }  
 ```  
   
-## types de safe\_cast et de générique  
- L'exemple suivant montre comment utiliser `safe_cast` pour effectuer une conversion aval avec un type générique.  
+## <a name="safecast-and-generic-types"></a>safe_cast et des types génériques  
+ L’exemple suivant montre comment vous pouvez utiliser `safe_cast` pour effectuer un downcast avec un type générique.  
   
-```  
+```cpp  
 // safe_cast_generic_types.cpp  
 // compile with: /clr  
 interface struct I {};  
@@ -325,5 +333,5 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
- [safe\_cast](../windows/safe-cast-cpp-component-extensions.md)
+## <a name="see-also"></a>Voir aussi  
+ [safe_cast](../windows/safe-cast-cpp-component-extensions.md)

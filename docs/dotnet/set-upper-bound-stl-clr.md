@@ -1,45 +1,43 @@
 ---
-title: "set::upper_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::upper_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre upper_bound [STL/CLR]"
+title: Set::upper_bound (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::upper_bound
+dev_langs: C++
+helpviewer_keywords: upper_bound member [STL/CLR]
 ms.assetid: 874d258a-990f-486f-ac7b-757a2f7c150a
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0eb6c82fc12b5ea6a3848dfc7c7babf54aff75d7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# set::upper_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Recherche la fin de la plage qui correspond à une clé spécifiée.  
+# <a name="setupperbound-stlclr"></a>set::upper_bound (STL/CLR)
+Fin de la recherche de plage qui correspond à une clé spécifiée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 iterator upper_bound(key_type key);  
 ```  
   
-#### Paramètres  
- key  
+#### <a name="parameters"></a>Paramètres  
+ clé  
  Valeur de clé à rechercher.  
   
-## Notes  
- La méthode détermine le dernier élément `X` dans la séquence contrôlée dont le classement est équivalent à `key`.  Si aucun élément de ce type n'existe, ou si `X` est le dernier élément de la séquence contrôlée, cela retourne [set::end](../dotnet/set-end-stl-clr.md)`()` ; sinon cela renvoie un itérateur qui indique le premier élément au delà de `X`.  Vous l'utilisez pour rechercher la fin d'une séquence d'éléments figurant actuellement dans la séquence contrôlée qui correspond à la clé spécifiée.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre détermine le dernier élément `X` dans la séquence contrôlée qui a un classement équivalent à `key`. Si cet élément n’existe, ou si `X` est le dernier élément dans la séquence contrôlée, elle retourne [set::end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`; sinon, elle retourne un itérateur qui désigne le premier élément au-delà de `X`. Il permet de localiser la fin d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_set_upper_bound.cpp   
@@ -71,18 +69,21 @@ int main()
   
 ```  
   
-  **a b c**  
-**upper\_bound\(L'x'\)\=\=end\(\) \= Vrai**  
-**\*upper\_bound\(L'a'\) \= b**  
-**\*upper\_bound\(L'b'\) \= c**   
-## Configuration requise  
- **En\-tête :** \<cliext\/set\>  
+```Output  
+ a b c  
+upper_bound(L'x')==end() = True  
+*upper_bound(L'a') = b  
+*upper_bound(L'b') = c  
+```  
   
- **Espace de nom :** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/set >  
   
-## Voir aussi  
- [set](../dotnet/set-stl-clr.md)   
- [set::count](../dotnet/set-count-stl-clr.md)   
- [set::equal\_range](../dotnet/set-equal-range-stl-clr.md)   
- [set::find](../dotnet/set-find-stl-clr.md)   
- [set::lower\_bound](../dotnet/set-lower-bound-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Set (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [Set::Count (STL/CLR)](../dotnet/set-count-stl-clr.md)   
+ [Set::equal_range (STL/CLR)](../dotnet/set-equal-range-stl-clr.md)   
+ [Set::Find (STL/CLR)](../dotnet/set-find-stl-clr.md)   
+ [set::lower_bound (STL/CLR)](../dotnet/set-lower-bound-stl-clr.md)

@@ -1,34 +1,33 @@
 ---
-title: "Comment&#160;: &#233;crire un fichier texte (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fichiers (C++), texte"
-  - "fichiers texte, écrire en C++"
+title: "Comment : écrire un fichier texte (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], text
+- text files, writing in C++
 ms.assetid: 39ecdba6-84e0-485c-a202-84cf6d7b8d4a
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 080b4fcfb005d0d04c10ad5c0a6f4d1c7a49fe0e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: &#233;crire un fichier texte (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'exemple de code suivant montre comment créer un fichier texte et écrire du texte dans celui\-ci à l'aide de la classe <xref:System.IO.StreamWriter> qui est définie dans l'espace de noms <xref:System.IO>.  Le constructeur <xref:System.IO.StreamWriter> prend le nom du fichier à créer.  Si le fichier existe, il est remplacé \(à moins que vous passiez True comme deuxième argument du constructeur <xref:System.IO.StringWriter>\).  
+# <a name="how-to-write-a-text-file-ccli"></a>Comment : écrire un fichier texte (C++/CLI)
+L’exemple de code suivant montre comment créer un fichier texte et écrire du texte à l’aide de la <xref:System.IO.StreamWriter> (classe), qui est définie dans le <xref:System.IO> espace de noms. Le <xref:System.IO.StreamWriter> constructeur prend le nom du fichier à créer. Si le fichier existe, il est remplacé (à moins que vous transmettez la valeur True comme deuxième <xref:System.IO.StringWriter> argument du constructeur).  
   
- Le fichier est classé à l'aide des fonctions <xref:System.IO.StreamWriter.Write%2A> et <xref:System.IO.TextWriter.WriteLine%2A>.  
+ Le fichier est classé à l’aide de la <xref:System.IO.StreamWriter.Write%2A> et <xref:System.IO.TextWriter.WriteLine%2A> fonctions.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // text_write.cpp  
@@ -54,6 +53,6 @@ int main()
 }  
 ```  
   
-## Voir aussi  
- [Fichier et flux de données E\/S](../Topic/File%20and%20Stream%20I-O.md)   
- [Programmation .NET avec C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Fichier et flux de données E/S](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

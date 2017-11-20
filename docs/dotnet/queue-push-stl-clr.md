@@ -1,41 +1,39 @@
 ---
-title: "queue::push (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::push"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "member push [STL/CLR]"
+title: Queue::push (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::push
+dev_langs: C++
+helpviewer_keywords: push member [STL/CLR]
 ms.assetid: 97cf1f98-d4c4-417f-b57a-89cdd351ef65
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 86fd84c8f5e50b08ae5535703d808e9b690d4521
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# queue::push (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ajoute un nouveau dernier élément.  
+# <a name="queuepush-stlclr"></a>queue::push (STL/CLR)
+Ajoute un nouvel élément en dernier.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void push(value_type val);  
 ```  
   
-## Notes  
- La fonction membre ajoute un élément avec la valeur `val` à la fin de la file d'attente.  Vous l'utilisez pour ajouter un élément dans la file d'attente.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre ajoute un élément avec la valeur `val` à la fin de la file d’attente. Il permet d’ajouter un élément à la file d’attente.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_queue_push.cpp   
@@ -59,12 +57,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## Configuration requise  
- **En\-tête :** \<cliext\/queue\>  
+```Output  
+a b c  
+```  
   
- **Espace de nom :** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/file d’attente >  
   
-## Voir aussi  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::pop](../dotnet/queue-pop-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [file d’attente (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::pop (STL/CLR)](../dotnet/queue-pop-stl-clr.md)

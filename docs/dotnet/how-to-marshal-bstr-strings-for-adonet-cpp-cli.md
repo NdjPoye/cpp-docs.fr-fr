@@ -1,38 +1,37 @@
 ---
-title: "Comment&#160;: marshaler des cha&#238;nes BSTR pour ADO.NET (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ADO.NET (C++), marshaler des chaînes BSTR"
-  - "BSTR, chaînes"
-  - "chaînes (C++), marshaler des chaînes BSTR"
+title: "Comment : marshaler des chaînes BSTR pour ADO.NET (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- BSTRs, strings
+- ADO.NET [C++], marshaling BSTR strings
+- strings [C++], marshaling BSTR strings
 ms.assetid: 5daf4d9e-6ae8-4604-908f-855e37c8d636
-caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9423dcc177db68319ea6d8e1771fe4b18a86c5c0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: marshaler des cha&#238;nes BSTR pour ADO.NET (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Montre comment ajouter une chaîne COM \(`BSTR`\) à une base de données et comment marshaler une <xref:System.String?displayProperty=fullName> d'une base de données vers un `BSTR`.  
+# <a name="how-to-marshal-bstr-strings-for-adonet-ccli"></a>Comment : marshaler des chaînes BSTR pour ADO.NET (C++/CLI)
+Montre comment ajouter une chaîne COM (`BSTR`) pour une base de données et comment marshaler un <xref:System.String?displayProperty=fullName> à partir d’une base de données à un `BSTR`.  
   
-## Exemple  
- Dans cet exemple, la classe DatabaseClass est créée pour interagir avec un objet <xref:System.Data.DataTable> ADO.NET.  Notez que cette classe est une `class` C\+\+ native \(comparée à une `ref class` ou `value class`\).  Cela est nécessaire, car nous souhaitons utiliser cette classe à partir de code natif et il est impossible d'utiliser des types managés en code natif.  Cette classe sera compilée pour cibler le CLR, comme indiqué par la directive `#pragma managed` précédant la déclaration de classe.  Pour plus d'informations sur cette directive, consultez [managé, non managé](../preprocessor/managed-unmanaged.md).  
+## <a name="example"></a>Exemple  
+ Dans cet exemple, la classe DatabaseClass est créée pour interagir avec un élément ADO.NET <xref:System.Data.DataTable> objet. Notez que cette classe est un code C++ natif `class` (par rapport à un `ref class` ou `value class`). Cela est nécessaire, car nous souhaitons utiliser cette classe à partir de code natif, et vous ne pouvez pas utiliser des types managés en code natif. Cette classe sera compilée pour cibler le CLR, comme indiqué par la `#pragma managed` directive précédant la déclaration de classe. Pour plus d’informations sur cette directive, consultez [managé, non managé](../preprocessor/managed-unmanaged.md).  
   
- Notez le membre privé de la classe DatabaseClass : `gcroot<DataTable ^> table`.  Les types natifs ne pouvant pas contenir de types managés, le mot clé `gcroot` est nécessaire.  Pour plus d'informations sur `gcroot`, consultez [Comment : déclarer des handles dans les types natifs](../dotnet/how-to-declare-handles-in-native-types.md).  
+ Notez le membre privé de la classe DatabaseClass : `gcroot<DataTable ^> table`. Étant donné que les types natifs ne peut pas contenir de types managés, le `gcroot` (mot clé) est nécessaire. Pour plus d’informations sur `gcroot`, consultez [Comment : déclarer des Handles dans les Types natifs](../dotnet/how-to-declare-handles-in-native-types.md).  
   
- Le reste du code dans cet exemple est du code C\+\+ natif, comme indiqué par la directive `#pragma unmanaged` précédant `main`.  Dans cet exemple, nous créons une nouvelle instance de DatabaseClass et appelons ses méthodes pour créer une table et remplir quelques lignes dans la table.  Notez que les chaînes COM sont passées en tant que valeurs pour la colonne de base de données StringCol.  Au sein de DatabaseClass, ces chaînes sont marshalées vers des chaînes managées à l'aide des fonctionnalités de marshaling trouvées dans l'espace de noms <xref:System.Runtime.InteropServices?displayProperty=fullName>.  En particulier, la méthode <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> est utilisée pour marshaler un `BSTR` vers une <xref:System.String> et la méthode <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> est utilisée pour marshaler une <xref:System.String> vers un `BSTR`.  
+ Le reste du code dans cet exemple est le code C++ natif, comme indiqué par le `#pragma unmanaged` précédant la directive `main`. Dans cet exemple, nous sommes création d’une nouvelle instance de DatabaseClass et appeler ses méthodes pour créer une table et de remplir certaines lignes de la table. Notez que les chaînes COM sont passées en tant que valeurs pour la colonne de base de données StringCol. Au sein de DatabaseClass, ces chaînes sont marshalées vers des chaînes managées à l’aide des fonctionnalités de marshaling trouvées dans le <xref:System.Runtime.InteropServices?displayProperty=fullName> espace de noms. Plus précisément, la méthode <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> est utilisée pour marshaler un `BSTR` à un <xref:System.String>et la méthode <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> est utilisée pour marshaler un <xref:System.String> à un `BSTR`.  
   
 > [!NOTE]
 >  La mémoire allouée par <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> doit être libérée en appelant <xref:System.Runtime.InteropServices.Marshal.FreeBSTR%2A> ou `SysFreeString`.  
@@ -143,22 +142,25 @@ int main()
 }  
 ```  
   
-  **StringCol: This is string 1.**  
-**StringCol: This is string 2.**   
-## Compilation du code  
+```Output  
+StringCol: This is string 1.  
+StringCol: This is string 2.  
+```  
   
--   Pour compiler le code depuis la ligne de commande, enregistrez l'exemple de code dans un fichier nommé adonet\_marshal\_string\_native.cpp et saisissez l'instruction suivante :  
+## <a name="compiling-the-code"></a>Compilation du code  
+  
+-   Pour compiler le code à partir de la ligne de commande, enregistrez l’exemple de code dans un fichier nommé adonet_marshal_string_native.cpp et entrez l’instruction suivante :  
   
     ```  
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_native.cpp  
     ```  
   
-## Sécurité .NET Framework  
- Pour plus d'informations sur les problèmes de sécurité impliquant ADO.NET, consultez [Sécurisation des applications ADO.NET](../Topic/Securing%20ADO.NET%20Applications.md).  
+## <a name="net-framework-security"></a>Sécurité .NET Framework  
+ Pour plus d’informations sur les problèmes de sécurité impliquant ADO.NET, consultez [sécurisation des Applications ADO.NET](/dotnet/framework/data/adonet/securing-ado-net-applications).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  <xref:System.Runtime.InteropServices>   
- [Accès aux données](../dotnet/data-access-using-adonet-cpp-cli.md)   
- [ADO.NET](../Topic/ADO.NET.md)   
- [Interoperability](http://msdn.microsoft.com/fr-fr/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
+ [Accès aux données en utilisant ADO.NET (C + c++ / CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)   
+ [ADO.NET](/dotnet/framework/data/adonet/index)   
+ [Interopérabilité](http://msdn.microsoft.com/en-us/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
  [Interopérabilité native et .NET](../dotnet/native-and-dotnet-interoperability.md)

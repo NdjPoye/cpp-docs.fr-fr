@@ -1,32 +1,32 @@
 ---
-title: "Parcours d&#39;un jeu de lignes simple | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "accesseurs (C++), jeux de lignes"
-  - "accès aux données (C++), jeux de lignes"
-  - "OLE DB (consommateurs) (C++), attributs de bases de données"
-  - "jeux de lignes (C++), accéder"
-  - "jeux de lignes simples"
+title: "Parcours d’un ensemble de lignes Simple | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data access [C++], rowsets
+- rowsets [C++], accessing
+- simple rowsets
+- OLE DB consumers [C++], database attributes
+- accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5f4204027d52a5dfd4d7968732fb4d08328f12ce
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Parcours d&#39;un jeu de lignes simple
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'exemple suivant montre un accès rapide et simple à la base de données, qui ne met pas en œuvre des commandes.  Le code de consommateur suivant, dans un projet ATL, récupère des enregistrements d'une table appelée *Artists* dans une base de données Microsoft Access en utilisant le fournisseur Microsoft OLE DB pour ODBC.  Le code crée un objet de table [CTable](../../data/oledb/ctable-class.md) avec un accesseur reposant sur la classe d'enregistrement utilisateur `CArtists`.  Il ouvre une connexion, ouvre une session sur la connexion, puis ouvre la table sur la session.  
+# <a name="traversing-a-simple-rowset"></a>Parcours d'un jeu de lignes simple
+L’exemple suivant montre un accès simple et rapide de la base de données qui n’implique pas de commandes. Le code de consommateur suivant, dans un projet ATL, extrait des enregistrements à partir d’une table appelée *artistes* Microsoft Access, une base de données à l’aide du fournisseur Microsoft OLE DB pour ODBC. Le code crée un [CTable](../../data/oledb/ctable-class.md) objet de table avec un accesseur basé sur la classe d’enregistrement utilisateur `CArtists`. Ouvre une connexion, ouvre une session sur la connexion et la table s’ouvre sur la session.  
   
 ```  
 #include <atldbcli.h>  
@@ -51,7 +51,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- L'enregistrement utilisateur, `CArtists`, ressemble au texte suivant :  
+ L’enregistrement d’utilisateur, `CArtists`, ressemble à ceci :  
   
 ```  
 class CArtists  
@@ -70,5 +70,5 @@ BEGIN_COLUMN_MAP(CArtists)
 END_COLUMN_MAP()  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utilisation des modèles du consommateur OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

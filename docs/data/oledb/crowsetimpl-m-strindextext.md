@@ -1,34 +1,32 @@
 ---
-title: "CRowsetImpl::m_strIndexText | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowsetImpl::m_strIndexText"
-  - "CRowsetImpl.m_strIndexText"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_strIndexText"
+title: CRowsetImpl::m_strIndexText | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowsetImpl::m_strIndexText
+- CRowsetImpl.m_strIndexText
+dev_langs: C++
+helpviewer_keywords: m_strIndexText
 ms.assetid: fa5465b8-67c6-4efa-b786-d5bca67b9f96
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a38ad6e8fcb36b5e7c601b416b214d9e2f98ff60
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# CRowsetImpl::m_strIndexText
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Contient l'index initial de l'ensemble de lignes.  
+# <a name="crowsetimplmstrindextext"></a>CRowsetImpl::m_strIndexText
+Contient l’index de départ de l’ensemble de lignes.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -36,13 +34,13 @@ CComBSTR CRowsetBaseImpl::m_strIndexText;
   
 ```  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CRowsetImpl, classe](../../data/oledb/crowsetimpl-class.md)   
- [CRowsetImpl::m\_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)   
- [CRowsetImpl::m\_rgRowData](../../data/oledb/crowsetimpl-m-rgrowdata.md)   
+ [CRowsetImpl::m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)   
+ [CRowsetImpl::m_rgRowData](../../data/oledb/crowsetimpl-m-rgrowdata.md)   
  [CRowsetImpl::GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md)   
  [CRowsetImpl::SetCommandText](../../data/oledb/crowsetimpl-setcommandtext.md)   
  [CRowsetImpl::ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md)

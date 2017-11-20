@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CxxThrowException
+apiname: _CxxThrowException
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,22 +23,20 @@ apitype: DLLExport
 f1_keywords:
 - CxxThrowException
 - _CxxThrowException
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CxxThrowException function
 - CxxThrowException function
 ms.assetid: 0b90bef5-b7d2-46e0-88e2-59e531e01a4d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 5cfe894dc20e77bf34067c16fddd74432c522bda
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cxxthrowexception"></a>_CxxThrowException
 Crée l’enregistrement d’exception et appelle l’environnement d’exécution pour commencer le traitement de l’exception.  

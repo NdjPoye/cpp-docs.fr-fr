@@ -1,37 +1,35 @@
 ---
-title: "IDBPropertiesImpl, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDBPropertiesImpl"
-  - "ATL.IDBPropertiesImpl"
-  - "ATL.IDBPropertiesImpl<T>"
-  - "ATL::IDBPropertiesImpl<T>"
-  - "ATL::IDBPropertiesImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDBPropertiesImpl (classe)"
+title: Idbpropertiesimpl, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDBPropertiesImpl
+- ATL.IDBPropertiesImpl
+- ATL.IDBPropertiesImpl<T>
+- ATL::IDBPropertiesImpl<T>
+- ATL::IDBPropertiesImpl
+dev_langs: C++
+helpviewer_keywords: IDBPropertiesImpl class
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 98dd7c0ea8000d2f86283cadb9a92fd2caa059a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# IDBPropertiesImpl, classe
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fournit une implémentation de l'interface `IDBProperties`.  
+# <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl, classe
+Fournit une implémentation pour la `IDBProperties` interface.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template <class T>   
@@ -39,26 +37,26 @@ class ATL_NO_VTABLE IDBPropertiesImpl
    : public IDBProperties, public CUtlProps<T>  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
  Votre classe, dérivée de `IDBPropertiesImpl`.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Méthodes d'interface  
+### <a name="interface-methods"></a>Méthodes d’interface  
   
 |||  
 |-|-|  
-|[GetProperties](../../data/oledb/idbpropertiesimpl-getproperties.md)|Retourne les valeurs des propriétés des groupes de source de données, des informations de la source de données, et des propriétés d'initialisation qui sont actuellement définis sur l'objet source de données ou les valeurs des propriétés dans le groupe de propriétés d'initialisation qui sont actuellement définies pour l'énumérateur.|  
+|[GetProperties](../../data/oledb/idbpropertiesimpl-getproperties.md)|Retourne les valeurs des propriétés dans les groupes de propriétés de Source de données, sources de données et d’initialisation qui sont actuellement définies sur l’objet de source de données ou les valeurs des propriétés dans le groupe de propriétés d’initialisation qui sont actuellement définies sur le énumérateur.|  
 |[GetPropertyInfo](../../data/oledb/idbpropertiesimpl-getpropertyinfo.md)|Retourne des informations sur toutes les propriétés prises en charge par le fournisseur.|  
-|[SetProperties](../../data/oledb/idbpropertiesimpl-setproperties.md)|Définit les propriétés des groupes de source de données et de propriétés d'initialisation, les objets sources de données, ou le groupe de propriétés d'initialisation, pour les énumérateurs.|  
+|[SetProperties](../../data/oledb/idbpropertiesimpl-setproperties.md)|Définit les propriétés dans les groupes de propriétés de Source de données et de l’initialisation, pour les objets de source de données, ou le groupe de propriétés d’initialisation, pour les énumérateurs.|  
   
-## Notes  
- [IDBProperties](https://msdn.microsoft.com/en-us/library/ms719607.aspx) est une interface de liaison pour les objets sources de données et une interface facultative pour les énumérateurs.  Toutefois, si un énumérateur expose [IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx), il doit exposer `IDBProperties`.  `IDBPropertiesImpl` implémente `IDBProperties` à l'aide d'une fonction statique définie par [BEGIN\_PROPSET\_MAP](../../data/oledb/begin-propset-map.md).  
+## <a name="remarks"></a>Remarques  
+ [IDBProperties](https://msdn.microsoft.com/en-us/library/ms719607.aspx) est une interface obligatoire pour les objets de source de données et une interface facultative pour les énumérateurs. Toutefois, si un énumérateur expose [IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx), elle doit exposer `IDBProperties`. `IDBPropertiesImpl`implémente `IDBProperties` à l’aide d’une fonction statique définie par [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
- [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

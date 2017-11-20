@@ -1,37 +1,36 @@
 ---
-title: "Types et stockage | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Types et stockage | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 7fe008b2-520f-4b71-8cb5-35fd513146ce
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d112d7d27d798c410cd6873d5e3433cdf92a31eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Types et stockage
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cette section décrit l'énumération et le stockage des types de données pour l'architecture [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  
+# <a name="types-and-storage"></a>Types et stockage
+Cette section décrit l’énumération et le stockage des types de données pour le [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] architecture.  
   
 -   [Types scalaires](../build/scalar-types.md)  
   
 -   [Agrégats et unions](../build/aggregates-and-unions.md)  
   
--   [Exemples d'alignement de la structure](../build/examples-of-structure-alignment.md)  
+-   [Exemples d’alignement de structure](../build/examples-of-structure-alignment.md)  
   
 -   [Champs de bits](../build/bitfields.md)  
   
 -   [Conflits avec le compilateur x86](../build/conflicts-with-the-x86-compiler.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Conventions des logiciels x64](../build/x64-software-conventions.md)

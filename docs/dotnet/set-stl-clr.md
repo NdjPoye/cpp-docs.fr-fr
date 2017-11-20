@@ -1,37 +1,35 @@
 ---
-title: "set (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "en-tête <cliext/set> (STL/CLR)"
-  - "en-tête <set> (STL/CLR)"
-  - "set (classe) (STL/CLR)"
+title: "définir (STL/CLR) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set
+dev_langs: C++
+helpviewer_keywords:
+- <cliext/set> header [STL/CLR]
+- <set> header [STL/CLR]
+- set class [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cafab92b157fb0da39471d96a23a69e2ce209e5b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# set (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d'éléments ayant un accès bidirectionnel.  Vous utilisez le conteneur `set` pour gérer une séquence d'éléments en tant qu'arbre \(presque\) équilibré de noeuds, chacun stockant un élément.  
+# <a name="set-stlclr"></a>set (STL/CLR)
+La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments ayant un accès bidirectionnel. Vous utilisez le conteneur `set` pour gérer une séquence d’éléments sous forme d’arborescence triée à charge équilibrée (presque) des nœuds, chacun stocker un élément.  
   
- Dans la description ci\-dessous, `GValue` est le même que `GKey`, qui est à son tour identique à `Key` sauf si ce dernier est un type de référence, auquel cas il s'agit `Key^`.  
+ Dans la description ci-dessous, `GValue` est identique à `GKey`, qui à son tour est le même que `Key` , sauf si ce dernier est un type référence, auquel cas il est `Key^`.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Key>  
@@ -47,113 +45,113 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### Paramètres  
- Clé  
- Type du composant clé d'un élément dans la séquence contrôlée.  
+#### <a name="parameters"></a>Paramètres  
+ Touche  
+ Le type du composant clé d’un élément dans la séquence contrôlée.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-|Définition de type|Description|  
-|------------------------|-----------------|  
-|[set::const\_iterator](../dotnet/set-const-iterator-stl-clr.md)|Type d'un itérateur constant pour la séquence contrôlée.|  
-|[set::const\_reference](../dotnet/set-const-reference-stl-clr.md)|Type d'une référence constante à un élément.|  
-|[set::const\_reverse\_iterator](../dotnet/set-const-reverse-iterator-stl-clr.md)|Le type d'un itérateur inverse constant pour la séquence contrôlée.|  
-|[set::difference\_type](../dotnet/set-difference-type-stl-clr.md)|Le type d'une distance \(possiblement signée\) entre deux éléments.|  
-|[set::generic\_container](../dotnet/set-generic-container-stl-clr.md)|Le type de l'interface générique pour le conteneur.|  
-|[set::generic\_iterator](../dotnet/set-generic-iterator-stl-clr.md)|Le type d'un itérateur pour l'interface générique pour le conteneur.|  
-|[set::generic\_reverse\_iterator](../dotnet/set-generic-reverse-iterator-stl-clr.md)|Le type d'un itérateur inversé pour l'interface générique pour le conteneur.|  
-|[set::generic\_value](../dotnet/set-generic-value-stl-clr.md)|Le type d'un élément pour l'interface générique pour le conteneur.|  
-|[set::iterator](../dotnet/set-iterator-stl-clr.md)|Type d'un itérateur pour la séquence contrôlée.|  
-|[set::key\_compare](../dotnet/set-key-compare-stl-clr.md)|Le classement délégue pour deux clés.|  
-|[set::key\_type](../dotnet/set-key-type-stl-clr.md)|Type d'une clé de classement.|  
-|[set::reference](../dotnet/set-reference-stl-clr.md)|Type d'une référence à un élément.|  
-|[set::reverse\_iterator](../dotnet/set-reverse-iterator-stl-clr.md)|Le type d'un itérateur inversé pour la séquence contrôlée.|  
-|[set::size\_type](../dotnet/set-size-type-stl-clr.md)|Le type d'une distance \(non\-négative\) entre deux éléments.|  
-|[set::value\_compare](../dotnet/set-value-compare-stl-clr.md)|Le classement délégué pour deux valeurs d'élements.|  
-|[set::value\_type](../dotnet/set-value-type-stl-clr.md)|Le type d'un élément.|  
+|Définition de types|Description|  
+|---------------------|-----------------|  
+|[set::const_iterator (STL/CLR)](../dotnet/set-const-iterator-stl-clr.md)|Type d'un itérateur constant pour la séquence contrôlée.|  
+|[set::const_reference (STL/CLR)](../dotnet/set-const-reference-stl-clr.md)|Type d'une référence constante à un élément.|  
+|[set::const_reverse_iterator (STL/CLR)](../dotnet/set-const-reverse-iterator-stl-clr.md)|Type d'un itérateur inserve constant pour la séquence contrôlée.|  
+|[set::difference_type (STL/CLR)](../dotnet/set-difference-type-stl-clr.md)|Le type d’une distance (éventuellement signée) entre deux éléments.|  
+|[set::generic_container (STL/CLR)](../dotnet/set-generic-container-stl-clr.md)|Le type de l’interface générique pour le conteneur.|  
+|[set::generic_iterator (STL/CLR)](../dotnet/set-generic-iterator-stl-clr.md)|Le type d’un itérateur pour l’interface générique pour le conteneur.|  
+|[set::generic_reverse_iterator (STL/CLR)](../dotnet/set-generic-reverse-iterator-stl-clr.md)|Le type d’un itérateur inverse pour l’interface générique pour le conteneur.|  
+|[set::generic_value (STL/CLR)](../dotnet/set-generic-value-stl-clr.md)|Le type d’un élément pour l’interface générique pour le conteneur.|  
+|[set::iterator (STL/CLR)](../dotnet/set-iterator-stl-clr.md)|Type d'un itérateur pour la séquence contrôlée.|  
+|[set::key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md)|Délégué de classement pour les deux clés.|  
+|[set::key_type (STL/CLR)](../dotnet/set-key-type-stl-clr.md)|Type d'une clé de tri.|  
+|[set::reference (STL/CLR)](../dotnet/set-reference-stl-clr.md)|Type d'une référence à un élément.|  
+|[set::reverse_iterator (STL/CLR)](../dotnet/set-reverse-iterator-stl-clr.md)|Type d'un itérateur inverse pour la séquence contrôlée.|  
+|[set::size_type (STL/CLR)](../dotnet/set-size-type-stl-clr.md)|Le type d’une distance (négatif) entre deux éléments.|  
+|[set::value_compare (STL/CLR)](../dotnet/set-value-compare-stl-clr.md)|Délégué de classement pour les deux valeurs d’éléments.|  
+|[set::value_type (STL/CLR)](../dotnet/set-value-type-stl-clr.md)|Type d’un élément.|  
   
 |Fonction membre|Description|  
 |---------------------|-----------------|  
-|[set::begin](../dotnet/set-begin-stl-clr.md)|Désigne le début de la séquence contrôlée.|  
-|[set::clear](../dotnet/set-clear-stl-clr.md)|Supprime tous les éléments.|  
-|[set::count](../dotnet/set-count-stl-clr.md)|Compte les éléments qui correspondent à une clé spécifiée.|  
-|[set::empty](../dotnet/set-empty-stl-clr.md)|Teste si aucun élément n'est présent.|  
-|[set::end](../dotnet/set-end-stl-clr.md)|Désigne la fin de la séquence contrôlée.|  
-|[set::equal\_range](../dotnet/set-equal-range-stl-clr.md)|Recherche la plage qui correspond à une clé spécifiée.|  
-|[set::erase](../dotnet/set-erase-stl-clr.md)|Supprime les éléments placés aux positions spécifiées.|  
-|[set::find](../dotnet/set-find-stl-clr.md)|Recherche un élément qui correspond à une clé spécifiée.|  
-|[set::insert](../dotnet/set-insert-stl-clr.md)|Ajoute les éléments.|  
-|[set::key\_comp](../dotnet/set-key-comp-stl-clr.md)|Copie le délégué de commande pour deux clés.|  
-|[set::lower\_bound](../dotnet/set-lower-bound-stl-clr.md)|Recherche le début de la plage qui correspond à une clé spécifiée.|  
-|[set::make\_value](../dotnet/set-make-value-stl-clr.md)|Construit un objet doté d'une valeur.|  
-|[set::rbegin](../dotnet/set-rbegin-stl-clr.md)|Désigne le début de la séquence contrôlée inversée.|  
-|[set::rend](../dotnet/set-rend-stl-clr.md)|Désigne la fin de la séquence contrôlée inversée.|  
-|[set::set](../dotnet/set-set-stl-clr.md)|Construit un objet container.|  
-|[set::size](../dotnet/set-size-stl-clr.md)|Compte le nombre d'éléments.|  
-|[set::swap](../dotnet/set-swap-stl-clr.md)|Échange le contenu de deux conteneurs.|  
-|[set::to\_array](../dotnet/set-to-array-stl-clr.md)|Copie la séquence contrôlée dans un nouveau tableau.|  
-|[set::upper\_bound](../dotnet/set-upper-bound-stl-clr.md)|Recherche la fin de la plage qui correspond à une clé spécifiée.|  
-|[set::value\_comp](../dotnet/set-value-comp-stl-clr.md)|Copie le classement délégué pour deux valeurs d'éléments.|  
+|[set::begin (STL/CLR)](../dotnet/set-begin-stl-clr.md)|Désigne le début de la séquence contrôlée.|  
+|[set::clear (STL/CLR)](../dotnet/set-clear-stl-clr.md)|Supprime tous les éléments.|  
+|[set::count (STL/CLR)](../dotnet/set-count-stl-clr.md)|Compte des éléments qui correspondent à une clé spécifiée.|  
+|[set::empty (STL/CLR)](../dotnet/set-empty-stl-clr.md)|Vérifie l'absence d'éléments.|  
+|[set::end (STL/CLR)](../dotnet/set-end-stl-clr.md)|Désigne la fin de la séquence contrôlée.|  
+|[set::equal_range (STL/CLR)](../dotnet/set-equal-range-stl-clr.md)|Recherche une plage qui correspond à une clé spécifiée.|  
+|[set::erase (STL/CLR)](../dotnet/set-erase-stl-clr.md)|Supprime les éléments placés aux positions spécifiées.|  
+|[set::find (STL/CLR)](../dotnet/set-find-stl-clr.md)|Recherche un élément qui correspond à une clé spécifiée.|  
+|[set::insert (STL/CLR)](../dotnet/set-insert-stl-clr.md)|Ajoute des éléments.|  
+|[set::key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)|Copie le délégué de classement pour les deux clés.|  
+|[set::lower_bound (STL/CLR)](../dotnet/set-lower-bound-stl-clr.md)|Début de la recherche de plage qui correspond à une clé spécifiée.|  
+|[set::make_value (STL/CLR)](../dotnet/set-make-value-stl-clr.md)|Construit un objet de valeur.|  
+|[set::rbegin (STL/CLR)](../dotnet/set-rbegin-stl-clr.md)|Désigne le début de la séquence contrôlée inverse.|  
+|[set::rend (STL/CLR)](../dotnet/set-rend-stl-clr.md)|Désigne la fin de la séquence contrôlée inverse.|  
+|[set::set (STL/CLR)](../dotnet/set-set-stl-clr.md)|Construit un objet conteneur.|  
+|[set::size (STL/CLR)](../dotnet/set-size-stl-clr.md)|Compte le nombre d'éléments.|  
+|[set::swap (STL/CLR)](../dotnet/set-swap-stl-clr.md)|Échange le contenu de deux conteneurs.|  
+|[set::to_array (STL/CLR)](../dotnet/set-to-array-stl-clr.md)|Copie de la séquence contrôlée vers un nouveau tableau.|  
+|[set::upper_bound (STL/CLR)](../dotnet/set-upper-bound-stl-clr.md)|Fin de la recherche de plage qui correspond à une clé spécifiée.|  
+|[set::value_comp (STL/CLR)](../dotnet/set-value-comp-stl-clr.md)|Copie le délégué de classement pour les deux valeurs d’éléments.|  
   
 |Opérateur|Description|  
-|---------------|-----------------|  
-|[set::operator\=](../dotnet/set-operator-assign-stl-clr.md)|Remplace la séquence contrôlée.|  
-|[operator\!\= \(set\)](../dotnet/operator-inequality-set-stl-clr.md)|Détermine si un objet de `set` n'est pas égal à un autre objet de `set`.|  
-|[operator\< \(set\)](../dotnet/operator-less-than-set-stl-clr.md)|Détermine si un objet de `set` est inférieur à un autre objet de `set`.|  
-|[operator\<\= \(set\)](../dotnet/operator-less-or-equal-set-stl-clr.md)|Détermine si un objet de `set` est inférieur ou égal à un objet de `set`.|  
-|[operator\=\= \(set\)](../dotnet/operator-equality-set-stl-clr.md)|Détermine si un objet de `set` n'est pas égal à un autre objet de `set`.|  
-|[operator\> \(set\)](../dotnet/operator-greater-than-set-stl-clr.md)|Détermine si un objet de `set` est plus grand qu'un autre objet de `set`.|  
-|[operator\>\= \(set\)](../dotnet/operator-greater-or-equal-set-stl-clr.md)|Détermine si un objet de `set` est supérieur ou égal à un objet de `set`.|  
+|--------------|-----------------|  
+|[set::operator= (STL/CLR)](../dotnet/set-operator-assign-stl-clr.md)|Remplace la séquence contrôlée.|  
+|[operator!= (set) (STL/CLR)](../dotnet/operator-inequality-set-stl-clr.md)|Détermine si un `set` objet n’est pas égal à un autre `set` objet.|  
+|[operator< (set) (STL/CLR)](../dotnet/operator-less-than-set-stl-clr.md)|Détermine si un `set` objet est inférieur à un autre `set` objet.|  
+|[operator<= (set) (STL/CLR)](../dotnet/operator-less-or-equal-set-stl-clr.md)|Détermine si un `set` objet est inférieur ou égal à un autre `set` objet.|  
+|[operator== (set) (STL/CLR)](../dotnet/operator-equality-set-stl-clr.md)|Détermine si un `set` objet est égal à un autre `set` objet.|  
+|[operator> (set) (STL/CLR)](../dotnet/operator-greater-than-set-stl-clr.md)|Détermine si un `set` objet est supérieur à un autre `set` objet.|  
+|[operator>= (set) (STL/CLR)](../dotnet/operator-greater-or-equal-set-stl-clr.md)|Détermine si un `set` objet est supérieur ou égal à un autre `set` objet.|  
   
-## Interfaces  
+## <a name="interfaces"></a>Interfaces  
   
 |Interface|Description|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Dupliquer un objet.|  
-|<xref:System.Collections.IEnumerable>|Parcourir les éléments.|  
-|<xref:System.Collections.ICollection>|Maintenir le groupe d'éléments.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Parcourir les éléments typés.|  
-|<xref:System.Collections.Generic.ICollection%601>|Maintenir le groupe d'éléments typés.|  
-|ITree\<Key, Value\>|Maintenir le conteneur générique.|  
+|<xref:System.Collections.IEnumerable>|Dans les éléments de séquence.|  
+|<xref:System.Collections.ICollection>|Conserver le groupe d’éléments.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Séquence via les éléments typés.|  
+|<xref:System.Collections.Generic.ICollection%601>|Conserver le groupe d’éléments typés.|  
+|ITree\<de clé, la valeur >|Mettre à jour de conteneur générique.|  
   
-## Notes  
- L'objet alloue et libère du stockage pour la séquence qu'il contrôle en tant que nœuds individuels.  Il insère des éléments dans un arbre \(presque\) équilibré qu'il garde trié en modifiant les liens entre les nœuds, jamais en copiant le contenu d'un nœud vers un autre.  Cela signifie que vous pouvez insérer et supprimer des éléments librement sans déranger les éléments restants.  
+## <a name="remarks"></a>Remarques  
+ L’objet alloue et libère du stockage pour la séquence qu’il contrôle en tant que nœuds individuels. Il insère des éléments dans une arborescence à charge équilibrée (presque) il conserve ordonnée en modifiant les liens entre les nœuds, jamais par copie le contenu d’un nœud vers un autre. Cela signifie que vous pouvez insérer et supprimer des éléments librement sans perturber éléments restants.  
   
- L'objet classifie la séquence qu'il contrôle en appelant un objet délégué stocké de type [set::key\_compare](../dotnet/set-key-compare-stl-clr.md).  Vous pouvez spécifier l'objet délégué stocké lorsque vous construisez l'ensemble ; si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<(key_type, key_type)`.  Vous accédez à cet objet stocké en appelant la méthode [set::key\_comp](../dotnet/set-key-comp-stl-clr.md)`()`.  
+ L’objet ordonne la séquence qu’il contrôle en appelant un objet délégué stocké de type [set::key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md). Vous pouvez spécifier l’objet délégué stockées lorsque vous construisez le jeu ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<(key_type, key_type)`. Pour accéder à cet objet stocké en appelant la fonction membre [set::key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)`()`.  
   
- Un objet délégué de la sorte doit imposer un ordre strict faible sur les clés du type [set::key\_type](../dotnet/set-key-type-stl-clr.md).  Cela signifie, pour deux clés quelconques `X` et `Y`:  
+ Cet objet de délégué doit imposer un classement faible strict sur les clés de type [set::key_type (STL/CLR)](../dotnet/set-key-type-stl-clr.md). Cela signifie que, pour toutes les deux clés `X` et `Y`:  
   
- `key_comp()(X, Y)` retourne le même résultat booléen à chaque appel.  
+ `key_comp()(X, Y)`Retourne la valeur booléenne même résultat à chaque appel.  
   
- Si `key_comp()(X, Y)` est vrai, alors `key_comp()(Y, X)` doit être faux.  
+ Si `key_comp()(X, Y)` est true, puis `key_comp()(Y, X)` doit avoir la valeur false.  
   
- Si `key_comp()(X, Y)` est vrai, alors on dit que `X` commandé avant `Y`.  
+ Si `key_comp()(X, Y)` est true, puis `X` on dit d’être classé avant `Y`.  
   
- Si `!key_comp()(X, Y) && !key_comp()(Y, X)` est vrai, alors `X` et `Y` ont un classement équivalent.  
+ Si `!key_comp()(X, Y) && !key_comp()(Y, X)` est true, puis `X` et `Y` sont considérés comme ayant un classement équivalent.  
   
- Pour n'importe quel élément `X` qui précède `Y` dans la séquence contrôlée, `key_comp()(Y, X)` est faux. \(Pour l'objet délégué par défaut, les clés ne perdent jamais en valeur.\) Contrairement à la classe de modèle [set](../dotnet/set-stl-clr.md), un objet de classe de modèle `set` ne requiert pas que les clés pour tous les éléments soient uniques. \(Deux clés ou plus peuvent être classées de manière équivalente.\)  
+ Pour tout élément `X` qui précède `Y` dans la séquence contrôlée, `key_comp()(Y, X)` a la valeur false. (Pour l’objet de délégué par défaut, les clés jamais diminuent dans valeur.) Contrairement à la classe de modèle [définir](../dotnet/set-stl-clr.md), un objet de classe de modèle `set` ne nécessite pas que les clés pour tous les éléments sont uniques. (Deux touches ou plus peuvent avoir un classement équivalent.)  
   
- Chaque élément sert de clé et de valeur.  La séquence est représentée d'une manière qui autorise la recherche, l'insertion, et la suppression d'un élément aléatoire avec un nombre d'opérations proportionnel au logarithme du nombre d'éléments dans la séquence \(complexité logarithmique\).  De plus, insérer un élément n'invalide aucun itérateur, et la suppression d'un élément invalide uniquement les itérateurs pointant vers l'élément supprimé.  
+ Chaque élément sert à la fois une clé et une valeur. La séquence est représentée de façon à permettre la recherche, l’insertion et la suppression d’un élément arbitraire avec un nombre d’opérations proportionnels au logarithme du nombre d’éléments dans la séquence (temps logarithmique). De plus, l'insertion d'un élément n'entraîne pas la non validité des itérateurs, et la suppression d'un élément ne rend non valides que les itérateurs qui pointent vers l'élément supprimé.  
   
- Un ensemble prend en charge les itérateurs bidirectionnels, ce qui signifie que vous pouvez passer à des éléments adjacents donnés un itérateur qui indique un élément dans la séquence contrôlée.  Un nœud principal spécial correspond à l'itérateur retourné par [set::end](../dotnet/set-end-stl-clr.md)`()`.  Vous pouvez décrémenter l'itérateur pour atteindre le dernier élément de la séquence contrôlée, s'il est présent.  Vous pouvez incrémenter un itérateur d'ensemble pour atteindre le nœud principal, puis il testera son égalité à `end()`.  Mais vous ne pouvez pas déréférencer l'itérateur retourné par `end()`.  
+ Un ensemble prend en charge les itérateurs bidirectionnels, ce qui signifie que vous pouvez exécuter pour les éléments adjacents donnés d’un itérateur qui désigne un élément dans la séquence contrôlée. Un nœud principal spécial correspond à l’itérateur retourné par [set::end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`. Vous pouvez décrémenter cet itérateur afin d’atteindre le dernier élément dans la séquence contrôlée, le cas échéant. Vous pouvez incrémenter un itérateur ensemble afin d’atteindre le nœud principal, et il compare ensuite égal à `end()`. Mais vous ne pouvez pas déréférencer l’itérateur retourné par `end()`.  
   
- Notez que vous ne pouvez pas faire directement référence à un élément d'ensemble avec sa position numérique \-\- cela requiert un itérateur à accès aléatoire.  
+ Notez que vous ne pouvez pas faire référence à un élément de jeu directement donné sa position numérique--nécessitant un itérateur à accès aléatoire.  
   
- Un itérateur d'ensemble stocke un gestionnaire de son nœud d'ensemble, qui lui même stocke un gestionnaire vers son conteneur associé.  Vous pouvez utiliser des itérateurs uniquement avec leurs objets conteneurs associés.  Un itérateur d'ensemble reste valide tant que le nœud d'ensemble associé est associé à un certain ensemble.  De plus, un itérateur valide est déréférençable \-\- vous pouvez l'utiliser pour accéder ou modifier la valeur de l'élément qu'il indique \-\- tant qu'il n'est pas égal à `end()`.  
+ Un itérateur ensemble stocke un handle vers son nœud de jeu associé, qui à son tour stocke un handle à son conteneur associé. Vous pouvez utiliser des itérateurs uniquement avec les objets du conteneur associé. Un itérateur ensemble reste valide tant que son nœud de jeu associé est associé à un ensemble. En outre, un itérateur valide est dereferencable : vous pouvez l’utiliser pour accéder ou modifier la valeur d’élément qu’il désigne--tant qu’il n’est pas égal à `end()`.  
   
- Effacer ou supprimer un élément appelle le destructeur pour sa valeur stockée.  Détruire le conteneur efface tous les éléments.  Par conséquent, un conteneur dont le type d'élément est une classe de base garantit qu'aucun élément ne survive au conteneur.  Notez, toutefois, qu'un conteneur de descripteurs ne détruit `not` ses éléments.  
+ Effacement ou suppression d’un élément appelle le destructeur de sa valeur stockée. Destruction du conteneur efface tous les éléments. Par conséquent, un conteneur dont le type d’élément est une classe ref garantit qu’aucun élément ne survivent le conteneur. Toutefois, notez qu’un conteneur de handles ne `not` détruire ses éléments.  
   
-## Configuration requise  
- **En\-tête :** \<cliext\/set\>  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/set >  
   
- **Espace de noms** cliext  
+ **Namespace :** cliext  
   
-## Voir aussi  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [map](../dotnet/map-stl-clr.md)   
- [set](../dotnet/set-stl-clr.md)   
- [set](../dotnet/set-stl-clr.md)   
- [STL\/CLR, bibliothèque](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [carte (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [ensemble](../dotnet/set-stl-clr.md)   
+ [ensemble](../dotnet/set-stl-clr.md)   
+ [Référence de bibliothèque STL/CLR](../dotnet/stl-clr-library-reference.md)

@@ -1,39 +1,39 @@
 ---
-title: "operator AND | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "And"
-  - "operator AND"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator AND"
-  - "AND operator"
+title: "opérateur AND | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- And
+- operator AND
+dev_langs: C++
+helpviewer_keywords:
+- operator AND
+- AND operator
 ms.assetid: 6862d248-c169-4db8-a478-9d0ce4fdd1e3
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 220c8c07dfd46d13640adafbe7b764063d04e27d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# operator AND
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retourne le résultat d'une opération de bits AND l'opération pour *expression1* et *expression2*.  
+# <a name="operator-and"></a>AND, opérateur
+Retourne le résultat d’une opération AND au niveau du bit pour *expression1* et *expression2*.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 expression1 AND expression2  
 ```  
   
-## Voir aussi  
- [Operators Reference](../../assembler/masm/operators-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)

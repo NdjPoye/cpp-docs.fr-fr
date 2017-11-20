@@ -1,42 +1,42 @@
 ---
-title: "Implementation of a Custom String Manager (Advanced Method) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IAtlStringMgr class, using"
+title: "Implémentation d’un gestionnaire de chaîne personnalisée (méthode d’avancé) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: IAtlStringMgr class, using
 ms.assetid: 64ab7da9-47c1-4c4a-9cd7-4cc37e7f3f57
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b167f4064c73e126a745e5273592042dbf4a00e2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Implementation of a Custom String Manager (Advanced Method)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Implémentation d’un gestionnaire de chaînes personnalisé (méthode avancée)
+Dans des cas spéciaux, il pourrez que vous souhaitez implémenter un gestionnaire de chaînes personnalisé qui change plus que de segment de mémoire est utilisé pour allouer de la mémoire. Dans ce cas, vous devez implémenter manuellement le [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interface en tant que gestionnaire de chaînes personnalisé.  
+  
+ Pour ce faire, il est important de comprendre comment [CStringT](../atl-mfc-shared/reference/cstringt-class.md) utilise cette interface pour gérer ses données de chaîne. Chaque instance de `CStringT` a un pointeur vers un [CStringData](../atl-mfc-shared/reference/cstringdata-class.md) structure. Cette structure de longueur variable contient des informations importantes sur la chaîne (par exemple, la longueur), ainsi que les données de caractère de la chaîne. Chaque gestionnaire de chaînes personnalisé est chargé d’allouer et libérer ces structures à la demande de `CStringT`.  
+  
+ Le `CStringData` structure comprend les quatre champs :  
+  
+-   [pStringMgr](../atl-mfc-shared/reference/cstringdata-class.md#pstringmgr) ce champ pointe vers le `IAtlStringMgr` interface utilisée pour gérer les données de type chaîne. Lorsque `CStringT` doit réallouer ou libérer la mémoire tampon de chaîne qu’elle appelle la réallocation ou libres méthodes de cette interface, en passant le `CStringData` structure en tant que paramètre. Lors de l’allocation un `CStringData` structure dans le Gestionnaire de chaînes, vous devez définir ce champ pour pointer vers le Gestionnaire de chaînes personnalisé.  
+  
+-   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength) ce champ contient la longueur actuelle de la logique de la chaîne stockée dans la mémoire tampon à l’exclusion du caractère null de fin. `CStringT`met à jour ce champ lorsque la longueur de la chaîne est modifiée. Lors de l’allocation un `CStringData` structure, le Gestionnaire de chaînes doit définissez ce champ à zéro. Lors de la réallocation un `CStringData` structure, le Gestionnaire de chaînes personnalisé doit laisser ce champ inchangé.  
+  
+-   [nAllocLength](../atl-mfc-shared/reference/cstringdata-class.md#nalloclength) ce champ contient le nombre maximal de caractères (sans le caractère null de fin) qui peuvent être stockées dans cette mémoire tampon de chaîne sans la réallouer. Chaque fois que `CStringT` a besoin d’augmenter la longueur logique de la chaîne, il vérifie d’abord ce champ pour vous assurer que l’espace est suffisant dans la mémoire tampon. Si la vérification échoue, `CStringT` appelle le Gestionnaire de chaînes personnalisé pour réallouer la mémoire tampon. Lors de l’attribution ou de réallocation un `CStringData` structure, vous devez configurer ce champ au moins le nombre de caractères demandé dans le **nChars** paramètre [IAtlStringMgr::Allocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#allocate) ou [IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate). S’il existe davantage d’espace dans la mémoire tampon que celle demandée, vous pouvez définir cette valeur afin de refléter la quantité réelle de l’espace disponible. Cela permet de `CStringT` d’agrandir la chaîne pour remplir l’ensemble de l’espace alloué à l’avant qu’il ait rappeler dans le Gestionnaire de chaînes pour réallouer la mémoire tampon.  
+  
+-   [nRefs](../atl-mfc-shared/reference/cstringdata-class.md#nrefs) ce champ contient le nombre de références en cours de la mémoire tampon de chaîne. Si la valeur est un, puis une instance unique de `CStringT` à l’aide de la mémoire tampon. En outre, l’instance est autorisée à lire et modifier le contenu de la mémoire tampon. Si la valeur est supérieure à un, plusieurs instances de `CStringT` peut utiliser la mémoire tampon. Étant donné que la mémoire tampon de caractères est partagé, `CStringT` uniquement les instances peuvent lire le contenu de la mémoire tampon. Pour modifier le contenu, `CStringT` établit d’abord une copie de la mémoire tampon. Si la valeur est négative, seule une instance de `CStringT` à l’aide de la mémoire tampon. Dans ce cas, la mémoire tampon est considéré comme verrouillé. Lorsqu’un `CStringT` instance n’utilise une mémoire tampon verrouillée aucune autre instance de `CStringT` peuvent partager la mémoire tampon. Au lieu de cela, ces instances de créent une copie de la mémoire tampon avant de manipuler le contenu. En outre, le `CStringT` instance à l’aide de la mémoire tampon verrouillée n’essaie pas de partager la mémoire tampon de n’importe quel autre `CStringT` instance qui lui est affecté. Dans ce cas, le `CStringT` instance copie l’autre chaîne dans la mémoire tampon verrouillée.  
+  
+     Lors de l’allocation un `CStringData` structure, vous devez définir ce champ pour refléter le type de partage autorisé pour la mémoire tampon. Pour la plupart des implémentations, définissez cette valeur sur 1. Cela permet au comportement de partage de copie sur écriture normal. Toutefois, si le Gestionnaire de chaînes ne prend pas en charge le partage de la mémoire tampon de chaîne, définissez ce champ dans un état verrouillé. Cette opération force `CStringT` n’utiliser cette mémoire tampon pour l’instance de `CStringT` qui lui a été alloué.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Gestion de la mémoire avec CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
 
-Dans les configurations spécialisées, vous pouvez souhaiter implémenter un gestionnaire de chaînes personnalisé qui fait plus que la modification que le tas est utilisé pour allouer de la mémoire.  Dans cette situation, vous devez manuellement implémenter l'interface d' [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) comme votre gestionnaire de chaînes personnalisé.  
-  
- Pour ce faire, il est important d'abord incluent comment les utilisations de [CStringT](../atl-mfc-shared/reference/cstringt-class.md) interface qui gérer ses données de chaîne.  Chaque instance d' `CStringT` un pointeur vers une structure de [CStringData](../atl-mfc-shared/reference/cstringdata-class.md) .  Cette structure de longueur variable contient des informations importantes concernant la chaîne \(telle que la longueur\), ainsi que des données réelles caractères de la chaîne.  Chaque gestionnaire de chaînes personnalisé est chargé d'allouer et à libérer ces structures sur demande d' `CStringT`.  
-  
- La structure d' `CStringData` comporte quatre champs :  
-  
--   [pStringMgr](../Topic/CStringData::pStringMgr.md) points de ce champ à l'interface d' `IAtlStringMgr` utilisée pour gérer ces données de chaîne.  Lorsque les besoins d' `CStringT` de réaffecter ou libérer la mémoire tampon de chaîne il appelle le réaffecter ou libère des méthodes de cette interface, en passant la structure d' `CStringData` comme paramètre.  En allouant une structure d' `CStringData` dans votre gestionnaire de chaînes, vous devez définir ce champ pour indiquer le gestionnaire de chaînes personnalisé.  
-  
--   [nDataLength](../Topic/CStringData::nDataLength.md) ce champ contient la longueur logique actuelle de la chaîne stockée dans la mémoire tampon à l'exclusion de null de fin.  `CStringT` met à jour le champ lorsque la longueur de la chaîne est modifiée.  En allouant une structure d' `CStringData` , votre gestionnaire de chaînes doit définir ce champ à zéro.  En réaffectant une structure d' `CStringData` , votre gestionnaire de chaînes personnalisé doit quitter ce champ inchangé.  
-  
--   [nAllocLength](../Topic/CStringData::nAllocLength.md) ce champ contient le nombre maximal de caractères \(à l'exclusion de null de fin\) qui peuvent être stockés dans cette mémoire tampon de chaîne sans le réaffecter.  Chaque fois que les besoins d' `CStringT` d'augmenter la longueur logique de la chaîne, il vérifie d'abord ce champ pour vous assurer qu'il y a suffisamment d'espace dans la mémoire tampon.  Si la vérification échoue, les appels d' `CStringT` dans votre gestionnaire de chaînes personnalisé pour réaffecter la mémoire tampon.  Lorsque allouer ou réaffecter une structure d' `CStringData` , vous devez définir ce champ au moins le nombre de caractères demandés dans le paramètre de **nChars** à [IAtlStringMgr::Allocate](../Topic/IAtlStringMgr::Allocate.md) ou à [IAtlStringMgr::Reallocate](../Topic/IAtlStringMgr::Reallocate.md).  S'il y a plus d'espace dans la mémoire tampon que demandé, vous pouvez définir cette valeur pour refléter la quantité actuel de l'espace disponible.  Cela permet à `CStringT` pour élever la chaîne pour remplir l'espace alloué entier avant qu'il ait appeler dans le gestionnaire de chaînes à réaffecter la mémoire tampon.  
-  
--   [nRefs](../Topic/CStringData::nRefs.md) ce champ contient le nombre de références actuel de la mémoire tampon de chaîne.  Si la valeur est une, une seule instance d' `CStringT` utilise la mémoire tampon.  En outre, l'instance est autorisé à lire et modifie le contenu de la mémoire tampon.  Si la valeur est supérieure à une, plusieurs instances d' `CStringT` peuvent utiliser la mémoire tampon.  Étant donné que la mémoire tampon de caractères est partagé, les instances d' `CStringT` peuvent seulement lire le contenu de la mémoire tampon.  Pour modifier le contenu, `CStringT` tire d'abord une copie de la mémoire tampon.  Si la valeur est négative, une seule instance d' `CStringT` utilise la mémoire tampon.  Dans ce cas, la mémoire tampon est considérée comme verrouillée.  Lorsqu'une instance d' `CStringT` utilise une mémoire tampon verrouillée pas d'autres instances d' `CStringT` peuvent partager la mémoire tampon.  À la place, ces instances crée une copie de la mémoire tampon avant de manipuler le contenu.  En outre, l'instance d' `CStringT` utilisation de la mémoire tampon verrouillée ne tente pas de partager la mémoire tampon d'aucune autre instance d' `CStringT` assignée à celui\-ci.  Dans ce cas, l'instance d' `CStringT` copie l'autre chaîne dans la mémoire tampon verrouillée.  
-  
-     En allouant une structure d' `CStringData` , vous devez définir ce champ pour refléter le partage de type autorisé pour la mémoire tampon.  Pour la plupart des implémentations, définissez cette valeur à une.  Cela permet le comportement habituel de partage de copie\-sur\- Écriture.  Toutefois, si votre gestionnaire de chaînes ne prend pas partager la mémoire tampon de chaîne, définissez ce champ à un état verrouillé.  Cela force `CStringT` pour utiliser uniquement cette mémoire tampon pour l'instance d' `CStringT` qui l'a allouée.  
-  
-## Voir aussi  
- [Memory Management with CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)

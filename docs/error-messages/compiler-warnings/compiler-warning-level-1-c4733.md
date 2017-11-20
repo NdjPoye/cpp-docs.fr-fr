@@ -1,36 +1,34 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4733 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4733"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4733"
+title: Compilateur avertissement (niveau 1) C4733 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4733
+dev_langs: C++
+helpviewer_keywords: C4733
 ms.assetid: 7ef4f577-772d-4b66-a7bf-8958a6b250bc
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0fc99bf8c0d3397a11b6e0b06c582a81dd2b4875
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 1) C4733
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-assignation de Inline asm à 'FS:0' : gestionnaire non inscrit en tant que gestionnaire safe  
+# <a name="compiler-warning-level-1-c4733"></a>Avertissement du compilateur (niveau 1) C4733
+Affectation de inline asm à 'FS : 0' : gestionnaire non inscrit en tant que gestionnaire safe  
   
- Une fonction modifiant la valeur en FS:0 pour ajouter un nouveau gestionnaire d'exceptions pourrait ne pas fonctionner avec les exceptions sécurisées car le gestionnaire pourrait ne pas être inscrit comme gestionnaire d'exceptions valide \(consultez [\/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)\).  
+ Une fonction de modification de la valeur en FS : 0 pour ajouter un nouveau gestionnaire d’exceptions peuvent ne pas fonctionne avec les Exceptions sécurisées car le gestionnaire ne peut-être pas être inscrits en tant que gestionnaire d’exceptions valide (consultez [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)).  
   
- Pour corriger cet avertissement, supprimez la définition FS:0 ou désactivez cet avertissement et utilisez [.SAFESEH](../../assembler/masm/dot-safeseh.md) pour spécifier les gestionnaires d'exceptions sécurisés.  
+ Pour résoudre cet avertissement, supprimez la définition FS : 0 ou désactivez ce avertissement et utilisez [. SAFESEH](../../assembler/masm/dot-safeseh.md) pour spécifier les gestionnaires d’exceptions sécurisés.  
   
- L'exemple suivant génère l'erreur C4733 :  
+ L’exemple suivant génère l’erreur C4733 :  
   
 ```  
 // C4733.cpp  

@@ -1,32 +1,30 @@
 ---
-title: "ML Nonfatal Error A2189 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A2189"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A2189"
+title: Erreur ML non fatale A2189 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A2189
+dev_langs: C++
+helpviewer_keywords: A2189
 ms.assetid: 39649f39-57bc-4ceb-ab16-53f9b2a8d2d5
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e75e4c18a14b66760213f72c97453afebfd0c0fc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# ML Nonfatal Error A2189
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**combinaison valide avec l'alignement de segment**  
+# <a name="ml-nonfatal-error-a2189"></a>Erreur ML non fatale A2189
+**combinaison non valide avec l’alignement de segment**  
   
- L'alignement spécifié par la directive d' **ALIGNER** ou d' `EVEN` est supérieure à celui en cours de segment comme spécifié par la directive de **SEGMENT** .  
+ L’alignement spécifié par le **ALIGN** ou `EVEN` directive était supérieure à l’alignement de segment actuel tel que spécifié par le **SEGMENT** directive.  
   
-## Voir aussi  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>Voir aussi  
+ [Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)

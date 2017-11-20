@@ -1,45 +1,45 @@
 ---
-title: "Source de donn&#233;es&#160;: cr&#233;ation d&#39;une table par programme dans une source de donn&#233;es ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sources de données ODBC, créer des tables dans"
-  - "créer des tables ODBC par programme (C++)"
-  - "tables (C++)"
-  - "tables (C++), créer par programmation"
+title: "Créer par programmation une Table dans une Source de données ODBC | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- programmatically creating ODBC tables [C++]
+- tables [C++]
+- ODBC data sources, creating tables in
+- tables [C++], creating programmatically
 ms.assetid: 9ca68fb5-c3df-424a-a75c-e3fb01cc1b18
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8009d587007e618bfecf46911c5b30486cf1aba4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Source de donn&#233;es&#160;: cr&#233;ation d&#39;une table par programme dans une source de donn&#233;es ODBC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique décrit comment créer une table pour votre source de données, en utilisant la fonction membre `ExecuteSQL` de la classe `CDatabase`, en passant à la fonction une chaîne comprenant une instruction SQL **CREATE TABLE**.  
+# <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>Source de données : création d'une table par programme dans une source de données ODBC
+Cette rubrique explique comment créer une table pour vos données source, à l’aide de la `ExecuteSQL` fonction membre de classe `CDatabase`, en passant la fonction de chaîne qui contient un **CREATE TABLE** instruction SQL.  
   
- Pour plus d'informations générales sur les sources de données ODBC dans MFC, consultez [Source de données \(ODBC\)](../../data/odbc/data-source-odbc.md).  La rubrique [Source de données : configuration d'une source de données ODBC par programmation](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md) décrit la création de sources de données.  
+ Pour obtenir des informations générales sur les sources de données ODBC dans MFC, consultez [Source de données (ODBC)](../../data/odbc/data-source-odbc.md). La rubrique [Source de données : configuration d’une Source de données ODBC par programme](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md) décrit la création de sources de données.  
   
- Lorsque vous avez établi la source de données, vous pouvez facilement créer des tables à l'aide de la fonction membre `ExecuteSQL` et de l'instruction SQL **CREATE TABLE**.  Par exemple, si vous possédez un objet `CDatabase` intitulé `myDB`, vous pouvez utiliser le code MFC suivant pour créer une table :  
+ Lorsque vous avez établi la source de données, vous pouvez facilement créer des tables à l’aide de la `ExecuteSQL` fonction membre et le **CREATE TABLE** instruction SQL. Par exemple, si vous aviez un `CDatabase` objet appelé `myDB`, vous pouvez utiliser le code MFC suivant pour créer une table :  
   
 ```  
 myDB.ExecuteSQL("CREATE TABLE OFFICES (OfficeID TEXT(4)" ",   
                          OfficeName TEXT(10))");  
 ```  
   
- Cet exemple de code crée une table appelée "OFFICES" dans la connexion de source de données Microsoft Access gérée par `myDB` ; la table comprend deux champs "OfficeID" et "OfficeName".  
+ Cet exemple de code crée une table appelée « Bureaux » dans la connexion de source de données Microsoft Access gérée par `myDB`; la table contient deux champs « OfficeID » et « OfficeName ».  
   
 > [!NOTE]
->  Les types de champs spécifiés dans l'instruction SQL **CREATE TABLE** peuvent varier selon le pilote ODBC que vous utilisez.  Grâce au programme Microsoft Query \(livré avec Visual C\+\+ 1.5\), vous pouvez connaître les types de champs disponibles pour une source de données.  Dans Microsoft Query, cliquez sur **Fichier**, puis sur **Table\_Definition**, sélectionnez une table à partir d'une source de données et regardez le type affiché dans la zone de liste déroulante **Type**.  La syntaxe SQL sert également à créer des index.  
+>  Les types de champ spécifiés dans le **CREATE TABLE** instruction SQL peut varier selon le pilote ODBC que vous utilisez. Le programme Microsoft Query (livré avec Visual C++ 1.5) est une façon de découvrir les types de champ sont disponibles pour une source de données. Dans Microsoft Query, cliquez sur **fichier**, cliquez sur **définition_de_table**, sélectionnez une table dans une source de données et regardez le type indiqué dans le **Type** zone de liste déroulante. Il existe également la syntaxe SQL pour créer des index.  
   
-## Voir aussi  
- [Source de données \(ODBC\)](../../data/odbc/data-source-odbc.md)
+## <a name="see-also"></a>Voir aussi  
+ [Source de données (ODBC)](../../data/odbc/data-source-odbc.md)

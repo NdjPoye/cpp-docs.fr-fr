@@ -1,131 +1,131 @@
 ---
-title: "Classes de collection ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes de collection"
-  - "classes de collection, à propos des classes de collection"
-  - "classes de collection, choisir"
-  - "ConstructElements (fonction)"
-  - "CTraits (classes)"
-  - "DestructElements (fonction)"
-  - "SerializeElements (fonction)"
-  - "caractéristiques (classes)"
+title: Classes de Collection ATL | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DestructElements function
+- collection classes, choosing
+- ConstructElements function
+- SerializeElements function
+- traits classes
+- collection classes, about collection classes
+- CTraits classes
+- collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-caps.latest.revision: 14
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8be61044a9cc6883eab74eb8093b79ea84aacc60
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Classes de collection ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-ATL fournit de nombreuses classes de stockage et de données accès.  La classe vous décidez d'utiliser dépend de plusieurs facteurs, notamment :  
+# <a name="atl-collection-classes"></a>Classes de collection ATL
+ATL fournit de nombreuses classes de stockage et l’accès aux données. La classe que vous décidez d’utiliser dépend de plusieurs facteurs, notamment :  
   
 -   La quantité de données à stocker  
   
--   Efficacité et les performances lors de l'accès aux données  
+-   Efficacité et les performances d’accès aux données  
   
--   La capacité d'accéder aux données par index ou par clé  
+-   La possibilité d’accéder aux données par index ou par clé  
   
--   Comment les données sont triées  
+-   Comment les données sont triées.  
   
--   Préférence personnelle  
+-   Préférences personnelles  
   
-## Les classes de collection  
- ATL fournit les classes suivantes de tableau pour traiter un petit nombre d'objets.  Toutefois, ces classes sont limitées et conçues pour être utilisées en interne par ATL.  Il n'est pas recommandé de les utiliser dans vos programmes.  
+## <a name="small-collection-classes"></a>Classes de Collection de petites  
+ ATL fournit les classes de tableau suivantes pour traiter des petites quantités d’objets. Cependant, ces classes sont limitées et conçus pour être utilisé en interne par ATL. Il est déconseillé de les utiliser dans vos programmes.  
   
-|Classe|Stockage de type de données|  
-|------------|---------------------------------|  
-|[CSimpleArray](../atl/reference/csimplearray-class.md)|Implémente une classe de tableau pour traiter un petit nombre d'objets.|  
-|[CSimpleMap](../atl/reference/csimplemap-class.md)|Implémente une classe de mappage pour traiter un petit nombre d'objets.|  
+|Classe|Type de stockage de données|  
+|-----------|--------------------------|  
+|[CSimpleArray](../atl/reference/csimplearray-class.md)|Implémente une classe de tableau pour traiter des petites quantités d’objets.|  
+|[CSimpleMap](../atl/reference/csimplemap-class.md)|Implémente une classe de mappage pour traiter des petites quantités d’objets.|  
   
-## Classes de collection à caractère général  
- Les classes de traçage implémentent des tableaux, des listes, des cartes et sont fournies en tant que classes de collection à caractère général :  
+## <a name="general-purpose-collection-classes"></a>Classes de Collection usage général  
+ Les classes suivantes implémentent des tableaux, listes et mappages et sont fournies en tant que classes de collection usage général :  
   
-|Classe|Stockage de type de données|  
-|------------|---------------------------------|  
+|Classe|Type de stockage de données|  
+|-----------|--------------------------|  
 |[CAtlArray](../atl/reference/catlarray-class.md)|Implémente un tableau.|  
 |[CAtlList](../atl/reference/catllist-class.md)|Implémente une liste.|  
-|[CAtlMap](../atl/reference/catlmap-class.md)|Implémente une structure de mappage, par lequel les données puissent être référencées par clé ou la valeur.|  
-|[CRBMap](../atl/reference/crbmap-class.md)|Implémente une structure de mappage à l'aide de Rouge\- Noir.|  
-|[CRBMultiMap](../atl/reference/crbmultimap-class.md)|Implémente une structure multimapping de Rouge\-Noir.|  
+|[CAtlMap](../atl/reference/catlmap-class.md)|Implémente une structure de mappage, par laquelle les données peuvent être référencées par la clé ou une valeur.|  
+|[CRBMap](../atl/reference/crbmap-class.md)|Implémente une structure de mappage à l’aide de l’algorithme rouge-noire.|  
+|[CRBMultiMap](../atl/reference/crbmultimap-class.md)|Implémente une structure de multimappage rouge-noire.|  
   
- Ces classes intercepteront de nombreuses erreurs de programmation lorsque utilisé dans les versions debug, mais dans l'intéret de performances, ces contrôles ne sont pas exécutées dans les versions commerciales.  
+ Ces classes seront intercepter de nombreuses erreurs de programmation lorsqu’il est utilisé dans les versions debug, mais pour les besoins de performances, ces contrôles ne seront pas effectuées dans les versions commerciales.  
   
-## Classes de collection spécialisées  
- Les classes de collection plus spécialisées sont également données pour gérer des pointeurs mémoire et des pointeurs d'interface :  
+## <a name="specialized-collection-classes"></a>Classes de Collection spécialisées  
+ Classes de collection plus spécialisées sont également fournis pour la gestion des pointeurs de mémoire et des pointeurs d’interface :  
   
 |Classe|Objectif|  
-|------------|--------------|  
-|[CAutoPtrArray](../atl/reference/cautoptrarray-class.md)|Fournit des méthodes utiles lorsque vous construisez un tableau de pointeurs intelligents.|  
-|[CAutoPtrList](../atl/reference/cautoptrlist-class.md)|Fournit des méthodes utiles lorsque vous construisez une liste de pointeurs intelligents.|  
-|[CComUnkArray](../atl/reference/ccomunkarray-class.md)|Stocke des pointeurs d' `IUnknown` et est conçu pour être utilisé comme paramètre à la classe de modèle d' [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) .|  
-|[CHeapPtrList](../atl/reference/cheapptrlist-class.md)|Fournit des méthodes utiles lorsque vous construisez une liste des pointeurs de tas.|  
-|[CInterfaceArray](../atl/reference/cinterfacearray-class.md)|Fournit des méthodes utiles lorsque vous construisez un tableau de pointeurs d'interface COM.|  
-|[CInterfaceList](../atl/reference/cinterfacelist-class.md)|Fournit des méthodes utiles lorsque vous construisez une liste des pointeurs d'interface COM.|  
+|-----------|-------------|  
+|[CAutoPtrArray](../atl/reference/cautoptrarray-class.md)|Fournit des méthodes utiles lors de la construction d’un tableau de pointeurs intelligents.|  
+|[CAutoPtrList](../atl/reference/cautoptrlist-class.md)|Fournit des méthodes utiles lors de la construction d’une liste de pointeurs intelligents.|  
+|[CComUnkArray](../atl/reference/ccomunkarray-class.md)|Magasins `IUnknown` pointeurs et est conçu pour être utilisé en tant que paramètre à la [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) classe de modèle.|  
+|[CHeapPtrList](../atl/reference/cheapptrlist-class.md)|Fournit des méthodes utiles lors de la construction d’une liste de pointeurs de tas.|  
+|[CInterfaceArray](../atl/reference/cinterfacearray-class.md)|Fournit des méthodes utiles lors de la construction d’un tableau de pointeurs d’interface COM.|  
+|[CInterfaceList](../atl/reference/cinterfacelist-class.md)|Fournit des méthodes utiles lors de la construction d’une liste de pointeurs d’interface COM.|  
   
-## Choisir une classe de collection  
- Chacune des classes de collection disponibles propose différentes caractéristiques de performance, comme indiqué dans le tableau ci\-dessous.  
+## <a name="choosing-a-collection-class"></a>Choix d’une classe de Collection  
+ Chacune des classes de collection disponible offre des caractéristiques de performances différentes, comme indiqué dans le tableau ci-dessous.  
   
--   Les colonnes 2 et 3 décrivent les caractéristiques de chaque la classe de classement et de l'accès.  Dans le tableau, le terme « taille » signifie que l'ordre dans lequel les éléments sont insérés et supprimés détermine leur ordre dans la collection ; il ne signifie pas que les éléments sont triés sur leur contenu.  Le terme « est indexé » signifie que les éléments de la collection peuvent être extraits par un index d'entiers, comme les éléments d'un tableau classique.  
+-   Les colonnes 2 et 3 décrivent le classement de chaque classe caractéristiques et d’accès. Dans le tableau, le terme « ordonné » signifie que l’ordre dans lequel les éléments sont insérés et supprimés détermine leur ordre dans la collection. Il ne signifie pas que les éléments sont triés en fonction de leur contenu. Le terme « indexé » signifie que les éléments de la collection peuvent être récupérés par un index entier, comme les éléments d’un tableau standard.  
   
--   Les colonnes 4 et 5 décrivent la représentation de chaque classe.  Dans les applications qui requièrent plusieurs insertions dans la collection, la vitesse d'insertion peut être particulièrement importante ; pour d'autres applications, la vitesse de recherche peut être plus importante.  
+-   Les colonnes 4 et 5 décrivent les performances de chaque classe. Dans les applications qui nécessitent de nombreuses insertions dans la collection, la vitesse d’insertion peut être particulièrement importante. Pour d’autres applications, la vitesse de recherche peut être plus importante.  
   
--   La colonne 6 décrit si chaque formulaire permet les éléments en double.  
+-   La colonne 6 indique si chaque forme autorise des éléments en double.  
   
--   La représentation d'une opération donnée de classe de collection est exprimée en termes de relation entre le temps nécessaire pour terminer l'opération et le nombre d'éléments dans la collection.  Une opération prenant une durée qui augmente linéairement lorsque le nombre d'une augmentation d'éléments est décrit comme O \(n\) algorithme.  En revanche, une opération prenant un certain temps qui augmente inférieur à moins que le nombre d'une augmentation d'éléments est décrit comme O \(algorithme de journal n\).  Par conséquent, en termes de performances, O \(algorithmes de journal n\) surpassent O \(n\) des algorithmes de plus en plus à mesure que le nombre d'éléments augmente.  
+-   Les performances d’une opération de classe de collection donnée sont exprimée en termes de la relation entre le temps nécessaire pour terminer l’opération et le nombre d’éléments dans la collection. Une opération exigeant un laps de temps qui augmente proportionnellement au nombre d’éléments est décrite comme un algorithme o (n). En revanche, une opération exigeant un laps de temps qui augmente de moins en moins que le nombre d’éléments augmente est décrite comme un algorithme O (n journal). Par conséquent, en termes de performances, les algorithmes O (n journal) maintiennent des algorithmes plus en tant que le nombre d’éléments augmente.  
   
-### Fonctionnalités de forme de collection  
+### <a name="collection-shape-features"></a>Fonctionnalités des formes de collection  
   
-|Forme|Priorité ?|Indexé ?|Insérez<br /><br /> element|Recherche<br /><br /> élément spécifié|Dupliqué<br /><br /> éléments ?|  
-|-----------|----------------|--------------|-------------------------|------------------------------------|-----------------------------|  
-|Liste|Oui|Non|Rapide \(temps fixe\)|Lent o \(n\)|Oui|  
-|Tableau|Oui|Par int \(temps fixe\)|Ralentissez O \(n\) sauf si l'insertion à la fin, auquel cas le temps passé dans constante|Lent o \(n\)|Oui|  
-|Table|Non|Par clé \(temps fixe\)|Rapide \(temps fixe\)|Rapide \(temps fixe\)|Sans \(clés\) oui \(valeurs\)|  
-|Mappage de Rouge\- Noir|Oui \(par la clé\)|Par clé O \(log n\)|o rapide \(log n\)|o rapide \(log n\)|Non|  
-|Mappage de plusieurs Rouge\- Noir|Oui \(par la clé\)|Par clé O \(log n\) \(plusieurs valeurs par clé\)|o rapide \(log n\)|o rapide \(log n\)|Oui \(plusieurs valeurs par clé\)|  
+|Forme|Ordered|Indexées|Insérer un<br /><br /> d'élément|Rechercher<br /><br /> élément spécifié|Dupliquer<br /><br /> éléments|  
+|-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|  
+|Liste|Oui|Non|Rapide (temps constant)|Lente o (n)|Oui|  
+|Tableau|Oui|Par int (temps constant)|Lente o (n), sauf si insertion à la fin, dans quel cas temps constant|Lente o (n)|Oui|  
+|Carte|Non|Par clé (temps constant)|Rapide (temps constant)|Rapide (temps constant)|Non (clés) Oui (valeurs)|  
+|Table rouge-noire|Oui (par clé)|Par clé O (n journal)|Rapide O (n journal)|Rapide O (n journal)|Non|  
+|Rouge-noire Multimap|Oui (par clé)|Par clé O(log n) (plusieurs valeurs par clé)|Rapide O (n journal)|Rapide O (n journal)|Oui (plusieurs valeurs par clé)|  
   
-## À l'aide de objets de CTraits  
- Lorsque les classes de collection ATL peuvent être utilisées pour stocker une large gamme de types de données définis par l'utilisateur, il peut être utile de pouvoir remplacer des fonctions importantes telles que les comparaisons.  Cela est accompli en utilisant les classes de CTraits.  
+## <a name="using-ctraits-objects"></a>Utilisation des objets CTraits  
+ Comme les classes de collection ATL peuvent être utilisés pour stocker un large éventail de types de données définis par l’utilisateur, il peut être utile de pouvoir substituer des fonctions importantes telles que les comparaisons. Cela est possible en utilisant les classes CTraits.  
   
- Les classes de CTraits sont semblables à, mais plus flexibles que, les fonctions d'assistance de classe de collection MFC ; consultez [Programmes d'assistance pour les classes de collection](../mfc/reference/collection-class-helpers.md) pour plus d'informations.  
+ CTraits (classes) sont semblables aux, mais il est plus flexible que les fonctions d’assistance du classe de collection MFC ; consultez [Assistants de classe de Collection](../mfc/reference/collection-class-helpers.md) pour plus d’informations.  
   
- Lorsque vous construisez votre classe de collection, vous avez la possibilité de spécifier une classe de CTraits.  Cette classe contient le code qui s'exécute des opérations telles que les comparaisons lorsque appelé par les méthodes qui composent la classe de collection.  Par exemple, si votre objet de liste contient vos propres structures définies par l'utilisateur, vous pouvez redéfinir le test d'égalité pour comparer uniquement certaines variables membres.  De cette façon, la méthode de recherche de l'objet de liste sera exécuté de façon plus utile.  
+ Lors de la construction de votre classe de collection, vous avez la possibilité de spécifier une classe CTraits. Cette classe contiendra le code qui effectue des opérations telles que des comparaisons lorsqu’elle est appelée par les autres méthodes qui composent la classe de collection. Par exemple, si votre objet de liste contient vos propres structures définies par l’utilisateur, vous souhaiterez redéfinir le test d’égalité pour comparer uniquement certaines variables de membre. De cette façon, méthode de recherche de l’objet de liste fonctionne de manière plus utile.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Code  
- [!code-cpp[NVC_ATL_Utilities#112](../atl/codesnippet/CPP/atl-collection-classes_1.cpp)]  
+### <a name="code"></a>Code  
+ [!code-cpp[NVC_ATL_Utilities#112](../atl/codesnippet/cpp/atl-collection-classes_1.cpp)]  
   
-## Commentaires  
- Pour une liste des classes de CTraits, consultez [classes de collection](../atl/collection-classes.md).  
+## <a name="comments"></a>Commentaires  
+ Pour obtenir la liste des classes CTraits, consultez [Classes de Collection](../atl/collection-classes.md).  
   
- Le diagramme suivant illustre la hiérarchie de classes pour les classes de CTraits.  
+ Le diagramme suivant illustre la hiérarchie de classes pour les classes CTraits.  
   
- ![Hiérarchie des traits des classes de collection](../atl/media/vctraitscollectionclasseshierarchy.png "vcTraitsCollectionClassesHierarchy")  
+ ![Hiérarchie des traits des classes de collection](../atl/media/vctraitscollectionclasseshierarchy.gif "vctraitscollectionclasseshierarchy")  
   
-## Exemples de classes de collection  
- Les exemples suivants montrent des classes de collection :  
+## <a name="collection-classes-samples"></a>Exemples de Classes de collection  
+ Les exemples suivants illustrent les classes de collection :  
   
--   [Exemple MMXSwarm](../top/visual-cpp-samples.md)  
+-   [MMXSwarm, exemple](../visual-cpp-samples.md)  
   
--   [Exemple de DynamicConsumer](../top/visual-cpp-samples.md)  
+-   [DynamicConsumer, exemple](../visual-cpp-samples.md)  
   
--   [Exemple UpdatePV](../top/visual-cpp-samples.md)  
+-   [Exemple UpdatePV](../visual-cpp-samples.md)  
   
--   [Exemple de bannière](../top/visual-cpp-samples.md)  
+-   [Exemple de texte défilant](../visual-cpp-samples.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Concepts](../atl/active-template-library-atl-concepts.md)   
- [Classes de collection](../atl/collection-classes.md)
+ [Classes de collections](../atl/collection-classes.md)
+

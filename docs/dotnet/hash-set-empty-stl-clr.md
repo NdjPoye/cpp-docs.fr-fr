@@ -1,41 +1,39 @@
 ---
-title: "hash_set::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre empty [STL/CLR]"
+title: hash_set::Empty (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: 7843eb9a-067b-4339-8637-5401b637c6d0
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a63e1cb481ec0edab83bf214c6766fce02ee90b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Teste si aucun élément n'est présent.  
+# <a name="hashsetempty-stlclr"></a>hash_set::empty (STL/CLR)
+Vérifie l'absence d'éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 bool empty();  
 ```  
   
-## Notes  
- La fonction membre retourne vrai pour une séquence contrôlée vide.  Équivaut à [hash\_set::size](../dotnet/hash-set-size-stl-clr.md)`() == 0`.  Vous l'utilisez pour tester si le l'ensemble de hachage est vide.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre retourne la valeur true pour une séquence contrôlée vide. Elle est équivalente à [hash_set::size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md)`() == 0`. Il permet de tester si l’objet hash_set est vide.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_set_empty.cpp   
@@ -66,16 +64,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3**  
-**vide\(\) \= faux**  
-**taille\(\) \= 0**  
-**vide\(\) \= Vrai**   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/hash_set >  
   
-## Voir aussi  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::size](../dotnet/hash-set-size-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md)

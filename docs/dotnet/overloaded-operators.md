@@ -1,31 +1,31 @@
 ---
-title: "Op&#233;rateurs surcharg&#233;s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "surcharge d'opérateur, dans une classe CLR"
-  - "opérateurs (C++), surcharger"
+title: "Les opérateurs surchargés | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- operator overloading, in a CLR class
+- operators [C++], overloading
 ms.assetid: 30391426-afe7-4497-bf22-e4816c1e48c8
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 21d006aabc83af2021bb2b6d8bfa6a35588de12f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Op&#233;rateurs surcharg&#233;s
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La surcharge d'opérateur a été considérablement modifiée entre Extensions managées pour C\+\+ et [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+# <a name="overloaded-operators"></a>Opérateurs surchargés
+Surcharge d’opérateur a changé considérablement entre les Extensions managées pour C++ vers Visual C++.  
   
- Dans la déclaration d'un type référence, par exemple, au lieu d'utiliser la syntaxe `operator+` native, il faut inscrire explicitement le nom interne sous\-jacent de l'opérateur – ici, `op_Addition`.  En outre, l'appel d'un opérateur doit être appelé explicitement à travers ce nom, ce qui annule les deux avantages principaux de la surcharge d'opérateur : \(a\) une syntaxe intuitive et \(b\) la possibilité de mélanger les types nouveaux et les types existants.  Par exemple :  
+ Dans la déclaration d’un type de référence, par exemple, au lieu d’utiliser natif `operator+` syntaxe, vous inscrire explicitement le nom interne sous-jacent de l’opérateur - dans ce cas, `op_Addition`. En outre, l’appel d’un opérateur doit être appelé explicitement à travers ce nom, ce qui annule les deux avantages principaux de la surcharge d’opérateur : (a) une syntaxe intuitive et (b) la possibilité de mélanger les nouveaux types avec des types existants. Exemple :  
   
 ```  
 public __gc __sealed class Vector {  
@@ -52,7 +52,7 @@ int main()
 }  
 ```  
   
- Dans la nouvelle syntaxe, le programmeur C\+\+ natif retrouve ses habitudes, à la fois dans la déclaration et dans l'utilisation des opérateurs statiques.  Voici la traduction de la classe `Vector` dans la nouvelle syntaxe :  
+ Dans la nouvelle syntaxe, les attentes habituelles d’un programmeur C++ natif sont restaurés, à la fois dans la déclaration et l’utilisation des opérateurs statiques. Voici la `Vector` classe traduit dans la nouvelle syntaxe :  
   
 ```  
 public ref class Vector sealed {  
@@ -79,5 +79,5 @@ int main()
 }  
 ```  
   
-## Voir aussi  
- [Déclarations de membre dans une classe ou interface \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)
+## <a name="see-also"></a>Voir aussi  
+ [Déclarations de membre dans une classe ou interface (C++-CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)

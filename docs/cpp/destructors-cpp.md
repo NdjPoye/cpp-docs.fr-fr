@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - objects [C++], destroying
 - Visual C++, destructors
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 043143cc0a0a200f83642180b59b9576fefc4975
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 4fb96ae6763d9b2ca86f99ee42a10f56e93d7e3e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="destructors-c"></a>Destructeurs (C++)
 Un destructeur est une fonction membre qui est appelée automatiquement lorsque l’objet est hors de portée ou est détruite explicitement par un appel à `delete`. Un destructeur a le même nom que la classe précédé d’un tilde (`~`). Par exemple, le destructeur de la classe `String` est déclaré : `~String()`. Si vous ne définissez pas un destructeur, le compilateur fournit par défaut ; Pour de nombreuses classes, cela est suffisant. Vous ne devez définir un destructeur personnalisé lors de la classe stocke des handles vers des ressources système qui doivent être libérées ou détenant la mémoire qu’ils pointent.
@@ -232,4 +229,3 @@ ps->~String();     // Virtual call
 ```  
   
  La notation pour les appels explicites aux destructeurs, illustrée dans l'exemple précédent, peut être utilisée que le type définisse ou non un destructeur. Vous pouvez ainsi effectuer ce type d'appels explicites sans savoir si un destructeur est défini pour le type. Un appel explicite à un destructeur n'a aucun effet lorsqu'aucun destructeur n'est défini.  
-

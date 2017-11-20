@@ -1,61 +1,61 @@
 ---
-title: "/MD, /MT, /LD (Utiliser la biblioth&#232;que Runtime) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/ld"
-  - "/mt"
-  - "VC.Project.VCCLWCECompilerTool.RuntimeLibrary"
-  - "VC.Project.VCCLCompilerTool.RuntimeLibrary"
-  - "/md"
-  - "/ml"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/LD (option du compilateur C++)"
-  - "/MD (option du compilateur C++)"
-  - "/MDd (option du compilateur C++)"
-  - "/MT (option du compilateur C++)"
-  - "/MTd (option du compilateur C++)"
-  - "_STATIC_CPPLIB (symbole)"
-  - "DLL (C++), options du compilateur"
-  - "LD (option du compilateur C++)"
-  - "-LD (option du compilateur C++)"
-  - "LIBC.lib"
-  - "LIBCD.lib"
-  - "LIBCMT.lib"
-  - "LIBCMTD.lib"
-  - "MD (option du compilateur C++)"
-  - "-MD (option du compilateur C++)"
-  - "MDd (option du compilateur C++)"
-  - "-MDd (option du compilateur C++)"
-  - "MSVCRT.lib"
-  - "MSVCRTD.lib"
-  - "MT (option du compilateur C++)"
-  - "-MT (option du compilateur C++)"
-  - "MTd (option du compilateur C++)"
-  - "-MTd (option du compilateur C++)"
-  - "multithread (option du compilateur)"
-  - "threads (C++), multithread (option du compilateur)"
+title: "-MD, -MT, -LD (utiliser la bibliothèque Runtime) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /ld
+- /mt
+- VC.Project.VCCLWCECompilerTool.RuntimeLibrary
+- VC.Project.VCCLCompilerTool.RuntimeLibrary
+- /md
+- /ml
+dev_langs: C++
+helpviewer_keywords:
+- /MT compiler option [C++]
+- -MD compiler option [C++]
+- threading [C++], multithread compiler option
+- MSVCRTD.lib
+- MSVCRT.lib
+- LIBCMT.lib
+- MD compiler option [C++]
+- /MD compiler option [C++]
+- MT compiler option [C++]
+- LD compiler option [C++]
+- MDd compiler option [C++]
+- -MDd compiler option [C++]
+- LIBCD.lib
+- -MTd compiler option [C++]
+- MTd compiler option [C++]
+- /MTd compiler option [C++]
+- -LD compiler option [C++]
+- /MDd compiler option [C++]
+- multithread compiler option
+- _STATIC_CPPLIB symbol
+- LIBC.lib
+- /LD compiler option [C++]
+- DLLs [C++], compiler options
+- LIBCMTD.lib
+- -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bb4405c893552f38e613b9cb23ae0335c1a914c0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /MD, /MT, /LD (Utiliser la biblioth&#232;que Runtime)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Utiliser la bibliothèque Runtime)
 Indique si un module multithread est une DLL et spécifie les versions retail ou debug de la bibliothèque Runtime.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 /MD[d]  
@@ -63,41 +63,41 @@ Indique si un module multithread est une DLL et spécifie les versions retail ou
 /LD[d]  
 ```  
   
-## Notes  
+## <a name="remarks"></a>Remarques  
   
 |Option|Description|  
 |------------|-----------------|  
-|**\/MD**|Indique à l'application d'utiliser la version multithread spécifique à la DLL de la bibliothèque Runtime.  Définit `_MT` et `_DLL`, puis indique au compilateur de placer le nom de la bibliothèque MSVCRT.lib dans le fichier .obj.<br /><br /> Les applications compilées avec cette option sont liées de manière statique à MSVCRT.lib.  Cette bibliothèque fournit une couche de code qui permet à l'éditeur de liens de résoudre des références externes.  Le code de travail effectif est contenu dans MSVCR*versionnumber*.DLL, qui doit être disponible au moment de l'exécution pour les applications liées avec MSVCRT.lib.|  
-|**\/MDd**|Définit `_DEBUG`, `_MT` et `_DLL`, puis indique à l'application d'utiliser la version debug multithread spécifique à la DLL de la bibliothèque Runtime.  Le compilateur place également le nom de la bibliothèque MSVCRTD.lib dans le fichier .obj.|  
-|**\/MT**|Indique à l'application d'utiliser la version statique multithread de la bibliothèque Runtime.  Définit `_MT` et indique au compilateur de placer le nom de la bibliothèque LIBCMT.lib dans le fichier .obj de façon à ce que l'éditeur de liens utilise LIBCMT.lib pour résoudre les symboles externes.|  
-|**\/MTd**|Définit `_DEBUG` et `_MT`.  Cette option indique également au compilateur d'ajouter le nom de bibliothèque LIBCMTD.lib dans le fichier .obj afin que l'Éditeur de liens utilise LIBCMTD.lib pour résoudre les symboles externes.|  
-|**\/LD**|Crée une DLL.<br /><br /> Passe l'option **\/DLL** à l'éditeur de liens.  L'éditeur de liens recherche, mais n'exige pas, une fonction `DllMain`.  Si vous n'écrivez pas de fonction `DllMain`, l'éditeur de liens insère une fonction `DllMain` qui retourne TRUE.<br /><br /> Lie le code de démarrage de la DLL.<br /><br /> Crée une bibliothèque d'importation \(.lib\), si aucun fichier d'exportation \(.exp\) n'est spécifié sur la ligne de commande.  Vous liez la bibliothèque d'importation aux applications qui appellent votre DLL.<br /><br /> Interprète [\/Fe \(Nom de fichier EXE\)](../../build/reference/fe-name-exe-file.md) de manière à nommer une DLL plutôt qu'un fichier .exe.  Par défaut, le nom du programme devient *basename*.dll au lieu de *basename*.exe.<br /><br /> Implique **\/MT** à moins que vous ne spécifiiez explicitement **\/MD**.|  
-|**\/LDd**|Crée une DLL de débogage.  Définit `_MT` et `_DEBUG`.|  
+|**/MD**|Indique à l'application d'utiliser la version multithread spécifique à la DLL de la bibliothèque Runtime. Définit `_MT` et `_DLL`, puis indique au compilateur de placer le nom de la bibliothèque MSVCRT.lib dans le fichier .obj.<br /><br /> Les applications compilées avec cette option sont liées de manière statique à MSVCRT.lib. Cette bibliothèque fournit une couche de code qui permet à l'éditeur de liens de résoudre des références externes. Le code de travail effectif est contenu dans MSVCR*versionnumber*. DLL, qui doit être disponible au moment de l’exécution pour les applications liées avec MSVCRT.lib.|  
+|**/MDd**|Définit `_DEBUG`, `_MT` et `_DLL`, puis indique à l'application d'utiliser la version debug multithread spécifique à la DLL de la bibliothèque Runtime. Le compilateur place également le nom de la bibliothèque MSVCRTD.lib dans le fichier .obj.|  
+|**/MT**|Indique à l'application d'utiliser la version statique multithread de la bibliothèque Runtime. Définit `_MT` et indique au compilateur de placer le nom de la bibliothèque LIBCMT.lib dans le fichier .obj de façon à ce que l'éditeur de liens utilise LIBCMT.lib pour résoudre les symboles externes.|  
+|**/MTd**|Définit `_DEBUG` et `_MT`. Cette option indique également au compilateur d'ajouter le nom de bibliothèque LIBCMTD.lib dans le fichier .obj afin que l'Éditeur de liens utilise LIBCMTD.lib pour résoudre les symboles externes.|  
+|**/LD**|Crée une DLL.<br /><br /> Transmet le **/DLL** option à l’éditeur de liens. L'éditeur de liens recherche, mais n'exige pas, une fonction `DllMain`. Si vous n'écrivez pas de fonction `DllMain`, l'éditeur de liens insère une fonction `DllMain` qui retourne TRUE.<br /><br /> Lie le code de démarrage de la DLL.<br /><br /> Crée une bibliothèque d'importation (.lib), si aucun fichier d'exportation (.exp) n'est spécifié sur la ligne de commande. Vous liez la bibliothèque d'importation aux applications qui appellent votre DLL.<br /><br /> Interprète [/Fe (nom de fichier EXE)](../../build/reference/fe-name-exe-file.md) comme une DLL au lieu d’un fichier .exe. Par défaut, le nom du programme devient *basename*.dll à la place de *basename*.exe.<br /><br /> Implique **/MT** , sauf si vous spécifiez explicitement **/MD**.|  
+|**/Ldd**|Crée une DLL de débogage. Définit `_MT` et `_DEBUG`.|  
   
- Pour plus d'informations sur les bibliothèques Runtime C et les bibliothèques utilisées lors de la compilation avec [\/clr \(Compilation pour le Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md), consultez [Fonctions de bibliothèque CRT](../../c-runtime-library/crt-library-features.md).  
+ Pour plus d’informations sur les bibliothèques Runtime C et les bibliothèques qui sont utilisées lorsque vous compilez avec [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md), consultez [fonctionnalités de la bibliothèque CRT](../../c-runtime-library/crt-library-features.md).  
   
- Tous les modules passés à un appel donné de l'éditeur de liens doivent être compilés avec la même option de compilateur de la bibliothèque Runtime \(**\/MD**, **\/MT**, **\/LD**\).  
+ Tous les modules passés à un appel donné de l’éditeur de liens doivent avoir été compilés avec la même option du compilateur de bibliothèque Runtime (**/MD**, **/MT**, **/LD**).  
   
- Pour plus d'informations sur l'utilisation des versions Debug des bibliothèques Runtime, consultez [Référence sur les bibliothèques Runtime C](../../c-runtime-library/c-run-time-library-reference.md).  
+ Pour plus d’informations sur la façon d’utiliser les versions debug des bibliothèques Runtime, consultez [C Run-Time Library Reference](../../c-runtime-library/c-run-time-library-reference.md).  
   
  L'article de la Base de connaissances Q140584 indique également comment choisir la bibliothèque Runtime C appropriée.  
   
- Pour plus d'informations sur les DLL, consultez [DLL en Visual C\+\+](../../build/dlls-in-visual-cpp.md).  
+ Pour plus d’informations sur les DLL, consultez [DLL dans Visual C++](../../build/dlls-in-visual-cpp.md).  
   
-### Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Comment : ouvrir les pages de propriétés d'un projet](../../misc/how-to-open-project-property-pages.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
-2.  Développez le dossier **C\/C\+\+**.  
+2.  Développez le **C/C++** dossier.  
   
-3.  Sélectionnez la page de propriétés **Génération de code**.  
+3.  Sélectionnez le **génération de Code** page de propriétés.  
   
-4.  Modifiez la propriété **Bibliothèque Runtime**.  
+4.  Modifier la **de la bibliothèque Runtime** propriété.  
   
-### Pour définir cette option du compilateur par programmation  
+### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation  
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeLibrary%2A>.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options du compilateur](../../build/reference/compiler-options.md)   
  [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

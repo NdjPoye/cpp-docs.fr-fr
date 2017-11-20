@@ -1,49 +1,48 @@
 ---
-title: "lock::operator bool | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "operator bool"
-  - "msclr.lock.operator bool"
-  - "lock.operator bool"
-  - "msclr::lock::operator bool"
-  - "lock::operator bool"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock::operator bool"
+title: Lock::operator bool | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- operator bool
+- msclr.lock.operator bool
+- lock.operator bool
+- msclr::lock::operator bool
+- lock::operator bool
+dev_langs: C++
+helpviewer_keywords: lock::operator bool
 ms.assetid: 007f0372-f812-4f1e-ba43-2584bd96eb11
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1b797057679a1d0613936ae00bc8f76d32febd17
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# lock::operator bool
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Opérateur pour l'utilisation de `lock` dans une expression conditionnelle.  
+# <a name="lockoperator-bool"></a>lock::operator bool
+Opérateur pour l’utilisation de `lock` dans une expression conditionnelle.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 operator bool();  
 ```  
   
-## Valeur de retour  
- `true` si un verrou est maintenu, `false` sinon.  
+## <a name="return-value"></a>Valeur de retour  
+ `true`Si un verrou est maintenu, `false` dans le cas contraire.  
   
-## Notes  
- L'opérateur convertit en fait à `_detail_class::_safe_bool` qui est plus sûr que `bool` car il ne peut pas être converti en un type intégral.  
+## <a name="remarks"></a>Remarques  
+ Cet opérateur convertit effectivement en `_detail_class::_safe_bool` qui est plus sûr que `bool` car il ne peut pas être converti en un type intégral.  
   
-## Exemple  
- Cet exemple utilise une instance d'une classe entre des threads.  La classe utilise un verrou sur elle\-même pour garantir que les accès à ses données internes sont cohérents pour chaque thread.  Le thread d'application principale utilise un verrou sur la même instance de la classe pour vérifier régulièrement si les threads de travail existent toujours, et attend pour quitter jusqu'à ce que tous les threads de travail aient terminé leurs tâches.  
+## <a name="example"></a>Exemple  
+ Cet exemple utilise une seule instance d’une classe sur plusieurs threads.  La classe utilise un verrou sur lui-même pour vous assurer que l’accès à ses données internes sont cohérents pour chaque thread.  Le thread d’application principale utilise un verrou sur la même instance de la classe à vérifier régulièrement si les threads de travail existent toujours, et attend de quitter jusqu'à ce que tous les threads de travail ont terminé leurs tâches.  
   
 ```  
 // msl_lock_op_bool.cpp  
@@ -118,22 +117,25 @@ int main() {
 }  
 ```  
   
-  **Dans le thread 3, Compteur \= 0**  
-**Dans le thread 3, Compteur \= 10**  
-**Dans le thread 5, Compteur \= 0**  
-**Dans le thread 5, Compteur \= 10**  
-**Dans le thread 7, Compteur \= 0**  
-**Dans le thread 7, Compteur \= 10**  
-**Dans le thread 4, Compteur \= 0**  
-**Dans le thread 4, Compteur \= 10**  
-**Dans le thread 6, Compteur \= 0**  
-**Dans le thread 6, Compteur \= 10**  
-**Tous les threads terminés.**   
-## Configuration requise  
- **Fichier d'en\-tête** \<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- **Espace de noms** msclr  
+## <a name="requirements"></a>Spécifications  
+ **Fichier d’en-tête** \<msclr\lock.h >  
   
-## Voir aussi  
- [lock, membres](../dotnet/lock-members.md)   
- [lock::is\_locked](../dotnet/lock-is-locked.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Lock, membres](../dotnet/lock-members.md)   
+ [lock::is_locked](../dotnet/lock-is-locked.md)

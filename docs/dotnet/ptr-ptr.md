@@ -1,35 +1,34 @@
 ---
-title: "ptr::ptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr::ptr"
-  - "ptr.ptr"
-  - "msclr.com.ptr.ptr"
-  - "msclr::com::ptr::ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::ptr"
+title: PTR::PTR | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr::ptr
+- ptr.ptr
+- msclr.com.ptr.ptr
+- msclr::com::ptr::ptr
+dev_langs: C++
+helpviewer_keywords: ptr::ptr
 ms.assetid: 4f5883b4-7c0a-46c6-aa9f-4e49eed463eb
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 99016a9006bb13be70fe38fd222ad25a08792b20
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ptrptr"></a>ptr::ptr
 Construit un `com::ptr` pour encapsuler un objet COM.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 ptr();  
@@ -38,19 +37,19 @@ ptr(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `P`  
  Pointeur d'interface COM.  
   
-## Notes  
- Le constructeur d'étiquette sans argument affecte `nullptr` au handle d'objet sous\-jacent.  Les appels suivants à `com::ptr` valideront l'objet interne et échouent silencieusement jusqu'à ce qu'un objet soit créé ou joint.  
+## <a name="remarks"></a>Remarques  
+ Le constructeur sans argument affecte `nullptr` au handle d’objet sous-jacent. Les appels suivants à la `com::ptr` valide l’objet interne et échoueront jusqu'à ce qu’un objet est réellement créé ou attaché.  
   
- Le constructeur à un argument ajoute une référence à l'objet COM mais ne libère pas la référence de l'appelant, donc l'appelant doit appeler `Release` sur l'objet COM pour annuler réellement le contrôle.  Lorsque le destructeur de `com::ptr` est appelé cela libèrera automatiquement les références sur l'objet COM.  
+ Le constructeur d’un argument ajoute une référence à l’objet COM, mais ne libère pas de référence de l’appelant, l’appelant doit appeler `Release` sur l’objet COM réellement abandonne le contrôle. Lorsque le `com::ptr`du destructeur est appelé il publiera automatiquement ses références sur l’objet COM.  
   
- Passer `NULL` à ce constructeur est identique à appeler la version sans argument.  
+ Passage `NULL` à ce constructeur est identique à l’appel de la version sans argument.  
   
-## Exemple  
- Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son attribut privé `IXMLDOMDocument`.  Il illustre l'utilisation des deux versions du constructeur.  
+## <a name="example"></a>Exemple  
+ Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet. Il illustre l’utilisation des deux versions du constructeur.  
   
 ```  
 // comptr_ptr.cpp  
@@ -111,12 +110,12 @@ int main() {
 }  
 ```  
   
-## Configuration requise  
- **Fichier d'en\-tête** \<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>Spécifications  
+ **Fichier d’en-tête** \<msclr\com\ptr.h >  
   
- **Espace de noms** msclr::com  
+ **Namespace** msclr::com  
   
-## Voir aussi  
- [ptr, membres](../dotnet/ptr-members.md)   
- [ptr::CreateInstance](../dotnet/ptr-createinstance.md)   
+## <a name="see-also"></a>Voir aussi  
+ [PTR, membres](../dotnet/ptr-members.md)   
+ [PTR::CreateInstance](../dotnet/ptr-createinstance.md)   
  [ptr::~ptr](../dotnet/ptr-tilde-ptr.md)

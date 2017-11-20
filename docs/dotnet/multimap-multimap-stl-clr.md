@@ -1,33 +1,30 @@
 ---
-title: "multimap::multimap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::multimap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "multimap (membre) (STL/CLR)"
+title: multimap::multimap (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::multimap
+dev_langs: C++
+helpviewer_keywords: multimap member [STL/CLR]
 ms.assetid: cdf9c5dc-774c-424e-aeea-7554643e401c
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 90e201ea917ea50b64c85d8b1b103e186b267b88
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::multimap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Construit un objet container.  
+# <a name="multimapmultimap-stlclr"></a>multimap::multimap (STL/CLR)
+Construit un objet conteneur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 multimap();  
@@ -44,7 +41,7 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  premier  
  Début de la plage à insérer.  
   
@@ -52,71 +49,63 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
  Fin de la plage à insérer.  
   
  pred  
- Classer l'attribut de la séquence contrôlée.  
+ Classement de prédicat pour la séquence contrôlée.  
   
- right  
+ droite  
  Objet ou plage à insérer.  
   
-## Notes  
- Le constructeur :  
+## <a name="remarks"></a>Remarques  
+ Le constructeur :  
   
  `multimap();`  
   
- démarre la séquence contrôlée sans éléments, avec le prédicat de classement par défaut `key_compare()`.  Vous l'utilisez pour spécifier une séquence initiale contrôlée vide, avec le prédicat de classement par défaut.  
+ Initialise la séquence contrôlée sans aucun élément, avec la valeur par défaut classement prédicat `key_compare()`. Il permet de spécifier une séquence contrôlée initiale vide avec la valeur par défaut de classement de prédicat.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `explicit multimap(key_compare^ pred);`  
   
- démarre la séquence contrôlée sans éléments, avec le prédicat de classement `pred`.  Vous l'utilisez pour spécifier une séquence initiale contrôlée vide, avec le prédicat de classement spécifié.  
+ Initialise la séquence contrôlée sans aucun élément, avec le prédicat de tri `pred`. Il permet de spécifier une séquence contrôlée initiale vide avec le prédicat de tri spécifié.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `multimap(multimap<Key, Mapped>% right);`  
   
- démarre la séquence contrôlée par la séquence `[``right``.`[multimap::begin](../dotnet/multimap-begin-stl-clr.md)`(),` `right``.`[multimap::end](../dotnet/multimap-end-stl-clr.md)`())`, avec le prédicat de classement par défaut.  Vous l'utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l'objet tableau associatif \(multimap\) `right`, avec le prédicat de classement par défaut.  
+ Initialise la séquence contrôlée par la séquence [`right.begin()`, `right.end()`), avec la valeur par défaut de classement de prédicat. Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet multimap `right`, avec la valeur par défaut de classement de prédicat.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `multimap(multimap<Key, Mapped>^ right);`  
   
- démarre la séquence contrôlée par la séquence `[``right``->`[multimap::begin](../dotnet/multimap-begin-stl-clr.md)`(),` `right``->`[multimap::end](../dotnet/multimap-end-stl-clr.md)`())`, avec le prédicat de classement par défaut.  Vous l'utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l'objet tableau associatif \(multimap\) `right`, avec le prédicat de classement par défaut.  
+ Initialise la séquence contrôlée par la séquence [`right->begin()`, `right->end()`), avec la valeur par défaut de classement de prédicat. Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet multimap `right`, avec la valeur par défaut de classement de prédicat.  
   
- Le constructeur :  
+ Le constructeur :  
   
- `template<typename InIter>`  
+ `template<typename InIter> multimap(InIter first, InIter last);`  
   
- `multimap(InIter first, InIter last);`  
+ Initialise la séquence contrôlée par la séquence [`first`, `last`), avec la valeur par défaut de classement de prédicat. Il permet de rendre la séquence contrôlée une copie d’une autre séquence, avec la valeur par défaut de classement de prédicat.  
   
- démarre la séquence contrôlée par la séquence `[``first``,` `last``)`, avec le prédicat de classement par défaut.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence, avec le prédicat de classement par défaut.  
+ Le constructeur :  
   
- Le constructeur :  
+ `template<typename InIter> multimap(InIter first, InIter last, key_compare^ pred);`  
   
- `template<typename InIter>`  
+ Initialise la séquence contrôlée par la séquence [`first`, `last`), avec le prédicat de tri `pred`. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence, avec le prédicat de tri spécifié.  
   
- `multimap(InIter first, InIter last,`  
-  
- `key_compare^ pred);`  
-  
- démarre la séquence contrôlée par la séquence `[``first``,` `last``)`, avec le prédicat de classement par défaut `pred`.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence, avec le prédicat de classement spécifié.  
-  
- Le constructeur :  
+ Le constructeur :  
   
  `multimap(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- démarre la séquence contrôlée par la séquence désignée par l'énumérateur `right`, avec le prédicat de classement par défaut.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence décrite par un énumérateur, avec le prédicat de classement par défaut.  
+ Initialise la séquence contrôlée par la séquence désignée par l’énumérateur `right`, avec la valeur par défaut de classement de prédicat. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec la valeur par défaut de classement de prédicat.  
   
- Le constructeur :  
+ Le constructeur :  
   
- `multimap(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ Initialise la séquence contrôlée par la séquence désignée par l’énumérateur `right`, avec le prédicat de tri `pred`. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par l’énumérateur, avec le prédicat de tri spécifié.  
   
- démarre la séquence contrôlée par la séquence désignée par l'énumérateur `right`, avec le prédicat de classement par défaut `pred`.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence décrite par un énumérateur, avec le prédicat de classement spécifié.  
+## <a name="example"></a>Exemple  
   
-## Exemple  
-  
-```  
+```cpp  
 // cliext_multimap_construct.cpp   
 // compile with: /clr   
 #include <cliext/map>   
@@ -190,22 +179,25 @@ int main()
   
 ```  
   
-  **taille\(\) \= 0**  
- **\[a 1\] \[b 2\] \[c 3\]**  
-**taille\(\) \= 0**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## Configuration requise  
- **En\-tête :** \<cliext\/map\>  
+```Output  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+```  
   
- **Espace de nommage** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/map >  
   
-## Voir aussi  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::generic\_container](../dotnet/multimap-generic-container-stl-clr.md)   
- [multimap::operator\=](../dotnet/multimap-operator-assign-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::generic_container (STL/CLR)](../dotnet/multimap-generic-container-stl-clr.md)   
+ [multimap::operator= (STL/CLR)](../dotnet/multimap-operator-assign-stl-clr.md)

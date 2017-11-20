@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 08/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- namespace_CPP
-dev_langs:
-- C++
+f1_keywords: namespace_CPP
+dev_langs: C++
 helpviewer_keywords:
 - namespaces [C++], C++
 - namespaces [C++]
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - global namespace
 - Visual C++, namespaces
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: deb5926f15e4efad4378a9930f1e353e9af58516
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 5c7098727052ec9ef19614d011ace5981b54ce15
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="namespaces-c"></a>Espaces de noms (C++)
 Un espace de noms est une région déclarative qui fournit une portée aux identificateurs (noms de types, fonctions, variables, etc.) à l'intérieur. Les espaces de noms sont utilisés pour organiser le code en groupes logiques et pour éviter les conflits de noms qui peuvent se produire en particulier lorsque votre base de code inclut plusieurs bibliothèques. Tous les identificateurs de portée espace de noms sont visibles les uns pour les autres sans qualification. Les identificateurs en dehors de l’espace de noms peuvent accéder aux membres en utilisant le nom qualifié complet pour chaque identificateur, par exemple `std::vector<std::string> vec;`, ou par un [à l’aide de la déclaration](../cpp/using-declaration.md) pour un identificateur unique (`using std::string`), ou un [à l’aide de la Directive](../cpp/namespaces-cpp.md#using_directives) pour tous les identificateurs dans l’espace de noms (`using namespace std;`). Le code dans les fichiers d'en-tête doit toujours utiliser le nom de l'espace de noms qualifié complet.  
@@ -281,4 +277,3 @@ namespace
   
 ## <a name="see-also"></a>Voir aussi  
  [Déclarations et définitions](declarations-and-definitions-cpp.md)
-

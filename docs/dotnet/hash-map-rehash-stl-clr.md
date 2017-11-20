@@ -1,42 +1,39 @@
 ---
-title: "hash_map::rehash (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::rehash"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre rehash [STL/CLR]"
+title: hash_map::rehash (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::rehash
+dev_langs: C++
+helpviewer_keywords: rehash member [STL/CLR]
 ms.assetid: e894157c-4e31-4fbf-8020-b90f236da3e7
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 15c0bfbf6b35092858eb10516808dae843b60bdd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::rehash (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmaprehash-stlclr"></a>hash_map::rehash (STL/CLR)
 Régénère la table de hachage.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void rehash();  
 ```  
   
-## Notes  
- La fonction membre reconstruit la table de hachage, ce qui garantit [hash\_map::load\_factor](../dotnet/hash-map-load-factor-stl-clr.md)`() <=` [hash\_map::max\_load\_factor](../dotnet/hash-map-max-load-factor-stl-clr.md).  Sinon, la table de hachage augmente sa taille de la manière nécessaire après une insertion. \(Cela ne diminue jamais automatiquement de taille.\) Vous l'utilisez pour ajuster la taille de la table de hachage.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre régénère la table de hachage, en s’assurant que [hash_map::load_factor (STL/CLR)](../dotnet/hash-map-load-factor-stl-clr.md) `() <=` [hash_map::max_load_factor (STL/CLR)](../dotnet/hash-map-max-load-factor-stl-clr.md). Sinon, la table de hachage augmente la taille que si nécessaire après une insertion. (Jamais automatiquement diminue la taille.) Il permet d’ajuster la taille de la table de hachage.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_map_rehash.cpp   
@@ -82,23 +79,28 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 4**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 0,25**  
-**bucket\_count\(\) \= 128**  
-**load\_factor\(\) \= 0,0234375**  
-**max\_load\_factor\(\) \= 0,25**   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
   
- **Espace de nom** cliext  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
   
-## Voir aussi  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::bucket\_count](../dotnet/hash-map-bucket-count-stl-clr.md)   
- [hash\_map::load\_factor](../dotnet/hash-map-load-factor-stl-clr.md)   
- [hash\_map::max\_load\_factor](../dotnet/hash-map-max-load-factor-stl-clr.md)
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/hash_map >  
+  
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::bucket_count (STL/CLR)](../dotnet/hash-map-bucket-count-stl-clr.md)   
+ [hash_map::load_factor (STL/CLR)](../dotnet/hash-map-load-factor-stl-clr.md)   
+ [hash_map::max_load_factor (STL/CLR)](../dotnet/hash-map-max-load-factor-stl-clr.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,38 +15,21 @@ f1_keywords:
 - ATLBASE/ATL::CHandle::Close
 - ATLBASE/ATL::CHandle::Detach
 - ATLBASE/ATL::CHandle::m_h
-dev_langs:
-- C++
-helpviewer_keywords:
-- CHandle class
+dev_langs: C++
+helpviewer_keywords: CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: bbc0703ae5eaab01c0819be7e378509c7dc579ef
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: ed254b49c61f873e1d85fd0600c371c03ac246a2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="chandle-class"></a>CHandle (classe)
-Cette classe fournit des méthodes pour créer et utiliser un objet handle.  
+# <a name="chandle-class"></a>Classe de CHandle
+Cette classe fournit des méthodes pour la création et à l’aide d’un handle d’objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -85,11 +67,11 @@ class CHandle
 |----------|-----------------|  
 |[CHandle::m_h](#m_h)|La variable de membre qui stocke le descripteur.|  
   
-## <a name="remarks"></a>Notes  
- A `CHandle` objet peut être utilisé chaque fois qu’un descripteur est nécessaire : la principale différence est que le `CHandle` objet sera automatiquement supprimé.  
+## <a name="remarks"></a>Remarques  
+ A `CHandle` objet peut être utilisé chaque fois qu’un handle est requis : la principale différence est que le `CHandle` objet sera automatiquement supprimé.  
   
 > [!NOTE]
->  Certaines fonctions API utilisera NULL en tant que handle vide ou non valide, tandis que d’autres utilisent INVALID_HANDLE_VALUE. `CHandle`utilise NULL et ne traitez INVALID_HANDLE_VALUE comme un handle réel. Si vous appelez une API qui peut retourner INVALID_HANDLE_VALUE, vous devez vérifier cette valeur avant d’appeler [CHandle::Attach](#attach) ou en le passant à la `CHandle` constructeur et passer à la place la valeur NULL.  
+>  Certaines fonctions API utilisera NULL comme un handle non valide ou vide, alors que d’autres utilisent INVALID_HANDLE_VALUE. `CHandle`utilise NULL et ne traitez INVALID_HANDLE_VALUE comme un handle réel. Si vous appelez une API qui peut retourner INVALID_HANDLE_VALUE, vous devez rechercher cette valeur avant d’appeler [CHandle::Attach](#attach) ou en le passant à la `CHandle` constructeur et passer à la place la valeur NULL.  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
@@ -106,7 +88,7 @@ void Attach(HANDLE h) throw();
  `CHandle`prend possession du handle `h`.  
   
 ### <a name="remarks"></a>Remarques  
- Affecte le `CHandle` de l’objet à le `h` gérer. Dans les versions débogue une ATLASSERT ; sera déclenchée si `h` a la valeur NULL. Aucune autre vérification sur la validité de la poignée est effectuée.  
+ Affecte le `CHandle` de l’objet à le `h` gérer. Dans les versions débogue un ATLASSERT ; sera déclenchée si `h` a la valeur NULL. Aucune autre vérification sur la validité de la poignée est effectuée.  
   
 ##  <a name="chandle"></a>CHandle::CHandle  
  Constructeur.  
@@ -121,8 +103,8 @@ explicit CHandle(HANDLE h) throw();
  `h`  
  Un handle existant ou `CHandle`.  
   
-### <a name="remarks"></a>Notes  
- Crée un objet `CHandle` de l’objet, en utilisant éventuellement un handle existant ou `CHandle` objet.  
+### <a name="remarks"></a>Remarques  
+ Crée un nouveau `CHandle` de l’objet, si vous le souhaitez à l’aide d’un handle existant ou `CHandle` objet.  
   
 ##  <a name="dtor"></a>CHandle :: ~ CHandle  
  Destructeur.  
@@ -131,7 +113,7 @@ explicit CHandle(HANDLE h) throw();
 ~CHandle() throw();
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Libère le `CHandle` objet en appelant [CHandle::Close](#close).  
   
 ##  <a name="close"></a>CHandle::Close  
@@ -155,7 +137,7 @@ HANDLE Detach() throw();
  Retourne le handle qui est détaché.  
   
 ### <a name="remarks"></a>Remarques  
- Libère la possession du handle.  
+ Libère la possession de la poignée.  
   
 ##  <a name="m_h"></a>CHandle::m_h  
  La variable de membre qui stocke le descripteur.  
@@ -179,7 +161,7 @@ CHandle& operator=(CHandle& h) throw();
  Retourne une référence à la nouvelle `CHandle` objet.  
   
 ### <a name="remarks"></a>Remarques  
- Si le `CHandle` objet contient actuellement un handle, il va être fermée. Le `CHandle` de l’objet passé dans aura sa référence handle la valeur NULL. Cela garantit que deux `CHandle` objets ne contient jamais le même handle actif.  
+ Si le `CHandle` objet contient actuellement un handle, il va être fermée. Le `CHandle` de l’objet en cours de passage aura sa référence de descripteur de la valeur NULL. Cela garantit que deux `CHandle` objets ne contient jamais le même handle actif.  
   
 ##  <a name="operator_handle"></a>CHandle::operator descripteur  
  Retourne la valeur du handle stockée.  
@@ -193,4 +175,3 @@ operator HANDLE() const throw();
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

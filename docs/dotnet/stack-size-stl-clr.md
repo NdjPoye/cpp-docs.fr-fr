@@ -1,41 +1,39 @@
 ---
-title: "stack::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre size [STL/CLR]"
+title: Stack::Size (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 6113e649-a4f9-4021-8131-34cee4bc8ca0
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c43a16e897e2517ccac0597512b741cb3e66a6ad
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# stack::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stacksize-stlclr"></a>stack::size (STL/CLR)
 Compte le nombre d'éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 size_type size();  
 ```  
   
-## Notes  
- La méthode retourne la longueur de la séquence contrôlée.  Vous l'utilisez pour déterminer le nombre d'éléments figurant actuellement dans la séquence contrôlée.  Si tout ce dont vous vous souciez est si la séquence a une taille différente de zéro, consultez [stack::empty](../dotnet/stack-empty-stl-clr.md)`()`.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre retourne la longueur de la séquence contrôlée. Il permet de déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si tout vous intéressent est indique si la séquence a une taille différente de zéro, consultez [stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_stack_size.cpp   
@@ -69,15 +67,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3 à partir de 3**  
-**size\(\) \= 2 après avoir dépilé**  
-**size\(\) \= 4 après avoir ajouté 2**   
-## Configuration requise  
- **En\-tête :** \<cliext\/stack\>  
+```Output  
+ a b c  
+size() = 3 starting with 3  
+size() = 2 after popping  
+size() = 4 after adding 2  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/stack >  
   
-## Voir aussi  
- [pile](../dotnet/stack-stl-clr.md)   
- [stack::empty](../dotnet/stack-empty-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [pile (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)

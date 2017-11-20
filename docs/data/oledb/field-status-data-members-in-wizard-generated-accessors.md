@@ -1,33 +1,33 @@
 ---
-title: "Donn&#233;es membres de l&#39;&#233;tat des champs dans les accesseurs g&#233;n&#233;r&#233;s par l&#39;Assistant | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "état du champ dans les modèles OLE DB"
-  - "OLE DB (modèles du consommateur), état du champ"
+title: "Champ d’état des membres de données dans les accesseurs générés par l’Assistant | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB consumer templates, field status
+- field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e3991e2e5cab8814cba4e92882fbd978bdc051eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Donn&#233;es membres de l&#39;&#233;tat des champs dans les accesseurs g&#233;n&#233;r&#233;s par l&#39;Assistant
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Lorsque vous utilisez l'Assistant Consommateur OLE DB ATL pour créer un consommateur, l'Assistant génère des données membres dans la classe d'enregistrement utilisateur pour chaque champ que vous spécifiez dans le mappage de colonnes.  Chaque donnée membre correspond au type `DWORD` et contient une valeur d'état correspondant à son champ respectif.  
+# <a name="field-status-data-members-in-wizard-generated-accessors"></a>Données membres de l’état des champs dans les accesseurs générés par l’Assistant
+Lorsque vous utilisez l’Assistant Consommateur OLE DB ATL pour créer un consommateur, l’Assistant génère un membre de données dans la classe d’enregistrement utilisateur pour chaque champ que vous spécifiez dans le mappage de colonnes. Chaque membre de données est de type `DWORD` et contient une valeur d’état correspondant à son champ respectif.  
   
- Par exemple, pour une donnée membre *m\_OwnerID*, l'Assistant génère une donnée membre supplémentaire pour l'état du champ \(*dwOwnerIDStatus*\), et une autre pour la taille du champ \(*dwOwnerIDLength*\).  Il génère également un mappage de colonnes à l'aide des entrées `COLUMN_ENTRY_LENGTH_STATUS`.  
+ Par exemple, pour un membre de données *m_OwnerID*, l’Assistant génère une donnée membre supplémentaire pour l’état du champ (*dwOwnerIDStatus*) et une longueur de champ (*dwOwnerIDLength*). Il génère également un mappage de colonnes avec `COLUMN_ENTRY_LENGTH_STATUS` entrées.  
   
- Ce cas est illustré dans le code suivant :  
+ Ceci est illustré dans le code suivant :  
   
 ```  
 [db_source("insert connection string")]  
@@ -78,22 +78,22 @@ END_COLUMN_MAP()
 ```  
   
 > [!NOTE]
->  Si vous modifiez la classe d'enregistrement utilisateur ou écrivez votre propre consommateur, les variables de données doivent précéder les variables d'état et de longueur.  
+>  Si vous modifiez la classe d’enregistrement utilisateur ou écrivez votre propre consommateur, les variables de données doivent précéder les variables d’état et de longueur.  
   
- Vous pouvez également utiliser les valeurs d'état à des fins de débogage.  Si le code généré par l'Assistant Consommateur OLE DB ATL produit des erreurs de compilation telles que **DB\_S\_ERRORSOCCURRED** ou **DB\_E\_ERRORSOCCURRED**, vous devez d'abord examiner les valeurs actuelles des données membres d'état des champs.  Celles qui contiennent des valeurs différentes de zéro correspondent aux colonnes fautives.  
+ Vous pouvez utiliser les valeurs d’état à des fins de débogage. Si le code généré par l’Assistant Consommateur OLE DB ATL génère des erreurs de compilation comme **DB_S_ERRORSOCCURRED** ou **DB_E_ERRORSOCCURRED**, vous devez d’abord examiner les valeurs actuelles de l’état du champ membres de données. Celles qui ont des valeurs différentes de zéro correspondent aux colonnes qui posent problème.  
   
- Vous pouvez également utiliser les valeurs d'état pour attribuer une valeur NULL à un champ particulier.  Cette méthode est utile quand vous voulez distinguer une valeur de champ NULL d'une valeur zéro.  Il vous appartient de déterminer si NULL est une valeur valide ou une valeur spéciale, et comment votre application doit la gérer.  OLE DB définit **DBSTATUS\_S\_ISNULL** comme étant le moyen correct pour spécifier une valeur NULL générique.  Si le consommateur lit les données et que la valeur est nulle, le champ d'état a la valeur **DBSTATUS\_S\_ISNULL**.  Si le consommateur souhaite définir une valeur NULL, le consommateur définit la valeur de l'état comme étant **DBSTATUS\_S\_ISNULL** avant d'appeler le fournisseur.  
+ Vous pouvez également utiliser les valeurs d’état pour définir une valeur NULL pour un champ particulier. Cela vous aide à dans le cas dans lequel vous souhaitez distinguer une valeur de champ en tant que valeur NULL plutôt qu’à zéro. Il vous incombe de déterminer si NULL est une valeur valide ou une valeur spéciale et décider comment votre application doit gérer. OLE DB définit **DBSTATUS_S_ISNULL** comme le moyen correct pour spécifier une valeur NULL générique. Si le consommateur lit les données et la valeur est null, le champ d’état a la valeur **DBSTATUS_S_ISNULL**. Si le consommateur souhaite définir une valeur NULL, le consommateur définit la valeur d’état **DBSTATUS_S_ISNULL** avant d’appeler le fournisseur.  
   
- Ensuite, ouvrez Oledb.h et recherchez **DBSTATUSENUM**.  Vous pouvez comparer ensuite la valeur numérique de l'état différent de zéro aux valeurs d'énumération **DBSTATUSENUM**.  Si le nom d'énumération ne vous permet pas de déterminer le problème, consultez la rubrique « État » de la section « Liaison de valeurs de données » du [Guide de programmation OLE DB](http://go.microsoft.com/fwlink/?LinkId=121548).  Cette rubrique contient des tables de valeurs d'état utilisées lors de l'obtention ou de la définition des données.  Pour plus d'informations sur les valeurs de longueur, consultez la rubrique « Longueur » dans cette même section \(page éventuellement en anglais\).  
+ Ensuite, ouvrez Oledb.h et recherchez **DBSTATUSENUM**. Vous pouvez mettre en correspondre à la valeur numérique de l’état différent de zéro la **DBSTATUSENUM** valeurs d’énumération. Si le nom de l’énumération n’est pas suffisant pour vous indiquer quel est le problème, consultez la rubrique « État » dans la section « Liaison de valeurs de données » de la [Guide du programmeur OLE DB](http://go.microsoft.com/fwlink/?linkid=121548). Cette rubrique contient des tableaux de valeurs d’état utilisées lors de l’obtention ou la définition de données. Pour plus d’informations sur les valeurs de longueur, consultez la rubrique « Longueur » dans la même section.  
   
-## Récupération de la longueur ou de l'état d'une colonne  
- Vous pouvez récupérer la longueur d'une colonne de longueur variable ou l'état d'une colonne \(pour rechercher **DBSTATUS\_S\_ISNULL**, par exemple\) :  
+## <a name="retrieving-the-length-or-status-of-a-column"></a>La récupération de la longueur ou l’état d’une colonne  
+ Vous pouvez récupérer la longueur d’une colonne de longueur variable ou l’état d’une colonne (pour rechercher les **DBSTATUS_S_ISNULL**, par exemple) :  
   
--   Pour obtenir la longueur, utilisez la macro `COLUMN_ENTRY_LENGTH`.  
+-   Pour obtenir la longueur, utilisez la `COLUMN_ENTRY_LENGTH` (macro).  
   
--   Pour obtenir l'état, utilisez la macro `COLUMN_ENTRY_STATUS`.  
+-   Pour obtenir l’état, utilisez la `COLUMN_ENTRY_STATUS` (macro).  
   
--   Pour obtenir les deux, utilisez `COLUMN_ENTRY_LENGTH_STATUS`, comme indiqué ci\-dessous.  
+-   Pour obtenir les deux, utilisez `COLUMN_ENTRY_LENGTH_STATUS`, comme illustré ci-dessous.  
   
 ```  
 class CProducts  
@@ -121,7 +121,7 @@ while (product.MoveNext() == S_OK)
 }  
 ```  
   
- Quand vous utilisez `CDynamicAccessor`, la longueur et l'état sont liés automatiquement.  Pour récupérer les valeurs de longueur et d'état, utilisez les fonctions membres `GetLength` et **GetStatus**.  
+ Lorsque vous utilisez `CDynamicAccessor`, la longueur et l’état sont liés automatiquement. Pour récupérer les valeurs de longueur et l’état, utilisez la `GetLength` et **GetStatus** fonctions membres.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utilisation des modèles du consommateur OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

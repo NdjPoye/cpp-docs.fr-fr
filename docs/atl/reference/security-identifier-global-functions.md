@@ -4,46 +4,61 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atlsecurity/ATL::Sids::AccountOps
+- atlsecurity/ATL::Sids::Admins
+- atlsecurity/ATL::Sids::AnonymousLogon
+- atlsecurity/ATL::Sids::AuthenticatedUser
+- atlsecurity/ATL::Sids::BackupOps
+- atlsecurity/ATL::Sids::Batch
+- atlsecurity/ATL::Sids::CreatorGroup
+- atlsecurity/ATL::Sids::CreatorGroupServer
+- atlsecurity/ATL::Sids::CreatorOwner
+- atlsecurity/ATL::Sids::CreatorOwnerServer
+- atlsecurity/ATL::Sids::Dialup
+- atlsecurity/ATL::Sids::Guests
+- atlsecurity/ATL::Sids::Interactive
+- atlsecurity/ATL::Sids::Local
+- atlsecurity/ATL::Sids::Network
+- atlsecurity/ATL::Sids::NetworkService
+- atlsecurity/ATL::Sids::Null
+- atlsecurity/ATL::Sids::PowerUsers
+- atlsecurity/ATL::Sids::PrintOps
+- atlsecurity/ATL::Sids::Proxy
+- atlsecurity/ATL::Sids::RasServers
+- atlsecurity/ATL::Sids::Replicator
+- atlsecurity/ATL::Sids::RestrictedCode
+- atlsecurity/ATL::Sids::Self
+- atlsecurity/ATL::Sids::ServerLogon
+- atlsecurity/ATL::Sids::Service
+- atlsecurity/ATL::Sids::System
+- atlsecurity/ATL::Sids::SystemOps
+- atlsecurity/ATL::Sids::TerminalServer
+- atlsecurity/ATL::Sids::Users
+- atlsecurity/ATL::Sids::World
+dev_langs: C++
 helpviewer_keywords:
 - security IDs [C++]
 - SIDs [C++], returning SID objects
 ms.assetid: 85404dcb-c59b-4535-ab3d-66cfa37e87de
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 9e51fe30b0519514df34f1a77b1e731f51047520
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 0a8c0b901bf5be8bc89e9e77a0fa65d86bb29add
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="security-identifier-global-functions"></a>Fonctions globales identificateur de sécurité
 Ces fonctions retournent des objets common SID bien connu.  
   
 > [!IMPORTANT]
->  Les fonctions répertoriées dans le tableau suivant ne peut pas être utilisées dans les applications qui s’exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Les fonctions répertoriées dans le tableau suivant ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
   
 |||  
 |-|-|  
@@ -181,9 +196,9 @@ CSid NetworkService() throw(...);
 ```  
   
 ### <a name="remarks"></a>Remarques  
- Utilisez NetworkService pour permettre à l’utilisateur NT AUTHORITY\NetworkService lire un objet de sécurité CPerfMon. NetworkService ajoute un SecurityAttribute au code ATL qui permettra à la DLL pour vous connecter sous le compte NetworkService sur [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] et supérieure système d’exploitation.  
+ Utilisez NetworkService pour permettre à l’utilisateur NT AUTHORITY\NetworkService lire un objet de sécurité CPerfMon. NetworkService ajoute un SecurityAttribute au code ATL qui permettra de la DLL pour vous connecter sous le compte NetworkService sur [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] et supérieure système d’exploitation.  
   
- Lorsque les compteurs de journal personnalisé sont créés avec la classe ATLServer CPerfMon dans la console MMC Perfmon, les compteurs peuvent être absentes lorsque vous affichez le fichier journal, bien qu’ils s’affichent correctement dans la vue en temps réel. Compteurs de performance personnalisés CPerfMon n’ont pas les autorisations nécessaires pour s’exécuter sous le service « Journaux et alertes de Performance » (smlogsvc.exe) [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] (ou version ultérieure) systèmes d’exploitation. Ce service s’exécute sous le compte « NT AUTHORITY\NetworkService ».  
+ Lorsque les compteurs de journal personnalisées sont créées avec la classe de ATLServer CPerfMon dans la console MMC Perfmon, les compteurs peuvent n’apparaître lorsque vous affichez le fichier journal, bien qu’ils s’affichent correctement dans la vue en temps réel. Compteurs de performances personnalisés CPerfMon n’ont pas les autorisations nécessaires pour s’exécuter sous le service « Journaux et alertes de performances » (smlogsvc.exe) [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] (ou version ultérieure) les systèmes d’exploitation. Ce service s’exécute sous le compte « NT AUTHORITY\NetworkService ».  
   
 ##  <a name="null"></a>SIDs::null  
  Retourne le SID de SECURITY_NULL_RID.  
@@ -283,4 +298,3 @@ CSid World() throw(...);
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions](../../atl/reference/atl-functions.md)
-

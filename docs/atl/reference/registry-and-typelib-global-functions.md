@@ -4,45 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- RegistryDataExchange function, global functions
+f1_keywords:
+- atlbase/ATL::AtlGetPerUserRegistration
+- afxpriv/ATL::AfxRegCreateKey
+- afxpriv/ATL::AfxRegDeleteKey
+- atlbase/ATL::AtlRegisterTypeLib
+- afxpriv/ATL::AfxRegOpenKey
+- afxpriv/ATL::AfxRegOpenKeyEx
+- afxdisp/ATL::AfxUnregisterPreviewHandler
+- atlbase/ATL::AtlSetPerUserRegistration
+- atlbase/ATL::AtlUnRegisterTypeLib
+- atlbase/ATL::AtlLoadTypeLib
+- atlbase/ATL::AtlUpdateRegistryFromResourceD
+- atlbase/ATL::RegistryDataExchange
+dev_langs: C++
+helpviewer_keywords: RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 9f05db468d5d7fffce149d7a92ba29615c3ae7c1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 6f9dd09983a7b8cb781e26a6a3ed049d82d03632
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="registry-and-typelib-global-functions"></a>Fonctions globales du Registre et de TypeLib
 Ces fonctions fournissent la prise en charge pour le chargement et l’inscription d’une bibliothèque de types.  
   
 > [!IMPORTANT]
->  Les fonctions répertoriées dans les tableaux suivants ne peuvent pas être utilisées dans les applications qui s’exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Les fonctions répertoriées dans les tableaux suivants ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
   
 |||  
 |-|-|  
@@ -185,7 +180,7 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette fonction d’assistance utilisée par [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) et [CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib).  
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h
@@ -344,7 +339,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette fonction d’assistance utilisée par [AtlRegisterTypeLib](#atlregistertypelib) et [AtlUnRegisterTypeLib](#atlunregistertypelib).  
   
 ##  <a name="atlupdateregistryfromresourced"></a>AtlUpdateRegistryFromResourceD  
@@ -380,7 +375,7 @@ HRESULT RegistryDataExchange(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Les macros [BEGIN_RDX_MAP](registry-data-exchange-macros.md#begin_rdx_map) et [END_RDX_MAP](registry-data-exchange-macros.md#end_rdx_map) développer vers une fonction qui appelle `RegistryDataExchange`.  
   
  Les valeurs possibles d’énumération qui indiquent que l’opération de la fonction doit effectuer sont affichés dans le tableau suivant :  
@@ -395,9 +390,7 @@ HRESULT RegistryDataExchange(
  **En-tête :** atlbase.h
 
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions](atl-functions.md)
- [Macros d’échange de données de Registre](registry-data-exchange-macros.md)
-
+ [Fonctions](atl-functions.md) [Macros d’échange de données de Registre](registry-data-exchange-macros.md)
 
 
 

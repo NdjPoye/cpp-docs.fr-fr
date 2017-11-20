@@ -1,33 +1,33 @@
 ---
-title: "Comment&#160;: charger des ressources non manag&#233;es dans un tableau d&#39;octets | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ressources natives"
-  - "ressources natives, charger dans un tableau d'octets"
-  - "ressources non managées, charger dans un tableau d'octets"
+title: "Comment : charger des ressources non managées dans un tableau d’octets | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- native resources, loading into Byte array
+- unmanaged resources, loading into Byte array
+- native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 95c6e0655bcb5868a3c8eefa7a990ceea5dc6371
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: charger des ressources non manag&#233;es dans un tableau d&#39;octets
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique décrit différentes manières de charger des ressources non managées dans un tableau <xref:System.Byte>.  
+# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Comment : charger des ressources non managées dans un tableau d'octets
+Cette rubrique décrit les différentes manières de charger des ressources non managées dans un <xref:System.Byte> tableau.  
   
-## Exemple  
- Si vous connaissez la taille de votre ressource non managée, vous pouvez préallouer un tableau CLR, puis charger la ressource dans celui\-ci à l'aide d'un pointeur vers le bloc de tableau du tableau CLR.  
+## <a name="example"></a>Exemple  
+ Si vous connaissez la taille de votre ressource non managée, vous pouvez allouer un tableau CLR et ensuite charger la ressource dans le tableau à l’aide d’un pointeur vers le bloc de tableau du tableau CLR.  
   
 ```  
 // load_unmanaged_resources_into_Byte_array.cpp  
@@ -57,9 +57,12 @@ int main() {
 }  
 ```  
   
-  **0123456789**   
-## Exemple  
- Cet exemple montre comment copier des données d'un bloc de mémoire non managé vers un tableau managé.  
+```Output  
+0123456789  
+```  
+  
+## <a name="example"></a>Exemple  
+ Cet exemple montre comment copier des données à partir d’un bloc de mémoire non managée vers un tableau managé.  
   
 ```  
 // load_unmanaged_resources_into_Byte_array_2.cpp  
@@ -78,5 +81,5 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
- [Utilisation de l'interopérabilité C\+\+ \(PInvoke implicite\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

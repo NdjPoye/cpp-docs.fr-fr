@@ -1,33 +1,30 @@
 ---
-title: "$ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "$"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "$ symbol"
+title: $ | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: $
+dev_langs: C++
+helpviewer_keywords: $ symbol
 ms.assetid: c9c36297-0dc2-4d41-b071-a22d8f4a47bb
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5e41314d6e9b6a120e0701ae486281f7d96b7f89
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# $
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La valeur actuelle du compteur d'instruction.  
+# <a name=""></a>$
+La valeur actuelle du compteur d’emplacement.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,5 +32,5 @@ $
   
 ```  
   
-## Voir aussi  
- [Symbols Reference](../../assembler/masm/symbols-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les symboles](../../assembler/masm/symbols-reference.md)

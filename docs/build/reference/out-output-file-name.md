@@ -1,65 +1,65 @@
 ---
-title: "/OUT (Nom du fichier de sortie) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.OutputFile"
-  - "/out"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/OUT (option de l'éditeur de liens C++)"
-  - "éditeur de liens (C++), fichiers de sortie"
-  - "OUT (option de l'éditeur de liens)"
-  - "-OUT (option de l'éditeur de liens)"
-  - "fichiers de sortie, nom (option de l'éditeur de liens)"
+title: -OUT (nom de fichier de sortie) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.OutputFile
+- /out
+dev_langs: C++
+helpviewer_keywords:
+- output files, name linker option
+- -OUT linker option
+- OUT linker option
+- /OUT C++ linker option
+- linker [C++], output files
 ms.assetid: 976210a4-e51f-4cfb-af5e-c16344455834
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1dbf2e353ffb060a7bba2f38617e8fa86a1ab9c5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /OUT (Nom du fichier de sortie)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="out-output-file-name"></a>/OUT (Nom du fichier de sortie)
 ```  
 /OUT:filename  
 ```  
   
-## Notes  
- où :  
+## <a name="remarks"></a>Remarques  
+ où :  
   
  *filename*  
- désigne le nom spécifié par l'utilisateur du fichier de sortie.  Il remplace le nom par défaut.  
+ Nom du fichier de sortie spécifié par l’utilisateur. Il remplace le nom par défaut.  
   
-## Notes  
- L'option \/OUT substitue le nom et l'emplacement par défaut du programme créé par l'Éditeur de liens.  
+## <a name="remarks"></a>Remarques  
+ L’option /OUT substitue le nom par défaut et l’emplacement du programme qui crée de l’éditeur de liens.  
   
- Par défaut, l'éditeur de liens compose le nom du fichier en utilisant le nom de base du premier fichier .obj spécifié et l'extension appropriée \(.exe ou .dll\).  
+ Par défaut, l’éditeur de liens constitue le nom de fichier à l’aide du nom de base du premier fichier .obj spécifié et l’extension appropriée (.exe ou .dll).  
   
- Cette option est le nom de base par défaut d'un fichier de mappage ou d'une bibliothèque d'importation.  Pour plus d'informations, consultez [Générer fichier de mappage](../../build/reference/map-generate-mapfile.md) \(\/MAP\) et [\/IMPLIB](../../build/reference/implib-name-import-library.md).  
+ Cette option le nom de base par défaut pour une bibliothèque de fichier de mappage ou d’importation. Pour plus d’informations, consultez [générer fichier de mappage](../../build/reference/map-generate-mapfile.md) (/Map) et [/IMPLIB](../../build/reference/implib-name-import-library.md).  
   
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Définition des propriétés de projets Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Cliquez sur le dossier **Éditeur de liens**.  
+2.  Cliquez sur le **l’éditeur de liens** dossier.  
   
-3.  Cliquez sur la page de propriétés **Général**.  
+3.  Cliquez sur le **général** page de propriétés.  
   
-4.  Modifiez la propriété **Fichier de sortie**.  
+4.  Modifier la **fichier de sortie** propriété.  
   
-### Pour définir cette option de l'éditeur de liens par programme  
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>.  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)

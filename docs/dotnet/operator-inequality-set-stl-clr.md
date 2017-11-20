@@ -1,33 +1,30 @@
 ---
-title: "operator!= (set) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::operator!="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator!= (membre) (STL/CLR)"
+title: "opérateur ! = (set) (STL/CLR) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::operator!=
+dev_langs: C++
+helpviewer_keywords: operator!= member [STL/CLR]
 ms.assetid: cb82d6a4-0954-49a4-b979-a9ae39df9553
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 38b4c1924d9018c8892b9c409f9749dd372e5c00
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# operator!= (set) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Comparaison "non égale" de listes  
+# <a name="operator-set-stlclr"></a>operator!= (set) (STL/CLR)
+Liste de comparaison n’est pas égal.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Key>  
@@ -35,17 +32,17 @@ template<typename Key>
         set<Key>% right);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  left  
  Conteneur de gauche à comparer.  
   
- right  
+ droite  
  Conteneur de droite à comparer.  
   
-## Notes  
- La fonction d'opérateur retourne `!(``left` `==` `right``)`.  Vous l'utilisez pour tester si `left` n'est pas ordonné comme `right` lorsque les deux ensembles sont comparés élément par élément.  
+## <a name="remarks"></a>Remarques  
+ La fonction d’opérateur retourne `!(left == right)`. Il permet de tester si `left` n’est pas ordonné identique `right` lorsque les deux jeux sont comparé élément par élément.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_set_operator_ne.cpp   
@@ -85,19 +82,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b d**  
-**\[a b c\] \!\= \[a b c\] est Faux**  
-**\[a b c\] \!\= \[a b c\] est Vrai**   
-## Configuration requise  
- **En\-tête :** \<cliext\/set\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] != [a b c] is False  
+[a b c] != [a b d] is True  
+```  
   
- **Espace de nommage:** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/set >  
   
-## Voir aussi  
- [set](../dotnet/set-stl-clr.md)   
- [operator\=\= \(set\)](../dotnet/operator-equality-set-stl-clr.md)   
- [operator\< \(set\)](../dotnet/operator-less-than-set-stl-clr.md)   
- [operator\>\= \(set\)](../dotnet/operator-greater-or-equal-set-stl-clr.md)   
- [operator\> \(set\)](../dotnet/operator-greater-than-set-stl-clr.md)   
- [operator\<\= \(set\)](../dotnet/operator-less-or-equal-set-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Set (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [opérateur == (set) (STL/CLR)](../dotnet/operator-equality-set-stl-clr.md)   
+ [opérateur\< (set) (STL/CLR)](../dotnet/operator-less-than-set-stl-clr.md)   
+ [opérateur > = (set) (STL/CLR)](../dotnet/operator-greater-or-equal-set-stl-clr.md)   
+ [opérateur > (set) (STL/CLR)](../dotnet/operator-greater-than-set-stl-clr.md)   
+ [operator<= (set) (STL/CLR)](../dotnet/operator-less-or-equal-set-stl-clr.md)

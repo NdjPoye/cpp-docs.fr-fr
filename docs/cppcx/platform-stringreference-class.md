@@ -1,67 +1,205 @@
 ---
-title: "Platform::StringReference, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::StringReference"
-dev_langs: 
-  - "C++"
+title: Classe Platform::StringReference | Documents Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCCORLIB/Platform::StringReference::StringReference
+- VCCORLIB/Platform::StringReference::Data
+- VCCORLIB/Platform::StringReference::Length
+- VCCORLIB/Platform::StringReference::GetHSTRING
+- VCCORLIB/Platform::StringReference::GetString
+dev_langs: C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: bf096ef9849856e9995ff634d7aca26cd7f3f8e9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Platform::StringReference, classe
+# <a name="platformstringreference-class"></a>Platform::StringReference, classe
 Type d'optimisation que vous pouvez utiliser pour passer des données de type chaîne des paramètres d'entrée `Platform::String^` à d'autres méthodes avec un minimum d'opérations de copie.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
 class StringReference  
 ```  
   
-## Notes  
+### <a name="remarks"></a>Remarques  
   
-## Membres  
+### <a name="members"></a>Membres  
   
-### Constructeurs publics  
-  
-|Nom|Description|  
-|---------|-----------------|  
-|[StringReference::StringReference, constructeur](../cppcx/stringreference-stringreference-constructor.md)|Deux constructeurs pour créer des instances de `StringReference`.|  
-  
-### M&\#233;thodes publiques  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[StringReference::Data, méthode](../cppcx/stringreference-data-method.md)|Retourne des données de type chaîne en tant que tableau de valeurs char16.|  
-|[StringReference::Length, méthode](../cppcx/stringreference-length-method.md)|Retourne le nombre de caractères de la chaîne.|  
-|[StringReference::GetHSTRING, méthode](../cppcx/stringreference-gethstring-method.md)|Retourne des données de type chaîne en tant que HSTRING.|  
-|[StringReference::GetString, méthode](../cppcx/stringreference-getstring-method.md)|Retourne des données de type chaîne en tant que `Platform::String^`.|  
+|----------|-----------------|  
+|[StringReference::StringReference](#ctor)|Deux constructeurs pour créer des instances de `StringReference`.|  
   
-### Op&\#233;rateurs publics  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
-|---------|-----------------|  
-|`StringReference::operator=`|Assigne une `StringReference` à une nouvelle instance de `StringReference`.|  
-|`StringReference::operator()`|Convertit une `StringReference` en une `Platform::String^`.|  
+|----------|-----------------|  
+|[StringReference::Data](#data)|Retourne des données de type chaîne en tant que tableau de valeurs char16.|  
+|[StringReference::Length](#length)|Retourne le nombre de caractères de la chaîne.|  
+|[StringReference::GetHSTRING](#gethstring)|Retourne des données de type chaîne en tant que HSTRING.|  
+|[StringReference::GetString](#getstring)|Retourne des données de type chaîne en tant que `Platform::String^`.|  
   
-## Configuration requise  
- **Client minimum pris en charge :** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="public-operators"></a>Op&#233;rateurs publics  
   
- **Serveur minimum pris en charge :** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+|Nom|Description|  
+|----------|-----------------|  
+|[StringReference::operator =](#operator-assign)|Assigne une `StringReference` à une nouvelle instance de `StringReference` .|  
+|[Stringreference::operator](#operator-call)|Convertit une `StringReference` en une `Platform::String^`.|  
   
- **Espace de noms :** Platform  
+### <a name="requirements"></a>Spécifications  
+ **Minimum pris en charge le client :** Windows 8  
   
- **En\-tête** : vccorlib.h  
+ **Minimum de serveur pris en charge :** Windows Server 2012  
   
-## Voir aussi  
- [Platform::StringReference Class](../cppcx/platform-stringreference-class.md)
+ **Espace de noms :** Platform  
+  
+ **En-tête :** vccorlib.h  
+
+## <a name="data"></a>Stringreference::Data, méthode
+Retourne le contenu de ce `StringReference` sous forme de tableau de valeurs char16.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+const ::default::char16 * Data() const  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Tableau de caractères de texte UNICODE char16.  
+  
+
+
+## <a name="gethstring"></a>Stringreference::gethstring, méthode
+Retourne le contenu de la chaîne en tant que `__abi_HSTRING`.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+__abi_HSTRING GetHSTRING() const  
+  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ `__abi_HSTRING` contenant les données de type chaîne.  
+  
+### <a name="remarks"></a>Remarques  
+  
+
+
+## <a name="getstring"></a>Stringreference::GetString, méthode
+Retourne le contenu de la chaîne en tant que `Platform::String^`.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+__declspec(no_release_return) __declspec(no_refcount)  
+    ::Platform::String^ GetString() const  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ `Platform::String^` contenant les données de type chaîne.  
+
+## <a name="length"></a>Stringreference::Length, méthode
+Retourne le nombre de caractères de la chaîne.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+unsigned int Length() const  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Entier non signé qui Spécifie le nombre de caractères de la chaîne.  
+  
+### <a name="remarks"></a>Remarques  
+  
+
+
+## <a name="operator-assign"></a>StringReference::operator =, opérateur
+Assigne l'objet spécifié à l'objet `StringReference` actif.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+StringReference& operator=(const StringReference& __fstrArg);  
+StringReference& operator=(const ::default::char16* __strArg);    
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `__fstrArg`  
+ Adresse d'un objet `StringReference` utilisé pour initialiser l'objet `StringReference` actif.  
+  
+ `__strArg`  
+ Pointeur vers un tableau de valeurs char16 utilisé pour initialiser l'objet `StringReference` actif.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Référence à un objet de type `StringReference`.  
+  
+### <a name="remarks"></a>Remarques  
+ Étant donné que `StringReference` est une classe C++ standard et non une classe ref, elle n’apparaît pas dans le **Explorateur d’objets**.  
+  
+
+
+## <a name="operator-call"></a>Opérateur de Stringreference::operator
+Convertit un objet `StringReference` en un objet `Platform::String^`.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+  
+__declspec(no_release_return) __declspec(no_refcount)  
+         operator ::Platform::String^() const  
+  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Handle d'un objet de type `Platform::String`.  
+
+## <a name="ctor"></a>  StringReference::StringReference, constructeur
+Initialise une nouvelle instance de la classe `StringReference`.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+  
+    StringReference();  
+  
+   StringReference(const StringReference& __fstrArg)  
+  
+StringReference(const ::default::char16* __strArg)  
+  
+StringReference(const ::default::char16* __strArg, size_t __lenArg)  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `__fstrArg`  
+ `StringReference` dont les données sont utilisées pour initialiser la nouvelle instance.  
+  
+ `__strArg`  
+ Pointeur vers un tableau de valeurs char16 utilisé pour initialiser la nouvelle instance.  
+  
+ `__lenArg`  
+ Nombre d'éléments de `__strArg`.  
+  
+### <a name="remarks"></a>Remarques  
+ La première version de ce constructeur est le constructeur par défaut. La deuxième version initialise une nouvelle classe d'instance `StringReference` de l'objet spécifié par le paramètre `__fstrArg`. Les troisième et quatrième surcharges initialisent une nouvelle `StringReference` instance à partir d’un tableau de valeurs char16. char16 représente un caractère de texte UNICODE 16 bits.  
+  
+
+
+  
+## <a name="see-also"></a>Voir aussi  
+ [Platform::StringReference, classe](../cppcx/platform-stringreference-class.md)

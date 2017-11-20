@@ -1,53 +1,52 @@
 ---
-title: "Comment&#160;: diagnostiquer et r&#233;soudre les probl&#232;mes de compatibilit&#233; de l&#39;assembly (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compatibilité, entre les assemblys"
-  - "exceptions, diagnostiquer un comportement étrange"
-  - "contrôle de version"
-  - "contrôle de version, diagnostiquer les conflits"
+title: "Comment : diagnostiquer et résoudre les problèmes de compatibilité d’Assembly (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- versioning, diagnosing conflicts
+- versioning
+- exceptions, diagnosing odd behavior
+- compatibility, between assemblies
 ms.assetid: 297c71e3-04a8-4d24-a5dc-b04a2c5cc6fb
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9968981e8fd06a5c94383e1dee40c9b44169b4ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: diagnostiquer et r&#233;soudre les probl&#232;mes de compatibilit&#233; de l&#39;assembly (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique explique ce qui peut se passer lorsque la version d'un assembly référencée à la compilation ne correspond pas à la version de l'assembly référencée à l'exécution, et comment éviter ce problème.  
+# <a name="how-to-diagnose-and-fix-assembly-compatibility-problems-ccli"></a>Comment : diagnostiquer et résoudre les problèmes de compatibilité de l'assembly (C++/CLI)
+Cette rubrique explique ce qui peut se produire lorsque la version d’un assembly référencé au moment de la compilation ne correspond pas à la version de l’assembly référencé lors de l’exécution et comment éviter le problème.  
   
- Lorsqu'un assembly est compilé, d'autres assemblys peuvent être référencés à l'aide de la syntaxe `#using`.  Au cours de la compilation, le compilateur accède à ces assemblys.  Les informations fournies par ces assemblys servent à prendre des décisions d'optimisation.  
+ Lorsqu’un assembly est compilé, les autres assemblys peuvent être référencés avec la `#using` syntaxe. Lors de la compilation, ces assemblys sont accessibles par le compilateur. Informations à partir de ces assemblys sont utilisées pour prendre des décisions d’optimisation.  
   
- Toutefois, si l'assembly référencé est modifié et recompilé, et si vous ne recompilez pas l'assembly référenceur qui en dépend, les assemblys risquent de ne toujours pas être compatibles.  Les décisions d'optimisation qui étaient jusqu'ici valides peuvent ne plus être correctes avec la nouvelle version de l'assembly.  Diverses erreurs d'exécution peuvent se produire en raison de ces incompatibilités.  Aucune exception spécifique ne sera produite dans de tels cas.  La façon dont la défaillance est rapportée à l'exécution dépend de la nature de la modification du code qui a provoqué le problème.  
+ Toutefois, si l’assembly référencé est modifié et recompilé, et vous ne recompilez pas l’assembly de référence est dépendant, les assemblys peut ne pas toujours être compatibles. Les décisions d’optimisation qui étaient valides au premier peut-être pas correctes par rapport à la nouvelle version de l’assembly. Diverses erreurs d’exécution peuvent se produire en raison de ces incompatibilités. Il n’existe aucune exception spécifique qui est produite dans ce cas. La façon de que l’échec est consigné lors de l’exécution dépend de la nature de la modification du code qui a provoqué le problème.  
   
- Ces erreurs ne doivent pas poser problème dans votre code final de production tant que l'application entière est reconstituée pour la version finale de votre produit.  Les assemblys diffusés au public doivent être marqués d'un numéro de version officiel, ce qui évitera l'apparition de ces problèmes.  Pour plus d'informations, consultez [Versioning des assemblys](../Topic/Assembly%20Versioning.md).  
+ Ces erreurs ne doivent pas être un problème dans votre code de production final tant que l’application entière est reconstruite pour la version finale de votre produit. Les assemblys qui sont rendus accessibles au public doivent être marqués avec un numéro de version officielle, afin de vous assurer que ces problèmes sont évités. Pour plus d’informations, consultez [Versioning des assemblys](/dotnet/framework/app-domains/assembly-versioning).  
   
-### Diagnostic et résolution d'une erreur d'incompatibilité  
+### <a name="diagnosing-and-fixing-an-incompatibility-error"></a>Diagnostiquer et résoudre une erreur d’incompatibilité  
   
-1.  Si vous découvrez des exceptions d'exécution ou d'autres situations d'erreur dans le code qui référence un autre assembly, sans pouvoir en identifier la cause, vous avez peut\-être affaire à un assembly obsolète.  
+1.  Si vous rencontrez des exceptions d’exécution ou d’autres conditions d’erreur qui se produisent dans le code qui fait référence à un autre assembly et que vous avez aucun autre cause identifiée, vous pouvez être confronté à un assembly obsolète.  
   
-2.  Commencez par isoler et reproduire l'exception ou la situation d'erreur.  Un problème causé par une exception obsolète doit être reproductible.  
+2.  Tout d’abord, isoler et reproduire l’exception ou une autre condition d’erreur. Un problème qui se produit en raison d’une exception obsolète doit être reproductible.  
   
-3.  Vérifiez l'horodatage de tous les assemblys référencés dans votre application.  
+3.  Vérifiez l’horodatage de tous les assemblys référencés dans votre application.  
   
-4.  Si les horodatages de tous les assemblys référencés montrent un retard par rapport à l'horodatage de la dernière compilation de votre application, c'est que votre application est obsolète.  Dans ce cas, recompilez votre application avec l'assembly le plus récent et procédez aux modifications de code nécessaires.  
+4.  Si les horodatages de tous les assemblys référencés sont ultérieures à l’horodatage de la dernière compilation de votre application, votre application est obsolète. Si cela se produit, recompiler votre application avec l’assembly le plus récent et apportez les modifications de code nécessaires.  
   
-5.  Relancez l'application, exécutez les étapes qui reproduisent le problème et vérifiez que l'exception ne se produit pas.  
+5.  Réexécutez l’application, effectuez les étapes pour reproduire le problème, vérifiez que l’exception ne se produit pas.  
   
-## Exemple  
- Le programme suivant illustre le problème en réduisant l'accessibilité d'une méthode et en tentant d'accéder à cette méthode dans un autre assembly sans recompiler.  Essayez tout d'abord de compiler `changeaccess.cpp`.  Il s'agit de l'assembly référencé qui sera modifié.  Compilez ensuite `referencing.cpp`.  La compilation réussit.  Maintenant, réduisez l'accessibilité de la méthode appelée.  Recompilez `changeaccess.cpp` avec l'indicateur `/DCHANGE_ACCESS`.  Cette procédure fait de la méthode une méthode protégée, plutôt que privée, de façon à ce qu'elle puisse être appelée plus longtemps légalement.  Sans recompiler `referencing.exe`, relancez l'application.  Une exception <xref:System.MethodAccessException> se produira.  
+## <a name="example"></a>Exemple  
+ Le programme suivant illustre le problème en réduisant l’accessibilité d’une méthode et essayez d’accéder à cette méthode dans un autre assembly sans avoir à recompiler. Essayez de compiler `changeaccess.cpp` première. Il s’agit de l’assembly référencé, ce qui modifie. Ensuite, compilez `referencing.cpp`. La compilation réussit. Maintenant, réduisez l’accessibilité de la méthode appelée. Recompilez `changeaccess.cpp` avec l’indicateur `/DCHANGE_ACCESS`. Cela rend la méthode protégée, plutôt que privée, il peut donc plus être appelée légalement. Sans avoir à recompiler `referencing.exe`, réexécutez l’application. Une exception <xref:System.MethodAccessException> génère.  
   
 ```  
 // changeaccess.cpp  
@@ -100,6 +99,6 @@ int main() {
   
 ```  
   
-## Voir aussi  
- [\#using, directive](../preprocessor/hash-using-directive-cpp.md)   
- [Types managés](../dotnet/managed-types-cpp-cli.md)
+## <a name="see-also"></a>Voir aussi  
+ [#using, Directive](../preprocessor/hash-using-directive-cpp.md)   
+ [Types managés (C++-CLI)](../dotnet/managed-types-cpp-cli.md)

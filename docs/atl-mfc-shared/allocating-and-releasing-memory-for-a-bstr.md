@@ -1,56 +1,56 @@
 ---
-title: "Allocating and Releasing Memory for a BSTR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "bstr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BSTR, allocation de mémoire"
-  - "mémoire (C++), libération"
-  - "allocation de mémoire, BSTR"
-  - "memory deallocation, BSTR memory"
-  - "memory deallocation, string memory"
-  - "chaînes (C++), libération"
+title: "Allocation et libération de mémoire pour un BSTR | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: bstr
+dev_langs: C++
+helpviewer_keywords:
+- BSTRs, memory allocation
+- memory deallocation, string memory
+- memory [C++], releasing
+- memory allocation, BSTRs
+- memory deallocation, BSTR memory
+- strings [C++], releasing
 ms.assetid: 98041e29-3442-4a02-b425-7a4a13e9cc84
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9b202d9e1d93cb170325ede736eb1ab33fc69b02
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Allocating and Releasing Memory for a BSTR
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="allocating-and-releasing-memory-for-a-bstr"></a>Allocation et libération de mémoire pour un BSTR
+Lorsque vous créez `BSTR`s et les passer entre les objets COM, vous devez être attentif dans le traitement de la mémoire qu’ils utilisent afin d’éviter les fuites de mémoire. Lorsqu’un `BSTR` reste dans une interface, vous devez libérer sa mémoire lorsque vous avez terminé avec lui. Toutefois, lorsqu’un `BSTR` passe en dehors d’une interface, l’objet récepteur assume la responsabilité de la gestion de la mémoire.  
+  
+ En général, les règles pour l’allocation et libération de la mémoire allouée pour `BSTR`s sont les suivantes :  
+  
+-   Lorsque vous appelez une fonction qui attend un `BSTR` argument, vous devez allouer la mémoire pour le `BSTR` avant l’appel et libérer ensuite. Exemple :  
+  
+     [!code-cpp[NVC_ATLMFC_Utilities#192](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_1.cpp)]  
+  
+     [!code-cpp[NVC_ATLMFC_Utilities#193](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_2.cpp)]  
+  
+-   Lorsque vous appelez une fonction qui retourne un `BSTR`, vous devez libérer la chaîne vous-même. Exemple :  
+  
+     [!code-cpp[NVC_ATLMFC_Utilities#194](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_3.cpp)]  
+  
+     [!code-cpp[NVC_ATLMFC_Utilities#195](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_4.cpp)]  
+  
+-   Lorsque vous implémentez une fonction qui retourne un `BSTR`, allouez la chaîne mais ne le libérez pas. La réception de la fonction libère la mémoire. Exemple :  
+  
+     [!code-cpp[NVC_ATLMFC_Utilities#196](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_5.cpp)]  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Chaînes (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
+ [CStringT::AllocSysString](../atl-mfc-shared/reference/cstringt-class.md#allocsysstring)   
+ [SysAllocString](https://msdn.microsoft.com/library/windows/desktop/ms221458.aspx)   
+ [SysFreeString](https://msdn.microsoft.com/library/windows/desktop/ms221481.aspx)
 
-Lorsque vous créez `BSTR`s et les passez entre les objets COM, vous devez prendre en charge le traitement de la mémoire qu'ils utilisent pour éviter des fuites de mémoire.  Lorsque `BSTR` reste dans une interface, vous devez libérer la mémoire lorsque vous avez terminé avec elle.  Toutefois, lorsque `BSTR` passe hors d'une interface, l'objet de réception accepte la responsabilité de sa gestion de la mémoire.  
-  
- En général les règles pour allouer et libérer la mémoire allouée pour `BSTR`s sont les suivantes :  
-  
--   Lorsque vous appelez une fonction qui attend un argument d' `BSTR` , vous devez allouer de la mémoire pour `BSTR` avant l'appel et la libération après.  Par exemple :  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#192](../atl-mfc-shared/codesnippet/CPP/allocating-and-releasing-memory-for-a-bstr_1.cpp)]  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#193](../atl-mfc-shared/codesnippet/CPP/allocating-and-releasing-memory-for-a-bstr_2.cpp)]  
-  
--   Lorsque vous appelez une fonction qui retourne `BSTR`, vous devez libérer la chaîne vous\-même.  Par exemple :  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#194](../atl-mfc-shared/codesnippet/CPP/allocating-and-releasing-memory-for-a-bstr_3.cpp)]  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#195](../atl-mfc-shared/codesnippet/CPP/allocating-and-releasing-memory-for-a-bstr_4.cpp)]  
-  
--   Lorsque vous implémentez une fonction qui retourne `BSTR`, allouez la chaîne mais ne libérez pas la.  Recevoir la fonction libère la mémoire.  Par exemple :  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#196](../atl-mfc-shared/codesnippet/CPP/allocating-and-releasing-memory-for-a-bstr_5.cpp)]  
-  
-## Voir aussi  
- [Chaînes](../atl-mfc-shared/strings-atl-mfc.md)   
- [CStringT::AllocSysString](../Topic/CStringT::AllocSysString.md)   
- [SysAllocString](http://msdn.microsoft.com/fr-fr/9e0437a2-9b4a-4576-88b0-5cb9d08ca29b)   
- [SysFreeString](http://msdn.microsoft.com/fr-fr/8f230ee3-5f6e-4cb9-a910-9c90b754dcd3)

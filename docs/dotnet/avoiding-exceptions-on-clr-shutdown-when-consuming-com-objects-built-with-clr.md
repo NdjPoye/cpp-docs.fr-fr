@@ -1,35 +1,35 @@
 ---
-title: "&#201;viter des exceptions &#224; l&#39;arr&#234;t du CLR lors de l&#39;utilisation d&#39;objets COM g&#233;n&#233;r&#233;s avec&#160;/clr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr (option du compilateur C++), exceptions d'arrêt CLR"
-  - "/clr (option du compilateur C++), objets COM"
-  - "exceptions d'arrêt CLR (C++)"
-  - "Interop (C++), exceptions d'arrêt CLR"
-  - "interopérabilité (C++), exceptions d'arrêt CLR"
-  - "assemblys mixtes (C++), exceptions d'arrêt CLR"
+title: "Éviter les Exceptions levées par les objets COM générés avec - clr | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], CLR shutdown exceptions
+- /clr compiler option [C++], CLR shutdown exceptions
+- mixed assemblies [C++], CLR shutdown exceptions
+- /clr compiler option [C++], COM objects
+- interoperability [C++], CLR shutdown exceptions
+- CLR shutdown exceptions [C++]
 ms.assetid: 41249d83-4b51-4e46-866f-27f475f2498c
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 430420a62915d3378dae863c20c00e3b398ecb3c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# &#201;viter des exceptions &#224; l&#39;arr&#234;t du CLR lors de l&#39;utilisation d&#39;objets COM g&#233;n&#233;r&#233;s avec&#160;/clr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Une fois que le Common Language Runtime \(CLR\) entre en mode d'arrêt, les fonctions natives ont un accès limité aux services CLR.  Lorsqu'on tente d'appeler la version release sur un objet COM compilé avec **\/clr**, le CLR passe en code natif, puis revient en code managé pour répondre à l'appel IUnknown::Release \(défini en code managé\).  Le CLR empêche le rappel en code managé puisqu'il se trouve en mode d'arrêt.  
+# <a name="avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr"></a>Éviter des exceptions à l'arrêt du CLR lors de l'utilisation d'objets COM générés avec /clr
+Une fois que le common language runtime (CLR) entre en mode arrêt, les fonctions natives ont un accès limité aux services CLR. Lorsque vous tentez d’appeler Release sur un objet COM compilé avec **/CLR**, le CLR passe en code natif, puis revient en code managé pour répondre à l’appel IUnknown::Release (qui est définie dans le code managé). Le CLR empêche l’appel en code managé, car il est en mode arrêt.  
   
- Pour résoudre le problème, veillez à ce que les destructeurs appelés depuis des méthodes release ne contiennent que du code natif.  
+ Pour résoudre ce problème, assurez-vous que destructeurs appelés à partir des méthodes de mise en production ne doivent contenir du code natif.  
   
-## Voir aussi  
- [Assemblys mixtes \(natif et managé\)](../dotnet/mixed-native-and-managed-assemblies.md)
+## <a name="see-also"></a>Voir aussi  
+ [Assemblys mixtes (natif et managé)](../dotnet/mixed-native-and-managed-assemblies.md)

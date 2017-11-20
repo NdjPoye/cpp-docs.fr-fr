@@ -1,32 +1,30 @@
 ---
-title: "BLOB_ENTRY_LENGTH | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BLOB_ENTRY_LENGTH"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BLOB_ENTRY_LENGTH (macro)"
+title: BLOB_ENTRY_LENGTH | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BLOB_ENTRY_LENGTH
+dev_langs: C++
+helpviewer_keywords: BLOB_ENTRY_LENGTH macro
 ms.assetid: 832d21ab-5fdd-49ad-af6e-4fca5722ec93
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0de1707ab616aca49061590bfb76bf74360019ba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# BLOB_ENTRY_LENGTH
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Used with `BEGIN_COLUMN_MAP` and `END_COLUMN_MAP` to bind a binary large object \([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)\).  Similar to [BLOB\_ENTRY](../../data/oledb/blob-entry.md), except that this macro also gets the length in bytes of the BLOB column.  
+# <a name="blobentrylength"></a>BLOB_ENTRY_LENGTH
+Utilisé avec `BEGIN_COLUMN_MAP` et `END_COLUMN_MAP` pour lier un objet binaire volumineux ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). Semblable à [BLOB_ENTRY](../../data/oledb/blob-entry.md), sauf que cette macro obtient également la longueur en octets de la colonne BLOB.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -44,33 +42,33 @@ length
   
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `nOrdinal`  
- \[in\] The column number.  
+ [in] Le numéro de colonne.  
   
  *IID*  
- \[in\] Interface GUID, such as **IDD\_ISequentialStream**, used to retrieve the BLOB.  
+ [in] Interface, GUID, tels que **IDD_ISequentialStream**, utilisée pour récupérer l’objet BLOB.  
   
  `flags`  
- \[in\] Storage\-mode flags as defined by the OLE Structured Storage model \(for example, **STGM\_READ**\).  
+ [in] Indicateurs de mode de stockage tel que défini par le modèle de stockage structuré OLE (par exemple, **STGM_READ**).  
   
  `data`  
- \[in\] The corresponding data member in the user record.  
+ [in] Le membre de données correspondant dans l’enregistrement utilisateur.  
   
  *length*  
- \[out\] The \(actual\) length in bytes of the BLOB column.  
+ [out] Longueur (réelle), en octets, de la colonne BLOB.  
   
-## Exemple  
- See [How Can I Retrieve a BLOB?](../../data/oledb/retrieving-a-blob.md).  
+## <a name="example"></a>Exemple  
+ Consultez [comment récupérer un objet BLOB ?](../../data/oledb/retrieving-a-blob.md).  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Macros et fonctions globales pour les modèles du consommateur OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)   
- [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md)   
- [COLUMN\_ENTRY](../../data/oledb/column-entry.md)   
- [BLOB\_ENTRY](../../data/oledb/blob-entry.md)   
- [BLOB\_ENTRY\_LENGTH\_STATUS](../../data/oledb/blob-entry-length-status.md)   
- [BLOB\_ENTRY\_STATUS](../../data/oledb/blob-entry-status.md)
+ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
+ [END_COLUMN_MAP](../../data/oledb/end-column-map.md)   
+ [COLUMN_ENTRY](../../data/oledb/column-entry.md)   
+ [BLOB_ENTRY](../../data/oledb/blob-entry.md)   
+ [BLOB_ENTRY_LENGTH_STATUS](../../data/oledb/blob-entry-length-status.md)   
+ [BLOB_ENTRY_STATUS](../../data/oledb/blob-entry-status.md)

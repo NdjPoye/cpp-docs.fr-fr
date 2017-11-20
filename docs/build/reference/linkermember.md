@@ -1,39 +1,38 @@
 ---
-title: "/LINKERMEMBER | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/linkermember"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/LINKERMEMBER (option Dumpbin)"
-  - "LINKERMEMBER (option Dumpbin)"
-  - "-LINKERMEMBER (option Dumpbin)"
+title: -LINKERMEMBER | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /linkermember
+dev_langs: C++
+helpviewer_keywords:
+- /LINKERMEMBER dumpbin option
+- LINKERMEMBER dumpbin option
+- -LINKERMEMBER dumpbin option
 ms.assetid: c96868c1-d70e-4651-ae36-c55b58b16406
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1af5cf0f3304b77bf731a95f8fc771bf7010dfbc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /LINKERMEMBER
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="linkermember"></a>/LINKERMEMBER
 ```  
 /LINKERMEMBER[:{1|2}]  
 ```  
   
-## Notes  
- Cette option affiche des symboles publics définis dans une bibliothèque.  Spécifiez l'argument 1 pour afficher des symboles dans un ordre d'objets, ainsi que leurs offsets.  Spécifiez l'argument 2 pour afficher les offsets et les numéros d'index des objets, puis lister les symboles dans un ordre alphabétique, ainsi que l'index objet de chacun d'eux.  Pour obtenir les deux types de sortie, spécifiez \/LINKERMEMBER dans l'argument du numéro.  
+## <a name="remarks"></a>Remarques  
+ Cette option affiche les symboles publics définis dans une bibliothèque. Spécifiez le 1 argument pour afficher les symboles dans l’ordre de l’objet, ainsi que leurs offsets. Spécifier l’argument 2 pour afficher les offsets et les numéros d’index des objets et répertorie ensuite les symboles dans l’ordre alphabétique, ainsi que l’index de l’objet pour chacun. Pour obtenir les deux sorties, spécifiez /LINKERMEMBER dans l’argument de nombre.  
   
- Seule l'option [\/HEADERS](../../build/reference/headers.md) de DUMPBIN est disponible pour les fichiers générés à l'aide de l'option de compilation [\/GL](../../build/reference/gl-whole-program-optimization.md).  
+ Uniquement les [/HEADERS](../../build/reference/headers.md) (option DUMPBIN) est disponible pour les fichiers générés par le [/GL](../../build/reference/gl-whole-program-optimization.md) option du compilateur.  
   
-## Voir aussi  
- [Options DUMPBIN](../../build/reference/dumpbin-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [DUMPBIN, options](../../build/reference/dumpbin-options.md)

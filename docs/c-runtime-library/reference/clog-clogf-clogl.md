@@ -33,37 +33,21 @@ f1_keywords:
 - complex/clog
 - complex/clogf
 - complex/clogl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - clog function
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 2778a27aa2859d7abb5f247e71397af6aa8b0da6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 7a7d2f42c6ba902f1c657708a2ca739ba30b5b08
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="clog-clogf-clogl"></a>clog, clogf, clogl
 Récupère le logarithme népérien d’un nombre complexe, avec une coupure sur l’axe des réels négatifs.  

@@ -1,73 +1,73 @@
 ---
-title: "Recordset&#160;: d&#233;filement (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Move (méthode des recordsets)"
-  - "navigation (C++), recordsets"
-  - "ODBC (recordsets), défilement"
-  - "recordsets (C++), début de"
-  - "recordsets (C++), fin de"
-  - "recordsets (C++), atteindre un enregistrement"
-  - "recordsets (C++), naviguer"
-  - "défilement (C++), recordsets"
+title: "Recordset : Défilement (ODBC) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- recordsets [C++], end of
+- recordsets [C++], beginning of
+- navigation [C++], recordsets
+- recordsets [C++], moving to records
+- ODBC recordsets, scrolling
+- recordsets [C++], navigating
+- scrolling [C++], recordsets
+- Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0bb5e426e17c0a91c53abf5393b3c98bef02da14
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Recordset&#160;: d&#233;filement (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique s'applique aux classes ODBC MFC.  
+# <a name="recordset-scrolling-odbc"></a>Recordset : défilement (ODBC)
+Cette rubrique s’applique aux classes ODBC MFC.  
   
- Après avoir ouvert un recordset, vous avez besoin d'accéder aux enregistrements pour, entre autres, afficher les valeurs, effectuer des calculs ou générer des états.  Le défilement permet de passer d'un enregistrement à l'autre au sein de votre recordset.  
+ Après avoir ouvert un jeu d’enregistrements, vous avez besoin pour accéder aux enregistrements pour afficher les valeurs, effectuer des calculs, générer des rapports et ainsi de suite. Défilement permet de que passer d’un enregistrement à l’autre au sein de votre recordset.  
   
  Cette rubrique explique :  
   
--   [comment passer d'un enregistrement à l'autre au sein d'un recordset](#_core_scrolling_from_one_record_to_another) ;  
+-   [Comment passer d’un enregistrement à l’autre dans un jeu d’enregistrements](#_core_scrolling_from_one_record_to_another).  
   
--   [dans quels cas le défilement est pris en charge](#_core_when_scrolling_is_supported).  
+-   [Dans quels cas le défilement est n’est pas prise en charge](#_core_when_scrolling_is_supported).  
   
-##  <a name="_core_scrolling_from_one_record_to_another"></a> Défilement d'un enregistrement à l'autre  
- La classe `CRecordset` propose les fonctions membres **Move** pour faire défiler un recordset.  Ces fonctions déplacent l'enregistrement courant par jeu de lignes.  Si vous avez implémenté l'extraction de lignes en bloc, l'opération **Move** repositionne le recordset en fonction de la taille du jeu de lignes.  Dans le cas contraire, l'appel de la fonction **Move** repositionne les enregistrements du jeu un par un.  Pour plus d'informations sur l'extraction de lignes en bloc, consultez [Recordset : extraction globale d'enregistrements \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+##  <a name="_core_scrolling_from_one_record_to_another"></a>Défilement d’un enregistrement à un autre  
+ Classe `CRecordset` fournit le **déplacer** fonctions membres pour faire défiler un jeu d’enregistrements. Ces fonctions déplacent l’enregistrement actif en ensembles de lignes. Si vous avez implémenté l’extraction de lignes en bloc, un **déplacer** opération repositionne le jeu d’enregistrements en fonction de la taille de l’ensemble de lignes. Si vous n’avez pas implémenté l’extraction, un appel à de lignes en bloc un **déplacer** fonction repositionne le jeu d’enregistrements en un seul enregistrement chaque fois. Pour plus d’informations sur l’extraction de lignes en bloc, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 > [!NOTE]
->  Lorsque vous vous déplacez dans un recordset, les enregistrements supprimés ne peuvent pas être ignorés.  Pour plus d'informations, consultez la fonction membre [IsDeleted](../Topic/CRecordset::IsDeleted.md).  
+>  Lorsque vous déplacez dans un jeu d’enregistrements, enregistrements supprimés ne peuvent pas être ignorés. Pour plus d’informations, consultez la [IsDeleted](../../mfc/reference/crecordset-class.md#isdeleted) fonction membre.  
   
- En dehors des fonctions **Move**, `CRecordset` propose des fonctions membres permettant de vérifier si vous avez atteint la fin ou le début du recordset.  
+ Outre la **déplacer** fonctions, `CRecordset` propose des fonctions membres permettant de vérifier si vous avez atteint la fin ou le début du jeu d’enregistrements.  
   
- Pour déterminer si le défilement est possible au sein de votre recordset, appelez la fonction membre `CanScroll`.  
+ Pour déterminer si le défilement est possible dans votre jeu d’enregistrements, appelez le `CanScroll` fonction membre.  
   
-#### Pour défiler  
+#### <a name="to-scroll"></a>Pour faire défiler  
   
-1.  vers l'avant d'un enregistrement ou d'un jeu de lignes à la fois, appelez la fonction membre [MoveNext](../Topic/CRecordset::MoveNext.md) ;  
+1.  Transférer un enregistrement ou un ensemble de lignes : appelez le [MoveNext](../../mfc/reference/crecordset-class.md#movenext) fonction membre.  
   
-2.  vers l'arrière d'un enregistrement ou d'un jeu de lignes à la fois, appelez la fonction membre [MovePrev](../Topic/CRecordset::MovePrev.md) ;  
+2.  Reculer d’un enregistrement ou un ensemble de lignes : appelez le [MovePrev](../../mfc/reference/crecordset-class.md#moveprev) fonction membre.  
   
-3.  jusqu'au premier enregistrement du recordset, appelez la fonction membre [MoveFirst](../Topic/CRecordset::MoveFirst.md) ;  
+3.  Le premier enregistrement dans le jeu d’enregistrements : appelez le [MoveFirst](../../mfc/reference/crecordset-class.md#movefirst) fonction membre.  
   
-4.  jusqu'au dernier enregistrement du recordset ou jusqu'au dernier jeu de lignes, appelez la fonction membre [MoveLast](../Topic/CRecordset::MoveLast.md) ;  
+4.  Avec le dernier enregistrement dans le jeu d’enregistrements ou au dernier ensemble de lignes : appelez le [MoveLast](../../mfc/reference/crecordset-class.md#movelast) fonction membre.  
   
-5.  de *N* enregistrements à partir de la position courante, appelez la fonction membre [Move](../Topic/CRecordset::Move.md).  
+5.  *N* enregistrements par rapport à la position actuelle : appelez le [déplacer](../../mfc/reference/crecordset-class.md#move) fonction membre.  
   
-#### Pour tester le début ou la fin d'un recordset  
+#### <a name="to-test-for-the-end-or-the-beginning-of-the-recordset"></a>Pour tester la début ou la fin de l’objet recordset  
   
-1.  Vous êtes\-vous déplacé au\-delà du dernier enregistrement ?  Appelez la fonction membre [IsEOF](../Topic/CRecordset::IsEOF.md).  
+1.  Vous avez atteint le dernier enregistrement ? Appelez le [IsEOF](../../mfc/reference/crecordset-class.md#iseof) fonction membre.  
   
-2.  Si vous avez atteint le premier enregistrement \(déplacement vers l'arrière\),  Appelez la fonction membre [IsBOF](../Topic/CRecordset::IsBOF.md).  
+2.  Vous avez atteint le premier enregistrement (déplacement vers l’arrière) Appelez le [IsBOF](../../mfc/reference/crecordset-class.md#isbof) fonction membre.  
   
- Le code ci\-après constitue un exemple d'utilisation de `IsBOF` et de `IsEOF` pour détecter le début ou la fin du recordset lorsque vous défilez vers l'avant ou vers l'arrière.  
+ Le code suivant utilise des exemple `IsBOF` et `IsEOF` pour détecter les limites d’un objet recordset lors du défilement dans les deux sens.  
   
 ```  
 // Open a recordset; first record is current  
@@ -95,21 +95,21 @@ while( !rsCustSet.IsBOF( ) )
 rsCustSet.MoveFirst( );  
 ```  
   
- `IsEOF` retourne une valeur différente de zéro si le recordset est positionné au\-delà du dernier enregistrement.  `IsBOF` retourne une valeur différente de zéro si le recordset est positionné avant le premier enregistrement \(avant tous les enregistrements\).  Dans les deux cas, il n'y a pas d'enregistrement actuel sur lequel opérer.  Si vous appelez `MovePrev` alors que `IsBOF` a déjà la valeur **TRUE**, ou si vous appelez `MoveNext` alors que `IsEOF` a déjà la valeur **TRUE**, l'infrastructure lève une exception `CDBException`.  Vous pouvez aussi utiliser `IsBOF` et `IsEOF` pour vérifier si un recordset est vide.  
+ `IsEOF`Retourne une valeur différente de zéro si le jeu d’enregistrements est positionné au-delà du dernier enregistrement. `IsBOF`Retourne une valeur différente de zéro si le jeu d’enregistrements est positionné avant le premier enregistrement (avant tous les enregistrements). Dans les deux cas, il n’existe aucune ne fonctionne pas sur l’enregistrement en cours. Si vous appelez `MovePrev` lorsque `IsBOF` est déjà **TRUE** ou appelez `MoveNext` lorsque `IsEOF` est déjà **TRUE**, le framework lève un `CDBException`. Vous pouvez également utiliser `IsBOF` et `IsEOF` pour rechercher un jeu d’enregistrements vide.  
   
- Pour plus d'informations sur la navigation au sein d'un recordset, consultez [Recordset : extraction globale d'enregistrements \(ODBC\)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
+ Pour plus d’informations sur la navigation de jeu d’enregistrements, consultez [Recordset : signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-##  <a name="_core_when_scrolling_is_supported"></a> Prise en charge du défilement  
- Tel qu'il fut conçu à l'origine, SQL ne permettait que le défilement vers l'avant. ODBC enrichit les possibilités de défilement.  Le niveau de prise en charge disponible dépend des pilotes ODBC utilisés par votre application, du niveau de conformité de l'API ODBC du pilote et de l'éventuel chargement en mémoire de la bibliothèque de curseurs ODBC.  Pour plus d'informations, consultez [ODBC](../../data/odbc/odbc-basics.md) et [ODBC : bibliothèque de curseurs ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
+##  <a name="_core_when_scrolling_is_supported"></a>Lorsque le défilement est pris en charge  
+ Conçus à l’origine, SQL fourni le défilement vers l’avant uniquement, mais ODBC étend les fonctionnalités de défilement. Le niveau de prise en charge pour le défilement disponible dépend des pilotes ODBC de votre application fonctionne avec le niveau de conformité de votre pilote ODBC API et indique si la bibliothèque de curseurs ODBC est chargée en mémoire. Pour plus d’informations, consultez [ODBC](../../data/odbc/odbc-basics.md) et [ODBC : bibliothèque de curseurs ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
   
 > [!TIP]
->  Vous pouvez contrôler si la bibliothèque de curseurs est utilisée.  Consultez les paramètres `bUseCursorLib` et `dwOptions` de [CDatabase::Open](../Topic/CDatabase::Open.md).  
+>  Vous pouvez contrôler si la bibliothèque de curseurs est utilisée. Consultez le `bUseCursorLib` et `dwOptions` paramètres [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open).  
   
 > [!NOTE]
->  Contrairement aux classes DAO MFC, les classes ODBC MFC ne fournissent pas de fonctions **Find** pour rechercher le prochain ou le précédent enregistrement obéissant à des critères définis.  
+>  Contrairement aux classes DAO MFC, les classes ODBC MFC ne fournissent pas d’un ensemble de **trouver** fonctions pour rechercher l’enregistrement suivant (ou précédent) qui répond aux critères spécifiés.  
   
-## Voir aussi  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [CRecordset::CanScroll](../Topic/CRecordset::CanScroll.md)   
- [CRecordset::CheckRowsetError](../Topic/CRecordset::CheckRowsetError.md)   
- [Recordset : filtrage d'enregistrements \(ODBC\)](../../data/odbc/recordset-filtering-records-odbc.md)
+## <a name="see-also"></a>Voir aussi  
+ [Jeu d’enregistrements (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [CRecordset::CanScroll](../../mfc/reference/crecordset-class.md#canscroll)   
+ [CRecordset::CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)   
+ [Recordset : filtrage d’enregistrements (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

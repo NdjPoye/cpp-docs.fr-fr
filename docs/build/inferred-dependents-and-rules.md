@@ -1,41 +1,41 @@
 ---
-title: "R&#232;gles et d&#233;pendants inf&#233;r&#233;s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dépendants, déduites"
-  - "dépendants inférés dans NMAKE"
-  - "règles inférées dans NMAKE"
-  - "règles, déduites"
+title: "Déduit des règles et dépendants | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- rules, inferred
+- inferred dependents in NMAKE
+- inferred rules in NMAKE
+- dependents, inferred
 ms.assetid: 9381e74a-53d9-445c-836d-0ff7ef6112d9
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 68b61a6aad55ef1f6b8b5807d857a4d7239ebb51
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# R&#232;gles et d&#233;pendants inf&#233;r&#233;s
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-NMAKE suppose un dépendant déduit pour une cible si une règle d'inférence applicable existe.  Une règle s'applique si :  
+# <a name="inferred-dependents-and-rules"></a>Règles et dépendants inférés
+NMAKE suppose un dépendant déduit pour une cible si une règle d’inférence applicable existe. Une règle s’applique si :  
   
--   *toext* correspond à l'extension de la cible ;  
+-   *toext* correspond à extension de la cible.  
   
--   *fromext* correspond à l'extension d'un fichier qui porte le nom de base de la cible et qui existe dans le répertoire en cours ou spécifié ;  
+-   *fromext* correspond à l’extension d’un fichier qui a le nom de base de la cible et qui existe dans le répertoire actuel ou spécifié.  
   
--   *fromext* se trouve dans [.SUFFIXES](../build/dot-directives.md), aucune autre *fromext* dans une règle correspondante ne possède une priorité **.SUFFIXES** supérieure ;  
+-   *fromext* est [. SUFFIXES](../build/dot-directives.md); aucun autre *fromext* dans une règle de correspondance a un degré plus élevé **. SUFFIXES** priorité.  
   
--   aucun dépendant explicite n'a une priorité **.SUFFIXES** supérieure.  
+-   Aucun dépendant explicite n’est plus élevé **. SUFFIXES** priorité.  
   
- Les dépendants déduits peuvent avoir des effets secondaires inattendus.  Si le bloc de description de la cible contient des commandes, NMAKE les exécute à la place des commandes de la règle.  
+ Dépendants inférés peuvent avoir des effets secondaires inattendus. Si le bloc de description de la cible contient des commandes, NMAKE exécute les commandes au lieu des commandes dans la règle.  
   
-## Voir aussi  
- [Règles d'inférence](../build/inference-rules.md)
+## <a name="see-also"></a>Voir aussi  
+ [Règles d’inférence](../build/inference-rules.md)

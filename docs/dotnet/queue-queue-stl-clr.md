@@ -1,32 +1,30 @@
 ---
-title: "queue::queue (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::queue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "queue (membre) (STL/CLR)"
+title: Queue::Queue (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::queue
+dev_langs: C++
+helpviewer_keywords: queue member [STL/CLR]
 ms.assetid: 6106c07f-d5eb-4f0b-82df-ee4e2e751047
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f2e454f1a8922f5fa4af26c166c4b0b683123871
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# queue::queue (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Construit un objet d'adaptateur de conteneur.  
+# <a name="queuequeue-stlclr"></a>queue::queue (STL/CLR)
+Construit un objet d’adaptateur de conteneur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 queue();  
@@ -35,39 +33,39 @@ queue(queue<Value, Container>^ right);
 explicit queue(container_type% wrapped);  
 ```  
   
-#### Paramètres  
- right  
+#### <a name="parameters"></a>Paramètres  
+ droite  
  Objet à copier.  
   
- inclus  
- Conteneurs inclus à utiliser.  
+ encapsulé  
+ Conteneur encapsulée à utiliser.  
   
-## Notes  
- Le constructeur :  
+## <a name="remarks"></a>Remarques  
+ Le constructeur :  
   
  `queue();`  
   
- crée un conteneur encapsulé vide.  Vous l'utilisez pour spécifier une séquence contrôlée initialement vide.  
+ Crée un conteneur encapsulé vide. Il permet de spécifier une séquence contrôlée initiale vide.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `queue(queue<Value, Container>% right);`  
   
- crée un conteneur encapsulé qui est une copie de `right.get_container()`.  Vous l'utilisez pour spécifier une séquence contrôlée par initiale qui est une copie de la séquence contrôlée par l'objet en attente `right`.  
+ Crée un conteneur encapsulé est une copie de `right.get_container()`. Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet de file d’attente `right`.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `queue(queue<Value, Container>^ right);`  
   
- crée un conteneur encapsulé qui est une copie de `right->get_container()`.  Vous l'utilisez pour spécifier une séquence contrôlée par initiale qui est une copie de la séquence contrôlée par l'objet en attente `*right`.  
+ Crée un conteneur encapsulé est une copie de `right->get_container()`. Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet de file d’attente `*right`.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `explicit queue(container_type wrapped);`  
   
- utilise le conteneur existant `wrapped` comme conteneurs inclus.  Vous l'utilisez pour créer une file d'attente à partir d'un conteneur existant.  
+ utilise le conteneur existant `wrapped` comme conteneur encapsulé. Il permet de construire une file d’attente à partir d’un conteneur existant.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_queue_construct.cpp   
@@ -107,17 +105,20 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **x x x x x**  
- **x x x x x**  
- **x x x x x**   
-## Configuration requise  
- **En\-tête :** \<cliext\/queue\>  
+```Output  
+size() = 0  
+ x x x x x  
+ x x x x x  
+ x x x x x  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/file d’attente >  
   
-## Voir aussi  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::assign](../dotnet/queue-assign-stl-clr.md)   
- [queue::generic\_container](../dotnet/queue-generic-container-stl-clr.md)   
- [queue::operator\=](../dotnet/queue-operator-assign-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [file d’attente (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [Queue::Assign (STL/CLR)](../dotnet/queue-assign-stl-clr.md)   
+ [Queue::generic_container (STL/CLR)](../dotnet/queue-generic-container-stl-clr.md)   
+ [queue::operator= (STL/CLR)](../dotnet/queue-operator-assign-stl-clr.md)

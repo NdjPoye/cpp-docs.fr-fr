@@ -1,50 +1,48 @@
 ---
-title: "R&#232;gles s&#39;appliquant aux instructions de d&#233;finition de module | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".def"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fichiers de définition de module"
-  - "fichiers de définition de module, syntaxe des instructions"
+title: "Règles pour les instructions de définition de Module | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .def
+dev_langs: C++
+helpviewer_keywords:
+- module definition files, statement syntax
+- module definition files
 ms.assetid: f65cd3a7-65d7-4d06-939f-a8b1ecd50f2d
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 50d382b8f6dbb8c6468bba3bcb2d5c65607de99d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# R&#232;gles s&#39;appliquant aux instructions de d&#233;finition de module
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les règles de syntaxe suivantes s'appliquent à toutes les instructions d'un fichier .def.  D'autres règles s'appliquant à des instructions spécifiques sont décrites en même temps que celles\-ci.  
+# <a name="rules-for-module-definition-statements"></a>Règles s'appliquant aux instructions de définition de module
+Les règles de syntaxe suivantes s’appliquent à toutes les instructions dans un fichier .def. Autres règles qui s’appliquent à des instructions spécifiques sont décrites dans chaque instruction.  
   
--   Les instructions, les mots clés des attributs et les identificateurs spécifiés par l'utilisateur respectent la casse.  
+-   Instructions, les mots clés des attributs et les identificateurs spécifiés par l’utilisateur respectent la casse.  
   
--   Les noms de fichiers longs contenant des espaces ou des points\-virgules \(;\) doivent être placés entre guillemets \("\).  
+-   Durée pendant laquelle les noms contenant des espaces ou des points-virgules ( ;) de fichiers doit être entre guillemets («).  
   
--   Utilisez un ou plusieurs espaces, tabulations ou caractères de saut de ligne pour séparer un mot clé d'instruction de ses arguments et pour séparer les instructions les unes des autres.  Un signe deux\-points \(:\) ou égal à \(\=\) qui désigne un argument est délimité par zéro ou plusieurs espaces, tabulations ou caractères de saut de ligne.  
+-   Utilisez un ou plusieurs espaces, tabulations ou caractères de saut de ligne pour séparer un mot clé d’instruction de ses arguments et pour séparer les instructions de l’autre. Un signe deux-points ( :) ou signe égal (=) qui désigne un argument est entourée par zéro ou plusieurs espaces, de tabulations ou caractères de saut de ligne.  
   
--   Une instruction **NAME** ou **LIBRARY** doit, si elle est utilisée, précéder toutes les autres instructions.  
+-   A **nom** ou **bibliothèque** instruction, si vous, doit précéder toutes les autres instructions.  
   
--   Les instructions **SECTIONS** et **EXPORTS** peuvent apparaître plusieurs fois dans le fichier .def.  Chaque instruction accepte plusieurs spécifications, qui doivent être séparées par un ou plusieurs espaces, tabulations ou caractères de saut de ligne.  Le mot clé de l'instruction doit apparaître une fois avant la première spécification et peut être répété avant chaque spécification supplémentaire.  
+-   Le **SECTIONS** et **exportations** instructions peuvent apparaître plusieurs fois dans le fichier .def. Chaque instruction accepte plusieurs spécifications, qui doivent être séparées par un ou plusieurs espaces, tabulations ou caractères de saut de ligne. Le mot clé instruction doit apparaître une fois avant la première spécification et peut être répété avant chaque spécification supplémentaire.  
   
--   De nombreuses instructions ont une option de ligne de commande LINK équivalente.  Pour plus d'informations, consultez la description de l'option LINK correspondante.  
+-   De nombreuses instructions ont une option de ligne de commande lien équivalente. Consultez la description de l’option de liaison correspondante pour plus d’informations.  
   
--   Les commentaires insérés dans le fichier .def sont signalés par un point\-virgule \(;\) au début de chaque ligne de commentaire.  Un commentaire ne peut pas partager une ligne avec une instruction, mais il peut apparaître entre les spécifications dans une instruction multiligne. \(**SECTIONS** et **EXPORTS** sont des instructions multilignes.\)  
+-   Commentaires dans le fichier .def sont signalés par un point-virgule ( ;) au début de chaque ligne de commentaire. Un commentaire ne peuvent pas partager une ligne avec une instruction, mais il peut apparaître entre les spécifications dans une instruction multiligne. (**SECTIONS** et **exportations** sont des instructions multilignes.)  
   
 -   Les arguments numériques sont spécifiés en base 10 ou hexadécimale.  
   
--   Si un argument de type chaîne correspond à un [mot réservé](../../build/reference/reserved-words.md), il doit être placé entre guillemets doubles \("\).  
+-   Si un argument de chaîne correspond à un [mot réservé](../../build/reference/reserved-words.md), il doit être encadré par des guillemets doubles («).  
   
-## Voir aussi  
- [Fichiers de définition de module \(.Def\)](../../build/reference/module-definition-dot-def-files.md)   
- [Frequently Asked Questions on Building](http://msdn.microsoft.com/fr-fr/56a3bb8f-0181-4989-bab4-a07ba950ab08)
+## <a name="see-also"></a>Voir aussi  
+ [Fichiers de définition de module (.Def)](../../build/reference/module-definition-dot-def-files.md)  

@@ -1,40 +1,39 @@
 ---
-title: "CUtlProps::SetPropValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SetPropValue"
-  - "ATL::CUtlProps<T>::SetPropValue"
-  - "ATL.CUtlProps<T>.SetPropValue"
-  - "ATL.CUtlProps.SetPropValue"
-  - "CUtlProps::SetPropValue"
-  - "CUtlProps<T>::SetPropValue"
-  - "CUtlProps.SetPropValue"
-  - "CUtlProps<T>.SetPropValue"
-  - "ATL::CUtlProps::SetPropValue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetPropValue (méthode)"
+title: CUtlProps::SetPropValue | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SetPropValue
+- ATL::CUtlProps<T>::SetPropValue
+- ATL.CUtlProps<T>.SetPropValue
+- ATL.CUtlProps.SetPropValue
+- CUtlProps::SetPropValue
+- CUtlProps<T>::SetPropValue
+- CUtlProps.SetPropValue
+- CUtlProps<T>.SetPropValue
+- ATL::CUtlProps::SetPropValue
+dev_langs: C++
+helpviewer_keywords: SetPropValue method
 ms.assetid: 69a703c0-f640-4ca3-8850-0c4e75d52429
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a137420383f4084a1795e4f28d58f36b0825feb8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# CUtlProps::SetPropValue
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cutlpropssetpropvalue"></a>CUtlProps::SetPropValue
 Définit une propriété dans un jeu de propriétés.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -45,21 +44,21 @@ Définit une propriété dans un jeu de propriétés.
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `pguidPropSet`  
- \[in\] GUID du PropSet.  
+ [in] GUID pour le PropSet.  
   
  `dwPropId`  
- \[in\] index de la propriété.  
+ [in] L’index de la propriété.  
   
  `pvValue`  
- \[in\] pointeur à une variante qui contient la nouvelle valeur de la propriété.  
+ [in] Pointeur vers une variante qui contient la nouvelle valeur de propriété.  
   
-## Valeur de retour  
- `Failure` en cas d'échec et `S_OK` en cas de réussite.  
+## <a name="return-value"></a>Valeur de retour  
+ `Failure`en cas d’échec et `S_OK` en cas de réussite.  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CUtlProps, classe](../../data/oledb/cutlprops-class.md)

@@ -1,78 +1,78 @@
 ---
-title: "vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_vsnprintf"
-  - "_vsnprintf_l"
-  - "_vsnwprintf"
-  - "_vsnwprintf_l"
-  - "_vsnprintf"
-  - "_vsnprintf;"
-  - "vsnprintf; _vsnprintf"
-  - "_vsnwprintf;"
-  - "_vsnprintf_l;"
-  - "_vsnwprintf_l;"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ntoskrnl.exe"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_vsnprintf"
-  - "_vsnwprintf"
-  - "_vsntprintf"
-  - "vsnprintf"
-  - "stdio/vsnprintf"
-  - "stdio/_vsnprintf"
-  - "stdio/_vsnprintf_l"
-  - "stdio/_vsnwprintf"
-  - "stdio/_vsnwprintf_l"
-  - "_vsnprintf_l"
-  - "_vsnwprintf_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vsntprintf (fonction)"
-  - "_vsnwprintf_l (fonction)"
-  - "vsnwprintf_l (fonction)"
-  - "vsntprintf_l (fonction)"
-  - "_vsntprintf (fonction)"
-  - "_vsnprintf_l (fonction)"
-  - "vsnprintf (fonction)"
-  - "_vsntprintf_l (fonction)"
-  - "vsnprintf_l (fonction)"
-  - "_vsnwprintf (fonction)"
-  - "_vsnprintf (fonction)"
-  - "texte mis en forme (C++)"
-  - "vsnwprintf (fonction)"
+title: vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _vsnprintf
+- _vsnprintf_l
+- _vsnwprintf
+- _vsnwprintf_l
+- _vsnprintf
+- _vsnprintf;
+- vsnprintf; _vsnprintf
+- _vsnwprintf;
+- _vsnprintf_l;
+- _vsnwprintf_l;
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntoskrnl.exe
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _vsnprintf
+- _vsnwprintf
+- _vsntprintf
+- vsnprintf
+- stdio/vsnprintf
+- stdio/_vsnprintf
+- stdio/_vsnprintf_l
+- stdio/_vsnwprintf
+- stdio/_vsnwprintf_l
+- _vsnprintf_l
+- _vsnwprintf_l
+dev_langs: C++
+helpviewer_keywords:
+- vsntprintf function
+- _vsnwprintf_l function
+- vsnwprintf_l function
+- vsntprintf_l function
+- _vsntprintf function
+- _vsnprintf_l function
+- vsnprintf function
+- _vsntprintf_l function
+- vsnprintf_l function
+- _vsnwprintf function
+- _vsnprintf function
+- formatted text [C++]
+- vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-caps.latest.revision: 35
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 35
+caps.latest.revision: "35"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4850299b43b805c93136a59d5ee227e8bf79d2dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Écrivez la sortie mise en forme en utilisant un pointeur désignant une liste d’arguments. Des versions plus sécurisées de ces fonctions sont disponibles. Consultez [vsnprintf\_s, \_vsnprintf\_s, \_vsnprintf\_s\_l, \_vsnwprintf\_s, \_vsnwprintf\_s\_l](../../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md).  
+# <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
+Écrivez la sortie mise en forme en utilisant un pointeur désignant une liste d’arguments. Il existe des versions plus sécurisées de ces fonctions. Consultez [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int vsnprintf(  
@@ -146,7 +146,7 @@ int _vsnwprintf_l(
 ); // C++ only  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `buffer`  
  Emplacement de stockage pour la sortie.  
   
@@ -162,53 +162,53 @@ int _vsnwprintf_l(
  `locale`  
  Paramètres régionaux à utiliser.  
   
- Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
-## Valeur de retour  
- Le `vsnprintf` fonction retourne le nombre de caractères écrits, sans compter le caractère null de fin. Si la taille de mémoire tampon spécifiée par `count` n’est pas suffisamment grande pour contenir la sortie spécifiée par `format` et `argptr`, la valeur de retour de `vsnprintf` est le nombre de caractères qui doit être écrite, sans compter le caractère null, si `count` étaient suffisamment importantes. Si la valeur de retour est supérieure à `count` \- 1, le résultat a été tronqué. La valeur de retour \-1 indique qu’une erreur de codage s’est produite.  
+## <a name="return-value"></a>Valeur de retour  
+ La fonction `vsnprintf` retourne le nombre de caractères écrits, sans compter le caractère null de fin. Si la taille de mémoire tampon spécifiée par `count` n’est pas suffisante pour contenir la sortie spécifiée par `format` et `argptr`, la valeur de retour de `vsnprintf` est le nombre de caractères qui seraient écrits, sans compter le caractère null, si la valeur de `count` était suffisamment grande. Si la valeur de retour est supérieure à `count` - 1, la sortie a été tronquée. La valeur de retour -1 indique qu’une erreur de codage s’est produite.  
   
- Les deux `_vsnprintf` et `_vsnwprintf` fonctions retournent le nombre de caractères écrits si le nombre de caractères à écrire est inférieure ou égale à `count`; Si le nombre de caractères à écrire est supérieur à `count`, ces fonctions renvoient \-1 indiquant que la sortie a été tronquée.  
+ Les fonctions `_vsnprintf` et `_vsnwprintf` retournent toutes deux le nombre de caractères écrits si le nombre de caractères à écrire est inférieur ou égal à `count` ; si ce nombre est supérieur à `count`, ces fonctions retournent -1, ce qui indique que la sortie a été tronquée.  
   
- La valeur retournée par toutes ces fonctions n’inclut pas le caractère null de fin, un est écrit ou non. Lorsque `count` est égal à zéro, la valeur retournée est le nombre de caractères que les fonctions écririez pas, y compris tout caractère null de fin. Vous pouvez utiliser ce résultat à allouer suffisamment d’espace tampon pour la chaîne et le caractère null de fin et appelle ensuite la fonction pour remplir la mémoire tampon.  
+ La valeur retournée par toutes ces fonctions n’inclut pas le caractère null de fin, qu’il soit écrit ou pas. Quand `count` est égal à zéro, la valeur retournée correspond au nombre de caractères que les fonctions écriraient, sans le caractère null de fin éventuel. Vous pouvez utiliser ce résultat pour allouer un espace de mémoire tampon suffisant pour la chaîne et son caractère null de fin et rappeler ensuite la fonction pour remplir la mémoire tampon.  
   
- Si `format` est `NULL`, ou si `buffer` a la valeur NULL et `count` n’est pas égal à zéro, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent \-1 et définissent `errno` avec la valeur `EINVAL`.  
+ Si `format` a la valeur `NULL` ou si `buffer` a la valeur NULL et que `count` est différent de zéro, ces fonctions appellent le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent -1 et définissent `errno` avec la valeur `EINVAL`.  
   
-## Notes  
- Chacune de ces fonctions prend un pointeur vers une liste d’arguments, met en forme les données et écrit jusqu’à `count` caractères dans la mémoire vers laquelle `buffer` pointe. La fonction `vsnprintf` écrit toujours une marque de fin null, même si elle tronque le résultat. Quand vous utilisez `_vsnprintf` et `_vsnwprintf`, la mémoire tampon est terminée par un caractère null uniquement s’il reste de la place à la fin \(autrement dit, si le nombre de caractères à écrire est inférieur à `count`\).  
+## <a name="remarks"></a>Notes  
+ Chacune de ces fonctions prend un pointeur vers une liste d’arguments, met en forme les données et écrit jusqu’à `count` caractères dans la mémoire vers laquelle `buffer`pointe. La fonction `vsnprintf` écrit toujours une marque de fin null, même si elle tronque le résultat. Quand vous utilisez `_vsnprintf` et `_vsnwprintf`, la mémoire tampon est terminée par un caractère null uniquement s’il reste de la place à la fin (autrement dit, si le nombre de caractères à écrire est inférieur à `count`).  
   
 > [!IMPORTANT]
->  Pour éviter certains types de problèmes de sécurité, assurez\-vous que `format` n’est pas une chaîne définie par l’utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  Pour éviter certains types de problèmes de sécurité, assurez-vous que `format` n’est pas une chaîne définie par l’utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
 > [!NOTE]
->  Pour laisser suffisamment d’espace pour le caractère null de fin quand `_vsnprintf`, `_vsnprintf_l`, `_vsnwprintf` et `_vsnwprintf_l` sont appelés, vérifiez que `count` est strictement inférieur à la longueur de la mémoire tampon et initialisez la mémoire tampon sur la valeur Null avant d’appeler la fonction.  
+>  Pour laisser suffisamment d’espace pour le caractère null de fin quand `_vsnprintf`, `_vsnprintf_l`, `_vsnwprintf` et `_vsnwprintf_l`sont appelés, vérifiez que `count` est strictement inférieur à la longueur de la mémoire tampon et initialisez la mémoire tampon sur la valeur Null avant d’appeler la fonction.  
 >   
->  Étant donné que `vsnprintf` écrit toujours le caractère null de fin, le `count` paramètre peut être égal à la taille de la mémoire tampon.  
+>  Étant donné que `vsnprintf` écrit toujours le caractère null de fin, le paramètre `count` peut être égal à la taille de la mémoire tampon.  
   
- Depuis le composant UCRT dans Visual Studio 2015 et Windows 10, `vsnprintf` n’est plus identique à `_vsnprintf`. Le `vsnprintf` fonction conforme à la norme C99 ; `_vnsprintf` est conservée pour compatibilité descendante avec l’ancien code Visual Studio.  
+ Depuis le composant UCRT dans Visual Studio 2015 et Windows 10,         `vsnprintf` n’est plus identique à `_vsnprintf`. La fonction `vsnprintf` est conforme à la norme C99 ; `_vnsprintf` est conservé pour assurer une compatibilité descendante avec du code Visual Studio plus ancien.  
   
  Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.  
   
- En C\+\+, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE et \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|-------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vsntprintf`|`_vsnprintf`|`_vsnprintf`|`_vsnwprintf`|  
 |`_vsntprintf_l`|`_vsnprintf_l`|`_vsnprintf_l`|`_vsnwprintf_l`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis \(C\)|En\-tête requis \(C\+\+\)|  
+|Routine|En-tête requis (C)|En-tête requis (C++)|  
 |-------------|---------------------------|-------------------------------|  
-|`vsnprintf`, `_vsnprintf`, `_vsnprintf_l`|\<stdio.h\>|\<stdio.h\> ou \<cstdio\>|  
-|`_vsnwprintf`, `_vsnwprintf_l`|\<stdio.h\> ou \<wchar.h\>|\<stdio.h\>, \<wchar.h\>, \<cstdio\> ou \<cwchar\>|  
+|`vsnprintf`, `_vsnprintf`, `_vsnprintf_l`|\<stdio.h>|\<stdio.h> ou \<cstdio>|  
+|`_vsnwprintf`, `_vsnwprintf_l`|\<stdio.h> ou \<wchar.h>|\<stdio.h>, \<wchar.h>, \<cstdio> ou \<cwchar>|  
   
- Les fonctions `_vsnprintf`, `_vsnprintf_l`, `_vsnwprintf` et `_vsnwprintf_l` sont des fonctions fournies par Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Les fonctions `_vsnprintf`, `_vsnprintf_l`, `_vsnwprintf` et `_vsnwprintf_l` sont des fonctions fournies par Microsoft. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```c  
+```C  
 // crt_vsnwprintf.c  
 // compile by using: cl /W3 crt_vsnwprintf.c  
   
@@ -230,6 +230,7 @@ void FormatOutput(LPCWSTR formatstring, ...)
     // Note: _vsnwprintf is deprecated; consider vsnwprintf_s instead  
     nSize = _vsnwprintf(buff, BUFFCOUNT - 1, formatstring, args); // C4996  
     wprintf(L"nSize: %d, buff: %ls\n", nSize, buff);  
+    va_end(args);
 }  
   
 int main() {  
@@ -240,14 +241,16 @@ int main() {
 ```  
   
 ```Output  
-nSize : 8, polissage : Bonjour nSize là : 9, polissage : Bonjour il ! nSize : -1, polissage : Bonjour il !  
+nSize: 8, buff: Hi there  
+nSize: 9, buff: Hi there!  
+nSize: -1, buff: Hi there!  
 ```  
   
- Les changements de comportement si vous utilisez vsnprintf à la place, ainsi que les paramètres de chaîne étroite. Le `count` paramètre peut être la taille totale de la mémoire tampon et la valeur de retour est le nombre de caractères qui aurait été écrite si `count` était suffisante :  
+ Le comportement change si vous utilisez à la place vsnprintf avec des paramètres à chaîne étroite. Le paramètre `count` peut représenter la taille totale de la mémoire tampon, et la valeur de retour correspond au nombre de caractères qui auraient été écrits si `count` avait une taille suffisante :  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```c  
+```C  
 // crt_vsnprintf.c  
 // compile by using: cl /W4 crt_vsnprintf.c  
 #include <stdio.h>  
@@ -264,7 +267,8 @@ void FormatOutput(char* formatstring, ...)
     va_list args;  
     va_start(args, formatstring);  
     nSize = vsnprintf(buff, sizeof(buff), formatstring, args);  
-    printf("nSize: %d, buff: %s\n", nSize, buff);  
+    printf("nSize: %d, buff: %s\n", nSize, buff);
+    va_end(args);  
 }  
   
 int main() {  
@@ -275,14 +279,16 @@ int main() {
 ```  
   
 ```Output  
-nSize : 8, polissage : Bonjour nSize là : 9, polissage : Bonjour il ! nSize : 10, polissage : Bonjour il !  
+nSize: 8, buff: Hi there  
+nSize: 9, buff: Hi there!  
+nSize: 10, buff: Hi there!  
 ```  
   
-## Voir aussi  
- [E\/S de flux](../../c-runtime-library/stream-i-o.md)   
- [Fonctions vprintf](../../c-runtime-library/vprintf-functions.md)   
+## <a name="see-also"></a>Voir aussi  
+ [E/S de flux](../../c-runtime-library/stream-i-o.md)   
+ [vprintf, fonctions](../../c-runtime-library/vprintf-functions.md)   
  [Syntaxe de spécification de format : fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [va\_arg, va\_copy, va\_end, va\_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

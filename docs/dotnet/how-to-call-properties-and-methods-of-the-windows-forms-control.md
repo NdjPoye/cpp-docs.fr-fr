@@ -1,47 +1,47 @@
 ---
-title: "Comment&#160;: appeler des propri&#233;t&#233;s et des m&#233;thodes du contr&#244;le Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "appeler des méthodes, contrôle Windows Forms"
-  - "appeler des propriétés"
-  - "appeler des propriétés, contrôle Windows Forms"
-  - "appels de méthode, Windows Forms"
-  - "contrôles Windows Forms (C++), méthodes"
-  - "contrôles Windows Forms (C++), propriétés"
+title: "Comment : appeler des propriétés et méthodes des Windows Forms contrôlent | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- method calls, Windows Forms
+- calling methods, Windows Forms control
+- calling properties, Windows Forms control
+- Windows Forms controls [C++], methods
+- calling properties
+- Windows Forms controls [C++], properties
 ms.assetid: 6e647d8a-fdaa-4aa1-b3fe-04f15cff8eb3
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 28e6d025d6c2aa485b5687117d64afeb7e402a79
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: appeler des propri&#233;t&#233;s et des m&#233;thodes du contr&#244;le Windows Forms
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dans la mesure où [CWinFormsView::GetControl](../Topic/CWinFormsView::GetControl.md) retourne un pointeur vers <xref:System.Windows.Forms.Control?displayProperty=fullName>, et non un pointeur vers `WindowsControlLibrary1::UserControl1`, il est recommandé d'ajouter un membre du type de contrôle utilisateur et de l'initialiser dans [IView::OnInitialUpdate](../Topic/IView::OnInitialUpdate.md).  Vous pouvez maintenant appeler des méthodes et des propriétés à l'aide de `m_ViewControl`.  
+# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Comment : appeler des propriétés et des méthodes du contrôle Windows Forms
+Étant donné que [CWinFormsView::GetControl](../mfc/reference/cwinformsview-class.md#getcontrol) retourne un pointeur vers <xref:System.Windows.Forms.Control?displayProperty=fullName>et non un pointeur vers `WindowsControlLibrary1::UserControl1`, il est recommandé d’ajouter un membre du type de contrôle utilisateur et l’initialiser dans [IView::OnInitialUpdate ](../mfc/reference/iview-interface.md#oninitialupdate). Vous pouvez maintenant appeler à l’aide des propriétés et méthodes `m_ViewControl`.  
   
- Cette rubrique part du principe que vous avez précédemment effectué les étapes [Comment : créer le contrôle utilisateur et l'héberger dans une boîte de dialogue](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) et [Comment : créer le contrôle utilisateur et héberger l'affichage MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
+ Cette rubrique suppose que vous avez déjà terminées [Comment : créer le contrôle utilisateur et l’hôte dans une boîte de dialogue](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) et [Comment : créer le contrôle utilisateur et l’affichage des ordinateurs hôtes MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
   
-### Pour créer l'application MFC hôte  
+### <a name="to-create-the-mfc-host-application"></a>Pour créer l’application MFC hôte  
   
-1.  Ouvrez l'application MFC que vous avez créée dans [Comment : créer le contrôle utilisateur et héberger l'affichage MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
+1.  Ouvrez l’application MFC que vous avez créé dans [Comment : créer le contrôle utilisateur et l’affichage des ordinateurs hôtes MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
   
-2.  Ajoutez la ligne suivante à la section des substitutions publique de la déclaration de classe `CMFC02View` dans MFC02View.h.  
+2.  Ajoutez la ligne suivante à la section des substitutions publique de la `CMFC02View` déclaration dans MFC02View.h de classe.  
   
      `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`  
   
 3.  Ajoutez une substitution pour OnInitialupdate.  
   
-     Affichez la fenêtre **Propriétés** \(F4\).  Dans **Affichage de classes** \(CTRL\+MAJ\+C\), sélectionnez la classe CMFC02View.  Dans la fenêtre **Propriétés**, sélectionnez l'icône associée à Substitutions.  Faites défiler la liste vers le bas jusqu'à OnInitialUpdate.  Cliquez sur la liste déroulante et sélectionnez \<Ajouter\>.  assurez\-vous que le corps de la fonction OnInitialUpdate se présente comme suit :  
+     Afficher le **propriétés** fenêtre (F4). Dans **affichage de classes** (CTRL + MAJ + C), sélectionnez CMFC02View classe. Dans le **propriétés** fenêtre, sélectionnez l’icône pour les remplacements. Scoll vers le bas de la liste pour OnInitialUpdate. Cliquez sur la liste déroulante et sélectionnez \<Ajouter >. Dans MFC02View.cpp. Assurez-vous que le corps de la fonction OnInitialUpdate comme suit :  
   
     ```  
     CWinFormsView::OnInitialUpdate();  
@@ -51,11 +51,11 @@ Dans la mesure où [CWinFormsView::GetControl](../Topic/CWinFormsView::GetContro
   
 4.  Générez et exécutez le projet.  
   
-     Dans le menu **Générer**, cliquez sur **Générer la solution**.  
+     Dans le menu **Générer** , cliquez sur **Générer la solution**.  
   
-     Dans le menu **Déboguer**, cliquez sur **Exécuter sans débogage**.  
+     Sur le **déboguer** menu, cliquez sur **démarrer sans débogage**.  
   
      Notez que la zone de texte est maintenant initialisée.  
   
-## Voir aussi  
- [Hébergement d'un contrôle utilisateur Windows Forms en tant que vue MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)
+## <a name="see-also"></a>Voir aussi  
+ [Hébergement d’un contrôle utilisateur Windows Forms en tant que vue MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)

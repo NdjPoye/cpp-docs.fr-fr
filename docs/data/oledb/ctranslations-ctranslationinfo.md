@@ -1,73 +1,73 @@
 ---
-title: "CTranslations, CTranslationInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szCatalog"
-  - "m_szSourceCatalog"
-  - "m_szTargetSchema"
-  - "m_szTargetCatalog"
-  - "m_szTargetName"
-  - "CTranslationInfo"
-  - "m_szSourceName"
-  - "m_szSchema"
-  - "CTranslations"
-  - "m_szName"
-  - "m_szSourceSchema"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTranslationInfo (classe de paramètre)"
-  - "CTranslations (classe typedef)"
-  - "m_szCatalog"
-  - "m_szName"
-  - "m_szSchema"
-  - "m_szSourceCatalog"
-  - "m_szSourceName"
-  - "m_szSourceSchema"
-  - "m_szTargetCatalog"
-  - "m_szTargetName"
-  - "m_szTargetSchema"
+title: CTranslations, CTranslationInfo | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szCatalog
+- m_szSourceCatalog
+- m_szTargetSchema
+- m_szTargetCatalog
+- m_szTargetName
+- CTranslationInfo
+- m_szSourceName
+- m_szSchema
+- CTranslations
+- m_szName
+- m_szSourceSchema
+dev_langs: C++
+helpviewer_keywords:
+- m_szSourceSchema
+- m_szSourceCatalog
+- m_szSchema
+- m_szTargetName
+- m_szSourceName
+- CTranslations typedef class
+- m_szCatalog
+- m_szTargetCatalog
+- m_szName
+- CTranslationInfo parameter class
+- m_szTargetSchema
 ms.assetid: 19a64828-2d4c-42a0-8bfb-b010e334a9b3
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 96b6602bb4bf472979ff11bb1d4df351559cc066
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# CTranslations, CTranslationInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Appelez la classe **CTranslations** de typedef pour implémenter la classe de paramètre **CTranslationInfo**.  
+# <a name="ctranslations-ctranslationinfo"></a>CTranslations, CTranslationInfo
+Appelez la classe typedef **CTranslations** pour implémenter sa classe de paramètre **CTranslationInfo**.  
   
-## Notes  
- Voir [Classes d'ensemble de lignes de schéma et de classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d'informations sur l'utilisation des classes de typedef.  
+## <a name="remarks"></a>Remarques  
+ Consultez [Classes de jeu de lignes de schéma et Classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation de classes typedef.  
   
- Cette classe identifie les traductions des caractères définies dans le catalogue qui sont accessibles à un utilisateur donné.  
+ Cette classe identifie les conversions de caractères définies dans le catalogue qui sont accessibles à un utilisateur donné.  
   
- Le tableau suivant répertorie les données membres de la classe et leurs colonnes correspondantes OLE DB.  Voir le [Ensemble de lignes TRANSLATIONS](https://msdn.microsoft.com/en-us/library/ms725365.aspx) dans *OLE DB guide de référence du programmeur* pour plus d'informations sur le schéma et les colonnes.  
+ Le tableau suivant répertorie les membres de données de la classe et les colonnes correspondantes de OLE DB. Consultez [ensemble de lignes de traductions](https://msdn.microsoft.com/en-us/library/ms725365.aspx) dans les *de référence du programmeur OLE DB* pour plus d’informations sur le schéma et les colonnes.  
   
-|Membres de données|Colonnes OLE DB|  
-|------------------------|---------------------|  
-|m\_szCatalog|TRANSLATION\_CATALOG|  
-|m\_szSchema|TRANSLATION\_SCHEMA|  
-|m\_szName|TRANSLATION\_NAME|  
-|m\_szSourceCatalog|SOURCE\_CHARACTER\_SET\_CATALOG|  
-|m\_szSourceSchema|SOURCE\_CHARACTER\_SET\_SCHEMA|  
-|m\_szSourceName|SOURCE\_CHARACTER\_SET\_NAME|  
-|m\_szTargetCatalog|TARGET\_CHARACTER\_SET\_CATALOG|  
-|m\_szTargetSchema|TARGET\_CHARACTER\_SET\_SCHEMA|  
-|m\_szTargetName|TARGET\_CHARACTER\_SET\_NAME|  
+|Données membres|Colonnes de OLE DB|  
+|------------------|--------------------|  
+|m_szCatalog|TRANSLATION_CATALOG|  
+|m_szSchema|TRANSLATION_SCHEMA|  
+|m_szName|TRANSLATION_NAME|  
+|m_szSourceCatalog|SOURCE_CHARACTER_SET_CATALOG|  
+|m_szSourceSchema|SOURCE_CHARACTER_SET_SCHEMA|  
+|m_szSourceName|SOURCE_CHARACTER_SET_NAME|  
+|m_szTargetCatalog|TARGET_CHARACTER_SET_CATALOG|  
+|m_szTargetSchema|TARGET_CHARACTER_SET_SCHEMA|  
+|m_szTargetName|TARGET_CHARACTER_SET_NAME|  
   
-## Conditions requises  
- **En\-tête :** atldbsch.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldbsch.h  
   
-## Voir aussi  
- [CatDB](../../top/visual-cpp-samples.md)   
+## <a name="see-also"></a>Voir aussi  
+ [CatDB](../../visual-cpp-samples.md)   
  [CRestrictions, classe](../../data/oledb/crestrictions-class.md)

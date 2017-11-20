@@ -1,42 +1,42 @@
 ---
-title: "/MANIFESTINPUT (Sp&#233;cifier l&#39;entr&#233;e de manifeste) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "-MANIFESTINPUT (spécifier l’entrée de manifeste) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a0b0c21e-1f9b-4d8c-bb3f-178f57fa7f1b
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a32eb8c65e14684b818341121714ce0359f6521a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /MANIFESTINPUT (Sp&#233;cifier l&#39;entr&#233;e de manifeste)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Spécifie un fichier d'entrée manifeste à inclure dans le manifeste incorporé dans l'image.  
+# <a name="manifestinput-specify-manifest-input"></a>/MANIFESTINPUT (Spécifier l'entrée de manifeste)
+Spécifie un fichier manifeste d’entrée à inclure dans le manifeste est incorporé dans l’image.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
-```c#  
+```  
 /MANIFESTINPUT:filename  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `filename`  
- Fichier du manifeste à inclure dans le manifeste incorporé.  
+ Le fichier manifeste à inclure dans le manifeste incorporé.  
   
-## Notes  
- L'option **\/MANIFESTINPUT** spécifie le chemin d'accès d'un fichier d'entrée à utiliser pour créer le manifeste incorporé dans une image exécutable.  Si vous avez plusieurs fichiers d'entrée manifestes, utilisez le commutateur plusieurs fois \- une fois pour chaque fichier d'entrée.  Les fichiers d'entrée manifeste sont fusionnés pour créer le manifeste intégré.  Cette option requiert l'option **\/MANIFEST:EMBED**.  
+## <a name="remarks"></a>Remarques  
+ Le **/MANIFESTINPUT** option spécifie le chemin d’accès de fichier d’entrée à utiliser pour créer le manifeste incorporé dans une image exécutable. Si vous avez manifeste plusieurs fichiers d’entrée, utilisez le commutateur plusieurs fois : une fois pour chaque fichier d’entrée. Les fichiers d’entrée de manifeste sont fusionnés pour créer le manifeste incorporé. Cette option requiert le **de manifeste : incorporer** option.  
   
- Cette option ne peut pas être définie directement dans [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)].  À la place, utilisez la propriété **Fichiers manifeste supplémentaires** du projet pour spécifier les fichiers manifeste supplémentaires à inclure.  Pour plus d'informations, consultez [Entrée et sortie, Outil Manifeste, Propriétés de configuration, boîte de dialogue Pages de propriétés de \<NomProjet\>](../../ide/input-and-output-manifest-tool.md).  
+ Cette option ne peut pas être définie directement dans [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Utilisez plutôt le **des fichiers manifeste supplémentaires** propriété du projet pour spécifier les fichiers manifeste supplémentaires à inclure. Pour plus d’informations, consultez [entrée et sortie, outil manifeste, propriétés de Configuration, \<Projectname > Property Pages Dialog Box](../../ide/input-and-output-manifest-tool.md).  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)

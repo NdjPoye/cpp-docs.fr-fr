@@ -1,57 +1,57 @@
 ---
-title: "Instantan&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bibliothèque de curseurs (ODBC), instantanés"
-  - "ODBC (curseurs), statiques"
-  - "ODBC (bibliothèque de curseurs), instantanés"
-  - "ODBC (recordsets), instantanés"
-  - "recordsets, instantanés"
-  - "instantanés"
-  - "instantanés, prise en charge dans ODBC"
-  - "curseurs statiques"
+title: "Instantané | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC cursor library [ODBC], snapshots
+- cursors [ODBC], static
+- recordsets, snapshots
+- snapshots, support in ODBC
+- static cursors
+- ODBC recordsets, snapshots
+- cursor library [ODBC], snapshots
+- snapshots
 ms.assetid: b5293a52-0657-43e9-bd71-fe3785b21c7e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b8671ce1eefd73b2b8af506b621258e81cbed9b8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Instantan&#233;
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Un instantané est un recordset qui reflète une vue statique des données au moment de la création de l'instantané.  Lorsque vous avez ouvert l'instantané et atteint tous les enregistrements, le recordset et leurs valeurs que comprend l'instantané ne varient pas jusqu'à ce que l'instantané soit reconstruit en appelant **Requery**.  
+# <a name="snapshot"></a>Instantané
+Un instantané est un jeu d’enregistrements qui reflète une vue statique des données telles qu’elles existaient au moment de que l’instantané a été créé. Lorsque vous ouvrez l’instantané et déplacez tous les enregistrements, le jeu d’enregistrements et leurs valeurs ne changent pas jusqu'à ce que vous reconstruisiez l’instantané en appelant **Requery**.  
   
 > [!NOTE]
->  Cette rubrique s'applique aux classes ODBC MFC.  Si vous utilisez les classes DAO MFC plutôt que les classes ODBC MFC, consultez [CDaoRecordset::Open](../Topic/CDaoRecordset::Open.md) pour plus de détails sur les recordsets de type instantané.  
+>  Cette rubrique s’applique aux classes ODBC MFC. Si vous utilisez les classes DAO MFC plutôt que les classes ODBC MFC, consultez [CDaoRecordset::Open](../../mfc/reference/cdaorecordset-class.md#open) pour obtenir une description des jeux d’enregistrements de type instantané.  
   
- Vous pouvez créer des instantanés modifiables ou en lecture seule avec les classes de base de données.  Contrairement à une feuille de réponse dynamique, un instantané modifiable ne reflète pas les modifications effectuées par d'autres utilisateurs aux valeurs d'enregistrement, mais reflète les mises à jour et les suppressions effectuées par votre programme.  Les enregistrements ajoutés à un instantané ne sont pas visibles dans l'instantané avant l'appel de **Requery**.  
+ Vous pouvez créer des instantanés en lecture seule ou être mis à jour avec les classes de base de données. Contrairement à une feuille de réponse dynamique, un instantané modifiable ne reflète pas les modifications apportées par d’autres utilisateurs des valeurs d’enregistrement, mais il ne reflète pas les mises à jour et suppressions effectuées par votre programme. Les enregistrements ajoutés à un instantané ne sont pas visibles dans l’instantané avant l’appel de **Requery**.  
   
 > [!TIP]
->  Un instantané est un curseur statique ODBC.  Les curseurs statiques n'obtiennent aucune ligne de données jusqu'à ce que l'enregistrement soit affiché.  Pour vous assurer que tous les enregistrements sont immédiatement récupérés, affichez la fin de votre recordset, puis faites\-le défiler pour afficher le premier enregistrement souhaité.  Notez cependant que le défilement vers la fin du recordset entraîne une charge supplémentaire et peut diminuer la performance.  
+>  Un instantané est un curseur statique ODBC. Les curseurs statiques n’obtiennent pas réellement une ligne de données jusqu'à ce que vous faites défiler à cet enregistrement. Pour vous assurer que tous les enregistrements sont immédiatement extraits, vous pouvez faire défiler jusqu'à la fin de votre jeu d’enregistrements et puis faites défiler vers le premier enregistrement que vous souhaitez afficher. Toutefois, notez que le défilement à la fin implique une charge supplémentaire et peut diminuer la performance.  
   
- Les instantanés sont plus utiles lorsque les données doivent rester fixes lors de vos opérations, par exemple lorsque vous générez un rapport ou effectuez des calculs.  Même dans ce cas, la source de données peut différer considérablement de votre instantané ; vous pourriez être amené à le régénérer de temps en temps.  
+ Les instantanés sont plus utiles lorsque les données doivent rester fixes lors de vos opérations, comme lors de la génération d’un rapport ou de calculs. Même dans ce cas, la source de données peut différer considérablement de votre instantané, donc vous souhaiterez peut-être régénérer, de temps à autre.  
   
- La prise en charge d'instantané est basée sur la bibliothèque de curseurs ODBC, qui procure des curseurs statiques et des mises à jour positionnées \(nécessaires pour la mise à jour\) pour tout pilote de niveau 1.  La DLL de la bibliothèque de curseurs doit être chargée en mémoire pour assurer cette prise en charge.  Lorsque vous construisez un objet `CDatabase` et appelez sa fonction membre `OpenEx`, vous devez spécifier l'option **CDatabase::useCursorLib** du paramètre `dwOptions`.  Si vous appelez la fonction membre **Open**, la bibliothèque de curseurs est chargée par défaut.  Si vous utilisez des feuilles de réponse dynamiques à la place d'instantanés, vous ne voulez pas que la bibliothèque de curseurs soit chargée.  
+ Prise en charge de l’instantané est basée sur la bibliothèque de curseurs ODBC, qui procure des curseurs statiques et positionné mises à jour (nécessaires pour la mise à jour) pour un pilote de niveau 1. La DLL de bibliothèque de curseurs doit être chargée en mémoire pour cette prise en charge. Lorsque vous construisez un `CDatabase` objet et appeler ses `OpenEx` fonction membre, vous devez spécifier le **CDatabase::useCursorLib** option de le `dwOptions` paramètre. Si vous appelez le **ouvrir** fonction membre, la bibliothèque de curseurs est chargée par défaut. Si vous utilisez des feuilles de réponse dynamiques à la place d’instantanés, vous ne souhaitez pas que la bibliothèque de curseurs doit être chargé.  
   
- Les instantanés ne sont disponibles que si la bibliothèque de curseurs ODBC était chargée lors de la construction de l'objet `CDatabase` ou si le pilote ODBC que vous utilisez prend en charge les curseurs statiques.  
-  
-> [!NOTE]
->  Pour certains pilotes ODBC, les instantanés \(curseurs statiques\) peuvent ne pas être modifiables.  Vérifiez la documentation du pilote pour les types de curseurs pris en charge et les types d'accès concurrentiel qu'ils prennent en charge.  Pour pouvoir mettre à jour les instantanés, assurez\-vous de charger la bibliothèque de curseurs en mémoire lorsque vous créez un objet `CDatabase`.  Pour plus d'informations, consultez [ODBC : bibliothèque de curseurs ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
+ Les instantanés sont disponibles uniquement si la bibliothèque de curseurs ODBC était chargée lors la `CDatabase` objet a été construit, ou le pilote ODBC que vous utilisez prend en charge les curseurs statiques.  
   
 > [!NOTE]
->  Si vous voulez utiliser les instantanés et les feuilles de réponse dynamiques, vous devez les baser sur deux objets `CDatabase` distincts \(deux connexions différentes\).  
+>  Pour certains pilotes ODBC, les instantanés (curseurs statiques) n’est peut-être pas être mis à jour. Vérifiez la documentation du pilote pour les types de curseurs pris en charge et les types d’accès concurrentiel que pris en charge. Pour garantir les instantanés, assurez-vous de charger la bibliothèque de curseurs en mémoire lorsque vous créez un `CDatabase` objet. Pour plus d’informations, consultez [ODBC : bibliothèque de curseurs ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
   
- Pour plus d'informations sur les propriétés que les instantanés partagent avec tous les recordsets, consultez [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md).  Pour plus d'informations sur ODBC et les instantanés*,* y compris la bibliothèque de curseurs ODBC, consultez [ODBC](../../data/odbc/odbc-basics.md).  
+> [!NOTE]
+>  Si vous souhaitez utiliser les instantanés et les feuilles de réponse dynamiques, vous devez les baser sur deux `CDatabase` objets (deux connexions différentes).  
   
-## Voir aussi  
- [ODBC \(Open Database Connectivity\)](../../data/odbc/open-database-connectivity-odbc.md)
+ Pour plus d’informations sur le partage d’instantanés de propriétés avec tous les jeux d’enregistrements, consultez [Recordset (ODBC)](../../data/odbc/recordset-odbc.md). Pour plus d’informations sur ODBC et les instantanés, y compris la bibliothèque de curseurs ODBC, consultez [ODBC](../../data/odbc/odbc-basics.md).  
+  
+## <a name="see-also"></a>Voir aussi  
+ [ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

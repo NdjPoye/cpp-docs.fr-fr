@@ -1,79 +1,79 @@
 ---
-title: "Mod&#232;le objet OLE&#160;DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB, modèle objet"
-  - "jeux de lignes, modèle d'objet OLE DB"
+title: "Modèle objet OLE DB | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- rowsets, OLE DB object model
+- OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b91198d4280a271c775b7be79ecab3da7271fb57
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Mod&#232;le objet OLE&#160;DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Le modèle objet OLE DB englobe les objets ou composants suivants.  Les quatre premiers objets ou composants répertoriés \(sources de données, sessions, commandes et jeux de lignes\) vous permettent de vous connecter à une source de données et de la visualiser.  Le reste, à commencer par les accesseurs, concerne l'utilisation des données une fois qu'elles sont affichées.  
+# <a name="ole-db-object-model"></a>Modèle objet OLE DB
+Le modèle objet OLE DB comprend les objets ou les composants suivants. Les quatre premiers objets ou composants répertoriés (les sources de données, les sessions, les commandes et ensembles de lignes) permettent de se connecter à une source de données et l’afficher. Le reste, à commencer par les accesseurs, se rapportent à l’utilisation avec les données lorsqu’elle est affichée.  
   
-## Sources de données  
- Les objets source de données vous permettent de vous connecter à une source de données telle qu'un fichier ou un SGBD.  Un objet source de données crée et gère la connexion, et contient des informations relatives aux autorisations et aux authentifications \(nom de connexion et mot de passe, par exemple\).  Un objet source de données peut créer une ou plusieurs sessions.  
+## <a name="data-sources"></a>Sources de données  
+ Objets source de données vous permettent de vous connecter à une source de données tel qu’un fichier ou un SGBD. Un objet de source de données crée et gère la connexion et contient des informations d’authentifications et les autorisations (par exemple, le nom de connexion et mot de passe). Un objet de source de données peut créer une ou plusieurs sessions.  
   
-## Sessions  
- Une session gère une interaction particulière avec la source de données pour rechercher et récupérer des données.  Chaque session correspond à une transaction unique.  Une transaction est une unité de travail indivisible définie selon le test des propriétés ACID.  Pour une définition du test ACID, consultez [Transactions](#vcconoledbcomponents_transactions).  
+## <a name="sessions"></a>Sessions  
+ Une session gère une interaction particulière avec la source de données pour interroger et extraire des données. Chaque session est une transaction unique. Une transaction est une unité de travail indivisible définie par le test ACID. Pour une définition de ACID, consultez [Transactions](#vcconoledbcomponents_transactions).  
   
- Les sessions exécutent des tâches importantes telles que l'ouverture de jeux de lignes et le retour de l'objet source de données l'ayant créé.  Les sessions peuvent également retourner des métadonnées ou des informations concernant la source de données elle\-même \(des informations sur les tables, par exemple\).  
+ Les sessions exécutent des tâches importantes telles que l’ouverture des ensembles de lignes et de retourner l’objet de source de données qui l’a créé. Sessions peuvent également retourner des métadonnées ou des informations sur la source de données (telles que les informations de la table).  
   
  Une session peut créer une ou plusieurs commandes.  
   
-## Commandes  
- Les commandes exécutent une commande texte, telle qu'une instruction SQL.  Si la commande texte spécifie un jeu de lignes, par exemple une instruction SQL **SELECT**, la commande crée le jeu de lignes.  
+## <a name="commands"></a>Commandes  
+ Commandes exécutent une commande de texte, telle qu’une instruction SQL. Si la commande de texte spécifie un ensemble de lignes, telles que SQL **sélectionnez** instruction, la commande crée l’ensemble de lignes.  
   
- Une commande est tout simplement un conteneur d'une commande texte, qui est une chaîne \(une instruction SQL, par exemple\) passée par un consommateur à un objet source de données pour être exécutée par le magasin de données sous\-jacent du fournisseur.  En principe, la commande texte est une instruction SQL **SELECT** \(auquel cas, dans la mesure où SQL **SELECT** spécifie un jeu de lignes, la commande crée automatiquement un jeu de lignes\).  
+ Une commande est simplement un conteneur pour une commande de texte, qui est une chaîne (par exemple, une instruction SQL) passée à partir d’un consommateur à un objet de source de données pour l’exécution par le magasin de données du fournisseur sous-jacent. En règle générale, la commande de texte est une SQL **sélectionnez** instruction (dans ce cas, étant donné que SQL **sélectionnez** spécifie un ensemble de lignes, la commande crée automatiquement un ensemble de lignes).  
   
-## Jeux de lignes  
- Les jeux de lignes exposent les données sous la forme d'un tableau.  Un index est un cas spécial de jeu de lignes.  Vous pouvez créer des jeux de lignes à partir de la session ou de la commande.  
+## <a name="rowsets"></a>Ensembles de lignes  
+ Ensembles de lignes exposent les données sous forme de tableau. Un index est un cas spécial d’un ensemble de lignes. Vous pouvez créer des ensembles de lignes de la session ou de la commande.  
   
-### Jeux de lignes du schéma  
- Les schémas contiennent des métadonnées \(informations structurelles\) concernant une base de données.  Les jeux de lignes du schéma sont des jeux de lignes qui contiennent des informations relatives au schéma.  Certains fournisseurs OLE DB pour SGBD prennent en charge des objets jeu de lignes du schéma.  Pour plus d'informations sur les jeux de lignes du schéma, consultez [Récupération de métadonnées à l'aide de jeux de lignes du schéma](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) et [Classes de jeu de lignes du schéma et classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).  
+### <a name="schema-rowsets"></a>Jeux de lignes du schéma  
+ Les schémas contiennent des métadonnées (informations structurelles) sur une base de données. Ensembles de lignes de schéma sont des ensembles de lignes qui contiennent des informations de schéma. Certains fournisseurs OLE DB pour SGBD prennent en charge les objets d’ensemble de lignes de schéma. Pour plus d’informations sur les ensembles de lignes de schéma, consultez [récupération de métadonnées avec les ensembles de lignes de schéma](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) et [Classes de jeu de lignes de schéma et Classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).  
   
-### Objets de vue  
- Un objet de vue définit un sous\-ensemble de lignes et de colonnes d'un jeu de lignes.  Il ne contient pas de données propres.  Les objets de vue ne peuvent pas combiner des données provenant de plusieurs jeux de lignes.  
+### <a name="view-objects"></a>Afficher les objets  
+ Un objet de vue définit un sous-ensemble des lignes et des colonnes à partir d’un ensemble de lignes. Il ne contient aucune donnée de son propre. Objets de vue ne peut pas combiner des données à partir de plusieurs ensembles de lignes.  
   
-## Accesseurs  
- Seule la technologie OLE DB utilise le concept d'accesseur.  Un accesseur décrit comment les données sont stockées dans un consommateur.  Il contient un jeu de liaisons \(appelé mappage de colonnes\) entre les champs du jeu de lignes \(colonnes\) et les données membres que vous déclarez dans le consommateur.  
+## <a name="accessors"></a>Accesseurs  
+ Uniquement la OLE DB utilise le concept d’accesseur. Un accesseur décrit la façon dont les données sont stockées dans un consommateur. Il contient un jeu de liaisons (appelé un mappage de colonnes) entre les champs de l’ensemble de lignes (colonnes) et les membres de données que vous déclarez dans le consommateur.  
   
-##  <a name="vcconoledbcomponents_transactions"></a> Transactions  
- Les objets de transaction sont utilisés lors de la validation ou de l'abandon de transactions imbriquées à un niveau autre que le niveau le plus bas.  Une transaction est une unité de travail indivisible définie selon le test des propriétés ACID.  Les propriétés ACID sont les suivantes :  
+##  <a name="vcconoledbcomponents_transactions"></a>Transactions  
+ Les objets de transaction sont utilisés lors de la validation ou l’abandon de transactions imbriquées à autre que le niveau le plus bas. Une transaction est une unité de travail indivisible définie par le test ACID. Les propriétés ACID :  
   
--   Atomicité : suppose qu'une transaction ne peut pas être divisée en petites unités de travail.  
+-   Atomicité : ne peut pas être divisé en plus petites unités de travail.  
   
--   Simultanéité : plusieurs transactions peuvent être exécutées en même temps.  
+-   Accès concurrentiel : plusieurs transactions peuvent se produire à la fois.  
   
--   Isolement : une transaction a une connaissance limitée des modifications effectuées par une autre transaction.  
+-   Isolement : une transaction a une connaissance limitée sur les modifications apportées par un autre.  
   
--   Durabilité : la transaction rend permanentes les modifications apportées au système.  
+-   Durabilité : la transaction rend permanentes les modifications apportées.  
   
-## Énumérateurs  
- Les énumérateurs recherchent les sources de données disponibles et d'autres énumérateurs.  Les consommateurs qui ne sont pas personnalisés pour une source de données particulière utilisent des énumérateurs pour rechercher une source de données à utiliser.  
+## <a name="enumerators"></a>Énumérateurs  
+ Les énumérateurs rechercher des sources de données disponibles et d’autres énumérateurs. Les consommateurs qui ne sont pas personnalisés pour une source de données particulière utilisent des énumérateurs pour rechercher une source de données à utiliser.  
   
- Un énumérateur racine, fourni avec le Kit de développement Microsoft Data Access SDK, parcourt la base de registres à la recherche de sources de données et autres énumérateurs.  D'autres énumérateurs parcourent la base de registres ou effectuent une recherche d'une manière spécifique à un fournisseur.  
+ Un énumérateur racine, inclu dans Microsoft Data Access SDK, parcourt le Registre, recherchez des sources de données et autres énumérateurs. D’autres énumérateurs parcourent le Registre ou la recherche d’une manière spécifique au fournisseur.  
   
-## Erreurs  
- Toute interface sur un objet OLE DB peut générer des erreurs.  Les erreurs contiennent des informations supplémentaires sur une erreur, y compris un objet erreur personnalisé facultatif.  Ces informations sont contenues dans un HRESULT.  
+## <a name="errors"></a>Erreurs  
+ N’importe quelle interface sur un objet OLE DB peut générer des erreurs. Les erreurs contiennent des informations supplémentaires sur une erreur, y compris un objet erreur personnalisé facultatif. Ces informations sont contenues dans un HRESULT.  
   
-## Notifications  
- Les notifications sont utilisées par des groupes de consommateurs coopératifs partageant un jeu de lignes \(« partageant » signifie en l'occurrence que les consommateurs sont censés travailler dans la même transaction\).  Les notifications permettent aux consommateurs coopératifs partageant un jeu de lignes d'êtres informées sur les actions opérées par leurs pairs sur le jeu de lignes.  
+## <a name="notifications"></a>Notifications  
+ Les notifications sont utilisées par les groupes de consommateurs contributif partage un ensemble de lignes (où le partage signifie que les consommateurs sont censés pour travailler dans la même transaction). Les notifications permettent aux consommateurs contributif partage un ensemble de lignes afin de rester informé sur les actions sur l’ensemble de lignes effectuées par leurs homologues.  
   
-## Voir aussi  
- [Programmation OLE DB](../../data/oledb/ole-db-programming.md)   
- [Vue d'ensemble de la programmation OLE DB](../../data/oledb/ole-db-programming-overview.md)
+## <a name="see-also"></a>Voir aussi  
+ [Programmation OLE DB](../../data/oledb/ole-db-programming.md)   
+ [Vue d’ensemble de la programmation OLE DB](../../data/oledb/ole-db-programming-overview.md)

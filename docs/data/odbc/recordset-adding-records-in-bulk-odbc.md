@@ -1,48 +1,47 @@
 ---
-title: "Recordset&#160;: ajout global d&#39;enregistrements (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ajouts d'enregistrements en bloc aux recordsets"
-  - "ODBC (recordsets), ajouter des enregistrements"
-  - "recordsets, ajouter des enregistrements"
+title: "Recordset : Ajout d’enregistrements en bloc (ODBC) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC recordsets, adding records
+- recordsets, adding records
+- bulk record additions to recordsets
 ms.assetid: 4685f656-14b9-4f10-a1c5-147b2b89a0b4
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 937e5273a0b999672dbbc98a927d34909d04136b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Recordset&#160;: ajout global d&#39;enregistrements (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique s'applique aux classes ODBC MFC.  
+# <a name="recordset-adding-records-in-bulk-odbc"></a>Recordset : ajout global d'enregistrements (ODBC)
+Cette rubrique s’applique aux classes ODBC MFC.  
   
- La classe [CRecordset](../../mfc/reference/crecordset-class.md) MFC dispose d'une nouvelle optimisation qui améliore son efficacité quand vous ajoutez en bloc de nouveaux enregistrements à une table.  
+ La bibliothèque MFC [CRecordset](../../mfc/reference/crecordset-class.md) classe a une nouvelle optimisation qui améliore l’efficacité lorsque vous ajoutez de nouveaux enregistrements en bloc dans une table.  
   
 > [!NOTE]
->  Cette rubrique s'applique aux objets dérivés de `CRecordset` dans lesquels l'extraction de lignes en bloc n'a pas été implémentée.  Si vous utilisez l'extraction de lignes en bloc, consultez [Recordset : extraction globale d'enregistrements \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Cette rubrique s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous utilisez l’extraction de lignes en bloc, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Une nouvelle option du paramètre **dwOptions** de la fonction membre [CRecordset::Open](../Topic/CRecordset::Open.md), **optimizeBulkAdd**, améliore les performances lorsque vous ajoutez plusieurs enregistrements à la suite sans appeler **Requery** ou **Close**.  Seuls les champs « dirty » \(modifiés\) avant le premier appel de **Update** sont marqués comme « dirty » \(modifiés\) pour les appels suivants de `AddNew`\/**Update**.  
+ Une nouvelle option pour le **dwOptions** paramètre à la [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) fonction membre, **optimizeBulkAdd**, améliore les performances lorsque vous ajoutez plusieurs enregistrements consécutivement sans appeler **Requery** ou **fermer**. Seuls les champs qui sont modifiées avant la première **mise à jour** appel sont marqués comme modifiés pour l’ultérieures `AddNew` / **mise à jour** appels.  
   
- Si vous utilisez les classes de base de données pour bénéficier de la fonction API ODBC **::SQLSetPos** lors de l'ajout, de la modification ou de la suppression d'enregistrements, cette optimisation est superflue.  
+ Si vous utilisez les classes de base de données pour tirer parti de la **:: SQLSetPos** fonction d’API ODBC pour l’ajout, modification, et suppression d’enregistrements, cette optimisation n’est pas nécessaire.  
   
- Si la bibliothèque de curseurs ODBC est chargée ou que le pilote ODBC ne prend pas en charge l'ajout, la modification ou la suppression via **::SQLSetPos**, cette optimisation doit améliorer les performances de l'ajout en bloc.  Pour activer l'optimisation, définissez le paramètre **dwOptions** dans l'appel **Open** de votre recordset avec la valeur suivante :  
+ Si la bibliothèque de curseurs ODBC est chargée ou le pilote ODBC ne prend pas en charge l’ajout, modification et suppression via **:: SQLSetPos**, cette optimisation doit améliorer en bloc ajouter les performances. Pour activer l’optimisation, définissez le **dwOptions** paramètre dans le **ouvrir** appeler pour votre jeu d’enregistrements à ce qui suit :  
   
 ```  
 appendOnly | optimizeBulkAdd  
 ```  
   
-## Voir aussi  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Recordset : ajout, modification et suppression d'enregistrements \(ODBC\)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)   
- [Recordset : verrouillage d'enregistrements \(ODBC\)](../../data/odbc/recordset-locking-records-odbc.md)
+## <a name="see-also"></a>Voir aussi  
+ [Jeu d’enregistrements (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Recordset : Ajout, modification et suppression d’enregistrements (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)   
+ [Recordset : verrouillage d’enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

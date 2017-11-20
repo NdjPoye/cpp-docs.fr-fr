@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- wcsrtombs_s
+apiname: wcsrtombs_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- wcsrtombs_s
-dev_langs:
-- C++
+f1_keywords: wcsrtombs_s
+dev_langs: C++
 helpviewer_keywords:
 - string conversion, wide characters
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 4c32ff2061e8ce52ae193c7679b40e69515d3ab0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: f8045010875713588fb20a8f05a230717a21a9a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="wcsrtombss"></a>wcsrtombs_s
 Convertit une chaîne de caractères larges dans sa représentation de chaîne de caractères multioctets. Version de [wcsrtombs](../../c-runtime-library/reference/wcsrtombs.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -124,9 +105,9 @@ errno_t wcsrtombs_s(
   
  Si `count` correspond à la valeur spéciale [_TRUNCATE](../../c-runtime-library/truncate.md), `wcsrtombs_s` convertit autant de caractères de la chaîne que la mémoire tampon de destination peut en accueillir, tout en laissant de l’espace pour un terminateur Null.  
   
- Si la fonction `wcsrtombs_s` convertit correctement la chaîne source, elle indique la taille en octets de la chaîne convertie, terminateur Null inclus, dans `*``pReturnValue` (à condition que `pReturnValue` n’a pas la valeur `NULL`). Cela se produit même si l'argument `mbstr` a la valeur `NULL`, et permet de déterminer la taille de mémoire tampon requise. Notez que si `mbstr` a la valeur `NULL`, le paramètre `count` est ignoré.  
+ Si la fonction `wcsrtombs_s` convertit correctement la chaîne source, elle indique la taille en octets de la chaîne convertie, terminateur Null inclus, dans `*pReturnValue` (à condition que `pReturnValue` n’a pas la valeur `NULL`). Cela se produit même si l'argument `mbstr` a la valeur `NULL`, et permet de déterminer la taille de mémoire tampon requise. Notez que si `mbstr` a la valeur `NULL`, le paramètre `count` est ignoré.  
   
- Si la fonction `wcsrtombs_s` rencontre un caractère large qu’elle ne peut pas convertir en caractère multioctet, elle affecte la valeur -1 à `*``pReturnValue`, définit la mémoire tampon de destination en tant que chaîne vide, affecte à `errno` la valeur `EILSEQ`, puis retourne `EILSEQ`.  
+ Si la fonction `wcsrtombs_s` rencontre un caractère large qu’elle ne peut pas convertir en caractère multioctet, elle affecte la valeur -1 à `*pReturnValue`, définit la mémoire tampon de destination en tant que chaîne vide, affecte à `errno` la valeur `EILSEQ`, puis retourne `EILSEQ`.  
   
  Si les séquences pointées par `wcstr` et `mbstr` se chevauchent, le comportement de `wcsrtombs_s` n'est pas défini. `wcsrtombs_s` est affecté par la catégorie LC_TYPE des paramètres régionaux actuels.  
   

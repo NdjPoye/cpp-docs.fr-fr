@@ -1,35 +1,33 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4091 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4091"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4091"
+title: "Du compilateur (niveau 1) d’avertissement C4091 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4091
+dev_langs: C++
+helpviewer_keywords: C4091
 ms.assetid: 3a404967-ab42-49b0-b324-fd7ba1859d78
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9b40596872bba7cc914f148f36c7d31dde5dd103
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 1) C4091
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'MotClé' : ignoré à gauche de 'type' quand aucune variable n'est déclarée  
+# <a name="compiler-warning-level-1-c4091"></a>Du compilateur (niveau 1) d’avertissement C4091
+'keyword' : ignoré à gauche de 'type' quand aucune variable est déclarée.  
   
- Le compilateur a détecté une situation dans laquelle l'utilisateur attendait probablement la déclaration d'une variable, mais le compilateur n'a pas pu la déclarer.  
+ Le compilateur a détecté une situation dans laquelle l’utilisateur attendait probablement une variable qui doit être déclarée, mais le compilateur n’a pas la possibilité de déclarer la variable.  
   
-## Exemple  
- Un attribut `__declspec` au début d'une déclaration de type défini par l'utilisateur s'applique à la variable de ce type.  L'erreur C4091 indique qu'aucune variable n'est déclarée.  L'exemple suivant génère l'erreur C4091 :  
+## <a name="example"></a>Exemple  
+ A `__declspec` attribut au début d’une déclaration de type défini par l’utilisateur s’applique à la variable de ce type. C4091 indique qu’aucune variable est déclarée. L’exemple suivant génère C4091.  
   
 ```  
 // C4091.cpp  
@@ -44,8 +42,8 @@ __declspec(dllimport) class X2 {} varX;
 class __declspec(dllimport) X3 {};  
 ```  
   
-## Exemple  
- Si un identificateur est un typedef, il ne peut pas également être un nom de variable.  L'exemple suivant génère l'erreur C4091 :  
+## <a name="example"></a>Exemple  
+ Si un identificateur est un typedef, il ne peut pas être également un nom de variable. L’exemple suivant génère C4091.  
   
 ```  
 // C4091_b.cpp  

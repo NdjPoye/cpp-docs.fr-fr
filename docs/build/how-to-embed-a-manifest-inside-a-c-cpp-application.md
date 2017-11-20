@@ -1,57 +1,56 @@
 ---
-title: "Comment&#160;: incorporer un manifeste &#224; une application C/C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "incorporer des manifestes"
-  - "makefiles, mettre à jour pour incorporer un manifeste"
-  - "manifestes (C++)"
+title: "Comment : incorporer un manifeste à l’intérieur d’une Application C/C++ | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- manifests [C++]
+- embedding manifests
+- makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-caps.latest.revision: 16
-caps.handback.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3bc7646dab51b9a1fdd73b23d1f58c7b474c363e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: incorporer un manifeste &#224; une application C/C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il est recommandé que le manifeste d'une application \(ou d'une bibliothèque\) C\/C\+\+ soit incorporé à l'intérieur du fichier binaire final parce que cela garantit un comportement d'exécution correct dans la plupart des scénarios.  Par défaut, [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] tente d'incorporer le manifeste lorsqu'il génère un projet à partir de fichiers sources ; pour plus d'informations, consultez [Génération de manifeste dans Visual Studio](../build/manifest-generation-in-visual-studio.md).  Toutefois, si une application est générée à l'aide de nmake, certaines modifications doivent être apportées au makefile existant.  Cette section montre comment modifier des makefiles existants pour incorporer automatiquement le manifeste dans le fichier binaire final.  
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Comment : incorporer un manifeste à une application C/C++
+Il est recommandé qu’une application C/C++ (ou la bibliothèque) son manifeste incorporé dans le fichier binaire final, car cela garantit un comportement correct dans la plupart des scénarios. Par défaut, [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] tente d’incorporer le manifeste lorsqu’il génère un projet à partir des fichiers sources, consultez [génération de manifeste dans Visual Studio](../build/manifest-generation-in-visual-studio.md) pour plus d’informations. Toutefois si une application est générée à l’aide de nmake, certaines modifications apportées à un makefile existant sont nécessaires. Cette section montre comment modifier des makefiles existants pour incorporer automatiquement le manifeste dans le fichier binaire final.  
   
-## Deux approches  
- Il y a deux façons d'incorporer le manifeste à l'intérieur d'une application ou d'une bibliothèque.  
+## <a name="two-approaches"></a>Deux approches  
+ Il existe deux façons d’incorporer le manifeste à l’intérieur d’une application ou une bibliothèque.  
   
--   Si vous n'exécutez pas une génération incrémentielle, vous pouvez directement incorporer le manifeste à l'aide d'une ligne de commande similaire à la suivante comme étape post\-build :  
+-   Si vous n’effectuez pas une génération incrémentielle, vous pouvez incorporer directement le manifeste à l’aide d’une ligne de commande semblable à celle-ci comme une étape post-build :  
   
-     **mt.exe –manifest MyApp.exe.manifest \-outputresource:MyApp.exe;1**  
+     **MT.exe-manifeste MyApp.exe.manifest-outputresource:MyApp.exe;1**  
   
      ou  
   
-     **mt.exe –manifest MyLibrary.dll.manifest \-outputresource:MyLibrary.dll;2**  
+     **MT.exe-manifeste MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**  
   
-     \(1 pour un EXE, 2 pour une DLL.\)  
+     (1 pour un EXE, 2 pour une DLL).  
   
--   Si vous exécutez une génération incrémentielle, la modification de la ressource comme illustré ici désactive la génération incrémentielle et provoque une régénération complète ; par conséquent, une approche différente doit être adoptée :  
+-   Si vous effectuez une génération incrémentielle, modifier directement la ressource, comme indiqué ici désactivera la génération incrémentielle et entraîner une régénération complète ; Par conséquent, une approche différente doit être prise :  
   
-    -   Liez le fichier binaire pour générer le fichier MyApp.exe.manifest.  
+    -   Lier le fichier binaire pour générer le fichier MyApp.exe.manifest.  
   
     -   Convertissez le manifeste en un fichier de ressources.  
   
-    -   Procédez à une nouvelle liaison \(de façon incrémentielle\) pour incorporer la ressource manifeste dans le fichier binaire.  
+    -   Reconnectez (incrémentielle) pour incorporer la ressource de manifeste dans le fichier binaire.  
   
  Les exemples suivants montrent comment modifier les makefiles pour incorporer les deux techniques.  
   
-## Makefiles \(avant\)  
- Prenons le script nmake pour MyApp.exe, une application simple à partir d'un seul fichier :  
+## <a name="makefiles-before"></a>Makefiles (avant)  
+ Prenons le script nmake pour MyApp.exe, une application simple à partir d’un fichier :  
   
 ```  
 # build MyApp.exe  
@@ -71,9 +70,9 @@ clean :
     del MyApp.obj MyApp.exe  
 ```  
   
- Si ce script est exécuté tel quel avec Visual C\+\+, il crée MyApp.exe avec succès.  Il crée également le fichier manifeste MyApp.exe.manifest externe, que le système d'exploitation utilisera pour charger des assemblys dépendants pendant l'exécution.  
+ Si ce script est exécuté tel quel avec Visual C++, il crée MyApp.exe avec succès. Il crée également le fichier manifeste MyApp.exe.manifest, externe pour une utilisation par le système d’exploitation pour charger des assemblys dépendants lors de l’exécution.  
   
- Le script nmake pour MyLibrary.dll paraît très similaire :  
+ Le script nmake pour MyLibrary.dll très similaire :  
   
 ```  
 # build MyLibrary.dll  
@@ -96,8 +95,8 @@ clean :
     del MyLibrary.obj MyLibrary.dll  
 ```  
   
-## Makefiles \(après\)  
- Pour effectuer la génération avec des manifestes incorporés, vous devez apporter quatre légères modifications aux fichiers makefile d'origine.  Pour le makefile MyApp.exe :  
+## <a name="makefiles-after"></a>Makefiles (après)  
+ Pour générer des manifestes incorporés que vous devez apporter des modifications mineures quatre pour les makefiles d’origine. Pour le makefile MyApp.exe :  
   
 ```  
 # build MyApp.exe  
@@ -160,9 +159,9 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- Les makefiles incluent désormais deux fichiers, makefile.inc et makefile.targ.inc, qui effectuent le véritable travail.  
+ Les makefiles incluent désormais deux fichiers qui effectuent le travail réel, makefile.inc et makefile.targ.inc.  
   
- Créez makefile.inc et copiez\-y le code suivant :  
+ Créez makefile.inc et copiez-y ce qui suit :  
   
 ```  
 # makefile.inc -- Include this file into existing makefile at the very top.  
@@ -233,7 +232,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################  
 ```  
   
- Maintenant créez makefile.targ.inc et copiez\-y le code suivant :  
+ Maintenant créez makefile.targ.inc et copiez-y ce qui suit :  
   
 ```  
 # makefile.targ.inc - include this at the very bottom of the existing makefile  
@@ -260,5 +259,5 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 # end of makefile.targ.inc  
 ```  
   
-## Voir aussi  
- [Fonctionnement de la génération de manifestes pour les programmes C\/C\+\+](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+## <a name="see-also"></a>Voir aussi  
+ [Présentation de la génération de manifeste pour les programmes C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)

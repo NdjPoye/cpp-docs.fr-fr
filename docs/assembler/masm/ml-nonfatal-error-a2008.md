@@ -1,46 +1,44 @@
 ---
-title: "ML Nonfatal Error A2008 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A2008"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A2008"
+title: Erreur ML non fatale A2008 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A2008
+dev_langs: C++
+helpviewer_keywords: A2008
 ms.assetid: ca24157f-c88a-4678-ae06-3bc3cd956001
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7bcef41e81ea0f3d6229cf828a661fdc8f8fdec4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# ML Nonfatal Error A2008
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**erreur de syntaxe :**  
+# <a name="ml-nonfatal-error-a2008"></a>Erreur ML non fatale A2008
+**Erreur de syntaxe :**  
   
- Un jeton à la position actuelle a causé une erreur de syntaxe.  
+ Un jeton à l’emplacement actuel a provoqué une erreur de syntaxe.  
   
- L'une des opérations suivantes a pu se produire :  
+ Une des opérations suivantes peut-être se sont produites :  
   
--   un préfixe de point a été ajouté à ou omis d'une directive.  
+-   Un préfixe de point a été ajouté à ou omis à partir d’une directive.  
   
--   un mot réservé \(tel que **C** ou **SIZE**\) a été utilisé comme identificateur.  
+-   Un mot réservé (tel que **C** ou **taille**) a été utilisé en tant qu’identificateur.  
   
--   Vous avez utilisé une instruction non disponibles avec la sélection de processeur actuel d'exploitation ou de coprocesseur.  
+-   Une instruction a été utilisée qui n’était pas disponible avec la sélection actuelle de processeur ou de coprocesseur.  
   
--   Un opérateur à l'exécution de comparaison \(tel qu' `==`\) est utilisé dans une instruction d'assembly conditionnel au lieu d'un opérateur de relation \(tel qu' [EQ](../../assembler/masm/operator-eq.md)\).  
+-   Un opérateur d’exécution de comparaison (tels que `==`) a été utilisée dans une instruction conditionnelle assembly au lieu d’un opérateur relationnel (tel que [EQ](../../assembler/masm/operator-eq.md)).  
   
--   Une instruction ou une directive a été attribuée trop peu d'opérandes.  
+-   Une instruction ou une directive a été spécifiée trop peu d’opérandes.  
   
--   une directive obsolète a été utilisée.  
+-   Une directive obsolète a été utilisée.  
   
-## Voir aussi  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>Voir aussi  
+ [Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)

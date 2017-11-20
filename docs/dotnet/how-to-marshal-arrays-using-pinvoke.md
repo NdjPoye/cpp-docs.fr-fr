@@ -1,42 +1,42 @@
 ---
-title: "Comment&#160;: marshaler des tableaux &#224; l&#39;aide de PInvoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marshaling de données (C++), tableaux"
-  - "Interop (C++), tableaux"
-  - "marshaling (C++), tableaux"
-  - "appel de code non managé (C++), tableaux"
+title: "Comment : marshaler des tableaux à l’aide de PInvoke | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- marshaling [C++], arrays
+- platform invoke [C++], arrays
+- interop [C++], arrays
+- data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bf034bb191174d78ca8a614559e9f1e4976d88bf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: marshaler des tableaux &#224; l&#39;aide de PInvoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique explique comment les fonctions natives qui acceptent des chaînes de style C peuvent être appelées à l'aide du <xref:System.String> de type de chaîne du CLR grâce à la prise en charge de l'appel de plateforme .NET Framework.  Les programmeurs Visual C\+\+ sont encouragés à utiliser plutôt les fonctionnalités d'interopérabilité C\+\+ \(dans la mesure du possible\), car P\/Invoke ne signale pas correctement les erreurs de compilation, n'est pas de type sécurisé et peut être fastidieux à implémenter.  Si l'API non managée se présente sous la forme d'une DLL et si le code source n'est pas disponible, P\/Invoke est votre seule option \(sinon, consultez [Utilisation de l'interopérabilité C\+\+ \(PInvoke implicite\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)\).  
+# <a name="how-to-marshal-arrays-using-pinvoke"></a>Comment : marshaler des tableaux à l’aide de PInvoke
+Cette rubrique explique comment les fonctions natives qui acceptent des chaînes de style C peuvent être appelées à l’aide du type de chaîne CLR <xref:System.String> à l’aide de la prise en charge de l’appel de plateforme .NET Framework. Les programmeurs Visual C++ sont encouragés à utiliser les fonctionnalités d’interopérabilité C++ au lieu de cela (si possible), car P/Invoke peu compilation rapport d’erreurs, n’est pas de type sécurisé et peut être fastidieux à implémenter. Si l’API non managée est empaqueté en tant que DLL et le code source n’est pas disponible, P/Invoke est la seule option (sinon, consultez [à l’aide du interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).  
   
-## Exemple  
- Comme les tableaux natifs et managés sont disposés différemment en mémoire, leur passage entre la limite managée\/non managée exige une conversion ou un marshaling.  Cette rubrique montre comment un tableau d'éléments simples \(blittables\) peut être passé aux fonctions natives à partir de code managé.  
+## <a name="example"></a>Exemple  
+ Étant donné que les tableaux natifs et managés sont disposés différemment en mémoire, leur passage entre la limite managée/exige une conversion ou le marshaling. Cette rubrique montre comment un tableau d’éléments de simples (blittables) peut être passé aux fonctions natives à partir du code managé.  
   
- Comme c'est le cas en général pour le marshaling de données managées\/non managées, l'attribut <xref:System.Runtime.InteropServices.DllImportAttribute> permet de créer un point d'entrée managé pour chaque fonction native qui sera utilisée.  Dans le cas des fonctions qui prennent des tableaux comme arguments, l'attribut <xref:System.Runtime.InteropServices.MarshalAsAttribute> doit également être utilisé pour spécifier au compilateur de quelle manière les données doivent être marshalées.  Dans l'exemple suivant, l'énumération <xref:System.Runtime.InteropServices.UnmanagedType> est utilisée pour indiquer que le tableau managé doit être marshalé en tant que tableau de style C.  
+ De même managés/non managés non de marshaling de données, en général, les <xref:System.Runtime.InteropServices.DllImportAttribute> attribut est utilisé pour créer un point d’entrée managé pour chaque fonction native qui sera utilisé. Dans le cas des fonctions qui utilisent des tableaux en tant qu’arguments, le <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribut doit être utilisé aussi bien pour spécifier au compilateur comment les données doivent être marshalées. Dans l’exemple suivant, la <xref:System.Runtime.InteropServices.UnmanagedType> énumération est utilisée pour indiquer que le tableau managé doit être marshalé en tant qu’un tableau de style C.  
   
- Le code suivant est constitué d'un module non managé et d'un module managé.  Le module non managé est une DLL qui définit une fonction acceptant un tableau d'entiers.  Le deuxième module est une application en ligne de commande managée qui importe cette fonction, mais la définit en tant que tableau managé et utilise l'attribut <xref:System.Runtime.InteropServices.MarshalAsAttribute> pour spécifier que le tableau doit être converti en tableau natif lorsqu'il est appelé.  
+ Le code suivant se compose d’une fonction non managée et un module managé. Le module non managé est une DLL qui définit une fonction qui accepte un tableau d’entiers. Le deuxième module est une application de ligne de commande managée qui importe cette fonction, mais la définit en termes d’un tableau managé et utilise le <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribut pour spécifier que le tableau doit être converti en un tableau natif lorsqu’elle est appelée.  
   
- Le module managé est compilé avec \/clr, mais \/clr:pure fonctionne également.  
+ Le module managé est compilé avec/CLR, mais/CLR : pure fonctionne également. Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015.  
   
-```  
+```cpp  
 // TraditionalDll4.cpp  
 // compile with: /LD /EHsc  
 #include <iostream>  
@@ -59,7 +59,7 @@ void TakesAnArray(int len, int a[]) {
 }  
 ```  
   
-```  
+```cpp  
 // MarshalBlitArray.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -84,7 +84,7 @@ int main() {
 }  
 ```  
   
- Notez qu'aucune partie de la DLL n'est exposée au code managé à l'aide de la directive \#include traditionnelle.  En réalité, comme l'accès à la DLL est limité au moment de l'exécution, les problèmes liés aux fonctions importées à l'aide de <xref:System.Runtime.InteropServices.DllImportAttribute> ne sont pas détectés au moment de la compilation.  
+ Notez qu’aucune partie de la DLL est exposée au code managé via traditionnel #include (directive). En fait, étant donné que la DLL est accessible au moment de l’exécution, les problèmes liés aux fonctions importés avec <xref:System.Runtime.InteropServices.DllImportAttribute> ne sont pas détectés au moment de la compilation.  
   
-## Voir aussi  
- [Utilisation d'un PInvoke explicite en C\+\+ \(attribut DllImport\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation d’un PInvoke explicite en C++ (attribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,37 +18,21 @@ f1_keywords:
 - ATLCOM/ATL::CComPolyObject::QueryInterface
 - ATLCOM/ATL::CComPolyObject::Release
 - ATLCOM/ATL::CComPolyObject::m_contained
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aggregate objects [C++], in ATL
 - aggregation [C++], ATL objects
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ee44fcec146ef8a8c68b917020ae52e2300eed5e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 49945127d726c1a83ed01f70dee2190622a4c68d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject (classe)
 Cette classe implémente **IUnknown** pour un objet regroupé ou.  
@@ -80,7 +63,7 @@ class CComPolyObject : public IUnknown,
 |Nom|Description|  
 |----------|-----------------|  
 |[CComPolyObject::AddRef](#addref)|Incrémente le décompte de références de l’objet.|  
-|[CComPolyObject::CreateInstance](#createinstance)|(Statique) Vous permet de créer un nouveau **CComPolyObject** `contained` **>** objet sans la surcharge de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
+|[CComPolyObject::CreateInstance](#createinstance)|(Statique) Vous permet de créer un nouveau **CComPolyObject <** `contained`  **>**  objet sans la surcharge de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
 |[CComPolyObject::FinalConstruct](#finalconstruct)|Effectue l’initialisation finale de `m_contained`.|  
 |[CComPolyObject::FinalRelease](#finalrelease)|Effectue une destruction finale de `m_contained`.|  
 |[CComPolyObject::QueryInterface](#queryinterface)|Récupère un pointeur vers l'interface demandée.|  
@@ -105,7 +88,7 @@ class CComPolyObject : public IUnknown,
   
  Pour plus d’informations sur l’agrégation, consultez l’article [notions de base des objets COM ATL](../../atl/fundamentals-of-atl-com-objects.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CComObjectRootBase`  
   
  [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)  
@@ -154,7 +137,7 @@ CComPolyObject(void* pv);
  Libère toutes les ressources attribuées, les appels [FinalRelease](#finalrelease), et décrémente le module nombre de verrous.  
   
 ##  <a name="createinstance"></a>CComPolyObject::CreateInstance  
- Vous permet de créer un nouveau **CComPolyObject** `contained` **>** objet sans la surcharge de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Vous permet de créer un nouveau **CComPolyObject <** `contained`  **>**  objet sans la surcharge de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
 static HRESULT WINAPI CreateInstance(  
@@ -164,7 +147,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>Paramètres  
  `pp`  
- [out] Un pointeur vers un **CComPolyObject** `contained` **>** pointeur. Si `CreateInstance` échoue, `pp` a la valeur **NULL**.  
+ [out] Un pointeur vers un **CComPolyObject <** `contained`  **>**  pointeur. Si `CreateInstance` échoue, `pp` a la valeur **NULL**.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
@@ -230,7 +213,7 @@ HRESULT QueryInterface(Q** pp);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Pour un objet, si l’interface demandée est **IUnknown**, `QueryInterface` retourne un pointeur vers l’agrégées propre à l’objet **IUnknown** et incrémente le décompte de références. Sinon, cette méthode recherche l’interface via la `CComContainedObject` membre de données, [m_contained](#m_contained).  
   
 ##  <a name="release"></a>CComPolyObject::Release  
@@ -247,4 +230,3 @@ STDMETHOD_(ULONG, Release)();
  [CComObjectRootEx (classe)](../../atl/reference/ccomobjectrootex-class.md)   
  [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,38 +16,21 @@ f1_keywords:
 - ATLCORE/ATL::CComCriticalSection::Term
 - ATLCORE/ATL::CComCriticalSection::Unlock
 - ATLCORE/ATL::CComCriticalSection::m_sec
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComCriticalSection class
+dev_langs: C++
+helpviewer_keywords: CComCriticalSection class
 ms.assetid: 44e1edd2-90be-4bfe-9739-58e8b419e7d1
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: a7c4fbc87ff06bb09766eb3e4ad0d7c5275eed65
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: ef8ca542ef9bda72bd89b633d42db727bce3e94a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="ccomcriticalsection-class"></a>CComCriticalSection (classe)
-Cette classe fournit des méthodes permettant d’obtenir et de libérer la possession d’un objet de section critique.  
+# <a name="ccomcriticalsection-class"></a>Classe de CComCriticalSection
+Cette classe fournit des méthodes pour obtenir et de libérer la possession d’un objet de section critique.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -80,12 +62,12 @@ class CComCriticalSection
 |[CComCriticalSection::m_sec](#m_sec)|A **CRITICAL_SECTION** objet.|  
   
 ## <a name="remarks"></a>Remarques  
- `CComCriticalSection`est semblable à la classe [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md), mais vous devez explicitement initialiser et libèrera la section critique.  
+ `CComCriticalSection`est semblable à la classe [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md), sauf que vous devez explicitement initialiser et libérer de la section critique.  
   
  En général, vous utilisez `CComCriticalSection` via la `typedef` nom [CriticalSection](ccommultithreadmodel-class.md#criticalsection). Ce nom fait référence à `CComCriticalSection` lorsque [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) est utilisé.  
 
   
- Consultez la page [CComCritSecLock classe](../../atl/reference/ccomcritseclock-class.md) un moyen plus sûr d’utiliser cette classe à appeler la méthode `Lock` et `Unlock` directement.  
+ Consultez [CComCritSecLock classe](../../atl/reference/ccomcritseclock-class.md) un moyen plus sûr d’utiliser cette classe que l’appel `Lock` et `Unlock` directement.  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcore.h  
@@ -98,10 +80,10 @@ CComCriticalSection() throw();
 ```  
   
 ### <a name="remarks"></a>Remarques  
- Définit les [m_sec](#m_sec) membre de données null **.**  
+ Définit le [m_sec](#m_sec) membre de données null **.**  
   
 ##  <a name="init"></a>CComCriticalSection::Init  
- Appelle la fonction Win32 [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472), ce qui initialise l’objet de section critique contenue dans le [m_sec](#m_sec) membre de données.  
+ Appelle la fonction Win32 [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472), qui initialise l’objet de section critique contenu dans le [m_sec](#m_sec) membre de données.  
   
 ```
 HRESULT Init() throw();
@@ -120,8 +102,8 @@ HRESULT Lock() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK` en cas de réussite, **E_OUTOFMEMORY** ou **E_FAIL** en cas d’échec.  
   
-### <a name="remarks"></a>Notes  
- L’objet de section critique doit tout d’abord être initialisé avec un appel à la [Init](#init) méthode. Lorsque le code protégé a terminé son exécution, le thread doit appeler [Unlock](#unlock) pour libérer la possession de la section critique.  
+### <a name="remarks"></a>Remarques  
+ L’objet de section critique doit tout d’abord être initialisé avec un appel à la [Init](#init) (méthode). Lorsque le code protégé a terminé l’exécution, le thread doit appeler [Unlock](#unlock) pour libérer la possession de la section critique.  
   
 ##  <a name="m_sec"></a>CComCriticalSection::m_sec  
  Contient un objet de section critique qui est utilisé par tous les `CComCriticalSection` méthodes.  
@@ -141,10 +123,10 @@ HRESULT Term() throw();
  Retourne `S_OK`.  
   
 ### <a name="remarks"></a>Remarques  
- Une fois `Term` a été appelée, la critique section ne peut plus être utilisée pour la synchronisation.  
+ Une fois `Term` a été appelée, les informations critiques section ne peut plus être utilisée pour la synchronisation.  
   
 ##  <a name="unlock"></a>CComCriticalSection::Unlock  
- Appelle la fonction Win32 [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), ce qui libère la possession de l’objet de section critique contenue dans le [m_sec](#m_sec) membre de données.  
+ Appelle la fonction Win32 [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), ce qui libère la propriété de l’objet de section critique contenue dans le [m_sec](#m_sec) membre de données.  
   
 ```
 HRESULT Unlock() throw();
@@ -154,10 +136,9 @@ HRESULT Unlock() throw();
  Retourne `S_OK`.  
   
 ### <a name="remarks"></a>Remarques  
- Pour obtenir la propriété tout d’abord, le thread doit appeler le [verrou](#lock) méthode. Chaque appel à `Lock` nécessite un appel à `Unlock` pour libérer la possession de la section critique.  
+ Pour tout d’abord obtenir la propriété, le thread doit appeler le [verrou](#lock) (méthode). Chaque appel à `Lock` nécessite un appel correspondant à `Unlock` pour libérer la possession de la section critique.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classe de la classe CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
- [CComCritSecLock (classe)](../../atl/reference/ccomcritseclock-class.md)
-
+ [CComCritSecLock, classe](../../atl/reference/ccomcritseclock-class.md)

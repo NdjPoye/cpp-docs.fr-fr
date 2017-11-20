@@ -1,39 +1,39 @@
 ---
-title: "operator MOD | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Mod"
-  - "operator MOD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Mod operator"
-  - "operator MOD"
+title: "Mod, opérateur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Mod
+- operator MOD
+dev_langs: C++
+helpviewer_keywords:
+- Mod operator
+- operator MOD
 ms.assetid: 8e05e8c2-3f07-44f9-8216-5436dcb97cc7
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d0091510f2725aa53356ffe7a2a194c3c5bdf28d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# operator MOD
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retourne la valeur entière du reste \(modulo\) en divisant *expression1* par *expression2*.  
+# <a name="operator-mod"></a>MOD, opérateur
+Retourne la valeur entière du reste (modulo) lors de la division *expression1* par *expression2*.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 expression1 MOD expression2  
 ```  
   
-## Voir aussi  
- [Operators Reference](../../assembler/masm/operators-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)

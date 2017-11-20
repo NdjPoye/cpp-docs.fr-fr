@@ -1,39 +1,39 @@
 ---
-title: "Fournisseurs et consommateurs OLE&#160;DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "consommateurs OLE DB"
-  - "consommateurs OLE DB, architecture de données OLE DB"
-  - "fournisseurs OLE DB"
-  - "fournisseurs OLE DB, architecture de données OLE DB"
-  - "OLE DB, modèle de données"
+title: Fournisseurs et consommateurs OLE DB | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, OLE DB data architecture
+- OLE DB providers
+- OLE DB consumers, OLE DB data architecture
+- OLE DB consumers
+- OLE DB, data model
 ms.assetid: 886cb39d-652b-4557-93f0-4b1b0754d8bc
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cd09e1566a6f53244d420387870a03b0b34f8fb6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Fournisseurs et consommateurs OLE&#160;DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'architecture OLE DB utilise le modèle du consommateur et du fournisseur.  Un consommateur formule des demandes de données.  Le fournisseur répond à ces demandes en donnant une forme tabulaire aux données avant de les retourner au consommateur.  Tout appel pouvant émaner du consommateur doit être implémenté dans le fournisseur.  
+# <a name="ole-db-consumers-and-providers"></a>Fournisseurs et consommateurs OLE DB
+L’architecture OLE DB utilise le modèle de fournisseurs et consommateurs. Un consommateur envoie des demandes pour les données. Un fournisseur répond à ces demandes en plaçant des données dans un format tabulaire et retourner au consommateur. N’importe quel appel que le consommateur doit être implémenté dans le fournisseur.  
   
- Sur un plan technique, un consommateur représente tout système ou code d'application code \(pas nécessairement un composant OLE DB\) qui accède aux données par l'intermédiaire d'interfaces OLE DB.  Les interfaces sont implémentées dans un fournisseur.  Ainsi, un fournisseur correspond à tout composant logiciel implémentant des interfaces OLE DB pour encapsuler l'accès aux données et exposer celles\-ci à d'autres objets \(c'est\-à\-dire les consommateurs\).  
+ Techniquement, un consommateur représente n’importe quel code (pas nécessairement un composant OLE DB) système ou une application qui accède aux données via des interfaces OLE DB. Les interfaces sont implémentées dans un fournisseur. Par conséquent, un fournisseur est un composant logiciel qui implémente les interfaces OLE DB pour encapsuler l’accès aux données et l’exposer à d’autres objets (autrement dit, les consommateurs).  
   
- En termes de rôles, donc, un consommateur appelle les méthodes sur des interfaces OLE DB ; un fournisseur OLE DB implémente les interfaces OLE DB requises.  
+ En termes de rôles, un consommateur appelle les méthodes sur des interfaces OLE DB ; un fournisseur OLE DB implémente les interfaces OLE DB requises.  
   
- OLE DB évite les termes « client » et « serveur » car ces rôles ne sont pas toujours significatifs, notamment dans une situation multicouche.  Un consommateur peut être un composant sur une couche qui prend en charge un autre composant ; parler alors de composant client risque de prêter à confusion.  Un fournisseur se comporte également davantage en tant que pilote de base de données que comme un serveur.  
+ OLE DB évite les termes du contrat client et serveur, car ces rôles ne sont pas toujours justifiés, en particulier dans une situation multicouche. Étant donné que le consommateur peut être un composant sur une couche qui prend en charge un autre composant, pour appeler un client composant serait à confusion. En outre, un fournisseur parfois agit plus comme un pilote de base de données à un serveur.  
   
-## Voir aussi  
- [Programmation OLE DB](../../data/oledb/ole-db-programming.md)   
- [Vue d'ensemble de la programmation OLE DB](../../data/oledb/ole-db-programming-overview.md)
+## <a name="see-also"></a>Voir aussi  
+ [Programmation OLE DB](../../data/oledb/ole-db-programming.md)   
+ [Vue d’ensemble de la programmation OLE DB](../../data/oledb/ole-db-programming-overview.md)

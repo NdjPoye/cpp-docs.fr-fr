@@ -1,33 +1,30 @@
 ---
-title: ".CONST | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".CONST"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".CONST directive"
+title: . CONST | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .CONST
+dev_langs: C++
+helpviewer_keywords: .CONST directive
 ms.assetid: d5c1d795-174c-48d2-8359-92fbbd7d4c6c
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e92e9669039b879559da9816c834c1f8efa70faf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# .CONST
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-En cas de utilisation avec [.MODEL](../../assembler/masm/dot-model.md), démarre que les constantes segmentent \(avec le nom de segment CONST\).  
+# <a name="const"></a>.CONST
+Lorsqu’il est utilisé avec [. MODÈLE](../../assembler/masm/dot-model.md), démarre un segment de données constantes (avec segment nom CONST).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,8 +32,8 @@ En cas de utilisation avec [.MODEL](../../assembler/masm/dot-model.md), démarre
   
 ```  
   
-## Notes  
- Ce segment a l'attribut lecture seule.  
+## <a name="remarks"></a>Remarques  
+ Ce segment est l’attribut en lecture seule.  
   
-## Voir aussi  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)

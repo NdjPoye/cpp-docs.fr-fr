@@ -1,34 +1,32 @@
 ---
-title: "ICommandImpl::Execute | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandImpl::Execute"
-  - "ICommandImpl.Execute"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Execute (méthode)"
+title: ICommandImpl::Execute | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ICommandImpl::Execute
+- ICommandImpl.Execute
+dev_langs: C++
+helpviewer_keywords: Execute method
 ms.assetid: 033e0d4e-256b-4eed-9215-70e0bebb768c
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 84ff5892573f2bb1fc80f7eb88e21948df561fc0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# ICommandImpl::Execute
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="icommandimplexecute"></a>ICommandImpl::Execute
 Exécute la commande.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -41,17 +39,17 @@ Exécute la commande.
 );  
 ```  
   
-#### Paramètres  
- Consultez [ICommand::Execute](https://msdn.microsoft.com/en-us/library/ms718095.aspx) dans le *Guide de référence du programmeur OLE DB*.  
+#### <a name="parameters"></a>Paramètres  
+ Consultez [ICommand::Execute](https://msdn.microsoft.com/en-us/library/ms718095.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## Notes  
- L'interface sortante demandée est une interface acquise de l'objet d'ensemble de lignes que cette fonction crée.  
+## <a name="remarks"></a>Remarques  
+ L’interface sortante demandé sera une interface acquise à partir de l’objet d’ensemble de lignes créés par cette fonction.  
   
- **Execute** appelle [CreateRowset](../../data/oledb/icommandimpl-createrowset.md).  Remplacer l'implémentation par défaut pour créer plusieurs jeux de lignes ou fournir vos propres conditions pour créer des ensembles de lignes.  
+ **Exécutez** appelle [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Substituer l’implémentation par défaut pour créer plus d’un ensemble de lignes ou pour fournir vos propres conditions de création de différents ensembles de lignes.  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
- [ICommandImpl, classe](../../data/oledb/icommandimpl-class.md)   
+## <a name="see-also"></a>Voir aussi  
+ [ICommandImpl (classe)](../../data/oledb/icommandimpl-class.md)   
  [ICommandImpl::CancelExecution](../../data/oledb/icommandimpl-cancelexecution.md)

@@ -1,57 +1,58 @@
 ---
-title: "csinh, csinhf, csinhl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "csinh"
-  - "csinhf"
-  - "csinhl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "csinh"
-  - "csinhf"
-  - "csinhl"
-  - "complex/csinh"
-  - "complex/csinhf"
-  - "complex/csinhl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "csinh (fonction)"
-  - "csinhf (fonction)"
-  - "csinhl (fonction)"
+title: csinh, csinhf, csinhl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- csinh
+- csinhf
+- csinhl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- csinh
+- csinhf
+- csinhl
+- complex/csinh
+- complex/csinhf
+- complex/csinhl
+dev_langs: C++
+helpviewer_keywords:
+- csinh function
+- csinhf function
+- csinhl function
 ms.assetid: cc616e55-d14d-4cd3-91f0-fbee03ce5edf
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 65c3a74ecfbdfba27d0b1ac4dff37915e8b4c3a3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# csinh, csinhf, csinhl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="csinh-csinhf-csinhl"></a>csinh, csinhf, csinhl
 Récupère le sinus hyperbolique d’un nombre complexe.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 _Dcomplex csinh(   
@@ -71,25 +72,25 @@ _Lcomplex csinhl(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `z`  
- Un nombre complexe qui représente l’angle, en radians.  
+ Nombre complexe qui représente un angle, en radians.  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  Sinus hyperbolique de `z`, en radians.  
   
-## Notes  
- C\+\+ autorisant la surcharge, vous pouvez appeler des surcharges de `csinh` qui acceptent et retournent des valeurs `_Fcomplex` et `_Lcomplex`. Dans un programme C, `csinh` accepte et retourne toujours un `_Dcomplex` valeur.  
+## <a name="remarks"></a>Notes  
+ C++ autorisant la surcharge, vous pouvez appeler des surcharges de `csinh` qui acceptent et retournent des valeurs `_Fcomplex` et `_Lcomplex`. Dans un programme C, `csinh` accepte et retourne toujours une valeur `_Dcomplex` .  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête C|En\-tête C\+\+|  
-|-------------|----------------|--------------------|  
-|`csinh`, `csinhf`, `csinhl`|\<complex.h\>|\< ccomplex \>|  
+|Routine|En-tête C|En-tête C++|  
+|-------------|--------------|------------------|  
+|`csinh`,               `csinhf`, `csinhl`|\<complex.h>|\<ccomplex>|  
   
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
  [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   

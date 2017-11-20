@@ -1,43 +1,42 @@
 ---
-title: "Comment&#160;: marshaler des rappels et des d&#233;l&#233;gu&#233;s &#224; l&#39;aide de l&#39;interop&#233;rabilit&#233;&#160;C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interopérabilité C++, rappels et délégués"
-  - "rappels (C++), marshaling"
-  - "marshaling de données (C++), rappels et délégués"
-  - "délégués (C++), marshaling"
-  - "Interop (C++), rappels et délégués"
-  - "marshaling (C++), rappels et délégués"
+title: "Comment : marshaler des rappels et délégués à l’aide d’interopérabilité C++ | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- data marshaling [C++], callbacks and delegates
+- C++ Interop, callbacks and delegates
+- interop [C++], callbacks and delegates
+- delegates [C++], marshaling
+- marshaling [C++], callbacks and delegates
+- callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-caps.latest.revision: 23
-caps.handback.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "23"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2a835dbdbce23f7f92f13fabd038d6e294345981
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: marshaler des rappels et des d&#233;l&#233;gu&#233;s &#224; l&#39;aide de l&#39;interop&#233;rabilit&#233;&#160;C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique illustre le marshaling de rappels et de délégués \(version managée d'un rappel\) entre du code managé et non managé à l'aide de Visual C\+\+.  
+# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Comment : marshaler des rappels et des délégués à l’aide de l’interopérabilité C++
+Cette rubrique illustre le marshaling de rappels et délégués (version managée d’un rappel) entre du code managé et à l’aide de Visual C++.  
   
- Les exemples de code suivants utilisent les directives \#pragma [managé, non managé](../preprocessor/managed-unmanaged.md) pour implémenter des fonctions managées et non managées dans le même fichier, mais les fonctions peuvent également être définies dans des fichiers séparés.  Les fichiers qui contiennent uniquement des fonctions non managées ne doivent pas être compilés avec [\/clr \(Compilation pour le Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  
+ Exemple de code suit le [managé, non managé](../preprocessor/managed-unmanaged.md) directives #pragma pour implémenter des fonctions managées et dans le même fichier, mais les fonctions peuvent également être définies dans des fichiers distincts. Fichiers contenant uniquement des fonctions non managées ne doivent pas être compilés avec le [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Exemple  
- L'exemple suivant illustre la configuration d'une API non managée pour déclencher un délégué managé.  Un délégué managé est créé et l'une des méthodes d'interopérabilité, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, est utilisée pour récupérer le point d'entrée sous\-jacent du délégué.  Cette adresse est ensuite passée à la fonction non managée qui l'appelle sans avoir connaissance du fait qu'elle est implémentée en tant que fonction managée.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant montre comment configurer une API non managée pour déclencher un délégué managé. Un délégué managé est créé et l’une des méthodes d’interopérabilité, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, est utilisée pour récupérer le point d’entrée sous-jacent du délégué. Cette adresse est ensuite passée à la fonction non managée, ce qui l’appelle aucune connaissance du fait qu’il est implémenté comme une fonction managée.  
   
- Remarquez qu'il est possible, mais pas nécessaire, d'épingler le délégué à l'aide de [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md) pour l'empêcher d'être réadressé ou supprimé par le garbage collector.  La protection contre un garbage collection prématuré est exigée, mais l'épinglage assure une protection plus élevée que ce qui est requis, car il empêche la collecte, mais également le réadressage.  
+ Remarquez qu’il est possible, mais pas nécessaire, d’épingler le délégué à l’aide de [pin_ptr (C + c++ / CLI)](../windows/pin-ptr-cpp-cli.md) empêcher d’être réadressé ou supprimé par le garbage collector. Protection contre les garbage collection prématuré est nécessaire, mais épinglage assure une protection plus qu’il n’est nécessaire, car elle empêche la collection, mais empêche également le déplacement.  
   
- Si un délégué est réadressé par un garbage collection, il n'affecte pas le rappel managé sous\-jacent ; <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> est donc utilisé pour ajouter une référence au délégué, en autorisant le réadressage du délégué, mais en empêchant sa suppression.  L'utilisation de GCHandle plutôt que de pin\_ptr réduit le potentiel de fragmentation du tas managé.  
+ Si un délégué est réadressé par un garbage collection, il n’affecte pas du rappel managé sous-jacent, donc <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> est utilisé pour ajouter une référence au délégué, ce qui permet de réadressage du délégué, mais empêche la suppression. L’utilisation de GCHandle plutôt que de pin_ptr de réduit le risque de fragmentation du tas managé.  
   
 ```  
 // MarshalDelegate1.cpp  
@@ -85,8 +84,8 @@ int main() {
 }  
 ```  
   
-## Exemple  
- L'exemple suivant est similaire à l'exemple précédent, mais dans ce cas, le pointeur fonction fourni est stocké par l'API non managée ; il peut donc être appelé à tout moment, en exigeant la suppression du garbage collection pendant une durée arbitraire.  En conséquence, l'exemple suivant utilise une instance globale de <xref:System.Runtime.InteropServices.GCHandle> pour empêcher le délégué d'être réadressé, indépendamment de la portée de la fonction.  Comme expliqué dans le premier exemple, l'utilisation de pin\_ptr est inutile pour ces exemples, mais s'avère de toute manière inutile dans ce cas précis, car la portée de pin\_ptr est limitée à une fonction unique.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant est similaire à l’exemple précédent, mais dans ce cas le pointeur de fonction fourni est stocké par l’API non managée, afin qu’il peut être appelée à tout moment, nécessitant que le garbage collection supprimées pendant une durée arbitraire. Par conséquent, l’exemple suivant utilise une instance globale de <xref:System.Runtime.InteropServices.GCHandle> pour empêcher le délégué d’être réadressé, indépendamment de la portée de la fonction. Comme indiqué dans le premier exemple, à l’aide de pin_ptr n’est pas nécessaire pour ces exemples, mais dans ce cas ne fonctionnerait pas, car la portée de pin_ptr est limitée à une fonction unique.  
   
 ```  
 // MarshalDelegate2.cpp  
@@ -146,5 +145,5 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
- [Utilisation de l'interopérabilité C\+\+ \(PInvoke implicite\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - <<
 - '>>'
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - << operator [C++], with specific objects
 - left shift operators [C++]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: e695a90f871f973780a859fb27a06a2c6b246f3d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: ad2da0f4f8807bef5899a32eabda931092641260
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Opérateurs de décalage vers la gauche et droit (&gt; &gt; et &lt; &lt;)
 Les opérateurs de décalage de bits sont l’opérateur de décalage vers la droite (>>), qui déplace les bits de *expression-décalage* vers la droite et l’opérateur de décalage vers la gauche (<<), qui déplace les bits de *expression-décalage* à gauche. <sup>1</sup>  
@@ -201,7 +198,7 @@ int main() {
 ```  
   
 ## <a name="additional-details"></a>Détails supplémentaires  
- Le résultat d’une opération de décalage n’est pas défini si *additive-expression* est un nombre négatif ou si *additive-expression* est supérieur ou égal au nombre de bits dans (promues) * expression-décalage*. Aucune opération de décalage n’est effectuée si *additive-expression* est 0.  
+ Le résultat d’une opération de décalage n’est pas défini si *additive-expression* est un nombre négatif ou si *additive-expression* est supérieur ou égal au nombre de bits dans (promues)  *expression-décalage*. Aucune opération de décalage n’est effectuée si *additive-expression* est 0.  
   
 ```cpp  
 #include <iostream>  

@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - members [C++], types of class members
 - members [C++]
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 0a5a62edf0e71b4fecf25cf10731af7d7c515da7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 82daf0ecf506d55a6067b30ee568e11bf3e82364
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="class-member-overview"></a>Vue d'ensemble des membres de classe
 Une classe ou un struct se compose de ses membres. Le travail exécuté par une classe est effectué par ses fonctions membres. L'état géré est stocké dans ses données membres. Initialisation des membres est effectuée par les constructeurs et le travail de nettoyage comme la libération de mémoire et de ressources est effectuée par des destructeurs. En C++11 et versions ultérieures, les données membres peuvent (et généralement doivent) être initialisées au point de déclaration.  
@@ -113,11 +110,11 @@ int TestRun::_instances{ 0 };
   
 2.  Constructeur de copie  
   
-3.  **(C ++ 11) ** Constructeur de déplacement  
+3.  **(C ++ 11)**  Constructeur de déplacement  
   
 4.  Opérateur d'assignation de copie  
   
-5.  **(C ++ 11) ** Opérateur d’assignation de déplacement  
+5.  **(C ++ 11)**  Opérateur d’assignation de déplacement  
   
 6.  Destructeur  
   
@@ -179,4 +176,3 @@ int CanInit2::j = i;
   
 ## <a name="see-also"></a>Voir aussi  
  [Classes et structs](../cpp/classes-and-structs-cpp.md)
-

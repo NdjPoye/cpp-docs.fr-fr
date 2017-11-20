@@ -1,60 +1,60 @@
 ---
-title: "Record Field Exchange&#160;: utilisation des fonctions RFX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "types de données (C++), échange de champs d'enregistrements ODBC"
-  - "DoFieldExchange (méthode), et fonctions RFX"
-  - "appels de fonction, RFX (fonctions)"
-  - "ODBC (C++), types de données"
-  - "ODBC (C++), RFX"
-  - "RFX (ODBC) (C++), types de données"
-  - "RFX (ODBC) (C++), syntaxe et paramètres de la fonction"
+title: "Record Field Exchange : Utilisation des fonctions RFX | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC [C++], data types
+- data types [C++], ODBC record field exchange
+- RFX (ODBC) [C++], function syntax and parameters
+- DoFieldExchange method, and RFX functions
+- ODBC [C++], RFX
+- RFX (ODBC) [C++], data types
+- function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6c330ee2f9d3952068e2a400cd8f6e23103dc20e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Record Field Exchange&#160;: utilisation des fonctions RFX
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique explique comment utiliser les appels de fonctions RFX qui constituent le corps de votre substitution de `DoFieldExchange`.  
+# <a name="record-field-exchange-using-the-rfx-functions"></a>Record Field Exchange : utilisation des fonctions RFX
+Cette rubrique explique comment utiliser les appels de fonction RFX qui composent le corps de votre `DoFieldExchange` remplacer.  
   
 > [!NOTE]
->  Cette rubrique s'applique aux classes dérivées de [CRecordset](../../mfc/reference/crecordset-class.md) dans lesquels l'extraction de lignes en bloc n'a pas été implémentée.  Si vous utilisez l'extraction de lignes en bloc, le mécanisme RFX en bloc \(Bulk RFX\) est implémenté.  RFX en bloc est similaire à RFX.  Pour plus d'informations sur les différences, consultez [Recordset : extraction globale d'enregistrements \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Cette rubrique s’applique aux classes dérivées de [CRecordset](../../mfc/reference/crecordset-class.md) dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous utilisez l’extraction de lignes en bloc, RFX en bloc (RFX en bloc) est implémentée. RFX en bloc est similaire à RFX. Pour comprendre les différences, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Les fonctions globales RFX échangent les données entre les colonnes de la source de données et les membres de données de type champ du recordset.  Vous écrivez les appels de fonction RFX dans la fonction membre [DoFieldExchange](../Topic/CRecordset::DoFieldExchange.md) de votre recordset.  Cette rubrique décrit brièvement les fonctions et indique les types de données disponibles pour chaque fonction RFX.  La [Note technique 43](../../mfc/tn043-rfx-routines.md) explique comment écrire ses propres fonctions RFX pour des types de données additionnels.  
+ Les fonctions globales RFX échangent des données entre les colonnes de données source et le champ membres de données de votre recordset. Vous écrivez les appels de la fonction RFX dans le jeu d’enregistrements [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) fonction membre. Cette rubrique décrit brièvement les fonctions et présente les types de données pour laquelle RFX fonctions sont disponibles. [La Note technique 43](../../mfc/tn043-rfx-routines.md) explique comment écrire vos propres fonctions RFX pour les types de données supplémentaires.  
   
-##  <a name="_core_rfx_function_syntax"></a> Syntaxe des fonctions RFX  
- Chaque fonction RFX nécessite trois paramètres \(certaines admettent deux autres paramètres supplémentaires facultatifs\) :  
+##  <a name="_core_rfx_function_syntax"></a>Syntaxe des fonctions RFX  
+ Chaque fonction RFX accepte trois paramètres (et certaines prennent un paramètre optionnel de quatre ou cinq) :  
   
--   Un pointeur vers un objet [CFieldExchange](../../mfc/reference/cfieldexchange-class.md).  Vous transmettez simplement le pointeur `pFX` passé à `DoFieldExchange`.  
+-   Un pointeur vers un [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) objet. Vous transmettez simplement le `pFX` pointeur passé à `DoFieldExchange`.  
   
--   Nom de la colonne tel qu'il apparaît dans la source de données.  
+-   Le nom de la colonne tel qu’il apparaît sur la source de données.  
   
--   Nom du membre de données de champ ou de paramètre correspondant dans la classe de recordset.  
+-   Le nom du membre de données de champ correspondant ou membre de données de paramètre dans la classe de recordset.  
   
--   \(Facultatif\) Dans certaines fonctions, la longueur maximale de la chaîne ou du tableau à transférer.  Par défaut, cette longueur est de 255 octets, mais il se peut que vous souhaitiez la modifier.  La taille maximale est fonction de la taille maximale d'un objet `CString` — **INT\_MAX** \(2 147 483 647\) octets — mais vous vous heurterez probablement aux limites du pilote avant d'atteindre cette taille.  
+-   (Facultatif) Dans certaines fonctions, la longueur maximale de la chaîne ou le tableau en cours de transfert. L’emplacement par défaut est de 255 octets, mais vous souhaiterez peut-être le modifier. La taille maximale est fonction de la taille maximale d’un `CString` objet : **INT_MAX** (2 147 483 647) octets, mais vous rencontrerez probablement les limites du pilote avant que la taille.  
   
--   \(Facultatif\) Dans la fonction `RFX_Text`, vous utilisez quelquefois un cinquième paramètre pour définir le type de données d'une colonne.  
+-   (Facultatif) Dans le `RFX_Text` (fonction), vous utilisez quelquefois un cinquième paramètre pour spécifier le type de données d’une colonne.  
   
- Pour plus d'informations, consultez les fonctions RFX sous [Macros and Globals](../Topic/Macros,%20Global%20Functions,%20and%20Global%20Variables.md) dans *Class Library Reference*.  Pour obtenir un exemple d'utilisation particulière des paramètres, consultez [Recordset : calculs de totaux et autres résultats de regroupement \(ODBC\)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md).  
+ Pour plus d’informations, consultez les fonctions RFX sous [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md) dans les *Class Library Reference*. Pour obtenir un exemple de lorsque vous apportez spéciale, utilisez des paramètres, consultez [Recordset : calculs de totaux et autres résultats de regroupement (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md).  
   
-##  <a name="_core_rfx_data_types"></a> Types de données RFX  
- La bibliothèque de classes contient des fonctions RFX pour transférer plusieurs types de données différents entre la source de données et les recordsets.  La liste ci\-après résume les fonctions RFX par type de données.  Lorsque vous devez écrire vos propres appels de fonction RFX, choisissez dans cette liste de fonctions selon le type de données.  
+##  <a name="_core_rfx_data_types"></a>Types de données RFX  
+ La bibliothèque de classes fournit les fonctions RFX pour transférer de nombreux types de données différents entre la source de données et les jeux d’enregistrements. La liste suivante résume les fonctions RFX par type de données. Dans les cas où vous devez écrire vos propres appels de fonction RFX, sélectionnez à partir de ces fonctions selon le type de données.  
   
 |Fonction|Type de données|  
-|--------------|---------------------|  
+|--------------|---------------|  
 |`RFX_Bool`|**BOOL**|  
 |`RFX_Byte`|**BYTE**|  
 |`RFX_Binary`|`CByteArray`|  
@@ -66,12 +66,13 @@ Cette rubrique explique comment utiliser les appels de fonctions RFX qui constit
 |`RFX_Text`|`CString`|  
 |`RFX_Date`|`CTime`|  
   
- Pour plus d'informations, consultez la documentation relative aux fonctions RFX sous [Macros and Globals](../Topic/Macros,%20Global%20Functions,%20and%20Global%20Variables.md) dans *Class Library Reference*.  Pour plus d'informations sur la correspondance entre les types de données C\+\+ et les types de données SQL, consultez le tableau « Mappage des types de données SQL ANSI et C\+\+ » dans [SQL : types de données SQL et C\+\+ \(ODBC\)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).  
+
+ Pour plus d’informations, consultez la documentation relative aux fonctions RFX sous [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md) dans les *Class Library Reference*. Pour plus d’informations sur les types de données C++ mappent des types de données SQL, consultez le tableau de Types de ANSI SQL données mappés aux Types de données C++ dans [SQL : SQL et les Types de données C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).  
   
-## Voir aussi  
- [Record Field Exchange \(RFX\)](../../data/odbc/record-field-exchange-rfx.md)   
- [Record Field Exchange : fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)   
- [Recordset : paramétrage d'un recordset \(ODBC\)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)   
- [Recordset : liaison dynamique de colonnes de données \(ODBC\)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)   
- [CRecordset Class](../../mfc/reference/crecordset-class.md)   
- [CFieldExchange Class](../../mfc/reference/cfieldexchange-class.md)
+## <a name="see-also"></a>Voir aussi  
+ [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md)   
+ [Record Field Exchange : Fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)   
+ [Recordset : Paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)   
+ [Recordset : Liaison dynamique de colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)   
+ [Classe CRecordset](../../mfc/reference/crecordset-class.md)   
+ [CFieldExchange, classe](../../mfc/reference/cfieldexchange-class.md)

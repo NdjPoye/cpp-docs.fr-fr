@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,44 +13,28 @@ f1_keywords:
 - ATLCTL/ATL::IObjectSafetyImpl::GetInterfaceSafetyOptions
 - ATLCTL/ATL::IObjectSafetyImpl::SetInterfaceSafetyOptions
 - ATLCTL/ATL::IObjectSafetyImpl::m_dwCurrentSafety
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - controls [ATL], safe
 - safe for scripting and initialization (controls)
 - IObjectSafety, ATL implementation
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: cdcc008797e94988fb42fd6239603fa300a84233
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 3b1c0369acceb792af26b7e9c8e8fd49f82a4468
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="iobjectsafetyimpl-class"></a>Classe de IObjectSafetyImpl
 Cette classe fournit une implémentation par défaut de la `IObjectSafety` interface pour permettre à un client récupérer et définir des niveaux de sécurité d’un objet.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s'exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -89,11 +72,11 @@ class IObjectSafetyImpl
 ## <a name="remarks"></a>Remarques  
  Classe `IObjectSafetyImpl` fournit une implémentation par défaut de `IObjectSafety`. Le `IObjectSafety` interface permet à un client récupérer et définir des niveaux de sécurité d’un objet. Par exemple, un navigateur web peut appeler **IObjectSafety::SetInterfaceSafetyOptions** pour rendre un contrôle pour l’initialisation ou sécurisé pour le script.  
   
- Notez que l’utilisation du [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category) macro avec le **CATID_SafeForScripting** et **CATID_SafeForInitializing** catégories de composants vous permet également de spécifier qu’un composant est sécurisé.  
+ Notez que l’utilisation du [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category) macro avec le **CATID_SafeForScripting** et **CATID_SafeForInitializing** catégories de composants fournit une alternative manière de spécifier qu’un composant est sécurisé.  
   
  **Articles connexes** [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md), [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `IObjectSafety`  
   
  `IObjectSafetyImpl`  
@@ -117,7 +100,7 @@ HRESULT GetInterfaceSafetyOptions(
 > [!IMPORTANT]
 >  Tout objet qui prend en charge `IObjectSafety` est responsable de sa propre sécurité et de n’importe quel objet, elle délègue. Le programmeur doit prendre en considération les questions découlant de l’exécution de code dans le contexte de l’utilisateur, de scripts entre sites et effectuer une vérification de la zone appropriée.  
   
- Consultez [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consultez [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="m_dwcurrentsafety"></a>IObjectSafetyImpl::m_dwCurrentSafety  
  Stocke le niveau de sécurité de l’objet actuel.  
@@ -142,9 +125,8 @@ HRESULT SetInterfaceSafetyOptions(
 > [!IMPORTANT]
 >  Tout objet qui prend en charge `IObjectSafety` est responsable de sa propre sécurité et de n’importe quel objet, elle délègue. Le programmeur doit prendre en considération les questions découlant de l’exécution de code dans le contexte de l’utilisateur, de scripts entre sites et effectuer une vérification de la zone appropriée.  
   
- Consultez [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consultez [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) dans le Kit de développement logiciel Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Interface IObjectSafety](https://msdn.microsoft.com/library/aa768224.aspx)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

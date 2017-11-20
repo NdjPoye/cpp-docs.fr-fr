@@ -1,49 +1,48 @@
 ---
-title: "Double conversion de code (thunking) (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr (option du compilateur C++), double conversion de code (thunking)"
-  - "double conversions de code (thunks)"
-  - "Interop (C++), double conversion de code (thunking)"
-  - "interopérabilité (C++), double conversion de code (thunking)"
-  - "assemblys mixtes (C++), double conversion de code (thunking)"
+title: Double Thunking (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- double thunks
+- interop [C++], double thunking
+- mixed assemblies [C++], double thunking
+- /clr compiler option [C++], double thunking
+- interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 80f444e48d786b0543aeb5de64e5659cdca6ff5d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Double conversion de code (thunking) (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le double médiateur \(thunking\) fait référence à la perte de performances qui peut se produire lorsqu'un appel de fonction dans un contexte managé appelle une fonction managée Visual C\+\+ et que l'exécution du programme appelle le point d'entrée natif de la fonction pour appeler la fonction managée.  Cette rubrique explique dans quel contexte le double médiateur peut survenir et comment l'éviter pour améliorer les performances.  
+# <a name="double-thunking-c"></a>Double conversion de code (thunking) (C++)
+Double médiateur fait référence à la perte de performances que peuvent se produire lorsqu’un appel de fonction dans un contexte managé appelle une Visual C++ fonction managée et où l’exécution du programme appelle le point d’entrée natif de la fonction afin d’appeler la fonction managée. Cette rubrique traite des cas de double médiateur et comment vous pouvez l’éviter pour améliorer les performances.  
   
-## Remarques  
- Par défaut, lors de la compilation avec **\/clr** \(et non **\/clr:pure**\), la définition d'une fonction managée provoque la génération par le compilateur d'un point d'entrée managé et d'un point d'entrée natif.  Cela permet d'appeler la fonction managée depuis des sites d'appel natifs et managés.  Toutefois, lorsqu'un point d'entrée natif existe, il peut être le point d'entrée pour tous les appels à la fonction.  Si une fonction appelante est managée, le point d'entrée natif appellera le point d'entrée managé.  En fait, deux appels sont requis pour appeler la fonction \(d'où le double médiateur\).  Par exemple, les fonctions virtuelles sont toujours appelées à travers un point d'entrée natif.  
+## <a name="remarks"></a>Remarques  
+ Par défaut, lors de la compilation avec **/CLR**, la définition d’une fonction managée, le compilateur générer un point d’entrée managé et un point d’entrée natif. Ainsi, la fonction managée à être appelée à partir des sites d’appel natif et managé. Toutefois, lorsqu’un point d’entrée natif existe, il peut être le point d’entrée pour tous les appels à la fonction. Si une fonction appelante est gérée, le point d’entrée natif appellera ensuite le point d’entrée managé. En effet, les deux appels sont requis pour appeler la fonction (d'où le double médiateur). Par exemple, les fonctions virtuelles sont toujours appelées via un point d’entrée natif.  
   
- Une résolution consiste à dire au compilateur de ne pas générer de point d'entrée natif pour une fonction managée et que la fonction ne sera appelée que d'un contexte managé, à l'aide de la convention d'appel [\_\_clrcall](../cpp/clrcall.md).  
+ Une solution consiste à indiquer au compilateur de ne pas générer de point d’entrée natif pour une fonction managée et que la fonction est uniquement appelée à partir d’un contexte managé, à l’aide de la [__clrcall](../cpp/clrcall.md) convention d’appel.  
   
- De même, si vous exportez \([dllexport, dllimport](../cpp/dllexport-dllimport.md)\) une fonction managée, un point d'entrée natif est généré et toute fonction qui importe et appelle cette fonction appellera via le point d'entrée natif.  Pour éviter un double médiateur dans cette situation, n'utilisez pas de sémantique d'exportation\/importation native ; référencez simplement les métadonnées via `#using` \(voir [\#using, directive](../preprocessor/hash-using-directive-cpp.md)\).  
+ De même, si vous exportez ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) une fonction managée, un point d’entrée natif est généré et toute fonction qui importe et appelle cette fonction appellera via le point d’entrée natif. Pour éviter un double médiateur dans cette situation, n’utilisez pas de sémantique d’exportation/importation native ; référencez simplement les métadonnées via `#using` (consultez [#using, Directive](../preprocessor/hash-using-directive-cpp.md)).  
   
- Le compilateur a été mis à jour pour réduire la double conversion de code inutile.  Par exemple, toute fonction ayant un type managé dans sa signature \(y compris le type de retour\) sera marquée implicitement comme `__clrcall`.  Pour plus d'informations sur la double élimination de conversion de code, consultez [http:\/\/msdn.microsoft.com\/msdnmag\/issues\/05\/01\/COptimizations\/default.aspx](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).  
+ Le compilateur a été mis à jour afin de réduire thunking double inutiles. Par exemple, toute fonction ayant un type managé dans la signature (y compris le type de retour) sera marquée implicitement comme `__clrcall`. Pour plus d’informations sur l’élimination de double conversion de code, consultez [http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Description  
- L'exemple suivant illustre un double médiateur.  Lorsqu'il est compilé en natif \(sans **\/clr**\), l'appel à la fonction virtuelle dans `main` génère un appel au constructeur de copie de `T` et un appel au destructeur.  Un comportement similaire survient lorsque la fonction virtuelle est déclarée avec **\/clr** et `__clrcall`.  Toutefois, lorsqu'il vient d'être compilé avec **\/clr**, l'appel de fonction génère un appel au constructeur de copie mais un autre appel est effectué au constructeur de copie dû au double médiateur entre natif et managé.  
+### <a name="description"></a>Description  
+ L’exemple suivant illustre un double médiateur. Lors de la compilation native (sans **/CLR**), l’appel à la fonction virtuelle dans `main` génère un appel à `T`du constructeur de copie et un appel au destructeur. Un comportement similaire survient lorsque la fonction virtuelle est déclarée avec **/CLR** et `__clrcall`. Toutefois, lors de la compilation juste avec **/CLR**, l’appel de fonction génère un appel au constructeur de copie, mais il existe un autre appel au constructeur de copie en raison de la conversion de code natif et managé.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // double_thunking.cpp  
@@ -82,7 +81,7 @@ int main() {
 }  
 ```  
   
-### Résultat de l'exemple  
+### <a name="sample-output"></a>Résultat de l'exemple  
   
 ```  
 __thiscall T::T(void)  
@@ -95,12 +94,12 @@ after calling struct S
 __thiscall T::~T(void)  
 ```  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Description  
- L'exemple précédent a montré l'existence d'un double médiateur.  Cet exemple montre son effet.  La boucle `for` appelle la fonction virtuelle et le programme rapporte le temps d'exécution.  Le temps le plus long rapporté correspond à une compilation du programme avec **\/clr**.  Le temps le plus rapide rapporté correspond à une compilation sans **\/clr** ou lorsque la fonction virtuelle est déclarée avec `__clrcall`.  
+### <a name="description"></a>Description  
+ L’exemple précédent a montré l’existence d’un double médiateur. Cet exemple montre son effet. Le `for` boucle appelle la fonction virtuelle et le programme rapporte le temps d’exécution. Le temps le plus long est signalé lorsque le programme est compilé avec **/CLR**. Les temps le plus rapide sont signalées lors de la compilation sans **/CLR** ou si la fonction virtuelle est déclarée avec `__clrcall`.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // double_thunking_2.cpp  
@@ -137,12 +136,12 @@ int main() {
 }  
 ```  
   
-### Résultat de l'exemple  
+### <a name="sample-output"></a>Résultat de l'exemple  
   
 ```  
 4.2 seconds  
 after calling struct S  
 ```  
   
-## Voir aussi  
- [Assemblys mixtes \(natif et managé\)](../dotnet/mixed-native-and-managed-assemblies.md)
+## <a name="see-also"></a>Voir aussi  
+ [Assemblys mixtes (natif et managé)](../dotnet/mixed-native-and-managed-assemblies.md)

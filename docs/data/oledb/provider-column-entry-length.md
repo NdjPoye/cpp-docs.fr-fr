@@ -1,32 +1,30 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_LENGTH | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_LENGTH"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_LENGTH (macro)"
+title: PROVIDER_COLUMN_ENTRY_LENGTH | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROVIDER_COLUMN_ENTRY_LENGTH
+dev_langs: C++
+helpviewer_keywords: PROVIDER_COLUMN_ENTRY_LENGTH macro
 ms.assetid: b4a67246-c049-4622-bb65-242cc8cae4be
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0a2d976dd079eb0100d4eb7cf56ef7c9dcfd0175
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# PROVIDER_COLUMN_ENTRY_LENGTH
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Représente une colonne spécifique prise en charge par le fournisseur.  
+# <a name="providercolumnentrylength"></a>PROVIDER_COLUMN_ENTRY_LENGTH
+Représente une colonne spécifique pris en charge par le fournisseur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,30 +33,30 @@ name
 , ordinal, size, member )  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *name*  
- \[in\] Le nom de colonne.  
+ [in] Le nom de colonne.  
   
  `ordinal`  
- \[in\] Le numéro de colonne.  Sauf si la colonne est une colonne du signet, le numéro de colonne ne doit pas être 0.  
+ [in] Le numéro de colonne. Sauf si la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.  
   
  `size`  
- \[in\] La taille en octets.  
+ [in] La taille de la colonne en octets.  
   
  `member`  
- \[in\] la variable membre dans `dataClass` qui stocke les données de la colonne.  
+ [in] La variable de membre dans `dataClass` qui stocke les données de colonne.  
   
-## Notes  
- Permet de spécifier la taille de colonne.  
+## <a name="remarks"></a>Remarques  
+ Vous permet de spécifier la taille de la colonne.  
   
-## Exemple  
- Voir [BEGIN\_PROVIDER\_COLUMN\_MAP](../../data/oledb/begin-provider-column-map.md).  
+## <a name="example"></a>Exemple  
+ Consultez [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
- [Macros pour les modèles du fournisseur OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
- [Création d'un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+## <a name="see-also"></a>Voir aussi  
+ [Macros pour les modèles du fournisseur OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+ [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
+ [Création d’un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

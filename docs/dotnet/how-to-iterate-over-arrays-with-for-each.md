@@ -1,31 +1,30 @@
 ---
-title: "Comment&#160;: it&#233;rer au sein des tableaux avec for each | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tableaux (C++), itérer avec instructions "for each""
+title: "Comment : itérer les tableaux avec for each | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: arrays [C++], iterating with for each
 ms.assetid: ddc88ce2-69e1-44fc-af84-5b6f62fcb9e3
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 559f2257a12d87eb03e9dbc7aa1493d0ec016b48
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: it&#233;rer au sein des tableaux avec for each
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique explique comment utiliser le mot clé de [for each, in](../dotnet/for-each-in.md) sur différents types de tableaux.  
+# <a name="how-to-iterate-over-arrays-with-for-each"></a>Comment : itérer au sein des tableaux avec for each
+Cette rubrique montre comment utiliser le [pour chacun, dans](../dotnet/for-each-in.md) (mot clé) sur les différents types de tableaux.  
   
-## Exemple  
- Cet exemple montre comment utiliser `for each` sur le tableau des types références.  Notez que si une dimension d'une tableau multidimensionnel est zéro, la boucle de `for each` n'effectuera pas une itération sur le tableau.  
+## <a name="example"></a>Exemple  
+ Cet exemple montre comment utiliser `for each` sur le tableau de types de référence.  Notez que si une dimension d’un tableau unidimensionnel multiples est égal à zéro, le `for each` boucle n’effectue pas une itération sur le tableau.  
   
 ```  
 // for_each_arrays.cpp  
@@ -66,14 +65,18 @@ int main() {
 }  
 ```  
   
-  **0 \= dans MyClass**  
-**1 \= dans MyClass**  
-**0 \= dans MyClass2**  
-**1 \= dans MyClass2**  
-**2 \= dans MyClass2**  
-**3 \= dans MyClass2**   
-## Exemple  
- Cet exemple affiche pour chaque itération sur <xref:System.Collections.ArrayList>, qui implémente <xref:System.Collections.IEnumerable>.  
+```Output  
+0 = in MyClass  
+1 = in MyClass  
+  
+0 = in MyClass2  
+1 = in MyClass2  
+2 = in MyClass2  
+3 = in MyClass2  
+```  
+  
+## <a name="example"></a>Exemple  
+ Cet exemple montre pour chaque itération sur un <xref:System.Collections.ArrayList>, qui implémente <xref:System.Collections.IEnumerable>.  
   
 ```  
 // for_each_arrays_2.cpp  
@@ -95,8 +98,11 @@ int main() {
 }  
 ```  
   
-  **60**   
-## Exemple  
+```Output  
+60  
+```  
+  
+## <a name="example"></a>Exemple  
  Cet exemple montre comment itérer sur un tableau de tableaux.  
   
 ```  
@@ -129,13 +135,17 @@ int main() {
 }  
 ```  
   
-  **IntArray \[0\] \= 10**  
-**IntArray \[0\] \= 10**  
-**IntArray \[1\] \= 11**  
-**IntArray \[1\] \= 11**  
-**10**  
-**10**  
-**11**  
-**11**   
-## Voir aussi  
+```Output  
+IntArray[0] = 10  
+IntArray[0] = 10  
+IntArray[1] = 11  
+IntArray[1] = 11  
+  
+10  
+10  
+11  
+11  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
  [for each, in](../dotnet/for-each-in.md)

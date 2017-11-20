@@ -1,32 +1,32 @@
 ---
-title: "&#201;criture de fonctions avec un assembly inline | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm (mot clé) (C++), dans les fonctions"
-  - "assembleur (C++), écrire des fonctions"
-  - "fonctions (C++), assembleur inline"
-  - "assembleur inline (C++), écrire des fonctions"
+title: "Écriture de fonctions avec un Assembly Inline | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- functions [C++], inline assembly
+- inline assembly [C++], writing functions
+- assembler [C++], writing functions
+- __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2b7abbb7a09f5205ada192cf15d5b7eb3c5c6b33
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# &#201;criture de fonctions avec un assembly inline
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Spécifique à Microsoft  
- Si vous écrivez une fonction avec le code assembleur inline, il est facile de passer des arguments à la fonction et retourner une valeur à partir de celui\-ci.  Les exemples suivants comparent une fonction tout d'abord écrit pour un assembleur distinct et ré\-écrites pour l'assembleur inline.  La fonction appelée  `power2`, qui reçoit deux paramètres, en multipliant le premier paramètre par 2 à la puissance du second paramètre.  Écrit pour un assembleur distinct, la fonction peut se présenter comme suit :  
+# <a name="writing-functions-with-inline-assembly"></a>Écriture de fonctions avec un assembly inline
+## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
+ Si vous écrivez une fonction avec du code assembleur inline, il est facile de transmettre des arguments à cette fonction et de retourner une valeur de celle-ci. Les exemples suivants comparent une fonction d'abord écrite pour un assembleur distinct puis réécrite pour l'assembleur inline. La fonction, appelée `power2`, reçoit deux paramètres, multipliant le premier paramètre par 2 à la puissance du second paramètre. Écrite pour un assembleur distinct, la fonction peut ressembler à ceci :  
   
 ```  
 ; POWER.ASM  
@@ -50,10 +50,10 @@ _TEXT   ENDS
         END  
 ```  
   
- Dans la mesure où il est écrit pour un assembleur distinct, la fonction requiert une source distincte fichier et assembly et lier les étapes.  Généralement, les arguments de fonction C et C\+\+ sont passés sur la pile, par conséquent, cette version de la  `power2`fonction accède à ses arguments par leur position dans la pile.  \(Notez que les  **modèle** disponible dans MASM et certains autres assembleurs, de la directive vous permet également d'accéder aux arguments de la pile et des variables de pile locales par son nom.\)  
+ Étant donné qu'elle est écrite pour un assembleur distinct, la fonction nécessite un fichier source distinct ainsi qu'un code assembleur et des étapes de liaison. Les arguments de fonction C et C++ sont généralement transmis sur la pile, par conséquent cette version de la fonction `power2` accède à ses arguments par leur position sur la pile. (Notez que la **modèle** directive, disponible dans MASM et certains autres assembleurs, permet également d’accéder aux arguments de pile et des variables de pile locales par nom.)  
   
-## Exemple  
- Ce programme écrit les  `power2`fonction avec le code assembleur inline :  
+## <a name="example"></a>Exemple  
+ Ce programme écrit la fonction `power2` avec le code assembleur inline :  
   
 ```  
 // Power2_inline_asm.c  
@@ -81,11 +81,11 @@ int power2( int num, int power )
 }  
 ```  
   
- La version en ligne de la  `power2`fonction fait référence à ses arguments par nom et s'affiche dans le même fichier source que le reste du programme.  Cette version nécessite également moins instructions d'assemblage.  
+ La version inline de la fonction `power2` fait référence à ses arguments par nom et apparaît dans le même fichier source que le reste du programme. Cette version requiert également moins d'instructions assembleur.  
   
- Dans la mesure où la version en ligne du  `power2`n'exécute pas un C  `return`instruction, il génère un avertissement sans danger si vous compilez au niveau d'avertissement 2 ou version ultérieure.  La fonction retourne une valeur, mais le compilateur ne peut pas savoir qui en l'absence d'une  `return`instruction.  Vous pouvez utiliser  [\#pragma warning](../../preprocessor/warning.md) pour désactiver la génération de cet avertissement.  
+ Étant donné que la version inline de `power2` n'exécute pas d'instruction `return` C, un avertissement sans incidence est généré si vous effectuez la compilation au niveau d'avertissement 2 ou ultérieur. La fonction ne retourne aucune valeur, mais le compilateur ne peut pas l'indiquer sans instruction `return`. Vous pouvez utiliser [#pragma warning](../../preprocessor/warning.md) pour désactiver la génération de cet avertissement.  
   
- **FIN spécifique à Microsoft**  
+ **FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [Utilisation de C ou C\+\+ dans les blocs \_\_asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation de C ou C++ dans les blocs __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)

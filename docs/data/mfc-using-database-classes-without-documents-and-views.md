@@ -1,126 +1,123 @@
 ---
-title: "MFC&#160;: utilisation de classes de bases de donn&#233;es sans document ni vue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assistants Application (C++), créer des applications de bases de données"
-  - "CDaoRecordView (classe), utiliser dans des applications de base de données"
-  - "CRecordView (classe), utiliser dans des applications de base de données"
-  - "DAO (C++), prise en charge des fichiers dans les applications de bases de données"
-  - "DAO (C++), écrire des applications"
-  - "applications de base de données (C++), Assistant Application (options)"
-  - "applications de base de données (C++), sans document"
-  - "applications de base de données (C++), sans vue"
-  - "classes de base de données (C++), MFC"
-  - "architecture Document/Vue (C++), dans les bases de données"
-  - "documents (C++), applications sans"
-  - "fichiers (C++), MFC"
-  - "ODBC (C++), prise en charge des fichiers dans les applications de bases de données"
-  - "ODBC (applications) (C++)"
-  - "ODBC (applications) (C++), sans document"
-  - "ODBC (applications) (C++), sans vue"
-  - "interface utilisateur (C++), dessiner des informations"
+title: "MFC : Utilisation de Classes de base de données sans document ni vue | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC applications [C++], without views
+- documents [C++], applications without
+- ODBC applications [C++]
+- document/view architecture [C++], in databases
+- files [C++], MFC
+- database classes [C++], MFC
+- CRecordView class, using in database applications
+- database applications [C++], without views
+- database applications [C++], application wizard options
+- application wizards [C++], creating database applications
+- ODBC [C++], file support in database applications
+- ODBC applications [C++], without documents
+- database applications [C++], without documents
+- user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 89c8c1d67a8273b542c088783e4b5121038c9fc2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# MFC&#160;: utilisation de classes de bases de donn&#233;es sans document ni vue
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vous pouvez parfois ne pas souhaiter utiliser l'architecture document\/vue de l'infrastructure dans vos applications de bases de données.  Cette rubrique explique :  
+# <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC : utilisation de classes de bases de données sans document ni vue
+Parfois, vous pouvez utiliser l’architecture document/vue de l’infrastructure dans vos applications de base de données. Cette rubrique explique :  
   
--   [Quand vous n'avez pas besoin d'utiliser des documents](#_core_when_you_don.92.t_need_documents) comme pour la sérialisation des documents.  
+-   [Lorsque vous n’avez pas besoin d’utiliser des documents](#_core_when_you_don.92.t_need_documents) tels que de la sérialisation des documents.  
   
--   Les [options de l'assistant Application](#_core_appwizard_options_for_documents_and_views) pour prendre en charge des applications sans sérialisation et sans les commandes du menu **Fichier**, par exemple **Nouveau**, **Ouvrir**, **Enregistrer** et **Enregistrer sous**, applicables aux documents.  
+-   [Options de l’Assistant Application](#_core_appwizard_options_for_documents_and_views) pour prendre en charge des applications sans sérialisation et sans liées aux documents **fichier** tels que des commandes de menu **nouveau**, **ouvrir**, **Enregistrer**, et **enregistrer en tant que**.  
   
--   [Comment utiliser une application qui utilise un document minimal](#_core_applications_with_minimal_documents).  
+-   [Comment travailler avec une application qui utilise un document minimal](#_core_applications_with_minimal_documents).  
   
 -   [Comment structurer une application sans document ni vue](#_core_applications_with_no_document).  
   
-##  <a name="_core_when_you_don.92.t_need_documents"></a> Quand vous n'avez pas besoin d'utiliser des documents  
- Certaines applications ont un concept distinct du document.  Ces applications chargent généralement tout ou partie d'un fichier en mémoire à partir du support de stockage à l'aide d'une commande **Fichier Ouvrir**.  Elles réécrivent le fichier mis à jour sur le support de stockage en une fois à l'aide d'une commande **Fichier Enregistrer** ou **Enregistrer sous**.  Ce que l'utilisateur voit est un fichier de données.  
+##  <a name="_core_when_you_don.92.t_need_documents"></a>Lorsque vous n’avez pas besoin des Documents  
+ Certaines applications ont un concept distinct d’un document. Ces applications chargent généralement tout ou partie d’un fichier à partir du stockage en mémoire avec un **ouvrir le fichier** commande. Elles réécrivent le fichier mis à jour au stockage, à la fois avec un **l’enregistrement du fichier** ou **Enregistrer sous** commande. Ce que l’utilisateur voit est un fichier de données.  
   
- Certaines catégories d'applications, cependant, n'ont pas besoin de documents.  Les applications de bases de données opèrent en termes de transactions.  L'application sélectionne des enregistrements dans une base de données et les présente à l'utilisateur, souvent un à la fois.  Ce que l'utilisateur voit est généralement un seul enregistrement en cours, qui peut être le seul en mémoire.  
+ Toutefois, certaines catégories d’applications, ne nécessitent pas un document. Les applications de base de données fonctionnent en termes de transactions. L’application sélectionne des enregistrements à partir d’une base de données et les présente à l’utilisateur, souvent un à la fois. Ce que l’utilisateur voit est généralement un seul enregistrement actuel, qui peut être le seul en mémoire.  
   
- Si votre application ne requiert pas un document pour le stockage des données, vous pouvez vous passer de tout ou partie de l'architecture document\/vue de l'infrastructure.  La partie dont vous pouvez vous passer dépend de l'approche que vous adoptez.  Vous pouvez :  
+ Si votre application ne requiert pas un document pour le stockage des données, vous pouvez vous passer de tout ou partie de l’architecture document/vue de l’infrastructure. Combien vous passer dépend de l’approche que vous préférez. Vous pouvez :  
   
--   Utiliser un document minimal en tant qu'emplacement de stockage d'une connexion à votre source de données tout en vous passant des fonctionnalités normales liées aux documents telles que la sérialisation.  Ceci est utile quand vous voulez avoir plusieurs vues des données et souhaitez synchroniser toutes les vues, les mettre à jour toutes en même temps, etc.  
+-   Utiliser un document minimal comme emplacement pour stocker une connexion à votre source de données, mais avec des fonctionnalités de document normal telles que la sérialisation de distribution. Cela est utile lorsque vous souhaitez que plusieurs vues des données et que vous souhaitez synchroniser toutes les vues, mise à jour à la fois et ainsi de suite.  
   
--   Utiliser une fenêtre frame, dans laquelle vous dessinez directement, au lieu d'utiliser une vue.  En ce cas, omettez le document et stockez les données ou les connexions des données dans l'objet fenêtre frame.  
+-   Utiliser une fenêtre frame, dans laquelle vous dessinez directement, au lieu d’utiliser une vue. Dans ce cas, vous omettez le document et stockez les données ou les connexions de données dans l’objet fenêtre frame.  
   
-##  <a name="_core_appwizard_options_for_documents_and_views"></a> Options de l'Assistant Application pour les documents et les vues  
- L'Assistant Application MFC possède plusieurs options dans **Prise en charger des bases de données**, qui sont répertoriées dans le tableau ci\-dessous.  Si vous utilisez l'Assistant Application MFC pour créer une application, toutes ces options produisent des applications dotées de documents et de vues.  Certaines options fournissent des documents et des vues qui omettent la fonction de document superflue.  Pour plus d'informations, consultez [Prise en charge des bases de données, Assistant Application MFC](../mfc/reference/database-support-mfc-application-wizard.md).  
+##  <a name="_core_appwizard_options_for_documents_and_views"></a>Options de l’Assistant Application pour les Documents et vues  
+ L’Assistant Application MFC a plusieurs options **sélectionnez prise en charge de la base de données**, qui sont répertoriées dans le tableau suivant. Si vous utilisez l’Assistant Application MFC pour créer une application, toutes ces options produisent des applications avec des documents et vues. Certaines options fournissent des documents et des vues qui omettent la fonction de document superflue. Pour plus d’informations, consultez [prise en charge de la base de données, Assistant Application MFC](../mfc/reference/database-support-mfc-application-wizard.md).  
   
-|Option|Vue|Document|  
-|------------|---------|--------------|  
-|**None**|Dérivée de `CView`.|N'offre aucune prise en charge des bases de données.  Il s'agit de l'option par défaut.<br /><br /> Si vous sélectionnez l'option **Prise en charge de l'architecture Document\/Vue** dans la page [Type d'application, Assistant Application MFC](../mfc/reference/application-type-mfc-application-wizard.md), vous bénéficiez d'une prise en charge complète pour le document, y compris la sérialisation et les commandes `New`, **Ouvrir**, **Enregistrer** et **Enregistrer sous** du menu **Fichier**.  Consultez [Applications sans document](#_core_applications_with_no_document).|  
-|**Fichiers d'en\-tête uniquement**|Dérivée de `CView`.|Assure le niveau de base de prise en charge des bases de données pour votre application.<br /><br /> Inclut Afxdb.h.  Ajoute des bibliothèques de liens, mais ne crée pas de classes spécifiques à la base de données.  Vous pouvez créer des recordsets ultérieurement et les utiliser pour examiner et mettre à jour les enregistrements.|  
-|**Vue de base de données sans prise en charge des fichiers**|Dérivée de `CRecordView`|Assure la prise en charge des documents mais pas la prise en charge de la sérialisation.  Le document peut stocker le recordset et coordonner plusieurs vues ; il ne prend pas en charge ni la sérialisation ni les commandes `New`, **Ouvrir**, **Enregistrer** et **Enregistrer sous**.  Consultez [Applications avec des documents minimaux](#_core_applications_with_minimal_documents).  Si vous choisissez d'inclure une vue de base de données, vous devez spécifier la source des données.<br /><br /> Inclut des fichiers d'en\-tête de base de données, des bibliothèques de liens, une vue de l'enregistrement et un recordset. \(Cette option n'est disponible que pour les applications pour lesquelles l'option **Prise en charge de l'architecture Document\/Vue** est sélectionnée dans la page [Type d'application, Assistant Application MFC](../mfc/reference/application-type-mfc-application-wizard.md).\)|  
-|**Vue de base de données avec prise en charge des fichiers**|Dérivée de `CRecordView`|Fournit une prise en charge complète des documents, y compris la sérialisation et les commandes du menu **Fichier** applicables aux documents.  Les applications de base de données opèrent généralement par enregistrement et non par fichier ; elles n'ont donc pas besoin de la sérialisation.  Il se peut toutefois que vous utilisiez la sérialisation dans un but spécial.  Consultez [Applications avec des documents minimaux](#_core_applications_with_minimal_documents).  Si vous choisissez d'inclure une vue de base de données, vous devez spécifier la source des données.<br /><br /> Inclut des fichiers d'en\-tête de base de données, des bibliothèques de liens, une vue de l'enregistrement et un recordset. \(Cette option n'est disponible que pour les applications pour lesquelles l'option **Prise en charge de l'architecture Document\/Vue** est sélectionnée dans la page [Type d'application, Assistant Application MFC](../mfc/reference/application-type-mfc-application-wizard.md).\)|  
+|Option|Afficher|Document|  
+|------------|----------|--------------|  
+|**Aucun**|Dérivée de `CView`.|Ne fournit aucune prise en charge de la base de données. Il s'agit de l'option par défaut.<br /><br /> Si vous sélectionnez le **prise en charge d’architecture Document/vue** option sur le [Type d’Application, Assistant Application MFC](../mfc/reference/application-type-mfc-application-wizard.md) page, vous obtenez prise en charge complète pour le document, y compris la sérialisation et `New`,  **Ouvrez**, **enregistrer**, et **enregistrer en tant que** des commandes sur le **fichier** menu. Consultez [Applications sans Document](#_core_applications_with_no_document).|  
+|**Fichiers d’en-tête**|Dérivée de `CView`.|Fournit le niveau de prise en charge de la base de données de base pour votre application.<br /><br /> Inclut Afxdb.h. Ajoute des bibliothèques de liens, mais ne crée pas de classes spécifiques à la base de données. Vous pouvez créer des jeux d’enregistrements ultérieurement et les utiliser pour examiner et mettre à jour des enregistrements.|  
+|**Vue de base de données sans prise en charge de fichier**|Dérivé de`CRecordView`|Fournit la prise en charge du document, mais aucune prise en charge de la sérialisation. Le document peut stocker le recordset et coordonner plusieurs vues ; ne prend pas en charge la sérialisation ou la `New`, **ouvrir**, **enregistrer**, et **Enregistrer sous** commandes. Consultez [Applications avec des Documents minimaux](#_core_applications_with_minimal_documents). Si vous incluez une vue de base de données, vous devez spécifier la source des données.<br /><br /> Inclut les fichiers d’en-tête de base de données, des bibliothèques de liens, une vue d’enregistrement et un jeu d’enregistrements. (Disponible uniquement pour les applications avec le **prise en charge d’architecture Document/vue** option est sélectionnée dans le [Type d’Application, Assistant Application MFC](../mfc/reference/application-type-mfc-application-wizard.md) page.)|  
+|**Vue de base de données avec prise en charge de fichier**|Dérivé de`CRecordView`|Fournit une prise en charge complète pour le document, y compris la sérialisation et aux documents **fichier** commandes de menu. Les applications de base de données fonctionnent généralement par enregistrement plutôt que sur un fichier par fichier et n’avez pas besoin sérialisation. Toutefois, vous pouvez avoir une utilisation spéciale pour la sérialisation. Consultez [Applications avec des Documents minimaux](#_core_applications_with_minimal_documents). Si vous incluez une vue de base de données, vous devez spécifier la source des données.<br /><br /> Inclut les fichiers d’en-tête de base de données, des bibliothèques de liens, une vue d’enregistrement et un jeu d’enregistrements. (Disponible uniquement pour les applications avec le **prise en charge d’architecture Document/vue** option est sélectionnée dans le [Type d’Application, Assistant Application MFC](../mfc/reference/application-type-mfc-application-wizard.md) page.)|  
   
- Pour plus d'informations sur les alternatives à la sérialisation et les autres utilisations pour la sérialisation, consultez [Sérialisation : sérialisation et entrées\/sorties de base de données](../mfc/serialization-serialization-vs-database-input-output.md).  
+ Pour une présentation des alternatives à la sérialisation et les autres utilisations pour la sérialisation, consultez [sérialisation : sérialisation et. Base de données d’entrée/sortie](../mfc/serialization-serialization-vs-database-input-output.md).  
   
-##  <a name="_core_applications_with_minimal_documents"></a> Applications avec des documents minimaux  
- L'Assistant Application MFC possède deux options qui prennent en charge les applications d'accès aux données à base de formulaires.  Chaque option crée une classe d'affichage dérivée de `CRecordView` et un document.  Ces options diffèrent au niveau des éléments du document qu'elles éliminent.  
+##  <a name="_core_applications_with_minimal_documents"></a>Applications avec des Documents minimaux  
+ L’Assistant Application MFC propose deux options qui prennent en charge les applications d’accès aux données basées sur le formulaire. Chaque option crée un `CRecordView`-classe d’affichage et un document dérivés. Elles diffèrent dans qu’ils quittent hors du document.  
   
-###  <a name="_core_a_document_without_file_support"></a> Document sans prise en charge des fichiers  
- Sélectionnez l'option de base de données de l'Assistant Application **Vue de base de données sans prise en charge des fichiers** si vous n'avez pas besoin de la sérialisation de document.  Le document répond aux objectifs utiles suivants :  
+###  <a name="_core_a_document_without_file_support"></a>Document sans prise en charge de fichier  
+ Sélectionnez l’option de base de données d’Assistant application **vue sans prise en charge des fichiers de base de données** si vous n’avez pas besoin de sérialisation de document. Le document utilisé aux fins utiles suivantes :  
   
--   C'est un emplacement commode pour le stockage d'un objet `CRecordset`.  
+-   Il s’agit d’un emplacement pratique pour stocker un `CRecordset` objet.  
   
-     Cette utilisation correspond aux concepts de document ordinaires : le document stocke les données \(ou, en l'occurrence, un recordset\) et la vue est une vue du document.  
+     Cette utilisation correspond aux concepts de document ordinaires : le document stocke les données (ou, dans ce cas, un ensemble d’enregistrements) et la vue est une vue du document.  
   
--   Si votre application présente plusieurs vues \(par exemple, plusieurs vues de l'enregistrement\), un document prend en charge la coordination des vues.  
+-   Si votre application présente plusieurs vues (par exemple, plusieurs vues des enregistrements), un document prend en charge la coordination des vues.  
   
-     Si plusieurs vues affichent les mêmes données, vous pouvez utiliser la fonction membre `CDocument::UpdateAllViews` pour coordonner les mises à jour de toutes les vues quand une vue modifie les données.  
+     Si plusieurs vues affichent les mêmes données, vous pouvez utiliser la `CDocument::UpdateAllViews` fonction membre pour coordonner les mises à jour de toutes les vues quand une vue modifie les données.  
   
- Vous utilisez généralement cette option pour les applications simples basées sur des formulaires.  L'Assistant Application prend en charge automatiquement une structure pratique pour de telles applications.  
+ Vous utilisez généralement cette option pour les applications simples basées sur le formulaire. L’Assistant application prend en charge une structure pratique pour de telles applications automatiquement.  
   
-###  <a name="_core_a_document_with_file_support"></a> Document avec prise en charge des fichiers  
- Sélectionnez l'option de base de données de l'Assistant Application **Vue de base de données avec prise en charge des fichiers** quand vous avez une utilisation alternative pour les commandes du menu **Fichier** liées aux documents et à la sérialisation des documents.  Pour la partie accès aux données de votre programme, vous pouvez utiliser le document comme décrit dans [Document sans prise en charge des fichiers](#_core_a_document_without_file_support).  Vous pouvez utiliser la fonction de sérialisation de document, par exemple, pour lire et écrire un document de profil utilisateur sérialisé qui stocke les préférences de l'utilisateur ou d'autres informations utiles.  Pour plus d'informations, consultez [Sérialisation : sérialisation et entrées\/sorties de base de données](../mfc/serialization-serialization-vs-database-input-output.md).  
+###  <a name="_core_a_document_with_file_support"></a>Document avec prise en charge de fichier  
+ Sélectionnez l’option de base de données d’Assistant application **vue avec prise en charge des fichiers de base de données** lorsque vous avez une utilisation alternative pour les documents liés **fichier** commandes de menu et de la sérialisation des documents. Pour la partie de l’accès aux données de votre programme, vous pouvez utiliser le document de la même façon comme décrit dans [Document sans prise en charge de fichier](#_core_a_document_without_file_support). Vous pouvez utiliser les capacités de sérialisation du document, par exemple, pour lire et écrire un document de profil utilisateur sérialisé qui stocke les préférences de l’utilisateur ou d’autres informations utiles. Pour plus d’informations, consultez [sérialisation : sérialisation et. Base de données d’entrée/sortie](../mfc/serialization-serialization-vs-database-input-output.md).  
   
- L'Assistant Application prend en charge cette option, mais vous devez écrire le code qui sérialise le document.  Stockez les informations sérialisées dans des données membres du document.  
+ L’Assistant application prend en charge cette option, mais vous devez écrire le code qui sérialise le document. Stockez les informations sérialisées dans les membres de données de document.  
   
-##  <a name="_core_applications_with_no_document"></a> Applications sans document  
- Vous pouvez parfois souhaiter écrire une application qui n'utilise ni document ni vue.  Sans document, vous stockez les données \(telles qu'un objet `CRecordset`\) dans la classe de fenêtre frame ou la classe d'application.  Les besoins supplémentaires éventuels dépendent de la présence ou de l'absence d'une interface utilisateur dans l'application.  
+##  <a name="_core_applications_with_no_document"></a>Applications sans Document  
+ Vous souhaiterez parfois écrire une application qui n’utilise pas de documents ou des vues. Sans document, vous stockez vos données (comme un `CRecordset` objet) dans votre classe de fenêtre frame ou de la classe de l’application. Des exigences supplémentaires dépendant de si l’application présente une interface utilisateur.  
   
-###  <a name="_core_database_support_with_a_user_interface"></a> Prise en charge des bases de données avec une interface utilisateur  
- Si vous disposez d'une interface utilisateur \(autre, par exemple, qu'une interface de ligne de commande de console\), votre application est dessinée non pas dans une vue mais directement dans la zone cliente de la fenêtre frame.  Une telle application n'utilise ni `CRecordView`, ni `CFormView` ni `CDialog` pour son interface utilisateur principale, mais fait généralement appel à `CDialog` pour les boîtes de dialogue ordinaires.  
+###  <a name="_core_database_support_with_a_user_interface"></a>Prise en charge de la base de données avec une Interface utilisateur  
+ Si vous avez une interface utilisateur (autre que, par exemple, une interface de ligne de commande de console), votre application Dessine directement dans la zone cliente de la fenêtre frame plutôt que dans une vue. Une telle application n’utilise pas `CRecordView`, `CFormView`, ou `CDialog` pour son interface utilisateur principale, mais il utilise normalement `CDialog` pour les boîtes de dialogue ordinaires.  
   
-###  <a name="_core_writing_applications_without_documents"></a> Écriture d'applications sans document  
- Dans la mesure où l'Assistant Application ne prend pas en charge la création d'applications sans document, vous devez écrire votre propre classe dérivée de `CWinApp` et, le cas échéant, créer également une classe `CFrameWnd` ou `CMDIFrameWnd`.  Substituez `CWinApp::InitInstance` et déclarez un objet application en tant que :  
+###  <a name="_core_writing_applications_without_documents"></a>Écriture d’Applications sans document  
+ Étant donné que l’Assistant application ne prend pas en charge la création d’applications sans document, vous devez écrire votre propre `CWinApp`-classe dérivée et, si nécessaire, vous devez également créer un `CFrameWnd` ou `CMDIFrameWnd` classe. Substituer `CWinApp::InitInstance` et déclarer un objet de l’application en tant que :  
   
 ```  
 CYourNameApp theApp;  
 ```  
   
- L'infrastructure fournit toujours le mécanisme de correspondance des messages et de nombreuses autres fonctionnalités.  
+ L’infrastructure fournit toujours le mécanisme de table des messages et de nombreuses autres fonctionnalités.  
   
-###  <a name="_core_database_support_separate_from_the_user_interface"></a> Prise en charge des bases de données distinctes de l'interface utilisateur  
- Certaines applications n'ont parfois pas besoin d'interface utilisateur ou ne requièrent qu'une interface utilisateur minimale.  Par exemple, vous écrivez :  
+###  <a name="_core_database_support_separate_from_the_user_interface"></a>Séparé de prise en charge de base de données à partir de l’Interface utilisateur  
+ Certaines applications ont besoin d’aucune interface utilisateur ou uniquement un minimale. Par exemple, supposons que vous écrivez :  
   
--   Un objet intermédiaire d'accès aux données que d'autres applications \(clientes\) appellent pour un traitement spécial des données entre l'application et la source de données.  
+-   Un objet d’accès aux données intermédiaire qui appellent d’autres applications (clients) pour un traitement spécial des données entre l’application et la source de données.  
   
--   Une application qui traite les données sans l'intervention de l'utilisateur, par exemple une application qui convertit les données d'un format de base de données en un autre, ou une application qui effectue des calculs et exécute des mises à jour en batch.  
+-   Une application qui traite les données sans intervention de l’utilisateur, par exemple, une application qui déplace les données d’un format de base de données à un autre ou qui effectue des calculs et effectue des mises à jour par lots.  
   
- Dans la mesure où aucun document ne possède l'objet `CRecordset` ou `CDaoRecordset`, vous souhaiterez probablement le stocker en tant que donnée membre incorporée dans votre classe d'application dérivée de `CWinApp`.  Les solutions de remplacement sont les suivantes :  
+ Parce qu’aucun document n’est propriétaire du `CRecordset` de l’objet, vous souhaiterez probablement stocker en tant que donnée membre incorporée dans votre `CWinApp`-classe d’application dérivée. Autres solutions possibles sont :  
   
--   Ne pas conserver du tout un objet `CRecordset` ou `CDaoRecordset` permanent.  Vous pouvez passer la valeur **NULL** aux constructeurs de votre classe de recordset.  Dans ce cas, l'infrastructure crée un objet `CDatabase` ou `CDaoDatabase` temporaire en utilisant les informations de la fonction membre `GetDefaultConnect` du recordset.  C'est l'approche alternative la plus probable.  
+-   Ne pas garder permanent `CRecordset` de l’objet du tout. Vous pouvez passer **NULL** aux constructeurs de classe de votre recordset. Dans ce cas, l’infrastructure crée un fichier temporaire `CDatabase` en utilisant les informations du jeu d’enregistrements de l’objet `GetDefaultConnect` fonction membre. Il s’agit de l’autre approche de la plus probable.  
   
--   Faire de l'objet `CRecordset` ou `CDaoRecordset` une variable globale.  Cette variable doit être un pointeur désignant un objet Recordset que vous créez dynamiquement lors de la substitution de `CWinApp::InitInstance`.  Vous évitez ainsi toute tentative de construction de l'objet avant l'initialisation de l'infrastructure.  
+-   Rendre le `CRecordset` une variable globale de l’objet. Cette variable doit être un pointeur vers un objet de jeu d’enregistrements que vous créez dynamiquement dans votre `CWinApp::InitInstance` remplacer. Cela évite de tentative de construction de l’objet avant l’initialisation de l’infrastructure.  
   
--   Utiliser des objets Recordset comme dans le contexte d'un document ou d'une vue.  Créez des recordsets dans les fonctions membres de l'application ou des objets de la fenêtre frame.  
+-   Comme vous le feriez dans le contexte d’un document ou d’une vue, à l’aide d’objets recordset. Créer des jeux d’enregistrements dans le membre de fonctions de votre application ou les objets de la fenêtre frame.  
   
-## Voir aussi  
- [Classes de bases de données MFC \(ODBC et DAO\)](../data/mfc-database-classes-odbc-and-dao.md)
+## <a name="see-also"></a>Voir aussi  
+ [Classes de base de données MFC](../data/mfc-database-classes-odbc-and-dao.md)

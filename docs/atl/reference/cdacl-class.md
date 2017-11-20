@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,35 +16,18 @@ f1_keywords:
 - ATLSECURITY/ATL::CDacl::GetAceCount
 - ATLSECURITY/ATL::CDacl::RemoveAce
 - ATLSECURITY/ATL::CDacl::RemoveAllAces
-dev_langs:
-- C++
-helpviewer_keywords:
-- CDacl class
+dev_langs: C++
+helpviewer_keywords: CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 18da3b079cba8bbccba1a5d9655107620fc41eb8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: f45a4fc1d69cf0caefb08a7a408ecc836d092851
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cdacl-class"></a>Classe de CDacl
 Cette classe est un wrapper pour une structure de la liste DACL (liste de contrôle d’accès discrétionnaire).  
@@ -91,9 +73,9 @@ class CDacl : public CAcl
   
  Utilisez les méthodes de classe fournies pour créer, ajouter, supprimer et supprimer des entrées à partir de la `CDacl` objet. Voir aussi [AtlGetDacl](security-global-functions.md#atlgetdacl) et [AtlSetDacl](security-global-functions.md#atlsetdacl).  
   
- Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le Kit de développement logiciel Windows.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CAcl](../../atl/reference/cacl-class.md)  
   
  `CDacl`  
@@ -137,7 +119,7 @@ bool AddAllowedAce(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **true** si l’ACE est ajoutée à la `CDacl` objet, **false** en cas d’échec.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  A `CDacl` objet contient zéro ou plusieurs entrées (contrôle d’accès) qui identifient les utilisateurs et groupes qui peuvent accéder à l’objet. Cette méthode ajoute un ACE qui autorise l’accès à la `CDacl` objet.  
   
 > [!NOTE]
@@ -201,7 +183,7 @@ CDacl () throw();
  `rhs`  
  Existant **ACL** structure (liste de contrôle d’accès).  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Le `CDacl` objet peut être éventuellement créé à l’aide d’un fichier **ACL** structure. Il est important de noter que seule une liste DACL (liste de contrôle d’accès discrétionnaire), et pas une liste (SACL) (liste de contrôle d’accès système), doit être passé en tant que ce paramètre. Dans les versions debug, en passant une liste (SACL) entraîne une assertion. Dans les versions release, en passant une liste (SACL) entraîne l’ACE (entrées de contrôle d’accès) dans la liste ACL est ignoré, et aucune erreur ne se produira.  
   
 ##  <a name="dtor"></a>CDacl :: ~ CDacl  
@@ -211,7 +193,7 @@ CDacl () throw();
 ~CDacl () throw();
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Le destructeur libère les ressources acquises par l’objet, y compris toutes les ACE (entrées de contrôle d’accès) à l’aide de [CDacl::RemoveAllAces](#removeallaces).  
   
 ##  <a name="getacecount"></a>CDacl::GetAceCount  
@@ -252,7 +234,7 @@ void RemoveAce(UINT nIndex) throw();
  `nIndex`  
  Index de l’entrée ACE à supprimer.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette méthode est dérivée de [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
   
 ##  <a name="removeallaces"></a>CDacl::RemoveAllAces  
@@ -262,7 +244,7 @@ void RemoveAce(UINT nIndex) throw();
 void RemoveAllAces() throw();
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Supprime chaque **ACE** structure (entrée de contrôle d’accès) (le cas échéant) dans le `CDacl` objet.  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -272,4 +254,3 @@ void RemoveAllAces() throw();
  [ACE](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
  [Fonctions globales de sécurité](../../atl/reference/security-global-functions.md)
-

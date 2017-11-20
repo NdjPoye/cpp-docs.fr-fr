@@ -1,32 +1,32 @@
 ---
-title: "Comment&#160;: utiliser gcnew pour cr&#233;er des types de valeur et utiliser un boxing implicite | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conversion boxing, implicites"
-  - "gcnew (mot clé) (C++), créer des types valeur"
-  - "types valeur, créer"
+title: "Comment : utiliser gcnew pour créer des Types valeur et utiliser un Boxing implicite | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- gcnew keyword [C++], creating value types
+- boxing, implicit
+- value types, creating
 ms.assetid: ceb48841-d6bd-47be-a167-57f44c961603
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: db569feb489fc73c7460e2444e3d2340c1a5be13
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: utiliser gcnew pour cr&#233;er des types de valeur et utiliser un boxing implicite
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'utilisation de [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) sur un type de valeur crée un type de valeur boxed, qui peut ensuite être placé sur le tas du garbage\-collector managé.  
+# <a name="how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing"></a>Comment : utiliser gcnew pour créer des types de valeur et utiliser un boxing implicite
+À l’aide de [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) sur une valeur de type va créer un type valeur boxed, qui peut alors être placé sur le tas managé, le garbage collector.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // vcmcppv2_explicit_boxing4.cpp  
@@ -53,5 +53,5 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
- [Boxing](../windows/boxing-cpp-component-extensions.md)
+## <a name="see-also"></a>Voir aussi  
+ [Conversion boxing](../windows/boxing-cpp-component-extensions.md)

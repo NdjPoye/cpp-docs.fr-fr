@@ -1,37 +1,35 @@
 ---
-title: "CDynamicParameterAccessor::GetParamString | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicParameterAccessor.GetParamString"
-  - "GetParamString"
-  - "CDynamicParameterAccessor::GetParamString"
-  - "ATL.CDynamicParameterAccessor.GetParamString"
-  - "ATL::CDynamicParameterAccessor::GetParamString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetParamString (méthode)"
+title: CDynamicParameterAccessor::GetParamString | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicParameterAccessor.GetParamString
+- GetParamString
+- CDynamicParameterAccessor::GetParamString
+- ATL.CDynamicParameterAccessor.GetParamString
+- ATL::CDynamicParameterAccessor::GetParamString
+dev_langs: C++
+helpviewer_keywords: GetParamString method
 ms.assetid: 078c2b1c-7072-47c1-a203-f47e75363f91
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a123d5585447d71076dbe96bd58dfb87a68df147
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicParameterAccessor::GetParamString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Récupère les données de chaîne du paramètre stocké en mémoire tampon.  
+# <a name="cdynamicparameteraccessorgetparamstring"></a>CDynamicParameterAccessor::GetParamString
+Récupère les données de chaîne du paramètre spécifié stocké en mémoire tampon.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -55,32 +53,32 @@ bool GetParamString(
 ) throw( );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `nParam`  
- \[in\] Le nombre de paramètre \(décalage de 1\).  Le paramètre 0 est réservé pour les valeurs de retour.  Le numéro de paramètre représente l'index du paramètre en fonction de son ordre dans l'appel SQL ou celui d'une procédure stockée.  Consultez [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) pour obtenir un exemple.  
+ [in] Le numéro de paramètre (offset à partir de 1). Le paramètre 0 est réservé pour les valeurs de retournés. Le paramètre est l’index du paramètre en fonction de son ordre dans le SQL ou d’un appel de procédure stockée. Consultez [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) pour obtenir un exemple.  
   
  `strOutput`  
- \[out\] données de chaîne ANSI \(**CSimpleStringA**\) ou Unicode \(**CSimpleStringW**\) du paramètre.  Vous devez passer un paramètre de type `CString`, par exemple :  
+ [out] L’ANSI (**CSimpleStringA**) ou Unicode (**CSimpleStringW**) chaîne de données du paramètre spécifié. Vous devez passer un paramètre de type `CString`, par exemple :  
   
- [!code-cpp[NVC_OLEDB_Consumer#9](../../data/oledb/codesnippet/CPP/cdynamicparameteraccessor-getparamstring_1.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#9](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-getparamstring_1.cpp)]  
   
  `pBuffer`  
- \[out\] Un pointeur vers les données de chaîne ANSI \(**CHAR**\) ou Unicode \(**WCHAR**\) du paramètre.  
+ [out] Un pointeur vers l’ANSI (**CHAR**) ou Unicode (**WCHAR**) chaîne de données du paramètre spécifié.  
   
  `pMaxLen`  
- \[out\] Un pointeur à la taille de la mémoire tampon désignée par `pBuffer` \(en caractères, y compris la valeur de fin NULL\).  
+ [out] Un pointeur vers la taille de la mémoire tampon pointée par `pBuffer` (en caractères, y compris le caractère NULL de fin).  
   
-## Notes  
- Retourne la valeur **vrai** en cas de réussite, ou **faux** en cas d'échec.  
+## <a name="remarks"></a>Remarques  
+ Retourne **true** en cas de réussite ou **false** en cas d’échec.  
   
- Si `pBuffer` est NULL, cette méthode fixera la taille de mémoire tampon requise dans la mémoire désignée par `pMaxLen` et renvoie **vrai** sans copier les données.  
+ Si `pBuffer` est NULL, cette méthode définit la taille de la mémoire tampon requise dans la mémoire vers laquelle pointée `pMaxLen` et retourner **true** sans copier les données.  
   
- Cette méthode échoue si la mémoire tampon `pBuffer` n'est pas assez grande pour contenir la chaîne entière.  
+ Cette méthode échoue si la mémoire tampon `pBuffer` n’est pas suffisamment grande pour contenir la chaîne entière.  
   
- Utilisez `GetParamString` pour récupérer des données de paramètre de chaîne de la mémoire tampon.  Utilisez [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) pour récupérer de la mémoire tampon des données de paramètre n'étant pas des chaînes de caractères.  
+ Utilisez `GetParamString` pour récupérer les données de paramètre de chaîne à partir de la mémoire tampon. Utilisez [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) pour récupérer des données de paramètre de chaîne à partir de la mémoire tampon.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CDynamicParameterAccessor, classe](../../data/oledb/cdynamicparameteraccessor-class.md)

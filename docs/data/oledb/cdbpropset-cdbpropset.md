@@ -1,58 +1,57 @@
 ---
-title: "CDBPropSet::CDBPropSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDBPropSet.CDBPropSet"
-  - "CDBPropSet::CDBPropSet"
-  - "ATL::CDBPropSet::CDBPropSet"
-  - "ATL.CDBPropSet.CDBPropSet"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDBPropSet (classe), constructeur"
+title: CDBPropSet::CDBPropSet | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDBPropSet.CDBPropSet
+- CDBPropSet::CDBPropSet
+- ATL::CDBPropSet::CDBPropSet
+- ATL.CDBPropSet.CDBPropSet
+dev_langs: C++
+helpviewer_keywords: CDBPropSet class, constructor
 ms.assetid: 02ae5d9e-c067-47ca-8111-a03e86b5626b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c1b583ca5639ad542011fd9d4db0839034a4389e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# CDBPropSet::CDBPropSet
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Constructeur.  Initialise **rgProperties**, **cProperties**, les champs **guidPropertySet** de la structure [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx).  
+# <a name="cdbpropsetcdbpropset"></a>CDBPropSet::CDBPropSet
+Constructeur. Initialise le **rgProperties**, **cProperties**, et **guidPropertySet** champs de la [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) structure.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
       CDBPropSet(  
    const GUID& guid   
 );  
-CDBPropSet(   
-   const CDBPropSet& propset    
+CDBPropSet(   
+   const CDBPropSet& propset    
 );  
 CDBPropSet( );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `guid`  
- \[in\] UN GUIDE utilisé pour initialiser le champ de **guidPropertySet**.  
+ [in] Un GUID utilisé pour initialiser le **guidPropertySet** champ.  
   
  *propset*  
- \[in\] un autre objet `CDBPropSet` pour la construction de copie.  
+ [in] Un autre `CDBPropSet` objet pour la construction de copie.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
- [CDBPropSet, classe](../../data/oledb/cdbpropset-class.md)   
+## <a name="see-also"></a>Voir aussi  
+ [CDBPropSet (classe)](../../data/oledb/cdbpropset-class.md)   
  [CDBPropSet::SetGUID](../../data/oledb/cdbpropset-setguid.md)   
- [DBPROP Structure](https://msdn.microsoft.com/en-us/library/ms717970.aspx)
+ [Structure DBPROP](https://msdn.microsoft.com/en-us/library/ms717970.aspx)

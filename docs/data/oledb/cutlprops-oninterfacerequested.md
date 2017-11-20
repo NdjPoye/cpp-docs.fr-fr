@@ -1,32 +1,30 @@
 ---
-title: "CUtlProps::OnInterfaceRequested | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CUtlProps"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OnInterfaceRequested (méthode)"
+title: CUtlProps::OnInterfaceRequested | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CUtlProps
+dev_langs: C++
+helpviewer_keywords: OnInterfaceRequested method
 ms.assetid: a5e1a879-cff3-4e01-b902-2249a152984f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 860870628d8558ad252657c06d90f195fd707eb8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# CUtlProps::OnInterfaceRequested
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les demandes des gestionnaires pour une interface facultative lorsqu'un consommateur appelle une méthode sur une de la création d'objets interfaces.  
+# <a name="cutlpropsoninterfacerequested"></a>CUtlProps::OnInterfaceRequested
+Gère les demandes d’une interface facultative lorsqu’un consommateur appelle une méthode sur l’un de l’objet des interfaces de création.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,16 +33,16 @@ Les demandes des gestionnaires pour une interface facultative lorsqu'un consomma
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `riid`  
- \[in\] L'IID pour l'interface requis.  Pour plus d'informations, consultez la description du paramètre de `riid` de `ICommand::Execute` dans *OLE DB guide de référence du programmeur* \(dans *MDAC SDK*  
+ [in] L’IID de l’interface demandée. Pour plus d’informations, consultez la description de la `riid` paramètre de `ICommand::Execute` dans les *de référence du programmeur OLE DB* (dans le *MDAC SDK*).  
   
-## Notes  
- **SurInterfaceRequis** traite les demandes du consommateur d'une interface facultative lorsqu'un consommateur appelle une méthode sur l'une des interfaces de création d'objets \(telles que **IDBCreerSession**, **IDBCreerCommande**, `IOpenRowset`, ou `ICommand`\).  Il définit la propriété correspondante OLE DB pour l'interface demandée.  Par exemple, si le consommateur demande **IID\_IRowsetLocate**, **SurInterfaceRequise** définit l'interface de **DBPROP\_IRowsetLocate**.  Gère le maintien approprié lors de la création de l'ensemble de lignes.  
+## <a name="remarks"></a>Remarques  
+ **OnInterfaceRequested** gère les demandes de consommateur d’une interface facultative lorsqu’un consommateur appelle une méthode sur l’un de l’objet des interfaces de création (tel que **IDBCreateSession**, **IDBCreateCommand**, `IOpenRowset`, ou `ICommand`). Il définit la propriété OLE DB correspondante pour l’interface demandée. Par exemple, si le consommateur demande **IID_IRowsetLocate**, **OnInterfaceRequested** définit le **DBPROP_IRowsetLocate** interface. Cela tient à jour l’état approprié lors de la création de l’ensemble de lignes.  
   
  Cette méthode est appelée lorsque le consommateur appelle **IOpenRowset::OpenRowset** ou `ICommand::Execute`.  
   
- Si un consommateur ouvre un objet et demande une interface facultative, le fournisseur doit définir la propriété associée à cette interface à `VARIANT_TRUE`.  Pour permettre le traitement spécifique à, **OnInterfaceRequested** est appelée avant la méthode de **Exécuter** du fournisseur appelée.  Par défaut, **SurInterfaceRequise** gère les interfaces suivantes :  
+ Si un consommateur ouvre un objet et demande une interface facultative, le fournisseur doit définir la propriété associée à cette interface pour `VARIANT_TRUE`. Pour permettre le traitement spécifique à la propriété, **OnInterfaceRequested** est appelée avant que le fournisseur **Execute** méthode est appelée. Par défaut, **OnInterfaceRequested** gère les interfaces suivantes :  
   
 -   `IRowsetLocate`  
   
@@ -56,10 +54,10 @@ Les demandes des gestionnaires pour une interface facultative lorsqu'un consomma
   
 -   `IRowsetScroll`  
   
- Si vous souhaitez gérer d'autres interfaces, remplacez cette fonction dans votre source de données, la session, la commande, ou la classe d'ensemble du traitement des fonctions.  Le fichier doit autoriser des interfaces régulières définies\/obtenir des propriétés pour s'assurer que la définition des propriétés définit également les propriétés chaînées \(voir [SurChangementPropriétés](../../data/oledb/cutlprops-onpropertychanged.md)\).  
+ Si vous souhaitez gérer d’autres interfaces, remplacez cette fonction dans votre classe de source, de session, de commande ou d’ensemble de lignes de données pour les fonctions de processus. Votre substitution doit passer par les interfaces de propriétés set/get normal pour vous assurer que définir des propriétés définit également des propriétés chaînées (consultez [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CUtlProps, classe](../../data/oledb/cutlprops-class.md)

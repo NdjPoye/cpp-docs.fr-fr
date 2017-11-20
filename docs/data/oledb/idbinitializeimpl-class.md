@@ -1,74 +1,73 @@
 ---
-title: "IDBInitializeImpl, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IDBInitializeImpl<T>"
-  - "ATL::IDBInitializeImpl<T>"
-  - "IDBInitializeImpl"
-  - "ATL::IDBInitializeImpl"
-  - "ATL.IDBInitializeImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDBInitializeImpl (classe)"
+title: Idbinitializeimpl, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IDBInitializeImpl<T>
+- ATL::IDBInitializeImpl<T>
+- IDBInitializeImpl
+- ATL::IDBInitializeImpl
+- ATL.IDBInitializeImpl
+dev_langs: C++
+helpviewer_keywords: IDBInitializeImpl class
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a7a51023f167eee5fbd4082486409f4e11a15547
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# IDBInitializeImpl, classe
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fournit une implémentation de l'interface [IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx).  
+# <a name="idbinitializeimpl-class"></a>IDBInitializeImpl, classe
+Fournit une implémentation pour la [IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx) interface.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template <class T>  
 class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
  Votre classe, dérivée de `IDBInitializeImpl`.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Méthodes  
+### <a name="methods"></a>Méthodes  
   
 |||  
 |-|-|  
 |[IDBInitializeImpl](../../data/oledb/idbinitializeimpl-idbinitializeimpl.md)|Constructeur.|  
   
-### Méthodes d'interface  
+### <a name="interface-methods"></a>Méthodes d’interface  
   
 |||  
 |-|-|  
-|[Initialize](../../data/oledb/idbinitializeimpl-initialize.md)|Démarre fournisseur.|  
-|[Desinitialise](../../data/oledb/idbinitializeimpl-uninitialize.md)|Arrête le fournisseur.|  
+|[Initialiser](../../data/oledb/idbinitializeimpl-initialize.md)|Démarre le fournisseur.|  
+|[Annuler l’initialisation](../../data/oledb/idbinitializeimpl-uninitialize.md)|Arrête le fournisseur.|  
   
-### Membres de données  
+### <a name="data-members"></a>Membres de données  
   
 |||  
 |-|-|  
-|[m\_dwStatus](../../data/oledb/idbinitializeimpl-m-dwstatus.md)|Indicateurs de source de données.|  
-|[m\_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md)|Pointeur vers l'implémentation des informations de propriétés des bases de données croisées.|  
+|[m_dwStatus](../../data/oledb/idbinitializeimpl-m-dwstatus.md)|Indicateurs de source de données.|  
+|[m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md)|Pointeur vers l’implémentation des informations sur les propriétés de la base de données.|  
   
-## Notes  
- Interface forcé sur les objets sources de données et interface facultative sur les énumérateurs.  
+## <a name="remarks"></a>Remarques  
+ Une interface obligatoire sur une interface facultative sur les énumérateurs et les objets source de données.  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
- [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

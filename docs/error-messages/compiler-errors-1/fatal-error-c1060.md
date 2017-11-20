@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C1060
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1060
+f1_keywords: C1060
+dev_langs: C++
+helpviewer_keywords: C1060
 ms.assetid: feaf305c-c84c-4160-b974-50e283412849
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 36abe3a63515dcb3b8f07ce5d0d169329ed5f7ab
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fatal-error-c1060"></a>Erreur irrécupérable C1060
 espace du tas insuffisant pour le compilateur  

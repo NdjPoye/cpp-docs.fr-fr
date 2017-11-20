@@ -1,52 +1,51 @@
 ---
-title: "marshal_context::marshal_context | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::interop::marshal_context::marshal_context"
-  - "marshal_context::marshal_context"
-  - "msclr.interop.marshal_context.marshal_context"
-  - "marshal_context.marshal_context"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marshal_context (classe) (C++), opérations"
+title: marshal_context::marshal_context | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::interop::marshal_context::marshal_context
+- marshal_context::marshal_context
+- msclr.interop.marshal_context.marshal_context
+- marshal_context.marshal_context
+dev_langs: C++
+helpviewer_keywords: marshal_context class [C++], operations
 ms.assetid: 5f08c895-60b0-4f72-97ff-7ae37c68e853
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0ce4837f4e3820544852f5ca535a24ee4ed46cb0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# marshal_context::marshal_context
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Construit un objet `marshal_context` à utiliser pour la conversion de données entre les types de données managés et natifs.  
+# <a name="marshalcontextmarshalcontext"></a>marshal_context::marshal_context
+Construit un `marshal_context` objet à utiliser pour la conversion de données entre les types de données managés et natifs.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 marshal_context();  
 ```  
   
-## Notes  
- Certaines conversions de données requièrent un contexte de sérialisation.  Consultez [Vue d'ensemble du marshaling dans C\+\+](../dotnet/overview-of-marshaling-in-cpp.md) pour plus d'informations sur les traductions qui requièrent un contexte et sur le fichier de sérialisation à inclure dans votre application.  
+## <a name="remarks"></a>Remarques  
+ Certaines conversions de données nécessitent un contexte de marshaler. Consultez [vue d’ensemble du Marshaling dans C++](../dotnet/overview-of-marshaling-in-cpp.md) pour plus d’informations sur les traductions nécessitent un contexte et le marshaling du fichier doit être inclus dans votre application.  
   
-## Exemple  
- Consultez l'exemple pour [marshal\_context::marshal\_as](../dotnet/marshal-context-marshal-as.md).  
+## <a name="example"></a>Exemple  
+ Consultez l’exemple de [marshal_context::marshal_as](../dotnet/marshal-context-marshal-as.md).  
   
-## Configuration requise  
- **Fichier d'en\-tête :** \<msclr\\marshal.h\>, \<msclr\\marshal\_windows.h\>, \<msclr\\marshal\_cppstd.h\> ou \<msclr\\marshal\_atl.h\>  
+## <a name="requirements"></a>Spécifications  
+ **Fichier d’en-tête :** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, ou \<msclr\marshal_atl.h >  
   
- **Espace de noms :** msclr::interop  
+ **Namespace :** msclr::interop  
   
-## Voir aussi  
- [Vue d'ensemble du marshaling dans C\+\+](../dotnet/overview-of-marshaling-in-cpp.md)   
- [marshal\_as](../dotnet/marshal-as.md)   
- [marshal\_context, classe](../dotnet/marshal-context-class.md)
+## <a name="see-also"></a>Voir aussi  
+ [Vue d’ensemble du Marshaling dans C++](../dotnet/overview-of-marshaling-in-cpp.md)   
+ [marshal_as](../dotnet/marshal-as.md)   
+ [marshal_context Class](../dotnet/marshal-context-class.md)

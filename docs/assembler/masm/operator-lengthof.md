@@ -1,39 +1,39 @@
 ---
-title: "operator LENGTHOF | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "operator LENGTHOF"
-  - "LENGTHOF"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LENGTHOF operator"
-  - "operator LENGTHOF"
+title: "lengthof, opérateur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- operator LENGTHOF
+- LENGTHOF
+dev_langs: C++
+helpviewer_keywords:
+- LENGTHOF operator
+- operator LENGTHOF
 ms.assetid: 09c40dbb-a4e0-4fc6-80ab-dc9967240ef6
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 499fbfa32e08a75d6d078d94402b3251433ea5e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# operator LENGTHOF
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retourne le nombre d'objets de données dans *la variable*.  
+# <a name="operator-lengthof"></a>LENGTHOF, opérateur
+Retourne le nombre d’objets de données dans *variable*.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 LENGTHOF variable  
 ```  
   
-## Voir aussi  
- [Operators Reference](../../assembler/masm/operators-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)

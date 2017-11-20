@@ -1,34 +1,33 @@
 ---
-title: "IRowsetImpl::SetDBStatus | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetImpl.SetDBStatus"
-  - "IRowsetImpl::SetDBStatus"
-  - "SetDBStatus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetDBStatus (méthode)"
+title: IRowsetImpl::SetDBStatus | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetImpl.SetDBStatus
+- IRowsetImpl::SetDBStatus
+- SetDBStatus
+dev_langs: C++
+helpviewer_keywords: SetDBStatus method
 ms.assetid: b73f526a-4fc6-4adb-9611-c3cca2cddb23
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dcc6783ce210c434e58814bcee8654ddd9111b52
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetImpl::SetDBStatus
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fixe les indicateurs d'état de `DBSTATUS` du champ spécifié.  
+# <a name="irowsetimplsetdbstatus"></a>IRowsetImpl::SetDBStatus
+Définit le `DBSTATUS` indicateurs d’état pour le champ spécifié.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -39,24 +38,24 @@ Fixe les indicateurs d'état de `DBSTATUS` du champ spécifié.
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `statusFlags`  
- Les indicateurs de [DBSTATUS](https://msdn.microsoft.com/en-us/library/ms722617.aspx) à définir pour la colonne.  
+ Le [DBSTATUS](https://msdn.microsoft.com/en-us/library/ms722617.aspx) indicateurs à définir pour la colonne.  
   
  `currentRow`  
  La ligne actuelle.  
   
  *columnInfo*  
- La colonne dont l'état est en train d'être fixé.  
+ La colonne pour laquelle l’état est défini.  
   
-## Valeur de retour  
- Une valeur standard `HRESULT`.  
+## <a name="return-value"></a>Valeur de retour  
+ Valeur `HRESULT` standard.  
   
-## Notes  
- Le fournisseur remplace cette fonction pour fournir un traitement spécial de **DBSTATUS\_S\_ISNULL** et **DBSTATUS\_S\_DEFAULT**.  
+## <a name="remarks"></a>Remarques  
+ Le fournisseur substitue cette fonction pour fournir un traitement spécial pour **DBSTATUS_S_ISNULL** et **DBSTATUS_S_DEFAULT**.  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [IRowsetImpl, classe](../../data/oledb/irowsetimpl-class.md)

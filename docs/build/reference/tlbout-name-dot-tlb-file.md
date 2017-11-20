@@ -1,72 +1,71 @@
 ---
-title: "/TLBOUT (Nommer le fichier .TLB) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.TypeLibraryFile"
-  - "/tlbout"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fichiers .tlb, renommer"
-  - "/TLBOUT (option de l'éditeur de liens)"
-  - "fichiers tlb, renommer"
-  - "TLBOUT (option de l'éditeur de liens)"
-  - "-TLBOUT (option de l'éditeur de liens)"
+title: -TLBOUT (nom. Fichier TLB) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.TypeLibraryFile
+- /tlbout
+dev_langs: C++
+helpviewer_keywords:
+- tlb files, renaming
+- TLBOUT linker option
+- /TLBOUT linker option
+- .tlb files, renaming
+- -TLBOUT linker option
 ms.assetid: 0df6d078-2e48-46c9-a1a5-02674d85dce8
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c38710707397a5990266544d88a252daf8c40151
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /TLBOUT (Nommer le fichier .TLB)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="tlbout-name-tlb-file"></a>/TLBOUT (Nommer le fichier .TLB)
 ```  
 /TLBOUT:[path\]filename  
 ```  
   
-## Notes  
- où :  
+## <a name="remarks"></a>Remarques  
+ où :  
   
  *path*  
- désigne une spécification de chemin d'accès absolu ou relatif concernant l'emplacement de création du fichier .tlb.  
+ Une spécification de chemin d’accès absolu ou relatif pour où le fichier .tlb doit être créé.  
   
  *filename*  
- Spécifie le nom du fichier .tlb créé par le compilateur MIDL.  Aucune extension de fichier particulière n'est demandée ; spécifiez *filename*.tlb si vous souhaitez une extension .tlb.  
+ Spécifie le nom du fichier .tlb créé par le compilateur MIDL. Aucune extension de fichier n’est supposée ; Spécifiez *nom de fichier*.tlb si vous souhaitez une extension .tlb.  
   
-## Notes  
- L'option \/TLBOUT spécifie le nom et l'extension du fichier .tlb.  
+## <a name="remarks"></a>Remarques  
+ L’option /TLBOUT Spécifie le nom et l’extension du fichier .tlb.  
   
- Le compilateur MIDL est appelé par l'éditeur de liens Visual C\+\+ lors de la liaison de projets dotés de l'attribut [module](../../windows/module-cpp.md).  
+ Le compilateur MIDL est appelé par l’éditeur de liens Visual C++ lors de la liaison des projets qui ont le [module](../../windows/module-cpp.md) attribut.  
   
- Si \/TLBOUT n'est pas spécifié, le fichier .tlb obtiendra son nom de [\/IDLOUT](../../build/reference/idlout-name-midl-output-files.md) *filename*.  Si \/IDLOUT n'est pas spécifié, le fichier .tlb s'appellera vc70.tlb.  
+ Si /TLBOUT n’est pas spécifié, le fichier .tlb obtiendra son nom de [/IDLOUT](../../build/reference/idlout-name-midl-output-files.md) *nom de fichier*. Si /IDLOUT n’est pas spécifié, le fichier .tlb s’appellera vc70.tlb.  
   
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Définition des propriétés de projets Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Cliquez sur le dossier **Éditeur de liens**.  
+2.  Cliquez sur le **l’éditeur de liens** dossier.  
   
-3.  Cliquez sur la page de propriétés **IDL incorporé**.  
+3.  Cliquez sur le **IDL incorporé** page de propriétés.  
   
-4.  Modifiez la propriété **Bibliothèque de types**.  
+4.  Modifier la **bibliothèque de types** propriété.  
   
-### Pour définir cette option de l'éditeur de liens par programme  
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   
 1.  Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TypeLibraryFile%2A>.  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)   
- [\/IGNOREIDL \(Ne pas traiter les attributs dans MIDL\)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
- [\/MIDL \(Spécification d'options de ligne de commande MIDL\)](../../build/reference/midl-specify-midl-command-line-options.md)   
- [Building an Attributed Program](../../windows/building-an-attributed-program.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)   
+ [/IGNOREIDL (ne pas traiter les attributs dans MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
+ [/MIDL (spécifier les Options de ligne de commande MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)   
+ [Générer un programmes par attributs](../../windows/building-an-attributed-program.md)

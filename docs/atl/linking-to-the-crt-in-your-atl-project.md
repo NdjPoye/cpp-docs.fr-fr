@@ -1,47 +1,48 @@
 ---
-title: "Linking to the CRT in Your ATL Project | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DllMainCRTStartup"
-  - "wWinMainCRTStartup"
-  - "WinMainCRTStartup"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, C Run-Time library (CRT)"
-  - "CRT, linking with ATL"
-  - "DllMainCRTStartup method"
-  - "WinMainCRTStartup method"
-  - "wWinMainCRTStartup method"
+title: Liaison vers le CRT dans votre projet ATL | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DllMainCRTStartup
+- wWinMainCRTStartup
+- WinMainCRTStartup
+dev_langs: C++
+helpviewer_keywords:
+- CRT, linking with ATL
+- WinMainCRTStartup method
+- DllMainCRTStartup method
+- wWinMainCRTStartup method
+- ATL, C Run-Time library (CRT)
 ms.assetid: 650957ae-362c-4ecf-8b03-5d49138e8b5b
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 59f6fa9ada7c69814d1841b350afc247ec489704
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Linking to the CRT in Your ATL Project
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="linking-to-the-crt-in-your-atl-project"></a>Liaison vers le CRT dans votre projet ATL
+Le [C Run-Time Libraries](../c-runtime-library/crt-library-features.md) (CRT) fournissent de nombreuses fonctions qui facilitent le programmation pendant le développement ATL. Tous les projets ATL lier à la bibliothèque CRT. Vous pouvez voir les avantages et inconvénients de la liaison de méthode dans [avantages et limitations de la méthode utilisée pour le lien vers la bibliothèque CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md).  
+  
+## <a name="effects-of-linking-to-the-crt-on-your-program-image"></a>Effets de la liaison vers le CRT sur l’Image de votre programme  
+ Si vous liez statiquement à la bibliothèque CRT, le code à partir de la bibliothèque CRT est placé dans votre image exécutable et vous n’avez pas besoin de disposer de la DLL CRT présents sur un système pour exécuter votre image. Si vous liez dynamiquement à la bibliothèque CRT, les références au code dans la DLL CRT sont placés dans votre image, mais pas le code lui-même. Dans l’ordre de votre image pour s’exécuter sur un système donné, la DLL CRT doit être présente sur ce système. Même lorsque vous liez dynamiquement à la bibliothèque CRT, vous découvrirez peut-être que du code peut être lié statiquement (par exemple, **DllMainCRTStartup**).  
+  
+ Lorsque vous liez votre image, implicitement ou explicitement spécifier un point d’entrée que le système d’exploitation appellera après le chargement de l’image. Pour une DLL, le point d’entrée par défaut est **DllMainCRTStartup**. Pour un EXE, il est **WinMainCRTStartup**. Vous pouvez remplacer la valeur par défaut avec l’option de l’éditeur de liens /ENTRY. La bibliothèque CRT fournit une implémentation pour **DllMainCRTStartup**, **WinMainCRTStartup**, et **wWinMainCRTStartup** (le point d’entrée Unicode pour un EXE). Ces points d’entrée fournis par le CRT appellent des constructeurs sur des objets globaux et initialiser les autres structures de données qui sont utilisées par certaines fonctions CRT. Ce code de démarrage ajoute environ 25 Ko à votre image si elle est liée de manière statique. S’il est lié dynamiquement, la plupart du code est dans la DLL, la taille de votre image reste petite.  
+  
+ Pour plus d’informations, consultez la rubrique de l’éditeur de liens [/ENTRY (symbole de Point d’entrée)](../build/reference/entry-entry-point-symbol.md).  
+  
+## <a name="optimization-options"></a>Options d’optimisation  
+ À l’aide de l’option de l’éditeur de liens/OPT : NOWIN98 permet de réduire un contrôle ATL par défaut de 10 K, aux dépens des produits augmentée du temps sur les systèmes Windows 98 de chargement. Pour plus d’informations sur la liaison des options, consultez [/OPT (optimisations)](../build/reference/opt-optimizations.md).  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Programmation avec ATL et le Code d’exécution C](../atl/programming-with-atl-and-c-run-time-code.md)   
+ [DLL et comportement de la bibliothèque runtime Visual C++](../build/run-time-library-behavior.md)
 
-[Bibliothèques runtime C](../c-runtime-library/crt-library-features.md) \(CRT\) fournissent de nombreuses fonctions utiles peuvent rendre programmer beaucoup plus facile pendant le développement ATL.  Tous les projets ATL sont liés à la bibliothèque CRT.  Vous pouvez consulter les avantages et les inconvénients de joindre la méthode dans [Avantages et compromis de la méthode utilisée à lier au CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md).  
-  
-## Effets de lier au CRT sur votre image de programme  
- Si vous liez de manière statique au CRT, le code du CRT est défini dans votre image exécutable et vous n'avez pas besoin d'avoir la DLL CRT présent sur un système d'exécuter votre image.  Si vous liez dynamiquement au CRT, les références au code dans la DLL CRT ne sont définies dans votre image, mais pas le code lui\-même.  Pour que votre image s'exécute sur un système donné, la DLL CRT doit être présent sur le système.  Même si vous liez dynamiquement au CRT, vous pouvez constater que du code peut être lié de manière statique \(par exemple, **DllMainCRTStartup**\).  
-  
- Lorsque vous attachez votre image, vous spécifiez explicitement ou implicitement un point d'entrée que le système d'exploitation appelle dans après chargement de l'image.  Pour une DLL, le point d'entrée par défaut est **DllMainCRTStartup**.  Pour un EXE, c'est **WinMainCRTStartup**.  Vous pouvez substituer la valeur par défaut avec l'option de l'éditeur de liens \/ENTRY.  Le CRT fournit une implémentation pour **DllMainCRTStartup**, **WinMainCRTStartup**, et **wWinMainCRTStartup** \(le point d'entrée Unicode pour un EXE\).  Ces Tube\- fournis aux constructeurs d'appel de points d'entrée dans les objets globaux et initialisent d'autres structures de données utilisées par des fonctions CRT.  Ce code de démarrage ajoute à propos de 25K à votre image s'il est lié de manière statique.  S'il est lié dynamiquement, la majeure partie du code est dans la DLL, votre taille de l'image reste petite.  
-  
- Pour plus d'informations, consultez la rubrique [\/ENTRY \(Symbole de point d'entrée\)](../build/reference/entry-entry-point-symbol.md)d'éditeur de liens.  
-  
-## Options d'optimisation  
- À l'aide de l'option de l'éditeur de liens \/OPT : NOWIN98 peut davantage réduire un contrôle par défaut ATL par 10K, aux dépens du temps de chargement augmenté sur les systèmes Windows 98.  Pour plus d'informations sur la liaison des options, consultez [\/OPT \(Optimisations\)](../build/reference/opt-optimizations.md).  
-  
-## Voir aussi  
- [Programmation avec ATL et le code C Run\-Time](../atl/programming-with-atl-and-c-run-time-code.md)   
- [Comportement de la bibliothèque runtime](../build/run-time-library-behavior.md)

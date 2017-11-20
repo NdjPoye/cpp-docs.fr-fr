@@ -1,30 +1,30 @@
 ---
-title: "Can I Host More Than One Control in a Single Window? | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [ATL], hosting multiple"
-  - "windows [C++], hosting multiple controls"
+title: "Puis-je héberger plusieurs contrôles dans une fenêtre unique ? | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [ATL], hosting multiple
+- windows [C++], hosting multiple controls
 ms.assetid: 3a967a1a-7e7e-42e3-8eed-f7bde912363f
-caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5fa1a1b914d7d9725e8f2d9858f0481bb7aa24a4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Can I Host More Than One Control in a Single Window?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il n'est pas possible d'héberger plusieurs contrôles dans une fenêtre unique d'hôte ATL.  Chaque fenêtre hôte est conçue pour contenir exactement un contrôle à la fois \(cela permet d'un mécanisme simple pour gérer des propriétés ambiantes de point d'arrêt de message et pour chaque contrôle\).  Toutefois, si vous avez besoin de l'utilisateur pour afficher plusieurs contrôles dans un guichet unique, il est chose facile de créer des fenêtres hôtes multiples comme enfants de cette fenêtre.  
+# <a name="can-i-host-more-than-one-control-in-a-single-window"></a>Puis-je héberger plusieurs contrôles dans une fenêtre unique ?
+Il n’est pas possible d’héberger plusieurs contrôles dans une seule fenêtre d’hôte ATL. Chaque fenêtre de l’hôte est conçu pour contenir exactement un contrôle à la fois (ainsi, un mécanisme simple pour la gestion des propriétés ambiantes message réflexion et par contrôle). Toutefois, si vous avez besoin de l’utilisateur de voir plusieurs contrôles dans une fenêtre unique, il est très simple pour créer plusieurs fenêtres de l’ordinateur hôte en tant qu’enfants de cette fenêtre.  
   
-## Voir aussi  
- [FAQ sur la relation contenant\-contenu des contrôles](../atl/atl-control-containment-faq.md)
+## <a name="see-also"></a>Voir aussi  
+ [Forum aux questions sur la contenance de contrôles](../atl/atl-control-containment-faq.md)
+

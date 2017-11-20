@@ -1,62 +1,63 @@
 ---
-title: "Prise en charge ATL pour les contr&#244;les DHTML | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DHTML (contrôles)"
-  - "DHTML (contrôles), ATL (prise en charge)"
-  - "contrôles HTML, ATL (prise en charge)"
+title: "Prise en charge ATL pour les contrôles DHTML | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- HTML controls, ATL support
+- DHTML controls, ATL support
+- DHTML controls
 ms.assetid: 4ba98098-da5d-4362-96ad-8372f816c307
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 16848150802ec3fb097f6d19f0b1b4f8b11c8f69
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Prise en charge ATL pour les contr&#244;les DHTML
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-À l'aide de ATL, vous pouvez créer un contrôle à la fonction dynamique HTML \(DHTML\).  Un contrôle ATL DHTML :  
+# <a name="atl-support-for-dhtml-controls"></a>Prise en charge ATL pour les contrôles DHTML
+ATL, vous pouvez créer un contrôle avec la fonctionnalité de Dynamic HTML (DHTML). Un contrôle ATL DHTML :  
   
 -   Héberge le contrôle WebBrowser.  
   
--   Spécifie, en utilisant HTML, l'interface utilisateur \(UI\) du contrôle DHTML.  
+-   Spécifie, à l’aide de HTML, l’interface utilisateur (IU) du contrôle DHTML.  
   
--   Accède à l'objet WebBrowser et à ses méthodes à son interface, [IWebBrowser2](https://msdn.microsoft.com/en-us/library/aa752127.aspx).  
+-   Accède à l’objet WebBrowser et ses méthodes via son interface, [IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx).  
   
--   Gère la communication entre le code C\+\+ et HTML.  
+-   Gère la communication entre le code C++ et HTML.  
   
- Un contrôle DHTML est semblable à tout autre contrôle ATL, à moins que le contrôle DHTML inclut une interface de dispatch supplémentaire.  Voir la figure dans [Identifier les éléments du projet de contrôle DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md) pour une illustration des interfaces fournies dans le DHTML par défaut pour un projet.  
+ Un contrôle DHTML est similaire à n’importe quel autre contrôle ATL, excepté le contrôle DHTML comprend une interface de dispatch supplémentaire. Voir la figure dans [identifier les éléments du projet de contrôle DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md) pour obtenir une illustration des interfaces fournies dans le projet DHTML par défaut.  
   
- Vous pouvez afficher le contrôle ATL DHTML dans un navigateur web ou un autre conteneur, comme ActiveX Control Test Container.  
+ Vous pouvez afficher le contrôle ATL DHTML dans un navigateur Web ou un autre conteneur, telles que ActiveX Control Test Container.  
   
-## Dans cette section  
- [Identifier les éléments du projet de contrôle DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md)  
- Décrit les éléments d'un projet de contrôle DHTML.  
+## <a name="in-this-section"></a>Dans cette section  
+ [Identification des éléments du projet de contrôle DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md)  
+ Décrit les éléments d’un projet de contrôle DHTML.  
   
- [Code C\+\+ appelant DHTML](../atl/calling-cpp-code-from-dhtml.md)  
- Fournit un exemple d'appeler le code C\+\+ d'un contrôle DHTML.  
+ [Appel de code C++ à partir de DHTML](../atl/calling-cpp-code-from-dhtml.md)  
+ Fournit un exemple d’appel de code C++ à partir d’un contrôle DHTML.  
   
- [Créer un contrôle ATL DHTML](../atl/creating-an-atl-dhtml-control.md)  
- Répertorie les étapes pour créer un contrôle DHTML.  
+ [Création d’un contrôle ATL DHTML](../atl/creating-an-atl-dhtml-control.md)  
+ Répertorie les étapes de création d’un contrôle DHTML.  
   
- [Tester le contrôle ATL DHTML](../atl/testing-the-atl-dhtml-control.md)  
- Montre comment générer et tester le projet de contrôle DHTML initiale.  
+ [Test du contrôle ATL DHTML](../atl/testing-the-atl-dhtml-control.md)  
+ Montre comment générer et tester le projet de contrôle DHTML initial.  
   
- [Modifier le contrôle ATL DHTML](../atl/modifying-the-atl-dhtml-control.md)  
- Montre comment ajouter certaines fonctionnalités au contrôle.  
+ [Modification du contrôle ATL DHTML](../atl/modifying-the-atl-dhtml-control.md)  
+ Montre comment ajouter des fonctionnalités au contrôle.  
   
- [Tester le contrôle modifié ATL DHTML](../atl/testing-the-modified-atl-dhtml-control.md)  
- Montre comment générer et tester la fonctionnalité ajoutée du contrôle.  
+ [Test du contrôle modifiée ATL DHTML](../atl/testing-the-modified-atl-dhtml-control.md)  
+ Montre comment générer et tester la fonctionnalité ajoutée au contrôle.  
   
-## Rubriques connexes  
+## <a name="related-sections"></a>Rubriques connexes  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Fournit des liens vers des rubriques conceptuelles sur comment programmer avec la bibliothèque ATL.
+ Propose des liens vers des rubriques conceptuelles traitant de la programmation à l'aide de la bibliothèque ATL (Active Template Library).
+

@@ -1,44 +1,44 @@
 ---
-title: "FpCsr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: MxFpCsrCsr | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: dff95d5d-7589-4432-82db-64b459c24352
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b97573e6d92465eea0f646a3c000f5677b73e486
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# FpCsr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'état du registre inclut également le mot de commande FPUx87.  La convention d'appel définit ce registre comme non volatil.  
+# <a name="fpcsr"></a>FpCsr
+L’état du Registre inclut également le x87 mot de commande FPU. La convention d’appel définit ce Registre comme non volatil.  
   
- Le registre du mot de commande FPU x87 possède les valeurs standard suivantes au démarrage de l'exécution du programme :  
+ Le x87 Registre du mot de contrôle FPU est défini pour les valeurs standard suivantes au début de l’exécution du programme :  
   
 ```  
 FPCSR[0:6]: Exception masks all 1's (all exceptions masked)  
-FPCSR[7]: Reserved – 0  
-FPCSR[8:9]: Precision Control – 10B (double precision)  
+FPCSR[7]: Reserved - 0  
+FPCSR[8:9]: Precision Control - 10B (double precision)  
 FPCSR[10:11]: Rounding  control - 0 (round to nearest)  
-FPCSR[12]: Infinity control – 0 (not used)  
+FPCSR[12]: Infinity control - 0 (not used)  
 ```  
   
- Un appelé qui modifie l'un des champs dans FPCSR doit les restaurer avant de retourner à son appelant.  En outre, un appelant qui a modifié l'un de ces champs doit rétablir leur valeur standard avant d'appeler un appelé, à moins que, selon les termes d'un contrat, l'appelé attende les valeurs modifiées.  
+ Un appelant qui modifie l’un des champs dans FPCSR doit restaurer avant de retourner à son appelant. En outre, un appelant qui a modifié l’un de ces champs doive restaurer leurs valeurs standard avant d’appeler un appelant, sauf si le contrat de l’appelé attend les valeurs modifiées.  
   
- Il existe deux exceptions aux règles relatives à la rémanence des indicateurs de contrôle :  
+ Il existe deux exceptions aux règles relatives à la volatilité-non des indicateurs de contrôle :  
   
-1.  dans les fonctions dont l'objectif documenté consiste à modifier les indicateurs MxFpCsrCsr non volatils ;  
+1.  Dans les fonctions où documentée de la fonction donnée vise à modifier le MxFpCsrCsr non volatils indicateurs.  
   
-2.  lorsqu'il peut être prouvé que la violation des résultats de ces règles dans un programme qui se comporte de la même manière ou a la même signification qu'un programme où ces règles ne sont pas enfreintes \(par exemple, par le biais d'une analyse de l'intégralité d'un programme\).  
+2.  Lorsqu’il est prouvée corriger que les résultats de la violation de ces règles dans un programme qui se comporte ou a la même en tant que programme où ces règles ne sont pas violées, par exemple, via l’analyse de la totalité du programme.  
   
-## Voir aussi  
- [Convention d'appel](../build/calling-convention.md)
+## <a name="see-also"></a>Voir aussi  
+ [Convention d’appel](../build/calling-convention.md)

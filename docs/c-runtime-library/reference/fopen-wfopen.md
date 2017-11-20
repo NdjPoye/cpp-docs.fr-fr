@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _tfopen
 - corecrt_wstdio/_wfopen
 - stdio/fopen
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - opening files, for file I/O
 - wfopen function
@@ -41,30 +39,15 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 7d432ab9e8bdb6f386eb6fe4fbb24d218d6a2071
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: c5a81cdcba10d65c496a946fb8847fdb09b1ff70
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 Ouvre un fichier. Des versions plus sécurisées de ces fonctions qui effectuent des validations supplémentaires des paramètres et retournent des codes d’erreur sont disponibles. Consultez [fopen_s, _wfopen_s](../../c-runtime-library/reference/fopen-s-wfopen-s.md).  
@@ -203,12 +186,12 @@ FILE *_wfopen(
   
 |Caractères en mode chaîne|Valeur `oflag` équivalente pour `_open`/`_sopen`|  
 |-------------------------------|----------------------------------------------------|  
-|`a`|`_O_WRONLY &#124; _O_APPEND`(généralement `_O_WRONLY &#124; _O_CREAT &#124; _O_APPEND`)|  
+|`a`|`_O_WRONLY &#124; _O_APPEND` (généralement `_O_WRONLY &#124; _O_CREAT &#124; _O_APPEND`)|  
 |`a+`|`_O_RDWR &#124; _O_APPEND` (généralement `_O_RDWR &#124; _O_APPEND &#124; _O_CREAT` )|  
 |`r`|`_O_RDONLY`|  
 |`r+`|`_O_RDWR`|  
-|`w`|`_O_WRONLY`(généralement `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`)|  
-|`w+`|`_O_RDWR`(généralement `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`)|  
+|`w`|`_O_WRONLY` (généralement `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`)|  
+|`w+`|`_O_RDWR` (généralement `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`)|  
 |`b`|`_O_BINARY`|  
 |`t`|`_O_TEXT`|  
 |`c`|Aucun|  

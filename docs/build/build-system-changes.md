@@ -1,78 +1,77 @@
 ---
-title: "Modifications du syst&#232;me de g&#233;n&#233;ration | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.msbuild.changes"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modifications du système de génération, $(Inherit)"
-  - "modifications du système de génération, $(NoInherit)"
-  - "modifications du système de génération, .vsprops"
-  - "modifications du système de génération, règles de génération personnalisée"
-  - "modifications du système de génération, MSBuild"
-  - "modifications du système de génération, fichier projet (.vcxprog)"
-  - "MSBuild, modifications du système de génération"
+title: "Modifications du système de génération | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.msbuild.changes
+dev_langs: C++
+helpviewer_keywords:
+- Build system changes, project file (.vcxprog)
+- Build system changes, custom build rules
+- Build system changes, MSBuild
+- MSBuild, build system changes
+- Build system changes, .vsprops
+- Build system changes, $(Inherit)
+- Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 90266f54dd6972e68abe770bad4ee323eebf46b7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Modifications du syst&#232;me de g&#233;n&#233;ration
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le système MSBuild est utilisé pour générer les projets Visual C\+\+.  Toutefois, dans Visual Studio 2008 et ses versions antérieures, le système de VCBuild a été utilisé.  Certains types de fichiers et concepts qui dépendaient de VCBuild n'existent plus ou sont représentés différemment dans le système actuel.  Ce document présente les différences du système de génération actuel.  
+# <a name="build-system-changes"></a>Modifications du système de génération
+Le système MSBuild est utilisé pour générer des projets Visual C++. Toutefois, dans Visual Studio 2008 et versions antérieures, le système de VCBuild a été utilisé. Certains types de fichiers et les concepts qui dépendaient de VCBuild n’existent pas ou sont représentés différemment dans le système actuel. Ce document explique les différences dans le système de génération en cours.  
   
-## .vcproj est désormais .vcxproj  
- Les fichiers projet n'utilisent plus l'extension de nom de fichier .vcproj.  Visual Studio convertit automatiquement les fichiers projet créés avec une version antérieure de Visual C\+\+ au format utilisé par le système actuel.  Pour plus d'informations sur la mise à niveau manuelle d'un projet, consultez [\/Upgrade](../Topic/-Upgrade%20\(devenv.exe\).md).  
+## <a name="vcproj-is-now-vcxproj"></a>.vcproj est désormais .vcxproj  
+ Fichiers de projet ne plus utilisent l’extension de nom de fichier .vcproj. Visual Studio convertit automatiquement les fichiers projet qui ont été créés par une version antérieure de Visual C++ au format utilisé par le système actuel. Pour plus d’informations sur la façon de mettre à niveau un projet, consultez [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe).  
   
- Dans la version actuelle, l'extension de nom de fichier des fichiers projet est .vcxproj.  
+ Dans la version actuelle, l’extension de nom de fichier d’un fichier projet est .vcxproj.  
   
-## .vsprops est désormais .props  
- Dans les versions antérieures, une *feuille de propriétés de projet* est un fichier XML dont l'extension de nom de fichier est .vsprops.  Une feuille de propriétés de projet vous permet de spécifier des commutateurs pour les outils de génération tels que le compilateur ou l'éditeur de liens et de créer des macros définies par l'utilisateur.  
+## <a name="vsprops-is-now-props"></a>.vsprops est désormais .props  
+ Dans les versions antérieures, un *feuille de propriétés de projet* est un fichier XML qui possède une extension de nom de fichier .vsprops. Une feuille de propriétés de projet vous permet de spécifier des commutateurs pour les outils de génération tels que le compilateur ou l’éditeur de liens et de créer des macros définies par l’utilisateur.  
   
- Dans la version actuelle, l'extension de nom de fichier d'une feuille de propriété de projet est .props.  
+ Dans la version actuelle, l’extension de nom de fichier pour une feuille de propriétés de projet est .props.  
   
-## Règles de génération personnalisée et fichiers .rules  
- Dans les versions antérieures, un *fichier de règles* est un fichier XML dont l'extension de nom de fichier est .rules.  Un fichier de règles vous permet de définir des règles de génération personnalisée et de les incorporer au processus de génération d'un projet Visual C\+\+.  Une règle de génération personnalisée, qui peut être associée à une ou plusieurs extensions de nom de fichier, vous permet de passer des fichiers d'entrée à un outil qui crée un ou plusieurs fichiers de sortie.  
+## <a name="custom-build-rules-and-rules-files"></a>Fichiers .rules et les règles de génération personnalisée  
+ Dans les versions antérieures, un *fichier de règles* est un fichier XML qui possède une extension de nom de fichier .rules. Un fichier de règles vous permet de définir des règles de génération personnalisée et les incorporer dans le processus de génération d’un projet Visual C++. Une règle de génération personnalisée, qui peut être associée à une ou plusieurs extensions de nom de fichier, vous permet de passer des fichiers d’entrée à un outil qui crée un ou plusieurs fichiers de sortie.  
   
- Dans cette version, les règles de génération personnalisée sont représentées par trois types de fichier, à savoir .xml, .props et .targets, au lieu d'un fichier .rules.  Lorsqu'un fichier .rules créé à l'aide d'une version antérieure de Visual C\+\+ est migré vers la version actuelle, les fichiers .xml, .props et .targets correspondants sont créés et stockés dans votre projet avec le fichier .rules d'origine.  
+ Dans cette version, les règles de génération personnalisée sont représentées par trois types de fichiers .xml, .props et .targets, au lieu d’un fichier .rules. Lorsqu’un fichier .rules qui a été créé à l’aide d’une version antérieure de Visual C++ est migré vers la version actuelle, les fichiers .xml, .props et .targets équivalents sont créées et stockées dans votre projet avec le fichier .rules d’origine.  
   
 > [!IMPORTANT]
->  Dans la version actuelle, le [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)] ne prend pas en charge la création de nouvelles règles.  Pour cette raison, la façon la plus simple d'utiliser un fichier de règle d'un projet créé à l'aide d'une version antérieure de Visual C\+\+ est de migrer le projet vers la version actuelle.  
+>  Dans la version actuelle, le [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)] ne prend pas en charge la création de nouvelles règles. Pour cette raison, le plus simple à utiliser un fichier de règles à partir d’un projet qui a été créé à l’aide d’une version antérieure de Visual C++ consiste à migrer le projet vers la version actuelle.  
   
-## Macros d'héritage  
- Dans les versions antérieures, la macro **$\(Inherit\)** spécifie l'ordre dans lequel les propriétés héritées s'affichent sur la ligne de commande, qui est composée par le système de génération de projet.  Avec la macro **$\(NoInherit\)**, toutes les occurrences de $\(Inherit\) sont ignorées et toutes les propriétés devant être héritées ne sont pas héritées.  Par exemple, la macro $\(Inherit\) entraîne par défaut l'ajout des fichiers spécifiés à l'aide de l'option du compilateur [\/I \(Autres répertoires Include\)](../build/reference/i-additional-include-directories.md) à la ligne de commande.  
+## <a name="inheritance-macros"></a>Macros d’héritage  
+ Dans les versions antérieures, le **$ (Inherit)** (macro) spécifie l’ordre dans lequel les propriétés héritées apparaissent sur la ligne de commande qui est composée par le système de génération de projet. Le **$ (NoInherit)** (macro), toutes les occurrences de $ (Inherit) sont ignorées et toutes les propriétés devant être héritées, pas être héritée. Par exemple, par défaut la macro $ (Inherit) génère des fichiers spécifiés à l’aide de la [/I (autres répertoires Include)](../build/reference/i-additional-include-directories.md) option du compilateur à ajouter à la ligne de commande.  
   
- Dans la version actuelle, l'héritage est pris en charge en spécifiant la valeur d'une propriété sous la forme d'une concaténation d'une ou plusieurs valeurs littérales et macros de propriété.  Les macros **$\(Inherit\)** et **$\(NoInherit\)** ne sont pas prises en charge.  
+ L’héritage est pris en charge dans la version actuelle, en spécifiant la valeur d’une propriété comme la concaténation d’une ou plusieurs valeurs littérales et macros de propriété. Le **$ (Inherit)** et **$ (NoInherit)** macros ne sont pas prises en charge.  
   
- Dans l'exemple suivant, une liste délimitée par des points\-virgules est assignée à une propriété dans une page de propriétés.  La liste se compose de la concaténation du littéral *\<value\>* et de la valeur de la propriété `MyProperty`, accessible à l'aide de la notation macro **$\(***MyProperty***\)**.  
+ Dans l’exemple suivant, une liste délimitée par des points-virgules est assignée à une propriété sur une page de propriétés. La liste se compose de la concaténation de la  *\<valeur >* littéral et la valeur de la `MyProperty` propriété, qui est accessible à l’aide de la notation de macro, **$(**  *MyProperty***)**.  
   
 ```  
 Property=<value>;$(MyProperty)  
 ```  
   
-## Fichiers .vcxproj.user  
- Par exemple, un fichier utilisateur \(.vcxproj.user\) stocke des propriétés spécifiques à l'utilisateur telles que les paramètres de débogage et de déploiement.  Le fichier vcxproj.user s'applique à tous les projets d'un utilisateur particulier.  
+## <a name="vcxprojuser-files"></a>. vcxproj.user fichiers  
+ Un fichier utilisateur (. vcxproj.user) stocke des propriétés spécifiques à l’utilisateur pour les paramètres de l’exemple, de débogage et de déploiement. Le fichier vcxproj.user s’applique à tous les projets pour un utilisateur particulier.  
   
-## Fichier .vcxproj.filters  
- Lorsque l'**Explorateur de solutions** est utilisé pour ajouter un fichier à un projet, le fichier de filtre \(.vcxproj.filters\) définit l'emplacement auquel le fichier est ajouté dans l'arborescence **Explorateur de solutions**, en fonction de son extension de nom de fichier.  
+## <a name="vcxprojfilters-file"></a>. vcxproj.filters fichier  
+ Lorsque **l’Explorateur de solutions** est utilisée pour ajouter un fichier à un projet, le fichier de filtres (. vcxproj.filters) définit où, dans le **l’Explorateur de solutions** arborescence le fichier est ajouté, en fonction de son extension de nom de fichier.  
   
-## Paramètres de répertoires VC\+\+  
- Les paramètres de répertoires Visual C\+\+ sont spécifiés dans la [Page de propriétés Répertoires VC\+\+](../ide/vcpp-directories-property-page.md).  Dans les versions antérieures de Visual Studio, les paramètres de répertoires s'appliquent par utilisateur et la liste de répertoires exclus est spécifiée dans le fichier sysincl.dat.  
+## <a name="vc-directories-settings"></a>Paramètres de répertoires VC ++  
+ Paramètres de répertoires Visual C++ sont spécifiés sur le [Page de propriétés répertoires VC ++](../ide/vcpp-directories-property-page.md). Dans les versions antérieures de Visual Studio, les paramètres de répertoires s’appliquent par utilisateur et la liste de répertoires exclus est spécifiée dans le fichier sysincl.dat.  
   
- Vous ne pouvez pas modifier les paramètres de répertoires VC\+\+ si vous exécutez [devenv \/resetsettings](../Topic/-ResetSettings%20\(devenv.exe\).md) à la ligne de commande.  De la même façon, il n'est pas possible de modifier les paramètres lorsque vous ouvrez le menu **Outils**, cliquez sur **Importation et exportation de paramètres**, puis sélectionnez l'option **Réinitialiser tous les paramètres**.  
+ Vous ne pouvez pas modifier les paramètres de répertoires VC ++ si vous exécutez [devenv /resetsettings](/visualstudio/ide/reference/resetsettings-devenv-exe) à la ligne de commande. Vous ne pouvez pas également modifier les paramètres si vous ouvrez le **outils** menu, cliquez sur **importation et exportation de paramètres**, puis sélectionnez le **réinitialiser tous les paramètres** option.  
   
- Migrez les paramètres de répertoires VC\+\+ à partir d'un fichier .vssettings créé dans une version antérieure de Visual C\+\+.  Ouvrez le menu **Outils**, cliquez sur **Importation et exportation de paramètres**, sélectionnez **Importer les paramètres d'environnement sélectionnés**, puis suivez les instructions de l'Assistant.  Ou, lorsque vous démarrez Visual Studio pour la première fois, dans la boîte de dialogue **Choisir les paramètres d'environnement par défaut**, sélectionnez **Migrer mes paramètres éligibles depuis une version précédente et les ajouter aux paramètres par défaut sélectionnés ci\-dessous**.  
+ Migrer les paramètres de répertoires VC ++ à partir d’un fichier .vssettings créé par une version antérieure de Visual C++. Ouvrez le **outils** menu, cliquez sur **importation et exportation de paramètres**, sélectionnez **importer les paramètres d’environnement sélectionnés**, puis suivez les instructions de l’Assistant. Ou lorsque vous démarrez Visual Studio pour la première fois, sur le **choisissez Paramètres d’environnement par défaut** boîte de dialogue, sélectionnez **migrer mes paramètres éligibles depuis une version précédente et de les appliquer en plus des paramètres par défaut sélectionné ci-dessous**.  
   
-## Voir aussi  
- [MSBuild \(Visual C\+\+\)](../build/msbuild-visual-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)

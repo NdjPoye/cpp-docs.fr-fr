@@ -1,38 +1,38 @@
 ---
-title: "ODBC&#160;: configuration d&#39;une source de donn&#233;es ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "configurer les sources de données ODBC"
-  - "ODBC (connexions), configurer"
-  - "sources de données ODBC, configurer"
+title: "ODBC : Configuration d’une Source de données ODBC | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC data sources, configuring
+- ODBC connections, configuring
+- configuring ODBC data sources
 ms.assetid: 1cd03e6a-8d59-4eca-a8c6-1010582d5e67
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8e347683a079227226513ce82f9623860e826228
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# ODBC&#160;: configuration d&#39;une source de donn&#233;es ODBC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Pour utiliser une [source de données](../../data/odbc/data-source-odbc.md) avec une application que vous avez développée, vous devez utiliser l'Administrateur ODBC pour la configurer.  L'Administrateur ODBC assure le suivi des sources de données disponibles et des informations relatives à leurs connexions dans le Registre Windows.  Utilisez l'Administrateur ODBC pour ajouter, modifier et supprimer les sources de données dans la boîte de dialogue **Sources de données** ainsi que pour ajouter et supprimer des pilotes ODBC.  
+# <a name="odbc-configuring-an-odbc-data-source"></a>ODBC : configuration d'une source de données ODBC
+Pour utiliser un [source de données](../../data/odbc/data-source-odbc.md) avec une application que vous avez développés, vous devez utiliser l’administrateur ODBC pour la configurer. L’administrateur ODBC assure le suivi des sources de données disponibles et leurs informations de connexion dans le Registre Windows. Utilisez l’administrateur ODBC pour ajouter, modifier et supprimer des sources de données dans le **des Sources de données** boîte de dialogue et d’ajouter et supprimer des pilotes ODBC.  
   
 > [!NOTE]
->  Ces informations s'appliquent lorsque vous utilisez les classes DAO \(Data Access Object\) MFC pour accéder à ODBC, ainsi que lorsque vous utilisez les classes ODBC MFC.  
+>  Ces informations s’appliquent lorsque vous utilisez les classes de données Access objet DAO (MFC) pour accéder à ODBC et lorsque vous utilisez les classes ODBC MFC.  
   
- L'Administrateur ODBC est automatiquement installé avec la prise en charge de base de données de la bibliothèque MFC \(Microsoft Foundation Classes\).  Pour plus d'informations sur le programme d'administration ODBC, consultez [Administrateur ODBC](../../data/odbc/odbc-administrator.md) et le système d'aide en ligne ODBC API Reference.  
+ Administrateur ODBC est automatiquement installé avec la prise en charge de la base de données de la bibliothèque Microsoft Foundation Classes (MFC). Pour plus d’informations sur le programme Administrateur ODBC, consultez [administrateur ODBC](../../data/odbc/odbc-administrator.md) et le système d’aide ODBC API Reference en ligne.  
   
- La [Technical Note 48](../../mfc/tn048-writing-odbc-setup-and-administration-programs.md) explique comment écrire des programmes d'installation et d'administration ODBC pour les applications de base de données MFC.  
+ Pour plus d’informations sur la façon d’écrire des programmes d’installation ODBC et d’Administration pour les applications de base de données MFC,[Technical Note 48](../../mfc/tn048-writing-odbc-setup-and-administration-programs.md).  
   
-## Voir aussi  
- [Éléments fondamentaux relatifs à ODBC](../../data/odbc/odbc-basics.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Principes de base ODBC](../../data/odbc/odbc-basics.md)   
  [ODBC : appel direct de fonctions API ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)

@@ -1,32 +1,30 @@
 ---
-title: "deque::deque (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::deque"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "deque (membre) (STL/CLR)"
+title: deque::deque (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::deque
+dev_langs: C++
+helpviewer_keywords: deque member [STL/CLR]
 ms.assetid: e5bc9511-619e-469c-b50a-e06858e7fce7
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fc08403d0d8cf7875700ca539a3e68a0ed788104
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# deque::deque (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Construit un objet container.  
+# <a name="dequedeque-stlclr"></a>deque::deque (STL/CLR)
+Construit un objet conteneur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 deque();  
@@ -39,70 +37,70 @@ template<typename InIt>
 deque(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### Paramètres  
- count  
- Nombre d'éléments à insérer.  
+#### <a name="parameters"></a>Paramètres  
+ `count`  
+ Nombre d’éléments à insérer.  
   
- premier  
+ `first`  
  Début de la plage à insérer.  
   
- last  
+ `last`  
  Fin de la plage à insérer.  
   
- right  
+ `right`  
  Objet ou plage à insérer.  
   
- val  
- Valeur de l'élément à insérer.  
+ `val`  
+ Valeur de l’élément à insérer.  
   
-## Notes  
- Le constructeur :  
+## <a name="remarks"></a>Remarques  
+ Le constructeur :  
   
  `deque();`  
   
- démarre la séquence contrôlée sans éléments.  Vous l'utilisez pour spécifier une séquence contrôlée initialement vide.  
+ Initialise la séquence contrôlée sans aucun élément. Il permet de spécifier une séquence contrôlée initiale vide.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `deque(deque<Value>% right);`  
   
- Initialise la séquence contrôlée avec la séquence `[``right``.`[deque::begin](../dotnet/deque-begin-stl-clr.md)`(),` `right``.`[deque::end](../dotnet/deque-end-stl-clr.md)`())`.  Vous l'utilisez pour spécifier une séquence contrôlée par initiale qui est une copie de la séquence contrôlée par l'objet vectoriel `right`.  
+ Initialise la séquence contrôlée par la séquence [`right.begin()`, `right.end()`). Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet deque `right`. Pour plus d’informations sur les itérateurs, consultez [deque::begin (STL/CLR)](../dotnet/deque-begin-stl-clr.md) et [deque::end (STL/CLR)](../dotnet/deque-end-stl-clr.md).  
   
- Le constructeur :  
+ Le constructeur :  
   
  `deque(deque<Value>^ right);`  
   
- Initialise la séquence contrôlée avec la séquence `[``right``->`[deque::begin](../dotnet/deque-begin-stl-clr.md)`(),` `right``->`[deque::end](../dotnet/deque-end-stl-clr.md)`())`.  Vous l'utilisez pour spécifier une séquence initiale contrôlée qui est une copie de la séquence contrôlée par l'objet de list dont le gestionnaire est `right`.  
+ Initialise la séquence contrôlée par la séquence [`right->begin()`, `right->end()`). Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet deque dont le handle est `right`.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `explicit deque(size_type count);`  
   
- démarrez la séquence contrôlée aux éléments de `count`  chacune avec la valeur `value_type()`.  Vous l'utilisez pour remplir un conteneur avec des éléments ayant la même valeur par défaut.  
+ Initialise la séquence contrôlée avec `count` éléments dont la valeur `value_type()`. Utilisez-le pour remplir le conteneur avec des éléments dont la valeur par défaut.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `deque(size_type count, value_type val);`  
   
- démarre la séquence contrôlée aux éléments de `count` chacune avec la valeur `val`.  Vous l'utilisez pour remplir un conteneur avec des éléments ayant la même valeur.  
+ Initialise la séquence contrôlée avec `count` éléments dont la valeur `val`. Utilisez-le pour remplir le conteneur avec des éléments dont la même valeur.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `template<typename InIt>`  
   
  `deque(InIt first, InIt last);`  
   
- Initialise la séquence contrôlée avec la séquence `[``first``,` `last``)`.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence.  
+ Initialise la séquence contrôlée par la séquence [`first`, `last`). Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `deque(System::Collections::Generic::IEnumerable<Value>^ right);`  
   
- démarre la séquence contrôlée avec la séquence indiquée par l'énumérateur `right`.  Vous l'utilisez pour faire de la séquence contrôlée d'une copie d'une séquence décrite par un énumérateur.  
+ Initialise la séquence contrôlée par la séquence désignée par l’énumérateur `right`. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par l’énumérateur.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // cliext_deque_construct.cpp   
 // compile with: /clr   
 #include <cliext/deque>   
@@ -156,20 +154,23 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **0 0 0**  
- **x x x x x x**  
- **x x x x x**  
- **x x x x x x**  
- **x x x x x x**  
- **x x x x x x**   
-## Configuration requise  
- **En\-tête :** \<cliext\/deque\>  
+```Output  
+size() = 0  
+ 0 0 0  
+ x x x x x x  
+ x x x x x  
+ x x x x x x  
+ x x x x x x  
+ x x x x x x  
+```  
   
- **Espace de noms :** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/deque >  
   
-## Voir aussi  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::assign](../dotnet/deque-assign-stl-clr.md)   
- [deque::generic\_container](../dotnet/deque-generic-container-stl-clr.md)   
- [operator\= \(deque\)](../dotnet/operator-assign-deque-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::Assign (STL/CLR)](../dotnet/deque-assign-stl-clr.md)   
+ [deque::generic_container (STL/CLR)](../dotnet/deque-generic-container-stl-clr.md)   
+ [operator= (deque) (STL/CLR)](../dotnet/operator-assign-deque-stl-clr.md)

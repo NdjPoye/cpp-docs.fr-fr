@@ -1,33 +1,30 @@
 ---
-title: ".XLIST | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".XLIST"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".XLIST directive"
+title: . XLIST | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .XLIST
+dev_langs: C++
+helpviewer_keywords: .XLIST directive
 ms.assetid: e90f04f4-82d0-4f6c-9568-7b3bca5060fb
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0f496c1270800297719aeb5a14332e2659373e81
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# .XLIST
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Consultez [.NOLIST](../../assembler/masm/dot-nolist.md).  
+# <a name="xlist"></a>.XLIST
+Consultez [. NOLIST](../../assembler/masm/dot-nolist.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,5 +32,5 @@ Consultez [.NOLIST](../../assembler/masm/dot-nolist.md).
   
 ```  
   
-## Voir aussi  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)

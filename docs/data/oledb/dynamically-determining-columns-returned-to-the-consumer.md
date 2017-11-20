@@ -1,31 +1,31 @@
 ---
-title: "D&#233;termination de mani&#232;re dynamique des colonnes retourn&#233;es au consommateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "signets (C++), déterminer les colonnes de manière dynamique"
-  - "déterminer les colonnes de manière dynamique (C++)"
+title: "Détermination de manière dynamique les colonnes retournées au consommateur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- bookmarks [C++], dynamically determining columns
+- dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ec9ba16d4d600a06cdc5e4fa3de5bf40a67de8d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# D&#233;termination de mani&#232;re dynamique des colonnes retourn&#233;es au consommateur
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les macros PROVIDER\_COLUMN\_ENTRY gèrent normalement l'appel **IColumnsInfo::GetColumnsInfo**.  Toutefois, parce qu'un consommateur peut choisir d'utiliser des signets, le fournisseur doit être capable de modifier les colonnes retournées si le consommateur demande un signet.  
+# <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Détermination de manière dynamique des colonnes retournées au consommateur
+Les macros PROVIDER_COLUMN_ENTRY gèrent normalement le **IColumnsInfo::GetColumnsInfo** appeler. Toutefois, étant donné que le consommateur peut choisir d’utiliser des signets, le fournisseur doit être en mesure de modifier les colonnes retournées selon que le consommateur demande un signet.  
   
- Pour gérer l'appel **IColumnsInfo::GetColumnsInfo**, supprimez la macro PROVIDER\_COLUMN\_MAP, qui définit une fonction `GetColumnInfo`, de l'enregistrement utilisateur `CAgentMan` dans MyProviderRS.h et remplacez\-la par la définition de votre propre fonction `GetColumnInfo` :  
+ Pour gérer les **IColumnsInfo::GetColumnsInfo** appeler, supprimez la macro PROVIDER_COLUMN_MAP, qui définit une fonction `GetColumnInfo`, à partir de la `CAgentMan` utilisateur Enregistrer dans MyProviderRS.h et remplacez-la par la définition de votre propre `GetColumnInfo` (fonction) :  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -48,11 +48,11 @@ public:
 };  
 ```  
   
- Ensuite, implémentez la fonction `GetColumnInfo` dans MyProviderRS.cpp, comme le montre le code suivant.  
+ Ensuite, implémentez la `GetColumnInfo` fonctionner dans MyProviderRS.cpp, comme indiqué dans le code suivant.  
   
- `GetColumnInfo` vérifie d'abord si la propriété OLE DB **DBPROP\_BOOKMARKS** est définie.  Pour obtenir la propriété, `GetColumnInfo` utilise un pointeur \(`pRowset`\) désignant l'objet rowset.  Le pointeur `pThis` représente la classe qui a créé l'ensemble de lignes qui est la classe contenant le mappage de propriété.  `GetColumnInfo` convertit le type du pointeur `pThis` en un pointeur `RMyProviderRowset`.  
+ `GetColumnInfo`vérifie tout d’abord si la propriété OLE DB **DBPROP_BOOKMARKS** est définie. Pour obtenir la propriété, `GetColumnInfo` utilise un pointeur (`pRowset`) à l’objet d’ensemble de lignes. Le `pThis` pointeur représente la classe qui a créé l’ensemble de lignes, qui est la classe où le mappage de propriété. `GetColumnInfo`Convertit le `pThis` pointeur vers un `RMyProviderRowset` pointeur.  
   
- Pour vérifier la présence de la propriété **DBPROP\_BOOKMARKS**, `GetColumnInfo` utilise l'interface `IRowsetInfo`, que vous pouvez obtenir en appelant `QueryInterface` sur l'interface `pRowset`.  Comme solution de rechange, vous pouvez utiliser une méthode ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md).  
+ Pour vérifier la **DBPROP_BOOKMARKS** propriété, `GetColumnInfo` utilise le `IRowsetInfo` interface que vous pouvez obtenir en appelant `QueryInterface` sur la `pRowset` interface. En guise d’alternative, vous pouvez utiliser un ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) méthode à la place.  
   
 ```  
 ////////////////////////////////////////////////////////////////////  
@@ -113,7 +113,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
 }  
 ```  
   
- Cet exemple loge les informations sur les colonnes dans un tableau statique.  Si le consommateur ne souhaite pas la colonne signets, une entrée du tableau reste inutilisée.  Pour gérer les informations, vous créez deux macros de tableau : ADD\_COLUMN\_ENTRY et ADD\_COLUMN\_ENTRY\_EX.  ADD\_COLUMN\_ENTRY\_EX prend un paramètre supplémentaire, `flags`, qui est nécessaire si vous désignez une colonne signets.  
+ Cet exemple utilise un tableau statique pour contenir les informations de colonne. Si le consommateur ne souhaite pas que la colonne des signets, une entrée dans le tableau est inutilisée. Pour gérer les informations, vous créez deux macros de tableau : ADD_COLUMN_ENTRY et ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX prend un paramètre supplémentaire, `flags`, qui est nécessaire si vous désignez une colonne de signet.  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -146,7 +146,7 @@ precision, scale, guid, dataClass, member, flags) \
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```  
   
- Dans la fonction `GetColumnInfo`, la macro de signets est utilisée de la façon suivante :  
+ Dans la `GetColumnInfo` fonction, la macro de signets est utilisée comme suit :  
   
 ```  
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),  
@@ -154,7 +154,7 @@ ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
    DBCOLUMNFLAGS_ISBOOKMARK)  
 ```  
   
- Vous pouvez à présent compiler et exécuter le fournisseur amélioré.  Pour tester le fournisseur, modifiez le consommateur de test comme décrit dans [Implémentation d'un consommateur simple](../../data/oledb/implementing-a-simple-consumer.md).  Exécutez le consommateur de test avec le fournisseur.  Vérifiez que le consommateur de test récupère les chaînes appropriées à partir du fournisseur lorsque vous cliquez sur le bouton **Exécuter** dans la boîte de dialogue **Consommateur de test**.  
+ Vous pouvez maintenant compiler et exécuter le fournisseur amélioré. Pour tester le fournisseur, modifiez le consommateur de test comme décrit dans [implémentation d’un consommateur Simple](../../data/oledb/implementing-a-simple-consumer.md). Exécutez le consommateur de test avec le fournisseur. Vérifiez que le consommateur de test récupère les chaînes appropriées à partir du fournisseur lorsque vous cliquez sur le **exécuter** situé dans le **consommateur de Test** boîte de dialogue.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Amélioration du fournisseur simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md)

@@ -1,41 +1,39 @@
 ---
-title: "deque::front (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::front"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre front [STL/CLR]"
+title: deque::Front (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::front
+dev_langs: C++
+helpviewer_keywords: front member [STL/CLR]
 ms.assetid: eb8cb5f2-346d-4d7a-bb7b-cf67fe4318e8
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bcf649af1b9b1b3bbd3442a7d957eab89dc80118
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# deque::front (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Accesses the first element.  
+# <a name="dequefront-stlclr"></a>deque::front (STL/CLR)
+Accède au premier élément.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 reference front();  
 ```  
   
-## Notes  
- The member function returns a reference to the first element of the controlled sequence, which must be non\-empty.  You use it to read or write the first element, when you know it exists.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre retourne une référence au premier élément de la séquence contrôlée, qui doit être vide. Vous l’utilisez pour lire ou écrire le premier élément, lorsque vous savez qu’il existe.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_deque_front.cpp   
@@ -67,16 +65,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**front\(\) \= a**  
- **x b c**   
-## Configuration requise  
- **Header:** \<cliext\/deque\>  
+```Output  
+ a b c  
+front() = a  
+ x b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/deque >  
   
-## Voir aussi  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::back](../dotnet/deque-back-stl-clr.md)   
- [deque::back\_item](../dotnet/deque-back-item-stl-clr.md)   
- [deque::front\_item](../dotnet/deque-front-item-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::Back (STL/CLR)](../dotnet/deque-back-stl-clr.md)   
+ [deque::back_item (STL/CLR)](../dotnet/deque-back-item-stl-clr.md)   
+ [deque::front_item (STL/CLR)](../dotnet/deque-front-item-stl-clr.md)

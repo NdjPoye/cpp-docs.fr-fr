@@ -5,14 +5,37 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
+f1_keywords:
+- atlbase/ATL::AtlGetHexValue
+- atlbase/ATL::AtlGetVersion
+- atlenc/ATL::AtlHexDecode
+- atlenc/ATL::AtlHexDecodeGetRequiredLength
+- atlenc/ATL::AtlHexEncode
+- atlenc/ATL::AtlHexEncodeGetRequiredLength
+- atlenc/ATL::AtlHexValue
+- atlenc/ATL::BEncode
+- atlenc/ATL::BEncodeGetRequiredLength
+- atlenc/ATL::EscapeXML
+- atlenc/ATL::GetExtendedChars
+- atlenc/ATL::IsExtendedChar
+- atlenc/ATL::QEncode
+- atlenc/ATL::QEncodeGetRequiredLength
+- atlenc/ATL::QPDecode
+- atlenc/ATL::QPDecodeGetRequiredLength
+- atlenc/ATL::QPEncode
+- atlenc/ATL::QPEncodeGetRequiredLength
+- atlenc/ATL::UUDecode
+- atlenc/ATL::UUDecodeGetRequiredLength
+- atlenc/ATL::UUEncode
+- atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-caps.latest.revision: 3
-translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: a7d4572f34a88192723c574e1b749947f76d819a
-ms.lasthandoff: 03/31/2017
-
+caps.latest.revision: "3"
+ms.openlocfilehash: d92ce766ea0fff11f104ae4f6d260d44faf85292
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atl-text-encoding-functions"></a>Codage des fonctions de texte ATL
 Ces fonctions prennent en charge le codage et décodage de texte.
@@ -77,7 +100,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ## <a name="example"></a>Exemple  
  La fonction doit être appelée comme suit.  
   
- [!code-cpp[NVC_ATL_Utilities #95](../../atl/codesnippet/cpp/atl-text-encoding-functions_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#95](../../atl/codesnippet/cpp/atl-text-encoding-functions_1.cpp)]  
   
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
@@ -242,7 +265,7 @@ inline BOOL BEncode(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Le schéma d’encodage « B » est décrite dans la RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
 ## <a name="bencodegetrequiredlength"></a>BEncodeGetRequiredLength 
@@ -301,7 +324,7 @@ inline int EscapeXML(
 ### <a name="return-value"></a>Valeur de retour  
  La longueur en caractères de la chaîne convertie.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Les conversions possibles effectuées par cette fonction sont affichées dans la table :  
   
 |Source|Destination|  
@@ -398,7 +421,7 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de caractères requis pour une mémoire tampon qui peut contenir des données encodées de `nSrcLen` octets.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Le schéma d’encodage « Q » est décrite dans la RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
 ## <a name="qpdecode"></a>QPDecode
@@ -432,7 +455,7 @@ inline BOOL QPDecode(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `TRUE` en cas de réussite, `FALSE` en cas d’échec.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Le schéma de codage quoted-printable est décrite dans RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
 ## <a name="qpdecodegetrequiredlength"></a>QPDecodeGetRequiredLength
@@ -449,7 +472,7 @@ inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’octets requis pour une mémoire tampon qui peut contenir une chaîne décodée de `nSrcLen` caractères.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Le schéma de codage quoted-printable est décrite dans RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
 ## <a name="qpencode"></a>QPEncode
@@ -487,7 +510,7 @@ Le schéma de codage quoted-printable est décrit dans [RFC 2045](http://www.iet
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Le schéma de codage quoted-printable est décrite dans RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
 ## <a name="qpencodegetrequiredlength"></a>QPEncodeGetRequiredLength
@@ -534,7 +557,7 @@ inline BOOL UUDecode(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette implémentation uuencoding suit la spécification de POSIX P1003.2b/D11.  
   
 ## <a name="uudecodegetrequiredlength"></a>UUDecodeGetRequiredLength
@@ -551,7 +574,7 @@ inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’octets requis pour une mémoire tampon qui peut contenir une chaîne décodée de `nSrcLen` caractères.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette implémentation uuencoding suit la spécification de POSIX P1003.2b/D11.  
   
 ## <a name="uuencode"></a>UUEncode

@@ -1,91 +1,91 @@
 ---
-title: "Recordset&#160;: calculs de totaux et autres r&#233;sultats de regroupement (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ODBC (recordsets), récupérer des valeurs agrégées SQL"
-  - "recordsets, récupérer des valeurs agrégées SQL"
-  - "récupérer les valeurs agrégées SQL à partir de recordsets"
-  - "SQL (valeurs d'agrégation)"
-  - "SQL (valeurs d'agrégation), récupérer à partir de recordsets"
-  - "projets SQL Server, récupérer les valeurs agrégées de recordsets"
-  - "SQL, récupérer les valeurs agrégées de recordsets"
+title: "Recordset : Calculs de totaux et autres résultats de regroupement (ODBC) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- SQL, retrieving aggregate values from recordsets
+- recordsets, retrieving SQL aggregate values
+- retrieving SQL aggregate values from recordsets
+- ODBC recordsets, retrieving SQL aggregate values
+- SQL aggregate values
+- SQL Server projects, retrieving aggregate values from recordsets
+- SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f69341095e2bf6ad97e3b9c3fa0535c349c47ca3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Recordset&#160;: calculs de totaux et autres r&#233;sultats de regroupement (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique s'applique aux classes ODBC MFC.  
+# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Recordset : calculs de totaux et autres résultats de regroupement (ODBC)
+Cette rubrique s’applique aux classes ODBC MFC.  
   
- La présente rubrique explique comment utiliser des résultats de regroupement à l'aide des mots clés [SQL](../../data/odbc/sql.md) suivants :  
+ Cette rubrique explique comment obtenir des résultats de regroupement à l’aide de ce qui suit [SQL](../../data/odbc/sql.md) mots clés :  
   
--   **SUM** Calcule le total des valeurs d'une colonne dont les données sont de type numérique.  
+-   **SOMME** calcule le total des valeurs dans une colonne avec un type de données numérique.  
   
--   **MIN** Extrait la plus petite valeur d'une colonne dont les données sont de type numérique.  
+-   **MIN** extrait la plus petite valeur dans une colonne avec un type de données numérique.  
   
--   **MAX** Extrait la plus grande valeur d'une colonne dont les données sont de type numérique.  
+-   **MAX** extrait la plus grande valeur dans une colonne avec un type de données numérique.  
   
--   **AVG** Calcule la valeur moyenne de toutes valeurs d'une colonne dont les données sont de type numérique.  
+-   **AVG** calcule la valeur moyenne de toutes les valeurs dans une colonne avec un type de données numérique.  
   
--   **COUNT** Comptabilise le nombre d'enregistrements d'une colonne, quel que soit le type de données.  
+-   **NOMBRE** compte le nombre d’enregistrements dans une colonne de tout type de données.  
   
- Ces fonctions SQL permettent d'obtenir des informations statistiques sur les enregistrements d'une source de données sans avoir à extraire les enregistrements.  Le recordset créé se compose généralement d'un seul enregistrement \(si les colonnes sont des regroupements\) contenant une valeur. \(Il peut y avoir plus d'un enregistrement si vous avez utilisé une clause **GROUP BY**.\) Cette valeur est le résultat du calcul ou de l'extraction effectué\(e\) par la fonction SQL.  
+ Vous utilisez ces fonctions SQL pour obtenir des informations statistiques sur les enregistrements dans une source de données et non pour extraire des enregistrements à partir de la source de données. Le jeu d’enregistrements est créé habituellement se compose d’un seul enregistrement (si toutes les colonnes sont des regroupements) qui contient une valeur. (Il peut y avoir plusieurs enregistrements si vous avez utilisé un **GROUP BY** clause.) Cette valeur est le résultat du calcul ou d’extraction effectuée par la fonction SQL.  
   
 > [!TIP]
->  Pour ajouter une clause SQL **GROUP BY** \(et éventuellement une clause **HAVING**\) à l'instruction SQL, ajoutez\-la à la fin de **m\_strFilter**.  Par exemple :  
+>  Pour ajouter une SQL **GROUP BY** clause (et éventuellement un **HAVING** clause) à votre instruction SQL, ajoutez-la à la fin de **m_strFilter**. Exemple :  
   
 ```  
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";  
 ```  
   
- Vous pouvez limiter le nombre d'enregistrements utilisés pour obtenir des résultats de regroupement en filtrant ou en triant les colonnes.  
+ Vous pouvez limiter le nombre d’enregistrements qui que vous permet d’obtenir des résultats de regroupement en filtrant et en triant les colonnes.  
   
 > [!CAUTION]
->  Certains opérateurs de regroupement retournent un type de données différent de la colonne ou des colonnes à partir de laquelle ou desquelles ils sont regroupés.  
+>  Certains opérateurs d’agrégation retournent un autre type de données à partir des colonnes sur lesquelles ils sont regroupés.  
   
--   **SUM** et **AVG** peuvent retourner le type de données immédiatement supérieur \(par exemple, un appel avec `int` retourne **LONG** ou **double**\).  
+-   **SOMME** et **AVG** peut retourner le type de données immédiatement supérieur (par exemple, l’appel avec `int` retourne **LONG** ou **double**).  
   
--   **COUNT** retourne généralement **LONG** indépendamment du type de la colonne cible.  
+-   **NOMBRE de** retourne généralement **LONG** , quelle que soit le type de colonne cible.  
   
--   **MAX** et **MIN** retournent le même type de données que celui des colonnes utilisées pour le calcul.  
+-   **MAX** et **MIN** retournent le même type de données que les colonnes utilisées pour le calcul.  
   
-     Par exemple, l'Assistant  **Ajouter une classe** crée `long` `m_lSales` pour recevoir la colonne Sales, mais vous devrez le remplacer par le membre de donnée `double m_dblSumSales` pour recevoir le résultat du regroupement.  Voir l'exemple suivant.  
+     Par exemple, le **ajouter une classe** crée `long` `m_lSales` pour prendre en charge de la colonne Sales, mais vous devez remplacer ceci avec un `double m_dblSumSales` membre de données pour recevoir le résultat du regroupement. Lisez l'exemple suivant.  
   
-#### Pour obtenir le résultat de regroupement d'un recordset  
+#### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Pour obtenir un résultat d’agrégation pour un jeu d’enregistrements  
   
-1.  Créez un recordset comme décrit dans [Ajout d'un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) et contenant la\(les\) colonne\(s\) à partir de laquelle \(desquelles\) vous voulez obtenir les résultats de regroupement.  
+1.  Créer un jeu d’enregistrements, comme décrit dans [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) contenant les colonnes à partir de laquelle vous souhaitez obtenir des résultats de regroupement.  
   
-2.  Modifiez la fonction [DoFieldExchange](../Topic/CRecordset::DoFieldExchange.md) du recordset.  Remplacez la chaîne représentant le nom de colonne \(deuxième argument des appels de fonction [RFX](../../data/odbc/record-field-exchange-using-rfx.md)\) par celle représentant la fonction de regroupement de la colonne.  Par exemple, remplacez :  
+2.  Modifier la [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) fonction du jeu d’enregistrements. Remplacez la chaîne représentant le nom de colonne (le deuxième argument de la [RFX](../../data/odbc/record-field-exchange-using-rfx.md) appels de fonction) avec une chaîne qui représente la fonction d’agrégation sur la colonne. Par exemple, remplacez :  
   
     ```  
     RFX_Long(pFX, "Sales", m_lSales);  
     ```  
   
-     par  
+     avec :  
   
     ```  
     RFX_Double(pFX, "Sum(Sales)", m_dblSumSales)  
     ```  
   
-3.  Ouvrez le recordset.  Le résultat de l'opération de regroupement se trouve dans `m_dblSumSales`.  
+3.  Ouvrez le jeu d’enregistrements. Le résultat de l’opération d’agrégation est conservé dans `m_dblSumSales`.  
   
 > [!NOTE]
->  L'Assistant assigne effectivement les noms des membres de données sans préfixes Hongrois.  Par exemple, l'Assistant génère `m_Sales` pour la colonne Sales, plutôt que le nom `m_lSales` utilisé préalablement aux fins d'illustration.  
+>  En fait, l’Assistant attribue des noms de membres de données sans préfixes Hongrois. Par exemple, l’Assistant génère `m_Sales` pour la colonne Sales, plutôt que `m_lSales` nom utilisé précédemment, à titre d’illustration.  
   
- Si vous utilisez une classe [CRecordView](../../mfc/reference/crecordview-class.md) pour visualiser les données, vous devez modifier l'appel de fonction DDX pour afficher la nouvelle valeur du membre de données. Dans le cas présent, il faudrait changer  
+ Si vous utilisez un [CRecordView](../../mfc/reference/crecordview-class.md) de classes pour afficher les données, vous devez modifier l’appel de fonction DDX pour afficher la nouvelle valeur du membre de données ; dans ce cas, la modifier à partir de :  
   
 ```  
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);  
@@ -97,6 +97,6 @@ DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);  
 ```  
   
-## Voir aussi  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Recordset : sélection d'enregistrements par les recordsets \(ODBC\)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+## <a name="see-also"></a>Voir aussi  
+ [Jeu d’enregistrements (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Recordset : sélection d’enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

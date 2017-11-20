@@ -1,54 +1,53 @@
 ---
-title: "com::ptr, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "com::ptr"
-  - "msclr::com::ptr"
-  - "msclr.com.ptr"
-  - "com.ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr (classe)"
+title: com::PTR, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- com::ptr
+- msclr::com::ptr
+- msclr.com.ptr
+- com.ptr
+dev_langs: C++
+helpviewer_keywords: ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fc7dbfdd5ca20ab330a0c4dd855593b6c91fb953
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# com::ptr, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Un wrapper d'un objet COM qui peut être utilisé en tant que membre d'une classe CLR.  Le wrapper automatise également la gestion de la durée de vie de l'objet COM, libérant toutes les références détenues sur l'objet lorsque son destructeur est appelé.  Analogue à [CComPtr Class](../atl/reference/ccomptr-class.md).  
+# <a name="comptr-class"></a>com::ptr, classe
+Wrapper pour un objet COM qui peut être utilisé en tant que membre d’une classe CLR.  Le wrapper automatise également la gestion de la durée de vie de l’objet COM à libérer détenus toutes les références sur l’objet lorsque son destructeur est appelé. Analogue à [classe CComPtr](../atl/reference/ccomptr-class.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<class _interface_type>  
 ref class ptr;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `_interface_type`  
- interface COM.  
+ Interface COM.  
   
-## Notes  
- Un `com::ptr` peut également être utilisé comme une variable de fonction locale pour simplifier différentes tâches COM et automatiser la gestion de la durée de vie.  
+## <a name="remarks"></a>Remarques  
+ Un `com::ptr` peut également servir comme une variable de fonction locale pour simplifier les différentes tâches de COM et d’automatiser la gestion de la durée de vie.  
   
- Un `com::ptr` ne peut pas être utilisé directement comme un paramètre de fonction ; utilisez [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md) ou [Handle sur l'opérateur Object \(^\)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) à la place.  
+ A `com::ptr` ne peut pas être utilisé directement comme un paramètre de fonction ; utilisez un [opérateur de référence de suivi](../windows/tracking-reference-operator-cpp-component-extensions.md) ou un [Handle sur l’opérateur Object (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) à la place.  
   
- Un `com::ptr` ne peut plus être directement renvoyé depuis fonction ; utilisez un descripteur à la place.  
+ Un `com::ptr` ne peut pas être retourné directement à partir d’une fonction ; utilisez un handle à la place.  
   
-## Exemple  
- Cet exemple implémente une classe CLR qui utilise `com::ptr` pour encapsuler son objet membre privé `IXMLDOMDocument`.  Appeler les méthodes publiques de la classe amène des appels à l'objet `IXMLDOMDocument` contenu.  L'exemple crée une instance d'un document XML, la remplit avec un certain XML simple ; il effectue un parcours simplifié des nœuds dans l'arborescence analysée du document pour imprimer le XML sur la console.  
+## <a name="example"></a>Exemple  
+ Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet.  Les méthodes publiques de la classe entraîne l’appel dans les appels à la relation contenant-contenu `IXMLDOMDocument` objet.  L’exemple crée une instance d’un document XML, il remplit avec du code XML simple et est un parcours simplifié des nœuds dans l’arborescence du document analysé pour imprimer le code XML dans la console.  
   
 ```  
 // comptr.cpp  
@@ -158,12 +157,15 @@ int main() {
 }  
 ```  
   
-  **\<mot\>persnickety\<\/mot\>**   
-## Configuration requise  
- **Fichier d'en\-tête** \<msclr\\com\\ptr.h\>  
+```Output  
+<word>persnickety</word>  
+```  
   
- **Espace de nom** msclr::com  
+## <a name="requirements"></a>Spécifications  
+ **Fichier d’en-tête** \<msclr\com\ptr.h >  
   
-## Voir aussi  
- [Bibliothèque de prise en charge C\+\+](../dotnet/cpp-support-library.md)   
+ **Namespace** msclr::com  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Bibliothèque de prise en charge C++](../dotnet/cpp-support-library.md)   
  [ptr, membres](../dotnet/ptr-members.md)

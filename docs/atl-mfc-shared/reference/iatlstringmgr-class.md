@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,39 +15,23 @@ f1_keywords:
 - ATLSIMPSTR/ATL::Free
 - ATLSIMPSTR/ATL::GetNilString
 - ATLSIMPSTR/ATL::Reallocate
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - shared classes, IAtlStringMgr
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 4ff4aa01a6d30f377560962f98a5892bdcc37837
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: cb5d582b73184d562f84363fa27bfc20a63f1d1f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="iatlstringmgr-class"></a>IAtlStringMgr (classe)
+# <a name="iatlstringmgr-class"></a>Classe de IAtlStringMgr
 Cette classe représente l’interface pour un `CStringT` Gestionnaire de mémoire.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -67,12 +50,12 @@ __interface IAtlStringMgr
 |[Clone](#clone)|Appelez cette méthode pour retourner un pointeur vers un nouveau gestionnaire de chaîne pour une utilisation avec une autre instance de `CSimpleStringT`.|  
 |[Gratuit](#free)|Appelez cette méthode pour libérer une structure de données de chaîne.|  
 |[GetNilString](#getnilstring)|Retourne un pointeur vers le `CStringData` objet utilisé par les objets de la chaîne vide.|  
-|[Réallouer](#reallocate)|Appelez cette méthode pour réaffecter une structure de données de chaîne.|  
+|[Réallouer](#reallocate)|Appelez cette méthode pour réallouer une structure de données de chaîne.|  
   
 ## <a name="remarks"></a>Remarques  
  Cette interface gère la mémoire utilisée par les classes de chaîne indépendant des MFC ; comme [CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md), [CStringT](../../atl-mfc-shared/reference/cstringt-class.md), et [CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md).  
   
- Vous pouvez également utiliser cette classe pour implémenter un gestionnaire de mémoire personnalisé pour votre classe de chaîne personnalisée. Pour plus d’informations, consultez [gestion de la mémoire et CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
+ Vous pouvez également utiliser cette classe pour implémenter un gestionnaire de mémoire personnalisés pour votre classe de chaîne personnalisée. Pour plus d’informations, consultez [gestion de la mémoire et CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlsimpstr.h  
@@ -89,7 +72,7 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
  Le nombre de caractères dans le nouveau bloc de mémoire.  
   
  `nCharSize`  
- La taille (en octets) du type de caractères utilisé par le Gestionnaire de chaînes.  
+ La taille (en octets) du type de caractère utilisé par le Gestionnaire de chaîne.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers le bloc de mémoire nouvellement alloué.  
@@ -114,7 +97,7 @@ IAtlStringMgr* Clone() throw();
  Retourne une copie de la `IAtlStringMgr` objet.  
   
 ### <a name="remarks"></a>Remarques  
- Appelé par l’infrastructure lorsqu’un gestionnaire de chaînes est nécessaire pour une nouvelle chaîne. Dans la plupart des cas, le **cela** pointeur est retourné.  
+ Appelé par le framework lorsqu’un gestionnaire de chaînes est nécessaire pour une nouvelle chaîne. Dans la plupart des cas, le **cela** pointeur est retourné.  
   
  Toutefois, si le Gestionnaire de mémoire ne prend pas en charge utilisé par plusieurs instances de `CSimpleStringT`, un pointeur vers un gestionnaire de chaînes partageable doit être retourné.  
   
@@ -133,7 +116,7 @@ void Free(CStringData* pData) throw();
  Pointeur vers le bloc de mémoire à libérer.  
   
 ### <a name="remarks"></a>Remarques  
- Libère le bloc de mémoire spécifié précédemment alloué par [allouer](#allocate) ou [réallouer](../../atl/reference/iatlmemmgr-class.md#reallocate).  
+ Libère le bloc de mémoire spécifié précédemment alloué par [Allocate](#allocate) ou [réallouer](../../atl/reference/iatlmemmgr-class.md#reallocate).  
   
 > [!NOTE]
 >  Pour obtenir des exemples, consultez [gestion de la mémoire et CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
@@ -149,16 +132,16 @@ CStringData* GetNilString() throw();
  Un pointeur vers le `CStringData` objet utilisé pour représenter une chaîne vide.  
   
 ### <a name="remarks"></a>Remarques  
- Appelez cette fonction pour retourner la représentation d’une chaîne vide.  
+ Appelez cette fonction pour retourner une représentation d’une chaîne vide.  
   
 > [!NOTE]
->  Lorsque vous implémentez un gestionnaire de chaînes personnalisé, cette fonction ne doit jamais échouer. Vous pouvez vous assurer par incorporation d’une instance de **CNilStringData** dans la classe de gestionnaire de chaînes, retourner un pointeur à cette instance.  
+>  Lorsque vous implémentez un gestionnaire personnalisé, cette fonction ne doit jamais échouer. Vous pouvez vous assurer par incorporation d’une instance de **CNilStringData** dans la classe de gestionnaire de chaîne et retournent un pointeur à cette instance.  
   
 > [!NOTE]
 >  Pour obtenir des exemples, consultez [gestion de la mémoire et CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
 ##  <a name="reallocate"></a>IAtlStringMgr::Reallocate  
- Réaffecte une structure de données de chaîne.  
+ Réalloue une structure de données de chaîne.  
   
 ```
 CStringData* Reallocate(  
@@ -175,7 +158,7 @@ CStringData* Reallocate(
  Le nombre de caractères dans le nouveau bloc de mémoire.  
   
  `nCharSize`  
- La taille (en octets) du type de caractères utilisé par le Gestionnaire de chaînes.  
+ La taille (en octets) du type de caractère utilisé par le Gestionnaire de chaîne.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers le début du bloc de mémoire nouvellement alloué.  
@@ -189,8 +172,7 @@ CStringData* Reallocate(
 >  Pour obtenir des exemples, consultez [gestion de la mémoire et CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
- [ATL et MFC des Classes partagées](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-
+ [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
+ [Classes de partagées ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 
 

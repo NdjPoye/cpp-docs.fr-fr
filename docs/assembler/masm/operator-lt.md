@@ -1,39 +1,39 @@
 ---
-title: "operator LT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LT"
-  - "operator LT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LT operator"
-  - "operator LT"
+title: "LT, opérateur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- LT
+- operator LT
+dev_langs: C++
+helpviewer_keywords:
+- LT operator
+- operator LT
 ms.assetid: 6a7b43cc-2f38-49e9-b42e-8e5b5c41b965
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a3f3f2a03340eda616bfec7bb397c398178f7e06
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# operator LT
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retourne la valeur true \(\- 1\) si *expression1* est moins qu' *expression2*, ou retourne la valeur false \(0\) s'il n'est pas.  
+# <a name="operator-lt"></a>LT, opérateur
+Retourne la valeur true (-1) si *expression1* est inférieure à *expression2*, ou la valeur false (0) si elle n’est pas.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 expression1 LT expression2  
 ```  
   
-## Voir aussi  
- [Operators Reference](../../assembler/masm/operators-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)

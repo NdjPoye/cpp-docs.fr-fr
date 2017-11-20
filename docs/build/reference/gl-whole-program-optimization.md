@@ -1,76 +1,76 @@
 ---
-title: "/GL (Optimisation de l&#39;ensemble du programme) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/gl"
-  - "VC.Project.VCCLWCECompilerTool.WholeProgramOptimization"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/GL (option du compilateur C++)"
-  - "GL (option du compilateur C++)"
-  - "-GL (option du compilateur C++)"
-  - "optimisation de l'ensemble du programme et compilateur C++"
+title: "-GL (optimisation de l’ensemble du programme) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /gl
+- VC.Project.VCCLWCECompilerTool.WholeProgramOptimization
+dev_langs: C++
+helpviewer_keywords:
+- /GL compiler option [C++]
+- whole program optimizations and C++ compiler
+- -GL compiler option [C++]
+- GL compiler option [C++]
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 20436df9fd2f54193183505eb56da7c7b3371164
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /GL (Optimisation de l&#39;ensemble du programme)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="gl-whole-program-optimization"></a>/GL (Optimisation de l'ensemble du programme)
 Active l'optimisation de l'ensemble du programme.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 /GL[-]  
 ```  
   
-## Notes  
- L'optimisation de l'ensemble du programme permet au compilateur de réaliser des optimisations avec des informations sur tous les modules dans le programme.  Sans l'optimisation de l'ensemble du programme, les optimisations sont effectuées par module \(compiland\).  
+## <a name="remarks"></a>Remarques  
+ Optimisation de l’ensemble du programme permet au compilateur d’effectuer des optimisations avec des informations sur tous les modules dans le programme. Sans optimisation de l’ensemble du programme, les optimisations sont effectuées sur une base de module (compiland).  
   
- L'optimisation de l'ensemble du programme étant désactivée par défaut, il faut l'activer de façon explicite.  Toutefois, il est également possible de la désactiver explicitement à l'aide du commutateur **\/GL\-**.  
+ Optimisation de l’ensemble du programme est désactivée par défaut et doit être explicitement activée. Toutefois, il est également possible de désactiver explicitement avec **/GL-**.  
   
  Avec des informations sur tous les modules, le compilateur peut :  
   
--   Optimiser l'utilisation de registres au\-delà des limites des fonctions.  
+-   Optimiser l’utilisation de registres au-delà des limites de fonction.  
   
 -   Effectuer un meilleur travail de suivi des modifications apportées aux données globales, autorisant ainsi une réduction du nombre de charges et de magasins.  
   
--   Effectuer un meilleur travail de suivi du jeu d'éléments susceptible d'être modifié par un pointeur déréférencé, réduisant ainsi le nombre de charges et de magasins.  
+-   Effectuer un meilleur travail de suivi de l’ensemble possible d’éléments modifiée par un pointeur déréférencé, réduisant ainsi le nombre de charges et de magasins.  
   
--   Traiter inline une fonction dans un modèle même quand celle\-ci est définie dans un autre module.  
+-   Incorporer une fonction dans un module, même lorsque la fonction est définie dans un autre module.  
   
- Les fichiers .obj produits avec **\/GL** ne seront pas disponibles pour des utilitaires d'édition des liens, tels que [EDITBIN](../../build/reference/editbin-reference.md) et [DUMPBIN](../../build/reference/dumpbin-reference.md).  
+ fichiers .obj produits avec **/GL** ne seront pas disponibles sur ces utilitaires de l’éditeur de liens en tant que [EDITBIN](../../build/reference/editbin-reference.md) et [DUMPBIN](../../build/reference/dumpbin-reference.md).  
   
- Si vous compilez votre programme avec **\/GL** et [\/c](../../build/reference/c-compile-without-linking.md), vous devez utiliser l'option de l'éditeur de liens \/LTCG pour créer le fichier de sortie.  
+ Si vous compilez votre programme avec **/GL** et [/c](../../build/reference/c-compile-without-linking.md), vous devez utiliser l’option de l’éditeur de liens /LTCG pour créer le fichier de sortie.  
   
- [\/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) ne peut pas être utilisé avec **\/GL**  
+ [/ Zi](../../build/reference/z7-zi-zi-debug-information-format.md) ne peut pas être utilisé avec **/GL**  
   
- Le format des fichiers produits avec **\/GL** dans la version actuelle peut ne pas être compatible avec les versions ultérieures de Visual C\+\+.  Vous ne devez pas fournir un fichier .lib composé de fichiers .obj qui ont été produits avec **\/GL** sauf si vous souhaitez livrer des copies du fichier .lib pour toutes les versions de Visual C\+\+ que les utilisateurs sont susceptibles d'utiliser, aujourd'hui et demain.  
+ Le format des fichiers produits avec **/GL** dans la version actuelle ne peuvent être lisibles par les versions ultérieures de Visual C++. Vous ne devez pas fournir un fichier .lib composé de fichiers .obj qui ont été générés avec **/GL** , sauf si vous êtes disposé à livrer des copies du fichier .lib pour toutes les versions de Visual C++ que les utilisateurs à utiliser, maintenant et dans le futur.  
   
- Les fichiers .obj produits avec **\/GL** et les fichiers d'en\-tête précompilés ne doivent pas être utilisés pour générer un fichier .lib, sauf si le fichier .lib sera lié sur le même ordinateur ayant servi à la génération du fichier .obj de **\/GL**.  Les informations provenant du fichier d'en\-tête précompilé du fichier .obj seront nécessaires au moment de l'édition des liens.  
+ fichiers .obj produits avec **/GL** et les fichiers d’en-tête précompilés ne doivent pas servir pour générer un fichier .lib, sauf si le fichier .lib sera lié sur le même ordinateur que celui qui a généré le **/GL** fichier .obj. Pour plus d’informations à partir du fichier d’en-tête précompilé du fichier .obj seront nécessaires au moment de la liaison.  
   
- Pour plus d'informations sur les optimisations disponibles avec les limites de l'optimisation de programmes complets, consultez [\/LTCG](../../build/reference/ltcg-link-time-code-generation.md).  **\/GL** permet également l'optimisation guidée par profil ; consultez \/LTCG.  Si, lors de la compilation d'optimisations guidées par profil, vous souhaitez classer les fonctions de vos optimisations guidées par profil, vous devez compiler avec [\/Gy](../../build/reference/gy-enable-function-level-linking.md) ou avec une option du compilateur qui implique \/Gy.  
+ Pour plus d’informations sur les optimisations disponibles et les limitations de l’optimisation de l’ensemble du programme, consultez [LTCG](../../build/reference/ltcg-link-time-code-generation.md).  **/GL** également rend profil optimisation guidée disponibles ; consultez LTCG.  Lors de la compilation pour les optimisations guidées profil si vous souhaitez classer les fonctions de vos optimisations guidées par profil, vous devez compiler avec [/Gy](../../build/reference/gy-enable-function-level-linking.md) ou une option du compilateur qui implique/Gy.  
   
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Pour plus d'informations sur **\/GL** dans l'environnement de développement, consultez [\/LTCG \(Génération de code durant l'édition de liens\)](../../build/reference/ltcg-link-time-code-generation.md).  
+1.  Consultez [/LTCG (génération de Code d’édition de liens)](../../build/reference/ltcg-link-time-code-generation.md) pour plus d’informations sur la façon de spécifier **/GL** dans l’environnement de développement.  
   
-### Pour définir cette option de l'éditeur de liens par programme  
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   
 1.  Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WholeProgramOptimization%2A>.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options du compilateur](../../build/reference/compiler-options.md)   
  [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

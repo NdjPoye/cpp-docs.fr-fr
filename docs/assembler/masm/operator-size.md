@@ -1,40 +1,39 @@
 ---
-title: "operator SIZE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "size"
-  - "operator SIZE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator SIZE"
-  - "SIZE operator"
+title: "SIZE, opérateur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- size
+- operator SIZE
+dev_langs: C++
+helpviewer_keywords:
+- operator SIZE
+- SIZE operator
 ms.assetid: 2e380289-3ad7-4bf0-8b1c-75211f59e5c4
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7ba3d582a4d3d6d22809b5f493c8bfd761116de0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# operator SIZE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retourne le nombre d'octets dans *la variable* allouée par le premier initialiseur.  
+# <a name="operator-size"></a>SIZE, opérateur
+Retourne le nombre d’octets dans *variable* allouée par l’initialiseur de première.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 SIZE variable  
 ```  
   
-## Voir aussi  
- [Operators Reference](../../assembler/masm/operators-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)

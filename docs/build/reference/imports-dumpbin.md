@@ -1,47 +1,46 @@
 ---
-title: "/IMPORTS (DUMPBIN) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/imports"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/IMPORTS (option Dumpbin)"
-  - "IMPORTS (option Dumpbin)"
-  - "-IMPORTS (option Dumpbin)"
+title: -IMPORTS (DUMPBIN) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /imports
+dev_langs: C++
+helpviewer_keywords:
+- IMPORTS dumpbin option
+- /IMPORTS dumpbin option
+- -IMPORTS dumpbin option
 ms.assetid: 6a296216-2b1b-40f8-8736-cd4553a22456
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e395896c7f595780b1bb6b667d53d4e3eb5fa2ce
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /IMPORTS (DUMPBIN)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="imports-dumpbin"></a>/IMPORTS (DUMPBIN)
 ```  
 /IMPORTS[:file]  
 ```  
   
- Cette option affiche la liste des DLL \(à lien statique et à [chargement différé](../../build/reference/linker-support-for-delay-loaded-dlls.md)\) qui sont importées vers un fichier exécutable ou une DLL et toutes les différentes importations effectuées à partir de chacune de ces DLL.  
+ Cette option affiche la liste des DLL (à lien statique et [chargé différé](../../build/reference/linker-support-for-delay-loaded-dlls.md)) qui sont importées vers un fichier exécutable ou une DLL et toutes les importations individuelles à partir de chacune de ces DLL.  
   
- La spécification facultative `file` permet de demander l'affichage uniquement des importations de cette DLL.  Par exemple :  
+ Le paramètre facultatif `file` spécification vous permet de spécifier que les importations de DLL uniquement seront affichera. Exemple :  
   
 ```  
 dumpbin /IMPORTS:msvcrt.dll  
 ```  
   
-## Notes  
- La sortie affichée par cette option est similaire à la sortie [\/EXPORTS](../../build/reference/dash-exports.md).  
+## <a name="remarks"></a>Remarques  
+ La sortie affichée par cette option est similaire à la [/EXPORTE](../../build/reference/dash-exports.md) sortie.  
   
- Seule l'option [\/HEADERS](../../build/reference/headers.md) de DUMPBIN est disponible pour les fichiers générés à l'aide de l'option de compilation [\/GL](../../build/reference/gl-whole-program-optimization.md).  
+ Uniquement les [/HEADERS](../../build/reference/headers.md) (option DUMPBIN) est disponible pour les fichiers générés par le [/GL](../../build/reference/gl-whole-program-optimization.md) option du compilateur.  
   
-## Voir aussi  
- [Options DUMPBIN](../../build/reference/dumpbin-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [DUMPBIN, options](../../build/reference/dumpbin-options.md)

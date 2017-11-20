@@ -1,45 +1,44 @@
 ---
-title: "Probl&#232;mes courants lors de la cr&#233;ation d&#39;une version release | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "versions debug, différence par rapport aux versions release"
-  - "allocateur de mémoire debug"
-  - "déboguer (MFC), versions release"
-  - "problèmes de présentation du tas"
-  - "mémoire (C++), remplacements"
-  - "MFC (C++), versions release"
-  - "optimisation (C++), compilateur"
-  - "pointeurs, perdus"
-  - "projets (C++), configuration Debug"
-  - "versions release, générer des applications"
-  - "versions release, dépanner"
-  - "pointeurs perdus"
-  - "dépanner les versions release"
-  - "dépanner Visual C++"
-  - "génération de code inattendue"
+title: "Problèmes courants lors de la création d’une version Release | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- unexpected code generation
+- debugging [MFC], release builds
+- release builds, troubleshooting
+- stray pointers
+- debug builds, difference from release builds
+- MFC [C++], release builds
+- heap layout problems
+- pointers, stray
+- release builds, building applications
+- debug memory allocator
+- optimization [C++], compiler
+- projects [C++], debug configuration
+- troubleshooting Visual C++
+- troubleshooting release builds
+- memory [C++], overwrites
 ms.assetid: 73cbc1f9-3e33-472d-9880-39a8e9977b95
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d07abc5e2579ac0764d32223b4ded15265e827fa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Probl&#232;mes courants lors de la cr&#233;ation d&#39;une version release
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-En cours de développement, vous serez généralement amené à effectuer des générations et des tests à l'aide d'une version debug de votre projet.  Si vous générez ensuite votre application en vue de produire une version release, vous pouvez provoquer une violation d'accès.  
+# <a name="common-problems-when-creating-a-release-build"></a>Problèmes courants lors de la création d’une version release
+Pendant le développement, vous généralement générer et tester avec une version debug de votre projet. Si vous générez ensuite votre application pour une version release, vous pouvez obtenir une violation d’accès.  
   
- La liste ci\-dessous montre les principales différences entre les versions debug et release \(non debug\).  D'autres différences existent, mais celles qui suivent sont les principales différences pouvant entraîner l'échec en version release d'une application qui fonctionne en version debug.  
+ La liste ci-dessous répertorie les principales différences entre un debug et Release (non Debug). Autres différences existent, mais voici les principales différences sont de provoquer une Échec de l’application dans une version Release lorsqu’elle fonctionne dans une version debug.  
   
 -   [Présentation du tas](#_core_heap_layout)  
   
@@ -49,26 +48,26 @@ En cours de développement, vous serez généralement amené à effectuer des g�
   
 -   [Optimisations](#_core_optimizations)  
   
- Consultez l'option de compilation [\/GZ \(Intercepter des erreurs de versions release dans les versions debug\)](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md) pour obtenir des informations sur la manière d'intercepter les erreurs des versions release dans les versions debug.  
+ Consultez le [/GZ (intercepter des erreurs de version Release dans la version Debug)](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md) option du compilateur pour plus d’informations sur l’interception version générer des erreurs dans les versions debug.  
   
-##  <a name="_core_heap_layout"></a> Présentation du tas  
- La présentation du tas est à l'origine de 90 % environ des problèmes apparents quand une application fonctionne en version debug, mais pas en version release.  
+##  <a name="_core_heap_layout"></a>Présentation du tas  
+ Présentation du tas est à l’origine de 90 % environ des problèmes apparents quand une application fonctionne en version debug, mais pas la mise en production.  
   
- Lorsque vous générez votre projet pour la version debug, vous utilisez l'allocateur de mémoire debug.  Ceci signifie que toutes les allocations de mémoire sont entourées d'octets de garde.  Ces octets de garde détectent les remplacements de mémoire.  Dans la mesure où la présentation du tas diffère entre les versions release et debug, un remplacement de mémoire peut ne pas créer d'incidents dans une version debug, mais avoir des effets catastrophiques dans une version release.  
+ Lorsque vous générez votre projet pour le débogage, vous utilisez l’allocateur de mémoire de débogage. Cela signifie que toutes les allocations de mémoire ont des octets de protection placés autour d’elles. Ces octets de garde détectent un remplacement de mémoire. Étant donné que la mise en page de segment de mémoire est différent entre release et debug versions, un remplacement de mémoire ne peut pas créer d’incidents dans une version debug, mais peut avoir des effets catastrophiques dans une version Release.  
   
- Pour plus d'informations, consultez [Vérification des remplacements de mémoire](../../build/reference/checking-for-memory-overwrites.md) et [Utilisation de la version debug pour vérifier les remplacements de mémoire](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md).  
+ Pour plus d’informations, consultez [vérifier les remplacements de mémoire](../../build/reference/checking-for-memory-overwrites.md) et [destiné à la version Debug pour vérifier l’écrasement de mémoire](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md).  
   
-##  <a name="_core_compilation"></a> Compilation  
- Nombre de macros MFC et une grande partie de l'implémentation des MFC sont modifiées lors d'une génération destinée à produire une version release.  En particulier, la macro ASSERT se traduit par une chaîne nulle dans une version release, et le code contenu dans les instructions ASSERT n'est ainsi pas exécuté.  Pour plus d'informations, consultez [Examen des instructions ASSERT](../../build/reference/using-verify-instead-of-assert.md).  
+##  <a name="_core_compilation"></a>Compilation  
+ Nombre de macros MFC et la plupart des modifications d’implémentation MFC quand vous générez pour la mise en production. En particulier, la macro ASSERT a la valeur nothing dans une version Release, aucun code trouvé dans les instructions Assert ne sera exécuté. Pour plus d’informations, consultez [examen des instructions ASSERT](../../build/reference/using-verify-instead-of-assert.md).  
   
- Certaines fonctions sont déclarées inline pour accélérer la vitesse d'exécution lors de la génération de la version release.  Les optimisations sont généralement activées dans une version release.  Un allocateur de mémoire différent est également utilisé.  
+ Certaines fonctions sont déclarées inline pour augmenter la vitesse de la version Release. Les optimisations sont généralement activées dans une version Release. Un allocateur de mémoire différent est également utilisé.  
   
-##  <a name="_core_pointer_support"></a> Prise en charge du pointeur  
- L'absence d'informations de débogage supprime la marge intérieure de votre application.  Dans une version release, les pointeurs perdus ont plus de chances de désigner une mémoire non initialisée que de référencer des informations de débogage.  
+##  <a name="_core_pointer_support"></a>Prise en charge du pointeur  
+ L’absence d’informations de débogage supprime la marge intérieure de votre application. Dans une version Release, les pointeurs perdus ont plus de chances de pointant vers la mémoire non initialisée au lieu de pointer vers des informations de débogage.  
   
-##  <a name="_core_optimizations"></a> Optimisations  
- Selon la nature de certains segments de code, le compilateur d'optimisation peut générer un code inattendu.  C'est la cause la moins probable des problèmes liés aux versions release, mais elle se manifeste quand même de temps à autre.  Pour une solution, consultez [Optimisation du code](../../build/reference/optimizing-your-code.md).  
+##  <a name="_core_optimizations"></a>Optimisations  
+ Selon la nature de certains segments de code, le compilateur d’optimisation peut générer un code inattendu. Ceci est la moins probable des problèmes liés à la mise en production, mais il se produit à l’occasion. Pour une solution, consultez [optimisation du Code](../../build/reference/optimizing-your-code.md).  
   
-## Voir aussi  
- [Versions release](../../build/reference/release-builds.md)   
- [Résolution de problèmes liés à la version release](../../build/reference/fixing-release-build-problems.md)
+## <a name="see-also"></a>Voir aussi  
+ [Versions Release](../../build/reference/release-builds.md)   
+ [Résolution de problèmes liés à la version Release](../../build/reference/fixing-release-build-problems.md)

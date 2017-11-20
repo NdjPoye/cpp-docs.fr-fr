@@ -1,33 +1,30 @@
 ---
-title: "not_equal_to (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::not_equal_to"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "not_equal_to (fonction) (STL/CLR)"
+title: Not_Equal_To (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::not_equal_to
+dev_langs: C++
+helpviewer_keywords: not_equal_to function [STL/CLR]
 ms.assetid: 1b66e0ca-eace-4672-8da9-ed16f8608bca
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6def975ac9de8f069394c822e756e56c227e2f89
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# not_equal_to (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe du modèle décrit un foncteur qui, lorsqu'il est appelé, renvoie true uniquement si le premier argument n'est pas égal au second.  Vous l'utilisez pour spécifier un objet fonction au niveau de son type d'argument.  
+# <a name="notequalto-stlclr"></a>not_equal_to (STL/CLR)
+La classe de modèle décrit un functor que, lorsqu’elle est appelée, retourne true uniquement si le premier argument n’est pas égal à la seconde. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Arg>  
@@ -50,34 +47,34 @@ public:
     };  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  Arg  
- Type des arguments.  
+ Le type des arguments.  
   
-## Fonctions membres  
+## <a name="member-functions"></a>Fonctions membres  
   
-|Définition de type|Description|  
-|------------------------|-----------------|  
-|delegate\_type|Le type du délégué générique.|  
-|premier\_type\_d'argument.|Le type du premier argument de functor.|  
-|result\_type|Le type du premier argument du résultat du foncteur.|  
-|deuxième\_type\_d'argument.|Le type du deuxième argument de functor.|  
+|Définition de types|Description|  
+|---------------------|-----------------|  
+|delegate_type|Le type du délégué générique.|  
+|first_argument_type|Le type du premier argument functor.|  
+|RESULT_TYPE|Le type du résultat functor.|  
+|second_argument_type|Le type du second argument functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|not\_equal\_to|Construit le foncteur.|  
+|not_equal_to|Construit le foncteur.|  
   
 |Opérateur|Description|  
-|---------------|-----------------|  
-|operator\(\)|Calcule la fonction souhaitée.|  
-|opérateur delegate\_type^|Convertit le functor en un délégué.|  
+|--------------|-----------------|  
+|operator()|Calcule la fonction de votre choix.|  
+|opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
   
-## Notes  
- La classe du modèle décrit un foncteur à deux arguments.  Elle définit l'opérateur membre `operator()` afin que, lorsque l'objet est appelé en tant que fonction, il renvoie true uniquement si le premier argument n'est pas égal au second.  
+## <a name="remarks"></a>Remarques  
+ La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, il retourne true uniquement si le premier argument n’est pas égal à la seconde.  
   
- Vous pouvez également transmettre l'objet comme argument de fonction dont le type est `delegate_type^` et il sera converti de façon appropriée.  
+ Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_not_equal_to.cpp   
@@ -117,13 +114,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **4 4**  
- **0 1**   
-## Configuration requise  
- **Header:** \<cliext\/functional\>  
+```Output  
+4 3  
+4 4  
+0 1  
+```  
   
- **Espace de noms :** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/fonctionnel >  
   
-## Voir aussi  
- [equal\_to](../dotnet/equal-to-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [equal_to (STL/CLR)](../dotnet/equal-to-stl-clr.md)

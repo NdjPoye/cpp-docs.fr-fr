@@ -1,103 +1,102 @@
 ---
-title: "Macros et fonctions globales pour les mod&#232;les du consommateur OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.templates.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "macros, OLE DB (modèle du consommateur)"
-  - "OLE DB (modèles du consommateur), macros"
+title: "Macros et fonctions globales pour les modèles du consommateur OLE DB | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.templates.ole
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB consumer templates, macros
+- macros, OLE DB consumer template
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 541425a073b4d179a20a33646844723d655f8160
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Macros et fonctions globales pour les mod&#232;les du consommateur OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les modèles du consommateur OLE DB incluent les macros et les fonctions globales suivantes :  
+# <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Macros et fonctions globales pour les modèles du consommateur OLE DB
+Modèles du consommateur OLE DB inclut les macros suivantes et les fonctions globales :  
   
-### Fonctions globales  
+### <a name="global-functions"></a>Fonctions globales  
   
 |||  
 |-|-|  
-|[AtlTraceErrorRecords](../../data/oledb/atltraceerrorrecords.md)|Vidages des informations sur les enregistrements d'erreur OLE DB dans l'unité de vidage si une erreur est retournée.|  
+|[AtlTraceErrorRecords](../../data/oledb/atltraceerrorrecords.md)|Exporte les informations d’enregistrement de l’erreur OLE DB à l’unité de vidage si une erreur est retournée.|  
   
-### Macros de carte d'accesseur  
-  
-|||  
-|-|-|  
-|[BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md)|Marque le début d'une entrée d'accesseur.|  
-|[BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md)|Marque le début des entrées de mappage d'accesseur.|  
-|[END\_ACCESSOR](../../data/oledb/end-accessor.md)|Marque la fin d'une entrée d'accesseur.|  
-|[END\_ACCESSOR\_MAP](../../data/oledb/end-accessor-map.md)|Marque la fin des entrées de mappage d'accesseur.|  
-  
-### Macros de mappage de colonnes  
+### <a name="accessor-map-macros"></a>Macros de mappage d’accesseur  
   
 |||  
 |-|-|  
-|[BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)|Marque le début des entrées de mappage de colonnes dans la classe d'enregistrement de l'utilisateur.|  
-|[BLOB\_ENTRY](../../data/oledb/blob-entry.md)|Permet de lier un grand objet binaire \(BLOB\).|  
-|[BLOB\_ENTRY\_LENGTH](../../data/oledb/blob-entry-length.md)|Indique la longueur de la colonne de données BLOB.|  
-|[BLOB\_ENTRY\_LENGTH\_STATUS](../../data/oledb/blob-entry-length-status.md)|Indique la longueur et l'état de la colonne de données BLOB.|  
-|[BLOB\_ENTRY\_STATUS](../../data/oledb/blob-entry-status.md)|Signale l'état de la colonne de données BLOB.|  
-|[BLOB\_NAME](../../data/oledb/blob-name.md)|Permet de lier un objet blob par son nom de colonne.|  
-|[BLOB\_NAME\_LENGTH](../../data/oledb/blob-name-length.md)|Indique la longueur de la colonne de données BLOB.|  
-|[BLOB\_NAME\_LENGTH\_STATUS](../../data/oledb/blob-name-length-status.md)|Indique la longueur et l'état de la colonne de données BLOB.|  
-|[BLOB\_NAME\_STATUS](../../data/oledb/blob-name-status.md)|Signale l'état de la colonne de données BLOB.|  
-|[BOOKMARK\_ENTRY](../../data/oledb/bookmark-entry.md)|Représente une entrée de signet sur l'ensemble de lignes.  Une entrée de signet est un type spécial de colonnes d'entrée.|  
-|[COLUMN\_ENTRY](../../data/oledb/column-entry.md)|Représente une liaison à une colonne spécifique dans la base de données.|  
-|[COLUMN\_ENTRY\_EX](../../data/oledb/column-entry-ex.md)|Représente une liaison à une colonne spécifique dans la base de données.  Prend en charge les paramètres `type`, *longueur*, *précision*, l'`scale`, et *état*.|  
-|[COLUMN\_ENTRY\_LENGTH](../../data/oledb/column-entry-length.md)|Représente une liaison à une colonne spécifique dans la base de données.  Prend en charge la variable de *longueur*.|  
-|[COLUMN\_ENTRY\_LENGTH\_STATUS](../../data/oledb/column-entry-length-status.md)|Représente une liaison à une colonne spécifique dans la base de données.  Prend en charge les paramètres d'*état* et de *longueur*.|  
-|[COLUMN\_ENTRY\_PS](../../data/oledb/column-entry-ps.md)|Représente une liaison à une colonne spécifique dans la base de données.  Prend en charge les paramètres de *précision* et de `scale`.|  
-|[COLUMN\_ENTRY\_PS\_LENGTH](../../data/oledb/column-entry-ps-length.md)|Représente une liaison à une colonne spécifique dans la base de données.  Prend en charge la variable de *longueur*, et les paramètres de *précision* et de `scale`.|  
-|[COLUMN\_ENTRY\_PS\_LENGTH\_STATUS](../../data/oledb/column-entry-ps-length-status.md)|Représente une liaison à une colonne spécifique dans la base de données.  Prend en charge les variables *d'état* et de *longueur*, et les paramètres de *précision* et de `scale`.|  
-|[COLUMN\_ENTRY\_PS\_STATUS](../../data/oledb/column-entry-ps-status.md)|Représente une liaison à une colonne spécifique dans la base de données.  Prend en charge la variable d' *état*, et les paramètres de *précision* et de `scale`.|  
-|[COLUMN\_ENTRY\_STATUS](../../data/oledb/column-entry-status.md)|Représente une liaison à une colonne spécifique dans la base de données.  Prend en charge la variable d' *état*.|  
-|[COLUMN\_ENTRY\_TYPE](../../data/oledb/column-entry-type.md)|Représente une liaison à une colonne spécifique dans la base de données.  Prend en charge le paramètre de `type`.|  
-|[COLUMN\_ENTRY\_TYPE\_SIZE](../../data/oledb/column-entry-type-size.md)|Représente une liaison à une colonne spécifique dans la base de données.  Prend en charge les paramètres `type` et `size`.|  
-|[COLUMN\_NAME](../../data/oledb/column-name.md)|Représente une liaison par nom à une colonne spécifique dans la base de données.|  
-|[COLUMN\_NAME\_EX](../../data/oledb/column-name-ex.md)|Représente une liaison par nom à une colonne spécifique dans la base de données.  Prend en charge la spécification du type de données, la taille, la précision, l'échelle, la longueur de colonne, et de l'état de la colonne.|  
-|[COLUMN\_NAME\_LENGTH](../../data/oledb/column-name-length.md)|Représente une liaison par nom à une colonne spécifique dans la base de données.  Prend en charge la spécification de la longueur de la colonne.|  
-|[COLUMN\_NAME\_LENGTH\_STATUS](../../data/oledb/column-name-length-status.md)|Représente une liaison par nom à une colonne spécifique dans la base de données.  Prend en charge la spécification de la longueur et l'état de la colonne.|  
-|[COLUMN\_NAME\_PS](../../data/oledb/column-name-ps.md)|Représente une liaison par nom à une colonne spécifique dans la base de données.  Prend en charge la spécification de précision et d'échelle.|  
-|[COLUMN\_NAME\_PS\_LENGTH](../../data/oledb/column-name-ps-length.md)|Représente une liaison par nom à une colonne spécifique dans la base de données.  Prend en charge la spécification de la précision, l'échelle, et la longueur de la colonne.|  
-|[COLUMN\_NAME\_PS\_LENGTH\_STATUS](../../data/oledb/column-name-ps-length-status.md)|Représente une liaison par nom à une colonne spécifique dans la base de données.  Prend en charge la spécification de la précision, l'échelle, la longueur de colonne, et de l'état de la colonne.|  
-|[COLUMN\_NAME\_PS\_STATUS](../../data/oledb/column-name-ps-status.md)|Représente une liaison par nom à une colonne spécifique dans la base de données.  Prend en charge la spécification de la précision, l'échelle, et l'état de la colonne.|  
-|[COLUMN\_NAME\_STATUS](../../data/oledb/column-name-status.md)|Représente une liaison par nom à une colonne spécifique dans la base de données.  Prend en charge la spécification de l'état de la colonne.|  
-|[COLUMN\_NAME\_TYPE](../../data/oledb/column-name-type.md)|Représente une liaison par nom à une colonne spécifique dans la base de données.  Prend en charge la spécification du type de données.|  
-|[COLUMN\_NAME\_TYPE\_PS](../../data/oledb/column-name-type-ps.md)|Représente une liaison par nom à une colonne spécifique dans la base de données.  Prend en charge la spécification du type de données, de la précision, et de l'échelle.|  
-|[COLUMN\_NAME\_TYPE\_SIZE](../../data/oledb/column-name-type-size.md)|Représente une liaison par nom à une colonne spécifique dans la base de données.  Prend en charge la spécification du type de données et de la taille.|  
-|[COLUMN\_NAME\_TYPE\_STATUS](../../data/oledb/column-name-type-status.md)|Représente une liaison par nom à une colonne spécifique dans la base de données.  Prend en charge la spécification de l'état et du type de données de la colonne.|  
-|[END\_COLUMN\_MAP](../../data/oledb/end-column-map.md)|Marque la fin des entrées de mappage de colonnes.|  
+|[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)|Marque le début d’une entrée de l’accesseur.|  
+|[BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)|Marque le début des entrées de mappage d’accesseur.|  
+|[END_ACCESSOR](../../data/oledb/end-accessor.md)|Marque la fin d’une entrée de l’accesseur.|  
+|[END_ACCESSOR_MAP](../../data/oledb/end-accessor-map.md)|Marque la fin des entrées de mappage d’accesseur.|  
   
-### macros de commande  
+### <a name="column-map-macros"></a>Macros de mappage de colonnes  
   
 |||  
 |-|-|  
-|[DEFINE\_COMMAND](../../data/oledb/define-command.md)|Spécifie la commande qui sera utilisée pour créer l'ensemble des lignes lorsque vous utilisez la classe [CCommand](../../data/oledb/ccommand-class.md).  Accepte uniquement les types de chaîne correspondant au type d'application spécifié \(ANSI ou Unicode\).  Il est recommandé d'utiliser [DEFINE\_COMMAND\_EX](../../data/oledb/define-command-ex.md) au lieu de `DEFINE_COMMAND`.|  
-|[DEFINE\_COMMAND\_EX](../../data/oledb/define-command-ex.md)|Spécifie la commande qui sera utilisée pour créer l'ensemble des lignes lorsque vous utilisez la classe [CCommand](../../data/oledb/ccommand-class.md).  Prend en charge les applications ANSI et Unicode.|  
+|[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)|Marque le début des entrées de mappage de colonne dans la classe d’enregistrement utilisateur.|  
+|[BLOB_ENTRY](../../data/oledb/blob-entry.md)|Permet de lier un objet binaire volumineux (BLOB).|  
+|[BLOB_ENTRY_LENGTH](../../data/oledb/blob-entry-length.md)|Indique la longueur de la colonne de données BLOB.|  
+|[BLOB_ENTRY_LENGTH_STATUS](../../data/oledb/blob-entry-length-status.md)|Indique la longueur et l’état de la colonne de données BLOB.|  
+|[BLOB_ENTRY_STATUS](../../data/oledb/blob-entry-status.md)|Signale l’état de la colonne de données BLOB.|  
+|[BLOB_NAME](../../data/oledb/blob-name.md)|Permet de lier un objet binaire volumineux par nom de colonne.|  
+|[BLOB_NAME_LENGTH](../../data/oledb/blob-name-length.md)|Indique la longueur de la colonne de données BLOB.|  
+|[BLOB_NAME_LENGTH_STATUS](../../data/oledb/blob-name-length-status.md)|Indique la longueur et l’état de la colonne de données BLOB.|  
+|[BLOB_NAME_STATUS](../../data/oledb/blob-name-status.md)|Signale l’état de la colonne de données BLOB.|  
+|[BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)|Représente une entrée de signet sur l’ensemble de lignes. Une entrée de signet est un type spécial d’entrée de la colonne.|  
+|[COLUMN_ENTRY](../../data/oledb/column-entry.md)|Représente une liaison à une colonne spécifique dans la base de données.|  
+|[COLUMN_ENTRY_EX](../../data/oledb/column-entry-ex.md)|Représente une liaison à la colonne dans la base de données. Prend en charge `type`, *longueur*, *précision*, `scale`, et *état* paramètres.|  
+|[COLUMN_ENTRY_LENGTH](../../data/oledb/column-entry-length.md)|Représente une liaison à la colonne dans la base de données. Prend en charge la *longueur* variable.|  
+|[COLUMN_ENTRY_LENGTH_STATUS](../../data/oledb/column-entry-length-status.md)|Représente une liaison à la colonne dans la base de données. Prend en charge *état* et *longueur* paramètres.|  
+|[COLUMN_ENTRY_PS](../../data/oledb/column-entry-ps.md)|Représente une liaison à la colonne dans la base de données. Prend en charge *précision* et `scale` paramètres.|  
+|[COLUMN_ENTRY_PS_LENGTH](../../data/oledb/column-entry-ps-length.md)|Représente une liaison à la colonne dans la base de données. Prend en charge la *longueur* variable, *précision* et `scale` paramètres.|  
+|[COLUMN_ENTRY_PS_LENGTH_STATUS](../../data/oledb/column-entry-ps-length-status.md)|Représente une liaison à la colonne dans la base de données. Prend en charge *état* et *longueur* variables, *précision* et `scale` paramètres.|  
+|[COLUMN_ENTRY_PS_STATUS](../../data/oledb/column-entry-ps-status.md)|Représente une liaison à la colonne dans la base de données. Prend en charge la *état* variable, *précision* et `scale` paramètres.|  
+|[COLUMN_ENTRY_STATUS](../../data/oledb/column-entry-status.md)|Représente une liaison à la colonne dans la base de données. Prend en charge la *état* variable.|  
+|[COLUMN_ENTRY_TYPE](../../data/oledb/column-entry-type.md)|Représente une liaison à une colonne spécifique dans la base de données. Prend en charge `type` paramètre.|  
+|[COLUMN_ENTRY_TYPE_SIZE](../../data/oledb/column-entry-type-size.md)|Représente une liaison à la colonne dans la base de données. Prend en charge `type` et `size` paramètres.|  
+|[COLUMN_NAME](../../data/oledb/column-name.md)|Représente une liaison à une colonne spécifique dans la base de données par nom.|  
+|[COLUMN_NAME_EX](../../data/oledb/column-name-ex.md)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification de type de données, taille, précision, échelle, longueur de colonne et l’état de la colonne.|  
+|[COLUMN_NAME_LENGTH](../../data/oledb/column-name-length.md)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification de longueur de colonne.|  
+|[COLUMN_NAME_LENGTH_STATUS](../../data/oledb/column-name-length-status.md)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification de longueur de colonne et l’état.|  
+|[COLUMN_NAME_PS](../../data/oledb/column-name-ps.md)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification de la précision et l’échelle.|  
+|[COLUMN_NAME_PS_LENGTH](../../data/oledb/column-name-ps-length.md)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification de longueur de précision, échelle et de colonne.|  
+|[COLUMN_NAME_PS_LENGTH_STATUS](../../data/oledb/column-name-ps-length-status.md)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification de précision, échelle, longueur de colonne et état de colonne.|  
+|[COLUMN_NAME_PS_STATUS](../../data/oledb/column-name-ps-status.md)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification de l’état de précision, échelle et de colonne.|  
+|[COLUMN_NAME_STATUS](../../data/oledb/column-name-status.md)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification de l’état de la colonne.|  
+|[COLUMN_NAME_TYPE](../../data/oledb/column-name-type.md)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification du type de données.|  
+|[COLUMN_NAME_TYPE_PS](../../data/oledb/column-name-type-ps.md)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification de type de données, la précision et l’échelle.|  
+|[COLUMN_NAME_TYPE_SIZE](../../data/oledb/column-name-type-size.md)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification de type de données et la taille.|  
+|[COLUMN_NAME_TYPE_STATUS](../../data/oledb/column-name-type-status.md)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification de l’état de type et de la colonne de données.|  
+|[END_COLUMN_MAP](../../data/oledb/end-column-map.md)|Marque la fin des entrées de mappage de colonne.|  
   
-### Macros de mappage de paramètre  
+### <a name="command-macros"></a>Macros de commande  
   
 |||  
 |-|-|  
-|[BEGIN\_PARAM\_MAP](../../data/oledb/begin-param-map.md)|Marque le début des entrées de mappage de paramètres dans la classe d'enregistrement de l'utilisateur.|  
-|[END\_PARAM\_MAP](../../data/oledb/end-param-map.md)|Marque la fin des entrées de mappage de paramètres.|  
-|[SET\_PARAM\_TYPE](../../data/oledb/set-param-type.md)|Spécifie les macros `COLUMN_ENTRY` qui suivent la macro `SET_PARAM_TYPE` en tant qu'entrée, sortie, ou entrée\/sortie.|  
+|[DEFINE_COMMAND](../../data/oledb/define-command.md)|Spécifie la commande permettant de créer l’ensemble de lignes lors de l’utilisation du [CCommand](../../data/oledb/ccommand-class.md) classe. Accepte uniquement les types de chaîne correspondant au type d’application spécifié (ANSI ou Unicode). Il est recommandé d’utiliser [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) au lieu de `DEFINE_COMMAND`.|  
+|[DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md)|Spécifie la commande permettant de créer l’ensemble de lignes lors de l’utilisation du [CCommand](../../data/oledb/ccommand-class.md) classe. Prend en charge les applications ANSI et Unicode.|  
   
-## Voir aussi  
- [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+### <a name="parameter-map-macros"></a>Macros de mappage de paramètre  
+  
+|||  
+|-|-|  
+|[BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)|Marque le début des entrées de mappage de paramètre dans la classe d’enregistrement utilisateur.|  
+|[END_PARAM_MAP](../../data/oledb/end-param-map.md)|Marque la fin des entrées de mappage de paramètre.|  
+|[SET_PARAM_TYPE](../../data/oledb/set-param-type.md)|Spécifie `COLUMN_ENTRY` macros qui suivent le `SET_PARAM_TYPE` macro comme entrée, sortie ou d’entrée/sortie.|  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

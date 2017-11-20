@@ -1,37 +1,36 @@
 ---
-title: "Assemblys de nom fort (signature d&#39;assembly) (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET Framework (C++), signature d'assembly"
-  - "assemblys (C++)"
-  - "assemblys (C++), signer"
-  - "éditeur de liens (C++), signature d'assembly"
-  - "signer des assemblys"
-  - "assemblys avec nom fort (C++)"
+title: "Assemblys de nom fort (signature d’Assembly) (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- assemblies [C++]
+- signing assemblies
+- .NET Framework [C++], assembly signing
+- assemblies [C++], signing
+- linker [C++], assembly signing
+- strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 32a9502bbb1143e23ee542c1d9fff593925c527a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Assemblys de nom fort (signature d&#39;assembly) (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique explique comment signer un assembly, opération souvent désignée par l'expression donner un nom fort à votre assembly.  
+# <a name="strong-name-assemblies-assembly-signing-ccli"></a>Assemblys de nom fort (signature d'assembly) (C++/CLI)
+Cette rubrique explique comment vous pouvez signer un assembly, souvent appelé donner votre assembly un nom fort.  
   
-## Remarques  
- Lors de l'utilisation de Visual C\+\+, utilisez les options de l'éditeur de liens pour signer votre assembly afin d'éviter tout problème lié aux attributs CLR de signature d'assembly :  
+## <a name="remarks"></a>Notes  
+ Lorsque vous utilisez Visual C++, utilisez les options de l’éditeur de liens pour signer votre assembly pour éviter les problèmes liés aux attributs CLR de signature d’assembly :  
   
 -   <xref:System.Reflection.AssemblyDelaySignAttribute>  
   
@@ -39,21 +38,21 @@ Cette rubrique explique comment signer un assembly, opération souvent désigné
   
 -   <xref:System.Reflection.AssemblyKeyNameAttribute>  
   
- L'utilisation d'attributs n'est pas conseillée car le nom de la clé est visible dans les métadonnées de l'assembly, ce qui peut poser des problèmes de sécurité si le nom du fichier comprend des informations confidentielles.  En outre, le processus de génération utilisé par l'environnement de développement Visual C\+\+ invalidera la clé avec laquelle l'assembly est signé si vous avez utilisé des attributs CLR pour donner un nom fort à l'assembly, puis il exécutera un outil de post\-traitement tel que mt.exe sur cet assembly.  
+ Les raisons pour ne pas utiliser les attributs incluent le fait que le nom de clé est visible dans les métadonnées de l’assembly, qui peuvent être un risque de sécurité si le nom de fichier consacrée des informations confidentielles. En outre, le processus de génération utilisé par l’environnement de développement Visual C++ invalidera la clé avec laquelle l’assembly est signé si vous utilisez des attributs CLR pour attribuer un nom fort à un assembly, puis exécutez un outil de post-traitement tel que mt.exe sur l’assembly.  
   
- Si vous générez à la ligne de commande, utilisez les options de l'éditeur de liens pour signer votre assembly, puis exécutez un outil de post\-traitement \(comme mt.exe\), vous devrez ré\-signer l'assembly avec sn.exe.  Ou bien, vous pouvez générer et différer la signature de l'assembly et après avoir exécuté des outils de post\-traitement, complétez la signature.  
+ Si vous générez à partir de la ligne de commande, utilisez les options de l’éditeur de liens pour signer votre assembly, puis exécutez un outil de post-traitement (comme mt.exe), vous devez signer à nouveau l’assembly avec sn.exe. Vous pouvez également générer et différer la signature de l’assembly et après l’exécution des outils de post-traitement, complétez la signature.  
   
- Si vous utilisez les attributs de signature lors de la génération dans l'environnement de développement, vous pouvez signer correctement l'assembly en appelant explicitement sn.exe \([Sn.exe \(Strong Name Tool\)](../Topic/Sn.exe%20\(Strong%20Name%20Tool\).md)\) dans un événement post\-build.  Pour plus d'informations, consultez [Spécification d'événements de build](../ide/specifying-build-events.md).  Les durées de génération peuvent être raccourcies si vous utilisez des attributs et un événement post\-build, par rapport à l'utilisation d'une option de l'éditeur de liens.  
+ Si vous utilisez les attributs de signature lors de la génération dans l’environnement de développement, vous pouvez signer correctement l’assembly en appelant explicitement sn.exe ([Sn.exe (Strong Name Tool)](/dotnet/framework/tools/sn-exe-strong-name-tool)) dans un événement post-build. Pour plus d’informations, consultez [spécifiant les événements de Build](../ide/specifying-build-events.md). Les durées de génération peuvent être inférieure si vous utilisez des attributs et un événement post-build, par rapport à l’aide des options d’un éditeur de liens.  
   
- Les options de l'éditeur de liens suivantes prennent en charge la signature d'assembly :  
+ Les options de l’éditeur de liens suivantes prennent en charge la signature d’assembly :  
   
--   [\/DELAYSIGN \(Signer partiellement un assembly\)](../build/reference/delaysign-partially-sign-an-assembly.md)  
+-   [/DELAYSIGN (signer partiellement un Assembly)](../build/reference/delaysign-partially-sign-an-assembly.md)  
   
--   [\/KEYFILE \(Spécifier une clé ou une paire de clés pour signer un assembly\)](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
+-   [/KEYFILE (spécifier la clé ou une paire de clés pour signer un Assembly)](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
   
--   [\/KEYCONTAINER \(Spécifier un conteneur de clé pour signer un assembly\)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
+-   [/KEYCONTAINER (spécifier un conteneur de clé pour signer un Assembly)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
   
- Pour plus d'informations sur les assemblys forts, consultez [Création et utilisation d'assemblys avec nom fort](../Topic/Creating%20and%20Using%20Strong-Named%20Assemblies.md).  
+ Pour plus d’informations sur les assemblys forts, consultez [création et assemblys avec nom fort](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies).  
   
-## Voir aussi  
- [Programmation .NET avec C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

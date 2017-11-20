@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,38 +14,21 @@ f1_keywords:
 - ATLMEM/ATL::CLocalHeap::Free
 - ATLMEM/ATL::CLocalHeap::GetSize
 - ATLMEM/ATL::CLocalHeap::Reallocate
-dev_langs:
-- C++
-helpviewer_keywords:
-- CLocalHeap class
+dev_langs: C++
+helpviewer_keywords: CLocalHeap class
 ms.assetid: 1ffa87a5-5fc8-4f8d-8809-58e87e963bd2
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 6a5caaa360970578aee4432fd40af9aa0e391d90
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: fefd632dbdb7afa24da358459d3b8c43e7c85ea4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="clocalheap-class"></a>CLocalHeap (classe)
-Cette classe implémente [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) à l’aide de fonctions Win32 du tas local.  
+# <a name="clocalheap-class"></a>Classe de CLocalHeap
+Cette classe implémente [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) en utilisant les fonctions de tas local Win32.  
   
 > [!IMPORTANT]
 >  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
@@ -64,20 +46,20 @@ class CLocalHeap : public IAtlMemMgr
 |Nom|Description|  
 |----------|-----------------|  
 |[CLocalHeap::Allocate](#allocate)|Appelez cette méthode pour allouer un bloc de mémoire.|  
-|[CLocalHeap::Free](#free)|Appelez cette méthode pour libérer un bloc de mémoire alloué par ce gestionnaire de mémoire.|  
-|[CLocalHeap::GetSize](#getsize)|Appelez cette méthode pour obtenir la taille d’un bloc de mémoire alloué par ce gestionnaire de mémoire allouée.|  
+|[CLocalHeap::Free](#free)|Appelez cette méthode pour libérer un bloc de mémoire allouée par ce gestionnaire de mémoire.|  
+|[CLocalHeap::GetSize](#getsize)|Appelez cette méthode pour obtenir la taille d’un bloc de mémoire allouée par ce gestionnaire de mémoire allouée.|  
 |[CLocalHeap::Reallocate](#reallocate)|Appelez cette méthode pour réallouer la mémoire allouée par ce gestionnaire de mémoire.|  
   
 ## <a name="remarks"></a>Remarques  
- `CLocalHeap`implémente les fonctions d’allocation de mémoire à l’aide de fonctions Win32 du tas local.  
+ `CLocalHeap`implémente des fonctions d’allocation de mémoire en utilisant les fonctions de tas local Win32.  
   
 > [!NOTE]
->  Les fonctions du tas local sont plus lentes que d’autres fonctions de gestion de mémoire et ne fournissent pas autant de fonctionnalités. Par conséquent, les nouvelles applications doivent utiliser le [fonctions de tas](http://msdn.microsoft.com/library/windows/desktop/aa366711). Ils sont disponibles dans le [CWin32Heap](../../atl/reference/cwin32heap-class.md) (classe).  
+>  Les fonctions de tas local sont plus lentes que les autres fonctions de gestion de mémoire et ne fournissent pas autant de fonctionnalités. Par conséquent, les nouvelles applications doivent utiliser le [fonctions de tas](http://msdn.microsoft.com/library/windows/desktop/aa366711). Ils sont disponibles dans le [CWin32Heap](../../atl/reference/cwin32heap-class.md) classe.  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `IAtlMemMgr`  
   
  `CLocalHeap`  
@@ -99,13 +81,13 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers le début du bloc de mémoire nouvellement alloué.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Appelez [CLocalHeap::Free](#free) ou [CLocalHeap::Reallocate](#reallocate) pour libérer la mémoire allouée par cette méthode.  
   
- Implémenté à l’aide de [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723) avec un paramètre d’indicateur de **LMEM_FIXED**.  
+ Implémentation à l’aide [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723) avec un paramètre d’indicateur de **LMEM_FIXED**.  
   
 ##  <a name="free"></a>CLocalHeap::Free  
- Appelez cette méthode pour libérer un bloc de mémoire alloué par ce gestionnaire de mémoire.  
+ Appelez cette méthode pour libérer un bloc de mémoire allouée par ce gestionnaire de mémoire.  
   
 ```
 virtual void Free(void* p) throw();
@@ -113,13 +95,13 @@ virtual void Free(void* p) throw();
   
 ### <a name="parameters"></a>Paramètres  
  `p`  
- Pointeur vers la mémoire précédemment allouée par ce gestionnaire de mémoire. NULL est une valeur valide et n’a aucun effet.  
+ Pointeur vers la mémoire précédemment allouée par ce gestionnaire de mémoire. NULL est une valeur valide et ne fait rien.  
   
 ### <a name="remarks"></a>Remarques  
- Implémenté à l’aide de [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730).  
+ Implémentation à l’aide [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730).  
   
 ##  <a name="getsize"></a>CLocalHeap::GetSize  
- Appelez cette méthode pour obtenir la taille d’un bloc de mémoire alloué par ce gestionnaire de mémoire allouée.  
+ Appelez cette méthode pour obtenir la taille d’un bloc de mémoire allouée par ce gestionnaire de mémoire allouée.  
   
 ```
 virtual size_t GetSize(void* p) throw();
@@ -132,8 +114,8 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la taille du bloc de mémoire allouée en octets.  
   
-### <a name="remarks"></a>Notes  
- Implémenté à l’aide de [LocalSize](http://msdn.microsoft.com/library/windows/desktop/aa366745).  
+### <a name="remarks"></a>Remarques  
+ Implémentation à l’aide [LocalSize](http://msdn.microsoft.com/library/windows/desktop/aa366745).  
   
 ##  <a name="reallocate"></a>CLocalHeap::Reallocate  
  Appelez cette méthode pour réallouer la mémoire allouée par ce gestionnaire de mémoire.  
@@ -152,16 +134,15 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers le début du bloc de mémoire nouvellement alloué.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Appelez [CLocalHeap::Free](#free) pour libérer la mémoire allouée par cette méthode.  
   
- Implémenté à l’aide de [LocalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366742).  
+ Implémentation à l’aide [LocalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366742).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
- [CComHeap (classe)](../../atl/reference/ccomheap-class.md)   
- [CWin32Heap (classe)](../../atl/reference/cwin32heap-class.md)   
- [CGlobalHeap (classe)](../../atl/reference/cglobalheap-class.md)   
- [CCRTHeap (classe)](../../atl/reference/ccrtheap-class.md)   
- [IAtlMemMgr (classe)](../../atl/reference/iatlmemmgr-class.md)
-
+ [Classe de CComHeap](../../atl/reference/ccomheap-class.md)   
+ [Classe de CWin32Heap](../../atl/reference/cwin32heap-class.md)   
+ [Classe de CGlobalHeap](../../atl/reference/cglobalheap-class.md)   
+ [Classe de CCRTHeap](../../atl/reference/ccrtheap-class.md)   
+ [IAtlMemMgr, classe](../../atl/reference/iatlmemmgr-class.md)

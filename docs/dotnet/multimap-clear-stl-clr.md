@@ -1,41 +1,39 @@
 ---
-title: "multimap::clear (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::clear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre clear [STL/CLR]"
+title: multimap::Clear (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::clear
+dev_langs: C++
+helpviewer_keywords: clear member [STL/CLR]
 ms.assetid: 2c4aae4b-0aac-42ba-abf4-eaf2d5734817
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c1c329d3c75685fc30097e42345cb36311345f05
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::clear (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multimapclear-stlclr"></a>multimap::clear (STL/CLR)
 Supprime tous les éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void clear();  
 ```  
   
-## Notes  
- La fonction membre appelle efficacement [multimap::erase](../dotnet/multimap-erase-stl-clr.md)`(` [multimap::begin](../dotnet/multimap-begin-stl-clr.md)`(),` [multimap::end](../dotnet/multimap-end-stl-clr.md)`())`.  Vous l'utilisez pour faire en sorte que la séquence contrôlée soit vide.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre appelle [multimap::erase (STL/CLR)](../dotnet/multimap-erase-stl-clr.md) `(` [multimap::begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md) `(),` [multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `())`. Il permet de vous assurer que la séquence contrôlée est vide.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_multimap_clear.cpp   
@@ -73,15 +71,18 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**taille\(\) \= 0**  
- **\[a 1\] \[b 2\]**  
-**taille\(\) \= 0**   
-## Configuration requise  
- **En\-tête :** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [a 1] [b 2]  
+size() = 0  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/map >  
   
-## Voir aussi  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::erase](../dotnet/multimap-erase-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::erase (STL/CLR)](../dotnet/multimap-erase-stl-clr.md)

@@ -1,42 +1,39 @@
 ---
-title: "map::end (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre end [STL/CLR]"
+title: Map::end (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: 547a34f0-af66-45be-9b55-1e60ab3a1d6e
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 403f879217f7e0e61e8b20d0d468100c08ac4622
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# map::end (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mapend-stlclr"></a>map::end (STL/CLR)
 Désigne la fin de la séquence contrôlée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 iterator end();  
 ```  
   
-## Notes  
- La méthode retourne un itérateur bidirectionnel qui pointe juste au delà de la fin de la séquence contrôlée.  Vous l'utilisez pour obtenir un itérateur qui désigne la fin de la séquence contrôlée, son état ne peut changer si la longueur de la séquence contrôlée change.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre retourne un itérateur bidirectionnel qui pointe juste après la fin de la séquence contrôlée. Vous l’utilisez pour obtenir un itérateur qui désigne la fin de la séquence contrôlée ; son état ne change pas si la longueur de la séquence contrôlée change.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_map_end.cpp   
@@ -70,11 +67,11 @@ int main()
   
 ```  
   
-## Configuration requise  
- **En\-tête :** \<cliext\/map\>  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/map >  
   
- **Espace de noms** cliext  
+ **Namespace :** cliext  
   
-## Voir aussi  
- [map](../dotnet/map-stl-clr.md)   
- [map::begin](../dotnet/map-begin-stl-clr.md)
+## <a name="see-also"></a>Voir aussi  
+ [carte (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::begin (STL/CLR)](../dotnet/map-begin-stl-clr.md)

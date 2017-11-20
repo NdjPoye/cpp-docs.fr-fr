@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,39 +12,23 @@ f1_keywords:
 - ATLCOM/ATL::IConnectionPointContainerImpl
 - ATLCOM/ATL::IConnectionPointContainerImpl::EnumConnectionPoints
 - ATLCOM/ATL::IConnectionPointContainerImpl::FindConnectionPoint
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - connectable objects
 - connection points [C++], container
 - IConnectionPointContainerImpl class
 ms.assetid: 10db5a8d-8be9-4d9d-8a82-8ab9ffe3e9d6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 81a68cae1d961f2846c1a807432f22ae92ca3b89
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 8c76ded677c7aa49c9c9135d098b00f21f6d8098
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="iconnectionpointcontainerimpl-class"></a>IConnectionPointContainerImpl (classe)
+# <a name="iconnectionpointcontainerimpl-class"></a>Classe de IConnectionPointContainerImpl
 Cette classe implémente un conteneur de point de connexion pour gérer une collection de [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) objets.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -70,7 +53,7 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 |[IConnectionPointContainerImpl::FindConnectionPoint](#findconnectionpoint)|Récupère un pointeur d’interface vers le point de connexion qui prend en charge l’IID spécifié.|  
   
 ## <a name="remarks"></a>Remarques  
- `IConnectionPointContainerImpl`implémente un conteneur de point de connexion pour gérer une collection de [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) objets. `IConnectionPointContainerImpl`fournit deux méthodes qu’un client peut appeler pour récupérer des informations sur un objet connectable :  
+ `IConnectionPointContainerImpl`implémente un conteneur de point de connexion pour gérer une collection de [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) objets. `IConnectionPointContainerImpl`propose deux méthodes qu’un client peut appeler pour récupérer des informations sur un objet connectable :  
   
 - `EnumConnectionPoints`permet au client déterminer quels sortant interfaces de l’objet prend en charge.  
   
@@ -78,7 +61,7 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
   
  Pour plus d’informations sur l’utilisation de points de connexion dans ATL, consultez l’article [Points de connexion](../../atl/atl-connection-points.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `IConnectionPointContainer`  
   
  `IConnectionPointContainerImpl`  
@@ -93,8 +76,8 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
 ```  
   
-### <a name="remarks"></a>Notes  
- Consultez la page [IConnectionPointContainer::EnumConnectionPoints](http://msdn.microsoft.com/library/windows/desktop/ms682460) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarques  
+ Consultez [IConnectionPointContainer::EnumConnectionPoints](http://msdn.microsoft.com/library/windows/desktop/ms682460) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="findconnectionpoint"></a>IConnectionPointContainerImpl::FindConnectionPoint  
  Récupère un pointeur d’interface vers le point de connexion qui prend en charge l’IID spécifié.  
@@ -104,9 +87,8 @@ STDMETHOD(FindConnectionPoint)(REFIID riid, IConnectionPoint** ppCP);
 ```  
   
 ### <a name="remarks"></a>Remarques  
- Consultez la page [IConnectionPointContainer::FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consultez [IConnectionPointContainer::FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476) dans le Kit de développement logiciel Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

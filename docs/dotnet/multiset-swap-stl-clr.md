@@ -1,45 +1,43 @@
 ---
-title: "multiset::swap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre swap [STL/CLR]"
+title: multiset::swap (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::swap
+dev_langs: C++
+helpviewer_keywords: swap member [STL/CLR]
 ms.assetid: 8a3023c7-e58b-4ffe-8fd5-2e0bf02cc291
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b520cb617b4a8fed151d0c2f473cce75c7594178
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::swap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multisetswap-stlclr"></a>multiset::swap (STL/CLR)
 Échange le contenu de deux conteneurs.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void swap(multiset<Key>% right);  
 ```  
   
-#### Paramètres  
- right  
+#### <a name="parameters"></a>Paramètres  
+ droite  
  Conteneur avec lequel échanger le contenu.  
   
-## Notes  
- The member function swaps the controlled sequences between `this` and `right`.  It does so in constant time and it throws no exceptions.  You use it as a quick way to exchange the contents of two containers.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre échange les séquences contrôlées entre `this` et `right`. Cela se fait en temps constant et ne lève aucune exception. Vous l’utiliser comme un moyen rapide de l’échange le contenu de deux conteneurs.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_multiset_swap.cpp   
@@ -82,15 +80,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **d e f**  
- **d e f**  
- **a b c**   
-## Configuration requise  
- **Header:** \<cliext\/set\>  
+```Output  
+a b c  
+d e f  
+d e f  
+a b c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/set >  
   
-## Voir aussi  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::operator\=](../dotnet/multiset-operator-assign-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::operator= (STL/CLR)](../dotnet/multiset-operator-assign-stl-clr.md)

@@ -1,32 +1,31 @@
 ---
-title: "Comment&#160;: r&#233;cup&#233;rer du texte du Presse-papiers (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Presse-papiers, récupérer du texte"
-  - "texte, récupérer du Presse-papiers"
+title: "Comment : récupérer du texte dans le Presse-papiers (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- text, retrieving from Clipboard
+- Clipboard, retrieving text
 ms.assetid: 99e77ba0-8573-4030-92d8-de8aa7623ee4
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6517b367e8c3d59538a4e36839ccc7f93d8b1817
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: r&#233;cup&#233;rer du texte du Presse-papiers (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'exemple de code suivant utilise la fonction membre <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> pour retourner un pointeur vers l'interface <xref:System.Windows.Forms.IDataObject>.  Ensuite, cette interface peut faire l'objet d'une requête visant à connaître le format de données et être utilisée pour récupérer les données réelles.  
+# <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>Comment : récupérer du texte du Presse-papiers (C++/CLI)
+Le code suivant exemple utilise le <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> fonction membre pour retourner un pointeur vers le <xref:System.Windows.Forms.IDataObject> interface. Cette interface peut être interrogée pour le format des données et permet de récupérer les données réelles.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // read_clipboard.cpp  
@@ -62,6 +61,6 @@ using namespace System::Windows::Forms;
 }  
 ```  
   
-## Voir aussi  
- [Opérations Windows](../dotnet/windows-operations-cpp-cli.md)   
- [Programmation .NET avec C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Opérations Windows (C + c++ / CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
