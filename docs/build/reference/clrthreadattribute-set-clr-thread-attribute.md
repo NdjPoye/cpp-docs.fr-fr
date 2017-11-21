@@ -1,75 +1,74 @@
 ---
-title: "/CLRTHREADATTRIBUTE (D&#233;finir l&#39;attribut de thread CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.CLRThreadAttribute"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/CLRTHREADATTRIBUTE (option de l'éditeur de liens)"
-  - "-CLRTHREADATTRIBUTE (option de l'éditeur de liens)"
+title: -/CLRTHREADATTRIBUTE (attribut de Thread CLR ensemble) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.CLRThreadAttribute
+dev_langs: C++
+helpviewer_keywords:
+- /CLRTHREADATTRIBUTE linker option
+- -CLRTHREADATTRIBUTE linker option
 ms.assetid: 4907e9ef-5031-446c-aecf-0a0b32fae1e8
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e928d24c6257bc64303d667e66cd1f968e003450
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /CLRTHREADATTRIBUTE (D&#233;finir l&#39;attribut de thread CLR)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Spécifie explicitement l'attribut de thread pour le point d'entrée de votre programme CLR.  
+# <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE (Définir l'attribut de thread CLR)
+Spécifier explicitement l’attribut de thread pour le point d’entrée de votre programme CLR.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 /CLRTHREADATTRIBUTE:{STA|MTA|NONE}  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  MTA  
- Applique l'attribut MTAThreadAttribute au point d'entrée de votre programme.  
+ Applique l’attribut MTAThreadAttribute au point d’entrée de votre programme.  
   
- NONE  
- Revient à ne pas spécifier \/CLRTHREADATTRIBUTE.  Permet au Common Language Runtime \(CLR\) de définir l'attribut de thread par défaut.  
+ AUCUN  
+ Identique à ne pas spécifier /CLRTHREADATTRIBUTE..  Permet de définir la valeur par défaut, attribut de thread du Common Language Runtime (CLR).  
   
  STA  
- Applique l'attribut STAThreadAttribute au point d'entrée de votre programme.  
+ Applique l’attribut STAThreadAttribute au point d’entrée de votre programme.  
   
-## Notes  
- La définition de l'attribut de thread n'est valide que lors de la génération d'un fichier .exe, car il affecte le point d'entrée du thread principal.  
+## <a name="remarks"></a>Remarques  
+ Définition de l’attribut de thread est valide uniquement lors de la création d’un .exe, car il affecte le point d’entrée du thread principal.  
   
- Si vous utilisez le point d'entrée par défaut \(main ou wmain, par exemple\) spécifiez le modèle de thread en utilisant \/CLRTHREADATTRIBUTE ou en plaçant l'attribut de thread \(STAThreadAttribute ou MTAThreadAttribute\) sur la fonction d'entrée par défaut.  
+ Si vous utilisez le point d’entrée par défaut (main ou wmain, par exemple) spécifiez le modèle de thread en utilisant /CLRTHREADATTRIBUTE ou en plaçant l’attribut de thread (STAThreadAttribute ou MTAThreadAttribute) sur la fonction d’entrée par défaut.  
   
- Si vous utilisez un point d'entrée autre que celui par défaut, spécifiez le modèle de thread en utilisant \/CLRTHREADATTRIBUTE ou en plaçant l'attribut de thread sur la fonction d'entrée autre que celle par défaut, puis spécifiez le point d'entrée autre que celui par défaut avec [\/ENTRY](../../build/reference/entry-entry-point-symbol.md).  
+ Si vous utilisez un point d’entrée de celle par défaut, spécifiez le modèle de thread en utilisant /CLRTHREADATTRIBUTE ou en plaçant le threading attribut sur la fonction d’entrée non-par défaut, puis spécifiez le point d’entrée de celle par défaut avec [/ENTRY](../../build/reference/entry-entry-point-symbol.md) .  
   
- Si le modèle de thread spécifié dans le code source n'est pas en accord avec le modèle de thread spécifié à l'aide de \/CLRTHREADATTRIBUTE, l'éditeur de liens ignore \/CLRTHREADATTRIBUTE et applique le modèle de thread spécifié dans le code source.  
+ Si le modèle de thread spécifié dans le code source ne correspond pas avec le modèle de thread spécifié avec /CLRTHREADATTRIBUTE., l’éditeur de liens ignore /CLRTHREADATTRIBUTE et appliquer le modèle de thread spécifié dans le code source.  
   
- Il vous sera nécessaire d'utiliser le monothreading. Par exemple, si votre programme CLR héberge un objet COM qui utilise le monothreading.  Si votre programme CLR utilise le multi\-threading, il ne peut pas héberger d'objet COM qui utilise le monothreading.  
+ Il sera nécessaire pour pouvoir l’utiliser, par exemple, si votre programme CLR héberge un objet COM qui utilise le modèle de thread unique.  Si votre programme CLR utilise le multithreading, il ne peut pas héberger un objet COM qui utilise le modèle de thread unique.  
   
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Comment : ouvrir les pages de propriétés d'un projet](../../misc/how-to-open-project-property-pages.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
-2.  Développez le nœud **Propriétés de configuration**.  
+2.  Développez le **propriétés de Configuration** nœud.  
   
-3.  Développez le nœud **Éditeur de liens**.  
+3.  Développez le **l’éditeur de liens** nœud.  
   
-4.  Sélectionnez la page de propriétés **Avancé**.  
+4.  Sélectionnez le **avancé** page de propriétés.  
   
-5.  Modifiez la propriété **Attribut de thread CLR**.  
+5.  Modifier la **attribut de Thread CLR** propriété.  
   
-### Pour définir cette option de l'éditeur de liens par programme  
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   
 1.  Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRThreadAttribute%2A>.  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)

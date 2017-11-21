@@ -1,35 +1,34 @@
 ---
-title: "Generic Classes (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes [C++], generic"
-  - "generic classes [C++], about generic classes"
-  - "data types [C++], generic"
-  - "generic classes"
-  - "generics [C++], declaring generic classes"
+title: "Classes génériques (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- classes [C++], generic
+- generic classes [C++], about generic classes
+- data types [C++], generic
+- generic classes
+- generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-caps.latest.revision: 33
-caps.handback.revision: 31
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "33"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e59aafde058565435e0a777a55ff7b010fea705e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Generic Classes (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Une classe générique est déclarée en utilisant la syntaxe suivante :  
+# <a name="generic-classes-ccli"></a>Classes génériques (C++/CLI)
+Une classe générique est déclarée à l’aide de la forme suivante :  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 [attributes]  
@@ -38,49 +37,49 @@ generic <class-key type-parameter-identifier(s)>
 [accessibility-modifiers] ref class identifier  [modifiers]  
 [: base-list]   
 {  
-   class-body  
+class-body  
 } [declarators] [;]  
 ```  
   
-## Notes  
- Dans la syntaxe ci\-dessus, les termes suivants sont utilisés :  
+## <a name="remarks"></a>Remarques  
+ Dans la syntaxe ci-dessus, les termes suivants sont utilisés :  
   
- `attributes` \(facultatif\)  
- Les informations supplémentaires déclarative.  Pour plus d'informations sur les attributs et les classes d'attributs, consultez la section attributs.  
+ `attributes`(facultatif)  
+ Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et classes d’attributs, consultez attributs.  
   
- *class\-key*  
- Soit `class`, soit `typename`  
+ *clé de la classe*  
+ Soit `class` ou`typename`  
   
- *type\-paramètre\-indentifiant\(s\)*,  
- Liste d'identificateurs séparée par des virgules qui spécifie les noms des paramètres de type.  
+ *type-paramètre-identificateur (s)*,  
+ Liste de séparées par des virgules d’identificateurs en spécifiant les noms des paramètres de type.  
   
- *contrainte\-clauses*  
- Une liste \(non séparée par des virgules\) de clauses de **where** spécifiant les contraintes des paramètres de type.  Prend la forme suivante :  
+ *clauses de contrainte*  
+ Une liste (ne pas séparées par des virgules) de **où** clauses spécifiant les contraintes pour les paramètres de type. Prend la forme :  
   
- `where`  *type\-parameter\-identifier*  `:`  *constraint\-list*  `...`  
+ `where`  *identificateur de paramètre de type*`:`*liste de contraintes*   `...`  
   
  *liste de contraintes*  
- *classe\-ou\-interface*\[`,`*...*\]  
+ *classe ou interface*[`,` *...* ]  
   
- *Modificateurs d'accessibilité*  
- Modificateurs d'Accessibilité pour la classe générique.  Pour [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], le seul modificateur autorisé est `private`.  Pour le common langage runtime\), les modificateurs autorisés sont `private` et `public`.  
+ *modificateurs d’accessibilité*  
+ Modificateurs d’accessibilité de la classe générique. Pour le Windows Runtime, le seul modificateur autorisé est `private`. Pour le common language runtime, les modificateurs autorisés sont `private` et `public`.  
   
- *identificateur*  
- Nom de la classe générique, un identificateur valide et C\+\+.  
+ *identifier*  
+ Le nom de la classe générique, un identificateur C++ valide.  
   
- *Modificateur* \(facultatif\)  
- Les modificateurs autorisés sont `sealed` et **abstract**.  
+ *modificateurs* (facultatif)  
+ Autorisées incluent des modificateurs `sealed` et **abstraite**.  
   
- *base liste*  
- Liste qui contient une classe de base et toutes les interfaces implémentées, tout en les séparant par des virgules.  
+ *liste de base*  
+ Une liste qui contient la classe de base et les interfaces implémentées, séparés par des virgules.  
   
- *classe corps*  
- Le corps de la classe, qui contient des champs, des fonctions membres, etc.  
+ *corps de la classe*  
+ Le corps de la classe contenant des champs, des fonctions membres, etc..  
   
  *déclarateurs*  
- Toutes les déclarations de variables de ce type.  Par exemple :*identificateur* de  `^`\[`,` …\]  
+ Déclarations des variables de ce type. Par exemple : `^` *identificateur*[`,` ...]  
   
- Vous pouvez déclarer les classes génériques tels que ceux\-ci \(notez que le mot clé **classe** peut être utilisé à la place de **nom de type**\).  Dans cet exemple, `ItemType`, `KeyType` et `ValueType` sont des types inconnus spécifiés au point où le type.  `HashTable<int, int>` est un type construit du type générique `HashTable<KeyType, ValueType>`.  Un certain nombre de types construits peuvent être construits d'un type générique unique.  Les types construits, construits de classes génériques sont traités comme tout autre type de classe de référence.  
+ Vous pouvez déclarer des classes génériques telles que celles-ci (Notez que le mot clé **classe** peut être utilisé au lieu de **typename**). Dans cet exemple, `ItemType`, `KeyType` et `ValueType` sont des types inconnus spécifiés au point où le type. `HashTable<int, int>`est un type construit du type générique `HashTable<KeyType, ValueType>`. Un nombre de différents types construits peut être construit à partir d’un type générique unique. Les types construits construites à partir de classes génériques sont traités comme tout autre type de classe ref.  
   
 ```  
 // generic_classes_1.cpp  
@@ -104,9 +103,9 @@ int main() {
 }  
 ```  
   
- Les types de valeur \(les types intégrés tels que `int` ou `double`, ou types de valeur définis par l'utilisateur\) et les types référence peuvent être utilisés comme argument du type générique.  La syntaxe de la définition générique est la même quelle que soit la situation.  Syntaxe, le type inconnu est considéré comme étant un type de référence.  Toutefois, le runtime peut déterminer que le type effectivement utilisé est un type de valeur et remplacer le code généré approprié pour l'accès direct aux membres.  Les types de valeur utilisés comme arguments de type générique ne sont pas enfermés dans la boîte et par conséquent ne souffrent pas l'altération des performances associée au boxing.  La syntaxe utilisée dans le corps du générique doit être **T^** et '**\-\>**' au lieu de '**.**'.  Toute utilisation de [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) pour le paramètre de type est interprétée correctement par le runtime comme simple création d'un type de valeur si l'argument de type est un type de valeur.  
+ Les deux types de valeur (soit intégré types tels que `int` ou `double`, ou des types valeur définis par l’utilisateur) et les types référence peuvent être utilisés en tant qu’argument de type générique. La syntaxe dans la définition générique est le même indépendamment. Point de vue syntaxique, le type inconnu est traité comme s’il s’agissait d’un type référence. Toutefois, le runtime est en mesure de déterminer que si le type réellement utilisé est un type valeur et remplacez le code généré approprié pour l’accès direct aux membres. Types valeur utilisés en tant qu’arguments de type générique ne sont pas convertie (boxed) et par conséquent, ne sont pas affectées la baisse des performances associée à une conversion boxing. La syntaxe utilisée dans le corps de l’objet générique doit être **T ^** et '**->**'à la place de'**.**'. Toute utilisation de [gcnew de nouveau, ref](../windows/ref-new-gcnew-cpp-component-extensions.md) pour le type de paramètre sera correctement interprété par le runtime en tant que la simple création d’un type valeur si l’argument de type est un type valeur.  
   
- Vous pouvez également déclarer une classe générique avec [Constraints on Generic Type Parameters \(C\+\+\/CLI\)](../windows/constraints-on-generic-type-parameters-cpp-cli.md) sur les types d'éléments qui peuvent être utilisés pour le paramètre de type.  Dans l'exemple suivant n'importe quel type utilisé pour `ItemType` doit implémenter l'interface `IItem`.  Tenter d'utiliser `int`, par exemple, qui n'implémente pas `IItem`, produirait une erreur de compilation car l'argument de type ne satisfait pas la contrainte.  
+ Vous pouvez également déclarer une classe générique avec [contraintes sur les paramètres de Type générique (C + c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md) sur les types qui peuvent être utilisés pour le paramètre de type. Dans l’exemple suivant, tout type utilisé pour `ItemType` doit implémenter la `IItem` interface. Toute tentative d’utilisation `int`, par exemple, ce qui n’implémente pas `IItem`, produit une erreur de compilation, car l’argument de type ne satisfait pas la contrainte.  
   
 ```  
 // generic_classes_2.cpp  
@@ -117,7 +116,7 @@ where ItemType : IItem
 ref class Stack {};  
 ```  
   
- Les classes génériques dans le même espace de noms ne peuvent pas être surchargées en modifiant uniquement le nombre ou les types de paramètres de type.  Toutefois, si chaque classe vit dans un espace de noms différent, elles peuvent être surchargées.  Par exemple, considérez les deux classes suivantes, `MyClass` et `MyClass<ItemType>`, dans les espaces de noms `A` et `B`.  Les deux classes peuvent être surchargées dans un troisième espace de noms c c :  
+ Les classes génériques dans le même espace de noms ne peuvent pas être surchargées en modifiant uniquement le nombre ou les types de paramètres de type. Toutefois, si chaque classe vit dans un autre espace de noms, ils peuvent être surchargés. Par exemple, considérez les deux classes suivantes, `MyClass` et `MyClass<ItemType>`, les espaces de noms `A` et `B`. Les deux classes puis peuvent être surchargés dans un espace de noms tiers C:  
   
 ```  
 // generic_classes_3.cpp  
@@ -144,7 +143,7 @@ namespace C {
 }  
 ```  
   
- Les classes de base et les interfaces de base ne peuvent pas être des paramètres de type.  Toutefois, la classe de base peut impliquer le paramètre de type comme argument, comme dans le cas suivant :  
+ La classe de base et les interfaces de base ne peut pas être des paramètres de type. Toutefois, la classe de base peut impliquer le paramètre de type en tant qu’argument, comme dans le cas suivant :  
   
 ```  
 // generic_classes_4.cpp  
@@ -156,16 +155,16 @@ generic <typename ItemType>
 ref class MyClass : IInterface<ItemType> {};  
 ```  
   
- Les constructeurs et les destructeurs sont exécutés une fois pour chaque instance de l'objet \(comme d'habitude\) ; les constructeurs statiques sont exécutés une fois pour chaque type construit.  
+ Constructeurs et les destructeurs sont exécutées une fois pour chaque instance d’objet (comme d’habitude) ; les constructeurs statiques sont exécutées une fois pour chaque type construit.  
   
-## Champs dans les classes génériques  
- Cette section illustre l'utilisation des champs d'instance et statiques dans les classes génériques.  
+## <a name="fields-in-generic-classes"></a>Champs dans les Classes génériques  
+ Cette section illustre l’utilisation de l’instance et les champs statiques dans les classes génériques.  
   
-### Variables d'instance  
- Les variables d'instance d'une classe générique peuvent avoir des types et des initialiseurs de variable qui incluentt tous les paramètres de type de la classe englobant.  
+### <a name="instance-variables"></a>Variables d’instance  
+ Variables d’instance d’une classe générique peuvent avoir des types et les initialiseurs de variable qui incluent des paramètres de type à partir de la classe englobante.  
   
-## Exemple  
- Dans l'exemple suivant, trois instances différentes de la classe générique, MyClass\<ItemType\>, sont créés à l'aide de les arguments de type approprié \(`int`, **double**, et **string**\).  
+## <a name="example"></a>Exemple  
+ Dans l’exemple suivant, trois instances différentes de la classe générique, MyClass\<ItemType >, sont créés en utilisant les arguments de type approprié (`int`, **double**, et **chaîne**).  
   
 ```  
 // generics_instance_fields1.cpp  
@@ -199,16 +198,19 @@ int main() {
    }  
 ```  
   
-  **Zone entière \= 123**  
-**Double champ \= 1,23**  
-**Champ de chaîne \= ABC**   
-## Variables Statiques  
- Sur la création d'un type générique, les instances de toutes les variables statiques sont créées et tout constructeur statique pour ce type est exécuté.  
+```Output  
+Integer field = 123  
+Double field = 1.23  
+String field = ABC  
+```  
   
- Les variables statiques peuvent utiliser tous les paramètres de type de la classe englobant.  
+## <a name="static-variables"></a>Variables statiques  
+ Sur la création d’un nouveau type générique, des instances de toutes les variables statiques sont créés et un constructeur statique pour ce type est exécuté.  
   
-## Exemple  
- L'exemple suivant illustre l'utilisation des champs statiques et un constructeur statique d'une classe générique.  
+ Les variables statiques peuvent utiliser des paramètres de type à partir de la classe englobante.  
+  
+## <a name="example"></a>Exemple  
+ L’exemple suivant montre l’utilisation des champs statiques et un constructeur statique dans une classe générique.  
   
 ```  
 // generics_static2.cpp  
@@ -256,30 +258,33 @@ int main() {
 }  
 ```  
   
-  **Le constructeur statique appellé.**  
-**Le constructeur statique appellé.**  
-**Le constructeur statique appellé.**  
-**Test1**   
-## Méthodes des classes génériques  
- Les méthodes des classes génériques peuvent être génériques elles\-mêmes ; les méthodes génériques sont implicitement paramétrables par le paramètre de type de la classe.  
+```Output  
+Static constructor called.  
+Static constructor called.  
+Static constructor called.  
+Test1  
+```  
   
- Les règles particulières suivantes s'appliquent aux méthodes dans les classes génériques :  
+## <a name="methods-in-generic-classes"></a>Méthodes dans les Classes génériques  
+ Méthodes dans les classes génériques peuvent être génériques eux-mêmes ; les méthodes non génériques seront être paramétrées implicitement par le paramètre de type classe.  
   
--   Les méthodes des classes génériques peuvent utiliser des paramètres de type en guise de paramètres, types de retour, ou variables locales.  
+ Les règles suivantes s’appliquent aux méthodes dans les classes génériques :  
   
--   Les méthodes des classes génériques peuvent utiliser les types construits ouverts et fermés comme paramètres, types de retour, ou variables locales.  
+-   Méthodes dans les classes génériques peuvent utiliser des paramètres de type en tant que paramètres, des types de retour ou des variables locales.  
   
-### Méthodes génériques dans les classes génériques  
- Les méthodes des classes génériques qui n'ont pas de paramètres de type supplémentaire sont généralement indiquées comme générique bien qu'elles soient paramétrables implicitement par la classe générique englobant.  
+-   Méthodes dans les classes génériques peuvent utiliser les types construits ouverts ou fermés en tant que paramètres, des types de retour ou des variables locales.  
   
- La signature de la méthode générique peut inclure un ou plusieurs paramètres de type de la classe englobant, directement ou dans un type construit ouvert.  Par exemple :  
+### <a name="non-generic-methods-in-generic-classes"></a>Méthodes non génériques dans les Classes génériques  
+ Méthodes dans les classes génériques qui n’ont aucun paramètre de type supplémentaires sont généralement appelées non générique bien qu’ils sont implicitement paramétrables par la classe générique englobante.  
+  
+ La signature d’une méthode non générique peut inclure un ou plusieurs paramètres de type de la classe englobante, soit directement, soit dans un type construit ouvert. Exemple :  
   
  `void MyMethod(MyClass<ItemType> x) {}`  
   
  Le corps de ces méthodes peuvent également utiliser ces paramètres de type.  
   
-## Exemple  
- L'exemple suivant déclare une méthode générique, `ProtectData`, dans une classe générique, `MyClass<ItemType>`.  La méthode utilise le paramètre de type `ItemType` de classe dans sa signature d'un type construit ouvert.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant déclare une méthode non générique, `ProtectData`, à l’intérieur d’une classe générique, `MyClass<ItemType>`. La méthode utilise le paramètre de type classe `ItemType` dans sa signature dans un type construit ouvert.  
   
 ```  
 // generics_non_generic_methods1.cpp  
@@ -329,12 +334,15 @@ int main() {
 }  
 ```  
   
-  **Nom: Jeff Smith**  
-**Montant: $123.00\*\***   
-## Méthodes génériques dans les classes génériques  
- Vous pouvez déclarer les méthodes génériques dans les classes génériques et non\-génériques.  Par exemple :  
+```Output  
+Name: Jeff Smith  
+Amount: $123.00**  
+```  
   
-## Exemple  
+## <a name="generic-methods-in-generic-classes"></a>Méthodes génériques dans les Classes génériques  
+ Vous pouvez déclarer des méthodes génériques dans les classes génériques et non génériques. Exemple :  
+  
+## <a name="example"></a>Exemple  
   
 ```  
 // generics_method2.cpp  
@@ -356,12 +364,12 @@ public:
 };  
 ```  
   
- La méthode générique est toujours générique dans le sens qu'elle est paramétrable par le paramètre de type de la classe, mais elle n'a pas de paramètres de type supplémentaire.  
+ La méthode non générique est toujours générique en ce sens qu’il est paramétré par le paramètre de type de la classe, mais il n’a aucun paramètre de type supplémentaire.  
   
- Tous les types de méthode dans la classe génériques peuvent être génériques, y compris les curseurs statiques instance, les méthodes, et virtuels.  
+ Tous les types de méthodes dans les classes génériques peuvent être statique générique, y compris, instance et des méthodes virtuelles.  
   
-## Exemple  
- L'exemple suivant montre comment déclarer et utiliser les méthodes génériques dans les classes génériques :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant montre comment déclarer et à l’aide des méthodes génériques dans les classes génériques :  
   
 ```  
 // generics_generic_method2.cpp  
@@ -402,11 +410,14 @@ int main() {
 }  
 ```  
   
-  **MyMethod retourné : 12**  
-**MyMethod retourné : Hello \#1**  
-**MyMethod retourné : Hello World\!**   
-## Utilisation de tables imbriquées dans les classes génériques  
- Tout comme avec les classes ordinaires, vous pouvez déclarer les autres types dans une classe générique.  La déclaration de classe imbriquée est implicitement paramétrable par les paramètres de type de la déclaration de classe externe.  Par conséquent, une classe séparée imbriquée est définie pour chaque type externe construit.  Par exemple dans la déclaration,  
+```Output  
+MyMethod returned: 12  
+MyMethod returned: Hello #1  
+MyMethod returned: Hello World!  
+```  
+  
+## <a name="using-nested-types-in-generic-classes"></a>À l’aide des Types imbriqués dans les Classes génériques  
+ Tout comme avec les classes ordinaires, vous pouvez déclarer des autres types à l’intérieur d’une classe générique. La déclaration de classe imbriquée est implicitement paramétrable par les paramètres de type de la déclaration de classe externe. Par conséquent, une classe imbriquée distincte est définie pour chaque type externe construit. Par exemple, dans la déclaration,  
   
 ```  
 // generic_classes_5.cpp  
@@ -417,9 +428,9 @@ ref struct Outer {
 };  
 ```  
   
- Le type Outer\<int\>::Inner n'est pas identique au type Outer\<double\>::Inner.  
+ Le type externe\<int > :: interne n’est pas le même que le type externe\<double > :: interne.  
   
- Comme avec les méthodes génériques dans les classes génériques, les paramètres de type supplémentaires peuvent être définies pour le type imbriqué.  Si vous utilisez les mêmes noms de paramètre de type de la classe interne et externe, le paramètre de type interne masquera le paramètre de type externe.  
+ Comme avec les méthodes génériques dans les classes génériques, les paramètres de type supplémentaires peuvent être définis pour le type imbriqué. Si vous utilisez les mêmes noms de paramètre de type dans la classe interne et externe, le paramètre de type interne masque le paramètre de type externe.  
   
 ```  
 // generic_classes_6.cpp  
@@ -435,13 +446,13 @@ ref class Outer {
 };  
 ```  
   
- Étant donné qu'il n'existe aucun moyen pour faire référence au paramètre de type externe, le compilateur produit une erreur dans cette situation.  
+ Comme il n’existe aucun moyen de faire référence au paramètre de type externe, le compilateur génère un avertissement dans ce cas.  
   
- Lorsque des types génériques imbriqués construits sont nommés, le paramètre de type pour le type externe n'est pas inclus dans la liste des paramètres de type pour le type interne, même si le type interne est implicitement paramétrable par le paramètre de type externe de type.  Dans le cas ci\-dessus, un nom de type construit est Outer\<int\>::Inner\<string\>.  
+ Lorsque des types génériques construits imbriquées sont nommées, le paramètre de type pour le type externe n’est pas inclus dans la liste de paramètres de type pour le type interne, même si le type interne est implicitement paramétrable par le paramètre de type du type externe. Dans le cas ci-dessus, un nom d’un type construit serait externe\<int > :: interne\<chaîne >.  
   
- L'exemple suivant illustre la construction et la lecture d'une liste liée à des tables imbriquées dans les classes génériques.  
+ L’exemple suivant illustre la création et la lecture d’une liste liée à l’aide des types imbriqués dans les classes génériques.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // generics_linked_list.cpp  
@@ -517,30 +528,33 @@ int main() {
 }  
 ```  
   
-  **Générer la liste :**  
-**0.1**  
-**0.2**  
-**0.3**  
-**0.4**  
-**0.5**  
-**Nœuds de lecture :**  
-**0.5**  
-**0.4**  
-**0.3**  
-**0.2**  
-**0.1**   
-## Propriétés, événements, indexeurs et opérateurs dans les classes génériques  
+```Output  
+Building the list:  
+0.1  
+0.2  
+0.3  
+0.4  
+0.5  
+Reading nodes:  
+0.5  
+0.4  
+0.3  
+0.2  
+0.1  
+```  
   
--   Les propriétés, les événements, les indexeurs et les opérateurs peuvent utiliser des paramètres de type de la classe générique englobant comme valeurs de retour, paramètres, ou variables locales, telle que `ItemType` soit un paramètre de type d'une classe :  
+## <a name="properties-events-indexers-and-operators-in-generic-classes"></a>Propriétés, événements, indexeurs et opérateurs dans les Classes génériques  
+  
+-   Propriétés, événements, indexeurs et opérateurs peuvent utiliser les paramètres de type de la classe générique englobante en tant que valeurs de retour, des paramètres ou des variables locales, par exemple lorsque `ItemType` est un paramètre de type d’une classe :  
   
     ```  
     public ItemType MyProperty {}  
     ```  
   
--   Les propriétés, les événements, les indexeurs et les opérateurs ne peuvent pas eux\-mêmes être paramétrés.  
+-   Propriétés, événements, indexeurs et les opérateurs ne peuvent pas eux-mêmes être paramétrées.  
   
-## Exemple  
- Cet exemple montre les déclarations d'une propriété d'instance d'une classe générique.  
+## <a name="example"></a>Exemple  
+ Cet exemple montre des déclarations d’une propriété d’instance dans une classe générique.  
   
 ```  
 // generics_generic_properties1.cpp  
@@ -574,9 +588,12 @@ int main() {
 }  
 ```  
   
-  **John, 234**   
-## Exemple  
- L'exemple suivant montre une classe générique avec un événement.  
+```Output  
+John, 234  
+```  
+  
+## <a name="example"></a>Exemple  
+ L’exemple suivant montre une classe générique avec un événement.  
   
 ```  
 // generics_generic_with_event.cpp  
@@ -637,11 +654,11 @@ int main() {
 }  
 ```  
   
-## Generic Structs  
- Les règles pour déclarer et utiliser les structs génériques sont les mêmes que celles pour les classes génériques, à l'exception de les différences indiquées dans Visual C\+\+ référence du langage.  
+## <a name="generic-structs"></a>Structures génériques  
+ Les règles de déclaration et d’utilisation de structs génériques sont les mêmes que celles pour les classes génériques, à part les différences figurant dans la référence du langage Visual C++.  
   
-## Exemple  
- L'exemple suivant déclare une structure générique, `MyGenStruct`, avec un champ, `myField`, et lui assigner des valeurs de types différents \(`int`, **double**, **String^**\) à ce champ.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant déclare une structure générique, `MyGenStruct`, avec un champ, `myField`et assigne des valeurs de types différents (`int`, **double**, **String ^**) à ce champ.  
   
 ```  
 // generics_generic_struct1.cpp  
@@ -680,8 +697,11 @@ int main() {
 }  
 ```  
   
-  **On attribut au champs la valeur entière: 123**  
-**Le champ est affecté la valeur double : 0,123**  
-**Le champ est affecté la chaîne : Hello génériques \!**   
-## Voir aussi  
- [Generics](../windows/generics-cpp-component-extensions.md)
+```Output  
+The field is assigned the integer value: 123  
+The field is assigned the double value: 0.123  
+The field is assigned the string: Hello Generics!  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Génériques](../windows/generics-cpp-component-extensions.md)

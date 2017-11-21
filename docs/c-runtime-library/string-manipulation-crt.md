@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.strings
-dev_langs:
-- C++
+f1_keywords: c.strings
+dev_langs: C++
 helpviewer_keywords:
 - strings [C++], manipulating
 - string manipulation
 - manipulating strings
 ms.assetid: 6545861a-59e7-408d-9d29-2ec9134fc91a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 1f0584bd657db7ea3b80bfe5b0695e0d45a4f43b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: 5fca1b898f43670499c9dace3f912b207f5b7933
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="string-manipulation-crt"></a>Manipulation de chaînes (CRT)
 Ces routines fonctionnent sur les chaînes de caractères à un octet terminée par le caractère null, les chaînes de caractères larges et les chaînes de caractères multioctets. Utilisez les routines de manipulation de mémoire tampon, décrites dans [Manipulation de la mémoire tampon](../c-runtime-library/buffer-manipulation.md), pour utiliser des tableaux de caractères qui ne se terminent pas par un caractère null.  

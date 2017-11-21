@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,35 +16,18 @@ f1_keywords:
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::is_canceled
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::none
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::register_callback
-dev_langs:
-- C++
-helpviewer_keywords:
-- cancellation_token class
+dev_langs: C++
+helpviewer_keywords: cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: d17505a117c0affd8106afad9004e6ec86602a26
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: e4e656fa567342dde9ba990bff5b0d8081337385
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token, classe
 La classe `cancellation_token` représente la capacité à déterminer si l'annulation d'une opération a été demandée. Un jeton donné peut être associé à un objet `task_group`, `structured_task_group` ou `task` pour entraîner une annulation implicite.. Il peut également être sondé à la recherche d'une annulation ou comporter un rappel enregistré en cas d'annulation de la classe `cancellation_token_source` associée.  
@@ -83,7 +65,7 @@ class cancellation_token;
 |[operator=](#operator_eq)||  
 |[operator==](#operator_eq_eq)||  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `cancellation_token`  
   
 ## <a name="requirements"></a>Spécifications  
@@ -205,8 +187,7 @@ template<typename _Function>
  Objet de fonction qui est rappelé lorsque `cancellation_token` est annulé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Objet `cancellation_token_registration` qui peut être utilisé dans la méthode `deregister` pour annuler l'enregistrement d'un rappel précédemment enregistré et l'empêcher d'être effectué. La méthode lève un [invalid_operation](invalid-operation-class.md) exception si elle est appelée sur une `cancellation_token` objet créé à l’aide de la [cancellation_token::none](#none) (méthode).  
+ Objet `cancellation_token_registration` qui peut être utilisé dans la méthode `deregister` pour annuler l'enregistrement d'un rappel précédemment enregistré et l'empêcher d'être effectué. La méthode lève un [invalid_operation](invalid-operation-class.md) exception si elle est appelée sur une `cancellation_token` objet qui a été créé à l’aide de la [cancellation_token::none](#none) (méthode).  
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)
-

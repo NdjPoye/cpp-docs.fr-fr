@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.io
-dev_langs:
-- C++
+f1_keywords: c.io
+dev_langs: C++
 helpviewer_keywords:
 - I/O routines, stream I/O
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: f342fb51cf2a1e97afa28db710fbb966b31a386b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: 72772912097cf868538a496d3350d4708af5dc83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="stream-io"></a>E/S de flux
 Ces fonctions permettent de traiter des données de tailles et de formats différents, des caractères uniques jusqu'aux structures de données volumineuses. Elles assurent aussi une mise en mémoire tampon, ce qui peut améliorer les performances. La taille par défaut d'une mémoire tampon de flux est de 4 Ko. Ces routines concernent uniquement les mémoires tampons créées par les routines de bibliothèque Runtime et n'ont aucun effet sur les mémoires tampons créées par le système d'exploitation.  
@@ -52,7 +33,7 @@ Ces fonctions permettent de traiter des données de tailles et de formats diffé
 |-------------|---------|  
 |[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|Effacer un indicateur d'erreur de flux|  
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|Fermer un flux|  
-|[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|Fermer tous les flux ouverts sauf `stdin`, `stdout` et `stderr`|  
+|[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|Fermer tous les flux ouverts sauf `stdin`, `stdout`et `stderr`|  
 |[_fdopen, wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|Associer un flux au descripteur de fichier d'un fichier ouvert|  
 |[feof](../c-runtime-library/reference/feof.md)|Tester la fin de fichier sur un flux|  
 |[ferror](../c-runtime-library/reference/ferror.md)|Tester la présence d'erreur sur un flux|  
@@ -118,7 +99,7 @@ Ces fonctions permettent de traiter des données de tailles et de formats diffé
   
  Le comportement d'un fichier spécifiquement ouvert avec l'indicateur `c` ou `n` varie en fonction de cet indicateur, quel que soit l'indicateur de validation global (« commit »/« no-commit »).  
   
- Si votre programme ne ferme pas explicitement un flux, le flux est fermé automatiquement quand le programme se termine. Cependant, vous devez fermer un flux une fois que le programme en a terminé avec celui-ci, car le nombre de flux pouvant être ouverts simultanément est limité. Consultez [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) pour plus d’informations sur cette limite.  
+ Si votre programme ne ferme pas explicitement un flux, le flux est fermé automatiquement quand le programme se termine. Cependant, vous devez fermer un flux une fois que le programme en a terminé avec celui-ci, car le nombre de flux pouvant être ouverts simultanément est limité. Pour plus d'informations sur cette limite, consultez [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) .  
   
  Une entrée ne peut suivre directement une sortie qu'à condition de faire un appel intermédiaire à `fflush` ou à une fonction de positionnement de fichier (`fseek`, `fsetpos`ou `rewind`). Une sortie peut suivre une entrée sans appel intermédiaire à une fonction de positionnement de fichier si l'opération d'entrée rencontre la fin du fichier.  
   

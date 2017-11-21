@@ -1,32 +1,32 @@
 ---
-title: "Type Enum du CLR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classe enum (mot clé C++)"
-  - "structure enum (mot clé C++)"
-  - "portée, d'enum CLR"
+title: Type Enum du CLR | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- scope, of CLR enum
+- enum struct keyword [C++]
+- enum class keyword [C++]
 ms.assetid: 4541d952-97bb-4e35-a7f8-d14f5f6a6606
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 154904eb201f39852b57f253b97fba864084381a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Type Enum du CLR
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La déclaration et le comportement des enums ont été modifiés entre Extensions managées pour C\+\+ et [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+# <a name="clr-enum-type"></a>Type Enum du CLR
+La déclaration et le comportement des enums a changé entre les Extensions managées pour C++ vers Visual C++.  
   
- La déclaration d'enum en Extensions managées est précédée du mot clé `__value`.  L'idée ici est de distinguer l'enum natif de l'enum du CLR, lequel est dérivé de `System::ValueType`, tout en suggérant des fonctionnalités analogues.  Par exemple :  
+ La déclaration d’enum Extensions managées est précédée par le `__value` (mot clé). L’idée ici est de distinguer l’enum natif de l’enum du CLR qui est dérivée de `System::ValueType`, tout en suggérant des fonctionnalités analogues. Exemple :  
   
 ```  
 __value enum e1 { fail, pass };  
@@ -36,7 +36,7 @@ public __value enum e2 : unsigned short  {
 };  
 ```  
   
- La nouvelle syntaxe résout le problème de la distinction entre enums natifs et enums du CLR en soulignant la nature de classe du dernier plutôt que ses racines de type valeur.  Comme tel, le mot clé `__value` est ignoré et remplacé par la paire de mots clés espacés `enum class`.  Cela fournit une symétrie de paires de mots clés vis\-à\-vis des déclarations de classes de référence, de valeur et d'interface :  
+ La nouvelle syntaxe résout le problème distinction natif et les énumérations CLR en mettant en évidence la nature de la classe de ce dernier plutôt que ses racines de type valeur. Par conséquent, le `__value` mot clé est ignoré et remplacé par la paire de mots clés espacés de `enum class`. Cela fournit une symétrie de paires de mots clés pour les déclarations de la référence, valeur et des classes d’interface :  
   
 ```  
 enum class ec;  
@@ -45,7 +45,7 @@ ref class rc;
 interface class ic;  
 ```  
   
- La traduction de la paire d'énumération `e1` et `e2` dans la nouvelle syntaxe ressemble à ceci :  
+ La traduction de la paire d’énumération `e1` et `e2` dans la nouvelle syntaxe se présente comme suit :  
   
 ```  
 enum class e1 { fail, pass };  
@@ -55,20 +55,20 @@ public enum class e2 : unsigned short {
 };  
 ```  
   
- Outre cette légère modification syntaxique, le comportement du type d'enum du CLR a été modifié de plusieurs manières :  
+ Outre cette légère modification syntaxique, le comportement du type d’enum CLR a été modifié de plusieurs façons :  
   
--   La déclaration anticipée d'un enum du CLR n'est plus prise en charge.  Il n'y a aucun mappage.  Elle est simplement signalée comme erreur de compilation.  
+-   Une déclaration anticipée d’un enum du CLR n’est plus pris en charge. Il n’existe aucun mappage. Elle est simplement signalée comme une erreur de compilation.  
   
 ```  
 __value enum status; // Managed Extensions: ok  
 enum class status;   // new syntax: error  
 ```  
   
--   La résolution de la surcharge entre les types arithmétiques intégrés et la hiérarchie des classes `Object` a été inversée entre les deux versions du langage \!  Un des effets secondaires est que les enums du CLR ne sont plus convertis implicitement en types arithmétiques.  
+-   La résolution de surcharge entre les types arithmétiques intégrés et la `Object` hiérarchie de classes a été inversée entre les deux versions du langage ! En effet, les énumérations CLR sont ne sont plus converties implicitement en types arithmétiques.  
   
--   Dans la nouvelle syntaxe, un enum du CLR conserve sa propre portée, ce qui n'est pas le cas en Extensions managées.  Auparavant, les énumérateurs étaient visibles dans la portée contenant l'enum.  Maintenant, les énumérateurs sont encapsulés dans la portée de l'enum.  
+-   Dans la nouvelle syntaxe, un enum du CLR conserve sa propre portée, ce qui n’est pas le cas dans les Extensions managées. Auparavant, les énumérateurs étaient visibles dans la portée contenant l’enum. Maintenant, les énumérateurs sont encapsulés dans la portée de l’enum.  
   
-## Les enums du CLR sont une sorte d'objet  
+## <a name="clr-enums-are-a-kind-of-object"></a>Les énumérations CLR sont une sorte d’objet  
  Prenons le fragment de code suivant :  
   
 ```  
@@ -85,32 +85,32 @@ int main()
 }  
 ```  
   
- Pour le programmeur en C\+\+ natif, la réponse naturelle à la question consistant à savoir quelle instance de `f()` surchargée appeler est celle de `f(int)`.  Un enum est une constante intégrale symbolique et il participe aux promotions intégrales standard qui prennent ici la priorité.  D'ailleurs, en Extensions managées, c'était l'instance sur laquelle l'appel résolvait.  Cela provoquait un certain nombre de surprises \- non lorsqu'ils étaient utilisés dans un état d'esprit C\+\+ natif \- mais lorsque nous avions besoin qu'ils interagissent avec l'infrastructure de la BCL \(bibliothèque de classes de base\) existante, dans laquelle un `Enum` est une classe dérivée indirectement de `Object`.  Dans la conception du langage [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)], l'instance de `f()` appelée est celle de `f(Object^)`.  
+ Pour les programmeurs C++ natif, le naturel répondre à la question de l’instance de surchargées `f()` est appelée est celle de `f(int)`. Un enum est une constante intégrale symbolique et il participe aux promotions intégrales standard qui prévalent dans ce cas.  Et en fait dans les Extensions managées, c’était l’instance à laquelle l’appel résout. Cela a provoqué un certain nombre de surprises - non lorsque nous avons utilisé dans un état d’esprit C++ natif - mais lorsque nous avons besoin qu’ils interagissent avec l’infrastructure existante BCL (Base Class Library), où un `Enum` est une classe dérivée indirectement de `Object`. Dans la conception du langage Visual C++, l’instance de `f()` appelée est celle de `f(Object^)`.  
   
- Le mode choisi par [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] pour faire appliquer ceci consiste à ne pas prendre en charge de conversions implicites entre un type d'enum du CLR et les types arithmétiques.  Cela signifie que toute assignation d'un objet d'un type d'enum du CLR à un type arithmétique requerra un cast explicite.  Si bien que, par exemple, étant donné :  
+ Le que Visual C++ a choisi d’appliquer cette recommandation consiste à ne prend ne pas en charge les conversions implicites entre un type enum du CLR et les types arithmétiques. Cela signifie que toute assignation d’un objet d’un type enum du CLR à un type arithmétique nécessite un cast explicite. Ainsi, par exemple, étant donné  
   
 ```  
 void f( int );  
 ```  
   
- comme méthode non\-surchargée, en Extensions managées, l'appel  
+ comme une méthode non surchargée, dans les Extensions managées, l’appel  
   
 ```  
 f( rslt ); // ok: Managed Extensions; error: new syntax  
 ```  
   
- est correct, et la valeur contenue dans `rslt` est implicitement convertie en une valeur entière.  Dans [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)], cet appel échoue lors de la compilation.  Pour le traduire correctement, nous devons insérer un opérateur de conversion :  
+ est OK et la valeur contenue dans `rslt` est implicitement convertie en une valeur entière. Dans Visual C++, cet appel ne parvient pas à compiler. Pour traduire correctement, nous devons insérer un opérateur de conversion :  
   
 ```  
 f( safe_cast<int>( rslt )); // ok: new syntax  
 ```  
   
-## La portée du type d'enum du CLR  
- L'une des modifications intervenues entre le langage C et C\+\+ a été l'ajout, dans C\+\+, de la portée au sein du dispositif de struct.  En C, un struct n'est qu'un agrégat de données sans prise en charge d'une interface ou d'une portée associée.  Cela a représenté une modification radicale et a engendré un sujet de controverse pour de nombreux utilisateurs novices en C\+\+ qui venaient du langage C.  La relation entre l'enum natif et l'enum du CLR est du même genre.  
+## <a name="the-scope-of-the-clr-enum-type"></a>L’étendue du Type d’Enum CLR  
+ Une des modifications entre les langages C et C++ a été l’ajout en C++ de portée dans le dispositif de struct. En C, un struct est simplement un agrégat de données sans prise en charge d’une interface ou d’une portée associée. Cela était assez une modification radicale au moment et un problème de litige pour de nombreux utilisateurs C++ nouvelle provenant du langage C. La relation entre le natif et un enum du CLR est analogue.  
   
- En Extensions managées, une tentative a été faite pour définir des noms injectés faiblement pour les énumérateurs d'un enum du CLR afin de simuler l'absence de portée dans l'enum natif.  Elle n'a pas abouti.  En effet, cela pousse les énumérateurs à se répandre dans l'espace de noms global, avec pour résultat des collisions de noms difficiles à gérer.  Dans la nouvelle syntaxe, nous nous sommes conformés aux autres langages du CLR en prenant en charge les portées dans l'enum du CLR.  
+ Dans les Extensions managées, une tentative a été effectuée pour définir des noms injectés faiblement pour les énumérateurs d’un enum du CLR afin de simuler l’absence de portée dans l’enum natif. Cela n’a pas abouti. Le problème est que cela provoque des énumérateurs déborder dans l’espace de noms global entraîne difficiles à gérer les conflits de noms. Dans la nouvelle syntaxe, nous avons mis en conformité pour les autres langages CLR prennent en charge les portées dans l’enum du CLR.  
   
- Cela signifie que toute utilisation non qualifiée d'un énumérateur d'un enum du CLR ne sera pas reconnue par la nouvelle syntaxe.  Prenons un exemple concret.  
+ Cela signifie que toute utilisation non qualifiée d’un énumérateur d’un enum du CLR ne reconnaîtra pas par la nouvelle syntaxe. Examinons un exemple réel.  
   
 ```  
 // Managed Extensions supporting weak injection  
@@ -132,7 +132,7 @@ public:
    XDCMake() {  
       optionList = new ListDictionary;  
   
-      // here are the problems …  
+      // here are the problems...  
       optionList->Add(S"?", __box(OPTION_USAGE)); // (1)  
       optionList->Add(S"help", __box(OPTION_USAGE)); // (2)  
   
@@ -143,7 +143,7 @@ public:
 };  
 ```  
   
- Chacune des trois utilisations non qualifiées des noms d'énumérateur \(`(1)`, `(2)` et `(3)`\) devra être qualifié dans la traduction vers la nouvelle syntaxe afin que le code source puisse compiler.  Voici une traduction correcte du code source d'origine :  
+ Chacun des trois non qualifiés utilise des noms d’énumérateur (`(1)`, `(2)`, et `(3)`) devra être qualifié dans la traduction vers la nouvelle syntaxe afin que le code source à compiler. Voici une traduction correcte du code source d’origine :  
   
 ```  
 ref class XDCMake {  
@@ -171,12 +171,12 @@ public:
 };  
 ```  
   
- Cela modifie la stratégie de conception entre un enum natif et un enum du CLR.  Avec un enum du CLR conservant une portée associée dans [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)], il n'est ni nécessaire ni efficace d'encapsuler la déclaration de l'enum dans une classe.  Cet idiome a évolué à l'époque de cfront 2.0 dans les Laboratoires Bell dans le but de résoudre également le problème de pollution du nom global.  
+ Cela modifie la stratégie de conception entre natif et un enum du CLR. Avec un enum du CLR conservant une portée associée dans Visual C++, il n’est ni nécessaire ni efficace d’encapsuler la déclaration de l’enum dans une classe. Cet idiome a évolué à l’époque de cfront 2.0 dans les laboratoires Bell également afin de résoudre le problème de la pollution du nom global.  
   
- Dans la version bêta d'origine de la nouvelle bibliothèque iostream, conçue par Jerry Schwarz dans les Laboratoires Bell, Jerry n'avait pas encapsulé tous les enums associés définis pour la bibliothèque, et les énumérateurs courants, tels que `read`, `write`, `append`, etc., rendaient presque impossible pour les utilisateurs la compilation de leur code existant.  Une solution aurait été de mutiler les noms, tel que `io_read`, `io_write`, etc. Une autre solution aurait été de modifier le langage en ajoutant de la portée à une énumération, mais ce n'était pas possible à l'époque.  La solution intermédiaire a été d'encapsuler l'enum dans la classe, ou la hiérarchie de classes, solution dans laquelle le nom de balise et les énumérateurs de l'enum remplissent la portée de la classe englobante.\) C'est ainsi que la motivation poussant à placer des enums dans des classes, tout au moins à l'origine, n'a pas été d'ordre philosophique, mais a représenté une réponse pratique au problème global de la pollution de l'espace de noms.  
+ Dans la version bêta d’origine de la nouvelle bibliothèque iostream par Jerry Schwarz dans les laboratoires Bell, Jerry n’avait pas encapsulé tous les enums associés définis pour la bibliothèque et les énumérateurs courants tels que `read`, `write`, `append`, etc. , rend pratiquement impossible pour les utilisateurs compiler leur code existant. Une solution aurait été de supprimer les noms, tel que `io_read`, `io_write`, etc.. Une deuxième solution aurait été de modifier le langage en ajoutant la portée à un enum, mais cela n’était pas possible à la fois. La solution intermédiaire a été pour encapsuler l’enum dans la classe ou la hiérarchie de classes, où le nom de balise et les énumérateurs de l’enum remplissent la portée de classe englobante.) Autrement dit, la motivation pour placer des enums dans des classes, au moins à l’origine, n’était pas philosophique, mais une réponse pratique au problème pollution d’espace de noms global.  
   
- Avec l'enum de [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)], l'avantage majeur de l'encapsulation d'un enum dans une classe disparaît.  En réalité, si vous regardez les espaces de noms `System`, vous verrez qu'enums, classes et interfaces habitent tous le même espace de déclaration.  
+ Avec l’enum de Visual C++, il n’est plus avantage majeur pour encapsuler un enum dans une classe. En fait, si vous examinez le `System` espaces de noms, vous verrez qu’enums, classes et interfaces tous occupent le même espace de déclaration.  
   
-## Voir aussi  
- [Types valeur et leurs comportements \(C\+\+\/CLI\)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Types valeur et leurs comportements (C + c++ / CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
  [enum, classe](../windows/enum-class-cpp-component-extensions.md)
