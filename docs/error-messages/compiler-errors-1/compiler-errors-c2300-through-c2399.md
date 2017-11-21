@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -62,33 +61,17 @@ helpviewer_keywords:
 - C2367
 - C2398
 - C2399
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 07ca45b5-b2f0-4049-837b-40a7a3caed88
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 8d8925a68ffbb7ba607e37be8db5eca33300ef23
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: f8e1dcf350c974f5be96b971d3d70e69b95ebc9e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c2300-through-c2399"></a>Erreur du compilateurs C2300 Through C2399
 Les articles de cette partie de la documentation contiennent des informations sur une sous-section des erreurs du compilateur Visual C++. Vous pouvez accéder aux informations ici, ou dans la fenêtre **Sortie** de Visual Studio, vous pouvez sélectionner un numéro d'erreur, puis appuyer sur F1.  
@@ -96,7 +79,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 > [!NOTE]
 >  Pas chaque [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erreur est documentée dans MSDN. Dans de nombreux cas, le message de diagnostic fournit toutes les informations qui est disponibles. Si vous pensez qu'un message d'erreur nécessite une explication supplémentaire, faites-nous part de vos suggestions. Vous pouvez utiliser le formulaire de commentaires sur cette page, ou accédez à la barre de menus dans Visual Studio et choisissez **aide**, **signaler un bogue**, ou vous pouvez envoyer un rapport de suggestion ou un bogue sur [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
- Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) forum est de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ général](http://go.microsoft.com/fwlink/?LinkId=158194) est de forum de questions sur [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).  
+ Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) est de forum de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ général](http://go.microsoft.com/fwlink/?LinkId=158194) est de forum de questions sur [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).  
   
 |Erreur|Message|  
 |-----------|-------------|  
@@ -109,11 +92,11 @@ Les articles de cette partie de la documentation contiennent des informations su
 |C2306 d’erreur du compilateur|'*fichier*' ne contient pas les dernières informations de débogage pour ce module|  
 |[Erreur du compilateur C2307](compiler-error-c2307.md)|pragma *directive* doit être déplacé en dehors de la fonction si la compilation incrémentielle est activée.|  
 |[Erreur du compilateur C2308](compiler-error-c2308.md)|concaténation de chaînes incompatibles|  
-|[Erreur du compilateur C2309](compiler-error-c2309.md)|déclaration d'exception entre parenthèses attendue par le gestionnaire catch|  
-|[Erreur du compilateur C2310](compiler-error-c2310.md)|les gestionnaires catch doivent spécifier un seul type|  
-|[Erreur du compilateur C2311](compiler-error-c2311.md)|'*type*' : intercepté par '...' sur la ligne *nombre*|  
+|[Erreur du compilateur C2309](compiler-error-c2309.md)|une déclaration d’exception entre parenthèses attendue par le Gestionnaire de catch|  
+|[Erreur du compilateur C2310](compiler-error-c2310.md)|gestionnaires catch doivent spécifier un type|  
+|[Erreur du compilateur C2311](compiler-error-c2311.md)|'*type*' : intercepté par '...' à la ligne *nombre*|  
 |[Erreur du compilateur C2312](compiler-error-c2312.md)|'*type1*' : intercepté par '*type2*' sur la ligne *nombre*|  
-|[Erreur du compilateur C2313](compiler-error-c2313.md)|'*type1*' : intercepté par la référence ('*type2*») sur la ligne *numéro*|  
+|[Erreur du compilateur C2313](compiler-error-c2313.md)|'*type1*' : intercepté par la référence ('*type2*») sur la ligne *nombre*|  
 |C2314 d’erreur du compilateur|mot clé '*mot_clé1*' est déconseillée : utilisez '*mot Clé2*' à la place|  
 |[Erreur du compilateur C2315](compiler-error-c2315.md)|'*type1*' : référence interceptée par '*type2*' sur la ligne *nombre*|  
 |[Erreur du compilateur C2316](compiler-error-c2316.md)|'*type*' : ne peut pas être intercepté que destructeur et/ou le constructeur de copie est inaccessible ou supprimé|  
@@ -130,7 +113,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2327](compiler-error-c2327.md)|'*identificateur*' : n’est pas un nom de type, statique ou énumérateur|  
 |C2328 d’erreur du compilateur|'*mot clé*' : mot clé n’est pas encore pris en charge|  
 |C2329 d’erreur du compilateur|'*identificateur*' : __ptr64 non disponible pour les pointeurs vers des fonctions|  
-|C2330 d’erreur du compilateur|'implementation_key( )' n'est valide que dans une région délimitée par #pragma start_map_region/stop_map_region|  
+|C2330 d’erreur du compilateur|'implementation_key ()' est valide uniquement dans une région délimitée par #pragma start_map_region/stop_map_region|  
 |C2331 d’erreur du compilateur|l’accès à '*identificateur*'défini maintenant comme'*accessibility1*«, précédemment, il a été défini à »*accessibility2*'|  
 |[Erreur du compilateur C2332](compiler-error-c2332.md)|'*typedef*' : nom de balise manquant|  
 |[Erreur du compilateur C2333](compiler-error-c2333.md)|'*fonction*' : erreur dans la déclaration de fonction ; corps de la fonction ignoré|  
@@ -142,7 +125,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |C2339 d’erreur du compilateur|'*identificateur*' : type non conforme dans un IDL incorporé|  
 |C2340 d’erreur du compilateur|'*identificateur*' : 'static' peut uniquement être utilisé dans une définition de classe|  
 |[Erreur du compilateur C2341](compiler-error-c2341.md)|'*section*' : segment doit être défini à l’aide de #pragma data_seg, code_seg ou section avant d’utiliser|  
-|C2342 d’erreur du compilateur|erreur de syntaxe : conflit entre qualificateurs de type|  
+|C2342 d’erreur du compilateur|Erreur de syntaxe : les qualificateurs de type en conflit|  
 |C2343 d’erreur du compilateur|'*section*' : attributs en conflit de la section|  
 |[Erreur du compilateur C2344](compiler-error-c2344.md)|align (*nombre*) : alignement doit être une puissance de deux|  
 |[Erreur du compilateur C2345](compiler-error-c2345.md)|align (*nombre*) : valeur d’alignement non conforme|  
@@ -151,12 +134,12 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2348](compiler-error-c2348.md)|'*type*' : n’est pas un agrégat de style C, ne peut pas être exporté dans un IDL incorporé|  
 |[Erreur du compilateur C2349](compiler-error-c2349.md)|'*fonction*' ne peut pas être compilé comme code managé : '*explication*' ; utilisez #pragma unmanaged|  
 |[Erreur du compilateur C2350](compiler-error-c2350.md)|'*identificateur*' n’est pas un membre statique|  
-|[Erreur du compilateur C2351](compiler-error-c2351.md)|syntaxe obsolète d'initialisation d'un constructeur C++|  
+|[Erreur du compilateur C2351](compiler-error-c2351.md)|syntaxe obsolète d’initialisation constructeur C++|  
 |[Erreur du compilateur C2352](compiler-error-c2352.md)|'*identificateur*' : appel non conforme d’une fonction membre non statique|  
-|[Erreur du compilateur C2353](compiler-error-c2353.md)|la spécification de l'exception n'est pas autorisée|  
+|[Erreur du compilateur C2353](compiler-error-c2353.md)|spécification d’exception n’est pas autorisée.|  
 |C2354 d’erreur du compilateur|Obsolète.|  
-|[Erreur du compilateur C2355](compiler-error-c2355.md)|'this' : ne peut être référencé qu'à l'intérieur de fonctions membres non static ou d'initialiseurs de membres de données non static|  
-|[Erreur du compilateur C2356](compiler-error-c2356.md)|un segment d'initialisation ne doit pas changer durant une unité de traduction|  
+|[Erreur du compilateur C2355](compiler-error-c2355.md)|'this' : ne peut être référencée à l’intérieur de fonctions membres non static ou d’initialiseurs de membres de données non statiques|  
+|[Erreur du compilateur C2356](compiler-error-c2356.md)|un segment d’initialisation ne doit pas changer au cours de l’unité de traduction|  
 |[Erreur du compilateur C2357](compiler-error-c2357.md)|'*identificateur*' : doit être une fonction de type '*type*'|  
 |C2358 d’erreur du compilateur|'*identificateur*' : une propriété statique ne peut pas être définie en dehors d’une définition de classe|  
 |C2359 d’erreur du compilateur|Obsolète.|  
@@ -200,4 +183,3 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2397](compiler-error-c2397.md)|la conversion de '*type1*'à'*type2*' requiert une conversion restrictive|  
 |C2398 d’erreur du compilateur|Élément '*nombre*' : conversion de '*type1*'à'*type2*' requiert une conversion restrictive|  
 |C2399 d’erreur du compilateur|Obsolète.|  
-

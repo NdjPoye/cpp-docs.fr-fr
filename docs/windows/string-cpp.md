@@ -1,33 +1,30 @@
 ---
-title: "string (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.string"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "string attribute"
+title: "chaîne (C++) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.string
+dev_langs: C++
+helpviewer_keywords: string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0293785b9552b2e5696b9334e81aebf44c3bc4b7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# string (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indique qu' `char`unidimensionnel, `wchar_t`, le tableau de **byte** \(ou équivalent\) ou le pointeur à une telle tableau doivent être traités comme chaîne.  
+# <a name="string-c"></a>string (C++)
+Indique que la dimension `char`, `wchar_t`, **octets** (ou équivalent) tableau ou pointeur vers ce type de tableau doit être traité en tant que chaîne.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,11 +32,11 @@ Indique qu' `char`unidimensionnel, `wchar_t`, le tableau de **byte** \(ou équiv
   
 ```  
   
-## Notes  
- L'attribut de **chaîne** C\+\+ a les mêmes fonctionnalités que l'attribut de [chaîne](http://msdn.microsoft.com/library/windows/desktop/aa367270) MIDL.  
+## <a name="remarks"></a>Remarques  
+ Le **chaîne** attribut C++ a les mêmes fonctionnalités que le [chaîne](http://msdn.microsoft.com/library/windows/desktop/aa367270) attribut MIDL.  
   
-## Exemple  
- Le code suivant montre comment utiliser **chaîne** sur une interface et sur un typedef :  
+## <a name="example"></a>Exemple  
+ Le code suivant montre comment utiliser **chaîne** sur une interface et un typedef :  
   
 ```  
 // cpp_attr_ref_string.cpp  
@@ -54,21 +51,20 @@ __interface IFireTabCtrl
 };  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|Tableau ou pointeur vers un tableau, paramètre de l'interface, méthode d'interface|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|Tableau ou pointeur vers un tableau, le paramètre d’interface, la méthode d’interface|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun|  
+|**Attributs non valides**|Aucun|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Array Attributes](../windows/array-attributes.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs de tableau](../windows/array-attributes.md)   
  [export](../windows/export.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

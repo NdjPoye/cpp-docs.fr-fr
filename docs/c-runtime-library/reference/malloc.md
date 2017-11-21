@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- malloc
+apiname: malloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,38 +21,21 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- malloc
-dev_langs:
-- C++
+f1_keywords: malloc
+dev_langs: C++
 helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3c024862e1bf993c4e602846d4da125599f3fe7f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: 72dd949aa8d894ba49f53a6440de20beea070e2b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="malloc"></a>malloc
 Alloue des blocs de mémoire.  
@@ -72,7 +53,7 @@ void *malloc(
  Octets à allouer.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `malloc` retourne un pointeur void vers l’espace alloué, ou `NULL` si la mémoire disponible est insuffisante. Pour retourner un pointeur désignant un type autre que `void`, utilisez un cast de type sur la valeur de retour. L’espace de stockage désigné par la valeur de retour est obligatoirement correctement aligné pour le stockage de tout type d’objet dont la spécification d’alignement est inférieure ou égale à celle de l’alignement fondamental. (Dans Visual C++, l’alignement fondamental est l’alignement qui est obligatoire pour un `double`, ou 8 octets. Dans un code qui cible les plateformes 64 bits, il s’agit de 16 octets.) Utilisez [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) pour allouer un stockage pour les objets qui ont une plus grande spécification d’alignement, par exemple, les types SSE [__m128](../../cpp/m128.md) et `__m256`, ainsi que les types qui sont déclarés à l’aide de `__declspec(align(``n``))` où `n` est supérieur à 8. Si `size` a la valeur 0, `malloc` alloue un élément de longueur nulle dans le tas et retourne un pointeur valide vers cet élément. Vérifiez toujours le retour de `malloc`, même si la quantité de mémoire demandée est faible.  
+ `malloc` retourne un pointeur void vers l’espace alloué, ou `NULL` si la mémoire disponible est insuffisante. Pour retourner un pointeur désignant un type autre que `void`, utilisez un cast de type sur la valeur de retour. L’espace de stockage désigné par la valeur de retour est obligatoirement correctement aligné pour le stockage de tout type d’objet dont la spécification d’alignement est inférieure ou égale à celle de l’alignement fondamental. (Dans Visual C++, l’alignement fondamental est l’alignement qui est obligatoire pour un `double`, ou 8 octets. Dans un code qui cible les plateformes 64 bits, il s’agit de 16 octets.) Utilisez [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) pour allouer un stockage pour les objets qui ont une plus grande spécification d’alignement, par exemple, les types SSE [__m128](../../cpp/m128.md) et `__m256`, ainsi que les types qui sont déclarés à l’aide de `__declspec(align( n ))` où `n` est supérieur à 8. Si `size` a la valeur 0, `malloc` alloue un élément de longueur nulle dans le tas et retourne un pointeur valide vers cet élément. Vérifiez toujours le retour de `malloc`, même si la quantité de mémoire demandée est faible.  
   
 ## <a name="remarks"></a>Notes  
  La fonction `malloc` alloue un bloc de mémoire d’au moins `size` octets. Le bloc peut être supérieur à `size` octets, en raison de l’espace nécessaire aux informations d’alignement et de gestion.  
@@ -154,4 +135,3 @@ Memory freed
  [free](../../c-runtime-library/reference/free.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
  [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md)
-

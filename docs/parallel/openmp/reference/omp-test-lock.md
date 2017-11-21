@@ -1,32 +1,30 @@
 ---
-title: "omp_test_lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_test_lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_test_lock OpenMP function"
+title: fonctions omp_test_lock | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_test_lock
+dev_langs: C++
+helpviewer_keywords: omp_test_lock OpenMP function
 ms.assetid: 314ca85e-0749-4c16-800f-b0f36fed256d
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 052b552cab9d8fb0ff6b969e85a7108ca232b572
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# omp_test_lock
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Essaie de définir un verrou mais ne bloque pas l'exécution des threads.  
+# <a name="omptestlock"></a>omp_test_lock
+Tente de définir un verrou, mais ne bloque pas l’exécution du thread.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int omp_test_lock(  
@@ -34,16 +32,16 @@ int omp_test_lock(
 );  
 ```  
   
-## Notes  
+## <a name="remarks"></a>Remarques  
  où,  
   
  `lock`  
- une variable du type [omp\_lock\_t](../../../parallel/openmp/reference/omp-lock-t.md) qui a été initialisé avec [omp\_init\_lock](../../../parallel/openmp/reference/omp-init-lock.md).  
+ Une variable de type [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md) qui a été initialisée avec [fonctions omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md).  
   
-## Notes  
- Pour plus d'informations, consultez [3.2.5 omp\_test\_lock and omp\_test\_nest\_lock Functions](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md).  
+## <a name="remarks"></a>Remarques  
+ Pour plus d’informations, consultez [3.2.5 fonctions omp_test_lock and omp_test_nest_lock fonctions](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // omp_test_lock.cpp  
@@ -74,25 +72,28 @@ int main() {
 }  
 ```  
   
-  **Thread 1 \- simple\_lock interrompu**  
-**thread 1 \- simple\_lock finale**  
-**thread 0 \- pour acquérir le simple\_lock**  
-**thread 3 \- pour acquérir le simple\_lock**  
-**thread 0 \- pour acquérir le simple\_lock**  
-**thread 3 \- pour acquérir le simple\_lock**  
-**Thread 2 \- simple\_lock interrompu**  
-**thread 0 \- pour acquérir le simple\_lock**  
-**thread 3 \- pour acquérir le simple\_lock**  
-**thread 0 \- pour acquérir le simple\_lock**  
-**thread 3 \- pour acquérir le simple\_lock**  
-**thread 2 \- simple\_lock finale**  
-**thread 0 \- pour acquérir le simple\_lock**  
-**thread 3 \- pour acquérir le simple\_lock**  
-**Thread 0 \- simple\_lock interrompu**  
-**thread 3 \- pour acquérir le simple\_lock**  
-**thread 0 \- simple\_lock finale**  
-**thread 3 \- pour acquérir le simple\_lock**  
-**Thread 3 \- simple\_lock interrompu**  
-**thread 3 \- simple\_lock finale**   
-## Voir aussi  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+Thread 1 - acquired simple_lock  
+Thread 1 - released simple_lock  
+Thread 0 - failed to acquire simple_lock  
+Thread 3 - failed to acquire simple_lock  
+Thread 0 - failed to acquire simple_lock  
+Thread 3 - failed to acquire simple_lock  
+Thread 2 - acquired simple_lock  
+Thread 0 - failed to acquire simple_lock  
+Thread 3 - failed to acquire simple_lock  
+Thread 0 - failed to acquire simple_lock  
+Thread 3 - failed to acquire simple_lock  
+Thread 2 - released simple_lock  
+Thread 0 - failed to acquire simple_lock  
+Thread 3 - failed to acquire simple_lock  
+Thread 0 - acquired simple_lock  
+Thread 3 - failed to acquire simple_lock  
+Thread 0 - released simple_lock  
+Thread 3 - failed to acquire simple_lock  
+Thread 3 - acquired simple_lock  
+Thread 3 - released simple_lock  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Fonctions](../../../parallel/openmp/reference/openmp-functions.md)

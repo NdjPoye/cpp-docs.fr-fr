@@ -1,69 +1,67 @@
 ---
-title: "for (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "for"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "for OpenMP directive"
+title: pour (OpenMP) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: for
+dev_langs: C++
+helpviewer_keywords: for OpenMP directive
 ms.assetid: 8b54e034-9db2-4c1a-a2b1-72e14e930506
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8c1e7f5df003796050958f803cc931a49d2d52d3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# for (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Permet de le travail effectué dans un pour l'intérieur de la boucle une région parallèle à diviser entre les threads.  
+# <a name="for-openmp"></a>for (OpenMP)
+Provoque le travail effectué dans une boucle à l’intérieur d’une région parallèle pour être réparti entre les threads.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 #pragma omp [parallel] for [clauses]  
    for_statement  
 ```  
   
-## Notes  
+## <a name="remarks"></a>Remarques  
  où,  
   
- `clause` \(facultatif\)  
- zéro clauses ou plus.  Consultez la section Notes pour une liste des clauses prises en charge par **pour**.  
+ `clause`(facultatif)  
+ Zéro ou plusieurs clauses. Consultez la section Notes pour obtenir la liste des clauses prises en charge par **pour**.  
   
  `for_statement`  
- Une boucle for.  Le comportement indéfini est générée si le code utilisateur dans la boucle modifie la variable d'index.  
+ Une boucle for. Un comportement non défini se produira si le code utilisateur dans la boucle devient la variable d’index.  
   
-## Notes  
- La directive de **pour** prend en charge les clauses suivantes OpenMP :  
+## <a name="remarks"></a>Remarques  
+ Le **pour** directive prend en charge les clauses OpenMP suivantes :  
   
 -   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   
--   [elle](../../../parallel/openmp/reference/lastprivate.md)  
+-   [lastprivate](../../../parallel/openmp/reference/lastprivate.md)  
   
 -   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
--   [dimensionné](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
+-   [commandée](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
--   [réduction](../../../parallel/openmp/reference/reduction.md)  
+-   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
--   [planification](../../../parallel/openmp/reference/schedule.md)  
+-   [schedule](../../../parallel/openmp/reference/schedule.md)  
   
- Si **parallèle** est également spécifié, `clause` peut être une clause acceptée par les directives de **parallèle** ou de **pour** , sauf **nowait**.  
+ Si **parallèles** est également spécifiée, `clause` peut être n’importe quelle clause acceptée par le **parallèles** ou **pour** directives, à l’exception **nowait**.  
   
- Pour plus d'informations, consultez [2.4.1 pour l'élément](../../../parallel/openmp/2-4-1-for-construct.md).  
+ Pour plus d’informations, consultez [2.4.1 construction for](../../../parallel/openmp/2-4-1-for-construct.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // omp_for.cpp  
@@ -122,6 +120,10 @@ int main() {
 }  
 ```  
   
-  **4 Threads OpenMP ont été utilisés.  la somme de 1 à 10 est 55**    
-## Voir aussi  
+```Output  
+4 OpenMP threads were used.  
+The sum of 1 through 10 is 55  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
  [Directives](../../../parallel/openmp/reference/openmp-directives.md)

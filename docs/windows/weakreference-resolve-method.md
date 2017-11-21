@@ -1,32 +1,30 @@
 ---
-title: "WeakReference::Resolve, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::WeakReference::Resolve"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Resolve (méthode)"
+title: "WeakReference::Resolve, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::WeakReference::Resolve
+dev_langs: C++
+helpviewer_keywords: Resolve method
 ms.assetid: fc65a4b7-48a0-4d64-a793-37f566fdd8e7
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9dc2eef072e64d38b96afd045bae6a9b23d59d94
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# WeakReference::Resolve, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="weakreferenceresolve-method"></a>WeakReference::Resolve, méthode
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -36,29 +34,29 @@ STDMETHOD(Resolve)
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `riid`  
- Un ID d'interface.  
+ ID d’interface.  
   
  `ppvObject`  
- Lorsque cette opération se termine, une copie de la référence forte actuelle si le décompte de références fortes est différent de zéro.  
+ Lorsque cette opération est terminée, une copie de la référence forte actuelle si le nombre de référence forte est différente de zéro.  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
   
--   S\_OK si cette opération réussit et que le décompte de références fortes est à zéro.  Le paramètre `ppvObject` a la valeur `nullptr`.  
+-   S_OK si cette opération réussit et le nombre de référence forte est égale à zéro. Le paramètre `ppvObject` a la valeur `nullptr`.  
   
--   S\_OK si cette opération réussit et que le décompte de références fortes est différent de zéro.  Le paramètre `ppvObject` est affecté à la référence forte.  
+-   S_OK si cette opération est terminée et le nombre de référence forte est différente de zéro. Le `ppvObject` est affectée à la référence forte.  
   
--   Sinon, un HRESULT indiquant la raison de l'échec de cette opération.  
+-   Sinon, un HRESULT qui indique la raison pour laquelle cette opération a échoué.  
   
-## Notes  
- Définit le pointeur spécifié vers la valeur de la référence forte actuelle si le décompte de références fortes est différent de zéro.  
+## <a name="remarks"></a>Remarques  
+ Définit le pointeur spécifié à la valeur actuelle de la référence forte si le nombre de référence forte est différente de zéro.  
   
-## Configuration requise  
- **En\-tête :** implements.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** implements.h  
   
- **Espace de noms :** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
- [WeakReference, classe](../windows/weakreference-class1.md)   
+## <a name="see-also"></a>Voir aussi  
+ [WeakReference Class1](../windows/weakreference-class1.md)   
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

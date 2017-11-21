@@ -1,68 +1,67 @@
 ---
-title: "Transaction&#160;: r&#233;percussions des transactions sur les mises &#224; jour (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CommitTrans (méthode)"
-  - "ODBC (recordsets), transactions"
-  - "Rollback (méthode), transactions ODBC"
-  - "transactions, restaurer"
-  - "transactions, mettre à jour des recordsets"
+title: "Transaction : Répercussions des Transactions sur les mises à jour (ODBC) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- transactions, updating recordsets
+- ODBC recordsets, transactions
+- transactions, rolling back
+- CommitTrans method
+- Rollback method, ODBC transactions
 ms.assetid: 9e00bbf4-e9fb-4332-87fc-ec8ac61b3f68
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ee5e34ce0af330ec9a788ceda758a412e3d7ac2d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Transaction&#160;: r&#233;percussions des transactions sur les mises &#224; jour (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les mises à jour de la [source de données](../../data/odbc/data-source-odbc.md) sont managées pendant les transactions grâce à l'utilisation d'une mémoire tampon de modification ; la même méthode est d'ailleurs utilisée en dehors des transactions.  Les données membres de champs d'un recordset jouent collectivement le rôle d'une mémoire tampon de modification qui contient l'enregistrement en cours, ce dernier étant sauvegardé temporairement par le recordset pendant un `AddNew` ou **Edit**.  Pendant une opération **Delete**, l'enregistrement en cours n'est pas sauvegardé dans une transaction.  Pour plus d'informations sur la mémoire tampon de modification et la façon dont les mises à jour sauvegardent l'enregistrement en cours, consultez [Recordset : modification des enregistrements par les recordsets \(ODBC\)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
+# <a name="transaction-how-transactions-affect-updates-odbc"></a>Transaction : répercussions des transactions sur les mises à jour (ODBC)
+Met à jour vers la [source de données](../../data/odbc/data-source-odbc.md) sont managées pendant les transactions grâce à l’utilisation d’une mémoire tampon de modification (la même méthode utilisée en dehors des transactions). Données membres de champ d’un recordset jouent collectivement le rôle en tant que tampon d’édition qui contient l’enregistrement en cours, ce qui le jeu d’enregistrements sauvegardé temporairement pendant une `AddNew` ou **modifier**. Pendant un **supprimer** opération, l’enregistrement actif n’est pas sauvegardée dans une transaction. Pour plus d’informations sur la mémoire tampon de modification et comment les mises à jour de stocker l’enregistrement actif, consultez [Recordset : modification des enregistrements de jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
   
 > [!NOTE]
->  Si vous avez implémenté l'extraction de lignes en bloc, vous ne pouvez pas appeler `AddNew`, **Edit** ou **Delete**.  Vous devez donc écrire vos propres fonctions pour effectuer des mises à jour de la source de données.  Pour plus d'informations sur l'extraction de lignes en bloc, consultez [Recordset : extraction globale d'enregistrements \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Si vous avez implémenté l’extraction de lignes en bloc, vous ne pouvez pas appeler `AddNew`, **modifier**, ou **supprimer**. Vous devez à la place écrire vos propres fonctions pour effectuer des mises à jour de la source de données. Pour plus d’informations sur l’extraction de lignes en bloc, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Pendant les transactions, les opérations `AddNew`, **Edit** et **Delete** peuvent être validées ou annulées.  **CommitTrans** et **Rollback** peuvent entraîner l'échec de la restauration de l'enregistrement en cours dans la mémoire tampon de modification.  Pour assurer la restauration correcte de l'enregistrement en cours, il est important de bien comprendre comment les fonctions membres **CommitTrans** et **Rollback** de `CDatabase` fonctionnent avec les fonctions de mise à jour de `CRecordset`.  
+ Pendant les transactions, `AddNew`, **modifier**, et **supprimer** opérations peuvent être validées ou restaurées. Les effets de **CommitTrans** et **restauration** peut entraîner l’enregistrement en cours de restauration pour le tampon d’édition. Pour vous assurer que l’enregistrement actif est correctement restaurée, il est important de comprendre comment les **CommitTrans** et **restauration** les fonctions membres de `CDatabase` fonctionnent avec les fonctions de mise à jour de `CRecordset`.  
   
-##  <a name="_core_how_committrans_affects_updates"></a> Répercussions de CommitTrans sur les mises à jour  
- Le tableau ci\-dessous explique les effets de **CommitTrans** sur les transactions.  
+##  <a name="_core_how_committrans_affects_updates"></a>Impact de CommitTrans sur les mises à jour  
+ Le tableau suivant explique les effets de **CommitTrans** sur des transactions.  
   
-### Répercussions de CommitTrans sur les mises à jour  
+### <a name="how-committrans-affects-updates"></a>Impact de CommitTrans sur les mises à jour  
   
 |Opération|État de la source de données|  
-|---------------|----------------------------------|  
-|`AddNew` et **Update**, puis **CommitTrans**|Ajout d'un nouvel enregistrement à la source de données.|  
-|`AddNew` \(sans **Update**\), puis **CommitTrans**|Perte du nouvel enregistrement.  L'enregistrement n'est pas ajouté à la source de données.|  
-|**Edit** et **Update**, puis **CommitTrans**|Validation des modifications dans la source de données.|  
-|**Edit** \(sans **Update**\), puis **CommitTrans**|Perte des modifications de l'enregistrement.  L'enregistrement reste identique dans la source de données.|  
-|**Delete**, puis **CommitTrans**|Suppression des enregistrements de la source de données.|  
+|---------------|---------------------------|  
+|`AddNew`et **mise à jour**, puis **CommitTrans**|Nouvel enregistrement sont ajoutés à la source de données.|  
+|`AddNew`(sans **mise à jour**), puis **CommitTrans**|Nouvel enregistrement est perdue. Enregistrement ne pas ajouté à la source de données.|  
+|**Modifier** et **mise à jour**, puis **CommitTrans**|Modifications validées dans la source de données.|  
+|**Modifier** (sans **mise à jour**), puis **CommitTrans**|Modifications de l’enregistrement sont perdues. Enregistrement reste identique dans la source de données.|  
+|**Supprimer** puis **CommitTrans**|Enregistrements supprimés de la source de données.|  
   
-##  <a name="_core_how_rollback_affects_updates"></a> Répercussions de Rollback sur les transactions  
- Le tableau ci\-dessous explique les effets de **Rollback** sur les transactions.  
+##  <a name="_core_how_rollback_affects_updates"></a>Impact de la restauration des Transactions  
+ Le tableau suivant explique les effets de **restauration** sur des transactions.  
   
-### Répercussions de Rollback sur les transactions  
+### <a name="how-rollback-affects-transactions"></a>Impact de la restauration des Transactions  
   
-|Opération|État de l'enregistrement en cours|Vous devez également|État de la source de données|  
-|---------------|---------------------------------------|--------------------------|----------------------------------|  
-|`AddNew` et **Update**, puis **Rollback**|Le contenu de l'enregistrement en cours est temporairement stocké pour libérer de l'espace pour les nouveaux enregistrements.  Le nouvel enregistrement est entré dans la mémoire tampon de modification.  Après appel de **Update**, l'enregistrement en cours est rétabli dans la mémoire tampon de modification.||L'ajout à la source de données effectué par **Update** est annulé.|  
-|`AddNew` \(sans **Update**\), puis **Rollback**|Le contenu de l'enregistrement en cours est temporairement stocké pour libérer de l'espace pour les nouveaux enregistrements.  La mémoire tampon de modification contient le nouvel enregistrement.|Appeler une nouvelle fois `AddNew` pour rétablir la mémoire tampon de modification pour un nouvel enregistrement vide.  Autre solution : appeler **Move**\(0\) pour rétablir les anciennes valeurs dans la mémoire tampon de modification.|Comme **Update** n'a pas été appelé, aucune modification n'a été apportée à la source de données.|  
-|**Edit** et **Update**, puis **Rollback**|Une version non modifiée de l'enregistrement en cours est temporairement stockée.  Des modifications sont apportées au contenu de la mémoire tampon de modification.  Après l'appel de **Update**, la version non modifiée de l'enregistrement est toujours temporairement stockée.|*Dynaset* : Vous éloigner de l'enregistrement en cours, puis y revenir pour rétablir la version non modifiée de l'enregistrement dans la mémoire tampon de modification.<br /><br /> *Snapshot* : Appeler **Requery** pour actualiser le recordset à partir de la source de données.|Les modifications apportées par **Update** à la source de données sont annulées.|  
-|**Edit** \(sans **Update**\), puis **Rollback**|Une version non modifiée de l'enregistrement en cours est temporairement stockée.  Des modifications sont apportées au contenu de la mémoire tampon de modification.|Appeler une nouvelle fois **Edit** pour rétablir la version non modifiée de l'enregistrement dans la mémoire tampon de modification.|Comme **Update** n'a pas été appelé, aucune modification n'a été apportée à la source de données.|  
-|**Delete**, puis **Rollback**|Le contenu de l'enregistrement en cours est supprimé.|Appeler **Requery** pour rétablir le contenu de l'enregistrement en cours à partir de la source de données.|La suppression des données de la source de données est annulée.|  
+|Opération|État de l’enregistrement actif|Vous devez également|État de la source de données|  
+|---------------|------------------------------|-------------------|---------------------------|  
+|`AddNew`et **mise à jour**, puis **Rollback**|Contenu de l’enregistrement actif est stocké temporairement pour libérer de l’espace pour le nouvel enregistrement. Nouvel enregistrement est entré dans la mémoire tampon de modification. Après avoir **mise à jour** est appelée, actuel enregistrement est rétabli dans la mémoire tampon de modification.||Ajout à la source de données effectuée par **mise à jour** est inversée.|  
+|`AddNew`(sans **mise à jour**), puis **Rollback**|Contenu de l’enregistrement actif est stocké temporairement pour libérer de l’espace pour le nouvel enregistrement. Modifier mémoire tampon contient le nouvel enregistrement.|Appelez `AddNew` pour rétablir la mémoire tampon de modification pour un nouvel enregistrement vide. Ou appelez **déplacer**(0) pour rétablir les anciennes valeurs dans la mémoire tampon de modification.|Étant donné que **mise à jour** n’est pas appelée, aucune modification apportée à la source de données.|  
+|**Modifier** et **mise à jour**, puis **Rollback**|Une version non modifiée de l’enregistrement actif est stockée temporairement. Des modifications sont apportées au contenu de la mémoire tampon de modification. Après avoir **mise à jour** est appelée, la version non modifiée version de l’enregistrement est toujours temporairement stockée.|*Feuille de réponse dynamique*: l’enregistrement en cours, puis y revenir pour rétablir la version non modifiée de l’enregistrement pour le tampon d’édition.<br /><br /> *Instantané*: appelez **Requery** pour actualiser le jeu d’enregistrements à partir de la source de données.|Modifications apportées à la source de données effectuée par **mise à jour** sont inversées.|  
+|**Modifier** (sans **mise à jour**), puis **Rollback**|Une version non modifiée de l’enregistrement actif est stockée temporairement. Des modifications sont apportées au contenu de la mémoire tampon de modification.|Appelez **modifier** afin de rétablir la version non modifiée de l’enregistrement pour le tampon d’édition.|Étant donné que **mise à jour** n’est pas appelée, aucune modification apportée à la source de données.|  
+|**Supprimer** puis **Rollback**|Contenu de l’enregistrement actif est supprimé.|Appelez **Requery** pour restaurer le contenu de l’enregistrement en cours à partir de la source de données.|Suppression de données à partir de la source de données est inversée.|  
   
-## Voir aussi  
- [Transaction \(ODBC\)](../../data/odbc/transaction-odbc.md)   
- [Transaction \(ODBC\)](../../data/odbc/transaction-odbc.md)   
- [Transaction : exécution d'une transaction dans un recordset \(ODBC\)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)   
- [CDatabase Class](../../mfc/reference/cdatabase-class.md)   
- [CRecordset Class](../../mfc/reference/crecordset-class.md)
+## <a name="see-also"></a>Voir aussi  
+ [Transactions (ODBC)](../../data/odbc/transaction-odbc.md)   
+ [Transactions (ODBC)](../../data/odbc/transaction-odbc.md)   
+ [Transaction : Exécution d’une Transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)   
+ [CDatabase (classe)](../../mfc/reference/cdatabase-class.md)   
+ [CRecordset, classe](../../mfc/reference/crecordset-class.md)

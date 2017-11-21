@@ -4,42 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - data [C++], reading from input stream
 - input streams
 - input stream objects
 ms.assetid: f14d8954-8f8c-4c3c-8b99-14ddb3683f94
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 344c0c29531ee44445b89f14396593cdd48a25ad
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: e708f1cbb9db3cc546aac172291facfa95acfb83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="input-streams"></a>Flux d'entrée
 Un objet de flux d’entrée est une source d’octets. Les trois classes de flux d’entrée les plus importantes sont [istream](../standard-library/basic-istream-class.md), [ifstream](../standard-library/basic-ifstream-class.md) et [istringstream](../standard-library/basic-istringstream-class.md).  
@@ -65,4 +48,3 @@ Un objet de flux d’entrée est une source d’octets. Les trois classes de flu
   
 ## <a name="see-also"></a>Voir aussi  
  [iostream, programmation](../standard-library/iostream-programming.md)
-

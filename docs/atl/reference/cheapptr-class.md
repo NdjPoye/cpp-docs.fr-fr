@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,38 +13,21 @@ f1_keywords:
 - ATLCORE/ATL::CHeapPtr::CHeapPtr
 - ATLCORE/ATL::CHeapPtr::Allocate
 - ATLCORE/ATL::CHeapPtr::Reallocate
-dev_langs:
-- C++
-helpviewer_keywords:
-- CHeapPtr class
+dev_langs: C++
+helpviewer_keywords: CHeapPtr class
 ms.assetid: e5c5bfd4-9bf1-4164-8a83-8155fe253454
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 41334cd7497c9e21d1cf047d7ab304864f663758
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 506dac565ef30c44c553301c6669e416a7dd5f8a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="cheapptr-class"></a>CHeapPtr (classe)
-Une classe de pointeur intelligent pour la gestion des pointeurs de tas.  
+# <a name="cheapptr-class"></a>Classe de CHeapPtr
+Une classe de pointeur intelligent pour la gestion des pointeurs de segment de mémoire.  
   
 > [!IMPORTANT]
 >  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
@@ -76,7 +58,7 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CHeapPtr::Allocate](#allocate)|Appelez cette méthode pour allouer de la mémoire sur le tas pour stocker des objets.|  
+|[CHeapPtr::Allocate](#allocate)|Appelez cette méthode pour allouer de la mémoire sur le tas pour stocker les objets.|  
 |[CHeapPtr::Reallocate](#reallocate)|Appelez cette méthode pour réallouer la mémoire sur le tas.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
@@ -86,9 +68,9 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 |[CHeapPtr::operator =](#operator_eq)|L’opérateur d’assignation.|  
   
 ## <a name="remarks"></a>Remarques  
- `CHeapPtr`est dérivé [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) et utilise les routines de la bibliothèque CRT par défaut (dans [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) pour allouer et libérer de la mémoire. La classe [CHeapPtrList](../../atl/reference/cheapptrlist-class.md) peut être utilisé pour construire une liste de pointeurs de tas. Voir aussi [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), qui utilise les routines d’allocation de mémoire COM.  
+ `CHeapPtr`est dérivé de [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) et par défaut utilise les routines CRT (dans [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) à allouer et libérer la mémoire. La classe [CHeapPtrList](../../atl/reference/cheapptrlist-class.md) peut être utilisé pour construire une liste de pointeurs de tas. Voir aussi [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), qui utilise les routines d’allocation de mémoire COM.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)  
   
  `CHeapPtr`  
@@ -97,7 +79,7 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
  **En-tête :** atlcore.h  
   
 ##  <a name="allocate"></a>CHeapPtr::Allocate  
- Appelez cette méthode pour allouer de la mémoire sur le tas pour stocker des objets.  
+ Appelez cette méthode pour allouer de la mémoire sur le tas pour stocker les objets.  
   
 ```
 bool Allocate(size_t nElements = 1) throw();
@@ -110,11 +92,11 @@ bool Allocate(size_t nElements = 1) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true si la mémoire a été allouée, false en cas d’échec.  
   
-### <a name="remarks"></a>Notes  
- Les routines d’allocation permettent de réserver suffisamment de mémoire sur le tas pour stocker *nElement* les objets d’un type défini dans le constructeur.  
+### <a name="remarks"></a>Remarques  
+ Les routines d’allocateur permettent de réserver suffisamment de mémoire sur le tas pour stocker *nElement* les objets d’un type défini dans le constructeur.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities&#77;](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#77](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]  
   
 ##  <a name="cheapptr"></a>CHeapPtr::CHeapPtr  
  Constructeur.  
@@ -127,13 +109,13 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
   
 ### <a name="parameters"></a>Paramètres  
  `p`  
- Un pointeur de segment existant ou `CHeapPtr`.  
+ Un pointeur de segment de mémoire existant ou `CHeapPtr`.  
   
 ### <a name="remarks"></a>Remarques  
- Le pointeur du tas peut être éventuellement créé à l’aide d’un pointeur existant, ou un `CHeapPtr` objet. Dans ce cas, la nouvelle `CHeapPtr` objet assume la responsabilité de gérer le nouveau pointeur et les ressources.  
+ Le pointeur du tas peut être éventuellement créé à l’aide d’un pointeur existant, ou un `CHeapPtr` objet. Dans ce cas, la nouvelle `CHeapPtr` objet assume la responsabilité de gérer les ressources et le nouveau pointeur.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities&#78;](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#78](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]  
   
 ##  <a name="operator_eq"></a>CHeapPtr::operator =  
  Opérateur d'assignation.  
@@ -151,7 +133,7 @@ CHeapPtr<T, Allocator>& operator=(
  Retourne une référence à la mise à jour `CHeapPtr`.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities&#80;](../../atl/codesnippet/cpp/cheapptr-class_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#80](../../atl/codesnippet/cpp/cheapptr-class_3.cpp)]  
   
 ##  <a name="reallocate"></a>CHeapPtr::Reallocate  
  Appelez cette méthode pour réallouer la mémoire sur le tas.  
@@ -168,10 +150,9 @@ bool Reallocate(size_t nElements) throw();
  Retourne la valeur true si la mémoire a été allouée, false en cas d’échec.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities&#79;](../../atl/codesnippet/cpp/cheapptr-class_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#79](../../atl/codesnippet/cpp/cheapptr-class_4.cpp)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [CHeapPtrBase (classe)](../../atl/reference/cheapptrbase-class.md)   
- [CCRTAllocator (classe)](../../atl/reference/ccrtallocator-class.md)   
+ [Classe de CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)   
+ [Classe de CCRTAllocator](../../atl/reference/ccrtallocator-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

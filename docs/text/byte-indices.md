@@ -1,48 +1,48 @@
 ---
-title: "Indices d&#39;octets | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "indices d'octets (C++)"
-  - "MBCS (C++), indices d'octets"
+title: "Indices d’octets | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MBCS [C++], byte indices
+- byte indices [C++]
 ms.assetid: f6e7774a-86c6-41c2-89e3-74fd46432e47
-caps.latest.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: ec28ce5e577fe4d1e766934095d22a7e64a6a3da
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Indices d&#39;octets
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="byte-indices"></a>Indices d'octets
 Utilisez les conseils suivants :  
   
--   L'utilisation d'un index au niveau de l'octet dans une chaîne pose les mêmes problèmes que ceux posés par la manipulation de pointeurs.  Prenons l'exemple suivant, qui montre comment analyser une chaîne pour une barre oblique inverse :  
+-   Travail avec des index dans une chaîne présente des problèmes semblables à ceux posés par la manipulation du pointeur. Considérez cet exemple, qui analyse une chaîne d’un caractère de barre oblique inverse :  
   
     ```  
     while ( rgch[ i ] != '\\' )  
         i++;  
     ```  
   
-     Cela peut indexer un octet de queue, et non un octet de tête, et ainsi peut ne pas pointer vers un `character`.  
+     Cela peut indexer un octet de fin, et non un octet de tête, et par conséquent, elle ne peut pas pointer sur un `character`.  
   
--   Utilisez la fonction [\_mbclen](../c-runtime-library/reference/mbclen-mblen-mblen-l.md) pour résoudre le problème précédent :  
+-   Utilisez le [_mbclen](../c-runtime-library/reference/mbclen-mblen-mblen-l.md) afin de résoudre le problème précédent :  
   
     ```  
     while ( rgch[ i ] != '\\' )  
         i += _mbclen ( rgch + i );  
     ```  
   
-     Ce code indexe correctement un octet de tête, et donc un `character`.  La fonction `_mbclen` détermine la taille d'un caractère \(un ou deux octets\).  
+     Ce code indexe correctement un octet de tête, par conséquent, pour un `character`. Le `_mbclen` fonction détermine la taille d’un caractère (1 ou 2 octets).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Conseils de programmation MBCS](../text/mbcs-programming-tips.md)   
- [Dernier caractère d'une chaîne](../text/last-character-in-a-string.md)
+ [Dernier caractère d’une chaîne](../text/last-character-in-a-string.md)

@@ -1,65 +1,64 @@
 ---
-title: "Administrateur ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "administration (Administrateur ODBC)"
-  - "Administrateur dans ODBC"
-  - "pilotes (C++), ODBC"
-  - "installer ODBC"
-  - "ODBC (C++), Administrateur ODBC"
-  - "ODBC (Administrateur) (C++)"
-  - "ODBC (sources de données) (C++), Administrateur ODBC"
-  - "ODBC (pilotes) (C++), installer"
+title: Administrateur ODBC | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- installing ODBC
+- ODBC data sources [C++], ODBC Administrator
+- ODBC drivers [C++], installing
+- ODBC [C++], ODBC Administrator
+- Administrator in ODBC
+- administration ODBC Administrator
+- ODBC Administrator [C++]
+- drivers [C++], ODBC
 ms.assetid: b8652790-3437-4e7d-bc83-6ea6981f008b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 834825b38eb8d5c81752dfed85f44202fbce3299
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Administrateur ODBC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'Administrateur ODBC enregistre et configure les [sources de données](../../data/odbc/data-source-odbc.md) disponibles en local ou sur un réseau.  Les Assistants utilisent les informations fournies par l'Administrateur ODBC pour créer du code dans vos applications afin de connecter vos utilisateurs aux sources de données.  
+# <a name="odbc-administrator"></a>Administrateur ODBC
+L’administrateur ODBC enregistre et configure le [des sources de données](../../data/odbc/data-source-odbc.md) disponibles localement ou sur un réseau. Les Assistants utilisent les informations fournies par l’administrateur ODBC pour créer du code dans vos applications qui connecte vos utilisateurs aux sources de données.  
   
- Pour configurer une source de données ODBC à utiliser avec les classes ODBC MFC ou DAO \(Data Access Object\) MFC, vous devez d'abord enregistrer et configurer la source de données.  Utilisez l'Administrateur ODBC pour ajouter et supprimer des sources de données.  Selon le pilote ODBC, vous pouvez également créer de nouvelles sources de données.  
+ Pour configurer une source de données ODBC pour une utilisation avec les classes ODBC MFC ou les classes de données Access objet DAO (MFC), vous devez tout d’abord inscrire et configurer la source de données. Utilisez l’administrateur ODBC pour ajouter et supprimer des sources de données. Selon le pilote ODBC, vous pouvez également créer de nouvelles sources de données.  
   
- L'Administrateur ODBC est installé lors du programme d'installation.  Si vous avez choisi l'installation **Personnalisée** et n'avez sélectionné aucun pilote ODBC dans la boîte de dialogue **Options de base de données**, vous devez réexécuter le programme d'installation pour installer les fichiers nécessaires.  
+ L’administrateur ODBC est installé pendant l’installation. Si vous avez choisi **personnalisé** Installation et vous n’avez pas sélectionné de tous les pilotes ODBC dans le **les Options de base de données** boîte de dialogue, vous devez exécuter le programme d’installation pour installer les fichiers nécessaires.  
   
- Lors de l'installation, sélectionnez les pilotes ODBC que vous voulez installer.  Le programme d'installation Visual C\+\+ vous permet d'installer ultérieurement des pilotes supplémentaires livrés avec Visual C\+\+.  
+ Pendant l’installation, vous sélectionnez les pilotes ODBC que vous souhaitez installer. Vous pouvez installer ultérieurement des pilotes supplémentaires fournis avec Visual C++ à l’aide du programme d’installation de Visual C++.  
   
- Si vous voulez installer des pilotes ODBC qui ne sont pas livrés avec Visual C\+\+, vous devez exécuter le programme d'installation du pilote.  
+ Si vous souhaitez installer les pilotes ODBC ne sont pas fournis avec Visual C++, vous devez exécuter le programme d’installation du pilote.  
   
-#### Pour installer les pilotes ODBC fournis avec Visual C\+\+  
+#### <a name="to-install-odbc-drivers-that-ship-with-visual-c"></a>Pour installer les pilotes ODBC fournis avec Visual C++  
   
-1.  Exécutez le programme d'installation à partir du CD\-ROM Visual C\+\+.  
+1.  Exécutez le programme d’installation à partir du CD-ROM Visual C++.  
   
-     La boîte de dialogue d'ouverture du programme d'installation apparaît.  
+     L’ouverture est de boîte de dialogue du programme d’installation s’affiche.  
   
-2.  Cliquez sur **Suivant** dans chaque boîte de dialogue jusqu'à ce que la boîte de dialogue **Options d'installation** s'affiche.  Sélectionnez **Personnalisée**, puis cliquez sur `Next`.  
+2.  Cliquez sur **suivant** sur chaque boîte de dialogue jusqu'à ce que vous atteigniez le **Options d’Installation** boîte de dialogue. Sélectionnez **personnalisé**, puis cliquez sur `Next`.  
   
-3.  Désactivez toutes les cases à cocher de la boîte de dialogue **Installation de Microsoft Visual C\+\+** à l'exception de la case à cocher **Options de base de données**, puis cliquez sur **Détails** pour afficher la boîte de dialogue **Options de base de données**.  
+3.  Désactivez toutes les cases à cocher dans la **d’installation de Microsoft Visual C++** boîte de dialogue à l’exception de la **les Options de base de données** case à cocher, puis cliquez sur **détails** pour afficher la **Les Options de base de données** boîte de dialogue.  
   
-4.  Désactivez la case à cocher **Objets d'accès aux données Microsoft**, activez la case à cocher **Pilotes ODBC Microsoft**, puis cliquez sur **Détails**.  
+4.  Désactivez le **Microsoft Data Access Objects** case à cocher, sélectionnez le **pilotes ODBC Microsoft** case à cocher, puis cliquez sur **détails**.  
   
-     La boîte de dialogue **Pilotes ODBC Microsoft** s'affiche.  
+     Le **pilotes ODBC Microsoft** boîte de dialogue s’affiche.  
   
-5.  Sélectionnez les pilotes que vous voulez installer, puis cliquez deux fois sur **OK**.  
+5.  Sélectionnez les pilotes que vous souhaitez installer, puis cliquez sur **OK** à deux reprises.  
   
-6.  Cliquez sur **Suivant** dans les boîtes de dialogue qui s'affichent par la suite pour commencer l'installation.  Le programme d'installation vous prévient lorsque l'installation est terminée.  
+6.  Cliquez sur **suivant** sur les boîtes de dialogue restantes pour commencer l’installation. Le programme d’installation vous informe lorsque l’installation est terminée.  
   
- Dès que les pilotes sont installés, vous pouvez configurer la source de données à l'aide de l'Administrateur ODBC.  L'icône ODBC se trouve dans le Panneau de configuration.  
+ Lorsque les pilotes sont installés, vous pouvez configurer la source de données à l’aide de l’administrateur ODBC. Vous trouverez l’icône ODBC dans le panneau de configuration.  
   
-## Voir aussi  
- [ODBC \(Open Database Connectivity\)](../../data/odbc/open-database-connectivity-odbc.md)   
- [Source de données \(ODBC\)](../../data/odbc/data-source-odbc.md)
+## <a name="see-also"></a>Voir aussi  
+ [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
+ [Source de données (ODBC)](../../data/odbc/data-source-odbc.md)

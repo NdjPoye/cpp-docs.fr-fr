@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3632
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3632
+f1_keywords: C3632
+dev_langs: C++
+helpviewer_keywords: C3632
 ms.assetid: a04e3217-f5a1-4461-a1db-d69fd096d468
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: aceeae92ee2efa180ba46c913f1c30d436d9f21b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3632"></a>Erreur du compilateur C3632
 'événement' : style d’événement pour une construction non conforme  
@@ -32,4 +27,3 @@ ms.lasthandoff: 10/10/2017
  [__event](../../cpp/event.md) déclarations ne sont pas valides dans toutes les constructions.  
   
  C3632 est uniquement accessible à l’aide de l’option du compilateur obsolète **oldSyntax ;**.  
-

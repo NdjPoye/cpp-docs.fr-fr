@@ -1,56 +1,57 @@
 ---
-title: "Implementing a Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, boîtes de dialogue"
-  - "CAxDialogImpl class, implementing dialog boxes in ATL"
-  - "CSimpleDialog class, implementing dialog boxes in ATL"
-  - "boîtes de dialogue, ATL"
+title: "Implémentation d’une boîte de dialogue | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CSimpleDialog class, implementing dialog boxes in ATL
+- dialog boxes, ATL
+- CAxDialogImpl class, implementing dialog boxes in ATL
+- ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6e4a8f0d4ef6e8f5ea73352f0d4a62acee1c8c89
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Implementing a Dialog Box
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="implementing-a-dialog-box"></a>Implémentation d’une boîte de dialogue
+Il existe deux façons d’ajouter une boîte de dialogue à votre projet ATL : utiliser l’Assistant dialogue ATL ou de l’ajouter manuellement.  
+  
+## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>Ajout d’une boîte de dialogue avec l’Assistant dialogue ATL  
+ Dans le [boîte de dialogue Ajouter une classe](../ide/add-class-dialog-box.md), sélectionnez l’objet de la boîte de dialogue ATL pour ajouter une boîte de dialogue à votre projet ATL. Complétez l’Assistant dialogue ATL selon le cas, cliquez sur **Terminer**. L’Assistant ajoute une classe dérivée de [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) à votre projet. Ouvrez l’affichage des ressources à partir de la **vue** menu, recherchez votre boîte de dialogue, puis double-cliquez dessus pour l’ouvrir dans l’éditeur de ressources.  
+  
+> [!NOTE]
+>  Si votre boîte de dialogue est dérivée de `CAxDialogImpl`, il peut héberger les deux ActiveX et des contrôles Windows. Si vous ne souhaitez pas la surcharge de prise en charge du contrôle ActiveX dans votre classe de boîte de dialogue, utilisez [CSimpleDialog](../atl/reference/csimpledialog-class.md) ou [CDialogImpl](../atl/reference/cdialogimpl-class.md) à la place.  
+  
+ Gestionnaires de messages et d’événements peuvent être ajoutés à votre classe de boîte de dialogue à partir de l’affichage de classes. Pour plus d’informations, consultez [Ajout d’un gestionnaire de messages ATL](../atl/adding-an-atl-message-handler.md).  
+  
+## <a name="adding-a-dialog-box-manually"></a>Ajout manuel d’une boîte de dialogue  
+ Implémentation d’une boîte de dialogue est similaire à l’implémentation d’une fenêtre. Vous dérivez une classe à partir de le [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md), [CDialogImpl](../atl/reference/cdialogimpl-class.md), ou [CSimpleDialog](../atl/reference/csimpledialog-class.md) et déclarer un [table des messages](../atl/message-maps-atl.md) pour traiter les messages. Toutefois, vous devez également spécifier un ID de ressource de modèle de boîte de dialogue dans votre classe dérivée. Votre classe doit avoir un membre de données appelé `IDD` doit contenir cette valeur.  
+  
+> [!NOTE]
+>  Lorsque vous créez une boîte de dialogue à l’aide de l’Assistant dialogue ATL, l’Assistant ajoute automatiquement le `IDD` membre comme une `enum` type.  
+  
+ `CDialogImpl`vous permet d’implémenter une modale ou une boîte de dialogue non modale qui héberge des contrôles Windows. `CAxDialogImpl`vous permet d’implémenter une modale ou une boîte de dialogue non modale qui héberge des contrôles ActiveX et Windows.  
+  
+ Pour créer une boîte de dialogue modale, créez une instance de votre `CDialogImpl`-dérivées (ou `CAxDialogImpl`-dérivée) de classe, puis appelez le [DoModal](../atl/reference/cdialogimpl-class.md#domodal) (méthode). Pour fermer la boîte de dialogue modale, appelez le [EndDialog](../atl/reference/cdialogimpl-class.md#enddialog) méthode à partir d’un gestionnaire de messages. Pour créer une boîte de dialogue non modale, appelez le [créer](../atl/reference/cdialogimpl-class.md#create) méthode à la place de `DoModal`. Pour détruire une boîte de dialogue non modale, appelez [DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow).  
+  
+ La réception des événements est effectuée automatiquement dans [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md). Implémenter des gestionnaires de messages de la boîte de dialogue comme vous le feriez dans les gestionnaires d’un `CWindowImpl`-classe dérivée. S’il existe une valeur de retour spécifique au message, retourner comme un `LRESULT`. Retourné `LRESULT` les valeurs sont mappées par ATL pour gérer correctement par le Gestionnaire de boîte de dialogue Windows. Pour plus d’informations, consultez le code source pour [CDialogImplBaseT::DialogProc](../atl/reference/cdialogimpl-class.md#dialogproc) dans atlwin.h.  
+  
+## <a name="example"></a>Exemple  
+ La classe suivante implémente une boîte de dialogue :  
+  
+ [!code-cpp[NVC_ATL_Windowing#66](../atl/codesnippet/cpp/implementing-a-dialog-box_1.h)]  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Classes de fenêtre](../atl/atl-window-classes.md)
 
-Il existe deux façons d'ajouter une boîte de dialogue ATL à votre projet : utilisez l'Assistant Dialogue ATL ou ajoutez \-le manuellement.  
-  
-## Ajouter une boîte de dialogue à l'aide de Dialogue ATL  
- Dans [ajoutez la boîte de dialogue de classe](../ide/add-class-dialog-box.md), sélectionnez l'objet dialog ATL pour ajouter une boîte de dialogue à votre projet ATL.  Remplissez Assistant Dialogue ATL en conséquence et cliquez sur **Finish**.  l'assistant ajoute une classe dérivée de [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) à votre projet.  Ouvrez l'affichage des ressources de menu **Affichage** , localisez votre dialogue, et double\-cliquez dessus pour l'ouvrir dans l'éditeur de ressources.  
-  
-> [!NOTE]
->  Si votre boîte de dialogue est dérivée d' `CAxDialogImpl`, il peut héberger des contrôles ActiveX et Windows.  Si vous ne souhaitez pas la charge mémoire de la prise en charge de contrôles ActiveX dans votre classe de boîte de dialogue, utilisez [CSimpleDialog](../atl/reference/csimpledialog-class.md) ou [CDialogImpl](../atl/reference/cdialogimpl-class.md) à la place.  
-  
- Le message et les gestionnaires d'événements peuvent être ajoutés à votre classe de boîte de dialogue de l'Affichage de classes.  Pour plus d'informations, consultez [Ajout d'un gestionnaire de messages ATL](../atl/adding-an-atl-message-handler.md).  
-  
-## Ajout d'une boîte de dialogue manuellement  
- Implémenter une boîte de dialogue est semblable à implémenter une fenêtre.  Vous dérivez une classe de [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md), de [CDialogImpl](../atl/reference/cdialogimpl-class.md), ou de [CSimpleDialog](../atl/reference/csimpledialog-class.md) et déclarez [table des messages](../atl/message-maps-atl.md) messages de handle.  Toutefois, vous devez également spécifier un ID de ressource modèle de boîte de dialogue dans votre classe dérivée.  Votre classe doit avoir un membre appelée `IDD` pour stocker cette valeur.  
-  
-> [!NOTE]
->  Lorsque vous créez une boîte de dialogue à l'aide de l'Assistant Dialogue ATL, l'assistant ajoute automatiquement le membre d' `IDD` comme type d' `enum` .  
-  
- `CDialogImpl` vous permet d'implémenter un modal ou une boîte de dialogue non modale qui héberge des contrôles Windows.  `CAxDialogImpl` vous permet d'implémenter un modal ou une boîte de dialogue non modale qui héberge des contrôles ActiveX et Windows.  
-  
- Pour créer une boîte de dialogue modale, créez une instance de votre `CDialogImpl`\(\)dérivé\) la classe dérivée \(ou `CAxDialogImpl`et appelez la méthode de [DoModal](../Topic/CDialogImpl::DoModal.md) .  Pour fermer la boîte de dialogue modale, appelez la méthode d' [EndDialog](../Topic/CDialogImpl::EndDialog.md) d'un gestionnaire de messages.  Pour créer une boîte de dialogue non modale, appelez la méthode de création au lieu d' `DoModal`.  Pour détruire une boîte de dialogue non modale, appelez [DestroyWindow](../Topic/CDialogImpl::DestroyWindow.md).  
-  
- Jambage descendant des événements est automatiquement effectuée dans [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md).  Implémentez les gestionnaires de messages de la boîte de dialogue lorsque vous les gestionnaires dans `CWindowImpl`classe dérivée.  Si une valeur de retour de message\- spécifique, renvoyez\- la comme `LRESULT`.  Les valeurs retournées par `LRESULT` sont mappées par ATL pour la gestion appropriée par le gestionnaire de dialogue windows.  Pour plus d'informations, consultez le code source de [CDialogImplBaseT::DialogProc](../Topic/CDialogImpl::DialogProc.md) dans atlwin.h.  
-  
-## Exemple  
- La classe suivante implémente une boîte de dialogue :  
-  
- [!code-cpp[NVC_ATL_Windowing#66](../atl/codesnippet/CPP/implementing-a-dialog-box_1.h)]  
-  
-## Voir aussi  
- [classes de fenêtre](../atl/atl-window-classes.md)

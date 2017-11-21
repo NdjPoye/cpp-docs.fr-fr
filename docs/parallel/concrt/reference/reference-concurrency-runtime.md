@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -454,48 +453,31 @@ f1_keywords:
 - concrt/Concurrency::details::_Timer::_Stop
 - concrt/Concurrency::details::_TaskCollectionBase::_M_pParent
 - agents/Concurrency::_Network_link_iterator::operator->
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - DWORD typedef
 - HANDLE typedef
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 88de4e73c29e222009a4ca90b3b22c4701b21e70
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: b97785b2853b278e93f5f13aa2c40741d10c9d9c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="reference-concurrency-runtime"></a>Référence (runtime d'accès concurrentiel)
 Cette section contient des informations de référence pour le Runtime d’accès concurrentiel.
-**Remarque** norme du langage C++ de la réserve l’utilisation des identificateurs qui commencent par un caractère de soulignement (_) pour les implémentations tels que les bibliothèques. N'utilisez pas ces noms dans votre code. Le comportement des éléments de code, dont les noms suivent cette convention n'est pas garanti et est susceptible de changer dans les futures mises à jour. Pour ces raisons, ces éléments de code sont omis de la documentation du Runtime d’accès concurrentiel.
+**Remarque** norme du langage C++ de la réserve l’utilisation des identificateurs qui commencent par un caractère de soulignement (_) pour les implémentations telles que des bibliothèques. N'utilisez pas ces noms dans votre code. Le comportement des éléments de code, dont les noms suivent cette convention n'est pas garanti et est susceptible de changer dans les futures mises à jour. Pour ces raisons, ces éléments de code sont omis de la documentation du Runtime d’accès concurrentiel.
 
 ## <a name="in-this-section"></a>Dans cette section
 [accès concurrentiel Namespace](concurrency-namespace.md) l’espace de noms d’accès concurrentiel fournit des classes et des fonctions qui vous donnent accès au Runtime d’accès concurrentiel, une infrastructure de programmation simultanée pour C++. Pour plus d’informations, consultez [Runtime d’accès concurrentiel](../concurrency-runtime.md).
 
 [espace de noms std](std-namespace.md)
-[espace de noms stdx](stdx-namespace.md)
-
+[stdx espace de noms](stdx-namespace.md)
 
 

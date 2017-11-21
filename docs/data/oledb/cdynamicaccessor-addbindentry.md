@@ -1,56 +1,55 @@
 ---
-title: "CDynamicAccessor::AddBindEntry | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDynamicAccessor::AddBindEntry"
-  - "AddBindEntry"
-  - "CDynamicAccessor.AddBindEntry"
-  - "CDynamicAccessor::AddBindEntry"
-  - "ATL.CDynamicAccessor.AddBindEntry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddBindEntry (méthode)"
+title: CDynamicAccessor::AddBindEntry | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDynamicAccessor::AddBindEntry
+- AddBindEntry
+- CDynamicAccessor.AddBindEntry
+- CDynamicAccessor::AddBindEntry
+- ATL.CDynamicAccessor.AddBindEntry
+dev_langs: C++
+helpviewer_keywords: AddBindEntry method
 ms.assetid: 8f139376-7db3-4193-ba3b-63fe938ffa79
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9b11409a7bbff2ef3f9c89f62fd361755d99f5d5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicAccessor::AddBindEntry
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Adds a bind entry to the output columns.  
+# <a name="cdynamicaccessoraddbindentry"></a>CDynamicAccessor::AddBindEntry
+Ajoute une entrée de liaison pour les colonnes de sortie.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      HRESULT AddBindEntry(   
-   const DBCOLUMNINFO& info    
+      HRESULT AddBindEntry(   
+   const DBCOLUMNINFO& info    
 ) throw( );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `info`  
- \[in\] A **DBCOLUMNINFO** structure containing column information.  See "DBCOLUMNINFO Structures" in [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) in the *OLE DB Programmer's Reference*.  
+ [in] A **DBCOLUMNINFO** structure contenant des informations de colonne. Consultez la section « Structures DBCOLUMNINFO » dans [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## Valeur de retour  
- One of the standard `HRESULT` values.  
+## <a name="return-value"></a>Valeur de retour  
+ Un de la norme `HRESULT` valeurs.  
   
-## Notes  
- Use this method when overriding the default accessor created with `CDynamicAccessor` \(see [How Do I Fetch Data?](../../data/oledb/fetching-data.md)\).  
+## <a name="remarks"></a>Remarques  
+ Utilisez cette méthode lors de la substitution de l’accesseur par défaut créé avec `CDynamicAccessor` (consultez [comment faire pour extraire des données ?](../../data/oledb/fetching-data.md)).  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CDynamicAccessor, classe](../../data/oledb/cdynamicaccessor-class.md)

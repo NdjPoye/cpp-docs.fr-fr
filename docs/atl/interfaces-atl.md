@@ -1,37 +1,38 @@
 ---
-title: "Interfaces (ATL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interfaces COM"
-  - "interfaces, COM"
+title: Interfaces (ATL) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- COM interfaces
+- interfaces, COM
 ms.assetid: de6c8b12-6230-4fdc-af66-a28b91d5ee55
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 28fb749a705ed01b4c10d22cea0062c2f0d799c7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Interfaces (ATL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Une interface est la façon dont un objet expose ses fonctionnalités au monde externe.  Dans COM, une interface est un tableau de pointeurs \(comme C\+\+ vtable\) aux fonctions implémentées par l'objet.  Le tableau représente l'interface, et les fonctions à laquelle il pointe sont les méthodes de cette interface.  Un objet peut exposer autant d'interfaces qu'il choisit.  
+# <a name="interfaces-atl"></a>Interfaces (ATL)
+Une interface est la méthode dans laquelle un objet expose ses fonctionnalités au monde extérieur. Dans COM, une interface est une table de pointeurs (comme un vtable C++) sur les fonctions implémentées par l’objet. La table représente l’interface et les fonctions vers laquelle il pointe sont les méthodes de cette interface. Un objet peut exposer autant d’interfaces qu’il le souhaite.  
   
- Chaque interface est basé sur l'interface COM fondamentale, [IUnknown](../atl/iunknown.md).  Les méthodes d' **IUnknown** permettent la navigation vers d'autres interfaces exposées par l'objet.  
+ Chaque interface est basée sur l’interface COM de base, [IUnknown](../atl/iunknown.md). Les méthodes de **IUnknown** permettent de naviguer vers d’autres interfaces exposées par l’objet.  
   
- De plus, chaque interface reçoit un ID d'interface \(IID\).  Cette unicité le est facile de prendre en charge le versioning d'interface.  Une nouvelle version d'une interface est simplement une nouvelle interface, avec un nouvel IID.  
+ En outre, chaque interface est dotée d’un unique ID d’interface (IID). Ce caractère unique facilite la charge du versioning. Une nouvelle version d’une interface est simplement une nouvelle interface, avec un nouveau IID.  
   
 > [!NOTE]
->  Les IID pour COM standard et les interfaces OLE sont intégrés.  
+>  IID pour les interfaces COM et OLE standards sont prédéfinies.  
   
-## Voir aussi  
- [Introduction to COM](../atl/introduction-to-com.md)   
- [COM Objects and Interfaces](http://msdn.microsoft.com/library/windows/desktop/ms690343)
+## <a name="see-also"></a>Voir aussi  
+ [Introduction à COM](../atl/introduction-to-com.md)   
+ [Interfaces et des objets COM](http://msdn.microsoft.com/library/windows/desktop/ms690343)
+

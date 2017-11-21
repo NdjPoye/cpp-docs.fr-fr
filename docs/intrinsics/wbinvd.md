@@ -1,53 +1,51 @@
 ---
-title: "__wbinvd | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__wbinvd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__wbinvd, intrinsèque"
-  - "wbinvd, instruction"
+title: __wbinvd | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __wbinvd
+dev_langs: C++
+helpviewer_keywords:
+- __wbinvd intrinsic
+- wbinvd instruction
 ms.assetid: 628d0981-39e5-49e1-bd43-706d123af121
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6efbb1388974e74e76c0f4ec88a3ffdcfe2ee6f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# __wbinvd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="wbinvd"></a>__wbinvd
+**Section spécifique à Microsoft**  
   
- Génère une ristourne et invalide l'instruction de cache \(`wbinvd`\).  
+ Génère l’écriture différée et invalider le Cache (`wbinvd`) instruction.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void __wbinvd(void);  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__wbinvd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- Cette fonction est uniquement disponible en mode noyau avec un niveau de privilège \(COMPLET\) de 0, et la routine est uniquement disponible sous forme intrinsèque.  
+## <a name="remarks"></a>Remarques  
+ Cette fonction est uniquement disponible en mode noyau avec un niveau de privilège (Panneau de configuration) de 0, et la routine est disponible uniquement comme intrinsèque.  
   
-## détail de FIN Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

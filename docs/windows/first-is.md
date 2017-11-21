@@ -1,32 +1,30 @@
 ---
-title: "first_is | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.first_is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "first_is attribute"
+title: first_is | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.first_is
+dev_langs: C++
+helpviewer_keywords: first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 478b4f501e16ab9fff2e66a4b36fac6e8d29ac70
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# first_is
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Spécifie l'index du premier élément du tableau à transmettre.  
+# <a name="firstis"></a>first_is
+Spécifie l’index du premier élément du tableau doit être transmis.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,15 +33,15 @@ Spécifie l'index du premier élément du tableau à transmettre.
 ) ]  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *expression*  
- Une ou plusieurs expressions de langage C.  Il permet des emplacements vides d'argument.  
+ Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont autorisées.  
   
-## Notes  
- L'attribut de **first\_is** C\+\+ a les mêmes fonctionnalités que l'attribut de [first\_is](http://msdn.microsoft.com/library/windows/desktop/aa366831) MIDL.  
+## <a name="remarks"></a>Remarques  
+ Le **first_is** attribut C++ a les mêmes fonctionnalités que le [first_is](http://msdn.microsoft.com/library/windows/desktop/aa366831) attribut MIDL.  
   
-## Exemple  
- Code suivant montre différentes manières de spécifier une section dans un tableau :  
+## <a name="example"></a>Exemple  
+ Le code suivant montre comment spécifier une section dans un tableau :  
   
 ```  
 // cpp_attr_ref_first_is.cpp  
@@ -65,25 +63,24 @@ requestedit] HRESULT get_I([out, retval]long *i);
 };  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|Champ dans `struct` ou **union**, paramètre de l'interface, méthode d'interface|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|Champ `struct` ou **union**, paramètre de l’interface, méthode d’interface|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun|  
+|**Attributs non valides**|None|  
   
- Pour plus d'informations, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [last\_is](../windows/last-is.md)   
- [max\_is](../windows/max-is.md)   
- [length\_is](../windows/length-is.md)   
- [size\_is](../windows/size-is.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union et Struct (attributs)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Attributs de paramètre](../windows/parameter-attributes.md)   
+ [last_is](../windows/last-is.md)   
+ [max_is](../windows/max-is.md)   
+ [length_is](../windows/length-is.md)   
+ [size_is](../windows/size-is.md)   

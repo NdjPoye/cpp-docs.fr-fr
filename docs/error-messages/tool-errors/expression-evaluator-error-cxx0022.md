@@ -1,32 +1,31 @@
 ---
-title: "&#201;valuateur d&#39;expression, erreur CXX0022 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0022"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0022"
-  - "CXX0022"
+title: "Évaluateur d’expression, erreur CXX0022 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0022
+dev_langs: C++
+helpviewer_keywords:
+- CXX0022
+- CAN0022
 ms.assetid: f6b299ac-a4ee-492c-bd9f-6fff005bc537
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7ce3565258d7aa79a308cadcffaa2ef3d2626944
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# &#201;valuateur d&#39;expression, erreur CXX0022
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-appel de fonction avant \_main  
+# <a name="expression-evaluator-error-cxx0022"></a>Évaluateur d'expression, erreur CXX0022
+appel de fonction avant _main  
   
- L'évaluateur d'expression C ne peut pas évaluer une fonction avant que le débogueur n'entre dans **\_main** de la fonction.  Le programme n'est pas correctement initialisé tant que **\_main** n'est pas appelé.  
+ L’évaluateur d’expression C ne peut pas évaluer une fonction avant que le débogueur est passé à la fonction **_main**. Le programme n’est pas initialisé correctement tant que **_main** a été appelée.  
   
- Erreur identique à CAN0022.
+ Cette erreur est identique à CAN0022.

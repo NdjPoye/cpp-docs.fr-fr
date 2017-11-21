@@ -1,41 +1,38 @@
 ---
-title: "safe_cast (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "safe_cast"
-  - "safe_cast_cpp"
-  - "stdcli::language::safe_cast"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "safe_cast keyword [C++]"
+title: safe_cast (Extensions du composant C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- safe_cast
+- safe_cast_cpp
+- stdcli::language::safe_cast
+dev_langs: C++
+helpviewer_keywords: safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-caps.latest.revision: 26
-caps.handback.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "26"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bf02b1c8aa84688df5ef29f4c5e69fa818b31904
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# safe_cast (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="safecast-c-component-extensions"></a>safe_cast (extensions du composant C++)
 L'opération `safe_cast` retourne l'expression spécifiée en tant que type spécifié, en cas de réussite ; sinon, lève une exception `InvalidCastException`.  
   
-## Tous les runtimes  
- \(Aucune remarque pour cette fonctionnalité de langage ne s'applique à tous les runtimes.\)  
+## <a name="all-runtimes"></a>Tous les runtimes  
+ (Aucune remarque pour cette fonctionnalité de langage ne s'applique à tous les runtimes.)  
   
-### Syntaxe  
+### <a name="syntax"></a>Syntaxe  
   
 ```cpp  
-  
 [default]:: safe_cast<  
 type-id  
 >(  
@@ -44,17 +41,16 @@ expression
   
 ```  
   
-### Paramètres  
+### <a name="parameters"></a>Paramètres  
   
-### Notes  
+### <a name="remarks"></a>Remarques  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- `safe_cast` vous permet de modifier le type d'une expression spécifiée.  Dans les situations où vous vous attendez à ce qu'une variable ou un paramètre soit convertible en un certain type, vous pouvez utiliser safe\_cast sans bloc try\-catch pour détecter les erreurs de programmation pendant le développement.  Pour plus d'informations, consultez [Effectuer un cast \(C\+\+\/CX\)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx).  
+## <a name="windows-runtime"></a>Windows Runtime  
+ `safe_cast` vous permet de modifier le type d'une expression spécifiée. Dans les situations où vous vous attendez à ce qu'une variable ou un paramètre soit convertible en un certain type, vous pouvez utiliser safe_cast sans bloc try-catch pour détecter les erreurs de programmation pendant le développement. Pour plus d’informations, consultez [cast (C + c++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx).  
   
-### Syntaxe  
+### <a name="syntax"></a>Syntaxe  
   
 ```cpp  
-  
 [default]:: safe_cast<  
 type-id  
 >(  
@@ -63,23 +59,23 @@ expression
   
 ```  
   
-### Paramètres  
+### <a name="parameters"></a>Paramètres  
  *id du type*  
- Type vers lequel convertir une *expression*.  Handle vers un type référence ou valeur, type valeur ou référence de suivi à un type référence ou valeur.  
+ Le type vers lequel convertir *expression* à. Handle vers un type référence ou valeur, type valeur ou référence de suivi à un type référence ou valeur.  
   
  *expression*  
  Expression qui s'évalue en handle vers un type référence ou type valeur, type valeur ou référence de suivi vers un type référence ou valeur.  
   
-### Notes  
- `safe_cast` lève une exception `InvalidCastException` la conversion de l'*expression* dans le type spécifié par *id de type* n'est pas possible.  Pour intercepter `InvalidCastException`, spécifiez l'option du compilateur [\/EH \(Modèle de gestion des exceptions\)](../build/reference/eh-exception-handling-model.md) et utilisez une instruction try\/catch.  
+### <a name="remarks"></a>Remarques  
+ `safe_cast`lève `InvalidCastException` si elle ne peut pas convertir *expression* pour le type spécifié par *id de type*. Pour intercepter `InvalidCastException`, spécifiez la [/EH (modèle de gestion des exceptions)](../build/reference/eh-exception-handling-model.md) option du compilateur et l’utilisation d’une instruction try/catch.  
   
-### Spécifications  
- Option du compilateur : **\/ZW**  
+### <a name="requirements"></a>Spécifications  
+ Option du compilateur : **/ZW**  
   
-### Exemples  
+### <a name="examples"></a>Exemples  
  **Exemple**  
   
- L'exemple de code suivant illustre l'utilisation de `safe_cast` avec [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
+ L’exemple de code suivant montre comment utiliser `safe_cast` avec Windows Runtime.  
   
 ```cpp#  
 // safe_cast_ZW.cpp  
@@ -109,14 +105,16 @@ int main(Array<String^>^ args) {
   
  **Sortie**  
   
-  **Exception attendue interceptée : InvalidCastException**   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+```Output  
+Caught expected exception: InvalidCastException  
+```  
+  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  `safe_cast` vous permet de modifier le type d'une expression et de générer du code MSIL vérifiable.  
   
-### Syntaxe  
+### <a name="syntax"></a>Syntaxe  
   
 ```cpp  
-  
 [cli]:: safe_cast<  
 type-id  
 >(  
@@ -125,46 +123,36 @@ expression
   
 ```  
   
-### Paramètres  
+### <a name="parameters"></a>Paramètres  
  *id du type*  
  Handle vers un type référence ou valeur, type valeur ou référence de suivi à un type référence ou valeur.  
   
  *expression*  
  Expression qui s'évalue en handle vers un type référence ou type valeur, type valeur ou référence de suivi vers un type référence ou valeur.  
   
-### Notes  
- L'expression `safe_cast<`*id de type*`>(`*expression*`)` convertit l'expression d'opérande en objet de type id de type.  
+### <a name="remarks"></a>Remarques  
+ L’expression `safe_cast<` *id de type*`>(`*expression* `)` convertit l’expression d’opérande en objet de type id de type.  
   
- Le compilateur accepte un [static\_cast](../cpp/static-cast-operator.md) à la plupart des emplacements auxquels il n'accepte un `safe_cast`.  Toutefois, `safe_cast` garantit la production de code MSIL vérifiable, alors qu'un `static_cast` peut produire du code MSIL non vérifiable.  Voir [Code pur et vérifiable](../dotnet/pure-and-verifiable-code-cpp-cli.md) et [Peverify.exe \(PEVerify Tool\)](../Topic/Peverify.exe%20\(PEVerify%20Tool\).md) pour plus d'informations sur le code vérifiable.  
+ Le compilateur accepte un [static_cast](../cpp/static-cast-operator.md) dans la plupart des cas il n’acceptera une `safe_cast`.  Toutefois, `safe_cast` garantit la production de code MSIL vérifiable, alors qu'un `static_cast` peut produire du code MSIL non vérifiable.  Consultez [Code pur et vérifiable (C + c++ / CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) et [Peverify.exe (outil PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) pour plus d’informations sur le code vérifiable.  
   
  Comme `static_cast`, `safe_cast` appelle des conversions définies par l'utilisateur.  
   
- Pour plus d'informations sur les casts, consultez [Opérateurs de casting](../cpp/casting-operators.md).  
+ Pour plus d’informations sur les casts, consultez [opérateurs de Casting](../cpp/casting-operators.md).  
   
- `safe_cast` n'applique pas de **const\_cast** \(rejet de **const**\).  
+ `safe_cast`ne s’applique pas une **const_cast** (caster **const**).  
   
- `safe_cast` est dans l'espace de noms cli.  Consultez [Platform, default, and cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) pour plus d'informations.  
+ `safe_cast` est dans l'espace de noms cli.  Consultez [plateforme, par défaut et espaces de noms cli](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) pour plus d’informations.  
   
- Pour plus d'informations sur **safe\_cas**t, consultez :  
+ Pour plus d’informations sur **safe_cas**t, consultez :  
   
--   [C\-Style Casts with \/clr \(C\+\+\/CLI\)](../windows/c-style-casts-with-clr-cpp-cli.md)  
+-   [Les Casts de Style C avec /clr (C + c++ / CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)  
   
--   [Comment : utiliser safe\_cast dans C\+\+\/CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
+-   [Guide pratique pour utiliser safe_cast dans C++-CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
+
+### <a name="requirements"></a>Spécifications  
+ Option du compilateur : **/clr**  
   
--   [Comment : utiliser un cast aval avec safe\_cast](../misc/how-to-downcast-with-safe-cast.md)  
-  
--   [Comment : utiliser safe\_cast et des types génériques](../misc/how-to-use-safe-cast-and-generic-types.md)  
-  
--   [Comment : utiliser safe\_cast et des conversions définies par l'utilisateur](../misc/how-to-use-safe-cast-and-user-defined-conversions.md)  
-  
--   [Comment : utiliser safe\_cast et boxing](../misc/how-to-use-safe-cast-and-boxing.md)  
-  
--   [Comment : utiliser safe\_cast et unboxing](../misc/how-to-use-safe-cast-and-unboxing.md)  
-  
-### Spécifications  
- Option du compilateur : **\/clr**  
-  
-### Exemples  
+### <a name="examples"></a>Exemples  
  **Exemple**  
   
  Les casts entre types d'interface non liés constituent un exemple où le compilateur n'accepte pas un `static_cast` mais accepte un `safe_cast`.  Avec `safe_cast`, le compilateur n'émet pas d'erreur de conversion et effectue une vérification au moment de l'exécution si le cast est possible.  
@@ -195,6 +183,9 @@ int main() {
   
  **Sortie**  
   
-  **Exception attendue interceptée**   
-## Voir aussi  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+Caught expected exception  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)

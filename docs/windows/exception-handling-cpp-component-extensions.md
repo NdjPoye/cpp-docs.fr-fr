@@ -1,58 +1,57 @@
 ---
-title: "Exception Handling  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "structured exception handling, managed exceptions"
-  - "Exception class, managed applications"
-  - "exception handling"
-  - "C++ exception handling"
-  - "exception handling, types of"
-  - "managed exceptions"
-  - "System::Exception class in managed applications"
+title: Exceptions (Extensions du composant C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- structured exception handling, managed exceptions
+- Exception class, managed applications
+- exception handling
+- C++ exception handling
+- exception handling, types of
+- managed exceptions
+- System::Exception class in managed applications
 ms.assetid: ccb11fe8-6938-41ac-b477-a183e85865b9
-caps.latest.revision: 20
-caps.handback.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aa42bfc67a94ed4e25045dc6656651a7b9bd645e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Exception Handling  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les applications qui sont compilés avec l'option du compilateur **\/ZW** ou l'option du compilateur **\/clr** utilisent toutes les deux *exceptions* pour gérer les erreurs inattendues pendant l'exécution du programme.  Les rubriques suivantes portent sur la gestion des exceptions dans les applications de C\+\+\/CX ou de C\+\+\/CLI.  
+# <a name="exception-handling--c-component-extensions"></a>Gestion des exceptions (extensions du composant C++)
+Les applications compilées avec les **/ZW** option du compilateur ou **/CLR** option du compilateur utilisent tous deux *exceptions* pour gérer les erreurs inattendues pendant l’exécution du programme. Les rubriques suivantes abordent la gestion des exceptions dans soit C + c++ / CX ou C + c++ / applications de CLI.  
   
-## Dans cette section  
- [Concepts de base dans l'utilisation des exceptions managées](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
- Décrit le soulèvement des exceptions et l'utilisation des blocages `try`\/`catch`.  
+## <a name="in-this-section"></a>Dans cette section  
+ [Concepts de base dans l’utilisation des exceptions managées](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
+ Décrit la levée d’exceptions et à l’aide de `try` / `catch` blocs.  
   
- [Différences du comportement de gestion des exceptions](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
- Explique les différences avec le comportement standard de la gestion des exceptions C\+\+.  
+ [Différences de comportement sous/CLR de la gestion des exceptions](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
+ Discute les différences du comportement standard de gestion des exceptions C++.  
   
  [finally](../dotnet/finally.md)  
- Explique comment utiliser le mot clé enfin.  
+ Explique comment utiliser le mot clé finally.  
   
- [Comment : définir et installer un gestionnaire d'exceptions global](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
- Montre comment les exceptions non gérées peuvent être capturées.  
+ [Guide pratique pour définir et installer un gestionnaire d’exceptions global](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
+ Montre comment non prise en charge des exceptions peuvent être capturés.  
   
- [Comment : intercepter des exceptions en code natif levées à partir de MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)  
- Explique comment intercepter le CLR et les exceptions C\+\+ en code natif.  
+ [Guide pratique pour intercepter des exceptions en code natif levées à partir de MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)  
+ Explique comment intercepter des exceptions C++ et CLR dans le code natif.  
   
- [Comment : définir et installer un gestionnaire d'exceptions global](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
- Montre comment intercepter les exceptions non gérées.  
+ [Guide pratique pour définir et installer un gestionnaire d’exceptions global](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
+ Montre comment intercepter des exceptions de tous les non prise en charge.  
   
-## Rubriques connexes  
+## <a name="related-sections"></a>Rubriques connexes  
  [Gestion des exceptions](../cpp/exception-handling-in-visual-cpp.md)  
- Décrit la gestion des exceptions en C\+\+.  
+ Décrit la gestion des exceptions dans C++.  
   
-## Voir aussi  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Voir aussi  
+ [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)

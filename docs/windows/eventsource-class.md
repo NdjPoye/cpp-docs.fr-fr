@@ -1,32 +1,30 @@
 ---
-title: "EventSource, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::EventSource"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "EventSource (classe)"
+title: EventSource, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::EventSource
+dev_langs: C++
+helpviewer_keywords: EventSource class
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 95bb322944b6a7c68c5b9abde53e67382fe73ced
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# EventSource, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Représente un événement.  Les fonctions membres d'EventSource ajoutent, suppriment, et appellent des gestionnaires d'événements.  
+# <a name="eventsource-class"></a>EventSource (classe)
+Représente un événement. Les fonctions membres EventSource ajouter, supprimer et appellent des gestionnaires d’événements.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<  
@@ -35,42 +33,42 @@ template<
 class EventSource;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `TDelegateInterface`  
- L'interface d'un délégué représentant un gestionnaire d'événements.  
+ L’interface d’un délégué qui représente un gestionnaire d’événements.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[EventSource::EventSource, constructeur](../windows/eventsource-eventsource-constructor.md)|Initialise une nouvelle instance de la classe EventSource.|  
   
-### Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|[EventSource::Add, méthode](../windows/eventsource-add-method.md)|Ajoute le gestionnaire d'événements représenté par l'interface de délégué spécifiée à l'ensemble de gestionnaires de d'événements pour l'objet EventSource actuel.|  
-|[EventSource::GetSize, méthode](../windows/eventsource-getsize-method.md)|Récupère le nombre de gestionnaires d'événements associés à l'objet EventSource actuel.|  
-|[EventSource::InvokeAll, méthode](../windows/eventsource-invokeall-method.md)|Appelle chaque gestionnaire d'événements associé à l'objet EventSource actuel à l'aide des arguments et types d'arguments spécifiés.|  
-|[EventSource::Remove, méthode](../windows/eventsource-remove-method.md)|Supprime le gestionnaire d'événements représenté par le jeton d'enregistrement d'événements spécifié de l'ensemble des gestionnaires de jeu d'événements associés à l'objet EventSource actuel.|  
+|[EventSource::Add, méthode](../windows/eventsource-add-method.md)|Ajoute le Gestionnaire d’événements représenté par l’interface de délégué spécifié à l’ensemble des gestionnaires d’événements pour l’objet source d’événement actuel.|  
+|[EventSource::GetSize, méthode](../windows/eventsource-getsize-method.md)|Récupère le nombre de gestionnaires d’événements associés à l’objet en cours de la source d’événement|  
+|[EventSource::InvokeAll, méthode](../windows/eventsource-invokeall-method.md)|Appelle chaque gestionnaire d’événements associé à l’objet source d’événement actuel avec les types d’arguments spécifiés et les arguments.|  
+|[EventSource::Remove, méthode](../windows/eventsource-remove-method.md)|Supprime le Gestionnaire d’événements représenté par le jeton d’inscription d’événement spécifié à l’ensemble des gestionnaires d’événements associés à l’objet source d’événement actuel.|  
   
-### Données membres protégées  
+### <a name="protected-data-members"></a>Membres de données protégés  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|[EventSource::addRemoveLock\_, données de membre](../windows/eventsource-addremovelock-data-member.md)|Synchronise l'accès au tableau de [targets\_](../windows/eventsource-targets-data-member.md) lors d'ajout, de suppression, ou d'appel de gestionnaires d'événements.|  
-|[EventSource::targets\_, données de membre](../windows/eventsource-targets-data-member.md)|Un tableau d'un ou plusieurs gestionnaires d'événements.|  
-|[EventSource::targetsPointerLock\_, données de membre](../windows/eventsource-targetspointerlock-data-member.md)|Synchronise l'accès aux données membres internes même si les gestionnaires d'événements pour cet EventSource sont ajoutés, déplacés, ou appelés.|  
+|[EventSource::addRemoveLock_, données de membre](../windows/eventsource-addremovelock-data-member.md)|Synchronise l’accès à la [targets_](../windows/eventsource-targets-data-member.md) tableau lors de l’ajout, la suppression ou appeler des gestionnaires d’événements.|  
+|[EventSource::targets_, données de membre](../windows/eventsource-targets-data-member.md)|Tableau d’un ou plusieurs gestionnaires d’événements.|  
+|[EventSource::targetsPointerLock_, données de membre](../windows/eventsource-targetspointerlock-data-member.md)|Synchronise l’accès aux membres de données internes, même si les gestionnaires d’événements pour cette source d’événement sont ajoutés, supprimés ou appelé.|  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `EventSource`  
   
-## Configuration requise  
- **En\-tête:** event.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** event.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)

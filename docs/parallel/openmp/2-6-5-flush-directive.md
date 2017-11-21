@@ -1,69 +1,68 @@
 ---
-title: "2.6.5 flush Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.6.5 Directive flush | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a2ec5f74-9c37-424a-8376-47ab4a5829a2
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a1911efe811545c13e62ab9f917ddfc284af35b0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# 2.6.5 flush Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La directive de **vide** , si explicite ou implicite, spécifie un point de séquence « inter\-threads » auquel l'implémentation est requise pour garantir que tous les threads dans une équipe ont un point de vue cohérent de certains objets \(spécifiés ci\-dessous\) dans la mémoire.  Cela signifie que les estimations précédentes des expressions qui référencent ces objets sont des estimations terminées et suivantes n'ont pas encore démarré.  Par exemple, les compilateurs doivent restaurer les valeurs des objets à partir de les registres à la mémoire, et le matériel peut avoir à purger les mémoires tampons d'écriture vers la mémoire et recharger les valeurs des objets de la mémoire.  
+# <a name="265-flush-directive"></a>2.6.5 Directive flush
+Le **vider** directive, explicite ou implicite, spécifie un point de séquence de « inter-threads » à laquelle l’implémentation est requise pour garantir que tous les threads dans une équipe ont une vue cohérente de certains objets (indiqué ci-dessous) dans mémoire. Cela signifie que des évaluations précédentes des expressions qui font référence à ces objets sont terminées et que les évaluations suivantes n’ont pas encore commencé. Par exemple, compilateurs doivent restaurer les valeurs des objets à partir de registres à la mémoire et matériel devrez peut-être vider les mémoires tampons d’écriture dans la mémoire et de recharger les valeurs des objets de la mémoire.  
   
- La syntaxe de la directive de **vide** est la suivante :  
+ La syntaxe de la **vider** la directive est la suivante :  
   
 ```  
 #pragma omp flush [(variable-list)]  new-line  
 ```  
   
- Si les objets qui nécessitent la synchronisation peuvent tous être lus par des variables, ces variables peuvent être spécifiées dans *la variable\-liste*facultative.  Si un pointeur est présent dans *la variable\-liste*, le pointeur lui\-même n'est vidé, et non l'objet que le pointeur se rapporte.  
+ Si les objets qui nécessitent une synchronisation peuvent désignées par des variables, ces variables peuvent être spécifiées dans le paramètre facultatif *variable-list*. Si un pointeur est présent dans le *liste de la variable*, le pointeur lui-même est vidé, pas l’objet le pointeur fait référence à.  
   
- Une directive de **vide** sans *variable\-liste* synchronise tous les objets partagés à l'exception de les objets inaccessibles avec la durée automatique de stockage.  \(C'est susceptible de contenir plus de charge que **vide** avec *une variable\-liste*.\) une directive de **vide** sans variable\- *liste* est implicite pour les directives suivantes :  
+ A **vider** directive sans un *variable-list* synchronise des objets partagés à l’exception des objets inaccessibles avec une durée de stockage automatique. (Il s’agit probablement d’une charge plus importante qu’un **vider** avec un *variable-list*.) A **vider** directive sans un *liste de la variable* est implicite pour les directives suivantes :  
   
 -   `barrier`  
   
--   À l'entrée et à la sortie de **critique**  
+-   À l’entrée et la sortie à partir de **critiques**  
   
--   À l'entrée et à la sortie d' `ordered`  
+-   À l’entrée et la sortie à partir de`ordered`  
   
--   À l'entrée et à la sortie de **parallèle**  
+-   À l’entrée et la sortie à partir de **parallèle**  
   
--   Dans la sortie de **pour**  
+-   Quitter at **pour**  
   
--   Dans la sortie de **sections**  
+-   Quitter at **sections**  
   
--   à la sortie d' **unique**  
+-   Quitter at **unique**  
   
--   À l'entrée et à la sortie de **parallèle pour**  
+-   À l’entrée et la sortie à partir de **parallèle pour**  
   
--   À l'entrée et à la sortie de **mettez en parallèle les sections**  
+-   À l’entrée et la sortie à partir de **de sections parallèles**  
   
- La directive n'est pas implicite lorsqu'une clause d' `nowait` est présente.  Il faut noter que la directive de **vide** n'est pas implicite pour l'un des éléments suivants :  
+ La directive n’est pas impliquée si un `nowait` clause n’est présente. Il convient de noter que la **vider** directive n’est pas impliquée pour les éléments suivants :  
   
--   à l'entrée à **pour**  
+-   Lors de l’entrée à **pour**  
   
--   à l'entrée à ou à la sortie de **page maître**  
+-   À l’entrée ou sortie de **master**  
   
--   à l'entrée à **sections**  
+-   Lors de l’entrée à **sections**  
   
--   à l'entrée à **unique**  
+-   Lors de l’entrée à **unique**  
   
- Une référence qui accède à la valeur d'un objet avec un type volatil\-qualifié se comporte comme s'il y avait **vide** directive spécification de cet objet au point de séquence précédent.  Une référence qui modifie la valeur d'un objet avec un type volatil\-qualifié se comporte comme s'il y avait **vide** directive spécification de cet objet au point de séquence suivant.  
+ Une référence qui accède à la valeur d’un objet avec un type qualifié volatile se comporte comme s’il existait un **vider** directive spécifiant le point de séquence précédent de cet objet. Une référence qui modifie la valeur d’un objet avec un type qualifié volatile se comporte comme s’il existait un **vider** directive spécifiant le point de séquence suivante de cet objet.  
   
- Étant donné que la directive de **vide** n'a pas d'instructions de langage c dans le cadre de sa syntaxe, il existe des limites à son positionnement à l'intérieur d'un programme.  Consultez l' [annexe C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md) pour la grammaire formels.  L'exemple suivant illustre ces restrictions.  
+ Étant donné que la **vider** directive n’a pas d’une instruction de langage C dans le cadre de sa syntaxe, il existe certaines restrictions sur son positionnement dans un programme. Consultez [annexe C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md) pour la grammaire formelle. L’exemple ci-dessous illustre ces restrictions.  
   
 ```  
 /* ERROR - The flush directive cannot be the immediate  
@@ -81,6 +80,6 @@ if (x!=0) {
 }  
 ```  
   
- Les restrictions à la directive de **vide** sont les suivantes :  
+ Restrictions à le **vider** directive sont les suivantes :  
   
--   une variable spécifiée dans une directive de **vide** ne doit pas avoir un type référence.
+-   Une variable spécifiée dans un **vider** directive ne doit pas avoir un type référence.

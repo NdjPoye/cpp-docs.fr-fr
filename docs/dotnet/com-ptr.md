@@ -1,39 +1,37 @@
 ---
-title: "com::ptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "com::ptr"
+title: com::PTR | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ptr
+dev_langs: C++
+helpviewer_keywords: com::ptr
 ms.assetid: ee302e3c-8fed-4875-a372-2e55003718d3
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 68098a5f71571931e582bc1e7be09a26fad4b8ed
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# com::ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Un wrapper d'un objet COM qui peut être utilisé en tant que membre d'une classe CLR.  Le wrapper automatise également la gestion de la durée de vie de l'objet COM, libérant toutes les références détenues sur l'objet lorsque son destructeur est appelé.  Analogue à [CComPtr Class](../atl/reference/ccomptr-class.md).  
+# <a name="comptr"></a>com::ptr
+Wrapper pour un objet COM qui peut être utilisé en tant que membre d’une classe CLR. Le wrapper automatise également la gestion de la durée de vie de l’objet COM à libérer appartenant à des références sur l’objet lorsque son destructeur est appelé. Analogue à [classe CComPtr](../atl/reference/ccomptr-class.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 #include <msclr\com\ptr.h>  
 ```  
   
-## Notes  
- [com::ptr, classe](../dotnet/com-ptr-class.md) est défini dans \<le msclr\\COM\\fichier de ptr.h\>.  
+## <a name="remarks"></a>Remarques  
+ [com::PTR, classe](../dotnet/com-ptr-class.md) est défini dans le \<msclr\com\ptr.h > fichier.  
   
-## Voir aussi  
- [Bibliothèque de prise en charge C\+\+](../dotnet/cpp-support-library.md)
+## <a name="see-also"></a>Voir aussi  
+ [Bibliothèque de prise en charge C++](../dotnet/cpp-support-library.md)

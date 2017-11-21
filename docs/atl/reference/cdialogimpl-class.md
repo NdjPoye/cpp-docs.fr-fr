@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,36 +19,20 @@ f1_keywords:
 - ATLWIN/ATL::OnFinalMessage
 - ATLWIN/ATL::DialogProc
 - ATLWIN/ATL::StartDialogProc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 76a95ed5c32b2125112b64ef4368e4a82f0acec0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: aab3048667099a698bd4aff928c7a23d7fbb01e2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl (classe)
 Cette classe fournit des méthodes pour la création d’une boîte de dialogue modale ou non.  
@@ -110,7 +93,7 @@ template <class T,
 > [!NOTE]
 >  Votre classe doit définir un **IDD** membre qui spécifie l’ID de ressource boîte de dialogue Modèles. Par exemple, l’Assistant Projet ATL ajoute automatiquement la ligne suivante à votre classe :  
   
- [!code-cpp[# NVC_ATL_Windowing 41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]  
   
  où `MyDlg` est la **nom court** entré dans l’Assistant **noms** page.  
   
@@ -119,7 +102,7 @@ template <class T,
 |Création de contrôles|[Didacticiel ATL](../../atl/active-template-library-atl-tutorial.md)|  
 |À l’aide des boîtes de dialogue dans ATL|[ATL, classes de fenêtre](../../atl/atl-window-classes.md)|  
 |Assistant Projet ATL|[Création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Boîtes de dialogue|[Boîtes de dialogue](http://msdn.microsoft.com/library/windows/desktop/ms632588) et les rubriques suivantes dans le[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]|  
+|Boîtes de dialogue|[Boîtes de dialogue](http://msdn.microsoft.com/library/windows/desktop/ms632588) et les rubriques suivantes dans le SDK Windows|  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h  
@@ -142,7 +125,7 @@ HWND Create(
  `hWndParent`  
  [in] Le handle de fenêtre propriétaire.  
   
- **RECT SE**`rect`  
+ **RECT &**`rect`  
  [in] A [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure spécifiant la taille et la position de la boîte de dialogue.  
   
  `dwInitParam`  

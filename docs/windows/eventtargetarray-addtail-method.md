@@ -1,32 +1,30 @@
 ---
-title: "EventTargetArray::AddTail, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::EventTargetArray::AddTail"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddTail (méthode)"
+title: "Eventtargetarray::AddTail, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::EventTargetArray::AddTail
+dev_langs: C++
+helpviewer_keywords: AddTail method
 ms.assetid: d0fafab9-049c-40e0-a40c-d126c9ee63e6
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 60561b0f9508f81c24ad5fec807b4dc206f9e68a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# EventTargetArray::AddTail, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="eventtargetarrayaddtail-method"></a>EventTargetArray::AddTail, méthode
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void AddTail(  
@@ -34,20 +32,20 @@ void AddTail(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `element`  
- Pointeur vers le gestionnaire d'événements à ajouter.  
+ Pointeur vers le Gestionnaire d’événements à ajouter.  
   
-## Remarques  
- Ajoute le gestionnaire d'événements spécifié à la fin de le tableau interne de gestionnaires d'événements.  
+## <a name="remarks"></a>Notes  
+ Ajoute le Gestionnaire d’événements spécifié à la fin du tableau interne de gestionnaires d’événements.  
   
- AddTail\(\) est conçu pour être utilisé en interne uniquement par la classe EventSource.  
+ AddTail() est destinée à être utilisée en interne par la classe EventSource.  
   
-## Configuration requise  
- **En\-tête:** event.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** event.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
- [EventTargetArray, classe](../windows/eventtargetarray-class.md)   
+## <a name="see-also"></a>Voir aussi  
+ [EventTargetArray (classe)](../windows/eventtargetarray-class.md)   
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

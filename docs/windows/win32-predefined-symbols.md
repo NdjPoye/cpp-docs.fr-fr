@@ -1,52 +1,51 @@
 ---
-title: "Win32 Predefined Symbols | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Win32 [C++], predefined symbols"
-  - "symbols, Win32 predefined"
-  - "Windows API [C++], predefined symbols"
+title: "Symboles Win32 prédéfinis | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Win32 [C++], predefined symbols
+- symbols, Win32 predefined
+- Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 01aa83fc5d0be468252b8593ee343ff28648d218
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Win32 Predefined Symbols
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ces symboles sont définis dans les fichiers d'en\-tête Win32 et ils prennent en charge les fonctions et les actions standard des applications Windows.  Ces symboles sont principalement utilisés avec les éléments d'interface utilisateur courants.  Lorsque vous utilisez des contrôles dans les éditeurs de ressources, ces symboles s'affichent dans la [fenêtre Propriétés](../Topic/Properties%20Window.md) associée à ces contrôles courants.  Par exemple, si votre barre d'outils doit afficher l'icône de l'application, l'icône est associée au symbole IDI\_SMALL dans la fenêtre Propriétés.  
+# <a name="win32-predefined-symbols"></a>Symboles Win32 prédéfinis
+Ces symboles sont définis dans les fichiers d’en-tête Win32 et ils prennent en charge les actions et les fonctions d’application Windows standard. Ces symboles sont utilisés principalement avec les éléments d’interface courants. Lorsque vous travaillez avec des contrôles dans les éditeurs de ressources, ces symboles s’affichent dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) associées aux contrôles communs. Par exemple, si votre barre d’outils doit afficher l’icône de l’application, l’icône sera associée au symbole IDI_SMALL dans la fenêtre Propriétés.  
   
 |||  
 |-|-|  
-|IDABORT|Contrôle : bouton Abandonner d'une boîte de dialogue|  
-|IDC\_STATIC|Contrôle : texte statique dans une boîte de dialogue|  
-|IDCANCEL|Contrôle : bouton Annuler d'une boîte de dialogue|  
-|IDD\_ABOUTBOX|Boîte de dialogue : boîte de dialogue À propos de produit|  
-|IDI\_PROJECTNAME|Icône : icône du projet actuel|  
-|IDI\_SMALL|Icône : petite icône du projet actuel|  
-|IDIGNORE|Contrôle : utilisé avec le bouton Ignorer dans les boîtes de dialogue|  
-|IDM\_ABOUT|Élément de menu : utilisé avec Aide...À propos de...|  
-|IDM\_EXIT|Élément de menu : utilisé avec Fichier...Quitter...|  
-|IDNO|Contrôle : bouton Non d'une boîte de dialogue|  
-|IDOK|Contrôle : bouton OK d'une boîte de dialogue|  
-|IDRETRY|Contrôle : bouton Réessayer d'une boîte de dialogue|  
-|IDS\_APP\_TITLE|Chaîne : nom actuel de l'application|  
-|IDYES|Contrôle : bouton Oui d'une boîte de dialogue|  
+|IDABORT|Contrôle : Bouton de Abort de boîte de dialogue|  
+|IDC_STATIC|Contrôle : Le texte statique dans une boîte de dialogue|  
+|IDCANCEL|Contrôle : Bouton Annuler de boîte de dialogue|  
+|IDD_ABOUTBOX|Boîte de dialogue : À propos de la boîte de dialogue produit|  
+|IDI_PROJECTNAME|Icône : Icône du projet actuel|  
+|IDI_SMALL|Icône : Petite icône du projet actuel|  
+|IDIGNORE|Contrôle : Utilisé avec le bouton Ignorer dans les boîtes de dialogue|  
+|IDM_ABOUT|Élément de menu : Utilisé avec aide... Sur...|  
+|IDM_EXIT|Élément de menu : Utilisé avec fichier... Quitter...|  
+|IDNO|Contrôle : ne boîte de dialogue aucun bouton|  
+|IDOK|Contrôle : Bouton OK de boîte de dialogue|  
+|IDRETRY|Contrôle : Bouton de nouvelle tentative de boîte de dialogue|  
+|IDS_APP_TITLE|De chaîne : Nom de l’application en cours|  
+|IDYES|Contrôle : Bouton de la boîte de dialogue Oui|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Win32  
   
-## Voir aussi  
- [Predefined Symbol IDs](../windows/predefined-symbol-ids.md)   
- [Symbols: Resource Identifiers](../mfc/symbols-resource-identifiers.md)
+## <a name="see-also"></a>Voir aussi  
+ [ID de symbole prédéfinis](../windows/predefined-symbol-ids.md)   
+ [Symboles : identificateurs de ressources](../windows/symbols-resource-identifiers.md)

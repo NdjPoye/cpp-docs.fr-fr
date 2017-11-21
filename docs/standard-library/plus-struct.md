@@ -4,43 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::plus
-- plus
-dev_langs:
-- C++
+f1_keywords: xfunctional/std::plus
+dev_langs: C++
 helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 65dd34958f89d80608cf21b360d76f0c26cda38a
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 7e44bc156e50966394c5d6fda09beddad7524225
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="plus-struct"></a>plus, struct
 Objet de fonction prédéfini qui effectue l’opération d’addition (`operator+` binaire) sur ses arguments.  
@@ -75,7 +56,7 @@ struct plus<void>
  Opérande droit de l’opération d’addition. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `U`.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Résultat de `Left``+``Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par un `operator+` binaire.  
+ Résultat de `Left + Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par un `operator+` binaire.  
   
 ## <a name="example"></a>Exemple  
   
@@ -135,7 +116,6 @@ The element-wise sums are: ( -4 -2 0 2 4 6 )
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

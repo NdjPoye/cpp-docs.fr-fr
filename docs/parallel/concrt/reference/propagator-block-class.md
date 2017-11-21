@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,35 +23,18 @@ f1_keywords:
 - AGENTS/concurrency::propagator_block::send_message
 - AGENTS/concurrency::propagator_block::unlink_source
 - AGENTS/concurrency::propagator_block::unlink_sources
-dev_langs:
-- C++
-helpviewer_keywords:
-- propagator_block class
+dev_langs: C++
+helpviewer_keywords: propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a34d127baf13434435c9ab359cf75b7b93c21f6d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 422d01cf138da0468a430e1a802369e8ecda093a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="propagatorblock-class"></a>propagator_block, classe
 La classe `propagator_block` est une classe de base abstraite pour les blocs de messages qui sont à la fois une source et une cible. Elle combine les fonctionnalités des classes `source_block` et `target_block`.  
@@ -68,13 +50,13 @@ class propagator_block : public source_block<_TargetLinkRegistry,
   
 #### <a name="parameters"></a>Paramètres  
  `_TargetLinkRegistry`  
- Registre de liens à utiliser pour contenir les liens cibles.  
+ Le Registre de lien à utiliser pour contenir les liens cibles.  
   
  `_SourceLinkRegistry`  
- Registre de liens à utiliser pour contenir les liens source.  
+ Le Registre de lien à utiliser pour contenir les liens source.  
   
  `_MessageProcessorType`  
- Le type de processeur pour le traitement du message.  
+ Le type de processeur pour le traitement des messages.  
   
 ## <a name="members"></a>Membres  
   
@@ -95,8 +77,8 @@ class propagator_block : public source_block<_TargetLinkRegistry,
   
 |Nom|Description|  
 |----------|-----------------|  
-|[propager](#propagate)|Passe de façon asynchrone un message à partir d’un bloc source à ce bloc cible.|  
-|[Envoyer](#send)|Démarre de façon synchrone un message de ce bloc. Appelé par un `ISource` bloc. Lorsque cette fonction se termine, le message est déjà propagé dans le bloc.|  
+|[propager](#propagate)|Passe un message de façon asynchrone à partir d’un bloc source à ce bloc cible.|  
+|[send](#send)|Démarre de façon synchrone un message à ce bloc. Appelée par un `ISource` bloc. Lorsque cette fonction se termine, le message est déjà propagé dans le bloc.|  
   
 ### <a name="protected-methods"></a>Méthodes protégées  
   
@@ -106,17 +88,17 @@ class propagator_block : public source_block<_TargetLinkRegistry,
 |[initialize_source_and_target](#initialize_source_and_target)|Initialise l’objet de base. Plus précisément, le `message_processor` objet doit être initialisé.|  
 |[link_source](#link_source)|Lie un bloc source spécifié à ce `propagator_block` objet.|  
 |[process_input_messages](#process_input_messages)|Traiter les messages d’entrée. Cela est utile uniquement pour les blocs propagateurs, qui dérivent de source_block (remplace [source_block::process_input_messages](source-block-class.md#process_input_messages).)|  
-|[propagate_message](#propagate_message)|En cas de substitution dans une classe dérivée, cette méthode passe de façon asynchrone un message à partir d’un `ISource` à ce bloc `propagator_block` objet. Il est appelé par le `propagate` la méthode appelée par un bloc source.|  
-|[register_filter](#register_filter)|Enregistre une méthode de filtre qui sera appelée sur chaque message reçu.|  
-|[remove_network_links](#remove_network_links)|Supprime tous les liens de réseau source et cible de cet `propagator_block` objet.|  
-|[send_message](#send_message)|En cas de substitution dans une classe dérivée, cette méthode passe de façon synchrone un message à partir d’un `ISource` à ce bloc `propagator_block` objet. Il est appelé par le `send` la méthode appelée par un bloc source.|  
+|[propagate_message](#propagate_message)|En cas de substitution dans une classe dérivée, cette méthode passe de façon asynchrone un message à partir d’un `ISource` à ce bloc `propagator_block` objet. Il est appelé par le `propagate` (méthode), lorsqu’elle est appelée par un bloc source.|  
+|[register_filter](#register_filter)|Inscrit une méthode de filtre qui sera appelée sur chaque message reçu.|  
+|[remove_network_links](#remove_network_links)|Supprime tous les liens de réseau source et cible à partir de ce `propagator_block` objet.|  
+|[send_message](#send_message)|En cas de substitution dans une classe dérivée, cette méthode passe de façon synchrone un message à partir d’un `ISource` à ce bloc `propagator_block` objet. Il est appelé par le `send` (méthode), lorsqu’elle est appelée par un bloc source.|  
 |[unlink_source](#unlink_source)|Dissocie un bloc source spécifié à partir de ce `propagator_block` objet.|  
 |[unlink_sources](#unlink_sources)|Dissocie tous les blocs de code source à partir de ce `propagator_block` objet. (Substitue [ITarget::unlink_sources](itarget-class.md#unlink_sources).)|  
   
 ## <a name="remarks"></a>Remarques  
- Pour éviter l’héritage multiple, la `propagator_block` classe hérite de la `source_block` classe et `ITarget` classe abstraite. La plupart des fonctionnalités de la `target_block` classe est répliquée ici.  
+ Pour éviter l’héritage multiple, la `propagator_block` classe hérite de la `source_block` classe et `ITarget` classe abstraite. La plupart des fonctionnalités dans le `target_block` classe est répliquée ici.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [ISource](isource-class.md)  
   
  [ITarget](itarget-class.md)  
@@ -139,7 +121,7 @@ void decline_incoming_messages();
 ```  
   
 ### <a name="remarks"></a>Remarques  
- Cette méthode est appelée par le destructeur pour vous assurer que les nouveaux messages sont refusés pendant que la destruction est en cours.  
+ Cette méthode est appelée par le destructeur pour vous assurer que les nouveaux messages sont refusés pendant que la destruction est en cours d’exécution.  
   
 ##  <a name="initialize_source_and_target"></a>initialize_source_and_target 
 
@@ -172,7 +154,7 @@ virtual void link_source(_Inout_ ISource<_Source_type>* _PSource);
   
 ##  <a name="process_input_messages"></a>process_input_messages 
 
- Traiter les messages d’entrée. Cela est utile uniquement pour les blocs propagateurs, qui dérivent de source_block  
+ Traiter les messages d’entrée. Cela est utile pour les blocs propagateurs, qui dérivent de source_block uniquement  
   
 ```
 virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
@@ -183,7 +165,7 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
   
 ##  <a name="propagate"></a>propager 
 
- Passe de façon asynchrone un message à partir d’un bloc source à ce bloc cible.  
+ Passe un message de façon asynchrone à partir d’un bloc source à ce bloc cible.  
   
 ```
 virtual message_status propagate(
@@ -199,7 +181,7 @@ virtual message_status propagate(
  Pointeur vers le bloc source qui transmet le message.  
   
 ### <a name="return-value"></a>Valeur de retour  
- A [message_status](concurrency-namespace-enums.md) indication de ce que la cible a décidé de faire avec ce message.  
+ A [message_status](concurrency-namespace-enums.md) indication de ce que la cible décidé de faire avec le message.  
   
 ### <a name="remarks"></a>Remarques  
  Le `propagate` méthode est appelée sur un bloc cible par un bloc source lié. Il la file d’attente une tâche asynchrone pour gérer le message, si un n’est pas déjà en attente ou de l’exécution.  
@@ -208,7 +190,7 @@ virtual message_status propagate(
   
 ##  <a name="propagate_message"></a>propagate_message 
 
- En cas de substitution dans une classe dérivée, cette méthode passe de façon asynchrone un message à partir d’un `ISource` à ce bloc `propagator_block` objet. Il est appelé par le `propagate` la méthode appelée par un bloc source.  
+ En cas de substitution dans une classe dérivée, cette méthode passe de façon asynchrone un message à partir d’un `ISource` à ce bloc `propagator_block` objet. Il est appelé par le `propagate` (méthode), lorsqu’elle est appelée par un bloc source.  
   
 ```
 virtual message_status propagate_message(
@@ -224,7 +206,7 @@ virtual message_status propagate_message(
  Pointeur vers le bloc source qui transmet le message.  
   
 ### <a name="return-value"></a>Valeur de retour  
- A [message_status](concurrency-namespace-enums.md) indication de ce que la cible a décidé de faire avec ce message.  
+ A [message_status](concurrency-namespace-enums.md) indication de ce que la cible décidé de faire avec le message.  
   
 ##  <a name="ctor"></a>propagator_block 
 
@@ -244,7 +226,7 @@ virtual ~propagator_block();
   
 ##  <a name="register_filter"></a>register_filter 
 
- Enregistre une méthode de filtre qui sera appelée sur chaque message reçu.  
+ Inscrit une méthode de filtre qui sera appelée sur chaque message reçu.  
   
 ```
 void register_filter(filter_method const& _Filter);
@@ -256,7 +238,7 @@ void register_filter(filter_method const& _Filter);
   
 ##  <a name="remove_network_links"></a>remove_network_links 
 
- Supprime tous les liens de réseau source et cible de cet `propagator_block` objet.  
+ Supprime tous les liens de réseau source et cible à partir de ce `propagator_block` objet.  
   
 ```
 void remove_network_links();
@@ -264,7 +246,7 @@ void remove_network_links();
   
 ##  <a name="send"></a>Envoyer 
 
- Démarre de façon synchrone un message de ce bloc. Appelé par un `ISource` bloc. Lorsque cette fonction se termine, le message est déjà propagé dans le bloc.  
+ Démarre de façon synchrone un message à ce bloc. Appelée par un `ISource` bloc. Lorsque cette fonction se termine, le message est déjà propagé dans le bloc.  
   
 ```
 virtual message_status send(
@@ -280,14 +262,14 @@ virtual message_status send(
  Pointeur vers le bloc source qui transmet le message.  
   
 ### <a name="return-value"></a>Valeur de retour  
- A [message_status](concurrency-namespace-enums.md) indication de ce que la cible a décidé de faire avec ce message.  
+ A [message_status](concurrency-namespace-enums.md) indication de ce que la cible décidé de faire avec le message.  
   
 ### <a name="remarks"></a>Remarques  
  Cette méthode lève un [invalid_argument](../../../standard-library/invalid-argument-class.md) exception si le `_PMessage` ou `_PSource` paramètre est `NULL`.  
   
 ##  <a name="send_message"></a>send_message 
 
- En cas de substitution dans une classe dérivée, cette méthode passe de façon synchrone un message à partir d’un `ISource` à ce bloc `propagator_block` objet. Il est appelé par le `send` la méthode appelée par un bloc source.  
+ En cas de substitution dans une classe dérivée, cette méthode passe de façon synchrone un message à partir d’un `ISource` à ce bloc `propagator_block` objet. Il est appelé par le `send` (méthode), lorsqu’elle est appelée par un bloc source.  
   
 ```
 virtual message_status send_message(
@@ -296,7 +278,7 @@ virtual message_status send_message(
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- A [message_status](concurrency-namespace-enums.md) indication de ce que la cible a décidé de faire avec ce message.  
+ A [message_status](concurrency-namespace-enums.md) indication de ce que la cible décidé de faire avec le message.  
   
 ### <a name="remarks"></a>Remarques  
  Par défaut, ce bloc retourne `declined` sauf substitution par une classe dérivée.  
@@ -311,7 +293,7 @@ virtual void unlink_source(_Inout_ ISource<_Source_type>* _PSource);
   
 ### <a name="parameters"></a>Paramètres  
  `_PSource`  
- Un pointeur vers le `ISource` bloc qui doit être dissocié.  
+ Un pointeur vers le `ISource` bloc qui doit être supprimée.  
   
 ##  <a name="unlink_sources"></a>unlink_sources 
 
@@ -323,6 +305,5 @@ virtual void unlink_sources();
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   
- [source_block (classe)](source-block-class.md)   
+ [source_block, classe](source-block-class.md)   
  [ITarget, classe](itarget-class.md)
-

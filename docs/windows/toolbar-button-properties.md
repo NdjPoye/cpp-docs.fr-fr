@@ -1,48 +1,49 @@
 ---
-title: "Toolbar Button Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size, toolbar buttons"
-  - "toolbar buttons (in Toolbar editor), setting properties"
-  - "Toolbar editor, toolbar button properties"
-  - "status bars, active toolbar button text"
-  - "command IDs, toolbar buttons"
-  - "width, toolbar buttons"
+title: "Propriétés de bouton de barre d’outils | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- size, toolbar buttons
+- toolbar buttons (in Toolbar editor), setting properties
+- Toolbar editor, toolbar button properties
+- status bars, active toolbar button text
+- command IDs, toolbar buttons
+- width, toolbar buttons
 ms.assetid: b2705814-7c5d-4f24-8f77-07559b0cdda2
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 98c78922ee3987bf459f01a62253e9835ad3e377
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Toolbar Button Properties
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les propriétés d'un bouton de barre d'outils sont :  
+# <a name="toolbar-button-properties"></a>Propriétés d'un bouton de barre d'outils
+Les propriétés d’un bouton de barre d’outils sont :  
   
 |Propriété|Description|  
-|---------------|-----------------|  
-|**ID**|Définit l'ID pour le bouton.  La liste déroulante fournit des noms d'**ID** courants.|  
-|**Largeur**|Définit la largeur du bouton.  Valeur recommandée : 16 pixels.|  
-|**Hauteur**|Définit la hauteur du bouton.  Notez que la hauteur d'un bouton change la hauteur de tous les boutons de la barre d'outils.  Valeur recommandée : 15 pixels.|  
-|**Prompt**|Définit le message affiché dans la barre d'état.  L'ajout de \\n et d'un nom ajoute une info\-bulle à ce bouton de barre d'outils.  Pour plus d'informations, consultez [Création d'une info\-bulle pour un bouton de barre d'outils](../mfc/creating-a-tool-tip-for-a-toolbar-button.md).|  
+|--------------|-----------------|  
+|**ID**|Définit l’ID du bouton. La liste déroulante fournit commun **ID** noms.|  
+|**Largeur**|Définit la largeur du bouton. valeur recommandée : 16 pixels.|  
+|**Hauteur**|Définit la hauteur du bouton. Notez que la hauteur d’un bouton change la hauteur de tous les boutons de la barre d’outils. valeur recommandée : 15 pixels.|  
+|**Invite**|Définit le message affiché dans la barre d’état. Ajout de \n et un nom d’ajoute une info-bulle à ce bouton de barre d’outils. Pour plus d’informations, consultez [création d’une info-bulle](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|  
   
- **Width** et **Height** s'appliquent à tous les boutons.  Une bitmap utilisée pour créer une barre d'outils a une largeur maximale de 2048.  Donc si vous affectez à la largeur du bouton la valeur 512, vous pouvez avoir uniquement quatre boutons et si vous affectez à la largeur la valeur 513, vous pouvez avoir uniquement trois boutons.  
+ **Largeur** et **hauteur** s’appliquent à tous les boutons. Une image bitmap qui est utilisée pour créer une barre d’outils a une largeur maximale de 2048. Par conséquent, si vous définissez la largeur du bouton à 512, vous ne pouvez avoir quatre boutons et si vous définissez la largeur à 513, vous ne pouvez avoir trois boutons.  
   
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l'ajout de fichiers de ressources aux projets managés, l'accès aux ressources, l'affichage de ressources statiques et l'assignation de chaînes de ressources aux propriétés, et ce manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/fr-fr/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](https://msdn.microsoft.com/library/f45fce5x.aspx) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](https://msdn.microsoft.com/library/xbx3z216.aspx). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
  MFC ou ATL  
   
-## Voir aussi  
- [Changing the Properties of a Toolbar Button](../mfc/changing-the-properties-of-a-toolbar-button.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>Voir aussi  
+ [Modification des propriétés d’un bouton de barre d’outils](../windows/changing-the-properties-of-a-toolbar-button.md)   
+ [Éditeur de barres d’outils](../windows/toolbar-editor.md)
+

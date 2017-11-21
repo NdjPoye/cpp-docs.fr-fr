@@ -1,60 +1,61 @@
 ---
-title: "Creating a Tool Tip for a Toolbar Button | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tool tips [C++], adding to toolbar buttons"
-  - "\n in tool tip"
-  - "toolbar buttons [C++], tool tips"
-  - "buttons [C++], tool tips"
-  - "Toolbar editor, creating tool tips"
+title: "Création d’une info-bulle pour un bouton de barre d’outils | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- tool tips [C++], adding to toolbar buttons
+- "\nin tool tip"
+- toolbar buttons [C++], tool tips
+- buttons [C++], tool tips
+- Toolbar editor, creating tool tips
 ms.assetid: 0af65342-fd78-4e78-8d0d-dc68f7fc462e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e9399341f19a614783c0f8f873051ed048d89b35
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Creating a Tool Tip for a Toolbar Button
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Pour créer une info\-bulle  
+# <a name="creating-a-tool-tip-for-a-toolbar-button"></a>Création d'une info-bulle pour un bouton de barre d'outils
+### <a name="to-create-a-tool-tip"></a>Pour créer une info-bulle  
   
-1.  Sélectionnez le bouton de barre d'outils.  
+1.  Sélectionnez le bouton de barre d’outils.  
   
-2.  Dans la [fenêtre Propriétés](../Topic/Properties%20Window.md), dans le champ **Prompt**, ajoutez une description du bouton pour la barre d'état ; après le message, ajoutez \\n et le nom de l'info\-bulle.  
+2.  Dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), dans le **invite** champ de propriété, ajoutez une description du bouton de la barre d’état ; après le message, ajoutez \n et l’info-bulle nom.  
   
- Un exemple courant d'info\-bulle est le bouton Imprimer dans WordPad :  
+ Un exemple courant d’une info-bulle est le bouton Imprimer dans WordPad :  
   
- 1.  Ouvrez WordPad.  
+ 1. Ouvrez WordPad.  
   
- 2.  Placez le pointeur de la souris sur le bouton **Imprimer** de la barre d'outils.  
+ 2. Placez le pointeur de la souris sur le **impression** bouton de barre d’outils.  
   
- 3.  Remarquez que le mot « Imprimer » s'affiche sous le pointeur de la souris.  
+ 3. Notez que le mot « Imprimer » s’affiche sous le pointeur de la souris.  
   
- 4.  Dans la barre d'état \(en bas de la fenêtre Wordpad\) – le texte « Imprime le document actif » s'affiche.  
+ 4. Examinez la barre d’état (en bas de la fenêtre WordPad), notez le texte « Imprime le document actif » s’affiche.  
   
- La valeur « Imprimer » à l'étape 3 est le « nom de l'info\-bulle » et « Imprime le document actif » à l'étape 4 est la « description du bouton pour la barre d'état ».  
+ L’impression à l’étape 3 est « info-bulle nom » et le « imprime le document actif » à partir de l’étape 4 est la « description du bouton de la barre d’état ».  
   
- Si vous souhaitez obtenir la même chose en utilisant l'Éditeur de **barres d'outils**, définissez la propriété **Prompt** à **Imprime le document actif\\nImprimer**.  
+ Si vous souhaitez que cet effet à l’aide de la **barre d’outils** éditeur, vous définissez la **invite** propriété **imprime le document actif\nImprimer**.  
   
 > [!NOTE]
->  Vous pouvez modifier le texte de l'invite en utilisant la [fenêtre Propriétés](../Topic/Properties%20Window.md).  
+>  Vous pouvez modifier le texte d’invite à l’aide de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).  
   
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l'ajout de fichiers de ressources aux projets managés, l'accès aux ressources, l'affichage de ressources statiques et l'assignation de chaînes de ressources aux propriétés, et ce manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/fr-fr/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](https://msdn.microsoft.com/library/f45fce5x.aspx) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](https://msdn.microsoft.com/library/xbx3z216.aspx). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
- Configuration requise  
+ Spécifications  
   
  MFC ou ATL  
   
-## Voir aussi  
- [Creating, Moving, and Editing Toolbar Buttons](../mfc/creating-moving-and-editing-toolbar-buttons.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>Voir aussi  
+ [Création, déplacement et modification de boutons de barre d’outils](../windows/creating-moving-and-editing-toolbar-buttons.md)   
+ [Éditeur de barres d’outils](../windows/toolbar-editor.md)
+

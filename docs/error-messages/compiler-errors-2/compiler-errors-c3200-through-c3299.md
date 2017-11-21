@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 04/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -40,19 +39,17 @@ helpviewer_keywords:
 - C3267
 - C3281
 - C3294
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 10c64a5969e8a735ad4e7797ecf41ab0674c82cc
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 87910db946d51d740c93134b7085e5af7d3ccadc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>C3200 d’erreurs du compilateur via C3299
 Les articles de cette partie de la documentation contiennent des informations sur une sous-section des erreurs du compilateur Visual C++. Vous pouvez accéder aux informations ici, ou dans la fenêtre **Sortie** de Visual Studio, vous pouvez sélectionner un numéro d'erreur, puis appuyer sur F1.  
@@ -138,9 +135,9 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C3271](compiler-error-c3271.md)|'*champ*' : valeur non valide '*nombre*' pour l’attribut FieldOffset|  
 |[Erreur du compilateur C3272](compiler-error-c3272.md)|'*symbole*' : symbole requiert FieldOffset, car il s’agit d’un membre de struct/classe *type_name* défini avec StructLayout (LayoutKind::Explicit)|  
 |[Erreur du compilateur C3273](compiler-error-c3273.md)|'*mot clé*' : non autorisé sur un bloc try C++|  
-|[Erreur du compilateur C3274](compiler-error-c3274.md)|finally /\_\_finally sans correspondance avec un bloc try|  
+|[Erreur du compilateur C3274](compiler-error-c3274.md)|finally / &#95; &#95; finally sans correspondance avec un bloc try|  
 |[Erreur du compilateur C3275](compiler-error-c3275.md)|'*identificateur*' : Impossible d’utiliser ce symbole sans qualificateur|  
-|[Erreur du compilateur C3276](compiler-error-c3276.md)|'*mot clé*' : saut hors enfin /\_\_enfin bloc a un comportement indéfini lors de la gestion de l’arrêt|  
+|[Erreur du compilateur C3276](compiler-error-c3276.md)|'*mot clé*' : saut hors enfin / &#95; &#95; enfin bloc a un comportement indéfini lors de la gestion de l’arrêt|  
 |[Erreur du compilateur C3277](compiler-error-c3277.md)|Impossible de définir un enum non managé '*énumération*'managé à l’intérieur'*type*'|  
 |[Erreur du compilateur C3278](compiler-error-c3278.md)|appel de l’interface ou la méthode pure direct '*fonction*' échoue lors de l’exécution|  
 |[Erreur du compilateur C3279](compiler-error-c3279.md)|les spécialisations partielles et explicites, ainsi que les instanciations explicites des modèles de classe déclarés dans l'espace de noms cli sont interdites|  
@@ -164,4 +161,3 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C3297](compiler-error-c3297.md)|' *contrainte2*' : Impossible d’utiliser ' *contrainte1*' en tant que contrainte, car ' *contrainte1*' a la contrainte de valeur|  
 |[Erreur du compilateur C3298](compiler-error-c3298.md)|' *contrainte1*' : Impossible d’utiliser ' *contrainte2*' en tant que contrainte, car ' *contrainte2*' a la contrainte ref et ' *contrainte1*' a la contrainte de valeur|  
 |[Erreur du compilateur C3299](compiler-error-c3299.md)|' *fonction*' : ne peut pas spécifier les contraintes, elles sont héritées de la méthode de base|  
-

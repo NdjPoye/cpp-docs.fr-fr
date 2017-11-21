@@ -1,74 +1,72 @@
 ---
-title: "CArrayRowset, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CArrayRowset<TAccessor>"
-  - "ATL.CArrayRowset"
-  - "CArrayRowset"
-  - "ATL::CArrayRowset"
-  - "ATL::CArrayRowset<TAccessor>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CArrayRowset (classe)"
+title: CArrayRowset (classe) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CArrayRowset<TAccessor>
+- ATL.CArrayRowset
+- CArrayRowset
+- ATL::CArrayRowset
+- ATL::CArrayRowset<TAccessor>
+dev_langs: C++
+helpviewer_keywords: CArrayRowset class
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 82c209938c7d124e787310cb859aeb6191f32c8d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# CArrayRowset, classe
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Accède aux éléments d'un ensemble de lignes à l'aide de la syntaxe de table.  
+# <a name="carrayrowset-class"></a>CArrayRowset, classe
+Éléments d’accès d’un ensemble de lignes à l’aide de la syntaxe de tableau.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template < class TAccessor >  
 class CArrayRowset :   
-   public CVirtualBuffer <TAccessor>,   
+   public CVirtualBuffer <TAccessor>,   
    protected CBulkRowset <TAccessor>  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `TAccessor`  
- Type de classe d'accesseur que vous souhaitez que l'ensemble de lignes utilise.  
+ Le type de classe d’accesseur que vous souhaitez que l’ensemble de lignes à utiliser.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Méthodes  
+### <a name="methods"></a>Méthodes  
   
 |||  
 |-|-|  
 |[CArrayRowset](../../data/oledb/carrayrowset-carrayrowset.md)|Constructeur.|  
-|[Instantané](../../data/oledb/carrayrowset-snapshot.md)|Lit l'ensemble de lignes entier en mémoire.|  
+|[Instantané](../../data/oledb/carrayrowset-snapshot.md)|Lit l’ensemble de lignes en mémoire.|  
   
-### Opérateurs  
-  
-|||  
-|-|-|  
-|[Operator&#91;&#93;](../../data/oledb/carrayrowset-operator.md)|Accède à un élément de l'ensemble de lignes.|  
-  
-### Membres de données  
+### <a name="operators"></a>Opérateurs  
   
 |||  
 |-|-|  
-|[CArrayRowset::m\_nRowsRead](../../data/oledb/carrayrowset-m-nrowsread.md)|Le nombre de lignes affiche déjà.|  
+|[Opérateur &#91; &#93;](../../data/oledb/carrayrowset-operator.md)|Accède à un élément de l’ensemble de lignes.|  
   
-## Configuration requise  
- **En\-tête :** : atldbcli.h  
+### <a name="data-members"></a>Membres de données  
   
-## Voir aussi  
- [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+|||  
+|-|-|  
+|[CArrayRowset::m_nRowsRead](../../data/oledb/carrayrowset-m-nrowsread.md)|Le nombre de lignes déjà lue.|  
+  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldbcli.h  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Référence des modèles de consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CRowset, classe](../../data/oledb/crowset-class.md)

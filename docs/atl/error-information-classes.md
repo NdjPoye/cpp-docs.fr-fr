@@ -1,34 +1,34 @@
 ---
-title: "Error Information Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.errors"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestion des erreurs, classes"
-  - "gestion des erreurs, error information classes"
-  - "error information, classes"
+title: "Classe de plus d’informations d’erreur (ATL) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.errors
+dev_langs: C++
+helpviewer_keywords:
+- error handling, error information classes
+- error handling, classes
+- error information, classes
 ms.assetid: ba40c8fb-81fd-4f61-8f47-fa2cb540e274
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 71e8112adf7164dcfdf0baffb6b0531b1ee84e9b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Error Information Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="error-information-classes"></a>Classes d’informations d’erreur
+La classe suivante indique les modalités de gestion des informations d’erreur :  
+  
+-   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) détermine si l’objet prend en charge la [IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) interface. **IErrorInfo** permet la propagation au client des informations d’erreur.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Vue d’ensemble de la classe](../atl/atl-class-overview.md)
 
-La classe suivante indique comment les informations sur l'erreur sont traitées :  
-  
--   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) détermine si l'objet prend en charge l'interface d' [IErrorInfo](http://msdn.microsoft.com/fr-fr/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) .  **IErrorInfo** fournit des informations d'erreur à propager vers le client.  
-  
-## Voir aussi  
- [Class Overview](../atl/atl-class-overview.md)

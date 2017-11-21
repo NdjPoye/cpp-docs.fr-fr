@@ -1,44 +1,42 @@
 ---
-title: "CriticalSection::IsValid, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::CriticalSection::IsValid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsValid (méthode)"
+title: "CriticalSection::IsValid, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::CriticalSection::IsValid
+dev_langs: C++
+helpviewer_keywords: IsValid method
 ms.assetid: 0080106c-925e-4b3b-89d4-f47668e8bce6
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fae598dbe765a6162f183cf5c38cc389f497f2d3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# CriticalSection::IsValid, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indique si la section critique courante est valide  
+# <a name="criticalsectionisvalid-method"></a>CriticalSection::IsValid, méthode
+Indique si la section critique en cours est valide.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 bool IsValid() const;  
 ```  
   
-## Valeur de retour  
- Par défaut, `true` est toujours retourné.  
+## <a name="return-value"></a>Valeur de retour  
+ Par défaut, retourne toujours `true`.  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers  
+ **Namespace :** Microsoft::WRL::Wrappers  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CriticalSection, classe](../windows/criticalsection-class.md)

@@ -50,18 +50,17 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanf
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 2ca8b085c7dcc226a216032060e628c7c7ce0a4a
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: c9566468c2b9ba6447ce3a8ef2c09e4981edafef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Fonctions d’espace de noms Concurrency::fast_math
 ||||  
@@ -157,7 +156,7 @@ inline float atan(float _X) restrict(amp);
  Valeur à virgule flottante  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur d’arc tangent de l’argument  
+ Retourne la valeur de l’arc tangente de l’argument  
   
 ##  <a name="atan2"></a>  atan2  
  Calcule l’arc tangente de _Y/_X  
@@ -176,7 +175,7 @@ inline float atan2(
  Valeur à virgule flottante  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur d’arc tangent de _Y/_X  
+ Retourne la valeur de l’arc tangente de _Y/_X  
   
 ##  <a name="atan2f"></a>atan2f  
  Calcule l’arc tangente de _Y/_X  
@@ -195,7 +194,7 @@ inline float atan2f(
  Valeur à virgule flottante  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur d’arc tangent de _Y/_X  
+ Retourne la valeur de l’arc tangente de _Y/_X  
   
 ##  <a name="atanf"></a>atanf  
  Calcule l’arc tangente de l’argument  
@@ -209,9 +208,9 @@ inline float atanf(float _X) restrict(amp);
  Valeur à virgule flottante  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur d’arc tangent de l’argument  
+ Retourne la valeur de l’arc tangente de l’argument  
   
-##  <a name="ceil"></a>ceil  
+##  <a name="ceil"></a>ceil)  
  Calcule le plafond de l’argument  
   
 ```  
@@ -251,7 +250,7 @@ inline float cosf(float _X) restrict(amp);
  Valeur à virgule flottante  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur de cosinus de l’argument  
+ Retourne la valeur du cosinus de l’argument  
   
 ##  <a name="coshf"></a>coshf  
  Calcule la valeur de cosinus hyperbolique de l’argument  
@@ -279,7 +278,7 @@ inline float cos(float _X) restrict(amp);
  Valeur à virgule flottante  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur de cosinus de l’argument  
+ Retourne la valeur du cosinus de l’argument  
   
 ##  <a name="cosh"></a>  cosh  
  Calcule la valeur de cosinus hyperbolique de l’argument  
@@ -296,7 +295,7 @@ inline float cosh(float _X) restrict(amp);
  Retourne la valeur de cosinus hyperbolique de l’argument  
   
 ##  <a name="exp"></a>  exp  
- Calcule la valeur exponentielle de l’argument de base e  
+ Calcule l’exponentielle de l’argument de base e  
   
 ```  
 inline float exp(float _X) restrict(amp);
@@ -310,7 +309,7 @@ inline float exp(float _X) restrict(amp);
  Retourne la valeur exponentielle de l’argument de base e  
   
 ##  <a name="exp2"></a>exp2  
- Calcule la valeur exponentielle de l’argument base-2  
+ Calcule la valeur exponentielle de l’argument de base 2  
   
 ```  
 inline float exp2(float _X) restrict(amp);
@@ -321,10 +320,10 @@ inline float exp2(float _X) restrict(amp);
  Valeur à virgule flottante  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur exponentielle de l’argument base-2  
+ Retourne la valeur exponentielle de l’argument de base 2  
   
 ##  <a name="exp2f"></a>exp2f  
- Calcule la valeur exponentielle de l’argument base-2  
+ Calcule la valeur exponentielle de l’argument de base 2  
   
 ```  
 inline float exp2f(float _X) restrict(amp);
@@ -335,10 +334,10 @@ inline float exp2f(float _X) restrict(amp);
  Valeur à virgule flottante  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur exponentielle de l’argument base-2  
+ Retourne la valeur exponentielle de l’argument de base 2  
   
 ##  <a name="expf"></a>expf  
- Calcule la valeur exponentielle de l’argument de base e  
+ Calcule l’exponentielle de l’argument de base e  
   
 ```  
 inline float expf(float _X) restrict(amp);
@@ -379,8 +378,8 @@ inline float fabsf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur absolue de l’argument  
   
-##  <a name="floor"></a>étage  
- Calcule le plancher de l’argument  
+##  <a name="floor"></a>Floor  
+ Calcule la valeur plancher de l’argument  
   
 ```  
 inline float floor(float _X) restrict(amp);
@@ -394,7 +393,7 @@ inline float floor(float _X) restrict(amp);
  Retourne le plancher de l’argument  
   
 ##  <a name="floorf"></a>floorf  
- Calcule le plancher de l’argument  
+ Calcule la valeur plancher de l’argument  
   
 ```  
 inline float floorf(float _X) restrict(amp);
@@ -535,7 +534,7 @@ inline float frexp(
  Valeur à virgule flottante  
   
  `_Exp`  
- Renvoie l’exposant entier de _X en valeur à virgule flottante  
+ Retourne l’exposant entier de _X en valeur à virgule flottante  
   
 ### <a name="return-value"></a>Valeur de retour  
  Renvoie la mantisse _X  
@@ -554,7 +553,7 @@ inline float frexpf(
  Valeur à virgule flottante  
   
  `_Exp`  
- Renvoie l’exposant entier de _X en valeur à virgule flottante  
+ Retourne l’exposant entier de _X en valeur à virgule flottante  
   
 ### <a name="return-value"></a>Valeur de retour  
  Renvoie la mantisse _X  
@@ -571,10 +570,10 @@ inline int isfinite(float _X) restrict(amp);
  Valeur à virgule flottante  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne une valeur différente de zéro si et seulement si l’argument a la valeur finie  
+ Retourne une valeur différente de zéro si et seulement si l’argument a une valeur finie  
   
 ##  <a name="isinf"></a>isinf  
- Détermine si l’argument est une infinité  
+ Détermine si l’argument est un infini.  
   
 ```  
 inline int isinf(float _X) restrict(amp);
@@ -602,7 +601,7 @@ inline int isnan(float _X) restrict(amp);
  Retourne une valeur différente de zéro si et seulement si l’argument a une valeur NaN  
   
 ##  <a name="ldexp"></a>ldexp  
- Calcule le nombre réel de la mantisse et exposant  
+ Calcule un nombre réel à partir de la mantisse et exposant  
   
 ```  
 inline float ldexp(
@@ -621,7 +620,7 @@ inline float ldexp(
  Retourne _X * 2 ^ _Exp  
   
 ##  <a name="ldexpf"></a>ldexpf  
- Calcule le nombre réel de la mantisse et exposant  
+ Calcule un nombre réel à partir de la mantisse et exposant  
   
 ```  
 inline float ldexpf(
@@ -654,7 +653,7 @@ inline float log(float _X) restrict(amp);
  Retourne le logarithme de base e de l’argument  
   
 ##  <a name="log10"></a>  log10  
- Calcule le logarithme en base&10; de l’argument  
+ Calcule le logarithme de base 10 de l’argument  
   
 ```  
 inline float log10(float _X) restrict(amp);
@@ -665,10 +664,10 @@ inline float log10(float _X) restrict(amp);
  Valeur à virgule flottante  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne le logarithme en base&10; de l’argument  
+ Retourne le logarithme de base 10 de l’argument  
   
 ##  <a name="log10f"></a>log10f  
- Calcule le logarithme en base&10; de l’argument  
+ Calcule le logarithme de base 10 de l’argument  
   
 ```  
 inline float log10f(float _X) restrict(amp);
@@ -679,10 +678,10 @@ inline float log10f(float _X) restrict(amp);
  Valeur à virgule flottante  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne le logarithme en base&10; de l’argument  
+ Retourne le logarithme de base 10 de l’argument  
   
 ##  <a name="log2"></a>LOG2  
- Calcule le logarithme base&2; de l’argument  
+ Calcule le logarithme base 2 de l’argument  
   
 ```  
 inline float log2(float _X) restrict(amp);
@@ -693,10 +692,10 @@ inline float log2(float _X) restrict(amp);
  Valeur à virgule flottante  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne le logarithme base&2; de l’argument  
+ Retourne le logarithme base 2 de l’argument  
   
 ##  <a name="log2f"></a>log2f  
- Calcule le logarithme base&2; de l’argument  
+ Calcule le logarithme base 2 de l’argument  
   
 ```  
 inline float log2f(float _X) restrict(amp);
@@ -707,7 +706,7 @@ inline float log2f(float _X) restrict(amp);
  Valeur à virgule flottante  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne le logarithme en base&10; de l’argument  
+ Retourne le logarithme de base 10 de l’argument  
   
 ##  <a name="logf"></a>logf  
  Calcule le logarithme de base e de l’argument  
@@ -724,7 +723,7 @@ inline float logf(float _X) restrict(amp);
  Retourne le logarithme de base e de l’argument  
   
 ##  <a name="modf"></a>modf  
- Fractionne _X en une fraction et un nombre entier.  
+ Fractionne _X en fractions de seconde et un nombre entier.  
   
 ```  
 inline float modf(
@@ -739,10 +738,10 @@ inline float modf(
  `_Ip`  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la fraction signée de _X  
+ Retourne la partie fractionnaire signée de _X  
   
 ##  <a name="modff"></a>modff  
- Fractionne _X en une fraction et un nombre entier.  
+ Fractionne _X en fractions de seconde et un nombre entier.  
   
 ```  
 inline float modff(
@@ -757,7 +756,7 @@ inline float modff(
  `_Ip`  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la fraction signée de _X  
+ Retourne la partie fractionnaire signée de _X  
   
 ##  <a name="pow"></a>  pow  
  Calcule _X élevé à la puissance de _Y  
@@ -864,7 +863,7 @@ inline int signbit(float _X) restrict(amp);
  Valeur à virgule flottante  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne une valeur différente de zéro si et seulement si le signe _X est négatif  
+ Retourne une valeur différente de zéro si et seulement si le signe de _X est négatif  
   
 ##  <a name="signbitf"></a>signbitf  
  Détermine si le signe de _X est négatif  
@@ -878,7 +877,7 @@ inline int signbitf(float _X) restrict(amp);
  Valeur à virgule flottante  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne une valeur différente de zéro si et seulement si le signe _X est négatif  
+ Retourne une valeur différente de zéro si et seulement si le signe de _X est négatif  
   
 ##  <a name="sin"></a>  sin  
  Calcule la valeur du sinus de l’argument  
@@ -909,7 +908,7 @@ inline float sinf(float _X) restrict(amp);
  Retourne la valeur du sinus de l’argument  
   
 ##  <a name="sincos"></a>sincos  
- Calcule le sinus et le cosinus valeur _X  
+ Calcule le sinus et le cosinus de _X  
   
 ```  
 inline void sincos(
@@ -929,7 +928,7 @@ inline void sincos(
  Retourne la valeur de cosinus de _X  
   
 ##  <a name="sincosf"></a>sincosf  
- Calcule le sinus et le cosinus valeur _X  
+ Calcule le sinus et le cosinus de _X  
   
 ```  
 inline void sincosf(
@@ -1061,7 +1060,7 @@ inline float tanhf(float _X) restrict(amp);
  Retourne la valeur de la tangente hyperbolique de l’argument  
   
 ##  <a name="trunc"></a>trunc  
- Tronque l’argument pour le composant entier  
+ Tronque l’argument de la partie entière  
   
 ```  
 inline float trunc(float _X) restrict(amp);
@@ -1075,7 +1074,7 @@ inline float trunc(float _X) restrict(amp);
  Retourne la partie entière de l’argument  
   
 ##  <a name="truncf"></a>truncf  
- Tronque l’argument pour le composant entier  
+ Tronque l’argument de la partie entière  
   
 ```  
 inline float truncf(float _X) restrict(amp);
@@ -1093,4 +1092,3 @@ inline float truncf(float _X) restrict(amp);
   
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency::fast_math, espace de noms](concurrency-fast-math-namespace.md)
-

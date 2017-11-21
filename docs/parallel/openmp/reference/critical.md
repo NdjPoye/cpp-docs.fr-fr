@@ -1,47 +1,28 @@
 ---
-title: critiques | Documents Microsoft
+title: critique | Documents Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- Critical
-dev_langs:
-- C++
-helpviewer_keywords:
-- critical OpenMP directive
+f1_keywords: Critical
+dev_langs: C++
+helpviewer_keywords: critical OpenMP directive
 ms.assetid: 2ab87d6d-5ca4-43ae-9f0a-1f517a6a2bab
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5693a16faebbc0f8c0a29cf28910110fbff66318
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: c3527d7716edc30a7b8265881f0a3bd674c68957
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="critical"></a>critical
-Spécifie que code est uniquement exécutée sur un thread à la fois.  
+Spécifie que code est uniquement être exécuté sur un thread à la fois.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,9 +40,9 @@ Spécifie que code est uniquement exécutée sur un thread à la fois.
  Un nom pour identifier le code critique. Notez que ce nom doit être entre parenthèses.  
   
 ## <a name="remarks"></a>Remarques  
- Le **critique** directive prend en charge aucune clause OpenMP.  
+ Le **critique** directive prend en charge aucune clauses OpenMP.  
   
- Pour plus d’informations, consultez [critique&2;.6.2 construction](../../../parallel/openmp/2-6-2-critical-construct.md).  
+ Pour plus d’informations, consultez [2.6.2 critiques construire](../../../parallel/openmp/2-6-2-critical-construct.md).  
   
 ## <a name="example"></a>Exemple  
   

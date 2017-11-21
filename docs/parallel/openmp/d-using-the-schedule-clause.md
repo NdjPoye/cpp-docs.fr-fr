@@ -1,29 +1,28 @@
 ---
-title: "D. Using the schedule Clause | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "D. À l’aide de la Clause de planification | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: bf3d8f51-ea05-4803-bf55-657c12e91efe
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4a0566157f2dd4d9a278113f2246bd36671e3217
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# D. Using the schedule Clause
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Une région parallèle contient au moins un cloisonnement, à la fin, et peut avoir des barrières supplémentaires dans celui\-ci.  À chaque le cloisonnement, les autres membres de l'équipe doivent attendre le dernier thread pour archiver.  Pour réduire ce délai d'attente, le travail partagé doit être distribué afin que tous les threads arrivent au cloisonnement à la même heure.  Si de que le travail partagé est contenu dans des éléments de **pour** , la clause d' `schedule` peut être utilisée à cet effet.  
+# <a name="d-using-the-schedule-clause"></a>D. À l’aide de la Clause de planification
+Une région parallèle a au moins un cloisonnement, de son côté et peut avoir des obstacles supplémentaires qu’il contient. À chaque barrière, les autres membres de l’équipe doivent attendre pour le dernier thread arrivée. Pour réduire ce délai d’attente, le travail doit être distribué afin que tous les threads arrivent à la barrière en même temps. Si certains des partageant le travail est contenu dans **pour** construit, le `schedule` clause peut être utilisée à cet effet.  
   
- Lorsqu'il existe des références répétées aux mêmes objets, le choix de planification pour un élément de **pour** peut être déterminé origine par des caractéristiques du système mémoire, telles que la présence et la taille en cache et si les temps d'accès de mémoire sont uniformes ou non\-uniformes.  De telles considérations peuvent s'avérer préférable de le faire référence chaque thread régulièrement au même ensemble d'éléments d'un tableau d'une série de boucles, même si certains threads sont assignés relativement moins de travail dans certaines boucles.  Cela peut être effectuée à l'aide de planification de **statique** avec les mêmes limites pour toutes les boucles.  Dans l'exemple suivant, notez que zéro est utilisé comme la limite inférieure dans la seconde boucle, même si **k** soit plus naturel si la planification n'étaient pas important.  
+ Lorsqu’il existe des répété références vers les objets de mêmes, le choix de la planification pour un **pour** construction peut être déterminée principalement par les caractéristiques du système de mémoire, telles que la présence et la taille des mémoires caches et si l’accès mémoire temps de sont uniforme ou non. Ces considérations, il peut être préférable de disposer de chaque thread régulièrement le même jeu d’éléments d’un tableau dans une série de boucles, même si certains threads assignés relativement moins de travail dans des boucles. Cela est possible à l’aide de la **statique** calendrier avec les mêmes limites pour toutes les boucles. Dans l’exemple suivant, notez que zéro est utilisée comme limite inférieure dans la seconde boucle, même si **k** serait plus naturel si la planification n’est pas importante.  
   
 ```  
 #pragma omp parallel  
@@ -37,9 +36,9 @@ Une région parallèle contient au moins un cloisonnement, à la fin, et peut av
 }  
 ```  
   
- Dans les exemples restants, on suppose que l'accès à la mémoire n'est pas une attention dominante, et, sauf indication contraire, que tous les threads reçoivent les ressources de calcul comparables.  Dans ces cas, le choix de planification pour un élément de **pour** dépend de tout le travail partagé qui doit être effectuée entre le cloisonnement précédent le plus proche et le cloisonnement fermant implicite ou le cloisonnement suivant le plus proche, s'il existe une clause d' `nowait` .  Pour chaque type de planification, un bref montre comment ce type de planification peut être le meilleur choix.  Une brève description suit chaque exemple.  
+ Dans les autres exemples, il est supposé que la mémoire accès n’est pas le compte principal et, sauf indication contraire, que tous les threads reçoivent des ressources de calcul comparables. Dans ces cas, le choix de la planification pour un **pour** construction dépend de tout le travail partagé doit être effectuée entre la précédente la plus proche barrière et soit la barrière de fermeture implicite ou le plus proche de la barrière suivante, si elle existe un `nowait` clause. Pour chaque type de planification, un bref exemple montre comment ce type de planification est susceptible d’être le meilleur choix. Obtenir une brève présentation suit chaque exemple.  
   
- La planification de **statique** est également approprié pour le cas le plus simple, une région parallèle contenant un seul élément de **pour** , chaque itération demandant au même volume de travail.  
+ Le **statique** planification est également appropriée pour le cas le plus simple, une région parallèle contenant un seul **pour** construire, chaque nouvelle itération nécessitant la même quantité de travail.  
   
 ```  
 #pragma omp parallel for schedule(static)  
@@ -48,11 +47,11 @@ for(i=0; i<n; i++) {
 }  
 ```  
   
- La planification de **statique** est caractérisé par les propriétés que chaque thread est environ au même nombre d'itérations que tout autre thread, et chaque thread peut indépendamment déterminer les itérations assignées à celui\-ci.  Donc aucune synchronisation n'est requise pour distribuer le travail, et, en supposant que chaque itération requiert le même volume de travail, tous les threads doivent se terminer à la même heure.  
+ Le **statique** planification se caractérise par les propriétés que chaque thread obtient environ le même nombre d’itérations que tout autre thread, et chaque thread peut déterminer indépendamment les itérations qui lui est affectées. Par conséquent, aucune synchronisation n’est requise pour distribuer le travail et, en supposant que chaque itération nécessite la même quantité de travail, tous les threads doivent terminer à près en même temps.  
   
- Pour une équipe de threads d' `p` , conservez *la valeur plafond \(n\/p\)* l'entier *q*, qui satisfait *n \= p\*q \- r* avec *0 \<\= r \< P.* Une implémentation de planification de **statique** pour cet exemple assignerait les itérations *de q* aux premier thread *p\-1* , et itérations *de q\-r* au dernier thread.  Une autre implémentation acceptable assignerait les itérations *de q* aux premier thread *de PRS\-AF.* , et les itérations *q\-1* *au r* restant des threads.  Cela montre pourquoi un programme ne doit pas dépendre des détails d'implémentation particulière.  
+ Pour une équipe de `p` permettent de threads, *ceiling(n/p)* être l’entier *q*, qui répondent aux *n = p\*q - r* avec *0 < = r < p *. Une implémentation de la **statique** planifier pour cet exemple affecterait *q* itérations pour la première *p-1* threads, et *q-r* itérations pour le dernier thread.  Une autre implémentation acceptable affecterait *q* itérations pour la première *p-r* threads, et *q-1* itérations pour les autres *r*threads. Cet exemple illustre les raisons pour lesquelles un programme ne doit pas dépendre les détails d’une implémentation particulière.  
   
- La planification de **dynamique** est approprié pour le cas d'un élément de **pour** avec les itérations requérant varier, ou même imprévisible, des montants de travail.  
+ Le **dynamique** planification est appropriée pour le cas d’un **pour** construire avec les itérations nécessitant des montants différents, ou même imprévisibles, de travail.  
   
 ```  
 #pragma omp parallel for schedule(dynamic)  
@@ -61,11 +60,11 @@ for(i=0; i<n; i++) {
 }  
 ```  
   
- La planification de **dynamique** est caractérisé par la propriété qu'aucun thread n'attend au cloisonnement plus longtemps qu'il prend un autre thread pour exécuter son itération finale.  Cela nécessite que les itérations soient assignées un par un des threads lorsqu'elles sont disponibles, avec la synchronisation pour chaque assignation.  La charge de synchronisation peut être réduite en spécifiant une taille du segment minimum *k* supérieure à 1, afin que les threads soient assignés *k* à la fois jusqu'à ce que moins de *k* restent.  Cela garantit qu'aucun thread n'attend au cloisonnement plus longtemps qu'il prend un autre thread pour exécuter son segment final \(au plus\) des itérations *de k* .  
+ Le **dynamique** planification se caractérise par la propriété aucun thread n’attend au cloisonnement plus long que celui qu’elle utilise un autre thread pour exécuter sa dernière itération. Cela nécessite que les itérations soit affecté à la fois à des threads dès qu’elles sont disponibles, avec la synchronisation pour chaque affectation. La surcharge de synchronisation peut être réduite en spécifiant une taille de segment minimum *k* supérieur à 1, afin que les threads sont affectés *k* à la fois tant que moins de *k* restent. Cela garantit qu’aucun thread n’attend au cloisonnement plus longtemps que nécessaire à un autre thread à exécuter (au plus) de son bloc final de *k* itérations.  
   
- La planification de **dynamique** peut être utile si les threads reçoivent varier les ressources de calcul, qui a plus ou moins le même effet que variant des montants de travail pour chaque itération.  De même, la planification dynamique peut également être utile si les threads arrivent à l'élément de **pour** à diverses périodes toutefois, dans certaines de ces cas dans la planification de **guidée** peut être préférable.  
+ Le **dynamique** planification peut être utile si les threads de réception différentes ressources de calcul, qui a beaucoup le même effet que des quantités variables de travail pour chaque itération. De même, la planification dynamique peut également être utile si les threads arrivent à la **pour** construire à des moments différents, bien que dans certains cas le **guidée** planification peut être préférable.  
   
- La planification de **guidée** est approprié pour le cas où les threads peuvent arriver à diverses périodes à un élément de **pour** avec chaque itération nécessitant la quantité de travail à peu près identique.  Cela peut se produire si, par exemple, l'élément de **pour** est précédé d'un ou plusieurs sections ou éléments de **pour** avec les clauses d' `nowait` .  
+ Le **guidée** planification est appropriée pour le cas dans lequel les threads peuvent arriver à des moments différents à une **pour** construire avec chaque itération nécessitant environ la même quantité de travail. Cela peut se produire si, par exemple, le **pour** construction est précédée d’une ou plusieurs sections ou **pour** construit avec `nowait` clauses.  
   
 ```  
 #pragma omp parallel  
@@ -81,12 +80,12 @@ for(i=0; i<n; i++) {
 }  
 ```  
   
- Comme **dynamique**, la planification de **guidée** garantit qu'aucun thread n'attend au cloisonnement plus longtemps qu'il prend un autre thread pour exécuter son itération finale, ou des itérations précédentes *du k* si la taille *du* segment de *k* est spécifiée.  Parmi de ces planifications, la planification de **guidée** est caractérisé par la propriété qu'il requiert les moins synchronisations.  Pour la taille du segment *k*, une implémentation assignera *q \= valeur plafond \(n\/p\)* les itérations au premier thread disponible, définissent *n* au supérieur *du nq* et *du p\*k*, puis répétez l'opération jusqu'à ce que toutes les itérations soient assignées.  
+ Comme **dynamique**, le **guidée** planifier la garantie qu’aucun thread n’attend au cloisonnement plus longtemps que nécessaire à un autre thread pour exécuter sa dernière itération ou final *k* itérations si une taille de segment de *k* est spécifié. Parmi ces planifications, les **guidée** planification est caractérisée par la propriété qu’elle requiert les synchronisations moins élevé. Pour la taille de segment *k*, une implémentation classique attribuera *q = ceiling(n/p)* définir des itérations pour le premier thread disponible, * n * à la plus grande de *n-q* et *p\*k*, jusqu'à ce que toutes les itérations sont affectées.  
   
- Lorsque le choix de planification optimal n'est pas aussi clairement que pour ces exemples, la planification de **runtime** est pratique pour expérimenter avec des planifications et tailles de segment sans devoir modifier et recompiler le programme.  Il peut également être utile lorsque la planification optimal dépend \(d'une certaine façon prévisible\) de données d'entrée à laquelle le programme est appliqué.  
+ Lorsque le choix de la planification n’est pas aussi clairement que c’est pour ces exemples, le **runtime** planification est pratique pour tester différentes planifications et les tailles de segment sans avoir à modifier et recompilez le programme. Il peut également être utile lors de la planification dépend (d’une certaine façon prévisible) des données d’entrée à laquelle le programme est appliqué.  
   
- Pour voir un exemple des compromis entre plusieurs calendriers, envisagez de partager 1000 itérations entre 8 threads.  Supposons une quantité de travail indifférente dans chaque itération, et utilisez ce comme unité de temps.  
+ Pour obtenir un exemple de compromis entre les différentes planifications, envisagez de partage 1000 itérations entre 8 threads. Supposez qu’il existe une invariante quantité de travail dans chaque itération et l’utiliser comme unité de temps.  
   
- Si tous les threads démarrent en même temps, la planification de **statique** entraînera l'exécution de l'élément dans les 125 unités, sans la synchronisation.  mais supposez qu'un thread est 100 unités en retard dans l'arrivée.  Les sept threads restants attendent 100 unités dans le cloisonnement, et la durée d'exécution pour l'élément entière passe à 225.  
+ Si tous les threads démarrent en même temps, le **statique** planification entraîne la construction à s’exécuter dans des unités de 125, sans synchronisation. Mais supposons qu’un seul thread est de 100 unités vers la fin de l’arrivée. Les autres sept threads attendent 100 unités à la barrière et la durée d’exécution pour la construction entière à 225.  
   
- Étant donné que les planifications de **dynamique** et de **guidée** garantissent qu'aucun thread n'attend plusieurs unité dans le cloisonnement, le thread suspendu provoque les durées d'exécution pour l'élément passe uniquement jusqu'à 138 unités, probablement affectées par les délais de synchronisation.  Si ces délais ne sont pas négligeables, il est important que le nombre de synchronisations soit 1000 pour **dynamique** mais seulement 41 pour **guidée**, en supposant que la taille du segment par défaut d'une.  Avec une taille du segment de 25, **dynamique** et **guidée** les deux fois dans les 150 unités, plus les délais des synchronisations requises, qui s'attendent maintenant seulement 40 et 20, respectivement.
+ Étant donné qu’à la fois le **dynamique** et **guidée** planifications s’assurer qu’aucun thread n’attend plus d’une unité au cloisonnement, le thread retardé provoque leurs temps d’exécution de la construction d’augmenter uniquement à 138 unités, éventuellement augmentées des délais de synchronisation. Si ces délais ne sont pas négligeables, il est important que le nombre de synchronisations est 1000 pour **dynamique** mais 41 uniquement pour **guidée**, en supposant que la taille de segment par défaut d’un. Avec une taille de segment de 25, **dynamique** et **guidée** deux terminer 150 unités, ainsi que les délais des synchronisations requises, le numéro du présent uniquement 40 et 20, respectivement.

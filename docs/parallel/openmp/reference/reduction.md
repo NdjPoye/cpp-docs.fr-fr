@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- reduction
-dev_langs:
-- C++
-helpviewer_keywords:
-- reduction OpenMP clause
+f1_keywords: reduction
+dev_langs: C++
+helpviewer_keywords: reduction OpenMP clause
 ms.assetid: a2b051af-5a1b-4c00-9cc7-692bb43653fb
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c9b2d13ac10005590c51275cc9ecbab0407e5a9e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 33c629253db2d891f5e52347db291a3eec00bd03
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="reduction"></a>reduction
-Spécifie qu’une ou plusieurs variables qui sont privées pour chaque thread font l’objet d’une opération de réduction à la fin de la région parallèle.  
+Spécifie qu’une ou plusieurs variables qui sont privés pour chaque thread font l’objet d’une opération de réduction à la fin de la région parallèle.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,17 +34,17 @@ reduction(operation:var)
  où,  
   
  `operation`  
- L’opérateur de l’opération à effectuer sur les variables (`var`) à la fin de la région parallèle.  
+ L’opérateur pour l’opération à effectuer sur les variables (`var`) à la fin de la région parallèle.  
   
  `var`  
- Variables de plus d’une sur laquelle effectuer une réduction scalaire. Si plus d’une variable est spécifiée, séparez les noms de variables par des virgules.  
+ Variables de plus d’un sur laquelle effectuer la réduction scalaire. Si plusieurs variables est spécifié, séparez les noms de variables par des virgules.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  `reduction`s’applique aux directives suivantes :  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [parallèle](../../../parallel/openmp/reference/parallel.md)  
+-   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
 -   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
   

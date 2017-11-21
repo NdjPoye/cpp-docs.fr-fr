@@ -1,36 +1,35 @@
 ---
-title: "&#201;valuateur d&#39;expression, erreur CXX0065 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0065"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0065"
-  - "CXX0065"
+title: "Évaluateur d’expression, erreur CXX0065 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0065
+dev_langs: C++
+helpviewer_keywords:
+- CAN0065
+- CXX0065
 ms.assetid: aac68f87-0b90-4c19-afa6-1c587625a5fd
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a80869ad54541a493450ce4cc3696da5da6116b0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# &#201;valuateur d&#39;expression, erreur CXX0065
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-la variable a besoin du frame de pile  
+# <a name="expression-evaluator-error-cxx0065"></a>Évaluateur d'expression, erreur CXX0065
+variable a besoin du frame de pile  
   
- Une expression contient une variable qui existe dans la portée actuelle mais qui n'a pas encore été créée.  
+ Une expression contient une variable qui existe dans la portée actuelle, mais n’a pas encore été créée.  
   
- Cette erreur peut se produire lorsque vous effectuez le pas à pas détaillé du prologue d'une fonction sans avoir configuré le frame de pile de cette fonction, ou encore lorsque vous effectuez le pas à pas détaillé du code de sortie de la fonction.  
+ Cette erreur peut se produire lorsque vous avez exécuté le code dans le prologue d’une fonction, mais pas encore configurer le frame de pile pour la fonction, ou si vous avez exécuté le code dans le code de sortie pour la fonction.  
   
- Exécutez pas à pas le code du prologue jusqu'à ce que le frame de pile soit configuré avant d'évaluer l'expression.  
+ Parcourez le code de prologue jusqu'à ce que le frame de pile a été configuré avant d’évaluer l’expression.  
   
- Erreur identique à CAN0065.
+ Cette erreur est identique à CAN0065.

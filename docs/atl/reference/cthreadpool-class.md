@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,35 +23,18 @@ f1_keywords:
 - ATLUTIL/ATL::CThreadPool::SetSize
 - ATLUTIL/ATL::CThreadPool::SetTimeout
 - ATLUTIL/ATL::CThreadPool::Shutdown
-dev_langs:
-- C++
-helpviewer_keywords:
-- CThreadPool class
+dev_langs: C++
+helpviewer_keywords: CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: b3c944958ba73240131fba33db95dbc20ec9bec8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 6c142d9c7dca6c46453317e056ec573cbc960f51
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cthreadpool-class"></a>CThreadPool (classe)
 Cette classe fournit un pool de threads de travail qui traitent d’une file d’attente d’éléments de travail.  
@@ -100,7 +82,7 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="remarks"></a>Remarques  
  Threads dans le pool sont créés et détruits lorsque le pool est initialisé, redimensionné ou arrêté. Une instance de classe *travail* sera créé sur la pile de chaque thread de travail dans le pool. Chaque instance se trouvera pour la durée de vie du thread.  
   
- Immédiatement après la création d’un thread, *travail*:: `Initialize` sera appelée sur l’objet associé à ce thread. Juste avant la destruction d’un thread, *travail*:: `Terminate` sera appelée. Les deux méthodes doivent accepter un **void\*** argument. La valeur de cet argument est passée au pool de threads par le biais du `pvWorkerParam` paramètre de [CThreadPool::Initialize](#initialize).  
+ Immédiatement après la création d’un thread, *travail*:: `Initialize` sera appelée sur l’objet associé à ce thread. Juste avant la destruction d’un thread, *travail*:: `Terminate` sera appelée. Les deux méthodes doivent accepter un **void\***  argument. La valeur de cet argument est passée au pool de threads par le biais du `pvWorkerParam` paramètre de [CThreadPool::Initialize](#initialize).  
   
  Lorsqu’il existe des éléments de travail dans les threads de travail et de file d’attente de travail, un thread de travail doivent extraire un objet en dehors de la file d’attente et l’appel de la **Execute** méthode de la *travail* objet pour ce thread. Trois éléments sont ensuite passées à la méthode : l’élément à partir de la file d’attente, le même `pvWorkerParam` passé à *travail*:: `Initialize` et *travail*:: `Terminate`et un pointeur vers le [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) structure utilisée pour la file d’attente du port de fin e/s.  
   
@@ -108,7 +90,7 @@ class CThreadPool : public IThreadPoolConfig
   
  Un exemple d’un *travail* classe est [CNonStatelessWorker classe](../../atl/reference/cnonstatelessworker-class.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `IUnknown`  
   
  [Interface IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)  
@@ -138,7 +120,7 @@ ULONG STDMETHODCALLTYPE AddRef() throw();
 CThreadPool() throw();
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Initialise la valeur de délai d’attente à `ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT`. La durée par défaut est 36 secondes. Si nécessaire, vous pouvez définir votre propre valeur entière positive pour ce symbole avant d’inclure atlutil.h.  
   
 ##  <a name="dtor"></a>CThreadPool :: ~ CThreadPool  
@@ -148,7 +130,7 @@ CThreadPool() throw();
 ~CThreadPool() throw();
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Appels [CThreadPool::Shutdown](#shutdown).  
   
 ##  <a name="getnumthreads"></a>CThreadPool::GetNumThreads  
@@ -308,10 +290,10 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Le délai d’attente est initialisée à `ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT`. La durée par défaut est 36 secondes. Si nécessaire, vous pouvez définir votre propre valeur entière positive pour ce symbole avant d’inclure atlutil.h. 
   
- Notez que `dwMaxWait` est le délai d’attente pour un seul thread arrêter le pool. La durée maximale qui pourrait être prise pour supprimer plusieurs threads du pool peut être légèrement inférieure à `dwMaxWait` multiplié par le nombre de threads.  
+ Notez que `dwMaxWait` est le délai d’attente pour un seul thread arrêter le pool. La durée maximale qui pourrait être prise pour supprimer plusieurs threads du pool peut être légèrement inférieure à `dwMaxWait` multipliée par le nombre de threads.  
   
 ##  <a name="shutdown"></a>CThreadPool::Shutdown  
  Appelez cette méthode pour arrêter le pool de threads.  
@@ -324,11 +306,10 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
  `dwMaxWait`  
  L’heure demandée maximal en millisecondes d’attente du pool de threads d’un thread pour l’arrêter. Si 0 ou aucune valeur n’est fournie, cette méthode utilise le délai défini par [CThreadPool::SetTimeout](#settimeout).  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette méthode envoie une demande d’arrêt à tous les threads dans le pool. Si le délai expire, cette méthode appelle [TerminateThread](http://msdn.microsoft.com/library/windows/desktop/ms686717) sur n’importe quel thread qui n’a pas été arrêté. Cette méthode est appelée automatiquement à partir du destructeur de la classe.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Interface de l’interface IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)   
  [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
  [Classes](../../atl/reference/atl-classes.md)
-

@@ -1,41 +1,39 @@
 ---
-title: "String  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "string support with /clr"
-  - "/clr compiler option [C++], string support"
+title: "Chaîne (Extensions du composant C++) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- string support with /clr
+- /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-caps.latest.revision: 19
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3fb87578a0046a70da9a68ab6a1a08b2d6a9f4d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# String  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le compilateur Visual C\+\+ prend en charge des *chaînes*, qui sont des objets qui représentent le texte comme une séquence de caractères.  Visual C\+\+ prend en charge les variables chaîne, dont la valeur est implicite, et les littéraux, dont la valeur est une chaîne entre guillemets explicite.  
+# <a name="string--c-component-extensions"></a>Chaîne  (extensions du composant C++)
+Le compilateur Visual C++ prend en charge *chaînes*, qui sont des objets qui représentent le texte comme une séquence de caractères. Visual C++ prend en charge les variables de chaîne, dont la valeur est implicite, et les littéraux, dont la valeur est une chaîne entre guillemets explicite.  
   
-## Tous les runtimes  
- Windows Runtime et Common Langage Runtime représentent les chaînes comme des objets dont la mémoire allouée est gérée automatiquement.  Autrement dit, vous n'êtes pas tenu d'ignorer explicitement la mémoire pour une chaîne lorsque la variable chaîne est hors de portée ou votre application se termine.  Pour indiquer que la durée de vie d'un objet chaîne doit être managée automatiquement, déclarez le type chaîne avec le modificateur [handle\-to\-object \(^\)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md).  
+## <a name="all-runtimes"></a>Tous les runtimes  
+ Le Windows Runtime et le common language runtime représentent les chaînes en tant qu’objets dont la mémoire allouée est gérée automatiquement. Autrement dit, vous ne sont pas obligé d’ignorer explicitement la mémoire pour une chaîne lorsque le passage de variable chaîne hors de portée ou votre application se termine. Pour indiquer que la durée de vie d’un objet string est géré automatiquement, déclarez le type de chaîne avec la [handle-to-object (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) modificateur.  
   
-## Windows Runtime  
- L'architecture Windows Runtime nécessite Visual C\+\+ pour implémenter le type de données `String` dans l'espace de noms `Platform`.  Pour plus de facilité, Visual C\+\+ fournit également le type de données `string`, un synonyme de `Platform::String`, dans l'espace de noms `default`.  
+## <a name="windows-runtime"></a>Windows Runtime  
+ L’architecture de Windows Runtime nécessite Visual C++ implémenter le `String` de type de données dans le `Platform` espace de noms. Pour des raisons pratiques, Visual C++ fournit aussi la `string` de type de données, qui est un synonyme de `Platform::String`, dans le `default` espace de noms.  
   
-### Syntaxe  
+### <a name="syntax"></a>Syntaxe  
   
 ```cpp  
-  
 // compile with /ZW  
 using namespace Platform;  
 using namespace default;  
@@ -45,45 +43,43 @@ using namespace default;
   
 ```  
   
-### Remarques  
- Pour plus d'informations sur la mise en forme des chaînes, consultez [Platform::String, std::wstring, and Literals \(Platform\)](http://msdn.microsoft.com/fr-fr/ec92fbc6-edf3-4137-a85e-8e29bdb857a8).  
+### <a name="remarks"></a>Remarques  
+ Pour plus d’informations et des exemples sur les chaînes, consultez [Platform::String, std::wstring et littéraux (plate-forme)](http://msdn.microsoft.com/en-us/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
   
-### Configuration requise  
- Option du compilateur : **\/ZW**  
+### <a name="requirements"></a>Spécifications  
+ Option du compilateur : **/ZW**  
   
-## Common Language Runtime  
- Cette rubrique explique comment le compilateur Visual C\+\+ traite des littéraux de chaîne lorsque vous l'exécutez à l'aide de l'option **\/clr** du compilateur.  Pour utiliser **\/clr**, vous devez également utiliser le Common Langage Runtime \(CLR\), la syntaxe de C\+\+\/CLI et les objets managés.  Pour plus d'informations sur **\/clr**, consultez [\/clr \(Compilation pour le Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ Cette rubrique explique comment le compilateur Visual C++ traite les littéraux de chaîne lorsque vous l’exécutez à l’aide de la **/CLR** option du compilateur. Pour utiliser **/CLR**, vous devez également utiliser le common language runtime (CLR), C + c++ / syntaxe CLI et les objets gérés. Pour plus d’informations sur **/CLR**, consultez [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
- Lors de la compilation avec **\/clr**, le compilateur convertit des littéraux de chaîne en chaînes de type <xref:System.String>.  Pour conserver la rétro\-compatibilité avec le code existant il existe deux exceptions à ceci :  
+ Lors de la compilation avec **/CLR**, le compilateur convertit des littéraux de chaîne en chaînes de type <xref:System.String>. Pour conserver la compatibilité descendante avec le code existant sont deux exceptions à cela :  
   
--   Gestion des exceptions.  Lorsqu'un littéral de chaîne est renvoyé, le compilateur l'intercepte en tant que littéral de chaîne.  
+-   Gestion des exceptions. Lorsqu’un littéral de chaîne est levé, le compilateur intercepte comme un littéral de chaîne.  
   
--   Déduction de modèle.  Lorsqu'un littéral de chaîne est passé comme argument de modèle, le compilateur ne le convertit pas en <xref:System.String>.  Notez que les littéraux de chaîne passés comme argument générique seront promus en <xref:System.String>.  
+-   Déduction du modèle. Lorsqu’un littéral de chaîne est passé comme argument de modèle, le compilateur ne convertira pas à un <xref:System.String>. Notez que les littéraux de chaîne passées comme argument générique seront promus à <xref:System.String>.  
   
- Le compilateur a également une prise en charge intégrée pour trois opérateurs, que l'on peut passer outre pour personnaliser leur comportement :  
+ Le compilateur a également une prise en charge intégrée pour les trois opérateurs, que vous pouvez substituer pour personnaliser leur comportement :  
   
--   System::String ^ operator \+\( System::String, System::String\);  
+-   System::String ^ (opérateur) + (System::String, System::String) ;  
   
--   System::String ^ operator \+\( System::Object, System::String\);  
+-   System::String ^ (opérateur) + (System::Object, System::String) ;  
   
--   System::String ^ operator \+\( System::String, System::Object\);  
+-   System::String ^ (opérateur) + (System::String, System::Object) ;  
   
- Lorsque l'on passe un <xref:System.String>, le compilateur boxera, si nécessaire, puis concatènera l'objet et la chaîne \(avec ToString\).  
-  
- Lors de la compilation avec **\/clr:oldSyntax**, des littéraux de chaîne ne seront pas convertis en <xref:System.String>.  
+ Lorsqu’il est passé un <xref:System.String>, le compilateur zone, si nécessaire et puis concaténer l’objet (avec ToString) avec la chaîne.  
   
 > [!NOTE]
->  Le symbole \(" ^ "\) indique que la variable déclarée est un handle vers un objet managé C\+\+\/CLI.  
+>  Le point d’insertion (« ^ ») indique que la variable déclarée est un handle vers un C + c++ / CLI d’objet managé.  
   
- Pour plus d'informations, consultez [Littéraux de chaîne et de caractère](../cpp/string-and-character-literals-cpp.md).  
+ Pour plus d’informations, consultez [littéraux de chaîne et caractère](../cpp/string-and-character-literals-cpp.md).  
   
-### Configuration requise  
- Option du compilateur : **\/clr**  
+### <a name="requirements"></a>Spécifications  
+ Option du compilateur : **/clr**  
   
-### Exemples  
+### <a name="examples"></a>Exemples  
  **Exemple**  
   
- L'exemple de code suivant illustre la concaténation et la comparaison des chaînes.  
+ L’exemple de code suivant illustre la concaténation et comparaison de chaînes.  
   
 ```cpp  
 // string_operators.cpp  
@@ -142,22 +138,39 @@ int main() {
   
  **Sortie**  
   
-  **12345 ABCDE**  
- **abcghi**  
- **ghiabc**  
- **c**  
- **abcdefghi**  
- **abczzz**  
- **abc1**  
- **abc97**  
- **abc3.1**  
- **12345 ABCDE**  
- **a et b sont égaux.**  
- **a et b ne sont pas égaux.**  
- **abc**  
- **n est vide.** **Exemple**  
+```Output  
+abcdef  
   
- L'exemple suivant montre que l'on peut surcharger les opérateurs fournis par le compilateur, et que le compilateur trouvera une surcharge de fonction basée sur le type <xref:System.String>.  
+abcghi  
+  
+ghiabc  
+  
+c  
+  
+abcdefghi  
+  
+abczzz  
+  
+abc1  
+  
+abc97  
+  
+abc3.1  
+  
+abcdef  
+  
+a and b are equal  
+  
+a and b are not equal  
+  
+abc  
+  
+n is empty  
+```  
+  
+ **Exemple**  
+  
+ L’exemple suivant montre que vous pouvez surcharger les opérateurs fournis par le compilateur, et que le compilateur ne recherche pas une surcharge de fonction basée sur le <xref:System.String> type.  
   
 ```cpp  
 // string_operators_2.cpp  
@@ -205,13 +218,21 @@ int main() {
   
  **Sortie**  
   
-  **overloaded \+\(String ^ a, String ^ b\)**   
- **overloaded \+\(String ^ a, Object ^ b\)**   
- **overloaded \+\(Object ^ a, String ^ b\)**   
- **String ^ a**  
- **const char \* a** **Exemple**  
+```Output  
+overloaded +(String ^ a, String ^ b)   
   
- L'exemple suivant indique que le compilateur respecte la différence entre chaînes natives et chaînes <xref:System.String>.  
+overloaded +(String ^ a, Object ^ b)   
+  
+overloaded +(Object ^ a, String ^ b)   
+  
+String ^ a  
+  
+const char * a  
+```  
+  
+ **Exemple**  
+  
+ L’exemple suivant montre que le compilateur fait la distinction entre les chaînes d’origine et <xref:System.String> chaînes.  
   
 ```cpp  
 // string_operators_3.cpp  
@@ -252,11 +273,17 @@ int main() {
   
  **Sortie**  
   
-  **char\***  
- **String^ str**  
- **System.SByte\***  
- **System.String**   
-## Voir aussi  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
- [Littéraux de chaîne et de caractère](../cpp/string-and-character-literals-cpp.md)   
- [\/clr \(Compilation pour le Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md)
+```Output  
+char *  
+  
+String^ str  
+  
+System.SByte*  
+  
+System.String  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)   
+ [Littéraux de chaîne et caractères](../cpp/string-and-character-literals-cpp.md)   
+ [/CLR (Compilation pour le common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)

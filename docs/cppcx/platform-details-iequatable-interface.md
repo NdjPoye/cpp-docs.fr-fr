@@ -1,46 +1,46 @@
 ---
-title: "Platform::Details::IEquatable (interface) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Details::IEquatable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::Details::IEquatable (interface)"
+title: Platform::Details Interface | Documents Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::Details::IEquatable
+dev_langs: C++
+helpviewer_keywords: Platform::Details::IEquatable Interface
 ms.assetid: 72f15f55-f7a4-4cca-aeba-2d5a9996818c
-caps.latest.revision: 3
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 693cb21e8b41a49a561d0acfd7af2b0ca8d19f0e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Platform::Details::IEquatable (interface)
-Cette interface n’est destinée qu’à une utilisation interne, et non à des fins de développement.  
+# <a name="platformdetailsiequatable-interface"></a>Platform::Details::IEquatable (interface)
+Cette interface est destinée à une utilisation interne uniquement, et non à des fins de développement.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
   
 interface class IEquatable;  
 ```  
   
-## Notes  
+### <a name="remarks"></a>Remarques  
  Cette interface est fournie uniquement par souci d’exhaustivité, car elle peut être inspectée avec les navigateurs.  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Platform`  
   
-## Configuration requise  
- **Métadonnées :** platform.winmd  
+### <a name="requirements"></a>Spécifications  
+ **Métadonnées :** platform.winmd  
   
- **Espace de noms :** Platform::Details  
+ **Espace de noms :** Platform::Details  
   
-## Voir aussi  
- [\(NOTINBUILD\) Espace de noms Platform](http://msdn.microsoft.com/fr-fr/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)
+## <a name="see-also"></a>Voir aussi  
+ [Plateforme Namespace](platform-namespace-c-cx.md)

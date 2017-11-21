@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,36 +15,18 @@ f1_keywords:
 - PPLTASKS/concurrency::task_continuation_context::use_current
 - PPLTASKS/concurrency::task_continuation_context::use_default
 - PPLTASKS/concurrency::task_continuation_context::use_synchronous_execution
-dev_langs:
-- C++
-helpviewer_keywords:
-- task_continuation_context class
+dev_langs: C++
+helpviewer_keywords: task_continuation_context class
 ms.assetid: 1fb5a76a-3682-45c2-a615-8b6b527741f0
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 8afd599e5ee489500d7f8c498d03c91ace6b99ed
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 48ef4f4646aedf648e3bb9efb572c203d7047378
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context, classe
 La classe `task_continuation_context` vous permet de spécifier où vous souhaitez qu'une continuation soit exécutée. Seule l'utilisation de cette classe à partir d'une application du Windows Store s'avère utile. Pour les applications qui ne figurent pas dans le Windows Store, le contexte d’exécution de la continuation de tâche est déterminé par le runtime et n’est pas configurable.  
@@ -68,7 +49,7 @@ class task_continuation_context : public details::_ContextCallback;
 |[use_default](#use_default)|Crée le contexte de continuation de tâche par défaut.|  
 |[use_synchronous_execution](#use_synchronous_execution)|Retourne un objet de contexte de continuation de tâche qui représente le contexte de l’exécution synchrone.|  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `_ContextCallback`  
   
  `task_continuation_context`  
@@ -90,12 +71,12 @@ static task_continuation_context get_current_winrt_context();
 ## <a name="return-value"></a>Valeur de retour  
  Le contexte actuel du thread Windows Runtime. Retourne un task_continuation_context vide si elle est appelée à partir d’un contexte non Windows Runtime.  
   
-## <a name="remarks"></a>Notes  
- Le `get_current_winrt_context` méthode capture le contexte de thread de l’appelant de l’exécution de Windows. Elle retourne un contexte vide pour les appelants non Windows Runtime.  
+## <a name="remarks"></a>Remarques  
+ Le `get_current_winrt_context` méthode capture le contexte de thread Windows Runtime de l’appelant. Elle retourne un contexte vide à des appelants non Windows Runtime.  
   
- La valeur retournée par `get_current_winrt_context` peut être utilisé pour indiquer à l’exécution que la continuation doit s’exécuter dans le modèle de cloisonnement du contexte capturé (STA et MTA), indépendamment de si l’antécédent est cloisonné prenant en charge. Un thread cloisonné prenant en charge les tâches est une tâche désencapsule une Windows Runtime `IAsyncInfo` interface ou une tâche qui est issue de ce type de tâche.  
+ La valeur retournée par `get_current_winrt_context` peut être utilisé pour indiquer à l’exécution que la continuation doit s’exécuter dans le modèle de cloisonnement du contexte capturé (STA et MTA), indépendamment de si la tâche antécédente est cloisonné prenant en charge. Un thread cloisonné prenant en charge les tâches sont une tâche qui se désencapsule un objet Windows Runtime `IAsyncInfo` interface ou une tâche qui est issue de ce type de tâche.  
   
- Cette méthode est similaire à la `use_current` (méthode), mais il est également disponible en code C++ natif sans C + c++ / prise en charge des extensions CX. Il est prévu pour utilisation par écriture C + utilisateurs avancés c++ / code de bibliothèque de natif et Windows Runtime appelants CX indépendant. Sauf si vous avez besoin de cette fonctionnalité, nous vous recommandons du `use_current` (méthode), qui est uniquement disponible pour C + c++ / les clients CX.  
+ Cette méthode est similaire à la `use_current` (méthode), mais il est également disponible pour le code C++ natif sans C + c++ / prise en charge des extensions CX. Il est destiné aux utilisateurs avancés utilisé par l’écriture C + c++ / CX bibliothèque code d’indépendant natif et les appelants de Windows Runtime. Sauf si vous avez besoin de cette fonctionnalité, nous vous recommandons du `use_current` (méthode), qui est uniquement disponible pour C + c++ / les clients CX.  
   
   
 ##  <a name="use_arbitrary"></a>use_arbitrary 
@@ -110,9 +91,9 @@ static task_continuation_context use_arbitrary();
  Un contexte de continuation de tâche qui représente un emplacement arbitraire.  
   
 ### <a name="remarks"></a>Remarques  
- Lorsque ce contexte de continuation est utilisé la continuation s’exécutent dans un contexte, que le runtime sélectionne même si l’antécédent est un modèle apartment prenant en charge.  
+ Lorsque ce contexte de continuation est utilisé, la continuation s’exécute dans un contexte, que le runtime sélectionne même si la tâche antécédente est cloisonné prenant en charge.  
   
- `use_arbitrary`peut être utilisé pour désactiver le comportement par défaut pour une liaison dans une tâche prenant en charge de cloisonnement créée dans un STA.  
+ `use_arbitrary`peut être utilisé pour désactiver le comportement par défaut pour une continuation sur une tâche prenant en charge de cloisonnement créée dans un STA.  
   
  Cette méthode est uniquement disponible pour les applications du Windows Store.  
   
@@ -130,7 +111,7 @@ static task_continuation_context use_current();
 ### <a name="remarks"></a>Remarques  
  Cette méthode capture le contexte d’exécution de Windows de l’appelant afin que les continuations peuvent être exécutées dans le compartiment de droite.  
   
- La valeur retournée par `use_current` peut être utilisé pour indiquer à l’exécution que la continuation doit s’exécuter dans le contexte capturé (STA et MTA), quelle que soit ou non l’antécédent est un modèle apartment prenant en charge. Un thread cloisonné prenant en charge les tâches est une tâche désencapsule une Windows Runtime `IAsyncInfo` interface ou une tâche qui est issue de ce type de tâche.  
+ La valeur retournée par `use_current` peut être utilisé pour indiquer à l’exécution que la continuation doit s’exécuter dans le contexte capturé (STA et MTA), même si la tâche antécédente cloisonnement prenant en charge. Un thread cloisonné prenant en charge les tâches sont une tâche qui se désencapsule un objet Windows Runtime `IAsyncInfo` interface ou une tâche qui est issue de ce type de tâche.  
   
  Cette méthode est uniquement disponible pour les applications du Windows Store.  
   
@@ -146,11 +127,11 @@ static task_continuation_context use_default();
  Le contexte de continuation par défaut.  
   
 ### <a name="remarks"></a>Remarques  
- Le contexte par défaut est utilisé si vous ne spécifiez pas un contexte de continuation lorsque vous appelez le `then` (méthode). Dans les applications Windows pour Windows 7 et en dessous, ainsi que des applications de bureau sur Windows 8 et versions ultérieures, le runtime détermine où les continuations de tâches seront exécutée. Toutefois, dans une application Windows Store, le contexte de continuation par défaut pour une liaison dans une tâche prenant en charge de cloisonnement est le cloisonnement où `then` est appelé.  
+ Le contexte par défaut est utilisé si vous ne spécifiez pas un contexte de continuation lorsque vous appelez le `then` (méthode). Dans les applications Windows pour Windows 7 et en dessous, ainsi que les applications de bureau sous Windows 8 et versions ultérieures, le runtime détermine où les continuations de tâches seront exécute. Toutefois, dans une application du Windows Store, le contexte de continuation par défaut pour une continuation sur une tâche prenant en charge de cloisonnement est le cloisonnement où `then` est appelé.  
   
- Un thread cloisonné prenant en charge les tâches est une tâche désencapsule une Windows Runtime `IAsyncInfo` interface ou une tâche qui est issue de ce type de tâche. Par conséquent, si vous planifiez une continuation sur une tâche prenant en charge de cloisonnement dans un STA d’exécution de Windows, la continuation exécute dans ce STA.  
+ Un thread cloisonné prenant en charge les tâches sont une tâche qui se désencapsule un objet Windows Runtime `IAsyncInfo` interface ou une tâche qui est issue de ce type de tâche. Par conséquent, si vous planifiez une continuation sur une tâche prenant en charge de cloisonnement dans un STA d’exécution de Windows, la continuation s’exécute dans ce STA.  
   
- Une continuation d’une tâche prenant en charge un cloisonnement non s’exécuter dans un contexte que choisit le Runtime.  
+ Une continuation sur une tâche prenant en charge un cloisonnement non s’exécute dans un contexte, que le Runtime sélectionne.  
 
 ## <a name="use_synchronous_execution"></a>task_continuation_context::use_synchronous_execution  
 Retourne un objet de contexte de continuation de tâche qui représente le contexte de l’exécution synchrone.  
@@ -162,14 +143,13 @@ static task_continuation_context use_synchronous_execution();
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Le contexte d’exécution synchrone.  
+ Le contexte de l’exécution synchrone.  
   
 ## <a name="remarks"></a>Remarques  
- Le `use_synchronous_execution` méthode force la tâche de continuation à exécuter simultanément sur le contexte, à l’origine de la saisie semi-automatique de son antécédent.  
+ Le `use_synchronous_execution` méthode force la tâche de continuation à exécuter simultanément sur le contexte, à l’origine de la fin de la sa tâche antécédente.  
   
- Si l’antécédent est déjà terminé lorsque la continuation est attachée, la continuation s’exécute de façon synchrone sur le contexte qui attache la continuation.  
+ Si l’antécédent est déjà terminée lorsque la continuation est jointe, la continuation s’exécute de façon synchrone sur le contexte qui joint la continuation.  
   
  
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)
-

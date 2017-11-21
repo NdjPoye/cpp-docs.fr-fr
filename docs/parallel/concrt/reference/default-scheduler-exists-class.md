@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - default_scheduler_exists
 - CONCRT/concurrency::default_scheduler_exists
 - CONCRT/concurrency::default_scheduler_exists::default_scheduler_exists
-dev_langs:
-- C++
-helpviewer_keywords:
-- default_scheduler_exists class
+dev_langs: C++
+helpviewer_keywords: default_scheduler_exists class
 ms.assetid: f6e575e2-4e0f-455a-9e06-54f462ce0c1c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 4272c4658a6dbd85c838ccfd2586eb6a8ec08d81
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 07f78f5c2f06e933a7b1b477428ddbdb69f101ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="defaultschedulerexists-class"></a>default_scheduler_exists, classe
 Cette classe décrit une exception levée quand la méthode `Scheduler::SetDefaultSchedulerPolicy` est appelée alors qu'un planificateur par défaut existe déjà au sein du processus.  
@@ -59,7 +41,7 @@ class default_scheduler_exists : public std::exception;
 |----------|-----------------|  
 |[default_scheduler_exists](#ctor)|Surchargé. Construit un objet `default_scheduler_exists`.|  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `exception`  
   
  `default_scheduler_exists`  
@@ -85,4 +67,3 @@ default_scheduler_exists() throw();
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)
-

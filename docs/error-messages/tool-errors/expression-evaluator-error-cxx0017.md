@@ -1,42 +1,41 @@
 ---
-title: "&#201;valuateur d&#39;expression, erreur CXX0017 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0017"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0017"
-  - "CXX0017"
+title: "Évaluateur d’expression, erreur CXX0017 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0017
+dev_langs: C++
+helpviewer_keywords:
+- CAN0017
+- CXX0017
 ms.assetid: af74db02-a64d-49ca-8363-3e044a107580
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2b1e7901f46aacbcac73a7d2b6a3e5f033d1526c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# &#201;valuateur d&#39;expression, erreur CXX0017
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-symbole non trouvé  
+# <a name="expression-evaluator-error-cxx0017"></a>Évaluateur d'expression, erreur CXX0017
+symbole introuvable  
   
- Un symbole spécifié dans une expression est introuvable.  
+ Impossible de trouver un symbole spécifié dans une expression.  
   
- L'une des causes possibles de cette erreur est le non\-respect de la casse dans le nom du symbole.  Dans la mesure où les langages C et C\+\+ respectent la casse, un nom de symbole doit être fourni avec exactement la même casse que sa définition dans le source.  
+ Une des causes possibles de cette erreur est une incompatibilité de cas dans le nom du symbole. Étant donné que C et C++ sont des langages qui respecte la casse, un nom de symbole doit figurer dans la casse exacte dans laquelle il est défini dans la source.  
   
- Cette erreur peut se produire lorsque vous essayez de convertir le type d'une variable pour surveiller celle\-ci pendant le débogage.  `typedef` déclare un nouveau nom de type mais ne définit pas un nouveau type.  La conversion de type tentée dans le débogueur exige le nom d'un type défini.  
+ Cette erreur peut se produire lorsque vous tentez de convertir une variable afin de surveiller la variable pendant le débogage. Le `typedef` déclare un nouveau nom pour un type, mais il ne définit pas un nouveau type. La conversion de type tentée dans le débogueur exige que le nom d’un type défini.  
   
- Erreur identique à CAN0017.  
+ Cette erreur est identique à CAN0017.  
   
-### Pour résoudre le problème en utilisant les solutions possibles suivantes  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Pour résoudre ce problème, appliquez les solutions possibles suivantes.  
   
-1.  Assurez\-vous que le symbole est déjà déclaré au moment où il est utilisé dans le programme.  
+1.  Assurez-vous que le symbole est déjà déclaré au niveau du point du programme où il est utilisé.  
   
-2.  Pour effectuer un cast des variables dans le débogueur, utilisez un nom de type réel plutôt qu'un nom défini par `typedef`.
+2.  Pour effectuer un cast de variables dans le débogueur, utilisez un nom de type réel plutôt qu’un `typedef`-nom défini.

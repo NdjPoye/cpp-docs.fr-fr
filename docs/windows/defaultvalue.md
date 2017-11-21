@@ -1,47 +1,45 @@
 ---
-title: "defaultvalue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.defaultvalue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "defaultvalue attribute"
+title: DefaultValue | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.defaultvalue
+dev_langs: C++
+helpviewer_keywords: defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 16f75743010087eb13ab38186b6326b4bcc38688
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# defaultvalue
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Autorise la spécification d'une valeur par défaut pour un paramètre optionnel typé.  
+# <a name="defaultvalue"></a>defaultvalue
+Autorise la spécification d’une valeur par défaut pour un paramètre optionnel typé.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 [ defaultvalue= value ]  
 ```  
   
-#### Paramètres  
- *correspondante*  
- Valeur par défaut du paramètre.  
+#### <a name="parameters"></a>Paramètres  
+ *value*  
+ La valeur par défaut pour le paramètre.  
   
-## Notes  
- L'attribut de **defaultvalue** C\+\+ a les mêmes fonctionnalités que l'attribut de [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) MIDL.  
+## <a name="remarks"></a>Remarques  
+ Le **defaultvalue** attribut C++ a les mêmes fonctionnalités que le [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) attribut MIDL.  
   
-## Exemple  
- Le code suivant présente une méthode d'interface à l'aide de l'attribut de **defaultvalue** :  
+## <a name="example"></a>Exemple  
+ Le code suivant montre une méthode d’interface à l’aide du **defaultvalue** attribut :  
   
 ```  
 // cpp_attr_ref_defaultvalue.cpp  
@@ -65,25 +63,24 @@ __interface IFireTabCtrl : IDispatch {
       version="1.0", helpstring="ATLFire 1.0 Type Library") ];  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|paramètre d'interface|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|Paramètre d’interface|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun|  
+|**Attributs non valides**|None|  
   
- Pour plus d'informations, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs de paramètre](../windows/parameter-attributes.md)   
  [out](../windows/out-cpp.md)   
  [retval](../windows/retval.md)   
  [in](../windows/in-cpp.md)   
- [pointer\_default](../windows/pointer-default.md)   
+ [pointer_default](../windows/pointer-default.md)   
  [unique](../windows/unique-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

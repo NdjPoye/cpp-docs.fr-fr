@@ -1,34 +1,32 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4401 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4401"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4401"
+title: Compilateur avertissement (niveau 1) C4401 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4401
+dev_langs: C++
+helpviewer_keywords: C4401
 ms.assetid: 2e7ca136-f144-4b40-b847-82976e8643fc
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: cabb50ca025390cd00f4c9db68f3aa97d606fa57
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 1) C4401
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-ChampBits' : le membre est un champ de bits  
+# <a name="compiler-warning-level-1-c4401"></a>Avertissement du compilateur (niveau 1) C4401
+« champ de bits » : membre est un champ de bits  
   
- Du code assembleur inline tente d'accéder à un membre champ de bits.  Le code assembleur inline ne peut pas accéder aux membres champs de bits, donc c'est la dernière limite de compactage avant le membre champ de bits qui est utilisé.  
+ Le code assembleur inline tente d’accéder à un membre de champ de bits. Assembleur inline ne peut pas accéder à membres de champ de bits, la dernière limite de compactage avant le membre champ de bits est utilisée.  
   
- Pour éviter cet avertissement, effectuez un cast du champ de bits en un type approprié avant d'y faire référence dans du code assembleur inline.  L'exemple suivant génère l'erreur C4401 :  
+ Pour éviter cet avertissement, vous devez effectuer un cast en un type approprié, le champ de bits avant de procéder de la référence dans le code assembleur inline. L’exemple suivant génère l’erreur C4401 :  
   
 ```  
 // C4401.cpp  

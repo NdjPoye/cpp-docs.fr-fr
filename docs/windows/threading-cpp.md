@@ -1,33 +1,30 @@
 ---
-title: "threading (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.threading"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "threading attribute"
+title: threads (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.threading
+dev_langs: C++
+helpviewer_keywords: threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c85287a590dfa9cf3c931ce358dca8b303f4737a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# threading (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-spécifie le modèle de thread pour un objet COM.  
+# <a name="threading-c"></a>thread (C++)
+Spécifie le modèle de thread pour un objet COM.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -36,49 +33,48 @@ spécifie le modèle de thread pour un objet COM.
 ) ]  
 ```  
   
-#### Paramètres  
- ***modèle*** \(facultatif\)  
- L'un des modèles de thread suivants :  
+#### <a name="parameters"></a>Paramètres  
+ ***modèle*** (facultatif)  
+ L’un des modèles de threads suivants :  
   
--   **apartment \(cloisonné\)** \(thread cloisonné\)  
+-   **cloisonnement** (cloisonnement des threads)  
   
--   **Neutre** \(composants .NET Framework sans interface utilisateur\)  
+-   **neutre** (composants de .NET Framework sans interface utilisateur)  
   
--   **unique** \(threading simple\)  
+-   **seul** (thread simple)  
   
--   **libre** \(modèle de thread libre\)  
+-   **libre** (libre de threads)  
   
--   **les deux** \(modèles de thread cloisonné \(STA\) et libre\)  
+-   **les deux** (thread cloisonné et libre)  
   
- la valeur par défaut est **apartment \(cloisonné\)**.  
+ La valeur par défaut est **cloisonnement**.  
   
-## Notes  
- L'attribut de **threads** C\+\+ n'apparaît pas dans le fichier généré .idl mais sera utilisé dans l'implémentation de votre objet COM.  
+## <a name="remarks"></a>Remarques  
+ Le **threading** attribut C++ n’apparaît pas dans le fichier .idl généré, mais sera utilisé dans l’implémentation de votre objet COM.  
   
- Dans les projets ATL, si l'attribut de [coclasse](../windows/coclass.md) est également présent, le modèle de thread spécifié par *le modèle* est passé comme paramètre de modèle à la classe de [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) , l'insertion par l'attribut de **coclasse** .  
+ Dans les projets ATL, si le [coclasse](../windows/coclass.md) attribut est également présent, le modèle de thread spécifié par *modèle* est passé comme paramètre de modèle pour le [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) classe , inséré par le **coclasse** attribut.  
   
- l'attribut de **threads** garde également l'accès à [event\_source](../windows/event-source.md).  
+ Le **threading** attribut protège également l’accès à un [event_source](../windows/event-source.md).  
   
-## Exemple  
- Consultez l'exemple d' [autorisé](../windows/licensed.md) pour un usage d'exemple de **threads**.  
+## <a name="example"></a>Exemple  
+ Consultez le [concédé sous licence](../windows/licensed.md) exemple pour un exemple d’utilisation de **threading**.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**classe**, `struct`|  
-|**reproductible**|Non|  
-|**attributs requis**|**coclasse**|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|**class**, `struct`|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|**coclass**|  
+|**Attributs non valides**|Aucun|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [COM Attributes](../windows/com-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Prise en charge du multithreading pour le code plus ancien \(Visual C\+\+\)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
- [Neutral Apartments](http://msdn.microsoft.com/library/windows/desktop/ms681813)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs COM](../windows/com-attributes.md)   
+ [TypeDef, Enum, Union et Struct (attributs)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Attributs de classe](../windows/class-attributes.md)   
+ [Prise en charge le multithreading pour un Code plus ancien (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+ [Cloisonnements neutres](http://msdn.microsoft.com/library/windows/desktop/ms681813)   

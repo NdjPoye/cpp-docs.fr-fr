@@ -1,42 +1,39 @@
 ---
-title: "Mots cl&#233;s contextuels  (extensions de composant C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "internal_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mots clés contextuels"
+title: "Mots clés contextuels (Extensions du composant C++) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: internal_CPP
+dev_langs: C++
+helpviewer_keywords: context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-caps.latest.revision: 19
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 68ff63d5b596d575f26ec0f56a3ac7a568c8471e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Mots cl&#233;s contextuels  (extensions de composant C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les *mots clés contextuels* sont des éléments de langage reconnus uniquement dans des contextes spécifiques.  En dehors du contexte spécifique, un mot clé contextuel peut être un symbole défini par l'utilisateur.  
+# <a name="context-sensitive-keywords--c-component-extensions"></a>Mots clés contextuels  (extensions de composant C++)
+*Mots clés contextuels* sont des éléments de langage reconnus uniquement dans des contextes spécifiques. En dehors du contexte spécifique, un mot clé contextuel peut être un symbole défini par l'utilisateur.  
   
-## Tous les runtimes  
- **Notes**  
+## <a name="all-runtimes"></a>Tous les runtimes  
+ **Remarques**  
   
  Voici une liste de mots clés contextuels :  
   
 -   [abstract](../windows/abstract-cpp-component-extensions.md)  
   
--   [délégué](../windows/delegate-cpp-component-extensions.md)  
+-   [delegate](../windows/delegate-cpp-component-extensions.md)  
   
--   [événement](../windows/event-cpp-component-extensions.md)  
+-   [event](../windows/event-cpp-component-extensions.md)  
   
 -   [finally](../dotnet/finally.md)  
   
@@ -44,37 +41,37 @@ Les *mots clés contextuels* sont des éléments de langage reconnus uniquement 
   
 -   [initonly](../dotnet/initonly-cpp-cli.md)  
   
--   `internal` \(voir [Visibilité de membre](../misc/member-visibility.md)\)  
+-   `internal`   
   
--   [literal](../windows/literal-cpp-component-extensions.md)  
+-   [littéral](../windows/literal-cpp-component-extensions.md)  
   
 -   [override](../windows/override-cpp-component-extensions.md)  
   
--   [property](../windows/property-cpp-component-extensions.md)  
+-   [propriété](../windows/property-cpp-component-extensions.md)  
   
 -   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   `where` \(partie de [Generics](../windows/generics-cpp-component-extensions.md)\)  
+-   `where`(dans le cadre du [génériques](../windows/generics-cpp-component-extensions.md))  
   
- Pour des raisons de lisibilité, vous pouvez limiter votre utilisation des mots clés contextuels comme symboles définis par l'utilisateur.  
+ Pour des raisons de lisibilité, vous voudrez limiter votre utilisation des mots clés contextuels comme symboles définis par l’utilisateur.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- **Notes**  
+## <a name="windows-runtime"></a>Windows Runtime  
+ **Remarques**  
   
- \(Il n'existe aucune note spécifique à la plateforme pour cette fonctionnalité.\)  
+ (Il n’existe aucune note spécifique à la plateforme pour cette fonctionnalité.)  
   
-### Conditions requises  
- Option du compilateur : **\/ZW**  
+### <a name="requirements"></a>Spécifications  
+ Option du compilateur : **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **Notes**  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ **Remarques**  
   
- \(Il n'existe aucune note spécifique à la plateforme pour cette fonctionnalité.\)  
+ (Il n’existe aucune note spécifique à la plateforme pour cette fonctionnalité.)  
   
-### Conditions requises  
- Option du compilateur : **\/clr**  
+### <a name="requirements"></a>Spécifications  
+ Option du compilateur : **/clr**  
   
-### Exemples  
+### <a name="examples"></a>Exemples  
  **Exemple**  
   
  L'exemple de code suivant montre que dans le contexte approprié, le mot clé contextuel `property` peut être utilisé pour définir une propriété et une variable.  
@@ -102,6 +99,9 @@ int main() {
   
  **Sortie**  
   
-  **100**   
-## Voir aussi  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+100  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)

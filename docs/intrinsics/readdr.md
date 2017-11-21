@@ -1,58 +1,56 @@
 ---
-title: "__readdr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__readdr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__readdr, intrinsèque"
+title: __readdr | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __readdr
+dev_langs: C++
+helpviewer_keywords: __readdr intrinsic
 ms.assetid: 061b05da-c85e-4052-b392-106f14bb84f1
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f167001e8202b950e1e994e7a4ed53b40a50ded4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# __readdr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-lit la valeur du registre spécifié de débogage.  
+# <a name="readdr"></a>__readdr
+Lit la valeur de l’historique de débogage spécifiés.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 unsigned         __readdr(unsigned int DebugRegister);  
 unsigned __int64 __readdr(unsigned int DebugRegister);  
 ```  
   
-#### Paramètres  
- \[in\] `DebugRegister`  
- une constante de 0 à 7 qui identifie le registre de débogage.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `DebugRegister`  
+ Une constante comprise entre 0 et 7 identifiant le débogage s’inscrire.  
   
-## Valeur de retour  
- la valeur du registre spécifié de débogage.  
+## <a name="return-value"></a>Valeur de retour  
+ La valeur de l’historique de débogage spécifiés.  
   
-## Notes  
- Ces intrinsèques ne sont disponibles qu'en mode noyau, et les routines sont disponibles uniquement comme intrinsèques.  
+## <a name="remarks"></a>Remarques  
+ Ces fonctions intrinsèques sont disponibles uniquement en mode noyau, et les routines sont disponibles seulement comme fonctions intrinsèques.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__readdr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## TERMINEZ le détail de Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)   
- [\_\_readeflags](../intrinsics/readeflags.md)
+## <a name="see-also"></a>Voir aussi  
+ [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)   
+ [__readeflags](../intrinsics/readeflags.md)

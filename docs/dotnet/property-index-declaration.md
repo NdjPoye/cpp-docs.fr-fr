@@ -1,33 +1,33 @@
 ---
-title: "D&#233;claration de l&#39;index de la propri&#233;t&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "indexeurs par défaut"
-  - "valeurs par défaut, indexeurs"
-  - "propriétés indexées, C++"
-  - "indexeurs"
+title: "Déclaration de propriété d’Index | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- indexers
+- default indexers
+- defaults, indexers
+- indexed properties, C++
 ms.assetid: d898fdbc-2106-4b6a-8c5c-9f511d80fc2f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7c832f14b7a466e84eaabbd1efdadf67d4e0fc9a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# D&#233;claration de l&#39;index de la propri&#233;t&#233;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La syntaxe servant à déclarer une propriété indexée a été modifiée entre Extensions managées pour C\+\+ et [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+# <a name="property-index-declaration"></a>Déclaration de l'index de la propriété
+La syntaxe de déclaration d’une propriété indexée a changé entre les Extensions managées pour C++ vers Visual C++.  
   
- La prise en charge par le langage des Extensions managées des propriétés indexées présente deux défauts principaux. Le premier est son incapacité à fournir une mise en indice de niveau de classe ; autrement dit, toutes les propriétés indexées doivent être nommées, et il n'y a donc, par exemple, aucun moyen de fournir un opérateur managé de mise en indice qui puisse être directement appliqué à un objet de classe `Vector` ou `Matrix`.  Le second défaut, moins problématique, est qu'il est visuellement difficile de distinguer une propriété d'une propriété indexée, le nombre de paramètres étant la seule indication.  Enfin, les propriétés indexées souffrent des mêmes problèmes que les propriétés non indexées \- les accesseurs ne sont pas traités comme une unité atomique, mais séparés dans des méthodes individuelles.  Par exemple :  
+ L’inconvénient principal de deux de la prise en charge du langage des Extensions managées des propriétés indexées est l’incapacité pour fournir la mise en indice de niveau de classe ; Autrement dit, toutes les propriétés indexées sont nécessaires à donner un nom, et par conséquent, il n’existe aucun moyen, par exemple, pour fournir un opérateur d’indice managé qui peut être appliqué directement à un `Vector` ou `Matrix` objet de classe. Une seconde moins problématique est qu’il est visuellement difficile de distinguer une propriété d’une propriété indexée, le nombre de paramètres est la seule indication. Enfin, les propriétés indexées souffrent des mêmes problèmes que ceux de propriétés non indexées - les accesseurs ne sont pas traités comme une unité atomique, mais séparés dans des méthodes individuelles.  Exemple :  
   
 ```  
 public __gc class Vector;  
@@ -43,7 +43,7 @@ public:
 };  
 ```  
   
- Comme vous pouvez le constater, les indexeurs ne se distinguent que par les paramètres supplémentaires qui spécifient un index à deux ou à une seule dimension.  Dans la nouvelle syntaxe, les indexeurs se distinguent par les crochets \(\[,\]\) qui suivent le nom de l'indexeur et qui indiquent le nombre et le type de chaque index :  
+ Comme vous pouvez le voir, les indexeurs sont distinguent uniquement par les paramètres supplémentaires pour spécifier une de deux ou un seul index de dimension. Dans la nouvelle syntaxe, les indexeurs sont distinguent par les crochets ([,]) après le nom de l’indexeur et en indiquant le nombre et le type de chaque index :  
   
 ```  
 public ref class Vector {};  
@@ -64,7 +64,7 @@ public:
 };  
 ```  
   
- Dans la nouvelle syntaxe, pour indiquer un indexeur de niveau de classe qui peut être appliqué directement aux objets de la classe, le mot clé `default` est réutilisé pour se substituer à un nom explicite.  Par exemple :  
+ Pour indiquer un indexeur de niveau de classe qui peut être appliqué directement aux objets de la classe dans la nouvelle syntaxe, le `default` (mot clé) est réutilisé pour se substituer à un nom explicite. Exemple :  
   
 ```  
 public ref class Matrix {  
@@ -74,10 +74,10 @@ private:
 public:  
    // ok: class level indexer now  
    //  
-   //     Matrix mat …  
+   //     Matrix mat;  
    //     mat[ 0, 0 ] = 1;   
    //  
-   // invokes the set accessor of the default indexer …  
+   // invokes the set accessor of the default indexer  
   
    property float default [int,int] {  
       float get( int r, int c );  
@@ -91,10 +91,10 @@ public:
 };  
 ```  
   
- Dans la nouvelle syntaxe, lorsque la propriété indexée par défaut est spécifiée, les deux noms suivants sont réservés : `get_Item` et `set_Item`.  En effet, il s'agit des noms sous\-jacents générés pour la propriété indexée par défaut.  
+ Dans la nouvelle syntaxe, lors de la valeur par défaut est la propriété est spécifiée, les deux noms suivants sont réservés : `get_Item` et `set_Item`. Il s’agit, car ce sont les noms sous-jacent générés pour la propriété indexée par défaut.  
   
- Notez qu'il n'y a aucune syntaxe d'index simple analogue à la syntaxe de propriété simple.  
+ Notez qu’il n’existe aucune syntaxe index simple analogue à la syntaxe de propriété simple.  
   
-## Voir aussi  
- [Déclarations de membre dans une classe ou interface \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [Comment : utiliser des propriétés indexées](../misc/how-to-use-indexed-properties.md)
+## <a name="see-also"></a>Voir aussi  
+ [Déclarations de membre dans une classe ou interface (C++-CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ 

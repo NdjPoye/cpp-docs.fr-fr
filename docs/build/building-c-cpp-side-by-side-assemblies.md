@@ -1,45 +1,43 @@
 ---
-title: "G&#233;n&#233;ration d&#39;assemblys c&#244;te &#224; c&#244;te C/C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "applications côte à côte (C++)"
+title: "Création d’assemblys de C/C++ côte-à-côte | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-caps.latest.revision: 18
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 40b8099a1159514d3ffce8cfeb9b38274c3e68b0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# G&#233;n&#233;ration d&#39;assemblys c&#244;te &#224; c&#244;te C/C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Un [assembly côte à côte](_win32_side_by_side_assemblies) est une collection de ressources \(un groupe de DLL, de classes de fenêtres, de serveurs COM, de bibliothèques de types ou d'interfaces\) disponibles, qu'une application peut utiliser au moment de l'exécution.  L'avantage principal du rempaquetage des DLL dans des assemblys est que plusieurs versions d'assemblys peuvent être utilisées simultanément par les applications et que la maintenance des assemblys actuellement installés peut être assurée en cas de mise à jour.  
+# <a name="building-cc-side-by-side-assemblies"></a>Génération d'assemblys côte à côte C/C++
+A [côte-à-côte assembly](http://msdn.microsoft.com/library/windows/desktop/ff951640) est une collection de ressources, un groupe de DLL, classes de fenêtres, serveurs COM, bibliothèques de types ou interfaces : une application à utiliser lors de l’exécution. Le principal avantage de la réintégration des DLL dans des assemblys est que plusieurs versions d’assemblys peuvent être utilisées par les applications en même temps, et il est possible d’assemblys de service est actuellement installé en cas de mise à jour.  
   
- Une application Visual C\+\+ peut utiliser une ou plusieurs DLL dans diverses parties de l'application.  Pendant l'exécution, les DLL sont chargées dans le processus principal et le code requis est exécuté.  L'application se base sur le système d'exploitation pour localiser les DLL demandées, déterminer les autres DLL dépendantes devant être chargées et les charger avec la DLL demandée.  Sur les versions du système d'exploitation Windows antérieures à Windows XP, Windows Server 2003 et Windows Vista, le chargeur de système d'exploitation recherche les DLL dépendantes dans le dossier local de l'application ou un autre dossier spécifié dans le chemin d'accès système.  Sous Windows XP, Windows Server 2003 et Windows Vista, le chargeur du système d'exploitation peut également rechercher les DLL dépendantes à l'aide d'un fichier de [manifeste](http://msdn.microsoft.com/library/aa375365) et rechercher les assemblys côte à côte qui contiennent ces DLL.  
+ Une application Visual C++ peut utiliser une ou plusieurs DLL dans différentes parties de l’application. Lors de l’exécution, les DLL sont chargées dans le processus principal et le code requis est exécuté. L’application s’appuie sur le système d’exploitation pour localiser les DLL demandées, comprendre les autres DLL dépendantes qui doivent être chargées et les charger avec la DLL demandée. Sur les versions de systèmes d’exploitation Windows antérieurs à Windows XP, Windows Server 2003 et Windows Vista, le chargeur du système d’exploitation recherche les DLL dépendantes dans le dossier local de l’application ou d’un autre dossier spécifié sur le chemin d’accès système. Sous Windows XP, Windows Server 2003 et Windows Vista, le chargeur du système d’exploitation peut également rechercher les DLL dépendantes à l’aide un [manifeste](http://msdn.microsoft.com/library/windows/desktop/aa375365) fichier et rechercher les assemblys côte à côte qui contiennent ces DLL.  
   
- Par défaut, lorsqu'une DLL est générée avec Visual Studio, elle dispose d'un [manifeste d'application](http://msdn.microsoft.com/library/aa374191) incorporé sous la forme d'une ressource RT\_MANIFEST dont l'ID est égal à 2.  Comme pour un fichier exécutable, ce manifeste décrit les dépendances de cette DLL vis\-à\-vis d'autres assemblys.  Cela suppose que la DLL ne fasse pas partie d'un assembly côte à côte et que les applications qui dépendent de cette DLL n'utilisent pas un manifeste d'application pour la charger, mais s'appuient plutôt sur le chargeur du système d'exploitation pour rechercher cette DLL dans le chemin d'accès système.  
+ Par défaut, lorsqu’une DLL est générée avec Visual Studio, elle a un [manifeste d’application](http://msdn.microsoft.com/library/windows/desktop/aa374191) incorporé comme une ressource RT_MANIFEST avec l’ID est égal à 2. Comme pour un fichier exécutable, ce manifeste décrit les dépendances de cette DLL avec d’autres assemblys. Cela suppose que la DLL ne fait pas partie d’un assembly côte à côte et les applications qui dépendent de cette DLL ne vont pas utiliser un manifeste d’application à charger, mais s’appuient plutôt sur le chargeur du système d’exploitation pour rechercher cette DLL sur le chemin d’accès système.  
   
 > [!NOTE]
->  Il est important, pour une DLL utilisant un manifeste d'application, que ce dernier soit incorporé sous la forme d'une ressource dont l'ID est égal à 2.  Si la DLL est chargée dynamiquement lors de l'exécution \(par exemple, à l'aide de la fonction [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175)\), le chargeur du système d'exploitation charge les assemblys dépendants spécifiés dans le manifeste de la DLL.  Les manifestes d'application externes pour les DLL ne sont pas vérifiés au cours de l'appel `LoadLibrary`.  Si le manifeste n'est pas incorporé, le chargeur peut tenter de charger des versions inexactes des assemblys ou ne pas parvenir à trouver les assemblys dépendants.  
+>  Il est important pour une DLL qui utilise un manifeste d’application pour que le manifeste incorporé en tant que ressource avec un ID égal à 2. Si la DLL est chargée dynamiquement pendant l’exécution (par exemple, à l’aide de la [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175) fonction), le chargeur du système d’exploitation charge les assemblys dépendants spécifiés dans le manifeste de la DLL. Un manifeste d’application externe pour les DLL n’est pas vérifié pendant un `LoadLibrary` appeler. Si le manifeste n’est pas incorporé, le chargeur peut tenter de charger des versions inexactes des assemblys ou ne parviennent pas à trouver les assemblys dépendants.  
   
- Une ou plusieurs DLL connexes peuvent être rempaquetées dans un assembly côte à côte avec un [manifeste d'assembly](http://msdn.microsoft.com/library/aa374219) correspondant qui décrit les fichiers contenus dans l'assembly, ainsi que la dépendance de l'assembly vis\-à\-vis d'autres assemblys côte à côte.  
+ Une ou plusieurs connexes de DLL peuvent être réorganisées dans un assembly côte à côte avec correspondante [manifeste d’assembly](http://msdn.microsoft.com/library/windows/desktop/aa374219), qui décrit les fichiers l’assembly, ainsi que la dépendance de l’assembly sur les autres côte à côte assemblys.  
   
 > [!NOTE]
->  Si un assembly contient une DLL, il vaut mieux incorporer le manifeste d'assembly dans cette DLL comme une ressource à l'ID égal à 1, et attribuer le même nom à l'assembly privé et la DLL.  Par exemple, si le nom de la DLL est mylibrary.dll, la valeur de l'attribut de nom utilisé dans l'élément \<assemblyIdentity\> du manifeste peut également être mylibrary.  Dans certains cas, lorsqu'une bibliothèque a une extension autre que .dll \(par exemple, un projet ActiveX MFC Controls crée une bibliothèque .ocx\), un manifeste d'assembly externe peut être créé.  Dans ce cas, le nom de l'assembly et de son manifeste doit être différent du nom de la DLL \(par exemple, MyAssembly, MyAssembly.manifest et mylibrary.ocx\).  Il reste cependant recommandé de renommer de telles bibliothèques avec l'extension.dll et d'incorporer le manifeste en tant que ressource afin de diminuer le futur coût de maintenance de cet assembly.  Pour plus d'informations sur la recherche d'assemblys privés par le système d'exploitation, consultez [Séquence de recherche d'assemblys](http://msdn.microsoft.com/library/aa374224).  
+>  Si un assembly contient une DLL, il est recommandé d’incorporer le manifeste d’assembly dans cette DLL en tant que ressource avec un ID égal à 1 et de donner à l’assembly privé le même nom que la DLL. Par exemple, si le nom de la DLL est mylibrary.dll, la valeur de l’attribut name est utilisée dans le \<assemblyIdentity > élément du manifeste peut être également mylibrary. Dans certains cas, lorsqu’une bibliothèque a une extension autre que .dll (par exemple, un projet de contrôles ActiveX MFC crée une bibliothèque .ocx) un manifeste d’assembly externe peut être créé. Dans ce cas, le nom de l’assembly et son manifeste doit être différent du nom de la DLL (par exemple, MyAssembly, MyAssembly.manifest et mylibrary.ocx). Cependant il est recommandé de toujours renommer ces bibliothèques pour l’extension.dll et d’incorporer le manifeste en tant que ressource afin de réduire le coût de maintenance ultérieure de cet assembly. Pour plus d’informations sur la façon dont le système d’exploitation recherche les assemblys privés, consultez [séquence de recherche d’Assembly](http://msdn.microsoft.com/library/windows/desktop/aa374224).  
   
- Cette modification peut permettre de déployer les DLL correspondantes sous forme d'un [assembly privé](_win32_private_assemblies) dans un dossier local d'application ou comme un [assembly partagé](https://msdn.microsoft.com/en-us/library/aa375996.aspx) dans le cache d'assembly WinSxS.  Plusieurs étapes doivent être suivies pour que le comportement au moment de l'exécution de ce nouvel assembly soit correct ; elles sont décrites dans [Instructions relatives à la création d'assemblys côte à côte](http://msdn.microsoft.com/library/aa375155).  Une fois un assembly correctement créé, il peut être déployé en tant qu'assembly privé ou partagé en même temps qu'une application dépendante de lui.  Lorsque vous installez un assembly côte à côte en tant qu'assembly partagé, vous pouvez suivre les indications données sous [Installation d'assemblys Win32 pour le partage de composants côte à côte sur Windows XP](http://msdn.microsoft.com/library/aa369532) ou utiliser les [modules de fusion](http://msdn.microsoft.com/library/aa369820).  Lors de l'installation d'assemblys côte à côte comme un assembly privé, il vous suffit de copier la DLL, les ressources et le manifeste d'assembly correspondants au cours du processus d'installation dans le dossier local de l'application sur l'ordinateur cible, garantissant ainsi que cet assembly pourra être trouvé par le chargeur pendant l'exécution \(voir [Séquence de recherche d'assemblys](http://msdn.microsoft.com/library/aa374224)\).  Une autre méthode consiste à utiliser [Windows Installer](http://msdn.microsoft.com/library/cc185688) et suivre les indications données sous [Installation d'assemblys Win32 pour l'usage privé d'une application sur Windows XP](http://msdn.microsoft.com/library/aa369534).  
+ Cette modification peut permettre de déployer les DLL correspondantes comme un [assembly privé](http://msdn.microsoft.com/library/windows/desktop/aa370850) dans un dossier local d’application ou comme un [assembly partagé](http://msdn.microsoft.com/library/windows/desktop/aa371839) dans le cache d’assembly WinSxS. Plusieurs étapes doivent être suivies pour que le comportement d’exécution correcte de ce nouvel assembly ; ils sont décrits dans [des recommandations pour les assemblys côte à côte de création](http://msdn.microsoft.com/library/windows/desktop/aa375155). Une fois un assembly a été créé correctement, il peut déployée comme soit un assembly privé ou partagé avec une application qui en dépend. Lorsque vous installez les assemblys côte à côte comme un assembly partagé, vous pouvez soit suivre les indications de [installation d’assemblys Win32 pour le partage côte à côte sur Windows XP](http://msdn.microsoft.com/library/windows/desktop/aa369532) ou utilisez [demodulesdefusion](http://msdn.microsoft.com/library/windows/desktop/aa369820). Lorsque vous installez les assemblys côte à côte comme un assembly privé, vous suffit de copier le manifeste d’assembly, les ressources et les DLL correspondant dans le cadre du processus d’installation dans le dossier local de l’application sur l’ordinateur cible, garantissant ainsi que cet assembly peut trouvé par le chargeur lors de l’exécution (voir [séquence de recherche d’Assembly](http://msdn.microsoft.com/library/windows/desktop/aa374224)). Une autre méthode consiste à utiliser [Windows Installer](http://msdn.microsoft.com/library/windows/desktop/cc185688) et suivez les instructions indiquées dans [installation d’assemblys Win32 pour l’usage privé d’une Application sur Windows XP](http://msdn.microsoft.com/library/windows/desktop/aa369534).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exemples de déploiement](../ide/deployment-examples.md)   
- [Génération d'applications isolées C\/C\+\+](../build/building-c-cpp-isolated-applications.md)   
- [Génération d'applications isolées C\/C\+\+ et d'assemblys côte à côte](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+ [Génération C/C++ d’Applications isolées](../build/building-c-cpp-isolated-applications.md)   
+ [Génération d’applications isolées et d’assemblys côte à côte C/C++](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

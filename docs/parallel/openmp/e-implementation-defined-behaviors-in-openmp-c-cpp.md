@@ -1,75 +1,74 @@
 ---
-title: "E. Implementation-Defined Behaviors in OpenMP C/C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "E. Comportements dans OpenMP C/C++ défini par l’implémentation | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: b8d660ca-9bb3-4b6b-87af-45c67d43a731
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d54705947db5125bd9d30adb8a074a6ac354b94a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# E. Implementation-Defined Behaviors in OpenMP C/C++
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-cette annexe résume les comportements qui sont décrits comme « implémentation\-définis » dans cette API.  Chaque comportement est établi les références croisées rétablissant sa description dans la spécification principale.  
+# <a name="e-implementation-defined-behaviors-in-openmp-cc"></a>E. Défini par l’implémentation de comportements dans OpenMP C/C++
+Cette annexe résume les comportements qui sont décrites comme « défini par l’implémentation » dans cette API.  Chaque comportement est une référence croisée à sa description dans la spécification principale.  
   
-## Remarques  
- Une implémentation est requise pour définir et documenter son comportement dans ces cas, mais cette liste peut être incomplète.  
+## <a name="remarks"></a>Notes  
+ Une implémentation est requise pour définir et son comportement dans ces cas de document, mais cette liste peut être incomplet.  
   
--   **Nombre de threads :** si une région parallèle est produite lors de la modification dynamique du nombre de threads est désactivé, et le nombre de threads demandés pour la région parallèle dépasse le nombre que le système runtime peut fournir, le comportement du programme implémentation\-est défini \(voir la page 9\).  
+-   **Nombre de threads :** si une région parallèle est rencontrée pendant que l’ajustement dynamique du nombre de threads est désactivé, et le nombre de threads demandé pour la région parallèle dépasse le nombre que le système d’exécution peut fournir, le comportement de le programme est défini par l’implémentation (voir page 9).  
   
-     Dans Visual C\+\+, pour une zone parallèle non imbriquée, 64 threads \(le maximum\) seront fournis.  
+     Dans Visual C++, pour une région parallèle non imbriqués, les 64 threads (maximum) seront fournies.  
   
--   **Nombre de processeurs :** le nombre de processeurs physiques qui hébergent réellement les threads à un moment donné implémentation\-est défini \(voir la page 10\).  
+-   **Nombre de processeurs :** le nombre de processeurs physiques hébergeant les threads à un moment donné est défini par l’implémentation (voir la page 10).  
   
-     Dans Visual C\+\+, ce numéro n'est pas fixe, qui est contrôlé par le système d'exploitation.  
+     Dans Visual C++, ce numéro n’est pas constant et est contrôlé par le système d’exploitation.  
   
--   **Créer des équipes de threads :** le nombre de threads dans une équipe qui exécutent une région parallèle imbriquée implémentation\-est défini. \(consultez la page 10\).  
+-   **Création d’équipes de threads :** le nombre de threads qui s’exécutent une région parallèle imbriquée dans une équipe est défini par l’implémentation. () consultez la page 10).  
   
-     Dans Visual C\+\+, il est déterminé par le système d'exploitation.  
+     Dans Visual C++, cela est déterminé par le système d’exploitation.  
   
--   **planifier \(runtime\) :** la décision concernant la planification est différé au moment de l'exécution.  Le type et la taille du segment de planification peuvent être choisis au moment de l'exécution en définissant la variable d'environnement `OMP_SCHEDULE` .  Si cette variable d'environnement n'est pas définie, la planification résultant implémentation\-est défini \(voir la page 13\).  
+-   **Schedule (Runtime) :** la décision en matière de planification est différée jusqu'à l’exécution. La taille de segment et de type de planification peut être choisie au moment de l’exécution en définissant le `OMP_SCHEDULE` variable d’environnement. Si cette variable d’environnement n’est pas définie, la planification qui en résulte est défini par l’implémentation (voir page 13).  
   
-     Dans Visual C\+\+, le type de planification est `static` sans la taille du segment.  
+     Dans Visual C++, le type de planification est `static` avec aucune taille de segment.  
   
--   **planifier par défaut :** en l ' absence d'une clause de planification, le calendrier par défaut implémentation\-est défini \(voir la page 13\).  
+-   **Planification par défaut :** en l’absence de la clause de la planification, la planification par défaut est défini par l’implémentation (voir page 13).  
   
-     Dans Visual C\+\+, le type de planification par défaut est `static` sans la taille du segment.  
+     Dans Visual C++, le type de planification par défaut est `static` avec aucune taille de segment.  
   
--   **ATOMIQUE :** elle implémentation\-est la valeur si une implémentation remplace toutes les directives d' `atomic` par les directives de **critique** qui ont le même nom unique \(voir la page 20\).  
+-   **ATOMIQUE :** qu’il est défini par l’implémentation indique si une implémentation remplace toutes les `atomic` directives avec **critique** directives qui portent le même nom unique (voir page 20).  
   
-     Dans Visual C\+\+, si les données modifiées par [atomic](../../parallel/openmp/reference/atomic.md) n'est pas sur un alignement naturel ou si elle est de 1 ou 2 octets toutes les opérations atomiques qui satisfont cette propriété utiliseront une section critique.  Sinon, des sections critiques ne seront pas utilisées.  
+     Dans Visual C++, si les données modifiées par [atomique](../../parallel/openmp/reference/atomic.md) n’est pas sur un alignement naturel ou s’il s’agit de 1 ou 2 octets long toutes les opérations atomiques qui répondent à cette propriété utilisera une section critique. Sinon, les sections critiques ne seront pas utilisées.  
   
--   **omp\_get\_num\_threads :** si le nombre de threads n'a pas été explicitement défini par l'utilisateur, la valeur par défaut implémentation\-est défini \(voir la page 9, et le [section 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) à la page 37\).  
+-   **omp_get_num_threads :** si le nombre de threads n’a pas été explicitement défini par l’utilisateur, la valeur par défaut est défini par l’implémentation (voir page 9, et [Section 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) à la page 37).  
   
-     Dans Visual C\+\+, le nombre par défaut de threads est égal au nombre de processeurs.  
+     Dans Visual C++, le nombre par défaut de threads est égal au nombre de processeurs.  
   
--   **omp\_set\_dynamic :** la valeur par défaut pour l'ajustement dynamique de thread implémentation\-est défini \(consultez [section 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) à la page 39\).  
+-   **omp_set_dynamic :** la valeur par défaut pour l’ajustement de thread dynamique est défini par l’implémentation (voir [Section 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) sur la page 39).  
   
-     dans Visual C\+\+, la valeur par défaut est `FALSE`.  
+     Dans Visual C++, la valeur par défaut est `FALSE`.  
   
--   **omp\_set\_nested :** lorsque le parallélisme imbriqué est activé, le nombre de threads utilisés pour exécuter les régions parallèles imbriquées implémentation\-est défini \(consultez [section 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md) à la page 40\).  
+-   **omp_set_nested :** lorsque parallélisme imbriquée est activée, le nombre de threads utilisés pour exécuter les régions parallèles imbriquées est défini par l’implémentation (voir [Section 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md) page 40).  
   
-     Dans Visual C\+\+, le nombre de threads est déterminé par le système d'exploitation.  
+     Dans Visual C++, le nombre de threads est déterminé par le système d’exploitation.  
   
--   variable d'environnement`OMP_SCHEDULE` : La valeur par défaut de cette variable d'environnement implémentation\-est la valeur \(consultez [section 4,1](../../parallel/openmp/4-1-omp-schedule.md) à la page 48\).  
+-   `OMP_SCHEDULE`variable d’environnement : la valeur par défaut pour cette variable d’environnement est défini par l’implémentation (voir [Section 4.1](../../parallel/openmp/4-1-omp-schedule.md) page 48).  
   
-     Dans Visual C\+\+, le type de planification est `static` sans la taille du segment.  
+     Dans Visual C++, le type de planification est `static` avec aucune taille de segment.  
   
--   variable d'environnement`OMP_NUM_THREADS` : Si aucune valeur n'est spécifiée pour la variable d'environnement `OMP_NUM_THREADS` , ou si la valeur spécifiée n'est pas un entier positif, ou si la valeur est supérieure au nombre maximal de threads le système peut prendre en charge, le nombre de threads à utiliser implémentation\-est défini \(consultez [section 4,2](../../parallel/openmp/4-2-omp-num-threads.md) à la page 48\).  
+-   `OMP_NUM_THREADS`variable d’environnement : si aucune valeur n’est spécifiée pour le `OMP_NUM_THREADS` variable d’environnement, ou si la valeur spécifiée n’est pas un entier positif, ou si la valeur est supérieure au nombre maximal de threads que le système peut prendre en charge, le nombre de threads à utiliser est défini par l’implémentation (voir [Section 4.2](../../parallel/openmp/4-2-omp-num-threads.md) page 48).  
   
-     Dans Visual C\+\+, si la valeur spécifiée est zéro ou moins, le nombre de threads est égal au nombre de processeurs.  Si la valeur est supérieure à 64, le nombre de threads est 64.  
+     Dans Visual C++, si la valeur spécifiée est égale à zéro ou moins, le nombre de threads est égal au nombre de processeurs.  Si la valeur est supérieure à 64, le nombre de threads est 64.  
   
--   variable d'environnement`OMP_DYNAMIC` : La valeur par défaut implémentation\-est la valeur \(consultez [section 4,3](../../parallel/openmp/4-3-omp-dynamic.md) à la page 49\).  
+-   `OMP_DYNAMIC`variable d’environnement : la valeur par défaut est défini par l’implémentation (voir [Section 4.3](../../parallel/openmp/4-3-omp-dynamic.md) page 49).  
   
-     dans Visual C\+\+, la valeur par défaut est `FALSE`.
+     Dans Visual C++, la valeur par défaut est `FALSE`.

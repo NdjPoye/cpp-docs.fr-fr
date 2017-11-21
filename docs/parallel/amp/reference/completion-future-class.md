@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,36 +18,20 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait
 - AMPRT/Concurrency::completion_future::wait_for
 - AMPRT/Concurrency::completion_future::wait_until
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 1c6d8e880fbdb784b22b1e9c879473efa7bc9802
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 40f4c4821a6141e7795f37f5a276a544677ba48b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="completionfuture-class"></a>completion_future, classe
-Représente une future correspondant à une opération asynchrone de C++ AMP.  
+Représente une future qui correspond à une opération asynchrone de C++ AMP.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -70,11 +53,11 @@ class completion_future;
 |Nom|Description|  
 |----------|-----------------|  
 |[get](#get)|Attend que l’opération asynchrone terminée.|  
-|[puis](#then)|Est lié à un objet de fonction de rappel à le `completion_future` objet à exécuter lorsque l’opération asynchrone associée termine son exécution.|  
+|[puis](#then)|Remonte d’un objet de fonction de rappel pour le `completion_future` objet à exécuter lorsque l’opération asynchrone associée termine son exécution.|  
 |[to_task](#to_task)|Retourne un `task` objet correspondant à l’opération asynchrone associée.|  
 |[valide](#valid)|Obtient une valeur booléenne qui indique si l’objet est associé à une opération asynchrone.|  
 |[attente](#wait)|Bloque jusqu'à ce que l’opération asynchrone terminée.|  
-|[wait_for](#wait_for)|Bloque jusqu'à ce que l’opération asynchrone terminée ou que la durée spécifiée par `_Rel_time` est écoulé.|  
+|[wait_for](#wait_for)|Bloque jusqu'à ce que l’opération asynchrone terminée ou que la durée spécifiée par `_Rel_time` s’est écoulé.|  
 |[wait_until](#wait_until)|Bloque jusqu'à ce que l’opération asynchrone terminée ou jusqu'à ce que l’heure actuelle dépasse la valeur spécifiée par `_Abs_time`.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
@@ -84,7 +67,7 @@ class completion_future;
 |[opérateur std::shared_future\<void >](#operator_shared_future)|Convertit implicitement la `completion_future` de l’objet à un `std::shared_future` objet.|  
 |[operator=](#operator_eq)|Copie le contenu de l’objet `completion_future` objet dans celui-ci.|  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `completion_future`  
   
 ## <a name="requirements"></a>Spécifications  
@@ -117,7 +100,7 @@ completion_future(
   
 |Nom|Description|  
 |----------|-----------------|  
-|`completion_future();`|Initialise une nouvelle instance de la `completion_future` (classe)|  
+|`completion_future();`|Initialise une nouvelle instance de la `completion_future` classe|  
 |`completion_future(const completion_future& _Other);`|Initialise une nouvelle instance de la `completion_future` classe par un constructeur de copie.|  
 |`completion_future(completion_future&& _Other);`|Initialise une nouvelle instance de la `completion_future` classe en déplaçant un constructeur.|  
   
@@ -171,7 +154,7 @@ completion_future&  operator= (completion_future&& _Other );
   
 ## <a name="then"></a>puis 
 
-Est lié à un objet de fonction de rappel à le `completion_future` objet à exécuter lorsque l’opération asynchrone associée termine son exécution.  
+Remonte d’un objet de fonction de rappel pour le `completion_future` objet à exécuter lorsque l’opération asynchrone associée termine son exécution.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -198,7 +181,7 @@ concurrency::task<void> to_task() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un `task` objet correspondant à l’opération asynchrone associée.  
+ A `task` objet correspondant à l’opération asynchrone associée.  
   
 ## <a name="valid"></a>valide 
 
@@ -225,7 +208,7 @@ void wait() const;
   
 ## <a name="wait_for"></a>wait_for 
 
-Bloque jusqu'à ce que l’opération asynchrone terminée ou l’heure spécifiée par `_Rel_time` est écoulé.  
+Bloque jusqu'à ce que l’opération asynchrone terminée ou que la durée spécifiée par `_Rel_time` s’est écoulé.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -251,7 +234,7 @@ std::future_status::future_status wait_for(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne :  
   
--   `std::future_status::deferred`Si l’opération asynchrone associée n’est pas exécuté.  
+-   `std::future_status::deferred`Si l’opération asynchrone associée n’est pas en cours d’exécution.  
   
 -   `std::future_status::ready`Si l’opération asynchrone associée est terminée.  
   
@@ -274,10 +257,10 @@ std::future_status::future_status wait_until(
   
 ### <a name="parameters"></a>Paramètres  
  `_Clock`  
- L’horloge sur laquelle ce point de temps est mesuré.  
+ L’horloge sur lesquels ce point de temps est mesuré.  
   
  `_Duration`  
- Depuis le début de l’intervalle de temps `_Clock`d’époque, après laquelle la fonction doit expirer.  
+ Depuis le début de l’intervalle de temps `_Clock`d’époque, après lequel la fonction va expirer.  
   
  `_Abs_time`  
  Le point dans le temps après lequel la fonction expire.  
@@ -285,7 +268,7 @@ std::future_status::future_status wait_until(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne :  
   
-1.  `std::future_status::deferred`Si l’opération asynchrone associée n’est pas exécuté.  
+1.  `std::future_status::deferred`Si l’opération asynchrone associée n’est pas en cours d’exécution.  
   
 2.  `std::future_status::ready`Si l’opération asynchrone associée est terminée.  
   
@@ -303,4 +286,3 @@ Détruit le `completion_future` objet.
   
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

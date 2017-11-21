@@ -1,69 +1,65 @@
 ---
-title: "HStringReference::HStringReference, constructeur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HStringReference::HStringReference"
-dev_langs: 
-  - "C++"
+title: Hstringreference::hstringreference, constructeur | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HStringReference::HStringReference
+dev_langs: C++
 ms.assetid: 29f5fe11-3928-4f60-9861-f0894247bfcb
-caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b73e25977b91940031316f6d85c0bcfded4ab3ef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# HStringReference::HStringReference, constructeur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Initialise une nouvelle instance de la classe HStringReference.  
+# <a name="hstringreferencehstringreference-constructor"></a>HStringReference::HStringReference, constructeur
+Initialise une nouvelle instance de la hstringreference, classe.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
+template<unsigned int sizeDest>  
+HStringReference(wchar_t const (&str)[ sizeDest]) throw();  
   
-    template<unsigned int sizeDest>  
-    HStringReference(wchar_t const (&str)[ sizeDest]) throw();  
+template<unsigned int sizeDest>  
+HStringReference(wchar_t const (&str)[ sizeDest],   
+                 unsigned int len) throw();  
   
-    template<unsigned int sizeDest>  
-    HStringReference(wchar_t const (&str)[ sizeDest],   
-unsigned int len)  
-       throw();  
-  
-    HStringReference(HStringReference&& other) throw();  
-  
+HStringReference(HStringReference&& other) throw();  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `sizeDest`  
- Un paramètre de modèle spécifiant la taille de la mémoire tampon du HStringReference de destination.  
+ Un paramètre de modèle qui spécifie la taille de la mémoire tampon HStringReference de destination.  
   
  `str`  
  Une référence à une chaîne à caractères larges.  
   
  `len`  
- La longueur maximale de la mémoire tampon du paramètre `str` à utiliser dans cette opération.  Si le paramètre `len` n'est pas spécifié, le paramètre `str` entier est utilisé.  Si `len` est supérieur à `sizeDest`, `len` a la valeur `sizeDest`\-1.  
+ La longueur maximale de la `str` mémoire tampon de paramètre à utiliser dans cette opération. Si le `len` paramètre n’est pas spécifié, l’ensemble `str` paramètre est utilisé. Si `len` est supérieur à `sizeDest`, `len` a la valeur `sizeDest`-1.  
   
  `other`  
- Un autre objet de HStringReference.  
+ Un autre objet HStringReference.  
   
-## Remarques  
- Le premier constructeur initialise un objet de HStringReference de la même taille qu'un paramètre `str`.  
+## <a name="remarks"></a>Notes  
+ Le premier constructeur initialise un nouvel objet de HStringReference la même taille que le paramètre `str`.  
   
- Le deuxième constructeur initialise un objet de HStringReference dont la taille est spécifiée par le paramètre `len`.  
+ Le deuxième constructeur initialise un nouveau HStringReference de l’objet qui le specifeid taille par le paramètre `len`.  
   
- Le troisième constructeur initialise un objet de HStringReference à la valeur du paramètre `other`, puis détruit le paramètre `other` .  
+ Le troisième constructeur initialise un nouvel objet HStringReference à la valeur de la `other` paramètre et puis détruit la `other` paramètre.  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers  
+ **Namespace :** Microsoft::WRL::Wrappers  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [HStringReference, classe](../windows/hstringreference-class.md)

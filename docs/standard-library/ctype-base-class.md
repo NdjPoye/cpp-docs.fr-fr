@@ -4,41 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- locale/std::ctype_base
-- ctype_base
-dev_langs:
-- C++
-helpviewer_keywords:
-- ctype_base class
+f1_keywords: locale/std::ctype_base
+dev_langs: C++
+helpviewer_keywords: ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 59ec50c7e68b4d79b97218a8cd24df391198e758
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: dc45c762c4abe772164f2db365361b9f2277a260
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ctypebase-class"></a>ctype_base, classe
 La classe sert de classe de base pour les facettes de la classe de modèle [ctype](../standard-library/ctype-class.md). Classe de base de la classe ctype utilisée pour définir des types énumération utilisés pour classifier ou tester les caractères, individuellement ou dans des plages entières.  
@@ -96,7 +77,7 @@ struct ctype_base : public locale::facet
   
 - **graph** (fonction [isgraph](../standard-library/locale-functions.md#isgraph))  
   
- Vous pouvez caractériser une combinaison de classifications en reliant ces constantes par une opération OR. En particulier, ce qui suit est toujours vérifié : **alnum** == ( **alpha**``&#124; **digit**\) and **graph** \=\= \( **alnum**``&#124; **punct**).  
+ Vous pouvez caractériser une combinaison de classifications en reliant ces constantes par une opération OR. En particulier, il est toujours true qui **à "alnum"** == ( **alpha** &#124; **chiffre** \) et **graphique** \= \= \( **à "alnum"** &#124; **punct**).  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** \<locale>  
@@ -105,7 +86,6 @@ struct ctype_base : public locale::facet
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

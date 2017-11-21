@@ -1,71 +1,69 @@
 ---
-title: "WeakReference, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::WeakReference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WeakReference (classe)"
+title: WeakReference Class1 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::WeakReference
+dev_langs: C++
+helpviewer_keywords: WeakReference class
 ms.assetid: 3f4c956b-dbbd-49b1-8cfa-9509a9956c97
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bb8e05ca3ef52515af58db455ed83da593d6bdfb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# WeakReference, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="weakreference-class1"></a>WeakReference Class1
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 class WeakReference;  
 ```  
   
-## Remarques  
- Représente une *référence faible* pouvant être utilisée avec les le runtime Windows ou le COM classique.  Une référence faible représente un objet qui peut être accessible ou non.  
+## <a name="remarks"></a>Remarques  
+ Représente un *référence faible* qui peut être utilisé avec le Windows Runtime ou le COM classique. Une référence faible représente un objet qui peut être accessible ou non.  
   
- Un objet `WeakReference` conserve une *référence forte*, qui est un pointeur vers un objet, et un*décompte de références fortes*, qui est le nombre de copies de la référence forte qui ont été distribuées par la méthode Resolve\(\).  Lorsque le décompte de références fortes est différent de zéro, la référence forte est valide et l'objet est accessible.  Lorsque le décompte de références fortes devient nul, la référence forte n'est pas valide et l'objet est inaccessible.  
+ A `WeakReference` objet conserve un *référence forte*, qui est un pointeur vers un objet et un *nombre de référence forte*, qui est le nombre de copies de la référence forte qui ont été distribuées par la méthode Resolve(). Alors que le nombre de référence forte est différente de zéro, la référence forte est valide et l’objet est accessible. Lorsque le nombre de référence forte devient égal à zéro, la référence forte n’est pas valide et que l’objet n’est pas accessible.  
   
- Un objet WeakReference est généralement utilisé pour représenter un objet dont l'existence est contrôlée par un thread ou une application externe.  Par exemple, construisez un objet WeakReference à partir d'une référence à un fichier objet.  Lorsque le fichier est ouvert, la référence forte est valide.  Mais si le fichier est fermé, la référence forte devient non valide.  
+ Un objet WeakReference est généralement utilisé pour représenter un objet dont l’existence est contrôlée par un thread externe ou une application. Par exemple, construisez un objet WeakReference à partir d’une référence à un objet fichier. Pendant que le fichier est ouvert, la référence forte est valide, mais si le fichier est fermé, la référence forte devient non valide.  
   
- Les méthodes de WeakReference sont thread\-safe.  
+ Les méthodes de WeakReference sont thread-safe.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[WeakReference::WeakReference, constructeur](../windows/weakreference-weakreference-constructor.md)|Initialise une nouvelle instance de la classe WeakReference.|  
-|[WeakReference::~WeakReference, destructeur](../windows/weakreference-tilde-weakreference-destructor.md)|Libère \(détruit\) l'instance actuelle de la classe WeakReference.|  
+|[WeakReference::~WeakReference, destructeur](../windows/weakreference-tilde-weakreference-destructor.md)|Désinitialise (détruit) l’instance actuelle de la classe WeakReference.|  
   
-### Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|[WeakReference::DecrementStrongReference, méthode](../windows/weakreference-decrementstrongreference-method.md)|Décrémente le décompte de références fortes de l'objet WeakReference actuel.|  
-|[WeakReference::IncrementStrongReference, méthode](../windows/weakreference-incrementstrongreference-method.md)|Incrémente le décompte de références fortes de l'objet WeakReference actuel.|  
-|[WeakReference::Resolve, méthode](../windows/weakreference-resolve-method.md)|Définit le pointeur spécifié vers la valeur de la référence forte actuelle si le décompte de références fortes est différent de zéro.|  
-|[WeakReference::SetUnknown, méthode](../windows/weakreference-setunknown-method.md)|Définit la référence forte de l'objet WeakReference actuel au pointeur de l'interface spécifiée.|  
+|[WeakReference::DecrementStrongReference, méthode](../windows/weakreference-decrementstrongreference-method.md)|Décrémente le fort décompte de références de l’objet WeakReference actuel.|  
+|[WeakReference::IncrementStrongReference, méthode](../windows/weakreference-incrementstrongreference-method.md)|Incrémente le décompte de références fort de l’objet WeakReference actuel.|  
+|[WeakReference::Resolve, méthode](../windows/weakreference-resolve-method.md)|Définit le pointeur spécifié à la valeur actuelle de la référence forte si le nombre de référence forte est différente de zéro.|  
+|[WeakReference::SetUnknown, méthode](../windows/weakreference-setunknown-method.md)|Définit la référence forte de l’objet WeakReference actuel sur le pointeur d’interface spécifié.|  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `WeakReference`  
   
-## Configuration requise  
- **En\-tête:** implements.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** implements.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

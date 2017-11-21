@@ -1,89 +1,89 @@
 ---
-title: "Utilisation des recordsets ODBC MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ODBC (recordsets)"
-  - "recordsets, ODBC MFC"
+title: Utiliser des Recordsets ODBC MFC | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- recordsets, MFC ODBC
+- ODBC recordsets
 ms.assetid: ebde4180-e3de-474a-a5ab-6135e41763a7
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 114725aad521edc30b9e33f0be699dc6019d15d2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Utilisation des recordsets ODBC MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ces rubriques vous expliquent comment utiliser les recordsets ODBC avec MFC.  
+# <a name="use-mfc-odbc-recordsets"></a>Utilisation des recordsets ODBC MFC
+Ces rubriques expliquent l’utilisation des recordsets ODBC MFC.  
   
-## Dans cette section  
+## <a name="in-this-section"></a>Dans cette section  
   
-### Tâches générales de recordsets  
+### <a name="general-recordset-tasks"></a>Tâches générales de recordsets  
   
--   [Choisir un type de recordset ODBC](../../data/odbc/recordset-odbc.md)  
+-   [Choisir un type de jeu d’enregistrements ODBC](../../data/odbc/recordset-odbc.md)  
   
--   [Lancer une nouvelle requête sur un recordset](../../data/odbc/recordset-requerying-a-recordset-odbc.md)  
+-   [Actualiser un jeu d’enregistrements](../../data/odbc/recordset-requerying-a-recordset-odbc.md)  
   
 -   [Déclarer une classe de recordset pour une table](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)  
   
 -   [Déclarer une classe de recordset pour une requête prédéfinie](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)  
   
-### Conception et implémentation de recordset  
+### <a name="recordset-design-and-implementation"></a>Jeu d’enregistrements de conception et implémentation  
   
--   [Apprendre l'échange de champs d'enregistrements \(RFX\)](../../data/odbc/record-field-exchange-rfx.md)  
+-   [En savoir plus sur l’échange de champs d’enregistrements (RFX)](../../data/odbc/record-field-exchange-rfx.md)  
   
--   [Échanger des données entre un objet recordset et un objet database](../../data/odbc/record-field-exchange-using-rfx.md)  
+-   [Échanger des données entre une base de données et un objet recordset](../../data/odbc/record-field-exchange-using-rfx.md)  
   
--   [Personnaliser le code de recordset écrit par les Assistants](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)  
+-   [Personnaliser le code de jeu d’enregistrements produit par les Assistants](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)  
   
--   [Utiliser les fonctions RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)  
+-   [Utilisez les fonctions d’exchange (RFX) des champs d’enregistrements](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)  
   
-### Performance et avantages des recordsets  
+### <a name="recordset-performance-and-convenience"></a>Raisons de commodité et de performances de l’ensemble d’enregistrements  
   
--   [Ajouter globalement des enregistrements avec un recordset](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
+-   [Ajouter des enregistrements en bloc avec un jeu d’enregistrements](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
   
--   [Filtrer des enregistrements dans un recordset](../../data/odbc/recordset-filtering-records-odbc.md)  
+-   [Filtrer les enregistrements dans un jeu d’enregistrements](../../data/odbc/recordset-filtering-records-odbc.md)  
   
-### Opérations de recordset  
+### <a name="recordset-operations"></a>Opérations de jeu d’enregistrements  
   
--   [Ajouter globalement des enregistrements avec un recordset](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
+-   [Ajouter des enregistrements en bloc avec un jeu d’enregistrements](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
   
--   [Lancer une nouvelle requête sur un recordset](../../data/odbc/recordset-requerying-a-recordset-odbc.md)  
+-   [Actualiser un jeu d’enregistrements](../../data/odbc/recordset-requerying-a-recordset-odbc.md)  
   
--   [Filtrer des enregistrements dans un recordset](../../data/odbc/recordset-filtering-records-odbc.md)  
+-   [Filtrer les enregistrements dans un jeu d’enregistrements](../../data/odbc/recordset-filtering-records-odbc.md)  
   
--   [Trier des enregistrements dans un recordset](../../data/odbc/recordset-sorting-records-odbc.md)  
+-   [Trier des enregistrements dans un jeu d’enregistrements](../../data/odbc/recordset-sorting-records-odbc.md)  
   
--   [Paramétrer un recordset](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
+-   [Paramétrer un jeu d’enregistrements](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
   
--   [Passer des valeurs de paramètre à un recordset lors de l'exécution](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
+-   [Passer des valeurs de paramètre à un jeu d’enregistrements en cours d’exécution](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
   
--   [Effectuer une jointure avec un recordset](../../data/odbc/recordset-performing-a-join-odbc.md)  
+-   [Effectuer une jointure avec un jeu d’enregistrements](../../data/odbc/recordset-performing-a-join-odbc.md)  
   
--   [Verrouiller des enregistrements dans un recordset](../../data/odbc/recordset-locking-records-odbc.md)  
+-   [Verrouiller des enregistrements dans un jeu d’enregistrements](../../data/odbc/recordset-locking-records-odbc.md)  
   
--   [Utiliser de grands éléments de données dans un recordset](../../data/odbc/recordset-working-with-large-data-items-odbc.md)  
+-   [Travailler avec des éléments de données de grande taille dans un jeu d’enregistrements](../../data/odbc/recordset-working-with-large-data-items-odbc.md)  
   
--   [Obtenir des calculs de totaux et autres résultats de regroupement dans un recordset](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)  
+-   [Obtenir des totaux et autres résultats de regroupement dans un jeu d’enregistrements](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)  
   
-### Sélection de recordset et SQL  
+### <a name="recordset-selection-and-sql"></a>Sélection de Recordset et SQL  
   
--   [Sélectionner des enregistrements dans une source de données ODBC](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)  
+-   [Sélectionner des enregistrements à partir d’une source de données ODBC](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)  
   
--   [Personnaliser la chaîne SQL pour un recordset](../../data/odbc/sql-customizing-your-recordset’s-sql-statement-odbc.md)  
+-   [Personnaliser la chaîne SQL pour un jeu d’enregistrements](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)  
   
-### Liaison dynamique de recordsets  
+### <a name="dynamic-binding-of-recordsets"></a>Liaison dynamique de jeux d’enregistrements  
   
--   [Lier dynamiquement des colonnes de données dans un recordset lors de l'exécution](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)  
+-   [Liez les colonnes de données dans un jeu d’enregistrements dynamiquement au moment de l’exécution](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)  
   
-## Voir aussi  
- [ODBC \(Open Database Connectivity\)](../../data/odbc/open-database-connectivity-odbc.md)
+## <a name="see-also"></a>Voir aussi  
+ [ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

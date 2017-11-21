@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -78,33 +77,17 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::get_yx
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 4ead4c4bd9aac91c4a0db7e2dfbc4976664120bd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 50f85b5582fbafa3d79a611f92009d9254b58101
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="double3-class"></a>double_3, classe
 Représente un vecteur court de trois valeurs de type double.  
@@ -127,7 +110,7 @@ class double_3;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[double_3 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments à 0.|  
+|[double_3 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -224,7 +207,7 @@ class double_3;
 |double_3::ZY||  
 |double_3::ZYX||  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `double_3`  
   
 ## <a name="requirements"></a>Spécifications  
@@ -234,7 +217,7 @@ class double_3;
   
 ##  <a name="ctor"></a>double_3 
 
- Par défaut constructeur initialise tous les éléments à 0.  
+ Par défaut constructeur initialise tous les éléments par 0.  
   
 ```  
 double_3() restrict(amp,
@@ -294,7 +277,7 @@ explicit inline double_3(
  La valeur pour initialiser l’élément 2.  
   
  `_V`  
- La valeur pour l’initialisation.  
+ La valeur de l’initialisation.  
   
  `_Other`  
  Objet utilisé pour initialiser.  
@@ -307,4 +290,3 @@ static const int size = 3;
   
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
-

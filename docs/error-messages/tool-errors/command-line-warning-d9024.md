@@ -1,46 +1,43 @@
 ---
-title: "Avertissement de ligne de commande D9024 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "D9024"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "D9024"
+title: Avertissement de ligne de commande D9024 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: D9024
+dev_langs: C++
+helpviewer_keywords: D9024
 ms.assetid: daf4896d-223d-4af0-9b6d-89109cf3d1bb
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7898ad566c45b8badef971afb72fbaf038ef3a4b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement de ligne de commande D9024
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-type de fichier source non reconnu 'NomFichier', fichier objet pris par défaut  
+# <a name="command-line-warning-d9024"></a>Avertissement de ligne de commande D9024
+le fichier 'nom_fichier' de type de source non reconnu, object pris par défaut du fichier  
   
- L'extension du fichier spécifié n'a pas été reconnue.  Le fichier a été considéré comme un fichier objet et passé à l'éditeur de liens.  
+ L’extension du fichier spécifié n’a pas été reconnue. Le fichier a été considérée comme un fichier objet et a été passé à l’éditeur de liens.  
   
- Les extensions reconnues sont les suivantes :  
+ Les extensions suivantes sont reconnues :  
   
--   .c \(fichier source C\)  
+-   .c (fichier de code source C)  
   
--   .cxx \(fichier source C\+\+\)  
+-   .cxx (fichier de code source C++)  
   
--   .cpp \(fichier source C\+\+\)  
+-   .cpp (fichier de code source C++)  
   
--   .obj \(fichier objet\)  
+-   .obj (fichier objet)  
   
--   .lib \(fichier bibliothèque\)  
+-   .lib (fichier bibliothèque)  
   
--   .def \(fichier de définition de module\)  
+-   .def (fichier de définition de module)  
   
--   .exp \(fichier d'exportation de l'éditeur de liens, créé par LINK \/LIB\)
+-   .exp (l’éditeur de liens exporte le fichier créé par LINK /LIB)

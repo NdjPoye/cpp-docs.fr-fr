@@ -1,30 +1,30 @@
 ---
-title: "Testing a Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Test Dialog command"
-  - "testing, dialog boxes"
-  - "dialog boxes, testing"
+title: "Test d’une boîte de dialogue | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Test Dialog command
+- testing, dialog boxes
+- dialog boxes, testing
 ms.assetid: 45034ee9-c554-4f4b-8c46-6ddefdee8951
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ca6e6cd8dd9f7d67ba8a000f33143a12c0978a25
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Testing a Dialog Box
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Lorsque vous créez une boîte de dialogue, vous pouvez simuler et tester son comportement au moment de l’exécution sans compiler votre programme. Dans ce mode, vous pouvez :  
+# <a name="testing-a-dialog-box"></a>Test d’une boîte de dialogue
+Lorsque vous créez une boîte de dialogue, vous pouvez simuler et tester son comportement au moment de l’exécution sans compiler votre programme. Dans ce mode, vous pouvez :  
   
 -   Taper du texte, effectuer des sélections dans des listes de zone de liste déroulante, activer ou désactiver des options, et choisir des commandes  
   
@@ -37,21 +37,22 @@ Lorsque vous créez une boîte de dialogue, vous pouvez simuler et tester son co
     > [!NOTE]
     >  Les connexions au code de boîte de dialogue effectuées à l’aide des Assistants ne sont pas incluses dans la simulation.  
   
- Quand vous testez une boîte de dialogue, elle s’affiche généralement à un emplacement qui est relatif à la fenêtre principale du programme. Si vous avez affecté la valeur True à la propriété Absolute Align de la boîte de dialogue, celle\-ci s’affiche à une position relative au coin supérieur gauche de l’écran.  
+ Quand vous testez une boîte de dialogue, elle s’affiche généralement à un emplacement qui est relatif à la fenêtre principale du programme. Si vous avez affecté la valeur True à la propriété Absolute Align de la boîte de dialogue, celle-ci s’affiche à une position relative au coin supérieur gauche de l’écran.  
   
-### Pour tester une boîte de dialogue  
+### <a name="to-test-a-dialog-box"></a>Pour tester une boîte de dialogue  
   
 1.  Lorsque l’Éditeur de boîtes de dialogue est la fenêtre active, dans la barre de menus, choisissez **Format**, **Tester la boîte de dialogue**.  
   
 2.  Pour arrêter la simulation, appuyez sur Échap ou sélectionnez simplement le bouton **Fermer** dans la boîte de dialogue que vous testez.  
   
- Pour plus d’informations sur la façon d’ajouter des ressources aux projets managés, consultez [Ressources dans des applications de bureau](../Topic/Resources%20in%20Desktop%20Apps.md).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index).  
   
  Spécifications  
   
  Win32  
   
-## Voir aussi  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
- [Dialog Editor](../mfc/dialog-editor.md)   
- [Affichage ou masquage de la barre d’outils Éditeur de boîtes de dialogue](../mfc/showing-or-hiding-the-dialog-editor-toolbar.md)
+## <a name="see-also"></a>Voir aussi  
+ [Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)   
+ [Éditeur de boîte de dialogue](../windows/dialog-editor.md)   
+ [Affichage ou masquage de la barre d’outils Éditeur de boîtes de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)
+

@@ -1,37 +1,37 @@
 ---
-title: "_mm_insert_si64, _mm_inserti_si64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_inserti_si64"
-  - "_mm_insert_si64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "insertq, instruction"
-  - "_mm_insert_si64 intrinsèque"
-  - "_mm_inserti_si64 intrinsèque"
+title: _mm_insert_si64, _mm_inserti_si64 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _mm_inserti_si64
+- _mm_insert_si64
+dev_langs: C++
+helpviewer_keywords:
+- insertq instruction
+- _mm_insert_si64 intrinsic
+- _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 45a69efa4e2b78009065c218924882af92d6bd1d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# _mm_insert_si64, _mm_inserti_si64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64, _mm_inserti_si64
+**Section spécifique à Microsoft**  
   
- Génère des instructions d' `insertq` d'insérer des bits de son deuxième dans son premier opérande.  
+ Génère le `insertq` instruction pour insérer des bits de son second opérande dans son premier opérande.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 __m128i _mm_insert_si64(  
@@ -46,41 +46,41 @@ __m128i _mm_inserti_si64(
 );  
 ```  
   
-#### Paramètres  
- \[in\] `Source1`  
- Un champ 128 bits avec les données d'entrée dans ses 64 bits inférieurs dans lesquels il est inséré.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `Source1`  
+ Un champ de 128 bits avec des données d’entrée dans son 64 bits inférieurs dans lequel un champ sera inséré.  
   
- \[in\]    `Source2`  
- Un champ 128 bits avec les données à insérer dans ses bas bits.  Pour `_mm_insert_si64`, contient également un descripteur de champ dans ses bits élevés.  
+ [in]`Source2`  
+ Un champ de 128 bits avec les données à insérer dans ses bits de poids faibles.  Pour `_mm_insert_si64`, contient également un descripteur de champ dans son bits de poids fort.  
   
- \[in\]    `Length`  
+ [in]`Length`  
  Une constante entière qui spécifie la longueur du champ à insérer.  
   
- \[in\]    `Index`  
- Une constante entière qui spécifie l'index de bits le moins significatif du champ dans lequel les données sont insérées.  
+ [in]`Index`  
+ Une constante entière qui spécifie l’index du bit le moins significatif du champ dans lequel les données seront insérées.  
   
-## Valeur de retour  
- Un champ 128 bits dont les 64 bits inférieurs contiennent les bits d'origine du bas 64 d' `Source1` au champ de bits spécifié a remplacé par les bas bits d' `Source2`.  les 64 bits supérieurs de la valeur de retour sont indéfinis.  
+## <a name="return-value"></a>Valeur de retour  
+ Un champ de 128 bits dont 64 bits inférieurs contiennent d’origine 64 bits de poids faibles de `Source1` avec le champ de bits spécifié remplacé par les bits de poids faibles `Source2`. Les 64 bits de poids supérieurs de la valeur de retour ne sont pas définis.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`_mm_insert_si64`|SSE4a|  
 |`_mm_inserti_si64`|SSE4a|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- Cette intrinsèque génère des instructions d' `insertq` d'insérer des bits d' `Source2` dans `Source1`.  Il existe deux versions de cette intrinsèque : `_mm_inserti_si64`, est la version immédiate, et `_mm_insert_si64` est le non\-immédiat.  Chaque version extrait un champ de bits d'une longueur données de Source2 et l'insère dans Source1.  Les bits extraits sont les bits les plus significatifs de Source2.  Le champ Source1 dans lequel les bits sont insérés est défini par la longueur et l'index de son bit le moins significatif.  Les valeurs de longueur et l'index sont le modèle pris 64, donc \-1 et 127 sont interprètes comme 63.  Si la somme de l'index \(réduit\) et la longueur du champ \(réduite\) de bit est supérieure à 64, les résultats sont indéfinis.  Une valeur zéro pour la taille du champ est interprétée comme 64.  Si l'index de longueur de champ et de bits sont les deux zéro, 63:0 de bits d' `Source2` sont insérés dans `Source1`.  Si la taille du champ est zéro mais l'index de bit est différente de zéro, les résultats sont indéfinis.  
+## <a name="remarks"></a>Remarques  
+ Cet intrinsèque génère le `insertq` instruction pour insérer des bits de `Source2` dans `Source1`. Il existe deux versions de cette intrinsèques : `_mm_inserti_si64`, est la version immédiate, et `_mm_insert_si64` est celui non immédiate.  Chaque version extrait un champ de bits d’une longueur donnée Source2 et l’insère dans Source1.  Les extraits sont les bits de poids de Source2.  Le Source1 du champ dans lequel ces bits seront insérées est défini par la longueur et l’index de son bit le moins significatif.  Les valeurs de la longueur et les index sont extraites mod 64, par conséquent, -1 et 127 sont interprétés en tant que 63. Si la somme des index de bits (réduit) et la longueur de champ (réduit) est supérieure à 64, les résultats sont indéfinis. Une valeur égale à zéro pour la longueur de champ est interprétée comme 64.  Si l’index de longueur et les bits du champ est les deux zéro, 63:0 de bits de `Source2` sont insérées dans `Source1`.  Si la longueur de champ est égal à zéro, mais l’index de bits est différente de zéro, les résultats sont indéfinis.  
   
- Dans un appel à \_mm\_insert\_si64, la taille du champ est contenue dans le 77:72 de bits de Source2 et l'index dans le 69:64 de bits.  
+ Dans un appel à _mm_insert_si64, la longueur de champ est contenue dans 77:72 de bits de Source2 et de l’index dans 69:64 de bits.  
   
- Si vous appelez `_mm_inserti_si64`avec les arguments que le compilateur ne peut pas déterminer pour être des constantes entières, le compilateur génère du code pour compacter ces valeurs dans un registre XMM et appeler `_mm_insert_si64`.  
+ Si vous appelez `_mm_inserti_si64` avec des arguments que le compilateur ne peut pas déterminer à être des constantes entières, le compilateur génère du code pour le pack de ces valeurs dans un registre XMM et appeler `_mm_insert_si64`.  
   
- Pour déterminer la prise en charge du matériel pour l'instruction d' `insertq` appelez l'intrinsèque de `__cpuid` avec `InfoType=0x80000001` et le bit de contrôle 6 d' `CPUInfo[2] (ECX)`.  Ce bit est 1 si l'instruction est prise en charge, et 0 sinon.  Si vous exécutez le code qui utilise cette intrinsèque sur le matériel qui ne prend pas en charge l'instruction d' `insertq` , les résultats sont imprévisibles.  
+ Pour déterminer la prise en charge matérielle pour le `insertq` appel le `__cpuid` intrinsèque avec `InfoType=0x80000001` et vérifiez le bit 6 de `CPUInfo[2] (ECX)`. Ce bit sera égale à 1 si l’instruction est prise en charge et 0 dans le cas contraire. Si vous exécutez le code qui utilise cet intrinsèque sur du matériel qui ne prend pas en charge la `insertq` instruction, les résultats sont imprévisibles.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // Compile this sample with: /EHsc  
@@ -118,12 +118,15 @@ main()
 }  
 ```  
   
-  **result1 \= 0xfffffffff3210fff**  
-**result2 \= 0xfffffffff3210fff**  
-**result3 \= 0xfffffffff3210fff**   
-## détail de FIN Microsoft  
- copyright 2007 par Advanced Micro Devices, Inc.  Tous droits réservés.  reproduit avec l'autorisation d'Advanced Micro Devices, Inc.  
+```Output  
+result1 = 0xfffffffff3210fff  
+result2 = 0xfffffffff3210fff  
+result3 = 0xfffffffff3210fff  
+```  
   
-## Voir aussi  
- [\_mm\_extract\_si64, \_mm\_extracti\_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)   
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+**FIN de la section spécifique à Microsoft**  
+ Copyright 2007 par Advanced Micro Devices, Inc. Tous droits réservés. Reproduit avec l’autorisation d’Advanced Micro Devices, Inc.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)   
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

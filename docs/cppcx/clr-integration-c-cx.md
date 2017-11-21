@@ -1,31 +1,34 @@
 ---
-title: "Int&#233;gration&#160;CLR (C++/CX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/22/2017"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Intégration du CLR (C + c++ / CX) | Documents Microsoft"
+ms.custom: 
+ms.date: 01/22/2017
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 76e213cf-2f3d-4181-b35b-9fd25d5b307c
-caps.latest.revision: 10
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 0220d13f6c378d5081f6043382e7d58888ff3c2b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Int&#233;gration&#160;CLR (C++/CX)
-Certains types [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] reçoivent un traitement spécial en [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] et les langages basés sur le Common Language Runtime \(CLR\). Cet article décrit comment plusieurs types dans un langage sont mappés à un autre langage. Par exemple, le CLR mappe Windows.Foundation.IVector à System.Collections.IList, Windows.Foundation.IMap à System.Collections.IDictionary, et ainsi de suite. De même, [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] mappe spécialement des types tels que Platform::Delegate et Platform::String.  
+# <a name="clr-integration-ccx"></a>Intégration CLR (C++/CX)
+Certains types Windows Runtime reçoivent un traitement spécial dans C + c++ / CX et les langues qui sont basées sur le common language runtime (CLR). Cet article décrit comment plusieurs types dans un langage sont mappés à un autre langage. Par exemple, le CLR mappe Windows.Foundation.IVector à System.Collections.IList, Windows.Foundation.IMap à System.Collections.IDictionary, et ainsi de suite. De même, C + c++ / CX mappe spécialement des types tels que Platform::Delegate et Platform::String.  
   
-## Mappage du [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] à [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]  
- Lorsque [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] lit un fichier de métadonnées Windows \(.winmd\), le compilateur mappe automatiquement les espaces de noms et les types [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] communs aux espaces de noms et aux types [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]. Par exemple, le type [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] numérique `UInt32` est automatiquement mappé à `default::uint32`.  
+## <a name="mapping-the-windows-runtime-to-ccx"></a>Mappage de Windows Runtime C + c++ / CX  
+ Lorsque C + c++ / CX lit un fichier de métadonnées (.winmd) de Windows, le compilateur mappe automatiquement les types et les espaces de noms communs Windows Runtime C + c++ / CX espaces de noms et les types. Par exemple, le type Windows Runtime numérique `UInt32` est automatiquement mappé à `default::uint32`.  
   
- [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] mappe plusieurs autres types [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] à l’espace de noms **Platform**. Par exemple, le handle HSTRING **Windows::Foundation**, qui représente une chaîne Unicode en lecture seule, est mappé à la classe [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]`Platform::String`.  Lorsqu’une opération [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] retourne une erreur HRESULT, elle est mappée à un [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] `Platform::Exception`.  Pour plus d'informations, consultez [Built\-in Types](http://msdn.microsoft.com/fr-fr/acc196fd-09da-4882-b554-6c94685ec75f).  
+ C + c++ / CX mappe plusieurs autres types Windows Runtime pour le **plateforme** espace de noms. Par exemple, le **Windows::Foundation** handle HSTRING, qui représente une chaîne de texte Unicode en lecture seule, est mappé à C + c++ / CX `Platform::String` classe. Lorsqu’une opération de Windows Runtime retourne une erreur HRESULT, il est mappé à un C + c++ / CX `Platform::Exception`. Pour plus d'informations, consultez [Built-in Types](http://msdn.microsoft.com/en-us/acc196fd-09da-4882-b554-6c94685ec75f).  
   
- [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] mappe également certains types dans les espaces de noms [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] pour améliorer les fonctionnalités du type. Pour ces types, [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] fournit des constructeurs d’assistance et des méthodes qui sont propres à C\+\+ et ne sont pas disponibles dans le fichier .winmd standard du type.  
+ C + c++ / CX mappe également certains types dans les espaces de noms Windows Runtime pour améliorer les fonctionnalités du type. Pour ces types, C + c++ / CX fournit des constructeurs d’assistance et les méthodes qui sont spécifiques à C++ et ne sont pas disponibles dans le fichier de .winmd standard du type.  
   
- Les listes suivantes présentent les structs de valeurs qui prennent en charge les nouvelles méthodes d’assistance et les nouveaux constructeurs. Si vous avez déjà écrit du code qui utilise des listes d’initialisation de struct, modifiez\-le pour utiliser les constructeurs qui viennent d’être ajoutés.  
+ Les listes suivantes présentent les structs de valeurs qui prennent en charge les nouvelles méthodes d’assistance et les nouveaux constructeurs. Si vous avez déjà écrit du code qui utilise des listes d’initialisation de struct, modifiez-le pour utiliser les constructeurs qui viennent d’être ajoutés.  
   
  **Windows::Foundation**  
   
@@ -67,10 +70,10 @@ Certains types [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] reçoivent un traite
   
 -   Matrix3D  
   
-## Mappage du CLR à [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]  
- Lorsque les compilateurs Visual C\+\+ ou C\# lisent un fichier .winmd, ils mappent automatiquement certains types dans le fichier de métadonnées aux types [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] ou CLR appropriés. Par exemple, dans le CLR, l’interface IVector\<T\>  est mappée à IList\<T\>. En revanche, en [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)], l’interface IVector\<T\> n’est pas mappée à un autre type.  
+## <a name="mapping-the-clr-to-ccx"></a>Mappage du CLR à C + c++ / CX  
+ Lorsque les compilateurs Visual C++ ou c# lisent un fichier .winmd, ils mappent automatiquement certains types dans le fichier de métadonnées appropriées C + c++ / CX ou CLR types. Par exemple, dans le CLR, le IVector\<T > interface est mappée à IList\<T >. Mais en langage c++ / CX, le IVector\<T > interface n’est pas mappé à un autre type.  
   
- IReference\<T\> dans le [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] est mappée à Nullable\<T\> dans .NET.  
+ IReference\<T > dans le Windows Runtime est mappée à Nullable\<T > dans .NET.  
   
-## Voir aussi  
- [Interopérabilité avec d'autres langages](../cppcx/interoperating-with-other-languages-c-cx.md)
+## <a name="see-also"></a>Voir aussi  
+ [Interopérabilité avec d’autres langages](../cppcx/interoperating-with-other-languages-c-cx.md)

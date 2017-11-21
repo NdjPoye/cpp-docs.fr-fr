@@ -1,111 +1,110 @@
 ---
-title: "Cr&#233;ation d&#39;un consommateur simple | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "consommateurs OLE DB, créer"
+title: "Création d’un consommateur Simple | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9ab1066d9a1f56906fcbecca968da07b12a126c5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Cr&#233;ation d&#39;un consommateur simple
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Vous pouvez utiliser l'Assistant Projet ATL et l'Assistant Consommateur OLE DB pour générer un consommateur des modèles OLE DB.  
+# <a name="creating-a-simple-consumer"></a>Création d'un consommateur simple
+Utilisez l’Assistant Projet ATL et l’Assistant Consommateur OLE DB ATL pour générer un consommateur des modèles OLE DB.  
   
-#### Pour créer une application console destinée à un consommateur OLE DB  
+#### <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>Pour créer une application console destinée à un consommateur OLE DB  
   
-1.  Dans le menu **Fichier**, cliquez sur **Nouveau**, puis sur **Projet**.  
+1.  Dans le menu **Fichier** , cliquez sur **Nouveau**, puis sur **Projet**.  
   
-     La boîte de dialogue **Nouveau projet** s'affiche.  
+     La boîte de dialogue **Nouveau projet** s’affiche.  
   
-2.  Dans le volet Types de projets, cliquez sur le dossier **Projets Visual C\+\+**, puis dans le volet Modèles, cliquez sur l'icône **Projet Win32**.  Dans la zone **Nom**, entrez un nom pour le projet, par exemple **MyCons**.  
+2.  Dans le volet Types de projets, cliquez sur le **projets Visual C++** dossier, puis cliquez sur le **projet Win32** icône dans le volet Modèles. Dans le **nom** , entrez le nom de votre projet, par exemple, **MyCons**.  
   
 3.  Cliquez sur **OK**.  
   
-     L'Assistant Projet Win32 apparaît.  
+     L’Assistant Projet Win32 s’affiche.  
   
-4.  Dans la page **Paramètres de l'application**, sélectionnez **Application console**, puis sélectionnez **Ajouter la prise en charge de ATL**.  
+4.  Sur le **paramètres de l’Application** page, sélectionnez **application Console**, puis sélectionnez **ajouter la prise en charge ATL**.  
   
-5.  Cliquez sur **Terminer** pour fermer l'Assistant et générer le projet.  
+5.  Cliquez sur **Terminer** pour fermer l’Assistant et générer le projet.  
   
- Ensuite, utilisez l'Assistant Consommateur OLE DB ATL pour ajouter un objet consommateur OLE DB.  
+ Ensuite, utilisez l’Assistant Consommateur OLE DB ATL pour ajouter un objet consommateur OLE DB.  
   
-#### Pour créer un consommateur via l'Assistant Consommateur OLE DB ATL  
+#### <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Pour créer un consommateur avec l’Assistant Consommateur OLE DB ATL  
   
-1.  Dans l'Affichage de classes, cliquez avec le bouton droit sur le projet `MyCons`.  
+1.  Dans l’affichage de classes, cliquez sur le `MyCons` projet.  
   
-2.  Dans le menu contextuel, cliquez sur **Ajouter**, puis sur **Ajouter une classe**.  
+2.  Dans le menu contextuel, cliquez sur **ajouter**, puis cliquez sur **ajouter une classe**.  
   
-     La boîte de dialogue **Ajouter une classe** s'affiche.  
+     Le **ajouter une classe** boîte de dialogue s’affiche.  
   
-3.  Dans le volet Catégories, cliquez sur le dossier **Visual C\+\+**, et dans le volet Modèles, cliquez sur l'icône **Consommateur OLE DB ATL**, puis cliquez sur **Ouvrir**.  
+3.  Dans le volet des catégories, cliquez sur **Visual C++**, cliquez sur le **consommateur OLE DB ATL** icône dans le volet Modèles, puis cliquez sur **ouvrir**.  
   
-     L'Assistant Consommateur OLE DB ATL apparaît.  
+     L’Assistant Consommateur OLE DB ATL s’affiche.  
   
-4.  Cliquez sur le bouton **Source de données**.  
+4.  Cliquez sur le **Source de données** bouton.  
   
-     La boîte de dialogue **Propriétés des liaisons de données** s'affiche.  
+     Le **propriétés des liaisons de données** boîte de dialogue s’affiche.  
   
-5.  Dans la boîte de dialogue **Propriétés des liaisons de données**, exécutez les tâches suivantes :  
+5.  Dans le **propriétés des liaisons de données** boîte de dialogue zone, procédez comme suit :  
   
-    -   Sous l'onglet **Fournisseur**, spécifiez un fournisseur OLE DB  
+    -   Sur le **fournisseur** onglet, spécifiez un fournisseur OLE DB.  
   
-    -   Sous l'onglet **Connexion**, spécifiez le nom du serveur, l'ID de connexion et le mot de passe de votre source de données, ainsi que la base de données sur le serveur  
-  
-    > [!NOTE]
-    >  La fonctionnalité **Autoriser l'enregistrement du mot de passe** de la boîte de dialogue **Propriétés des liaisons de données** présente un problème de sécurité.  Dans **Entrez des informations pour vous connecter au serveur**, il y a deux cases d'option : **Utiliser la sécurité intégrée de Windows NT** et **Utiliser un nom d'utilisateur et un mot de passe spécifiques**.  
+    -   Sur le **connexion** onglet, spécifiez le nom du serveur, ID de connexion et mot de passe pour votre source de données et la base de données sur le serveur.  
   
     > [!NOTE]
-    >  Si vous sélectionnez **Utiliser un nom d'utilisateur et un mot de passe spécifiques**, vous avez la possibilité d'enregistrer le mot de passe \(à l'aide de la case à cocher **Autoriser l'enregistrement du mot de passe**\). Cependant, cette option n'est pas sécurisée.  Il est recommandé de sélectionner **Utiliser la sécurité intégrée de Windows NT**. Cette option utilise Windows NT pour vérifier votre identité.  
+    >  Il existe un problème de sécurité avec le **autoriser l’enregistrement du mot de passe** fonctionnalité de la **propriétés des liaisons de données** boîte de dialogue. Dans **entrer des informations pour vous connecter au serveur**, il existe deux boutons radio : **la sécurité intégrée de Windows NT d’utilisation** et **utiliser un nom d’utilisateur spécifique et un mot de passe**.  
   
     > [!NOTE]
-    >  Si vous ne pouvez pas utiliser la sécurité intégrée de Windows NT, utilisez une application intermédiaire pour demander à l'utilisateur le mot de passe, ou pour stocker le mot de passe à un emplacement sécurisé \(et non pas dans le code source\).  
+    >  Si vous sélectionnez **utiliser un nom d’utilisateur spécifique et un mot de passe**, vous avez la possibilité d’enregistrer le mot de passe (à l’aide de la **autoriser l’enregistrement du mot de passe** case à cocher) ; Cependant, cette option n’est pas sécurisée. Il est recommandé de sélectionner **la sécurité intégrée de Windows NT d’utilisation**; cette option utilise Windows NT pour vérifier votre identité.  
   
-     Après avoir sélectionné le fournisseur et effectué d'autres paramétrages, cliquez sur **Tester la connexion** afin de vérifier les sélections opérées dans les pages de boîtes de dialogue précédentes.  Si la zone **Résultats** indique « `Test connection succeeded` », cliquez sur **OK** pour créer la liaison de données.  
+    > [!NOTE]
+    >  Si vous ne pouvez pas utiliser la sécurité intégrée de Windows NT, vous devez utiliser une application de couche intermédiaire pour inviter l’utilisateur pour le mot de passe ou pour stocker le mot de passe dans un emplacement avec les mécanismes de sécurité pour aider à protéger (et non dans le code source).  
   
-     La boîte de dialogue **Sélectionner l'objet de base de données** s'affiche.  
+     Après avoir sélectionné le fournisseur et autres paramètres, cliquez sur **tester la connexion** pour vérifier les sélections effectuées dans les pages de boîte de dialogue précédente. Si le **résultats** zone rapports `Test connection succeeded`, cliquez sur **OK** pour créer la liaison de données.  
   
-6.  Utilisez le contrôle d'arborescence pour sélectionner une table, une vue ou une procédure stockée.  Pour les besoins de cette procédure, sélectionnez la table Products dans la base de données Northwind.  
+     Le **sélectionner un objet de base de données** boîte de dialogue s’affiche.  
   
-7.  Cliquez sur **OK**.  Vous retournez à l'Assistant Consommateur OLE DB ATL.  
+6.  Utilisez le contrôle d’arborescence pour sélectionner une table, une vue ou une procédure stockée. Pour les besoins de cette procédure, sélectionnez la table Products de la base de données Northwind.  
   
-8.  L'Assistant renseigne les noms pour les zones `Class` et **.h file** en fonction du nom de la table, de la vue ou de la procédure stockée que vous avez sélectionnée.  Vous pouvez modifier ces noms, le cas échéant.  
+7.  Cliquez sur **OK**. Cela vous renvoie à l’Assistant Consommateur OLE DB ATL.  
   
-9. Désactivez la case à cocher **Avec attributs** pour que l'Assistant crée le code du consommateur à l'aide des [classes des modèles OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) au lieu de l'option par défaut [Attributs du consommateur OLE DB](../../windows/ole-db-consumer-attributes.md).  
+8.  L’Assistant renseigne les noms de `Class` et **fichier .h** basé sur le nom de la table, vue ou procédure stockée que vous avez sélectionné. Vous pouvez modifier ces noms si vous le souhaitez.  
   
-10. Sous **Type**, sélectionnez **Commande**.  
+9. Désactivez le **avec attributs** case à cocher pour que l’Assistant crée le code de consommateur à l’aide de [classes de modèles OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) au lieu de la valeur par défaut [attributs du consommateur OLE DB](../../windows/ole-db-consumer-attributes.md).  
   
-     L'Assistant crée un consommateur basé sur la classe [CCommand](../../data/oledb/ccommand-class.md) si vous sélectionnez **Commande**, ou un consommateur basé sur la classe [CTable](../../data/oledb/ctable-class.md) si vous sélectionnez **Table**.  La classe de table ou de commande est nommée selon l'objet sélectionné, mais vous pouvez modifier ce nom.  
+10. Sous **Type**, sélectionnez **commande**.  
   
-11. Sous **Prendre en charge**, laissez les cases à cocher **Modifier**, **Insérer** et **Supprimer** désactivées.  
+     L’Assistant crée un [CCommand](../../data/oledb/ccommand-class.md)-consommateur basé sur si vous sélectionnez **commande** ou un [CTable](../../data/oledb/ctable-class.md)-consommateur basé sur si vous sélectionnez **Table**. La classe de table ou de la commande est appelée après l’objet sélectionné, mais vous pouvez modifier le nom.  
   
-     Activez **Modifier**, **Insérer** et **Supprimer** pour prendre en charge la modification, l'insertion et la suppression des enregistrements du jeu de lignes, si nécessaire.  Pour plus d'informations sur l'enregistrement de données dans le magasin de données, consultez [Mise à jour des jeux de lignes](../../data/oledb/updating-rowsets.md).  
+11. Sous **prise en charge**, laissez le **modification**, **insérer**, et **supprimer** cases à cocher désactivées.  
+  
+     Sélectionnez le **modification**, **insérer**, et **supprimer** cases à cocher pour prendre en charge la modification, l’insertion et la suppression d’enregistrements dans l’ensemble de lignes, si nécessaire. Pour plus d’informations sur l’écriture de données pour les données de stockage, consultez [mise à jour des ensembles de lignes de](../../data/oledb/updating-rowsets.md).  
   
 12. Cliquez sur **Terminer** pour créer le consommateur.  
   
- L'Assistant génère une classe d'enregistrement utilisateur et une classe de commande, comme indiqué dans [Classes de consommateur générées par l'Assistant](../../data/oledb/consumer-wizard-generated-classes.md).  La classe de commande prend le nom que vous avez entré dans la zone `Class` de l'Assistant \(dans le cas présent, `CProducts`\) et la classe d'enregistrement utilisateur prend un nom de la forme « *ClassName*Accessor » \(dans le cas présent, `CProductsAccessor`\).  
+ L’Assistant génère une classe de commande et une classe d’enregistrement utilisateur, comme indiqué dans [Consumer Wizard-Generated Classes](../../data/oledb/consumer-wizard-generated-classes.md). La classe de commande aura le nom que vous avez entré dans le `Class` zone dans l’Assistant (dans ce cas, `CProducts`), et la classe d’enregistrement utilisateur aura un nom sous la forme «*ClassName*accesseur » (dans ce cas, `CProductsAccessor`).  
   
 > [!NOTE]
->  L'Assistant met la ligne suivante dans Products.h :  
+>  L’Assistant met la ligne suivante dans Products.h :  
   
 ```  
 #error Security Issue: The connection string may contain a password  
 ```  
   
 > [!NOTE]
->  Cette ligne empêche l'application consommateur de compiler et vous rappelle de vérifier votre chaîne de connexion pour les mots de passe codés en dur.  Après avoir vérifié votre chaîne de connexion, vous pouvez supprimer cette ligne de code.  
+>  Cette ligne empêche l’application de consommateur de la compilation et vous rappelle de vérifier votre chaîne de connexion pour les mots de passe codés en dur. Après avoir vérifié votre chaîne de connexion, vous pouvez supprimer cette ligne de code.  
   
-## Voir aussi  
- [Création d'un consommateur OLE DB en utilisant l'Assistant](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+## <a name="see-also"></a>Voir aussi  
+ [Création d’un consommateur OLE DB en utilisant l’Assistant](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

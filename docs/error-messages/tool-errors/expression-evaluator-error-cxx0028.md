@@ -1,34 +1,33 @@
 ---
-title: "&#201;valuateur d&#39;expression, erreur CXX0028 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0028"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0028"
-  - "CXX0028"
+title: "Évaluateur d’expression, erreur CXX0028 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0028
+dev_langs: C++
+helpviewer_keywords:
+- CAN0028
+- CXX0028
 ms.assetid: 172eb81f-c0b0-43b1-b418-766f35f1a561
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7a23af2ad5bca04ba9929408e9f5172a8eaa2074
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# &#201;valuateur d&#39;expression, erreur CXX0028
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-n'est pas un élément struct\/union  
+# <a name="expression-evaluator-error-cxx0028"></a>Évaluateur d'expression, erreur CXX0028
+élément struct/union  
   
- Une expression de la forme 'Struct.Member' ou 'pStruct\-\>Member' est spécifiée mais \<member\> n'est pas un élément de la structure.  
+ Une expression de la forme 'Struct.Member' ou 'pStruct -> membre' a été spécifiée, mais \<membre > n’est pas un élément de la structure.  
   
- L'expression n'est peut\-être pas correctement mise entre parenthèses.  
+ L’expression ne peut pas être correctement entre parenthèses.  
   
- Erreur identique à CAN0028.
+ Cette erreur est identique à CAN0028.

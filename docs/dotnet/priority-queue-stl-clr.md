@@ -1,36 +1,35 @@
 ---
-title: "priority_queue (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "en-tête <cliext/queue> (STL/CLR)"
-  - "en-tête <queue> (STL/CLR)"
-  - "priority_queue (classe) (STL/CLR)"
+title: priority_queue (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue
+dev_langs: C++
+helpviewer_keywords:
+- priority_queue class [STL/CLR]
+- <queue> header [STL/CLR]
+- <cliext/queue> header [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7eb84d1979d3655c49e5fe089fe04d44708d16a0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe de modèle décrit un objet qui contrôle une séquence ordonnée de longueur variable d'éléments ayant un accès limité.  Vous utilisez l'adaptateur `priority_queue` de conteneur pour gérer un conteneur sous\-jacent en file de priorité.  
+# <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
+La classe de modèle décrit un objet qui contrôle une longueur variable ordonné séquence d’éléments qui a un accès limité. Utilisation de l’adaptateur de conteneur `priority_queue` pour gérer un conteneur sous-jacent comme une file d’attente de priorité.  
   
- Dans la description ci\-dessous, `GValue` est le même que `Value` sauf si ce dernier est un type de référence, auquel cas il vaut `Value^`.  De même, `GContainer` est le même que `Container` sauf si ce dernier est un type de référence, auquel cas il vaut `Container^`.  
+ Dans la description ci-dessous, `GValue` est identique à `Value` , sauf si ce dernier est un type référence, auquel cas il est `Value^`. De même, `GContainer` est identique à `Container` , sauf si ce dernier est un type référence, auquel cas il est `Container^`.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Value,  
@@ -41,90 +40,90 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  Valeur  
  Type d'un élément dans la séquence contrôlée.  
   
  Conteneur  
- Type du conteneur sous\-jacent.  
+ Type du conteneur sous-jacent.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-|Définition de type|Description|  
-|------------------------|-----------------|  
-|[priority\_queue::const\_reference](../dotnet/priority-queue-const-reference-stl-clr.md)|Type d'une référence constante à un élément.|  
-|[priority\_queue::container\_type](../dotnet/priority-queue-container-type-stl-clr.md)|Type du conteneur sous\-jacent.|  
-|[priority\_queue::difference\_type](../dotnet/priority-queue-difference-type-stl-clr.md)|Type d'une distance signée entre deux éléments.|  
-|[priority\_queue::generic\_container](../dotnet/priority-queue-generic-container-stl-clr.md)|Le type de l'interface générique pour l'adaptateur de conteneur.|  
-|[priority\_queue::generic\_value](../dotnet/priority-queue-generic-value-stl-clr.md)|Le type d'un élément pour une utilisation avec l'interface générique pour l'adaptateur du conteneur.|  
-|[priority\_queue::reference](../dotnet/priority-queue-reference-stl-clr.md)|Type d'une référence à un élément.|  
-|[priority\_queue::size\_type](../dotnet/priority-queue-size-type-stl-clr.md)|Type d'une distance signée entre deux éléments.|  
-|[priority\_queue::value\_compare](../dotnet/priority-queue-value-compare-stl-clr.md)|Le délégué de classement pour deux éléments.|  
-|[priority\_queue::value\_type](../dotnet/priority-queue-value-type-stl-clr.md)|Le type d'un élément.|  
+|Définition de types|Description|  
+|---------------------|-----------------|  
+|[priority_queue::const_reference (STL/CLR)](../dotnet/priority-queue-const-reference-stl-clr.md)|Type d'une référence constante à un élément.|  
+|[priority_queue::container_type (STL/CLR)](../dotnet/priority-queue-container-type-stl-clr.md)|Type du conteneur sous-jacent.|  
+|[priority_queue::difference_type (STL/CLR)](../dotnet/priority-queue-difference-type-stl-clr.md)|Type d'une distance signée entre deux éléments.|  
+|[priority_queue::generic_container (STL/CLR)](../dotnet/priority-queue-generic-container-stl-clr.md)|Le type de l’interface générique pour l’adaptateur de conteneur.|  
+|[priority_queue::generic_value (STL/CLR)](../dotnet/priority-queue-generic-value-stl-clr.md)|Le type d’un élément de l’interface générique de l’adaptateur de conteneur.|  
+|[priority_queue::reference (STL/CLR)](../dotnet/priority-queue-reference-stl-clr.md)|Type d'une référence à un élément.|  
+|[priority_queue::size_type (STL/CLR)](../dotnet/priority-queue-size-type-stl-clr.md)|Type d'une distance signée entre deux éléments.|  
+|[priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md)|Délégué de classement pour les deux éléments.|  
+|[priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)|Type d’un élément.|  
   
-|Méthode|Description|  
-|-------------|-----------------|  
-|[priority\_queue::assign](../dotnet/priority-queue-assign-stl-clr.md)|Remplace tous les éléments.|  
-|[priority\_queue::empty](../dotnet/priority-queue-empty-stl-clr.md)|Teste si aucun élément n'est présent.|  
-|[priority\_queue::get\_container](../dotnet/priority-queue-get-container-stl-clr.md)|Accède au conteneur sous\-jacent.|  
-|[priority\_queue::pop](../dotnet/priority-queue-pop-stl-clr.md)|Supprime l'élément de priorité maximale.|  
-|[priority\_queue::priority\_queue](../dotnet/priority-queue-priority-queue-stl-clr.md)|Construit un objet container.|  
-|[priority\_queue::push](../dotnet/priority-queue-push-stl-clr.md)|Ajoute un nouvel élément.|  
-|[priority\_queue::size](../dotnet/priority-queue-size-stl-clr.md)|Compte le nombre d'éléments.|  
-|[priority\_queue::top](../dotnet/priority-queue-top-stl-clr.md)|Accède à l'élément ayant la priorité la plus élevée.|  
-|[priority\_queue::to\_array](../dotnet/priority-queue-to-array-stl-clr.md)|Copie la séquence contrôlée dans un nouveau tableau.|  
-|[priority\_queue::value\_comp](../dotnet/priority-queue-value-comp-stl-clr.md)|Copie le délégué de classement pour deux éléments.|  
+|Fonction membre|Description|  
+|---------------------|-----------------|  
+|[priority_queue::assign (STL/CLR)](../dotnet/priority-queue-assign-stl-clr.md)|Remplace tous les éléments.|  
+|[priority_queue::empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)|Vérifie l'absence d'éléments.|  
+|[priority_queue::get_container (STL/CLR)](../dotnet/priority-queue-get-container-stl-clr.md)|Accède au conteneur sous-jacent.|  
+|[priority_queue::pop (STL/CLR)](../dotnet/priority-queue-pop-stl-clr.md)|Supprime l’élément de priorité hghest.|  
+|[priority_queue::priority_queue (STL/CLR)](../dotnet/priority-queue-priority-queue-stl-clr.md)|Construit un objet conteneur.|  
+|[priority_queue::push (STL/CLR)](../dotnet/priority-queue-push-stl-clr.md)|Ajoute un nouvel élément.|  
+|[priority_queue::size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)|Compte le nombre d'éléments.|  
+|[priority_queue::top (STL/CLR)](../dotnet/priority-queue-top-stl-clr.md)|Accède à l’élément de priorité la plus élevée.|  
+|[priority_queue::to_array (STL/CLR)](../dotnet/priority-queue-to-array-stl-clr.md)|Copie de la séquence contrôlée vers un nouveau tableau.|  
+|[priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)|Copie le délégué de classement pour les deux éléments.|  
   
 |Propriété|Description|  
-|---------------|-----------------|  
-|[priority\_queue::top\_item](../dotnet/priority-queue-top-item-stl-clr.md)|Accède à l'élément ayant la priorité la plus élevée.|  
+|--------------|-----------------|  
+|[priority_queue::top_item (STL/CLR)](../dotnet/priority-queue-top-item-stl-clr.md)|Accède à l’élément de priorité la plus élevée.|  
   
 |Opérateur|Description|  
-|---------------|-----------------|  
-|[priority\_queue::operator\=](../dotnet/priority-queue-operator-assign-stl-clr.md)|Remplace la séquence contrôlée.|  
+|--------------|-----------------|  
+|[priority_queue::operator= (STL/CLR)](../dotnet/priority-queue-operator-assign-stl-clr.md)|Remplace la séquence contrôlée.|  
   
-## Interfaces  
+## <a name="interfaces"></a>Interfaces  
   
 |Interface|Description|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Dupliquer un objet.|  
-|IPriorityQueue\<Value, Container\>|Conserver l'adaptateur générique de conteneur.|  
+|IPriorityQueue\<valeur, le conteneur >|Mettre à jour la carte de conteneur générique.|  
   
-## Notes  
- L'objet alloue et libère le stockage de la séquence qu'il contrôle par un conteneur sous\-jacent, de type `Container`, qui stocke les éléments de `Value` et s'agrandit à la demande.  Il contient la séquence ordonnée en tant que tas, avec l'élément de priorité la plus élevée \(l'élément maximal\) facilement accessible et amovible.  L'objet limite l'accès à l'empilement de nouveaux éléments et le dépilement de l'élément le plus élevé uniquement, implémentant ainsi une file de priorité.  
+## <a name="remarks"></a>Remarques  
+ L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un conteneur sous-jacent, de type `Container`, qui stocke `Value` éléments et à la demande. Il conserve la séquence ordonnée en tant que segment, avec l’élément de priorité la plus élevée (l’élément supérieur) facilement accessible et amovible. L’objet limite l’accès en exécutant un push de nouveaux éléments et dépilé simplement l’élément de priorité la plus élevée, mise en œuvre d’une file d’attente de priorité.  
   
- L'objet classifie la séquence qu'il contrôle en appelant un objet délégué stocké de type [priority\_queue::value\_compare](../dotnet/priority-queue-value-compare-stl-clr.md).  Vous pouvez spécifier l'objet délégué stocké lorsque vous construisez la priority\_queue; si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<(value_type, value_type)`.  Vous accédez à cet objet stocké en appelant la méthode [priority\_queue::value\_comp](../dotnet/priority-queue-value-comp-stl-clr.md)`()`.  
+ L’objet ordonne la séquence qu’il contrôle en appelant un objet délégué stocké de type [priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md). Vous pouvez spécifier l’objet délégué stockées lorsque vous construisez le priority_queue ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<(value_type, value_type)`. Pour accéder à cet objet stocké en appelant la fonction membre [priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`.  
   
- Un objet délégué de la sorte doit imposer un ordre strict faible sur les valeurs du type [priority\_queue::value\_type](../dotnet/priority-queue-value-type-stl-clr.md).  Cela signifie, pour deux clés quelconques `X` et `Y`:  
+ Cet objet de délégué doit imposer un classement faible strict sur les valeurs de type [priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md). Cela signifie que, pour toutes les deux clés `X` et `Y`:  
   
- `value_comp()(X, Y)` retourne le même résultat booléen à chaque appel.  
+ `value_comp()(X, Y)`Retourne la valeur booléenne même résultat à chaque appel.  
   
- Si `value_comp()(X, Y)` est vrai, alors `value_comp()(Y, X)` doit être faux.  
+ Si `value_comp()(X, Y)` est true, puis `value_comp()(Y, X)` doit avoir la valeur false.  
   
- Si `value_comp()(X, Y)` est vrai, alors on dit que `X` est trié avant `Y`.  
+ Si `value_comp()(X, Y)` est true, puis `X` on dit d’être classé avant `Y`.  
   
- Si `!value_comp()(X, Y) && !value_comp()(Y, X)` est vrai, alors `X` et `Y` ont un classement équivalent.  
+ Si `!value_comp()(X, Y) && !value_comp()(Y, X)` est true, puis `X` et `Y` sont considérés comme ayant un classement équivalent.  
   
- Pour n'importe quel élément `X` qui précède `Y` dans la séquence contrôlée, `key_comp()(Y, X)` est faux. \(Pour l'objet délégué par défaut, les clés ne perdent jamais en valeur.\)  
+ Pour tout élément `X` qui précède `Y` dans la séquence contrôlée, `key_comp()(Y, X)` a la valeur false. (Pour l’objet de délégué par défaut, les clés jamais diminuent dans valeur.)  
   
- L'élément le plus élevé est l'un des éléments qui n'est classé avant tout autre élément.  
+ L’élément de priorité la plus élevée est donc un des éléments qui n’est pas classé avant tout autre élément.  
   
- Étant donné que le conteneur sous\-jacent contient des éléments rangés en tas :  
+ Étant donné que le conteneur sous-jacent conserve des éléments classés comme un segment de mémoire :  
   
- Le conteneur doit prendre en charge les itérateurs à accès aléatoire.  
+ Le conteneur doit prendre en charge des itérateurs d’accès aléatoire.  
   
- Les éléments d'ordre équivalent peuvent être dépilés dans un ordre différent que celui dans lequel ils ont été empilés. \(Le classement n'est pas stable.\)  
+ Éléments avec un classement équivalent peuvent être dépilés dans un ordre différent, qu’elles ont été appliquées. (L’ordre n’est pas stable.)  
   
- Par conséquent, les candidats pour le conteneur sous\-jacent incluent [deque](../dotnet/deque-stl-clr.md) et [vecteur](../dotnet/vector-stl-clr.md).  
+ Par conséquent, incluent des candidats pour le conteneur sous-jacent [deque (STL/CLR)](../dotnet/deque-stl-clr.md) et [vecteur (STL/CLR)](../dotnet/vector-stl-clr.md).  
   
-## Configuration requise  
- **En\-tête :** \<cliext\/queue\>  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/file d’attente >  
   
- **Espace de noms** cliext  
+ **Namespace :** cliext  
   
-## Voir aussi  
- [deque](../dotnet/deque-stl-clr.md)   
- [queue](../dotnet/queue-stl-clr.md)   
- [pile](../dotnet/stack-stl-clr.md)   
- [vecteur](../dotnet/vector-stl-clr.md)   
- [STL\/CLR, bibliothèque](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [file d’attente (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [pile (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [vecteur (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Référence de bibliothèque STL/CLR](../dotnet/stl-clr-library-reference.md)

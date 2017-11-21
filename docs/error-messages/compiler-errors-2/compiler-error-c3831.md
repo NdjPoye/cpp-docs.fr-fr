@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3831
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3831
+f1_keywords: C3831
+dev_langs: C++
+helpviewer_keywords: C3831
 ms.assetid: a125d8dc-b75a-4ea0-b6c7-fe7b119dba25
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 27b330e82c952bd02de7499e8dffe548acfe819c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3831"></a>Erreur du compilateur C3831
 'membre' : 'classe' ne peut pas avoir de données membres épinglées ni de fonctions membres retournant un pointeur épingle  
@@ -54,4 +49,3 @@ int main() {
    pin_ptr<int> p = &y.i;  
 }  
 ```  
-

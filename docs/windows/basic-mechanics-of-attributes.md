@@ -1,42 +1,40 @@
 ---
-title: "Basic Mechanics of Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributes [C++], inserting in code"
-  - "attributes [C++], about attributes"
+title: "Mécanismes de base des attributs | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- attributes [C++], inserting in code
+- attributes [C++], about attributes
 ms.assetid: dc2069c3-b9f3-4a72-965c-4e5208ce8e34
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ebf81d5bfb20f151cc8f405fb8346b66451f77e2
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2017
 ---
-# Basic Mechanics of Attributes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il existe trois façons d'insérer des attributs dans votre projet.  Tout d'abord, vous pouvez les insérer manuellement dans votre code source.  Ensuite, vous pouvez les insérer à l'aide de la grille des propriétés d'un objet dans votre projet.  Enfin, vous pouvez les insérer à l'aide de les différents assistants.  Pour plus d'informations sur l'utilisation de la fenêtre Propriétés et les différents assistants, consultez [Création et gestion des projets Visual C\+\+](../ide/creating-and-managing-visual-cpp-projects.md).  
+# <a name="basic-mechanics-of-attributes"></a>Mécanismes de base des attributs
+Il existe trois manières d’insérer des attributs dans votre projet. Tout d’abord, vous pouvez les insérer manuellement dans votre code source. Ensuite, vous pouvez insérer dans votre projet à l’aide de la grille des propriétés d’un objet. Enfin, vous pouvez insérer à l’aide des Assistants différents. Pour plus d’informations sur l’utilisation de la fenêtre Propriétés et les divers Assistants, consultez [création et gestion de projets Visual C++](../ide/creating-and-managing-visual-cpp-projects.md).  
   
- Depuis Visual C\+\+ .NET, le compilateur identifie la présence d'attributs dans un fichier source et peut dynamiquement les analyser et vérifier pendant la compilation.  
+ Comme précédemment, lorsque le projet est généré, le compilateur analyse chaque fichier source C++, produit un fichier objet. Toutefois, lorsque le compilateur rencontre un attribut, il est analysé et sa syntaxe est vérifiée. Le compilateur appelle ensuite dynamiquement un fournisseur d’attributs pour insérer du code ou apporter d’autres modifications à la compilation. L’implémentation du fournisseur diffère selon le type d’attribut. Par exemple, les attributs liés à ATL sont implémentées par Atlprov.dll.  
   
- Comme avant, lorsque le projet est généré, le compilateur analyse chaque fichier source C\+\+, pour produire un fichier objet.  Toutefois, lorsque le compilateur rencontre un attribut, il est interprète et syntaxiquement vérifié.  Le compilateur appelle ensuite dynamiquement un fournisseur d'attribut pour insérer le code ou pour apporter d'autres modifications au moment de la compilation.  l'implémentation du fournisseur diffère selon le type d'attribut.  Par exemple, les attributs ATL\-mis en relation sont implémentés par Atlprov.dll.  
+ L’illustration suivante montre la relation entre le compilateur et le fournisseur d’attributs.  
   
- l'illustration suivante montre la relation entre le compilateur et le fournisseur d'attribut.  
-  
- ![Communication des attributs de composants](../windows/media/vccompattrcomm.png "vcCompAttrComm")  
+ ![Communication des attributs de composant](../windows/media/vccompattrcomm.gif "vcCompAttrComm")  
   
 > [!NOTE]
->  l'utilisation d'attribut ne modifie pas le contenu du fichier source.  La seule fois le code généré d'attribut est visible pendant les sessions de débogage.  En outre, pour chaque fichier source dans le projet, vous pouvez générer un fichier texte et affiche les résultats de la substitution d'attribut.  Pour plus d'informations sur cette procédure, consultez [\/Fx \(Code injecté par fusion\)](../build/reference/fx-merge-injected-code.md) et le [Le code injecté par débogage](../Topic/How%20to:%20Debug%20Injected%20Code.md).  
+>  Utilisation d’attributs ne modifie pas le contenu du fichier source. Le seul moment où que le code généré d’attribut est visible est pendant les sessions de débogage. En outre, pour chaque fichier source dans le projet, vous pouvez générer un fichier texte qui affiche les résultats de la substitution de l’attribut. Pour plus d’informations sur cette procédure, consultez [/Fx (fusionner le Code injecté)](../build/reference/fx-merge-injected-code.md) et [débogage de Code injecté](/visualstudio/debugger/how-to-debug-injected-code).  
   
- Comme la plupart des éléments C\+\+, les attributs ont un ensemble de fonctionnalités qui définit leur utilisation appropriée.  Cela est indiqué comme le contexte de l'attribut et est traité dans le tableau de contexte d'attribut pour chaque rubrique de référence d'attribut.  Par exemple, l'attribut de [coclasse](../windows/coclass.md) peut s'appliquer qu'à une classe ou une structure existante, par opposition à l'attribut de [cpp\_quote](../windows/cpp-quote.md) , qui peut être inséré n'importe où dans le fichier source C\+\+.  
+ Comme la plupart des constructions C++, les attributs ont un ensemble de caractéristiques qui définit leur utilisation appropriée. Cela est appelé le contexte de l’attribut et est traité dans la table de contexte d’attribut pour chaque rubrique de référence d’attribut. Par exemple, le [coclasse](../windows/coclass.md) attribut peut uniquement être appliqué à une classe existante ou une structure, par opposition à la [cpp_quote](../windows/cpp-quote.md) attribut, qui peut être inséré n’importe où dans un fichier source C++.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Concepts](../windows/attributed-programming-concepts.md)

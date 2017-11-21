@@ -1,32 +1,30 @@
 ---
-title: "db_accessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.db_accessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "db_accessor attribute"
+title: db_accessor | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.db_accessor
+dev_langs: C++
+helpviewer_keywords: db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d5293712990685ff63bcafa8e5c9d5a0e8592a25
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# db_accessor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-attributs de **db\_column** de groupes qui participent à la liaison basée sur d' `IAccessor`.  
+# <a name="dbaccessor"></a>db_accessor
+Groupes **db_column** attributs participer `IAccessor`-en fonction de liaison.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -36,24 +34,24 @@ attributs de **db\_column** de groupes qui participent à la liaison basée sur 
 ) ]  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *num*  
- Spécifie le numéro de l'accesseur \(un index d'entiers de base zéro\).  Vous devez spécifier des numéros d'accesseur en augmentant la commande, à des entiers ou des valeurs définies.  
+ Spécifie le numéro de l’accesseur (un index entier de base zéro). Vous devez spécifier les numéros d’accesseur par ordre croissant de commande, à l’aide d’entiers ou valeurs définies.  
   
  *auto*  
- Valeur booléenne qui spécifie, que l'accesseur est automatiquement extrait \(**TRUE**\) ou échec de l'extraction \(**FALSE**\).  
+ Valeur booléenne qui spécifie si l’accesseur est automatiquement récupéré (**TRUE**) ou pas récupérés (**FALSE**).  
   
-## Notes  
- **db\_accessor** définit l'accesseur sous\-jacent OLE DB pour **db\_column** suivant les attributs et de **db\_param** dans la même classe ou la fonction.  **db\_accessor** est utilisable au niveau de le membre et est utilisé pour grouper les attributs de **db\_column** qui participent à la liaison basée sur OLE DB `IAccessor`.  Il est utilisé avec les attributs de **db\_table** ou de **db\_command** .  Appeler cet attribut revient à appeler des macros de [BEGIN\_ACCESSOR](../data/oledb/begin-accessor.md) et d' [END\_ACCESSOR](../data/oledb/end-accessor.md) .  
+## <a name="remarks"></a>Remarques  
+ **db_accessor** définit l’accesseur OLE DB sous-jacent pour ultérieures **db_column** et **db_param** attributs au sein de la même classe ou fonction. **db_accessor** est utilisable au niveau du membre et est utilisé pour le groupe **db_column** les attributs qui participent à OLE DB `IAccessor`-liaison basée sur. Il est utilisé conjointement avec l’option le **db_table** ou **db_command** attributs. Appel de cet attribut ressemble à appeler la [BEGIN_ACCESSOR](../data/oledb/begin-accessor.md) et [END_ACCESSOR](../data/oledb/end-accessor.md) macros.  
   
- **db\_accessor** génère un ensemble de lignes et des liens aux tables de correspondance d'accesseur.  Si vous n'appelez pas **db\_accessor**, l'accesseur 0 sera généré automatiquement, et toutes les liaisons des colonnes sont mappées à ce bloc d'accesseur.  
+ **db_accessor** génère un ensemble de lignes et le lie aux mappages d’accesseur correspondant. Si vous n’appelez pas **db_accessor**accesseur 0 est automatiquement générée et toutes les liaisons de colonne seront mappées à ce bloc d’accesseur.  
   
- **db\_accessor** groupe des liaisons des colonnes de base de données dans un ou plusieurs accesseurs.  Pour en savoir plus sur les scénarios dans lesquels vous devez utiliser plusieurs accesseurs, consultez l' [Utilisation de plusieurs accesseurs dans un jeu de lignes](../data/oledb/using-multiple-accessors-on-a-rowset.md).  Voir aussi « prise en charge d'enregistrement utilisateur de plusieurs accesseurs » dans [Enregistrements utilisateur](../data/oledb/user-records.md).  
+ **db_accessor** liaisons de colonne dans un ou plusieurs accesseurs de la base de données des groupes. Pour en savoir plus sur les scénarios dans lesquels vous devez utiliser plusieurs accesseurs, consultez [à l’aide de plusieurs accesseurs sur un ensemble de lignes](../data/oledb/using-multiple-accessors-on-a-rowset.md). Consultez également « Utilisateur enregistrement prise en charge pour les accesseurs multiples » dans [enregistrements utilisateur](../data/oledb/user-records.md).  
   
- Lorsque le fournisseur d'attributs du consommateur applique cet attribut à une classe, le compilateur renommera la classe au \_YourClassNameAccessor, où *YourClassName* est le nom que vous avez donné à la classe, et le compilateur crée également une classe appelée *YourClassName,* qui dérive de \_YourClassNameAccessor.  Dans l'Affichage de classes, vous verrez les deux classes.  
+ Lorsque le fournisseur de consommateur d’attribut s’applique à cet attribut à une classe, le compilateur attribue la classe à \_ *YourClassName*accesseur, où *YourClassName* est le nom que vous avez donné à la classe et le compilateur crée également une classe appelée *YourClassName*, lequel dérive \_ *YourClassName*accesseur.  Dans l’affichage de classes, vous verrez les deux classes.  
   
-## Exemple  
- L'exemple suivant utilise **db\_accessor** pour regrouper des colonnes de la table Orders de la base de données Northwind dans deux accesseurs.  L'accesseur 0 est un accesseur automatique, les accesseurs et 1 n'est pas.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant utilise **db_accessor** pour grouper des colonnes dans la table Orders à partir de la base de données Northwind dans deux accesseurs. L’accesseur 0 est un accesseur automatique, et l’accesseur 1 n’est pas.  
   
 ```  
 // cpp_attr_ref_db_accessor.cpp  
@@ -75,19 +73,18 @@ public:
 };  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|blocs d'attributs|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|Blocs d’attributs|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun|  
+|**Attributs non valides**|Aucun|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [OLE DB Consumer Attributes](../windows/ole-db-consumer-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs du consommateur OLE DB](../windows/ole-db-consumer-attributes.md)   

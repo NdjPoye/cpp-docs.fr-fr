@@ -1,32 +1,30 @@
 ---
-title: "Avertissement du compilateur (niveau 3) C4073 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4073"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4073"
+title: Compilateur avertissement (niveau 3) C4073 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4073
+dev_langs: C++
+helpviewer_keywords: C4073
 ms.assetid: 50081a6e-6acd-45ff-8484-9b1ea926cc5c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f9c53b9d5a5efb1b60c680543a2072bc4f148330
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 3) C4073
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-initialiseurs placés dans la zone d'initialisation d'une bibliothèque  
+# <a name="compiler-warning-level-3-c4073"></a>Compilateur avertissement (niveau 3) C4073
+initialiseurs placés dans une zone d’initialisation de bibliothèque  
   
- Seuls les développeurs de bibliothèques tierces doivent utiliser la zone d'initialisation de bibliothèque spécifiée par [\#pragma init\_seg](../../preprocessor/init-seg.md).  L'exemple suivant génère l'erreur C4073 :  
+ Seuls les développeurs de bibliothèques tierces doivent utiliser la zone de l’initialisation de bibliothèque, qui est spécifiée par [#pragma init_seg](../../preprocessor/init-seg.md). L’exemple suivant génère l’erreur C4073 :  
   
 ```  
 // C4073.cpp  

@@ -1,33 +1,30 @@
 ---
-title: "idl_quote | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.idl_quote"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "idl_quote attribute"
+title: idl_quote | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.idl_quote
+dev_langs: C++
+helpviewer_keywords: idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8ca11d9b92ba1dd0dc7f5437bf1dec812f2edfcc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# idl_quote
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vous permet d'utiliser les éléments IDL qui ne sont pas pris en charge dans la version actuelle de Visual C\+\+ et pour les faire passer le fichier généré .idl.  
+# <a name="idlquote"></a>idl_quote
+Vous pouvez utiliser des constructions IDL qui ne sont pas pris en charge dans la version actuelle de Visual C++ et les transmettre au fichier .idl généré.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -36,15 +33,15 @@ Vous permet d'utiliser les éléments IDL qui ne sont pas pris en charge dans la
 ) ]  
 ```  
   
-#### Paramètres  
- *text*  
- Le nom de l'attribut que vous projetez le compilateur Visual C\+\+ pour passer au fichier généré .idl sans retourner une erreur du compilateur.  
+#### <a name="parameters"></a>Paramètres  
+ *texte*  
+ Le nom d’attribut que vous avez l’intention le compilateur Visual C++ pour passer directement vers le fichier .idl généré sans retourner une erreur du compilateur.  
   
-## Notes  
- Si l'attribut d' **idl\_quote** C\+\+ est utilisé comme attribut autonome \(par un point\-virgule après le crochet fermant\), *le texte* est placé dans le fichier fusionné .idl comme.  si **idl\_quote** est utilisé sur un symbole, le *texte* est placé dans le bloc d'attributs pour ce symbole.  
+## <a name="remarks"></a>Remarques  
+ Si le **idl_quote** attribut C++ est utilisé en tant qu’attribut autonome (avec un point-virgule après le crochet fermant), puis *texte* est placé dans le fichier .idl fusionné. Si **idl_quote** est utilisé sur un symbole, *texte* est placé dans le bloc d’attributs de ce symbole.  
   
-## Exemple  
- Le code suivant illustre comment vous pouvez spécifier un attribut non pris en charge \(à l'aide de **dans**, qui est pris en charge\) et comment définir et utiliser un élément non défini .idl :  
+## <a name="example"></a>Exemple  
+ Le code suivant montre comment vous pouvez spécifier un attribut non pris en charge (à l’aide de **dans**, qui est pris en charge) et comment définir et utiliser une construction .idl non défini :  
   
 ```  
 // cpp_attr_ref_idl_quote.cpp  
@@ -79,22 +76,21 @@ __interface IStatic{
 };  
 ```  
   
- Ce code crée MYFLOT et MYDUB et *la saisie de texte* soient placées dans le fichier généré .idl.  Les avantages *de paramètre name* *texte* pour être placées avant que quelque chose qui fait référence au *nom* dans le fichier généré .idl.  Le paramètre *de dépendances* force les définitions de listes de dépendance à placer avant *texte* dans le fichier généré .idl.  
+ Ce code entraîne MYFLOT et MYDUB et *texte* entrée doit être placé dans le fichier .idl généré. Le *nom* paramètre force *texte* doit être placé avant tout ce qui fait référence à *nom* dans le fichier .idl généré. Le *dépendances* paramètre force les définitions de liste de dépendance doit être placé avant *texte* dans le fichier .idl généré.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|n'importe où|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|N'importe où|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun|  
+|**Attributs non valides**|None|  
   
- Pour plus d'informations, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs autonomes](../windows/stand-alone-attributes.md)   

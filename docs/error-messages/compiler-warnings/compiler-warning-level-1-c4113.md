@@ -1,29 +1,27 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4113 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4113"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4113"
+title: Compilateur avertissement (niveau 1) C4113 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4113
+dev_langs: C++
+helpviewer_keywords: C4113
 ms.assetid: ec7a7c4a-d2ee-431c-89dc-31b0f9bfd975
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4d012191a9eaa728df5a9fbaece002e66961362e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 1) C4113
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'identificateur1' est différent de 'identificateur2' dans les listes de paramètres  
+# <a name="compiler-warning-level-1-c4113"></a>Compilateur avertissement (niveau 1) C4113
+'identificateur1' diffère dans les listes de paramètres de 'identificateur2'  
   
- Un pointeur fonction est assigné à un autre pointeur fonction, mais les listes de paramètres formels des fonctions ne correspondent pas.  L'assignation est compilée sans modification.
+ Un pointeur de fonction est attribué à un autre pointeur fonction, mais les listes de paramètres formels des fonctions ne correspondent pas. L’affectation est compilée sans modification.

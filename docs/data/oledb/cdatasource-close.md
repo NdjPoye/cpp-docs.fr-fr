@@ -1,36 +1,34 @@
 ---
-title: "CDataSource::Close | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDataSource::Close"
-  - "ATL.CDataSource.Close"
-  - "CDataSource::Close"
-  - "CDataSource.Close"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Close (méthode)"
+title: CDataSource::Close | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDataSource::Close
+- ATL.CDataSource.Close
+- CDataSource::Close
+- CDataSource.Close
+dev_langs: C++
+helpviewer_keywords: Close method
 ms.assetid: f528fc6e-98df-4b79-b088-45f27d068266
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d7c5056a1ab561c1bf836d566b565cf6bf1c0a93
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# CDataSource::Close
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ferme la connexion en libérant le pointeur de **m\_spInit**.  
+# <a name="cdatasourceclose"></a>CDataSource::Close
+Ferme la connexion en relâchant le **m_spInit** pointeur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -38,8 +36,8 @@ void Close( ) throw( );
   
 ```  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CDataSource, classe](../../data/oledb/cdatasource-class.md)

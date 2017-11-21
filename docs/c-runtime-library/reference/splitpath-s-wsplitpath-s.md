@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - splitpath_s
 - _splitpath_s
 - wsplitpath_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - splitpath_s function
 - pathnames
@@ -39,30 +37,15 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: c4c6803731deba188a4f4dba118b04f626f58564
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: b95813c79efc42ba9d0425ab453628f20d512e23
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
 Divise un nom de chemin en composants. Ces versions de [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -160,7 +143,7 @@ errno_t _wsplitpath_s(
  Si la taille de l’une des mémoires tampons ne suffit pas à contenir le résultat, ces fonctions remplacent le contenu de toutes les mémoires tampons par des chaînes vides, affectent à `errno` la valeur `ERANGE` et retournent `ERANGE`.  
   
 ## <a name="remarks"></a>Notes  
- La fonction `_splitpath_s` divise un chemin en quatre composants. `_splitpath_s` gère automatiquement les arguments de chaîne de caractères multioctets si nécessaire, en identifiant les séquences de caractères multioctets en fonction de la page de codes multioctets en cours d’utilisation. `_wsplitpath_s` est une version à caractères larges de `_splitpath_s` ; les arguments de `_``wsplitpath_s` sont des chaînes à caractères larges. Sinon, ces fonctions se comportent de façon identique.  
+ La fonction `_splitpath_s` divise un chemin en quatre composants. `_splitpath_s` gère automatiquement les arguments de chaîne de caractères multioctets si nécessaire, en identifiant les séquences de caractères multioctets en fonction de la page de codes multioctets en cours d’utilisation. `_wsplitpath_s` est une version à caractères larges de `_splitpath_s` ; les arguments de `_wsplitpath_s` sont des chaînes à caractères larges. Sinon, ces fonctions se comportent de façon identique.  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   

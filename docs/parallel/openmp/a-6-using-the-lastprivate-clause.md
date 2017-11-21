@@ -1,27 +1,26 @@
 ---
-title: "A.6   Using the lastprivate Clause | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A.6 à l’aide de la Clause lastprivate | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: cf3bf0cc-aa46-4e44-9433-e2969e3be2c1
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e35ad34ce3bd1f97a58273522520d6ab67710505
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# A.6   Using the lastprivate Clause
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'exécution correcte parfois dépend de la valeur que la dernière itération d'une boucle assigner à une variable.  De tels programmes doivent répertorier toutes les variables telles que des arguments à une clause d' `lastprivate` \([section 2.7.2.3](../../parallel/openmp/2-7-2-3-lastprivate.md) à la page 27\) afin que les valeurs des variables sont les mêmes que lorsque la boucle est exécutée de manière séquentielle.  
+# <a name="a6---using-the-lastprivate-clause"></a>A.6   Utilisation de la clause lastprivate
+Exécution correcte parfois dépend de la valeur de la dernière itération d’une boucle assigne à une variable. Ces programmes doivent répertorier toutes les variables de ce type en tant qu’arguments à une `lastprivate` clause ([Section 2.7.2.3](../../parallel/openmp/2-7-2-3-lastprivate.md) page 27) afin que les valeurs des variables sont les mêmes que lorsque la boucle est exécutée de manière séquentielle.  
   
 ```  
 #pragma omp parallel  
@@ -33,4 +32,4 @@ L'exécution correcte parfois dépend de la valeur que la dernière itération d
 a[i]=b[i];  
 ```  
   
- Dans l'exemple précédent, la valeur d' `i` à la fin de la zone parallèle sera égal `n–1`, comme dans le cas séquentiel.
+ Dans l’exemple précédent, la valeur de `i` à la fin de la région parallèle est égale à `n-1`, comme dans le cas séquentiel.

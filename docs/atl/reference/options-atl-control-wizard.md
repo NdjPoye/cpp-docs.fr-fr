@@ -1,93 +1,92 @@
 ---
-title: "Options, Assistant contr&#244;le ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.codewiz.class.atl.control.options"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assistant Contrôle ATL, options"
+title: "Options, Assistant contrôle ATL | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: vc.codewiz.class.atl.control.options
+dev_langs: C++
+helpviewer_keywords: ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 314f0c7675212ad1f453da189d6483fc9b8284c4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Options, Assistant contr&#244;le ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Insérez ici le résumé « Résultats de la recherche ».  
+# <a name="options-atl-control-wizard"></a>Options, Assistant contrôle ATL
+Insérez « Résultats de recherche « résumé ici.  
   
- Utilisez cette page de l'Assistant pour définir le type de contrôle que vous souhaitez créer et le niveau de prise en charge des interfaces qu'il contient.  
+ Utilisez cette page de l’Assistant pour définir le type de contrôle que vous créez et le niveau de prise en charge de l’interface qu’il contient.  
   
-## Liste UIElement  
+## <a name="uielement-list"></a>Liste UIElement  
  **Type de contrôle**  
- Type de contrôle que vous souhaitez créer.  
+ Le type de contrôle que vous souhaitez créer.  
   
 -   **Contrôle standard : contrôle ActiveX.**  
   
--   **Contrôle composite** : contrôle ActiveX pouvant contenir \(comme une boîte de dialogue\) d'autres contrôles ActiveX ou Windows.  Un contrôle composite comprend les éléments suivants :  
+-   **Contrôle composite**: contrôle ActiveX pouvant contenir (semblable à une boîte de dialogue) autres contrôles ActiveX ou Windows. Un contrôle composite inclut les éléments suivants :  
   
-    -   un modèle pour la boîte de dialogue qui implémente le contrôle composite ;  
+    -   Un modèle pour la boîte de dialogue qui implémente le contrôle composite.  
   
-    -   une ressource personnalisée, REGISTRY, qui inscrit automatiquement le contrôle composite lorsqu'il est appelé ;  
+    -   Une ressource personnalisée, REGISTRY, qui inscrit automatiquement le contrôle composite lorsqu’elle est appelée.  
   
-    -   une classe C\+\+ qui implémente le contrôle composite ;  
+    -   Une classe C++ qui implémente le contrôle composite.  
   
-    -   une interface COM exposée par le contrôle composite ;  
+    -   Une interface COM exposée par le contrôle composite.  
   
-    -   une page de test HTML contenant le contrôle composite.  
+    -   Une page de test HTML contenant le contrôle composite.  
   
-     Par défaut, ce contrôle attribue à [CComControlBase::m\_bWindowOnly](../Topic/CComControlBase::m_bWindowOnly.md) la valeur True, pour indiquer qu'il s'agit d'un contrôle utilisant une fenêtre.  Il implémente une table de récepteurs.  Pour plus d'informations, consultez [Prise en charge pour un contrôle DHTML](../../atl/atl-support-for-dhtml-controls.md).  
+     Par défaut, ce contrôle affecte [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) à true pour indiquer qu’il s’agit d’un contrôle avec fenêtres. Il implémente une table de récepteurs. Pour plus d’informations, consultez [prise en charge pour un contrôle DHTML](../../atl/atl-support-for-dhtml-controls.md).  
   
--   **Contrôle DHTML** : contrôle ATL DHTML spécifie l'interface utilisateur à l'aide de code HTML.  La classe de l'interface utilisateur DHTML contient une table COM.  Par défaut, ce contrôle attribue à [CComControlBase::m\_bWindowOnly](../Topic/CComControlBase::m_bWindowOnly.md) la valeur True, pour indiquer qu'il s'agit d'un contrôle utilisant une fenêtre.  
+-   **Contrôle DHTML**: contrôle ATL DHTML spécifie l’interface utilisateur, à l’aide HTML. La classe UI DHTML contient un mappage COM. Par défaut, ce contrôle affecte [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) à true pour indiquer qu’il s’agit d’un contrôle avec fenêtres.  
   
-     Pour plus d'informations, consultez [Identifying the Elements of the DHTML Control Project](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).  
+     Pour plus d’informations, consultez [identifier les éléments du projet de contrôle DHTML](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).  
   
  **Contrôle minimal**  
- Prend en charge uniquement les interfaces absolument nécessaires à la plupart des conteneurs.  Vous pouvez sélectionner **Contrôle minimal** pour tous les types de contrôles : il est possible de créer un contrôle standard minimal, un contrôle composite minimal ou un contrôle DHTML minimal.  
+ Prend en charge uniquement les interfaces qui sont absolument nécessaires à la plupart des conteneurs. Vous pouvez définir **contrôle Minimal** pour tous les types de contrôles : vous pouvez créer un contrôle standard minimal, un contrôle composite minimal ou un contrôle DHTML minimal.  
   
  **Aggregation**  
- Ajoute la prise en charge de l'agrégation pour le contrôle que vous créez.  Pour plus d'informations, consultez [Aggregation](../../atl/aggregation.md).  
+ Ajoute la prise en charge de l’agrégation pour le contrôle que vous créez. Pour plus d’informations, consultez [agrégation](../../atl/aggregation.md).  
   
--   **Oui** : crée un contrôle pouvant être regroupé en agrégats.  
+-   **Oui**: créer un contrôle qui peut être agrégé.  
   
--   **Non** : crée un contrôle qui ne peut pas être regroupé en agrégats.  
+-   **Ne**: créer un contrôle qui ne peut pas être agrégé.  
   
--   **Uniquement** : crée un contrôle qui ne peut être instancié qu'à l'aide de l'agrégation.  
+-   **Uniquement**: créer un contrôle qui ne peut être instancié par le biais d’agrégation.  
   
  **Modèle de thread**  
- Spécifie le modèle de thread utilisé par le contrôle.  
+ Spécifie que le modèle de thread utilisé par le contrôle.  
   
--   **Unique** : le contrôle s'exécute uniquement dans le thread COM principal.  
+-   **Seul**: le contrôle s’exécute uniquement dans le thread COM principal.  
   
--   **Cloisonné** : le contrôle peut être créé dans n'importe quel mode STA \(Single Thread Apartment\).  Valeur par défaut.  
+-   **Cloisonnement**: le contrôle peut être créé dans n’importe quel cloisonnement du thread unique. Valeur par défaut.  
   
  **Interface**  
- Type d'interface que ce contrôle expose au conteneur.  
+ Le type d’interface de ce contrôle expose au conteneur.  
   
--   **Double** : crée une interface exposant des propriétés et des méthodes par l'intermédiaire de `IDispatch` et directement par l'intermédiaire du VTBL.  
+-   **Double**: crée une interface qui expose les propriétés et méthodes via `IDispatch` et directement par l’intermédiaire du VTBL.  
   
--   **Personnalisé** : crée une interface exposant des méthodes directement par l'intermédiaire d'un VTBL.  
+-   **Personnalisé**: crée une interface qui expose des méthodes directement par l’intermédiaire d’un VTBL.  
   
-     Si vous sélectionnez **Personnalisée**, vous pouvez spécifier que le contrôle est **Compatible Automation**.  Si vous avez sélectionné **Compatible Automation**, l'Assistant ajoute l'attribut [oleautomation](../../windows/oleautomation.md) à l'interface dans l'IDL, et l'interface peut être marshalée par le marshaleur universel dans le fichier oleaut32.dll.  Pour plus d'informations, consultez [Détails de marshaling](http://msdn.microsoft.com/library/windows/desktop/ms692621) dans le [!INCLUDE[winsdkshort](../../atl/reference/includes/winsdkshort_md.md)].  
+     Si vous sélectionnez **personnalisé**, vous pouvez ensuite spécifier que le contrôle est **Automation compatible**. Si vous sélectionnez **Automation compatible**, l’Assistant ajoute les [oleautomation](../../windows/oleautomation.md) d’attribut à l’interface dans le fichier IDL, et l’interface peut être marshalée par le marshaleur universel dans le fichier oleaut32.dll. Consultez [détails de Marshaling](http://msdn.microsoft.com/library/windows/desktop/ms692621) dans le SDK Windows pour plus d’informations.  
   
-     Par ailleurs, si vous sélectionnez **Compatible Automation**, tous les paramètres de l'ensemble des méthodes du contrôle doivent être compatibles **VARIANT**.  
+     En outre, si vous sélectionnez **Automation compatible**, tous les paramètres pour toutes les méthodes dans le contrôle doivent être **VARIANT** compatible.  
   
  **Prise en charge**  
- Définit différentes prises en charge supplémentaires pour le contrôle.  
+ Définit la prise en charge des divers supplémentaire pour le contrôle.  
   
--   **Points de connexion** : active les points de connexion pour votre objet en dérivant la classe de votre objet de [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) et en l'autorisant à exposer une interface source.  
+-   **Points de connexion**: Active les points de connexion pour votre objet en faisant dériver la classe de l’objet [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) et en l’autorisant à exposer une interface source.  
   
--   **Licence** : ajoute la prise en charge des [licences](http://msdn.microsoft.com/library/windows/desktop/ms690543) au contrôle.  Les contrôles sous licence ne peuvent être hébergés que si l'ordinateur client possède la licence adéquate.  
+-   **Une licence**: ajoute la prise en charge pour le contrôle de [licences](http://msdn.microsoft.com/library/windows/desktop/ms690543). Contrôles sous licence peuvent uniquement être hébergés si l’ordinateur client possède la bonne licence.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Assistant Contrôle ATL](../../atl/reference/atl-control-wizard.md)
+

@@ -1,51 +1,49 @@
 ---
-title: "&#201;valuateur d&#39;expression, erreur CXX0036 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0036"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0036"
-  - "CXX0036"
+title: "Évaluateur d’expression, erreur CXX0036 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0036
+dev_langs: C++
+helpviewer_keywords:
+- CXX0036
+- CAN0036
 ms.assetid: 383404be-df5b-4eec-b113-df21bb5d269d
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 58d5fa976306c6e8a2545ce852bf3e808bc5b2d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# &#201;valuateur d&#39;expression, erreur CXX0036
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-spécification de contexte {...} incorrecte  
+# <a name="expression-evaluator-error-cxx0036"></a>Évaluateur d'expression, erreur CXX0036
+contexte incorrect {...} spécification  
   
- Ce message peut être généré par plusieurs erreurs d'utilisation de l'opérateur de contexte \(**{}**\).  
+ Ce message peut être généré par plusieurs erreurs dans l’utilisation de l’opérateur de contexte (**{}**).  
   
--   La syntaxe spécifiée pour l'opérateur de contexte \(**{}**\) est incorrecte.  
+-   La syntaxe de l’opérateur de contexte (**{}**) a été donné de façon incorrecte.  
   
-     La syntaxe correcte est la suivante :  
+     La syntaxe de l’opérateur de contexte est la suivante :  
   
      {*fonction*,*module*,*dll*}*expression*  
   
-     Elle spécifie le contexte d'*expression*.  L'opérateur de contexte présente la même priorité et la même utilisation qu'une conversion de type.  
+     Spécifie le contexte de *expression*. L’opérateur de contexte a la même priorité et l’utilisation en tant qu’un cast de type.  
   
-     Vous pouvez omettre les virgules de fin.  Si *fonction*, *module* ou *dll* contient une virgule littérale, vous devez placer l'ensemble du nom entre parenthèses.  
+     Virgules de fin peuvent être omis. Si une des *fonction*, *module*, ou *dll* contient une virgule littérale, vous devez placer le nom entier entre parenthèses.  
   
--   Le nom de la fonction n'est pas correctement orthographié ou il n'existe pas dans le module ou la bibliothèque de liens dynamiques spécifiés.  
+-   Le nom de la fonction a été mal orthographié ou n’existe pas dans le module spécifié ou de la bibliothèque de liens dynamiques.  
   
-     Dans la mesure où le langage C respecte la casse, *fonction* doit être fourni avec une casse strictement identique à celle de sa définition dans le source.  
+     Étant donné que C est un langage qui respecte la casse, *fonction* doivent figurer dans la casse exacte telle qu’elle est définie dans la source.  
   
 -   Le module ou la DLL est introuvable.  
   
-     Vérifiez le chemin complet du module ou de la DLL spécifiés.  
+     Vérifiez le nom de chemin d’accès complet du module spécifié ou de la DLL.  
   
- Erreur identique à CAN0036.
+ Cette erreur est identique à CAN0036.

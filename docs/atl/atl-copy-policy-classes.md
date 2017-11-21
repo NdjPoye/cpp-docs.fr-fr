@@ -1,34 +1,34 @@
 ---
-title: "ATL Copy Policy Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_Copy class"
-  - "_CopyInterface class"
-  - "classes (C++), copy policy"
-  - "copy policy classes [C++]"
-  - "données (C++), ATL"
+title: "Classes de stratégies de copie ATL | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data [C++], ATL
+- classes [C++], copy policy
+- copy policy classes [C++]
+- _Copy class
+- _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 667a6c35d979b0fb1da3675efd03e2840285b845
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# ATL Copy Policy Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les classes de stratégie de copie sont [classes de service](../atl/utility-classes.md) utilisé pour initialiser, copier, et supprimer des données.  Les classes de stratégie de copie vous permettent de définir la sémantique de copie pour un type de données, et pour définir des conversions entre des types de données.  
+# <a name="atl-copy-policy-classes"></a>Classes de stratégies de copie ATL
+Classes de stratégies de copie sont [classes utilitaires](../atl/utility-classes.md) utilisée pour initialiser, copier et supprimer des données. Elles permettent de définir une sémantique de copie pour n’importe quel type de données, et de définir des conversions entre différents types de données.  
   
- ATL utilise des classes de stratégie de copie dans ses implémentations des modèles suivants :  
+ Classes de stratégies de copie utilise ATL dans ses implémentations des modèles suivants :  
   
 -   [CComEnumImpl](../atl/reference/ccomenumimpl-class.md)  
   
@@ -36,10 +36,10 @@ Les classes de stratégie de copie sont [classes de service](../atl/utility-clas
   
 -   [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md)  
   
- En encapsulant les informations nécessaires pour copier ou convertir des données dans une classe de stratégie de copie qui peut être passée comme argument template, les développeurs ATL est attendu la réutilisabilité extrême de ces classes.  Par exemple, si vous devez implémenter une collection à l'aide de n'importe quel type de données arbitraire, tout ce que vous devez fournir est la stratégie de copie appropriée ; vous devez jamais toucher le code qui implémente la collection.  
+ En encapsulant les informations nécessaires pour copier ou de convertir les données dans une classe de stratégie de copie qui peut être passée comme argument de modèle, les développeurs d’ATL ont fourni pour réutilisation extrêmes de ces classes. Par exemple, si vous avez besoin d’implémenter une collection à l’aide de n’importe quel type de données arbitraires, il vous suffit de fournir est la stratégie de copie appropriée ; Vous devrez jamais toucher au code qui implémente la collection.  
   
-## Définition  
- Par définition, une classe qui fournit les fonctions statiques suivantes est une classe de stratégie de copie :  
+## <a name="definition"></a>Définition  
+ Par définition, une classe qui fournit les fonctions statiques suivantes est une classe de stratégies de copie :  
   
  `static void init(` `DestinationType` `* p);`  
   
@@ -47,41 +47,42 @@ Les classes de stratégie de copie sont [classes de service](../atl/utility-clas
   
  `static void destroy(` `DestinationType` `* p);`  
   
- Vous pouvez remplacer les types `DestinationType` et *SourceType* par les types de données arbitraires pour chaque stratégie de copie.  
+ Vous pouvez remplacer les types `DestinationType` et *SourceType* avec les types de données arbitraires pour chaque copie de la stratégie.  
   
 > [!NOTE]
->  Bien que vous puissiez définir des classes de stratégie de copie pour tous les types de données arbitraires, l'utilisation des classes dans le code ATL doit limiter les types qui ont un sens.  Par exemple, lorsque vous utilisez une classe de stratégie de copie avec les implémentations de la collection ou de l'énumérateur ATL, `DestinationType` doit être un type qui peut être utilisé comme paramètre dans une méthode d'interface COM.  
+>  Bien que vous pouvez définir des classes de stratégies de copie pour les types de données arbitraires, utilisation des classes dans le code ATL doit limiter les types qui ont un sens. Par exemple, quand une copie de la stratégie à l’aide de la classe avec des collections d’ATL ou des implémentations de l’énumérateur, `DestinationType` doit être un type qui peut être utilisé en tant que paramètre dans une méthode d’interface COM.  
   
- Utilisez **INIT** pour initialiser des données, **copy** pour copier des données, et **destroy** pour libérer les données.  La signification exacte de l'initialisation, la copie, et la destruction sont le champ de la classe de stratégie de copie et varient en fonction de les types de données impliqués.  
+ Utilisez **init** pour initialiser les données, **copie** pour copier les données, et **détruire** pour libérer les données. La signification précise de l’initialisation, la copie et la destruction sont dans le domaine de la classe de stratégie de copie et varient en fonction des types de données impliqués.  
   
- Il existe deux spécifications sur l'implémentation d'utilisation d'une classe de stratégie de copie :  
+ Il existe deux exigences sur l’utilisation et l’implémentation d’une classe de stratégie de copie :  
   
--   Le premier paramètre à **copy** doit accepter uniquement un pointeur vers les données que vous avez précédemment initialisées à l'aide de **INIT**.  
+-   Le premier paramètre de **copie** doivent recevoir uniquement un pointeur vers les données que vous avez précédemment initialisé à l’aide de **init**.  
   
--   **destroy** doit uniquement jamais recevoir un pointeur vers les données que vous avez précédemment initialisées à l'aide de **INIT** ou avez copiées via **copy**.  
+-   **détruire** doivent recevoir uniquement un pointeur vers les données que vous avez précédemment initialisé à l’aide de **init** ou copiés via **copie**.  
   
-## Implémentations standard  
- ATL fournit deux classes de stratégie de copie sous la forme de classes de modèle de **\_Copy** et de **\_CopyInterface** :  
+## <a name="standard-implementations"></a>Implémentations standard  
+ ATL fournit deux classes de stratégie de copie sous la forme de la **_Copy** et **_CopyInterface** classes de modèle :  
   
--   La classe de **\_Copy** permet de copier homogène uniquement \(pas conversion entre types de données\) parce qu'elle offre uniquement un seul paramètre de modèle pour spécifier `DestinationType` et *SourceType*.  L'implémentation générique de ce modèle ne contient aucune initialisation ou code de destruction et utilise `memcpy` pour copier des données.  ATL fournit également des spécialisations de **\_Copy** pour **variant**, `LPOLESTR`, des types de données d' **OLEVERB**, et de **CONNECTDATA** .  
+-   Le **_Copy** classe ne permet que la copie homogène (pas la conversion entre types de données), car elle offre uniquement un paramètre de modèle unique pour spécifier les deux `DestinationType` et *SourceType*. L’implémentation générique de ce modèle ne contient aucun code d’initialisation ou de destruction et utilise `memcpy` pour copier les données. ATL fournit également des spécialisations de **_Copy** pour **VARIANT**, `LPOLESTR`, **OLEVERB**, et **CONNECTDATA** des types de données.  
   
--   La classe de **\_CopyInterface** fournit une implémentation pour copier des pointeurs d'interface qui suivent les règles standard COM.  De nouveau cette classe permet uniquement la copie homogène, elle utilise l'assignation simple et un appel à `AddRef` pour effectuer la copie.  
+-   Le **_CopyInterface** classe fournit une implémentation pour la copie des pointeurs d’interface suivant les règles COM standard. Une fois encore cette classe permet de seulement copie homogène, afin qu’il utilise une assignation simple et un appel à `AddRef` pour effectuer la copie.  
   
-## Implémentations personnalisées  
- En général, vous devrez définir vos propres classes de stratégie de copie de la copie hétérogène \(autrement dit, conversion entre types de données\).  Pour quelques exemples des classes personnalisées de stratégie de copie, examinez les fichiers VCUE\_Copy.h et VCUE\_CopyString.h dans l'exemple de [ATLCollections](../top/visual-cpp-samples.md) .  Ces fichiers contiennent deux classes de stratégie de copie de modèle, `GenericCopy` et `MapCopy`, ainsi que plusieurs spécialisations d' `GenericCopy` pour différents types de données.  
+## <a name="custom-implementations"></a>Implémentations personnalisées  
+ En règle générale, vous devez définir vos propres classes de stratégie de copie pour la copie hétérogène (autrement dit, la conversion entre types de données). Pour obtenir des exemples de classes de stratégie de copie personnalisée, examinez les fichiers VCUE_Copy.h et VCUE_CopyString.h dans le [ATLCollections](../visual-cpp-samples.md) exemple. Ces fichiers contiennent deux classes de stratégie de copie de modèle, `GenericCopy` et `MapCopy`, ainsi que plusieurs spécialisations de `GenericCopy` pour différents types de données.  
   
-### GenericCopy  
- `GenericCopy` vous permet de spécifier *le SourceType* et `DestinationType` comme arguments template.  Voici la forme la plus générale de la classe d' `GenericCopy` de VCUE\_Copy.h :  
+### <a name="genericcopy"></a>GenericCopy  
+ `GenericCopy`Vous pouvez spécifier le *SourceType* et `DestinationType` en tant qu’arguments de modèle. Voici la forme la plus générale de la `GenericCopy` classe VCUE_Copy.h :  
   
- [!code-cpp[NVC_ATL_COM#30](../atl/codesnippet/CPP/atl-copy-policy-classes_1.h)]  
+ [!code-cpp[NVC_ATL_COM#30](../atl/codesnippet/cpp/atl-copy-policy-classes_1.h)]  
   
- VCUE\_Copy.h contient également les spécialisations suivantes de cette classe : `GenericCopy<BSTR>`, `GenericCopy<VARIANT, BSTR>`, `GenericCopy<BSTR, VARIANT>`.  VCUE\_CopyString.h contient les spécialisations de copie de **std::string**s : `GenericCopy<std::string>`, `GenericCopy<VARIANT, std::string>`, et `GenericCopy<BSTR, std::string>`.  Vous pouvez améliorer `GenericCopy` en fournissant d'autres spécialisations de votre choix.  
+ VCUE_Copy.h contient également les spécialisations suivantes de cette classe : `GenericCopy<BSTR>`, `GenericCopy<VARIANT, BSTR>`, `GenericCopy<BSTR, VARIANT>`. VCUE_CopyString.h contient les spécialisations de la copie de **std::string**s: `GenericCopy<std::string>`, `GenericCopy<VARIANT, std::string>`, et `GenericCopy<BSTR, std::string>`. Vous pouvez améliorer `GenericCopy` en fournissant vos propres spécialisations.  
   
-### MapCopy  
- `MapCopy` suppose que les données qui sont copiées sont stockées dans un mappage de style STL, elles vous permettent de spécifier le type de mappage dans lequel les données sont stockées et le type de destination.  L'implémentation de la classe utilise uniquement les typedefs fournis par la classe *de MapType* pour déterminer le type des données sources et appeler la classe appropriée d' `GenericCopy` .  Une spécialisation de cette classe n'est requise.  
+### <a name="mapcopy"></a>MapCopy  
+ `MapCopy`suppose que les données copiées sont stockées dans un mappage de type de bibliothèque C++ Standard, donc il permet de spécifier le type de carte dans laquelle les données sont stockées et le type de destination. L’implémentation de la classe utilise seulement les typedefs fournis par le *MapType* classe pour déterminer le type de la source de données et appeler approprié `GenericCopy` classe. Aucune des spécialisations de cette classe ne sont nécessaires.  
   
- [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/CPP/atl-copy-policy-classes_2.h)]  
+ [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/cpp/atl-copy-policy-classes_2.h)]  
   
-## Voir aussi  
- [Implementing an STL\-Based Collection](../atl/implementing-an-stl-based-collection.md)   
- [ATLCollections](../top/visual-cpp-samples.md)
+## <a name="see-also"></a>Voir aussi  
+ [Implémentation d’un regroupement de bibliothèque C++ Standard](../atl/implementing-an-stl-based-collection.md)   
+ [ATLCollections, exemple](../visual-cpp-samples.md)
+

@@ -1,73 +1,72 @@
 ---
-title: "Proc&#233;dure pas &#224; pas&#160;: test d&#39;un projet (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tests de projets (C++)"
-  - "projets (C++), tester"
-  - "tester des projets"
+title: "Procédure pas à pas : Test d’un projet (C++) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- project testing [C++]
+- testing projects
+- projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: be54f9b0d82b2c860c12dfcdeeb2c44c9c67547c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Proc&#233;dure pas &#224; pas&#160;: test d&#39;un projet (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Lorsque vous exécutez un programme en mode débogage, vous pouvez utiliser des points d'arrêt pour suspendre le programme afin d'examiner l'état des variables et des objets.  
+# <a name="walkthrough-testing-a-project-c"></a>Procédure pas à pas : test d'un projet (C++)
+Lorsque vous exécutez un programme en mode débogage, vous pouvez utiliser des points d’arrêt pour interrompre le programme pour examiner l’état des variables et des objets.  
   
- Dans cette procédure pas à pas, vous observez la valeur d'une variable pendant l'exécution du programme et vous en déduisez pourquoi la valeur n'est pas celle qui est prévue.  
+ Dans cette procédure pas à pas, vous observez la valeur d’une variable que le programme s’exécute et déduisez pourquoi la valeur n’est pas ce que vous attendez.  
   
-## Composants requis  
+## <a name="prerequisites"></a>Conditions préalables  
   
--   Cette procédure pas à pas suppose que vous compreniez les notions de base du langage C\+\+.  
+-   Cette procédure pas à pas part du principe que vous comprenez les notions de base du langage C++.  
   
--   Elle suppose également que vous avez effectué les procédures pas à pas connexes précédentes répertoriées dans [Utilisation de l'IDE de Visual Studio pour le développement de bureau C\+\+](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+-   Il suppose également que vous avez effectué les procédures plus haut connexes qui sont répertoriés dans [à l’aide de l’IDE de Visual Studio pour le développement de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
-### Pour exécuter un programme en mode débogage  
+### <a name="to-run-a-program-in-debug-mode"></a>Pour exécuter un programme en mode débogage  
   
-1.  Ouvrez TestGames.cpp pour modification.  
+1.  Ouvrez TestGames.cpp pour la modification.  
   
 2.  Sélectionnez cette ligne de code :  
   
      `Cardgame.solitaire(1);`  
   
-3.  Pour définir un point d'arrêt sur cette ligne, dans la barre de menus, choisissez **Déboguer**, **Basculer le point d'arrêt** ou utilisez la touche F9.  Un cercle rouge apparaît à gauche de la ligne ; il indique qu'un point d'arrêt est défini.  Pour supprimer un point d'arrêt, vous pouvez sélectionner la commande de menu ou à nouveau la touche F9.  
+3.  Pour définir un point d’arrêt sur cette ligne, dans la barre de menus, choisissez **déboguer**, **point d’arrêt**, ou appuyez sur la touche F9. Un cercle rouge apparaît à gauche de la ligne ; Il indique qu’un point d’arrêt est défini. Pour supprimer un point d’arrêt, vous pouvez choisir à nouveau la commande de menu ou la touche F9.  
   
-     Si vous utilisez une souris, vous pouvez également définir ou supprimer un point d'arrêt en cliquant dans la marge de gauche.  
+     Si vous utilisez une souris, vous pouvez également définir ou supprimer un point d’arrêt en cliquant dans la marge de gauche.  
   
-4.  Dans la barre de menus, choisissez **Déboguer**, **Démarrer le débogage**, ou appuyez sur la touche F5.  
+4.  Dans la barre de menus, choisissez **déboguer**, **démarrer le débogage**, ou appuyez sur la touche F5.  
   
-     Lorsque le programme atteint la ligne comportant le point d'arrêt, l'exécution s'arrête temporairement car votre programme se trouve en mode Arrêt.  Une flèche jaune à gauche d'une ligne de code indique la prochaine ligne à exécuter.  
+     Lorsque le programme atteint la ligne contenant le point d’arrêt, l’exécution s’arrête temporairement, car votre programme est en mode arrêt. Une flèche jaune à gauche d’une ligne de code indique que la ligne suivante à exécuter.  
   
-5.  Pour examiner la valeur de la variable `Cardgame::totalParticipants`, déplacez le pointeur sur `Cardgame`, puis déplacez\-le sur le contrôle d'expansion existe à gauche de la fenêtre d'info\-bulle.  Le nom de variable `totalParticipants` et sa valeur 12 s'affichent.  
+5.  Pour examiner la valeur de la `Cardgame::totalParticipants` variable, placez le pointeur sur `Cardgame` , puis le déplacer sur le contrôle d’extension à gauche de la fenêtre d’info-bulle. Le nom de variable `totalParticipants` et sa valeur de 12 sont affichés.  
   
-     Ouvrez le menu contextuel de la variable `Cardgame::totalParticipants`, puis choisissez **Ajouter un espion** pour afficher cette variable dans la fenêtre **Espion 1**.  Vous pouvez également sélectionner une variable et la faire glisser sur la fenêtre **Espion 1**.  
+     Ouvrez le menu contextuel pour le `Cardgame::totalParticipants` variable, puis choisissez **ajouter un espion** pour afficher cette variable dans le **Espion 1** fenêtre. Vous pouvez également sélectionner une variable et faites-la glisser vers le **Espion 1** fenêtre.  
   
-6.  Pour passer à la ligne de code suivante, dans la barre de menus, choisissez **Déboguer**, **Pas à pas principal** ou appuyez sur F10 .  
+6.  Pour passer à la ligne suivante de code, dans la barre de menus, choisissez **déboguer**, **pas à pas principal**, ou appuyez sur la touche F10.  
   
-     La valeur `Cardgame::totalParticipants` dans la fenêtre **Espion 1** s'affiche maintenant sous la forme 13.  
+     La valeur de `Cardgame::totalParticipants` dans les **Espion 1** fenêtre est maintenant affichée comme 13.  
   
-7.  Ouvrez le menu contextuel de l'instruction `return 0;`, puis choisissez **Exécuter jusqu'au curseur**.  La flèche jaune à gauche du code pointe sur la prochaine instruction à exécuter.  
+7.  Ouvrez le menu contextuel pour le `return 0;` instruction, puis choisissez **exécuter jusqu’au curseur**. La flèche jaune à gauche des points de code à l’instruction suivante à exécuter.  
   
-8.  Le nombre `Cardgame::totalParticipants` doit diminuer lorsque Cardgame se termine.  À ce stade, `Cardgame::totalParticipants` doit être égal à 0 car toutes les instances Cardgame ont été supprimées, mais la fenêtre **Espion 1** indique que `Cardgame::totalparticipants` est égal à 18.  Cela indique la présence d'un bogue dans le code, que vous pouvez détecter et corriger en exécutant la procédure suivante, [Procédure pas à pas : débogage d'un projet \(C\+\+\)](../ide/walkthrough-debugging-a-project-cpp.md).  
+8.  Le `Cardgame::totalParticipants` doit diminuer lorsqu’un Cardgame se termine. À ce stade, `Cardgame::totalParticipants` doit être égal à 0, car toutes les instances Cardgame ont été supprimés, mais la **Espion 1** fenêtre indique que `Cardgame::totalparticipants` est égal à 18. Cela indique qu’il existe un bogue dans le code, vous pouvez détecter et résoudre en effectuant la procédure suivante, [procédure pas à pas : débogage d’un projet (C++)](../ide/walkthrough-debugging-a-project-cpp.md).  
   
-9. Pour arrêter le programme, dans la barre de menus, sélectionnez **Déboguer**, **Arrêter le débogage**, ou sélectionnez le raccourci clavier Maj\+F5.  
+9. Pour arrêter le programme, dans la barre de menus, choisissez **déboguer**, **arrêter le débogage**, ou choisissez le raccourci MAJ + F5.  
   
-## Étapes suivantes  
- **Précédent :** [Procédure pas à pas : génération d’un projet \(C\+\+\)](../ide/walkthrough-building-a-project-cpp.md) &#124; **Suivant :** [Procédure pas à pas : débogage d'un projet \(C\+\+\)](../ide/walkthrough-debugging-a-project-cpp.md)  
+## <a name="next-steps"></a>Étapes suivantes  
+ **Précédente :** [procédure pas à pas : création d’un projet (C++)](../ide/walkthrough-building-a-project-cpp.md) &#124; **Suivant :**[procédure pas à pas : débogage d’un projet (C++)](../ide/walkthrough-debugging-a-project-cpp.md)  
   
-## Voir aussi  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/fr-fr/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [DELETE\_PENDING\_Building and Debugging](http://msdn.microsoft.com/fr-fr/9f6ba537-5ea0-46fb-b6ba-b63d657d84f1)
+## <a name="see-also"></a>Voir aussi  
+ [Référence du langage C++](../cpp/cpp-language-reference.md)   
+ [Génération de programmes C/C++](../build/building-c-cpp-programs.md)

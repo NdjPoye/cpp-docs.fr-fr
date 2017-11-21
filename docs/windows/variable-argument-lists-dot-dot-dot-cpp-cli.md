@@ -1,39 +1,38 @@
 ---
-title: "Variable Argument Lists (...) (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "variable argument lists"
-  - "parameter arrays"
+title: "Listes d’arguments variables (...) (C + C++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- variable argument lists
+- parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-caps.latest.revision: 22
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "22"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: af3742ae4c8f22dd2b5cef8189d02e8f19f7c9fe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Variable Argument Lists (...) (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cet exemple montre comment utiliser la syntaxe `...` dans Visual C\+\+ pour implémenter les fonctions qui ont un nombre variable d'arguments.  
+# <a name="variable-argument-lists--ccli"></a>Listes d’arguments de variable (...) (C++/CLI)
+Cet exemple montre comment vous pouvez utiliser la `...` syntaxe dans Visual C++ pour implémenter des fonctions qui ont un nombre variable d’arguments.  
   
 > [!NOTE]
->  Cette rubrique concerne C\+\+\/CLI.  Pour plus d'informations sur l'utilisation de `...` en langage C\+\+ conforme à la norme ISO, consultez [Ellipses et modèles variadiques](../cpp/ellipses-and-variadic-templates.md) et [Ellipses et arguments par défaut](../misc/ellipses-and-default-arguments.md).  
+>  Cette rubrique se rapporte à C + c++ / CLI. Pour plus d’informations sur l’utilisation de la `...` dans la norme ISO C++ Standard, consultez [Ellipses et modèles Variadiques](../cpp/ellipses-and-variadic-templates.md) et Ellipses et Arguments par défaut dans [expressions suffixées](../cpp/postfix-expressions.md).  
   
- Le paramètre qui utilise `...` doit être le dernier paramètre dans la liste de paramètres.  
+ Le paramètre utilise `...` doit être le dernier paramètre dans la liste de paramètres.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // mcppv2_paramarray.cpp  
@@ -54,14 +53,14 @@ int main() {
 }  
 ```  
   
-### Sortie  
+### <a name="output"></a>Sortie  
   
 ```  
 3  
 ```  
   
-## Exemple de code  
- L'exemple suivant montre comment appeler de C\# une fonction Visual C\+\+ qui accepte un nombre variable d'arguments.  
+## <a name="code-example"></a>Exemple de code  
+ L’exemple suivant montre comment appeler à partir de c#, une fonction de Visual C++ qui accepte un nombre variable d’arguments.  
   
 ```  
 // mcppv2_paramarray2.cpp  
@@ -74,9 +73,9 @@ public:
 };  
 ```  
   
- La fonction `f` peut être appelée à partir de C\# ou de Visual Basic, par exemple, comme s'il s'agissait d'une fonction pouvant prendre un nombre variable d'arguments.  
+ La fonction `f` peut être appelée à partir de c# ou Visual Basic, par exemple, comme s’il s’agissait d’une fonction qui peut prendre un nombre variable d’arguments.  
   
- En C\#, un argument passé à un paramètre `ParamArray` peut être appelé par un nombre d'arguments variable.  L'exemple de code suivant est présenté en C\#.  
+ En c#, un argument est passé à un `ParamArray` paramètre peut être appelé par un nombre variable d’arguments. L’exemple de code suivant est en c#.  
   
 ```  
 // mcppv2_paramarray3.cs  
@@ -93,7 +92,7 @@ public class X {
 }  
 ```  
   
- Un appel à `f` dans Visual C\+\+ peut transmettre un tableau initialisé ou un tableau de longueur variable.  
+ Un appel à `f` dans Visual C++ peut passer un tableau initialisé ou un tableau de longueur variable.  
   
 ```  
 // mcpp_paramarray4.cpp  
@@ -111,5 +110,5 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
- [Arrays](../windows/arrays-cpp-component-extensions.md)
+## <a name="see-also"></a>Voir aussi  
+ [Tableaux](../windows/arrays-cpp-component-extensions.md)

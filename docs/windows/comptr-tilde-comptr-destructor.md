@@ -1,42 +1,39 @@
 ---
-title: "ComPtr::~ComPtr, destructeur | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::~ComPtr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~ComPtr, destructeur"
+title: "ComPtr :: ~ ComPtr, destructeur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::~ComPtr
+dev_langs: C++
+helpviewer_keywords: ~ComPtr, destructor
 ms.assetid: b5e92d05-5d96-4610-ae0b-efd93f759858
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 58d9327ee1436061dcfff52a8b5abd6c42bc1b9e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# ComPtr::~ComPtr, destructeur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Libère une instance de ComPtr.  
+# <a name="comptrcomptr-destructor"></a>ComPtr::~ComPtr, destructeur
+Annule l’initialisation d’une instance de ComPtr.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 WRL_NOTHROW ~ComPtr();  
 ```  
   
-## Configuration requise  
- **En\-tête:** client.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** client.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ComPtr, classe](../windows/comptr-class.md)

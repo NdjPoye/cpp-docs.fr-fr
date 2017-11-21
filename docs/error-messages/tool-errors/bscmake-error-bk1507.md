@@ -1,35 +1,33 @@
 ---
-title: "Erreur BSCMAKE BK1507 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "BK1507"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BK1507"
+title: Erreur BSCMAKE BK1507 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: BK1507
+dev_langs: C++
+helpviewer_keywords: BK1507
 ms.assetid: 3c5220d7-ccb3-45b4-9da0-cb06147311f6
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: beca820e4a6b5fbfef4c88d85b195c8c4d6e42ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Erreur BSCMAKE BK1507
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-impossible d'ouvrir le fichier temporaire 'nom\_fichier' \[: raison\]  
+# <a name="bscmake-error-bk1507"></a>Erreur BSCMAKE BK1507
+Impossible d’ouvrir le fichier temporaire 'nom_fichier' [ : raison]  
   
  BSCMAKE ne peut pas ouvrir un fichier temporaire.  
   
-### Pour résoudre le problème en vérifiant les causes possibles suivantes  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Pour corriger en vérifiant les causes possibles suivantes  
   
-1.  La variable d'environnement **TMP** n'a pas pour valeur un lecteur et un répertoire valides.  
+1.  Le **TMP** variable d’environnement n’est pas définie pour un lecteur valide et un répertoire.  
   
-2.  Un disque plein.
+2.  Un disque saturé.

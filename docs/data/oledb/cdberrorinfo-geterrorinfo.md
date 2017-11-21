@@ -1,54 +1,53 @@
 ---
-title: "CDBErrorInfo::GetErrorInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetErrorInfo"
-  - "ATL.CDBErrorInfo.GetErrorInfo"
-  - "CDBErrorInfo.GetErrorInfo"
-  - "ATL::CDBErrorInfo::GetErrorInfo"
-  - "CDBErrorInfo::GetErrorInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetErrorInfo (méthode)"
+title: CDBErrorInfo::GetErrorInfo | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetErrorInfo
+- ATL.CDBErrorInfo.GetErrorInfo
+- CDBErrorInfo.GetErrorInfo
+- ATL::CDBErrorInfo::GetErrorInfo
+- CDBErrorInfo::GetErrorInfo
+dev_langs: C++
+helpviewer_keywords: GetErrorInfo method
 ms.assetid: 234e1f02-c307-4666-b3ce-2a4d62407fa1
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fe8f82a5f5d5c570bd12aade11df419dd69487e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# CDBErrorInfo::GetErrorInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Appelle [IErrorRecords::GetErrorInfo](https://msdn.microsoft.com/en-us/library/ms711230.aspx) pour retourner un pointeur d'interface [IErrorInfo](https://msdn.microsoft.com/en-us/library/ms718112.aspx) vers un enregistrement spécifié.  
+# <a name="cdberrorinfogeterrorinfo"></a>CDBErrorInfo::GetErrorInfo
+Appels [IErrorRecords::GetErrorInfo](https://msdn.microsoft.com/en-us/library/ms711230.aspx) pour retourner une [IErrorInfo](https://msdn.microsoft.com/en-us/library/ms718112.aspx) pointeur d’interface pour l’enregistrement spécifié.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      HRESULT GetErrorInfo(   
-   ULONG ulRecordNum,   
-   LCID lcid,   
-   IErrorInfo** ppErrorInfo    
+      HRESULT GetErrorInfo(   
+   ULONG ulRecordNum,   
+   LCID lcid,   
+   IErrorInfo** ppErrorInfo    
 ) const throw( );  
 ```  
   
-#### Paramètres  
- Voir [IErrorRecords::GetErrorInfo](https://msdn.microsoft.com/en-us/library/ms711230.aspx) dans le *Guide de référence pour programmeur OLE DB*.  
+#### <a name="parameters"></a>Paramètres  
+ Consultez [IErrorRecords::GetErrorInfo](https://msdn.microsoft.com/en-us/library/ms711230.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## Valeur de retour  
- Un `HRESULT` standard.  
+## <a name="return-value"></a>Valeur de retour  
+ `HRESULT` standard.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CDBErrorInfo, classe](../../data/oledb/cdberrorinfo-class.md)

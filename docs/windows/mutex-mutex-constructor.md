@@ -1,29 +1,27 @@
 ---
-title: "Mutex::Mutex, constructeur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Mutex::Mutex"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Mutex, constructeur"
+title: Mutex::mutex, constructeur | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Mutex::Mutex
+dev_langs: C++
+helpviewer_keywords: Mutex, constructor
 ms.assetid: 504afcdc-775a-4c98-a06f-4fb4663eba3f
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d2a0187c26f8f0a170881d0b683cb462a0a24b81
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Mutex::Mutex, constructeur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mutexmutex-constructor"></a>Mutex::Mutex, constructeur
 Initialise une nouvelle instance de la classe Mutex.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -40,10 +38,10 @@ Mutex(
   
 #### <a name="parameters"></a>Paramètres  
  `h`  
- Un handle, ou une référence rvalue à un handle, pour un objet Mutex.  
+ Un handle ou une référence rvalue à un handle, à un objet Mutex.  
   
 ## <a name="remarks"></a>Notes  
- Le premier constructeur initialise un objet Mutex à partir du handle spécifié. Le deuxième constructeur initialise un objet Mutex à partir du handle spécifié et transfère la propriété du mutex à l’objet Mutex actuel.  
+ Le premier constructeur initialise un objet Mutex à partir du handle spécifié. Le deuxième constructeur initialise un objet Mutex à partir du handle spécifié et la propriété du mutex est alors transférée vers l’objet Mutex actuel.  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** corewrappers.h  

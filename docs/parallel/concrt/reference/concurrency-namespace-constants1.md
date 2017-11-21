@@ -19,18 +19,17 @@ f1_keywords:
 - concrt/concurrency::ResourceManagerEventGuid
 - concrt/concurrency::ScheduleGroupEventGuid
 - concrt/concurrency::VirtualProcessorEventGuid
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 6f81fc4c-b10c-479e-8717-9c292360d5a0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 807579ee48ec543a050d9e96bf0672fc91b1f2f5
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: a30b1c8a9949ab00259dc3335bb842ffc80a0f4f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrency-namespace-constants"></a>constantes d’espace de noms d’accès concurrentiel
 ||||  
@@ -58,7 +57,7 @@ const __declspec(selectany) GUID ChoreEventGuid =
 ```  
   
 ### <a name="remarks"></a>Remarques  
- Cette catégorie d’événements n’est pas déclenchée actuellement par le Runtime d’accès concurrentiel.  
+ Cette catégorie d’événements n’est pas actuellement déclenchée par le Runtime d’accès concurrentiel.  
   
 ##  <a name="concrt_providerguid"></a>ConcRT_ProviderGuid  
  GUID du fournisseur ETW pour le runtime d'accès concurrentiel.  
@@ -84,7 +83,7 @@ const __declspec(selectany) GUID ConcRTEventGuid =
 ```  
   
 ### <a name="remarks"></a>Remarques  
- Cette catégorie d’événements n’est pas déclenchée actuellement par le Runtime d’accès concurrentiel.  
+ Cette catégorie d’événements n’est pas actuellement déclenchée par le Runtime d’accès concurrentiel.  
   
 ##  <a name="cooperative_timeout_infinite"></a>COOPERATIVE_TIMEOUT_INFINITE  
  Valeur qui indique qu'une attente ne doit jamais expirer.  
@@ -123,8 +122,8 @@ const __declspec(selectany) GUID LockEventGuid =
     { 0x79A60DC6, 0x5FC8, 0x4952, { 0xA4, 0x1C, 0x11, 0x63, 0xAE, 0xEC, 0x5E, 0xB8 } };
 ```  
   
-### <a name="remarks"></a>Notes  
- Cette catégorie d’événements n’est pas déclenchée actuellement par le Runtime d’accès concurrentiel.  
+### <a name="remarks"></a>Remarques  
+ Cette catégorie d’événements n’est pas actuellement déclenchée par le Runtime d’accès concurrentiel.  
   
 ##  <a name="maxexecutionresources"></a>MaxExecutionResources  
  Valeur spéciale pour les clés de stratégie `MinConcurrency` et `MaxConcurrency`. Prend la valeur par défaut du nombre de threads matériels sur l'ordinateur en l'absence d'autres contraintes.  
@@ -166,7 +165,7 @@ const __declspec(selectany) GUID ResourceManagerEventGuid =
 ```  
   
 ### <a name="remarks"></a>Remarques  
- Cette catégorie d’événements n’est pas déclenchée actuellement par le Runtime d’accès concurrentiel.  
+ Cette catégorie d’événements n’est pas actuellement déclenchée par le Runtime d’accès concurrentiel.  
   
 ##  <a name="schedulegroupeventguid"></a>ScheduleGroupEventGuid  
  GUID de catégorie qui décrit les événements ETW déclenchés par le runtime d'accès concurrentiel qui sont directement liés à des groupes de planification.  
@@ -177,7 +176,7 @@ const __declspec(selectany) GUID ScheduleGroupEventGuid =
 ```  
   
 ### <a name="remarks"></a>Remarques  
- Cette catégorie d’événements n’est pas déclenchée actuellement par le Runtime d’accès concurrentiel.  
+ Cette catégorie d’événements n’est pas actuellement déclenchée par le Runtime d’accès concurrentiel.  
   
 ##  <a name="schedulereventguid"></a>SchedulerEventGuid  
  GUID de catégorie qui décrit les événements ETW déclenchés par le runtime d'accès concurrentiel qui sont directement liés à l'activité du planificateur.  
@@ -197,4 +196,3 @@ const __declspec(selectany) GUID VirtualProcessorEventGuid =
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)
-

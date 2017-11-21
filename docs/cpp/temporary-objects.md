@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - temporary objects
 - objects [C++], temporary
 ms.assetid: 4c8cec02-391e-4225-9bc6-06d150201412
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2f1e30ce63374a3b8fddb52f7d2afa3f219287d4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 8cfea84beb3e6e2bef7c0b58d8932cbdc7a44f6b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="temporary-objects"></a>Objets temporaires
 Dans certains cas, le compilateur a besoin de créer des objets temporaires. Ces objets temporaires peuvent être créés pour les raisons suivantes :  
@@ -58,4 +55,3 @@ Dans certains cas, le compilateur a besoin de créer des objets temporaires. Ces
 |Résultat de l'évaluation de l'expression|Tous les objets temporaires créés à la suite de l'évaluation d'une expression sont détruits à la fin de l'instruction d'expression (c'est-à-dire au point-virgule) ou à la fin des expressions de contrôle pour `for`, `if`, `while`, `do` et `switch`.|  
 |Initialisation des références `const`|Si un initialiseur n'est pas une l-value du même type que la référence initialisée, un objet temporaire du type d'objet sous-jacent est créé et initialisé avec l'expression d'initialisation. Cet objet temporaire est détruit juste après la destruction de l’objet de référence auquel il est lié.|  
   
-

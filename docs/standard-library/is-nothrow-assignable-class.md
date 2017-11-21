@@ -9,23 +9,19 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- type_traits/std::is_nothrow_assignable
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_nothrow_assignable
+f1_keywords: type_traits/std::is_nothrow_assignable
+dev_langs: C++
+helpviewer_keywords: is_nothrow_assignable
 ms.assetid: aa3aca92-308b-4b1d-b3f3-c54216c48fe7
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 5bc98560000cc0f12270a55547aa0ee082d312a7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: f4e0b1cc873c5b83f7a307e98965ac4891153f60
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="isnothrowassignable-class"></a>is_nothrow_assignable, classe
 Teste si une valeur de type `From` peut être assignée au type `To` et si l’assignation est connue comme ne levant pas d’exception.  
@@ -54,7 +50,6 @@ struct is_nothrow_assignable;
   
 ## <a name="see-also"></a>Voir aussi  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

@@ -1,59 +1,60 @@
 ---
-title: "Disabling Guides | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "guides, disabling snapping"
-  - "Dialog editor, snap to guides"
-  - "snap to guides (Dialog editor)"
-  - "controls [C++], snap to guides/grid"
+title: "Désactivation des repères | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- guides, disabling snapping
+- Dialog editor, snap to guides
+- snap to guides (Dialog editor)
+- controls [C++], snap to guides/grid
 ms.assetid: 51efa07b-8684-474e-a0b4-191ec5d91d1a
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 63c31758b1664f80a350c1d381873e1ac9665bc4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Disabling Guides
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vous pouvez utiliser des touches spéciales combinées avec la souris pour désactiver l'alignement sur les repères.  Si vous utilisez la touche ALT, l'alignement est désactivé pour le repère sélectionné.  Si vous déplacez un repère tout en maintenant la touche MAJ enfoncée, les contrôles alignés ne sont pas déplacés en même temps que le repère.  
+# <a name="disabling-guides"></a>Désactivation des repères
+Vous pouvez utiliser les touches spéciales conjointement avec la souris pour désactiver l’alignement des guides. À l’aide de la touche ALT désactive les effets d’alignement du guide sélectionnée. Déplacement d’un repère avec la touche MAJ empêche de déplacer avec le guide de contrôles alignés.  
   
-### Pour désactiver l'alignement sur les repères  
+### <a name="to-disable-the-snapping-effect-of-the-guides"></a>Pour désactiver l’alignement sur les repères  
   
-1.  Faites glisser le contrôle tout en maintenant la touche **ALT** enfoncée.  
+1.  Faites glisser le contrôle tout en maintenant enfoncée la **ALT** clé.  
   
-### Pour déplacer des repères sans déplacer les contrôles alignés  
+### <a name="to-move-guides-without-moving-the-snapped-controls"></a>Pour déplacer des repères sans déplacer les contrôles alignés  
   
-1.  Faites glisser le repère tout en maintenant la touche **MAJ** enfoncée.  
+1.  Faites glisser le repère tout en maintenant enfoncée la **MAJ** clé.  
   
-### Pour désactiver les repères  
+### <a name="to-turn-off-the-guides"></a>Pour désactiver les repères  
   
-1.  Dans le menu **Format**, cliquez sur **Paramètres du repère**.  
+1.  À partir de la **Format** menu, choisissez **Guide paramètres**.  
   
-2.  Dans la [boîte de dialogue Paramètres du repère](../mfc/guide-settings-dialog-box.md), sous **Repères de mise en page**, sélectionnez **Aucun**.  
+2.  Dans le [repère, boîte de dialogue Paramètres](../windows/guide-settings-dialog-box.md), sous **repères**, sélectionnez **aucun**.  
   
     > [!NOTE]
-    >  Vous pouvez également double\-cliquer sur la règle pour accéder à la boîte de dialogue **Paramètres du repère**.  
+    >  Vous pouvez également double-cliquer sur la règle pour accéder à la **Guide paramètres** boîte de dialogue.  
   
- \- ou \-  
+ \- ou -  
   
--   Dans le menu **Format**, cliquez sur **Activer\/désactiver les repères**.  
+-   Sur le **Format** menu, cliquez sur **bascule Guides**.  
   
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l'ajout de fichiers de ressources aux projets managés, l'accès aux ressources, l'affichage de ressources statiques et l'assignation de chaînes de ressources aux propriétés, et ce manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/fr-fr/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](https://msdn.microsoft.com/library/f45fce5x.aspx) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](https://msdn.microsoft.com/library/xbx3z216.aspx). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
- Configuration requise  
+ Spécifications  
   
  Win32  
   
-## Voir aussi  
- [Dialog Editor States \(Guides and Grids\)](../mfc/dialog-editor-states-guides-and-grids.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)
+## <a name="see-also"></a>Voir aussi  
+ [États de l’éditeur de boîte de dialogue (repères et grilles)](../windows/dialog-editor-states-guides-and-grids.md)   
+ [Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)
+

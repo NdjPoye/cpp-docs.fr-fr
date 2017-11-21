@@ -1,37 +1,35 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4581 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4581"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4581"
+title: Compilateur avertissement (niveau 1) C4581 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4581
+dev_langs: C++
+helpviewer_keywords: C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0f5c8e5c103c7da2cca580fb4f2c12f7ae25dd89
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 1) C4581
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-comportement déconseillé : '"chaîne1"' remplacé par 'chaîne2' pour traiter l'attribut  
+# <a name="compiler-warning-level-1-c4581"></a>Avertissement du compilateur (niveau 1) C4581
+comportement déconseillé : '« chaîne1 »' remplacé par 'chaîne2' pour traiter l’attribut  
   
- Cette erreur peut être due à la mise en conformité du compilateur pour Visual C\+\+ 2005 : vérification des paramètres des attributs Visual C\+\+.  
+ Cette erreur peut être due à la mise en conformité du compilateur pour Visual C++ 2005 : vérification des paramètres des attributs Visual C++.  
   
- Dans les versions antérieures, les valeurs d'attribut étaient acceptées qu'elles soient ou non mises entre guillemets.  Si la valeur est une énumération, elle ne doit pas être entre guillemets.  
+ Dans les versions précédentes, les valeurs d’attribut ont été acceptées ou non qu’ils ont été entourées de guillemets. Si la valeur est une énumération, elle ne doit pas figurer entre guillemets.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C4581 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C4581.  
   
 ```  
 // C4581.cpp  

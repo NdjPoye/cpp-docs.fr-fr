@@ -1,36 +1,37 @@
 ---
-title: "Prise en charge de IDispatch et IErrorInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IErrorInfo"
-  - "IDispatch"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "prise en charge de la classe IDispatch dans ATL"
-  - "classe IDispatchImpl"
-  - "prise en charge de la classe IErrorInfo dans ATL"
-  - "ISupportErrorInfoImpl (méthode)"
+title: Prise en charge IDispatch et IErrorInfo | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IErrorInfo
+- IDispatch
+dev_langs: C++
+helpviewer_keywords:
+- ISupportErrorInfoImpl method
+- IErrorInfo class suppor in ATL
+- IDispatchImpl class
+- IDispatch class support in ATL
 ms.assetid: 7db2220f-319d-4ce9-9382-d340019f14f7
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b6d34f0d0616ae3980d1132b1f70812fe273d275
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Prise en charge de IDispatch et IErrorInfo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="supporting-idispatch-and-ierrorinfo"></a>Prise en charge IDispatch et IErrorInfo
+Vous pouvez utiliser la classe de modèle [IDispatchImpl](../atl/reference/idispatchimpl-class.md) pour fournir une implémentation par défaut de la `IDispatch Interface` partie de toutes les interfaces doubles sur votre objet.  
+  
+ Si votre objet utilise le `IErrorInfo` interface pour signaler des erreurs au client, puis votre objet doit prendre en charge la `ISupportErrorInfo Interface` interface. La classe de modèle [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) fournit un moyen simple pour implémenter cette option si vous disposez d’une interface unique qui génère des erreurs sur votre objet.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Principes de base des objets ATL COM](../atl/fundamentals-of-atl-com-objects.md)
 
-Vous pouvez utiliser la classe de modèle [IDispatchImpl](../atl/reference/idispatchimpl-class.md) pour fournir une implémentation par défaut de la partie d' `IDispatch Interface` de toutes les interfaces doubles sur votre objet.  
-  
- Si votre objet utilise l'interface d' `IErrorInfo` pour stocker des erreurs au client, votre objet doit prendre en charge l'interface d' `ISupportErrorInfo Interface` .  La classe de modèle [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) offre un moyen simple d'implémenter ce scénario si vous avez une interface unique qui génère des erreurs sur votre objet.  
-  
-## Voir aussi  
- [Fundamentals of ATL COM Objects](../atl/fundamentals-of-atl-com-objects.md)

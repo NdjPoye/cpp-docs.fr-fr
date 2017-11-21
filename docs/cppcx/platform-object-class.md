@@ -1,62 +1,188 @@
 ---
-title: "Platform::Object, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Object"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Object (classe)"
+title: Classe Platform::Object | Documents Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCCORLIB/Platform::Object::Object
+- VCCORLIB/Platform::Object::Equals
+- VCCORLIB/Platform::Object::GetHashCode
+- VCCORLIB/Platform::Object::ReferenceEquals
+- VCCORLIB/Platform::ToString
+- VCCORLIB/Platform::GetType
+dev_langs: C++
+helpviewer_keywords: Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-caps.latest.revision: 9
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: ae0c7a99ca64287c91cb1392f81ac82db103d29d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Platform::Object, classe
+# <a name="platformobject-class"></a>Platform::Object, classe
 Fournit un comportement commun pour les classes ref et les structs ref dans les applications du Windows Store. Toute instance de classe ref ou de struct ref est implicitement convertible en objet Platform::Object^ et peut remplacer sa méthode ToString virtuelle.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
-```scr  
+```cpp  
 public ref class Object : Object  
 ```  
   
-## Membres  
+### <a name="members"></a>Membres  
   
-### Constructeurs publics  
-  
-|Nom|Description|  
-|---------|-----------------|  
-|[Object::Object, constructeur](../cppcx/object-object-constructor.md)|Initialise une nouvelle instance de la classe Object.|  
-  
-### M&\#233;thodes publiques  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[Object::Equals, méthode](../cppcx/object-equals-method.md)|Détermine si l'objet spécifié est identique à l'objet actuel.|  
-|[Object::GetHashCode, méthode](../cppcx/object-gethashcode-method.md)|Retourne le code de hachage de cette instance.|  
-|[Object::ReferenceEquals, méthode](../cppcx/object-referenceequals-method.md)|Détermine si les instances Object spécifiées sont identiques.|  
-|[ToString \(méthode\)](../cppcx/object-tostring-method-c-cx.md)|Retourne une chaîne qui représente l'objet actuel. Peut être substituée.|  
-|[GetType, méthode](../cppcx/object-gettype-method.md)|Obtient un [Platform::Type](../cppcx/platform-type-class.md) qui décrit l'instance actuelle.|  
+|----------|-----------------|  
+|[Object::Object](#ctor)|Initialise une nouvelle instance de la classe Object.|  
   
-## Hiérarchie d'héritage  
+### <a name="public-methods"></a>M&#233;thodes publiques  
+  
+|Nom|Description|  
+|----------|-----------------|  
+|[Object::Equals](#equals)|Détermine si l'objet spécifié est identique à l'objet actuel.|  
+|[Object::GetHashCode](#gethashcode)|Retourne le code de hachage de cette instance.|  
+|[Object::ReferenceEquals](#referenceequals)|Détermine si les instances Object spécifiées sont identiques.|  
+|[ToString](#tostring)|Retourne une chaîne qui représente l'objet actuel. Peut être substituée.|  
+|[GetType](#gettype)|Obtient un [Platform::Type](../cppcx/platform-type-class.md) qui décrit l'instance actuelle.|  
+  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Object`  
   
  `Object`  
   
-## Configuration requise  
- **En\-tête** : vccorlib.h  
+### <a name="requirements"></a>Spécifications  
+ **En-tête :** vccorlib.h  
   
- **Espace de noms :** Platform  
+ **Espace de noms :** Platform  
+
   
-## Voir aussi  
- [\(NOTINBUILD\) Espace de noms Platform](http://msdn.microsoft.com/fr-fr/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)
+## <a name="equals"></a>Object::Equals, méthode
+Détermine si l'objet spécifié est identique à l'objet actuel.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+  
+bool Equals(  
+    Object^ obj  
+)  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ obj  
+ Objet à comparer.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ `true` si les objets sont identiques ; sinon, `false`.  
+  
+
+
+## <a name="gethashcode"></a>Object::GetHashCode, méthode
+Retourne la valeur d'identité `IUnknown`* pour cette instance s'il s'agit d'un objet COM ou une valeur de hachage calculée s'il ne s'agit d'un objet COM.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+public:int GetHashCode()  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Une valeur numérique qui identifie de façon unique cet objet.  
+  
+### <a name="remarks"></a>Remarques  
+ Vous pouvez utiliser GetHashCode afin de créer des clés pour les objets des cartes. Vous pouvez comparer les codes de hachage à l’aide de [Object::Equals](#equals). Si le chemin de code est extrêmement critique et `GetHashCode` et `Equals` ne sont pas suffisamment rapides, vous pouvez alors accéder à la couche COM sous-jacente et effectuer des comparaisons de pointeurs `IUnknown` natifs.  
+  
+
+
+## <a name="gettype"></a>Object::GetType, méthode
+Retourne un [Platform::Type](../cppcx/platform-type-class.md) objet qui décrit le type d’exécution d’un objet.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+Object::GetType()  
+```  
+
+  
+### <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
+ A [Platform::Type](../cppcx/platform-type-class.md) objet qui décrit le type de runtime de l’objet.  
+  
+### <a name="remarks"></a>Remarques  
+ La méthode statique [Type::GetTypeCode](../cppcx/platform-type-class.md#gettypecode) peut être utilisée pour obtenir un [Platform::TypeCode (énumération)](../cppcx/platform-typecode-enumeration.md) valeur qui représente le type actuel. Ceci est particulièrement utile pour les types intégrés. Le code de type pour toute classe ref en plus [Platform::String](../cppcx/platform-string-class.md) est Object (1).  
+  
+ Le [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) classe est utilisée dans les API Windows comme un moyen indépendant du langage de passer des informations de type entre les applications et des composants de Windows. Le T[classe Platform::Type](../cppcx/platform-type-class.md) a des opérateurs de conversion entre `Type` et `TypeName`.  
+  
+ Utilisez le [typeid](../windows/typeid-cpp-component-extensions.md) opérateur pour retourner un `Platform::Type` objet pour un nom de classe, par exemple lors de la navigation entre les pages XAML :  
+  
+```  
+rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Platform::type (classe)](../cppcx/platform-type-class.md)   
+ [Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)   
+ (Type System) (.. /cppcx/type-System-c-CX.MD
+  
+## <a name="ctor"></a>Object::Object, constructeur
+Initialise une nouvelle instance de la classe Object.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+public:Object()  
+```  
+
+## <a name="referenceequals"></a>Object::ReferenceEquals, méthode
+Détermine si les instances Object spécifiées sont identiques.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2)  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ obj1  
+ Premier objet à comparer.  
+  
+ obj2  
+ Deuxième objet à comparer.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ `true` si les deux objets sont identiques ; sinon, `false`.  
+ 
+## <a name="tostring"></a>Object::ToString, méthode (C + c++ / CX)
+Retourne une chaîne qui représente l'objet actuel.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+public:  
+virtual String^ ToString()  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Chaîne qui représente l'objet actuel. Vous pouvez substituer cette méthode afin de fournir un message personnalisé dans votre classe ou struct ref :  
+  
+```cpp  
+public ref class Tree sealed  
+{  
+public:  
+    Tree(){}  
+    virtual Platform::String^ ToString() override  
+    {  
+      return "I’m a Tree";  
+    };  
+};  
+```  
+## <a name="see-also"></a>Voir aussi  
+ [Plateforme Namespace](platform-namespace-c-cx.md)

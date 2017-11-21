@@ -9,23 +9,19 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- type_traits/std::is_trivially_constructible
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_trivially_constructible
+f1_keywords: type_traits/std::is_trivially_constructible
+dev_langs: C++
+helpviewer_keywords: is_trivially_constructible
 ms.assetid: 3fa918c1-e66f-4d0e-a11b-be1fb2c02e7b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: c123f01504a986c14b3b24af99f6df1abb7b8216
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 109e119100a3cb561159cca9bce95f793922e58d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="istriviallyconstructible-class"></a>is_trivially_constructible, classe
 Teste si un type est constructible de façon triviale quand les types d’arguments spécifiés sont utilisés.  
@@ -54,7 +50,6 @@ struct is_trivially_constructible;
   
 ## <a name="see-also"></a>Voir aussi  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

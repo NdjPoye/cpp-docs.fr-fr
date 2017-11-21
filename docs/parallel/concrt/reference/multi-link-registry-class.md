@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,35 +17,18 @@ f1_keywords:
 - AGENTS/concurrency::multi_link_registry::count
 - AGENTS/concurrency::multi_link_registry::remove
 - AGENTS/concurrency::multi_link_registry::set_bound
-dev_langs:
-- C++
-helpviewer_keywords:
-- multi_link_registry class
+dev_langs: C++
+helpviewer_keywords: multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: b52ee20ed16a4ce8d0b9f11b6acf25112464b49b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 39c93cf2c2e3642d2ed6c3fcf08cadafea4ce8bf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry, classe
 L'objet `multi_link_registry` est un `network_link_registry` qui gère plusieurs blocs sources ou plusieurs blocs cibles.  
@@ -60,7 +42,7 @@ class multi_link_registry : public network_link_registry<_Block>;
   
 #### <a name="parameters"></a>Paramètres  
  `_Block`  
- Le bloc type de données qui est stocké dans le `multi_link_registry` objet.  
+ Le bloc type de données sont stockées dans le `multi_link_registry` objet.  
   
 ## <a name="members"></a>Membres  
   
@@ -77,12 +59,12 @@ class multi_link_registry : public network_link_registry<_Block>;
 |----------|-----------------|  
 |[add](#add)|Ajoute un lien vers le `multi_link_registry` objet. (Substitue [network_link_registry::add](network-link-registry-class.md#add).)|  
 |[begin](#begin)|Retourne un itérateur au premier élément dans le `multi_link_registry` objet. (Substitue [network_link_registry::begin](network-link-registry-class.md#begin).)|  
-|[contient](#contains)|Recherche le `multi_link_registry` objet un bloc spécifié. (Substitue [network_link_registry::contains](network-link-registry-class.md#contains).)|  
+|[contient](#contains)|Recherche le `multi_link_registry` objet pour un bloc spécifié. (Substitue [network_link_registry::contains](network-link-registry-class.md#contains).)|  
 |[count](#count)|Compte le nombre d’éléments dans le `multi_link_registry` objet. (Substitue [network_link_registry::count](network-link-registry-class.md#count).)|  
 |[remove](#remove)|Supprime un lien à partir de la `multi_link_registry` objet. (Substitue [network_link_registry::remove](network-link-registry-class.md#remove).)|  
 |[set_bound](#set_bound)|Définit une limite supérieure sur le nombre de liens qui les `multi_link_registry` objet peut contenir.|  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [network_link_registry](network-link-registry-class.md)  
   
  `multi_link_registry`  
@@ -105,7 +87,7 @@ virtual void add(_EType _Link);
  Pointeur vers un bloc à ajouter.  
   
 ### <a name="remarks"></a>Remarques  
- La méthode lève un [invalid_link_target](invalid-link-target-class.md) exception si le lien est déjà présent dans le Registre, ou si une limite a déjà été définie avec la `set_bound` fonction et un lien a été supprimé depuis.  
+ La méthode lève un [invalid_link_target](invalid-link-target-class.md) exception si le lien est déjà présent dans le Registre, ou si une limite a déjà été définie avec la `set_bound` (fonction) et un lien a été supprimé depuis.  
   
 ##  <a name="begin"></a>commencer 
 
@@ -116,14 +98,14 @@ virtual iterator begin();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un itérateur qui traite le premier élément de la `multi_link_registry` objet.  
+ Un itérateur qui traite le premier élément dans le `multi_link_registry` objet.  
   
 ### <a name="remarks"></a>Remarques  
- L’état de fin est indiqué par une `NULL` lien.  
+ L’état de fin est indiqué par un `NULL` lien.  
   
 ##  <a name="contains"></a>contient 
 
- Recherche le `multi_link_registry` objet un bloc spécifié.  
+ Recherche le `multi_link_registry` objet pour un bloc spécifié.  
   
 ```
 virtual bool contains(_EType _Link);
@@ -131,7 +113,7 @@ virtual bool contains(_EType _Link);
   
 ### <a name="parameters"></a>Paramètres  
  `_Link`  
- Pointeur vers un bloc qui doit être recherché dans le `multi_link_registry` objet.  
+ Un pointeur vers un bloc qui consiste à rechercher dans le `multi_link_registry` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si le bloc spécifié a été trouvé, `false` dans le cas contraire.  
@@ -176,7 +158,7 @@ virtual bool remove(_EType _Link);
   
 ### <a name="parameters"></a>Paramètres  
  `_Link`  
- Pointeur vers un bloc à supprimer, si trouvé.  
+ Un pointeur vers un bloc doit être supprimée, si trouvée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si le lien a été trouvé et supprimé, `false` dans le cas contraire.  
@@ -199,4 +181,3 @@ void set_bound(size_t _MaxLinks);
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   
  [single_link_registry, classe](single-link-registry-class.md)
-

@@ -1,30 +1,28 @@
 ---
-title: "SyncLockWithStatusT, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SyncLockWithStatusT (classe)"
+title: Synclockwithstatust, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT
+dev_langs: C++
+helpviewer_keywords: SyncLockWithStatusT class
 ms.assetid: 4832fd93-0ac8-4168-9404-b43fefea7476
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d1d2cd87c7a77501981904686f0bea0b3c7444e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# SyncLockWithStatusT, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l’infrastructure/FAO et n’est pas destinée à être utilisée directement à partir de votre code.  
+# <a name="synclockwithstatust-class"></a>SyncLockWithStatusT, classe
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,28 +48,28 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Synclockwithstatust::synclockwithstatust, constructeur](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Initialise une nouvelle instance de la classe SyncLockWithStatusT.|  
+|[SyncLockWithStatusT::SyncLockWithStatusT, constructeur](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Initialise une nouvelle instance de la classe SyncLockWithStatusT.|  
   
 ### <a name="protected-constructors"></a>Constructeurs protégés  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Synclockwithstatust::synclockwithstatust, constructeur](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Initialise une nouvelle instance de la classe SyncLockWithStatusT.|  
+|[SyncLockWithStatusT::SyncLockWithStatusT, constructeur](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Initialise une nouvelle instance de la classe SyncLockWithStatusT.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Synclockwithstatust::GetStatus, méthode](../windows/synclockwithstatust-getstatus-method.md)|Récupère l’état d’attente de l’objet SyncLockWithStatusT.|  
-|[Synclockwithstatust::IsLocked, méthode](../windows/synclockwithstatust-islocked-method.md)|Indique si l’objet en cours de SyncLockWithStatusT possède une ressource ; Autrement dit, l’objet SyncLockWithStatusT est *verrouillé*.|  
+|[SyncLockWithStatusT::GetStatus, méthode](../windows/synclockwithstatust-getstatus-method.md)|Récupère l’état d’attente de l’objet SyncLockWithStatusT actuel.|  
+|[SyncLockWithStatusT::IsLocked, méthode](../windows/synclockwithstatust-islocked-method.md)|Indique si l’objet SyncLockWithStatusT actuel possède une ressource ; l’objet SyncLockWithStatusT est *verrouillé*.|  
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Synclockwithstatust::Status, données de membre](../windows/synclockwithstatust-status-data-member.md)|Contient le résultat de l’infrastructure : opération après une opération de verrouillage en attente sur un objet basé sur l’objet SyncLockWithStatusT en cours.|  
+|[SyncLockWithStatusT::status_, données de membre](../windows/synclockwithstatust-status-data-member.md)|Contient le résultat de l’objet sous-jacent attendre l’opération après une opération de verrouillage sur un objet basé sur l’objet SyncLockWithStatusT actuel.|  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `SyncLockT`  
   
  `SyncLockWithStatusT`  
@@ -82,4 +80,4 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
  **Namespace :** Microsoft::WRL::Wrappers::Details  
   
 ## <a name="see-also"></a>Voir aussi  
- [Microsoft::wrl::wrappers::Details Namespace](../windows/microsoft-wrl-wrappers-details-namespace.md)
+ [Microsoft::WRL::Wrappers::Details, espace de noms](../windows/microsoft-wrl-wrappers-details-namespace.md)

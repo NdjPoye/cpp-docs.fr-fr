@@ -1,50 +1,49 @@
 ---
-title: "3.2 Lock Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 3.2 fonctions de verrouillage | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 0ec855c6-55a9-49d7-bee4-5edae6e86a1b
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 540c76a5fdcee4df78df454fed957191fc244cf5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# 3.2 Lock Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-les fonctions décrites de cette section manipulent des verrous utilisés pour la synchronisation.  
+# <a name="32-lock-functions"></a>3.2 Fonctions de verrouillage
+Les fonctions décrites dans cette section manipulent des verrous utilisés pour la synchronisation.  
   
- pour les fonctions suivantes, la variable de verrou doit avoir le type **omp\_lock\_t**.  Cette variable doit uniquement accessible via ces fonctions.  Toutes les fonctions de verrou requièrent un argument qui a un pointeur vers le type d' **omp\_lock\_t** .  
+ Pour les fonctions suivantes, la variable de verrou doit avoir le type **omp_lock_t**. Cette variable doit être accessible uniquement au moyen de ces fonctions. Toutes les fonctions de verrouillage nécessitent un argument qui a un pointeur vers **omp_lock_t** type.  
   
--   la fonction d' `omp_init_lock` initialise un verrou simple.  
+-   Le `omp_init_lock` fonction initialise un verrou simple.  
   
--   la fonction d' `omp_destroy_lock` supprime un verrou simple.  
+-   Le `omp_destroy_lock` fonction supprime un verrou simple.  
   
--   la fonction d' `omp_set_lock` attend jusqu'à ce qu'un verrou simple soit disponible.  
+-   Le `omp_set_lock` fonction attend un verrou simple n’est disponible.  
   
--   la fonction d' `omp_unset_lock` libère un verrou simple.  
+-   Le `omp_unset_lock` fonction libère un verrou simple.  
   
--   les tests de fonction d' `omp_test_lock` un verrou simple.  
+-   Le `omp_test_lock` fonction teste un verrou simple.  
   
- pour les fonctions suivantes, la variable de verrou doit avoir le type **omp\_nest\_lock\_t**.  Cette variable doit uniquement accessible via ces fonctions.  Toutes les fonctions de verrou empilables requièrent un argument qui a un pointeur vers le type d' **omp\_nest\_lock\_t** .  
+ Pour les fonctions suivantes, la variable de verrou doit avoir le type **omp_nest_lock_t**.  Cette variable doit être accessible uniquement au moyen de ces fonctions. Toutes les fonctions de verrou pouvant nécessitent un argument qui a un pointeur vers **omp_nest_lock_t** type.  
   
--   la fonction d' `omp_init_nest_lock` initialise un verrou empilable.  
+-   Le `omp_init_nest_lock` fonction initialise un verrou pouvant.  
   
--   la fonction d' `omp_destroy_nest_lock` supprime un verrou empilable.  
+-   Le `omp_destroy_nest_lock` fonction supprime un verrou pouvant.  
   
--   la fonction d' `omp_set_nest_lock` attend jusqu'à ce qu'un verrou empilable soit disponible.  
+-   Le `omp_set_nest_lock` fonction attend un verrou pouvant est disponible.  
   
--   la fonction d' `omp_unset_nest_lock` libère un verrou empilable.  
+-   Le `omp_unset_nest_lock` fonction libère un verrou pouvant.  
   
--   les tests de fonction d' `omp_test_nest_lock` un verrou empilable.  
+-   Le `omp_test_nest_lock` fonction teste un verrou pouvant.  
   
- Les fonctions de verrou d'OpenMP accède à la variable de verrou de telle sorte qu'elles toujours lisent et mettent à jour la plupart de valeur actuelle de la variable de verrouillage.  Par conséquent, il n'est pas nécessaire qu'un programme d'OpenMP inclure les directives explicites de **vide** pour garantir que la valeur de variable de verrou est cohérente entre les différents threads.  \(Il peut exister un besoin des directives de **vide** de mettre les valeurs d'autres variables cohérentes.\)
+ Les fonctions de verrouillage OpenMP accéder à la variable de verrou de sorte qu’ils toujours lire et mettre à jour la valeur la plus récente de la variable de verrou. Par conséquent, il n’est pas nécessaire pour inclure explicite d’un programme OpenMP **vider** directives pour vous assurer que la valeur de la variable de verrou est cohérente parmi différents threads. (Il peut être nécessaire de **vider** directives pour rendre les valeurs des autres variables cohérente.)

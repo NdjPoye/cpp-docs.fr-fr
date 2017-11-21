@@ -1,31 +1,29 @@
 ---
-title: "Avertissement BSCMAKE BK4504 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "BK4504"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BK4504"
+title: Avertissement BSCMAKE BK4504 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: BK4504
+dev_langs: C++
+helpviewer_keywords: BK4504
 ms.assetid: b56ee2d4-ad44-40f4-98c0-75934ea44a6c
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f7f6d854fbd74d9ca05ba6797bbd57db52b7a70e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement BSCMAKE BK4504
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-le fichier contient trop de références ; les références ultérieures provenant de cette source seront ignorées  
+# <a name="bscmake-warning-bk4504"></a>Avertissement BSCMAKE BK4504
+fichier contient trop de références ; en ignorant les références ultérieures provenant de cette source  
   
- Le fichier .cpp contient plus de 64.000 références de symbole.  Lorsque BSCMAKE a rencontré 64.000 références dans un fichier, il ignore toutes les références ultérieures.  
+ Le fichier .cpp contient plus de 64 000 références des symboles. Lorsque BSCMAKE a rencontré des références 64 000 dans un fichier, il ignore toutes les références supplémentaires.  
   
- Pour corriger ce problème, sectionnez le fichier en deux fichiers ou plus, chacun possédant moins de 64.000 références de symbole, ou utilisez la directive du préprocesseur `#pragma component(browser)` pour limiter les symboles générés pour les références spécifiques.  Pour plus d'informations, consultez [composant](../../preprocessor/component.md).
+ Pour corriger le problème, fractionnez le fichier en deux ou plusieurs fichiers, chacun d'entre eux ayant moins de 64 000 références de symboles, ou utilisent la `#pragma component(browser)` directive de préprocesseur limite les symboles qui sont générés pour les références particuliers. Pour plus d’informations, consultez [composant](../../preprocessor/component.md).
