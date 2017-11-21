@@ -1,41 +1,39 @@
 ---
-title: "hash_set::key_comp (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::key_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre key_comp [STL/CLR]"
+title: hash_set::key_comp (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::key_comp
+dev_langs: C++
+helpviewer_keywords: key_comp member [STL/CLR]
 ms.assetid: d5dc46c3-c2ee-4591-8f03-d8c9d3df0519
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a76db0965f3f8ef7381d85f1fccdfbeaa69f8b85
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::key_comp (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copies the ordering delegate for two keys.  
+# <a name="hashsetkeycomp-stlclr"></a>hash_set::key_comp (STL/CLR)
+Copie le délégué de classement pour les deux clés.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 key_compare^key_comp();  
 ```  
   
-## Notes  
- The member function returns the ordering delegate used to order the controlled sequence.  Vous l'utilisez pour comparer deux clés.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre retourne le délégué de classement utilisé pour ordonner la séquence contrôlée. Il permet de comparer deux clés.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_set_key_comp.cpp   
@@ -71,18 +69,22 @@ int main()
   
 ```  
   
-  **compare\(L'a', L'a'\) \= True**  
-**compare\(L'a', L'b'\) \= True**  
-**compare\(L'b', L'a'\) \= False**  
-**compare\(L'a', L'a'\) \= False**  
-**compare\(L'a', L'b'\) \= False**  
-**compare\(L'b', L'a'\) \= True**   
-## Configuration requise  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+compare(L'a', L'a') = True  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
   
- **Namespace:** cliext  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
   
-## Voir aussi  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::key\_compare](../dotnet/hash-set-key-compare-stl-clr.md)   
- [hash\_set::key\_type](../dotnet/hash-set-key-type-stl-clr.md)
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/hash_set >  
+  
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)   
+ [hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)

@@ -1,34 +1,33 @@
 ---
-title: "IRowsetLocateImpl::GetRowsByBookmark | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetLocateImpl::GetRowsByBookmark"
-  - "IRowsetLocateImpl.GetRowsByBookmark"
-  - "GetRowsByBookmark"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetRowsByBookmark (méthode)"
+title: IRowsetLocateImpl::GetRowsByBookmark | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetLocateImpl::GetRowsByBookmark
+- IRowsetLocateImpl.GetRowsByBookmark
+- GetRowsByBookmark
+dev_langs: C++
+helpviewer_keywords: GetRowsByBookmark method
 ms.assetid: 07906e42-3582-427e-812a-aa19791e3c56
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 938a32796f61bbb1873866db6b6b81b017e0a1d0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetLocateImpl::GetRowsByBookmark
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="irowsetlocateimplgetrowsbybookmark"></a>IRowsetLocateImpl::GetRowsByBookmark
 Extrait une ou plusieurs lignes qui correspondent aux signets spécifiés.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -42,18 +41,18 @@ Extrait une ou plusieurs lignes qui correspondent aux signets spécifiés.
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `hReserved`  
- \[in\] correspond au paramètre `hChapter` à [IRowsetLocate::GetRowsByBookmark](https://msdn.microsoft.com/en-us/library/ms725420.aspx).  
+ [in] Correspond à `hChapter` paramètre [IRowsetLocate::GetRowsByBookmark](https://msdn.microsoft.com/en-us/library/ms725420.aspx).  
   
- Pour d'autres paramètres, consultez [IRowsetLocate::GetRowsByBookmark](https://msdn.microsoft.com/en-us/library/ms725420.aspx) dans le *guide de référence du programmeur OLE DB*.  
+ Pour les autres paramètres, consultez [IRowsetLocate::GetRowsByBookmark](https://msdn.microsoft.com/en-us/library/ms725420.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## Notes  
- Le signet peut être une valeur que vous définissez ou un [signets standard](https://msdn.microsoft.com/en-us/library/ms712954.aspx) OLE DB \(**DBBMK\_FIRST** ou **DBBMK\_LAST**\).  Ne modifie pas la position du curseur.  
+## <a name="remarks"></a>Remarques  
+ Le signet peut être une valeur que vous définissez ou OLE DB [signets standards](https://msdn.microsoft.com/en-us/library/ms712954.aspx) (**DBBMK_FIRST** ou **DBBMK_LAST**). Ne modifie pas la position du curseur.  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [IRowsetLocateImpl, classe](../../data/oledb/irowsetlocateimpl-class.md)   
  [IRowsetLocateImpl::GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)

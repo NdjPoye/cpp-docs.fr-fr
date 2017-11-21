@@ -1,47 +1,48 @@
 ---
-title: "Dual Interfaces and ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, interfaces doubles"
-  - "COM, et ATL"
-  - "interfaces doubles, about dual interfaces"
+title: Interfaces doubles et ATL | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- COM, and ATL
+- ATL, dual interfaces
+- dual interfaces, about dual interfaces
 ms.assetid: 5a390e89-d2c4-41f0-8538-cab2c5e5d4c8
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7fc4859d9008135cf1e8ff39b0f00f1a86d35088
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Dual Interfaces and ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Une interface double autorise ses méthodes à faire référence en tant que méthodes dispinterface ou en tant que méthodes vtable.  Cette section décrit quelques\-unes des fonctionnalités des interfaces doubles du point de vue ATL.  
+# <a name="dual-interfaces-and-atl"></a>Interfaces doubles et ATL
+Une interface double permet à ses méthodes accessibles en tant que méthodes dispinterface ou vtable. Cette section décrit certaines des fonctionnalités des interfaces doubles à partir d’un point de vue ATL.  
   
-## Dans cette section  
- [implémenter une interface double](../atl/implementing-a-dual-interface.md)  
- Décrit les classes et les assistants impliqués en implémentant une interface double.  
+## <a name="in-this-section"></a>Dans cette section  
+ [Implémentation d’une interface double](../atl/implementing-a-dual-interface.md)  
+ Décrit les classes et les Assistants de mise en œuvre d’une interface double.  
   
- [plusieurs interfaces doubles](../atl/multiple-dual-interfaces.md)  
- Explique comment exposer plusieurs interfaces doubles sur un objet unique.  
+ [Interfaces doubles multiples](../atl/multiple-dual-interfaces.md)  
+ Explique comment exposer plusieurs interfaces doubles sur un seul objet.  
   
- [l'attribut non extensible](../atl/nonextensible-attribute.md)  
- Explique quand utiliser l'attribut de **nonextensible** sur votre définition d'interface.  
+ [Le nonextensible (attribut)](../atl/nonextensible-attribute.md)  
+ Explique quand utiliser le **nonextensible** attribut sur la définition d’interface.  
   
- [interfaces doubles et événements](../atl/dual-interfaces-and-events.md)  
- Décrit les raisons de conception pour ne pas avoir à une interface d'événements une interface double.  
+ [Interfaces doubles et événements](../atl/dual-interfaces-and-events.md)  
+ Explique les raisons de conception d’effectuez ne pas un événement de l’interface une interface double.  
   
-## Rubriques connexes  
+## <a name="related-sections"></a>Rubriques connexes  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Fournit des liens vers des rubriques conceptuelles sur comment programmer avec la bibliothèque ATL.  
+ Propose des liens vers des rubriques conceptuelles traitant de la programmation à l'aide de la bibliothèque ATL (Active Template Library).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Concepts](../atl/active-template-library-atl-concepts.md)
+

@@ -1,55 +1,55 @@
 ---
-title: "/NOLOGO (Suppression de la banni&#232;re de d&#233;marrage) (&#201;diteur de liens) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.SuppressStartupBanner"
-  - "/nologo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/NOLOGO (option de l'éditeur de liens)"
-  - "bannières, supprimer au démarrage"
-  - "message de copyright"
-  - "NOLOGO (option de l'éditeur de liens)"
-  - "-NOLOGO (option de l'éditeur de liens)"
-  - "supprimer la bannière de démarrage (option de l'éditeur de liens)"
-  - "numéros de version, empêcher l'affichage de l'éditeur de liens"
+title: "-NOLOGO (suppression de la bannière de démarrage) (éditeur de liens) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.SuppressStartupBanner
+- /nologo
+dev_langs: C++
+helpviewer_keywords:
+- suppress startup banner linker option
+- -NOLOGO linker option
+- /NOLOGO linker option
+- copyright message
+- version numbers, preventing linker display
+- banners, suppressing startup
+- NOLOGO linker option
 ms.assetid: 3b20dddd-eca6-4545-a331-9f70bf720197
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1460563303f6a619d316a1b3ff4f885a31247a72
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /NOLOGO (Suppression de la banni&#232;re de d&#233;marrage) (&#201;diteur de liens)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="nologo-suppress-startup-banner-linker"></a>/NOLOGO (Suppression de la bannière de démarrage) (Éditeur de liens)
 ```  
 /NOLOGO  
 ```  
   
-## Notes  
- L'option \/NOLOGO empêche l'affichage du message de copyright et du numéro de version.  
+## <a name="remarks"></a>Remarques  
+ L’option /NOLOGO empêche l’affichage de l’auteur message et numéro de version.  
   
- Cette option supprime également la reproduction en écho des fichiers de commande.  Pour plus d'informations, consultez [Fichiers de commandes LINK](../../build/reference/link-command-files.md).  
+ Cette option supprime également l’affichage des fichiers de commandes. Pour plus d’informations, consultez [fichiers de commandes LINK](../../build/reference/link-command-files.md).  
   
- Par défaut, l'éditeur de liens envoie ces informations à la fenêtre Sortie.  Sur la ligne de commande, ces informations sont envoyées à la sortie standard et peuvent être redirigées vers un fichier.  
+ Par défaut, ces informations sont transmises par l’éditeur de liens dans la fenêtre Sortie. Sur la ligne de commande, il est envoyé vers une sortie standard et peut être redirigé vers un fichier.  
   
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Cette option s'exécute uniquement à partir de la ligne de commande.  
+1.  Cette option doit uniquement être utilisée à partir de la ligne de commande.  
   
-### Pour définir cette option de l'éditeur de liens par programme  
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   
-1.  Cette option n'est pas modifiable par programme.  
+1.  Cette option de l’éditeur de liens ne peut pas être modifiée par programmation.  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)

@@ -1,32 +1,30 @@
 ---
-title: "InterfaceTraits::CastToBase, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceTraits::CastToBase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CastToBase (méthode)"
+title: "Interfacetraits::casttobase, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceTraits::CastToBase
+dev_langs: C++
+helpviewer_keywords: CastToBase method
 ms.assetid: 0591a017-0adf-4358-b946-eb0a307ce7f2
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fa78bd28bbc65c93c201f044055cde40d5d79cf6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# InterfaceTraits::CastToBase, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="interfacetraitscasttobase-method"></a>InterfaceTraits::CastToBase, méthode
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<  
@@ -37,26 +35,26 @@ static __forceinline Base* CastToBase(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
  Le type de paramètre `ptr`.  
   
  `ptr`  
- Pointeur vers le type `T`.  
+ Pointeur vers un type `T`.  
   
-## Valeur de retour  
- Pointeur vers `Base`  
+## <a name="return-value"></a>Valeur de retour  
+ Un pointeur vers `Base`.  
   
-## Remarques  
- Caste le pointeur spécifié en un pointeur vers `Base`.  
+## <a name="remarks"></a>Notes  
+ Convertit le pointeur spécifié vers un pointeur vers `Base`.  
   
- Pour plus d'informations sur `Base`, consultez la section Typedefs Publiques dans [InterfaceTraits, structure](../windows/interfacetraits-structure.md).  
+ Pour plus d’informations sur `Base`, consultez la section Typedefs publics dans [interfacetraits, Structure](../windows/interfacetraits-structure.md).  
   
-## Configuration requise  
- **En\-tête:** implements.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** implements.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
- [InterfaceTraits, structure](../windows/interfacetraits-structure.md)   
+## <a name="see-also"></a>Voir aussi  
+ [InterfaceTraits (Structure)](../windows/interfacetraits-structure.md)   
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

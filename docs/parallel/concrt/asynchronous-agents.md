@@ -1,71 +1,74 @@
 ---
-title: "Agents asynchrones | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "agents (runtime d'accès concurrentiel)"
-  - "agents asynchrones"
+title: Agents asynchrones | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- asynchronous agents
+- agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5196503776be8abf4de49c9ae0ffc42122f9028f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Agents asynchrones
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="asynchronous-agents"></a>Agents asynchrones
+Un *agent asynchrone* (ou simplement *agent*) est un composant d’application qui fonctionne de façon asynchrone avec d’autres agents pour effectuer des tâches de calcul supérieure. Considérer un agent comme une tâche qui a un cycle de vie défini. Par exemple, un agent peut lire les données à partir d’un périphérique d’entrée/sortie (par exemple, le clavier, un fichier sur disque ou une connexion réseau) et un autre agent peuvent exécuter une action sur ces données qu’il est disponible. Le premier agent utilise le passage de message pour informer le second agent que davantage de données est disponible. Le Planificateur de tâches du Runtime d’accès concurrentiel fournit un mécanisme efficace pour permettre aux agents de bloquer et de céder de manière coopérative sans nécessiter de préemption moins efficace.  
+  
 
-Un *agent asynchrone* \(ou simplement *agent*\) est un composant d'application qui opère de manière asynchrone avec d'autres agents afin d'effectuer de plus grandes tâches de calcul.  On peut considérer un agent comme une tâche qui a un cycle de vie fixe.  Par exemple, un agent peut lire des données d'un périphérique d'entrée\/sortie \(tel que le clavier, un fichier sur disque ou une connexion réseau\) et un autre agent peut exécuter une action sur ces données dès qu'elles deviennent disponibles.  Le premier agent utilise le passage de message pour signaler au deuxième agent que davantage de données sont disponibles.  Le planificateur de tâches du runtime d'accès concurrentiel fournit un mécanisme efficace pour permettre aux agents de se bloquer et de céder de manière coopérative sans nécessiter de préemption moins efficace.  
+ La bibliothèque d’Agents définit le [concurrency::agent](../../parallel/concrt/reference/agent-class.md) classe pour représenter un agent asynchrone. `agent`est une classe abstraite qui déclare la méthode virtuelle [Concurrency::agent :: Run](reference/agent-class.md#run). Le `run` méthode exécute la tâche effectuée par l’agent. Étant donné que `run` est abstraite, vous devez implémenter cette méthode dans chaque classe que vous dérivez de `agent`.  
   
- La Bibliothèque d'agents définit la classe [concurrency::agent](../../parallel/concrt/reference/agent-class.md) pour représenter un agent asynchrone.  `agent` est une classe abstraite qui déclare la méthode virtuelle [concurrency::agent::run](../Topic/agent::run%20Method.md).  La méthode `run` exécute la tâche effectuée par l'agent.  La méthode `run` étant abstraite, vous devez l'implémenter dans chaque classe que vous dérivez d'`agent`.  
+## <a name="agent-life-cycle"></a>Cycle de vie de l’agent  
+ Agents ont un cycle de vie défini. Le [concurrency::agent_status](reference/concurrency-namespace-enums.md#agent_status) énumération définit les différents États d’un agent. L’illustration suivante est un diagramme d’état qui montre l’avancement des agents d’un état à un autre. Dans cette illustration, les lignes pleines représentent les méthodes que vous appelez à partir de votre application ; traits pointillés représentent des méthodes qui sont appelées à partir de l’exécution.  
   
-## Cycle de vie d'agent  
- Les agents ont un cycle de vie fixe.  L'énumération [concurrency::agent\_status](../Topic/agent_status%20Enumeration.md) définit les différents états d'un agent.  L'illustration suivante est un diagramme d'état qui montre comment les agents progressent d'un état à un autre.  Dans cette illustration, les traits pleins représentent des méthodes que vous appelez à partir de votre application ; les traits en pointillés représentent des méthodes appelées à partir du runtime.  
+ ![Diagramme d’état de l’agent](../../parallel/concrt/media/agentstate.png "agentstate")  
   
- ![Diagramme d'état de l'agent](../../parallel/concrt/media/agentstate.png "AgentState")  
+ Le tableau suivant décrit chaque état dans le `agent_status` énumération.  
   
- Le tableau suivant décrit chaque état dans l'énumération `agent_status`.  
+|État de l’agent|Description|  
+|-----------------|-----------------|  
+|`agent_created`|L’agent n’a pas été planifié pour l’exécution.|  
+|`agent_runnable`|Le runtime planifie l’exécution de l’agent.|  
+|`agent_started`|L’agent a démarré et est en cours d’exécution.|  
+|`agent_done`|L’agent terminé.|  
+|`agent_canceled`|L’agent a été annulé avant de passer le `started` état.|  
   
-|État d'agent|Description|  
-|------------------|-----------------|  
-|`agent_created`|L'exécution de l'agent n'a pas été planifiée.|  
-|`agent_runnable`|Le runtime planifie l'exécution de l'agent.|  
-|`agent_started`|L'agent a démarré et est en cours d'exécution.|  
-|`agent_done`|L'agent a terminé.|  
-|`agent_canceled`|L'agent a été annulé avant de passer à l'état `started`.|  
+ `agent_created`est l’état initial d’un agent, `agent_runnable` et `agent_started` sont les états actifs, et `agent_done` et `agent_canceled` sont les états terminaux.  
   
- `agent_created` est l'état initial d'un agent, `agent_runnable` et `agent_started` sont les états actifs, et `agent_done` et `agent_canceled` sont les états terminaux.  
+ Utilisez le [concurrency::agent::status](reference/agent-class.md#status) méthode pour récupérer l’état actuel d’un `agent` objet. Bien que le `status` méthode d’accès concurrentiel sécurisé, l’état de l’agent peut modifier au moment où la `status` retourne de la méthode. Par exemple, un agent peut être dans le `agent_started` état lorsque vous appelez le `status` (méthode), mais a été déplacée vers le `agent_done` état juste après le `status` méthode retourne.  
+
   
- Utilisez la méthode [concurrency::agent::status](../Topic/agent::status%20Method.md) pour extraire l'état actuel d'un objet `agent`.  Bien que la méthode `status` soit sécurisée du point de vue de la concurrence, l'état de l'agent peut avoir changé au moment où la méthode `status` retourne.  Par exemple, un agent peut être à l'état `agent_started` quand vous appelez la méthode `status`, mais être passé à l'état `agent_done` juste après le retour de la méthode `status`.  
-  
-## Méthodes et fonctionnalités  
- Le tableau suivant montre quelques\-unes des méthodes importantes qui appartiennent à la classe `agent`.  Pour plus d'informations sur toutes les méthodes de la classe `agent`, consultez [agent, classe](../../parallel/concrt/reference/agent-class.md).  
+## <a name="methods-and-features"></a>Méthodes et fonctionnalités  
+ Le tableau suivant répertorie quelques-unes des méthodes importantes qui appartiennent à la `agent` classe. Pour plus d’informations sur l’ensemble de la `agent` méthodes de la classe, consultez [agent, classe](../../parallel/concrt/reference/agent-class.md).  
   
 |Méthode|Description|  
-|-------------|-----------------|  
-|[start](../Topic/agent::start%20Method.md)|Planifie l'objet `agent` pour l'exécution et le place à l'état `agent_runnable`.|  
-|[run](../Topic/agent::run%20Method.md)|Exécute la tâche qui doit être effectuée par l'objet `agent`.|  
-|[done](../Topic/agent::done%20Method.md)|Fait passer un agent à l'état `agent_done`.|  
-|[cancel](../Topic/agent::cancel%20Method.md)|Si l'agent n'a pas été démarré, cette méthode annule l'exécution de l'agent et le place à l'état `agent_canceled`.|  
-|[status](../Topic/agent::status%20Method.md)|Extrait l'état actuel de l'objet `agent`.|  
-|[wait](../Topic/agent::wait%20Method.md)|Attend que l'objet `agent` passe à l'état `agent_done` ou `agent_canceled`.|  
-|[wait\_for\_all](../Topic/agent::wait_for_all%20Method.md)|Attend que tous les objets `agent` fournis passent à l'état `agent_done` ou `agent_canceled`.|  
-|[wait\_for\_one](../Topic/agent::wait_for_one%20Method.md)|Attend qu'au moins l'un des objets `agent` fournis passe à l'état `agent_done` ou `agent_canceled`.|  
+|------------|-----------------|  
+|[start](reference/agent-class.md#start)|Planifications le `agent` objet pour l’exécution et lui affecte la `agent_runnable` état.|  
+|[run](reference/agent-class.md#run)|Exécute la tâche doit être effectuée par le `agent` objet.|  
+|[terminé](reference/agent-class.md#done)|Déplace un agent à le `agent_done` état.|  
+|[Annuler](../../parallel/concrt/cancellation-in-the-ppl.md#cancel)|Si l’agent n’a pas démarré, cette méthode annule l’exécution de l’agent et lui affecte la `agent_canceled` état.|  
+|[status](reference/agent-class.md#status)|Récupère l’état actuel de la `agent` objet.|  
+|[attente](reference/agent-class.md#wait)|Attend que le `agent` objet pour entrer le `agent_done` ou `agent_canceled` état.|  
+|[wait_for_all](reference/agent-class.md#wait_for_all)|Attend que tous fourni `agent` objets à la `agent_done` ou `agent_canceled` état.|  
+|[wait_for_one](reference/agent-class.md#wait_for_one)|Attend au moins un des fourni `agent` objets à la `agent_done` ou `agent_canceled` état.|  
   
- Après avoir créé un objet d'agent, appelez la méthode [concurrency::agent::start](../Topic/agent::start%20Method.md) pour planifier son exécution.  Le runtime appelle la méthode `run` après avoir planifié l'agent et le place à l'état `agent_runnable`.  
+ Après avoir créé un objet d’agent, appelez le [Concurrency::agent :: Start](reference/agent-class.md#start) méthode à planifier son exécution. Le runtime appelle le `run` méthode après avoir planifié l’agent et lui affecte la valeur du `agent_runnable` état.  
   
- Le runtime ne gère pas les exceptions levées par les agents asynchrones.  Pour plus d'informations sur la levée d'exceptions et les agents, consultez [Gestion des exceptions](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
+ Le runtime ne gère pas les exceptions levées par les agents asynchrones. Pour plus d’informations sur la gestion des exceptions et les agents, consultez [la gestion des exceptions](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
   
-## Exemple  
- Pour obtenir un exemple qui indique comment créer une application de base basée sur agent, consultez [Procédure pas à pas : création d’une application basée sur un agent](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md).  
+## <a name="example"></a>Exemple  
+ Pour obtenir un exemple qui montre comment créer une application basée sur l’agent de base, consultez [procédure pas à pas : création d’une Application basée sur l’Agent](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md).  
   
-## Voir aussi  
- [Bibliothèque d'agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md)
+## <a name="see-also"></a>Voir aussi  
+ [Bibliothèque d’agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md)
+

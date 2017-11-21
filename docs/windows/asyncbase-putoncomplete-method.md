@@ -1,33 +1,30 @@
 ---
-title: "AsyncBase::PutOnComplete, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::PutOnComplete"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PutOnComplete (méthode)"
+title: "Asyncbase::putoncomplete, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::PutOnComplete
+dev_langs: C++
+helpviewer_keywords: PutOnComplete method
 ms.assetid: 1c469ff9-b2df-4637-bf05-01a617043149
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6eeddf1f94d72407b90b9f99c4755b6e0a865ec5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# AsyncBase::PutOnComplete, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Définit l'adresse du gestionnaire d'événement de complétion à la valeur spécifiée.  
+# <a name="asyncbaseputoncomplete-method"></a>AsyncBase::PutOnComplete, méthode
+Définit l’adresse du Gestionnaire d’événements de fin à la valeur spécifiée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 STDMETHOD(  
@@ -35,17 +32,17 @@ STDMETHOD(
 )(TComplete* completeHandler);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `completeHandler`  
- L'adresse à laquelle le gestionnaire d'événements de saisie semi\-automatique est défini.  
+ L’adresse à laquelle le Gestionnaire d’événements de fin est défini.  
   
-## Valeur de retour  
- S\_OK si l'opération a réussi; sinon, E\_ILLEGAL\_METHOD\_CALL.  
+## <a name="return-value"></a>Valeur de retour  
+ S_OK en cas de réussite ; dans le cas contraire, E_ILLEGAL_METHOD_CALL.  
   
-## Configuration requise  
- **En\-tête:** async.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** async.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [AsyncBase, classe](../windows/asyncbase-class.md)

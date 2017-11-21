@@ -1,48 +1,49 @@
 ---
-title: "Liste d&#39;exemples de document/vue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Exemple de document / vue liste | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 6f087ce8-2f46-433c-b674-4c110743b289
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9a98e087a9155268997e913c2ecafc1bfd7020e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Liste d&#39;exemples de document/vue
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="documentview-sample-list"></a>Liste d'exemples de document/vue
+Consultez les exemples de programmes suivants qui illustrent l’utilisation de l’architecture document/vue de MFC de façons intéressantes :  
+  
+ *Variantes de document/vue*  
+  
+-   [MDI](../visual-cpp-samples.md)  
+  
+-   [DESSIN À MAIN LEVÉE](../visual-cpp-samples.md)  
+  
+-   [VIEWEX](../visual-cpp-samples.md)  
+  
+ *Interface de la boîte de dialogue remplace le Document/Vue*  
+  
+-   [CMNCTRL1](../visual-cpp-samples.md)  
+  
+-   [CMNCTRL2](../visual-cpp-samples.md)  
+  
+ *Utilisation de COleDocument et ses Classes dérivées*  
+  
+-   [CONTENEUR](../visual-cpp-samples.md)  
+  
+-   [HIERSVR](../visual-cpp-samples.md)  
+  
+-   [OCLIENT](../visual-cpp-samples.md)  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Architecture document/vue](../mfc/document-view-architecture.md)
 
-Consultez les exemples de programmes suivants illustrent l'utilisation de l'architecture documents\/Vue de MFC comme intéressantes :  
-  
- *Document\/variantes de vue*  
-  
--   [MDI](../top/visual-cpp-samples.md)  
-  
--   [SCRIBBLE](../top/visual-cpp-samples.md)  
-  
--   [VIEWEX](../top/visual-cpp-samples.md)  
-  
- *L'interface de la boîte de dialogue remplace le document\/vue*  
-  
--   [CMNCTRL1](../top/visual-cpp-samples.md)  
-  
--   [CMNCTRL2](../top/visual-cpp-samples.md)  
-  
- *Utilisation COleDocument et ses classes dérivées*  
-  
--   [conteneur](../top/visual-cpp-samples.md)  
-  
--   [HierSvr](../top/visual-cpp-samples.md)  
-  
--   [OClient](../top/visual-cpp-samples.md)  
-  
-## Voir aussi  
- [Architecture document\/vue](../mfc/document-view-architecture.md)

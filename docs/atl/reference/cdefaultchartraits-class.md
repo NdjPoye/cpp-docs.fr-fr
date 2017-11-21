@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,38 +12,21 @@ f1_keywords:
 - ATLCOLL/ATL::CDefaultCharTraits
 - ATLCOLL/ATL::CDefaultCharTraits::CharToLower
 - ATLCOLL/ATL::CDefaultCharTraits::CharToUpper
-dev_langs:
-- C++
-helpviewer_keywords:
-- CDefaultCharTraits class
+dev_langs: C++
+helpviewer_keywords: CDefaultCharTraits class
 ms.assetid: f94a3934-597f-401d-8513-ed6924ae069a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 12991cfcf1ac96808a0315899d01ce3012324dc6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 02595c426a631e15bf2f1b5baed2550a8befe20a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="cdefaultchartraits-class"></a>CDefaultCharTraits (classe)
-Cette classe fournit deux fonctions statiques pour convertir les caractères entre majuscules et minuscules.  
+# <a name="cdefaultchartraits-class"></a>Classe de CDefaultCharTraits
+Cette classe fournit deux fonctions statiques pour la conversion de caractères entre majuscules et minuscules.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,7 +46,7 @@ class CDefaultCharTraits
 |Nom|Description|  
 |----------|-----------------|  
 |[CDefaultCharTraits::CharToLower](#chartolower)|(Statique) Appelez cette fonction pour convertir un caractère en majuscules.|  
-|[CDefaultCharTraits::CharToUpper](#chartoupper)|(Statique) Appelez cette fonction pour convertir un caractère en minuscule.|  
+|[CDefaultCharTraits::CharToUpper](#chartoupper)|(Statique) Appelez cette fonction pour convertir un caractère en minuscules.|  
   
 ## <a name="remarks"></a>Remarques  
  Cette classe fournit des fonctions qui sont utilisées par la classe [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
@@ -73,7 +55,7 @@ class CDefaultCharTraits
  **En-tête :** atlcoll.h  
   
 ##  <a name="chartolower"></a>CDefaultCharTraits::CharToLower  
- Appelez cette fonction pour convertir un caractère en minuscule.  
+ Appelez cette fonction pour convertir un caractère en minuscules.  
   
 ```
 static wchar_t CharToLower(wchar_t x);  
@@ -82,10 +64,10 @@ static char CharToLower(char x);
   
 ### <a name="parameters"></a>Paramètres  
  *x*  
- Caractère à convertir en minuscules.  
+ Caractère à convertir en minuscule.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities&#132;](../../atl/codesnippet/cpp/cdefaultchartraits-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#132](../../atl/codesnippet/cpp/cdefaultchartraits-class_1.cpp)]  
   
 ##  <a name="chartoupper"></a>CDefaultCharTraits::CharToUpper  
  Appelez cette fonction pour convertir un caractère en majuscules.  
@@ -97,8 +79,7 @@ static char CharToUpper(char x);
   
 ### <a name="parameters"></a>Paramètres  
  *x*  
- Caractère à convertir en majuscules.  
+ Caractère à convertir en majuscule.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

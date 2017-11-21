@@ -1,32 +1,30 @@
 ---
-title: "hash_multiset::erase (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::erase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre erase [STL/CLR]"
+title: hash_multiset::Erase (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::erase
+dev_langs: C++
+helpviewer_keywords: erase member [STL/CLR]
 ms.assetid: bddd329d-aece-4b93-8355-005351c3aa45
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cf8ec1956abbdb9efa7ca05ecf39264003c8c5f8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::erase (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultiseterase-stlclr"></a>hash_multiset::erase (STL/CLR)
 Supprime les éléments placés aux positions spécifiées.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 iterator erase(iterator where);  
@@ -34,29 +32,29 @@ iterator erase(iterator first, iterator last);
 bool erase(key_type key)  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  premier  
  Début de la plage à effacer.  
   
- key  
- Valeur de clé à supprimer.  
+ clé  
+ Valeur de clé à effacer.  
   
  last  
  Fin de la plage à effacer.  
   
- where  
+ où  
  Élément à effacer.  
   
-## Notes  
- La première fonction membre supprime l'élément de la séquence contrôlée vers laquelle pointe `where`, et retourne un itérateur qui indique le premier élément restant au delà de l'élément supprimé, ou [hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)`()` si aucun tel élément n'existe.  Vous l'utilisez pour retirer un élément.  
+## <a name="remarks"></a>Remarques  
+ La première fonction membre supprime l’élément de la séquence contrôlée vers lequel pointé `where`et retourne un itérateur qui désigne le premier élément restant après l’élément supprimé, ou [hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) `()` si cet élément n’existe. Il permet de supprimer un seul élément.  
   
- La deuxième fonction membre supprime les éléments de la séquence contrôlée dans la plage `[``first``,` `last``)`, et retourne un itérateur qui désigne le premier élément restant au delà de tous les éléments supprimés, ou `end()` si aucun tel élément n'existe.  Vous l'utilisez pour supprimer zéro ou plusieurs éléments contigus.  
+ La deuxième fonction membre supprime les éléments de la séquence contrôlée dans la plage [`first`, `last`) et retourne un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou `end()` si aucun élément correspondant existe... Il permet de supprimer de zéro ou plusieurs éléments contigus.  
   
- La troisième fonction membre supprime tout élément de la séquence contrôlée de la clé de tri équivalent à `key`, puis retourne le nombre d'éléments supprimés.  Vous l'utilisez pour supprimer et compter les éléments qui correspondent à la clé spécifiée.  
+ La troisième fonction membre supprime tout élément de la séquence contrôlée, dont la clé a un classement équivalent à `key`et retourne le nombre d’éléments supprimés. Utilisez-le pour supprimer et compter tous les éléments qui correspondent à une clé spécifiée.  
   
- Chaque suppression d'élément prend un temps proportionnel au logarithme du nombre d'éléments dans la séquence contrôlée.  
+ Effacement de chaque élément du temps proportionnel au logarithme du nombre d’éléments dans la séquence contrôlée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_multiset_erase.cpp   
@@ -97,16 +95,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**erase\(begin\(\)\) \= b**  
- **b c d e**  
-**erase\(begin\(\), end\(\)\-1\) \= e**  
-**size\(\) \= 1**   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+erase(begin()) = b  
+ b c d e  
+erase(begin(), end()-1) = e  
+size() = 1  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/hash_set >  
   
-## Voir aussi  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::clear](../dotnet/hash-multiset-clear-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::clear (STL/CLR)](../dotnet/hash-multiset-clear-stl-clr.md)

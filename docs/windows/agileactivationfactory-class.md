@@ -1,31 +1,29 @@
 ---
-title: "AgileActivationFactory, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::AgileActivationFactory"
-dev_langs: 
-  - "C++"
+title: Agileactivationfactory, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::AgileActivationFactory
+dev_langs: C++
 ms.assetid: fab98f32-bb93-4c0f-badb-49fbddb194b0
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 072f160dbdbb8116ab4546890b6e9eeb6e309023
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# AgileActivationFactory, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Représente une fabrique d'activation pour appartemement implémentant [FtmBase](../windows/ftmbase-class.md).  
+# <a name="agileactivationfactory-class"></a>AgileActivationFactory, classe
+Représente une fabrique d’activation de cloisonnement conviviale qui implémente [FtmBase](../windows/ftmbase-class.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
 template <  
@@ -34,15 +32,14 @@ template <
    typename I2 = Details::Nil,   
 FactoryCacheFlags cacheFlagValue = FactoryCacheDefault>  
 class AgileActivationFactory :   
-   public ActivationFactory<Implements<FtmBase, I0>, I1, I2, cacheFlagValue>  
-{};  
+   public ActivationFactory<Implements<FtmBase, I0>, I1, I2, cacheFlagValue>{};  
 ```  
   
-## Configuration requise  
- **En\-tête:** module.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** module.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
- [Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Microsoft::wrl Namespace](../windows/microsoft-wrl-namespace.md)   
  [ActivationFactory, classe](../windows/activationfactory-class.md)

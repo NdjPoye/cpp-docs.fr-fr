@@ -1,34 +1,33 @@
 ---
-title: "Comment&#160;: analyser des cha&#238;nes &#224; l&#39;aide d&#39;expressions r&#233;guli&#232;res (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "exemples (C++), chaînes"
-  - "analyser des chaînes (C++)"
-  - "expressions régulières (C++), analyser des chaînes"
-  - "chaînes (C++), analyser"
+title: "Comment : analyser des chaînes à l’aide d’Expressions régulières (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- parsing strings [C++]
+- examples [C++], strings
+- regular expressions [C++], parsing strings
+- strings [C++], parsing
 ms.assetid: 5b0c7ca3-9bba-4389-a45c-6d373cff91b0
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fed9fd05ed9916e4d285c64a398b48b82d99f884
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: analyser des cha&#238;nes &#224; l&#39;aide d&#39;expressions r&#233;guli&#232;res (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'exemple de code suivant illustre l'analyse d'une chaîne simple à l'aide de la classe <xref:System.Text.RegularExpressions.Regex> dans l'espace de noms <xref:System.Text.RegularExpressions?displayProperty=fullName>.  Une chaîne contenant plusieurs types de délinéateurs de mots est créée.  Elle est analysée à l'aide de la classe <xref:System.Text.RegularExpressions.Regex> conjointement avec la classe <xref:System.Text.RegularExpressions.Match>.  Ensuite, chaque mot de la phrase est affiché séparément.  
+# <a name="how-to-parse-strings-using-regular-expressions-ccli"></a>Comment : analyser des chaînes à l'aide d'expressions régulières (C++/CLI)
+L’exemple de code suivant illustre l’analyse de chaîne simple à l’aide de la <xref:System.Text.RegularExpressions.Regex> classe dans le <xref:System.Text.RegularExpressions?displayProperty=fullName> espace de noms. Chaîne qui contient plusieurs types de délimiteurs de word est construite. La chaîne est ensuite analysée à l’aide de la <xref:System.Text.RegularExpressions.Regex> classe conjointement avec la <xref:System.Text.RegularExpressions.Match> classe. Ensuite, chaque mot dans la phrase est affiché séparément.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // regex_parse.cpp  
@@ -62,6 +61,6 @@ int main( )
 }  
 ```  
   
-## Voir aussi  
- [Expressions régulières du .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [Programmation .NET avec C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [.NET Framework (expressions régulières)](/dotnet/standard/base-types/regular-expressions)   
+ [Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

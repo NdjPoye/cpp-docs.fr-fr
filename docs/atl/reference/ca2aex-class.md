@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,35 +13,18 @@ f1_keywords:
 - ATLCONV/ATL::CA2AEX::CA2AEX
 - ATLCONV/ATL::CA2AEX::m_psz
 - ATLCONV/ATL::CA2AEX::m_szBuffer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CA2AEX class
+dev_langs: C++
+helpviewer_keywords: CA2AEX class
 ms.assetid: 57dc65df-d9cf-4a84-99d3-6e031dde3664
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 979e06cbb4386f61f6490342f16d48739be55e95
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: d682e6db093220557ec7caaa4ac6f3cd7ca5f53a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ca2aex-class"></a>Classe de CA2AEX
 Cette classe est utilisée par les macros de conversion de chaînes `CA2TEX` et `CT2AEX`et le typedef **CA2A**.  
@@ -83,7 +65,7 @@ class CA2AEX
 |[CA2AEX::m_psz](#m_psz)|Le membre de données qui stocke la chaîne source.|  
 |[CA2AEX::m_szBuffer](#m_szbuffer)|La mémoire tampon statique, utilisé pour stocker la chaîne convertie.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  À moins que des fonctionnalités supplémentaires sont requises, utilisez `CA2TEX`, `CT2AEX`, ou **CA2A** dans votre propre code.  
   
  Cette classe contient une mémoire tampon de taille fixe statique qui est utilisé pour stocker le résultat de la conversion. Si le résultat est trop grand pour tenir dans la mémoire tampon statique, la classe alloue de la mémoire avec `malloc` et libère la mémoire quand l'objet passe en dehors de l'étendue. Cela garantit que, contrairement au texte des macros de conversion disponibles dans les versions précédentes d’ATL, cette classe est plus sûr d’utiliser dans les boucles et qu’il ne sera pas dépassement de la pile.  

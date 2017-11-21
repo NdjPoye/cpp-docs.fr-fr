@@ -1,29 +1,27 @@
 ---
-title: "Erreur irr&#233;cup&#233;rable RC1004 du compilateur de ressources  | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC1004"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC1004"
+title: "Erreur irrécupérable RC1004 du compilateur de ressources | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC1004
+dev_langs: C++
+helpviewer_keywords: RC1004
 ms.assetid: f9b703d4-6767-4721-9450-37079bcc7152
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2abd2b2a398c3a13f553d300cda5376cb81c605b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Erreur irr&#233;cup&#233;rable RC1004 du compilateur de ressources 
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="resource-compiler-fatal-error-rc1004"></a>Erreur irrécupérable RC1004 du compilateur de ressources 
 fin de fichier inattendue rencontrée  
   
- Cette erreur peut être provoquée par des caractères de saut de ligne ou de retour chariot manquants dans la dernière ligne d'un fichier texte.
+ Cette erreur peut être dû à l’absence de saut de ligne et les caractères de retour chariot dans la dernière ligne d’un fichier texte.

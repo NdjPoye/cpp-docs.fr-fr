@@ -1,27 +1,26 @@
 ---
-title: "A.17   Using Nestable Locks | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A.17 à l’aide de verrous pouvant | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 8ef386ed-ddc4-4d40-80aa-cc39f0fb5e4b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3464c7d183b20d2d0eb851489c8aecf86321876f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# A.17   Using Nestable Locks
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'exemple suivant \(pour [section 3,2](../../parallel/openmp/3-2-lock-functions.md) à la page 41\) indique comment un verrou empilable peut être utilisé pour synchroniser des mises à jour sur une structure entière et un de ses membres.  
+# <a name="a17---using-nestable-locks"></a>A.17   Utilisation de verrous pouvant être imbriqués
+L’exemple suivant (pour [Section 3.2](../../parallel/openmp/3-2-lock-functions.md) page 41) montre comment un verrou pouvant peut être utilisé pour synchroniser les mises à jour pour un ensemble de la structure et un de ses membres.  
   
 ```  
 #include <omp.h>  

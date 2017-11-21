@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- valarray/std::mask_array
-dev_langs:
-- C++
-helpviewer_keywords:
-- mask_array class
+f1_keywords: valarray/std::mask_array
+dev_langs: C++
+helpviewer_keywords: mask_array class
 ms.assetid: c49bed6a-3000-4f39-bff6-cb9a453acb0b
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 2dfc6705d9d042b9a12ab84cb314d49cddc855a4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 882091956f9d9c5985e3bfacfe015ff81e84ac6c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="maskarray-class"></a>mask_array, classe
 Classe de modèle interne auxiliaire qui prend en charge les objets qui sont des sous-ensembles de valarrays parents, spécifiés avec une expression booléenne, en fournissant des opérations entre les tableaux de sous-ensembles.  
@@ -88,5 +83,4 @@ The modified operand valarray is:  (0 -1 2 -1 10 -1 10 -1 10 -1).
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

@@ -1,40 +1,37 @@
 ---
-title: "Avertissement du compilateur (niveau 4) C4366 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4366"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4366"
+title: Compilateur avertissement (niveau 4) C4366 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4366
+dev_langs: C++
+helpviewer_keywords: C4366
 ms.assetid: 65d2942f-3741-42f4-adf2-4920d5a055ca
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0d610bfcf2e432870fc081298d3dfc3a60c73bd4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 4) C4366
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Le résultat de l'opérateur 'opérateur' unaire risque de ne pas être aligné  
+# <a name="compiler-warning-level-4-c4366"></a>Avertissement du compilateur (niveau 4) C4366
+Le résultat de l’opérateur 'opérateur' unaire peut être non aligné  
   
- Si un membre de structure n'est pas aligné en raison d'une compression, le compilateur vous avertit que l'adresse de ce membre est assignée à un pointeur aligné.  Par défaut, tous les pointeurs règles sont alignés.  
+ Si un membre de structure ne peut jamais être non aligné en raison de la compression, le compilateur vous avertit que son adresse est attribué à un pointeur aligné. Par défaut, tous les pointeurs sont alignées.  
   
- Pour remédier à l'erreur C4366, modifiez l'alignement de la structure ou déclarez le pointeur avec le mot clé [\_\_unaligned](../../cpp/unaligned.md).  
+ Pour résoudre l’erreur C4366, modifiez l’alignement de la structure ou déclarez le pointeur avec le [__unaligned](../../cpp/unaligned.md) (mot clé).  
   
- Pour plus d'informations, consultez \_\_unaligned et [pack](../../preprocessor/pack.md).  
+ Pour plus d’informations, consultez __unaligned et [pack](../../preprocessor/pack.md).  
   
-## Exemple  
- L'exemple suivant génère l'erreur C4366 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C4366.  
   
 ```  
 // C4366.cpp  

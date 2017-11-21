@@ -1,28 +1,27 @@
 ---
-title: "&#201;mission d&#39;une requ&#234;te param&#233;tr&#233;e | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "requêtes avec paramètres, exécuter avec la classe CCommand"
+title: "Émission d’une requête paramétrable | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8386358a2dea8949d069384029ea110e8463a45d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# &#201;mission d&#39;une requ&#234;te param&#233;tr&#233;e
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'exemple suivant émet une requête paramétrée simple qui récupère des enregistrements à l'aide d'un champ d'âge \(supérieur à 30\) à partir d'une table dans une base de données Microsoft Access.  Pour prendre en charge le paramètre, l'enregistrement utilisateur doit disposer d'un mappage supplémentaire.  Le code suivant utilise, dans un projet ATL, la classe `CCommand` à la place de la classe `CTable` utilisée dans l'exemple précédent, [Parcours d'un jeu de lignes simple](../../data/oledb/traversing-a-simple-rowset.md).  
+# <a name="issuing-a-parameterized-query"></a>Émission d'une requête paramétrée
+L’exemple suivant émet une requête paramétrée simple qui extrait des enregistrements avec un champ d’âge (qui est supérieur à 30) à partir d’une table dans une base de données Microsoft Access. Pour prendre en charge le paramètre, l’enregistrement de l’utilisateur doit avoir un mappage supplémentaire. Le code suivant, dans un projet ATL, utilise le `CCommand` classe au lieu du `CTable` classe utilisée dans l’exemple précédent, [parcours d’un ensemble de lignes Simple](../../data/oledb/traversing-a-simple-rowset.md).  
   
 ```  
 #include <atldbcli.h>  
@@ -50,7 +49,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- L'enregistrement utilisateur, `CArtists`, ressemble au texte suivant :  
+ L’enregistrement d’utilisateur, `CArtists`, ressemble à ceci :  
   
 ```  
 class CArtists  
@@ -76,5 +75,5 @@ END_PARAM_MAP()
 };  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utilisation des modèles du consommateur OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

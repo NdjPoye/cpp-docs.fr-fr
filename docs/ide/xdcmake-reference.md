@@ -1,65 +1,63 @@
 ---
-title: "R&#233;f&#233;rence XDCMake | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xdcmake"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "xdcmake (programme)"
+title: "Référence XDCMake | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: xdcmake
+dev_langs: C++
+helpviewer_keywords: xdcmake program
 ms.assetid: 14e65747-d000-4343-854b-8393bf01cbac
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ad0744da891c93dab44c980ed10aa4213a4dddb3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# R&#233;f&#233;rence XDCMake
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-xdcmake.exe est un programme qui compile les fichiers .xdc dans un fichier .xml.  Un fichier .xdc est créé par le compilateur Visual C\+\+ pour chaque fichier de code source lorsque le code source est compilé avec [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) et lorsque le fichier de code source contient les commentaires de documentation marqués avec des balises XML.  
+# <a name="xdcmake-reference"></a>Référence XDCMake
+xdcmake.exe est un programme qui compile les fichiers .xdc dans un fichier .xml. Un fichier .xdc est créé par le compilateur Visual C++ pour chaque fichier de code source lorsque le code source est compilé avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) et lorsque le fichier de code source contient des commentaires de documentation marqués avec des balises XML.  
   
-### Pour utiliser xdcmake.exe dans l'environnement de développement Visual Studio  
+### <a name="to-use-xdcmakeexe-in-the-visual-studio-development-environment"></a>Utilisation de xdcmake.exe dans l’environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Comment : ouvrir les pages de propriétés d'un projet](../misc/how-to-open-project-property-pages.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
   
-2.  Ouvrez le dossier **Propriétés de configuration** .  
+2.  Ouvrez le **propriétés de Configuration** dossier.  
   
-3.  Cliquez sur la page de propriétés **Commentaires de document XML** .  
+3.  Cliquez sur le **commentaires de Document XML** page de propriétés.  
   
 > [!NOTE]
->  les options de xdcmake.exe à la ligne de commande diffèrent des options xdcmake.exe lorsque est utilisé dans l'environnement de développement \(pages de propriétés\).  Pour plus d'informations sur l'utilisation xdcmake.exe dans l'environnement de développement, consultez [Outil Générateur de documents XML, page de propriétés](../ide/xml-document-generator-tool-property-pages.md).  
+>  des options au niveau de la ligne de commande xdcmake.exe diffèrent des options lorsque xdcmake.exe est utilisé dans l’environnement de développement (pages de propriétés). Pour plus d’informations sur l’utilisation de xdcmake.exe dans l’environnement de développement, consultez [XML Document Generator Tool Property Pages](../ide/xml-document-generator-tool-property-pages.md).  
   
-## Syntaxe  
- xdcmake `input_filename options`  
+## <a name="syntax"></a>Syntaxe  
+ xdcmake`input_filename options`  
   
-## Paramètres  
- où :  
+## <a name="parameters"></a>Paramètres  
+ où :  
   
  `input_filename`  
- Le nom de fichier des fichiers .xdc utilisés comme entrée à xdcmake.exe.  Spécifiez un ou plusieurs fichiers .xdc ou utilisez \*.xdc pour utiliser tous les fichiers .xdc dans l'annuaire actuel.  
+ Le nom de fichier des fichiers .xdc utilisés comme entrée pour xdcmake.exe. Spécifiez un ou plusieurs fichiers .xdc ou *.xdc permet d’utiliser tous les fichiers .xdc dans le répertoire actif.  
   
  `options`  
- Zéro ou plusieurs des éléments suivants :  
+ Zéro ou plusieurs des opérations suivantes :  
   
 |Option|Description|  
 |------------|-----------------|  
-|\/? , \/help|Utilisation d'affichage pour xdcmake.exe.|  
-|\/assembly :*nom de fichier*|Vous permet de spécifier la valeur de la balise d' \<assembly\> dans le fichier .xml.  Par défaut, la valeur de la balise d' \<assembly\> est identique au nom de fichier du fichier .xml.|  
-|\/nologo|Supprime le message de copyright.|  
-|\/out :*nom de fichier*|Vous permet de spécifier le nom du fichier .xml.  Par défaut, le nom du fichier .xml est le nom de fichier du premier fichier .xdc traité par xdcmake.exe.|  
+|/ ?, /Help|Afficher l’aide pour xdcmake.exe.|  
+|/ assembly :*nom de fichier*|Vous permet de spécifier la valeur de la \<assembly > balise dans le fichier .xml.  Par défaut, la valeur de la \<assembly > balise est le même que le nom de fichier du fichier .xml.|  
+|/nologo|Supprimer le message de copyright.|  
+|/ out :*nom de fichier*|Permet de spécifier le nom du fichier .xml.  Par défaut, le nom du fichier .xml est le nom de fichier du premier fichier .xdc traité par xdcmake.exe.|  
   
-## Notes  
- Visual Studio appellera xdcmake.exe automatiquement lors de la génération d'un projet.  Vous pouvez également appeler xdcmake.exe à la ligne de commande.  
+## <a name="remarks"></a>Remarques  
+ Visual Studio appelle xdcmake.exe automatiquement lors de la génération d’un projet. Vous pouvez également appeler xdcmake.exe à la ligne de commande.  
   
- Consultez l' [Balises recommandées pour les commentaires de documentation](../ide/recommended-tags-for-documentation-comments-visual-cpp.md) pour plus d'informations sur l'ajout de commentaires de documentation des fichiers de code source.  
+ Consultez [balises recommandées pour commentaires de Documentation](../ide/recommended-tags-for-documentation-comments-visual-cpp.md) pour plus d’informations sur l’ajout de commentaires de documentation pour les fichiers de code source.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Documentation XML](../ide/xml-documentation-visual-cpp.md)

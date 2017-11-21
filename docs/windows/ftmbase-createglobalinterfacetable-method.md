@@ -1,33 +1,30 @@
 ---
-title: "FtmBase::CreateGlobalInterfaceTable, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase::CreateGlobalInterfaceTable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateGlobalInterfaceTable (méthode)"
+title: "Ftmbase::createglobalinterfacetable, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase::CreateGlobalInterfaceTable
+dev_langs: C++
+helpviewer_keywords: CreateGlobalInterfaceTable method
 ms.assetid: bb82a0c5-22b9-4844-9204-7922033d8b07
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7d206e581166fb2bd685e6d4755d56e6d189656c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# FtmBase::CreateGlobalInterfaceTable, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Crée un tableau global d'interface \(GIT\).  
+# <a name="ftmbasecreateglobalinterfacetable-method"></a>FtmBase::CreateGlobalInterfaceTable, méthode
+Crée un tableau global d’interface (GIT).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 static HRESULT CreateGlobalInterfaceTable(  
@@ -35,20 +32,20 @@ static HRESULT CreateGlobalInterfaceTable(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `git`  
- Lorsque cette opération se termine, un pointeur vers un tableau global d'interface.  
+ Lorsque cette opération est terminée, un pointeur vers un tableau global d’interface.  
   
-## Valeur de retour  
- S\_OK si l'opération a réussi; sinon, un HRESULT indiquant l'erreur.  
+## <a name="return-value"></a>Valeur de retour  
+ S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.  
   
-## Remarques  
- Pour plus d'informations, consultez la rubrique « IGlobalInterfaceTable » dans la sous\-rubrique « Interfaces COM » de la rubrique « Référence COM » dans la bibliothèque MSDN.  
+## <a name="remarks"></a>Notes  
+ Pour plus d’informations, consultez la rubrique « IGlobalInterfaceTable » dans la sous-rubrique « Interfaces COM » de la rubrique « Référence COM » dans MSDN Library.  
   
-## Configuration requise  
- **En\-tête:** ftm.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** ftm.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [FtmBase, classe](../windows/ftmbase-class.md)

@@ -1,32 +1,30 @@
 ---
-title: "AsyncBase::get_Id, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::get_Id"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "get_Id (méthode)"
+title: "Asyncbase::get_id, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::get_Id
+dev_langs: C++
+helpviewer_keywords: get_Id method
 ms.assetid: 591d8366-ea76-4deb-9278-9d3bc394a42b
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f90a3b57f1691db67b6ba5a62704b91bd8e4eb7b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# AsyncBase::get_Id, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Récupère le handle de l'opération asynchrone.  
+# <a name="asyncbasegetid-method"></a>AsyncBase::get_Id, méthode
+Récupère le handle de l’opération asynchrone.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 STDMETHOD(  
@@ -34,20 +32,20 @@ STDMETHOD(
 )(unsigned int *id) override;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `id`  
- Emplacement où le handle sera enregistré.  
+ L’emplacement où le handle doit être stocké.  
   
-## Valeur de retour  
- S\_OK si l'opération a réussi; sinon, E\_ILLEGAL\_METHOD\_CALL.  
+## <a name="return-value"></a>Valeur de retour  
+ S_OK en cas de réussite ; dans le cas contraire, E_ILLEGAL_METHOD_CALL.  
   
-## Remarques  
- Cette méthode implémente IAsyncInfo::get\_Id.  
+## <a name="remarks"></a>Notes  
+ Cette méthode implémente IAsyncInfo::get_Id.  
   
-## Configuration requise  
- **En\-tête:** async.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** async.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [AsyncBase, classe](../windows/asyncbase-class.md)

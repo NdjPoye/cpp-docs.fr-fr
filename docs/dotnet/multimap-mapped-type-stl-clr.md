@@ -1,41 +1,39 @@
 ---
-title: "multimap::mapped_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::mapped_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mapped_type (membre) (STL/CLR)"
+title: multimap::mapped_type (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::mapped_type
+dev_langs: C++
+helpviewer_keywords: mapped_type member [STL/CLR]
 ms.assetid: 0b59c9a9-7f6a-4c3d-bdc6-0b90c28eff34
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f8c958f1a115bef2b342aded4c8ea7dd2f088e17
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::mapped_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multimapmappedtype-stlclr"></a>multimap::mapped_type (STL/CLR)
 Type d'une valeur mappée associée à chaque clé.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef Mapped mapped_type;  
 ```  
   
-## Notes  
+## <a name="remarks"></a>Remarques  
  Le type est un synonyme du paramètre de modèle `Mapped`.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_multimap_mapped_type.cpp   
@@ -63,13 +61,16 @@ int main()
   
 ```  
   
-  **1 2 3**   
-## Configuration requise  
- **En\-tête:** \<cliext\/map\>  
+```Output  
+1 2 3  
+```  
   
- **Espace de noms:** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/map >  
   
-## Voir aussi  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::key\_compare](../dotnet/multimap-key-compare-stl-clr.md)   
- [multimap::value\_type](../dotnet/multimap-value-type-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)   
+ [multimap::value_type (STL/CLR)](../dotnet/multimap-value-type-stl-clr.md)

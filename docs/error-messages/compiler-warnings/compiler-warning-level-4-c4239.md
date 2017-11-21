@@ -1,36 +1,33 @@
 ---
-title: "Avertissement du compilateur (niveau 4) C4239 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4239"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4239"
+title: Compilateur avertissement (niveau 4) C4239 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4239
+dev_langs: C++
+helpviewer_keywords: C4239
 ms.assetid: a23dc16a-649e-4870-9a24-275de1584fcd
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ac667ac760e9dbee33da7beb2abcaf3a00e0edbc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 4) C4239
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-4-c4239"></a>Avertissement du compilateur (niveau 4) C4239
 extension non standard utilisée : 'jeton' : conversion de 'type' en 'type'  
   
- Cette conversion de type n'est pas autorisée par la norme C\+\+, mais elle est autorisée ici en tant qu'extension.  Cet avertissement est toujours suivi au moins d'une ligne d'explication décrivant l'infraction à la règle du langage.  
+ Cette conversion de type n’est pas autorisée par la norme C++, mais elle est autorisée ici en tant qu’extension. Cet avertissement est toujours suivi d’au moins une ligne d’explication décrivant la règle de langage violée.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C4239 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C4239.  
   
 ```  
 // C4239.cpp  
@@ -46,10 +43,10 @@ void func(void) {
 }  
 ```  
   
-## Exemple  
- La conversion de type intégral en type enum n'est pas réellement permise.  
+## <a name="example"></a>Exemple  
+ Conversion d’un type intégral en type enum n’est pas strictement autorisée.  
   
- L'exemple suivant génère l'erreur C4239 :  
+ L’exemple suivant génère C4239.  
   
 ```  
 // C4239b.cpp  

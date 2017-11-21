@@ -1,37 +1,37 @@
 ---
-title: "Comment&#160;: acc&#233;der aux caract&#232;res d&#39;un System::String | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caractères (C++), accéder dans System::String"
-  - "exemples (C++), chaînes"
-  - "chaînes (C++), accéder aux caractères"
+title: "Comment : accéder aux caractères d’un System::String | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- characters [C++], accessing in System::String
+- examples [C++], strings
+- strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2cc927d2e06def1eba726f3123e9968003e62d1b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: acc&#233;der aux caract&#232;res d&#39;un System::String
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vous pouvez accéder aux caractères d'un objet <xref:System.String> pour les appels haute performance aux fonctions non managées qui prennent des chaînes `wchar_t*`.  Cette méthode génère un pointeur intérieur vers le premier caractère de l'objet <xref:System.String>.  Ce pointeur peut être manipulé directement ou être épinglé et passé à une fonction qui attend une chaîne `wchar_t` ordinaire.  
+# <a name="how-to-access-characters-in-a-systemstring"></a>Comment : accéder aux caractères d'un System::String
+Vous pouvez accéder aux caractères d’un <xref:System.String> des fonctions de l’objet pour les appels de hautes performances à non managé utilisant `wchar_t*` chaînes. La méthode génère un pointeur intérieur vers le premier caractère de la <xref:System.String> objet. Ce pointeur peut être manipulé directement ou épinglé et passé à une fonction qui attend un ordinaire `wchar_t` chaîne.  
   
-## Exemple  
- `PtrToStringChars` retourne un <xref:System.Char> qui est un pointeur intérieur \(également appelé `byref`\).  En tant que tel, il fait l'objet d'un garbage collection.  Vous ne devez pas épingler ce pointeur à moins que vous ayez l'intention de le passer à une fonction native.  
+## <a name="example"></a>Exemple  
+ `PtrToStringChars`Retourne un <xref:System.Char>, qui est un pointeur intérieur (également appelé un `byref`). Par conséquent, il est soumis au garbage collection. Vous n’êtes pas obligé d’épingler ce pointeur à moins que vous allez passer à une fonction native.  
   
- Prenons le code suivant.  L'épinglage n'est pas nécessaire, car `ppchar` est un pointeur intérieur, et si le garbage collector déplace la chaîne qu'il désigne, il met également à jour `ppchar`.  Sans [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md), le code fonctionne et ne présente pas le problème de performances potentiel provoqué par l'épinglage.  
+ Prenons le code suivant.  L’épinglage n’est pas nécessaire, car `ppchar` est un pointeur intérieur, et si le garbage collector déplace la chaîne vers laquelle il pointe, il met également à jour `ppchar`. Sans un [pin_ptr (C + c++ / CLI)](../windows/pin-ptr-cpp-cli.md), le code fonctionnera, et pas le gain de performances potentiels ont provoqué par l’épinglage.  
   
- Si vous passez `ppchar`  à une fonction native, il doit s'agir d'un pointeur épingle ; le garbage collector n'est donc pas capable de mettre à jour tous les pointeurs sur le frame de pile non managé.  
+ Si vous passez `ppchar` à une fonction native, il doit être un pointeur épingle ; le garbage collector ne sera pas en mesure de mettre à jour tous les pointeurs sur le frame de pile non managé.  
   
 ```  
 // PtrToStringChars.cpp  
@@ -49,9 +49,12 @@ int main() {
 }  
 ```  
   
-  **abcdefg**   
-## Exemple  
- Cet exemple montre où l'épinglage est nécessaire.  
+```Output  
+abcdefg  
+```  
+  
+## <a name="example"></a>Exemple  
+ Cet exemple montre où l’épinglage est nécessaire.  
   
 ```  
 // PtrToStringChars_2.cpp  
@@ -74,9 +77,12 @@ int main() {
 }  
 ```  
   
- **7**   
-## Exemple  
- Un pointeur intérieur possède toutes les propriétés d'un pointeur C\+\+ natif.  Par exemple, vous pouvez l'utiliser pour parcourir une structure de données liées ainsi que pour procéder à des insertions et des suppressions qui utilisent un seul pointeur :  
+```Output  
+7  
+```  
+  
+## <a name="example"></a>Exemple  
+ Un pointeur intérieur possède toutes les propriétés d’un pointeur C++ natif. Par exemple, vous pouvez l’utiliser pour parcourir une structure de données liées et effectuer des insertions et suppressions à l’aide uniquement un pointeur :  
   
 ```  
 // PtrToStringChars_3.cpp  
@@ -98,5 +104,5 @@ void deleteNode( ListNode ^ list, Int32 e ) {
 }  
 ```  
   
-## Voir aussi  
- [Utilisation de l'interopérabilité C\+\+ \(PInvoke implicite\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

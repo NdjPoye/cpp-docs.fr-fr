@@ -1,79 +1,79 @@
 ---
-title: "__addfsbyte, __addfsword, __addfsdword | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__addfsbyte_cpp"
-  - "__addfsdword"
-  - "__addfsword_cpp"
-  - "__addfsbyte"
-  - "__addfsword"
-  - "__addfsdword_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__addfsdword, intrinsèque"
-  - "__addfsword, intrinsèque"
-  - "__addfsbyte, intrinsèque"
+title: __addfsbyte, __addfsword, __addfsdword | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __addfsbyte_cpp
+- __addfsdword
+- __addfsword_cpp
+- __addfsbyte
+- __addfsword
+- __addfsdword_cpp
+dev_langs: C++
+helpviewer_keywords:
+- __addfsdword intrinsic
+- __addfsword intrinsic
+- __addfsbyte intrinsic
 ms.assetid: 706c70df-6b52-4401-9268-2977ed8ad715
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 04478094ec318073567e603f1e96664b08a36d6d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# __addfsbyte, __addfsword, __addfsdword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte, __addfsword, __addfsdword
+**Section spécifique à Microsoft**  
   
- Ajoutez une valeur à un emplacement mémoire spécifié par un offset relatif au début du segment d' `FS` .  
+ Ajoutez une valeur à un emplacement de mémoire spécifié par un décalage par rapport au début de la `FS` segment.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-void __addfsbyte(   
-   unsigned long Offset,   
-   unsigned char Data   
+void __addfsbyte(   
+   unsigned long Offset,   
+   unsigned char Data   
 );  
-void __addfsword(   
-   unsigned long Offset,   
-   unsigned short Data   
+void __addfsword(   
+   unsigned long Offset,   
+   unsigned short Data   
 );  
-void __addfsdword(   
-   unsigned long Offset,   
-   unsigned long Data   
+void __addfsdword(   
+   unsigned long Offset,   
+   unsigned long Data   
 );  
 ```  
   
-#### Paramètres  
- \[in\] `Offset`  
- L'offset du début d' `FS`.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `Offset`  
+ Le décalage à partir du début de `FS`.  
   
- \[in\] `Data`  
- La valeur à ajouter à l'emplacement mémoire.  
+ [in] `Data`  
+ Valeur à ajouter à l’emplacement de mémoire.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__addfsbyte`|x86|  
 |`__addfsword`|x86|  
 |`__addfsdword`|x86|  
   
-## Notes  
- Ces routines sont disponibles uniquement comme intrinsèques.  
+## <a name="remarks"></a>Remarques  
+ Ces routines sont disponibles seulement comme fonctions intrinsèques.  
   
-## détail de FIN Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [\_\_incfsbyte, \_\_incfsword, \_\_incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)   
- [\_\_readfsbyte, \_\_readfsdword, \_\_readfsqword, \_\_readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
- [\_\_writefsbyte, \_\_writefsdword, \_\_writefsqword, \_\_writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>Voir aussi  
+ [__incfsbyte, \__incfsword, \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)   
+ [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
+ [__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

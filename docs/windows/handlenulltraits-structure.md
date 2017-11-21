@@ -1,59 +1,57 @@
 ---
-title: "HANDLENullTraits, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "HANDLENullTraits (structure)"
+title: HANDLENullTraits (Structure) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits
+dev_langs: C++
+helpviewer_keywords: HANDLENullTraits structure
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b1e28415cf6f0e5f29d50349cd38fe4b18cfe812
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# HANDLENullTraits, structure
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Définit les caractéristiques communes d'un handle non initialisé.  
+# <a name="handlenulltraits-structure"></a>HANDLENullTraits (structure)
+Définit les caractéristiques communes d’un handle non initialisé.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 struct HANDLENullTraits;  
 ```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Typedefs publics  
+### <a name="public-typedefs"></a>Typedefs publics  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |`Type`|Un synonyme de HANDLE.|  
   
-### Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[HANDLENullTraits::Close, méthode](../windows/handlenulltraits-close-method.md)|Ferme le handle spécifié.|  
 |[HANDLENullTraits::GetInvalidValue, méthode](../windows/handlenulltraits-getinvalidvalue-method.md)|Représente un handle non valide.|  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `HANDLENullTraits`  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers::HandleTraits  
+ **Namespace :** Microsoft::WRL::Wrappers::HandleTraits  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL::Wrappers::HandleTraits, espace de noms](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

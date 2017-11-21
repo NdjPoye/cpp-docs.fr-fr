@@ -4,48 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- R6017
-dev_langs:
-- C++
-helpviewer_keywords:
-- R6017
+f1_keywords: R6017
+dev_langs: C++
+helpviewer_keywords: R6017
 ms.assetid: df3ec5f5-6771-4648-ba06-0e26c6a1cc6a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6cad5222fb0d97594d5b13b5cf8903eb2934ee88
-ms.openlocfilehash: 903d440dbedbe704ae28be643337619ca1e09c69
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 6a4e4b1be6bb6323702b72d99be88824d456243b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-runtime-error-r6017"></a>R6017 d’erreur d’exécution C
 Erreur de verrouillage multithread inattendue  
   
 > [!NOTE]
->  Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée car il a un problème interne. Il existe plusieurs raisons possibles de cette erreur, mais souvent, elle est provoquée par un défaut dans le code de l’application.  
+>  Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème interne. Il existe plusieurs raisons possibles de cette erreur, mais souvent, elle est provoquée par un défaut dans le code de l’application.  
 >   
 >  Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :  
 >   
@@ -55,6 +35,6 @@ Erreur de verrouillage multithread inattendue
   
  **Informations pour les programmeurs**  
   
- Le processus a reçu une erreur inattendue en essayant d’accéder à un verrou multithread d’exécution C sur une ressource système. Cette erreur se produit généralement quand le processus modifie par inadvertance les données de segment de mémoire du runtime. Toutefois, elle peut également être due à une erreur interne dans la bibliothèque runtime ou le code du système d’exploitation.  
+ Le processus a reçu une erreur inattendue lors de la tentative d’accéder à un verrou multithread d’exécution C sur une ressource système. Cette erreur se produit généralement quand le processus modifie par inadvertance les données de segment de mémoire du runtime. Cependant, il peut également être dû à une erreur interne dans la bibliothèque runtime ou le code du système d’exploitation.  
   
- Pour résoudre ce problème, recherchez les bogues de corruption des tas dans votre code. Pour plus d’informations et d’exemples, consultez [détails du tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details). Ensuite, vérifiez que vous utilisez les derniers redistribuables pour votre déploiement d’application. Pour plus d’informations, consultez [déploiement dans Visual C++](../../ide/deployment-in-visual-cpp.md).
+ Pour résoudre ce problème, recherchez les bogues d’altération du tas dans votre code. Pour plus d’informations et d’exemples, consultez [détails du tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details). Ensuite, vérifiez que vous utilisez les derniers redistribuables pour votre déploiement d’application. Pour plus d’informations, consultez [déploiement dans Visual C++](../../ide/deployment-in-visual-cpp.md).

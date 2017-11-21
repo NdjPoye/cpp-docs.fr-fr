@@ -1,46 +1,43 @@
 ---
-title: "EventTargetArray::~EventTargetArray, destructeur | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::EventTargetArray::~EventTargetArray"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~EventTargetArray, destructeur"
+title: "EventTargetArray :: ~ EventTargetArray, destructeur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::EventTargetArray::~EventTargetArray
+dev_langs: C++
+helpviewer_keywords: ~EventTargetArray, destructor
 ms.assetid: a7be9a95-6da7-40ac-9672-e1462e8cb86f
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0ca53f7c0e28cd47a2e79057b50633f8dc2a66b7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# EventTargetArray::~EventTargetArray, destructeur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="eventtargetarrayeventtargetarray-destructor"></a>EventTargetArray::~EventTargetArray, destructeur
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 ~EventTargetArray();  
 ```  
   
-## Notes  
- Libère la classe `EventTargetArray` actuelle.  
+## <a name="remarks"></a>Remarques  
+ Désinitialise actuel `EventTargetArray` classe.  
   
-## Configuration requise  
- **En\-tête:** event.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** event.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
- [EventTargetArray, classe](../windows/eventtargetarray-class.md)   
+## <a name="see-also"></a>Voir aussi  
+ [EventTargetArray (classe)](../windows/eventtargetarray-class.md)   
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

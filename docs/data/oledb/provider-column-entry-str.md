@@ -1,32 +1,30 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_STR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_STR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_STR (macro)"
+title: PROVIDER_COLUMN_ENTRY_STR | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROVIDER_COLUMN_ENTRY_STR
+dev_langs: C++
+helpviewer_keywords: PROVIDER_COLUMN_ENTRY_STR macro
 ms.assetid: f1c27dd6-9ab8-4821-8685-d4dd15e76e88
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8f26311d3f84c28983a9d53985dbdde16f2c47cf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# PROVIDER_COLUMN_ENTRY_STR
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Représente une colonne spécifique prise en charge par le fournisseur.  
+# <a name="providercolumnentrystr"></a>PROVIDER_COLUMN_ENTRY_STR
+Représente une colonne spécifique pris en charge par le fournisseur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,27 +33,27 @@ name
 , ordinal, member )  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *name*  
- \[in\] Le nom de colonne.  
+ [in] Le nom de colonne.  
   
  `ordinal`  
- \[in\] Le numéro de colonne.  Sauf si la colonne est une colonne du signet, le numéro de colonne ne doit pas être 0.  
+ [in] Le numéro de colonne. Sauf si la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.  
   
  `member`  
- \+\[in\] la variable membre de la classe de données qui stocke les données.  
+ [in] La variable membre de la classe de données qui stocke les données.  
   
-## Notes  
- Utilisez la macro lorsqu'il est supposé que les données de la colonne sont [DBTYPE\_STR](https://msdn.microsoft.com/en-us/library/ms711251.aspx).  
+## <a name="remarks"></a>Remarques  
+ Utilisez cette macro, lorsque les données de colonne sont supposées être [DBTYPE_STR](https://msdn.microsoft.com/en-us/library/ms711251.aspx).  
   
-## Exemple  
- Voir [BEGIN\_PROVIDER\_COLUMN\_MAP](../../data/oledb/begin-provider-column-map.md).  
+## <a name="example"></a>Exemple  
+ Consultez [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
- [Macros pour les modèles du fournisseur OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
- [Création d'un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+## <a name="see-also"></a>Voir aussi  
+ [Macros pour les modèles du fournisseur OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+ [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
+ [Création d’un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

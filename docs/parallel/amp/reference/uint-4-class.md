@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -274,33 +273,17 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::set_xywz
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: c0cd118a5ce9f5ebec30e5d1ca7a8437d14f55ab
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 95c05dc7eedb687bb91ccf7292fcff01aa349fbe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="uint4-class"></a>uint_4, classe
 Représente un vecteur court de quatre entiers non signés.  
@@ -323,7 +306,7 @@ class uint_4;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[uint_4 constructeur](#uint_4__ctor) |Surchargé. Par défaut constructeur initialise tous les éléments à 0.|  
+|[uint_4 constructeur](#uint_4__ctor) |Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
 
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
@@ -620,7 +603,7 @@ class uint_4;
 |uint_4::ZYX||  
 |uint_4::zyxw||  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `uint_4`  
   
 ## <a name="requirements"></a>Spécifications  
@@ -630,7 +613,7 @@ class uint_4;
   
 ## <a name="uint_4__ctor"></a>uint_4 
 
-Par défaut constructeur initialise tous les éléments à 0.
+Par défaut constructeur initialise tous les éléments par 0.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -679,7 +662,7 @@ explicit inline uint_4(
  La valeur pour initialiser l’élément 3.  
   
  `_V`  
- La valeur pour l’initialisation.  
+ La valeur de l’initialisation.  
   
  `_Other`  
  Objet utilisé pour initialiser.  
@@ -694,4 +677,3 @@ static const int size = 4;
 
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
-

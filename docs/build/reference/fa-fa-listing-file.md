@@ -1,94 +1,105 @@
 ---
-title: "/FA, /Fa (Fichier listing) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLWCECompilerTool.AssemblerListingLocation"
-  - "VC.Project.VCCLCompilerTool.ConfigureASMListing"
-  - "VC.Project.VCCLWCECompilerTool.AssemblerOutput"
-  - "VC.Project.VCCLCompilerTool.AssemblerListingLocation"
-  - "/fa"
-  - "VC.Project.VCCLCompilerTool.AssemblerOutput"
-  - "VC.Project.VCCLCompilerTool.UseUnicodeForAssemblerListing"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/FA (option du compilateur C++)"
-  - "listing du code assembleur uniquement"
-  - "FA (option du compilateur C++)"
-  - "-FA (option du compilateur C++)"
-  - "type de fichier listing"
+title: / FA, /Fa (fichier Listing) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLWCECompilerTool.AssemblerListingLocation
+- VC.Project.VCCLCompilerTool.ConfigureASMListing
+- VC.Project.VCCLWCECompilerTool.AssemblerOutput
+- VC.Project.VCCLCompilerTool.AssemblerListingLocation
+- /fa
+- VC.Project.VCCLCompilerTool.AssemblerOutput
+- VC.Project.VCCLCompilerTool.UseUnicodeForAssemblerListing
+dev_langs: C++
+helpviewer_keywords:
+- FA compiler option [C++]
+- /FA compiler option [C++]
+- -FA compiler option [C++]
+- listing file type
+- assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 44d21eae211bd2d01e202a516ef487c8d0df3684
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /FA, /Fa (Fichier listing)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="fa-fa-listing-file"></a>/FA, /Fa (Fichier listing)
+Crée un fichier listing contenant du code assembleur.  
+  
+## <a name="syntax"></a>Syntaxe  
+  
+> **/FA**[**c**\][**s**\][**u**]  
+> **/FA**_chemin d’accès_  
+  
+## <a name="remarks"></a>Remarques  
+Le `/FA` option du compilateur génère un fichier du listing assembleur pour chaque unité de traduction dans la compilation, ce qui correspond généralement à un fichier source C ou C++. Par défaut, l’assembleur uniquement est inclus dans le fichier de liste, qui est encodé comme ANSI. Le paramètre facultatif `c`, `s`, et `u` arguments `/FA` contrôle si les code machine ou code source sont générés avec l’assembleur de liste, et si la liste est encodée en UTF-8.  
+  
+Par défaut, chaque fichier listing Obtient le même nom que le fichier source et a une extension .asm. Lorsque le code machine est inclus à l’aide de la `c` option, le fichier de liste a une extension .cod. Vous pouvez modifier le nom et l’extension de fichier listing et le répertoire dans lequel il est créé à l’aide de la `/Fa` option.  
 
-Crée un fichier listing qui contient le code assembleur.  
+### <a name="fa-arguments"></a>/FA arguments  
+aucun  
+Uniquement les langage assembleur sont inclus dans la liste.  
   
-## Syntaxe  
+`c`  
+Facultatif. Inclut le code machine dans la liste.  
   
-```  
-/FA[c|s|u]  
-/Fapathname  
-```  
+`s`  
+Facultatif. Inclut le code source dans la liste.  
   
-## Notes  
- Les arguments déterminent la génération du code source et du code machine ainsi que l'extension du fichier listing.  
+`u`Facultatif. Encode le fichier d’annonce au format UTF-8 et inclut un marqueur d’ordre d’octet. Par défaut, le fichier est encodé comme ANSI. Utilisez `u` pour créer un fichier listing qui s’affiche correctement sur n’importe quel système, ou si vous utilisez Unicode des fichiers de code source comme entrée pour le compilateur.  
   
- Le tableau suivant décrit les différentes valeurs de **\/FA**.  Il est possible de spécifier plusieurs valeurs pour **\/FA**.  Par exemple, vous pouvez effectuer **\/FAsu**.  
+Si les deux `s` et `u` sont spécifiés et si une source de fichier de code utilise un encodage Unicode autre que UTF-8, puis les lignes de code dans le fichier .asm peut ne pas affichent correctement.  
   
-|Option|Contenu du listing et extension de fichier|  
-|------------|------------------------------------------------|  
-|**\/FA**|Code assembleur ; .asm|  
-|**\/FAc**|Code assembleur et machine ; .cod|  
-|**\/FAs**|Code assembleur et source ; .asm<br /><br /> Si **\/FAcs** est spécifié, l'extension de fichier est .cod|  
-|**\/FAu**|Entraîne la création du fichier de sortie au format UTF\-8, avec un marqueur d'ordre d'octet.  Par défaut, l'encodage de fichier est ANSI, mais utilisez **\/FAu** si vous souhaitez un fichier listing qui s'affiche correctement sur tout système, ou si vous utilisez des fichiers de code source Unicode comme entrées dans le compilateur.<br /><br /> Si **\/FAsu** est spécifié, et si un fichier de code source utilise un encodage Unicode autre que UTF\-8, les lignes de code contenues dans le fichier .asm risquent de ne pas s'afficher correctement.|  
+### <a name="fa-argument"></a>/FA argument  
+aucun  
+Un *source*fichier .asm est créé pour chaque fichier de code source dans la compilation.  
   
- Par défaut, le fichier listing prend le même nom de base que le fichier source.  Vous pouvez modifier le nom du fichier listing et le répertoire où il est créé à l'aide de l'option **\/Fa**.  
+*nom de fichier* un fichier listing nommé *nom de fichier*.asm est placé dans le répertoire actif. Cela n’est valide que lors de la compilation d’un fichier de code source unique.  
   
-|Utilisation de \/Fa|Résultat|  
-|-------------------------|--------------|  
-|**\/Fa**|Un *source\_file*.asm est créé pour chaque fichier de code source de la compilation.|  
-|**\/Fa** *filename*|*filename*.asm est placé dans le répertoire courant.  Valide seulement lors de la compilation d'un seul fichier de code source.|  
-|**\/Fa** *filename.extension*|*filename.extension* est placé dans le répertoire courant.  Valide seulement lors de la compilation d'un seul fichier de code source.|  
-|**\/Fa** *directory*\\|Un *source\_file*.asm est créé et placé dans le répertoire *directory* spécifié pour chaque fichier de code source de la compilation.  Notez la présence de la barre oblique inverse obligatoire.  Seuls les chemins d'accès sur le disque actif sont admis.|  
-|**\/Fa** *directory*\\*filename*|*filename*.asm est placé dans le répertoire `directory`spécifié.  Valide seulement lors de la compilation d'un seul fichier de code source.|  
-|**\/Fa** *directory*\\*filename.extension*|*filename.extension* est placé dans le répertoire `directory`spécifié.  Valide seulement lors de la compilation d'un seul fichier de code source.|  
+*nomfichier.extension*  
+Un fichier listing nommé *nomfichier.extension* est placé dans le répertoire actif. Cela n’est valide que lors de la compilation d’un fichier de code source unique.  
   
-### Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
+*répertoire*\  
+Un *source_file*.asm est créé et placé dans le texte spécifié *répertoire* pour chaque fichier de code source dans la compilation. Notez la barre oblique de fin requise. Uniquement les chemins d’accès sur le disque en cours sont autorisés.  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Définition des propriétés de projets Visual C\+\+](../../ide/working-with-project-properties.md).  
+*répertoire*\\*nom de fichier* un fichier listing nommé *nom de fichier*.asm est placé dans le texte spécifié *active*. Cela n’est valide que lors de la compilation d’un fichier de code source unique.  
   
-2.  Cliquez sur le dossier **C\/C\+\+**.  
+*répertoire*\\*nomfichier.extension*  
+Un fichier listing nommé *nomfichier.extension* est placé dans le texte spécifié *active*. Cela n’est valide que lors de la compilation d’un fichier de code source unique.  
   
-3.  Cliquez sur la page de propriétés **Fichiers de sortie**.  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-4.  Modifiez la propriété **Emplacement d'un listing ASM** \(**\/Fa**\) ou **Sortie de l'assembleur** \(**\/FA**\) \(**\/FAu** doit être spécifié dans la page de propriétés **Ligne de commande**, zone **Options supplémentaires**.  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
-### Pour définir cette option du compilateur par programmation  
+2.  Ouvrez le **C/C++** dossier et sélectionnez le **fichiers de sortie** page de propriétés.  
   
--   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerListingLocation%2A> ou <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerOutput%2A>.  Pour spécifier **\/FAu**, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
+3.  Modifier la **sortie de l’assembleur** propriété à définir le `/FAc` et `/FAs` options pour le code source, machine et assembleur. Modifier la **utiliser Unicode pour Assembler répertoriant** propriété à définir la `/FAu` option de sortie ANSI ou UTF-8. Modifier la **emplacement d’un listing ASM** pour définir le `/Fa` option pour répertorier le nom de fichier et l’emplacement.  
   
-## Exemple  
- La ligne de commande suivante produit un listing appelé HELLO.cod combinant code source et code machine :  
+Notez que l’affectation à la fois **sortie de l’assembleur** et **utiliser Unicode pour Assembler répertoriant** propriétés peuvent entraîner [avertissement de ligne de commande D9025](../../error-messages/tool-errors/command-line-warning-d9025.md). Pour combiner ces options dans l’IDE, utilisez le **des Options supplémentaires** champ dans le **ligne de commande** page de propriétés à la place.  
+  
+### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation  
+  
+-   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerListingLocation%2A> ou <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerOutput%2A>. Pour spécifier `/FAu`, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
+  
+## <a name="example"></a>Exemple  
+La ligne de commande suivante génère une source combinée et le listing de code machine appelé Hello.cod combinant :  
   
 ```  
 CL /FAcs HELLO.CPP  
 ```  
   
-## Voir aussi  
- [Options du fichier de sortie \(\/F\)](../../build/reference/output-file-f-options.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Fichier de sortie (/ F) Options](../../build/reference/output-file-f-options.md)   
  [Options du compilateur](../../build/reference/compiler-options.md)   
- [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)   
+ [Définition des Options du compilateur](../../build/reference/setting-compiler-options.md)   
  [Spécification du nom de chemin](../../build/reference/specifying-the-pathname.md)

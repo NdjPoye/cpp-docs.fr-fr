@@ -1,30 +1,30 @@
 ---
-title: "Code de vue de l&#39;enregistrement cr&#233;&#233; par l&#39;Assistant Application (Acc&#232;s aux donn&#233;es MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assistants Application (C++), code de vue d'enregistrement"
-  - "vues des enregistrements, Assistant Application (code)"
-  - "vues des enregistrements, actualiser des contrôles"
+title: "Enregistrement d’afficher le Code créé par l’Assistant Application (MFC Data Access) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- application wizards [C++], record view code
+- record views, refreshing controls
+- record views, application wizard code
 ms.assetid: 18fd4703-5939-491d-b759-985f767b951f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a9475dd6192eb6bc1abd00e3614c18482be415c8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Code de vue de l&#39;enregistrement cr&#233;&#233; par l&#39;Assistant Application (Acc&#232;s aux donn&#233;es MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'[Assistant Application MFC](../mfc/reference/database-support-mfc-application-wizard.md) remplace les fonctions membres `OnInitialUpdate` et `OnGetRecordset` de la vue.  Une fois que l'infrastructure a créé la fenêtre frame, le document et la vue, elle appelle `OnInitialUpdate` pour initialiser la vue.  `OnInitialUpdate` obtient un pointeur vers le recordset à partir du document.  Un appel à la fonction [CView::OnInitialUpdate](../Topic/CView::OnInitialUpdate.md) de la classe de base ouvre le recordset.  Le code suivant illustre ce processus pour un `CRecordView` : le code pour un `CDaoRecordView` est similaire :  
+# <a name="record-view-code-created-by-application-wizard--mfc-data-access"></a>Code de vue de l'enregistrement créé par l'Assistant Application (Accès aux données MFC)
+Le [Assistant Application MFC](../mfc/reference/database-support-mfc-application-wizard.md) remplace la vue `OnInitialUpdate` et `OnGetRecordset` fonctions membres. Une fois que l'infrastructure a créé la fenêtre frame, le document et la vue, elle appelle `OnInitialUpdate` pour initialiser la vue. `OnInitialUpdate` obtient un pointeur vers le recordset à partir du document. Un appel à la classe de base [CView::OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) fonction ouvre le recordset. Le code suivant illustre ce processus pour une `CRecordView`:  
   
 ```  
 void CSectionForm::OnInitialUpdate()  
@@ -34,10 +34,10 @@ void CSectionForm::OnInitialUpdate()
 }  
 ```  
   
- Quand le recordset s'ouvre, il sélectionne des enregistrements.  [CRecordset::Open](../Topic/CRecordset::Open.md) ou [CDaoRecordset::Open](../Topic/CDaoRecordset::Open.md) fait du premier enregistrement l'enregistrement actif et DDX déplace les données à partir des données membres de champ du recordset vers les contrôles de formulaire correspondants dans la vue.  Pour plus d'informations sur RFX, consultez [Record Field Exchange \(RFX\)](../data/odbc/record-field-exchange-rfx.md).  Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../mfc/dialog-data-exchange-and-validation.md).  Pour plus d'informations sur le processus de création de document\/vue, consultez [Utilisation des classes pour l'écriture d'applications pour Windows](../mfc/using-the-classes-to-write-applications-for-windows.md).  
+ Quand le recordset s'ouvre, il sélectionne des enregistrements. [CRecordset::Open](../mfc/reference/crecordset-class.md#open) fait du premier enregistrement l’enregistrement actif et DDX déplace les données à partir des membres de données de champ du jeu d’enregistrements correspondant dans l’affichage des contrôles de formulaire. Pour plus d’informations sur RFX, consultez [Record Field Exchange (RFX)](../data/odbc/record-field-exchange-rfx.md). Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../mfc/dialog-data-exchange-and-validation.md). Pour plus d’informations sur le processus de création de document/vue, consultez [l’utilisation des Classes pour l’écriture d’Applications Windows](../mfc/using-the-classes-to-write-applications-for-windows.md).  
   
 > [!NOTE]
->  Vous devez laisser à vos utilisateurs finaux la possibilité d'actualiser les contrôles de vue d'enregistrement à partir du recordset.  Sans cette fonctionnalité, si un utilisateur affecte à un contrôle une valeur non valide, il risque de rester de manière permanente sur l'enregistrement actif.  Pour actualiser les contrôles, vous devez appeler la fonction membre `CWnd` [UpdateData](../Topic/CWnd::UpdateData.md) avec un paramètre **FALSE**.  
+>  Vous devez laisser à vos utilisateurs finaux la possibilité d'actualiser les contrôles de vue d'enregistrement à partir du recordset. Sans cette fonctionnalité, si un utilisateur affecte à un contrôle une valeur non valide, il risque de rester de manière permanente sur l'enregistrement actif. Pour actualiser les contrôles, vous appelez le `CWnd` fonction membre [UpdateData](../mfc/reference/cwnd-class.md#updatedata) avec un paramètre de **FALSE**.  
   
-## Voir aussi  
- [Utilisation d'une vue de l'enregistrement](../data/using-a-record-view-mfc-data-access.md)
+## <a name="see-also"></a>Voir aussi  
+ [À l’aide d’une vue d’enregistrement](../data/using-a-record-view-mfc-data-access.md)

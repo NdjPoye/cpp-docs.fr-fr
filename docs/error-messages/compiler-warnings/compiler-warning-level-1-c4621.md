@@ -1,34 +1,32 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4621 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4621"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4621"
+title: Compilateur avertissement (niveau 1) C4621 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4621
+dev_langs: C++
+helpviewer_keywords: C4621
 ms.assetid: 40931bd9-cb89-497e-86f0-cec9f016c63c
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a4a9252e615ad0fe1ede02e374294e03db38eca4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 1) C4621
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-aucune forme suffixée de l'opérateur 'operator \-\-' trouvée pour le type 'type', utilisez la forme préfixée  
+# <a name="compiler-warning-level-1-c4621"></a>Avertissement du compilateur (niveau 1) C4621
+aucune forme suffixée de l’opérateur 'operator--' trouvée pour le type 'type', utilisez la forme préfixée  
   
- Il n'y a pas d'opérateur de décrément postfix défini pour le type donné.  Le compilateur a utilisé l'opérateur de préfixe surchargé.  
+ Il n’a aucun opérateur de décrémentation suffixé défini pour le type donné. Le compilateur a utilisé l’opérateur de préfixe surchargé.  
   
- Vous pouvez éviter cet avertissement en définissant un opérateur postfix `--`.  Créez une version à deux arguments de l'opérateur `--` comme illustré ici :  
+ Cet avertissement peut être évité en définissant un suffixe `--` opérateur. Créer une version à deux arguments de la `--` opérateur, comme indiqué ci-dessous :  
   
 ```  
 // C4621.cpp  

@@ -1,36 +1,34 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4508 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4508"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4508"
+title: Compilateur avertissement (niveau 1) C4508 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4508
+dev_langs: C++
+helpviewer_keywords: C4508
 ms.assetid: c05f113b-b789-4df0-a4ef-78bce4767021
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6d29e821fe29720b065bd9f003e1349c80bbb5c5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 1) C4508
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'fonction' : la fonction doit retourner une valeur ; type de retour 'void' pris par défaut  
+# <a name="compiler-warning-level-1-c4508"></a>Avertissement du compilateur (niveau 1) C4508
+'fonction' : fonction doit retourner une valeur ; 'void' pris par défaut de type de retour  
   
- La fonction n'a pas de type de retour spécifié.  Dans ce cas, l'erreur C4430 devrait également se déclencher et le compilateur implémente le correctif signalé par l'erreur C4430 \(la valeur par défaut est int\).  
+ La fonction n’a aucun type de retour spécifié. Dans ce cas, C4430 doit également déclencher et le compilateur implémente le correctif signalé par l’erreur C4430 (valeur par défaut est de type int).  
   
- Pour résoudre cet avertissement, déclarez explicitement le type de retour des fonctions.  
+ Pour résoudre cet avertissement, déclarer explicitement le type de retour des fonctions.  
   
- L'exemple suivant génère l'erreur C4508 :  
+ L’exemple suivant génère C4508 :  
   
 ```  
 // C4508.cpp  

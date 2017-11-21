@@ -1,69 +1,68 @@
 ---
-title: "__stosw | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__stosw"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "stosw, instruction"
-  - "__stosw, intrinsèque"
-  - "rep stosw, instruction"
+title: __stosw | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __stosw
+dev_langs: C++
+helpviewer_keywords:
+- stosw instruction
+- __stosw intrinsic
+- rep stosw instruction
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c81be0e3c1687a54eb06f4f091a406059523d3a4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# __stosw
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="stosw"></a>__stosw
+**Section spécifique à Microsoft**  
   
- Génère une instruction de chaîne du magasin \(`rep stosw`\).  
+ Génère une instruction de chaîne magasin (`rep stosw`).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-void __stosw(   
-   unsigned short* Dest,   
-   unsigned short Data,   
-   size_t Count   
+void __stosw(   
+   unsigned short* Dest,   
+   unsigned short Data,   
+   size_t Count   
 );  
 ```  
   
-#### Paramètres  
- \[out\] `Dest`  
- la destination de l'opération.  
+#### <a name="parameters"></a>Paramètres  
+ [out] `Dest`  
+ La destination de l’opération.  
   
- \[in\] `Data`  
- Données à stocker.  
+ [in] `Data`  
+ Les données à stocker.  
   
- \[in\] `Count`  
- la longueur du bloc de mots à écrire.  
+ [in] `Count`  
+ La longueur du bloc de mots à écrire.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__stosw`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- Le résultat est que le mot `Data` est entré dans un bloc de mots d' `Count` dans la chaîne d' `Dest` .  
+## <a name="remarks"></a>Remarques  
+ Le résultat est que le mot `Data` est écrit dans un bloc de `Count` mots dans le `Dest` chaîne.  
   
- Cette routine est uniquement disponible sous forme intrinsèque.  
+ Cette routine est disponible uniquement en tant qu'intrinsèque.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // stosw.c  
@@ -83,8 +82,11 @@ int main()
 }  
 ```  
   
-  **0 128 128 0**   
-## détail de FIN Microsoft  
+```Output  
+0 128 128 0  
+```  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+**FIN de la section spécifique à Microsoft**  
+  
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

@@ -1,32 +1,30 @@
 ---
-title: "list::splice (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::splice"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre splice [STL/CLR]"
+title: List::splice (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::splice
+dev_langs: C++
+helpviewer_keywords: splice member [STL/CLR]
 ms.assetid: ebc424b9-8341-4a88-b101-86d56324f5ac
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9bbc7517013edd4c7af7c40c3787d8ec7749df32
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# list::splice (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Liens de Restitches entre les nœuds.  
+# <a name="listsplice-stlclr"></a>list::splice (STL/CLR)
+Restitch les liens entre les nœuds.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void splice(iterator where, list<Value>% right);  
@@ -36,27 +34,27 @@ void splice(iterator where, list<Value>% right,
     iterator first, iterator last);  
 ```  
   
-#### Paramètres  
- first  
- Début de la plage à épisser.  
+#### <a name="parameters"></a>Paramètres  
+ premier  
+ Début de plage à splice.  
   
  last  
- Fin de la plage à épisser.  
+ Fin de la plage à splice.  
   
- right  
- Conteneur à partir duquel effectuer l'opération splice.  
+ droite  
+ Splice, à partir de conteneur.  
   
- where  
- Où dans le conteneur épisser avant.  
+ où  
+ Emplacement dans le conteneur à splice avant.  
   
-## Notes  
- La première fonction membre insère la séquence contrôlée par `right` avant l'élément dans la séquence contrôlée est référencé par `where`.  Elle supprime également tous les éléments d'`right`. \(`%``right` ne doit pas être égal `this`.\) Vous l'utilisez pour épisser toute la liste dans une autre.  
+## <a name="remarks"></a>Remarques  
+ La première fonction membre insère la séquence contrôlée par `right` avant l’élément dans la séquence contrôlée vers lequel pointée `where`. Elle supprime également tous les éléments de `right`. (`%right` ne doit pas correspondre `this`.) Il permet de splice tous d’une liste dans un autre.  
   
- La deuxième fonction membre supprime l'élément référencé par `first` dans la séquence contrôlée par `right` et l'insère avant l'élément dans la séquence contrôlée est référencé par `where`. \(Si `where` `==` `first` `||` `where` `== ++``first`, aucune modification se produit.\) Vous l'utilisez pour épisser un élément unique dans une liste dans une autre.  
+ La deuxième fonction membre supprime l’élément vers lequel pointé `first` dans la séquence contrôlée par `right` et l’insère avant l’élément dans la séquence contrôlée vers lequel pointe `where`. (Si `where` `==` `first` `||` `where` `== ++first`, aucune modification se produit.) Il permet de splice un élément unique d’une liste dans un autre.  
   
- La troisième fonction membre insère le sous\-plage indiqué par `[``first``,` `last``)` de la séquence contrôlée par `right` avant l'élément dans la séquence contrôlée est référencé par `where`.  Elle supprime également le sous\-plage d'origine de la séquence contrôlée par `right`. \(Si `right` `==` `this`, la plage `[``first``,` `last``)` ne doit pas inclure l'élément référencé par `where`.\) Vous l'utilisez pour épisser une sous\-séquence de zéro ou plusieurs éléments d'une liste dans une autre.  
+ La troisième fonction membre insère la sous-plage désignée par [`first`, `last`) à partir de la séquence contrôlée par `right` avant l’élément dans la séquence contrôlée vers lequel pointée `where`. Elle supprime également la sous-plage d'origine de la séquence contrôlée par `right`. (If `right` `==` `this`, la plage [`first`, `last`) ne doit pas inclure l’élément vers lequel pointé `where`.) Il permet de splice une sous-séquence de zéro ou plusieurs éléments d’une liste dans un autre.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_list_splice.cpp   
@@ -104,20 +102,23 @@ int main()
   
 ```  
   
-  **a b c**  
-**c1.size\(\) \= 0**  
- **a b c**  
- **a**  
- **b c**  
- **&#124; a b c &#124;**  
-**c2.size\(\) \= 0**   
-## Configuration requise  
- **En\-tête :** \<cliext\/list\>  
+```Output  
+ a b c  
+c1.size() = 0  
+ a b c  
+ a  
+ b c  
+ b c a  
+c2.size() = 0  
+```  
   
- **Espace de nom** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/liste >  
   
-## Voir aussi  
- [list](../dotnet/list-stl-clr.md)   
- [list::assign](../dotnet/list-assign-stl-clr.md)   
- [list::insert](../dotnet/list-insert-stl-clr.md)   
- [list::merge](../dotnet/list-merge-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::Assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)   
+ [List::Insert (STL/CLR)](../dotnet/list-insert-stl-clr.md)   
+ [list::merge (STL/CLR)](../dotnet/list-merge-stl-clr.md)

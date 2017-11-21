@@ -1,39 +1,39 @@
 ---
-title: "Utilisation des mod&#232;les du consommateur OLE&#160;DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB (modèles du consommateur), à propos des modèles de consommateurs"
-  - "exemples d'applications (C++), modèles OLE DB"
+title: "Utilisation des modèles du consommateur OLE DB | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- sample applications [C++], OLE DB Templates
+- OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: be52ccf8ba42b61d7393c32587e54a5a768d2f40
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Utilisation des mod&#232;les du consommateur OLE&#160;DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les rubriques suivantes fournissent quelques exemples qui montrent comment utiliser les modèles du consommateur OLE DB dans des scénarios courants :  
+# <a name="working-with-ole-db-consumer-templates"></a>Utilisation des modèles du consommateur OLE DB
+Les rubriques suivantes fournissent des exemples montrant comment utiliser les modèles du consommateur OLE DB dans des scénarios courants :  
   
--   [Simplification de l'accès aux données à l'aide d'attributs de base de données](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
+-   [Simplification de l’accès aux données à l’aide d’attributs de base de données](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
   
--   [Données membres de l'état des champs dans les accesseurs générés par l'Assistant](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)  
+-   [Données membres de l’état des champs dans les accesseurs générés par l’Assistant](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)  
   
--   [Parcours d'un jeu de lignes simple](../../data/oledb/traversing-a-simple-rowset.md)  
+-   [Parcours d’un jeu de lignes simple](../../data/oledb/traversing-a-simple-rowset.md)  
   
--   [Émission d'une requête paramétrée](../../data/oledb/issuing-a-parameterized-query.md)  
+-   [Émission d’une requête paramétrée](../../data/oledb/issuing-a-parameterized-query.md)  
   
--   [Extraction de données](../../data/oledb/fetching-data.md)  
+-   [Récupération de données](../../data/oledb/fetching-data.md)  
   
 -   [Mise à jour des jeux de lignes](../../data/oledb/updating-rowsets.md)  
   
@@ -41,31 +41,31 @@ Les rubriques suivantes fournissent quelques exemples qui montrent comment utili
   
 -   [Utilisation des accesseurs](../../data/oledb/using-accessors.md)  
   
--   [Récupération de métadonnées à l'aide de jeux de lignes du schéma](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)  
+-   [Récupération de métadonnées à l’aide de jeux de lignes du schéma](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)  
   
 -   [Prise en charge des transactions dans OLE DB](../../data/oledb/supporting-transactions-in-ole-db.md)  
   
--   [Utilisation des vues de l'enregistrement OLE DB](../../data/oledb/using-ole-db-record-views.md)  
+-   [Utilisation des vues de l’enregistrement OLE DB](../../data/oledb/using-ole-db-record-views.md)  
   
--   [Utilisation d'un recordset ADO existant](../../data/oledb/using-an-existing-ado-recordset.md)  
+-   [Utilisation d’un recordset ADO existant](../../data/oledb/using-an-existing-ado-recordset.md)  
   
--   [Mise à jour d'une colonne quand une autre table contient une référence à la ligne](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)  
+-   [Mise à jour d’une colonne quand une autre table contient une référence à la ligne](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)  
   
 -   [Utilisation des signets](../../data/oledb/using-bookmarks.md)  
   
--   [Récupération d'un BLOB](../../data/oledb/retrieving-a-blob.md)  
+-   [Récupération d’un BLOB](../../data/oledb/retrieving-a-blob.md)  
   
 -   [Réception des notifications](../../data/oledb/receiving-notifications.md)  
   
- Pour obtenir un exemple plus complet de l'implémentation d'un consommateur OLE DB, consultez [Implémentation d'un consommateur simple](../../data/oledb/creating-an-ole-db-consumer.md).  
+ Pour obtenir un exemple de création et implémentation d’un consommateur OLE DB, consultez [création d’un consommateur Simple](../../data/oledb/creating-an-ole-db-consumer.md).  
   
- Les exemples suivants montrent également comment utiliser les modèles du consommateur OLE DB :  
+ Vous trouverez également des exemples montrant comment utiliser les modèles du consommateur OLE DB dans les exemples suivants :  
   
--   [CatDB](http://msdn.microsoft.com/fr-fr/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
+-   [CatDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
   
--   [DBViewer](http://msdn.microsoft.com/fr-fr/07620f99-c347-4d09-9ebc-2459e8049832)  
+-   [DBViewer](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)  
   
--   [MultiRead](http://msdn.microsoft.com/fr-fr/21459014-4409-413c-b826-a41f0413be61)  
+-   [MultiRead](http://msdn.microsoft.com/en-us/21459014-4409-413c-b826-a41f0413be61)  
   
-## Voir aussi  
- [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

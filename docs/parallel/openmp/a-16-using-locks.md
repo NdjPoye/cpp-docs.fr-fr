@@ -1,31 +1,30 @@
 ---
-title: "A.16   Using Locks | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "À l’aide de verrous A.16 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 873bf32b-6cfe-4ce1-b994-bef80b50f399
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 870895dae8aa6fe4b3720b9319359672fcb576af
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# A.16   Using Locks
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dans l'exemple suivant, \(pour [section 3,2](../../parallel/openmp/3-2-lock-functions.md) à la page 41\) notez que l'argument aux fonctions de verrou doit avoir le type`omp_lock_t`, et qu'il n'est pas nécessaire de le vidage.  Les fonctions de verrou a pour être inactives en attendant l'entrée à la première section critique, mais pour exécuter les threads un autre travail en attendant les entrées de la deuxième.  Les blocs de fonction d' `omp_set_lock` , mais la fonction d' `omp_test_lock` n'est pas le cas, en autorisant le travail dans le saut \(\) à effectuer.  
+# <a name="a16---using-locks"></a>A.16   Utilisation des verrous
+Dans l’exemple suivant, (pour [Section 3.2](../../parallel/openmp/3-2-lock-functions.md) page 41) Notez que l’argument pour les fonctions de verrouillage doit avoir type `omp_lock_t`, et qu’il n’est pas nécessaire de le videz.  Les fonctions de verrouillage entraînent les threads est inactive pendant l’attente de l’entrée à la première section critique, mais pour effectuer d’autres tâches pendant l’attente de l’entrée à la seconde.  Le `omp_set_lock` blocs de fonction, mais la `omp_test_lock` (fonction) ne pas autoriser le travail dans skip() à faire.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // omp_using_locks.c  

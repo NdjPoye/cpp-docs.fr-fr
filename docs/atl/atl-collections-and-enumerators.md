@@ -1,54 +1,55 @@
 ---
-title: "Collections et &#233;num&#233;rateurs ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "collection (interfaces)"
-  - "collections, ATL (classes)"
-  - "énumérateur (interfaces)"
-  - "énumérateurs, ATL (classes)"
+title: "Collections et énumérateurs ATL | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- enumerator interfaces
+- collections, ATL classes
+- enumerators, ATL classes
+- collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4738e3f5256fe654dd64541dfd021ba2b4fce090
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Collections et &#233;num&#233;rateurs ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`collection` est un objet COM qui fournit une interface qui permet l'accès à un groupe d'éléments de données \(des données brutes ou d'autres objets\).  Une interface qui suit les normes pour permettre l'accès à un groupe d'objets est appelé *une interface de la collection*.  
+# <a name="atl-collections-and-enumerators"></a>Collections et énumérateurs ATL
+A `collection` est un objet COM qui fournit une interface qui autorise l’accès à un groupe d’éléments de données (données brutes ou autres objets). Interface qui respecte les normes pour fournir l’accès à un groupe d’objets est appelé un *interface de collection*.  
   
- Au minimum, les interfaces de collection doivent fournir une propriété de **Nombre** qui retourne le nombre d'éléments dans la collection, une propriété de **Élément** qui retourne un élément de la collection sur un index, et une propriété d' `_NewEnum` qui retourne un énumérateur pour la collection.  Éventuellement, les interfaces de collection peuvent fournir **Ajouter** les méthodes et de **Supprimer** pour permettre à des éléments à insérer dans ou être supprimés de la collection, et une méthode de **Clear** pour supprimer tous les éléments.  
+ Au minimum, les interfaces de collection doivent fournir un **nombre** propriété qui retourne le nombre d’éléments dans la collection, une **élément** propriété qui retourne un élément de la collection basée sur un index et un `_NewEnum` propriété qui retourne un énumérateur pour la collection. Le cas échéant, peuvent fournir les interfaces de collection **ajouter** et **supprimer** méthodes afin de permettre des éléments à insérer ou supprimer de la collection et un **clair** à supprimer (méthode) tous les éléments.  
   
- `enumerator` est un objet COM qui fournit une interface pour itérer au sein de les éléments d'une collection.  Les interfaces d'énumérateurs fournissent un accès séquentiel aux éléments d'une collection via quatre méthodes requises : `Next`, **Ignorer**, **Réinitialiser**, et `Clone`.  
+ Un `enumerator` est un objet COM qui fournit une interface pour l’itération au sein des éléments dans une collection. Interfaces d’énumérateur fournissent un accès série aux éléments d’une collection via quatre méthodes : `Next`, **ignorer**, **réinitialiser**, et `Clone`.  
   
- Vous pouvez en savoir plus sur les interfaces d'énumérateur en lisant sur l'interface archétypale \(mais entièrement imaginaire\) de.  
+ Vous pouvez en savoir plus sur l’énumérateur (interfaces) en lecture sur le type (mais entièrement imaginaire) [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx) interface.  
   
-## Dans cette section  
- [Classes de collection et d'énumérateur ATL](../atl/atl-collection-and-enumerator-classes.md)  
- Décrit brièvement et fournit des liens vers des classes ATL qui vous aideront les collections et des énumérateurs d'implémenter.  
+## <a name="in-this-section"></a>Dans cette section  
+ [Collections ATL et classes d’énumérateurs](../atl/atl-collection-and-enumerator-classes.md)  
+ Décrit brièvement et fournit des liens vers les classes ATL qui vous aidera à implémentent des collections et énumérateurs.  
   
- [Principes de conception pour les interfaces de collection et d'énumérateur](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
- Présente les différents principes de conception derrière chaque type d'interface.  
+ [Principes de conception pour les interfaces d’énumérateurs et de collections](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
+ Présente les principes de conception derrière chaque type d’interface.  
   
- [implémenter une collection STL\-Basée](../atl/implementing-an-stl-based-collection.md)  
- Un exemple étendu qui vous présente l'implémentation d'une collection basée sur de \(STL\) Standard Template Library\).  
+ [Implémentation d’une collection basée sur la bibliothèque standard C++](../atl/implementing-an-stl-based-collection.md)  
+ Exemple étendu qui vous guide tout au long de l’implémentation d’un regroupement basé sur la bibliothèque C++ Standard.  
   
-## Rubriques connexes  
+## <a name="related-sections"></a>Rubriques connexes  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Fournit des liens vers des rubriques conceptuelles sur comment programmer avec la bibliothèque ATL.  
+ Propose des liens vers des rubriques conceptuelles traitant de la programmation à l'aide de la bibliothèque ATL (Active Template Library).  
   
- [ATLCollections](../top/visual-cpp-samples.md)  
- Un exemple qui illustre l'utilisation d' `ICollectionOnSTLImpl` et d' `CComEnumOnSTL`, et l'implémentation de la stratégie de copie personnalisées.  
+ [ATLCollections, exemple](../visual-cpp-samples.md)  
+ Un exemple qui illustre l’utilisation de `ICollectionOnSTLImpl` et `CComEnumOnSTL`et l’implémentation de classes de stratégies de copie personnalisée.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Concepts](../atl/active-template-library-atl-concepts.md)
+

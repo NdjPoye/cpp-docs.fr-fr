@@ -1,37 +1,35 @@
 ---
-title: "Avertissement du compilateur (niveau&#160;4) C4754 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4754"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4754"
+title: Compilateur avertissement (niveau 4) C4754 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4754
+dev_langs: C++
+helpviewer_keywords: C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 06ff5e8f0d2dc87d26e5fc1db80b70def5bb0fd7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau&#160;4) C4754
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les règles de conversion pour les opérations arithmétiques dans une comparaison signifient qu'une branche ne peut pas être exécutée.  
+# <a name="compiler-warning-level-4-c4754"></a>Avertissement du compilateur (niveau 4) C4754
+Les règles de conversion pour les opérations arithmétiques dans une comparaison signifient qu’une branche ne peut pas être exécutée.  
   
- L'avertissement C4754 est publié car le résultat de la comparaison est toujours identique.  Cela indique qu'une des branches de la condition n'est jamais exécuté, très probablement parce que l'expression entière associée est incorrecte.  Cette erreur de code se produit souvent dans les contrôles incorrects de dépassement sur les entiers sur les architectures 64 bits.  
+ L'avertissement C4754 est généré, car le résultat de la comparaison est toujours identique. Cela indique qu'une des branches de la condition n'est jamais exécutée, très probablement parce que l'expression d'entier associée est incorrecte. Cette erreur de code se produit souvent dans les contrôles incorrects de dépassement sur les entiers sur les architectures 64 bits.  
   
- Les règles de conversion entières sont complexes et il y a de nombreuses pièges subtils.  Comme alternative à résoudre chaque avertissement C4754, il vous est possible de mettre à jour le code pour utiliser [Bibliothèque SafeInt](../../windows/safeint-library.md).  
+ Les règles de conversion d'entier sont complexes, et il existe de nombreuses pièges subtils. Comme alternative à résoudre chaque avertissement C4754, vous pouvez mettre à jour le code pour utiliser le [Bibliothèque SafeInt](../../windows/safeint-library.md).  
   
-## Exemple  
- Cet exemple génère l'erreur C4754 :  
+## <a name="example"></a>Exemple  
+ Cet exemple génère C4754 :  
   
 ```cpp  
 // C4754a.cpp  
@@ -51,9 +49,13 @@ int sum_overflow(unsigned long a, unsigned long b)
 }  
 ```  
   
- L'addition `a + b` peut provoquer un dépassement de capacité arithmétiques avant le résultat est upcast à une valeur 64 bits et assigné à la variable `x`64 bits.  Cela signifie que le contrôle sur `x` est redondant et n'intercepte jamais un dépassement de capacité.  Dans ce cas, le compilateur émet cet avertissement :  
+ L'addition `a + b` peut provoquer un dépassement de capacité arithmétique avant que le résultat fasse l'objet d'un upcast vers une valeur 64 bits et soit assigné à la variable 64 bits `x`. Cela signifie que le contrôle sur `x` est redondant et n'intercepte jamais un dépassement de capacité. Dans ce cas, le compilateur génère l'avertissement suivant :  
   
-  **Avertissement C4754 : Modalités de conversion pour les opérations arithmétiques dans la comparaison au moyen de C4754a.cpp \(7\) qu'une branche ne peut pas être exécuté.  Cast de '\(a \+ ...\)' vers 'ULONG64' \(ou un type similaire de 8 octets\).**  Pour éliminer l'avertissement, il vous est possible de modifier l'instruction d'assignation pour effectuer un cast des opérandes à 8 valeurs d'octets :  
+```Output  
+Warning C4754: Conversion rules for arithmetic operations in the comparison at C4754a.cpp (7) mean that one branch cannot be executed. Cast '(a + ...)' to 'ULONG64' (or similar type of 8 bytes).  
+```  
+  
+ Pour éliminer l’avertissement, il est possible de modifier l’instruction d’assignation pour effectuer un cast des opérandes vers des valeurs de 8 octets :  
   
 ```cpp  
 // Casting one operand is sufficient to force all the operands in   
@@ -63,8 +65,8 @@ unsigned long long x =
    (unsigned long long)a + (unsigned long long)b;  
 ```  
   
-## Exemple  
- L'exemple suivant génère également l'erreur C4754.  
+## <a name="example"></a>Exemple  
+ L'exemple suivant génère également l'avertissement C4754.  
   
 ```cpp  
 // C4754b.cpp  
@@ -82,11 +84,15 @@ int wrap_overflow(unsigned long a)
 }  
 ```  
   
- L'opérateur `sizeof()` renvoie un `size_t`, dont la taille est architecture\- dépendant.  L'exemple de code fonctionne sur les architectures 32 bits où `size_t` est un type 32 bits.  Toutefois, dans les architectures 64 bits, `size_t` est un type 64 bits.  Les règles de conversion pour les entiers signifient que `a` est upcast à une valeur 64 bits dans l'expression `a + b < a` comme c'était écrit `(size_t)a + (size_t)b < (size_t)a`.  Lorsque `a` et `b` sont des entiers 32 bits, l'opération 64 bits d'ajout peut jamais déborder, et les blocages ne tiennent jamais.  Par conséquent, le code ne détecte jamais une condition de dépassement sur les entiers sur les architectures 64 bits.  Cet exemple fait le compilateur à émettre cet avertissement :  
+ L'opérateur `sizeof()` retourne `size_t` dont la taille dépend de l'architecture. L'exemple de code fonctionne sur les architectures 32 bits, où `size_t` est un type 32 bits. Toutefois, sur les architectures 64 bits, `size_t` est un type 64 bits. Les règles de conversion pour les entiers signifient que `a` fait l'objet d'un upcast vers une valeur 64 bits dans l'expression `a + b < a`, comme si elle était écrite `(size_t)a + (size_t)b < (size_t)a`. Lorsque `a` et `b` sont des entiers 32 bits, l'opération d'addition 64 bits ne peut jamais déborder, et la contrainte n'est jamais conservée. Par conséquent, le code ne détecte jamais une condition de dépassement sur les entiers sur les architectures 64 bits. Cet exemple entraîne le compilateur à générer l'avertissement suivant :  
   
-  **Avertissement C4754 : Modalités de conversion pour les opérations arithmétiques dans la comparaison au moyen de C4754a.cpp \(7\) signifient qu'une branche ne peut pas être exécuté.  Cast '4' et 'ULONG' \(ou en type similaire de 4 octets\).**  Notez que le message d'avertissement répertorie explicitement la valeur de constante 4 au lieu de la source d'origine chaîne\- par le temps que l'analyse d'avertissement rencontre code incriminée qui a été `sizeof(unsigned long)`, a déjà été converti en une constante.  Par conséquent, il vous est possible d'avoir à trouver quelle expression dans le code source est associé à la valeur de constante dans le message d'avertissement.  Les sources les plus courantes de code résolues aux constantes dans les messages d'avertissement C4754 sont des expressions telles que `sizeof(TYPE)` et `strlen(szConstantString)`.  
+```Output  
+Warning C4754: Conversion rules for arithmetic operations in the comparison at C4754b.cpp (7) mean that one branch cannot be executed. Cast '4' to 'ULONG' (or similar type of 4 bytes).  
+```  
   
- Dans ce cas, le code fixe ressemblerait à ceci :  
+ Notez que le message d'avertissement répertorie explicitement la valeur de constante 4 au lieu de la chaîne source d'origine. Au moment où l'analyse de l'avertissement rencontre le code incriminé, `sizeof(unsigned long)` a déjà été converti en constante. Par conséquent, vous devrez peut-être trouver quelle expression dans le code source est associée à la valeur de constante dans le message d'avertissement. Les sources de code les plus courantes résolues en constantes dans les messages d'avertissement C4754 sont des expressions telles que `sizeof(TYPE)` et `strlen(szConstantString)`.  
+  
+ Dans ce cas, le code résolu se présente comme suit :  
   
 ```cpp  
 // Casting the result of sizeof() to unsigned long ensures  
@@ -96,7 +102,7 @@ if (a + (unsigned long)sizeof(unsigned long) < a)
   
 ```  
   
- **Notes** Numéro de ligne prévue des avertissements du compilateur est la dernière ligne d'une instruction.  Dans un message d'avertissement concernant une instruction conditionnelle complexe qui est plusieurs lignes réparties, la ligne comportant l'erreur de code peut être plusieurs lignes avant la ligne qui est signalée.  Par exemple :  
+ **Remarque** le numéro de ligne dans les avertissements du compilateur est la dernière ligne d’une instruction. Dans un message d'avertissement concernant une instruction conditionnelle complexe répartie sur plusieurs lignes, la ligne contenant l'erreur de code peut être plusieurs lignes avant la ligne indiquée. Exemple :  
   
 ```cpp  
 unsigned long a;  
@@ -107,5 +113,4 @@ if (a + sizeof(unsigned long) < a || // incorrect check
          // never executes!  
          return INVALID_PARAMETER;  
 }  
-  
 ```

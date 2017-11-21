@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,24 +12,22 @@ f1_keywords:
 - allocators/stdext::sync_per_thread::allocate
 - allocators/stdext::sync_per_thread::deallocate
 - allocators/stdext::sync_per_thread::equals
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stdext::sync_per_thread
 - stdext::sync_per_thread [C++], allocate
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 263622066c379450c5155a5d484e9eb7e46916f1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 817f52e11a39de64288c4433b5f29c48ae45ca22
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="syncperthread-class"></a>sync_per_thread, classe
 Décrit un [filtre de synchronisation](../standard-library/allocators-header.md) qui fournit un objet cache distinct pour chaque thread.  
@@ -118,7 +115,6 @@ bool equals(const sync<Cache>& Other) const;
   
 ## <a name="see-also"></a>Voir aussi  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

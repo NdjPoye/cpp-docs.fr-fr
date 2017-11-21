@@ -1,32 +1,30 @@
 ---
-title: "ComPtr::Swap, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::Swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Swap (méthode)"
+title: "Comptr::swap, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::Swap
+dev_langs: C++
+helpviewer_keywords: Swap method
 ms.assetid: 74275f00-b24e-4b4c-b8b6-ac2aa2dd7ae9
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a8ff215bf3461fcbcadd20b0680829af81630aa4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# ComPtr::Swap, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Echange l'interface managée par le ComPtr actuel avec l'interface managée par le ComPtr spécifié.  
+# <a name="comptrswap-method"></a>ComPtr::Swap, méthode
+Échange l’interface gérée par le ComPtr actuel avec l’interface gérée par le ComPtr spécifié.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void Swap(  
@@ -38,14 +36,14 @@ void Swap(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `r`  
  Un ComPtr.  
   
-## Configuration requise  
- **En\-tête:** client.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** client.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ComPtr, classe](../windows/comptr-class.md)

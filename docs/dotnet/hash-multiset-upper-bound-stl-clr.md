@@ -1,45 +1,43 @@
 ---
-title: "hash_multiset::upper_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::upper_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre upper_bound [STL/CLR]"
+title: hash_multiset::upper_bound (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::upper_bound
+dev_langs: C++
+helpviewer_keywords: upper_bound member [STL/CLR]
 ms.assetid: d5be0d79-ae60-42bb-8a53-051bc374407d
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b549538c1147f3d9574c018f7e15c4066dbbb245
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::upper_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Finds end of range that matches a specified key.  
+# <a name="hashmultisetupperbound-stlclr"></a>hash_multiset::upper_bound (STL/CLR)
+Fin de la recherche de plage qui correspond à une clé spécifiée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 iterator upper_bound(key_type key);  
 ```  
   
-#### Paramètres  
- key  
- Key value to search for.  
+#### <a name="parameters"></a>Paramètres  
+ clé  
+ Valeur de clé à rechercher.  
   
-## Notes  
- The member function determines the last element `X` in the controlled sequence that hashes to the same bucket as `key` and has equivalent ordering to `key`.  If no such element exists, or if `X` is the last element in the controlled sequence, it returns [hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)`()`; otherwise it returns an iterator that designates the first element beyond `X`.  You use it to locate the end of a sequence of elements currently in the controlled sequence that match a specified key.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre détermine le dernier élément `X` dans la séquence contrôlée qui hache le même compartiment en tant que `key` et a un classement équivalent à `key`. Si cet élément n’existe, ou si `X` est le dernier élément dans la séquence contrôlée, elle retourne [hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`; sinon, elle retourne un itérateur qui désigne le premier élément au-delà de `X`. Il permet de localiser la fin d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_multiset_upper_bound.cpp   
@@ -71,18 +69,21 @@ int main()
   
 ```  
   
-  **a b c**  
-**upper\_bound\(L'x'\)\=\=end\(\) \= True**  
-**\*upper\_bound\(L'a'\) \= b**  
-**\*upper\_bound\(L'b'\) \= c**   
-## Configuration requise  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+upper_bound(L'x')==end() = True  
+*upper_bound(L'a') = b  
+*upper_bound(L'b') = c  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/hash_set >  
   
-## Voir aussi  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::count](../dotnet/hash-multiset-count-stl-clr.md)   
- [hash\_multiset::equal\_range](../dotnet/hash-multiset-equal-range-stl-clr.md)   
- [hash\_multiset::find](../dotnet/hash-multiset-find-stl-clr.md)   
- [hash\_multiset::lower\_bound](../dotnet/hash-multiset-lower-bound-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::Count (STL/CLR)](../dotnet/hash-multiset-count-stl-clr.md)   
+ [hash_multiset::equal_range (STL/CLR)](../dotnet/hash-multiset-equal-range-stl-clr.md)   
+ [hash_multiset::Find (STL/CLR)](../dotnet/hash-multiset-find-stl-clr.md)   
+ [hash_multiset::lower_bound (STL/CLR)](../dotnet/hash-multiset-lower-bound-stl-clr.md)

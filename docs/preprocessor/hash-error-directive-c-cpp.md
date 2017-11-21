@@ -1,43 +1,40 @@
 ---
-title: "#error, directive (C/C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "#error"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "#error (directive)"
-  - "directive error (#error)"
-  - "préprocesseur, directives"
+title: '#<a name="error-directive-cc--microsoft-docs"></a>erreur Directive (C/C++) | Documents Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '#error'
+dev_langs: C++
+helpviewer_keywords:
+- '#error directive'
+- preprocessor, directives
+- error directive (#error directive)
 ms.assetid: d550a802-ff19-4347-9597-688935d23b2b
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5bb05612ed7262b9daf287793c93ccce654306d6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# #error, directive (C/C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La directive `#error` émet un message d'erreur spécifié par l'utilisateur au moment de la compilation puis arrête la compilation.  
+# <a name="error-directive-cc"></a>#error, directive (C/C++)
+Le `#error` directive émet un message d’erreur spécifié par l’utilisateur au moment de la compilation, puis se termine la compilation.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-#error token-string  
+#errortoken-string  
 ```  
   
-## Notes  
- Le message d'erreur que cette directive émet inclut le paramètre *token\-string*.  Le paramètre `token-string` n'est pas soumis à une expansion macro.  Cette directive est très utile pendant le prétraitement pour informer le développeur d'une incohérence du programme ou de la violation d'une contrainte.  L'exemple suivant illustre le traitement d'une erreur pendant le prétraitement :  
+## <a name="remarks"></a>Remarques  
+ Cette directive émet le message d’erreur inclut le *chaîne de jeton* paramètre. Le `token-string` paramètre n’est pas soumis à une expansion de macro. Cette directive est très utile lors du prétraitement pour informer le développeur d’une incohérence de programme ou de la violation d’une contrainte. L’exemple suivant illustre l’erreur lors du traitement lors du prétraitement :  
   
 ```  
 #if !defined(__cplusplus)  
@@ -45,5 +42,5 @@ La directive `#error` émet un message d'erreur spécifié par l'utilisateur au 
 #endif  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Directives de préprocesseur](../preprocessor/preprocessor-directives.md)

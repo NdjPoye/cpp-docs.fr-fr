@@ -1,35 +1,33 @@
 ---
-title: "Erreur du compilateur C3541 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3541"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3541"
+title: Erreur du compilateur C3541 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C3541
+dev_langs: C++
+helpviewer_keywords: C3541
 ms.assetid: 252cfd4c-5fd2-415e-a17d-6b0c254350db
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 78b4c228999560807aa28dbaecfaa8f0af7b379a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Erreur du compilateur C3541
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-« type » : typeid ne peut pas s'appliquer à un type qui contient « auto »  
+# <a name="compiler-error-c3541"></a>Erreur du compilateur C3541
+'type' : typeid ne peut pas être appliqué à un type contenant 'auto'  
   
- L'opérateur [typeid](../../windows/typeid-cpp-component-extensions.md) ne peut pas être appliqué au type indiqué car il contient le spécificateur `auto`.  
+ Le [typeid](../../windows/typeid-cpp-component-extensions.md) opérateur ne peut pas être appliqué au type indiqué car il contient le `auto` spécificateur.  
   
-## Exemple  
- L'exemple suivant donne C3541.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant donne C3541.  
   
 ```  
 // C3541.cpp  
@@ -43,7 +41,7 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [auto, mot clé](../../cpp/auto-keyword.md)   
- [\/Zc:auto \(déduire le type de variable\)](../../build/reference/zc-auto-deduce-variable-type.md)   
+ [/ Zc : auto (déduire le Type de Variable)](../../build/reference/zc-auto-deduce-variable-type.md)   
  [typeid](../../windows/typeid-cpp-component-extensions.md)

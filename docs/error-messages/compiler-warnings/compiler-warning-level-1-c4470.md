@@ -1,42 +1,40 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4470 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4470"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4470"
+title: Compilateur avertissement (niveau 1) C4470 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4470
+dev_langs: C++
+helpviewer_keywords: C4470
 ms.assetid: f52a3eaa-a235-4747-a47d-9ec4ad4cb0ea
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e77fa078dd3263f796c7b136068e10567da3e0d8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 1) C4470
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-pragmas de contrôle à virgule flottante ignorés sous \/clr  
+# <a name="compiler-warning-level-1-c4470"></a>Avertissement du compilateur (niveau 1) C4470
+pragmas de contrôle à virgule flottante ignorés sous /clr  
   
  Les pragmas de contrôle à virgule flottante :  
   
--   [fenv\_access](../../preprocessor/fenv-access.md)  
+-   [fenv_access](../../preprocessor/fenv-access.md)  
   
--   [float\_control](../../preprocessor/float-control.md)  
+-   [float_control](../../preprocessor/float-control.md)  
   
--   [fp\_contract](../../preprocessor/fp-contract.md)  
+-   [fp_contract](../../preprocessor/fp-contract.md)  
   
- n'ont aucun effet sous [\/clr](../../build/reference/clr-common-language-runtime-compilation.md).  
+ n’ont aucun effet sous [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  
   
- L'exemple suivant génère l'erreur C4470 :  
+ L’exemple suivant génère l’erreur C4470 :  
   
 ```  
 // C4470.cpp  

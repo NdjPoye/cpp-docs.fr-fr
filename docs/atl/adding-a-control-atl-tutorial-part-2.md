@@ -1,115 +1,116 @@
 ---
-title: "Ajout d&#39;un contr&#244;le (Didacticiel ATL, Partie&#160;2) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
+title: "Ajout d’un contrôle (ATL didacticiel, partie 2) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8802dc25400b96d70bfaec65cd88f68db7650023
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Ajout d&#39;un contr&#244;le (Didacticiel ATL, Partie&#160;2)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dans cette étape, vous ajouterez un contrôle à votre projet, le générerez et le testerez sur une page Web.  
+# <a name="adding-a-control-atl-tutorial-part-2"></a>Ajout d'un contrôle (Didacticiel ATL, Partie 2)
+Dans cette étape, vous ajoutez un contrôle à votre projet, générez-le et tester sur une page Web.  
   
-## Procédures  
+## <a name="procedures"></a>Procédures  
   
-#### Pour ajouter un objet à un projet ATL  
+#### <a name="to-add-an-object-to-an-atl-project"></a>Pour ajouter un objet à un projet ATL  
   
-1.  Dans l'Affichage de classes, cliquez avec le bouton droit sur le projet Polygon.  
+1.  Dans Affichage de classes, cliquez sur le projet de polygone.  
   
-2.  Pointez sur **Ajouter** dans le menu contextuel, puis cliquez sur **Classe** dans le sous\-menu.  
+2.  Pointez sur **ajouter** dans le menu contextuel, cliquez sur **classe** dans le sous-menu.  
   
-     La boîte de dialogue **Ajouter une classe** s'affiche.  Les différentes catégories d'objet sont répertoriées dans l'arborescence à gauche.  
+     Le **ajouter une classe** boîte de dialogue s’affiche. Les différentes catégories d’objet sont répertoriées dans l’arborescence à gauche.  
   
-3.  Choisissez le dossier **ATL**.  
+3.  Cliquez sur le **ATL** dossier.  
   
-4.  Dans la liste des modèles à droite, sélectionnez **Contrôle ATL**.  Cliquez sur **Ajouter**.  L'Assistant Contrôle ATL s'ouvre, et vous pouvez configurer le contrôle.  
+4.  Dans la liste des modèles à droite, sélectionnez **contrôle ATL**. Cliquez sur **Ajouter**. L’Assistant contrôle ATL s’ouvre et vous pouvez configurer le contrôle.  
   
-5.  Tapez `PolyCtl` comme nom court et notez que les autres champs sont automatiquement remplis.  Ne cliquez pas encore sur **Terminer** car vous devez apporter des modifications.  
+5.  Type `PolyCtl` comme nom court et notez que les autres champs sont complétés automatiquement. Ne cliquez pas sur **Terminer** encore, car vous devez apporter des modifications.  
   
- La page **Noms** de l'Assistant Contrôle ATL contient les champs suivants :  
+ L’Assistant contrôle ATL **noms** page contient les champs suivants :  
   
 |Champ|Sommaire|  
 |-----------|--------------|  
-|**Nom court**|Le nom spécifié pour le contrôle.|  
-|**Classe**|Nom de la classe C\+\+ créé pour implémenter le contrôle.|  
-|**fichier .h**|Fichier créé pour contenir la définition de la classe C\+\+.|  
-|**fichier .cpp**|Fichier créé pour contenir l'implémentation de la classe C\+\+.|  
-|**CoClasse**|Le nom de la classe de composant pour ce contrôle.|  
-|**Interface**|Le nom de l'interface sur laquelle le contrôle implémente ses méthodes et ses propriétés personnalisées.|  
-|**Type**|Description du contrôle.|  
-|**ProgID**|Le nom lisible qui peut être utilisé pour rechercher le CLSID du contrôle.|  
+|**Nom court**|Le nom que vous avez entré pour le contrôle.|  
+|**Classe**|Le nom de classe C++ créé pour implémenter le contrôle.|  
+|**fichier .h**|Le fichier est créé pour contenir la définition de la classe C++.|  
+|**fichier .cpp**|Le fichier est créé pour contenir l’implémentation de la classe C++.|  
+|**Coclasse**|Le nom de la classe de composant pour ce contrôle.|  
+|**Interface**|Le nom de l’interface sur laquelle le contrôle implémentera ses méthodes et propriétés personnalisées.|  
+|**Type**|Description pour le contrôle.|  
+|**ProgID**|Nom lisible qui peut être utilisé pour rechercher le CLSID du contrôle.|  
   
- Vous devez effectuer plusieurs paramètres supplémentaires dans l'Assistant Contrôle ATL.  
+ Vous avez à faire de plusieurs paramètres supplémentaires dans l’Assistant contrôle ATL.  
   
-#### Pour activer la prise en charge des informations sur l'erreur et les points de connexion riches  
+#### <a name="to-enable-support-for-rich-error-information-and-connection-points"></a>Pour activer la prise en charge pour les connexions et les informations d’erreur complètes des points  
   
-1.  Cliquez sur **Options** pour ouvrir la page **Options**.  
+1.  Cliquez sur **Options** pour ouvrir le **Options** page.  
   
-2.  Activez la case à cocher **Points de connexion**.  Cela créera la prise en charge d'une interface sortante dans le fichier IDL.  
+2.  Sélectionnez le **points de connexion** case à cocher. Cela crée la prise en charge pour une interface sortante dans le fichier IDL.  
   
- Vous pouvez également rendre le contrôle insérable, ce qui signifie qu'il peut être intégré aux applications prenant en charge les objets incorporés, tels qu'Excel ou Word.  
+ Vous pouvez également rendre le contrôle pouvant être inséré, ce qui signifie qu’il peut être incorporé dans des applications qui prennent en charge les objets incorporés, tels qu’Excel ou Word.  
   
-#### Pour rendre le contrôle insérable  
+#### <a name="to-make-the-control-insertable"></a>Pour rendre le contrôle à insérer  
   
-1.  Cliquez sur **Apparence** pour ouvrir la page **Apparence**.  
+1.  Cliquez sur **apparence** pour ouvrir le **apparence** page.  
   
-2.  Activez la case à cocher **Insérable**.  
+2.  Sélectionnez le **Insertable** case à cocher.  
   
- Le polygone affiché par l'objet aura une couleur de remplissage unie, vous devez alors ajouter une propriété stock `Fill Color`.  
+ Le polygone affiché par l’objet aura une couleur de remplissage unie, donc vous devez ajouter un `Fill Color` propriété stock.  
   
-#### Pour ajouter une propriété stock de couleur de remplissage et créer un contrôle  
+#### <a name="to-add-a-fill-color-stock-property-and-create-the-control"></a>Pour ajouter une propriété stock couleur de remplissage et de créer le contrôle  
   
-1.  Cliquez sur **Propriétés stock** pour ouvrir la page **Propriétés stock**.  
+1.  Cliquez sur **Propriétés Stock** pour ouvrir le **Propriétés Stock** page.  
   
-2.  Sous **Non pris en charge**, faites défiler la liste de propriétés stock possibles.  Double\-cliquez sur `Fill Color` pour le placer dans la liste **Pris en charge**.  
+2.  Sous **ne pas pris en charge**, faites défiler vers le bas la liste des propriétés stock possibles. Double-cliquez sur `Fill Color` pour le déplacer vers le **pris en charge** liste.  
   
-3.  Cela termine les options pour le contrôle.  Cliquez sur **Terminer**.  
+3.  Les options pour le contrôle est terminée. Cliquez sur **Terminer**.  
   
- Lorsque l'Assistant a créé le contrôle, plusieurs modifications de code et ajouts de fichiers se sont produits.  Les fichiers suivants ont été créés :  
+ Comme l’Assistant a créé le contrôle, plusieurs modifications de code et les ajouts de fichiers s’est produite. Les fichiers suivants ont été créés :  
   
 |Fichier|Description|  
-|-------------|-----------------|  
-|PolyCtl.h|Contient la majeure partie de l'implémentation du `CPolyCtl` de la classe C\+\+.|  
-|PolyCtl.cpp|Contient les parties restantes de `CPolyCtl`.|  
-|PolyCtl.rgs|Fichier de texte qui contient le script de registre utilisé pour enregistrer le contrôle.|  
-|PolyCtl.htm|Page Web contenant une référence au contrôle nouvellement créé.|  
+|----------|-----------------|  
+|PolyCtl.h|Contient la plupart de l’implémentation de la classe C++ `CPolyCtl`.|  
+|PolyCtl.cpp|Contient les parties restantes du `CPolyCtl`.|  
+|PolyCtl.rgs|Un fichier texte qui contient le script de Registre utilisé pour inscrire le contrôle.|  
+|PolyCtl.htm|Une page Web contenant une référence au contrôle nouvellement créé.|  
   
- L'Assistant a également exécuté les modifications du code suivantes :  
+ L’Assistant a effectuées également les modifications de code suivantes :  
   
--   Ajout d'une instruction `#include` aux fichiers stdafx.h et stdafx.cpp pour inclure les fichiers ATL nécessaires à la prise en charge des contrôles.  
+-   Ajouter un `#include` instruction aux fichiers stdafx.h et stdafx.cpp pour inclure la bibliothèque ATL fichiers nécessaire pour prendre en charge des contrôles.  
   
--   Polygon.idl modifié pour inclure les détails du nouveau contrôle.  
+-   Fichier Polygon.idl pour inclure les détails du nouveau contrôle.  
   
--   Ajout d'un nouveau contrôle au mappage d'objets dans Polygon.cpp.  
+-   Ajouté le nouveau contrôle au mappage d’objets dans Polygon.cpp.  
   
  Vous pouvez maintenant générer le contrôle pour le voir en action.  
   
-## Génération et test du contrôle  
+## <a name="building-and-testing-the-control"></a>Génération et test du contrôle  
   
-#### Pour générer et tester le contrôle  
+#### <a name="to-build-and-test-the-control"></a>Pour générer et tester le contrôle  
   
-1.  Dans le menu **Générer**, cliquez sur **Générer le polygone**.  
+1.  Sur le **générer** menu, cliquez sur **générer Polygon**.  
   
-     Une fois que le contrôle a terminé la génération, cliquez avec le bouton droit sur PolyCtl.htm dans l'**Explorateur de solutions** et sélectionnez **Afficher dans le navigateur**.  La page Web HTML contenant le contrôle sera affichée.  Vous devez voir la page portant le titre « Page de test ATL 8.0 pour l'objet PolyCtl » et le texte **PolyCtl**.  Il s'agit de votre contrôle.  
+     Une fois que le contrôle a terminé la construction, avec le bouton droit PolyCtl.htm dans **l’Explorateur de solutions** et sélectionnez **afficher dans le navigateur**. La page HTML Web contenant le contrôle s’affichera. Vous devez voir une page avec le titre « ATL 8.0 page de test pour l’objet PolyCtl » et le texte **PolyCtl**. Il s’agit de votre contrôle.  
   
 > [!NOTE]
->  En effectuant ce didacticiel, si vous recevez un message d'erreur où le fichier DLL ne peut pas être créé, fermez le fichier PolyCtl.htm et l'ActiveX Control Test Container, puis générez à nouveau la solution.  Si vous ne parvenez toujours pas à créer la DLL, redémarrez l'ordinateur ou fermez la session \(si vous utilisez les services Terminal Server\).  
+>  Lorsque vous aurez terminé ce didacticiel, si vous recevez un message d’erreur dans lequel le fichier DLL ne peut pas être créé, fermez le fichier PolyCtl.htm et le conteneur de Test du contrôle ActiveX et régénérez la solution. Si vous ne pouvez toujours pas créer la DLL, redémarrez l’ordinateur, ou fermez la session (si vous utilisez des Services Terminal Server).  
   
- Vous ajouterez ensuite une propriété personnalisée au contrôle.  
+ Ensuite, vous allez ajouter une propriété personnalisée au contrôle.  
   
- [Revenir à l'étape 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [Dans l'étape 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
+ [À l’étape 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [à l’étape 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Didacticiel](../atl/active-template-library-atl-tutorial.md)
+

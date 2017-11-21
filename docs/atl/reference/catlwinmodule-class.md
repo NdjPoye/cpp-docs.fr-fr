@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,35 +13,18 @@ f1_keywords:
 - ATLBASE/ATL::CAtlWinModule::CAtlWinModule
 - ATLBASE/ATL::CAtlWinModule::AddCreateWndData
 - ATLBASE/ATL::CAtlWinModule::ExtractCreateWndData
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlWinModule class
+dev_langs: C++
+helpviewer_keywords: CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f2d5e28f39159b097c4e00e11518295b2872a84b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 59f555f129548b3ced008b61364fa4a9900e062d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="catlwinmodule-class"></a>Classe de CAtlWinModule
 Cette classe prend en charge pour les composants de fenêtrage ATL.  
@@ -75,7 +57,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 ## <a name="remarks"></a>Remarques  
  Cette classe prend en charge toutes les classes ATL qui nécessitent les fonctionnalités de fenêtrage.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)  
   
  `CAtlWinModule`  
@@ -117,7 +99,7 @@ CAtlWinModule();
 ~CAtlWinModule();
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Libère toutes les ressources attribuées.  
   
 ##  <a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData  
@@ -134,4 +116,3 @@ void* ExtractCreateWndData();
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
  [Module (Classes)](../../atl/atl-module-classes.md)
-

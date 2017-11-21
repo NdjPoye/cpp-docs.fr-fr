@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -78,33 +77,17 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_3::yxz
 - amp_short_vectors/Concurrency::graphics::uint_3::set_xzy
 - amp_short_vectors/Concurrency::graphics::uint_3::operator-=
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 5e22c277-9d4f-4a3a-b38c-a83d5fcab33c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 034478144d77abcc9dba8bf1a1909c4711f7119c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 12e2e25dd6a1ba2a31130196f04f336cecf6b34e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="uint3-class"></a>uint_3, classe
 Représente un vecteur court de trois entiers non signés.  
@@ -127,7 +110,7 @@ class uint_3;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[uint_3 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments à 0.|  
+|[uint_3 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -176,15 +159,15 @@ class uint_3;
 |----------|-----------------|  
 |uint_3::operator--||  
 |uint_3::operator % =||  
-|uint_3::operator < =||  
+|uint_3::operator & =||  
 |uint_3::operator * =||  
 |/ = uint_3::operator||  
 |uint_3::operator ^ =||  
-|uint_3::operator | =||  
+|uint_3::operator &#124; =||  
 |uint_3::operator ~||  
 |uint_3::operator ++||  
 |uint_3::operator +=||  
-|uint_3::operator\<=||  
+|uint_3::operator <\<=||  
 |uint_3::operator =||  
 |uint_3::operator =||  
 |uint_3::operator >> =||  
@@ -230,7 +213,7 @@ class uint_3;
 |uint_3::ZY||  
 |uint_3::ZYX||  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `uint_3`  
   
 ## <a name="requirements"></a>Spécifications  
@@ -240,7 +223,7 @@ class uint_3;
   
 ##  <a name="ctor"></a>uint_3 
 
- Par défaut constructeur initialise tous les éléments à 0.  
+ Par défaut constructeur initialise tous les éléments par 0.  
   
 ```  
 uint_3() restrict(amp,
@@ -300,7 +283,7 @@ explicit inline uint_3(
  La valeur pour initialiser l’élément 2.  
   
  `_V`  
- La valeur pour l’initialisation.  
+ La valeur de l’initialisation.  
   
  `_Other`  
  Objet utilisé pour initialiser.  
@@ -313,4 +296,3 @@ static const int size = 3;
   
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
-

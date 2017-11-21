@@ -1,68 +1,74 @@
 ---
-title: "_bittestandreset, _bittestandreset64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_bittestandreset64_cpp"
-  - "_bittestandreset"
-  - "_bittestandreset_cpp"
-  - "_bittestandreset64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_bittestandreset intrinsic"
-  - "_bittestandreset64 intrinsic"
-  - "btr instruction"
+title: _bittestandreset, _bittestandreset64 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _bittestandreset64_cpp
+- _bittestandreset
+- _bittestandreset_cpp
+- _bittestandreset64
+dev_langs: C++
+helpviewer_keywords:
+- btr instruction
+- _bittestandreset intrinsic
+- _bittestandreset64 intrinsic
 ms.assetid: 8dad63bb-a051-4cd7-a793-3357537dfeaf
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4756decd5f92e86dcbdf1a2366b5b88be8d6f013
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# _bittestandreset, _bittestandreset64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="bittestandreset-bittestandreset64"></a>_bittestandreset, _bittestandreset64
 **Section spécifique à Microsoft**  
   
  Générer l'instruction qui examine le bit `b` de l'adresse `a`, retourne sa valeur actuelle et réinitialise le bit à la valeur 0.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-unsigned char _bittestandreset(    long *a,    long b ); unsigned char _bittestandreset64(    __int64 *a,    __int64 b );  
+unsigned char _bittestandreset(  
+   long *a,  
+   long b  
+);  
+unsigned char _bittestandreset64(  
+   __int64 *a,  
+   __int64 b  
+);  
 ```  
   
-#### Paramètres  
- \[in, out\] `a`  
+#### <a name="parameters"></a>Paramètres  
+ [in, out] `a`  
  Pointeur vers la mémoire à examiner.  
   
- \[in\] `b`  
+ [in] `b`  
  Position du bit à tester.  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  Bit à la position spécifiée.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`_bittestandreset`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`_bittestandreset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
+## <a name="remarks"></a>Remarques  
  Cette routine est disponible uniquement en tant qu'intrinsèque.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // bittestandreset.cpp  
@@ -95,8 +101,11 @@ int main()
 }  
 ```  
   
-  **Le nombre était négatif.**   
-## FIN de la section spécifique à Microsoft  
+```Output  
+The number was negative.  
+```  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+**FIN de la section spécifique à Microsoft**  
+  
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

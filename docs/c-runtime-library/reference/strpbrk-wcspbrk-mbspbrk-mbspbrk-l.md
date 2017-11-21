@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -34,8 +33,7 @@ f1_keywords:
 - _tcspbrk
 - _ftcspbrk
 - wcspbrk
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - fstrpbrk function
 - _ftcspbrk function
@@ -53,30 +51,15 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 9eb1dfc77694c9c1b85aa21fe039058facb98c71
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: aef34a8cddfde1088c8535a1835b157146400faa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 Analyse des chaînes à la recherche de caractères présents dans les jeux de caractères spécifiés.  
@@ -162,7 +145,7 @@ const unsigned char *_mbspbrk_l(
   
  `_mbspbrk` est similaire à `_mbscspn`, sauf que `_mbspbrk` retourne un pointeur et non une valeur de type [size_t](../../c-runtime-library/standard-types.md).  
   
- En C, ces fonctions acceptent un pointeur `const` comme premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers `const` retourne un pointeur vers `const` ; la version qui accepte un pointeur vers non-`const` retourne un pointeur vers non-`const`. La macro _CONST_CORRECT_OVERLOADS est définie si les versions `const` et non-`const` de ces fonctions sont disponibles. Si vous avez besoin d'un comportement non-`const` pour les deux surcharges C++, définissez le symbol _CONST_RETURN.  
+ En C, ces fonctions acceptent un pointeur `const` comme premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers `const` retourne un pointeur vers `const` ; la version qui accepte un pointeur vers non-`const` retourne un pointeur vers non-`const`. La macro `_CRT_CONST_CORRECT_OVERLOADS` est défini si les deux le `const` et non-`const` versions de ces fonctions sont disponibles. Si vous avez besoin non -`const` comportement pour les deux surcharges C++, définissez le symbole `_CONST_RETURN`.  
   
  La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans suffixe `_l` utilisent les paramètres régionaux actifs pour ce comportement dépendant des paramètres régionaux ; la version avec suffixe `_l` est identique, sauf qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   

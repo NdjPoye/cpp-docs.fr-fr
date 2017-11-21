@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -48,32 +47,17 @@ helpviewer_keywords:
 - C2889
 - C2895
 - C2899
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 1f7f5329c9723b1c0fe44020807251fff04a4349
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: 9c825bba825db2bba28e29c0cf38bb845492509c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>Erreurs du compilateur C2800 à C2899
 Les articles de cette partie de la documentation contiennent des informations sur une sous-section des erreurs du compilateur Visual C++. Vous pouvez accéder aux informations ici, ou dans la fenêtre **Sortie** de Visual Studio, vous pouvez sélectionner un numéro d'erreur, puis appuyer sur F1.  
@@ -81,7 +65,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 > [!NOTE]
 >  Pas chaque [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erreur est documentée dans MSDN. Dans de nombreux cas, le message de diagnostic fournit toutes les informations qui est disponibles. Si vous pensez qu'un message d'erreur nécessite une explication supplémentaire, faites-nous part de vos suggestions. Vous pouvez utiliser le formulaire de commentaires sur cette page, ou accédez à la barre de menus dans Visual Studio et choisissez **aide**, **signaler un bogue**, ou vous pouvez envoyer un rapport de suggestion ou un bogue sur [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
- Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) forum est de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ général](http://go.microsoft.com/fwlink/?LinkId=158194) est de forum de questions sur [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).  
+ Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) est de forum de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ général](http://go.microsoft.com/fwlink/?LinkId=158194) est de forum de questions sur [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).  
   
 |Erreur|Message|  
 |-----------|-------------|  
@@ -97,25 +81,25 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2809](compiler-error-c2809.md)|' opérateur *opérateur*' n’a aucun paramètre formel|  
 |[Erreur du compilateur C2810](compiler-error-c2810.md)|'*interface*' : une interface ne peut hériter que d’une autre interface|  
 |[Erreur du compilateur C2811](compiler-error-c2811.md)|'*type1*' : ne peut pas hériter de '*type2*', une classe ref peut uniquement hériter d’une classe ref ou classe interface|  
-|[Erreur du compilateur C2812](compiler-error-c2812.md)|#importation n’est pas prise en charge avec/clr : pure et/CLR : safe|  
-|[Erreur du compilateur C2813](compiler-error-c2813.md)|#importation n’est pas prise en charge avec /MP|  
+|[Erreur du compilateur C2812](compiler-error-c2812.md)|#import n’est pas pris en charge avec/clr : pure et/CLR : safe|  
+|[Erreur du compilateur C2813](compiler-error-c2813.md)|#import n'est pas pris en charge avec /MP|  
 |[Erreur du compilateur C2814](compiler-error-c2814.md)|'*membre*' : un type natif ne peut pas être imbriqué dans un type managé/WinRT '*classe*'|  
 |[Erreur du compilateur C2815](compiler-error-c2815.md)|'operator delete' : le premier paramètre formel doit être ' void *', mais '*type *' a été utilisé|  
 |C2816 d’erreur du compilateur|Obsolète.|  
-|[Erreur du compilateur C2817](compiler-error-c2817.md)|le type de retour de 'operator delete' doit être 'void'|  
+|[Erreur du compilateur C2817](compiler-error-c2817.md)|type de retour de 'operator delete' doit être 'void'|  
 |[Erreur du compilateur C2818](compiler-error-c2818.md)|application de surchargé 'operator ->' est récurrente à travers le type '*classe*'|  
 |[Erreur du compilateur C2819](compiler-error-c2819.md)|type '*classe*' n’a pas d’un membre surchargé 'opérateur de' ->|  
 |C2820 d’erreur du compilateur|Obsolète.|  
-|[Erreur du compilateur C2821](compiler-error-c2821.md)|le premier paramètre formel de 'operator new' doit être 'size_t'|  
-|C2822 d’erreur du compilateur|le déroulement local n'est pas pris en charge sur cette plateforme|  
+|[Erreur du compilateur C2821](compiler-error-c2821.md)|premier paramètre formel de 'operator new' doit être 'size_t'|  
+|C2822 d’erreur du compilateur|déroulement local n’est pas pris en charge sur cette plateforme|  
 |[Erreur du compilateur C2823](compiler-error-c2823.md)|un modèle/générique de typedef est non conforme|  
-|[Erreur du compilateur C2824](compiler-error-c2824.md)|le type de retour de 'operator new' doit être 'void *'|  
+|[Erreur du compilateur C2824](compiler-error-c2824.md)|type de retour de 'operator new' doit être ' void *'|  
 |[Erreur du compilateur C2825](compiler-error-c2825.md)|'*identificateur*' : doit être une classe ou un espace de noms lorsqu’il est suivi par ' ::'|  
 |Erreur du compilateur C2826|Obsolète.|  
 |[Erreur du compilateur C2827](compiler-error-c2827.md)|' opérateur *opérateur*' ne peut pas être globalement substitué par une forme unaire|  
 |[Erreur du compilateur C2828](compiler-error-c2828.md)|' opérateur *opérateur*' ne peut pas être globalement substitué par une forme binaire|  
 |[Erreur du compilateur C2829](compiler-error-c2829.md)|' opérateur *opérateur*' ne peut pas avoir une liste de paramètres de variables|  
-|[Erreur du compilateur C2830](compiler-error-c2830.md)|seuls les paramètres de positionnement de 'operator new' peuvent avoir des valeurs par défaut|  
+|[Erreur du compilateur C2830](compiler-error-c2830.md)|Seuls les paramètres de positionnement de 'operator new' peuvent avoir des valeurs par défaut|  
 |[Erreur du compilateur C2831](compiler-error-c2831.md)|' opérateur *opérateur*' ne peut pas avoir de paramètres par défaut|  
 |C2832 d’erreur du compilateur|'*identificateur*' : un type référence ne peut pas être initialisé par une valeur|  
 |[Erreur du compilateur C2833](compiler-error-c2833.md)|' opérateur *jeton*' n’est pas un opérateur ou type reconnu|  
@@ -125,8 +109,8 @@ Les articles de cette partie de la documentation contiennent des informations su
 |Erreur du compilateur C2837|'*fonction*' : Impossible d’utiliser des directives OpenMP et #pragma Loop (hint_parallel) système dans la même fonction|  
 |[Erreur du compilateur C2838](compiler-error-c2838.md)|'*identificateur*' : nom qualifié non conforme dans une déclaration de membre|  
 |[Erreur du compilateur C2839](compiler-error-c2839.md)|type de retour non valide '*type*' pour surchargé 'operator ->'|  
-|Erreur du compilateur C2840|l'argument de type word de l'instruction n'est pas une constante|  
-|C2841 d’erreur du compilateur|l'argument du registre n'est pas une constante|  
+|Erreur du compilateur C2840|argument word de l’instruction est pas une constante|  
+|C2841 d’erreur du compilateur|l’argument est pas une constante du Registre|  
 |[Erreur du compilateur C2842](compiler-error-c2842.md)|'*classe*' : un type managé/WinRT ne peut pas définir son propre 'operator new' ou 'operator delete'|  
 |[Erreur du compilateur C2843](compiler-error-c2843.md)|'*membre*' : ne peut pas prendre l’adresse d’un membre de données non statique ou méthode d’un type managé/WinRT|  
 |[Erreur du compilateur C2844](compiler-error-c2844.md)|'*identificateur*' : ne peut pas être un membre d’interface '*interface*'|  
@@ -139,13 +123,13 @@ Les articles de cette partie de la documentation contiennent des informations su
 |C2851 d’erreur du compilateur|'*enum*' : un enum WinRT public peut uniquement utiliser 'int' ou 'unsigned int' comme type de base|  
 |C2852 d’erreur du compilateur|'*identificateur*' : seuls les membres de données peuvent être initialisées dans une classe|  
 |C2853 d’erreur du compilateur|'*identificateur*' : un membre de données non statique ne peut pas avoir un type contenant 'auto'|  
-|[Erreur du compilateur C2854](compiler-error-c2854.md)|erreur de syntaxe dans #pragma hdrstop|  
+|[Erreur du compilateur C2854](compiler-error-c2854.md)|Erreur de syntaxe dans #pragma hdrstop|  
 |[Erreur du compilateur C2855](compiler-error-c2855.md)|option de ligne de commande '*option*' cohérente avec l’en-tête précompilé|  
 |[Erreur du compilateur C2856](compiler-error-c2856.md)|#pragma hdrstop ne peut pas être à l’intérieur d’un bloc #if|  
 |[Erreur du compilateur C2857](compiler-error-c2857.md)|' #include ' instruction spécifiée avec /Yc*nom de fichier* option de ligne de commande est introuvable dans le fichier source|  
 |[Erreur du compilateur C2858](compiler-error-c2858.md)|option de ligne de commande ' /Yc (/Fd*nom de fichier*)' incompatible avec l’en-tête précompilé, qui utilisait ' /Fd*nom de fichier*'|  
 |[Erreur du compilateur C2859](compiler-error-c2859.md)|*nom de fichier* n’est pas le *filetype* fichier qui a été utilisé lors de la création de cet en-tête précompilé, recréez l’en-tête précompilé.|  
-|[Erreur du compilateur C2860](compiler-error-c2860.md)|'void' ne peut pas être un type d'argument, sauf dans '(void)'|  
+|[Erreur du compilateur C2860](compiler-error-c2860.md)|'void' ne peut pas être un type d’argument, à l’exception de '(void)'|  
 |[Erreur du compilateur C2861](compiler-error-c2861.md)|'*déclaration*' : une fonction membre d’interface ne peut pas être définie.|  
 |[Erreur du compilateur C2862](compiler-error-c2862.md)|'*interface*' : une interface ne peut avoir que des membres publics|  
 |[Erreur du compilateur C2863](compiler-error-c2863.md)|'*interface*' : une interface ne peut pas avoir de fonctions friend|  
@@ -177,12 +161,11 @@ Les articles de cette partie de la documentation contiennent des informations su
 |C2889 d’erreur du compilateur|'*classe*' : un type de classe de managed/WinRT ne peut pas être une classe de base virtuelle|  
 |[Erreur du compilateur C2890](compiler-error-c2890.md)|'*classe*' : une classe ref peut avoir uniquement une classe de base sans interface|  
 |[Erreur du compilateur C2891](compiler-error-c2891.md)|'*paramètre*' : ne peut pas prendre l’adresse d’un paramètre de modèle|  
-|[Erreur du compilateur C2892](compiler-error-c2892.md)|la classe locale ne doit pas avoir de modèles membres|  
+|[Erreur du compilateur C2892](compiler-error-c2892.md)|classe locale ne doit pas avoir de modèles membres|  
 |[Erreur du compilateur C2893](compiler-error-c2893.md)|La spécialisation du modèle de fonction '*modèle*'|  
-|[Erreur du compilateur C2894](compiler-error-c2894.md)|les modèles ne peuvent pas être déclarés comme ayant une liaison 'C'|  
+|[Erreur du compilateur C2894](compiler-error-c2894.md)|les modèles ne peut pas être déclarés pour que la liaison 'C'|  
 |C2895 d’erreur du compilateur|'*déclaration*' : Impossible d’instancier explicitement un modèle de fonction qui a été déclaré avec dllimport|  
 |[Erreur du compilateur C2896](compiler-error-c2896.md)|'*fonction1*' : ne peut pas utiliser de fonction de modèle/générique '*fonction2*' comme argument de fonction|  
 |[Erreur du compilateur C2897](compiler-error-c2897.md)|un destructeur/finaliseur ne peut pas être un modèle de fonction|  
 |[Erreur du compilateur C2898](compiler-error-c2898.md)|'*déclaration*' : les modèles de fonction membre ne peut pas être virtuels|  
 |Erreur du compilateur C2899|Obsolète.|  
-

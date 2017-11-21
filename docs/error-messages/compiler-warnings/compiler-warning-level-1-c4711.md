@@ -1,35 +1,33 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4711 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4711"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4711"
+title: Compilateur avertissement (niveau 1) C4711 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4711
+dev_langs: C++
+helpviewer_keywords: C4711
 ms.assetid: 270506ab-fead-4328-b714-2978113be238
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0747f4345b36dc1b8e9f0dda97f6981b243405df
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 1) C4711
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4711"></a>Avertissement du compilateur (niveau 1) C4711
 fonction 'fonction' sélectionnée pour expansion inline  
   
- Le compilateur applique la fonctionnalité inline à la fonction donnée, bien que celle\-ci n'a pas été marquée pour inline.  
+ Le compilateur applique la fonctionnalité inline sur la fonction donnée, bien qu’il n’a pas été marqué pour incorporation (inlining).  
   
- C4711 est activé si [\/Ob2](../../build/reference/ob-inline-function-expansion.md) est spécifié.  
+ C4711 est activé si [/Ob2](../../build/reference/ob-inline-function-expansion.md) est spécifié.  
   
- La fonctionnalité inline est appliquée à la discrétion du compilateur.  Cet avertissement est informatif.  
+ La fonctionnalité inline est effectuée à la discrétion du compilateur. Cet avertissement possède un caractère informatif.  
   
- Cet avertissement est désactivé par défaut.  Pour activer un avertissement, utilisez [\#pragma warning](../../preprocessor/warning.md).  Pour plus d'informations, consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+ Cet avertissement est désactivé par défaut. Pour activer un avertissement, utilisez [#pragma warning](../../preprocessor/warning.md). Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.

@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - templates, instantiation
 - explicit instantiation
 - instantiation, explicit
 ms.assetid: 8b0d4e32-45a6-49d5-8041-1ebdd674410e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: ecd8f8c893abab10699a0bd43f368356335c6e10
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: acfaf9b36cfde4399815571807a6a82903dc980e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="explicit-instantiation"></a>instanciation explicite
 Vous pouvez utiliser l’instanciation explicite pour créer une instanciation d’une classe basée sur un modèle ou une fonction sans réellement l’utiliser dans votre code. Étant donné que cela est utile lorsque vous créez bibliothèque (.lib) les fichiers qui utilisent des modèles pour la distribution, les définitions de modèle non instancié ne sont pas placées dans des fichiers objets (.obj).  

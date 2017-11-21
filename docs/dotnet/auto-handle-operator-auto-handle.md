@@ -1,46 +1,45 @@
 ---
-title: "auto_handle::operator auto_handle | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.auto_handle.operator auto_handle"
-  - "operator auto_handle"
-  - "msclr::auto_handle::operator auto_handle"
-  - "auto_handle.operator auto_handle"
-  - "auto_handle::operator auto_handle"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "opérateur auto_handle"
+title: auto_handle::operator auto_handle | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.auto_handle.operator auto_handle
+- operator auto_handle
+- msclr::auto_handle::operator auto_handle
+- auto_handle.operator auto_handle
+- auto_handle::operator auto_handle
+dev_langs: C++
+helpviewer_keywords: operator auto_handle
 ms.assetid: 2f8b35d1-2783-4d91-b6fb-eae551270fb8
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3577cb74ef151953ae12d0524c539e247af02bbd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::operator auto_handle
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Opérateur de conversion de type entre `auto_handle` et les types compatibles.  
+# <a name="autohandleoperator-autohandle"></a>auto_handle::operator auto_handle
+Opérateur de cast de type entre `auto_handle` et types compatibles.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename _other_type>  
 operator auto_handle<_other_type>();  
 ```  
   
-## Valeur de retour  
- Le `auto_handle` actuel converti en `auto_handle<_other_type>`.  
+## <a name="return-value"></a>Valeur de retour  
+ En cours `auto_handle` castée en `auto_handle<_other_type>`.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // msl_auto_handle_op_auto_handle.cpp  
@@ -77,12 +76,15 @@ int main() {
 }  
 ```  
   
-  **Bonjour du premier B\!**  
-**Bonjour du premier A\!**   
-## Configuration requise  
- **Fichier d'en\-tête** \<msclr\\auto\_handle.h\>  
+```Output  
+Hello from first B!  
+Hello from first A!  
+```  
   
- **Espace de noms** msclr  
+## <a name="requirements"></a>Spécifications  
+ **Fichier d’en-tête** \<msclr\auto_handle.h >  
   
-## Voir aussi  
- [auto\_handle, membres](../dotnet/auto-handle-members.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Voir aussi  
+ [auto_handle, membres](../dotnet/auto-handle-members.md)

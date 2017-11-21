@@ -1,32 +1,32 @@
 ---
-title: "R&#233;cup&#233;ration d&#39;un BLOB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "objets binaires volumineux (BLOB), récupérer"
-  - "OLE DB, objets binaires volumineux (BLOB)"
-  - "récupérer des BLOB"
+title: "Récupération d’un BLOB | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- retrieving BLOBs
+- BLOB (binary large object), retrieving
+- OLE DB, BLOBs (binary large objects)
 ms.assetid: 2893eb0a-5c05-4016-8914-1e40ccbaf0b3
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ac10d34fbb5e0cc6320d6c7f8ff1a52efc36f1b0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# R&#233;cup&#233;ration d&#39;un BLOB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Vous pouvez récupérer un objet de type BLOB \(Binary Large Object\) de diverses manières.  Vous pouvez utiliser **DBTYPE\_BYTES** pour récupérer le BLOB en tant que séquence d'octets, ou recourir à une interface de type `ISequentialStream`.  Pour plus d'informations, consultez [BLOBS et objets OLE](https://msdn.microsoft.com/en-us/library/ms711511.aspx) dans le Guide de référence du programmeur *OLE DB*.  
+# <a name="retrieving-a-blob"></a>Récupération d'un BLOB
+Vous pouvez récupérer un objet binaire volumineux (BLOB) de différentes manières. Vous pouvez utiliser **DBTYPE_BYTES** pour récupérer l’objet BLOB sous la forme d’une séquence d’octets ou utiliser une interface de type `ISequentialStream`. Pour plus d’informations, consultez [BLOB et les objets OLE](https://msdn.microsoft.com/en-us/library/ms711511.aspx) dans les *de référence du programmeur OLE DB*.  
   
- Le code suivant montre comment récupérer un BLOB en utilisant `ISequentialStream`.  La macro [BLOB\_ENTRY](../../data/oledb/blob-entry.md) vous permet de spécifier l'interface et les indicateurs utilisés pour l'interface.  Après avoir ouvert la table, le code appelle **Read** à maintes reprises sur `ISequentialStream` pour lire les octets à partir du BLOB.  Le code appelle **Release** pour supprimer le pointeur de l'interface avant d'appeler `MoveNext` pour obtenir l'enregistrement suivant.  
+ Le code suivant montre comment récupérer un objet BLOB à l’aide de `ISequentialStream`. La macro [BLOB_ENTRY](../../data/oledb/blob-entry.md) vous permet de spécifier l’interface et les indicateurs utilisés pour l’interface. Après l’ouverture de la table, le code appelle **en lecture** à maintes reprises sur `ISequentialStream` pour lire les octets à partir de l’objet BLOB. Le code appelle **version** pour supprimer le pointeur d’interface avant d’appeler `MoveNext` pour obtenir l’enregistrement suivant.  
   
 ```  
 class CCategories  
@@ -55,8 +55,8 @@ while (categories.MoveNext() == S_OK)
 }  
 ```  
   
- Pour plus d'informations sur les macros qui gèrent les données BLOB, consultez « Macros de table de colonnes » dans [Macros et fonctions globales pour les modèles du consommateur OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
+ Pour plus d’informations sur les macros qui gèrent les données BLOB, consultez « Macros de mappage de colonnes » dans [Macros et fonctions globales pour les modèles du consommateur OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   
-## Voir aussi  
- [Utilisation des accesseurs](../../data/oledb/using-accessors.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation d’accesseurs](../../data/oledb/using-accessors.md)   
  [Macros et fonctions globales pour les modèles du consommateur OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)

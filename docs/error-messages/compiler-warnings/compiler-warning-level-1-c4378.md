@@ -1,36 +1,33 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4378 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4378"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4378"
+title: Compilateur avertissement (niveau 1) C4378 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4378
+dev_langs: C++
+helpviewer_keywords: C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c3ed33157c73c48b4d00b85e37f36a110ab3f721
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 1) C4378
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les pointeurs fonction sont indispensables à l'exécution des initialiseurs ; utilisez System::ModuleHandle::ResolveMethodHandle à la place  
+# <a name="compiler-warning-level-1-c4378"></a>Avertissement du compilateur (niveau 1) C4378
+Les pointeurs de fonction pour l’exécution des initialiseurs ; envisagez de System::ModuleHandle::ResolveMethodHandle  
   
- Sous **\/clr**, les symboles d'initialiseurs contiennent des jetons de fonction, et non des pointeurs fonction.  Vous devez convertir les jetons en pointeurs à l'aide de <xref:System.ModuleHandle.ResolveMethodHandle%2A>.  
+ Sous **/CLR**, symboles d’initialiseurs contiennent des jetons de fonction, pas les pointeurs de fonctions.  Vous devez convertir les jetons en pointeurs à l’aide de <xref:System.ModuleHandle.ResolveMethodHandle%2A>.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C4378 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C4378.  
   
 ```  
 // C4378.cpp  
@@ -72,8 +69,8 @@ int main () {
 }  
 ```  
   
-## Exemple  
- L'exemple suivant montre comment remédier à l'erreur C4378.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant montre comment résoudre C4378.  
   
 ```  
 // C4378_b.cpp  

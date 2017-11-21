@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,8 +18,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DResource::ReCreate
 - AFXRENDERTARGET/CD2DResource::m_bIsAutoDestroy
 - AFXRENDERTARGET/CD2DResource::m_pParentTarget
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DResource [MFC], CD2DResource
 - CD2DResource [MFC], Create
@@ -31,16 +29,15 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 9f178d16878955ba46670169c46ee5ca9edcde30
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: b292bf680a146d730554c56c60df9a649b670ba3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cd2dresource-class"></a>CD2DResource, classe
 Une classe abstraite qui fournit une interface pour la création et la gestion des ressources D2D telles que des pinceaux, des couches et des textes.  
@@ -184,4 +181,3 @@ virtual HRESULT ReCreate(CRenderTarget* pRenderTarget);
   
 ## <a name="see-also"></a>Voir aussi  
  [Classes](../../mfc/reference/mfc-classes.md)
-

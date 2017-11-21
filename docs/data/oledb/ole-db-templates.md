@@ -1,71 +1,69 @@
 ---
-title: "mod&#232;les OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.templates.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modèles OLE DB"
+title: "Modèles OLE DB | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.templates.ole
+dev_langs: C++
+helpviewer_keywords: OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2f584b28d24d941a4ad03a31582c661bafa09cc8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# mod&#232;les OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les modèles OLE DB facilitent l'accès aux données OLE DB.  Visual C\+\+ fournit les classes du modèle qui implémentent plusieurs des interfaces OLE DB utilisées communément.  Vous pouvez utiliser les modèles du consommateur Visual C\+\+ pour écrire l'application cliente OLE DB \(consommateur\) et les modèles du fournisseur afin d'écrire une application de serveur \(fournisseur\).  
+# <a name="ole-db-templates"></a>modèles OLE DB
+Les modèles OLE DB facilitent l’accès aux données OLE DB. Visual C++ fournit des classes de modèles qui implémentent de nombreuses interfaces OLE DB courantes. Vous pouvez utiliser les modèles de consommateur Visual C++ pour écrire une application de client (consommateur) OLE DB et les modèles du fournisseur pour écrire une application serveur (fournisseur).  
   
-## Dans cette section  
- [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)  
- Fournit des liens vers les classes du modèle de consommateur OLE DB répertoriées par l'utilisation.  
+## <a name="in-this-section"></a>Dans cette section  
+ [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)  
+ Fournit des liens vers les classes de modèles du consommateur OLE DB répertoriés par utilisation.  
   
- [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)  
- Fournit des liens vers les classes du modèle fournisseur OLE DB répertoriées par l'utilisation.  
+ [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)  
+ Fournit des liens vers les classes de modèles du fournisseur OLE DB répertoriés par utilisation.  
   
-## Rubriques connexes  
- [Vue d'ensemble de la programmation OLE DB](../../data/oledb/ole-db-programming-overview.md)  
- Explique ce qu'est et OLE DB présente l'accès universel dans OLE DB.  
+## <a name="related-sections"></a>Rubriques connexes  
+ [Vue d’ensemble de la programmation OLE DB](../../data/oledb/ole-db-programming-overview.md)  
+ Décrit les nouveautés de OLE DB et traite Universal Data Access dans OLE DB.  
   
- [Guide de référence du programmeur OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx)  
- Fournit des liens vers la documentation de [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] sur OLE DB.  
+ [Référence du programmeur OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx)  
+ Fournit des liens vers la documentation du Kit de développement OLE DB.  
   
- [Exemples de modèles OLE DB](../../top/visual-cpp-samples.md)  
- Fournit des liens vers des exemples de modèles OLE DB qui montrent comment utiliser OLE DB dans vos projets.  
+ [Exemples de modèles OLE DB](../../visual-cpp-samples.md)  
+ Fournit des liens vers les exemples de modèles OLE DB qui montrent comment utiliser OLE DB dans vos projets.  
   
- [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)  
- Décrit le matériel conceptuel sur les modèles consommateur OLE DB.  
+ [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)  
+ Présente des informations conceptuelles sur les modèles du consommateur OLE DB.  
   
- [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)  
- Décrit le matériel conceptuel sur les modèles fournisseur OLE DB.  
+ [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)  
+ Présente des informations conceptuelles sur les modèles du fournisseur OLE DB.  
   
- [Création d'un consommateur OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)  
- Décrit la création d'un consommateur de modèles OLE DB avec ou sans Assistant Consommateur OLE DB ATL.  
+ [Création d’un consommateur OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)  
+ Décrit la création d’un consommateur des modèles OLE DB avec ou sans l’Assistant Consommateur OLE DB ATL.  
   
- [Création d'un fournisseur simple accessible en lecture seule](../../data/oledb/creating-a-simple-read-only-provider.md)  
- Décrit la création d'un fournisseur simple en lecture seule qui lit une paire de chaînes.  
+ [Création d’un fournisseur simple accessible en lecture seule](../../data/oledb/creating-a-simple-read-only-provider.md)  
+ Décrit la création d’un fournisseur simple en lecture seule qui lit une paire de chaînes.  
   
- [Création d'un fournisseur actualisable](../../data/oledb/creating-an-updatable-provider.md)  
- Décrit la création de fournisseurs qui peuvent écrire dans la banque de données.  
+ [Création d’un fournisseur actualisable](../../data/oledb/creating-an-updatable-provider.md)  
+ Décrit les fournisseurs de création qui peuvent écrire dans le magasin de données.  
   
  [Attributs du consommateur OLE DB](../../windows/ole-db-consumer-attributes.md)  
- Décrit une interface simplifiée pour injecter du code basé sur les modèles consommateur OLE DB pour créer des consommateurs OLE DB qui fonctionnent.  
+ Présente une interface simplifiée pour injecter du code basé sur les modèles du consommateur OLE DB pour créer des consommateurs OLE DB de travail.  
   
- [Référence ATL \(Active Template Library\)](../../atl/atl-com-desktop-components.md)  
- Fournit les documents de référence pour l'ATL Library, un jeu de classes C\+\+ basées sur modèle qui simplifient la programmation d'objets COM.  
+ [Référence Active Template Library (ATL)](../../atl/atl-com-desktop-components.md)  
+ Fournit les documents de référence pour l'ATL Library, un jeu de classes C++ basées sur modèle qui simplifient la programmation d'objets COM.  
   
- [Bibliothèques Visual C\+\+](http://msdn.microsoft.com/fr-fr/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- Fournit des liens vers les différentes bibliothèques fournies avec Visual C\+\+, notamment la bibliothèque ATL, MFC, les modèles OLE DB, la bibliothèque Runtime C et la bibliothèque C\+\+ standard.  
+ [Bibliothèques Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
+ Fournit des liens vers les différentes bibliothèques fournies avec Visual C++, notamment la bibliothèque ATL, MFC, les modèles OLE DB, la bibliothèque Runtime C et la bibliothèque C++ Standard.  
   
- [Debugging](../Topic/Debugging%20in%20Visual%20Studio.md)  
+ [Débogage](/visualstudio/debugger/debugging-in-visual-studio)  
  Fournit des liens vers l'utilisation du débogueur Visual Studio pour corriger des erreurs de logique dans vos application ou procédures stockées.

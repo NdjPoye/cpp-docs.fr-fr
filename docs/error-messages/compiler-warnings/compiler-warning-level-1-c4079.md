@@ -1,34 +1,32 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4079 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4079"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4079"
+title: Compilateur avertissement (niveau 1) C4079 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4079
+dev_langs: C++
+helpviewer_keywords: C4079
 ms.assetid: 549759f0-e168-47e9-8c9a-de93ac843689
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 548d8f801c39580b0f0ea4a0b945eb86b54f29d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 1) C4079
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-jeton 'jeton' inattendu  
+# <a name="compiler-warning-level-1-c4079"></a>Compilateur avertissement (niveau 1) C4079
+jeton 'token' inattendu  
   
- Un jeton séparateur inattendu apparaît dans une liste d'arguments de pragma.  Le reste du pragma a été ignoré.  
+ Un jeton séparateur inattendu se produit dans une liste d’arguments de pragma. Le reste du pragma a été ignoré.  
   
- L'exemple suivant génère l'erreur C4079 :  
+ L’exemple suivant génère l’erreur C4079 :  
   
 ```  
 // C4079.cpp  

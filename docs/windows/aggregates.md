@@ -1,68 +1,66 @@
 ---
-title: "agr&#233;gats | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.aggregates"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aggregates (attribut)"
-  - "agrégation (C++)"
-  - "objets d’agrégats (C++), aggregates (attribut)"
-  - "agrégats (C++)"
+title: "agrégats | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.aggregates
+dev_langs: C++
+helpviewer_keywords:
+- aggregates attribute
+- aggregation [C++]
+- aggregate objects [C++], aggregates attribute
+- aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c225de7795171da6bfd82f8750012780d44b636c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# agr&#233;gats
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="aggregates"></a>agrégats
 Indique que l’objet agrège l’objet spécifié par le CLSID.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-[ aggregates(  
-clsid,  
-variable_name  
+      [ aggregates(  
+   clsid,  
+   variable_name  
 ) ]  
-  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `clsid`  
  Spécifie le CLSID de l’objet qui peut être agrégé.  
   
  `variable_name`  
  Nom de la variable à insérer. Cette variable contient le **IUnknown** de l’objet en cours d’agrégation.  
   
-## Notes  
- Quand il est appliqué à un objet, l’attribut C\+\+ **aggregates** implémente un wrapper externe pour l’objet en cours d’agrégation \(spécifié par `clsid`\).  
+## <a name="remarks"></a>Remarques  
+ Quand il est appliqué à un objet, l’attribut C++ **aggregates** implémente un wrapper externe pour l’objet en cours d’agrégation (spécifié par `clsid`).  
   
- Cet attribut exige que l’attribut [coclass](../windows/coclass.md), [progid](../windows/progid.md) ou [vi\_progid](../windows/vi-progid.md) \(ou un autre attribut qui implique l’un de ceux\-ci\) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si **progid** est appliqué, **vi\_progid** et **coclass** sont également appliqués.  
+ Cet attribut exige que l’attribut [coclass](../windows/coclass.md), [progid](../windows/progid.md)ou [vi_progid](../windows/vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si **progid** est appliqué, **vi_progid** et **coclass** sont également appliqués.  
   
  **Projets ATL**  
   
- Si vous utilisez cet attribut dans un projet qui utilise ATL, le comportement de l’attribut change. Tout d’abord, l’entrée suivante est ajoutée au mappage COM de l’objet cible :  
+ Si vous utilisez cet attribut dans un projet qui utilise ATL, le comportement de l’attribut change. Tout d’abord, l’entrée suivante est ajoutée au mappage COM de l’objet cible :  
   
 ```  
 COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(_m_spAttrXXX, clsid)  
 ```  
   
- Ensuite, la macro [DECLARE\_GET\_CONTROLLING\_UNKNOWN](../Topic/DECLARE_GET_CONTROLLING_UNKNOWN.md) est également ajoutée.  
+ Ensuite, la macro [DECLARE_GET_CONTROLLING_UNKNOWN](../atl/reference/aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) est également ajoutée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cpp_attr_ref_aggregates.cpp  
@@ -89,24 +87,24 @@ struct CObject : IObject
 };  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-### Contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
 |**S'applique à**|**class**, `struct`|  
 |**Renouvelable**|Oui|  
-|**Attributs requis**|Un ou plusieurs des éléments suivants : **coclass**, **progid** ou **vi\_progid**.|  
-|**Attributs non valides**|None|  
+|**Attributs requis**|Un ou plusieurs des éléments suivants : **coclass**, **progid**ou **vi_progid**.|  
+|**Attributs non valides**|Aucun|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [COM Attributes](../windows/com-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Attributs COM](../windows/com-attributes.md)   
+ [Attributs de classe](../windows/class-attributes.md)   
+ [TypeDef, Enum, Union et Struct (attributs)](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Agrégation](http://msdn.microsoft.com/library/windows/desktop/ms686558)   
- [Aggregatable](http://msdn.microsoft.com/library/windows/desktop/aa366721)   
- [COM\_INTERFACE\_ENTRY\_AUTOAGGREGATE\_BLIND](../Topic/COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+ [Peut être agrégé](http://msdn.microsoft.com/library/windows/desktop/aa366721)   
+ [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)   
+ 

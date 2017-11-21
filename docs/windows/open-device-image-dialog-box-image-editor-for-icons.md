@@ -1,37 +1,36 @@
 ---
-title: "Ouvrir l’image de &lt;appareil&gt;, bo&#238;te de dialogue (&#201;diteur d’images pour les ic&#244;nes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.opendeviceimage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Ouvrir l’image de <appareil>, boîte de dialogue"
+title: "Ouvrez &lt;périphérique&gt; l’Image de la boîte de dialogue (Éditeur d’images pour les icônes) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.opendeviceimage
+dev_langs: C++
+helpviewer_keywords: Open <Device> Image dialog box
 ms.assetid: 27cb60ec-8704-4e58-ab1c-8cc3b34e66be
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7081d1ed4c65afea2aab7eca169782ec227a258b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Ouvrir l’image de &lt;appareil&gt;, bo&#238;te de dialogue (&#201;diteur d’images pour les ic&#244;nes)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Utilisez cette boîte de dialogue pour ouvrir des images de périphérique.  Cette boîte de dialogue répertorie les images de périphérique existantes dans la ressource actuelle \(les images qui font partie de la ressource actuelle\).  
+# <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>Ouvrez &lt;périphérique&gt; l’Image de la boîte de dialogue (Éditeur d’images pour les icônes)
+Utilisez cette boîte de dialogue pour ouvrir des images de périphérique. Il répertorie les images de périphérique existantes dans la ressource actuelle (les images qui font partie de la ressource actuelle).  
   
  **Images en cours**  
- Répertorie les images incluses dans la ressource.  Sélectionnez le type d'image que vous souhaitez ouvrir.  
+ Répertorie les images incluses dans la ressource. Sélectionnez le type d’image que vous souhaitez ouvrir.  
   
-## Configuration requise  
- Aucun  
+## <a name="requirements"></a>Spécifications  
+ Aucune  
   
-## Voir aussi  
- [Image, menu](../mfc/image-menu-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Voir aussi  
+ [Menu image](../windows/image-menu-image-editor-for-icons.md)   
+ [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)
+

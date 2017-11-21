@@ -1,34 +1,32 @@
 ---
-title: "Avertissement du compilateur (niveau 3) C4243 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4243"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4243"
+title: Compilateur avertissement (niveau 3) C4243 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4243
+dev_langs: C++
+helpviewer_keywords: C4243
 ms.assetid: ca72f9ad-ce0b-43a9-a68c-106e1f8b90ef
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 527dbbc55fca3f8c602704472ba17a31d54b4b3a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 3) C4243
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La conversion 'type de conversion' de 'type1' en 'type2' existe, mais n'est pas accessible  
+# <a name="compiler-warning-level-3-c4243"></a>Avertissement du compilateur (niveau 3) C4243
+' type de conversion' existe à partir de 'type1' en 'type2', mais n’est pas accessible  
   
  Un pointeur vers une classe dérivée est converti en un pointeur vers une classe de base, mais la classe dérivée hérite de la classe de base avec un accès privé ou protégé.  
   
- L'exemple suivant génère l'erreur C4243 :  
+ L’exemple suivant génère l’erreur C4243 :  
   
 ```  
 // C4243.cpp  

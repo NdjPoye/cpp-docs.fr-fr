@@ -1,33 +1,30 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_WSTR | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_WSTR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_WSTR (macro)"
+title: PROVIDER_COLUMN_ENTRY_WSTR | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROVIDER_COLUMN_ENTRY_WSTR
+dev_langs: C++
+helpviewer_keywords: PROVIDER_COLUMN_ENTRY_WSTR macro
 ms.assetid: 70630bd5-d782-473b-9777-aebbbf5321c5
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cee2a21b91a01e73c980bd29902ad3cec85c6e82
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# PROVIDER_COLUMN_ENTRY_WSTR
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Représente une colonne spécifique prise en charge par le fournisseur.  
+# <a name="providercolumnentrywstr"></a>PROVIDER_COLUMN_ENTRY_WSTR
+Représente une colonne spécifique pris en charge par le fournisseur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -36,24 +33,24 @@ name
 , ordinal, member )  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *name*  
- \[in\] Le nom de colonne.  
+ [in] Le nom de colonne.  
   
  `ordinal`  
- \[in\] Le numéro de colonne.  Sauf si la colonne est une colonne du signet, le numéro de colonne ne doit pas être 0.  
+ [in] Le numéro de colonne. Sauf si la colonne est une colonne de signet, le numéro de colonne ne doit pas être 0.  
   
  `member`  
- \[in\] la variable membre de la classe de données qui stocke les données.  
+ [in] La variable membre de la classe de données qui stocke les données.  
   
-## Notes  
- Utilisez la macro lorsque les données de la colonne est une chaîne de caractères Unicode terminée par le caractère NULL, [DBTYPE\_WSTR](https://msdn.microsoft.com/en-us/library/ms711251.aspx).  
+## <a name="remarks"></a>Remarques  
+ Utilisez cette macro, lorsque les données de la colonne seront une chaîne de caractères Unicode, de nul [DBTYPE_WSTR](https://msdn.microsoft.com/en-us/library/ms711251.aspx).  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
- [Macros pour les modèles du fournisseur OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
- [Création d'un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+## <a name="see-also"></a>Voir aussi  
+ [Macros pour les modèles du fournisseur OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+ [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
+ [Création d’un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

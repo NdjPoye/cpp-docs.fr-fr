@@ -1,48 +1,46 @@
 ---
-title: "atomic | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "atomic"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "atomic OpenMP directive"
+title: atomique | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: atomic
+dev_langs: C++
+helpviewer_keywords: atomic OpenMP directive
 ms.assetid: 275e0338-cf2f-4525-97b5-696250000df7
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 92804b2bdcc243bde6e536004cda73d7f5087b1d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# atomic
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-spécifie qu'un emplacement de mémoire qui sera mis à jour atomique.  
+# <a name="atomic"></a>atomique
+Spécifie qu’un emplacement de mémoire qui sera mise à jour atomiquement.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 #pragma omp atomic  
    expression  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `expression`  
- L'instruction contenant l'emplacement mémoire lvalue dont vous souhaitez protéger contre plusieurs écrit.  Pour plus d'informations sur les formulaires d'expression légal, consultez la spécification d'OpenMP.  
+ L’instruction contenant la valeur lvalue dont l’emplacement de mémoire que vous souhaitez protéger contre plusieurs écritures. Pour plus d’informations sur les formes expression juridique, consultez la spécification OpenMP.  
   
-## Notes  
- La directive d' `atomic` ne prend en charge aucune clauses OpenMP.  
+## <a name="remarks"></a>Remarques  
+ Le `atomic` directive prend en charge aucune clauses OpenMP.  
   
- Pour plus d'informations, consultez [2.6.4 atomic Construct](../../../parallel/openmp/2-6-4-atomic-construct.md).  
+ Pour plus d’informations, consultez [2.6.4 atomique construire](../../../parallel/openmp/2-6-4-atomic-construct.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // omp_atomic.cpp  
@@ -63,6 +61,9 @@ int main() {
 }  
 ```  
   
-  **Nombre de threads : 10**   
-## Voir aussi  
+```Output  
+Number of threads: 10  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
  [OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)

@@ -1,68 +1,67 @@
 ---
-title: "/DLL (G&#233;n&#233;rer une DLL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/dll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DLL (option de l'éditeur de liens C++)"
-  - "-DLL (option de l'éditeur de liens)"
-  - "DLL (option de l'éditeur de liens C++)"
-  - "DLL (C++), générer"
-  - "exporter des DLL (C++), spécifier des exportations"
+title: "-DLL (générer une DLL) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /dll
+dev_langs: C++
+helpviewer_keywords:
+- -DLL linker option
+- /DLL linker option [C++]
+- exporting DLLs [C++], specifying exports
+- DLLs [C++], building
+- DLL linker option [C++]
 ms.assetid: c7685aec-31d0-490f-9503-fb5171a23609
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6ca732d96eaa0ae7e4ffd805063156be519d41ab
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /DLL (G&#233;n&#233;rer une DLL)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dll-build-a-dll"></a>/DLL (Générer une DLL)
 ```  
 /DLL  
 ```  
   
-## Notes  
- L'option \/DLL génère une DLL comme fichier de sortie principal.  Une DLL contient en général les exportations utilisables par un autre programme.  Il existe trois méthodes de spécification des exportations, présentées dans l'ordre d'utilisation recommandé :  
+## <a name="remarks"></a>Remarques  
+ L’option /DLL génère une DLL en tant que fichier de sortie principal. Une DLL contient généralement des exportations qui peuvent être utilisées par un autre programme. Il existe trois méthodes de spécification des exportations, répertoriées dans l’ordre d’utilisation recommandé :  
   
-1.  [\_\_declspec\(dllexport\)](../../cpp/dllexport-dllimport.md) dans le code source ;  
+1.  [__declspec (dllexport)](../../cpp/dllexport-dllimport.md) dans le code source  
   
-2.  une instruction [EXPORTS](../../build/reference/exports.md) dans un fichier .def ;  
+2.  Un [exportations](../../build/reference/exports.md) instruction dans un fichier .def  
   
-3.  une spécification [\/EXPORT](../../build/reference/export-exports-a-function.md) dans une commande LINK.  
+3.  Un [/EXPORT](../../build/reference/export-exports-a-function.md) spécification dans une commande LINK  
   
  Un programme peut utiliser plusieurs méthodes.  
   
- Une autre façon de générer une DLL consiste à utiliser l'instruction de définition de module **LIBRARY**.  Les options \/BASE et \/DLL réunies sont équivalentes à l'instruction **LIBRARY**.  
+ Une autre consiste à générer une DLL avec la **bibliothèque** instruction de définition de module. Les options /BASE et /DLL réunies sont équivalentes à la **bibliothèque** instruction.  
   
- Ne spécifiez pas uniquement cette option sur la ligne de commande ; il ne faut donc pas l'utiliser dans l'environnement de développement.  Cette option est définie lorsque vous créez un projet DLL avec un Assistant Application.  
+ Ne spécifiez pas cette option dans l’environnement de développement. Cette option est réservée uniquement sur la ligne de commande. Cette option est définie lorsque vous créez un projet DLL avec un Assistant Application.  
   
- Notez que si vous créez votre bibliothèque d'importation lors d'une étape préliminaire, avant de créer votre fichier .dll, vous devez passer lors de la génération du fichier .dll le même jeu de fichiers objets que celui que vous avez passé lors de la génération de la bibliothèque d'importation.  
+ Notez que si vous créez votre bibliothèque d’importation dans une étape préliminaire, avant de créer votre fichier .dll, vous devez passer le même jeu de fichiers objets lors de la génération du fichier .dll que vous avez passé lors de la création de la bibliothèque d’importation.  
   
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Définition des propriétés de projets Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Cliquez sur le dossier **Propriétés de configuration**.  
+2.  Cliquez sur le **propriétés de Configuration** dossier.  
   
-3.  Cliquez sur la page de propriétés **Général**.  
+3.  Cliquez sur le **général** page de propriétés.  
   
-4.  Modifiez la propriété **Type de configuration**.  
+4.  Modifier la **Configuration Type** propriété.  
   
-### Pour définir cette option de l'éditeur de liens par programme  
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCPropertySheet.ConfigurationType%2A>.  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)

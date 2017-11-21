@@ -1,38 +1,37 @@
 ---
-title: "&#201;valuateur d&#39;expression, erreur CXX0015 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0015"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0015"
-  - "CXX0015"
+title: "Évaluateur d’expression, erreur CXX0015 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0015
+dev_langs: C++
+helpviewer_keywords:
+- CXX0015
+- CAN0015
 ms.assetid: 35efaf77-d578-48d8-bfc5-fdeb2a46a8b5
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d6b04fd2b13b2acd9021dcd8e751a0b4cbefd166
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# &#201;valuateur d&#39;expression, erreur CXX0015
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-expression trop complexe \(dépassement de capacité de la pile\)  
+# <a name="expression-evaluator-error-cxx0015"></a>Évaluateur d'expression, erreur CXX0015
+expression trop complexe (dépassement de capacité de pile)  
   
- L'expression est trop complexe ou trop imbriquée pour la quantité de stockage dont dispose l'évaluateur d'expression C.  
+ L’expression est trop complexe ou imbriquées trop profondément pour la quantité de stockage disponible pour l’évaluateur d’expression C.  
   
- Le dépassement de la pile se produit généralement à cause d'un nombre excessif de calculs en attente.  
+ Dépassement de capacité se produit généralement en raison du trop grand nombre de calculs en attente.  
   
- Réorganisez l'expression pour que chacun de ses éléments puisse être évalué tout de suite, sans attendre le calcul d'autres parties de l'expression.  
+ Réorganiser l’expression afin que chaque composant de l’expression peut être évaluée, tel qu’il est trouvé, au lieu de devoir attendre d’autres parties de l’expression doit être calculée.  
   
- Décomposez l'expression en plusieurs commandes.  
+ Fractionnez l’expression en plusieurs commandes.  
   
- Erreur identique à CAN0015.
+ Cette erreur est identique à CAN0015.

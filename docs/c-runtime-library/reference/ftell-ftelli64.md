@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,8 +26,7 @@ apitype: DLLExport
 f1_keywords:
 - _ftelli64
 - ftell
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ftell function
 - ftelli64 function
@@ -36,30 +34,15 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 220b34e5bba7a4a6716d6ef18d6621b58d36ecc3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 4b37db89ca7d9e3facb7de2fbce2dc819cfa03e8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ftell-ftelli64"></a>ftell, _ftelli64
 Obtient la position actuelle d’un pointeur de fichier.  
@@ -85,7 +68,7 @@ __int64 _ftelli64(
  Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Remarques  
- Le `ftell` et `_ftelli64` fonctions de récupérer la position actuelle du pointeur de fichier (le cas échéant) associée à `stream`. La position est exprimée sous la forme d’un décalage par rapport au début du flux.  
+ Le `ftell` et `_ftelli64` fonctions récupèrent la position actuelle du pointeur de fichier (le cas échéant) associée à `stream`. La position est exprimée sous la forme d’un décalage par rapport au début du flux.  
   
  Notez que quand un fichier est ouvert pour un ajout de données, la position de fichier actuelle est déterminée par la dernière opération d’E/S, pas par l’emplacement auquel l’écriture suivante se produirait. Par exemple, si un fichier est ouvert pour un ajout et que la dernière opération était une lecture, la position de fichier est le point où l’opération de lecture suivante commencerait, pas celui où l’écriture suivante démarrerait. (Quand un fichier est ouvert pour un ajout, la position de fichier est déplacée vers la fin du fichier avant toute opération d’écriture.) Si aucune opération d’E/S ne s’est produite sur un fichier ouvert pour un ajout, la position de fichier correspond au début du fichier.  
   

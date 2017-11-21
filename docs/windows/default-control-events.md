@@ -1,67 +1,68 @@
 ---
-title: "Default Control Events | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dialog editor, default control events"
-  - "controls [C++], default control events"
-  - "events [C++], controls"
-  - "dialog box controls, events"
+title: "Par défaut des événements de contrôle | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Dialog editor, default control events
+- controls [C++], default control events
+- events [C++], controls
+- dialog box controls, events
 ms.assetid: 75556b23-18f5-4390-97a4-2ecad3309741
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a8f85e534892cf45987cf563f968ca5e1ec28262
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Default Control Events
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les noms de contrôle suivants sont accompagnés des événements par défaut :  
+# <a name="default-control-events"></a>Événements de contrôle par défaut
+Les noms de contrôle suivants ont des événements par défaut qui l’accompagne :  
   
 |Nom du contrôle|Événement par défaut|  
-|---------------------|--------------------------|  
-|Animate|**ACN\_START**|  
-|Check Box|**BN\_CLICKED**|  
-|Combo Box|**CBN\_SELCHANGE**|  
-|Personnalisé|**TTN\_GETDISPINFO**|  
-|Date Time Picker|**DTN\_DATETIMECHANGE**|  
-|Zone d'édition|**EN\_CHANGE**|  
-|Zone de groupe|\(Non applicable\)|  
-|Hot key|**NM\_OUTOFMEMORY**|  
-|Adresse IP|**IPN\_FIELDCHANGED**|  
-|Liste|**LVN\_ITEMCHANGE**|  
-|Zone de liste|**LBN\_SELCHANGE**|  
-|Month calendar|**MCN\_SELCHANGE**|  
-|Contrôle Picture|\(Non applicable\)|  
-|Progression|**NM\_CUSTOMDRAW**|  
-|Push button|**BN\_CLICKED**|  
-|Radio Button|**BN\_CLICKED**|  
-|RichEdit|**EN\_CHANGE**|  
-|Scroll Bar|**NM\_THEMECHANGED**|  
-|Slider|**NM\_CUSTOMDRAW**|  
-|Spin|**UDN\_DELTAPOS**|  
-|Static Text|\(Non applicable\)|  
-|Onglet|**TCN\_SELCHANGE**|  
-|Tree|**TVN\_SELCHANGE**|  
+|------------------|-------------------|  
+|Animer|**MESSAGE ACN_START**|  
+|Case à cocher|**BN_CLICKED**|  
+|Zone de liste modifiable|**CBN_SELCHANGE DU**|  
+|Personnalisé|**TTN_GETDISPINFO**|  
+|Sélecteur de date heure|**DTN_DATETIMECHANGE**|  
+|Zone d’édition|**EN_CHANGE**|  
+|Zone de groupe|(Non applicable)|  
+|Touche d’accès rapide|**NM_OUTOFMEMORY**|  
+|Adresse IP|**IPN_FIELDCHANGED**|  
+|Liste|**LVN_ITEMCHANGE**|  
+|Zone de liste|**LBN_SELCHANGE**|  
+|Calendrier mensuel|**MCN_SELCHANGE**|  
+|Contrôle d’image|(Non applicable)|  
+|Progression|**NM_CUSTOMDRAW**|  
+|Bouton de commande|**BN_CLICKED**|  
+|Case d’option|**BN_CLICKED**|  
+|RichEdit|**EN_CHANGE**|  
+|Barre de défilement|**NM_THEMECHANGED**|  
+|Curseur|**NM_CUSTOMDRAW**|  
+|Faire pivoter|**UDN_DELTAPOS**|  
+|Texte statique|(Non applicable)|  
+|Onglet|**TCN_SELCHANGE**|  
+|Arborescence|**TVN_SELCHANGE**|  
   
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l'ajout de fichiers de ressources aux projets managés, l'accès aux ressources, l'affichage de ressources statiques et l'assignation de chaînes de ressources aux propriétés, et ce manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/fr-fr/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](https://msdn.microsoft.com/library/f45fce5x.aspx) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](https://msdn.microsoft.com/library/xbx3z216.aspx). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Win32  
   
-## Voir aussi  
- [Defining Member Variables for Dialog Controls](../mfc/defining-member-variables-for-dialog-controls.md)   
- [Types de messages associés aux objets interface utilisateur](../mfc/reference/message-types-associated-with-user-interface-objects.md)   
- [Modification d'un gestionnaire de messages](../mfc/reference/editing-a-message-handler.md)   
- [Définition d'un gestionnaire de messages pour un message réfléchi](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)   
- [Déclaration d'une variable basée sur votre nouvelle classe de contrôle](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)   
- [Substitution d'une fonction virtuelle](../ide/overriding-a-virtual-function-visual-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définir des Variables membres pour les contrôles de boîte de dialogue](../windows/defining-member-variables-for-dialog-controls.md)   
+ [Types de messages associés aux objets d’Interface utilisateur](../mfc/reference/message-types-associated-with-user-interface-objects.md)   
+ [Modification d’un gestionnaire de messages](../mfc/reference/editing-a-message-handler.md)   
+ [Définition d’un gestionnaire de messages pour un Message réfléchi](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)   
+ [Déclaration d’une Variable basée sur votre nouvelle classe de contrôle](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)   
+ [Une fonction virtuelle de substitution](../ide/overriding-a-virtual-function-visual-cpp.md)
+

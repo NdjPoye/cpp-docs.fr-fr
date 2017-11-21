@@ -1,32 +1,30 @@
 ---
-title: "FactoryCache::cookie, donn&#233;es de membre | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::FactoryCache::cookie"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cookie (membre de données)"
+title: "Factorycache::cookie, données de membre | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::FactoryCache::cookie
+dev_langs: C++
+helpviewer_keywords: cookie data member
 ms.assetid: b1bc79af-a896-4e3b-8afa-64733022eddf
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c3cca7b708f7fc2a0fdaa5b975396958b967210a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# FactoryCache::cookie, donn&#233;es de membre
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="factorycachecookie-data-member"></a>FactoryCache::cookie, données de membre
+Prend en charge l’infrastructure de la bibliothèque de modèles Windows Runtime C++ et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 union {   
@@ -35,14 +33,14 @@ union {
 } cookie;  
 ```  
   
-## Notes  
- Contient une valeur identifiant un [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] enregistré ou un objet de classe COM, et utilisée ultérieurement pour effacer l'objet.  
+## <a name="remarks"></a>Remarques  
+ Contient une valeur qui identifie un objet de classe Windows Runtime ou COM inscrit et est utilisée ultérieurement pour annuler l’inscription de l’objet.  
   
-## Configuration requise  
- **En\-tête:** module.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** module.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
- [FactoryCache, structure](../windows/factorycache-structure.md)   
+## <a name="see-also"></a>Voir aussi  
+ [FactoryCache (Structure)](../windows/factorycache-structure.md)   
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

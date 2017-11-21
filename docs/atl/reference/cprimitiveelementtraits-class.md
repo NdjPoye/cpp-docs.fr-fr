@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,37 +12,20 @@ f1_keywords:
 - ATLCOLL/ATL::CPrimitiveElementTraits
 - ATLCOLL/ATL::CPrimitiveElementTraits::INARGTYPE
 - ATLCOLL/ATL::CPrimitiveElementTraits::OUTARGTYPE
-dev_langs:
-- C++
-helpviewer_keywords:
-- CPrimitiveElementTraits class
+dev_langs: C++
+helpviewer_keywords: CPrimitiveElementTraits class
 ms.assetid: 21c1cea8-2c5a-486c-b65c-85490f3ed4e6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 44e3849ebf2de09bc9b62e28df0f70bf52ac95e6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: e9713ae95e5c47f67c09ecbfc571b118f6a9989f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="cprimitiveelementtraits-class"></a>CPrimitiveElementTraits (classe)
+# <a name="cprimitiveelementtraits-class"></a>Classe de CPrimitiveElementTraits
 Cette classe fournit des méthodes par défaut et des fonctions pour une classe de collection composée des types de données primitifs.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -67,11 +49,11 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 |[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collection.|  
   
 ## <a name="remarks"></a>Remarques  
- Cette classe fournit des méthodes pour déplacer, copier, comparaison et des éléments de type de données primitif stockées dans un objet de classe de collection de hachage et les fonctions statiques par défaut.  
+ Cette classe fournit les fonctions statiques par défaut et les méthodes pour déplacer, copier, comparaison et hachage des éléments de type de données primitif stockées dans un objet de classe de collection.  
   
  Pour plus d’informations, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
   
  [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)  
@@ -100,6 +82,5 @@ typedef T& OUTARGTYPE;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [CDefaultElementTraits (classe)](../../atl/reference/cdefaultelementtraits-class.md)   
+ [Classe de CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

@@ -1,32 +1,30 @@
 ---
-title: "ms_union | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.ms_union"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ms_union attribute"
+title: ms_union | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.ms_union
+dev_langs: C++
+helpviewer_keywords: ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f70f4403c3318729ae0dcf42e717902c48c8759b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# ms_union
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Contrôle l'alignement de représentation des données de réseau les unions nonencapsulated.  
+# <a name="msunion"></a>ms_union
+Contrôle l’alignement de représentation sous forme de données de réseau d’unions nonencapsulated.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -34,11 +32,11 @@ Contrôle l'alignement de représentation des données de réseau les unions non
   
 ```  
   
-## Notes  
- L'attribut de **ms\_union** C\+\+ a les mêmes fonctionnalités que l'attribut de [ms\_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) MIDL.  
+## <a name="remarks"></a>Remarques  
+ Le **ms_union** attribut C++ a les mêmes fonctionnalités que le [ms_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) attribut MIDL.  
   
-## Exemple  
- Le code suivant montre le positionnement de **ms\_union**:  
+## <a name="example"></a>Exemple  
+ Le code suivant illustre le positionnement des **ms_union**:  
   
 ```  
 // cpp_attr_ref_ms_union.cpp  
@@ -63,20 +61,19 @@ __interface IFireTabCtrl {
 [module(name="ATLFIRELib")];  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|Union de Nonencapsulated|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|**dispinterface**|  
+|**S'applique à**|Unions nonencapsulated|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun|  
+|**Attributs non valides**|**dispinterface**|  
   
- Pour plus d'informations, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)   

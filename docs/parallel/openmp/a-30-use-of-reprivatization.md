@@ -1,27 +1,26 @@
 ---
-title: "A.30   Use of Reprivatization | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Utilisation A.30 de Reprivatization | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 26529090-6c39-40f2-b806-e12374d6b5f8
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8ab359fdc63d90494b686684d26cc73e0135c886
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# A.30   Use of Reprivatization
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-l'exemple suivant montre le reprivatization des variables.  les variables privées peuvent être `private` marqué de nouveau dans une directive imbriquée.  Ils ne doivent pas être partagés dans une région parallèle englobante.  
+# <a name="a30---use-of-reprivatization"></a>A.30   Utilisation de la reprivatisation
+L’exemple suivant montre la reprivatization des variables. Variables privées peuvent être marqués `private` dans une directive imbriquée. Ils n’ont pas à être partagées dans la région parallèle englobante.  
   
 ```  
 int i, a;  

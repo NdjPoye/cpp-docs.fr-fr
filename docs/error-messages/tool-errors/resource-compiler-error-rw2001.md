@@ -1,34 +1,32 @@
 ---
-title: "Erreur RW2001 du compilateur de ressources  | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RW2001"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RW2001"
+title: Erreur RW2001 du compilateur de ressources | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RW2001
+dev_langs: C++
+helpviewer_keywords: RW2001
 ms.assetid: 963bdc7d-6ebe-4378-8bbc-47dfcf5d330c
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 91ded0f0b07e34a633229a9e7a445029f091b5bf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Erreur RW2001 du compilateur de ressources 
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="resource-compiler-error-rw2001"></a>Erreur RW2001 du compilateur de ressources 
 Directive non valide dans le fichier RC prétraité  
   
- Le fichier RC contient une directive **\#pragma**.  
+ Le fichier RC contient un **#pragma** directive.  
   
- Utilisez la directive de préprocesseur **\#ifndef** avec la constante **RC\_INVOKED** définie par le compilateur de ressources lors du traitement du fichier include.  Placez la directive **\#pragma** dans un bloc de code qui n'est pas traité lorsque la constante **RC\_INVOKED** est définie.  Le code situé dans le bloc est traité par le compilateur C\/C\+\+, mais pas par le compilateur de ressources.  L'exemple de code suivant illustre cette méthode :  
+ Utilisez le **#ifndef** directive de préprocesseur avec la **RC_INVOKED** constante que le compilateur de ressources définit lorsqu’il traite un fichier include. Place le **#pragma** directive à l’intérieur d’un bloc de code qui n’est pas traité lorsque le **RC_INVOKED** constante est définie. Le code dans le bloc est traité exclusivement par le compilateur C/C++ et non par le compilateur de ressources. L’exemple de code suivant illustre cette technique :  
   
 ```  
 #ifndef RC_INVOKED  
@@ -36,6 +34,6 @@ Directive non valide dans le fichier RC prétraité
 #endif  
 ```  
   
- La directive de préprocesseur **\#pragma** n'a aucune signification dans un fichier .RC.  La directive de préprocesseur **\#include** est fréquemment utilisée dans un fichier .RC pour inclure un fichier d'en\-tête \(un fichier d'en\-tête personnalisé d'un projet ou un fichier d'en\-tête standard fourni par Microsoft avec l'un de ses produits\).  Certains de ces fichiers include contiennent la directive **\#pragma**.  Un fichier d'en\-tête peut contenir un ou plusieurs autres fichiers d'en\-tête et il peut donc être difficile d'identifier le fichier contenant la directive **\#pragma** posant problème.  
+ Le **#pragma** directive de préprocesseur n’a aucune signification un. Fichier RC. Le **#include** directive de préprocesseur est fréquemment utilisée dans un. Fichier RC pour inclure un fichier d’en-tête (un fichier d’en-tête de personnalisée basée sur le projet ou un fichier d’en-tête standard fourni par Microsoft avec l’un de ses produits). Certains de ces fichiers include contiennent la **#pragma** directive. Un fichier d’en-tête peut contenir un ou plusieurs autres fichiers d’en-tête, le fichier qui contient l’incriminée **#pragma** directive ne peut pas être évidente.  
   
- La méthode **\#ifndef RC\_INVOKED** permet de contrôler l'ajout de fichiers d'en\-tête dans des fichiers d'en\-tête de projet.
+ Le **#ifndef RC_INVOKED** technique peut contrôler l’ajout de fichiers d’en-tête dans les fichiers d’en-tête de projet.

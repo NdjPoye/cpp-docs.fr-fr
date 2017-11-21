@@ -1,41 +1,39 @@
 ---
-title: "multimap::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array (membre) (STL/CLR)"
+title: multimap::to_array (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: eb4872dd-5e32-4a82-8ad4-37b533eb6814
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c51fe6e8196f68ade3977c6d239d859cd0752d46
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copie la séquence contrôlée dans un tableau.  
+# <a name="multimaptoarray-stlclr"></a>multimap::to_array (STL/CLR)
+Copie de la séquence contrôlée vers un nouveau tableau.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 cli::array<value_type>^ to_array();  
 ```  
   
-## Notes  
- La fonction membre retourne un tableau qui contient la séquence contrôlée.  Vous l'utilisez pour obtenir une copie de la séquence contrôlée sous forme de tableau.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre retourne un tableau contenant la séquence contrôlée. Il permet d’obtenir une copie de la séquence contrôlée sous forme de tableau.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_multimap_to_array.cpp   
@@ -67,12 +65,15 @@ int main()
   
 ```  
   
-  **\[d, 1\] \[c, 2\] \[b, 3\] \[a, 4\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## Configuration requise  
- **En\-tête :** \<cliext\/map\>  
+```Output  
+[a 1] [b 2] [c 3] [d 4]  
+[a 1] [b 2] [c 3]  
+```  
   
- **Espace de nommage:** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/map >  
   
-## Voir aussi  
- [multimap](../dotnet/multimap-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)

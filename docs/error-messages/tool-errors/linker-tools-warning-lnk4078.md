@@ -1,41 +1,39 @@
 ---
-title: "Avertissement des outils &#201;diteur de liens LNK4078 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4078"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4078"
+title: "LNK4078 d’avertissement des outils Éditeur de liens | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4078
+dev_langs: C++
+helpviewer_keywords: LNK4078
 ms.assetid: 5a16796d-6caf-42d9-8f65-b042843eafb8
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c6fc69436d30500eeb73af8435aad962bb228e07
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement des outils &#201;diteur de liens LNK4078
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-plusieurs sections 'nom de la section' trouvées avec différents attributs  
+# <a name="linker-tools-warning-lnk4078"></a>Avertissement des outils Éditeur de liens LNK4078
+plusieurs sections 'section name' trouvées avec différents attributs  
   
- LINK a trouvé deux ou plusieurs sections de même nom avec des attributs différents.  
+ LINK a trouvé deux ou plus de sections qui ont le même nomment mais des attributs.  
   
- Cet avertissement peut être généré si une bibliothèque d'importation ou un fichier d'exportation a été créé avec une version précédente de LINK ou LIB.  
+ Cet avertissement peut être dû à un fichier de bibliothèque ou exportations d’importation qui a été créé par une version précédente de LINK ou LIB.  
   
- Recréez le fichier et recommencez l'édition de liens.  
+ Recréez le fichier et les relier.  
   
-## Exemple  
- L'erreur LNK4078 peut également être provoquée par une modification avec rupture : la section nommée par [init\_seg](../../preprocessor/init-seg.md) sur x86 était en lecture\/écriture ; elle est désormais en lecture seule.  
+## <a name="example"></a>Exemple  
+ LNK4078 peut également être provoquée par une modification avec rupture : la section nommée par [init_seg](../../preprocessor/init-seg.md) x86 était en lecture/écriture, il est en lecture seule.  
   
- L'exemple suivant génère l'erreur LNK4078.  
+ L’exemple suivant génère l’erreur LNK4078.  
   
 ```  
 // LNK4078.cpp  

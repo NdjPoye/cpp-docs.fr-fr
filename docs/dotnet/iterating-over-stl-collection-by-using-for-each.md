@@ -1,38 +1,37 @@
 ---
-title: "It&#233;ration au sein d&#39;une collection STL en utilisant for each | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DTL (collections), itérer"
+title: "Itération de la Collection de bibliothèque C++ Standard en utilisant for each | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: DTL collections, iterating over
 ms.assetid: 9358ca29-b982-4a19-bbfd-bef50fe66c9a
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f18b4bfdcb1c525e6e05b133e853d09b2dbd0a56
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# It&#233;ration au sein d&#39;une collection STL en utilisant for each
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le mot clé de `for each` peut être utilisé pour itérer sur une collection de bibliothèque C\+\+ standard \(STL\).  
+# <a name="iterating-over-c-standard-library-collection-by-using-for-each"></a>Itération de la Collection de bibliothèque C++ Standard en utilisant for each
+Le `for each` mot clé peut être utilisé pour itérer sur une collection de la bibliothèque C++ Standard.  
   
-## Toutes les plateformes  
+## <a name="all-platforms"></a>Toutes les plateformes  
  **Remarques**  
   
- Une collection de STL est également appelé *conteneur*.  Pour plus d'informations, consultez [Conteneurs STL](../standard-library/stl-containers.md).  
+ Une collection de la bibliothèque C++ Standard est également appelé un *conteneur*. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  **Exemple**  
   
- L'exemple de code suivant utilise `for each` pour effectuer une itération au sein de [\< map \>](../standard-library/map.md).  
+ Le code suivant utilise des exemple `for each` d’itérer sur une [ \<carte >](../standard-library/map.md).  
   
 ```  
 // for_each_stl.cpp  
@@ -74,9 +73,13 @@ int main() {
   
  **Sortie**  
   
-  **Mois de 30 jours \= 4** **Exemple**  
+```Output  
+Months with 30 days = 4  
+```  
   
- L'exemple de code suivant utilise une référence const \(`const&`\) pour une variable d'itération avec les conteneurs de STL.  Vous pouvez utiliser une référence \(`&`\) en tant que variable d'itération sur toute collection d'un type qui peut être déclaré comme *T*`&`.  
+ **Exemple**  
+  
+ L’exemple de code suivant utilise une référence const (`const&`) pour une variable d’itération avec des conteneurs de bibliothèque C++ Standard. Vous pouvez utiliser une référence (`&`) en tant qu’une variable d’itération sur une collection d’un type qui peut être déclaré comme un *T*`&`.  
   
 ```  
 // for_each_stl_2.cpp  
@@ -102,23 +105,26 @@ int main() {
   
  **Sortie**  
   
-  **retval: 60**   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+```Output  
+retval: 60  
+```  
+  
+## <a name="windows-runtime"></a>Windows Runtime  
  **Remarques**  
   
- Il n'existe aucune note de plateforme spécifique sur cette fonctionnalité.  
+ Il n’existe aucune note spécifique à la plateforme sur cette fonctionnalité.  
   
-### Conditions requises  
- Option du compilateur : **\/ZW**  
+### <a name="requirements"></a>Spécifications  
+ Option du compilateur : **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Remarques**  
   
- Il n'existe aucune remarque de plateforme spécifique sur cette fonctionnalité.  
+ Il n’existe aucune note spécifique à la plateforme sur cette fonctionnalité.  
   
-### Conditions requises  
- Option du compilateur : **\/clr**  
+### <a name="requirements"></a>Spécifications  
+ Option du compilateur : **/clr**  
   
-## Voir aussi  
- [for each, in](../dotnet/for-each-in.md)   
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Voir aussi  
+ [pour chacune, dans](../dotnet/for-each-in.md)   
+ [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)

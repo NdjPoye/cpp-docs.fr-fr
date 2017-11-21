@@ -1,29 +1,27 @@
 ---
-title: "Erreur RC2122 du compilateur de ressources  | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC2122"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC2122"
+title: Erreur RC2122 du compilateur de ressources | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC2122
+dev_langs: C++
+helpviewer_keywords: RC2122
 ms.assetid: c2f02ec1-1ce8-4a13-b35e-7cd416fa9f41
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ed63bac6c949c30c7ab736eb43df9144ffbdda62
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Erreur RC2122 du compilateur de ressources 
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-sous\-type de menu inconnu  
+# <a name="resource-compiler-error-rc2122"></a>Erreur RC2122 du compilateur de ressources 
+sous-type de menu inconnu  
   
- Le champ *item\-definition* de l'instruction **MENU** peut uniquement contenir des instructions **MENUITEM** et **POPUP**.
+ Le *définition d’élément* champ le **MENU** instruction peut uniquement contenir **MENUITEM** et **POPUP** instructions.

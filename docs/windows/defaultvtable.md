@@ -1,32 +1,30 @@
 ---
-title: "defaultvtable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.defaultvtable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "defaultvtable attribute"
+title: defaultvtable | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.defaultvtable
+dev_langs: C++
+helpviewer_keywords: defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0753887cef2b169758351be9fafc0ec532bacb05
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# defaultvtable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Définit une interface en tant qu'interface vtable par défaut pour un objet COM.  
+# <a name="defaultvtable"></a>defaultvtable
+Définit une interface en tant que l’interface de vtable par défaut pour un objet COM.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,15 +33,15 @@ Définit une interface en tant qu'interface vtable par défaut pour un objet COM
 ) ]  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `interface`  
- L'interface indique que vous voulez avoir la valeur par défaut vtable pour l'objet COM.  
+ L’interface désignée que vous souhaitez avoir la vtable de la valeur par défaut pour l’objet COM.  
   
-## Notes  
- L'attribut de **defaultvtable** C\+\+ a les mêmes fonctionnalités que l'attribut de [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) MIDL.  
+## <a name="remarks"></a>Remarques  
+ Le **defaultvtable** attribut C++ a les mêmes fonctionnalités que le [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) attribut MIDL.  
   
-## Exemple  
- Le code suivant montre les attributs d'une classe qui utilisent **defaultvtable** pour spécifier une interface par défaut :  
+## <a name="example"></a>Exemple  
+ Le code suivant montre les attributs sur une classe qui utilisent **defaultvtable** pour spécifier une interface par défaut :  
   
 ```  
 // cpp_attr_ref_defaultvtable.cpp  
@@ -71,20 +69,19 @@ uuid("00000000-0000-0000-0000-000000000004")]
 class CMyC3 : public IMyI3 {};  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**classe**, `struct`|  
-|**reproductible**|Non|  
-|**attributs requis**|**coclasse**|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|**class**, `struct`|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|**coclass**|  
+|**Attributs non valides**|None|  
   
- Pour plus d'informations, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs de classe](../windows/class-attributes.md)   

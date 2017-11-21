@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- new keyword [C++]
+dev_langs: C++
+helpviewer_keywords: new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: a7386d45f5188e7217ebfd4c235c0763bfd70044
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 05b83a284dcf599890985f1f01d8327ac5ef75e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="new-operator-c"></a>new, opérateur (C++)
 Alloue de la mémoire pour un objet ou un tableau d’objets de *type-name* du magasin gratuit et retourne un pointeur différent de zéro, correctement typé vers l’objet.  
@@ -238,7 +234,7 @@ int main()
   
  Le **nouveau** opérateur appelle la fonction `operator new`. Pour les tableaux de tout type et pour les objets qui ne sont pas de **classe**, `struct`, ou **union** types, une fonction globale, **:: new, opérateur**, est appelée pour allouer du stockage. Les objets de type de classe peuvent définir leur propre fonction membre statique `operator new` pour chaque classe.  
   
- Lorsque le compilateur rencontre le **nouveau** opérateur pour allouer un objet de type `type`, il émet un appel à `type` **:: opérateur new (sizeof (** `type` **)) ** ou, si non défini par l’utilisateur `operator new` est défini, **:: opérateur new (sizeof (** `type` **))**. Par conséquent, le **nouveau** opérateur peut allouer la quantité correcte de mémoire pour l’objet.  
+ Lorsque le compilateur rencontre le **nouveau** opérateur pour allouer un objet de type `type`, il émet un appel à `type` **:: opérateur new (sizeof (** `type` **))**  ou, si non défini par l’utilisateur `operator new` est défini, **:: opérateur new (sizeof (** `type` **))**. Par conséquent, le **nouveau** opérateur peut allouer la quantité correcte de mémoire pour l’objet.  
   
 > [!NOTE]
 >  L’argument `operator new` est de type **size_t**. Ce type est défini dans DIRECT.H, MALLOC.H, MEMORY.H, SEARCH.H, STDDEF.H, STDIO.H, STDLIB.H, STRING.H et TIME.H.  

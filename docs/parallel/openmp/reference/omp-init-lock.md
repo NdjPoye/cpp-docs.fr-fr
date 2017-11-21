@@ -1,32 +1,30 @@
 ---
-title: "omp_init_lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_init_lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_init_lock OpenMP function"
+title: fonctions omp_init_lock | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_init_lock
+dev_langs: C++
+helpviewer_keywords: omp_init_lock OpenMP function
 ms.assetid: 7a65e3e2-2e31-4645-964c-c1e82e2a4d0e
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 30ced1bc649a8a6caed1cef4c77967abdd1e1868
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# omp_init_lock
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-initialise un verrou simple.  
+# <a name="ompinitlock"></a>omp_init_lock
+Initialise un verrou simple.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void omp_init_lock(  
@@ -34,14 +32,14 @@ void omp_init_lock(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `lock`  
- une variable de type [omp\_lock\_t](../../../parallel/openmp/reference/omp-lock-t.md).  
+ Une variable de type [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md).  
   
-## Notes  
- Pour plus d'informations, consultez [3.2.1 omp\_init\_lock and omp\_init\_nest\_lock Functions](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
+## <a name="remarks"></a>Remarques  
+ Pour plus d’informations, consultez [3.2.1 fonctions omp_init_lock and omp_init_nest_lock fonctions](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // omp_init_lock.cpp  
@@ -71,45 +69,48 @@ int main() {
 }  
 ```  
   
-  **Thread 0 \- démarrer la zone verrouillée**  
-**thread 0 \- zone verrouillée de fin**  
-**Thread 0 \- démarrer la zone verrouillée**  
-**thread 0 \- zone verrouillée de fin**  
-**Thread 0 \- démarrer la zone verrouillée**  
-**thread 0 \- zone verrouillée de fin**  
-**Thread 0 \- démarrer la zone verrouillée**  
-**thread 0 \- zone verrouillée de fin**  
-**Thread 0 \- démarrer la zone verrouillée**  
-**thread 0 \- zone verrouillée de fin**  
-**Thread 1 \- démarrer la zone verrouillée**  
-**thread 1 \- zone verrouillée de fin**  
-**Thread 1 \- démarrer la zone verrouillée**  
-**thread 1 \- zone verrouillée de fin**  
-**Thread 1 \- démarrer la zone verrouillée**  
-**thread 1 \- zone verrouillée de fin**  
-**Thread 1 \- démarrer la zone verrouillée**  
-**thread 1 \- zone verrouillée de fin**  
-**Thread 1 \- démarrer la zone verrouillée**  
-**thread 1 \- zone verrouillée de fin**  
-**Thread 2 \- démarrer la zone verrouillée**  
-**thread 2 \- zone verrouillée de fin**  
-**Thread 2 \- démarrer la zone verrouillée**  
-**thread 2 \- zone verrouillée de fin**  
-**Thread 2 \- démarrer la zone verrouillée**  
-**thread 2 \- zone verrouillée de fin**  
-**Thread 2 \- démarrer la zone verrouillée**  
-**thread 2 \- zone verrouillée de fin**  
-**Thread 2 \- démarrer la zone verrouillée**  
-**thread 2 \- zone verrouillée de fin**  
-**Thread 3 \- démarrer la zone verrouillée**  
-**thread 3 \- zone verrouillée de fin**  
-**Thread 3 \- démarrer la zone verrouillée**  
-**thread 3 \- zone verrouillée de fin**  
-**Thread 3 \- démarrer la zone verrouillée**  
-**thread 3 \- zone verrouillée de fin**  
-**Thread 3 \- démarrer la zone verrouillée**  
-**thread 3 \- zone verrouillée de fin**  
-**Thread 3 \- démarrer la zone verrouillée**  
-**thread 3 \- zone verrouillée de fin**   
-## Voir aussi  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Fonctions](../../../parallel/openmp/reference/openmp-functions.md)

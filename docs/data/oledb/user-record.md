@@ -1,33 +1,32 @@
 ---
-title: "Enregistrement utilisateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fournisseurs OLE DB, enregistrement utilisateur"
-  - "enregistrements, utilisateur"
-  - "jeux de lignes, enregistrement utilisateur"
-  - "enregistrements utilisateur"
-  - "enregistrements utilisateur, description"
+title: "Enregistrement d’utilisateur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- records, user
+- OLE DB providers, user record
+- user records
+- user records, described
+- rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 08b0e369629bc93002ee73a31978ef8d00493f6d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Enregistrement utilisateur
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'enregistrement utilisateur fournit le code et la structure de données représentant les données de colonne d'un jeu de lignes.  Un enregistrement utilisateur peut être créé au moment de la compilation ou de l'exécution.  Lorsque vous créez un fournisseur par l'intermédiaire de l'Assistant Fournisseur OLE DB ATL, l'Assistant crée un enregistrement utilisateur par défaut qui ressemble à celui\-ci \(à supposer que vous ayez spécifié un nom de fournisseur \[nom court\] « MyProvider »\) :  
+# <a name="user-record"></a>Enregistrement utilisateur
+L’enregistrement utilisateur fournit la code et structure de données qui représente les données de colonne pour un ensemble de lignes. Un enregistrement d’utilisateur peut être créé au moment de la compilation ou au moment de l’exécution. Lorsque vous créez un fournisseur à l’aide de l’Assistant fournisseur OLE DB ATL, l’Assistant crée un enregistrement d’utilisateur par défaut qui ressemble à ceci (en supposant que vous avez spécifié un nom de fournisseur [nom court] « MyProvider ») :  
   
 ```  
 class CWindowsFile:  
@@ -46,7 +45,7 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- Les modèles du fournisseur OLE DB gèrent toutes les particularités OLE DB concernant les interactions avec le client.  Pour acquérir les données d'une colonne nécessaires pour une réponse, le fournisseur appelle la fonction `GetColumnInfo`, que vous devez placer dans l'enregistrement utilisateur.  Vous pouvez substituer explicitement `GetColumnInfo` dans l'enregistrement utilisateur en la déclarant, par exemple, dans le fichier .h comme illustré ici :  
+ Les modèles du fournisseur OLE DB gèrent toutes les particularités OLE DB concernant les interactions avec le client. Pour obtenir les données des colonnes nécessaires pour une réponse, le fournisseur appelle la `GetColumnInfo` (fonction), que vous devez placer dans l’enregistrement utilisateur. Vous pouvez substituer explicitement `GetColumnInfo` dans l’enregistrement d’utilisateur, par exemple, en la déclarant dans le fichier .h comme illustré ici :  
   
 ```  
 template <class T>  
@@ -60,21 +59,21 @@ static ATLCOLUMNINFO* GetColumnInfo(CommandClass* pThis, ULONG* pcCols)
 static ATLCOLUMNINFO* GetColumnInfo(RowsetClass* pThis, ULONG* pcCols)  
 ```  
   
- Vous devez également implémenter `GetColumnInfo` dans le fichier .cpp de l'enregistrement utilisateur.  
+ Vous devez également implémenter `GetColumnInfo` dans le fichier .cpp de l’enregistrement utilisateur.  
   
- Les macros PROVIDER\_COLUMN\_MAP facilitent la création d'une fonction `GetColumnInfo` :  
+ Les macros PROVIDER_COLUMN_MAP faciliter la création d’un `GetColumnInfo` (fonction) :  
   
--   BEGIN\_PROVIDER\_COLUMN\_MAP définit le prototype de la fonction et un tableau statique de structures **ATLCOLUMNINFO**.  
+-   BEGIN_PROVIDER_COLUMN_MAP définit le prototype de fonction et un tableau statique de **ATLCOLUMNINFO** structures.  
   
--   PROVIDER\_COLUMN\_ENTRY définit et initialise une structure **ATLCOLUMNINFO** unique.  
+-   PROVIDER_COLUMN_ENTRY définit et initialise un seul **ATLCOLUMNINFO**.  
   
--   END\_PROVIDER\_COLUMN\_MAP ferme le tableau et la fonction.  Elle place également le décompte des éléments du tableau dans le paramètre `pcCols`.  
+-   END_PROVIDER_COLUMN_MAP ferme le tableau et la fonction. Il permet également de placer le nombre d’éléments de tableau dans le `pcCols` paramètre.  
   
- Quand un enregistrement utilisateur est créé au moment de l'exécution, **GetColumnInfo** utilise le paramètre `pThis` pour recevoir un pointeur désignant une instance de rowset ou de command.  Les commandes et les jeux de lignes doivent prendre en charge l'interface `IColumnsInfo`, de façon que les informations des colonnes puissent être obtenues à partir de ce pointeur.  
+ Lorsqu’un enregistrement d’utilisateur est créé au moment de l’exécution **GetColumnInfo** utilise le `pThis` paramètre pour recevoir un pointeur vers une instance de l’ensemble de lignes ou de la commande. Commandes et des ensembles de lignes doit prendre en charge la `IColumnsInfo` interface, les informations de colonne peuvent être obtenues à partir de ce pointeur.  
   
- **CommandClass** et **RowsetClass** correspondent aux interfaces command et rowset qui utilisent l'enregistrement utilisateur.  
+ **CommandClass** et **RowsetClass** sont command et rowset qui utilisent l’enregistrement utilisateur.  
   
- Pour obtenir un exemple plus détaillé de la façon de substituer `GetColumnInfo` dans un enregistrement utilisateur, consultez [Détermination de manière dynamique des colonnes retournées au consommateur](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
+ Pour obtenir un exemple plus détaillé de la procédure de remplacement `GetColumnInfo` dans un enregistrement d’utilisateur, consultez [déterminer dynamiquement les colonnes retournées au consommateur](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

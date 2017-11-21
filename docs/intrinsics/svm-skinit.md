@@ -1,35 +1,34 @@
 ---
-title: "__svm_skinit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__svm_skinit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SKINIT, instruction"
-  - "__svm_skinit, intrinsèque"
+title: __svm_skinit | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __svm_skinit
+dev_langs: C++
+helpviewer_keywords:
+- SKINIT instruction
+- __svm_skinit intrinsic
 ms.assetid: 787ec781-4cf2-40a2-aa20-5192334b131a
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 63f58bed44dcea47c925f94b90e9438eb1082962
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# __svm_skinit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="svmskinit"></a>__svm_skinit
+**Section spécifique à Microsoft**  
   
- Initialise le chargement vérifié du logiciel sécurisé, tel qu'un écran d'ordinateurs virtuels.  
+ Lance le chargement d’un logiciel sécurisé sécurisé, tel qu’un moniteur d’ordinateur virtuel.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void __svm_skinit(  
@@ -37,28 +36,28 @@ void __svm_skinit(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|`SLB`|L'adresse physique 32 bits à un octet de sécuriser le bloc de chargeur \(SLB\).|  
+|`SLB`|L’adresse physique de 32 bits d’un octet de 64 Ko Secure chargeur de bloc (SLB).|  
   
-## Notes  
- La fonction d' `__svm_skinit` équivaut à l'instruction machine d' `SKINIT` .  Cette fonction fait partie d'un système de sécurité qui utilise le processeur et un module approuvé de \(TPM\) plateforme pour rechercher et charger le logiciel approuvé appelé cœur de sécurité \(SK\).  Le moniteur d'ordinateurs virtuels est un exemple d'un noyau de sécurité.  Le système de sécurité vérifie les composants de programme chargés pendant le processus d'initialisation, et protège les composants de la falsification par les interruptions, l'accès de périphérique, ou un autre programme si l'ordinateur est un multiprocesseur.  
+## <a name="remarks"></a>Remarques  
+ Le `__svm_skinit` fonction est équivalente à la `SKINIT` instruction machine. Cette fonction fait partie d’un système de sécurité qui utilise le processeur et un Module de plateforme approuvée (TPM) pour vérifier et charger des logiciels approuvés appelé un noyau de sécurité (SK). Un moniteur d’ordinateur virtuel est un exemple d’un noyau de sécurité. Le système de sécurité vérifie les composants du programme chargé pendant le processus d’initialisation et protège les composants contre la falsification à des interruptions, accès à l’appareil ou un autre programme si l’ordinateur est un multiprocesseur.  
   
- Le paramètre d' `SLB` spécifie l'adresse physique d'un bloc de mémoire limitée appelé *le bloc de chargeur sécurisé \(SLB\)* .  Le SLB contient un programme appelé le chargeur sécurisé qui génère l'environnement d'exploitation de l'ordinateur, et charge par la suite le noyau de sécurité.  
+ Le `SLB` paramètre spécifie l’adresse physique d’un bloc de 64 Ko de mémoire appelée le *sécuriser le bloc chargeur* (SLB). Le SLB contient un programme appelé le chargeur sécurisé qui établit l’environnement d’exploitation de l’ordinateur et par la suite charge le noyau de sécurité.  
   
- cette fonction prend en charge l'interaction du moniteur d'ordinateurs virtuels d'un hôte avec un système d'exploitation invité et ses applications.  Pour plus d'informations, recherchez le document, « le volume manuel 2 du programmeur d'architectures AMD64 : programmation système, » numéro de document 24593, révision 3,11, [AMD corporation](http://go.microsoft.com/fwlink/?LinkId=23746) au site.  
+ Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document, « de Volume manuelle AMD64 Architecture programmeur 2 : programmation du système, « numéro 24593, 3.11, de révision du document à la [corporation d’AMD](http://go.microsoft.com/fwlink/?LinkId=23746) site.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__svm_skinit`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## détail de FIN Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

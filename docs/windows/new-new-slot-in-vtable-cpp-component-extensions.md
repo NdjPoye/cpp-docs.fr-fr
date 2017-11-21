@@ -1,57 +1,52 @@
 ---
-title: "new (new slot in vtable)  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "new keyword [C++]"
+title: New (nouvel emplacement dans vtable) (Extensions du composant C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-caps.latest.revision: 20
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4612df74e360c389c34e750dd315074de415447c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# new (new slot in vtable)  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le mot clé `new` indique qu'un membre virtuel obtiendra un nouvel emplacement dans la vtable.  
+# <a name="new-new-slot-in-vtable--c-component-extensions"></a>nouveau (nouvel emplacement dans vtable)  (extensions du composant C++)
+Le `new` mot clé indique qu’un membre virtuel obtiendra un nouvel emplacement dans vtable.  
   
-> [!NOTE]
->  Le mot clé `new` a de nombreux usages et significations.  Pour plus d’informations, voir la rubrique d'homonymes  [new](../misc/new.md).  
+## <a name="all-runtimes"></a>Tous les runtimes  
+ (Aucune remarque pour cette fonctionnalité de langage ne s'applique à tous les runtimes.)  
   
-## Tous les runtimes  
- \(Aucune note de cette fonctionnalité de langage ne s'applique à tous les runtimes.\)  
+## <a name="windows-runtime"></a>Windows Runtime  
+ Non pris en charge dans Windows Runtime.  
   
-## Windows Runtime  
- Non pris en charge dans [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
-  
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Remarques**  
   
- Dans une compilation **\/clr**, `new` indique qu'un membre virtuel obtiendra un nouvel emplacement dans la vtable et que la fonction ne substitue pas de méthode de classe de base.  
+ Dans un **/CLR** compilation, `new` indique qu’un membre virtuel obtiendra un nouvel emplacement dans vtable ; que la fonction ne remplace pas une méthode de classe de base.  
   
- `new`cause l'ajout du modificateur newslot à l'IL pour la fonction.  Pour plus d'informations sur newslot, consultez :  
+ `new`provoque le modificateur newslot à ajouter avec le langage intermédiaire pour la fonction.  Pour plus d’informations sur newslot, consultez :  
   
--   [\<caps:sentence id\="tgt11" sentenceid\="e9bb59a12f97840a5c3173bb77c6b5b1" class\="tgtSentence"\>Méthode MethodInfo.GetBaseDefinition\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
+-   [MethodInfo.GetBaseDefinition (méthode)](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
   
--   [\<caps:sentence id\="tgt12" sentenceid\="f6ceddd85a425f38e7ed06e94a9808a9" class\="tgtSentence"\>Énumération de MethodAttributes\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
+-   [Énumération MethodAttributes](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
   
-### Configuration requise  
- Option du compilateur : **\/clr**  
+### <a name="requirements"></a>Spécifications  
+ Option du compilateur : **/clr**  
   
-### Exemples  
+### <a name="examples"></a>Exemples  
  **Exemple**  
   
- L'exemple suivant montre les effets de `new`.  
+ L’exemple suivant montre l’effet de `new`.  
   
 ```  
 // newslot.cpp  
@@ -102,11 +97,18 @@ int main() {
   
  **Sortie**  
   
-  **C::f\(\) appelé**  
- **D::f\(\) appelé**  
- **D::g\(\) appelé**  
- **D::g\(\) appelé**  
- **E::f\(\) appelé**   
-## Voir aussi  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
+```Output  
+C::f() called  
+  
+D::f() called  
+  
+D::g() called  
+  
+D::g() called  
+  
+E::f() called  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)   
  [Spécificateurs de substitution](../windows/override-specifiers-cpp-component-extensions.md)

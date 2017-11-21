@@ -1,45 +1,43 @@
 ---
-title: "auto_gcroot::operator! | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.auto_gcroot.operator!"
-  - "auto_gcroot.operator!"
-  - "msclr::auto_gcroot::operator!"
-  - "auto_gcroot::operator!"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_gcroot::operator!"
+title: auto_gcroot::operator! | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.auto_gcroot.operator!
+- auto_gcroot.operator!
+- msclr::auto_gcroot::operator!
+- auto_gcroot::operator!
+dev_langs: C++
+helpviewer_keywords: auto_gcroot::operator!
 ms.assetid: f9728be3-2e09-4c01-a594-43e0d59d40d3
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9f40c2465e144b25f649cf358a4aa5e3ad3a6902
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::operator!
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Opérateur pour l'utilisation de `auto_gcroot` dans une expression conditionnelle.  
+# <a name="autogcrootoperator"></a>auto_gcroot::operator!
+Opérateur pour l’utilisation de `auto_gcroot` dans une expression conditionnelle.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 bool operator!() const;  
 ```  
   
-## Valeur de retour  
- `true` si l'objet encapsulé est invalide ; `false` sinon.  
+## <a name="return-value"></a>Valeur de retour  
+ `true`Si l’objet encapsulé n’est pas valide ; `false` dans le cas contraire.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // msl_auto_gcroot_operator_not.cpp  
@@ -62,14 +60,17 @@ int main() {
 }  
 ```  
   
-  **s n'est pas valide.**  
-**maintenant s est valide**  
-**maintenant s n'est pas valide**   
-## Configuration requise  
- **Fichier d'en\-tête** \<msclr\\auto\_gcroot.h\>  
+```Output  
+s is invalid  
+now s is valid  
+now s is invalid  
+```  
   
- **Espace de noms** msclr  
+## <a name="requirements"></a>Spécifications  
+ **Fichier d’en-tête** \<msclr\auto_gcroot.h >  
   
-## Voir aussi  
- [auto\_gcroot, membres](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::operator bool](../dotnet/auto-gcroot-operator-bool.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Voir aussi  
+ [auto_gcroot, membres](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::operator bool](../dotnet/auto-gcroot-operator-bool.md)

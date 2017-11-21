@@ -1,31 +1,31 @@
 ---
-title: "Utilisation des signets | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "signets, OLE DB"
-  - "modèles du fournisseur OLE DB, signets"
-  - "fournisseurs OLE DB, prise en charge des signets"
-  - "jeux de lignes, signets"
+title: "À l’aide de signets | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- rowsets, bookmarks
+- OLE DB provider templates, bookmarks
+- bookmarks, OLE DB
+- OLE DB providers, bookmark support
 ms.assetid: 7fa1d1a8-5063-4aa9-93ee-815bb9c98fae
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4b7c5c1a7722e378e313e1b0fe8e9ed10d97ddb9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Utilisation des signets
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Avant d'ouvrir le jeu de ligne, vous devez indiquer au fournisseur que vous souhaitez utiliser des signets.  Pour ce faire, affectez à la propriété **DBPROP\_BOOKMARKS** la valeur **true** dans votre jeu de propriétés.  Le fournisseur récupère des signets comme colonne zéro, donc vous devez utiliser la macro spéciale `BOOKMARK_ENTRY` et la classe `CBookmark` si vous utilisez un accesseur statique.  `CBookmark` est une classe de modèle où l'argument est la longueur en octets de la mémoire tampon de signet.  La taille de la mémoire tampon requise pour un signet dépend du fournisseur.  Si vous utilisez le fournisseur OLE DB ODBC, comme le montre l'exemple suivant, la mémoire tampon doit avoir une capacité de 4 octets.  
+# <a name="using-bookmarks"></a>Utilisation des signets
+Avant d’ouvrir l’ensemble de lignes, vous devez indiquer au fournisseur que vous souhaitez utiliser des signets. Pour ce faire, définissez la **DBPROP_BOOKMARKS** propriété **true** dans votre jeu. Le fournisseur récupère les signets en tant que colonne zéro, vous devez utiliser la macro spéciale `BOOKMARK_ENTRY` et `CBookmark` si vous utilisez un accesseur statique de classe. `CBookmark`est une classe de modèle où l’argument est la longueur en octets de la mémoire tampon de signet. La longueur de la mémoire tampon requise pour un signet dépend du fournisseur. Si vous utilisez le fournisseur OLE DB pour ODBC, comme indiqué dans l’exemple suivant, la mémoire tampon doit être de 4 octets.  
   
 ```  
 class CProducts  
@@ -45,7 +45,7 @@ CTable<CAccessor<CProducts> > product;
 product.Open(session, "Products", &propset);  
 ```  
   
- Si vous utilisez `CDynamicAccessor`, la mémoire tampon est affectée dynamiquement au moment de l'exécution.  En ce cas, vous pouvez utiliser une version spécialisée de `CBookmark` pour laquelle vous ne spécifiez pas une taille de mémoire tampon.  Utilisez la fonction `GetBookmark` pour récupérer le signet de l'enregistrement en cours, comme indiqué dans cet exemple de code :  
+ Si vous utilisez `CDynamicAccessor`, la mémoire tampon est affectée dynamiquement au moment de l’exécution. Dans ce cas, vous pouvez utiliser une version spécialisée de `CBookmark` pour laquelle vous ne spécifiez pas une longueur de la mémoire tampon. Utilisez la fonction `GetBookmark` pour récupérer le signet de l’enregistrement actuel, comme indiqué dans cet exemple de code :  
   
 ```  
 CTable<CDynamicAccessor> product;  
@@ -58,7 +58,7 @@ product.MoveNext();
 product.GetBookmark(&bookmark);  
 ```  
   
- Pour plus d'informations sur la prise en charge des signets par les fournisseurs, consultez [Prise en charge des signets par le fournisseur](../../data/oledb/provider-support-for-bookmarks.md).  
+ Pour plus d’informations sur la prise en charge des signets dans les fournisseurs, consultez [prise en charge du fournisseur pour les signets](../../data/oledb/provider-support-for-bookmarks.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utilisation des accesseurs](../../data/oledb/using-accessors.md)

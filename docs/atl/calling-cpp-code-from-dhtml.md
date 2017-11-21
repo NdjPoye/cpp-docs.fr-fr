@@ -1,53 +1,52 @@
 ---
-title: "Calling C++ Code from DHTML | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DHTML, calling C++ code from"
+title: "Appeler le Code C++ à partir de DHTML | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: DHTML, calling C++ code from
 ms.assetid: 37329acd-4c22-40ca-a85a-b7480748f75f
-caps.latest.revision: 12
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b86bd8874e054dc2d2865523e77436e1f8cf6f81
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Calling C++ Code from DHTML
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Un contrôle DHTML peut être hébergé dans un conteneur, tel que Test Container ou Internet Explorer.  Consultez [propriétés et événements de test avec Test Container](../mfc/testing-properties-and-events-with-test-container.md) pour plus d'informations sur l'accès à l'outil Test Container.  
+# <a name="calling-c-code-from-dhtml"></a>Appel du Code C++ depuis DHTML
+Un contrôle DHTML peut être hébergé dans un conteneur, comme le conteneur de Test ou d’Internet Explorer. Consultez [test des propriétés et des événements avec le conteneur de Test](../mfc/testing-properties-and-events-with-test-container.md) pour plus d’informations sur la façon d’accéder au conteneur de Test.  
   
- Le conteneur héberger le contrôle communique avec le contrôle à l'aide de les interfaces de contrôle normales.  DHTML utilise l'interface de dispatch qui se termine par « interface » pour communiquer avec votre code C\+\+ et votre ressource HTML.  Dans [Modifier le contrôle ATL DHTML](../atl/modifying-the-atl-dhtml-control.md), vous pouvez pratiquer ajouter des méthodes à appeler par ces différentes interfaces.  
+ Le conteneur qui héberge le contrôle communique avec le contrôle à l’aide des interfaces de contrôle normal. DHTML utilise l’interface de dispatch qui se termine par « UI » pour communiquer avec votre code C++ et votre ressource HTML. Dans [modification du contrôle ATL DHTML](../atl/modifying-the-atl-dhtml-control.md), vous pouvez vous exercer à ajouter les méthodes à appeler par ces différentes interfaces.  
   
- Pour obtenir un exemple d'appeler le code C\+\+ DHTML, de [créez un contrôle DHTML](../atl/creating-an-atl-dhtml-control.md) à l'aide de l'Assistant Contrôle ATL et examiner le code dans le fichier d'en\-tête et dans le fichier HTML.  
+ Pour voir un exemple d’appel de code C++ à partir de DHTML, [créer un contrôle DHTML](../atl/creating-an-atl-dhtml-control.md) à l’aide de l’Assistant contrôle ATL et examinez le code dans le fichier d’en-tête et dans le fichier HTML.  
   
-## Déclaration des méthodes WebBrowser dans le fichier d'en\-tête  
- Pour appeler des méthodes C\+\+ DHTML interface utilisateur, vous devez ajouter des méthodes à l'interface de l'interface utilisateur de votre contrôle.  Par exemple, le fichier d'en\-tête créé par l'Assistant Contrôle ATL contient la méthode `OnClick`C\+\+, qui est un membre de l'interface d'interface utilisateur du contrôle généré par l'Assistant.  
+## <a name="declaring-webbrowser-methods-in-the-header-file"></a>Déclarer des méthodes WebBrowser dans le fichier d’en-tête  
+ Pour appeler les méthodes C++ depuis l’UI DHTML, vous devez ajouter des méthodes à l’interface utilisateur de votre contrôle. Par exemple, le fichier d’en-tête créé par l’Assistant contrôle ATL contient la méthode C++ `OnClick`, qui est un membre de l’interface de l’interface utilisateur du contrôle générées par l’Assistant.  
   
- Examinez `OnClick` dans le fichier du .h du contrôle :  
+ Examinez `OnClick` dans le fichier .h du contrôle :  
   
- [!code-cpp[NVC_ATL_COM#4](../atl/codesnippet/CPP/calling-cpp-code-from-dhtml_1.h)]  
+ [!code-cpp[NVC_ATL_COM#4](../atl/codesnippet/cpp/calling-cpp-code-from-dhtml_1.h)]  
   
- Le premier paramètre, `pdispBody`, est un pointeur vers l'interface de dispatch de l'objet de corps.  Le deuxième paramètre, `varColor`, identifie la couleur pour appliquer au contrôle.  
+ Le premier paramètre, `pdispBody`, est un pointeur vers l’interface de dispatch de l’objet corps. Le deuxième paramètre, `varColor`, identifie la couleur à appliquer au contrôle.  
   
-## Code C\+\+ appelant dans le fichier HTML  
- Une fois que vous avez déclaré les méthodes WebBrowser dans le fichier d'en\-tête, vous pouvez appeler les méthodes du fichier HTML.  Notez dans le fichier HTML que les insertions de l'Assistant Contrôle ATL trois fenêtres présentent des méthodes : trois méthodes d' `OnClick` qui présentent des des messages pour modifier la couleur d'arrière\-plan du contrôle.  
+## <a name="calling-c-code-in-the-html-file"></a>Appel du Code C++ dans le fichier HTML  
+ Une fois que vous avez déclaré les méthodes WebBrowser dans le fichier d’en-tête, vous pouvez appeler les méthodes à partir du fichier HTML. Notez dans le fichier HTML que l’Assistant contrôle ATL insère trois méthodes de dispatch Windows : trois `OnClick` méthodes qui distribuent les messages pour modifier la couleur d’arrière-plan du contrôle.  
   
- Examinez l'une des méthodes dans le fichier HTML :  
+ Examinez l’une des méthodes dans le fichier HTML :  
   
  `<BUTTON onclick='window.external.OnClick(theBody, "red");'>Red</BUTTON>`  
   
- Dans le code HTML ci\-dessus, la méthode externe de la fenêtre, `OnClick`, est appelée dans le cadre de la balise de bouton.  La méthode possède deux paramètres : `theBody`, qui référence le corps du document HTML, et `"red"`, ce qui indique que la couleur d'arrière\-plan du contrôle sera modifiée en rouge lorsque l'utilisateur clique sur le bouton.  `Red` suivant l'indicateur est l'étiquette du bouton.  
+ Dans le code HTML ci-dessus, la méthode externe de fenêtre, `OnClick`, est appelée dans le cadre de la légende du bouton. La méthode possède deux paramètres : `theBody`, qui référence le corps du document HTML, et `"red"`, ce qui signifie que couleur d’arrière-plan du contrôle deviendra rouge lorsque le bouton est activé. Le `Red` après la balise est l’étiquette du bouton.  
   
- Consultez [Modifier le contrôle ATL DHTML](../atl/modifying-the-atl-dhtml-control.md) pour plus d'informations sur fournir vos propres méthodes.  Consultez l' [Identifier les éléments du projet de contrôle DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md) pour plus d'informations sur le fichier HTML.  
+ Consultez [modification du contrôle ATL DHTML](../atl/modifying-the-atl-dhtml-control.md) pour plus d’informations sur l’envoi de vos propres méthodes. Consultez [identifier les éléments du projet de contrôle DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md) pour plus d’informations sur le fichier HTML.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge pour un contrôle DHTML](../atl/atl-support-for-dhtml-controls.md)
+

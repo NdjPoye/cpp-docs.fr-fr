@@ -1,44 +1,41 @@
 ---
-title: "Erreur du compilateur C3535 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3535"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3535"
+title: Erreur du compilateur C3535 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C3535
+dev_langs: C++
+helpviewer_keywords: C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3ab054ceefa51ab944e2d048996e25559b0c86ba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Erreur du compilateur C3535
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-impossible de déduire le type pour « type1 » à partir de « type2 »  
+# <a name="compiler-error-c3535"></a>Erreur du compilateur C3535
+Impossible de déduire le type de 'type1' à partir de 'type2'  
   
- Le type de la variable déclarée par le mot clé `auto` ne peut pas être déduit du type de l'expression d'initialisation.  Par exemple, cette erreur se produit si l'expression d'initialisation a la valeur `void`, ce qui n'est pas un type.  
+ Le type de la variable déclarée par le `auto` mot clé ne peut pas être déduit du type de l’expression d’initialisation. Par exemple, cette erreur se produit si l’expression d’initialisation a la valeur `void`, qui n’est pas un type.  
   
-### Pour corriger cette erreur  
+### <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Vérifiez que le type de l'expression d'initialisation n'est pas `void`.  
+1.  Assurez-vous que le type de l’expression d’initialisation n’est pas `void`.  
   
-2.  Vérifiez que la déclaration n'est pas un pointeur vers un type fondamental.  Pour plus d'informations, consultez [Types fondamentaux](../../cpp/fundamental-types-cpp.md).  
+2.  Assurez-vous que la déclaration n’est pas un pointeur vers un type fondamental. Pour plus d’informations, consultez [Types fondamentaux](../../cpp/fundamental-types-cpp.md).  
   
-3.  Vérifiez que si la déclaration est un pointeur vers un type, l'expression d'initialisation est un type pointeur.  
+3.  Assurez-vous que si la déclaration est un pointeur vers un type, l’expression d’initialisation est un type pointeur.  
   
-## Exemple  
- L'exemple suivant donne C3535 parce que l'expression d'initialisation a la valeur `void`.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant donne C3535 parce que l’expression d’initialisation prend la valeur `void`.  
   
 ```  
 // C3535a.cpp  
@@ -51,8 +48,8 @@ int main()
 }  
 ```  
   
-## Exemple  
- L'exemple suivant donne C3535 parce que l'instruction déclare la variable `x` comme un pointeur vers un type déduit, mais le type de l'expression d'initialiseur est double.  Par conséquent, le compilateur ne peut pas déduire le type de la variable.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant donne C3535 parce que l’instruction déclare la variable `x` comme un pointeur vers un type déduit, mais le type de l’initialiseur de l’expression est double. Par conséquent, le compilateur ne peut pas déduire le type de la variable.  
   
 ```  
 // C3535b.cpp  
@@ -64,8 +61,8 @@ int main()
 }  
 ```  
   
-## Exemple  
- L'exemple suivant donne C3535 parce que la variable `p` déclare un pointeur vers un type déduit, mais l'expression d'initialisation n'est pas un type pointeur.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant donne C3535 parce que variable `p` déclare un pointeur vers un type déduit, mais l’expression d’initialisation n’est pas un type pointeur.  
   
 ```  
 // C3535c.cpp  
@@ -75,6 +72,6 @@ A x;
 auto *p = x;  // C3535  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [auto, mot clé](../../cpp/auto-keyword.md)   
  [Types fondamentaux](../../cpp/fundamental-types-cpp.md)

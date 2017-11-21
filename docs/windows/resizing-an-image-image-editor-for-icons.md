@@ -1,60 +1,60 @@
 ---
-title: "Resizing an Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.image.editing"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], resizing images"
-  - "graphics [C++], resizing"
-  - "images [C++], resizing"
-  - "resizing images"
+title: "Redimensionnement d’une Image (Éditeur d’images pour les icônes) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.image.editing
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], resizing images
+- graphics [C++], resizing
+- images [C++], resizing
+- resizing images
 ms.assetid: d83a02c4-4dfe-4586-a0df-51a50c2ba71d
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6c6e8d5e4704f9dda9399d67de5b3d0f93d283a7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Resizing an Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le comportement de l'Éditeur d'images lors du redimensionnement d'une image dépend de la [sélection](../mfc/selecting-an-area-of-an-image-image-editor-for-icons.md) \(intégralité de l'image ou une partie\).  
+# <a name="resizing-an-image-image-editor-for-icons"></a>Redimensionnement d'une image (Éditeur d'images pour les icônes)
+Le comportement de l’éditeur d’images lors du redimensionnement d’une image varie selon que vous avez [sélectionné](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) l’image entière ou une partie.  
   
- Lorsque la sélection ne comprend qu'une partie de l'image, l'Éditeur d'images réduit la sélection en supprimant des lignes ou des colonnes de pixels et en remplissant les régions libérées avec la couleur d'arrière\-plan actuelle ou il étire la sélection en dupliquant des lignes ou des colonnes de pixels.  
+ Lorsque la sélection contient uniquement une partie de l’image, l’éditeur d’images réduit la sélection en supprimant les lignes ou colonnes de pixels et en remplissant les régions libérées avec la couleur d’arrière-plan en cours, ou il s’étend la sélection en dupliquant des lignes ou des colonnes de pixels.  
   
- Lorsque la sélection comprend l'intégralité de l'image, l'Éditeur d'images réduit ou étire l'image ou bien rogne ou étend l'image.  
+ Lorsque la sélection comprend l’intégralité de l’image, l’éditeur d’images soit réduit et s’étend de l’image, ou les cultures et les étend.  
   
- Il existe deux mécanismes pour redimensionner une image : les poignées de redimensionnement et la [fenêtre Propriétés](../Topic/Properties%20Window.md).  Vous pouvez faire glisser les poignées de redimensionnement pour changer la taille d'une partie ou de l'intégralité d'une image.  Les poignées de redimensionnement que vous pouvez faire glisser sont pleines.  Vous ne pouvez pas faire glisser des poignées qui sont vides.  Vous ne pouvez utiliser la fenêtre Propriétés que pour redimensionner l'intégralité d'une image.  
+ Il existe deux mécanismes pour redimensionner une image : les poignées de redimensionnement et la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Vous pouvez faire glisser les poignées de redimensionnement pour modifier la taille de tous ou une partie d’une image. Les poignées de dimensionnement que vous pouvez faire glisser sont pleines. Vous ne peut pas faire glisser les poignées qui sont vides. Vous pouvez utiliser la fenêtre de propriétés pour redimensionner l’image entière uniquement, pas une partie sélectionnée.  
   
- ![Poignées de dimensionnement d'une image bitmap](../mfc/media/vcimageeditorsizinghandles.png "vcImageEditorSizingHandles")  
+ ![Poignées d’une image bitmap](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")  
 Poignées de redimensionnement  
   
 > [!NOTE]
->  Si l'option Grille mosaïque est sélectionnée dans la [boîte de dialogue Paramètres de la grille](../mfc/grid-settings-dialog-box-image-editor-for-icons.md), l'image lors du redimensionnement s'aligne sur le quadrillage suivant.  Si seule l'option Grille de pixels est sélectionnée \(paramètre par défaut\), l'image lors du redimensionnement s'aligne sur le pixel suivant.  
+>  Si vous avez l’option de grille mosaïque sélectionnée dans le [boîte de dialogue Paramètres de la grille](../windows/grid-settings-dialog-box-image-editor-for-icons.md), redimensionnement s’aligne sur le quadrillage suivant. Si seule la grille de pixels est de l’option sélectionnée (paramètre par défaut), redimensionnement s’aligne sur le pixel suivant.  
   
--   [Redimensionnement de l'intégralité d'une image](../mfc/resizing-an-entire-image-image-editor-for-icons.md)  
+-   [Redimensionner l’intégralité d’une Image](../windows/resizing-an-entire-image-image-editor-for-icons.md)  
   
--   [Rognage ou extension de l'intégralité d'une image](../mfc/cropping-or-extending-an-entire-image-image-editor-for-icons.md)  
+-   [Rognage ou extension de l’intégralité d’une Image](cropping-or-extending-an-entire-image-image-editor-for-icons.md)  
   
--   [Réduction ou étirement de l'intégralité d'une image](../mfc/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md)  
+-   [Réduction ou étirement de l’intégralité d’une Image](../windows/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md)  
   
--   [Réduction ou étirement d'une partie d'une image](../mfc/shrinking-or-stretching-part-of-an-image-image-editor-for-icons.md)  
+-   [Réduction ou étirement d’une partie d’une Image](../windows/shrinking-or-stretching-part-of-an-image-image-editor-for-icons.md)  
   
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l'ajout de fichiers de ressources aux projets managés, l'accès aux ressources, l'affichage de ressources statiques et l'assignation de chaînes de ressources aux propriétés, et ce manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/fr-fr/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](https://msdn.microsoft.com/library/f45fce5x.aspx) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](https://msdn.microsoft.com/library/xbx3z216.aspx). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Configuration requise  
- Aucun  
+## <a name="requirements"></a>Spécifications  
+ Aucune  
   
-## Voir aussi  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Voir aussi  
+ [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Modification de ressources graphiques](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)
+

@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- AMP_GRAPHICS/Concurrency
-dev_langs:
-- C++
+f1_keywords: AMP_GRAPHICS/Concurrency
+dev_langs: C++
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: e08a9bc52b7ce519508bb1682287e75070d341a1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: ad53fea97c98f496d1140725f4232052e2f53d3b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics, espace de noms
 L’espace de noms du graphique fournit des types et des fonctions conçues pour la programmation graphique.  
@@ -53,13 +35,13 @@ namespace graphics;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Concurrency::graphics::direct3d, espace de noms](concurrency-graphics-direct3d-namespace.md)|Fournit des fonctions pour l’interopérabilité de Direct3D.|  
+|[Concurrency::graphics::direct3d, espace de noms](concurrency-graphics-direct3d-namespace.md)|Fournit des fonctions de l’interopérabilité de Direct3D.|  
   
 ### <a name="typedefs"></a>Typedef  
   
 |Nom|Description|  
 |----------|-----------------|  
-|`uint`|Le type d’élément de [uint_2, classe](uint-2-class.md), [uint_3, classe](uint-3-class.md), et [uint_4, classe](uint-4-class.md). Défini comme `typedef unsigned int uint;`.|  
+|`uint`|Le type d’élément pour [uint_2, classe](uint-2-class.md), [uint_3, classe](uint-3-class.md), et [uint_4, classe](uint-4-class.md). Défini comme `typedef unsigned int uint;`.|  
   
 ### <a name="enumerations"></a>Énumérations  
   
@@ -72,29 +54,29 @@ namespace graphics;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[texture, classe](texture-class.md)|Une texture est un agrégat sur une accelerator_view dans le domaine de l’extension de données. Il est une collection de variables, un pour chaque élément dans un domaine de l’étendue. Chaque variable contient une valeur correspondant à un type primitif C++ (unsigned int, int, float, double) ou normales de type scalaire, ou unorm (défini dans concurrency::graphics) ou types de vecteurs courts éligibles définis dans concurrency::graphics.|  
-|[writeonly_texture_view, classe](writeonly-texture-view-class.md)|Un writeonly_texture_view fournit un accès writeonly une texture.|  
+|[texture, classe](texture-class.md)|Une texture est un agrégat sur une accelerator_view dans le domaine de l’extension de données. Il est une collection de variables, un pour chaque élément dans un domaine de l’étendue. Chaque variable contient une valeur correspondant à un type primitif de C++ (unsigned int, int, float, double), ou la norme de type scalaire ou unorm (défini dans concurrency::graphics) ou types de vecteurs courts éligibles définies dans concurrency::graphics.|  
+|[writeonly_texture_view, classe](writeonly-texture-view-class.md)|Un writeonly_texture_view fournit l’accès de writeonly une texture.|  
 |[double_2, classe](double-2-class.md)|Représente un vecteur court de 2 `double` valeurs.|  
-|[double_3, classe](double-3-class.md)|Représente un vecteur court 3 `double` valeurs.|  
+|[double_3, classe](double-3-class.md)|Représente un vecteur court des 3 `double` valeurs.|  
 |[double_4, classe](double-4-class.md)|Représente un vecteur court de 4 `double` valeurs.|  
 |[float_2, classe](float-2-class.md)|Représente un vecteur court de 2 `float` valeurs.|  
-|[float_3, classe](float-3-class.md)|Représente un vecteur court 3 `float` valeurs.|  
+|[float_3, classe](float-3-class.md)|Représente un vecteur court des 3 `float` valeurs.|  
 |[float_4, classe](float-4-class.md)|Représente un vecteur court de 4 `float` valeurs.|  
 |[int_2, classe](int-2-class.md)|Représente un vecteur court de 2 `int` valeurs.|  
-|[int_3, classe](int-3-class.md)|Représente un vecteur court 3 `int` valeurs.|  
+|[int_3, classe](int-3-class.md)|Représente un vecteur court des 3 `int` valeurs.|  
 |[int_4, classe](int-4-class.md)|Représente un vecteur court de 4 `int` valeurs.|  
 |[norm_2, classe](norm-2-class.md)|Représente un vecteur court de 2 `norm` valeurs.|  
-|[norm_3, classe](norm-3-class.md)|Représente un vecteur court 3 `norm` valeurs.|  
+|[norm_3, classe](norm-3-class.md)|Représente un vecteur court des 3 `norm` valeurs.|  
 |[norm_4, classe](norm-4-class.md)|Représente un vecteur court de 4 `norm` valeurs.|  
 |[uint_2, classe](uint-2-class.md)|Représente un vecteur court de 2 `uint` valeurs.|  
-|[uint_3, classe](uint-3-class.md)|Représente un vecteur court 3 `uint` valeurs.|  
+|[uint_3, classe](uint-3-class.md)|Représente un vecteur court des 3 `uint` valeurs.|  
 |[uint_4, classe](uint-4-class.md)|Représente un vecteur court de 4 `uint` valeurs.|  
 |[unorm_2, classe](unorm-2-class.md)|Représente un vecteur court de 2 `unorm` valeurs.|  
-|[unorm_3, classe](unorm-3-class.md)|Représente un vecteur court 3 `unorm` valeurs.|  
+|[unorm_3, classe](unorm-3-class.md)|Représente un vecteur court des 3 `unorm` valeurs.|  
 |[unorm_4, classe](unorm-4-class.md)|Représente un vecteur court de 4 `unorm` valeurs.|  
-|[sampler, classe](sampler-class.md)|Représente la configuration de l’échantillon utilisée pour l’échantillonnage de texture.|  
+|[sampler, classe](sampler-class.md)|Représente la configuration de l’échantillonneur utilisée pour l’échantillonnage de texture.|  
 |[short_vector, structure](short-vector-structure.md)|Fournit une implémentation de base d’un vecteur court de valeurs.|  
-|[short_vector_traits, structure](short-vector-traits-structure.md)|Offre pour la récupération de la longueur et le type d’un vecteur court.|  
+|[short_vector_traits, structure](short-vector-traits-structure.md)|Fournit pour la récupération de la longueur et le type d’un vecteur court.|  
 |[texture_view, classe](texture-view-class.md)|Fournit l’accès en lecture et écriture à une texture.|  
   
 ### <a name="functions"></a>Fonctions  
@@ -111,4 +93,3 @@ namespace graphics;
   
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

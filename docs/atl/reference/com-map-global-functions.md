@@ -4,39 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- COM interfaces, COM map global functions
+f1_keywords:
+- atlbase/ATL::AtlInternalQueryInterface
+- atlbase/ATL::InlineIsEqualIUnknown
+dev_langs: C++
+helpviewer_keywords: COM interfaces, COM map global functions
 ms.assetid: b9612d30-eb23-46ef-8093-d56f237d3cf1
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: d6f23de1a5fd13d61d376acded35f9217d0a898d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 8a5c73f99d8d31ad500b232d371bf55072dd567a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="com-map-global-functions"></a>Fonctions globales de mappage COM
 Ces fonctions fournissent la prise en charge pour le mappage COM **IUnknown** implémentations.  
@@ -81,7 +66,7 @@ HRESULT AtlInternalQueryInterface(
  `AtlInternalQueryInterface` gère seulement des interfaces dans le tableau de mappage COM. Si votre objet est agrégée, `AtlInternalQueryInterface` ne délègue pas à inconnu externe. Vous pouvez entrer des interfaces dans la table de mappage COM avec la macro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) ou une de ses variantes.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Windowing #94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing#94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]  
   
 ##  <a name="inlineisequaliunknown"></a>InlineIsEqualIUnknown  
  Appelez cette fonction, dans le cas particulier du test de **IUnknown**.  
@@ -97,4 +82,3 @@ BOOL InlineIsEqualUnknown(REFGUID rguid1);
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions](../../atl/reference/atl-functions.md)   
  [Macros de mappage COM](../../atl/reference/com-map-macros.md)
-

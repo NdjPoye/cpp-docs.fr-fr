@@ -1,38 +1,37 @@
 ---
-title: "_mm_extract_si64, _mm_extracti_si64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_extracti_si64"
-  - "_mm_extract_si64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "extrq, instruction"
-  - "_mm_extracti_si64, intrinsèque"
-  - "_mm_extract_si64, intrinsèque"
+title: _mm_extract_si64, _mm_extracti_si64 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _mm_extracti_si64
+- _mm_extract_si64
+dev_langs: C++
+helpviewer_keywords:
+- extrq instruction
+- _mm_extracti_si64 intrinsic
+- _mm_extract_si64 intrinsic
 ms.assetid: 459fdd72-cc54-4ee5-bbd5-d2c6067a88e7
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 33467ac3a4397c3f446abe370dca5dc16c1a92ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# _mm_extract_si64, _mm_extracti_si64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64, _mm_extracti_si64
+**Section spécifique à Microsoft**  
   
- Génère des instructions d' `extrq` de récupérer les bits spécifié des bits du bas 64 de son premier argument.  
+ Génère le `extrq` instruction d’extraction bits spécifiée à partir de 64 bits de poids faibles du premier argument.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 __m128i _mm_extract_si64(  
@@ -46,41 +45,41 @@ __m128i _mm_extracti_si64(
 );  
 ```  
   
-#### Paramètres  
- \[in\] `Source`  
- Un champ 128 bits avec les données d'entrée dans ses 64 bits inférieurs.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `Source`  
+ Un champ de 128 bits avec des données d’entrée dans son 64 bits de poids faible.  
   
- \[in\]    `Descriptor`  
- Un champ 128 bits qui décrit le champ de bits pour récupérer.  
+ [in]`Descriptor`  
+ Un champ de 128 bits qui décrit le champ de bits pour extraire.  
   
- \[in\]    `Length`  
- Un entier qui spécifie la longueur du champ à récupérer.  
+ [in]`Length`  
+ Entier qui spécifie la longueur du champ à extraire.  
   
- \[in\]    `Index`  
- Un entier qui spécifie l'index du champ pour récupérer  
+ [in]`Index`  
+ Entier qui spécifie l’index du champ à extraire  
   
-## Valeur de retour  
- Un champ 128 bits avec le champ extrait dans ses de modifier certains bits.  
+## <a name="return-value"></a>Valeur de retour  
+ Un champ de 128 bits avec le champ extrait dans son bits les moins significatifs.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`_mm_extract_si64`|SSE4a|  
 |`_mm_extracti_si64`|SSE4a|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- Cette intrinsèque génère des instructions d' `extrq` de récupérer des bits d' `Source`. Il existe deux versions de cette intrinsèque : `_mm_extracti_si64` est la version immédiate, et `_mm_extract_si64` est le non\-immédiat.  chaque version extrait d' `Source` qu'un champ de bits a défini par sa longueur et l'index de son bit le moins significatif.  Les valeurs de longueur et l'index sont le modèle pris 64, donc \-1 et 127 sont interprètes comme 63.  Si la somme de l'index \(réduit\) et la longueur du champ \(réduite\) est supérieure à 64, les résultats sont indéfinis.  Une valeur zéro pour la taille du champ est interprétée comme 64.  Si l'index de longueur de champ et de bits sont les deux zéro, 63:0 de bits d' `Source` sont récupérés.  Si la taille du champ est zéro mais l'index de bit est différente de zéro, les résultats sont indéfinis.  
+## <a name="remarks"></a>Remarques  
+ Cet intrinsèque génère le `extrq` instruction d’extraction des bits de `Source`. Il existe deux versions de cette intrinsèques : `_mm_extracti_si64` est la version immédiate, et `_mm_extract_si64` est celui non immédiate.  L’extrait de chaque version `Source` un champ de bits défini par sa longueur et de l’index de son bit le moins significatif. Les valeurs de la longueur et les index sont extraites mod 64, par conséquent, -1 et 127 sont interprétés en tant que 63. Si la somme des index (réduit) et la longueur de champ (réduit) est supérieure à 64, les résultats sont indéfinis. Une valeur égale à zéro pour la longueur de champ est interprétée comme 64. Si l’index de longueur et les bits du champ est les deux zéro, 63:0 de bits de `Source` sont extraits. Si la longueur de champ est égal à zéro, mais l’index de bits est différente de zéro, les résultats sont indéfinis.  
   
- Dans un appel à \_mm\_extract\_si64, `Descriptor` contient l'index dans le de 13:8 bits et la taille du champ de données à récupérer dans le de 5:0 bits.  
+ Dans un appel à _mm_extract_si64, le `Descriptor` contient l’index de bits 13:8 et la longueur du champ des données à extraire dans bits 5:0...  
   
- Si vous appelez `_mm_extracti_si64` avec les arguments que le compilateur ne peut pas déterminer pour être des constantes entières le compilateur génère du code pour compacter ces valeurs dans un registre XMM \(`Descriptor`\) et appeler `_mm_extract_si64`.  
+ Si vous appelez `_mm_extracti_si64` avec des arguments que le compilateur ne peut pas déterminer à être des constantes entières le compilateur génère du code pour le pack de ces valeurs dans un registre XMM (`Descriptor`) et d’appeler `_mm_extract_si64`.  
   
- Pour déterminer la prise en charge du matériel pour l'instruction d' `extrq` , appelez l'intrinsèque de `__cpuid` avec `InfoType=0x80000001` et le bit de contrôle 6 d' `CPUInfo[2] (ECX)`.  Ce bit est 1 si l'instruction est prise en charge, et 0 sinon.  Si vous exécutez le code qui utilise ces informations intrinsèque qui ne prend pas en charge l'instruction d' `extrq` , les résultats sont imprévisibles.  
+ Pour déterminer la prise en charge matérielle pour le `extrq` instruction, appelez le `__cpuid` intrinsèque avec `InfoType=0x80000001` et vérifiez le bit 6 de `CPUInfo[2] (ECX)`. Ce bit sera égale à 1 si l’instruction est prise en charge et 0 dans le cas contraire. Si vous exécutez le code qui utilise ce matériel intrinsèque qui ne prend pas en charge la `extrq` instruction, les résultats sont imprévisibles.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // Compile this sample with: /EHsc  
@@ -109,12 +108,15 @@ main()
 }  
 ```  
   
-  **result1 \= 0x30eca86**  
-**result2 \= 0x30eca86**  
-**result3 \= 0x30eca86**   
-## détail de FIN Microsoft  
- copyright 2007 par Advanced Micro Devices, Inc.  Tous droits réservés.  reproduit avec l'autorisation d'Advanced Micro Devices, Inc.  
+```Output  
+result1 = 0x30eca86  
+result2 = 0x30eca86  
+result3 = 0x30eca86  
+```  
   
-## Voir aussi  
- [\_mm\_insert\_si64, \_mm\_inserti\_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)   
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+**FIN de la section spécifique à Microsoft**  
+ Copyright 2007 par Advanced Micro Devices, Inc. Tous droits réservés. Reproduit avec l’autorisation d’Advanced Micro Devices, Inc.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)   
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

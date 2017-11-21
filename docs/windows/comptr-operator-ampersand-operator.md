@@ -1,33 +1,30 @@
 ---
-title: "ComPtr::operator&amp;, op&#233;rateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::operator&"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "& (opérateur)"
+title: "ComPtr::operator&amp; opérateur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::operator&
+dev_langs: C++
+helpviewer_keywords: operator& operator
 ms.assetid: 2d77fda6-f4b2-45c1-8a0e-fbc355013531
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2b464a77fedf0d996210040b744faea0ee7372ef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# ComPtr::operator&amp;, op&#233;rateur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Libère l'interface associée à cet objet `ComPtr` puis récupère l'adresse de l'objet `ComPtr` .  
+# <a name="comptroperatoramp-operator"></a>ComPtr::operator&amp; (opérateur)
+Libère l’interface associée à ce `ComPtr` de l’objet, puis récupère l’adresse de le `ComPtr` objet.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
 Details::ComPtrRef<WeakRef> operator&()  
@@ -35,16 +32,16 @@ Details::ComPtrRef<WeakRef> operator&()
 const Details::ComPtrRef<const WeakRef> operator&() const  
 ```  
   
-## Valeur de retour  
- Obtient une référence faible au `ComPtr` actuel.  
+## <a name="return-value"></a>Valeur de retour  
+ Une référence faible à actuel `ComPtr`.  
   
-## Notes  
- Cette méthode diffère de [ComPtr::GetAddressOf](../windows/comptr-getaddressof-method.md) dans la mesure où cette méthode récupère une référence au pointeur d'interface.  Utilisez `ComPtr::GetAddressOf` lorsque vous avez besoin de l'adresse du pointeur d'interface mais ne souhaitez pas libérer cette interface.  
+## <a name="remarks"></a>Remarques  
+ Cette méthode diffère [ComPtr::GetAddressOf](../windows/comptr-getaddressof-method.md) dans la mesure où cette méthode libère une référence au pointeur d’interface. Utilisez `ComPtr::GetAddressOf` quand vous exigent l’adresse du pointeur d’interface, mais ne souhaitez pas libérer cette interface.  
   
-## Configuration requise  
- **En\-tête:** client.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** client.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ComPtr, classe](../windows/comptr-class.md)

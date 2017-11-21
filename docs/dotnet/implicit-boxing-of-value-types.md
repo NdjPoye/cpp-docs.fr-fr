@@ -1,44 +1,44 @@
 ---
-title: "Conversion boxing implicite de types valeur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__box (mot clé)"
-  - "conversion boxing"
-  - "conversion boxing, __box (mot clé)"
-  - "conversion boxing, Visual C++"
-  - "types valeur, boxed"
+title: Conversion Boxing implicite de Types valeur | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- boxing, Visual C++
+- __box keyword
+- boxing
+- boxing, __box keyword
+- value types, boxed
 ms.assetid: 9597c92f-a3fe-44af-ad80-f9d656847a35
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1f489c686a182840e142264476c3906d0cbfe97b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Conversion boxing implicite de types valeur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La conversion boxing de types valeur a été modifiée entre Extensions managées pour C\+\+ et [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+# <a name="implicit-boxing-of-value-types"></a>Conversion boxing implicite de types valeur
+La conversion boxing de types valeur a été modifiée à partir des Extensions managées pour C++ vers Visual C++.  
   
- En termes de conception de langage, nous avons privilégié une position philosophique au détriment d'un point de vue pratique s'agissant de cette fonctionnalité. Dans la pratique, cela s'est révélé être une erreur.  Pour faire une analogie, dans la conception initiale de l'héritage multiple dans le langage, Stroustrup décidait qu'un sous\-objet de classe de base virtuelle ne pouvait pas être initialisé dans un constructeur de classe dérivée, et par conséquent le langage exigeait que toute classe utilisée comme classe de base virtuelle définisse un constructeur par défaut.  La dérivation virtuelle suivante appellerait ce constructeur par défaut.  
+ Dans la conception du langage, nous imposée à une position philosophique à la place d’une expérience pratique avec la fonctionnalité et, dans la pratique, il a une erreur. Par analogie, dans la version d’origine plusieurs conception du langage d’héritage, Stroustrup a décidé qu’un sous-objet de classe de base virtuelle n’a pas pu être initialisé dans un constructeur de classe dérivée, et par conséquent, la langue requises que n’importe quelle classe servant de base virtuelle classe doit définir un constructeur par défaut. Il est de ce constructeur par défaut qui peuvent être appelé par dérivation virtuelle suivante.  
   
- Le problème d'une hiérarchie de classe de base virtuelle est qu'à chaque dérivation suivante, la responsabilité de l'initialisation du sous\-objet virtuel partagé se déplace.  Par exemple, si je définis une classe de base dont l'initialisation requiert l'allocation d'une mémoire tampon, la taille de celle\-ci spécifiée par l'utilisateur peut être passée en tant qu'argument au constructeur.  Si je fournis par la suite deux dérivations virtuelles, que nous appellerons `inputb` et `outputb`, chacune fournit une valeur particulière au constructeur de classe de base.  Mais lorsque j'ai dérivé une classe `in_out` à la fois d'`inputb` et d'`outputb`, aucune de ces valeurs du sous\-objet de classe de base virtuelle partagée ne peut raisonnablement être autorisée à évaluer.  
+ Le problème d’une hiérarchie de classe de base virtuelle est que le responsable de l’initialisation du sous-objet virtuel partagé se déplace à chaque dérivation suivante. Par exemple, si une classe de base pour définir dont l’initialisation requiert l’allocation d’une mémoire tampon, la taille spécifiée par l’utilisateur de cette mémoire tampon peut être passé en tant qu’argument au constructeur. Si ensuite fournir deux dérivations virtuelles, les appeler `inputb` et `outputb`, chacune fournit une valeur particulière au constructeur de classe de base. Maintenant, lorsque je dérivée un `in_out` classe à partir des deux `inputb` et `outputb`, aucune de ces valeurs le sous-objet de classe de base virtuelle partagée ne peut raisonnablement être autorisée à évaluer.  
   
- Par conséquent, dans la conception originelle du langage, Stroustrup refusait l'initialisation explicite d'une classe de base virtuelle dans la liste d'initialiseurs de membre du constructeur de classe dérivée.  Bien que cela résolve le problème, l'incapacité de diriger l'initialisation de la classe de base virtuelle s'est révélée inapplicable d'un point de vue pratique.  Keith Gorlen, de l'Institut National de la Santé, qui avait implémenté une version gratuite de la bibliothèque de collection Smalltalk appelée nihcl, a puissamment argumenté pour convaincre Stroustrup qu'il devait rechercher une conception plus souple du langage.  
+ Par conséquent, dans la conception d’origine du langage, Stroustrup interdit l’initialisation explicite d’une classe de base virtuelle dans la liste des membres de l’initialisation du constructeur de classe dérivée. Bien que cela résolve le problème, dans la pratique, l’incapacité de diriger l’initialisation de la classe de base virtuelle révélé impossible. Keith Gorlen, de l’Institut National de la santé, qui avait implémenté une version gratuite de la bibliothèque de collection SmallTalk appelée nihcl, a une voix principe convaincre Stroustrup qu’il devait avec une conception plus souple du langage.  
   
- Un principe de la conception hiérarchique orientée objet stipule qu'une classe dérivée ne devrait être concernée que par l'implémentation non privée de ses classes de base immédiates.  Pour pouvoir prendre en charge une conception d'initialisation souple de l'héritage virtuel, Stroustrup a été contraint de violer ce principe.  La classe la plus dérivée dans une hiérarchie assume la responsabilité de l'initialisation de tous les sous\-objets virtuels, où qu'elle se situe dans la hiérarchie.  Par exemple, `inputb` et `outputb` sont toutes deux chargées d'initialiser explicitement leur classe de base virtuelle immédiate.  Lorsque `in_out` dérive de `inputb` et de `outputb`, `in_out` devient responsable de l'initialisation de la classe de base virtuelle qui auparavant était supprimée, et l'initialisation rendue explicite au sein de `inputb` et `outputb` est supprimée.  
+ Un principe de conception hiérarchique orientée objet stipule qu’une classe dérivée doit être concernent uniquement avec l’implémentation non privée de ses classes de base immédiates. Pour prendre en charge une conception d’initialisation souple pour l’héritage virtuel, Stroustrup a été contraint de violer ce principe. La classe la plus dérivée dans une hiérarchie assume la responsabilité pour une initialisation tous les sous-objets virtuels quelle que soit la profondeur dans la hiérarchie, il se produit. Par exemple, `inputb` et `outputb` sont toutes deux chargées d’initialiser explicitement leur classe de base virtuelle immédiate. Lorsque `in_out` dérive les deux `inputb` et `outputb`, `in_out` devient responsable de l’initialisation d’une fois supprimé de classe de base virtuelle, et l’initialisation rendue explicite dans `inputb` et `outputb` est supprimé.  
   
- Cela apporte la souplesse nécessaire aux développeurs de langage, mais au prix d'une sémantique compliquée.  Cette complexité peut être allégée en n'autorisant pas une classe de base virtuelle à avoir un état et en lui permettant simplement de spécifier une interface.  Il s'agit de l'idiome de conception recommandé dans C\+\+.  Dans la programmation du CLR, il est élevé au rang de stratégie, s'agissant du type d'interface.  
+ Cela offre la souplesse nécessaire aux développeurs de langage, mais au prix d’une sémantique compliquée. Cette charge de la complication est ignorée si nous limiter à une classe de base virtuelle pour être sans état et simplement lui permettre de spécifier une interface. Il s’agit d’un idiome de conception recommandé dans C++. Dans la programmation CLR, il est déclenché à la stratégie avec le type d’Interface.  
   
- Voici un exemple de code simple – dans ce cas, la conversion boxing explicite est inutile :  
+ Voici un exemple de code simple - et dans ce cas, la conversion boxing explicite est inutile :  
   
 ```  
 // Managed Extensions for C++ requires explicit __box operation  
@@ -52,7 +52,7 @@ Console::WriteLine( "{0}\t{1}\t{2}", __box(0),
    __box(my1DIntArray->GetUpperBound(0)) );  
 ```  
   
- Comme vous pouvez le constater, il y a de nombreuses conversions boxing.  Sous [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)], la conversion boxing de type valeur est implicite :  
+ Comme vous pouvez le voir, il existe un grand nombre de boxing sur. Type de valeur sous Visual C++, la conversion boxing est implicite :  
   
 ```  
 // new syntax makes boxing implicit  
@@ -64,6 +64,6 @@ Console::WriteLine( "{0}\t{1}\t{2}", 0,
    my1DIntArray->GetUpperBound( 0 ) );  
 ```  
   
-## Voir aussi  
- [Types valeur et leurs comportements \(C\+\+\/CLI\)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
- [Boxing](../windows/boxing-cpp-component-extensions.md)
+## <a name="see-also"></a>Voir aussi  
+ [Types valeur et leurs comportements (C + c++ / CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
+ [Conversion boxing](../windows/boxing-cpp-component-extensions.md)

@@ -1,32 +1,30 @@
 ---
-title: "DontUseNewUseMake::operator new, op&#233;rateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::DontUseNewUseMake::operator new"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "new (opérateur)"
+title: "DontUseNewUseMake::operator new, opérateur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::DontUseNewUseMake::operator new
+dev_langs: C++
+helpviewer_keywords: operator new operator
 ms.assetid: 6af07a0d-2271-430c-9d9b-5a4223fed049
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5424108692bd97bdea890aff85ab7428276dd430
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# DontUseNewUseMake::operator new, op&#233;rateur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="dontusenewusemakeoperator-new-operator"></a>DontUseNewUseMake::operator new, opérateur
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void* operator new(  
@@ -35,24 +33,24 @@ void* operator new(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `__unnamed0`  
- Un paramètre sans nom spécifiant le nombre d'octets de mémoire à allouer.  
+ Un paramètre sans nom qui spécifie le nombre d’octets de mémoire à allouer.  
   
  `placement`  
  Le type à allouer.  
   
-## Valeur de retour  
- Permet de passer des arguments supplémentaires si vous surchargez l'opérateur `new`.  
+## <a name="return-value"></a>Valeur de retour  
+ Offre un moyen de passer des arguments supplémentaires si vous surchargez l’opérateur `new`.  
   
-## Notes  
- Surcharge l'opérateur `new` et l'empêche d'être utilisée dans RuntimeClass.  
+## <a name="remarks"></a>Remarques  
+ Surcharge d’opérateur `new` et empêche l’utilisation de RuntimeClass.  
   
-## Configuration requise  
- **En\-tête:** implements.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** implements.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
- [DontUseNewUseMake, classe](../windows/dontusenewusemake-class.md)   
+## <a name="see-also"></a>Voir aussi  
+ [DontUseNewUseMake (classe)](../windows/dontusenewusemake-class.md)   
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

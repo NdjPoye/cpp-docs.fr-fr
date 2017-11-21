@@ -1,38 +1,38 @@
 ---
-title: "Utilisation d&#39;accesseurs dynamiques | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "accesseurs (C++), dynamiques"
-  - "accesseurs dynamiques"
+title: "Utilisation d’accesseurs dynamiques | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- accessors [C++], dynamic
+- dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e7995415bf74dabab43a86495630f77bd015d2bd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Utilisation d&#39;accesseurs dynamiques
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les accesseurs dynamiques vous permettent d'accéder à une source de données lorsque vous ignorez tout du schéma de la base de données \(sa structure sous\-jacente\).  La bibliothèque des modèles OLE DB contient plusieurs classes destinées à vous aider à accomplir cette tâche.  
+# <a name="using-dynamic-accessors"></a>Utilisation d’accesseurs dynamiques
+Accesseurs dynamiques permettent d’accéder à une source de données lorsque vous n’avez aucune connaissance du schéma de base de données (structure sous-jacente). La bibliothèque de modèles OLE DB fournit plusieurs classes pour ce faire.  
   
- L'exemple [DynamicConsumer](http://msdn.microsoft.com/fr-fr/2ccc4c61-6749-4e83-aa81-00f8009c0dc3) montre comment utiliser les classes d'accesseurs dynamiques pour obtenir des informations sur les colonnes et créer des accesseurs de manière dynamique.  
+ Le [DynamicConsumer](http://msdn.microsoft.com/en-us/2ccc4c61-6749-4e83-aa81-00f8009c0dc3) montre comment utiliser les classes d’accesseurs dynamiques pour obtenir des informations sur les colonnes et créer des accesseurs de manière dynamique.  
   
-## Utilisation de CDynamicAccessor  
- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) vous permet d'accéder à une source de données lorsque vous n'avez aucune connaissance du schéma de la base de données \(la structure sous\-jacente de la base de données\).  Les méthodes `CDynamicAccessor` obtiennent des informations sur la colonne telles que les noms de colonne, nombre et type de données.  Vous utilisez ces informations sur les colonnes pour créer un accesseur de manière dynamique au moment de l'exécution.  Les informations sur les colonnes sont stockées dans une mémoire tampon qui est créé et managée par cette classe.  Récupérez les données à partir de la mémoire tampon en utilisant la méthode [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md).  
+## <a name="using-cdynamicaccessor"></a>Utilisation de CDynamicAccessor  
+ [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) vous permet d’accéder à une source de données lorsque vous n’avez aucune connaissance du schéma de base de données (structure sous-jacente de la base de données). `CDynamicAccessor`méthodes d’obtiennent des informations de colonne telles que les noms de colonne, nombre et type de données. Ces informations de colonne vous permet de créer un accesseur dynamique au moment de l’exécution. Les informations de colonne sont stockées dans une mémoire tampon qui est créée et gérée par cette classe. Obtenir des données à partir de la mémoire tampon à l’aide de la [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md) (méthode).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // Using_Dynamic_Accessors.cpp  
@@ -98,14 +98,14 @@ int main( int argc, char* argv[] )
 }  
 ```  
   
-## Utilisation de CDynamicStringAccessor  
- [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md) fonctionne comme [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), sauf sur un plan important.  Alors que `CDynamicAccessor` demande des données dans le format natif indiqué par le fournisseur, `CDynamicStringAccessor` demande que le fournisseur récupère toutes les données ayant fait l'objet d'un accès à partir du magasin de données en tant que données de type chaîne.  Cette approche est particulièrement utile pour des tâches simples qui n'exigent pas de calcul de valeurs dans le magasin de données, comme l'affichage ou l'impression du contenu du magasin de données.  
+## <a name="using-cdynamicstringaccessor"></a>Utilisation de CDynamicStringAccessor  
+ [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md) fonctionne comme [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), sauf sur un point important. Alors que `CDynamicAccessor` demande des données dans le format natif indiqué par le fournisseur, `CDynamicStringAccessor` demande que le fournisseur récupère toutes les données accessibles à partir du magasin de données en tant que données de type chaîne. Cela est particulièrement utile pour les tâches simples qui ne nécessitent pas de calcul de valeurs dans le magasin de données, telles que l’affichage ou l’impression du contenu du magasin de données.  
   
- Utilisez les méthodes `CDynamicStringAccessor` pour récupérer des informations sur les colonnes.  Vous utilisez ces informations sur les colonnes pour créer un accesseur de manière dynamique au moment de l'exécution.  Les informations sur les colonnes sont stockées dans une mémoire tampon qui est créée et managée par cette classe.  Récupérez les données à partir de la mémoire tampon en utilisant [CDynamicStringAccessor::GetString](../../data/oledb/cdynamicstringaccessor-getstring.md), ou stockez\-les dans la mémoire tampon à l'aide de [CDynamicStringAccessor::SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).  
+ Utilisez `CDynamicStringAccessor` méthodes pour obtenir des informations de colonne. Ces informations de colonne vous permet de créer un accesseur dynamique au moment de l’exécution. Les informations de colonne sont stockées dans une mémoire tampon créée et gérée par cette classe. Obtenir des données à partir de la mémoire tampon à l’aide de [CDynamicStringAccessor::GetString](../../data/oledb/cdynamicstringaccessor-getstring.md) ou stockez-le dans la mémoire tampon à l’aide de [CDynamicStringAccessor::SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // Using_Dynamic_Accessors_b.cpp  
@@ -160,16 +160,16 @@ int main( int argc, char* argv[] )
 }  
 ```  
   
-## Utilisation de CDynamicParameterAccessor  
- [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) est similaire à [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), sauf que `CDynamicParameterAccessor` récupère les informations sur les paramètres à définir en appelant l'interface [ICommandWithParameters](https://msdn.microsoft.com/en-us/library/ms712937.aspx).  Le fournisseur doit prendre en charge `ICommandWithParameters` pour que le consommateur puisse utiliser cette classe.  
+## <a name="using-cdynamicparameteraccessor"></a>À l’aide de CDynamicParameterAccessor  
+ [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) est similaire à [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), sauf que `CDynamicParameterAccessor` Obtient des informations sur les paramètres à définir en appelant le [ICommandWithParameters](https://msdn.microsoft.com/en-us/library/ms712937.aspx) interface. Le fournisseur doit prendre en charge `ICommandWithParameters` pour permettre au consommateur d’utiliser cette classe.  
   
- Les informations sur les paramètres sont stockées dans une mémoire tampon qui est créée et managée par cette classe.  Récupérez les données des paramètres à partir de la mémoire tampon en utilisant [CDynamicParameterAccessor::GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) et [CDynamicParameterAccessor::GetParamType](../../data/oledb/cdynamicparameteraccessor-getparamtype.md).  
+ Les informations sur les paramètres sont stockées dans une mémoire tampon créée et gérée par cette classe. Obtenir des données de paramètre à partir de la mémoire tampon à l’aide de [CDynamicParameterAccessor::GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) et [CDynamicParameterAccessor::GetParamType](../../data/oledb/cdynamicparameteraccessor-getparamtype.md).  
   
- Pour obtenir un exemple montrant comment utiliser cette classe afin d'exécuter une procédure stockée SQL Server et avoir les valeurs des paramètres de sortie, consultez l'article de la Base de connaissances Q058860, « HOWTO: Execute Stored Procedure using CDynamicParameterAccessor ». Knowledge Base articles are available in the MSDN Library Visual Studio documentation or at [http:\/\/support.microsoft.com](http://support.microsoft.com/).  
+ Pour accéder à un exemple montrant comment utiliser cette classe pour exécuter une procédure stockée SQL Server et obtenir les valeurs de paramètre de sortie, consultez l’article de la Base de connaissances Q058860 relatif à l’exécution d’une procédure stockée via CDynamicParameterAccessor. Articles de la Base de connaissances sont disponibles dans la documentation de Visual Studio de MSDN Library ou à [http://support.microsoft.com](http://support.microsoft.com/).  
   
-## Voir aussi  
- [Utilisation des accesseurs](../../data/oledb/using-accessors.md)   
- [CDynamicAccessor, classe](../../data/oledb/cdynamicaccessor-class.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation d’accesseurs](../../data/oledb/using-accessors.md)   
+ [CDynamicAccessor (classe)](../../data/oledb/cdynamicaccessor-class.md)   
  [CDynamicStringAccessor, classe](../../data/oledb/cdynamicstringaccessor-class.md)   
- [CDynamicParameterAccessor, classe](../../data/oledb/cdynamicparameteraccessor-class.md)   
- [DynamicConsumer Sample](http://msdn.microsoft.com/fr-fr/2ccc4c61-6749-4e83-aa81-00f8009c0dc3)
+ [CDynamicParameterAccessor (classe)](../../data/oledb/cdynamicparameteraccessor-class.md)   
+ [DynamicConsumer, exemple](http://msdn.microsoft.com/en-us/2ccc4c61-6749-4e83-aa81-00f8009c0dc3)

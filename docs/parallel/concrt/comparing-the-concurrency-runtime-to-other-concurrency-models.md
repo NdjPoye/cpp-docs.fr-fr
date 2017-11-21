@@ -1,35 +1,33 @@
 ---
-title: "Comparaison du runtime d&#39;acc&#232;s concurrentiel aux autres mod&#232;les d&#39;acc&#232;s concurrentiel | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/08/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "runtime d’accès concurrentiel, comparaison avec d’autres modèles"
+title: "Comparaison du Runtime d’accès concurrentiel aux autres modèles d’accès concurrentiel | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a20df7ed057c11f8d8879e1373cc7466982d871b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comparaison du runtime d&#39;acc&#232;s concurrentiel aux autres mod&#232;les d&#39;acc&#232;s concurrentiel
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparaison du runtime d'accès concurrentiel aux autres modèles d'accès concurrentiel
 Ce document décrit les différences entre les fonctionnalités et les modèles de programmation du runtime d’accès concurrentiel et d’autres technologies. Il est important de connaître les avantages du runtime d’accès concurrentiel par rapport à ceux des autres modèles de programmation pour choisir la technologie la mieux adaptée aux exigences de vos applications.  
   
  Si vous utilisez un autre modèle de programmation, tel que le pool de threads Windows ou OpenMP, vous avez peut-être intérêt à migrer vers le runtime d’accès concurrentiel dans certains cas. La rubrique [Migrating from OpenMP to the Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md) décrit des exemples de cas où la migration d’OpenMP vers le runtime d’accès concurrentiel peut être bénéfique. Toutefois, si vous êtes satisfait des performances de votre application et de la prise en charge actuelle du débogage, la migration n’est pas obligatoire.  
   
  Vous pouvez tirer avantage des fonctionnalités et de la productivité du runtime d’accès concurrentiel pour améliorer votre application existante basée sur un autre modèle d’accès concurrentiel. Le runtime d’accès concurrentiel ne peut pas garantir l’équilibrage du traitement quand plusieurs planificateurs de tâches sont en concurrence pour les mêmes ressources de calcul. Quand il n’y a pas de chevauchement de traitement, l’impact reste toutefois minime.  
   
-##  <a name="a-nametopa-sections"></a><a name="top"></a> Sections  
+##  <a name="top"></a> Sections  
   
 -   [Comparaison de la planification préemptive avec la planification coopérative](#models)  
   
@@ -37,7 +35,7 @@ Ce document décrit les différences entre les fonctionnalités et les modèles 
   
 -   [Comparaison du runtime d’accès concurrentiel avec OpenMP](#openmp)  
   
-##  <a name="a-namemodelsa-comparing-preemptive-scheduling-to-cooperative-scheduling"></a><a name="models"></a> Comparaison de la planification préemptive avec la planification coopérative  
+##  <a name="models"></a> Comparaison de la planification préemptive avec la planification coopérative  
  Le modèle préemptif et les modèles de planification coopérative sont deux méthodes courantes pour permettre à plusieurs tâches de partager des ressources de calcul, par exemple, des processeurs ou des threads matériels.  
   
 ### <a name="preemptive-and-cooperative-scheduling"></a>Planifications préemptive et coopérative  
@@ -56,7 +54,7 @@ Ce document décrit les différences entre les fonctionnalités et les modèles 
   
  [[Haut](#top)]  
   
-##  <a name="a-namewinapia-comparing-the-concurrency-runtime-to-the-windows-api"></a><a name="winapi"></a> Comparaison du runtime d’accès concurrentiel avec l’API Windows  
+##  <a name="winapi"></a> Comparaison du runtime d’accès concurrentiel avec l’API Windows  
  L’interface de programmation d’application Microsoft Windows, le plus souvent appelée API Windows (et auparavant appelée Win32), fournit un modèle de programmation qui permet l’accès concurrentiel dans vos applications. Le runtime d’accès concurrentiel s’appuie sur l’API Windows pour fournir des modèles de programmation supplémentaires qui ne sont pas disponibles dans le système d’exploitation sous-jacent.  
   
  Le runtime d’accès concurrentiel utilise le modèle de thread de l’API Windows pour effectuer le travail parallèle. Il utilise également la gestion de la mémoire Windows API et les mécanismes de stockage local des threads. Sur Windows 7 et Windows Server 2008 R2, il utilise la prise en charge de l’API Windows pour les threads planifiables par l’utilisateur et les ordinateurs avec plus de 64 threads matériels. Le runtime d’accès concurrentiel étend le modèle de l’API Windows en fournissant un planificateur de tâches coopératif et un algorithme de vol de travail pour optimiser l’utilisation des ressources de calcul, et en autorisant l’exécution de plusieurs instances simultanées du planificateur.  
@@ -82,8 +80,8 @@ Ce document décrit les différences entre les fonctionnalités et les modèles 
   
  [[Haut](#top)]  
   
-##  <a name="a-nameopenmpa-comparing-the-concurrency-runtime-to-openmp"></a><a name="openmp"></a> Comparaison du runtime d’accès concurrentiel avec OpenMP  
- Le runtime d’accès concurrentiel accepte divers modèles de programmation. Ces modèles peuvent chevaucher ou compléter les modèles d’autres bibliothèques. Cette section compare le runtime d’accès concurrentiel avec [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp_in_visual_c_add_add).  
+##  <a name="openmp"></a> Comparaison du runtime d’accès concurrentiel avec OpenMP  
+ Le runtime d’accès concurrentiel accepte divers modèles de programmation. Ces modèles peuvent chevaucher ou compléter les modèles d’autres bibliothèques. Cette section compare le runtime d’accès concurrentiel avec [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp).  
   
  Le modèle de programmation OpenMP est défini par une norme ouverte et a des liaisons bien définies aux langages de programmation C/C++ et Fortran. Les versions 2.0 et 2.5 d’OpenMP sont adaptées pour les algorithmes parallèles itératifs (autrement dit, ceux qui effectuent une itération parallèle sur un tableau de données). OpenMP montre une efficacité optimale quand le degré de parallélisme est prédéterminé et correspond aux ressources disponibles sur le système. Le modèle OpenMP est particulièrement approprié pour les calculs haute performance, où de très grandes tâches de calcul sont distribuées entre les ressources de traitement d’un seul ordinateur. Dans ce scénario, l’environnement matériel est connu et le développeur peut raisonnablement s’attendre à avoir un accès exclusif aux ressources de calcul lors de l’exécution de l’algorithme.  
   
@@ -100,4 +98,4 @@ Ce document décrit les différences entre les fonctionnalités et les modèles 
  [Vue d’ensemble](../../parallel/concrt/asynchronous-message-blocks.md)   
  [Bibliothèque de modèles parallèles](../../parallel/concrt/parallel-patterns-library-ppl.md)   
  [Bibliothèque d’agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md)   
- [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp_in_visual_c_add_add)
+ [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)

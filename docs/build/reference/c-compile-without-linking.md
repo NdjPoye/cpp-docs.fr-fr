@@ -1,57 +1,55 @@
 ---
-title: "/c (Compiler sans liaison) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/c"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/c (option du compilateur C++)"
-  - "c (option du compilateur C++)"
-  - "-c (option du compilateur C++)"
-  - "compilateur cl.exe, compiler sans édition des liens"
-  - "supprimer la liaison"
+title: -c (compiler sans liaison) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /c
+dev_langs: C++
+helpviewer_keywords:
+- suppress link
+- cl.exe compiler, compiling without linking
+- -c compiler option [C++]
+- c compiler option [C++]
+- /c compiler option [C++]
 ms.assetid: 8017fc3d-e5dd-4668-a1f7-3120daa95d20
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a8f10aef6c2907d0730d358a6471c17bfd6a4cf8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /c (Compiler sans liaison)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Empêche l'appel automatique à LINK.  
+# <a name="c-compile-without-linking"></a>/c (Compiler sans liaison)
+Empêche l’appel automatique à LINK.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 /c  
 ```  
   
-## Notes  
- La compilation avec **\/c** crée des fichiers .obj uniquement.  Vous devez donc appeler LINK de manière explicite à l'aide des fichiers et des options appropriés pour effectuer la phase de liaison de la génération.  
+## <a name="remarks"></a>Remarques  
+ La compilation avec **/c** crée des fichiers .obj uniquement. Vous devez appeler explicitement des lien avec les fichiers appropriés et les options permettant d’effectuer la phase de liaison de la build.  
   
- Tout projet interne créé dans l'environnement de développement utilise l'option **\/c** par défaut.  
+ Tout projet interne créé dans l’environnement de développement utilise les **/c** option par défaut.  
   
-### Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
--   Cette option n'est pas disponible dans l'environnement de développement.  
+-   Cette option n’est pas disponible dans l’environnement de développement.  
   
-### Pour définir cette option du compilateur par programmation  
+### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation  
   
--   Pour définir cette option du compilateur par programme, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileOnly%2A>  
+-   Pour définir cette option du compilateur par programmation, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileOnly%2A>.  
   
-## Exemple  
- La ligne de commande suivante crée les fichiers objets FIRST.obj et SECOND.obj.  THIRD.obj est ignoré.  
+## <a name="example"></a>Exemple  
+ La ligne de commande suivante crée les fichiers objets FIRST.obj et SECOND.obj. THIRD.obj est ignoré.  
   
 ```  
 CL /c FIRST.C SECOND.C THIRD.OBJ  
@@ -63,6 +61,6 @@ CL /c FIRST.C SECOND.C THIRD.OBJ
 LINK firsti.obj second.obj third.obj /OUT:filename.exe  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options du compilateur](../../build/reference/compiler-options.md)   
  [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

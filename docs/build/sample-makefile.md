@@ -1,30 +1,30 @@
 ---
-title: "Exemple de makefile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Exemple de Makefile | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 8343ce71-5556-4ae0-8d1e-7efd82673070
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 845c1c5d816b1553ed63a3c2d520c5489ecffeea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Exemple de makefile
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique contient un exemple de fichier makefile.  
+# <a name="sample-makefile"></a>Exemple de makefile
+Cette rubrique contient un exemple de makefile.  
   
-## Exemple  
+## <a name="sample"></a>Exemple  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 # Sample makefile  
@@ -43,5 +43,5 @@ challeng.exe: challeng.obj md4c.obj
   $(link) $(ldebug) $(conflags) -out:challeng.exe $** $(conlibs) lsapi32.lib  
 ```  
   
-## Voir aussi  
- [Contenu d'un makefile](../build/contents-of-a-makefile.md)
+## <a name="see-also"></a>Voir aussi  
+ [Contenu d’un makefile](../build/contents-of-a-makefile.md)

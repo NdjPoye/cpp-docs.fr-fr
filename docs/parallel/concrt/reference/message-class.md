@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - AGENTS/concurrency::message::msg_id
 - AGENTS/concurrency::message::remove_ref
 - AGENTS/concurrency::message::payload
-dev_langs:
-- C++
-helpviewer_keywords:
-- message class
+dev_langs: C++
+helpviewer_keywords: message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: c6cc72c1fe9385eabe86194031913b7363d602ff
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 5f0c62e8b783b7d97a6158a3f4a55501ed4450b7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="message-class"></a>message, classe
 Enveloppe de message de base contenant la charge utile de données transmise entre les blocs de messagerie.  
@@ -58,7 +40,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 #### <a name="parameters"></a>Paramètres  
  `T`  
- Le type de données de la charge utile du message.  
+ Le type de données de la charge utile dans le message.  
   
 ## <a name="members"></a>Membres  
   
@@ -81,7 +63,7 @@ class message : public ::Concurrency::details::_Runtime_object;
 |----------|-----------------|  
 |[add_ref](#add_ref)|Ajoute au décompte de références pour le `message` objet. Utilisé pour les blocs de messages qui nécessitent un décompte de références pour déterminer la durée de vie des messages.|  
 |[msg_id](#msg_id)|Retourne l’ID de la `message` objet.|  
-|[remove_ref](#remove_ref)|Soustrait le nombre de références pour le `message` objet. Utilisé pour les blocs de messages qui nécessitent un décompte de références pour déterminer la durée de vie des messages.|  
+|[remove_ref](#remove_ref)|Soustrait du nombre de références pour le `message` objet. Utilisé pour les blocs de messages qui nécessitent un décompte de références pour déterminer la durée de vie des messages.|  
   
 ### <a name="public-data-members"></a>Membres de données publics  
   
@@ -89,10 +71,10 @@ class message : public ::Concurrency::details::_Runtime_object;
 |----------|-----------------|  
 |[charge utile](#payload)|La charge utile de la `message` objet.|  
   
-## <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [blocs de messages asynchrones](../../../parallel/concrt/asynchronous-message-blocks.md).  
+## <a name="remarks"></a>Remarques  
+ Pour plus d’informations, consultez [des blocs de messages asynchrones](../../../parallel/concrt/asynchronous-message-blocks.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `message`  
   
 ## <a name="requirements"></a>Spécifications  
@@ -140,7 +122,7 @@ message(
  `_Msg`  
  Une référence ou un pointeur vers un `message` objet.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Le constructeur qui prend un pointeur vers un `message` de l’objet comme argument lève une [invalid_argument](../../../standard-library/invalid-argument-class.md) exception si le paramètre `_Msg` est `NULL`.  
   
 ##  <a name="dtor"></a>~ message 
@@ -172,7 +154,7 @@ T const payload;
   
 ##  <a name="remove_ref"></a>remove_ref 
 
- Soustrait le nombre de références pour le `message` objet. Utilisé pour les blocs de messages qui nécessitent un décompte de références pour déterminer la durée de vie des messages.  
+ Soustrait du nombre de références pour le `message` objet. Utilisé pour les blocs de messages qui nécessitent un décompte de références pour déterminer la durée de vie des messages.  
   
 ```
 long remove_ref();
@@ -183,4 +165,3 @@ long remove_ref();
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)
-

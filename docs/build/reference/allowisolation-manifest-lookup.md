@@ -1,62 +1,62 @@
 ---
-title: "/ALLOWISOLATION (Recherche de manifeste) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/ALLOWISOLATION"
-  - "VC.Project.VCLinkerTool.AllowIsolation"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ALLOWISOLATION (option de l'éditeur de liens)"
-  - "-ALLOWISOLATION (option de l'éditeur de liens)"
+title: -/ALLOWISOLATION (recherche de manifeste) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /ALLOWISOLATION
+- VC.Project.VCLinkerTool.AllowIsolation
+dev_langs: C++
+helpviewer_keywords:
+- -ALLOWISOLATION linker option
+- /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c8d6163c6377a6d8c92875b3bb5ba76b07a94d38
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /ALLOWISOLATION (Recherche de manifeste)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Spécifie le comportement de recherche du fichier manifeste.  
+# <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (Recherche de manifeste)
+Spécifie un comportement pour la recherche de manifeste.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 /ALLOWISOLATION[:NO]  
 ```  
   
-## Notes  
- **\/ALLOWISOLATION:NO** indique que les DLL sont chargées comme s'il n'existait aucun manifeste et demande à l'éditeur de liens de définir le bit `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` dans le champ `DllCharacteristics` de l'en\-tête facultatif.  
+## <a name="remarks"></a>Remarques  
+ **/ALLOWISOLATION:no** indique que les DLL sont chargées comme s’il existait aucun manifeste et entraîne l’éditeur de liens définir le `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit dans l’en-tête optional `DllCharacteristics` champ.  
   
- **\/ALLOWISOLATION** demande au système d'exploitation de rechercher et de charger des manifestes.  
+ **/ALLOWISOLATION** provoque le système d’exploitation et charger des manifestes.  
   
- **\/ALLOWISOLATION** est la valeur par défaut.  
+ **/ALLOWISOLATION** est la valeur par défaut.  
   
- Lorsque l'isolation est désactivée pour un fichier exécutable, le chargeur Windows ne tente pas de rechercher un manifeste d'application pour le processus créé récemment.  Le nouveau processus ne possédera pas de contexte d'activation par défaut, même s'il existe un manifeste à l'intérieur du fichier exécutable ou dans le même répertoire que le fichier exécutable portant le nom *executable\-name***.exe.manifest**.  
+ Lorsque l’isolation est désactivée pour un fichier exécutable, le chargeur Windows ne tente pas à trouver un manifeste d’application pour le processus nouvellement créé. Le nouveau processus ne disposera d’un contexte d’activation par défaut, même s’il existe un manifeste à l’intérieur du fichier exécutable ou dans le même répertoire que le fichier exécutable avec le nom *-nom du fichier exécutable***. exe.manifest**.  
   
- Pour plus d'informations, consultez la [référence des fichiers manifeste](http://msdn.microsoft.com/library/aa375632).  
+ Pour plus d’informations, consultez [référence des fichiers manifeste](http://msdn.microsoft.com/library/aa375632).  
   
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Comment : ouvrir les pages de propriétés d'un projet](../../misc/how-to-open-project-property-pages.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
-2.  Développez le nœud **Propriétés de configuration**.  
+2.  Développez le **propriétés de Configuration** nœud.  
   
-3.  Développez le nœud **Éditeur de liens**.  
+3.  Développez le **l’éditeur de liens** nœud.  
   
-4.  Sélectionnez la page de propriétés **Fichier manifeste**.  
+4.  Sélectionnez le **le fichier manifeste** page de propriétés.  
   
-5.  Modifiez la propriété **Autoriser l'isolation**.  
+5.  Modifier la **autoriser l’Isolation** propriété.  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)

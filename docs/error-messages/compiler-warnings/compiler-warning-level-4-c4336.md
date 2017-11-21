@@ -1,34 +1,32 @@
 ---
-title: "Avertissement du compilateur (niveau 4) C4336 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4336"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4336"
+title: Compilateur avertissement (niveau 4) C4336 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4336
+dev_langs: C++
+helpviewer_keywords: C4336
 ms.assetid: 93f199dd-d6dd-42c0-82d8-c12d101a7235
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2cbb27a524caf5c02cbc99d8792c93ecc134390a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 4) C4336
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-importer la bibliothèque de types à références croisées 'biblio\_types1' avant d'importer 'biblio\_types2'  
+# <a name="compiler-warning-level-4-c4336"></a>Avertissement du compilateur (niveau 4) C4336
+Importer la bibliothèque 'biblio_types1' avant d’importer 'biblio_types2'  
   
- Une bibliothèque de types a été référencée avec la directive [\#import](../../preprocessor/hash-import-directive-cpp.md).  Cependant, la bibliothèque de types contenait une référence à une autre bibliothèque de types qui n'était pas référencée avec `#import`.  Cet autre fichier .tlb a été trouvé par le compilateur.  
+ Une bibliothèque de types a été référencée avec la [#import](../../preprocessor/hash-import-directive-cpp.md) directive. Toutefois, la bibliothèque de types contenait une référence à une autre bibliothèque de types qui n’est pas référencée avec `#import`. Cet autre fichier .tlb a été trouvé par le compilateur.  
   
- Avec deux bibliothèques de types sur disque créées à partir des deux fichiers suivants \(compilés avec midl.exe\) :  
+ Donné deux bibliothèques de types sur disque créées à partir des deux fichiers suivants (compilés avec midl.exe) :  
   
 ```  
 // c4336a.idl  
@@ -43,7 +41,7 @@ library c4336aLib
 };  
 ```  
   
- Deuxième bibliothèque de types :  
+ La deuxième bibliothèque de types :  
   
 ```  
 // c4336b.idl  
@@ -59,7 +57,7 @@ library C4336bLib
 };  
 ```  
   
- L'exemple suivant génère l'erreur C4336 :  
+ L’exemple suivant génère l’erreur C4336 :  
   
 ```  
 // C4336.cpp  

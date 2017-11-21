@@ -1,33 +1,31 @@
 ---
-title: "Erreur de g&#233;n&#233;ration de projet PRJ0023 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0023"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0023"
+title: "PRJ0023 d’erreur de Build de projet | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0023
+dev_langs: C++
+helpviewer_keywords: PRJ0023
 ms.assetid: ed55a320-e7c8-489f-886e-825feee0d576
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2dc3d766a147fbced03632b05b4b599d41187c24
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Erreur de g&#233;n&#233;ration de projet PRJ0023
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Outil 'outil', la propriété inconnue contient un nom de fichier non valide 'fichier'.  
+# <a name="project-build-error-prj0023"></a>Erreur de génération de projet PRJ0023
+Outil 'outil', propriété inconnue contient le nom de fichier non valide 'fichier'.  
   
- Le nom de fichier, ***fichier***, spécifié pour l'outil, ***outil***, était non valide.  
+ Le nom de fichier ***fichier***, spécifié pour l’outil, ***outil***, n’est pas valide.  
   
- Vous avez peut\-être spécifié une macro inconnue ou non valide.  
+ Vous avez peut-être utilisé une macro inconnue ou non valide.  
   
- Pour plus d'informations sur l'accès aux propriétés de votre projet, consultez [Définition des propriétés de projets Visual C\+\+](../../ide/working-with-project-properties.md).
+ Consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md) pour plus d’informations sur l’accès aux propriétés de votre projet.

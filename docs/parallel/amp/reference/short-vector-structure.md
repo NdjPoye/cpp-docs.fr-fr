@@ -4,45 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - short_vector
 - AMP_SHORT_VECTORS/short_vector
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector::short_vector Constructor
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: f8df5600c8af80b4d279fc1fde0cc4c2ab9337eb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 8245c5ebf1013f226bcef5050e3a91680b837b67
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="shortvector-structure"></a>short_vector Structure
-short_vector fournit les définitions métaprogrammation qui sont utiles pour la programmation générique de vecteurs courts.  
+short_vector fournit les définitions de métaprogrammation qui sont utiles pour la programmation des vecteurs courts de façon générique.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -120,7 +102,7 @@ struct short_vector<double, 4>;
 |----------|-----------------|  
 |[short_vector::short_vector, constructeur](#ctor)||  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `short_vector`  
   
 ## <a name="requirements"></a>Spécifications  
@@ -135,5 +117,4 @@ short_vector();
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concurrency::Graphics Namespace](concurrency-graphics-namespace.md)
-
+ [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)

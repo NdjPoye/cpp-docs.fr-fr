@@ -1,72 +1,72 @@
 ---
-title: "_InterlockedIncrement, fonctions intrins&#232;ques | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_InterlockedIncrement_acq"
-  - "_InterlockedIncrement16_rel_cpp"
-  - "_InterlockedIncrement16_cpp"
-  - "_InterlockedIncrement64_rel"
-  - "_InterlockedIncrement_rel"
-  - "_InterlockedIncrement64_nf"
-  - "_InterlockedIncrement16_acq_cpp"
-  - "_InterlockedIncrement_rel_cpp"
-  - "_InterlockedIncrement64"
-  - "_InterlockedIncrement64_rel_cpp"
-  - "_InterlockedIncrement16_nf"
-  - "_InterlockedIncrement16_rel"
-  - "_InterlockedIncrement16_acq"
-  - "_InterlockedIncrement_nf"
-  - "_InterlockedIncrement_acq_cpp"
-  - "_InterlockedIncrement64_cpp"
-  - "_InterlockedIncrement64_acq_cpp"
-  - "_InterlockedIncrement"
-  - "_InterlockedIncrement_cpp"
-  - "_InterlockedIncrement64_acq"
-  - "_InterlockedIncrement16"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_InterlockedIncrement, intrinsèque"
-  - "_InterlockedIncrement_acq, intrinsèque"
-  - "_InterlockedIncrement_nf, intrinsèque"
-  - "_InterlockedIncrement_rel, intrinsèque"
-  - "_InterlockedIncrement16, intrinsèque"
-  - "_InterlockedIncrement16_acq, intrinsèque"
-  - "_InterlockedIncrement16_nf, intrinsèque"
-  - "_InterlockedIncrement16_rel, intrinsèque"
-  - "_InterlockedIncrement64, intrinsèque"
-  - "_InterlockedIncrement64_acq, intrinsèque"
-  - "_InterlockedIncrement64_nf, intrinsèque"
-  - "_InterlockedIncrement64_rel, intrinsèque"
-  - "InterlockedIncrement, intrinsèque"
-  - "InterlockedIncrement_acq, intrinsèque"
-  - "InterlockedIncrement_rel, intrinsèque"
-  - "InterlockedIncrement16, intrinsèque"
-  - "InterlockedIncrement64, intrinsèque"
-  - "InterlockedIncrement64_acq, intrinsèque"
-  - "InterlockedIncrement64_rel, intrinsèque"
+title: "_InterlockedIncrement, fonctions intrinsèques | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _InterlockedIncrement_acq
+- _InterlockedIncrement16_rel_cpp
+- _InterlockedIncrement16_cpp
+- _InterlockedIncrement64_rel
+- _InterlockedIncrement_rel
+- _InterlockedIncrement64_nf
+- _InterlockedIncrement16_acq_cpp
+- _InterlockedIncrement_rel_cpp
+- _InterlockedIncrement64
+- _InterlockedIncrement64_rel_cpp
+- _InterlockedIncrement16_nf
+- _InterlockedIncrement16_rel
+- _InterlockedIncrement16_acq
+- _InterlockedIncrement_nf
+- _InterlockedIncrement_acq_cpp
+- _InterlockedIncrement64_cpp
+- _InterlockedIncrement64_acq_cpp
+- _InterlockedIncrement
+- _InterlockedIncrement_cpp
+- _InterlockedIncrement64_acq
+- _InterlockedIncrement16
+dev_langs: C++
+helpviewer_keywords:
+- _InterlockedIncrement64_rel intrinsic
+- _InterlockedIncrement16_rel intrinsic
+- InterlockedIncrement64_acq intrinsic
+- _InterlockedIncrement16 intrinsic
+- _InterlockedIncrement16_acq intrinsic
+- _InterlockedIncrement_nf intrinsic
+- _InterlockedIncrement_rel intrinsic
+- _InterlockedIncrement64_nf intrinsic
+- InterlockedIncrement_rel intrinsic
+- InterlockedIncrement_acq intrinsic
+- _InterlockedIncrement64_acq intrinsic
+- _InterlockedIncrement16_nf intrinsic
+- _InterlockedIncrement intrinsic
+- _InterlockedIncrement64 intrinsic
+- InterlockedIncrement64_rel intrinsic
+- InterlockedIncrement64 intrinsic
+- InterlockedIncrement16 intrinsic
+- _InterlockedIncrement_acq intrinsic
+- InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6185aee179febe77fa9f5b47793e4becd253e504
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# _InterlockedIncrement, fonctions intrins&#232;ques
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement, fonctions intrinsèques
 **Section spécifique à Microsoft**  
   
- Fournit une prise en charge des intrinsèques du compilateur pour la fonction Win32 [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)] [InterlockedIncrement](http://msdn.microsoft.com/library/ms683614.aspx).  
+ Fournir la prise en charge intrinsèque de compilateur pour Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [InterlockedIncrement](http://msdn.microsoft.com/library/ms683614.aspx) (fonction).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 long _InterlockedIncrement(  
@@ -107,39 +107,39 @@ __int64 _InterlockedIncrement64_nf(
 );  
 ```  
   
-#### Paramètres  
- \[in, out\] `lpAddend`  
+#### <a name="parameters"></a>Paramètres  
+ [in, out] `lpAddend`  
  Pointeur vers la variable à incrémenter.  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  La valeur de retour est la valeur incrémentée résultante.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Intrinsèque|Architecture|En\-tête|  
-|-----------------|------------------|--------------|  
-|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h\>|  
-|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h\>|  
+|Intrinsèque|Architecture|En-tête|  
+|---------------|------------------|------------|  
+|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
+|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h >|  
   
-## Notes  
+## <a name="remarks"></a>Remarques  
  Il existe plusieurs variantes de `_InterlockedIncrement` qui varient selon les types de données qu'elles impliquent et l'utilisation d'une sémantique acquire ou release spécifique au processeur.  
   
  La fonction `_InterlockedIncrement` opère sur des valeurs entières de 32 bits, `_InterlockedIncrement16` sur des valeurs entières de 16 bits et `_InterlockedIncrement64` sur des valeurs entières de 64 bits.  
   
- Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d'une section critique.  La fonction intrinsèque avec un suffixe `_nf` \(pour « no fence », « pas de délimitation »\) n'agit pas comme une barrière mémoire.  
+ Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d'une section critique. La fonction intrinsèque avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agit pas comme une barrière mémoire.  
   
- La variable vers laquelle pointe le paramètre `lpAddend` doit être alignée sur une limite de 32 bits. Dans le cas contraire, cette fonction échoue sur les systèmes x86 multiprocesseurs et les systèmes autres que x86.  Pour plus d'informations, consultez [align](../cpp/align-cpp.md).  
+ La variable vers laquelle pointe le paramètre `lpAddend` doit être alignée sur une limite de 32 bits. Dans le cas contraire, cette fonction échoue sur les systèmes x86 multiprocesseurs et les systèmes autres que x86. Pour plus d’informations, consultez [aligner](../cpp/align-cpp.md).  
   
  La fonction Win32 est déclarée dans `Wdm.h` ou `Ntddk.h`.  
   
  Ces routines sont disponibles seulement comme fonctions intrinsèques.  
   
-## Exemple  
- Pour obtenir un exemple de l'utilisation de `_InterlockedIncrement`, consultez [\_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
+## <a name="example"></a>Exemple  
+ Pour obtenir un exemple montrant comment utiliser `_InterlockedIncrement`, consultez [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   
-## FIN de la section spécifique à Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)   
+ [Mots clés](../cpp/keywords-cpp.md)   
  [Conflits avec le compilateur x86](../build/conflicts-with-the-x86-compiler.md)

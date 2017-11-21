@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,35 +14,18 @@ f1_keywords:
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::cancel
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::create_linked_source
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::get_token
-dev_langs:
-- C++
-helpviewer_keywords:
-- cancellation_token_source class
+dev_langs: C++
+helpviewer_keywords: cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: f41a4a21af5bc37ab612221152b8311a5a91d914
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: d5335b36e9ac80399a965c3717fcc0f5c2bab1fa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source, classe
 La classe `cancellation_token_source` représente la capacité d'annulation d'une opération annulable.  
@@ -79,7 +61,7 @@ class cancellation_token_source;
 |[operator=](#operator_eq)||  
 |[operator==](#operator_eq_eq)||  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `cancellation_token_source`  
   
 ## <a name="requirements"></a>Spécifications  
@@ -134,7 +116,7 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
  Jeton dont l'annulation provoque l'annulation de la source du jeton retourné. Notez que la source du jeton retourné peut également être annulée indépendamment de la source contenue dans ce paramètre.  
   
  `_Begin`  
- Itérateur de bibliothèque C++ Standard correspondant au début de la plage de jetons à écouter pour l’annulation.  
+ Itérateur de bibliothèque Standard C++ correspondant au début de la plage de jetons à écouter pour l’annulation.  
   
  `_End`  
  Itérateur de bibliothèque C++ Standard correspondant à la fin de la plage de jetons à écouter pour l’annulation.  
@@ -190,4 +172,3 @@ bool operator== (const cancellation_token_source& _Src) const;
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)
-

@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.mfc.macros
-dev_langs:
-- C++
+f1_keywords: vc.mfc.macros
+dev_langs: C++
 helpviewer_keywords:
 - MFC, global functions and variables
 - MFC, macros
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - Afx naming convention
 - macros
 ms.assetid: add4e33f-0e62-4d27-be14-896cb8675d22
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
 ms.openlocfilehash: 71011177634e92b22cce1bc88a2ee711ad9537ed
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="mfc-macros-and-globals"></a>Macros et objet Globals MFC
 La bibliothèque Microsoft Foundation Class peut être divisée en deux sections principales : (1) le classes MFC et les macros (2) et les variables globales. Si une fonction ou une variable n’est pas un membre d’une classe, il est une fonction globale ou une variable.  
@@ -140,7 +136,6 @@ La bibliothèque Microsoft Foundation Class peut être divisée en deux sections
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../mfc/class-library-overview.md)
-
 
 
 

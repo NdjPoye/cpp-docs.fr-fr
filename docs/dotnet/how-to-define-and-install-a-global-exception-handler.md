@@ -1,32 +1,31 @@
 ---
-title: "Comment&#160;: d&#233;finir et installer un gestionnaire d&#39;exceptions global | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestionnaires, globaux"
+title: "Comment : définir et installer un gestionnaire d’exceptions Global | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 970ecd355b42c83102c034c4639f152b1971dae6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: d&#233;finir et installer un gestionnaire d&#39;exceptions global
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'exemple de code suivant illustre comment les exceptions non gérées peuvent être capturées.  Le formulaire d'exemple contient un bouton qui, une fois appuyé, effectue une référence nulle, provoquant une exception à lever.  Cette fonctionnalité représente une erreur classique de code.  L'exception résultante est interceptée par le gestionnaire d'exceptions installé par la fonction principale.  
+# <a name="how-to-define-and-install-a-global-exception-handler"></a>Comment : définir et installer un gestionnaire d'exceptions global
+L’exemple de code suivant montre comment non prise en charge des exceptions peuvent être capturés. L’exemple de formulaire contient un bouton qui, lorsque vous appuyez sur, effectue une référence null, à l’origine d’une exception levée. Cette fonctionnalité représente un échec de code classique. L’exception qui en résulte est interceptée par le Gestionnaire d’exceptions de l’application installé par la fonction principale.  
   
- Cela est possible en liant un délégué à l'événement de <xref:System.Windows.Forms.Application.ThreadException>.  Dans ce cas, les exceptions suivantes sont ensuite envoyées à la méthode de `App::OnUnhandled`.  
+ Cela est accompli en liant un délégué à le <xref:System.Windows.Forms.Application.ThreadException> événement. Dans ce cas, les exceptions suivantes sont ensuite envoyées à la `App::OnUnhandled` (méthode).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // global_exception_handler.cpp  
@@ -80,5 +79,5 @@ int main()
 }  
 ```  
   
-## Voir aussi  
- [Exception Handling](../windows/exception-handling-cpp-component-extensions.md)
+## <a name="see-also"></a>Voir aussi  
+ [Gestion des exceptions](../windows/exception-handling-cpp-component-extensions.md)

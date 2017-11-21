@@ -1,45 +1,43 @@
 ---
-title: "multiset::equal_range (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::equal_range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre equal_range [STL/CLR]"
+title: multiset::equal_range (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::equal_range
+dev_langs: C++
+helpviewer_keywords: equal_range member [STL/CLR]
 ms.assetid: 0fa617fb-8316-4310-b906-0322fa04aebe
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1e03ecf53edf4f5eb0e792aca3d4cb1008bbdc6a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::equal_range (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Recherche la plage qui correspond à une clé spécifiée.  
+# <a name="multisetequalrange-stlclr"></a>multiset::equal_range (STL/CLR)
+Recherche une plage qui correspond à une clé spécifiée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 cliext::pair<iterator, iterator> equal_range(key_type key);  
 ```  
   
-#### Paramètres  
- key  
- Valeur clé à rechercher.  
+#### <a name="parameters"></a>Paramètres  
+ clé  
+ Valeur de clé à rechercher.  
   
-## Notes  
- La fonction membre retourne une paire d'itérateurs `cliext::pair<iterator, iterator>(` [multiset::lower\_bound](../dotnet/multiset-lower-bound-stl-clr.md)`(``key``),` [multiset::upper\_bound](../dotnet/multiset-upper-bound-stl-clr.md)`(``key``))`.  Vous l'utilisez pour déterminer la plage d'éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre retourne une paire d’itérateurs `cliext::pair<iterator, iterator>(` [multiset::lower_bound (STL/CLR)](../dotnet/multiset-lower-bound-stl-clr.md) `(key),` [multiset::upper_bound (STL/CLR)](../dotnet/multiset-upper-bound-stl-clr.md)`(key))`. Il permet de déterminer la plage d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_multiset_equal_range.cpp   
@@ -75,17 +73,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**gamme\_egale \(L'x'\) vide \= Vrai**  
- **b**   
-## Configuration requise  
- **En\-tête :** \<cliext\/set\>  
+```Output  
+ a b c  
+equal_range(L'x') empty = True  
+ b  
+```  
   
- **Espace de nom :** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/set >  
   
-## Voir aussi  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::count](../dotnet/multiset-count-stl-clr.md)   
- [multiset::find](../dotnet/multiset-find-stl-clr.md)   
- [multiset::lower\_bound](../dotnet/multiset-lower-bound-stl-clr.md)   
- [multiset::upper\_bound](../dotnet/multiset-upper-bound-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::Count (STL/CLR)](../dotnet/multiset-count-stl-clr.md)   
+ [multiset::Find (STL/CLR)](../dotnet/multiset-find-stl-clr.md)   
+ [multiset::lower_bound (STL/CLR)](../dotnet/multiset-lower-bound-stl-clr.md)   
+ [multiset::upper_bound (STL/CLR)](../dotnet/multiset-upper-bound-stl-clr.md)

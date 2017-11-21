@@ -1,32 +1,30 @@
 ---
-title: "ML Nonfatal Error A2083 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A2083"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A2083"
+title: Erreur ML non fatale A2083 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A2083
+dev_langs: C++
+helpviewer_keywords: A2083
 ms.assetid: d2715877-1702-44e5-ab8f-6ef1fb6069f1
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 67311c65e9e9997403390f847e8f368323fa98c4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# ML Nonfatal Error A2083
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**valeur d'échelle non valide**  
+# <a name="ml-nonfatal-error-a2083"></a>Erreur ML non fatale A2083
+**valeur d’échelle non valide**  
   
- Vous avez spécifié une échelle de registre qui n'était pas 1, 2, 4, ou 8.  
+ Une échelle de Registre a été spécifiée qui n’est pas 1, 2, 4 ou 8.  
   
-## Voir aussi  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>Voir aussi  
+ [Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)

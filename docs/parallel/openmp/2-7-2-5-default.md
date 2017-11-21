@@ -1,51 +1,50 @@
 ---
-title: "2.7.2.5 default | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.7.2.5 la valeur par défaut | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c856df07-705c-4ad3-9105-a268dd33e939
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 26dff1f0e8b3b88b4891617a2eef2bb2d82240eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# 2.7.2.5 default
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La clause de **valeur par défaut** permet à l'utilisateur d'affecter les attributs de partage de données des variables.  La syntaxe de la clause de **valeur par défaut** est la suivante :  
+# <a name="2725-default"></a>2.7.2.5 default
+Le **par défaut** clause permet à l’utilisateur affecter les attributs de partage de données de variables. La syntaxe de la **par défaut** clause est comme suit :  
   
 ```  
 default(shared | none)  
 ```  
   
- Spécifier **valeur par défaut \(partagé\)** équivaut à répertorier explicitement chaque variable actuellement visible dans une clause de **partagé** , à moins qu'il ne **threadprivate** ou **cons**`t`\- qualifié.  En l ' absence d'une clause explicite de **valeur par défaut** , le comportement par défaut est le même que si **valeur par défaut \(partagé\)** ont été spécifiés.  
+ Spécification de **default(shared)** équivaut à répertoriant explicitement chaque variable actuellement visible dans un **partagé** clause, sauf s’il est **threadprivate** ou **inconvénients**`t`-qualifié. En l’absence d’explicite **par défaut** clause, le comportement par défaut est le même qu’if **default(shared)** ont été spécifiés.  
   
- Spécifiant **valeur par défaut \(sans\)** exige qu'au moins l'une des conditions suivantes doivent être remplies pour chaque référence à une variable dans l'étendue lexicale de l'élément parallèle :  
+ Spécification de **default (None)** requiert qu’au moins une des valeurs suivantes doit être remplie pour chaque référence à une variable dans l’étendue lexicale de la construction parallèle :  
   
--   La variable est explicitement répertorié dans une clause d'attribut de partage de données d'un élément qui contient la référence.  
+-   La variable est explicitement répertoriée dans une clause partage des données d’attribut d’une construction qui contient la référence.  
   
--   la variable est déclarée dans l'élément parallèle.  
+-   La variable est déclarée au sein de la construction parallèle.  
   
--   la variable est **threadprivate**.  
+-   La variable est **threadprivate**.  
   
--   la variable a **const**\- type qualifié.  
+-   La variable a une **const**-type qualifié.  
   
--   la variable est la variable de contrôle de boucle pour une boucle de **pour** qui suit immédiatement une directive de **pour** ou de **parallèle pour** , et la référence variable apparaît à l'intérieur de la boucle.  
+-   La variable est la variable de contrôle de boucle pour un **pour** boucle qui suit immédiatement un **pour** ou **parallèles pour** la directive et la référence variable apparaît à l’intérieur de la boucle .  
   
- spécifiant une variable sur **firstprivate**, **elle**, ou la clause de **réduction** d'une directive placé entre provoque une référence implicite à la variable dans le contexte englobant.  De telles références implicites sont soumises également aux spécifications répertoriées ci\-dessus.  
+ Spécification d’une variable sur une **firstprivate**, **lastprivate**, ou **réduction** clause d’une directive entre provoque une référence implicite à la variable dans la forme contexte. De telles références implicites sont également soumises à la configuration requise ci-dessus.  
   
- Uniquement une clause unique de **valeur par défaut** peut être spécifiée dans une directive de **parallèle** .  
+ Un seul **par défaut** clause peut être spécifiée sur un **parallèles** directive.  
   
- L'attribut par défaut de la partage de données d'une variable peut être substituée à l'aide de **privé**, de **firstprivate**, d' **elle**, de **réduction**, les clauses de **partagé** , comme le montre l'exemple suivant :  
+ Attributs de partage de données peut être remplacée à l’aide de la valeur par défaut d’une variable le **privé**, **firstprivate**, **lastprivate**, **réduction**, et **partagé** clauses, comme illustré dans l’exemple suivant :  
   
 ```  
 #pragma  omp  parallel  for  default(shared)  firstprivate(i)\  

@@ -1,44 +1,43 @@
 ---
-title: "3.1 Execution Environment Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.1 exécution des fonctions d’environnement | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 7d3e6f47-ce01-4dab-946b-bccc220e2ddd
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8adf595c8b2460bda2c977e4467d34dd1cbb3f48
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# 3.1 Execution Environment Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les fonctions décrites de cette section affectent et surveiller des threads, des jetons, et l'environnement parallèle :  
+# <a name="31-execution-environment-functions"></a>3.1 Exécution des fonctions d'environnement
+Les fonctions décrites dans cette section affectent et contrôler les threads, de processeurs et de l’environnement parallèle :  
   
--   la fonction d' **omp\_set\_num\_threads** .  
+-   le **omp_set_num_threads** (fonction).  
   
--   la fonction d' **omp\_get\_num\_threads** .  
+-   le **omp_get_num_threads** (fonction).  
   
--   la fonction d' **omp\_get\_max\_threads** .  
+-   le **omp_get_max_threads** (fonction).  
   
--   la fonction d' **omp\_get\_thread\_num** .  
+-   le **omp_get_thread_num** (fonction).  
   
--   la fonction d' **omp\_get\_num\_procs** .  
+-   le **omp_get_num_procs** (fonction).  
   
--   la fonction d' **omp\_in\_parallel** .  
+-   le **omp_in_parallel** (fonction).  
   
--   la fonction d' **omp\_set\_dynamic** .  
+-   le **omp_set_dynamic** (fonction).  
   
--   la fonction d' **omp\_get\_dynamic** .  
+-   le **omp_get_dynamic** (fonction).  
   
--   la fonction d' **omp\_set\_nested** .  
+-   le **omp_set_nested** (fonction).  
   
--   la fonction d' **omp\_get\_nested** .
+-   le **omp_get_nested** (fonction).

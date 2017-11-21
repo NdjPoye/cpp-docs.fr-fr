@@ -1,38 +1,37 @@
 ---
-title: "Comment&#160;: marshaler des tableaux &#224; l&#39;aide de l&#39;interop&#233;rabilit&#233; C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tableaux (C++), marshaling"
-  - "interopérabilité C++, tableaux"
-  - "marshaling de données (C++), tableaux"
-  - "Interop (C++), tableaux"
-  - "marshaling (C++), tableaux"
+title: "Comment : marshaler des tableaux à l’aide d’interopérabilité C++ | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- arrays [C++], marshaling
+- marshaling [C++], arrays
+- interop [C++], arrays
+- C++ Interop, arrays
+- data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 605e3ba14af37fd13b3d6eac75f76610cf29af65
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: marshaler des tableaux &#224; l&#39;aide de l&#39;interop&#233;rabilit&#233; C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique illustre une facette de l'interopérabilité Visual C\+\+.  Pour plus d'informations, consultez [Utilisation de l'interopérabilité C\+\+ \(PInvoke implicite\)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+# <a name="how-to-marshal-arrays-using-c-interop"></a>Comment : marshaler des tableaux à l’aide de l’interopérabilité C++
+Cette rubrique illustre une facette de l’interopérabilité de Visual C++. Pour plus d’informations, consultez [à l’aide du interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
- Les exemples de code suivants utilisent les directives \#pragma [managé, non managé](../preprocessor/managed-unmanaged.md) pour implémenter des fonctions managées et non managées dans le même fichier, mais ces fonctions interagissent de la même manière si elles sont définies dans des fichiers séparés.  Les fichiers qui contiennent uniquement des fonctions non managées ne doivent pas être compilés avec [\/clr \(Compilation pour le Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  
+ Exemple de code suit le [managé, non managé](../preprocessor/managed-unmanaged.md) directives #pragma pour implémenter des fonctions managées et dans le même fichier, mais ces fonctions interagissent de la même manière, si elles sont définies dans des fichiers distincts. Fichiers contenant uniquement des fonctions non managées ne doivent pas être compilés avec [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Exemple  
- L'exemple suivant montre comment passer un tableau managé à une fonction non managée.  La fonction managée utilise [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md) afin de supprimer le garbage collection pour le tableau avant d'appeler la fonction non managée.  En fournissant la fonction non managée avec un pointeur épinglé dans le tas GC, la charge mémoire entraînée par la réalisation d'une copie du tableau peut être évitée.  Pour montrer que la fonction non managée accède à la mémoire de tas GC, elle modifie le contenu du tableau et les modifications sont reflétées lorsque la fonction managée reprend le contrôle.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant montre comment passer un tableau managé à une fonction non managée. La fonction managée utilise [pin_ptr (C + c++ / CLI)](../windows/pin-ptr-cpp-cli.md) pour supprimer le garbage collection pour le tableau avant d’appeler la fonction non managée. En fournissant la fonction non managée avec un pointeur épinglé dans le tas GC, la surcharge d’effectuer une copie du tableau peut être évitée. Pour montrer que la fonction non managée est l’accès à la mémoire de tas GC, elle modifie le contenu du tableau et les modifications sont reflétées lorsque la fonction managée reprend le contrôle.  
   
 ```  
 // PassArray1.cpp  
@@ -89,8 +88,8 @@ int main() {
 }  
 ```  
   
-## Exemple  
- L'exemple suivant illustre le passage d'un tableau non managé à une fonction managée.  La fonction managée accède directement à la mémoire du tableau \(plutôt que de créer un tableau managé et de copier son contenu\), permettant ainsi de répercuter les modifications apportées par la fonction managée dans la fonction non managée lorsqu'elle reprend le contrôle.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant illustre le passage d’un tableau non managé à une fonction managée. La fonction managée accède à la mémoire du tableau directement (au lieu de créer un tableau managé et copie le contenu du tableau), ce qui permet des modifications apportées par la fonction managée soient prises en compte dans la fonction non managée lorsqu’elle reprend le contrôle.  
   
 ```  
 // PassArray2.cpp  
@@ -136,5 +135,5 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
- [Utilisation de l'interopérabilité C\+\+ \(PInvoke implicite\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

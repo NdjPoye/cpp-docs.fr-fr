@@ -1,31 +1,29 @@
 ---
-title: "Avertissement NMAKE U4004 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "U4004"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "U4004"
+title: Avertissement NMAKE U4004 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: U4004
+dev_langs: C++
+helpviewer_keywords: U4004
 ms.assetid: 5086bbcb-42d7-4677-a877-1a02202a86a2
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b629bd2910b2820cc703824a5a97bf3361ac54b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement NMAKE U4004
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-règles trop nombreuses pour la cible 'nomcible'  
+# <a name="nmake-warning-u4004"></a>Avertissement NMAKE U4004
+règles trop nombreuses pour la cible 'targetname'  
   
- Plusieurs blocs de description ont été spécifiés pour la cible donnée en utilisant comme séparateurs des signes des deux\-points simples \(**:**\).  NMAKE a exécuté les commandes du premier bloc de description et ignoré les blocs suivants.  
+ Plusieurs blocs de description a été spécifiée pour la cible de donnée unique comprenant les signes deux-points (**:**) comme séparateurs. NMAKE exécuté les commandes dans le premier bloc de description et ignoré les blocs.  
   
- Pour spécifier la même cible dans plusieurs dépendances, utilisez comme séparateur des signes des deux\-points doubles \(`::`\) dans chaque ligne de dépendance.
+ Pour spécifier la même cible dans plusieurs dépendances, utilisez des signes deux-points doubles (`::`) comme séparateur dans chaque ligne de dépendance.

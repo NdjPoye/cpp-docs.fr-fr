@@ -1,33 +1,30 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4405 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4405"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4405"
+title: Compilateur avertissement (niveau 1) C4405 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4405
+dev_langs: C++
+helpviewer_keywords: C4405
 ms.assetid: 155c64d6-58ae-4455-b61f-ccd711c5da96
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2301c85eeb91ece43cec75e4cbb2a451c27a0c8d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 1) C4405
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'identificateur' : cet identificateur est un mot réservé  
+# <a name="compiler-warning-level-1-c4405"></a>Avertissement du compilateur (niveau 1) C4405
+'identificateur' : identificateur est un mot réservé  
   
- Un mot réservé pour l'assembleur inline est utilisé comme nom de variable.  Ceci peut causer des résultats imprévisibles.  Pour résoudre cet avertissement, évitez de donner aux variables des noms identiques à des mots réservés pour l'assembleur inline.  L'exemple suivant génère l'erreur C4405 :  
+ Un mot réservé pour l’assembleur inline est utilisé comme nom de variable. Cela peut entraîner des résultats imprévisibles. Pour résoudre cet avertissement, évitez d’affectation de noms de variables à des mots réservés pour l’assembleur inline. L’exemple suivant génère C4405 :  
   
 ```  
 // C4405.cpp  

@@ -1,57 +1,56 @@
 ---
-title: "/Qvec-report (Niveau de rapport du vectoriseur automatique) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: -Qvec-report (niveau de Reporting Vectoriseur automatique) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4778c9a3-0692-4085-9b05-1bfeadf4c74a
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e0df8e487f2f79029c73adfbf44cb3873bcfcaa3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /Qvec-report (Niveau de rapport du vectoriseur automatique)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Active la fonctionnalité de rapport du compilateur [AUTO\-Vectorizer](../../parallel/auto-parallelization-and-auto-vectorization.md) et spécifie le niveau des messages d'information pour la sortie pendant la compilation.  
+# <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report (Niveau de rapport du vectoriseur automatique)
+Active la fonctionnalité de création de rapports du compilateur [Vectoriseur](../../parallel/auto-parallelization-and-auto-vectorization.md) et spécifie le niveau des messages d’information pour la sortie pendant la compilation.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 /Qvec-report:{1}{2}  
 ```  
   
-## Notes  
- **\/Qvec\-report:1**  
- Génère un message d'information pour les boucles for qui sont vectorisées.  
+## <a name="remarks"></a>Remarques  
+ **/ Qvec-report : 1**  
+ Génère un message d’information pour les boucles sont vectorisée.  
   
- **\/Qvec\-report:2**  
- Génère un message d'information pour les boucles for qui sont vectorisées et les boucles for qui ne sont pas vectorisées, avec un code de la raison.  
+ **/ Qvec-report : 2**  
+ Génère un message d’information pour les boucles sont vectorisées et pour les boucles non vectorisées, ainsi que d’un code de raison.  
   
- Pour des informations sur les codes supplémentaires et les messages, consultez [Messages du vectoriseur et du paralléliseur](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
+ Pour plus d’informations sur les codes motifs et les messages, consultez [Messages du Vectoriseur et du PARALLÉLISEUR](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
   
-### Pour définir l'option \/Qvec\-report du compilateur dans Visual Studio  
+### <a name="to-set-the-qvec-report-compiler-option-in-visual-studio"></a>Pour définir l’option de compilateur /Qvec-report dans Visual Studio  
   
-1.  Dans l'**Explorateur de solutions**, ouvrez le menu contextuel du projet et choisissez **Propriétés**.  
+1.  Dans l' **Explorateur de solutions**, ouvrez le menu contextuel du projet et choisissez **Propriétés**.  
   
-2.  Dans la boîte de dialogue **Pages de propriétés**, sous **C\/C\+\+**, sélectionnez **Ligne de commande**.  
+2.  Dans le **Pages de propriétés** boîte de dialogue **C/C++**, sélectionnez **ligne de commande**.  
   
-3.  Dans la zone **Options supplémentaires**, entrez `/Qvec-report:1` ou `/Qvec-report:2`.  
+3.  Dans le **des Options supplémentaires** , entrez `/Qvec-report:1` ou `/Qvec-report:2`.  
   
-### Pour définir l'option \/Qvec\-report du compilateur par programmation  
+### <a name="to-set-the-qvec-report-compiler-option-programmatically"></a>Pour définir l’option de compilateur /Qvec-report par programmation  
   
--   Utilisez l'exemple de code dans <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
+-   Utilisez l'exemple de code fourni dans <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Voir aussi  
- [\/Q \(Opérations de bas niveau\), options](../../build/reference/q-options-low-level-operations.md)   
+## <a name="see-also"></a>Voir aussi  
+ [/Q (opérations de bas niveau), options](../../build/reference/q-options-low-level-operations.md)   
  [Options du compilateur](../../build/reference/compiler-options.md)   
- [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)   
- [Programmation parallèle dans le Code Natif](http://go.microsoft.com/fwlink/?LinkId=263662)
+ [Définition des Options du compilateur](../../build/reference/setting-compiler-options.md)   
+ [Programmation parallèle en Code natif](http://go.microsoft.com/fwlink/?LinkId=263662)

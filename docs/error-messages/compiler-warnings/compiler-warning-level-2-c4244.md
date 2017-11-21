@@ -1,39 +1,37 @@
 ---
-title: "Avertissement du compilateur (niveau 2) C4244 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4244"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4244"
+title: Compilateur avertissement (niveau 2) C4244 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4244
+dev_langs: C++
+helpviewer_keywords: C4244
 ms.assetid: 2c19d157-21d1-42c2-a6c0-3f30f2ce3813
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7f2059d6b17d803740f70e0d640e212d15858705
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 2) C4244
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-2-c4244"></a>Avertissement du compilateur (niveau 2) C4244
 'argument' : conversion de 'type1' en 'type2', perte possible de données  
   
- Un type à virgule flottante a été converti en type d'entier.  Une perte de données est possible.  
+ Un type à virgule flottante a été converti en un type entier.  Une perte de données peut avoir eu lieu.  
   
- Si l'erreur C4244 se produit, vous devez soit modifier votre programme pour utiliser des types compatibles, soit ajouter une certaine logique à votre code afin de garantir que la plage de valeurs possibles sera toujours compatible avec les types que vous utilisez.  
+ Si vous obtenez l'avertissement C4244, vous devez modifier votre programme pour utiliser des types compatibles, ou ajouter une logique à votre code pour garantir que la plage des valeurs possibles sera toujours compatible avec les types que vous utilisez.  
   
- L'avertissement C4244 peut également se déclencher aux niveaux 3 et 4 ; pour plus d'informations, consultez [Avertissement du compilateur \(niveaus 3 and 4\) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md).  
+ C4244 peut également se produire au niveau 3 et 4 ; consultez [l’avertissement du compilateur (niveaux 3 et 4) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md) pour plus d’informations.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C4244 :  
+## <a name="example"></a>Exemple  
+ L'exemple suivant génère l'avertissement C4244 :  
   
 ```  
 // C4244_level2.cpp  

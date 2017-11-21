@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - '* operator'
 - indirection operator
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1f9b758e3bfa1a01ed2b2a428758c3e4a982fdae
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 271708c8908e6d213047283c431e03726946e059
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="indirection-operator-"></a>Opérateur d'indirection : *
 ## <a name="syntax"></a>Syntaxe  
@@ -36,7 +33,7 @@ ms.lasthandoff: 09/25/2017
 ```  
   
 ## <a name="remarks"></a>Remarques  
- L’opérateur d’indirection unaire (**\***) déréférence un pointeur ; autrement dit, il convertit une valeur de pointeur à une l-value. L’opérande de l’opérateur d’indirection doit être un pointeur vers un type. Le résultat de l'expression d'indirection est le type à partir duquel le type pointeur est dérivé. L’utilisation de la ** \* ** opérateur dans ce contexte est différente de sa signification comme opérateur binaire, qui est la multiplication.  
+ L’opérateur d’indirection unaire (**\***) déréférence un pointeur ; autrement dit, il convertit une valeur de pointeur à une l-value. L’opérande de l’opérateur d’indirection doit être un pointeur vers un type. Le résultat de l'expression d'indirection est le type à partir duquel le type pointeur est dérivé. L’utilisation de la  **\***  opérateur dans ce contexte est différente de sa signification comme opérateur binaire, qui est la multiplication.  
   
  Si l'opérande pointe vers une fonction, le résultat est un désignateur de fonction. S'il pointe vers un emplacement de stockage, le résultat est une l-value désignant l'emplacement de stockage.  
   

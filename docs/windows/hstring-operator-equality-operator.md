@@ -1,34 +1,31 @@
 ---
-title: "HString::Operator==, op&#233;rateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString::operator=="
-dev_langs: 
-  - "C++"
+title: "HString::Operator ==, opérateur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString::operator==
+dev_langs: C++
 ms.assetid: 77ff4c1a-e62a-4256-bf9d-0f017137c630
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a53b451ca5beae1e26bdda8cac9041669f63cd87
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# HString::Operator==, op&#233;rateur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hstringoperator-operator"></a>HString::Operator==, opérateur
 Indique si les deux paramètres sont égaux.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
-  
 inline bool operator==(  
                const HString& lhs,   
                const HString& rhs) throw()  
@@ -51,20 +48,20 @@ inline bool operator==(
   
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `lhs`  
- Le premier paramètre à comparer.  `lhs` peut être un objet HString ou un objet HStringReference, ou encore un handle HSTRING.  
+ Le premier paramètre à comparer. `lhs`peut être un objet HString ou HStringReference, ou un handle HSTRING.  
   
  `rhs`  
- Le deuxième paramètre à comparer.`rhs` peut être un objet HString ou un objet HStringReference, ou encore un handle HSTRING.  
+ Le deuxième paramètre à comparer.`rhs` peut être un objet HString ou HStringReference, ou un handle HSTRING.  
   
-## Valeur de retour  
- `true` si les paramètres `lhs` et `rhs` sont égaux ; sinon, `false`.  
+## <a name="return-value"></a>Valeur de retour  
+ `true`Si le `lhs` et `rhs` paramètres sont égaux ; sinon, `false`.  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers  
+ **Namespace :** Microsoft::WRL::Wrappers  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [HString, classe](../windows/hstring-class.md)

@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- lambda expressions [C++], examples
+dev_langs: C++
+helpviewer_keywords: lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 29a2c80bbd586ecf495269dad84f2b42440c41cc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 552452d7da81836c5f88ad98b5168d6ceee47bf4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="examples-of-lambda-expressions"></a>Exemples d’expressions lambda
 Cet article explique comment utiliser des expressions lambda dans vos programmes. Pour une vue d’ensemble d’expressions lambda, consultez [Expressions Lambda](../cpp/lambda-expressions-in-cpp.md). Pour plus d’informations sur la structure d’une expression lambda, consultez [syntaxe d’Expression Lambda](../cpp/lambda-expression-syntax.md).  

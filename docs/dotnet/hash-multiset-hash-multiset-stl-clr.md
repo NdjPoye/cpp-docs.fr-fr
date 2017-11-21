@@ -1,32 +1,30 @@
 ---
-title: "hash_multiset::hash_multiset (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::hash_multiset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_multiset (membre) (STL/CLR)"
+title: hash_multiset::hash_multiset (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::hash_multiset
+dev_langs: C++
+helpviewer_keywords: hash_multiset member [STL/CLR]
 ms.assetid: 1b224c60-b714-4ed5-9234-79b61b92a953
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f6345e94ff115d14ae7e94d0243682ed8b27b28b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::hash_multiset (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Construit un objet container.  
+# <a name="hashmultisethashmultiset-stlclr"></a>hash_multiset::hash_multiset (STL/CLR)
+Construit un objet conteneur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 hash_multiset();  
@@ -49,106 +47,92 @@ hash_multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred, hasher^ hashfn);  
 ```  
   
-#### Paramètres  
- premièrement  
+#### <a name="parameters"></a>Paramètres  
+ premier  
  Début de la plage à insérer.  
   
  hashfn  
- Fonction de hachage pour faire correspondre les clés aux compartiments correspondants.  
+ Fonction pour les clés de mappage pour les compartiments de hachage.  
   
  last  
  Fin de la plage à insérer.  
   
  pred  
- Classer l'attribut de la séquence contrôlée.  
+ Classement de prédicat pour la séquence contrôlée.  
   
- right  
+ droite  
  Objet ou plage à insérer.  
   
-## Notes  
- Le constructeur :  
+## <a name="remarks"></a>Remarques  
+ Le constructeur :  
   
  `hash_multiset();`  
   
- démarre la séquence contrôlée sans éléments, avec l'attribut de classement par défaut `key_compare()`, et avec la fonction de hachage par défaut.  Vous l'utilisez pour spécifier une séquence initiale contrôlée vide, avec le prédicat de classement par défaut et la fonction de hachage.  
+ Initialise la séquence contrôlée sans aucun élément, avec la valeur par défaut classement prédicat `key_compare()`et avec la fonction de hachage par défaut. Il permet de spécifier une séquence contrôlée initiale vide avec la fonction de prédicat et hachage de classement par défaut.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `explicit hash_multiset(key_compare^ pred);`  
   
- démarre la séquence contrôlée sans éléments, avec l'attribut de classement par défaut `pred`, et avec la fonction de hachage par défaut.  Vous l'utilisez pour spécifier une séquence initiale contrôlée vide, avec le prédicat spécifique de classement par défaut et la fonction de hachage par défaut.  
+ Initialise la séquence contrôlée sans aucun élément, avec le prédicat de tri `pred`et avec la fonction de hachage par défaut. Il permet de spécifier une séquence contrôlée initiale vide avec le prédicat de tri spécifié et la fonction de hachage par défaut.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `hash_multiset(key_compare^ pred, hasher^ hashfn);`  
   
- démarre la séquence contrôlée sans éléments, avec l'attribut de classement par défaut `pred`, et avec la fonction de hachage par défaut `hashfn`.  Vous l'utilisez pour spécifier une séquence initiale contrôlée vide, avec le prédicat spécifique de classement par défaut et la fonction de hachage.  
+ Initialise la séquence contrôlée sans aucun élément, avec le prédicat de tri `pred`et avec la fonction de hachage `hashfn`. Il permet de spécifier une séquence contrôlée initiale vide avec la fonction de prédicat et hachage de tri spécifiée.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `hash_multiset(hash_multiset<Key>% right);`  
   
- démarre la séquence contrôlée sans éléments par la séquence `[``right``.`[hash\_multiset::begin](../dotnet/hash-multiset-begin-stl-clr.md)`(),` `right``.`[hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)`())`, avec l'attribut de classement par défaut, et avec la fonction de hachage par défaut.  Vous l'utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le code de hachage multiset de l'objet `right`, Avec le défaut ordonnant le prédicat et la fonction de hachage.  
+ Initialise la séquence contrôlée par la séquence [`right.begin()`, `right.end()`), avec la valeur par défaut de classement de prédicat et avec la fonction de hachage par défaut. Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet hash_multiset `right`avec le prédicat de tri par défaut et la fonction de hachage.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `hash_multiset(hash_multiset<Key>^ right);`  
   
- démarre la séquence contrôlée sans éléments par la séquence `[``right``->`[hash\_multiset::begin](../dotnet/hash-multiset-begin-stl-clr.md)`(),` `right``->`[hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)`())`, avec l'attribut de classement par défaut, et avec la fonction de hachage par défaut.  Vous l'utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le code de hachage multiset de l'objet `right`, Avec le défaut ordonnant le prédicat et la fonction de hachage.  
+ Initialise la séquence contrôlée par la séquence [`right->begin()`, `right->end()`), avec la valeur par défaut de classement de prédicat et avec la fonction de hachage par défaut. Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet hash_multiset `right`avec le prédicat de tri par défaut et la fonction de hachage.  
   
- Le constructeur :  
+ Le constructeur :  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_multiset(InIter first, InIter last);`  
   
- `hash_multiset(InIter first, InIter last);`  
+ Initialise la séquence contrôlée par la séquence [`first`, `last`), avec la valeur par défaut de classement de prédicat et avec la fonction de hachage par défaut. Il permet de rendre la séquence contrôlée une copie d’une autre séquence, avec la fonction de prédicat et hachage de classement par défaut.  
   
- démarre la séquence contrôlée sans éléments par la séquence `[``first``,` `last``)`, avec l'attribut de classement par défaut, et avec la fonction de hachage par défaut.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence, avec l'attribut et la fonction de hachage par défaut.  
+ Le constructeur :  
   
- Le constructeur :  
+ `template<typename InIter> hash_multiset(InIter first, InIter last, key_compare^ pred);`  
   
- `template<typename InIter>`  
+ Initialise la séquence contrôlée par la séquence [`first`, `last`), avec le prédicat de tri `pred`et avec la fonction de hachage par défaut. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence, avec le prédicat de tri spécifié et la fonction de hachage par défaut.  
   
- `hash_multiset(InIter first, InIter last,`  
+ Le constructeur :  
   
- `key_compare^ pred);`  
+ `template<typename InIter> hash_multiset(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
   
- démarre la séquence contrôlée sans éléments par la séquence `[``first``,` `last``)`, avec l'attribut de classement par défaut `pred`, et avec la fonction de hachage par défaut.  Vous l'utilisez pour faire de la séquence contrôlée d'une copie d'une autre séquence, avec l'attribut spécifique de classement et la fonction de hachage par défaut.  
+ Initialise la séquence contrôlée par la séquence [`first`, `last`), avec le prédicat de tri `pred`et avec la fonction de hachage `hashfn`. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence, avec la fonction de prédicat et hachage de tri spécifiée.  
   
- Le constructeur :  
-  
- `template<typename InIter>`  
-  
- `hash_multiset(InIter first, InIter last,`  
-  
- `key_compare^ pred, hasher^ hashfn);`  
-  
- Initialise la séquence contrôlée avec la séquence `[``first``,` `last``)`, avec le prédicat de classements `pred`, et avec la fonction de hachage `hashfn`.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence, avec l'attribut spécifié et la fonction de hachage par défaut.  
-  
- Le constructeur :  
+ Le constructeur :  
   
  `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- démarre la séquence contrôlée par la séquence indiquée par l'énumérateur `right`, avec l'attribut par défaut, et avec la fonction de hachage par défaut.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence décrite par un énumérateur, avec le prédicat de classement par défaut et la fonction de hachage par défaut.  
+ Initialise la séquence contrôlée par la séquence désignée par l’énumérateur `right`, avec la valeur par défaut de classement de prédicat et avec la fonction de hachage par défaut. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec la fonction de prédicat et hachage de classement par défaut.  
   
- Le constructeur :  
+ Le constructeur :  
   
- `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ Initialise la séquence contrôlée par la séquence désignée par l’énumérateur `right`, avec le prédicat de tri `pred`et avec la fonction de hachage par défaut. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par l’énumérateur avec la fonction de hachage par défaut et le prédicat de tri spécifiée.  
   
- démarre la séquence contrôlée par l'ordre indiqué par l'énumérateur `right`, avec l'attribut de classement par défaut `pred`, et avec la fonction de hachage par défaut.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence décrite par un énumérateur, avec le prédicat spécifié de classement par défaut et la fonction de hachage par défaut.  
+ Le constructeur :  
   
- Le constructeur :  
+ `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
   
- `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ Initialise la séquence contrôlée par la séquence désignée par l’énumérateur `right`, avec le prédicat de tri `pred`et avec la fonction de hachage `hashfn`. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par l’énumérateur, avec la fonction de prédicat et hachage de tri spécifiée.  
   
- `key_compare^ pred, hasher^ hashfn);`  
+## <a name="example"></a>Exemple  
   
- démarre la séquence contrôlée par l'ordre indiqué par l'énumérateur `right`, avec l'attribut de classement par défaut `pred`, et avec la fonction de hachage par défaut `hashfn`.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence décrite par un énumérateur, avec le prédicat spécifique de classement par défaut et la fonction de hachage par défaut.  
-  
-## Exemple  
-  
-```  
+```cpp  
 // cliext_hash_multiset_construct.cpp   
 // compile with: /clr   
 #include <cliext/hash_set>   
@@ -255,26 +239,32 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **a b c**  
-**size\(\) \= 0**  
- **a b c**  
-**size\(\) \= 0**  
- **c b a**  
- **a b c**  
- **a b c**  
- **c b a**  
- **a b c**  
- **a b c**  
- **c b a**  
- **a b c**  
- **a b c**   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_set\>  
+```Output  
+size() = 0  
+ a b c  
+size() = 0  
+ a b c  
+size() = 0  
+ c b a  
   
- **Espace de noms** cliext  
+ a b c  
+ a b c  
+ c b a  
   
-## Voir aussi  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::generic\_container](../dotnet/hash-multiset-generic-container-stl-clr.md)   
- [hash\_multiset::operator\=](../dotnet/hash-multiset-operator-assign-stl-clr.md)
+ a b c  
+ a b c  
+ c b a  
+  
+ a b c  
+ a b c  
+```  
+  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/hash_set >  
+  
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::generic_container (STL/CLR)](../dotnet/hash-multiset-generic-container-stl-clr.md)   
+ [hash_multiset::operator= (STL/CLR)](../dotnet/hash-multiset-operator-assign-stl-clr.md)

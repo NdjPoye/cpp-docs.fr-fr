@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -139,37 +138,20 @@ f1_keywords:
 - AMP_MATH/Concurrency::tgammaf
 - AMP_MATH/Concurrency::trunc
 - AMP_MATH/Concurrency::truncf
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: bc8487cf007eaf1373389b6cc6d3f4bdac09b698
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 5250ab17fa6da4ed54d5bda84e32b409ca53869d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math, espace de noms
-Les fonctions dans le `precise_math` espace de noms sont C99 conforme. À la fois simple précision et double précision versions de chaque fonction sont incluses. Par exemple, `acos` est la version double précision et `acosf` est la version simple précision. Ces fonctions, y compris les fonctions simple précision, requièrent la prise en charge de double précision étendue sur l’accélérateur. Vous pouvez utiliser la [accelerator::supports_double_precision](accelerator-class.md#supports_double_precision) pour déterminer si vous pouvez exécuter ces fonctions sur un accélérateur spécifique. 
+Les fonctions dans le `precise_math` espace de noms sont C99 conforme. À la fois simple précision et double précision versions de chaque fonction sont incluses. Par exemple, `acos` est la version double précision et `acosf` est la version simple précision. Ces fonctions, y compris les fonctions simple précision, nécessitent la prise en charge de double précision étendue sur l’accélérateur. Vous pouvez utiliser la [accelerator::supports_double_precision](accelerator-class.md#supports_double_precision) pour déterminer si vous pouvez exécuter ces fonctions sur un accélérateur spécifique. 
 
   
 ## <a name="syntax"></a>Syntaxe  
@@ -204,8 +186,8 @@ namespace precise_math;
 |[cbrtf](concurrency-precise-math-namespace-functions.md#cbrtf)|Calcule la racine cubique réelle de l’argument|  
 |[ceil](concurrency-precise-math-namespace-functions.md#ceil)|Surchargé. Calcule le plafond de l’argument|  
 |[ceilf](concurrency-precise-math-namespace-functions.md#ceilf)|Calcule le plafond de l’argument|  
-|[copysign](concurrency-precise-math-namespace-functions.md#copysign)|Surchargé. Produit une valeur avec l’ampleur des _X et le signe de _Y|  
-|[copysignf](concurrency-precise-math-namespace-functions.md#copysignf)|Produit une valeur avec l’ampleur des _X et le signe de _Y|  
+|[copysign](concurrency-precise-math-namespace-functions.md#copysign)|Surchargé. Génère une valeur avec la grandeur du _X et le signe de _Y|  
+|[copysignf](concurrency-precise-math-namespace-functions.md#copysignf)|Génère une valeur avec la grandeur du _X et le signe de _Y|  
 |[cos](concurrency-precise-math-namespace-functions.md#cos)|Surchargé. Calcule le cosinus de l’argument|  
 |[cosf](concurrency-precise-math-namespace-functions.md#cosf)|Calcule le cosinus de l’argument|  
 |[cosh](concurrency-precise-math-namespace-functions.md#cosh)|Surchargé. Calcule la valeur de cosinus hyperbolique de l’argument|  
@@ -220,20 +202,20 @@ namespace precise_math;
 |[erff](concurrency-precise-math-namespace-functions.md#erff)|Calcule la fonction d’erreur de _X|  
 |[erfinv](concurrency-precise-math-namespace-functions.md#erfinv)|Surchargé. Calcule la fonction d’erreur inverse de _X|  
 |[erfinvf](concurrency-precise-math-namespace-functions.md#erfinvf)|Calcule la fonction d’erreur inverse de _X|  
-|[exp](concurrency-precise-math-namespace-functions.md#exp)|Surchargé. Calcule la valeur exponentielle de l’argument de base e|  
-|[exp10](concurrency-precise-math-namespace-functions.md#exp10)|Surchargé. Calcule la valeur exponentielle de l’argument de base&10;|  
-|[exp10f](concurrency-precise-math-namespace-functions.md#exp10f)|Calcule la valeur exponentielle de l’argument de base&10;|  
-|[exp2](concurrency-precise-math-namespace-functions.md#exp2)|Surchargé. Calcule la valeur exponentielle de l’argument base-2|  
-|[exp2f](concurrency-precise-math-namespace-functions.md#exp2f)|Calcule la valeur exponentielle de l’argument base-2|  
-|[expf](concurrency-precise-math-namespace-functions.md#expf)|Calcule la valeur exponentielle de l’argument de base e|  
+|[exp](concurrency-precise-math-namespace-functions.md#exp)|Surchargé. Calcule l’exponentielle de l’argument de base e|  
+|[exp10](concurrency-precise-math-namespace-functions.md#exp10)|Surchargé. Calcule la valeur exponentielle de l’argument de base 10|  
+|[exp10f](concurrency-precise-math-namespace-functions.md#exp10f)|Calcule la valeur exponentielle de l’argument de base 10|  
+|[exp2](concurrency-precise-math-namespace-functions.md#exp2)|Surchargé. Calcule la valeur exponentielle de l’argument de base 2|  
+|[exp2f](concurrency-precise-math-namespace-functions.md#exp2f)|Calcule la valeur exponentielle de l’argument de base 2|  
+|[expf](concurrency-precise-math-namespace-functions.md#expf)|Calcule l’exponentielle de l’argument de base e|  
 |[expm1](concurrency-precise-math-namespace-functions.md#expm1)|Surchargé. Calcule l’exponentielle de base e de l’argument, moins 1|  
 |[expm1f](concurrency-precise-math-namespace-functions.md#expm1f)|Calcule l’exponentielle de base e de l’argument, moins 1|  
 |[fabs](concurrency-precise-math-namespace-functions.md#fabs)|Surchargé. Retourne la valeur absolue de l’argument|  
 |[fabsf](concurrency-precise-math-namespace-functions.md#fabsf)|Retourne la valeur absolue de l’argument|  
-|[fdim](concurrency-precise-math-namespace-functions.md#fdim)|Surchargé. Détermine la différence entre les arguments positive|  
-|[fdimf](concurrency-precise-math-namespace-functions.md#fdimf)|Détermine la différence entre les arguments positive|  
-|[floor](concurrency-precise-math-namespace-functions.md#floor)|Surchargé. Calcule le plancher de l’argument|  
-|[floorf](concurrency-precise-math-namespace-functions.md#floorf)|Calcule le plancher de l’argument|  
+|[fdim](concurrency-precise-math-namespace-functions.md#fdim)|Surchargé. Détermine la différence positive entre les arguments|  
+|[fdimf](concurrency-precise-math-namespace-functions.md#fdimf)|Détermine la différence positive entre les arguments|  
+|[floor](concurrency-precise-math-namespace-functions.md#floor)|Surchargé. Calcule la valeur plancher de l’argument|  
+|[floorf](concurrency-precise-math-namespace-functions.md#floorf)|Calcule la valeur plancher de l’argument|  
 |[fma](concurrency-precise-math-namespace-functions.md#fma)|Surchargé. Calcul (_X * _Y) + _Z, arrondi comme une seule opération ternaire|  
 |[fmaf](concurrency-precise-math-namespace-functions.md#fmaf)|Calcul (_X * _Y) + _Z, arrondi comme une seule opération ternaire|  
 |[fmax](concurrency-precise-math-namespace-functions.md#fmax)|Surchargé. Déterminer la valeur numérique maximale des arguments|  
@@ -242,7 +224,7 @@ namespace precise_math;
 |[fminf](concurrency-precise-math-namespace-functions.md#fminf)|Déterminer la valeur numérique minimale des arguments|  
 |[fmod, fonction (C++ AMP)](concurrency-precise-math-namespace-functions.md#fmod)|Surchargé. Calcule le reste à virgule flottante de _X/_Y|  
 |[fmodf](concurrency-precise-math-namespace-functions.md#fmodf)|Calcule le reste à virgule flottante de _X/_Y|  
-|[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|Surchargé. Classe de la valeur d’argument comme une valeur NaN, infinie, normale subnormal, zéro|  
+|[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|Surchargé. Classe de la valeur d’argument comme une valeur NaN, infinie, normal subnormal, zéro|  
 |[frexp](concurrency-precise-math-namespace-functions.md#frexp)|Surchargé. Obtient la mantisse et l’exposant de _X|  
 |[frexpf](concurrency-precise-math-namespace-functions.md#frexpf)|Obtient la mantisse et l’exposant de _X|  
 |[hypot](concurrency-precise-math-namespace-functions.md#hypot)|Surchargé. Calcule la racine carrée de la somme des carrés des _X et _Y|  
@@ -250,31 +232,31 @@ namespace precise_math;
 |[ilogb](concurrency-precise-math-namespace-functions.md#ilogb)|Surchargé. Extraire l’exposant de _X comme une valeur int signée|  
 |[ilogbf](concurrency-precise-math-namespace-functions.md#ilogbf)|Extraire l’exposant de _X comme une valeur int signée|  
 |[isFinite](concurrency-precise-math-namespace-functions.md#isfinite)|Surchargé. Détermine si l’argument a une valeur finie|  
-|[isinf](concurrency-precise-math-namespace-functions.md#isinf)|Surchargé. Détermine si l’argument est une infinité|  
+|[isinf](concurrency-precise-math-namespace-functions.md#isinf)|Surchargé. Détermine si l’argument est un infini.|  
 |[isnan](concurrency-precise-math-namespace-functions.md#isnan)|Surchargé. Détermine si l’argument est une valeur NaN|  
-|[isnormal](concurrency-precise-math-namespace-functions.md#isnormal)|Surchargé. Détermine si l’argument est normale|  
-|[ldexp](concurrency-precise-math-namespace-functions.md#ldexp)|Surchargé. Calcule le nombre réel de la mantisse et exposant|  
-|[ldexpf](concurrency-precise-math-namespace-functions.md#ldexpf)|Calcule le nombre réel de la mantisse et exposant|  
-|[lgamma](concurrency-precise-math-namespace-functions.md#lgamma)|Surchargé. Calcule le logarithme népérien de la valeur absolue de gamma de l’argument|  
-|[lgammaf](concurrency-precise-math-namespace-functions.md#lgammaf)|Calcule le logarithme népérien de la valeur absolue de gamma de l’argument|  
+|[isnormal](concurrency-precise-math-namespace-functions.md#isnormal)|Surchargé. Détermine si l’argument est un vecteur normal|  
+|[ldexp](concurrency-precise-math-namespace-functions.md#ldexp)|Surchargé. Calcule un nombre réel à partir de la mantisse et exposant|  
+|[ldexpf](concurrency-precise-math-namespace-functions.md#ldexpf)|Calcule un nombre réel à partir de la mantisse et exposant|  
+|[lgamma](concurrency-precise-math-namespace-functions.md#lgamma)|Surchargé. Calcule le logarithme naturel de la valeur absolue de gamma de l’argument|  
+|[lgammaf](concurrency-precise-math-namespace-functions.md#lgammaf)|Calcule le logarithme naturel de la valeur absolue de gamma de l’argument|  
 |[log](concurrency-precise-math-namespace-functions.md#log)|Surchargé. Calcule le logarithme de base e de l’argument|  
-|[log10](concurrency-precise-math-namespace-functions.md#log10)|Surchargé. Calcule le logarithme en base&10; de l’argument|  
-|[log10f](concurrency-precise-math-namespace-functions.md#log10f)|Calcule le logarithme en base&10; de l’argument|  
-|[log1p](concurrency-precise-math-namespace-functions.md#log1p)|Surchargé. Calcule le logarithme de base e de 1 et de l’argument|  
-|[log1pf](concurrency-precise-math-namespace-functions.md#log1pf)|Calcule le logarithme de base e de 1 et de l’argument|  
-|[log2](concurrency-precise-math-namespace-functions.md#log2)|Surchargé. Calcule le logarithme base&2; de l’argument|  
-|[log2f](concurrency-precise-math-namespace-functions.md#log2f)|Calcule le logarithme base&2; de l’argument|  
-|[logb](concurrency-precise-math-namespace-functions.md#logb)|Surchargé. Extrait l’exposant de _X, comme une valeur d’entier signé dans un format à virgule flottante|  
-|[logbf](concurrency-precise-math-namespace-functions.md#logbf)|Extrait l’exposant de _X, comme une valeur d’entier signé dans un format à virgule flottante|  
+|[log10](concurrency-precise-math-namespace-functions.md#log10)|Surchargé. Calcule le logarithme de base 10 de l’argument|  
+|[log10f](concurrency-precise-math-namespace-functions.md#log10f)|Calcule le logarithme de base 10 de l’argument|  
+|[log1p](concurrency-precise-math-namespace-functions.md#log1p)|Surchargé. Calcule le logarithme de base e de 1 ainsi que l’argument|  
+|[log1pf](concurrency-precise-math-namespace-functions.md#log1pf)|Calcule le logarithme de base e de 1 ainsi que l’argument|  
+|[log2](concurrency-precise-math-namespace-functions.md#log2)|Surchargé. Calcule le logarithme base 2 de l’argument|  
+|[log2f](concurrency-precise-math-namespace-functions.md#log2f)|Calcule le logarithme base 2 de l’argument|  
+|[logb](concurrency-precise-math-namespace-functions.md#logb)|Surchargé. Extrait l’exposant de _X, comme une valeur entière signée dans un format à virgule flottante|  
+|[logbf](concurrency-precise-math-namespace-functions.md#logbf)|Extrait l’exposant de _X, comme une valeur entière signée dans un format à virgule flottante|  
 |[logf](concurrency-precise-math-namespace-functions.md#logf)|Calcule le logarithme de base e de l’argument|  
-|[modf](concurrency-precise-math-namespace-functions.md#modf)|Surchargé. Fractionne _X en une fraction et un nombre entier.|  
-|[modff](concurrency-precise-math-namespace-functions.md#modff)|Fractionne _X en une fraction et un nombre entier.|  
+|[modf](concurrency-precise-math-namespace-functions.md#modf)|Surchargé. Fractionne _X en fractions de seconde et un nombre entier.|  
+|[modff](concurrency-precise-math-namespace-functions.md#modff)|Fractionne _X en fractions de seconde et un nombre entier.|  
 |[nan](concurrency-precise-math-namespace-functions.md#nan)|Retourne une valeur NaN silencieuse|  
 |[nanf](concurrency-precise-math-namespace-functions.md#nanf)|Retourne une valeur NaN silencieuse|  
-|[nearbyint](concurrency-precise-math-namespace-functions.md#nearbyint)|Surchargé. Arrondit l’argument en une valeur entière dans un format à virgule flottante, à l’aide de la direction d’arrondi actuelle.|  
-|[nearbyintf](concurrency-precise-math-namespace-functions.md#nearbyintf)|Arrondit l’argument en une valeur entière dans un format à virgule flottante, à l’aide de la direction d’arrondi actuelle.|  
-|[nextafter](concurrency-precise-math-namespace-functions.md#nextafter)|Surchargé. Déterminer la valeur représentable, dans le type de la fonction, après _X dans la direction de _Y|  
-|[nextafterf](concurrency-precise-math-namespace-functions.md#nextafterf)|Déterminer la valeur représentable, dans le type de la fonction, après _X dans la direction de _Y|  
+|[nearbyint](concurrency-precise-math-namespace-functions.md#nearbyint)|Surchargé. Arrondit l’argument à une valeur entière dans un format à virgule flottante, à l’aide de la direction d’arrondi actuelle.|  
+|[nearbyintf](concurrency-precise-math-namespace-functions.md#nearbyintf)|Arrondit l’argument à une valeur entière dans un format à virgule flottante, à l’aide de la direction d’arrondi actuelle.|  
+|[nextafter](concurrency-precise-math-namespace-functions.md#nextafter)|Surchargé. Déterminer la valeur représentable suivante, dans le type de la fonction, après _X dans la direction de _Y|  
+|[nextafterf](concurrency-precise-math-namespace-functions.md#nextafterf)|Déterminer la valeur représentable suivante, dans le type de la fonction, après _X dans la direction de _Y|  
 |[phi](concurrency-precise-math-namespace-functions.md#phi)|Surchargé. Retourne la fonction de distribution cumulative de l’argument|  
 |[phif](concurrency-precise-math-namespace-functions.md#phif)|Retourne la fonction de distribution cumulative de l’argument|  
 |[pow](concurrency-precise-math-namespace-functions.md#pow)|Surchargé. Calcule _X élevé à la puissance de _Y|  
@@ -285,21 +267,21 @@ namespace precise_math;
 |[rcbrtf](concurrency-precise-math-namespace-functions.md#rcbrtf)|Retourne l’inverse de la racine cubique de l’argument|  
 |[remainder](concurrency-precise-math-namespace-functions.md#remainder)|Surchargé. Calcule le reste : _X REM _Y|  
 |[remainderf](concurrency-precise-math-namespace-functions.md#remainderf)|Calcule le reste : _X REM _Y|  
-|[remquo](concurrency-precise-math-namespace-functions.md#remquo)|Surchargé. Calcule le reste même comme _X REM _Y. Également calcule les 23 bits de poids faible de l’intégrale quotient _X/_Y et donne à la même signature que _X/_Y cette valeur. Elle stocke cette valeur signée dans l’entier indiqué par _Quo.|  
-|[remquof](concurrency-precise-math-namespace-functions.md#remquof)|Calcule le reste même comme _X REM _Y. Également calcule les 23 bits de poids faible de l’intégrale quotient _X/_Y et donne à la même signature que _X/_Y cette valeur. Elle stocke cette valeur signée dans l’entier indiqué par _Quo.|  
+|[remquo](concurrency-precise-math-namespace-functions.md#remquo)|Surchargé. Calcule le reste de la même comme _X REM _Y. Également calcule les 23 bits de poids faible de l’intégrale quotient _X/_Y et fournit cette valeur le même signe que _X/_Y. Elle stocke cette valeur signée dans l’entier vers lequel pointé _Quo.|  
+|[remquof](concurrency-precise-math-namespace-functions.md#remquof)|Calcule le reste de la même comme _X REM _Y. Également calcule les 23 bits de poids faible de l’intégrale quotient _X/_Y et fournit cette valeur le même signe que _X/_Y. Elle stocke cette valeur signée dans l’entier vers lequel pointé _Quo.|  
 |[round](concurrency-precise-math-namespace-functions.md#round)|Surchargé. Arrondit _X à l’entier le plus proche|  
 |[roundf](concurrency-precise-math-namespace-functions.md#roundf)|Arrondit _X à l’entier le plus proche|  
 |[rsqrt](concurrency-precise-math-namespace-functions.md#rsqrt)|Surchargé. Retourne l’inverse de la racine carrée de l’argument|  
 |[rsqrtf](concurrency-precise-math-namespace-functions.md#rsqrtf)|Retourne l’inverse de la racine carrée de l’argument|  
-|[scalb](concurrency-precise-math-namespace-functions.md#scalb)|Surchargé. Multiplie _X par FLT_RADIX à la _Y de l’alimentation|  
-|[scalbf](concurrency-precise-math-namespace-functions.md#scalbf)|Multiplie _X par FLT_RADIX à la _Y de l’alimentation|  
-|[scalbn](concurrency-precise-math-namespace-functions.md#scalbn)|Surchargé. Multiplie _X par FLT_RADIX à la _Y de l’alimentation|  
-|[scalbnf](concurrency-precise-math-namespace-functions.md#scalbnf)|Multiplie _X par FLT_RADIX à la _Y de l’alimentation|  
+|[scalb](concurrency-precise-math-namespace-functions.md#scalb)|Surchargé. Multiplie _X par FLT_RADIX à la puissance _Y|  
+|[scalbf](concurrency-precise-math-namespace-functions.md#scalbf)|Multiplie _X par FLT_RADIX à la puissance _Y|  
+|[scalbn](concurrency-precise-math-namespace-functions.md#scalbn)|Surchargé. Multiplie _X par FLT_RADIX à la puissance _Y|  
+|[scalbnf](concurrency-precise-math-namespace-functions.md#scalbnf)|Multiplie _X par FLT_RADIX à la puissance _Y|  
 |[signbit](concurrency-precise-math-namespace-functions.md#signbit)|Surchargé. Détermine si le signe de _X est négatif|  
 |[signbitf](concurrency-precise-math-namespace-functions.md#signbitf)|Détermine si le signe de _X est négatif|  
 |[sin](concurrency-precise-math-namespace-functions.md#sin)|Surchargé. Calcule la valeur du sinus de l’argument|  
-|[sincos](concurrency-precise-math-namespace-functions.md#sincos)|Surchargé. Calcule le sinus et le cosinus valeur _X|  
-|[sincosf](concurrency-precise-math-namespace-functions.md#sincosf)|Calcule le sinus et le cosinus valeur _X|  
+|[sincos](concurrency-precise-math-namespace-functions.md#sincos)|Surchargé. Calcule le sinus et le cosinus de _X|  
+|[sincosf](concurrency-precise-math-namespace-functions.md#sincosf)|Calcule le sinus et le cosinus de _X|  
 |[sinf](concurrency-precise-math-namespace-functions.md#sinf)|Calcule la valeur du sinus de l’argument|  
 |[sinh](concurrency-precise-math-namespace-functions.md#sinh)|Surchargé. Calcule la valeur du sinus hyperbolique de l’argument|  
 |[sinhf](concurrency-precise-math-namespace-functions.md#sinhf)|Calcule la valeur du sinus hyperbolique de l’argument|  
@@ -315,8 +297,8 @@ namespace precise_math;
 |[tanpif](concurrency-precise-math-namespace-functions.md#tanpif)|Calcule la valeur de tangente de pi * _X|  
 |[tgamma](concurrency-precise-math-namespace-functions.md#tgamma)|Surchargé. Calcule la fonction gamma de _X|  
 |[tgammaf](concurrency-precise-math-namespace-functions.md#tgammaf)|Calcule la fonction gamma de _X|  
-|[trunc](concurrency-precise-math-namespace-functions.md#trunc)|Surchargé. Tronque l’argument pour le composant entier|  
-|[truncf](concurrency-precise-math-namespace-functions.md#truncf)|Tronque l’argument pour le composant entier|  
+|[trunc](concurrency-precise-math-namespace-functions.md#trunc)|Surchargé. Tronque l’argument de la partie entière|  
+|[truncf](concurrency-precise-math-namespace-functions.md#truncf)|Tronque l’argument de la partie entière|  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** amp_math.h  
@@ -325,4 +307,3 @@ namespace precise_math;
   
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

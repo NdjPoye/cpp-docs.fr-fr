@@ -1,41 +1,41 @@
 ---
-title: "Interfaces de l&#39;objet transaction | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interfaces, liste de"
-  - "interfaces, OLE DB"
-  - "modèles du fournisseur OLE DB, interfaces d'objet"
-  - "fournisseurs OLE DB, prise en charge des transactions"
-  - "OLE DB, interfaces"
-  - "interfaces d'objet de transaction"
+title: "Interfaces de l’objet transaction | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- interfaces, OLE DB
+- transaction object interfaces
+- OLE DB, interfaces
+- OLE DB providers, transaction support
+- OLE DB provider templates, object interfaces
+- interfaces, list of
 ms.assetid: d2ce99ce-6f7a-4ff9-bc6e-acda3633d5c8
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5731d4d187fa02b0b68c9e4b764bf9aeb1f653dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Interfaces de l&#39;objet transaction
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'objet transaction définit une unité de travail atomique sur une source de données et détermine comment ces unités se rapportent les unes aux autres.  Cet objet n'est pas pris en charge directement par les modèles du fournisseur OLE DB \(autrement dit, vous devez créer votre propre objet\).  
+# <a name="transaction-object-interfaces"></a>Interfaces de l’objet transaction
+L’objet de transaction définit une unité atomique de travail sur une source de données et détermine comment ces unités de travail sont liés entre eux. Cet objet n’est pas directement pris en charge par les modèles du fournisseur OLE DB (autrement dit, vous devez créer votre propre objet).  
   
- Le tableau suivant indique les interfaces obligatoires et facultatives définies par OLE DB pour un objet transaction.  
+ Le tableau suivant montre les interfaces obligatoires et facultatives définies par OLE DB pour un objet de transaction.  
   
-|Interface|Obligatoire ?|Implémentée par les modèles OLE DB ?|  
-|---------------|-------------------|------------------------------------------|  
-|[\<caps:sentence id\="tgt7" sentenceid\="63e99e63156fc90f114fa402662387ef" class\="tgtSentence"\>IConnectionPointContainer\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Obligatoire|Non|  
-|[\<caps:sentence id\="tgt10" sentenceid\="f5097e646bb93cceb560c38e13953a89" class\="tgtSentence"\>ITransaction\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms723053.aspx)|Obligatoire|Non|  
-|[\<caps:sentence id\="tgt13" sentenceid\="130702210bcc45e1afd88b1f2aae1a0b" class\="tgtSentence"\>ISupportErrorInfo\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Facultatif|Non|  
+|Interface|Obligatoire ?|Implémentée par les modèles OLE DB ?|  
+|---------------|---------------|--------------------------------------|  
+|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Obligatoire|Non|  
+|[ITransaction](https://msdn.microsoft.com/en-us/library/ms723053.aspx)|Obligatoire|Non|  
+|[ISupportErrorInfo](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Facultatif|Non|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

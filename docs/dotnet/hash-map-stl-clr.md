@@ -1,44 +1,43 @@
 ---
-title: "hash_map (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "en-tête <cliext/hash_map> [STL/CLR]"
-  - "en-tête <hash_map> [STL/CLR]"
-  - "classe hash_map [STL/CLR]"
+title: hash_map (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map
+dev_langs: C++
+helpviewer_keywords:
+- <cliext/hash_map> header [STL/CLR]
+- <hash_map> header [STL/CLR]
+- hash_map class [STL/CLR]
 ms.assetid: c3cfc69b-04c6-42ae-a30e-0eda953fe883
-caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aae2ca596a04a6502fc50bc7ac2cb6344463f739
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe du modèle décrit un objet qui contrôle la séquence de longueur variée d'éléments ayant un accès bidirectionnel.  Vous utilisez le conteneur `hash_map` pour gérer une séquence d'éléments comme une table de hachage, chaque entrée de table enregistrant une liste liée bidirectionnelle de nœuds, et chaque nœud stockant un élément.  Un élément se compose d'une clé, pour classer la séquence, et d'une valeur mappée.  
+# <a name="hashmap-stlclr"></a>hash_map (STL/CLR)
+La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments ayant un accès bidirectionnel. Vous utilisez le conteneur `hash_map` pour gérer une séquence d’éléments comme une table de hachage, chaque entrée de table stockant un bidirectionnel lié à la liste des nœuds et chaque nœud de stocker un élément. Un élément est constitué d’une clé, pour le classement de la séquence et une valeur mappée, qui aborde le long de la conduite.  
   
- Dans la description ci\-dessous, `GValue` est la même chose que :  
+ Dans la description ci-dessous, `GValue` est identique à :  
   
  `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`  
   
- où :  
+ où :  
   
- `GKey` est la même chose que `Key` sauf si ce dernier est un type de référence, auquel cas il s'agit de `Key^`.  
+ `GKey`est le même que `Key` , sauf si ce dernier est un type référence, auquel cas il est`Key^`  
   
- `GMapped` est la même chose que `Mapped` sauf si ce dernier est un type de référence, auquel cas il s'agit de `Mapped^`.  
+ `GMapped`est le même que `Mapped` , sauf si ce dernier est un type référence, auquel cas il est`Mapped^`  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Key,  
@@ -56,125 +55,125 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### Paramètres  
- Clé  
- Type du composant clé d'un élément dans la séquence contrôlée.  
+#### <a name="parameters"></a>Paramètres  
+ Touche  
+ Le type du composant clé d’un élément dans la séquence contrôlée.  
   
- Mappé  
- Type du composant additionnel d'un élément dans la séquence contrôlée.  
+ mappé  
+ Le type du composant supplémentaire d’un élément dans la séquence contrôlée.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-|Définition de type|Description|  
-|------------------------|-----------------|  
-|[hash\_map::const\_iterator](../dotnet/hash-map-const-iterator-stl-clr.md)|Type d'un itérateur constant pour la séquence contrôlée.|  
-|[hash\_map::const\_reference](../dotnet/hash-map-const-reference-stl-clr.md)|Type d'une référence constante à un élément.|  
-|[hash\_map::const\_reverse\_iterator](../dotnet/hash-map-const-reverse-iterator-stl-clr.md)|Type d'un itérateur inverse constant pour la séquence contrôlée..|  
-|[hash\_map::difference\_type](../dotnet/hash-map-difference-type-stl-clr.md)|Le type d'une distance \(possiblement signée\) entre deux éléments.|  
-|[hash\_map::generic\_container](../dotnet/hash-map-generic-container-stl-clr.md)|Le type de l'interface générique pour le conteneur.|  
-|[hash\_map::generic\_iterator](../dotnet/hash-map-generic-iterator-stl-clr.md)|Le type d'un itérateur pour l'interface générique pour le conteneur.|  
-|[hash\_map::generic\_reverse\_iterator](../dotnet/hash-map-generic-reverse-iterator-stl-clr.md)|Le type d'un itérateur inversé pour l'interface générique pour le conteneur.|  
-|[hash\_map::generic\_value](../dotnet/hash-map-generic-value-stl-clr.md)|Le type d'un élément pour une utilisation avec l'interface générique pour le conteneur.|  
-|[hash\_map::hasher](../dotnet/hash-map-hasher-stl-clr.md)|Le hachage délègue pour une clé.|  
-|[hash\_map::iterator](../dotnet/hash-map-iterator-stl-clr.md)|Type d'un itérateur pour la séquence contrôlée.|  
-|[hash\_map::key\_compare](../dotnet/hash-map-key-compare-stl-clr.md)|Le classement délégué pour deux clés.|  
-|[hash\_map::key\_type](../dotnet/hash-map-key-type-stl-clr.md)|Type d'une clé de classement.|  
-|[hash\_map::mapped\_type](../dotnet/hash-map-mapped-type-stl-clr.md)|Type de la valeur mappée associée à chaque clé.|  
-|[hash\_map::reference](../dotnet/hash-map-reference-stl-clr.md)|Type d'une référence à un élément.|  
-|[hash\_map::reverse\_iterator](../dotnet/hash-map-reverse-iterator-stl-clr.md)|Le type d'un itérateur inversé pour la séquence contrôlée.|  
-|[hash\_map::size\_type](../dotnet/hash-map-size-type-stl-clr.md)|Type d'une \(non\-negative\) distance entre deux éléments.|  
-|[hash\_map::value\_compare](../dotnet/hash-map-value-compare-stl-clr.md)|Le classement délégué pour deux valeurs d'éléments.|  
-|[hash\_map::value\_type](../dotnet/hash-map-value-type-stl-clr.md)|Le type d'un élément.|  
+|Définition de types|Description|  
+|---------------------|-----------------|  
+|[hash_map::const_iterator (STL/CLR)](../dotnet/hash-map-const-iterator-stl-clr.md)|Type d'un itérateur constant pour la séquence contrôlée.|  
+|[hash_map::const_reference (STL/CLR)](../dotnet/hash-map-const-reference-stl-clr.md)|Type d'une référence constante à un élément.|  
+|[hash_map::const_reverse_iterator (STL/CLR)](../dotnet/hash-map-const-reverse-iterator-stl-clr.md)|Type d'un itérateur inserve constant pour la séquence contrôlée.|  
+|[hash_map::difference_type (STL/CLR)](../dotnet/hash-map-difference-type-stl-clr.md)|Le type d’une distance (éventuellement signée) entre deux éléments.|  
+|[hash_map::generic_container (STL/CLR)](../dotnet/hash-map-generic-container-stl-clr.md)|Le type de l’interface générique pour le conteneur.|  
+|[hash_map::generic_iterator (STL/CLR)](../dotnet/hash-map-generic-iterator-stl-clr.md)|Le type d’un itérateur pour l’interface générique pour le conteneur.|  
+|[hash_map::generic_reverse_iterator (STL/CLR)](../dotnet/hash-map-generic-reverse-iterator-stl-clr.md)|Le type d’un itérateur inverse pour l’interface générique pour le conteneur.|  
+|[hash_map::generic_value (STL/CLR)](../dotnet/hash-map-generic-value-stl-clr.md)|Le type d’un élément pour l’interface générique pour le conteneur.|  
+|[hash_map::hasher (STL/CLR)](../dotnet/hash-map-hasher-stl-clr.md)|Délégué d’une clé de hachage.|  
+|[hash_map::iterator (STL/CLR)](../dotnet/hash-map-iterator-stl-clr.md)|Type d'un itérateur pour la séquence contrôlée.|  
+|[hash_map::key_compare (STL/CLR)](../dotnet/hash-map-key-compare-stl-clr.md)|Délégué de classement pour les deux clés.|  
+|[hash_map::key_type (STL/CLR)](../dotnet/hash-map-key-type-stl-clr.md)|Type d'une clé de tri.|  
+|[hash_map::mapped_type (STL/CLR)](../dotnet/hash-map-mapped-type-stl-clr.md)|Le type de la valeur mappée associée à chaque clé.|  
+|[hash_map::reference (STL/CLR)](../dotnet/hash-map-reference-stl-clr.md)|Type d'une référence à un élément.|  
+|[hash_map::reverse_iterator (STL/CLR)](../dotnet/hash-map-reverse-iterator-stl-clr.md)|Type d'un itérateur inverse pour la séquence contrôlée.|  
+|[hash_map::size_type (STL/CLR)](../dotnet/hash-map-size-type-stl-clr.md)|Le type d’une distance (négatif) entre deux éléments.|  
+|[hash_map::value_compare (STL/CLR)](../dotnet/hash-map-value-compare-stl-clr.md)|Délégué de classement pour les deux valeurs d’éléments.|  
+|[hash_map::value_type (STL/CLR)](../dotnet/hash-map-value-type-stl-clr.md)|Type d’un élément.|  
   
-|Fonctions membres|Description|  
-|-----------------------|-----------------|  
-|[hash\_map::begin](../dotnet/hash-map-begin-stl-clr.md)|Désigne le début de la séquence contrôlée.|  
-|[hash\_map::bucket\_count](../dotnet/hash-map-bucket-count-stl-clr.md)|Compte le nombre de buckets.|  
-|[hash\_map::clear](../dotnet/hash-map-clear-stl-clr.md)|Supprime tous les éléments.|  
-|[hash\_map::count](../dotnet/hash-map-count-stl-clr.md)|Compte les éléments qui correspondent à la clé spécifiée.|  
-|[hash\_map::empty](../dotnet/hash-map-empty-stl-clr.md)|Teste si aucun élément n'est présent.|  
-|[hash\_map::end](../dotnet/hash-map-end-stl-clr.md)|Désigne la fin de la séquence contrôlée.|  
-|[hash\_map::equal\_range](../dotnet/hash-map-equal-range-stl-clr.md)|Recherche la plage qui correspond à une clé spécifiée.|  
-|[hash\_map::erase](../dotnet/hash-map-erase-stl-clr.md)|Supprime les éléments placés aux positions spécifiées.|  
-|[hash\_map::find](../dotnet/hash-map-find-stl-clr.md)|Recherche un élément qui correspond à une clé spécifiée.|  
-|[hash\_map::hash\_delegate](../dotnet/hash-map-hash-delegate-stl-clr.md)|Copie le délégué de hachage pour une clé.|  
-|[hash\_map::hash\_map](../dotnet/hash-map-hash-map-stl-clr.md)|Construit un objet container.|  
-|[hash\_map::insert](../dotnet/hash-map-insert-stl-clr.md)|Ajoute les éléments.|  
-|[hash\_map::key\_comp](../dotnet/hash-map-key-comp-stl-clr.md)|Copie le délégué de classement pour deux clés.|  
-|[hash\_map::load\_factor](../dotnet/hash-map-load-factor-stl-clr.md)|Compte le nombre moyens d'éléments par compartiment.|  
-|[hash\_map::lower\_bound](../dotnet/hash-map-lower-bound-stl-clr.md)|Recherche le début de la plage qui correspond à une clé spécifiée.|  
-|[hash\_map::make\_value](../dotnet/hash-map-make-value-stl-clr.md)|Construit un objet de valeur.|  
-|[hash\_map::max\_load\_factor](../dotnet/hash-map-max-load-factor-stl-clr.md)|Obtient ou définit les éléments de chaque compartiment.|  
-|[hash\_map::rbegin](../dotnet/hash-map-rbegin-stl-clr.md)|Désigne le début de la séquence contrôlée inversée.|  
-|[hash\_map::rehash](../dotnet/hash-map-rehash-stl-clr.md)|Régénère la table de hachage.|  
-|[hash\_map::rend](../dotnet/hash-map-rend-stl-clr.md)|Désigne la fin de la séquence contrôlée inversée.|  
-|[hash\_map::size](../dotnet/hash-map-size-stl-clr.md)|Compte le nombre d'éléments.|  
-|[hash\_map::swap](../dotnet/hash-map-swap-stl-clr.md)|Échange le contenu de deux conteneurs.|  
-|[hash\_map::to\_array](../dotnet/hash-map-to-array-stl-clr.md)|Copie la séquence contrôlée dans un tableau.|  
-|[hash\_map::upper\_bound](../dotnet/hash-map-upper-bound-stl-clr.md)|Recherche la fin de la plage qui correspond à une clé spécifiée.|  
-|[hash\_map::value\_comp](../dotnet/hash-map-value-comp-stl-clr.md)|Copie le délégué de classement pour deux valeurs d'éléments.|  
+|Fonction membre|Description|  
+|---------------------|-----------------|  
+|[hash_map::begin (STL/CLR)](../dotnet/hash-map-begin-stl-clr.md)|Désigne le début de la séquence contrôlée.|  
+|[hash_map::bucket_count (STL/CLR)](../dotnet/hash-map-bucket-count-stl-clr.md)|Compte le nombre de compartiments.|  
+|[hash_map::clear (STL/CLR)](../dotnet/hash-map-clear-stl-clr.md)|Supprime tous les éléments.|  
+|[hash_map::count (STL/CLR)](../dotnet/hash-map-count-stl-clr.md)|Compte des éléments qui correspondent à une clé spécifiée.|  
+|[hash_map::empty (STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)|Vérifie l'absence d'éléments.|  
+|[hash_map::end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)|Désigne la fin de la séquence contrôlée.|  
+|[hash_map::equal_range (STL/CLR)](../dotnet/hash-map-equal-range-stl-clr.md)|Recherche une plage qui correspond à une clé spécifiée.|  
+|[hash_map::erase (STL/CLR)](../dotnet/hash-map-erase-stl-clr.md)|Supprime les éléments placés aux positions spécifiées.|  
+|[hash_map::find (STL/CLR)](../dotnet/hash-map-find-stl-clr.md)|Recherche un élément qui correspond à une clé spécifiée.|  
+|[hash_map::hash_delegate (STL/CLR)](../dotnet/hash-map-hash-delegate-stl-clr.md)|Copie le délégué de hachage pour une clé.|  
+|[hash_map::hash_map (STL/CLR)](../dotnet/hash-map-hash-map-stl-clr.md)|Construit un objet conteneur.|  
+|[hash_map::insert (STL/CLR)](../dotnet/hash-map-insert-stl-clr.md)|Ajoute des éléments.|  
+|[hash_map::key_comp (STL/CLR)](../dotnet/hash-map-key-comp-stl-clr.md)|Copie le délégué de classement pour les deux clés.|  
+|[hash_map::load_factor (STL/CLR)](../dotnet/hash-map-load-factor-stl-clr.md)|Compte le nombre moyen d'éléments par compartiment.|  
+|[hash_map::lower_bound (STL/CLR)](../dotnet/hash-map-lower-bound-stl-clr.md)|Début de la recherche de plage qui correspond à une clé spécifiée.|  
+|[hash_map::make_value (STL/CLR)](../dotnet/hash-map-make-value-stl-clr.md)|Construit un objet de valeur.|  
+|[hash_map::max_load_factor (STL/CLR)](../dotnet/hash-map-max-load-factor-stl-clr.md)|Obtient ou définit le nombre maximal d’éléments par compartiment.|  
+|[hash_map::rbegin (STL/CLR)](../dotnet/hash-map-rbegin-stl-clr.md)|Désigne le début de la séquence contrôlée inverse.|  
+|[hash_map::rehash (STL/CLR)](../dotnet/hash-map-rehash-stl-clr.md)|Régénère la table de hachage.|  
+|[hash_map::rend (STL/CLR)](../dotnet/hash-map-rend-stl-clr.md)|Désigne la fin de la séquence contrôlée inverse.|  
+|[hash_map::size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md)|Compte le nombre d'éléments.|  
+|[hash_map::swap (STL/CLR)](../dotnet/hash-map-swap-stl-clr.md)|Échange le contenu de deux conteneurs.|  
+|[hash_map::to_array (STL/CLR)](../dotnet/hash-map-to-array-stl-clr.md)|Copie de la séquence contrôlée vers un nouveau tableau.|  
+|[hash_map::upper_bound (STL/CLR)](../dotnet/hash-map-upper-bound-stl-clr.md)|Fin de la recherche de plage qui correspond à une clé spécifiée.|  
+|[hash_map::value_comp (STL/CLR)](../dotnet/hash-map-value-comp-stl-clr.md)|Copie le délégué de classement pour les deux valeurs d’éléments.|  
   
 |Opérateur|Description|  
-|---------------|-----------------|  
-|[hash\_map::operator\=](../dotnet/hash-map-operator-assign-stl-clr.md)|Remplace la séquence contrôlée.|  
-|[hash\_map::operator](../dotnet/hash-map-operator-stl-clr.md)|Mappe une clé à sa valeur mappée associée.|  
+|--------------|-----------------|  
+|[hash_map::operator= (STL/CLR)](../dotnet/hash-map-operator-assign-stl-clr.md)|Remplace la séquence contrôlée.|  
+|[hash_map::operator(STL/CLR)](../dotnet/hash-map-operator-stl-clr.md)|Mappe une clé à sa valeur mappée associée.|  
   
-## Interfaces  
+## <a name="interfaces"></a>Interfaces  
   
 |Interface|Description|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Dupliquer un objet.|  
-|<xref:System.Collections.IEnumerable>|Séquence à travers les éléments.|  
-|<xref:System.Collections.ICollection>|Contient le groupe d'éléments.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Séquence dans les éléments typés.|  
-|<xref:System.Collections.Generic.ICollection%601>|Contient le groupe d'éléments typés.|  
-|<xref:System.Collections.Generic.IDictionary%602>|Garde un groupe de paires {clé,valeur}.|  
-|IHashKey\<, valeur\>|Contient le conteneur générique.|  
+|<xref:System.Collections.IEnumerable>|Dans les éléments de séquence.|  
+|<xref:System.Collections.ICollection>|Conserver le groupe d’éléments.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Séquence via les éléments typés.|  
+|<xref:System.Collections.Generic.ICollection%601>|Conserver le groupe d’éléments typés.|  
+|<xref:System.Collections.Generic.IDictionary%602>|Mettre à jour le groupe de {clé, valeur} paires.|  
+|IHash < clé, valeur >|Mettre à jour de conteneur générique.|  
   
-## Notes  
- L'objet alloue et libère du stockage pour la séquence qu'il contrôle comme des nœuds dans une liste liée bidirectionnelle.  Pour accélérer l'accès, l'objet contient également un tableau de longueur variée de pointeurs dans la liste \(table de hachage\), la gestion et la liste entière comme séquence de sous\-listes, ou compartiments.  Il insère des éléments dans un compartiment qu'il garde trié en modifiant les liens entre les nœuds, jamais en copiant le contenu d'un nœud vers un autre.  Cela signifie que vous pouvez insérer et supprimer des éléments librement sans éléments restants inquiétants.  
+## <a name="remarks"></a>Remarques  
+ L’objet alloue et libère du stockage pour la séquence qu’il contrôle en tant que nœuds individuels dans une liste liée bidirectionnelle. Pour accélérer l’accès, l’objet conserve un tableau de longueur variable de pointeurs dans la liste (la table de hachage), gestion efficace de l’intégralité de la liste comme une séquence de sous-listes, ou compartiments. Elle insère des éléments dans un compartiment il conserve ordonnée en modifiant les liens entre les nœuds, jamais par copie le contenu d’un nœud vers un autre. Cela signifie que vous pouvez insérer et supprimer des éléments librement sans perturber éléments restants.  
   
- L'objet classifie chaque compartiment qu'il contrôle en appelant un objet délégué stockées de type [hash\_set::key\_compare](../dotnet/hash-set-key-compare-stl-clr.md).  Vous pouvez spécifier l'objet délégué stockée lorsque vous construisez le hash\_set ; si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<=(key_type, key_type)`.  
+ Chaque compartiment qu’il contrôle en appelant un objet délégué stocké de type des commandes de l’objet [hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Vous pouvez spécifier l’objet délégué stockées lorsque vous construisez l’objet hash_set ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<=(key_type, key_type)`.  
   
- Vous accédez à l'objet délégué stocké en appelant la fonction membre [hash\_set::key\_comp](../dotnet/hash-set-key-comp-stl-clr.md)`()`.  Ce objet délégué doit définir le classement équivalent entre les clés du type [hash\_set::key\_type](../dotnet/hash-set-key-type-stl-clr.md).  Cela signifie, pour deux clés quelconques `X` et `Y`:  
+ Pour accéder à l’objet délégué stockée en appelant la fonction membre [hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Cet objet de délégué doit définir un classement équivalent entre les clés de type [hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Cela signifie que, pour toutes les deux clés `X` et `Y`:  
   
- `key_comp()(X, Y)` retourne le même résultat booléen sur chaque appel.  
+ `key_comp()(X, Y)`Retourne la valeur booléenne même résultat à chaque appel.  
   
- Si `key_comp()(X, Y) && key_comp()(Y, X)` est true, alors `X` et `Y` ont un classement équivalent.  
+ Si `key_comp()(X, Y) && key_comp()(Y, X)` est true, puis `X` et `Y` sont considérés comme ayant un classement équivalent.  
   
- Toute règle de tri qui se comporte comme `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` ou `operator==(key_type, key_type)` définit l'ordre équivalent.  
+ Une règle de tri qui se comporte comme `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` ou `operator==(key_type, key_type)` définit l’ordre d’eqivalent.  
   
- Notez que le conteneur ne garantit que les éléments dont les clés ont un classement équivalent \(et qui hachent à la même valeur entière\) et qui sont adjacents dans un compartiment.  Contrairement à la classe de modèle [hash\_multimap](../dotnet/hash-multimap-stl-clr.md), un objet de classe de modèle `hash_map` garantit que les clés pour les éléments sont uniques. \(Deux clés n'ont pas un classement équivalent.\)  
+ Notez que le conteneur garantit uniquement qu’éléments dont les clés ont un classement équivalent (et le hachage à la même valeur d’entier) sont adjacents dans un compartiment. Contrairement à la classe de modèle [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md), un objet de classe de modèle `hash_map` garantit que les clés pour tous les éléments sont uniques. (Aucune deux clés n’ont un classement équivalent).  
   
- L'objet détermine quel compartiment doit contenir une clé de tri donnée en appelant un objet délégué stockées de type [hash\_set::hasher](../dotnet/hash-set-hasher-stl-clr.md).  Vous accédez à cet objet stocké en appelant la fonction membre [hash\_set::hash\_delegate](../dotnet/hash-set-hash-delegate-stl-clr.md)`()` pour obtenir une valeur entière qui dépend de la valeur de clé.  Vous pouvez spécifier l'objet délégué stockée lorsque vous construisez le hash\_set ; si vous ne spécifiez aucun objet délégué, la valeur par défaut est la fonction `System::Object::hash_value(key_type)`.  Cela signifie, pour des clés quelconques `X` et `Y`:  
+ L’objet détermine quel compartiment doit contenir une clé de tri spécifique en appelant un objet délégué stocké de type [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Pour accéder à cet objet stocké en appelant la fonction membre [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` pour obtenir une valeur entière qui dépend de la valeur de clé. Vous pouvez spécifier l’objet délégué stockées lorsque vous construisez l’objet hash_set ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la fonction `System::Object::hash_value(key_type)`. Cela signifie que, pour toutes les clés `X` et `Y`:  
   
- `hash_delegate()(X)` retourne le même entier sur chaque appel.  
+ `hash_delegate()(X)`Retourne le même résultat entier sur chaque appel.  
   
- Si `X` et `Y` ont un classement équivalent, alors `hash_delegate()(X)` doit retourner le même résultat entier que `hash_delegate()(Y)`.  
+ Si `X` et `Y` ont un classement équivalent, puis `hash_delegate()(X)` doit retourner le même résultat entier en tant que `hash_delegate()(Y)`.  
   
- Chaque élément contient une clé distincte et une valeur associée.  La séquence est représentée d'une manière qui autorise la recherche, l'insertion, et la suppression d'un élément aléatoire avec un nombre d'opérations qui dépend du nombre d'éléments dans la séquence \(à temps fixe\) \-\- au moins dans l'idéal.  De plus, insérer un élément n'invalide aucun itérateur, et la suppression d'un élément invalide uniquement les itérateurs correspondant au point de l'élément supprimé.  
+ Chaque élément contient une clé séparée et une valeur mappée. La séquence est représentée d’une façon qui permet la recherche, l’insertion et la suppression d’un élément arbitraire avec un nombre d’opérations qui est indépendant du nombre d’éléments dans la séquence (temps constant)--au moins dans le meilleur des cas. De plus, l'insertion d'un élément n'entraîne pas la non validité des itérateurs, et la suppression d'un élément ne rend non valides que les itérateurs qui pointent vers l'élément supprimé.  
   
- Si les valeurs hachées ne sont pas distribuées uniformément ; toutefois, une table de hachage peut se dégénérer.  Dans le cas extrême \-\- pour une fonction de hachage qui retourne toujours la même valeur \-\- la recherche, l'insertion, la suppression sont proportionnelles au nombre d'éléments dans la séquence \(temps linéaire\).  Le conteneur tente de sélectionner une fonction de hachage raisonnable, la taille moyenne de création de compartiments, et une taille de brouillage \(nombre total de compartiments\), mais vous pouvez remplacer tout ou une partie de ces choix.  Consultez, par exemple, les fonctions [hash\_set::max\_load\_factor](../dotnet/hash-set-max-load-factor-stl-clr.md) et [hash\_set::rehash](../dotnet/hash-set-rehash-stl-clr.md).  
+ Toutefois, si les valeurs de hachage ne sont pas distribuées uniformément, une table de hachage peut dégénérées. À l’extrême--pour une fonction de hachage qui retourne toujours la même valeur--recherche, d’insertion et de suppression sont proportionnelles au nombre d’éléments dans la séquence (délai linéaire). Le conteneur s’efforce de choisir une fonction de hachage raisonnable, la taille du compartiment moyenne et taille de la table de hachage (nombre total de compartiments), mais vous pouvez remplacer tout ou partie de ces choix. Voir, par exemple, les fonctions [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) et [hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).  
   
- Un hash\_map prend en charge les itérateurs bidirectionnels, ce qui signifie que vous pouvez passer aux éléments adjacents à partir d'un itérateur qui indique un élément dans la séquence contrôlée.  Un nœud principal spécial correspond à l'itérateur retourné par [hash\_map::end](../dotnet/hash-map-end-stl-clr.md)`()`.  Vous pouvez décrémenter l'itérateur pour atteindre le dernier élément de la séquence contrôlée, le cas échéant.  Vous pouvez incrémenter un itérateur de hash\_map pour atteindre le nœud principal, et il est alors égal à `end()`.  Mais vous ne pouvez pas déréférencer l'itérateur retourné par `end()`.  
+ Un objet hash_map prend en charge les itérateurs bidirectionnels, ce qui signifie que vous pouvez exécuter pour les éléments adjacents donnés d’un itérateur qui désigne un élément dans la séquence contrôlée. Un nœud principal spécial correspond à l’itérateur retourné par [hash_map::end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`. Vous pouvez décrémenter cet itérateur afin d’atteindre le dernier élément dans la séquence contrôlée, le cas échéant. Vous pouvez incrémenter un itérateur hash_map afin d’atteindre le nœud principal, et il compare ensuite égal à `end()`. Mais vous ne pouvez pas déréférencer l’itérateur retourné par `end()`.  
   
- Notez que vous ne pouvez pas faire référence à un hash\_map directement avec sa position numérique \-\- cela requiert un itérateur à accès aléatoire.  
+ Notez que vous ne pouvez pas faire référence à un élément de hash_map directement donné sa position numérique--nécessitant un itérateur à accès aléatoire.  
   
- Un itérateur de hash\_map contient une handle vers son nœud hash\_map associé, qui elle\-même contient une handle vers son conteneur associé.  Vous pouvez utiliser les itérateurs uniquement avec leurs objets conteneurs associés.  Un itérateur de hash\_map reste valide à condition que son nœud de hash\_map associé soit associé à un certain hash\_map.  De plus, un itérateur valide est dereferencable \-\- vous pouvez l'utiliser pour accéder et modifier la valeur d'élément qu'il indique \-\- sous réserve qu'il ne soit pas égal à `end()`.  
+ Un itérateur hash_map stocke un handle vers son nœud hash_map associé, qui à son tour stocke un handle à son conteneur associé. Vous pouvez utiliser des itérateurs uniquement avec les objets du conteneur associé. Un itérateur hash_map reste valide tant que son nœud associé hash_map est associé à certaines hash_map. En outre, un itérateur valide est dereferencable : vous pouvez l’utiliser pour accéder ou modifier la valeur d’élément qu’il désigne--tant qu’il n’est pas égal à `end()`.  
   
- Effaçant ou supprimer un élément appelle le destructeur de la valeur stockée.  Détruire le conteneur efface tous les éléments.  Par conséquent, un conteneur dont le type d'élément est une classe de base garantit qu'aucun élément ne survit au conteneur.  Notez, toutefois, qu'un conteneur de descripteurs `not` détruit ses éléments.  
+ Effacement ou suppression d’un élément appelle le destructeur de sa valeur stockée. Destruction du conteneur efface tous les éléments. Par conséquent, un conteneur dont le type d’élément est une classe ref garantit qu’aucun élément ne survivent le conteneur. Toutefois, notez qu’un conteneur de handles ne `not` détruire ses éléments.  
   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_map\>  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/hash_map >  
   
- **Espace de noms :** cliext  
+ **Namespace :** cliext  
   
-## Voir aussi  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [map](../dotnet/map-stl-clr.md)   
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multiset](../dotnet/multiset-stl-clr.md)   
- [set](../dotnet/set-stl-clr.md)   
- [STL\/CLR, bibliothèque](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [hash_map](../dotnet/hash-map-stl-clr.md)   
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [carte (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [Set (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [Référence de bibliothèque STL/CLR](../dotnet/stl-clr-library-reference.md)

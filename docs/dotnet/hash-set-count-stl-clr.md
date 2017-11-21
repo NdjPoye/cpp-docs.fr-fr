@@ -1,45 +1,43 @@
 ---
-title: "hash_set::count (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre count [STL/CLR]"
+title: hash_set::Count (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::count
+dev_langs: C++
+helpviewer_keywords: count member [STL/CLR]
 ms.assetid: 99dbaef5-64fd-4bef-bac4-a6072dd231f1
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6fc5a754364485a632ec4a3673d7192598ec1eca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::count (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Recherche le nombre d'éléments qui correspondent à une clé spécifiée.  
+# <a name="hashsetcount-stlclr"></a>hash_set::count (STL/CLR)
+Recherche le nombre d’éléments qui correspondent à une clé spécifiée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 size_type count(key_type key);  
 ```  
   
-#### Paramètres  
- key  
- Valeur clé à rechercher.  
+#### <a name="parameters"></a>Paramètres  
+ clé  
+ Valeur de clé à rechercher.  
   
-## Notes  
- La fonction membre retourne le nombre d'éléments dans la séquence contrôlée dont le classement est équivalent à `key`.  Vous l'utilisez pour déterminer le nombre d'éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre retourne le nombre d’éléments dans la séquence contrôlée qui ont un classement équivalent à `key`. Il permet de déterminer le nombre d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_set_count.cpp   
@@ -67,15 +65,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**count\(L'A'\) \= 0**  
-**count\(L'b'\) \= 1**  
-**count\(L'C'\) \= 0**   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+count(L'A') = 0  
+count(L'b') = 1  
+count(L'C') = 0  
+```  
   
- **Espace de nom :** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/hash_set >  
   
-## Voir aussi  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::equal\_range](../dotnet/hash-set-equal-range-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::equal_range (STL/CLR)](../dotnet/hash-set-equal-range-stl-clr.md)

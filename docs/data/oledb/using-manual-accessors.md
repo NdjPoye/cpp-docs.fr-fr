@@ -1,58 +1,58 @@
 ---
-title: "Utilisation des accesseurs manuels | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "accesseurs (C++), manuels"
-  - "gestion des commandes, modèles OLE DB"
-  - "accesseurs manuels"
+title: Utilisation des accesseurs manuels | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- command handling, OLE DB Templates
+- manual accessors
+- accessors [C++], manual
 ms.assetid: 29f00a89-0240-482b-8413-4120b9644672
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3a37f721c372f3ad11000aec023ef74fb1fb1097
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Utilisation des accesseurs manuels
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Lors de la manipulation d'une commande inconnue, vous devez exécuter quatre opérations :  
+# <a name="using-manual-accessors"></a>Utilisation des accesseurs manuels
+Il existe quatre opérations lors du traitement d’une commande inconnue :  
   
 -   Déterminer les paramètres  
   
--   Exécuter la commande  
+-   Exécutez la commande  
   
 -   Déterminer les colonnes de sortie  
   
--   Vérifier s'il y a plusieurs jeux de lignes de retour  
+-   S’il existe plusieurs ensembles de lignes de retour  
   
- Pour exécuter ces opérations à l'aide des modèles du consommateur OLE DB, utilisez la classe `CManualAccessor` et suivez la procédure ci\-dessous :  
+ Pour ce faire, avec les modèles du consommateur OLE DB, utilisez la `CManualAccessor` classe et procédez comme suit :  
   
-1.  Ouvrez un objet `CCommand` à l'aide de la classe `CManualAccessor` comme paramètre de modèle.  
+1.  Ouvrir un `CCommand` avec l’objet `CManualAccessor` comme paramètre de modèle.  
   
     ```  
     CCommand<CManualAccessor, CRowset, CMultipleResults> rs;  
     ```  
   
-2.  Interrogez la session pour l'interface **IDBSchemaRowset** et utilisez le jeu de lignes des paramètres de la procédure.  Si l'interface **IDBSchemaRowset** n'est pas disponible, recherchez l'interface `ICommandWithParameters`.  Pour plus d'informations, appelez `GetParameterInfo`.  Si aucune interface n'est disponible, vous pouvez supposer qu'il n'existe pas de paramètres.  
+2.  Interrogez la session pour le **IDBSchemaRowset** interface et utiliser l’ensemble de lignes de paramètres de procédure. Si le **IDBSchemaRowset** interface n’est pas disponible, recherchez le `ICommandWithParameters` interface. Appelez `GetParameterInfo` pour plus d’informations. Si aucune interface n’est disponible, vous pouvez supposer qu’aucun paramètre.  
   
 3.  Pour chaque paramètre, appelez `AddParameterEntry` pour ajouter les paramètres et les définir.  
   
-4.  Ouvrez le jeu de lignes mais attribuez la valeur **false** au paramètre de liaison.  
+4.  Ouvrir l’ensemble de lignes, mais la valeur du paramètre de liaison **false**.  
   
-5.  Appelez `GetColumnInfo` pour récupérer les colonnes de sortie.  Utilisez `AddBindEntry` pour ajouter la colonne de sortie à la liaison.  
+5.  Appelez `GetColumnInfo` pour récupérer les colonnes de sortie. Utilisez `AddBindEntry` pour ajouter la colonne de sortie à la liaison.  
   
-6.  Appelez `GetNextResult` pour déterminer si d'autres jeux de lignes sont disponibles.  Répétez les étapes 2 à 5.  
+6.  Appelez `GetNextResult` pour déterminer si plusieurs ensembles de lignes sont disponibles. Répétez les étapes 2 à 5.  
   
- Pour obtenir un exemple d'accesseur manuel, consultez **CDBListView::CallProcedure** dans l'exemple [DBVIEWER](http://msdn.microsoft.com/fr-fr/07620f99-c347-4d09-9ebc-2459e8049832).  
+ Pour obtenir un exemple d’accesseur manuel, consultez **CDBListView::CallProcedure** dans les [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) exemple.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utilisation des accesseurs](../../data/oledb/using-accessors.md)

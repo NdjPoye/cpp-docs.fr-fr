@@ -1,33 +1,32 @@
 ---
-title: "2.6.4 Construction atomic | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.6.4 construction atomic | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: e4232ef1-4058-42ce-9de0-0ca788312aba
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ea1cc2474a8420227dcf2b6b6e87f255ce144cf4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# 2.6.4 Construction atomic
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La `atomic` directive garantit qu’un emplacement mémoire spécifique est mis à jour atomiquement, plutôt que d’exposer à la possibilité de plusieurs simultanées d’écriture de threads. La syntaxe de la `atomic` directive se présente comme suit :  
+# <a name="264-atomic-construct"></a>2.6.4 Construction atomic
+Le `atomic` directive garantit qu’un emplacement de mémoire spécifique est mise à jour atomiquement, plutôt que d’exposer la possibilité de plusieurs simultanées de l’écriture de threads. La syntaxe de la `atomic` la directive est la suivante :  
   
 ```  
 #pragma omp atomic new-lineexpression-stmt  
 ```  
   
- L’instruction d’expression doit avoir une des formes suivantes :  
+ L’instruction d’expression doit avoir la valeur de l’une des formes suivantes :  
   
  *x binop*= *expr*  
   
@@ -35,25 +34,25 @@ La `atomic` directive garantit qu’un emplacement mémoire spécifique est mis 
   
  ++ x  
   
- x :  
+ x--  
   
- x :  
+ --x  
   
  Dans les expressions précédentes :  
   
 -   *x* est une expression lvalue avec type scalaire.  
   
--   *Expr* est une expression de type scalaire, et il ne fait pas référence à l’objet désigné par *x*.  
+-   *Expr* est une expression avec un type scalaire, et il ne fait pas référence à l’objet désigné par *x*.  
   
--   `binop` n’est pas un opérateur surchargé et fait partie de +, *, -, /, &, ^, &#124 ; <\<, ou >>.  
+-   `binop`n’est pas un opérateur surchargé et fait partie de +, *, -, /, &, ^, &#124; <\<, ou >>.  
   
- Bien qu’il soit défini par l’implémentation si une implémentation remplace tous les `atomic` directives avec **critique** directives qui ont le même unique *nom*, le `atomic` permet une meilleure optimisation de la directive. Fréquence à laquelle les instructions de matériel sont disponibles qui peuvent effectuer la mise à jour atomique avec le moins de surcharge.  
+ Bien qu’il soit défini par l’implémentation indique si une implémentation remplace toutes les `atomic` directives avec **critique** directives qui ont le même unique *nom*, le `atomic` (directive) autorise une meilleure optimisation. Fréquence à laquelle les instructions de matériel sont disponibles qui peut effectuer la mise à jour atomique avec le moins de surcharge.  
   
- Uniquement la charge et le magasin de l’objet désigné par *x* sont atomique ; la version d’évaluation de *expr* n’est pas atomique. Pour éviter des conditions de concurrence, les mises à jour de l’emplacement en parallèle doivent être protégées par la `atomic` directive, sauf ceux qui sont connus pour être des conditions de concurrence.  
+ Uniquement la charge et le magasin de l’objet désigné par *x* sont atomique ; de l’évaluation de *expr* n’est pas atomique. Pour éviter des conditions de concurrence, toutes les mises à jour de l’emplacement en parallèle doivent être protégés avec le `atomic` directive, sauf ceux qui sont connus comme étant libre des conditions de concurrence.  
   
- Restrictions à le `atomic` la directive sont les suivantes :  
+ Restrictions à le `atomic` directive sont les suivantes :  
   
--   Toutes les références atomique à l’emplacement de stockage x dans tout le programme doit être un type compatible.  
+-   Toutes les références atomiques à l’emplacement de stockage x partout dans le programme doit être un type compatible.  
   
 ## <a name="examples"></a>Exemples :  
   

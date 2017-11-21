@@ -1,44 +1,44 @@
 ---
-title: "Substitution des services par d&#233;faut du fournisseur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "services OLE DB, substituer les méthodes par défaut"
-  - "fournisseurs de services (OLE DB)"
+title: "Par défaut du Service fournisseur de substitution | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- service providers [OLE DB]
+- OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 479f3464db46fda4c566feeaeec2f7fe5384ee87
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Substitution des services par d&#233;faut du fournisseur
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La valeur de Registre du fournisseur pour les **OLEDB\_SERVICES** est retournée en tant que valeur par défaut pour la propriété d'initialisation [DBPROP\_INIT\_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx) sur l'objet data source.  
+# <a name="overriding-provider-service-defaults"></a>Substitution des services par défaut du fournisseur
+Valeur de Registre du fournisseur pour **OLEDB_SERVICES** est retourné en tant que la valeur par défaut pour le [DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx) propriété d’initialisation de l’objet de source de données.  
   
- Tant que l'entrée du Registre existe, les objets du fournisseur sont regroupés et l'utilisateur peut substituer le paramétrage par défaut des services activés en définissant la propriété **DBPROP\_INIT\_OLEDBSERVICES** avant l'initialisation.  Pour activer ou désactiver un service particulier, l'utilisateur peut obtenir généralement la valeur actuelle de la propriété **DBPROP\_INIT\_OLEDBSERVICES**, définir ou supprimer le bit correspondant à la propriété particulière à activer ou à désactiver, et rétablir la propriété.  Il est possible de définir directement **DBPROP\_INIT\_OLEDBSERVICES** dans OLE DB, ou dans la chaîne de connexion passée à ADO ou à **IDataInitialize::GetDatasource**.  Les valeurs correspondantes pour activer\/désactiver des services particuliers sont répertoriées dans le tableau suivant :  
+ Tant que l’entrée de Registre existe, les objets du fournisseur sont agrégées et que l’utilisateur peut remplacer le paramétrage par défaut des services activés en définissant le **DBPROP_INIT_OLEDBSERVICES** propriété avant l’initialisation. Pour activer ou désactiver un service particulier, l’utilisateur obtient généralement la valeur actuelle de la **DBPROP_INIT_OLEDBSERVICES** propriété, définit ou supprime le bit pour la propriété d’être activés ou désactivés et réinitialise la propriété. **DBPROP_INIT_OLEDBSERVICES** peut être définie directement dans OLE DB ou dans la chaîne de connexion passée à ADO ou **IDataInitialize::GetDatasource**. Les valeurs correspondantes pour activer ou désactiver des services individuels sont répertoriés dans le tableau suivant.  
   
-|Services activés par défaut|Valeur de propriété DBPROP\_INIT\_OLEDBSERVICES|Valeur dans la chaîne de connexion|  
-|---------------------------------|-----------------------------------------------------|----------------------------------------|  
-|Tous les services \(par défaut\)|**DBPROPVAL\_OS\_ENABLEALL**|"Services OLE DB \= \-1;"|  
-|Tous sauf le regroupement et l'inscription automatique|**DBPROPVAL\_OS\_ENABLEALL &**<br /><br /> **~DBPROPVAL\_OS\_RESOURCEPOOLING &**<br /><br /> **~DBPROPVAL\_OS\_TXNENLISTMENT**|"Services OLE DB \= \-4;"|  
-|Tous sauf le curseur client|**DBPROPVAL\_OS\_ENABLEALL** &<br /><br /> ~**DBPROPVAL\_OS\_CLIENTCURSOR**|"Services OLE DB \= \-5;"|  
-|Tous sauf le regroupement, l'inscription automatique et le curseur client|**DBPROPVAL\_OS\_ENABLEALL &**<br /><br /> **~DBPROPVAL\_OS\_TXNENLISTMENT &**<br /><br /> **~DBPROPVAL\_OS\_CLIENTCURSOR**|"Services OLE DB \= \-7;"|  
-|Pas de services|~**DBPROPVAL\_OS\_ENABLEALL**|"Services OLE DB \= 0;"|  
+|Services activés par défaut|Valeur de la propriété DBPROP_INIT_OLEDBSERVICES|Valeur de chaîne de connexion|  
+|------------------------------|------------------------------------------------|--------------------------------|  
+|Tous les services (par défaut)|**DBPROPVAL_OS_ENABLEALL**|« Services OLE DB = -1 ; »|  
+|Tous sauf le regroupement et l’inscription automatique|**DBPROPVAL_OS_ENABLEALL &**<br /><br /> **~ DBPROPVAL_OS_RESOURCEPOOLING &**<br /><br /> **~ DBPROPVAL_OS_TXNENLISTMENT**|« Services OLE DB = -4 ; »|  
+|Tous sauf le curseur Client|**DBPROPVAL_OS_ENABLEALL** &<br /><br /> ~**DBPROPVAL_OS_CLIENTCURSOR**|« Services OLE DB = -5 ; »|  
+|Tous sauf le regroupement, l’inscription automatique et le curseur Client|**DBPROPVAL_OS_ENABLEALL &**<br /><br /> **~ DBPROPVAL_OS_TXNENLISTMENT &**<br /><br /> **~ DBPROPVAL_OS_CLIENTCURSOR**|« Services OLE DB = -7 ; »|  
+|Aucun service|~**DBPROPVAL_OS_ENABLEALL**|« Services OLE DB = 0 ; »|  
   
- Si l'entrée du Registre n'existe pas pour le fournisseur, les gestionnaires de composants ne regroupent pas les objets du fournisseur, et aucun service n'est appelé, même quand il est demandé explicitement par l'utilisateur.  
+ Si l’entrée de Registre n’existe pas pour le fournisseur, les gestionnaires de composants ne regroupent pas les objets du fournisseur, et aucun service n’est appelé, même si explicitement demandée par l’utilisateur.  
   
-## Voir aussi  
- [Resource Pooling](https://msdn.microsoft.com/en-us/library/ms713655.aspx)   
- [How Consumers Use Resource Pooling](https://msdn.microsoft.com/en-us/library/ms715907.aspx)   
- [How Providers Work Effectively with Resource Pooling](https://msdn.microsoft.com/en-us/library/ms714906.aspx)   
+## <a name="see-also"></a>Voir aussi  
+ [Regroupement des ressources](https://msdn.microsoft.com/en-us/library/ms713655.aspx)   
+ [Comment les consommateurs utilisent le regroupement des ressources](https://msdn.microsoft.com/en-us/library/ms715907.aspx)   
+ [Comment les fournisseurs de travailler efficacement avec le regroupement des ressources](https://msdn.microsoft.com/en-us/library/ms714906.aspx)   
  [Activation et désactivation des services OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)

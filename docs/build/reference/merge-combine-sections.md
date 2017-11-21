@@ -1,60 +1,60 @@
 ---
-title: "/MERGE (Combiner des sections) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/merge"
-  - "VC.Project.VCLinkerTool.MergeSections"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/MERGE (option de l'éditeur de liens)"
-  - "MERGE (option de l'éditeur de liens)"
-  - "-MERGE (option de l'éditeur de liens)"
-  - "sections"
-  - "sections, combiner"
-  - "sections, affecter des noms"
+title: -MERGE (combiner des Sections) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /merge
+- VC.Project.VCLinkerTool.MergeSections
+dev_langs: C++
+helpviewer_keywords:
+- sections, combining
+- /MERGE linker option
+- sections, naming
+- sections
+- -MERGE linker option
+- MERGE linker option
 ms.assetid: 10fb20c2-0b3f-4c8d-98a8-f69aedf03d52
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 936af84fea09f129cd5f455a0b57731393600e02
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /MERGE (Combiner des sections)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="merge-combine-sections"></a>/MERGE (Combiner des sections)
 ```  
 /MERGE:from=to  
 ```  
   
-## Notes  
- L'option \/MERGE fusionne la première section \(*from*\) avec la seconde \(*to*\), en nommant le résultat *to*.  Par exemple, `/merge:.rdata=.text`.  
+## <a name="remarks"></a>Remarques  
+ Cette option associe la première section (*de*) avec la deuxième section (*à*), nommant le résultat *à*. Par exemple, `/merge:.rdata=.text`.  
   
- Si la seconde section n'existe pas, LINK renomme la section *from* en *to*.  
+ Si la deuxième section n’existe pas, LINK renomme la section *de* en tant que *à*.  
   
- Cette option est utile pour créer des VxD et pour substituer les noms de sections générés par le compilateur.  
+ Cette option est utile pour créer des VxD et en remplaçant les noms de section de généré par le compilateur.  
   
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Définition des propriétés de projets Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Cliquez sur le dossier **Éditeur de liens**.  
+2.  Cliquez sur le **l’éditeur de liens** dossier.  
   
-3.  Cliquez sur la page de propriétés **Avancé**.  
+3.  Cliquez sur le **avancé** page de propriétés.  
   
-4.  Modifiez la propriété **Fusion des sections**.  
+4.  Modifier la **fusionner les Sections** propriété.  
   
-### Pour définir cette option de l'éditeur de liens par programme  
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   
 1.  Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MergeSections%2A>.  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)

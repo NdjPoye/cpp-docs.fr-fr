@@ -1,67 +1,66 @@
 ---
-title: "/vmb, /vmg (M&#233;thode de repr&#233;sentation) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/vmb"
-  - "/vmg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/vmb (option du compilateur C++)"
-  - "/vmg (option du compilateur C++)"
-  - "méthode de représentation (options du compilateur C++)"
-  - "vmb (option du compilateur C++)"
-  - "-vmb (option du compilateur C++)"
-  - "vmg (option du compilateur C++)"
-  - "-vmg (option du compilateur C++)"
+title: "-maintenant la touche - vmb, /vmg (méthode de représentation) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /vmb
+- /vmg
+dev_langs: C++
+helpviewer_keywords:
+- vmb compiler option [C++]
+- -vmg compiler option [C++]
+- vmg compiler option [C++]
+- -vmb compiler option [C++]
+- /vmb compiler option [C++]
+- representation method compiler options [C++]
+- /vmg compiler option [C++]
 ms.assetid: ecdb391c-7dab-40b1-916b-673d10889fd4
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 061943dc029a566b7bc636a2bb4b37e276413245
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /vmb, /vmg (M&#233;thode de repr&#233;sentation)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Permettent de sélectionner la méthode que le compilateur utilise pour représenter les pointeurs vers des membres de classe.  
+# <a name="vmb-vmg-representation-method"></a>/vmb, /vmg (Méthode de représentation)
+Sélectionnez la méthode que le compilateur utilise pour représenter les pointeurs vers des membres de classe.  
   
- Utilisez **\/vmb** si vous définissez toujours une classe avant de déclarer un pointeur vers un membre de la classe.  
+ Utilisez **/vmb** si vous définissez toujours une classe avant de déclarer un pointeur vers un membre de la classe.  
   
- Utilisez **\/vmg** pour déclarer un pointeur vers un membre de la classe avant de définir la classe en question.  Cette situation peut se présenter si vous définissez des membres dans deux classes différentes qui font référence l'une à l'autre.  Pour de telles classes qui se font mutuellement référence, une classe doit être référencée avant d'être définie.  
+ Utilisez **/vmg** pour déclarer un pointeur vers un membre d’une classe avant de définir la classe. Cette situation peut se présenter si vous définissez des membres dans deux classes différentes qui font référence à l’autre. Pour de telles classes mutuellement référence, une classe doit être référencée avant d’être définie.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 /vmb  
 /vmg  
 ```  
   
-## Notes  
- Vous pouvez également utiliser [pointers\_to\_members](../../preprocessor/pointers-to-members.md) ou [Mots clé d'héritage](../../cpp/inheritance-keywords.md) dans votre code pour spécifier une représentation de pointeur.  
+## <a name="remarks"></a>Remarques  
+ Vous pouvez également utiliser [pointers_to_members](../../preprocessor/pointers-to-members.md) ou [mots clés d’héritage](../../cpp/inheritance-keywords.md) dans votre code pour spécifier une représentation de pointeur.  
   
-### Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Comment : ouvrir les pages de propriétés d'un projet](../../misc/how-to-open-project-property-pages.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
-2.  Cliquez sur le dossier **C\/C\+\+**.  
+2.  Cliquez sur le dossier **C/C++** .  
   
-3.  Cliquez sur la page de propriétés **Ligne de commande**.  
+3.  Cliquez sur la page de propriétés **Ligne de commande** .  
   
-4.  Spécifiez l'option du compilateur dans la zone **Options supplémentaires**.  
+4.  Tapez l'option de compilateur dans la zone **Options supplémentaires** .  
   
-### Pour définir cette option du compilateur par programmation  
+### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation  
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options du compilateur](../../build/reference/compiler-options.md)   
  [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

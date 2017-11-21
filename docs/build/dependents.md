@@ -1,36 +1,35 @@
 ---
-title: "D&#233;pendants | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dépendants"
-  - "dépendants, NMAKE"
-  - "programme NMAKE, dépendants"
+title: "Dépendants | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- dependents
+- NMAKE program, dependents
+- dependents, NMAKE
 ms.assetid: 0a7b4499-ac6e-4c99-a304-027dd3818ab2
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 58c342e5e9081d393cdea30e0d668c16f4d81424
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# D&#233;pendants
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dans une ligne de dépendance, spécifiez zéro ou plusieurs dépendants après deux\-points \(:\) ou un double deux\-points \(::\) à l'aide d'un nom de fichier ou d'une [pseudocible](../build/pseudotargets.md) valable.  Séparez les dépendants multiples par un ou plusieurs espaces ou tabulations.  Les dépendants ne respectent pas la casse.  Les chemins d'accès contenant des noms de fichiers sont admis.  
+# <a name="dependents"></a>Dépendants
+Dans une ligne de dépendance, spécifiez zéro ou plusieurs dépendants après le signe deux-points ( :)) ou un double deux-points ( :),) à l’aide de n’importe quel nom de fichier valide ou [pseudocible](../build/pseudotargets.md). Séparez les dépendants multiples par un ou plusieurs des espaces ou des tabulations. Objets dépendants ne respectent pas la casse. Chemins d’accès sont autorisées avec les noms de fichiers.  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
- [Dépendants déduits](../build/inferred-dependents.md)  
+## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?  
+ [Dépendants inférés](../build/inferred-dependents.md)  
   
  [Chemins de recherche des dépendants](../build/search-paths-for-dependents.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Blocs de description](../build/description-blocks.md)

@@ -1,63 +1,63 @@
 ---
-title: "Tailles de type et de variable dans un assembly inline | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "length"
-  - "Type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assembleur inline, opérateurs"
-  - "LENGTH (opérateur)"
-  - "taille"
-  - "SIZE (opérateur)"
-  - "taille, obtenir dans l'assembleur inline"
-  - "TYPE (opérateur)"
-  - "variables, longueur"
-  - "variables, taille"
-  - "variables, type"
+title: Type de tailles et de Variable dans un Assembly Inline | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- length
+- Type
+dev_langs: C++
+helpviewer_keywords:
+- variables, length
+- size, getting in inline assembly
+- size
+- LENGTH operator
+- TYPE operator
+- SIZE operator
+- inline assembly, operators
+- variables, type
+- variables, size
 ms.assetid: b62c2f2b-a7ad-4145-bae4-d890db86d348
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1714d660cad6474f0b038a40e2ad1efdf5aa5743
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Tailles de type et de variable dans un assembly inline
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="type-and-variable-sizes-in-inline-assembly"></a>Tailles de type et de variable dans l'assembly inline
+**Section spécifique à Microsoft**  
   
- Le  **longueur**,  **taille**, et  **TYPE** opérateurs ont une signification limitée dans un assembly inline.  Ne peut pas être utilisés à tout avec la  `DUP`opérateur \(parce que vous ne pouvez définir des données avec les opérateurs ou les directives MASM\).  Mais vous pouvez les utiliser pour connaître la taille des types ou des variables de C ou C\+\+ :  
+ Le **longueur**, **taille**, et **TYPE** opérateurs ont une signification limitée dans l’assembleur inline. Ils ne peuvent pas du tout être utilisés avec l'opérateur `DUP` (car vous ne pouvez pas définir des données avec des directives ou des opérateurs MASM). Toutefois, vous pouvez les utiliser pour rechercher la taille des variables ou types C ou C++ :  
   
--   Le  **longueur** opérateur peut renvoyer le nombre d'éléments dans un tableau.  Elle renvoie la valeur 1 pour les variables de tableau non.  
+-   Le **longueur** opérateur peut retourner le nombre d’éléments dans un tableau. Il retourne la valeur 1 pour les variables non-tableau.  
   
--   Le  **taille** opérateur peut renvoyer la taille d'une variable C ou C\+\+.  Taille d'une variable est le produit de sa  **longueur de** et  **TYPE**.  
+-   Le **taille** opérateur peut retourner la taille d’une variable C ou C++. Taille d’une variable est le produit de ses **longueur** et **TYPE**.  
   
--   Le  **TYPE** opérateur peut renvoyer la taille d'une variable ou de type C ou C\+\+.  Si la variable est un tableau,  **TYPE** retourne la taille d'un élément unique du tableau.  
+-   Le **TYPE** opérateur peut retourner la taille d’une variable ou de type C ou C++. Si la variable est un tableau, **TYPE** retourne la taille d’un seul élément du tableau.  
   
- Par exemple, si votre programme présente un élément de 8  `int`tableau,  
+ Par exemple, si votre programme comporte un tableau `int` de 8 éléments,  
   
 ```  
 int arr[8];  
 ```  
   
- les expressions suivantes C et assembly produisent la taille de  `arr`et de ses éléments.  
+ les expressions C et d'assembly suivantes génèrent la taille d'un tableau `arr` et de ses éléments.  
   
-|\_\_asm|C|Taille|  
-|-------------|-------|------------|  
-|**LONGUEUR** arr|`sizeof`\(arr\)\/`sizeof`\(arr\[0\]\)|8|  
-|**TAILLE de** arr|`sizeof`\(arr\)|32|  
-|**TYPE** arr|`sizeof`\(arr\[0\]\)|4|  
+|__asm|C|Taille|  
+|-------------|-------|----------|  
+|**LONGUEUR** arr|`sizeof`(arr)/`sizeof`(arr[0])|8|  
+|**TAILLE** arr|`sizeof`(arr)|32|  
+|**TYPE** arr|`sizeof`(arr[0])|4|  
   
- **FIN spécifique à Microsoft**  
+ **FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [Utilisation du langage assembleur dans les blocs \_\_asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation du langage assembleur dans les blocs __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)

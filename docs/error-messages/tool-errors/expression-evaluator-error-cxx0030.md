@@ -1,34 +1,33 @@
 ---
-title: "&#201;valuateur d&#39;expression, erreur CXX0030 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0030"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0030"
-  - "CXX0030"
+title: "Évaluateur d’expression, erreur CXX0030 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0030
+dev_langs: C++
+helpviewer_keywords:
+- CAN0030
+- CXX0030
 ms.assetid: ada8b48c-09c8-49bf-ae23-313ed663c4fe
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ffa1dd85419943ede6a13d61cb82924c32b5e80a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# &#201;valuateur d&#39;expression, erreur CXX0030
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="expression-evaluator-error-cxx0030"></a>Évaluateur d'expression, erreur CXX0030
 expression non évaluée  
   
- L'évaluateur d'expression du débogueur n'a pas pu obtenir de valeur pour l'expression telle qu'elle est rédigée.  L'une des causes probables de cette erreur est que l'expression fait référence à un emplacement mémoire situé hors de l'espace d'adressage du programme \(dans le cas notamment de la suppression de la référence d'un pointeur nul\).  Windows ne permet pas d'accéder aux emplacements mémoire situés hors de l'espace d'adressage du programme.  
+ Évaluateur d’expression du débogueur n’a pas pu obtenir une valeur pour l’expression lors de l’écriture. Une des causes possibles sont que l’expression fait référence à la mémoire qui est en dehors de l’espace d’adressage du programme (déréférencement d’un pointeur null est d’un exemple). Windows n’autorise pas l’accès à la mémoire qui est en dehors de l’espace d’adressage du programme.  
   
- Vous pouvez récrire l'expression en utilisant des parenthèses pour contrôler l'ordre d'évaluation.  
+ Vous souhaiterez Réécrivez votre expression utilisant des parenthèses pour contrôler l’ordre d’évaluation.  
   
- Erreur identique à CAN0030.
+ Cette erreur est identique à CAN0030.

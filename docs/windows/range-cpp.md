@@ -1,33 +1,30 @@
 ---
-title: "range (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "range attribute"
+title: plage (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.range
+dev_langs: C++
+helpviewer_keywords: range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a43ad22484ec8502c66c16caa40933bf8f422df9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# range (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Spécifie une plage de valeurs autorisées pour les arguments ou les champs dont les valeurs sont définies au moment de l'exécution.  
+# <a name="range-c"></a>range (C++)
+Spécifie une plage de valeurs autorisées pour les arguments ou les champs dont les valeurs sont définies au moment de l’exécution.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -37,17 +34,17 @@ Spécifie une plage de valeurs autorisées pour les arguments ou les champs dont
 ) ]  
 ```  
   
-#### Paramètres  
- *bas*  
- La valeur de plage faible.  
+#### <a name="parameters"></a>Paramètres  
+ *low*  
+ La valeur de la plage inférieure.  
   
- *haute*  
- la valeur de plage élevée.  
+ *high*  
+ La valeur de la plage supérieure.  
   
-## Notes  
- L'attribut de **plage** C\+\+ a les mêmes fonctionnalités que l'attribut de [plage](http://msdn.microsoft.com/library/windows/desktop/aa367151) MIDL.  
+## <a name="remarks"></a>Remarques  
+ Le **plage** attribut C++ a les mêmes fonctionnalités que le [plage](http://msdn.microsoft.com/library/windows/desktop/aa367151) attribut MIDL.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cpp_attr_ref_range.cpp  
@@ -63,22 +60,21 @@ __interface ICustom {
 };  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|méthode d'interface, paramètre d'interface|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|Méthode d’interface, paramètre d’interface|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun|  
+|**Attributs non valides**|Aucun|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Data Member Attributes](../windows/data-member-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs de méthode](../windows/method-attributes.md)   
+ [Attributs de paramètre](../windows/parameter-attributes.md)   
+ [Attributs de membre de données](../windows/data-member-attributes.md)   

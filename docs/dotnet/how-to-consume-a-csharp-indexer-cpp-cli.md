@@ -1,39 +1,36 @@
 ---
-title: "Comment&#160;: consommer un indexeur C# (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++, indexeurs"
-  - "indexeurs, utilisation de C#"
+title: "Comment : consommer un indexeur c# (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++, indexers
+- indexers, consuming C#
 ms.assetid: 5a11850c-a1a2-4a0a-b95e-f6dc5a87f439
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1e7938022bfe2ba1a8f97420a217590de659d9e1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: consommer un indexeur C# (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ ne contient pas d'indexeur ; il possède des propriétés indexées.  Pour utiliser un indexeur C\#, accédez à l'indexeur comme s'il s'agissait d'une propriété indexée.  
+# <a name="how-to-consume-a-c-indexer-ccli"></a>Comment : consommer un indexeur C# (C++/CLI)
+Visual C++ ne contient pas d’indexeur ; Il possède des propriétés indexées. Pour consommer un indexeur c#, accédez à l’indexeur comme s’il s’agissait d’une propriété indexée.  
   
- Pour plus d'informations sur les indexeurs, consultez :  
+ Pour plus d’informations à propos des indexeurs, consultez :  
   
--   [Indexeurs](../Topic/Indexers%20\(C%23%20Programming%20Guide\).md)  
+-   [Indexeurs](https://msdn.microsoft.com/library/6x16t2tx.aspx)  
   
--   [Comment : utiliser des propriétés indexées](../misc/how-to-use-indexed-properties.md)  
-  
-## Exemple  
- Le programme C\# suivant définit un indexeur.  
+## <a name="example"></a>Exemple  
+ L’exemple de programme c# suivant définit un indexeur.  
   
 ```  
 // consume_cs_indexers.cs  
@@ -71,8 +68,8 @@ public class MainClass {
 */  
 ```  
   
-## Exemple  
- Ce programme Visual C\+\+ utilise l'indexeur.  
+## <a name="example"></a>Exemple  
+ Ce programme Visual C++ utilise l’indexeur.  
   
 ```  
 // consume_cs_indexers_2.cpp  
@@ -88,16 +85,19 @@ int main() {
 }  
 ```  
   
-  **Element \#0 \= 21**  
-**Element \#1 \= 0**  
-**Element \#2 \= 0**  
-**Element \#3 \= 0**  
-**Element \#4 \= 0**  
-**Element \#5 \= 0**  
-**Element \#6 \= 0**  
-**Element \#7 \= 0**  
-**Element \#8 \= 0**  
-**Element \#9 \= 0**  
-**Element \#10 \= 0**   
-## Voir aussi  
- [Interopérabilité avec d'autres langages .NET](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+```Output  
+Element #0 = 21  
+Element #1 = 0  
+Element #2 = 0  
+Element #3 = 0  
+Element #4 = 0  
+Element #5 = 0  
+Element #6 = 0  
+Element #7 = 0  
+Element #8 = 0  
+Element #9 = 0  
+Element #10 = 0  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Interopérabilité avec d’autres langages .NET (C++-CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)

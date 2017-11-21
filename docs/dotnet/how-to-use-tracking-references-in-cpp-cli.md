@@ -1,34 +1,32 @@
 ---
-title: "Comment&#160;: utiliser des r&#233;f&#233;rences de suivi dans C++/CLI | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "types CLR, passer par référence"
+title: "Comment : utiliser des références de suivi en C + c++ / CLI | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f7e03106c9a4e49e727e278538ca984b740ad446
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: utiliser des r&#233;f&#233;rences de suivi dans C++/CLI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-This article shows how to use a tracking reference \(%\) in [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] to pass common language runtime \(CLR\) types by reference.  
+# <a name="how-to-use-tracking-references-in-ccli"></a>Comment : utiliser des références de suivi dans C++/CLI
+Cet article explique comment utiliser une référence de suivi (%) en langage c++ / CLI pour passer common language runtime (CLR) types par référence.  
   
-## To pass CLR types by reference  
- The following sample shows how to use a tracking reference to pass CLR types by reference.  
+## <a name="to-pass-clr-types-by-reference"></a>Pour passer des types CLR par référence  
+ L’exemple suivant montre comment utiliser une référence de suivi pour passer des types CLR par référence.  
   
-```  
+```cpp  
 // tracking_reference_handles.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -75,11 +73,13 @@ int main() {
 }  
 ```  
   
- **Sortie**  
-  
-  **zip \=\= 20100** The next sample shows that taking the address of a tracking reference returns an [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md), and shows how to modify and access data through a tracking reference.  
-  
+```Output  
+zip == 20100  
 ```  
+  
+ L’exemple suivant montre que la prise d’adresse d’une référence de suivi retourne un [interior_ptr (C + c++ / CLI)](../windows/interior-ptr-cpp-cli.md)et montre comment modifier et accéder aux données via une référence de suivi.  
+  
+```cpp  
 // tracking_reference_data.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -124,14 +124,15 @@ int main() {
 }  
 ```  
   
- **Sortie**  
-  
-  **ctor: R\(int\)**  
-**ctor: N\(int i\)**   
-## Tracking references and interior pointers  
- The following code sample shows that you can convert between tracking references and interior pointers.  
-  
+```Output  
+ctor: R(int)  
+ctor: N(int i)  
 ```  
+  
+## <a name="tracking-references-and-interior-pointers"></a>Références de suivi et des pointeurs intérieurs  
+ L’exemple de code suivant montre que vous pouvez convertir entre des références de suivi et des pointeurs intérieurs.  
+  
+```cpp  
 // tracking_reference_interior_ptr.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -177,20 +178,30 @@ int main() {
 }  
 ```  
   
- **Sortie**  
-  
-  **ctor: R\(int\)**  
-**ctor: N\(int i\)**   
-## Tracking references and value types  
- This sample shows simple boxing through a tracking reference to a value type:  
-  
-```  
-// tracking_reference_valuetypes_1.cpp// compile with: /clrusing namespace System;int main() {   int i = 10;   int % j = i;   Object ^ o = j;   // j is implicitly boxed and assigned to o}  
+```Output  
+ctor: R(int)  
+ctor: N(int i)  
 ```  
   
- The next sample shows that you can have both tracking references and native references to value types.  
+## <a name="tracking-references-and-value-types"></a>Références de suivi et les types valeur  
+ Cet exemple illustre un boxing simple via une référence de suivi à un type valeur :  
   
+```cpp  
+// tracking_reference_valuetypes_1.cpp
+// compile with: /clr
+
+using namespace System;
+
+int main() {
+   int i = 10;   
+   int % j = i;   
+   Object ^ o = j;   // j is implicitly boxed and assigned to o
+}  
 ```  
+  
+ L’exemple suivant montre que vous pouvez avoir des références de suivi et des références natives à des types valeur.  
+  
+```cpp  
 // tracking_reference_valuetypes_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -207,13 +218,15 @@ int main() {
 }  
 ```  
   
- **Sortie**  
-  
-  **13**  
-**13**  
-**13** The following sample shows that you can use tracking references together with value types and native types.  
-  
+```Output  
+13  
+13  
+13  
 ```  
+  
+ L’exemple suivant montre que vous pouvez utiliser des références de suivi avec les types valeur et les types natifs.  
+  
+```cpp  
 // tracking_reference_valuetypes_3.cpp  
 // compile with: /clr  
 value struct G {  
@@ -239,14 +252,16 @@ int main() {
 }  
 ```  
   
- **Sortie**  
-  
-  **4**  
-**4**  
-**5**  
-**5** This sample shows that you can bind a tracking reference to a value type on the garbage\-collected heap:  
-  
+```Output  
+4  
+4  
+5  
+5  
 ```  
+  
+ Cet exemple montre que vous pouvez lier une référence de suivi à un type valeur sur le tas de garbage collection :  
+  
+```cpp  
 // tracking_reference_valuetypes_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -275,16 +290,17 @@ int main() {
 }  
 ```  
   
- **Sortie**  
-  
-  **Original V: 2, Tracking reference to boxed V: 1**  
-**Tracking reference to boxed V: 3**  
-**Boxed new copy V: 1**  
-**Original V: 4, Reference to handle of originally boxed V: 1**   
-## Template functions that take native, value, or reference parameters  
- By using a tracking reference in the signature of a template function, you ensure that the function can be called by a parameter whose type is native, CLR value, or CLR reference.  
-  
+```Output  
+Original V: 2, Tracking reference to boxed V: 1  
+Tracking reference to boxed V: 3  
+Boxed new copy V: 1  
+Original V: 4, Reference to handle of originally boxed V: 1  
 ```  
+  
+## <a name="template-functions-that-take-native-value-or-reference-parameters"></a>Fonctions de modèle qui prennent natives, valeur ou des paramètres de référence  
+ En utilisant une référence de suivi dans la signature d’une fonction de modèle, vous assurer que la fonction peut être appelée par un paramètre de type natif, valeur CLR ou référence CLR.  
+  
+```cpp  
 // tracking_reference_template.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -305,7 +321,7 @@ public:
    }  
 };  
   
-// Class Defintions  
+// Class Definitions  
 ref struct R {  
    int i;  
 };  
@@ -323,10 +339,11 @@ int main() {
 }  
 ```  
   
- **Sortie**  
+```Output  
+T %  
+T %  
+T &  
+```  
   
-  **T %**  
-**T %**  
-**T &**   
-## Voir aussi  
- [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md)
+## <a name="see-also"></a>Voir aussi  
+ [Opérateur de référence de suivi](../windows/tracking-reference-operator-cpp-component-extensions.md)

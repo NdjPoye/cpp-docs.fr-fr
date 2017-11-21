@@ -1,42 +1,42 @@
 ---
-title: "Pourquoi les nombres &#224; virgule flottante peuvent manquer de pr&#233;cision | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DBL_EPSILON (constante)"
-  - "chiffres à virgule flottante, précision"
-  - "FLT_EPSILON (constante)"
+title: "Pourquoi les nombres à virgule flottante peuvent manquer de précision | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DBL_EPSILON constant
+- FLT_EPSILON constant
+- floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ad6d78b6209b2a2d45f0d0e5874dff1271da880b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Pourquoi les nombres &#224; virgule flottante peuvent manquer de pr&#233;cision
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les valeurs décimales à virgule flottante n'ont généralement pas une représentation binaire exacte.  Il s'agit d'un effet secondaire lié à la manière dont l'UC représente les données à virgule flottante.  Pour cette raison, vous pouvez constater une certaine perte de précision, et certaines opérations à virgule flottante peuvent donner lieu à des résultats inattendus.  
+# <a name="why-floating-point-numbers-may-lose-precision"></a>Pourquoi les nombres à virgule flottante peuvent manquer de précision
+Les valeurs décimales à virgule flottante n’ont généralement pas une représentation binaire exacte. Il s’agit d’un effet secondaire de la manière dont l’UC représente les données à virgule flottante. Pour cette raison, vous pouvez rencontrer une certaine perte de précision, et certaines opérations à virgule flottante peuvent produire des résultats inattendus.  
   
- Ce comportement est le résultat de l'un des phénomènes suivants :  
+ Ce comportement est le résultat de l’une des opérations suivantes :  
   
--   la représentation binaire du nombre décimal n'est peut\-être pas exacte ;  
+-   La représentation binaire du nombre décimal ne peut pas être exacte.  
   
--   il existe une discordance de type entre les nombres utilisés \(par exemple, un mélange de nombres à virgule flottante et de nombres en double précision\).  
+-   Il existe une incompatibilité de type entre les nombres utilisés (par exemple, mélange float et double).  
   
- Pour remédier à cette situation, la plupart des programmeurs s'assurent que la valeur est supérieure ou inférieure à ce qui est nécessaire, ou ils obtiennent et utilisent une bibliothèque de type décimal codé binaire \(BCD, Binary Coded Decimal\) qui préserve la précision.  
+ Pour résoudre le problème, vérifiez que la valeur est supérieure ou inférieure à ce qui est nécessaire, ou ils obtiennent et utilisent une bibliothèque Binary Coded Decimal (BCD) qui préserve la précision de la plupart des programmeurs.  
   
- La représentation binaire des valeurs à virgule flottante affecte la précision et l'exactitude des calculs à virgule flottante.  Microsoft Visual C\+\+ utilise le [format à virgule flottante IEEE](../../build/reference/ieee-floating-point-representation.md).  
+ Représentation binaire des valeurs à virgule flottante affecte la précision et l’exactitude des calculs en virgule flottante. Microsoft Visual C++ utilise [format à virgule flottante IEEE](../../build/reference/ieee-floating-point-representation.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // Floating-point_number_precision.c  
@@ -63,9 +63,12 @@ int main() {
 }  
 ```  
   
-  **Elle ne sont pas égales \!  La valeur de c est 2.4679999352 ou 2.46800**    
-## Commentaires  
- Pour EPSILON, vous pouvez utiliser les constantes FLT\_EPSILON, dont la définition en notation à virgule flottante est 1,192092896e\-07F, ou DBL\_EPSILON, dont la définition en notation double précision est 2,2204460492503131e\-016.  Vous devez inclure float.h pour ces constantes.  Ces constantes sont définies comme étant le plus petit nombre positif x, ce qui fait que x\+1.0 n'est pas égal à 1.0.  Dans la mesure où il s'agit d'un très petit nombre, vous devez employer une tolérance définie par l'utilisateur pour les calculs impliquant de très grands nombres.  
+```Output  
+They are not equal! The value of c is  2.4679999352 or 2.468000  
+```  
   
-## Voir aussi  
+## <a name="comments"></a>Commentaires  
+ Pour EPSILON, vous pouvez utiliser les constantes FLT_EPSILON, qui est défini pour float comme 1, 192092896e-07F, ou DBL_EPSILON, qui est défini pour un double en tant que 2, 2204460492503131e-016. Vous devez inclure float.h pour ces constantes. Ces constantes sont définies comme positif le plus petit nombre x, telle que x + 1,0 n’est pas égale à 1.0. Comme il s’agit d’un très petit nombre, vous devez employer tolérance définie par l’utilisateur pour les calculs impliquant un grand nombre.  
+  
+## <a name="see-also"></a>Voir aussi  
  [Optimisation du code](../../build/reference/optimizing-your-code.md)

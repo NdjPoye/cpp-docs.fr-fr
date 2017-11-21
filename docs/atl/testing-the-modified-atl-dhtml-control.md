@@ -1,54 +1,55 @@
 ---
-title: "Testing the Modified ATL DHTML Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DHTML controls, tester"
-  - "contrôles HTML, tester"
-  - "testing controls"
+title: "Test du contrôle ATL DHTML modifié | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- HTML controls, testing
+- testing controls
+- DHTML controls, testing
 ms.assetid: 42316118-9433-410f-9d8a-0efcc1eff824
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 84b9aa9ffb04b807cba07fdd3577622f62f6ab45
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Testing the Modified ATL DHTML Control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Essayez votre nouveau contrôle pour voir comment il fonctionne maintenant.  
+# <a name="testing-the-modified-atl-dhtml-control"></a>Test du contrôle ATL DHTML modifié
+Tester votre nouveau contrôle pour voir comment il fonctionne maintenant.  
   
-#### Pour générer et tester le contrôle modifié  
+#### <a name="to-build-and-test-the-modified-control"></a>Pour générer et tester le contrôle modifié  
   
-1.  Régénérez le projet et ouvrez \-le dans l'outil Test Container.  Consultez [propriétés et événements de test avec Test Container](../mfc/testing-properties-and-events-with-test-container.md) pour plus d'informations sur l'accès à l'outil Test Container.  
+1.  Régénérez le projet et ouvrez-le dans le conteneur de Test. Consultez [test des propriétés et des événements avec le conteneur de Test](../mfc/testing-properties-and-events-with-test-container.md) pour plus d’informations sur la façon d’accéder au conteneur de Test.  
   
-     Redimensionnez le contrôle pour afficher tous les boutons que vous avez ajoutés.  
+     Redimensionner le contrôle pour afficher tous les boutons que vous avez ajouté.  
   
-2.  Examinez les deux boutons que vous avez inséré en modifiant le HTML.  Chaque bouton permet d'atteindre le label que vous avez identifié dans [Modifier le contrôle ATL DHTML](../atl/modifying-the-atl-dhtml-control.md): **Refresh** et **HelloHTML**.  
+2.  Examinez les deux boutons que vous avez insérée en modifiant le code HTML. Chaque bouton porte l’étiquette que vous avez identifiés dans [modification du contrôle ATL DHTML](../atl/modifying-the-atl-dhtml-control.md): **Actualiser** et **HelloHTML**.  
   
-3.  Testez les deux nouveaux boutons pour voir comment ils s'exécutent.  
+3.  Tester les deux nouveaux boutons pour voir comment ils fonctionnent.  
   
- Testez maintenant les méthodes qui ne font pas partie de l'interface utilisateur.  
+ À présent tester les méthodes qui ne font pas partie de l’interface utilisateur.  
   
-1.  Mettez en surbrillance le contrôle, la bordure est activée.  
+1.  Mettez en surbrillance le contrôle, afin de la bordure est activée.  
   
-2.  Dans le menu de **Control** , cliquez sur **Invoke Methods**.  
+2.  Sur le **contrôle** menu, cliquez sur **appeler les méthodes**.  
   
- Les méthodes dans la liste étiquetée **Nom de la méthode** sont les méthodes que le conteneur peut appeler : `MethodInvoked`et`GoToURL`.  Toutes les autres méthodes sont contrôlées par l'interface utilisateur.  
+ Les méthodes dans la liste intitulée **nom de la méthode** sont les méthodes que le conteneur peut appeler : `MethodInvoked` et `GoToURL`. Toutes les autres méthodes sont contrôlées par l’interface utilisateur.  
   
-1.  Sélectionnez une méthode pour appeler et cliquez sur `Invoke` pour afficher le message de la méthode ou pour naviguer vers www.microsoft.com.  
+1.  Sélectionnez une méthode à appeler et cliquez sur `Invoke` pour afficher la boîte de message de la méthode ou pour accéder à www.microsoft.com.  
   
-2.  Dans la boîte de dialogue d' **Invoke Methods** , cliquez sur **Fermer**.  
+2.  Dans le **appeler les méthodes** boîte de dialogue, cliquez sur **fermer**.  
   
- Pour en savoir plus sur les différents éléments et fichiers qui composent un contrôle ATL DHTML, consultez l' [Identifier les éléments du projet de contrôle DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).  
+ Pour en savoir plus sur les différents éléments et fichiers qui composent un contrôle ATL DHTML, consultez [identifier les éléments du projet de contrôle DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge pour un contrôle DHTML](../atl/atl-support-for-dhtml-controls.md)
+

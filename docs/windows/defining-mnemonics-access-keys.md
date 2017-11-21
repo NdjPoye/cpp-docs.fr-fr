@@ -1,68 +1,69 @@
 ---
-title: "Defining Mnemonics (Access Keys) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "access keys [C++], adding"
-  - "keyboard shortcuts [C++], controls"
-  - "dialog box controls, mnemonics"
-  - "access keys [C++], checking"
-  - "mnemonics, checking for duplicate"
-  - "mnemonics"
-  - "mnemonics, dialog box controls"
-  - "keyboard shortcuts [C++], uniqueness checking"
-  - "Check Mnemonics command"
-  - "controls [C++], access keys"
-  - "access keys [C++]"
+title: "Définition des mnémoniques (touches d’accès) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- access keys [C++], adding
+- keyboard shortcuts [C++], controls
+- dialog box controls, mnemonics
+- access keys [C++], checking
+- mnemonics, checking for duplicate
+- mnemonics
+- mnemonics, dialog box controls
+- keyboard shortcuts [C++], uniqueness checking
+- Check Mnemonics command
+- controls [C++], access keys
+- access keys [C++]
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7f19e255b2c8b63558dfe178ccfd7a23f8992861
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Defining Mnemonics (Access Keys)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En règle générale, les utilisateurs du clavier déplacent le focus d'un contrôle à l'autre dans la boîte de dialogue à l'aide des touches de direction ou de la touche TABULATION.  Cependant, vous pouvez définir une touche d'accès rapide \(un nom mnémonique ou facile à retenir\) qui permet aux utilisateurs de choisir un contrôle en appuyant sur une seule touche.  
+# <a name="defining-mnemonics-access-keys"></a>Définition des mnémoniques (Touches d'accès rapide)
+Normalement, les utilisateurs du clavier déplacement le focus d’entrée à partir d’un contrôle à l’autre dans une boîte de dialogue avec les touches TAB et flèche. Toutefois, vous pouvez définir une clé d’accès (un nom mnémonique ou facile à retenir) qui permet aux utilisateurs de choisir un contrôle en appuyant sur une clé unique.  
   
-### Pour définir une touche d'accès rapide pour un contrôle avec une légende visible \(boutons de commande, cases à cocher et cases d'option\)  
+### <a name="to-define-an-access-key-for-a-control-with-a-visible-caption-push-buttons-check-boxes-and-radio-buttons"></a>Pour définir une touche d’accès pour un contrôle avec une légende visible (boutons de commande, cases à cocher et des boutons radio)  
   
 1.  Sélectionnez le contrôle dans la boîte de dialogue.  
   
-2.  Dans la [fenêtre Propriétés](../Topic/Properties%20Window.md), dans la propriété **Caption**, tapez un nouveau nom pour le contrôle en tapant un **&** devant la lettre que vous souhaitez utiliser comme touche d'accès rapide pour ce contrôle.  Par exemple, `&Radio1`.  
+2.  Dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), dans le **légende** propriété, tapez un nouveau nom pour le contrôle en tapant une esperluette (**&**) devant la lettre que vous souhaitez définir comme le clé d’accès pour ce contrôle. Par exemple, `&Radio1`.  
   
-3.  Appuyez sur **Entrée**.  
+3.  Appuyez sur **entrez**.  
   
-     La touche d'accès rapide s'affiche soulignée dans la légende, par exemple, **R**adio1.  
+     Un soulignement s’affiche dans la légende pour indiquer la clé d’accès, par exemple, **R**adio1.  
   
-### Pour définir une touche d'accès rapide pour un contrôle sans légende visible  
+### <a name="to-define-an-access-key-for-a-control-without-a-visible-caption"></a>Pour définir une touche d’accès pour un contrôle sans légende visible  
   
-1.  Créez une légende pour le contrôle en utilisant un contrôle **Static Text** dans la [Boîte à outils](../Topic/Toolbox.md).  
+1.  Rendre une légende pour le contrôle à l’aide un **texte statique** contrôler dans le [boîte à outils](/visualstudio/ide/reference/toolbox).  
   
-2.  Dans la légende de texte statique, tapez un **&** devant la lettre que vous souhaitez utiliser comme touche d'accès rapide.  
+2.  Dans la légende de texte statique, tapez un « et commercial » (**&**) devant la lettre que vous souhaitez comme touche d’accès rapide.  
   
-3.  Assurez\-vous que le contrôle de texte statique précède immédiatement dans l'ordre de tabulation le contrôle qu'il identifie.  
+3.  Assurez-vous que le contrôle de texte statique précède immédiatement le contrôle qu’il identifie dans l’ordre de tabulation.  
   
- Toutes les touches d'accès rapide de la boîte de dialogue doivent être uniques.  
+ Toutes les clés d’accès au sein d’une boîte de dialogue doivent être uniques.  
   
-#### Pour contrôler les touches d'accès rapide dupliquées  
+#### <a name="to-check-for-duplicate-access-keys"></a>Pour vérifier les clés d’accès en double  
   
-1.  Dans le menu **Format**, cliquez sur **Vérifier les mnémoniques**.  
+1.  Sur le **Format** menu, cliquez sur **vérifier les mnémoniques**.  
   
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l'ajout de fichiers de ressources aux projets managés, l'accès aux ressources, l'affichage de ressources statiques et l'assignation de chaînes de ressources aux propriétés, et ce manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/fr-fr/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](https://msdn.microsoft.com/library/f45fce5x.aspx) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](https://msdn.microsoft.com/library/xbx3z216.aspx). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-### Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Win32  
   
-## Voir aussi  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)   
  [Contrôles](../mfc/controls-mfc.md)
+

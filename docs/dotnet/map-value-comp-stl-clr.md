@@ -1,41 +1,39 @@
 ---
-title: "map::value_comp (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::value_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre value_comp [STL/CLR]"
+title: Map::value_comp (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::value_comp
+dev_langs: C++
+helpviewer_keywords: value_comp member [STL/CLR]
 ms.assetid: b0e53052-f3cc-48c8-8e29-1b151c23860a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ded4813f7a8e73efd9afbe6fe538835136c83259
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# map::value_comp (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copie le classement délégué pour deux valeurs d'éléments.  
+# <a name="mapvaluecomp-stlclr"></a>map::value_comp (STL/CLR)
+Copie le délégué de classement pour les deux valeurs d’éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 value_compare^ value_comp();  
 ```  
   
-## Notes  
- La méthode retourne le délégué de tri utilisé pour trier la séquence contrôlée.  Vous l'utilisez pour comparer les valeurs de deux éléments.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre retourne le délégué de classement utilisé pour ordonner la séquence contrôlée. Il permet de comparer deux valeurs d’éléments.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_map_value_comp.cpp   
@@ -63,15 +61,18 @@ int main()
   
 ```  
   
-  **compare\(\[L'a', 1\], \[L'a', 1\]\) \= Faux**  
-**compare\(\[L'a', 1\], \[L'b', 2\]\) \= Vrai**  
-**compare\(\[L'b', 2\], \[L'a', 1\]\) \= Faux**   
-## Configuration requise  
- **En\-tête :** \<cliext\/map\>  
+```Output  
+compare([L'a', 1], [L'a', 1]) = False  
+compare([L'a', 1], [L'b', 2]) = True  
+compare([L'b', 2], [L'a', 1]) = False  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/map >  
   
-## Voir aussi  
- [map](../dotnet/map-stl-clr.md)   
- [map::value\_compare](../dotnet/map-value-compare-stl-clr.md)   
- [map::value\_type](../dotnet/map-value-type-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [carte (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map::value_compare (STL/CLR)](../dotnet/map-value-compare-stl-clr.md)   
+ [map::value_type (STL/CLR)](../dotnet/map-value-type-stl-clr.md)

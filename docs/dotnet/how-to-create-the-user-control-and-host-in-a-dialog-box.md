@@ -1,101 +1,101 @@
 ---
-title: "Comment&#160;: cr&#233;er le contr&#244;le utilisateur et l&#39;h&#233;berger dans une bo&#238;te de dialogue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC (C++), héberger un contrôle Windows Forms"
-  - "Windows Forms (C++), prise en charge des MFC"
+title: "Comment : créer le contrôle utilisateur et l’hôte dans une boîte de dialogue | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], hosting a Windows Forms Control
+- Windows Forms [C++], MFC support
 ms.assetid: 03a53032-2f03-4fa2-b567-031615a26011
-caps.latest.revision: 29
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 29
+caps.latest.revision: "29"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cf0372029a6f6f3c2e2d3030d9e04ddcf6483f14
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: cr&#233;er le contr&#244;le utilisateur et l&#39;h&#233;berger dans une bo&#238;te de dialogue
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les étapes de cet article supposent que vous créiez un projet MFC \(Microsoft Foundation Classes\) basé sur des boîtes de dialogue \([CDialog Class](../mfc/reference/cdialog-class.md)\) mais vous pouvez également ajouter la prise en charge d'un contrôle Windows Forms à une boîte de dialogue MFC existante.  
+# <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Comment : créer le contrôle utilisateur et l'héberger dans une boîte de dialogue
+Les étapes de cet article supposent que vous créez basé sur une boîte de dialogue ([CDialog (classe)](../mfc/reference/cdialog-class.md)) project de Microsoft Foundation Classes (MFC), mais vous pouvez également ajouter la prise en charge pour un contrôle Windows Forms à une boîte de dialogue MFC existante.  
   
-### Pour créer le contrôle utilisateur .NET  
+### <a name="to-create-the-net-user-control"></a>Pour créer le contrôle utilisateur .NET  
   
-1.  Créez un projet de bibliothèque de contrôles Windows Forms Visual C\# nommé `WindowsFormsControlLibrary1`.  
+1.  Créez un projet de bibliothèque de contrôles Windows Forms Visual c# nommé `WindowsFormsControlLibrary1`.  
   
-     Dans le menu **Fichier**, cliquez sur **Nouveau**, puis sur **Projet**.  Dans le dossier **Visual C\#** , sélectionnez **Bibliothèque de contrôles Windows Forms**.  
+     Dans le menu **Fichier** , cliquez sur **Nouveau** , puis sur **Projet**. Dans le **Visual C#** dossier, sélectionnez **bibliothèque de contrôles Windows Forms**.  
   
-     Acceptez le nom de projet `WindowsFormsControlLibrary1` en cliquant **sur OK**.  
+     Accepter la `WindowsFormsControlLibrary1` nom du projet en cliquant sur **OK**.  
   
      Par défaut, le nom du contrôle .NET sera `UserControl1`.  
   
-2.  Ajoutez les contrôles enfants à `UserControl1`.  
+2.  Ajouter des contrôles enfants à `UserControl1`.  
   
-     Dans la **Boîte à outils**, ouvrez la liste **Tous les Windows Forms**.  Faites glisser un contrôle **Button** vers l'aire de conception `UserControl1`.  
+     Dans le **boîte à outils**, ouvrez le **tous les Windows Forms** liste. Faites glisser un **bouton** le contrôle à la `UserControl1` aire de conception.  
   
-     Ajoutez également un contrôle **TextBox**.  
+     Ajoutez également une **TextBox** contrôle.  
   
-3.  Dans l'**Explorateur de solutions**, double\-cliquez sur **UserControl1.Designer.cs** afin de l'ouvrir pour le modifier.  Modifiez les déclarations de la zone de texte et du bouton de `private` en `public`.  
+3.  Dans **l’Explorateur de solutions**, double-cliquez sur **UserControl1.Designer.cs** à ouvrir pour le modifier. Modifier les déclarations de la zone de texte et le bouton de `private` à `public`.  
   
 4.  Générez le projet.  
   
-     Dans le menu **Générer**, cliquez sur **Générer la solution**.  
+     Dans le menu **Générer** , cliquez sur **Générer la solution**.  
   
-### Pour créer l'application MFC hôte  
+### <a name="to-create-the-mfc-host-application"></a>Pour créer l’application MFC hôte  
   
-1.  Créez un projet d'application MFC.  
+1.  Créer un projet d’Application MFC.  
   
-     Dans le menu **Fichier**, cliquez sur **Nouveau**, puis sur **Projet**.  Dans le dossier **Visual C\+\+**, sélectionnez **Application MFC**.  
+     Dans le menu **Fichier** , cliquez sur **Nouveau** , puis sur **Projet**. Dans le **Visual C++** dossier, sélectionnez **Application MFC**.  
   
-     Dans la zone **Nom**, tapez `MFC01`.  Modifiez le paramètre Solution en **Ajouter à la solution**.  Cliquez sur **OK**.  
+     Dans la zone **Nom**, tapez `MFC01`. Modifiez le paramètre de la Solution à **ajouter à la Solution**. Cliquez sur **OK**.  
   
-     Dans l'**Assistant Application MFC**, pour Type d'application, sélectionnez **Basée sur des boîtes de dialogue**.  Acceptez les paramètres par défaut restants, puis cliquez sur **Terminer**.  Cette opération crée une application MFC comportant une boîte de dialogue MFC.  
+     Dans le **Assistant Application MFC**, pour le Type d’Application, sélectionnez **basée sur un dialogue**. Acceptez les paramètres par défaut restantes et cliquez sur **Terminer**. Cette opération crée une application MFC qui possède une boîte de dialogue MFC.  
   
-2.  Ajoutez un contrôle d'espace réservé à la boîte de dialogue MFC.  
+2.  Ajouter un contrôle d’espace réservé à la boîte de dialogue MFC.  
   
-     Dans le menu **Affichage**, cliquez sur **Affichage des ressources**.  Dans **Affichage des ressources**, développez le dossier **Boîte de dialogue**, puis double\-cliquez sur `IDD_MFC01_DIALOG`.  La ressource de boîte de dialogue apparaît dans l'**Éditeur de ressources**.  
+     Sur le **vue** menu, cliquez sur **affichage des ressources**. Dans **affichage des ressources**, développez le **boîte de dialogue** et double-cliquez sur `IDD_MFC01_DIALOG`. La ressource de boîte de dialogue s’affiche dans **éditeur de ressources**.  
   
-     Dans la **Boîte à outils**, ouvrez la liste **Éditeur de boîtes de dialogue**.  Faites glisser un contrôle **Texte statique** vers la ressource de boîte de dialogue.  Le contrôle **Texte statique** servira d'espace réservé pour le contrôle Windows Forms .NET.  Redimensionnez\-le à environ la taille du contrôle Windows Forms.  
+     Dans le **boîte à outils**, ouvrez le **boîte de dialogue Éditeur** liste. Faites glisser un **texte statique** contrôle à la ressource de boîte de dialogue. Le **texte statique** contrôle servira d’un espace réservé pour le contrôle Windows Forms .NET. Redimensionnez-le à environ la taille du contrôle Windows Forms.  
   
-     Dans la fenêtre **Propriétés**, modifiez l'**ID** du contrôle **Texte statique** en `IDC_CTRL1` et modifiez la propriété **TabStop** en **True**.  
+     Dans le **propriétés** fenêtre, de modifier le **ID** de la **texte statique** le contrôle à `IDC_CTRL1` et modifier le **TabStop** propriété **True**.  
   
-3.  Configurez le projet pour la prise en charge du Common Language Runtime \(CLR\).  
+3.  Configurer le projet pour la prise en charge du Common Language Runtime (CLR).  
   
-     Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur le nœud de projet MFC01, puis cliquez sur **Propriétés**.  
+     Dans **l’Explorateur de solutions**, cliquez sur le nœud de projet MFC01, puis cliquez sur **propriétés**.  
   
-     Dans la boîte de dialogue **Pages de propriétés**, sous **Propriétés de configuration**, sélectionnez **Général**.  Dans la section **Paramètres par défaut du projet**, attribuez à **Prise en charge du Common Language Runtime** la valeur **Prise en charge du Common Language Runtime \(\/clr\)**.  
+     Dans le **Pages de propriétés** boîte de dialogue **propriétés de Configuration**, sélectionnez **général**. Dans le **projet par défaut est** section, définissez **prise en charge du Common Language Runtime** à **prise en charge du Common Language Runtime (/ clr)**.  
   
-     Sous **Propriétés de configuration**, développez **C\/C\+\+**, puis sélectionnez le nœud **Général**.  Affectez à **Format des informations de débogage** la valeur **Base de données du programme \(\/Zi\)**.  
+     Sous **propriétés de Configuration**, développez **C/C++** et sélectionnez le **général** nœud. Définissez **Format des informations de débogage** à **(/ Zi) de la base de données du programme**.  
   
-     Sélectionnez le nœud **Génération de code**.  Affectez à **Activation de la régénération minimale** la valeur **Non \(\/Gm\-\)**.  Attribuez également à **Vérifications de base à l'exécution** la valeur **Par défaut**.  
+     Sélectionnez le **génération de Code** nœud. Définissez **activer la régénération minimale** à **non (/ Gm-)**. Définissez également **base Runtime vérifie** à **par défaut**.  
   
      Cliquez sur **OK** pour appliquer les modifications.  
   
 4.  Ajoutez une référence au contrôle .NET.  
   
-     Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur le nœud de projet MFC01, puis cliquez sur **Ajouter**, **Références**.  Dans la **Page de propriétés**, cliquez sur **Ajouter une nouvelle référence**, sélectionnez **WindowsFormsControlLibrary1** \(sous l'onglet **Projets**\), puis cliquez sur **OK**.  Cette opération ajoute une référence sous la forme d'une option de compilateur [\/FU](../build/reference/fu-name-forced-hash-using-file.md) afin de compiler le programme.  Elle place également une copie de WindowsFormsControlLibrary1.dll dans le dossier de projet \\MFC01\\ afin que le programme s'exécute.  
+     Dans **l’Explorateur de solutions**, cliquez sur le nœud de projet MFC01, puis sur **ajouter**, **références**. Sur le **Page de propriétés**, cliquez sur **ajouter une nouvelle référence**, sélectionnez **WindowsFormsControlLibrary1** (sous la **projets** onglet), puis cliquez sur **OK**. Cette opération ajoute une référence sous la forme d’un [/FU](../build/reference/fu-name-forced-hash-using-file.md) option du compilateur afin que le programme exécute la compilation. Il place également une copie de WindowsFormsControlLibrary1.dll dans le dossier du projet \MFC01\ afin que le programme s’exécute.  
   
-5.  Dans Stdafx.h, recherchez la ligne suivante :  
+5.  Dans le fichier Stdafx.h, recherchez cette ligne :  
   
     ```  
     #endif // _AFX_NO_AFXCMN_SUPPORT   
     ```  
   
-     Au\-dessus de cette ligne, ajoutez les lignes suivantes :  
+     Au-dessus de lui, ajoutez ces lignes :  
   
     ```  
     #include <afxwinforms.h>   // MFC Windows Forms support  
     ```  
   
-6.  Ajoutez le code servant à créer le contrôle managé.  
+6.  Ajoutez du code pour créer le contrôle managé.  
   
-     Commencez par déclarer le contrôle managé.  Dans MFC01Dlg.h, accédez à la déclaration de la classe de boîte de dialogue et ajoutez un membre de données pour le contrôle utilisateur dans la portée Protégé, comme suit :  
+     Commencez par déclarer le contrôle managé. Dans MFC01Dlg.h, accédez à la déclaration de la classe de boîte de dialogue et ajouter un membre de données pour le contrôle utilisateur dans la portée protégé, comme suit.  
   
     ```  
     class CMFC01Dlg : public CDialog  
@@ -105,7 +105,7 @@ Les étapes de cet article supposent que vous créiez un projet MFC \(Microsoft 
        CWinFormsControl<WindowsFormsControlLibrary1::UserControl1> m_ctrl1;  
     ```  
   
-     Fournissez ensuite une implémentation pour le contrôle managé.  Dans MFC01Dlg.cpp, dans la boîte de dialogue de substitution de `CMFC01Dlg::DoDataExchange` générée par l'Assistant Application MFC \(et non `CAboutDlg::DoDataExchange`, qui se trouve dans le même fichier\), ajoutez le code suivant pour créer le contrôle managé et l'associer à l'espace réservé statique IDC\_CTRL1.  
+     Ensuite, fournir une implémentation pour le contrôle managé. Dans MFC01Dlg.cpp, dans la boîte de dialogue Remplacer de `CMFC01Dlg::DoDataExchange` qui a été généré par l’Assistant Application MFC (pas `CAboutDlg::DoDataExchange`, qui se trouve dans le même fichier), ajoutez le code suivant pour créer le contrôle managé et l’associer à l’espace réservé statique IDC_CTRL1.  
   
     ```  
     void CMFC01Dlg::DoDataExchange(CDataExchange* pDX)  
@@ -117,11 +117,11 @@ Les étapes de cet article supposent que vous créiez un projet MFC \(Microsoft 
   
 7.  Générez et exécutez le projet.  
   
-     Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur **MFC01**, puis cliquez sur **Définir comme projet de démarrage**.  
+     Dans **l’Explorateur de solutions**, avec le bouton droit **MFC01** puis cliquez sur **définir comme projet de démarrage**.  
   
-     Dans le menu **Générer**, cliquez sur **Générer la solution**.  
+     Dans le menu **Générer** , cliquez sur **Générer la solution**.  
   
-     Dans le menu **Déboguer**, cliquez sur **Exécuter sans débogage**.  La boîte de dialogue MFC doit afficher le contrôle Windows Forms.  
+     Sur le **déboguer** menu, cliquez sur **démarrer sans débogage**. La boîte de dialogue MFC doit afficher le contrôle Windows Forms.  
   
-## Voir aussi  
- [Hébergement d'un contrôle utilisateur Windows Form dans une boîte de dialogue MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)
+## <a name="see-also"></a>Voir aussi  
+ [Hébergement d’un contrôle utilisateur Windows Form dans une boîte de dialogue MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)

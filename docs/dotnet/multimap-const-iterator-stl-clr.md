@@ -1,41 +1,39 @@
 ---
-title: "multimap::const_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::const_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_iterator (membre) (STL/CLR)"
+title: multimap::const_iterator (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::const_iterator
+dev_langs: C++
+helpviewer_keywords: const_iterator member [STL/CLR]
 ms.assetid: 13b166c9-1dcd-4ff9-b1da-3b8ffa463735
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e5faa25d8bce27558cd560cb5d6a2a27063d6653
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::const_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multimapconstiterator-stlclr"></a>multimap::const_iterator (STL/CLR)
 Type d'un itérateur constant pour la séquence contrôlée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef T2 const_iterator;  
 ```  
   
-## Notes  
- Le type décrit un objet de type non spécifié `T2` qui peut servir d'itérateur bidirectionnel constant pour la séquence contrôlée.  
+## <a name="remarks"></a>Remarques  
+ Le type décrit un objet de type non spécifié `T2` qui peut servir d’itérateur bidirectionnel constant pour la séquence contrôlée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_multimap_const_iterator.cpp   
@@ -60,12 +58,15 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**   
-## Configuration requise  
- **Header:** \<cliext\/map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
   
- **Espace de noms:** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/map >  
   
-## Voir aussi  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::iterator](../dotnet/multimap-iterator-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::iterator (STL/CLR)](../dotnet/multimap-iterator-stl-clr.md)

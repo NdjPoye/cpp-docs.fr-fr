@@ -1,41 +1,39 @@
 ---
-title: "multiset::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre empty [STL/CLR]"
+title: multiset::Empty (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: 59ec9cc4-cc72-4082-9ab2-49b49980e681
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 289c885269c9c40690e58c33d481e4a4081eda00
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Teste si aucun élément n'est présent.  
+# <a name="multisetempty-stlclr"></a>multiset::empty (STL/CLR)
+Vérifie l'absence d'éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 bool empty();  
 ```  
   
-## Notes  
- La fonction membre retourne vrai pour une séquence contrôlée vide.  Équivaut à [multiset::size](../dotnet/multiset-size-stl-clr.md)`() == 0`.  Vous l'utilisez pour tester si le multiset est vide.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre retourne la valeur true pour une séquence contrôlée vide. Elle est équivalente à [multiset::size (STL/CLR)](../dotnet/multiset-size-stl-clr.md)`() == 0`. Il permet de tester si le multiensemble est vide.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_multiset_empty.cpp   
@@ -66,16 +64,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3**  
-**vide\(\) \= faux**  
-**size\(\) \= 0**  
-**vide\(\) \= Vrai**   
-## Configuration requise  
- **En\-tête :** \<cliext\/set\>  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/set >  
   
-## Voir aussi  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::size](../dotnet/multiset-size-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::size (STL/CLR)](../dotnet/multiset-size-stl-clr.md)

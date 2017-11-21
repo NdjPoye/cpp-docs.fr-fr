@@ -1,43 +1,41 @@
 ---
-title: "RoInitializeWrapper::~RoInitializeWrapper, destructeur | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper::~RoInitializeWrapper"
-dev_langs: 
-  - "C++"
+title: "RoInitializeWrapper :: ~ roinitializewrapper, destructeur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper::~RoInitializeWrapper
+dev_langs: C++
 ms.assetid: afef4c1f-ffde-4cd2-8654-8de4182eb5f4
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5679d6c3375ad01471bd84854ee44155a3a8a1d7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# RoInitializeWrapper::~RoInitializeWrapper, destructeur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Libère le [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
+# <a name="roinitializewrapperroinitializewrapper-destructor"></a>RoInitializeWrapper::~RoInitializeWrapper, destructeur
+N’initialise pas le Windows Runtime.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
 ~RoInitializeWrapper()  
 ```  
   
-## Remarques  
- La classe RoInitializeWrapper appelle Windows::Foundation::Uninitialize\(\).  
+## <a name="remarks"></a>Remarques  
+ La classe RoInitializeWrapper appelle Windows::Foundation::Uninitialize().  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers  
+ **Namespace :** Microsoft::WRL::Wrappers  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [HandleT, classe](../windows/handlet-class.md)

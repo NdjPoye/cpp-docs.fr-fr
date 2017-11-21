@@ -1,49 +1,48 @@
 ---
-title: "/Zc:forScope (Forcer la conformit&#233; &#224; la port&#233;e de la boucle for) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.ForceConformanceInForLoopScope"
-  - "VC.Project.VCCLWCECompilerTool.ForceConformanceInForLoopScope"
-  - "/zc:forScope"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zc (option du compilateur C++)"
-  - "conformité des options du compilateur"
-  - "Zc (option du compilateur C++)"
-  - "-Zc (option du compilateur C++)"
+title: "-Zc : forScope (forcer la conformité dans pour la portée de la boucle) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.ForceConformanceInForLoopScope
+- VC.Project.VCCLWCECompilerTool.ForceConformanceInForLoopScope
+- /zc:forScope
+dev_langs: C++
+helpviewer_keywords:
+- /Zc compiler options [C++]
+- -Zc compiler options [C++]
+- Conformance compiler options
+- Zc compiler options [C++]
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 72595581e5054630e761f214c1a30c139fb7b69b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /Zc:forScope (Forcer la conformit&#233; &#224; la port&#233;e de la boucle for)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Permet d'implémenter un comportement C\+\+ standard pour les boucles [for](../../cpp/for-statement-cpp.md) avec les extensions Microsoft \([\/Ze](../../build/reference/za-ze-disable-language-extensions.md)\).**\/Zc:forScope** est activé par défaut.  
+# <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Forcer la conformité à la portée de la boucle for)
+Permet d'implémenter un comportement C++ standard pour les boucles [for](../../cpp/for-statement-cpp.md) avec les extensions Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).  **/Zc:forScope** est activé par défaut.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 /Zc:forScope[-]  
 ```  
   
-## Notes  
- L’option **\/Zc:forScope\-** est déconseillée et sera supprimée dans une version ultérieure. L’utilisation de **\/Zc:forScope\-** génère l’avertissement D9035 de désapprobation.  
+## <a name="remarks"></a>Remarques  
+ L’option **/Zc:forScope-** est déconseillée et sera supprimée dans une version ultérieure. L’utilisation de **/Zc:forScope-** génère l’avertissement D9035 de désapprobation.  
   
- Le comportement standard consiste à laisser l’initialiseur d’une boucle **for** sortir de la portée après la boucle **for**. Sous **\/Zc:forScope\-** et [\/Ze](../../build/reference/za-ze-disable-language-extensions.md), l’initialiseur de la boucle **for** reste dans la portée jusqu’à la fin de la portée locale.  
+ Le comportement standard consiste à laisser l’initialiseur d’une boucle **for** sortir de la portée après la boucle **for** . Sous **/Zc:forScope-** et [/Ze](../../build/reference/za-ze-disable-language-extensions.md), l’initialiseur de la boucle **for** reste dans la portée jusqu’à la fin de la portée locale.  
   
- Le code suivant est compilé sous **\/Ze**, mais pas sous **\/Za** :  
+ Le code suivant est compilé sous **/Ze** , mais pas sous **/Za**:  
   
 ```cpp  
 // zc_forScope.cpp  
@@ -60,26 +59,26 @@ int main() {
 }  
 ```  
   
- Si vous utilisez **\/Zc:forScope\-**, l’avertissement C4288 \(désactivé par défaut\) est généré si une variable est dans la portée en raison de l’existence d’une déclaration dans une portée précédente. Pour illustrer ceci, supprimez les caractères `//` dans l’exemple de code pour déclarer `int i`.  
+ Si vous utilisez **/Zc:forScope-**, l’avertissement C4288 (désactivé par défaut) est généré si une variable est dans la portée en raison de l’existence d’une déclaration dans une portée précédente. Pour illustrer ceci, supprimez les caractères `//` dans l’exemple de code pour déclarer `int i`.  
   
- Vous pouvez modifier le comportement au moment de l’exécution de **\/Zc:forScope** en utilisant le pragma [conform](../../preprocessor/conform.md).  
+ Vous pouvez modifier le comportement au moment de l’exécution de **/Zc:forScope** en utilisant le pragma [conform](../../preprocessor/conform.md) .  
   
- Si vous utilisez **\/Zc:forScope\-** dans un projet contenant déjà un fichier .pch, un avertissement est généré, **\/Zc:forScope\-** est ignoré et la compilation continue en utilisant les fichiers .pch existants. Si vous voulez qu’un nouveau fichier .pch soit généré, utilisez [\/Yc \(Créer un fichier d'en\-tête précompilé\)](../../build/reference/yc-create-precompiled-header-file.md).  
+ Si vous utilisez **/Zc:forScope-** dans un projet contenant déjà un fichier .pch, un avertissement est généré, **/Zc:forScope-** est ignoré et la compilation continue en utilisant les fichiers .pch existants. Si vous souhaitez générer un nouveau fichier .pch, utilisez [/Yc (créer un en-tête précompilé)](../../build/reference/yc-create-precompiled-header-file.md).  
   
- Pour plus d’informations sur les problèmes de conformité dans Visual C\+\+, consultez [Comportement non standard](../../cpp/nonstandard-behavior.md).  
+ Pour plus d’informations sur les problèmes de conformité dans Visual C++, consultez [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).  
   
-### Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d'informations, consultez [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
-2.  Dans le volet de navigation, ouvrez la page de propriétés **Propriétés de configuration**, **C\/C\+\+**, **Langage**.  
+2.  Dans le volet de navigation, ouvrez la page de propriétés **Propriétés de configuration**, **C/C++**, **Langage** .  
   
-3.  Modifiez la propriété **Conformité forcée dans la portée d'une boucle For**.  
+3.  Modifiez la propriété **Conformité forcée dans la portée d'une boucle For** .  
   
-### Pour définir cette option du compilateur par programmation  
+### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation  
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForceConformanceInForLoopScope%2A>.  
   
-## Voir aussi  
- [\/Zc \(Conformité\)](../../build/reference/zc-conformance.md)   
- [\/Za, \/Ze \(Désactiver les extensions de langage\)](../../build/reference/za-ze-disable-language-extensions.md)
+## <a name="see-also"></a>Voir aussi  
+ [/Zc (conformité)](../../build/reference/zc-conformance.md)   
+ [/ Za, /Ze (désactiver les Extensions de langage)](../../build/reference/za-ze-disable-language-extensions.md)

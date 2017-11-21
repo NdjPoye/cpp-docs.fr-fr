@@ -1,32 +1,30 @@
 ---
-title: "Comment&#160;: utiliser des &#233;v&#233;nements dans C++/CLI | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "événements (C++), accès dans les interfaces"
+title: "Comment : utiliser des événements dans c++ / CLI | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b5a2d6a1ae0443b7c1ec66f5ca0d0fa057cf9041
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: utiliser des &#233;v&#233;nements dans C++/CLI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cet article explique comment utiliser une interface qui déclare un événement et une fonction pour appeler cet événement, la classe et le gestionnaire d'événements qui implémentent l'interface.  
+# <a name="how-to-use-events-in-ccli"></a>Comment : utiliser des événements dans C++/CLI
+Cet article explique comment utiliser une interface qui déclare un événement et une fonction à appeler cet événement et le Gestionnaire de classe d’événements qui implémentent l’interface.  
   
-## Interface d'événements  
- L'exemple de code suivant ajoute un gestionnaire d'événements, appelle l'événement \(ce qui provoque que le gestionnaire d'événements écrive son nom dans la console\) puis supprime le gestionnaire d'événements.  
+## <a name="interface-events"></a>Événements d’interface  
+ L’exemple de code suivant ajoute un gestionnaire d’événements, appelle l’événement, ce qui entraîne le Gestionnaire d’événements à écrire son nom dans la console, puis supprime le Gestionnaire d’événements.  
   
 ```  
 // mcppv2_events2.cpp  
@@ -76,9 +74,12 @@ int main () {
   
  **Sortie**  
   
-  **EventReceiver::Handler**   
-## Méthodes d'accesseur personnalisées  
- L'exemple suivant montre comment définir le comportement d'un événement si les gestionnaires sont ajoutés ou supprimés, et lorsqu'un événement est déclenché.  
+```Output  
+EventReceiver::Handler  
+```  
+  
+## <a name="custom-accessor-methods"></a>Méthodes d’accesseur personnalisé  
+ L’exemple suivant montre comment définir le comportement d’un événement lorsque les gestionnaires sont ajoutés ou supprimés, et quand un événement est déclenché.  
   
 ```  
 // mcppv2_events6.cpp  
@@ -163,10 +164,13 @@ int main() {
   
  **Sortie**  
   
-  **Dans legestionnaire d'événements H1.**  
-**Dans le gestionnaire d'événements H2 avec les arguments 1 et 2,2**   
-## Substituez l'accès par défaut avec les accesseurs ajouter, supprimer, et lever.  
- Cet exemple montre comment remplacer l'accès par défaut avec les méthodes d'événement ajouter, supprimer, et lever :  
+```Output  
+In event handler H1  
+In event handler H2 with args 1 and 2.2  
+```  
+  
+## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>Modifier l’accès par défaut sur Ajouter, supprimer et déclencher des accesseurs  
+ Cet exemple montre comment substituer l’accès par défaut sur les méthodes add, remove et déclencher les événements :  
   
 ```  
 // mcppv2_events3.cpp  
@@ -218,9 +222,12 @@ int main() {
   
  **Sortie**  
   
-  **17**   
-## Plusieurs gestionnaires d'événements  
- Un récepteur d'événements, ou tout autre code client, peut ajouter un ou plusieurs gestionnaires à un événement.  
+```Output  
+17  
+```  
+  
+## <a name="multiple-event-handlers"></a>Plusieurs gestionnaires d’événements  
+ Un récepteur d’événements, ou tout autre code client peut ajouter un ou plusieurs gestionnaires à un événement.  
   
 ```  
 // mcppv2_events4.cpp  
@@ -291,11 +298,14 @@ int main() {
   
  **Sortie**  
   
-  **Click\(x\=7,y\=3.14159\)**  
-**DblClick\(s\=System.Char\[\]\)**  
-**DblClickAgain\(s\=System.Char\[\]\)**   
-## événements statiques  
- L'exemple suivant montre comment définir et utiliser des événements statiques.  
+```Output  
+Click(x=7,y=3.14159)  
+DblClick(s=System.Char[])  
+DblClickAgain(s=System.Char[])  
+```  
+  
+## <a name="static-events"></a>Événements statiques  
+ L’exemple suivant montre comment définir et utiliser des événements statiques.  
   
 ```  
 // mcppv2_events7.cpp  
@@ -376,12 +386,15 @@ int main() {
   
  **Sortie**  
   
-  **Dans legestionnaire d'événements H1.**  
-**Dans le gestionnaire d'événements H2 avec les arguments 11 et 11,11**  
-**Dans legestionnaire d'événements H1.**  
-**Dans le gestionnaire d'événements H2 avec les arguments 22 et 22,22**   
-## Evénements virtuels  
- Cet exemple implémente les événements virtuels et managés dans une interface et la classe :  
+```Output  
+In event handler H1  
+In event handler H2 with args 11 and 11.11  
+In event handler H1  
+In event handler H2 with args 22 and 22.22  
+```  
+  
+## <a name="virtual-events"></a>Événements virtuels  
+ Cet exemple implémente des événements virtuels managés dans une interface et une classe :  
   
 ```  
 // mcppv2_events5.cpp  
@@ -460,8 +473,12 @@ int main() {
   
  **Sortie**  
   
-  **dans handler H1**  
-**Dans le gestionnaire H2 avec les arguments 1 et 2,2** Un événement simple ne peut pas être spécifié pour remplacer ou masquer un événement de la classe de base.  Vous devez définir les fonctions de l'accesseur de tous les événements, puis spécifier le mot clé `new` ou `override` sur chaque fonction d'accesseur.  
+```Output  
+In handler H1  
+In handler H2 with args 1 and 2.2  
+```  
+  
+ Un événement simple ne peut pas être spécifié pour remplacer ou de masquer un événement de la classe de base.  Vous devez définir toutes les fonctions d’accesseur de l’événement et puis spécifiez le `new` ou `override` (mot clé) sur chaque fonction d’accesseur.  
   
 ```  
 // mcppv2_events5_a.cpp  
@@ -493,8 +510,8 @@ ref struct C : B {
 };  
 ```  
   
-## Événements Abstraits  
- L'exemple suivant montre comment implémenter un événement abstrait.  
+## <a name="abstract-events"></a>Événements abstraits  
+ L’exemple suivant montre comment implémenter un événement abstrait.  
   
 ```  
 // mcppv2_events10.cpp  
@@ -572,10 +589,13 @@ int main () {
   
  **Sortie**  
   
-  **hi**  
-**hello depuis Event2**   
-## Déclenchement des événements définis dans un assembly distinct  
- Un événement et un gestionnaire d'événements peuvent être définis dans un assembly, et être consommés par un autre assembly.  
+```Output  
+hi  
+hello from Event2  
+```  
+  
+## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>Le déclenchement d’événements qui sont définis dans un assembly différent  
+ Un événement et un gestionnaire d’événements peuvent être définis dans un assembly et consommées par un autre assembly.  
   
 ```  
 // mcppv2_events8.cpp  
@@ -593,7 +613,7 @@ public:
 };  
 ```  
   
- Ce code client consomme l'événement :  
+ Ce code client utilise l’événement :  
   
 ```  
 // mcppv2_events9.cpp  
@@ -622,7 +642,10 @@ int main() {
   
  **Sortie**  
   
-  **hello**  
-**hello**   
-## Voir aussi  
+```Output  
+hello  
+hello  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
  [event](../windows/event-cpp-component-extensions.md)

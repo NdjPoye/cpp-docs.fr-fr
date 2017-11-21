@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -32,8 +31,7 @@ f1_keywords:
 - mkgmtime
 - mkgmtime64
 - _mkgmtime
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - mkgmtime32 function
 - time functions
@@ -45,33 +43,18 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 7f73bffc2971b535f393cef7e0e2f957b01eee42
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 6353229aecc273daac03635f73761345171bd30e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="mkgmtime-mkgmtime32-mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
-Convertit une heure UTC représentée par un `tm``struct` en heure UTC représentée par un type `time_t`.  
+Convertit une heure UTC représentée par un `tm struct` en heure UTC représentée par un type `time_t`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -90,7 +73,7 @@ __time64_t _mkgmtime64(
   
 #### <a name="parameters"></a>Paramètres  
  `timeptr`  
- Pointeur désignant l’heure UTC sous forme `struct``tm` à convertir.  
+ Pointeur désignant l’heure UTC sous forme `struct tm` à convertir.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Quantité de type `__time32_t` ou `__time64_t` qui représente le nombre de secondes écoulées depuis le 1er janvier 1970 à minuit, en temps universel coordonné (UTC). Si la date est hors limites (voir la section Notes) ou l’entrée ne peut pas être interprétée comme une heure valide, la valeur de retour est -1.  

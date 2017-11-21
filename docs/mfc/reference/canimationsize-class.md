@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationSize::GetAnimationVariableList
 - AFXANIMATIONCONTROLLER/CAnimationSize::m_cxValue
 - AFXANIMATIONCONTROLLER/CAnimationSize::m_cyValue
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationSize [MFC], CAnimationSize
 - CAnimationSize [MFC], AddTransition
@@ -35,16 +33,15 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cxValue
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 9d44533dd17a64bb25eb9c482cdf767b2a13a37e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 418bba617261ee11322a3d5a83ba07b197c83427
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="canimationsize-class"></a>CAnimationSize, classe
 Implémente les fonctionnalités d'un objet taille dont les dimensions peuvent être animées.  
@@ -282,4 +279,3 @@ void SetDefaultValue(const CSize& szDefault);
   
 ## <a name="see-also"></a>Voir aussi  
  [Classes](../../mfc/reference/mfc-classes.md)
-

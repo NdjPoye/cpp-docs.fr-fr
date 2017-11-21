@@ -1,33 +1,32 @@
 ---
-title: "CMyProviderSource (MyProviderDS.H) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ""myproviderds.h""
-  - "cmyprovidersource"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMyProviderSource (classe dans MyProviderDS.H)"
-  - "fournisseurs OLE DB, fichiers générés par l'Assistant"
+title: CMyProviderSource (MyProviderDS.H) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- myproviderds.h
+- cmyprovidersource
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, wizard-generated files
+- CMyProviderSource class in MyProviderDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: adaf048dca30544ed9daf84fc388ad00df741ecf
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2017
 ---
-# CMyProviderSource (MyProviderDS.H)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les classes du fournisseur utilisent un héritage multiple.  Le code suivant montre la chaîne d'héritage de l'objet data source :  
+# <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource (MyProviderDS.H)
+Les classes de fournisseur utilisent l’héritage multiple. Le code suivant montre la chaîne d’héritage de l’objet de source de données :  
   
 ```  
 /////////////////////////////////////////////////////////////////////////  
@@ -42,12 +41,12 @@ class ATL_NO_VTABLE CMyProviderSource :
    public IInternalConnectionImpl<CMyProviderSource>  
 ```  
   
- Tous les composants COM dérivent de `CComObjectRootEx` et `CComCoClass`.  `CComObjectRootEx` fournit toute l'implémentation pour l'interface **IUnknown**.  Il peut gérer tout modèle de thread.  `CComCoClass` gère toutes les erreurs de prise en charge.  Si vous souhaitez envoyer au client des informations plus complètes sur les erreurs, vous pouvez utiliser certaines API d'erreurs dans `CComCoClass`.  
+ Tous les composants COM dérivent `CComObjectRootEx` et `CComCoClass`. `CComObjectRootEx`fournit toute l’implémentation pour la **IUnknown** interface. Il peut gérer n’importe quel modèle de thread. `CComCoClass`gère toute prise en charge de l’erreur requise. Si vous souhaitez envoyer des informations plus détaillées sur l’erreur au client, vous pouvez utiliser certaines API d’erreurs dans `CComCoClass`.  
   
- L'objet data source hérite également de plusieurs classes « Impl ».  Chaque classe assure l'implémentation pour une interface.  L'objet data source implémente les interfaces `IPersist`, `IDBProperties`, **IDBInitialize** et **IDBCreateSession**.  OLE DB exige que chaque interface implémente l'objet data source.  Vous pouvez choisir de prendre en charge ou non des fonctionnalités particulières en héritant ou non de l'une de ces classes « Impl ».  Si vous souhaitez prendre en charge l'interface **IDBDataSourceAdmin**, vous devez alors hériter de la classe **IDBDataSourceAdminImpl** pour obtenir la fonctionnalité requise.  
+ L’objet de source de données hérite également de plusieurs classes de 'Impl'. Chaque classe fournit l’implémentation d’une interface. La source de données objet implémente le `IPersist`, `IDBProperties`, **IDBInitialize**, et **IDBCreateSession** interfaces. OLE DB exige que chaque interface implémente l’objet de source de données. Vous pouvez choisir de prendre en charge ou prennent pas en charge les fonctionnalités particulières en héritant ou non à partir d’une de ces classes 'Impl'. Si vous souhaitez prendre en charge la **IDBDataSourceAdmin** interface, vous héritez de la **IDBDataSourceAdminImpl** classe pour obtenir les fonctionnalités requises.  
   
-## Mappage COM  
- Chaque fois que le client appelle la fonction `QueryInterface` pour une interface sur la source de données, il transite par le mappage COM suivant :  
+## <a name="com-map"></a>Mappage COM  
+ Chaque fois que le client appelle `QueryInterface` pour une interface sur la source de données, il parcourt le mappage COM suivant :  
   
 ```  
 BEGIN_COM_MAP(CMyProviderSource)  
@@ -59,10 +58,10 @@ BEGIN_COM_MAP(CMyProviderSource)
 END_COM_MAP()  
 ```  
   
- Les macros COM\_INTERFACE\_ENTRY sont issues d'ATL et indiquent à l'implémentation de `QueryInterface` dans `CComObjectRootEx` de retourner les interfaces appropriées.  
+ Les macros COM_INTERFACE_ENTRY sont issues d’ATL et indiquent à l’implémentation de `QueryInterface` dans `CComObjectRootEx` pour retourner les interfaces appropriées.  
   
-## Mappage des propriétés  
- Le mappage des propriétés spécifie toutes les propriétés désignées par le fournisseur :  
+## <a name="property-map"></a>Mappages de propriété  
+ Le mappage de propriété spécifie toutes les propriétés désignées par le fournisseur :  
   
 ```  
 BEGIN_PROPSET_MAP(CMyProviderSource)  
@@ -132,9 +131,9 @@ BEGIN_PROPSET_MAP(CMyProviderSource)
 END_PROPSET_MAP()  
 ```  
   
- Dans OLE DB, les propriétés sont groupées.  L'objet data source a deux groupes de propriétés : le premier pour le jeu **DBPROPSET\_DATASOURCEINFO** et le second pour le jeu **DBPROPSET\_DBINIT**.  Le jeu **DBPROPSET\_DATASOURCEINFO** correspond aux propriétés concernant le fournisseur et sa source de données.  Le jeu **DBPROPSET\_DBINIT** correspond aux propriétés utilisées lors de l'initialisation.  Les modèles du fournisseur OLE DB gèrent ces jeux à l'aide des macros PROPERTY\_SET.  Les macros créent un bloc qui contient un tableau de propriétés.  Chaque fois que le client appelle l'interface `IDBProperties`, le fournisseur utilise le mappage des propriétés.  
+ Dans OLE DB, les propriétés sont groupées. L’objet de source de données possède deux groupes de propriétés : un pour le **DBPROPSET_DATASOURCEINFO** ensemble et l’autre pour le **DBPROPSET_DBINIT** définie. Le **DBPROPSET_DATASOURCEINFO** jeu correspond aux propriétés sur le fournisseur et sa source de données. Le **DBPROPSET_DBINIT** ensemble correspond aux propriétés utilisées lors de l’initialisation. Les modèles du fournisseur OLE DB gèrent ces jeux à l’aide des macros PROPERTY_SET. Les macros créent un bloc qui contient un tableau de propriétés. Chaque fois que le client appelle le `IDBProperties` interface, le fournisseur utilise le mappage de propriété.  
   
- Vous n'avez pas besoin d'implémenter chaque propriété de la spécification.  Cependant, vous devez prendre en charge les propriétés requises ; consultez la spécification de compatibilité niveau 0 pour plus d'informations.  Si vous ne souhaitez pas prendre en charge une propriété, vous pouvez la supprimer du mappage.  Si vous souhaitez prendre en charge une propriété, ajoutez\-la au mappage à l'aide de la macro PROPERTY\_INFO\_ENTRY.  La macro correspond à la structure **UPROPINFO**, comme le montre le code suivant :  
+ Vous n’avez pas besoin d’implémenter chaque propriété dans la spécification. Toutefois, vous devez prendre en charge les propriétés requises ; consultez la spécification de mise en conformité de niveau 0 pour plus d’informations. Si vous ne souhaitez pas prendre en charge une propriété, vous pouvez le supprimer à partir de la carte. Si vous souhaitez prendre en charge une propriété, ajoutez-la dans la table à l’aide d’une macro PROPERTY_INFO_ENTRY. La macro correspond à la **UPROPINFO** structure comme indiqué dans le code suivant :  
   
 ```  
 struct UPROPINFO  
@@ -152,16 +151,16 @@ struct UPROPINFO
 };  
 ```  
   
- Chaque élément de la structure représente des informations permettant de gérer la propriété.  Il contient **DBPROPID** pour déterminer le GUID et l'ID de la propriété.  Il contient également des entrées pour déterminer le type et la valeur de la propriété.  
+ Chaque élément de la structure représente des informations permettant de gérer la propriété. Il contient un **DBPROPID** pour déterminer le GUID et l’ID de la propriété. Il contient également des entrées pour déterminer le type et la valeur de la propriété.  
   
- Si vous souhaitez modifier la valeur par défaut d'une propriété \(notez qu'un consommateur peut à tout moment modifier la valeur d'une propriété accessible en écriture\), vous pouvez utiliser la macro PROPERTY\_INFO\_ENTRY\_VALUE ou PROPERTY\_INFO\_ENTRY\_EX.  Ces macros permettent de spécifier une valeur pour une propriété correspondante.  La macro PROPERTY\_INFO\_ENTRY\_VALUE est une notation abrégée qui permet de modifier la valeur.  La macro PROPERTY\_INFO\_ENTRY\_VALUE appelle la macro PROPERTY\_INFO\_ENTRY\_EX.  Cette macro permet d'ajouter ou de modifier tous les attributs de la structure **UPROPINFO**.  
+ Si vous souhaitez modifier la valeur par défaut d’une propriété (Notez qu’un consommateur peut modifier la valeur d’une propriété accessible en écriture à tout moment), vous pouvez utiliser soit la macro PROPERTY_INFO_ENTRY_VALUE ou PROPERTY_INFO_ENTRY_EX. Ces macros permettent de spécifier une valeur pour une propriété correspondante. La macro PROPERTY_INFO_ENTRY_VALUE est une notation abrégée qui vous permet de modifier la valeur. La macro PROPERTY_INFO_ENTRY_VALUE appelle la macro PROPERTY_INFO_ENTRY_EX. Cette macro permet d’ajouter ou modifier tous les attributs dans le **UPROPINFO** structure.  
   
- Si vous souhaitez définir votre propre jeu de propriétés, vous pouvez alors en ajouter un en créant une combinaison BEGIN\_PROPSET\_MAP\/END\_PROPSET\_MAP supplémentaire.  Vous devez définir un GUID pour le jeu de propriétés, puis définir vos propres propriétés.  Si vous avez des propriétés spécifiques au fournisseur, ajoutez\-les alors à un nouveau jeu de propriétés au lieu d'utiliser un jeu existant.  Vous évitez ainsi les problèmes rencontrés dans les versions ultérieures d'OLE DB.  
+ Si vous souhaitez définir votre propre jeu de propriétés, vous pouvez ajouter un en créant une combinaison BEGIN_PROPSET_MAP/END_PROPSET_MAP supplémentaire. Vous devez définir un GUID pour le jeu de propriétés, puis définissez vos propres propriétés. Si vous avez des propriétés spécifiques au fournisseur, les ajouter à une nouvelle propriété définie au lieu d’utiliser un existant. Cela évite les problèmes dans les versions ultérieures d’OLE DB.  
   
-## Jeux de propriétés définis par l'utilisateur  
- Visual C\+\+ .NET prend en charge les jeux de propriétés définis par l'utilisateur.  Il n'est plus nécessaire de substituer **GetProperties** ou `GetPropertyInfo`.  Les modèles détectent tout jeu de propriétés défini par l'utilisateur et l'ajoutent à l'objet approprié.  
+## <a name="user-defined-property-sets"></a>Jeux de propriétés défini par l’utilisateur  
+ Visual C++ prend en charge les ensembles de propriétés défini par l’utilisateur. Vous n’êtes pas obligé de remplacer **GetProperties** ou `GetPropertyInfo`. Au lieu de cela, les modèles détectent tout jeu de propriétés défini par l’utilisateur et l’ajouter à l’objet approprié.  
   
- Si vous avez un jeu de propriétés défini par l'utilisateur qui doit être disponible au moment de l'initialisation \(autrement dit, avant que le consommateur n'appelle **IDBInitialize::Initialize**\), vous pouvez alors le spécifier en utilisant l'indicateur **UPROPSET\_USERINIT** en combinaison avec la macro BEGIN\_PROPERTY\_SET\_EX.  Le jeu de propriétés doit se trouver dans l'objet data source pour que ceci fonctionne \(comme l'exige la spécification OLE DB\).  Par exemple :  
+ Si vous avez un jeu de propriétés défini par l’utilisateur qui doit être disponible au moment de l’initialisation (autrement dit, avant que le consommateur appelle **IDBInitialize::Initialize**), vous pouvez le spécifier à l’aide de la **UPROPSET_USERINIT** indicateur conjointement avec la macro BEGIN_PROPERTY_SET_EX. Le jeu de propriétés doit être dans l’objet de source de données pour que cela fonctionne (comme la spécification OLE DB exige). Exemple :  
   
 ```  
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)  
@@ -169,5 +168,5 @@ BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)
 END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)  
 ```  
   
-## Voir aussi  
- [Fichiers générés par l'Assistant Fournisseur](../../data/oledb/provider-wizard-generated-files.md)
+## <a name="see-also"></a>Voir aussi  
+ [Fichiers générés par l’Assistant Fournisseur](../../data/oledb/provider-wizard-generated-files.md)

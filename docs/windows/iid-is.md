@@ -1,32 +1,30 @@
 ---
-title: "iid_is | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.iid_is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iid_is attribute"
+title: iid_is | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.iid_is
+dev_langs: C++
+helpviewer_keywords: iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c2f4ccdf469ac41c6313626cc80e2256a50e7782
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# iid_is
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Spécifie l'IID de l'interface COM vers lequel un pointeur d'interface.  
+# <a name="iidis"></a>iid_is
+Spécifie l’IID de l’interface COM vers laquelle pointé un pointeur d’interface.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,15 +33,15 @@ Spécifie l'IID de l'interface COM vers lequel un pointeur d'interface.
 ) ]  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *expression*  
- L'expression de langage c qui spécifie un IID d'une interface COM indiquée par un pointeur d'interface.  
+ Une expression de langage C qui spécifie un IID d’une interface COM vers laquelle pointe un pointeur d’interface.  
   
-## Notes  
- L'attribut d' **iid\_is** C\+\+ a les mêmes fonctionnalités que l'attribut d' [iid\_is](http://msdn.microsoft.com/library/windows/desktop/aa367044) MIDL.  
+## <a name="remarks"></a>Remarques  
+ Le **iid_is** attribut C++ a les mêmes fonctionnalités que le [iid_is](http://msdn.microsoft.com/library/windows/desktop/aa367044) attribut MIDL.  
   
-## Exemple  
- Le code suivant illustre l'utilisation d' **iid\_is**:  
+## <a name="example"></a>Exemple  
+ Le code suivant illustre l’utilisation de **iid_is**:  
   
 ```  
 // cpp_attr_ref_iid_is.cpp  
@@ -60,20 +58,19 @@ __interface IFireTabCtrl : IDispatch
 [module(name="ATLFIRELib")];  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|Paramètre d'interface, une donnée membre|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|Paramètre d’interface, données membres|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun|  
+|**Attributs non valides**|None|  
   
- Pour plus d'informations, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs de paramètres](../windows/parameter-attributes.md)   

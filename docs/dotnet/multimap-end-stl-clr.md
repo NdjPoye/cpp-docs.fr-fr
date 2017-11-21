@@ -1,41 +1,39 @@
 ---
-title: "multimap::end (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre end [STL/CLR]"
+title: multimap::end (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: 8d3f9347-794d-4bd3-9bd1-50534fcf4ffe
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 055c24a2038c03c7a37d78b5f75bc5c169c7e280
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::end (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multimapend-stlclr"></a>multimap::end (STL/CLR)
 Désigne la fin de la séquence contrôlée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 iterator end();  
 ```  
   
-## Notes  
- The member function returns a bidirectional iterator that points just beyond the end of the controlled sequence.  You use it to obtain an iterator that designates the end of the controlled sequence; its status doesn not change if the length of the controlled sequence changes.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre retourne un itérateur bidirectionnel qui pointe juste après la fin de la séquence contrôlée. Vous l’utilisez pour obtenir un itérateur qui désigne la fin de la séquence contrôlée ; son état ne change pas si la longueur de la séquence contrôlée change.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_multimap_end.cpp   
@@ -69,14 +67,17 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**\*\-\- \-\-end\(\) \= \[b 2\]**  
-**\*\-\-end\(\) \= \[c 3\]**   
-## Configuration requise  
- **Header:** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+*-- --end() = [b 2]  
+*--end() = [c 3]  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/map >  
   
-## Voir aussi  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::begin](../dotnet/multimap-begin-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md)

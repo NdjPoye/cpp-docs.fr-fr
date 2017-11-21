@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- ;
-- ', '
-- '{'
-- '}'
-- (
-- )
-- '['
-- ']'
-- '!'
-- '%'
-- '&#94;'
-- '&#42;'
-- '&#34;'
-dev_langs:
-- C++
-helpviewer_keywords:
-- punctuators [C++]
+dev_langs: C++
+helpviewer_keywords: punctuators [C++]
 ms.assetid: 1521564c-a977-488a-9490-068079897592
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: a747b74f20d0c427883b8b7deba748b9de793d7a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 27d5f36587c85d72de1eb5588c2f618e1ef5ceb4
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="punctuators-c"></a>Signes de ponctuation (C++)
 Les signes de ponctuation en langage C++ ont une signification syntaxique et sémantique pour le compilateur mais ne spécifient pas d'eux-mêmes une opération qui produit une valeur. Certains signes de ponctuation, seuls ou combinés, peuvent également être des opérateurs C++ ou être significatifs pour le préprocesseur.  
@@ -52,4 +34,3 @@ Les signes de ponctuation en langage C++ ont une signification syntaxique et s�
 
 ## <a name="see-also"></a>Voir aussi  
  [Conventions lexicales](../cpp/lexical-conventions.md)
-

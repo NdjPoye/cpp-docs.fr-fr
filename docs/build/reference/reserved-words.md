@@ -1,69 +1,69 @@
 ---
-title: "Mots r&#233;serv&#233;s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "code"
-  - "CONFORMING"
-  - "DISCARDABLE"
-  - "Description"
-  - "base"
-  - "APPLOADER"
-  - "Data"
-  - "DYNAMIC"
-  - "DEV386"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fichiers .def (C++), mots réservés"
-  - "fichiers def (C++), mots réservés"
-  - "éditeur de liens (C++), mots réservés"
-  - "mots réservés (C++)"
+title: "Mots réservés | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- code
+- CONFORMING
+- DISCARDABLE
+- Description
+- base
+- APPLOADER
+- Data
+- DYNAMIC
+- DEV386
+dev_langs: C++
+helpviewer_keywords:
+- .def files [C++], reserved words
+- def files [C++], reserved words
+- linker [C++], reserved words
+- reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1a7040ac0093471be657c2ed7a064719abcd0230
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Mots r&#233;serv&#233;s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les mots suivants sont réservés par l'éditeur de liens.  Ces noms ne peuvent être utilisés comme arguments dans les [instructions de définition de module](../../build/reference/module-definition-dot-def-files.md) que s'ils sont placés entre guillemets doubles \(""\).  
+# <a name="reserved-words"></a>Mots réservés
+Les mots suivants sont réservés par l’éditeur de liens. Ces noms peuvent être utilisés en tant qu’arguments dans [les instructions de définition de module](../../build/reference/module-definition-dot-def-files.md) uniquement si le nom est placé entre guillemets doubles ( » »).  
   
 ||||  
 |-|-|-|  
-|**APPLOADER**1|**INITINSTANCE**2|**PRELOAD**|  
-|**BASE**|**IOPL**|**PRIVATE**|  
-|**CODE**|**LIBRARY**1|**PROTMODE**2|  
-|**CONFORMING**|**LOADONCALL**1|**PURE**1|  
-|**DATA**|**LONGNAMES**2|**READONLY**|  
-|**DESCRIPTION**|`MOVABLE`1|**READWRITE**|  
-|**DEV386**|**MOVEABLE**1|**REALMODE**1|  
-|**DISCARDABLE**|**MULTIPLE**|**RESIDENT**|  
-|**DYNAMIC**|**NOM**|**RESIDENTNAME**1|  
-|**EXECUTE\-ONLY**|**NEWFILES**2|**SECTIONS**|  
-|**EXECUTEONLY**|`NODATA`1|**SEGMENTS**|  
-|**EXECUTEREAD**|**NOIOPL**1|**SHARED**|  
-|**EXETYPE**|**NONAME**|**SINGLE**|  
-|**EXPORTS**|**NONCONFORMING**1|**STACKSIZE**|  
-|**FIXED**1|**NONDISCARDABLE**|**STUB**|  
-|**FUNCTIONS**2|**NONE**|**VERSION**|  
-|**HEAPSIZE**|**NONSHARED**|**WINDOWAPI**|  
-|**IMPORTS**|**NOTWINDOWCOMPAT**1|**WINDOWCOMPAT**|  
-|**IMPURE**1|**OBJECTS**|**WINDOWS**|  
-|**INCLUDE**2|**OLD**1||  
+|**APPLOADER**1|**INITINSTANCE**2|**PRÉCHARGEMENT**|  
+|**BASE**|**IOPL**|**PRIVÉ**|  
+|**CODE**|**BIBLIOTHÈQUE**1|**PROTMODE**2|  
+|**CONFORME**|**LOADONCALL**1|**PURE**1|  
+|**DONNÉES**|**LONGNAMES**2|**EN LECTURE SEULE**|  
+|**DESCRIPTION**|**MOBILE**1|**LECTURE/ÉCRITURE**|  
+|**DEV386**|**MOBILE**1|**EN MODE RÉEL ;**1|  
+|**POUVANT ÊTRE ÉLIMINÉE**|**PLUSIEURS**|**RÉSIDENT**|  
+|**DYNAMIQUE**|**NOM**|**RESIDENTNAME**1|  
+|**EXÉCUTER UNIQUEMENT**|**NEWFILES**2|**SECTIONS**|  
+|**EXECUTEONLY**|**NODATA**1|**SEGMENTS**|  
+|**EXÉCUTIONLECTURE**|**NOIOPL**1|**PARTAGÉ**|  
+|**EXETYPE**|**NONAME**|**UNIQUE**|  
+|**EXPORTS**|**NON CONFORMES**1|**STACKSIZE**|  
+|**FIXE**1|**NONDISCARDABLE**|**STUB**|  
+|**FONCTIONS**2|**AUCUN**|**VERSION**|  
+|**HEAPSIZE**|**NON PARTAGÉ**|**WINDOWAPI**|  
+|**IMPORTATIONS**|**NOTWINDOWCOMPAT**1|**WINDOWCOMPAT**|  
+|**IMPURES**1|**OBJETS**|**WINDOWS**|  
+|**INCLURE**2|**ANCIEN**1||  
   
- 1 L'éditeur de liens émet un avertissement \(« ignoré »\) lorsqu'il trouve ce terme.  Toutefois, le mot est toujours réservé.  
+ 1 l’éditeur de liens émet un avertissement (« ignoré ») lorsqu’il rencontre ce terme. Toutefois, le mot est toujours réservé.  
   
- 2 L'éditeur de liens ignore ce mot, mais n'émet aucun avertissement.  
+ 2 l’éditeur de liens ignore ce mot, mais n’émet aucun avertissement.  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)

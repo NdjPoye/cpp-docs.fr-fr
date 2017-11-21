@@ -1,60 +1,59 @@
 ---
-title: "D&#233;clarations de membre dans une classe ou interface (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membres de classe, syntaxe de déclaration"
-  - "membres, syntaxe de déclaration"
+title: "Déclarations de membre dans une classe ou Interface (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- members, declaration syntax
+- class members, declaration syntax
 ms.assetid: 95d312a4-198b-46f0-b8f5-15253807c55e
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b3475ae25a6c11dbbbead1de4fb4f3180e2e24f4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# D&#233;clarations de membre dans une classe ou interface (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La déclaration de propriétés et d'opérateurs a été largement revue entre Extensions managées pour C\+\+ et [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)], afin de masquer les détails d'implémentation sous\-jacents exposés dans la conception d'Extensions managées.  Les déclarations d'événements ont également été modifiées.  
+# <a name="member-declarations-within-a-class-or-interface-ccli"></a>Déclarations de membre dans une classe ou interface (C++/CLI)
+La déclaration de propriétés et d’opérateurs a été largement revue à partir des Extensions managées pour C++ vers Visual C++, masquer les détails d’implémentation sous-jacents exposés dans la conception des Extensions managées. Déclarations d’événements ont été modifiées ainsi.  
   
- Dans la catégorie des modifications non prises en charge par Extensions managées, les constructeurs statiques peuvent désormais être définis hors ligne \(ils devaient être définis inline en Extensions managées\) et la notion de constructeur déléguant a été introduite.  
+ Sous la catégorie des modifications qu’aucune prise en charge des Extensions managées, constructeurs statiques peuvent désormais n’être défini hors ligne (ils devaient être définies inline dans les Extensions managées) et la notion de constructeur déléguant a été introduite.  
   
-## Dans cette section  
+## <a name="in-this-section"></a>Dans cette section  
  [Déclaration de propriété](../dotnet/property-declaration.md)  
- Traite des modifications apportées aux déclarations de propriétés.  
+ Décrit les modifications apportées aux déclarations de propriété.  
   
- [Déclaration de l'index de la propriété](../dotnet/property-index-declaration.md)  
- Traite des modifications apportées aux déclarations de propriétés indexées.  
+ [Déclaration de l’index de la propriété](../dotnet/property-index-declaration.md)  
+ Décrit les modifications apportées aux déclarations de propriétés indexées.  
   
  [Délégués et événements](../dotnet/delegates-and-events.md)  
- Traite des modifications apportées à la syntaxe pour déclarer des délégués et des événements.  
+ Décrit les modifications apportées à la syntaxe de déclaration de délégués et événements.  
   
  [Sceller une fonction virtuelle](../dotnet/sealing-a-virtual-function.md)  
- Traite des modifications apportées à la syntaxe pour sceller une fonction.  
+ Décrit les modifications apportées à la syntaxe pour sceller une fonction.  
   
  [Opérateurs surchargés](../dotnet/overloaded-operators.md)  
- Traite des modifications apportées à la surcharge d'opérateur.  
+ Décrit les modifications apportées à la surcharge d’opérateur.  
   
  [Modifications apportées aux opérateurs de conversion](../dotnet/changes-to-conversion-operators.md)  
- Traite des modifications apportées aux opérateurs de conversion.  
+ Décrit les modifications apportées aux opérateurs de conversion.  
   
- [Substitution explicite d'un membre d'interface](../dotnet/explicit-override-of-an-interface-member.md)  
- Traite des modifications apportées à la méthode servant à substituer explicitement un membre d'interface.  
+ [Substitution explicite d’un membre d’interface](../dotnet/explicit-override-of-an-interface-member.md)  
+ Décrit les modifications apportées à la méthode pour substituer explicitement un membre d’interface.  
   
  [Fonctions virtuelles privées](../dotnet/private-virtual-functions.md)  
- Traite des modifications apportées à la façon dont les fonctions virtuelles privées sont gérées dans les classes dérivées.  
+ Traite des modifications dans le traitement des fonctions virtuelles privées dans les classes dérivées.  
   
- [La liaison Static Const Int n'est plus littérale](../dotnet/static-const-int-linkage-is-no-longer-literal.md)  
- Traite des modifications apportées à la façon dont `static const` les membres intégraux sont liés et comment déclarer explicitement une constante à l'aide du nouveau mot clé `literal`.  
+ [La liaison Static Const Int n’est plus littérale](../dotnet/static-const-int-linkage-is-no-longer-literal.md)  
+ Traite des modifications de la façon `static const` membres intégraux sont liés et comment déclarer explicitement une constante à l’aide de la nouvelle `literal` (mot clé).  
   
-## Voir aussi  
- [Initiation à la migration de C\+\+\/CLI](../dotnet/cpp-cli-migration-primer.md)
+## <a name="see-also"></a>Voir aussi  
+ [Initiation à la migration de C++/CLI](../dotnet/cpp-cli-migration-primer.md)

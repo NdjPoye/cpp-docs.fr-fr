@@ -1,47 +1,45 @@
 ---
-title: "&lt;c&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<c>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<c> (balise XML C++)"
-  - "c (balise XML C++)"
+title: '&lt;c&gt; (Visual C++) | Documents Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: <c>
+dev_langs: C++
+helpviewer_keywords:
+- <c> C++ XML tag
+- c C++ XML tag
 ms.assetid: 3b23fc0f-e10d-4dd0-b197-48a46cbddd9f
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d44d1fccb0a6fdbcedff641982033bfdee4adc6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# &lt;c&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La balise d' \<c\> indique ce texte dans une description doit être marquée comme code.  Utilisez [\<code\>](../ide/code-visual-cpp.md) pour indiquer que plusieurs lignes constituent du code.  
+# <a name="ltcgt-visual-c"></a>&lt;c&gt; (Visual C++)
+Le \<c > balise indique que le texte d’une description doit être marqué en tant que code. Utilisez [\<code>](../ide/code-visual-cpp.md) pour indiquer plusieurs lignes comme étant du code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 <c>text</c>  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `text`  
- Le texte que vous souhaitez désigner comme code.  
+ Le texte que vous souhaitez indiquer en tant que code.  
   
-## Notes  
- Compilez avec [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour traiter les commentaires de documentation et les placer dans un fichier.  
+## <a name="remarks"></a>Remarques  
+ Compilez avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // xml_c_tag.cpp  
@@ -62,5 +60,5 @@ public:
 };  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Documentation XML](../ide/xml-documentation-visual-cpp.md)

@@ -1,34 +1,33 @@
 ---
-title: "Utilisation des vues de l&#39;enregistrement OLE&#160;DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COleDBRecordView (classe), vue d'ensemble"
-  - "MFC, vues des enregistrements"
-  - "vues des enregistrements OLE DB"
-  - "OLE DB, vues des enregistrements"
-  - "vues des enregistrements, objets de vue d'enregistrement"
-  - "jeux de lignes, vues des enregistrements"
+title: "À l’aide des vues des enregistrements OLE DB | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB record views
+- COleDBRecordView class, overview
+- rowsets, record views
+- record views, record view objects
+- OLE DB, record views
+- MFC, record views
 ms.assetid: 1cd3e595-ce08-43d8-a0a9-d03b5d3e24ce
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c4e57f320c8b207e7b1c8721ab25744cd1f128bc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Utilisation des vues de l&#39;enregistrement OLE&#160;DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Si vous souhaitez afficher des données du jeu de lignes OLE DB dans une application MFC, vous devez utiliser la classe MFC [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md).  Un objet recordview créé à partir de `COleDBRecordView` vous permet d'afficher des enregistrements de la base de données dans des contrôles MFC.  La vue de l'enregistrement est une vue de type formulaire des boîtes de dialogue directement connectée à un objet jeu de lignes OLE DB créé à partir de la classe de modèles `CRowset`.  L'obtention d'un handle de l'objet jeu de lignes est simple :  
+# <a name="using-ole-db-record-views"></a>Utilisation des vues de l'enregistrement OLE DB
+Si vous souhaitez afficher les données d’ensemble de lignes OLE DB dans une application MFC, vous devez utiliser la classe MFC [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md). Un objet de vue de l’enregistrement créé à partir de `COleDBRecordView` vous permet d’afficher les enregistrements de base de données dans des contrôles MFC. La vue de l’enregistrement est une vue de formulaire de boîte de dialogue directement connectée à un objet de l’ensemble de lignes OLE DB créé à partir de la `CRowset` classe de modèle. Obtention d’un handle vers l’objet d’ensemble de lignes est simple :  
   
 ```  
 COleDBRecordView myRecordView;  
@@ -37,10 +36,10 @@ COleDBRecordView myRecordView;
 CRowset<CAccessor<CProductAccessor>> myRowSet = myRecordView.OnGetRowset();  
 ```  
   
- La vue affiche les champs de l'objet `CRowset` dans les contrôles de la boîte de dialogue.  L'objet `COleDBRecordView` utilise les fonctionnalités de l'Échange de données de boîtes de dialogue \(DDX\) et de navigation intégrées à `CRowset` \(**MoveFirst**, `MoveNext`, `MovePrev` et `MoveLast`\) pour automatiser le déplacement des données entre les contrôles sur le formulaire et les champs de l'ensemble de lignes.  `COleDBRecordView` effectue le suivi de la position de l'utilisateur dans l'ensemble de lignes afin que la vue de l'enregistrement puisse mettre à jour l'interface utilisateur et fournit une méthode [OnMove](../Topic/COleDBRecordView::OnMove.md) pour la mise à jour de l'enregistrement actif avant de passer à un autre.  
+ La vue affiche les champs de la `CRowset` objet dans les contrôles de la boîte de dialogue. Le `COleDBRecordView` objet utilise l’échange de données de boîte de dialogue (DDX) et les fonctionnalités de navigation intégrées `CRowset` (**MoveFirst**, `MoveNext`, `MovePrev`, et `MoveLast`) pour automatiser le déplacement des données entre les contrôles sur le formulaire et les champs de l’ensemble de lignes. `COleDBRecordView`effectue le suivi de position de l’utilisateur dans l’ensemble de lignes afin que la vue de l’enregistrement peut mettre à jour l’interface utilisateur et fournit un [OnMove](../../mfc/reference/coledbrecordview-class.md#onmove) méthode de mise à jour de l’enregistrement actif avant de passer à un autre.  
   
- Vous pouvez utiliser des fonctions DDX avec **COleDbRecordView** pour obtenir des données directement du recordset de la base de données et les afficher dans un contrôle de boîte de dialogue.  Vous devez utiliser les méthodes **DDX\_\*** \(telles que `DDX_Text`\), mais pas les fonctions **DDX\_Field\*** \(telles que `DDX_FieldText`\) avec **COleDbRecordView**.  
+ Vous pouvez utiliser des fonctions DDX avec **COleDbRecordView** pour obtenir des données directement à partir de l’ensemble d’enregistrements de base de données et les afficher dans un contrôle de boîte de dialogue. Vous devez utiliser le **DDX_\***  méthodes (tel que `DDX_Text`), et non le **DDX_Field\***  fonctions (telles que `DDX_FieldText`) avec **COleDbRecordView** .  
   
-## Voir aussi  
- [Utilisation des accesseurs](../../data/oledb/using-accessors.md)   
- [COleDBRecordView Class](../../mfc/reference/coledbrecordview-class.md)
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation d’accesseurs](../../data/oledb/using-accessors.md)   
+ [COleDBRecordView, classe](../../mfc/reference/coledbrecordview-class.md)

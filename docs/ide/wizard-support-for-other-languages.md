@@ -1,50 +1,49 @@
 ---
-title: "Prise en charge d&#39;autres langues par l&#39;Assistant | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.EastAsianLanguages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "prise en charge des langues pour les projets MFC"
-  - "projets (C++), prise en charge d'autres langues"
-  - "Assistants (C++), prise en charge d'autres langues"
+title: "Prise en charge de l’Assistant pour d’autres langues | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.appwiz.EastAsianLanguages
+dev_langs: C++
+helpviewer_keywords:
+- wizards [C++], language support
+- language support for MFC projects
+- projects [C++], language support
 ms.assetid: b653c673-0687-455c-885f-15d7e2f4149d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f5741f6b09ec466c04794bf049222d344df34a85
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Prise en charge d&#39;autres langues par l&#39;Assistant
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Lorsque vous installez Visual Studio, le programme d'installation recherche les paramètres régionaux installés sur votre système et installe le ou les modèles linguistiques correspondant à ces paramètres.  Par exemple, s'il détecte des paramètres de l'Europe de l'Ouest, le programme d'installation installe les modèles anglais, français, italiens, espagnols et allemands.  Ces langues figurent dans la liste **Langue des ressources** affichée dans la page [Type d'application](../mfc/reference/application-type-mfc-application-wizard.md) de l'Assistant Application MFC.  
+# <a name="wizard-support-for-other-languages"></a>Prise en charge d'autres langues par l'Assistant
+Lorsque vous installez Visual Studio, le programme d’installation détecte les paramètres régionaux installé sur votre système et installe les modèles pour ces paramètres régionaux ou un modèle de langage approprié. Par exemple, pour les paramètres régionaux européens occidentales, le programme d’installation installe anglais, Français, italien, espagnol et allemand. Ces langues figurent dans le **langue de ressource** liste sur le [Type d’Application](../mfc/reference/application-type-mfc-application-wizard.md) page de l’Assistant Application MFC.  
   
-## Modèles de langue  
- Les modèles ne sont pas tous installés sur tous les systèmes, car ils sont basés sur l'encodage ANSI et toutes les ressources ne sont pas modifiables sur tous les systèmes.  Par exemple, par défaut, vous ne pouvez pas modifier des ressources de langue japonaise sur un système français.  
+## <a name="language-templates"></a>Modèles de langue  
+ Pas de tous les modèles sont installés sur tous les systèmes, car les modèles sont ANSI encodage, et pas toutes les ressources peuvent être modifiées sur tous les systèmes. Par exemple, par défaut, vous ne pouvez pas modifier des ressources de langue japonaise sur un système Français.  
   
- Si vous utilisez Windows 2000 ou version ultérieure et que vous souhaitez créer une application MFC dans une autre langue, vous devez copier sur votre système le répertoire de modèles pour la langue appropriée à partir du CD\-ROM Visual Studio.  
+ Si vous utilisez Windows 2000 ou version ultérieure et que vous souhaitez créer une application MFC dans une autre langue, vous devez copier le répertoire de modèles pour la langue appropriée à partir du support d’installation de Visual Studio (disque 1) sur votre système.  
   
 > [!NOTE]
->  Pour modifier le projet créé, vous devez remplacer les paramètres régionaux de votre système par les paramètres régionaux de la langue sélectionnée.  
+>  Pour modifier le projet créé, vous devez définir les paramètres régionaux système pour les paramètres régionaux appropriés pour la langue sélectionnée.  
   
- Chaque modèle est stocké dans un dossier spécifique du répertoire \\Microsoft Visual Studio .NET 2003\\Vc7\\VCWizards\\mfcappwiz\\templates\\, comme indiqué dans le tableau ci\-dessous.  Pour accéder au modèle linguistique souhaité, copiez le dossier correspondant dans le répertoire \\mfcappwiz\\templates\\ sur votre ordinateur.  Une fois ce dossier copié, la langue apparaît dans la liste **Langue des ressources** affichée dans la page **Type d'application** de l'Assistant Application MFC.  
+ Les modèles sont chacun ayant un dossier dans le répertoire \Microsoft Visual Studio .NET 2003\Vc7\VCWizards\mfcappwiz\templates\, comme indiqué dans le tableau suivant. Pour accéder au modèle de langue de votre choix, copiez le dossier approprié dans le répertoire \mfcappwiz\templates\ sur votre ordinateur. Une fois que vous avez copié le dossier, la langue apparaît dans le **langue de ressource** liste sur le **Type d’Application** page de l’Assistant Application MFC.  
   
-### Modèles de langue fournis dans Visual Studio .NET  
+### <a name="language-templates-provided-in-visual-studio-net"></a>Modèles de langue fournis dans Visual Studio .NET  
   
-|Language|Modèle|  
-|--------------|------------|  
-|Chinois \(Traditionnel\)|1028|  
-|Chinois \(Simplifié\)|2052|  
-|Anglais|1033|  
+|Langage|Modèle|  
+|--------------|--------------|  
+|Chinois (traditionnel)|1028|  
+|Chinois (simplifié)|2052|  
+|Anglais|1036|  
 |Français|1036|  
 |Allemand|1031|  
 |Italien|1040|  
@@ -52,11 +51,11 @@ Lorsque vous installez Visual Studio, le programme d'installation recherche les 
 |Coréen|1042|  
 |Espagnol|3082|  
   
-## Format des fichiers Visual C\+\+ générés par l'Assistant  
- Les Assistants Visual C\+\+ génèrent les projets en Unicode lorsque la version de langue Visual Studio ne correspond pas aux paramètres régionaux système.  Par exemple, lorsque la version japonaise de Visual Studio est installée sur un ordinateur dont les paramètres régionaux sont définis avec une autre langue, les Assistants Visual C\+\+ génèrent des projets composés de fichiers Unicode.  Il s'agit d'un comportement courant sur les ordinateurs installés avec les packs multilingues Windows.  
+## <a name="format-of-visual-c-wizard-generated-files"></a>Format des fichiers générés par l’Assistant de C++ de Visual  
+ Les Assistants Visual C++ génère les projets au format Unicode lors de la version linguistique installée de Visual Studio ne correspond pas à la langue du système. Par exemple, lorsque la version japonaise de Visual Studio est installée sur un ordinateur qui a des paramètres régionaux définis pour une autre langue, les Assistants Visual C++ génère projets composés de fichiers Unicode. Cela est courant sur les ordinateurs à configurer avec les packs de Windows multilingues (MUI).  
   
- Il en va différemment sur les systèmes où les paramètres régionaux système sont identiques à ceux de la version de langue de Visual Studio.  Dans ce cas, les fichiers projet sont créés en ANSI, dans la page de codes système.  
+ Ce comportement diffère des systèmes tels que les paramètres régionaux système sont identique à la version linguistique de Visual Studio. Dans ce cas, les fichiers projet seront créés au format ANSI dans la page de codes du système.  
   
-## Voir aussi  
- [Types de fichiers créés pour les projets Visual C\+\+](../ide/file-types-created-for-visual-cpp-projects.md)   
- [Création et gestion de projets Visual C\+\+](../ide/creating-and-managing-visual-cpp-projects.md)
+## <a name="see-also"></a>Voir aussi  
+ [Types de fichiers créés pour les projets Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)   
+ [Création et gestion de projets Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)

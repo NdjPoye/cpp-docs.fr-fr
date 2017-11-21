@@ -1,32 +1,30 @@
 ---
-title: "FtmBase::MarshalInterface, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase::MarshalInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MarshalInterface (méthode)"
+title: "Ftmbase::MarshalInterface, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase::MarshalInterface
+dev_langs: C++
+helpviewer_keywords: MarshalInterface method
 ms.assetid: fc8421b4-06e4-4925-b908-c285fe4790d2
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2b6bd889a20c2c31de8e5fb6d11990fc2579ef2d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# FtmBase::MarshalInterface, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Écrit dans un flux les données requises pour initialiser un objet proxy dans un processus client.  
+# <a name="ftmbasemarshalinterface-method"></a>FtmBase::MarshalInterface, méthode
+Écrit dans un flux les données requises pour initialiser l’objet proxy dans un processus client.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 STDMETHODIMP MarshalInterface(  
@@ -39,46 +37,46 @@ STDMETHODIMP MarshalInterface(
 ) override;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `pStm`  
- Pointeur vers le flux de données à utiliser lors du marshaling.  
+ Pointeur vers le flux à utiliser pendant le marshaling.  
   
  `riid`  
- Référence à l'identificateur de l'interface à marshaler.  Cette interface doit être dérivée de l'interface IUnknown.  
+ Référence à l’identificateur de l’interface pour être marshalés. Cette interface doit être dérivée de l’interface IUnknown.  
   
  `pv`  
- Pointeur vers un pointeur d'interface à marshaler; peut être NULL si l'appelant ne possède pas de pointeur vers l'interface souhaitée.  
+ Pointeur vers le pointeur d’interface pour être marshalés ; peut d’être NULL si l’appelant n’a pas un pointeur vers l’interface souhaitée.  
   
  `dwDestContext`  
- Contexte de destination où l'interface spécifiée doit être démarshalée.  
+ Contexte de destination où l’interface spécifiée doit être démarshalée.  
   
- Spécifiez une ou plusieurs valeurs d'énumération de MSHCTX.  
+ Spécifiez une ou plusieurs valeurs d’énumération MSHCTX.  
   
- La démarshalisation peut se produire dans un autre appartement du processus actuel \(MSHCTX\_INPROC\) ou dans un autre processus sur le même ordinateur que le processus actuel \(MSHCTX\_LOCAL\).  
+ Unmarshaling peut se produire dans un autre cloisonnement du processus actuel (MSHCTX_INPROC) ou dans un autre processus sur le même ordinateur que le processus en cours (MSHCTX_LOCAL).  
   
  `pvDestContext`  
  Réservé pour une future utilisation ; doit être nul.  
   
  `mshlflags`  
- Spécifie si les données à marshaler doivent être transmises au processus client, le cas courant, ou être écrites dans un tableau global, où elles peuvent être récupérées par plusieurs clients.  
+ Spécifie si les données doivent être marshalées doit être transmis au processus client, le cas par défaut, ou écrites sur une table globale, où il peut être récupéré par plusieurs clients.  
   
-## Valeur de retour  
- S\_OK  
- Le pointeur d'interface a été marshalé avec succès.  
+## <a name="return-value"></a>Valeur de retour  
+ S_OK  
+ Le pointeur d’interface a été correctement marshalé.  
   
- E\_NOINTERFACE  
- L'interface spécifiée n'est pas prise en charge.  
+ E_NOINTERFACE  
+ L’interface spécifiée n’est pas pris en charge.  
   
- STG\_E\_MEDIUMFULL  
- Le flux est plein.  
+ STG_E_MEDIUMFULL  
+ Le flux de données est plein.  
   
- E\_FAIL  
- Échec de l'opération.  
+ E_FAIL  
+ L'opération a échoué.  
   
-## Configuration requise  
- **En\-tête:** ftm.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** ftm.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [FtmBase, classe](../windows/ftmbase-class.md)

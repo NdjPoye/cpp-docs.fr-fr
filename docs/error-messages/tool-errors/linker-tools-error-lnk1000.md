@@ -1,31 +1,29 @@
 ---
-title: "Erreur des outils &#201;diteur de liens LNK1000 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1000"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1000"
+title: "LNK1000 d’erreur des outils Éditeur de liens | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1000
+dev_langs: C++
+helpviewer_keywords: LNK1000
 ms.assetid: 86421b9a-460a-4285-8dce-9b8257d78122
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9c1cc88fa7e604dd1676634bb02bbe5a6dd63be0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Erreur des outils &#201;diteur de liens LNK1000
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-erreur inconnue ; consultez la documentation du support technique  
+# <a name="linker-tools-error-lnk1000"></a>Erreur des outils Éditeur de liens LNK1000
+Erreur inconnue ; consultez la documentation pour les options de support technique  
   
- Notez les circonstances de l'erreur, essayez de cerner le problème et de créer un exemple de test reproductible, puis consultez `Microsoft Product Support Services`.  Pour plus d'informations sur comment élucider et reporter ces erreurs, consultez [http:\/\/support.microsoft.com\/default.aspx?scid\=kb;en\-us;134650](http://support.microsoft.com/default.aspx?scid=kb;en-us;134650).  
+ Notez les circonstances de l’erreur, essayez d’isoler le problème et de créer un cas de test reproductible, puis contactez `Microsoft Product Support Services`. Pour plus d’informations sur la façon d’examiner et de signaler ces erreurs, consultez [http://support.microsoft.com/default.aspx?scid=kb;en-us;134650](http://support.microsoft.com/default.aspx?scid=kb;en-us;134650).  
   
- Cette erreur peut être générée si vous mélangez des fichiers d'en\-tête standard \(par exemple, dos.h\) avec vos propres fichiers.  Incluez \(`#include`\) d'abord les fichiers d'en\-tête standard, puis vos propres fichiers d'en\-tête.
+ Vous pouvez obtenir cette erreur si vous combinez des fichiers d’en-tête standard (par exemple, dos.h) et vos propres fichiers. `#include`les en-têtes standard en premier lieu, suivi par vos propres fichiers d’en-tête.

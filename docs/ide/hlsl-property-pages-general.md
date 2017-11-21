@@ -1,70 +1,70 @@
 ---
-title: "Pages de propri&#233;t&#233;s HLSL&#160;: G&#233;n&#233;ral | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.FXCompilerTool.ShaderModel"
-  - "VC.Project.FXCompilerTool.PreprocessorDefinitions"
-  - "VC.Project.FXCompilerTool.ShaderType"
-  - "VC.Project.FXCompilerTool.EnableDebuggingInformation"
-  - "VC.Project.FXCompilerTool.AdditionalIncludeDirectories"
-  - "VC.Project.FXCompilerTool.DisableOptimizations"
-  - "VC.Project.FXCompilerTool.EntryPointName"
-dev_langs: 
-  - "C++"
+title: "Pages de propriétés HLSL : Général | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.FXCompilerTool.ShaderModel
+- VC.Project.FXCompilerTool.PreprocessorDefinitions
+- VC.Project.FXCompilerTool.ShaderType
+- VC.Project.FXCompilerTool.EnableDebuggingInformation
+- VC.Project.FXCompilerTool.AdditionalIncludeDirectories
+- VC.Project.FXCompilerTool.DisableOptimizations
+- VC.Project.FXCompilerTool.EntryPointName
+dev_langs: C++
 ms.assetid: 0e02f2a6-f123-43da-b04b-a0719a7c2b03
-caps.latest.revision: 8
-author: "BrianPeek"
-ms.author: "brpeek"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c8c4ad3e504ec9c57a9c0a99d69aeda624407d5f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Pages de propri&#233;t&#233;s HLSL&#160;: G&#233;n&#233;ral
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Pour configurer les propriétés suivantes du compilateur de HLSL \(fxc.exe\), utilisez sa page de propriétés **Général** .  Pour plus d'informations sur l'accès à la page de propriétés **Général** dans le dossier de HLSL, consultez [Comment : spécifier des propriétés de projet avec des pages de propriétés](../misc/how-to-specify-project-properties-with-property-pages.md).  
+# <a name="hlsl-property-pages-general"></a>Pages de propriétés HLSL : Général
+Pour configurer les propriétés suivantes du compilateur HLSL (fxc.exe), utilisez son **général** page de propriétés. Pour plus d’informations sur l’accès à la **général** page de propriétés dans le dossier HLSL, consultez [utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
   
-## Liste UIElement  
- **Répertoires Include supplémentaires**  
- Ajoute un ou plusieurs dossiers au chemin d'accès Include.  Points\-virgules d'utilisation pour séparer les dossiers.  
+## <a name="uielement-list"></a>Liste UIElement  
+ **Autres répertoires Include**  
+ Ajoute un ou plusieurs répertoires pour le chemin d’accès include. Utilisez des points-virgules pour séparer les répertoires.  
   
- Cette propriété correspond à l'argument de ligne de commande des **\/I\[path\]** .  
+ Cette propriété correspond à la **/I [path]** argument de ligne de commande.  
   
- **Nom d'Entrée**  
- Spécifie le point d'entrée pour le shader.  Par défaut, la valeur est **Principal**.  
+ **Nom de point d’entrée**  
+ Spécifie le point d’entrée pour le nuanceur. Par défaut, la valeur est **principal**.  
   
- Cette propriété correspond à l'argument de ligne de commande des **\/E\[name\]** .  
+ Cette propriété correspond à la **/E [nom]** argument de ligne de commande.  
   
- **Désactiver des optimisations**  
- **Oui \(\/Od\)** pour désactiver des optimisations ; sinon, **Non**.  Par défaut, la valeur est **Oui \(\/Od\)** pour les paramètres et **NonDéboguer** pour les paramètres **Version finale** .  
+ **Désactiver les optimisations**  
+ **Oui (/ Od)** pour désactiver les optimisations ; sinon, **non**. Par défaut, la valeur est **Oui (/ Od)** pour **déboguer** configurations et **non** pour **version** configurations.  
   
- L'argument de ligne de commande des **\/Od** au compilateur de HLSL applique implicitement l'argument de ligne de commande des **\/Gfp**, mais sortie ne peut pas être identique à la sortie qui est produite lors de le passage des arguments de ligne de commande des **\/Od** et d' **\/Gfp** explicitement.  
+ Le **/Od** un argument de ligne de commande du compilateur HLSL applique implicitement la **/GFP, même** argument de ligne de commande, mais une sortie ne pas être identique à la sortie qui est généré en passant à la fois le **/Od**  et **/GFP, même** des arguments de ligne de commande explicitement.  
   
- **Activez les informations de débogage**  
- **Oui \(\/Zi\)** pour activer les informations de débogage ; sinon, **Non**.  Par défaut, la valeur est **Oui \(\/Zi\)** pour les paramètres et **NonDéboguer** pour les paramètres **Version finale** .  
+ **Activer les informations de débogage**  
+ **Oui (/ Zi)** pour activer les informations de débogage ; sinon, **non**. Par défaut, la valeur est **Oui (/ Zi)** pour **déboguer** configurations et **non** pour **version** configurations.  
   
  **Type de nuanceur**  
- Spécifie le genre de shader.  Les différents types de shaders implémentent les différentes parties du pipeline de graphiques.  Certains types de shaders sont uniquement disponibles dans les modèles shaders plus récents \(spécifiés par la propriété **Modèle de nuanceur** \) pour l'exemple, shaders de calcul a été introduit dans le model\) 5. de shader.  
+ Spécifie le type de nuanceur. Différents types de nuanceurs implémentent différentes parties du pipeline graphique. Certains types de nuanceurs sont uniquement disponibles dans les modèles de nuanceur les plus récentes (qui sont spécifié par le **Shader Model** propriété) : par exemple, calculer les nuanceurs ont été introduites dans le modèle de nuanceur 5.  
   
- Cette propriété correspond à la partie d' **\[type\]** de l'argument de ligne de commande des **\/T \[type\]\_\[model\]** au compilateur de HLSL.  La propriété **Modèles shaders** spécifie la partie d' **\[model\]** de l'argument.  
+ Cette propriété correspond à la **[type]** partie de la **/T [type] _ [modèle]** des arguments de ligne de commande du compilateur HLSL. Le **modèles de nuanceur** propriété spécifie le **[modèle]** partie de l’argument.  
   
  **Modèle de nuanceur**  
- Spécifie le modèle de nuanceur.  Les différents modèles shaders ont des fonctions.  En général une publication shadère plus récente de modèles est développée des fonctions mais requiert un matériel vidéo plus récent d'exécuter du code shader.  Certains types de shaders \(spécifiés par la propriété **Type de nuanceur** \) sont uniquement disponibles dans un shader plus récent modèle\- pour l'exemple, shaders de calcul a été introduit dans le model\) 5. de shader.  
+ Spécifie le modèle de nuanceur. Modèles de nuanceur différentes ont des fonctions différentes. En général, plus les modèles de nuanceur offrent des fonctionnalités étendues, mais nécessitent plus moderne matériel graphique pour exécuter le code du nuanceur. Certains types de nuanceurs (qui sont spécifié par le **Type de nuanceur** propriété) sont uniquement disponibles dans les modèles de nuanceur les plus récentes, de calcul, par exemple, les nuanceurs ont été introduites dans le modèle de nuanceur 5.  
   
- Cette propriété correspond à la partie d' **\[model\]** de l'argument de ligne de commande des **\/T \[type\]\_\[model\]** au compilateur de HLSL.  La propriété **Type de nuanceur** spécifie la partie d' **\[type\]** de l'argument.  
+ Cette propriété correspond à la **[modèle]** partie de la **/T [type] _ [modèle]** des arguments de ligne de commande du compilateur HLSL. Le **Type de nuanceur** propriété spécifie le **[type]** partie de l’argument.  
   
  **Définitions de préprocesseur**  
- Ajoute une ou plusieurs définitions de symbole de préprocesseur pour appliquer au fichier de code source de HLSL.  Points\-virgules d'utilisation pour séparer les définitions de symbole.  
+ Ajoute une ou plusieurs définitions de symbole de préprocesseur à appliquer au fichier de code source HLSL. Utilisez des points-virgules pour séparer les définitions de symbole.  
   
- Cette propriété correspond à l'argument de ligne de commande des **\/D \[definitions\]** au compilateur de HLSL.  
+ Cette propriété correspond à la **/D [définitions]** des arguments de ligne de commande du compilateur HLSL.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Pages de propriétés HLSL](../ide/hlsl-property-pages.md)   
- [Pages de propriétés HLSL : Avancé](../ide/hlsl-property-pages-advanced.md)   
- [Pages de propriétés HLSL : fichiers de sortie](../ide/hlsl-property-pages-output-files.md)
+ [Pages de propriétés HLSL : avancé](../ide/hlsl-property-pages-advanced.md)   
+ [HLSL, page de propriétés : fichiers de sortie](../ide/hlsl-property-pages-output-files.md)

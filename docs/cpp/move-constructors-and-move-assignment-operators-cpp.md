@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- move constructor
+dev_langs: C++
+helpviewer_keywords: move constructor
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 07debd120c7757c049d1e3d23dfe1bb065a3cc17
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 62008713d096825c7fa9dca5b1542122909f0939
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Constructeurs de déplacement et opérateurs d'assignation de déplacement (C++)
 Cette rubrique explique comment écrire un *constructeur de déplacement* et un opérateur d’assignation de déplacement pour une classe C++. Un constructeur de déplacement vous permet d'implémenter une sémantique de déplacement, qui peut améliorer considérablement les performances de vos applications. Pour plus d’informations sur la sémantique de déplacement, consultez [déclarateur de référence Rvalue : & &](../cpp/rvalue-reference-declarator-amp-amp.md).  

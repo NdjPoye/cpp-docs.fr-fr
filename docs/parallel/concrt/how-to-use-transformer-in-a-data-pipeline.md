@@ -1,36 +1,35 @@
 ---
-title: "Comment&#160;: utiliser la classe transformer dans un pipeline de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "transformer, classe, exemple"
-  - "pipelines de données, utiliser transformer [Runtime d’accès concurrentiel]"
-  - "utiliser transformer dans des pipelines de données [Runtime d’accès concurrentiel]"
+title: "Comment : utiliser la classe transformer dans un Pipeline de données | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- transformer class, example
+- data pipelines, using transformer [Concurrency Runtime]
+- using transformer in data pipelines [Concurrency Runtime]
 ms.assetid: ca49cb3f-4dab-4b09-a9c9-d3a109ae4c29
-caps.latest.revision: 16
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 97591a66f7499e136072d47e2a7c5b87870a4702
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: utiliser la classe transformer dans un pipeline de donn&#233;es
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique contient un exemple de base qui montre comment utiliser la classe [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) dans un pipeline de données.  Pour obtenir un exemple plus complet qui utilise un pipeline de données pour effectuer le traitement d'image, consultez [Procédure pas à pas : création d'un réseau de traitement d'image](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).  
+# <a name="how-to-use-transformer-in-a-data-pipeline"></a>Comment : utiliser la classe transformer dans un pipeline de données
+Cette rubrique contient un exemple de base qui montre comment utiliser le [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) classe dans un pipeline de données. Pour obtenir un exemple plus complet qui utilise un pipeline de données pour effectuer le traitement d’image, consultez [procédure pas à pas : création d’un réseau de traitement d’Image](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).  
   
- Le *traitement « pipeline » de données* est un modèle commun dans la programmation simultanée.  Un pipeline de données se compose d'une série d'étapes, où chaque étape exécute un travail puis passe le résultat de ce travail à l'étape suivante.  La classe `transformer` est un composant clé dans les pipelines de données car elle reçoit une valeur d'entrée, effectue un travail sur cette valeur, puis produit un résultat utilisable par un autre composant.  
+ *Traitement « pipeline » des données* est un modèle commun dans la programmation simultanée. Un pipeline de données se compose d’une série d’étapes, où chaque étape exécute une tâche et puis passe le résultat de ce travail à l’étape suivante. La `transformer` classe un rôle essentiel dans les données de pipelines car elle reçoit une valeur d’entrée, effectue le travail sur cette valeur, puis produit un résultat pour un autre composant à utiliser.  
   
-## Exemple  
- Cet exemple utilise le pipeline de données suivant pour exécuter une série de transformations étant donné une valeur d'entrée initiale :  
+## <a name="example"></a>Exemple  
+ Cet exemple utilise le pipeline de données suivantes pour effectuer une série de transformations avec une valeur d’entrée initiale :  
   
 1.  La première étape calcule la valeur absolue de son entrée.  
   
@@ -42,23 +41,28 @@ Cette rubrique contient un exemple de base qui montre comment utiliser la classe
   
 5.  La cinquième étape écrit le résultat final dans un tampon de messages.  
   
- Pour finir, l'exemple imprime le résultat du pipeline sur la console.  
+ Enfin, l’exemple imprime le résultat du pipeline sur la console.  
   
- [!code-cpp[concrt-data-pipeline#1](../../parallel/concrt/codesnippet/CPP/how-to-use-transformer-in-a-data-pipeline_1.cpp)]  
+ [!code-cpp[concrt-data-pipeline#1](../../parallel/concrt/codesnippet/cpp/how-to-use-transformer-in-a-data-pipeline_1.cpp)]  
   
  Cet exemple génère la sortie suivante :  
   
-  **Le résultat est \-42.** Il est courant pour une étape dans un pipeline de données de générer une valeur dont le type diffère de sa valeur d'entrée.  Dans cet exemple, la deuxième étape prend une valeur de type `int` comme entrée et produit la racine carrée de cette valeur \( `double`\) comme sortie.  
+```Output  
+The result is -42.  
+```  
+  
+ Il est courant pour une étape dans un pipeline de données pour générer une valeur dont le type diffère de sa valeur d’entrée. Dans cet exemple, la deuxième étape prend une valeur de type `int` comme entrée et produit la racine carrée de cette valeur (un `double`) comme sortie.  
   
 > [!NOTE]
->  Le pipeline de données de cet exemple est fourni à titre d'illustration.  Étant donné que chaque opération de transformation effectue peu de travail, la surcharge requise pour effectuer le passage de message peut l'emporter sur les avantages que procure l'utilisation d'un pipeline de données.  
+>  Dans cet exemple, le pipeline de données est à titre d’illustration. Étant donné que chaque opération de transformation effectue peu de travail, la surcharge requise pour effectuer la transmission de messages peut annuler les avantages de l’utilisation d’un pipeline de données.  
   
-## Compilation du code  
- Copiez l'exemple de code et collez\-le dans un projet Visual Studio , ou collez\-le dans un fichier nommé `data-pipeline.cpp` puis exécutez la commande suivante dans une fenêtre d'invite de commandes Visual Studio.  
+## <a name="compiling-the-code"></a>Compilation du code  
+ Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `data-pipeline.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.  
   
- **cl.exe \/EHsc data\-pipeline.cpp**  
+ **CL.exe /EHsc data-pipeline.cpp**  
   
-## Voir aussi  
- [Bibliothèque d'agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Bibliothèque d’agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md)   
  [Blocs de messages asynchrones](../../parallel/concrt/asynchronous-message-blocks.md)   
- [Procédure pas à pas : création d'un réseau de traitement d'image](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
+ [Procédure pas à pas : création d’un réseau de traitement d’image](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
+

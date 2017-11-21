@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationPoint::GetAnimationVariableList
 - AFXANIMATIONCONTROLLER/CAnimationPoint::m_xValue
 - AFXANIMATIONCONTROLLER/CAnimationPoint::m_yValue
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationPoint [MFC], CAnimationPoint
 - CAnimationPoint [MFC], AddTransition
@@ -35,16 +33,15 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: c0710977a8f2c481ca90b2212359f0376a339373
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 81e4221ca2aa9ee653d391d9808666628010a325
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint, classe
 Implémente les fonctionnalités d'un point dont les coordonnées peuvent être animées.  
@@ -280,4 +277,3 @@ void SetDefaultValue(const POINT& ptDefault);
   
 ## <a name="see-also"></a>Voir aussi  
  [Classes](../../mfc/reference/mfc-classes.md)
-

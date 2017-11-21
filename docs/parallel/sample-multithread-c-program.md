@@ -1,31 +1,30 @@
 ---
-title: "Exemple de programme multithread en langage&#160;C | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Exemple de programme multithread en langage C | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4e4906924f3a572f2e8a00d226acdb3da7097cdc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Exemple de programme multithread en langage&#160;C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Bounce.c est un exemple de programme multithread qui crée un thread chaque fois que la lettre **a** ou **A** est saisie.  Chaque thread affiche un « sourire » de couleur différente autour de l'écran.  Il est possible de créer jusqu'à 32 threads.  La fin normale du programme intervient avec la saisie de la lettre `q` ou **Q**.  Pour plus d'informations sur la compilation et la liaison de Bounce.c, consultez [Compilation et liaison de programmes multithread](../parallel/compiling-and-linking-multithread-programs.md).  
+# <a name="sample-multithread-c-program"></a>Exemple de programme multithread en langage C
+Bounce.c est un exemple de programme multithread qui crée un thread chaque fois que la lettre **un** ou **A** est typé. Chaque thread rebondit un visage heureux d’une couleur différente autour de l’écran. Jusqu'à 32 threads peuvent être créés. Une fin normale du programme se produit lorsque `q` ou **Q** est typé. Pour plus d’informations sur la compilation et liaison de Bounce.c, consultez [compilation et liaison de programmes Multithread](../parallel/compiling-and-linking-multithread-programs.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // sample_multithread_c_program.c  
@@ -212,12 +211,12 @@ void ClearScreen( void )
 }  
 ```  
   
-### Entrée  
+### <a name="input"></a>Entrée  
   
 ```  
 a  
 q  
 ```  
   
-## Voir aussi  
- [Multithreading à l'aide de C et de Win32](../parallel/multithreading-with-c-and-win32.md)
+## <a name="see-also"></a>Voir aussi  
+ [Multithreading à l’aide de C et de Win32](../parallel/multithreading-with-c-and-win32.md)

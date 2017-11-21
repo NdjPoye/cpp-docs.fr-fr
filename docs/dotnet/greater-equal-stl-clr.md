@@ -1,32 +1,30 @@
 ---
-title: "greater_equal (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::greater_equal"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "greater_equal (fonction) (STL/CLR)"
+title: greater_equal (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::greater_equal
+dev_langs: C++
+helpviewer_keywords: greater_equal function [STL/CLR]
 ms.assetid: 4d4d8301-72dd-4a06-a652-5237e1e72a88
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7fbd6f2999adac0c4bb9a8d7af166caa69848efa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# greater_equal (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe du modèle décrit un foncteur qui, lorsqu'il est appelé, renvoie vrai uniquement si le premier argument est supérieur ou égal au second.  Vous l'utilisez pour spécifier un objet fonction au niveau de son type d'argument.  
+# <a name="greaterequal-stlclr"></a>greater_equal (STL/CLR)
+La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourne true uniquement si le premier argument est supérieur ou égal au second. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Arg>  
@@ -49,34 +47,34 @@ public:
     };  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  Arg  
- Type des arguments.  
+ Le type des arguments.  
   
-## Fonctions membres  
+## <a name="member-functions"></a>Fonctions membres  
   
-|Définition de type|Description|  
-|------------------------|-----------------|  
-|delegate\_type|Le type du délégué générique.|  
-|first\_argument\_type|Le type du premier argument de foncteur|  
-|result\_type|Le type du résultat du foncteur.|  
-|second\_argument\_type|Le type du deuxième argument de foncteur.|  
+|Définition de types|Description|  
+|---------------------|-----------------|  
+|delegate_type|Le type du délégué générique.|  
+|first_argument_type|Le type du premier argument functor.|  
+|RESULT_TYPE|Le type du résultat functor.|  
+|second_argument_type|Le type du second argument functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|greater\_equal|Construit le foncteur.|  
+|greater_equal|Construit le foncteur.|  
   
 |Opérateur|Description|  
-|---------------|-----------------|  
-|operator\(\)|Calcule la fonction souhaitée.|  
-|operator delegate\_type^|Convertit le foncteur en un délégué.|  
+|--------------|-----------------|  
+|operator()|Calcule la fonction de votre choix.|  
+|opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
   
-## Notes  
- La classe du modèle décrit un foncteur à deux arguments.  Elle définit l'opérateur membre `operator()` afin que, lorsque l'objet est appelé en tant que fonction, il renvoie true uniquement si le premier argument est supérieur ou égal au second.  
+## <a name="remarks"></a>Remarques  
+ La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, il retourne true uniquement si le premier argument est supérieur ou égal au second.  
   
- Vous pouvez également transmettre l'objet comme argument de fonction dont le type est `delegate_type^` et il sera converti de façon appropriée.  
+ Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_greater_equal.cpp   
@@ -116,13 +114,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **4 4**  
- **1 0**   
-## Configuration requise  
- **En\-tête :** \<cliext\/functional\>  
+```Output  
+4 3  
+4 4  
+1 0  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/fonctionnel >  
   
-## Voir aussi  
- [less](../dotnet/less-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [less (STL/CLR)](../dotnet/less-stl-clr.md)

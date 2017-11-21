@@ -1,52 +1,51 @@
 ---
-title: "__int2c | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__int2c"
-  - "__int2c_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "int2c, intrinsèque"
-  - "int 2c, instruction"
-  - "__int2c, intrinsèque"
+title: __int2c | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __int2c
+- __int2c_cpp
+dev_langs: C++
+helpviewer_keywords:
+- int2c intrinsic
+- int 2c instruction
+- __int2c intrinsic
 ms.assetid: aa20ff30-adef-42bb-8577-8010f3122f8e
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4641fbe8c7424708d6af9c6e8bae6e29355404ae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# __int2c
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="int2c"></a>__int2c
+**Section spécifique à Microsoft**  
   
- Génère des instructions d' `int 2c` , qui déclenche l'interruption d' `2c` .  
+ Génère le `int 2c` instruction, ce qui déclenche le `2c` interruption.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void __int2c(void);  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__int2c`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## détail de FIN Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

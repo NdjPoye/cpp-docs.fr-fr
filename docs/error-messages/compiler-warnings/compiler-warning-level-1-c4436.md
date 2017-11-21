@@ -1,41 +1,41 @@
 ---
-title: "Avertissement du compilateur (niveau&#160;1) C4436 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: Compilateur avertissement (niveau 1) C4436 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-caps.latest.revision: 2
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e727159cbd0f87d8ae01813b7ac2a0ed57362b08
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau&#160;1) C4436
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-le dynamic\_cast de base virtuelle « class1 » à « class2 » dans le constructeur ou le destructeur peut échouer avec un objet partiellement construit     Compiler avec \/vd2 ou définir « class2 » avec le vtordisp de \#pragma \(2\) activé  
+# <a name="compiler-warning-level-1-c4436"></a>Avertissement du compilateur (niveau 1) C4436
+dynamic_cast de la base virtuelle 'classe1' en 'classe2' dans le constructeur ou un destructeur peut échouer avec un objet partiellement construit compilation avec/vd2 ou définir 'classe2' avec #pragma vtordisp (2) système en vigueur  
   
- Le compilateur a rencontré une opération de `dynamic_cast` avec les caractéristiques suivantes.  
+ Le compilateur a rencontré un `dynamic_cast` opération avec les caractéristiques suivantes.  
   
--   Le lancement consiste en un pointeur de base de la classe converti en un pointeur dérivé de la classe.  
+-   La conversion est d’un pointeur de classe de base à un pointeur de la classe dérivée.  
   
 -   La classe dérivée hérite pratiquement de la classe de base.  
   
--   La classe dérivée n'a aucun champ de `vtordisp` pour la base virtuelle.  
+-   La classe dérivée n’a pas un `vtordisp` pour la base virtuelle.  
   
--   La conversion se trouve dans un constructeur ou un destructeur de la classe dérivée, ou d'une classe qui hérite davantage de la classe dérivée.  
+-   Le cast se trouvent dans un constructeur ou un destructeur de la classe dérivée, ou une classe qui concourent hérite de la classe dérivée.  
   
- L'avertissement indique que le `dynamic_cast` peut ne pas s'exécuter correctement, s'il fonctionne sur un objet construit partiellement.  Cela se produit si le constructeur\/destructeur dérivé opère sur le type de sous\-objet d'un certain autre objet dérivé.  Si la classe dérivée nommée dans l'avertissement n'est jamais plus dérivée, l'avertissement peut être ignoré.  
+ L’avertissement indique la `dynamic_cast` peuvent ne pas fonctionner correctement, si elle s’exécute dans un objet partiellement construit.  Cela se produit si le constructeur/destructeur dérivé est d’utiliser un sous-objet d’un objet dérivé ultérieure.  Si la classe dérivée est nommée dans l’avertissement n’est jamais plue dérivé, l’avertissement peut être ignoré.  
   
-## Exemple  
- L'échantillon suivant génère C4436 et illustre le problème de génération de code qui résulte du champ manquant `vtordisp`.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C4436 et illustre le problème de génération de code qui découle manquants `vtordisp` champ.  
   
 ```cpp  
 // C4436.cpp  
@@ -77,7 +77,7 @@ int main()
 }  
 ```  
   
-## Voir aussi  
- [dynamic\_cast, opérateur](../../cpp/dynamic-cast-operator.md)   
+## <a name="see-also"></a>Voir aussi  
+ [dynamic_cast, opérateur](../../cpp/dynamic-cast-operator.md)   
  [vtordisp](../../preprocessor/vtordisp.md)   
- [Avertissement du compilateur \(niveau 4\) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)
+ [Avertissement du compilateur (niveau 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)

@@ -1,50 +1,49 @@
 ---
-title: "/SAFESEH (L&#39;image est dot&#233;e de gestionnaires d&#39;exceptions s&#233;curis&#233;s) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/SAFESEH"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SAFESEH (option de l'éditeur de liens)"
-  - "-SAFESEH (option de l'éditeur de liens)"
-  - "SAFESEH (option de l'éditeur de liens)"
+title: "-SAFESEH (Image a des gestionnaires d’exceptions sécurisés) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /SAFESEH
+dev_langs: C++
+helpviewer_keywords:
+- /SAFESEH linker option
+- -SAFESEH linker option
+- SAFESEH linker option
 ms.assetid: 7722ff99-b833-4c65-a855-aaca902ffcb7
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 430991838245e258a8f1b4bffe16a2f559019901
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /SAFESEH (L&#39;image est dot&#233;e de gestionnaires d&#39;exceptions s&#233;curis&#233;s)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (L'image est dotée de gestionnaires d'exceptions sécurisés)
 ```  
 /SAFESEH[:NO]  
 ```  
   
- Lorsque **\/SAFESEH** est spécifié, l'éditeur de liens produit uniquement une image s'il peut également produire une table des gestionnaires d'exceptions sécurisés de l'image.  Cette table indique au système d'exploitation les gestionnaires d'exceptions valides pour l'image.  
+ Lorsque **/SAFESEH** est spécifié, l’éditeur de liens génère uniquement une image si elle peut également produire une table de gestionnaires d’exceptions sécurisés de l’image. Ce tableau indique le système d’exploitation les gestionnaires d’exceptions sont valides pour l’image.  
   
- **\/SAFESEH** n'est valide que lors de la liaison de cibles x86.  L'option **\/SAFESEH** n'est pas prise en charge pour les plates\-formes dont les gestionnaires d'exceptions sont déjà définis.  Par exemple, sur [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] et ARM, tous les gestionnaires d'exceptions sont indiqués dans le PDATA.  ML64.exe prend en charge l'ajoute d'annotations qui émettent des informations SEH \(XDATA et PDATA\) dans l'image, ce qui vous permet de procéder au déroulement à l'aide de fonctions ml64.  Pour plus d'informations, consultez [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
+ **/SAFESEH** est valide uniquement lors de la liaison pour x86 cibles. **/SAFESEH** n’est pas prise en charge pour les plateformes qui ont déjà les gestionnaires d’exceptions. Par exemple, sur [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] et ARM, tous les gestionnaires sont indiqués dans le PDATA d’exception. Ml64.exe est prise en charge pour l’ajout d’annotations qui émettent des informations SEH (XDATA et PDATA) dans l’image, ce qui vous permet de déroulement via les fonctions ml64. Consultez [MASM pour x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) pour plus d’informations.  
   
- Si **\/SAFESEH** n'est pas spécifié, l'éditeur de liens produit une image avec une table des gestionnaires d'exceptions sécurisés si tous les modules sont compatibles avec la fonction de gestion sécurisée des exceptions.  Si des modules n'étaient pas compatibles avec la fonction de gestion sécurisée des exceptions, l'image résultante ne contient pas de table des gestionnaires d'exceptions sécurisés.  Si [\/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) spécifie WINDOWSCE ou l'une des options EFI\_\*, l'éditeur de liens ne tente pas de produire une image avec une table des gestionnaires d'exceptions sécurisés, puisque aucun de ces sous\-systèmes n'est en mesure d'utiliser les informations.  
+ Si **/SAFESEH** n’est pas spécifié, l’éditeur de liens génère une image avec une table de gestionnaires d’exceptions sécurisés si tous les modules sont compatibles avec la fonctionnalité de gestion sécurisée des exceptions. Si tous les modules ne sont pas compatibles avec la fonctionnalité de gestion sécurisée des exceptions, l’image résultante ne contiendra pas une table de gestionnaires d’exceptions sécurisés. Si [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) spécifie WINDOWSCE ou l’une des options EFI_ *, l’éditeur de liens ne tente pas de produire une image avec une table de gestionnaires d’exceptions sécurisés, car aucun de ces sous-systèmes peuvent utiliser les informations.  
   
- Si **\/SAFESEH:NO** est spécifié, l'éditeur de liens ne produit d'image avec une table des gestionnaires d'exceptions sécurisés, même si tous les modules sont compatibles avec la fonction de gestion sécurisée des exceptions.  
+ Si **/SAFESEH : no** est spécifié, l’éditeur de liens ne produira pas une image avec une table de gestionnaires d’exceptions sécurisés même si tous les modules sont compatibles avec la fonctionnalité de gestion sécurisée des exceptions.  
   
- La cause la plus fréquente de l'impossibilité pour l'éditeur de liens de produire une image est l'incompatibilité d'un ou de plusieurs des fichiers d'entrée \(modules\) à l'éditeur de liens avec la fonction de gestion sécurisée des exceptions.  La non\-compatibilité d'un module avec des gestionnaires d'exceptions sécurisés est souvent due à sa création par un compilateur d'une version précédente de Visual C\+\+.  
+ La raison la plus courante de l’éditeur de liens ne pas pouvoir produire une image est, car un ou plusieurs des fichiers d’entrée (modules) à l’éditeur de liens n’étaient pas compatible avec la fonctionnalité de gestionnaires d’exceptions sécurisés. Une raison courante d’un module ne soit ne pas compatible avec les gestionnaires d’exceptions sécurisés est, car il a été créé avec un compilateur d’une version antérieure de Visual C++.  
   
- Vous pouvez également enregistrer une fonction en tant que gestionnaire d'exceptions structuré à l'aide de [.SAFESEH](../../assembler/masm/dot-safeseh.md).  
+ Vous pouvez également enregistrer une fonction en tant que gestionnaire d’exceptions structuré à l’aide de [. SAFESEH](../../assembler/masm/dot-safeseh.md).  
   
- Dans , il n'est pas possible de marquer un fichier binaire existant comme ayant des gestionnaires d'exceptions sécurisés \(ou aucun gestionnaire d'exceptions\) ; les informations sur la gestion sécurisée des exceptions doivent être ajoutées au moment de la génération.  
+ Il n’est pas possible de marquer un fichier binaire comme ayant des gestionnaires d’exceptions sécurisés (ou aucun gestionnaire d’exceptions) ; plus d’informations sur la gestion des exceptions sécurisés doivent être ajoutées au moment de la génération.  
   
- L'éditeur de liens ne peut générer une table des gestionnaires d'exceptions sécurisés que si l'application utilise la bibliothèque Microsoft C Runtime.  Si vous créez un lien avec [\/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) et souhaitez obtenir une table des gestionnaires d'exceptions sécurisés, vous devez fournir une structure de configuration de charge \(comme celle du fichier source CRT loadcfg.c\) qui contient toutes les entrées définies pour Visual C\+\+.  Par exemple :  
+ Capacité de l’éditeur de liens pour générer une table de gestionnaires d’exceptions sécurisés dépend de l’application à l’aide de la bibliothèque runtime C. Si vous liez avec [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) et que vous souhaitez créer une table de gestionnaires d’exceptions sécurisés, vous devez fournir une structure de configuration de charge (par exemple, vous trouverez dans le fichier source CRT loadcfg.c) qui contient toutes les entrées définies pour Visual C++. Exemple :  
   
 ```  
 #include <windows.h>  
@@ -105,20 +104,20 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
 };  
 ```  
   
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Définition des propriétés de projets Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Sélectionnez le dossier **Éditeur de liens**.  
+2.  Sélectionnez le **l’éditeur de liens** dossier.  
   
-3.  Sélectionnez la page de propriétés **Ligne de commande**.  
+3.  Sélectionnez le **ligne de commande** page de propriétés.  
   
-4.  Entrez l'option dans la zone **Options supplémentaires**.  
+4.  Entrez l’option dans le **des Options supplémentaires** boîte.  
   
-### Pour définir cette option de l'éditeur de liens par programme  
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)

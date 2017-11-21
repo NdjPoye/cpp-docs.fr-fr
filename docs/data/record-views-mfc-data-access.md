@@ -1,37 +1,36 @@
 ---
-title: "Vues d&#39;enregistrements (Acc&#232;s aux donn&#233;es MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DAO (C++), vues des enregistrements"
-  - "bases de données (C++), vues des enregistrements"
-  - "formulaires (C++), tâches d'accès aux données"
-  - "MFC (C++), vues des enregistrements"
-  - "ODBC (recordsets C++), vues des enregistrements"
-  - "vues des enregistrements (C++)"
+title: Enregistrer des vues (MFC Data Access) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], record views
+- ODBC recordsets [C++], record views
+- databases [C++], record views
+- record views [C++]
+- forms [C++], data access tasks
 ms.assetid: 562122d9-01d8-4284-acf6-ea109ab0408d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 38c5d65e89aa4fb76ff96fa82cd52e42475e2353
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Vues d&#39;enregistrements (Acc&#232;s aux donn&#233;es MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cette section s'applique uniquement aux classes DAO et ODBC MFC.  Pour plus d'informations sur les vues d'enregistrements OLE DB, consultez [COleDBRecordView](../mfc/reference/coledbrecordview-class.md) et [Utilisation des vues de l'enregistrement OLE DB](../data/oledb/using-ole-db-record-views.md).  
+# <a name="record-views--mfc-data-access"></a>Vues d'enregistrements (Accès aux données MFC)
+Cette section s’applique uniquement aux classes ODBC MFC. Pour plus d’informations sur les vues des enregistrements OLE DB, consultez [COleDBRecordView](../mfc/reference/coledbrecordview-class.md) et [à l’aide des vues de l’enregistrement OLE DB](../data/oledb/using-ole-db-record-views.md).  
   
- Pour prendre en charge les applications d'accès aux données basées sur formulaire, la bibliothèque de classes fournit les classes [CRecordView](../mfc/reference/crecordview-class.md) et [CDaoRecordView](../mfc/reference/cdaorecordview-class.md).  Une vue d'enregistrement est un objet de vue de formulaire dont les contrôles sont mappés directement aux données membres de champ d'un objet [recordset](../data/odbc/recordset-odbc.md) \(et indirectement aux colonnes correspondantes dans un résultat de requête ou une table sur la source de données\).  Comme leur classe de base [CFormView](../mfc/reference/cformview-class.md), `CRecordView` et `CDaoRecordView` sont basées sur une ressource de modèle de boîte de dialogue.  
+ Pour prendre en charge les applications d’accès aux données de formulaire, la bibliothèque de classes fournit la classe [CRecordView](../mfc/reference/crecordview-class.md). Une vue d’enregistrement est un objet de vue de formulaire dont les contrôles sont mappés directement aux données membres de champ d’un [recordset](../data/odbc/recordset-odbc.md) objet (et indirectement aux colonnes correspondantes dans une table sur la source de données ou le résultat de la requête). Comme sa classe de base [CFormView](../mfc/reference/cformview-class.md), `CRecordView` est basée sur une ressource de modèle de boîte de dialogue.  
   
-## Utilisations des formulaires  
+## <a name="form-uses"></a>Utilisations des formulaires  
  Les formulaires sont utiles pour diverses tâches d'accès aux données :  
   
 -   Saisie de données  
@@ -40,21 +39,21 @@ Cette section s'applique uniquement aux classes DAO et ODBC MFC.  Pour plus d'in
   
 -   Mise à jour des données  
   
-## Informations complémentaires sur les vues d'enregistrements  
- Le contenu de ces rubriques s'applique aux classes ODBC et DAO.  Utilisez `CRecordView` pour ODBC et `CDaoRecordView` pour DAO.  
+## <a name="further-reading-about-record-views"></a>Informations complémentaires sur les vues d'enregistrements  
+ Le contenu de ces rubriques s'applique aux classes ODBC et DAO. Utilisez `CRecordView` pour ODBC et `CDaoRecordView` pour DAO.  
   
- Les rubriques traitées ici sont les suivantes :  
+ Les rubriques traitées ici sont les suivantes :  
   
--   [Fonctionnalités des classes d'affichage des enregistrements](../data/features-of-record-view-classes-mfc-data-access.md)  
+-   [Fonctionnalités des Classes d’affichage de l’enregistrement](../data/features-of-record-view-classes-mfc-data-access.md)  
   
 -   [Échange de données pour les vues des enregistrements](../data/data-exchange-for-record-views-mfc-data-access.md)  
   
--   [Votre rôle dans l'utilisation d'une vue de l'enregistrement](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)  
+-   [Votre rôle dans l’utilisation d’une vue d’enregistrement](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)  
   
--   [Conception et création d'une vue de l'enregistrement](../data/designing-and-creating-a-record-view-mfc-data-access.md)  
+-   [Conception et création d’une vue d’enregistrement](../data/designing-and-creating-a-record-view-mfc-data-access.md)  
   
--   [Utilisation d'une vue de l'enregistrement](../data/using-a-record-view-mfc-data-access.md)  
+-   [À l’aide d’une vue d’enregistrement](../data/using-a-record-view-mfc-data-access.md)  
   
-## Voir aussi  
- [Programmation de l'accès aux données \(MFC\/ATL\)](../data/data-access-programming-mfc-atl.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Programmation (MFC/ATL) d’accès aux données](../data/data-access-programming-mfc-atl.md)   
  [Liste de pilotes ODBC](../data/odbc/odbc-driver-list.md)

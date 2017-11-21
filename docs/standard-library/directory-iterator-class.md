@@ -4,57 +4,50 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
-- directory_iterator
 - filesystem/std::experimental::filesystem::_Directory_iterator::_Directory_iterator
-- filesystem/std::experimental::filesystem::directory_iterator
-- FILESYSTEM/std::experimental::filesystem::directory_iterator::directory_iterator
-- FILESYSTEM/std::experimental::filesystem::directory_iterator::increment
-- FILESYSTEM/std::experimental::filesystem::directory_iterator::operator=
-- FILESYSTEM/std::experimental::filesystem::directory_iterator::operator==
-- FILESYSTEM/std::experimental::filesystem::directory_iterator::operator!=
-- FILESYSTEM/std::experimental::filesystem::directory_iterator::operator*
-- FILESYSTEM/std::experimental::filesystem::directory_iterator::operator->
-- FILESYSTEM/std::experimental::filesystem::directory_iterator::operator++
-dev_langs:
-- C++
+- filesystem/std::experimental::filesystem::directory_iterator::directory_iterator
+- filesystem/std::experimental::filesystem::directory_iterator::increment
+- filesystem/std::experimental::filesystem::directory_iterator::operator=
+- filesystem/std::experimental::filesystem::directory_iterator::operator==
+- filesystem/std::experimental::filesystem::directory_iterator::operator!=
+- filesystem/std::experimental::filesystem::directory_iterator::operator*
+- filesystem/std::experimental::filesystem::directory_iterator::operator-&gt;
+- filesystem/std::experimental::filesystem::directory_iterator::operator++
+dev_langs: C++
 ms.assetid: dca2ecf8-3e69-4644-a83d-705061e10cc8
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4eb80d5309a7749c1374d72be16798dbeea33bdc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+helpviewer_keywords:
+- std::experimental::filesystem::directory_iterator
+- std::experimental::filesystem::_Directory_iterator::_Directory_iterator
+- std::experimental::filesystem::directory_iterator
+- std::experimental::filesystem::directory_iterator::directory_iterator
+- std::experimental::filesystem::directory_iterator::increment
+- std::experimental::filesystem::directory_iterator::operator=
+- std::experimental::filesystem::directory_iterator::operator==
+- std::experimental::filesystem::directory_iterator::operator!=
+- std::experimental::filesystem::directory_iterator::operator*
+- std::experimental::filesystem::directory_iterator::operator-&gt;
+- std::experimental::filesystem::directory_iterator::operator++
+ms.openlocfilehash: 9782cd4853b7b0c1f429f65ec0741148cc1bc241
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="directoryiterator-class"></a>directory_iterator, classe
 Décrit un itérateur d’entrée qui parcourt en séquence les noms de fichiers dans un répertoire. Pour un itérateur X, l’expression *X correspond à un objet de la classe directory_entry qui inclut dans un wrapper le nom de fichier et tout ce qui est connu sur son état.  
   
  La classe stocke un objet de type chemin, appelé ici mydir, qui représente le nom du répertoire à parcourir en séquence, et un objet de type directory_entry appelé myentry, qui représente le nom de fichier actuel dans la séquence du répertoire. Un objet construit par défaut de type directory_entry a un nom de chemin mydir vide et représente l’itérateur de fin de séquence.  
   
- Par exemple, étant donné le répertoire abc avec les entrées def et ghi, le code :  
+ Par exemple, étant donné le répertoire abc avec les entrées def et ghi, le code :  
   
  `for (directory_iterator next(path("abc")), end; next != end; ++next)     visit(next->path());`  
   
@@ -79,7 +72,7 @@ directory_iterator(const directory_iterator&) = default;
 directory_iterator(directory_iterator&&) noexcept = default;  
 ```  
   
- Le premier constructeur produit un itérateur de fin de séquence. Les deuxième et troisième constructeurs stockent pval dans mydir, puis tentent d’ouvrir et lire mydir en tant que répertoire. En cas de réussite, ils stockent le premier nom de fichier du répertoire dans myentry ; dans le cas contraire, ils produisent un itérateur de fin de séquence.  
+ Le premier constructeur produit un itérateur de fin de séquence. Les deuxième et troisième constructeurs stockent pval dans mydir, puis tentent d’ouvrir et lire mydir en tant que répertoire. En cas de réussite, ils stockent le premier nom de fichier du répertoire dans myentry ; dans le cas contraire, ils produisent un itérateur de fin de séquence.  
   
  Les constructeurs par défaut se comporte comme prévu.  
   
@@ -89,7 +82,7 @@ directory_iterator(directory_iterator&&) noexcept = default;
 directory_iterator& increment(error_code& ec) noexcept;  
 ```  
   
- La fonction tente d’accéder au nom de fichier suivant dans le répertoire. En cas de réussite, elle stocke ce nom de fichier dans myentry ; dans le cas contraire, elle génère un itérateur de fin de séquence.  
+ La fonction tente d’accéder au nom de fichier suivant dans le répertoire. En cas de réussite, elle stocke ce nom de fichier dans myentry ; dans le cas contraire, elle génère un itérateur de fin de séquence.  
   
 ## <a name="directoryiteratoroperator"></a>directory_iterator::operator!=  
   
@@ -150,5 +143,4 @@ directory_iterator& operator++(int);
  [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)   
  [\<filesystem>](../standard-library/filesystem.md)   
  [Navigation dans le système de fichiers (C++)](../standard-library/file-system-navigation.md)
-
 

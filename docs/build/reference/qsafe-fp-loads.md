@@ -1,57 +1,57 @@
 ---
-title: "/Qsafe_fp_loads | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: -Qsafe_fp_loads | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 2b2ce52d-ba57-4bd3-a739-47a7f8bfaba9
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f79a73565a78c8972d9d77b809cd77d774b821f1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /Qsafe_fp_loads
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nécessite des instructions de déplacement d'entiers pour les valeurs à virgule flottante et désactive certaines optimisations de charge de virgule flottante.  
+# <a name="qsafefploads"></a>/Qsafe_fp_loads
+Nécessite des instructions de déplacement entier pour les valeurs à virgule flottante et désactive certaines optimisations à virgule flottante de charge.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 /Qsafe_fp_loads  
 ```  
   
-## Notes  
- **\/Qsafe\_fp\_loads** est uniquement disponible dans les compilateurs qui cible x86 ; n'est pas disponible dans les compilateurs qui cible x64 ou ARM.  
+## <a name="remarks"></a>Remarques  
+ **/ Qsafe_fp_loads** est disponible uniquement dans les compilateurs qui ciblent x86 ; il n’est pas disponible dans les compilateurs qui ciblent x64 ou ARM.  
   
- **\/Qsafe\_fp\_loads** force le compilateur a utiliser l'instruction entière de mouvements au lieu de l'instruction à virgule flottante de transfert pour déplacer des données entre la mémoire et les registres MMX.  Cette option désactive également l'optimisation de charge de registre pour les valeurs à virgule flottante qui peuvent être chargées dans les chemins d'accès de contrôle multiples lorsque la valeur peut provoquer une exception lors du chargement—par exemple, la valeur NaN.  
+ **/ Qsafe_fp_loads** inscrit de force le compilateur à utiliser des instructions de déplacement entier au lieu des instructions de déplacement à virgule flottante pour déplacer des données entre la mémoire et MMX. Cette option désactive également le Registre de l’optimisation de charge pour les valeurs à virgule flottante qui peut être chargée dans plusieurs chemins d’accès de contrôle lorsque la valeur peut provoquer une exception lors du chargement, par exemple, une valeur NaN.  
   
- Cette option est substituée par [\/fp:except](../../build/reference/fp-specify-floating-point-behavior.md).  **\/Qsafe\_fp\_loads** spécifie un sous\-ensemble du comportement du compilateur qui est spécifiée par **\/fp:except**.  
+ Cette option est remplacée par [/fp : sauf](../../build/reference/fp-specify-floating-point-behavior.md). **/ Qsafe_fp_loads** spécifie un sous-ensemble du comportement du compilateur spécifié par **/fp : sauf**.  
   
- **\/Qsafe\_fp\_loads** est incompatible avec [\/clr](../../build/reference/clr-common-language-runtime-compilation.md) et [\/fp:fast](../../build/reference/fp-specify-floating-point-behavior.md).  Pour plus d'informations sur les options du compilateur de virgule flottante, consultez [\/fp \(Spécifier le comportement de virgule flottante\)](../../build/reference/fp-specify-floating-point-behavior.md).  
+ **/ Qsafe_fp_loads** n’est pas compatible avec [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) et [Fast](../../build/reference/fp-specify-floating-point-behavior.md). Pour plus d’informations sur les options de compilateur point flottant, consultez [/fp (spécifier du comportement de nombres à virgule flottante)](../../build/reference/fp-specify-floating-point-behavior.md).  
   
-### Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Comment : ouvrir les pages de propriétés d'un projet](../../misc/how-to-open-project-property-pages.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
-2.  Sélectionnez le dossier **C\/C\+\+**.  
+2.  Sélectionnez le **C/C++** dossier.  
   
-3.  Sélectionnez la page de propriétés **Ligne de commande**.  
+3.  Sélectionnez le **ligne de commande** page de propriétés.  
   
-4.  Spécifiez l'option du compilateur dans la zone **Options supplémentaires**.  
+4.  Tapez l'option de compilateur dans la zone **Options supplémentaires** .  
   
-### Pour définir cette option du compilateur par programmation  
+### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation  
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Voir aussi  
- [\/Q \(Opérations de bas niveau\), options](../../build/reference/q-options-low-level-operations.md)   
+## <a name="see-also"></a>Voir aussi  
+ [/Q (opérations de bas niveau), options](../../build/reference/q-options-low-level-operations.md)   
  [Options du compilateur](../../build/reference/compiler-options.md)   
  [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

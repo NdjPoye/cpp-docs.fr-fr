@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,35 +25,18 @@ f1_keywords:
 - AMP/Concurrency::array::associated_accelerator_view
 - AMP/Concurrency::array::cpu_access_type
 - AMP/Concurrency::array::extent
-dev_langs:
-- C++
-helpviewer_keywords:
-- array class
+dev_langs: C++
+helpviewer_keywords: array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 470918d62357a8dd463db35b4d929e7ec5c2f251
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: ad9e098ad485c7a96670c4249770b038333e1bc8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="array-class"></a>array, classe
 Représente un conteneur de données utilisé pour déplacer des données vers un accélérateur.  
@@ -79,7 +61,7 @@ friend class array;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Array, constructeur](#ctor)|Initialise une nouvelle instance de la classe `array`.|  
+|[Constructeur de tableau](#ctor)|Initialise une nouvelle instance de la classe `array`.|  
 |[~ array, destructeur](#dtor)|Détruit le `array` objet.|  
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -87,9 +69,9 @@ friend class array;
 |----------|-----------------|  
 |[copy_to](#copy_to)|Copie le contenu du tableau dans un autre tableau.|  
 |[data](#data)|Retourne un pointeur vers les données brutes du tableau.|  
-|[get_accelerator_view](#get_accelerator_view)|Retourne le [accelerator_view](accelerator-view-class.md) objet qui représente l’emplacement où le tableau est alloué. Cette propriété est accessible uniquement sur le processeur.|  
-|[get_associated_accelerator_view](#get_associated_accelerator_view)|Obtient le second [accelerator_view](accelerator-view-class.md) objet passé en tant que paramètre lorsqu’une zone de transit est appelé pour instancier le `array` objet.|  
-|[get_cpu_access_type](#get_cpu_access_type)|Retourne le [access_type](concurrency-namespace-enums-amp.md#access_type) du tableau. Cette méthode est accessible uniquement sur le processeur.|  
+|[get_accelerator_view](#get_accelerator_view)|Retourne le [accelerator_view](accelerator-view-class.md) objet qui représente l’emplacement où le tableau est alloué. Cette propriété est accessible uniquement sur l’UC.|  
+|[get_associated_accelerator_view](#get_associated_accelerator_view)|Obtient la deuxième [accelerator_view](accelerator-view-class.md) objet passé en tant que paramètre quand un constructeur intermédiaire est appelé pour instancier le `array` objet.|  
+|[get_cpu_access_type](#get_cpu_access_type)|Retourne le [access_type](concurrency-namespace-enums-amp.md#access_type) du tableau. Cette méthode est accessible uniquement sur l’UC.|  
 |[get_extent](#get_extent)|Retourne le [étendue](extent-class.md) objet du tableau.|  
 |[reinterpret_as](#reinterpret_as)|Retourne un tableau unidimensionnel qui contienne tous les éléments dans le `array` objet.|  
 |[section](#section)|Retourne une sous-section de le `array` objet qui est à l’origine spécifiée et, éventuellement, qui a l’étendue spécifiée.|  
@@ -99,9 +81,9 @@ friend class array;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[opérateur std::vector&lt;value_type&gt;](#operator_vec)|Utilise `copy(*this, vector)` convertir implicitement le tableau à un std ::[vecteur](../../../standard-library/vector-class.md) objet.|  
+|[opérateur std::vector&lt;value_type&gt;](#operator_vec)|Utilise `copy(*this, vector)` pour convertir implicitement le tableau std ::[vecteur](../../../standard-library/vector-class.md) objet.|  
 |[operator()](#operator_call)|Retourne la valeur de l’élément spécifié par les paramètres.|  
-|[operator]](#operator_at)|Retourne l’élément situé à l’index spécifié.|  
+|[operator]](#operator_at)|Retourne l’élément qui est à l’index spécifié.|  
 |[operator=](#operator_eq)|Copie le contenu de l’objet `array` objet dans celui-ci.|  
   
 ### <a name="public-constants"></a>Constantes publiques  
@@ -114,29 +96,29 @@ friend class array;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[accelerator_view](#accelerator_view)|Obtient le [accelerator_view](accelerator-view-class.md) objet qui représente l’emplacement où le tableau est alloué. Cette propriété est accessible uniquement sur le processeur.|  
-|[associated_accelerator_view](#associated_accelerator_view)|Obtient le second [accelerator_view](accelerator-view-class.md) objet passé en tant que paramètre lorsqu’une zone de transit est appelé pour instancier le `array` objet.|  
-|[cpu_access_type](#cpu_access_type)|Obtient le [access_type](concurrency-namespace-enums-amp.md#access_type) qui représente la façon dont le processeur peut accéder au stockage du tableau.|  
+|[accelerator_view](#accelerator_view)|Obtient le [accelerator_view](accelerator-view-class.md) objet qui représente l’emplacement où le tableau est alloué. Cette propriété est accessible uniquement sur l’UC.|  
+|[associated_accelerator_view](#associated_accelerator_view)|Obtient la deuxième [accelerator_view](accelerator-view-class.md) objet passé en tant que paramètre quand un constructeur intermédiaire est appelé pour instancier le `array` objet.|  
+|[cpu_access_type](#cpu_access_type)|Obtient le [access_type](concurrency-namespace-enums-amp.md#access_type) qui représente la façon dont l’UC peut accéder au stockage du tableau.|  
 |[extent](#extent)|Obtient l’étendue qui définit la forme du tableau.|  
   
 ## <a name="remarks"></a>Remarques  
- Le type `array<T,N>` représente une densité et ordinaires (non en escalier) *N*-tableau unidimensionnel qui se trouve dans un emplacement spécifique, comme un accélérateur ou de l’UC. Le type de données des éléments du tableau est `T`, qui doit être d’un type qui est compatible avec l’accélérateur de cible. Bien que le classement, `N`, (du tableau est déterminé de manière statique et fait partie du type, la mesure du tableau est déterminée par le runtime et est exprimée à l’aide de la classe `extent<N>`.  
+ Le type `array<T,N>` représente une densité et régulier (ne pas en escalier) *N*-tableau unidimensionnel qui se trouve dans un emplacement spécifique, comme un accélérateur ou de l’UC. Le type de données des éléments du tableau est `T`, qui doit être d’un type qui est compatible avec l’accélérateur cible. Bien que le classement, `N`, (de tableau est déterminé de manière statique et fait partie du type, l’étendue du tableau est déterminée par le runtime et est exprimée en utilisant la classe `extent<N>`.  
   
- Un tableau peut avoir n’importe quel nombre de dimensions, bien que certaines fonctionnalités sont spécialisée pour `array` objets avec un classement, deux et trois. Si vous omettez l’argument de dimension, la valeur par défaut est 1.  
+ Un tableau peut avoir n’importe quel nombre de dimensions, bien que certaines fonctionnalités sont spécialisée pour `array` objets avec un classement, deux et trois. Si vous omettez l’argument de la dimension, la valeur par défaut est 1.  
   
- Données de tableau sont disposées de façon contiguë en mémoire. Les éléments qui diffèrent d’une unité dans la dimension moins significatif sont adjacents en mémoire.  
+ Données de tableau sont disposées de façon contiguë en mémoire. Éléments qui diffèrent par une dans la dimension moins significatif sont adjacents en mémoire.  
   
- Tableaux sont logiquement considérés comme des types valeur, car lorsqu’un tableau est copié dans un autre tableau, une copie complète est effectuée. Deux tableaux point jamais aux mêmes données.  
+ Les tableaux sont logiquement considéré comme des types valeur, car lorsqu’un tableau est copié dans un autre tableau, une copie complète est effectuée. Deux tableaux pointent jamais les mêmes données.  
   
- Le `array<T,N>` est utilisé dans plusieurs scénarios :  
+ Le `array<T,N>` type est utilisé dans plusieurs scénarios :  
   
--   Conteneur de données qui peut être utilisé dans les calculs sur un accélérateur.  
+-   Comme un conteneur de données qui peut être utilisé dans les calculs sur un accélérateur.  
   
--   Comme un conteneur de données pour contenir la mémoire sur l’hôte du processeur (qui peut être utilisé pour copier vers et à partir d’autres tableaux).  
+-   Comme un conteneur de données pour contenir la mémoire sur l’ordinateur hôte de l’UC (qui peut être utilisé pour copier vers et depuis d’autres tableaux).  
   
--   Comme un objet intermédiaire d’agir comme un intermédiaire rapide de copie de l’hôte vers le périphérique.  
+-   En tant qu’objet intermédiaire d’agir comme un intermédiaire rapide de copie de l’hôte sur l’appareil.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `array`  
   
 ## <a name="requirements"></a>Spécifications  
@@ -154,7 +136,7 @@ friend class array;
   
 ##  <a name="accelerator_view"></a>accelerator_view 
 
- Obtient le [accelerator_view](accelerator-view-class.md) objet qui représente l’emplacement où le tableau est alloué. Cette propriété est accessible uniquement sur le processeur.  
+ Obtient le [accelerator_view](accelerator-view-class.md) objet qui représente l’emplacement où le tableau est alloué. Cette propriété est accessible uniquement sur l’UC.  
   
 ```  
 __declspec(property(get= get_accelerator_view)) Concurrency::accelerator_view accelerator_view;  
@@ -162,7 +144,7 @@ __declspec(property(get= get_accelerator_view)) Concurrency::accelerator_view ac
   
 ##  <a name="ctor"></a>tableau 
 
- Initialise une nouvelle instance de la [array, classe](array-class.md). Aucun constructeur par défaut pour `array<T,N>`. Tous les constructeurs sont exécutés sur le processeur uniquement. Elles ne peuvent pas être exécutées sur une cible de Direct3D.  
+ Initialise une nouvelle instance de la [array, classe](array-class.md). Il n’existe aucun constructeur par défaut pour `array<T,N>`. Tous les constructeurs sont exécutés sur le processeur uniquement. Ils ne peuvent pas être exécutées sur une cible de Direct3D.  
   
 ```  
 explicit array(  
@@ -428,7 +410,7 @@ array(array&& _Other) restrict(cpu);
  Un [accelerator_view](accelerator-view-class.md) objet qui spécifie l’emplacement du tableau.  
   
  `_Cpu_access_type`  
- L’élément [access_type](concurrency-namespace-enums-amp.md#access_type) pour le groupe de l’unité centrale. Ce paramètre a la valeur par défaut `access_type_auto` en laissant le processeur `access_type` détermination à l’exécution. Le processeur réel `access_type` pour le tableau peut être interrogé à l’aide de la `get_cpu_access_type` méthode.  
+ L’élément [access_type](concurrency-namespace-enums-amp.md#access_type) pour le groupe sur l’UC. Ce paramètre a la valeur par défaut `access_type_auto` en laissant l’UC `access_type` détermination à l’exécution. Le processeur réel `access_type` pour le tableau peut être interrogé à l’aide de la `get_cpu_access_type` (méthode).  
   
  `_Extent`  
  L’étendue de chaque dimension du tableau.  
@@ -440,13 +422,13 @@ array(array&& _Other) restrict(cpu);
  Le composant suivant-à-plus significatif de l’étendue de cette section.  
   
  `_E2`  
- Le composant moins important de l’étendue de cette section.  
+ Le composant de poids faible de l’étendue de cette section.  
   
  `_InputIterator`  
- Le type de l’entrée interator.  
+ Le type de l’interator d’entrée.  
   
  `_Src`  
- Pour l’objet à copier.  
+ À l’objet à copier.  
   
  `_Src_first`  
  Un itérateur de début dans le conteneur source.  
@@ -458,14 +440,14 @@ array(array&& _Other) restrict(cpu);
  Autre source de données.  
   
  `_Rank`  
- Le classement de la section.  
+ Le rang de la section.  
   
  `value_type`  
  Le type de données des éléments qui sont copiés.  
   
 ##  <a name="associated_accelerator_view"></a>associated_accelerator_view 
 
- Obtient le second [accelerator_view](accelerator-view-class.md) objet passé en tant que paramètre lorsqu’une zone de transit est appelé pour instancier le `array` objet.  
+ Obtient la deuxième [accelerator_view](accelerator-view-class.md) objet passé en tant que paramètre quand un constructeur intermédiaire est appelé pour instancier le `array` objet.  
   
 ```  
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;  
@@ -473,7 +455,7 @@ __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelera
   
 ##  <a name="copy_to"></a>copy_to 
 
- Copie le contenu de la `array` à un autre `array`.  
+ Copie le contenu de la `array` vers un autre `array`.  
   
 ```  
 void copy_to(
@@ -485,11 +467,11 @@ void copy_to(
   
 ### <a name="parameters"></a>Paramètres  
  `_Dest`  
- Le [array_view](array-view-class.md) objet de destination.  
+ Le [array_view](array-view-class.md) objet dans lequel copier.  
   
 ##  <a name="cpu_access_type"></a>cpu_access_type 
 
- Obtient l’access_type UC autorisées pour ce tableau.  
+ Obtient l’access_type processeur autorisée pour ce tableau.  
   
 ```  
 __declspec(property(get= get_cpu_access_type)) access_type cpu_access_type;  
@@ -518,7 +500,7 @@ __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;
   
 ##  <a name="get_accelerator_view"></a>get_accelerator_view 
 
- Retourne le [accelerator_view](accelerator-view-class.md) objet qui représente l’emplacement où le `array` objet est alloué. Cette propriété est accessible uniquement sur le processeur.  
+ Retourne le [accelerator_view](accelerator-view-class.md) objet qui représente l’emplacement où le `array` objet est alloué. Cette propriété est accessible uniquement sur l’UC.  
   
 ```  
 Concurrency::accelerator_view get_accelerator_view() const;  
@@ -529,7 +511,7 @@ Concurrency::accelerator_view get_accelerator_view() const;
   
 ##  <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view 
 
- Obtient le second [accelerator_view](accelerator-view-class.md) objet passé en tant que paramètre lorsqu’une zone de transit est appelé pour instancier le `array` objet.  
+ Obtient la deuxième [accelerator_view](accelerator-view-class.md) objet passé en tant que paramètre quand un constructeur intermédiaire est appelé pour instancier le `array` objet.  
   
 ```  
 Concurrency::accelerator_view get_associated_accelerator_view() const ;  
@@ -540,7 +522,7 @@ Concurrency::accelerator_view get_associated_accelerator_view() const ;
   
 ##  <a name="get_cpu_access_type"></a>get_cpu_access_type 
 
- Access_type renvoie le processeur qui est autorisée pour ce tableau.  
+ Access_type retourne l’UC qui est autorisé pour ce tableau.  
   
 ```  
 access_type get_cpu_access_type() const restrict(cpu);
@@ -617,7 +599,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
   
 ##  <a name="operator_at"></a>operator] 
 
- Retourne l’élément situé à l’index spécifié.  
+ Retourne l’élément qui est à l’index spécifié.  
   
 ```  
 value_type& operator[](const index<_Rank>& _Index) restrict(amp,cpu);  
@@ -655,24 +637,24 @@ array& operator= (
   
 ### <a name="parameters"></a>Paramètres  
  `_Other`  
- Le `array` objet d’origine.  
+ Le `array` objet à copier à partir de.  
   
  `_Src`  
- Le `array` objet d’origine.  
+ Le `array` objet à copier à partir de.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à ce `array` objet.  
   
 ##  <a name="rank"></a>rang 
 
- Stocke le rang de la `array`.  
+ Stocke le rang de le `array`.  
   
 ```  
 static const int rank = _Rank;  
 ```  
 ## <a name="reinterpret_as"></a>reinterpret_as 
 
-Réinterprète groupe via un array_view unidimensionnel, qui peut être un type de valeur différente de la baie source.
+Réinterprète groupe via un array_view unidimensionnel, éventuellement susceptible d’avoir un type de valeur différente que le tableau source.
 
 ### <a name="syntax"></a>Syntaxe
 ``` 
@@ -687,10 +669,10 @@ array_view<const _Value_type2, 1> reinterpret_as() const restrict(amp,cpu);
 `_Value_type2`Le type de données des données retournées.
 
 ### <a name="return-value"></a>Valeur de retour
-Un array_view ou un objet const array_view qui est basé sur le tableau, avec le type d’élément réinterprétée dans T ElementType et le rang réduit de N à 1.
+Un array_view ou un objet const array_view qui est basé sur le tableau, avec le type d’élément réinterprétée de T ElementType et le rang réduite de N à 1.
 
 ### <a name="remarks"></a>Remarques
-Il est parfois commode afficher un tableau multidimensionnel, comme si elle était un tableau unidimensionnel linéaire, éventuellement avec un type de valeur différente que le tableau source. Vous pouvez utiliser cette méthode pour y parvenir.
+Il est parfois commode afficher un tableau multidimensionnel, comme si elle est un tableau unidimensionnel linéaire, éventuellement avec un type de valeur différente de la baie source. Vous pouvez utiliser cette méthode pour y parvenir.
 **Attention** réinterprétation un objet tableau à l’aide d’un type valeur différent est une opération potentiellement dangereuse. Nous vous recommandons d’utiliser cette fonctionnalité avec précaution. 
 
 Le code suivant fournit un exemple.
@@ -774,7 +756,7 @@ array_view<const value_type,3> section(
  Le composant suivant-à-plus significatif de l’étendue de cette section.  
   
  `_E2`  
- Le composant moins important de l’étendue de cette section.  
+ Le composant de poids faible de l’étendue de cette section.  
   
  `_Ext`  
  Le [étendue](extent-class.md) objet qui spécifie l’étendue de la section. L’origine est 0.  
@@ -792,7 +774,7 @@ array_view<const value_type,3> section(
  Le composant moins significatif de l’origine de cette section.  
   
  `_Rank`  
- Le classement de la section.  
+ Le rang de la section.  
   
  `_Section_extent`  
  Le [étendue](extent-class.md) objet qui spécifie l’étendue de la section.  
@@ -808,7 +790,7 @@ array_view<const value_type,3> section(
   
 ##  <a name="view_as"></a>view_as 
 
- Réinterprète ce tableau comme une [array_view](array-view-class.md) d’un rang différent.  
+ Réinterprète ce tableau comme un [array_view](array-view-class.md) d’un classement différent.  
   
 ```  
 template <int _New_rank>  
@@ -823,10 +805,10 @@ array_view<const value_type,_New_rank> view_as(
   
 ### <a name="parameters"></a>Paramètres  
  `_New_rank`  
- Le classement de la `extent` objet passé comme paramètre.  
+ Le classement de la `extent` objet passé en tant que paramètre.  
   
  `_View_extent`  
- L’étendue qui est utilisé pour construire la nouvelle [array_view](array-view-class.md) objet.  
+ La mesure est utilisée pour construire la nouvelle [array_view](array-view-class.md) objet.  
   
  `value_type`  
  Le type de données des éléments dans les deux d’origine `array` objet et retourné `array_view` objet.  
@@ -836,4 +818,3 @@ array_view<const value_type,_New_rank> view_as(
   
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

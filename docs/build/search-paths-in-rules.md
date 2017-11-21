@@ -1,41 +1,40 @@
 ---
-title: "Chemins de recherche utilis&#233;s dans les r&#232;gles | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "règles d'inférence dans NMAKE"
-  - "règles, inférence"
-  - "chemins de recherche dans les règles d'inférence NMAKE"
+title: "Chemins de recherche dans les règles | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- search paths in NMAKE inference rules
+- inference rules in NMAKE
+- rules, inference
 ms.assetid: 38feded6-536d-425d-bf40-fff3173a5506
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 808ec39bafd6ad5c7982f63055ba92fccff7a285
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Chemins de recherche utilis&#233;s dans les r&#232;gles
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="search-paths-in-rules"></a>Chemins de recherche utilisés dans les règles
 ```  
 {frompath}.fromext{topath}.toext:  
    commands  
 ```  
   
-## Remarques  
- Une règle d'inférence s'applique à une dépendance seulement si les chemins spécifiés dans la dépendance correspondent exactement aux chemins des règles d'inférence.  Spécifiez le répertoire du dépendant dans *frompath* et le répertoire de la cible dans *topath* ; les espaces ne sont pas admis.  Spécifiez un seul chemin pour chaque extension.  Un chemin sur une extension exige un chemin sur l'autre.  Pour spécifier le répertoire actif, utilisez soit un point \(.\), soit des accolades vides \({ }\).  Les macros peuvent représenter *frompath* et *topath* ; elles sont appelées pendant le prétraitement.  
+## <a name="remarks"></a>Remarques  
+ Une règle d’inférence s’applique à une dépendance uniquement si les chemins d’accès spécifiés dans la dépendance exactement correspondent les chemins d’accès de la règle d’inférence. Spécifiez le répertoire du dépendant dans *frompath* et répertoire de la cible dans *topath*; sans espaces sont autorisés. Spécifiez qu’un seul chemin d’accès pour chaque extension. Un chemin d’accès sur une extension requiert un chemin d’accès sur l’autre. Pour spécifier le répertoire actif, utilisez un point (.) ou accolades ({}). Les macros peuvent représenter *frompath* et *topath*; ils sont appelés pendant le prétraitement.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 {dbi\}.cpp{$(ODIR)}.obj::  
@@ -66,5 +65,5 @@ manager: "ghogen"
         $(CC) $(CFLAGS) $<  
 ```  
   
-## Voir aussi  
- [Définition d'une règle](../build/defining-a-rule.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définition d’une règle](../build/defining-a-rule.md)

@@ -1,35 +1,32 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4715 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4715"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4715"
+title: Compilateur avertissement (niveau 1) C4715 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4715
+dev_langs: C++
+helpviewer_keywords: C4715
 ms.assetid: 1c819bf7-0d8b-4f5e-b338-9cc292870439
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 66f748aaf29365c9a49e5ee5eaa9b7fec8d1de41
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 1) C4715
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'fonction' : les chemins de contrôle ne retournent pas tous une valeur  
+# <a name="compiler-warning-level-1-c4715"></a>Avertissement du compilateur (niveau 1) C4715
+'fonction' : une valeur de retour pas tous les chemins d’accès de contrôle  
   
- La fonction spécifiée risque de ne pas retourner de valeur.  
+ La fonction spécifiée ne peut potentiellement pas retourner une valeur.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // C4715a.cpp  
@@ -41,7 +38,7 @@ int func1( int i )
 }  
 ```  
   
- Pour éviter cet avertissement, modifiez le code de manière à ce que tous les chemins d'accès assignent une valeur de retour à la fonction :  
+ Pour éviter cet avertissement, modifiez le code afin que tous les chemins d’affectent une valeur de retour à la fonction :  
   
 ```  
 // C4715b.cpp  
@@ -53,7 +50,7 @@ int func1( int i )
 }  
 ```  
   
- Votre code contient peut\-être un appel à une fonction qui ne donne jamais lieu à un retour, comme dans l'exemple suivant :  
+ Il est possible que votre code peut contenir un appel à une fonction qui ne retourne jamais, comme dans l’exemple suivant :  
   
 ```  
 // C4715c.cpp  
@@ -72,4 +69,4 @@ int glue()
 }  
 ```  
   
- Ce code génère également un avertissement car le compilateur ne sait pas que `fatal` n'est jamais retourné.  Pour éviter que ce code ne génère un message d'erreur, déclarez `fatal` en utilisant [\_\_declspec\(noreturn\)](../../cpp/noreturn.md).
+ Ce code génère également un avertissement, car le compilateur ne sait pas que `fatal` ne retourne jamais. Pour éviter que ce code génère un message d’erreur, déclarez `fatal` à l’aide de [__declspec (noreturn)](../../cpp/noreturn.md).

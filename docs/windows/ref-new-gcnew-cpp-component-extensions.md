@@ -1,55 +1,54 @@
 ---
-title: "ref new, gcnew  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "gcnew"
-  - "ref new"
-  - "gcnew_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ref new keyword (C++)"
-  - "gcnew keyword [C++]"
+title: gcnew de nouveau, ref (Extensions du composant C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- gcnew
+- ref new
+- gcnew_cpp
+dev_langs: C++
+helpviewer_keywords:
+- ref new keyword (C++)
+- gcnew keyword [C++]
 ms.assetid: 388a62da-c2df-4a94-a9a2-205b53e577da
-caps.latest.revision: 24
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "24"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cabe15639d75a1dfe7c41463ea9b95332f6dafa3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# ref new, gcnew  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le mot clé d'agrégation `ref new` alloue une instance d'un type récupéré par le garbage collector quand l'objet devient inaccessible, et qui renvoie un handle \([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)\) à l'objet alloué.  
+# <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew  (extensions du composant C++)
+Le `ref new` mot clé d’agrégation alloue une instance d’un type qui est le garbage collecté lors de l’objet devienne inaccessible, et qui retourne un handle ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) vers l’objet alloué.  
   
-## Tous les runtimes  
+## <a name="all-runtimes"></a>Tous les runtimes  
  La mémoire d'une instance d'un type alloué par `ref new` est automatiquement désallouée.  
   
  Une opération `ref new` lève une exception `OutOfMemoryException` s'il est impossible d'allouer de la mémoire.  
   
- Pour plus d'informations sur l'allocation et la désallocation de la mémoire pour les types C\+\+ natifs, consultez les [opérateurs new et delete](../cpp/new-and-delete-operators.md).  
+ Pour plus d’informations sur la façon dont la mémoire pour les types natifs C++ est allouée et désallouée, consultez [le nouveau et supprimer des opérateurs](../cpp/new-and-delete-operators.md).  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- Utilisez `ref new` pour allouer de la mémoire aux objets Windows Runtime dont vous voulez administrer automatiquement la durée de vie.  L'objet est automatiquement désalloué quand son nombre de références atteint zéro, ce qui se produit une fois que la dernière copie de la référence est hors de portée.  Pour plus d'informations, consultez [Classes et structs de référence](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
+## <a name="windows-runtime"></a>Windows Runtime  
+ Utilisez `ref new` pour allouer de la mémoire aux objets Windows Runtime dont vous voulez administrer automatiquement la durée de vie. L'objet est automatiquement désalloué quand son nombre de références atteint zéro, ce qui se produit une fois que la dernière copie de la référence est hors de portée. Pour plus d’informations, consultez [les classes ou structures](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
-### Spécifications  
- Option du compilateur : **\/ZW**  
+### <a name="requirements"></a>Spécifications  
+ Option du compilateur : **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- La mémoire d'un type managé \(type référence ou valeur\) est allouée par `gcnew`, puis désallouée à l'aide du garbage collection.  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ La mémoire d'un type managé (type référence ou valeur) est allouée par `gcnew`, puis désallouée à l'aide du garbage collection.  
   
-### Spécifications  
- Option du compilateur : **\/clr**  
+### <a name="requirements"></a>Spécifications  
+ Option du compilateur : **/clr**  
   
-### Exemples  
+### <a name="examples"></a>Exemples  
  **Exemple**  
   
  L'exemple suivant utilise `gcnew` pour allouer un objet Message.  
@@ -92,6 +91,9 @@ int main()
   
  **Sortie**  
   
-  **32**   
-## Voir aussi  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+32  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)

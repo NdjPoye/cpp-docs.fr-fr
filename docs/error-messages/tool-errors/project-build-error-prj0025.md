@@ -1,35 +1,33 @@
 ---
-title: "Erreur de g&#233;n&#233;ration de projet PRJ0025 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0025"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0025"
+title: "PRJ0025 d’erreur de Build de projet | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0025
+dev_langs: C++
+helpviewer_keywords: PRJ0025
 ms.assetid: 57725c78-bc63-44f3-9667-2969b2d7c41d
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 263c5df7e2f34fdaa5131a65f8820080875b569d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Erreur de g&#233;n&#233;ration de projet PRJ0025
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Le fichier batch 'fichier' contient du code Unicode qui n'a pas pu être traduit dans la page de codes ANSI de l'utilisateur.  
+# <a name="project-build-error-prj0025"></a>Erreur de génération de projet PRJ0025
+Le fichier de commandes 'fichier' contient Unicode qui n’a pas pu être traduits à la page de codes ANSI de l’utilisateur.  
   
  ***Contenu UNICODE du fichier***  
   
- Le système de projet a trouvé un contenu Unicode, dans une règle de génération personnalisée ou un événement de build, qui ne peut être traduit correctement dans la page de codes ANSI en cours de l'utilisateur.  
+ Le système de projet trouvée contenu Unicode personnalisé règle de génération ou de générer des événements qui ne peut pas être traduit correctement à la page de codes ANSI de l’utilisateur actuelle.  
   
- Pour corriger cette erreur, mettez à jour le contenu de la règle de génération ou de l'événement de build de façon à utiliser ANSI ou installez la page de codes sur votre ordinateur et définissez\-la en tant que valeur système par défaut.  
+ La résolution de cette erreur consiste à mettre à jour le contenu de la règle de génération ou de générer des événements à utiliser ANSI ou pour installer la page de codes sur votre ordinateur et définissez-le en tant que la valeur par défaut du système.  
   
- Pour plus d'informations sur les étapes de build personnalisée et les événements de build, consultez [Présentation des étapes de build personnalisée et des événements de build](../../ide/understanding-custom-build-steps-and-build-events.md).
+ Pour plus d’informations sur personnalisée des étapes de génération et événements de build, consultez [présentation des étapes de génération personnalisée et des événements de Build](../../ide/understanding-custom-build-steps-and-build-events.md).

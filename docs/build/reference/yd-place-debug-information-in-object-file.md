@@ -1,93 +1,92 @@
 ---
-title: "/Yd (Placer les informations de d&#233;bogage dans un fichier objet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/yd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Yd (option du compilateur C++)"
-  - "déboguer (C++), fichiers d'information de débogage"
-  - "Yd (option du compilateur C++)"
-  - "-Yd (option du compilateur C++)"
+title: "-Yd (placer les informations de débogage dans un fichier objet) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /yd
+dev_langs: C++
+helpviewer_keywords:
+- /Yd compiler option [C++]
+- -Yd compiler option [C++]
+- debugging [C++], debug information files
+- Yd compiler option [C++]
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9b86ec1bf3c47de45eaf9120d8e8f68ac9377db6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /Yd (Placer les informations de d&#233;bogage dans un fichier objet)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Place des informations de débogage complètes dans tous les fichiers objets créés à partir d'un fichier d'en\-tête précompilé \(.pch\) si cette option est associée aux options [\/Yc](../../build/reference/yc-create-precompiled-header-file.md) et [\/Z7](../../build/reference/z7-zi-zi-debug-information-format.md).  Déconseillé.  
+# <a name="yd-place-debug-information-in-object-file"></a>/Yd (Placer les informations de débogage dans un fichier objet)
+Espace complète les informations de débogage dans tous les fichiers objets créés à partir d’un fichier d’en-tête précompilé (.pch) lorsqu’il est utilisé avec le [/Yc](../../build/reference/yc-create-precompiled-header-file.md) et [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) options. Obsolète.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 /Yd  
 ```  
   
-## Notes  
- L'option **\/Yd** est déconseillée ; [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] prend désormais en charge plusieurs objets qui écrivent dans un fichier .pdb unique ; utilisez plutôt **\/Zi**.  Pour plus d'informations, consultez [Deprecated Compiler Options in Visual C\+\+ 2005](http://msdn.microsoft.com/fr-fr/aa59fce3-50b8-4f66-9aeb-ce09a7a84cce).  
+## <a name="remarks"></a>Remarques  
+ **/Yd** est déconseillé ; [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] utiliser de prend désormais en charge plusieurs objets qui écrivent dans un fichier .pdb unique, **/Zi** à la place. Pour obtenir la liste des options du compilateur déconseillées, consultez **déconseillées et supprimées des Options du compilateur** dans [Options du compilateur classées par catégorie](../../build/reference/compiler-options-listed-by-category.md).  
   
- À moins que vous deviez distribuer une bibliothèque contenant des informations de débogage, utilisez l'option [\/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) plutôt que **\/Z7** et **\/Yd**.  
+ Sauf si vous devez distribuer une bibliothèque contenant débogage des informations, utilisez le [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) option plutôt que **/Z7** et **/Yd**.  
   
- Le stockage d'informations de débogage complètes dans chaque fichier .obj est nécessaire uniquement pour la distribution de bibliothèques contenant des informations de débogage.  Il ralentit la compilation et demande beaucoup d'espace disque.  Quand les options **\/Yc** et **\/Z7** sont utilisées sans **\/Yd**, le compilateur stocke les informations de débogage communes dans le premier fichier .obj créé à partir du fichier .pch.  Le compilateur n'insère pas ces informations dans les autres fichiers .obj créés ensuite à partir du fichier .pch ; il insère à la place des références croisées aux informations.  Quel que soit le nombre de fichiers .obj qui utilisent le fichier .pch, un seul fichier .obj contient les informations de débogage communes.  
+ Le stockage des informations de débogage complètes dans chaque fichier .obj est nécessaire uniquement pour la distribution de bibliothèques qui contiennent des informations de débogage. Il ralentit la compilation et nécessite un espace disque considérable. Lorsque **/Yc** et **/Z7** sont utilisées sans **/Yd**, le compilateur stocke les informations de débogage communes dans le premier fichier .obj créé à partir du fichier .pch. Le compilateur n’insère pas ces informations dans des fichiers .obj créés par la suite à partir du fichier .pch ; Il insère les renvois aux informations. Quel que soit le nombre de fichiers .obj utilisent le fichier .pch, un seul fichier .obj contient les informations de débogage courantes.  
   
- Même si ce comportement par défaut se traduit par des délais de génération plus courts et une utilisation moindre de l'espace disque, il n'est pas souhaitable si une modification, même minime, requiert la régénération du fichier .obj contenant les informations de débogage communes.  Dans ce cas, le compilateur doit régénérer tous les fichiers .obj qui contiennent des références croisées au fichier .obj d'origine.  En outre, si un fichier .pch commun est utilisé par différents projets, il est difficile de garantir la fiabilité des références croisées à un seul fichier .obj.  
+ Bien que ce comportement se traduit par défaut dans les délais de génération plus rapidement et réduit les besoins en espace disque, il n’est pas souhaitable si une petite modification nécessite la reconstruction du fichier .obj contenant les informations de débogage communes. Dans ce cas, le compilateur doit régénérer tous les fichiers .obj qui contient des références croisées au fichier .obj d’origine. En outre, si un fichier .pch commun est utilisé par différents projets, il est difficile d’envers les références croisées à un seul fichier .obj.  
   
- Pour plus d'informations sur les en\-têtes précompilés, consultez :  
+ Pour plus d’informations sur les en-têtes précompilés, consultez :  
   
--   [\/Y \(En\-têtes précompilés\)](../../build/reference/y-precompiled-headers.md)  
+-   [/Y (en-têtes précompilés)](../../build/reference/y-precompiled-headers.md)  
   
--   [Création de fichiers d'en\-tête précompilés](../../build/reference/creating-precompiled-header-files.md)  
+-   [Création de fichiers d’en-tête précompilé](../../build/reference/creating-precompiled-header-files.md)  
   
-### Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Comment : ouvrir les pages de propriétés d'un projet](../../misc/how-to-open-project-property-pages.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
-2.  Cliquez sur le dossier **C\/C\+\+**.  
+2.  Cliquez sur le dossier **C/C++** .  
   
-3.  Cliquez sur la page de propriétés **Ligne de commande**.  
+3.  Cliquez sur la page de propriétés **Ligne de commande** .  
   
-4.  Spécifiez l'option du compilateur dans la zone **Options supplémentaires**.  
+4.  Tapez l'option de compilateur dans la zone **Options supplémentaires** .  
   
-### Pour définir cette option du compilateur par programmation  
+### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation  
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Exemples  
- Prenons le cas de deux fichiers de base, F.cpp et G.cpp, chacun contenant ces instructions **\#include** :  
+## <a name="examples"></a>Exemples  
+ Supposez que vous avez deux fichiers de base, F.cpp et G.cpp, chacun contenant ces **#include** instructions :  
   
 ```  
 #include "windows.h"  
 #include "etc.h"  
 ```  
   
- La ligne de commande suivante crée le fichier d'en\-tête précompilé ETC.pch et le fichier objet F.obj :  
+ La commande suivante crée l’en-tête précompilé du fichier ETC.pch et le fichier objet F.obj :  
   
 ```  
 CL /YcETC.H /Z7 F.CPP  
 ```  
   
- Le fichier objet F.obj comprend des informations sur les types et les symboles pour WINDOWS.h et ETC.h \(et tous les autres fichiers d'en\-tête qu'ils incluent\).  Vous pouvez à présent utiliser l'en\-tête précompilé ETC.pch pour compiler le fichier source G.cpp :  
+ Le fichier objet F.obj inclut le type et les informations de symboles pour WINDOWS.h et ETC.h (et tous les autres fichiers d’en-tête qu’ils incluent). Vous pouvez maintenant utiliser l’en-tête précompilé ETC.pch pour compiler le fichier source G.cpp :  
   
 ```  
 CL /YuETC.H /Z7 G.CPP  
 ```  
   
- Le fichier objet G.obj ne comprend pas les informations de débogage pour l'en\-tête précompilé, mais uniquement des références à ces informations figurant dans le fichier F.obj.  Notez que vous devez établir un lien avec le fichier F.obj.  
+ Le fichier objet G.obj n’inclut pas les informations de débogage pour l’en-tête précompilé, mais uniquement des références à ces informations dans le fichier F.obj. Notez que vous devez lier avec le fichier F.obj.  
   
- Si votre en\-tête précompilé n'a pas été compilé avec **\/Z7**, vous pourrez l'utiliser dans des compilations ultérieures avec l'option **\/Z7**.  Cependant, les informations de débogage sont placées dans le fichier objet en cours, et les symboles locaux des fonctions et des types définis dans l'en\-tête précompilé ne seront pas disponibles pour le débogueur.  
+ Si votre en-tête précompilé n’a pas été compilée avec **/Z7**, vous pouvez l’utiliser dans des compilations ultérieures à l’aide de **/Z7**. Toutefois, les informations de débogage sont placées dans le fichier objet en cours, et les symboles locaux pour les fonctions et les types définis dans l’en-tête précompilé ne sont pas disponibles pour le débogueur.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options du compilateur](../../build/reference/compiler-options.md)   
  [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

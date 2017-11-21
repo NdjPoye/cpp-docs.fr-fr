@@ -1,31 +1,31 @@
 ---
-title: "Comment&#160;: inclure une classe native dans un wrapper pour une utilisation par C# | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes (C++), Visual C# et"
-  - "code natif (C++), Visual C# et"
+title: "Comment : encapsuler une classe Native pour une utilisation par c# | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- native code [C++], Visual C# and
+- classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9ff0c2a3700c20c78d3cbbf9b67810a65bb89fc3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: inclure une classe native dans un wrapper pour une utilisation par C# #
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cet exemple montre comment encapsuler une classe C\+\+ native pour pouvoir l'utiliser dans du code créé en C\#, ou dans un autre langage .NET.  
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>Comment : inclure une classe native dans un wrapper pour une utilisation par C#
+Cet exemple montre comment exposer une classe C++ native, afin qu’il peut être consommé par le code créé en c# ou autre langage .NET.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // wrap_native_class_for_mgd_consumption.cpp  
@@ -75,5 +75,5 @@ private:
 };  
 ```  
   
-## Voir aussi  
- [Utilisation de l'interopérabilité C\+\+ \(PInvoke implicite\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

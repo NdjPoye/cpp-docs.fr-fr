@@ -1,33 +1,30 @@
 ---
-title: "hash_multimap::hash_multimap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::hash_multimap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_multimap (membre) (STL/CLR)"
+title: hash_multimap::hash_multimap (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::hash_multimap
+dev_langs: C++
+helpviewer_keywords: hash_multimap member [STL/CLR]
 ms.assetid: a1d576a7-5dc7-4ad9-abef-ee7a13caaec3
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2d09f0fd54625d5f6df87305771991c65340309f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::hash_multimap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Construit un objet container.  
+# <a name="hashmultimaphashmultimap-stlclr"></a>hash_multimap::hash_multimap (STL/CLR)
+Construit un objet conteneur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 hash_multimap();  
@@ -50,104 +47,90 @@ hash_multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred, hasher^ hashfn);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  premier  
  Début de la plage à insérer.  
   
  hashfn  
- Fonction de hachage pour faire correspondre les clés aux compartiments correspondants.  
+ Fonction pour les clés de mappage pour les compartiments de hachage.  
   
  last  
  Fin de la plage à insérer.  
   
  pred  
- Classer l'attribut de la séquence contrôlée.  
+ Classement de prédicat pour la séquence contrôlée.  
   
- right  
+ droite  
  Objet ou plage à insérer.  
   
-## Notes  
- Le constructeur :  
+## <a name="remarks"></a>Remarques  
+ Le constructeur :  
   
  `hash_multimap();`  
   
- démarre la séquence contrôlée sans éléments, avec l'attribut de classement par défaut `key_compare()`, et avec la fonction de hachage par défaut.  Vous l'utilisez pour spécifier une séquence initiale contrôlée vide, avec le prédicat de classement par défaut et la fonction de hachage.  
+ Initialise la séquence contrôlée sans aucun élément, avec la valeur par défaut classement prédicat `key_compare()`et avec la fonction de hachage par défaut. Il permet de spécifier une séquence contrôlée initiale vide avec la fonction de prédicat et hachage de classement par défaut.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `explicit hash_multimap(key_compare^ pred);`  
   
- démarre la séquence contrôlée sans éléments, avec l'attribut de classement par défaut `pred`, et avec la fonction de hachage par défaut.  Vous l'utilisez pour spécifier une séquence initiale contrôlée vide, avec le prédicat spécifique de classement par défaut et la fonction de hachage par défaut.  
+ Initialise la séquence contrôlée sans aucun élément, avec le prédicat de tri `pred`et avec la fonction de hachage par défaut. Il permet de spécifier une séquence contrôlée initiale vide avec le prédicat de tri spécifié et la fonction de hachage par défaut.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `hash_multimap(key_compare^ pred, hasher^ hashfn);`  
   
- démarre la séquence contrôlée sans éléments, avec l'attribut de classement par défaut `pred`, et avec la fonction de hachage par défaut `hashfn`.  Vous l'utilisez pour spécifier une séquence initiale contrôlée vide, avec le prédicat spécifique de classement par défaut et la fonction de hachage.  
+ Initialise la séquence contrôlée sans aucun élément, avec le prédicat de tri `pred`et avec la fonction de hachage `hashfn`. Il permet de spécifier une séquence contrôlée initiale vide avec la fonction de prédicat et hachage de tri spécifiée.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `hash_multimap(hash_multimap<Key, Mapped>% right);`  
   
- démarre la séquence contrôlée sans éléments par la séquence `[``right``.`[hash\_multimap::begin](../dotnet/hash-multimap-begin-stl-clr.md)`(),` `right``.`[hash\_multimap::end](../dotnet/hash-multimap-end-stl-clr.md)`())`, avec l'attribut de classement par défaut, et avec la fonction de hachage par défaut.  Vous l'utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le code de hachage multi mappage de l'objet `right`, Avec le défaut ordonnant le prédicat et la fonction de hachage.  
+ Initialise la séquence contrôlée par la séquence [`right.begin()`, `right.end()`), avec la valeur par défaut de classement de prédicat et avec la fonction de hachage par défaut. Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet hash_multimap `right`avec le prédicat de tri par défaut et la fonction de hachage.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `hash_multimap(hash_multimap<Key, Mapped>^ right);`  
   
- démarre la séquence contrôlée sans éléments par la séquence `[``right``->`[hash\_multimap::begin](../dotnet/hash-multimap-begin-stl-clr.md)`(),` `right``->`[hash\_multimap::end](../dotnet/hash-multimap-end-stl-clr.md)`())`, avec l'attribut de classement par défaut, et avec la fonction de hachage par défaut.  Vous l'utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le code de hachage multi mappage de l'objet `right`, Avec le défaut ordonnant le prédicat et la fonction de hachage.  
+ Initialise la séquence contrôlée par la séquence [`right->begin()`, `right->end()`), avec la valeur par défaut de classement de prédicat et avec la fonction de hachage par défaut. Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet hash_multimap `right`avec le prédicat de tri par défaut et la fonction de hachage.  
   
- Le constructeur :  
+ Le constructeur :  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_multimap(InIter first, InIter last);`  
   
- `hash_multimap(InIter first, InIter last);`  
+ Initialise la séquence contrôlée par la séquence [`first`, `last`), avec la valeur par défaut de classement de prédicat et avec la fonction de hachage par défaut. Il permet de rendre la séquence contrôlée une copie d’une autre séquence, avec la fonction de prédicat et hachage de classement par défaut.  
   
- démarre la séquence contrôlée sans éléments par la séquence `[``first``,` `last``)`, avec l'attribut de classement par défaut, et avec la fonction de hachage par défaut.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence, avec l'attribut et la fonction de hachage par défaut.  
+ Le constructeur :  
   
- Le constructeur :  
+ `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred);`  
   
- `template<typename InIter>`  
+ Initialise la séquence contrôlée par la séquence [`first`, `last`), avec le prédicat de tri `pred`et avec la fonction de hachage par défaut. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence, avec le prédicat de tri spécifié et la fonction de hachage par défaut.  
   
- `hash_multimap(InIter first, InIter last,`  
+ Le constructeur :  
   
- `key_compare^ pred);`  
+ `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
   
- démarre la séquence contrôlée sans éléments par la séquence `[``first``,` `last``)`, avec l'attribut de classement par défaut `pred`, et avec la fonction de hachage par défaut.  Vous l'utilisez pour faire de la séquence contrôlée d'une copie d'une autre séquence, avec l'attribut spécifique de classement et la fonction de hachage par défaut.  
+ Initialise la séquence contrôlée par la séquence [`first`, `last`), avec le prédicat de tri `pred`et avec la fonction de hachage `hashfn`. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence, avec la fonction de prédicat et hachage de tri spécifiée.  
   
- Le constructeur :  
-  
- `template<typename InIter>`  
-  
- `hash_multimap(InIter first, InIter last,`  
-  
- `key_compare^ pred, hasher^ hashfn);`  
-  
- Initialise la séquence contrôlée avec la séquence `[``first``,` `last``)`, avec le prédicat de classements `pred`, et avec la fonction de hachage `hashfn`.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence, avec l'attribut spécifié et la fonction de hachage par défaut.  
-  
- Le constructeur :  
+ Le constructeur :  
   
  `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- démarre la séquence contrôlée par la séquence indiquée par l'énumérateur `right`, avec l'attribut par défaut, et avec la fonction de hachage par défaut.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence décrite par un énumérateur, avec le prédicat de classement par défaut et la fonction de hachage par défaut.  
+ Initialise la séquence contrôlée par la séquence désignée par l’énumérateur `right`, avec la valeur par défaut de classement de prédicat et avec la fonction de hachage par défaut. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec la fonction de prédicat et hachage de classement par défaut.  
   
- Le constructeur :  
+ Le constructeur :  
   
- `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ Initialise la séquence contrôlée par la séquence désignée par l’énumérateur `right`, avec le prédicat de tri `pred`et avec la fonction de hachage par défaut. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par l’énumérateur avec la fonction de hachage par défaut et le prédicat de tri spécifiée.  
   
- démarre la séquence contrôlée par l'ordre indiqué par l'énumérateur `right`, avec l'attribut de classement par défaut `pred`, et avec la fonction de hachage par défaut.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence décrite par un énumérateur, avec le prédicat spécifié de classement par défaut et la fonction de hachage par défaut.  
+ Le constructeur :  
   
- Le constructeur :  
+ `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
   
- `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ Initialise la séquence contrôlée par la séquence désignée par l’énumérateur `right`, avec le prédicat de tri `pred`et avec la fonction de hachage `hashfn`. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par l’énumérateur, avec la fonction de prédicat et hachage de tri spécifiée.  
   
- `key_compare^ pred, hasher^ hashfn);`  
-  
- démarre la séquence contrôlée par l'ordre indiqué par l'énumérateur `right`, avec l'attribut de classement par défaut `pred`, et avec la fonction de hachage par défaut `hashfn`.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence décrite par un énumérateur, avec le prédicat spécifique de classement par défaut et la fonction de hachage par défaut.  
-  
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_multimap_construct.cpp   
@@ -259,26 +242,32 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0**  
- **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_map\>  
+```Output  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [c 3] [b 2] [a 1]  
   
- **Espace de nom :** cliext  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
   
-## Voir aussi  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::generic\_container](../dotnet/hash-multimap-generic-container-stl-clr.md)   
- [hash\_multimap::operator\=](../dotnet/hash-multimap-operator-assign-stl-clr.md)
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/hash_map >  
+  
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::generic_container (STL/CLR)](../dotnet/hash-multimap-generic-container-stl-clr.md)   
+ [hash_multimap::operator= (STL/CLR)](../dotnet/hash-multimap-operator-assign-stl-clr.md)

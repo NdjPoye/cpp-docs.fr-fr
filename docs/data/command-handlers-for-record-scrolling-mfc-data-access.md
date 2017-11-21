@@ -1,44 +1,43 @@
 ---
-title: "Gestionnaires de commandes pour le d&#233;filement des enregistrements (Acc&#232;s aux donn&#233;es MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "faire défiler des enregistrements (C++)"
-  - "vues des enregistrements (C++), défilement"
-  - "faire défiler des enregistrements"
+title: "Gestionnaires de commandes pour l’enregistrement de défilement (MFC Data Access) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- record views [C++], scrolling
+- record scrolling [C++]
+- scrolling records
 ms.assetid: f8b13477-2a37-459e-a30c-806fb78165ac
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dc91c19661bb8902ff15919d89e745e9966c72c5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Gestionnaires de commandes pour le d&#233;filement des enregistrements (Acc&#232;s aux donn&#233;es MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les classes [CRecordView](../mfc/reference/crecordview-class.md) et [CDaoRecordView](../mfc/reference/cdaorecordview-class.md) fournissent une gestion des commandes par défaut pour les commandes standard suivantes :  
+# <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>Gestionnaires de commandes pour le défilement des enregistrements (Accès aux données MFC)
+Le [CRecordView](../mfc/reference/crecordview-class.md) classe fournit par défaut gestion des commandes pour les commandes standard suivantes :  
   
--   **ID\_RECORD\_MOVE\_FIRST**  
+-   **ID_RECORD_MOVE_FIRST**  
   
--   **ID\_RECORD\_MOVE\_LAST**  
+-   **ID_RECORD_MOVE_LAST**  
   
--   **ID\_RECORD\_MOVE\_NEXT**  
+-   **ID_RECORD_MOVE_NEXT**  
   
--   **ID\_RECORD\_MOVE\_PREV**  
+-   **ID_RECORD_MOVE_PREV**  
   
- La fonction de membre `OnMove` des classes `CRecordView` et `CDaoRecordView` fournit une gestion des commandes par défaut pour les quatre commandes, qui permettent de passer d'un enregistrement à l'autre.  À mesure que ces commandes sont exécutées, RFX \(ou DFX\) charge le nouvel enregistrement dans les champs du recordset et DDX déplace les valeurs dans les contrôles du formulaire d'enregistrement.  Pour plus d'informations sur RFX, consultez [Record Field Exchange \(RFX\)](../data/odbc/record-field-exchange-rfx.md).  
+ Le `OnMove` fonction membre fournit par défaut gestion des commandes pour les quatre commandes, qui permettent de passer d’un enregistrement à l’autre. À mesure que ces commandes sont exécutées, RFX (ou DFX) charge le nouvel enregistrement dans les champs du recordset et DDX déplace les valeurs dans les contrôles du formulaire d'enregistrement. Pour plus d’informations sur RFX, consultez [Record Field Exchange (RFX)](../data/odbc/record-field-exchange-rfx.md).  
   
 > [!NOTE]
 >  Veillez à utiliser ces ID de commandes standard pour tous les objets d'interface utilisateur associés aux commandes de navigation d'enregistrements standard.  
   
-## Voir aussi  
- [Prise en charge de la navigation dans une vue de l'enregistrement](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+## <a name="see-also"></a>Voir aussi  
+ [Prise en charge de la Navigation dans une vue d’enregistrement](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)

@@ -1,62 +1,61 @@
 ---
-title: "/Od (D&#233;sactiver (D&#233;bogage)) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/od"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Od (option du compilateur C++)"
-  - "désactiver (déboguer) (option du compilateur C++)"
-  - "désactiver les optimisations"
-  - "compilation rapide"
-  - "pas d'optimisations"
-  - "Od (option du compilateur C++)"
-  - "-Od (option du compilateur C++)"
+title: "-Od (désactiver (débogage)) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /od
+dev_langs: C++
+helpviewer_keywords:
+- no optimizations
+- fast compiling
+- /Od compiler option [C++]
+- disable optimizations
+- Od compiler option [C++]
+- -Od compiler option [C++]
+- disable (debug) compiler option [C++]
 ms.assetid: b1ac31b7-e086-4eeb-be5e-488f7513f5f5
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c1d26742d4922dac176f198037ad1cce29e722d0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /Od (D&#233;sactiver (D&#233;bogage))
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="od-disable-debug"></a>/Od (Désactiver (Débogage))
 Désactive toutes les optimisations du programme et accélère la compilation.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 /Od  
 ```  
   
-## Notes  
- Il s'agit de l'option par défaut.  Dans la mesure où elle supprime tout mouvement de code, l'option **\/Od** simplifie le processus de débogage.  Pour plus d'informations sur les options de compilateur utilisées pour le débogage, consultez [\/Z7, \/Zi, \/ZI \(Format des informations de débogage\)](../../build/reference/z7-zi-zi-debug-information-format.md).  
+## <a name="remarks"></a>Remarques  
+ Cette option est la valeur par défaut. Étant donné que **/Od** supprime le mouvement de code, elle simplifie le processus de débogage. Pour plus d’informations sur les options du compilateur pour le débogage, consultez [/Z7, / Zi, /ZI (Format des informations de débogage)](../../build/reference/z7-zi-zi-debug-information-format.md).  
   
-### Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Comment : ouvrir les pages de propriétés d'un projet](../../misc/how-to-open-project-property-pages.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
-2.  Cliquez sur le dossier **C\/C\+\+**.  
+2.  Cliquez sur le dossier **C/C++** .  
   
-3.  Cliquez sur la page de propriétés **Optimisation**.  
+3.  Cliquez sur le **optimisation** page de propriétés.  
   
-4.  Modifiez la propriété **Optimisation**.  
+4.  Modifier la **optimisation** propriété.  
   
-### Pour définir cette option du compilateur par programmation  
+### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation  
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Optimization%2A>.  
   
-## Voir aussi  
- [\/O \(Optimiser le code\), options](../../build/reference/o-options-optimize-code.md)   
+## <a name="see-also"></a>Voir aussi  
+ [/O (optimiser le Code), options](../../build/reference/o-options-optimize-code.md)   
  [Options du compilateur](../../build/reference/compiler-options.md)   
- [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)   
- [\/Z7, \/Zi, \/ZI \(Format des informations de débogage\)](../../build/reference/z7-zi-zi-debug-information-format.md)
+ [Définition des Options du compilateur](../../build/reference/setting-compiler-options.md)   
+ [/Z7, /Zi, /ZI (Format des informations de débogage)](../../build/reference/z7-zi-zi-debug-information-format.md)

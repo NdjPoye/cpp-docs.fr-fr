@@ -1,45 +1,42 @@
 ---
-title: "HANDLENullTraits::GetInvalidValue, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetInvalidValue (méthode)"
+title: "Handlenulltraits::getinvalidvalue, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue
+dev_langs: C++
+helpviewer_keywords: GetInvalidValue method
 ms.assetid: 49df8980-9c92-4333-9f3b-687b7c10949e
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: af421098edd2004862f3410502ea693ea65ceb75
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# HANDLENullTraits::GetInvalidValue, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="handlenulltraitsgetinvalidvalue-method"></a>HANDLENullTraits::GetInvalidValue, méthode
 Représente un handle non valide.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 inline static Type GetInvalidValue();  
 ```  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  Retourne toujours `nullptr`.  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers::HandleTraits  
+ **Namespace :** Microsoft::WRL::Wrappers::HandleTraits  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [HANDLENullTraits, structure](../windows/handlenulltraits-structure.md)

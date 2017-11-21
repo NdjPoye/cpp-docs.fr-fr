@@ -1,98 +1,97 @@
 ---
-title: "CRowsetImpl, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowsetImpl"
-  - "ATL.CRowsetImpl"
-  - "ATL::CRowsetImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRowsetImpl (classe)"
+title: CRowsetImpl, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowsetImpl
+- ATL.CRowsetImpl
+- ATL::CRowsetImpl
+dev_langs: C++
+helpviewer_keywords: CRowsetImpl class
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2390a474e289ea41fd676759d12b92e8a22e462a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# CRowsetImpl, classe
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fournit une implémentation standard de l'ensemble de lignes OLE DB sans l'héritage multiple de nombreuses interfaces d'implémentation.  
+# <a name="crowsetimpl-class"></a>CRowsetImpl, classe
+Fournit une implémentation d’ensemble de lignes OLE DB standard sans nécessiter l’héritage multiple de nombreuses interfaces d’implémentation.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template <  
    class T,  
    class Storage,  
    class CreatorClass,  
-   class ArrayType = CAtlArray<Storage>,   
-   class RowClass = CSimpleRow,   
-   class RowsetInterface = IRowsetImpl < T, IRowset >   
+   class ArrayType = CAtlArray<Storage>,   
+   class RowClass = CSimpleRow,   
+   class RowsetInterface = IRowsetImpl < T, IRowset >   
 >  
-class CRowsetImpl :    
-   public CComObjectRootEx<CreatorClass::_ThreadModel>,   
-   public CRowsetBaseImpl<T, Storage, ArrayType, RowsetInterface>,   
+class CRowsetImpl :    
+   public CComObjectRootEx<CreatorClass::_ThreadModel>,   
+   public CRowsetBaseImpl<T, Storage, ArrayType, RowsetInterface>,   
    public IRowsetInfoImpl<T, CreatorClass::_PropClass>  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
- Créez une classe qui dérive de `CRowsetImpl`.  
+ Classe de l’utilisateur qui dérive de `CRowsetImpl`.  
   
  `Storage`  
- Enregistrement utilisateur  
+ La classe d’enregistrement utilisateur.  
   
  `CreatorClass`  
- La classe qui contient les propriétés de l'ensemble de lignes ; en général la commande.  
+ La classe qui contient les propriétés de l’ensemble de lignes ; en général, la commande.  
   
  `ArrayType`  
- La classe qui sera comme stockage des données de l'ensemble de lignes.  Ce paramètre par défaut est `CAtlArray`, mais il peut être n'importe quelle classe qui prend en charge les fonctionnalités requises.  
+ La classe qui agira en tant que stockage pour les données de l’ensemble de lignes. Ce paramètre par défaut est `CAtlArray`, mais il peut être n’importe quelle classe qui prend en charge la fonctionnalité requise.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Méthodes  
-  
-|||  
-|-|-|  
-|[NameFromDBID](../../data/oledb/crowsetimpl-namefromdbid.md)|Extrait une chaîne de **DBID** et la copie sur `bstr` transmis.|  
-|[EnsembleTexteCommande](../../data/oledb/crowsetimpl-setcommandtext.md)|Valide et stocke **DBID**s dans les deux chaînes \([m\_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) et [m\_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)\).|  
-  
-### Méthodes substituables  
+### <a name="methods"></a>Méthodes  
   
 |||  
 |-|-|  
-|[GetColumnInfo](../../data/oledb/crowsetimpl-getcolumninfo.md)|Récupère les informations de colonne pour une demande d'un client particulière.|  
-|[GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md)|Vérifie si l'un ou l'autre ou les deux paramètres contiennent des valeurs de chaîne et, le cas échéant, copie les valeurs de chaîne aux membres de données [m\_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) et [m\_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).|  
-|[ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md)|Vérifie si l'un ou l'autre ou les deux **DBID**s contiennent des valeurs de chaîne et, le cas échéant, les copier ses membres de données [m\_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) et [m\_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).|  
+|[NameFromDBID](../../data/oledb/crowsetimpl-namefromdbid.md)|Extrait une chaîne à partir d’un **DBID** et la copie à le `bstr` passé.|  
+|[SetCommandText](../../data/oledb/crowsetimpl-setcommandtext.md)|Valide et stocke le **DBID**s dans les deux chaînes ([m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) et [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)).|  
   
-### Membres de données  
+### <a name="overridable-methods"></a>Méthodes substituables  
   
 |||  
 |-|-|  
-|[m\_rgRowData](../../data/oledb/crowsetimpl-m-rgrowdata.md)|Par défaut, `CAtlArray` qui créé un modèle sur l'argument TEMPLATE enregistré de l'utilisateur à `CRowsetImpl`.  Une classe de type tableau peut être utilisée en modifiant l'argument TEMPLATE d'`ArrayType` à `CRowsetImpl`.|  
-|[m\_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)|Contient la commande initiale de l'ensemble de lignes.|  
-|[m\_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)|Contient l'index initial de l'ensemble de lignes.|  
+|[GetColumnInfo](../../data/oledb/crowsetimpl-getcolumninfo.md)|Récupère les informations de colonne pour une demande de client particulier.|  
+|[GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md)|Vérifie si un ou les deux paramètres contiennent des valeurs de chaîne et dans ce cas, copie les valeurs de chaîne dans les données membres [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) et [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).|  
+|[ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md)|Une vérification pour voir si un ou les deux **DBID**s contiennent des valeurs de chaîne et dans ce cas, les copie dans ses données membres [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) et [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).|  
   
-## Notes  
- `CRowsetImpl` fournit les substitutions sous la forme d'upcasts statiques.  Les méthodes contrôlent la manière dont un ensemble de lignes donné validera le texte de la commande.  Vous pouvez créer votre propre classe du style de `CRowsetImpl`lors de les interfaces d'implémentation plusieurs héritées.  La seule méthode pour laquelle vous devez fournir l'implémentation est **Exécuter**.  Selon le type d'ensemble de lignes, vous créez les méthodes de créateur attendront des signatures pour **Exécuter**.  Par exemple, si vous utilisez `CRowsetImpl`\- classe dérivée à implémenter un ensemble de lignes de schéma, la méthode de **Exécuter** aura la signature suivante :  
+### <a name="data-members"></a>Membres de données  
+  
+|||  
+|-|-|  
+|[m_rgRowData](../../data/oledb/crowsetimpl-m-rgrowdata.md)|Par défaut, un `CAtlArray` qui templatizes sur l’argument de modèle d’enregistrement utilisateur `CRowsetImpl`. Une autre classe de type tableau peut être utilisée en modifiant le `ArrayType` d’argument template pour `CRowsetImpl`.|  
+|[m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)|Contient la commande initiale de l’ensemble de lignes.|  
+|[m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)|Contient l’index de départ de l’ensemble de lignes.|  
+  
+## <a name="remarks"></a>Remarques  
+ `CRowsetImpl`Fournit des remplacements dans le formulaire d’effectue un upcast statique. Les méthodes de contrôlent la manière dans lequel un ensemble de lignes donné validera le texte de la commande. Vous pouvez créer vos propres `CRowsetImpl`-classe de style en effectuant vos interfaces de l’implémentation héritée de multiples. La seule méthode pour laquelle vous devez fournir l’implémentation est **Execute**. Selon le type de l’ensemble de lignes que vous créez, les méthodes creator seront attend à recevoir des signatures différentes pour **Execute**. Par exemple, si vous utilisez un `CRowsetImpl`-dérivée de la classe pour implémenter un ensemble de lignes de schéma, le **Execute** méthode aura la signature suivante :  
   
  `HRESULT Execute(LONG* pcRows, ULONG cRestrictions, const VARIANT* rgRestrictions)`  
   
- Si vous créez `CRowsetImpl`\- classe dérivée à implémenter un ensemble de lignes de commande ou de session, la méthode de **Exécuter** aura la signature suivante :  
+ Si vous créez un `CRowsetImpl`-dérivée de la classe pour implémenter une commande ou un ensemble de lignes de la session, le **Execute** méthode aura la signature suivante :  
   
  `HRESULT Execute(LONG* pcRows, DBPARAMS* pParams)`  
   
- Pour implémenter `CRowsetImpl`l'un des \- les méthodes dérivées de **Exécuter**, vous devez remplir des tampons de données internes \([m\_rgRowData](../../data/oledb/crowsetimpl-m-rgrowdata.md)\).  
+ Pour mettre en œuvre toutes la `CRowsetImpl`-dérivée **Execute** méthodes, vous devez remplir vos tampons de données interne ([m_rgRowData](../../data/oledb/crowsetimpl-m-rgrowdata.md)).  
   
-## Configuration requise  
- **En\-tête :** atldb.h
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldb.h

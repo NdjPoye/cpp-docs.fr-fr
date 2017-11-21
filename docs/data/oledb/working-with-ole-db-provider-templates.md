@@ -1,35 +1,35 @@
 ---
-title: "Utilisation des mod&#232;les du fournisseur OLE&#160;DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fournisseurs OLE DB, modèles"
-  - "OLE DB, modèles fournisseur"
-  - "référence, modèles du fournisseur OLE DB"
-  - "modèles, fournisseur OLE DB"
+title: "Utilisation des modèles du fournisseur OLE DB | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- reference, OLE DB provider templates
+- OLE DB, provider templates
+- templates, OLE DB provider
+- OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d9158351892c8a8d097f0eccd498c05b2833d862
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Utilisation des mod&#232;les du fournisseur OLE&#160;DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Pour apprendre à utiliser les modèles du fournisseur OLE DB, consultez les rubriques suivantes :  
+# <a name="working-with-ole-db-provider-templates"></a>Utilisation des modèles du fournisseur OLE DB
+Pour savoir comment travailler avec les modèles du fournisseur OLE DB, consultez les rubriques suivantes :  
   
--   [Ajout d'une interface à votre fournisseur](../../data/oledb/adding-an-interface-to-your-provider.md)  
+-   [Ajout d’une interface à votre fournisseur](../../data/oledb/adding-an-interface-to-your-provider.md)  
   
--   [Référencement d'une propriété dans votre fournisseur](../../data/oledb/referencing-a-property-in-your-provider.md)  
+-   [Référencement d’une propriété dans votre fournisseur](../../data/oledb/referencing-a-property-in-your-provider.md)  
   
 -   [Définition de propriétés dans votre fournisseur](../../data/oledb/setting-properties-in-your-provider.md)  
   
@@ -43,6 +43,6 @@ Pour apprendre à utiliser les modèles du fournisseur OLE DB, consultez les ru
   
 -   [Conversion des données non prises en charge par le fournisseur](../../data/oledb/converting-data-not-supported-by-the-provider.md)  
   
-## Voir aussi  
- [Référence des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)   
- [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Référence des modèles de fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)   
+ [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

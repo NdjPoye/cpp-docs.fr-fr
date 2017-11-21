@@ -1,68 +1,67 @@
 ---
-title: "_set_errno | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_set_errno"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "set_errno"
-  - "_set_errno"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_set_errno (fonction)"
-  - "errno (variable globale)"
-  - "set_errno (fonction)"
+title: _set_errno | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: _set_errno
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- set_errno
+- _set_errno
+dev_langs: C++
+helpviewer_keywords:
+- errno global variable
+- set_errno function
+- _set_errno function
 ms.assetid: d338914a-1894-4cf3-ae45-f2c4eb26590b
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2353929ea112777561697928c4f12b3e8f80a47a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# _set_errno
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Définissez la valeur de la variable globale `errno`.  
+# <a name="seterrno"></a>_set_errno
+Définit la valeur de la variable globale `errno`.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-errno_t _set_errno(   
-   int value   
+errno_t _set_errno(   
+   int value   
 );  
 ```  
   
-#### Paramètres  
- \[in\] `value`  
+#### <a name="parameters"></a>Paramètres  
+ [in] `value`  
  Nouvelle valeur de `errno`.  
   
-## Valeur de retour  
- En cas de succès, retourne la valeur zero.  
+## <a name="return-value"></a>Valeur de retour  
+ Retourne zéro si l’opération réussit.  
   
-## Notes  
- Les valeurs possibles sont définies dans Errno.h.  Voir aussi [errno, constantes](../../c-runtime-library/errno-constants.md).  
+## <a name="remarks"></a>Notes  
+ Les valeurs possibles sont définies dans Errno.h. Voir aussi [errno, constantes](../../c-runtime-library/errno-constants.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_set_errno.c  
@@ -76,15 +75,18 @@ int main()
 }  
 ```  
   
-  **Oups \! : Séquence d'octets non conforme**   
-## Configuration requise  
+```Output  
+Oops: Illegal byte sequence  
+```  
   
-|Routine|En\-tête requis|En\-tête facultatif|  
-|-------------|---------------------|-------------------------|  
-|`_set_errno`|\<stdlib.h\>|\<errno.h\>|  
+## <a name="requirements"></a>Spécifications  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+|Routine|En-tête requis|En-tête facultatif|  
+|-------------|---------------------|---------------------|  
+|`_set_errno`|\<stdlib.h>|\<errno.h>|  
   
-## Voir aussi  
- [\_get\_errno](../../c-runtime-library/reference/get-errno.md)   
- [errno, \_doserrno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [_get_errno](../../c-runtime-library/reference/get-errno.md)   
+ [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)

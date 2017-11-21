@@ -1,36 +1,34 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4392 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4392"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4392"
+title: Compilateur avertissement (niveau 1) C4392 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4392
+dev_langs: C++
+helpviewer_keywords: C4392
 ms.assetid: 817806ad-06a6-4b9e-8355-e25687c782dc
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9166a6ea3fc210d0e430c79dc517cadac6a84895
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 1) C4392
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'signature' : nombre d'arguments incorrect pour la fonction intrinsèque, 'nombre' arguments attendus  
+# <a name="compiler-warning-level-1-c4392"></a>Avertissement du compilateur (niveau 1) C4392
+'signature' : nombre incorrect d’arguments pour la fonction intrinsèque, attendu 'nombre' arguments  
   
- Une déclaration de fonction pour une fonction intrinsèque du compilateur avait un nombre d'arguments incorrect.  L'image résultante peut ne pas s'exécuter correctement.  
+ Une déclaration de fonction pour intrinsèque du compilateur avait un nombre incorrect d’arguments. L’image résultante ne peut pas s’exécuter correctement.  
   
- Pour résoudre cet avertissement, vous pouvez soit corriger la déclaration, soit supprimer la déclaration et vous contenter d'inclure le fichier d'en\-tête approprié par \#include.  
+ Pour résoudre cet avertissement, corrigez la déclaration ou supprimer la déclaration et simplement #include le fichier d’en-tête approprié.  
   
- L'exemple suivant génère l'erreur C4392 :  
+ L’exemple suivant génère l’erreur C4392 :  
   
 ```  
 // C4392.cpp  

@@ -1,32 +1,30 @@
 ---
-title: "binary_negate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binary_negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary_negate (fonction) (STL/CLR)"
+title: binary_negate (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binary_negate
+dev_langs: C++
+helpviewer_keywords: binary_negate function [STL/CLR]
 ms.assetid: 0c3b47eb-0f37-4cb2-b879-4c9f0e57d275
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: afb2a3617dcd162ac3298d95cfa16b9044ef7fb0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# binary_negate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe du modèle décrit un functor qui, lorsqu'il est appelé, retourne le NOT logique de son functor stocké à deux arguments.  Vous utilisez pour spécifier un objet fonction au niveau de son functor stocké.  
+# <a name="binarynegate-stlclr"></a>binary_negate (STL/CLR)
+La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourne la logique pas de son stockée functor de deux arguments. Vous l’utilisez spécifier un objet de fonction en termes de son functor stockée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Fun>  
@@ -50,35 +48,35 @@ public:
     };  
 ```  
   
-#### Paramètres  
- Fun  
- Le type de functor stocké.  
+#### <a name="parameters"></a>Paramètres  
+ amusement  
+ Le type de la fonction stockée.  
   
-## Fonctions membres  
+## <a name="member-functions"></a>Fonctions membres  
   
-|Définition de type|Description|  
-|------------------------|-----------------|  
-|type\_délégué|Le type du délégué générique.|  
-|premier\_type\_d'argument.|Le type du premier argument de functor.|  
-|type\_de\_résultat|Le type du premier argument de functor.|  
-|deuxième\_type\_d'argument.|Le type du deuxième argument de functor.|  
-|type\_de\_fonction\_stocké|Type du functor.|  
+|Définition de types|Description|  
+|---------------------|-----------------|  
+|delegate_type|Le type du délégué générique.|  
+|first_argument_type|Le type du premier argument functor.|  
+|RESULT_TYPE|Le type du résultat functor.|  
+|second_argument_type|Le type du second argument functor.|  
+|stored_function_type|Le type de foncteur.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|binary\_negate|Construit le functor.|  
+|binary_negate|Construit le foncteur.|  
   
 |Opérateur|Description|  
-|---------------|-----------------|  
-|opérateur\(\)|Calcule la fonction souhaitée.|  
-|opérateur type\_délégué^\(\)|Convertit le functor à un délégué.|  
+|--------------|-----------------|  
+|operator()|Calcule la fonction de votre choix.|  
+|opérateur delegate_type^()|Effectue un cast de la fonction d’un délégué.|  
   
-## Notes  
- La classe du modèle décrit un functor de deux arguments qui stocke un autre functor de deux arguments.  Elle définit l'opérateur membre `operator()` afin que, lorsque l'objet est appelé en tant que fonction, elle retourne un NOT logique du functor stocké appelé avec les deux arguments.  
+## <a name="remarks"></a>Remarques  
+ La classe de modèle décrit un functor deux arguments qui stocke un autre functor de deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, elle retourne la logique pas de la fonction stockée appelée avec les deux arguments.  
   
- Vous pouvez également transmettre l'objet en tant qu'argument de fonction dont le type est `delegate_type^` et il sera converti correctement.  
+ Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_binary_negate.cpp   
@@ -128,14 +126,17 @@ int main()
   
 ```  
   
-  **4 3**  
- **4 4**  
- **1 0**  
- **1 0**   
-## Configuration requise  
- **En\-tête:** \<cliext\/functional\>  
+```Output  
+4 3  
+4 4  
+1 0  
+1 0  
+```  
   
- **Espace de noms:** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/fonctionnel >  
   
-## Voir aussi  
- [not2](../dotnet/not2-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [not2 (STL/CLR)](../dotnet/not2-stl-clr.md)

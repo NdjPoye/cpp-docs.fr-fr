@@ -1,35 +1,33 @@
 ---
-title: "Erreur des outils &#201;diteur de liens LNK1312 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1312"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1312"
+title: "Erreur LNK1312 des outils Éditeur de liens | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1312
+dev_langs: C++
+helpviewer_keywords: LNK1312
 ms.assetid: 48284abb-d849-43fc-ab53-45aded14fd8a
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0fc7bf47ff05f817b36ff9ff641fe7823aa38d9a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Erreur des outils &#201;diteur de liens LNK1312
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-fichier non valide ou endommagé : impossible d'importer l'assembly  
+# <a name="linker-tools-error-lnk1312"></a>Erreur des outils Éditeur de liens LNK1312
+fichier non valide ou endommagé : Impossible d’importer l’assembly  
   
- Lors de la génération d'un assembly, un fichier autre qu'un module ou un assembly compilé avec **\/clr** a été passé à l'option de l'éditeur de liens **\/ASSEMBLYMODULE**.  Si vous avez passé un fichier objet à **\/ASSEMBLYMODULE**, il vous suffit de passer directement l'objet à l'éditeur de liens plutôt qu'à **\/ASSEMBLYMODULE**.  
+ Lors de la création d’un assembly, un fichier autre qu’un module ou un assembly compilé avec **/CLR** a été passé à la **/ASSEMBLYMODULE** option de l’éditeur de liens.  Si vous avez passé un fichier objet à **/ASSEMBLYMODULE**, simplement passer l’objet directement à l’éditeur de liens, plutôt qu’à **/ASSEMBLYMODULE**.  
   
-## Exemple  
- L'exemple suivant a créé le fichier .obj.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant créé le fichier .obj.  
   
 ```  
 // LNK1312.cpp  
@@ -40,8 +38,8 @@ public:
 };  
 ```  
   
-## Exemple  
- L'exemple suivant génère l'erreur LNK1312.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur LNK1312.  
   
 ```  
 // LNK1312_b.cpp  

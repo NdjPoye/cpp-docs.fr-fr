@@ -1,41 +1,39 @@
 ---
-title: "list::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type (membre) (STL/CLR)"
+title: List::size_type (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: bfdf869f-fd7e-47b4-9ce9-68f7146dc3ed
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cff995d4d5b21afc0dd1e54800cf812353c0b022
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# list::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le type d'une distance signée entre deux éléments.  
+# <a name="listsizetype-stlclr"></a>list::size_type (STL/CLR)
+Le type d’une distance signée entre deux éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef int size_type;  
 ```  
   
-## Notes  
- Le type décrit un décompte d'élément non négatif.  
+## <a name="remarks"></a>Remarques  
+ Le type décrit un nombre non négatif élément.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_list_size_type.cpp   
@@ -65,13 +63,16 @@ int main()
   
 ```  
   
-  **a b c**  
-**end\(\)\-begin\(\) \= 3**   
-## Configuration requise  
- **En tête:** \<cliext\/list\>  
+```Output  
+ a b c  
+end()-begin() = 3  
+```  
   
- **Espace de nom:** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/liste >  
   
-## Voir aussi  
- [list](../dotnet/list-stl-clr.md)   
- [list::empty](../dotnet/list-empty-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)

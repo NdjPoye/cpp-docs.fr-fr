@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - literals, C++
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5c4a9a7aca2f11956e0ba47cced37a86733dcce8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: a55a608246403f427107869cbb275fa10b5569b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Littéraux numériques, booléen et pointeur (C++)
 Un littéral est un élément de programme qui représente directement une valeur. Cet article traite des littéraux de type entier, virgule flottante, booléen et de pointeur. Pour plus d’informations sur les littéraux de chaîne et de caractère, consultez [chaîne et les littéraux de caractère (C++)](../cpp/string-and-character-literals-cpp.md). Vous pouvez également définir vos propres littéraux basés sur un de ces catégories. Pour plus d’informations, consultez [littéraux définis par l’utilisateur (C++)](../cpp/user-defined-literals-cpp.md)  
@@ -108,7 +105,7 @@ long long i = 24'847'458'121
   
  L’exposant peut être spécifié à l’aide de **e** ou **E**, qui ont la même signification, suivie d’un signe facultatif (+ ou -) et une séquence de chiffres.  Si un exposant est présent, la virgule décimale de fin est inutile dans les nombres entiers tels que `18E0`.  
   
- Par défaut des littéraux à virgule flottante en type **double**. Grâce aux suffixes **f** ou **l** (ou **F** ou **L** , le suffixe n’est pas respecter la casse), le littéral peut être spécifié comme ** float** ou `long double`, respectivement.  
+ Par défaut des littéraux à virgule flottante en type **double**. Grâce aux suffixes **f** ou **l** (ou **F** ou **L** , le suffixe n’est pas respecter la casse), le littéral peut être spécifié comme  **float** ou `long double`, respectivement.  
   
  Bien que `long double` et **double** ont la même représentation, ils ne sont pas du même type. Par exemple, vous pouvez avoir des fonctions surchargées comme  
   

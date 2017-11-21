@@ -1,32 +1,30 @@
 ---
-title: "RuntimeClass::Release, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClass::Release"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "release (méthode)"
+title: "Runtimeclass::Release, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClass::Release
+dev_langs: C++
+helpviewer_keywords: Release method
 ms.assetid: 0bd6f9e2-ad90-4de6-adef-a6286f458cb6
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b989b32add712a9f9c97385104ed65a5cc704c9c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# RuntimeClass::Release, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Effectue une opération de livraison COM sur l'objet en cours de RuntimeClass.  
+# <a name="runtimeclassrelease-method"></a>RuntimeClass::Release, méthode
+Effectue une opération de libération de COM sur l’objet RuntimeClass actuel.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 STDMETHOD_(  
@@ -35,16 +33,16 @@ STDMETHOD_(
 )();  
 ```  
   
-## Valeur de retour  
- S\_OK si l'opération a réussi; sinon, un HRESULT indiquant l'erreur.  
+## <a name="return-value"></a>Valeur de retour  
+ S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.  
   
-## Remarques  
- Si le décompte de références est zéro, l'objet de RuntimeClass est supprimé.  
+## <a name="remarks"></a>Notes  
+ Si le décompte de références atteint zéro, l’objet RuntimeClass est supprimé.  
   
-## Configuration requise  
- **En\-tête:** implements.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** implements.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [RuntimeClass, classe](../windows/runtimeclass-class.md)

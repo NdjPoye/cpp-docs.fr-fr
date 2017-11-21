@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- for keyword [C++]
+dev_langs: C++
+helpviewer_keywords: for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6b958bba842a5dfdbe61415c6ad81aab7a8b4110
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 700a5d39d2752ba334f06b04382dab792d5f81e5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="for-statement-c"></a>for, instruction (C++)
 Exécute une instruction à plusieurs reprises jusqu'à ce que la condition soit false. Pour plus d’informations sur la plage pour l’instruction, consultez [Range-based d’instruction (C++)](../cpp/range-based-for-statement-cpp.md).  

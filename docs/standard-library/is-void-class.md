@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::is_void
-dev_langs:
-- C++
+f1_keywords: type_traits/std::is_void
+dev_langs: C++
 helpviewer_keywords:
 - is_void class
 - is_void
 ms.assetid: 99b0de3b-1b38-4949-b053-080e5363174e
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 8b77866a16eabc39d96e4b66f9419bf618b725ec
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 6bb753ad54ee2a74dc9de2556c65e3e3c537f191
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="isvoid-class"></a>is_void, classe
 Teste si le type est void.  
@@ -84,5 +80,4 @@ is_void<void> == true
   
 ## <a name="see-also"></a>Voir aussi  
  [<type_traits>](../standard-library/type-traits.md)
-
 

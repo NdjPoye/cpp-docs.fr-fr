@@ -1,40 +1,40 @@
 ---
-title: "R&#233;ception des notifications | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "événements (C++), notifications dans OLE DB"
-  - "notifications (C++), événements"
-  - "notifications (C++), consommateurs OLE DB"
-  - "consommateurs OLE DB, notifications"
-  - "fournisseurs OLE DB, notifications"
-  - "recevoir des notifications dans OLE DB"
-  - "jeux de lignes, notifications d'événement"
+title: Recevoir des Notifications | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- notifications [C++], OLE DB consumers
+- receiving notifications in OLE DB
+- events [C++], notifications in OLE DB
+- notifications [C++], events
+- OLE DB consumers, notifications
+- rowsets, event notifications
+- OLE DB providers, notifications
 ms.assetid: 305a1103-0c87-40c8-94bc-7fbbdd52ae32
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ed9c82d97a1d96777ae9b7e3c28b8ffa0de4507a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# R&#233;ception des notifications
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-OLE DB fournit des interfaces pour la réception des notifications quand des événements se produisent.  Ces notifications sont décrites dans [Notifications relatives à l'objet OLE DB](https://msdn.microsoft.com/en-us/library/ms725406.aspx), dans le Guide de référence du programmeur *OLE DB*.  La configuration de ces événements utilise le mécanisme des points de connexion COM standard.  Par exemple, un objet ATL qui souhaite récupérer des événements par l'intermédiaire de `IRowsetNotify` implémente l'interface `IRowsetNotify` en ajoutant `IRowsetNotify` à la liste dérivée de la classe et en l'exposant via une macro **COM\_INTERFACE\_ENTRY**.  
+# <a name="receiving-notifications"></a>Réception des notifications
+OLE DB fournit des interfaces pour recevoir des notifications lorsque des événements se produisent. Ceux-ci sont décrits dans [Notifications de l’objet OLE DB](https://msdn.microsoft.com/en-us/library/ms725406.aspx) dans les *de référence du programmeur OLE DB*. Le programme d’installation de ces événements utilise le mécanisme de point de connexion COM standard. Par exemple, un objet ATL qui souhaite récupérer des événements via `IRowsetNotify` implémente la `IRowsetNotify` interface en ajoutant `IRowsetNotify` à la liste de la classe dérivée et de l’exposer via une **COM_INTERFACE_ENTRY** (macro).  
   
- `IRowsetNotify` possède trois méthodes, qui peuvent être appelées à différents moments.  Si vous voulez répondre à une seule de ces méthodes, vous pouvez utiliser la classe [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md), qui retourne **E\_NOTIMPL** pour les méthodes qui ne vous intéressent pas.  
+ `IRowsetNotify`possède trois méthodes, qui peuvent être appelées à différents moments. Si vous souhaitez répondre à une seule de ces méthodes, vous pouvez utiliser la [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) classe, qui retourne **E_NOTIMPL** pour les méthodes qui vous n'intéressent pas.  
   
- Lorsque vous créez le jeu de lignes, vous devez indiquer au fournisseur que vous voulez que l'objet jeu de lignes retourné prenne en charge **IConnectionPointContainer**, qui est nécessaire pour configurer la notification.  
+ Lorsque vous créez l’ensemble de lignes, vous devez indiquer au fournisseur que vous souhaitez que l’objet d’ensemble de lignes retourné pour prendre en charge **IConnectionPointContainer**, qui est nécessaire pour configurer la notification.  
   
- Le code suivant indique comment ouvrir l'ensemble de lignes d'un objet ATL et utiliser la fonction `AtlAdvise` pour installer le récepteur de notification.  `AtlAdvise` retourne un cookie utilisé lorsque vous appelez `AtlUnadvise`.  
+ Le code suivant montre comment ouvrir l’ensemble de lignes à partir d’un objet ATL et utiliser la `AtlAdvise` fonction pour configurer le récepteur de notification. `AtlAdvise`Retourne un cookie qui est utilisé lorsque vous appelez `AtlUnadvise`.  
   
 ```  
 CDBPropSet propset(DBPROPSET_ROWSET);  
@@ -45,5 +45,5 @@ product.Open(session, _T("Products"), &propset);
 AtlAdvise(product.m_spRowset, GetUnknown(), IID_IRowsetNotify, &m_dwCookie);  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utilisation des accesseurs](../../data/oledb/using-accessors.md)

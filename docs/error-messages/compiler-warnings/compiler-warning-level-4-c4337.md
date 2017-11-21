@@ -1,34 +1,32 @@
 ---
-title: "Avertissement du compilateur (niveau 4) C4337 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4337"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4337"
+title: Compilateur avertissement (niveau 4) C4337 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4337
+dev_langs: C++
+helpviewer_keywords: C4337
 ms.assetid: 70bc72d9-aac5-45cd-abd3-ebe42a05897b
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2b26043727b2249f841f34383d1481fa2389dfef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 4) C4337
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-importation automatique en cours de la bibliothèque de types à références croisées 'biblio\_types\_1' de 'biblio\_types\_2'  
+# <a name="compiler-warning-level-4-c4337"></a>Avertissement du compilateur (niveau 4) C4337
+bibliothèque de types à 'références croisées biblio_types_1' dans 'biblio_types_2' est en cours d’importation automatiquement  
   
- L'attribut auto\_search de la [directive \#import](../../preprocessor/hash-import-directive-cpp.md) a provoqué l'importation implicite d'une bibliothèque de types.  
+ L’attribut auto_search de [la directive #import](../../preprocessor/hash-import-directive-cpp.md) a provoqué une bibliothèque de types à importer implicitement.  
   
- Avec deux bibliothèques de types sur disque créées à partir des deux fichiers suivants \(compilés avec midl.exe\) :  
+ Donné deux bibliothèques de types sur disque créées à partir des deux fichiers suivants (compilés avec midl.exe) :  
   
 ```  
 // C4337a.idl  
@@ -47,7 +45,7 @@ library C4337aLib
 };  
 ```  
   
- puis le deuxième fichier .idl,  
+ et ensuite le fichier .idl deuxième,  
   
 ```  
 // C4337b.idl  
@@ -67,7 +65,7 @@ library C4337bLib
 };  
 ```  
   
- L'exemple suivant génère l'erreur C4337 :  
+ L’exemple suivant génère l’erreur C4337 :  
   
 ```  
 // C4337.cpp  

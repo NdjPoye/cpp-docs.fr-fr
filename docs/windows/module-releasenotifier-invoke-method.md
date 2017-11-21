@@ -1,41 +1,39 @@
 ---
-title: "Module::ReleaseNotifier::Invoke, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::ReleaseNotifier::Invoke"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Invoke (méthode)"
+title: "Module::ReleaseNotifier :: Invoke, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::ReleaseNotifier::Invoke
+dev_langs: C++
+helpviewer_keywords: Invoke method
 ms.assetid: f62686fe-74bf-482b-a46b-6a3c09b80e7e
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5a5fe3fec23975f6ed582445c376f6ea6db5dfbd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Module::ReleaseNotifier::Invoke, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En cas d'implémentation, appelle un gestionnaire d'événements lorsque le dernier objet d'un module est libéré.  
+# <a name="modulereleasenotifierinvoke-method"></a>Module::ReleaseNotifier::Invoke, méthode
+En cas d’implémentation, appelle un gestionnaire d’événements lorsque le dernier objet dans un module est lancé.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 virtual void Invoke() = 0;  
 ```  
   
-## Configuration requise  
- **En\-tête:** module.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** module.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Module::ReleaseNotifier, classe](../windows/module-releasenotifier-class.md)

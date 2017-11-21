@@ -1,41 +1,39 @@
 ---
-title: "SRWLock::SRWLock_, donn&#233;es de membre | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::SRWLock::SRWLock_"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SRWLock (donnée membre)"
+title: "SRWLOCK::SRWLOCK, données de membre | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::SRWLock::SRWLock_
+dev_langs: C++
+helpviewer_keywords: SRWLock_ data member
 ms.assetid: 19f053c2-019a-45ef-9c1f-e0144a951561
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b7baa1808c90ae9f86c5549936a7e0780cc9abdc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# SRWLock::SRWLock_, donn&#233;es de membre
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Contient la variable de verrou sous\-jacente de l'objet SRWLock actuel.  
+# <a name="srwlocksrwlock-data-member"></a>SRWLock::SRWLock_, données de membre
+Contient la variable sous-jacente de verrou pour l’objet SRWLock actuel.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 SRWLOCK SRWLock_;  
 ```  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers  
+ **Namespace :** Microsoft::WRL::Wrappers  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SRWLock, classe](../windows/srwlock-class.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -48,8 +47,7 @@ f1_keywords:
 - regex/std::regex_constants::nosubs
 - regex/std::regex_constants::optimize
 - regex/std::regex_constants::collate
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::regex_constants [C++]
 - std::regex_constants [C++], error_collate
@@ -91,16 +89,15 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: a901b656546b333fc5dd2416a88050ee761e601e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 320b2c390a1220e47191dec4166170daa5537cb2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="regexconstants-class"></a>regex_constants, classe
 Espace de noms des indicateurs d'expression régulière.  
@@ -295,4 +292,3 @@ enum syntax_option_type
 [regex_token_iterator, classe](../standard-library/regex-token-iterator-class.md)  
 [regex_traits, classe](../standard-library/regex-traits-class.md)  
 [\<regex>, typedefs](../standard-library/regex-typedefs.md)  
-

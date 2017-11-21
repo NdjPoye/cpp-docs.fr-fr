@@ -1,41 +1,39 @@
 ---
-title: "list::const_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::const_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_iterator (membre) (STL/CLR)"
+title: List::const_iterator (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::const_iterator
+dev_langs: C++
+helpviewer_keywords: const_iterator member [STL/CLR]
 ms.assetid: 24e19077-02d2-456e-a3f1-7caaf0b6c974
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 76e59007b1ed45e01310795f7ada35576a57bb60
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# list::const_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listconstiterator-stlclr"></a>list::const_iterator (STL/CLR)
 Type d'un itérateur constant pour la séquence contrôlée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef T2 const_iterator;  
 ```  
   
-## Notes  
- Le type décrit un objet de type non spécifié `T2` qui peut servir d'itérateur constant à accès aléatoire pour la séquence contrôlée.  
+## <a name="remarks"></a>Remarques  
+ Le type décrit un objet de type non spécifié `T2` qui peut servir d’un itérateur à accès aléatoire constant pour la séquence contrôlée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_list_const_iterator.cpp   
@@ -59,12 +57,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## Configuration requise  
- **En\-tête :** \<cliext\/list\>  
+```Output  
+a b c  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/liste >  
   
-## Voir aussi  
- [list](../dotnet/list-stl-clr.md)   
- [list::iterator](../dotnet/list-iterator-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::iterator (STL/CLR)](../dotnet/list-iterator-stl-clr.md)

@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- new/std::bad_alloc
-- bad_alloc
-dev_langs:
-- C++
-helpviewer_keywords:
-- bad_alloc class
+f1_keywords: new/std::bad_alloc
+dev_langs: C++
+helpviewer_keywords: bad_alloc class
 ms.assetid: 6429a8e6-5a49-4907-8d56-f4a4ec8131d0
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3d42ce374744f446185466f65df77a38ebcdbfd4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 3bb9257e83eb5c94361bb20ce689eff115817912
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="badalloc-class"></a>bad_alloc, classe
 La classe décrit une exception levée pour indiquer qu'une demande d'allocation n'a pas réussi.  
@@ -95,5 +75,4 @@ bad allocation
 ## <a name="see-also"></a>Voir aussi
  [exception, classe](../standard-library/exception-class.md)  
  [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

@@ -1,41 +1,39 @@
 ---
-title: "hash_multiset::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre size [STL/CLR]"
+title: hash_multiset::Size (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 45f1f35e-35c4-4e39-8485-0786c1de22e3
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fce1f75c546e245c3007fefe1c993d5f9260c43d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultisetsize-stlclr"></a>hash_multiset::size (STL/CLR)
 Compte le nombre d'éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 size_type size();  
 ```  
   
-## Notes  
- La méthode retourne la longueur de la séquence contrôlée.  Vous l'utilisez pour déterminer le nombre d'éléments figurant actuellement dans la séquence contrôlée.  Si tout ce dont vous vous souciez est si la séquence a une taille différente de zéro, consultez [hash\_multiset::empty](../dotnet/hash-multiset-empty-stl-clr.md)`()`.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre retourne la longueur de la séquence contrôlée. Il permet de déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si tout vous intéressent est indique si la séquence a une taille différente de zéro, consultez [hash_multiset::empty (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md)`()`.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_multiset_size.cpp   
@@ -69,15 +67,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3 à partir de 3**  
-**size\(\) \= 0 après libération**  
-**size\(\) \= 2 après avoir ajouté 2**   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+size() = 3 starting with 3  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/hash_set >  
   
-## Voir aussi  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::empty](../dotnet/hash-multiset-empty-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::empty (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md)

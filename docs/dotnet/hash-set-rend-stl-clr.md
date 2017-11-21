@@ -1,41 +1,39 @@
 ---
-title: "hash_set::rend (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::rend"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre rend [STL/CLR]"
+title: hash_set::rend (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::rend
+dev_langs: C++
+helpviewer_keywords: rend member [STL/CLR]
 ms.assetid: 12764bf1-ff3e-48db-a6ef-fe120187bc4e
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 121e21c5abb760c27de928e95d9e6beb767ac4ef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::rend (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Désigne la fin de la séquence contrôlée inversée.  
+# <a name="hashsetrend-stlclr"></a>hash_set::rend (STL/CLR)
+Désigne la fin de la séquence contrôlée inverse.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 reverse_iterator rend();  
 ```  
   
-## Notes  
- La fonction membre retourne un membre itérateur inverse qui pointe uniquement au delà du début de la séquence contrôlée.  Par conséquent, il désigne le `end` de la séquence inverse.  Vous l'utilisez pour obtenir un itérateur qui désigne la fin `current` de la séquence contrôlée vue dans l'ordre inverse, mais son état peut changer si la longueur de la séquence contrôlée change.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre retourne un itérateur inverse qui pointe juste après le début de la séquence contrôlée. Par conséquent, il désigne le `end` de la séquence inverse. Vous l’utilisez pour obtenir un itérateur qui désigne le `current` fin de la séquence contrôlée vue dans l’ordre inverse, mais son état peut changer si la longueur de la séquence contrôlée change.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_set_rend.cpp   
@@ -65,16 +63,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*\-\- \-\-rend\(\) \= b**  
-**\*\-\-rend\(\) \= a**   
-## Configuration requise  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+*-- --rend() = b  
+*--rend() = a  
+```  
   
- **Espace de noms:** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/hash_set >  
   
-## Voir aussi  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::begin](../dotnet/hash-set-begin-stl-clr.md)   
- [hash\_set::end](../dotnet/hash-set-end-stl-clr.md)   
- [hash\_set::rbegin](../dotnet/hash-set-rbegin-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::Begin (STL/CLR)](../dotnet/hash-set-begin-stl-clr.md)   
+ [hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)   
+ [hash_set::rbegin (STL/CLR)](../dotnet/hash-set-rbegin-stl-clr.md)

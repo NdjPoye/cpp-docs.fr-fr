@@ -1,32 +1,31 @@
 ---
-title: "&#201;valuateur d&#39;expression, erreur CXX0008 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0008"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0008"
-  - "CXX0008"
+title: "Évaluateur d’expression, erreur CXX0008 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0008
+dev_langs: C++
+helpviewer_keywords:
+- CXX0008
+- CAN0008
 ms.assetid: 49e0968c-a6ce-4ba9-9762-02a55c08124e
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0c34d0b8e86d20d3b43be69476ca32d670f50212
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# &#201;valuateur d&#39;expression, erreur CXX0008
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**absence de " en fin de chaîne**  
+# <a name="expression-evaluator-error-cxx0008"></a>Évaluateur d'expression, erreur CXX0008
+**manquant « à la fin de chaîne**  
   
- Les guillemets doubles attendus manquent à la fin du littéral de chaîne.  Entrez à nouveau l'expression en entourant le littéral de chaîne de guillemets doubles.  
+ Les guillemets doubles attendus à la fin de la chaîne littérale sont manquant. Tapez à nouveau l’expression en entourant le littéral de chaîne dans des guillemets doubles.  
   
- Erreur identique à CAN0008.
+ Cette erreur est identique à CAN0008.

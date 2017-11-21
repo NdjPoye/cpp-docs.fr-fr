@@ -1,62 +1,62 @@
 ---
-title: "/FI (Nom du fichier Include impos&#233;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCNMakeTool.ForcedIncludes"
-  - "VC.Project.VCCLCompilerTool.ForcedIncludeFiles"
-  - "VC.Project.VCCLWCECompilerTool.ForcedIncludeFiles"
-  - "/fi"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/FI (option du compilateur C++)"
-  - "FI (option du compilateur C++)"
-  - "-FI (option du compilateur C++)"
-  - "prétraitement des fichiers d'en-tête (option du compilateur C++)"
+title: -FI (nom du fichier Include) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCNMakeTool.ForcedIncludes
+- VC.Project.VCCLCompilerTool.ForcedIncludeFiles
+- VC.Project.VCCLWCECompilerTool.ForcedIncludeFiles
+- /fi
+dev_langs: C++
+helpviewer_keywords:
+- FI compiler option [C++]
+- -FI compiler option [C++]
+- /FI compiler option [C++]
+- preprocess header file compiler option [C++]
 ms.assetid: 07e79577-8152-4df9-a64c-aae08c603397
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1309f822ae8f7ab7e4735525439f9d3529754001
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /FI (Nom du fichier Include impos&#233;)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Demande au préprocesseur de traiter le fichier d'en\-tête spécifié.  
+# <a name="fi-name-forced-include-file"></a>/FI (Nom du fichier Include imposé)
+Indique au préprocesseur de traiter le fichier d’en-tête spécifié.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 /FI[ ]pathname  
 ```  
   
-## Notes  
- Cette option a le même effet que la spécification du fichier avec des guillemets doubles dans une directive `#include` à la première ligne de chaque fichier source indiqué sur la ligne de commande, dans la variable d'environnement CL, ou dans un fichier de commandes.  Si vous utilisez plusieurs options **\/FI**, les fichiers sont inclus dans l'ordre où ils sont traités par CL.  
+## <a name="remarks"></a>Remarques  
+ Cette option a le même effet que la spécification du fichier avec des guillemets doubles dans une `#include` directive sur la première ligne de chaque fichier source indiqué sur la ligne de commande dans la variable d’environnement CL, ou dans un fichier de commandes. Si vous utilisez plusieurs **/FI** options, les fichiers sont incluses dans l’ordre qu’ils sont traités par CL.  
   
-### Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Comment : ouvrir les pages de propriétés d'un projet](../../misc/how-to-open-project-property-pages.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
-2.  Cliquez sur le dossier **C\/C\+\+**.  
+2.  Cliquez sur le dossier **C/C++** .  
   
-3.  Cliquez sur la page de propriétés **Avancé**.  
+3.  Cliquez sur le **avancé** page de propriétés.  
   
-4.  Modifiez la propriété **Fichiers Include forcés**.  
+4.  Modifier la **Force inclut** propriété.  
   
-### Pour définir cette option du compilateur par programmation  
+### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation  
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForcedIncludeFiles%2A>.  
   
-## Voir aussi  
- [Options du fichier de sortie \(\/F\)](../../build/reference/output-file-f-options.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Fichier de sortie (/ F) Options](../../build/reference/output-file-f-options.md)   
  [Options du compilateur](../../build/reference/compiler-options.md)   
- [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)   
+ [Définition des Options du compilateur](../../build/reference/setting-compiler-options.md)   
  [Spécification du nom de chemin](../../build/reference/specifying-the-pathname.md)

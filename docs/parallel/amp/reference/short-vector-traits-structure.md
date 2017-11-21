@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,37 +12,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: aa123da5dfb5675a4b44d386224bf17e79df40a3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: d4054b95dc4c62c645f4e8e9ba1eb7d64e690784
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="shortvectortraits-structure"></a>short_vector_traits Structure
-short_vector_traits permet la récupération de la longueur du vecteur sous-jacent et type scalaire d’un type de vecteur court ou un type scalaire  
+short_vector_traits permet la récupération de la longueur du vecteur sous-jacent et de type scalaire d’un type de vecteur court ou un type scalaire  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -125,7 +107,7 @@ struct short_vector_traits<double_4>;
 |----------|-----------------|  
 |[short_vector_traits::Size, constante](#size)||  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `short_vector_traits`  
   
 ## <a name="requirements"></a>Spécifications  
@@ -146,5 +128,4 @@ static int const size = 1;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concurrency::Graphics Namespace](concurrency-graphics-namespace.md)
-
+ [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)

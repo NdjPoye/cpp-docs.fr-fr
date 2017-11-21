@@ -1,40 +1,40 @@
 ---
-title: "Comment&#160;: marshaler des cha&#238;nes &#224; l&#39;aide de PInvoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marshaling de données (C++), chaînes"
-  - "Interop (C++), chaînes"
-  - "marshaling (C++), chaînes"
-  - "appel de code non managé (C++), chaînes"
+title: "Comment : marshaler des chaînes à l’aide de PInvoke | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], strings
+- marshaling [C++], strings
+- data marshaling [C++], strings
+- platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0047c76000d336ce18d2bbbab741dc965c1fbc59
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: marshaler des cha&#238;nes &#224; l&#39;aide de PInvoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique explique comment les fonctions natives qui acceptent des chaînes de style C peuvent être appelées à l'aide du System::String de type de chaîne du CLR grâce à la prise en charge de l'appel de code non managé .NET Framework.  Les programmeurs Visual C\+\+ sont encouragés à utiliser plutôt les fonctionnalités d'interopérabilité C\+\+ \(dans la mesure du possible\), car P\/Invoke ne signale pas correctement les erreurs de compilation, n'est pas de type sécurisé et peut être fastidieux à implémenter.  Si l'API non managée se présente sous la forme d'une DLL et si le code source n'est pas disponible, P\/Invoke est votre seule option \(sinon, consultez [Utilisation de l'interopérabilité C\+\+ \(PInvoke implicite\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)\).  
+# <a name="how-to-marshal-strings-using-pinvoke"></a>Comment : marshaler des chaînes à l’aide de PInvoke
+Cette rubrique explique comment les fonctions natives qui acceptent des chaînes de style C peuvent être appelées à l’aide de la chaîne CLR System::String à l’aide de la prise en charge de .NET Framework non managé de type. Les programmeurs Visual C++ sont encouragés à utiliser les fonctionnalités d’interopérabilité C++ au lieu de cela (si possible), car P/Invoke peu compilation rapport d’erreurs, n’est pas de type sécurisé et peut être fastidieux à implémenter. Si l’API non managée est empaqueté en tant que DLL, et le code source n’est pas disponible, P/Invoke est la seule option, mais sinon consultez [à l’aide du interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
- Les chaînes managées et non managées sont disposées différemment en mémoire ; par conséquent, le passage de chaînes de fonctions managées vers des fonctions non managées exige l'attribut <xref:System.Runtime.InteropServices.MarshalAsAttribute> pour indiquer au compilateur d'insérer les mécanismes de conversion requis pour marshaler les données de type chaîne correctement et sans risque.  
+ Les chaînes managées et non managées sont disposés différemment en mémoire, donc passer des chaînes à partir de managées nécessite le <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribut pour indiquer au compilateur d’insérer les mécanismes de conversion requise pour le marshaling des données de type chaîne correctement et en toute sécurité.  
   
- Comme pour les fonctions qui utilisent uniquement des types de données intrinsèques, <xref:System.Runtime.InteropServices.DllImportAttribute> est utilisé pour déclarer des points d'entrée managés dans les fonctions natives mais, pour passer des chaînes, un handle du type <xref:System.String> peut être utilisé plutôt que de définir ces points d'entrée comme prenant des chaînes de style C.  Le compilateur est ainsi invité à insérer le code qui exécute la conversion requise.  Pour chaque argument de fonction contenu dans une fonction non managée prenant une chaîne, l'attribut <xref:System.Runtime.InteropServices.MarshalAsAttribute> doit être utilisé pour indiquer que l'objet String doit être marshalé vers la fonction native en tant que chaîne de style C.  
+ Comme avec les fonctions qui utilisent uniquement des types de données intrinsèques, <xref:System.Runtime.InteropServices.DllImportAttribute> est utilisé pour déclarer des points d’entrée managés dans les fonctions natives mais, pour passer des chaînes au lieu de définir ces points d’entrée comme prenant des chaînes de style C, un handle vers le <xref:System.String> type peut être utilisé à la place. Cela demande au compilateur d’insérer le code qui effectue la conversion requise. Pour chaque argument de fonction dans une fonction non managée qui prend une chaîne, le <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribut doit être utilisé pour indiquer que l’objet de chaîne doit être marshalée vers la fonction native en tant qu’une chaîne de style C.  
   
-## Exemple  
- Le code suivant est constitué d'un module non managé et d'un module managé.  Le module non managé est une DLL définissant une fonction appelée TakesAString qui accepte une chaîne ANSI de style C sous la forme d'un char\*.  Le module managé est une application en ligne de commande qui importe la fonction TakesAString, mais la définit comme prenant un System.String managé plutôt qu'un char\*.  L'attribut <xref:System.Runtime.InteropServices.MarshalAsAttribute> est utilisé pour indiquer de quelle manière la chaîne managée doit être marshalée lors d'un appel à TakesAString.  
+## <a name="example"></a>Exemple  
+ Le code suivant se compose d’un non managé et un module managé. Le module non managé est une DLL qui définit une fonction appelée TakesAString qui accepte une chaîne de style C ANSI sous la forme de char *. Le module managé est une application de ligne de commande qui importe la fonction TakesAString, mais la définit comme prenant un System.String managé au lieu de char\*. Le <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribut est utilisé pour indiquer comment la chaîne managée doit être marshalée lorsque TakesAString est appelée.  
   
- Le module managé est compilé avec \/clr, mais \/clr:pure fonctionne également.  
+ Le module managé est compilé avec/CLR, mais/CLR : pure fonctionne également.  
   
 ```  
 // TraditionalDll2.cpp  
@@ -82,9 +82,9 @@ int main() {
 }  
 ```  
   
- Cette technique entraîne la création d'une copie de la chaîne sur le tas non managé ; par conséquent, les modifications apportées à la chaîne par la fonction native ne sont pas répercutées dans la copie managée de la chaîne.  
+ Cette technique entraîne une copie de la chaîne doit être construite sur le tas non managé, donc les modifications apportées à la chaîne par la fonction native n’apparaîtront pas dans la copie managée de la chaîne.  
   
- Notez qu'aucune partie de la DLL n'est exposée au code managé à l'aide de la directive \#include traditionnelle.  En réalité, l'accès à la DLL est limité au moment de l'exécution. Par conséquent, les problèmes liés aux fonctions importées à l'aide de `DllImport` ne sont pas détectés au moment de la compilation.  
+ Notez qu’aucune partie de la DLL est exposée au code managé via traditionnel #include (directive). En fait, la DLL est accessible à l’exécution uniquement, afin de problèmes liés aux fonctions importées avec `DllImport` ne sont pas détectés au moment de la compilation.  
   
-## Voir aussi  
- [Utilisation d'un PInvoke explicite en C\+\+ \(attribut DllImport\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation d’un PInvoke explicite en C++ (attribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

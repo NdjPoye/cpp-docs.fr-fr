@@ -1,33 +1,30 @@
 ---
-title: "case (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.case"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "case attribute"
+title: cas (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.case
+dev_langs: C++
+helpviewer_keywords: case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b1a3b76d56c6d1b78218d75ca596ae7311e13ac6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# case (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-utilisé avec l'attribut de [switch\_type](../windows/switch-type.md) dans **union**.  
+# <a name="case-c"></a>cas (C++)
+Utilisé avec le [switch_type](../windows/switch-type.md) d’attribut dans un **union**.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -36,25 +33,25 @@ utilisé avec l'attribut de [switch\_type](../windows/switch-type.md) dans **uni
 ) ]  
 ```  
   
-#### Paramètres  
- *correspondante*  
- Une valeur d'entrée possible pour laquelle vous souhaitez fournir le traitement.  le type de **valeur** peut être l'un des types suivants :  
+#### <a name="parameters"></a>Paramètres  
+ *value*  
+ Une valeur d’entrée possible pour lequel vous souhaitez fournir le traitement. Le type de **valeur** peut être un des types suivants :  
   
 -   `int`  
   
 -   `char`  
   
--   **boolean**  
+-   `boolean`  
   
 -   `enum`  
   
- ou un identificateur de ce type.  
+ ou un identificateur d’un tel type.  
   
-## Notes  
- L'attribut d' **événement** C\+\+ a les mêmes fonctionnalités que l'attribut d' **événement** MIDL.  Cet attribut est utilisé uniquement avec l'attribut de [switch\_type](../windows/switch-type.md) .  
+## <a name="remarks"></a>Remarques  
+ Le **cas** attribut C++ a les mêmes fonctionnalités que le **cas** attribut MIDL. Cet attribut est utilisé uniquement avec les [switch_type](../windows/switch-type.md) attribut.  
   
-## Exemple  
- Le code suivant illustre une utilisation de l'attribut d' **événement** :  
+## <a name="example"></a>Exemple  
+ Le code suivant illustre une utilisation de la **cas** attribut :  
   
 ```  
 // cpp_attr_ref_case.cpp  
@@ -73,21 +70,20 @@ struct SizedValue2 {
 [module(name="ATLFIRELib")];  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|membre de **classe** ou d' `struct`|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|Membre d’un **classe** ou`struct`|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun|  
+|**Attributs non valides**|Aucun|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union et Struct (attributs)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Attributs de classe](../windows/class-attributes.md)   

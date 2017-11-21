@@ -1,48 +1,48 @@
 ---
-title: "Editing a String in a Version Information Resource | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.version"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "version information resources"
-  - "resources [Visual Studio], editing version information"
+title: "Modification d’une chaîne dans une ressource d’informations de Version | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.version
+dev_langs: C++
+helpviewer_keywords:
+- version information resources
+- resources [Visual Studio], editing version information
 ms.assetid: d3a7d4e4-7d31-47c2-902c-f50b8404ba4f
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4547247a2ab9dc5b8ca98aae6838d9891f4ab49f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Editing a String in a Version Information Resource
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Pour modifier une chaîne dans une ressource d’informations sur la version  
+# <a name="editing-a-string-in-a-version-information-resource"></a>Modification d'une chaîne dans une ressource d'informations sur la version
+### <a name="to-edit-a-string-in-a-version-information-resource"></a>Pour modifier une chaîne dans une ressource d’informations sur la version  
   
-1.  Cliquez sur l’élément pour le sélectionner, puis recliquez dessus pour commencer à le modifier. Apportez les modifications directement dans la table d’informations sur la version ou dans la fenêtre [Propriétés](../Topic/Properties%20Window.md). Les modifications que vous apportez apparaîtront aux deux emplacements.  
+1.  Cliquez sur l’élément pour le sélectionner, puis recliquez dessus pour commencer à le modifier. Apportez les modifications directement dans la table d’informations sur la version ou dans la fenêtre [Propriétés](/visualstudio/ide/reference/properties-window). Les modifications que vous apportez apparaîtront aux deux emplacements.  
   
-     **Remarque** Lors de la modification de la clé **FILEFLAGS** dans l’Éditeur d’informations sur la version, vous remarquerez que vous ne pouvez pas définir les propriétés **Debug**, **Private Build** ou **Special Build** \(dans la fenêtre Propriétés\) pour les fichiers .rc :  
+     **Remarque** Lors de la modification de la clé **FILEFLAGS** dans l’Éditeur d’informations sur la version, vous remarquerez que vous ne pouvez pas définir les propriétés **Debug**, **Private Build**ou **Special Build** (dans la fenêtre Propriétés) pour les fichiers .rc :  
   
-    -   L’Éditeur d’informations sur la version définit la propriété **Debug** avec un \#ifdef dans le script de ressources, en fonction de l’indicateur de build **\_DEBUG**.  
+    -   L’Éditeur d’informations sur la version définit la propriété **Debug** avec un #ifdef dans le script de ressources, en fonction de l’indicateur de build **_DEBUG** .  
   
-    -   Si la clé **Private Build** a une **Valeur** définie dans la table d’informations sur la version, la propriété **Private Build** correspondante \(dans la fenêtre Propriétés\) de la clé **FILEFLAGS** a la valeur **True**. Si la **Valeur** est vide, la propriété est **False**. De même, la clé **Special Build** \(dans la table d’informations sur la version\) est liée à la propriété **Special Build** de la clé **FILEFLAGS**.  
+    -   Si la clé **Private Build** a une **Valeur** définie dans la table d’informations sur la version, la propriété **Private Build** correspondante (dans la fenêtre Propriétés) de la clé **FILEFLAGS** a la valeur **True**. Si la **Valeur** est vide, la propriété est **False**. De même, la clé **Special Build** (dans la table d’informations sur la version) est liée à la propriété **Special Build** de la clé **FILEFLAGS** .  
   
- Vous pouvez trier la séquence d’informations du bloc de chaîne en cliquant sur l’en\-tête de colonne Clé ou Valeur. Ces en\-têtes réorganisent automatiquement les informations dans la séquence sélectionnée.  
+ Vous pouvez trier la séquence d’informations du bloc de chaîne en cliquant sur l’en-tête de colonne Clé ou Valeur. Ces en-têtes réorganisent automatiquement les informations dans la séquence sélectionnée.  
   
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l’ajout de fichiers de ressources aux projets managés, l’accès aux ressources, l’affichage de ressources statiques et l’assignation de chaînes de ressources à des propriétés, et ceci manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/fr-fr/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](https://msdn.microsoft.com/library/f45fce5x.aspx) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](https://msdn.microsoft.com/library/xbx3z216.aspx). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
- **Spécifications**  
+ **Requirements**  
   
  Win32  
   
-## Voir aussi  
- [Version Information Editor](../mfc/version-information-editor.md)   
- [Informations sur la version \(Windows\)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
+## <a name="see-also"></a>Voir aussi  
+ [Éditeur d’informations de version](../windows/version-information-editor.md)   
+ [Informations de version (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
+

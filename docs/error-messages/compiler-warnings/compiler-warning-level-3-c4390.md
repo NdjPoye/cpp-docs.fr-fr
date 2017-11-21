@@ -1,36 +1,34 @@
 ---
-title: "Avertissement du compilateur (niveau 3) C4390 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4390"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4390"
+title: Compilateur avertissement (niveau 3) C4390 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4390
+dev_langs: C++
+helpviewer_keywords: C4390
 ms.assetid: c95c2f1b-9bce-4b1f-a80c-565d4cde0b1e
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 62e7573be5a3410075d2b7b5eed9c618be993859
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 3) C4390
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-';' : une instruction contrôlée a été trouvée vide ; est\-ce ce que vous souhaitiez ?  
+# <a name="compiler-warning-level-3-c4390"></a>Avertissement du compilateur (niveau 3) C4390
+' ;' : vide instruction contrôlée a été trouvée. Cela est son but ?  
   
- Un point\-virgule a été trouvé après une expression de contrôle qui ne contient aucune instruction.  
+ Un point-virgule a été trouvé après une instruction de contrôle qui ne contient aucune instruction.  
   
- Si vous obtenez C4390 à cause d'une macro, vous devriez utiliser le pragma [warning](../../preprocessor/warning.md) pour désactiver C4390 dans le module qui contient la macro.  
+ Si vous obtenez C4390 à cause d’une macro, vous devez utiliser le [avertissement](../../preprocessor/warning.md) pragma pour désactiver C4390 dans le module contenant la macro.  
   
- L'exemple suivant génère l'erreur C4390 :  
+ L’exemple suivant génère l’erreur C4390 :  
   
 ```  
 // C4390.cpp  

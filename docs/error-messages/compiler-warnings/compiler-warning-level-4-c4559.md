@@ -1,34 +1,32 @@
 ---
-title: "Avertissement du compilateur (niveau 4) C4559 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4559"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4559"
+title: Compilateur avertissement (niveau 4) C4559 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4559
+dev_langs: C++
+helpviewer_keywords: C4559
 ms.assetid: ed542f60-454d-45cb-85da-987ede61b1ab
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 046a3186554603d4a33b2eec78084dd76ec64e40
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 4) C4559
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'fonction' : redéfinition ; la fonction gagne \_\_declspec\(modifier\)  
+# <a name="compiler-warning-level-4-c4559"></a>Avertissement du compilateur (niveau 4) C4559
+'fonction' : redéfinition ; la fonction gagne __declspec (modifier)  
   
- Une fonction a été redéfinie ou redéclarée et la deuxième définition ou déclaration possède un modificateur \_\_**declspec** \(***modifier*** supplémentaire.  Cet avertissement est informatif.  Pour résoudre cet avertissement, supprimez l'une des définitions.  
+ Une fonction a été redéfinie ou redéclarée et la deuxième définition ou déclaration un __**declspec** modificateur (***modificateur***). Cet avertissement possède un caractère informatif. Pour résoudre cet avertissement, supprimez une des définitions.  
   
- L'exemple suivant génère l'erreur C4559 :  
+ L’exemple suivant génère l’erreur C4559 :  
   
 ```  
 // C4559.cpp  

@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- lambda expressions [C++], syntax
+dev_langs: C++
+helpviewer_keywords: lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9daa1ce8d7b55f71113dcf7559394715bd93c604
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 89914c902c6519f2bd3b890757f417cfd1d220c3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lambda-expression-syntax"></a>Syntaxe d’expression lambda
 Cet article décrit la syntaxe et les éléments structuraux des expressions lambda. Pour obtenir une description des expressions lambda, consultez [Expressions Lambda](../cpp/lambda-expressions-in-cpp.md).  

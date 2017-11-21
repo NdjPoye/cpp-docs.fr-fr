@@ -1,31 +1,29 @@
 ---
-title: "Erreur irr&#233;cup&#233;rable RC1019 du compilateur de ressources  | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC1019"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC1019"
+title: "Erreur irrécupérable RC1019 du compilateur de ressources | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC1019
+dev_langs: C++
+helpviewer_keywords: RC1019
 ms.assetid: 432fff44-04a9-4e13-91c6-870df6f0b4e4
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b2daee250bd3a8900f1c2eea12d105dfb3fd1026
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Erreur irr&#233;cup&#233;rable RC1019 du compilateur de ressources 
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'\#else' inattendu  
+# <a name="resource-compiler-fatal-error-rc1019"></a>Erreur irrécupérable RC1019 du compilateur de ressources 
+inattendue ' #else '  
   
- La directive `#else` ne figure pas dans une construction `#if`, **\#ifdef** ou **\#ifndef**.  
+ Le `#else` directive ne figure pas dans un `#if`, **#ifdef**, ou **#ifndef** construire.  
   
- Assurez\-vous que cette instruction est précédée d'une instruction `#if`, **\#ifdef** ou **\#ifndef** en vigueur.
+ Assurez-vous qu’il existe un `#if`, **#ifdef**, ou **#ifndef** instruction en vigueur avant cette instruction.

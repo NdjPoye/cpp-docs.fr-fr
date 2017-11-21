@@ -1,41 +1,39 @@
 ---
-title: "multimap::reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reverse_iterator (membre) (STL/CLR)"
+title: multimap::reverse_iterator (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::reverse_iterator
+dev_langs: C++
+helpviewer_keywords: reverse_iterator member [STL/CLR]
 ms.assetid: 45ef2b07-8f5d-478c-8dcb-35bd07d3743a
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e5c28d23b60f909f0baa44e8f5b80b861a03a589
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le type d'un itérateur inversé pour la séquence contrôlée.  
+# <a name="multimapreverseiterator-stlclr"></a>multimap::reverse_iterator (STL/CLR)
+Type d'un itérateur inverse pour la séquence contrôlée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef T3 reverse_iterator;  
 ```  
   
-## Notes  
- Le type décrit un objet de type non spécifié `T3` qui peut servir d'itérateur inversé pour la séquence contrôlée.  
+## <a name="remarks"></a>Remarques  
+ Le type décrit un objet de type non spécifié `T3` qui peut servir d’itérateur inverse pour la séquence contrôlée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_multimap_reverse_iterator.cpp   
@@ -60,14 +58,17 @@ int main()
   
 ```  
   
-  **\[c 3\] \[b 2\] \[a 1\]**   
-## Configuration requise  
- **En\-tête :** \<cliext\/map\>  
+```Output  
+[c 3] [b 2] [a 1]  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/map >  
   
-## Voir aussi  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::const\_iterator](../dotnet/multimap-const-iterator-stl-clr.md)   
- [multimap::const\_reverse\_iterator](../dotnet/multimap-const-reverse-iterator-stl-clr.md)   
- [multimap::iterator](../dotnet/multimap-iterator-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::const_iterator (STL/CLR)](../dotnet/multimap-const-iterator-stl-clr.md)   
+ [multimap::const_reverse_iterator (STL/CLR)](../dotnet/multimap-const-reverse-iterator-stl-clr.md)   
+ [multimap::iterator (STL/CLR)](../dotnet/multimap-iterator-stl-clr.md)

@@ -1,32 +1,30 @@
 ---
-title: "make_pair (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::make_pair"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_pair (fonction) (STL/CLR)"
+title: make_pair (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::make_pair
+dev_langs: C++
+helpviewer_keywords: make_pair function [STL/CLR]
 ms.assetid: 74733f2c-97b0-4d69-b431-5ab8f0de9e3e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8fba63cb9e10fcdccba8ed5c6a8a405184a4bca5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# make_pair (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Faites `pair` à partir d'une paire de valeurs.  
+# <a name="makepair-stlclr"></a>make_pair (STL/CLR)
+Rendre un `pair` à partir d’une paire de valeurs.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Value1,  
@@ -34,25 +32,25 @@ template<typename Value1,
     pair<Value1, Value2> make_pair(Value1 first, Value2 second);  
 ```  
   
-#### Paramètres  
- Value1  
- Type de la première valeur encapsulée.  
+#### <a name="parameters"></a>Paramètres  
+ `Value1`  
+ Le type de la première valeur encapsulée.  
   
- Value2  
- Type de la deuxième valeur encapsulée.  
+ `Value2`  
+ Le type de la deuxième valeur encapsulée.  
   
- premier  
- Première valeur à wrapper.  
+ `first`  
+ Première valeur à encapsuler.  
   
- Seconde  
- La seconde valeur à wrapper.  
+ `second`  
+ Seconde valeur à encapsuler.  
   
-## Notes  
- La fonction modèle retourne `pair<``Value1``,` `Value2``>(``first``,` `second``)`.  Vous l'utilisez pour construire un objet `pair``<``Value1``,` `Value2``>` à partir d'une paire de valeurs.  
+## <a name="remarks"></a>Remarques  
+ La fonction de modèle retourne `pair<Value1, Value2>(first, second)`. Utilisez-la pour construire un `pair<Value1, Value2>` objet à partir d’une paire de valeurs.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // cliext_make_pair.cpp   
 // compile with: /clr   
 #include <cliext/utility>   
@@ -69,12 +67,15 @@ int main()
   
 ```  
   
-  **\[x, 3\]**  
-**\[y, 4\]**   
-## Configuration requise  
- **En\-tête :** \<cliext\/utility\>  
+```Output  
+[x, 3]  
+[y, 4]  
+```  
   
- **Espace de nommage** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/utilitaire >  
   
-## Voir aussi  
- [range\_adapter](../dotnet/range-adapter-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)

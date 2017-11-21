@@ -1,36 +1,34 @@
 ---
-title: "How to: Overload Functions with Interior Pointers and Native Pointers (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Functions with interior and native pointers, overloading"
+title: "Comment : surcharger des fonctions avec des pointeurs intérieurs et des pointeurs natifs (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: Functions with interior and native pointers, overloading
 ms.assetid: d70df625-4aad-457c-84f5-70a0a290cc1f
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f0cc789143c7e29f7552b213d3c1dec330dd0833
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# How to: Overload Functions with Interior Pointers and Native Pointers (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les fonctions peuvent être surchargées selon que le type de paramètre soit un pointeur intérieur ou un pointeur natif.  
+# <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>Comment : surcharger des fonctions avec des pointeurs intérieurs et des pointeurs natifs (C++/CLI)
+Les fonctions peuvent être surchargées selon que le type de paramètre est un pointeur intérieur ou un pointeur natif.  
   
 > [!IMPORTANT]
->  Cette fonctionnalité des langues est prise en charge par l'option du compilateur **\/clr**, mais pas par l'option du compilateur **\/ZW**.  
+>  Cette fonctionnalité de langage est pris en charge par le **/CLR** option du compilateur, mais pas par le **/ZW** option du compilateur.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // interior_ptr_overload.cpp  
@@ -67,12 +65,12 @@ int main() {
 };  
 ```  
   
-### Sortie  
+### <a name="output"></a>Sortie  
   
 ```  
 in f( int* pi )  
 in f( interior_ptr<int> pi )  
 ```  
   
-## Voir aussi  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>Voir aussi  
+ [interior_ptr (C++-CLI)](../windows/interior-ptr-cpp-cli.md)

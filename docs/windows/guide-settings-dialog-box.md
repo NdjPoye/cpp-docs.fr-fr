@@ -1,66 +1,67 @@
 ---
-title: "Param&#232;tres du rep&#232;re, bo&#238;te de dialogue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLU (unités de boîte de dialogue)"
-  - "Éditeur de boîtes de dialogue, aligner sur les repères"
-  - "espacement de la grille"
-  - "repères, paramètres"
-  - "unités de boîte de dialogue (DLU)"
-  - "grille de présentation dans l'Éditeur de boîtes de dialogue"
-  - "aligner sur les repères (Éditeur de boîtes de dialogue)"
-  - "contrôles (C++), aligner sur les repères/la grille"
-  - "Paramètres du repère (boîte de dialogue de l'Éditeur de boîtes de dialogue)"
+title: "Boîte de dialogue Paramètres du repère | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DLUs (dialog units)
+- Dialog editor, snap to guides
+- grid spacing
+- guides, settings
+- dialog units (DLUs)
+- layout grid in Dialog Editor
+- snap to guides (Dialog editor)
+- controls [C++], snap to guides/grid
+- Guide Settings dialog box (Dialog editor)
 ms.assetid: 55381e1c-146a-4fa7-b1b3-b1492817615f
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3389a92be2dcb1a183cfbc297e45fb8360a9288d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Param&#232;tres du rep&#232;re, bo&#238;te de dialogue
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-## Repères de mise en page  
- Affiche les paramètres pour les repères de mise en page.  
+# <a name="guide-settings-dialog-box"></a>Paramètres du repère, boîte de dialogue
+## <a name="layout-guides"></a>Guides de mise en page  
+ Affiche les paramètres de mise en page.  
   
  **Aucun**  
   
- Masque les outils de mise en page.  
+ Masque les outils de disposition.  
   
- **Règles et repères**  
+ **Règles et les repères**  
   
- Lorsque cette option est activée, les règles sont ajoutées aux outils de mise en page et les repères peuvent être placés dans les règles.  Les repères par défaut sont les marges, qui peuvent être déplacées en les faisant glisser.  Cliquez dans les règles pour placer un repère.  Les contrôles « s'alignent » sur les repères lorsque qu'ils sont placés à côtés des repères ou que vous les passez au\-dessus.  Les contrôles sont également déplacés avec un repère une fois qu'ils y sont attachés.  Lorsqu'un contrôle est attaché à un repère sur chaque côté, et qu'un repère est déplacé, le contrôle est redimensionné.  
+ Lorsque activé, ajoute des règles pour les outils de disposition ; guides peuvent être placés dans les règles. Les guides de valeur par défaut sont les marges, ce qui peuvent être déplacés par glissement. Cliquez dans les règles pour placer un guide. « Snap » sur les repères lorsque les contrôles sont déplacées sur ou en regard des contrôles. Contrôles sont également déplacés avec un repère une fois qu’ils sont attachés à ce dernier. Lorsqu’un contrôle est attaché à un repère sur chaque côté, et un repère est déplacé, le contrôle est redimensionné.  
   
  **Grille**  
   
- Crée une grille.  Les nouveaux contrôles sont automatiquement alignés sur la grille.  
+ Crée une grille de disposition. Nouveaux contrôles seront aligne automatiquement à la grille.  
   
-## Espacement de la grille  
- Affiche les paramètres pour l'espacement de la grille en unités de boîte de dialogue \(DLU\).  
+## <a name="grid-spacing"></a>Espacement de la grille  
+ Affiche les paramètres de la grille en unités de boîte de dialogue (DLU).  
   
- **Largeur : Unités de boîte de dialogue**  
+ **Largeur : DLU**  
   
- Définit la largeur de la grille en unités de boîte de dialogue.  Une DLU horizontale correspond à la largeur moyenne de la police de la boîte de dialogue divisée par quatre.  
+ Définit la largeur de la grille de disposition dans DLU. Une DLU horizontale correspond à la largeur de la police de boîte de dialogue divisée en quatre.  
   
- **Hauteur : Unités de boîte de dialogue**  
+ **Hauteur : DLU**  
   
- Définit la hauteur de la grille en unités de boîte de dialogue.  Une DLU verticale correspond à la hauteur moyenne de la police de la boîte de dialogue divisée par huit.  
+ Définit la hauteur de la grille de disposition dans DLU. Une DLU verticale correspond à la hauteur moyenne de la police de boîte de dialogue divisée par huit.  
   
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l'ajout de fichiers de ressources aux projets managés, l'accès aux ressources, l'affichage de ressources statiques et l'assignation de chaînes de ressources aux propriétés, et ce manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/fr-fr/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](https://msdn.microsoft.com/library/f45fce5x.aspx) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](https://msdn.microsoft.com/library/xbx3z216.aspx). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Win32  
   
-## Voir aussi  
- [Modifying the Layout Grid](../mfc/modifying-the-layout-grid.md)   
- [Dialog Editor States \(Guides and Grids\)](../mfc/dialog-editor-states-guides-and-grids.md)
+## <a name="see-also"></a>Voir aussi  
+ [Modification de la grille de disposition](../windows/modifying-the-layout-grid.md)   
+ [États de l’Éditeur de boîtes de dialogue (repères et grilles)](../windows/dialog-editor-states-guides-and-grids.md)
+

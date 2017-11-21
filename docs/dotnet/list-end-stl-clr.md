@@ -1,41 +1,39 @@
 ---
-title: "list::end (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre end [STL/CLR]"
+title: List::end (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: c3444164-2c6e-4cbd-8765-1ce7d30fc43e
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2bdee025575c538f95b46bb1042f46fef4ae587c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# list::end (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listend-stlclr"></a>list::end (STL/CLR)
 Désigne la fin de la séquence contrôlée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 iterator end();  
 ```  
   
-## Notes  
- La fonction membre retourne un itérateur d'accès aléatoire qui pointe uniquement au delà de la fin de la séquence contrôlée.  Vous l'utilisez pour obtenir un itérateur qui désigne la fin de la séquence contrôlée, son état ne peut changer si la longueur de la séquence contrôlée change.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre retourne un itérateur à accès aléatoire qui pointe juste après la fin de la séquence contrôlée. Vous l’utilisez pour obtenir un itérateur qui désigne la fin de la séquence contrôlée ; son état ne change pas si la longueur de la séquence contrôlée change.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_list_end.cpp   
@@ -71,17 +69,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*\-\- \-\-end\(\) \= b**  
-**\*\-\-end\(\) \= c**  
- **a x y**   
-## Configuration requise  
- **En\-tête :** \<cliext\/list\>  
+```Output  
+ a b c  
+*-- --end() = b  
+*--end() = c  
+ a x y  
+```  
   
- **Espace de nommage:** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/liste >  
   
-## Voir aussi  
- [list](../dotnet/list-stl-clr.md)   
- [list::back](../dotnet/list-back-stl-clr.md)   
- [list::back\_item](../dotnet/list-back-item-stl-clr.md)   
- [list::begin](../dotnet/list-begin-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::Back (STL/CLR)](../dotnet/list-back-stl-clr.md)   
+ [List::back_item (STL/CLR)](../dotnet/list-back-item-stl-clr.md)   
+ [list::begin (STL/CLR)](../dotnet/list-begin-stl-clr.md)

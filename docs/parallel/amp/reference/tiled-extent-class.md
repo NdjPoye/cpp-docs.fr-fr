@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,33 +18,17 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim1
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: e295b56290435a1d87ac2f0dbc0951850600534d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: a73a29a7cdcd20c969680e1dbb69b6a6ede4dbb6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="tiledextent-class"></a>tiled_extent, classe
 A `tiled_extent` objet est un `extent` objet d’un à trois dimensions qui divise l’espace d’étendue en une, deux ou les vignettes en trois dimensions.  
@@ -121,7 +104,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 |----------|-----------------|  
 |[tile_extent](#tile_extent)|Obtient un `extent` objet qui capture les valeurs de la `tiled_extent` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.|  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `extent`  
   
  `tiled_extent`  
@@ -166,7 +149,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
  Un `extent` objet qui capture les dimensions de ce `tiled_extent` instance.  
   
 
-## <a name="pad"></a>  pad   
+## <a name="pad"></a> remplissage   
 Retourne un nouveau `tiled_extent` objet avec les extensions modifiés des divisible par les dimensions de la mosaïque.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -243,4 +226,3 @@ __declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent
   
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

@@ -1,31 +1,29 @@
 ---
-title: "operator==, op&#233;rateur (Microsoft::WRL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::operator=="
-dev_langs: 
-  - "C++"
+title: "opérateur ==, opérateur (Microsoft::WRL) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::operator==
+dev_langs: C++
 ms.assetid: 94f383a5-17a9-40c7-9d9c-778acdc54b27
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3bf8690e92140b503695de79cc6f6d96d3003a32
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# operator==, op&#233;rateur (Microsoft::WRL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Opérateur d'égalité pour les objets [ComPtr](../windows/comptr-class.md) et [ComPtrRef](../windows/comptrref-class.md).  
+# <a name="operator-operator-microsoftwrl"></a>operator==, opérateur (Microsoft::WRL)
+Opérateur d’égalité pour [ComPtr](../windows/comptr-class.md) et [ComPtrRef](../windows/comptrref-class.md) objets.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 WRL_NOTHROW bool operator==(  
@@ -62,20 +60,20 @@ WRL_NOTHROW bool operator==(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `a`  
- L'objet de gauche.  
+ Objet gauche.  
   
  `b`  
- L'objet de droite.  
+ Objet droit.  
   
-## Valeur de retour  
- `true` si les objets sont identiques ; sinon, `false`.  
+## <a name="return-value"></a>Valeur de retour  
+ `true` si les objets sont égaux ; sinon `false`.  
   
-## Configuration requise  
- **En\-tête:** client.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** client.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)

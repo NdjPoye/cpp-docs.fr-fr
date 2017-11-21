@@ -1,43 +1,42 @@
 ---
-title: "Tests de compatibilit&#233; OLE&#160;DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "test de conformité"
-  - "test de conformité (OLE DB)"
-  - "fournisseurs OLE DB, tester"
-  - "tester les fournisseurs"
-  - "tester, fournisseurs OLE DB"
+title: "Passage des Tests de compatibilité OLE DB | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- testing, OLE DB providers
+- testing providers
+- conformance testing
+- conformance testing [OLE DB]
+- OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8ef7e32f56fdff81c7a66a1dfcc6c613201e2f49
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Tests de compatibilit&#233; OLE&#160;DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Pour rendre les fournisseurs plus homogènes, le kit de développement Data Access SDK contient toute une série de tests de compatibilité OLE DB.  Les tests vérifient tous les aspects du fournisseur et vous garantissent raisonnablement que le fournisseur fonctionnera normalement.  Les tests de compatibilité OLE DB font partie du kit de développement Microsoft Data Access SDK.  Cette section met l'accent sur les mesures que vous devez prendre pour réussir les tests de compatibilité.  Pour plus d'informations sur l'exécution des tests de compatibilité OLE DB, consultez le kit de développement SDK.  
+# <a name="passing-ole-db-conformance-tests"></a>Tests de compatibilité OLE DB
+Pour rendre les fournisseurs plus homogènes, le Kit de développement accès aux données fournit un ensemble de tests de compatibilité OLE DB. Les tests de vérifient tous les aspects de votre fournisseur et vous donnent probable que vos fonctions de fournisseur comme prévues. Vous pouvez trouver les tests de compatibilité OLE DB sur le SDK Microsoft Data Access. Cette section se concentre sur ce que vous devez faire pour réussir les tests de conformité. Pour plus d’informations sur l’exécution des tests de compatibilité OLE DB, consultez le Kit de développement.  
   
-## Exécution des tests de compatibilité  
- Dans Visual C\+\+ 6.0, les modèles du fournisseur OLE DB ont ajouté un certain nombre de fonctions de raccordement pour vous permettre de vérifier les valeurs et les propriétés.  La plupart de ces fonctions ont été ajoutées en réaction aux tests de compatibilité.  
+## <a name="running-the-conformance-tests"></a>Exécution des Tests de conformité  
+ Dans Visual C++ 6.0, les modèles du fournisseur OLE DB ajouté un nombre de fonctions de raccordement vous permet de vérifier les valeurs et propriétés. La plupart de ces fonctions ont été ajoutée en réponse aux tests de compatibilité.  
   
 > [!NOTE]
->  Vous devez ajouter plusieurs fonctions de validation pour que votre fournisseur passe avec succès les tests de compatibilité OLE DB.  
+>  Vous devez ajouter plusieurs fonctions de validation de votre fournisseur pour passer les tests de compatibilité OLE DB.  
   
- Ce fournisseur requiert deux routines de validation.  La première routine, `CRowsetImpl::ValidateCommandID`, fait partie de votre classe rowset.  Elle est appelée pendant la création du jeu de lignes par les modèles du fournisseur.  L'exemple utilise cette routine pour indiquer aux consommateurs qu'il ne prend pas en charge les index.  Le premier appel est adressé à `CRowsetImpl::ValidateCommandID` \(notez que le fournisseur utilise le typedef **\_RowsetBaseClass** ajouté dans la table d'interface pour `CMyProviderRowset` dans [Prise en charge des signets par le fournisseur](../../data/oledb/provider-support-for-bookmarks.md), ce qui fait que vous n'avez pas besoin de taper une longue ligne d'arguments des modèles\).  Ensuite, retournez **DB\_E\_NOINDEX** si le paramètre d'index est différent de **NULL** \(cela indique que le consommateur souhaite utiliser un index\).  Pour plus d'informations sur les ID de commande, consultez la spécification OLE DB et recherchez **IOpenRowset::OpenRowset**.  
+ Ce fournisseur requiert deux routines de validation. La première routine, `CRowsetImpl::ValidateCommandID`, fait partie de votre classe rowset. Elle est appelée lors de la création de l’ensemble de lignes par les modèles du fournisseur. L’exemple utilise cette routine pour indiquer aux consommateurs qu’il ne prend pas en charge les index. Le premier appel est à `CRowsetImpl::ValidateCommandID` (Notez que le fournisseur utilise le **_RowsetBaseClass** typedef ajouté dans la table d’interface pour `CMyProviderRowset` dans [prise en charge du fournisseur pour les signets](../../data/oledb/provider-support-for-bookmarks.md), donc vous n’avez pas à taper une longue ligne d’arguments de modèle). Ensuite, retournez **DB_E_NOINDEX** si le paramètre d’index n’est pas **NULL** (cela indique que le consommateur souhaite utiliser un index). Pour plus d’informations sur les ID de commande, consultez la spécification OLE DB et recherchez **IOpenRowset::OpenRowset**.  
   
- Le code suivant correspond à la routine de validation **ValidateCommandID** :  
+ Le code suivant est le **ValidateCommandID** routine de validation :  
   
 ```  
 /////////////////////////////////////////////////////////////////////  
@@ -57,30 +56,30 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
 }  
 ```  
   
- Les modèles du fournisseur appellent la méthode `OnPropertyChanged` chaque fois que quelqu'un modifie une propriété dans le groupe **DBPROPSET\_ROWSET**.  Si vous souhaitez gérer des propriétés pour d'autres groupes, vous devez les ajouter à l'objet approprié \(autrement dit, les contrôles **DBPROPSET\_SESSION** trouvent place dans la classe `CMyProviderSession`\).  
+ Le modèles du fournisseur appellent la `OnPropertyChanged` méthode chaque fois qu’un utilisateur modifie une propriété sur le **DBPROPSET_ROWSET** groupe. Si vous souhaitez gérer des propriétés pour d’autres groupes, ajoutez-les à l’objet approprié (autrement dit, **DBPROPSET_SESSION** vérifications aller dans le `CMyProviderSession` classe).  
   
- Le code vérifie d'abord si la propriété est liée à une autre.  Si la propriété est chaînée, il affecte la valeur True à la propriété **DBPROP\_BOOKMARKS**.  L'annexe C de la spécification OLE DB contient des informations sur les propriétés.  Ces informations vous indiquent également si la propriété est chaînée à une autre propriété.  
+ Le code vérifie tout d’abord si la propriété est liée à un autre. Si la propriété est chaînée, il affecte la **DBPROP_BOOKMARKS** True à la propriété. Annexe C de la spécification OLE DB contient des informations sur les propriétés. Ces informations vous indiquent également si la propriété est chaînée à une autre.  
   
- Vous pouvez également, le cas échéant, ajouter la routine `IsValidValue` à votre code.  Les modèles appellent `IsValidValue` lors des tentatives de définition d'une propriété.  Vous devez substituer cette méthode si vous avez besoin d'un traitement supplémentaire lors de la définition de la valeur d'une propriété.  Vous pouvez avoir l'une de ces méthodes pour chaque propriété définie.  
+ Vous pouvez souhaiter également ajouter le `IsValidValue` routine à votre code. L’appel de modèles `IsValidValue` lorsque vous tentez de définir une propriété. Vous devez substituer cette méthode si vous avez besoin d’un traitement supplémentaire lors de la définition d’une valeur de propriété. Vous pouvez avoir une des méthodes suivantes pour chaque jeu de propriétés.  
   
-## Problèmes liés aux threads  
- Par défaut, l'Assistant Fournisseur OLE DB de l'Assistant Fournisseur OLE DB ATL génère un code pour que le fournisseur puisse s'exécuter dans un modèle « apartment » \(appartement\).  Si vous essayez d'exécuter ce code avec les tests de compatibilité, vous commencez par obtenir des échecs.  Cette situation s'explique par le fait que Ltm.exe, l'outil utilisé pour exécuter les tests de compatibilité OLE DB, applique par défaut le traitement « Free threaded » \(thread libre\).  Le code de l'Assistant Fournisseur OLE DB applique par défaut le modèle appartement à des fins d'amélioration des performances et de la convivialité.  
+## <a name="threading-issues"></a>Problèmes liés aux threads  
+ Par défaut, l’Assistant fournisseur OLE DB dans l’Assistant fournisseur OLE DB ATL génère du code pour le fournisseur pour s’exécuter dans un modèle de cloisonnement. Si vous essayez d’exécuter ce code avec les tests de compatibilité, vous obtenez des échecs. Ceci est le fait que Ltm.exe, l’outil utilisé pour exécuter les tests de compatibilité OLE DB, valeurs par défaut afin de libérer de thread. Le code de l’Assistant fournisseur OLE DB par défaut pour le modèle de cloisonnement pour les performances et la facilité d’utilisation.  
   
- Pour remédier à ce problème, vous devez modifier LTM ou le fournisseur.  
+ Pour corriger ce problème, vous pouvez modifier LTM ou modifier le fournisseur.  
   
-#### Pour modifier LTM en vue d'une exécution en mode thread appartement  
+#### <a name="to-change-ltm-to-run-in-apartment-threaded-mode"></a>Pour modifier LTM pour s’exécuter dans un cloisonnement mode thread  
   
-1.  Dans le menu principal de LTM, cliquez sur **Outils**, puis sur **Options**.  
+1.  Dans le menu principal de LTM, cliquez sur **outils**, puis cliquez sur **Options**.  
   
-2.  Sous l'onglet **Général**, remplacez le modèle de thread **Free Threaded** par **Apartment Threaded**.  
+2.  Sur le **général** , modifiez le modèle de thread de **Free Threaded** à **Apartment Threaded**.  
   
- Pour modifier votre fournisseur en vue d'une exécution en mode thread libre :  
+ Pour modifier votre fournisseur pour une exécution en mode thread libre :  
   
--   Dans le projet de fournisseur, recherchez toutes les instances de `CComSingleThreadModel` et remplacez\-les par `CComMultiThreadModel`, qui doit se trouver dans les en\-têtes source de données, session et rowset.  
+-   Dans votre projet de fournisseur, recherchez toutes les instances de `CComSingleThreadModel` et remplacez-la par `CComMultiThreadModel`, qui doit être dans les en-têtes de lignes, de session et de source de données.  
   
--   Dans le fichier .rgs, remplacez le modèle de thread **Apartment** par **Both**.  
+-   Dans le fichier .rgs, modifiez le modèle de thread de **cloisonnement** à **les deux**.  
   
--   Suivez les règles de programmation correctes pour la programmation en mode thread libre \(c'est\-à\-dire, le verrouillage des accès en écriture\).  
+-   Programmation multithread gratuitement (autrement dit, un verrou sur les écritures) de règles de programmation correctes de suivi.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Techniques avancées du fournisseur](../../data/oledb/advanced-provider-techniques.md)

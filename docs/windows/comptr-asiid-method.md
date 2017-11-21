@@ -1,32 +1,30 @@
 ---
-title: "ComPtr::AsIID, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::AsIID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AsIID (méthode)"
+title: "Comptr::asiid, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::AsIID
+dev_langs: C++
+helpviewer_keywords: AsIID method
 ms.assetid: d5a3cdb2-796d-4410-966a-847c0e8fb226
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3db430114cc2346174c56f35d08dab41a1c4b01f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# ComPtr::AsIID, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Retourne un objet ComPtr représentant l'interface identifiée par l'ID d'interface spécifié.  
+# <a name="comptrasiid-method"></a>ComPtr::AsIID, méthode
+Retourne un objet ComPtr qui représente l’interface identifiée par l’ID d’interface spécifié.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 WRL_NOTHROW HRESULT AsIID(  
@@ -35,20 +33,20 @@ WRL_NOTHROW HRESULT AsIID(
 ) const;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `riid`  
- Un ID d'interface.  
+ ID d’interface.  
   
  `p`  
- Si pris en charge, un pointeur d'indirection double vers l'interface spécifiée par le paramètre `riid`; sinon, un pointeur vers IUnknown.  
+ Si la prise en charge, un pointeur doublement indirect vers l’interface spécifiée par le `riid` paramètre ; sinon, un pointeur vers IUnknown.  
   
-## Valeur de retour  
- S\_OK si l'opération a réussi; sinon, un HRESULT indiquant l'erreur.  
+## <a name="return-value"></a>Valeur de retour  
+ S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.  
   
-## Configuration requise  
- **En\-tête:** client.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** client.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ComPtr, classe](../windows/comptr-class.md)

@@ -1,32 +1,30 @@
 ---
-title: "SafeMultiply | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeMultiply"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeMultiply (fonction)"
+title: SafeMultiply | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeMultiply
+dev_langs: C++
+helpviewer_keywords: SafeMultiply function
 ms.assetid: 81d988a5-fac7-4930-8c37-c24fa8e2c853
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 27b03278e3f6cdf526f6df4bdded67be640caab0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# SafeMultiply
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Multiplie deux nombres ensemble d'une manière qui protège contre un dépassement de capacité.  
+# <a name="safemultiply"></a>SafeMultiply
+Multiplie deux nombres ensemble d’une manière qui protège contre le dépassement de capacité.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename T, typename U>  
@@ -37,34 +35,34 @@ inline bool SafeMultiply (
 ) throw ();  
 ```  
   
-#### Paramètres  
- \[in\] `t`  
- Premier nombre à multiplier.  Ceci doit être de type T.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `t`  
+ Premier nombre à multiplier. Cela doit être de type T.  
   
- \[in\] `u`  
- Second nombre à multiplier.  Ceci doit être de type U.  
+ [in] `u`  
+ Second nombre à multiplier. Cela doit être de type U.  
   
- \[out\] `result`  
+ [out] `result`  
  Le paramètre où `SafeMultiply` stocke le résultat.  
   
-## Valeur de retour  
- `true` si aucune erreur ne se produit; `false` si une erreur se produit.  
+## <a name="return-value"></a>Valeur de retour  
+ `true`Si aucune erreur ne se produit ; `false` si une erreur se produit.  
   
-## Notes  
- Cette méthode fait partie de [Bibliothèque SafeInt](../windows/safeint-library.md) et est conçue pour une opération de multiplication sans création d'une instance de [SafeInt, classe](../windows/safeint-class.md).  
+## <a name="remarks"></a>Remarques  
+ Cette méthode fait partie de [Bibliothèque SafeInt](../windows/safeint-library.md) et est conçu pour une opération de multiplication unique sans créer d’instance de la [SafeInt, classe](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Cette méthode doit être utilisée uniquement lorsqu'une seule opération mathématique doit être protégée.  S'il existe plusieurs opérations, vous devez utiliser la classe `SafeInt` au lieu d'appeler des fonctions autonomes.  
+>  Cette méthode doit uniquement être utilisée lorsqu’une opération mathématique unique doit être protégée. S’il existe plusieurs opérations, vous devez utiliser le `SafeInt` classe au lieu d’appeler les fonctions autonomes individuelles.  
   
- Pour plus d'informations sur les types de modèle T et U, consultez [SafeInt, fonctions](../windows/safeint-functions.md).  
+ Pour plus d’informations sur les types de modèles T, U, consultez [SafeInt, fonctions](../windows/safeint-functions.md).  
   
-## Configuration requise  
- **En\-tête :** safeint.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** safeint.h  
   
- **Espace de nommage :** Microsoft::Utilities  
+ **Namespace :** Microsoft::Utilities  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SafeInt, fonctions](../windows/safeint-functions.md)   
  [Bibliothèque SafeInt](../windows/safeint-library.md)   
- [SafeInt, classe](../windows/safeint-class.md)   
+ [SafeInt (classe)](../windows/safeint-class.md)   
  [SafeDivide](../windows/safedivide.md)

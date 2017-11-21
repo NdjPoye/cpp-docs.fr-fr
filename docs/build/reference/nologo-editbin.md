@@ -1,38 +1,36 @@
 ---
-title: "/NOLOGO (EDITBIN) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/nologo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/NOLOGO (option Editbin)"
-  - "NOLOGO (option Editbin)"
-  - "-NOLOGO (option Editbin)"
+title: -NOLOGO (EDITBIN) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /nologo
+dev_langs: C++
+helpviewer_keywords:
+- -NOLOGO editbin option
+- /NOLOGO editbin option
+- NOLOGO editbin option
 ms.assetid: 909a1909-0c99-4bce-8013-bf161d645f19
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f3607ee78ebee6697958d674d90a50fd3fc78d5f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /NOLOGO (EDITBIN)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="nologo-editbin"></a>/NOLOGO (EDITBIN)
 ```  
 /NOLOGO  
 ```  
   
-## Notes  
- Cette option supprime l'affichage du message de copyright et du numéro de version de l'utilitaire EDITBIN.  
+## <a name="remarks"></a>Remarques  
+ Cette option supprime l’affichage du message de copyright EDITBIN et le numéro de version.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options EDITBIN](../../build/reference/editbin-options.md)

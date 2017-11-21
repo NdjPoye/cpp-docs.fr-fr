@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3145
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3145
+f1_keywords: C3145
+dev_langs: C++
+helpviewer_keywords: C3145
 ms.assetid: f165c874-0f51-45c7-85e8-ebe321cbc168
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 6b6548d04d701cb510669d91780979951c485685
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3145"></a>Erreur du compilateur C3145
 'objet' : une variable globale ou statique ne peut pas avoir de type managé ou WinRT 'type'  
@@ -73,4 +68,3 @@ int main() {
    interior_ptr<int> p = &(h_MyClass->data);  
 }  
 ```  
-

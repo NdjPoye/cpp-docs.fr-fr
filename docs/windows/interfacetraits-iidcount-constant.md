@@ -1,45 +1,43 @@
 ---
-title: "InterfaceTraits::IidCount, constante | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceTraits::IidCount"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IidCount (constante)"
+title: Interfacetraits::iidcount, constante | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceTraits::IidCount
+dev_langs: C++
+helpviewer_keywords: IidCount constant
 ms.assetid: c4eab6e0-51f7-4b24-9137-cbcf58e0a9f4
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2e2a015bf7ea065724d4bc31926c91ad64010e66
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# InterfaceTraits::IidCount, constante
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="interfacetraitsiidcount-constant"></a>InterfaceTraits::IidCount, constante
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 static const unsigned long IidCount = 1;  
 ```  
   
-## Notes  
- Contient le nombre d'IDs d'interface associés à l'objet InterfaceTraits actuel.  
+## <a name="remarks"></a>Remarques  
+ Contient le nombre d’interface Qu'id associées à l’objet InterfaceTraits en cours.  
   
-## Configuration requise  
- **En\-tête:** implements.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** implements.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
- [InterfaceTraits, structure](../windows/interfacetraits-structure.md)   
+## <a name="see-also"></a>Voir aussi  
+ [InterfaceTraits (Structure)](../windows/interfacetraits-structure.md)   
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

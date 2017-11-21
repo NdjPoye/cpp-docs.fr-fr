@@ -1,32 +1,30 @@
 ---
-title: "logical_or (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::logical_or"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "logical_or (fonction) (STL/CLR)"
+title: logical_or (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::logical_or
+dev_langs: C++
+helpviewer_keywords: logical_or function [STL/CLR]
 ms.assetid: 3b5eac9b-4aaf-4395-8d76-49100487d85a
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ac9c12b0df661ea3400eadbcf7acb71a8d325696
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# logical_or (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe du modèle décrit un foncteur qui, lorsqu'il est appelé, renvoie true uniquement si le premier argument ou le deuxième vaut true.  Vous l'utilisez pour spécifier un objet fonction au niveau de son type d'argument.  
+# <a name="logicalor-stlclr"></a>logical_or (STL/CLR)
+La classe de modèle décrit un functor que, lorsqu’elle est appelée, retourne true uniquement si le premier argument ou des deuxième tests en tant que la valeur true. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Arg>  
@@ -49,34 +47,34 @@ public:
     };  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  Arg  
- Type des arguments.  
+ Le type des arguments.  
   
-## Fonctions membres  
+## <a name="member-functions"></a>Fonctions membres  
   
-|Définition de type|Description|  
-|------------------------|-----------------|  
-|delegate\_type|Le type du délégué générique.|  
-|first\_argument\_type|Le type du premier argument de foncteur|  
-|result\_type|Le type du premier argument du résultat du foncteur.|  
-|second\_argument\_type|Le type du deuxième argument de foncteur.|  
+|Définition de types|Description|  
+|---------------------|-----------------|  
+|delegate_type|Le type du délégué générique.|  
+|first_argument_type|Le type du premier argument functor.|  
+|RESULT_TYPE|Le type du résultat functor.|  
+|second_argument_type|Le type du second argument functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|logical\_or|Construit le foncteur.|  
+|logical_or|Construit le foncteur.|  
   
 |Opérateur|Description|  
-|---------------|-----------------|  
-|operator\(\)|Calcule la fonction souhaitée.|  
-|opérateur delegate\_type^|Convertit le foncteur en un délégué.|  
+|--------------|-----------------|  
+|operator()|Calcule la fonction de votre choix.|  
+|opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
   
-## Notes  
- La classe du modèle décrit un foncteur à deux arguments.  Elle définit l'opérateur membre `operator()` afin que, lorsque l'objet est appelé en tant que fonction, il renvoie true uniquement si le premier argument ou le second vaut true.  
+## <a name="remarks"></a>Remarques  
+ La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, il retourne true uniquement si le premier argument ou tests en tant que deuxième true.  
   
- Vous pouvez également transmettre l'objet comme argument de fonction dont le type est `delegate_type^` et il sera converti de façon appropriée.  
+ Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_logical_or.cpp   
@@ -116,13 +114,16 @@ int main()
   
 ```  
   
-  **2 0**  
- **0 0**  
- **1 0**   
-## Configuration requise  
- **En\-tête :** \<cliext\/functional\>  
+```Output  
+2 0  
+0 0  
+1 0  
+```  
   
- **Espace de nom :** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/fonctionnel >  
   
-## Voir aussi  
- [logical\_and](../dotnet/logical-and-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [logical_and (STL/CLR)](../dotnet/logical-and-stl-clr.md)

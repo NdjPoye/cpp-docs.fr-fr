@@ -1,37 +1,35 @@
 ---
-title: "IRowsetImpl::m_bReset | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IRowsetImpl.m_bReset"
-  - "IRowsetImpl.m_bReset"
-  - "m_bReset"
-  - "IRowsetImpl::m_bReset"
-  - "ATL::IRowsetImpl::m_bReset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_bReset"
+title: IRowsetImpl::m_bReset | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IRowsetImpl.m_bReset
+- IRowsetImpl.m_bReset
+- m_bReset
+- IRowsetImpl::m_bReset
+- ATL::IRowsetImpl::m_bReset
+dev_langs: C++
+helpviewer_keywords: m_bReset
 ms.assetid: d423f9f3-4d48-4d0c-b152-684c81a0b34e
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4323d92398ea4d47410a2b5a3aad08972628634d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetImpl::m_bReset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Un indicateur de bit utilisé pour déterminer si la position de curseur est définie dans l'ensemble de lignes.  
+# <a name="irowsetimplmbreset"></a>IRowsetImpl::m_bReset
+Un indicateur de bit utilisé pour déterminer si la position du curseur est définie sur l’ensemble de lignes.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -39,11 +37,11 @@ unsigned m_bReset:1;
   
 ```  
   
-## Notes  
- Si le consommateur appelle [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) avec `lOffset` négatif ou *les* paramètres crows et le `m_bReset` est vrai, `GetNextRows` passe à la fin de l'ensemble de lignes.  Si `m_bReset` est faux, le consommateur obtient un code d'erreur, conformément à la spécification OLE DB.  L'indicateur de `m_bReset` obtient la valeur **vrai** lorsque l'ensemble de lignes est d'abord créé et que le consommateur appelle [IRowsetImpl::RestartPosition](../../data/oledb/irowsetimpl-restartposition.md).  Elle obtient la valeur **faux** lorsque vous appelez `GetNextRows`.  
+## <a name="remarks"></a>Remarques  
+ Si le consommateur appelle [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) avec une valeur négative `lOffset` ou *cRows* et `m_bReset` a la valeur true, `GetNextRows` se déplace vers la fin de l’ensemble de lignes. Si `m_bReset` a la valeur false, le consommateur reçoit un code d’erreur, conformément à la spécification OLE DB. Le `m_bReset` indicateur obtient la valeur **true** lors de la première création de l’ensemble de lignes et lorsque le consommateur appelle [IRowsetImpl::RestartPosition](../../data/oledb/irowsetimpl-restartposition.md). Elle obtient la valeur **false** lorsque vous appelez `GetNextRows`.  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [IRowsetImpl, classe](../../data/oledb/irowsetimpl-class.md)

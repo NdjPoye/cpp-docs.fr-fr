@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,36 +14,20 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4cb454ca6ea92ede5c4cf83c1072e22e60577811
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 14d81a2039005e3ab301a865d9834de048a74ac5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
-Incluez l’en-tête \<filesystem> pour accéder aux classes et aux fonctions qui manipulent et récupèrent des informations sur les chemins, les fichiers et les répertoires.  
+Incluez l’en-tête &lt;filesystem> pour accéder aux classes et aux fonctions qui manipulent et récupèrent des informations sur les chemins, les fichiers et les répertoires.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,7 +38,7 @@ using namespace std::experimental::filesystem::v1;
 ```  
   
 > [!IMPORTANT]
->  Au moment de la publication de Visual Studio 2017, l’en-tête \<experimental/filesystem> n’était pas encore une norme C++. Visual C++ 2017 implémente le projet final de la norme, qui se trouve dans [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).  
+>  À compter de la version de Visual Studio 2017, le \<filesystem > en-tête n’était pas encore une norme C++. Visual C++ 2017 implémente le projet final de la norme, qui se trouve dans [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).  
   
  Cet en-tête prend en charge les systèmes de fichiers des deux grandes classes de systèmes d’exploitation : Microsoft Windows et Posix.  
   
@@ -73,15 +56,15 @@ using namespace std::experimental::filesystem::v1;
   
 -   Un objet de classe path stocke le chemin au format natif. Toutefois, il prend en charge la conversion (avec simplicité) entre ce format stocké et plusieurs formats externes :  
   
-    -   Séquence char terminée par un caractère null, codée au format préconisé par le système d’exploitation.  
+-   Séquence char terminée par un caractère null, codée au format préconisé par le système d’exploitation.  
   
-    -   Séquence char terminée par un caractère null, codée au format UTF-8.  
+-   Séquence char terminée par un caractère null, codée au format UTF-8.  
   
-    -   Séquence wchar_t terminée par un caractère null, codée au format préconisé par le système d’exploitation.  
+-   Séquence wchar_t terminée par un caractère null, codée au format préconisé par le système d’exploitation.  
   
-    -   Séquence char16_t terminée par un caractère null, codée au format UTF-16.  
+-   Séquence char16_t terminée par un caractère null, codée au format UTF-16.  
   
-    -   Séquence char32_t terminée par un caractère null, codée au format UTF-32.  
+-   Séquence char32_t terminée par un caractère null, codée au format UTF-32.  
   
  Selon les besoins, les conversions entre ces représentations passent par une ou plusieurs facettes `codecvt`. Si aucun objet de paramètres régionaux spécifique n’est désigné, ces facettes sont obtenues à partir des paramètres régionaux globaux.  
   
@@ -142,14 +125,13 @@ using namespace std::experimental::filesystem::v1;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) et qui détermine le comportement si un fichier de destination existe déjà.|  
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) qui détermine le comportement si un fichier de destination existe déjà.|  
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Énumération qui spécifie les options pour les itérateurs de répertoire.|  
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Énumération pour les types de fichiers.|  
 |[Perms](../standard-library/filesystem-enumerations.md#perms)|Type de masque de bits utilisé pour transmettre les autorisations et les options des autorisations|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

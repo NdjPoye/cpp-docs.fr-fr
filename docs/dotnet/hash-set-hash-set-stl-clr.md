@@ -1,32 +1,30 @@
 ---
-title: "hash_set::hash_set (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::hash_set"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_set (membre) (STL/CLR)"
+title: hash_set::hash_set (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::hash_set
+dev_langs: C++
+helpviewer_keywords: hash_set member [STL/CLR]
 ms.assetid: 006414ed-db5a-4c08-ac81-4a8ae57d0aad
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4e4a7e2975402183c0cabf46ce786bf3877fe6d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::hash_set (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Construit un objet container.  
+# <a name="hashsethashset-stlclr"></a>hash_set::hash_set (STL/CLR)
+Construit un objet conteneur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 hash_set();  
@@ -49,104 +47,90 @@ hash_set(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred, hasher^ hashfn);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  premier  
  Début de la plage à insérer.  
   
  hashfn  
- Fonction de hachage pour faire correspondre les clés aux compartiments correspondants.  
+ Fonction pour les clés de mappage pour les compartiments de hachage.  
   
  last  
  Fin de la plage à insérer.  
   
  pred  
- Classer l'attribut de la séquence contrôlée.  
+ Classement de prédicat pour la séquence contrôlée.  
   
- right  
+ droite  
  Objet ou plage à insérer.  
   
-## Notes  
- Le constructeur:  
+## <a name="remarks"></a>Remarques  
+ Le constructeur :  
   
  `hash_set();`  
   
- démarre la séquence contrôlée sans éléments, avec l'attribut de classement par défaut `key_compare()`, et avec la fonction de hachage par défaut.  Vous l'utilisez pour spécifier une séquence initiale contrôlée vide, avec le prédicat de classement par défaut et la fonction de hachage.  
+ Initialise la séquence contrôlée sans aucun élément, avec la valeur par défaut classement prédicat `key_compare()`et avec la fonction de hachage par défaut. Il permet de spécifier une séquence contrôlée initiale vide avec la fonction de prédicat et hachage de classement par défaut.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `explicit hash_set(key_compare^ pred);`  
   
- démarre la séquence contrôlée sans éléments, avec l'attribut de classement par défaut `pred`, et avec la fonction de hachage par défaut.  Vous l'utilisez pour spécifier une séquence initiale contrôlée vide, avec le prédicat spécifique de classement par défaut et la fonction de hachage par défaut.  
+ Initialise la séquence contrôlée sans aucun élément, avec le prédicat de tri `pred`et avec la fonction de hachage par défaut. Il permet de spécifier une séquence contrôlée initiale vide avec le prédicat de tri spécifié et la fonction de hachage par défaut.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `hash_set(key_compare^ pred, hasher^ hashfn);`  
   
- démarre la séquence contrôlée sans éléments, avec l'attribut de classement par défaut `pred`, et avec la fonction de hachage par défaut `hashfn`.  Vous l'utilisez pour spécifier une séquence initiale contrôlée vide, avec le prédicat spécifique de classement par défaut et la fonction de hachage.  
+ Initialise la séquence contrôlée sans aucun élément, avec le prédicat de tri `pred`et avec la fonction de hachage `hashfn`. Il permet de spécifier une séquence contrôlée initiale vide avec la fonction de prédicat et hachage de tri spécifiée.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `hash_set(hash_set<Key>% right);`  
   
- démarre la séquence contrôlée sans éléments par la séquence `[``right``.`[hash\_set::begin](../dotnet/hash-set-begin-stl-clr.md)`(),` `right``.`[hash\_set::end](../dotnet/hash-set-end-stl-clr.md)`())`, avec l'attribut de classement par défaut, et avec la fonction de hachage par défaut.  Vous l'utilisez pour spécifier une séquence initiale contrôlée qui est une copie de la séquence contrôlée par l'objet hash\_set `right`, avec le prédicat de classement par défaut et la fonction de hachage.  
+ Initialise la séquence contrôlée par la séquence [`right.begin()`, `right.end()`), avec la valeur par défaut de classement de prédicat et avec la fonction de hachage par défaut. Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet hash_set `right`avec le prédicat de tri par défaut et la fonction de hachage.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `hash_set(hash_set<Key>^ right);`  
   
- démarre la séquence contrôlée sans éléments par la séquence `[``right``->`[hash\_set::begin](../dotnet/hash-set-begin-stl-clr.md)`(),` `right``->`[hash\_set::end](../dotnet/hash-set-end-stl-clr.md)`())`, avec l'attribut de classement par défaut, et avec la fonction de hachage par défaut.  Vous l'utilisez pour spécifier une séquence initiale contrôlée qui est une copie de la séquence contrôlée par l'objet hash\_set `right`, avec le prédicat de classement par défaut et la fonction de hachage.  
+ Initialise la séquence contrôlée par la séquence [`right->begin()`, `right->end()`), avec la valeur par défaut de classement de prédicat et avec la fonction de hachage par défaut. Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet hash_set `right`avec le prédicat de tri par défaut et la fonction de hachage.  
   
- Le constructeur :  
+ Le constructeur :  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_set(InIter first, InIter last);`  
   
- `hash_set(InIter first, InIter last);`  
+ Initialise la séquence contrôlée par la séquence [`first`, `last`), avec la valeur par défaut de classement de prédicat et avec la fonction de hachage par défaut. Il permet de rendre la séquence contrôlée une copie d’une autre séquence, avec la fonction de prédicat et hachage de classement par défaut.  
   
- démarre la séquence contrôlée sans éléments par la séquence `[``first``,` `last``)`, avec l'attribut de classement par défaut, et avec la fonction de hachage par défaut.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence, avec l'attribut et la fonction de hachage par défaut.  
+ Le constructeur :  
   
- Le constructeur :  
+ `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred);`  
   
- `template<typename InIter>`  
+ Initialise la séquence contrôlée par la séquence [`first`, `last`), avec le prédicat de tri `pred`et avec la fonction de hachage par défaut. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence, avec le prédicat de tri spécifié et la fonction de hachage par défaut.  
   
- `hash_set(InIter first, InIter last,`  
+ Le constructeur :  
   
- `key_compare^ pred);`  
+ `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
   
- démarre la séquence contrôlée sans éléments par la séquence `[``first``,` `last``)`, avec l'attribut de classement par défaut `pred`, et avec la fonction de hachage par défaut.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence, l'attribut spécifique de classement et la fonction de hachage étants par défaut.  
+ Initialise la séquence contrôlée par la séquence [`first`, `last`), avec le prédicat de tri `pred`et avec la fonction de hachage `hashfn`. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence, avec la fonction de prédicat et hachage de tri spécifiée.  
   
- Le constructeur :  
-  
- `template<typename InIter>`  
-  
- `hash_set(InIter first, InIter last,`  
-  
- `key_compare^ pred, hasher^ hashfn);`  
-  
- Initialise la séquence contrôlée avec la séquence `[``first``,` `last``)`, avec le prédicat de classements `pred`, et avec la fonction de hachage `hashfn`.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence, avec l'attribut spécifié et la fonction de hachage par défaut.  
-  
- Le constructeur :  
+ Le constructeur :  
   
  `hash_set(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- démarre la séquence contrôlée par la séquence indiquée par l'énumérateur `right`, avec l'attribut par défaut, et avec la fonction de hachage par défaut.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence décrite par un énumérateur, avec le prédicat de classement par défaut et la fonction de hachage par défaut.  
+ Initialise la séquence contrôlée par la séquence désignée par l’énumérateur `right`, avec la valeur par défaut de classement de prédicat et avec la fonction de hachage par défaut. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec la fonction de prédicat et hachage de classement par défaut.  
   
- Le constructeur :  
+ Le constructeur :  
   
- `hash_set(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ Initialise la séquence contrôlée par la séquence désignée par l’énumérateur `right`, avec le prédicat de tri `pred`et avec la fonction de hachage par défaut. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par l’énumérateur avec la fonction de hachage par défaut et le prédicat de tri spécifiée.  
   
- démarre la séquence contrôlée par l'ordre indiqué par l'énumérateur `right`, avec l'attribut de classement par défaut `pred`, et avec la fonction de hachage par défaut.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence décrite par un énumérateur, avec le prédicat spécifié de classement par défaut et la fonction de hachage par défaut.  
+ Le constructeur :  
   
- Le constructeur :  
+ `hash_set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
   
- `hash_set(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ Initialise la séquence contrôlée par la séquence désignée par l’énumérateur `right`, avec le prédicat de tri `pred`et avec la fonction de hachage `hashfn`. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par l’énumérateur, avec la fonction de prédicat et hachage de tri spécifiée.  
   
- `key_compare^ pred, hasher^ hashfn);`  
-  
- démarre la séquence contrôlée par l'ordre indiqué par l'énumérateur `right`, avec l'attribut de classement par défaut `pred`, et avec la fonction de hachage par défaut `hashfn`.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence décrite par un énumérateur, avec le prédicat spécifique de classement par défaut et la fonction de hachage par défaut.  
-  
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_set_construct.cpp   
@@ -255,26 +239,32 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **a b c**  
-**size\(\) \= 0**  
- **a b c**  
-**size\(\) \= 0**  
- **c b a**  
- **a b c**  
- **a b c**  
- **c b a**  
- **a b c**  
- **a b c**  
- **c b a**  
- **a b c**  
- **a b c**   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_set\>  
+```Output  
+size() = 0  
+ a b c  
+size() = 0  
+ a b c  
+size() = 0  
+ c b a  
   
- **Espace de nom :** cliext  
+ a b c  
+ a b c  
+ c b a  
   
-## Voir aussi  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::generic\_container](../dotnet/hash-set-generic-container-stl-clr.md)   
- [hash\_set::operator\=](../dotnet/hash-set-operator-assign-stl-clr.md)
+ a b c  
+ a b c  
+ c b a  
+  
+ a b c  
+ a b c  
+```  
+  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/hash_set >  
+  
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::generic_container (STL/CLR)](../dotnet/hash-set-generic-container-stl-clr.md)   
+ [hash_set::operator= (STL/CLR)](../dotnet/hash-set-operator-assign-stl-clr.md)

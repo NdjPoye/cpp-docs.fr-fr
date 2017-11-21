@@ -1,77 +1,77 @@
 ---
-title: "section | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "section_CPP"
-  - "vc-pragma.section"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pragmas, section"
-  - "section (pragma)"
+title: section | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- section_CPP
+- vc-pragma.section
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, section
+- section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bdf0a02155329de5b77ffa67a8bc77ab34cc3e07
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# section
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="section"></a>section
 Crée une section dans un fichier .obj.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 #pragma section( "section-name" [, attributes] )  
 ```  
   
-## Notes  
- Les termes *segment* et *section* sont interchangeables dans cette rubrique.  
+## <a name="remarks"></a>Remarques  
+ La signification des termes du contrat *segment* et *section* sont interchangeables dans cette rubrique.  
   
- Une fois qu'une section est définie, elle reste valide pour le reste de la compilation.  Toutefois, vous devez utiliser [\_\_declspec\(allocate\)](../cpp/allocate.md), sinon aucun élément ne sera placé dans la section.  
+ Une fois qu'une section est définie, elle reste valide pour le reste de la compilation. Toutefois, vous devez utiliser [__declspec (Allocate)](../cpp/allocate.md) ou rien ne sera placé dans la section.  
   
- *section\-name* est un paramètre obligatoire qui représente le nom de la section.  Ce nom ne doit pas être en conflit avec les noms de section standard.  Consultez [\/SECTION](../build/reference/section-specify-section-attributes.md) pour obtenir la liste des noms à ne pas utiliser lorsque vous créez une section.  
+ *nom de la section* est un paramètre obligatoire qui sera le nom de la section. Ce nom ne doit pas être en conflit avec les noms de section standard. Consultez [/SECTION](../build/reference/section-specify-section-attributes.md) pour une liste de noms, vous ne devez pas utiliser lors de la création d’une section.  
   
- `attributes` est un paramètre optionnel qui se compose d'un ou plusieurs attributs séparés par des virgules que vous souhaitez assigner à la section.  Les paramètres `attributes` possibles sont les suivants :  
+ `attributes` est un paramètre optionnel qui se compose d'un ou plusieurs attributs séparés par des virgules que vous souhaitez assigner à la section. Les paramètres `attributes` possibles sont les suivants :  
   
- **read \(lecture\)**  
+ **read**  
  Permet les opérations de lecture sur les données.  
   
- **write \(écriture\)**  
+ **write**  
  Permet les opérations d'écriture sur les données.  
   
- **execute**  
+ **exécuter**  
  Permet d'exécuter le code.  
   
- **shared**  
+ **partagé**  
  Partage la section entre tous les processus qui chargent l'image.  
   
  **nopage**  
  Marque la section comme non paginable ; utile pour les pilotes de périphériques Win32.  
   
- **nocache**  
+ **NoCache**  
  Marque la section comme ne pouvant pas être mise en cache ; utile pour les pilotes de périphériques Win32.  
   
- **discard**  
+ **Ignorer**  
  Marque la section comme ne pouvant pas être supprimée ; utile pour les pilotes de périphériques Win32.  
   
  **remove**  
- Marque la section comme non résidante en mémoire ; pilotes de périphériques virtuels \(V*x*D\) uniquement.  
+ Marque la section comme non résidents en mémoire ; pilotes de périphériques virtuels (V*x*D) uniquement.  
   
  Si vous ne spécifiez aucun attribut, la section aura des attributs en lecture et en écriture.  
   
-## Exemple  
- Dans l'exemple suivant, la première instruction identifie la section et ses attributs.  L'entier `j` n'est pas placé dans `mysec` car il n'a pas été déclaré avec `__declspec(allocate)` ; `j` est placé dans la section de données.  L'entier `i` n'est pas placé dans `mysec` en raison de son attribut de classe de stockage `__declspec(allocate)`.  
+## <a name="example"></a>Exemple  
+ Dans l'exemple suivant, la première instruction identifie la section et ses attributs. L'entier `j` n'est pas placé dans `mysec` car il n'a pas été déclaré avec `__declspec(allocate)` ; `j` est placé dans la section de données. L'entier `i` n'est pas placé dans `mysec` en raison de son attribut de classe de stockage `__declspec(allocate)`.  
   
 ```  
 // pragma_section.cpp  
@@ -84,5 +84,5 @@ int i = 0;
 int main(){}  
 ```  
   
-## Voir aussi  
- [Directives pragma et mot clé \_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Voir aussi  
+ [Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

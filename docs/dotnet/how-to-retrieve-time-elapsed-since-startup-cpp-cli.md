@@ -1,35 +1,34 @@
 ---
-title: "Comment&#160;: r&#233;cup&#233;rer le temps &#233;coul&#233; depuis le d&#233;marrage (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compteurs, temps écoulé"
-  - "démarrage"
-  - "démarrage, temps écoulé depuis"
-  - "nombres de cycles"
-  - "heure, temps écoulé depuis le démarrage"
+title: "Comment : récupérer le temps écoulé depuis le démarrage (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- time, elapsed since startup
+- counters, elapsed time
+- startup, time elapsed since
+- tick counts
+- startup
 ms.assetid: a31fdecc-099e-4dd1-a176-f682289c5dd0
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 56f73aec78af0fe34d8c3881911a6ae1d7f26501
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Comment&#160;: r&#233;cup&#233;rer le temps &#233;coul&#233; depuis le d&#233;marrage (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'exemple de code suivant montre comment déterminer le nombre de tics ou le nombre des millisecondes qui se sont écoulées depuis le démarrage de Windows.  Cette valeur est stockée dans le membre <xref:System.Environment.TickCount%2A?displayProperty=fullName> et, comme il s'agit d'une valeur de 32 bits, elle est remise à zéro tous les 24,9 jours environ.  
+# <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>Comment : récupérer le temps écoulé depuis le démarrage (C++/CLI)
+L’exemple de code suivant montre comment déterminer le nombre de cycles, ou nombre de millisecondes qui se sont écoulées depuis Windows a été démarré. Cette valeur est stockée dans le <xref:System.Environment.TickCount%2A?displayProperty=fullName> membre et, s’agissant d’une valeur 32 bits, remet à zéro tous les 24,9 jours environ.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // startup_time.cpp  
@@ -54,6 +53,6 @@ int main( )
 }  
 ```  
   
-## Voir aussi  
- [Opérations Windows](../dotnet/windows-operations-cpp-cli.md)   
- [Programmation .NET avec C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Opérations Windows (C + c++ / CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -1,45 +1,46 @@
 ---
-title: "default::(type_name)::ToString, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Object::ToString"
-dev_langs: 
-  - "C++"
+title: "par défaut :: (type_name) :: ToString, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::Object::ToString
+dev_langs: C++
 ms.assetid: 2541955f-d844-4bd8-944d-185198c86579
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 8c95210d25008b70a190a793c4e8ff69bb309d9e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# default::(type_name)::ToString, m&#233;thode
+# <a name="defaulttypenametostring-method"></a>default::(type_name)::ToString, méthode
 Retourne une chaîne qui représente le type actuel.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
   
 String^ ToString()  
 ```  
   
-## Valeur de retour  
+### <a name="return-value"></a>Valeur de retour  
  Chaîne qui représente l'objet actuel.  
   
-## Configuration requise  
- **Client minimum pris en charge :** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>Spécifications  
+ **Minimum pris en charge le client :** Windows 8  
   
- **Serveur minimum pris en charge :** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Minimum de serveur pris en charge :** Windows Server 2012  
   
  **Espace de noms** : par défaut  
   
- **En\-tête** : vccorlib.h  
+ **En-tête :** vccorlib.h  
   
-## Voir aussi  
- [espace de noms par défaut](../cppcx/default-namespace.md)
+## <a name="see-also"></a>Voir aussi  
+ [Espace de noms par défaut](../cppcx/default-namespace.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -32,8 +31,7 @@ f1_keywords:
 - wcscpy
 - _tcscpy
 - strcpy
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - strcpy function
 - tcscpy function
@@ -46,36 +44,21 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 940983d8bb5795d44a78f9049c351941db41afb7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: 466565dcb957e98efccc9f2037f98c869775e36f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="strcpy-wcscpy-mbscpy"></a>strcpy, wcscpy, _mbscpy
 Copie une chaîne. Il existe des versions plus sécurisées de ces fonctions. Consultez [strcpy_s, wcscpy_s, _mbscpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md).  
   
 > [!IMPORTANT]
->  `_mbscpy` ne peut pas être utilisée dans les applications qui s'exécutent dans [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  La fonction `_mbscpy` ne peut pas être utilisée dans les applications qui s’exécutent dans Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -127,7 +110,7 @@ unsigned char *_mbscpy(
   
  `wcscpy` et `_mbscpy` sont respectivement des versions à caractères larges et à caractères multioctets de `strcpy`. Les arguments et la valeur de retour de `wcscpy` sont des chaînes de caractères larges ; ceux de `_mbscpy` sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.  
   
- En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   

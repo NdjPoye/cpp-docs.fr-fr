@@ -1,27 +1,26 @@
 ---
-title: "Gestionnaire sp&#233;cifique au langage | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Gestionnaire spécifique au langage | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 6503e0cd-2d3a-4330-a925-8bed8c27c2be
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3f9e548dc3c9262349fc05bd6bea19290b57ad94
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Gestionnaire sp&#233;cifique au langage
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'adresse relative du gestionnaire spécifique au langage est présente dans UNWIND\_INFO chaque fois que les indicateurs UNW\_FLAG\_EHANDLER ou UNW\_FLAG\_UHANDLER sont définis.  Comme décrit dans la section précédente, le gestionnaire spécifique au langage est appelé dans le cadre de la recherche d'un gestionnaire d'exceptions ou dans le cadre d'un déroulement.  Il comporte le prototype suivant :  
+# <a name="language-specific-handler"></a>Gestionnaire spécifique au langage
+L’adresse relative du gestionnaire spécifique au langage est présente dans UNWIND_INFO chaque fois que les indicateurs UNW_FLAG_EHANDLER ou UNW_FLAG_UHANDLER sont définis. Comme décrit dans la section précédente, le gestionnaire spécifique au langage est appelé dans le cadre de la recherche d’un gestionnaire d’exceptions ou dans le cadre d’un déroulement. Il a le prototype suivant :  
   
 ```  
 typedef EXCEPTION_DISPOSITION (*PEXCEPTION_ROUTINE) (  
@@ -32,13 +31,13 @@ typedef EXCEPTION_DISPOSITION (*PEXCEPTION_ROUTINE) (
 );  
 ```  
   
- **ExceptionRecord** fournit un pointeur vers un enregistrement d'exception possédant la définition Win64 standard.  
+ **ExceptionRecord** fournit un pointeur vers un enregistrement d’exception possédant la définition Win64 standard.  
   
- **EstablisherFrame** est l'adresse de la base de la pile d'allocation fixe pour cette fonction.  
+ **EstablisherFrame** est l’adresse de la base de l’allocation de pile fixe pour cette fonction.  
   
- **ContextRecord** pointe vers le contexte d'exception au moment de la levée de l'exception \(dans le cas du gestionnaire d'exceptions\) ou dans le contexte de « déroulement » actuel \(dans le cas du gestionnaire de terminaisons\).  
+ **ContextRecord** contexte (dans le cas du Gestionnaire de terminaisons) pointe vers le contexte d’exception au moment de l’exception a été levée (dans le cas de gestionnaire d’exceptions) ou actuel « déroule ».  
   
- **DispatcherContext** pointe vers le contexte de répartiteur de cette fonction.  Il comporte la définition suivante :  
+ **DispatcherContext** pointe vers le contexte de répartiteur de cette fonction. Il a la définition suivante :  
   
 ```  
 typedef struct _DISPATCHER_CONTEXT {  
@@ -53,21 +52,21 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;  
 ```  
   
- **ControlPc** est la valeur de RIP dans cette fonction.  Il s'agit d'une adresse d'exception ou de l'adresse à laquelle le contrôle a quitté la fonction de mise en place.  Ce RIP sera utilisé pour déterminer si le contrôle se trouve dans une construction protégée au sein de cette fonction \(par exemple, un bloc \_\_try pour \_\_try\/\_\_except ou \_\_try\/\_\_finally\).  
+ **ControlPc** est la valeur de RIP dans cette fonction. Il s’agit d’une adresse de l’exception ou l’adresse à laquelle contrôle gauche de la fonction de mise en place. C’est le protocole RIP qui permet de déterminer si le contrôle est dans une construction protégée au sein de cette fonction (par exemple, un bloc __try pour \__try /\__except ou \__try /\__finally).  
   
- **ImageBase** est la base d'image \(adresse de chargement\) du module qui contient cette fonction, à ajouter aux offsets de 32 bits utilisés dans l'entrée de fonction et dans les informations de déroulement pour enregistrer des adresses relatives.  
+ **ImageBase** est l’image de base (adresse de chargement) du module contenant cette fonction, à ajouter aux offsets de 32 bits utilisés dans l’entrée de fonction et informations de déroulement pour enregistrer des adresses relatives.  
   
- **FunctionEntry** fournit un pointeur vers l'entrée de fonction RUNTIME\_FUNCTION contenant les adresses relatives de la base d'image de la fonction et des informations de déroulement pour cette fonction.  
+ **FunctionEntry** fournit un pointeur vers le RUNTIME_FUNCTION entrée de la fonction de la fonction info base d’image adresses relatives et déroulement de cette fonction.  
   
- **EstablisherFrame** est l'adresse de la base de la pile d'allocation fixe pour cette fonction.  
+ **EstablisherFrame** est l’adresse de la base de l’allocation de pile fixe pour cette fonction.  
   
- **TargetIp** fournit une adresse d'instruction facultative spécifiant l'adresse de continuation du déroulement.  Cette adresse est ignorée si **EstablisherFrame** n'est pas spécifié.  
+ **TargetIp** fournit une adresse d’instruction facultatif qui spécifie l’adresse de la continuation du déroulement. Cette adresse est ignorée si **EstablisherFrame** n’est pas spécifié.  
   
- **ContextRecord** pointe vers le contexte d'exception que le code de répartition\/déroulement des exceptions du système doit utiliser.  
+ **ContextRecord** pointe vers le contexte d’exception, pour une utilisation par le code de répartition/déroulement d’exception système.  
   
  **LanguageHandler** pointe vers la routine du gestionnaire spécifique au langage appelé.  
   
  **HandlerData** pointe vers les données du gestionnaire spécifique au langage pour cette fonction.  
   
-## Voir aussi  
- [Gestion des exceptions \(x64\)](../build/exception-handling-x64.md)
+## <a name="see-also"></a>Voir aussi  
+ [Gestion des exceptions (x64)](../build/exception-handling-x64.md)

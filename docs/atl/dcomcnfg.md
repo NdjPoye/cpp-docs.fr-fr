@@ -1,53 +1,53 @@
 ---
-title: "DCOMCNFG | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DCOMCNFG"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DCOM, configuring in ATL"
-  - "DCOMCNFG utility"
+title: DCOMCNFG | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DCOMCNFG
+dev_langs: C++
+helpviewer_keywords:
+- DCOMCNFG utility
+- DCOM, configuring in ATL
 ms.assetid: 5a8126e9-ef27-40fb-a66e-9dce8d1a7e80
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bffed7658232d11dd7741900d6eca14de341e855
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# DCOMCNFG
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**DCOMCNFG** est un utilitaire Windows NT 4,0 qui vous permet de configurer différentes configurations de DCOM\- détail dans le Registre.  La fenêtre de **DCOMCNFG** a trois pages : Sécurité par défaut, les propriétés par défaut, et applications.  Sous Windows 2000 une quatrième page, protocoles par défaut, est présente.  
+# <a name="dcomcnfg"></a>DCOMCNFG
+**DCOMCNFG** est un utilitaire Windows NT 4.0 qui permet de configurer différents paramètres spécifiques DCOM dans le Registre. Le **DCOMCNFG** fenêtre comporte trois pages : sécurité par défaut, les propriétés par défaut et les Applications. Sous Windows 2000, une quatrième page, protocoles par défaut, est présente.  
   
-## Page par défaut de sécurité  
- Vous pouvez utiliser la page par défaut de sécurité pour spécifier les autorisations par défaut pour les objets sur le système.  La page par défaut de sécurité a trois sections : Access, lancement, et configuration.  Pour modifier les valeurs par défaut d'une section, cliquez sur le bouton correspondant de **Modifier** .  Ces paramètres de sécurité par défaut sont stockés dans le Registre sous `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`.  
+## <a name="default-security-page"></a>Page de sécurité par défaut  
+ Vous pouvez utiliser la page de sécurité par défaut pour spécifier les autorisations par défaut pour les objets sur le système. La page sécurité par défaut comprend trois sections : accès, de démarrage et de Configuration. Pour modifier les valeurs par défaut d’une section, cliquez sur le correspondant **modifier** bouton. Ces paramètres de sécurité par défaut sont stockés dans le Registre sous `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`.  
   
-## Page par défaut de protocoles  
- Cette page répertorie l'ensemble des protocoles réseau disponibles à DCOM sur cet ordinateur.  La commande indique la priorité dans lequel ils seront utilisés ; le premier dans la liste a la priorité la plus élevée.  Les fournisseurs peuvent être ajoutés ou supprimés de cette page.  
+## <a name="default-protocols-page"></a>Page protocoles par défaut  
+ Cette page répertorie l’ensemble des protocoles réseau disponibles pour DCOM sur cet ordinateur. L’ordre reflète la priorité dans lequel ils seront utilisés ; le premier dans la liste a la priorité la plus élevée. Protocoles peuvent être ajoutés ou supprimés à partir de cette page.  
   
-## Page de propriétés par défaut  
- Dans la page de propriétés par défaut, vous devez activer la case à cocher de **Activer Distributed COM \(DCOM\) sur cet ordinateur** si vous souhaitez que les clients sur d'autres ordinateurs pour accéder aux objets COM qui s'exécutent sur cet ordinateur.  La sélection de cette option affecte la valeur d' `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE\EnableDCOM` à `Y`.  
+## <a name="default-properties-page"></a>Page de propriétés par défaut  
+ Dans la page de propriétés par défaut, vous devez sélectionner le **Activer Distributed COM sur cet ordinateur** case à cocher si vous souhaitez que les clients sur d’autres ordinateurs pour accéder aux objets COM en cours d’exécution sur cet ordinateur. En sélectionnant cette option définit la `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE\EnableDCOM` valeur `Y`.  
   
-## Page d'application  
- Vous modifiez les paramètres pour un objet particulier avec la page d'application.  Sélectionnez simplement l'application de la liste et cliquez sur le bouton **Propriétés** .  La fenêtre Propriétés contient cinq pages :  
+## <a name="applications-page"></a>Page des applications  
+ Vous modifiez les paramètres d’un objet particulier à la page des Applications. Simplement sélectionner l’application à partir de la liste et cliquez sur le **propriétés** bouton. La fenêtre Propriétés comprend cinq pages :  
   
--   La page en confirmant l'application que vous utilisez.  
+-   La page Général confirme l’application que vous utilisez.  
   
--   La page d'emplacement vous permet de spécifier où l'application doit s'exécuter lorsqu'un client appelle `CoCreateInstance` sur le CLSID approprié.  Si vous activez la case à cocher de **Exécuter l’application sur l’ordinateur suivant** et entrez un nom d'ordinateur, une valeur d' `RemoteServerName` est ajoutée sous l'AppID pour cette application.  Désactiver la case à cocher de **Run application on this computer** renomme la valeur d' `LocalService` à `_LocalService` et la désactivation, de ce fait.  
+-   La page emplacement vous permet de spécifier où l’application doit s’exécuter lorsqu’un client appelle `CoCreateInstance` sur le CLSID concerné. Si vous sélectionnez le **exécuter l’application sur l’ordinateur suivant** case à cocher et entrez un nom d’ordinateur, puis un `RemoteServerName` valeur est ajoutée sous l’AppID pour cette application. Effacer la **exécuter l’application sur cet ordinateur** changements de noms de case à cocher le `LocalService` valeur `_LocalService` et, ce qui la désactive.  
   
--   La page sécurité est semblable à la page par défaut de sécurité recherchée dans la fenêtre de **DCOMCNFG** , sauf que ces paramètres s'appliquent uniquement à l'application actuelle.  Là encore, les paramètres sont stockés sous l'AppID pour cet objet.  
+-   La page sécurité est similaire à la sécurité par défaut de page trouvée dans le **DCOMCNFG** fenêtre, à ceci près que ces paramètres s’appliquent uniquement à l’application actuelle. Là encore, les paramètres sont stockés sous l’AppID pour cet objet.  
   
--   La page d'identification identifie l'utilisateur est utilisé pour exécuter l'application.  
+-   La page identifier identifie l’utilisateur qui est utilisé pour exécuter l’application.  
   
--   La page de points de terminaison répertorie l'ensemble des protocoles et de points de terminaison disponibles pour une utilisation par les clients du serveur sélectionné DCOM.  
+-   La page points de terminaison répertorie l’ensemble de protocoles et de points de terminaison disponibles pour une utilisation par les clients du serveur DCOM sélectionné.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Services](../atl/atl-services.md)
+

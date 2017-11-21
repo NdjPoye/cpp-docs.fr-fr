@@ -1,47 +1,47 @@
 ---
-title: "SQL&#160;: appels SQL directs (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "appels SQL directs à partir d'ODBC"
-  - "ODBC, appels SQL"
-  - "appels SQL"
-  - "SQL, appeler directement à partir d'ODBC"
-  - "SQL, appels directs à partir d'ODBC"
+title: "SQL : Appels SQL directs (ODBC) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- SQL, direct calls from ODBC
+- SQL, calling directly from ODBC
+- ODBC, SQL calls
+- SQL calls
+- direct SQL calls from ODBC
 ms.assetid: 091988d2-f5a5-4c2d-aa09-8779a9fb9607
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cac2844c64bf2157a9984a29b8885434eb07b811
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# SQL&#160;: appels SQL directs (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="sql-making-direct-sql-calls-odbc"></a>SQL : appels SQL directs (ODBC)
 Cette rubrique explique :  
   
--   quand utiliser les appels SQL directs ;  
+-   Quand utiliser SQL directe appelle.  
   
--   [comment effectuer des appels SQL directs vers la source de données](#_core_making_direct_sql_function_calls).  
+-   [Comment faire directe SQL des appels à la source de données](#_core_making_direct_sql_function_calls).  
   
 > [!NOTE]
->  Ces informations s'appliquent aux classes ODBC MFC.  Si vous utilisez les classes DAO MFC, consultez la rubrique « Comparison of Microsoft Jet Database Engine SQL and ANSI SQL » dans l'aide de DAO.  
+>  Ces informations s’appliquent aux classes ODBC MFC. Si vous travaillez avec les classes DAO MFC, consultez la rubrique « Comparaison de Microsoft Jet Database Engine SQL et ANSI SQL » dans l’aide de DAO.  
   
-##  <a name="_core_when_to_call_sql_directly"></a> Quand utiliser les appels SQL directs  
- Pour créer des tables, les supprimer ou les modifier, pour créer des index, ou pour effectuer d'autres fonctions SQL qui modifient le schéma de la [Source de données \(ODBC\)](../../data/odbc/data-source-odbc.md), vous devez exécuter directement une instruction SQL sur la source de données à l'aide du langage DDL \(Database Definition Language\).  Lorsque vous utilisez un Assistant pour créer un recordset pour une table \(au moment du design\), vous pouvez choisir les colonnes de la table à faire figurer dans le recordset.  En revanche, il n'est pas possible d'utiliser les colonnes que vous\-même ou un autre utilisateur de la source de données avez ajoutées à la table après que votre programme a été compilé.  Les classes de base de données ne prennent pas en charge DDL directement, mais vous pouvez toujours écrire le code permettant de lier dynamiquement une nouvelle colonne à votre recordset, lors de l'exécution.  Pour plus d'informations sur la réalisation de cette liaison, consultez [Recordset : liaison dynamique de colonnes de données \(ODBC\)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
+##  <a name="_core_when_to_call_sql_directly"></a>Quand les appels SQL directs  
+ Pour créer de nouvelles tables, supprimer (delete) tables, modifier des tables existantes, créer des index et effectuer d’autres fonctions SQL qui modifient le [Source de données (ODBC)](../../data/odbc/data-source-odbc.md) schéma, vous devez émettre une instruction SQL directement à la source de données à l’aide de la base de données Definition Language (DDL). Lorsque vous utilisez un Assistant pour créer un jeu d’enregistrements pour une table (au moment du design), vous pouvez choisir les colonnes de la table à représenter dans le jeu d’enregistrements. Cela ne permet pas de colonnes que vous ou un autre utilisateur de la source de données ajouter à la table ultérieurement, une fois que votre programme a été compilé. Les classes de base de données ne prennent pas en charge DDL directement, mais vous pouvez toujours écrire du code pour lier d’une nouvelle colonne à votre jeu d’enregistrements dynamiquement au moment de l’exécution. Pour plus d’informations sur la réalisation de cette liaison, consultez [Recordset : liaison dynamique de colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
   
- Vous pouvez utiliser le SGBD lui\-même pour modifier le schéma, ou tout autre outil permettant d'effectuer les fonctions DDL.  Vous pouvez aussi utiliser les appels de fonction ODBC pour envoyer des instructions SQL, comme l'appel d'une requête prédéfinie \(procédure stockée\) ne retournant pas d'enregistrements.  
+ Vous pouvez utiliser le SGBD lui-même pour modifier le schéma ou un autre outil qui vous permet d’effectuer les fonctions DDL. Vous pouvez également utiliser des appels de fonction ODBC pour l’envoi d’instructions SQL, telles que l’appel d’une requête prédéfinie (procédure stockée) qui ne retourne pas d’enregistrements.  
   
-##  <a name="_core_making_direct_sql_function_calls"></a> Appels directs de fonctions SQL  
- Vous pouvez exécuter directement un appel SQL en utilisant un objet [CDatabase Class](../../mfc/reference/cdatabase-class.md).  Définissez la chaîne de votre instruction SQL \(généralement dans une chaîne `CString`\) et passez\-la à la fonction membre [CDatabase::ExecuteSQL](../Topic/CDatabase::ExecuteSQL.md) de votre objet `CDatabase`.  Si vous utilisez les appels de fonction ODBC pour transmettre une instruction SQL qui retourne normalement des enregistrements, les enregistrements sont ignorés.  
+##  <a name="_core_making_direct_sql_function_calls"></a>Appels de fonction SQL directs  
+ Vous pouvez exécuter directement un appel SQL en utilisant un [CDatabase (classe)](../../mfc/reference/cdatabase-class.md) objet. Configurer la chaîne de votre instruction SQL (généralement dans un `CString`) et le passer à la [CDatabase::ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) fonction membre de votre `CDatabase` objet. Si vous utilisez des appels de fonction ODBC pour envoyer une instruction SQL qui retourne normalement des enregistrements, les enregistrements sont ignorés.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL](../../data/odbc/sql.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 04/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -106,19 +105,17 @@ helpviewer_keywords:
 - C3376
 - C3377
 - C3378
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 190b7d29-ffe6-4261-921d-140da1935d00
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 58f9d6de7b350a4d03f0f938d459bcd50c390ca2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c3300-through-c3399"></a>C3300 des erreurs du compilateur via C3399
 Les articles de cette partie de la documentation contiennent des informations sur une sous-section des erreurs du compilateur Visual C++. Vous pouvez accéder aux informations ici, ou dans la fenêtre **Sortie** de Visual Studio, vous pouvez sélectionner un numéro d'erreur, puis appuyer sur F1.  
@@ -230,4 +227,3 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C3397](compiler-error-c3397.md)|L'initialisation d'agrégats n'est pas autorisée dans les arguments par défaut|  
 |[Erreur du compilateur C3398](compiler-error-c3398.md)|'*opérateur*' : Impossible de convertir '*type*'à'*type*'. L'expression source doit être un symbole de fonction|  
 |[Erreur du compilateur C3399](compiler-error-c3399.md)|'*type*' : ne peut pas fournir des arguments lors de la création d’une instance d’un paramètre générique|  
-

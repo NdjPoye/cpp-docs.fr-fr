@@ -1,55 +1,55 @@
 ---
-title: "Chemin de recherche utilis&#233; par Windows pour localiser une DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL (C++), chemin de recherche Windows"
-  - "rechercher des DLL"
-  - "recherches de DLL connus (C++)"
-  - "localiser des DLL"
-  - "chemin de recherche (C++)"
-  - "rechercher (C++), DLL"
-  - "Windows (C++), chemin de recherche de DLL"
+title: "Rechercher le chemin d’accès utilisé par Windows pour retrouver une DLL | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- searching [C++], DLLs
+- DLLs [C++], Windows search path
+- Windows [C++], DLL search path
+- known DLL searches [C++]
+- locating DLLs
+- finding DLLs
+- search paths [C++]
 ms.assetid: 84bfb380-ad7b-4962-b2d0-51b19a45f1bb
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 79f6ca137c16100ac1d6b9bfa818f35d5ae21f14
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Chemin de recherche utilis&#233; par Windows pour localiser une DLL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Avec une liaison à la fois implicite et explicite, Windows recherche d'abord les « DLL connues », telles que Kernel32.dll et User32.dll.  Windows recherche ensuite les DLL dans les emplacements suivants selon l'ordre indiqué :  
+# <a name="search-path-used-by-windows-to-locate-a-dll"></a>Chemin de recherche utilisé par Windows pour localiser une DLL
+Avec la liaison d’implicites et explicites, Windows recherche d’abord « DLL connues », telles que Kernel32.dll et User32.dll. Windows recherche ensuite les DLL dans l’ordre suivant :  
   
-1.  Le répertoire contenant le module exécutable du processus en cours.  
+1.  Le répertoire où se trouve le module exécutable du processus en cours.  
   
 2.  Le répertoire actif.  
   
-3.  Le répertoire System de Windows.  La fonction **GetSystemDirectory** récupère le chemin de ce répertoire.  
+3.  Le répertoire du système Windows. Le **GetSystemDirectory** fonction récupère le chemin d’accès de ce répertoire.  
   
-4.  Le répertoire Windows.  La fonction **GetWindowsDirectory** récupère le chemin de ce répertoire.  
+4.  Le répertoire Windows. Le **GetWindowsDirectory** fonction récupère le chemin d’accès de ce répertoire.  
   
-5.  Les répertoires désignés dans la variable d'environnement PATH.  
+5.  Les répertoires énumérés dans la variable d’environnement PATH.  
   
     > [!NOTE]
-    >  La variable d'environnement LIBPATH n'est pas utilisée.  
+    >  La variable d’environnement LIBPATH n’est pas utilisée.  
   
-## Que voulez\-vous faire ?  
+## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?  
   
--   [Lier de manière implicite](../build/linking-implicitly.md)  
+-   [Comment lier de manière implicite à une DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
   
--   [Lier de manière explicite](../build/linking-explicitly.md)  
+-   [Comment lier de manière explicite à une DLL](../build/linking-an-executable-to-a-dll.md#linking-explicitly)  
   
--   [Déterminer la méthode de liaison à utiliser](../build/determining-which-linking-method-to-use.md)  
+-   [Déterminer la méthode de liaison à utiliser](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
-## Voir aussi  
- [DLL en Visual C\+\+](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [DLL dans Visual C++](../build/dlls-in-visual-cpp.md)

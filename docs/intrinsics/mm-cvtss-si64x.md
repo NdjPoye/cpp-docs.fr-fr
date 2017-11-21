@@ -1,63 +1,62 @@
 ---
-title: "_mm_cvtss_si64x | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_cvtss_si64x"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cvtss2si, intrinsèque"
-  - "_mm_cvtss_si64x, intrinsèque"
+title: _mm_cvtss_si64x | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_cvtss_si64x
+dev_langs: C++
+helpviewer_keywords:
+- cvtss2si intrinsic
+- _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 19d39aa8219321e372a2cd8b669c83b606646122
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# _mm_cvtss_si64x
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
+**Section spécifique à Microsoft**  
   
- Génère la version étendue par [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] du nombre à virgule flottante scalaire de simple précision de converti à l'instruction d'entiers 64 bits \(`cvtss2si`\).  
+ Génère le [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] version étendue de la convertir scalaire unique précision nombre à virgule flottante à entier 64 bits (`cvtss2si`) instruction.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-__int64 _mm_cvtss_si64x(   
-   __m128 value   
+__int64 _mm_cvtss_si64x(   
+   __m128 value   
 );  
 ```  
   
-#### Paramètres  
- \[in\] `value`  
- Une structure d' `__m128` qui contiennent des valeurs à virgule flottante.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `value`  
+ Un `__m128` structure contenant les valeurs à virgule flottante-.  
   
-## Valeur de retour  
- Entier 64 bits, le résultat de la conversion de la première valeur à virgule flottante en un entier.  
+## <a name="return-value"></a>Valeur de retour  
+ Un entier 64 bits, le résultat de la conversion de la première valeur à virgule flottante en un entier.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`_mm_cvtss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- Le premier élément de la valeur de structure est converti en un entier et retourné.  Les bits de contrôle d'arrondi dans MXCSR utilisés pour déterminer le comportement d'arrondi.  Le mode d'arrondi par défaut est en rond le plus proche, arrondies pair au chiffre si la partie décimale a 0,5 ans.  Comme la structure d' `__m128` représente un registre XMM, cette intrinsèque prend une valeur à partir de le registre XMM et l'écrit dans la mémoire système.  
+## <a name="remarks"></a>Remarques  
+ Le premier élément de la valeur de la structure est converti en un entier et est retourné. Les bits de contrôle arrondi dans MXCSR permettent de déterminer le comportement d’arrondi. La valeur par défaut le mode d’arrondi est arrondi à la plus proche, arrondi au nombre pair si la partie décimale est 0,5. Étant donné que le `__m128` structure représente un registre XMM, cet intrinsèque prend une valeur du registre XMM et l’écrit dans la mémoire système.  
   
- Cette routine est uniquement disponible sous forme intrinsèque.  
+ Cette routine est disponible uniquement en tant qu'intrinsèque.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // _mm_cvtss_si64x.cpp  
@@ -87,9 +86,12 @@ int main()
 }  
 ```  
   
-  **101**   
-## détail de FIN Microsoft  
+```Output  
+101  
+```  
   
-## Voir aussi  
- [\_\_m128d](../cpp/m128d.md)   
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+**FIN de la section spécifique à Microsoft**  
+  
+## <a name="see-also"></a>Voir aussi  
+ [__m128d](../cpp/m128d.md)   
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

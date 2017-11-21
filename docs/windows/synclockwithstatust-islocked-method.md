@@ -1,47 +1,45 @@
 ---
-title: "SyncLockWithStatusT::IsLocked, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::IsLocked"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsLocked (méthode)"
+title: "Synclockwithstatust::IsLocked, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::IsLocked
+dev_langs: C++
+helpviewer_keywords: IsLocked method
 ms.assetid: e1b75b7b-c145-471a-aa5d-71abf31f5990
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e31f0931a53e8bdd977e82fcef56f1bacc45f76b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# SyncLockWithStatusT::IsLocked, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="synclockwithstatustislocked-method"></a>SyncLockWithStatusT::IsLocked, méthode
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 bool IsLocked() const;  
 ```  
   
-## Notes  
- Indique si l'objet SyncLockWithStatusT actuel possède une ressource; autrement dit, si l'objet SyncLockWithStatusT est *verrouillé*.  
+## <a name="remarks"></a>Remarques  
+ Indique si l’objet SyncLockWithStatusT actuel possède une ressource ; l’objet SyncLockWithStatusT est *verrouillé*.  
   
-## Valeur de retour  
- **true** si l'objet SyncLockWithStatusT est verrouillé; sinon, **false**.  
+## <a name="return-value"></a>Valeur de retour  
+ **true** si l’objet SyncLockWithStatusT est verrouillée ; sinon, **false**.  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers::Details  
+ **Namespace :** Microsoft::WRL::Wrappers::Details  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SyncLockWithStatusT, classe](../windows/synclockwithstatust-class.md)

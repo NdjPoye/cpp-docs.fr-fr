@@ -1,41 +1,39 @@
 ---
-title: "multimap::rbegin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::rbegin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre rbegin [STL/CLR]"
+title: multimap::rbegin (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::rbegin
+dev_langs: C++
+helpviewer_keywords: rbegin member [STL/CLR]
 ms.assetid: fd5a2a04-b03d-4920-b8f2-e01985cb91e3
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 16d576c58ac21ec9d8a33d45d192b77491c10d84
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::rbegin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Désigne le début de la séquence contrôlée inversée.  
+# <a name="multimaprbegin-stlclr"></a>multimap::rbegin (STL/CLR)
+Désigne le début de la séquence contrôlée inverse.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 reverse_iterator rbegin();  
 ```  
   
-## Notes  
- La fonction membre renvoie un Itérateur inverse qui désigne le dernier élément de la séquence contrôlée ou la position juste après le début d'une séquence vide.  Par conséquent, il désigne le `beginning` de la séquence inverse.  Vous l'utilisez pour obtenir un itérateur qui désigne le début `current` de la séquence contrôlée vue dans l'ordre inverse, mais son état peut changer si la longueur de la séquence contrôlée change.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre retourne un itérateur inverse qui désigne le dernier élément de la séquence contrôlée, ou juste après le début d’une séquence vide. Par conséquent, il désigne le `beginning` de la séquence inverse. Vous l’utilisez pour obtenir un itérateur qui désigne le `current` début de la séquence contrôlée vue dans l’ordre inverse, mais son état peut changer si la longueur de la séquence contrôlée change.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_multimap_rbegin.cpp   
@@ -67,16 +65,19 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**\*rbegin\(\) \= \[c 3\]**  
-**\*\+\+rbegin\(\) \= \[b 2\]**   
-## Configuration requise  
- **En\-tête :** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+*rbegin() = [c 3]  
+*++rbegin() = [b 2]  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/map >  
   
-## Voir aussi  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::begin](../dotnet/multimap-begin-stl-clr.md)   
- [multimap::end](../dotnet/multimap-end-stl-clr.md)   
- [multimap::rend](../dotnet/multimap-rend-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::Begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md)   
+ [multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)   
+ [multimap::rend (STL/CLR)](../dotnet/multimap-rend-stl-clr.md)

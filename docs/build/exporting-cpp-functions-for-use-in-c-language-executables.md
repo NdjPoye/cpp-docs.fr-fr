@@ -1,60 +1,60 @@
 ---
-title: "Exportation de fonctions&#160;C++ &#224; utiliser dans des ex&#233;cutables en langage&#160;C | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "exporter des DLL (C++), fonctions C++ dans les exécutables C"
-  - "exporter des fonctions (C++), fonctions C++ dans les exécutables C"
-  - "fonctions (C++), fonctions C++ dans les exécutables C"
-  - "fonctions (C++), exporter"
+title: "Exportation de fonctions C++ à utiliser dans des exécutables en langage C | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- functions [C++], C++ functions in C executables
+- exporting DLLs [C++], C++ functions in C executables
+- exporting functions [C++], C++ functions in C executables
+- functions [C++], exporting
 ms.assetid: 80b9e982-f52d-4312-a891-f73cc69f3c2b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 56e275b6c97bf319ab3d2bacb014423e6c0efd20
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Exportation de fonctions&#160;C++ &#224; utiliser dans des ex&#233;cutables en langage&#160;C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Si, dans une DLL écrite en C\+\+, vous avez des fonctions auxquelles vous souhaitez accéder à partir d'un module en langage C, vous devez déclarer ces fonctions à l'aide d'une liaison C de préférence à une liaison C\+\+.  Sauf indication contraire, le compilateur C\+\+ utilise la convention d'attribution de noms de types sécurisée du C\+\+ \(appelée également décoration de noms\) et les conventions d'appel du C\+\+, qu'il est parfois difficile d'appeler à partir du C.  
+# <a name="exporting-c-functions-for-use-in-c-language-executables"></a>Exportation de fonctions C++ à utiliser dans des exécutables en langage C  
   
- Pour spécifier une liaison C, indiquez **extern** "**C**" dans les déclarations de fonctions.  Par exemple :  
+Si vous avez des fonctions dans une DLL écrite en C++, que vous souhaitez accéder à partir d’un module en langage C, vous devez déclarer ces fonctions avec liaison C au lieu d’une liaison C++. Sauf indication contraire, le compilateur C++ utilise C++ d’affectation de noms (également appelé décoration de nom) de type sécurisé et C++, conventions d’appel, ce qui peuvent être difficiles de les appeler à partir de C.  
+  
+Pour spécifier une liaison C, spécifiez `extern "C"` pour les déclarations de fonction. Exemple :  
   
 ```  
 extern "C" __declspec( dllexport ) int MyFunc(long parm1);  
 ```  
   
-## Que voulez\-vous faire ?  
+## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?  
   
--   [Exporter à partir d'une DLL à l'aide de fichiers .def](../build/exporting-from-a-dll-using-def-files.md)  
+-   [Exporter à partir d’une DLL à l’aide de fichiers .def](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [Exporter à partir d'une DLL à l'aide de \_\_declspec\(dllexport\)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [Exporter à partir d’une DLL à l’aide de __declspec (dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [Exporter et importer à l'aide de AFX\_EXT\_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
+-   [Exporter et importer à l’aide de AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
   
--   [Exporter des fonctions C à utiliser dans des exécutables en langage C ou C\+\+](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
+-   [Exporter des fonctions C à utiliser dans des exécutables en langage C ou C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
   
--   [Déterminer la méthode d'exportation à utiliser](../build/determining-which-exporting-method-to-use.md)  
+-   [Déterminer la méthode d’exportation à utiliser](../build/determining-which-exporting-method-to-use.md)  
   
--   [Importer dans une application à l'aide de \_\_declspec\(dllimport\)](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [Importer dans une application à l’aide de __declspec (dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
--   [Initialiser une DLL](../build/initializing-a-dll.md)  
+-   [Initialiser une DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?  
   
 -   [Noms décorés](../build/reference/decorated-names.md)  
   
--   [Spécifications de liaison](http://msdn.microsoft.com/fr-fr/d2b0cff1-7798-4c38-9ac8-61c3bfe2bfb9)  
+-   [Utilisation d’extern pour spécifier la liaison](../cpp/using-extern-to-specify-linkage.md)  
   
-## Voir aussi  
- [Exportation à partir d'une DLL](../build/exporting-from-a-dll.md)
+## <a name="see-also"></a>Voir aussi  
+ [Exportation à partir d’une DLL](../build/exporting-from-a-dll.md)

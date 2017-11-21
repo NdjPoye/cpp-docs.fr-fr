@@ -1,47 +1,45 @@
 ---
-title: "Ajout d&#39;une fonction membre (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.classes.member.function"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes (C++), ajouter des membres"
-  - "fonctions membres, ajouter aux classes"
+title: "Ajout d’une fonction membre (Visual C++) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.classes.member.function
+dev_langs: C++
+helpviewer_keywords:
+- member functions, adding to classes
+- classes [C++], adding members
 ms.assetid: 55b25ddb-541d-44ed-957c-974ef91cfc85
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f90aa1194a05fc8c79dbb811684151cbcbc4e2b5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Ajout d&#39;une fonction membre (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dans **Class View**, Vous pouvez ajouter une fonction membre à n'importe quelle classe.  Lorsque vous réalisez cela, une déclaration est ajoutée au fichier d'en\-tête et un corps de fonction membre stub est ajouté au fichier d'implémentation de la classe, que vous pouvez ensuite modifier.  
+# <a name="adding-a-member-function-visual-c"></a>Ajout d'une fonction membre (Visual C++)
+Dans **affichage de classes**, vous pouvez ajouter une fonction membre à n’importe quelle classe. Lorsque vous effectuez cette opération, une déclaration est ajoutée au fichier d’en-tête et un corps de fonction membre stub est ajouté au fichier d’implémentation de la classe, que vous pouvez modifier.  
   
-### Pour ajouter une fonction membre à une classe  
+### <a name="to-add-a-member-function-to-a-class"></a>Pour ajouter une fonction membre à une classe  
   
-1.  Dans **l'Affichage de classes**, développez le nœud du projet afin d'afficher ses classes. \(Pour ouvrir **Affichage de classes**, dans la barre de menus, sélectionnez **Afficher**, **Affichage de classes**.\)  
+1.  Dans **affichage de classes**, développez le nœud de projet pour afficher les classes dans le projet. (Pour ouvrir **affichage de classes**, dans la barre de menus, choisissez **vue**, **affichage de classes**.)  
   
-2.  Ouvrez le menu contextuel de la classe qà laquelle ue vous souhaitez ajouter une fonction membre, puis choisissez **Ajouter**, **Ajouter une fonction**.  
+2.  Ouvrez le menu contextuel pour la classe que vous souhaitez ajouter une fonction membre de, puis choisissez **ajouter**, **ajouter une fonction**.  
   
-3.  Fournissez des détails appropriés sur la fonction membre.  Pour plus d'informations, consultez [Assistant Ajout de fonction membre](../ide/add-member-function-wizard.md).  
+3.  Fournissez les détails appropriés sur la fonction membre. Pour plus d’informations, consultez [Assistant Ajout de fonction membre](../ide/add-member-function-wizard.md).  
   
-4.  Cliquez sur le bouton **Terminer** pour générer du code de fonction membre.  
+4.  Choisissez le **Terminer** bouton pour générer le code de la fonction membre.  
   
-## Voir aussi  
- [Ajout de fonctionnalités à l'aide des Assistants Code](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Ajout d'une classe](../ide/adding-a-class-visual-cpp.md)   
- [Ajout d'une variable membre](../ide/adding-a-member-variable-visual-cpp.md)   
- [Substitution d'une fonction virtuelle](../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC, gestionnaire de messages](../mfc/reference/adding-an-mfc-message-handler.md)   
- [Parcours de la structure de classe](../ide/navigating-the-class-structure-visual-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Ajout de fonctionnalités à l’aide des Assistants Code](../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Ajout d’une classe](../ide/adding-a-class-visual-cpp.md)   
+ [Ajout d’une Variable membre](../ide/adding-a-member-variable-visual-cpp.md)   
+ [Une fonction virtuelle de substitution](../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [Gestionnaire de messages MFC](../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigation dans la Structure de classe](../ide/navigating-the-class-structure-visual-cpp.md)

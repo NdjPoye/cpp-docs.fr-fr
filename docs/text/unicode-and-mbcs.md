@@ -1,58 +1,57 @@
 ---
-title: "Unicode et MBCS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mbcs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MBCS [C++], Unicode"
-  - "MFC [C++], jeux de caractères"
-  - "jeux de caractères [C++], multioctets"
-  - "bibliothèques runtime [C++], portabilité de langage"
-  - "jeux de caractères [C++], Unicode"
-  - "Unicode [C++], fonctions MFC et runtime C"
-  - "caractères multioctets (C++)"
-  - "runtime [C++], portabilité de langage"
+title: Unicode et MBCS | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mbcs
+dev_langs: C++
+helpviewer_keywords:
+- MBCS [C++], Unicode
+- MFC [C++], character sets
+- character sets [C++], multibyte
+- run-time libraries [C++], language portability
+- character sets [C++], Unicode
+- Unicode [C++], MFC and C run-time functions
+- multibyte characters [C++]
+- runtime [C++], language portability
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
-caps.latest.revision: 9
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: b46158795c91c0c1982e50f56d8961106b952076
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Unicode et MBCS
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La bibliothèque MFC \(Microsoft Foundation Classes\), la bibliothèque Runtime C pour Visual C\+\+ et l'environnement de développement Visual C\+\+ aident à la programmation internationale.  Elles fournissent :  
+# <a name="unicode-and-mbcs"></a>Unicode et MBCS
+La bibliothèque Microsoft Foundation Classes (MFC), la bibliothèque Runtime C pour Visual C++ et l’environnement de développement Visual C++ sont activées pour faciliter la programmation internationale. Ils fournissent :  
   
--   Une prise en charge pour la norme Unicode sous Windows 2000 \(anciennement Windows NT\).  Unicode est la norme actuelle et doit être utilisé dès que possible.  
+-   Prise en charge de la norme Unicode sous Windows 2000 (anciennement Windows NT). Unicode est la norme actuelle et doit être utilisé chaque fois que possible.  
   
-     Unicode est un encodage de caractères sur 16 bits, permettant l'encodage pour toutes les langues.  Tous les caractères ASCII sont inclus dans Unicode en tant que caractères élargis.  
+     Unicode est un caractère de 16 bits de codage, permettant le codage pour toutes les langues. Tous les caractères ASCII sont inclus dans Unicode en tant que caractères élargis.  
   
     > [!NOTE]
-    >  La norme Unicode n'est pas prise en charge sous Windows 95, Windows 98 ou Windows Millennium.  
+    >  La norme Unicode n’est pas pris en charge sur Windows 95, Windows 98 ou Windows Millennium Edition.  
   
--   Une prise en charge pour un formulaire MBCS \(MultiByte Character Set\) appelé jeu de caractères DBCS \(Double Byte Character Set\) sur toutes les plateformes.  
+-   Prise en charge pour un formulaire de jeu de caractères multioctets (MBCS) appelé jeu de caractères de codés sur deux octets (DBCS) sur toutes les plateformes.  
   
-     Les caractères DBCS sont composés d'un ou deux octets.  Certaines plages d'octets sont mises de côté pour une utilisation en tant que « octets de tête ».  Un octet de tête indique qu'il comprend avec l'« octet de queue » un caractère unique de deux octets.  Vous devez effectuer le suivi des octets de tête.  Dans un jeu de caractères multioctets, les octets de tête font partie d'une plage spécifique, ainsi que les octets de queue.  Lorsque ces plages se superposent, il peut être nécessaire d'évaluer le contexte pour déterminer si un octet donné fonctionne en tant qu'octet de tête ou octet de queue.  
+     Les caractères DBCS sont composés de 1 ou 2 octets. Certaines plages d’octets sont définis pour une utilisation en tant qu’octets de tête. Un octet de tête indique qu’il et l’octet de fin suivante comprennent un caractère unique de 2 octets. Vous devez conserver le suivi des octets d’octets de tête. Dans un jeu de caractères multioctets, les octets de tête sont compris dans une plage et les octets de fin dans une autre. Lorsque ces plages se chevauchent, il peut être nécessaire d’évaluer le contexte pour déterminer si un octet donné fonctionne comme un octet de tête ou un octet de fin.  
   
--   Une prise en charge des outils qui simplifie la programmation MBCS des applications écrites pour les marchés internationaux.  
+-   Prise en charge des outils qui simplifient la programmation MBCS des applications écrites pour les marchés internationaux.  
   
-     Lorsqu'il est exécuté sur une version MBCS du système d'exploitation Windows 2000, l'environnement de développement Visual C\+\+, y compris l'éditeur de code source intégré, le débogueur et les outils de ligne de commande, est compatible MBCS.  Pour plus d'informations, consultez [Prise en charge MBCS dans Visual C\+\+](../text/mbcs-support-in-visual-cpp.md).  
+     Sur une version compatible MBCS du système d’exploitation Windows, le système de développement Visual C++, y compris l’éditeur de code source intégré, débogueur et les outils de ligne de commande, est totalement compatible MBCS. Pour plus d’informations, consultez [prise en charge MBCS dans Visual C++](../text/mbcs-support-in-visual-cpp.md).  
   
 > [!NOTE]
->  Dans cette documentation, MBCS est utilisé pour décrire la prise en charge non\-Unicode pour les caractères élargis.  Dans Visual C\+\+, MBCS signifie toujours DBCS.  Les jeux de caractères de plus de deux octets ne sont pas pris en charge.  
+>  Dans cette documentation, MBCS est utilisé pour décrire la prise en charge de tous les non-Unicode de caractères multioctets. Dans Visual C++, MBCS signifie toujours DBCS. Jeux de caractères plus large que 2 octets ne sont pas pris en charge.  
   
- Par définition, le jeu de caractères ASCII est un sous\-ensemble de tous les jeux de caractères multioctets.  Dans de nombreux jeux de caractères multioctets, chaque caractère de la plage 0x00 – 0x7F est identique au caractère qui a la même valeur dans le jeu de caractères ASCII.  Par exemple, dans les chaînes de caractères ASCII et MBCS, le caractère **NULL** d'un octet \('\\0'\) a la valeur 0x00 et indique le caractère de fin null.  
+ Par définition, le jeu de caractères ASCII est un sous-ensemble de tous les jeux de caractères multioctets. Dans de nombreux jeux de caractères multioctets, chaque caractère de la plage 0x00-0x7F est identique au caractère qui a la même valeur dans le jeu de caractères ASCII. Par exemple, dans les chaînes de caractères ASCII et MBCS, 1 octet **NULL** caractère ('\0') a la valeur 0 x 00 et indique le caractère null de fin.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Texte et chaînes](../text/text-and-strings-in-visual-cpp.md)   
  [Compatibilité internationale](../text/international-enabling.md)

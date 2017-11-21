@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::add_cv
-dev_langs:
-- C++
+f1_keywords: type_traits/std::add_cv
+dev_langs: C++
 helpviewer_keywords:
 - add_cv class
 - add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: be91a6c0567b06c033d71d07ba6fb64eec18acb7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 90d31b9eaa9baf3f282fb5cc57e0c75c7480e489
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="addcv-class"></a>add_cv, classe
 Crée un type volatile const à partir d’un type.  
@@ -102,4 +98,3 @@ invoked const volatile S.f()
 [<type_traits>](../standard-library/type-traits.md)   
 [remove_const, classe](../standard-library/remove-const-class.md)   
 [remove_volatile, classe](../standard-library/remove-volatile-class.md)
-

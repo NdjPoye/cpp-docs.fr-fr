@@ -1,38 +1,35 @@
 ---
-title: "Avertissement du compilateur (niveau 3) C4641 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4641"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4641"
+title: Compilateur avertissement (niveau 3) C4641 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4641
+dev_langs: C++
+helpviewer_keywords: C4641
 ms.assetid: 28fe5c3e-6039-42da-9100-1312b5b15aea
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a25a131efd61da971e973fda3364970ec7a32619
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 3) C4641
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-3-c4641"></a>Avertissement du compilateur (niveau 3) C4641
 Le commentaire de document XML comporte une référence croisée ambiguë  
   
- Le compilateur n'a pas pu résoudre clairement une référence.  Pour résoudre cet avertissement, spécifiez les informations sur les paramètres nécessaires pour rendre la référence non équivoque.  
+ Le compilateur n’a pas pu résoudre clairement une référence. Pour résoudre cet avertissement, spécifiez les informations de paramètre nécessaires pour rendre la référence non équivoque.  
   
- Pour plus d'informations, consultez [Documentation XML](../../ide/xml-documentation-visual-cpp.md).  
+ Pour plus d’informations, consultez [XML Documentation](../../ide/xml-documentation-visual-cpp.md).  
   
-## Exemple  
- L'exemple suivant génère l'erreur C4641 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C4641.  
   
 ```  
 // C4641.cpp  

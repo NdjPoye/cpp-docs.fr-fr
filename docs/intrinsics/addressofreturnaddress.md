@@ -1,55 +1,55 @@
 ---
-title: "_AddressOfReturnAddress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_AddressOfReturnAddress_cpp"
-  - "_AddressOfReturnAddress"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_AddressOfReturnAddress, intrinsèque"
-  - "AddressOfReturnAddress, intrinsèque"
+title: _AddressOfReturnAddress | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _AddressOfReturnAddress_cpp
+- _AddressOfReturnAddress
+dev_langs: C++
+helpviewer_keywords:
+- _AddressOfReturnAddress intrinsic
+- AddressOfReturnAddress intrinsic
 ms.assetid: c7e10b8c-445e-4236-a602-e2d90200f70a
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0808f1053475b1f4919ada60615f91dc8cc0cba0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# _AddressOfReturnAddress
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
+**Section spécifique à Microsoft**  
   
- Fournit l'adresse de l'emplacement de mémoire qui contient l'adresse de retour de la fonction active.  Cette adresse ne peut être utilisée pour accéder à d'autres emplacements de mémoire \(par exemple, les arguments de fonction\).  
+ Fournit l’adresse de l’emplacement de mémoire qui contient l’adresse de retour de la fonction actuelle. Cette adresse ne peut pas être utilisée pour accéder à d’autres emplacements de mémoire (par exemple, les arguments de la fonction).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void * _AddressOfReturnAddress();  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`_AddressOfReturnAddress`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- Lorsque `_AddressOfReturnAddress` est utilisé dans un programme compilé avec [\/clr](../build/reference/clr-common-language-runtime-compilation.md), la fonction contenant l'appel d' `_AddressOfReturnAddress` est compilée comme fonction native.  Lorsque appelle aussi managés compilés par fonction dans la fonction contenant `_AddressOfReturnAddress`, `_AddressOfReturnAddress` peuvent ne pas se comporter que prévu.  
+## <a name="remarks"></a>Remarques  
+ Lorsque `_AddressOfReturnAddress` est utilisée dans un programme compilé avec [/CLR](../build/reference/clr-common-language-runtime-compilation.md), la fonction contenant le `_AddressOfReturnAddress` appel est compilé en tant qu’une fonction native. Lorsqu’une fonction compilée comme géré appelle la fonction contenant `_AddressOfReturnAddress`, `_AddressOfReturnAddress` peuvent ne pas fonctionner comme prévu.  
   
- Cette routine est uniquement disponible sous forme intrinsèque.  
+ Cette routine est disponible uniquement en tant qu'intrinsèque.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // compiler_intrinsics_AddressOfReturnAddress.cpp  
@@ -75,11 +75,14 @@ int main() {
 }  
 ```  
   
-  **0012FF78**  
-**00401058**  
-**00401058**   
-## détail de FIN Microsoft  
+```Output  
+0012FF78  
+00401058  
+00401058  
+```  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)
+**FIN de la section spécifique à Microsoft**  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)   
+ [Mots clés](../cpp/keywords-cpp.md)

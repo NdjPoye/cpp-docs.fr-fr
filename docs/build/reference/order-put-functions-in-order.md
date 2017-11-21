@@ -1,82 +1,87 @@
 ---
-title: "/ORDER (Mettre les fonctions dans l&#39;ordre) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.FunctionOrder"
-  - "/order"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ORDER (option de l'éditeur de liens)"
-  - "LINK (outil C++), optimisation de programme"
-  - "LINK (outil C++), réglage de l'échange"
-  - "ORDER (option de l'éditeur de liens)"
-  - "-ORDER (option de l'éditeur de liens)"
-  - "pagination, optimiser"
+title: "-ORDRE (mettre les fonctions dans l’ordre) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.FunctionOrder
+- /order
+dev_langs: C++
+helpviewer_keywords:
+- ORDER linker option
+- -ORDER linker option
+- LINK tool [C++], program optimizing
+- /ORDER linker option
+- LINK tool [C++], swap tuning
+- paging, optimizing
 ms.assetid: ecf5eb3e-e404-4e86-9a91-4e5ec157261a
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 695c716b29e8d43c0190b4721285f6b4f6959e29
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /ORDER (Mettre les fonctions dans l&#39;ordre)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="order-put-functions-in-order"></a>/ORDER (Mettre les fonctions dans l'ordre)
 
-```  
-/ORDER:@filename  
-```  
-  
-## Paramètres  
- *filename*  
- désigne un fichier texte spécifiant l'ordre de liaison des fonctions COMDAT.  
-  
-## Notes  
- L'option \/ORDER indique à LINK d'optimiser votre programme en plaçant certains COMDAT dans l'image selon un ordre prédéterminé.  LINK place les fonctions dans l'ordre spécifié dans chaque section de l'image.  
-  
- Spécifiez l'ordre dans l'argument *filename*, qui est un fichier texte \(fichier réponse\) répertoriant les COMDAT dans l'ordre de liaison souhaité.  Chaque ligne de l'argument *filename* contient le nom d'un COMDAT.  Un objet contient des COMDAT s'il a été compilé avec l'option \/Gy.  Les noms de fonctions respectent la casse.  
-  
- LINK utilise les formes décorées des identificateurs.  Le compilateur décore un identificateur lorsqu'il crée le fichier .obj.  Utilisez l'outil [DUMPBIN](../../build/reference/dumpbin-reference.md) pour obtenir la forme décorée d'un identificateur lorsque vous devez le spécifier à l'éditeur de liens.  Pour plus d'informations sur les noms décorés, consultez [Noms décorés](../../build/reference/decorated-names.md).  
-  
- Si plusieurs spécifications \/ORDER sont utilisées, la dernière spécifiée est appliquée.  
-  
- Le classement vous permet d'optimiser le comportement d'échange de votre programme par le biais du réglage de l'échange en regroupant une fonction avec la fonction appelée.  Vous pouvez également regrouper les fonctions appelées fréquemment.  Ces techniques augmentent la probabilité selon laquelle une fonction appelée est en mémoire si nécessaire et n'aura pas besoin d'être échangée à partir du disque.  
-  
- L'éditeur de liens ajoutera un trait de soulignement \(\_\) à chaque nom décoré dans l'argument *filename*, sauf si le nom commence par un point d'interrogation \(?\) ou un signe \(@\).  Par exemple, si un fichier objet contient `extern "C" int func(int)` et `int main(void)`, DUMPBIN [\/SYMBOLS](../../build/reference/symbols.md) va répertorier ces noms décorés :  
-  
-```  
-009 00000000 SECT3  notype ()    External     | _func  
-00A 00000008 SECT3  notype ()    External     | _main  
-```  
-  
- Toutefois, le nom spécifié dans le fichier d'ordres doit être `func` et `main`.  
-  
- L'option \/ORDER désactive les liens incrémentiels.  
-  
+Spécifier l’ordre de liaison pour les fonctions séparément empaquetées (COMDAT).
+
+## <a name="syntax"></a>Syntaxe
+
+>/ COMMANDE : @*nom de fichier*
+
+### <a name="parameters"></a>Paramètres
+
+*filename*  
+Un fichier texte qui spécifie l’ordre de liaison des fonctions COMDAT.
+
+## <a name="remarks"></a>Remarques
+
+Le **/Order** option du compilateur vous permet d’optimiser le comportement de pagination de votre programme en regroupant une fonction avec les fonctions qu’elle appelle. Vous pouvez également regrouper les fonctions appelées fréquemment ensemble. Ces techniques, appelés *réglage de l’échange* ou *l’optimisation de la pagination*, augmente la probabilité qu’une fonction appelée est en mémoire lorsqu’il est nécessaire et ne doit pas être notifié par radiomessagerie à partir du disque.
+
+Lorsque vous compilez votre code source dans un fichier objet, vous pouvez indiquer au compilateur pour placer chaque fonction dans sa propre section appelée un *COMDAT*, à l’aide de la [/Gy (activer la liaison au niveau des fonctions)](../../build/reference/gy-enable-function-level-linking.md) compilateur option. Le **/Order** option de l’éditeur de liens indique à l’éditeur de liens place les COMDAT dans l’image exécutable dans l’ordre que vous spécifiez.
+
+Pour spécifier l’ordre des COMDAT, créez un *fichier réponse*, un fichier texte qui répertorie chaque COMDAT par nom, un par ligne, dans l’ordre que vous sélectionnez soient placés par l’éditeur de liens. Passez le nom de ce fichier en tant que le *nom de fichier* paramètre de la **/Order** option. Pour les fonctions C++, le nom d’un COMDAT est la forme décorée du nom de la fonction. Utiliser le nom non décoré pour les fonctions C, `main`, ainsi que pour les fonctions C++ déclarées comme `extern "C"`. Les noms de fonctions et les noms décorés respectent la casse. Pour plus d’informations sur les noms décorés, consultez [noms décorés](../../build/reference/decorated-names.md). 
+
+Pour rechercher les noms décorés de votre COMDAT, utilisez le [DUMPBIN](../../build/reference/dumpbin-reference.md) l’outil [/symboles](../../build/reference/symbols.md) option sur le fichier objet. L’éditeur de liens ajoute automatiquement un trait de soulignement (\_) à la fonction de noms dans la réponse de fichiers, sauf si le nom commence par un point d’interrogation ( ?) ou signe arobase (@). Par exemple, si un fichier source, example.cpp, contient des fonctions `int cpp_func(int)`, `extern "C" int c_func(int)` et `int main(void)`, la commande `DUMPBIN /SYMBOLS example.obj` répertorie ces noms décorés :
+
+```Output
+...
+088 00000000 SECT1A notype ()    External     | ?cpp_func@@YAHH@Z (int __cdecl cpp_func(int))
+089 00000000 SECT22 notype ()    External     | _c_func
+08A 00000000 SECT24 notype ()    External     | _main
+...
+```
+
+Dans ce cas, spécifiez les noms en tant que `?cpp_func@@YAHH@Z`, `c_func`, et `main` dans votre fichier de réponse.
+
+Si plusieurs **/Order** option s’affiche dans les options de l’éditeur de liens, la dernière spécifiée est appliquée.
+
+Le **/Order** option désactive les liens incrémentiels. Vous pouvez voir l’avertissement de l’éditeur de liens [LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md) lorsque vous spécifiez cette option si la liaison incrémentielle est activée, ou si vous avez spécifié le [/ZI (incrémentielle PDB)](../../build/reference/z7-zi-zi-debug-information-format.md) option du compilateur. Pour exclure cet avertissement, vous pouvez utiliser la [/INCREMENTAL : no](../../build/reference/incremental-link-incrementally.md) option de l’éditeur de liens pour désactiver les liens incrémentiels et utiliser le [/ZI (générer PDB)](../../build/reference/z7-zi-zi-debug-information-format.md) option du compilateur pour générer un fichier PDB sans édition des liens incrémentielle.
+
 > [!NOTE]
->  LINK ne peut pas classer les fonctions statiques car les noms de fonctions statiques ne sont pas des noms de symboles publics.  Lorsque \/ORDER est spécifié, l'avertissement de l'éditeur de liens LNK4037 est généré pour chaque symbole, dans le fichier d'ordres, qui est soit statique, soit introuvable.  
-  
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
-  
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Définition des propriétés de projets Visual C\+\+](../../ide/working-with-project-properties.md).  
-  
-2.  Cliquez sur le dossier **Éditeur de liens**.  
-  
-3.  Cliquez sur la page de propriétés **Optimisation**.  
-  
-4.  Modifiez la propriété **Ordre des fonctions**.  
-  
-### Pour définir cette option de l'éditeur de liens par programme  
-  
--   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.FunctionOrder%2A>.  
-  
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+> LIEN ne peut pas classer les fonctions statiques car les noms de fonctions statiques ne sont pas des noms de symboles publics. Lorsque **/Order** est spécifié, l’avertissement de l’éditeur de liens [LNK4037](../../error-messages/tool-errors/linker-tools-warning-lnk4037.md) est généré pour chaque symbole dans le fichier de réponse de commande est statique ou introuvable.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
+
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).  
+
+1. Sous **propriétés de Configuration**, ouvrez **l’éditeur de liens** , puis choisissez le **optimisation** page de propriétés.
+
+1. Modifier la **fonction ordre** propriété pour contenir le nom de votre fichier de réponse.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
+
+- Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.FunctionOrder%2A>.
+
+## <a name="see-also"></a>Voir aussi
+
+[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)  
+[Options de l’éditeur de liens](../../build/reference/linker-options.md)

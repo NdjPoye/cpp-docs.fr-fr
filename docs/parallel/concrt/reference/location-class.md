@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,35 +13,18 @@ f1_keywords:
 - CONCRT/concurrency::location::location
 - CONCRT/concurrency::location::current
 - CONCRT/concurrency::location::from_numa_node
-dev_langs:
-- C++
-helpviewer_keywords:
-- location class
+dev_langs: C++
+helpviewer_keywords: location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a0b64804ebfea3ad2c172c509aeffd485f4fe30a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: aafe0500568cd9d4c9419345560272e18008df83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="location-class"></a>location, classe
 Abstraction d'un emplacement physique sur du matériel.  
@@ -66,7 +48,7 @@ class location;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[en cours](#current)|Retourne un `location` objet représentant le lieu plus spécifique que le thread appelant s’exécute.|  
+|[en cours](#current)|Retourne un `location` objet représentant l’emplacement plus spécifique que le thread appelant s’exécute.|  
 |[from_numa_node](#from_numa_node)|Retourne un `location` objet qui représente un nœud NUMA donné.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
@@ -77,7 +59,7 @@ class location;
 |[operator=](#operator_eq)|Assigne le contenu d’un autre `location` objet à celui-ci.|  
 |[operator==](#operator_eq_eq)|Détermine si deux `location` objets représentent le même emplacement.|  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `location`  
   
 ## <a name="requirements"></a>Spécifications  
@@ -95,14 +77,14 @@ class location;
   
 ##  <a name="current"></a>en cours 
 
- Retourne un `location` objet représentant le lieu plus spécifique que le thread appelant s’exécute.  
+ Retourne un `location` objet représentant l’emplacement plus spécifique que le thread appelant s’exécute.  
   
 ```
 static location __cdecl current();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un emplacement qui représente le lieu plus spécifique que le thread appelant s’exécute.  
+ Un emplacement qui représente l’emplacement plus spécifique que le thread appelant s’exécute.  
   
 ##  <a name="from_numa_node"></a>from_numa_node 
 
@@ -190,4 +172,3 @@ bool operator== (const location& _Rhs) const;
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)
-

@@ -1,34 +1,32 @@
 ---
-title: "How to: Declare Interior Pointers with the const Keyword (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pointers, interior"
+title: "Comment : déclarer des pointeurs intérieurs avec le mot clé const (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: pointers, interior
 ms.assetid: 64e08b0e-9396-4046-ab51-8f6588f32330
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: db90a74bc73c548dcc3cca71cf3631bd9499ac27
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# How to: Declare Interior Pointers with the const Keyword (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'échantillon suivant montre comment utiliser `const` dans la déclaration d'un pointeur intérieur.  
+# <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>Comment : déclarer des pointeurs intérieurs avec le mot clé const (C++/CLI)
+L’exemple suivant montre comment utiliser `const` dans la déclaration d’un pointeur intérieur.  
   
 > [!IMPORTANT]
->  Cette fonctionnalité des langues est prise en charge par l'option du compilateur **\/clr**, mais pas par l'option du compilateur **\/ZW**.  
+>  Cette fonctionnalité de langage est pris en charge par le **/CLR** option du compilateur, mais pas par le **/ZW** option du compilateur.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // interior_ptr_const.cpp  
@@ -87,5 +85,5 @@ int main() {
 };  
 ```  
   
-## Voir aussi  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>Voir aussi  
+ [interior_ptr (C++-CLI)](../windows/interior-ptr-cpp-cli.md)

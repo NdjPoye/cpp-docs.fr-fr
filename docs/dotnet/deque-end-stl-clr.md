@@ -1,41 +1,39 @@
 ---
-title: "deque::end (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre end [STL/CLR]"
+title: deque::end (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: 3de3e816-3334-4b39-97ad-6f8771e9b4e9
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1be343e4333f4e1d59e4c792a79474b5ccdf5071
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# deque::end (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequeend-stlclr"></a>deque::end (STL/CLR)
 Désigne la fin de la séquence contrôlée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 iterator end();  
 ```  
   
-## Notes  
- La méthode retourne un itérateur d'accès aléatoire qui pointe juste après la fin de la séquence contrôlée.  Vous l'utilisez pour obtenir un itérateur qui désigne la fin `current` de la séquence contrôlée, mais son état peut changer si la longueur de la séquence contrôlée change.  
+## <a name="remarks"></a>Remarques  
+ La fonction membre retourne un itérateur à accès aléatoire qui pointe juste après la fin de la séquence contrôlée. Vous l’utilisez pour obtenir un itérateur qui désigne le `current` fin de la séquence contrôlée, mais son état peut changer si la longueur de la séquence contrôlée change.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_deque_end.cpp   
@@ -71,17 +69,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*\-\- \-\-end\(\) \= b**  
-**\*\-\-end\(\) \= c**  
- **a x y**   
-## Configuration requise  
- **En\-tête :** \<cliext\/deque\>  
+```Output  
+ a b c  
+*-- --end() = b  
+*--end() = c  
+ a x y  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/deque >  
   
-## Voir aussi  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::back](../dotnet/deque-back-stl-clr.md)   
- [deque::back\_item](../dotnet/deque-back-item-stl-clr.md)   
- [deque::begin](../dotnet/deque-begin-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::Back (STL/CLR)](../dotnet/deque-back-stl-clr.md)   
+ [deque::back_item (STL/CLR)](../dotnet/deque-back-item-stl-clr.md)   
+ [deque::begin (STL/CLR)](../dotnet/deque-begin-stl-clr.md)

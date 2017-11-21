@@ -1,31 +1,29 @@
 ---
-title: "Erreur irr&#233;cup&#233;rable CVTRES CVT1105 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CVT1105"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CVT1105"
+title: "Erreur irrécupérable CVTRES CVT1105 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CVT1105
+dev_langs: C++
+helpviewer_keywords: CVT1105
 ms.assetid: 6fb98e2b-836e-4e1e-9bd8-4e1465ad4e85
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bb8e5b7a581ba73f6707f6649bba287572aa3d5f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Erreur irr&#233;cup&#233;rable CVTRES CVT1105
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-impossible de rechercher dans le fichier  
+# <a name="cvtres-fatal-error-cvt1105"></a>Erreur irrécupérable CVTRES CVT1105
+Impossible de rechercher dans le fichier  
   
- CVTRES n'a pas pu atteindre un emplacement dans le fichier.  
+ CVTRES Impossible d’accéder à un emplacement dans le fichier.  
   
- Cette erreur est peut\-être due au fait que le fichier est endommagé.
+ Cette erreur peut être dû à l’endommagement du fichier.

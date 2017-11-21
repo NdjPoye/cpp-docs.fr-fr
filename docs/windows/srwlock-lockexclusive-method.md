@@ -1,32 +1,30 @@
 ---
-title: "SRWLock::LockExclusive, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::SRWLock::LockExclusive"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LockExclusive (méthode)"
+title: "SRWLOCK::lockexclusive, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::SRWLock::LockExclusive
+dev_langs: C++
+helpviewer_keywords: LockExclusive method
 ms.assetid: f361b672-fca6-45cc-a9b4-310cc0d23fdc
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bb389b0aee2e995981e3d4570d3609ecae0dcaa5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# SRWLock::LockExclusive, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Obtient un objet SRWLock en mode exclusif.  
+# <a name="srwlocklockexclusive-method"></a>SRWLock::LockExclusive, méthode
+Acquiert un objet SRWLock en mode exclusif.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 SyncLockExclusive LockExclusive();  
@@ -36,17 +34,17 @@ static SyncLockExclusive LockExclusive(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `lock`  
  Pointeur vers un objet SRWLock.  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  Un objet SRWLock en mode exclusif.  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers  
+ **Namespace :** Microsoft::WRL::Wrappers  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SRWLock, classe](../windows/srwlock-class.md)

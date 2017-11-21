@@ -1,54 +1,51 @@
 ---
-title: "HString::Operator&lt;, op&#233;rateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString::operator<"
-dev_langs: 
-  - "C++"
+title: "HString::Operator&lt; opérateur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString::operator<
+dev_langs: C++
 ms.assetid: 48a051cb-4609-42be-b48c-d35fc99d1eab
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 84725ca0ceeb4778bec2add60c7e96eff3ab3bfb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# HString::Operator&lt;, op&#233;rateur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indique si le premier paramètre est inférieur au deuxième paramètre.  
+# <a name="hstringoperatorlt-operator"></a>HString::Operator&lt; (opérateur)
+Indique si le premier paramètre est inférieur au second paramètre.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
-  
 inline bool operator<(  
     const HString& lhs,   
     const HString& rhs) throw()  
   
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `lhs`  
- Le premier paramètre à comparer.  `lhs` peut être une référence à un HString.  
+ Le premier paramètre à comparer. `lhs`peut être une référence à HString.  
   
  `rhs`  
- Le deuxième paramètre à comparer.  `rhs` peut être une référence à un HString.  
+ Le deuxième paramètre à comparer. `rhs`peut être une référence à HString.  
   
-## Valeur de retour  
- `true` si le paramètre `lhs` est inférieur au paramètre `rhs`; sinon, `false`.  
+## <a name="return-value"></a>Valeur de retour  
+ `true`Si le `lhs` paramètre est inférieure à la `rhs` paramètre ; sinon, `false`.  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers  
+ **Namespace :** Microsoft::WRL::Wrappers  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [HString, classe](../windows/hstring-class.md)

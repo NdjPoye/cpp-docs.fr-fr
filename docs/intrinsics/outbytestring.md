@@ -1,67 +1,66 @@
 ---
-title: "__outbytestring | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__outbytestring"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rep outsb, instruction"
-  - "__outbytestring, intrinsèque"
-  - "outsb, instruction"
+title: __outbytestring | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __outbytestring
+dev_langs: C++
+helpviewer_keywords:
+- rep outsb instruction
+- __outbytestring intrinsic
+- outsb instruction
 ms.assetid: c9150661-9c18-427f-bae8-710bba6ed78c
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 43ee5deb1dc6584352d4aaff882ad8fb91702d04
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# __outbytestring
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="outbytestring"></a>__outbytestring
+**Section spécifique à Microsoft**  
   
- Génère des instructions d' `rep outsb` , qui envoie les premiers octets d' `Count` de données pointées par `Buffer` au port spécifié par `Port`.  
+ Génère le `rep outsb` instruction, qui envoie le premier `Count` octets de données vers lequel pointe `Buffer` sur le port spécifié par `Port`.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-void __outbytestring(   
-   unsigned short Port,   
-   unsigned char* Buffer,   
-   unsigned long Count   
+void __outbytestring(   
+   unsigned short Port,   
+   unsigned char* Buffer,   
+   unsigned long Count   
 );  
 ```  
   
-#### Paramètres  
- \[in\] `Port`  
- Le port pour renvoyer les données à.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `Port`  
+ Le port pour envoyer les données.  
   
- \[in\] `Buffer`  
- les données à envoyer le port spécifié.  
+ [in] `Buffer`  
+ Les données à envoyer le port spécifié.  
   
- \[in\] `Count`  
- le nombre d'octets de données à envoyer.  
+ [in] `Count`  
+ Le nombre d’octets de données à envoyer.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__outbytestring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- Cette routine est uniquement disponible sous forme intrinsèque.  
+## <a name="remarks"></a>Remarques  
+ Cette routine est disponible uniquement en tant qu'intrinsèque.  
   
-## détail de FIN Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

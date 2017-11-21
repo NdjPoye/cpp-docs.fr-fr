@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _wfullpath_dbg
 - _fullpath_dbg
 - fullpath_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _fullpath_dbg function
 - relative file paths
@@ -38,30 +36,15 @@ helpviewer_keywords:
 - _wfullpath_dbg function
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 6af4d6ba5df2305b5181e47cf0a0557650aa0406
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: d4a89e5599823bb60d65f0845044185fbbe560dd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 Versions de [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md) qui utilisent la version de débogage de `malloc` pour allouer de la mémoire.  
@@ -110,7 +93,7 @@ wchar_t *_wfullpath_dbg(
  Chaque fonction retourne un pointeur vers une mémoire tampon contenant le nom de chemin d'accès absolu (`absPath`). En cas d'erreur (par exemple, si la valeur passée dans `relPath` comprend une lettre de lecteur qui n'est pas valide ou qui est introuvable, ou si la longueur du nom de chemin d'accès absolu créé (`absPath`) est supérieure à `maxLength`) la fonction retourne `NULL`.  
   
 ## <a name="remarks"></a>Remarques  
- Le `_fullpath_dbg` et `_wfullpath_dbg` fonctions sont identiques aux `_fullpath` et `_wfullpath` , sauf que, lorsque `_DEBUG` est défini, ces fonctions utilisent la version debug de `malloc`, `_malloc_dbg`, allocation de mémoire si la valeur NULL est passée comme premier paramètre. Pour plus d’informations sur les fonctionnalités de débogage de `_malloc_dbg`, consultez [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
+ Le `_fullpath_dbg` et `_wfullpath_dbg` fonctions sont identiques aux `_fullpath` et `_wfullpath` , sauf que, lorsque `_DEBUG` est défini, ces fonctions utilisent la version debug de `malloc`, `_malloc_dbg`, allocation de mémoire si NULL est passé comme premier paramètre. Pour plus d’informations sur les fonctionnalités de débogage de `_malloc_dbg`, consultez [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
   
  Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. À la place, vous pouvez définir l'indicateur `_CRTDBG_MAP_ALLOC`. Quand `_CRTDBG_MAP_ALLOC` est défini, les appels à `_fullpath` et `_wfullpath` sont remappés à `_fullpath_dbg` et `_wfullpath_dbg`, respectivement, avec `blockType` défini sur `_NORMAL_BLOCK`. Ainsi, vous n'avez pas besoin d'appeler ces fonctions de manière explicite sauf si vous souhaitez marquer les blocs du tas comme `_CLIENT_BLOCK`. Pour plus d’informations, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).  
   
@@ -127,7 +110,7 @@ wchar_t *_wfullpath_dbg(
 |`_fullpath_dbg`|\<crtdbg.h>|  
 |`_wfullpath_dbg`|\<crtdbg.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion de fichiers](../../c-runtime-library/file-handling.md)   

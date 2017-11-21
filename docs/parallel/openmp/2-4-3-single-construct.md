@@ -1,51 +1,49 @@
 ---
-title: "2.4.3 single Construct | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.4.3 unique construction | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 15c180cd-e462-4b41-bf8c-cb8b1afb1a9b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3efb6c833227140440d327ea47906f8239769689
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# 2.4.3 single Construct
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La directive d' **unique** identifie un élément qui spécifie que le bloc de type associé est exécuté par un seul thread dans l'équipe \(pas nécessairement le thread principal\).  La syntaxe de la directive d' **unique** est la suivante :  
+# <a name="243-single-construct"></a>2.4.3 Construction simple
+Le **unique** directive identifie une construction qui spécifie que le bloc structuré associé est exécuté par un seul thread de l’équipe (pas nécessairement le thread principal). La syntaxe de la **unique** la directive est la suivante :  
   
 ```  
-#pragma omp single [clause[[,] clause] ...] new-line  
-   structured-block  
+#pragma omp single [clause[[,] clause] ...] new-linestructured-block  
 ```  
   
- La clause est l'une des opérations suivantes :  
+ La clause est une des opérations suivantes :  
   
- *variable\-liste* **\)**de**privé \(**  
+ **privé (** *variable-list* **)**  
   
- *variable\-liste* **\)**de**firstprivate \(**  
+ **firstprivate (** *variable-list* **)**  
   
- *variable\-liste* **\)**de**copyprivate \(**  
+ **copyprivate (** *variable-list* **)**  
   
  **nowait**  
   
- Il existe un cloisonnement implicite après l'élément d' **unique** à moins qu'une clause de **nowait** soit spécifiée.  
+ Il existe une barrière implicite après le **unique** construire, sauf si un **nowait** clause est spécifiée.  
   
- Les restrictions à la directive d' **unique** sont les suivantes :  
+ Restrictions à le **unique** directive sont les suivantes :  
   
--   Uniquement une clause unique de **nowait** peut apparaître sur une directive d' **unique** .  
+-   Un seul **nowait** clause peut s’afficher dans un **unique** directive.  
   
--   la clause de **copyprivate** ne doit pas être utilisée avec la clause de **nowait** .  
+-   Le **copyprivate** clause ne doit pas être utilisée avec le **nowait** clause.  
   
-## Références croisées :  
+## <a name="cross-references"></a>Références externes :  
   
--   **privé**, **firstprivate**, et les clauses de **copyprivate** , consultez [section 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) à la page 25.
+-   **privé**, **firstprivate**, et **copyprivate** clauses, consultez [Section 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) page 25.

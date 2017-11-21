@@ -1,32 +1,29 @@
 ---
-title: "Erreur des outils &#201;diteur de liens LNK1166 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1166"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1166"
+title: "LNK1166 d’erreur des outils Éditeur de liens | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1166
+dev_langs: C++
+helpviewer_keywords: LNK1166
 ms.assetid: d69548a8-0efb-44e1-90b7-b27636a4b575
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 44c71d074e950c857123bad5619bfa7a19fd1dff
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Erreur des outils &#201;diteur de liens LNK1166
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-ne peut pas ajuster le code à offset\=offset, va\=value  
+# <a name="linker-tools-error-lnk1166"></a>Erreur des outils Éditeur de liens LNK1166
+Impossible de modifier le code à l’offset = offset, va = valeur  
   
- LINK n'a pas pu effectuer le remplissage de code nécessaire.  
+ LIEN n’a pas pu compléter le code en fonction des besoins.  
   
- Certaines instructions ne doivent pas s'étendre sur des frontières de pages pour certains processeurs.  LINK tente d'ajouter des remplissages pour corriger cette situation.  Dans ce cas, LINK n'a pas pu éviter le problème.
+ Certaines instructions ne sont pas autorisées à franchir les limites de page sur certains processeurs. LIEN tente d’ajouter des remplissages pour corriger cette situation. Dans ce cas, lien ne pourrait pas contourner le problème.

@@ -4,44 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4161
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4161
+f1_keywords: C4161
+dev_langs: C++
+helpviewer_keywords: C4161
 ms.assetid: 03d3be61-83f1-4009-8310-8758ab67055f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: f2b28f9dc124a90c8fd279e2aafce1471c64b5a0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: 6a1a5ce118dc1c6a0de872ca851e59daa96f8b13
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="compiler-warning-level-3-c4161"></a>Avertissement du compilateur (niveau 3) C4161
+# <a name="compiler-warning-level-3-c4161"></a>Avertissement du compilateur (niveau 3) C4161
 \#pragma pragma(pop...) : plus de POP que de push  
   
  Étant donné que votre code source contient plus d’opérations pop que d’opérations push pour le pragma ***pragma***, la pile peut ne pas fonctionner comme prévu. Pour éviter cet avertissement, vérifiez que le nombre d’opérations pop ne dépasse pas le nombre d’opérations push.  

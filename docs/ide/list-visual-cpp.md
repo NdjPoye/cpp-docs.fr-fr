@@ -1,35 +1,34 @@
 ---
-title: "&lt;list&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "list"
-  - "<list>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<list> (balise XML C++)"
-  - "list (balise XML C++)"
+title: '&lt;liste&gt; (Visual C++) | Documents Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- list
+- <list>
+dev_langs: C++
+helpviewer_keywords:
+- list C++ XML tag
+- <list> C++ XML tag
 ms.assetid: c792a10b-0451-422c-9aa0-604116e69d64
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0d7b4e97cb5e14bb50b914f883fdd5237afa5496
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# &lt;list&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le bloc \<listheader\> permet de définir la ligne de titre d'un tableau ou d'une liste de définitions.  Lorsque vous définissez un tableau, il suffit de fournir une entrée pour term dans le titre.  
+# <a name="ltlistgt-visual-c"></a>&lt;liste&gt; (Visual C++)
+Le bloc \<listheader> permet de définir la ligne d’en-tête d’une table ou d’une liste de définitions. Au moment de définir une table, il vous suffit de fournir une entrée pour le terme figurant dans l’en-tête.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 <list type="bullet" | "number" | "table">  
@@ -44,21 +43,21 @@ Le bloc \<listheader\> permet de définir la ligne de titre d'un tableau ou d'un
 </list>  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `term`  
  Terme à définir, qui est défini dans `description`.  
   
  `description`  
- Élément d'une liste à puces ou numérotée, ou définition d'un `term`.  
+ Élément contenu dans une puce ou une liste numérotée ou définition d’un `term`.  
   
-## Notes  
- Chaque élément de la liste est spécifié par un bloc \<item\>.  Lorsque vous créez une liste de définitions, vous devez spécifier à la fois `term` et `description`.  Cependant, pour un tableau, une liste à puces ou une liste numérotée, il vous suffit de fournir une entrée pour `description`.  
+## <a name="remarks"></a>Remarques  
+ Chaque élément de la liste est spécifié avec un bloc \<item>. Au moment de créer une liste de définitions, vous devez spécifier à la fois `term` et `description`. Cependant, pour une table, une liste à puces ou une liste numérotée, il vous suffit de fournir une entrée pour `description`.  
   
- Une liste ou un tableau peut comporter autant de blocs \<item\> que nécessaire.  
+ Une liste ou une table peut comporter autant de blocs \<item> que nécessaire.  
   
- Compilez avec [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour traiter les commentaires de documentation et les placer dans un fichier.  
+ Compilez avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // xml_list_tag.cpp  
@@ -77,5 +76,5 @@ Le bloc \<listheader\> permet de définir la ligne de titre d'un tableau ou d'un
 class MyClass {};  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Documentation XML](../ide/xml-documentation-visual-cpp.md)

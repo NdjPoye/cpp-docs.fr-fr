@@ -1,45 +1,43 @@
 ---
-title: "hash_set::find (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::find"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre find [STL/CLR]"
+title: hash_set::Find (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::find
+dev_langs: C++
+helpviewer_keywords: find member [STL/CLR]
 ms.assetid: 758b7438-ef15-4af0-8001-a1126d5e9a9e
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7a0dafb99d424eda2237164cd7ccae0c2d7c22ab
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::find (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsetfind-stlclr"></a>hash_set::find (STL/CLR)
 Recherche un élément qui correspond à une clé spécifiée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 iterator find(key_type key);  
 ```  
   
-#### Paramètres  
- key  
- Key value to search for.  
+#### <a name="parameters"></a>Paramètres  
+ clé  
+ Valeur de clé à rechercher.  
   
-## Notes  
- If at least one element in the controlled sequence has equivalent ordering with `key`, the member function returns an iterator designating one of those elements; otherwise it returns [hash\_set::end](../dotnet/hash-set-end-stl-clr.md)`()`.  You use it to locate an element currently in the controlled sequence that matches a specified key.  
+## <a name="remarks"></a>Remarques  
+ Si au moins un élément dans la séquence contrôlée a un classement équivalent à `key`, la fonction membre retourne un itérateur désignant un de ces éléments ; sinon, elle retourne [hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `()`. Il permet de localiser un élément actuellement dans la séquence contrôlée qui correspond à une clé spécifiée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_set_find.cpp   
@@ -70,20 +68,23 @@ int main()
   
 ```  
   
-  **a b c**  
-**find A \= False**  
-**find b \= b**  
-**find C \= False**   
-## Description  
- Note that `find` does not guarantee which of several element it finds.  
+```Output  
+ a b c  
+find A = False  
+find b = b  
+find C = False  
+```  
   
-## Configuration requise  
- **Header:** \<cliext\/hash\_set\>  
+## <a name="description"></a>Description  
+ Notez que `find` ne garantit pas parmi plusieurs élément qu’il trouve.  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/hash_set >  
   
-## Voir aussi  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::equal\_range](../dotnet/hash-set-equal-range-stl-clr.md)   
- [hash\_set::lower\_bound](../dotnet/hash-set-lower-bound-stl-clr.md)   
- [hash\_set::upper\_bound](../dotnet/hash-set-upper-bound-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::equal_range (STL/CLR)](../dotnet/hash-set-equal-range-stl-clr.md)   
+ [hash_set::lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md)   
+ [hash_set::upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)

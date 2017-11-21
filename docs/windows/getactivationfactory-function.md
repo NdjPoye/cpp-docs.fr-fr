@@ -1,34 +1,33 @@
 ---
-title: "GetActivationFactory, fonction | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::GetActivationFactory"
-  - "client/ABI::Windows::Foundation::GetActivationFactory"
-  - "client/Windows::Foundation::GetActivationFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetActivationFactory (fonction)"
+title: GetActivationFactory (fonction) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- module/Microsoft::WRL::Details::GetActivationFactory
+- client/ABI::Windows::Foundation::GetActivationFactory
+- client/Windows::Foundation::GetActivationFactory
+dev_langs: C++
+helpviewer_keywords: GetActivationFactory function
 ms.assetid: 5736d285-6beb-42aa-8788-e261c0010afe
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 34ffd1826e337194e83e4fa7741e18f7892a47cd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# GetActivationFactory, fonction
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Récupère une fabrique d'activation pour le type spécifié par le paramètre de modèle.  
+# <a name="getactivationfactory-function"></a>GetActivationFactory (fonction)
+Récupère la fabrique d’activation pour le type spécifié par le paramètre de modèle.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<  
@@ -40,23 +39,23 @@ inline HRESULT GetActivationFactory(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
- Un paramètre de modèle spécifiant le type de la fabrique d'activation.  
+ Un paramètre de modèle qui spécifie le type de la fabrique d’activation.  
   
  `activatableClassId`  
- Le nom de la classe que la fabrique d'activation peut produire.  
+ Le nom de la classe qui permet de créer la fabrique d’activation.  
   
  `factory`  
- Lorsque cette opération se termine, une référence à la fabrique d'activation pour le type `T`.  
+ Lorsque cette opération est terminée, une référence à la fabrique d’activation pour le type `T`.  
   
-## Valeur de retour  
- S\_OK si l'opération a réussi; sinon, une erreur HRESULT indiquant la cause de l'échec.  
+## <a name="return-value"></a>Valeur de retour  
+ S_OK en cas de réussite ; Sinon, une erreur HRESULT qui indique la raison pour laquelle cette opération a échoué.  
   
-## Configuration requise  
- **En\-tête:** client.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** client.h  
   
- **Espace de noms:** Windows::Foundation  
+ **Namespace :** Windows::Foundation  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Windows::Foundation, espace de noms](../windows/windows-foundation-namespace.md)

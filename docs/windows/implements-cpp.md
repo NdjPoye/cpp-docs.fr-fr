@@ -1,69 +1,66 @@
 ---
-title: "implements (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.implements"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "implements attribute"
+title: Implements (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.implements
+dev_langs: C++
+helpviewer_keywords: implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 44e1ec9a00f1de2ab07d7b2a916d274a9cddce2e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# implements (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Spécifie les interfaces de dispatch qui sont converties pour être des membres de la coclasse IDL.  
+# <a name="implements-c"></a>implements (C++)
+Spécifie les interfaces de dispatch qui doivent être membres de la coclasse IDL.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      [ implements(   
+      [ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
 )]  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  **interfaces**  
- Une virgule séparées la liste des interfaces qui seront membre de la coclasse IDL.  Une méthode abrégée pour spécifier une interface est*nom\_interface***\)**d' **implémente \(**.  
+ Liste des interfaces qui sera un membre de la coclasse IDL séparés par des virgules. Une méthode de raccourci pour la spécification d’une seule interface est **implémente (***nom_interface***)**.  
   
  **dispinterfaces**  
- Une virgule séparées la liste de la dispinterface qui sera membre de la coclasse IDL.  Une méthode abrégée pour spécifier une dispinterface unique est **implémente \(dispinterfaces** *\= dispinterface\_name***\)**.  
+ Liste de l’interface qui sera un membre de la coclasse IDL séparés par des virgules. Une méthode abrégée pour spécifier une dispinterface unique est **implémente (dispinterfaces** *= dispinterface_name***)**.  
   
-## Notes  
- Par défaut, seuls les interfaces COM qui représentent des classes de base de la coclasse sont ajoutées dans la coclasse IDL.  **implémente** vous permet de forcer d'autres interfaces pour être des membres de la coclasse IDL.  
+## <a name="remarks"></a>Remarques  
+ Par défaut, seuls-interfaces COM qui sont des classes de base de la coclasse sont ajoutés dans la coclasse IDL. **implémente** vous permet de forcer d’autres interfaces qui seront membres de coclasse IDL.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**classe**, `struct`|  
-|**reproductible**|Oui|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|**class**, `struct`|  
+|**Renouvelable**|Oui|  
+|**Attributs requis**|Aucun|  
+|**Attributs non valides**|None|  
   
- Pour plus d'informations, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Exemple  
- L'exemple suivant est à trois parties : un fichier .idl et son fichier associé .h, et fichier C\+\+.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant est en trois parties : un fichier .idl et son fichier .h associés et un fichier C++.  
   
- Prenons le fichier suivant .idl, qui sera disponible au compilateur.  
+ Supposons que le fichier .idl suivant, qui sera disponible pour le compilateur.  
   
 ```  
 // attr_implements.idl  
@@ -112,8 +109,8 @@ library odod
 }  
 ```  
   
-## Exemple  
- Et le fichier suivant .h, qui doit également être disponible au compilateur.  
+## <a name="example"></a>Exemple  
+ Et le fichier .h, qui doit également être disponible pour le compilateur.  
   
 ```  
 // attr_implements.h  
@@ -429,8 +426,8 @@ CBar;
 #endif  
 ```  
   
-## Exemple  
- Dans le programme suivant, implémente sans, IBar1, IBar2, et ISna ne sera pas dans la coclasse dans le fichier IDL généré.  
+## <a name="example"></a>Exemple  
+ Dans le programme suivant, sans implémente, IBar1, IBar2 et ESTNA sera pas dans la coclasse dans le fichier IDL généré.  
   
 ```  
 // attr_implements.cpp  
@@ -551,7 +548,6 @@ public:
 };  
 ```  
   
-## Voir aussi  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs du compilateur](../windows/compiler-attributes.md)   
+ [Attributs de classe](../windows/class-attributes.md)   

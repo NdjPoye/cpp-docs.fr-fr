@@ -1,46 +1,44 @@
 ---
-title: "ordered (OpenMP Directives) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ordered"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ordered OpenMP directive"
+title: "ordonnée (Directives OpenMP) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ordered
+dev_langs: C++
+helpviewer_keywords: ordered OpenMP directive
 ms.assetid: e1aa703e-d07d-4f6a-9b2a-f4f25203d850
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 85e4b969c7cf47e2243418db52bbdf2299bdafd4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# ordered (OpenMP Directives)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Spécifie ce code sous parallélisé de la boucle doit être exécuté comme une boucle séquentielle.  
+# <a name="ordered-openmp-directives"></a>ordered (directives OpenMP)
+Spécifie que le code sous un parallélisée boucle doit être exécutée comme une boucle séquentielle.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 #pragma omp ordered  
    structured-block  
 ```  
   
-## Notes  
- La directive de **dimensionné** doit se situer dans l'étendue dynamique d'un élément de [for](../../../parallel/openmp/reference/for-openmp.md) ou de **parallèle pour** avec une clause de **dimensionné** .  
+## <a name="remarks"></a>Remarques  
+ Le **classés** la directive doit être dans l’étendue dynamique d’un [pour](../../../parallel/openmp/reference/for-openmp.md) ou **parallèles pour** construire avec un **classés** clause.  
   
- La directive de **dimensionné** ne prend en charge aucune clauses OpenMP.  
+ Le **classés** directive prend en charge aucune clauses OpenMP.  
   
- Pour plus d'informations, consultez [2.6.6 ordered Construct](../../../parallel/openmp/2-6-6-ordered-construct.md).  
+ Pour plus d’informations, consultez [2.6.6 construction ordered](../../../parallel/openmp/2-6-6-ordered-construct.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // omp_ordered.cpp  
@@ -82,14 +80,17 @@ int main( )
 }  
 ```  
   
-  **testez \(\) l'itération 1**  
-**itération 3 de test \(\)**  
-**testez \(\) l'itération 5**  
-**testez \(\) l'itération 7**  
-**\(\) itération test2 0**  
-**\(\) itération test2 1**  
-**\(\) itération test2 2**  
-**\(\) itération test2 3**  
-**\(\) itération test2 4**   
-## Voir aussi  
+```Output  
+test() iteration 1  
+test() iteration 3  
+test() iteration 5  
+test() iteration 7  
+test2() iteration 0  
+test2() iteration 1  
+test2() iteration 2  
+test2() iteration 3  
+test2() iteration 4  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
  [Directives](../../../parallel/openmp/reference/openmp-directives.md)

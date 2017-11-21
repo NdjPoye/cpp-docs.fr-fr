@@ -1,66 +1,67 @@
 ---
-title: "/DRIVER (Pilote Windows&#160;NT en mode noyau) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.driver"
-  - "/driver"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DRIVER (option de l'éditeur de liens)"
-  - "DRIVER (option de l'éditeur de liens)"
-  - "-DRIVER (option de l'éditeur de liens)"
-  - "pilote en mode noyau"
+title: -(Pilote Windows NT en Mode noyau) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.driver
+- /driver
+dev_langs: C++
+helpviewer_keywords:
+- kernel mode driver
+- -DRIVER linker option
+- DRIVER linker option
+- /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 819efe8de1e1cc4f5e12c3d20834556e15de1132
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/31/2017
 ---
-# /DRIVER (Pilote Windows&#160;NT en mode noyau)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (Pilote Windows NT en mode noyau)
 
-```  
-/DRIVER[:UPONLY | :WDM]  
-```  
-  
-## Notes  
- L'option \/DRIVER de l'Éditeur de liens vous permet de générer un pilote en mode noyau Windows NT.  
-  
- **\/DRIVER:UPONLY** force l'éditeur de liens à ajouter le bit **IMAGE\_FILE\_UP\_SYSTEM\_ONLY** aux caractéristiques figurant dans l'en\-tête de sortie pour spécifier qu'il s'agit d'un pilote uniprocesseur \(UP\).  Le système d'exploitation n'autorise pas le chargement d'un pilote monoprocesseur sur un système multiprocesseur.  
-  
- **\/DRIVER:WDM** force l'éditeur de liens à définir le bit **IMAGE\_DLLCHARACTERISTICS\_WDM\_DRIVER** dans le champ DllCharacteristics facultatif de l'en\-tête.  
-  
- Si **\/DRIVER** n'est pas spécifié, ces bits ne sont pas définis par l'éditeur de liens.  
-  
- Si **\/DRIVER** est spécifié :  
-  
--   \/FIXE:NO est appliqué \([\/FIXED \(Adresse de base fixe\)](../../build/reference/fixed-fixed-base-address.md)\).  
-  
--   L'extension du fichier de sortie est .sys.  Utilisez **\/OUT** pour modifier le nom de fichier et l'extension par défaut \([\/OUT \(Nom du fichier de sortie\)](../../build/reference/out-output-file-name.md)\).  
-  
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
-  
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Définition des propriétés de projets Visual C\+\+](../../ide/working-with-project-properties.md).  
-  
-2.  Cliquez sur le dossier **Éditeur de liens**.  
-  
-3.  Cliquez sur la page de propriétés **Système**.  
-  
-4.  Modifiez la propriété **Pilote**.  
-  
-### Pour définir cette option de l'éditeur de liens par programme  
-  
-1.  Consultez `P:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.driver`.  
-  
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+>/ PILOTE [ : UPONLY | : WDM]
+
+## <a name="remarks"></a>Remarques
+
+Utilisez le **c** option de l’éditeur de liens pour générer un pilote de mode noyau Windows NT.
+
+**/DRIVER:UPONLY** entraîne l’éditeur de liens ajouter la **IMAGE_FILE_UP_SYSTEM_ONLY figurant** les caractéristiques dans l’en-tête de sortie pour spécifier qu’il s’agit d’un monoprocesseur pilote au bit. Le système d’exploitation refuse de chargement d’un pilote sur un système multiprocesseur de (MP).
+
+**/ Driver : WDM** entraîne l’éditeur de liens définir le **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** bit dans le champ DllCharacteristics de l’en-tête facultatif.
+
+Si **c** n’est pas spécifié, ces bits ne sont pas définis par l’éditeur de liens.
+
+Si **c** est spécifié :
+
+- **/ Fixed : no** est en vigueur. Pour plus d’informations, consultez l’article [/BASE (Adresse de base fixe)](../../build/reference/fixed-fixed-base-address.md).
+
+- L’extension du fichier de sortie est définie sur .sys. Utilisez **/OUT** pour modifier le nom de fichier par défaut et l’extension. Pour plus d’informations, consultez l’article [/OUT (Nom du fichier de sortie)](../../build/reference/out-output-file-name.md).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
+
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+
+1. Cliquez sur le **l’éditeur de liens** dossier.
+
+1. Cliquez sur le **système** page de propriétés.
+
+1. Modifier la **pilote** propriété.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
+
+- Consultez [VCLinkerTool.driver propriété](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver).
+
+## <a name="see-also"></a>Voir aussi
+
+[Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+[Options de l’éditeur de liens](../../build/reference/linker-options.md)

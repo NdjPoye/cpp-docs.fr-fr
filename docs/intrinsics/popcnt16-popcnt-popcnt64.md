@@ -1,39 +1,39 @@
 ---
-title: "__popcnt16, __popcnt, __popcnt64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__popcnt64"
-  - "__popcnt"
-  - "__popcnt16"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "popcnt, instruction"
-  - "__popcnt16"
-  - "__popcnt64"
-  - "__popcnt"
+title: __popcnt16, __popcnt, __popcnt64 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __popcnt64
+- __popcnt
+- __popcnt16
+dev_langs: C++
+helpviewer_keywords:
+- popcnt instruction
+- __popcnt16
+- __popcnt64
+- __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2a73775316391fd90698f35a5d5f1fdd7e00ebe3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# __popcnt16, __popcnt, __popcnt64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
+**Section spécifique à Microsoft**  
   
- Compte le nombre de bits un \(dénombrement de la population\) dans un entier non signé 16 \- 32, \-, ou 64 octets.  
+ Compte le nombre de bits (peuplement) dans un 16, 32 ou entier non signé de 64 octets.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 unsigned short __popcnt16(  
@@ -47,29 +47,29 @@ unsigned __int64 __popcnt64(
 );  
 ```  
   
-#### Paramètres  
- \[in\] `value`  
- Le \(16, 32\), ou entier non signé 64 bits pour lequel vous souhaitez le dénombrement de la population.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `value`  
+ Les 16, 32 ou entier non signé de 64 bits pour lequel nous souhaitons le volume de peuplement.  
   
-## Valeur de retour  
- le nombre de bits un dans le paramètre d' `value` .  
+## <a name="return-value"></a>Valeur de retour  
+ Le nombre de bits un dans le `value` paramètre.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
-|`__popcnt16`|manipulation de bits avancée|  
-|`__popcnt`|manipulation de bits avancée|  
-|`__popcnt64`|Manipulation de bits avancée en mode 64 bits.|  
+|---------------|------------------|  
+|`__popcnt16`|Manipulation de bits avancées|  
+|`__popcnt`|Manipulation de bits avancées|  
+|`__popcnt64`|Manipulation de bits avancées en mode 64 bits.|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- Chacune de ces intrinsèques génère des instructions d'`popcnt` .  La taille de la valeur que l'instruction d'`popcnt` retourne est la même que la taille de son argument.  En mode 32 bits il n'y a des registres à caractère général pas 64 bits, donc pas `popcnt`64 bits.  
+## <a name="remarks"></a>Remarques  
+ Chacune de ces fonctions intrinsèques génère le `popcnt` instruction.  La taille de la valeur que la `popcnt` instruction retourne une valeur est identique à la taille de son argument.  En mode 32 bits ne des aucun 64 bits registres à caractère général, par conséquent, ne 64 bits `popcnt`.  
   
- Pour déterminer la prise en charge du matériel pour l'instruction d' `popcnt`, appelez l'intrinsèque de `__cpuid` avec `InfoType=0x00000001` et le bit de contrôle 23 d' `CPUInfo[2] (ECX)`.  Ce bit est 1 si l'instruction est prise en charge, et 0 sinon.  Si vous exécutez le code qui utilise cette intrinsèque sur le matériel qui ne prend pas en charge l'instruction d' `popcnt` , les résultats sont imprévisibles.  
+ Pour déterminer la prise en charge matérielle pour le `popcnt` instruction, appelez le `__cpuid` intrinsèque avec `InfoType=0x00000001` et vérifiez le bit 23 de `CPUInfo[2] (ECX)`. Ce bit est 1 si l’instruction est prise en charge et 0 dans le cas contraire. Si vous exécutez le code qui utilise cet intrinsèque sur du matériel qui ne prend pas en charge la `popcnt` instruction, les résultats sont imprévisibles.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 #include <iostream>   
@@ -96,15 +96,18 @@ int main()
   
 ```  
   
-  **\_\_popcnt16 \(0x0\) \= 0**  
- **\_\_popcnt16 \(0xff\) \= 8**  
- **\_\_popcnt16 \(0xffff\) \= 16**  
- **\_\_popcnt \(0x0\) \= 0**  
- **\_\_popcnt \(0xff\) \= 8**  
- **\_\_oopcnt \(0xffff\) \= 16**  
- **\_\_popcnt \(0xffffffff\) \= 32**   
-## détail de FIN Microsoft  
- copyright 2007 par Advanced Micro Devices, Inc.  Tous droits réservés.  reproduit avec l'autorisation d'Advanced Micro Devices, Inc.  
+```Output  
+__popcnt16(0x0) = 0  
+__popcnt16(0xff) = 8  
+__popcnt16(0xffff) = 16  
+__popcnt(0x0) = 0  
+__popcnt(0xff) = 8  
+__oopcnt(0xffff) = 16  
+__popcnt(0xffffffff) = 32  
+```  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+**FIN de la section spécifique à Microsoft**  
+ Copyright 2007 par Advanced Micro Devices, Inc. Tous droits réservés. Reproduit avec l’autorisation d’Advanced Micro Devices, Inc.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

@@ -1,30 +1,29 @@
 ---
-title: "RemoveIUnknown, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::RemoveIUnknown"
-dev_langs: 
-  - "C++"
+title: Removeiunknown, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::RemoveIUnknown
+dev_langs: C++
 ms.assetid: 998e711a-7d1a-44c6-a016-e6167aa40863
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4434064e973626fa1274bf620aa6c8cd34dc99d5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# RemoveIUnknown, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="removeiunknown-class"></a>RemoveIUnknown, classe
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template <  
@@ -38,32 +37,32 @@ template <
 class RemoveIUnknown : public T;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
  Une classe.  
   
-## Remarques  
- Crée un type équivalent à un type basé sur `IUnknown`, mais ayant des fonctions membres `QueryInterface`, `AddRef` et `Release` non virtuelles.  
+## <a name="remarks"></a>Notes  
+ Crée un type qui est équivalent à une `IUnknown`-type de base, mais avec non virtuelle `QueryInterface`, `AddRef`, et `Release` fonctions membres.  
   
- Par défaut, les méthodes COM fournissent des méthodes `QueryInterface`, `AddRef`, et Release virtuelles.  Toutefois, `ComPtr` ne requiert pas la surcharge des méthodes virtuelles.  `RemoveIUnknown` élimine cette surcharge en fournissant des méthodes `QueryInterface`, `AddRef`, et `Release` privées et non virtuelles.  
+ Par défaut, les méthodes COM fournissent virtuel `QueryInterface`, `AddRef`et libérer des méthodes. Toutefois, `ComPtr` ne nécessite pas la surcharge de méthodes virtuelles. `RemoveIUnknown`élimine cette surcharge en fournissant privé et non virtuelle `QueryInterface`, `AddRef`, et `Release` méthodes.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Typedefs publics  
+### <a name="public-typedefs"></a>Typedefs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|`ReturnType`|Un synonyme d'un type équivalent au paramètre de modèle `T` mais possédant des membres d'IUnknown non virtuels.|  
+|----------|-----------------|  
+|`ReturnType`|Un synonyme pour un type qui est équivalent au paramètre de modèle `T` mais comporte des membres de IUnknown non virtuelles.|  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `T`  
   
  `RemoveIUnknown`  
   
-## Configuration requise  
- **En\-tête :** client.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** client.h  
   
- **Espace de noms :** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

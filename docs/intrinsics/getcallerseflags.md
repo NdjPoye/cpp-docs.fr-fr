@@ -1,55 +1,54 @@
 ---
-title: "__getcallerseflags | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_getcallerseflags"
-  - "_getcallerseflags_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_getcallerseflags, intrinsèque"
+title: __getcallerseflags | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _getcallerseflags
+- _getcallerseflags_cpp
+dev_langs: C++
+helpviewer_keywords: _getcallerseflags intrinsic
 ms.assetid: 2386596f-33aa-4cc7-b026-5a834637270a
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 62ba5e7cc24f343565d27c72151cc81df0f82550
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# __getcallerseflags
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="getcallerseflags"></a>__getcallerseflags
+**Section spécifique à Microsoft**  
   
- Retourne la valeur d'EFLAGS du contexte de l'appelant.  
+ Retourne la valeur EFLAGS à partir du contexte de l’appelant.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 unsigned int __getcallerseflags(void);  
 ```  
   
-## Valeur de retour  
- valeur d'EFLAGS du contexte de l'appelant.  
+## <a name="return-value"></a>Valeur de retour  
+ Valeur EFLAGS à partir du contexte de l’appelant.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__getcallerseflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- Cette routine est uniquement disponible sous forme intrinsèque.  
+## <a name="remarks"></a>Remarques  
+ Cette routine est disponible uniquement en tant qu'intrinsèque.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // getcallerseflags.cpp  
@@ -80,9 +79,12 @@ int main()
 }  
 ```  
   
-  **EFLAGS 0x202**  
-**EFLAGS 0x206**   
-## détail de FIN Microsoft  
+```Output  
+EFLAGS 0x202  
+EFLAGS 0x206  
+```  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+**FIN de la section spécifique à Microsoft**  
+  
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

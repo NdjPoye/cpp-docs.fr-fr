@@ -11,8 +11,7 @@ apiname:
 - _invalid_parameter_noinfo
 - _invalid_parameter_noinfo_noreturn
 - _invoke_watson
-apilocation:
-- api-ms-win-crt-runtime-l1-1-0.dll
+apilocation: api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - CORECRT/_invalid_parameter
@@ -24,15 +23,15 @@ f1_keywords:
 - CORECRT/_invoke_watson
 - _invoke_watson
 ms.assetid: a4d6f1fd-ce56-4783-8719-927151a7a814
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: 49ae87567cd311e271a0ab50d7112a4a8f0c1b4a
-ms.lasthandoff: 02/24/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="invalidparameter-invalidparameternoinfo-invalidparameternoinfonoreturn-invokewatson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 Ces fonctions sont utilisées par la bibliothèque Runtime C pour gérer les paramètres non valides transmis aux fonctions de la bibliothèque CRT. Votre code peut également utiliser ces fonctions pour prendre en charge la gestion personnalisable ou par défaut des paramètres non valides.
@@ -102,4 +101,3 @@ Quand le gestionnaire par défaut `_invoke_watson` est appelé, si le processeur
  [_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)  
  [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)  
  [Validation de paramètre](../../c-runtime-library/parameter-validation.md)
-

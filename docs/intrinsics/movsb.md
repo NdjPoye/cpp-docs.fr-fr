@@ -1,69 +1,68 @@
 ---
-title: "__movsb | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__movsb"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "movsb, instruction"
-  - "rep movsb, instruction"
-  - "__movsb, intrinsèque"
+title: __movsb | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __movsb
+dev_langs: C++
+helpviewer_keywords:
+- movsb instruction
+- rep movsb instruction
+- __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d5ed046555b102c77b8213fc8755220d1f2d0777
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# __movsb
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="movsb"></a>__movsb
+**Section spécifique à Microsoft**  
   
- Génère une instruction de chaîne de déplacement \(`rep movsb`\).  
+ Génère une chaîne de déplacer (`rep movsb`) instruction.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-void __movsb(   
-   unsigned char* Destination,   
-   unsigned const char* Source,   
-   size_t Count   
+void __movsb(   
+   unsigned char* Destination,   
+   unsigned const char* Source,   
+   size_t Count   
 );  
 ```  
   
-#### Paramètres  
- \[out\] `Destination`  
- Un pointeur vers la destination de la copie.  
+#### <a name="parameters"></a>Paramètres  
+ [out] `Destination`  
+ Pointeur vers la destination de la copie.  
   
- \[in\] `Source`  
- Un pointeur vers la source de copie.  
+ [in] `Source`  
+ Pointeur vers la source de la copie.  
   
- \[in\] `Count`  
+ [in] `Count`  
  Nombre d'octets à copier.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__movsb`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- Le résultat est que les premiers octets d' `Count` entrées figurant dans `Source` sont copiés dans la chaîne d' `Destination` .  
+## <a name="remarks"></a>Remarques  
+ Le résultat est que la première `Count` octets vers lequel pointe `Source` sont copiés vers le `Destination` chaîne.  
   
- Cette routine est uniquement disponible sous forme intrinsèque.  
+ Cette routine est disponible uniquement en tant qu'intrinsèque.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // movsb.cpp  
@@ -83,8 +82,11 @@ int main()
 }  
 ```  
   
-  **un grand chien noir.  un grand chien noir.**    
-## détail de FIN Microsoft  
+```Output  
+A big black dog. A big black dog.  
+```  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+**FIN de la section spécifique à Microsoft**  
+  
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

@@ -1,39 +1,36 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4743 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4743"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4743"
+title: Compilateur avertissement (niveau 1) C4743 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4743
+dev_langs: C++
+helpviewer_keywords: C4743
 ms.assetid: 2ee76ea3-77f3-4c2f-9a57-0751823c89fd
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 28ab5a9535184ea06ab9dd8f6e6203b98992e975
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement du compilateur (niveau 1) C4743
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'*type*' a une taille différente dans '*file1*' et '*file2*' : *number* et *number* octets  
+# <a name="compiler-warning-level-1-c4743"></a>Avertissement du compilateur (niveau 1) C4743
+'*type*'a une taille différente '*file1*'et'*fichier2*' : *nombre* et *nombre* octets  
   
- Une variable externe référencée ou définie par l'utilisateur dans deux fichiers possède des types différents dans ces fichiers, et le compilateur a déterminé que la taille de la variable contenue dans *file1* diffère de la taille de la variable contenue dans *file2*.  
+ Une variable externe référencée ou définie dans deux fichiers possède des types différents dans ces fichiers, et le compilateur a déterminé que la taille de la variable dans *file1* diffère de la taille de la variable dans *fichier2*.  
   
- Cet avertissement peut être émis pour C\+\+ dans des cas graves.  Si vous déclarez les mêmes types avec le même nom dans deux fichiers différents, si ces déclarations contiennent des fonctions virtuelles, et si les déclarations ne sont pas identiques, le compilateur peut émettre l'avertissement C4744 pour les tables de fonctions virtuelles.  L'avertissement se produit parce qu'il existe deux tables de fonctions virtuelles de taille différente pour le même type, et que l'éditeur de liens doit en choisir une afin de l'incorporer dans le fichier exécutable.  Il est possible que votre programme appelle ensuite une fonction virtuelle incorrecte.  
+ Il est important cas lorsque cet avertissement peut être émis pour C++. Si vous déclarez les mêmes types portant le même nom dans deux fichiers différents, si ces déclarations contiennent des fonctions virtuelles, et si les déclarations ne sont pas identiques, le compilateur peut émettre l’avertissement C4744 pour les tables de la fonction virtuelle. L’avertissement se produit, car il existe deux tables de fonctions virtuelles de taille différente pour le même type, et l’éditeur de liens doit choisir un d’eux à incorporer dans le fichier exécutable.  Il est possible que cela peut entraîner votre programme appelle la fonction virtuelle incorrecte.  
   
- Pour résoudre cet avertissement, utilisez la même définition de type ou des noms différents pour les types ou les variables.  
+ Pour résoudre cet avertissement, utilisez la même définition de type ou utiliser des noms différents pour les types ou les variables.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  Cet exemple contient une définition du type.  
   
 ```  
@@ -52,8 +49,8 @@ void C::f3(void) {}
 C q;  
 ```  
   
-## Exemple  
- L'exemple suivant génère l'erreur C4743.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C4743.  
   
 ```  
 // C4743b.cpp  

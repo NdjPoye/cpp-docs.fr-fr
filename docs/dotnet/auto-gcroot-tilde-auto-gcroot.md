@@ -1,46 +1,44 @@
 ---
-title: "auto_gcroot::~auto_gcroot | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_gcroot::~auto_gcroot"
-  - "~auto_gcroot"
-  - "auto_gcroot.~auto_gcroot"
-  - "msclr::auto_gcroot::~auto_gcroot"
-  - "msclr.auto_gcroot.~auto_gcroot"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_gcroot::~auto_gcroot"
+title: "auto_gcroot :: ~ auto_gcroot | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_gcroot::~auto_gcroot
+- ~auto_gcroot
+- auto_gcroot.~auto_gcroot
+- msclr::auto_gcroot::~auto_gcroot
+- msclr.auto_gcroot.~auto_gcroot
+dev_langs: C++
+helpviewer_keywords: auto_gcroot::~auto_gcroot
 ms.assetid: 3c970d43-0cb1-4b27-8bee-0394d91b4739
-caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 46326050e25e62ab05eae44a3c96dbd82fa75e35
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::~auto_gcroot
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le destructeur de `auto_gcroot` .  
+# <a name="autogcrootautogcroot"></a>auto_gcroot::~auto_gcroot
+Le `auto_gcroot` destructeur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 ~auto_gcroot();  
 ```  
   
-## Notes  
- Le destructeur détruit également l'objet propriétaire.  
+## <a name="remarks"></a>Remarques  
+ Le destructeur également destruction de l’objet détenu.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // msl_auto_gcroot_dtor.cpp  
@@ -69,15 +67,18 @@ int main()
 }  
 ```  
   
-  **Constructeurs de ClassA**  
-**Destructeur de ClassA**  
-**done**   
-## Configuration requise  
- **Fichier d'en\-tête** \<msclr\\auto\_gcroot.h\>  
+```Output  
+ClassA constructor  
+ClassA destructor  
+done  
+```  
   
- **Espace de noms** msclr  
+## <a name="requirements"></a>Spécifications  
+ **Fichier d’en-tête** \<msclr\auto_gcroot.h >  
   
-## Voir aussi  
- [auto\_gcroot, membres](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::release](../dotnet/auto-gcroot-release.md)   
- [auto\_gcroot::auto\_gcroot](../dotnet/auto-gcroot-auto-gcroot.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Voir aussi  
+ [auto_gcroot, membres](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::Release](../dotnet/auto-gcroot-release.md)   
+ [auto_gcroot::auto_gcroot](../dotnet/auto-gcroot-auto-gcroot.md)

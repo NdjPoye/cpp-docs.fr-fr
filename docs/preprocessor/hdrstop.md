@@ -1,62 +1,60 @@
 ---
-title: "hdrstop | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "hdrstop_CPP"
-  - "vc-pragma.hdrstop"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "hdrstop (pragma)"
-  - "pragmas, hdrstop"
+title: hdrstop | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- hdrstop_CPP
+- vc-pragma.hdrstop
+dev_langs: C++
+helpviewer_keywords:
+- hdrstop pragma
+- pragmas, hdrstop
 ms.assetid: 5ea8370a-10d1-4538-ade6-4c841185da0e
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: be26e2139ab0cf0e31e63331a8e87df8769fe715
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# hdrstop
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hdrstop"></a>hdrstop
 Vous permet de mieux contrôler les noms des fichiers de précompilation et l'emplacement auquel l'état de compilation est enregistré.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 #pragma hdrstop [( "filename" )]    
 ```  
   
-## Notes  
- *filename* correspond au nom du fichier d'en\-tête précompilé à utiliser ou créer \(selon que [\/Yu](../build/reference/yu-use-precompiled-header-file.md) ou [\/Yc](../build/reference/yc-create-precompiled-header-file.md) est spécifié\).  Si *filename* ne contient pas de spécification de chemin d'accès, il est supposé que le fichier d'en\-tête précompilé est dans le même répertoire que le fichier source.  
+## <a name="remarks"></a>Remarques  
+ Le *nom de fichier* est le nom du fichier d’en-tête précompilé à utiliser ou créer (selon que [/Yu](../build/reference/yu-use-precompiled-header-file.md) ou [/Yc](../build/reference/yc-create-precompiled-header-file.md) est spécifié). Si *nom de fichier* ne contient pas une spécification de chemin d’accès, le fichier d’en-tête précompilé est censé pour se trouver dans le même répertoire que le fichier source.  
   
- Si un fichier C ou C\+\+ contient un pragma **hdrstop** lorsqu'il est compilé avec \/Yc, le compilateur enregistre l'état de la compilation jusqu'à l'emplacement du pragma.  L'état compilé de tout code qui suit le pragma n'est pas enregistré.  
+ Si un fichier C ou C++ contient une **hdrstop** pragma lors de la compilation avec/Yc, le compilateur enregistre l’état de la compilation jusqu'à l’emplacement du pragma. L'état compilé de tout code qui suit le pragma n'est pas enregistré.  
   
- Utilisez *filename* pour nommer le fichier d'en\-tête précompilé dans lequel l'état compilé est enregistré.  Il est facultatif d'insérer un espace entre **hdrstop** et *filename*.  Le nom de fichier spécifié dans le pragma **hdrstop** est une chaîne et est soumis par conséquent aux contraintes de toute chaîne C ou C\+\+.  En particulier, vous devez le placer entre guillemets et utiliser le caractère d'échappement \(barre oblique inverse\) pour spécifier des noms de répertoires.  Par exemple :  
+ Utilisez *nom de fichier* pour nommer le fichier d’en-tête précompilé dans lequel l’état compilé est enregistré. Un espace entre **hdrstop** et *nom de fichier* est facultatif. Le nom de fichier spécifié dans le **hdrstop** pragma est une chaîne et est donc soumis aux contraintes de n’importe quelle chaîne C ou C++. En particulier, vous devez le placer entre guillemets et utiliser le caractère d'échappement (barre oblique inverse) pour spécifier des noms de répertoires. Exemple :  
   
 ```  
 #pragma hdrstop( "c:\\projects\\include\\myinc.pch" )  
 ```  
   
- Le nom du fichier d'en\-tête précompilé est déterminé selon les règles suivantes par ordre de priorité :  
+ Le nom du fichier d'en-tête précompilé est déterminé selon les règles suivantes par ordre de priorité :  
   
-1.  L'argument de l'option du compilateur \/Fp  
+1.  L’argument de l’option du compilateur /Fp  
   
-2.  L'argument *filename* de \#**pragma hdrstop**  
+2.  Le *nom de fichier* argument #**pragma hdrstop**  
   
 3.  Le nom de base du fichier source avec une extension .PCH  
   
- Pour les options \/Yc et \/Yu, si ni les options de compilation, ni le pragma **hdrstop** indique un nom de fichier, le nom de base du fichier source est utilisé comme nom de base du fichier d'en\-tête précompilé.  
+ Pour les options /Yc et /Yu, si aucune des options de deux compilation ni le **hdrstop** pragma spécifie un nom de fichier, le nom de base du fichier source est utilisé comme nom de base du fichier d’en-tête précompilé.  
   
  Vous pouvez également utiliser les commandes de prétraitement pour remplacer une macro comme suit :  
   
@@ -69,13 +67,13 @@ Vous permet de mieux contrôler les noms des fichiers de précompilation et l'em
 #pragma hdrstop( INCLUDE_PATH PCH_FNAME )  
 ```  
   
- Les règles suivantes régissent l'emplacement où le pragma **hdrstop** peut être placé :  
+ Les règles suivantes régissent où le **hdrstop** pragma peut être placé :  
   
 -   Il doit apparaître hors de toute déclaration ou définition de données ou de fonction.  
   
--   Il doit être spécifié dans le fichier source, pas dans un fichier d'en\-tête.  
+-   Il doit être spécifié dans le fichier source, pas dans un fichier d'en-tête.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 #include <windows.h>                 // Include several files  
@@ -88,7 +86,7 @@ __inline Disp( char *szToDisplay )   // Define an inline function
 #pragma hdrstop  
 ```  
   
- Dans cet exemple, le pragma **hdrstop** apparaît après l'inclusion de deux fichiers et la définition d'une fonction inline.  Au départ, cela peut sembler être un positionnement étrange pour le pragma.  Toutefois, pensez que l'utilisation des options de précompilation manuelles, \/Yc et \/Yu, avec le pragma **hdrstop** vous permet de précompiler des fichiers source entiers, même du code incorporé.  Le compilateur Microsoft ne se limite pas à précompiler uniquement les déclarations de données.  
+ Dans cet exemple, le **hdrstop** pragma apparaît une fois que les deux fichiers ont été ajoutés et une fonction inline a été définie. Au départ, cela peut sembler être un positionnement étrange pour le pragma. Utilisez, toutefois, que les options de précompilation manuelles, /Yc et/Yu, avec la **hdrstop** pragma permet à vous permet de précompiler des fichiers source entiers, même du code incorporé. Le compilateur Microsoft ne se limite pas à précompiler uniquement les déclarations de données.  
   
-## Voir aussi  
- [Directives pragma et mot clé \_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Voir aussi  
+ [Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

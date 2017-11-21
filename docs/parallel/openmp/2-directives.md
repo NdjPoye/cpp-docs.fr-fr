@@ -1,24 +1,23 @@
 ---
-title: "2. Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2. Directives | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 768dd8d50f777cbd7b3c3131d61ab17ec50e5645
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# 2. Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les directives sont basés sur des directives de **\#pragma** définies dans les normes C et C\+\+.  Les compilateurs qui prennent en charge l'API d'OpenMP C et C\+\+ incluront une option de ligne de commande qui active et permet l'interprétation de les directives de compilateur d'OpenMP.
+# <a name="2-directives"></a>2. Directives
+Directives sont basées sur **#pragma** directives définies dans les normes C et C++.  Les compilateurs qui prennent en charge les API C++ OpenMP C inclut une option de ligne de commande qui active et autorise l’interprétation de toutes les directives de compilateur OpenMP.

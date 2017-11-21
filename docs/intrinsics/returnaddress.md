@@ -1,43 +1,42 @@
 ---
-title: "_ReturnAddress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_ReturnAddress"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ReturnAddress, intrinsèque"
-  - "ReturnAddress, intrinsèque"
+title: _ReturnAddress | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _ReturnAddress
+dev_langs: C++
+helpviewer_keywords:
+- _ReturnAddress intrinsic
+- ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7cc2682aa4c6d4662e188911dab0d0a61baf49ba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# _ReturnAddress
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-## Spécifique à Microsoft  
- L'intrinsèque de `_ReturnAddress` fournit l'adresse de l'instruction dans l'appel de la fonction qui sera exécuté après le contrôle retourne à l'appelant.  
+# <a name="returnaddress"></a>_ReturnAddress
+## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
+ Le `_ReturnAddress` intrinsèque fournit l’adresse de l’instruction dans la fonction appelante qui sera exécutée une fois que le contrôle retourne à l’appelant.  
   
- Générez le programme et l'étape suivants parcourir dans le débogueur.  Comme vous parcourez le programme, notez l'adresse retournée à partir de `_ReturnAddress`.  Ensuite, immédiatement après le retour de la fonction où `_ReturnAddress` a été utilisé, ouvrez [Comment : utiliser la fenêtre Code Machine](../Topic/How%20to:%20Use%20the%20Disassembly%20Window.md) et notez que l'adresse de l'instruction suivante d'être les correspondances exécutées que l'adresse que a été retourné d' `_ReturnAddress`.  
+ Générez le programme suivant et les exécuter pas à pas dans le débogueur. À mesure que vous parcourez le programme, notez l’adresse qui est retourné à partir de `_ReturnAddress`. Puis, immédiatement après le retour de la fonction où `_ReturnAddress` a été utilisé, ouvrez le [Comment : utiliser la fenêtre code machine](/visualstudio/debugger/how-to-use-the-disassembly-window) et notez que l’adresse de l’instruction suivante à exécuter correspond à l’adresse retournée par `_ReturnAddress`.  
   
- Les optimisations telles que la fonctionnalité inline peuvent affecter l'adresse de retour.  par exemple, si l'exemple de programme ci\-dessous est compilé avec [\/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` sera inline dans l'appel de la fonction, `main`.  Par conséquent, les appels à `_ReturnAddress` d' `inline_func` et à `main` remontera chaque produit la même valeur.  
+ Optimisations comme l’incorporation (inlining) peut affecter l’adresse de retour. Par exemple, si le programme d’exemple suivant est compilé avec [/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` seront incorporées dans la fonction appelante, `main`. Par conséquent, les appels à `_ReturnAddress` de `inline_func` et `main` chaque produit la même valeur.  
   
- Lorsque `_ReturnAddress` est utilisé dans un programme compilé avec [\/clr](../build/reference/clr-common-language-runtime-compilation.md), la fonction contenant l'appel d' `_ReturnAddress` sera compilée comme fonction native.  Lorsque appelle aussi managés compilés par fonction dans la fonction contenant `_ReturnAddress`, `_ReturnAddress` peuvent ne pas se comporter que prévu.  
+ Lorsque `_ReturnAddress` est utilisée dans un programme compilé avec [/CLR](../build/reference/clr-common-language-runtime-compilation.md), la fonction contenant le `_ReturnAddress` appel sera compilé dans une fonction native. Lorsqu’une fonction compilée comme géré appelle la fonction contenant `_ReturnAddress`, `_ReturnAddress` peut ne pas fonctionner comme prévu.  
   
-## Configuration requise  
- **Fichier d'en\-tête** \<intrin.h\>  
+## <a name="requirements"></a>Spécifications  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // compiler_intrinsics__ReturnAddress.cpp  
@@ -68,9 +67,9 @@ int main(void)
 }  
 ```  
   
-## détail de FIN Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [\_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)   
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)   
+ [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)   
+ [Mots clés](../cpp/keywords-cpp.md)

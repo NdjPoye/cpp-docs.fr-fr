@@ -1,36 +1,35 @@
 ---
-title: "IRowsetUpdateImpl::SetData | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SetData"
-  - "IRowsetUpdateImpl::SetData"
-  - "IRowsetUpdateImpl.SetData"
-  - "ATL::IRowsetUpdateImpl::SetData"
-  - "ATL.IRowsetUpdateImpl.SetData"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetData (méthode)"
+title: IRowsetUpdateImpl::SetData | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SetData
+- IRowsetUpdateImpl::SetData
+- IRowsetUpdateImpl.SetData
+- ATL::IRowsetUpdateImpl::SetData
+- ATL.IRowsetUpdateImpl.SetData
+dev_langs: C++
+helpviewer_keywords: SetData method
 ms.assetid: 7288a8d1-a7cf-4957-b832-0f3b18fd0da4
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e098db995bad0d99e47d6108436a5324d2920e9d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetUpdateImpl::SetData
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Définit les valeurs de données dans une ou plusieurs colonnes d'une ligne.  
+# <a name="irowsetupdateimplsetdata"></a>IRowsetUpdateImpl::SetData
+Définit les valeurs de données dans une ou plusieurs colonnes.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -41,14 +40,14 @@ Définit les valeurs de données dans une ou plusieurs colonnes d'une ligne.
 );  
 ```  
   
-#### Paramètres  
- Pour plus d'informations sur les curseurs, consultez [IRowsetChange::SetData](https://msdn.microsoft.com/en-us/library/ms721232.aspx) dans le *Guide de référence du programmeur OLE DB*.  
+#### <a name="parameters"></a>Paramètres  
+ Consultez [IRowsetChange::SetData](https://msdn.microsoft.com/en-us/library/ms721232.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## Notes  
- Cette méthode substitue la méthode de [IRowsetChangeImpl::SetData](../../data/oledb/irowsetchangeimpl-setdata.md) mais inclut la mise en cache des données d'origine pour autoriser le traitement immédiat ou différée de l'opération.  
+## <a name="remarks"></a>Remarques  
+ Cette méthode remplace la [IRowsetChangeImpl::SetData](../../data/oledb/irowsetchangeimpl-setdata.md) méthode inclut, mais la mise en cache des données d’origine pour permettre le traitement immédiat ou différé de l’opération.  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [IRowsetUpdateImpl, classe](../../data/oledb/irowsetupdateimpl-class.md)

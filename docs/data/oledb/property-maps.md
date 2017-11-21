@@ -1,30 +1,30 @@
 ---
-title: "Mappages des propri&#233;t&#233;s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mappages, propriété"
-  - "fournisseurs OLE DB, propriétés"
-  - "mappage de propriétés"
+title: "Mappages de propriété | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, properties
+- maps, property
+- property maps
 ms.assetid: 44abde56-90ad-4612-854e-d2fa5426fa80
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c51d50cb52562b60c1d9615e0617a02bef0cbcf3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Mappages des propri&#233;t&#233;s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Outre les objets session, rowset et l'objet facultatif command, chaque fournisseur prend en charge une ou plusieurs propriétés.  Ces propriétés sont définies dans les mappages des propriétés contenus dans les fichiers d'en\-tête créés par l'Assistant Fournisseur OLE DB.  Chaque fichier d'en\-tête contient un mappage pour les propriétés du groupe de propriétés OLE DB spécifié pour les objets définis dans ce fichier.  Le fichier d'en\-tête contenant l'objet data source contient également le mappage des propriétés pour les [propriétés DataSource](https://msdn.microsoft.com/en-us/library/ms724188\(v=vs.140\).aspx).  Session.h contient le mappage des propriétés pour les [propriétés Session](https://msdn.microsoft.com/en-us/library/ms714221.aspx).  Les objets de commande et ensemble de lignes résident dans un fichier d'en\-tête unique appelé *nomprojet*RS.h.  Ces propriétés sont membres du groupe [propriétés Ensemble de lignes](https://msdn.microsoft.com/en-us/library/ms711252.aspx).  
+# <a name="property-maps"></a>Mappages des propriétés
+En plus de la session, un ensemble de lignes et un objet de commande facultatifs, chaque fournisseur prend en charge une ou plusieurs propriétés. Ces propriétés sont définies dans les mappages de propriété contenus dans les fichiers d’en-tête créés par l’Assistant fournisseur OLE DB. Chaque fichier d’en-tête contient un mappage pour les propriétés dans le groupe de propriétés OLE DB définis pour l’ou les objets définis dans ce fichier. Le fichier d’en-tête qui contient l’objet de source de données contient également le mappage de propriété pour le [propriétés DataSource](https://msdn.microsoft.com/en-us/library/ms724188\(v=vs.140\).aspx). Session.h contient le mappage de propriété pour le [propriétés de la Session](https://msdn.microsoft.com/en-us/library/ms714221.aspx). Les objets rowset et command résident dans un fichier d’en-tête unique, appelé *nom_projet*RS.h. Ces propriétés sont membres de la [propriétés de l’ensemble de lignes](https://msdn.microsoft.com/en-us/library/ms711252.aspx) groupe.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

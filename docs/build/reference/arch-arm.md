@@ -1,60 +1,60 @@
 ---
-title: "/arch (ARM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: -arch (ARM) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4f1406ff-f174-487c-a126-8ab06cf447c1
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b17e230fcc530398e0e51ef8cdb72198a12d97a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# /arch (ARM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Spécifie l'architecture pour la génération de code sur ARM.  Consultez également [\/arch \(x86\)](../../build/reference/arch-x86.md) et [\/arch \(x64\)](../../build/reference/arch-x64.md).  
+# <a name="arch-arm"></a>/arch (ARM)
+Spécifie l'architecture pour la génération de code sur ARM. Voir aussi [/arch (x86)](../../build/reference/arch-x86.md) et [/arch (x64)](../../build/reference/arch-x64.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 /arch:[ARMv7VE|VFPv4]  
 ```  
   
-## Arguments  
- **\/arch:ARMv7VE**  
- Permet l'utilisation des instructions des extensions de virtualisation ARMv7VE.  
+## <a name="arguments"></a>Arguments  
+ **armv7ve**  
+ Permet l’utilisation des instructions des extensions de virtualisation ARMv7VE.  
   
- **\/arch:VFPv4**  
- Permet l'utilisation des instructions ARM VFPv4.  Si cette option n'est pas spécifiée, VFPv3 est utilisé par défaut.  
+ **vfpv4**  
+ Permet l'utilisation des instructions ARM VFPv4. Si cette option n'est pas spécifiée, VFPv3 est utilisé par défaut.  
   
-## Notes  
- La macro `_M_ARM_FP` \(pour ARM uniquement\) indique quelle option de compilateur **\/arch** a été utilisée, le cas échéant.  Pour plus d'informations, consultez [Macros prédéfinies](../../preprocessor/predefined-macros.md).  
+## <a name="remarks"></a>Remarques  
+ Le `_M_ARM_FP` macro (pour ARM uniquement) qui indique, le cas échéant, **/arch** option du compilateur a été utilisée. Pour plus d'informations, consultez [Predefined Macros](../../preprocessor/predefined-macros.md).  
   
- Lorsque vous utilisez [\/clr](../../build/reference/clr-common-language-runtime-compilation.md) pour compiler, **\/arch** n'a aucun effet sur la génération de code pour les fonctions managées.  **\/arch** affecte uniquement la génération de code pour les fonctions natives.  
+ Lorsque vous utilisez [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) à compiler, **/arch** n’a aucun effet sur la génération du code pour les fonctions managées. **/ arch** uniquement affecte génération de code pour les fonctions natives.  
   
-### Pour définir l'option de compilateur \/arch:ARMv7VE ou \/arch:VFPv4 dans Visual Studio  
+### <a name="to-set-the-archarmv7ve-or-archvfpv4-compiler-option-in-visual-studio"></a>Pour définir l'option de compilateur /arch:ARMv7VE ou /arch:VFPv4 dans Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriétés** du projet.  Pour plus d'informations, consultez [Comment : ouvrir les pages de propriétés d'un projet](../../misc/how-to-open-project-property-pages.md).  
+1.  Ouvrez le **Pages de propriétés** boîte de dialogue pour le projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
-2.  Sélectionnez le dossier **C\/C\+\+**.  
+2.  Sélectionnez le **C/C++** dossier.  
   
-3.  Sélectionnez la page de propriétés **Ligne de commande**.  
+3.  Sélectionnez le **ligne de commande** page de propriétés.  
   
-4.  Dans la zone **Options supplémentaires**, ajoutez `/arch:ARMv7VE` ou `/arch:VFPv4`.  
+4.  Dans le **des options supplémentaires** zone, ajoutez `/arch:ARMv7VE` ou `/arch:VFPv4`.  
   
-### Pour définir cette option du compilateur par programmation  
+### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation  
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>.  
   
-## Voir aussi  
- [\/arch \(Architecture d'UC minimale\)](../../build/reference/arch-minimum-cpu-architecture.md)   
+## <a name="see-also"></a>Voir aussi  
+ [/arch (Architecture d’UC minimale)](../../build/reference/arch-minimum-cpu-architecture.md)   
  [Options du compilateur](../../build/reference/compiler-options.md)   
  [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

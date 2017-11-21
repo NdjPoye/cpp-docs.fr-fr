@@ -1,29 +1,27 @@
 ---
-title: "Avertissement des outils &#201;diteur de liens LNK4205 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4205"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4205"
+title: "LNK4205 d’avertissement des outils Éditeur de liens | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4205
+dev_langs: C++
+helpviewer_keywords: LNK4205
 ms.assetid: d63b9d18-ef3c-4081-9d8d-93077dad13c2
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9ebec9dd1f56c780612c93b4ba5154af3ab0eb38
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Avertissement des outils &#201;diteur de liens LNK4205
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'NomFichier' n'a pas d'informations de débogage en cours pour référencer le module ; édition de liens des objets comme s'il n'y avait aucune information de débogage  
+# <a name="linker-tools-warning-lnk4205"></a>Avertissement des outils Éditeur de liens LNK4205
+Il manque des informations de débogage en cours pour référencer le module ; 'nom_fichier' objet sera lié sans informations de débogage  
   
- Le fichier .pdb a des informations obsolètes.  L'éditeur de liens poursuit la liaison de l'objet sans les informations de débogage.  Vous pouvez essayer de recompiler le fichier objet avec l'option [\/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).
+ Le fichier .pdb a des informations obsolètes. L’éditeur de liens poursuit la liaison d’objet sans informations de débogage. Vous souhaiterez peut-être recompiler le fichier d’objet à l’aide du [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) option.

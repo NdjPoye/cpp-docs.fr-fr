@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::binary_negate
-- binary_negate
-dev_langs:
-- C++
-helpviewer_keywords:
-- binary_negate class
+f1_keywords: xfunctional/std::binary_negate
+dev_langs: C++
+helpviewer_keywords: binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: ae604ad5fcac5bfe827e335330097a902457723d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/19/2017
-
+ms.openlocfilehash: 5350576ec1b42620aa89f7fa48980e8227e13a80
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="binarynegate-class"></a>binary_negate, classe
 Classe de modèle fournissant une fonction membre qui inverse la valeur de retour d'une fonction binaire spécifiée.  
@@ -148,7 +128,6 @@ Resorted vector v1 = ( 3739828298 3715465425 2621500314 2233879413 580942933 626
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

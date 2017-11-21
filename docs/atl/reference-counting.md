@@ -1,46 +1,47 @@
 ---
-title: "Reference Counting | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddRef method [C++]"
-  - "AddRef method [C++], reference counting"
-  - "reference counting"
-  - "reference counts"
-  - "références, compter"
+title: "Décompte de références (ATL) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- AddRef method [C++], reference counting
+- reference counting
+- AddRef method [C++]
+- reference counts
+- references, counting
 ms.assetid: b1fd4514-6de6-429f-9e60-2777c0d07a3d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9bef78ba6047305ccb20e5740ae03535ca2c366b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Reference Counting
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-COM n'essaie pas automatiquement de supprimer un objet de la mémoire lorsqu'il pense que l'objet n'est plus utilisé.  À la place, le programmeur d'objet doit supprimer l'objet non utilisé.  Le programmeur détermine si un objet peut être supprimé en fonction d'un nombre de références.  
+# <a name="reference-counting"></a>Comptage des références
+COM n’essaie pas automatiquement de supprimer un objet de la mémoire lorsqu’il détermine que l’objet n’est plus utilisé. Au lieu de cela, le programmeur de l’objet doit supprimer l’objet d’inutilisé. Le programmeur détermine si un objet peut être supprimé en fonction du décompte de références.  
   
- COM utilise les méthodes d' **IUnknown** , [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) et [Version](http://msdn.microsoft.com/library/windows/desktop/ms682317), pour gérer le décompte de références d'interfaces sur un objet.  Les règles générales pour appeler ces méthodes sont :  
+ COM utilise le **IUnknown** méthodes, [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) et [version](http://msdn.microsoft.com/library/windows/desktop/ms682317), pour gérer le décompte de références des interfaces sur un objet. Les règles générales pour l’appel de ces méthodes sont :  
   
--   Chaque fois qu'un client reçoit un pointeur d'interface, `AddRef` doit être invité l'interface.  
+-   Chaque fois qu’un client reçoit un pointeur d’interface, `AddRef` doit être appelée sur l’interface.  
   
--   Chaque fois que le client a terminé d'utiliser le pointeur d'interface, il doit appeler **Release**.  
+-   Chaque fois que le client a terminé d’utiliser le pointeur d’interface, il doit appeler **version**.  
   
- Dans une implémentation simple, les index de chaque appel d' `AddRef` et chaque appel de **Release** décrémente une variable compteur à l'intérieur de l'objet.  Lorsque retourne à zéro de nombre, l'interface n'a plus aucun utilisateur et est libre pour le supprimer de la mémoire.  
+ Dans une implémentation simple, chaque `AddRef` appeler incréments et chaque **version** appeler décrémente une variable de compteur à l’intérieur de l’objet. Lorsque le compteur revient à zéro, l’interface n’est plus a tous les utilisateurs et peut se supprimer de la mémoire.  
   
- Le décompte de références peut également être implémenté afin que chaque référence à l'objet \(pas à une interface individuelle\) soit numérotée.  Dans ce cas, les délégués chaque `AddRef` et appel de **Release** à une implémentation centrale sur l'objet, et **Release** libère l'objet entier lorsque ses atteint zéro de décompte de références.  
+ Comptage des références peut également être implémenté afin que chaque référence à l’objet (pas une interface individuelle) est comptabilisé. Dans ce cas, chaque `AddRef` et **version** appeler des délégués à une implémentation centrale sur l’objet, et **version** libère l’objet complet lorsque son décompte de références atteint zéro.  
   
 > [!NOTE]
->  Lorsque `CComObject`\- l'objet dérivé est construit à l'aide de l'opérateur **nouveau** , le décompte de références est 0.  Par conséquent, un appel à `AddRef` doit être effectuée après avoir créé avec succès `CComObject`objet dérivé.  
+>  Lorsqu’un `CComObject`-objet dérivé est construit à l’aide de la **nouvelle** (opérateur), le nombre de références est 0. Par conséquent, un appel à `AddRef` doit être effectué après la création du `CComObject`-objet dérivé.  
   
-## Voir aussi  
- [Introduction to COM](../atl/introduction-to-com.md)   
- [Managing Object Lifetimes through Reference Counting](http://msdn.microsoft.com/library/windows/desktop/ms687260)
+## <a name="see-also"></a>Voir aussi  
+ [Introduction à COM](../atl/introduction-to-com.md)   
+ [Gérer la durée de vie des objets via le décompte](http://msdn.microsoft.com/library/windows/desktop/ms687260)
+
