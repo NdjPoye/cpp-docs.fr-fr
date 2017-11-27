@@ -2,7 +2,7 @@
 # [CTimeSpan, classe](ctimespan-class.md)
 # [COleDateTime, classe](coledatetime-class.md)
 # [CRect, classe](crect-class.md)
-# [Classes Shared by MFC and ATL](classes-shared-by-mfc-and-atl.md)
+# [Classes partagées par MFC et ATL](classes-shared-by-mfc-and-atl.md)
 # [CPoint, classe](cpoint-class.md)
 # [CStringT, classe](cstringt-class.md)
 # [COleDateTimeSpan, classe](coledatetimespan-class.md)

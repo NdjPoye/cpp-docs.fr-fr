@@ -4,41 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.character.multibyte
-dev_langs:
-- C++
-helpviewer_keywords:
-- MBCS [C++], locale code page
+f1_keywords: c.character.multibyte
+dev_langs: C++
+helpviewer_keywords: MBCS [C++], locale code page
 ms.assetid: da9150de-70ea-4d2f-90e6-ddb9202dd80b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 8b8cd1cc92d422f876b67a66bb5d28dd8ba1843b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: ca454b0087bd9cc1b8ded6f7b2d4ccb201373dc4
+ms.sourcegitcommit: 2a5d0e9e6829150cbc22c6de3395ec13008e3266
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="interpretation-of-multibyte-character-sequences"></a>Interprétation des séquences de caractères multioctets
 La plupart des routines de caractères multioctets dans la bibliothèque Runtime Microsoft reconnaissent les séquences de caractères multioctets relatives à une page de codes multioctets. La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe `_l` utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent à la place les paramètres régionaux transmis.  
@@ -53,6 +34,8 @@ La plupart des routines de caractères multioctets dans la bibliothèque Runtime
 |[mbtowc, _mbtowc_l](../c-runtime-library/reference/mbtowc-mbtowc-l.md)|Convertir un caractère multioctet en un caractère large correspondant|  
 |[wcstombs, _wcstombs_l](../c-runtime-library/reference/wcstombs-wcstombs-l.md), [wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)|Convertir une séquence de caractères larges en une séquence correspondante de caractères multioctets|  
 |[wctomb, _wctomb_l](../c-runtime-library/reference/wctomb-wctomb-l.md), [wctomb_s, _wctomb_s_l](../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)|Convertir un caractère large en un caractère multioctet correspondant|  
+|[mbrtoc16, mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)|Convertir un caractère multioctet en caractère UTF-16 ou UTF-32 équivalent|  
+|[c16rtomb, c32rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md)|Convertir un caractère UTF-16 ou UTF-32 en caractère multioctet équivalent|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Internationalisation](../c-runtime-library/internationalization.md)   

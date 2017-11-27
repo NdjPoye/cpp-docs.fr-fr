@@ -500,7 +500,7 @@
 ### [ISessionPropertiesImpl, classe](isessionpropertiesimpl-class.md)
 #### [ISessionPropertiesImpl::GetProperties](isessionpropertiesimpl-getproperties.md)
 #### [ISessionPropertiesImpl::SetProperties](isessionpropertiesimpl-setproperties.md)
-### [Macros for OLE DB Provider Templates](macros-for-ole-db-provider-templates.md)
+### [Macros pour les modèles du fournisseur OLE DB](macros-for-ole-db-provider-templates.md)
 #### [BEGIN_PROPERTY_SET](begin-property-set.md)
 #### [BEGIN_PROPERTY_SET_EX](begin-property-set-ex.md)
 #### [BEGIN_PROPSET_MAP](begin-propset-map.md)

@@ -186,6 +186,7 @@
 ## [Avertissement des outils Éditeur de liens LNK4010](linker-tools-warning-lnk4010.md)
 ## [Avertissement des outils Éditeur de liens LNK4014](linker-tools-warning-lnk4014.md)
 ## [Avertissement des outils Éditeur de liens LNK4022](linker-tools-warning-lnk4022.md)
+## [Avertissement des outils Éditeur de liens LNK4037](linker-tools-warning-lnk4037.md)
 ## [Avertissement des outils Éditeur de liens LNK4039](linker-tools-warning-lnk4039.md)
 ## [Avertissement des outils Éditeur de liens LNK4044](linker-tools-warning-lnk4044.md)
 ## [Avertissement des outils Éditeur de liens LNK4049](linker-tools-warning-lnk4049.md)
