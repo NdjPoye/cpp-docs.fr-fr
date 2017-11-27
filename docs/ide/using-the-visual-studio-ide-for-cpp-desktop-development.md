@@ -1,51 +1,56 @@
 ---
-title: "Utilisation de l&#39;IDE de Visual Studio pour le d&#233;veloppement&#160;de bureau C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDE (C++)"
-  - "IDE de Visual Studio (C++)"
+title: "À l’aide de l’IDE de Visual Studio pour le développement de bureau C++ | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- IDE [C++]
+- Visual Studio IDE [C++]
 ms.assetid: d985c230-8e81-49d6-92be-2db9cac8d023
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6d31d5a9cd055a9051d7003060e0202ec96c3ac5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-# Utilisation de l&#39;IDE de Visual Studio pour le d&#233;veloppement&#160;de bureau C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Utilisation de l'IDE de Visual Studio pour le développement de bureau C++
 
-L'environnement de développement intégré \(IDE\) de [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] offre un ensemble d'outils destinés à vous aider à écrire et modifier du code, mais aussi à détecter et corriger les erreurs.  
+L’environnement de développement intégré de Visual Studio (IDE) offre un ensemble de fonctionnalités qui vous aident à gérer les grands et projets de la taille du code, écrire et refactoriser votre code et détecter et corriger les erreurs à l’aide d’analyse statique et puissants outils de débogage. Cet ensemble d’articles est conçu pour vous guider tout au long de chaque étape, que vous devrez gérer vos projets, écrire, tester et déboguer votre code, puis la déployer vers un autre ordinateur.  
+
+## <a name="prerequisites"></a>Conditions préalables  
+
+Si vous n’avez pas encore installé Visual Studio, le moment est venu. Pour obtenir Visual Studio, vous pouvez le télécharger à partir de [téléchargements Visual Studio](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx). Veillez à inclure les outils de développement Visual C++ lorsque vous installez Visual Studio, car ils ne sont pas installés par défaut. Pour plus d’informations sur l’installation de Visual Studio, consultez []().  
   
- À travers les articles de cette section de la documentation, vous allez créer un programme C\+\+ standard et tester son fonctionnement à l'aide des fonctionnalités de [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  Le programme de base que vous allez créer vise à suivre le nombre de joueurs jouant à différents jeux de cartes.  
+Ces procédures pas à pas supposent que vous avez installé Visual Studio et le langage Visual C++ et les composants requis pour le développement de bureau Windows. Nous supposons également que vous comprenez les notions de base du langage C++. Si vous avez besoin pour en savoir plus C++, il existe de la documentation et les ressources web. Un bon point de départ est la [prise en main](https://isocpp.org/get-started) page du site Web Standard C++ Foundation.    
+
+Une fois que votre installation de Visual Studio est terminée, vous êtes prêt à continuer.  
   
- Voici les articles :  
+## <a name="get-started"></a>Bien démarrer  
+
+Pour commencer à l’aide de l’IDE de Visual Studio pour créer des applications C++, passez en revue chacune de ces rubriques dans l’ordre. Chacun d’eux s’appuie sur le travail que vous avez effectuées dans les rubriques précédentes :  
   
--   [Procédure pas à pas : utilisation de projets et de solutions \(C\+\+\)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)  
+-   [Procédure pas à pas : utilisation de projets et de solutions (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)  
   
--   [Procédure pas à pas : génération d’un projet \(C\+\+\)](../ide/walkthrough-building-a-project-cpp.md)  
+-   [Procédure pas à pas : génération d’un projet (C++)](../ide/walkthrough-building-a-project-cpp.md)  
   
--   [Procédure pas à pas : test d'un projet \(C\+\+\)](../ide/walkthrough-testing-a-project-cpp.md)  
+-   [Procédure pas à pas : test d’un projet (C++)](../ide/walkthrough-testing-a-project-cpp.md)  
   
--   [Procédure pas à pas : débogage d'un projet \(C\+\+\)](../ide/walkthrough-debugging-a-project-cpp.md)  
+-   [Procédure pas à pas : débogage d’un projet (C++)](../ide/walkthrough-debugging-a-project-cpp.md)  
   
--   [Procédure pas à pas : déploiement de votre programme \(C\+\+\)](../ide/walkthrough-deploying-your-program-cpp.md)  
+-   [Procédure pas à pas : déploiement de votre programme (C++)](../ide/walkthrough-deploying-your-program-cpp.md)  
   
-## Conditions préalables  
- Cette rubrique suppose que vous comprenez les notions de base du langage C\+\+.  
+## <a name="next-steps"></a>Étapes suivantes
   
-## Étapes suivantes  
- **Précédente :** [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/fr-fr/499cb66f-7df1-45d6-8b6b-33d94fd1f17c) &#124; **Suivante :** [Procédure pas à pas : utilisation de projets et de solutions \(C\+\+\)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)  
+Une fois que vous avez terminé ces procédures pas à pas, vous êtes prêt à commencer à créer vos propres projets. Pour plus d’informations et des ressources pour le développement de Visual C++, consultez [Visual C++ dans Visual Studio](https://msdn.microsoft.com/library/60k1461a.aspx).
   
-## Voir aussi  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/fr-fr/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [Développement d'applications dans Visual Studio](http://msdn.microsoft.com/fr-fr/97490c1b-a247-41fb-8f2c-bc4c201eff68)
+## <a name="see-also"></a>Voir aussi  
+[Développement d'applications dans Visual Studio](http://msdn.microsoft.com/en-us/97490c1b-a247-41fb-8f2c-bc4c201eff68)
