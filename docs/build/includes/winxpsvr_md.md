@@ -1,3 +1,1 @@
----
----
-Windows Server 2003
+Windows Server 2003
