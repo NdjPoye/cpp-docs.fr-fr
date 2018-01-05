@@ -17,14 +17,15 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1f309673b5f0362657434bf3160d1062fdefe881
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5fef2e682f8e2036eb2919c20879c60e879ec845
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Procédure pas à pas : connexion à l’aide de tâches et de requêtes HTTP XML
-Cet exemple montre comment utiliser le [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) et [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) interfaces avec des tâches pour envoyer des demandes HTTP GET et POST à un service web dans un [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] application. En combinant `IXMLHTTPRequest2` avec des tâches, vous pouvez écrire du code qui s'adapte à d'autres tâches. Par exemple, vous pouvez utiliser la tâche de téléchargement dans le cadre d'une chaîne des tâches. La tâche de téléchargements peut également répondre quand le travail est annulé.  
+Cet exemple montre comment utiliser le [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) et [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) interfaces avec des tâches pour envoyer des demandes HTTP GET et POST à un service web dans un [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] application. En combinant `IXMLHTTPRequest2` avec des tâches, vous pouvez écrire du code qui s'adapte à d'autres tâches. Par exemple, vous pouvez utiliser la tâche de téléchargement dans le cadre d’une chaîne des tâches. La tâche de téléchargements peut également répondre quand le travail est annulé.  
   
 > [!TIP]
 >  Utilisez également le Kit de développement logiciel (SDK) REST C++ pour exécuter des requêtes HTTP depuis une application [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] à l'aide d'une l'application C++ ou depuis une application de bureau C++. Pour plus d’informations, consultez [Kit de développement logiciel C++ REST (nom de code « Casablanca »)](https://github.com/Microsoft/cpprestsdk).  
@@ -38,7 +39,7 @@ Cet exemple montre comment utiliser le [IXMLHTTPRequest2](http://msdn.microsoft.
 > [!TIP]
 >  `IXMLHTTPRequest2` et `IXMLHTTPRequest2Callback` sont les interfaces que nous recommandons d'utiliser dans une application [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Vous pouvez également adapter cet exemple pour l'utilisation dans une application de bureau.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
   
 ## <a name="defining-the-httprequest-httprequestbufferscallback-and-httprequeststringcallback-classes"></a>Définition des classes HttpRequest, HttpRequestBuffersCallback et HttpRequestStringCallback  
  Lorsque vous utilisez l'interface `IXMLHTTPRequest2` pour créer des requêtes Web via HTTP, vous implémentez l'interface `IXMLHTTPRequest2Callback` pour recevoir la réponse du serveur et réagir à d'autres événements. Cet exemple définit la classe `HttpRequest` pour créer des applications Web, et les classes `HttpRequestBuffersCallback` et `HttpRequestStringCallback` afin de traiter des réponses. Les classes `HttpRequestBuffersCallback` et `HttpRequestStringCallback` prennent en charge la classe `HttpRequest` ; vous travaillez uniquement avec la classe `HttpRequest` du code d'application.  

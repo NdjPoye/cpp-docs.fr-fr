@@ -13,11 +13,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eb26f38ece8c098e6f10ba2ec90738787cb20ff3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 25cc08c22ac0d33945a73744a0be6045971d9330
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation"></a>Procédure pas à pas : création d'une application Windows Store à l'aide de WRL et Media Foundation
 Découvrez comment utiliser la bibliothèque de modèles C++ (WRL) de Windows Runtime pour créer une application de plateforme Windows universelle qui utilise [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
@@ -34,7 +37,7 @@ Découvrez comment utiliser la bibliothèque de modèles C++ (WRL) de Windows Ru
 > [!NOTE]
 >  Bien que cet exemple de code soit long, il montre le minimum nécessaire pour créer une transformation Media Foundation utile. Vous pouvez l'utiliser comme point de départ pour votre propre transformation personnalisée. Cet exemple est une adaptation de le [exemple d’extensions de média](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), qui utilise des extensions de média pour appliquer des effets à une vidéo, décoder une vidéo et créer des gestionnaires de schéma qui produisent des flux de données.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
   
 -   Expérience avec le [Windows Runtime](http://msdn.microsoft.com/library/windows/apps/br211377.aspx).  
   

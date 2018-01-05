@@ -12,11 +12,12 @@ caps.latest.revision: "30"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: dee99cf85ff47fe7dbde8bd8bc7f60f708a5ebc6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3612421c9089fbb97c0bf256040c8082cad01afc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delegates-ccx"></a>Délégués (C++/CX)
 Le `delegate` est utilisé pour déclarer un type référence qui est l’équivalent de Windows Runtime d’un objet de fonction en C++ standard. Une déclaration delegate est similaire à une signature de fonction. Elle spécifie le type de retour et les types de paramètre que sa fonction incluse dans un wrapper doit comporter. Voici une déclaration delegate définie par l'utilisateur :  
@@ -110,7 +111,7 @@ event PrimeFoundHandler^ primeFoundEvent;
  [!code-cpp[Cx_delegates#115](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#115)]  
   
 > [!WARNING]
->  Si vous utilisez une fonction lambda qui capture le pointeur « this », veillez à utiliser l'opérateur `-=` pour annuler explicitement votre inscription à l'événement avant de quitter la fonction lambda. Pour plus d'informations, consultez [Events](../cppcx/events-c-cx.md).  
+>  Si vous utilisez une fonction lambda qui capture le pointeur « this », veillez à utiliser l'opérateur `-=` pour annuler explicitement votre inscription à l'événement avant de quitter la fonction lambda. Pour plus d’informations, consultez [Événements](../cppcx/events-c-cx.md).  
   
 ### <a name="generic-delegates"></a>Délégués génériques  
  Les délégués génériques en C++/CX ont des restrictions similaires à celles des déclarations de classes génériques. Ils ne peuvent pas être déclarés publics. Vous pouvez déclarer un délégué générique comme étant privé ou interne, et le consommer à partir du C++, mais les clients .NET ou JavaScript ne peuvent pas le consommer, car il n'est pas émis dans les métadonnées .winmd. Cet exemple déclare un délégué générique qui ne peut être consommé que par du C++ :  
