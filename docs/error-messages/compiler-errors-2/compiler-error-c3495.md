@@ -4,44 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3495
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3495
+f1_keywords: C3495
+dev_langs: C++
+helpviewer_keywords: C3495
 ms.assetid: 1fd40cb8-8373-403d-b8a8-f08424a50807
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: d5eb9f62cb18d9d94f74caa8925dbba0ed453737
-ms.lasthandoff: 04/12/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3818f42410fd97d5df9b157828658c30ac9974e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3495"></a>Erreur du compilateur C3495
-'var' : une capture lambda doit avoir une durée de stockage automatique  
+'var' : une capture lambda doit avoir une durée de stockage automatique  
   
  Vous ne pouvez pas capturer une variable qui n’a pas de durée de stockage automatique, telle qu’une variable qui est marquée `static` ou `extern`.  
   
@@ -64,4 +46,5 @@ int main()
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions lambda](../../cpp/lambda-expressions-in-cpp.md)   
- [(NOTINBUILD) Spécificateurs de classe de stockage](http://msdn.microsoft.com/en-us/10b3d22d-cb40-450b-994b-08cf9a211b6c)
+
+

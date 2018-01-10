@@ -1,33 +1,33 @@
 ---
-title: "max (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::max"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "max (fonction) (STL/CLR)"
+title: max (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::max
+dev_langs: C++
+helpviewer_keywords: max function [STL/CLR]
 ms.assetid: bf51aedc-b7a0-4b6c-a76e-fdbc4af042fa
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5f98be9b66e0e01017435b97a5683ecdb800e705
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# max (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Compare deux objets et retourne le plus grand des deux, où le critère de classement peut être spécifié par un prédicat binaire.  
+# <a name="max-stlclr"></a>max (STL/CLR)
+Compare deux objets et retourne le plus grand des deux. Un critère de tri peut être spécifié à l’aide d’un prédicat binaire.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<class _Ty> inline  
@@ -36,13 +36,13 @@ template<class _Ty, class _Pr> inline
     const _Ty max(const _Ty% _Left, const _Ty% _Right, _Pr _Pred);  
 ```  
   
-## Notes  
- Cette fonction se comporte comme la fonction `max` de STL.  Pour plus d'informations, consultez [max](../Topic/max.md).  
+## <a name="remarks"></a>Notes  
+ Cette fonction comporte comme la fonction de la bibliothèque Standard C++ `max`. Pour plus d’informations, consultez [max](../standard-library/algorithm-functions.md#max).  
   
-## Configuration requise  
- **En\-tête :** \<cliext\/algorithm\>  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/algorithme >  
   
- **Espace de noms** cliext  
+ **Namespace :** cliext  
   
-## Voir aussi  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Voir aussi  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

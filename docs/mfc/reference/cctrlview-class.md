@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a80e5d0815c919eaa1983d07d714cbe314a9916b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 484abaf5344400e03b53038d2c137497c202345f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cctrlview-class"></a>Classe de CCtrlView
 Adapte l'architecture document/vue aux contrôles communs pris en charge par Windows 98 et Windows NT versions 3.51 et ultérieures.  
@@ -59,12 +60,12 @@ class CCtrlView : public CView
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CCtrlView::m_dwDefaultStyle](#m_dwdefaultstyle)|Contient le style par défaut pour la classe d’affichage.|  
 |[CCtrlView::m_strClass](#m_strclass)|Contient le nom de classe Windows pour la classe d’affichage.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La classe `CCtrlView` et ses dérivés, [CEditView](../../mfc/reference/ceditview-class.md), [CListView](../../mfc/reference/clistview-class.md), [CTreeView](../../mfc/reference/ctreeview-class.md), et [CRichEditView](../../mfc/reference/cricheditview-class.md), adapter le l’architecture document / vue pour les nouveaux contrôles communs pris en charge par Windows 95/98 et Windows NT versions 3.51 et ultérieures. Pour plus d’informations sur l’architecture document / vue, consultez [Architecture Document/vue](../../mfc/document-view-architecture.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -78,7 +79,7 @@ class CCtrlView : public CView
   
  `CCtrlView`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="cctrlview"></a>CCtrlView::CCtrlView  
@@ -97,7 +98,7 @@ CCtrlView(
  `dwStyle`  
  Style de la classe d’affichage.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le framework appelle le constructeur lorsqu’une nouvelle fenêtre frame est créée ou d’une fenêtre est fractionnée. Substituer [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) pour initialiser la vue, une fois le document est attaché. Appelez [CWnd::Create](../../mfc/reference/cwnd-class.md#create) ou [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) pour créer l’objet de Windows.  
   
 ##  <a name="m_strclass"></a>CCtrlView::m_strClass  
@@ -114,7 +115,7 @@ CString m_strClass;
 DWORD m_dwDefaultStyle;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ce style est appliqué lors de la création d’une fenêtre.  
   
 ##  <a name="ondraw"></a>CCtrlView::OnDraw  
@@ -128,7 +129,7 @@ virtual void OnDraw(CDC* pDC);
  `pDC`  
  Pointeur vers le contexte de périphérique dans lequel le dessin se produit.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `OnDraw`est généralement appelée pour afficher l’écran, en passant un contexte de périphérique spécifié par `pDC`.  
   
 ##  <a name="precreatewindow"></a>CCtrlView::PreCreateWindow  
@@ -145,7 +146,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la création de la fenêtre doit continuer ; 0 pour indiquer un échec de la création.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ne jamais appeler cette fonction directement.  
   
  L’implémentation par défaut de cette fonction vérifie un **NULL** nom de classe de fenêtre et les remplace par une valeur par défaut appropriée. Remplacez cette fonction membre pour modifier le `CREATESTRUCT` avant la création de la fenêtre de la structure.  

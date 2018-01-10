@@ -1,37 +1,35 @@
 ---
-title: "Avertissement du compilateur (niveau 4) C4296 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4296"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4296"
+title: Compilateur avertissement (niveau 4) C4296 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4296
+dev_langs: C++
+helpviewer_keywords: C4296
 ms.assetid: 9d99aafe-f6bd-4ee0-b8d0-98ce5712274d
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: af07562daebe4cd6cae0499efafcc9fa3f8b30ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 4) C4296
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'opérateur' : l'expression est toujours false  
+# <a name="compiler-warning-level-4-c4296"></a>Avertissement du compilateur (niveau 4) C4296
+'opérateur' : expression est toujours false  
   
- Une variable non signée a été utilisée dans un opérateur de comparaison avec zéro.  
+ Une variable non signée a été utilisée dans une opération de comparaison avec zéro.  
   
- Cet avertissement est désactivé par défaut.  Pour plus d'informations, consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.  
   
- L'exemple suivant génère l'erreur C4296 :  
+ L’exemple suivant génère l’erreur C4296 :  
   
 ```  
 // C4296.cpp  

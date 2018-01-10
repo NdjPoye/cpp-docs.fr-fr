@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 64f66bf80e8e4b6ba7477691cb9675cec347807d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c66b464ac38a46716fbed972939feef1273ad03d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2555"></a>Erreur du compilateur C2555
 'classe1::fonction1' : fonction virtuelle de substitution type de retour est différent et n’est pas covariant 'classe2::fonction2'  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
 Guid[] CheckSources(Guid sourceID, Guid[] carouselIDs);  
 ```  
   
- is  
+ est  
   
 ```  
 Guid CheckSources(Guid sourceID, Guid carouselIDs[]) [];  

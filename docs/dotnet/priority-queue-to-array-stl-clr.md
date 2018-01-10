@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3221542787629cef649db6faccb896feae2af5d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 25bfe45543976d7615555ad5d7affa0042a514e4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="priorityqueuetoarray-stlclr"></a>priority_queue::to_array (STL/CLR)
 Copie de la séquence contrôlée vers un nouveau tableau.  
@@ -30,7 +33,7 @@ Copie de la séquence contrôlée vers un nouveau tableau.
 cli::array<Value>^ to_array();  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction membre retourne un tableau contenant la séquence contrôlée. Il permet d’obtenir une copie de la séquence contrôlée sous forme de tableau.  
   
 ## <a name="example"></a>Exemple  
@@ -70,7 +73,7 @@ d c b a
 c a b  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/file d’attente >  
   
  **Namespace :** cliext  

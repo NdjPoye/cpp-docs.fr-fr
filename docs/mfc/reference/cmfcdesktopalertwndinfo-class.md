@@ -25,11 +25,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5771f092ec99020128e8d4ba5feba72e6ec0635c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f257575abbf405177b2524c4c803c0b3d250187
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>Cmfcdesktopalertwndinfo, classe
 Le `CMFCDesktopAlertWndInfo` classe est utilisée avec la [classe CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md). Elle spécifie les contrôles qui sont affichés si la fenêtre d'alerte sur le Bureau s'affiche.  
@@ -56,14 +57,14 @@ class CMFCDesktopAlertWndInfo
   
 ### <a name="data-members"></a>Membres de données  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|Handle vers l’icône qui s’affiche.|  
 |[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|L’ID de commande associée à un lien dans la fenêtre d’alerte de bureau.|  
 |[CMFCDesktopAlertWndInfo::m_strText](#m_strtext)|Le texte qui apparaît dans la fenêtre d’alerte de bureau.|  
 |[CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)|Le lien qui apparaît dans la fenêtre d’alerte de bureau.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `CMFCDesktopAlertWndInfo` classe est passée à la [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) méthode pour spécifier les éléments qui sont affichés dans la boîte de dialogue par défaut de la fenêtre d’alerte de bureau. La boîte de dialogue par défaut peut contenir trois éléments :  
   
 -   Une icône, qui est définie en appelant [CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon).  
@@ -82,7 +83,7 @@ class CMFCDesktopAlertWndInfo
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CMFCDesktopAlertWndInfo](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxDesktopAlertDialog.h  
   
 ##  <a name="operator_eq"></a>CMFCDesktopAlertWndInfo::operator =  
@@ -97,7 +98,7 @@ CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="m_hicon"></a>CMFCDesktopAlertWndInfo::m_hIcon  
  Handle vers l’icône qui s’affiche.  
@@ -106,7 +107,7 @@ CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
 HICON m_hIcon;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="m_nurlcmdid"></a>CMFCDesktopAlertWndInfo::m_nURLCmdID  
  L’ID de commande associée à un lien dans la fenêtre d’alerte de bureau.  
@@ -115,7 +116,7 @@ HICON m_hIcon;
 UINT m_nURLCmdID;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’ID de commande est envoyé au propriétaire de la fenêtre contextuelle lorsque l’utilisateur clique sur le lien spécifié par [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl).  
   
 ##  <a name="m_strtext"></a>CMFCDesktopAlertWndInfo::m_strText  
@@ -125,7 +126,7 @@ UINT m_nURLCmdID;
 CString m_strText;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="m_strurl"></a>CMFCDesktopAlertWndInfo::m_strURL  
  Le lien qui apparaît dans la fenêtre d’alerte de bureau.  
@@ -134,7 +135,7 @@ CString m_strText;
 CString m_strURL;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque l’utilisateur clique sur le lien, la commande qui a le [CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid) ID de la commande sera envoyé au propriétaire de la fenêtre contextuelle.  
   
 ## <a name="see-also"></a>Voir aussi  

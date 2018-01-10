@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a4e826419e5b56a348d29a7fa77ade8904b32ba2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e32f4cc17bfd091b4475d3dbdde280d5c410f5d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-warning-d9040"></a>Avertissement de ligne de commande D9040
 Ignorer l’option '/analyze' ; Avertissements d’analyse du code ne sont pas disponibles dans cette édition du compilateur  

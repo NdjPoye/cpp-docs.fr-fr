@@ -15,18 +15,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7754f04b271667165e5702e95491006bf82e61a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d1c471e931ce2f2e69cccf5fd4e02956ecd81f57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3050"></a>Erreur du compilateur C3050
 'type1' : une classe ref ne peut pas hériter de 'type1'  
   
  `System::ValueType` ne peut pas être une classe de base pour un type référence.  
   
- L’exemple suivant génère l’erreur C3050 :  
+ L’exemple suivant génère l’erreur C3050 :  
   
 ```  
 // C3050.cpp  

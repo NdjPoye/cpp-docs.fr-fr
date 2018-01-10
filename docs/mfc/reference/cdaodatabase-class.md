@@ -69,11 +69,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c72946edb68212e09ab93e9d36d2dfa8afd5630e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48646e0635098aceea957f93015a5de93515096d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase (classe)
 Représente une connexion à une base de données, par l'intermédiaire de laquelle vous pouvez utiliser les données.  
@@ -127,7 +128,7 @@ class CDaoDatabase : public CObject
 |[CDaoDatabase::m_pDAODatabase](#m_pdaodatabase)|Pointeur vers l’objet de base de données DAO sous-jacent.|  
 |[CDaoDatabase::m_pWorkspace](#m_pworkspace)|Un pointeur vers le [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) objet qui contient la base de données et définit son espace de transaction.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour plus d’informations sur les formats de base de données pris en charge, consultez la [GetName](../../mfc/reference/cdaoworkspace-class.md#getname) fonction membre. Vous pouvez avoir un ou plusieurs `CDaoDatabase` objets actifs à la fois dans un « espace de travail donné, « représenté par un [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) objet. L’espace de travail gère une collection d’objets de base de données ouverte, appelée la collection de bases de données.  
   
 > [!NOTE]
@@ -163,7 +164,7 @@ class CDaoDatabase : public CObject
   
  `CDaoDatabase`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdao.h  
   
 ##  <a name="cantransact"></a>CDaoDatabase::CanTransact  
@@ -176,7 +177,7 @@ BOOL CanTransact();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la base de données prend en charge les transactions ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les transactions sont gérées dans l’espace de travail de la base de données.  
   
 ##  <a name="canupdate"></a>CDaoDatabase::CanUpdate  
@@ -189,7 +190,7 @@ BOOL CanUpdate();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la `CDaoDatabase` objet autorise les mises à jour ; sinon, 0, qui indique soit que vous avez passé **TRUE** dans `bReadOnly` lorsque vous avez ouvert la `CDaoDatabase` objet ou que la base de données est en lecture seule. Consultez le [ouvrir](#open) fonction membre.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur la mise à jour de la base de données, consultez la rubrique « Propriété actualisable » dans l’aide de DAO.  
   
 ##  <a name="cdaodatabase"></a>CDaoDatabase::CDaoDatabase  
@@ -203,7 +204,7 @@ CDaoDatabase(CDaoWorkspace* pWorkspace = NULL);
  *pWorkspace*  
  Un pointeur vers le `CDaoWorkspace` objet qui contient le nouvel objet de base de données. Si vous acceptez la valeur par défaut **NULL**, le constructeur crée un fichier temporaire `CDaoWorkspace` objet qui utilise l’espace de travail DAO par défaut. Vous pouvez obtenir un pointeur vers l’objet de l’espace de travail via le [m_pWorkspace](#m_pworkspace) membre de données.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Après avoir construit l’objet, si vous créez un nouveau Microsoft Jet (. MDB) de base de données, appelez l’objet [créer](#create) fonction membre. Si vous êtes à la place, ouverture d’une base de données existant, appelez l’objet [ouvrir](#open) fonction membre.  
   
  Lorsque vous avez terminé avec l’objet, vous devez appeler sa [fermer](#close) membre de fonction, puis détruisez le `CDaoDatabase` objet.  
@@ -220,7 +221,7 @@ CDaoDatabase(CDaoWorkspace* pWorkspace = NULL);
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il est recommandé de fermer ces objets vous-même avant d’appeler cette fonction membre. Fermeture d’un `CDaoDatabase` objet supprime de la collection de bases de données dans le type [espace de travail](../../mfc/reference/cdaoworkspace-class.md). Étant donné que **fermer** ne détruit pas les `CDaoDatabase` de l’objet, vous pouvez réutiliser l’objet en ouvrant la même base de données ou une autre base de données.  
   
 > [!CAUTION]
@@ -296,7 +297,7 @@ virtual void Create(
 > [!CAUTION]
 >  Si une base de données n’est pas chiffré, il est possible, même si vous implémentez la sécurité de l’utilisateur/mot de passe, pour directement lire le fichier binaire sur disque qui constitue la base de données.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  **Créer** crée le fichier de base de données et de l’objet de base de données DAO sous-jacent et initialise l’objet C++. L’objet est ajouté à la collection de bases de données de l’espace de travail associé. L’objet de base de données est dans un état ouvert. n’appelez pas **ouvrir** après **créer**.  
   
 > [!NOTE]
@@ -349,7 +350,7 @@ void CreateRelation(CDaoRelationInfo& relinfo);
  *relinfo*  
  Une référence à un [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) objet qui contient des informations sur la relation que vous souhaitez créer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La relation ne peut pas impliquer une requête ou une table attachée à partir d’une base de données externe.  
   
  Utilisez la première version de la fonction de la relation impliquant un champ dans chacune des deux tables. Utilisez la deuxième version lorsque la relation implique plusieurs champs. Le nombre maximal de champs dans une relation est 14.  
@@ -373,7 +374,7 @@ void DeleteQueryDef(LPCTSTR lpszName);
  `lpszName`  
  Le nom de la requête enregistrée à supprimer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ensuite, cette requête n’est plus définie dans la base de données.  
   
  Pour plus d’informations sur la création d’objets querydef, consultez la classe [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). Un objet querydef est associé à un particulier `CDaoDatabase` de l’objet lorsque vous construisez le `CDaoQueryDef` objet, en passant un pointeur vers l’objet de base de données.  
@@ -389,7 +390,7 @@ void DeleteRelation(LPCTSTR lpszName);
  `lpszName`  
  Le nom de la relation à supprimer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ensuite, la relation n’est plus existe.  
   
  Pour plus d’informations, consultez la rubrique « Supprimer de la méthode » dans l’aide de DAO.  
@@ -405,7 +406,7 @@ void DeleteTableDef(LPCTSTR lpszName);
  `lpszName`  
  Le nom de l’objet à supprimer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ensuite, cette table n’est plus définie dans la base de données.  
   
 > [!NOTE]
@@ -446,7 +447,7 @@ void Execute(
 > [!NOTE]
 >  Si les deux **dbInconsistent** et **dbConsistent** sont inclus ou si aucun n’est fourni, le résultat est la valeur par défaut. Pour obtenir une explication de ces constantes, consultez la rubrique « Exécuter la méthode » dans l’aide de DAO.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  **Exécutez** fonctionne uniquement pour les requêtes d’action ou des requêtes SQL directes qui ne retournent pas de résultats. Il ne fonctionne pas pour les requêtes select qui retournent des enregistrements.  
   
  Pour une définition et les informations sur les requêtes d’action, consultez les rubriques « Requête Action » et « Exécuter la méthode » dans l’aide de DAO.  
@@ -468,7 +469,7 @@ CString GetConnect();
 ### <a name="return-value"></a>Valeur de retour  
  La chaîne de connexion si [ouvrir](#open) a été appelé sur une source de données ODBC ; sinon, une chaîne vide. Pour un Microsoft Jet (. Base de données MDB), la chaîne est toujours vide sauf si vous le configurez pour une utilisation avec le **dbSQLPassThrough** option utilisée avec la [Execute](#execute) fonction membre ou utilisé lors de l’ouverture d’un jeu d’enregistrements.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La chaîne fournit des informations sur la source d’une base de données ou une base de données utilisé dans une requête directe. La chaîne de connexion est composée d’un spécificateur de type de base de données et de zéro ou plusieurs paramètres séparés par des points-virgules.  
   
 > [!NOTE]
@@ -489,7 +490,7 @@ CString GetName();
 ### <a name="return-value"></a>Valeur de retour  
  Le chemin d’accès complet et le nom de la base de données en cas de réussite ; dans le cas contraire, vide [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si votre réseau prend en charge la convention d’affectation de noms uniforme (UNC), vous pouvez également spécifier un chemin d’accès réseau, par exemple, «\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB ». (Deux barres obliques inverses sont nécessaires dans les littéraux de chaîne, car «\\» est le caractère d’échappement de C++.)  
   
  Par exemple, vous pourriez afficher ce nom dans un en-tête. Si une erreur se produit alors que le nom est récupéré, MFC lève une exception de type [CDaoException](../../mfc/reference/cdaoexception-class.md).  
@@ -519,7 +520,7 @@ short GetQueryDefCount();
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de requêtes définies dans la base de données.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `GetQueryDefCount`est utile si vous devez effectuer une boucle sur tous les querydefs dans la collection QueryDefs. Pour obtenir plus d’informations sur une requête donnée dans la collection, consultez [fonction membre GetQueryDefInfo](#getquerydefinfo).  
   
 ##  <a name="getquerydefinfo"></a>CDaoDatabase::GetQueryDefInfo  
@@ -557,7 +558,7 @@ void GetQueryDefInfo(
  `lpszName`  
  Chaîne contenant le nom d’une requête définie dans la base de données pour la recherche par nom.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Deux versions de la fonction sont fournies pour vous pouvez de sélectionner une requête par index dans la collection QueryDefs de la base de données ou par le nom de la requête.  
   
  Pour obtenir une description des informations retournées dans *querydefinfo*, consultez la [objet CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md) structure. Cette structure possède des membres qui correspondent aux éléments d’informations répertoriés ci-dessus dans la description de `dwInfoOptions`. Si vous demandez un niveau d’informations, vous obtenez tous les niveaux préalables d’informations.  
@@ -572,7 +573,7 @@ short GetQueryTimeout();
 ### <a name="return-value"></a>Valeur de retour  
  Un entier court qui contient la valeur de délai d’attente en secondes.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une opération peut expirer en raison de problèmes d’accès réseau, le temps de traitement de requête excessive et ainsi de suite. Alors que le paramètre est en vigueur, il affecte toutes les ajouter de nouveaux, mettre à jour et supprimer les opérations sur les jeux d’enregistrements associé à ce `CDaoDatabase` objet. Vous pouvez modifier le paramètre de délai d’attente actuel en appelant [SetQueryTimeout](#setquerytimeout). La modification de la valeur de délai d’attente de requête pour un jeu d’enregistrements après l’ouverture ne modifie pas la valeur de l’ensemble d’enregistrements. Par exemple, ultérieur [déplacer](../../mfc/reference/cdaorecordset-class.md#move) opérations n’utilisent pas la nouvelle valeur. La valeur par défaut est initialement définie lorsque le moteur de base de données est initialisé.  
   
  La valeur par défaut pour les délais d’attente de la requête est effectuée à partir du Registre Windows. S’il n’existe aucun paramètre de Registre, la valeur par défaut est 60 secondes. Pas toutes les bases de données prend en charge la possibilité de définir une valeur de délai d’attente de requête. Si vous définissez une valeur de délai d’attente de requête de 0, aucun délai d’expiration se produit ; et la communication avec la base de données peut cesser de répondre. Ce comportement peut être utile lors du développement. Si l’appel échoue, MFC lève une exception de type [CDaoException](../../mfc/reference/cdaoexception-class.md).  
@@ -589,7 +590,7 @@ long GetRecordsAffected();
 ### <a name="return-value"></a>Valeur de retour  
  Entier long contenant le nombre d’enregistrements concernés.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La valeur retournée inclut le nombre d’enregistrements supprimés, mis à jour ou insérées par une requête de l’action exécuter avec **Execute**. Le nombre retourné ne reflète pas les modifications dans les tables associées lorsque cascade met à jour ou supprime prennent effet.  
   
  Pour plus d’informations, consultez la rubrique « Propriété RecordsAffected » dans l’aide de DAO.  
@@ -604,7 +605,7 @@ short GetRelationCount();
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de relations définies entre les tables dans la base de données.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  **GetRelationCount** est utile si vous devez effectuer une boucle sur toutes les relations définies dans la collection de Relations de la base de données. Pour obtenir plus d’informations sur une relation donnée dans la collection, consultez [GetRelationInfo](#getrelationinfo).  
   
  Pour illustrer le concept d’une relation, considérez une table fournisseurs et une table de produits, ce qui peut avoir une relation un-à-plusieurs. Dans cette relation, un seul fournisseur peut fournir plusieurs produits. Autres relations sont un à un et plusieurs-à-plusieurs.  
@@ -644,7 +645,7 @@ void GetRelationInfo(
  `lpszName`  
  Chaîne contenant le nom de l’objet de relation pour la recherche par nom.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Deux versions de cette fonction fournissent un accès par index ou par nom. Pour obtenir une description des informations retournées dans *relinfo*, consultez la [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) structure. Cette structure possède des membres qui correspondent aux éléments d’informations répertoriés ci-dessus dans la description de `dwInfoOptions`. Si vous demandez des informations à un niveau, vous obtenez également des informations à des niveaux précédents ainsi.  
   
 > [!NOTE]
@@ -660,7 +661,7 @@ short GetTableDefCount();
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de tabledefs défini dans la base de données.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `GetTableDefCount`est utile si vous devez effectuer une boucle sur tous les objets TableDef dans TableDefs (collection) de la base de données. Pour obtenir plus d’informations sur une table donnée dans la collection, consultez [GetTableDefInfo](#gettabledefinfo).  
   
 ##  <a name="gettabledefinfo"></a>CDaoDatabase::GetTableDefInfo  
@@ -698,7 +699,7 @@ void GetTableDefInfo(
  `lpszName`  
  Le nom de l’objet tabledef, pour la recherche par nom.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Deux versions de la fonction sont fournies afin de pouvoir sélectionner une table par index dans la collection TableDefs de la base de données ou par le nom de la table.  
   
  Pour obtenir une description des informations retournées dans `tabledefinfo`, consultez la [CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md) structure. Cette structure possède des membres qui correspondent aux éléments d’informations répertoriés ci-dessus dans la description de `dwInfoOptions`. Si vous demandez des informations à un niveau, vous obtenez des informations pour les niveaux de préalables.  
@@ -716,7 +717,7 @@ CString GetVersion();
 ### <a name="return-value"></a>Valeur de retour  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) qui indique la version du fichier de base de données associé à l’objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La valeur renvoyée représente le numéro de version sous la forme « major.minor » ; par exemple, « 3.0 ». Le numéro de version du produit (par exemple, version 3.0) comprend le numéro de version (3), un point et le numéro de version (0). Les versions à la date sont 1.0, 1.1, 2.0 et 3.0.  
   
  Pour plus d’informations, consultez la rubrique « Propriété de Version » dans l’aide de DAO.  
@@ -731,12 +732,12 @@ BOOL IsOpen() const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la `CDaoDatabase` objet est actuellement ouvert ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="m_pdaodatabase"></a>CDaoDatabase::m_pDAODatabase  
  Contient un pointeur vers l’interface OLE pour l’objet de base de données DAO sous-jacent le `CDaoDatabase` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez ce pointeur si vous avez besoin d’accéder à l’interface DAO directement.  
   
  Pour plus d’informations sur l’appel de DAO directement, consultez [Note technique 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
@@ -744,7 +745,7 @@ BOOL IsOpen() const;
 ##  <a name="m_pworkspace"></a>CDaoDatabase::m_pWorkspace  
  Contient un pointeur vers le [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) objet qui contient l’objet de base de données.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez ce pointeur si vous avez besoin d’accéder directement à l’espace de travail, par exemple, pour obtenir des pointeurs sur les autres objets de base de données dans la collection de bases de données de l’espace de travail.  
   
 ##  <a name="open"></a>CDaoDatabase::Open  
@@ -782,7 +783,7 @@ virtual void Open(
  `lpszConnect`  
  Une expression de chaîne utilisée pour l’ouverture de la base de données. Cette chaîne constitue ODBC connecter des arguments. Vous devez fournir les arguments exclusifs et en lecture seule pour fournir une chaîne source. Si la base de données est une base de données Microsoft Jet (. (MDB), cette chaîne est vide (« »). La syntaxe de la valeur par défaut : **_T**(« »), fournit la portabilité pour Unicode, ainsi que ANSI les builds de votre application.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  **Ouvrez** associe la base de données de l’objet DAO sous-jacent. Vous ne pouvez pas utiliser l’objet de base de données pour construire l’objet recordset, tabledef ou querydef objets jusqu'à ce qu’il est initialisé. **Ouvrez** ajoute l’objet de base de données à la collection de bases de données de l’espace de travail associé.  
   
  Utilisez les paramètres comme suit :  
@@ -817,7 +818,7 @@ void SetQueryTimeout(short nSeconds);
  `nSeconds`  
  Le nombre de secondes avant une tentative de requête est arrivée à expiration.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une opération peut expirer en raison de problèmes d’accès réseau, le temps de traitement de requête excessive et ainsi de suite. Appelez `SetQueryTimeout` avant d’ouvrir le jeu d’enregistrements ou avant l’appel de l’ensemble d’enregistrements [AddNew](../../mfc/reference/cdaorecordset-class.md#addnew), [mise à jour](../../mfc/reference/cdaorecordset-class.md#update), ou [supprimer](../../mfc/reference/cdaorecordset-class.md#delete) si vous souhaitez modifier la requête de fonctions membres valeur de délai d’attente. Le paramètre affecte toutes les [ouvrir](../../mfc/reference/cdaorecordset-class.md#open), `AddNew`, **mise à jour**, et **supprimer** les appels à des jeux d’enregistrements associé à ce `CDaoDatabase` objet. La modification de la valeur de délai d’attente de requête pour un jeu d’enregistrements après l’ouverture ne modifie pas la valeur de l’ensemble d’enregistrements. Par exemple, ultérieur [déplacer](../../mfc/reference/cdaorecordset-class.md#move) opérations n’utilisent pas la nouvelle valeur.  
   
  La valeur par défaut pour les délais d’expiration est de 60 secondes. Pas toutes les bases de données prend en charge la possibilité de définir une valeur de délai d’attente de requête. Si vous définissez une valeur de délai d’attente de requête de 0, aucun délai d’expiration se produit ; la communication avec la base de données peut cesser de répondre. Ce comportement peut être utile lors du développement.  

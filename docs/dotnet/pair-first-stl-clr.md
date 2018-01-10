@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 034d867b2d02557128ecf4d7ab30338f43ee653e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 33b6183dd78225081c77e5cad06ed707f6bf7abe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pairfirst-stlclr"></a>pair::first (STL/CLR)
 La première valeur encapsulée.  
@@ -30,7 +33,7 @@ La première valeur encapsulée.
 Value1 first;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’objet stocke la première valeur encapsulée.  
   
 ## <a name="example"></a>Exemple  
@@ -57,7 +60,7 @@ int main()
 [x, 3]  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/utilitaire >  
   
  **Namespace :** cliext  

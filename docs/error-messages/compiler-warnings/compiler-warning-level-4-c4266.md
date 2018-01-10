@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 88cd587c142243b1a97ee6afd59cbc519b36180a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7d94cc47d6df61a286d97f5a6d3a382ad3820cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4266"></a>Avertissement du compilateur (niveau 4) C4266
 'fonction' : aucune substitution disponible pour la fonction membre virtuelle de base 'type' ; la fonction est masquée  
@@ -45,7 +46,7 @@ class LocalBinding : private Engine {
 };   // C4266  
 ```  
   
- Résolution possible :  
+ Solution possible :  
   
 ```  
 // C4266b.cpp  

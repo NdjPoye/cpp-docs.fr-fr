@@ -4,41 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK2005
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK2005
+f1_keywords: LNK2005
+dev_langs: C++
+helpviewer_keywords: LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 40097ea2b5c5519a5b883aad09788cf2f802ea36
-ms.contentlocale: fr-fr
-ms.lasthandoff: 05/10/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 69b5201c3e035d1c0aca0105c136766eba3786f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk2005"></a>Erreur des outils Éditeur de liens LNK2005
 *symbole* déjà définie dans l’objet  
@@ -49,7 +31,7 @@ Cette erreur est suivie d’une erreur irrécupérable [LNK1169](../../error-mes
   
 ### <a name="possible-causes-and-solutions"></a>Causes et solutions possibles  
   
-En règle générale, cette erreur signifie que vous avez interrompu le *règle d’unique définition*, ce qui ne permet qu’une seule définition pour n’importe quel modèle utilisé, fonction, type ou dans un fichier de l’objet donné et qu’une seule définition entre l’exécutable tout entier pour les objets visibles de l’extérieur ou les fonctions.  
+En règle générale, cette erreur signifie que vous avez interrompu le *règle d’unique définition*, ce qui ne permet qu’une seule définition pour n’importe quel modèle utilisé, fonction, type ou dans un fichier de l’objet donné et qu’une seule définition entre l’exécutable tout entier pour objets visibles de l’extérieur ou fonctions.  
   
 Voici certaines des causes courantes de cette erreur.  
   
@@ -118,7 +100,7 @@ Voici certaines des causes courantes de cette erreur.
   
 -   Cette erreur peut se produire si vous liez plusieurs versions de la bibliothèque standard ou de la bibliothèque CRT. Par exemple, si vous essayez de lier à la fois la vente au détail et les bibliothèques de débogage CRT ou les deux versions d’une bibliothèque statique et dynamique ou deux versions différentes d’une bibliothèque standard pour votre fichier exécutable, cette erreur peut apparaître plusieurs fois. Pour résoudre ce problème, supprimez toutes sauf une copie de chaque bibliothèque de la commande de lien. Il est déconseillé de combiner la vente au détail et de bibliothèques, ou différentes versions d’une bibliothèque, dans le même exécutable de débogage.  
   
-    Pour indiquer à l’éditeur de liens à utiliser des bibliothèques autres que les valeurs par défaut, la ligne de commande, spécifiez les bibliothèques à utiliser et utiliser le [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) option pour désactiver les bibliothèques par défaut. Dans l’IDE, ajouter des références à votre projet pour spécifier les bibliothèques à utiliser, puis ouvrez le **Pages de propriétés** boîte de dialogue pour votre projet et dans le **l’éditeur de liens**, **entrée** page de propriétés, la valeur **ignorer toutes les bibliothèques de valeur par défaut**, ou **ignorer les bibliothèques par défaut spécifique** propriétés pour désactiver les bibliothèques par défaut.   
+    Pour indiquer à l’éditeur de liens à utiliser des bibliothèques autres que les valeurs par défaut, la ligne de commande, spécifiez les bibliothèques à utiliser et utiliser le [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) option pour désactiver les bibliothèques par défaut. Dans l’IDE, ajouter des références à votre projet pour spécifier les bibliothèques à utiliser, puis ouvrez le **Pages de propriétés** boîte de dialogue pour votre projet et dans le **l’éditeur de liens**, **entrée** propriété Définissez soit **ignorer toutes les bibliothèques de valeur par défaut**, ou **ignorer les bibliothèques par défaut spécifique** propriétés pour désactiver les bibliothèques par défaut.   
   
 -   Cette erreur peut se produire si vous combinez l’utilisation de bibliothèques statiques et dynamiques lorsque vous utilisez la [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) option. Par exemple, cette erreur peut se produire si vous générez une DLL à utiliser dans votre fichier exécutable qui établit un lien dans la bibliothèque CRT statique. Pour résoudre ce problème, utilisez uniquement les bibliothèques statiques ou uniquement les bibliothèques dynamiques pour l’ensemble de l’exécutable et pour toutes les bibliothèques que vous générez pour l’utiliser dans le fichier exécutable.  
   
@@ -147,4 +129,3 @@ Si vous utilisez une version antérieure de l’ensemble d’outils, consultez c
   
 -   [Vous recevez des erreurs LNK2005 se produisent lorsque vous compilez un projet exécutable (.exe) de ATL dans Visual C++](https://support.microsoft.com/kb/184235).  
   
-

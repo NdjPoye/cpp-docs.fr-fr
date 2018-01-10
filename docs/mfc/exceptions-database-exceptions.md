@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aaebe39e758d3fa0ea919433204ce1b7313019b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e853f2bd6f57c7ccc63e802f013661efb85d9796
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exceptions-database-exceptions"></a>Exceptions : exceptions de base de données
 Cet article explique comment gérer les exceptions de base de données. La plupart des éléments de cet article s’applique si vous travaillez avec les classes MFC pour la connectivité ODBC (Open Database) ou les classes MFC pour les objets DAO (Data Access). Matériel spécifique à un ou l’autre modèle est marquée explicitement. Les rubriques traitées ici sont les suivantes :  

@@ -1,37 +1,36 @@
 ---
-title: "Erreur des outils &#201;diteur de liens LNK2023 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2023"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2023"
+title: "LNK2023 d’erreur des outils Éditeur de liens | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2023
+dev_langs: C++
+helpviewer_keywords: LNK2023
 ms.assetid: c99e35a8-739a-4a20-a715-29b8c3744703
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dfaac5729c014baff676772fb052bfbcf79489cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Erreur des outils &#201;diteur de liens LNK2023
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-une dll ou un point d'entrée erronés \<dll ou point d'entrée\>  
+# <a name="linker-tools-error-lnk2023"></a>Erreur des outils Éditeur de liens LNK2023
+dll incorrecte ou le point d’entrée \<dll ou point d’entrée >  
   
- L'éditeur de liens charge une version incorrecte de msobj90.dll.  Vérifiez que les versions de link.exe et msobj90.dll dans le chemin d'accès sont identiques.  
+ L’éditeur de liens charge une version incorrecte de msobj90.dll. Vérifiez que link.exe et msobj90.dll dans votre chemin d’accès ont la même version.  
   
- Il manque peut\-être une dépendance de msobj90.dll.  La liste de dépendances de msobj90.dll est la suivante :  
+ Une dépendance de msobj90.dll ne peut pas être présente. La liste des dépendances de msobj90.dll est la suivante :  
   
 -   Msvcr90.dll  
   
 -   Kernel32.dll  
   
- Vérifiez la présence sur votre ordinateur d'autres copies de msobj90.dll pouvant être obsolètes.
+ Vérifiez votre ordinateur d’autres copies de msobj90.dll pouvant être obsolètes.

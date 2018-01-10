@@ -17,11 +17,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54ca5ac28d4f5fb044b78ad7b846cd20d73e2c22
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68b4a5ba27d4fcb6fcaac7c80662d778c7cbbca7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA (structure)
 La structure `AFX_GLOBAL_DATA` contient des champs et des méthodes qui permettent de gérer l’infrastructure ou de personnaliser l’apparence et le comportement de votre application.  
@@ -85,7 +86,7 @@ struct AFX_GLOBAL_DATA
   
 ### <a name="data-members"></a>Membres de données  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport](#bisosalphablendingsupport)|Indique si le système d’exploitation actuel prend en charge la simulation de transparence.|  
 |[AFX_GLOBAL_DATA::bIsWindows7](#biswindows7)|Indique si l’application est exécutée sur le système d’exploitation Windows 7 ou ultérieur|  
@@ -102,13 +103,13 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](#m_ndragframethicknessdock)|Spécifie l’épaisseur du cadre de glissement qui est utilisé pour communiquer l’état d’ancrage.|  
 |[AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](#m_ndragframethicknessfloat)|Spécifie l’épaisseur du cadre de glissement qui est utilisé pour communiquer l’état flottant.|  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La plupart des données dans la structure `AFX_GLOBAL_DATA` sont initialisées au démarrage de votre application.  
   
 ### <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `AFX_GLOBAL_DATA`   
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afxglobals.h  
   
 ### <a name="see-also"></a>Voir aussi  
@@ -124,7 +125,7 @@ Indique si le système d’exploitation prend en charge la fusion alpha.
 BOOL  bIsOSAlphaBlendingSupport;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `TRUE`Indique la fusion alpha est pris en charge ; dans le cas contraire, `FALSE`.  
   
 
@@ -235,7 +236,7 @@ BOOL DrawTextOnGlass(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si un thème est utilisé pour dessiner le texte spécifié ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un thème définit le style visuel d’une application. Un thème n’est pas utilisé pour dessiner le texte si le paramètre `hTheme` a la valeur `NULL`, si la méthode [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) n’est pas prise en charge, ou encore si la composition du [Gestionnaire de fenêtrage](http://msdn.microsoft.com/library/windows/desktop/aa969540) est désactivée.  
   
 ### <a name="see-also"></a>Voir aussi  
@@ -259,7 +260,7 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
  [in] `bEnable`  
  `TRUE`Pour activer la prise en charge de l’accessibilité ; `FALSE` pour désactiver la prise en charge de l’accessibilité. La valeur par défaut est `TRUE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Active Accessibility est une technologie COM qui améliore les façon dont les programmes et le système d’exploitation de Windows fonctionne avec les produits de technologie d’assistance. Il fournit des méthodes fiables pour exposer des informations sur les éléments d’interface utilisateur. Cependant, un modèle d’accessibilité plus récente appelé Microsoft UI Automation est désormais disponible. Pour obtenir une comparaison des deux technologies, consultez [UI Automation et Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).  
   
  Utilisez le [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) méthode pour déterminer si la prise en charge Microsoft Active Accessibility est activée.  
@@ -297,7 +298,7 @@ BOOL ExcludeTag(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si cette méthode a réussi ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une paire de balises XML se compose de nommé balises qui indiquent le début et la fin d’une séquence de texte dans la mémoire tampon spécifiée. Le `strBuffer` paramètre spécifie la mémoire tampon et le `lpszTag` paramètre spécifie le nom des balises XML.  
   
  Utilisez les symboles dans le tableau suivant pour encoder un jeu de caractères d’échappement dans la mémoire tampon spécifiée. Spécifiez `TRUE` pour le `bIsCharsList` paramètre à convertir les symboles dans le `strTag` paramètre en caractères d’échappement réel. Le tableau suivant utilise le [_T()](../../c-runtime-library/data-type-mappings.md) (macro) pour spécifier le symbole et les chaînes de caractères d’échappement.  
@@ -327,7 +328,7 @@ COLORREF GetColor(int nColor);
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de couleur RVB de l’élément d’interface utilisateur spécifié. Pour plus d'informations, consultez la section Notes.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si le `nColor` paramètre est hors limites, la valeur de retour est égale à zéro. Zéro est également une valeur RVB, vous ne pouvez pas utiliser cette méthode pour déterminer si une couleur système est pris en charge par le système d’exploitation actuel. Utilisez plutôt le [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) (méthode), qui retourne `NULL` si la couleur n’est pas pris en charge.  
   
 ### <a name="see-also"></a>Voir aussi  
@@ -447,7 +448,7 @@ BOOL Is32BitIcons() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si les icônes de 32 bits prédéfinies sont prises en charge ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode retourne `TRUE` si le framework prend en charge les icônes intégrés 32 bits et si le système d’exploitation prend en charge 16 bits par pixel ou plus, et si les images ne sont pas affichées avec un contraste élevé.  
   
 ## <a name="isaccessibilitysupport"></a>AFX_GLOBAL_DATA::IsAccessibilitySupport
@@ -461,7 +462,7 @@ BOOL IsAccessibilitySupport() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si la prise en charge de l’accessibilité est activée ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Microsoft Active Accessibility était la solution précédemment utilisée pour rendre les applications accessibles. Microsoft UI Automation est le nouveau modèle d’accessibilité pour Microsoft Windows et est destinée à répondre aux besoins des produits de technologie d’assistance et outils de test automatisés.   
   
  Utilisez le [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport) méthode pour activer ou désactiver la prise en charge de Active Accessibility.  
@@ -505,7 +506,7 @@ BOOL IsHighContrastMode() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si les images sont affichées actuellement en mode de contraste élevé d’ou de blocage ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En mode de contraste élevé noir, bords en face de la lumière sont blanches et l’arrière-plan est noir. En mode de contraste élevé blanc, bords en face de la lumière sont noirs et l’arrière-plan est blanc.  
   
 ## <a name="iswindowslayersupportavailable"></a>AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable
@@ -519,7 +520,7 @@ BOOL IsWindowsLayerSupportAvailable() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si les fenêtres superposées sont pris en charge ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si les fenêtres superposées sont pris en charge, *ancrage actifs* utilisent des marqueurs de fenêtres superposées.  
   
 ## <a name="m_busebuiltin32biticons"></a>AFX_GLOBAL_DATA::m_bUseBuiltIn32BitIcons
@@ -530,7 +531,7 @@ Indique si l’infrastructure utilise des icônes de couleur 32 bits prédéfini
 BOOL  m_bUseBuiltIn32BitIcons;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `TRUE`Spécifie que le framework utilise des icônes de couleur 32 bits ; `FALSE` spécifie les icônes de résolution inférieurs. Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise à ce membre `TRUE`.  
   
  Ce membre doit être défini au démarrage de l’application.  
@@ -543,7 +544,7 @@ Indique si une police système est utilisée pour les menus, les barres d’outi
 BOOL m_bUseSystemFont;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `TRUE`Spécifie l’utilisation d’une police système ; dans le cas contraire, `FALSE`. Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise à ce membre `FALSE`.  
   
  Test de ce membre n’est pas la seule façon pour l’infrastructure pour déterminer la police à utiliser. Le `AFX_GLOBAL_DATA::UpdateFonts` méthode teste également les polices par défaut et de remplacement pour déterminer les styles visuels sont disponibles pour être appliqués à des menus, barres d’outils et les rubans.  
@@ -587,7 +588,7 @@ Spécifie le décalage à partir de la barre d’outils à l’extrême gauche d
 int  m_nAutoHideToolBarMargin;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise ce membre de 4 pixels.  
   
 ## <a name="m_nautohidetoolbarspacing"></a>AFX_GLOBAL_DATA::m_nAutoHideToolBarSpacing
@@ -598,7 +599,7 @@ Spécifie l’intervalle entre les barres d’outils de masquage automatique.
 int   m_nAutoHideToolBarSpacing;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise ce membre à 14 pixels.  
   
 ## <a name="m_ndragframethicknessdock"></a>AFX_GLOBAL_DATA::m_nDragFrameThicknessDock
@@ -610,7 +611,7 @@ Spécifie l’épaisseur du cadre glisser qui est utilisé pour indiquer l’ét
 int  m_nDragFrameThicknessDock;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise ce membre de 3 pixels.  
   
 ## <a name="m_ndragframethicknessfloat"></a>AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat
@@ -621,7 +622,7 @@ Spécifie l’épaisseur du cadre glisser qui est utilisé pour indiquer l’ét
 int  m_nDragFrameThicknessFloat;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise ce membre de 4 pixels.  
   
 ## <a name="onsettingchange"></a>AFX_GLOBAL_DATA::OnSettingChange
@@ -632,7 +633,7 @@ Détecte l’état actuel des fonctionnalités de masquage automatique de la bar
 void OnSettingChange();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode définit les variables de framework à l’état de certains attributs de bureau de l’utilisateur. Cette méthode détecte l’état actuel de l’animation de menu, atténuation de menu et de tâches de la barre des fonctionnalités de masquage automatique.  
   
 ## <a name="registerwindowclass"></a>AFX_GLOBAL_DATA::RegisterWindowClass
@@ -650,7 +651,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ### <a name="return-value"></a>Valeur de retour  
  Le nom qualifié de la classe inscrite si cette méthode a réussi ; Sinon, un [exception ressources](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La valeur de retour est une liste délimitée par des deux-points de la `lpszClassNamePrefix` la chaîne de paramètres et les représentations sous forme de texte hexadécimal des poignées d’en cours d’instance d’application ; le curseur de l’application, qui est le curseur flèche dont l’identificateur est IDC_ARROW ; et le pinceau d’arrière-plan. Pour plus d’informations sur l’inscription des classes de fenêtre MFC, consultez [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
   
 ### <a name="see-also"></a>Voir aussi    
@@ -668,7 +669,7 @@ BOOL Resume();
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si cette méthode a réussi ; dans le cas contraire, `FALSE`. En mode débogage, cette méthode déclare si cette méthode est infructueuse.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode est appelée lorsque l’infrastructure reçoit le [WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247) message.  
   
 ## <a name="setlayeredattrib"></a>AFX_GLOBAL_DATA::SetLayeredAttrib
@@ -723,7 +724,7 @@ BOOL SetMenuFont(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si cette méthode a réussi ; dans le cas contraire, `FALSE`. En mode débogage, cette méthode déclare si cette méthode est infructueuse.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode crée une police normale horizontale, une police soulignée, et une police en gras est utilisé par défaut des éléments de menu. Si vous le souhaitez, cette méthode crée une police verticale normale. Pour plus d’informations sur les polices logiques, consultez [CFont::CreateFontIndirect](../../mfc/reference/cfont-class.md#createfontindirect).  
   
 ## <a name="updatefonts"></a>AFX_GLOBAL_DATA::UpdateFonts
@@ -734,7 +735,7 @@ Réinitialise les polices logiques qui sont utilisées par l’infrastructure.
 void UpdateFonts();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur les polices logiques, consultez `CFont::CreateFontIndirect`.  
   
 ## <a name="updatesyscolors"></a>AFX_GLOBAL_DATA::UpdateSysColors

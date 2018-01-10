@@ -1,40 +1,42 @@
 ---
-title: "Comment&#160;: &#233;num&#233;rer des types de donn&#233;es dans des assemblys &#224; l&#39;aide de r&#233;flexion (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assemblys (C++)"
-  - "assemblys (C++), énumérer des types de données dans"
-  - "types de données (C++), énumérer"
-  - "membres publics (C++)"
-  - "types publics (C++)"
-  - "réflection (C++), assemblys externes"
+title: "Comment : énumérer des Types de données à l’aide de la réflexion (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- assemblies [C++], enumerating data types in
+- public types [C++]
+- reflection [C++], external assemblies
+- assemblies [C++]
+- data types [C++], enumerating
+- public members [C++]
 ms.assetid: c3578e6d-bb99-4599-80e1-ab795305f878
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 209124e6d4e8afa7930a4c74d2cce1acd7e279b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Comment&#160;: &#233;num&#233;rer des types de donn&#233;es dans des assemblys &#224; l&#39;aide de r&#233;flexion (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le code suivant illustre l'énumération de types et de membres publics à l'aide de <xref:System.Reflection>.  
+# <a name="how-to-enumerate-data-types-in-assemblies-using-reflection-ccli"></a>Comment : énumérer des types de données dans des assemblys à l'aide de réflexion (C++/CLI)
+Le code suivant illustre l’énumération des types publics et des membres à l’aide de <xref:System.Reflection>.  
   
- Une fois le nom d'un assembly spécifié, dans le répertoire local ou dans le GAC, le code suivant essaie d'ouvrir l'assembly et de récupérer des descriptions.  En cas de réussite, chaque type est affiché avec ses membres publics.  
+ Étant donné le nom d’un assembly, dans le répertoire local ou dans le GAC, le code suivant tente d’ouvrir l’assembly et de récupérer les descriptions des. En cas de réussite, chaque type est affiché avec ses membres publics.  
   
- Notez que <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> exige qu'aucune extension de fichier ne soit utilisée.  Par conséquent, l'utilisation de "mscorlib.dll" comme argument de ligne de commande échouera, alors que l'utilisation de "mscorlib" uniquement entraînera l'affichage des types .NET Framework.  Si aucun nom d'assembly n'est fourni, ce code détecte et signale les types contenus dans l'assembly actuel \(fichier EXE résultant de ce code\).  
+ Notez que <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> exige qu’aucune extension de fichier n’est utilisée. Par conséquent, à l’aide de « mscorlib.dll » comme un argument de ligne de commande échoue, tandis que l’utilisation de simplement « mscorlib » entraîne l’affichage des types .NET Framework. Si aucun nom de l’assembly n’est fourni, le code de détecter et signaler les types dans l’assembly actuel (obtenu à partir de ce code (EXE).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // self_reflection.cpp  
@@ -83,5 +85,5 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
- [Réflexion](../dotnet/reflection-cpp-cli.md)
+## <a name="see-also"></a>Voir aussi  
+ [Réflexion (C++-CLI)](../dotnet/reflection-cpp-cli.md)

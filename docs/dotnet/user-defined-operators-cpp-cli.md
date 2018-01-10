@@ -1,81 +1,82 @@
 ---
-title: "Op&#233;rateurs d&#233;finis par l&#39;utilisateur (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "opérateurs définis par l'utilisateur sous /clr"
+title: "Opérateurs définis par l’utilisateur (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b02d6806abedb407d1c53ec8022e92983ce21d28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Op&#233;rateurs d&#233;finis par l&#39;utilisateur (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les opérateurs définis par l'utilisateur pour les types managés sont autorisés en tant que membres statiques ou membres d'instance, ou au niveau de l'étendue globale.  Toutefois, seuls les opérateurs statiques sont accessibles via les métadonnées à des clients écrits dans un langage autre que Visual C\+\+.  
+# <a name="user-defined-operators-ccli"></a>Opérateurs définis par l'utilisateur (C++/CLI)
+Les opérateurs définis par l’utilisateur pour les types managés sont autorisés en tant que membres statiques ou des membres d’instance, ou dans une portée globale. Toutefois, seuls les opérateurs statiques sont accessibles via les métadonnées pour les clients qui sont écrites dans une langue autre que Visual C++.  
   
- Dans un type de référence, l'un des paramètres d'un opérateur défini par l'utilisateur statique doit être l'un des suivants :  
+ Dans un type référence, l’un des paramètres d’un opérateur défini par l’utilisateur statique doit être une de ces :  
   
--   Un descripteur \(`type` ^\) à une instance du type englobant.  
+-   Un handle (`type` ^) à une instance du type englobant.  
   
--   Une indirection de type référence \(`type`^& ou type^%\) à un handle à une instance du type englobant.  
+-   Une indirection de type référence (`type`^ & ou type ^ %) à un handle à une instance du type englobant.  
   
- Dans un type de valeur, l'un des paramètres d'un opérateur défini par l'utilisateur statique doit être l'un des suivants :  
+ Dans un type valeur, l’un des paramètres d’un opérateur défini par l’utilisateur statique doit être une de ces :  
   
--   Du même type que le type sous\-jacent.  
+-   De même type que le type englobant de valeur.  
   
--   Une indirection de type pointeur \(`type`^\) au type englobant.  
+-   Une indirection de type pointeur (`type`^) pour le type englobant.  
   
--   Une indirection de type référence \(`type`% ou `type`&\) au type englobant.  
+-   Une indirection de type référence (`type`% ou `type`&) pour le type englobant.  
   
--   Une indirection de type référence \(`type`^% ou `type`^&\) au descripteur.  
+-   Une indirection de type référence (`type`^ % ou `type`^ &) au handle.  
   
- Vous pouvez définir des opérateurs suivants :  
+ Vous pouvez définir les opérateurs suivants :  
   
-|Opérateur|Forme unaire ou binaire ?|  
-|---------------|-------------------------------|  
-|\!|Unaire|  
-|\!\=|Binaire|  
+|Opérateur|Unaire/binaire Forms ?|  
+|--------------|--------------------------|  
+|!|Unaire|  
+|!=|Binaire|  
 |%|Binaire|  
 |&|Unaire et binaire|  
 |&&|Binaire|  
-|\*|Unaire et binaire|  
-|\+|Unaire et binaire|  
-|\+\+|Unaire|  
+|*|Unaire et binaire|  
+|+|Unaire et binaire|  
+|++|Unaire|  
 |,|Binaire|  
-|\-|Unaire et binaire|  
-|\-\-|Unaire|  
-|\-\>|Unaire|  
-|\/|Binaire|  
-|\<|Binaire|  
-|\<\<|Binaire|  
-|\<\=|Binaire|  
-|\=|Binaire|  
-|\=\=|Binaire|  
-|\>|Binaire|  
-|\>\=|Binaire|  
-|\>\>|Binaire|  
+|-|Unaire et binaire|  
+|--|Unaire|  
+|->|Unaire|  
+|/|Binaire|  
+|<|Binaire|  
+|<<|Binaire|  
+|\<=|Binaire|  
+|=|Binaire|  
+|==|Binaire|  
+|>|Binaire|  
+|>=|Binaire|  
+|>>|Binaire|  
 |^|Binaire|  
-|false|Unaire|  
+|False|Unaire|  
 |true|Unaire|  
 |&#124;|Binaire|  
 |&#124;&#124;|Binaire|  
 |~|Unaire|  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // mcppv2_user-defined_operators.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -135,17 +136,20 @@ int main() {
 }  
 ```  
   
-  **\-5**  
-**\-4**  
-**\-3**  
-**\-2**  
-**\-1**  
-**\-2**  
-**\-3**   
-## Exemple  
- L'exemple suivant illustre la synthèse des opérateurs, qui est disponible uniquement lorsque vous utilisez **\/clr** pour compiler.  La synthèse d'opérateur crée la forme d'assignation d'un opérateur binaire, s'il n'est pas défini, où la partie gauche de l'opérateur d'affectation a un type CLR.  
-  
+```Output  
+-5  
+-4  
+-3  
+-2  
+-1  
+-2  
+-3  
 ```  
+  
+## <a name="example"></a>Exemple  
+ L’exemple suivant illustre la synthèse d’opérateur, qui est disponible uniquement lorsque vous utilisez **/CLR** à compiler. Synthèse d’opérateur crée le formulaire de l’attribution d’un opérateur binaire, s’il n’est défini, où le côté gauche de l’opérateur d’assignation a un type CLR.  
+  
+```cpp  
 // mcppv2_user-defined_operators_2.cpp  
 // compile with: /clr  
 ref struct A {  
@@ -165,6 +169,9 @@ int main() {
 }  
 ```  
   
-  **30**   
-## Voir aussi  
- [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+```Output  
+30  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Classes et structs](../windows/classes-and-structs-cpp-component-extensions.md)

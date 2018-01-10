@@ -18,11 +18,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7eb84d1979d3655c49e5fe089fe04d44708d16a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b7d1459da07f7e392a2da1fbf5d6e9d72c8f4653
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une longueur variable ordonné séquence d’éléments qui a un accès limité. Utilisation de l’adaptateur de conteneur `priority_queue` pour gérer un conteneur sous-jacent comme une file d’attente de priorité.  
@@ -41,7 +44,7 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Valeur  
+ Value  
  Type d'un élément dans la séquence contrôlée.  
   
  Conteneur  
@@ -89,7 +92,7 @@ template<typename Value,
 |<xref:System.ICloneable>|Dupliquer un objet.|  
 |IPriorityQueue\<valeur, le conteneur >|Mettre à jour la carte de conteneur générique.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un conteneur sous-jacent, de type `Container`, qui stocke `Value` éléments et à la demande. Il conserve la séquence ordonnée en tant que segment, avec l’élément de priorité la plus élevée (l’élément supérieur) facilement accessible et amovible. L’objet limite l’accès en exécutant un push de nouveaux éléments et dépilé simplement l’élément de priorité la plus élevée, mise en œuvre d’une file d’attente de priorité.  
   
  L’objet ordonne la séquence qu’il contrôle en appelant un objet délégué stocké de type [priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md). Vous pouvez spécifier l’objet délégué stockées lorsque vous construisez le priority_queue ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<(value_type, value_type)`. Pour accéder à cet objet stocké en appelant la fonction membre [priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`.  
@@ -116,7 +119,7 @@ template<typename Value,
   
  Par conséquent, incluent des candidats pour le conteneur sous-jacent [deque (STL/CLR)](../dotnet/deque-stl-clr.md) et [vecteur (STL/CLR)](../dotnet/vector-stl-clr.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/file d’attente >  
   
  **Namespace :** cliext  

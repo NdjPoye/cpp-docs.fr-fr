@@ -1,45 +1,43 @@
 ---
-title: "barrier | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "barrier"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "barrier OpenMP directive"
+title: cloisonnement | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: barrier
+dev_langs: C++
+helpviewer_keywords: barrier OpenMP directive
 ms.assetid: 5c73ad4f-c768-443a-8f9e-4fd8bc2253c7
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5d1e8076ecef41cf60bf34a0622ee53afb05910b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# barrier
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Synchronise tous les threads dans une équipe ; tous les threads suspendent dans le cloisonnement, jusqu'à ce que tous les threads exécutent le cloisonnement.  
+# <a name="barrier"></a>barrier
+Synchronise tous les threads dans une équipe. tous les threads suspendre au cloisonnement, jusqu'à ce que tous les threads s’exécutent le cloisonnement.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 #pragma omp barrier  
 ```  
   
-## Notes  
- La directive d' `barrier` ne prend en charge aucune clauses OpenMP.  
+## <a name="remarks"></a>Notes  
+ Le `barrier` directive prend en charge aucune clauses OpenMP.  
   
- Pour plus d'informations, consultez [2.6.3 barrier Directive](../../../parallel/openmp/2-6-3-barrier-directive.md).  
+ Pour plus d’informations, consultez [2.6.3 Directive barrier](../../../parallel/openmp/2-6-3-barrier-directive.md).  
   
-## Exemple  
- Pour un exemple d'utilisation `barrier`, consultez [master](../../../parallel/openmp/reference/master.md).  
+## <a name="example"></a>Exemple  
+ Pour obtenir un exemple montrant comment utiliser `barrier`, consultez [master](../../../parallel/openmp/reference/master.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Directives](../../../parallel/openmp/reference/openmp-directives.md)

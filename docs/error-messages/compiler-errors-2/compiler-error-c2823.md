@@ -1,36 +1,38 @@
 ---
-title: "Erreur du compilateur C2823 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2823"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2823"
+title: Erreur du compilateur C2823 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C2823
+dev_langs: C++
+helpviewer_keywords: C2823
 ms.assetid: 982b1b35-1a7c-456e-b711-f80cfe2d571e
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 84640d17479c27047919016525272ee5a87d178b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Erreur du compilateur C2823
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-modèle typedef non conforme  
+# <a name="compiler-error-c2823"></a>Erreur du compilateur C2823  
   
- Les modèles ne sont pas autorisés dans les définitions [typedef](http://msdn.microsoft.com/fr-fr/cc96cf26-ba93-4179-951e-695d1f5fdcf1).  
+> un modèle typedef non conforme  
   
- L'exemple suivant génère l'erreur C2823 :  
+Les modèles ne sont pas autorisés dans `typedef` définitions.  
   
-```  
+## <a name="example"></a>Exemple  
+  
+L’exemple suivant génère C2823 et illustre une façon de pour résoudre ce problème :  
+  
+```cpp  
 // C2823.cpp  
 template<class T>  
 typedef struct x {  

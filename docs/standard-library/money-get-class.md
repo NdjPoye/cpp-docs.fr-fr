@@ -27,11 +27,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0e5da0114c1d652e8d45d0ea157df24562da33cd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c823f6ddc688a697d82835995b2fda86a2feb44
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moneyget-class"></a>money_get, classe
 La classe de modèle décrit un objet pouvant servir de facette de paramètres régionaux pour contrôler les conversions de séquences de type `CharType` en valeurs monétaires.  
@@ -50,7 +51,7 @@ class money_get : public locale::facet;
  `InputIterator`  
  Type d'itérateur depuis lequel les fonctions get lisent leur entrée.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet statique possède une valeur stockée initiale de zéro. La première tentative d’accès à sa valeur stockée entraîne le stockage d’une valeur positive unique dans **id.**  
   
 ### <a name="constructors"></a>Constructeurs  
@@ -59,7 +60,7 @@ class money_get : public locale::facet;
 |-|-|  
 |[money_get](#money_get)|Constructeur des objets de type `money_get` utilisés pour extraire des valeurs numériques de séquences représentant des valeurs monétaires.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -74,7 +75,7 @@ class money_get : public locale::facet;
 |[do_get](#do_get)|Fonction virtuelle appelée pour extraire une valeur numérique d'une séquence de caractères représentant une valeur monétaire.|  
 |[get](#get)|Extrait une valeur numérique d'une séquence de caractères représentant une valeur monétaire.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<locale>  
   
  **Espace de noms :** std  
@@ -128,7 +129,7 @@ virtual iter_type do_get(iter_type first,
 ### <a name="return-value"></a>Valeur de retour  
  Itérateur d’entrée qui traite le premier élément au-delà du champ d’entrée monétaire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La première fonction membre protégée virtuelle tente de faire correspondre des éléments séquentiels en commençant au premier dans la séquence [ `first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée monétaire complet et non vide. En cas de réussite, elle convertit ce champ en une séquence d’un ou plusieurs chiffres décimaux, éventuellement précédée d’un signe moins ( `-`), pour représenter le montant, et elle stocke le résultat dans l’objet [string_type](#string_type) `val`. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée monétaire. Sinon, la fonction stocke une séquence vide dans `val` et définit `ios_base::failbit` dans `State`. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée monétaire valide. Dans les deux cas, si la valeur de retour est égale à `last`, la fonction définit `ios_base::eofbit` dans `State`.  
   
  La deuxième fonction membre protégée virtuelle se comporte comme la première, sauf qu’en cas de réussite elle convertit la séquence de chiffres éventuellement signée en une valeur de type `long double` et stocke cette valeur dans `val`.  
@@ -205,7 +206,7 @@ iter_type get(iter_type first,
 ### <a name="return-value"></a>Valeur de retour  
  Itérateur d’entrée qui traite le premier élément au-delà du champ d’entrée monétaire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les deux fonctions membres retournent [do_get](#do_get)`(first, last, Intl, Iosbase, State, val)`.  
   
 ### <a name="example"></a>Exemple  
@@ -298,7 +299,7 @@ explicit money_get(size_t _Refs = 0);
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le type décrit une spécialisation de la classe de modèle [basic_string](../standard-library/basic-string-class.md).  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,34 +1,33 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4731 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4731"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4731"
+title: Compilateur avertissement (niveau 1) C4731 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4731
+dev_langs: C++
+helpviewer_keywords: C4731
 ms.assetid: 5658c24c-3e6f-4505-835b-1fb92d47cab0
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9d8c59a22166c3f4f44db3bea43e241a2199009d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4731
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'pointeur' : registre de pointeur frame 'registre' modifié par le code assembleur inline  
+# <a name="compiler-warning-level-1-c4731"></a>Avertissement du compilateur (niveau 1) C4731
+'pointeur' : Registre de pointeur 'Registre' modifié par le code assembleur inline frame  
   
- Le registre d'un pointeur frame a été modifié.  Vous devez enregistrer et restaurer le registre dans votre variable bloc ou frame d'assembly inline \(local ou paramètre, suivant le registre modifié\), sinon votre code risque de ne pas fonctionner correctement.  
+ Un Registre de pointeur de frame a été modifié. Vous devez enregistrer et restaurer le Registre dans votre assembly bloc ou frame variable intégrée (locale ou un paramètre, selon le Registre modifié), ou votre code peut ne pas fonctionne correctement.  
   
- L'exemple suivant génère l'erreur C4731 :  
+ L’exemple suivant génère l’erreur C4731 :  
   
 ```  
 // C4731.cpp  
@@ -48,4 +47,4 @@ void bad(int p) {
 }  
 ```  
   
- EBP est le pointeur frame \(FPO est interdit\) et il est modifié.  Lorsque `p` est ensuite référencé, il l'est par rapport à `EBP`.  Mais `EBP` a été remplacé par le code, le programme ne fonctionnera donc pas correctement et peut même défaillir.
+ EBP est le pointeur de frame (FPO n’est pas autorisée) et il est en cours de modification. Lorsque `p` ultérieure référencée, elle est référencée relatif à `EBP`. Mais `EBP` a été remplacé par le code, afin que le programme ne fonctionnera pas correctement et peut même subir une défaillance.

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 902044e23974b882c52f5cb715d42f0fe1f2f610
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46f62b3d208d4b5822ab259614823509970b2842
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-dll-wizard"></a>DLL MFC (Assistant)
 Lorsque vous utilisez l’Assistant DLL MFC pour créer un projet DLL MFC, vous obtenez une application de démarrage du travail avec des fonctionnalités intégrées qui, lorsque compilées, implémentent les fonctionnalités de base un [DLL](../../build/dlls-in-visual-cpp.md). Le programme de démarrage MFC inclut des fichiers sources (.cpp) C++, les fichiers de ressources (.rc) et un fichier projet (.vcxproj). Le code généré dans ces fichiers de démarrage est basé sur MFC. Pour plus d’informations, consultez les détails du fichier Readme.txt généré pour votre projet dans Visual Studio, et [Classes et fonctions générées par l’Assistant DLL MFC](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  

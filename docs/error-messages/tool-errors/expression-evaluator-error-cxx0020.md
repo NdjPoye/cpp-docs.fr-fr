@@ -1,34 +1,34 @@
 ---
-title: "&#201;valuateur d&#39;expression, erreur CXX0020 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0020"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0020"
-  - "CXX0020"
+title: "Évaluateur d’expression, erreur CXX0020 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0020
+dev_langs: C++
+helpviewer_keywords:
+- CXX0020
+- CAN0020
 ms.assetid: 9dc57c25-e976-44e8-9a4e-db5a79e35bd7
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 08f1e8a3ca57cf36e695d09f10ae7796e9a0702e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# &#201;valuateur d&#39;expression, erreur CXX0020
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-types d'opérandes incorrects pour cette opération  
+# <a name="expression-evaluator-error-cxx0020"></a>Évaluateur d'expression, erreur CXX0020
+types d’opérandes incorrects pour cette opération  
   
- Un opérateur est appliqué à une expression dont le type n'est pas valide pour cet opérateur.  
+ Un opérateur est appliqué à une expression avec un type non valide pour cet opérateur.  
   
- Par exemple, il n'est pas correct de prendre l'adresse d'un registre ou d'indicer un tableau avec une expression à virgule flottante.  
+ Par exemple, il n’est pas valide pour prendre l’adresse d’un Registre ou d’indicer un tableau avec une expression à virgule flottante.  
   
- Erreur identique à CAN0020.
+ Cette erreur est identique à CAN0020.

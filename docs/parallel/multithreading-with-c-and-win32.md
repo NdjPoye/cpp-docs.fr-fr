@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e2ce9377d0ea4b2bd7b04255eb1c8099341af39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 30c7833a4df80669b6223f1fe6b1ccceed0257cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-with-c-and-win32"></a>Multithreading à l'aide de C et de Win32
 Microsoft Visual C++ prend en charge la création d’applications multithread avec Microsoft Windows : Windows XP, Windows 2000, Windows NT, Windows Millennium Edition et Windows 98. Vous devez envisager d’utiliser plusieurs threads si votre application doit gérer plusieurs activités, telles que simultanées au clavier et d’entrée de la souris. Un thread peut traiter l’entrée au clavier pendant un deuxième thread filtre les activités de la souris. Un troisième thread peut mettre à jour l’écran d’affichage en fonction des données à partir de threads de la souris et clavier. En même temps, les autres threads peuvent accéder aux fichiers de disque ou obtenir des données à partir d’un port de communication.  

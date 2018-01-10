@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3450
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3450
+f1_keywords: C3450
+dev_langs: C++
+helpviewer_keywords: C3450
 ms.assetid: 78892cf7-0b82-4589-90d0-e06666247003
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 970631a125f07e61a0923703678642e357426dc5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 90aa45cc810f8a0d7f869484216a28ea80eaf602
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3450"></a>Erreur du compilateur C3450
 'type' : n'est pas un attribut ; impossible de spécifier [System::AttributeUsageAttribute] ou [Windows::Foundation::Metadata::AttributeUsageAttribute]  

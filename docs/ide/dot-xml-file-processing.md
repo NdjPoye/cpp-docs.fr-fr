@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3a1c0ced45fc7f9c4e51a5dbe8a888c030a6b957
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b3340df4ef1d36994182e2315c8eb437e76fd4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-file-processing"></a>Traitement de fichier.Xml
 Le compilateur génère une chaîne d’ID pour chaque construction de votre code qui est marquée pour générer la documentation. Pour plus d’informations, consultez [recommandé de commentaires de Documentation balises](../ide/recommended-tags-for-documentation-comments-visual-cpp.md). La chaîne d’ID identifie de façon unique la construction. Les programmes qui traitent le fichier .xml peuvent utiliser la chaîne d’ID pour identifier le .NET Framework métadonnées ou la réflexion élément correspondant à laquelle s’applique la documentation.  

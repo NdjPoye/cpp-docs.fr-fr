@@ -20,11 +20,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a86741e9047694dda61e306afb164dc2cc2bbf98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 286a0dfa19d5d18d76dea1164d9d038667e1ef57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ptrgetinterface"></a>ptr::GetInterface
 Retourne un pointeur vers l’objet COM détenu.  
@@ -41,7 +44,7 @@ _interface_type * GetInterface();
 ## <a name="exceptions"></a>Exceptions  
  En interne, `QueryInterface` est appelée sur l’objet COM détenu et toute erreur `HRESULT` est convertie en une exception par <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `com::ptr` ajoute une référence à l’objet COM sur le nom de l’appelant et conserve également sa propre référence à l’objet COM. L’appelant doit libérer finalement la référence sur l’objet retourné ou qu’il ne sera jamais être détruit.  
   
 ## <a name="example"></a>Exemple  
@@ -165,7 +168,7 @@ int main() {
 <word>persnickety</word>  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  

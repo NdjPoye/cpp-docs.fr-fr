@@ -113,11 +113,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df627cbd062d2347539c0db26580360d80c3dd9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ecf574deed95fca6a96e8e5a5c1d1e0bebed1854
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clistbox-class"></a>CListBox (classe)
 Fournit les fonctionnalités d'une zone de liste Windows.  
@@ -188,7 +189,7 @@ class CListBox : public CWnd
 |[CListBox::SetTopIndex](#settopindex)|Définit l’index de base zéro de la première chaîne visible dans une zone de liste.|  
 |[CListBox::VKeyToItem](#vkeytoitem)|Remplacement de fournir personnalisée `WM_KEYDOWN` pour les zones de liste avec la **LBS_WANTKEYBOARDINPUT** ensemble de style.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une zone de liste affiche une liste d’éléments, tels que des noms de fichiers, l’utilisateur peut afficher et sélectionner.  
   
  Dans une zone de liste à sélection unique, l’utilisateur peut sélectionner un seul élément. Dans une zone de liste à sélection multiple, une plage d’éléments peut être sélectionnée. Lorsque l’utilisateur sélectionne un élément, il est mis en surbrillance et la zone de liste envoie un message de notification à la fenêtre parente.  
@@ -242,7 +243,7 @@ class CListBox : public CWnd
   
  `CListBox`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="addstring"></a>CListBox::AddString  
@@ -259,7 +260,7 @@ int AddString(LPCTSTR lpszItem);
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de la chaîne dans la zone de liste. La valeur de retour est **LB_ERR** si une erreur se produit ; la valeur de retour est **LB_ERRSPACE** si l’espace est insuffisant stocker la nouvelle chaîne.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si la zone de liste n’a pas été créée avec le [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) style, la chaîne est ajoutée à la fin de la liste. Sinon, la chaîne est insérée dans la liste, et la liste est triée. Si la zone de liste a été créée avec le **LBS_SORT** style mais pas les [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) style, le framework trie la liste par un ou plusieurs appels à la `CompareItem` fonction membre.  
   
  Utilisez [InsertString](#insertstring) pour insérer une chaîne dans un emplacement spécifique dans la zone de liste.  
@@ -286,7 +287,7 @@ virtual int CharToItem(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne - 1 ou - 2 pour aucune autre action ou un nombre non négatif pour spécifier un index d’un élément de zone de liste sur laquelle effectuer l’action par défaut pour la séquence de touches. L’implémentation par défaut retourne - 1.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `WM_CHARTOITEM` message est envoyé par la zone de liste lorsqu’il reçoit un `WM_CHAR` message, mais uniquement si la zone de liste répond à ces critères :  
   
 -   Est une zone de liste owner-draw.  
@@ -311,7 +312,7 @@ virtual int CharToItem(
 CListBox();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous construisez un `CListBox` objet en deux étapes. Tout d’abord, appelez le constructeur **ClistBox** , puis appelez **créer**, qui initialise la zone de liste Windows et l’attache à le `CListBox`.  
   
 ### <a name="example"></a>Exemple  
@@ -331,7 +332,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="return-value"></a>Valeur de retour  
  Indique la position relative des deux éléments décrits dans le [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) structure. Il peut être une des valeurs suivantes :  
   
-|Valeur|Signification|  
+|Value|Signification|  
 |-----------|-------------|  
 |-1|Élément 1 est trié avant l’élément 2.|  
 |0|Élément 1 et 2 de l’élément de tri identiques.|  
@@ -339,7 +340,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
   
  Consultez [CWnd::OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) pour obtenir une description de la `COMPAREITEMSTRUCT` structure.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, cette fonction membre ne fait rien. Si vous créez une zone de liste owner-draw avec les **LBS_SORT** style, vous devez substituer cette fonction membre pour vous aider à l’infrastructure de tri des nouveaux éléments ajoutés à la zone de liste.  
   
 ### <a name="example"></a>Exemple  
@@ -372,7 +373,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous construisez un `CListBox` objet en deux étapes. Tout d’abord, appelez le constructeur, puis **créer**, qui initialise la zone de liste Windows et l’attache à le `CListBox` objet.  
   
  Lorsque **créer** s’exécute, Windows envoie les [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), et [WM_ GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) messages pour le contrôle de zone de liste.  
@@ -409,7 +410,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
  `lpDeleteItemStruct`  
  Un pointeur long vers Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) structure qui contient des informations sur l’élément supprimé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation par défaut de cette fonction est sans effet. Remplacez cette fonction pour redessiner une zone de liste owner-draw en fonction des besoins.  
   
  Consultez [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) pour obtenir une description de la `DELETEITEMSTRUCT` structure.  
@@ -431,7 +432,7 @@ int DeleteString(UINT nIndex);
 ### <a name="return-value"></a>Valeur de retour  
  Nombre de chaînes restants dans la liste. La valeur de retour est **LB_ERR** si `nIndex` spécifie un index supérieur au nombre d’éléments dans la liste.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Tous les éléments qui suivent `nIndex` se déplacent vers le bas une position. Par exemple, si une zone de liste contient deux éléments, la suppression du premier élément provoquera l’élément restant à figurer dans la première position. `nIndex`= 0 pour l’élément dans la première position.  
   
 ### <a name="example"></a>Exemple  
@@ -450,7 +451,7 @@ int Dir(
  `attr`  
  Peut être n’importe quelle combinaison de la `enum` valeurs décrites dans **CFile::GetStatu**[s](../../mfc/reference/cfile-class.md#getstatus), ou n’importe quelle combinaison des valeurs suivantes :  
   
-|Valeur|Signification|  
+|Value|Signification|  
 |-----------|-------------|  
 |0x0000|Fichier peut être lu ou écrit à.|  
 |0 x 0001|Fichier puisse être lues mais ne pas écrite dans.|  
@@ -481,7 +482,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
  `lpDrawItemStruct`  
  Un pointeur long désignant un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure qui contient des informations sur le type de dessin nécessaire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le **itemAction** et **itemState** membres de le `DRAWITEMSTRUCT` structure définir l’action de dessin qui doit être effectuée.  
   
  Par défaut, cette fonction membre ne fait rien. Remplacez cette fonction membre pour implémenter le dessin pour un mode owner-draw `CListBox` objet. L’application doit restaurer tous les objets interface GDI périphérique graphique sélectionnés pour le contexte d’affichage fournie dans `lpDrawItemStruct` avant ce membre de la fonction s’arrête.  
@@ -510,7 +511,7 @@ int FindString(
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de l’élément correspondant, ou **LB_ERR** si la recherche a échoué.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez le [SelectString](#selectstring) fonction membre pour rechercher et sélectionner une chaîne.  
   
 ### <a name="example"></a>Exemple  
@@ -535,7 +536,7 @@ int FindStringExact(
 ### <a name="return-value"></a>Valeur de retour  
  L’index de l’élément correspondant, ou **LB_ERR** si la recherche a échoué.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si la zone de liste a été créée avec un style de mode owner-draw, mais sans le [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) style, la `FindStringExact` fonction membre tente de correspondre à la valeur DWORD par rapport à la valeur de `lpszFind`.  
   
 ### <a name="example"></a>Exemple  
@@ -551,7 +552,7 @@ int GetAnchorIndex() const;
 ### <a name="return-value"></a>Valeur de retour  
  L’index de l’élément d’ancrage actuelle, en cas de réussite ; dans le cas contraire **LB_ERR**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans une zone de liste à sélection multiple, l’élément d’ancrage est le premier ou au dernier élément dans un bloc d’éléments sélectionnés contiguës.  
   
 ### <a name="example"></a>Exemple  
@@ -567,7 +568,7 @@ int GetCaretIndex() const;
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de l’élément qui contient le rectangle de focus dans une zone de liste. Si la zone de liste est une zone de liste à sélection unique, la valeur de retour est l’index de l’élément est sélectionné, le cas échéant.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’élément peut ou ne peut pas être sélectionné.  
   
 ### <a name="example"></a>Exemple  
@@ -583,7 +584,7 @@ int GetCount() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’éléments dans la zone de liste, ou **LB_ERR** si une erreur se produit.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le nombre retourné est supérieure à la valeur d’index du dernier élément (l’index est de base zéro).  
   
 ### <a name="example"></a>Exemple  
@@ -601,7 +602,7 @@ int GetCurSel() const;
   
  Dans une zone de liste à sélection multiple, l’index de l’élément qui a le focus.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  N’appelez pas `GetCurSel` pour une zone de liste à sélection multiple. Utilisez [CListBox::GetSelItems](#getselitems) à la place.  
   
 ### <a name="example"></a>Exemple  
@@ -617,7 +618,7 @@ int GetHorizontalExtent() const;
 ### <a name="return-value"></a>Valeur de retour  
  La largeur de défilement de la zone de liste, en pixels.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cela s’applique uniquement si la zone de liste a une barre de défilement horizontale.  
   
 ### <a name="example"></a>Exemple  
@@ -637,7 +638,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de 32 bits associée à l’élément, ou **LB_ERR** si une erreur se produit.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La valeur DWORD était la `dwItemData` paramètre d’un [SetItemData](#setitemdata) appeler.  
   
 ### <a name="example"></a>Exemple  
@@ -709,7 +710,7 @@ DWORD GetListBoxInfo() const;
 ### <a name="return-value"></a>Valeur de retour  
  Nombre d’éléments par colonne de la `CListBox` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LB_GETLISTBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775208) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getlocale"></a>CListBox::GetLocale  
@@ -722,7 +723,7 @@ LCID GetLocale() const;
 ### <a name="return-value"></a>Valeur de retour  
  La valeur d’identificateur (LCID) de paramètres régionaux pour les chaînes dans la zone de liste.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les paramètres régionaux sont utilisé, par exemple, pour déterminer l’ordre de tri des chaînes dans une zone de liste triée.  
   
 ### <a name="example"></a>Exemple  
@@ -742,7 +743,7 @@ int GetSel(int nIndex) const;
 ### <a name="return-value"></a>Valeur de retour  
  Un nombre positif si l’élément spécifié est sélectionné ; dans le cas contraire, il est 0. La valeur de retour est `LB_ERR` si une erreur se produit.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre fonctionne avec les deux zones de liste à sélection unique et multiple.  
   
  Pour récupérer l’index de l’élément de zone de liste actuellement sélectionnées, utilisez [CListBox::GetCurSel](#getcursel).  
@@ -811,7 +812,7 @@ void GetText(
 ### <a name="return-value"></a>Valeur de retour  
  La longueur (en octets) de la chaîne, à l’exclusion du caractère null de fin. Si `nIndex` ne spécifie pas un index valide, la valeur de retour est **LB_ERR**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La deuxième forme de ce membre fonction remplit un `CString` objet avec le texte de la chaîne.  
   
 ### <a name="example"></a>Exemple  
@@ -844,7 +845,7 @@ int GetTopIndex() const;
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro du premier élément visible dans une zone de liste en cas de réussite, **LB_ERR** dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Au départ, l’élément 0 est en haut de la zone de liste, mais si le défilement de la zone de liste, un autre élément peut être en haut.  
   
 ### <a name="example"></a>Exemple  
@@ -869,7 +870,7 @@ int InitStorage(
 ### <a name="return-value"></a>Valeur de retour  
  Si réussie, le nombre maximal d’éléments que la zone de liste peut stocker une réallocation de la mémoire est nécessaire avant de **LB_ERRSPACE**, ce qui signifie que pas assez de mémoire est disponible.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction avant d’ajouter un grand nombre d’éléments à un `CListBox`.  
   
  Cette fonction permet d’accélérer l’initialisation des zones de liste qui ont un grand nombre d’éléments (plus de 100). Il pré-alloue la quantité spécifiée de mémoire suivante qui [AddString](#addstring), [InsertString](#insertstring), et [Dir](#dir) fonctions acceptent les plus brefs délais. Vous pouvez utiliser des estimations pour les paramètres. Si vous surestimer, la mémoire supplémentaire est allouée ; Si vous sous-estimez, l’allocation normale est utilisée pour les éléments qui dépassent le montant préalloué.  
@@ -898,7 +899,7 @@ int InsertString(
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de la position à laquelle la chaîne a été insérée. La valeur de retour est **LB_ERR** si une erreur se produit ; la valeur de retour est **LB_ERRSPACE** si l’espace est insuffisant stocker la nouvelle chaîne.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Contrairement à la [AddString](#addstring) fonction membre, `InsertString` n’entraîne pas une liste avec la [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) style à trier.  
   
 ### <a name="example"></a>Exemple  
@@ -923,7 +924,7 @@ UINT ItemFromPoint(
 ### <a name="return-value"></a>Valeur de retour  
  L’index de l’élément le plus proche du point spécifié dans `pt`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction vous permet de déterminer quel élément de zone de liste le curseur de la souris passe au-dessus.  
   
 ### <a name="example"></a>Exemple  
@@ -940,7 +941,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
  `lpMeasureItemStruct`  
  Un pointeur long désignant un [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) structure.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, cette fonction membre ne fait rien. Remplacez cette fonction membre et renseignez la `MEASUREITEMSTRUCT` structure pour informer Windows les dimensions de la zone de liste. Si la zone de liste est créée avec le [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) style, l’infrastructure appelle cette fonction membre pour chaque élément dans la zone de liste. Sinon, ce membre est appelé une seule fois.  
   
  Pour plus d’informations sur l’utilisation de la [LBS_OWNERDRAWFIXED](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) style dans une zone de liste owner-draw créée avec le `SubclassDlgItem` fonction membre de `CWnd`, consultez la discussion dans [14 Note technique](../../mfc/tn014-custom-controls.md).  
@@ -979,7 +980,7 @@ int SelectString(
 ### <a name="return-value"></a>Valeur de retour  
  L’index de l’élément sélectionné si la recherche a réussi. Si la recherche a échoué, la valeur de retour est **LB_ERR** et la sélection actuelle n’est pas modifiée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La zone de liste est le défilement, si nécessaire, pour afficher l’élément sélectionné dans la vue.  
   
  Cette fonction membre ne peut pas être utilisée avec une zone de liste qui a la [LBS_MULTIPLESEL](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) style.  
@@ -1014,7 +1015,7 @@ int SelItemRange(
 ### <a name="return-value"></a>Valeur de retour  
  **LB_ERR** si une erreur se produit.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette fonction membre uniquement avec les zones de liste à sélection multiple. Si vous avez besoin sélectionner un seul élément dans une zone de liste à sélection multiple : autrement dit, si `nFirstItem` est égal à `nLastItem` : appeler le [fonction membre SetSel](#setsel) fonction de membre à la place.  
   
 ### <a name="example"></a>Exemple  
@@ -1031,7 +1032,7 @@ void SetAnchorIndex(int nIndex);
  `nIndex`  
  Spécifie l’index de base zéro de l’élément de zone de liste qui sera le point d’ancrage.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans une zone de liste à sélection multiple, l’élément d’ancrage est le premier ou au dernier élément dans un bloc d’éléments sélectionnés contiguës.  
   
 ### <a name="example"></a>Exemple  
@@ -1056,7 +1057,7 @@ int SetCaretIndex(
 ### <a name="return-value"></a>Valeur de retour  
  **LB_ERR** si une erreur se produit.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si l’élément n’est pas visible, elle devient visible.  
   
 ### <a name="example"></a>Exemple  
@@ -1090,7 +1091,7 @@ int SetCurSel(int nSelect);
 ### <a name="return-value"></a>Valeur de retour  
  `LB_ERR`Si une erreur se produit.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque la nouvelle chaîne est sélectionnée, la zone de liste supprime la surbrillance de la chaîne sélectionnée précédemment.  
   
  Utilisez cette fonction membre uniquement avec les zones de liste à sélection unique.  
@@ -1111,7 +1112,7 @@ void SetHorizontalExtent(int cxExtent);
  *cxExtent*  
  Spécifie le nombre de pixels par lequel la zone de liste peut défiler horizontalement.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si la taille de la zone de liste est inférieure à cette valeur, la barre de défilement horizontale défile horizontalement les éléments dans la zone de liste. Si la zone de liste est volumineux ou supérieur à cette valeur, la barre de défilement horizontale est masquée.  
   
  Pour répondre à un appel à `SetHorizontalExtent`, la zone de liste doit être définie avec la [WS_HSCROLL](../../mfc/reference/styles-used-by-mfc.md#window-styles) style.  
@@ -1162,7 +1163,7 @@ int SetItemDataPtr(
 ### <a name="return-value"></a>Valeur de retour  
  **LB_ERR** si une erreur se produit.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ce pointeur reste valide pour la durée de vie de la zone de liste, même si la position relative de l’élément dans la zone de liste peut changer en fonction des éléments sont ajoutés ou supprimés. Par conséquent, l’index de l’élément dans la zone peut modifier, mais le pointeur reste fiable.  
   
 ### <a name="example"></a>Exemple  
@@ -1187,7 +1188,7 @@ int SetItemHeight(
 ### <a name="return-value"></a>Valeur de retour  
  **LB_ERR** si l’index ou la hauteur n’est pas valide.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si la zone de liste a le [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) style, cette fonction définit la hauteur de l’élément spécifié par `nIndex`. Sinon, cette fonction définit la hauteur de tous les éléments dans la zone de liste.  
   
 ### <a name="example"></a>Exemple  
@@ -1207,7 +1208,7 @@ LCID SetLocale(LCID nNewLocale);
 ### <a name="return-value"></a>Valeur de retour  
  La valeur d’identificateur (LCID) locale précédent pour cette zone de liste.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si **SetLocale** n’est pas appelée, la valeur par défaut aux paramètres régionaux sont obtenue à partir du système. Ce paramètres régionaux par défaut du système peut être modifiée à l’aide du panneau application régionales (ou International).  
   
 ### <a name="example"></a>Exemple  
@@ -1232,7 +1233,7 @@ int SetSel(
 ### <a name="return-value"></a>Valeur de retour  
  `LB_ERR`Si une erreur se produit.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette fonction membre uniquement avec les zones de liste à sélection multiple.  
   
  Pour sélectionner un élément dans une zone de liste à sélection unique, utilisez [CListBox::SetCurSel](#setcursel).  
@@ -1266,7 +1267,7 @@ BOOL SetTabStops(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si tous les onglets ont été définies ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour définir des taquets de tabulation à la taille par défaut de 2 unités de boîte de dialogue, appelez la version sans paramètre de cette fonction membre. Pour définir des taquets de tabulation sur une taille de 2, appelez la version avec le `cxEachStop` argument.  
   
  Pour définir des taquets de tabulation dans un tableau de taille, utilisez la version avec le `rgTabStops` et `nTabStops` arguments. Un taquet de tabulation est défini pour chaque valeur dans `rgTabStops`, jusqu’au nombre spécifié par `nTabStops`.  
@@ -1290,7 +1291,7 @@ int SetTopIndex(int nIndex);
 ### <a name="return-value"></a>Valeur de retour  
  Zéro en cas de réussite, ou **LB_ERR** si une erreur se produit.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le système fait défiler la liste jusqu'à ce que soit l’élément spécifié par `nIndex` s’affiche en haut de la liste de zone ou la plage de défilement maximal a été atteint.  
   
 ### <a name="example"></a>Exemple  
@@ -1315,7 +1316,7 @@ virtual int VKeyToItem(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne - 2 pour aucune autre action, - 1 pour l’action par défaut ou un nombre non négatif pour spécifier un index d’un élément de zone de liste sur laquelle effectuer l’action par défaut pour la séquence de touches.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `WM_VKEYTOITEM` message est envoyé par la zone de liste lorsqu’il reçoit un `WM_KEYDOWN` message, mais uniquement si la zone de liste satisfait à la fois des éléments suivants :  
   
 -   A la [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) set de style.  

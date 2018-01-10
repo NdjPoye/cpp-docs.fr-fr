@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 45a69efa4e2b78009065c218924882af92d6bd1d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f7a2b52c8a41a3689cc668846e038505425aab4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64, _mm_inserti_si64
 **Section spécifique à Microsoft**  
@@ -62,7 +63,7 @@ __m128i _mm_inserti_si64(
 ## <a name="return-value"></a>Valeur de retour  
  Un champ de 128 bits dont 64 bits inférieurs contiennent d’origine 64 bits de poids faibles de `Source1` avec le champ de bits spécifié remplacé par les bits de poids faibles `Source2`. Les 64 bits de poids supérieurs de la valeur de retour ne sont pas définis.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
@@ -71,7 +72,7 @@ __m128i _mm_inserti_si64(
   
  **Fichier d’en-tête** \<intrin.h >  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cet intrinsèque génère le `insertq` instruction pour insérer des bits de `Source2` dans `Source1`. Il existe deux versions de cette intrinsèques : `_mm_inserti_si64`, est la version immédiate, et `_mm_insert_si64` est celui non immédiate.  Chaque version extrait un champ de bits d’une longueur donnée Source2 et l’insère dans Source1.  Les extraits sont les bits de poids de Source2.  Le Source1 du champ dans lequel ces bits seront insérées est défini par la longueur et l’index de son bit le moins significatif.  Les valeurs de la longueur et les index sont extraites mod 64, par conséquent, -1 et 127 sont interprétés en tant que 63. Si la somme des index de bits (réduit) et la longueur de champ (réduit) est supérieure à 64, les résultats sont indéfinis. Une valeur égale à zéro pour la longueur de champ est interprétée comme 64.  Si l’index de longueur et les bits du champ est les deux zéro, 63:0 de bits de `Source2` sont insérées dans `Source1`.  Si la longueur de champ est égal à zéro, mais l’index de bits est différente de zéro, les résultats sont indéfinis.  
   
  Dans un appel à _mm_insert_si64, la longueur de champ est contenue dans 77:72 de bits de Source2 et de l’index dans 69:64 de bits.  

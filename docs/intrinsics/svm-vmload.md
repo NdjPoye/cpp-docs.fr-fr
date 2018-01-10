@@ -1,36 +1,35 @@
 ---
-title: "__svm_vmload | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__svm_vmload"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__svm_vmload, intrinsèque"
-  - "VMLOAD, instruction"
+title: __svm_vmload | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __svm_vmload
+dev_langs: C++
+helpviewer_keywords:
+- __svm_vmload intrinsic
+- VMLOAD instruction
 ms.assetid: b46a5592-db76-4ffc-8694-2f3494e28bed
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 458a650214ab2186f9697ca587b2b429e9cb5a6f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
-# __svm_vmload
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="svmvmload"></a>__svm_vmload
+**Section spécifique à Microsoft**  
   
- charge un sous\-ensemble d'état du processeur du bloc de contrôle spécifié d'ordinateur virtuel \(VMCB\).  
+ Charge un sous-ensemble de l’état du processeur à partir du bloc de contrôle d’ordinateur virtuel spécifié (VMCB).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void __svm_vmload(  
@@ -38,26 +37,26 @@ void __svm_vmload(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|\[in\] `VmcbPhysicalAddress`|l'adresse physique du VMCB.|  
+|[in] `VmcbPhysicalAddress`|L’adresse physique de la VMCB.|  
   
-## Notes  
- La fonction d' `__svm_vmload` équivaut à l'instruction machine d' `VMLOAD` .  cette fonction prend en charge l'interaction du moniteur d'ordinateurs virtuels d'un hôte avec un système d'exploitation invité et ses applications.  Pour plus d'informations, recherchez le document, « le volume manuel 2 du programmeur d'architectures AMD64 : programmation système, » numéro de document 24593, révision 3,11, [AMD corporation](http://go.microsoft.com/fwlink/?LinkId=23746) au site.  
+## <a name="remarks"></a>Notes  
+ Le `__svm_vmload` fonction est équivalente à la `VMLOAD` instruction machine. Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document, « de Volume manuelle AMD64 Architecture programmeur 2 : programmation du système, « numéro 24593, 3.11, de révision du document à la [corporation d’AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) site.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__svm_vmload`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## TERMINEZ le détail de Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)   
- [\_\_svm\_vmrun](../intrinsics/svm-vmrun.md)   
- [\_\_svm\_vmsave](../intrinsics/svm-vmsave.md)
+## <a name="see-also"></a>Voir aussi  
+ [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)   
+ [__svm_vmrun](../intrinsics/svm-vmrun.md)   
+ [__svm_vmsave](../intrinsics/svm-vmsave.md)

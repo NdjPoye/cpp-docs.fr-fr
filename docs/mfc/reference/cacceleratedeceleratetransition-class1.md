@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 10712925645549f637ffea343e5ab6ce4220b5e3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6251451607a31caad44e8507466c555d39847a1a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cacceleratedeceleratetransition-class"></a>CAccelerateDecelerateTransition (classe)
 Implémente une transition accélérer-ralentir.  
@@ -55,7 +56,7 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
 |[CAccelerateDecelerateTransition::m_duration](#m_duration)|La durée de la transition.|  
 |[CAccelerateDecelerateTransition::m_finalValue](#m_finalvalue)|La valeur de la variable à la fin de la transition de l’animation.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pendant une accélérer-ralentir la transition, la variable d’animation accélère et ralentit pendant la durée de la transition, se terminant à une valeur spécifiée. Vous pouvez contrôler la rapidité avec laquelle l’accélération et de décélération indépendamment, en spécifiant l’accélération différents et des ratios de décélération. Lorsque la rapidité initiale est nulle, le taux d’accélération est la fraction de la durée pendant laquelle la variable passent à l’accélération ; de même avec le taux de décélération. Si la rapidité initiale est différente de zéro, il est le moins de temps entre la rapidité qui atteint zéro et la fin de la transition. Le taux d’accélération de la décélération doivent correspondre à un maximum de 1.0. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l’aide de nouvel opérateur. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup, jusqu'à ce que puis sa valeur est NULL. La modification de variables membres après que la création de cet objet COM n’a aucun effet.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -65,7 +66,7 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
   
  `CAccelerateDecelerateTransition`   
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="cacceleratedeceleratetransition"></a>CAccelerateDecelerateTransition::CAccelerateDecelerateTransition  

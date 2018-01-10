@@ -1,46 +1,46 @@
 ---
-title: "map::operator(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::operator[]"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operatormember [] [STL/CLR]"
+title: Map::operator(STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::operator[]
+dev_langs: C++
+helpviewer_keywords: operatormember [] [STL/CLR]
 ms.assetid: 50e494c5-62d4-4469-8da3-7432ee4dff97
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d8bfbba2909c3bf8256df433294c5d52605db816
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# map::operator(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mapoperatorstlclr"></a>map::operator(STL/CLR)
 Mappe une clé à sa valeur mappée associée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 mapped_type operator[](key_type key);  
 ```  
   
-#### Paramètres  
- key  
+#### <a name="parameters"></a>Paramètres  
+ clé  
  Valeur de clé à rechercher.  
   
-## Notes  
- Les méthodes tentent de trouver un élément avec un classement équivalent à `key`.  S'il en trouve une, retourne la valeur mappée associée ; sinon, il insère `value_type(``key``, mapped_type())` et retourne la valeur mappée associée \(par défaut\).  Vous l'utilisez pour rechercher une valeur mappée étant donné sa clé associée, ou pour garantir qu'une entrée existe pour la clé si aucune n'est trouvée.  
+## <a name="remarks"></a>Notes  
+ Les fonctions membres domaines à rechercher un élément avec un classement équivalent à `key`. S’il en trouve, il retourne la valeur mappée associée ; dans le cas contraire, il insère `value_type(key, mapped_type())` et retourne les informations associé valeur mis en correspondance (valeur par défaut). Utilisez-la pour rechercher une valeur mappée en fonction de sa clé associée, ou pour vérifier qu’une entrée existe pour la clé si aucun n’est trouvé.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_map_operator_sub.cpp   
@@ -81,17 +81,20 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**c1\[A\] \= 0**  
-**c1\[b\] \= 2**  
- **\[A 0\] \[a 1\] \[b 2\] \[c 3\]**  
- **\[A 10\] \[a 1\] \[b 2\] \[c 13\]**   
-## Configuration requise  
- **En\-tête :** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+c1[A] = 0  
+c1[b] = 2  
+ [A 0] [a 1] [b 2] [c 3]  
+ [A 10] [a 1] [b 2] [c 13]  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/map >  
   
-## Voir aussi  
- [map](../dotnet/map-stl-clr.md)   
- [map::find](../dotnet/map-find-stl-clr.md)   
- [map::insert](../dotnet/map-insert-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [carte (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map::Find (STL/CLR)](../dotnet/map-find-stl-clr.md)   
+ [map::insert (STL/CLR)](../dotnet/map-insert-stl-clr.md)

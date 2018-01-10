@@ -1,66 +1,65 @@
 ---
-title: "__vmx_vmresume | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmresume"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__vmx_vmresume intrinsèque"
-  - "VMRESUME, instruction"
+title: __vmx_vmresume | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmresume
+dev_langs: C++
+helpviewer_keywords:
+- __vmx_vmresume intrinsic
+- VMRESUME instruction
 ms.assetid: 233fe1b6-c727-493a-a484-1b2363732281
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ace3bfcc5063c705346543ad3d72e96e74dd6778
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
-# __vmx_vmresume
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vmxvmresume"></a>__vmx_vmresume
 **Section spécifique à Microsoft**  
   
- Reprend l’opération non racine VMX à l’aide de la structure de contrôle de machine virtuelle actuelle \(VMCS, Virtual Machine Control Structure\).  
+ Reprend l’opération non racine VMX à l’aide de la structure de contrôle de machine virtuelle actuelle (VMCS, Virtual Machine Control Structure).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 unsigned char __vmx_vmresume(  
    void);  
 ```  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
   
-|Valeur|Signification|  
-|------------|-------------------|  
+|Value|Signification|  
+|-----------|-------------|  
 |0|L’opération a réussi.|  
 |1|L’opération a échoué avec l’état étendu disponible dans le `VM-instruction error field` de la VMCS actuelle.|  
 |2|L’opération a échoué sans état disponible.|  
   
-## Notes  
- Une application peut effectuer une opération VM\-enter à l’aide de la fonction [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md) ou `__vmx_vmresume`. La fonction `__vmx_vmlaunch` peut être utilisée seulement avec une VMCS dont l’état de lancement est `Clear`, et la fonction `__vmx_vmresume` peut être utilisée seulement avec une VMCS dont l’état de lancement est `Launched`. Par conséquent, utilisez la fonction [\_\_vmx\_vmclear](../intrinsics/vmx-vmclear.md) pour définir l’état de lancement d’une VMCS sur `Clear`, puis utilisez la fonction `__vmx_vmlaunch` pour votre première opération VM\-enter et la fonction `__vmx_vmresume` pour les opérations VM\-enter ultérieures.  
+## <a name="remarks"></a>Notes  
+ Une application peut effectuer une opération VM-enter à l’aide de la fonction [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) ou `__vmx_vmresume` . La fonction `__vmx_vmlaunch` peut être utilisée seulement avec une VMCS dont l’état de lancement est `Clear`, et la fonction `__vmx_vmresume` peut être utilisée seulement avec une VMCS dont l’état de lancement est `Launched`. Par conséquent, utilisez la fonction [__vmx_vmclear](../intrinsics/vmx-vmclear.md) pour définir l’état de lancement d’une VMCS sur `Clear`, puis utilisez la fonction `__vmx_vmlaunch` pour votre première opération VM-enter et la fonction `__vmx_vmresume` pour les opérations VM-enter ultérieures.  
   
- La fonction `__vmx_vmresume` est équivalente à l’instruction machine `VMRESUME`. Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document PDF « Intel Virtualization Technical Specification for the IA\-32 Intel Architecture », dont le numéro de document est C97063\-002, sur le site d’[Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127).  
+ La fonction `__vmx_vmresume` est équivalente à l’instruction machine `VMRESUME` . Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document PDF « Intel virtualisation technique spécification pour l’Architecture IA-32 Intel, » document numéro est C97063-002, sur le [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__vmx_vmresume`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d’en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## FIN de la section spécifique à Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md)   
- [\_\_vmx\_vmclear](../intrinsics/vmx-vmclear.md)
+## <a name="see-also"></a>Voir aussi  
+ [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)   
+ [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)   
+ [__vmx_vmclear](../intrinsics/vmx-vmclear.md)

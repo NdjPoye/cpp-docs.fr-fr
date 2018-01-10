@@ -1,68 +1,70 @@
 ---
-title: "Proc&#233;dure pas &#224; pas&#160;: g&#233;n&#233;ration d’un projet (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "générer des projets [C++]"
-  - "projets [C++], générer"
-  - "génération de projets [C++]"
+title: "Procédure pas à pas : Création d’un projet (C++) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- building projects [C++]
+- projects [C++], building
+- project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 65d7a4bf7e4b3fd519911a2a127ec0ac2723b630
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Proc&#233;dure pas &#224; pas&#160;: g&#233;n&#233;ration d’un projet (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dans cette procédure pas à pas, vous introduisez délibérément une erreur de syntaxe Visual C\+\+ dans votre code pour apprendre à reconnaître une erreur de compilation et à la résoudre.  Lorsque vous compilez le projet, un message d'erreur indique en quoi consiste le problème et l'endroit où il s'est produit.  
+# <a name="walkthrough-building-a-project-c"></a>Procédure pas à pas : génération d’un projet (C++)
+Dans cette procédure pas à pas, vous introduisez délibérément une erreur de syntaxe Visual C++ dans votre code pour apprendre à reconnaître une erreur de compilation et à la résoudre. Lorsque vous compilez le projet, un message d'erreur indique en quoi consiste le problème et l'endroit où il s'est produit.  
   
-## Composants requis  
+## <a name="prerequisites"></a>Prérequis  
   
--   Cette procédure pas à pas part du principe que vous comprenez les notions de base du langage C\+\+.  
+-   Cette procédure pas à pas part du principe que vous comprenez les notions de base du langage C++.  
   
--   Elle suppose également que vous avez effectué les procédures pas à pas connexes précédentes répertoriées dans [Utilisation de l'IDE de Visual Studio pour le développement de bureau C\+\+](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+-   Il suppose également que vous avez effectué les procédures plus haut connexes qui sont répertoriés dans [à l’aide de l’IDE de Visual Studio pour le développement de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
-### Pour résoudre les erreurs de compilation  
+### <a name="to-fix-compilation-errors"></a>Pour résoudre les erreurs de compilation  
   
-1.  Dans TestGames.cpp, supprimez le point\-virgule de la dernière ligne pour obtenir ce qui suit :  
+1.  Dans TestGames.cpp, supprimez le point-virgule de la dernière ligne pour obtenir ce qui suit :  
   
      `return 0`  
   
 2.  Dans la barre de menus, choisissez **Générer**, puis **Générer la solution**.  
   
-3.  Un message dans la fenêtre **Liste d'erreurs** indique qu'une erreur s'est produite lors de la génération du projet.  La description ressemble à ceci :  
+3.  Un message dans le **liste d’erreurs** fenêtre indique qu’il existe une erreur dans la génération du projet. La description ressemble à ceci :  
   
      `error C2143: syntax error : missing ';' before '}'`  
   
-     Pour afficher l'aide concernant cette erreur, sélectionnez\-la dans la fenêtre **Liste d'erreurs** et appuyez sur la touche F1.  
+     Pour afficher les informations d’aide sur cette erreur, mettez en surbrillance dans le **liste d’erreurs** fenêtre, puis sur la touche F1.  
   
-4.  Replacez le point\-virgule à la fin de la ligne où se situe l'erreur de syntaxe :  
+4.  Replacez le point-virgule à la fin de la ligne où se situe l'erreur de syntaxe :  
   
      `return 0;`  
   
 5.  Dans la barre de menus, choisissez **Générer**, puis **Générer la solution**.  
   
-     Un message dans la fenêtre **Sortie** indique que le projet a été compilé avec succès.  
+     Un message dans le **sortie** fenêtre indique que le projet a été compilé avec succès.  
   
-  **1\>\-\-\-\-\-\- Génération démarrée : Projet : Game, Configuration : Débogage Win32 \-\-\-\-\-\-**  
-**1\>  TestGames.cpp**  
-**1\>  Game.vcxproj \-\> C:\\Users\\\<username\>\\Documents\\Visual Studio *\<version\>*\\Projects\\Game\\Debug\\Game.exe**  
-**\=\=\=\=\=\=\=\=\=\= Génération : 1 a réussi, 0 a échoué, 0 mis à jour, 0 a été ignoré \=\=\=\=\=\=\=\=\=\=**  
+    ```Output  
+    1>------ Build started: Project: Game, Configuration: Debug Win32 ------  
+    1>  TestGames.cpp  
+    1>  Game.vcxproj -> C:\Users\<username>\Documents\Visual Studio <version>\Projects\Game\Debug\Game.exe  
+    ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========  
+    ```  
   
-## Étapes suivantes  
- **Précédent :** [Procédure pas à pas : utilisation de projets et de solutions \(C\+\+\)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) &#124; **Suivant :** [Procédure pas à pas : test d'un projet \(C\+\+\)](../ide/walkthrough-testing-a-project-cpp.md)  
+## <a name="next-steps"></a>Étapes suivantes  
+ **Précédente :** [procédure pas à pas : utilisation de projets et Solutions (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) &#124; **Suivant :**[procédure pas à pas : test d’un projet (C++)](../ide/walkthrough-testing-a-project-cpp.md)  
   
-## Voir aussi  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/fr-fr/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [DELETE\_PENDING\_Building and Debugging](http://msdn.microsoft.com/fr-fr/9f6ba537-5ea0-46fb-b6ba-b63d657d84f1)
+## <a name="see-also"></a>Voir aussi  
+ [Référence du langage C++](../cpp/cpp-language-reference.md)   
+ [Génération de programmes C/C++](../build/building-c-cpp-programs.md)

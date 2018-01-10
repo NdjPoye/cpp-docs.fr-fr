@@ -37,11 +37,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 657483c85c8b2f03d4a78e76cdc28a5dfff496e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32413fe7939b5e5d5d3d41bf32a923dd308f0395
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccmdui-class"></a>CCmdUI (classe)
 Est utilisé uniquement dans un `ON_UPDATE_COMMAND_UI` gestionnaire dans un `CCmdTarget`-classe dérivée.  
@@ -74,7 +75,7 @@ class CCmdUI
 |[CCmdUI::m_pOther](#m_pother)|Pointe vers l’objet de fenêtre qui a envoyé la notification.|  
 |[CCmdUI::m_pSubMenu](#m_psubmenu)|Pointe vers le sous-menu contenu représenté par le `CCmdUI` objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CCmdUI`ne dispose pas d’une classe de base.  
   
  Lorsqu’un utilisateur de votre application extrait un menu, chaque élément de menu doit savoir si elle doit être affiché comme activé ou désactivé. La cible d’une commande de menu fournit ces informations en implémentant un `ON_UPDATE_COMMAND_UI` gestionnaire. Pour chacun des objets d’interface utilisateur de commande dans votre application, utilisez la fenêtre Propriétés pour créer un prototype d’entrée et de la fonction table des messages pour chaque gestionnaire.  
@@ -98,7 +99,7 @@ class CCmdUI
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CCmdUI`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="continuerouting"></a>CCmdUI::ContinueRouting  
@@ -108,7 +109,7 @@ class CCmdUI
 void ContinueRouting();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il s’agit d’une fonction membre avancée qui doit être utilisée conjointement avec un `ON_COMMAND_EX` gestionnaire retourne **FALSE**. Pour plus d’informations, consultez [Technical Note 6](../../mfc/tn006-message-maps.md).  
   
 ##  <a name="enable"></a>CCmdUI::Enable  
@@ -148,7 +149,7 @@ UINT m_nIndex;
 CMenu* m_pMenu;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  **NULL** si l’élément n’est pas un menu.  
   
 ##  <a name="m_psubmenu"></a>CCmdUI::m_pSubMenu  
@@ -158,7 +159,7 @@ CMenu* m_pMenu;
 CMenu* m_pSubMenu;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  **NULL** si l’élément n’est pas un menu. Si le sous-menu est une fenêtre contextuelle, `m_nID` contient l’ID du premier élément dans le menu contextuel. Pour plus d’informations, consultez [Note technique 21](../../mfc/tn021-command-and-message-routing.md).  
   
 ##  <a name="m_pother"></a>CCmdUI::m_pOther  
@@ -168,7 +169,7 @@ CMenu* m_pSubMenu;
 CWnd* m_pOther;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  **NULL** si l’élément est un menu ou non - `CWnd` objet.  
   
 ##  <a name="setcheck"></a>CCmdUI::SetCheck  
@@ -182,7 +183,7 @@ virtual void SetCheck(int nCheck = 1);
  `nCheck`  
  Spécifie l’état de la vérification à définir. Si 0, désactive ; Si 1, les contrôles ; et si le 2 définit indéterminé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre fonctionne pour les éléments de menu et boutons de barre d’outils. L’état indéterminé s’applique uniquement aux boutons de barre d’outils.  
   
 ##  <a name="setradio"></a>CCmdUI::SetRadio  
@@ -196,7 +197,7 @@ virtual void SetRadio(BOOL bOn = TRUE);
  `bOn`  
  **TRUE** pour activer l’élément ; sinon **FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre fonctionne comme `SetCheck`, à ceci près qu’elle fonctionne sur les éléments d’interface utilisateur qui agit en tant que partie d’un groupe de cases d’option. Si vous décochez les autres éléments dans le groupe n’est pas automatique, sauf si les éléments proprement dits préserver le comportement de groupe de cases d’option.  
   
 ##  <a name="settext"></a>CCmdUI::SetText  

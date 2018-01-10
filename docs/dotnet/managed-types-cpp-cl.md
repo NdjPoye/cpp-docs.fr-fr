@@ -16,11 +16,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 058c2c2c2c8c54a0c4c7d290326c4af453c73d05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9e7bbd9687c3cc696b35e0284d55a18f59c898cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managed-types-ccl"></a>Types managés (C++/CL)
 La syntaxe de la déclaration des types managés et à créer et utiliser des objets de ces types a été sensiblement modifiée entre les Extensions managées pour C++ vers Visual C++. Cela a été fait pour favoriser leur intégration dans le système de type ISO-C++. Ces modifications sont présentées en détail dans les sous-sections suivantes.  

@@ -24,11 +24,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04478094ec318073567e603f1e96664b08a36d6d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ac2285eb0a140a942a42c7543d458172bcf890f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte, __addfsword, __addfsdword
 **Section spécifique à Microsoft**  
@@ -59,7 +60,7 @@ void __addfsdword(
  [in] `Data`  
  Valeur à ajouter à l’emplacement de mémoire.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
@@ -67,7 +68,7 @@ void __addfsdword(
 |`__addfsword`|x86|  
 |`__addfsdword`|x86|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Ces routines sont disponibles seulement comme fonctions intrinsèques.  
   
 **FIN de la section spécifique à Microsoft**  

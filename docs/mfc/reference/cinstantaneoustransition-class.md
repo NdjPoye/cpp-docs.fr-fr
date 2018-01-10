@@ -23,11 +23,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dc0d7caba256128026b186e0cbc5dcaf510da511
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ffd06fe8c9b6f10c853cbc407d6558b95934b1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cinstantaneoustransition-class"></a>CInstantaneousTransition, classe
 Encapsule une transition instantanée.  
@@ -58,7 +59,7 @@ class CInstantaneousTransition : public CBaseTransition;
 |----------|-----------------|  
 |[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|La valeur de la variable à la fin de la transition de l’animation.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pendant une transition instantanée, la valeur de la variable d’animation change instantanément à partir de sa valeur actuelle à une valeur finale spécifiée. La durée de cette transition est toujours zéro. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l’aide de nouvel opérateur. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup, jusqu'à ce que puis sa valeur est NULL. La modification de variables membres après que la création de cet objet COM n’a aucun effet.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -68,7 +69,7 @@ class CInstantaneousTransition : public CBaseTransition;
   
  [CInstantaneousTransition](../../mfc/reference/cinstantaneoustransition-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="cinstantaneoustransition"></a>CInstantaneousTransition::CInstantaneousTransition  

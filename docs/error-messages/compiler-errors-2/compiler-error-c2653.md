@@ -1,61 +1,66 @@
 ---
 title: Erreur du compilateur C2653 | Documents Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2653
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2653
+f1_keywords: C2653
+dev_langs: C++
+helpviewer_keywords: C2653
 ms.assetid: 3f49e731-affd-43a0-a8d0-181db7650bc3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3f18e3d6210c5d9b9aba4fdfaab296a01d32b6d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: cc7990614283a20e9d07f52187258dbccad7c075
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2653"></a>Erreur du compilateur C2653
-'identificateur' : n’est pas un nom de classe ou espace de noms  
-  
-Syntaxe requiert un nom de classe, structure, union ou espace de noms.  
-  
-L’exemple suivant génère l’erreur C2653 :  
-  
-```cpp  
-// C2653.cpp  
-// compile with: /c  
-class yy {  
-   void func1(int i);  
-};  
-  
-void xx::func1(int m) {}   // C2653  
-void yy::func1(int m) {}   // OK  
-```  
-  
-C2653 est également possible si vous essayez de définir un *espace de noms composé*, un espace de noms qui contient un ou plusieurs noms d’espace de noms imbriqué à l’étendue, lorsque vous utilisez une version de Visual C++ avant Visual Studio 2015 Update 3. Compound, espace de noms définitions ne sont pas autorisées en C++ avant C ++ 17. À partir de Visual C++ 2015 Update 3, le compilateur prend en charge les définitions de l’espace de noms composé lorsque le [/std : c ++ dernière](../../build/reference/std-specify-language-standard-version.md) option du compilateur est spécifiée :  
-```cpp  
-// C2653b.cpp  
-namespace a::b {int i;}   // C2653 prior to Visual C++ 2015 Update 3,  
-                          // C2429 thereafter. Use /std:c++latest to fix.
-namespace a {  
-   namespace b {  
-      int i;  
-   }  
-}  
-  
-int main() {  
-   a::b::i = 2;  
-}  
-```  
+
+> '*identificateur*' : n’est pas un nom de classe ou espace de noms
+
+La syntaxe du langage requiert un nom de classe, structure, union ou espace de noms ici.
+
+Cette erreur peut se produire lorsque vous utilisez un nom qui n’a pas été déclaré en tant que classe, structure, union ou espace de noms devant un opérateur de portée. Pour résoudre ce problème, déclarez le nom ou inclure l’en-tête qui déclare le nom avant de les utiliser.
+
+C2653 est également possible si vous essayez de définir un *espace de noms composé*, un espace de noms qui contient un ou plusieurs noms d’espace de noms imbriqué à l’étendue. Compound, espace de noms définitions ne sont pas autorisées en C++ avant C ++ 17. Espaces de noms composés sont pris en charge depuis Visual Studio 2015 Update 3 lorsque vous spécifiez la [/std : c ++ dernière](../../build/reference/std-specify-language-standard-version.md) option du compilateur. À partir de Visual C++ 2017 version 15.5, le compilateur prend en charge les définitions de l’espace de noms composé lorsque le [/std : c ++ 17](../../build/reference/std-specify-language-standard-version.md) option est spécifiée.
+
+## <a name="examples"></a>Exemples
+
+Cet exemple génère l’erreur C2653, car un nom de l’étendue est utilisé mais non déclaré. Le compilateur attend un nom de classe, structure, union ou espace de noms avant un opérateur de portée ( :).
+
+```cpp
+// C2653.cpp
+// compile with: /c
+class yy {
+   void func1(int i);
+};
+
+void xx::func1(int m) {}   // C2653, xx is not declared
+void yy::func1(int m) {}   // OK
+```
+
+Dans le code qui n’est pas compilé pour C ++ 17 ou normes ultérieures, espaces de noms imbriqués doivent utiliser une déclaration d’espace de noms explicite à chaque niveau d’imbrication :
+
+```cpp
+// C2653b.cpp
+namespace a::b {int i;}   // C2653 prior to Visual C++ 2015 Update 3,
+                          // C2429 thereafter. Use /std:c++17 or /std:c++latest to fix.
+
+namespace a {             // Use this form for compliant code under /std:c++14 (the default)
+   namespace b {          // or when using compilers before Visual Studio 2015 update 3.
+      int i;
+   }
+}
+
+int main() {
+   a::b::i = 2;
+}
+```

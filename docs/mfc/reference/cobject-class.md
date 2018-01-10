@@ -31,11 +31,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 170a6db8bfbba83722f9649c52d7a7e3d65761ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0384392d42196e4365c59670537819435ce1e45
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cobject-class"></a>CObject (classe)
 Classe de base principale pour la bibliothèque MFC (Microsoft Foundation Class).  
@@ -72,7 +73,7 @@ class AFX_NOVTABLE CObject
 |[Suppression de CObject::operator](#operator_delete)|Spécial **supprimer** opérateur.|  
 |[CObject::operator nouveau](#operator_new)|Spécial **nouveau** opérateur.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Elle sert de racine non seulement pour les classes de bibliothèque, tel que `CFile` et `CObList`, mais également pour les classes que vous écrivez. `CObject`Fournit des services de base, y compris  
   
 -   Prise en charge de la sérialisation  
@@ -96,7 +97,7 @@ class AFX_NOVTABLE CObject
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CObject`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h  
   
 ##  <a name="assertvalid"></a>CObject::AssertValid  
@@ -106,7 +107,7 @@ class AFX_NOVTABLE CObject
 virtual void AssertValid() const;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `AssertValid`effectue une vérification de validité sur cet objet en vérifiant son état interne. Dans la version Debug de la bibliothèque, `AssertValid` peut déclarer et donc fin avec un message qui répertorie le numéro de ligne et le nom de fichier où l’assertion a échoué.  
   
  Lorsque vous écrivez votre propre classe, vous devez substituer la `AssertValid` fonction pour fournir des services de diagnostic pour vous-même et d’autres utilisateurs de votre classe. Le substituée `AssertValid` appelle généralement la `AssertValid` fonction de sa classe de base avant de rechercher des membres de données uniques à la classe dérivée.  
@@ -134,7 +135,7 @@ CObject(const CObject& objectSrc);
  *objectSrc*  
  Une référence à un autre`CObject`  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La version par défaut est automatiquement appelée par le constructeur de votre classe dérivée.  
   
  Si votre classe est sérialisable (il intègre le `IMPLEMENT_SERIAL` (macro)), doit disposer d’un constructeur par défaut (un constructeur sans arguments) dans votre déclaration de classe. Si vous n’avez pas besoin d’un constructeur par défaut, déclarez privée ou protégée constructeur « vide ». Pour plus d’informations, consultez [à l’aide de CObject](../../mfc/using-cobject.md).  
@@ -157,7 +158,7 @@ virtual void Dump(CDumpContext& dc) const;
  `dc`  
  Le contexte de dump de diagnostic pour le vidage, généralement `afxDump`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque vous écrivez votre propre classe, vous devez substituer la `Dump` fonction pour fournir des services de diagnostic pour vous-même et d’autres utilisateurs de votre classe. Le substituée `Dump` appelle généralement la `Dump` fonction de sa classe de base avant d’imprimer des membres de données uniques à la classe dérivée. `CObject::Dump`Imprime le nom de classe si votre classe utilise le `IMPLEMENT_DYNAMIC` ou `IMPLEMENT_SERIAL` (macro).  
   
 > [!NOTE]
@@ -186,7 +187,7 @@ virtual CRuntimeClass* GetRuntimeClass() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) structure correspondant à cette classe de l’objet ; jamais **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il y a un `CRuntimeClass` structure pour chaque `CObject`-classe dérivée. Les membres de structure sont les suivantes :  
   
 - **LPCSTR m_lpszClassName** une chaîne terminée par le caractère null qui contient le nom de classe ASCII.  
@@ -222,7 +223,7 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’objet correspond à la classe ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction teste `pClass` si (1) il s’agit d’un objet de la classe spécifiée ou (2) il s’agit d’un objet d’une classe dérivée de la classe spécifiée. Cette fonction fonctionne uniquement pour les classes déclarées avec le [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic), [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate), ou [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) (macro).  
   
  N’utilisez pas cette fonction largement car elle occulte la fonctionnalité de polymorphisme C++. Utilisez à la place des fonctions virtuelles.  
@@ -242,7 +243,7 @@ BOOL IsSerializable() const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si cet objet peut être sérialisé ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour une classe soit sérialisable, sa déclaration doit contenir le [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) (macro) et l’implémentation doivent contenir le [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) (macro).  
   
 > [!NOTE]
@@ -271,7 +272,7 @@ void PASCAL operator delete(
     int nLine);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans la version Debug, opérateur **supprimer** fait partie d’un schéma d’analyse de répartition conçu pour détecter les fuites de mémoire.  
   
  Si vous utilisez la ligne de code  
@@ -303,7 +304,7 @@ void* PASCAL operator new(
     int nLine);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans la version Debug, opérateur **nouveau** fait partie d’un schéma d’analyse de répartition conçu pour détecter les fuites de mémoire.  
   
  Si vous utilisez la ligne de code  
@@ -333,7 +334,7 @@ virtual void Serialize(CArchive& ar);
  `ar`  
  A `CArchive` objet à sérialiser vers ou depuis.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez substituer `Serialize` pour chaque classe que vous souhaitez sérialiser. Le substituée `Serialize` doit d’abord appeler la `Serialize` fonction de sa classe de base.  
   
  Vous devez également utiliser le [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) macro dans votre déclaration de classe et vous devez utiliser le [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) macro dans l’implémentation.  

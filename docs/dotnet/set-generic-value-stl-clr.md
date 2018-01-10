@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68fd5a411d5cb962852b0d00a385485463473e9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b00197812b2f68c5bbc4d2b76d84c77235d6f458
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setgenericvalue-stlclr"></a>set::generic_value (STL/CLR)
 Le type d’un élément pour une utilisation avec l’interface générique pour le conteneur.  
@@ -30,7 +33,7 @@ Le type d’un élément pour une utilisation avec l’interface générique pou
 typedef GValue generic_value;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le type décrit un objet de type `GValue` qui décrit la valeur de l’élément stocké pour une utilisation avec l’interface générique pour cette classe de conteneur de modèle.  
   
 ## <a name="example"></a>Exemple  
@@ -74,7 +77,7 @@ a b c
 a  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/set >  
   
  **Namespace :** cliext  

@@ -11,13 +11,14 @@ ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6e765fedb127d07c08622b784018399f3bdfef45
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5280b4940c2a52fc6e72b397300040ca4c1ac92e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="change-signature"></a>Changement de Signature
+# <a name="change-signature"></a>Changer la signature
 **Ce que :** vous permet de modifier les paramètres d’une fonction.
 
 **Quand :** vous souhaitez réorganiser, ajouter, supprimer ou modifier les paramètres d’une fonction qui est actuellement utilisé dans différents emplacements.  
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/24/2017
    | Entrée | Description
    | ----- | ---
    | **Type**               | Le type du paramètre (int, double, float, etc..)
-   | **Nom**               | Le nom du paramètre
+   | **Name**               | Le nom du paramètre
    | **Paramètre facultatif** | Rend le paramètre éventuellement spécifié
    | **Valeur injecté**     | La valeur insérée dans tous les appels à la fonction dans laquelle le paramètre n’est pas spécifié (valide uniquement pour **ajouter**)
    | **Valeur par défaut**      | La valeur utilisée par la fonction si l’appelant ne spécifie pas une (valide uniquement pour **paramètres facultatifs**)

@@ -1,32 +1,33 @@
 ---
-title: "priority_queue::priority_queue (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::priority_queue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "priority_queue (membre) (STL/CLR)"
+title: priority_queue::priority_queue (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::priority_queue
+dev_langs: C++
+helpviewer_keywords: priority_queue member [STL/CLR]
 ms.assetid: aab423d7-959e-48fd-9028-e9f45f43cb8a
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 03d0054f3c755c3dd6e4bd653c972a0f7aa6735d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::priority_queue (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Construit un objet d'adaptateur de conteneur.  
+# <a name="priorityqueuepriorityqueue-stlclr"></a>priority_queue::priority_queue (STL/CLR)
+Construit un objet d’adaptateur de conteneur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 priority_queue();  
@@ -44,84 +45,74 @@ template<typename InIt>
         value_compare^ pred, container_type% cont);  
 ```  
   
-#### Paramètres  
- cont  
+#### <a name="parameters"></a>Paramètres  
+ suite  
  Conteneur à copier.  
   
- first  
+ premier  
  Début de la plage à insérer.  
   
  last  
  Fin de la plage à insérer.  
   
  pred  
- Classer l'attribut de la séquence contrôlée.  
+ Classement de prédicat pour la séquence contrôlée.  
   
- right  
+ droite  
  Objet ou plage à insérer.  
   
-## Notes  
- Le constructeur :  
+## <a name="remarks"></a>Notes  
+ Le constructeur :  
   
  `priority_queue();`  
   
- crée un conteneur vide, avec le prédicat d'ordre par défaut.  Vous l'utilisez pour spécifier une séquence initiale contrôlée vide, avec le prédicat de classement par défaut.  
+ Crée un conteneur vide encapsulé, avec la valeur par défaut de classement de prédicat. Il permet de spécifier une séquence contrôlée initiale vide avec la valeur par défaut de classement de prédicat.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `priority_queue(priority_queue<Value, Container>% right);`  
   
- crée un conteneur encapsulé qui est une copie de `right.get_container()`, avec l'attribut `right.value_comp()`.  Vous l'utilisez pour spécifier une séquence initiale contrôlée qui est une copie de la séquence contrôlée par l'objet queue `right`, avec le même prédicat de classement.  
+ Crée un conteneur encapsulé est une copie de `right.get_container()`, avec le prédicat de tri `right.value_comp()`. Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet de file d’attente `right`, avec le même classement.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `priority_queue(priority_queue<Value, Container>^ right);`  
   
- crée un conteneur encapsulé qui est une copie de `right->get_container()`, avec l'attribut `right->value_comp()`.  Vous l'utilisez pour spécifier une séquence initiale contrôlée qui est une copie de la séquence contrôlée par l'objet queue `*right`, avec le même prédicat de classement.  
+ Crée un conteneur encapsulé est une copie de `right->get_container()`, avec le prédicat de tri `right->value_comp()`. Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet de file d’attente `*right`, avec le même classement.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `explicit priority_queue(value_compare^ pred);`  
   
- crée un conteneur vide, avec le prédicat d'ordre `pred`.  Vous l'utilisez pour spécifier une séquence initiale contrôlée vide, avec le prédicat de classement spécifié.  
+ Crée un conteneur vide encapsulé, avec le prédicat de tri `pred`. Il permet de spécifier une séquence contrôlée initiale vide avec le prédicat de tri spécifié.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `priority_queue(value_compare^ pred, container_type cont);`  
   
- crée un conteneur vide, avec le prédicat d'ordre `pred`, puis met tous les éléments de `cont`. Vous l'utilisez pour spécifier une séquence contrôlée d'un conteneur existant, avec l'attribut spécifié.  
+ Crée un conteneur vide encapsulé, avec le prédicat de tri `pred`, puis transmet tous les éléments de `cont` il permet de spécifier une séquence contrôlée initiale à partir d’un conteneur existant, avec le prédicat de tri spécifié.  
   
- Le constructeur :  
+ Le constructeur :  
   
- `template<typename InIt>`  
+ `template<typename InIt> priority_queue(InIt first, InIt last);`  
   
- `priority_queue(InIt first, InIt last);`  
+ Crée un conteneur vide encapsulé, avec le prédicat de tri par défaut, puis exécute un push de la séquence [`first`, `last`). Il permet de spécifier une séquence contrôlée initiale à partir d’un eqeuence spécifié, avec le prédicat de tri spécifié.  
   
- crée un conteneur vide, inclus avec l'attribut par défaut, puis donne la séquence `[``first``,` `last``)`.  Vous l'utilisez pour spécifier une séquence contrôlée initiale d'une séquence spécifiée, avec l'attribut spécifié.  
+ Le constructeur :  
   
- Le constructeur :  
+ `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred);`  
   
- `template<typename InIt>`  
+ Crée un conteneur vide encapsulé, avec le prédicat de tri `pred`, puis exécute un push de la séquence [`first`, `last`). Il permet de spécifier une séquence contrôlée initiale à partir d’un seqeuence spécifié, avec le prédicat de tri spécifié.  
   
- `priority_queue(InIt first, InIt last,`  
+ Le constructeur :  
   
- `value_compare^ pred);`  
+ `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred, container_type% cont);`  
   
- crée un conteneur vide, inclus avec l'attribut par défaut `pred`, puis donne la séquence `[``first``,` `last``)`.  Vous l'utilisez pour spécifier une séquence contrôlée initiale d'une séquence spécifiée, avec l'attribut spécifié.  
+ Crée un conteneur vide encapsulé, avec le prédicat de tri `pred`, puis transmet tous les éléments de `cont` ainsi que la séquence [`first`, `last`). Il permet de spécifier une séquence contrôlée initiale à partir d’un conteneur existant et un seqeuence spécifié, avec le prédicat de tri spécifié.  
   
- Le constructeur :  
+## <a name="example"></a>Exemple  
   
- `template<typename InIt>`  
-  
- `priority_queue(InIt first, InIt last,`  
-  
- `value_compare^ pred, container_type% cont);`  
-  
- crée un conteneur vide, inclus avec l'attribut d'ordre `pred`, puis met tous les éléments de `cont` et la séquence `[``first``,` `last``)`.  Vous l'utilisez pour spécifier une séquence contrôlée initial d'un conteneur existant et un seqeuence spécifié, avec l'attribut d'ordre spécifié.  
-  
-## Exemple  
-  
-```  
+```cpp  
 // cliext_priority_queue_construct.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -204,24 +195,27 @@ int main()
   
 ```  
   
-  **taille\(\) \= 0**  
- **c a b**  
-**taille\(\) \= 0**  
- **a c b**  
- **a c b**  
- **c a b**  
- **a c b**  
- **un b c b c**  
- **c a b**  
- **c a b**  
- **a c b**   
-## Configuration requise  
- **En\-tête :** \<cliext\/queue\>  
+```Output  
+size() = 0  
+ c a b  
+size() = 0  
+ a c b  
+ a c b  
+ c a b  
+ a c b  
+ a a b c c b  
+ c a b  
+ c a b  
+ a c b  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/file d’attente >  
   
-## Voir aussi  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::assign](../dotnet/priority-queue-assign-stl-clr.md)   
- [priority\_queue::generic\_container](../dotnet/priority-queue-generic-container-stl-clr.md)   
- [priority\_queue::operator\=](../dotnet/priority-queue-operator-assign-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::Assign (STL/CLR)](../dotnet/priority-queue-assign-stl-clr.md)   
+ [priority_queue::generic_container (STL/CLR)](../dotnet/priority-queue-generic-container-stl-clr.md)   
+ [priority_queue::operator= (STL/CLR)](../dotnet/priority-queue-operator-assign-stl-clr.md)

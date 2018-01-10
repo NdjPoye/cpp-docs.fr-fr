@@ -1,29 +1,28 @@
 ---
-title: "Erreur irr&#233;cup&#233;rable RC1102 du compilateur de ressources  | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC1102"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC1102"
+title: "Erreur irrécupérable RC1102 du compilateur de ressources | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC1102
+dev_langs: C++
+helpviewer_keywords: RC1102
 ms.assetid: bd2091f8-ef5e-4151-a8d6-98043e9422b6
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fe69fe0ebaaeee6359b8407a32417a4cc7f6c68c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Erreur irr&#233;cup&#233;rable RC1102 du compilateur de ressources 
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-erreur interne : arguments trop nombreux pour RCPP  
+# <a name="resource-compiler-fatal-error-rc1102"></a>Erreur irrécupérable RC1102 du compilateur de ressources 
+Erreur interne : trop d’arguments pour RCPP  
   
- Un trop grand nombre d'arguments a été passé au préprocesseur du compilateur de ressources.  Réduisez le nombre de symboles définis à l'aide de l'option Define Symbols \(\/d\) en les spécifiant dans votre source.  La spécification d'un trop grand nombre de chemins de recherche de fichiers à l'aide de l'option Include Search Path \(\/i\) peut également générer cette erreur.
+ Trop d’arguments ont été transmis au préprocesseur du compilateur de ressources. Réduisez le nombre de symboles définis avec les symboles de définir (/ d) l’option en les définissant dans votre source. Cette erreur peut également être provoquée par la spécification de trop nombreux incluent des chemins de recherche de fichier à l’aide de l’option de chemin de recherche Include (/ i).
