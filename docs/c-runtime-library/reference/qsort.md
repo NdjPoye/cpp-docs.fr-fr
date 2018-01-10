@@ -34,11 +34,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 671bc9f6f21871e27cc6edc54f4fc45de4317e10
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e3f6d964f4cf4debefa3044a458704554233447
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="qsort"></a>qsort
 Effectue un tri rapide. Il existe une version plus sécurisée de cette fonction. Consultez [qsort_s](../../c-runtime-library/reference/qsort-s.md).  
@@ -88,13 +89,13 @@ compare( (void *) & elem1, (void *) & elem2 );
   
  Cette fonction valide ses paramètres. Si `compare` ou `num` a la valeur `NULL` ou si `base` a la valeur `NULL` et que *`num` est différent de zéro, ou si `width` est inférieur à zéro, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne une valeur et `errno` prend la valeur `EINVAL`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`qsort`|\<stdlib.h> et \<search.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

@@ -40,11 +40,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f1427c830ea861f7b3195c745fff6cde68858666
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 70cccdc8dea6abb032fbf6170ca84ad866ddd491
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 Obtiennent une chaîne à partir d’un flux.  
@@ -77,7 +78,7 @@ wchar_t *fgetws(
 ## <a name="return-value"></a>Valeur de retour  
  Chacune de ces fonctions retourne `str`. `NULL` est retourné pour indiquer une erreur ou une condition de fin de fichier. Utilisez `feof` ou `ferror` pour déterminer si une erreur s’est produite. Si `str` ou `stream` est un pointeur null ou que `n` est inférieur ou égal à zéro, cette fonction appelle le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, `errno` a la valeur `EINVAL` et la fonction retourne une valeur `NULL`.  
   
- Consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d’informations sur ces éléments et autres codes d’erreur.  
+ Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Notes  
  La fonction `fgets` lit une chaîne à partir de l’argument `stream` d’entrée et la stocke dans `str`. `fgets`lit les caractères à partir de la position actuelle du flux, y compris le premier caractère de saut de ligne, à la fin du flux, ou jusqu'à ce que le nombre de caractères lus est égal à `n` - 1, selon ce qui se produit en premier. Le résultat stocké dans `str` est assorti d’un caractère null. Le caractère de saut de ligne, s’il est lu, est inclus dans la chaîne.  
@@ -92,14 +93,14 @@ wchar_t *fgetws(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_fgetts`|`fgets`|`fgets`|`fgetws`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête requis|  
 |--------------|---------------------|  
 |`fgets`|\<stdio.h>|  
 |`fgetws`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

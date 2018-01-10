@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: acfaf9b36cfde4399815571807a6a82903dc980e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e272652ecc82b65d0251194f17a746ddde58fcc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicit-instantiation"></a>instanciation explicite
 Vous pouvez utiliser l’instanciation explicite pour créer une instanciation d’une classe basée sur un modèle ou une fonction sans réellement l’utiliser dans votre code. Étant donné que cela est utile lorsque vous créez bibliothèque (.lib) les fichiers qui utilisent des modèles pour la distribution, les définitions de modèle non instancié ne sont pas placées dans des fichiers objets (.obj).  

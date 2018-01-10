@@ -33,11 +33,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3f54b8ea828513dfbf25e5af1eeea38751c7c2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4cf792fed2f7a5cac45826649224a565228f9d73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccontainedwindowt-class"></a>Classe de CContainedWindowT
 Cette classe implémente une fenêtre contenue dans un autre objet.  
@@ -92,7 +93,7 @@ class CContainedWindowT : public TBase
 |[CContainedWindowT::m_pfnSuperWindowProc](#m_pfnsuperwindowproc)|Pointe vers la procédure de fenêtre d'origine de la classe de fenêtre.|  
 |[CContainedWindowT::m_pObject](#m_pobject)|Pointe vers l’objet conteneur.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CContainedWindowT`implémente une fenêtre contenue dans un autre objet. `CContainedWindowT`'s utilise de procédure de fenêtre un message de mappage dans l’objet conteneur pour diriger les messages pour les gestionnaires appropriés. Lorsque vous construisez un `CContainedWindowT` de l’objet, vous spécifiez quelle table des messages doit être utilisé.  
   
  `CContainedWindowT`vous permet de créer une nouvelle fenêtre par surclasser une classe de fenêtre existante. Le **créer** méthode enregistre tout d’abord une classe de fenêtre qui est basée sur une classe existante mais utilise `CContainedWindowT::WindowProc`. **Créer** crée ensuite une fenêtre basée sur cette nouvelle classe de fenêtre. Chaque instance de `CContainedWindowT` pouvez superclasse une classe de fenêtre différente.  
@@ -122,7 +123,7 @@ class CContainedWindowT : public TBase
   
  `CContainedWindowT`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlwin.h  
   
 ##  <a name="ccontainedwindowt"></a>CContainedWindowT::CContainedWindowT  
@@ -150,7 +151,7 @@ CContainedWindowT(
  `dwMsgMapID`  
  [in] Identifie la table des messages qui traitera les messages de la fenêtre de la relation contenant-contenu. La valeur par défaut, 0, spécifie la table des messages par défaut déclarée avec [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Pour utiliser une autre table des messages déclarée avec [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), passer `msgMapID`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si vous souhaitez créer une nouvelle fenêtre via [créer](#create), vous devez passer le nom d’une classe de fenêtre existante pour la `lpszClassName` paramètre. Pour obtenir un exemple, consultez la [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) vue d’ensemble.  
   
  Il existe trois constructeurs :  
@@ -234,7 +235,7 @@ HWND Create(
 ### <a name="return-value"></a>Valeur de retour  
  En cas de réussite, le handle de fenêtre qui vient d’être créé ; dans le cas contraire, **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le nom de classe de fenêtre existante est enregistré dans [m_lpszClassName](#m_lpszclassname). **Créer** crée ensuite une fenêtre basée sur cette nouvelle classe. La fenêtre qui vient d’être créée est automatiquement joint à la `CContainedWindowT` objet.  
   
 > [!NOTE]
@@ -267,7 +268,7 @@ LRESULT DefWindowProc(
 ### <a name="return-value"></a>Valeur de retour  
  Le résultat du traitement du message.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, `DefWindowProc` appelle la [CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571) fonction Win32 pour envoyer les informations de message à la procédure de fenêtre spécifiée dans [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
 ##  <a name="getcurrentmessage"></a>CContainedWindowT::GetCurrentMessage  
@@ -287,7 +288,7 @@ const _ATL_MSG* GetCurrentMessage();
 DWORD m_dwMsgMapID;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette table des messages doit être déclarée dans l’objet conteneur.  
   
  La table des messages par défaut déclarée avec [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), est toujours identifié par zéro. Une autre table des messages déclarée avec [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), est identifié par `msgMapID`.  
@@ -301,7 +302,7 @@ DWORD m_dwMsgMapID;
 LPTSTR m_lpszClassName;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque vous créez une fenêtre, [créer](#create) enregistre une nouvelle classe de fenêtre qui est basée sur cette classe existante mais utilise [CContainedWindowT::WindowProc](#windowproc).  
   
  `m_lpszClassName`est initialisé par le constructeur. Pour obtenir un exemple, consultez la [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) vue d’ensemble.  
@@ -313,7 +314,7 @@ LPTSTR m_lpszClassName;
 WNDPROC m_pfnSuperWindowProc;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si la fenêtre de relation contenant-contenue est la superclasse, ce qui signifie qu’il est basé sur une classe de fenêtre qui modifie une classe existante, `m_pfnSuperWindowProc` pointe vers la procédure de fenêtre de la classe de fenêtre existante.  
   
  Le [DefWindowProc](#defwindowproc) méthode envoie des informations de message à la procédure de fenêtre enregistrée dans `m_pfnSuperWindowProc`.  
@@ -325,7 +326,7 @@ WNDPROC m_pfnSuperWindowProc;
 CMessageMap* m_pObject;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ce conteneur, dont la classe doit dériver de [CMessageMap](../../atl/reference/cmessagemap-class.md), déclare le mappage de message utilisé par la fenêtre de relation contenant-contenue.  
   
  `m_pObject`est initialisé par le constructeur. Pour obtenir un exemple, consultez la [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) vue d’ensemble.  
@@ -340,7 +341,7 @@ ATOM RegisterWndSuperClass();
 ### <a name="return-value"></a>Valeur de retour  
  En cas de réussite, un atom qui identifie de façon unique la classe de fenêtre en cours d’inscription ; Sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette classe de fenêtre est basée sur une classe existante mais utilise [CContainedWindowT::WindowProc](#windowproc). Procédure de fenêtre et de nom de la classe de fenêtre existante sont enregistrés dans [m_lpszClassName](#m_lpszclassname) et [m_pfnSuperWindowProc](#m_pfnsuperwindowproc), respectivement.  
   
 ##  <a name="subclasswindow"></a>CContainedWindowT::SubclassWindow  
@@ -357,7 +358,7 @@ BOOL SubclassWindow(HWND hWnd);
 ### <a name="return-value"></a>Valeur de retour  
  **TRUE** si la fenêtre est correctement sous-classé ; sinon, **FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fenêtre sous-classée utilise désormais [CContainedWindowT::WindowProc](#windowproc). La procédure de fenêtre d’origine est enregistrée dans [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
 > [!NOTE]
@@ -374,7 +375,7 @@ void SwitchMessageMap(DWORD dwMsgMapID);
  `dwMsgMapID`  
  [in] Identificateur de la carte de message. Pour utiliser le mappage de message par défaut déclarée avec [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), transférez la valeur zéro. Pour utiliser une autre table des messages déclarée avec [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), passer `msgMapID`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La table des messages doit être définie dans l’objet conteneur.  
   
  Initialement, vous spécifiez l’identificateur de carte dans le constructeur.  
@@ -393,7 +394,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 ### <a name="return-value"></a>Valeur de retour  
  Le handle de fenêtre précédemment sous-classée. Si `bForce` a la valeur **FALSE** et la procédure de fenêtre pour ce `CContainedWindowT` objet n’est pas actuellement actif, retourne **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement si vous souhaitez restaurer la procédure de fenêtre d’origine avant la destruction de la fenêtre. Dans le cas contraire, [WindowProc](#windowproc) fera automatiquement lorsque la fenêtre est détruite.  
   
 ##  <a name="windowproc"></a>CContainedWindowT::WindowProc  
@@ -423,7 +424,7 @@ static LRESULT CALLBACK WindowProc(
 ### <a name="return-value"></a>Valeur de retour  
  Le résultat du traitement du message.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `WindowProc`Indique les messages à la table des messages identifié par [m_dwMsgMapID](#m_dwmsgmapid). Si nécessaire, `WindowProc` appelle [DefWindowProc](#defwindowproc) pour le traitement des messages supplémentaires.  
   
 ## <a name="see-also"></a>Voir aussi  

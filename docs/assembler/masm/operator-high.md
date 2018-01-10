@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fc186808c644a38a0ca1145f51580db4a294e966
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b714b5f9fde18e4818dbd9b77b7283727cfc8c40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-high"></a>HIGH, opérateur
 Retourne les 8 bits de poids fort de 16 bits de poids faibles de *expression*. Expressions MASM sont des valeurs 64 bits.  

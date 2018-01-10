@@ -1,41 +1,42 @@
 ---
-title: "Vue d&#39;ensemble des conventions d&#39;appel x64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Vue d’ensemble de x64 Conventions d’appel | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a05db5eb-0844-4d9d-8b92-b1b2434be0ea
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8ac42eb934692fb9eaecf345b75e7544e7078f07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Vue d&#39;ensemble des conventions d&#39;appel x64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Deux des modifications importantes du passage de x86 à [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] sont la fonction d'adressage 64 bits et un jeu de 16 registres 64 bits pour une utilisation générale.  Étant donné le jeu de registres étendu, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] utilise uniquement la convention d'appel [\_\_fastcall](../cpp/fastcall.md) et un modèle de gestion des exceptions basé sur RISC.  Le modèle `__fastcall` utilise des registres pour les quatre premiers arguments et le frame de pile pour passer les autres paramètres.  
+# <a name="overview-of-x64-calling-conventions"></a>Vue d’ensemble des conventions d’appel x64
+Deux différences importantes entre x86 et [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] sont la fonction d’adressage 64 bits et un jeu de 16 bits 64 registres pour une utilisation générale. Étant donné les registres étendu ensemble, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] utilise le [__fastcall](../cpp/fastcall.md) convention d’appel et un modèle de gestion des exceptions basé sur RISC. Le `__fastcall` convention utilise des registres pour les quatre premiers arguments et le frame de pile pour passer des arguments supplémentaires.  
   
- L'option du compilateur suivante vous aide à optimiser votre application pour [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] :  
+ L’option du compilateur suivante vous aide à optimiser votre application pour [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
   
--   [\/favor \(optimisation pour les particularités d'architecture\)](../build/reference/favor-optimize-for-architecture-specifics.md)  
+-   [/favor (optimisation pour les particularités d’Architecture)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
-## Convention d'appel  
- L'interface binaire d'application \(ABI\) [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] est une convention d'appel rapide à 4 registres, avec un stockage de pile pour ces registres.  Il existe une stricte correspondance un à un entre les arguments d'une fonction et les registres de ces arguments.  Tout argument qui ne rentre pas sur 8 octets, ou qui n'est pas à 1, 2, 4 ou 8 octets, doit être passé par référence.  Il n'y a aucune tentative visant à répartir un argument unique sur plusieurs registres.  La pile du registre x87 est inutilisée.  Elle peut être utilisée, mais doit être considérée comme volatile à travers les appels de fonction.  Toutes les opérations en virgule flottante sont effectuées à l'aide des 16 registres XMM.  Les arguments sont passés dans les registres RCX, RDX, R8 et R9.  Si les arguments sont float\/double, ils sont passés dans XMM0L, XMM1L, XMM2L et XMM3L.  Les arguments à 16 octets sont passés par référence.  Le passage de paramètres est décrit en détail dans [Passage de paramètres](../build/parameter-passing.md).  Outre ces registres, RAX, R10, R11, XMM4 et XMM5 sont volatiles.  Tous les autres registres sont non volatiles.  L'utilisation des registres est documentée en détail dans [Utilisation des Registres](../build/register-usage.md) et [Registres enregistrés des appelants\/appelés](../build/caller-callee-saved-registers.md).  
+## <a name="calling-convention"></a>Convention d’appel  
+ Le [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] une quatre Registre fast-convention d’appel par défaut utilise l’Interface binaire d’Application (ABI). Espace est alloué sur la pile des appels, comme un magasin de clichés instantanés pour appelés enregistrer ces registres. Il existe une correspondance univoque stricte entre les arguments pour un appel de fonction et les registres utilisés pour ces arguments. Tout argument qui ne tient pas dans 8 octets, ou n’est pas 1, 2, 4 ou 8 octets, doit être passé par référence. Il n’existe aucune tentative pour répartir un argument unique sur plusieurs registres. Le x87 pile du Registre n’est pas utilisée. Il peut être utilisé par l’appelé, mais doit être considérée comme volatile entre les appels de fonction. Virgule flottante toutes les opérations sont effectuées à l’aide du 16 registres de XMM. Arguments entiers sont passés dans les registres RCX, RDX, R8 et R9. Arguments sont passés dans XMM0L, XMM1L, XMM2L et XMM3L de virgule flottante. arguments de 16 octets sont passés par référence. Passage de paramètres est décrite en détail dans [passage de paramètres](../build/parameter-passing.md). Outre ces registres, RAX, R10, R11, XMM4 et XMM5 sont considérés comme volatile. Tous les autres registres sont non volatiles. L’utilisation des registres est documentée en détail dans [inscrire Usage](../build/register-usage.md) et [appelant/appelé enregistré inscrit](../build/caller-callee-saved-registers.md).  
   
- L'appelant est chargé d'allouer de l'espace pour les paramètres de l'appelé et doit toujours allouer un espace suffisant pour les 4 paramètres de registre, même si l'appelé n'a pas autant de paramètres.  Cela contribue à la simplicité de la prise en charge des fonctions non prototypées C, et des fonctions vararg C\/C\+\+.  Pour les fonctions vararg ou non prototypées, toutes les valeurs float doivent être dupliquées dans le registre généraliste correspondant.  Tous les paramètres au\-dessus des 4 premiers doivent être stockés sur la pile, au\-dessus du magasin de stockage des 4 premiers, avant l'appel.  Les fonctions Vararg sont décrites en détail dans [Varargs](../build/varargs.md).  Des informations détaillées sur les fonctions non prototypées se trouvent dans [Fonctions non prototypées](../build/unprototyped-functions.md).  
+ L’appelant est responsable de l’allocation d’espace pour les paramètres vers l’appelé et doit toujours allouer suffisamment d’espace pour stocker les quatre paramètres de Registre, même si l’appelé ne prend pas autant de paramètres. Cela simplifie la prise en charge pour les fonctions non prototypées en langage C et les fonctions vararg C/C++. Pour les fonctions vararg ou non prototypées, tout en virgule flottante, les valeurs doivent être dupliquées dans le Registre à usage général correspondant. Tous les paramètres au-delà des quatre premiers doivent être stockés dans la pile, au-dessus de la banque de clichés instantanés pour les quatre premières, avant l’appel. Vous trouverez les détails de la fonction vararg dans [Varargs](../build/varargs.md). Informations sur les fonctions non prototypées sont détaillées dans [fonctions non prototypées](../build/unprototyped-functions.md).  
   
-## Alignement  
- La plupart des structures sont alignées sur leur alignement naturel.  Les principales exceptions sont le pointeur de pile et la mémoire malloc ou alloca, qui sont alignés sur 16 octets pour de meilleures performances.  Un alignement supérieur à 16 octets doit se faire manuellement, mais puisque 16 octets sont une taille d'alignement courante pour les opérations XMM, cela devrait suffire pour l'essentiel du code.  Pour plus d'informations sur la disposition et l'alignement de la structure, consultez [Types et stockage](../build/types-and-storage.md).  Pour plus d'informations sur la disposition de la pile, consultez [Utilisation de la pile](../build/stack-usage.md).  
+## <a name="alignment"></a>Alignement  
+ La plupart des structures sont alignées sur leur alignement naturel. Les principales exceptions sont le pointeur de pile et `malloc` ou `alloca` mémoire, ce qui est aligné sur 16 octets pour de meilleures performances. Alignement supérieur à 16 octets doit être effectué manuellement, mais puisque 16 octets est une taille d’alignement courante pour les opérations XMM, cela devrait fonctionner pour la plupart du code. Pour plus d’informations sur la disposition de la structure et l’alignement, consultez [Types et stockage](../build/types-and-storage.md). Pour plus d’informations sur la disposition de la pile, consultez [utilisation de la pile](../build/stack-usage.md).  
   
-## Capacité de déroulement  
- Toutes les fonctions feuilles \[fonctions qui n'appellent pas de fonction et n'allouent pas d'espace de pile\] doivent être annotées avec des données \[connues sous le nom de xdata ou ehdata, pointées par pdata\] qui décrivent au système d'exploitation comment les dérouler correctement, pour récupérer les registres non volatiles.  Les prologues et épilogues sont extrêmement restreints, afin de pouvoir être décrits correctement dans xdata.  Le pointeur de pile doit être aligné sur 16 octets, sauf pour les fonctions feuilles, dans les parties du code qui ne font pas partie d'un épilogue ou d'un prologue.  Pour plus d'informations sur la structure appropriée des prologues et des épilogues de fonction, consultez [Prologue et épilogue](../build/prolog-and-epilog.md).  Pour plus d'informations sur la gestion des exceptions et sur les pdata et xdata dans la gestion des exceptions ou leur déroulement, consultez [Gestion des exceptions \(x64\)](../build/exception-handling-x64.md).  
+## <a name="unwindability"></a>Capacité de déroulement  
+ Fonctions de feuille sont des fonctions qui ne modifient pas les registres non volatils. Une fonction non terminaux peut changer non volatile RSP, par exemple, en appelant une fonction ou de l’allocation d’espace de pile supplémentaires pour les variables locales. Pour récupérer les registres non volatils lorsqu’une exception est gérée, les fonctions non terminaux doivent être annotées avec les données statiques qui décrit la procédure dérouler correctement la fonction à une instruction arbitraire. Ces données sont stockées en tant que *pdata*, ou les données de la procédure, qui à son tour fait référence à *xdata*, les données de gestion des exceptions. Le xdata contient les informations de déroulement et peut pointer vers pdata supplémentaire ou une fonction de gestionnaire d’exception. Les prologues et épilogues sont extrêmement limitées afin qu’ils peuvent être décrits correctement dans xdata. Le pointeur de pile doit être aligné sur n’importe quelle région de code qui ne fait pas partie d’un épilogue ou d’un prologue, sauf dans les fonctions de feuille de 16 octets. Les fonctions terminales peuvent être vidées simplement en simulant un retour, pdata et xdata ne sont pas requis. Pour plus d’informations sur la structure appropriée des prologues de fonction et les épilogues, consultez [prologue et épilogue](../build/prolog-and-epilog.md). Pour plus d’informations sur la gestion des exceptions et la gestion des exceptions et le déroulement des pdata et xdata, consultez [(x64) gestion des exceptions](../build/exception-handling-x64.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Conventions des logiciels x64](../build/x64-software-conventions.md)

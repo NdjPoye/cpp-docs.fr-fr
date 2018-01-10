@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- selectany_cpp
-dev_langs:
-- C++
+f1_keywords: selectany_cpp
+dev_langs: C++
 helpviewer_keywords:
 - __declspec keyword [C++], selectany
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9c17221e2d0875505d9aa3f1132ea4a4b6d4c489
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8d8b4a1a78fb8231d407e60ded2c6dea3f7c891d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selectany"></a>selectany
 **Section spécifique à Microsoft**  
@@ -38,7 +35,7 @@ ms.lasthandoff: 09/25/2017
 __declspec( selectany ) declarator  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Au moment d'effectuer le lien, si plusieurs définitions d'un COMDAT s'affichent, l'éditeur de liens en choisit un et ignore le reste. Si l’option de l’éditeur de liens [/OPT : REF](../build/reference/opt-optimizations.md) (optimisations) est sélectionnée, puis l’élimination COMDAT se produit pour supprimer tous les éléments de données non référencées dans la sortie de l’éditeur de liens.  
   
  Les constructeurs et l'assignation par fonction globale ou méthodes statiques dans la déclaration ne créent pas de référence et n'empêchent pas la suppression /OPT:REF. Les effets secondaires d'un tel code ne doivent pas créer de dépendances quand il n'existe aucune autre référence à des données.  

@@ -22,24 +22,25 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1dbf2e353ffb060a7bba2f38617e8fa86a1ab9c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a548e21e6bb485a326a2a9e34c6f47d968bbb6f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="out-output-file-name"></a>/OUT (Nom du fichier de sortie)
 ```  
 /OUT:filename  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  où :  
   
  *filename*  
  Nom du fichier de sortie spécifié par l’utilisateur. Il remplace le nom par défaut.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’option /OUT substitue le nom par défaut et l’emplacement du programme qui crée de l’éditeur de liens.  
   
  Par défaut, l’éditeur de liens constitue le nom de fichier à l’aide du nom de base du premier fichier .obj spécifié et l’extension appropriée (.exe ou .dll).  

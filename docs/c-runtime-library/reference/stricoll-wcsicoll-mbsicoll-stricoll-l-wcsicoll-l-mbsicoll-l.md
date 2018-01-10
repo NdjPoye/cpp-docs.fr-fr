@@ -62,11 +62,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9508eacf1e361f3e87353f7ceb6dc00270982212
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 88464cd717b11591b22f50d3df50f72ebb5fee02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 Compare les chaînes à partir des informations propres aux paramètres régionaux.  
@@ -128,7 +129,7 @@ int _mbsicoll_l(
 ## <a name="remarks"></a>Notes  
  Chacune de ces fonctions effectue une comparaison sensible à la casse de `string1` et `string2` en fonction de la page de codes en cours d’utilisation. Ces fonctions ne doivent être utilisées que s’il existe une différence entre l’ordre du jeu de caractères et l’ordre lexicographique des caractères dans la page de codes actuelle, et si cette différence présente un intérêt pour la comparaison de chaînes.  
   
- `_stricmp` se distingue de `_stricoll` dans le sens où la comparaison `_stricmp` est affectée par `LC_CTYPE`, tandis que la comparaison `_stricoll` dépend des catégories `LC_CTYPE` et `LC_COLLATE` des paramètres régionaux. Pour plus d’informations sur la catégorie `LC_COLLATE`, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) et [Catégories de paramètres régionaux](../../c-runtime-library/locale-categories.md). Les versions de ces fonctions sans suffixe `_l` utilisent les paramètres régionaux actifs ; les versions avec suffixe `_l` sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ `_stricmp` se distingue de `_stricoll` dans le sens où la comparaison `_stricmp` est affectée par `LC_CTYPE`, tandis que la comparaison `_stricoll` dépend des catégories `LC_CTYPE` et `LC_COLLATE` des paramètres régionaux. Pour plus d’informations sur la catégorie `LC_COLLATE`, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) et [Catégories de paramètres régionaux](../../c-runtime-library/locale-categories.md). Les versions de ces fonctions sans suffixe `_l` utilisent les paramètres régionaux actifs ; les versions avec suffixe `_l` sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  Toutes ces fonctions valident leurs paramètres. Si `string1` ou `string2` sont des pointeurs `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent `_NLSCMPERROR` et définissent `errno` avec la valeur `EINVAL`.  
   
@@ -138,7 +139,7 @@ int _mbsicoll_l(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsicoll`|`_stricoll`|`_mbsicoll`|`_wcsicoll`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

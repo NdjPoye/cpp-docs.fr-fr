@@ -34,11 +34,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3805800a89842ba23d0778a3a5aabf9d60880c38
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b00b0afdf9ba2daac8b4a64a8527d3b73e3c0cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chsizes"></a>_chsize_s
 Modifie la taille d’un fichier. Il s’agit d’une version de [_chsize](../../c-runtime-library/reference/chsize.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -62,7 +63,7 @@ errno_t _chsize_s(
 ## <a name="return-value"></a>Valeur de retour  
  `_chsize_s` retourne la valeur 0 si la taille du fichier a été correctement modifiée. Une valeur de retour différente de zéro indique une erreur : `EACCES` si le fichier spécifié est verrouillé contre tout accès, `EBADF` si le fichier spécifié est en lecture seule ou si le descripteur n’est pas valide, `ENOSPC` en l’absence d’espace disponible sur le périphérique ou `EINVAL` si la taille est inférieure à zéro. `errno` est défini sur la même valeur.  
   
- Pour plus d’informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Notes  
  La fonction `_chsize_s` étend ou tronque le fichier associé à `fd` à la longueur spécifiée par `size`. Le fichier doit être ouvert dans un mode qui permet l’écriture. Des caractères Null (« \0 ») sont ajoutés si le fichier est étendu. Si le fichier est tronqué, toutes les données depuis la fin du fichier raccourci jusqu’à la longueur d’origine du fichier sont perdues.  
@@ -71,13 +72,13 @@ errno_t _chsize_s(
   
  Cette fonction valide ses paramètres. Si `fd` n’est pas un descripteur de fichier valide ou que la taille est inférieure à zéro, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|En-tête facultatif|  
 |-------------|---------------------|---------------------|  
 |`_chsize_s`|\<io.h>|\<errno.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion de fichiers](../../c-runtime-library/file-handling.md)   

@@ -18,18 +18,19 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cdaf9fe5b2d41491683d34ea029a546433cd709d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e419cbd30b523121ae1902b49a25d60c0b9d21eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memory-allocation"></a>Allocation de mémoire
 Utilisez ces routines pour allouer, libérer et réallouer de la mémoire.  
   
 ### <a name="memory-allocation-routines"></a>Routines d'allocation de mémoire  
   
-|Routine|Utilisation|  
+|Routine|Utilisez|  
 |-------------|---------|  
 |[_alloca](../c-runtime-library/reference/alloca.md), [_malloca](../c-runtime-library/reference/malloca.md)|Allouer de la mémoire à partir de la pile|  
 |[calloc](../c-runtime-library/reference/calloc.md)|Allouer le stockage pour le tableau, en initialisant chaque octet dans le bloc alloué à 0|  

@@ -1,90 +1,91 @@
 ---
-title: "struct UNWIND_INFO | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: struct UNWIND_INFO | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: f0aee906-a1b9-44cc-a8ad-463637bd5411
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1effec5bc753f1b23f8d43a8406c61cb6663fa56
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# struct UNWIND_INFO
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La structure des informations sur les données de déroulement est utilisée pour enregistrer les effets d'une fonction sur le pointeur de pile et l'emplacement auquel les registres non volatils sont enregistrés sur la pile :  
+# <a name="struct-unwindinfo"></a>struct UNWIND_INFO
+La structure d’informations de données de déroulement est utilisée pour enregistrer les effets de qu'une fonction a sur le pointeur de pile et où les registres non volatils sont enregistrés sur la pile :  
   
 |||  
 |-|-|  
-|UBYTE: 3|Version|  
-|UBYTE: 5|Flags|  
+|UBYTE : 3|Version|  
+|UBYTE : 5|Indicateurs|  
 |UBYTE|Taille du prologue|  
 |UBYTE|Nombre de codes de déroulement|  
-|UBYTE: 4|Registre du frame|  
-|UBYTE: 4|Offset du registre du frame \(mis à l'échelle\)|  
-|USHORT \* n|Tableau de codes de déroulement|  
-|variable|Peut se présenter sous la forme \(1\) ou \(2\) ci\-dessous|  
+|UBYTE : 4|Registre du frame|  
+|UBYTE : 4|Décalage de trame du Registre (à l’échelle)|  
+|USHORT * n|Tableau des codes de déroulement|  
+|variable|Peut être de forme (1) ou (2) ci-dessous|  
   
- \(1\) Gestionnaire d'exceptions  
-  
-|||  
-|-|-|  
-|ULONG|Adresse du gestionnaire d'exceptions|  
-|variable|Données du gestionnaire spécifique au langage \(facultatif\)|  
-  
- \(2\) Des informations liées de déroulement  
+ (1) Gestionnaire d’exceptions  
   
 |||  
 |-|-|  
-|ULONG|Adresse de début de fonction|  
-|ULONG|Adresse de fin de fonction|  
+|ULONG|Adresse du Gestionnaire d’exceptions|  
+|variable|Données du gestionnaire spécifique au langage (facultatif)|  
+  
+ (2) la chaîne d’informations de déroulement  
+  
+|||  
+|-|-|  
+|ULONG|Adresse de début (fonction)|  
+|ULONG|Adresse de fin (fonction)|  
 |ULONG|Adresse des informations de déroulement|  
   
- La structure UNWIND\_FUNCTION doit être alignée sur un DWORD en mémoire.  Vous trouverez ci\-dessous la signification de chaque champ :  
+ La structure UNWIND_INFO doit être DWORD aligné en mémoire. La signification de chaque champ est la suivante :  
   
  **Version**  
- Numéro de version des données de déroulement \(actuellement 1\).  
+ Numéro de version des données de déroulement, actuellement 1.  
   
- **Flags**  
+ **Indicateurs**  
  Trois indicateurs sont actuellement définis :  
   
- UNW\_FLAG\_EHANDLER la fonction a un gestionnaire d'exceptions qui doit être appelé en recherchant fonctionne ce besoin d'examiner des exceptions.  
+ UNW_FLAG_EHANDLER la fonction possède un gestionnaire d’exceptions qui doit être appelé lors de la recherche pour les fonctions que vous avez besoin d’examiner les exceptions.  
   
- UNW\_FLAG\_UHANDLER la fonction a un gestionnaire de terminaisons qui doit être appelé via un déroulement une exception.  
+ UNW_FLAG_UHANDLER la fonction possède un gestionnaire de terminaisons qui doit être appelé lorsque le déroulement d’une exception.  
   
- Cette structure d'informations de progression d'UNW\_FLAG\_CHAININFO n'est pas la principale pour la procédure.  Par contre, l'entrée des informations de déroulement chaînées est le contenu d'une entrée RUNTIME\_FUNCTION antérieure.  Consultez le texte suivant pour obtenir une explication des structures d'informations de déroulement chaînées.  Si cet indicateur est défini, les indicateurs UNW\_FLAG\_EHANDLER et UNW\_FLAG\_UHANDLER doivent être effacés.  Les champs du registre du frame et de l'allocation de pile fixe doivent posséder les mêmes valeurs que dans les informations de déroulement principales.  
+ UNW_FLAG_CHAININFO Cette structure n’est pas le principal pour la procédure d’informations de déroulement. Au lieu de cela, les informations de déroulement chaînées entrée est le contenu d’une entrée RUNTIME_FUNCTION antérieure. Consultez le texte suivant pour obtenir une explication de chaînés structures d’informations de déroulement. Si cet indicateur est défini, les indicateurs UNW_FLAG_EHANDLER et UNW_FLAG_UHANDLER doivent être effacés. En outre, les champs d’allocation de Registre et de pile fixe frame doivent avoir les mêmes valeurs que dans le réplica principal d’informations de déroulement.  
   
  **Taille du prologue**  
  Longueur du prologue de fonction en octets.  
   
  **Nombre de codes de déroulement**  
- Nombre d'emplacements dans le tableau de codes de déroulement.  Notez que certains codes de déroulement \(par exemple, UWOP\_SAVE\_NONVOL\) exigent plusieurs emplacements dans le tableau.  
+ Il s’agit du nombre d’emplacements dans le tableau de codes de déroulement. Notez que certaines les codes de déroulement (par exemple, UWOP_SAVE_NONVOL) nécessitent plusieurs emplacements dans le tableau.  
   
  **Registre du frame**  
- Si ce champ a une valeur différente de zéro, la fonction utilise un pointeur de frame, et ce champ correspond au numéro du registre non volatil utilisé comme pointeur de frame, à l'aide du même encodage que pour le champ d'information d'opération des nœuds UNWIND\_CODE.  
+ Si elle est différente de zéro, la fonction utilise un pointeur de frame, et ce champ est le numéro de Registre non volatil utilisé comme pointeur de frame, à l’aide de ce même encodage pour le champ d’information opération des nœuds UNWIND_CODE.  
   
- **Offset du registre du frame \(mis à l'échelle\)**  
- Si le champ du registre du frame a une valeur différente de zéro, il s'agit de l'offset mis à l'échelle de RSP qui s'applique au registre FP lorsqu'il est défini.  Le régulateur FP réel a la valeur RSP \+ 16 \* ce nombre, ce qui permet des offsets de 0 à 240.  Cela permet de pointer le régulateur FP vers le milieu de l'allocation de pile locale pour les frames de pile dynamiques, ce qui offre une meilleure densité de code via des instructions plus courtes \(plus d'instructions peuvent utiliser la forme offset signé de 8 bits\).  
+ **Registre du frame décalage (mise à l’échelle)**  
+ Si le champ du Registre du frame est différent de zéro, il s’agit de l’offset mis à l’échelle de RSP qui s’applique au registre FP lorsqu’il est établi. Le registre FP réel a la valeur RSP + 16 * ce nombre, autorisant des offsets compris entre 0 et 240. Cela permet de pointer vers le registre FP vers le milieu de l’allocation de pile locale pour les frames de pile dynamique, ce qui permet une meilleure densité de code par le biais des instructions plus courtes (davantage d’instructions peuvent utiliser le format d’offset signé 8 bits).  
   
- **Tableau de codes de déroulement**  
- Tableau des éléments qui expliquent l'effet du prologue sur les registres non volatils et RSP.  Consultez la section relative à UNWIND\_CODE pour connaître la signification des différents éléments.  À des fins d'alignement, ce tableau possèdera toujours un nombre pair d'entrées, avec la dernière entrée éventuellement inutilisée \(auquel cas le tableau comptera une entrée de plus que spécifié par le champ du nombre de codes de déroulement\).  
+ **Tableau des codes de déroulement**  
+ Il s’agit d’un tableau d’éléments qui explique l’effet du prologue sur les registres non volatils et RSP. Consultez la section sur UNWIND_CODE pour la signification des éléments individuels. À des fins d’alignement, ce tableau est toujours avoir un nombre pair d’entrées, avec la dernière entrée éventuellement inutilisée (auquel cas le tableau sera une plus longue que la valeur indiquée par le nombre de champs de codes de déroulement).  
   
- **Adresse du gestionnaire d'exceptions**  
- Pointeur relatif à l'image désignant le gestionnaire d'exceptions\/de terminaisons spécifique au langage de la fonction \(si l'indicateur UNW\_FLAG\_CHAININFO est effacé et si l'un des indicateurs UNW\_FLAG\_EHANDLER ou UNW\_FLAG\_UHANDLER est défini\).  
+ **Adresse du Gestionnaire d’exceptions**  
+ Il s’agit d’un pointeur relatif à l’image au gestionnaire d’exceptions spécifiques au langage et d’arrêt de la fonction (si l’indicateur UNW_FLAG_CHAININFO est effacé et un des indicateurs UNW_FLAG_EHANDLER ou UNW_FLAG_UHANDLER est défini).  
   
  **Données du gestionnaire spécifique au langage**  
- Données du gestionnaire d'exceptions spécifique au langage de la fonction.  Le format de ces données n'est pas défini et est complètement déterminé par le gestionnaire d'exceptions spécifique utilisé.  
+ Il s’agit de données du Gestionnaire d’exceptions spécifique au langage de la fonction. Le format de ces données est spécifié et complètement déterminé par le Gestionnaire d’exceptions spécifiques en cours d’utilisation.  
   
- **Informations de déroulement chaînées**  
- Si indicateur UNW\_FLAG\_CHAININFO est défini, la structure UNWIND\_INFO se termine par trois UWORD.  Ces UWORD représentent les informations RUNTIME\_FUNCTION pour la fonction du déroulement chaîné.  
+ **Chaîne d’informations de déroulement**  
+ Si l’indicateur UNW_FLAG_CHAININFO est la structure UNWIND_INFO se termine par trois UWORD.  Ces UWORD représentent les informations RUNTIME_FUNCTION pour la fonction du déroulement chaîné.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Données de déroulement pour la gestion des exceptions et la prise en charge du débogueur](../build/unwind-data-for-exception-handling-debugger-support.md)

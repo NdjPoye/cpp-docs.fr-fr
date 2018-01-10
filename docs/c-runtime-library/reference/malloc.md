@@ -31,11 +31,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72dd949aa8d894ba49f53a6440de20beea070e2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fb2ce8a8a2df102f2e455668ab798957b9ad46c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="malloc"></a>malloc
 Alloue des blocs de mémoire.  
@@ -75,19 +76,19 @@ void *malloc(
 |[fputs](../../c-runtime-library/reference/fputs-fputws.md)|[_getdcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)|[scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)||  
 |[fread](../../c-runtime-library/reference/fread.md)|[gets](../../c-runtime-library/gets-getws.md)|[_searchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md)||  
   
- La fonction C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) définit le nouveau mode de gestionnaire pour `malloc`. Le nouveau mode de gestionnaire indique si, en cas d’échec, `malloc` doit appeler la nouvelle routine de gestionnaire, telle qu’elle est définie par [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md). Par défaut, `malloc` n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, quand _`malloc` ne parvient pas à allouer de la mémoire, `malloc` appelle la routine de nouveau gestionnaire de la même façon que l’opérateur `new` quand il échoue pour la même raison. Pour substituer la valeur par défaut, appelez `_set_new_mode(1)` anticipée dans votre programme, ou votre lien avec NEWMODE. OBJ (consultez [Options Link](../../c-runtime-library/link-options.md)).  
+ La fonction C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) définit le nouveau mode de gestionnaire pour `malloc`. Le mode de nouveau gestionnaire indique si, en cas d’échec, `malloc` doit appeler la routine de nouveau gestionnaire, telle qu’elle est définie par [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md). Par défaut, `malloc` n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, quand _`malloc` ne parvient pas à allouer de la mémoire, `malloc` appelle la routine de nouveau gestionnaire de la même façon que l’opérateur `new` quand il échoue pour la même raison. Pour substituer la valeur par défaut, appelez `_set_new_mode(1)` anticipée dans votre programme, ou votre lien avec NEWMODE. OBJ (consultez [Options Link](../../c-runtime-library/link-options.md)).  
   
  Quand l’application est liée à une version de débogage des bibliothèques Runtime C, `malloc` se résout en [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Détails du tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
  `malloc` est marqué `__declspec(noalias)` et `__declspec(restrict)` ; cela signifie que la fonction ne peut pas modifier les variables globales et que le pointeur retourné n’a pas d’alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`malloc`|\<stdlib.h> et \<malloc.h>|  
   
- Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

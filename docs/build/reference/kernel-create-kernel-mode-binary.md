@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: acf0aca8105ac3934f91a6abf146d94de4eb0a80
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b0e20df59788577acb680cbd18b737f7ec2d7822
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (Créer un fichier binaire pour le mode noyau)
 Crée un fichier binaire qui peut être exécuté dans le noyau Windows.  
@@ -38,7 +39,7 @@ Crée un fichier binaire qui peut être exécuté dans le noyau Windows.
  **/Kernel-**  
  Le code dans le projet actuel est compilé et lié sans utiliser les règles de langage C++ qui sont spécifiques au code qui s’exécute en mode noyau.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Il existe aucune `#pragma` équivalente pour contrôler cette option.  
   
  En spécifiant le **/kernel** option indique au compilateur et l’éditeur de liens pour déterminer les fonctionnalités de langage sont autorisées en mode noyau et s’assurer que vous avez suffisamment puissance expressive afin d’éviter l’instabilité du runtime qui est unique en mode noyau C++. Cela est accompli en interdisant l’utilisation de fonctionnalités du langage C++ qui sont en mode noyau interruption de service et en fournissant des avertissements pour les fonctionnalités du langage C++ qui sont potentiellement dangereuses, mais ne peut pas être désactivées.  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -38,8 +37,7 @@ f1_keywords:
 - strncat_s
 - _mbsncat_s
 - _tcsncat_s_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - concatenating strings
 - _mbsncat_s function
@@ -56,30 +54,16 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 18f40484e5af5033d8a9093dd18137a884c6d531
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 789ac892ab4d91ea88e563079599ae4422e55a79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 Ajoute des caractères à une chaîne. Ces versions de [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -193,16 +177,16 @@ errno_t _mbsncat_s_l(
   
 |`strDestination`|`numberOfElements`|`strSource`|Valeur de retour|Contenu de `strDestination`|  
 |----------------------|------------------------|-----------------|------------------|----------------------------------|  
-|`NULL` ou inachevé|indifférent|any|`EINVAL`|non modifié|  
+|`NULL` ou inachevé|any|any|`EINVAL`|non modifié|  
 |any|any|`NULL`|`EINVAL`|non modifié|  
-|indifférent|0 ou trop petit|indifférent|`ERANGE`|non modifié|  
+|any|0 ou trop petit|any|`ERANGE`|non modifié|  
   
 ## <a name="remarks"></a>Notes  
  Ces fonctions essaient d’ajouter les `D` premiers caractères de `strSource` à la fin de `strDest`, `D` représentant la valeur la plus petite de `count` et la longueur de `strSource`. Si l’ajout de ces `D` caractères est possible dans `strDest` (dont la taille est indiquée par `numberOfElements`) et s’il reste de l’espace pour un terminateur null, ces caractères sont ajoutés, à partir du caractère null de fin d’origine de `strDest`, puis un nouveau caractère null de fin est ajouté ; sinon, `strDest`[0] est défini avec le caractère null et le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  
   
  Il existe une exception au paragraphe ci-dessus. Si `count` a la valeur [_TRUNCATE](../../c-runtime-library/truncate.md), le maximum de caractères de `strSource` est ajouté à `strDest`, qui laisse toujours un emplacement pour l’ajout d’un caractère null de fin.  
   
- Par exemple :  
+ Par exemple :  
   
  `char dst[5];`  
   
@@ -226,9 +210,9 @@ errno_t _mbsncat_s_l(
   
  `wcsncat_s` et `_mbsncat_s` sont des versions à caractères larges et à caractères multioctets de `strncat_s`. Les arguments de chaîne et la valeur de retour de `wcsncat_s` sont des chaînes de caractères larges ; ceux de `_mbsncat_s` sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.  
   
- La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe `_l` utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe `_l` utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
- En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -241,7 +225,7 @@ errno_t _mbsncat_s_l(
   
  `_strncat_s_l` et `_wcsncat_s_l` n’ont aucune dépendance vis-à-vis des paramètres régionaux ; ils sont fournis uniquement pour `_tcsncat_s_l`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
@@ -249,7 +233,7 @@ errno_t _mbsncat_s_l(
 |`wcsncat_s`|\<string.h> ou \<wchar.h>|  
 |`_mbsncat_s`, `_mbsncat_s_l`|\<mbstring.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -40,8 +39,7 @@ f1_keywords:
 - _strupr
 - mbsupr_l
 - _wcsupr
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tcsupr_l function
 - mbsupr function
@@ -69,30 +67,16 @@ helpviewer_keywords:
 - _tcsupr function
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 09153213c542e3424b38057ba12c9826344a5a02
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f211a64dca335433c8da779f6d3674f47ba33ce9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 Convertit une chaîne en majuscules. Il existe des versions plus sécurisées de ces fonctions. Consultez [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md).  
@@ -164,13 +148,13 @@ unsigned char *_mbsupr_l(
  Retourne un pointeur vers la chaîne modifiée. Sachant que la modification est effectuée sur place, le pointeur retourné est le même que celui passé comme argument d’entrée. Aucune valeur de retour n'est réservée pour indiquer une erreur.  
   
 ## <a name="remarks"></a>Notes  
- La fonction `_strupr` convertit sur place chaque lettre minuscule contenue dans `str` en majuscule. La conversion est déterminée par le paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Les autres caractères ne sont pas concernés. Pour plus d’informations sur `LC_CTYPE`, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans suffixe `_l` utilisent les paramètres régionaux actifs ; les versions avec suffixe `_l` sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La fonction `_strupr` convertit sur place chaque lettre minuscule contenue dans `str` en majuscule. La conversion est déterminée par le paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Les autres caractères ne sont pas concernés. Pour plus d’informations sur `LC_CTYPE`, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans suffixe `_l` utilisent les paramètres régionaux actifs ; les versions avec suffixe `_l` sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  `_wcsupr` et `_mbsupr` sont des versions à caractères larges et à caractères multioctets de `_strupr`. L’argument et la valeur de retour de `_wcsupr` sont des chaînes de caractères larges ; ceux de `_mbsupr` sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.  
   
  Si `str` est un pointeur null, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent la chaîne d’origine et affectent à `errno` la valeur `EINVAL`.  
   
- En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
@@ -179,7 +163,7 @@ unsigned char *_mbsupr_l(
 |`_tcsupr`|`_strupr`|`_mbsupr`|`_wcsupr`|  
 |`_tcsupr_l`|`_strupr_l`|`_mbsupr_l`|`_wcsupr_l`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
@@ -187,7 +171,7 @@ unsigned char *_mbsupr_l(
 |`_wcsupr`, `_wcsupr_l`|\<string.h> ou \<wchar.h>|  
 |`_mbsupr`, `_mbsupr_l`|\<mbstring.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple relatif à [_strlwr](../../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md).  

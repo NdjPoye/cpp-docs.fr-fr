@@ -28,11 +28,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 95b75930503ba36c398c4d7e7d5ee2f0e20bbf44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 86427dbf1ac6c3404daa36d2e02786aa80ed6453
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="opt-optimizations"></a>/OPT (Optimisations)
 Contrôle les optimisations effectuées par LINK pendant une génération.  
@@ -53,7 +54,7 @@ Contrôle les optimisations effectuées par LINK pendant une génération.
   
  Lorsque **/OPT : REF** est activé, soit explicitement, soit par défaut, une forme limitée de **/OPT : ICF** est activée afin de replier uniquement des fonctions identiques. Si vous souhaitez **/OPT : REF** mais pas **/OPT : ICF**, vous devez spécifier soit **/OPT : REF, NOICF** ou **NOICF**.  
   
- Si [/DEBUG](../../build/reference/debug-generate-debug-info.md) est spécifié, la valeur par défaut pour **/OPT** est **NOREF**, et toutes les fonctions sont conservées dans l’image. Pour remplacer cette valeur par défaut et optimiser une build de débogage, spécifiez **/OPT : REF**. Étant donné que **/OPT : REF** implique **/OPT : ICF**, nous vous recommandons de spécifier également **NOICF** à conserver des fonctions identiques dans les versions de débogage. Cela facilite la lecture des traces de la pile et la définition des points d'arrêt dans les fonctions qui seraient repliées ensemble dans le cas contraire. Le **/OPT : REF** option désactive les liens incrémentiels.  
+ Si [/DEBUG](../../build/reference/debug-generate-debug-info.md) est spécifié, la valeur par défaut pour **/OPT** est **NOREF**, et toutes les fonctions sont conservées dans l’image. Pour remplacer cette valeur par défaut et optimiser une build de débogage, spécifiez **/OPT : REF**. Étant donné que **/OPT : REF** implique **/OPT : ICF**, nous vous recommandons de spécifier également **NOICF** à conserver des fonctions identiques dans les versions de débogage. Cela facilite la lecture des traces de la pile et la définition des points d’arrêt dans les fonctions qui seraient pliées ensemble dans le cas contraire. Le **/OPT : REF** option désactive les liens incrémentiels.  
   
  Vous devez marquer explicitement `const` les données en tant que COMDAT ; utilisez [__declspec (selectany)](../../cpp/selectany.md).  
   
@@ -76,7 +77,7 @@ Contrôle les optimisations effectuées par LINK pendant une génération.
   
  Par défaut, le **/OPT : LBR** option est définie lors de l’édition des liens incrémentielle ne sont pas activé. Si vous souhaitez que des liens non incrémentielle sans optimisations des longues branches, spécifiez **/OPT:NOLBR**. Le **/OPT : LBR** option désactive les liens incrémentiels.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  En règle générale, les optimisations diminuent la taille de l'image et augmentent la vitesse du programme. Toutefois, elles entraînent également une augmentation de la durée d'édition des liens.  
   
  Vous pouvez utiliser la [/verbose](../../build/reference/verbose-print-progress-messages.md) option pour afficher les fonctions supprimées par **/OPT : REF** et les fonctions repliées par **/OPT : ICF**.  

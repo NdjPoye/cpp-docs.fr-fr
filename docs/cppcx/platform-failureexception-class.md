@@ -17,11 +17,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 441c8893015bb2f2a961c83b129af8f03dd527df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9b5e641b0a7519ac49a04c8769439858f3d697b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformfailureexception-class"></a>Platform::FailureException, classe
 Levée lorsque l'opération a échoué. Il s'agit de l'équivalent de E_FAIL HRESULT.  
@@ -32,10 +33,10 @@ Levée lorsque l'opération a échoué. Il s'agit de l'équivalent de E_FAIL HRE
 public ref class FailureException : COMException,    IException,    IPrintable,    IEquatable  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d'informations, consultez la classe [COMException](../cppcx/platform-comexception-class.md) .  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **Minimum pris en charge le client :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  

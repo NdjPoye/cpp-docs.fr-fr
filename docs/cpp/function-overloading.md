@@ -4,32 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9076fdd48e466d68d5dcecec2c339a98f39a8bb1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 785692992863e5a1cf3800f536d3f8fe3790b4a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-overloading"></a>Surcharge de fonction
 C++ permet la spécification de plusieurs fonctions du même nom dans la même portée. Ces fonctions s'appellent des fonctions surchargées et sont décrites en détail dans Surcharge. Les fonctions surchargées permettent aux programmeurs de fournir une sémantique différente pour une fonction, selon les types et le nombre des arguments.  
   
- Par exemple, un **imprimer** fonction qui accepte une chaîne (ou **char \* **) argument effectue des tâches très différentes de celles qui prend un argument de type **double** . La surcharge permet une appellation uniforme et évite aux programmeurs de devoir inventer des noms, par exemple `print_sz` ou`print_d`. Le tableau suivant montre les parties qu'une déclaration de fonction C++ utilise pour différencier les groupes de fonctions portant le même nom dans la même portée.  
+ Par exemple, un **imprimer** fonction qui accepte une chaîne (ou **char \*** ) argument effectue des tâches très différentes de celles qui prend un argument de type **double** . La surcharge permet une appellation uniforme et évite aux programmeurs de devoir inventer des noms, par exemple `print_sz` ou`print_d`. Le tableau suivant montre les parties qu'une déclaration de fonction C++ utilise pour différencier les groupes de fonctions portant le même nom dans la même portée.  
   
 ### <a name="overloading-considerations"></a>Considérations en matière de surcharge  
   
@@ -37,7 +35,7 @@ C++ permet la spécification de plusieurs fonctions du même nom dans la même p
 |----------------------------------|---------------------------|  
 |Type de retour de fonction|Non|  
 |Nombre d'arguments|Oui|  
-|Type d'arguments|Oui|  
+|Type d’arguments|Oui|  
 |Présence ou absence de points de suspension|Oui|  
 |Utilisation de noms `typedef`|Non|  
 |Limites de tableau non spécifiées|Non|  
@@ -120,7 +118,7 @@ return cout.good();
   
  Le code précédent illustre la surcharge de la fonction `print` dans la portée de fichier.  
   
- L'argument par défaut n'est pas considéré comme faisant partie du type de fonction. Par conséquent, il n'est pas utilisé pour la sélection des fonctions surchargées. Deux fonctions qui diffèrent uniquement de par leurs arguments par défaut sont considérées comme des définitions distinctes plutôt que comme des fonctions surchargées.  
+ L’argument par défaut n’est pas considéré comme faisant partie du type de fonction. Par conséquent, il n'est pas utilisé pour la sélection des fonctions surchargées. Deux fonctions qui diffèrent uniquement de par leurs arguments par défaut sont considérées comme des définitions distinctes plutôt que comme des fonctions surchargées.  
   
  Les arguments par défaut ne peuvent pas être fournis pour les opérateurs surchargés.  
   
@@ -134,15 +132,15 @@ return cout.good();
   
 -   Une promotion intégrale a été exécutée.  
   
--   Une conversion standard vers le type d'argument souhaité existe.  
+-   Une conversion standard vers le type d’argument souhaité existe.  
   
--   Une conversion définie par l'utilisateur (opérateur de conversion ou constructeur) vers le type d'argument souhaité existe.  
+-   Une conversion définie par l’utilisateur (opérateur de conversion ou constructeur) vers le type d’argument souhaité existe.  
   
 -   Des arguments représentés par une ellipse ont été détectés.  
   
- Le compilateur crée un ensemble de fonctions candidates pour chaque argument. Les fonctions candidates sont des fonctions dans lesquelles l'argument réel dans cette position peut être converti vers le type de l'argument formel.  
+ Le compilateur crée un ensemble de fonctions candidates pour chaque argument. Les fonctions candidates sont des fonctions dans lesquelles l’argument réel dans cette position peut être converti vers le type de l’argument formel.  
   
- Un ensemble des « meilleures fonctions correspondantes » est généré pour chaque argument, et la fonction sélectionnée correspond à l'intersection de tous les ensembles. Si l'intersection contient plusieurs fonctions, la surcharge est ambiguë et génère une erreur. La fonction qui est sélectionnée en finalité constitue toujours une meilleure correspondance que chaque autre fonction du groupe pour au moins un argument. Dans le cas contraire (en l'absence d'un vainqueur clair), l'appel de fonction génère une erreur.  
+ Un ensemble des « meilleures fonctions correspondantes » est généré pour chaque argument, et la fonction sélectionnée correspond à l’intersection de tous les ensembles. Si l'intersection contient plusieurs fonctions, la surcharge est ambiguë et génère une erreur. La fonction qui est sélectionnée en finalité constitue toujours une meilleure correspondance que chaque autre fonction du groupe pour au moins un argument. Dans le cas contraire (en l'absence d'un vainqueur clair), l'appel de fonction génère une erreur.  
   
  Prenons les déclarations suivantes (les fonctions sont marquées `Variant 1`, `Variant 2` et `Variant 3`, afin de les identifier dans la discussion suivante) :  
   
@@ -183,15 +181,15 @@ F1 = Add( 3, 6 );
   
  Notez que l'intersection entre ces deux ensembles est vide. Par conséquent, le compilateur génère un message d'erreur.  
   
- Pour l’argument correspondant, une fonction avec * n * arguments par défaut est traité comme * n *+ 1 des fonctions séparées, chacune avec un nombre différent d’arguments.  
+ Pour l’argument correspondant, une fonction avec  *n*  arguments par défaut est traité comme  *n* + 1 des fonctions séparées, chacune avec un nombre différent d’arguments.  
   
  L’ellipse (...) fait office de caractère générique ; elle correspond à n’importe quel argument réel. Cela peut aboutir à de nombreux ensembles ambigus si vous ne concevez pas vos ensembles de fonctions surchargées de fonction avec une extrême prudence.  
   
 > [!NOTE]
->  L'ambiguïté des fonctions surchargées ne peut pas être déterminée tant qu'un appel de fonction n'est pas détecté. À ce stade, les ensembles sont générés pour chaque argument dans l'appel de fonction, et vous pouvez déterminer si une surcharge non équivoque existe. Cela signifie que les ambiguïtés peuvent rester dans votre code jusqu'à ce qu'elles soient évoquées par un appel de fonction particulier.  
+>  L'ambiguïté des fonctions surchargées ne peut pas être déterminée tant qu'un appel de fonction n'est pas détecté. À ce stade, les ensembles sont générés pour chaque argument dans l’appel de fonction, et vous pouvez déterminer si une surcharge non équivoque existe. Cela signifie que les ambiguïtés peuvent rester dans votre code jusqu'à ce qu'elles soient évoquées par un appel de fonction particulier.  
   
-## <a name="argument-type-differences"></a>Différences de type d'argument  
- Les fonctions surchargées distinguent les types d'arguments qui acceptent différents initialiseurs. Par conséquent, un argument d'un type donné et une référence à ce type sont considérés comme identiques pour les besoins de la surcharge. Ils sont considérés comme identiques car ils acceptent les mêmes initialiseurs. Par exemple, `max( double, double )` est considéré comme identique à `max( double &, double & )`. La déclaration de deux de ces fonctions provoque une erreur.  
+## <a name="argument-type-differences"></a>Différences de type d’argument  
+ Les fonctions surchargées distinguent les types d’arguments qui acceptent différents initialiseurs. Par conséquent, un argument d’un type donné et une référence à ce type sont considérés comme identiques pour les besoins de la surcharge. Ils sont considérés comme identiques car ils acceptent les mêmes initialiseurs. Par exemple, `max( double, double )` est considéré comme identique à `max( double &, double & )`. La déclaration de deux de ces fonctions provoque une erreur.  
   
  Pour la même raison, arguments de fonction d’un type modifié par **const** ou `volatile` ne sont pas traités différemment que le type de base pour les besoins de la surcharge.  
   
@@ -259,7 +257,7 @@ volatile Over&
 |*nom de type*|*nom de type***&**|  
 |*nom de type***&**|*nom de type*|  
 |*nom de type* **]**|*nom de type\**|  
-|*nom de type* **(** *-liste d’arguments* **)**|**(** * \*-nom du type* **) (** *-liste d’arguments* **)**|  
+|*nom de type* **(** *-liste d’arguments* **)**|**(**  *\*-nom du type* **) (** *-liste d’arguments* **)**|  
 |*nom de type*|**const** *nom de type*|  
 |*nom de type*|`volatile`*nom de type*|  
 |*nom de type\**|**const** *nom de type\**|  
@@ -269,19 +267,19 @@ volatile Over&
   
 1.  Correspondance exacte. Une correspondance exacte entre les types avec lesquels la fonction est appelée et les types déclarés dans le prototype de fonction est toujours la meilleure correspondance. Les séquences de conversions ordinaires sont classées comme correspondances exactes. Toutefois, les séquences qui n'effectuent aucune de ces conversions sont considérées meilleures que les séquences qui convertissent :  
   
-    -   À partir du pointeur en pointeur vers **const** (`type` ** \* ** à **const** `type` ** \* ** ).  
+    -   À partir du pointeur en pointeur vers **const** (`type`  **\***  à **const** `type`  **\***  ).  
   
-    -   À partir du pointeur en pointeur vers `volatile` (`type` ** \* ** à `volatile` `type` ** \* **).  
+    -   À partir du pointeur en pointeur vers `volatile` (`type`  **\***  à `volatile` `type`  **\*** ).  
   
-    -   À partir de la référence, à la référence à **const** (`type` ** & ** à **const** `type` ** & **).  
+    -   À partir de la référence, à la référence à **const** (`type`  **&**  à **const** `type`  **&** ).  
   
-    -   À partir de la référence, à la référence à `volatile` (`type` ** & ** à `volatile` `type` ** & **).  
+    -   À partir de la référence, à la référence à `volatile` (`type`  **&**  à `volatile` `type`  **&** ).  
   
 2.  Correspondance avec des promotions. Toute séquence non classée comme correspondance exacte qui contient uniquement des promotions intégrales, les conversions de **float** à **double**, et des conversions ordinaires est classée comme correspondance avec des promotions. Bien qu'elle ne soit pas aussi appropriée qu'une correspondance exacte, une correspondance avec des promotions est meilleure qu'une correspondance avec des conversions standard.  
   
 3.  Correspondance avec des conversions standard. Toute séquence non classée comme correspondance exacte ou correspondance avec des promotions et qui contient uniquement des conversions standard et des conversions ordinaires est classée comme correspondance avec des conversions standard. Dans cette catégorie, les règles ci-dessous s'appliquent.  
   
-    -   Conversion d’un pointeur vers une classe dérivée, vers un pointeur vers une classe de base directe ou indirecte est préférable à une conversion vers **void \* ** ou **const void \* **.  
+    -   Conversion d’un pointeur vers une classe dérivée, vers un pointeur vers une classe de base directe ou indirecte est préférable à une conversion vers **void \***  ou **const void \*** .  
   
     -   La conversion d'un pointeur vers une classe dérivée, vers un pointeur vers une classe de base génère une correspondance d'autant meilleure que la classe de base est proche d'une classe de base directe. Supposons que la hiérarchie de classes s'apparente à celle de l'illustration ci-dessous.  
   
@@ -294,7 +292,7 @@ Graphique illustrant les conversions préférées
   
  Cette même règle s'applique aux conversions de pointeur vers membre. La conversion du type `T D::*` vers le type `T C::*` est préférable à une conversion du type `T D::*` vers le type `T B::*`, et ainsi de suite (où `T` est le type du membre).  
   
- La règle précédente s'applique uniquement à un chemin de dérivation donné. Examinez le graphique présenté dans l'illustration ci-dessous.  
+ La règle précédente s’applique uniquement à un chemin de dérivation donné. Examinez le graphique présenté dans l'illustration ci-dessous.  
   
  ![Plusieurs &#45; l’héritage illustrant les conversions préférées](../cpp/media/vc391t2.gif "vc391T2")  
 Graphique d'héritages multiples illustrant les conversions préférées  
@@ -405,7 +403,7 @@ obj.name
 ## <a name="restrictions"></a>Restrictions  
  Plusieurs restrictions régissent un ensemble acceptable de fonctions surchargées :  
   
--   Deux fonctions d'un ensemble de fonctions surchargées doivent avoir des listes d'arguments différentes.  
+-   Deux fonctions d’un ensemble de fonctions surchargées doivent avoir des listes d’arguments différentes.  
   
 -   Le surchargement de fonctions avec des listes d’arguments de même type, basées uniquement sur le type de retour, est une erreur.  
   
@@ -426,7 +424,7 @@ obj.name
     void Print( PSTR szToPrint );  
     ```  
   
-     Les deux fonctions précédentes ont des listes d’arguments identiques. `PSTR`est un synonyme de type **char \* **. Dans la portée du membre, ce code génère une erreur.  
+     Les deux fonctions précédentes ont des listes d’arguments identiques. `PSTR`est un synonyme de type **char \*** . Dans la portée du membre, ce code génère une erreur.  
   
 -   Les types énumérés sont des types distincts et peuvent être utilisés pour établir une distinction entre les fonctions surchargées.  
   
@@ -446,7 +444,7 @@ obj.name
     ```  
   
 ## <a name="declaration-matching"></a>Correspondance de déclaration  
- Deux déclarations de fonction du même nom dans la même portée peuvent faire référence à la même fonction ou à deux fonctions distinctes qui sont surchargées. Si les listes d'arguments des déclarations contiennent des arguments de types équivalents (comme décrit dans la section précédente), les déclarations de fonction font référence à la même fonction. Sinon, elles font référence à deux fonctions différentes qui sont sélectionnées à l'aide de la surcharge.  
+ Deux déclarations de fonction du même nom dans la même portée peuvent faire référence à la même fonction ou à deux fonctions distinctes qui sont surchargées. Si les listes d’arguments des déclarations contiennent des arguments de types équivalents (comme décrit dans la section précédente), les déclarations de fonction font référence à la même fonction. Sinon, elles font référence à deux fonctions différentes qui sont sélectionnées à l'aide de la surcharge.  
   
  La portée de classe est strictement observée ; par conséquent, une fonction déclarée dans une classe de base n'est pas dans la même portée qu'une fonction déclarée dans une classe dérivée. Si une fonction dans une classe dérivée est déclarée avec le même nom qu'une fonction dans la classe de base, la fonction de classe dérivée masque la fonction de classe de base au lieu de provoquer la surcharge.  
   

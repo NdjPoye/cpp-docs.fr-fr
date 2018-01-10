@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a93af25f154e0ec928c38bb60dc2999ad232a9ff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4fd524e72125408c6a88bea83272e18a7ef9b78d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (Différer le chargement de l'importation)
 ```  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
  `dllname`  
  Le nom d'une DLL dont vous voulez différer le chargement.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Avec l'option /DELAYLOAD, la DLL spécifiée par `dllname` n'est chargée que lors du premier appel du programme à une fonction contenue dans cette DLL. Pour plus d’informations, consultez [prise en charge de l’éditeur de liens pour les DLL à chargement différé](../../build/reference/linker-support-for-delay-loaded-dlls.md). Vous pouvez utiliser cette option autant de fois que nécessaire pour spécifier autant de DLL que vous voulez. Vous devez utiliser Delayimp.lib au moment de lier votre programme, ou vous pouvez implémenter votre propre fonction d'assistance du chargement différé.  
   
  Le [/Delay](../../build/reference/delay-delay-load-import-settings.md) option spécifie la liaison et de chargement des options pour chaque DLL à chargement différé.  

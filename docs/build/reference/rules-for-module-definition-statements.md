@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 50d382b8f6dbb8c6468bba3bcb2d5c65607de99d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 40eb4875b195871aff8d274667e005d63424a110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rules-for-module-definition-statements"></a>Règles s'appliquant aux instructions de définition de module
 Les règles de syntaxe suivantes s’appliquent à toutes les instructions dans un fichier .def. Autres règles qui s’appliquent à des instructions spécifiques sont décrites dans chaque instruction.  

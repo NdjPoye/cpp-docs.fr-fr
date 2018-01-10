@@ -30,11 +30,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1de5d46375a48b3d0a97ee76486a11e8a6e71b6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d54ea3cabbbe631006cc22a80fdbf500585ff20f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (Représentation à but général)
 Utilisé lorsque [/vmb, /vmg (méthode de représentation)](../../build/reference/vmb-vmg-representation-method.md) est sélectionné comme le [méthode de représentation](../../build/reference/vmb-vmg-representation-method.md). Ces options indiquent le modèle d’héritage de la définition de classe d’a pas encore été rencontrée.  
@@ -47,7 +48,7 @@ Utilisé lorsque [/vmb, /vmg (méthode de représentation)](../../build/referenc
 /vmv  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les options sont décrites dans le tableau suivant.  
   
 |Option|Description|  

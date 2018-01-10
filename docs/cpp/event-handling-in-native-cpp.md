@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2c404caf0090381af1697516d25358daa29c70d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e30e9259a5b3e59b9f8c2f3af877bca3a98c84dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-handling-in-native-c"></a>Gestion des événements en mode natif C++
 Dans Gestion des événements C++ native, vous configurez un récepteur d’événement source et les événements à l’aide de la [event_source](../windows/event-source.md) et [event_receiver](../windows/event-receiver.md) des attributs, respectivement, en spécifiant `type` = `native`. Ces attributs permettent aux classes auxquelles ils sont appliqués de déclencher et de gérer des événements dans un contexte natif non COM.  
@@ -27,7 +28,7 @@ Dans Gestion des événements C++ native, vous configurez un récepteur d’év�
  Dans une classe source d’événements, utilisez le [__event](../cpp/event.md) mot clé dans une déclaration de méthode pour déclarer la méthode comme un événement. Veillez à déclarer la méthode, mais ne la définissez pas ; cela générerait une erreur du compilateur, car celui-ci définit la méthode implicitement lorsqu'elle est convertie en événement. Les événements natifs peuvent être des méthodes avec zéro, un ou plusieurs paramètres. Le type de retour peut être void ou un type intégral.  
   
 ## <a name="defining-event-handlers"></a>Définition de gestionnaires d'événements  
- Dans une classe de récepteur d'événements, vous définissez des gestionnaires d'événements, qui sont des méthodes avec signatures (types de retour, conventions d'appel et arguments) qui correspondent à l'événement qu'ils doivent gérer.  
+ Dans une classe de récepteur d’événements, vous définissez des gestionnaires d’événements, qui sont des méthodes avec signatures (types de retour, conventions d’appel et arguments) qui correspondent à l’événement qu’ils doivent gérer.  
   
 ## <a name="hooking-event-handlers-to-events"></a>Raccordement de gestionnaires d'événements à des événements  
  Également dans une classe de récepteur d’événements, vous utilisez la fonction intrinsèque [__hook](../cpp/hook.md) pour associer des événements à des gestionnaires d’événements et [__unhook](../cpp/unhook.md) pour dissocier des événements à partir des gestionnaires d’événements. Vous pouvez raccorder plusieurs événements à un gestionnaire d'événements, ou plusieurs gestionnaires d'événements à un événement.  

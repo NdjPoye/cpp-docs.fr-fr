@@ -37,11 +37,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a3043abf425055d8cb21108a30db2e6382e19c1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 42515208c2c94e28ee5d6a5fab586d4ab747cc6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="swab"></a>_swab
 Échange des octets.  
@@ -74,12 +75,12 @@ void _swab(
 ## <a name="remarks"></a>Notes  
  Si `n` est pair, la fonction `_swab` copies `n` octets à partir de `src`, échange chaque paire d’octets adjacents et stocke le résultat au niveau de `dest`. Si `n` est impair, `_swab` copie et échange les `n-1` premiers octets de `src`, et le dernier octet n’est pas copié. La fonction `_swab` sert généralement à préparer le transfert de données binaires vers un ordinateur qui utilise un ordre d’octet différent.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_swab`|C : \<stdlib.h> C++ : \<cstdlib> ou \<stdlib.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
 ```C 

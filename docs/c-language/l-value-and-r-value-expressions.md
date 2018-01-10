@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8c2d37d95a20ac2a71c50d468a7793ae4ab8956f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6fb26b4488f6c75c0d9d7b70afb68c3c1b5e3178
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="l-value-and-r-value-expressions"></a>Expressions L-Value et R-Value
 Les expressions qui font référence à des emplacements de mémoire sont appelées expressions « l-value ». Une l-value représente la valeur « localisateur » d’une zone de stockage, ou une valeur « gauche », ce qui implique qu’elle peut apparaître à gauche du signe égal à (**=**). Les l-values sont souvent des identificateurs.  
@@ -62,7 +63,7 @@ long l;
   
  Par défaut pour Microsoft C, les extensions Microsoft sont activées. Utilisez l’option du compilateur /Za pour désactiver ces extensions.  
   
- **Fin de la section spécifique à Microsoft**  
+ **FIN de la section spécifique à Microsoft**  
   
 ## <a name="see-also"></a>Voir aussi  
  [Opérandes et expressions](../c-language/operands-and-expressions.md)

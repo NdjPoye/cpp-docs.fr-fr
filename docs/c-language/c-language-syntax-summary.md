@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c791feb2abb9deda0fcd0c18602682b81e4dcf28
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 992c3164a8adb95125d9e4be4f88f930270b08ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-language-syntax-summary"></a>Résumé de syntaxe du langage C
 Cette section fournit la description complète du langage C et des fonctionnalités du langage C spécifiques à Microsoft. Vous pouvez utiliser la notation de syntaxe dans cette section pour déterminer la syntaxe exacte pour n’importe quel composant de langage. L’explication de la syntaxe s’affiche dans la section de ce manuel, où vous trouverez une rubrique.  

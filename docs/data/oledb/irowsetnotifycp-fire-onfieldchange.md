@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fe8c43c04576e416718e5897dfffe07686210f77
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 602ce97c5e23827d08df0ab6ad152acdce8de1a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetnotifycpfireonfieldchange"></a>IRowsetNotifyCP::Fire_OnFieldChange
 Diffuse un [OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx) événement pour avertir les utilisateurs d’une modification à la valeur d’une colonne.  
@@ -47,7 +50,7 @@ Diffuse un [OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.asp
 #### <a name="parameters"></a>Paramètres  
  Consultez [IRowsetNotify::OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

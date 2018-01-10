@@ -18,16 +18,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8f6b6b39220f49339faccb4ea6608a0df5fdf6ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3465202908cb0ca375ab5dcc77a085b208071f3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Assertion et messages fournis par l'utilisateur (C++)
 Les C++ langage prend en charge trois la gestion des erreurs mécanismes qui vous aident à déboguer votre application : le [directive #error](../preprocessor/hash-error-directive-c-cpp.md), le [static_assert](../cpp/static-assert.md) (mot clé) et le [assert (macro), _assert, _ wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) (macro). Ces trois mécanismes génèrent des messages d'erreur et deux d'entre eux testent également les assertions logicielles. Une assertion logicielle spécifie une condition supposée être vraie en un point particulier de votre programme. Si une assertion au moment de la compilation échoue, le compilateur génère un message de diagnostic et une erreur de compilation. Si une assertion d'exécution échoue, le système d'exploitation génère un message de diagnostic et ferme votre application.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La durée de vie de votre application se compose d'une phase de prétraitement, de compilation et d'exécution. Chaque mécanisme de gestion des erreurs accède aux informations de débogage disponibles pendant l'une de ces phases. Pour déboguer efficacement, sélectionnez le mécanisme qui fournit des informations pertinentes concernant cette phase :  
   
 -   Le [directive #error](../preprocessor/hash-error-directive-c-cpp.md) est en vigueur au moment du prétraitement. Elle génère sans condition un message spécifié par l'utilisateur et provoque l'échec de la compilation avec une erreur. Le message peut contenir du texte manipulé par des directives de préprocesseur, mais aucune expression obtenue n'est évaluée.  

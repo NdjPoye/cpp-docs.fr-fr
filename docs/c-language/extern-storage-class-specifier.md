@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f11789f985c67b59b076bed7ec849a864688743
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 448a659afaf7a0251d500da3d9878d30550b9180
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="extern-storage-class-specifier"></a>Spécificateur extern de classe de stockage
 Une variable déclarée avec le spécificateur de classe de stockage `extern` est une référence à une variable du même nom définie au niveau externe dans n'importe quel fichier source du programme. La déclaration interne `extern` est utilisée pour rendre la définition de variable au niveau externe visible dans le bloc. Sauf déclaration contraire au niveau externe, une variable déclarée avec le mot clé `extern` est visible uniquement dans le bloc dans lequel elle est déclarée.  

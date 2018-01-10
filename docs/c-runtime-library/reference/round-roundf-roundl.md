@@ -38,11 +38,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b1f4532b8f37b5223aa42e7055ba9edf62339925
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0209e85b6846136a97a2c9fece459b6dc1ec4513
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 Arrondit une valeur à virgule flottante à l’entier le plus proche.  
@@ -74,20 +75,20 @@ long double roundl(
 ## <a name="return-value"></a>Valeur de retour  
  Les fonctions `round` retournent une valeur à virgule flottante qui représente l'entier le plus proche de `x`. Les valeurs médianes sont arrondies en s’éloignant de zéro, indépendamment du paramètre du mode d’arrondi à virgule flottante. Aucun retour d'erreur.  
   
-|Entrée|Exception SEH|Exception{b> <b}Matherr|  
+|Entrée|Exception SEH|Exception Matherr|  
 |-----------|-------------------|-----------------------|  
 |± `QNAN`,`IND`|aucun|`_DOMAIN`|  
   
 ## <a name="remarks"></a>Notes  
  C++ autorisant la surcharge, vous pouvez appeler des surcharges de `round` qui acceptent et retournent des valeurs `float` et `long double`. Dans un programme C, `round` accepte et retourne toujours un `double`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`round`, `roundf`, `roundl`|\<math.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

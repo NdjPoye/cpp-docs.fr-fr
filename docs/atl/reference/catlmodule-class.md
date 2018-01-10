@@ -30,11 +30,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6c2c9b9c5eaaa2cf908b2b1ff82bafaa892d1e43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c969341656d0861224cf0835d08e31907328b5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlmodule-class"></a>Classe de CAtlModule
 Cette classe fournit des méthodes utilisées par plusieurs classes du module ATL.  
@@ -76,7 +77,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 |[CAtlModule::m_libid](#m_libid)|Contient le GUID du module actuel.|  
 |[CAtlModule::m_pGIT](#m_pgit)|Pointeur vers le tableau Global d’Interface.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe est utilisée par [CAtlDllModuleT classe](../../atl/reference/catldllmodulet-class.md), [CAtlExeModuleT classe](../../atl/reference/catlexemodulet-class.md), et [CAtlServiceModuleT classe](../../atl/reference/catlservicemodulet-class.md) pour prendre en charge pour les applications de la DLL, les applications EXE, et Services Windows, respectivement.  
   
  Pour plus d’informations sur les modules dans les ATL, consultez [Module ATL, Classes](../../atl/atl-module-classes.md).  
@@ -88,7 +89,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
   
  `CAtlModule`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ##  <a name="addcommonrgsreplacements"></a>CAtlModule::AddCommonRGSReplacements  
@@ -105,7 +106,7 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Paramètres remplaçables autorisent le client du bureau d’enregistrement spécifier les données de l’exécution. Pour ce faire, Registrar maintient un mappage de remplacement dans laquelle il entre les valeurs associées aux paramètres remplaçables dans votre script. Le bureau d’enregistrement effectue ces entrées au moment de l’exécution.  
   
  Consultez la rubrique [à l’aide des paramètres remplaçables (le préprocesseur de Registrar)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) pour plus d’informations.  
@@ -134,7 +135,7 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 CAtlModule() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Initialise les membres de données et lance une section critique autour de thread du module.  
   
 ##  <a name="dtor"></a>CAtlModule :: ~ CAtlModule  
@@ -144,7 +145,7 @@ CAtlModule() throw();
 ~CAtlModule() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère tous les membres de données.  
   
 ##  <a name="getgitptr"></a>CAtlModule::GetGITPtr  
@@ -161,7 +162,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite ou un code d’erreur en cas d’échec. E_POINTER est retournée si `ppGIT` est égal à NULL.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si l’objet Global Interface Table n’existe pas, il est créé et son adresse est stockée dans la variable membre [CAtlModule::m_pGIT](#m_pgit).  
   
  Dans les versions debug, une erreur d’assertion se produit si `ppGIT` est égal à NULL, ou si le pointeur de la Table d’Interface globale ne peut pas être obtenu.  
@@ -209,7 +210,7 @@ IGlobalInterfaceTable* m_pGIT;
 void Term() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère tous les membres de données. Cette méthode est appelée par le destructeur.  
   
 ##  <a name="unlock"></a>CAtlModule::Unlock  
@@ -253,7 +254,7 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Exécute le script contenu dans la ressource spécifiée par *lpszRes ou nResID*. Si `bRegister` est **TRUE**, cette méthode enregistre l’objet dans le Registre système ; sinon, elle supprime l’objet à partir du Registre.  
   
  Pour lier statiquement au composant de Registre ATL (inscription), voir [CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources).  
@@ -283,7 +284,7 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode fournit l’implémentation de [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced).  
   
 ##  <a name="updateregistryfromresources"></a>CAtlModule::UpdateRegistryFromResourceS  
@@ -317,7 +318,7 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Semblable à [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced) sauf `CAtlModule::UpdateRegistryFromResourceS` crée un lien statique vers le composant de Registre ATL (inscription).  
   
 ## <a name="see-also"></a>Voir aussi  

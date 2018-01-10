@@ -11,21 +11,19 @@ ms.assetid: 165d3690-5bd8-4b0b-bc66-8b699d85a61b
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-f1_keywords:
-- VC.Project.IVCEventTool.CommandLine
-- VC.Project.IVCEventTool.Description
-- VC.Project.IVCEventTool.ExcludedFromBuild
-- VC.Project.VCConfiguration.BuildLogFile
-ms.openlocfilehash: 951b383708740aa4cd7571afc007f6fb328c254c
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 25e51a7df39c649ec8425f4aee332086acc408d6
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="build-event-properties-linux-c"></a>Événement de build, propriétés (Linux C++) 
 
-
 ## <a name="pre-build-event"></a>Événement prébuild
+
 Propriété | Description
 --- | ---
 Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement prébuild à exécuter.
@@ -34,6 +32,7 @@ Utilisation dans la génération | Spécifie si cet événement de build est exc
 Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier sur le système distant. Vous pouvez éventuellement fournir la liste sous forme de paires de mappage entre l’emplacement local et l’emplacement distant en utilisant la syntaxe suivante : fulllocalpath1:=fullremotepath1;fulllocalpath2:=fullremotepath2, où un fichier local peut être copié vers l’emplacement distant spécifié sur le système distant.
 
 ## <a name="pre-link-event"></a>Événement de préédition des liens
+
 Propriété | Description
 --- | ---
 Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement de préédition des liens à exécuter.
@@ -42,6 +41,7 @@ Utilisation dans la génération | Spécifie si cet événement de build est exc
 Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier sur le système distant. Vous pouvez éventuellement fournir la liste sous forme de paires de mappage entre l’emplacement local et l’emplacement distant en utilisant la syntaxe suivante : fulllocalpath1:=fullremotepath1;fulllocalpath2:=fullremotepath2, où un fichier local peut être copié vers l’emplacement distant spécifié sur le système distant.
 
 ## <a name="post-build-event"></a>Événement post-build
+
 Propriété | Description
 --- | ---
 Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement postbuild à exécuter.
@@ -50,6 +50,7 @@ Utilisation dans la génération | Spécifie si cet événement de build est exc
 Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier sur le système distant. Vous pouvez éventuellement fournir la liste sous forme de paires de mappage entre l’emplacement local et l’emplacement distant en utilisant la syntaxe suivante : fulllocalpath1:=fullremotepath1;fulllocalpath2:=fullremotepath2, où un fichier local peut être copié vers l’emplacement distant spécifié sur le système distant.
 
 ## <a name="remote-pre-build-event"></a>Événement prébuild distant
+
 Propriété | Description
 --- | ---
 Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement prébuild à exécuter sur le système distant.
@@ -58,6 +59,7 @@ Utilisation dans la génération | Spécifie si cet événement de build est exc
 Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier à partir du système distant. Vous pouvez éventuellement fournir la liste sous forme de paires de mappage entre l’emplacement distant et l’emplacement local en utilisant la syntaxe suivante : fullremotepath1:=fulllocalpath1;fullremotepath2:=fulllocalpath2, où un fichier distant peut être copié vers l’emplacement spécifié sur la machine locale.
 
 ## <a name="remote-pre-link-event"></a>Événement de préédition des liens distant
+
 Propriété | Description
 --- | ---
 Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement de préédition des liens à exécuter sur le système distant.
@@ -66,6 +68,7 @@ Utilisation dans la génération | Spécifie si cet événement de build est exc
 Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier à partir du système distant. Vous pouvez éventuellement fournir la liste sous forme de paires de mappage entre l’emplacement distant et l’emplacement local en utilisant la syntaxe suivante : fullremotepath1:=fulllocalpath1;fullremotepath2:=fulllocalpath2, où un fichier distant peut être copié vers l’emplacement spécifié sur la machine locale.
 
 ## <a name="remote-post-build-event"></a>Événement post-build distant
+
 Propriété | Description
 --- | ---
 Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement post-build à exécuter sur le système distant.

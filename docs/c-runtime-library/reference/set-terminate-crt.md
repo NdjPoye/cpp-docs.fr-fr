@@ -32,11 +32,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f2e2ac7ad7b103b5c1da790b61f560c758d9d124
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 099cb340f821f04c3a5f84ccef7e3e9649482cd6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 Installe votre propre routine d’arrêt que doit appeler `terminate`.  
@@ -57,7 +58,7 @@ terminate_function set_terminate(
  Retourne un pointeur vers la précédente fonction inscrite par `set_terminate`, si bien qu’elle peut être restaurée ultérieurement. Si aucune fonction précédente n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut ; cette valeur peut être NULL.  
   
 ## <a name="remarks"></a>Notes  
- La fonction `set_terminate` installe `termFunction` comme fonction appelée par `terminate`. `set_terminate` est utilisée avec la gestion des exceptions C++ et peut être appelée à tout moment dans votre programme avant que l’exception soit levée. `terminate` appelle `abort` par défaut. Vous pouvez modifier ce comportement par défaut en écrivant votre propre fonction d’arrêt et en appelant `set_terminate` avec le nom de votre fonction comme argument. `terminate` appelle la dernière fonction donnée comme argument à `set_terminate`. Après avoir effectué les tâches de nettoyage souhaitées, `termFunction` doit fermer le programme. S’il ne se ferme pas (avec un retour vers l’appelant), la fonction `abort` est appelée.  
+ La fonction `set_terminate` installe `termFunction` comme fonction appelée par `terminate`. `set_terminate` est utilisée avec la gestion des exceptions C++ et peut être appelée à tout moment dans votre programme avant que l’exception soit levée. `terminate` appelle `abort` par défaut. Vous pouvez modifier ce comportement par défaut en écrivant votre propre fonction d’arrêt et en appelant `set_terminate` avec le nom de votre fonction comme argument. `terminate` appelle la dernière fonction donnée comme argument de `set_terminate`. Après avoir effectué les tâches de nettoyage souhaitées, `termFunction` doit fermer le programme. S’il ne se ferme pas (avec un retour vers l’appelant), la fonction `abort` est appelée.  
   
  Dans un environnement multithread, les fonctions d’arrêt sont gérées séparément pour chaque thread. Chaque nouveau thread doit installer sa propre fonction d’arrêt. Par conséquent, chaque thread est responsable de sa propre gestion des arrêts.  
   
@@ -72,13 +73,13 @@ typedef void ( *terminate_function )( );
   
  Il existe un seul gestionnaire `set_terminate` pour l’ensemble des DLL ou EXE liés de manière dynamique ; même si vous appelez `set_terminate`, votre gestionnaire peut être remplacé par un autre ou vous pouvez remplacer un gestionnaire défini par une autre DLL ou un autre EXE.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`set_terminate`|\<eh.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple relatif à [terminate](../../c-runtime-library/reference/terminate-crt.md).  

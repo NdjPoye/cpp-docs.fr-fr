@@ -4,76 +4,59 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - IAxWinAmbientDispatch
-- No header/ATL::IAxWinAmbientDispatch
-- No header/ATL::get_AllowContextMenu
-- No header/ATL::get_AllowShowUI
-- No header/ATL::get_AllowWindowlessActivation
-- No header/ATL::get_BackColor
-- No header/ATL::get_DisplayAsDefault
-- No header/ATL::get_DocHostDoubleClickFlags
-- No header/ATL::get_DocHostFlags
-- No header/ATL::get_Font
-- No header/ATL::get_ForeColor
-- No header/ATL::get_LocaleID
-- No header/ATL::get_MessageReflect
-- No header/ATL::get_OptionKeyPath
-- No header/ATL::get_ShowGrabHandles
-- No header/ATL::get_ShowHatching
-- No header/ATL::get_UserMode
-- No header/ATL::put_AllowContextMenu
-- No header/ATL::put_AllowShowUI
-- No header/ATL::put_AllowWindowlessActivation
-- No header/ATL::put_BackColor
-- No header/ATL::put_DisplayAsDefault
-- No header/ATL::put_DocHostDoubleClickFlags
-- No header/ATL::put_DocHostFlags
-- No header/ATL::put_Font
-- No header/ATL::put_ForeColor
-- No header/ATL::put_LocaleID
-- No header/ATL::put_MessageReflect
-- No header/ATL::put_OptionKeyPath
-- No header/ATL::put_UserMode
-dev_langs:
-- C++
-helpviewer_keywords:
-- IAxWinAmbientDispatch interface
+- ATLIFACE/ATL::IAxWinAmbientDispatch
+- ATLIFACE/ATL::get_AllowContextMenu
+- ATLIFACE/ATL::get_AllowShowUI
+- ATLIFACE/ATL::get_AllowWindowlessActivation
+- ATLIFACE/ATL::get_BackColor
+- ATLIFACE/ATL::get_DisplayAsDefault
+- ATLIFACE/ATL::get_DocHostDoubleClickFlags
+- ATLIFACE/ATL::get_DocHostFlags
+- ATLIFACE/ATL::get_Font
+- ATLIFACE/ATL::get_ForeColor
+- ATLIFACE/ATL::get_LocaleID
+- ATLIFACE/ATL::get_MessageReflect
+- ATLIFACE/ATL::get_OptionKeyPath
+- ATLIFACE/ATL::get_ShowGrabHandles
+- ATLIFACE/ATL::get_ShowHatching
+- ATLIFACE/ATL::get_UserMode
+- ATLIFACE/ATL::put_AllowContextMenu
+- ATLIFACE/ATL::put_AllowShowUI
+- ATLIFACE/ATL::put_AllowWindowlessActivation
+- ATLIFACE/ATL::put_BackColor
+- ATLIFACE/ATL::put_DisplayAsDefault
+- ATLIFACE/ATL::put_DocHostDoubleClickFlags
+- ATLIFACE/ATL::put_DocHostFlags
+- ATLIFACE/ATL::put_Font
+- ATLIFACE/ATL::put_ForeColor
+- ATLIFACE/ATL::put_LocaleID
+- ATLIFACE/ATL::put_MessageReflect
+- ATLIFACE/ATL::put_OptionKeyPath
+- ATLIFACE/ATL::put_UserMode
+dev_langs: C++
+helpviewer_keywords: IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 3dd34ffec68e4503aebe7b8d0e72ec1f711dca03
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e9d53dc257920e40dbf6a2f360d1289676d121fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iaxwinambientdispatch-interface"></a>Interface de IAxWinAmbientDispatch
 Cette interface fournit des méthodes permettant de spécifier les caractéristiques du contrôle hébergé ou du conteneur.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s'exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -116,7 +99,7 @@ interface IAxWinAmbientDispatch : IDispatch
 |[put_OptionKeyPath](#put_optionkeypath)|Le **OptionKeyPath** propriété spécifie le chemin de clé de Registre pour les paramètres de l’utilisateur.|  
 |[put_UserMode](#put_usermode)|Le **UserMode** propriété indique le mode utilisateur ambiante du conteneur.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette interface est exposée par le contrôle ActiveX de d’ATL qui héberge les objets. Appelez les méthodes sur cette interface pour définir les propriétés ambiantes disponibles pour le contrôle hébergé ou pour spécifier d’autres aspects du comportement du conteneur. Pour compléter les propriétés fournies par `IAxWinAmbientDispatch`, utilisez [IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md).  
   
  [AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx) essaie de charger les informations de type sur `IAxWinAmbientDispatch` et `IAxWinAmbientDispatchEx` à partir de la bibliothèque de types qui contient le code.  
@@ -125,7 +108,7 @@ interface IAxWinAmbientDispatch : IDispatch
   
  Consultez [hébergement ActiveX des contrôles à l’aide de ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pour plus d’informations.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  La définition de cette interface est disponible dans plusieurs formes, comme indiqué dans le tableau ci-dessous.  
   
 |Type de définition|Fichier|  
@@ -148,7 +131,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation d’objet hôte ATL utilise `VARIANT_TRUE` comme valeur par défaut de cette propriété.  
   
 ##  <a name="get_allowshowui"></a>IAxWinAmbientDispatch::get_AllowShowUI  
@@ -165,7 +148,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation d’objet hôte ATL utilise **VARIANT_FALSE** comme valeur par défaut de cette propriété.  
   
 ##  <a name="get_allowwindowlessactivation"></a>IAxWinAmbientDispatch::get_AllowWindowlessActivation  
@@ -182,7 +165,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation d’objet hôte ATL utilise `VARIANT_TRUE` comme valeur par défaut de cette propriété.  
   
 ##  <a name="get_backcolor"></a>IAxWinAmbientDispatch::get_BackColor  
@@ -199,7 +182,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation d’objet hôte ATL utilise **COLOR_BTNFACE** ou **COLOR_WINDOW** en tant que la valeur par défaut de cette propriété (selon que le parent de la fenêtre hôte est une boîte de dialogue ou non).  
   
 ##  <a name="get_displayasdefault"></a>IAxWinAmbientDispatch::get_DisplayAsDefault  
@@ -233,7 +216,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation d’objet hôte ATL utilise **DOCHOSTUIDBLCLK_DEFAULT** en tant que la valeur par défaut de cette propriété.  
   
 ##  <a name="get_dochostflags"></a>IAxWinAmbientDispatch::get_DocHostFlags  
@@ -250,7 +233,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation d’objet hôte ATL utilise **DOCHOSTUIFLAG_NO3DBORDER** en tant que la valeur par défaut de cette propriété.  
   
 ##  <a name="get_font"></a>IAxWinAmbientDispatch::get_Font  
@@ -320,7 +303,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation d’objet hôte ATL utilise `VARIANT_TRUE` comme valeur par défaut de cette propriété.  
   
 ##  <a name="get_optionkeypath"></a>IAxWinAmbientDispatch::get_OptionKeyPath  
@@ -385,7 +368,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation d’objet hôte ATL utilise `VARIANT_TRUE` comme valeur par défaut de cette propriété.  
   
 ##  <a name="put_allowcontextmenu"></a>IAxWinAmbientDispatch::put_AllowContextMenu  
@@ -419,7 +402,7 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation d’objet hôte ATL utilise **VARIANT_FALSE** comme valeur par défaut de cette propriété.  
   
 ##  <a name="put_allowwindowlessactivation"></a>IAxWinAmbientDispatch::put_AllowWindowlessActivation  
@@ -436,7 +419,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation d’objet hôte ATL utilise `VARIANT_TRUE` comme valeur par défaut de cette propriété.  
   
 ##  <a name="put_backcolor"></a>IAxWinAmbientDispatch::put_BackColor  
@@ -453,7 +436,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation d’objet hôte ATL utilise **COLOR_BTNFACE** ou **COLOR_WINDOW** en tant que la valeur par défaut de cette propriété (selon que le parent de la fenêtre hôte est une boîte de dialogue ou non).  
   
 ##  <a name="put_displayasdefault"></a>IAxWinAmbientDispatch::put_DisplayAsDefault  
@@ -504,7 +487,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation d’objet hôte ATL utilise **DOCHOSTUIFLAG_NO3DBORDER** en tant que la valeur par défaut de cette propriété.  
   
 ##  <a name="put_font"></a>IAxWinAmbientDispatch::put_Font  
@@ -521,7 +504,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation d’objet hôte ATL utilise la police de l’interface graphique utilisateur par défaut ou la police système en tant que la valeur par défaut de cette propriété.  
   
 ##  <a name="put_forecolor"></a>IAxWinAmbientDispatch::put_ForeColor  
@@ -538,7 +521,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation d’objet hôte ATL utilise la couleur du texte fenêtre système en tant que la valeur par défaut de cette propriété.  
   
 ##  <a name="put_localeid"></a>IAxWinAmbientDispatch::put_LocaleID  
@@ -555,7 +538,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation d’objet hôte ATL utilise des paramètres régionaux par défaut de l’utilisateur en tant que la valeur par défaut de cette propriété.  
   
 ##  <a name="put_messagereflect"></a>IAxWinAmbientDispatch::put_MessageReflect  
@@ -572,7 +555,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation d’objet hôte ATL utilise `VARIANT_TRUE` comme valeur par défaut de cette propriété.  
   
 ##  <a name="put_optionkeypath"></a>IAxWinAmbientDispatch::put_OptionKeyPath  
@@ -603,7 +586,7 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation d’objet hôte ATL utilise `VARIANT_TRUE` comme valeur par défaut de cette propriété.  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -611,7 +594,6 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
  [Interface de l’interface IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)   
  [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
  [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
-
 
 
 

@@ -33,11 +33,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 09fa0329da2e2c143c219291c3b8c2018f84e445
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 237924bce3bb4b659e72cec060738035d91c7cbc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ecvt"></a>_ecvt
 Convertit un nombre `double` en chaîne. Une version plus sécurisée de cette fonction est disponible. Consultez [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md).  
@@ -82,13 +83,13 @@ char *_ecvt(
   
  Cette fonction valide ses paramètres. Si `dec` ou `sign` est NULL ou que `count` vaut 0, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `errno` prend la valeur `EINVAL` et NULL est retourné.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête requis|  
 |--------------|---------------------|  
 |`_ecvt`|\<stdlib.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

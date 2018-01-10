@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3e968a3b9814aeec898d4e157781b58c40a87e25
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 642078d84f72a553e9b2407b279265a3a7e77522
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comerrorerrorinfo"></a>_com_error::ErrorInfo
 **Section spécifique à Microsoft**  
@@ -37,7 +38,7 @@ IErrorInfo * ErrorInfo( ) const throw( );
 ## <a name="return-value"></a>Valeur de retour  
  Brutes **IErrorInfo** élément passé au constructeur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Récupère l’encapsulé **IErrorInfo** d’élément dans un `_com_error` objet, ou **NULL** si aucun **IErrorInfo** article est enregistré. L’appelant doit appeler **version** sur l’objet retourné lors de la fin de l’utiliser.  
   
  **FIN de la section spécifique à Microsoft**  

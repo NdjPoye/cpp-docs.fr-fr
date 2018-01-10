@@ -9,9 +9,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IAxWinHostWindowLic
-- No header/ATL::IAxWinHostWindowLic
-- No header/ATL::CreateControlLic
-- No header/ATL::CreateControlLicEx
+- ATLIFACE/ATL::IAxWinHostWindowLic
+- ATLIFACE/ATL::CreateControlLic
+- ATLIFACE/ATL::CreateControlLicEx
 dev_langs: C++
 helpviewer_keywords: IAxWinHostWindowLic interface
 ms.assetid: 750f1520-6bce-428c-aca0-fccbe3f063c7
@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e74029025daeb18a3c63459845ef9edf4ca69cb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 61bd50d5602812cc70ccc3201e9df255f469604a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>Interface IAxWinHostWindowLic
 Cette interface fournit des méthodes pour manipuler un contrôle sous licence et son objet ordinateur hôte.  
@@ -43,12 +44,12 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 |[CreateControlLic](#createcontrollic)|Crée un contrôle sous licence et l’attache à l’objet hôte.|  
 |[CreateControlLicEx](#createcontrollicex)|Crée un contrôle sous licence, attache à l’objet hôte et définit éventuellement un gestionnaire d’événements.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `IAxWinHostWindowLic`hérite de [interface IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) et ajoute des méthodes qui prennent en charge la création de contrôles sous licence.  
   
  Consultez [hébergement ActiveX des contrôles à l’aide de ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pour obtenir un exemple qui utilise les membres de cette interface.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  La définition de cette interface est disponible en tant que fichier IDL ou C++, comme indiqué ci-dessous.  
   
 |Type de définition|Fichier|  
@@ -71,7 +72,7 @@ STDMETHOD(CreateControlLic)(
  `bstrLic`  
  [in] Le BSTR qui contient la clé de licence pour le contrôle.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol) pour obtenir une description de la valeur de retour et de paramètres restants.  
   
  Appel de cette méthode équivaut à appeler la méthode [IAxWinHostWindowLic::CreateControlLicEx](#createcontrollicex)  
@@ -97,7 +98,7 @@ STDMETHOD(CreateControlLicEx)(
  `bstrLic`  
  [in] Le BSTR qui contient la clé de licence pour le contrôle.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IAxWinHostWindow::CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex) pour obtenir une description de la valeur de retour et de paramètres restants.  
   
 ### <a name="example"></a>Exemple  

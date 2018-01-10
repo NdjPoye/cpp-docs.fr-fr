@@ -1,93 +1,96 @@
 ---
-title: "/Yc (Cr&#233;er un fichier d&#39;en-t&#234;te pr&#233;compil&#233;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.UsePrecompiledHeader"
-  - "/yc"
-  - "VC.Project.VCCLWCECompilerTool.PrecompiledHeaderThrough"
-  - "VC.Project.VCCLWCECompilerTool.UsePrecompiledHeader"
-  - "VC.Project.VCCLCompilerTool.PrecompiledHeaderThrough"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fichiers .pch, créer"
-  - "/Yc (option du compilateur C++)"
-  - "fichiers PCH, créer"
-  - "fichiers d'en-tête précompilés, créer"
-  - "Yc (option du compilateur C++)"
-  - "-Yc (option du compilateur C++)"
+title: "-Yc (créer le fichier d’en-tête précompilé) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.UsePrecompiledHeader
+- /yc
+- VC.Project.VCCLWCECompilerTool.PrecompiledHeaderThrough
+- VC.Project.VCCLWCECompilerTool.UsePrecompiledHeader
+- VC.Project.VCCLCompilerTool.PrecompiledHeaderThrough
+dev_langs: C++
+helpviewer_keywords:
+- precompiled header files, creating
+- PCH files, creating
+- .pch files, creating
+- -Yc compiler option [C++]
+- /Yc compiler option [C++]
+- Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 865b5e0fa7039a0b60f524c2f13a367569757d92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# /Yc (Cr&#233;er un fichier d&#39;en-t&#234;te pr&#233;compil&#233;)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Prescrit au compilateur de créer un fichier d'en\-tête précompilé \(.pch\) qui représente l'état de la compilation à un moment donné.  
+# <a name="yc-create-precompiled-header-file"></a>/Yc (Créer un fichier d’en-tête précompilé)
+Indique au compilateur de créer un fichier d’en-tête précompilé (.pch) qui représente l’état de la compilation à un certain point.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
-```  
-/Yc[filename]  
-```  
+> __/Yc__
+> __/Yc__*nom de fichier*  
   
-## Arguments  
- `filename`  
- Spécifie un fichier d'en\-tête \(.h\).  Lorsque cet argument est utilisé, le compilateur compile tout le code jusqu'au fichier .h y compris.  
   
-## Notes  
- Lorsque **\/Yc** est spécifié sans argument, le compilateur compile tout le code jusqu'à la fin du fichier source de base, ou jusqu'à ce qu'il rencontre [hdrstop](../../preprocessor/hdrstop.md) dans ce fichier de base.  Le fichier .pch résultant a le même nom de base que votre fichier source de base, sauf si vous spécifiez un nom de fichier différent en utilisant le pragma **hdrstop** ou l'option **\/Fp**.  
+## <a name="arguments"></a>Arguments  
+*filename*  
+ Spécifie un fichier d’en-tête (.h). Lorsque cet argument est utilisé, le compilateur compile tout le code jusqu'à et y compris le fichier .h.  
   
- Le code précompilé est enregistré dans un fichier dont le nom est créé à partir du nom de base du fichier spécifié avec l'option **\/Yc** et dont l'extension est .pch.  Vous pouvez également utiliser l'option [\/Fp \(Nom de fichier .pch\)](../../build/reference/fp-name-dot-pch-file.md) pour spécifier un nom pour le fichier d'en\-tête précompilé.  
+## <a name="remarks"></a>Notes  
+ Lorsque **/Yc** est spécifiée sans argument, le compilateur compile tout le code jusqu'à la fin du fichier source de base, ou jusqu’au point dans le fichier de base dans lequel un [hdrstop](../../preprocessor/hdrstop.md) directive se produit. Le fichier .pch résultant a le même nom que votre fichier de source de base, sauf si vous spécifiez un nom de fichier différent à l’aide de la **hdrstop** pragma ou **/FP** option.  
   
- Si vous utilisez **\/Yc**`filename`, le compilateur compile tout le code jusqu'au fichier spécifié \(inclus\) pour toute utilisation ultérieure avec l'option **\/Yu**.  
+ Le code précompilé est enregistré dans un fichier avec un nom créé à partir du nom de base du fichier spécifié avec le **/Yc** option et une extension .pch. Vous pouvez également utiliser le [/Fp (nom. Aucun fichier PCH)](../../build/reference/fp-name-dot-pch-file.md) permettant de spécifier un nom pour le fichier d’en-tête précompilé.  
   
- Si les options **\/Yc**`filename` et [\/Yu \(Utiliser un fichier d'en\-tête précompilé\)](../../build/reference/yu-use-precompiled-header-file.md)`filename` se produisent sur la même ligne de commande et font toutes les deux référence à un nom de fichier identique \(ou l'impliquent\), **\/Yc**`filename` prend la priorité.  Cette fonctionnalité simplifie l'écriture de makefiles.  
+ Si vous utilisez __/Yc__*nom de fichier*, le compilateur compile tout le code jusqu'à et y compris le fichier spécifié pour une utilisation ultérieure avec le [/Yu (utiliser un fichier d’en-tête précompilé)](../../build/reference/yu-use-precompiled-header-file.md) option.  
   
- Pour plus d'informations sur les en\-têtes précompilés, consultez :  
+ Si les options __/Yc__*nom de fichier* et __/Yu__*nom de fichier* se produisent sur la même ligne de commande et les deux référence ou le laisse supposer, le même nom de fichier, __/Yc__*nom de fichier* est prioritaire. Cette fonctionnalité simplifie l’écriture de makefiles.  
   
--   [\/Y \(En\-têtes précompilés\)](../../build/reference/y-precompiled-headers.md)  
+ Pour plus d’informations sur les en-têtes précompilés, consultez :  
   
--   [Création de fichiers d'en\-tête précompilés](../../build/reference/creating-precompiled-header-files.md)  
+-   [/Y (en-têtes précompilés)](../../build/reference/y-precompiled-headers.md)  
   
-### Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
+-   [Création de fichiers d’en-tête précompilé](../../build/reference/creating-precompiled-header-files.md)  
   
-1.  Sélectionnez un fichier .cpp.  Le fichier .cpp doit comprendre \(\#include\) le fichier .h qui contient des informations d'en\-tête précompilées.  Le paramètre **\/Yc** du projet peut être substitué au niveau du fichier.  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-2.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Comment : ouvrir les pages de propriétés d'un projet](../../misc/how-to-open-project-property-pages.md).  
+1.  Sélectionnez un fichier .cpp. Le fichier .cpp doit #include le fichier .h qui contient des informations d’en-tête précompilé. Du projet **/Yc** paramètre peut être remplacé au niveau du fichier.  
   
-3.  Cliquez sur le dossier **C\/C\+\+**.  
+2.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
-4.  Cliquez sur la page de propriétés **En\-têtes précompilés**.  
+3.  Ouvrez le **propriétés de Configuration**, **C/C++**, **les en-têtes précompilés** page de propriétés.  
   
-5.  Modifiez la propriété **Création\/utilisation d'un en\-tête précompilé en spécifiant un nom de fichier** ou la propriété **Création\/utilisation d'un en\-tête précompilé**.  
+4.  Modifier la **d’un en-tête précompilé** propriété.  
   
-### Pour définir cette option du compilateur par programmation  
+5.  Pour définir le nom de fichier, modifiez le **fichier d’en-tête précompilé** propriété.
+  
+### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation  
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> et <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>.  
   
-## Exemple  
- Examinons le code ci\-dessous.  
+## <a name="example"></a>Exemple  
+ Examinons le code ci-dessous.  
   
-```  
+```cpp  
+// prog.cpp
+// compile with: cl /c /Ycmyapp.h prog.cpp
 #include <afxwin.h>   // Include header for class library  
 #include "resource.h" // Include resource definitions  
 #include "myapp.h"    // Include information specific to this app  
-...  
+// ...  
 ```  
   
- Lorsque ce code est compilé avec la commande `CL /YcMYAPP.H PROG.CPP`, le compilateur enregistre tout le prétraitement pour AFXWIN.h, RESOURCE.h et MYAPP.h dans un fichier d'en\-tête précompilé appelé MYAPP.pch.  
+Lorsque ce code est compilé avec la commande `CL /YcMYAPP.H PROG.CPP`, le compilateur enregistre tout le prétraitement pour AFXWIN.h, RESOURCE.h et MYAPP.h dans un fichier d’en-tête précompilé appelé MYAPP.pch.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options du compilateur](../../build/reference/compiler-options.md)   
- [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+ [Définition des Options du compilateur](../../build/reference/setting-compiler-options.md) [création de fichiers d’en-tête précompilés](../../build/reference/creating-precompiled-header-files.md)

@@ -13,18 +13,19 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9f014d6f8cc0fc6a8870e5c6fe4a43857f696ee2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc23e561b00022dc4238ec986f047d08825803a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specifying-calling-conventions"></a>Spécifications des conventions d’appel
 **Section spécifique à Microsoft**  
   
  Pour plus d’informations sur les conventions d’appel, consultez [Rubriques de conventions d’appel](../cpp/calling-conventions.md).  
   
- **Fin de la section spécifique à Microsoft**  
+ **FIN de la section spécifique à Microsoft**  
   
 ## <a name="see-also"></a>Voir aussi  
  [Attributs de fonctions](../c-language/function-attributes.md)

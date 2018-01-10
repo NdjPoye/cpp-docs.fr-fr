@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04eae2c263c8b26e44e8c1b05736061ad9291ef0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 92ad08738ea2c8c748ac642c5ea15f4b0a257da9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="secure-template-overloads"></a>Sécuriser les surcharges de modèle
 Microsoft a déprécié de nombreuses fonctions de bibliothèque Runtime C (CRT) au profit de versions plus sécurisées. Par exemple, `strcpy_s` est le remplacement le plus sécurisé pour `strcpy`. Les fonctions dépréciées sont des sources courantes de bogues de sécurité, car elles n’empêchent pas les opérations qui peuvent écraser la mémoire. Par défaut, le compilateur génère un avertissement de dépréciation quand vous utilisez l’une de ces fonctions. Le CRT fournit des surcharges de modèle C++ pour ces fonctions afin de faciliter la transition vers des variantes plus sécurisées.  
@@ -102,4 +103,4 @@ strcpy_s(szBuf, "test"); // doesn't compile; you have to change it to
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités de sécurité dans la bibliothèque CRT](../c-runtime-library/security-features-in-the-crt.md)   
- [Fonctionnalités de la bibliothèque CRT](../c-runtime-library/crt-library-features.md)
+ [Fonctionnalités de bibliothèque CRT](../c-runtime-library/crt-library-features.md)

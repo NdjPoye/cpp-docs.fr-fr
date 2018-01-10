@@ -1,37 +1,38 @@
 ---
-title: "CString Semantics | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "instructions d'assignation, assigning CString objects"
-  - "CString objects, assignment semantics"
-  - "semantics in Cstring"
+title: "Sémantique de CString | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- semantics in Cstring
+- CString objects, assignment semantics
+- assignment statements, assigning CString objects
 ms.assetid: d4023480-526f-499a-85f6-324b4de5b85f
-caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 394e459a46003e3f1baccff7dd4c76f40b73e354
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CString Semantics
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="cstring-semantics"></a>Sémantique CString
+Bien que [CString](../atl-mfc-shared/reference/cstringt-class.md) les objets sont des objets dynamiques peuvent atteindre, ils se comportent comme des types primitifs intégrés et des classes simples. Chaque `CString` objet représente une valeur unique. `CString`objets doivent être considérés comme les chaînes réelles plutôt que comme des pointeurs vers des chaînes.  
+  
+ Vous pouvez affecter un **CString** objet vers un autre. Toutefois, lorsque vous modifiez l’un des deux `CString` des objets, l’autre `CString` objet n’est pas modifié, comme indiqué dans l’exemple suivant :  
+  
+ [!code-cpp[NVC_ATLMFC_Utilities#188](../atl-mfc-shared/codesnippet/cpp/cstring-semantics_1.cpp)]  
+  
+ Remarque dans l’exemple que les deux `CString` objets sont considérés comme « égales à », car elles représentent la même chaîne de caractères. Le `CString` classe surcharge l’opérateur d’égalité (`==`) pour comparer deux `CString` objets en fonction de leur valeur (contenu) au lieu de leur identité (adresse).  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Chaînes (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
 
-Bien que les objets de [CString](../atl-mfc-shared/reference/cstringt-class.md) sont des objets dynamiques qui peuvent développer, ils se comportent comme les types primitifs intégrés et les classes simples.  Chaque objet d' `CString` représente une valeur unique.  Les objets d'`CString` doivent être considérés comme chaînes réelles plutôt que comme pointeurs vers des chaînes.  
-  
- Vous pouvez assigner un objet de **CString** à un autre.  Toutefois, lorsque vous modifiez un des deux objets d' `CString` , l'autre objet d' `CString` n'est pas modifié, comme illustré par l'exemple suivant :  
-  
- [!code-cpp[NVC_ATLMFC_Utilities#188](../atl-mfc-shared/codesnippet/CPP/cstring-semantics_1.cpp)]  
-  
- Remarque dans l'exemple que les deux objets d' `CString` sont considérés comme « égal » parce qu'ils représentent la même chaîne.  La classe d' `CString` surcharge l'opérateur d'égalité \(`==`\) pour comparer deux objets d' `CString` selon leur valeur \(contenu\) plutôt que leur identité \(adresse\).  
-  
-## Voir aussi  
- [Chaînes](../atl-mfc-shared/strings-atl-mfc.md)

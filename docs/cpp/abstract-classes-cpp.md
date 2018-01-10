@@ -4,28 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - classes [C++], abstract
 - base classes [C++], abstract classes [C++]
 - abstract classes [C++]
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: d8ee7473b77f943c4f9958dabb0baa4998c284f4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 23cdff4d0e2eb213a98b2e90d7df41af226edd86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="abstract-classes-c"></a>Classes abstraites (C++)
 Les classes abstraites agissent comme des expressions de concepts généraux dont des classes plus spécifiques peuvent être dérivées. Vous ne pouvez pas créer un objet d'un type de classe abstraite ; en revanche, vous pouvez utiliser des pointeurs et des références à des types de classe abstraite.  
@@ -67,7 +65,7 @@ private:
   
  *nom de classe abstraite* `::` *-nom de la fonction***)**  
   
- C’est utile lors de la création des hiérarchies de classes dont les classes de base incluent des destructeurs virtuels purs, car les destructeurs de classe de base sont toujours appelés dans le processus de destruction d’un objet. Prenons l'exemple suivant :  
+ C’est utile lors de la création des hiérarchies de classes dont les classes de base incluent des destructeurs virtuels purs, car les destructeurs de classe de base sont toujours appelés dans le processus de destruction d’un objet. Prenons l'exemple suivant :  
   
 ```  
 // Declare an abstract base class with a pure virtual destructor.  

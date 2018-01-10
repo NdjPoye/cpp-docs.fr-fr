@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -36,8 +35,7 @@ f1_keywords:
 - sprintf
 - _stprintf
 - stprintf_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _swprintf_l function
 - _stprintf function
@@ -54,30 +52,16 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 0a584008d0697dda3e45d8bafa74128d1978d5ce
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f4b8b840e73665aa9c176daccf5c1bc712f4f2ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sprintf-sprintfl-swprintf-swprintfl-swprintfl"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 Écrire des données mises en forme dans une chaîne. Il existe des versions plus sécurisées de certaines de ces fonctions. Consultez [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md). Les versions sécurisées de `swprintf` et `_swprintf_l` ne prennent pas de paramètre `count`.  
@@ -147,7 +131,7 @@ int _sprintf_l(
  `locale`  
  Paramètres régionaux à utiliser.  
   
- Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Valeur de retour  
  Le nombre de caractères écrits, ou -1 si une erreur s’est produite. Si `buffer` ou `format` est un pointeur Null, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent -1 et définissent `errno` avec la valeur `EINVAL`.  
@@ -164,7 +148,7 @@ int _sprintf_l(
   
  `swprintf` est conforme à la norme ISO C, qui exige le deuxième paramètre, `count`, de type `size_t`. Pour forcer l'ancien comportement non standard, définissez `_CRT_NON_CONFORMING_SWPRINTFS`. Sachant que l'ancien comportement risque d'être retiré dans une version ultérieure, il est conseillé de modifier le code pour utiliser le nouveau comportement conforme.  
   
- En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
@@ -173,14 +157,14 @@ int _sprintf_l(
 |`_stprintf`|`sprintf`|`sprintf`|`_swprintf`|  
 |`_stprintf_l`|`_sprintf_l`|`_sprintf_l`|`__swprintf_l`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`sprintf`, `_sprintf_l`|\<stdio.h>|  
 |`swprintf`, `_swprintf_l`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

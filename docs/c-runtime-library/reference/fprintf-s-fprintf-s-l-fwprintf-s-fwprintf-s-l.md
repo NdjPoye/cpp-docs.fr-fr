@@ -46,11 +46,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 422b8818ff0bbfaccd288b944c628371be7442c2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9fc74164b44b44e9f2ed56066d91f68e232fceb7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
 Envoient les données mises en forme vers un flux. Ces versions de [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -98,17 +99,17 @@ int _fwprintf_s_l(
 ## <a name="return-value"></a>Valeur de retour  
  `fprintf_s` retourne le nombre d’octets écrits. `fwprintf_s` retourne le nombre de caractères larges écrits. Chacune de ces fonctions retourne une valeur négative à la place en cas d’erreur de sortie.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `fprintf_s` met en forme et envoie une série de caractères et de valeurs vers la sortie `stream`. Chaque argument dans `argument_list` (le cas échéant) est converti et sorti selon la spécification de format correspondante dans `format`. Le `format` argument utilise le [syntaxe de spécification pour les fonctions printf et wprintf format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
- `fwprintf_s` est une version à caractères larges de `fprintf_s` ; dans `fwprintf_s`, `format` est une chaîne à caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. `fprintf_s` ne prend actuellement pas en charge la sortie vers un flux UNICODE.  
+ `fwprintf_s` est une version à caractères larges de `fprintf_s` ; dans `fwprintf_s`, `format` est une chaîne à caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. `fprintf_s` ne prend pas en charge la sortie vers un flux UNICODE pour l’instant.  
   
  Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.  
   
 > [!IMPORTANT]
 >  Assurez-vous que `format` n'est pas une chaîne définie par l'utilisateur.  
   
- Comme les versions non sécurisées (voir [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)), ces fonctions valident leurs paramètres et appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md), si `stream` ou `format` est un pointeur null. La chaîne de format est également validée. S’il existe des spécificateurs de mise en forme inconnus ou incorrects, ces fonctions génèrent l’exception de paramètre non valide. Dans tous les cas, si l’exécution est autorisée à se poursuivre, les fonctions retournent -1 et définissent `errno` avec la valeur `EINVAL`. Consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d’informations sur ces éléments et autres codes d’erreur.  
+ Comme les versions non sécurisées (voir [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)), ces fonctions valident leurs paramètres et appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md), si `stream` ou `format` est un pointeur null. La chaîne de format est également validée. S’il existe des spécificateurs de mise en forme inconnus ou incorrects, ces fonctions génèrent l’exception de paramètre non valide. Dans tous les cas, si l’exécution est autorisée à se poursuivre, les fonctions retournent -1 et définissent `errno` avec la valeur `EINVAL`. Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
@@ -117,16 +118,16 @@ int _fwprintf_s_l(
 |`_ftprintf_s`|`fprintf_s`|`fprintf_s`|`fwprintf_s`|  
 |`_ftprintf_s_l`|`_fprintf_s_l`|`_fprintf_s_l`|`_fwprintf_s_l`|  
   
- Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête requis|  
 |--------------|---------------------|  
 |`fprintf_s`, `_fprintf_s_l`|\<stdio.h>|  
 |`fwprintf_s`, `_fwprintf_s_l`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

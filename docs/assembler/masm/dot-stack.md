@@ -1,38 +1,36 @@
 ---
-title: ".STACK | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".STACK"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".STACK directive"
+title: . PILE | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .STACK
+dev_langs: C++
+helpviewer_keywords: .STACK directive
 ms.assetid: 70019463-5d4f-41b6-8464-023a8ac2466f
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 87846cc3b7887cd763c1b1707118a9350de55038
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# .STACK
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-En cas de utilisation avec [.MODEL](../../assembler/masm/dot-model.md), définit un segment de pile \(avec la PILE de nom de segment\).  `size` facultatif spécifie le nombre d'octets pour la pile \(valeur par défaut 1.024\).  La directive d' `.STACK` ferme automatiquement l'instruction de pile.  
+# <a name="stack"></a>.STACK
+Lorsqu’il est utilisé avec [. MODÈLE](../../assembler/masm/dot-model.md), définit un segment de pile (avec le nom du segment de pile). Le paramètre facultatif `size` Spécifie le nombre d’octets de la pile (valeur par défaut 1 024). Le `.STACK` directive ferme automatiquement l’instruction de la pile.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 .STACK [[size]]  
 ```  
   
-## Voir aussi  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)

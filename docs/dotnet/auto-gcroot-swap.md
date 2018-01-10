@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3f3876550ed48c0ab570220042b64ccadc4cff33
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b3da99d688f6ca60829860d91e3b7b819af4ab26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autogcrootswap"></a>auto_gcroot::swap
 Échange les objets avec un autre `auto_gcroot`.  
@@ -67,7 +70,7 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  

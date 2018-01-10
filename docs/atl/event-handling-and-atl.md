@@ -1,50 +1,51 @@
 ---
-title: "Gestion des &#233;v&#233;nements et ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestion des événements, à propos de la gestion d'événements"
+title: "Gestion des événements et ATL | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: event handling, about event handling
 ms.assetid: e4812b0d-6fdd-4e8c-bdb8-378a25c7bde2
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fbd1b955ae8ed3caf4f67dbcb9aa71419eb620c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Gestion des &#233;v&#233;nements et ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cette section indique comment recevoir des événements à l'aide de ATL.  Elle couvre les principes de la gestion des événements COM et les détails des événements de descendant à l'aide de la prise en charge ATL fourni par.  
+# <a name="event-handling-and-atl"></a>Gestion des événements et ATL
+Cette section montre comment recevoir des événements à l’aide d’ATL. Elle couvre les principes de la gestion des événements COM et les spécificités de la réception des événements à l’aide de la prise en charge dans ATL.  
   
- Pour plus d'informations sur la façon de déclencher des événements et des points de connexion d'implémenter, lisez [Points de connexion ATL](../atl/atl-connection-points.md).  
+ Pour plus d’informations sur la façon de déclencher des événements et d’implémenter les points de connexion, consultez [Points de connexion ATL](../atl/atl-connection-points.md).  
   
-## Dans cette section  
- [principes de gestion des événements](../atl/event-handling-principles.md)  
- Décrit les étapes communes à toutes la réinitialisation d'événements.  
+## <a name="in-this-section"></a>Dans cette section  
+ [Principes de gestion des événements](../atl/event-handling-principles.md)  
+ Décrit les étapes communes à tous les événements (gestion).  
   
- [implémenter l'interface de gestion des événements](../atl/implementing-the-event-handling-interface.md)  
- Décrit les classes à utiliser pour implémenter l'interface d'événement.  
+ [Implémentation de l’interface de gestion des événements](../atl/implementing-the-event-handling-interface.md)  
+ Décrit les classes à utiliser pour implémenter l’interface d’événement.  
   
- [Avec IDispEventImpl](../atl/using-idispeventimpl.md)  
- Répertorie les étapes pour l'utilisation d' `IDispEventImpl` et montre un exemple de code.  
+ [Utilisation d’IDispEventImpl](../atl/using-idispeventimpl.md)  
+ Répertorie les étapes d’utilisation `IDispEventImpl` et montre un exemple de code.  
   
- [Utilisation IDispEventSimpleImpl](../atl/using-idispeventsimpleimpl.md)  
- Répertorie les étapes pour l'utilisation d' `IDispEventSimpleImpl` et montre un exemple de code.  
+ [Utilisation d’IDispEventSimpleImpl](../atl/using-idispeventsimpleimpl.md)  
+ Répertorie les étapes d’utilisation `IDispEventSimpleImpl` et montre un exemple de code.  
   
- [Résumé de gestion des événements ATL](../atl/atl-event-handling-summary.md)  
- Récapitule, à l'aide de tables, les méthodes principales pour implémenter une interface d'événements et pour notifier et unadvising la source d'événements à l'aide de ATL.  
+ [ATL, résumé de la gestion des événements](../atl/atl-event-handling-summary.md)  
+ Récapitule l’utilisation des tables, les méthodes principales pour implémenter une interface d’événement et information et désinformation la source d’événements à l’aide d’ATL.  
   
-## Rubriques connexes  
+## <a name="related-sections"></a>Rubriques connexes  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Fournit des liens vers des rubriques conceptuelles sur comment programmer avec la bibliothèque ATL.  
+ Propose des liens vers des rubriques conceptuelles traitant de la programmation à l'aide de la bibliothèque ATL (Active Template Library).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Concepts](../atl/active-template-library-atl-concepts.md)
+

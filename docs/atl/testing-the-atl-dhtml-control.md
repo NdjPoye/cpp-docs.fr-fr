@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 12eab78bdf2f0499740ecc53dbb6cf7053948679
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd92900ffbb8170e942053910d3faedd1f5ab2ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="testing-the-atl-dhtml-control"></a>Test du contrôle ATL DHTML
 Une fois que vous avez créé votre projet, vous pouvez générer et tester l’exemple de contrôle. Avant cela, utilisez l’affichage de classes et Explorateur de solutions pour examiner le projet. Les éléments de votre projet sont décrits en détail dans [identifier les éléments du projet de contrôle DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).  

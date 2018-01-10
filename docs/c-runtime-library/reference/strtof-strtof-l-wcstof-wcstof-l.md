@@ -49,11 +49,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d454bbb9afd2448b63173386249329ea91b4af01
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0fdfe3a202d18aa1634a2ef692088264ff8fe188
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtof-strtofl-wcstof-wcstofl"></a>strtof, _strtof_l, wcstof, _wcstof_l
 Convertit les chaînes en valeur à virgule flottante simple précision.  
@@ -108,7 +109,7 @@ float wcstof_l(
 |`_tcstof`|`strtof`|`strtof`|`wcstof`|  
 |`_tcstof_l`|`_strtof_l`|`_strtof_l`|`_wcstof_l`|  
   
- La valeur du paramètre de catégorie `LC_NUMERIC` des paramètres régionaux détermine la reconnaissance du caractère de base dans `nptr`. Pour plus d’informations, consultez [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les fonctions sans suffixe `_l` utilisent les paramètres régionaux actifs ; celles qui ont le suffixe sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La valeur du paramètre de catégorie `LC_NUMERIC` des paramètres régionaux détermine la reconnaissance du caractère de base dans `nptr`. Pour plus d’informations, consultez [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les fonctions sans suffixe `_l` utilisent les paramètres régionaux actifs ; celles qui ont le suffixe sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  Si `endptr` n’a pas la valeur `NULL`, un pointeur désignant le caractère qui a arrêté l’analyse est stocké à l’emplacement désigné par `endptr`. Si aucune conversion ne peut être effectuée (aucun chiffre valide n’a été trouvé ou la base spécifiée n’est pas valide), la valeur de `nptr` est stockée à l’emplacement désigné par `endptr`.  
   
@@ -120,14 +121,14 @@ float wcstof_l(
  
  Les versions UCRT de ces fonctions ne prennent pas en charge la conversion de lettres d’exposants (`d` ou `D`) de style Fortran. Cette extension non standard était prise en charge par les versions antérieures de la bibliothèque CRT et peut être une modification avec rupture pour votre code.
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`strtof`, `_strtof_l`|C : \<stdlib.h> C++ : &lt;cstdlib> ou \<stdlib.h>|  
 |`wcstof`, `_wcstof_l`|C : \<stdlib.h> ou \<wchar.h> C++ : &lt;cstdlib>, \<stdlib.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

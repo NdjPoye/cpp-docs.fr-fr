@@ -43,11 +43,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 03eda993cbc087d5dc39f2c9d0f985ac5db48099
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 204e87183a8df076da8443ee4547825948fb5a2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="futime-futime32-futime64"></a>_futime, _futime32, _futime64
 Définit l’heure de modification d’un fichier ouvert.  
@@ -79,12 +80,12 @@ int _futime64(
 ## <a name="return-value"></a>Valeur de retour  
  Retournent 0 en cas de réussite. Si une erreur se produit, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne -1 et `errno` a la valeur `EBADF`, qui indique un descripteur de fichier non valide, ou `EINVAL`, qui indique un paramètre non valide.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `_futime` routine définit la date de modification et le temps d’accès sur le fichier ouvert associé `fd`. `_futime` est identique à [_utime](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md), à ceci près que son argument est le descripteur d’un fichier ouvert, et non le nom d’un fichier ou un chemin de fichier. La structure `_utimbuf` contient des champs pour les nouvelles date de modification et heure d’accès. Les deux champs doivent contenir des valeurs valides. `_utimbuf32` et `_utimbuf64` sont identiques à `_utimbuf`, sauf pour l’utilisation des types d’heure 32 bits et 64 bits, respectivement. `_futime` et `_utimbuf` utilisent un type d’heure 64 bits, tandis que `_futime` a le même comportement que `_futime64`. Si vous devez forcer l’ancien comportement, définissez `_USE_32BIT_TIME_T`. Grâce à cette opération, `_futime` a un comportement identique à `_futime32` et la structure `_utimbuf` utilise le type d’heure 32 bits, devenant ainsi équivalente à `__utimbuf32`.  
   
  `_futime64`, qui utilise la structure `__utimbuf64`, peut lire et modifier les dates de fichier jusqu’au 31 décembre 3000 à 23:59:59, heure UTC, alors qu’un appel à `_futime32` échoue si la date du fichier est postérieure au 18 janvier 2038 à 23:59:59, heure UTC. Le 1er janvier 1970 à minuit est la limite inférieure de la plage de dates pour ces fonctions.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête requis|En-tête facultatif|  
 |--------------|---------------------|---------------------|  
@@ -92,7 +93,7 @@ int _futime64(
 |`_futime32`|\<sys/utime.h>|\<errno.h>|  
 |`_futime64`|\<sys/utime.h>|\<errno.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

@@ -97,11 +97,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 49faa73a334d2feed480499735220a1ae7f6d2c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1702065a8157596d4366af31fed3f2a80d53149c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-constants"></a>Constantes de type de données
 Les constantes de type de données sont des plages de valeurs dépendant de l’implémentation qui sont autorisées pour les types de données intégraux. Les constantes répertoriées ci-dessous donnent les plages des types de données intégraux, et sont définies dans LIMITS.H.  
@@ -109,7 +110,7 @@ Les constantes de type de données sont des plages de valeurs dépendant de l’
 > [!NOTE]
 >  L’option /J du compilateur remplace le type par défaut `char` par `unsigned`.  
   
-|Constante|Valeur|Signification|  
+|Constante|Value|Signification|  
 |--------------|-----------|-------------|  
 |**SCHAR_MAX**|127|Valeur `char` signée maximale|  
 |**SCHAR_MIN**|-128|Valeur `char` signée minimale|  
@@ -133,7 +134,7 @@ Les constantes de type de données sont des plages de valeurs dépendant de l’
   
  Les constantes suivantes donnent la plage et les autres caractéristiques des types de données **double** et **float**, et sont définies dans FLOAT.H :  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**DBL_DIG**|15|# de chiffres décimaux de précision|  
 |**DBL_EPSILON**|2,2204460492503131e-016|Le plus petit de sorte que 1.0+**DBL_EPSILON** !=1.0|  

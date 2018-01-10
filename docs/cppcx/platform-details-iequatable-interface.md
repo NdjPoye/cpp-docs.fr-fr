@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 693cb21e8b41a49a561d0acfd7af2b0ca8d19f0e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fa871e003fed732e82145ae87bb4c77ecf32cee2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformdetailsiequatable-interface"></a>Platform::Details::IEquatable (interface)
 Cette interface est destinée à une utilisation interne uniquement, et non à des fins de développement.  
@@ -31,13 +32,13 @@ Cette interface est destinée à une utilisation interne uniquement, et non à d
 interface class IEquatable;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette interface est fournie uniquement par souci d’exhaustivité, car elle peut être inspectée avec les navigateurs.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Platform`  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **Métadonnées :** platform.winmd  
   
  **Espace de noms :** Platform::Details  

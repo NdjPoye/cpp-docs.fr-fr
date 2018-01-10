@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 059f3bda040257ab58412360cdfbac20869e381d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 63ea65a8e3732ee17cc30b3382aa7ebc56e48f59
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="version-cc"></a>VERSION (C/C++)
 Indique à LINK d’insérer un nombre dans l’en-tête du fichier .exe ou DLL.  
@@ -28,7 +29,7 @@ Indique à LINK d’insérer un nombre dans l’en-tête du fichier .exe ou DLL.
 VERSION major[.minor]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le *majeure* et *secondaire* arguments sont des nombres décimaux compris entre 0 et 65 535. La valeur par défaut est la version 0.0.  
   
  Vous pouvez spécifier un numéro de version est avec le [les informations de Version](../../build/reference/version-version-information.md) (/ VERSION) option.  

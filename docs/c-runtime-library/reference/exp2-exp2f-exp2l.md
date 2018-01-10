@@ -43,11 +43,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 19aeabbda33f4eb2e6b140ab2d887813f155b67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ceff966e289fd3118cdd515fb4fbc288080b0f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 Calcule les 2 élevé à la valeur spécifiée.  
@@ -94,16 +95,16 @@ long double exp2l(
   
  Les erreurs sont signalées comme indiqué dans [_matherr](../../c-runtime-library/reference/matherr.md).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  C++ autorisant la surcharge, vous pouvez appeler des surcharges de `exp2` qui acceptent et retournent **float** et **long double** types. Dans un programme C, `exp2` accepte et retourne toujours un **double**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
-|Routine|En-tête C|En-tête C++|  
+|Routine|En-tête C|En-tête C++|  
 |-------------|--------------|------------------|  
 |`exp`, `expf`, `expl`|\<math.h>|\<cmath>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

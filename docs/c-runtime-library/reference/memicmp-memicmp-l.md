@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,38 +27,23 @@ f1_keywords:
 - _memicmp
 - memicmp_l
 - _memicmp_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - memicmp function
 - _memicmp function
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 72cdb770716181ee5ac6b93b94d36fcd49bab7dd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: adfbab425e5765ce23522612c628b5b83da444b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
 Compare les caractères dans deux mémoires tampons (non-respect de la casse).  
@@ -108,16 +92,16 @@ int _memicmp_l(
   
  Si `buf1` ou `buf2` est un pointeur null, cette fonction appelle un gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à continuer, cette fonction retourne `_NLSCMPERROR` et définit à `errno` à `EINVAL`.  
   
- La fonction `_memicmp` utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux ; la fonction `_memicmp_l` est identique, à ceci près qu’elle utilise à la place les paramètres régionaux qui ont été passés. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La fonction `_memicmp` utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux ; la fonction `_memicmp_l` est identique, à ceci près qu’elle utilise à la place les paramètres régionaux qui ont été passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_memicmp`|\<memory.h> ou \<string.h>|  
 |`_memicmp_l`|\<memory.h> ou \<string.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

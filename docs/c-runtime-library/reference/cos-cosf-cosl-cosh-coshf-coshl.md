@@ -52,11 +52,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c37223f67e5c6d03aa7401870fb7ccbbd111cee3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e06a929148da03e59edff6f0630cd60841e912e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cos-cosf-cosl-cosh-coshf-coshl"></a>cos, cosf, cosl, cosh, coshf, coshl
 Calcule le cosinus (`cos`, `cosf` ou `cosl`), ou le cosinus hyperbolique (`cosh`, `coshf` ou `coshl`).  
@@ -105,22 +106,22 @@ long double coshl(
   
  Par défaut, si le résultat est trop grand dans un appel `cosh`, `coshf` ou `coshl`, la fonction retourne `HUGE_VAL` et définit `errno` sur `ERANGE`.  
   
-|Entrée|Exception SEH|Exception{b> <b}Matherr|  
+|Entrée|Exception SEH|Exception Matherr|  
 |-----------|-------------------|-----------------------|  
 |± `QNAN`,`IND`|aucun|`_DOMAIN`|  
-|± ∞ (`cosf`, `cos`, `cosl`)|`INVALID`|`_DOMAIN`|  
+|± ∞  (`cosf`, `cos`, `cosl`)|`INVALID`|`_DOMAIN`|  
 |x ≥ 7,104760e+002 (`cosh`, `coshf`, `coshl`)|`INEXACT`+`OVERFLOW`|`OVERFLOW`|  
   
 ## <a name="remarks"></a>Notes  
  Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de `cos` et `cosh` qui acceptent et retournent des valeurs `float` ou `long double`. Dans un programme C, `cos` et `cosh` acceptent et retournent toujours un `double`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`cos`, `cosh`, `cosf`, `coshf`, `cosl`, `coshl`|\<math.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple dans [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md).  

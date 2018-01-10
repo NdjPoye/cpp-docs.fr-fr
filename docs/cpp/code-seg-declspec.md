@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f1e222e3fb78807f4c67c746677e1223c7776a41
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae69cd9e88b97a31dda86648d86e143ab9bd5d40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="codeseg-declspec"></a>code_seg (__declspec)
 **Section spécifique à Microsoft**  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
 __declspec(code_seg("segname")) declarator  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L'attribut `__declspec(code_seg(...))` permet de placer le code dans des blocs nommés distincts qui peuvent être paginés ou verrouillés individuellement en mémoire. Vous pouvez utiliser cet attribut pour contrôler l'emplacement des modèles instanciés et du code généré par le compilateur.  
   
  A *segment* est un bloc nommé de données dans un fichier .obj qui est chargé en mémoire en tant qu’unité. A *segment de texte* est un segment qui contienne du code exécutable. Le terme *section* est synonyme de segment.  

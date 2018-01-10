@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtMemDifference
+apiname: _CrtMemDifference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,36 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - _CrtMemDifference
 - CrtMemDifference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CrtMemDifference function
 - _CrtMemDifference function
 ms.assetid: 0f327278-b551-482f-958b-76941f796ba4
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 9793a58ed76b4c3251936b9016f8308ad06a07fb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4ba4dc873fbb0e77f3b2f939c9d62533849dab76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtmemdifference"></a>_CrtMemDifference
 Compare deux états de la mémoire et retourne leurs différences (version Debug uniquement).  
@@ -91,15 +74,15 @@ int _CrtMemDifference(
   
  Par défaut, les blocs runtime C internes (`_CRT_BLOCK`) ne sont pas inclus dans les opérations relatives à l’état de la mémoire. La fonction [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) peut être utilisée pour activer la partie `_CRTDBG_CHECK_CRT_DF` de `_crtDbgFlag` afin d’inclure ces blocs dans la détection des fuites et les autres opérations relatives à l’état de la mémoire. Les blocs de mémoire libérés (`_FREE_BLOCK`) n’amènent pas `_CrtMemDifference` à retourner la valeur TRUE.  
   
- Pour plus d’informations sur les fonctions d’état du tas et la structure `_CrtMemState` , consultez [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, consultez [Détails du tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Pour plus d’informations sur les fonctions d’état du tas et la structure `_CrtMemState` , consultez [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, voir [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|En-tête facultatif|  
 |-------------|---------------------|---------------------|  
 |`_CrtMemDifference`|\<crtdbg.h>|\<errno.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
  **Bibliothèques :** uniquement les versions de débogage des [fonctions de bibliothèque CRT](../../c-runtime-library/crt-library-features.md).  
   

@@ -34,11 +34,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3db30aedfd18a34672c19e01e2353f6583b856b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 29211f494c905f3d82ebe3238706b2528dadce0a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locking"></a>_locking
 Verrouille ou déverrouille les octets d’un fichier.  
@@ -103,13 +104,13 @@ Verrouille ou déverrouille les octets d’un fichier.
   
  Vous ne pouvez pas verrouiller plusieurs zones d’un fichier qui ne se chevauchent pas. Une zone ne peut être déverrouillée que si elle a été verrouillée. `_locking` ne fusionne pas les zones adjacentes ; si deux zones verrouillées sont adjacentes, chacune d’elles doit être déverrouillée séparément. Le verrouillage des zones doit être de courte durée et celles-ci doivent être déverrouillées avant de fermer un fichier ou de quitter le programme.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|En-tête facultatif|  
 |-------------|---------------------|---------------------|  
 |`_locking`|\<io.h> et \<sys/locking.h>|\<errno.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

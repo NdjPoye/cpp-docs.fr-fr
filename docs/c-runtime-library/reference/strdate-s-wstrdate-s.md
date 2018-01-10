@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _wstrdate_s
 - strdate_s
 - _tstrdate_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - dates, copying
 - tstrdate_s function
@@ -42,31 +40,16 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 5b1701f41b2f66ccbc2601763c09a4db0523c2ed
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 71117aed66d83c2c2ae1651c4de9c91e06a43653
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
 Copient la date système actuelle dans une mémoire tampon. Ces versions de [_strdate, _wstrdate](../../c-runtime-library/reference/strdate-wstrdate.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -107,7 +90,7 @@ errno_t _wstrdate_s(
 |`buffer`|`numberOfElements`|Retourner|Contenu de `buffer`|  
 |--------------|------------------------|------------|--------------------------|  
 |`NULL`|(indifférent)|`EINVAL`|Non modifié|  
-|Non `NULL` (pointant vers la mémoire tampon valide)|0|`EINVAL`|Non modifié|  
+|Non `NULL` (pointant vers la mémoire tampon valide)|0|`EINVAL`|Non modifiée|  
 |Non `NULL` (pointant vers la mémoire tampon valide)|0 < `numberOfElements` < 9|`EINVAL`|Chaîne vide|  
 |Non `NULL` (pointant vers la mémoire tampon valide)|`numberOfElements` >= 9|0|Date actuelle au format spécifié dans la section Notes|  
   
@@ -123,7 +106,7 @@ errno_t _wstrdate_s(
   
  Si `buffer` est un pointeur `NULL` ou si `numberOfElements` a une valeur inférieure à 9 caractères, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et affectent à `errno` la valeur `EINVAL` si la mémoire tampon a la valeur `NULL` ou si `numberOfElements` a une valeur inférieure ou égale à 0, ou elles affectent à `errno` la valeur `ERANGE` si `numberOfElements` a une valeur inférieure à 9.  
   
- En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mapping"></a>Mappage de routines de texte générique :  
   
@@ -131,7 +114,7 @@ errno_t _wstrdate_s(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tstrdate_s`|`_strdate_s`|`_strdate_s`|`_wstrdate_s`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

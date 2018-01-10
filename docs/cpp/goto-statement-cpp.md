@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 467e432f9086198577d76c3624f5cb45562c7283
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a002071bdb4e271df525b138647b0544cfe9f3c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="goto-statement-c"></a>goto, instruction (C++)
 L'instruction `goto` transfère sans condition le contrôle à l'instruction étiquetée par l'identificateur spécifié.  
@@ -30,7 +31,7 @@ L'instruction `goto` transfère sans condition le contrôle à l'instruction ét
 goto identifier;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L'instruction étiquetée indiquée par `identifier` doit se trouver dans la fonction actuelle. Tous les noms `identifier` sont membres d'un espace de noms interne et, par conséquent, n'interfèrent pas avec d'autres identificateurs.  
   
  Une étiquette d'instruction est explicite uniquement pour une instruction `goto` ; sinon, les étiquettes d'instructions sont ignorées. Les étiquettes ne peuvent pas être redéclarées.  

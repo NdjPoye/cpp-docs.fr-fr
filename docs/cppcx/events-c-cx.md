@@ -12,11 +12,12 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: aef6920b9133280a20cc41344fa707a2cb1cfe97
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af74c81186591062214e2a8eb1695a2d177cfc04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="events-ccx"></a>Événements (C++/CX)
 Un objet Windows Runtime type peut déclarer (qui est, publier) les événements et le code client dans le même composant ou dans d’autres composants peuvent s’abonner à ces événements en associant des méthodes appelées *gestionnaires d’événements* avec l’événement. Plusieurs gestionnaires d'événements peuvent être associés à un seul événement. Lorsque l'objet de publication déclenche l'événement, il entraîne l'appel de tous les gestionnaires d'événements. Ainsi, une classe d'abonnement peut effectuer l'action personnalisée appropriée lorsque l'éditeur déclenche l'événement. Un événement a un type délégué qui spécifie la signature que tous les gestionnaires d'événements doivent posséder pour s'abonner à l'événement.  
@@ -55,7 +56,7 @@ Un objet Windows Runtime type peut déclarer (qui est, publier) les événements
   
  [!code-cpp[cx_events#04](../cppcx/codesnippet/CPP/eventsupportinvs/eventclientclass.h#04)]  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Plusieurs gestionnaires peuvent être associés au même événement. La source d'événements appelle de manière séquentielle tous les gestionnaires d'événements du même thread. Si un récepteur d'événements bloque dans la méthode de gestionnaire d'événements, il empêche la source d'événements d'appeler d'autres gestionnaires d'événements pour cet événement.  
   
  L'ordre dans lequel la source d'événements appelle les gestionnaires d'événements sur les récepteurs d'événements n'est pas garanti et peut différer d'un appel à un autre.  

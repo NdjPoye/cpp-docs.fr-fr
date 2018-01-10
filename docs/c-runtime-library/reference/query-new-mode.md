@@ -34,11 +34,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4f5cc42ee9aaeccfacf7088f5cc80a3d305169b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 385d6edc77387b724c4e121a9fc01cee1a4d8905
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="querynewmode"></a>_query_new_mode
 Retourne un entier indiquant le mode de nouveau gestionnaire défini par `_set_new_mode` pour `malloc`.  
@@ -58,13 +59,13 @@ Retourne un entier indiquant le mode de nouveau gestionnaire défini par `_set_n
 ## <a name="remarks"></a>Notes  
  La fonction C++ `_query_new_mode` retourne un entier qui indique le mode de nouveau gestionnaire défini par la fonction C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) pour [malloc](../../c-runtime-library/reference/malloc.md). Le mode de nouveau gestionnaire indique si, en cas d’échec d’allocation de mémoire, `malloc` doit appeler la routine de nouveau gestionnaire, telle qu’elle est définie par [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md). Par défaut, `malloc` n’appelle pas la routine de nouveau gestionnaire en cas d’échec. Vous pouvez utiliser `_set_new_mode` pour remplacer ce comportement de sorte qu’en cas d’échec, `malloc` appelle la routine de nouveau gestionnaire comme le fait l’opérateur **new** quand il ne parvient pas à allouer de la mémoire. Pour plus d’informations, consultez la description des [opérateurs new et delete](../../cpp/new-and-delete-operators.md) dans la Référence du langage C++.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_query_new_mode`|\<new.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

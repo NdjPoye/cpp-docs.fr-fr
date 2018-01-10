@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a69bf1b4e6b2e552bd73594a2c33f092570b94c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d5e862eb8e45d1f2558592c0bb54c1adb9305f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (Limiter la longueur des noms externes)
 Obsolète. Limite la longueur des noms externes.  
@@ -39,7 +40,7 @@ Obsolète. Limite la longueur des noms externes.
  `number`  
  Spécifie la longueur maximale des noms externes autorisés dans un programme.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Par défaut, la longueur des noms externes (publics) est limitée à 2 047 caractères. Cela est vrai pour les programmes C et C++. À l’aide de **/H** peut seulement diminuer la longueur maximale autorisée d’identificateurs, pas l’augmenter. Un espace entre **/H** et `number` est facultatif.  
   
  Si un programme contient des noms externes plus `number`, les caractères supplémentaires sont ignorées. Si vous compilez un programme sans **/H** et si un identificateur contient plus de 2 047 caractères, le compilateur générera [irrécupérable C1064 d’erreur](../../error-messages/compiler-errors-1/fatal-error-c1064.md).  

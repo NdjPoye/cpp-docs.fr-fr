@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1e780bda6850ef2096ecaf1dbffeefdb9d11c9f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5780fb725ab9ccfbba189894c22c991c415f6c2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Générer du code C/C++ sur la ligne de commande
 
@@ -48,7 +49,7 @@ Les raccourcis d’invite de commande sont installés dans une version spécifiq
 
 Les véritable démarrer menu contextuel noms des dossiers et varient selon la version de [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] que vous avez installé et l’installation du surnom si vous définissez une. Par exemple, si vous avez Visual Studio 2017 installé, et vous lui avez affecté une installation surnom de 15.3, le raccourci d’invite de commandes développeur est nommé **invite de commandes développeur pour VS 2017 (15,3)**, dans un dossier nommé  **Visual Studio 2017**. 
 
-Si vous avez installé le [outils de génération pour Visual Studio 2017](https://go.microsoft.com/fwlink/?linkid=840931) ou [outils Visual C++ 2015 générer](http://landinghub.visualstudio.com/visual-cpp-build-tools) edition, il se peut seulement natif spécifique ou options d’invite de commandes développeur des outils croisés. 
+Si vous avez installé le [outils de génération pour Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=840931) ou [outils Visual C++ 2015 générer](http://landinghub.visualstudio.com/visual-cpp-build-tools) edition, il se peut seulement natif spécifique ou options d’invite de commandes développeur des outils croisés. 
 
 <a name="developer_command_prompt"></a>
 ## <a name="to-open-a-developer-command-prompt-window"></a>Pour ouvrir une fenêtre d’invite de commandes développeur  
@@ -86,11 +87,11 @@ La façon la plus simple pour spécifier une architecture de build particulière
 |Argument d’architecture vcvarsall.bat|Compilateur|Architecture de l’ordinateur hôte|Architecture de sortie de génération|  
 |----------------------------|--------------|----------------------------------|-------------------------------|  
 |x86|natif 32 bits x86|x86, x64|x86|  
-|x86\_amd64 ou x86\_x64|x64 sur x86 croisée|x86, x64|x64|  
+|x86\_amd64 ou x86\_x64|x64 sur x86 croisée|x86, x64|X64|  
 |x86_arm|ARM sur x86 croisé|x86, x64|ARM|  
-|AMD64 ou x64|x64 64 bits natif|x64|x64|  
-|AMD64\_x86 ou x64\_x86|x86 sur x64 croisée|x64|x86|  
-|AMD64\_arm ou x64\_arm|ARM sur x64 croisée|x64|ARM|  
+|AMD64 ou x64|x64 64 bits natif|X64|X64|  
+|AMD64\_x86 ou x64\_x86|x86 sur x64 croisée|X64|x86|  
+|AMD64\_arm ou x64\_arm|ARM sur x64 croisée|X64|ARM|  
   
 Vous pouvez utiliser la **stocker** ou **uwp** options pour spécifier le type de plateforme ou aucune des deux pour spécifier une application de bureau. Pour spécifier la version du Kit de développement, vous pouvez un nombre de SDK Windows 10 complète comme 10.0.10240.0, ou spécifier 8.1 pour utiliser le Kit de développement logiciel Windows 8.1. Permet de spécifier l’ensemble d’outils du compilateur Visual Studio 2015 ; 14.0 par défaut, l’environnement est configuré pour utiliser l’ensemble d’outils du compilateur Visual Studio 2017.
 
@@ -164,7 +165,7 @@ Décrit comment créer et compiler un programme C++/CLI qui utilise le .NET Fram
 [Procédure pas à pas : compilation d’un programme C++-CX sur la ligne de commande](../build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)  
 Décrit comment créer et compiler un programme C++/CX qui utilise le Windows Runtime.  
   
-[Définir le chemin d’accès et les Variables d’environnement pour les versions de ligne de commande](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)  
+[Définir le chemin et les variables d’environnement pour les générations sur la ligne de commande](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)  
 Décrit comment ouvrir une fenêtre d’invite de commandes qui a les variables d’environnement requises défini pour les versions de ligne de commande qui ciblent x86, x64, les plateformes et ARM à l’aide d’un ensemble d’outils 32 bits ou 64 bits.  
   
 [NMAKE, référence](../build/nmake-reference.md)  

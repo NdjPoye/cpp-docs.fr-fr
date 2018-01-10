@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 552452d7da81836c5f88ad98b5168d6ceee47bf4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3177896b8cfdff78b0af2aeb40873f31099ce7d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="examples-of-lambda-expressions"></a>Exemples d’expressions lambda
 Cet article explique comment utiliser des expressions lambda dans vos programmes. Pour une vue d’ensemble d’expressions lambda, consultez [Expressions Lambda](../cpp/lambda-expressions-in-cpp.md). Pour plus d’informations sur la structure d’une expression lambda, consultez [syntaxe d’Expression Lambda](../cpp/lambda-expression-syntax.md).  
@@ -60,7 +61,7 @@ int main()
 7  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [automatique](../cpp/auto-cpp.md), [fonction classe](../standard-library/function-class.md), et [appel de fonction](../cpp/function-call-cpp.md).  
   
  Bien que les expressions lambda soient le plus souvent déclarées dans le corps d’une fonction, vous pouvez les déclarer partout où vous pouvez initialiser une variable.  
@@ -175,7 +176,7 @@ int main()
 The first even number in the list is 42.  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur la `find_if` , consultez [find_if](../standard-library/algorithm-functions.md#find_if). Pour plus d’informations sur les fonctions de bibliothèque C++ Standard qui effectuent des algorithmes communs, consultez [ \<algorithme >](../standard-library/algorithm.md).  
   
  [[Dans cet article](#top)]  
@@ -212,7 +213,7 @@ int main()
 13  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans cet exemple, `[](int y) { return y * 2; }` est l'expression lambda imbriquée.  
   
  [[Dans cet article](#top)]  
@@ -356,7 +357,7 @@ int main()
   
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction `ApplyScale` utilise une expression lambda pour imprimer le produit de la valeur d'échelle et de chaque élément d'un objet `vector`. L'expression lambda capture implicitement le pointeur `this` afin qu'elle puisse accéder au membre `_scale`.  
   
  [[Dans cet article](#top)]  
@@ -420,7 +421,7 @@ After negate_all():
   
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur les modèles C++, consultez [modèles](../cpp/templates-cpp.md).  
   
  [[Dans cet article](#top)]  
@@ -474,7 +475,7 @@ int main()
 Caught 'invalid vector<T> subscript'.  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur la gestion des exceptions, consultez [la gestion des exceptions](../cpp/exception-handling-in-visual-cpp.md).  
   
  [[Dans cet article](#top)]  
@@ -510,7 +511,7 @@ int main()
 Hello!  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous pouvez également utiliser vos expressions lambda avec la bibliothèque STL/CLR. Pour plus d’informations, consultez [référence de la bibliothèque STL/CLR](../dotnet/stl-clr-library-reference.md).  
   
 > [!IMPORTANT]

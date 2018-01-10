@@ -42,11 +42,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4d9b5557ba6c57410526260af905950f290fb298
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 403fc7f285aeebf5fc7b6d4ebb39d1e922d8edc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sopens-wsopens"></a>_sopen_s, _wsopen_s
 Ouvre un fichier pour le partage. Ces versions de [_sopen et _wsopen](../../c-runtime-library/reference/sopen-wsopen.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -210,14 +211,14 @@ errno_t _wsopen_s(
   
  `_sopen_s` applique le masque d'autorisation de fichier actif à `pmode` avant que les autorisations soient définies. (Voir [_umask](../../c-runtime-library/reference/umask.md).)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|En-tête facultatif|  
 |-------------|---------------------|---------------------|  
 |`_sopen_s`|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|  
 |`_wsopen_s`|\<io.h> ou \<wchar.h>|\<fcntl.h>, \<sys/types.h>, \<sys/stat.h>, \<share.h>|  
   
- `_sopen_s` et `_wsopen_s` sont des extensions Microsoft. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ `_sopen_s` et `_wsopen_s` sont des extensions Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple relatif à [_locking](../../c-runtime-library/reference/locking.md).  

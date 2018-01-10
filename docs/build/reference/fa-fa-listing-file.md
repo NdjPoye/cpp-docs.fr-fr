@@ -27,11 +27,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 44d21eae211bd2d01e202a516ef487c8d0df3684
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e0cd569cf16e7b2a14faaa119eacaef0994d09dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Fichier listing)
 Crée un fichier listing contenant du code assembleur.  
@@ -41,7 +42,7 @@ Crée un fichier listing contenant du code assembleur.
 > **/FA**[**c**\][**s**\][**u**]  
 > **/FA**_chemin d’accès_  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
 Le `/FA` option du compilateur génère un fichier du listing assembleur pour chaque unité de traduction dans la compilation, ce qui correspond généralement à un fichier source C ou C++. Par défaut, l’assembleur uniquement est inclus dans le fichier de liste, qui est encodé comme ANSI. Le paramètre facultatif `c`, `s`, et `u` arguments `/FA` contrôle si les code machine ou code source sont générés avec l’assembleur de liste, et si la liste est encodée en UTF-8.  
   
 Par défaut, chaque fichier listing Obtient le même nom que le fichier source et a une extension .asm. Lorsque le code machine est inclus à l’aide de la `c` option, le fichier de liste a une extension .cod. Vous pouvez modifier le nom et l’extension de fichier listing et le répertoire dans lequel il est créé à l’aide de la `/Fa` option.  

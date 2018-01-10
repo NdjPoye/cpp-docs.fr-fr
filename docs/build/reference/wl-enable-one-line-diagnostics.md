@@ -1,43 +1,43 @@
 ---
-title: "/WL (Activer un diagnostic de ligne) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/wl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/WL (option du compilateur C++)"
-  - "WL (option du compilateur C++)"
-  - "-WL (option du compilateur C++)"
+title: -WL (activer un diagnostic de ligne) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /wl
+dev_langs: C++
+helpviewer_keywords:
+- -WL compiler option [C++]
+- /WL compiler option [C++]
+- WL compiler option [C++]
 ms.assetid: 332cadb4-8ea6-45fe-b67d-33ddec1f2c2e
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 48ba6ab05ac596c98c4fa5a95971735c62267a35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# /WL (Activer un diagnostic de ligne)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ajoute des informations supplémentaires à un message d'erreur ou d'avertissement.  
+# <a name="wl-enable-one-line-diagnostics"></a>/WL (Activer un diagnostic de ligne)
+Ajoute des informations supplémentaires à un message d’erreur ou avertissement.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 /WL  
 ```  
   
-## Notes  
- Les messages d'erreur et d'avertissement émis par le compilateur C\+\+ peuvent être suivis d'informations supplémentaires qui apparaissent, par défaut, sur une nouvelle ligne.  Lorsque vous compilez à partir de la ligne de commande, la ligne supplémentaire d'informations peut être ajoutée au message d'erreur ou d'avertissement.  Cela peut être utile si vous capturez votre sortie de génération dans un fichier journal puis que vous examinez ce journal pour rechercher toutes les erreurs et tous les avertissements.  Un point\-virgule sépare le message d'erreur ou d'avertissement de la ligne supplémentaire.  
+## <a name="remarks"></a>Notes  
+ Messages d’erreur et Avertissement du compilateur C++ peuvent être suivis par des informations supplémentaires qui s’affiche, par défaut, sur une nouvelle ligne. Lorsque vous compilez à partir de la ligne de commande, la ligne d’informations supplémentaire peut être ajoutée à l’erreur ou un message d’avertissement. Cela peut être souhaitable si vous capturez votre sortie de génération dans un fichier journal et ensuite traitez ce journal pour rechercher toutes les erreurs et avertissements. Un point-virgule sépare le message d’erreur ou avertissement à partir de la ligne supplémentaire.  
   
- Certains messages d'erreur et d'avertissement n'ont pas de ligne supplémentaire d'informations.  Le code suivant génère une erreur qui possède une ligne supplémentaire d'informations ; il vous permet de voir le résultat obtenu lors de l'utilisation de l'option **\/WL**.  
+ Pas de tous les messages d’erreur et avertissement ont une ligne supplémentaire d’informations. Le code suivant génère une erreur qui possède une ligne supplémentaire d’informations ; Il vous permet de tester l’effet lorsque vous utilisez **/WL**.  
   
 ```  
 // compiler_option_WL.cpp  
@@ -49,20 +49,20 @@ int main() {
 }  
 ```  
   
-### Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Comment : ouvrir les pages de propriétés d'un projet](../../misc/how-to-open-project-property-pages.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
-2.  Cliquez sur le dossier **C\/C\+\+**.  
+2.  Cliquez sur le dossier **C/C++** .  
   
-3.  Cliquez sur la page de propriétés **Ligne de commande**.  
+3.  Cliquez sur la page de propriétés **Ligne de commande** .  
   
-4.  Spécifiez l'option du compilateur dans la zone **Options supplémentaires**.  
+4.  Tapez l'option de compilateur dans la zone **Options supplémentaires** .  
   
-### Pour définir cette option du compilateur par programmation  
+### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation  
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options du compilateur](../../build/reference/compiler-options.md)   
  [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

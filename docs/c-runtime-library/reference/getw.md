@@ -32,11 +32,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9d5cf5147f3225c9cd5c6f0c91d60bcaeb75b188
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8850bd13d8aa1ed0412ae93843784cb560be4a0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getw"></a>_getw
 Obtient un entier à partir d’un flux.  
@@ -54,18 +55,18 @@ int _getw(
  Pointeur désignant la structure `FILE`.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `_getw` retourne la valeur entière lue. Une valeur de retour égale à `EOF` indique une erreur ou la fin du fichier. Toutefois, étant donné que la valeur `EOF` est également une valeur d’entier légitime, utilisez `feof` ou `ferror` pour vérifier une condition d’erreur ou de fin de fichier. Si `stream` a la valeur `NULL`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, `errno` a la valeur `EINVAL` et la fonction retourne une valeur `EOF`.  
+ `_getw` retourne la valeur entière lue. Une valeur de retour égale à `EOF` indique une erreur ou la fin du fichier. Toutefois, étant donné que la valeur `EOF` est également une valeur d’entier légitime, utilisez `feof` ou `ferror` pour vérifier une condition d’erreur ou de fin de fichier. Si `stream` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, `errno` a la valeur `EINVAL` et la fonction retourne une valeur `EOF`.  
   
 ## <a name="remarks"></a>Notes  
  La fonction `_getw` lit la valeur binaire suivante de type `int` à partir du fichier associé à `stream` et incrémente le pointeur de fichier associé (le cas échéant) pour qu’il désigne le caractère non lu suivant. `_getw` ne considère pas que les éléments du flux sont alignés de manière spécifique. Des problèmes de portage peuvent se produire avec `_getw`, car la taille du type `int` et l’ordre des octets dans le type `int` diffèrent d’un système à l’autre.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_getw`|\<stdio.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

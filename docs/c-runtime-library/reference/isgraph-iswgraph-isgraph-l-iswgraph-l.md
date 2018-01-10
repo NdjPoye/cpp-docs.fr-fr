@@ -48,11 +48,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5141944b387de8866e2d4c5009e818e3359ee65c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc1dd32d2b427f6d22fad330cc25804ac528ea83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isgraph-iswgraph-isgraphl-iswgraphl"></a>isgraph, iswgraph, _isgraph_l, _iswgraph_l
 Détermine si un entier représente un caractère graphique.  
@@ -83,7 +84,7 @@ int _iswgraph_l(
 ## <a name="return-value"></a>Valeur de retour  
  Chacune de ces routines retourne une valeur différente de zéro si `c` est une représentation particulière d’un caractère imprimable autre qu’un espace. `isgraph` retourne une valeur différente de zéro si `c` est un caractère imprimable autre qu’un espace. `iswgraph` retourne une valeur différente de zéro si `c` est un caractère large imprimable autre qu’un caractère d’espace large. Chacune de ces routines retourne 0 si `c` ne répond pas à la condition de test.  
   
- Pour leur comportement dépendant des paramètres régionaux, les versions de ces fonctions avec le suffixe `_l` utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ Pour leur comportement dépendant des paramètres régionaux, les versions de ces fonctions avec le suffixe `_l` utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  Le comportement de `isgraph` et `_isgraph_l` n’est pas défini si `c` n’est pas EOF ou n’appartient pas à la plage 0 à 0xFF, inclus. Quand une bibliothèque CRT de débogage est utilisée et que `c` ne fait pas partie de ces valeurs, les fonctions déclenchent une assertion.  
   
@@ -94,7 +95,7 @@ int _iswgraph_l(
 |`_istgraph`|`isgraph`|[_ismbcgraph](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswgraph`|  
 |`_istgraph_l`|`_isgraph_l`|[_ismbcgraph_l](../../c-runtime-library/reference/ismbcgraph-functions.md)|`_iswgraph_l`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
@@ -103,7 +104,7 @@ int _iswgraph_l(
 |`_isgraph_l`|\<ctype.h>|  
 |`_iswgraph_l`|\<ctype.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classifications des caractères](../../c-runtime-library/character-classification.md)   

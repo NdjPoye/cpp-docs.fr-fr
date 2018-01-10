@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d60befb61e86c2ba8abc18a6eca1578df87b777f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04aff6922358048fcbd330096eb26a412cdb75ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmessagemap-class"></a>Classe de CMessageMap
 Cette classe autorise que les messages d’un objet est mappé pour l’accès par un autre objet.  
@@ -47,7 +48,7 @@ class ATL_NO_VTABLE CMessageMap
 |----------|-----------------|  
 |[CMessageMap::ProcessWindowMessage](#processwindowmessage)|Accède à une table des messages dans la `CMessageMap`-classe dérivée.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CMessageMap`est une classe de base abstraite qui permet les messages d’un objet est mappé pour être accessible par un autre objet. Dans l’ordre pour un objet d’exposer ses tables des messages, sa classe doit dériver de `CMessageMap`.  
   
  ATL utilise `CMessageMap` à windows de prise en charge des contenus et chaînage de carte dynamique des messages. Par exemple, toute classe qui contient un [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) objet doit dériver de `CMessageMap`. Le code suivant provient de la [SUBEDIT](../../visual-cpp-samples.md) exemple. Via [CComControl](../../atl/reference/ccomcontrol-class.md), le `CAtlEdit` classe dérive automatiquement `CMessageMap`.  
@@ -58,7 +59,7 @@ class ATL_NO_VTABLE CMessageMap
   
  Pour plus d’informations sur les tables des messages, consultez [tables des messages](../../atl/message-maps-atl.md) dans l’article « Classes de fenêtre ATL ».  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlwin.h  
   
 ##  <a name="processwindowmessage"></a>CMessageMap::ProcessWindowMessage  
@@ -96,7 +97,7 @@ virtual BOOL ProcessWindowMessage(
 ### <a name="return-value"></a>Valeur de retour  
  **TRUE** si le message est entièrement géré ; sinon, **FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelée par la procédure de fenêtre un [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) de l’objet ou d’un objet qui est dynamiquement chaînage des propriétés de la table des messages.  
   
 ## <a name="see-also"></a>Voir aussi  

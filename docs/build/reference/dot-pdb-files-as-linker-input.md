@@ -1,33 +1,33 @@
 ---
-title: "Fichiers .pdb en tant qu&#39;entr&#233;e dans l&#39;&#233;diteur de liens | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fichiers .pdb, en tant qu'entrée dans l'éditeur de liens"
-  - "fichiers PDB, en tant qu'entrée dans l'éditeur de liens"
+title: ". Fichiers PDB en tant qu’entrée de l’éditeur de liens | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .pdb files, as linker input
+- PDB files, as linker input
 ms.assetid: c1071478-2369-4b03-9df8-71761cf82f3b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c5acdc01a58cf0d501be5947cddf710d1b7c6d18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Fichiers .pdb en tant qu&#39;entr&#233;e dans l&#39;&#233;diteur de liens
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les fichiers objets \(.obj\) compilés à l'aide de l'option \/Zi contiennent le nom d'une base de données du programme \(PDB\).  Vous ne spécifiez pas le nom du fichier PDB de l'objet à l'éditeur de liens ; LINK utilise le nom incorporé pour trouver le fichier PDB, si nécessaire.  Cela s'applique également aux objets débogables contenus dans une bibliothèque ; le fichier PDB d'une bibliothèque débogable doit être mis à la disposition de l'éditeur de liens, parallèlement à la bibliothèque.  
+# <a name="pdb-files-as-linker-input"></a>Fichiers .pdb en tant qu'entrée dans l'éditeur de liens
+L’objet (.obj) les fichiers compilés à l’aide de l’option/Zi contiennent le nom d’une base de données du programme (PDB). Vous ne spécifiez pas de nom de fichier PDB de l’objet à l’éditeur de liens ; LIEN utilise le nom incorporé pour trouver le fichier PDB, s’il est nécessaire. Cela s’applique également aux objets débogables contenus dans une bibliothèque ; le fichier PDB d’une bibliothèque débogable doit être disponible pour l’éditeur de liens avec la bibliothèque.  
   
- LINK utilise également un fichier PDB pour stocker les informations de débogage du fichier .exe ou .dll.  Le PDB du programme est à la fois un fichier d'entrée ou de sortie, car LINK met à jour le PDB lorsqu'il régénère le programme.  
+ LINK utilise également un fichier PDB pour contenir les informations de débogage pour le fichier .exe ou .dll. Le PDB du programme est un fichier de sortie et un fichier d’entrée, car le lien mises à jour le fichier PDB lorsqu’il régénère le programme.  
   
-## Voir aussi  
- [Fichiers d'entrée LINK](../../build/reference/link-input-files.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [Fichiers d’entrée LINK](../../build/reference/link-input-files.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)

@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 068d1e0e9061645729728c4d0a3c956e521948cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8f4b888dde70708ee10b2d8000ff6380709dc870
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcrvaluecast-enforce-type-conversion-rules"></a>/Zc:rvalueCast (Appliquer les règles de conversion de type)
 Lorsque le **/Zc : rvaluecast** est spécifiée, le compilateur identifie correctement un type référence rvalue comme le résultat d’une opération de cast conformément à la norme C ++ 11. Quand l'option n'est pas spécifiée, le comportement du compilateur est le même que dans Visual Studio 2012. Par défaut, **/Zc : rvaluecast** est désactivée. Pour la conformité et éliminer les erreurs dans l’utilisation de casts, nous vous recommandons d’utiliser **/Zc : rvaluecast**.  
@@ -38,7 +39,7 @@ Lorsque le **/Zc : rvaluecast** est spécifiée, le compilateur identifie corre
 /Zc:rvalueCast[-]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si **/Zc : rvaluecast** est spécifié, le compilateur suit la section 5.4 de la norme C ++ 11 et traite uniquement les expressions qui génèrent les types sans référence et expressions de cast qui génèrent des références rvalue à des types sans fonction cast en tant que types rvalue. Par défaut, ou si **/Zc:rvalueCast-** est spécifié, le compilateur est non conforme et traite toutes les expressions de cast qui génèrent des références rvalue comme rvalues.  
   
  Utilisez **/Zc : rvaluecast** si vous passez une expression de cast en tant qu’argument à une fonction qui accepte un type référence rvalue. Le comportement par défaut provoque l’erreur du compilateur [l’erreur C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) lorsque le compilateur détermine de façon incorrecte le type de l’expression de cast. Cet exemple illustre une erreur du compilateur dans du code correct quand /Zc:rvalueCast n'est pas spécifié :  

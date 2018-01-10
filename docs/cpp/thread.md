@@ -4,35 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- thread_cpp
-dev_langs:
-- C++
+f1_keywords: thread_cpp
+dev_langs: C++
 helpviewer_keywords:
 - thread local storage (TLS)
 - thread __declspec keyword
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
-ms.openlocfilehash: 7261dc1d6d76eeac8a6b2959bc9bb6fc3c98a66e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b26487e7f5f11bb32f418b438e9d0396b5854a91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread"></a>thread
 
 **Section spécifique à Microsoft**  
-Le **thread** modificateur de classe de stockage étendu est utilisé pour déclarer une variable locale de thread. Pour l’ordinateur portable équivalente dans C ++ 11 et versions ultérieure, utilisez la [thread_local](../cpp/storage-classes-cpp.md#thread_local) spécificateur de classe de stockage.
+Le **thread** modificateur de classe de stockage étendu est utilisé pour déclarer une variable locale de thread. Pour l’ordinateur portable équivalente dans C ++ 11 et versions ultérieure, utilisez la [thread_local](../cpp/storage-classes-cpp.md#thread_local) spécificateur de classe de stockage pour du code portable. Sur Windows **thread_local** est implémenté avec **__declspec (thread)**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,7 +37,7 @@ Le **thread** modificateur de classe de stockage étendu est utilisé pour décl
 __declspec( thread ) declarator
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Le stockage local des threads (TLS) est le mécanisme par lequel chaque thread d’un processus multithread alloue de l’espace de stockage pour les données spécifiques aux threads. Dans les programmes multithread standard, les données sont partagées entre tous les threads d’un processus donné, alors que le stockage local des threads est le mécanisme d’allocation des données par thread. Pour obtenir une description complète des threads, consultez [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
@@ -50,13 +47,18 @@ Les déclarations de variables locales de thread doivent utiliser [étendu de la
 __declspec( thread ) int tls_i = 1;  
 ```
 
-Vous devez respecter ces indications lorsque vous déclarez des variables et des objets locaux de thread :
+Lorsque vous utilisez des variables locales de thread dans les bibliothèques chargées dynamiquement, vous devez vous tenez compte des facteurs qui peuvent provoquer une variable de thread local ne pas être initialisés correctement :
+
+1) Si la variable est initialisée avec un appel de fonction (y compris les constructeurs), cette fonction sera uniquement être appelée pour le thread qui a provoqué la binaire/DLL à charger dans le processus et les threads qui ont démarré après que le fichier binaire/DLL a été chargée. Les fonctions d’initialisation ne sont pas appelées pour n’importe quel autre thread qui a été déjà en cours d’exécution lors du chargement de la DLL. L’initialisation dynamique produit sur l’appel de DllMain pour DLL_THREAD_ATTACH, mais la DLL jamais Obtient le message si la DLL n’est pas dans le processus de démarrage du thread. 
+
+2) Les variables locales de thread statiquement initialisés avec les valeurs de constante sont généralement initialisés correctement sur tous les threads. Toutefois, depuis décembre 2017 il existe un problème de conformité connus dans le compilateur Microsoft C++ par laquelle les variables constexpr de réception dynamique au lieu de l’initialisation statique.  
+  
+   Remarque : Ces deux problèmes sont censés être résolu dans les futures mises à jour du compilateur.
+
+
+En outre, vous devez respecter ces indications lorsque vous déclarez des variables et des objets locaux de thread :
 
 - Vous pouvez appliquer la **thread** attribut uniquement à la classe et les déclarations de données et les définitions ; **thread** ne peut pas être utilisé sur des définitions ou déclarations de fonction.
-
-- L’utilisation de la **thread** attribut peut interférer avec [chargement différé](../build/reference/linker-support-for-delay-loaded-dlls.md) des importations de DLL.
-
-- Sur les systèmes XP, **thread** peut ne pas fonctionner correctement si une DLL utilise des données de __declspec (thread) et elle est chargée dynamiquement via LoadLibrary.
 
 - Vous pouvez spécifier le **thread** attribut uniquement sur les éléments de données avec une durée de stockage statique. Cela inclut les objets de données globaux (à la fois **statique** et **extern**), les objets statiques locaux et les membres de données statiques des classes. Vous ne pouvez pas déclarer des objets de données automatiques avec le **thread** attribut.
 
@@ -81,7 +83,7 @@ Vous devez respecter ces indications lorsque vous déclarez des variables et des
     __declspec( thread ) B2 BObject2;   // BObject2 declared thread local.
     ```
 
-- Le langage C standard permet l'initialisation d'un objet ou d'une variable à l'aide d'une expression impliquant une auto-référence, mais uniquement pour les objets d'étendue non statique. Même si C++ admet normalement l'initialisation dynamique d'un objet à l'aide d'une référence impliquant une auto-référence, ce type d'initialisation n'est pas permis avec les objets locaux de thread. Exemple :
+- Le langage C standard permet l'initialisation d'un objet ou d'une variable à l'aide d'une expression impliquant une auto-référence, mais uniquement pour les objets d'étendue non statique. Même si C++ admet normalement l’initialisation dynamique d’un objet à l’aide d’une référence impliquant une auto-référence, ce type d’initialisation n’est pas permis avec les objets locaux de thread. Exemple :
 
     ```cpp
     // declspec_thread_3.cpp
@@ -100,4 +102,3 @@ Vous devez respecter ces indications lorsque vous déclarez des variables et des
 [__declspec](../cpp/declspec.md)  
 [Mots clés](../cpp/keywords-cpp.md)  
 [Stockage local des threads (TLS)](../parallel/thread-local-storage-tls.md)
-

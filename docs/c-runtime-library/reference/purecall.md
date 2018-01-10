@@ -33,11 +33,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c475c66c92dec7990aa8056a1791c8eeb87d6afa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ef2670188374dc7af5fa34c76df73c3d261efc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="purecall"></a>_purecall
 Gestionnaire d’erreurs d’appel de fonction virtuelle pure par défaut. Le compilateur génère du code pour appeler cette fonction quand une fonction membre virtuelle pure est appelée.  
@@ -53,7 +54,7 @@ extern "C" int __cdecl _purecall();
   
  Un appel à une fonction virtuelle pure est une erreur, car elle n’a pas d’implémentation. Le compilateur génère du code pour appeler la fonction de gestionnaire d’erreurs `_purecall` quand une fonction virtuelle pure est appelée. Par défaut, `_purecall` met fin au programme. Avant cela, la fonction `_purecall` appelle une fonction `_purecall_handler` s’il en a été défini une pour le processus. Vous pouvez installer votre propre fonction de gestionnaire d’erreurs pour les appels de fonctions virtuelles pures, de façon à les intercepter à des fins de débogage ou de création de rapports. Pour utiliser votre propre gestionnaire d’erreurs, créez une fonction qui présente la signature `_purecall_handler`, puis utilisez [_set_purecall_handler](../../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md) pour en faire le gestionnaire actif.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  La fonction `_purecall` n’a pas de déclaration d’en-tête. Le typedef `_purecall_handler` est défini dans \<stdlib.h>.  
   
 ## <a name="see-also"></a>Voir aussi  

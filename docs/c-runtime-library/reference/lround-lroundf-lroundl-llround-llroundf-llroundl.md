@@ -47,11 +47,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 596d1d40043fceb9a75549a460776b5b7d9de552
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b75aecc6fe207d019ff9c84ddaaa718408e6059b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 Arrondit une valeur à virgule flottante à l’entier le plus proche.  
@@ -105,13 +106,13 @@ long long llroundl(
 ## <a name="remarks"></a>Notes  
  C++ autorisant la surcharge, vous pouvez appeler des surcharges de `lround` ou `llround` qui acceptent et retournent des valeurs `float` et `long double`. Dans un programme C, `lround` et `llround` acceptent et retournent toujours un `double`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`lround`, `lroundf`, `lroundl`, `llround`, `llroundf`, `llroundl`|\<math.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

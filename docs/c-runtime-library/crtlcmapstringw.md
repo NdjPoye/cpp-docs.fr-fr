@@ -25,11 +25,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 88af917cb86826cc4615948f7a5d2e53e888bad5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 261fb23c96bee0d646f64d587d9f7afecc59d4d2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 Mappe une chaîne de caractères à une autre en effectuant une transformation dépendante des paramètres régionaux spécifiés. Cette fonction peut aussi être utilisée pour générer une clé de tri pour la chaîne d’entrée.  
@@ -74,10 +75,10 @@ int __crtLCMapStringW(
   
  La valeur zéro indique l’échec de l’opération. Pour obtenir des informations plus complètes sur les erreurs, appelez la fonction `GetLastError` .  
   
-## <a name="remarks"></a>Remarques  
- Si `cchSrc` est supérieure à zéro et que `lpSrcStr` est une chaîne qui se termine par un caractère null, `__crtLCMapStringW` affecte à `cchSrc` la longueur de la chaîne. `__crtLCMapStringW` appelle ensuite la version de chaîne étendue (Unicode) de la fonction `LCMapString` avec les paramètres spécifiés. Pour plus d’informations sur les paramètres et la valeur de retour de cette fonction, consultez la fonction `LCMapString` dans [MSDN Library](http://go.microsoft.com/fwlink/?linkID=150542).  
+## <a name="remarks"></a>Notes  
+ Si `cchSrc` est supérieure à zéro et que `lpSrcStr` est une chaîne qui se termine par un caractère null, `__crtLCMapStringW` affecte à `cchSrc` la longueur de la chaîne. `__crtLCMapStringW` appelle ensuite la version de chaîne étendue (Unicode) de la fonction `LCMapString` avec les paramètres spécifiés. Pour plus d’informations sur les paramètres et la valeur de retour de cette fonction, consultez la fonction `LCMapString` dans [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

@@ -29,11 +29,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b8c8ab6a0b350bc7140d7fb20ecdb6b74eafccc4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 86085472c63d2ad3fbc1cf53d893bd8da2f8c244
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="callnewh"></a>_callnewh
 Appelle le *nouveau gestionnaire* installé.  
@@ -52,7 +53,7 @@ int _callnewh(
   
 ## <a name="return-value"></a>Valeur de retour  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0|Échec : aucun nouveau gestionnaire n’est installé ou actif.|  
 |1|Réussite : le nouveau gestionnaire est installé et activé. L’allocation de mémoire peut être retentée.|  
@@ -63,7 +64,7 @@ int _callnewh(
 ## <a name="remarks"></a>Notes  
  Le *nouveau gestionnaire* est appelé si l’[opérateur new](../../cpp/new-operator-cpp.md) ne parvient pas à allouer de la mémoire. Le nouveau gestionnaire peut alors lancer une action appropriée, par exemple la libération de mémoire pour que les allocations suivantes aboutissent.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

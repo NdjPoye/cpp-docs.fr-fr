@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f2b511a4b7cbaffb80d9f07a2491a38554682c29
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 680d3a97cec7971bf31605997e3ab2afdfae2cdf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lifetime-scope-visibility-and-linkage"></a>Durée de vie, portée, visibilité et liaison
 Pour comprendre le fonctionnement d'un programme C, vous devez comprendre les règles qui déterminent la façon dont les variables et les fonctions peuvent être utilisées dans ce programme. Plusieurs concepts sont cruciaux pour comprendre ces règles :  

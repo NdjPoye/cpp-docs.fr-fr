@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 039117b08a3985e1d29f8be50a8869156699b415
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48c41df17d118bca0a99cd16bc54d72169157dc5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="other-lib-output"></a>Autre sortie LIB
 Dans le mode par défaut, vous pouvez utiliser l’option /LIST pour afficher des informations sur la bibliothèque qui en résulte. Vous pouvez rediriger cette sortie vers un fichier.  

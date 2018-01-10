@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d1ed5731f0b46769ac9f49c34752d8794a0dddc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0920280f672b1c45d317ade4c592a6b93356fb8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-literals-in-primary-expressions"></a>Littéraux chaîne dans les expressions primaires
 Un littéral de chaîne est un caractère, un caractère élargi ou une séquence de caractères adjacents placés entre guillemets. Étant donné que les littéraux de chaîne et tous leurs éléments ne sont pas des variables, ils peuvent constituer l'opérande gauche d'une opération d'assignation. Le type d'un littéral de chaîne est un tableau de `char` (ou un tableau de `wchar_t` pour les littéraux de chaîne étendus). Les tableaux présents dans les expressions sont convertis en pointeurs. Pour plus d'informations sur les chaînes, consultez [Littéraux de chaîne](../c-language/c-string-literals.md).  

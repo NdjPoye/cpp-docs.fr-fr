@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2161238e00eaf8b5b042d02baf5123c686d15ac7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c88005c8afef8ab66edf989c61214d20b02b2cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fword"></a>FWORD
 Alloue et éventuellement initialise 6 octets de stockage pour chaque `initializer`.  
@@ -30,7 +31,7 @@ Alloue et éventuellement initialise 6 octets de stockage pour chaque `initializ
 [[name]] FWORD initializer [[, initializer]]...  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Peut également servir comme un spécificateur de type n’importe où un type est autorisé.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a5c73f99d8d31ad500b232d371bf55072dd567a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f7a0a02e46906ae8d3b6c62b8cc1b9147d396966
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="com-map-global-functions"></a>Fonctions globales de mappage COM
 Ces fonctions fournissent la prise en charge pour le mappage COM **IUnknown** implémentations.  
@@ -32,7 +33,7 @@ Ces fonctions fournissent la prise en charge pour le mappage COM **IUnknown** im
 |[InlineIsEqualIUnknown](#inlineisequaliunknown)|Génère un code efficace pour comparer des interfaces à **IUnknown**.|  
 
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
 
 ##  <a name="atlinternalqueryinterface"></a>AtlInternalQueryInterface  
@@ -62,7 +63,7 @@ HRESULT AtlInternalQueryInterface(
 ### <a name="return-value"></a>Valeur de retour  
  Une des valeurs HRESULT standards.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `AtlInternalQueryInterface` gère seulement des interfaces dans le tableau de mappage COM. Si votre objet est agrégée, `AtlInternalQueryInterface` ne délègue pas à inconnu externe. Vous pouvez entrer des interfaces dans la table de mappage COM avec la macro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) ou une de ses variantes.  
   
 ### <a name="example"></a>Exemple  

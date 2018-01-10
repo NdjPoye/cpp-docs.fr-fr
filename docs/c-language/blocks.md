@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 18d04884bacf2cbc03fd68c8ec0489595eb0f4d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 60126db8e2a8f7fe9e56041c4f5b119df828958c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="blocks"></a>Blocs
 Une séquence de déclarations, de définitions et d'instructions placées entre accolades (**{ }**) est appelée un « bloc ». Il existe deux types de bloc en C. L'« instruction composée, » une instruction composée d'une ou plusieurs instructions (consultez [L'instruction composée](../c-language/compound-statement-c.md)), est un type de bloc. L’autre, la « définition de fonction », se compose d’une instruction composée (le corps de la fonction) et de l’« en-tête » associé de la fonction (le nom de la fonction, le type de retour et les paramètres formels). Un bloc au sein d'autres blocs est dit « imbriqué ».  

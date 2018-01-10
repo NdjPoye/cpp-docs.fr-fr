@@ -1,32 +1,31 @@
 ---
-title: "LOCAL (MASM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Local"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LOCAL directive"
+title: LOCAL (MASM) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Local
+dev_langs: C++
+helpviewer_keywords: LOCAL directive
 ms.assetid: 76147e2d-23ca-4f1e-8817-81428becd113
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 45ee0a98d614ee10cb7393c0e616459526b37531
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# LOCAL (MASM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dans la première directive, dans une macro, **LOCAL** définit les noms uniques à chaque instance de la macro.  
+# <a name="local-masm"></a>LOCAL (MASM)
+Dans la première directive, au sein d’une macro, **LOCAL** définit les étiquettes qui sont uniques à chaque instance de la macro.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -34,8 +33,8 @@ Dans la première directive, dans une macro, **LOCAL** définit les noms uniques
 LOCAL label [[ [count ] ]] [[:type]] [[, label [[ [count] ]] [[type]]]]...  
 ```  
   
-## Notes  
- Dans la deuxième directive, dans une définition de procédure \(**COMMENT**\), **LOCAL** crée des variables pile\-basées qui existent pour la durée de la procédure.  *Le nom* peut être une variable simple ou un tableau contenant les éléments *de nombre* .  
+## <a name="remarks"></a>Notes  
+ Dans la deuxième directive, au sein d’une définition de procédure (**PROC**), **LOCAL** crée des variables de pile qui existent pour la durée de la procédure. Le *étiquette* peut être une simple variable ou un tableau contenant *nombre* éléments.  
   
-## Voir aussi  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)

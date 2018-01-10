@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8c959926cd1ae15ebc8087a9dc3237fdeeb34fa8
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: 86b12604a5348c3a1aabb33c7e13a4e7a3c57932
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zc-conformance"></a>/Zc (Conformité)
 
@@ -33,7 +34,7 @@ Vous pouvez utiliser la **/Zc** options du compilateur pour spécifier le compor
 
 > / Zc :_option_{,_option_}
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Lorsque Visual Studio a implémenté une extension de C ou C++ qui n’est pas compatible avec la norme, vous pouvez utiliser un `/Zc` option de conformité pour spécifier le comportement conforme à la norme ou spécifique à Microsoft. Pour certaines options, le comportement spécifique à Microsoft est la valeur par défaut, pour empêcher des modifications avec rupture à grande échelle pour le code existant. Dans d’autres cas, la valeur par défaut est le comportement standard, où les améliorations de sécurité, les performances ou compatibilité l’emportent sur les coûts des modifications avec rupture. Le paramètre par défaut de chaque option de conformité peut-être changer dans les versions plus récentes de Visual Studio. Pour plus d’informations sur chaque option de conformité, consultez la rubrique relative à l’option.
 
@@ -41,6 +42,7 @@ Il s’agit du `/Zc` options du compilateur :
 
 |Option|Comportement|
 |---|---|
+|[alignedNew\[-\]](zc-alignednew.md)|Activer C ++ 17 trop forte dynamique d’allocation alignée (activé par défaut dans C ++ 17).|
 |[Auto\[-\]](zc-auto-deduce-variable-type.md)|Appliquer la nouvelle signification C++ Standard pour `auto` (sur par défaut).|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Activer une liaison externe pour `constexpr` variables (désactivé par défaut).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Appliquer la norme C++ `for` règles de portée (sur par défaut).|

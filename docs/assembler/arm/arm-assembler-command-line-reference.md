@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1bb9bbdd6deb0a8e459f2f2b8d5b6188c7517e6c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e7f69c2ac2dbd8a0079d9160100077ccd35513e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="arm-assembler-command-line-reference"></a>Référence de la ligne de commande de l'assembleur ARM
 Cet article fournit des informations de ligne de commande sur l’assembleur Microsoft ARM, *armasm*, qui compile le langage d’assembly ARMv7 Thumb dans l’implémentation Microsoft du fichier de Format COFF (Common Object). L’éditeur de liens peut lier le code COFF avec le code d’objet qui est généré par l’assembleur ARM ou par le compilateur C, ainsi que des bibliothèques d’objets qui sont créés par le Générateur de bibliothèques.  
@@ -41,7 +42,7 @@ armasm [[options]] -o objectfile sourcefile
  Ajoutez les répertoires spécifiés dans le chemin de recherche include.  
   
  -prédéfinir`directive`  
- Spécification d’une directive de jeu de NŒUDSUNE, SETL ou les jeux de prédéfinir un symbole. Exemple : **armasm.exe-prédéfinir source.asm de « COUNT jeu de NŒUDSUNE 150 »**. Pour plus d’informations, consultez la [guide des outils assembleur ARM](http://go.microsoft.com/fwlink/?LinkId=246102).  
+ Spécification d’une directive de jeu de NŒUDSUNE, SETL ou les jeux de prédéfinir un symbole. Exemple : **armasm.exe-prédéfinir source.asm de « COUNT jeu de NŒUDSUNE 150 »**. Pour plus d’informations, consultez la [guide des outils assembleur ARM](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
  -nowarn  
  Désactiver tous les messages d’avertissement.  

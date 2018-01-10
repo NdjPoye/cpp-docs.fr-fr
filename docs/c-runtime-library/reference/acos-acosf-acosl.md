@@ -42,11 +42,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ab09d3e189ea4c1990be25f2982a949d95a68359
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1daa54589ad1332f2cb85f7cc6fe03aa58d07a18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 Calcule l’arc cosinus.  
@@ -76,7 +77,7 @@ long double acosl(
  Valeur comprise entre -1 et 1, pour lesquelles calculer l’arc cosinus (le cosinus inverse).  
   
 ## <a name="return-value"></a>Valeur de retour  
- La fonction `acos` retourne l’arc cosinus de `x` dans la plage 0 à π radians.  
+ Le `acos` fonction retourne l’arc cosinus de `x` dans la plage 0 en radians la mesure π.  
   
  Par défaut, si `x` est inférieur à -1 ou supérieur à 1, `acos` renvoie un indéterminée.  
   
@@ -89,7 +90,7 @@ long double acosl(
 ## <a name="remarks"></a>Notes  
  C++ autorisant la surcharge, vous pouvez appeler des surcharges de `acos` qui acceptent et retournent des types `float` et `long double`. Dans un programme C, `acos` accepte et retourne toujours un `double`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|En-têtes facultatifs|  
 |-------------|---------------------|----------------------|  

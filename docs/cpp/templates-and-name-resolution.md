@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4013b35cf12fdc8b6c586a794df8340472584bc0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cb6708a8b7631551a6e245c0777bcc6c9fb1a92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="templates-and-name-resolution"></a>Modèles et résolution de noms
 
@@ -27,11 +28,11 @@ Dans les définitions de modèle, il existe trois types de noms :
   
 -   les noms provenant de la portée englobante située en dehors de la définition de modèle ;  
   
--   les noms qui dépendent d'une certaine façon des arguments template, appelés noms dépendants.  
+-   les noms qui dépendent d’une certaine façon des arguments template, appelés noms dépendants.  
   
  Alors que les deux premiers noms concernent aussi des portées de classe et de fonction, des règles spécifiques de résolution de noms sont requises dans les définitions de modèle pour gérer la complexité ajouté des noms dépendants. Cela provient du fait que le compilateur connaît peu ces noms avant que le modèle ne soit instancié car il peut s'agir de types complètement différents selon les arguments template utilisés. Les noms non dépendants sont recherchés selon les règles classiques et au point de définition du modèle. Ces noms, qui sont indépendants des arguments template, sont recherchés une fois pour toutes les spécialisations de modèle. Les noms dépendants ne sont pas recherchés tant que le modèle n'est pas instancié et sont recherchés séparément pour chaque spécialisation.  
   
- Un type est dépendant s'il dépend des arguments template. En particulier un type est dépendant s'il s'agit :  
+ Un type est dépendant s’il dépend des arguments template. En particulier un type est dépendant s'il s'agit :  
   
 -   de l'argument template lui-même ;  
   
@@ -79,7 +80,7 @@ Dans les définitions de modèle, il existe trois types de noms :
   
 ## <a name="type-dependence-and-value-dependence"></a>Dépendance de type et dépendance de valeur
 
- Les noms et les expressions dépendants d'un paramètre de modèle sont classés comme dépendant de type ou dépendant de valeur selon que le paramètre de modèle est un paramètre de type ou un paramètre de valeur. En outre, tous les identificateurs déclarés dans un modèle avec un type dépendant de l'argument template sont considérés comme dépendants de valeur, étant donné qu'un type intégral ou énumération est initialisé avec une expression dépendante de valeur.  
+ Les noms et les expressions dépendants d’un paramètre de modèle sont classés comme dépendant de type ou dépendant de valeur selon que le paramètre de modèle est un paramètre de type ou un paramètre de valeur. En outre, tous les identificateurs déclarés dans un modèle avec un type dépendant de l'argument template sont considérés comme dépendants de valeur, étant donné qu'un type intégral ou énumération est initialisé avec une expression dépendante de valeur.  
   
  Les expressions dépendantes de type et de valeur sont des expressions qui impliquent des variables qui dépendent de type ou de valeur. Ces expressions peuvent avoir une sémantique qui diffère selon les paramètres utilisés pour le modèle.  
   

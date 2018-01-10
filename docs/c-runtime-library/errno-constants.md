@@ -52,11 +52,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fdfb4477b4de30221a0e89db02cd45178b70db0a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 98cc4c3afa245c55344454d4c96ea22d70905e0d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errno-constants"></a>errno, constantes
 ## <a name="syntax"></a>Syntaxe  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/24/2017
 #include <errno.h>  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les valeurs **errno** sont des constantes affectées à [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) lorsque différentes conditions d'erreur se produisent.  
   
  ERRNO.H contient les définitions des valeurs **errno**. Toutefois, toutes les définitions contenues dans ERRNO.H ne sont pas utilisées dans les systèmes d'exploitation Windows 32 bits. Certaines valeurs dans ERRNO.H sont présentes pour assurer la compatibilité avec la famille UNIX de systèmes d'exploitation.  

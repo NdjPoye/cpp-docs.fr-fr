@@ -19,18 +19,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cac5ba6baf821e7e9450ec01e7851edf625b8bd0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 91ffb9bd0645cab51e4140697c41e5b715380fe8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="section-editbin"></a>/SECTION (EDITBIN)
 ```  
 /SECTION:name[=newname][,attributes][alignment]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette option modifie les attributs d’une section, en substituant les attributs qui ont été définies lorsque le fichier de l’objet de la section a été compilé ou lié.  
   
  Après le signe deux-points ( **:** ), spécifiez la *nom* de la section. Pour modifier le nom de section, procédez comme *nom* par un signe égal (=) et un *newname* pour la section.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
 |Attribut|Paramètre|  
 |---------------|-------------|  
 |c|code|  
-|j|pouvant être éliminée|  
+|d|pouvant être éliminée|  
 |e|executable|  
 |g|données initialisées|  
 |k|mise en cache mémoire virtuelle|  

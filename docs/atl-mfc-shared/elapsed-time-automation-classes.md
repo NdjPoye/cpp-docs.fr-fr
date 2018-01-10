@@ -1,49 +1,51 @@
 ---
-title: "Elapsed Time: Automation Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "adding dates"
-  - "Automation classes, temps écoulé"
-  - "calculating dates and times"
-  - "calculs, date et heure"
-  - "dates, calculating intervals"
-  - "temps écoulé, calculating in Automation"
-  - "intervals, date et heure"
-  - "heure, elapsed"
+title: "Temps écoulé : Classes Automation | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- adding dates
+- calculating dates and times
+- dates, calculating intervals
+- elapsed time, calculating in Automation
+- Automation classes, elapsed time
+- time, elapsed
+- intervals, date and time
+- calculations, date and time
 ms.assetid: 26b34b37-c10e-4b91-82c3-1dc5ffb5361f
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0e4cf7fef17499910d9664ab26fa1b07438e7900
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Elapsed Time: Automation Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="elapsed-time-automation-classes"></a>Temps écoulé : Les Classes Automation
+Cette procédure montre comment calculer la différence entre deux `CTime` objets et obtenir un `CTimeSpan` résultat.  
+  
+#### <a name="to-calculate-elapsed-time"></a>Pour calculer le temps écoulé  
+  
+1.  Créez deux `COleDateTime` objets.  
+  
+2.  Définissez l’une de le `COleDateTime` objets à l’heure actuelle.  
+  
+3.  Exécution d’une tâche de longue durée.  
+  
+4.  Définir les autres `COleDateTime` objet à l’heure actuelle.  
+  
+5.  Prendre la différence entre les deux heures.  
+  
+     [!code-cpp[NVC_ATLMFC_Utilities#178](../atl-mfc-shared/codesnippet/cpp/elapsed-time-automation-classes_1.cpp)]  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Date et heure : prise en charge d’Automation](../atl-mfc-shared/date-and-time-automation-support.md)
 
-Cette procédure indique comment calculer la différence entre deux objets d' `CTime` et obtenir un résultat de `CTimeSpan` .  
-  
-#### Pour calculer le temps écoulé  
-  
-1.  Créez deux objets d' `COleDateTime` .  
-  
-2.  Placez l'un des objets d' `COleDateTime` à l'heure actuelle.  
-  
-3.  Effectuez une tâche longue.  
-  
-4.  Définissez l'autre objet d' `COleDateTime` à l'heure actuelle.  
-  
-5.  Prenez la différence entre les deux heures.  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#178](../atl-mfc-shared/codesnippet/CPP/elapsed-time-automation-classes_1.cpp)]  
-  
-## Voir aussi  
- [Date and Time: Automation Support](../atl-mfc-shared/date-and-time-automation-support.md)

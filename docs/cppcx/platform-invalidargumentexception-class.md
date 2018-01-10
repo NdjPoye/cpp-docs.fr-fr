@@ -17,11 +17,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c62b291d2136010c120e46141b6064a772524779
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4426fe0e8f4bc65e0071260dff0004abf327fe38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platforminvalidargumentexception-class"></a>Platform::InvalidArgumentException, classe
 Levée lorsque l'un des arguments fournis à une méthode n'est pas valide.  
@@ -32,10 +33,10 @@ Levée lorsque l'un des arguments fournis à une méthode n'est pas valide.
 public ref class InvalidArgumentException : COMException,    IException,    IPrintable,    IEquatable  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d'informations, consultez la classe [COMException](../cppcx/platform-comexception-class.md) .  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **Minimum pris en charge le client :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  

@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab5b54c820095b54be28a5868505d07f9b0e39d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5b1ee1c7307f4e19db4ca0b7d03e218b0916538c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Gestion des erreurs et des exceptions (Modern C++)
 En C++ moderne, dans la plupart des scénarios, la meilleure façon de signaler et gérer les erreurs de logique et erreurs d’exécution est d’utiliser des exceptions. Cela est particulièrement vrai lors de la pile peut contenir plusieurs appels de fonction entre la fonction qui détecte l’erreur et la fonction qui a le contexte de savoir comment la gérer. Les exceptions offrent un moyen de formel et bien défini pour le code qui détecte les erreurs pour passer les informations de la pile des appels.  

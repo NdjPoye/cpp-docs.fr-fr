@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,36 +13,19 @@ f1_keywords:
 - ATLCONV/ATL::CA2WEX::CA2WEX
 - ATLCONV/ATL::CA2WEX::m_psz
 - ATLCONV/ATL::CA2WEX::m_szBuffer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CA2WEX class
+dev_langs: C++
+helpviewer_keywords: CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 93f3fdbd9c728dcaea0262cb774fe5891e6a9838
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0114d2ce60eba1d92b4cfd52d003532bd9ced097
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ca2wex-class"></a>Classe de CA2WEX
 Cette classe est utilisée par les macros de conversion de chaînes `CA2TEX`, `CA2CTEX`, `CT2WEX`, et `CT2CWEX`et le typedef **CA2W**.  
@@ -84,7 +66,7 @@ class CA2WEX
 |[CA2WEX::m_psz](#m_psz)|Le membre de données qui stocke la chaîne source.|  
 |[CA2WEX::m_szBuffer](#m_szbuffer)|La mémoire tampon statique, utilisé pour stocker la chaîne convertie.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  À moins que des fonctionnalités supplémentaires sont requises, utilisez `CA2TEX`, `CA2CTEX`, `CT2WEX`, `CT2CWEX`, ou **CA2W** dans votre code.  
   
  Cette classe contient une mémoire tampon de taille fixe statique qui est utilisé pour stocker le résultat de la conversion. Si le résultat est trop grand pour tenir dans la mémoire tampon statique, la classe alloue de la mémoire avec `malloc` et libère la mémoire quand l'objet passe en dehors de l'étendue. Cela garantit que, contrairement au texte des macros de conversion disponibles dans les versions précédentes d’ATL, cette classe est plus sûr d’utiliser dans les boucles et qu’il ne sera pas dépassement de la pile.  
@@ -112,7 +94,7 @@ class CA2WEX
 ## <a name="example"></a>Exemple  
  Consultez [ATL et MFC Macros de Conversion de chaînes](string-conversion-macros.md) pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlconv.h  
   
 ##  <a name="ca2wex"></a>CA2WEX::CA2WEX  
@@ -128,9 +110,9 @@ CA2WEX(LPCSTR psz) throw(...);
  La chaîne de texte à convertir.  
   
  `nCodePage`  
- La page de codes utilisée pour effectuer la conversion. Consultez la discussion de paramètre de page de code pour le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] fonction [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) pour plus d’informations.  
+ La page de codes utilisée pour effectuer la conversion. Consultez la discussion de paramètre de page de code pour la fonction du Kit de développement logiciel Windows [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) pour plus d’informations.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Alloue de la mémoire tampon utilisée dans le processus de traduction.  
   
 ##  <a name="dtor"></a>CA2WEX :: ~ CA2WEX  
@@ -174,4 +156,3 @@ operator LPWSTR() const throw();
  [Classe de CW2CWEX](../../atl/reference/cw2cwex-class.md)   
  [Classe de CW2WEX](../../atl/reference/cw2wex-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

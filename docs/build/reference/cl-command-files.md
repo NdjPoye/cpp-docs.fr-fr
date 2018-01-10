@@ -1,41 +1,40 @@
 ---
-title: "Fichiers de commandes CL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compilateur cl.exe, fichiers de commandes"
-  - "fichiers de commandes"
-  - "fichiers de commandes, CL (compilateur)"
+title: Fichiers de commandes CL | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: cl
+dev_langs: C++
+helpviewer_keywords:
+- cl.exe compiler, command files
+- command files
+- command files, CL compiler
 ms.assetid: ec3cea06-2af0-4fe9-a94c-119c9d31b3a9
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a711b2f4a484a6370af828c5d0aad522686ca3f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Fichiers de commandes CL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Un fichier de commandes est un fichier texte qui contient des options et des noms de fichiers que vous devez autrement entrer sur la [ligne de commande](../../build/reference/compiler-command-line-syntax.md) ou spécifier à l'aide de la [variable d'environnement CL](../../build/reference/cl-environment-variables.md).  CL accepte un fichier de commandes du compilateur en tant qu'argument dans la variable d'environnement CL ou sur la ligne de commande.  Contrairement à la ligne de commande et à la variable d'environnement CL, un fichier de commandes admet l'utilisation de plusieurs lignes d'options et de noms de fichiers.  
+# <a name="cl-command-files"></a>Fichiers de commandes CL
+Un fichier de commandes est un fichier texte qui contient les options et les noms de fichiers vous indiquez dans le cas contraire le [ligne de commande](../../build/reference/compiler-command-line-syntax.md) ou spécifier à l’aide de la [variable d’environnement CL](../../build/reference/cl-environment-variables.md). CL accepte un fichier de commandes du compilateur en tant qu’argument dans la variable d’environnement CL ou sur la ligne de commande. Contrairement à la ligne de commande ou à la variable d'environnement CL, un fichier de commandes vous permet d'utiliser plusieurs lignes d'options et de noms de fichiers.  
   
- Les options et les noms de fichiers qui figurent dans un fichier de commandes sont traités en fonction de l'emplacement qu'occupe un nom de fichier de commandes dans la variable d'environnement CL ou sur la ligne de commande.  Cependant, si l'option \/link apparaît dans le fichier de commandes, toutes les options qui figurent sur le reste de la ligne sont passées à l'éditeur de liens.  Les options des lignes suivantes du fichier de commandes et les options situées sur la ligne de commande après l'appel du fichier de commandes sont toujours acceptées en tant qu'options du compilateur.  Pour plus d'informations sur la façon dont l'ordre des options influe sur leur interprétation, consultez [Ordre des options CL](../../build/reference/order-of-cl-options.md).  
+ Options et les noms de fichiers dans un fichier de commandes sont traités en fonction de l’emplacement d’un nom de fichier de commande dans la variable d’environnement CL ou sur la ligne de commande. Cependant, si l’option /link apparaît dans le fichier de commandes, toutes les options sur le reste de la ligne sont passées à l’éditeur de liens. Options dans les lignes suivantes du fichier de commandes et les options sur la ligne de commande après l’appel de fichier de commandes sont toujours acceptées en tant qu’options du compilateur. Pour plus d’informations sur la façon dont l’ordre des options influe sur leur interprétation, consultez [ordre des Options CL](../../build/reference/order-of-cl-options.md).  
   
- Un fichier de commandes ne doit pas contenir la commande CL.  Chaque option doit commencer et se terminer sur la même ligne ; vous ne pouvez pas utiliser la barre oblique inverse \(\\\) pour combiner une option répartie sur deux lignes.  
+ Un fichier de commandes ne doit pas contenir la commande CL. Chaque option doit commencer et se terminer sur la même ligne ; Vous ne pouvez pas utiliser la barre oblique inverse (\\) pour combiner une option répartie sur deux lignes.  
   
- Un fichier de commandes est spécifié par le signe arobase\(@\) suivi d'un nom de fichier ; le nom de fichier peut spécifier un chemin d'accès absolu ou relatif.  
+ Un fichier de commandes est spécifié par un arobase (@) suivi d’un nom de fichier ; le nom de fichier peut spécifier un chemin d’accès absolu ou relatif.  
   
- Par exemple, si la commande suivante se trouve dans un fichier nommé RESP :  
+ Par exemple, si la commande suivante est dans un fichier de réponse :  
   
 ```  
 /Og /link LIBC.LIB  
@@ -47,14 +46,14 @@ Un fichier de commandes est un fichier texte qui contient des options et des nom
 CL /Ob2 @RESP MYAPP.C  
 ```  
   
- la commande pour CL est comme suit :  
+ la commande CL est comme suit :  
   
 ```  
 CL /Ob2 /Og MYAPP.C /link LIBC.LIB  
 ```  
   
- Notez que les commandes de la ligne de commande et du fichier de commandes sont combinées efficacement.  
+ Notez que la ligne de commande et le fichier de commandes est combinées efficacement.  
   
-## Voir aussi  
- [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Définition des Options du compilateur](../../build/reference/setting-compiler-options.md)   
  [Options du compilateur](../../build/reference/compiler-options.md)

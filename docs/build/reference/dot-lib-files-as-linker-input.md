@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ad61a8fa3672dd6f243c611e8ad363769dc5fa05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 181c8c3e5e762f2f20d99ca2acadaf285e717b6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lib-files-as-linker-input"></a>.Fichiers .lib en tant qu'entrée de l'Éditeur de liens
 LINK accepte les bibliothèques standard COFF et COFF bibliothèques d’importation, qui portent généralement l’extension. lib. Les bibliothèques standard contiennent des objets et sont créés par l’outil LIB. Bibliothèques d’importation contiennent des informations sur les exportations dans d’autres programmes et sont créées soit par LINK lorsqu’il génère un programme contenant des exportations, ou par l’outil LIB. Pour plus d’informations sur l’utilisation de LIB pour créer standard ou des bibliothèques d’importation, consultez [Référence LIB](../../build/reference/lib-reference.md). Pour plus d’informations sur l’utilisation de la liaison pour créer une bibliothèque d’importation, consultez le [/DLL](../../build/reference/dll-build-a-dll.md) option.  

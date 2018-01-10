@@ -1,34 +1,33 @@
 ---
-title: "ML Fatal Error A1005 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A1005"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A1005"
+title: "Erreur ML irrécupérable A1005 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A1005
+dev_langs: C++
+helpviewer_keywords: A1005
 ms.assetid: 42c7a6c5-277d-417c-acc1-d84c370e8d24
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: de2f2a8c2a68418a9e29c9e1cf9ade371c87e451
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ML Fatal Error A1005
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**limite d'assembly : macro tableau de nom de paramètre complet**  
+# <a name="ml-fatal-error-a1005"></a>Erreur ML irrécupérable A1005
+**limite de l’assembleur : table de noms de paramètre de macro complète**  
   
- Trop de paramètres, variables locales, ou de macro noms ont été définis pour une macro.  Il n'y a plus de place dans le tableau de macro.  
+ Trop de paramètres, variables locales ou les étiquettes de macro ont été définis pour une macro. Aucun espace ne lors de la table de nom de macro.  
   
- Définir plus court ou moins noms, ou supprimez des macros inutiles.  
+ Définir le plus court ou moins noms, ou supprimer des macros inutiles.  
   
-## Voir aussi  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>Voir aussi  
+ [Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)

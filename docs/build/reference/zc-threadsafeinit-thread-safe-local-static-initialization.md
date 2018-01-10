@@ -22,11 +22,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3e1476369a798228361b89fdef12c94624ca4a70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a03f3ea67c9ecabd6fa68d653a3e1812fb0266cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcthreadsafeinit-thread-safe-local-static-initialization"></a>/Zc:threadSafeInit (thread-safe l’initialisation statique locale)  
 Le `/Zc:threadSafeInit` option du compilateur indique au compilateur pour initialiser les variables locales statiques (portée de fonction) de façon thread-safe, en éliminant la nécessité pour une synchronisation manuelle. Seule l’initialisation est thread-safe. Utilisation et modification de variables locales statiques par plusieurs threads doivent toujours être synchronisés manuellement. Cette option est disponible à partir de Visual Studio 2015. Par défaut, Visual Studio active cette option.  
@@ -35,7 +36,7 @@ Le `/Zc:threadSafeInit` option du compilateur indique au compilateur pour initia
   
 `/Zc:threadSafeInit`[`-`]  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 Dans la norme C ++ 11, variables de portée de bloc avec statique ou une durée de stockage thread doit être initialisée à zéro avant toute autre initialisation a lieu. L’initialisation se produit lorsque le contrôle passe tout d’abord via la déclaration de la variable. Si une exception est levée pendant l’initialisation, la variable est considérée comme non initialisé et l’initialisation est tentée de nouveau le contrôle de temps suivant passe par la déclaration. Si le contrôle passe à la déclaration en même temps que l’initialisation, les blocs de l’exécution simultanée, tandis que l’initialisation est terminée. Le comportement est indéfini si le contrôle entre la déclaration de manière récursive à nouveau lors de l’initialisation. Par défaut, Visual Studio à partir de Visual Studio 2015 implémente ce comportement par défaut. Ce comportement peut être spécifié explicitement en définissant la `/Zc:threadSafeInit` option du compilateur.  
   

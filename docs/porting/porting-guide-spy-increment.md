@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 79efd81177cc3235030600779e70c1e9a2043670
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11b50aa8eb5c44a8949228d03b0b733de90fb0b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="porting-guide-spy"></a>Guide du portage : Spy++
 Cette étude de cas de portage vise à vous donner une idée de ce qu'est un projet de portage classique et des types de problèmes que vous êtes susceptible de rencontrer. Elle fournit également quelques conseils et astuces généraux qui vous aideront à résoudre certains problèmes liés au portage. Elle n'est pas destinée à être un guide du portage exhaustif, car le déroulement du portage d'un projet dépend beaucoup des spécificités du code.  
@@ -683,7 +684,7 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
   
 ```  
   
-## <a name="summary"></a>Résumé  
+## <a name="summary"></a>Récapitulatif  
  Il nous a fallu environ 20 heures de codage pendant une semaine pour porter la solution Spy++ conçue initialement en code Visual C++ 6.0 vers la dernière version du compilateur. Nous avons effectué la mise à niveau de huit versions du produit en même temps de Visual Studio 6.0 vers Visual Studio 2015. Il s’agit désormais de la démarche conseillée pour toutes les mises à niveau concernant les projets, petits et grands.  
   
 ## <a name="see-also"></a>Voir aussi  

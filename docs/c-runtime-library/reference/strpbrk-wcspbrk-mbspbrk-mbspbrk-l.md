@@ -55,11 +55,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: aef34a8cddfde1088c8535a1835b157146400faa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 323ee2842799cdfe948bdf0a8af7ec2bfad92439
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 Analyse des chaînes à la recherche de caractères présents dans les jeux de caractères spécifiés.  
@@ -147,7 +148,7 @@ const unsigned char *_mbspbrk_l(
   
  En C, ces fonctions acceptent un pointeur `const` comme premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers `const` retourne un pointeur vers `const` ; la version qui accepte un pointeur vers non-`const` retourne un pointeur vers non-`const`. La macro `_CRT_CONST_CORRECT_OVERLOADS` est défini si les deux le `const` et non-`const` versions de ces fonctions sont disponibles. Si vous avez besoin non -`const` comportement pour les deux surcharges C++, définissez le symbole `_CONST_RETURN`.  
   
- La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans suffixe `_l` utilisent les paramètres régionaux actifs pour ce comportement dépendant des paramètres régionaux ; la version avec suffixe `_l` est identique, sauf qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans suffixe `_l` utilisent les paramètres régionaux actifs pour ce comportement dépendant des paramètres régionaux ; la version avec suffixe `_l` est identique, sauf qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
@@ -156,7 +157,7 @@ const unsigned char *_mbspbrk_l(
 |`_tcspbrk`|`strpbrk`|`_mbspbrk`|`wcspbrk`|  
 |**n/a**|**n/a**|`_mbspbrk_l`|**n/a**|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
@@ -164,7 +165,7 @@ const unsigned char *_mbspbrk_l(
 |`wcspbrk`|\<string.h> ou \<wchar.h>|  
 |`_mbspbrk`, `_mbspbrk_l`|\<mbstring.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

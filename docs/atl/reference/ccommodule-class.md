@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -34,36 +33,21 @@ f1_keywords:
 - ATLBASE/ATL::CComModule::m_hInstResource
 - ATLBASE/ATL::CComModule::m_hInstTypeLib
 - ATLBASE/ATL::CComModule::m_pObjMap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 893efea83bd0d84813a70ec39e5d50fde47dd732
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5b86e1f082b7be844afe3b1a84d182d1c722f500
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccommodule-class"></a>CComModule (classe)
 À compter d’ATL 7.0, `CComModule` est déconseillée : consultez [Module ATL, Classes](../../atl/atl-module-classes.md) pour plus d’informations.  
@@ -133,7 +117,7 @@ class CComModule : public _ATL_MODULE
   
  En plus de `CComModule`, ATL fournit [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), qui implémente un module de modèle de cloisonnement pour les services de fichiers exe et Windows. Dériver à partir de votre module de `CComAutoThreadModule` lorsque vous souhaitez créer des objets dans des cloisonnements plusieurs.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
   
  [CAtlModule](../../atl/reference/catlmodule-class.md)  
@@ -142,7 +126,7 @@ class CComModule : public _ATL_MODULE
   
  `CComModule`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ##  <a name="getclassobject"></a>CComModule::GetClassObject  
@@ -183,7 +167,7 @@ HINSTANCE GetModuleInstance() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Le `HINSTANCE` identifier ce module.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Retourne le [m_hInst](#m_hinst) membre de données.  
   
 ##  <a name="getresourceinstance"></a>CComModule::GetResourceInstance  
@@ -196,7 +180,7 @@ HINSTANCE GetResourceInstance() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Élément `HINSTANCE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Retourne le [m_hInstResource](#m_hinstresource) membre de données.  
   
 ##  <a name="gettypelibinstance"></a>CComModule::GetTypeLibInstance  
@@ -209,7 +193,7 @@ HINSTANCE GetTypeLibInstance() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Élément `HINSTANCE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Retourne le [m_hInstTypeLib](#m_hinsttypelib) membre de données.  
   
 ##  <a name="init"></a>CComModule::Init  
@@ -235,7 +219,7 @@ HRESULT Init(
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur HRESULT standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Initialise tous les membres de données.  
   
 ##  <a name="m_csobjmap"></a>CComModule::m_csObjMap  
@@ -255,7 +239,7 @@ CRITICAL_SECTION m_csObjMap;
 CRITICAL_SECTION m_csTypeInfoHolder;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Permet de garantir un accès synchronisé à la bibliothèque de types.  
   
 ##  <a name="m_cswindowcreate"></a>CComModule::m_csWindowCreate  
@@ -265,7 +249,7 @@ CRITICAL_SECTION m_csTypeInfoHolder;
 CRITICAL_SECTION m_csWindowCreate;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Permet de garantir un accès synchronisé aux informations de classe de fenêtre et aux données statiques utilisées lors de la création de fenêtre.  
   
 ##  <a name="m_hinst"></a>CComModule::m_hInst  
@@ -287,7 +271,7 @@ HINSTANCE m_hInst;
 HINSTANCE m_hInstResource;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, contient le handle de l’instance de module.  
   
  Le [Init](#init) jeux de méthode `m_hInstResource` pour le handle passé à **DLLMain** ou `WinMain`. Vous pouvez définir explicitement `m_hInstResource` le handle vers une ressource.  
@@ -301,7 +285,7 @@ HINSTANCE m_hInstResource;
 HINSTANCE m_hInstTypeLib;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, contient le handle de l’instance de module.  
   
  Le [Init](#init) jeux de méthode `m_hInstTypeLib` pour le handle passé à **DLLMain** ou `WinMain`. Vous pouvez définir explicitement `m_hInstTypeLib` le handle vers une bibliothèque de types.  
@@ -315,7 +299,7 @@ HINSTANCE m_hInstTypeLib;
 _ATL_OBJMAP_ENTRY* m_pObjMap;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pointe vers la table des objets gérés par l’instance de module.  
   
 ##  <a name="registerclasshelper"></a>CComModule::RegisterClassHelper  
@@ -349,7 +333,7 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur HRESULT standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Passe à l’inscription de classe standard d’un objet dans le Registre système.  
   
  Le [UpdateRegistryClass](#updateregistryclass) les appels de méthode `RegisterClassHelper`.  
@@ -363,10 +347,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
   
 ### <a name="parameters"></a>Paramètres  
  `dwClsContext`  
- [in] Spécifie le contexte dans lequel l’objet de classe doit être exécutée. Les valeurs possibles sont **CLSCTX_INPROC_SERVER**, **CLSCTX_INPROC_HANDLER**, ou **CLSCTX_LOCAL_SERVER**. Pour obtenir une description de ces valeurs, consultez [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Spécifie le contexte dans lequel l’objet de classe doit être exécutée. Les valeurs possibles sont **CLSCTX_INPROC_SERVER**, **CLSCTX_INPROC_HANDLER**, ou **CLSCTX_LOCAL_SERVER**. Pour obtenir une description de ces valeurs, consultez [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) dans le Kit de développement logiciel Windows.  
   
  `dwFlags`  
- [in] Détermine les types de connexion à l’objet de classe. Les valeurs possibles sont **REGCLS_SINGLEUSE**, **REGCLS_MULTIPLEUSE**, ou **REGCLS_MULTI_SEPARATE**. Pour obtenir une description de ces valeurs, consultez [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Détermine les types de connexion à l’objet de classe. Les valeurs possibles sont **REGCLS_SINGLEUSE**, **REGCLS_MULTIPLEUSE**, ou **REGCLS_MULTI_SEPARATE**. Pour obtenir une description de ces valeurs, consultez [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) dans le Kit de développement logiciel Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur HRESULT standard.  
@@ -393,7 +377,7 @@ HRESULT RegisterServer(
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur HRESULT standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Selon le `pCLSID` paramètre, met à jour le Registre système pour un objet de classe unique ou pour tous les objets du mappage d’objets.  
   
  Si `bRegTypeLib` est **TRUE**, les informations de bibliothèque de type seront également mise à jour.  
@@ -417,7 +401,7 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur HRESULT standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ajoute des informations sur une bibliothèque de types dans le Registre système.  
   
  Si l’instance de module contient plusieurs bibliothèques de types, utilisez la deuxième version de cette méthode pour spécifier le type de bibliothèque doit être utilisé.  
@@ -432,7 +416,7 @@ HRESULT RevokeClassObjects() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur HRESULT standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Supprime l’objet de classe. Cette méthode est uniquement disponible pour les fichiers exe.  
   
 ##  <a name="term"></a>CComModule::Term  
@@ -442,7 +426,7 @@ HRESULT RevokeClassObjects() throw();
 void Term() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère tous les membres de données.  
   
 ##  <a name="unregisterclasshelper"></a>CComModule::UnregisterClassHelper  
@@ -468,7 +452,7 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur HRESULT standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Supprime l’inscription de classe standard d’un objet à partir du Registre système.  
   
  Le [UpdateRegistryClass](#updateregistryclass) les appels de méthode `UnregisterClassHelper`.  
@@ -544,7 +528,7 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur HRESULT standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si `bRegister` est **TRUE**, cette méthode passe à l’inscription de classe standard de l’objet dans le Registre système.  
   
  Si `bRegister` est **FALSE**, il supprime l’inscription de l’objet.  
@@ -642,4 +626,3 @@ virtual HRESULT UpdateRegistryFromResourceS(
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

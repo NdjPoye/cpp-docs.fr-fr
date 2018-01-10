@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a028c2458b0a5085a1f46bf31f377e6ed9e4d346
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2dce8e219c2a64ecc6e9b307533ecc0ea11d2792
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlfilemapping-class"></a>Classe de CAtlFileMapping
 Cette classe représente un fichier mappé en mémoire, l’ajout d’un opérateur de conversion pour les méthodes de [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).  
@@ -48,7 +49,7 @@ class CAtlFileMapping : public CAtlFileMappingBase
 |----------|-----------------|  
 |[CAtlFileMapping::operator T *](#operator_t_star)|Permet la conversion implicite de `CAtlFileMapping` objets `T`  **\*** .|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe ajoute un opérateur de conversion unique pour permettre une conversion implicite de `CAtlFileMapping` objets `T`  **\*** . D’autres membres sont fournis par la classe de base [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -56,7 +57,7 @@ class CAtlFileMapping : public CAtlFileMappingBase
   
  `CAtlFileMapping`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlfile.h  
   
 ##  <a name="operator_t_star"></a>CAtlFileMapping::operator T *  
@@ -69,7 +70,7 @@ operator T*() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un `T`  **\***  pointeur au début du fichier mappé en mémoire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appels [CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata) et réinterprète le pointeur retourné comme un `T`  **\***  où *T* est le type utilisé comme modèle paramètre de cette classe.  
   
 ## <a name="see-also"></a>Voir aussi  

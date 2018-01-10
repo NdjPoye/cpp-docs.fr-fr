@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 806efafab617dfcf9779deceff79dba64e8408c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6fc53310c492c424c3d97aecec965ba03553dd8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interface"></a>__interface
 **Section spécifique à Microsoft**  
@@ -46,7 +47,7 @@ modifier
  __interface interface-name {interface-definition};  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  C++ [classe](../cpp/class-cpp.md) ou [struct](../cpp/struct-cpp.md) pourrait être implémenté avec ces règles, mais `__interface` les applique.  
   
  Par exemple, voici un exemple de définition d'interface :  

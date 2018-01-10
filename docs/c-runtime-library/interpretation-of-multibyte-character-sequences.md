@@ -15,18 +15,19 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ca454b0087bd9cc1b8ded6f7b2d4ccb201373dc4
-ms.sourcegitcommit: 2a5d0e9e6829150cbc22c6de3395ec13008e3266
+ms.workload: cplusplus
+ms.openlocfilehash: 90f7f9431ddfc2d21a29b35643ee3dff3e34cd6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interpretation-of-multibyte-character-sequences"></a>Interprétation des séquences de caractères multioctets
 La plupart des routines de caractères multioctets dans la bibliothèque Runtime Microsoft reconnaissent les séquences de caractères multioctets relatives à une page de codes multioctets. La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe `_l` utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent à la place les paramètres régionaux transmis.  
   
 ### <a name="locale-dependent-multibyte-routines"></a>Routines multioctets dépendant des paramètres régionaux  
   
-|Routine|Utilisation|  
+|Routine|Utilisez|  
 |-------------|---------|  
 |[_mbclen, mblen, _mblen_l](../c-runtime-library/reference/mbclen-mblen-mblen-l.md)|Valider et retourner le nombre d'octets dans un caractère multioctet|  
 |[strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)|Pour les chaînes de caractères multioctets : valider chaque caractère de la chaîne ; retourner la longueur de la chaîne. Pour les chaînes de caractères larges : retourne la longueur de chaîne.|  

@@ -43,11 +43,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05367f833fcb10a994bc165ff7c2e0f31b8bdce0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: acba6047239ee9c63e05666a4bdc685cf40527c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead, _ismbblead_l
 Teste un caractère pour déterminer s’il s’agit d’un octet de tête d’un caractère multioctet.  
@@ -85,7 +86,7 @@ int _ismbblead_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_istlead`|Retourne toujours la valeur false|`_ismbblead`|Retourne toujours la valeur false|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|En-tête facultatif|  
 |-------------|---------------------|---------------------|  

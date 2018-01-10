@@ -33,11 +33,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 67f546afa3059508787c7d3a5295d2b85651f125
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8eff0ac1a97c9a1d48b82601eb0d6dc0bb8bed0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getdoserrno"></a>_get_doserrno
 Obtient la valeur d'erreur retournée par le système d'exploitation avant qu'elle ne soit traduite en valeur `errno`.  
@@ -55,7 +56,7 @@ errno_t _get_doserrno(
  Pointeur vers un entier à remplir avec la valeur actuelle de la macro globale `_doserrno`.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Si `_get_doserrno` réussit, retourne zéro ; en cas d'échec, retourne un code d'erreur. Si `pValue` a la valeur `NULL`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, cette fonction affecte la valeur `errno` à `EINVAL` et retourne `EINVAL`.  
+ Si `_get_doserrno` réussit, retourne zéro ; en cas d'échec, retourne un code d'erreur. Si `pValue` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, cette fonction affecte la valeur `errno` à `EINVAL` et retourne `EINVAL`.  
   
 ## <a name="remarks"></a>Notes  
  La macro globale `_doserrno` prend la valeur zéro pendant l'initialisation CRT, avant le début de l'exécution du processus. Elle prend la valeur d'erreur du système d'exploitation retournée par tout appel de fonction au niveau système qui retourne une erreur de système d'exploitation, et elle n'est jamais réinitialisée à zéro pendant l'exécution. Quand vous écrivez du code pour vérifier la valeur d’erreur retournée par une fonction, effacez toujours `_doserrno` en utilisant [_set_doserrno](../../c-runtime-library/reference/set-doserrno.md) avant l’appel de fonction. Comme un autre appel de fonction peut remplacer `_doserrno`, vérifiez la valeur en utilisant `_get_doserrno` immédiatement après l'appel de fonction.  
@@ -64,13 +65,13 @@ errno_t _get_doserrno(
   
  Les valeurs possibles de `_doserrno` sont définies dans \<errno.h>.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|En-tête facultatif|  
 |-------------|---------------------|---------------------|  
 |`_get_doserrno`|\<stdlib.h>, \<cstdlib> (C++)|\<errno.h>, \<cerrno> (C++)|  
   
- `_get_doserrno` est une extension Microsoft. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ `_get_doserrno` est une extension Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [_set_doserrno](../../c-runtime-library/reference/set-doserrno.md)   

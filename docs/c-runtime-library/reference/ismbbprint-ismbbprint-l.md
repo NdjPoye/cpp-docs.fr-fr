@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,38 +28,23 @@ f1_keywords:
 - _ismbbprint
 - ismbbprint
 - ismbbprint_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ismbbprint_l function
 - ismbbprint function
 - _ismbbprint function
 - _ismbbprint_l function
 ms.assetid: d08a061c-18a8-48f2-a75d-bff4870aec9d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 09187e54126553331a6100fa11c98a730434db12
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2af7888be70a95aed35190b942e55a8a8247abba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbprint-ismbbprintl"></a>_ismbbprint, _ismbbprint_l
 Détermine si un caractère multioctet spécifié est un caractère d’impression.  
@@ -91,16 +75,16 @@ int _ismbbprint_l(
 isprint || _ismbbkprint  
 ```  
   
- est différente de zéro pour `c`, ou 0 dans le cas contraire. `_ismbbprint` utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. `_ismbbprint_l` est identique, excepté qu’il utilise à la place les paramètres régionaux. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ est différente de zéro pour `c`, ou 0 dans le cas contraire. `_ismbbprint` utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. `_ismbbprint_l` est identique, excepté qu’il utilise à la place les paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_ismbbprint`|\<mbctype.h>|  
 |`_ismbbprint_l`|\<mbctype.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classification d’octet](../../c-runtime-library/byte-classification.md)   

@@ -25,11 +25,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a888f46912aaa5292e9bcf1f83bc3e6926f73d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9820836096cb173cae54de496b6d10de8fe48a48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vprintf-functions"></a>Fonctions vprintf
 Chacune de ces fonctions `vprintf` prend un pointeur désignant une liste d’arguments, puis met en forme et écrit les données fournies dans une destination particulière. Les fonctions diffèrent dans la validation des paramètres effectuée, l’utilisation de chaînes à caractères larges ou sur un octet, la destination de sortie et la prise en charge de la spécification de l’ordre dans lequel les paramètres sont utilisés dans la chaîne de format.  
@@ -43,7 +44,7 @@ Chacune de ces fonctions `vprintf` prend un pointeur désignant une liste d’ar
 |[_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l](../c-runtime-library/reference/vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)|[vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|  
 |[_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|[_vsnprintf, _vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les fonctions `vprintf` sont semblables à leurs fonctions équivalentes, comme indiqué dans le tableau suivant. Toutefois, chaque fonction `vprintf` accepte un pointeur vers une liste d’arguments, alors que chacune de ces fonctions équivalentes accepte une liste d’arguments.  
   
  Ces fonctions mettent en forme les données pour la sortie vers les destinations, comme suit.  
@@ -73,7 +74,7 @@ Chacune de ces fonctions `vprintf` prend un pointeur désignant une liste d’ar
 |`_vscprintf`|[_vscprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher la valeur null.|Non|  
 |`_vscwprintf`|[_vscwprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher la valeur null.|Non|  
 |`_vsnprintf`|[_snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher la valeur null.|Non|  
-|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher la valeur null.|non|  
+|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher la valeur null.|Non|  
   
  L’argument `argptr` est de type `va_list`, qui est défini dans les VARARGS.H et STDARG.H. La variable `argptr` doit être initialisée par **va_start** et peut être réinitialisée par les appels ultérieurs à `va_arg` ; `argptr` pointe ensuite vers le début d’une liste d’arguments qui sont convertis et transmis pour la sortie en fonction des spécifications correspondantes dans l’argument *format*. *format* a la même forme et la même fonction que l’argument *format* pour [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md). Aucune de ces fonctions n’appelle `va_end`. Pour obtenir une description plus complète de chaque fonction `vprintf`, consultez la description de sa fonction équivalente, comme dans le tableau précédent.  
   

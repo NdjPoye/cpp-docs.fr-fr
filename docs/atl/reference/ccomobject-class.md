@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,19 @@ f1_keywords:
 - ATLCOM/ATL::CComObject::CreateInstance
 - ATLCOM/ATL::CComObject::QueryInterface
 - ATLCOM/ATL::CComObject::Release
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComObject class
+dev_langs: C++
+helpviewer_keywords: CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 1fbf6a09b4085df4ac6918d261e2b9d625c98c08
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 27da00e09ca88cc06b8bafed8f8601dac756fd34
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomobject-class"></a>Classe de CComObject
 Cette classe implémente **IUnknown** pour un objet brutes et non agrégée.  
@@ -78,17 +61,17 @@ class CComObject : public Base
 |[CComObject::QueryInterface](#queryinterface)|Récupère un pointeur vers l'interface demandée.|  
 |[CComObject::Release](#release)|Décrémente le décompte de références sur l’objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CComObject`implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour un objet brutes et non agrégée. Toutefois, les appels à `QueryInterface`, `AddRef`, et **version** sont déléguées à `CComObjectRootEx`.  
   
  Pour plus d’informations sur l’utilisation de `CComObject`, consultez l’article [notions de base des objets COM ATL](../../atl/fundamentals-of-atl-com-objects.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Base`  
   
  `CComObject`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
   
 ##  <a name="addref"></a>CComObject::AddRef  
@@ -124,12 +107,12 @@ CComObject(void* = NULL);
 CComObject();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère toutes les ressources attribuées, les appels [FinalRelease](ccomobjectrootex-class.md#finalrelease), et décrémente le module nombre de verrous.  
 
   
 ##  <a name="createinstance"></a>CComObject::CreateInstance  
- Cette fonction statique vous permet de créer un nouveau **CComObject** `Base` **>** objet, sans la surcharge de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Cette fonction statique vous permet de créer un nouveau **CComObject <** `Base`  **>**  objet, sans la surcharge de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
@@ -137,20 +120,20 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
 ### <a name="parameters"></a>Paramètres  
  `pp`  
- [out] Un pointeur vers un **CComObject** `Base` **>** pointeur. Si `CreateInstance` échoue, `pp` a la valeur **NULL**.  
+ [out] Un pointeur vers un **CComObject <** `Base`  **>**  pointeur. Si `CreateInstance` échoue, `pp` a la valeur **NULL**.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’objet retourné est un décompte de références de zéro, appelez `AddRef` immédiatement, puis utilisez **version** pour libérer la référence sur le pointeur d’objet lorsque vous avez terminé.  
   
  Si vous n’avez besoin d’imposent pas accès à l’objet, mais que vous souhaitez toujours créer un nouvel objet sans subir la surcharge de `CoCreateInstance`, utilisez [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) à la place.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_COM #38](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#38](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
   
- [!code-cpp[NVC_ATL_COM #39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_COM#39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
   
 ##  <a name="queryinterface"></a>CComObject::QueryInterface  
  Récupère un pointeur vers l'interface demandée.  
@@ -190,4 +173,3 @@ STDMETHOD_(ULONG, Release)();
  [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
  [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

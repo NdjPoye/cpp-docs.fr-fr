@@ -17,11 +17,12 @@ ms.assetid: 8747fc0c-701a-4796-bb4d-818ab4465cca
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 36c1baec22ce0804b4271718dd9495c4213941b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 20715b48413a705aa2338e7e37538171e4141cad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="natvis-add-natvis-to-pdb"></a>/ NATVIS (ajouter Natvis au fichier PDB)
   
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
 *filename*  
 Un fichier Natvis à ajouter au fichier PDB. Il incorpore les visualisations du débogueur dans le fichier .natvis dans le fichier PDB.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 L’option /NATVIS incorpore les visualisations du débogueur définies dans le fichier Natvis *nom de fichier* dans le fichier PDB généré par un lien. Ainsi, le débogueur pour afficher les visualisations indépendamment le fichier .natvis. Vous pouvez utiliser plusieurs options /NATVIS à incorporer plusieurs fichiers Natvis dans le fichier PDB généré.  
   

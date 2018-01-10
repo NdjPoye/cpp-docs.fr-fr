@@ -22,18 +22,19 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a8bbb816ebedcb82b198a70532fdacb80b74bf8a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8fcb837bcba4f03778f3de3eae3e1ffc167c3509
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="noassembly-create-a-msil-module"></a>/NOASSEMBLY (Créer un module MSIL)
 ```  
 /NOASSEMBLY  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’option /NOASSEMBLY indique à l’éditeur de liens pour créer une image pour le fichier de sortie actuel sans un assembly .NET Framework. Un fichier de sortie MSIL sans un manifeste d’assembly est appelé un module.  
   
  Par défaut, un assembly est créé. Vous pouvez également utiliser le [/LN (créer un Module MSIL)](../../build/reference/ln-create-msil-module.md) option du compilateur pour créer un module.  

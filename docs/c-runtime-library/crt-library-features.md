@@ -28,11 +28,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed41372637e9ee68db087fbe0ad532d9e6bb4935
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50ca3fd6d60e7fecf84c81d14c859f5b2f51e120
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crt-library-features"></a>Fonctionnalités de la bibliothèque CRT
 Cette rubrique décrit les différents fichiers .lib qui composent les bibliothèques Runtime C, ainsi que les options de compilateur et les directives de préprocesseur qui y sont associées.  
@@ -46,7 +47,7 @@ Cette rubrique décrit les différents fichiers .lib qui composent les biblioth�
   
 |Bibliothèque|DLL associée|Caractéristiques|Option|Directives de préprocesseur|  
 |-------------|--------------------|---------------------|------------|-----------------------------|  
-|libucrt.lib|Aucune|Lie de manière statique l’UCRT à votre code.|**/MT**|_MT|  
+|libucrt.lib|Aucun.|Lie de manière statique l’UCRT à votre code.|**/MT**|_MT|  
 |libucrtd.lib|Aucune|Version Debug de l’UCRT pour la liaison statique. Non redistribuable.|**/MTd**|_DEBUG, _MT|  
 |ucrt.lib|ucrtbase.dll|Bibliothèque d’importation de DLL pour l’UCRT.|**/MD**|_MT, _DLL|  
 |ucrtd.lib|ucrtbased.dll|Bibliothèque d’importation de DLL pour la version Debug de l’UCRT. Non redistribuable.|**/MDd**|_DEBUG, _MT, _DLL|  
@@ -57,8 +58,8 @@ Cette rubrique décrit les différents fichiers .lib qui composent les biblioth�
   
 |Bibliothèque|DLL associée|Caractéristiques|Option|Directives de préprocesseur|  
 |-------------|--------------------|---------------------|------------|-----------------------------|  
-|libvcruntime.lib|Aucune|Liée de manière statique à votre code.|**/MT**|_MT|  
-|libvcruntimed.lib|Aucune|Version Debug pour la liaison statique. Non redistribuable.|**/MTd**|_MT, _DEBUG|  
+|libvcruntime.lib|Aucun.|Liée de manière statique à votre code.|**/MT**|_MT|  
+|libvcruntimed.lib|Aucun.|Version Debug pour la liaison statique. Non redistribuable.|**/MTd**|_MT, _DEBUG|  
 |vcruntime.lib|vcruntime\<version>.dll|Bibliothèque d’importation de DLL pour vcruntime.|**/MD**|_MT, _DLL|  
 |vcruntimed.lib|vcruntime\<version>d.dll|Bibliothèque d’importation de DLL pour le vcruntime de débogage. Non redistribuable.|**/MDd**|_DEBUG, _MT, _DLL|  
   

@@ -28,11 +28,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89c8c1d67a8273b542c088783e4b5121038c9fc2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1691d1f90201b25cc53cd07e80626e98c447e66b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC : utilisation de classes de bases de données sans document ni vue
 Parfois, vous pouvez utiliser l’architecture document/vue de l’infrastructure dans vos applications de base de données. Cette rubrique explique :  
@@ -59,7 +62,7 @@ Parfois, vous pouvez utiliser l’architecture document/vue de l’infrastructur
 ##  <a name="_core_appwizard_options_for_documents_and_views"></a>Options de l’Assistant Application pour les Documents et vues  
  L’Assistant Application MFC a plusieurs options **sélectionnez prise en charge de la base de données**, qui sont répertoriées dans le tableau suivant. Si vous utilisez l’Assistant Application MFC pour créer une application, toutes ces options produisent des applications avec des documents et vues. Certaines options fournissent des documents et des vues qui omettent la fonction de document superflue. Pour plus d’informations, consultez [prise en charge de la base de données, Assistant Application MFC](../mfc/reference/database-support-mfc-application-wizard.md).  
   
-|Option|Afficher|Document|  
+|Option|Vue|Document|  
 |------------|----------|--------------|  
 |**Aucun**|Dérivée de `CView`.|Ne fournit aucune prise en charge de la base de données. Il s'agit de l'option par défaut.<br /><br /> Si vous sélectionnez le **prise en charge d’architecture Document/vue** option sur le [Type d’Application, Assistant Application MFC](../mfc/reference/application-type-mfc-application-wizard.md) page, vous obtenez prise en charge complète pour le document, y compris la sérialisation et `New`,  **Ouvrez**, **enregistrer**, et **enregistrer en tant que** des commandes sur le **fichier** menu. Consultez [Applications sans Document](#_core_applications_with_no_document).|  
 |**Fichiers d’en-tête**|Dérivée de `CView`.|Fournit le niveau de prise en charge de la base de données de base pour votre application.<br /><br /> Inclut Afxdb.h. Ajoute des bibliothèques de liens, mais ne crée pas de classes spécifiques à la base de données. Vous pouvez créer des jeux d’enregistrements ultérieurement et les utiliser pour examiner et mettre à jour des enregistrements.|  

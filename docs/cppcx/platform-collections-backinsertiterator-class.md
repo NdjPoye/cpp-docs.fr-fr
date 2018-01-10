@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 197c0c8dc7de6dca562d961635706a51fff992c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 057aebfcba1936bc2a59fbb8b9fb51bff3197b6f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator, classe
 Représente un itérateur qui ne remplace pas les éléments mais les insère dans le back end d'une collection séquentielle.  
@@ -36,7 +37,7 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
  `T`  
  Type d'élément de la collection active.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La classe BackInsertIterator implémente les règles requises par la [back_insert_iterator Class](../standard-library/back-insert-iterator-class.md).  
   
 ### <a name="members"></a>Membres  
@@ -58,7 +59,7 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `BackInsertIterator`  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** collection.h  
   
  **Espace de noms :** Platform::Collections  
@@ -79,7 +80,7 @@ explicit BackInsertIterator(
  `v`  
  Un IVector\<T > objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un `BackInsertIterator` insère des éléments après le dernier élément de l'objet spécifié par le paramètre `v`.  
  
 ## <a name="operator-assign"></a>BackInsertIterator::operator = (opérateur)
@@ -110,7 +111,7 @@ BackInsertIterator& operator*();
 ### <a name="return-value"></a>Valeur de retour  
  Référence au BackInsertIterator actif.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cet opérateur retourne une référence au BackInsertIterator actif, et non à un élément dans la collection actuelle.  
  
 ## <a name="operator-increment"></a>BackInsertIterator::operator ++ (opérateur)
@@ -128,7 +129,7 @@ BackInsertIterator operator++(int);
 ### <a name="return-value"></a>Valeur de retour  
  Référence au BackInsertIterator actif.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par conception, le premier exemple de syntaxe préincrémente le BackInsertIterator actuel et la deuxième syntaxe postincrémente le BackInsertIterator actuel. Le type `int` dans la deuxième syntaxe n'indique pas un opérande entier réel mais une post-incrémentation.  
   
  Toutefois, cet opérateur ne modifie pas réellement le BackInsertIterator. Au lieu de cela, l'opérateur retourne une référence à l'itérateur actuel non modifié. Il s’agit du même comportement que [opérateur *](#dereference-operator).  

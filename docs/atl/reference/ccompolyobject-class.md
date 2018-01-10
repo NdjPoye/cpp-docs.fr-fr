@@ -28,11 +28,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 49945127d726c1a83ed01f70dee2190622a4c68d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3518fd5936c4871e99eaf597f12fb3ab7cc8aff6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject (classe)
 Cette classe implémente **IUnknown** pour un objet regroupé ou.  
@@ -75,7 +76,7 @@ class CComPolyObject : public IUnknown,
 |----------|-----------------|  
 |[CComPolyObject::m_contained](#m_contained)|Délégués **IUnknown** appels à inconnu externe si l’objet est agrégée, ou à la **IUnknown** de l’objet si l’objet n’est pas agrégée.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CComPolyObject`implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour un objet regroupé ou.  
   
  Lorsqu’une instance de `CComPolyObject` est créé, la valeur de l’élément externe inconnu est activée. S’il s’agit **NULL**, **IUnknown** est implémenté pour un objet brutes et non agrégée. Si l’inconnu extérieur n’est pas **NULL**, **IUnknown** est implémenté pour un objet.  
@@ -97,7 +98,7 @@ class CComPolyObject : public IUnknown,
   
  `CComPolyObject`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
   
 ##  <a name="addref"></a>CComPolyObject::AddRef  
@@ -121,7 +122,7 @@ CComPolyObject(void* pv);
  `pv`  
  [in] Un pointeur vers l’inconnu extérieur si l’objet doit être agrégée, ou **NULL** si l’objet si l’objet n’est pas agrégée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Initialise le `CComContainedObject` membre de données, [m_contained](#m_contained)et incrémente le nombre de verrous du module.  
   
  Le décrémente destructeur le module nombre de verrous.  
@@ -133,7 +134,7 @@ CComPolyObject(void* pv);
 ~CComPolyObject();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère toutes les ressources attribuées, les appels [FinalRelease](#finalrelease), et décrémente le module nombre de verrous.  
   
 ##  <a name="createinstance"></a>CComPolyObject::CreateInstance  
@@ -152,7 +153,7 @@ static HRESULT WINAPI CreateInstance(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’objet retourné est un décompte de références de zéro, appelez `AddRef` immédiatement, puis utilisez **version** pour libérer la référence sur le pointeur d’objet lorsque vous avez terminé.  
   
  Si vous ne devez un accès direct à l’objet, mais que vous souhaitez toujours créer un nouvel objet sans subir la surcharge de `CoCreateInstance`, utilisez [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) à la place.  
@@ -185,7 +186,7 @@ CComContainedObject<contained> m_contained;
  `contained`  
  [in] Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), ainsi que d’autres interfaces souhaitées prendre en charge sur l’objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  **IUnknown** appelle via `m_contained` sont déléguées à inconnu externe si l’objet est agrégée, ou à la **IUnknown** de cet objet si l’objet n’est pas agrégée.  
   
 ##  <a name="queryinterface"></a>CComPolyObject::QueryInterface  
@@ -213,7 +214,7 @@ HRESULT QueryInterface(Q** pp);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour un objet, si l’interface demandée est **IUnknown**, `QueryInterface` retourne un pointeur vers l’agrégées propre à l’objet **IUnknown** et incrémente le décompte de références. Sinon, cette méthode recherche l’interface via la `CComContainedObject` membre de données, [m_contained](#m_contained).  
   
 ##  <a name="release"></a>CComPolyObject::Release  

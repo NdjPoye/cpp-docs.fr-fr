@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __stdcall_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- __stdcall keyword [C++]
+f1_keywords: __stdcall_cpp
+dev_langs: C++
+helpviewer_keywords: __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6c4998d3f53a76246545a6290e735f52206d70ad
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ec45f93331178f62799fb826ff31dfb6e66c3337
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stdcall"></a>__stdcall
 **Section spécifique à Microsoft**  
@@ -38,7 +34,7 @@ ms.lasthandoff: 09/25/2017
 return-type __stdcall function-name[(argument-list)]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La liste suivante illustre l’implémentation de cette convention d’appel.  
   
 |Élément|Implémentation|  
@@ -47,7 +43,7 @@ return-type __stdcall function-name[(argument-list)]
 |Convention de passage d'argument|Par valeur, à moins qu'un type pointeur ou référence soit passé.|  
 |Responsabilité de la maintenance de la pile|La fonction appelée enlève ses propres arguments de la pile.|  
 |Convention de décoration de nom|Un trait de soulignement (_) est ajouté en préfixe au nom. Le nom est suivi de l'arobase (@), suivi du nombre d'octets (au format décimal) dans la liste d'arguments. Par conséquent, la fonction déclarée comme `int func( int a, double b )` est décorée comme suit : `_func@12`|  
-|Convention de conversion de casse|Aucune|  
+|Convention de conversion de casse|Aucun.|  
   
  Le [GZ](../build/reference/gd-gr-gv-gz-calling-convention.md) option du compilateur spécifie `__stdcall` pour toutes les fonctions ne sont pas explicitement déclarées avec une autre convention d’appel.  
   
@@ -55,7 +51,7 @@ return-type __stdcall function-name[(argument-list)]
   
  Pour les processeurs ARM et x64, `__stdcall` est accepté et ignoré par le compilateur ; pour les architectures ARM et x64, par convention, les quatre premiers arguments sont passés dans les registres dans la mesure du possible et les arguments suivants sont passés sur la pile.  
   
- Pour les fonctions de classe non statiques, si la fonction est définie hors ligne, il n'est pas nécessaire de spécifier le modificateur de convention d'appel dans la définition hors ligne. En d'autres termes, pour les méthodes membres non statiques de classe, la convention d'appel spécifiée dans le cadre de la déclaration est utilisée par défaut au stade de la définition. Étant donné cette définition de classe,  
+ Pour les fonctions de classe non statiques, si la fonction est définie hors ligne, il n’est pas nécessaire de spécifier le modificateur de convention d’appel dans la définition hors ligne. En d’autres termes, pour les méthodes membres non statiques de classe, la convention d’appel spécifiée dans le cadre de la déclaration est utilisée par défaut au stade de la définition. Étant donné cette définition de classe,  
   
 ```cpp  
 struct CMyClass {  

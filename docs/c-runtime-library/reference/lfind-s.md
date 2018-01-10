@@ -37,11 +37,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a49c732be3c1f378340d00c414acee91e6e62978
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8bff33c66ebe8bdb2b5eb497aad2e3a11bc04a76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lfinds"></a>_lfind_s
 Effectue une recherche linéaire portant sur la clé spécifiée. Version de [_lfind](../../c-runtime-library/reference/lfind.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -97,13 +98,13 @@ void *_lfind_s(
   
  `_lfind_s` est semblable à `_lfind`, à ceci près que le pointeur `context` est ajouté aux arguments de la fonction de comparaison et à la liste des paramètres de la fonction. Le pointeur `context` peut être utile si la structure de données explorée fait partie d’un objet et que la fonction `compare` doit accéder aux membres de l’objet. La fonction `compare` peut effectuer un cast du pointeur void vers le type d’objet approprié et accéder aux membres de cet objet. L’ajout du paramètre `context` sécurise `_lfind_s`, car un contexte supplémentaire peut être utilisé pour éviter les bogues de réentrance associés à l’utilisation de variables statiques et rendre les données accessibles à la fonction `compare`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_lfind_s`|\<search.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

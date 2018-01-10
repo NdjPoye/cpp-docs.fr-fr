@@ -1,59 +1,61 @@
 ---
-title: "Implementing Property Pages | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IPropertyPage class"
-  - "IPropertyPage2 class"
-  - "pages de propriétés, implémenter"
+title: "Implémentation des Pages de propriétés | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- IPropertyPage2 class
+- IPropertyPage class
+- property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ac80bdd9e38d14b53aea7b691d480272cce66e7b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Implementing Property Pages
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les pages de propriétés sont des objets COM qui implémentent `IPropertyPage` ou l'interface d' **IPropertyPage2** .  ATL fournit la prise en charge d'implémenter des pages de propriétés via [Assistant Page de propriétés ATL](../atl/reference/atl-property-page-wizard.md) dans [ajoutez la boîte de dialogue de classe](../ide/add-class-dialog-box.md).  
+# <a name="implementing-property-pages"></a>Implémentation des Pages de propriétés
+Pages de propriétés sont des objets COM qui implémentent la `IPropertyPage` ou **IPropertyPage2** interface. ATL fournit la prise en charge pour l’implémentation des pages de propriétés par le biais du [Assistant Page de propriétés ATL](../atl/reference/atl-property-page-wizard.md) dans les [boîte de dialogue Ajouter une classe](../ide/add-class-dialog-box.md).  
   
- Pour créer une page de propriétés à l'aide de ATL :  
+ Pour créer une page de propriétés ATL à l’aide de :  
   
--   Créez ou ouvrez un projet serveur de \(DLL\) de bibliothèque de liens dynamiques ATL.  
+-   Créez ou ouvrez un projet de serveur ATL Dynamic-link library (DLL).  
   
--   Ouvrez [ajoutez la boîte de dialogue de classe](../ide/add-class-dialog-box.md) et sélectionnez **ATL Property Page**.  
+-   Ouvrez le [boîte de dialogue Ajouter une classe](../ide/add-class-dialog-box.md) et sélectionnez **Page de propriétés ATL**.  
   
--   Assurez \-vous que votre page de propriétés est thread cloisonné \(puisqu'il possède une interface utilisateur\).  
+-   Assurez-vous que votre page de propriétés est cloisonnés (puisqu’elle a une interface utilisateur).  
   
--   Définissez le titre, la description \(chaîne de documents\), et le fichier d'aide à associer à votre page.  
+-   Définir le titre, la description (Doc String) et le fichier d’aide à associer à votre page.  
   
--   Ajoutez des contrôles à la ressource de boîte de dialogue générée pour servir d'interface utilisateur de votre page de propriétés.  
+-   Ajouter des contrôles à la ressource de boîte de dialogue générée en tant que l’interface utilisateur de votre page de propriétés.  
   
--   Répondez aux modifications de l'interface utilisateur de votre page pour effectuer la validation, pour mettre à jour le site de page, ou mettre à jour les objets associés à votre page.  En particulier, appelez [IPropertyPageImpl::SetDirty](../Topic/IPropertyPageImpl::SetDirty.md) lorsque l'utilisateur effectue des modifications à la page de propriétés.  
+-   Répondre aux modifications dans l’interface utilisateur de votre page pour effectuer la validation, de mettre à jour le site de la page ou de mettre à jour les objets associés à votre page. En particulier, appelez [IPropertyPageImpl::SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty) lorsque l’utilisateur apporte des modifications à la page de propriétés.  
   
--   Substituez éventuellement les méthodes d' `IPropertyPageImpl` à l'aide de les instructions ci\-dessous.  
+-   Si vous le souhaitez remplacer le `IPropertyPageImpl` méthodes en utilisant les instructions ci-dessous.  
   
-    |Méthode de IPropertyPageImpl|Substitution lorsque vous souhaitez…|Remarques|  
-    |----------------------------------|------------------------------------------|---------------|  
-    |[SetObjects](../Topic/IPropertyPageImpl::SetObjects.md)|Exécutez les contrôles de base de validité sur le nombre d'objets passés à votre page et les interfaces qu'ils prennent en charge.|Exécutez votre propre code avant d'appeler l'implémentation de la classe de base.  Si les objets sont définis ne sont pas conformes à vos attentes, vous devez l'échec de l'appel dès que possible.|  
-    |[Exécutez](../Topic/IPropertyPageImpl::Activate.md)|Initialisez l'interface utilisateur de votre page \(par exemple, définissez les contrôles de boîte de dialogue avec des valeurs de propriété actuelles des objets, créez les contrôles dynamiquement, ou effectuer d'autres initialisations\).|Appelez l'implémentation de la classe de base avant votre code afin que la classe de base a la possibilité de créer la fenêtre de dialogue et tous les contrôles avant d'essayer de les mettre à jour.|  
-    |[Appliquer](../Topic/IPropertyPageImpl::Apply.md)|Validez les paramètres de propriété et mettre à jour les objets.|Il n'est pas nécessaire d'appeler l'implémentation de la classe de base puisqu'il ne fait rien en dehors de la trace l'appel.|  
-    |[Mettez off](../Topic/IPropertyPageImpl::Deactivate.md)|Nettoyez les éléments liés aux fenêtres.|L'implémentation de la classe de base perd la boîte de dialogue qui représente la page de propriétés.  Si vous devez nettoyer avant la boîte de dialogue soit perdue, vous devez ajouter votre code avant d'appeler la classe de base.|  
+    |Méthode IPropertyPageImpl|Remplacer lorsque vous souhaitez...|Notes|  
+    |------------------------------|----------------------------------|-----------|  
+    |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Effectuer les vérifications de validité de base sur le nombre d’objets passés à votre page et les interfaces prises en charge.|Exécutez votre propre code avant d’appeler l’implémentation de classe de base. Si les objets en cours de définition ne sont pas conformes à vos attentes, vous devez échouer l’appel dès que possible.|  
+    |[Activer](../atl/reference/ipropertypageimpl-class.md#activate)|Initialiser l’interface utilisateur de votre page (par exemple, définir des contrôles de boîte de dialogue avec les valeurs de propriété actuelles à partir des objets, créez des contrôles dynamiquement ou effectuer d’autres initialisations).|Appeler l’implémentation de classe de base avant votre code afin que la classe de base a la possibilité de créer la fenêtre de dialogue et tous les contrôles avant d’essayer de les mettre à jour.|  
+    |[Appliquer](../atl/reference/ipropertypageimpl-class.md#apply)|Vérifiez les paramètres de propriété et mettre à jour les objets.|Il n’est pas nécessaire d’appeler l’implémentation de classe de base, car il ne fait rien en dehors de la trace de l’appel.|  
+    |[Désactiver](../atl/reference/ipropertypageimpl-class.md#deactivate)|Nettoyer les éléments relatifs à la fenêtre.|L’implémentation de classe de base détruit la boîte de dialogue représentant la page de propriétés. Si vous avez besoin nettoyer avant la destruction de la boîte de dialogue, vous devez ajouter le code avant d’appeler la classe de base.|  
   
- Pour obtenir un exemple d'implémentation de page de propriétés, consultez [exemple : implémenter une page de propriétés](../atl/example-implementing-a-property-page.md).  
+ Pour un exemple d’implémentation de page de propriété, consultez [exemple : implémentation d’une Page de propriétés](../atl/example-implementing-a-property-page.md).  
   
 > [!NOTE]
->  Si vous souhaitez héberger des contrôles ActiveX dans votre page de propriétés, vous devez modifier la dérivation de la classe générée par l'Assistant.  Remplacez **CDialogImpl\<CYourClass\>** par **CAxDialogImpl\<CYourClass\>** dans la liste de classes de base.  
+>  Si vous souhaitez héberger des contrôles ActiveX dans votre page de propriétés, vous devez modifier la dérivation de la classe générée par l’Assistant. Remplacez **CDialogImpl\<CYourClass >** avec **CAxDialogImpl\<CYourClass >** dans la liste des classes de base.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Pages de propriétés](../atl/atl-com-property-pages.md)   
- [Exemple ATLPages](../top/visual-cpp-samples.md)
+ [Exemple ATLPages](../visual-cpp-samples.md)
+

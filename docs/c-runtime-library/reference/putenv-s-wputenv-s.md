@@ -41,17 +41,18 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e3e23b45eb96faf88924323850550feaa1fbf34f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7d55736daf6652ecbde6b0d16256ccebc206bb5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putenvs-wputenvs"></a>_putenv_s, _wputenv_s
 Crée, modifie ou supprime des variables d'environnement. Il s’agit de versions de [_putenv, _wputenv](../../c-runtime-library/reference/putenv-wputenv.md), mais qui intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/en-us/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/en-us/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -81,7 +82,7 @@ errno_t _wputenv_s(
 |`name`|`value`|Valeur de retour|  
 |------------|-------------|------------------|  
 |`NULL`|any|`EINVAL`|  
-|indifférent|`NULL`|`EINVAL`|  
+|any|`NULL`|`EINVAL`|  
   
  Si l’une des conditions d’erreur se produit, ces fonctions appellent un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent `EINVAL` et définissent `errno` avec la valeur `EINVAL`.  
   
@@ -105,14 +106,14 @@ errno_t _wputenv_s(
 > [!NOTE]
 >  Les familles de fonctions `_putenv_s` et `_getenv_s` ne sont pas thread-safe. `_getenv_s` peut retourner un pointeur de chaîne pendant que `_putenv_s` modifie la chaîne, ce qui provoque par voie de conséquence des échecs aléatoires. Assurez-vous que les appels à ces fonctions sont synchronisés.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_putenv_s`|\<stdlib.h>|  
 |`_wputenv_s`|\<stdlib.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
  Pour obtenir un exemple qui montre comment utiliser `_putenv_s`, consultez [getenv_s, _wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md).  

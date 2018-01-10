@@ -1,34 +1,35 @@
 ---
-title: "CRowsetImpl::SetCommandText | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowsetImpl.SetCommandText"
-  - "CRowsetImpl::SetCommandText"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetCommandText (méthode)"
+title: CRowsetImpl::SetCommandText | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowsetImpl.SetCommandText
+- CRowsetImpl::SetCommandText
+dev_langs: C++
+helpviewer_keywords: SetCommandText method
 ms.assetid: e016d7df-c1a0-4dee-b19b-c876680221fd
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4b7c07dfd7a4ba09ff9b00ba71de62c42b18b3be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CRowsetImpl::SetCommandText
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Valide et stocke les **DBID**dans les deux chaînes \([m\_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) et [m\_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)\).  
+# <a name="crowsetimplsetcommandtext"></a>CRowsetImpl::SetCommandText
+Valide et stocke le **DBID**s dans les deux chaînes ([m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) et [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -38,23 +39,23 @@ Valide et stocke les **DBID**dans les deux chaînes \([m\_strCommandText](../../
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `pTableID`  
- \[in\] Un pointeur à **DBID** qui représente l'ID de table.  
+ [in] Un pointeur vers le **DBID** représentant l’ID de table.  
   
  `pIndexID`  
- \[in\] Un pointeur à **DBID** qui représente l'ID de l'Index.  
+ [in] Un pointeur vers le **DBID** représentant l’ID d’index.  
   
-## Valeur de retour  
- Un `HRESULT` standard.  
+## <a name="return-value"></a>Valeur de retour  
+ `HRESULT` standard.  
   
-## Notes  
- La méthode de **SetCommentText** est appelée par `CreateRowset`, une méthode de mise au modèle de `IOpenRowsetImpl`statique.  
+## <a name="remarks"></a>Notes  
+ Le **SetCommentText** méthode est appelée par `CreateRowset`, statique transformer en modèle de méthode de `IOpenRowsetImpl`.  
   
- Cette méthode délègue son travail en appelant [ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md) et [GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md) via un pointeur upcasted.  
+ Cette méthode délègue son travail en appelant [ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md) et [GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md) via un pointeur converti en supertype.  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CRowsetImpl, classe](../../data/oledb/crowsetimpl-class.md)

@@ -45,17 +45,18 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5fdb0ee73b6ee289a97e3debfb7b4b5427ba003f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 509766f9f324c1dd9488488861e7c64200d44837
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putenv-wputenv"></a>_putenv, _wputenv
 Crée, modifie ou supprime des variables d'environnement. Il existe des versions plus sécurisées de ces fonctions. Consultez [_putenv_s, _wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md).  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -75,7 +76,7 @@ int _wputenv(
 ## <a name="return-value"></a>Valeur de retour  
  Retourne 0 en cas de réussite ou -1 en cas d’erreur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction `_putenv` ajoute de nouvelles variables d'environnement ou modifie les valeurs des variables d'environnement existantes. Les variables d'environnement définissent l'environnement d'exécution d'un processus (par exemple, le chemin de recherche par défaut pour les bibliothèques à lier à un programme). `_wputenv` est une version à caractères larges de `_putenv` ; l'argument `envstring` de `_wputenv` est une chaîne à caractères larges.  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
@@ -95,14 +96,14 @@ int _wputenv(
 > [!NOTE]
 >  Les familles de fonctions `_putenv` et `_getenv` ne sont pas thread-safe. `_getenv` peut retourner un pointeur de chaîne pendant que `_putenv` modifie la chaîne, ce qui provoque des échecs aléatoires. Assurez-vous que les appels à ces fonctions sont synchronisés.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_putenv`|\<stdlib.h>|  
 |`_wputenv`|\<stdlib.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de `_putenv`, consultez [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md).  

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9176336ac96d88a34d758fd55c09a3a938f371fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24fa0dae15fb0d4dfab8d481c6626c7611295572
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="restrict"></a>restrict
 **Section spécifique à Microsoft**  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
 __declspec(restrict) return_type f();  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le compilateur propage `__declspec(restrict)`. Par exemple, la fonction CRT `malloc` est décorée avec `__declspec(restrict)`. Par conséquent, les pointeurs initialisés à des emplacements de mémoire avec `malloc` sont également supposés ne pas avoir d'alias.  
   
  Le compilateur ne vérifie pas que le pointeur n'a pas réellement d'alias. Il incombe au développeur de s'assurer que le programme n'attribue pas d'alias à un pointeur marqué avec le modificateur `restrict __declspec`.  

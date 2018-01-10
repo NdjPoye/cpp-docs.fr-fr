@@ -38,11 +38,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: de987b726a4a25fa3bc23bbb569e7c9a9138de2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54256f68263ea966466c9c038f429ab4a73fc868
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 Calcule la fonction d'erreur ou la fonction d'erreur complémentaire d'une valeur.  
@@ -98,7 +99,7 @@ long double erfcl(
   
  C++ autorisant la surcharge, vous pouvez appeler des surcharges de `erf` et `erfc` qui acceptent et retournent les types `float` et `long double`. Dans un programme C, `erf` et `erfc` acceptent et retournent toujours un `double`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête requis|  
 |--------------|---------------------|  

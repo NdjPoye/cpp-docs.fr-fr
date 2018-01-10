@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: db65a7762659bfc71f7ef33dc9f8b9b732fda091
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d6857983412b2037b8958c2b1a0bee9d9dda053
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="return-statement-c"></a>return, instruction (C++)
 Termine l'exécution d'une fonction et retourne le contrôle à la fonction d'appel (ou au système d'exploitation si vous transférez le contrôle à partir de la fonction `main`). L'exécution reprend dans la fonction d'appel au point immédiatement après l'appel.  
@@ -32,7 +33,7 @@ Termine l'exécution d'une fonction et retourne le contrôle à la fonction d'ap
 return [expression];  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La clause `expression`, si elle est présente, est convertie dans le type spécifié dans la déclaration de fonction, comme si une initialisation était exécutée. La conversion du type de l'expression au type `return` de la fonction peut créer des objets temporaires. Pour plus d’informations sur comment et quand les objets temporaires sont créées, consultez [des objets temporaires](../cpp/temporary-objects.md).  
   
  La valeur de la clause `expression` est retournée à la fonction d'appel. Si l'expression est omise, la valeur de retour de la fonction n'est pas définie. Constructeurs et des destructeurs et des fonctions de type `void`, ne peut pas spécifier une expression dans la `return` instruction. Les fonctions de tous les autres types doivent spécifier une expression dans l'instruction `return`.  

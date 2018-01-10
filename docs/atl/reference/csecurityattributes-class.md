@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,37 +12,21 @@ f1_keywords:
 - ATLSECURITY/ATL::CSecurityAttributes
 - ATLSECURITY/ATL::CSecurityAttributes::CSecurityAttributes
 - ATLSECURITY/ATL::CSecurityAttributes::Set
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSecurityAttributes class
+dev_langs: C++
+helpviewer_keywords: CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 24dfba8b6125172cc2d4ff7a32b61da412bfe2be
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 918f90c9f04736eb2328d989e21b7b9997edab86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="csecurityattributes-class"></a>CSecurityAttributes (classe)
+# <a name="csecurityattributes-class"></a>Classe de CSecurityAttributes
 Cette classe est un wrapper mince pour la structure d’attributs de sécurité.  
   
 > [!IMPORTANT]
@@ -72,14 +55,14 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 ## <a name="remarks"></a>Notes  
  Le **SECURITY_ATTRIBUTES** structure contient un [descripteur de sécurité](http://msdn.microsoft.com/library/windows/desktop/aa379561) utilisé pour la création d’un objet et spécifie si le handle récupéré en spécifiant cette structure peut être hérité.  
   
- Pour une présentation du modèle de contrôle d’accès dans Windows, consultez la page [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le Kit de développement logiciel Windows.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `SECURITY_ATTRIBUTES`  
   
  `CSecurityAttributes`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h  
   
 ##  <a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes  
@@ -115,9 +98,8 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
  Cette méthode est utilisée par le constructeur pour initialiser le `CSecurityAttributes` objet.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple de la sécurité](../../visual-cpp-samples.md)   
+ [Exemple de sécurité](../../visual-cpp-samples.md)   
  [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)   
  [descripteur de sécurité](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
  [Fonctions globales de sécurité](../../atl/reference/security-global-functions.md)
-

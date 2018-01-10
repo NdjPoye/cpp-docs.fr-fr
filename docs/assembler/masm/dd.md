@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6d7166c0729abed67328b4d47afba3fea65e273c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 116cbfc7d1d3a97b395ee9197ece78cc11fc12fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dd"></a>DD
 Alloue et initialise éventuellement un mot double (4 octets) de stockage pour chaque `initializer`. `DD`est un synonyme de [DWORD](../../assembler/masm/dword.md).  
@@ -30,7 +31,7 @@ Alloue et initialise éventuellement un mot double (4 octets) de stockage pour c
 [[name]] DD initializer [[, initializer]]...  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Peut également être utilisé comme un spécificateur de type n’importe où un type est autorisé.  
   
 ## <a name="see-also"></a>Voir aussi  

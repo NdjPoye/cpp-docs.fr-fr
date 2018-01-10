@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 693a0ce139c35b804325e9ef5dcb7beb1e4da6a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 566d9fac60f082b8dbf46724b463a9ac07732449
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cglobalheap-class"></a>Classe de CGlobalHeap
 Cette classe implémente [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) en utilisant les fonctions de tas global Win32.  
@@ -50,7 +51,7 @@ class CGlobalHeap : public IAtlMemMgr
 |[CGlobalHeap::GetSize](#getsize)|Appelez cette méthode pour obtenir la taille d’un bloc de mémoire allouée par ce gestionnaire de mémoire allouée.|  
 |[CGlobalHeap::Reallocate](#reallocate)|Appelez cette méthode pour réallouer la mémoire allouée par ce gestionnaire de mémoire.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CGlobalHeap`implémente des fonctions d’allocation de mémoire en utilisant les fonctions de tas global Win32.  
   
 > [!NOTE]
@@ -64,7 +65,7 @@ class CGlobalHeap : public IAtlMemMgr
   
  `CGlobalHeap`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlmem.h  
   
 ##  <a name="allocate"></a>CGlobalHeap::Allocate  
@@ -81,7 +82,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers le début du bloc de mémoire nouvellement alloué.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez [CGlobalHeap::Free](#free) ou [CGlobalHeap::Reallocate](#reallocate) pour libérer la mémoire allouée par cette méthode.  
   
  Implémentation à l’aide [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) avec un paramètre d’indicateur de **GMEM_FIXED**.  
@@ -97,7 +98,7 @@ virtual void Free(void* p) throw();
  `p`  
  Pointeur vers la mémoire précédemment allouée par ce gestionnaire de mémoire. NULL est une valeur valide et ne fait rien.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Implémentation à l’aide [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579).  
   
 ##  <a name="getsize"></a>CGlobalHeap::GetSize  
@@ -114,7 +115,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la taille du bloc de mémoire allouée en octets.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Implémentation à l’aide [GlobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593).  
   
 ##  <a name="reallocate"></a>CGlobalHeap::Reallocate  
@@ -134,7 +135,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers le début du bloc de mémoire nouvellement alloué.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez [CGlobalHeap::Free](#free) pour libérer la mémoire allouée par cette méthode.  
   
  Implémentation à l’aide [GlobalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366590).  

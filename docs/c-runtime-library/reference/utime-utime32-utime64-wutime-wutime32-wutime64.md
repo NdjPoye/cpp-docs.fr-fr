@@ -69,11 +69,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 08e3cd90e4c86365694c098973f45d667621ea98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d65be96e49d5f6cceeb6b61259cb790d4265978d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 Définissent l’heure de modification des fichiers.  
@@ -158,7 +159,7 @@ int _wutime64(
 |`_tutime32`|`_utime32`|`_utime32`|`_wutime32`|  
 |`_tutime64`|`_utime64`|`_utime64`|`_wutime64`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-têtes obligatoires|En-têtes facultatifs|  
 |-------------|----------------------|----------------------|  
@@ -166,7 +167,7 @@ int _wutime64(
 |`_utime64`|\<sys/utime.h>|\<errno.h>|  
 |`_wutime`|\<utime.h> ou \<wchar.h>|\<errno.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
  Ce programme utilise `_utime` pour fixer l’heure de modification de fichier à l’heure du moment.  

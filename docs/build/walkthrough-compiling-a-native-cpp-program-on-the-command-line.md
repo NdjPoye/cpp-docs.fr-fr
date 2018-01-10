@@ -18,11 +18,12 @@ caps.latest.revision: "63"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 723410eb8b634e3e01c26b505e619eed7fc371d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64bd526bfd72c16cc993d3992c179f107a35fbd8
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Procédure pas à pas : compilation d'un programme C++ natif sur la ligne de commande
 Visual C++ inclut un compilateur C++ en ligne de commande que vous pouvez utiliser pour créer toutes sortes d’applications, depuis des applications console de base à des applications Windows universelles, des applications du Windows Store et des composants .NET.  
@@ -31,12 +32,12 @@ Visual C++ inclut un compilateur C++ en ligne de commande que vous pouvez utilis
   
  Dans cette procédure pas à pas, vous pouvez utiliser votre propre programme Visual C++ au lieu de taper le programme illustré, ou vous pouvez utiliser un exemple de code Visual C++ provenant d'un autre article d'aide.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure pas à pas, vous devez avoir installé Visual Studio et les composants facultatifs de Visual C++ ou Microsoft Visual C++ Build Tools.  
   
  Visual Studio est un environnement puissant de développement intégré qui prend en charge un éditeur complet, les gestionnaires de ressources, les débogueurs et les compilateurs pour plusieurs langages et les plateformes. Pour plus d’informations sur ces fonctionnalités et comment télécharger et installer Visual Studio, y compris l’édition de Visual Studio Community gratuite, consultez [VisualStudio.com](https://www.visualstudio.com/).  
   
- Les outils de génération Visual Studio installe uniquement les compilateurs de ligne de commande, outils et bibliothèques que vous avez besoin pour générer des programmes C et C++. Il est idéal pour les laboratoires de build ou la classe exerce et installe assez rapidement. Pour installer uniquement les outils de ligne de commande, téléchargez [Visual Studio Tools Build](https://go.microsoft.com/fwlink/?linkid=840931) et exécutez le programme d’installation. Pour plus d’informations, consultez [outils de génération de Visual C++](http://landinghub.visualstudio.com/visual-cpp-build-tools).  
+ Les outils de génération Visual Studio installe uniquement les compilateurs de ligne de commande, outils et bibliothèques que vous avez besoin pour générer des programmes C et C++. Il est idéal pour les laboratoires de build ou la classe exerce et installe assez rapidement. Pour installer uniquement les outils de ligne de commande, téléchargez [Visual Studio Tools Build](https://go.microsoft.com/fwlink/p/?linkid=840931) et exécutez le programme d’installation. Pour plus d’informations, consultez [outils de génération de Visual C++](http://landinghub.visualstudio.com/visual-cpp-build-tools).  
   
  Avant de pouvoir créer un programme C ou C++ sur la ligne de commande, vous devez vérifier que les outils sont installés et que vous pouvez y accéder à partir de la ligne de commande. Visual C++ a des exigences complexes de l’environnement de ligne de commande afin de trouver les outils, les en-têtes et les bibliothèques qu’il utilise. **Vous ne pouvez pas utiliser Visual C++ dans une fenêtre d’invite de commande simple**. Heureusement, Visual C++ installe des raccourcis pour vous permet de lancer une invite de commandes développeur qui a la configuration d’environnement pour les versions de ligne de commande. Malheureusement, les noms des raccourcis d’invite de commandes développeur et où ils se situent sont différents dans presque chaque version de Visual C++ et sur différentes versions de Windows. La première tâche de la procédure pas à pas est de trouver celui qui convient à utiliser.  
   

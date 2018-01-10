@@ -1,49 +1,50 @@
 ---
-title: "Platform::Delegate (classe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Delegate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::Delegate (classe)"
+title: Platform::Delegate (classe) | Documents Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::Delegate
+dev_langs: C++
+helpviewer_keywords: Platform::Delegate Class
 ms.assetid: 82b21271-768f-4193-9ca2-be68ddfd546e
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a95dad9833bcf1bebe9d9f74eceb05efcfa8ce0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::Delegate (classe)
+# <a name="platformdelegate-class"></a>Platform::Delegate (classe)
 Représente un objet de fonction.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
 public delegate void delegate_name();  
 ```  
   
-## Membres  
- La classe Delegate contient les méthodes Equals\(\), GetHashCode\(\), et ToString\(\) dérivées de la [Platform::Object, classe](../cppcx/platform-object-class.md).  
+### <a name="members"></a>Membres  
+ La classe Delegate contient les méthodes Equals(), GetHashCode(), et ToString() dérivées de la [Platform::Object Class](../cppcx/platform-object-class.md).  
   
-## Notes  
- Utilisez le mot clé [delegate](~/windows/delegate-cpp-component-extensions.md) pour créer des délégués. N’utilisez pas Platform::Delegate explicitement. Pour plus d'informations, consultez [Délégués](../cppcx/delegates-c-cx.md). Pour obtenir un exemple montrant comment créer et consommer un délégué, consultez [Création de composants Windows Runtime en C\+\+](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf).  
+### <a name="remarks"></a>Notes  
+ Utilisez le mot clé [delegate](../windows/delegate-cpp-component-extensions.md) pour créer des délégués. N’utilisez pas Platform::Delegate explicitement. Pour plus d’informations, consultez [Délégués](../cppcx/delegates-c-cx.md). Pour obtenir un exemple montrant comment créer et consommer un délégué, consultez [Creating Windows Runtime Components in C++](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md).  
   
-## Configuration requise  
- **Client minimum pris en charge :** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>Configuration requise  
+ **Minimum pris en charge le client :** Windows 8  
   
- **Serveur minimum pris en charge :** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Minimum de serveur pris en charge :** Windows Server 2012  
   
- **Espace de noms :** Platform  
+ **Espace de noms :** Platform  
   
- **Métadonnées :** platform.winmd  
+ **Métadonnées :** platform.winmd  
   
-## Voir aussi  
- [Espace de noms de plateforme](../cppcx/platform-namespace-c-cx.md)
+## <a name="see-also"></a>Voir aussi  
+ [Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)
