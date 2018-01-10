@@ -1,68 +1,69 @@
 ---
-title: "/STACK, allocations de la pile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.StackReserveSize"
-  - "VC.Project.VCLinkerTool.StackCommitSize"
-  - "/stack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "STACK, option de l’éditeur de liens"
-  - "-STACK, option de l’éditeur de liens"
-  - "allocation de mémoire, pile"
-  - "/STACK, option de l’éditeur de liens"
-  - "pile, définir la taille"
+title: -STACK (pile des Allocations) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.StackReserveSize
+- VC.Project.VCLinkerTool.StackCommitSize
+- /stack
+dev_langs: C++
+helpviewer_keywords:
+- STACK linker option
+- -STACK linker option
+- memory allocation, stack
+- /STACK linker option
+- stack, setting size
 ms.assetid: 73283660-e4bd-47cc-b5ca-04c5d739034c
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6b487ff830abd3dfa97a748c81d541cbd9fdd0b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# /STACK, allocations de la pile
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stack-stack-allocations"></a>/STACK, allocations de la pile
 ```  
 /STACK:reserve[,commit]  
 ```  
   
-## Notes  
- L'option \/STACK définit la taille de la pile en octets.  N'utilisez cette option que lorsque vous générez un fichier .exe.  
+## <a name="remarks"></a>Notes  
+ L’option /STACK définit la taille de la pile en octets. Utilisez cette option que lorsque vous générez un fichier .exe.  
   
- La valeur `reserve` indique la taille totale de l'allocation de piles dans la mémoire virtuelle.  Pour les ordinateurs ARM, x86 et [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], la taille de la pile par défaut est égale à 1 Mo  
+ Le `reserve` valeur spécifie l’allocation de pile total dans la mémoire virtuelle. Pour ARM, x86 et [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] machines, la taille de pile par défaut est de 1 Mo.  
   
- L'argument `commit` est soumis à l'interprétation du système d'exploitation.  Sous Windows WindowsRT, il spécifie la quantité de mémoire physique à allouer dans chaque cas.  La mémoire virtuelle dédiée fait réserver de l'espace dans le fichier d'échange.  Une valeur de l'argument `commit` supérieure permet de gagner du temps quand l'application requiert davantage d'espace pour la pile, mais augmente les besoins en ressources mémoire et peut allonger la durée de la phase de démarrage.  Pour les ordinateurs ARM, x86 et [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], la valeur de validation par défaut est 4 Ko.  
+ `commit`est soumis à l’interprétation par le système d’exploitation. Dans Windows RT de Windows, il spécifie la quantité de mémoire physique à allouer à la fois. Mémoire virtuelle dédiée, espace à réserver dans le fichier d’échange. Un degré plus élevé `commit` valeur fait gagner du temps quand l’application requiert davantage d’espace de pile, mais augmente les besoins en mémoire et éventuellement le temps de démarrage. Pour ARM, x86 et [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] machines, la valeur de validation par défaut est de 4 Ko.  
   
- Spécifiez les valeurs `reserve` et `commit` en notation décimale ou de langage C.  
+ Spécifiez le `reserve` et `commit` les valeurs dans la notation décimale ou en langage C.  
   
- Un autre moyen de définir la taille de la pile consiste à utiliser l'instruction [STACKSIZE](../../build/reference/stacksize.md) dans un fichier de définition de module \(.def\).  **STACKSIZE** substitue l'option Allocations de la pile \(\/STACK\) si les deux arguments sont spécifiés.  Vous pouvez modifier la taille de la pile une fois que le fichier .exe est généré à l'aide de l'outil [EDITBIN](../../build/reference/editbin-reference.md).  
+ Une autre consiste à définir la taille de la pile avec les [STACKSIZE](../../build/reference/stacksize.md) instruction dans un fichier de définition de module (.def). **STACKSIZE** remplace les Allocations de la pile (/Stack) option si les deux sont spécifiées. Vous pouvez modifier la taille de la pile une fois que le fichier .exe est généré à l’aide de la [EDITBIN](../../build/reference/editbin-reference.md) outil.  
   
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Définition des propriétés de projets Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Sélectionnez le dossier **Éditeur de liens**.  
+2.  Sélectionnez le **l’éditeur de liens** dossier.  
   
-3.  Sélectionnez la page de propriétés **System**.  
+3.  Sélectionnez le **système** page de propriétés.  
   
-4.  Modifiez une des propriétés suivantes :  
+4.  Modifier l’une des propriétés suivantes :  
   
     -   **Taille de validation de pile**  
   
-    -   **Taille de la réserve de piles**  
+    -   **Taille de réserve de pile**  
   
-### Pour définir cette option de l'éditeur de liens par programme  
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   
 1.  Consultez les propriétés <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StackCommitSize%2A> et <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StackReserveSize%2A>.  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)

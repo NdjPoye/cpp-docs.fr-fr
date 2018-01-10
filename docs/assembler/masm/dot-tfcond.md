@@ -1,33 +1,31 @@
 ---
-title: ".TFCOND | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".TFCOND"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".TFCOND directive"
+title: . TFCOND | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .TFCOND
+dev_langs: C++
+helpviewer_keywords: .TFCOND directive
 ms.assetid: e3c0fe44-bf68-4397-bf31-61995c69c4c2
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8fb20dd0969790aa904996e522dbf0a5df4711a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# .TFCOND
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Bascule la liste des blocs conditionnels false.  
+# <a name="tfcond"></a>.TFCOND
+Active/désactive la liste de blocs conditionnels false.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,5 +33,5 @@ Bascule la liste des blocs conditionnels false.
   
 ```  
   
-## Voir aussi  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)

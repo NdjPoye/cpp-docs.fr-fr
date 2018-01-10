@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 189344645cff785b2957131303cabbe1946954ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36ca3ea93f494587663d863b1dc4646750d38e82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="highentropyva"></a>/HIGHENTROPYVA
 Spécifie si l’image exécutable prend en charge la randomisation du format d’espace d’adresse (ASLR) 64 bits de forte entropie.  
@@ -32,8 +33,8 @@ Spécifie si l’image exécutable prend en charge la randomisation du format d�
 /HIGHENTROPYVA[:NO]  
 ```  
   
-## <a name="remarks"></a>Remarques  
- Cette option modifie l'en-tête d'un fichier .dll ou .exe pour indiquer si la fonctionnalité ASLR est prise en charge avec des adresses 64 bits. Quand cette option est définie au niveau d'un fichier exécutable et de tous les modules dont il dépend, un système d'exploitation qui prend en charge l'ASLR 64 bits peut redéfinir les segments de l'image exécutable au moment du chargement en utilisant des adresses aléatoires tirées d'un espace d'adressage virtuel de 64 bits. Devant ce grand espace d'adressage, il est plus difficile pour une personne malveillante de deviner l'emplacement d'une région de mémoire particulière.  
+## <a name="remarks"></a>Notes  
+ Cette option modifie l'en-tête d'un fichier .dll ou .exe pour indiquer si la fonctionnalité ASLR est prise en charge avec des adresses 64 bits. Quand cette option est définie au niveau d’un fichier exécutable et de tous les modules dont il dépend, un système d’exploitation qui prend en charge l’ASLR 64 bits peut rebaser les segments de l’image exécutable au moment du chargement en utilisant des adresses aléatoires tirées d’un espace d’adressage virtuel de 64 bits. Devant ce grand espace d'adressage, il est plus difficile pour une personne malveillante de deviner l'emplacement d'une région de mémoire particulière.  
   
  Par défaut, l’éditeur de liens définit cette option pour les images exécutables 64 bits. Pour définir cette option, le [/DYNAMICBASE](../../build/reference/dynamicbase.md) option doit également être définie.  
   

@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bbe718ef448f49f02fa6742015af59fa11d75574
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 08f1e170fcba0b9b11c80668e3e4f2cec696a9bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-edit-control"></a>valeur (contrôle d'édition)
 Pour utiliser le contrôle, entrez une valeur, collez-la depuis le Presse-papiers, ou faites glisser à partir du débogueur dans ce contrôle d’édition. Entrez la valeur au format hexadécimal ou décimal, puis **rechercher**. Valeurs hexadécimales doivent être précédés de 0 x ; les caractères valides sont 0-9, A-F et a-f. Les valeurs décimales peuvent être précédées du signe moins (-) ; les caractères valides sont 0-9.  

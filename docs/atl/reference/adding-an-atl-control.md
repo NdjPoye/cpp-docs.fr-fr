@@ -4,43 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ATL projects, adding controls
 - controls [ATL], adding to projects
 ms.assetid: 10223e7e-fdb7-4163-80c6-44aeafa8e6ce
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 28353386bf172bb4fdca595c7e8b2b724e5dc9d6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3200ea0fc8241007c1c97c1ab296166eb7889734
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-atl-control"></a>Ajout d’un contrôle ATL
-Utilisez cet Assistant pour ajouter un objet d’interface utilisateur à un projet qui prend en charge les interfaces pour tous les conteneurs potentiels. Pour prendre en charge ces interfaces, le projet doit avoir été créé comme une application ATL ou MFC prenant en charge ATL. Vous pouvez utiliser la [Assistant Projet ATL](../../atl/reference/atl-project-wizard.md) pour créer une application ATL, ou [ajouter un objet ATL à votre application MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) pour implémenter la prise en charge ATL pour une application MFC.  
+Utilisez cet Assistant pour ajouter un objet d’interface utilisateur à un projet qui prend en charge des interfaces pour tous les conteneurs potentiels. Pour prendre en charge ces interfaces, le projet doit avoir été créé comme une application ATL ou comme une application MFC qui contient la prise en charge ATL. Vous pouvez utiliser la [Assistant Projet ATL](../../atl/reference/atl-project-wizard.md) pour créer une application ATL, ou [ajouter un objet ATL à votre application MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) pour implémenter la prise en charge ATL pour une application MFC.  
   
 ### <a name="to-add-an-atl-control-to-your-project"></a>Pour ajouter un contrôle ATL à votre projet  
   
@@ -58,11 +42,10 @@ Utilisez cet Assistant pour ajouter un objet d’interface utilisateur à un pro
   
 -   Un contrôle DHTML  
   
- En outre, vous pouvez réduire la taille du contrôle et supprimer les interfaces qui ne sont pas utilisés par la plupart des conteneurs en sélectionnant **contrôle Minimal** sur la **Options** page de l’Assistant.  
+ En outre, vous pouvez réduire la taille du contrôle et supprimer les interfaces qui ne sont pas utilisées par la plupart des conteneurs en sélectionnant **contrôle Minimal** sur la **Options** page de l’Assistant.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajout d’une fonctionnalité au contrôle Composite](../../atl/adding-functionality-to-the-composite-control.md)   
- [Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)   
- [ATLFire, exemple](http://msdn.microsoft.com/en-us/5b2649f1-f45b-4cfb-9c4b-4d9459c26b09)
-
+ [Notions de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)   
+ [Exemple ATLFire](http://msdn.microsoft.com/en-us/5b2649f1-f45b-4cfb-9c4b-4d9459c26b09)
 

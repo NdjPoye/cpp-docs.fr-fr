@@ -40,11 +40,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3b6bda561c1461053a3a835f1d42e72471346895
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 604e3b9841ab628343a48e72612d2e50e85913f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccombstr-class"></a>Classe CComBSTR
 Cette classe est un wrapper pour `BSTR`s.  
@@ -107,7 +108,7 @@ class CComBSTR
 |----------|-----------------|  
 |[CComBSTR::m_str](#m_str)|Contient le `BSTR` associé à la `CComBSTR` objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `CComBSTR` classe est un wrapper pour `BSTR`s, qui sont des chaînes de longueur de préfixe. La longueur est stockée comme un entier à l’emplacement de mémoire qui précède les données dans la chaîne.  
   
  A [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) est terminée après le dernier comptabilisées caractère mais peut également contenir des caractères null incorporés dans la chaîne. La longueur de chaîne est déterminée par le nombre de caractères, pas au premier caractère null.  
@@ -120,7 +121,7 @@ class CComBSTR
   
  Pour obtenir la liste des avertissements lors de l’utilisation `CComBSTR`, consultez [programmation avec CComBSTR](../../atl/programming-with-ccombstr-atl.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ##  <a name="append"></a>CComBSTR::Append  
@@ -151,7 +152,7 @@ HRESULT Append(LPCOLESTR lpsz, int nLen) throw();
 ### <a name="return-value"></a>Valeur de retour  
  `S_OK`sur la réussite ou norme `HRESULT` valeur d’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une chaîne ANSI sera convertie au format Unicode avant d’être ajouté.  
   
 ### <a name="example"></a>Exemple  
@@ -171,7 +172,7 @@ HRESULT AppendBSTR(BSTR p) throw();
 ### <a name="return-value"></a>Valeur de retour  
  `S_OK`sur la réussite ou norme `HRESULT` valeur d’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ne passez pas une chaîne à caractères larges ordinaire à cette méthode. Le compilateur ne peut pas intercepter l’erreur et l’exécution des erreurs se produiront.  
   
 ### <a name="example"></a>Exemple  
@@ -236,7 +237,7 @@ void Attach(BSTR src) throw();
  *src*  
  [in] Le `BSTR` à attacher à l’objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ne passez pas une chaîne à caractères larges ordinaire à cette méthode. Le compilateur ne peut pas intercepter l’erreur et l’exécution des erreurs se produiront.  
   
 > [!NOTE]
@@ -269,7 +270,7 @@ unsigned int ByteLength() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  La longueur de la [m_str](#m_str) membre en octets.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Retourne 0 si `m_str` est **NULL**.  
   
 ### <a name="example"></a>Exemple  
@@ -306,7 +307,7 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
  `guid`  
  [in] Une référence à un **GUID** structure.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le constructeur de copie affecte `m_str` vers une copie de la `BSTR` membre *src*. Le **REFGUID** constructeur convertit le **GUID** à une chaîne à l’aide de **StringFromGUID2** et stocke le résultat.  
   
  Les autres constructeurs affectent à `m_str` une copie de la chaîne spécifiée. Si vous transmettez une valeur pour `nSize`, seuls `nSize` caractères sont copiés, suivis d'un caractère null de fin.  
@@ -325,7 +326,7 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 ~CComBSTR();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le destructeur libère la chaîne pointée par `m_str`.  
   
 ##  <a name="copy"></a>CComBSTR::Copy  
@@ -360,7 +361,7 @@ HRESULT CopyTo(VARIANT* pvarDest) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Une norme `HRESULT` indiquant la réussite ou l’échec de la copie.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Après avoir appelé cette méthode, le **VARIANT** vers lequel pointe `pvarDest` sera de type `VT_BSTR`.  
   
 ### <a name="example"></a>Exemple  
@@ -416,7 +417,7 @@ bool LoadString(UINT nID) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **true** si la chaîne est correctement chargé ; sinon, retourne **false**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La première fonction charge la ressource à partir du module identifié par vous via le `hInst` paramètre. La deuxième fonction charge la ressource à partir du module de ressources associé à la [CComModule](../../atl/reference/ccommodule-class.md)-objet utilisé dans ce projet dérivé.  
   
 ### <a name="example"></a>Exemple  
@@ -439,7 +440,7 @@ BSTR m_str;
 operator BSTR() const throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous pouvez ainsi passer `CComBSTR` objets à des fonctions qui ont **[in] BSTR** paramètres.  
   
 ### <a name="example"></a>Exemple  
@@ -455,7 +456,7 @@ bool operator!() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **true** si le [m_str](#m_str) membre est **NULL**; sinon, **false**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cet opérateur vérifie uniquement une valeur NULL, pas pour une chaîne vide.  
   
 ### <a name="example"></a>Exemple  
@@ -484,7 +485,7 @@ bool operator!= (int nNull) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **true** si l’élément en cours de comparaison n’est pas égale à la `CComBSTR` de l’objet ; sinon, retourne **false**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `CComBSTR`s sont comparées textuellement dans le contexte des paramètres régionaux par défaut de l’utilisateur. L’opérateur de comparaison finale compare simplement la chaîne de relation contenant-contenue contre **NULL**.  
   
 ##  <a name="operator_amp"></a>CComBSTR::operator&amp;  
@@ -494,7 +495,7 @@ bool operator!= (int nNull) const throw();
 BSTR* operator&() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `CComBstr operator &`est une assertion spéciale associé pour aider à identifier les fuites de mémoire. Le programme sera évaluée lorsque le `m_str` membre est initialisé. Cette assertion a été créée pour identifier les situations où un programmeur utilise le `& operator` pour attribuer une nouvelle valeur à `m_str` membre sans la libération de la première allocation de `m_str`. Si `m_str` est égal à NULL, le programme suppose que m_str n’a pas été encore affectés. Dans ce cas, le programme ne sera pas évaluée.  
   
  Cette assertion n’est pas activée par défaut. Définir `ATL_CCOMBSTR_ADDRESS_OF_ASSERT` pour activer cette assertion.  
@@ -519,7 +520,7 @@ CComBSTR& operator+= (const LPCOLESTR pszSrc);
  `pszSrc`  
  [in] Une chaîne terminée par zéro à ajouter.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `CComBSTR`s sont comparées textuellement dans le contexte des paramètres régionaux par défaut de l’utilisateur. Le **LPCOLESTR** comparaison est effectuée à l’aide `memcmp` sur les données brutes dans chaque chaîne. Le `LPCSTR` comparaison est effectuée de la même façon une fois qu’une valeur temporaire Unicode copie de `pszSrc` a été créé. L’opérateur de comparaison finale compare simplement la chaîne de relation contenant-contenue contre **NULL**.  
   
 ### <a name="example"></a>Exemple  
@@ -537,7 +538,7 @@ bool operator<(LPCSTR pszSrc) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **true** si l’élément en cours de comparaison est inférieure à la `CComBSTR` de l’objet ; sinon, retourne **false**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La comparaison est effectuée à l’aide des paramètres régionaux par défaut de l’utilisateur.  
   
 ##  <a name="operator_eq"></a>CComBSTR::operator =  
@@ -550,7 +551,7 @@ CComBSTR& operator= (LPCSTR pSrc);
 CComBSTR& operator= (CComBSTR&& src) throw(); // (Visual Studio 2017)
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `pSrc` paramètre spécifie un **LPCOLESTR** pour les versions Unicode ou `LPCSTR` pour les versions ANSI.  
   
 ### <a name="example"></a>Exemple  
@@ -579,7 +580,7 @@ bool operator== (int nNull) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **true** si l’élément en cours de comparaison est égal à la `CComBSTR` de l’objet ; sinon, retourne **false**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’opérateur de comparaison finale compare simplement la chaîne de relation contenant-contenue contre **NULL**.  
   
 ##  <a name="operator_gt"></a>CComBSTR::operator&gt;  
@@ -592,7 +593,7 @@ bool operator>(const CComBSTR& bstrSrc) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **true** si l’élément en cours de comparaison est supérieur à la `CComBSTR` de l’objet ; sinon, retourne **false**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La comparaison est effectuée à l’aide des paramètres régionaux par défaut de l’utilisateur.  
   
 ##  <a name="readfromstream"></a>CComBSTR::ReadFromStream  
@@ -609,7 +610,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  **ReadToStream** requiert le contenu du flux à la position actuelle pour être compatible avec le format de données écrit par un appel à [WriteToStream](#writetostream).  
   
 ### <a name="example"></a>Exemple  
@@ -625,7 +626,7 @@ HRESULT ToLower() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez **CharLowerBuff** pour plus d’informations sur la façon dont la conversion est effectuée.  
   
 ##  <a name="toupper"></a>CComBSTR::ToUpper  
@@ -638,7 +639,7 @@ HRESULT ToUpper() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez **CharUpperBuff** pour plus d’informations sur la façon dont la conversion est effectuée.  
   
 ##  <a name="writetostream"></a>CComBSTR::WriteToStream  
@@ -655,7 +656,7 @@ HRESULT WriteToStream(IStream* pStream) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous pouvez recréer un BSTR à partir du contenu du flux de données en utilisant la [ReadFromStream](#readfromstream) (fonction).  
   
 ### <a name="example"></a>Exemple  

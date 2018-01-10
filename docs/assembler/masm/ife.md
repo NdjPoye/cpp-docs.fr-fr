@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ea47017affeb1afa2efba2c1a8c8e03e9dd3dd7f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f4e1f079c45253beec27a8af00f2ceb20042e61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ife"></a>IFE
 Accorde l’assembly si *expression* a la valeur false (0).  
@@ -31,7 +32,7 @@ Accorde l’assembly si *expression* a la valeur false (0).
 IFE expression  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Consultez [IF](../../assembler/masm/if-masm.md) pour connaître la syntaxe complète.  
   
 ## <a name="see-also"></a>Voir aussi  

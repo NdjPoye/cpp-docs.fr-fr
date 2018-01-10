@@ -1,48 +1,47 @@
 ---
-title: "/DYNAMICBASE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/dynamicbase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DYNAMICBASE (option Editbin)"
-  - "DYNAMICBASE (option Editbin)"
-  - "-DYNAMICBASE (option Editbin)"
+title: -DYNAMICBASE | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /dynamicbase
+dev_langs: C++
+helpviewer_keywords:
+- -DYNAMICBASE editbin option
+- DYNAMICBASE editbin option
+- /DYNAMICBASE editbin option
 ms.assetid: edb3df90-7b07-42fb-a94a-f5a4c1d325d6
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 07fd3c89cb2cff1fed06189ac66b2e67f7e52ade
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# /DYNAMICBASE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Spécifie si une image exécutable peut être redéfinie de façon aléatoire au moment du chargement en utilisant la randomisation du format d'espace d'adresse \(ASLR\).  
+# <a name="dynamicbase"></a>/DYNAMICBASE
+Spécifie si une image exécutable peut être rebasée de façon aléatoire au moment du chargement en utilisant la randomisation du format d’espace d’adresse (ASLR).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 /DYNAMICBASE[:NO]  
 ```  
   
-## Notes  
- Par défaut, l'éditeur de liens définit l'option **\/DYNAMICBASE**.  
+## <a name="remarks"></a>Notes  
+ Par défaut, l’éditeur de liens définit les **/DYNAMICBASE** option.  
   
- Cette option modifie l'en\-tête d'une image exécutable pour indiquer si le chargeur peut redéfinir aléatoirement l'image au moment du chargement.  
+ Cette option modifie l’en-tête d’une image exécutable pour indiquer si le chargeur peut rebaser aléatoirement l’image au moment du chargement.  
   
  La fonctionnalité ASLR est prise en charge sur Windows Vista, Windows Server 2008, Windows 7, Windows 8 et Windows Server 2012.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options EDITBIN](../../build/reference/editbin-options.md)   
- [Sécurité de Windows pour les éditeurs de logiciels](http://msdn.microsoft.com/library/bb430720.aspx)
+ [Mesures de sécurité des éditeurs de logiciels Windows](http://msdn.microsoft.com/library/bb430720.aspx)

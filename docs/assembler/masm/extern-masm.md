@@ -1,33 +1,31 @@
 ---
-title: "EXTERN (MASM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "extern"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "EXTERN directive"
+title: EXTERN (MASM) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: extern
+dev_langs: C++
+helpviewer_keywords: EXTERN directive
 ms.assetid: 667d703d-3aaf-4139-a586-29bc5dab1aff
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 814922100d34534d51abed4cb682cc4181685066
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# EXTERN (MASM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Définit une ou plusieurs variables, noms, ou symboles externes appelés *le nom* dont le type est `type`.  
+# <a name="extern-masm"></a>EXTERN (MASM)
+Définit une ou plusieurs variables externes, des étiquettes ou des symboles appelés *nom* dont le type est `type`.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,8 +33,8 @@ Définit une ou plusieurs variables, noms, ou symboles externes appelés *le nom
 type [[, [[langtype]] name [[(altid)]] :type]]...  
 ```  
   
-## Notes  
- `type` peut être [ABS](../../assembler/masm/operator-abs.md), qui importe le *nom* comme constante.  De la même manière qu' [EXTRN](../../assembler/masm/extrn.md).  
+## <a name="remarks"></a>Notes  
+ Le `type` peut être [ABS](../../assembler/masm/operator-abs.md), qui importe *nom* en tant que constante. Identique à [EXTRN](../../assembler/masm/extrn.md).  
   
-## Voir aussi  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)

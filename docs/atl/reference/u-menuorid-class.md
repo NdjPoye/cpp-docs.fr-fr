@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ef6563166c658506a33ffa21da285207fbf5275
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ddde6ff5d45c90e675bd2e44ac421e840d1357b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="umenuorid-class"></a>Classe de _U_MENUorID
 Cette classe fournit des wrappers pour **CreateWindow** et **CreateWindowEx**.  
@@ -52,7 +53,7 @@ class _U_MENUorID
 |----------|-----------------|  
 |[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|Handle vers un menu.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe d’argument d’adaptateur permet l’ID ( **UINT**s) ou des handles de menu ( `HMENU`s) à passer à une fonction sans nécessiter un cast explicite de la part de l’appelant.  
   
  Cette classe est conçue pour l’implémentation des wrappers pour l’API Windows, en particulier le [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) et [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) les fonctions qui acceptent un `HMENU` argument peut être un enfant identificateur de fenêtre ( **UINT**) au lieu d’un handle de menu. Par exemple, vous pouvez voir cette classe en cours d’utilisation en tant que paramètre à [CWindowImpl::Create](cwindowimpl-class.md#create).  
@@ -60,7 +61,7 @@ class _U_MENUorID
   
  La classe définit deux surcharges de constructeur : une accepte un **UINT** argument et l’autre accepte un `HMENU` argument. Le **UINT** argument est uniquement effectué en une `HMENU` dans le constructeur et le résultat stocké dans le membre de données de la classe, [m_hMenu](#_u_menuorid__m_hmenu). L’argument de la `HMENU` constructeur est stocké directement, sans conversion.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlwin.h  
   
 ##  <a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu  
@@ -85,7 +86,7 @@ _U_MENUorID(HMENU hMenu);
  `hMenu`  
  Un handle de menu.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’argument de la `HMENU` constructeur est stocké directement, sans conversion.  
   
 ## <a name="see-also"></a>Voir aussi  

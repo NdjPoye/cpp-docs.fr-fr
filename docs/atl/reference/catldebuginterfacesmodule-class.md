@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ed0371116060baaec916d663445bb157dda64b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3507410641853f85900316534975d401d1f37a7a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catldebuginterfacesmodule-class"></a>Classe de CAtlDebugInterfacesModule
 Cette classe prend en charge pour les interfaces de débogage.  
@@ -34,10 +35,10 @@ Cette classe prend en charge pour les interfaces de débogage.
 class CAtlDebugInterfacesModule
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CAtlDebugInterfacesModule`Fournit la prise en charge requis pour les interfaces de débogage. Il est inclus dans tous les projets qui définit le symbole [_ATL_DEBUG_QI](debugging-and-error-reporting-macros.md#_atl_debug_qi).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ## <a name="see-also"></a>Voir aussi  

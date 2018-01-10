@@ -18,11 +18,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 952f6a6d9fa06c0f0c34e5769b4302c6230abb43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4afb07323cdb6b25914aabd802c4df73ee1d07c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cautoptrarray-class"></a>Classe de CAutoPtrArray
 Cette classe fournit des méthodes utiles lors de la construction d’un tableau de pointeurs intelligents.  
@@ -51,7 +52,7 @@ class CAutoPtrArray : public CAtlArray<
 |----------|-----------------|  
 |[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|Constructeur.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe fournit un constructeur et dérive des méthodes à partir de [CAtlArray](../../atl/reference/catlarray-class.md) et [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) à l’aide de la création d’un objet de classe de collection le stockage des pointeurs intelligents.  
   
  Pour plus d’informations, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
@@ -61,7 +62,7 @@ class CAutoPtrArray : public CAtlArray<
   
  `CAutoPtrArray`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcoll.h  
   
 ##  <a name="cautoptrarray"></a>CAutoPtrArray::CAutoPtrArray  
@@ -71,7 +72,7 @@ class CAutoPtrArray : public CAtlArray<
 CAutoPtrArray() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Initialise le tableau de pointeurs intelligents.  
   
 ## <a name="see-also"></a>Voir aussi  

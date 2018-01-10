@@ -1,83 +1,84 @@
 ---
-title: "/I (Autres r&#233;pertoires Include) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories"
-  - "VC.Project.VCCLCompilerTool.AdditionalIncludeDirectories"
-  - "/I"
-  - "VC.Project.VCNMakeTool.IncludeSearchPath"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/I (option du compilateur C++)"
-  - "Autres répertoires Include (option du compilateur)"
-  - "I (option du compilateur C++)"
-  - "-I (option du compilateur C++)"
-  - "répertoires Include, (option du compilateur C++)"
-  - "définir des répertoires Include"
+title: "-I (autres répertoires Include) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories
+- VC.Project.VCCLCompilerTool.AdditionalIncludeDirectories
+- /I
+- VC.Project.VCNMakeTool.IncludeSearchPath
+dev_langs: C++
+helpviewer_keywords:
+- /I compiler option [C++]
+- Additional Include Directories compiler option
+- I compiler option [C++]
+- -I compiler option [C++]
+- set include directories
+- include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bfbf962a92af22d3e724c592fec6cf812b610dc7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# /I (Autres r&#233;pertoires Include)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ajoute un répertoire à la liste des répertoires de recherche des fichiers Include.  
+# <a name="i-additional-include-directories"></a>/I (Autres répertoires Include)
+Ajoute un répertoire à la liste des répertoires de recherche des fichiers include.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 /I[ ]directory  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>Arguments  
  `directory`  
- Répertoire à ajouter à la liste des répertoires de recherche des fichiers Include.  
+ Le répertoire à ajouter à la liste des répertoires de recherche des fichiers include.  
   
-## Notes  
- Pour ajouter plusieurs répertoires, utilisez cette option plus d'une fois.  Les répertoires sont explorés uniquement jusqu'à ce que le fichier Include spécifié soit trouvé.  
+## <a name="remarks"></a>Notes  
+ Pour ajouter plusieurs répertoires, utilisez cette option plusieurs fois. Répertoires de recherche sont effectuées uniquement jusqu'à ce que le fichier include spécifié se trouve.  
   
- Vous pouvez utiliser cette option avec l'option [\/X \(Ignorer les chemins d'accès Include standard\)](../../build/reference/x-ignore-standard-include-paths.md) \(Ignorer les chemins d'accès Include standard\).  
+ Vous pouvez utiliser cette option avec l’ignorer ([/X (ignorer Standard chemins d’accès Include)](../../build/reference/x-ignore-standard-include-paths.md)) option.  
   
- Le compilateur recherche les répertoires dans l'ordre suivant :  
+ Le compilateur recherche des répertoires dans l’ordre suivant :  
   
-1.  Les répertoires contenant le fichier source.  
+1.  Répertoires contenant le fichier source.  
   
-2.  Les répertoires spécifiés avec l'option **\/I**, dans l'ordre où CL les trouve.  
+2.  Les répertoires spécifiés avec le **/I** option, dans l’ordre où CL les trouve.  
   
-3.  Les répertoires spécifiés dans la variable d'environnement **INCLUDE**.  
+3.  Les répertoires spécifiés dans le **INCLUDE** variable d’environnement.  
   
-### Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Comment : ouvrir les pages de propriétés d'un projet](../../misc/how-to-open-project-property-pages.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
-2.  Cliquez sur le dossier **C\/C\+\+**.  
+2.  Cliquez sur le dossier **C/C++** .  
   
-3.  Cliquez sur la page de propriétés **Général**.  
+3.  Cliquez sur le **général** page de propriétés.  
   
-4.  Modifiez la propriété **Autres répertoires inclus**.  
+4.  Modifier la **autres répertoires Include** propriété.  
   
-### Pour définir cette option du compilateur par programmation  
+### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation  
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalIncludeDirectories%2A>.  
   
-## Exemple  
- La commande suivante recherche les fichiers Include demandés par MAIN.c dans l'ordre suivant : d'abord dans le répertoire contenant MAIN.c, ensuite dans le répertoire \\INCLUDE, puis dans le répertoire \\MY\\INCLUDE, et enfin dans les répertoires assignés à la variable d'environnement INCLUDE.  
+## <a name="example"></a>Exemple  
+ La commande suivante recherche les fichiers include demandés par MAIN.c dans l’ordre suivant : premier dans le répertoire contenant MAIN.c, puis dans le répertoire \INCLUDE, puis, dans le répertoire \MY\INCLUDE et enfin, dans les répertoires attribué à inclure variable d’environnement.  
   
 ```  
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options du compilateur](../../build/reference/compiler-options.md)   
  [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

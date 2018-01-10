@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,37 +17,21 @@ f1_keywords:
 - CSTRINGT/ATL::CStringElementTraits::CopyElements
 - CSTRINGT/ATL::CStringElementTraits::Hash
 - CSTRINGT/ATL::CStringElementTraits::RelocateElements
-dev_langs:
-- C++
-helpviewer_keywords:
-- CStringElementTraits class
+dev_langs: C++
+helpviewer_keywords: CStringElementTraits class
 ms.assetid: 74d7134b-099d-4455-bf91-3e68ccbf95bc
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: f46ff072bcd0f772dac1bba52b114d82ee433112
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 025c9aa66a8647fd5d8ca9803aedb50b27ed3be1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="cstringelementtraits-class"></a>CStringElementTraits (classe)
+# <a name="cstringelementtraits-class"></a>Classe de CStringElementTraits
 Cette classe fournit des fonctions statiques utilisées par le stockage des classes de collection `CString` objets.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -81,16 +64,16 @@ class CStringElementTraits
 |[CStringElementTraits::Hash](#hash)|(Statique) Appelez cette fonction pour calculer une valeur de hachage pour l’élément de la chaîne donnée.|  
 |[CStringElementTraits::RelocateElements](#relocateelements)|(Statique) Appelez cette fonction pour déplacer `CString` éléments stockés dans un objet de classe de collection.|  
   
-## <a name="remarks"></a>Remarques  
- Cette classe fournit des fonctions statiques pour la copie, le déplacement et la comparaison de chaînes et de créer une valeur de hachage. Ces fonctions sont utiles lorsque vous utilisez une classe de collection pour stocker des données de type chaîne. Utilisez [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md) lorsque des comparaisons sans respecter la casse sont requises. Utilisez [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) lorsque les objets de chaîne sont traitées en tant que références.  
+## <a name="remarks"></a>Notes  
+ Cette classe fournit des fonctions statiques pour la copie, le déplacement et la comparaison de chaînes et pour la création d’une valeur de hachage. Ces fonctions sont utiles lors de l’utilisation d’une classe de collection pour stocker les données de type chaîne. Utilisez [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md) lorsque les comparaisons sans respecter la casse sont requises. Utilisez [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) lorsque les objets de chaîne doivent être traitées en tant que références.  
   
  Pour plus d’informations, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** cstringt.h  
   
 ##  <a name="compareelements"></a>CStringElementTraits::CompareElements  
- Appelez cette fonction pour comparer deux éléments de chaîne d’égalité statique.  
+ Appelez cette fonction statique pour comparer deux éléments de chaîne pour l’égalité.  
   
 ```
 static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
@@ -104,10 +87,10 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
  Le deuxième élément de chaîne.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur true si les éléments sont égaux.  
+ Retourne la valeur true si les éléments sont égaux, false dans le cas contraire.  
   
 ##  <a name="compareelementsordered"></a>CStringElementTraits::CompareElementsOrdered  
- Appelez cette fonction pour comparer deux éléments de chaîne statique.  
+ Appelez cette fonction statique pour comparer deux éléments de chaîne.  
   
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
@@ -121,7 +104,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
  Le deuxième élément de chaîne.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Zéro si les chaînes sont identiques, < 0="" if=""> `str1` est inférieure à `str2`, ou 0 > si `str1` est supérieur à `str2`. Le [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) méthode est utilisée pour effectuer des comparaisons.  
+ Zéro si les chaînes sont identiques, < 0 si `str1` est inférieure à `str2`, ou 0 > Si `str1` est supérieur à `str2`. Le [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) méthode est utilisée pour effectuer des comparaisons.  
 
   
 ##  <a name="copyelements"></a>CStringElementTraits::CopyElements  
@@ -176,7 +159,7 @@ typedef T& OUTARGTYPE;
 ```  
   
 ##  <a name="relocateelements"></a>CStringElementTraits::RelocateElements  
- Appelez cette fonction pour déplacer statique `CString` éléments stockés dans un objet de classe de collection.  
+ Appelez cette fonction statique pour déplacer `CString` éléments stockés dans un objet de classe de collection.  
   
 ```
 static void RelocateElements(
@@ -195,11 +178,10 @@ static void RelocateElements(
  `nElements`  
  Le nombre d’éléments à déplacer.  
   
-### <a name="remarks"></a>Remarques  
- Appelle cette fonction statique [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), ce qui est suffisant pour la plupart des types de données. Si les objets déplacés contiennent des pointeurs vers des membres de leurs propre, cette fonction statique devez être remplacée.  
+### <a name="remarks"></a>Notes  
+ Cette fonction statique appelle [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), ce qui est suffisant pour la plupart des types de données. Si les objets en cours de déplacement contiennent des pointeurs vers leurs propre membres, cette fonction statique devrez être substituée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [CElementTraitsBase (classe)](../../atl/reference/celementtraitsbase-class.md)   
- [CStringElementTraitsI (classe)](../../atl/reference/cstringelementtraitsi-class.md)   
+ [Classe de CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)   
+ [Classe de CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

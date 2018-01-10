@@ -1,1 +1,1 @@
-Bibliothèque de modèles Windows Runtime C\+\+
+Bibliothèque de modèles Windows Runtime C++

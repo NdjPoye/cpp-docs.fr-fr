@@ -17,18 +17,19 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 021740039044a43972cb51390ecf5cc1babdafe1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad2d707b5dbfc78ec8975471114bc87bf23fe5f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Assistant Composant ASP ATL
 Cet Assistant insère dans le projet un composant Active Server Pages (ASP). Microsoft Internet Information Services (IIS) utilise des composants ASP dans le cadre de son architecture de développement de pages Web améliorée.  
   
  À l’aide de cet Assistant, vous pouvez spécifier que le composant de modèle de thread et sa prise en charge de l’agrégation. Vous pouvez également indiquer la prise en charge de l’interface d’informations d’erreur, les points de connexion et marshaling libre de threads.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  À compter de Visual Studio 2008, le script d’inscription produit par cet Assistant inscrira ses composants COM sous **HKEY_CURRENT_USER** au lieu de **HKEY_LOCAL_MACHINE**. Pour modifier ce comportement, définissez la **inscrire le composant pour tous les utilisateurs** option de l’Assistant ATL.  
   
 ## <a name="names"></a>Noms  

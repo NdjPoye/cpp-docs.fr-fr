@@ -1,49 +1,50 @@
 ---
-title: "Date and Time | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dates, MFC"
-  - "MFC, date et heure"
-  - "heure"
-  - "heure, programmer MFC"
+title: Date et heure | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- time, MFC programming
+- time
+- MFC, date and time
+- dates, MFC
 ms.assetid: ecf56dc5-d418-4603-ad3e-af7e205a6403
-caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ed221cfe695ef04a7759fb0385153029ef9a892d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Date and Time
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-MFC prend en charge plusieurs manières d'utiliser des dates et des heures.  Ces niveaux sont les suivants :  
+# <a name="date-and-time"></a>Date et heure
+MFC prend en charge les différentes façons d’utiliser des dates et heures. Elles incluent notamment :  
   
--   Classes à caractère général de temps.  Les classes de [CTime](../atl-mfc-shared/reference/ctime-class.md) et de [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) encapsulent la plupart des fonctionnalités associée à la bibliothèque d'heure d'hiver, qui est déclarée dans TIME.H.  
+-   Classes de temps à usage général. Le [CTime](../atl-mfc-shared/reference/ctime-class.md) et [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) classes encapsulent la plupart des fonctionnalités associées à la bibliothèque de temps à la norme ANSI, qui est déclarée dans le temps. H.  
   
--   Prise en charge de l'horloge système.  Avec la version 3,0 des MFC, la prise en charge a été ajouté à `CTime` pour Win32 `SYSTEMTIME` et des types de données d' `FILETIME` .  
+-   Prise en charge de l’horloge système. Avec la version 3.0 de MFC, prise en charge a été ajouté à `CTime` pour Win32 `SYSTEMTIME` et `FILETIME` des types de données.  
   
--   Prise en charge de l'automation [type de données date](../atl-mfc-shared/date-type.md).  Prend en charge**DATE** de date, chronomètrent, et les valeur de date\/d'heure.  Les classes de [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) et de [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) encapsulent cette fonctionnalité.  Elles utilisent la classe de [COleVariant](../mfc/reference/colevariant-class.md) grâce à la prise en charge de l'automation.  
+-   Prise en charge de l’automatisation [type de données DATE](../atl-mfc-shared/date-type.md). **DATE** prend en charge la date, heure et date/heure des valeurs. Le [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) et [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) classes encapsulent ces fonctionnalités. Ils fonctionnent avec les [COleVariant](../mfc/reference/colevariant-class.md) classe à l’aide de la prise en charge Automation.  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus  
   
--   [Date et heure : classes à caractère général](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
+-   [Date et heure : classes à usage général](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
--   [Date et heure : Prise en charge de SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
+-   [Date et heure : prise en charge de SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   
--   [Date et heure : Prise en charge d'automation](../atl-mfc-shared/date-and-time-automation-support.md)  
+-   [Date et heure : prise en charge d’Automation](../atl-mfc-shared/date-and-time-automation-support.md)  
   
--   [Date et heure : prise en charge des bases de données](../atl-mfc-shared/date-and-time-database-support.md)  
+-   [Date et heure : prise en charge de base de données](../atl-mfc-shared/date-and-time-database-support.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Concepts](../mfc/mfc-concepts.md)   
  [Rubriques MFC générales](../mfc/general-mfc-topics.md)
+

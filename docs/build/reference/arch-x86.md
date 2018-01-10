@@ -13,11 +13,12 @@ caps.latest.revision: "33"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d1dd4689cf4e2ef4c4f6601396110327c74773b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4905634af75f30c5428f8091d736adbe1b8490d8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arch-x86"></a>/arch (x86)
 Spécifie l'architecture pour la génération de code sur x86. Consultez également [/arch (x64)](../../build/reference/arch-x64.md) et [/arch (ARM)](../../build/reference/arch-arm.md).  
@@ -44,7 +45,7 @@ Spécifie l'architecture pour la génération de code sur x86. Consultez égalem
  **/ arch : avx2**  
  Active l’utilisation des instructions Intel Advanced Vector Extensions 2.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les instructions SSE et SSE2 existent sur divers processeurs Intel et AMD. Les instructions AVX existe sur les processeurs Intel Sandy Bridge et les processeurs AMD Bulldozer. Les instructions AVX2 sont prises en charge par les processeurs Intel Haswell et Broadwell et les processeurs basés sur AMD Excavator.  
   
  Le `_M_IX86_FP`, `__AVX__` et `__AVX2__` macros indiquent, le cas échéant, **/arch** option du compilateur a été utilisée. Pour plus d'informations, consultez [Predefined Macros](../../preprocessor/predefined-macros.md). Le **/arch : avx2** option et `__AVX2__` (macro) ont été introduites dans Visual Studio 2013 Update 2, version 12.0.34567.1.  

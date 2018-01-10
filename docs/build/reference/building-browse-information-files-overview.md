@@ -1,57 +1,58 @@
 ---
-title: "G&#233;n&#233;ration de fichiers d&#39;informations de consultation&#160;: vue d&#39;ensemble | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fichiers .bsc, à propos des fichiers .bsc"
-  - "fichiers d'informations de consultation (.bsc)"
-  - "fichiers d'informations de consultation (.bsc), créer"
-  - "fichiers bsc, à propos des fichiers bsc"
+title: "Génération de fichiers d’informations : Vue d’ensemble de | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .bsc files, about .bsc files
+- bsc files, about bsc files
+- browse information files (.bsc)
+- browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f5b369d5a708e0ee56df635234c68ee88a31af48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# G&#233;n&#233;ration de fichiers d&#39;informations de consultation&#160;: vue d&#39;ensemble
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Pour créer des informations de consultation de symboles, le compilateur crée un fichier .sbr associé à chaque fichier source du projet, puis BSCMAKE.EXE concatène tous les fichiers .sbr en un fichier .bsc unique.  
+# <a name="building-browse-information-files-overview"></a>Génération de fichiers d'informations de consultation : vue d'ensemble
+Pour créer des informations de consultation de symboles, le compilateur crée un fichier .sbr pour chaque fichier source dans votre projet, puis BSCMAKE. EXE concatène les fichiers .sbr dans un fichier .bsc.  
   
- La génération des fichiers .sbr et .bsc prend du temps ; c'est pourquoi Visual C\+\+ désactive ces fonctions par défaut.  Pour consulter les informations en cours, vous devez activer les options de navigation et générer à nouveau le projet.  
+ Génération de fichiers .sbr et .bsc prend un certain temps, Visual C++ désactive ces fonctions par défaut. Si vous souhaitez parcourir les données en cours, vous devez activer les options de navigation et régénérer votre projet.  
   
- Utilisez l'option [\/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) ou [\/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md) pour demander au compilateur de créer des fichiers .sbr.  Pour créer les fichiers .bsc, vous pouvez appeler [BSCMAKE](../../build/reference/bscmake-command-line.md) à partir de la ligne de commande.  En utilisant BSCMAKE depuis la ligne de commande, vous pouvez exercer un contrôle plus précis sur la manipulation des fichiers d'informations de consultation.  Pour plus d'informations, reportez\-vous à [Référence de BSCMAKE](../../build/reference/bscmake-reference.md).  
+ Utilisez [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) ou [/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md) pour indiquer au compilateur de créer des fichiers .sbr. Pour créer les fichiers .bsc, vous pouvez appeler [BSCMAKE](../../build/reference/bscmake-command-line.md) à partir de la ligne de commande. En utilisant BSCMAKE depuis la ligne de commande vous donne un contrôle plus précis sur la manipulation de fichiers d’informations. Consultez [référence BSCMAKE](../../build/reference/bscmake-reference.md) pour plus d’informations.  
   
 > [!TIP]
->  Vous pouvez activer la génération de fichiers .sbr et laisser désactivée la fonction de génération du fichier .bsc.  Vous bénéficierez d'une bonne vitesse de génération et pourrez créer rapidement un fichier .bsc actualisé en activant la fonction correspondante lors de la génération du projet.  
+>  Vous pouvez activer la génération du fichier .sbr mais laisser la génération du fichier .bsc mises hors tension. Cela vous bénéficierez vous permet également de créer un fichier .bsc actualisé rapidement par la génération du fichier .bsc sous tension et la génération du projet.  
   
- Il est possible de réduire le temps, la mémoire et l'espace disque nécessaires à la génération du fichier .bsc en diminuant la taille de ce fichier.  
+ Vous pouvez réduire le temps, la mémoire et espace disque requis pour générer un fichier .bsc en réduisant la taille du fichier .bsc.  
   
- Pour plus d'informations sur la manière de générer un fichier browser dans l'environnement de développement, consultez [Général, page de propriétés \(Projet\)](../../ide/general-property-page-project.md).  
+ Consultez [général, Page de propriétés (projet)](../../ide/general-property-page-project.md) pour plus d’informations sur la façon de générer un fichier browser dans l’environnement de développement.  
   
-### Pour créer un fichier .bsc de plus petite taille  
+### <a name="to-create-a-smaller-bsc-file"></a>Pour créer un fichier .bsc plus petit  
   
-1.  Utilisez les [options de ligne de commande de BSCMAKE](../../build/reference/bscmake-options.md) pour exclure des informations du fichier d'informations de consultation.  
+1.  Utilisez [les options de ligne de commande BSCMAKE](../../build/reference/bscmake-options.md) pour exclure les informations à partir du fichier d’informations.  
   
-2.  Choisissez d'omettre des symboles locaux dans un ou plusieurs fichiers .sbr lors de la compilation ou de l'assemblage.  
+2.  Omettre les symboles locaux dans un ou plusieurs fichiers .sbr lors de la compilation ou l’assemblage.  
   
-3.  Si un fichier objet ne contient pas les informations dont vous avez besoin au stade actuel de débogage, omettez son fichier .sbr dans la commande BSCMAKE lorsque vous régénérez le fichier d'informations de consultation.  
+3.  Si un fichier objet ne contient pas les informations nécessaires pour la phase en cours de débogage, omettez son fichier .sbr dans la commande BSCMAKE lorsque vous régénérez le fichier d’informations.  
   
-### Pour combiner les informations de consultation de plusieurs projets en un fichier browser \(.bsc\) unique  
+### <a name="to-combine-the-browse-information-from-several-projects-into-one-browser-file-bsc"></a>Pour combiner les informations de consultation à partir de plusieurs projets dans un fichier browser (.bsc)  
   
-1.  Ne générez pas le fichier .bsc au niveau du projet ou utilisez le commutateur \/n pour empêcher la troncation des fichiers .sbr.  
+1.  Ne pas créer le fichier .bsc au niveau du projet ou utiliser le commutateur /n pour empêcher que les fichiers .sbr tronqués.  
   
-2.  Après avoir généré tous les projets, exécutez BSCMAKE avec tous les fichiers .sbr en entrée.  Les caractères génériques sont acceptés.  Par exemple, si vos répertoires de projet C:\\X, C:\\Y et C:\\Z contiennent des fichiers .sbr que vous souhaitez combiner en un fichier .bsc unique, utilisez BSCMAKE C:\\X\\\*.sbr C:\\Y\\\*.sbr C:\\Z\\\*.sbr \/o c:\\répertoire\_quelconque\\fichier\_combiné.bsc pour générer le fichier .bsc combiné.  
+2.  Une fois que tous les projets sont générés, exécutez BSCMAKE avec tous les fichiers .sbr en tant qu’entrée. Les caractères génériques sont acceptés. Par exemple, si vous aviez des répertoires de projet C:\X, C:\Y et C:\Z des fichiers .sbr que vous souhaitez combiner en un fichier .bsc, puis utilisez BSCMAKE C:\X\\*.sbr C:\Y\\\*.sbr C:\Z\\\*. sbr /o c:\whatever_directory\combined.bsc pour générer le fichier .bsc combiné.  
   
-## Voir aussi  
- [Outils de génération C\/C\+\+](../../build/reference/c-cpp-build-tools.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Outils de génération C/C++](../../build/reference/c-cpp-build-tools.md)   
  [Référence BSCMAKE](../../build/reference/bscmake-reference.md)

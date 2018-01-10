@@ -60,11 +60,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0c280359ba0acf23653a3e3a810fda57ef575a5c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f710953a32ccb32c63742ab28e84818f3a330336
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ioleobjectimpl-class"></a>Classe de IOleObjectImpl
 Cette classe implémente **IUnknown** et est l’interface principale par le biais duquel un conteneur communique avec un contrôle.  
@@ -130,7 +131,7 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 |[IOleObjectImpl::Unadvise](#unadvise)|Supprime une connexion de notifications avec le contrôle.|  
 |[IOleObjectImpl::Update](#update)|Met à jour le contrôle. L’implémentation ATL retourne `S_OK`.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le [IOleObject](http://msdn.microsoft.com/library/windows/desktop/dd542709) est l’interface principale par le biais duquel un conteneur communique avec un contrôle. Classe `IOleObjectImpl` fournit une implémentation par défaut de cette interface et implémente **IUnknown** en envoyant des informations pour le vidage de builds périphérique en mode débogage.  
   
  **Articles connexes** [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md), [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)  
@@ -140,7 +141,7 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
   
  `IOleObjectImpl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlctl.h  
   
 ##  <a name="advise"></a>IOleObjectImpl::Advise  
@@ -152,7 +153,7 @@ STDMETHOD(Advise)(
     DWORD* pdwConnection);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="close"></a>IOleObjectImpl::Close  
@@ -162,7 +163,7 @@ STDMETHOD(Advise)(
 STDMETHOD(Close)(DWORD dwSaveOption);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Désactive le contrôle et détruit la fenêtre de contrôle, si elle existe. Si le contrôle de membre de données de la classe [CComControlBase::m_bRequiresSave](../../atl/reference/ccomcontrolbase-class.md#m_brequiressave) est **TRUE** et `dwSaveOption` paramètre est `OLECLOSE_SAVEIFDIRTY` ou `OLECLOSE_PROMPTSAVE`, les propriétés du contrôle sont enregistrées. avant du fermer.  
   
  Les pointeurs contenues dans les membres de données de la classe de contrôle [CComControlBase::m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite) et [CComControlBase::m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink) sont libérés et les données membres [CComControlBase :: m_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd), [CComControlBase::m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless), et [CComControlBase::m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex) sont définies sur **FALSE**.  
@@ -182,7 +183,7 @@ STDMETHOD(DoVerb)(
     LPCRECT lprcPosRect);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Selon la valeur de `iVerb`, un de la bibliothèque ATL `DoVerb` fonctions d’assistance est appelée comme suit :  
   
 |*iVerb* valeur|Fonction d’assistance de DoVerb appelée|  
@@ -249,7 +250,7 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 ### <a name="return-value"></a>Valeur de retour  
  Un de la norme `HRESULT` valeurs.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Active le contrôle en place en appelant [CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). À moins que membre de données de la classe du contrôle `m_bWindowOnly` est **TRUE**, `DoVerbInPlaceActivate` essaie d’abord activer le contrôle comme un contrôle sans fenêtre (possible uniquement si le conteneur prend en charge [IOleInPlaceSiteWindowless ](http://msdn.microsoft.com/library/windows/desktop/ms682300)). En cas d’échec, la fonction tente d’activer le contrôle avec des fonctionnalités étendues (possible uniquement si le conteneur prend en charge [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)). En cas d’échec, la fonction tente d’activer le contrôle avec des fonctionnalités étendues (possible uniquement si le conteneur prend en charge [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)). Si l’activation réussit, la fonction notifie le conteneur pour que le contrôle a été activé.  
   
 ##  <a name="doverbopen"></a>IOleObjectImpl::DoVerbOpen  
@@ -286,7 +287,7 @@ HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
 ### <a name="return-value"></a>Valeur de retour  
  Un de la norme `HRESULT` valeurs.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, configuré pour afficher les pages de propriétés. Vous pouvez passer outre cela dans votre classe de contrôle pour appeler un comportement différent sur le double-clic ; par exemple, lire une vidéo ou accédez actif en place.  
   
 ##  <a name="doverbshow"></a>IOleObjectImpl::DoVerbShow  
@@ -330,7 +331,7 @@ HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IOleObject::EnumAdvise](http://msdn.microsoft.com/library/windows/desktop/ms682355) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="enumverbs"></a>IOleObjectImpl::EnumVerbs  
@@ -340,7 +341,7 @@ STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous pouvez ajouter des verbes pour le fichier .rgs du projet. Par exemple, consultez CIRCCTL. RGS dans le [CIRC](../../visual-cpp-samples.md) exemple.  
   
  Consultez [IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781) dans le Kit de développement logiciel Windows.  
@@ -352,7 +353,7 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
 STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IOleObject::GetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms692603) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getclipboarddata"></a>IOleObjectImpl::GetClipboardData  
@@ -367,7 +368,7 @@ STDMETHOD(GetClipboardData)(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IOleObject::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms682288) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getextent"></a>IOleObjectImpl::GetExtent  
@@ -379,7 +380,7 @@ STDMETHOD(GetExtent)(
     SIZEL* psizel);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La taille est stockée dans le membre de données de classe de contrôle [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).  
   
  Consultez [IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) dans le Kit de développement logiciel Windows.  
@@ -393,7 +394,7 @@ STDMETHOD(GetMiscStatus)(
     DWORD* pdwStatus);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les informations d’état incluent des comportements pris en charge par le contrôle et la présentation des données. Vous pouvez ajouter des informations d’état pour le fichier .rgs du projet.  
   
  Consultez [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) dans le Kit de développement logiciel Windows.  
@@ -411,7 +412,7 @@ STDMETHOD(GetMoniker)(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IOleObject::GetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms686576) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getuserclassid"></a>IOleObjectImpl::GetUserClassID  
@@ -421,7 +422,7 @@ STDMETHOD(GetMoniker)(
 STDMETHOD(GetUserClassID)(CLSID* pClsid);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IOleObject::GetUserClassID](http://msdn.microsoft.com/library/windows/desktop/ms682313) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getusertype"></a>IOleObjectImpl::GetUserType  
@@ -433,7 +434,7 @@ STDMETHOD(GetUserType)(
     LPOLESTR* pszUserType);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le nom de type d’utilisateur est utilisé pour l’affichage dans les éléments des interfaces utilisateur comme les menus et les boîtes de dialogue. Vous pouvez modifier le nom de type d’utilisateur dans le fichier .rgs du projet.  
   
  Consultez [IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) dans le Kit de développement logiciel Windows.  
@@ -451,7 +452,7 @@ STDMETHOD(InitFromData)(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="isuptodate"></a>IOleObjectImpl::IsUpToDate  
@@ -464,7 +465,7 @@ STDMETHOD(IsUpToDate)(void);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="onpostverbdiscardundo"></a>IOleObjectImpl::OnPostVerbDiscardUndo  
@@ -477,7 +478,7 @@ HRESULT OnPostVerbDiscardUndo();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Substituez cette méthode avec le code souhaité exécutée après que l’état d’annulation est ignorée.  
   
 ##  <a name="onpostverbhide"></a>IOleObjectImpl::OnPostVerbHide  
@@ -490,7 +491,7 @@ HRESULT OnPostVerbHide();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Substituez cette méthode avec le code que vous souhaitez exécutée après que le contrôle est masqué.  
   
 ##  <a name="onpostverbinplaceactivate"></a>IOleObjectImpl::OnPostVerbInPlaceActivate  
@@ -503,7 +504,7 @@ HRESULT OnPostVerbInPlaceActivate();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Substituez cette méthode avec le code que vous souhaitez exécutée après que le contrôle est activé sur place.  
   
 ##  <a name="onpostverbopen"></a>IOleObjectImpl::OnPostVerbOpen  
@@ -516,7 +517,7 @@ HRESULT OnPostVerbOpen();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Substituez cette méthode avec le code que vous souhaitez exécutée après que le contrôle a été ouvert pour modification dans une fenêtre distincte.  
   
 ##  <a name="onpostverbshow"></a>IOleObjectImpl::OnPostVerbShow  
@@ -529,7 +530,7 @@ HRESULT OnPostVerbShow();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Substituez cette méthode avec le code souhaité exécutée après que le contrôle a été rendu visible.  
   
 ##  <a name="onpostverbuiactivate"></a>IOleObjectImpl::OnPostVerbUIActivate  
@@ -542,7 +543,7 @@ HRESULT OnPostVerbUIActivate();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Substituez cette méthode avec le code souhaité exécutée après l’activation de l’interface utilisateur du contrôle.  
   
 ##  <a name="onpreverbdiscardundo"></a>IOleObjectImpl::OnPreVerbDiscardUndo  
@@ -555,7 +556,7 @@ HRESULT OnPreVerbDiscardUndo();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour éviter que l’état d’annulation sera ignoré, substituez cette méthode pour retourner une erreur HRESULT.  
   
 ##  <a name="onpreverbhide"></a>IOleObjectImpl::OnPreVerbHide  
@@ -568,7 +569,7 @@ HRESULT OnPreVerbHide();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour empêcher que le contrôle masqué, substituez cette méthode pour retourner une erreur HRESULT.  
   
 ##  <a name="onpreverbinplaceactivate"></a>IOleObjectImpl::OnPreVerbInPlaceActivate  
@@ -581,7 +582,7 @@ HRESULT OnPreVerbInPlaceActivate();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour empêcher que le contrôle en cours d’activation en place, substituez cette méthode pour retourner une erreur HRESULT.  
   
 ##  <a name="onpreverbopen"></a>IOleObjectImpl::OnPreVerbOpen  
@@ -594,7 +595,7 @@ HRESULT OnPreVerbOpen();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour empêcher le contrôle ne soit ouvert pour modification dans une fenêtre distincte, substituez cette méthode pour retourner une erreur HRESULT.  
   
 ##  <a name="onpreverbshow"></a>IOleObjectImpl::OnPreVerbShow  
@@ -607,7 +608,7 @@ HRESULT OnPreVerbShow();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour empêcher l’affichage du contrôle, substituez cette méthode pour retourner une erreur HRESULT.  
   
 ##  <a name="onpreverbuiactivate"></a>IOleObjectImpl::OnPreVerbUIActivate  
@@ -620,7 +621,7 @@ HRESULT OnPreVerbUIActivate();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour éviter que l’interface utilisateur du contrôle en cours d’activation, substituez cette méthode pour retourner une erreur HRESULT.  
   
 ##  <a name="setclientsite"></a>IOleObjectImpl::SetClientSite  
@@ -630,7 +631,7 @@ HRESULT OnPreVerbUIActivate();
 STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La méthode retourne ensuite `S_OK`.  
   
  Consultez [IOleObject::SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013) dans le Kit de développement logiciel Windows.  
@@ -645,7 +646,7 @@ STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="setextent"></a>IOleObjectImpl::SetExtent  
@@ -657,7 +658,7 @@ STDMETHOD(SetExtent)(
     SIZEL* psizel);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans le cas contraire, `SetExtent` stocke la valeur pointée par `psizel` dans le membre de données de classe de contrôle [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent). Cette valeur est en dixièmes (0,01 millimètre par unité).  
   
  Si le contrôle le membre de données de classe [CComControlBase::m_bResizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_bresizenatural) est **TRUE**, `SetExtent` stocke également la valeur pointée par `psizel` dans le membre de données de classe de contrôle [CComControlBase::m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural).  
@@ -676,7 +677,7 @@ STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainer
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="setmoniker"></a>IOleObjectImpl::SetMoniker  
@@ -691,7 +692,7 @@ STDMETHOD(SetMoniker)(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IOleObject::SetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679671) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="unadvise"></a>IOleObjectImpl::Unadvise  
@@ -701,7 +702,7 @@ STDMETHOD(SetMoniker)(
 STDMETHOD(Unadvise)(DWORD dwConnection);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="update"></a>IOleObjectImpl::Update  
@@ -714,7 +715,7 @@ STDMETHOD(Update)(void);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IOleObject::Update](http://msdn.microsoft.com/library/windows/desktop/ms679699) dans le Kit de développement logiciel Windows.  
   
 ## <a name="see-also"></a>Voir aussi  

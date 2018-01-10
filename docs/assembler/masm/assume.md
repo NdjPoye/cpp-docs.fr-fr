@@ -1,44 +1,41 @@
 ---
-title: "ASSUME | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ASSUME"
-  - "_assume_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ASSUME directive"
+title: SUPPOSONS | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ASSUME
+dev_langs: C++
+helpviewer_keywords: ASSUME directive
 ms.assetid: cd162070-aee9-4c65-babc-005c6cc73d7c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bf3e2bc4a29f1f6f2919e19085f73cde566aa5d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ASSUME
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Active les vérifications des erreurs pour les valeurs de registre.  
+# <a name="assume"></a>ASSUME
+Active la vérification des erreurs pour les valeurs de Registre.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      ASSUME segregister:name [[, segregister:name]]...  
+ASSUME segregister:name [[, segregister:name]]...  
 ASSUME dataregister:type [[, dataregister:type]]...  
 ASSUME register:ERROR [[, register:ERROR]]...  
 ASSUME [[register:]] NOTHING [[, register:NOTHING]]...  
 ```  
   
-## Notes  
- Une fois qu' `ASSUME` mise en œuvre, les surveillée assembleur des modifications apportées aux valeurs des registres donnés.  **ERREUR** génère une erreur si le registre est utilisé.  **RIEN** supprime la vérification des erreurs de registre.  Vous pouvez combiner plusieurs types d'hypothèses dans une instruction.  
+## <a name="remarks"></a>Notes  
+ Après une `ASSUME` est placé entre en vigueur, l’assembleur surveille les modifications apportées aux valeurs des registres donnés. **ERREUR** génère une erreur si le Registre est utilisé. **NOTHING** supprime inscrire la vérification des erreurs. Vous pouvez combiner les différents types d’hypothèses dans une instruction.  
   
-## Voir aussi  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)

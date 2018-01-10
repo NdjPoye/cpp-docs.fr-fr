@@ -17,18 +17,19 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d7d596396ec46aa1f30be00743ab6fe95d49a865
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c82cf91c61f047a80c513d1aead25fe73c77715
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-com-10-component-wizard"></a>Assistant Composant COM+ 1.0 ATL
 Utilisez cet Assistant pour ajouter un objet à votre projet qui prend en charge les services COM + 1.0, notamment les transactions.  
   
  Vous pouvez spécifier si l’objet prend en charge les interfaces doubles et l’automatisation. Vous pouvez également indiquer la prise en charge de l’interface d’informations d’erreur, contrôle de l’objet amélioré, transactions et asynchrone message queuing.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  À compter de Visual Studio 2008, le script d’inscription produit par cet Assistant inscrira ses composants COM sous **HKEY_CURRENT_USER** au lieu de **HKEY_LOCAL_MACHINE**. Pour modifier ce comportement, définissez la **inscrire le composant pour tous les utilisateurs** option de l’Assistant ATL.  
   
 ## <a name="names"></a>Noms  

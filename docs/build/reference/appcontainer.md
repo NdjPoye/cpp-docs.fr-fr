@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 62b23ed04783971bf37442237e4db770b7427a8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 19e926cbfd1fc58e04c8370825dd83eacff05dfe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appcontainer"></a>/APPCONTAINER
 Marque un fichier exécutable qui doit s’exécuter dans un conteneur d’application, par exemple une [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] ou une application Windows universelle.  
@@ -32,7 +33,7 @@ Marque un fichier exécutable qui doit s’exécuter dans un conteneur d’appli
 /APPCONTAINER[:NO]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un fichier exécutable dont l’option **/APPCONTAINER** est définie ne peut être exécuté que dans un conteneur d’application, ce qui correspond à l’environnement d’isolation des processus introduit dans Windows 8. Pour [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] et les applications Windows universelles, cette option doit être définie.  
   
 ## <a name="see-also"></a>Voir aussi  

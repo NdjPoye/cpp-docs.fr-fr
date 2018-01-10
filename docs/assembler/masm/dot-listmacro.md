@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 38663ea34837a17d474ea1b1076cf2d339ba7885
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6f7ed9e0fde8137fb9b2098b74b6ca6965a2e325
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="listmacro"></a>.LISTMACRO
 Démarre la liste d’instructions d’expansion macro qui génèrent du code ou des données.  
@@ -32,7 +33,7 @@ Démarre la liste d’instructions d’expansion macro qui génèrent du code ou
   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Il s'agit de la valeur par défaut. Identique à [. XALL](../../assembler/masm/dot-xall.md).  
   
 ## <a name="see-also"></a>Voir aussi  

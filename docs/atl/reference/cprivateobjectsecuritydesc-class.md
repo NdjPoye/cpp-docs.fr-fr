@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 310ccd778a0d681afad40b7dd67067c9e9af875d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef8836dec60eca6a7dac13af21c81adf72b5b319
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Classe de CPrivateObjectSecurityDesc
 Cette classe représente un objet de descripteur de sécurité objet privé.  
@@ -61,7 +62,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 |-|-|  
 |[opérateur =](#operator_eq)|Opérateur d'assignation.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe, dérivée de [CSecurityDesc](../../atl/reference/csecuritydesc-class.md), fournit des méthodes pour créer et gérer le descripteur de sécurité d’un objet privé.  
   
  Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le Kit de développement logiciel Windows.  
@@ -71,7 +72,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
   
  `CPrivateObjectSecurityDesc`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h  
   
 ##  <a name="converttoautoinherit"></a>CPrivateObjectSecurityDesc::ConvertToAutoInherit  
@@ -101,7 +102,7 @@ bool ConvertToAutoInherit(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode tente de déterminer si les entrées dans le contrôle d’accès discrétionnaire (DACL) de liste et une liste de contrôle d’accès système (SACL) du descripteur de sécurité en cours ont été héritées à partir du descripteur de sécurité parent. Il appelle le [ConvertToAutoInheritPrivateObjectSecurity](http://msdn.microsoft.com/library/windows/desktop/aa376403) (fonction).  
   
 ##  <a name="cprivateobjectsecuritydesc"></a>CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
@@ -111,7 +112,7 @@ bool ConvertToAutoInherit(
 CPrivateObjectSecurityDesc() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Initialise le `CPrivateObjectSecurityDesc` objet.  
   
 ##  <a name="dtor"></a>CPrivateObjectSecurityDesc :: ~ CPrivateObjectSecurityDesc  
@@ -121,7 +122,7 @@ CPrivateObjectSecurityDesc() throw();
 ~CPrivateObjectSecurityDesc() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le destructeur libère toutes les ressources attribuées et supprime le descripteur de sécurité de l’objet privé.  
   
 ##  <a name="create"></a>CPrivateObjectSecurityDesc::Create  
@@ -173,7 +174,7 @@ bool Create(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode appelle [CreatePrivateObjectSercurity](http://msdn.microsoft.com/library/windows/desktop/aa376405) ou [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581).  
   
  La deuxième méthode, ce qui permet de spécifier le type d’objet GUID du nouvel objet ou de contrôle de la façon dont les ACE sont héritées, est uniquement disponible sur les systèmes exécutant Windows 2000 et versions ultérieures.  
@@ -200,7 +201,7 @@ bool Get(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le descripteur de sécurité est une structure et les données associées qui contient les informations de sécurité pour un objet sécurisable.  
   
 ##  <a name="operator_eq"></a>CPrivateObjectSecurityDesc::operator =  
@@ -254,7 +255,7 @@ bool Set(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La deuxième méthode, ce qui permet de spécifier le type d’objet GUID de l’objet ou le contrôle de la façon dont les ACE sont héritées, est uniquement disponible sur les systèmes exécutant Windows 2000 et versions ultérieures.  
   
 ## <a name="see-also"></a>Voir aussi  

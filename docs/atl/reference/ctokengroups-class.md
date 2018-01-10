@@ -26,11 +26,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a6c08f9105d51112f1261a79bd5b96341b5504f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b6f0e8e2f63d5765e0e888c7a98cea77c862e241
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctokengroups-class"></a>Classe de CTokenGroups
 Cette classe est un wrapper pour le **TOKEN_GROUPS** structure.  
@@ -73,14 +74,14 @@ class CTokenGroups
 |[CTokenGroups::operator les TOKEN_GROUPS const *](#operator_const_token_groups__star)|Les casts le `CTokenGroups` objet vers un pointeur vers le **TOKEN_GROUPS** structure.|  
 |[CTokenGroups::operator =](#operator_eq)|Opérateur d'assignation.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un [jeton d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374909) est un objet qui décrit le contexte de sécurité d’un processus ou thread et est alloué à chaque utilisateur connecté à un système Windows NT ou Windows 2000.  
   
  Le **CTokenGroups** classe est un wrapper pour le [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) structure, contenant des informations sur les identificateurs de sécurité (SID de) groupe dans un jeton d’accès.  
   
  Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le Kit de développement logiciel Windows.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h  
   
 ##  <a name="add"></a>CTokenGroups::Add  
@@ -101,7 +102,7 @@ void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
  *rTokenGroups*  
  A [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) structure.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ces méthodes ajoutent un ou plusieurs `CSid` objets et leurs attributs associés à le `CTokenGroups` objet.  
   
 ##  <a name="ctokengroups"></a>CTokenGroups::CTokenGroups  
@@ -117,7 +118,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
  `rhs`  
  Le `CTokenGroups` objet ou [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) structure permettant de construire le `CTokenGroups` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `CTokenGroups` objet peut éventuellement être créé à l’aide un **TOKEN_GROUPS** précédemment définie ou structure `CTokenGroups` objet.  
   
 ##  <a name="dtor"></a>CTokenGroups :: ~ CTokenGroups  
@@ -127,7 +128,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 virtual ~CTokenGroups() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le destructeur libère toutes les ressources attribuées.  
   
 ##  <a name="delete"></a>CTokenGroups::Delete  
@@ -168,7 +169,7 @@ UINT GetCount() const throw();
 UINT GetLength() const throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Retourne la taille totale de la **CTokenGroup** objet, en octets.  
   
 ##  <a name="getptoken_groups"></a>CTokenGroups::GetPTOKEN_GROUPS  
@@ -197,7 +198,7 @@ void GetSidsAndAttributes(
  `pAttributes`  
  Pointeur vers un tableau de valeurs de type DWORD. Si ce paramètre est omis ou NULL, les attributs ne sont pas récupérées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode énumérera tous les `CSid` objets contenus dans le `CTokenGroups` de l’objet et placer les et (facultativement) les indicateurs d’attributs dans les objets array.  
   
 ##  <a name="lookupsid"></a>CTokenGroups::LookupSid  
@@ -219,7 +220,7 @@ bool LookupSid(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne true si le `CSid` est trouvé, false dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Paramètre `pdwAttributes` à NULL offre un moyen permettant de confirmer l’existence de la `CSid` sans accéder à l’attribut. Notez que cette méthode ne doit pas être utilisée pour vérifier les droits d’accès comme des résultats incorrects peuvent se produire sous Windows 2000. Les applications doivent utiliser à la place la [CAccessToken::CheckTokenMembership](../../atl/reference/caccesstoken-class.md#checktokenmembership) (méthode).  
   
 ##  <a name="operator_eq"></a>CTokenGroups::operator =  
@@ -244,7 +245,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 operator const TOKEN_GROUPS *() const throw(...);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Convertit une valeur en un pointeur vers le [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) structure.  
   
 ## <a name="see-also"></a>Voir aussi  

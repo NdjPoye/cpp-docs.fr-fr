@@ -24,11 +24,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3b1c0369acceb792af26b7e9c8e8fd49f82a4468
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aa7813b694cfea614bc80946d91c8f1bd977e627
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iobjectsafetyimpl-class"></a>Classe de IObjectSafetyImpl
 Cette classe fournit une implémentation par défaut de la `IObjectSafety` interface pour permettre à un client récupérer et définir des niveaux de sécurité d’un objet.  
@@ -69,7 +70,7 @@ class IObjectSafetyImpl
 |----------|-----------------|  
 |[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|Stocke le niveau de sécurité de l’objet actuel.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Classe `IObjectSafetyImpl` fournit une implémentation par défaut de `IObjectSafety`. Le `IObjectSafety` interface permet à un client récupérer et définir des niveaux de sécurité d’un objet. Par exemple, un navigateur web peut appeler **IObjectSafety::SetInterfaceSafetyOptions** pour rendre un contrôle pour l’initialisation ou sécurisé pour le script.  
   
  Notez que l’utilisation du [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category) macro avec le **CATID_SafeForScripting** et **CATID_SafeForInitializing** catégories de composants fournit une alternative manière de spécifier qu’un composant est sécurisé.  
@@ -81,7 +82,7 @@ class IObjectSafetyImpl
   
  `IObjectSafetyImpl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlctl.h  
   
 ##  <a name="getinterfacesafetyoptions"></a>IObjectSafetyImpl::GetInterfaceSafetyOptions  
@@ -94,7 +95,7 @@ HRESULT GetInterfaceSafetyOptions(
     DWORD* pdwEnabledOptions);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation retourne les valeurs appropriées pour n’importe quelle interface prise en charge par l’implémentation de l’objet de **IUnknown::QueryInterface**.  
   
 > [!IMPORTANT]
@@ -119,7 +120,7 @@ HRESULT SetInterfaceSafetyOptions(
     DWORD dwEnabledOptions);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation retourne **E_NOINTERFACE** pour toute interface ne pas pris en charge par l’implémentation de l’objet de **IUnknown::QueryInterface**.  
   
 > [!IMPORTANT]

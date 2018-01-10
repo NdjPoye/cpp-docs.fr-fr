@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed767299778b65a7275bbfd225daaf46ec0e98be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7b441f41106544633bd691c409fa04c989146f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcprofileallocscale"></a>VCPROFILE_ALLOC_SCALE
 Modifier la quantité de mémoire allouée pour contenir les données de profil.  
@@ -34,7 +35,7 @@ VCPROFILE_ALLOC_SCALE=scale_value
  `scale_value`  
  La valeur d’échelle pour la quantité de mémoire que vous souhaitez pour les scénarios de test en cours d’exécution.  La valeur par défaut est 1.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Dans de rares cas, il ne sera pas y avoir assez de mémoire disponible pour prendre en charge lors de l’exécution de scénarios de test de collecte des données de profil.  Dans ce cas, vous pouvez augmenter la quantité de mémoire avec `VCPROFILE_ALLOC_SCALE`.  
   
  Si vous recevez un message d’erreur pendant une série de tests qui indique que vous disposez d’une mémoire insuffisante, affecter une valeur supérieure à `VCPROFILE_ALLOC_SCALE`, jusqu'à ce que l’exécution du test terminé sans erreurs de mémoire insuffisante.  
