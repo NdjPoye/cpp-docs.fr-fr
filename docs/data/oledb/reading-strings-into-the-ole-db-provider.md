@@ -1,37 +1,39 @@
 ---
-title: "Lecture de cha&#238;nes dans le fournisseur OLE&#160;DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fournisseurs OLE DB, lire des chaînes dans les"
+title: "La lecture de chaînes dans le fournisseur OLE DB | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e798b3e85bbb5d6b362900c25d4c3414458ea63d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Lecture de cha&#238;nes dans le fournisseur OLE&#160;DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La fonction `RMyProviderRowset::Execute` ouvre un fichier et procède à la lecture des chaînes.  Le consommateur passe le nom de fichier au fournisseur en appelant [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx).  Le fournisseur reçoit le nom de fichier et le stocke dans la variable membre `m_szCommandText`.  `Execute` lit le nom de fichier depuis `m_szCommandText`.  Si le nom de fichier n'est pas valide ou si le fichier n'est pas disponible, `Execute` retourne une erreur.  Sinon, il ouvre le fichier et appelle `fgets` pour récupérer les chaînes.  Pour chaque jeu de chaînes qu'elle lit, `Execute` crée une instance de l'enregistrement utilisateur \(`CAgentMan`\) et la place dans un tableau.  
+# <a name="reading-strings-into-the-ole-db-provider"></a>Lecture de chaînes dans le fournisseur OLE DB
+Le `RMyProviderRowset::Execute` fonction ouvre un fichier et lit les chaînes. Le consommateur passe le nom de fichier au fournisseur en appelant [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx). Le fournisseur reçoit le nom de fichier et le stocke dans la variable membre `m_szCommandText`. `Execute`lit le nom de fichier `m_szCommandText`. Si le nom de fichier n’est pas valide ou le fichier n’est pas disponible, `Execute` renvoie une erreur. Sinon, il ouvre le fichier et appelle `fgets` pour récupérer les chaînes. Pour chaque jeu de chaînes qu’il lit, `Execute` crée une instance de l’enregistrement utilisateur (`CAgentMan`) et le place dans un tableau.  
   
- Si le fichier ne peut pas être ouvert, `Execute` doit retourner **DB\_E\_NOTABLE**.  Si elle retourne **E\_FAIL**, le fournisseur ne fonctionnera pas avec beaucoup de consommateurs et ne réussira pas les [tests de compatibilité](../../data/oledb/testing-your-provider.md) OLE DB.  
+ Si le fichier ne peut pas être ouvert, `Execute` doit retourner **DB_E_NOTABLE**. Si elle retourne **E_FAIL** au lieu de cela, le fournisseur ne fonctionnera pas avec beaucoup de consommateurs et OLE DB ne peut pas passer [les tests de conformité](../../data/oledb/testing-your-provider.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Description  
- La fonction `Execute` modifiée ressemble au texte suivant :  
+### <a name="description"></a>Description  
+ Le `Execute` fonction ressemble à ceci :  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 /////////////////////////////////////////////////////////////////////////  
@@ -105,5 +107,5 @@ public:
 }  
 ```  
   
-## Voir aussi  
- [Implémentation d'un fournisseur simple accessible en lecture seule](../../data/oledb/implementing-the-simple-read-only-provider.md)
+## <a name="see-also"></a>Voir aussi  
+ [Implémentation d’un fournisseur simple accessible en lecture seule](../../data/oledb/implementing-the-simple-read-only-provider.md)

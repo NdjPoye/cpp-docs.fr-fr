@@ -32,11 +32,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dd57f24bd6d790cc03c3e5bbb1e58ec45eee86e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8e2188dc477a81477b65db22bcd06390a4b6773c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locale-categories"></a>Catégories de paramètres régionaux
 ## <a name="syntax"></a>Syntaxe  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/24/2017
   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les catégories de paramètres régionaux sont des constantes manifestes utilisées par les routines de localisation pour spécifier dans quelle portion des informations de paramètres régionaux d’un programme les informations seront utilisées. Les paramètres régionaux font référence à la localité (ou au pays/à la région) pour laquelle certains aspects de votre programme peuvent être personnalisés. Les zones dépendant des paramètres régionaux comprennent par exemple la mise en forme des dates et le format d'affichage des valeurs monétaires.  
   
 |Catégorie de paramètres régionaux|Parties de programme affectées|  

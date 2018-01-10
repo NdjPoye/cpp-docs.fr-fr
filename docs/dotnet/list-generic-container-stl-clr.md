@@ -1,32 +1,33 @@
 ---
-title: "list::generic_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::generic_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_container (membre) (STL/CLR)"
+title: List::generic_container (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::generic_container
+dev_langs: C++
+helpviewer_keywords: generic_container member [STL/CLR]
 ms.assetid: 1a8b708e-3c75-4551-a86e-5b50d6be706a
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5f04032a3777e9537a7565f479d2a3dce5b407cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# list::generic_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le type de l'interface générique pour le conteneur.  
+# <a name="listgenericcontainer-stlclr"></a>list::generic_container (STL/CLR)
+Le type de l’interface générique pour le conteneur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef Microsoft::VisualC::StlClr::  
@@ -34,10 +35,10 @@ typedef Microsoft::VisualC::StlClr::
     generic_container;  
 ```  
   
-## Notes  
- Le type décrit l'interface générique pour cette classe de conteneur de modèle.  
+## <a name="remarks"></a>Notes  
+ Le type décrit l’interface générique pour cette classe de conteneur de modèle.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_list_generic_container.cpp   
@@ -81,18 +82,21 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a b c d**  
- **a b c d e**   
-## Configuration requise  
- **Header :** \<cliext\/list\>  
+```Output  
+a b c  
+a b c  
+a b c d  
+a b c d e  
+```  
   
- **Espace de noms :** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/liste >  
   
-## Voir aussi  
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
  <xref:Microsoft.VisualC.StlClr.IList%601>   
- [list](../dotnet/list-stl-clr.md)   
- [list::generic\_iterator](../dotnet/list-generic-iterator-stl-clr.md)   
- [list::generic\_reverse\_iterator](../dotnet/list-generic-reverse-iterator-stl-clr.md)   
- [list::generic\_value](../dotnet/list-generic-value-stl-clr.md)
+ [liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::generic_iterator (STL/CLR)](../dotnet/list-generic-iterator-stl-clr.md)   
+ [List::generic_reverse_iterator (STL/CLR)](../dotnet/list-generic-reverse-iterator-stl-clr.md)   
+ [list::generic_value (STL/CLR)](../dotnet/list-generic-value-stl-clr.md)

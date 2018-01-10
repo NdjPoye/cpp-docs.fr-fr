@@ -28,11 +28,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ee67049241067285f564e59791f408347cc0c747
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16aff4db1a04c31b3b45c9a61f74c44d6c9465f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filename-search-functions"></a>Fonctions de recherche de nom de fichier
 Ces fonctions recherchent des noms de fichiers spécifiés et arrêtent ces recherches :  
@@ -43,7 +44,7 @@ Ces fonctions recherchent des noms de fichiers spécifiés et arrêtent ces rech
   
 -   [_findclose](../c-runtime-library/reference/findclose.md)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction `_findfirst` fournit des informations sur la première instance d’un nom de fichier correspondant au fichier spécifié dans l’argument `filespec` . Vous pouvez utiliser dans `filespec` n’importe quelle combinaison de caractères génériques prise en charge par le système d’exploitation hôte.  
   
  Les fonctions retournent des informations sur les fichiers dans une structure `_finddata_t`, définie dans IO.h. Les diverses fonctions de la famille utilisent de nombreuses variations sur la structure `_finddata_t` . La structure de base `_finddata_t` inclut les éléments suivants :  

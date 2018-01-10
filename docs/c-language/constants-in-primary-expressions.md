@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 11b316ce00dd961c2c7d0dbd91a95d9a71df6f69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96798abe1c70ee83a1e897133ef5036742d8771c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constants-in-primary-expressions"></a>Constantes dans les expressions primaires
 Un opérande constant a la valeur et le type de la valeur constante qu’il représente. Une constante caractère a le type `int`. Une constante entière a un type `int`, **long**, `unsigned int` ou `unsigned long`, selon la taille de l'entier et la manière dont la valeur est spécifiée. Reportez-vous à l'article [Constantes](../c-language/c-constants.md) pour plus d'informations.  

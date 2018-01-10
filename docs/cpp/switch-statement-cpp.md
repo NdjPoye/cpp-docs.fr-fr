@@ -4,31 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - default_cpp
 - switch_cpp
 - case_cpp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - switch keyword [C++]
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5e05299d88cadfafb9ccb7523aac33096b90d46b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e668756e8cabafbdef522d6754487efe452f96de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="switch-statement-c"></a>switch, instruction (C++)
 Autorise la sélection parmi plusieurs sections de code, selon la valeur d'une expression intégrale.  
@@ -41,7 +39,7 @@ Autorise la sélection parmi plusieurs sections de code, selon la valeur d'une e
    [default  : statement]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le *expression* doit être de type intégral ou d’un type de classe pour laquelle il existe une conversion non ambiguë en type intégral. La promotion intégrale est exécutée comme décrit dans [Conversions Standard](standard-conversions.md).  
   
  Le `switch` corps d’instruction se compose d’une série de **cas** étiquettes et éventuellement un **par défaut** étiquette. Aucun deux expressions constantes dans **cas** instructions peuvent correspondre à la même valeur. Le **par défaut** étiquette peut apparaître qu’une seule fois. Les instructions étiquetées ne sont pas des exigences syntaxiques, mais sans elles l'instruction `switch` n'a pas de sens.   L'instruction par défaut n'a pas besoin d'être à la fin ; elle peut apparaître n'importe où dans le corps de l'instruction switch. Une étiquette case ou default ne peut apparaître que dans une instruction switch.  

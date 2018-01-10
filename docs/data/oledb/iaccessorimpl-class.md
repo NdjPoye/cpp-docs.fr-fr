@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9601c60f9942719a5360b30acb0c98d86b9300df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: fb76054313946df5b085081a3a619ae3fb3de2ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl, classe
 Fournit une implémentation de la [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx) interface.  
@@ -65,10 +68,10 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 |[GetBindings](../../data/oledb/iaccessorimpl-getbindings.md)|Retourne les liaisons dans un accesseur.|  
 |[ReleaseAccessor](../../data/oledb/iaccessorimpl-releaseaccessor.md)|Libère un accesseur.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Ce champ est obligatoire sur les commandes et les ensembles de lignes. OLE DB requiert que les fournisseurs implémenter un **HACCESSOR**, qui est une balise à un tableau de [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) structures. **HACCESSOR**s fournie par `IAccessorImpl` sont des adresses de la `BindType` structures. Par défaut, `BindType` est défini comme un **ATLBINDINGS** dans `IAccessorImpl`de définition de modèle. `BindType`fournit un mécanisme utilisé par `IAccessorImpl` pour suivre le nombre d’éléments dans son **DBBINDING** ainsi qu’un indicateur de nombre et d’accesseur de référence de tableau.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

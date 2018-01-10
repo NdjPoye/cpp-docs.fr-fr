@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ba0314abe9d70f25dc458abdbbf41f798fff263
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 715f337a4c94e65641660b4becbb33d6a151d9ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="limits-on-floating-point-constants"></a>Limites des constantes à virgule flottante
 **Section spécifique à Microsoft**  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="limits-on-floating-point-constants"></a>Limites sur les constantes à virgule flottante  
   
-|Constante|Signification|Valeur|  
+|Constante|Signification|Value|  
 |--------------|-------------|-----------|  
 |**FLT_DIG**<br />**DBL_DIG**<br />**LDBL_DIG**|Nombre de chiffres, *q*, de sorte qu’un nombre à virgule flottante avec *q* chiffres décimaux peut être arrondi en représentation à virgule flottante puis restauré à sa valeur initiale sans perte de précision.|6<br />15<br />15|  
 |**FLT_EPSILON**<br />**DBL_EPSILON**<br />**LDBL_EPSILON**|Plus petit nombre positif *x* de sorte que *x* + 1,0 n’est pas égal à 1,0|1,192092896e-07F<br />2,2204460492503131e-016<br />2,2204460492503131e-016|  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
   
  Notez que les informations fournies dans le tableau ci-dessus peuvent différer dans des implémentations futures.  
   
- **Fin de la section spécifique à Microsoft**  
+ **FIN de la section spécifique à Microsoft**  
   
 ## <a name="see-also"></a>Voir aussi  
  [Constantes à virgule flottante C](../c-language/c-floating-point-constants.md)

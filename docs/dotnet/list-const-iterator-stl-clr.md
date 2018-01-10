@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 76e59007b1ed45e01310795f7ada35576a57bb60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4927349bc0f6519bfaa2b64e8de89d8ad74a4b7b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="listconstiterator-stlclr"></a>list::const_iterator (STL/CLR)
 Type d'un itérateur constant pour la séquence contrôlée.  
@@ -30,7 +33,7 @@ Type d'un itérateur constant pour la séquence contrôlée.
 typedef T2 const_iterator;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le type décrit un objet de type non spécifié `T2` qui peut servir d’un itérateur à accès aléatoire constant pour la séquence contrôlée.  
   
 ## <a name="example"></a>Exemple  
@@ -61,7 +64,7 @@ int main()
 a b c  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/liste >  
   
  **Namespace :** cliext  

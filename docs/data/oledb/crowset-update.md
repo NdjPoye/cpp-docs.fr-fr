@@ -23,11 +23,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 17541ea324fa7d6c314501f1e09519881a1fff7c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 26cbada107bbefe4c5e32243f2761193b1912a0d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetupdate"></a>CRowset::Update
 Transmet toutes les modifications apportées à la ligne en cours depuis la dernière extraction ou **mise à jour** appeler sur celle-ci.  
@@ -56,12 +59,12 @@ Transmet toutes les modifications apportées à la ligne en cours depuis la dern
 ## <a name="return-value"></a>Valeur de retour  
  `HRESULT` standard.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Transmet les modifications apportées à la ligne actuelle dans la mesure où cette ligne dernière extraction ou mis à jour en attente (à l’aide de **mise à jour** ou [UpdateAll](../../data/oledb/crowset-updateall.md)). En général, vous appelez [SetData](../../data/oledb/crowset-setdata.md) pour définir des valeurs de données dans des colonnes dans une ligne, puis appelez **mise à jour** pour transmettre ces modifications.  
   
  Cette méthode requiert l’interface facultative `IRowsetUpdate`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si c’est le cas, la méthode retourne **E_NOINTERFACE**. Vous devez également définir **DBPROP_IRowsetUpdate** à `VARIANT_TRUE` avant d’appeler **ouvrir** sur la table ou d’une commande qui contient l’ensemble de lignes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

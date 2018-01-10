@@ -1,34 +1,36 @@
 ---
-title: "IDBCreateCommandImpl, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::IDBCreateCommandImpl"
-  - "IDBCreateCommandImpl"
-  - "ATL.IDBCreateCommandImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDBCreateCommandImpl (classe)"
+title: Idbcreatecommandimpl, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::IDBCreateCommandImpl
+- IDBCreateCommandImpl
+- ATL.IDBCreateCommandImpl
+dev_langs: C++
+helpviewer_keywords: IDBCreateCommandImpl class
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1cf29d8897a37b879511d048aafcf7fe8497f46d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# IDBCreateCommandImpl, classe
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La classe [oledbIDBCreateCommand](https://msdn.microsoft.com/en-us/library/ms711625.aspx) fournit une implémentation de l'interface .  
+# <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl, classe
+Fournit une implémentation de la [IDBCreateCommand](https://msdn.microsoft.com/en-us/library/ms711625.aspx) interface.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template <class T, class CommandClass >  
@@ -36,27 +38,27 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
    : public IDBCreateCommand  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
- L'objet session dérivé d'`IDBCreateCommandImpl`.  
+ Dérivé de l’objet de session `IDBCreateCommandImpl`.  
   
  `CommandClass`  
- La classe de commande.  
+ Votre classe de commande.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Méthodes d'interface  
+### <a name="interface-methods"></a>Méthodes d’interface  
   
 |||  
 |-|-|  
 |[CreateCommand](../../data/oledb/idbcreatecommandimpl-createcommand.md)|Crée une nouvelle commande.|  
   
-## Notes  
- Facultative sur l'objet session pour obtenir une nouvelle commande.  
+## <a name="remarks"></a>Notes  
+ Une interface facultative sur l’objet de session pour obtenir une nouvelle commande.  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
- [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

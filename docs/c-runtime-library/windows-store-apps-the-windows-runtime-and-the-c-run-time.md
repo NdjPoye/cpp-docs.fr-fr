@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b332e392db2ca788d041cb73e73cf42cce85906c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c75d66fcbe9ef437980878e7789a82dc94b68573
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-store-apps-the-windows-runtime-and-the-c-run-time"></a>Applications Windows Store, Windows Runtime et exécution C
 Les applications du [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] sont des programmes qui s'exécutent dans Windows Runtime, qui s'exécute lui-même sur [!INCLUDE[win8](../build/reference/includes/win8_md.md)].  Windows Runtime est un environnement fiable qui contrôle les fonctions, les variables et les ressources auxquelles une application [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] a accès. Cependant, par sa conception, Windows Runtime présente des restrictions qui empêchent l’utilisation de la plupart des fonctionnalités des bibliothèques Runtime C (CRT) dans les applications du [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)].  

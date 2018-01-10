@@ -1,34 +1,36 @@
 ---
-title: "Comment&#160;: convertir la cha&#238;ne char * en tableau System::Byte | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tableaux (C++), caractère"
-  - "tableaux de caractères, convertir en tableaux System::Byte"
-  - "exemples (C++), tableaux"
-  - "exemples (C++), chaînes"
+title: "Comment : convertir char * chaîne en tableau System::Byte | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- examples [C++], strings
+- arrays [C++], character
+- character arrays, converting to System::Byte arrays
+- examples [C++], arrays
 ms.assetid: de9bc4eb-773c-4796-a496-9b90ca986503
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5c8a1dd1b126b77f14815a90e7b4599fe0ce14bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Comment&#160;: convertir la cha&#238;ne char * en tableau System::Byte
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La façon la plus efficace de convertir une chaîne `char *` en tableau <xref:System.Byte> consiste à utiliser la classe <xref:System.Runtime.InteropServices.Marshal>.  
+# <a name="how-to-convert-char--string-to-systembyte-array"></a>Comment : convertir la chaîne char * en tableau System::Byte
+La façon la plus efficace de convertir un `char *` de string en un <xref:System.Byte> tableau consiste à utiliser <xref:System.Runtime.InteropServices.Marshal> classe.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // convert_native_string_to_Byte_array.cpp  
@@ -60,5 +62,5 @@ int main() {
 Native String  
 ```  
   
-## Voir aussi  
- [Utilisation de l'interopérabilité C\+\+ \(PInvoke implicite\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

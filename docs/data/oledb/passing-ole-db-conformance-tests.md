@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8ef7e32f56fdff81c7a66a1dfcc6c613201e2f49
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0df51ea0086104a45385673b310b5717bfa1c9ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Tests de compatibilité OLE DB
 Pour rendre les fournisseurs plus homogènes, le Kit de développement accès aux données fournit un ensemble de tests de compatibilité OLE DB. Les tests de vérifient tous les aspects de votre fournisseur et vous donnent probable que vos fonctions de fournisseur comme prévues. Vous pouvez trouver les tests de compatibilité OLE DB sur le SDK Microsoft Data Access. Cette section se concentre sur ce que vous devez faire pour réussir les tests de conformité. Pour plus d’informations sur l’exécution des tests de compatibilité OLE DB, consultez le Kit de développement.  

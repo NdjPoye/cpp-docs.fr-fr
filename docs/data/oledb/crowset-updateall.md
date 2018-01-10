@@ -24,11 +24,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5842fb52d2dae255186bb3e56da6e5a6744e1f0a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 048db34bd08ab3db5769fbcb096578a7a6ae8073
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetupdateall"></a>CRowset::UpdateAll
 Transmet toutes les modifications apportées à toutes les lignes depuis la dernière extraction ou **mise à jour** appeler sur celle-ci.  
@@ -54,7 +57,7 @@ Transmet toutes les modifications apportées à toutes les lignes depuis la dern
  `ppStatus`  
  [out] Un pointeur vers l’emplacement où **mise à jour** retourne la valeur d’état de ligne. Aucun état n’est retournée si `ppStatus` a la valeur null.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Transmet toutes les modifications apportées à toutes les lignes depuis ces lignes ont été dernière extraction ou mises à jour avec [mise à jour](../../data/oledb/crowset-update.md) ou `UpdateAll`. `UpdateAll`met à jour chaque ligne qui a été modifié, indépendamment de si vous avez toujours le handle pour eux (voir `pphRow`) ou non.  
   
  Par exemple, si vous avez utilisé **insérer** pour insérer cinq lignes dans un ensemble de lignes, vous pouvez appeler **mettre à jour** cinq fois ou appelez `UpdateAll` une fois pour mettre à jour toutes les.  
@@ -64,7 +67,7 @@ Transmet toutes les modifications apportées à toutes les lignes depuis la dern
 ## <a name="return-value"></a>Valeur de retour  
  `HRESULT` standard.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

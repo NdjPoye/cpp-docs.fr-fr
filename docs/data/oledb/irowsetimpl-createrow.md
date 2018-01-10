@@ -1,36 +1,38 @@
 ---
-title: "IRowsetImpl::CreateRow | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetImpl.CreateRow"
-  - "ATL.IRowsetImpl.CreateRow"
-  - "ATL::IRowsetImpl::CreateRow"
-  - "CreateRow"
-  - "IRowsetImpl::CreateRow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateRow (méthode)"
+title: IRowsetImpl::CreateRow | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetImpl.CreateRow
+- ATL.IRowsetImpl.CreateRow
+- ATL::IRowsetImpl::CreateRow
+- CreateRow
+- IRowsetImpl::CreateRow
+dev_langs: C++
+helpviewer_keywords: CreateRow method
 ms.assetid: b01c430c-9484-4fef-a6cf-a2e8d9d99130
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f90a5de73b5eea37eea192a4886fe29d1d8b435b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetImpl::CreateRow
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-A helper method called by [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) to allocate a new **HROW**.  
+# <a name="irowsetimplcreaterow"></a>IRowsetImpl::CreateRow
+Une méthode d’assistance appelée par [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) pour allouer une nouvelle **HROW**.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -41,21 +43,21 @@ A helper method called by [GetNextRows](../../data/oledb/irowsetimpl-getnextrows
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *lRowsOffset*  
- Cursor position of the row being created.  
+ Position du curseur de la ligne en cours de création.  
   
  *cRowsObtained*  
- A reference passed back to the user indicating the number of rows created.  
+ Une référence est passée à l’utilisateur indiquant le nombre de lignes créées.  
   
  *rgRows*  
- An array of **HROW**s returned to the caller with the newly created row handles.  
+ Un tableau de **HROW**s retourné à l’appelant avec les poignées de ligne nouvellement créée.  
   
-## Notes  
- If the row exists, this method calls [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) and returns.  Otherwise, it allocates a new instance of the RowClass template variable and adds it to [m\_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md).  
+## <a name="remarks"></a>Notes  
+ Si la ligne existe, cette méthode appelle [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) et le retourne. Dans le cas contraire, il alloue une nouvelle instance de la variable de modèle RowClass et ajoute à [m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md).  
   
-## Configuration requise  
- **Header:** atldb.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [IRowsetImpl, classe](../../data/oledb/irowsetimpl-class.md)

@@ -1,34 +1,36 @@
 ---
-title: "ICommandImpl::Cancel | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandImpl::Cancel"
-  - "Cancel"
-  - "ICommandImpl.Cancel"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Cancel (méthode)"
+title: ICommandImpl::Cancel | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ICommandImpl::Cancel
+- Cancel
+- ICommandImpl.Cancel
+dev_langs: C++
+helpviewer_keywords: Cancel method
 ms.assetid: 47c1ca06-35db-4a2e-bd49-880138961f47
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 154e9dbf42d879a9ecad39dfdb1b35e4b400cd1a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ICommandImpl::Cancel
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Annule l'exécution de la commande actuelle.  
+# <a name="icommandimplcancel"></a>ICommandImpl::Cancel
+Annule l’exécution de la commande actuelle.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -36,12 +38,12 @@ STDMETHOD(Cancel)( );
   
 ```  
   
-## Notes  
- Consultez [ICommand::Cancel](https://msdn.microsoft.com/en-us/library/ms714402.aspx) \(dans le *Guide de référence du programmeur OLE DB*\).  
+## <a name="remarks"></a>Notes  
+ Consultez [ICommand::Cancel](https://msdn.microsoft.com/en-us/library/ms714402.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
- [ICommandImpl, classe](../../data/oledb/icommandimpl-class.md)   
+## <a name="see-also"></a>Voir aussi  
+ [ICommandImpl (classe)](../../data/oledb/icommandimpl-class.md)   
  [ICommandImpl::CancelExecution](../../data/oledb/icommandimpl-cancelexecution.md)

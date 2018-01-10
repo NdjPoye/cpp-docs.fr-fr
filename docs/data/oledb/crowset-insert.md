@@ -1,73 +1,74 @@
 ---
-title: "CRowset::Insert | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CRowset<TAccessor>.Insert"
-  - "CRowset.Insert"
-  - "CRowset<TAccessor>.Insert"
-  - "CRowset<TAccessor>::Insert"
-  - "ATL::CRowset<TAccessor>::Insert"
-  - "ATL.CRowset.Insert"
-  - "CRowset::Insert"
-  - "ATL::CRowset::Insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Insert (méthode)"
+title: CRowset::Insert | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CRowset<TAccessor>.Insert
+- CRowset.Insert
+- CRowset<TAccessor>.Insert
+- CRowset<TAccessor>::Insert
+- ATL::CRowset<TAccessor>::Insert
+- ATL.CRowset.Insert
+- CRowset::Insert
+- ATL::CRowset::Insert
+dev_langs: C++
+helpviewer_keywords: Insert method
 ms.assetid: 6a64a1c3-10ac-4296-8685-0fd6fe63a13b
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 75dfe26fa04f8e639b3d391a9dc703a9a98c70c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::Insert
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Créé et initialise une nouvelle ligne en utilisant les données provenant de l'accesseur.  
+# <a name="crowsetinsert"></a>CRowset::Insert
+Crée et initialise une nouvelle ligne à l’aide des données à partir de l’accesseur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      HRESULT Insert(   
-   int nAccessor = 0,   
-   bool bGetHRow = false    
+      HRESULT Insert(   
+   int nAccessor = 0,   
+   bool bGetHRow = false    
 ) throw( );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `nAccessor`  
- \[in\] L'index de l'accesseur à utiliser pour insérer les données.  
+ [in] Le numéro de l’accesseur à utiliser pour insérer les données.  
   
  *bGetHRow*  
- \[in\] indique si le descripteur de la ligne insérée est extraite.  
+ [in] Indique si le handle de la ligne insérée est récupéré.  
   
-## Valeur de retour  
- Un `HRESULT` standard.  
+## <a name="return-value"></a>Valeur de retour  
+ `HRESULT` standard.  
   
-## Notes  
- Cette méthode requiert l'interface facultative `IRowsetChange`, qui peut ne pas être prise en charge chez tous les fournisseurs ; dans ce cas, la méthode retourne **E\_NOINTERFACE**.  Vous devez également définir **DBPROP\_IRowsetChange** sur `VARIANT_TRUE` avant d'appeler **Ouvrir** sur la table ou la commande contenant l'ensemble de lignes.  
+## <a name="remarks"></a>Notes  
+ Cette méthode requiert l’interface facultative `IRowsetChange`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si c’est le cas, la méthode retourne **E_NOINTERFACE**. Vous devez également définir **DBPROP_IRowsetChange** à `VARIANT_TRUE` avant d’appeler **ouvrir** sur la table ou d’une commande qui contient l’ensemble de lignes.  
   
- L'insertion peut échouer si une ou plusieurs colonnes ne sont pas écrivable.  Modifiez le mappage du curseur pour remédier à cette situation.  
+ INSERT peut échouer si une ou plusieurs colonnes n’est pas accessible en écriture. Modifier le mappage de votre curseur pour corriger ce problème.  
   
-## Exemple  
- L'exemple suivant indique comment accéder à une source de données via un ensemble de lignes puis insérer une chaîne à l'aide d'une table dans cet ensemble de lignes.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant montre comment accéder à une source de données via un ensemble de lignes, puis insérez une chaîne à l’aide d’une table dans cet ensemble de lignes.  
   
- En premier lieu, créez une classe de table en insérant un objet ATL dans votre projet.  Par exemple, cliquez avec le bouton droit sur le projet dans le volet de l'espace de travail et sélectionnez **New ATL Object**.  De **Accès aux données**, sélectionnez **Consommateur**.  Créez un objet de consommateur de type **Table**. \(Sélection **Table** crée un ensemble de lignes directement de la table ; sélectionnez **Commande** crée un ensemble de lignes à une commande SQL.\) Sélectionnez une source de données, en spécifiant une table à laquelle accéder à la source de données.  Si vous appelez votre objet **CCustomerTable**du consommateur, vous implémenteriez alors votre code d'insertion comme suit :  
+ Commencez par créer une classe de table en insérant un nouvel objet ATL dans votre projet. Par exemple, cliquez sur le projet dans le volet espace de travail et sélectionnez **nouvel objet ATL**. À partir de la **accès aux données** catégorie, sélectionnez **consommateur**. Créer un objet du consommateur de type **Table**. (En sélectionnant **Table** crée un ensemble de lignes directement à partir de la table ; sélection **commande** crée un ensemble de lignes via une commande SQL.) Sélectionnez une source de données, en spécifiant une table permettant d’accéder à cette source de données. Si vous appelez votre objet consommateur **CCustomerTable**, vous implémentez ensuite votre code d’insertion comme suit :  
   
- [!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/CPP/crowset-insert_1.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/cpp/crowset-insert_1.cpp)]  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CRowset, classe](../../data/oledb/crowset-class.md)

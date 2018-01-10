@@ -1,48 +1,51 @@
 ---
-title: "Liaison dynamique des colonnes dans votre fournisseur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "colonnes (C++), liaison de colonne dynamique"
-  - "liaison de colonne dynamique"
-  - "fournisseurs (C++), liaison de colonne dynamique"
+title: Liaison dynamique des colonnes dans votre fournisseur | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- columns [C++], dynamic column binding
+- dynamic column binding
+- providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f95dde27d6958bd9f1ad40bc411c7c434634879b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Liaison dynamique des colonnes dans votre fournisseur
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Assurez\-vous que vous avez vraiment besoin d'une liaison dynamique des colonnes.  Vous pouvez en avoir besoin pour les raisons suivantes :  
+# <a name="dynamically-binding-columns-in-your-provider"></a>Liaison dynamique des colonnes dans votre fournisseur
+Assurez-vous que vous avez vraiment besoin de liaison dynamique des colonnes. Vous en aurez besoin, car :  
   
--   les colonnes de votre jeu de lignes ne sont pas définies au moment de la compilation ;  
+-   Les colonnes de l’ensemble de lignes ne sont pas définies au moment de la compilation.  
   
--   vous prenez en charge un élément, tel que les signets, qui ajoute des colonnes.  
+-   Vous prenez en charge un élément tel que les signets qui ajoute des colonnes.  
   
-### Pour implémenter la liaison dynamique des colonnes  
+### <a name="to-implement-dynamic-column-binding"></a>Pour implémenter la liaison de colonne dynamique  
   
-1.  Supprimez toute occurrence de **PROVIDER\_COLUMN\_MAP** dans votre code.  
+1.  Supprimer les **PROVIDER_COLUMN_MAP**s à partir de votre code.  
   
-2.  Dans l'enregistrement utilisateur \(votre structure\), ajoutez la déclaration suivante :  
+2.  Dans l’enregistrement utilisateur (votre structure), ajoutez la déclaration suivante :  
   
     ```  
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);  
     ```  
   
-3.  Implémentez la fonction `GetColumnInfo`.  Cette fonction indique comment les informations sont stockées.  Vous devrez peut\-être obtenir des propriétés ou d'autres informations pour cette fonction.  Vous pouvez le cas échéant créer une macro, similaire à la macro [COLUMN\_ENTRY](../../data/oledb/column-entry.md), pour ajouter vos propres informations.  
+3.  Implémentez la `GetColumnInfo` (fonction). Cette fonction indique comment les informations sont stockées. Vous devrez peut-être obtenir des propriétés ou autres informations pour cette fonction. Vous souhaiterez peut-être créer une macro, similaire à la [COLUMN_ENTRY](../../data/oledb/column-entry.md) macro, pour ajouter vos propres informations.  
   
-     L'exemple suivant représente une fonction `GetColumnInfo`.  
+     L’exemple suivant montre un `GetColumnInfo` (fonction).  
   
     ```  
     // Check the property flag for bookmarks, if it is set, set the zero  
@@ -95,5 +98,5 @@ Assurez\-vous que vous avez vraiment besoin d'une liaison dynamique des colonnes
     }  
     ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utilisation des modèles du fournisseur OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 05cc39c184e39772c24e4347c2b6ae80463b9ce1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b655e704d06072dbbaa27cec739aadce0a175967
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultimaprehash-stlclr"></a>hash_multimap::rehash (STL/CLR)
 Régénère la table de hachage.  
@@ -30,7 +33,7 @@ Régénère la table de hachage.
 void rehash();  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction membre régénère la table de hachage, en s’assurant que [hash_multimap::load_factor (STL/CLR)](../dotnet/hash-multimap-load-factor-stl-clr.md) `() <=` [hash_multimap::max_load_factor (STL/CLR)](../dotnet/hash-multimap-max-load-factor-stl-clr.md). Sinon, la table de hachage augmente la taille que si nécessaire après une insertion. (Jamais automatiquement diminue la taille.) Il permet d’ajuster la taille de la table de hachage.  
   
 ## <a name="example"></a>Exemple  
@@ -94,7 +97,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/hash_map >  
   
  **Namespace :** cliext  

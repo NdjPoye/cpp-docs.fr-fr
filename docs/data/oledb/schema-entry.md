@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0919f2ba6474633d98c73cde758dbe6c81549f4f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 12a4026e94ea5fe5e310e0aeec7cdad10d33d2bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schemaentry"></a>SCHEMA_ENTRY
 Associe un GUID à une classe.  
@@ -41,7 +44,7 @@ Associe un GUID à une classe.
  *rowsetClass*  
  La classe qui sera créée pour représenter l’ensemble de lignes de schéma.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) peut ensuite la carte pour obtenir la liste des GUID de requête, ou créer un ensemble de lignes si elle se voit accorder un GUID. L’ensemble de lignes de schéma `IDBSchemaRowsetImpl` crée est similaire à une norme `CRowsetImpl`-classe dérivée, mais elle doit fournir une **Execute** méthode dont la signature suivante :  
   
 ```  
@@ -61,7 +64,7 @@ HRESULT Execute (
   
  L’Assistant ajoute également trois entrées correspondantes dans le mappage de schéma. Consultez [création d’un fournisseur OLE DB modèle](../../data/oledb/creating-an-ole-db-provider.md) pour plus d’informations sur l’utilisation de l’Assistant pour créer un fournisseur.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

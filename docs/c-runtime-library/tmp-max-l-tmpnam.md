@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b3f343eee6c6512bb30434aa428f3a4b9bd7a6df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 58f02c6d2a6dcdc4c858fe92b2cf5e1eecdba1a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tmpmax-ltmpnam"></a>TMP_MAX, L_tmpnam
 ## <a name="syntax"></a>Syntaxe  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
 #include <stdio.h>  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `TMP_MAX` est le nombre maximal de noms de fichiers uniques que la fonction `tmpnam` peut générer. `L_tmpnam` est la longueur des noms de fichiers temporaires générés par `tmpnam`.  
   
 ## <a name="see-also"></a>Voir aussi  

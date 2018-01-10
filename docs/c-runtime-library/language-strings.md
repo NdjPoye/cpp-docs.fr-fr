@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d65dc3b8d7dd62994eb0a8b546e290d1b6e47b9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 85f0c9b06ae85128209f06d95375e09043b3f9c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="language-strings"></a>Language Strings
 Les fonctions `setlocale` et `_create_locale` peuvent utiliser les langues prises en charge par l’API NLS Windows sur les systèmes d’exploitation qui n’utilisent pas la page de codes Unicode. Pour obtenir la liste des langues prises en charge par la version du système d’exploitation Windows, consultez [National Language Support (NLS) API Reference](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). La chaîne de langue peut être une des valeurs des colonnes **Langue** et **Abréviation du nom de langue** de la liste des langues prises en charge. Pour plus d’informations sur la prise en charge linguistique par version de système d’exploitation, consultez [Appendix A: Product Behavior](http://msdn.microsoft.com/goglobal/bb896001.aspx) dans [MS-LCID] : Informations de référence Windows LCID (Language Code Identifier).   
@@ -65,7 +66,7 @@ L’implémentation de la bibliothèque Runtime C prend également en charge ces
 |german-swiss|de-CH|  
 |irish-english|en-IE|  
 |italian-swiss|it-CH|  
-|norvégien|non|  
+|norvégien|Non|  
 |norwegian-bokmal|nb-NO|  
 |norwegian-nynorsk|nn-NO|  
 |portuguese-brazilian|pt-BR|  

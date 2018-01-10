@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 11fa4acae05c5488ce1d90873ec816744c7e83df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 95b4aeaa5c180b7a0aa2af68646f8c85bfa951a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sizeof-operator-c"></a>sizeof, opérateur (C)
 L'opérateur `sizeof` donne la quantité de stockage, en octets, obligatoire pour stocker un objet du type de l'opérande. Cet opérateur vous permet d'éviter de spécifier les tailles de données dépendantes de l'ordinateur dans vos programmes.  
@@ -31,7 +32,7 @@ sizeof unary-expression
 sizeof ( type-name )  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
 L’opérande est un identificateur qui est une *expression unaire* ou une expression de cast de type (c’est-à-dire, un spécificateur de type entre parenthèses). L’*expression unaire* ne peut pas représenter un objet de champ de bits, un type incomplet ou un indicateur de fonction. Le résultat est une constante intégrale non signée. L’en-tête standard STDDEF.H définit ce type comme **size_t**.  
   
 Lorsque vous appliquez l'opérateur `sizeof` à un identificateur du tableau, le résultat est la taille du tableau entier plutôt que la taille du pointeur représenté par l'identificateur du tableau.  

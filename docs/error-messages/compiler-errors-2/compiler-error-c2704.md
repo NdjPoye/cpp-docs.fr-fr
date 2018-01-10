@@ -15,13 +15,14 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a43cb68c83b511dfb3d25ab4177a0a9649fe7dc7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fb94fef6990f9b749a29cbe7bc6b1f10daf18677
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2704"></a>Erreur du compilateur C2704
-'identificateur' : __va_start intrinsèque autorisé uniquement dans les varargs  
+'identificateur' : __va_start intrinsèque autorisé uniquement dans les varargs  
   
  Le `__va_start` intrinsèque est utilisé dans une déclaration pour une fonction ayant un nombre fixe d’arguments.

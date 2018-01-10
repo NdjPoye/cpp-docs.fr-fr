@@ -17,18 +17,19 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a711a8087fef7978eceaadece317d4aac95d6340
-ms.sourcegitcommit: 2a5d0e9e6829150cbc22c6de3395ec13008e3266
+ms.workload: cplusplus
+ms.openlocfilehash: 11b28793e5e659e3135061e3a6fd410d9b1c9f3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-conversion"></a>Conversion de données
 Ces routines convertissent les données d’une forme à une autre. Ces routines s’exécutent en général plus rapidement que les conversions que vous écrivez. Chaque routine qui commence par un préfixe `to` est implémentée sous la forme d’une fonction et d’une macro. Pour plus d’informations sur le choix de l’implémentation, consultez [Choix entre fonctions et macros](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).  
   
 ### <a name="data-conversion-routines"></a>Routines de conversion de données  
   
-|Routine|Utilisation|  
+|Routine|Utilisez|  
 |-------------|---------|  
 |[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Rechercher la valeur absolue d’un entier|  
 |[atof, _atof_l, _wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Convertir une chaîne en `float`|  

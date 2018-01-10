@@ -28,11 +28,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc26033ff0da5c49ddcb848f648925978f7b53da
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: dbbf224797bd7d2eed2b085a6a7dd8eb1865de1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Recordset : fonctionnement d'AddNew, Edit et Delete (ODBC)
 Cette rubrique s’applique aux classes ODBC MFC.  
@@ -117,7 +120,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
 -   Si votre pilote ODBC prend en charge la **:: SQLSetPos** fonction d’API ODBC, MFC utilise la fonction pour mettre à jour l’enregistrement de la source de données. Avec **:: SQLSetPos**, le pilote compare le tampon d’édition et l’enregistrement correspondant sur le serveur, la mise à jour de l’enregistrement sur le serveur si les deux sont différents. Avec **:: SQLSetPos**, MFC peut mettre à jour plus efficacement un enregistrement, car il n’a pas à construire et à traiter une instruction SQL.  
   
-     ou  
+     - ou -  
   
 -   Si **:: SQLSetPos** ne peut pas être utilisé, MFC effectue les opérations suivantes :  
   
@@ -144,7 +147,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
 -   Si votre pilote ODBC prend en charge la **:: SQLSetPos** fonction d’API ODBC, MFC utilise la fonction pour supprimer l’enregistrement sur la source de données. À l’aide de **:: SQLSetPos** est généralement plus efficace que celle de SQL.  
   
-     ou  
+     - ou -  
   
 -   Si **:: SQLSetPos** ne peut pas être utilisé, MFC effectue les opérations suivantes :  
   

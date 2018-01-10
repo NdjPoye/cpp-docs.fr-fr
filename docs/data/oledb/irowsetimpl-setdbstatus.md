@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dcc6783ce210c434e58814bcee8654ddd9111b52
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 285f9004c9971d18646626b7410dcb52485227c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetimplsetdbstatus"></a>IRowsetImpl::SetDBStatus
 Définit le `DBSTATUS` indicateurs d’état pour le champ spécifié.  
@@ -51,10 +54,10 @@ Définit le `DBSTATUS` indicateurs d’état pour le champ spécifié.
 ## <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le fournisseur substitue cette fonction pour fournir un traitement spécial pour **DBSTATUS_S_ISNULL** et **DBSTATUS_S_DEFAULT**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

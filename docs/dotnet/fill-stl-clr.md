@@ -1,45 +1,46 @@
 ---
-title: "fill (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::fill"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fill (fonction)"
+title: Fill (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::fill
+dev_langs: C++
+helpviewer_keywords: fill function
 ms.assetid: eb67241c-9bb3-497e-bec6-639900c60758
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0003f920b446477b14a8d14c5a704725471e6178
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# fill (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Affecte la même nouvelle valeur à chaque élément dans une plage spécifiée.  
+# <a name="fill-stlclr"></a>fill (STL/CLR)
+Affecte la même nouvelle valeur à chaque élément d'une plage spécifiée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<class _FwdIt, class _Ty> inline  
     void fill(_FwdIt _First, _FwdIt _Last, const _Ty% _Val);  
 ```  
   
-## Notes  
- Cette fonction se comporte comme la fonction `fill` de STL.  Pour plus d'informations, consultez [remplissage](../Topic/fill.md).  
+## <a name="remarks"></a>Notes  
+ Cette fonction comporte comme la fonction de la bibliothèque Standard C++ `fill`. Pour plus d’informations, consultez [remplissage](../standard-library/algorithm-functions.md#fill).  
   
-## Configuration requise  
- **En\-tête :** \<cliext\/algorithm\>  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/algorithme >  
   
- **Espace de nommage:** cliext  
+ **Namespace :** cliext  
   
-## Voir aussi  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Voir aussi  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

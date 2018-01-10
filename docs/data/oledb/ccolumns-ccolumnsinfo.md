@@ -123,16 +123,19 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 511c39ecef8a9f099cf8ca71f73b891a96bc0ec9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 90ec0d78dc9a95f80dec04141184f5376d0e6556
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccolumns-ccolumnsinfo"></a>CColumns, CColumnsInfo
 Appelez la classe typedef **CColumns** pour implémenter sa classe de paramètre **CColumnsInfo**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Consultez [Classes de jeu de lignes de schéma et Classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation de classes typedef.  
   
  Cette classe identifie les colonnes des tables définies dans le catalogue qui sont accessibles à un utilisateur donné.  
@@ -170,7 +173,7 @@ Appelez la classe typedef **CColumns** pour implémenter sa classe de paramètre
 |m_szDomainName|DOMAIN_NAME|  
 |m_szDescription|DESCRIPTION|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbsch.h  
   
 ## <a name="see-also"></a>Voir aussi  

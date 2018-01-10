@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae753f1a483c05843797268641c4cc0c5d64c52a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 67d66667d169a95ae4d62ccadd2b56a136cd0a76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interpreting-more-complex-declarators"></a>Interprétation des déclarateurs plus complexes
 Vous pouvez placer n'importe quel déclarateur entre parenthèses pour spécifier une interprétation particulière d'un « déclarateur complexe ». Un déclarateur complexe est un identificateur qualifié par plusieurs modificateurs de tableau, de pointeur ou de fonction. Vous pouvez appliquer différentes combinaisons de modificateurs de tableau, de pointeur et de fonction à un même identificateur. En général, `typedef` peut être utilisé pour simplifier les déclarations. Consultez [Déclarations typedef](../c-language/typedef-declarations.md).  

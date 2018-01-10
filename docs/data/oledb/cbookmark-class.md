@@ -1,36 +1,38 @@
 ---
-title: "CBookmark, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CBookmark"
-  - "ATL::CBookmark<nSize>"
-  - "CBookmark"
-  - "ATL.CBookmark<nSize>"
-  - "ATL::CBookmark"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CBookmark (classe)"
+title: CBookmark, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CBookmark
+- ATL::CBookmark<nSize>
+- CBookmark
+- ATL.CBookmark<nSize>
+- ATL::CBookmark
+dev_langs: C++
+helpviewer_keywords: CBookmark class
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: dba5f98912fc69bac5554a4c6231f77e17e99d98
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CBookmark, classe
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Contient une valeur du signet dans sa mémoire tampon.  
+# <a name="cbookmark-class"></a>CBookmark, classe
+Contient une valeur de signet dans sa mémoire tampon.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template < DBLENGTH nSize = 0 >  
@@ -39,33 +41,33 @@ template < >
 class CBookmark< 0 > : public CBookmarkBase  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `nSize`  
- Taille de la mémoire tampon du signet en octets.  Lorsque `nSize` vaut zéro, la mémoire tampon de signet est créée dynamiquement lors de l'exécution.  
+ La taille de la mémoire tampon du signet en octets. Lorsque `nSize` est égal à zéro, la mémoire tampon de signet sera créée dynamiquement au moment de l’exécution.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Méthodes  
+### <a name="methods"></a>Méthodes  
   
 |||  
 |-|-|  
 |[CBookmark](../../data/oledb/cbookmark-class.md)|Le constructeur|  
 |[GetBuffer](../../data/oledb/cbookmark-getbuffer.md)|Récupère le pointeur vers la mémoire tampon.|  
-|[GetSize](../../data/oledb/cbookmark-getsize.md)|Récupère la taille, en octets, de la mémoire tampon.|  
+|[GetSize](../../data/oledb/cbookmark-getsize.md)|Récupère la taille de la mémoire tampon en octets.|  
 |[SetBookmark](../../data/oledb/cbookmark-setbookmark.md)|Définit la valeur du signet.|  
   
-### Opérateurs  
+### <a name="operators"></a>Opérateurs  
   
 |||  
 |-|-|  
-|[opérateur \=](../../data/oledb/cbookmark-operator-equal.md)|Affecte une classe de `CBookmark` à une autre.|  
+|[opérateur =](../../data/oledb/cbookmark-operator-equal.md)|Assigne un `CBookmark` classe vers un autre.|  
   
-## Notes  
- **CBookmark\<0\>** est une spécialisation de modèle de `CBookmark`; la mémoire tampon est créée dynamiquement pendant l'exécution.  
+## <a name="remarks"></a>Notes  
+ **CBookmark\<0 >** est une spécialisation de modèle de `CBookmark`; sa mémoire tampon est créé dynamiquement au moment de l’exécution.  
   
-## Configuration requise  
- **En\-tête :** : atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
- [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

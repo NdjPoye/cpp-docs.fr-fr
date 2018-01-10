@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 44ba30cf55df27b08d47b7dc7d540fcefced266d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a2e4cbe940ce9eaaa99725a3d252a0275c4fa84e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lowerbound-stlclr"></a>lower_bound (STL/CLR)
 Recherche la position du premier élément d’une plage triée dont la valeur inférieure ou équivalente à une valeur spécifiée, où le critère de tri peut être spécifié par un prédicat binaire.  
@@ -34,10 +37,10 @@ template<class _FwdIt, class _Ty, class _Pr> inline
         const _Ty% _Val, _Pr _Pred);  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette fonction comporte comme la fonction de la bibliothèque Standard C++ `lower_bound`. Pour plus d’informations, consultez [lower_bound](../standard-library/algorithm-functions.md#lower_bound).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/algorithme >  
   
  **Namespace :** cliext  

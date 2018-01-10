@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9e9dca1b95af3971045a1ce86807ef28be096546
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c61d9c6f38851e48335f83cccfeb5a8bf4aba448
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scope-and-visibility"></a>Portée et visibilité
 La « visibilité » d'un identificateur détermine les parties du programme où un identificateur peut être référencé (sa « portée »). Un identificateur est visible (c- à-d. qu'il peut être utilisé) uniquement dans les parties d'un programme entourées par sa « portée », qui peuvent être limitées (afin d'augmenter les restrictions) au fichier, à la fonction, au bloc ou au prototype de fonction dans lequel il apparaît. La portée d'un identificateur est la partie du programme où il peut être utilisé. Cela est parfois appelé « portée lexicale ». Il existe quatre types de portée : fonction, fichier, bloc, et prototype de fonction.  

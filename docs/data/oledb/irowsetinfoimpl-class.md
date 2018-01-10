@@ -1,65 +1,67 @@
 ---
-title: "IRowsetInfoImpl, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IRowsetInfoImpl"
-  - "IRowsetInfoImpl"
-  - "ATL::IRowsetInfoImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IRowsetInfoImpl (classe)"
+title: Irowsetinfoimpl, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IRowsetInfoImpl
+- IRowsetInfoImpl
+- ATL::IRowsetInfoImpl
+dev_langs: C++
+helpviewer_keywords: IRowsetInfoImpl class
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cba03cfdda0b7a55c8f4719d5340566ee5dc6050
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetInfoImpl, classe
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Assure l'implémentation pour une [IRowsetInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx) interface.  
+# <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl, classe
+Fournit une implémentation pour la [IRowsetInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx) interface.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template <class T, class PropClass = T>  
 class ATL_NO_VTABLE IRowsetInfoImpl :   
-   public IRowsetInfo,    
+   public IRowsetInfo,    
    public CUtlProps<PropClass>  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
  Votre classe, dérivée de `IRowsetInfoImpl`.  
   
  `PropClass`  
- Une classe de propriété définissable par l'utilisateur qui a par défaut la `T`.  
+ Une classe de propriété définis par l’utilisateur par défaut est `T`.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Methodes d'interface  
+### <a name="interface-methods"></a>Méthodes d’interface  
   
 |||  
 |-|-|  
-|[ObtenirPropriétés](../../data/oledb/irowsetinfoimpl-getproperties.md)|Retourne les paramètres actuels de toutes les propriétés prises en charge par le jeu de lignes.|  
-|[Obtenir la référence d'un ensemble de rangées.](../../data/oledb/irowsetinfoimpl-getreferencedrowset.md)|Retourne un pointeur d'interface vers le jeu de lignes sur lequel un signet ou un chapitre est appliqué.|  
-|[GetSpecification](../../data/oledb/irowsetinfoimpl-getspecification.md)|Retourne un pointeur d'interface sur l'objet \(commande ou session\) qui a créé ce jeu de lignes.|  
+|[GetProperties](../../data/oledb/irowsetinfoimpl-getproperties.md)|Retourne les paramètres actuels de toutes les propriétés prises en charge par l’ensemble de lignes.|  
+|[GetReferencedRowset](../../data/oledb/irowsetinfoimpl-getreferencedrowset.md)|Retourne un pointeur d’interface à l’ensemble de lignes auquel s’applique un signet.|  
+|[GetSpecification](../../data/oledb/irowsetinfoimpl-getspecification.md)|Retourne un pointeur d’interface sur l’objet (commande ou session) qui a créé cet ensemble de lignes.|  
   
-## Notes  
- Interface forcé sur les ensembles de lignes.  Cette classe implémente les propriétés d'ensemble de lignes à l'aide de [mappage de propriété](../../data/oledb/begin-propset-map.md) définies dans la classe de commande.  Bien que la classe d'ensemble de rangées semble s'utiliser avec la commande de la classe d'ensemble de propriétés, l'ensemble de lignes est fourni avec sa propre copie des propriétés d'exécution, lorsqu'il est créé par une commande ou un objet de session.  
+## <a name="remarks"></a>Notes  
+ Une interface obligatoire sur les ensembles de lignes. Cette classe implémente les propriétés de l’ensemble de lignes à l’aide de la [mappage de jeu de propriétés](../../data/oledb/begin-propset-map.md) définies dans votre classe de commande. Bien que la classe de l’ensemble de lignes s’affiche pour être à l’aide de la propriété de la classe de commande définit l’ensemble de lignes est fourni avec sa propre copie des propriétés d’exécution, lorsqu’il est créé par un objet de commande ou de la session.  
   
-## Configuration requise  
- **En\-tête :** altdb.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** altdb.h  
   
-## Voir aussi  
- [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

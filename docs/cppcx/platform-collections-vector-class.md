@@ -30,11 +30,12 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 35299f80b85432286859ed76afdd7a599809f67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c371b6805616ff0b114be24bb291469eae2dd26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector, classe
 Représente une collection séquentielle d'objets accessibles séparément par index.  
@@ -53,7 +54,7 @@ template <typename T, typename E>
  `E`  
  Spécifie un prédicat binaire pour tester l'égalité des valeurs de type `T`. La valeur par défaut est `std::equal_to<T>`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les types autorisés sont les suivants :  
   
 1.  Entiers  
@@ -100,13 +101,13 @@ template <typename T, typename E>
   
 |||  
 |-|-|  
-|Nom|Description|  
+|Name|Description|  
 |événement [Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](http://go.microsoft.com/fwlink/p/?LinkId=262644)|Se produit lorsque le Vector est modifié.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Vector`  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** collection.h  
   
  **Espace de noms :** Platform::Collections  
@@ -149,7 +150,7 @@ virtual Windows::Foundation::Collections::IIterator <T>^ First();
 ### <a name="return-value"></a>Valeur de retour  
  Itérateur qui pointe vers le premier élément du Vector.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un moyen pratique de contenir l’itérateur retourné par First() est d’assigner la valeur de retournée à une variable déclarée avec le **automatique** mot clé de déduction de type. Par exemple, `auto x = myVector->First();`. Cet itérateur connaît la longueur de la collection.  
   
  Lorsque vous avez besoin d’une paire d’itérateurs à passer à une fonction STL, utilisez les fonctions libres [Windows::Foundation :: Collections :: begin](../cppcx/begin-function.md) et [Windows::Foundation](../cppcx/end-function.md)  
@@ -195,7 +196,7 @@ virtual unsigned int GetMany(
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d'éléments à récupérer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction n'est pas destinée à être utilisée directement par le code client. Elle est utilisée en interne dans le [to_vector (fonction)](../cppcx/to-vector-function.md) pour permettre la conversion des instances Platform::Vector en instances std::vector.  
   
 
@@ -236,7 +237,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 ### <a name="return-value"></a>Valeur de retour  
  `true` si l'élément spécifié est trouvé ; sinon, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  IndexOf uses std::find_if pour trouver l'élément. Les types d'élément personnalisés doivent surcharger les opérateurs == et != afin d'autoriser les comparaisons d'égalité requises par find_if.  
   
 

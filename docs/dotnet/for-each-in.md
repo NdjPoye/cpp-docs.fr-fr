@@ -19,11 +19,14 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1d89552bd299edc778b06bd01ee185c275c45db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5dab51168b656422ddcf2c317a7f7fee1faf162e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-each-in"></a>for each, in
 Itère dans un tableau ou une collection. Ce mot clé non standard est disponible dans C++/CLI et les projets natifs C++. Toutefois, son utilisation n'est pas recommandée. Envisagez d’utiliser une norme [Range-based d’instruction (C++)](../cpp/range-based-for-statement-cpp.md) à la place.  
@@ -73,7 +76,7 @@ Itère dans un tableau ou une collection. Ce mot clé non standard est disponibl
   
 ## <a name="windows-runtime"></a>Windows Runtime  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/ZW**  
   
 ### <a name="example"></a>Exemple  
@@ -123,7 +126,7 @@ Testing
   
  *expression* correspond à un type qui implémente <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, ou un type qui définit un `GetEnumerator` méthode qui renvoie soit un type qui implémente <xref:System.Collections.IEnumerator> ou déclare toutes les méthodes qui sont définies dans `IEnumerator`.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/clr**  
   
 ### <a name="example"></a>Exemple  

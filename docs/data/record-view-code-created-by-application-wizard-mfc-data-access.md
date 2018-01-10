@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a9475dd6192eb6bc1abd00e3614c18482be415c8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 239ace3f23987bc4f704515e7f87d62ba2e26543
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-view-code-created-by-application-wizard--mfc-data-access"></a>Code de vue de l'enregistrement créé par l'Assistant Application (Accès aux données MFC)
 Le [Assistant Application MFC](../mfc/reference/database-support-mfc-application-wizard.md) remplace la vue `OnInitialUpdate` et `OnGetRecordset` fonctions membres. Une fois que l'infrastructure a créé la fenêtre frame, le document et la vue, elle appelle `OnInitialUpdate` pour initialiser la vue. `OnInitialUpdate` obtient un pointeur vers le recordset à partir du document. Un appel à la classe de base [CView::OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) fonction ouvre le recordset. Le code suivant illustre ce processus pour une `CRecordView`:  

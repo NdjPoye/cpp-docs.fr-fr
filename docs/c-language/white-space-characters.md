@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b86059bba33d2b606b63a84bd364bd60f86eb607
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 51476c05774103ed439ae45888717378e9f59fac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="white-space-characters"></a>Espace blanc, caractères
 Les caractères espace, de tabulation, de saut de ligne, de retour chariot, de saut de page et de tabulation verticale sont appelés « espaces blancs » car ils servent le même objectif que les espaces entre les mots et les lignes dans une page imprimée : ils facilitent la lecture. Les jetons sont délimités (limités) par des espaces blancs et par d'autres jetons, tels que les opérateurs et la ponctuation. Lors de l'analyse du code, le compilateur C ignore les espaces blancs à moins que vous les utilisiez comme séparateurs ou comme composants de constantes caractères ou de littéraux de chaîne. Utilisez les espaces blancs pour rendre un programme plus lisible. Notez que le compilateur traite également les commentaires comme des espaces blancs.  

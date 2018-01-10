@@ -1,31 +1,34 @@
 ---
-title: "Comment&#160;: modifier la classe de r&#233;f&#233;rence dans une fonction native | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "appel de code non managé, classe de référence"
-  - "types référence, modifier dans une fonction native C++"
+title: "Comment : modifier la classe de référence dans une fonction Native | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- platform invoke, reference class
+- reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 23f254ad76a080c7dadfc03e354e29bce4a31070
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Comment&#160;: modifier la classe de r&#233;f&#233;rence dans une fonction native
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vous pouvez passer une classe de référence avec un tableau CLR à une fonction native et modifier la classe à l'aide des services PInvoke.  
+# <a name="how-to-modify-reference-class-in-a-native-function"></a>Comment : modifier la classe de référence dans une fonction native
+Vous pouvez passer d’une classe de référence avec un tableau CLR à une fonction native et modifier la classe, à l’aide des services PInvoke.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  Compilez la bibliothèque native suivante.  
   
 ```  
@@ -54,8 +57,8 @@ extern "C"  {
 };  
 ```  
   
-## Exemple  
- Compilez l'assembly suivant.  
+## <a name="example"></a>Exemple  
+ Compilez l’assembly suivant.  
   
 ```  
 // modify_ref_class_in_native_function_2.cpp  
@@ -89,8 +92,11 @@ int main() {
 }  
 ```  
   
-  **str: Hello**  
-**In native: intarr: 100, 200**  
-**In managed: intarr: 300, 400**   
-## Voir aussi  
- [Utilisation de l'interopérabilité C\+\+ \(PInvoke implicite\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+str: Hello  
+In native: intarr: 100, 200  
+In managed: intarr: 300, 400  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

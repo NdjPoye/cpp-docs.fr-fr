@@ -1,40 +1,41 @@
 ---
-title: "IRowsetCreatorImpl::SetSite | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetCreatorImpl.SetSite"
-  - "IRowsetCreatorImpl<T>::SetSite"
-  - "IRowsetCreatorImpl::SetSite"
-  - "SetSite"
-  - "ATL.IRowsetCreatorImpl.SetSite"
-  - "ATL::IRowsetCreatorImpl<T>::SetSite"
-  - "ATL::IRowsetCreatorImpl::SetSite"
-  - "ATL.IRowsetCreatorImpl<T>.SetSite"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetSite (méthode)"
+title: IRowsetCreatorImpl::SetSite | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetCreatorImpl.SetSite
+- IRowsetCreatorImpl<T>::SetSite
+- IRowsetCreatorImpl::SetSite
+- SetSite
+- ATL.IRowsetCreatorImpl.SetSite
+- ATL::IRowsetCreatorImpl<T>::SetSite
+- ATL::IRowsetCreatorImpl::SetSite
+- ATL.IRowsetCreatorImpl<T>.SetSite
+dev_langs: C++
+helpviewer_keywords: SetSite method
 ms.assetid: e92e63d5-93e4-4ee0-9ef7-bb6583cc8091
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ed3f5f0bce2408cd2a4439aac6728f0e00760b1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetCreatorImpl::SetSite
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Définit le site contenant l'objet d'ensemble de lignes.  Pour plus d'informations, consultez l'[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869).  
+# <a name="irowsetcreatorimplsetsite"></a>IRowsetCreatorImpl::SetSite
+Définit le site qui contient l’objet d’ensemble de lignes. Pour plus d’informations, consultez [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -43,18 +44,18 @@ Définit le site contenant l'objet d'ensemble de lignes.  Pour plus d'informatio
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `pCreator`  
- \[in\] pointeur vers le pointeur d'interface de **IUnknown** du site qui gère l'objet d'ensemble de lignes.  
+ [in] Pointeur vers le **IUnknown** pointeur d’interface du site de gestion de l’objet d’ensemble de lignes.  
   
-## Valeur de retour  
- Un `HRESULT` standard.  
+## <a name="return-value"></a>Valeur de retour  
+ `HRESULT` standard.  
   
-## Notes  
- En outre, `IRowsetCreatorImpl::SetSite` active les propriétés OLE DB **DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS**.  
+## <a name="remarks"></a>Notes  
+ En outre, `IRowsetCreatorImpl::SetSite` permet d’OLE DB **DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS** propriétés.  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [IRowsetCreatorImpl, classe](../../data/oledb/irowsetcreatorimpl-class.md)

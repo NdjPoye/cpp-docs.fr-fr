@@ -1,34 +1,37 @@
 ---
-title: "Substitution explicite d&#39;un membre d&#39;interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "substitution explicite de fonction virtuelle"
-  - "fonctions (C++), substituer"
-  - "membres d'interface, substitutions explicites"
-  - "substituer des fonctions"
-  - "fonctions virtuelles, substitutions explicites"
+title: "Substitution explicite d’un membre d’Interface | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- virtual functions, explicit overrides
+- overriding functions
+- interface members, explicit overrides
+- functions [C++], overriding
+- explicit override of virtual function
 ms.assetid: 46f1f536-bf43-4311-9a17-ff2282e528a9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 85681b2e2aeeb6dbeb6ffdf511827fb1fc1cb029
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Substitution explicite d&#39;un membre d&#39;interface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La syntaxe servant à déclarer une substitution explicite d'un membre d'interface dans une classe a été modifiée entre Extensions managées pour C\+\+ et [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+# <a name="explicit-override-of-an-interface-member"></a>Substitution explicite d'un membre d'interface
+La syntaxe de déclaration d’une substitution explicite d’un membre d’interface dans une classe a changé entre les Extensions managées pour C++ vers Visual C++.  
   
- Vous voudrez fréquemment fournir deux instances d'un membre d'interface dans une classe qui implémente cette interface \- une qui sert lorsque les objets de la classe sont manipulés via un handle d'interface, et une autre qui sert lorsque les objets de la classe sont utilisés via l'interface de classe.  Par exemple :  
+ Fréquence à laquelle vous souhaitez fournir deux instances d’un membre d’interface dans une classe qui implémente l’interface, qui est utilisé lorsque les objets de classe sont manipulés via un handle d’interface et celui qui est utilisé lorsque les objets de classe sont utilisés via l’interface de classe. Exemple :  
   
 ```  
 public __gc class R : public ICloneable {  
@@ -40,9 +43,9 @@ public __gc class R : public ICloneable {
 };  
 ```  
   
- En Extensions managées, cela se fait en fournissant une déclaration explicite de la méthode d'interface avec le nom de la méthode qualifié par le nom de l'interface.  L'instance spécifique à la classe est non qualifiée.  Cela supprime la nécessité d'un cast aval de la valeur de retour de `Clone`, dans cet exemple, lorsqu'elle est explicitement appelée via une instance de `R`.  
+ Dans les Extensions managées cela, nous en fournissant une déclaration explicite de la méthode d’interface avec le nom de méthode qualifié avec le nom de l’interface. L’instance de la classe spécifique n’est pas qualifié. Cela élimine la nécessité d’un cast aval la valeur de retour de `Clone`, dans cet exemple, lorsqu’elle est appelée explicite via une instance de `R`.  
   
- Dans la nouvelle syntaxe, un mécanisme général de substitution a été introduit pour remplacer la syntaxe d'Extensions managées.  Notre exemple sera donc réécrit comme suit :  
+ Dans la nouvelle syntaxe, un mécanisme général de substitution a été introduit qui remplace la syntaxe des Extensions managées. Notre exemple est réécrite comme suit :  
   
 ```  
 public ref class R : public ICloneable {  
@@ -55,8 +58,8 @@ public:
 };  
 ```  
   
- Cette révision exige que le membre d'interface explicitement substitué reçoive un nom unique dans la classe.  Ici, j'ai fourni le nom encombrant de `InterfaceClone`.  Le comportement reste le même : un appel via l'interface `ICloneable` appelle l'`InterfaceClone,` renommé tandis qu'un appel via un objet de type `R` appelle la deuxième instance de `Clone`.  
+ Cette révision exige que le membre d’interface explicitement substitué soit donné un nom unique au sein de la classe. Ici, j’ai fourni le nom encombrant de `InterfaceClone`. Le comportement est le même : un appel via le `ICloneable` interface appelle la renommée `InterfaceClone`, tandis qu’un appel via un objet de type `R` appelle la seconde `Clone` instance.  
   
-## Voir aussi  
- [Déclarations de membre dans une classe ou interface \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [Explicit Overrides](../windows/explicit-overrides-cpp-component-extensions.md)
+## <a name="see-also"></a>Voir aussi  
+ [Déclarations de membre dans une classe ou Interface (C + c++ / CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ [Substitutions explicites](../windows/explicit-overrides-cpp-component-extensions.md)

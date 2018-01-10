@@ -18,11 +18,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: feb829812bd4223ca7c348f3a2825ad3b11839a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a8f5a7b4c09400ad31be0b8b403899c5e8401afa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdatasource-class"></a>CDataSource, classe
 Correspond à un objet de source de données OLE DB, qui représente une connexion via un fournisseur de source de données.  
@@ -49,12 +52,12 @@ class CDataSource
 |[OpenWithPromptFileName](../../data/oledb/cdatasource-openwithpromptfilename.md)|Permet à l’utilisateur de sélectionner un fichier de liaison de données créée précédemment pour ouvrir la source de données correspondante.|  
 |[OpenWithServiceComponents](../../data/oledb/cdatasource-openwithservicecomponents.md)|Ouvre un objet de source de données à l’aide de la boîte de dialogue liaison de données.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une ou plusieurs sessions de base de données peuvent être créées pour une seule connexion. Ces sessions sont représentées par `CSession`. Vous devez appeler [CDataSource::Open](../../data/oledb/cdatasource-open.md) pour ouvrir la connexion avant de créer une session avec `CSession::Open`.  
   
  Pour obtenir un exemple montrant comment utiliser `CDataSource`, consultez la [CatDB](../../visual-cpp-samples.md) exemple.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  
