@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5a06fe0f7fab05b6b73856fa3f326f1c54d4f55c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ece9858d0be171febaeb52e820e922665ac2a351
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cinterfacearray-class"></a>Classe de CInterfaceArray
 Cette classe fournit des méthodes utiles lors de la construction d’un tableau de pointeurs d’interface COM.  
@@ -51,7 +52,7 @@ class CInterfaceArray :
 |----------|-----------------|  
 |[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Le constructeur pour le tableau de l’interface.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe fournit un constructeur et les méthodes dérivées pour la création d’un tableau de pointeurs d’interface COM. Utilisez [CInterfaceList](../../atl/reference/cinterfacelist-class.md) lorsqu’une liste est requise.  
   
  Pour plus d’informations, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
@@ -61,7 +62,7 @@ class CInterfaceArray :
   
  `CInterfaceArray`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcoll.h  
   
 ##  <a name="cinterfacearray"></a>CInterfaceArray::CInterfaceArray  
@@ -71,7 +72,7 @@ class CInterfaceArray :
 CInterfaceArray() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Initialise le tableau de pointeurs intelligents.  
   
 ## <a name="see-also"></a>Voir aussi  

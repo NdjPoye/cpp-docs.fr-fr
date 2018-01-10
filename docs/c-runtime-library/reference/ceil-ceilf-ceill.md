@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -23,44 +22,30 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- ntdll.dll
 - api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - ceil
 - ceilf
 - ceill
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - calculating value ceilings
 - ceill function
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 1fd4b888c8fc332c07aed62af03b340864dfe3bf
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4831b9f6f046dbc1a5d337f22e6be3dc3f4a5662
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 Calcule le plafond d’une valeur.  
@@ -92,22 +77,22 @@ long double ceill(
 ## <a name="return-value"></a>Valeur de retour  
  Les fonctions `ceil` retournent une valeur à virgule flottante qui représente le plus petit entier supérieur ou égal à `x`. Aucun retour d'erreur.  
   
-|Entrée|Exception SEH|Exception{b> <b}Matherr|  
+|Entrée|Exception SEH|Exception Matherr|  
 |-----------|-------------------|-----------------------|  
 |± `QNAN`,`IND`|aucun|`_DOMAIN`|  
   
- `ceil` présente une implémentation qui utilise SSE2 (Streaming SIMD Extensions 2). Pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
+ `ceil` propose une implémentation qui utilise SSE2 (Streaming SIMD Extensions 2). Pour obtenir des informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
   
 ## <a name="remarks"></a>Notes  
  C++ autorisant la surcharge, vous pouvez appeler des surcharges de `ceil`. Dans un programme C, `ceil` accepte et retourne toujours un double.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`ceil`, `ceilf`, `ceill`|\<math.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple relatif à [floor](../../c-runtime-library/reference/floor-floorf-floorl.md).  

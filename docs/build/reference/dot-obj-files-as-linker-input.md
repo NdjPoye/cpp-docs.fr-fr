@@ -1,48 +1,50 @@
 ---
-title: "Fichiers&#160;.obj en tant qu&#39;entr&#233;e de l&#39;&#201;diteur de liens | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fichiers .obj en tant qu'entrée dans l'éditeur de liens"
-  - "fichiers COFF"
-  - "LINK (outil C++), fichiers .obj"
-  - "éditeur de liens (C++), fichiers OBJ en tant qu'entrée dans"
-  - "fichiers OBJ en tant qu'entrée dans l'éditeur de liens"
-  - "fichiers objets, sortie de l'éditeur de liens"
-  - "fichiers objets OMF"
-ms.assetid: 3028e423-8b10-4972-8eb4-6e9ae58f0a26
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+title: ". Fichiers obj en tant qu’entrée de l’éditeur de liens | Documents Microsoft"
+ms.custom: 
+ms.date: 12/29/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- linker [C++], OBJ files as input
+- object files, linker output
+- OMF object files
+- LINK tool [C++], .obj files
+- COFF files
+- OBJ files as linker input
+- .obj files as linker input
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9a2896822e97bdbb5ffdf8f869e67beadc1675b7
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
-# Fichiers&#160;.obj en tant qu&#39;entr&#233;e de l&#39;&#201;diteur de liens
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="obj-files-as-linker-input"></a>Fichiers .obj en tant qu'entrée de l'Éditeur de liens
 
-L'outil éditeur de liens \(LINK.EXE\) accepte des fichiers .obj qui sont au format COFF \(Common Object File Format\).  
-  
-## Notes  
- Microsoft fournit un document téléchargeable qui définit le format COFF.  Pour plus d'informations, téléchargez la révision 8.1 ou une version ultérieure de la [spécification du format de fichier Microsoft PE \(Portable Executable\) et COFF \(Common Object File Format\) \(page éventuellement en anglais\)](http://go.microsoft.com/fwlink/?LinkId=93292).  
-  
-## Prise en charge Unicode  
- Depuis Visual Studio 2005, le compilateur Microsoft Visual C\+\+ prend en charge des caractères Unicode dans les identificateurs comme définis par les normes C et C\+\+ ISO\/IEC.  Les versions antérieures du compilateur ont pris en charge uniquement des caractères ASCII dans les identificateurs.  Pour prendre en charge Unicode dans les noms de fonctions, de classes et statiques, le compilateur et l'éditeur de liens utilisent l'encodage UTF\-8 Unicode pour les symboles COFF dans les fichiers .obj.  L'encodage UTF\-8 offre une compatibilité ascendante avec l'encodage ASCII utilisé par les versions antérieures de Visual Studio.  
-  
- Pour plus d'informations sur le compilateur et l'éditeur de liens, consultez [Prise en charge Unicode dans le compilateur et l'éditeur de liens](../../build/reference/unicode-support-in-the-compiler-and-linker.md).  Pour plus d'informations sur la norme Unicode, consultez l'organisation [Unicode](http://go.microsoft.com/fwlink/?LinkId=37123).  
-  
-## Voir aussi  
- [Fichiers d'entrée LINK](../../build/reference/link-input-files.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)   
- [Prise en charge pour Unicode](../../text/support-for-unicode.md)   
- [Prise en charge Unicode dans le compilateur et l'éditeur de liens](../../build/reference/unicode-support-in-the-compiler-and-linker.md)   
- [Norme Unicode](http://go.microsoft.com/fwlink/?LinkId=37123)   
- [Spécification de format COFF](http://go.microsoft.com/fwlink/?LinkId=93292)
+L’outil de l’éditeur de liens (LINK. (EXE) accepte des fichiers .obj en fichier de Format COFF (Common Object).
+
+## <a name="remarks"></a>Notes
+
+Microsoft fournit une description complète du format de fichier objet commun. Pour plus d’informations, consultez [Format PE](https://msdn.microsoft.com/library/windows/desktop/ms680547).
+
+## <a name="unicode-support"></a>Prise en charge Unicode
+
+À compter de Visual Studio 2005, le compilateur Microsoft Visual C++ prend en charge les caractères Unicode dans les identificateurs, comme défini par la norme ISO/IEC normes C et C++. Les versions précédentes du compilateur pris en charge uniquement des caractères ASCII dans les identificateurs. Pour prendre en charge Unicode dans les noms des fonctions, des classes et des variables statiques, le compilateur et l’éditeur de liens utilisent l’encodage Unicode UTF-8 pour les symboles COFF dans les fichiers .obj. L’encodage UTF-8 est la compatibilité ascendante avec l’encodage ASCII utilisé par les versions antérieures de Visual Studio.
+
+Pour plus d’informations sur le compilateur et l’éditeur de liens, consultez [prise en charge Unicode dans le compilateur et l’éditeur de liens](../../build/reference/unicode-support-in-the-compiler-and-linker.md). Pour plus d’informations sur la norme Unicode, consultez le [Unicode](http://go.microsoft.com/fwlink/p/?linkid=37123) organisation.
+
+## <a name="see-also"></a>Voir aussi
+
+[Fichiers d’entrée LINK](../../build/reference/link-input-files.md)  
+[Options de l’éditeur de liens](../../build/reference/linker-options.md)  
+[Prise en charge pour Unicode](../../text/support-for-unicode.md)  
+[Prise en charge Unicode dans le compilateur et l’éditeur de liens](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
+[Norme Unicode](http://go.microsoft.com/fwlink/p/?linkid=37123)  
+[Format PE](https://msdn.microsoft.com/library/windows/desktop/ms680547)  

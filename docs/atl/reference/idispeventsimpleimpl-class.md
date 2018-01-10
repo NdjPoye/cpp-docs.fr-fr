@@ -25,11 +25,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a6500a73151f2d04c6f6ec9185aca385f9c3108a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f8a5b3098961af4f3f9262cdc4c99dbe80b4ac7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl (classe)
 Cette classe fournit des implémentations de la `IDispatch` méthodes, sans récupérer les informations de type à partir d’une bibliothèque de types.  
@@ -69,7 +70,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 |[IDispEventSimpleImpl::Invoke](#invoke)|Appelle les gestionnaires d’événements répertoriées dans l’événement de table de récepteur.|  
 |[IDispEventSimpleImpl::Unadvise](#unadvise)|Interrompt la connexion avec la source d’événement par défaut.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `IDispEventSimpleImpl`offre un moyen de l’implémentation d’une interface des événements sans avoir à fournir un code d’implémentation pour chaque méthode/événement sur cette interface. `IDispEventSimpleImpl`Fournit des implémentations de la `IDispatch` méthodes. Vous devez uniquement fournir des implémentations pour les événements que vous êtes intéressé par la gestion.  
   
  `IDispEventSimpleImpl`fonctionne en association avec la table de récepteur d’événements dans votre classe pour les événements d’itinéraire à la fonction gestionnaire approprié. Pour utiliser cette classe :  
@@ -100,7 +101,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
   
  `IDispEventSimpleImpl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
   
 ##  <a name="advise"></a>IDispEventSimpleImpl::Advise  
@@ -117,7 +118,7 @@ HRESULT Advise(IUnknown* pUnk);
 ### <a name="return-value"></a>Valeur de retour  
  `S_OK`ou tout échec `HRESULT` valeur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une fois que la connexion est établie, les événements déclenchés à partir de *pUnk* sera routé vers gestionnaires dans votre classe au moyen de la table de récepteur d’événements.  
   
 > [!NOTE]
@@ -142,7 +143,7 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
 ### <a name="return-value"></a>Valeur de retour  
  `S_OK`ou tout échec `HRESULT` valeur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par la suite, les événements déclenchés à partir de *pUnk* sera routé vers gestionnaires dans votre classe au moyen de la table de récepteur d’événements.  
   
 > [!NOTE]
@@ -167,7 +168,7 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
 ### <a name="return-value"></a>Valeur de retour  
  `S_OK`ou tout échec `HRESULT` valeur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une fois que la connexion est interrompue, les événements ne sont plus seront routés pour les fonctions de gestionnaire répertoriées dans la table de récepteur d’événements.  
   
 > [!NOTE]
@@ -187,7 +188,7 @@ STDMETHOD(GetIDsOfNames)(
     DISPID* /* rgdispid */);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="gettypeinfo"></a>IDispEventSimpleImpl::GetTypeInfo  
@@ -200,7 +201,7 @@ STDMETHOD(GetTypeInfo)(
     ITypeInfo** /* pptinfo */);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IDispatch::GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="gettypeinfocount"></a>IDispEventSimpleImpl::GetTypeInfoCount  
@@ -210,7 +211,7 @@ STDMETHOD(GetTypeInfo)(
 STDMETHOD(GetTypeInfoCount)(UINT* /* pctinfo */);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="invoke"></a>IDispEventSimpleImpl::Invoke  
@@ -228,7 +229,7 @@ STDMETHOD(Invoke)(
     UINT* /* puArgErr */);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IDispatch::Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
   
 ##  <a name="unadvise"></a>IDispEventSimpleImpl::Unadvise  
@@ -245,7 +246,7 @@ HRESULT Unadvise(IUnknown* pUnk);
 ### <a name="return-value"></a>Valeur de retour  
  `S_OK`ou tout échec `HRESULT` valeur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une fois que la connexion est interrompue, les événements ne sont plus seront routés pour les fonctions de gestionnaire répertoriées dans la table de récepteur d’événements.  
   
 > [!NOTE]

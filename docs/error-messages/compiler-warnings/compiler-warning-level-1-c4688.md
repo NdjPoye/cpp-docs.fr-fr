@@ -15,16 +15,17 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fb1ff3dfba0b3f3fb2d3fedc94c3724cc0ac446e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2abfdc9ae3cf998a867b229dce88afbc994eb600
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4688"></a>Avertissement du compilateur (niveau 1) C4688
 'constraint' : la liste des contraintes contient un type privé d’assembly 'type'  
   
- Une liste de contraintes possède un type privé d’assembly, ce qui signifie qu’il ne sera pas accessible en dehors de l’assembly. Pour plus d’informations, consultez [Génériques](../../windows/generics-cpp-component-extensions.md).  
+ Une liste de contraintes possède un type privé d’assembly, ce qui signifie qu’il ne sera pas accessible en dehors de l’assembly. Pour plus d’informations, consultez la page [Génériques](../../windows/generics-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant génère l’avertissement C4688.  

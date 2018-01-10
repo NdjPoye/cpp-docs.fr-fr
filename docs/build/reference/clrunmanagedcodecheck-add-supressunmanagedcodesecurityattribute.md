@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f4810da2a1dd24893a1e69a35091b3a7c89b527e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b0ac6b7c2c0ba9ea14a2ddd9c227143ec71e2b93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (Ajouter SupressUnmanagedCodeSecurityAttribute)
 **/CLRUNMANAGEDCODECHECK** Spécifie si l’éditeur de liens doit appliquer <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> généré à l’éditeur de liens `PInvoke` appelle du code managé dans des DLL natives.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
 /CLRUNMANAGEDCODECHECK[:NO]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Par défaut, l’éditeur de liens applique SuppressUnmanagedCodeSecurityAttribute aux généré par l’éditeur de liens `PInvoke` appels. Lorsque **/CLRUNMANAGEDCODECHECK** est activée, SuppressUnmanagedCodeSecurityAttribute n’est pas appliqué.  
   
  L’éditeur de liens ajoute seulement l’attribut aux objets compilés avec **/CLR** ou **/CLR : pure**. L’éditeur de liens ne génère pas `PInvoke` appelle dans les objets compilés avec **/CLR : safe**. Pour plus d’informations, consultez l’article [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md). Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015.  

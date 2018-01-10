@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,21 +18,19 @@ f1_keywords:
 - ATLCOM/ATL::IEnumOnSTLImpl::m_iter
 - ATLCOM/ATL::IEnumOnSTLImpl::m_pcollection
 - ATLCOM/ATL::IEnumOnSTLImpl::m_spUnk
-dev_langs:
-- C++
-helpviewer_keywords:
-- IEnumOnSTLImpl class
+dev_langs: C++
+helpviewer_keywords: IEnumOnSTLImpl class
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 38d645f7841cb71af9812bd1d62a979752a0343d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 98fb3d4562abc75f1023201a5bb7939275bb173f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ienumonstlimpl-class"></a>Classe de IEnumOnSTLImpl
 Cette classe définit une interface d’énumérateur basée sur une collection de la bibliothèque C++ Standard.  
@@ -82,7 +79,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 |[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|Pointeur vers le conteneur de la bibliothèque Standard C++ contenant les éléments à énumérer.|  
 |[IEnumOnSTLImpl::m_spUnk](#m_spunk)|Le **IUnknown** pointeur de l’objet en fournissant la collection.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `IEnumOnSTLImpl`fournit l’implémentation pour une interface d’énumérateur COM où les éléments en cours d’énumération sont stockées dans un conteneur de bibliothèque C++ Standard compatible. Cette classe est analogue à la [CComEnumImpl](../../atl/reference/ccomenumimpl-class.md) (classe), qui fournit une implémentation d’une interface d’énumérateur basé sur un tableau.  
   
 > [!NOTE]
@@ -97,7 +94,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
  `IEnumOnSTLImpl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
   
 ##  <a name="init"></a>IEnumOnSTLImpl::Init  
@@ -119,7 +116,7 @@ HRESULT Init(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si vous passez `Init` une référence à une collection contenues dans un autre objet, vous pouvez utiliser la `pUnkForRelease` paramètre pour vous assurer que l’objet et la collection, sa valeur est, est disponible pour tant que l’énumérateur a besoin.  
   
  Vous devez appeler cette méthode avant de passer un pointeur vers l’interface de l’énumérateur sur tous les clients.  
@@ -145,7 +142,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 CComPtr<IUnknown> m_spUnk;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ce pointeur intelligent conserve une référence sur l’objet passé à [IEnumOnSTLImpl::Init](#init), garantissant qu’il reste actif pendant la durée de vie de l’énumérateur.  
   
 ##  <a name="m_pcollection"></a>IEnumOnSTLImpl::m_pcollection  
@@ -155,7 +152,7 @@ CComPtr<IUnknown> m_spUnk;
 CollType* m_pcollection;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ce membre est initialisé par un appel à [IEnumOnSTLImpl::Init](#init).  
   
 ##  <a name="m_iter"></a>IEnumOnSTLImpl::m_iter  
@@ -214,4 +211,3 @@ STDMETHOD(Skip)(ULONG celt);
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

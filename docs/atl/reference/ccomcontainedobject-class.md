@@ -25,11 +25,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8fed68d788403a0c2a822d7e47f50b08d409bbf2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3579d4080b4dba130b58592fa47efd636805ed1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcontainedobject-class"></a>Classe de CComContainedObject
 Cette classe implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) par délégation à l’objet propriétaire **IUnknown**.  
@@ -66,7 +67,7 @@ class CComContainedObject : public Base
 |[CComContainedObject::QueryInterface](#queryinterface)|Récupère un pointeur vers l’interface demandée sur l’objet propriétaire.|  
 |[CComContainedObject::Release](#release)|Décrémente le décompte de références sur l’objet propriétaire.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  ATL utilise `CComContainedObject` dans les classes [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), et [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject`implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) par délégation à l’objet propriétaire **IUnknown**. (Le propriétaire est l’objet externe d’une agrégation ou de l’objet pour lequel une interface détachable est en cours de création.) `CComContainedObject` appelle `CComObjectRootEx`de `OuterQueryInterface`, `OuterAddRef`, et `OuterRelease`, hérités via `Base`.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -74,7 +75,7 @@ class CComContainedObject : public Base
   
  `CComContainedObject`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
   
 ##  <a name="addref"></a>CComContainedObject::AddRef  
@@ -98,7 +99,7 @@ CComContainedObject(void* pv);
  `pv`  
  [in] L’objet propriétaire **IUnknown**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Définit le `m_pOuterUnknown` pointeur de membre (héritée par le biais du `Base` classe) à `pv`.  
   
 ##  <a name="dtor"></a>CComContainedObject :: ~ CComContainedObject  
@@ -108,7 +109,7 @@ CComContainedObject(void* pv);
 ~CComContainedObject();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère toutes les ressources attribuées.  
   
 ##  <a name="getcontrollingunknown"></a>CComContainedObject::GetControllingUnknown  
@@ -121,7 +122,7 @@ IUnknown* GetControllingUnknown();
 ### <a name="return-value"></a>Valeur de retour  
  L’objet propriétaire **IUnknown**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode peut être virtuelle si `Base` a déclaré le [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) (macro).  
   
 ##  <a name="queryinterface"></a>CComContainedObject::QueryInterface  

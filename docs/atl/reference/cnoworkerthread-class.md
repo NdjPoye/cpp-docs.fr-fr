@@ -24,11 +24,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 12cb2f9ab7c69d8c120c1870c5cd97cbc59cf32e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36af37fae778a572d790a137073c62cfde22019c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cnoworkerthread-class"></a>Classe de CNoWorkerThread
 Utilisez cette classe comme argument pour le `MonitorClass` paramètre de modèle pour les classes de cache si vous souhaitez désactiver la maintenance du cache dynamique.  
@@ -56,12 +57,12 @@ class CNoWorkerThread
 |[CNoWorkerThread::RemoveHandle](#removehandle)|Non-équivalent du [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).|  
 |[CNoWorkerThread::Shutdown](#shutdown)|Non-équivalent du [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe fournit la même interface publique en tant que [CWorkerThread](../../atl/reference/cworkerthread-class.md). Cette interface est censée être fournies par le `MonitorClass` paramètre de modèle pour les classes de cache.  
   
  Les méthodes de cette classe sont implémentés pour ne rien faire. Les méthodes qui retournent une valeur HRESULT toujours retournent S_OK et les méthodes qui retournent un ID de HANDLE ou de thread toujours retournent 0.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlutil.h  
   
 ##  <a name="addhandle"></a>CNoWorkerThread::AddHandle  
@@ -79,7 +80,7 @@ HRESULT AddHandle(HANDLE /* hObject
 ### <a name="return-value"></a>Valeur de retour  
  Retourne toujours S_OK.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation fournie par cette classe ne fait rien.  
   
 ##  <a name="addtimer"></a>CNoWorkerThread::AddTimer  
@@ -99,7 +100,7 @@ HRESULT AddTimer(DWORD /* dwInterval
 ### <a name="return-value"></a>Valeur de retour  
  Retourne toujours S_OK.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation fournie par cette classe ne fait rien.  
   
 ##  <a name="getthreadhandle"></a>CNoWorkerThread::GetThreadHandle  
@@ -112,7 +113,7 @@ HANDLE GetThreadHandle() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne toujours NULL.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation fournie par cette classe ne fait rien.  
   
 ##  <a name="getthreadid"></a>CNoWorkerThread::GetThreadId  
@@ -125,7 +126,7 @@ DWORD GetThreadId() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne toujours 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation fournie par cette classe ne fait rien.  
   
 ##  <a name="initialize"></a>CNoWorkerThread::Initialize  
@@ -138,7 +139,7 @@ HRESULT Initialize() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne toujours S_OK.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation fournie par cette classe ne fait rien.  
   
 ##  <a name="removehandle"></a>CNoWorkerThread::RemoveHandle  
@@ -152,7 +153,7 @@ HRESULT RemoveHandle(HANDLE /* hObject
 ### <a name="return-value"></a>Valeur de retour  
  Retourne toujours S_OK.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation fournie par cette classe ne fait rien.  
   
 ##  <a name="shutdown"></a>CNoWorkerThread::Shutdown  
@@ -165,5 +166,5 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne toujours S_OK.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation fournie par cette classe ne fait rien.

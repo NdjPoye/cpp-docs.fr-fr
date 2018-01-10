@@ -1,61 +1,61 @@
 ---
-title: "LoadLibrary et AfxLoadLibrary | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LoadLibrary"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AfxLoadLibrary (méthode)"
-  - "DLL (C++), AfxLoadLibrary"
-  - "DLL (C++), LoadLibrary"
-  - "liaison explicite (C++)"
-  - "LoadLibrary (méthode)"
+title: LoadLibrary et AfxLoadLibrary | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: LoadLibrary
+dev_langs: C++
+helpviewer_keywords:
+- DLLs [C++], AfxLoadLibrary
+- DLLs [C++], LoadLibrary
+- AfxLoadLibrary method
+- LoadLibrary method
+- explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 03fc696af7605f9937ecddf40a06a0c020aff82c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# LoadLibrary et AfxLoadLibrary
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les processus appellent [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) \(ou [AfxLoadLibrary](../Topic/AfxLoadLibrary.md)\) pour établir une liaison explicite avec une DLL.  Si la fonction réussit, elle mappe la DLL spécifiée à l'espace d'adressage du processus appelant et retourne un handle vers la DLL qui peut être utilisé avec d'autres fonctions pour une liaison explicite, par exemple, `GetProcAddress` et `FreeLibrary`.  
+# <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary et AfxLoadLibrary
+Traite l’appel [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (ou [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) pour une liaison explicite à une DLL. Si la fonction réussit, elle mappe la DLL spécifiée dans l’espace d’adressage du processus appelant et retourne un handle vers la DLL qui peut être utilisée avec d’autres fonctions pour une liaison explicite, par exemple, `GetProcAddress` et `FreeLibrary`.  
   
- `LoadLibrary` tente de localiser la DLL à l'aide de la séquence de recherche utilisée pour la liaison implicite.  Si le système ne trouve pas la DLL ou si la fonction de point d'entrée retourne FALSE, `LoadLibrary` retourne NULL.  Si l'appel à `LoadLibrary` spécifie un module DLL qui est déjà mappé à l'espace d'adressage du processus appelant, la fonction retourne un handle vers la DLL et incrémente le décompte de références du module.  
+ `LoadLibrary`tente de localiser la DLL à l’aide de la séquence de recherche qui est utilisée pour la liaison implicite. Si le système ne peut pas trouver la DLL ou si la fonction de point d’entrée retourne FALSE, `LoadLibrary` renvoie la valeur NULL. Si l’appel à `LoadLibrary` spécifie un module DLL déjà mappé dans l’espace d’adressage du processus appelant, la fonction retourne un handle de la DLL et incrémente le décompte de références du module.  
   
- Si la DLL a une fonction de point d'entrée, le système d'exploitation appelle la fonction dans le contexte du thread ayant appelé `LoadLibrary`.  Il n'appelle pas la fonction de point d'entrée si la DLL est déjà liée au processus, suite à un appel antérieur à `LoadLibrary` sans appel correspondant à la fonction `FreeLibrary`.  
+ Si la DLL possède une fonction de point d’entrée, le système d’exploitation appelle la fonction dans le contexte du thread qui a appelé `LoadLibrary`. La fonction de point d’entrée n’est pas appelée si la DLL est déjà attachée au processus en raison d’un appel précédent à `LoadLibrary` ne dont aucun appel correspondant à la `FreeLibrary` (fonction).  
   
- Pour les applications MFC qui chargent des DLL d'extension, nous recommandons d'utiliser `AfxLoadLibrary` à la place de `LoadLibrary`.  `AfxLoadLibrary` gère la synchronisation des threads avant l'appel de `LoadLibrary`.  L'interface \(prototype de fonction\) de `AfxLoadLibrary` est identique à celle de `LoadLibrary`.  
+ Pour les applications MFC qui chargent des DLL d’extension MFC, nous vous recommandons d’utiliser `AfxLoadLibrary` au lieu de `LoadLibrary`. `AfxLoadLibrary`gère la synchronisation des threads avant d’appeler `LoadLibrary`. L’interface (prototype de fonction) de `AfxLoadLibrary` est identique à `LoadLibrary`.  
   
- Si Windows ne peut pas charger la DLL, le processus peut tenter de récupérer à partir de l'erreur.  Par exemple, il peut notifier l'erreur à l'utilisateur et lui demander de spécifier un autre chemin d'accès à la DLL.  
+ Si Windows ne peut pas charger la DLL, le processus peut tenter une récupération à partir de l’erreur. Par exemple, le processus peut avertir l’utilisateur de l’erreur et demandez à l’utilisateur de spécifier un autre chemin d’accès à la DLL.  
   
 > [!IMPORTANT]
->  Si le code doit être exécuté sous Windows NT 4, Windows 2000 ou Windows XP \(version antérieure à SP1\), veillez à spécifier le chemin d'accès complet de toute DLL.  Sur ces systèmes d'exploitation, la recherche porte d'abord sur le répertoire actif lors du chargement des fichiers.  Si vous ne spécifiez pas le chemin d'accès au fichier, un fichier qui n'est pas celui que vous aviez prévu risque d'être chargé.  
+>  Si le code doit s’exécuter sous Windows NT 4, Windows 2000 ou Windows XP (avant SP1), veillez à spécifier le chemin d’accès complet de toutes les DLL. Sur ces systèmes d’exploitation, le répertoire actif est tout d’abord recherché lors du chargement de fichiers. Si vous ne sont pas éligibles le chemin d’accès du fichier, un fichier qui n’est pas celle prévue peut être chargé.  
   
-## Que voulez\-vous faire ?  
+## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?  
   
--   [Lier de manière implicite](../build/linking-implicitly.md)  
+-   [Comment lier de manière implicite à une DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
   
--   [Déterminer la méthode de liaison à utiliser](../build/determining-which-linking-method-to-use.md)  
+-   [Déterminer la méthode de liaison à utiliser](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?  
   
--   [Chemin de recherche utilisé par Windows pour rechercher une DLL](../build/search-path-used-by-windows-to-locate-a-dll.md)  
+-   [Le chemin de recherche utilisé par Windows pour retrouver une DLL](../build/search-path-used-by-windows-to-locate-a-dll.md)  
   
 -   [FreeLibrary et AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)  
   
 -   [GetProcAddress](../build/getprocaddress.md)  
   
-## Voir aussi  
- [DLL en Visual C\+\+](../build/dlls-in-visual-cpp.md)   
+## <a name="see-also"></a>Voir aussi  
+ [DLL en Visual C++](../build/dlls-in-visual-cpp.md)   
  [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187)   
- [AfxLoadLibrary](../Topic/AfxLoadLibrary.md)
+ [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)

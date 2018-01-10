@@ -1,46 +1,47 @@
 ---
-title: "R&#232;gles en mode batch | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "règles d'inférence en mode batch dans NMAKE"
-  - "règles d'inférence dans NMAKE"
-  - "programme NMAKE, règles d'inférence"
+title: "Les règles en Mode Batch | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inference rules in NMAKE
+- NMAKE program, inference rules
+- batch-mode inference rules in NMAKE
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0faeb66f728c826f8d499ee6f033cecc7250a5b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# R&#232;gles en mode batch
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="batch-mode-rules"></a>Règles en mode batch
 ```  
 {frompath}.fromext{topath}.toext::  
    commands  
 ```  
   
- Les règles d'inférence en mode batch prévoient un seul appel de la règle d'inférence quand N commandes sont concernées par cette règle d'inférence.  Sans ces règles d'inférence en mode batch, il faudrait appeler N commandes.  N est le nombre de dépendants qui déclenchent la règle d'inférence.  
+ Règles d’inférence en mode batch ne fournissent qu’un seul appel de la règle d’inférence quand N commandes passent par cette règle d’inférence. Sans règles d’inférence en mode batch, il faudrait N commandes à appeler. N est le nombre de personnes qui déclenchent la règle d’inférence.  
   
- Les makefiles contenant des règles d'inférence en mode batch doivent utiliser NMAKE version 1.62 ou ultérieure.  Pour déterminer la version de NMAKE, exécutez la macro \_NMAKE\_VER fournie avec NMAKE version 1.62 ou ultérieure.  Cette macro retourne une chaîne représentant la version du produit C\+\+.  
+ Les makefiles contenant des règles d’inférence en mode batch doivent utiliser NMAKE version 1.62 ou ultérieure. Pour vérifier la version NMAKE, exécutez la macro _NMAKE_VER fournie avec NMAKE version 1.62 ou ultérieure. Cette macro retourne une chaîne représentant la version du produit Visual C++.  
   
- La seule différence sur le plan de la syntaxe par rapport à la règle d'inférence standard est que la règle d'inférence en mode batch se termine par un double signe deux\-points \(::\).  
+ La différence syntaxique uniquement à partir de la règle d’inférence standard est que la règle d’inférence en mode batch se termine par un double deux-points ( :).  
   
 > [!NOTE]
->  L'outil appelé doit pouvoir gérer des fichiers multiples.  La règle d'inférence en mode batch doit utiliser `$<` comme macro pour accéder aux fichiers dépendants.  
+>  L’outil appelé doit être en mesure de gérer plusieurs fichiers. La règle d’inférence en mode batch doit utiliser `$<` comme macro pour accéder aux fichiers dépendants.  
   
- Les règles d'inférence en mode batch peuvent accélérer le processus de génération.  Il est plus rapide de fournir des fichiers au compilateur en batch, car le pilote du compilateur n'est appelé qu'une seule fois.  Par exemple, le compilateur C et C\+\+ est plus performant quand il gère un ensemble de fichiers car il réside alors en mémoire pendant tout le processus.  
+ Les règles d’inférence en mode batch peuvent accélérer le processus de génération. Il est plus rapide pour fournir des fichiers au compilateur en batch, car le pilote du compilateur est appelé une seule fois. Par exemple, le compilateur C et C++ plus performant lors du traitement d’un ensemble de fichiers, car elle peut rester résident pendant le processus en mémoire.  
   
- L'exemple suivant montre comment utiliser les règles d'inférence en mode batch :  
+ L’exemple suivant montre comment utiliser les règles d’inférence en mode batch :  
   
 ```  
 #  
@@ -65,7 +66,7 @@ $(Objs) :
 #end of makefile  
 ```  
   
- NMAKE produit la sortie suivante sans règles d'inférence en mode batch :  
+ NMAKE génère la sortie suivante sans règles d’inférence en mode batch :  
   
 ```  
 E:\tmp> nmake -f test.mak -a NOBatch=1  
@@ -82,7 +83,7 @@ foo3.cpp
 foo4.cpp  
 ```  
   
- NMAKE génère le résultat suivant avec les règles d'inférence en mode batch :  
+ NMAKE génère le résultat suivant avec les règles d’inférence en mode batch :  
   
 ```  
 E:\tmp> nmake -f test.mak -a  
@@ -98,5 +99,5 @@ foo4.cpp
 Generating Code...  
 ```  
   
-## Voir aussi  
- [Règles d'inférence](../build/inference-rules.md)
+## <a name="see-also"></a>Voir aussi  
+ [Règles d’inférence](../build/inference-rules.md)

@@ -23,24 +23,25 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 85fe7b45d17ea7263ca2445aaa97cbf007532e4a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8caf060d278e7ac2c92c38ad58e9c4c55eab632c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="include-force-symbol-references"></a>/INCLUDE (Forcer les références des symboles)
 ```  
 /INCLUDE:symbol  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  où :  
   
  `symbol`  
  Spécifie un symbole à ajouter à la table de symboles.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’option /INCLUDE indique à l’éditeur de liens pour ajouter un symbole spécifié à la table de symboles.  
   
  Pour spécifier plusieurs symboles, tapez une virgule (,), un point-virgule ( ;) ou un espace entre les noms de symboles. Sur la ligne de commande, spécifiez/INCLUDE :`symbol` une fois pour chaque symbole.  

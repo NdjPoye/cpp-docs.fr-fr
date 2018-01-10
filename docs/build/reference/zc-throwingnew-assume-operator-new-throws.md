@@ -22,11 +22,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bc784af1c23576ff68c8be8b4b400cd10cc8b0e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cbcb635cd37a40c2de1599d271658de308e8cff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew (supposer que lève nouvel opérateur)  
 Lorsque le `/Zc:throwingNew` est spécifiée, le compilateur optimise les appels à `operator new` pour ignorer les contrôles d’un pointeur null en retour. Cette option indique au compilateur de supposer que tous les liés implémentations de `operator new` et allocateurs personnalisés conforme à la norme C++ et lever en cas d’échec d’allocation. Par défaut dans Visual Studio, le compilateur génère pessimiste les vérifications null (`/Zc:throwingNew-`) pour ces appels, car les utilisateurs peuvent lier avec une implémentation non lanceurs de `operator new` ou écrire des routines d’allocateur personnalisé qui retournent des pointeurs null.  
@@ -35,7 +36,7 @@ Lorsque le `/Zc:throwingNew` est spécifiée, le compilateur optimise les appels
   
 `/Zc:throwingNew`[`-`]  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 La norme ISO C ++ 98, depuis l’a spécifié que la valeur par défaut [new, opérateur](../../standard-library/new-operators.md#op_new) lève `std::bad_alloc` lorsque l’allocation de mémoire échoue. Versions de Visual C++ jusqu'à Visual Studio 6.0 a retourné un pointeur null en cas d’un échec d’allocation. À compter de Visual Studio 2002, `operator new` conforme au standard et lève en cas d’échec. Pour prendre en charge le code qui utilise l’ancien style d’allocation, Visual Studio fournit une implémentation de fenêtres de `operator new` dans *nothrownew.obj* qui retourne un pointeur null en cas d’échec. Par défaut, le compilateur génère également des vérifications null défensives pour empêcher ces allocateurs anciens provoque un arrêt immédiat en cas d’échec. Le `/Zc:throwingNew` option indique au compilateur d’ignorer ces vérifications null, en supposant que tous les liés mémoire allocateurs conforme à la norme. Cela ne s’applique pas à non lanceurs explicite `operator new` surcharges, qui sont déclarées à l’aide d’un paramètre supplémentaire de type `std::nothrow_t` et explicite `noexcept` spécification.  
   

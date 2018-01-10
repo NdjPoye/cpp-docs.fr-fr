@@ -28,11 +28,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1b6a7d1c76b9ddb0aa555e8856f26da99611f553
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0dc0fb58d1b92fac1462b355b9afb353554f3f23
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctokenprivileges-class"></a>Classe de CTokenPrivileges
 Cette classe est un wrapper pour le **TOKEN_PRIVILEGES** structure.  
@@ -77,7 +78,7 @@ class CTokenPrivileges
 |[CTokenPrivileges::operator les TOKEN_PRIVILEGES const *](#operator_const_token_privileges__star)|Convertit une valeur en un pointeur vers le **TOKEN_PRIVILEGES** structure.|  
 |[CTokenPrivileges::operator =](#operator_eq)|Opérateur d'assignation.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un [jeton d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374909) est un objet qui décrit le contexte de sécurité d’un processus ou thread et est alloué à chaque utilisateur connecté à un système Windows NT ou Windows 2000.  
   
  Le jeton d’accès est utilisé pour décrire les différents privilèges de sécurité accordées à chaque utilisateur. Un privilège se compose d’un nombre 64 bits appelé identificateur unique local ( [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)) et une chaîne de descripteur.  
@@ -86,7 +87,7 @@ class CTokenPrivileges
   
  Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le Kit de développement logiciel Windows.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h  
   
 ##  <a name="add"></a>CTokenPrivileges::Add  
@@ -126,7 +127,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
  `rPrivileges`  
  Le [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) à attribuer à la nouvelle structure `CTokenPrivileges` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `CTokenPrivileges` objet peut éventuellement être créé à l’aide un **TOKEN_PRIVILEGES** précédemment définie ou structure `CTokenPrivileges` objet.  
   
 ##  <a name="dtor"></a>CTokenPrivileges :: ~ CTokenPrivileges  
@@ -136,7 +137,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 virtual ~CTokenPrivileges() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le destructeur libère toutes les ressources attribuées.  
   
 ##  <a name="delete"></a>CTokenPrivileges::Delete  
@@ -153,7 +154,7 @@ bool Delete(LPCTSTR pszPrivilege) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true si le privilège a été supprimé avec succès.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode est utile en tant qu’outil de création de jetons limités sous Windows 2000.  
   
 ##  <a name="deleteall"></a>CTokenPrivileges::DeleteAll  
@@ -163,7 +164,7 @@ bool Delete(LPCTSTR pszPrivilege) throw();
 void DeleteAll() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Supprime tous les privilèges contenus dans le `CTokenPrivileges` objet jeton d’accès.  
   
 ##  <a name="getdisplaynames"></a>CTokenPrivileges::GetDisplayNames  
@@ -177,7 +178,7 @@ void GetDisplayNames(CNames* pDisplayNames) const throw(...);
  `pDisplayNames`  
  Pointeur vers un tableau d'objets `CString`. **Enregistrements CNAME** est défini comme un typedef : **CTokenPrivileges::CAtlArray\<CString >**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le paramètre `pDisplayNames` est un pointeur vers un tableau de `CString` objets afin de recevront les noms d’affichage correspondant aux privilèges contenus dans le `CTokenPrivileges` objet. Cette méthode récupère les noms d’affichage uniquement pour les privilèges spécifiés dans la section définie par les privilèges de Windows NT. H.  
   
  Cette méthode récupère un nom affichable : par exemple, si le nom d’attribut est SE_REMOTE_SHUTDOWN_NAME, le nom complet est « Forcer l’arrêt à partir d’un système distant ». Pour obtenir le nom du système, utilisez [CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes).  
@@ -218,7 +219,7 @@ void GetLuidsAndAttributes(
  `pAttributes`  
  Pointeur vers un tableau d’objets DWORD. Si ce paramètre est omis ou NULL, les attributs ne sont pas récupérées. **CAttributes** est un typedef défini en tant que **CAtlArray \<DWORD > CAttributes**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode énumérera tous les privilèges contenus dans le `CTokenPrivileges` objet du jeton d’accès et placer la liste des LUID individuels et (facultativement) les indicateurs d’attributs dans des objets de tableau.  
   
 ##  <a name="getnamesandattributes"></a>CTokenPrivileges::GetNamesAndAttributes  
@@ -237,7 +238,7 @@ void GetNamesAndAttributes(
  `pAttributes`  
  Pointeur vers un tableau d’objets DWORD. Si ce paramètre est omis ou NULL, les attributs ne sont pas récupérées. **CAttributes** est un typedef défini en tant que **CAtlArray \<DWORD > CAttributes**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode énumérera tous les privilèges contenus dans le `CTokenPrivileges` objet, en plaçant le nom et (facultativement) les indicateurs d’attributs dans des objets de tableau.  
   
  Cette méthode récupère le nom d’attribut, plutôt que le nom peut être affichée : par exemple, si le nom d’attribut est SE_REMOTE_SHUTDOWN_NAME, le nom du système est « SeRemoteShutdownPrivilege. » Pour obtenir le nom peut être affichée, utilisez la méthode [CTokenPrivileges::GetDisplayNames](#getdisplaynames).  
@@ -296,7 +297,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 operator const TOKEN_PRIVILEGES *() const throw(...);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Convertit une valeur en un pointeur vers le [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) structure.  
   
 ## <a name="see-also"></a>Voir aussi  

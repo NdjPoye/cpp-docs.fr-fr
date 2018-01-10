@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ae0db059d092feb1a24a3c7c635817250f2813b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f579716cff70d0c9f20ea0fa0133dcb4d86c8db3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ca2caex-class"></a>Classe de CA2CAEX
 Cette classe est utilisée par les macros de conversion de chaînes `CA2CTEX` et `CT2CAEX`et le typedef **CA2CA**.  
@@ -63,7 +64,7 @@ class CA2CAEX
 |----------|-----------------|  
 |[CA2CAEX::m_psz](#m_psz)|Le membre de données qui stocke la chaîne source.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  À moins que des fonctionnalités supplémentaires sont requises, utilisez `CA2CTEX`, `CT2CAEX`, ou **CA2CA** dans votre propre code.  
   
  Cette classe est plus sûr d’utiliser dans les boucles et ne sera pas dépassement de la pile. Par défaut, les classes et macros de conversion ATL utilisent la page de codes ANSI du thread actif pour la conversion.  
@@ -83,7 +84,7 @@ class CA2CAEX
 ## <a name="example"></a>Exemple  
  Consultez [ATL et MFC Macros de Conversion de chaînes](string-conversion-macros.md) pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlconv.h  
   
 ##  <a name="ca2caex"></a>CA2CAEX::CA2CAEX  
@@ -101,7 +102,7 @@ CA2CAEX(LPCSTR psz) throw(...);
  `nCodePage`  
  Inutilisé dans cette classe.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Crée la mémoire tampon requise pour la traduction.  
   
 ##  <a name="dtor"></a>CA2CAEX :: ~ CA2CAEX  
@@ -111,7 +112,7 @@ CA2CAEX(LPCSTR psz) throw(...);
 ~CA2CAEX() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère la mémoire tampon allouée.  
   
 ##  <a name="m_psz"></a>CA2CAEX::m_psz  

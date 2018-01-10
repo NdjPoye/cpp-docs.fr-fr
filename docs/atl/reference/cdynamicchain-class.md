@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,37 +14,22 @@ f1_keywords:
 - ATLWIN/ATL::CDynamicChain::CallChain
 - ATLWIN/ATL::CDynamicChain::RemoveChainEntry
 - ATLWIN/ATL::CDynamicChain::SetChainEntry
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - message maps, chaining
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 54137760f2c1ee0f93fd8ad21238710f4b6a4a56
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f57da02b764c1cbce6a97ecbea8aa84e4ffcce9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicchain-class"></a>Classe de CDynamicChain
 Cette classe fournit des méthodes de prise en charge le chaînage dynamique des tables des messages.  
@@ -89,17 +73,17 @@ class CDynamicChain
   
  Par exemple, supposons que votre classe est définie comme suit :  
   
- [!code-cpp[NVC_ATL_Windowing #88](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#88](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]  
   
  Le client appelle ensuite `CMyWindow::SetChainEntry`:  
   
- [!code-cpp[NVC_ATL_Windowing #89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing#89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]  
   
  où `chainedObj` est l’objet de chaîne et est une instance d’une classe dérivée de `CMessageMap`. Maintenant, si `myCtl` reçoit un message qui n’est pas géré par `OnPaint` ou `OnSetFocus`, la procédure de fenêtre achemine le message vers `chainedObj`de table des messages par défaut.  
   
  Pour plus d’informations sur le chaînage de mappage de message, consultez [tables des messages](../../atl/message-maps-atl.md) dans l’article « Classes de fenêtre ATL ».  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlwin.h  
   
 ##  <a name="callchain"></a>CDynamicChain::CallChain  
@@ -137,7 +121,7 @@ BOOL CallChain(
 ### <a name="return-value"></a>Valeur de retour  
  **TRUE** si le message est entièrement traité ; sinon, **FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour appeler la procédure de fenêtre `CallChain`, vous devez spécifier le [macro CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) macro dans votre table des messages. Pour obtenir un exemple, consultez la [CDynamicChain](../../atl/reference/cdynamicchain-class.md) vue d’ensemble.  
   
  `CallChain`nécessite un appel précédent à [SetChainEntry](#setchainentry) pour associer le `dwChainID` valeur avec un objet et sa table des messages.  
@@ -196,10 +180,9 @@ BOOL SetChainEntry(
 ### <a name="return-value"></a>Valeur de retour  
  **TRUE** si la table des messages est correctement ajoutée à la collection. Dans le cas contraire, **FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si le `dwChainID` valeur existe déjà dans la collection, son objet associé et la table des messages sont remplacés par `pObject` et `dwMsgMapID`, respectivement. Sinon, une nouvelle entrée est ajoutée.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classe de CWindowImpl](../../atl/reference/cwindowimpl-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

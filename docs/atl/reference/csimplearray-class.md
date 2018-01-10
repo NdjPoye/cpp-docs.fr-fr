@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6dc816dfa46e905dc8e9d0badb5fc54b53cbf043
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ea081d3868c1226638d01be9505eb9d0e01ed10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csimplearray-class"></a>Classe de CSimpleArray
 Cette classe fournit des méthodes pour la gestion d’un simple tableau.  
@@ -79,14 +80,14 @@ class CSimpleArray
 |[CSimpleArray::operator =](#operator_eq)|Opérateur d'assignation.|  
 
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CSimpleArray`Fournit des méthodes pour créer et gérer un simple tableau, d’un type donné `T`.  
   
  Le paramètre `TEqual` fournit un moyen de définir une fonction de l’égalité de deux éléments de type `T`. En créant une classe semblable à [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md), il est possible de modifier le comportement du test d’égalité pour tout tableau donné. Par exemple, lorsque vous traitez avec un tableau de pointeurs, il peut être utile définir l’égalité comme selon les valeurs que les pointeurs font référence. L’implémentation par défaut utilise **operator=()**.  
   
  Les deux `CSimpleArray` et [CSimpleMap](../../atl/reference/csimplemap-class.md) sont conçus pour un petit nombre d’éléments. [CAtlArray](../../atl/reference/catlarray-class.md) et [CAtlMap](../../atl/reference/catlmap-class.md) doit être utilisé lorsque le tableau contient un grand nombre d’éléments.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsimpcoll.h  
   
 ## <a name="example"></a>Exemple  
@@ -121,7 +122,7 @@ CSimpleArray();
  *src*  
  Objet `CSimpleArray` existant.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Initialise les membres de données, création d’un nouveau vide `CSimpleArray` objet ou une copie d’un objet `CSimpleArray` objet.  
   
 ##  <a name="dtor"></a>CSimpleArray :: ~ CSimpleArray  
@@ -131,7 +132,7 @@ CSimpleArray();
 ~CSimpleArray();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère toutes les ressources attribuées.  
   
 ##  <a name="find"></a>CSimpleArray::Find  
@@ -204,7 +205,7 @@ CSimpleArray<T, TEqual>
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers la mise à jour `CSimpleArray` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Copie tous les éléments de la `CSimpleArray` objet référencé par *src* dans l’objet de tableau en cours, en remplaçant toutes les données existantes.  
   
 ### <a name="example"></a>Exemple  
@@ -224,7 +225,7 @@ BOOL Remove(const T& t);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE si l’élément est trouvé et supprimé ; sinon FALSE.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsqu’un élément est supprimé, les éléments restants dans le tableau sont renumérotés pour remplir l’espace vide.  
   
 ##  <a name="removeall"></a>CSimpleArray::RemoveAll  
@@ -234,7 +235,7 @@ BOOL Remove(const T& t);
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Supprime tous les éléments actuellement stockés dans le tableau.  
   
 ##  <a name="removeat"></a>CSimpleArray::RemoveAt  
@@ -251,7 +252,7 @@ BOOL RemoveAtint nIndex);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE si l’élément a été supprimé, FALSE si l’index n’est pas valide.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsqu’un élément est supprimé, les éléments restants dans le tableau sont renumérotés pour remplir l’espace vide.  
   
 ##  <a name="setatindex"></a>CSimpleArray::SetAtIndex  

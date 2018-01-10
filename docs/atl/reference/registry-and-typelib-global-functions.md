@@ -27,11 +27,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6f9dd09983a7b8cb781e26a6a3ed049d82d03632
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dbb919cb2fe4d91f5665fbea3dcfd2140d178341
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registry-and-typelib-global-functions"></a>Fonctions globales du Registre et de TypeLib
 Ces fonctions fournissent la prise en charge pour le chargement et l’inscription d’une bibliothèque de types.  
@@ -60,7 +61,7 @@ Ces fonctions fournissent la prise en charge pour le chargement et l’inscripti
 |[AtlGetPerUserRegistration](#atlgetperuserregistration)|Récupère si l’application redirige l’accès au Registre vers le **HKEY_CURRENT_USER** ( **HKCU**) nœud.|  
 |[AtlSetPerUserRegistration](#atlsetperuserregistration)|Définit si l’application redirige l’accès au Registre vers le **HKEY_CURRENT_USER** ( **HKCU**) nœud.|  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h
 
 ## <a name="atlgetperuserregistration"></a>AtlGetPerUserRegistration
@@ -79,12 +80,12 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ### <a name="return-value"></a>Valeur de retour  
  `S_OK`Si la méthode a réussi, sinon la `HRESULT` code d’erreur si une erreur se produit.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La redirection du Registre n’est pas activée par défaut. Si vous activez cette option, l’accès au Registre est redirigé vers **HKEY_CURRENT_USER\Software\Classes**.  
   
  La redirection n’est pas globale. Seuls les infrastructures de MFC et ATL sont affectés par cette redirection de Registre.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
 
  ## <a name="afxregcreatekey"></a>AfxRegCreateKey
@@ -112,7 +113,7 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 ### <a name="return-value"></a>Valeur de retour  
  Si la fonction réussit, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror.h.  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afxpriv.h  
 
 ## <a name="afxregdeletekey"></a>AfxRegDeleteKey
@@ -137,7 +138,7 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 ### <a name="return-value"></a>Valeur de retour  
  Si la fonction réussit, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror.h.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afxpriv.h  
 
 ## <a name="afxregisterpreviewhandler"></a>
@@ -159,7 +160,7 @@ BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeNa
  `lpszFilterExt`  
  Indique l’extension de fichier est enregistré avec ce gestionnaire.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdisp.h   
 
 ##  <a name="atlregistertypelib"></a>AtlRegisterTypeLib  
@@ -180,9 +181,9 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction d’assistance utilisée par [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) et [CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib).  
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h
 
  ## <a name="afxregopenkey"></a>AfxRegOpenKey
@@ -210,7 +211,7 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 ### <a name="return-value"></a>Valeur de retour  
  Si la fonction réussit, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror.h.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afxpriv.h  
 
 ## <a name="afxregopenkeyex"></a>AfxRegOpenKeyEx
@@ -244,7 +245,7 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 ### <a name="return-value"></a>Valeur de retour  
  Si la fonction réussit, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror.h.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afxpriv.h  
 
  ## <a name="afxunregisterpreviewhandler"></a>AfxUnregisterPreviewHandler
@@ -260,7 +261,7 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
  `lpszCLSID`  
  Spécifie le CLSID du Gestionnaire d’inscription doit être annulée.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdisp.h  
 
 ## <a name="atlsetperuserregistration"></a>AtlSetPerUserRegistration
@@ -279,11 +280,11 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ### <a name="return-value"></a>Valeur de retour  
  `S_OK`Si la méthode a réussi, sinon la `HRESULT` code d’erreur si une erreur se produit.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La redirection du Registre n’est pas activée par défaut. Si vous activez cette option, l’accès au Registre est redirigé vers **HKEY_CURRENT_USER\Software\Classes**.  
   
  La redirection n’est pas globale. Seuls les infrastructures de MFC et ATL sont affectés par cette redirection de Registre.  
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
 
 ##  <a name="atlunregistertypelib"></a>AtlUnRegisterTypeLib  
@@ -306,9 +307,9 @@ ATLAPI AtlUnRegisterTypeLib(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction d’assistance utilisée par [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) et [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).  
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h
 
 ##  <a name="atlloadtypelib"></a>AtlLoadTypeLib  
@@ -339,7 +340,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction d’assistance utilisée par [AtlRegisterTypeLib](#atlregistertypelib) et [AtlUnRegisterTypeLib](#atlunregistertypelib).  
   
 ##  <a name="atlupdateregistryfromresourced"></a>AtlUpdateRegistryFromResourceD  
@@ -375,7 +376,7 @@ HRESULT RegistryDataExchange(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les macros [BEGIN_RDX_MAP](registry-data-exchange-macros.md#begin_rdx_map) et [END_RDX_MAP](registry-data-exchange-macros.md#end_rdx_map) développer vers une fonction qui appelle `RegistryDataExchange`.  
   
  Les valeurs possibles d’énumération qui indiquent que l’opération de la fonction doit effectuer sont affichés dans le tableau suivant :  
@@ -386,7 +387,7 @@ HRESULT RegistryDataExchange(
 |eWriteToReg|Écrire des données dans le Registre.|  
 |eDeleteFromReg|Supprimez la clé du Registre.|  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h
 
 ## <a name="see-also"></a>Voir aussi  

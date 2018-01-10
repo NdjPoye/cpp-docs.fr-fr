@@ -19,18 +19,19 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6f11684f71e874d2dbb439ed1f9dfc46b543a63e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7d8edd6c9e62456e54ac6228f25d7f923a6813c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clrimagetype-specify-type-of-clr-image"></a>/CLRIMAGETYPE (Spécifier le type d'une image CLR)
 ```  
 /CLRIMAGETYPE:{IJW|PURE|SAFE|SAFE32BITPREFERRED}  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’éditeur de liens accepte des objets natifs, et également MSIL objets qui sont compilées à l’aide de [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), / CLR : pure ou/CLR : safe. Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015. Lorsque des objets mixtes dans la même build sont transmis, la vérifiabilité du fichier de sortie résultant est, par défaut, égale à niveau le plus bas de vérifiabilité des modules d’entrée. Par exemple, si vous passez un coffre-fort et un module de code à l’éditeur de liens, le fichier de sortie sera pur. Si vous passez une image native et une image en mode mixte (compilée à l’aide de **/CLR**), l’image résultante est une image en mode mixte.  
   
  Vous pouvez utiliser CLRIMAGETYPE pour spécifier un niveau inférieur de vérifiabilité, si c’est ce dont vous avez besoin.  

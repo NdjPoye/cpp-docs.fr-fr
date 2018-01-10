@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 886669e6c6be58f02b9b8fa49468ca8b3b19c4a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3375e39120fdc8f2b0d8d5502aa6def997511ff5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t est un type natif)
 Analysez `wchar_t` en tant que type intégré selon la norme C++. Par défaut, **/Zc :** se trouve sur.  
@@ -38,7 +39,7 @@ Analysez `wchar_t` en tant que type intégré selon la norme C++. Par défaut, 
 /Zc:wchar_t[-]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si **/Zc :** est activé, `wchar_t` mappé au type natif spécifique à Microsoft `__wchar_t`. Si **/Zc:wchar_t-** (avec un signe moins) est spécifié, `wchar_t` est mappé à un `typedef` pour `unsigned short`. (Dans Visual C++ 6.0 et les versions antérieures, `wchar_t` n'a pas été implémenté en tant que type intégré mais a été déclaré dans wchar.h en tant que `typedef` pour `unsigned short`.) Nous ne recommandons pas **/Zc:wchar_t-** , car la norme C++ requiert que `wchar_t` être un type intégré. L'utilisation de la version `typedef` peut entraîner des problèmes de portabilité. Si vous mettez à niveau des versions antérieures de Visual C++ et rencontrez l’erreur du compilateur [l’erreur C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) parce que le code tente de convertir implicitement un `wchar_t` à `unsigned short`, nous vous recommandons de modifier le code pour corriger cette erreur, à la place paramètre **/Zc:wchar_t-**.  
   
  Microsoft implémente `wchar_t` en tant que valeur non signée de deux octets. Pour plus d’informations sur `wchar_t`, consultez [plages de types de données](../../cpp/data-type-ranges.md) et [Types fondamentaux](../../cpp/fundamental-types-cpp.md).  

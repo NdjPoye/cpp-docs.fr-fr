@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72f80202d2d1c8018e9c145951664d335ac759b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb88ff6d8a314ebd5cb0390f2c920f5b1d04e3e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="showincludes-list-include-files"></a>/showIncludes (Liste des fichiers Include)
 Indique au compilateur générer une liste des fichiers include. Imbriqué inclure les fichiers sont également affichés (les fichiers qui sont inclus dans les fichiers que vous incluez).  
@@ -38,7 +39,7 @@ Indique au compilateur générer une liste des fichiers include. Imbriqué inclu
 /showIncludes  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Lorsqu’un fichier include est rencontré pendant la compilation, un message est sortie, par exemple :  
   
 ```  

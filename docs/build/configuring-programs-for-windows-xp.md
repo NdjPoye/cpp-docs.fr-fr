@@ -13,17 +13,18 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b92eb646b152a7bbd4588fe953a762389ce111dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff80109c1f3a5e03ecb85406cdaea24804f96783
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configuration des programmes pour Windows XP
 Étant donné que Visual Studio prend en charge plusieurs ensembles d’outils de plateforme, vous pouvez cibler des systèmes d’exploitation et les bibliothèques runtime qui ne sont pas pris en charge par l’ensemble d’outils par défaut. Par exemple, en basculant l’ensemble d’outils de plateforme, vous pouvez utiliser C ++ 11, C ++ 14 et améliorations du langage C ++ 17 pris en charge par le compilateur Visual C++ dans Visual Studio pour créer des applications qui ciblent [!INCLUDE[winxp](../build/includes/winxp_md.md)] et [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Vous pouvez également utiliser des ensembles d’outils de plateforme plus anciens pour maintenir le code hérité compatible binaire et tirer parti des fonctionnalités plus récentes de l’IDE de Visual Studio.  
   
 > [!NOTE]
->  Si vous utilisez [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)], vous devez installer [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] mise à jour 4 pour ajouter la prise en charge des ensemble d’outils de plateforme de [!INCLUDE[winxp](../build/includes/winxp_md.md)] et [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Pour télécharger et installer une copie de [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] mise à jour 4, consultez [Microsoft Visual Studio Express 2012 pour Windows Desktop](http://go.microsoft.com/fwlink/?LinkID=265464) dans du Microsoft Download Center. Puis installez [Visual Studio 2012 Update 4](http://go.microsoft.com/fwlink/?LinkID=335900) pour obtenir l’ensemble d’outils de plateforme v110_xp. Utilisez Windows Update pour recevoir les dernières mises à jour logicielles après l'installation.  
+>  Si vous utilisez [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)], vous devez installer [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] mise à jour 4 pour ajouter la prise en charge des ensemble d’outils de plateforme de [!INCLUDE[winxp](../build/includes/winxp_md.md)] et [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Pour télécharger et installer une copie de [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] mise à jour 4, consultez [Microsoft Visual Studio Express 2012 pour Windows Desktop](http://go.microsoft.com/fwlink/p/?linkid=265464) dans du Microsoft Download Center. Puis installez [Visual Studio 2012 Update 4](http://go.microsoft.com/fwlink/p/?linkid=335900) pour obtenir l’ensemble d’outils de plateforme v110_xp. Utilisez Windows Update pour recevoir les dernières mises à jour logicielles après l'installation.  
   
 ## <a name="windows-xp-targeting-experience"></a>Ciblage de Windows XP  
  L’ensemble d’outils de plateforme Windows XP qui est inclus dans Visual Studio est une version de la [!INCLUDE[win7](../build/includes/win7_md.md)] Kit de développement logiciel qui a été inclus dans [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], mais elle utilise le compilateur C++ actuel. Il configure également les propriétés du projet avec les valeurs par défaut appropriées : par exemple, la spécification d'un éditeur de liens compatible pour le ciblage de bas niveau. Windows uniquement les applications de bureau qui sont créées à l’aide de l’ensemble d’outils de plateforme Windows XP s’exécutent sur [!INCLUDE[winxp](../build/includes/winxp_md.md)] et [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)], mais ces applications peuvent également s’exécuter sur les systèmes d’exploitation Windows plus récentes.  

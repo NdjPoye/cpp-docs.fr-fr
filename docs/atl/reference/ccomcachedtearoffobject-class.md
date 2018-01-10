@@ -26,11 +26,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c2d8f1c7308946e7c125cbc3450b328e52236823
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 89240e913f46a3522062317da8089c3ae4bd81ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Classe de CComCachedTearOffObject
 Cette classe implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour une interface détachable.  
@@ -75,7 +76,7 @@ public CComObjectRootEx<contained
 |----------|-----------------|  
 |[CComCachedTearOffObject::m_contained](#m_contained)|A `CComContainedObject` objet dérivé votre classe détachable (la classe `contained`).|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CComCachedTearOffObject`implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour une interface détachable. Cette classe est différente de `CComTearOffObject` dans ce `CComCachedTearOffObject` possède son propre **IUnknown**, distinct de l’objet propriétaire **IUnknown** (le propriétaire est l’objet pour lequel le détachable est en cours de création). `CComCachedTearOffObject`maintient son propre nombre de références sur son **IUnknown** et supprimée automatiquement une fois que son décompte de références est égal à zéro. Toutefois, si vous interrogez pour une de ses détachable interfaces, le nombre de références de l’objet propriétaire **IUnknown** est incrémenté.  
   
  Si le `CComCachedTearOffObject` de l’objet implémentant le détachable est déjà instanciée, et l’interface détachable est interrogé pour là encore, dans le même `CComCachedTearOffObject` objet est réutilisé. En revanche, si une interface détachable implémentée par un `CComTearOffObject` est à nouveau interrogée pour via l’objet propriétaire, un autre `CComTearOffObject` seront instanciés.  
@@ -91,7 +92,7 @@ public CComObjectRootEx<contained
   
  `CComCachedTearOffObject`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
   
 ##  <a name="addref"></a>CComCachedTearOffObject::AddRef  
@@ -115,7 +116,7 @@ CComCachedTearOffObject(void* pv);
  `pv`  
  [in] Pointeur vers le **IUnknown** de la `CComCachedTearOffObject`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Initialise le `CComContainedObject` membre, [m_contained](#m_contained).  
   
 ##  <a name="dtor"></a>CComCachedTearOffObject :: ~ CComCachedTearOffObject  
@@ -125,7 +126,7 @@ CComCachedTearOffObject(void* pv);
 ~CComCachedTearOffObject();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère toutes les ressources attribuées et les appels [FinalRelease](#finalrelease).  
   
 ##  <a name="finalconstruct"></a>CComCachedTearOffObject::FinalConstruct  
@@ -156,7 +157,7 @@ CcomContainedObject <contained> m_contained;
  `contained`  
  [in] Votre classe détachables, dérivée de `CComTearOffObjectBase` et les interfaces pour que votre objet détachable pour prendre en charge.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les méthodes `m_contained` hérite sont utilisés pour accéder à l’interface détachable dans votre classe détachable via l’objet mis en cache détachable `QueryInterface`, `FinalConstruct`, et `FinalRelease`.  
   
 ##  <a name="queryinterface"></a>CComCachedTearOffObject::QueryInterface  
@@ -176,7 +177,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si l’interface demandée est **IUnknown**, retourne un pointeur vers le `CComCachedTearOffObject`de propre **IUnknown** et incrémente le décompte de références. Sinon, les requêtes pour l’interface sur votre classe détachables à l’aide de la [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) héritée de la méthode `CComObjectRootEx`.  
 
   

@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: eb48e8ab0e866b416375c798ca432b976dc6d6f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3013b4233621e63de0230e088dfc10ff65a5705d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (Activer la gestion des exceptions)
 Obsolète. Gestion synchrone des exceptions à l’aide de l’hypothèse que les fonctions déclarées à l’aide d’Active `extern "C"` lèvent jamais d’exception.  
@@ -36,7 +37,7 @@ Obsolète. Gestion synchrone des exceptions à l’aide de l’hypothèse que le
 /GX  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **/GX** est déconseillée. Utiliser les équivalents [/EHsc](../../build/reference/eh-exception-handling-model.md) option à la place. Pour obtenir la liste des options du compilateur déconseillées, consultez le **déconseillées et supprimées des Options du compilateur** section [Options du compilateur classées par catégorie](../../build/reference/compiler-options-listed-by-category.md).  
   
  Par défaut, **/EHsc**, l’équivalent de **/GX**, est en vigueur lorsque vous compilez à l’aide de l’environnement de développement Visual Studio. Lorsque vous utilisez les outils de ligne de commande, sans gestion des exceptions sont spécifiée. C’est l’équivalent de **/GX-**.  

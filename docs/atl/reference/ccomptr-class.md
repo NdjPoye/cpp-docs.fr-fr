@@ -18,11 +18,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0fada073fd438bb2b3605c972f6598f2955b5f68
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ef8c49b04a769fd6202aa58324f20216948cf3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomptr-class"></a>Classe CComPtr
 Une classe de pointeur intelligent pour la gestion des pointeurs d’interface COM.  
@@ -52,7 +53,7 @@ class CComPtr
 |----------|-----------------|  
 |[CComPtr::operator =](#operator_eq)|Assigne un pointeur vers le pointeur de membre.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  ATL utilise `CComPtr` et [CComQIPtr](../../atl/reference/ccomqiptr-class.md) pour gérer les pointeurs d’interface COM. Les deux sont dérivés de [CComPtrBase](../../atl/reference/ccomptrbase-class.md), et les deux effectuant le comptage de références automatique.  
   
  Le **CComPtr** et [CComQIPtr](../../atl/reference/ccomqiptr-class.md) classes peuvent aider à éliminer les fuites de mémoire en effectuant un comptage de références automatique.  Les fonctions suivantes à la fois effectuent les mêmes opérations logiques ; Toutefois, notez comment la deuxième version peut être moins sujet aux erreurs à l’aide de la **CComPtr** classe :  
@@ -68,7 +69,7 @@ class CComPtr
   
  `CComPtr`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ##  <a name="ccomptr"></a>CComPtr::CComPtr  
@@ -98,7 +99,7 @@ T* operator= (const CComPtr<T>& lp) throw ();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers la mise à jour `CComPtr` objet  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette opération AddRefs le nouvel objet et libère l’objet existant, s’il existe.  
   
 ## <a name="see-also"></a>Voir aussi  

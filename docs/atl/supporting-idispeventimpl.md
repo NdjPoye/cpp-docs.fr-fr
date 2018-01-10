@@ -1,92 +1,92 @@
 ---
-title: "Supporting IDispEventImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDispEventImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, IDispEventImpl support in COM objects"
-  - "BEGIN_SINK_MAP macro"
-  - "event sink maps, déclarer"
-  - "IDispEventImpl class, advising and unadvising"
-  - "IDispEventImpl class, déclarer"
-  - "SINK_ENTRY macro"
-  - "bibliothèques de types, importer"
+title: Prise en charge de IDispEventImpl | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDispEventImpl
+dev_langs: C++
+helpviewer_keywords:
+- event sink maps, declaring
+- IDispEventImpl class, advising and unadvising
+- SINK_ENTRY macro
+- type libraries, importing
+- ATL, IDispEventImpl support in COM objects
+- BEGIN_SINK_MAP macro
+- IDispEventImpl class, declaring
 ms.assetid: b957f930-6a5b-4598-8e4d-8027759957e7
-caps.latest.revision: 11
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8bf10a68ae15743a637df2dee52bee83c3dfcbe0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Supporting IDispEventImpl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe de modèle [IDispEventImpl](../atl/reference/idispeventimpl-class.md) peut être utilisée pour fournir la prise en charge des récepteurs de point de connexion dans votre classe ATL.  Un récepteur de point de connexion permet à votre classe pour gérer des événements déclenchés des objets COM externes.  Les récepteurs de point de connexion sont mappés à une table de récepteurs d'événements, fournies par la classe.  
+# <a name="supporting-idispeventimpl"></a>Prise en charge de IDispEventImpl
+La classe de modèle [IDispEventImpl](../atl/reference/idispeventimpl-class.md) peut être utilisé pour prendre en charge des récepteurs de point de connexion dans votre classe ATL. Un récepteur de points de connexion permet à votre classe gérer les événements déclenchés à partir des objets COM externes. Ces récepteurs de points de connexion sont mappés avec une table de récepteur d’événements, fournie par votre classe.  
   
- Pour implémenter correctement un récepteur de point de connexion pour votre classe, les étapes suivantes doivent être effectuées :  
+ Pour implémenter correctement un récepteur de points de connexion pour votre classe, vous devant effectuer les étapes suivantes :  
   
--   Importez les bibliothèques de types pour chaque objet externe  
+-   Importer des bibliothèques de types pour chaque objet externe  
   
--   Déclarez les interfaces d' `IDispEventImpl`  
+-   Déclarez le `IDispEventImpl` interfaces  
   
--   Déclarez une table de récepteurs d'événements  
+-   Déclarer une table de récepteur d’événements  
   
--   Avertit et unadvise les points de connexion  
+-   Notifications et de déconseiller les points de connexion  
   
- Les étapes en implémentant un récepteur de tout point de connexion sont accomplies en modifiant que le fichier d'en\-tête \(.h\) de votre classe.  
+ Les étapes de l’implémentation d’un récepteur de point de connexion sont effectuées en modifiant uniquement le fichier d’en-tête (.h) de votre classe.  
   
-## Importer des bibliothèques de types  
- Pour chaque objet externe dont les événements à gérer, vous devez importer la bibliothèque de types.  Cette étape définit des événements qui peuvent être gérés et fournit des informations qui sont utilisées en déclarant la table de récepteurs d'événements.  La directive de [\#import](../preprocessor/hash-import-directive-cpp.md) peut être utilisée pour ce faire.  Ajoutez les lignes directives nécessaires pour `#import` pour chaque interface de dispatch que vous supporterez au fichier d'en\-tête \(.h\) de votre classe.  
+## <a name="importing-the-type-libraries"></a>L’importation de bibliothèques de types  
+ Pour chaque objet externe dont vous souhaitez gérer les événements, vous devez importer la bibliothèque de types. Cette étape définit les événements qui peuvent être gérés et fournit des informations qui sont utilisées lors de la déclaration de la table de récepteur d’événements. Le [#import](../preprocessor/hash-import-directive-cpp.md) directive peut être utilisée pour y parvenir. Ajouter nécessaires `#import` lignes la directive pour chaque interface de dispatch que vous prendrez en charge pour le fichier d’en-tête (.h) de votre classe.  
   
- L'exemple suivant importe la bibliothèque de types à partir d'un serveur COM externe \(`MSCAL.Calendar.7`\) :  
+ L’exemple suivant importe la bibliothèque de types d’un serveur COM externe (`MSCAL.Calendar.7`) :  
   
- [!code-cpp[NVC_ATL_Windowing#141](../atl/codesnippet/CPP/supporting-idispeventimpl_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#141](../atl/codesnippet/cpp/supporting-idispeventimpl_1.h)]  
   
 > [!NOTE]
->  Vous devez avoir une instruction distincte d' `#import` pour chaque bibliothèque de types externe que vous supporterez.  
+>  Vous devez définir un `#import` instruction pour chaque bibliothèque de types externes prendra en charge.  
   
-## Déclarer les interfaces d'IDispEventImpl  
- Maintenant que vous avez importé les bibliothèques de types de chaque interface de dispatch, vous devez déclarer les interfaces distinctes d' `IDispEventImpl` pour chaque interface de dispatch externe.  Modifiez la déclaration de la classe en ajoutant une déclaration d'interface d' `IDispEventImpl` pour chaque objet externe.  Pour plus d'informations sur les paramètres, consultez l' [IDispEventImpl](../atl/reference/idispeventimpl-class.md).  
+## <a name="declaring-the-idispeventimpl-interfaces"></a>Déclarer des Interfaces IDispEventImpl  
+ Maintenant que vous avez importé les bibliothèques de types de chaque interface de dispatch, vous devez déclarer distinct `IDispEventImpl` des interfaces pour chaque interface de dispatch externe. Modifiez la déclaration de votre classe en ajoutant une `IDispEventImpl` déclaration pour chaque objet externe de l’interface. Pour plus d’informations sur les paramètres, consultez [IDispEventImpl](../atl/reference/idispeventimpl-class.md).  
   
- Le code suivant déclare deux récepteurs de point de connexion, pour l'interface d' `DCalendarEvents` , car l'objet COM implémenté par la classe `CMyCompositCtrl2`:  
+ Le code suivant déclare deux récepteurs de points de connexion pour le `DCalendarEvents` interface, pour l’objet COM implémentée par la classe `CMyCompositCtrl2`:  
   
- [!code-cpp[NVC_ATL_Windowing#142](../atl/codesnippet/CPP/supporting-idispeventimpl_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#142](../atl/codesnippet/cpp/supporting-idispeventimpl_2.h)]  
   
-## Déclarer une table de récepteurs d'événements  
- Pour que les notifications d'événements soient gérées par la fonction RFX, votre classe doit router chaque événement à son gestionnaire approprié.  Cela est accompli en déclarant une table de récepteurs d'événements.  
+## <a name="declaring-an-event-sink-map"></a>Déclaration d’une table de récepteur d’événements  
+ Dans l’ordre pour les notifications d’événements à être gérées par la fonction, votre classe doit acheminer chaque événement à son gestionnaire correspondant. Cela est possible en déclarant une table de récepteur d’événements.  
   
- ATL fournit plusieurs macros, [BEGIN\_SINK\_MAP](../Topic/BEGIN_SINK_MAP.md), [END\_SINK\_MAP](../Topic/END_SINK_MAP.md), et [SINK\_ENTRY\_EX](../Topic/SINK_ENTRY.md), qui facilitent ce mappage.  Le format standard est la suivante :  
+ ATL fournit plusieurs macros, [BEGIN_SINK_MAP](reference/composite-control-macros.md#begin_sink_map), [END_SINK_MAP](reference/composite-control-macros.md#end_sink_map), et [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex), qui rendent ce mappage plus facile. Le format standard est la suivante :  
   
  `BEGIN_SINK_MAP(comClass)`  
   
  `SINK_ENTRY_EX(id, iid, dispid, func)`  
   
- `.  .  .  //additional external event entries`  
+ `. . . //additional external event entries`  
   
  `END_SINK_MAP()`  
   
- L'exemple suivant déclare une table de récepteurs d'événements avec deux gestionnaires d'événements :  
+ L’exemple suivant déclare une table de récepteur d’événements avec deux gestionnaires d’événements :  
   
- [!code-cpp[NVC_ATL_Windowing#136](../atl/codesnippet/CPP/supporting-idispeventimpl_3.h)]  
+ [!code-cpp[NVC_ATL_Windowing#136](../atl/codesnippet/cpp/supporting-idispeventimpl_3.h)]  
   
- L'implémentation est presque complète.  La dernière étape concerne notifier et unadvising des interfaces externes.  
+ L’implémentation est presque terminée. La dernière étape concerne informer et annulation des interfaces externes.  
   
-## Notifier et Unadvising les interfaces d'IDispEventImpl  
- La dernière étape consiste à implémenter une méthode qui avertit \(ou\) unadvise tous les points de connexion aux temps appropriés.  Cette opération qui signale doit être effectué avant communication entre les clients externes et votre objet peut avoir lieu.  Avant que votre objet soit visible, chaque interface de dispatch externe prise en charge par votre objet est interrogé pour les interfaces sortantes.  Une connexion établie et une référence à l'interface sortante est utilisée pour gérer des événements de l'objet.  Cette procédure sous le nom « informant ».  
+## <a name="advising-and-unadvising-the-idispeventimpl-interfaces"></a>Information et désinformation des Interfaces IDispEventImpl  
+ L’étape finale consiste à implémenter une méthode qui sera Conseiller (ou déconseiller) tous les points de connexion aux moments opportuns. Cette information doit être effectuée avant que la communication entre les clients externes et votre objet peut avoir lieu. Avant que vos objets deviennent visibles, chaque interface de dispatch externe prise en charge par votre objet est interrogée pour les interfaces sortantes. Une connexion est établie et une référence à l’interface sortante est utilisée pour gérer les événements de l’objet. Cette procédure est appelée « conseiller ».  
   
- Une fois que votre objet soit terminé avec les interfaces externes, il doit annoncer les interfaces sortantes qu'elles ne sont plus utilisées par votre classe.  Ce processus sous le nom « unadvising ».  
+ Une fois votre objet est terminé avec les interfaces externes, les interfaces sortantes doivent être informés qu’ils ne sont plus utilisés par votre classe. Ce processus est appelé « désinformation ».  
   
- En raison de la seule nature des objets COM, cette procédure varie, en détail et exécution, entre les implémentations.  Ces informations sont le cadre de cette rubrique et ne sont pas adressés.  
+ En raison de la nature unique des objets COM, la procédure varie en détail et de l’exécution, entre les implémentations. Ces détails sortent du cadre de cette rubrique et ne sont pas traitées.  
   
-## Voir aussi  
- [Fundamentals of ATL COM Objects](../atl/fundamentals-of-atl-com-objects.md)
+## <a name="see-also"></a>Voir aussi  
+ [Principes de base des objets ATL COM](../atl/fundamentals-of-atl-com-objects.md)
+

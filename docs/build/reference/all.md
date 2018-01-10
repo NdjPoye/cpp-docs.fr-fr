@@ -18,18 +18,19 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e2ff8a00f3d05e835a2b7b623c482f59281db80d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99a85106dba6da42943813654cfc35113f250b6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="all"></a>/ALL
 ```  
 /ALL  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette option affiche toutes les informations disponibles sauf le code machine. Utilisez [/DISASM](../../build/reference/disasm.md) pour afficher le code machine. Vous pouvez utiliser [/RAWDATA](../../build/reference/rawdata.md): NONE avec /all pour omettre les détails binaires bruts du fichier.  
   
  Uniquement les [/HEADERS](../../build/reference/headers.md) (option DUMPBIN) est disponible pour les fichiers générés par le [/GL](../../build/reference/gl-whole-program-optimization.md) option du compilateur.  

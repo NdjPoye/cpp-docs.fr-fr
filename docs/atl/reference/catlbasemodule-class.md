@@ -25,11 +25,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3249240ef90224dc1a297a848f1eba55d915fdac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 88671ae94a1df10f3866dd2ae2e70092d1ca0c4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlbasemodule-class"></a>Classe de CAtlBaseModule
 Cette classe est instanciée dans chaque projet ATL.  
@@ -65,7 +66,7 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 |----------|-----------------|  
 |[CAtlBaseModule::m_bInitFailed](#m_binitfailed)|Une variable qui indique si l’initialisation du module a échoué.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une instance de `CAtlBaseModule` _AtlBaseModule nommé est présent dans chaque projet ATL, qui contient un handle vers l’instance de module, un handle vers le module qui contient les ressources (par défaut, sont les mêmes) et un tableau de handles aux modules fournissant principal ressources. `CAtlBaseModule`rendre accessible à partir de plusieurs threads.  
   
  Cette classe remplace l’obsolète [CComModule](../../atl/reference/ccommodule-class.md) classe utilisée dans les versions antérieures d’ATL.  
@@ -75,7 +76,7 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
   
  `CAtlBaseModule`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcore.h  
   
 ##  <a name="addresourceinstance"></a>CAtlBaseModule::AddResourceInstance  
@@ -99,7 +100,7 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 CAtlBaseModule() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Crée l'objet `CAtlBaseModule`.  
   
 ##  <a name="gethinstanceat"></a>CAtlBaseModule::GetHInstanceAt  
@@ -143,7 +144,7 @@ HINSTANCE GetResourceInstance() throw();
 static bool m_bInitFailed;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  True si le module est initialisé, false en cas d’échec d’initialisation.  
   
 ##  <a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance  

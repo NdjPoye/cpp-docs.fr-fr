@@ -1,58 +1,59 @@
 ---
-title: "/ALLOWBIND (&#201;viter la liaison DLL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.PreventDLLBinding"
-  - "/allowbind"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ALLOWBIND (option de l'éditeur de liens)"
-  - "ALLOWBIND (option de l'éditeur de liens)"
-  - "-ALLOWBIND (option de l'éditeur de liens)"
-  - "lier des DLL"
-  - "DLL (C++), empêcher la liaison"
-  - "éviter la liaison DLL"
+title: "-/ALLOWBIND (éviter la liaison DLL) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.PreventDLLBinding
+- /allowbind
+dev_langs: C++
+helpviewer_keywords:
+- /ALLOWBIND linker option
+- binding DLLs
+- preventing DLL binding
+- ALLOWBIND linker option
+- -ALLOWBIND linker option
+- DLLs [C++], preventing binding
 ms.assetid: 30e37e24-12e4-407e-988a-39d357403598
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dc5d5827da555cc11a7fbc1417a9a0e26f953cea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# /ALLOWBIND (&#201;viter la liaison DLL)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (Éviter la liaison DLL)
 ```  
 /ALLOWBIND[:NO]  
 ```  
   
-## Notes  
- \/ALLOWBIND:NO définit un bit dans l'en\-tête d'une DLL, qui indique à Bind.exe que l'image n'est pas autorisée à être liée.  Vous ne voulez peut\-être pas qu'une DLL soit liée si elle a été signée numériquement \(la liaison invalide la signature\).  
+## <a name="remarks"></a>Notes  
+ /ALLOWBIND:NO définit un bit dans l'en-tête d'une DLL, qui indique à Bind.exe que l'image n'est pas autorisée à être liée. Vous ne voulez peut-être pas qu’une DLL soit liée si elle a été signée numériquement (la liaison invalide la signature).  
   
- Vous pouvez modifier une DLL existante pour la fonctionnalité \/ALLOWBIND à l'aide de l'option [\/ALLOWBIND](../../build/reference/allowbind.md) de l'utilitaire EDITBIN.  
+ Vous pouvez modifier une DLL existante pour la fonctionnalité /ALLOWBIND avec la [/ALLOWBIND](../../build/reference/allowbind.md) option de l’utilitaire EDITBIN.  
   
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, voir [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
-2.  Développez **Propriétés de configuration** et **Éditeur de liens**, puis sélectionnez **Ligne de commande**.  
+2.  Développez **propriétés de Configuration**, **l’éditeur de liens**, puis sélectionnez **ligne de commande**.  
   
-3.  Entrez `/ALLOWBIND:NO` dans **Options supplémentaires**.  
+3.  Entrez `/ALLOWBIND:NO` dans **des Options supplémentaires**.  
   
-### Pour définir cette option de l'éditeur de liens par programmation  
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)   
- [BindImage, fonction](http://msdn.microsoft.com/library/windows/desktop/ms679278.aspx)   
- [BindImageEx, fonction](http://msdn.microsoft.com/library/windows/desktop/ms679279.aspx)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)   
+ [BindImage (fonction)](http://msdn.microsoft.com/library/windows/desktop/ms679278.aspx)   
+ [BindImageEx (fonction)](http://msdn.microsoft.com/library/windows/desktop/ms679279.aspx)

@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 39bae0c1a5f78b852a92d10c4bb06fcb96f0e51d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d12abfceeebeb1cac89b510c14d7a9211173406e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomautocriticalsection-class"></a>Classe de CComAutoCriticalSection
 `CComAutoCriticalSection`Fournit des méthodes pour obtenir et de libérer la possession d’un objet de section critique.  
@@ -42,7 +43,7 @@ class CComAutoCriticalSection : public CComCriticalSection
 |[CComAutoCriticalSection::CComAutoCriticalSection](#ccomautocriticalsection)|Constructeur.|  
 |[CComAutoCriticalSection :: ~ CComAutoCriticalSection](#dtor)|Destructeur.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CComAutoCriticalSection`est semblable à la classe [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md), à l’exception `CComAutoCriticalSection` initialise automatiquement l’objet de section critique dans le constructeur.  
   
  En général, vous utilisez `CComAutoCriticalSection` via la `typedef` nom [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Ce nom fait référence à `CComAutoCriticalSection` lorsque [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) est utilisé.  
@@ -55,7 +56,7 @@ class CComAutoCriticalSection : public CComCriticalSection
   
  `CComAutoCriticalSection`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcore.h  
   
 ##  <a name="ccomautocriticalsection"></a>CComAutoCriticalSection::CComAutoCriticalSection  
@@ -65,7 +66,7 @@ class CComAutoCriticalSection : public CComCriticalSection
 CComAutoCriticalSection();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelle la fonction Win32 [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472), qui initialise l’objet de section critique.  
   
 ##  <a name="dtor"></a>CComAutoCriticalSection :: ~ CComAutoCriticalSection  
@@ -75,7 +76,7 @@ CComAutoCriticalSection();
 ~CComAutoCriticalSection() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le destructeur appelle [DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552), ce qui libère toutes les ressources système utilisées par l’objet de section critique.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -29,11 +29,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba2633fe88b83dda2f0d0edcf58d477f8f760b89
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3aa14c3ae6c083cbf440d8b5b94fcb3754bd6fff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwindowimpl-class"></a>Classe de CWindowImpl
 Fournit des méthodes pour créer ou sous-classer une fenêtre.  
@@ -90,7 +91,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 |-|-|  
 |[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)|Pointe vers la procédure de fenêtre d'origine de la classe de fenêtre.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez utiliser `CWindowImpl` pour créer une fenêtre ou une sous-classe une fenêtre existante. le `CWindowImpl` procédure de fenêtre utilise une table des messages pour diriger les messages vers les gestionnaires appropriés.  
   
  `CWindowImpl::Create`Crée une fenêtre basée sur les informations de classe de fenêtre qui sont gérées par [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md). `CWindowImpl`contient le [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (macro), ce qui signifie que `CWndClassInfo` enregistre une nouvelle classe de fenêtre. Si vous souhaitez surclasser une classe de fenêtre existante, dérivez votre classe de `CWindowImpl` et inclure le [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) (macro). Dans ce cas, `CWndClassInfo` enregistre une classe de fenêtre basée sur une classe existante mais utilise `CWindowImpl::WindowProc`. Exemple :  
@@ -128,7 +129,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
   
  `CWindowImpl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlwin.h  
   
 ##  <a name="create"></a>CWindowImpl::Create  
@@ -170,7 +171,7 @@ HWND Create(
 ### <a name="return-value"></a>Valeur de retour  
  En cas de réussite, le handle de fenêtre qui vient d’être créé. Dans le cas contraire, **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  **Créer** enregistre tout d’abord la classe de fenêtre si elle n’a pas encore été enregistré. La fenêtre qui vient d’être créée est automatiquement joint à la `CWindowImpl` objet.  
   
 > [!NOTE]
@@ -206,7 +207,7 @@ LRESULT DefWindowProc();
 ### <a name="return-value"></a>Valeur de retour  
  Le résultat du traitement du message.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, `DefWindowProc` appelle la [CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571) fonction Win32 pour envoyer les informations de message à la procédure de fenêtre spécifiée dans [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
  La fonction sans paramètres récupère automatiquement les paramètres nécessaires à partir du message en cours.  
@@ -231,7 +232,7 @@ virtual WNDPROC GetWindowProc();
 ### <a name="return-value"></a>Valeur de retour  
  La procédure de fenêtre en cours.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Substituez cette méthode pour remplacer la procédure de fenêtre par les vôtres.  
   
 ##  <a name="getwndclassinfo"></a>CWindowImpl::GetWndClassInfo  
@@ -244,7 +245,7 @@ static CWndClassInfo& GetWndClassInfo();
 ### <a name="return-value"></a>Valeur de retour  
  Une instance statique de [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, `CWindowImpl` obtient cette méthode via la [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) macro, qui spécifie une nouvelle classe de fenêtre.  
   
  Pour surclasser une classe de fenêtre existante, dérivez votre classe de `CWindowImpl` et inclure le [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) macro pour remplacer `GetWndClassInfo`. Pour plus d’informations, consultez la [CWindowImpl](../../atl/reference/cwindowimpl-class.md) vue d’ensemble.  
@@ -258,7 +259,7 @@ static CWndClassInfo& GetWndClassInfo();
 WNDPROC m_pfnSuperWindowProc;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 |Type de fenêtre|Procédure de fenêtre|  
 |--------------------|----------------------|  
@@ -279,7 +280,7 @@ virtual void OnFinalMessage(HWND hWnd);
  `hWnd`  
  [in] Un handle de fenêtre en cours de destruction.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation par défaut de `OnFinalMessage` ne fait rien, mais vous pouvez remplacer cette fonction pour gérer de nettoyage avant la destruction d’une fenêtre. Si vous souhaitez supprimer automatiquement votre objet lors de la destruction de la fenêtre, vous pouvez appeler `delete this;` dans cette fonction.  
   
 ##  <a name="subclasswindow"></a>CWindowImpl::SubclassWindow  
@@ -296,7 +297,7 @@ BOOL SubclassWindow(HWND hWnd);
 ### <a name="return-value"></a>Valeur de retour  
  **TRUE** si la fenêtre est correctement sous-classé ; sinon, **FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fenêtre sous-classée utilise désormais [CWindowImpl::WindowProc](#windowproc). La procédure de fenêtre d’origine est enregistrée dans [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
 > [!NOTE]
@@ -339,7 +340,7 @@ static LRESULT CALLBACK WindowProc(
 ### <a name="return-value"></a>Valeur de retour  
  Le résultat du traitement du message.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `WindowProc`utilise la table des messages par défaut (déclaré avec [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)) pour diriger les messages vers les gestionnaires appropriés. Si nécessaire, `WindowProc` appelle [DefWindowProc](#defwindowproc) pour le traitement des messages supplémentaires. Si le message final n’est pas géré, `WindowProc` effectue les opérations suivantes :  
   
 -   Effectue unsubclassing si la fenêtre a été unsubclassed.  

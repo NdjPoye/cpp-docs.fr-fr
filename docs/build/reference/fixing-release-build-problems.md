@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d9ea76487ffe5d622cc754072f999da8a9c5a156
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4b5f8ebc30c8260ed27c29f62830c2a94cf4d7a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fixing-release-build-problems"></a>Résolution de problèmes liés à la version release
 Si votre code génère des erreurs de compilation après basculement à partir de la version debug à une version Release, il existe quelques domaines que vous devez vérifier.  

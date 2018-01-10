@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9b86ec1bf3c47de45eaf9120d8e8f68ac9377db6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 419d97357fd3424d5de980f76c6758eaa47f3c7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (Placer les informations de débogage dans un fichier objet)
 Espace complète les informations de débogage dans tous les fichiers objets créés à partir d’un fichier d’en-tête précompilé (.pch) lorsqu’il est utilisé avec le [/Yc](../../build/reference/yc-create-precompiled-header-file.md) et [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) options. Obsolète.  
@@ -34,7 +35,7 @@ Espace complète les informations de débogage dans tous les fichiers objets cr�
 /Yd  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **/Yd** est déconseillé ; [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] utiliser de prend désormais en charge plusieurs objets qui écrivent dans un fichier .pdb unique, **/Zi** à la place. Pour obtenir la liste des options du compilateur déconseillées, consultez **déconseillées et supprimées des Options du compilateur** dans [Options du compilateur classées par catégorie](../../build/reference/compiler-options-listed-by-category.md).  
   
  Sauf si vous devez distribuer une bibliothèque contenant débogage des informations, utilisez le [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) option plutôt que **/Z7** et **/Yd**.  

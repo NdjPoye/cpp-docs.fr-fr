@@ -1,41 +1,42 @@
 ---
-title: "Pseudo-op&#233;rations brutes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Pseudo-opérations brutes | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4def1a0e-ec28-4736-91fb-fac95fba1f36
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 52ce7fb4455f87001bcfe87e1368ed0c09cda6b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Pseudo-op&#233;rations brutes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique répertorie les pseudo\-opérations.  
+# <a name="raw-pseudo-operations"></a>Pseudo-opérations brutes
+Cette rubrique répertorie les pseudo-opérations.  
   
-## Notes  
+## <a name="remarks"></a>Notes  
   
-|Pseudo\-opération|Description|  
-|-----------------------|-----------------|  
-|PROC FRAME \[:ehandler\]|Demande à MASM de générer une table de fonctions d'entrée dans .pdata et de débobiner des informations dans .xdata pour le comportement de déroulement de la gestion structurée des exceptions d'une fonction.  Si ehandler est présent, cette procédure est insérée dans le fichier .xdata en tant que gestionnaire spécifique au langage.<br /><br /> Lorsque l'attribut FRAME est utilisé, il doit être suivi d'une directive .ENDPROLOG.  Si la fonction est une fonction feuille \(comme défini dans [Types de fonctions](../build/function-types.md)\), l'attribut FRAME est inutile, tout comme le reste de ces pseudo\-opérations.|  
-|.PUSHREG reg|Génère une entrée de code de déroulement UWOP\_PUSH\_NONVOL pour le numéro de registre spécifié à l'aide de l'offset actuel dans le prologue.<br /><br /> Cette opération ne doit être utilisée qu'avec les registres d'entiers non volatils.  Pour les push de registres volatils, utilisez plutôt .ALLOCSTACK 8|  
-|.SETFRAME reg, offset|Remplit le champ du registre du frame et l'offset dans les informations de déroulement à l'aide du registre et de l'offset spécifiés.  L'offset doit être un multiple de 16 et inférieur ou égal à 240.  Cette directive génère également une entrée de code de déroulement UWOP\_SET\_FPREG pour le registre spécifié à l'aide de l'offset de prologue actuel.|  
-|.ALLOCSTACK size|Génère UWOP\_ALLOC\_SMALL ou UWOP\_ALLOC\_LARGE avec la taille spécifiée pour l'offset actuel dans le prologue.<br /><br /> L'opérande de taille doit être un multiple de 8.|  
-|.SAVEREG reg, offset|Génère une entrée de code de déroulement UWOP\_SAVE\_NONVOL ou UWOP\_SAVE\_NONVOL\_FAR pour le registre et l'offset spécifiés à l'aide de l'offset de prologue actuel.  MASM choisira l'encodage le plus efficace.<br /><br /> L'offset doit être positif et un multiple de 8.  L'offset est relatif à la base de la frame de la procédure qui est en général dans RSP ou, si vous utilisez un pointeur de frame, le pointeur de frame non cadré.|  
-|.SAVEXMM128 reg, offset|Génère une entrée de code de déroulement UWOP\_SAVE\_XMM128 ou UWOP\_SAVE\_XMM128\_FAR pour le registre XMM et l'offset spécifiés à l'aide de l'offset de prologue actuel.  MASM choisira l'encodage le plus efficace.<br /><br /> L'offset doit être positif et un multiple de 16.  L'offset est relatif à la base de la frame de la procédure qui est en général dans RSP ou, si vous utilisez un pointeur de frame, le pointeur de frame non cadré.|  
-|.PUSHFRAME \[code\]|Génère une entrée de code de déroulement UWOP\_PUSH\_MACHFRAME.  Si le code facultatif est spécifié, l'entrée de code de déroulement reçoit un modificateur de 1.  Sinon, le modificateur est 0.|  
-|.ENDPROLOG|Signale la fin des déclarations de prologue.  Doit se produire dans les 255 premiers octets de la fonction.|  
+|Opération de pseudo|Description|  
+|----------------------|-----------------|  
+|FRAME de PROC [ : ehandler]|Causes MASM pour générer une fonction table d’entrée dans .pdata et .xdata des informations de déroulement pour une fonction de structuré comportement de déroulement de la gestion des exceptions.  Si ehandler est présent, cette procédure est insérée dans le fichier .xdata en tant que gestionnaire spécifique au langage.<br /><br /> Lorsque l’attribut FRAME est utilisé, il doit être suivi par un. Directive ENDPROLOG.  Si la fonction est une fonction feuille (comme défini dans [Types de fonction](../build/function-types.md)) l’attribut FRAME est inutile, tout comme le reste de ces pseudo-opérations.|  
+|. PUSHREG reg|Génère une entrée de code de déroulement UWOP_PUSH_NONVOL pour le numéro de Registre spécifié à l’aide de l’offset dans le prologue actuel.<br /><br /> Cela doit être utilisé uniquement avec les registres non volatils d’entiers.  Pour les push de registres volatils, utilisez un. ALLOCSTACK 8, à la place|  
+|. SETFRAME reg, offset|Renseigne le frame inscrire le champ et le décalage dans les informations de déroulement à l’aide du Registre spécifié et le décalage. L’offset doit être un multiple de 16 et inférieur ou égal à 240. Cette directive génère également une entrée de code de déroulement UWOP_SET_FPREG pour le Registre spécifié à l’aide de l’offset de prologue actuel.|  
+|. Taille ALLOCSTACK|Génère UWOP_ALLOC_SMALL ou UWOP_ALLOC_LARGE avec la taille spécifiée pour l’offset actuel dans le prologue.<br /><br /> L’opérande de taille doit être un multiple de 8.|  
+|. SAVEREG reg, offset|Génère un UWOP_SAVE_NONVOL ou une entrée de code de déroulement UWOP_SAVE_NONVOL_FAR pour le Registre spécifié et le décalage à l’aide de l’offset de prologue actuel. MASM choisira l’encodage le plus efficace.<br /><br /> Offset doit être positif et un multiple de 8.  Décalage est relatif à la base du frame de la procédure, qui est en général dans RSP ou, si vous utilisez un pointeur de frame, le pointeur de frame non ajustée.|  
+|. SAVEXMM128 reg, offset|Génère un UWOP_SAVE_XMM128 ou une entrée de code de déroulement UWOP_SAVE_XMM128_FAR pour le registre XMM spécifié et le décalage à l’aide de l’offset de prologue actuel. MASM choisira l’encodage le plus efficace.<br /><br /> Offset doit être positif et un multiple de 16.  Décalage est relatif à la base du frame de la procédure, qui est en général dans RSP ou, si vous utilisez un pointeur de frame, le pointeur de frame non ajustée.|  
+|. PUSHFRAME [code]|Génère une entrée de code de déroulement UWOP_PUSH_MACHFRAME. Si le code facultatif est spécifié, l’entrée de code de déroulement reçoit un modificateur de 1. Sinon, le modificateur est 0.|  
+|.ENDPROLOG|Signale la fin des déclarations de prologue.  Doit se produire dans les 255 premiers octets de la fonction.|  
   
- Voici un exemple de prologue de fonction avec une utilisation correcte de la plupart des codes d'opération :  
+ Voici un exemple de prologue de fonction avec une utilisation correcte de la plupart des codes d’opération :  
   
 ```  
 sample PROC FRAME     
@@ -84,5 +85,5 @@ ret
 sample ENDP  
 ```  
   
-## Voir aussi  
- [Déroulement de l'assistance pour MASM](../build/unwind-helpers-for-masm.md)
+## <a name="see-also"></a>Voir aussi  
+ [Assistances de déroulement pour MASM](../build/unwind-helpers-for-masm.md)

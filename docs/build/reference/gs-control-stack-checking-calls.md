@@ -22,11 +22,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4c957ff59976406609a88bfbfe3e1f51af44d6c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff02465b4e1b1a727a2367c8d5e038f30854ecc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (contrôler les appels de contrôle de pile)
 Gère les tests de pile.  
@@ -41,7 +42,7 @@ Gère les tests de pile.
  `size`  
  (Facultatif) Nombre d'octets que les variables locales peuvent occuper avant qu'une sonde de pile soit lancée. Si le **/Gs** option est spécifiée sans un `size` argument, il est identique à la spécification **/Gs0**,  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une sonde de pile est une séquence de code que le compilateur insère dans chaque appel de fonction. Lorsqu'elle est lancée, une sonde de pile pénètre sans heurt dans la mémoire en fonction de l'espace requis pour stocker les variables locales de la fonction.  
   
  Si une fonction requiert plus de `size` octets d'espace de pile pour les variables locales, sa sonde de pile est démarrée. Par défaut, le compilateur génère du code qui lance une sonde de pile quand une fonction requiert plus d'une page d'espace de pile. Cela est équivalent à une option du compilateur **/Gs4096** pour x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]et les plateformes ARM. Cette valeur permet à une application et au gestionnaire de mémoire Windows d’augmenter la quantité de mémoire validée dynamiquement dans la pile du programme au moment de l’exécution.  

@@ -4,42 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CAtlAutoThreadModule
 - atlbase/ATL::CAtlAutoThreadModule
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlAutoThreadModule class
+dev_langs: C++
+helpviewer_keywords: CAtlAutoThreadModule class
 ms.assetid: 3be834aa-55ef-403e-94ae-41979691b15f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 159b2f13dc573262bfab3a2e19209b29e3eaf5a5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1845ecea273ece212b65d61b169cbd8f894a60a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlautothreadmodule-class"></a>Classe de CAtlAutoThreadModule
 Cette classe implémente un serveur COM mis en pool de threads, le modèle de cloisonnement.  
@@ -63,14 +46,14 @@ class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
 > [!NOTE]
 >  Cette classe remplace l’obsolète [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) classe.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `IAtlAutoThreadModule`  
   
  [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)  
   
  `CAtlAutoThreadModule`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -78,4 +61,3 @@ class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
  [Classe de IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
  [Module (Classes)](../../atl/atl-module-classes.md)
-

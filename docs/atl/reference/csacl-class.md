@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,19 @@ f1_keywords:
 - ATLSECURITY/ATL::CSacl::GetAceCount
 - ATLSECURITY/ATL::CSacl::RemoveAce
 - ATLSECURITY/ATL::CSacl::RemoveAllAces
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSacl class
+dev_langs: C++
+helpviewer_keywords: CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: bd9ef9932938cfe5ec65965b3a40116da7f43b90
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 104c189b1f368b42ef1d93496629b4e142e1c938
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csacl-class"></a>Classe de CSacl
 Cette classe est un wrapper pour une structure SACL (liste de contrôle d’accès système).  
@@ -82,21 +65,21 @@ class CSacl : public CAcl
 |----------|-----------------|  
 |[CSacl::operator =](#operator_eq)|Opérateur d'assignation.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une liste (SACL) contient des entrées de contrôle d’accès (ACE) qui spécifient les types de tentatives d’accès qui génèrent des enregistrements d’audit dans le journal des événements de sécurité d’un contrôleur de domaine. Notez qu’une liste (SACL) génère des entrées de journal uniquement sur le contrôleur de domaine où la tentative d’accès s’est produite, et non sur chaque contrôleur de domaine qui contient un réplica de l’objet.  
   
  Pour définir ou récupérer la liste SACL dans le descripteur de sécurité d’un objet, le privilège SE_SECURITY_NAME doit être activé dans le jeton d’accès de la thread en cours. Le groupe Administrateurs dispose de ce privilège accordé par défaut, et il peut être accordée aux autres utilisateurs ou groupes. Avoir le privilège accordé n’est pas tout ce qui est requis : avant de pouvoir effectuer l’opération définie par le privilège, le privilège doit être activé dans le jeton d’accès de sécurité afin de prendre effet. Le modèle permet de privilèges pour être activé uniquement pour les opérations de système spécifique, puis désactivé lorsqu’ils ne sont plus nécessaires. Consultez [AtlGetSacl](security-global-functions.md#atlgetsacl) et [AtlSetSacl](security-global-functions.md#atlsetsacl) pour obtenir des exemples de l’activation SE_SECURITY_NAME.  
   
  Utilisez les méthodes de la classe pour ajouter, supprimer, créer et supprimer des entrées à partir de la **SACL** objet. Voir aussi [AtlGetSacl](security-global-functions.md#atlgetsacl) et [AtlSetSacl](security-global-functions.md#atlsetsacl).  
   
- Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le Kit de développement logiciel Windows.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CAcl](../../atl/reference/cacl-class.md)  
   
  `CSacl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h  
   
 ##  <a name="addauditace"></a>CSacl::AddAuditAce  
@@ -145,7 +128,7 @@ bool AddAuditAce(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **true** si l’ACE est ajoutée à la `CSacl` objet, **false** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  A `CSacl` objet contient des entrées de contrôle d’accès (ACE) qui spécifient les types de tentatives d’accès qui génèrent des enregistrements d’audit dans le journal des événements de sécurité. Cette méthode ajoute ce type d’ACE pour le `CSacl` objet. La deuxième forme de `AddAuditAce` est uniquement disponible sur Windows 2000 et versions ultérieures.  
   
  Consultez [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) pour obtenir une description des indicateurs différents qui peuvent être définies dans le `AceFlags` paramètre.  
@@ -162,7 +145,7 @@ CSacl(const ACL& rhs) throw(...);
  `rhs`  
  Existant **ACL** structure (liste de contrôle d’accès).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `CSacl` objet peut être éventuellement créé à l’aide d’un fichier **ACL** structure. Assurez-vous que ce paramètre est une liste de contrôle d’accès système (SACL) et non une liste de contrôle d’accès discrétionnaire (DACL). Dans les versions debug, si une liste DACL est fournie une assertion se produit. Dans les versions release, toutes les entrées dans une liste DACL sont ignorées.  
   
 ##  <a name="dtor"></a>CSacl :: ~ CSacl  
@@ -172,7 +155,7 @@ CSacl(const ACL& rhs) throw(...);
 ~CSacl() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le destructeur libère les ressources acquises par l’objet, y compris toutes les entrées de contrôle d’accès (ACE).  
   
 ##  <a name="getacecount"></a>CSacl::GetAceCount  
@@ -210,7 +193,7 @@ void RemoveAce(UINT nIndex) throw();
  `nIndex`  
  Index de l’entrée ACE à supprimer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode est dérivée de [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
   
 ##  <a name="removeallaces"></a>CSacl::RemoveAllAces  
@@ -229,4 +212,3 @@ void RemoveAllAces() throw();
  [ACE](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
  [Fonctions globales de sécurité](../../atl/reference/security-global-functions.md)
-
