@@ -47,11 +47,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6353229aecc273daac03635f73761345171bd30e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f99e367d263d3ba49837b269fd04159a70cf549
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mkgmtime-mkgmtime32-mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
 Convertit une heure UTC représentée par un `tm struct` en heure UTC représentée par un type `time_t`.  
@@ -78,7 +79,7 @@ __time64_t _mkgmtime64(
 ## <a name="return-value"></a>Valeur de retour  
  Quantité de type `__time32_t` ou `__time64_t` qui représente le nombre de secondes écoulées depuis le 1er janvier 1970 à minuit, en temps universel coordonné (UTC). Si la date est hors limites (voir la section Notes) ou l’entrée ne peut pas être interprétée comme une heure valide, la valeur de retour est -1.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les fonctions `_mkgmtime32` et `_mkgmtime64` convertissent une heure UTC en un type `__time32_t` ou `__time64_t` qui représente l’heure en UTC. Pour convertir une heure locale en heure UTC, utilisez `mktime`, `_mktime32` et `_mktime64` à la place.  
   
  `_mkgmtime` est une fonction inline qui prend la valeur `_mkgmtime64`, tandis que `time_t` équivaut à `__time64_t`. Si vous devez forcer le compilateur à interpréter `time_t` comme ancien `time_t`32 bits, vous pouvez définir `_USE_32BIT_TIME_T`. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 (plage maximale d’un `time_t` 32 bits), et cela n’est pas du tout autorisé sur les plateformes 64 bits.  

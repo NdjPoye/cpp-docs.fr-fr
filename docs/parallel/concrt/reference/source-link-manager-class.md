@@ -27,11 +27,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 75be5687e63fe38f1ffa8f91c41963dfa1171e48
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 67cf15c6681c989a2da2b4e6824fec6012c517bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager, classe
 L'objet `source_link_manager` gère les liens réseau des blocs de messagerie avec les blocs `ISource`.  
@@ -65,7 +66,7 @@ class source_link_manager;
 |[source_link_manager](#ctor)|Construit un objet `source_link_manager`.|  
 |[~ source_link_manager, destructeur](#dtor)|Détruit le `source_link_manager` objet.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Méthodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -79,7 +80,7 @@ class source_link_manager;
 |[remove](#remove)|Supprime un lien à partir de la `source_link_manager` objet.|  
 |[set_bound](#set_bound)|Définit le nombre maximal de liens source qui peuvent être ajoutés à ce `source_link_manager` objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Actuellement, les blocs de code source ont un décompte. Il s’agit d’un wrapper un `network_link_registry` objet qui permet l’accès simultané aux liens et offre la possibilité de référencer les liens via des rappels. Blocs de messages ( `target_block`s ou `propagator_block`s) doivent utiliser cette classe pour leurs liens source.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -113,7 +114,7 @@ iterator begin();
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur qui traite le premier élément dans le `source_link_manager` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’état final de l’itérateur est indiqué par un `NULL` lien.  
   
 ##  <a name="contains"></a>contient 

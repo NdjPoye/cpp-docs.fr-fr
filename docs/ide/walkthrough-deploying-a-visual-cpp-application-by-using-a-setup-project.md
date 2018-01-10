@@ -1,56 +1,55 @@
 ---
-title: "Proc&#233;dure pas &#224; pas&#160;: d&#233;ploiement d&#39;une application Visual&#160;C++ &#224; l&#39;aide d&#39;un projet d&#39;installation | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "déploiement pour Visual C++"
+title: "Déployer une Application Visual C++ à l’aide d’un projet d’installation | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: deployment for Visual C++
 ms.assetid: 66735cda-8fe3-4211-a19a-2cf717a12a3f
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fbe75f1fd3ceb037e44716156556882f3f6d1cc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Proc&#233;dure pas &#224; pas&#160;: d&#233;ploiement d&#39;une application Visual&#160;C++ &#224; l&#39;aide d&#39;un projet d&#39;installation
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Décrit comment utiliser un projet d'installation pour déployer une application Visual C\+\+.  
+# <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>Procédure pas à pas : déploiement d'une application Visual C++ à l'aide d'un projet d'installation
+Décrit comment utiliser un projet d’installation pour déployer une application Visual C++.  
   
-## Composants requis  
+## <a name="prerequisites"></a>Prérequis  
  Pour exécuter cette procédure pas à pas, vous devez disposer des composants suivants :  
   
 -   Un ordinateur avec [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] installé.  
   
--   Un ordinateur supplémentaire qui n'a pas les bibliothèques Visual C\+\+.  
+-   Un ordinateur supplémentaire qui n’a pas les bibliothèques Visual C++.  
   
-### Pour déployer une application à l'aide d'un projet d'installation  
+### <a name="to-deploy-an-application-by-using-a-setup-project"></a>Pour déployer une application à l’aide d’un projet d’installation  
   
-1.  Utilisez l'**Assistant Application MFC** pour créer une nouvelle solution Visual Studio.  Pour rechercher l'Assistant, dans la boîte de dialogue **Nouveau projet**, développez le nœud **Visual C\+\+**, sélectionnez **MFC**, sélectionnez **Application MFC**, entrez un nom pour le projet, puis cliquez sur **OK**.  
+1.  Utilisez le **MFC ApplicationWizard** pour créer une nouvelle solution Visual Studio. Pour rechercher l’Assistant, à partir du **nouveau projet** boîte de dialogue, développez le **Visual C++** nœud, sélectionnez **MFC**, sélectionnez **Application MFC**, entrez un nom du projet, puis cliquez sur **OK**.  
   
-2.  Modifiez la configuration de solution active en **Version finale**.  Dans le menu **Générer**, sélectionnez **Gestionnaire de configurations**.  Dans la boîte de dialogue **Gestionnaire de configurations**, sélectionnez **Version finale** dans la liste déroulante **Configuration de la solution active**.  
+2.  Passez à la configuration de solution active **version**. À partir de la **générer** menu, sélectionnez **Gestionnaire de Configuration**. À partir de la **Configuration Manager** boîte de dialogue, sélectionnez **version** à partir de la **configuration de solution Active** zone de liste déroulante.  
   
-3.  Appuyez sur F7 pour générer l'application.  Ou, dans le menu **Générer**, cliquez sur **Générer la solution**.  Cela active le projet d'installation pour utiliser la sortie de ce projet d'application MFC.  
+3.  Appuyez sur F7 pour générer l’application. Ou, dans le **générer** menu, cliquez sur **générer la Solution**. Ainsi, le projet d’installation utiliser la sortie de ce projet d’application MFC.  
   
-4.  Si vous ne l'avez pas déjà fait, téléchargez la version d'InstallShield Limited \(ÎLE\), qui est libre pour les développeurs Visual Studio et remplace les fonctionnalités des modèles de projet dans Visual Studio pour l'installation et le déploiement.  Lorsque vous êtes connecté à Internet, ouvrez la boîte de dialogue **Nouveau projet** en choisissant **Fichier**, **Nouveau**, **Projet** dans la barre de menus, ou en cliquant avec le bouton droit sur votre solution dans **Explorateur de solutions** et en choisissant **Ajouter**, **Nouveau projet…**.  Développez le nœud **Autres types de projets**, choisissez **Activer InstallShield Limited Edition** dans le nœud **Configuration et déploiement**, puis suivez les instructions qui s'affichent.  Une fois que vous avez téléchargé édition, installez et activé d'InstallShield Limited, fermez Visual Studio et rouvrez\-le.  
+4.  Si vous n’avez pas déjà fait, téléchargez InstallShield Limited Edition (ISLE), qui est gratuit pour les développeurs Visual Studio et remplace la fonctionnalité des modèles de projet dans Visual Studio pour le déploiement et le programme d’installation. Lorsque vous êtes connecté à Internet, ouvrez le **nouveau projet** boîte de dialogue en choisissant **fichier**, **nouveau**, **projet** dans le menu de la barre, ou par clic droit sur votre solution dans **l’Explorateur de solutions** et en choisissant **ajouter**, **nouveau projet**. Développez le **autres Types de projets** nœud, choisissez **Activer InstallShield Limited Edition** dans le **le programme d’installation et de déploiement** nœud, puis suivez les instructions qui s’affichent. Une fois que vous avez téléchargé, installé et activé InstallShield Limited Edition, fermez Visual Studio et ouvrez à nouveau.  
   
-5.  Ouvrez la boîte de dialogue **Nouveau projet** de nouveau, développez le nœud **Autres types de projets**, puis choisissez **Projet d'édition d'InstallShield Limited** dans le nœud **Édition d'InstallShield Limited** .  
+5.  Ouvrez le **nouveau projet** boîte de dialogue, développez le **autres Types de projets** nœud et choisissez **projet InstallShield Limited Edition** dans le  **InstallShield Limited Edition** nœud.  
   
-6.  Suivez les instructions dans le nœud **Mise en route** du projet d'installation créé par le modèle d'édition d'InstallShield Limited pour ajouter une référence de sortie à votre projet MFC Visual Studio.  
+6.  Suivez les instructions fournies dans le **mise en route** nœud du projet d’installation créé par le modèle de InstallShield Limited Edition pour ajouter une référence de sortie à votre projet MFC de Visual Studio.  
   
-7.  Générez le projet d'installation pour créer un fichier d'installation \(setup.exe\).  Pour cela, cliquez avec le bouton droit sur le nœud du projet d'installation dans **Explorateur de solutions** et sélectionnez **Build**.  
+7.  Générez le projet d’installation pour créer le fichier de programme d’installation (setup.exe). Pour ce faire, cliquez avec le bouton droit sur le nœud du projet dans le programme d’installation **l’Explorateur de solutions** et sélectionnez **Build**.  
   
-     InstallShield Limited crée le fichier d'installation dans l'arborescence de projet d'installation \(par défaut, elle peut se trouver dans l'express\\le sous\-dossier SingleImage DiskImages\\\\ DISK1 du projet d'installation\).  
+     InstallShield Limited Edition crée le fichier d’installation dans l’arborescence du projet d’installation (par défaut, il peut se trouver dans le sous-dossier Express\SingleImage\DiskImages\DISK1 du projet d’installation).  
   
-8.  Exécutez le programme d'installation sur un deuxième ordinateur qui ne dispose pas des bibliothèques Visual C\+\+.  
+8.  Exécutez le programme d’installation sur un deuxième ordinateur qui ne dispose pas des bibliothèques Visual C++.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exemples de déploiement](../ide/deployment-examples.md)

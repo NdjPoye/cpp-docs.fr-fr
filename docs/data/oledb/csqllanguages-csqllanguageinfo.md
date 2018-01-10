@@ -1,67 +1,69 @@
 ---
-title: "CSQLLanguages, CSQLLanguageInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSQLLanguageInfo"
-  - "m_szProgrammingLanguage"
-  - "m_szImplementation"
-  - "m_szIntegrity"
-  - "m_szBindingStyle"
-  - "m_szConformance"
-  - "m_szSource"
-  - "m_szYear"
-  - "CSQLLanguages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSQLLanguageInfo (classe de paramètre)"
-  - "CSQLLanguages (classe typedef)"
-  - "m_szBindingStyle"
-  - "m_szConformance"
-  - "m_szImplementation"
-  - "m_szIntegrity"
-  - "m_szProgrammingLanguage"
-  - "m_szSource"
-  - "m_szYear"
+title: CSQLLanguages, CSQLLanguageInfo | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSQLLanguageInfo
+- m_szProgrammingLanguage
+- m_szImplementation
+- m_szIntegrity
+- m_szBindingStyle
+- m_szConformance
+- m_szSource
+- m_szYear
+- CSQLLanguages
+dev_langs: C++
+helpviewer_keywords:
+- m_szBindingStyle
+- m_szProgrammingLanguage
+- m_szYear
+- m_szImplementation
+- m_szSource
+- m_szConformance
+- CSQLLanguages typedef class
+- CSQLLanguageInfo parameter class
+- m_szIntegrity
 ms.assetid: 9c36c5bb-6917-49c3-9ac3-942339893f19
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f3bbd06f4ae6ab0b6a53007abd933017fa662d7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CSQLLanguages, CSQLLanguageInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Appelez la classe **CSQLLanguages** de typedef pour implémenter\+ la classe **CSQLLanguageInfo**de paramètre.  
+# <a name="csqllanguages-csqllanguageinfo"></a>CSQLLanguages, CSQLLanguageInfo
+Appelez la classe typedef **CSQLLanguages** pour implémenter sa classe de paramètre **CSQLLanguageInfo**.  
   
-## Notes  
- Voir [Classes d'ensemble de lignes de schéma et de classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d'informations sur l'utilisation des classes de typedef.  
+## <a name="remarks"></a>Notes  
+ Consultez [Classes de jeu de lignes de schéma et Classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation de classes typedef.  
   
- Cette classe identifie les niveaux de conformité, les options et les dialectes pris en charge par l'implémentation SQL traitant les données définies dans le catalogue.  
+ Cette classe identifie les niveaux de conformité, les options et les dialectes pris en charge par les données de traitement d’implémentation SQL définies dans le catalogue.  
   
- Le tableau suivant répertorie les membres de la classe de donnée et leurs colonnes OLE DB correspondantes.  Voir [Ensemble de lignes TRANSLATIONS](https://msdn.microsoft.com/en-us/library/ms714374.aspx) dans *OLE DB guide de référence du programmeur* pour plus d'informations sur le schéma et les colonnes.  
+ Le tableau suivant répertorie les membres de données de la classe et les colonnes correspondantes de OLE DB. Consultez [ensemble de lignes SQL_LANGUAGES](https://msdn.microsoft.com/en-us/library/ms714374.aspx) dans les *de référence du programmeur OLE DB* pour plus d’informations sur le schéma et les colonnes.  
   
-|Données concernées|Colonnes OLE DB|  
-|------------------------|---------------------|  
-|m\_szSource|SQL\_LANGUAGE\_SOURCE|  
-|m\_szAnnée|SQL\_LANGUAGE\_YEAR|  
-|m\_szConformité|SQL\_LANGUAGE\_CONFORMANCE|  
-|m\_szIntégrité|SQL\_LANGUAGE\_INTEGRITY|  
-|m\_szImplementation|SQL\_LANGUAGE\_IMPLEMENTATION|  
-|m\_szBindingStyle|SQL\_LANGUAGE\_BINDING\_STYLE|  
-|m\_szLanguageProgrammation|SQL\_LANGUAGE\_PROGRAMMING\_LANGUAGE|  
+|Données membres|Colonnes de OLE DB|  
+|------------------|--------------------|  
+|m_szSource|SQL_LANGUAGE_SOURCE|  
+|m_szYear|SQL_LANGUAGE_YEAR|  
+|m_szConformance|SQL_LANGUAGE_CONFORMANCE|  
+|m_szIntegrity|SQL_LANGUAGE_INTEGRITY|  
+|m_szImplementation|SQL_LANGUAGE_IMPLEMENTATION|  
+|m_szBindingStyle|SQL_LANGUAGE_BINDING_STYLE|  
+|m_szProgrammingLanguage|SQL_LANGUAGE_PROGRAMMING_LANGUAGE|  
   
-## Conditions requises  
- **En\-tête :** atldbsch.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldbsch.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CRestrictions, classe](../../data/oledb/crestrictions-class.md)

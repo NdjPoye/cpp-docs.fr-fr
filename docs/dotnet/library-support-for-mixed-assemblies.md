@@ -1,57 +1,60 @@
 ---
-title: "Prise en charge de biblioth&#232;que pour les assemblys mixtes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bibliothèques (C++), assemblys mixtes"
-  - "assemblys mixtes (C++), prise en charge de la bibliothèque"
-  - "msvcm90[d].dll"
-  - "msvcmrt[d].lib"
+title: Prise en charge pour les assemblys mixtes | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- msvcm90[d].dll
+- mixed assemblies [C++], library support
+- msvcmrt[d].lib
+- libraries [C++], mixed assemblies
 ms.assetid: 1229595c-9e9d-414d-b018-b4e4c727576d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9b3bc50416eceac64c134a31a4d7384e33db69b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Prise en charge de biblioth&#232;que pour les assemblys mixtes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ prend en charge l'utilisation de la bibliothèque C\+\+ standard, la bibliothèque CRT, ATL et MFC pour les applications compilées avec [\/clr \(Compilation pour le Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  Cela autorise les applications existantes qui utilisent ces bibliothèques à utiliser aussi des fonctionnalités .NET Framework.  
+# <a name="library-support-for-mixed-assemblies"></a>Prise en charge de bibliothèque pour les assemblys mixtes
+Visual C++ prend en charge l’utilisation de la bibliothèque C++ Standard, la bibliothèque CRT, ATL et MFC pour les applications compilées avec [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md). Ainsi, les applications existantes qui utilisent ces bibliothèques à utiliser aussi bien les fonctionnalités de .NET Framework.  
   
- Cette prise en charge introduit les nouvelles DLL et bibliothèques d'importation suivantes :  
+ Cette prise en charge introduit les bibliothèques DLL et d’importation nouveau suivantes :  
   
--   Msvcmrt \[d\] .lib si vous compilez avec \/clr.  Liens d'assemblys mixtes vers cette bibliothèque d'importation.  
+-   Msvcmrt [d] .lib si vous compilez avec/CLR. Assemblys mixtes est lié à cette bibliothèque d’importation.  
   
--   Msvcm90 \[d\] .dll et Msvcurt \[d\] .lib si vous compilez avec \/clr:pure.  La DLL est un assembly mixte qui fournit la prise en charge du runtime C managé \(CRT\), et fait partie d'un assembly managé installé dans le Global Assembly Cache \(GAC\).  Les assemblys purs se lient à cette bibliothèque d'importation et finissent liés à Msvcm90.dll.  
+-   Msvcm90 [d] .dll et Msvcurt [d] .lib si vous compilez avec/clr : pure. La DLL est un assembly mixte managé prise en charge des temps d’exécution C (CRT) et fait partie d’un assembly managé installé dans le global assembly cache (GAC). Assemblys purs se lient à cette bibliothèque d’importation et finissent liés à Msvcm90.dll.  
   
- Cette prise en charge offre plusieurs avantages connexes :  
+ Cette prise en charge offre que plusieurs avantages connexes :  
   
--   Le CRT et la bibliothèque C\+\+ standard sont disponibles pour le code à la fois mixte et pur.  Le CRT et la bibliothèque C\+\+ standard fournis ne sont pas vérifiables ; finalement, vos appels sont encore routés aux mêmes CRT et bibliothèque C\+\+ standard que vous utilisez à partir du code natif.  
+-   Le CRT et la bibliothèque C++ Standard sont disponibles pour le code mixte et pure. Le CRT et la bibliothèque C++ Standard fournis ne sont pas vérifiables ; Finalement, vos appels sont encore routés aux mêmes CRT et bibliothèque C++ Standard que vous utilisez du code natif.  
   
--   Gestion des exceptions unifiée correcte dans les images pures et mixtes.  
+-   Corriger la gestion des exceptions unifiée dans les images pures et mixtes.  
   
--   Initialisation statique de variables C\+\+ dans les images pures et mixtes.  
+-   Initialisation statique de variables C++ dans les images pures et mixtes.  
   
--   Prise en charge des variables par Appdomain et par processus dans le code managé.  
+-   Prise en charge pour les variables par processus et par domaine d’application dans le code managé.  
   
--   Résout les problèmes de verrouillage du chargeur qui se sont appliqués aux DLL mixtes dans Visual C\+\+ .NET et Visual C\+\+ .NET 2003.  
+-   Résout les problèmes de verrouillage du chargeur appliqués aux DLL mixtes compilés dans Visual Studio 2003 et versions antérieures.  
   
- De plus, cette prise en charge présente les limitations suivantes :  
+ En outre, cette prise en charge présente les limitations suivantes :  
   
--   Uniquement le modèle de la DLL du CRT est pris en charge \(pour le code compilé avec à la fois \/clr ou \/clr:pure\).  
+-   Seul le modèle de la DLL CRT est pris en charge (à la fois pour le code compilé avec /clr ou/CLR : pure).  
   
--   Vous ne pouvez pas mélanger des objets purs et mixtes dans une seule image si ces objets utilisent des bibliothèques Visual C\+\+ \(parce que tous les objets doivent être purs dans une image pure\).  Si vous faites ceci, vous obtenez des erreurs au moment de l'édition de liens.  
+-   Vous ne pouvez pas mélanger des objets purs et mixtes dans une seule image si ces objets utilisent les bibliothèques Visual C++ (étant donné que tous les objets doivent être purs dans une image pure). Si vous faites cela, vous recevez des erreurs au moment de la liaison.  
   
- Vous devez remplacer votre CLR \(Common Language Runtime\) par la version actuelle, sinon il n'est pas garanti qu'il fonctionne avec les versions antérieures.  Le code généré avec ces modifications ne s'exécutera pas sur CLR version 1.x.  
+ Vous devez mettre à jour votre langage CLR (common runtime) vers la version actuelle comme il n’est pas garanti pour travailler avec les versions antérieures. Code généré avec ces modifications ne s’exécutera pas sur CLR version 1.x.  
   
-## Voir aussi  
- [Assemblys mixtes \(natif et managé\)](../dotnet/mixed-native-and-managed-assemblies.md)
+## <a name="see-also"></a>Voir aussi  
+ [Assemblys mixtes (natif et managé)](../dotnet/mixed-native-and-managed-assemblies.md)

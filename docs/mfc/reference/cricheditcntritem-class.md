@@ -21,11 +21,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 84cca25f52bab9af4f30f35e2eb17dadb94c20a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ebb8cf92a522b63fb88338fe9befacc7d5f1d506
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cricheditcntritem-class"></a>Classe de CRichEditCntrItem
 Avec [CRichEditView](../../mfc/reference/cricheditview-class.md) et [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), fournit les fonctionnalités du contrôle RichEdit dans le contexte du document architecture vue de MFC.  
@@ -50,7 +51,7 @@ class CRichEditCntrItem : public COleClientItem
 |----------|-----------------|  
 |[CRichEditCntrItem::SyncToRichEditObject](#synctoricheditobject)|Active l’élément dans un autre type.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un « contrôle RichEdit » est une fenêtre dans laquelle l’utilisateur peut entrer et modifier du texte. Le texte de caractère et de mise en forme peut être alloué et peut inclure des objets OLE incorporés. Les contrôles RichEdit fournissent une interface de programmation pour la mise en forme de texte. Toutefois, une application doit implémenter tous les composants d’interface utilisateur nécessaires pour effectuer les opérations de mise en forme disponibles à l’utilisateur.  
   
  `CRichEditView`conserve le texte et les caractéristiques de mise en forme du texte. `CRichEditDoc`gère la liste des éléments de client OLE qui se trouvent dans la vue. `CRichEditCntrItem`fournit l’accès côté conteneur à l’élément client OLE.  
@@ -89,7 +90,7 @@ CRichEditCntrItem(
  `pContainer`  
  Pointeur vers le document conteneur qui contiendra cet élément. Si `pContainer` est **NULL**, vous devez appeler explicitement [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) pour ajouter cet élément client à un document.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction n’effectue pas de toute initialisation d’OLE.  
   
  Pour plus d’informations, consultez la [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) structure dans le SDK Windows.  
@@ -105,7 +106,7 @@ void SyncToRichEditObject(REOBJECT& reo);
  *REO ne possèdent*  
  Référence à un [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) structure qui décrit un élément OLE.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) dans le Kit de développement logiciel Windows.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -43,17 +43,18 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d19a16635f3e7d0469b8be8244c3484e733ef94c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fb036640c10a803eb5dd910c51335409ffdfcd97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
 Ajoute, au plus, les `n` premiers octets d’une chaîne de caractères multioctets un à une autre. Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [_mbsnbcat_s, _mbsnbcat_s_l](../../c-runtime-library/reference/mbsnbcat-s-mbsnbcat-s-l.md).  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -103,7 +104,7 @@ unsigned char *_mbsnbcat_l(
 ## <a name="remarks"></a>Notes  
  La fonction `_mbsnbcat` ajoute, au plus, les `count` premiers octets de `src` à `dest`. Si l’octet qui précède immédiatement le caractère Null dans `dest` est un octet de tête, l’octet initial de `src` remplace cet octet de tête. Dans le cas contraire, l'octet initial de `src` remplace le caractère null de fin de `dest`. Si un octet null apparaît dans `src` avant l'ajout de `count` octets, `_mbsnbcat` ajoute tous les octets de `src`, jusqu'au caractère null. Si la valeur `count` est supérieure à la longueur de `src`, la longueur de `src` est utilisée à la place de `count`. La chaîne obtenue se termine par un caractère Null. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.  
   
- La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La version `_mbsnbcat` de la fonction utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version `_mbsnbcat_l` est identique, à ceci près qu’elle utilise à la place les paramètres régionaux passés. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La version `_mbsnbcat` de la fonction utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version `_mbsnbcat_l` est identique, à ceci près qu’elle utilise à la place les paramètres régionaux passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  **Remarque relative à la sécurité** Utilisez une chaîne se terminant par un caractère Null. La chaîne ne doit pas dépasser la taille de la mémoire tampon de destination. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
@@ -125,7 +126,7 @@ unsigned char *_mbsnbcat_l(
 |`_mbsnbcat`|\<mbstring.h>|  
 |`_mbsnbcat_l`|\<mbstring.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)   

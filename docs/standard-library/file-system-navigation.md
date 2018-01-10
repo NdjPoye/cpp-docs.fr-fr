@@ -13,25 +13,26 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7ed9a10434f0128de871a426f7e6be46212d4098
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 60e7e32c79965e50255c5728cad3e9d399ea2df1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-system-navigation"></a>Navigation dans le système de fichiers
 L’en-tête \<filesystem> implémente la spécification technique de système de fichiers C++ (C++ File System Technical Specification) ISO/IEC TS 18822:2015 (Projet final : [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)), et a des types et des fonctions qui vous permettent d’écrire du code indépendant des plateformes pour naviguer dans le système de fichiers. Comme il est interplateforme, il contient des API qui ne s'appliquent pas aux systèmes Windows. Par exemple, cela signifie que `is_fifo(const path&)` retourne toujours `false` sur Windows.   
   
-## <a name="overview"></a>Vue d'ensemble  
+## <a name="overview"></a>Vue d’ensemble  
 Utilisez les API \<filesystem> pour les tâches suivantes :  
   
 -   effectuer une itération des fichiers et répertoires sous un chemin d'accès spécifié ;  
   
--   obtenir des informations sur les fichiers (date de création, taille, extension, répertoire racine, etc.) ;  
+-   obtenir des informations sur les fichiers (date de création, taille, extension, répertoire racine, etc.) ;  
   
--   composer, décomposer et comparer des chemins d'accès ;  
+-   composer, décomposer et comparer des chemins d'accès ;  
   
--   créer, copier et supprimer des répertoires ;  
+-   créer, copier et supprimer des répertoires ;  
   
 -   copier et supprimer des fichiers.  
   
@@ -104,7 +105,7 @@ void main(int argc, char* argv[])
 }  
 ```  
   
-Le code génère cette sortie :  
+Le code génère cette sortie :  
   
 ```Output  
 Displaying path info for: C:\FileSystemTest\SubDir3\SubDirLevel2\File2.txt  
@@ -124,7 +125,7 @@ extension() = .txt
 ```  
   
 ### <a name="comparing-paths"></a>Comparaison des chemins d'accès  
-La classe `path` surcharge les mêmes opérateurs de comparaison que `std::string` et `std::wstring`. Quand vous comparez deux chemins d'accès, vous effectuez une comparaison de chaînes une fois que les séparateurs ont été normalisés. Si une barre oblique de fin (ou barre oblique inverse) est manquante, elle n'est pas ajoutée, ce qui a une incidence sur la comparaison. L'exemple suivant montre comment les valeurs de chemin d'accès sont comparées :  
+La classe `path` surcharge les mêmes opérateurs de comparaison que `std::string` et `std::wstring`. Quand vous comparez deux chemins d'accès, vous effectuez une comparaison de chaînes une fois que les séparateurs ont été normalisés. Si une barre oblique de fin (ou barre oblique inverse) est manquante, elle n'est pas ajoutée, ce qui a une incidence sur la comparaison. L’exemple suivant montre comment les valeurs de chemin d’accès sont comparées :  
   
 ```cpp  
 wstring ComparePaths()  
@@ -157,7 +158,7 @@ C:\Documents\2014\ < D:\Documents\2013\Reports\: true
   
 Pour exécuter ce code, collez-le dans l’exemple complet ci-dessus avant `main` et supprimez les commentaires de la ligne qui l’appelle dans la fonction main.  
   
-### <a name="converting-between-path-and-string-types"></a>Conversion entre les types chemin d'accès et chaîne  
+### <a name="converting-between-path-and-string-types"></a>Conversion entre les types chemin d’accès et chaîne  
 Un objet `path` est implicitement convertible en `std::wstring` ou en `std::string`. Cela signifie que vous pouvez passer un chemin à des fonctions comme [wofstream::open](../standard-library/basic-ofstream-class.md#open), comme illustré dans cet exemple :  
   
 ```cpp  

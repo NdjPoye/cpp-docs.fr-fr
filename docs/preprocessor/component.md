@@ -1,34 +1,35 @@
 ---
-title: "composant | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.component"
-  - "component_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "component (pragma)"
-  - "pragmas, composant"
+title: composant | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.component
+- component_CPP
+dev_langs: C++
+helpviewer_keywords:
+- component pragma
+- pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 83ba325bf0b08f9b8ebb2cc7f9b0bf0b5eb8f173
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# composant
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="component"></a>component
 Contrôle la collecte des informations de consultation ou les informations sur les dépendances à partir des fichiers sources.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -37,12 +38,12 @@ Contrôle la collecte des informations de consultation ou les informations sur l
 #pragma component( mintypeinfo, on | off )  
 ```  
   
-## Notes  
+## <a name="remarks"></a>Notes  
   
-## Navigateur  
+## <a name="browser"></a>Visiteur  
  Vous pouvez désactiver ou activer la collecte, et spécifier des noms particuliers à ignorer lors de la collecte d'informations.  
   
- L'utilisation de l'activation et de la désactivation contrôle la collection des informations de consultation à partir du pragma.  Par exemple :  
+ L’utilisation de l’activation et de la désactivation contrôle la collection des informations de consultation à partir du pragma. Exemple :  
   
 ```  
 #pragma component(browser, off)  
@@ -51,9 +52,9 @@ Contrôle la collecte des informations de consultation ou les informations sur l
  arrête la collecte d'informations de consultation par le compilateur.  
   
 > [!NOTE]
->  Pour activer la collecte d'informations de consultation avec ce pragma, [les informations de consultation doivent d'abord être activées](../build/reference/building-browse-information-files-overview.md).  
+>  Pour activer la collecte des informations de consultation avec ce pragma, [des informations de consultation doivent d’abord être activées](../build/reference/building-browse-information-files-overview.md).  
   
- L'option **references** peut être utilisée avec ou sans l'argument *name*.  L'utilisation de **references** sans *name* active ou désactive la collecte de références \(les autres informations de consultation continuent d'être collectées\).  Par exemple :  
+ Le **références** option peut être utilisée avec ou sans le *nom* argument. À l’aide de **références** sans *nom* Active ou désactive la collecte de références (les autres informations de consultation continuent à être collectées). Exemple :  
   
 ```  
 #pragma component(browser, off, references)  
@@ -61,37 +62,37 @@ Contrôle la collecte des informations de consultation ou les informations sur l
   
  arrête la collecte d'informations de référence par le compilateur.  
   
- L'utilisation de **references** avec *name* et **off** empêche les références à *name* d'apparaître dans la fenêtre des informations de consultation.  Utilisez cette syntaxe pour ignorer les noms et les types qui ne vous intéressent pas afin de réduire la taille des fichiers d'informations de consultation.  Par exemple :  
+ À l’aide de **références** avec *nom* et **hors** empêche les références à *nom* d’apparaître dans la fenêtre d’informations de navigation. Utilisez cette syntaxe pour ignorer les noms et les types qui ne vous intéressent pas afin de réduire la taille des fichiers d'informations de consultation. Exemple :  
   
 ```  
 #pragma component(browser, off, references, DWORD)  
 ```  
   
- ignore les références à **DWORD** à partir de ce point.  Vous pouvez réactiver la collecte des références sur `DWORD` à l'aide de **on** :  
+ ignore les références à **DWORD** à partir de là. Vous pouvez réactiver la collecte de références à `DWORD` à l’aide **sur**:  
   
 ```  
 #pragma component(browser, on, references, DWORD)  
 ```  
   
- C'est la seule façon de reprendre la collecte des références à *name*. Vous devez explicitement activer tout *name* que vous avez désactivé.  
+ C’est la seule façon de reprendre la collecte des références à *nom*; vous devez activer explicitement sur n’importe quel *nom* que vous avez désactivé.  
   
- Pour empêcher le préprocesseur de développer *name* \(par exemple de développer **NULL** sur **0**\), placez des guillemets autour :  
+ Pour empêcher le préprocesseur de développer *nom* (par exemple de développer **NULL** à **0**), placez des guillemets autour :  
   
 ```  
 #pragma component(browser, off, references, "NULL")  
 ```  
   
-## Régénération minimale  
- La fonctionnalité de régénération minimale Visual C\+\+ exige que le compilateur crée et stocke des informations sur les dépendances de classe C\+\+, ce qui occupe de l'espace sur le disque.  Pour libérer de l'espace disque, vous pouvez utiliser `#pragma component( minrebuild, off )` chaque fois que vous n'avez pas besoin de collecter les informations de dépendance, par exemple, pour les fichiers d'en\-tête qui ne changent pas.  Insérez `#pragma component(minrebuild, on)` après les classes qui ne changent pas pour réactiver la collecte de dépendances.  
+## <a name="minimal-rebuild"></a>Régénération minimale  
+ La fonctionnalité de régénération minimale Visual C++ exige que le compilateur crée et stocke des informations sur les dépendances de classe C++, ce qui occupe de l’espace sur le disque. Pour économiser l’espace disque, vous pouvez utiliser `#pragma component( minrebuild, off )` chaque fois que vous n’avez pas besoin de collecter des informations de dépendance, par exemple, dans les fichiers d’en-tête qui ne changent pas. Insérer `#pragma component(minrebuild, on)` après les classes qui ne changent pas pour activer la collection de dépendances.  
   
-## Réduction des informations de type  
- L'option **mintypeinfo** réduit les informations de débogage pour la zone spécifiée.  Le volume de ces informations est considérable et a un impact sur les fichiers .pdb et .obj.  Vous ne pouvez pas déboguer des classes et des structures dans la zone mintypeinfo.  L'utilisation de l'option mintypeinfo peut être utile pour éviter l'avertissement suivant :  
+## <a name="reduce-type-information"></a>Réduction des informations de type  
+ Le **mintypeinfo** option permet de réduire les informations de débogage pour la région spécifiée. Le volume de ces informations est considérable et a un impact sur les fichiers .pdb et .obj. Vous ne pouvez pas déboguer des classes et des structures dans la zone mintypeinfo. L'utilisation de l'option mintypeinfo peut être utile pour éviter l'avertissement suivant :  
   
 ```  
 LINK : warning LNK4018: too many type indexes in PDB "filename", discarding subsequent type information  
 ```  
   
- Pour plus d'informations, consultez l'option du compilateur [Activation de la régénération minimale](../build/reference/gm-enable-minimal-rebuild.md) \(\/Gm\).  
+ Pour plus d’informations, consultez la [activer la régénération minimale](../build/reference/gm-enable-minimal-rebuild.md) (/ Gm) option du compilateur.  
   
-## Voir aussi  
- [Directives pragma et mot clé \_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Voir aussi  
+ [Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

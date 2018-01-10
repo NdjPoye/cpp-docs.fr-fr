@@ -1,36 +1,38 @@
 ---
-title: "CDynamicAccessor::GetColumnCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDynamicAccessor.GetColumnCount"
-  - "ATL::CDynamicAccessor::GetColumnCount"
-  - "CDynamicAccessor::GetColumnCount"
-  - "CDynamicAccessor.GetColumnCount"
-  - "GetColumnCount"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetColumnCount (méthode)"
+title: CDynamicAccessor::GetColumnCount | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDynamicAccessor.GetColumnCount
+- ATL::CDynamicAccessor::GetColumnCount
+- CDynamicAccessor::GetColumnCount
+- CDynamicAccessor.GetColumnCount
+- GetColumnCount
+dev_langs: C++
+helpviewer_keywords: GetColumnCount method
 ms.assetid: cd72cb01-6b89-4b13-9867-fbac6efc90d0
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e245454484330c786f0e23ffd184e45f48fc094e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::GetColumnCount
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicaccessorgetcolumncount"></a>CDynamicAccessor::GetColumnCount
 Récupère le nombre de colonnes.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -38,11 +40,11 @@ DBORDINAL GetColumnCount( ) const throw( );
   
 ```  
   
-## Valeur de retour  
- Le nombre de colonnes récupéré.  
+## <a name="return-value"></a>Valeur de retour  
+ Le nombre de colonnes à récupérer.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CDynamicAccessor, classe](../../data/oledb/cdynamicaccessor-class.md)

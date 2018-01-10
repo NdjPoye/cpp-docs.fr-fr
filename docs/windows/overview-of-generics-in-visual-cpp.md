@@ -22,11 +22,14 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6699d446fadbc0ca380bea28df318c27a31c04e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5082f603c64e796ef369044e3586ae5bfe85605a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Vue d'ensemble de génériques dans Visual C++
 Les génériques sont des types paramétrables pris en charge par le Common Language Runtime. Un type paramétrable est un type est défini avec un paramètre de type inconnu qui est spécifié lorsque le générique est utilisé.  
@@ -51,7 +54,7 @@ Les génériques sont des types paramétrables pris en charge par le Common Lang
  Une déclaration générique contient un ou plusieurs types inconnus, en tant que *les paramètres de type*. Les paramètres de type ont un nom qui représente le type dans le corps de la déclaration générique. Le type de paramètre est utilisé comme type dans le corps de la déclaration générique. La déclaration générique pour List < T\> contient le paramètre de type T.  
   
 ##### <a name="type-arguments"></a>Arguments de type  
- Le *argument de type* est le type actuel utilisé à la place le paramètre de type lorsque le générique est spécialisé pour un type spécifique ou les types. Par exemple, `int` est l'argument de type dans `List<int>`. Les types de valeur et les types de handle sont les seuls types autorisés en tant qu'argument de type générique.  
+ Le *argument de type* est le type actuel utilisé à la place le paramètre de type lorsque le générique est spécialisé pour un type spécifique ou les types. Par exemple, `int` est l'argument de type dans `List<int>`. Les types de valeur et les types de handle sont les seuls types autorisés en tant qu’argument de type générique.  
   
 ##### <a name="constructed-type"></a>Type construit  
  Un type construit à partir d’un type générique est appelé un *type construit*. Un type pas entièrement précisé, tel que `List<T>` est un *type construit ouvert*; un type complètement spécifié, tel que `List<double>,` est un *type construit fermé* ou *spécialisée de type* . Les types construits ouverts peuvent être utilisés dans la définition d'autres types ou méthodes génériques et ne peuvent pas être entièrement spécifiés jusqu'à ce que le générique joint soit lui-même spécifié. Voici un exemple d'utilisation d'un type construit ouvert comme classe de base pour un générique :  

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4a0566157f2dd4d9a278113f2246bd36671e3217
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b51eeb36a4cffafde0e90586fec08d28b9672e5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="d-using-the-schedule-clause"></a>D. À l’aide de la Clause de planification
 Une région parallèle a au moins un cloisonnement, de son côté et peut avoir des obstacles supplémentaires qu’il contient. À chaque barrière, les autres membres de l’équipe doivent attendre pour le dernier thread arrivée. Pour réduire ce délai d’attente, le travail doit être distribué afin que tous les threads arrivent à la barrière en même temps. Si certains des partageant le travail est contenu dans **pour** construit, le `schedule` clause peut être utilisée à cet effet.  
@@ -49,7 +50,7 @@ for(i=0; i<n; i++) {
   
  Le **statique** planification se caractérise par les propriétés que chaque thread obtient environ le même nombre d’itérations que tout autre thread, et chaque thread peut déterminer indépendamment les itérations qui lui est affectées. Par conséquent, aucune synchronisation n’est requise pour distribuer le travail et, en supposant que chaque itération nécessite la même quantité de travail, tous les threads doivent terminer à près en même temps.  
   
- Pour une équipe de `p` permettent de threads, *ceiling(n/p)* être l’entier *q*, qui répondent aux *n = p\*q - r* avec *0 < = r < p *. Une implémentation de la **statique** planifier pour cet exemple affecterait *q* itérations pour la première *p-1* threads, et *q-r* itérations pour le dernier thread.  Une autre implémentation acceptable affecterait *q* itérations pour la première *p-r* threads, et *q-1* itérations pour les autres *r*threads. Cet exemple illustre les raisons pour lesquelles un programme ne doit pas dépendre les détails d’une implémentation particulière.  
+ Pour une équipe de `p` permettent de threads, *ceiling(n/p)* être l’entier *q*, qui répondent aux *n = p\*q - r* avec *0 < = r < p* . Une implémentation de la **statique** planifier pour cet exemple affecterait *q* itérations pour la première *p-1* threads, et *q-r* itérations pour le dernier thread.  Une autre implémentation acceptable affecterait *q* itérations pour la première *p-r* threads, et *q-1* itérations pour les autres *r*threads. Cet exemple illustre les raisons pour lesquelles un programme ne doit pas dépendre les détails d’une implémentation particulière.  
   
  Le **dynamique** planification est appropriée pour le cas d’un **pour** construire avec les itérations nécessitant des montants différents, ou même imprévisibles, de travail.  
   
@@ -80,7 +81,7 @@ for(i=0; i<n; i++) {
 }  
 ```  
   
- Comme **dynamique**, le **guidée** planifier la garantie qu’aucun thread n’attend au cloisonnement plus longtemps que nécessaire à un autre thread pour exécuter sa dernière itération ou final *k* itérations si une taille de segment de *k* est spécifié. Parmi ces planifications, les **guidée** planification est caractérisée par la propriété qu’elle requiert les synchronisations moins élevé. Pour la taille de segment *k*, une implémentation classique attribuera *q = ceiling(n/p)* définir des itérations pour le premier thread disponible, * n * à la plus grande de *n-q* et *p\*k*, jusqu'à ce que toutes les itérations sont affectées.  
+ Comme **dynamique**, le **guidée** planifier la garantie qu’aucun thread n’attend au cloisonnement plus longtemps que nécessaire à un autre thread pour exécuter sa dernière itération ou final *k* itérations si une taille de segment de *k* est spécifié. Parmi ces planifications, les **guidée** planification est caractérisée par la propriété qu’elle requiert les synchronisations moins élevé. Pour la taille de segment *k*, une implémentation classique attribuera *q = ceiling(n/p)* définir des itérations pour le premier thread disponible,  *n*  à la plus grande de *n-q* et *p\*k*, jusqu'à ce que toutes les itérations sont affectées.  
   
  Lorsque le choix de la planification n’est pas aussi clairement que c’est pour ces exemples, le **runtime** planification est pratique pour tester différentes planifications et les tailles de segment sans avoir à modifier et recompilez le programme. Il peut également être utile lors de la planification dépend (d’une certaine façon prévisible) des données d’entrée à laquelle le programme est appliqué.  
   

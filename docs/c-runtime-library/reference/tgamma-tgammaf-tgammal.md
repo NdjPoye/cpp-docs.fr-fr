@@ -1,57 +1,59 @@
 ---
-title: "tgamma, tgammaf, tgammal | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "tgamma"
-  - "tgammaf"
-  - "tgammal"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "tgamma"
-  - "tgammaf"
-  - "tgammal"
-  - "math/tgamma"
-  - "math/tgammaf"
-  - "math/tgammal"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tgamma (fonction)"
-  - "tgammaf (fonction)"
-  - "tgammal (fonction)"
+title: tgamma, tgammaf, tgammal | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- tgamma
+- tgammaf
+- tgammal
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- tgamma
+- tgammaf
+- tgammal
+- math/tgamma
+- math/tgammaf
+- math/tgammal
+dev_langs: C++
+helpviewer_keywords:
+- tgamma function
+- tgammaf function
+- tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fefaaaf6dd6e660c4cda53d28194d6052d1d8bf4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# tgamma, tgammaf, tgammal
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 Détermine la fonction gamma de la valeur spécifiée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 double tgamma(  
@@ -76,42 +78,42 @@ long double tgammal(
   
 ```  
   
-#### Paramètres  
- \[in\] `x`  
- La valeur à rechercher la valeur gamma de.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `x`  
+ Valeur dont le gamma doit être trouvé.  
   
-## Valeur de retour  
- En cas de réussite, retourne la valeur de gamma de `x`.  
+## <a name="return-value"></a>Valeur de retour  
+ En cas de réussite, retourne le gamma de `x`.  
   
- Une erreur de plage peut se produire si la grandeur de `x` est trop grande ou trop petite pour le type de données. Une erreur de domaine ou plage peut se produire si `x` \< \= 0.  
+ Une erreur de plage peut se produire si `x` est trop grand ou trop petit pour le type de données. Une erreur de domaine ou de plage peut se produire si `x` <=0.  
   
 |Problème|Retourner|  
-|--------------|---------------|  
-|x \= ±0|±INFINITY|  
-|x \= entier négatif|NaN|  
-|x \= \- INFINITY|NaN|  
-|x \= \+ infini|\+ INFINI|  
-|x \= NaN|NaN|  
+|-----------|------------|  
+|x = ±0|±INFINITY|  
+|x = entier négatif|NaN|  
+|x =  -INFINITY|NaN|  
+|x = +INFINITY|+INFINITY|  
+|x = NaN|NaN|  
 |Erreur de domaine|NaN|  
-|Erreur de pôle|±HUGE\_VAL, ±HUGE\_VALF ou ±HUGE\_VALL|  
-|Erreur de plage de dépassement de capacité|±HUGE\_VAL, ±HUGE\_VALF ou ±HUGE\_VALL|  
-|Erreur de dépassement de plage|la valeur correcte après arrondi.|  
+|erreur de pôle|±HUGE_VAL, ±HUGE_VALF ou ±HUGE_VALL|  
+|erreur de plage avec dépassement de capacité positif|±HUGE_VAL, ±HUGE_VALF ou ±HUGE_VALL|  
+|erreur de plage avec dépassement de capacité négatif|valeur correcte après arrondi|  
   
- Les erreurs sont signalées comme spécifié dans [\_matherr](../../c-runtime-library/reference/matherr.md).  
+ Les erreurs sont signalées comme indiqué dans [_matherr](../../c-runtime-library/reference/matherr.md).  
   
-## Remarques  
- C\+\+ autorisant la surcharge, vous pouvez appeler de tgamma des surcharges qui acceptent et retournent des types float et doubles long. Dans un programme C, tgamma toujours prend et retourne une valeur double.  
+## <a name="remarks"></a>Notes  
+ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de tgamma qui acceptent et retournent des types double long et à virgule flottante. Dans un programme C, tgamma accepte et retourne toujours un type double.  
   
- Si x est un nombre, cette fonction retourne la factorielle de \(x\-1\).  
+ Si x est un nombre naturel, cette fonction retourne la factorielle de (x-1).  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Fonction|En\-tête C|En\-tête C\+\+|  
-|--------------|----------------|--------------------|  
-|`tgamma`, `tgammaf`,  `tgammal`|\<math.h\>|\<cmath\>|  
+|Fonction|En-tête C|En-tête C++|  
+|--------------|--------------|------------------|  
+|`tgamma`,                `tgammaf`,  `tgammal`|\<math.h>|\<cmath>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [lgamma, lgammaf, lgammal](../../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)

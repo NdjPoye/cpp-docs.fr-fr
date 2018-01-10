@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0bfcb73413aff9cab90c0e4bec3623053f0759c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1b70b4652ad89bcb8382e060740c8c627f7efb60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="columnentrytypesize"></a>COLUMN_ENTRY_TYPE_SIZE
 Représente une liaison à la colonne dans la base de données. Prend en charge `type` et `size` paramètres.  
@@ -53,7 +56,7 @@ data
  `data`  
  [in] Le membre de données correspondant dans l’enregistrement utilisateur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette macro est une variante spécialisée de la [COLUMN_ENTRY](../../data/oledb/column-entry.md) macro qui fournit un moyen de spécifier la taille des données et le type.  
   
 ## <a name="requirements"></a>Spécifications  

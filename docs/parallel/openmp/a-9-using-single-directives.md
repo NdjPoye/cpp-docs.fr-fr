@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 101d6570f2e3c3e757f28ffb632633d6570dac06
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11d41d62448d41d7a11ef747e65cc6ac47e4bd7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a9---using-single-directives"></a>A.9   Utilisation de directives simples
 L’exemple suivant illustre la `single` directive ([Section 2.4.3](../../parallel/openmp/2-4-3-single-construct.md) page 15). Dans l’exemple, un seul thread (généralement le premier thread qui rencontre le `single` directive) imprime le message de progression. L’utilisateur ne doit pas faire d’hypothèses comme pour le thread s’exécute le `single` section. Tous les autres threads ignorera la `single` section et s’arrêter à la barrière à la fin de la `single` construire. Si les autres threads peuvent continuer sans attendre que le thread qui exécute le `single` section, un `nowait` clause peut être spécifiée sur le `single` la directive.  

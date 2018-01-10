@@ -1,30 +1,30 @@
 ---
-title: "Conventions d&#39;appel, param&#232;tres et type de retour | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conventions d'appel, fonctions d'assistance"
-  - "fonctions d'assistance, conventions d'appel"
-  - "fonctions d'assistance, types de retour"
+title: "Conventions d’appel, paramètres et Type de retour | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- calling conventions, helper functions
+- helper functions, calling conventions
+- helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3c57a1a4fe659819d8635b2a6a05d565ffa95250
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Conventions d&#39;appel, param&#232;tres et type de retour
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="calling-conventions-parameters-and-return-type"></a>Conventions d’appel, paramètres et type de retour
 Le prototype d'une routine d'assistance est :  
   
 ```  
@@ -37,17 +37,17 @@ FARPROC WINAPI __delayLoadHelper2(
  où :  
   
  `pidd`  
- Pointeur `const` vers un `ImgDelayDescr` \(voir delayimp.h\) qui contient les décalages de diverses données liées aux importations, un horodatage pour les informations de liaison, ainsi qu'un ensemble d'attributs qui fournissent des informations supplémentaires sur le contenu du descripteur.  Actuellement, il n'existe qu'un seul attribut, `dlattrRva`, ce qui indique que les adresses dans le descripteur sont des adresses virtuelles relatives \(par opposition à des adresses virtuelles\).  
+ Pointeur `const` vers un `ImgDelayDescr` (voir delayimp.h) qui contient les décalages de diverses données liées aux importations, un horodatage pour les informations de liaison, ainsi qu'un ensemble d'attributs qui fournissent des informations supplémentaires sur le contenu du descripteur. Actuellement, il n'existe qu'un seul attribut, `dlattrRva`, ce qui indique que les adresses dans le descripteur sont des adresses virtuelles relatives (par opposition à des adresses virtuelles).  
   
- Pour obtenir la définition de la structure `PCImgDelayDescr`, voir [Définitions des structures et constantes](../../build/reference/structure-and-constant-definitions.md).  
+ Pour la définition de la `PCImgDelayDescr` de la structure, consultez [définitions des structures et constantes](../../build/reference/structure-and-constant-definitions.md).  
   
  `ppfnIATEntry`  
- Pointeur vers l'emplacement dans la table IAT \(Import Address Table\) de chargement différé qui doit être mis à jour avec l'adresse de la fonction importée.  La routine d'assistance doit stocker la même valeur qu'elle retournera dans cet emplacement.  
+ Pointeur vers l'emplacement dans la table IAT (Import Address Table) de chargement différé qui doit être mis à jour avec l'adresse de la fonction importée. La routine d'assistance doit stocker la même valeur qu'elle retournera dans cet emplacement.  
   
-## Valeurs de retour attendues  
+## <a name="expected-return-values"></a>Valeurs de retour attendues  
  Si la fonction réussit, elle retourne l'adresse de la fonction importée.  
   
- Si la fonction échoue, elle lève une exception et retourne 0.  Trois types d'exceptions peuvent être levées :  
+ Si la fonction échoue, elle lève une exception et retourne 0. Trois types d'exceptions peuvent être levées :  
   
 -   paramètre non valide, ce qui se produit si les attributs dans `pidd` ne sont pas spécifiés correctement ;  
   
@@ -57,12 +57,12 @@ FARPROC WINAPI __delayLoadHelper2(
   
  La gestion de ces exceptions est de votre responsabilité.  
   
-## Notes  
- La convention d'appel pour la fonction d'assistance est `__stdcall`.  Le type de la valeur de retour n'est pas pertinent, si bien que FARPROC est utilisé.  Cette fonction dispose d'une liaison C.  
+## <a name="remarks"></a>Notes  
+ La convention d'appel pour la fonction d'assistance est `__stdcall`. Le type de la valeur de retour n'est pas pertinent, si bien que FARPROC est utilisé. Cette fonction dispose d'une liaison C.  
   
- La valeur de retour de l'assistant de chargement différé doit être stockée dans l'emplacement du pointeur de fonction fourni, à moins que vous vouliez que votre routine d'assistance soit utilisée en tant que hook de notification.  Dans ce cas, votre code a la responsabilité de trouver le pointeur de fonction approprié à retourner.  Le code thunk que l'éditeur de liens génère prend ensuite cette valeur de retour comme cible réelle de l'importation et y accède directement.  
+ La valeur de retour de l'assistant de chargement différé doit être stockée dans l'emplacement du pointeur de fonction fourni, à moins que vous vouliez que votre routine d'assistance soit utilisée en tant que hook de notification. Dans ce cas, votre code a la responsabilité de trouver le pointeur de fonction approprié à retourner. Le code thunk que l'éditeur de liens génère prend ensuite cette valeur de retour comme cible réelle de l'importation et y accède directement.  
   
-## Exemple  
+## <a name="sample"></a>Exemple  
  Le code suivant illustre l'implémentation d'une fonction hook simple.  
   
 ```  
@@ -142,5 +142,5 @@ PfnDliHook __pfnDliNotifyHook2 = delayHook;
 */  
 ```  
   
-## Voir aussi  
- [Présentation de la fonction d'assistance](../../build/reference/understanding-the-helper-function.md)
+## <a name="see-also"></a>Voir aussi  
+ [Présentation de la fonction d’assistance](../../build/reference/understanding-the-helper-function.md)

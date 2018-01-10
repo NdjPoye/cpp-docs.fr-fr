@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - strcmp
 - _tcscmp
 - _ftcscmp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tcscmp function
 - strcmp function
@@ -47,37 +45,22 @@ helpviewer_keywords:
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 4bd820865bec6de284e725f433c84e4c20aa8910
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f133027b2f1e7dfef494baeed9df6e9e56447889
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcmp-wcscmp-mbscmp"></a>strcmp, wcscmp, _mbscmp
 Comparer des chaînes.  
   
 > [!IMPORTANT]
->  `_mbscmp` ne peut pas être utilisée dans les applications qui s'exécutent dans [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  La fonction `_mbscmp` ne peut pas être utilisée dans les applications qui s’exécutent dans Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -136,7 +119,7 @@ int _mbscmp(
 |`wcscmp`|<string.h> ou <wchar.h>|  
 |`_mbscmp`|\<mbstring.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

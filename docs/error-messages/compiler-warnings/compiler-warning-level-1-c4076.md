@@ -15,19 +15,20 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9b361448f7181ed4fd044ec18a7b36c4f86012fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7918ae093210c38bacfe89f0d4770eda2dee2e35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="compiler-warning-level-1-c4076"></a>Avertissement du compilateur (niveau 1) C4076
+# <a name="compiler-warning-level-1-c4076"></a>Avertissement du compilateur (niveau 1) C4076
 'typemod' : ne peut pas s’utiliser avec le type 'typename'  
   
  Un modificateur de type, qu’il soit **signed** ou `unsigned`, ne peut pas être utilisé avec un type non entier. ***typemod*** est ignoré.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant génère l’avertissement C4076 :  
+ L’exemple suivant génère l’avertissement C4076 :  
   
 ```  
 // C4076.cpp  

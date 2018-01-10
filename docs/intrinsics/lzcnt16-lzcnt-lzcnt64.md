@@ -1,42 +1,43 @@
 ---
-title: "__lzcnt16, __lzcnt, __lzcnt64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__lzcnt64"
-  - "__lzcnt16"
-  - "__lzcnt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__lzcnt, intrinsèque"
-  - "lzcnt, instruction"
-  - "lzcnt16, intrinsèque"
-  - "lzcnt, intrinsèque"
-  - "__lzcnt16, intrinsèque"
-  - "lzcnt64, intrinsèque"
-  - "__lzcnt64, intrinsèque"
+title: __lzcnt16, __lzcnt, __lzcnt64 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __lzcnt64
+- __lzcnt16
+- __lzcnt
+dev_langs: C++
+helpviewer_keywords:
+- __lzcnt intrinsic
+- lzcnt instruction
+- lzcnt16 intrinsic
+- lzcnt intrinsic
+- __lzcnt16 intrinsic
+- lzcnt64 intrinsic
+- __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c5fcd699cd137e6adbb2cf08f5852970d009f745
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# __lzcnt16, __lzcnt, __lzcnt64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16, __lzcnt, __lzcnt64
+**Section spécifique à Microsoft**  
   
- Compte le nombre de zéros non significatifs dans un entier compris entre 16 et 32, \-, ou 64 octets.  
+ Nombre des zéros le nombre de début dans un 16, 32 ou entier de 64 octets.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 unsigned short __lzcnt16(  
@@ -50,29 +51,31 @@ unsigned __int64 __lzcnt64(
 );  
 ```  
   
-#### Paramètres  
- \[in\] `value`  
- Les 16 \- 32, \-, ou 64 bits entiers non signés à analyser pour des zéros non significatifs.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `value`  
+ Les 16, 32 ou entier non signé 64 bits pour rechercher des zéros non significatifs.  
   
-## Valeur de retour  
- le nombre de bits de zéro non significatif dans le paramètre d' `value` .  Si `value` est zéro, la valeur de retour est la taille de l'opérande d'entrée \(16, 32 ou 64\).  si le bit de poids fort d' `value` est un, la valeur de retour est zéro.  
+## <a name="return-value"></a>Valeur de retour  
+ Le nombre de zéros d’en-tête dans le `value` paramètre. Si `value` est égal à zéro, la valeur de retour est la taille de l’opérande d’entrée (16, 32 ou 64). Si le bit de poids de `value` est 1, la valeur de retour est égale à zéro.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
-|`__lzcnt16`|manipulation de bits avancée|  
-|`__lzcnt`|manipulation de bits avancée|  
-|`__lzcnt64`|Manipulation de bits avancée en mode 64 bits.|  
+|---------------|------------------|  
+|`__lzcnt16`|AMD : Manipulation de Bit avancées (ABM)<br /><br /> Intel : Haswell|  
+|`__lzcnt`|AMD : Manipulation de Bit avancées (ABM)<br /><br /> Intel : Haswell|  
+|`__lzcnt64`|AMD : Avancée de Manipulation de bits (ABM) en mode 64 bits.<br /><br /> Intel : Haswell|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- Chacune de ces intrinsèques génère des instructions d' `lzcnt` .  La taille de la valeur que l'instruction d'`lzcnt` retourne est la même que la taille de son argument.  En mode 32 bits il n'y a des registres à caractère général pas 64 bits, donc pas `lzcnt`64 bits.  
+## <a name="remarks"></a>Notes  
+ Chacune de ces fonctions intrinsèques génère le `lzcnt` instruction.  La taille de la valeur que la `lzcnt` instruction retourne une valeur est identique à la taille de son argument.  En mode 32 bits ne des aucun 64 bits registres à caractère général, par conséquent, ne 64 bits `lzcnt`.  
   
- Pour déterminer la prise en charge du matériel pour l'instruction d'`lzcnt` appelez l'intrinsèque de `__cpuid` avec `InfoType=0x80000001` et le bit de contrôle 5 d' `CPUInfo[2] (ECX)`.  Ce bit est 1 si l'instruction est prise en charge, et 0 sinon.  Si vous exécutez le code qui utilise cette intrinsèque sur le matériel qui ne prend pas en charge l'instruction d'`lzcnt` , les résultats sont imprévisibles.  
+ Pour déterminer la prise en charge matérielle pour le `lzcnt` appel le `__cpuid` intrinsèque avec `InfoType=0x80000001` et vérifiez le bit 5 de `CPUInfo[2] (ECX)`. Ce bit sera égale à 1 si l’instruction est prise en charge et 0 dans le cas contraire. Si vous exécutez le code qui utilise cet intrinsèque sur du matériel qui ne prend pas en charge la `lzcnt` instruction, les résultats sont imprévisibles.  
   
-## Exemple  
+ Sur les processeurs Intel ne prenant pas en charge la `lzcnt` instruction, l’instruction octet d’encodage est exécutée en tant que `bsr` (bit analyse inverse). Si la portabilité du code est un critère important, envisagez d’utiliser le `_BitScanReverse` intrinsèque à la place. Pour plus d’informations, consultez [_BitScanReverse, _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md).  
+  
+## <a name="example"></a>Exemple  
   
 ```  
 // Compile this test with: /EHsc  
@@ -100,15 +103,18 @@ int main()
   
 ```  
   
-  **\_\_lzcnt16 \(0x0\) \= 16**  
- **\_\_lzcnt16 \(0xff\) \= 8**  
- **\_\_lzcnt16 \(0xffff\) \= 0**  
- **\_\_lzcnt \(0x0\) \= 32**  
- **\_\_lzcnt \(0xff\) \= 24**  
- **\_\_lzcnt \(0xffff\) \= 16**  
- **\_\_lzcnt \(0xffffffff\) \= 0**   
-## détail de FIN Microsoft  
- copyright 2007 par Advanced Micro Devices, Inc.  Tous droits réservés.  reproduit avec l'autorisation d'Advanced Micro Devices, Inc.  
+```Output  
+__lzcnt16(0x0) = 16  
+__lzcnt16(0xff) = 8  
+__lzcnt16(0xffff) = 0  
+__lzcnt(0x0) = 32  
+__lzcnt(0xff) = 24  
+__lzcnt(0xffff) = 16  
+__lzcnt(0xffffffff) = 0  
+```  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+**FIN de la section spécifique à Microsoft**  
+ Des parties de ce contenu sont Copyright 2007 par Advanced Micro Devices, Inc. Tous droits réservés. Reproduit avec l’autorisation d’Advanced Micro Devices, Inc.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

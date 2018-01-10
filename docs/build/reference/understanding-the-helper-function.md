@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b8604c90c4af46d98c3d9da72899670e86ca154
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c3a013cf584c37f84331a5ab5dfe74eaa213c851
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-the-helper-function"></a>Présentation de la fonction d'assistance
 La fonction d’assistance pour la prise en charge de l’éditeur de liens le chargement différé est ce qui charge réellement la DLL au moment de l’exécution. Vous pouvez modifier la fonction d’assistance pour personnaliser son comportement en écrivant votre propre fonction et en le liant à votre programme au lieu d’utiliser la fonction d’assistance fournie dans Delayimp.lib. Une fonction d’assistance sert toutes les DLL à chargement différé.  

@@ -1,48 +1,50 @@
 ---
-title: "CDBPropSet::operator = | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDBPropSet.operator="
-  - "ATL::CDBPropSet::operator="
-  - "ATL.CDBPropSet.operator="
-  - "CDBPropSet::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "= (opérateur), avec les modèles OLE DB (C++)"
-  - "opérateur =, sets de propriétés"
-  - "= (opérateur), sets de propriétés"
+title: CDBPropSet::operator = | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDBPropSet.operator=
+- ATL::CDBPropSet::operator=
+- ATL.CDBPropSet.operator=
+- CDBPropSet::operator=
+dev_langs: C++
+helpviewer_keywords:
+- operator =, property sets
+- = operator, with OLE DB templates
+- operator=, property sets
 ms.assetid: 1feb8c48-6ab4-4417-9982-226b1eac681b
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c58a40173d0a04d7b92b2d84572953329b6e03b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CDBPropSet::operator =
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Affecte le contenu d'un jeu de propriétés à un autre jeu de propriétés.  
+# <a name="cdbpropsetoperator-"></a>CDBPropSet::operator =
+Assigne le contenu d’une propriété définie sur un autre jeu de propriétés.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      CDBPropSet& operator =(   
-   CDBPropSet& propset    
+      CDBPropSet& operator =(   
+   CDBPropSet& propset    
 ) throw( );  
 ```  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CDBPropSet, classe](../../data/oledb/cdbpropset-class.md)

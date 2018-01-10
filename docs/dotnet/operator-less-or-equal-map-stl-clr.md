@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fd3e89c4d766d4533e1711119cc63bf6e11a578d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dc6e08e61f12651f966a2f4a6e75ac654ac8ecf8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorlt-map-stlclr"></a>opérateur&lt;= (map) (STL/CLR)
 Inférieur ou égal liste comparaison.  
@@ -37,10 +40,10 @@ template<typename Key,
  left  
  Conteneur de gauche à comparer.  
   
- droite  
+ droit  
  Conteneur de droite à comparer.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction d’opérateur retourne `!(right < left)`. Il permet de tester si `left` n’est pas ordonné après `right` lorsque les deux cartes sont comparé élément par élément.  
   
 ## <a name="example"></a>Exemple  

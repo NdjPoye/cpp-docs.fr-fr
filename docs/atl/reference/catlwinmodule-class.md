@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 59f555f129548b3ced008b61364fa4a9900e062d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dcaf3d6573432b7f6f16826b2551a7e9330abed9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlwinmodule-class"></a>Classe de CAtlWinModule
 Cette classe prend en charge pour les composants de fenêtrage ATL.  
@@ -47,14 +48,14 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 |[CAtlWinModule::CAtlWinModule](#catlwinmodule)|Constructeur.|  
 |[CAtlWinModule :: ~ CAtlWinModule](#dtor)|Destructeur.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Méthodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
 |[CAtlWinModule::AddCreateWndData](#addcreatewnddata)|Ajoute un objet de données.|  
 |[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|Retourne un pointeur vers l’objet de données de module de fenêtre.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe prend en charge toutes les classes ATL qui nécessitent les fonctionnalités de fenêtrage.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -79,7 +80,7 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
  `pObject`  
  Pointeur vers un objet **cela** pointeur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode appelle [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) qui initialise un [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) structure. Cette structure stockera la **cela** pointeur, permet d’obtenir l’instance de classe dans les procédures de fenêtre.  
   
 ##  <a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
@@ -89,7 +90,7 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 CAtlWinModule();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si l’initialisation échoue, un **EXCEPTION_NONCONTINUABLE** exception est levée.  
   
 ##  <a name="dtor"></a>CAtlWinModule :: ~ CAtlWinModule  
@@ -99,7 +100,7 @@ CAtlWinModule();
 ~CAtlWinModule();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère toutes les ressources attribuées.  
   
 ##  <a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData  

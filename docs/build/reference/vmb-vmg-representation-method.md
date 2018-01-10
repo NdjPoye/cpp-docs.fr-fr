@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 061943dc029a566b7bc636a2bb4b37e276413245
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a9d64f8b1035f731adef79356d24eeb3e4f7ee3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vmb-vmg-representation-method"></a>/vmb, /vmg (Méthode de représentation)
 Sélectionnez la méthode que le compilateur utilise pour représenter les pointeurs vers des membres de classe.  
@@ -44,7 +45,7 @@ Sélectionnez la méthode que le compilateur utilise pour représenter les point
 /vmg  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez également utiliser [pointers_to_members](../../preprocessor/pointers-to-members.md) ou [mots clés d’héritage](../../cpp/inheritance-keywords.md) dans votre code pour spécifier une représentation de pointeur.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  

@@ -1,54 +1,55 @@
 ---
-title: "SemaphoreTraits, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SemaphoreTraits (structure)"
+title: SemaphoreTraits (Structure) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits
+dev_langs: C++
+helpviewer_keywords: SemaphoreTraits structure
 ms.assetid: eddb8576-d063-409b-9201-cc87ca5d111e
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 103f02109558d9f301f9f1eec867e9379c102e17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# SemaphoreTraits, structure
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Définit les caractéristiques communes d'un objet Semaphore.  
+# <a name="semaphoretraits-structure"></a>SemaphoreTraits, structure
+Définit les caractéristiques communes d’un objet sémaphore.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 struct SemaphoreTraits : HANDLENullTraits;  
 ```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|[SemaphoreTraits::Unlock, méthode](../windows/semaphoretraits-unlock-method.md)|Libère le contrôle d'une ressource partagée.|  
+|[SemaphoreTraits::Unlock, méthode](../windows/semaphoretraits-unlock-method.md)|Contrôle des versions d’une ressource partagée.|  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `HANDLENullTraits`  
   
  `SemaphoreTraits`  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers::HandleTraits  
+ **Namespace :** Microsoft::WRL::Wrappers::HandleTraits  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL::Wrappers::HandleTraits, espace de noms](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

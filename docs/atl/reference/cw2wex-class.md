@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 61dbd4e59671ef2a17ba53eff4e864c43f3575b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c35439b1309e75359177cf45ade4c6be9459f623
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cw2wex-class"></a>Classe de CW2WEX
 Cette classe est utilisée par les macros de conversion de chaînes `CW2TEX` et `CT2WEX`et le typedef `CW2W`.  
@@ -65,7 +66,7 @@ class CW2WEX
 |[CW2WEX::m_psz](#m_psz)|Le membre de données qui stocke la chaîne source.|  
 |[CW2WEX::m_szBuffer](#m_szbuffer)|La mémoire tampon statique, utilisé pour stocker la chaîne convertie.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  À moins que des fonctionnalités supplémentaires sont requises, utilisez `CW2TEX`, `CT2WEX`, ou `CW2W` dans votre code.  
   
  Cette classe contient une mémoire tampon de taille fixe statique qui est utilisé pour stocker le résultat de la conversion. Si le résultat est trop grand pour tenir dans la mémoire tampon statique, la classe alloue de la mémoire avec `malloc` et libère la mémoire quand l'objet passe en dehors de l'étendue. Cela garantit que, contrairement au texte des macros de conversion disponibles dans les versions précédentes d’ATL, cette classe est plus sûr d’utiliser dans les boucles et qu’il ne sera pas dépassement de la pile.  
@@ -89,7 +90,7 @@ class CW2WEX
 ## <a name="example"></a>Exemple  
  Consultez [ATL et MFC Macros de Conversion de chaînes](string-conversion-macros.md) pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlconv.h  
   
 ##  <a name="cw2wex"></a>CW2WEX::CW2WEX  
@@ -107,7 +108,7 @@ CW2WEX( LPCWSTR  psz) throw(...);
  `nCodePage`  
  La page de codes. Pas utilisé dans cette classe.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Crée la mémoire tampon requise pour la traduction.  
   
 ##  <a name="dtor"></a>CW2WEX :: ~ CW2WEX  
@@ -117,7 +118,7 @@ CW2WEX( LPCWSTR  psz) throw(...);
 ~CW2WEX() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère la mémoire tampon allouée.  
   
 ##  <a name="m_psz"></a>CW2WEX::m_psz  

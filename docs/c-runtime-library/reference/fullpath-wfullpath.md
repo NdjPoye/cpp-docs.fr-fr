@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - fullpath
 - _wfullpath
 - _fullpath
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wfullpath function
 - relative file paths
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 7641c3cdc2a437d2c65f964ca6b1220992d11bca
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c96e806615d165bcdc3b5a5b89e4b8a966d8b1e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 Créer un nom de chemin absolu ou complet pour le nom de chemin relatif spécifié.  
@@ -95,7 +79,7 @@ wchar_t *_wfullpath(
 ## <a name="return-value"></a>Valeur de retour  
  Chacune de ces fonctions retourne un pointeur vers une mémoire tampon contenant le nom de chemin absolu (`absPath`). En cas d’erreur (par exemple, si la valeur passée dans `relPath` comprend une lettre de lecteur qui n’est pas valide ou qui est introuvable, ou si la longueur du nom de chemin absolu créé (`absPath`) est supérieure à `maxLength`) la fonction retourne `NULL`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `_fullpath` développe le nom de chemin d’accès relatif dans `relPath` et son chemin d’accès complet ou absolu stocke ce nom dans `absPath`. Si `absPath` a la valeur NULL, `malloc` est utilisé pour allouer une mémoire tampon de longueur suffisante pour contenir le nom du chemin. Il incombe à l’appelant de libérer cette mémoire tampon. Un nom de chemin relatif spécifie un chemin vers un autre emplacement à partir de l’emplacement actuel (tel que le répertoire de travail actuel : « . »). Un nom de chemin absolu est l’extension d’un nom de chemin relatif qui indique le chemin complet requis pour atteindre l’emplacement souhaité à partir de la racine du système de fichiers. Contrairement à `_makepath`, `_fullpath` peut être utilisé pour obtenir le nom de chemin absolu pour les chemins relatifs (`relPath`) dont le nom comprend « ./ » ou « ../ ».  
   
  Par exemple, pour utiliser les routines du runtime C, l’application doit inclure les fichiers d’en-tête qui contiennent les déclarations pour les routines. Chaque instruction include du fichier d’en-tête référence l’emplacement du fichier de manière relative (à partir du répertoire de travail de l’application) :  
@@ -131,7 +115,7 @@ wchar_t *_wfullpath(
 |`_fullpath`|\<stdlib.h>|  
 |`_wfullpath`|\<stdlib.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

@@ -35,11 +35,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b9f00bf8b1daac38a20b92e70a57570ad0681155
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ffebf8289b7c1eb5ccaae5a6b6a5f2a3f939cbb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlarray-class"></a>Classe CAtlArray
 Cette classe implémente un objet tableau.  
@@ -97,7 +98,7 @@ class CAtlArray
 |[INARGTYPE](#inargtype)|Le type de données à utiliser pour l’ajout d’éléments dans le tableau.|  
 |[OUTARGTYPE](#outargtype)|Le type de données à utiliser pour récupérer des éléments du tableau.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **CAtlArray** fournit des méthodes pour créer et gérer un tableau d’éléments d’un type défini par l’utilisateur. Bien que similaire à des tableaux C standard, le **CAtlArray** objet peut réduire et développer en fonction des besoins dynamiquement. L’index de tableau commence toujours à la position 0, et la limite supérieure peut être fixe ou autorisée à étendre à mesure que de nouveaux éléments sont ajoutés.  
   
  Pour les tableaux avec un petit nombre d’éléments, la classe ATL [CSimpleArray](../../atl/reference/csimplearray-class.md) peut être utilisé.  
@@ -124,7 +125,7 @@ size_t Add();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’index de l’élément ajouté.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le nouvel élément est ajouté à la fin du tableau. Si aucun élément n’est fourni, un élément vide est ajouté ; Autrement dit, le tableau est augmenté la taille comme si un élément réel a été ajouté. Si l’opération échoue, [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow) est appelée avec l’argument E_OUTOFMEMORY.  
   
 ### <a name="example"></a>Exemple  
@@ -144,7 +145,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’index du premier élément ajouté.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les éléments du tableau fourni sont ajoutés à la fin du tableau existant. Si nécessaire, mémoire sera allouée pour prendre en compte les nouveaux éléments.  
   
  Les tableaux doivent être du même type, et il n’est pas possible d’ajouter un tableau à lui-même.  
@@ -161,7 +162,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 void AssertValid() const;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si l’objet array n’est pas valide, `ATLASSERT` lèvera une assertion. Cette méthode est uniquement disponible si _DEBUG est défini.  
   
 ### <a name="example"></a>Exemple  
@@ -174,7 +175,7 @@ void AssertValid() const;
 CAtlArray() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Initialise l’objet de tableau.  
   
 ### <a name="example"></a>Exemple  
@@ -187,7 +188,7 @@ CAtlArray() throw();
 ~CAtlArray() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère toutes les ressources utilisées par l’objet de tableau.  
   
 ##  <a name="copy"></a>CAtlArray::Copy  
@@ -201,7 +202,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
  `aSrc`  
  La source des éléments à copier dans un tableau.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette méthode pour remplacer les éléments d’un tableau avec les éléments d’un autre tableau. Si nécessaire, mémoire sera allouée pour prendre en compte les nouveaux éléments. Il n’est pas possible de copier des éléments d’un tableau à lui-même.  
   
  Si le contenu existant du tableau doivent être conservées, utilisez [CAtlArray::Append](#append) à la place.  
@@ -221,7 +222,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 void FreeExtra() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les éléments vides sont supprimés, mais la taille et la limite supérieure du tableau restent inchangés.  
   
  Dans les versions debug, un ATLASSERT ; sera déclenchée si l’objet CAtlArray n’est pas valide, ou si le tableau dépasse sa taille maximale.  
@@ -241,7 +242,7 @@ E& GetAt(size_t iElement) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une référence à l’élément de tableau requis.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans les versions debug, un ATLASSERT ; sera déclenchée si `iElement` dépasse le nombre d’éléments dans le tableau. Un argument non valide dans les versions release, peut entraîner un comportement imprévisible.  
   
 ### <a name="example"></a>Exemple  
@@ -257,7 +258,7 @@ size_t GetCount() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le nombre d’éléments stockés dans le tableau.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Comme le premier élément du tableau est à la position 0, la valeur retournée par `GetCount` est toujours 1 supérieur le plus grand index.  
   
 ### <a name="example"></a>Exemple  
@@ -298,7 +299,7 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
  `paNew`  
  Tableau à insérer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Éléments du tableau `paNew` sont copiés dans l’objet de tableau, en commençant à l’élément `iStart`. Les éléments du tableau sont déplacés pour éviter l’écrasement.  
   
  Dans les versions debug, un ATLASSERT ; sera déclenchée si le `CAtlArray` objet n’est pas valide, ou si le `paNew` pointeur est NULL ou non valide.  
@@ -326,7 +327,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
  `nCount`  
  Le nombre d’éléments à ajouter.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Insère un ou plusieurs éléments dans le tableau, en commençant à l’index `iElement`. Éléments existants sont déplacés pour éviter l’écrasement.  
   
  Dans les versions debug, un ATLASSERT ; sera déclenchée si le `CAtlArray` objet n’est pas valide, le nombre d’éléments à ajouter est égal à zéro, ou le nombre d’éléments est trop grand pour le tableau destiné à contenir. Dans les versions commerciales, le passage de paramètres non valides peut provoquer des résultats imprévisibles.  
@@ -344,7 +345,7 @@ bool IsEmpty() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true si le tableau est vide, sinon false.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le tableau est dite vide s’il ne contienne aucun élément. Par conséquent, même si le tableau contient les éléments vides, il n’est pas vide.  
   
 ### <a name="example"></a>Exemple  
@@ -365,7 +366,7 @@ const E& operator[](size_t ielement) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une référence à l’élément de tableau requis.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Exécute une fonction semblable à [CAtlArray::GetAt](#getat). Contrairement à la classe MFC [CArray](../../mfc/reference/carray-class.md), cet opérateur ne peut pas être utilisé pour remplacer [CAtlArray::SetAt](#setat).  
   
  Dans les versions debug, un ATLASSERT ; sera déclenchée si `iElement` dépasse le nombre total d’éléments dans le tableau. Dans les versions commerciales, un paramètre non valide peut provoquer des résultats imprévisibles.  
@@ -384,7 +385,7 @@ typedef ETraits::OUTARGTYPE OUTARGTYPE;
 void RemoveAll() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Supprime tous les éléments de l’objet de tableau.  
   
  Cette méthode appelle [CAtlArray::SetCount](#setcount) pour redimensionner le tableau et par la suite libère la mémoire allouée.  
@@ -406,7 +407,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
  `nCount`  
  Nombre d'éléments à supprimer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Supprime un ou plusieurs éléments du tableau. Les éléments restants sont décalés vers le bas. La limite supérieure est décrémentée, mais la mémoire n’est pas libérée jusqu'à ce qu’un appel à [CAtlArray::FreeExtra](#freeextra) est effectuée.  
   
  Dans les versions debug, un ATLASSERT ; sera déclenchée si le `CAtlArray` objet n’est pas valide, ou si le total combiné de `iElement` et `nCount` dépasse le nombre total d’éléments dans le tableau. Dans les versions commerciales, les paramètres non valides peuvent provoquer des résultats imprévisibles.  
@@ -428,7 +429,7 @@ void SetAt(size_t iElement, INARGTYPE element);
  `element`  
  La nouvelle valeur de l’élément spécifié.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans les versions debug, un ATLASSERT ; sera déclenchée si `iElement` dépasse le nombre d’éléments dans le tableau. Dans les versions commerciales, un paramètre non valide peut entraîner des résultats imprévisibles.  
   
 ### <a name="example"></a>Exemple  
@@ -451,7 +452,7 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true si le tableau est redimensionné avec succès, false dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le tableau peut être augmenté ou diminué de taille. Si augmentée, éléments vides supplémentaires sont ajoutés au tableau. Si diminué, les éléments avec les plus grand index seront supprimés et la mémoire libérée.  
   
  Utilisez cette méthode pour définir la taille du tableau avant de l’utiliser. Si `SetCount` n’est pas utilisé, le processus d’ajout d’éléments, et l’allocation de mémoire suivantes est effectuée, est de réduire les performances et fragmenter la mémoire.  
@@ -473,7 +474,7 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
  `element`  
  La nouvelle valeur de l’élément spécifié.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Remplace la valeur de l’élément vers lequel pointé l’index. Si `iElement` est supérieure à la taille actuelle du tableau, le tableau est automatiquement augmenté à l’aide d’un appel à [CAtlArray::SetCount](#setcount). Dans les versions debug, un ATLASSERT ; sera déclenchée si le `CAtlArray` objet n’est pas valide. Dans les versions commerciales, les paramètres non valides peuvent provoquer des résultats imprévisibles.  
   
 ### <a name="example"></a>Exemple  

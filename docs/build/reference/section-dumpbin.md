@@ -19,18 +19,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2c9a0b854357f98e2103d8ebd0768a42fbd6fc70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ac3b24725efc8a929a390f179deafc13de17415
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="section-dumpbin"></a>/SECTION (DUMPBIN)
 ```  
 /SECTION:section  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette option restreint la sortie pour plus d’informations sur le texte spécifié *section*. Utilisez le [/HEADERS](../../build/reference/headers.md) option pour obtenir une liste des sections dans le fichier.  
   
  Uniquement les [/HEADERS](../../build/reference/headers.md) (option DUMPBIN) est disponible pour les fichiers générés par le [/GL](../../build/reference/gl-whole-program-optimization.md) option du compilateur.  

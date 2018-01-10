@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b0b4c56ccf67d5adae211925350dceaece3059cd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a4aad89b6f3227cac59b6429cc67975db3dad424
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-class-from-typelib-wizard"></a>Assistant Ajout de classes d'une Typelib
 Utilisez cet Assistant pour ajouter une classe MFC à partir d’une bibliothèque de types disponibles. L’Assistant crée une classe pour chaque interface que vous ajoutez à partir de la bibliothèque de types sélectionnée.  
@@ -31,7 +32,7 @@ Utilisez cet Assistant pour ajouter une classe MFC à partir d’une bibliothèq
   
 |Option|Description|  
 |------------|-----------------|  
-|**Registre**|La bibliothèque de types est enregistrée dans le système. Bibliothèques de types inscrits sont répertoriés dans **bibliothèques de types disponibles**.|  
+|**Registry**|La bibliothèque de types est enregistrée dans le système. Bibliothèques de types inscrits sont répertoriés dans **bibliothèques de types disponibles**.|  
 |**Fichier**|La bibliothèque de types n’est pas nécessairement inscrite dans le système, mais est contenue dans un fichier. Vous devez fournir l’emplacement du fichier dans **emplacement**.|  
   
  **Bibliothèques de types disponibles**  

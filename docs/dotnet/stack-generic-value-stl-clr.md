@@ -1,42 +1,42 @@
 ---
-title: "stack::generic_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::generic_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_value (membre) (STL/CLR)"
+title: Stack::generic_value (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::generic_value
+dev_langs: C++
+helpviewer_keywords: generic_value member [STL/CLR]
 ms.assetid: f918f5e6-5cb6-480e-8548-13e15026ffde
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 17e65bcae544224bb8987e1ffae084aafcb6b86a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# stack::generic_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le type d'un élément à utiliser avec l'interface générique pour le conteneur.  
+# <a name="stackgenericvalue-stlclr"></a>stack::generic_value (STL/CLR)
+Le type d’un élément pour une utilisation avec l’interface générique pour le conteneur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef GValue generic_value;  
 ```  
   
-## Notes  
- Le type décrit un objet de type `GValue` qui décrit la valeur de l'élément stockée pour une utilisation avec l'interface générique pour ce modèle de classe de conteneur. \(`GValue` est soit `value_type` ou soit `value_type^` si `value_type` est un type de référence.\)  
+## <a name="remarks"></a>Notes  
+ Le type décrit un objet de type `GValue` qui décrit la valeur de l’élément stocké pour une utilisation avec l’interface générique pour cette classe de conteneur de modèle. (`GValue` est `value_type` ou `value_type^` si `value_type` est de type ref.)  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_stack_generic_value.cpp   
@@ -75,15 +75,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **c b a**   
-## Configuration requise  
- **En\-tête :** \<cliext\/stack\>  
+```Output  
+a b c  
+a b c  
+c b a  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/stack >  
   
-## Voir aussi  
- [pile](../dotnet/stack-stl-clr.md)   
- [stack::generic\_container](../dotnet/stack-generic-container-stl-clr.md)   
- [stack::value\_type](../dotnet/stack-value-type-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [pile (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [Stack::generic_container (STL/CLR)](../dotnet/stack-generic-container-stl-clr.md)   
+ [stack::value_type (STL/CLR)](../dotnet/stack-value-type-stl-clr.md)

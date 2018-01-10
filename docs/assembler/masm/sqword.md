@@ -1,40 +1,38 @@
 ---
-title: "SQWORD | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQWORD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SQWORD directive"
+title: SQDWORD | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SQWORD
+dev_langs: C++
+helpviewer_keywords: SQWORD directive
 ms.assetid: 329245f1-af34-4540-a912-73e9045c47fa
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3f2a3b28b60c397d9cd5f6514d48d2e8213d7039
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# SQWORD
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-alloue et initialise éventuellement 8 octets signés de stockage pour chaque `initializer`.  Peut également être utilisé comme un spécificateur de type n'importe où qu'un type est conforme.  
+# <a name="sqword"></a>SQWORD
+Alloue et initialise éventuellement de 8 octets signés de stockage pour chaque `initializer`. Peut également servir comme un spécificateur de type n’importe où un type est autorisé.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 name SQWORD initializer [[, initializer]]...  
 ```  
   
-## Voir aussi  
- [Directives Reference](../../assembler/masm/directives-reference.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Référence des directives](../../assembler/masm/directives-reference.md)   
  [QWORD](../../assembler/masm/qword.md)   
  [DQ](../../assembler/masm/dq.md)

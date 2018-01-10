@@ -1,54 +1,55 @@
 ---
-title: "make_collection (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::make_collection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_collection (fonction) (STL/CLR)"
+title: make_collection (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::make_collection
+dev_langs: C++
+helpviewer_keywords: make_collection function [STL/CLR]
 ms.assetid: c25fb0cb-ebd8-4198-a565-bad28d32ee19
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 718483b6d95e1eb1eb67f66d2b9c18a8e17cae20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# make_collection (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Créer un `range_adapter` à partir d'une paire d'itérateur.  
+# <a name="makecollection-stlclr"></a>make_collection (STL/CLR)
+Rendre un `range_adapter` à partir d’une paire d’itérateur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Iter>  
     range_adapter<Iter> make_collection(Iter first, Iter last);  
 ```  
   
-#### Paramètres  
- iter  
- Le type des itérateurs inclus.  
+#### <a name="parameters"></a>Paramètres  
+ `Iter`  
+ Le type des itérateurs encapsulées.  
   
- premier  
- Premier itérateur à inclure.  
+ `first`  
+ Premier itérateur à encapsuler.  
   
- last  
- Deuxième itérateur à inclure.  
+ `last`  
+ Deuxième d’itérateur à encapsuler.  
   
-## Notes  
- La fonction modèle retourne `gcnew range_adapter<Iter>(``first``,` `last``)`.  Vous l'utilisez pour construire un objet `range_adapter``<Iter>` à partir d'une paire d'itérateurs.  
+## <a name="remarks"></a>Notes  
+ La fonction de modèle retourne `gcnew range_adapter<Iter>(first, last)`. Utilisez-la pour construire un `range_adapter<Iter>` objet à partir d’une paire d’itérateurs.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // cliext_make_collection.cpp   
 // compile with: /clr   
 #include <cliext/adapter>   
@@ -91,15 +92,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**count \= 3**  
-**IsSynchronized \= False**  
-**SyncRoot not nullptr \= True**  
- **&#124; a b c &#124;**   
-## Configuration requise  
- **En\-tête :** \<cliext\/adapter\>  
+```Output  
+ a b c  
+Count = 3  
+IsSynchronized = False  
+SyncRoot not nullptr = True  
+ | a b c |  
+```  
   
- **Espace de noms :** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/carte >  
   
-## Voir aussi  
- [range\_adapter](../dotnet/range-adapter-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)

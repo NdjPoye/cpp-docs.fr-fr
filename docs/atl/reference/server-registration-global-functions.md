@@ -1,53 +1,43 @@
 ---
-title: "Fonctions globales de l’inscription de serveur | Documents Microsoft"
+title: "Fonctions globales de serveur d’inscription | Documents Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atlbase/ATL::AtlComModuleRegisterServer
+- atlbase/ATL::AtlComModuleUnregisterServer
+- atlbase/ATL::AtlComModuleRegisterClassObjects
+- atlbase/ATL::AtlComModuleRevokeClassObjects
+- atlbase/ATL::AtlComModuleGetClassObject
+dev_langs: C++
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 4ace3bb50d824827071260e3f43cec3cda32742f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0f5cfffbcc47555ee8cff7cd6e18ea54b5524607
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="server-registration-global-functions"></a>Fonctions globales de l’inscription de serveur
-Ces fonctions fournissent la prise en charge de l’inscription et la désinscription des objets serveur dans la table des objets.  
+Ces fonctions fournissent la prise en charge pour l’inscription et la désinscription des objets serveur dans la table des objets.  
   
 > [!IMPORTANT]
->  Les fonctions répertoriées dans le tableau suivant ne peut pas être utilisées dans les applications qui s’exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Les fonctions répertoriées dans le tableau suivant ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
   
 |||  
 |-|-|  
 |[AtlComModuleRegisterServer](#atlcommoduleregisterserver)|Cette fonction est appelée pour inscrire chaque objet du mappage d'objets.|  
 |[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)|Cette fonction est appelée pour annuler l'inscription de chaque objet du mappage d'objets.|  
 |[AtlComModuleRegisterClassObjects](#atlcommoduleregisterclassobjects)|Cette fonction est appelée pour inscrire des objets de classe.|  
-|[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|Cette fonction est appelée pour supprimer des objets de classe à partir d’un module COM.|  
+|[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|Cette fonction est appelée pour supprimer les objets de classe à partir d’un module COM.|  
 |[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Cette fonction est appelée pour obtenir l’objet de classe.|  
 
 ## <a name="requirements"></a>Spécifications  
@@ -71,13 +61,13 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
  TRUE si la bibliothèque de types doit être enregistré.  
   
  `pCLSID`  
- Pointe vers le CLSID de l’objet à inscrire. Si la valeur NULL, tous les objets du mappage d’objets seront enregistrés.  
+ Pointe vers le CLSID de l’objet à inscrire. Si NULL, tous les objets du mappage d’objets seront inscrit.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Remarques  
- `AtlComModuleRegisterServer`Décrit le mappage d’objets ATL générées automatiquement et enregistre chaque objet dans la carte. Si `pCLSID` n’est pas NULL, alors seulement l’objet référencé par `pCLSID` est enregistré ; sinon, tous les objets sont enregistrés.  
+### <a name="remarks"></a>Notes  
+ `AtlComModuleRegisterServer`présente le mappage d’objets ATL générées automatiquement et inscrit chaque objet dans le mappage. Si `pCLSID` n’est pas NULL, alors seulement l’objet référencé par `pCLSID` est inscrite ; sinon, tous les objets sont enregistrés.  
   
  Cette fonction est appelée par [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver).  
   
@@ -104,8 +94,8 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Remarques  
- `AtlComModuleUnregisterServer`Décrit le mappage d’objets ATL et annule l’inscription de chaque objet de la carte. Si `pCLSID` n’est pas NULL, alors seulement l’objet référencé par `pCLSID` est désinscrite ; sinon tous les objets sont annulées.  
+### <a name="remarks"></a>Notes  
+ `AtlComModuleUnregisterServer`présente le mappage d’objets ATL et annule l’inscription de chaque objet de la carte. Si `pCLSID` n’est pas NULL, alors seulement l’objet référencé par `pCLSID` est désinscrite ; sinon tous les objets sont annulées.  
   
  Cette fonction est appelée par [CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver).  
   
@@ -124,15 +114,15 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
  Pointeur vers le module COM.  
   
  `dwClsContext`  
- Spécifie le contexte dans lequel l’objet de classe doit être exécutée. Les valeurs possibles sont CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER ou CLSCTX_LOCAL_SERVER. Consultez la page [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) pour plus de détails.  
+ Spécifie le contexte dans lequel l’objet de classe doit être exécutée. Les valeurs possibles sont CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER ou CLSCTX_LOCAL_SERVER. Consultez [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) pour plus d’informations.  
   
  `dwFlags`  
- Détermine les types de connexion à l’objet de classe. Les valeurs possibles sont REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE ou REGCLS_MULTI_SEPARATE. Consultez la page [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) pour plus de détails.  
+ Détermine les types de connexion à l’objet de classe. Les valeurs possibles sont REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE ou REGCLS_MULTI_SEPARATE. Consultez [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) pour plus d’informations.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction d’assistance utilisée par [CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (obsolète dans ATL 7.0) et [CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).  
   
 ##  <a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects  
@@ -149,7 +139,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction d’assistance utilisée par [CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (obsolète dans ATL 7.0) et [CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).  
   
 ##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject  
@@ -171,7 +161,7 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
  Le CLSID de l’objet à créer.  
   
  `riid`  
- L’IID de l’interface demandée.  
+ IID de l’interface demandée.  
   
  `ppv`  
  Un pointeur vers le pointeur d’interface identifié par `riid`. Si l’objet ne prend pas en charge cette interface, `ppv` a la valeur NULL.  
@@ -179,9 +169,8 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction d’assistance utilisée par [CComModule::GetClassObject](ccommodule-class.md#getclassobject) (obsolète dans ATL 7.0) et [CAtlDllModuleT::GetClassObject](catldllmodulet-class.md#getclassobject).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions](../../atl/reference/atl-functions.md)
-

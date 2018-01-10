@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 367fcdae26b66cce06fd6086a21d3212c7ac17ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4dc08bce80d27493a8a13ac24bce7011282d7cd3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-access-operators--and--gt"></a>Opérateurs d’accès au membre :. et -&gt;
 ## <a name="syntax"></a>Syntaxe  
@@ -39,7 +40,7 @@ postfix-expression . name
 postfix-expression -> name  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les opérateurs d’accès au membre **.** et  **->**  sont utilisés pour faire référence aux membres de classes, structures et unions. Les expressions d’accès au membre ont la valeur et le type du membre sélectionné.  
   
  Il existe deux formes d’expressions d’accès au membre :  

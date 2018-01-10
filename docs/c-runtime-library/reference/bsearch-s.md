@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- bsearch_s
+apiname: bsearch_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- bsearch_s
-dev_langs:
-- C++
+f1_keywords: bsearch_s
+dev_langs: C++
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 67caa4f6f6f9ba43c5d4b8a23af8be9bebcc717b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 19d60e16ee896049318d8722b59ba124aad67a50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bsearchs"></a>bsearch_s
 Effectue une recherche binaire dans un tableau trié. Il s’agit d’une version de [bsearch](../../c-runtime-library/reference/bsearch.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -102,10 +83,10 @@ void *bsearch_s(
 |||||||  
 |-|-|-|-|-|-|  
 |`key`|`base`|`compare`|`num`|`width`|`errno`|  
-|`NULL`|any|any|any|any|`EINVAL`|  
-|any|`NULL`|any|!= 0|any|`EINVAL`|  
-|any|any|any|any|= 0|`EINVAL`|  
-|any|any|`NULL`|an|any|`EINVAL`|  
+|`NULL`|tous|tous|tous|tous|`EINVAL`|  
+|tous|`NULL`|tous|!= 0|tous|`EINVAL`|  
+|tous|tous|tous|tous|= 0|`EINVAL`|  
+|tous|tous|`NULL`|an|any|`EINVAL`|  
   
 ## <a name="remarks"></a>Notes  
  La fonction `bsearch_s` effectue une recherche binaire dans un tableau trié de `num` éléments, chacun d’une taille de `width` octets. La valeur de `base` est un pointeur vers la base du tableau dans lequel effectuer la recherche, et `key` est la valeur recherchée. Le paramètre `compare` est un pointeur vers une routine fournie par l’utilisateur qui compare la clé demandée à un élément de tableau et retourne l’une des valeurs suivantes précisant leur relation :  
@@ -124,7 +105,7 @@ void *bsearch_s(
 |-------------|---------------------|  
 |`bsearch_s`|\<stdlib.h> et \<search.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
  Ce programme trie un tableau de chaînes avec [qsort_s](../../c-runtime-library/reference/qsort-s.md)et utilise ensuite bsearch_s pour rechercher le mot « cat ».  

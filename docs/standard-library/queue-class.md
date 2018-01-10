@@ -33,11 +33,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f2bfb8e0cbfb65b8cd1ad038ffe2bcc2e4bf2d9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9161a04f9007f660df7ea7293426e9a90ada20c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="queue-class"></a>queue, classe
 Classe d’adaptateur de conteneur de modèle qui fournit une restriction de fonctionnalité pour un certain type de conteneur sous-jacent, limitant l’accès aux éléments à l’arrière ou à l’avant. Les éléments peuvent être ajoutés à l’arrière ou supprimés à l’avant, et être inspectés aux extrémités de l’objet queue.  
@@ -509,6 +510,6 @@ The element at the front of the queue is 69.
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
 

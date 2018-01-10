@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,8 +30,7 @@ f1_keywords:
 - localtime32
 - localtime
 - _localtime32
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - localtime32 function
 - _localtime32 function
@@ -41,30 +39,16 @@ helpviewer_keywords:
 - localtime function
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 6dcb9a6f0d7187722a769a28cfb624e4621c181f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 77a0a297413c053dee3e165ece07034487535b06
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="localtime-localtime32-localtime64"></a>localtime, _localtime32, _localtime64
 Convertissent une valeur de temps et effectuent une correction en fonction du fuseau horaire local. Des versions plus sécurisées de ces fonctions sont disponibles. Consultez [localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md).  
@@ -98,7 +82,7 @@ struct tm *_localtime64(
   
  `_localtime64`, qui utilise la structure `__time64_t`, permet d’exprimer les dates jusqu’au 31 décembre 3000 à 23:59:59, heure UTC (temps universel coordonné), tandis que `_localtime32` représente les dates jusqu’au 18 janvier 2038 à 23:59:59, heure UTC.  
   
- `localtime` est une fonction inline qui prend la valeur `_localtime64`, tandis que `time_t` équivaut à `__time64_t`. Si vous devez forcer le compilateur à interpréter `time_t` comme l’ancien `time_t` 32 bits, vous pouvez définir `_USE_32BIT_TIME_T`. Ainsi, `localtime` prend la valeur `_localtime32`. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.  
+ `localtime` est une fonction inline qui prend la valeur `_localtime64`, tandis que `time_t` équivaut à `__time64_t`. Si vous devez forcer le compilateur à interpréter `time_t` comme ancien `time_t`32 bits, vous pouvez définir `_USE_32BIT_TIME_T`. Ainsi, `localtime` prend la valeur `_localtime32`. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.  
   
  Les champs du type de structure [tm](../../c-runtime-library/standard-types.md) stockent les valeurs suivantes, chacune d’elles étant un `int` :  
   
@@ -149,7 +133,7 @@ struct tm *_localtime64(
 |`_localtime32`|\<time.h>|  
 |`_localtime64`|\<time.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

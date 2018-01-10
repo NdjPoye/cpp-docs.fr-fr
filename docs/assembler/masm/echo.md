@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 17ff68395709b4484a5475c078498fdc5878187e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1d7298e840eaa3f5f8a98b21aafb4ef8b2318959
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="echo"></a>ECHO
 Affiche *message* au périphérique de sortie standard (par défaut, l’écran).  
@@ -33,7 +34,7 @@ message
   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Identique à [%out](../../assembler/masm/percent-out.md).  
   
 ## <a name="see-also"></a>Voir aussi  

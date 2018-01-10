@@ -4,39 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- macros, error reporting
+f1_keywords:
+- atldef/ATL::_ATL_DEBUG_INTERFACES
+- atldef/ATL::_ATL_DEBUG_QI
+- atldef/ATL::ATLASSERT
+- afx/ATL::ATLENSURE
+- atltrace/ATL::ATLTRACENOTIMPL
+- atltrace/ATL::ATLTRACE
+dev_langs: C++
+helpviewer_keywords: macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f59c09b7eb1621094b170d3bed31b5891081194e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9098b944f70ab4e4448fe40aa2347b0128e6e1a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de débogage et de rapport d’erreurs
 Ces macros fournissent des fonctionnalités de débogage et le traçage utiles.  
@@ -63,7 +53,7 @@ Ces macros fournissent des fonctionnalités de débogage et le traçage utiles.
   
  `ATL: QIThunk - 2008         AddRef  :   Object = 0x00d81ba0   Refcount = 1   CBug - IBug`  
   
- La première partie de chaque trace sera toujours `ATL: QIThunk`. L’élément suivant est une valeur qui identifie le notamment *interface thunk* utilisé. Une conversion de code d’interface est un objet utilisé pour conserver un décompte de références et fournir la fonctionnalité de suivi utilisée ici. Une conversion de code nouvelle interface est créée à chaque appel à `QueryInterface` à l’exception des demandes pour le **IUnknown** interface (dans ce cas, la même conversion de code est renvoyée un chaque fois pour se conformer aux règles d’identité de COM).  
+ La première partie de chaque trace sera toujours `ATL: QIThunk`. L’élément suivant est une valeur qui identifie le notamment *interface thunk* utilisé. Une conversion de code d’interface est un objet utilisé pour conserver un décompte de références et fournir la fonctionnalité de suivi utilisée ici. Une conversion de code nouvelle interface est créée à chaque appel à `QueryInterface` à l’exception des demandes pour le **IUnknown** interface (dans ce cas, le même thunk est renvoyé un chaque fois pour se conformer aux règles d’identité de COM).  
   
  Ensuite, vous verrez `AddRef` ou **version** indiquant quelle méthode a été appelée. Après cela, vous verrez une valeur qui identifie l’objet dont le nombre de référence interface a été modifié. La valeur de suivi est le **cela** pointeur de l’objet.  
   
@@ -103,7 +93,7 @@ ATLASSERT(booleanExpression);
  `booleanExpression`  
  Expression (pointeurs inclus) qui prend une valeur différente de zéro ou 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans les versions debug, `ATLASSERT` prend la valeur `booleanExpression` et génère un rapport de débogage lorsque le résultat est false.  
 
 ## <a name="requirements"></a>Spécifications  
@@ -124,7 +114,7 @@ ATLENSURE_THROW(booleanExpression, hr);
  `hr`  
  Spécifie un code d’erreur à retourner.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ces macros fournissent un mécanisme permettant de détecter et d’avertir l’utilisateur de l’utilisation des paramètres incorrects.  
   
  Les appels de macro `ATLASSERT` et si la condition échoue appels `AtlThrow`.  
@@ -136,7 +126,7 @@ ATLENSURE_THROW(booleanExpression, hr);
  La différence entre **ATLENSURE** et `ATLASSERT` qui est **ATLENSURE** lève une exception dans la version builds ainsi que dans les versions Debug.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities #108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
 
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afx.h  
@@ -152,11 +142,11 @@ ATLTRACENOTIMPL(funcname);
  `funcname`  
  [in] Chaîne contenant le nom de la fonction qui n’est pas implémentée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans les versions release, retourne simplement **E_NOTIMPL**.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities #127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atltrace.h 
@@ -186,7 +176,7 @@ ATLTRACE(
  `lpszFormat`  
  [in] La chaîne mise en forme à envoyer à l’unité de vidage.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [ATLTRACE2](#atltrace2) pour obtenir une description de **ATLTRACE**. **ATLTRACE** et `ATLTRACE2` ont le même comportement, **ATLTRACE** est inclus pour la compatibilité descendante.  
   
 ##  <a name="atltrace2"></a>ATLTRACE2  
@@ -254,13 +244,13 @@ ATLTRACE2(
   
  Pour déclarer une catégorie de suivi personnalisé, déclarez une instance globale de la `CTraceCategory` classe comme suit :  
   
- [!code-cpp[NVC_ATL_Utilities #109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]  
   
  Le nom de catégorie, `MY_CATEGORY` dans cet exemple, est le nom que vous spécifiez pour le `category` paramètre. Le premier paramètre est le nom de catégorie qui apparaîtra dans les ATL/MFC Trace Tool. Le deuxième paramètre est le niveau de trace par défaut. Ce paramètre est facultatif, et le niveau de trace par défaut est 0.  
   
  Pour utiliser une catégorie définie par l’utilisateur :  
   
- [!code-cpp[NVC_ATL_Utilities #110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]  
   
  Pour spécifier que vous souhaitez filtrer les messages de trace, insérez les définitions de ces macros dans Stdafx.h avant la `#include <atlbase.h>` instruction.  
   
@@ -268,16 +258,15 @@ ATLTRACE2(
   
  Atlbase.h contient des définitions par défaut de la `ATLTRACE2` macros et ces définitions seront utilisées si vous ne définissez pas ces symboles avant le traitement de atlbase.h.  
   
- Dans les versions release, `ATLTRACE2` compile à `(void) 0`.  
+ Dans les versions release, `ATLTRACE2` est compilé en `(void) 0`.  
   
  `ATLTRACE2`limite la valeur de la chaîne à envoyer à l’unité de vidage à ne plus de 1023 caractères, après la mise en forme.  
   
  **ATLTRACE** et `ATLTRACE2` ont le même comportement, **ATLTRACE** est inclus pour la compatibilité descendante.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Utilities #111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Macros](../../atl/reference/atl-macros.md)   
  [Fonctions globales de signalement d’erreurs et de débogage](../../atl/reference/debugging-and-error-reporting-global-functions.md)
-

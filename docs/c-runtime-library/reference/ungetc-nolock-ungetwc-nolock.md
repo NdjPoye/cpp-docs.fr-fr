@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - ungetc_nolock
 - _ungetc_nolock
 - _ungetwc_nolock
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _ungettc_nolock function
 - _ungetwc_nolock function
@@ -41,30 +39,16 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 835450387dea050b45dac2e44a12c7df5d5d7023
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 050e70744ca47b508c65905ecf95b17f42c38b8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
 Renvoie un caractère dans le flux via une transmission de type push.  
@@ -87,12 +71,12 @@ wint_t _ungetwc_nolock(
  Caractère à renvoyer (transmission push).  
   
  `stream`  
- Pointeur vers la structure `FILE` .  
+ Pointeur vers la structure `FILE`.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Si réussite, chacune de ces fonctions retourne l’argument de caractère `c`. Si `c` ne peut pas être renvoyé via une transmission de type push ou si aucun caractère n’a été lu, le flux d’entrée est inchangé et `_ungetc_nolock` retourne `EOF` ; `_ungetwc_nolock` retourne `WEOF`. Si `stream` a la valeur `NULL`, `EOF` ou `WEOF` est retourné et `errno` prend la valeur `EINVAL`.  
   
- Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Notes  
  Ces fonctions sont les versions sans verrouillage de `ungetc` et `ungetwc`. Les versions avec suffixe `_nolock` sont identiques, sauf qu’elles ne sont pas protégées contre les interférences avec les autres threads. Elles peuvent être plus rapides, car elles n’entraînent pas la surcharge liée au verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.  

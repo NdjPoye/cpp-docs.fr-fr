@@ -1,39 +1,39 @@
 ---
-title: "/NXCOMPAT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/NXCOMPAT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/NXCOMPAT (option editbin)"
-  - "NXCOMPAT (option editbin)"
-  - "-NXCOMPAT (option editbin)"
+title: -NXCOMPAT | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /NXCOMPAT
+dev_langs: C++
+helpviewer_keywords:
+- -NXCOMPAT editbin option
+- NXCOMPAT editbin option
+- /NXCOMPAT editbin option
 ms.assetid: 30e6b9bb-1189-4e27-b7c3-587e239437b7
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 16bc573e109aef0f4f08486c881128d7aec1d024
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# /NXCOMPAT
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="nxcompat"></a>/NXCOMPAT
 ```  
 /NXCOMPAT[:NO]  
 ```  
   
-## Notes  
- Indique qu'un fichier exécutable a été testé pour sa compatibilité avec la fonctionnalité de prévention de l'exécution des données de Windows.  
+## <a name="remarks"></a>Notes  
+ Indique qu’un fichier exécutable a été testé pour être compatible avec la fonctionnalité de prévention de l’exécution des données Windows.  
   
- Pour plus d'informations, consultez [\/NXCOMPAT \(compatible avec la prévention de l'exécution des données\)](../../build/reference/nxcompat-compatible-with-data-execution-prevention.md).  
+ Pour plus d’informations, consultez l’article [/NXCOMPAT (compatible avec la prévention de l’exécution des données)](../../build/reference/nxcompat-compatible-with-data-execution-prevention.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options EDITBIN](../../build/reference/editbin-options.md)

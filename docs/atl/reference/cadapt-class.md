@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37ce02b9493c47a2c93d9e54e14f73b5c980317d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4e565b1e2c20abf31919774d7bc6eb34f4c5f78
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cadapt-class"></a>Classe de CAdapt
 Ce modèle permet d'inclure dans un wrapper les classes qui redéfinissent l'opérateur d'adresse afin de retourner un autre élément que l'adresse de l'objet.  
@@ -67,7 +68,7 @@ class CAdapt
 |----------|-----------------|  
 |[CAdapt::m_T](#m_t)|Données adaptées.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CAdapt`est un modèle simple utilisé pour encapsuler les classes qui redéfinissent l’opérateur d’adresse ( `operator &`) pour retourner un élément autre que l’adresse de l’objet. Parmi ces exemples de classes figurent les classes ATL `CComBSTR`, `CComPtr` et `CComQIPtr`, ainsi que la classe de prise en charge COM du compilateur, `_com_ptr_t`. Ces classes redéfinissent toutes l'opérateur d'adresse afin de retourner l'adresse de l'un de leurs membres de données (`BSTR` dans le cas de `CComBSTR`, et un pointeur d'interface dans le cas des autres classes).  
   
  Le rôle principal de `CAdapt` est de masquer l'opérateur d'adresse défini par la classe `T` tout en conservant les caractéristiques de la classe adaptée. `CAdapt`remplit ce rôle en détenant un membre public, [m_T](#m_t), de type `T`et en définissant des opérateurs de conversion, opérateurs de comparaison et un constructeur de copie pour autoriser les spécialisations de `CAdapt` à être traitées comme si elles sont objets de type `T`.  
@@ -104,7 +105,7 @@ CAdapt(CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 T m_T;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cela **public** membre de données est accessible directement ou indirectement avec [opérateur const T &](#operator_const_t_amp) et [opérateur T &](#operator_t_amp).  
   
 ##  <a name="operator_const_t_amp"></a>CAdapt::operator const T&amp;  

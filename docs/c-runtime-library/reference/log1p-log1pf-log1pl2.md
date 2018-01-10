@@ -42,11 +42,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 14d0228b24a97c2b7113cf9ceccf337c15ef904c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f32799e2eabc54dacdc5144c59483b7a6a641110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 Calcule le logarithme népérien de 1 plus la valeur spécifiée.  
@@ -94,11 +95,11 @@ long double log1pl(
 |< -1|nan|INVALID|EDOM|  
 |-inf|nan|INVALID|EDOM|  
 |±SNaN|Identique à l’entrée|INVALID||  
-|±QNaN, indéfini|Identique à l’entrée|||  
+|±QNaN, indéterminée|Identique à l’entrée|||  
   
  `errno` prend la valeur ERANGE si `x` est égal à -1. Le `errno` a la valeur EDOM si `x` < -1.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les fonctions `log1p` peuvent être plus précises que l’utilisation de log(`x`+1) si x est proche de 0.  
   
  C++ autorisant la surcharge, vous pouvez appeler des surcharges de `log1p` qui acceptent et retournent des types double long et à virgule flottante. Dans un programme C, `log1p` accepte et retourne toujours un double.  
@@ -107,11 +108,11 @@ long double log1pl(
   
 ## <a name="requirements"></a>Spécifications  
   
-|Fonction|En-tête C|En-tête C++|  
+|Fonction|En-tête C|En-tête C++|  
 |--------------|--------------|------------------|  
 |`log1p`,                `log1pf`,  `log1pl`|\<math.h>|\<cmath>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

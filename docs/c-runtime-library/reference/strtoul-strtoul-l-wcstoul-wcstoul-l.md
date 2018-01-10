@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - strtoul
 - _tcstoul
 - wcstoul
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wcstoul_l function
 - _tcstoul function
@@ -43,30 +41,16 @@ helpviewer_keywords:
 - strtoul_l function
 - tcstoul function
 ms.assetid: 38f2afe8-8178-4e0b-8bbe-d5c6ad66e3ab
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 8916b8645b212f075b9ea575e4bb19e11c5ee975
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 32bc9c63ec148d8e5c39d2aa6a38da974bfc6d96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtoul-strtoull-wcstoul-wcstoull"></a>strtoul, _strtoul_l, wcstoul, _wcstoul_l
 Convertit les chaînes en valeur entière de type long non signée.  
@@ -119,7 +103,7 @@ unsigned long _wcstoul_l(
 ## <a name="remarks"></a>Notes  
  Chacune de ces fonctions convertit la chaîne d’entrée `nptr` en `unsigned` `long`.  
   
- La fonction `strtoul` arrête de lire la chaîne `nptr` au premier caractère qu’elle ne peut pas identifier comme faisant partie intégrante d’un nombre. Il peut s’agir du caractère Null de fin ou bien du premier caractère numérique supérieur ou égal à `base`. Le paramètre de catégorie `LC_NUMERIC` des paramètres régionaux détermine la reconnaissance du caractère de base dans `nptr`. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strtoul` et `wcstoul` utilisent les paramètres régionaux actifs ; `_strtoul_l` et `_wcstoul_l` sont identiques, sauf que ces fonctions utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La fonction `strtoul` arrête de lire la chaîne `nptr` au premier caractère qu’elle ne peut pas identifier comme faisant partie intégrante d’un nombre. Il peut s’agir du caractère Null de fin ou bien du premier caractère numérique supérieur ou égal à `base`. Le paramètre de catégorie `LC_NUMERIC` des paramètres régionaux détermine la reconnaissance du caractère de base dans `nptr`. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strtoul` et `wcstoul` utilisent les paramètres régionaux actifs ; `_strtoul_l` et `_wcstoul_l` sont identiques, sauf que ces fonctions utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  Si `endptr` n’a pas la valeur `NULL`, un pointeur désignant le caractère qui a arrêté l’analyse est stocké à l’emplacement désigné par `endptr`. Si aucune conversion ne peut être effectuée (aucun chiffre valide n’a été trouvé ou la base spécifiée n’est pas valide), la valeur de `nptr` est stockée à l’emplacement désigné par `endptr`.  
   
@@ -147,7 +131,7 @@ unsigned long _wcstoul_l(
 |`_strtoul_l`|\<stdlib.h>|  
 |`_wcstoul_l`|\<stdlib.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple relatif à [strtod](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md).  

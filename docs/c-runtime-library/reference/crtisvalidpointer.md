@@ -32,11 +32,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba249bc78b2e6b6aac95bef2c39b0d9526489ec9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a5063a82ca90b9f854adb1ef68328272df54f4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtisvalidpointer"></a>_CrtIsValidPointer
 Vérifie qu'un pointeur n'a pas la valeur null. Dans les versions de la bibliothèque Runtime C antérieures à Visual Studio 2010, vérifie qu'une plage mémoire spécifiée est valide pour la lecture et l'écriture (version de débogage uniquement).  
@@ -73,7 +74,7 @@ int _CrtIsValidPointer(
 _ASSERTE( _CrtIsValidPointer( address, size, TRUE ) );  
 ```  
   
- Pour plus d’informations sur la façon dont `_CrtIsValidPointer` peut être utilisé avec d’autres macros et fonctions de débogage, consultez [Macros pour la création de rapports](/visualstudio/debugger/macros-for-reporting). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, consultez [Détails du tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Pour plus d’informations sur la façon dont `_CrtIsValidPointer` peut être utilisé avec d’autres macros et fonctions de débogage, consultez [Macros pour la création de rapports](/visualstudio/debugger/macros-for-reporting). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, voir [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -81,7 +82,7 @@ _ASSERTE( _CrtIsValidPointer( address, size, TRUE ) );
 |-------------|---------------------|  
 |`_CrtIsValidPointer`|\<crtdbg.h>|  
   
- `_CrtIsValidPointer` est une extension Microsoft. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ `_CrtIsValidPointer` est une extension Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Bibliothèques  
  Uniquement les versions de débogage des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

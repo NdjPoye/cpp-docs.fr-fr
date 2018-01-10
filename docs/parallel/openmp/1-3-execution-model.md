@@ -1,34 +1,34 @@
 ---
-title: "1.3 Execution Model | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "1.3 modèle d’exécution | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 85ae8bc4-5bf0-45e0-a45f-02de9adaf716
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ce9c2398b38effebbca428c811d86481ca94e7cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# 1.3 Execution Model
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-OpenMP utilise le modèle bifurcation\-jointure de l'exécution parallèle.  Bien que ce modèle bifurcation\-jointure puisse être utile pour résoudre de nombreux problèmes, il est quelque peu appropriée pour les grandes applications basées sur les tableaux.  OpenMP est destiné aux programmes de prise en charge qui effectueront correctement les deux lorsque les programmes parallèles \(plusieurs threads d'exécution et un OpenMP complet prennent en charge la bibliothèque\) et en tant que programmes séquentiels \(les directives ignorées et un OpenMP simple choisit une bibliothèque\).  Toutefois, il est possible et laissé de développer un programme qui ne se comporte pas correctement lorsqu'il est exécuté séquentiellement.  En outre, les différents degrés de parallélisme peuvent entraîner des résultats numériques à cause de modifications de l'association des opérations numériques.  Par exemple, une réduction d'addition série peut avoir un modèle différent des associations d'addition qu'une réduction parallèle.  ces différentes associations peuvent modifier les résultats de l'ajout à virgule flottante.  
+# <a name="13-execution-model"></a>1.3 Modèle d'exécution
+OpenMP utilise le modèle de bifurcation-jointure de l’exécution en parallèle. Bien que ce modèle de bifurcation-jointure puisse être utile pour résoudre de nombreux problèmes, il est quelque peu conçu pour les grandes applications basées sur tableau. OpenMP est conçue pour la prise en charge des programmes qui seront exécute correctement à la fois comme parallèle programmes (plusieurs threads d’exécution et une bibliothèque de prise en charge OpenMP complète) et en tant que programmes séquentiels (directives ignorées et une bibliothèque de stubs OpenMP simple). Toutefois, il est possible et autorisé à développer un programme qui ne se comporte pas correctement lors de l’exécution de manière séquentielle. En outre, différents degrés de parallélisme peuvent entraîner des résultats numériques différents en raison de modifications dans l’association d’opérations numériques. Par exemple, une réduction de la série d’addition peut avoir un modèle différent des associations d’ajout à une réduction en parallèle. Ces différentes associations peuvent modifier les résultats de l’addition à virgule flottante.  
   
- Un programme écrit avec l'API d'OpenMP C\/C\+\+ commence l'exécution qu'un seul thread d'exécution a appelé *le thread principal*.  Le principal thread s'exécute dans une région série jusqu'à ce que le premier élément parallèle est produit.  dans l'API d'OpenMP C\/C\+\+, la directive de **parallèle** constitue un élément parallèle.  Lorsqu'un élément parallèle est produit, le thread principal crée une équipe de thread, et la page maître devient forme de base de l'équipe.  Chaque thread dans l'équipe exécute les instructions dans l'étendue dynamique d'une région parallèle, à l'exception de les éléments de partage du travail.  Les éléments de partage du travail doivent être produits par tous les threads de l'équipe dans le même ordre, et les instructions dans le bloc de type associé exécutent un ou plusieurs threads.  Le cloisonnement implicite à la fin d'un élément de partage du travail sans clause d' `nowait` est exécuté par tous les threads de l'équipe.  
+ Un programme écrit avec l’API de C/C++ OpenMP commence à s’exécuter comme un seul thread d’exécution appelé le *maître thread*. Le thread principal s’exécute dans une région de série jusqu'à ce que la première construction parallèle est rencontrée. Dans l’API C/C++ OpenMP, le **parallèles** directive constitue une construction parallèle. Lorsqu’une construction parallèle est trouvée, le thread principal crée une équipe de threads et le principal devient le maître de l’équipe. Chaque thread dans l’équipe exécute les instructions de l’extension dynamique d’une région parallèle, sauf pour les constructions de partage de travail. Constructions de partage de travail doivent être produites par tous les threads dans l’équipe dans le même ordre, et les instructions dans le bloc structuré associé sont exécutées par un ou plusieurs threads. Le cloisonnement impliqué à la fin d’une construction de partage de travail sans un `nowait` clause est exécutée par tous les threads dans l’équipe.  
   
- Si un thread modifie un objet partagé, il affecte non seulement son propre environnement d'exécution, mais également ceux des autres threads du programme.  La modification est garantie être terminée, du point de vue de l'un des autres threads, au point de séquence suivant \(défini dans la langue de base\) uniquement si l'objet est déclarée comme étant volatiles.  Sinon, la modification est garantie être terminée après d'abord le thread modifiant, puis \(ou simultané\) les autres threads, rencontrent une directive de **vide** qui spécifie l'objet \(implicitement ou explicitement\).  Notez que lorsque les directives de **vide** qui sont implicites par d'autres directives d'OpenMP ne sont pas suffisantes pour garantir l'ordre souhaité des effets secondaires, il revient au programmeur de fournir des directives supplémentaires et explicites de **vide** .  
+ Si un thread modifie un objet partagé, elle affecte non seulement son propre environnement d’exécution, mais aussi celles des autres threads dans le programme. La modification est garantie être terminée, à partir du point de vue de l’un des autres threads, au point de séquence suivant (comme défini dans la langue de base) uniquement si l’objet est déclaré comme étant volatile. Dans le cas contraire, la modification est garantie être terminée après tout d’abord la modification de thread, et puis (ou simultanément) rencontrer d’autres threads, un **vider** directive qui spécifie l’objet (implicitement ou explicitement). Notez que lorsque la **vider** directives sont implicites par d’autres directives OpenMP ne sont pas suffisantes pour garantir l’ordre souhaité des effets secondaires, il est la responsabilité du programmeur pour fournir supplémentaires, explicite  **vider** directives.  
   
- Au terme de l'élément parallèle, les threads dans l'équipe synchronisent à un cloisonnement implicite, et uniquement le principal thread reprend l'exécution.  un certain nombre d'éléments parallèles peuvent être spécifiés dans un programme unique.  Par conséquent, un programme peut répliquer et joindre plusieurs fois pendant l'exécution.  
+ À la fin de la construction parallèle, les threads de l’équipe de se synchronisent à une barrière implicite, et uniquement sur le thread principal continue l’exécution. N’importe quel nombre de constructions parallèle peut être spécifié dans un seul programme. Par conséquent, un programme peut effectuer un branchement et joindre autant de fois pendant l’exécution.  
   
- L'API d'OpenMP C\/C\+\+ permet aux programmeurs aux directives d'utilisation dans les fonctions appelées des éléments parallèles.  Les directives qui n'apparaissent pas dans l'étendue lexicale d'un élément parallèle mais peuvent se situer dans l'étendue dynamique sont appelées des directives *orphelines* .  Les directives orphelines offrent aux programmeurs la possibilité d'exécuter les parties importantes de leur programme en parallèle uniquement aux modifications minimes dans le programme séquentiel.  Avec cette fonctionnalité, les utilisateurs peuvent écrire du code pour les éléments parallèles à des niveaux supérieurs de l'arborescence des appels du programme et utiliser des directives pour contrôler l'exécution dans les fonctions appelées l'une d'elles.  
+ L’API de C/C++ OpenMP permet aux programmeurs d’utiliser les directives dans les fonctions appelées depuis parallèles. Les directives qui n’apparaissent pas dans l’étendue lexicale d’une construction parallèle, mais peuvent se trouver dans l’étendue dynamique sont appelés *orphelins* directives. Directives orphelins permettent aux programmeurs pour exécuter les principales parties de leur programme en parallèle avec des modifications minimes uniquement au programme séquentiel. Avec cette fonctionnalité, les utilisateurs peuvent parallèles sur les niveaux supérieurs de l’arborescence des appels de programme de code et utiliser des directives pour contrôler l’exécution dans les fonctions appelées.  
   
- Les appels non synchronisés aux fonctions de sortie C et C\+\+ qui écrivent dans le même fichier peuvent générer une sortie dans laquelle les données entrées par différents threads s'affiche dans un ordre non déterministe.  De même, les appels désynchronisés aux fonctions d'entrée qui les lisent à partir de le même fichier peuvent lire des données dans un ordre non déterministe.  L'utilisation n'est pas synchronisée d'E\/S, telle que chaque thread accède à un fichier différent, produit les mêmes résultats que l'exécution série d'E\/S s'exécute.
+ Fonctions qui écrivent dans le même fichier de sortie dans lequel les données écrites par différents threads apparaissent dans un ordre non déterministe peuvent entraîner de sortie des appels non synchronisés pour C et C++. De même, les appels non synchronisées à l’entrée des fonctions qui lisent à partir du même fichier peuvent lire des données dans un ordre non déterministe. Utilisation non synchronisée d’e/s, telle que chaque thread accède à un autre fichier, produit les mêmes résultats que l’exécution séquentielle de fonctions d’e/s.

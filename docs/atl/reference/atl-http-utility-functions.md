@@ -7,14 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
-translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 3d32c24173e803e95fb57938f4a3ab62d43b65e0
-ms.lasthandoff: 04/12/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 51c76e48023363fc7737aa690351801eceb3abf6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-http-utility-functions"></a>Fonctions utilitaires de HTTP ATL
 
@@ -53,7 +54,7 @@ inline BOOL AtlCanonicalizeUrl(
  Mémoire tampon allouée par l’appelant pour recevoir l’URL au format canonique.  
   
  `pdwMaxLength`  
- Pointeur vers une variable qui contient la longueur en caractères de `szCanonicalized`. Si la fonction réussit, la variable reçoit le nombre de caractères écrits dans la mémoire tampon non compris le caractère null de fin. Si la fonction échoue, la variable reçoit la longueur en octets de la mémoire tampon y compris un espace pour le caractère null de fin.  
+ Pointeur vers une variable qui contient la longueur en caractères de `szCanonicalized`. Si la fonction réussit, la variable reçoit le nombre de caractères écrits dans la mémoire tampon, y compris le caractère null de fin. Si la fonction échoue, la variable reçoit la longueur en octets de la mémoire tampon y compris un espace pour le caractère null de fin.  
   
  `dwFlags`  
  Indicateurs ATL_URL contrôler le comportement de cette fonction. 
@@ -98,7 +99,7 @@ inline BOOL AtlCombineUrl(
  Mémoire tampon allouée par l’appelant pour recevoir l’URL au format canonique.  
   
  `pdwMaxLength`  
- Pointeur vers une variable qui contient la longueur en caractères de `szBuffer`. Si la fonction réussit, la variable reçoit le nombre de caractères écrits dans la mémoire tampon non compris le caractère null de fin. Si la fonction échoue, la variable reçoit la longueur en octets de la mémoire tampon y compris un espace pour le caractère null de fin.  
+ Pointeur vers une variable qui contient la longueur en caractères de `szBuffer`. Si la fonction réussit, la variable reçoit le nombre de caractères écrits dans la mémoire tampon, y compris le caractère null de fin. Si la fonction échoue, la variable reçoit la longueur en octets de la mémoire tampon y compris un espace pour le caractère null de fin.  
   
  `dwFlags`  
  Indicateurs de contrôler le comportement de cette fonction. Consultez [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
@@ -136,7 +137,7 @@ inline BOOL AtlEscapeUrl(
  Tampon allouée par l’appelant dans lequel les URL convertie doit être écrite.  
   
  `pdwStrLen`  
- Pointeur vers une variable DWORD. Si la fonction réussit, `pdwStrLen` reçoit le nombre de caractères écrits dans la mémoire tampon, non compris le caractère null de fin. Si la fonction échoue, la variable reçoit la longueur en octets de la mémoire tampon y compris un espace pour le caractère null de fin. Lors de l’utilisation de cette méthode, la version à caractères larges `pdwStrLen` reçoit le nombre de caractères requis, pas le nombre d’octets.  
+ Pointeur vers une variable DWORD. Si la fonction réussit, `pdwStrLen` reçoit le nombre de caractères écrits dans la mémoire tampon, y compris le caractère null de fin. Si la fonction échoue, la variable reçoit la longueur en octets de la mémoire tampon y compris un espace pour le caractère null de fin. Lors de l’utilisation de cette méthode, la version à caractères larges `pdwStrLen` reçoit le nombre de caractères requis, pas le nombre d’octets.  
   
  `dwMaxLength`  
  La taille de la mémoire tampon `lpszStringOut`.  
@@ -175,7 +176,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** si le caractère d’entrée est unsafe, **FALSE** dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les caractères qui ne doivent pas être utilisées dans les URL peut être testés à l’aide de cette fonction et converti à l’aide [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
   
 ## <a name="atlunescapeurl"></a>AtlUnescapeUrl
@@ -203,7 +204,7 @@ inline BOOL AtlUnescapeUrl(
  Tampon allouée par l’appelant dans lequel les URL convertie doit être écrite.  
   
  `pdwStrLen`  
- Pointeur vers une variable DWORD. Si la fonction réussit, la variable reçoit le nombre de caractères écrits dans la mémoire tampon non compris le caractère null de fin. Si la fonction échoue, la variable reçoit la longueur en octets de la mémoire tampon y compris un espace pour le caractère null de fin.  
+ Pointeur vers une variable DWORD. Si la fonction réussit, la variable reçoit le nombre de caractères écrits dans la mémoire tampon, y compris le caractère null de fin. Si la fonction échoue, la variable reçoit la longueur en octets de la mémoire tampon y compris un espace pour le caractère null de fin.  
   
  `dwMaxLength`  
  La taille de la mémoire tampon `lpszStringOut`.  
@@ -211,7 +212,7 @@ inline BOOL AtlUnescapeUrl(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Inverse le processus de conversion appliqué par [AtlEscapeUrl](#atlescapeurl).  
   
 ## <a name="rgbtohtml"></a>RGBToHtml
@@ -237,7 +238,7 @@ bool inline RGBToHtml(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une valeur de couleur HTML est un signe dièse suivi d’une valeur hexadécimale à 6 chiffres pour chacun des composants rouges, verts et bleus de la couleur à l’aide de 2 chiffres (par exemple, est blanc #FFFFFF).  
   
 ## <a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
@@ -259,5 +260,4 @@ inline void SystemTimeToHttpDate(
 ## <a name="see-also"></a>Voir aussi  
  [Concepts](../../atl/active-template-library-atl-concepts.md)   
  [Composants de bureau COM ATL](../../atl/atl-com-desktop-components.md)   
-
 

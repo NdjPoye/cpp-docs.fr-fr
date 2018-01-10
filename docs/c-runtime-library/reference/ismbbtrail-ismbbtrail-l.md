@@ -39,11 +39,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8b99e318e95644b327f3629658ac5100f08c05d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e5c20e436e7b51b1c4e5463fb56165ae24c264d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbtrail-ismbbtraill"></a>_ismbbtrail, _ismbbtrail_l
 Détermine si un octet est un octet de fin d’un caractère multioctet.  
@@ -71,7 +72,7 @@ int _ismbbtrail_l(
  `_ismbbtrail` retourne une valeur différente de zéro si l'entier `c` est le deuxième octet d'un caractère multioctet. Par exemple, dans la page de codes 932 uniquement, les plages valides sont 0x40 à 0x7E et 0x80 à 0xFC.  
   
 ## <a name="remarks"></a>Notes  
- `_ismbbtrail` utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. `_ismbbtrail_l` est identique, à ceci près qu’il utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ `_ismbbtrail` utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. `_ismbbtrail_l` est identique, à ceci près qu’il utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Spécifications  
   

@@ -15,13 +15,14 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b483fa500e5424065dac9e266b6b75c22a1221b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 19a805c7477b49b3f608f7fb7850bbe37d1f7daf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2302"></a>Erreur du compilateur C2302
-la gauche de '.~identifier' doit être de type classe/struct/union  
+la gauche de ’.~identifier’ doit être de type classe/struct/union  
   
  L’expression à gauche de l’opérateur point (.) n’est pas une classe, structure ou union.

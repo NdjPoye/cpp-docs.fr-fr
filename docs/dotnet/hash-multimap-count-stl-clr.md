@@ -1,46 +1,46 @@
 ---
-title: "hash_multimap::count (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::Count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre count [STL/CLR]"
+title: hash_multimap::Count (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::Count
+dev_langs: C++
+helpviewer_keywords: count member [STL/CLR]
 ms.assetid: a4bc5b19-e025-4063-9797-304ab4ba08aa
-caps.latest.revision: 18
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aae26d26dfebe9d951cc13c02234b50ec28a76f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::count (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Recherche le nombre d'éléments qui correspondent à une clé spécifiée.  
+# <a name="hashmultimapcount-stlclr"></a>hash_multimap::count (STL/CLR)
+Recherche le nombre d’éléments qui correspondent à une clé spécifiée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 size_type count(key_type key);  
 ```  
   
-#### Paramètres  
- key  
- Valeur clé à rechercher.  
+#### <a name="parameters"></a>Paramètres  
+ clé  
+ Valeur de clé à rechercher.  
   
-## Notes  
- La fonction membre retourne le nombre d'éléments dans la séquence contrôlée dont le classement est équivalent à `key`.  Vous l'utilisez pour déterminer le nombre d'éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.  
+## <a name="remarks"></a>Notes  
+ La fonction membre retourne le nombre d’éléments dans la séquence contrôlée qui ont un classement équivalent à `key`. Il permet de déterminer le nombre d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_multimap_count.cpp   
@@ -68,15 +68,18 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**count\(L'A'\) \= 0**  
-**count\(L'b'\) \= 1**  
-**count\(L'C'\) \= 0**   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+count(L'A') = 0  
+count(L'b') = 1  
+count(L'C') = 0  
+```  
   
- **Espace de nommage :** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/hash_map >  
   
-## Voir aussi  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::equal\_range](../dotnet/hash-multimap-equal-range-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::equal_range (STL/CLR)](../dotnet/hash-multimap-equal-range-stl-clr.md)

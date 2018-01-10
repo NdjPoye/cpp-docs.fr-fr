@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2b21e48439fbf4f420751e2f89903044626df9c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1cfd67065b267f01704bb0658b89d9bab2186100
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cxmlaccessorgetxmlrowdata"></a>CXMLAccessor::GetXMLRowData
 Récupère le contenu entier d’une table en tant que données de chaîne au format XML, par ligne.  
@@ -49,7 +52,7 @@ Récupère le contenu entier d’une table en tant que données de chaîne au fo
 ## <a name="return-value"></a>Valeur de retour  
  Un de la norme `HRESULT` valeurs.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’exemple suivant montre comment les données de ligne sont au format XML. `DATA`ci-dessous représente les données de ligne. Utilisez les méthodes pour passer à la ligne souhaitée de déplacement.  
   
  `<row>`  

@@ -1,32 +1,33 @@
 ---
-title: "RuntimeClassBaseT::GetImplementedIIDS, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetImplementedIIDS (méthode)"
+title: "Runtimeclassbaset::getimplementediids, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS
+dev_langs: C++
+helpviewer_keywords: GetImplementedIIDS method
 ms.assetid: adae54da-521d-4add-87f5-242fbd85f33b
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 25410ac57e1812d3f4648151afff4f97d413689b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# RuntimeClassBaseT::GetImplementedIIDS, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="runtimeclassbasetgetimplementediids-method"></a>RuntimeClassBaseT::GetImplementedIIDS, méthode
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<  
@@ -39,7 +40,7 @@ __forceinline static HRESULT GetImplementedIIDS(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
  Type du paramètre `implements`.  
   
@@ -47,21 +48,21 @@ __forceinline static HRESULT GetImplementedIIDS(
  Pointeur vers le type spécifié par le paramètre `T`.  
   
  `iidCount`  
- Le nombre maximum d'IDs d'interface à récupérer.  
+ Le nombre maximal d’ID d’interface à récupérer.  
   
  `iids`  
- Si cette opération est terminée avec succès, un tableau des IDs d'interface implémenté par type `T`.  
+ Si cette opération est terminée avec succès, un tableau de l’interface implémentées par le type des ID `T`.  
   
-## Valeur de retour  
- S\_OK si l'opération a réussi; sinon, un HRESULT décrivant l'erreur.  
+## <a name="return-value"></a>Valeur de retour  
+ S_OK en cas de réussite ; Sinon, un HRESULT qui décrit l’erreur.  
   
-## Notes  
- Récupère un tableau d'IDs d'interface implémentés par un type spécifié.  
+## <a name="remarks"></a>Notes  
+ Récupère un tableau d’ID qui sont implémentées par un type d’interface.  
   
-## Configuration requise  
- **En\-tête:** implements.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** implements.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [RuntimeClassBaseT, structure](../windows/runtimeclassbaset-structure.md)

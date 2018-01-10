@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- free
+apiname: free
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- free
-dev_langs:
-- C++
+f1_keywords: free
+dev_langs: C++
 helpviewer_keywords:
 - memory blocks, deallocating
 - free function
 ms.assetid: 74ded9cf-1863-432e-9306-327a42080bb8
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: fa4dd487cc0a3f1f14f0bca955ca9059c4bbb964
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1be3f7141a8483aa7b0d43195b08506691e34fe3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="free"></a>free
 Libère un bloc de mémoire.  
@@ -91,7 +72,7 @@ void free(
 |--------------|---------------------|  
 |`free`|\<stdlib.h> et \<malloc.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple relatif à [malloc](../../c-runtime-library/reference/malloc.md).  

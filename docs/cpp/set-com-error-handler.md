@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 52258c64c98651fc7a962c2a246fe8bde79d8ab8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2cfb1e0dedf8d5ff90092d7eee2246791a491d2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setcomerrorhandler"></a>_set_com_error_handler
 **Section spécifique à Microsoft**  
@@ -46,7 +47,7 @@ void __stdcall _set_com_error_handler(
  `perrinfo`  
  Objet `IErrorInfo`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Par défaut, [_com_raise_error](../cpp/com-raise-error.md) gère toutes les erreurs COM. Vous pouvez modifier ce comportement en utilisant `_set_com_error_handler` pour appeler votre propre fonction de gestion des erreurs.  
   
  La fonction de remplacement doit avoir une signature qui est équivalente à celle de `_com_raise_error`.  

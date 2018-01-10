@@ -4,37 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C2004
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2004
+f1_keywords: C2004
+dev_langs: C++
+helpviewer_keywords: C2004
 ms.assetid: d81526dd-3a00-4593-87b0-d910d3d29bca
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 754f0099ac0b69eebbc98a34f7f6206591c75925
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: f4596e43fad713f6b0a81eea9e697c6e0f91c75b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="compiler-error-c2004"></a>Erreur du compilateur C2004
+# <a name="compiler-error-c2004"></a>Erreur du compilateur C2004
 attendu 'defined(id)'  
   
  Un identificateur doit apparaître entre les parenthèses qui suivent le mot clé du préprocesseur.  
   
- Cette erreur peut également être générée en raison de la mise en conformité du compilateur pour Visual Studio .NET 2003 : parenthèses absentes dans la directive de préprocesseur. Si la parenthèse fermante est absente dans une directive de préprocesseur, le compilateur génère une erreur.  
+ Cette erreur peut également être générée en raison de la mise en conformité du compilateur pour Visual Studio .NET 2003 : parenthèses absentes dans la directive de préprocesseur. Si la parenthèse fermante est absente dans une directive de préprocesseur, le compilateur génère une erreur.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant génère l’erreur C2004 :  
+ L’exemple suivant génère l’erreur C2004 :  
   
 ```  
 // C2004.cpp  
@@ -50,7 +46,7 @@ int main()
 ```  
   
 ## <a name="example"></a>Exemple  
- Résolution possible :  
+ Résolution possible :  
   
 ```  
 // C2004b.cpp  

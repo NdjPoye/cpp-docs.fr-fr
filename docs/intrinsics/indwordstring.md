@@ -1,37 +1,37 @@
 ---
-title: "__indwordstring | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__indwordstring"
-  - "__indwordstring_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__indwordstring, intrinsèque"
-  - "rep insd, instruction"
+title: __indwordstring | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __indwordstring
+- __indwordstring_cpp
+dev_langs: C++
+helpviewer_keywords:
+- __indwordstring intrinsic
+- rep insd instruction
 ms.assetid: 96a1cf33-f691-4916-99e4-fa849b61e3a9
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5a5150ceba7d85732c2b7db4d83cd2b1aa6cc0f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# __indwordstring
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="indwordstring"></a>__indwordstring
+**Section spécifique à Microsoft**  
   
- Lit les données du port spécifié à l'aide de l'instruction d' `rep insd` .  
+ Lit les données dans le port spécifié à l’aide de la `rep insd` instruction.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void __indwordstring(  
@@ -41,28 +41,28 @@ void __indwordstring(
 );  
 ```  
   
-#### Paramètres  
- \[in\] `Port`  
+#### <a name="parameters"></a>Paramètres  
+ [in] `Port`  
  Le port à lire.  
   
- \[out\] `Buffer`  
- la lecture de données du port est écrite ici.  
+ [out] `Buffer`  
+ Les données lues à partir du port sont écrit.  
   
- \[in\] `Count`  
- Le nombre d'octets de données à lire.  
+ [in] `Count`  
+ Le nombre d’octets de données à lire.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__indwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- Cette routine est uniquement disponible sous forme intrinsèque.  
+## <a name="remarks"></a>Notes  
+ Cette routine est disponible uniquement en tant qu'intrinsèque.  
   
-## détail de FIN Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

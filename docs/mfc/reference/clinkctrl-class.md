@@ -45,11 +45,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d61e3f09b96c236277cdaf3c38008be2a661f40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e6834190d7693e60f80285b04a04c484313d3c2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="clinkctrl-class"></a>Classe de CLinkCtrl
 Fournit les fonctionnalités du contrôle commun SysLink Windows.  
@@ -86,7 +87,7 @@ class CLinkCtrl : public CWnd
 |[CLinkCtrl::SetItemState](#setitemstate)|Définit l’état de l’élément de contrôle de lien.|  
 |[CLinkCtrl::SetItemUrl](#setitemurl)|Définit l’URL représenté par l’élément de contrôle de lien.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un « lier le contrôle » fournit un moyen pratique pour incorporer des liens hypertexte dans une fenêtre. Le contrôle est une fenêtre qui affiche le texte marqué et lance des applications appropriées lorsque l’utilisateur clique sur un lien incorporé. Plusieurs liens sont pris en charge dans un contrôle et est accessible par un index de base zéro.  
   
  Ce contrôle (et par conséquent la `CLinkCtrl` classe) est disponible uniquement pour les programmes s’exécutant sous Windows XP et versions ultérieures.  
@@ -132,7 +133,7 @@ virtual BOOL Create(DWORD dwStyle,
   
 ### <a name="parameters"></a>Paramètres  
  `lpszLinkMarkup`  
- Pointeur vers une chaîne terminée par zéro qui contient l’élément marqué le texte à afficher. Pour plus d’informations, consultez la section « Accès balisage et lien » dans la rubrique [vue d’ensemble des contrôles de SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706) dans les [MSDN Library](http://go.microsoft.com/fwlink/linkid=556).  
+ Pointeur vers une chaîne terminée par zéro qui contient l’élément marqué le texte à afficher. Pour plus d’informations, consultez la section « Accès balisage et lien » dans la rubrique [vue d’ensemble des contrôles de SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
  `dwStyle`  
  Spécifie le style du contrôle de lien. Appliquer n’importe quelle combinaison de styles de contrôle. Consultez [des Styles de contrôle courants](http://msdn.microsoft.com/library/windows/desktop/bb775498) dans le `Windows SDK` pour plus d’informations.  
@@ -149,7 +150,7 @@ virtual BOOL Create(DWORD dwStyle,
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si l’initialisation a réussi ; dans le cas contraire `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous construisez un `CLinkCtrl` objet en deux étapes. Tout d’abord, appelez le constructeur, puis `Create`, ce qui crée le contrôle de lien et l’attache à le `CLinkCtrl` objet. Si vous souhaitez utiliser les styles étendus windows avec votre contrôle, appelez [CLinkCtrl::CreateEx](#createex) au lieu de `Create`.  
   
  La deuxième forme de la `Create` méthode est déconseillée. Utiliser la première forme qui spécifie le `lpszLinkMarkup` paramètre.  
@@ -186,7 +187,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
   
 ### <a name="parameters"></a>Paramètres  
  `lpszLinkMarkup`  
- Pointeur vers une chaîne terminée par zéro qui contient l’élément marqué le texte à afficher. Pour plus d’informations, consultez la section « Accès balisage et lien » dans la rubrique [vue d’ensemble des contrôles de SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706) dans les [MSDN Library](http://go.microsoft.com/fwlink/linkid=556).  
+ Pointeur vers une chaîne terminée par zéro qui contient l’élément marqué le texte à afficher. Pour plus d’informations, consultez la section « Accès balisage et lien » dans la rubrique [vue d’ensemble des contrôles de SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
  `dwExStyle`  
  Spécifie le style étendu du contrôle de lien. Pour obtenir la liste des styles étendus de Windows, consultez le `dwExStyle` paramètre [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le Kit de développement logiciel Windows.  
@@ -206,7 +207,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si l’initialisation a réussi ; dans le cas contraire `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des constantes de style Windows étendus.  
   
  La deuxième forme de la `CreateEx` méthode est déconseillée. Utiliser la première forme qui spécifie le `lpszLinkMarkup` paramètre.  
@@ -221,7 +222,7 @@ int GetIdealHeight() const;
 ### <a name="return-value"></a>Valeur de retour  
  Hauteur idéale de contrôle, en pixels.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement du message Win32 [LM_GETIDEALHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb760716), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getidealsize"></a>CLinkCtrl::GetIdealSize  
@@ -243,7 +244,7 @@ int GetIdealSize(
 ### <a name="return-value"></a>Valeur de retour  
  La hauteur préférée du texte du lien, en pixels. La valeur de retour est la même que la valeur de la `cy` membre de la `SIZE` structure.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour obtenir un exemple de la `GetIdealSize` (méthode), consultez l’exemple de [CLinkCtrl::Create](#create).  
   
  Cette méthode envoie le [LM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760718) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
@@ -262,7 +263,7 @@ BOOL GetItem(PLITEM pItem) const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement du message Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getitemid"></a>CLinkCtrl::GetItemID  
@@ -298,7 +299,7 @@ BOOL GetItemID(
 > [!NOTE]
 >  Cette fonction retourne également **FALSE** si la mémoire tampon de *szID ou strID* est inférieure à **MAX_LINKID_TEXT**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Récupère l’ID d’un élément de contrôle de liens spécifiques. Pour plus d’informations, consultez le message Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getitemstate"></a>CLinkCtrl::GetItemState  
@@ -324,7 +325,7 @@ BOOL GetItemState(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Récupère la valeur de l’élément d’état spécifié d’un élément de contrôle de liens spécifiques. Pour plus d’informations, consultez le message Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getitemurl"></a>CLinkCtrl::GetItemUrl  
@@ -360,7 +361,7 @@ BOOL GetItemUrl(
 > [!NOTE]
 >  Cette fonction retourne également **FALSE** si la mémoire tampon de *szUrl ou strUrl* est inférieure à **MAX_LINKID_TEXT**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Récupère l’URL représenté par l’élément de contrôle de lien spécifié. Pour plus d’informations, consultez le message Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="hittest"></a>CLinkCtrl::HitTest  
@@ -377,7 +378,7 @@ BOOL HitTest(PLHITTESTINFO phti) const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement du message Win32 [LM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb760722), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="setitem"></a>CLinkCtrl::SetItem  
@@ -394,7 +395,7 @@ BOOL SetItem(PLITEM pItem);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement du message Win32 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="setitemid"></a>CLinkCtrl::SetItemID  
@@ -416,7 +417,7 @@ BOOL SetItemID(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Définit l’ID d’un élément de contrôle de liens spécifiques. Pour plus d’informations, consultez le message Win32 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="setitemstate"></a>CLinkCtrl::SetItemState  
@@ -442,7 +443,7 @@ BOOL SetItemState(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Définit la valeur de l’élément d’état spécifié d’un élément de contrôle de liens spécifiques. Pour plus d’informations, consultez le message Win32 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="setitemurl"></a>CLinkCtrl::SetItemUrl  
@@ -464,7 +465,7 @@ BOOL SetItemUrl(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Définit l’URL représenté par l’élément de contrôle de lien spécifié. Pour plus d’informations, consultez le message Win32 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) dans le Kit de développement logiciel Windows.  
   
 ## <a name="see-also"></a>Voir aussi  

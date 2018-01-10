@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc74d545388199eab2aca63ecdea1fdd62a9ef23
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1139c30fa5d23f3320cef76d09fb5bd86c8c4bc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="object-status-macros"></a>Objet état Macros
 Cette macro définit des indicateurs qui appartiennent à des contrôles ActiveX.  
@@ -41,7 +42,7 @@ DECLARE_OLEMISC_STATUS( miscstatus )
  *MiscStatus*  
  Indicateurs OLEMISC toutes applicables.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette macro est utilisée pour définir les indicateurs OLEMISC pour un contrôle ActiveX. Reportez-vous à [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) pour plus d’informations.  
   
 ### <a name="example"></a>Exemple  

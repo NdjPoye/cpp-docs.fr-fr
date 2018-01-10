@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 39c93cf2c2e3642d2ed6c3fcf08cadafea4ce8bf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5d95a98d56ea666ed823f3caef2190dea1591cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry, classe
 L'objet `multi_link_registry` est un `network_link_registry` qui gère plusieurs blocs sources ou plusieurs blocs cibles.  
@@ -53,7 +54,7 @@ class multi_link_registry : public network_link_registry<_Block>;
 |[multi_link_registry](#ctor)|Construit un objet `multi_link_registry`.|  
 |[~ multi_link_registry, destructeur](#dtor)|Détruit le `multi_link_registry` objet.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Méthodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -86,7 +87,7 @@ virtual void add(_EType _Link);
  `_Link`  
  Pointeur vers un bloc à ajouter.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La méthode lève un [invalid_link_target](invalid-link-target-class.md) exception si le lien est déjà présent dans le Registre, ou si une limite a déjà été définie avec la `set_bound` (fonction) et un lien a été supprimé depuis.  
   
 ##  <a name="begin"></a>commencer 
@@ -100,7 +101,7 @@ virtual iterator begin();
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur qui traite le premier élément dans le `multi_link_registry` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’état de fin est indiqué par un `NULL` lien.  
   
 ##  <a name="contains"></a>contient 
@@ -145,7 +146,7 @@ multi_link_registry();
 virtual ~multi_link_registry();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La méthode lève un [invalid_operation](invalid-operation-class.md) exception si elle est appelée avant que tous les liens sont supprimés.  
   
 ##  <a name="remove"></a>supprimer 
@@ -175,7 +176,7 @@ void set_bound(size_t _MaxLinks);
  `_MaxLinks`  
  Le nombre maximal de liens qui les `multi_link_registry` objet peut contenir.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une fois une limite définie, une entrée entraîne la `multi_link_registry` objet passe à un état immuable où autre appel aux `add` lèvera une `invalid_link_target` exception.  
   
 ## <a name="see-also"></a>Voir aussi  

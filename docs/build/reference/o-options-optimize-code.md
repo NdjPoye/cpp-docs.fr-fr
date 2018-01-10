@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 58f8aeda2570fef394b5a47d49c5dda090d8e1ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7da04384d0c4ea00c2eaaedbcf0ec770e216289
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="o-options-optimize-code"></a>/O (Optimiser le code), options
 
@@ -50,7 +51,7 @@ Le **/O** options contrôlent différentes optimisations qui vous aident à cré
 
 - [/Oy](../../build/reference/oy-frame-pointer-omission.md) supprime la création des pointeurs de frame sur la pile des appels pour les appels de fonction plus rapides.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Vous pouvez combiner plusieurs **/O** options dans une seule instruction d’option. Par exemple, **/Odi** est identique à **/Od /Oi**. Certaines options s’excluent mutuellement et provoquent une erreur du compilateur si utilisés ensemble. Consultez la personne **/O** options pour plus d’informations.
 

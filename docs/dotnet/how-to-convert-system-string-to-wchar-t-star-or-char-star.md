@@ -1,35 +1,37 @@
 ---
-title: "Comment&#160;: convertir System::String en wchar_t * ou char* | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caractères (type de données), convertir System::String en"
-  - "PtrToStringChars (méthode)"
-  - "System::String"
-  - "System::String, convertir en char ou wchar_t"
-  - "wchart (type), convertir System::String"
+title: "Comment : convertir System::String en wchar_t * ou char * | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- System::String, converting to char or wchar_t
+- PtrToStringChars method
+- System::String
+- wchart type, converting System::String
+- char data type, converting System::String to
 ms.assetid: 385da01b-5649-4543-8076-e3e251243ff0
-caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c304b3d01fa8d1cdece410d70ebe437d41d72cd0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Comment&#160;: convertir System::String en wchar_t * ou char*
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vous pouvez utiliser `PtrToStringChars` dans Vcclr.h pour convertir <xref:System.String> en `wchar_t *` ou `char *` natif.  De cette manière, un pointeur de chaîne Unicode étendu est toujours retourné, car les chaînes CLR sont Unicode en interne.  Vous pouvez ensuite effectuer la conversion du pointeur étendu comme illustré dans l'exemple suivant.  
+# <a name="how-to-convert-systemstring-to-wchart-or-char"></a>Comment : convertir System::String en wchar_t * ou char*
+Vous pouvez utiliser `PtrToStringChars` dans Vcclr.h pour convertir <xref:System.String> native `wchar_t *` ou `char *`.  Retourne toujours un pointeur de chaîne Unicode large, car les chaînes CLR sont Unicode en interne. Vous pouvez ensuite convertir à partir de l’échelle, comme indiqué dans l’exemple suivant.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // convert_string_to_wchar.cpp  
@@ -68,7 +70,10 @@ int main() {
 }  
 ```  
   
-  **Hello**  
-**Hello**   
-## Voir aussi  
- [Utilisation de l'interopérabilité C\+\+ \(PInvoke implicite\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+Hello  
+Hello  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

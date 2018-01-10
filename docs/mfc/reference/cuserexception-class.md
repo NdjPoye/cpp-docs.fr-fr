@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f88b9f7fb64697061df1e6d32f51a7c88c7e1be6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4613f2ba06ffa697df219172b98a5cf193c1f3b2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cuserexception-class"></a>Classe de CUserException
 Levée pour arrêter une opération d'utilisateur.  
@@ -36,7 +37,7 @@ Levée pour arrêter une opération d'utilisateur.
 class CUserException : public CSimpleException  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez `CUserException` lorsque vous souhaitez utiliser le mécanisme d’exception throw/catch pour les exceptions spécifiques à l’application. « Utilisateur » dans le nom de classe peut être interprété comme « mon utilisateur a rencontré une erreur exceptionnelles que vous avez besoin gérer. »  
   
  A `CUserException` est généralement levée après l’appel de la fonction globale `AfxMessageBox` pour informer l’utilisateur qui a une opération a échoué. Lorsque vous écrivez un gestionnaire d’exceptions, gérer l’exception spécialement étant donné que l’utilisateur généralement a déjà été notifié de l’échec. Le framework lève cette exception dans certains cas. Pour lever une `CUserException` vous-même, l’utilisateur d’alerte et ensuite appeler la fonction globale `AfxThrowUserException`.  

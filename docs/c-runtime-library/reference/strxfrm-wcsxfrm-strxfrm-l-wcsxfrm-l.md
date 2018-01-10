@@ -46,11 +46,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 747639550e05a0e00daadcbd72d25b31c72a7dd5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc61e1f1dee03d0604b4a7fab97dc4236c1f705c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 Transforme une chaîne en fonction des informations spécifiques aux paramètres régionaux.  
@@ -99,7 +100,7 @@ size_t wcsxfrm_l(
  Retourne la longueur de la chaîne transformée, sans compter le caractère null de fin. Si la valeur de retour est supérieure ou égale à `count`, le contenu de `strDest` est imprévisible. En cas d'erreur, chaque fonction définit `errno` et retourne `INT_MAX`. Pour un caractère non valide, `errno` a la valeur `EILSEQ`.  
   
 ## <a name="remarks"></a>Notes  
- La fonction `strxfrm` transforme la chaîne pointée par `strSource` en un nouveau format assemblé qui est stocké dans `strDest`. Pas plus de `count` caractères, y compris le caractère null, sont transformés et placés dans la chaîne résultante. La transformation s'effectue à l'aide de la catégorie `LC_COLLATE` des paramètres régionaux. Pour plus d’informations sur `LC_COLLATE`, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La fonction `strxfrm` utilise les paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux ; la fonction `_strxfrm_l` est identique à la différence qu'elle utilise les paramètres régionaux passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La fonction `strxfrm` transforme la chaîne pointée par `strSource` en un nouveau format assemblé qui est stocké dans `strDest`. Pas plus de `count` caractères, y compris le caractère null, sont transformés et placés dans la chaîne résultante. La transformation s'effectue à l'aide de la catégorie `LC_COLLATE` des paramètres régionaux. Pour plus d’informations sur `LC_COLLATE`, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La fonction `strxfrm` utilise les paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux ; la fonction `_strxfrm_l` est identique à la différence qu'elle utilise les paramètres régionaux passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  Après la transformation, un appel à `strcmp` avec les deux chaînes transformées génère des résultats identiques à ceux d'un appel à `strcoll` appliqué aux deux chaînes d'origine. Comme avec `strcoll` et `stricoll`, `strxfrm` gère automatiquement les chaînes de caractères multioctets si nécessaire.  
   
@@ -114,7 +115,7 @@ size_t wcsxfrm_l(
 |`_tcsxfrm`|`strxfrm`|`strxfrm`|`wcsxfrm`|  
 |`_tcsxfrm_l`|`_strxfrm_l`|`_strxfrm_l`|`_wcsxfrm_l`|  
   
- Dans les paramètres régionaux "C", l'ordre des caractères dans le jeu de caractères (jeu de caractères ASCII) est le même que l'ordre lexicographique des caractères. Toutefois, dans d'autres paramètres régionaux, l'ordre des caractères dans le jeu de caractères peut différer de l'ordre des caractères lexicographiques. Par exemple, avec certains paramètres régionaux européens, le caractère « a » (valeur 0x61) précède le caractère « &\#x00E4; » (valeur 0xE4) dans le jeu de caractères, mais le caractère « ä » précède le caractère « a » sur le plan lexicographique.  
+ Dans les paramètres régionaux "C", l'ordre des caractères dans le jeu de caractères (jeu de caractères ASCII) est le même que l'ordre lexicographique des caractères. Toutefois, dans d'autres paramètres régionaux, l'ordre des caractères dans le jeu de caractères peut différer de l'ordre des caractères lexicographiques. Par exemple, dans certains paramètres régionaux européens, le caractère « a » (valeur 0 x 61) précède le caractère ' &\#x00E4 ;' (valeur 0xE4) dans le jeu de caractères, mais le caractère « ä » précède le caractère 'a' lexicographique.  
   
  Dans les paramètres régionaux pour lesquels le jeu de caractères et l'ordre des caractères lexicographiques diffèrent, utilisez `strxfrm` sur les chaînes d'origine et `strcmp` sur les chaînes résultantes pour produire une comparaison de chaîne lexicographique en fonction de la catégorie `LC_COLLATE` des paramètres régionaux actuels. Par conséquent, pour comparer deux chaînes lexicographiquement dans les paramètres régionaux ci-dessus, utilisez `strxfrm` sur les chaînes d'origine et `strcmp` sur les chaînes résultantes. Vous pouvez également utiliser `strcoll` au lieu de `strcmp` sur les chaînes d'origine.  
   

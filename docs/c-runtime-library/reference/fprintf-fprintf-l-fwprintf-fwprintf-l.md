@@ -46,11 +46,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 709e3ac033f72c59732f93b1143886d3b90cbf52
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 13f358548b7155b281ffd77821b9a413e1e6fb43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fprintf-fprintfl-fwprintf-fwprintfl"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
 Envoient les données mises en forme vers un flux. Il existe des versions plus sécurisées de ces fonctions. Consultez [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
@@ -84,7 +85,7 @@ int _fwprintf_l(
   
 #### <a name="parameters"></a>Paramètres  
  `stream`  
- Pointeur vers la structure `FILE` .  
+ Pointeur vers la structure `FILE`.  
   
  `format`  
  Chaîne de contrôle de format.  
@@ -98,9 +99,9 @@ int _fwprintf_l(
 ## <a name="return-value"></a>Valeur de retour  
  `fprintf` retourne le nombre d’octets écrits. `fwprintf` retourne le nombre de caractères larges écrits. Chacune de ces fonctions retourne une valeur négative à la place en cas d’erreur de sortie. Si `stream` ou `format` a la valeur `NULL`, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent -1 et définissent `errno` avec la valeur `EINVAL`. La chaîne de format ne fait pas l’objet d’une vérification des caractères de mise en forme, comme c’est le cas avec `fprintf_s` ou `fwprintf_s`.  
   
- Consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d’informations sur ces éléments et autres codes d’erreur.  
+ Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `fprintf` met en forme et envoie une série de caractères et de valeurs vers la sortie `stream`. Chaque fonction `argument` (le cas échéant) est convertie et sortie selon la spécification de format correspondante dans `format`. Pour `fprintf`, l’argument `format` a les mêmes syntaxe et utilisation que dans `printf`.  
   
  `fwprintf` est une version à caractères larges de `fprintf` ; dans `fwprintf`, `format` est une chaîne à caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. `fprintf` ne prend actuellement pas en charge la sortie vers un flux UNICODE.  
@@ -117,7 +118,7 @@ int _fwprintf_l(
 |`_ftprintf`|`fprintf`|`fprintf`|`fwprintf`|  
 |`_ftprintf_l`|`_fprintf_l`|`_fprintf_l`|`_fwprintf_l`|  
   
- Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -126,7 +127,7 @@ int _fwprintf_l(
 |`fprintf`, `_fprintf_l`|\<stdio.h>|  
 |`fwprintf`, `_fwprintf_l`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

@@ -1,36 +1,37 @@
 ---
-title: "__ll_lshift | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__ll_lshift_cpp"
-  - "__ll_lshift"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ll_lshift, intrinsèque"
-  - "__ll_lshift, intrinsèque"
+title: __ll_lshift | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __ll_lshift_cpp
+- __ll_lshift
+dev_langs: C++
+helpviewer_keywords:
+- ll_lshift intrinsic
+- __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 958ade238317d1577bd93d373b9e8ce4aa1f4234
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# __ll_lshift
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="lllshift"></a>__ll_lshift
+**Section spécifique à Microsoft**  
   
- Déplace le valeur 64 bits fourni vers la gauche selon le nombre de bits spécifié.  
+ Décale la valeur 64 bits fournie à gauche du nombre de bits spécifié.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 unsigned __int64 __ll_lshift(  
@@ -39,30 +40,30 @@ unsigned __int64 __ll_lshift(
 );  
 ```  
   
-#### Paramètres  
- \[in\] `Mask`  
- La valeur entière 64 bits pour accéder à gauche.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `Mask`  
+ La valeur d’entier 64 bits de décalage vers la gauche.  
   
- \[in\] `nBit`  
- le nombre de bits à déplacer.  
+ [in] `nBit`  
+ Nombre de bits à décaler.  
   
-## Valeur de retour  
- Le masque est déplacé à gauche par les bits d' `nBit` .  
+## <a name="return-value"></a>Valeur de retour  
+ Le masque décalée vers la gauche en `nBit` bits.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__ll_lshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- Si vous compilez votre programme à l'aide de l'architecture de 64 bits et `nBit` est supérieur à 63, le nombre de bits à déplacer est le modulo 64 d' `nBit` .  Si vous compilez votre programme à l'aide de l'architecture de 32 bits et `nBit` est supérieur à 31, le nombre de bits à déplacer est le modulo 32 d' `nBit` .  
+## <a name="remarks"></a>Notes  
+ Si vous compilez votre programme à l’aide de l’architecture 64 bits et `nBit` est supérieur à 63, le nombre de bits de décalage est `nBit` modulo 64. Si vous compilez votre programme à l’aide de l’architecture 32 bits et `nBit` est supérieur à 31, le nombre de bits de décalage est `nBit` modulo 32.  
   
- `ll` dans le nom indique qu'il s'agit d'une opération sur `long long` \(`__int64`\).  
+ Le `ll` dans le nom indique qu’il s’agit une opération sur `long long` (`__int64`).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // ll_lshift.cpp  
@@ -83,17 +84,17 @@ int main()
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 10000  
 ```  
   
- **Remarque** il n'y a aucune version non signée de l'opération de décalage vers la gauche.  En effet `__ll_lshift` utilise déjà un paramètre d'entrée non signé.  Contrairement au décalage vers la droite, il n'y a aucune dépendance de signe pour le décalage vers la gauche, parce que le bit le moins significatif dans le résultat est toujours la valeur zéro quel que soit le signe de la valeur déplacée.  
+ **Remarque** il n’existe aucune version non signée de l’opération de décalage vers la gauche. C’est parce que `__ll_lshift` utilise déjà un paramètre d’entrée non signé. Le décalage vers la droite, à la différence ne de connexion pour le décalage vers la gauche, car le bit le moins significatif dans le résultat est toujours défini sur zéro, quel que soit le signe de la valeur décalée vers.  
   
-### TERMINEZ le détail de Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [\_\_ll\_rshift](../intrinsics/ll-rshift.md)   
- [\_\_ull\_rshift](../intrinsics/ull-rshift.md)   
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>Voir aussi  
+ [__ll_rshift](../intrinsics/ll-rshift.md)   
+ [__ull_rshift](../intrinsics/ull-rshift.md)   
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

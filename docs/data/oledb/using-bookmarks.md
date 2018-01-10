@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4b7c5c1a7722e378e313e1b0fe8e9ed10d97ddb9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 41c8e5a44130eebfddc9e99ab7ef815b6e8e43a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-bookmarks"></a>Utilisation des signets
 Avant d’ouvrir l’ensemble de lignes, vous devez indiquer au fournisseur que vous souhaitez utiliser des signets. Pour ce faire, définissez la **DBPROP_BOOKMARKS** propriété **true** dans votre jeu. Le fournisseur récupère les signets en tant que colonne zéro, vous devez utiliser la macro spéciale `BOOKMARK_ENTRY` et `CBookmark` si vous utilisez un accesseur statique de classe. `CBookmark`est une classe de modèle où l’argument est la longueur en octets de la mémoire tampon de signet. La longueur de la mémoire tampon requise pour un signet dépend du fournisseur. Si vous utilisez le fournisseur OLE DB pour ODBC, comme indiqué dans l’exemple suivant, la mémoire tampon doit être de 4 octets.  

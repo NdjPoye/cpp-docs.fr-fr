@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 29a7c04c2bb2037cb181957e2e0a08649b24cbe5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 383382de2720ac7a72403bd3578e235af7bdbe05
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safemodulus"></a>SafeModulus
 Effectue l’opération modulo de deux nombres.  
@@ -48,7 +51,7 @@ inline bool SafeModulus (
 ## <a name="return-value"></a>Valeur de retour  
  `true`Si aucune erreur ne se produit ; `false` si une erreur se produit.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette méthode fait partie de [Bibliothèque SafeInt](../windows/safeint-library.md) et est conçu pour une opération modulo unique sans créer d’instance de la [SafeInt, classe](../windows/safeint-class.md).  
   
 > [!NOTE]

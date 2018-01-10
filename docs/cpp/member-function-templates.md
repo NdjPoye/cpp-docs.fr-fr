@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- function templates, member functions
+dev_langs: C++
+helpviewer_keywords: function templates, member functions
 ms.assetid: 83d51835-6a27-40ed-997c-7d90dc9182d8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
-ms.openlocfilehash: bba7b35c08fbc171ddbb4c572285c0aed2f58a3b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f6d16c94eb9d88f8e000f3830477fbf420acf8b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-function-templates"></a>Modèles de fonctions membres
 
@@ -71,8 +68,6 @@ int main()
 ```  
   
 ## <a name="example"></a>Exemple
-
- En outre, dans Visual Studio .NET 2003 et versions ultérieures, les modèles de membre peuvent également être définis en dehors d’une classe.  
   
 ```cpp
 // defining_member_templates_outside_class.cpp  
@@ -100,7 +95,7 @@ int main()
   
  Les fonctions des modèles membres ne peuvent pas être des fonctions virtuelles et ne peuvent pas remplacer des fonctions virtuelles d'une classe de base lorsqu'elles sont déclarées avec le même nom qu'une fonction virtuelle d'une classe de base.  
   
- Visual C++ .NET 2003 introduit la prise en charge pour les conversions définies par l’utilisateur basé sur un modèle. L'exemple suivant fonctionne dans Visual C++ .NET 2003, comme indiqué dans la norme.  
+L’exemple suivant montre une conversion définie par l’utilisateur basés sur des modèles :  
   
 ```cpp
 // templated_user_defined_conversions.cpp  
@@ -123,4 +118,3 @@ int main()
 ## <a name="see-also"></a>Voir aussi
 
  [Modèles de fonctions](../cpp/function-templates.md)
-

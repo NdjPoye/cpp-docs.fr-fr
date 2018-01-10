@@ -37,11 +37,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f463ee2e077d4d1cc90e4fe2fc04eeda025bb6a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 86152082b081cb93ba264e607b256a2448874af2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="frexp"></a>frexp
 Obtient la mantisse et l’exposant d’un nombre à virgule flottante.  
@@ -73,7 +74,7 @@ long double frexp(
 ## <a name="return-value"></a>Valeur de retour  
  `frexp` retourne la mantisse. Si `x` a la valeur 0, la fonction retourne 0 pour la mantisse et l’exposant. Si `expptr` a la valeur `NULL`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, cette fonction affecte à `errno` la valeur `EINVAL` et retourne 0.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `frexp` fonction décompose la valeur à virgule flottante (`x`) dans une mantisse (`m`) et un exposant (`n`), telle que la valeur absolue de `m` est supérieur ou égal à 0,5 et inférieur à 1,0 et `x`  =  `m`* 2<sup>n</sup>. L’exposant entier `n` est stocké à l’emplacement désigné par `expptr`.  
   
  C++ autorisant la surcharge, vous pouvez appeler des surcharges de `frexp`. Dans un programme C, `frexp` accepte un double et un entier et retourne un double systématiquement.  
@@ -84,7 +85,7 @@ long double frexp(
 |--------------|---------------------|  
 |`frexp`|\<math.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

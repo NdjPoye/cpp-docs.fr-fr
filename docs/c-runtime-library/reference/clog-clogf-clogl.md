@@ -43,11 +43,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7a7d2f42c6ba902f1c657708a2ca739ba30b5b08
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 09cc64d10c997702e4dde2cff2b40ee4568bf42e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clog-clogf-clogl"></a>clog, clogf, clogl
 Récupère le logarithme népérien d’un nombre complexe, avec une coupure sur l’axe des réels négatifs.  
@@ -94,11 +95,11 @@ _Lcomplex clogl(
   
 ## <a name="requirements"></a>Spécifications  
   
-|Routine|En-tête C|En-tête C++|  
+|Routine|En-tête C|En-tête C++|  
 |-------------|--------------|------------------|  
 |`clog`,               `clogf`, `clogl`|\<complex.h>|\<ccomplex>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

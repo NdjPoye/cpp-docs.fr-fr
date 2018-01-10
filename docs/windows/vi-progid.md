@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f5a7560a05e670f8e6d0b04eea614be80db2ba93
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b7581a4a10d9f101526aeb1a17ba7e26c4646b39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="viprogid"></a>vi_progid
 Spécifie un formulaire indépendant de la version du ProgID.  
@@ -39,7 +42,7 @@ Spécifie un formulaire indépendant de la version du ProgID.
   
  ProgID présentent une version lisible de l’identificateur de classe (CLSID) utilisé pour identifier les objets COM/ActiveX.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **vi_progid** attribut C++ vous permet de spécifier un ProgID indépendants de la version d’un objet COM. Un ProgID présente sous la forme *name1.name2.version*. Un ProgID indépendants de la version n’a pas un *version*. Il est possible de spécifier à la fois le **progid** et **vi_progid** les attributs d’une coclasse. Si vous ne spécifiez pas **vi_progid**, les ProgID indépendants de la version est la valeur spécifiée par la [progid](../windows/progid.md) attribut.  
   
  **vi_progid** implique la **coclasse** d’attribut, autrement dit, si vous spécifiez **vi_progid**, il s’agit de la même chose que la spécification de la **coclasse** et **vi_progid** attributs.  
@@ -58,7 +61,7 @@ Spécifie un formulaire indépendant de la version du ProgID.
 |||  
 |-|-|  
 |**S'applique à**|**class**, `struct`|  
-|**Renouvelable**|Non|  
+|**Renouvelable**|Aucune|  
 |**Attributs requis**|Aucun|  
 |**Attributs non valides**|Aucun|  
   

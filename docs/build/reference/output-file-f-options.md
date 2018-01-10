@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05b3411fd9b8c9da13138f025bbc2a60ce8c73de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fa7bdc75bd994b5220d4f6fbbc0d4defeb68c691
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-file-f-options"></a>Options du fichier de sortie (/F)
 Les options de fichier de sortie créer ou renommer des fichiers de sortie. Ils affectent tous les fichiers sources C ou C++ spécifiés dans la variable d’environnement CL, sur la ligne de commande ou dans n’importe quel fichier de commandes.  

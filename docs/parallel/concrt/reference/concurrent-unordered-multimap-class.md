@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba0de9ad80aa23d36fda33c5501ce832da6bb0c2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 41a9a5ade4f7fa704311982d57e47f15561431c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentunorderedmultimap-class"></a>concurrent_unordered_multimap, classe
 La classe `concurrent_unordered_multimap` est un conteneur d'accès concurrentiel sécurisé qui contrôle une séquence à longueur variable d'éléments de type `std::pair<const K, _Element_type>`. La séquence est représentée d'une manière à permettre les opérations d'ajout d'accès concurrentiel sécurisé, d'accès à un élément, d'accès à un itérateur et de traversée d'itérateur.  
@@ -61,10 +62,10 @@ template <typename K,
  Type mappé.  
   
  `_Hasher`  
- Type d'objet de la fonction de hachage. Cet argument est facultatif et sa valeur par défaut est `std::hash<K>`.  
+ Type d’objet de la fonction de hachage. Cet argument est facultatif et sa valeur par défaut est `std::hash<K>`.  
   
  `key_equality`  
- Type d’objet de fonction de comparaison d’égalité. Cet argument est facultatif et sa valeur par défaut est `std::equal_to<K>`.  
+ Type d'objet de fonction de comparaison d'égalité. Cet argument est facultatif et sa valeur par défaut est `std::equal_to<K>`.  
   
  `_Allocator_type`  
  Type qui représente l’objet allocateur stocké qui contient des informations sur l’allocation et la désallocation de mémoire pour le vecteur simultané. Cet argument est facultatif et la valeur par défaut est `std::allocator<std::pair<K`, `_Element_type>>`.  
@@ -84,10 +85,10 @@ template <typename K,
 |`hasher`|Type de la fonction de hachage.|  
 |`iterator`|Type d'un itérateur pour la séquence contrôlée.|  
 |`key_equal`|Type de la fonction de comparaison.|  
-|`key_type`|Type d'une clé de tri.|  
+|`key_type`|Type d’une clé de tri.|  
 |`local_iterator`|Type d'un itérateur de compartiment pour la séquence contrôlée.|  
-|`mapped_type`|Type d'une valeur mappée associée à chaque clé.|  
-|`pointer`|Type d'un pointeur vers un élément.|  
+|`mapped_type`|Type d’une valeur mappée associée à chaque clé.|  
+|`pointer`|Type d’un pointeur vers un élément.|  
 |`reference`|Type d'une référence à un élément.|  
 |`size_type`|Type d'une distance non signée entre deux éléments.|  
 |`value_type`|Type d’un élément.|  
@@ -98,7 +99,7 @@ template <typename K,
 |----------|-----------------|  
 |[concurrent_unordered_multimap](#ctor)|Surchargé. Construit un multimap non ordonnée simultanée.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Méthodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -114,7 +115,7 @@ template <typename K,
 |----------|-----------------|  
 |[operator=](#operator_eq)|Surchargé. Assigne le contenu d’un autre `concurrent_unordered_multimap` objet à celui-ci. Cette méthode n’est pas d’accès concurrentiel sécurisé.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour plus d’informations sur la `concurrent_unordered_multimap` de classe, consultez [conteneurs et objets parallèles](../../../parallel/concrt/parallel-containers-and-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -230,7 +231,7 @@ concurrent_unordered_multimap(
  `_Umap`  
  La source `concurrent_unordered_multimap` pour copier les éléments d’objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Tous les constructeurs stockent un objet allocateur `_Allocator` et initialiser la classe multimap non triée.  
   
  Le premier constructeur spécifie une multimap initiale vide et spécifie explicitement les fonctions de hachage et d’égalité et allocateur tapez le nombre de compartiments, pour être utilisé.  
@@ -260,7 +261,7 @@ size_type count(const key_type& KVal) const;
   
 ##  <a name="empty"></a>vide 
 
- Vérifie l'absence d'éléments. Cette méthode est l’accès concurrentiel sécurisé.  
+ Vérifie l’absence d’éléments. Cette méthode est l’accès concurrentiel sécurisé.  
   
 ```
 bool empty() const;
@@ -269,7 +270,7 @@ bool empty() const;
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si le conteneur simultané est vide, `false` dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En présence d’insertions simultanées, ou non le conteneur simultané est vide peut changer immédiatement après l’appel de cette fonction, avant que la valeur de retour soit encore lu.  
   
 ##  <a name="end"></a>fin 
@@ -306,7 +307,7 @@ std::pair<const_iterator,
 ### <a name="return-value"></a>Valeur de retour  
  A [paire](http://msdn.microsoft.com/en-us/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) où le premier élément est un itérateur au début et le deuxième élément est un itérateur à la fin de la plage.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il est possible pour les insertions simultanées à provoquer des clés supplémentaires à insérer après l’itérateur begin et avant l’itérateur de fin.  
   
 ##  <a name="find"></a>Rechercher 
@@ -398,7 +399,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur pointant vers l’emplacement d’insertion.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La première fonction membre insère l’élément `value` dans la séquence contrôlée, puis retourne l’itérateur qui désigne l’élément inséré.  
   
  La deuxième fonction membre retourne insert ( `value`), à l’aide `_Where` comme point de départ dans la séquence contrôlée pour rechercher le point d’insertion.  
@@ -456,7 +457,7 @@ size_type max_size() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre maximal d’éléments qui peuvent être insérées dans ce conteneur simultané.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette valeur limite supérieure peut être supérieure à ce que le conteneur peut recevoir réellement.  
   
 ##  <a name="operator_eq"></a>opérateur = 
@@ -476,7 +477,7 @@ concurrent_unordered_multimap& operator= (concurrent_unordered_multimap&& _Umap)
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à ce `concurrent_unordered_multimap` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Après avoir supprimé les éléments existants dans un mappage non trié multiple simultané, `operator=` copie ou déplace le contenu de `_Umap` dans la classe non ordonnée multimap simultanée.  
   
 ##  <a name="rehash"></a>rehash) 
@@ -491,8 +492,8 @@ void rehash(size_type _Buckets);
  `_Buckets`  
  Le nombre souhaité de compartiments.  
   
-### <a name="remarks"></a>Remarques  
- La fonction membre modifie le nombre de compartiments pour qu’il soit au moins égal à `_Buckets` et régénère la table de hachage en fonction des besoins. Le nombre de compartiments doit être une puissance de 2. Si pas une puissance de 2, il est arrondi à la plus grande puissance de 2 suivante.  
+### <a name="remarks"></a>Notes  
+ La fonction membre modifie le nombre de compartiments pour qu'il soit au moins égal à `_Buckets` et régénère la table de hachage en fonction des besoins. Le nombre de compartiments doit être une puissance de 2. Si pas une puissance de 2, il est arrondi à la plus grande puissance de 2 suivante.  
   
  Elle lève une [out_of_range](../../../standard-library/out-of-range-class.md) exception si le nombre de compartiments n’est pas valide (0 ou supérieur au nombre maximal de compartiments).  
   
@@ -507,7 +508,7 @@ size_type size() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’éléments dans le conteneur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En présence d’insertions simultanées, le nombre d’éléments dans le conteneur simultané peut changer immédiatement après l’appel de cette fonction, avant que la valeur de retour soit encore lu.  
   
 ##  <a name="swap"></a>swap 
@@ -656,7 +657,7 @@ iterator unsafe_erase(
 ### <a name="return-value"></a>Valeur de retour  
  Les deux premières fonctions membres retournent un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou `concurrent_unordered_multimap::end`() si cet élément n’existe. La troisième fonction membre retourne le nombre d’éléments, qu'il le supprime.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La première fonction membre supprime l’élément de la séquence contrôlée vers lequel pointé `_Where`. La deuxième fonction membre supprime les éléments de la plage [ `_Begin`, `_End`).  
   
  La troisième fonction membre supprime les éléments de la plage délimitée par `concurrent_unordered_multimap::equal_range`(KVal).  

@@ -1,42 +1,46 @@
 ---
-title: "Shrinking or Stretching Part of an Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bitmaps [C++], shrinking"
-  - "images [C++], stretching"
-  - "bitmaps [C++], stretching"
-  - "images [C++], shrinking"
+title: "Réduction ou étirement d’une partie d’une Image (Éditeur d’images pour les icônes) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- bitmaps [C++], shrinking
+- images [C++], stretching
+- bitmaps [C++], stretching
+- images [C++], shrinking
 ms.assetid: c5f58e2c-6b6e-4fb3-9784-76483b2440af
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ea7cef1edf04cac83bfacefa881ffca92117caa2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Shrinking or Stretching Part of an Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Pour réduire ou étirer une partie d'une image  
+# <a name="shrinking-or-stretching-part-of-an-image-image-editor-for-icons"></a>Réduction ou étirement d'une partie d'une image (Éditeur d'images pour les icônes)
+### <a name="to-shrink-or-stretch-part-of-an-image"></a>Pour réduire ou étirer une partie d’une image  
   
-1.  Sélectionnez la partie de l'image que vous souhaitez redimensionner.  Pour plus d'informations, consultez [Sélection d'une zone d'une image](../mfc/selecting-an-area-of-an-image-image-editor-for-icons.md).  
+1.  Sélectionnez la partie de l’image que vous voulez redimensionner. Pour plus d’informations, consultez [sélection d’une zone de l’Image](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md).  
   
-2.  Faites glisser l'une des poignées de redimensionnement jusqu'à ce que la sélection ait la taille souhaitée.  
+2.  Faites glisser l’une des poignées de redimensionnement jusqu'à ce que la sélection est la taille souhaitée.  
   
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l'ajout de fichiers de ressources aux projets managés, l'accès aux ressources, l'affichage de ressources statiques et l'assignation de chaînes de ressources aux propriétés, et ce manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/fr-fr/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Configuration requise**  
+ **Spécifications**  
   
  Aucun  
   
-## Voir aussi  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Resizing an Image](../mfc/resizing-an-image-image-editor-for-icons.md)
+## <a name="see-also"></a>Voir aussi  
+ [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Redimensionnement d’une Image](../windows/resizing-an-image-image-editor-for-icons.md)
+

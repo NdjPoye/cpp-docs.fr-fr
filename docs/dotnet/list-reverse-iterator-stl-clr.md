@@ -1,41 +1,42 @@
 ---
-title: "list::reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reverse_iterator (membre) (STL/CLR)"
+title: List::reverse_iterator (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::reverse_iterator
+dev_langs: C++
+helpviewer_keywords: reverse_iterator member [STL/CLR]
 ms.assetid: 56853ed8-cb12-41d7-98b2-c511cd77945d
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 27d78fbd1679e025dedd3a6fbbde3631e00a67eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# list::reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le type d'un itérateur inversé pour la séquence contrôlée.  
+# <a name="listreverseiterator-stlclr"></a>list::reverse_iterator (STL/CLR)
+Type d'un itérateur inverse pour la séquence contrôlée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef T3 reverse_iterator;  
 ```  
   
-## Notes  
- Le type décrit un objet de type non spécifié `T3` qui peut servir d'itérateur inversé pour la séquence contrôlée.  
+## <a name="remarks"></a>Notes  
+ Le type décrit un objet de type non spécifié `T3` qui peut servir d’itérateur inverse pour la séquence contrôlée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_list_reverse_iterator.cpp   
@@ -66,15 +67,18 @@ int main()
   
 ```  
   
-  **c b a**  
- **x b a**   
-## Configuration requise  
- **En\-tête :** \<cliext\/list\>  
+```Output  
+c b a  
+x b a  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/liste >  
   
-## Voir aussi  
- [list](../dotnet/list-stl-clr.md)   
- [list::const\_iterator](../dotnet/list-const-iterator-stl-clr.md)   
- [list::const\_reverse\_iterator](../dotnet/list-const-reverse-iterator-stl-clr.md)   
- [list::iterator](../dotnet/list-iterator-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::const_iterator (STL/CLR)](../dotnet/list-const-iterator-stl-clr.md)   
+ [List::const_reverse_iterator (STL/CLR)](../dotnet/list-const-reverse-iterator-stl-clr.md)   
+ [list::iterator (STL/CLR)](../dotnet/list-iterator-stl-clr.md)

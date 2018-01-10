@@ -18,18 +18,19 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2067b0eb3cedb924c906e77bb549611bf8e8ed01
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bb26957109a558b48d6252e042e9082f7357fbd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manifest-create-side-by-side-assembly-manifest"></a>/MANIFEST (Créer un manifeste d'assembly côte à côte)
 ```  
 /MANIFEST[:{EMBED[,ID=#]|NO}]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  /MANIFEST spécifie que l’éditeur de liens doit créer un fichier manifeste côte à côte. Pour plus d’informations sur les fichiers manifeste, consultez [référence des fichiers manifeste](http://msdn.microsoft.com/library/aa375632).  
   
  La valeur par défaut est /MANIFEST.  

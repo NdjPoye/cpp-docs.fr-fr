@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,8 +26,7 @@ apitype: DLLExport
 f1_keywords:
 - _getws_s
 - gets_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - getws_s function
 - _getws_s function
@@ -40,30 +38,16 @@ helpviewer_keywords:
 - gets_s function
 - standard input, reading from
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 4f4a10f432c663be33fe751bcde862c4d8e57c49
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b4a14a5166e357c3b25622c49f75b2b26fed4f55
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getss-getwss"></a>gets_s, _getws_s
 Obtient une ligne du flux `stdin` Ces versions de [gets, _getws](../../c-runtime-library/gets-getws.md) intègrent des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -100,7 +84,7 @@ wchar_t *_getws_s(
  Retourne `buffer` en cas de réussite. Un pointeur `NULL` indique une condition d’erreur ou de fin de fichier. Utilisez [ferror](../../c-runtime-library/reference/ferror.md) ou [feof](../../c-runtime-library/reference/feof.md) pour déterminer laquelle des deux s’est produite.  
   
 ## <a name="remarks"></a>Notes  
- La fonction `gets_s` lit une ligne dans le flux d’entrée standard `stdin` et la stocke dans `buffer`. La ligne se compose de tous les caractères jusqu’à et y compris le premier caractère de saut de ligne (« \n »). `gets_s` remplace ensuite le caractère de saut de ligne par un caractère Null (« \0 ») avant de retourner la ligne. En revanche, la fonction `fgets_s` conserve le caractère de saut de ligne.  
+ La fonction `gets_s` lit une ligne dans le flux d’entrée standard `stdin` et la stocke dans `buffer`. La ligne se compose de tous les caractères jusqu’à et y compris le premier caractère de saut de ligne (« \n »). `gets_s` remplace ensuite le caractère de saut de ligne par un caractère Null (« \0 ») avant de retourner la ligne. En revanche, la fonction `fgets_s` conserve le caractère de saut de ligne.  
   
  Si le premier caractère lu est le caractère de fin de fichier, un caractère Null est stocké au début de `buffer` et `NULL` est retourné.  
   
@@ -108,7 +92,7 @@ wchar_t *_getws_s(
   
  Si `buffer` a la valeur `NULL` ou que `sizeInCharacters` est inférieur ou égal à zéro, ou si la mémoire tampon est trop petite pour contenir la ligne d’entrée et la marque de fin Null, ces fonctions appellent un gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent `NULL` et définissent errno sur `ERANGE`.  
   
- En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
@@ -123,7 +107,7 @@ wchar_t *_getws_s(
 |`gets_s`|\<stdio.h>|  
 |`_getws`|\<stdio.h> ou \<wchar.h>|  
   
- La console n'est pas prise en charge dans les applications [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] . Les handles de flux standard associés à la console (`stdin`, `stdout` et `stderr`) doivent être redirigés pour que les fonctions Runtime C puissent les utiliser dans les applications du [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ La console n'est pas prise en charge dans les applications [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] . Les handles de flux standard associés à la console (`stdin`, `stdout` et `stderr`) doivent être redirigés pour que les fonctions Runtime C puissent les utiliser dans les applications du [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

@@ -43,17 +43,18 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b0a94b0d15059c0ecf67a7a33b3be646ed7a2f59
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d5dc706f59672f60874a5f525bb37067c1b13ff1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 Vérifie si un caractère multioctet est un caractère minuscule ou majuscule.  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -87,7 +88,7 @@ int _ismbcupper_l(
 ## <a name="remarks"></a>Notes  
  Chacune de ces fonctions teste un caractère multioctet fourni pour un état donné.  
   
- Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
 |Routine|Condition de test|Exemple de page de codes 932|  
 |-------------|--------------------|---------------------------|  
@@ -105,7 +106,7 @@ int _ismbcupper_l(
 |`_ismbcupper`|\<mbstring.h>|  
 |`_ismbcupper_l`|\<mbstring.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classifications des caractères](../../c-runtime-library/character-classification.md)   

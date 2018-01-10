@@ -15,13 +15,16 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5bb328b93231646cd3b0ceeea42382d8f8857e21
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1a51de59278e476be1e99b60ef1b0ab8a6e3f3cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="implementshelper-structure"></a>ImplementsHelper (structure)
+# <a name="implementshelper-structure"></a>ImplementsHelper, structure
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -45,7 +48,7 @@ friend struct Details::ImplementsHelper;
  `IsDelegateToClass`  
  Spécifiez `true` si l’instance actuelle d’implémente est une classe de base du premier ID d’interface dans `ILst`; sinon, `false`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Permet d’implémenter le [implémente](../windows/implements-structure.md) structure.  
   
  Ce modèle parcourt la liste des interfaces et les ajoute comme classes de base et que les informations nécessaires pour permettre à QueryInterface.  

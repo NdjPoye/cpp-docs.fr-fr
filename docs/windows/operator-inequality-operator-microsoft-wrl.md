@@ -1,31 +1,32 @@
 ---
-title: "operator!=, op&#233;rateur (Microsoft::WRL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::operator!="
-dev_langs: 
-  - "C++"
+title: "opérateur ! =, opérateur (Microsoft::WRL) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::operator!=
+dev_langs: C++
 ms.assetid: 785435da-87a6-4454-9bce-9d288a96dc26
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5a379d367729a738f2a0a8b099a29eb6b274bacb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# operator!=, op&#233;rateur (Microsoft::WRL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Opérateur d'inégalité pour les objets [ComPtr](../windows/comptr-class.md) et [ComPtrRef](../windows/comptrref-class.md).  
+# <a name="operator-operator-microsoftwrl"></a>operator!=, opérateur (Microsoft::WRL)
+Opérateur d’inégalité pour [ComPtr](../windows/comptr-class.md) et [ComPtrRef](../windows/comptrref-class.md) objets.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 WRL_NOTHROW bool operator!=(  
@@ -62,20 +63,20 @@ WRL_NOTHROW bool operator!=(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `a`  
- L'objet de gauche.  
+ Objet gauche.  
   
  `b`  
- L'objet de droite.  
+ Objet droit.  
   
-## Valeur de retour  
- `true` si les objets ne sont pas égaux ; sinon, `false`.  
+## <a name="return-value"></a>Valeur de retour  
+ `true`Si les objets ne sont pas égales ; dans le cas contraire, `false`.  
   
-## Configuration requise  
- **En\-tête:** client.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** client.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)

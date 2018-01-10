@@ -18,13 +18,14 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 6c45256272f7d72dd1da6b6486f9358eaf062b8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f99b8ab49579d949081af73e76d4bfcb167e2cb3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute (classe)
+# <a name="platformmtathreadattribute-class"></a>Classe Platform::MTAThreadAttribute
 Indique que le modèle de thread d'une application est un modèle MTA (MultiThreaded Apartment).  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -41,8 +42,8 @@ public ref class MTAThreadAttribute sealed : Attribute
 |----------|-----------------|  
 |[MTAThreadAttribute constructeur 1](#ctor) constructeur|Initialise une nouvelle instance de la classe.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
- L’attribut MTAThreadAttribute hérite [Platform::Object, classe](../cppcx/platform-object-class.md). MTAThreadAttribute surcharge ou possède également les membres suivants :  
+### <a name="public-methods"></a>Méthodes publiques  
+ L’attribut MTAThreadAttribute hérite [Platform::Object, classe](../cppcx/platform-object-class.md). MTAThreadAttribute surcharge ou possède également les membres suivants :  
   
 |Nom|Description|  
 |----------|-----------------|  

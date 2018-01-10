@@ -24,11 +24,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 30459805268a8b2eac9e94d0aeb1da4cfff28a46
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 08812cdd0a4ffb27b387cce8cfb26e72ef80770a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="d-preprocessor-definitions"></a>/D (Définitions de préprocesseur)
 Définit un symbole de prétraitement pour un fichier source.  
@@ -39,7 +40,7 @@ Définit un symbole de prétraitement pour un fichier source.
 /Dname[= | # [{string | number}] ]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez utiliser ce symbole avec `#if` ou `#ifdef` pour effectuer une compilation conditionnelle du code source. La définition du symbole reste en vigueur jusqu'à ce qu'elle soit redéfinie ou annulée dans le code par la directive `#undef`.  
   
  **/D** a le même effet que la `#define` directive au début d’un fichier de code source, à ceci près que **/D** supprime les guillemets sur la ligne de commande et `#define` les conserve.  
@@ -68,7 +69,7 @@ SET CL=/DTEST#0
 CL /DTEST=%% TEST.C  
 ```  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l’environnement de développement Visual Studio  
   
 1.  Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   

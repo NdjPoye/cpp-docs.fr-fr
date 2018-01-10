@@ -24,11 +24,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6cf6b49714f8549f5e5c940b00fcaccc39667933
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 497dd21bba3e807349b793e3b37e774c833ccb40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Classes de fenêtre frame créées par l'Assistant Application
 Lorsque vous utilisez la [Assistant Application](../ide/creating-desktop-projects-by-using-application-wizards.md) pour créer une application squelette, outre l’application, document et affichage de classes, l’Assistant Application crée une classe dérivée de fenêtre frame de fenêtre frame principale de votre application. La classe est appelée `CMainFrame` par défaut et les fichiers qui le contiennent sont nommés MAINFRM. H et MAINFRM. CPP.  

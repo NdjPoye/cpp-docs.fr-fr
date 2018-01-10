@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _cwait
+apiname: _cwait
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,44 +21,28 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- _cwait
-dev_langs:
-- C++
+f1_keywords: _cwait
+dev_langs: C++
 helpviewer_keywords:
 - cwait function
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 8d5cfdb53b5aab8e6b0404b84de87ba24ee57597
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 817b8ef39758a47fe28a3a2e2320ae7384a2bc86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwait"></a>_cwait
 Attend la fin d'un autre processus.  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -90,7 +72,7 @@ intptr_t _cwait(
 |`ECHILD`|Aucun processus spécifié n’existe, `procHandle` n’est pas valide ou l’appel à l’API [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx) ou [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx) a échoué.|  
 |`EINVAL`|`action` n'est pas valide.|  
   
- Pour plus d’informations sur ces codes de retour et d’autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour plus d’informations sur ces codes de retour et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Notes  
  La fonction `_cwait` attend la fin de l'ID du processus spécifié fourni par `procHandle`. La valeur de `procHandle` passée à `_cwait` doit être la valeur retournée par l’appel à la fonction [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) qui a créé le processus spécifié. Si l'ID de processus se termine avant l'appel à `_cwait`, `_cwait` est immédiatement retourné. `_cwait` peut être utilisé par n'importe quel processus pour attendre tout autre processus connu pour lequel il existe un handle valide (`procHandle`).  
@@ -107,7 +89,7 @@ intptr_t _cwait(
 |-------------|---------------------|---------------------|  
 |`_cwait`|\<process.h>|\<errno.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

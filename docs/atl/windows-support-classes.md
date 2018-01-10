@@ -1,66 +1,67 @@
 ---
-title: "Windows Support Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.windows"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, fenêtres"
-  - "windows [C++], ATL"
+title: Windows prend en charge les Classes (ATL) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.windows
+dev_langs: C++
+helpviewer_keywords:
+- ATL, windows
+- windows [C++], ATL
 ms.assetid: 750b14d5-d787-4d2b-9728-ac199ccad489
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 308f9deada47998c2f639d01ea5b9fdc9d04faa5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Windows Support Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les classes suivantes fournissent la prise en charge des fenêtres :  
+# <a name="windows-support-classes"></a>Classes de prise en charge de Windows
+Les classes suivantes fournissent la prise en charge pour windows :  
   
--   [\_U\_MENUorID](../atl/reference/u-menuorid-class.md) Fournit des wrappers pour **CreateWindow** et **CreateWindowEx**.  
+-   [_U_MENUorID](../atl/reference/u-menuorid-class.md) fournit des wrappers pour **CreateWindow** et **CreateWindowEx**.  
   
--   [CWindow](../atl/reference/cwindow-class.md) contient des méthodes pour manipuler une fenêtre.  `CWindow` est la classe de base pour `CWindowImpl`, `CDialogImpl` et `CContainedWindow`.  
+-   [CWindow](../atl/reference/cwindow-class.md) contient des méthodes pour manipuler une fenêtre. `CWindow` est la classe de base des classes `CWindowImpl`, `CDialogImpl` et `CContainedWindow`.  
   
--   [CWindowImpl](../atl/reference/cwindowimpl-class.md) implémente une fenêtre selon une nouvelle classe de fenêtre.  Vous pouvez également sous\-classer ou à la surclassement de la fenêtre.  
+-   [CWindowImpl](../atl/reference/cwindowimpl-class.md) implémente une fenêtre basée sur une nouvelle classe de fenêtre. Vous permet également à la sous-classe ou superclasse la fenêtre.  
   
 -   [CDialogImpl](../atl/reference/cdialogimpl-class.md) implémente une boîte de dialogue.  
   
--   [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) implémente une boîte de dialogue \(modale ou non modale\) que des contrôles ActiveX d'hôtes.  
+-   [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) implémente une boîte de dialogue (modale ou non modale) qui héberge des contrôles ActiveX.  
   
--   [CSimpleDialog](../atl/reference/csimpledialog-class.md) implémente une boîte de dialogue \(modale ou non modale\) avec la fonctionnalité de base.  
+-   [CSimpleDialog](../atl/reference/csimpledialog-class.md) implémente une boîte de dialogue (modale ou non) avec les fonctionnalités de base.  
   
--   [CAxWindow](../atl/reference/caxwindow-class.md) manipule une fenêtre qui héberge un contrôle ActiveX.  
+-   [Objet CAxWindow](../atl/reference/caxwindow-class.md) manipule une fenêtre qui héberge un contrôle ActiveX.  
   
--   [CAxWindow2T](../atl/reference/caxwindow2t-class.md) fournit des méthodes pour manipuler une fenêtre qui héberge un contrôle ActiveX et a également une prise en charge de l'hébergement des contrôles ActiveX autorisés.  
+-   [CAxWindow2T](../atl/reference/caxwindow2t-class.md) fournit des méthodes pour manipuler une fenêtre qui héberge un contrôle ActiveX et prend également en charge pour l’hébergement de contrôles ActiveX sous licence.  
   
 -   [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md) implémente une fenêtre contenue dans un autre objet.  
   
--   [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) gère les informations d'une nouvelle classe de fenêtre.  
+-   [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) gère les informations d’une nouvelle classe de fenêtre.  
   
--   Chaînage dynamique prend en charge de[CDynamicChain](../atl/reference/cdynamicchain-class.md) des tables des messages.  
+-   [CDynamicChain](../atl/reference/cdynamicchain-class.md) prend en charge le chaînage dynamique des tables des messages.  
   
--   [CMessageMap](../atl/reference/cmessagemap-class.md) permet à un objet d'exposer ses tables des messages à d'autres objets.  
+-   [CMessageMap](../atl/reference/cmessagemap-class.md) permet à un objet d’exposer son message mappe à d’autres objets.  
   
--   [CWinTraits](../atl/reference/cwintraits-class.md) fournit une méthode simple de standardiser les caractéristiques d'un objet window ATL.  
+-   [CWinTraits](../atl/reference/cwintraits-class.md) fournit une méthode simple de standardiser les traits d’un objet fenêtre ATL.  
   
--   [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) fournit des valeurs par défaut des styles de fenêtre et des styles étendus utilisés pour créer une fenêtre.  Ces valeurs sont ajoutées, à l'aide de l'opérateur OR logique, les valeurs fournies lors de la création d'une fenêtre.  
+-   [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) fournit les valeurs par défaut pour les styles de fenêtre et les styles étendus utilisés pour créer une fenêtre. Ces valeurs sont ajoutées, à l’aide de l’opérateur OR logique, les valeurs fournies lors de la création d’une fenêtre.  
   
-## Articles connexes  
- [Classes de fenêtres ATL](../atl/atl-window-classes.md)  
+## <a name="related-articles"></a>Articles connexes  
+ [ATL, classes de fenêtre](../atl/atl-window-classes.md)  
   
  [Didacticiel ATL](../atl/active-template-library-atl-tutorial.md)  
   
-## Voir aussi  
- [Class Overview](../atl/atl-class-overview.md)   
- [Message Map Macros](../atl/reference/message-map-macros-atl.md)   
- [Window Class Macros](../atl/reference/window-class-macros.md)
+## <a name="see-also"></a>Voir aussi  
+ [Vue d’ensemble de la classe](../atl/atl-class-overview.md)   
+ [Macros de mappage des messages](../atl/reference/message-map-macros-atl.md)   
+ [Macros de classe de fenêtre](../atl/reference/window-class-macros.md)
+

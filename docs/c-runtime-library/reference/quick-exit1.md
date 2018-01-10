@@ -34,11 +34,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d2ae187d0132ca53b1ffba2b26ef18fa467b9072
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fb6a8bdea6cb37bd70d6aeda490e2470aa74e999
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="quickexit"></a>quick_exit
 Provoque l’arrêt normal du programme.  
@@ -71,7 +72,7 @@ __declspec(noreturn) void quick_exit(
 |-------------|---------------------|  
 |`quick_exit`|\<process.h> ou \<stdlib.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)   

@@ -1,38 +1,41 @@
 ---
-title: "Litt&#233;ral de cha&#238;ne | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "littéraux de chaîne"
-  - "chaînes (C++), littéraux de chaîne"
+title: "Littéral de chaîne | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- string literals
+- strings [C++], string literals
 ms.assetid: 6d1fc3f8-0d58-4d68-9678-16b4f6dc4766
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dd62f85b87473d1371daf2d2fa009d8620e59b57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Litt&#233;ral de cha&#238;ne
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La gestion des littéraux de chaîne a changé entre Extensions managées pour C\+\+ et [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+# <a name="string-literal"></a>Littéral de chaîne
+La gestion des littéraux de chaîne a été modifiée à partir des Extensions managées pour C++ vers Visual C++.  
   
- Dans la conception du langage des Extensions managées pour C\+\+, un littéral de chaîne managé était indiqué en préfaçant d'un `S` le littéral de chaîne.  Par exemple :  
+ Dans les Extensions managées pour la conception du langage C++, un littéral de chaîne managé a été indiqué par en le faisant précéder le littéral de chaîne avec un `S`. Exemple :  
   
 ```  
 String *ps1 = "hello";  
 String *ps2 = S"goodbye";  
 ```  
   
- Les charges mémoire en termes de performances entre les deux initialisations s'avèrent non négligeables, comme le montre la représentation CIL suivante à partir de **ildasm**:  
+ Les performances de la charge entre les deux initialisations s’avère pour être non trivial, comme la liste CIL suivante montre la représentation au travers de **ildasm**:  
   
 ```  
 // String *ps1 = "hello";  
@@ -48,15 +51,15 @@ ldstr      "goodbye"
 stloc.0  
 ```  
   
- Cela représente une économie tout à fait intéressante en contrepartie d'un effort minime, qui consiste simplement à se rappeler \(ou à apprendre\) de préfixer une chaîne littérale avec un `S`.  Dans la nouvelle syntaxe, la gestion des littéraux de chaîne est rendue transparente et déterminée par le contexte d'utilisation.  Le `S` ne doit plus nécessairement être spécifié.  
+ Qui est une économie tout simplement mémorisation ou learning préfixer une chaîne littérale avec un `S`. Dans la nouvelle syntaxe, la gestion des littéraux de chaîne est rendue transparente, déterminé par le contexte d’utilisation. Le `S` n’a plus besoin d’être spécifiés.  
   
- Que se passe t\-il dans les cas où le compilateur doit être dirigé explicitement vers une interprétation ou une autre ?  Dans ces cas, il faut appliquer un cast explicite.  Par exemple :  
+ Concernant les cas dans lesquels nous devez explicitement demander au compilateur d’une interprétation ou une autre ? Dans ce cas, nous appliquons un cast explicite. Exemple :  
   
 ```  
 f( safe_cast<String^>("ABC") );  
 ```  
   
- De plus, le littéral de chaîne fait désormais correspondre une `String` à une simple conversion plutôt qu'à une conversion standard.  Bien que cela puisse sembler peu de choses, cela modifie la résolution des jeux de fonctions surchargés qui incluent une `String` et un `const char*` en tant que paramètres formels en concurrence.  La résolution qui jusqu'ici se résolvait en une instance `const char*` est désormais signalée comme ambiguë.  Par exemple :  
+ En outre, le littéral de chaîne correspond à présent un `String` avec une simple conversion plutôt qu’une conversion standard. Alors que cela peut ne pas semble beaucoup il modifie la résolution des jeux de fonction surchargée qui incluent un `String` et un `const char*` en tant que paramètres formels concurrents. La résolution d’une fois résolu en un `const char*` instance est désormais signalée comme ambiguë. Exemple :  
   
 ```  
 ref struct R {  
@@ -68,48 +71,48 @@ int main () {
    R r;  
    // old syntax: f( const char* );  
    // new syntax: error: ambiguous  
-   r.f("ABC");   
+   r.f("ABC");   
 }  
 ```  
   
- Pourquoi y a\-t\-il une différence ?  Puisque l'on se trouve face à plusieurs instances nommées `f` existant au sein du programme, il faut appliquer à l'appel l'algorithme de la résolution de la surcharge de la fonction.  La résolution formelle d'une fonction de surcharge implique trois étapes.  
+ Pourquoi y a-t-il une différence ? Depuis plus d’une instance nommée `f` existe dans le programme, cela nécessite l’algorithme de résolution de surcharge de fonction à appliquer à l’appel. La résolution formelle d’une fonction de surcharge implique trois étapes.  
   
-1.  La collection des fonctions candidates.  Les fonctions candidates sont des méthodes comprises dans la portée qui correspondent de façon lexicale au nom de la fonction appelée.  Par exemple, puisque `f()` est appelée à travers une instance de `R`, toutes les fonctions nommées `f` qui ne sont pas un membre de `R` \(ou de sa hiérarchie de classe de base\) ne sont pas des fonctions candidates.  Notre exemple montre deux fonctions candidates.  Ce sont les deux fonctions membres de `R` nommées `f`.  Un appel échoue au cours de cette phase si le jeu de fonctions candidates est vide.  
+1.  La collection des fonctions candidates. Les fonctions candidates sont les méthodes dans la portée lexicale correspondent au nom de la fonction appelée. Par exemple, depuis `f()` est appelée via une instance de `R`, toutes les fonctions nommées `f` qui ne sont pas un membre de `R` (ou de sa hiérarchie de classe de base) ne sont pas des fonctions candidates. Dans notre exemple, il existe deux fonctions candidates. Voici les deux fonctions membres de `R` nommé `f`. Un appel échoue au cours de cette phase si le jeu de fonctions candidates est vide.  
   
-2.  Le jeu de fonctions viables parmi les fonctions candidates.  Une fonction viable est une fonction qui peut être appelée avec les arguments spécifiés dans l'appel, connaissant le nombre et le type des arguments.  Dans notre exemple, les fonctions candidates sont également des fonctions viables.  Un appel échoue au cours de cette phase si le jeu de fonctions viables est vide.  
+2.  Le jeu de fonctions viables parmi les fonctions candidates. Une fonction viable est celle qui peut être appelée avec les arguments spécifiés dans l’appel, étant donné le nombre d’arguments et leurs types. Dans notre exemple, les deux fonctions candidates sont également des fonctions viables. Un appel échoue au cours de cette phase si le jeu de fonctions viables est vide.  
   
-3.  Sélectionnez la fonction qui constitue la meilleure correspondance avec l'appel.  Cela se fait en classant les conversions appliquées pour transformer le type des arguments en type des paramètres de fonctions viables.  Cette procédure est relativement directe dans le cas d'une fonction à un seul paramètre, mais se complique quelque peu en présence de plusieurs paramètres.  Un appel échoue lors de cette phase s'il n'existe aucune meilleure correspondance.  Autrement dit, si les conversions nécessaires pour transformer le type de l'argument réel en type du paramètre formel sont également satisfaisantes.  L'appel est signalé comme étant ambigu.  
+3.  Sélectionnez la fonction qui représente la meilleure correspondance de l’appel. Cela est fait en classant les conversions appliquées pour transformer les arguments pour le type des paramètres de fonction viable. Cela est relativement simple avec une fonction de paramètre unique ; Il devient un peu plus complexe lorsqu’il y a plusieurs paramètres. Un appel échoue au cours de cette phase si aucune correspondance n’est meilleure. Autrement dit, si les conversions nécessaires pour transformer le type de l’argument réel pour le type du paramètre formel sont également satisfaisantes. L’appel est signalé comme ambiguë.  
   
- Dans les Extensions managées, la résolution de cet appel appelait l'instance `const char*` comme étant la meilleure correspondance.  Dans la nouvelle syntaxe, les conversions nécessaires pour faire correspondre `"abc"` à `const char*` et `String^` sont désormais équivalentes, c'est\-à\-dire également correctes \- et l'appel est donc signalé comme incorrect \- autrement dit, ambigu.  
+ Dans les Extensions managées, la résolution de cet appel appelé le `const char*` instance, comme la meilleure correspondance. Dans la nouvelle syntaxe, les conversions nécessaires pour faire correspondre `"abc"` à `const char*` et `String^` sont désormais équivalents - c'est-à-dire, c'est-à-dire également correctes - et par conséquent, l’appel est signalé comme incorrect - autrement dit, ambigu.  
   
- Cela soulève deux questions :  
+ Cela nous mène à deux questions :  
   
--   Quel est le type de l'argument réel, `"abc"` ?  
+-   Quel est le type de l’argument réel, `"abc"`?  
   
--   Quel est l'algorithme servant à déterminer si une conversion de type est meilleure qu'une autre ?  
+-   Qu’est l’algorithme pour déterminer si une conversion de type est meilleure qu’une autre ?  
   
- Le type du littéral de chaîne `"abc"` est `const char[4]` \- souvenez\-vous, il y a un caractère de terminaison nul implicite à la fin de chaque littéral de chaîne.  
+ Le type de littéral de chaîne `"abc"` est `const char[4]` -n’oubliez pas, il y a un caractère de fin null implicit à la fin de chaque chaîne littéral.  
   
- L'algorithme servant à déterminer si une conversion de type est meilleure qu'une autre implique que les conversions de types possibles soient placées dans une hiérarchie.  Voici comment je comprends cette hiérarchie \- toutes ces conversions étant, bien sûr, implicites.  L'utilisation d'une notation de cast explicite substitue la hiérarchie de la même façon que les parenthèses substituent la priorité habituelle des opérateurs d'une expression.  
+ L’algorithme permettant de déterminer si une conversion de type est meilleure qu’une autre consiste à placer les conversions de types possibles dans une hiérarchie. Voici ma connaissance de cette hiérarchie - toutes ces conversions sont bien sûr, implicites. À l’aide d’une notation de cast explicite substitue la hiérarchie de la même manière parenthèses remplace la priorité habituelle des opérateurs d’une expression.  
   
-1.  Une correspondance exacte représente la meilleure solution.  Curieusement, un argument n'a pas besoin de correspondre exactement au type du paramètre pour constituer une correspondance exacte ; il suffit qu'il en soit assez proche.  Ceci est essentiel pour comprendre ce qui se passe dans cet exemple et saisir en quoi le langage a changé.  
+1.  Une correspondance exacte est préférable. Étonnamment, pour une correspondance exacte pour un argument, il est inutile de correspondre exactement au type de paramètre ; Il doit simplement être suffisamment proches. Il s’agit de la clé à comprendre ce qui se passe dans cet exemple, et la manière dont la langue a changé.  
   
-2.  Une promotion est préférable à une conversion standard.  Par exemple, promouvoir un `short int` au rang de `int` est meilleur que de convertir un `int` en un `double`.  
+2.  Une promotion est préférable à une conversion standard. Par exemple, la promotion un `short int` à un `int` est meilleure que la conversion d’un `int` dans un `double`.  
   
-3.  Une conversion standard est préférable à une conversion boxing.  Par exemple, la conversion d'un `int` en un `double` est meilleure que la conversion boxing d'un `int` en un `Object`.  
+3.  Une conversion standard est préférable à une conversion boxing. Par exemple, convertir un `int` dans un `double` est meilleure que la conversion boxing un `int` dans un `Object`.  
   
-4.  Une conversion boxing est préférable à une conversion implicite définie par l'utilisateur.  Par exemple, il est préférable d'effectuer une conversion boxing d'un `int` en un `Object` plutôt que d'appliquer un opérateur de conversion d'une classe de valeur `SmallInt`.  
+4.  Une conversion boxing est une conversion implicite définie par l’utilisateur. Par exemple, le boxing une `int` dans une `Object` est meilleure que l’application d’un opérateur de conversion d’un `SmallInt` classe value.  
   
-5.  Une conversion implicite définie par l'utilisateur est préférable à une absence totale de conversion.  Une conversion implicite définie par l'utilisateur représente la dernière chance avant l'Erreur \(en étant toutefois prévenu que la signature formelle peut contenir un tableau de paramètres ou des points de suspension à cet emplacement\).  
+5.  Une conversion implicite définie par l’utilisateur est préférable à aucune conversion du tout. Une conversion implicite définie par l’utilisateur est la dernière sortie avant l’erreur (avec l’inconvénient est que la signature formelle peut contenir un tableau de paramètres ou les points de suspension à cette position).  
   
- Ainsi, que signifie la formule selon laquelle une correspondance exacte n'est pas toujours exactement une correspondance ?  Par exemple, `const char[4]` ne correspond pas exactement à `const char*` ni à `String^` et pourtant l'ambiguïté de notre exemple concerne deux correspondances exactes en conflit \!  
+ Par conséquent, ce qui signifie dire qu’une correspondance exacte n’est pas toujours exactement une correspondance ? Par exemple, `const char[4]` ne correspond pas exactement à `const char*` ou `String^`, et pourtant l’ambiguïté de notre exemple concerne deux correspondances exactes en conflit !  
   
- En réalité, une correspondance exacte comprend plusieurs conversions ordinaires.  Sous ISO\-C\+\+, il existe quatre conversions ordinaires qui peuvent s'appliquer tout en méritant encore la qualification de correspondance exacte.  Trois d'entre elles sont connues sous le nom de transformations lvalue.  Le quatrième type est appelé conversion de qualification.  Les trois transformations lvalue sont traitées comme une meilleure correspondance exacte que celles qui nécessitent une conversion de qualification.  
+ Une correspondance exacte, il se trouve, inclut un nombre de conversions ordinaires. Il existe quatre conversions ordinaires sous ISO-C++ qui peut être appliquée et toujours être considérés comme une correspondance exacte. Trois sont appelés transformations lvalue. Un quatrième type est appelé conversion de qualification. Les trois transformations lvalue sont traitées comme une meilleure correspondance exacte que celles qui nécessitent une conversion de qualification.  
   
- Une des formes des transformations lvalue est la conversion tableau natif en pointeur.  C'est ce qu'implique la correspondance entre un `const char[4]` et `const char*`.  Par conséquent, la correspondance entre `f("abc")` et `f(const char*)` est une correspondance exacte.  Dans les premières versions de notre langage, ceci était en réalité la meilleure correspondance.  
+ Un formulaire de la transformation de lvalue est la conversion tableau natif de pointeur. C’est ce qu’implique la mise en correspondance un `const char[4]` à `const char*`. Par conséquent, la correspondance de `f("abc")` à `f(const char*)` est une correspondance exacte. Dans les premières versions de notre langage, c’était en fait la meilleure correspondance.  
   
- Pour que le compilateur signale l'appel comme ambigu, il faut donc que la conversion d'un `const char[4]` en une `String^` soit également une correspondance exacte via une conversion ordinaire.  C'est cette modification qui a été introduite dans la nouvelle version du langage.  Et c'est pourquoi l'appel est désormais signalé comme ambigu.  
+ Le compilateur signale l’appel comme ambigu, il faut donc que la conversion d’un `const char[4]` à un `String^` soit également une correspondance exacte via une conversion ordinaire. Il s’agit de la modification qui a été introduite dans la nouvelle version de langue. Et c’est pourquoi l’appel est désormais signalé comme ambiguë.  
   
-## Voir aussi  
- [Modification d'ordre général apportée au langage](../dotnet/general-language-changes-cpp-cli.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Modifications du langage général (C + c++ / CLI)](../dotnet/general-language-changes-cpp-cli.md)   
  [String](../windows/string-cpp-component-extensions.md)

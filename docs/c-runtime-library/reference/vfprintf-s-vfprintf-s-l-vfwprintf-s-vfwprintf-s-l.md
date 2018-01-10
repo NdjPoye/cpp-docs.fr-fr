@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - _vftprintf_s
 - vfwprintf_s
 - vfprintf_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - vfprintf_s_l function
 - vfwprintf_s_l function
@@ -43,30 +41,16 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vftprintf_s function
 ms.assetid: eab6f563-46e2-4806-963f-2b23f339ecdc
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 2c0c5fafe959710621de041581751c7b295fb1cc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 71cc3edcecaf9cf9717fe38705a8e3a8660efb8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vfprintfs-vfprintfsl-vfwprintfs-vfwprintfsl"></a>vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l
 Écrivez la sortie mise en forme en utilisant un pointeur désignant une liste d’arguments. Ces versions de [vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l](../../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -100,23 +84,23 @@ int _vfwprintf_s_l(
   
 #### <a name="parameters"></a>Paramètres  
  `stream`  
- Pointeur vers la structure `FILE` .  
+ Pointeur vers la structure `FILE`.  
   
  `format`  
  Spécification de format.  
   
  `argptr`  
- Pointeur vers la liste d'arguments.  
+ Pointeur vers la liste d’arguments.  
   
  `locale`  
  Paramètres régionaux à utiliser.  
   
- Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Valeur de retour  
  `vfprintf_s` et `vfwprintf_s` retournent le nombre de caractères écrits, sans le caractère Null de fin, ou une valeur négative si une erreur de sortie se produit. Si `stream` ou `format` est un pointeur Null ou si la chaîne de format contient des caractères de mise en forme non valides, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent -1 et définissent `errno` avec la valeur `EINVAL`.  
   
- Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Notes  
  Chacune de ces fonctions prend un pointeur désignant une liste d’arguments, puis met en forme et écrit les données fournies dans `stream`.  

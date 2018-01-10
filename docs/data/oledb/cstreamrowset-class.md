@@ -1,76 +1,78 @@
 ---
-title: "CStreamRowset, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CStreamRowset<TAccessor>"
-  - "ATL::CStreamRowset"
-  - "CStreamRowset"
-  - "ATL.CStreamRowset<TAccessor>"
-  - "ATL.CStreamRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStreamRowset (classe)"
+title: CStreamRowset (classe) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CStreamRowset<TAccessor>
+- ATL::CStreamRowset
+- CStreamRowset
+- ATL.CStreamRowset<TAccessor>
+- ATL.CStreamRowset
+dev_langs: C++
+helpviewer_keywords: CStreamRowset class
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 32c4aa20f805ee141918e7c073709ec33b4d29ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CStreamRowset, classe
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Utilisée dans une déclaration de `CCommand` ou de `CTable`.  
+# <a name="cstreamrowset-class"></a>CStreamRowset, classe
+Utilisé dans un `CCommand` ou `CTable` déclaration.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template <class TAccessor = CAccessorBase>  
 class CStreamRowset  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `TAccessor`  
- Un classe accesseur.  
+ Une classe d’accesseur.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Méthodes  
+### <a name="methods"></a>Méthodes  
   
 |||  
 |-|-|  
-|[CStreamRowset](../../data/oledb/cstreamrowset-cstreamrowset.md)|Constructeur.  Instancie et initialise l'objet `CStreamRowset`.|  
-|[Fermer](../../data/oledb/cstreamrowset-close.md)|Libère le pointeur d'interface de [ISequentialStream](https://msdn.microsoft.com/en-us/library/ms718035.aspx) de la classe.|  
+|[CStreamRowset](../../data/oledb/cstreamrowset-cstreamrowset.md)|Constructeur. Instancie et initialise le `CStreamRowset` objet.|  
+|[Fermer](../../data/oledb/cstreamrowset-close.md)|Versions du [ISequentialStream](https://msdn.microsoft.com/en-us/library/ms718035.aspx) pointeur d’interface dans la classe.|  
   
-## Notes  
- Utilisez `CStreamRowset` dans votre déclaration de `CCommand` ou de `CTable`, par exemple :  
+## <a name="remarks"></a>Notes  
+ Utilisez `CStreamRowset` dans votre `CCommand` ou `CTable` déclaration, par exemple :  
   
- [!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/CPP/cstreamrowset-class_1.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]  
   
  ou  
   
- [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/CPP/cstreamrowset-class_2.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]  
   
- `ICommand::Execute` retourne un pointeur de `ISequentialStream`, stocké dans `m_spStream`.  Vous pouvez alors utiliser la méthode **Lire** pour récupérer les données \(chaîne Unicode\) au format XML.  Par exemple :  
+ `ICommand::Execute`Retourne un `ISequentialStream` pointeur, qui est stocké dans `m_spStream`. Vous utilisez ensuite le **en lecture** méthode pour récupérer les données (chaîne Unicode) au format XML. Exemple :  
   
- [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/CPP/cstreamrowset-class_3.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]  
   
- SQL Server 2000 effectue la mise en forme XML et retournera toutes les colonnes et toutes les lignes du jeu de lignes en tant que chaînes XML uniques.  
+ SQL Server 2000 effectue la mise en forme XML et retourne toutes les colonnes et toutes les lignes de l’ensemble de lignes sous forme de chaîne XML.  
   
 > [!NOTE]
->  Cette fonctionnalité fonctionne avec SQL Server 2000 uniquement.  
+>  Cette fonctionnalité fonctionne uniquement avec SQL Server 2000.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
- [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

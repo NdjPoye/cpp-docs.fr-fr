@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ffbb46c562daa213d91892b09e0938d7fd629132
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6bdc8d4b372a589beb51d2f8a9bc05b1aa241c48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="link-an-executable-to-a-dll"></a>Lier un exécutable à une DLL  
   
@@ -147,7 +148,7 @@ HRESULT LoadAndCallSomeFunction(DWORD dwParam1, UINT * puParam2)
   
 Contrairement à dans cet exemple, dans la plupart des cas vous devez appeler `LoadLibrary` et `FreeLibrary` qu’une seule fois dans votre application pour une DLL donnée, en particulier si vous vous apprêtez à appeler plusieurs fonctions dans la DLL ou DLL fonctionne à plusieurs reprises.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?  
   
 -   [Utilisation de bibliothèques d’importation et de fichiers d’exportation](../build/reference/working-with-import-libraries-and-export-files.md)  
   

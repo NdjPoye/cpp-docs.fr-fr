@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fb5eaebb9ee8de01a9b2418333e2959cd5b4a21f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad7ab4e6450d33923b728f20c8a35185edd2b05e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (Créer une image corrigeable en mémoire)
 Prépare une image corrigeable en mémoire.  
@@ -36,14 +37,14 @@ Prépare une image corrigeable en mémoire.
 /hotpatch  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Lorsque **/hotpatch** est utilisé dans une compilation, le compilateur garantit que première instruction de chaque fonction est d’au moins deux octets, ce qui est nécessaire pour l’application de correctifs à chaud.  
   
  Pour terminer la préparation de création d’une image corrigeable en mémoire, une fois que vous utilisez **/hotpatch** pour compiler, vous devez utiliser [/FUNCTIONPADMIN (créer une Image corrigeable en mémoire)](../../build/reference/functionpadmin-create-hotpatchable-image.md) à lier. Lorsque vous compilez et liez une image à l’aide d’un appel de cl.exe, **/hotpatch** implique **/functionpadmin**.  
   
  Étant donné que les instructions sont toujours deux octets ou plus sur l’architecture ARM et parce que x64 compilation est toujours traitée comme si **/hotpatch** a été spécifié, vous n’êtes pas obligé de spécifier **/hotpatch** lorsque vous compilez pour ces cibles ; Toutefois, vous devez toujours le lier à l’aide de **/functionpadmin** pour créer des images corrigeables en mémoire pour eux. Le **/hotpatch** du compilateur option uniquement affecte x86 compilation.  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l’environnement de développement Visual Studio  
   
 1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
@@ -57,7 +58,7 @@ Prépare une image corrigeable en mémoire.
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## <a name="guidance"></a>Conseils  
+## <a name="guidance"></a>Aide  
  Pour plus d’informations sur la gestion des mises à jour, consultez le « Guide de sécurité pour mettre à jour de gestion » à [http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx](http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx).  
   
 ## <a name="see-also"></a>Voir aussi  

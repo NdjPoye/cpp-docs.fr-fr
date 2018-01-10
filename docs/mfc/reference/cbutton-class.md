@@ -85,11 +85,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5eb955843d2390864a7fbc2c45025dca39ce498b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e6e92efe5b5a99042426dd2e6a7594f2de46f2ce
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cbutton-class"></a>Classe de CButton
 Fournit les fonctionnalités des contrôles bouton Windows.  
@@ -146,7 +147,7 @@ class CButton : public CWnd
 |[CButton::SetState](#setstate)|Définit l’état de mise en surbrillance d’un contrôle bouton.|  
 |[CButton::SetTextMargin](#settextmargin)|Définit la marge de texte du contrôle button.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un contrôle bouton est une fenêtre enfant de petite taille, rectangulaire que vous pouvez cliquer sur et hors tension. Boutons peuvent être utilisés seul ou en groupes et peuvent soit être étiquetés ou sans texte. Un bouton change généralement apparence lorsque l’utilisateur clique dessus.  
   
  Les boutons par défaut sont la case à cocher, case d’option et bouton de commande. A `CButton` objet peut devenir un de ces éléments, conformément à la [bouton style](../../mfc/reference/styles-used-by-mfc.md#button-styles) spécifié lors de son initialisation par le [créer](#create) fonction membre.  
@@ -231,9 +232,9 @@ virtual BOOL Create(
  Spécifie l’ID. du contrôle de bouton  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro cas de réussite ; sinon, 0.  
+ Non nul en cas de réussite ; sinon 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous construisez un `CButton` objet en deux étapes. Tout d’abord, appelez le constructeur, puis **créer**, ce qui crée le contrôle de bouton Windows et l’attache à le `CButton` objet.  
   
  Si le **WS_VISIBLE** style est fourni, Windows envoie le contrôle de tous les messages qui sont requises pour activer et afficher le bouton.  
@@ -264,7 +265,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
  `lpDrawItemStruct`  
  Un pointeur long désignant un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure. La structure contient des informations sur l’élément doit être dessiné et le type de dessin nécessaire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un bouton owner-drawn a la **BS_OWNERDRAW** set de style. Remplacez cette fonction membre pour implémenter le dessin pour un owner-drawn `CButton` objet. L’application doit restaurer tous les objets interface GDI périphérique graphique sélectionnés pour le contexte d’affichage fournie dans `lpDrawItemStruct` avant le membre de la fonction s’arrête.  
   
  Consultez également le [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) valeurs de style.  
@@ -357,9 +358,9 @@ BOOL GetIdealSize(SIZE* psize);
  Pointeur vers la taille actuelle du bouton.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro cas de réussite ; sinon, 0.  
+ Non nul en cas de réussite ; sinon 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la **BCM_GETIDEALSIZE** d’un message, comme décrit dans la [boutons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section du Kit de développement Windows.  
   
 ##  <a name="getimagelist"></a>CButton::GetImageList  
@@ -374,9 +375,9 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
  Un pointeur vers la liste d’images de la `CButton` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro cas de réussite ; sinon, 0.  
+ Non nul en cas de réussite ; sinon 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la **BCM_GETIMAGELIST** d’un message, comme décrit dans la [boutons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section du Kit de développement Windows.  
   
 ##  <a name="getnote"></a>CButton::GetNote  
@@ -404,7 +405,7 @@ BOOL GetNote(
   
  Dans la seconde surcharge, `true` si cette méthode réussit ; sinon, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_COMMANDLINK` ou `BS_DEFCOMMANDLINK`.  
   
  Cette méthode envoie le [BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
@@ -419,7 +420,7 @@ UINT GetNoteLength() const;
 ### <a name="return-value"></a>Valeur de retour  
  La longueur du texte de note, en caractères Unicode 16 bits, pour le contrôle de lien de commande en cours.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_COMMANDLINK` ou `BS_DEFCOMMANDLINK`.  
   
  Cette méthode envoie le [BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
@@ -434,7 +435,7 @@ TCHAR GetSplitGlyph() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le caractère de glyphe associé avec le contrôle de bouton partagé actuel.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un glyphe est la représentation physique d’un caractère dans une police particulière. Par exemple, un contrôle bouton partagé peut être décoré avec le glyphe de la case à cocher caractère Unicode (U + 2713).  
   
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON`.  
@@ -451,7 +452,7 @@ CImageList* GetSplitImageList() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON`.  
   
  Cette méthode initialise le `mask` membre un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec le `BCSIF_IMAGE` indicateur, puis envoie la structure dans le [adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message décrit dans le SDK Windows. Retour de la fonction de message, cette méthode récupère la liste d’images à partir de la `himlGlyph` membre de la structure.  
@@ -472,7 +473,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON`.  
   
  Cette méthode envoie le [adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
@@ -493,7 +494,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON`.  
   
  Lorsque le contrôle bouton partagé est développé, il peut afficher un composant de liste déroulante par exemple un contrôle de liste ou un contrôle pager. Cette méthode récupère le rectangle englobant qui contient le composant de liste déroulante.  
@@ -510,7 +511,7 @@ UINT GetSplitStyle() const;
 ### <a name="return-value"></a>Valeur de retour  
  Combinaison de bits de styles de bouton de fractionnement. Pour plus d’informations, consultez la `uSplitStyle` membre de la [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON`.  
   
  Les styles de bouton Fractionner spécifient l’alignement, proportions et format graphique avec laquelle Windows Dessine une icône de bouton de fractionnement.  
@@ -535,7 +536,7 @@ UINT GetState() const;
 |`BST_PUSHED`|0 x 0004|Le contrôle bouton est enfoncé.|  
 |`BST_FOCUS`|0x0008|Le contrôle a le focus.|  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un contrôle de bouton avec le `BS_3STATE` ou `BS_AUTO3STATE` style de bouton crée une case à cocher qui a un État tiers qui porte l’état indéterminé. L’état indéterminé indique que la case à cocher n’est ni activé ni désactivé.  
   
 ### <a name="example"></a>Exemple  
@@ -555,10 +556,10 @@ BOOL GetTextMargin(RECT* pmargin);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la marge de texte.  
   
-### <a name="remarks"></a>Remarques  
- Valeur différente de zéro cas de réussite ; sinon, 0.  
+### <a name="remarks"></a>Notes  
+ Non nul en cas de réussite ; sinon 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la **BCM_GETTEXTMARGIN** d’un message, comme décrit dans la [boutons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section du Kit de développement Windows.  
   
 ##  <a name="setbitmap"></a>CButton::SetBitmap  
@@ -575,7 +576,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 ### <a name="return-value"></a>Valeur de retour  
  Le handle d’une image bitmap précédemment associé au bouton.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’image bitmap est automatiquement placé sur le bouton centré par défaut. Si la bitmap est trop grande pour le bouton, il apparaît découpé sur chaque côté. Vous pouvez choisir d’autres options d’alignement, notamment les suivantes :  
   
 - **BS_TOP**  
@@ -613,7 +614,7 @@ void SetButtonStyle(
  `bRedraw`  
  Spécifie si le bouton doit être redessiné. Une valeur différente de zéro redessine le bouton. Une valeur 0 ne redessine pas le bouton. Par défaut, le bouton est redessiné.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez le `GetButtonStyle` fonction membre pour récupérer le style de bouton. Le mot de poids faible du style de bouton terminé est le style de bouton spécifiques.  
   
 ### <a name="example"></a>Exemple  
@@ -636,7 +637,7 @@ void SetCheck(int nCheck);
 |**BST_CHECKED**|Définir l’état activé.|  
 |**BST_INDETERMINATE**|La valeur l’état indéterminé. Cette valeur peut être utilisée uniquement si le bouton a la **BS_3STATE** ou **BS_AUTO3STATE** style.|  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il n’y a aucun effet sur un bouton de commande pour cette fonction membre.  
   
 ### <a name="example"></a>Exemple  
@@ -656,7 +657,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
 ### <a name="return-value"></a>Valeur de retour  
  Le handle d’un curseur précédemment associé au bouton.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le curseur est automatiquement placé sur le bouton centré par défaut. Si le curseur est trop grand pour le bouton, il apparaît découpé sur chaque côté. Vous pouvez choisir d’autres options d’alignement, notamment les suivantes :  
   
 - **BS_TOP**  
@@ -692,7 +693,7 @@ BOOL SetDropDownState(BOOL fDropDown);
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un contrôle bouton partagé a un style de `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON` et se compose d’un bouton et une flèche de déroulement située à sa droite. Pour plus d’informations, consultez [les Styles de bouton](http://msdn.microsoft.com/library/windows/desktop/bb775951). En règle générale, l’état de la liste déroulante est définie lorsque l’utilisateur clique sur la flèche déroulante. Utilisez cette méthode pour définir par programme l’état de la liste déroulante du contrôle. La flèche de déroulement est dessinée grisée pour indiquer l’état.  
   
  Cette méthode envoie le [BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
@@ -723,8 +724,8 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
- Si un contrôle de lien de bouton ou la commande requiert l’autorisation de sécurité avec élévation de privilèges pour exécuter une action, la valeur du contrôle `elevation required` état. Par la suite, Windows affiche l’icône de bouclier du contrôle de compte d’utilisateur (UAC) sur le contrôle. Pour plus d’informations, consultez « Contrôle de compte d’utilisateur » à [MSDN](http://go.microsoft.com/fwlink/linkid=18507).  
+### <a name="remarks"></a>Notes  
+ Si un contrôle de lien de bouton ou la commande requiert l’autorisation de sécurité avec élévation de privilèges pour exécuter une action, la valeur du contrôle `elevation required` état. Par la suite, Windows affiche l’icône de bouclier du contrôle de compte d’utilisateur (UAC) sur le contrôle. Pour plus d’informations, consultez « Contrôle de compte d’utilisateur » à [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).  
   
  Cette méthode envoie le [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
@@ -742,7 +743,7 @@ HICON SetIcon(HICON hIcon);
 ### <a name="return-value"></a>Valeur de retour  
  Le handle d’une icône précédemment associé au bouton.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’icône sera automatiquement placé sur le bouton centré par défaut. Si l’icône est trop grande pour le bouton, il apparaît découpé sur chaque côté. Vous pouvez choisir d’autres options d’alignement, notamment les suivantes :  
   
 - **BS_TOP**  
@@ -776,7 +777,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la **BCM_SETIMAGELIST** d’un message, comme décrit dans la [boutons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section du Kit de développement Windows.  
   
 ##  <a name="setnote"></a>CButton::SetNote  
@@ -795,7 +796,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_COMMANDLINK` ou `BS_DEFCOMMANDLINK`.  
   
  Cette méthode envoie le [BCM_SETNOTE détermine](http://msdn.microsoft.com/library/windows/desktop/bb775977) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
@@ -826,7 +827,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles qui ont le style de bouton `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON`.  
   
  Un glyphe est la représentation physique d’un caractère dans une police particulière. Le `chGlyph` paramètre n’est pas utilisé en tant que le glyphe, mais au lieu de cela permet de sélectionner un glyphe à partir d’un jeu de glyphes de définies par le système. Le glyphe de flèche de déroulement située par défaut est spécifié par un caractère '6' et ressemble à caractère Unicode TRIANGLE pointant noir vers le bas (U + 25BC).  
@@ -849,7 +850,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON`.  
   
  Cette méthode initialise le `mask` membre un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec le `BCSIF_IMAGE` indicateur et le `himlGlyph` membre avec le `pSplitImageList` paramètre, puis envoie la structure dans le [ Adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message qui est décrit dans le Kit de développement logiciel Windows.  
@@ -870,7 +871,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON`.  
   
  Cette méthode envoie le [BCM_SETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775981) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
@@ -901,7 +902,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON`.  
   
  Lorsque le contrôle bouton partagé est développé, il peut afficher un composant de liste déroulante par exemple un contrôle de liste ou un contrôle pager. Cette méthode spécifie la taille du rectangle englobant qui contient le composant de liste déroulante.  
@@ -934,7 +935,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON`.  
   
  Les styles de bouton Fractionner spécifient l’alignement, proportions et format graphique avec laquelle Windows Dessine une icône de bouton de fractionnement. Pour plus d’informations, consultez la `uSplitStyle` membre de la [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure.  
@@ -962,7 +963,7 @@ void SetState(BOOL bHighlight);
  *bHighlight*  
  Spécifie si le bouton doit être mis en surbrillance. Une valeur différente de zéro met en surbrillance le bouton ; la valeur 0 supprime toute la mise en surbrillance.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Mise en surbrillance affecte à l’extérieur d’un contrôle bouton. Il n’a aucun effet sur la vérification de l’état d’une case d’option ou une case à cocher.  
   
  Un contrôle bouton est automatiquement mis en surbrillance lorsque l’utilisateur clique et maintient le bouton gauche de la souris. La mise en surbrillance est supprimé lorsque l’utilisateur relâche le bouton de la souris.  
@@ -984,7 +985,7 @@ BOOL SetTextMargin(RECT* pmargin);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la **BCM_SETTEXTMARGIN** d’un message, comme décrit dans la [boutons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section du Kit de développement Windows.  
   
 ## <a name="see-also"></a>Voir aussi  

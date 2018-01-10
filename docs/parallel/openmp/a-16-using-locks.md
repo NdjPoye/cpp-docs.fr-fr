@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 870895dae8aa6fe4b3720b9319359672fcb576af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 612abe97de27b179f710b2b09811535829885c5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a16---using-locks"></a>A.16   Utilisation des verrous
 Dans l’exemple suivant, (pour [Section 3.2](../../parallel/openmp/3-2-lock-functions.md) page 41) Notez que l’argument pour les fonctions de verrouillage doit avoir type `omp_lock_t`, et qu’il n’est pas nécessaire de le videz.  Les fonctions de verrouillage entraînent les threads est inactive pendant l’attente de l’entrée à la première section critique, mais pour effectuer d’autres tâches pendant l’attente de l’entrée à la seconde.  Le `omp_set_lock` blocs de fonction, mais la `omp_test_lock` (fonction) ne pas autoriser le travail dans skip() à faire.  

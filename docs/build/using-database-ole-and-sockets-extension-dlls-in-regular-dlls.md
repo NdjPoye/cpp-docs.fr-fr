@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5fda176229d8f6bea5a586c6f6f538a40d7ed8a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0042dd5dc6049447868cf5ca5ea1112b3695f3a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>À l’aide de la base de données, OLE et Sockets MFC DLL d’extension dans la DLL régulière MFC
 Lors de l’utilisation d’une DLL à partir d’une DLL régulière MFC d’extension MFC si l’extension MFC DLL n’est pas raccordée à la **CDynLinkLibrary** chaîne de l’objet de la DLL régulière MFC, vous pouvez rencontrer un ou plusieurs des problèmes connexes. Étant donné que les versions debug de la base de données MFC, OLE et Sockets prennent en charge DLL sont implémentés en tant que DLL d’extension MFC, vous pouvez voir des problèmes similaires si vous utilisez ces MFC fonctionnalités, même si vous n’utilisez pas explicitement l’une de vos propres DLL d’extension MFC. Certains problèmes sont :  
@@ -136,13 +137,13 @@ BOOL CYourRegularDLL::InitInstance()
 }  
 ```  
   
-### <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?  
+### <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?  
   
 -   [Initialiser une DLL d’extension MFC](../build/run-time-library-behavior.md#initializing-extension-dlls)  
   
 -   [Initialiser des DLL régulière MFC](../build/run-time-library-behavior.md#initializing-regular-dlls)  
   
-### <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?  
+### <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?  
   
 -   [DLL d’extension de MFC](../build/extension-dlls.md)  
   

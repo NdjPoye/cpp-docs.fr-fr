@@ -47,17 +47,18 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c7d976606d292cbe7cd7ce8e8c24e20d0dfa688
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dcd45f8ccd7147fae7036c88477722b77f150193
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
 Obtient la longueur et détermine la validité d’un caractère multioctet.  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -92,12 +93,12 @@ int _mblen_l(
 ## <a name="return-value"></a>Valeur de retour  
  `_mbclen` retourne 1 ou 2, selon que la longueur du caractère multioctet `c` est de 1 ou 2 octets. Aucune erreur n’est retournée pour `_mbclen`. Si `mbstr` n’a pas la valeur `NULL`, `mblen` retourne la longueur, en octets, du caractère multioctet. Si `mbstr` a la valeur `NULL` ou désigne le caractère Null large, `mblen` retourne 0. Si l’objet qui `mbstr` pointe vers ne forment pas un caractère multioctet valide dans le premier `count` caractères, `mblen` retourne -1.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction `_mbclen` retourne la longueur, en octets, du caractère multioctet `c`. Si `c` ne pointe pas vers l’octet de tête d’un caractère multioctet comme déterminé par un appel implicite à `_ismbblead`, le résultat de `_mbclen` est imprévisible.  
   
  `mblen` retourne la longueur en octets de `mbstr` s’il s’agit d’un caractère multioctet valide et détermine la validité des caractères multioctets associée à la page de codes. `mblen` examine `count` octets (ou moins) contenus dans `mbstr`, mais pas plus de `MB_CUR_MAX`.  
   
- La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe `_l` utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe `_l` utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
@@ -113,7 +114,7 @@ int _mblen_l(
 |`mblen`|\<stdlib.h>|  
 |`_mblen_l`|\<stdlib.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

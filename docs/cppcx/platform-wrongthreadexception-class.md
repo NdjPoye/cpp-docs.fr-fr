@@ -1,47 +1,49 @@
 ---
-title: "Platform::WrongThreadException, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::WrongThreadException"
-  - "Platform/Platform::WrongThreadException::WrongThreadException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::WrongThreadException"
+title: Platform::wrongthreadexception, classe | Documents Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCCORLIB/Platform::WrongThreadException
+- VCCORLIB/Platform::WrongThreadException::WrongThreadException
+dev_langs: C++
+helpviewer_keywords: Platform::WrongThreadException
 ms.assetid: c193f97e-0392-4535-a4c4-0711e4e4a836
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d71c8b5c7f6c90dc0193626e57b736a549be87e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::WrongThreadException, classe
+# <a name="platformwrongthreadexception-class"></a>Platform::WrongThreadException, classe
 Levée lorsqu'un thread effectue un appel via un pointeur d'interface qui concerne un objet proxy qui n'appartient pas à l'apartment du thread.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
 public ref class WrongThreadException : COMException,    IException,    IPrintable,    IEquatable  
 ```  
   
-## Notes  
+### <a name="remarks"></a>Notes  
  Pour plus d'informations, consultez l'exception [COMException](../cppcx/platform-comexception-class.md).  
   
-## Configuration requise  
- **Client minimum pris en charge :** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>Spécifications  
+ **Minimum pris en charge le client :** Windows 8  
   
- **Serveur minimum pris en charge :** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Minimum de serveur pris en charge :** Windows Server 2012  
   
- **Espace de noms :** Platform  
+ **Espace de noms :** Platform  
   
- **Métadonnées :** platform.winmd  
+ **Métadonnées :** platform.winmd  
   
-## Voir aussi  
- [Platform::COMException \(classe\)](../cppcx/platform-comexception-class.md)
+## <a name="see-also"></a>Voir aussi  
+ [Platform::COMException, classe](../cppcx/platform-comexception-class.md)

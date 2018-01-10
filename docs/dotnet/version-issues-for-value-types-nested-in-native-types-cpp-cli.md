@@ -1,35 +1,37 @@
 ---
-title: "Probl&#232;mes de version pour les types valeur imbriqu&#233;s dans les types natifs (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_nogc (déclarations de type)"
-  - "__value (mot clé), problèmes lors de l'imbrication"
+title: "Problèmes de version pour les Types valeur imbriqués dans les Types natifs (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __nogc type declarations
+- __value keyword, issues when nesting
 ms.assetid: 0a3b1a43-39c6-4b52-be2f-1074690188aa
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 29a5eb3a085682f243f1497e56b12a0b7d760edb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Probl&#232;mes de version pour les types valeur imbriqu&#233;s dans les types natifs (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Considérez un composant d'assembly signé \(nom fort\) utilisé pour générer un assembly client.  Le composant contient un type valeur utilisé dans le client en tant que type d'un membre d'une union native, une classe ou un tableau.  Si une version future du composant modifie la taille ou la présentation du type valeur, le client devra être recompilé.  
+# <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>Problèmes de version pour les types valeur imbriqués dans les types natifs (C++/CLI)
+Envisagez d’un composant d’assembly signé (nom fort) utilisé pour générer un assembly client. Le composant contient un type valeur qui est utilisé dans le client en tant que le type d’un membre d’une union native, une classe ou un tableau. Si une version future du composant modifie la taille ou la disposition du type valeur, le client doit être recompilé.  
   
- Créez un keyfile avec [sn.exe](../Topic/Sn.exe%20\(Strong%20Name%20Tool\).md) \(`sn -k mykey.snk`\).  
+ Créez un fichier de clé avec [sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) (`sn -k mykey.snk`).  
   
-## Exemple  
- L'exemple suivant est le composant.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant est le composant.  
   
 ```  
 // nested_value_types.cpp  
@@ -46,8 +48,8 @@ public value struct S {
 };  
 ```  
   
-## Exemple  
- Voici l'exemple client :  
+## <a name="example"></a>Exemple  
+ Cet exemple est le client :  
   
 ```  
 // nested_value_types_2.cpp  
@@ -72,7 +74,7 @@ int main() {
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 S.i = 5  
@@ -81,8 +83,8 @@ S.i = 10
 S.i = 11  
 ```  
   
-### Commentaires  
- Toutefois, si vous ajoutez un autre membre à `struct S` dans nested\_value\_types.cpp, \(par exemple, `double d;`\) et si vous recompilez le composant sans recompiler le client, le résultat est une exception non gérée \(de type <xref:System.IO.FileLoadException?displayProperty=fullName>\).  
+### <a name="comments"></a>Commentaires  
+ Toutefois, si vous ajoutez un autre membre `struct S` dans nested_value_types.cpp, (par exemple, `double d;`) et recompilez le composant sans avoir à recompiler le client, le résultat est une exception non gérée (de type <xref:System.IO.FileLoadException?displayProperty=fullName>).  
   
-## Voir aussi  
- [Types managés](../dotnet/managed-types-cpp-cli.md)
+## <a name="see-also"></a>Voir aussi  
+ [Types managés (C++-CLI)](../dotnet/managed-types-cpp-cli.md)

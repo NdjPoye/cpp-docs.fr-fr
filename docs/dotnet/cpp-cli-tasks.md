@@ -13,11 +13,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b8fef15944f2733c4626e02cd1bc8b4421b8031
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0ffc10015f3f4bc396b3658ba4fb53aaa15d7254
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccli-tasks"></a>Tâches C++/CLI
 Les articles de cette section de la documentation indiquent comment utiliser les diverses fonctionnalités du langage c++ / CLI.  

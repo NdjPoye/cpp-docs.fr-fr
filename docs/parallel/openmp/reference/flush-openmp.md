@@ -4,44 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- Flush
-dev_langs:
-- C++
-helpviewer_keywords:
-- flush OpenMP directive
+f1_keywords: Flush
+dev_langs: C++
+helpviewer_keywords: flush OpenMP directive
 ms.assetid: 150ca46e-d4f7-4423-b0a4-838df40aeb67
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 30a713da7c1096043b3e48db2453b647717cb163
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 72b69daf431ab9dfd2b5c2ed7cebdc8c5af75847
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="flush-openmp"></a>flush (OpenMP)
-Spécifie que tous les threads ont la même vue de mémoire pour tous les objets partagés.  
+Spécifie que tous les threads ont la même vue de la mémoire pour tous les objets partagés.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,7 +38,7 @@ Spécifie que tous les threads ont la même vue de mémoire pour tous les objets
  Une liste séparée par des virgules de variables qui représentent des objets que vous souhaitez synchroniser. Si `var` n’est pas spécifié, toute la mémoire est vidée.  
   
 ## <a name="remarks"></a>Notes  
- Le **vider** directive prend en charge aucune clause OpenMP.  
+ Le **vider** directive prend en charge aucune clauses OpenMP.  
   
  Pour plus d’informations, consultez [2.6.5 Directive flush](../../../parallel/openmp/2-6-5-flush-directive.md).  
   

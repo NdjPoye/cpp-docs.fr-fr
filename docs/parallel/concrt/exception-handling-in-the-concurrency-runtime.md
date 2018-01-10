@@ -19,11 +19,12 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a2820daea9508145a200fc5dfd82098ac2572b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 72cde17c0bcb6a3582305167e6358f761c16f248
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Gestion des exceptions dans le runtime d’accès concurrentiel
 Le Runtime d’accès concurrentiel utilise des exceptions C++ pour communiquer de nombreux types d’erreurs. Ces erreurs incluent l’utilisation non valide du runtime, les erreurs d’exécution tel que l’échec d’acquisition d’une ressource et les erreurs qui se produisent dans les fonctions de travail que vous fournissez à des tâches et des groupes de tâches. Lorsqu’une tâche ou un groupe de tâches lève une exception, le runtime conserve cette exception et la marshale au contexte qui attend que la tâche ou le groupe de tâches se termine. Pour les composants tels que les tâches légères et des agents, le runtime ne gère pas les exceptions pour vous. Dans ce cas, vous devez implémenter votre propre mécanisme de gestion des exceptions. Cette rubrique décrit comment le runtime gère les exceptions levées par des tâches, des groupes de tâches, des tâches légères et des agents asynchrones et comment répondre aux exceptions dans vos applications.  

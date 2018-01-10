@@ -24,11 +24,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad2da0f4f8807bef5899a32eabda931092641260
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7dece9ac4045fa8b46e5edf8b266312242000229
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Opérateurs de décalage vers la gauche et droit (&gt; &gt; et &lt; &lt;)
 Les opérateurs de décalage de bits sont l’opérateur de décalage vers la droite (>>), qui déplace les bits de *expression-décalage* vers la droite et l’opérateur de décalage vers la gauche (<<), qui déplace les bits de *expression-décalage* à gauche. <sup>1</sup>  
@@ -38,7 +39,7 @@ Les opérateurs de décalage de bits sont l’opérateur de décalage vers la dr
 > *expression-décalage* `<<` *additive-expression*  
 > *expression-décalage* `>>` *additive-expression*  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 > [!IMPORTANT]
 > Les descriptions et les exemples suivants ne sont pas valides sur les architectures Windows pour x86 et x64. L'implémentation des opérateurs de décalage vers la droite et vers la gauche est très différente sur les appareils Windows RT pour ARM. Pour plus d’informations, consultez la section « Opérateurs de décalage » de la [Hello ARM](http://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) billet de blog.  

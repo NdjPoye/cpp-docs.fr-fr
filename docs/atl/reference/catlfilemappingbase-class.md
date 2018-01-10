@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3b4079889437af94fb5674411e140faa0ddcd403
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4b5e0dd90894e052d4b9bcff08e7e12234dde8f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlfilemappingbase-class"></a>Classe de CAtlFileMappingBase
 Cette classe représente un fichier mappé en mémoire.  
@@ -53,7 +54,7 @@ class CAtlFileMappingBase
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|Constructeur.|  
 |[CAtlFileMappingBase :: ~ CAtlFileMappingBase](#dtor)|Destructeur.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Méthodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -72,7 +73,7 @@ class CAtlFileMappingBase
 |----------|-----------------|  
 |[CAtlFileMappingBase::operator =](#operator_eq)|Définit l’objet de mappage de fichier actuel dans un autre objet de mappage de fichier.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le mappage de fichier est l’association du contenu d’un fichier avec une partie de l’espace d’adressage virtuel d’un processus. Cette classe fournit des méthodes pour la création d’objets de mappage de fichier qui autorise les programmes d’accéder facilement et partager des données.  
   
  Pour plus d’informations, consultez [mappage de fichier](http://msdn.microsoft.com/library/windows/desktop/aa366556) dans le Kit de développement logiciel Windows.  
@@ -92,7 +93,7 @@ CAtlFileMappingBase() throw();
  `orig`  
  L’objet de mappage de fichier d’origine à copier pour créer le nouvel objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Crée un nouvel objet de mappage de fichier, si vous le souhaitez à l’aide d’un objet existant. Il est toujours nécessaire d’appeler [CAtlFileMappingBase::MapFile](#mapfile) à ouvrir ou créer l’objet de mappage de fichier pour un fichier particulier.  
   
 ### <a name="example"></a>Exemple  
@@ -105,7 +106,7 @@ CAtlFileMappingBase() throw();
 ~CAtlFileMappingBase() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère les ressources allouées par la classe et les appels de la [CAtlFileMappingBase::Unmap](#unmap) (méthode).  
   
 ##  <a name="copyfrom"></a>CAtlFileMappingBase::CopyFrom  
@@ -186,7 +187,7 @@ HRESULT MapFile(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Après avoir créé un objet de mappage de fichier, la taille du fichier ne doit pas dépasser la taille de l’objet de mappage de fichier. Si c’est le cas, pas tous le contenu du fichier sera disponible pour le partage. Pour plus d’informations, consultez [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) et [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -227,7 +228,7 @@ HRESULT MapSharedMem(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  **MapShareMem** permet à un objet de mappage de fichier existant, créé par [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537), pour être partagées entre les processus.  
   
 ##  <a name="openmapping"></a>CAtlFileMappingBase::OpenMapping  
@@ -257,7 +258,7 @@ HRESULT OpenMapping(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans les versions debug, une erreur d’assertion se produira si les paramètres d’entrée ne sont pas valides.  
   
 ##  <a name="operator_eq"></a>CAtlFileMappingBase::operator =  
@@ -284,7 +285,7 @@ HRESULT Unmap() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [UnmapViewOfFile](http://msdn.microsoft.com/library/windows/desktop/aa366882) dans le SDK Windows pour plus de détails.  
   
 ## <a name="see-also"></a>Voir aussi  

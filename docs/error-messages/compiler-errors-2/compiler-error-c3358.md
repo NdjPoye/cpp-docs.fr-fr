@@ -15,18 +15,19 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0a4e062fd21577836ae1b56d2d0e277b162d9451
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 87e2cc7f1467c861f85db9e55dd99888f5cd5f60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3358"></a>Erreur du compilateur C3358
-'symbole' : symbole introuvable  
+'symbole' : symbole introuvable  
   
  Le symbole nécessaire est introuvable.  
   
- L’exemple suivant génère l’erreur C3358 :  
+ L’exemple suivant génère l’erreur C3358 :  
   
 ```  
 // C3358.cpp  

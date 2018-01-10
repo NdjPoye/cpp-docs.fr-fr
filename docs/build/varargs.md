@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8492610721846e8252cbe71b358e428a2aaf024f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f3d22a5c3f20480d1e904ec8e087114385ba7ee9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="varargs"></a>Varargs
 Si des paramètres sont passés via varargs (par exemple, les arguments de points de suspension), essentiellement le passage de paramètres normal s’applique notamment déversement les arguments de la cinquième et ultérieures. Il incombe à nouveau l’appelé aux arguments de vidage qui ont leur adresse. Pour les valeurs à virgule flottante, l’entier et le Registre à virgule flottante contiendra la valeur float si l’appelé attend la valeur dans les registres d’entiers.  

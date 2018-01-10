@@ -1,51 +1,53 @@
 ---
-title: "Arranging Push Buttons Along the Right or Bottom of a Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], positioning"
-  - "Arrange Buttons command"
-  - "buttons, arranging push buttons in dialog boxes"
-  - "push buttons"
+title: "Organisation de boutons à droite ou en bas de boîte de dialogue | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], positioning
+- Arrange Buttons command
+- buttons, arranging push buttons in dialog boxes
+- push buttons
 ms.assetid: 2e855cbf-90f8-4ff0-9511-508cf78e2cd5
-caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a8bec8f1f8772693b82523d01d0e14db12665be0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Arranging Push Buttons Along the Right or Bottom of a Dialog Box
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Pour organiser les boutons de commande le long du bord droit ou du bord inférieur d'une boîte de dialogue  
+# <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Organisation de boutons de commande à droite ou en bas d'une boîte de dialogue
+### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Pour réorganiser les boutons de commande à droite ou en bas de boîte de dialogue  
   
 1.  Sélectionnez un ou plusieurs boutons de commande.  
   
-2.  Dans le menu **Format**, cliquez sur **Réorganiser les boutons**, puis choisissez l'une des options suivantes :  
+2.  À partir de la **Format** menu, choisissez **réorganiser les boutons**, puis sélectionnez une des options suivantes :  
   
-    -   **Droite** : aligne les boutons de commande le long du bord droit de la boîte de dialogue.  
+    -   **Droit**: aligne les boutons de commande le long du bord droit de la boîte de dialogue.  
   
-    -   **Bas** : aligne les boutons de commande le long du bord inférieur de la boîte de dialogue.  
+    -   **Bas**: aligne les boutons de commande le long du bord inférieur de la boîte de dialogue.  
   
-         Si vous sélectionnez un contrôle autre qu'un bouton de commande, sa position n'est pas modifiée.  
+         Si vous sélectionnez un contrôle autre qu’un bouton de commande, sa position n’est pas affectée.  
   
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l'ajout de fichiers de ressources aux projets managés, l'accès aux ressources, l'affichage de ressources statiques et l'assignation de chaînes de ressources aux propriétés, et ce manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/fr-fr/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Configuration requise**  
+ **Spécifications**  
   
  Win32  
   
-## Voir aussi  
- [Arrangement of Controls on Dialog Boxes](../mfc/arrangement-of-controls-on-dialog-boxes.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Organisation des contrôles dans les boîtes de dialogue](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)   
  [Contrôles](../mfc/controls-mfc.md)
+

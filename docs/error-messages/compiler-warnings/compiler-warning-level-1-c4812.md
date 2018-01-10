@@ -15,18 +15,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a7dff9fec76cfc000216335840058241e11dfab3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17232fa4419044ae8138ceefd72883149db78d6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="compiler-warning-level-1-c4812"></a>Avertissement du compilateur (niveau 1) C4812
-style de déclaration obsolète : utilisez 'nouvelle_syntaxe' à la place  
+# <a name="compiler-warning-level-1-c4812"></a>Avertissement du compilateur (niveau 1) C4812
+style de déclaration obsolète : utilisez 'nouvelle_syntaxe' à la place  
   
- Dans la version actuelle de Visual C++, la spécialisation du constructeur explicite est toujours prise en charge, mais elle ne le sera peut être plus dans les versions ultérieures.  
+ Dans la version actuelle de Visual C++, la spécialisation du constructeur explicite est toujours prise en charge, mais elle ne le sera peut être plus dans les versions ultérieures.  
   
- L’exemple suivant génère l’erreur C4812 :  
+ L’exemple suivant génère l’erreur C4812 :  
   
 ```  
 // C4812.cpp  

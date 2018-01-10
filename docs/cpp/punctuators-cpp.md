@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 27d5f36587c85d72de1eb5588c2f618e1ef5ceb4
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 46ebf6e98b9c9d6521174cd35c9754cff7d9d609
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="punctuators-c"></a>Signes de ponctuation (C++)
 Les signes de ponctuation en langage C++ ont une signification syntaxique et sémantique pour le compilateur mais ne spécifient pas d'eux-mêmes une opération qui produit une valeur. Certains signes de ponctuation, seuls ou combinés, peuvent également être des opérateurs C++ ou être significatifs pour le préprocesseur.  

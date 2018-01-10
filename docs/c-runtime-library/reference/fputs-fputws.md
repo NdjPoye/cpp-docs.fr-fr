@@ -39,11 +39,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5d3d9a9225a3b6bc0dafd8804f62c61a94acb43c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4fcfe29abceb102534cd376c563917f3804d6df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fputs-fputws"></a>fputs, fputws
 Écrit une chaîne dans un flux.  
@@ -66,12 +67,12 @@ int fputws(
  Chaîne de sortie.  
   
  `stream`  
- Pointeur vers la structure `FILE` .  
+ Pointeur vers la structure `FILE`.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Chacune de ces fonctions retourne une valeur non négative si l’opération réussit. En cas d’erreur, `fputs` et `fputws` retournent `EOF`. Si `str` ou `stream` est un pointeur null, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent `errno` sur `EINVAL`, puis `fputs` retourne `EOF`, tandis que `fputws` retourne `WEOF`.  
   
- Consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d’informations sur ces éléments et autres codes d’erreur.  
+ Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Notes  
  Chacune de ces fonctions copie `str` vers la sortie `stream` à la position actuelle. `fputws` copie l’argument à caractères larges `str` vers `stream` en tant que chaîne de caractères multioctets ou que chaîne à caractères larges selon que `stream` est ouvert en mode texte ou binaire, respectivement. Aucune fonction ne copie le caractère Null de fin.  
@@ -91,7 +92,7 @@ int fputws(
 |`fputs`|\<stdio.h>|  
 |`fputws`|\<stdio.h> ou \<wchar.h>|  
   
- La console n'est pas prise en charge dans les applications [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] . Les handles de flux standard associés à la console (`stdin`, `stdout` et `stderr`) doivent être redirigés pour que les fonctions Runtime C puissent les utiliser dans les applications du [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ La console n'est pas prise en charge dans les applications [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] . Les handles de flux standard associés à la console (`stdin`, `stdout` et `stderr`) doivent être redirigés pour que les fonctions Runtime C puissent les utiliser dans les applications du [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d18124646f4d4fcb02246234bf74b5870246e7e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 87774f0237eb42c4bd2f97185230b3c869688ca8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dual-interfaces-and-events"></a>Interfaces doubles et événements
 Bien qu’il soit possible de concevoir une interface d’événement comme un double, il existe de nombreuses raisons d’une bonne conception ne pas à le faire. La raison fondamentale est que la source de l’événement se déclenche uniquement l’événement via la vtable ou `Invoke`, mais pas les deux. Si la source d’événement déclenche l’événement comme un appel de méthode vtable direct, le `IDispatch` méthodes ne seront jamais utilisées et il est clair que l’interface doit être une interface vtable pure. Si la source d’événement déclenche l’événement comme un appel à `Invoke`, les méthodes vtable ne seront jamais utilisées et il est clair que l’interface doit être une dispinterface. Si vous définissez vos interfaces d’événements comme duals, vous devez exiger que les clients implémentent une partie d’une interface qui ne sera jamais utilisée.  

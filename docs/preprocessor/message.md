@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3b62961ebd1327e8f8a844482b1490b21b4e9c34
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad91fdc0fb024fe87c2096f91962f715c0835262
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message"></a>message
 Envoie un littéral de chaîne à la sortie standard sans mettre fin à la compilation.  
@@ -35,7 +36,7 @@ Envoie un littéral de chaîne à la sortie standard sans mettre fin à la compi
 #pragma message( messagestring )  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  En règle générale le **message** pragma consiste à afficher des messages d’information au moment de la compilation.  
   
  Le *messagestring* paramètre peut être une macro qui se développe en un littéral de chaîne, et vous pouvez concaténer ces macros avec des littéraux de chaîne de n’importe quelle combinaison.  

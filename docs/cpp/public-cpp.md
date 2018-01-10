@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dc137060a5d8009c3eb316ac6983794546ff3650
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0ff41d2b12f43deabd82538a3e2fb10eb35ead16
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="public-c"></a>public (C++)
 ## <a name="syntax"></a>Syntaxe  
@@ -30,7 +31,7 @@ public:
 public base-class  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Lorsqu’il précède une liste de membres de classe, le **public** mot clé indique que ces membres sont accessibles à partir de n’importe quelle fonction. Cela s'applique à tous les membres déclarés jusqu'au spécificateur d'accès suivant de la classe.  
   
  En faisant précéder le nom de classe de base, le **public** mot clé spécifie que les membres publics et protégés de la classe de base sont publics et les membres protégés, respectivement, de la classe dérivée.  

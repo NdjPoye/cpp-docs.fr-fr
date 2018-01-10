@@ -28,11 +28,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ecc87bf670f56a2f56246cf45d2819b7ab7841f7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cda4598f5d5b0e5b3dbca265066c8366cfd6d67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomenumimpl-class"></a>Classe de CComEnumImpl
 Cette classe fournit l’implémentation pour une interface d’énumérateur COM où les éléments en cours d’énumération sont stockées dans un tableau.  
@@ -67,7 +68,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 |[CComEnumImpl::CComEnumImpl](#ccomenumimpl)|Constructeur.|  
 |[CComEnumImpl :: ~ CComEnumImpl](#dtor)|Destructeur.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Méthodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -87,7 +88,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 |[CComEnumImpl::m_iter](#m_iter)|Pointeur vers l’élément actuel dans le tableau.|  
 |[CComEnumImpl::m_spUnk](#m_spunk)|Le **IUnknown** pointeur de l’objet en fournissant la collection énumérée.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CComEnumImpl`fournit l’implémentation pour une interface d’énumérateur COM où les éléments en cours d’énumération sont stockées dans un tableau. Cette classe est analogue à la `IEnumOnSTLImpl` (classe), qui fournit une implémentation d’une interface d’énumérateur basé sur un conteneur de bibliothèque C++ Standard.  
   
 > [!NOTE]
@@ -148,7 +149,7 @@ HRESULT Init(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette méthode uniquement une fois, initialiser l’énumérateur, l’utiliser, puis jeter.  
   
  Si vous passez des pointeurs à des éléments dans un tableau dans un autre objet (et vous ne demandez pas à l’énumérateur pour copier les données), vous pouvez utiliser la *pUnk* paramètre pour garantir que l’objet et le tableau, sa valeur est aussi longtemps que l’énumérateur en a besoin. L’énumérateur conserve simplement une référence COM sur l’objet pour conserver actif. La référence COM est automatiquement libérée lorsque l’énumérateur est détruit.  
@@ -187,7 +188,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Notez que les énumérateurs clonés jamais leurs propre copie (ou prendre possession) des données utilisées par l’énumérateur d’origine. Si nécessaire, les énumérateurs clonés conservera l’énumérateur d’origine actif (à l’aide d’une référence COM) pour vous assurer que les données sont disponibles pour autant que nécessaire.  
   
 ##  <a name="m_spunk"></a>CComEnumImpl::m_spUnk  
@@ -269,7 +270,7 @@ STDMETHOD(Skip)(ULONG celt);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Retourne E_INVALIDARG si `celt` est égal à zéro, retourne S_FALSE est inférieure à `celt` les éléments sont retournés, sinon, retourne S_OK.  
   
 ## <a name="see-also"></a>Voir aussi  

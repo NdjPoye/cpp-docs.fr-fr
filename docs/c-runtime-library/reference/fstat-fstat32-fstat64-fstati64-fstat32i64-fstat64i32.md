@@ -60,11 +60,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b148bbda218e5f357d7cd5c771073f2d91b87c4c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d2993016e9c6b3a4ea7d47ba8071fab1267e483f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 Obtient des informations sur un fichier ouvert.  
@@ -147,16 +148,16 @@ int _fstat64i32(
   
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>Variantes de type d’heure et de type de longueur de fichier de _stat  
   
-|Fonctions|_USE_32BIT_TIME_T défini ?|Type d’heure|Type de longueur de fichier|  
+|Fonctions|_USE_32BIT_TIME_T défini ?|Type d’heure|Type de longueur de fichier|  
 |---------------|------------------------------------|---------------|----------------------|  
-|`_fstat`|Non défini|64 bits|32 bits|  
-|`_fstat`|Défini|32 bits|32 bits|  
-|`_fstat32`|Non affecté par la définition de macro|32 bits|32 bits|  
-|`_fstat64`|Non affecté par la définition de macro|64 bits|64 bits|  
-|`_fstati64`|Non défini|64 bits|64 bits|  
-|`_fstati64`|Défini|32 bits|64 bits|  
-|`_fstat32i64`|Non affecté par la définition de macro|32 bits|64 bits|  
-|`_fstat64i32`|Non affecté par la définition de macro|64 bits|32 bits|  
+|`_fstat`|Non défini|64 bits|32 bits|  
+|`_fstat`|Défini|32 bits|32 bits|  
+|`_fstat32`|Non affecté par la définition de macro|32 bits|32 bits|  
+|`_fstat64`|Non affecté par la définition de macro|64 bits|64 bits|  
+|`_fstati64`|Non défini|64 bits|64 bits|  
+|`_fstati64`|Défini|32 bits|64 bits|  
+|`_fstat32i64`|Non affecté par la définition de macro|32 bits|64 bits|  
+|`_fstat64i32`|Non affecté par la définition de macro|64 bits|32 bits|  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -169,7 +170,7 @@ int _fstat64i32(
 |`_fstat32i64`|\<sys/stat.h> et \<sys/types.h>|  
 |`_fstat64i32`|\<sys/stat.h> et \<sys/types.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

@@ -54,11 +54,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ecb29e00a4baa5bd1ad36fe47bade09a8cc7f56f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3e65837945b8c28ee0968dbeaded4fbdbf7e79c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 Compare des chaînes en utilisant les paramètres régionaux actifs ou une catégorie d’état de conversion LC_COLLATE spécifiée.  
@@ -121,7 +122,7 @@ int _mbscoll_l(
   
  Toutes ces fonctions valident leurs paramètres. Si `string1` ou `string2` est un pointeur Null ou si `count` est supérieur à `INT_MAX`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent `_NLSCMPERROR` et définissent `errno` avec la valeur `EINVAL`.  
   
- La comparaison des deux chaînes est une opération dépendante des paramètres régionaux dans la mesure où les différents paramètres régionaux ont des règles de classement de caractères qui leur sont propres. Les versions de ces fonctions sans suffixe `_l` utilisent les paramètres régionaux du thread actif pour ce comportement dépendant des paramètres régionaux ; les versions avec suffixe `_l` sont identiques à la fonction correspondante sans suffixe, sauf qu’elles utilisent les paramètres régionaux transmis comme paramètre à la place des paramètres régionaux actifs. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La comparaison des deux chaînes est une opération dépendante des paramètres régionaux dans la mesure où les différents paramètres régionaux ont des règles de classement de caractères qui leur sont propres. Les versions de ces fonctions sans suffixe `_l` utilisent les paramètres régionaux du thread actif pour ce comportement dépendant des paramètres régionaux ; les versions avec suffixe `_l` sont identiques à la fonction correspondante sans suffixe, sauf qu’elles utilisent les paramètres régionaux transmis comme paramètre à la place des paramètres régionaux actifs. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   

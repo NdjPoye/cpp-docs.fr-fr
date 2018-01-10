@@ -1,37 +1,36 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4546 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4546"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4546"
+title: Compilateur avertissement (niveau 1) C4546 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4546
+dev_langs: C++
+helpviewer_keywords: C4546
 ms.assetid: 071e1709-3841-46c1-8e71-96109cd22041
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1e9fbe6f2d55db447919266966a44df96e0ca2e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4546
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-l'appel de fonction avant la virgule n'a pas de liste d'arguments  
+# <a name="compiler-warning-level-1-c4546"></a>Avertissement du compilateur (niveau 1) C4546
+l’appel de fonction avant la virgule n’a pas de liste d’arguments  
   
  Le compilateur a détecté une expression avec virgules incorrecte.  
   
- Cet avertissement est désactivé par défaut.  Pour plus d'informations, consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Cet avertissement est désactivé par défaut. Pour plus d'informations, consultez [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   
-## Exemple  
- L'exemple suivant génère l'erreur C4546 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C4546 :  
   
 ```  
 // C4546.cpp  

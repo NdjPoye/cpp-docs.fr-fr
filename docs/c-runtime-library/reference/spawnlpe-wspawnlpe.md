@@ -42,17 +42,18 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 693f356f990a0b2e9d66aa1a3b8b53583500cfad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46c3677ac1f00597d4ed435f919bde21b4904582
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spawnlpe-wspawnlpe"></a>_spawnlpe, _wspawnlpe
 Crée et exécute un nouveau processus.  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -82,7 +83,7 @@ intptr_t _wspawnlpe(
  Mode d'exécution du processus appelant.  
   
  `cmdname`  
- Chemin d'accès du fichier à exécuter.  
+ Chemin d’accès du fichier à exécuter.  
   
  `arg0, arg1, ... argn`  
  Liste des pointeurs vers les arguments. L'argument `arg0` est généralement un pointeur vers `cmdname`. Les arguments `arg1` à `argn` sont des pointeurs vers les chaînes de caractères qui forment la nouvelle liste d'arguments. Après `argn`, il doit exister un pointeur `NULL` pour marquer la fin de la liste des arguments.  
@@ -100,7 +101,7 @@ intptr_t _wspawnlpe(
  Argument `mode` non valide.  
   
  `ENOENT`  
- Fichier ou chemin d'accès introuvable.  
+ Fichier ou chemin d’accès introuvable.  
   
  `ENOEXEC`  
  Le fichier spécifié n'est pas exécutable ou a un format de fichier exécutable non valide.  
@@ -122,7 +123,7 @@ intptr_t _wspawnlpe(
 |`_spawnlpe`|\<process.h>|  
 |`_wspawnlpe`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
  Consultez l'exemple de [Fonctions _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).  

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - envp argument
 - main function, arguments
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: d50e32a54cdb10af4adbfb3cfda64b8f1b21b2eb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: cd1bc4f017a90bf2f42972831eadc02e77868151
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-definitions"></a>Définitions d’arguments
 Les arguments dans le prototype  
@@ -43,7 +41,7 @@ argc[ ,char*argv[] [,char*envp[] ] ] );intwmain(intargc[ ,wchar_t*argv[] [,wchar
  Entier qui contient le nombre d'arguments qui se suivent dans `argv`. Le paramètre `argc` est toujours supérieur ou égal à 1.  
   
  `argv`  
- Tableau de chaînes terminées par le caractère NULL qui représentent les arguments de ligne de commande entrés par l’utilisateur du programme. Par convention, `argv` **[0]** est la commande à laquelle le programme est appelé, `argv` **[1]** est le premier argument de ligne de commande et ainsi de suite, jusqu’au `argv` ** [**`argc`**]**, qui est toujours **NULL**. Consultez [personnalisation du traitement de ligne de commande](../cpp/customizing-cpp-command-line-processing.md) pour plus d’informations sur la suppression du traitement de ligne de commande.  
+ Tableau de chaînes terminées par le caractère NULL qui représentent les arguments de ligne de commande entrés par l’utilisateur du programme. Par convention, `argv` **[0]** est la commande à laquelle le programme est appelé, `argv` **[1]** est le premier argument de ligne de commande et ainsi de suite, jusqu’au `argv`  **[**`argc`**]**, qui est toujours **NULL**. Consultez [personnalisation du traitement de ligne de commande](../cpp/customizing-cpp-command-line-processing.md) pour plus d’informations sur la suppression du traitement de ligne de commande.  
   
  Le premier argument de ligne de commande est toujours `argv` **[1]** et la dernière n’est pas `argv` **[** `argc` - 1**]**.  
   

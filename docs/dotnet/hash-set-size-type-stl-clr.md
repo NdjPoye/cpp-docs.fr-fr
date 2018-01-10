@@ -1,42 +1,42 @@
 ---
-title: "hash_set::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type (membre) (STL/CLR)"
+title: hash_set::size_type (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 700ce851-d081-4887-a855-8d98d2eadb81
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fa5267225b83d3a4df7dcc93bd8cc9b892854cf8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le type d'une distance signée entre deux éléments.  
+# <a name="hashsetsizetype-stlclr"></a>hash_set::size_type (STL/CLR)
+Le type d’une distance signée entre deux éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef int size_type;  
 ```  
   
-## Notes  
- Le type décrit un nombre non négatif d'éléments.  
+## <a name="remarks"></a>Notes  
+ Le type décrit un nombre non négatif élément.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_set_size_type.cpp   
@@ -66,13 +66,16 @@ int main()
   
 ```  
   
-  **a b c**  
-**end\(\)\-begin\(\) \= 3**   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+end()-begin() = 3  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/hash_set >  
   
-## Voir aussi  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::empty](../dotnet/hash-set-empty-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::empty (STL/CLR)](../dotnet/hash-set-empty-stl-clr.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- chsize
+apiname: chsize
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,23 +20,20 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords:
-- chsize
-dev_langs:
-- C++
-helpviewer_keywords:
-- chsize function
+f1_keywords: chsize
+dev_langs: C++
+helpviewer_keywords: chsize function
 ms.assetid: f94d62f6-b539-4cbf-bf99-b81d081b4216
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 185ca5af184b37bbd47f9519763c37599c497cc8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 065a713e61c4fc1b1b459948a11b68b855591538
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chsize"></a>chsize
 Cette fonction POSIX est déconseillée. Utilisez plutôt [_chsize](../../c-runtime-library/reference/chsize.md), qui est conforme à la norme ISO C++, ou [_chsize](../../c-runtime-library/reference/chsize-s.md), qui offre une sécurité améliorée.

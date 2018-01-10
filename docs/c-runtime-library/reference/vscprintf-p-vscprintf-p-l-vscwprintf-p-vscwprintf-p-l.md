@@ -52,11 +52,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 465260a07a6e18922a67cbb12f3e36b75f60e51a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b920931cf524ef44d1c09814576dbf22e54a640b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
 Retourne le nombre de caractères contenus dans la chaîne mise en forme en utilisant un pointeur désignant une liste d’arguments, avec la possibilité de spécifier l’ordre dans lequel les arguments sont utilisés.  
@@ -94,7 +95,7 @@ int _vscwprintf_p _l(
  `locale`  
  Paramètres régionaux à utiliser.  
   
- Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Valeur de retour  
  `_vscprintf_p` retourne le nombre de caractères qui seraient générés si la chaîne vers laquelle la liste d’arguments pointe était imprimée ou envoyée vers un fichier ou une mémoire tampon en utilisant les codes de mise en forme spécifiés. La valeur retournée n’inclut pas le caractère Null de fin. `_vscwprintf_p` exécute la même fonction pour les caractères larges.  
@@ -104,7 +105,7 @@ int _vscwprintf_p _l(
   
  Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.  
   
- Si `format` est un pointeur Null, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent -1 et définissent `errno` avec la valeur `EINVAL`.  
+ Si `format` est un pointeur Null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent -1 et définissent `errno` avec la valeur `EINVAL`.  
   
 > [!IMPORTANT]
 >  Si `format` est une chaîne définie par l’utilisateur, vérifiez qu’elle se termine par un caractère Null et qu’elle comprend le nombre et le type de paramètres appropriés. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
@@ -123,7 +124,7 @@ int _vscwprintf_p _l(
 |`_vscprintf_p`, `_vscprintf_p_l`|\<stdio.h>|  
 |`_vscwprintf_p`, `_vscwprintf_p_l`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple relatif à [vsprintf](../../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md).  

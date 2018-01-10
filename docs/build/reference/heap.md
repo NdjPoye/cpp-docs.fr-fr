@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 709b9a1b57750db4ea8eb13bdaa3d49eed9b7629
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d21fe68d96274eaf42c2b7d58aa025c49f8a6d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="heap"></a>/HEAP
 Définit la taille du segment de mémoire en octets. Cette option s’applique uniquement aux fichiers exécutables.  
@@ -34,7 +35,7 @@ Définit la taille du segment de mémoire en octets. Cette option s’applique u
 reserve[,commit]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `reserve` argument spécifie l’allocation initiale totale des tas dans la mémoire virtuelle. Par défaut, la taille du tas est de 1 Mo. [Référence EDITBIN](../../build/reference/editbin-reference.md) arrondit la valeur spécifiée au multiple plus proche de 4 octets.  
   
  Le paramètre facultatif `commit` argument est soumis à l’interprétation par le système d’exploitation. Sur un système d’exploitation Windows, il spécifie la quantité initiale de mémoire physique à allouer et de la quantité de mémoire supplémentaire pour allouer le segment de mémoire doit être développé. Mémoire virtuelle dédiée, espace à réserver dans le fichier d’échange. Un degré plus élevé `commit` valeur permet au système allouer de la mémoire moins souvent lors de l’application a besoin de davantage d’espace du tas, mais augmente les besoins en mémoire et peut allonger la durée de démarrage d’application. Le `commit` valeur doit être inférieure ou égale à la `reserve` valeur.  

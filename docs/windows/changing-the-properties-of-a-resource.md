@@ -1,47 +1,50 @@
 ---
-title: "Changing the Properties of a Resource | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "properties [Visual Studio], resources"
-  - "resources [Visual Studio], properties"
+title: "Modification des propriétés d’une ressource | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- properties [Visual Studio], resources
+- resources [Visual Studio], properties
 ms.assetid: c4373b36-2651-4954-afa6-3f66300673d4
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a79c4bfa17abacaa68f5c6be608ff911505d9912
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Changing the Properties of a Resource
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="changing-the-properties-of-a-resource"></a>Modification des propriétés d'une ressource
+### <a name="to-edit-the-properties-of-a-resource"></a>Pour modifier les propriétés d'une ressource  
+  
+1.  Dans [affichage des ressources](../windows/resource-view-window.md), avec le bouton droit de la ressource que vous souhaitez modifier, puis choisissez **propriétés** dans le menu contextuel.  
+  
+     **Remarque** Si votre projet ne contient pas déjà un fichier .rc, consultez [Création d'un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).  
+  
+2.  Dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), modifier les propriétés de votre ressource.  
+  
+### <a name="to-undo-a-change-youve-made-to-the-properties-of-a-resource"></a>Pour annuler une modification que vous avez apportée aux propriétés d'une ressource  
+  
+1.  Assurez-vous que votre ressource a le focus dans l'affichage des ressources.  
+  
+2.  Choisissez **Annuler** à partir de la **modifier** menu.  
+  
 
-### Pour modifier les propriétés d'une ressource  
-  
-1.  Dans [Affichage des ressources](../windows/resource-view-window.md), cliquez avec le bouton droit sur la ressource à modifier, puis sélectionnez **Propriétés** dans le menu contextuel.  
-  
-     [Remarque](../windows/how-to-create-a-resource-script-file.md) Si votre projet ne contient pas déjà un fichier .rc, consultez **Création d'un fichier de script de ressources**.  
-  
-2.  Dans la [fenêtre Propriétés](../Topic/Properties%20Window.md), changez les propriétés de votre ressource.  
-  
-### Pour annuler une modification que vous avez apportée aux propriétés d'une ressource  
-  
-1.  Assurez\-vous que votre ressource a le focus dans l'affichage des ressources.  
-  
-2.  Choisissez **Annuler** dans le menu **Edition**.  
-  
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour plus d'informations sur l'ajout de fichiers de ressources aux projets managés, l'accès aux ressources, l'affichage de ressources statiques et l'assignation de chaînes de ressources aux propriétés, et ce manuellement, voir [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
   
  **Spécifications**  
   
  Aucun  
   
-## Voir aussi  
- [Resource Editors](../mfc/resource-editors.md)
+## <a name="see-also"></a>Voir aussi  
+ [Éditeurs de ressources](../windows/resource-editors.md)

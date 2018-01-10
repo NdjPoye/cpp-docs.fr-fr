@@ -1,53 +1,54 @@
 ---
-title: "OpenMP Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Fonctions OpenMP | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c01967e47d8108803fdadd9c9cfe746a4d477459
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# OpenMP Functions
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Fournit des liens vers les fonctions utilisées dans l'API d'OpenMP.  
+# <a name="openmp-functions"></a>Fonctions OpenMP
+Fournit des liens vers les fonctions utilisées dans l’API OpenMP.  
   
- L'implémentation de Visual C\+\+ du standard d'OpenMP inclut les fonctionnalités suivantes.  
+ L’implémentation Visual C++ de l’OpenMP standard inclut les fonctions suivantes.  
   
 |Fonction|Description|  
 |--------------|-----------------|  
-|[omp\_destroy\_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)|Uninitializes un verrou.|  
-|[omp\_destroy\_nest\_lock](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)|Uninitializes un verrou empilable.|  
-|[omp\_get\_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md)|Retourne une valeur qui indique si le nombre de threads disponibles dans la région parallèle suivante peut être ajusté par le runtime.|  
-|[omp\_get\_max\_threads](../../../parallel/openmp/reference/omp-get-max-threads.md)|Retourne un entier auquel est égal ou supérieur au nombre de threads qui sont disponibles si une région parallèle sans [num\_threads](../../../parallel/openmp/reference/num-threads.md) sont définies à ce stade de code.|  
-|[omp\_get\_nested](../../../parallel/openmp/reference/omp-get-nested.md)|Retourne une valeur qui indique si le parallélisme imbriqué est activé.|  
-|[omp\_get\_num\_procs](../../../parallel/openmp/reference/omp-get-num-procs.md)|Retourne le nombre de processeurs disponibles lorsque la fonction est appelée.|  
-|[omp\_get\_num\_threads](../../../parallel/openmp/reference/omp-get-num-threads.md)|Retourne le nombre de threads dans une région parallèle.|  
-|[omp\_get\_thread\_num](../../../parallel/openmp/reference/omp-get-thread-num.md)|Retourne le numéro du thread s'exécutant dans son équipe de thread.|  
-|[omp\_get\_wtick](../../../parallel/openmp/reference/omp-get-wtick.md)|Retourne le nombre de secondes entre les battements d'horloge du processeur.|  
-|[omp\_get\_wtime](../../../parallel/openmp/reference/omp-get-wtime.md)|Retourne une valeur en secondes du temps écoulé d'un certain point.|  
-|[omp\_in\_parallel](../../../parallel/openmp/reference/omp-in-parallel.md)|Retourne une valeur différente de zéro si elle est appelée d'une région parallèle.|  
-|[omp\_init\_lock](../../../parallel/openmp/reference/omp-init-lock.md)|initialise un verrou simple.|  
-|[omp\_init\_nest\_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)|initialise un verrou.|  
-|[omp\_set\_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)|Indique que le nombre de threads disponibles dans la région parallèle suivante peut être ajusté par le runtime.|  
-|[omp\_set\_lock](../../../parallel/openmp/reference/omp-set-lock.md)|Les blocs thread l'exécution jusqu'à ce qu'un verrou soit disponible.|  
-|[omp\_set\_nest\_lock](../../../parallel/openmp/reference/omp-set-nest-lock.md)|Les blocs thread l'exécution jusqu'à ce qu'un verrou soit disponible.|  
-|[omp\_set\_nested](../../../parallel/openmp/reference/omp-set-nested.md)|Permet un imbriqué le parallélisme.|  
-|[omp\_set\_num\_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)|Définit le nombre de threads dans les régions parallèles suivantes, sauf si une clause de [num\_threads](../../../parallel/openmp/reference/num-threads.md) .|  
-|[omp\_test\_lock](../../../parallel/openmp/reference/omp-test-lock.md)|Essaie de définir un verrou mais ne bloque pas l'exécution des threads.|  
-|[omp\_test\_nest\_lock](../../../parallel/openmp/reference/omp-test-nest-lock.md)|Essaie de définir un verrou empilable mais ne bloque pas l'exécution des threads.|  
-|[omp\_unset\_lock](../../../parallel/openmp/reference/omp-unset-lock.md)|libère un verrou.|  
-|[omp\_unset\_nest\_lock](../../../parallel/openmp/reference/omp-unset-nest-lock.md)|libère un verrou empilable.|  
+|[omp_destroy_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)|N’initialise pas un verrou.|  
+|[omp_destroy_nest_lock](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)|N’initialise pas un verrou pouvant.|  
+|[omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md)|Retourne une valeur qui indique si le nombre de threads disponibles dans une région parallèle suivante peut être ajusté par le temps d’exécution.|  
+|[omp_get_max_threads](../../../parallel/openmp/reference/omp-get-max-threads.md)|Retourne un entier qui est égale ou supérieure au nombre de threads qui serait disponible si une région parallèle sans [num_threads](../../../parallel/openmp/reference/num-threads.md) ont été définies à ce stade dans le code.|  
+|[omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md)|Retourne une valeur qui indique si le parallélisme imbriquée est activée.|  
+|[omp_get_num_procs](../../../parallel/openmp/reference/omp-get-num-procs.md)|Retourne le nombre de processeurs qui sont disponibles lorsque la fonction est appelée.|  
+|[omp_get_num_threads](../../../parallel/openmp/reference/omp-get-num-threads.md)|Retourne le nombre de threads dans la région parallèle.|  
+|[omp_get_thread_num](../../../parallel/openmp/reference/omp-get-thread-num.md)|Retourne le nombre de threads d’exécution du thread au sein de son équipe de thread.|  
+|[omp_get_wtick](../../../parallel/openmp/reference/omp-get-wtick.md)|Retourne le nombre de secondes entre les battements d’horloge de processeur.|  
+|[omp_get_wtime](../../../parallel/openmp/reference/omp-get-wtime.md)|Retourne qu'une valeur en secondes du temps écoulé à partir d’un moment donné.|  
+|[omp_in_parallel](../../../parallel/openmp/reference/omp-in-parallel.md)|Retourne zéro si appelée à partir d’une région parallèle.|  
+|[omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)|Initialise un verrou simple.|  
+|[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)|Initialise un verrou.|  
+|[omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)|Indique que le nombre de threads disponibles dans une région parallèle suivante peut être ajusté par le temps d’exécution.|  
+|[omp_set_lock](../../../parallel/openmp/reference/omp-set-lock.md)|Blocs d’exécution du thread jusqu'à ce qu’un verrou n’est disponible.|  
+|[omp_set_nest_lock](../../../parallel/openmp/reference/omp-set-nest-lock.md)|Blocs d’exécution du thread jusqu'à ce qu’un verrou n’est disponible.|  
+|[omp_set_nested](../../../parallel/openmp/reference/omp-set-nested.md)|Active le parallélisme imbriqué.|  
+|[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)|Définit le nombre de threads dans les régions parallèles suivantes, sauf si un [num_threads](../../../parallel/openmp/reference/num-threads.md) clause.|  
+|[omp_test_lock](../../../parallel/openmp/reference/omp-test-lock.md)|Tente de définir un verrou, mais ne bloque pas l’exécution du thread.|  
+|[omp_test_nest_lock](../../../parallel/openmp/reference/omp-test-nest-lock.md)|Tente de définir un verrou pouvant mais ne bloque pas l’exécution du thread.|  
+|[omp_unset_lock](../../../parallel/openmp/reference/omp-unset-lock.md)|Libère un verrou.|  
+|[omp_unset_nest_lock](../../../parallel/openmp/reference/omp-unset-nest-lock.md)|Libère un verrou pouvant.|  
   
-## Voir aussi  
- [Library Reference](../../../parallel/openmp/reference/openmp-library-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Référence de la bibliothèque](../../../parallel/openmp/reference/openmp-library-reference.md)

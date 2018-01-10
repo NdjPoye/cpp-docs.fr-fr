@@ -1,41 +1,42 @@
 ---
-title: "set::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre empty [STL/CLR]"
+title: Set::Empty (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: af10279f-e9e8-4599-b59b-5b8d92b619eb
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1a383851532b949c2c0200b0a6fb57eda9dcc238
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# set::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Teste si aucun élément n'est présent.  
+# <a name="setempty-stlclr"></a>set::empty (STL/CLR)
+Vérifie l’absence d’éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 bool empty();  
 ```  
   
-## Notes  
- La fonction membre retourne vrai pour une séquence contrôlée vide.  Équivaut à [set::size](../dotnet/set-size-stl-clr.md)`() == 0`.  Vous l'utilisez pour déterminer si le jeu est vide.  
+## <a name="remarks"></a>Notes  
+ La fonction membre retourne la valeur true pour une séquence contrôlée vide. Elle est équivalente à [set::size (STL/CLR)](../dotnet/set-size-stl-clr.md)`() == 0`. Il permet de tester si le jeu est vide.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_set_empty.cpp   
@@ -66,16 +67,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3**  
-**vide\(\) \= faux**  
-**taille\(\) \= 0**  
-**vide\(\) \= Vrai**   
-## Configuration requise  
- **En\-tête :** \<cliext\/set\>  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/set >  
   
-## Voir aussi  
- [set](../dotnet/set-stl-clr.md)   
- [set::size](../dotnet/set-size-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Set (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set::size (STL/CLR)](../dotnet/set-size-stl-clr.md)

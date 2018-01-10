@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - wrmdir
 - _rmdir
 - _wrmdir
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _rmdir function
 - directories [C++], deleting
@@ -42,30 +40,16 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 04b563468b9bc79ccd92d608dfeb4e7a3b85120a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d926158275e56c6d845d73fe2d8b4092a84c096c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
 Supprime un répertoire.  
@@ -98,7 +82,7 @@ int _wrmdir(
  **EACCES**  
  Un programme a un descripteur ouvert désignant le répertoire.  
   
- Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Notes  
  La fonction `_rmdir` supprime le répertoire spécifié par `dirname`. Le répertoire doit être vide et ne doit pas être le répertoire de travail actif ou le répertoire racine.  
@@ -118,7 +102,7 @@ int _wrmdir(
 |`_rmdir`|\<direct.h>|  
 |`_wrmdir`|\<direct.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

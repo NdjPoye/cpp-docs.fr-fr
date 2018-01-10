@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- fflush
+apiname: fflush
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,23 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- fflush
-dev_langs:
-- C++
+f1_keywords: fflush
+dev_langs: C++
 helpviewer_keywords:
 - streams, flushing
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: f2a11a29ba0eec3c66cf23f72e8fe0e7106d5a5c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2692e06416da3b62e5f9e87b4c0827d3003253e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fflush"></a>fflush
 Vide un flux.  
@@ -70,7 +52,7 @@ int fflush(
   
 #### <a name="parameters"></a>Paramètres  
  `stream`  
- Pointeur vers la structure `FILE` .  
+ Pointeur vers la structure `FILE`.  
   
 ## <a name="return-value"></a>Valeur de retour  
  `fflush` retourne 0 si la mémoire tampon a été vidée correctement. La valeur 0 est également retournée si le flux spécifié n’a aucune mémoire tampon ou est ouvert en lecture seule. Une valeur de retour égale à `EOF` indique une erreur.  
@@ -95,7 +77,7 @@ int fflush(
 |--------------|---------------------|  
 |`fflush`|\<stdio.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

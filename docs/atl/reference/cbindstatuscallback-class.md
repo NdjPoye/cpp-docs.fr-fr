@@ -40,11 +40,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90546e2eb63c2b5dd9eb16a0ececfee2629562cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 19aa979cb69bdbf8d74acbd96291fac9af78c845
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbindstatuscallback-class"></a>Classe CBindStatusCallback
 Cette classe implémente l'interface `IBindStatusCallback`.  
@@ -78,7 +79,7 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx
 |[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|Constructeur.|  
 |[CBindStatusCallback :: ~ CBindStatusCallback](#dtor)|Destructeur.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Méthodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -106,7 +107,7 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx
 |[CBindStatusCallback::m_spMoniker](#m_spmoniker)|Pointeur vers le [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) interface pour l’URL à utiliser.|  
 |[CBindStatusCallback::m_spStream](#m_spstream)|Pointeur vers le [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) interface pour le transfert de données.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La classe `CBindStatusCallback` implémente l'interface `IBindStatusCallback`. `IBindStatusCallback`doit être implémenté par votre application afin qu’il peut recevoir des notifications à partir d’un transfert de données asynchrone. Le moniker asynchrone fourni par le système utilise `IBindStatusCallback` pour envoyer et recevoir des informations sur les données asynchrones, les méthodes transfèrent vers et à partir de votre objet.  
   
  En règle générale, le `CBindStatusCallback` objet est associé à une opération de liaison spécifique. Par exemple, dans le [ASYNC](../../visual-cpp-samples.md) exemple, lorsque vous définissez la propriété URL, il crée un `CBindStatusCallback` objet dans l’appel à `Download`:  
@@ -134,7 +135,7 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx
 CBindStatusCallback();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Crée un objet pour recevoir des notifications concernant le transfert de données asynchrone. En règle générale, un objet est créé pour chaque opération de liaison.  
   
  Le constructeur initialise également [m_pT](#m_pt) et [m_pFunc](#m_pfunc) à **NULL**.  
@@ -146,7 +147,7 @@ CBindStatusCallback();
 ~CBindStatusCallback();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère toutes les ressources attribuées.  
   
 ##  <a name="download"></a>CBindStatusCallback::Download  
@@ -182,7 +183,7 @@ static HRESULT Download(
 ### <a name="return-value"></a>Valeur de retour  
  Un de la norme `HRESULT` valeurs.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Chaque fois que les données sont disponibles, il est envoyé à l’objet via `OnDataAvailable`. `OnDataAvailable`lit les données et appelle la fonction vers laquelle pointée *pFunc* (par exemple, pour stocker les données ou l’imprimer à l’écran).  
   
 ##  <a name="getbindinfo"></a>CBindStatusCallback::GetBindInfo  
@@ -212,7 +213,7 @@ STDMETHOD(GetBindInfo)(
 ### <a name="return-value"></a>Valeur de retour  
  Un de la norme `HRESULT` valeurs.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation par défaut définit la liaison doit être asynchrone et à utiliser le modèle d’émission de données. Dans le modèle push de données, le moniker de l’opération de liaison asynchrone les lecteurs et signale en permanence au client chaque fois que les nouvelles données sont disponibles.  
   
 ##  <a name="getpriority"></a>CBindStatusCallback::GetPriority  
@@ -236,7 +237,7 @@ STDMETHOD(GetPriority)(LONG* pnPriority);
 DWORD m_dwAvailableToRead;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Initialisé à zéro dans `StartAsyncDownload`.  
   
 ##  <a name="m_dwtotalread"></a>CBindStatusCallback::m_dwTotalRead  
@@ -246,7 +247,7 @@ DWORD m_dwAvailableToRead;
 DWORD m_dwTotalRead;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Incrémenté à chaque modification `OnDataAvailable` est appelée par le nombre d’octets réellement lus. Initialisé à zéro dans `StartAsyncDownload`.  
   
 ##  <a name="m_pfunc"></a>CBindStatusCallback::m_pFunc  
@@ -256,7 +257,7 @@ DWORD m_dwTotalRead;
 ATL_PDATAAVAILABLE m_pFunc;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction vers laquelle pointe `m_pFunc` est un membre de classe de l’objet et la syntaxe est la suivante :  
   
 ```  
@@ -274,7 +275,7 @@ void Function_Name(
 T* m_pT;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `CBindStatusCallback` objet est mise en modèle de classe de l’objet.  
   
 ##  <a name="m_spbindctx"></a>CBindStatusCallback::m_spBindCtx  
@@ -284,7 +285,7 @@ T* m_pT;
 CComPtr<IBindCtx> m_spBindCtx;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Initialisé dans `StartAsyncDownload`.  
   
 ##  <a name="m_spbinding"></a>CBindStatusCallback::m_spBinding  
@@ -294,7 +295,7 @@ CComPtr<IBindCtx> m_spBindCtx;
 CComPtr<IBinding> m_spBinding;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Initialisé dans `OnStartBinding` et publiée en `OnStopBinding`.  
   
 ##  <a name="m_spmoniker"></a>CBindStatusCallback::m_spMoniker  
@@ -304,7 +305,7 @@ CComPtr<IBinding> m_spBinding;
 CComPtr<IMoniker> m_spMoniker;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Initialisé dans `StartAsyncDownload`.  
   
 ##  <a name="m_spstream"></a>CBindStatusCallback::m_spStream  
@@ -314,7 +315,7 @@ CComPtr<IMoniker> m_spMoniker;
 CComPtr<IStream> m_spStream;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Initialisé dans `OnDataAvailable` à partir de la **STGMEDIUM** structure lorsque le **BCSF** indicateur est **BCSF_FIRSTDATANOTIFICATION** et libérée lorsque la **BCSF**  indicateur est **BCSF_LASTDATANOTIFICATION**.  
   
 ##  <a name="ondataavailable"></a>CBindStatusCallback::OnDataAvailable  
@@ -344,7 +345,7 @@ STDMETHOD(
 ### <a name="return-value"></a>Valeur de retour  
  Un de la norme `HRESULT` valeurs.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `OnDataAvailable`lit les données, puis appelle une méthode de classe de l’objet (par exemple, pour stocker les données ou l’imprimer à l’écran). Consultez [CBindStatusCallback::StartAsyncDownload à laquelle sont](#startasyncdownload) pour plus d’informations.  
   
 ##  <a name="onlowresource"></a>CBindStatusCallback::OnLowResource  
@@ -433,7 +434,7 @@ STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
  szStatusText  
  Adresse d’une valeur de chaîne n’est pas utilisé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelé par le moniker asynchrone fourni par le système pour indiquer la fin de l’opération de liaison.  
   
 ##  <a name="startasyncdownload"></a>CBindStatusCallback::StartAsyncDownload à laquelle sont  
@@ -469,7 +470,7 @@ HRESULT StartAsyncDownload(
 ### <a name="return-value"></a>Valeur de retour  
  Un de la norme `HRESULT` valeurs.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Chaque fois que les données sont disponibles, il est envoyé à l’objet via `OnDataAvailable`. `OnDataAvailable`lit les données et appelle la fonction vers laquelle pointée *pFunc* (par exemple, pour stocker les données ou l’imprimer à l’écran).  
   
  La fonction vers laquelle pointe *pFunc* est un membre de classe de l’objet et la syntaxe est la suivante :  

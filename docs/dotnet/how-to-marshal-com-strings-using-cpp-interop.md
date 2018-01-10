@@ -1,42 +1,44 @@
 ---
-title: "Comment&#160;: marshaler des cha&#238;nes COM &#224; l&#39;aide de l&#39;interop&#233;rabilit&#233;&#160;C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interopérabilité C++, chaînes"
-  - "COM (C++), marshaler des chaînes"
-  - "marshaling de données (C++), chaînes"
-  - "Interop (C++), chaînes"
-  - "marshaling (C++), chaînes"
+title: "Comment : marshaler des chaînes COM à l’aide d’interopérabilité C++ | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], strings
+- marshaling [C++], strings
+- C++ Interop, strings
+- data marshaling [C++], strings
+- COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 45a79f3aa78d229c71aba5a1d1144d05afe7bbd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Comment&#160;: marshaler des cha&#238;nes COM &#224; l&#39;aide de l&#39;interop&#233;rabilit&#233;&#160;C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique montre comment un BSTR \(format de chaîne de base favorisé dans la programmation COM\) peut être passé d'une fonction managée à une fonction non managée, et inversement.  Pour interagir avec d'autres types de chaînes, consultez les rubriques suivantes :  
+# <a name="how-to-marshal-com-strings-using-c-interop"></a>Comment : marshaler des chaînes COM à l’aide de l’interopérabilité C++
+Cette rubrique montre comment un BSTR (format de chaîne de base favorisé dans la programmation COM) peut être passé d’une fonction managée à une fonction non managée et vice versa. Pour interagir avec d’autres types de chaînes, consultez les rubriques suivantes :  
   
--   [Comment : marshaler des chaînes Unicode à l'aide de l'interopérabilité C\+\+](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
+-   [Guide pratique pour marshaler des chaînes Unicode à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
   
--   [Comment : marshaler des chaînes ANSI à l'aide de l'interopérabilité C\+\+](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
+-   [Guide pratique pour marshaler des chaînes ANSI à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
   
- Les exemples de code suivants utilisent les directives \#pragma [managé, non managé](../preprocessor/managed-unmanaged.md) pour implémenter des fonctions managées et non managées dans le même fichier, mais ces fonctions interagissent de la même manière si elles sont définies dans des fichiers séparés.  Les fichiers qui contiennent uniquement des fonctions non managées ne doivent pas être compilés avec [\/clr \(Compilation pour le Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  
+ Exemple de code suit le [managé, non managé](../preprocessor/managed-unmanaged.md) directives #pragma pour implémenter des fonctions managées et dans le même fichier, mais ces fonctions interagissent de la même manière, si elles sont définies dans des fichiers distincts. Fichiers contenant uniquement des fonctions non managées ne doivent pas être compilés avec [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Exemple  
- L'exemple suivant montre comment un BSTR \(format de chaîne utilisé dans la programmation COM\) peut être passé d'une fonction managée à une fonction non managée.  La fonction managée appelante utilise <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> pour obtenir l'adresse d'une représentation BSTR du contenu d'un .NET System.String.  Ce pointeur est épinglé à l'aide de [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md) pour vérifier que son adresse physique n'est pas modifiée pendant un cycle de garbage collection au cours de l'exécution de la fonction non managée.  Le garbage collector n'est pas autorisé à déplacer la mémoire aussi longtemps que [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md) n'est pas hors de portée.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant montre comment un BSTR (format de chaîne utilisé dans la programmation COM) peut être passé à partir d’une fonction managée à une fonction non managée. L’appel de fonction utilise managé <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> pour obtenir l’adresse d’une représentation BSTR du contenu d’un System.String .NET. Ce pointeur est épinglé à l’aide de [pin_ptr (C + c++ / CLI)](../windows/pin-ptr-cpp-cli.md) pour vous assurer que son adresse physique n’est pas modifiée pendant un cycle de garbage collection pendant l’exécution de la fonction non managée. Le garbage collector est interdite par le déplacement de la mémoire jusqu'à ce que le [pin_ptr (C + c++ / CLI)](../windows/pin-ptr-cpp-cli.md) est hors de portée.  
   
 ```  
 // MarshalBSTR1.cpp  
@@ -71,8 +73,8 @@ int main() {
 }  
 ```  
   
-## Exemple  
- L'exemple suivant montre comment un BSTR peut être passé d'une fonction non managée à une fonction non managée.  La fonction managée réceptrice peut utiliser la chaîne en tant que BSTR ou utiliser <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> pour la convertir en <xref:System.String> en vue d'une utilisation avec d'autres fonctions managées.  Comme la mémoire représentant le BSTR est allouée sur le tas non managé, aucun épinglage n'est nécessaire, car il n'existe aucun garbage collection sur le tas non managé.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant montre comment un BSTR peut être passé à partir d’une fonction non managée à une fonction non managée. La fonction managée peut soit utiliser la chaîne en tant que BSTR ou utilisez la réception <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> pour le convertir en un <xref:System.String> pour une utilisation avec d’autres des fonctions managées. Étant donné que la mémoire représentant le BSTR est allouée sur le tas non managé, aucun épinglage n’est nécessaire, étant donné qu’aucun garbage collection sur le tas non managé.  
   
 ```  
 // MarshalBSTR2.cpp  
@@ -109,5 +111,5 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
- [Utilisation de l'interopérabilité C\+\+ \(PInvoke implicite\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

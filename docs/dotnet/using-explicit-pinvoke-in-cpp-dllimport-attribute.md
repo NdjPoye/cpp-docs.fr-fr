@@ -19,11 +19,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b3b2c69e022de6420223786f0f3b3f266c4f816
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d05c88167629bcb6bf86dc600afde0ea3162064f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-explicit-pinvoke-in-c-dllimport-attribute"></a>Utilisation d'un PInvoke explicite en C++ (attribut DllImport)
 Le .NET Framework fournit des fonctionnalités de code non managé (ou PInvoke) explicites avec le `Dllimport` attribut pour autoriser les applications managées à appeler des fonctions non managées empaquetées dans des DLL. PInvoke explicite est requis pour les situations où les API non managées sont empaquetés en tant que DLL et le code source n’est pas disponible. Appel de fonctions Win32, par exemple, requiert PInvoke. Sinon, utilisez P implicite {Invoke ; consultez [à l’aide du interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md) pour plus d’informations.  

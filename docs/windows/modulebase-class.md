@@ -1,30 +1,31 @@
 ---
-title: "ModuleBase, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::ModuleBase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ModuleBase (classe)"
+title: Modulebase, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::ModuleBase
+dev_langs: C++
+helpviewer_keywords: ModuleBase class
 ms.assetid: edce7591-6893-46f7-94a7-382827775548
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b02efe3ee61234b2439c1cbbae07827d6a879b2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ModuleBase, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l’infrastructure/FAO et n’est pas destinée à être utilisée directement à partir de votre code.  
+# <a name="modulebase-class"></a>ModuleBase, classe
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,17 +42,17 @@ class ModuleBase;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Modulebase::modulebase, constructeur](../windows/modulebase-modulebase-constructor.md)|Initialise une instance de la classe de Module.|  
-|[ModuleBase :: ~ ModuleBase, destructeur](../windows/modulebase-tilde-modulebase-destructor.md)|Deinitializes l’instance actuelle de la classe de Module.|  
+|[ModuleBase::ModuleBase, constructeur](../windows/modulebase-modulebase-constructor.md)|Initialise une instance de la classe de Module.|  
+|[ModuleBase::~ModuleBase, destructeur](../windows/modulebase-tilde-modulebase-destructor.md)|Désinitialise l’instance actuelle de la classe de Module.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Méthodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Modulebase::decrementobjectcount, méthode](../windows/modulebase-decrementobjectcount-method.md)|En cas d’implémentation, décrémente le nombre d’objets suivis par le module.|  
-|[Modulebase::incrementobjectcount, méthode](../windows/modulebase-incrementobjectcount-method.md)|En cas d’implémentation, incrémente le nombre d’objets suivis par le module.|  
+|[ModuleBase::DecrementObjectCount, méthode](../windows/modulebase-decrementobjectcount-method.md)|En cas d’implémentation, décrémente le nombre d’objets suivis par le module.|  
+|[ModuleBase::IncrementObjectCount, méthode](../windows/modulebase-incrementobjectcount-method.md)|En cas d’implémentation, incrémente le nombre d’objets suivis par le module.|  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `ModuleBase`  
   
 ## <a name="requirements"></a>Spécifications  
@@ -60,4 +61,4 @@ class ModuleBase;
  **Namespace :** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Voir aussi  
- [Microsoft::wrl::Details Namespace](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

@@ -1,50 +1,50 @@
 ---
-title: "&lt;summary&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<summary>"
-  - "summary"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<summary> (balise XML C++)"
-  - "summary (balise XML C++)"
+title: "&lt;Résumé&gt; (Visual C++) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <summary>
+- summary
+dev_langs: C++
+helpviewer_keywords:
+- <summary> C++ XML tag
+- summary C++ XML tag
 ms.assetid: cdeeefbb-1339-45d6-9002-10042a9a2726
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 48e4401967719313d9af7924d12cf68b870f4543
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;summary&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La balise \<summary\> doit être utilisée pour décrire un type ou un membre d'un type.  Utilisez [\<remarks\>](../ide/remarks-visual-cpp.md) pour ajouter des informations complémentaires à une description de type.  
+# <a name="ltsummarygt-visual-c"></a>&lt;Résumé&gt; (Visual C++)
+La balise \<summary> doit être utilisée pour décrire un type ou un membre de type. Utilisez [\<remarks>](../ide/remarks-visual-cpp.md) pour ajouter des informations supplémentaires à une description de type.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 <summary>description</summary>  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `description`  
- Résumé de l'objet.  
+ Résumé de l’objet.  
   
-## Notes  
- Le texte de la balise d' \<summary\> est la seule source d'informations sur le type dans Intellisense, et est également affiché dans [Explorateur d'objets](http://msdn.microsoft.com/fr-fr/f89acfc5-1152-413d-9f56-3dc16e3f0470) et dans le rapport Web de commentaires du code.  
+## <a name="remarks"></a>Notes  
+ Le texte de la \<Résumé > balise est la seule source d’informations sur le type dans IntelliSense et s’affiche également dans le [Explorateur d’objets](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) et dans le rapport Web de commentaire de Code.  
   
- Compilez avec [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour traiter les commentaires de documentation et les placer dans un fichier.  
+ Compilez avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // xml_summary_tag.cpp  
@@ -65,5 +65,5 @@ public:
 };  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Documentation XML](../ide/xml-documentation-visual-cpp.md)

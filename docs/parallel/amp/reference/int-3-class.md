@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -78,33 +77,18 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::get_zyx
 - amp_short_vectors/Concurrency::graphics::int_3::xz
 - amp_short_vectors/Concurrency::graphics::int_3::set_yz
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: d9a9b8eed7fcf46dee258c55471e79420666e043
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 395d548e322ffcaed91536a781c7d5d821b6a446
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="int3-class"></a>int_3, classe
 Représente un vecteur court de trois entiers.  
@@ -127,9 +111,9 @@ class int_3;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[int_3 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments à 0.|  
+|[int_3 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Méthodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -177,15 +161,15 @@ class int_3;
 |int_3::operator-||  
 |int_3::operator--||  
 |int_3::operator % =||  
-|int_3::operator < =||  
+|int_3::operator & =||  
 |int_3::operator * =||  
 |/ = int_3::operator||  
 |int_3::operator ^ =||  
-|int_3::operator | =||  
+|int_3::operator &#124; =||  
 |int_3::operator ~||  
 |int_3::operator ++||  
 |int_3::operator +=||  
-|int_3::operator\<=||  
+|int_3::operator <\<=||  
 |int_3::operator =||  
 |int_3::operator =||  
 |int_3::operator >> =||  
@@ -231,7 +215,7 @@ class int_3;
 |int_3::ZY||  
 |int_3::ZYX||  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `int_3`  
   
 ## <a name="requirements"></a>Spécifications  
@@ -241,7 +225,7 @@ class int_3;
 
 ## <a name="ctor"></a>int_3 
 
-Par défaut constructeur initialise tous les éléments à 0.  
+Par défaut constructeur initialise tous les éléments par 0.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -286,7 +270,7 @@ explicit inline int_3(
  La valeur pour initialiser l’élément 2.  
   
  `_V`  
- La valeur pour l’initialisation.  
+ La valeur de l’initialisation.  
   
  `_Other`  
  Objet utilisé pour initialiser.  
@@ -301,4 +285,3 @@ static const int size = 3;
   
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
-

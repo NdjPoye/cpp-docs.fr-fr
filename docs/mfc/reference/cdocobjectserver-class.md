@@ -27,14 +27,15 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9bdda622f27dab68e50e58c02ce31c97266ab86f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 912262c4f1ba85c181bb30ee5d6f38a0defe5d5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdocobjectserver-class"></a>Classe de CDocObjectServer
-Implémente les interfaces OLE supplémentaires nécessaires pour transformer un serveur normal `COleDocument` en serveur DocObject complet : `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`et `IPrint`.  
+Implémente les interfaces OLE supplémentaires nécessaires pour transformer un serveur normal `COleDocument` en serveur DocObject complet : `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget` et `IPrint`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,7 +65,7 @@ class CDocObjectServer : public CCmdTarget
 |[CDocObjectServer::OnApplyViewState](#onapplyviewstate)|Restaure l’état de la vue DocObject.|  
 |[CDocObjectServer::OnSaveViewState](#onsaveviewstate)|Enregistre l’état de la vue DocObject.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CDocObjectServer`est dérivé de `CCmdTarget` et travaille en étroite collaboration avec `COleServerDoc` pour exposer les interfaces.  
   
  Un document de serveur DocObject peut contenir [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) objets qui représentent l’interface serveur aux éléments de DocObject.  
@@ -94,7 +95,7 @@ class CDocObjectServer : public CCmdTarget
 void ActivateDocObject();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `ActivateDocObject`appels `IOleDocumentSite`de **ActivateMe** (méthode), mais n’affiche ne pas la vue, car il attend pour obtenir des instructions sur la façon de configurer et afficher la vue, indiqué dans l’appel à [CDocObjectServer::OnActivateView](#onactivateview).  
   
  Ensemble, `ActivateDocObject` et `OnActivateView` activer et afficher la vue DocObject. DocObject activation diffère des autres types d’activation des OLE sur place. L’activation DocObject ignore l’affichage des bordures de hachurage de place et ornements d’objet (par exemple, des poignées de redimensionnement), ignore les fonctions de mesure d’objet et dessine dans le rectangle d’affichage au lieu des faire glisser en dehors de ce rectangle (par exemple, normal, les barres de défilement activation sur place).  
@@ -115,7 +116,7 @@ explicit CDocObjectServer(
  `pDocSite`  
  Un pointeur vers le `IOleDocumentSite` interface implémentée par le conteneur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsqu’un DocObject est actif, le client du site OLE (interface) ( `IOleDocumentSite`) est ce qui permet au serveur DocObject de communiquer avec son client (le conteneur). Lorsqu’un serveur DocObject est activé, il vérifie d’abord que le conteneur implémente la `IOleDocumentSite` interface. Dans ce cas, [COleServerDoc::GetDocObjectServer](../../mfc/reference/coleserverdoc-class.md#getdocobjectserver) est appelé pour déterminer si le conteneur prend en charge DocObjects. Par défaut, `GetDocObjectServer` retourne **NULL**. Vous devez substituer `COleServerDoc::GetDocObjectServer` pour construire une nouvelle `CDocObjectServer` objet ou un objet dérivé de votre choix, avec des pointeurs vers les `COleServerDoc` conteneur et son `IOleDocumentSite` interface en tant qu’arguments au constructeur.  
   
 ##  <a name="onactivateview"></a>CDocObjectServer::OnActivateView  
@@ -128,7 +129,7 @@ virtual HRESULT OnActivateView();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une erreur ou une valeur d’avertissement. Par défaut, retourne **NOERROR** cas de réussite ; sinon, **E_FAIL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction crée une fenêtre frame en place, dessine des barres de défilement dans la vue, configure les menus, le serveur de partage avec son conteneur, ajoute des contrôles de frame, définit l’objet actif, puis enfin montre la fenêtre frame en place et définit le focus.  
   
 ##  <a name="onapplyviewstate"></a>CDocObjectServer::OnApplyViewState  
@@ -142,7 +143,7 @@ virtual void OnApplyViewState(CArchive& ar);
  `ar`  
  A `CArchive` objet permettant de sérialiser l’état d’affichage.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction est appelée lorsque la vue est affichée pour la première fois après son instanciation. `OnApplyViewState`Indique une vue se réinitialiser lui-même en fonction des données dans le `CArchive` objet précédemment enregistré avec [OnSaveViewState](#onsaveviewstate). La vue doit valider les données dans le `CArchive` étant donné que le conteneur n’essaie pas d’interpréter les données d’état de vue de quelque manière de l’objet.  
   
  Vous pouvez utiliser `OnSaveViewState` pour stocker les informations persistantes spécifiques à l’état de votre affichage. Si vous substituez `OnSaveViewState` pour stocker les informations, vous pouvez substituer `OnApplyViewState` pour lire les informations et les appliquer à votre vue lorsqu’elle est qui vient d’être activée.  
@@ -158,7 +159,7 @@ virtual void OnSaveViewState(CArchive& ar);
  `ar`  
  A `CArchive` de l’objet dans lequel l’état d’affichage est sérialisé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’état peut inclure des propriétés telles que le type d’affichage, le facteur de zoom, l’insertion et point de sélection et ainsi de suite. En règle générale, le conteneur appelle cette fonction avant la désactivation de la vue. L’état enregistré peut être restauré via [OnApplyViewState](#onapplyviewstate).  
   
  Vous pouvez utiliser `OnSaveViewState` pour stocker les informations persistantes spécifiques à l’état de votre affichage. Si vous substituez `OnSaveViewState` pour stocker les informations, vous pouvez substituer `OnApplyViewState` pour lire les informations et les appliquer à votre vue lorsqu’elle est qui vient d’être activée.  

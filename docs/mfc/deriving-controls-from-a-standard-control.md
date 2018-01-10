@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73370659d07e38565cc3e9b4cf349a0328b921b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b93bc07fc5ab4680caaa276daaeca86189b8ce5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>Dériver des contrôles d'un contrôle standard
 Comme avec n’importe quelle [CWnd](../mfc/reference/cwnd-class.md)-classe dérivée, vous pouvez modifier le comportement d’un contrôle en dérivant une classe nouvelle à partir d’une classe de contrôle existante.  

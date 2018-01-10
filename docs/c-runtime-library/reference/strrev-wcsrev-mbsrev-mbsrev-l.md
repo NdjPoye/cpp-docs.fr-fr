@@ -57,11 +57,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 56a0fe307b03b7371818237b359e4840f1beef85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b40acaa02a4907f0bcc49741312b55ea41224601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
 Inverse les caractères d’une chaîne.  
@@ -102,7 +103,7 @@ unsigned char *_mbsrev_l(
   
  `_mbsrev` valide ses paramètres. Si `string1` ou `string2` est un pointeur Null, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à continuer, `_mbsrev` retourne `NULL` et définit `errno` à `EINVAL`. `_strrev` et `_wcsrev` ne vérifient pas leurs paramètres.  
   
- La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sont identiques, sauf que celles qui n'ont pas le suffixe `_l` utilisent les paramètres régionaux actuels et celles qui ont le suffixe `_l` utilisent à la place les paramètres régionaux qui ont été passés. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sont identiques, sauf que celles qui n'ont pas le suffixe `_l` utilisent les paramètres régionaux actuels et celles qui ont le suffixe `_l` utilisent à la place les paramètres régionaux qui ont été passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
 > [!IMPORTANT]
 >  Ces fonctions peuvent être vulnérables aux menaces de dépassement de mémoire tampon. Les dépassements de mémoire tampon peuvent être utilisés pour les attaques du système, car ils peuvent provoquer une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
@@ -122,7 +123,7 @@ unsigned char *_mbsrev_l(
 |`_wcsrev`|\<string.h> ou \<wchar.h>|  
 |`_mbsrev`, `_mbsrev_l`|\<mbstring.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

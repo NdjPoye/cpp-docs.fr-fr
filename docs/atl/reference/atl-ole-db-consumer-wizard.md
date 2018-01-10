@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3ffb86fed1f7a3a4b6960fd13db84cdb3da7ce7c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d12020b6adfca2c23dc610b5e596ff883bb9e7ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Assistant Consommateur OLEDB ATL
 Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de données nécessaire pour accéder à la source de données spécifié via le fournisseur OLE DB spécifié.  
@@ -180,7 +181,7 @@ Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de do
  **Modification**  
  Spécifie que le consommateur prend en charge les mises à jour des données de ligne dans l’ensemble de lignes.  
   
- **INSERT**  
+ **Insert**  
  Spécifie que le consommateur prend en charge l’insertion de lignes dans l’ensemble de lignes.  
   
  **Supprimer**  

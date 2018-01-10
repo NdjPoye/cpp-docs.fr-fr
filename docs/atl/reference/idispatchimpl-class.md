@@ -25,11 +25,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e20a9edee01480aa529ffcd0441f7096d30715fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3008d42986fcdc4b98ba6a1f9c85c437f2d335c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idispatchimpl-class"></a>IDispatchImpl (classe)
 Fournit une implémentation par défaut pour le `IDispatch` dans le cadre d’une interface double.  
@@ -76,7 +77,7 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 |----------|-----------------|  
 |[IDispatchImpl::IDispatchImpl](#idispatchimpl)|Constructeur. Appels `AddRef` sur la variable membre protégé qui gère les informations de type pour l’interface double. Le destructeur appelle `Release`.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Méthodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -85,7 +86,7 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 |[IDispatchImpl::GetTypeInfoCount](#gettypeinfocount)|Détermine si les informations de type est disponible pour l’interface double.|  
 |[IDispatchImpl::Invoke](#invoke)|Fournit l’accès aux méthodes et propriétés exposées par l’interface double.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `IDispatchImpl`Fournit une implémentation par défaut pour le `IDispatch` dans le cadre d’une interface double sur un objet. Une interface double dérive `IDispatch` et utilise uniquement des types compatibles Automation. Comme une dispinterface, une interface double prend en charge la liaison anticipée et liaison tardive ; Toutefois, une interface double prend également en charge liaison par vtable.  
   
  L’exemple suivant montre une implémentation classique des `IDispatchImpl`.  
@@ -116,7 +117,7 @@ STDMETHOD(GetIDsOfNames)(
     DISPID* rgdispid);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="gettypeinfo"></a>IDispatchImpl::GetTypeInfo  
@@ -129,7 +130,7 @@ STDMETHOD(GetTypeInfo)(
     ITypeInfo** pptinfo);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IDispatch::GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="gettypeinfocount"></a>IDispatchImpl::GetTypeInfoCount  
@@ -139,7 +140,7 @@ STDMETHOD(GetTypeInfo)(
 STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez `IDispatch::GetTypeInfoCount` dans le Kit de développement logiciel Windows.  
   
 ##  <a name="idispatchimpl"></a>IDispatchImpl::IDispatchImpl  
@@ -164,7 +165,7 @@ STDMETHOD(Invoke)(
     UINT* puArgErr);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IDispatch::Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d) dans le Kit de développement logiciel Windows.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - getenv_s
 - _tgetenv_s
 - _wgetenv_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _tgetenv_s function
 - wgetenv_s function
@@ -38,36 +36,22 @@ helpviewer_keywords:
 - environment variables
 - tgetenv_s function
 ms.assetid: c3ae1ffe-d4cd-4bae-bcb1-3afa754c613a
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
-ms.openlocfilehash: de79cb66e33564f321dd3277528d67a8d7e0ddc0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/28/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0b714d1643ae929245f93f770fe67a87b0c75b54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getenvs-wgetenvs"></a>getenv_s, _wgetenv_s
 Obtient une valeur à partir de l'environnement actuel. Ces versions de [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md) intègrent des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -118,9 +102,9 @@ errno_t _wgetenv_s(
   
 |`pReturnValue`|`buffer`|`numberOfElements`|`varname`|Valeur de retour|  
 |--------------------|--------------|------------------------|---------------|------------------|  
-|`NULL`|any|any|any|`EINVAL`|  
-|any|`NULL`|>0|any|`EINVAL`|  
-|any|any|any|`NULL`|`EINVAL`|  
+|`NULL`|tous|tous|tous|`EINVAL`|  
+|tous|`NULL`|>0|tous|`EINVAL`|  
+|tous|tous|tous|`NULL`|`EINVAL`|  
   
  Ces conditions d’erreur appellent un gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, les fonctions affectent à `errno` la valeur `EINVAL` et retournent `EINVAL`.  
   
@@ -160,7 +144,7 @@ errno_t _wgetenv_s(
 |`getenv_s`|\<stdlib.h>|  
 |`_wgetenv_s`|\<stdlib.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

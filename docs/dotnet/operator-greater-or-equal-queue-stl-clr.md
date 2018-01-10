@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cba51a22d5e9f5656dad7480d5c6d28f6d4ca271
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 11adea15776b4f1291e4d460416654cf42c640ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorgt-queue-stlclr"></a>opérateur&gt;= (file d’attente) (STL/CLR)
 File d’attente supérieur ou égal à comparaison.  
@@ -37,10 +40,10 @@ template<typename Value,
  left  
  Conteneur de gauche à comparer.  
   
- droite  
+ droit  
  Conteneur de droite à comparer.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction d’opérateur retourne `!(left < right)`. Il permet de tester si `left` n’est pas classé avant `right` lorsque les deux files d’attente sont comparé élément par élément.  
   
 ## <a name="example"></a>Exemple  

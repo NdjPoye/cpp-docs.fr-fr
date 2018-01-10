@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8d206db7699b955d1440da53731d4c8574fdf81c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9a940000b5330c4eccdcabcc5a31f0c3e3e74d65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="v-version-number"></a>/V (Numéro de version)
 Obsolète. Incorpore une chaîne de texte dans le fichier .obj.  
@@ -39,14 +40,14 @@ Obsolète. Incorpore une chaîne de texte dans le fichier .obj.
  `string`  
  Chaîne spécifiant le numéro de version ou une mention de copyright à incorporer dans un fichier .obj.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’étiquette stringcan un fichier .obj avec un numéro de version ou une mention de copyright. Tout caractère espace ou tabulation doit figurer entre guillemets doubles (") si elles font partie de la chaîne. Une barre oblique inverse (\\) doivent précéder les guillemets doubles si elles font partie de la chaîne. Un espace entre **/V** et `string` est facultatif.  
   
  Vous pouvez également utiliser [commentaire (C/C++)](../../preprocessor/comment-c-cpp.md) avec l’argument de type commentaire du compilateur pour placer le nom et numéro de version du compilateur dans le fichier .obj.  
   
  Le **/V** option est déconseillée à compter de Visual Studio 2005 ; **/V** a été principalement utilisée pour prendre en charge la création des pilotes de périphériques virtuels (VxDs), et cette opération n’est plus pris en charge par l’ensemble d’outils Visual C++. Pour obtenir la liste des options du compilateur déconseillées, consultez **déconseillées et supprimées des Options du compilateur** dans [Options du compilateur classées par catégorie](../../build/reference/compiler-options-listed-by-category.md).  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l’environnement de développement Visual Studio  
   
 1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   

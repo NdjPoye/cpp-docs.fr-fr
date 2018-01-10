@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a8aca79296cdc8dd3eb0361ff26c02dff0b2cad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: feb3d17ebaa856b832d995826cef949f79920aa0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vectorbegin-stlclr"></a>vector::begin (STL/CLR)
 Désigne le début de la séquence contrôlée.  
@@ -30,7 +33,7 @@ Désigne le début de la séquence contrôlée.
 iterator begin();  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction membre retourne un itérateur à accès aléatoire qui désigne le premier élément de la séquence contrôlée ou juste après la fin d’une séquence vide. Vous l’utilisez pour obtenir un itérateur qui désigne le `current` début de la séquence contrôlée, mais son état peut changer si la longueur de la séquence contrôlée change.  
   
 ## <a name="example"></a>Exemple  

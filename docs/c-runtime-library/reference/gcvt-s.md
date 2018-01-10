@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _gcvt_s
+apiname: _gcvt_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - _gcvt_s
 - gcvt_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _gcvt_s function
 - _CVTBUFSIZE
@@ -38,30 +35,16 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: cc1f34eae067f0d2cc0781c9001af550b291006f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8a028431bb324fe634ee30ae81eec6c2d3371441
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gcvts"></a>_gcvt_s
 Convertit une valeur à virgule flottante en chaîne. Il s’agit d’une version de [_gcvt](../../c-runtime-library/reference/gcvt.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -103,9 +86,9 @@ errno_t _gcvt_s(
   
 |`buffer`|`sizeInBytes`|`value`|`digits`|Retourner|Valeur dans `buffer`|  
 |--------------|-------------------|-------------|--------------|------------|-----------------------|  
-|`NULL`|any|any|any|`EINVAL`|Non modifiée.|  
-|Pas `NULL` (pointe vers une mémoire valide)|zéro|any|any|`EINVAL`|Non modifiée.|  
-|Pas `NULL` (pointe vers une mémoire valide)|any|any|>= `sizeInBytes`|`EINVAL`|Non modifiée.|  
+|`NULL`|tous|tous|tous|`EINVAL`|Non modifiée.|  
+|Pas `NULL` (pointe vers une mémoire valide)|zéro|tous|tous|`EINVAL`|Non modifiée.|  
+|Pas `NULL` (pointe vers une mémoire valide)|tous|tous|>= `sizeInBytes`|`EINVAL`|Non modifiée.|  
   
  **Problèmes de sécurité**  
   
@@ -114,7 +97,7 @@ errno_t _gcvt_s(
 ## <a name="remarks"></a>Notes  
  La fonction `_gcvt_s` convertit une `value` à virgule flottante en une chaîne de caractères (qui inclut une virgule décimale et, éventuellement, un octet de signe) et stocke la chaîne dans `buffer`. `buffer` doit être assez grand pour contenir la valeur convertie, plus un caractère Null de fin, qui est ajouté automatiquement. Une mémoire tampon de longueur `_CVTBUFSIZE` est suffisante pour n’importe quelle valeur à virgule flottante. Si la taille de mémoire tampon utilisée est `digits` + 1, la fonction ne remplace pas la fin de la mémoire tampon ; veillez donc à fournir une mémoire tampon suffisante pour cette opération. `_gcvt_s` tente de produire `digits` chiffres au format décimal. Si elle n’y parvient pas, elle génère `digits` chiffres au format exponentiel. Les zéros de fin peuvent être supprimés pendant la conversion.  
   
- En C++, l’utilisation de cette fonction est simplifiée par une surcharge de modèle ; la surcharge peut déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, l’utilisation de cette fonction est simplifiée par une surcharge de modèle ; la surcharge peut déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  La version de débogage de cette fonction remplit d’abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -124,7 +107,7 @@ errno_t _gcvt_s(
 |-------------|---------------------|---------------------|  
 |`_gcvt_s`|\<stdlib.h>|\<error.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

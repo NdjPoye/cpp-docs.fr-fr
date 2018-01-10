@@ -39,11 +39,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2218d7b563666429aeeed07059b4e32640ffefe2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 506dafbbb2f1954584af0e6be613ecbcc9292a0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbalpha-ismbbalphal"></a>_ismbbalpha, _ismbbalpha_l
 Détermine si un caractère multioctet spécifié est alphanumérique.  
@@ -82,7 +83,7 @@ isalpha || _ismbbkalnum
 |`_ismbbalpha`|\<mbctype.h>|  
 |`_ismbbalpha_l`|\<mbctype.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

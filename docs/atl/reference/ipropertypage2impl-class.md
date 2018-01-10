@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40cdaeef31226cf47dcf4beb08f11242932578c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17773bdd07d4ae25b33bc104d46d607b5069f78d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ipropertypage2impl-class"></a>Classe de IPropertyPage2Impl
 Cette classe implémente **IUnknown** et hérite de l’implémentation par défaut de [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).  
@@ -52,7 +53,7 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 |----------|-----------------|  
 |[IPropertyPage2Impl::EditProperty](#editproperty)|Spécifie le contrôle de la propriété reçoit le focus lorsque la page de propriétés est activée. L’implémentation ATL retourne **E_NOTIMPL**.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) interface étend [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) en ajoutant le `EditProperty` (méthode). Cette méthode permet à un client sélectionner une propriété spécifique dans un objet de page de propriétés.  
   
  Classe `IPropertyPage2Impl` retourne simplement **E_NOTIMPL** pour **IPropertyPage2::EditProperty**. Toutefois, il hérite de l’implémentation par défaut de [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) et implémente **IUnknown** en envoyant des informations pour le vidage de builds périphérique en mode débogage.  
@@ -81,7 +82,7 @@ HRESULT EditProperty(DISPID dispID);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IPropertyPage2::EditProperty](http://msdn.microsoft.com/library/windows/desktop/ms690353) dans le Kit de développement logiciel Windows.  
   
 ## <a name="see-also"></a>Voir aussi  

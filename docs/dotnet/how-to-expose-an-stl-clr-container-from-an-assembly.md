@@ -16,11 +16,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b47e59e5b0c14bc0014140da67d226d62fad02ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 84505edf0877a5ae20d28906dde7f4c709574034
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Comment : exposer un conteneur STL/CLR d'un assembly
 Les conteneurs STL/CLR tels que `list` et `map` sont implémentés en tant que classes ref de modèle. Étant donné que les modèles C++ sont instanciés au moment de la compilation, deux classes de modèles qui ont exactement la même signature, mais se trouvent dans des assemblys différents sont réellement différents types. Cela signifie que les classes de modèle ne peut pas être utilisés au-delà des limites d’assembly.  
@@ -81,7 +84,7 @@ Les conteneurs STL/CLR tels que `list` et `map` sont implémentés en tant que c
 ### <a name="output"></a>Sortie  
   
 <CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
-## <a name="example-4"></a>Exemple 4  
+## <a name="example-4"></a>Exemple 4  
   
 ### <a name="description"></a>Description  
  Dans cet exemple, nous créer un client c# qui utilise la bibliothèque de classes créée dans les exemples 1 et 2. Ce client utilise le <xref:System.Collections.Generic.ICollection%601> méthodes des conteneurs STL/CLR pour itérer sur les conteneurs et leur contenu s’affiche.  

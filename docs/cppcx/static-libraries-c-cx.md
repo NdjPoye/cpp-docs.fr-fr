@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 5f86d24c693cfcd5eecf8b37f0e4567c9c7af3a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a68475447ed520298b0eab7949386c2e8d078ac6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="static-libraries-ccx"></a>Bibliothèques statiques (C++/CX)
 Une bibliothèque statique qui est utilisée dans une application de plateforme Windows universelle permettre contenir du code à la norme ISO C++, y compris les types STL et également les appels aux API Win32 qui ne sont pas exclus de la plateforme d’application de plateforme Windows universelle. Une bibliothèque statique consomme des composants Windows Runtime et peut créer des composants Windows Runtime avec certaines restrictions.  
@@ -36,7 +37,7 @@ Une bibliothèque statique qui est utilisée dans une application de plateforme 
   
  Si vous ajoutez un projet de bibliothèque statique C++ à une solution d’application de plateforme Windows universelle, vous devrez peut-être mettre à jour les paramètres de propriété du projet de bibliothèque afin que la propriété de prise en charge de plateforme Windows universelle est définie **Oui**. Sans ce paramètre, le code est généré et crée des liens, mais une erreur se produit lorsque vous essayez de vérifier l'application pour [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)]. La bibliothèque statique doit être compilée avec les mêmes paramètres de compilateur que ceux du projet qui la consomme.  
   
- Si vous consommez une bibliothèque statique qui crée des classes `ref` publiques, des classes d'interface publiques ou des classes de valeur publiques, l'éditeur de liens déclenche l'avertissement suivant :  
+ Si vous consommez une bibliothèque statique qui crée des classes `ref` publiques, des classes d'interface publiques ou des classes de valeur publiques, l'éditeur de liens déclenche l'avertissement suivant :  
   
 > **avertissement LNK4264 :** archivage du fichier objet compilé avec /ZW dans une bibliothèque statique ; Notez que lors de la création des types Windows Runtime, il n'est pas recommandée pour créer un lien avec une bibliothèque statique qui contient des métadonnées Windows Runtime.  
   

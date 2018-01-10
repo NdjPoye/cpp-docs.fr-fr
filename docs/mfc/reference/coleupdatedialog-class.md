@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 447d6571977d636809212adc616f21d284e7fc16
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32a7d41c507c2b7b932ba33df911151bfc417091
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coleupdatedialog-class"></a>Classe de COleUpdateDialog
 Utilisée pour un cas particulier de la boîte de dialogue OLE Modifier les liens, qui doit être utilisée lorsque vous devez mettre à jour uniquement les objets liés ou incorporés d'un document.  
@@ -50,7 +51,7 @@ class COleUpdateDialog : public COleLinksDialog
 |----------|-----------------|  
 |[COleUpdateDialog::DoModal](#domodal)|Affiche la **modifier les liens** boîte de dialogue dans un mode de mise à jour.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour plus d’informations sur les boîtes de dialogue spécifiques à OLE, consultez l’article [boîtes de dialogue OLE](../../mfc/dialog-boxes-in-ole.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -97,7 +98,7 @@ explicit COleUpdateDialog(
  `pParentWnd`  
  Pointe vers l’objet de fenêtre parente ou propriétaire (de type `CWnd`) auquel appartient l’objet de la boîte de dialogue. S’il s’agit **NULL**, la fenêtre parente de la boîte de dialogue sera définie sur la fenêtre principale de l’application.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction crée uniquement une `COleUpdateDialog` objet. Pour afficher la boîte de dialogue, appelez [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Cette classe doit être utilisée à la place de `COleLinksDialog` lorsque vous souhaitez mettre à jour uniquement les éléments liés ou incorporés.  
   
 ##  <a name="domodal"></a>COleUpdateDialog::DoModal  
@@ -116,7 +117,7 @@ virtual INT_PTR DoModal();
   
 - **IDABORT** si une erreur s’est produite. Si **IDABORT** est retourné, appelez le [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) fonction membre pour obtenir plus d’informations sur le type d’erreur qui s’est produite. Pour obtenir la liste des erreurs possibles, consultez la [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) fonction dans le SDK Windows.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Tous les liens et/ou des incorporations sont mis à jour, sauf si l’utilisateur sélectionne le bouton Annuler.  
   
 ## <a name="see-also"></a>Voir aussi  

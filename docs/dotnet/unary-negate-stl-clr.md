@@ -1,32 +1,33 @@
 ---
-title: "unary_negate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::unary_negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_negate (fonction) (STL/CLR)"
+title: unary_negate (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::unary_negate
+dev_langs: C++
+helpviewer_keywords: unary_negate function [STL/CLR]
 ms.assetid: 83bbdd86-199c-4451-9f70-72f9ade2264a
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 60e7a38ede07a3cf3b1c21b1c5fe26e9f588f2f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# unary_negate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The template class describes a functor that, when called, returns the logical NOT of its stored one\-argument functor.  You use it specify a function object in terms of its stored functor.  
+# <a name="unarynegate-stlclr"></a>unary_negate (STL/CLR)
+La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourne la logique pas de son stockée functor d’un argument. Vous l’utilisez spécifier un objet de fonction en termes de son functor stockée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Fun>  
@@ -48,33 +49,33 @@ public:
     };  
 ```  
   
-#### Paramètres  
- Fun  
- The type of the stored functor.  
+#### <a name="parameters"></a>Paramètres  
+ amusement  
+ Le type de la fonction stockée.  
   
-## Fonctions membres  
+## <a name="member-functions"></a>Fonctions membres  
   
-|Type Definition|Description|  
+|Définition de types|Description|  
 |---------------------|-----------------|  
-|argument\_type|The type of the functor argument.|  
-|delegate\_type|The type of the generic delegate.|  
-|result\_type|The type of the functor result.|  
+|argument_type|Le type de l’argument functor.|  
+|delegate_type|Le type du délégué générique.|  
+|RESULT_TYPE|Le type du résultat functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|unary\_negate|Constructs the functor.|  
+|unary_negate|Construit le foncteur.|  
   
 |Opérateur|Description|  
-|---------------|-----------------|  
-|operator\(\)|Computes the desired function.|  
-|delegate\_type^|Casts the functor to a delegate.|  
+|--------------|-----------------|  
+|operator()|Calcule la fonction de votre choix.|  
+|delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
   
-## Notes  
- The template class describes a one\-argument functor that stores another one\-argument functor.  It defines the member operator `operator()` so that, when the object is called as a function, it returns the logical NOT of the stored functor called with the argument.  
+## <a name="remarks"></a>Notes  
+ La classe de modèle décrit un functor un argument qui stocke un autre un argument functor. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, elle retourne la logique pas de la fonction stockée appelée avec l’argument.  
   
- You can also pass the object as a function argument whose type is `delegate_type^` and it will be converted appropriately.  
+ Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_unary_negate.cpp   
@@ -116,13 +117,16 @@ int main()
   
 ```  
   
-  **4 0**  
- **1 0**  
- **1 0**   
-## Configuration requise  
- **Header:** \<cliext\/functional\>  
+```Output  
+4 0  
+1 0  
+1 0  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/fonctionnel >  
   
-## Voir aussi  
- [not1](../dotnet/not1-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [not1 (STL/CLR)](../dotnet/not1-stl-clr.md)

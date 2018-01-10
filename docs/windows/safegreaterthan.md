@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: f1d09de4e09b76d663482ea73b8f0ed56b249bd1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 82f3d666e6e0c5a09f0968547b732b3735d23d2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safegreaterthan"></a>SafeGreaterThan
 Compare deux nombres.  
@@ -44,7 +47,7 @@ inline bool SafeGreaterThan (
 ## <a name="return-value"></a>Valeur de retour  
  `true`Si `t` est supérieur à `u`; sinon `false`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `SafeGreaterThan`étend l’opérateur de comparaison standard en vous permettant de comparer deux types de nombres.  
   
  Cette méthode fait partie de [Bibliothèque SafeInt](../windows/safeint-library.md) et est conçu pour une opération de comparaison unique sans créer d’instance de la [SafeInt, classe](../windows/safeint-class.md).  

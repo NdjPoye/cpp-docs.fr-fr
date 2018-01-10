@@ -27,11 +27,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4498f19e6a228bdfb23103ab2ee25d69fcfae1e3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f880b3cb806efa63299bf6cfa4aab4c72df23817
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="o1-o2-minimize-size-maximize-speed"></a>/O1, /O2 (Réduire la taille, augmenter la vitesse)
 
@@ -42,7 +43,7 @@ Sélectionne un ensemble prédéfini d’options qui affectent la taille et la v
 > /O1  
 > /O2
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Le **/O1** et **/O2** options du compilateur sont un moyen rapide de définir plusieurs options d’optimisation spécifiques à la fois. Le **/O1** option définit les options de l’optimisation individuels qui créent le code plus petit dans la majorité des cas. Le **/O2** option définit les options qui créent le code le plus rapide dans la majorité des cas. Le **/O2** option est la valeur par défaut pour les versions release. Ce tableau montre les options spécifiques qui sont définies par **/O1** et **/O2**:
 
@@ -57,7 +58,7 @@ Le **/O1** et **/O2** options du compilateur sont un moyen rapide de définir pl
 > **x86 spécifiques**  
 > Ces options impliquent l’utilisation de l’Omission du pointeur Frame ([/Oy](../../build/reference/oy-frame-pointer-omission.md)) option.
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l’environnement de développement Visual Studio
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
 

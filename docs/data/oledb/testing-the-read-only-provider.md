@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad2cf102902f62d03d4027c16b7d81b255b85875
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 438ab42a7f0f12379621a591f3b0b1eeb5930afd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="testing-the-read-only-provider"></a>Test du fournisseur accessible en lecture seule
 Pour tester un fournisseur, vous avez besoin d’un consommateur. Il est utile si le consommateur peut correspondre avec le fournisseur. Les modèles du consommateur OLE DB constituent une fine couche qui enveloppe OLE DB et correspondent aux objets COM du fournisseur. Car la source est livrée avec les modèles du consommateur, il est facile de déboguer un fournisseur avec eux. Les modèles du consommateur sont également un moyen très simple et rapide pour développer des applications consommateur.  

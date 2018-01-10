@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,38 +23,22 @@ f1_keywords:
 - ATLFILE/ATL::CAtlFile::UnlockRange
 - ATLFILE/ATL::CAtlFile::Write
 - ATLFILE/ATL::CAtlFile::m_pTM
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlFile class
+dev_langs: C++
+helpviewer_keywords: CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5ba8aa0bc5544d8d541fecb87e2eb0108c2c5ebd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a66e697a3599e7bfeef0f1d5d147e19b668222ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="catlfile-class"></a>CAtlFile (classe)
-Cette classe fournit un wrapper mince entourant Windows API de gestion de fichiers.  
+# <a name="catlfile-class"></a>Classe de CAtlFile
+Cette classe fournit un wrapper mince entourant les fenêtres des API de gestion de fichiers.  
   
 > [!IMPORTANT]
 >  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
@@ -74,16 +57,16 @@ class CAtlFile : public CHandle
 |----------|-----------------|  
 |[CAtlFile::CAtlFile](#catlfile)|Constructeur.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Méthodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
 |[CAtlFile::Create](#create)|Appelez cette méthode pour créer ou ouvrir un fichier.|  
-|[CAtlFile::Flush](#flush)|Appelez cette méthode pour effacer les mémoires tampons pour le fichier et pour que toutes les données mises en mémoire tampon à écrire dans le fichier.|  
-|[CAtlFile::GetOverlappedResult](#getoverlappedresult)|Appelez cette méthode pour obtenir les résultats d’une opération sur le fichier avec chevauchement.|  
+|[CAtlFile::Flush](#flush)|Appelez cette méthode pour effacer les mémoires tampons pour le fichier et de provoquer de toutes les données mises en mémoire tampon à écrire dans le fichier.|  
+|[CAtlFile::GetOverlappedResult](#getoverlappedresult)|Appelez cette méthode pour obtenir les résultats d’une opération superposée sur le fichier.|  
 |[CAtlFile::GetPosition](#getposition)|Appelez cette méthode pour obtenir la position actuelle du pointeur de fichier à partir du fichier.|  
 |[CAtlFile::GetSize](#getsize)|Appelez cette méthode pour obtenir la taille en octets du fichier.|  
-|[CAtlFile::LockRange](#lockrange)|Appelez cette méthode pour verrouiller une région dans le fichier pour empêcher les autres processus d’y accéder.|  
+|[CAtlFile::LockRange](#lockrange)|Appelez cette méthode pour le verrouillage d’une région dans le fichier pour empêcher les autres processus d’y accéder.|  
 |[CAtlFile::Read](#read)|Appelez cette méthode pour lire des données à partir d’un fichier en commençant à la position indiquée par le pointeur de fichier.|  
 |[CAtlFile::Seek](#seek)|Appelez cette méthode pour déplacer le pointeur de fichier du fichier.|  
 |[CAtlFile::SetSize](#setsize)|Appelez cette méthode pour définir la taille du fichier.|  
@@ -96,10 +79,10 @@ class CAtlFile : public CHandle
 |----------|-----------------|  
 |[CAtlFile::m_pTM](#m_ptm)|Pointeur vers `CAtlTransactionManager` objet|  
   
-## <a name="remarks"></a>Remarques  
- Utilisez cette classe lorsque les besoins de gestion de fichiers sont relativement simples, mais que l’API Windows fournit plus d’abstraction est nécessaire, sans inclure les dépendances MFC.  
+## <a name="remarks"></a>Notes  
+ Utilisez cette classe lorsque les besoins de gestion de fichiers sont relativement simples, mais plus d’abstraction fournit de l’API Windows est nécessaire, sans inclure les dépendances MFC.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CHandle](../../atl/reference/chandle-class.md)  
   
  `CAtlFile`  
@@ -127,7 +110,7 @@ explicit CAtlFile(HANDLE hFile) throw();
  `pTM`  
  Pointeur vers l'objet CAtlTransactionManager  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le constructeur de copie transfère la propriété du handle de fichier d’origine `CAtlFile` objet à l’objet qui vient d’être construit.  
   
 ##  <a name="create"></a>CAtlFile::Create  
@@ -149,31 +132,31 @@ HRESULT Create(
  Nom du fichier.  
   
  `dwDesiredAccess`  
- L’accès de votre choix. Consultez la page `dwDesiredAccess` dans [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ L’accès souhaité. Consultez `dwDesiredAccess` dans [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) dans le Kit de développement logiciel Windows.  
   
  `dwShareMode`  
- Le mode de partage. Consultez la page `dwShareMode` dans **CreateFile**.  
+ Le mode de partage. Consultez `dwShareMode` dans **CreateFile**.  
   
  `dwCreationDisposition`  
- La disposition de création. Consultez la page `dwCreationDisposition` dans **CreateFile**.  
+ La disposition de création. Consultez `dwCreationDisposition` dans **CreateFile**.  
   
  `dwFlagsAndAttributes`  
- Les indicateurs et les attributs. Consultez la page `dwFlagsAndAttributes` dans **CreateFile**.  
+ Les indicateurs et les attributs. Consultez `dwFlagsAndAttributes` dans **CreateFile**.  
   
  `lpsa`  
- Les attributs de sécurité. Consultez la page *lpSecurityAttributes* dans **CreateFile**.  
+ Les attributs de sécurité. Consultez *lpSecurityAttributes* dans **CreateFile**.  
   
  `hTemplateFile`  
- Le fichier de modèle. Consultez la page `hTemplateFile` dans **CreateFile**.  
+ Le fichier de modèle. Consultez `hTemplateFile` dans **CreateFile**.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appels [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) pour créer ou ouvrir le fichier.  
   
 ##  <a name="flush"></a>CAtlFile::Flush  
- Appelez cette méthode pour effacer les mémoires tampons pour le fichier et pour que toutes les données mises en mémoire tampon à écrire dans le fichier.  
+ Appelez cette méthode pour effacer les mémoires tampons pour le fichier et de provoquer de toutes les données mises en mémoire tampon à écrire dans le fichier.  
   
 ```
 HRESULT Flush() throw();
@@ -182,11 +165,11 @@ HRESULT Flush() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appels [FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439) pour vider les données mises en mémoire tampon dans le fichier.  
   
 ##  <a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult  
- Appelez cette méthode pour obtenir les résultats d’une opération sur le fichier avec chevauchement.  
+ Appelez cette méthode pour obtenir les résultats d’une opération superposée sur le fichier.  
   
 ```
 HRESULT GetOverlappedResult(
@@ -197,19 +180,19 @@ HRESULT GetOverlappedResult(
   
 ### <a name="parameters"></a>Paramètres  
  `pOverlapped`  
- La structure superposée. Consultez la page `lpOverlapped` dans [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ La structure. Consultez `lpOverlapped` dans [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) dans le Kit de développement logiciel Windows.  
   
  *dwBytesTransferred*  
- Les octets transférés. Consultez la page *lpNumberOfBytesTransferred* dans `GetOverlappedResult`.  
+ Les octets transférés. Consultez *lpNumberOfBytesTransferred* dans `GetOverlappedResult`.  
   
  `bWait`  
- L’option d’attente. See `bWait` in `GetOverlappedResult`.  
+ L’option d’attente. Consultez `bWait` dans `GetOverlappedResult`.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
- Appels [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) pour obtenir les résultats d’une opération sur le fichier avec chevauchement.  
+### <a name="remarks"></a>Notes  
+ Appels [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) pour obtenir les résultats d’une opération superposée sur le fichier.  
   
 ##  <a name="getposition"></a>CAtlFile::GetPosition  
  Appelez cette méthode pour obtenir la position actuelle du pointeur de fichier.  
@@ -225,7 +208,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appels [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) pour obtenir la position actuelle du pointeur de fichier.  
   
 ##  <a name="getsize"></a>CAtlFile::GetSize  
@@ -246,7 +229,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
  Appels [GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955) pour obtenir la taille en octets du fichier.  
   
 ##  <a name="lockrange"></a>CAtlFile::LockRange  
- Appelez cette méthode pour verrouiller une région dans le fichier pour empêcher les autres processus d’y accéder.  
+ Appelez cette méthode pour le verrouillage d’une région dans le fichier pour empêcher les autres processus d’y accéder.  
   
 ```
 HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
@@ -263,7 +246,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Appels [fichier de verrouillage](http://msdn.microsoft.com/library/windows/desktop/aa365202) verrouillage d’une région dans le fichier. Le verrouillage d’octets dans un fichier empêche l’accès à ces octets par d’autres processus. Vous pouvez verrouiller plus d’une région d’un fichier, mais aucune région qui se chevauchent n’est autorisées. Lorsque vous déverrouillez une région, à l’aide [CAtlFile::UnlockRange](#unlockrange), la plage d’octets doit correspondre exactement à la région a été précédemment verrouillée. `LockRange`ne fusionne pas les régions adjacentes ; Si deux régions verrouillées sont adjacentes, vous devez la déverrouiller chacune séparément.  
+ Appels [fichier de verrouillage](http://msdn.microsoft.com/library/windows/desktop/aa365202) verrouillage d’une région dans le fichier. Le verrouillage d’octets dans un fichier empêche l’accès à ces octets par d’autres processus. Vous pouvez verrouiller plus d’une région d’un fichier, mais aucune région qui se chevauche n’est autorisées. Lorsque vous déverrouillez une région, à l’aide [CAtlFile::UnlockRange](#unlockrange), la plage d’octets doit correspondre exactement à la région qui a été précédemment verrouillée. `LockRange`ne fusionne pas les zones adjacentes ; Si deux régions verrouillées sont adjacentes, vous devez déverrouiller chacune séparément.  
   
 ##  <a name="m_ptm"></a>CAtlFile::m_pTM  
  Pointeur vers un `CAtlTransactionManager` objet.  
@@ -272,7 +255,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 CAtlTransactionManager* m_pTM;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="read"></a>CAtlFile::Read  
  Appelez cette méthode pour lire des données à partir d’un fichier en commençant à la position indiquée par le pointeur de fichier.  
@@ -301,7 +284,7 @@ HRESULT Read(
   
 ### <a name="parameters"></a>Paramètres  
  `pBuffer`  
- Pointeur vers la mémoire tampon qui recevra les données lues à partir du fichier.  
+ Pointeur vers la mémoire tampon qui reçoit les données lues à partir du fichier.  
   
  `nBufSize`  
  Taille de la mémoire tampon en octets.  
@@ -310,16 +293,16 @@ HRESULT Read(
  Nombre d'octets lus.  
   
  `pOverlapped`  
- La structure superposée. Consultez la page `lpOverlapped` dans [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ La structure. Consultez `lpOverlapped` dans [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467) dans le Kit de développement logiciel Windows.  
   
  `pfnCompletionRoutine`  
- La routine d’exécution. Consultez la page *lpCompletionRoutine* dans [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ La routine d’exécution. Consultez *lpCompletionRoutine* dans [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) dans le Kit de développement logiciel Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
- Les trois premières formes appeler [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), le dernier [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) pour lire des données à partir du fichier. Utilisez [CAtlFile::Seek](#seek) pour déplacer le pointeur de fichier.  
+### <a name="remarks"></a>Notes  
+ Les trois premières formes appellent [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), le dernier [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) pour lire des données à partir du fichier. Utilisez [CAtlFile::Seek](#seek) pour déplacer le pointeur de fichier.  
   
 ##  <a name="seek"></a>CAtlFile::Seek  
  Appelez cette méthode pour déplacer le pointeur de fichier du fichier.  
@@ -332,7 +315,7 @@ HRESULT Seek(
   
 ### <a name="parameters"></a>Paramètres  
  `nOffset`  
- Le décalage du point de départ donné par `dwFrom`.  
+ Le décalage à partir du point de départ donné par `dwFrom`.  
   
  `dwFrom`  
  Le point de départ (FILE_BEGIN, FILE_CURRENT ou FILE_END).  
@@ -340,7 +323,7 @@ HRESULT Seek(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appels [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) pour déplacer le pointeur de fichier.  
   
 ##  <a name="setsize"></a>CAtlFile::SetSize  
@@ -358,7 +341,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
  Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Appels [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) et [SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) pour définir la taille du fichier. Au retour, le pointeur de fichier est placé à la fin du fichier.  
+ Appels [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) et [SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) pour définir la taille du fichier. En retour, le pointeur de fichier est placé à la fin du fichier.  
   
 ##  <a name="unlockrange"></a>CAtlFile::UnlockRange  
  Appelez cette méthode pour déverrouiller une région du fichier.  
@@ -403,16 +386,16 @@ HRESULT Write(
   
 ### <a name="parameters"></a>Paramètres  
  `pBuffer`  
- Mémoire tampon contenant les données à écrire dans le fichier.  
+ La mémoire tampon qui contient les données à écrire dans le fichier.  
   
  `nBufSize`  
  Le nombre d’octets à transférer de la mémoire tampon.  
   
  `pOverlapped`  
- La structure superposée. Consultez la page `lpOverlapped` dans [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ La structure. Consultez `lpOverlapped` dans [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747) dans le Kit de développement logiciel Windows.  
   
  `pfnCompletionRoutine`  
- La routine d’exécution. Consultez la page *lpCompletionRoutine* dans [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ La routine d’exécution. Consultez *lpCompletionRoutine* dans [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) dans le Kit de développement logiciel Windows.  
   
  `pnBytesWritten`  
  Les octets écrits.  
@@ -420,11 +403,10 @@ HRESULT Write(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
- Les trois premières formes appeler [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747), le dernier appelle [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) pour écrire des données dans le fichier. Utilisez [CAtlFile::Seek](#seek) pour déplacer le pointeur de fichier.  
+### <a name="remarks"></a>Notes  
+ Les trois premières formes appellent [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747), les appels de dernière [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) pour écrire des données dans le fichier. Utilisez [CAtlFile::Seek](#seek) pour déplacer le pointeur de fichier.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de texte défilant](../../visual-cpp-samples.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
- [CHandle (classe)](../../atl/reference/chandle-class.md)
-
+ [CHandle, classe](../../atl/reference/chandle-class.md)

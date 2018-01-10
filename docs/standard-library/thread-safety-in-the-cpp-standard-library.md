@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a30ad3887ace197276556aab929a7d16ae7922e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fa4c69e79a918d7b8cf77e03f76c81e846d5a5b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread-safety-in-the-c-standard-library"></a>Sécurité des threads dans la bibliothèque standard C++
 Les règles de sécurité des threads suivantes s’appliquent à toutes les classes de la bibliothèque standard C++, y compris `shared_ptr`, comme décrit ci-dessous.  De meilleures garanties sont parfois fournies, par exemple, les objets iostream standard, comme décrit ci-dessous, ainsi que des types spécifiquement destinés au multithreading, comme ceux dans [\<atomic>](../standard-library/atomic.md).  
@@ -42,7 +43,7 @@ Les règles de sécurité des threads suivantes s’appliquent à toutes les cla
 >  La lecture à partir d'une mémoire tampon de flux n'est pas considérée comme étant une opération de lecture. Elle est plutôt considérée comme une opération d'écriture, car l'état de la classe est modifié.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la bibliothèque C++ Standard](../standard-library/cpp-standard-library-overview.md)
+ [Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)
 
 
 

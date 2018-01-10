@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1911efe811545c13e62ab9f917ddfc284af35b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7607070692941606b863be9248b2d69f093f3a13
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="265-flush-directive"></a>2.6.5 Directive flush
 Le **vider** directive, explicite ou implicite, spécifie un point de séquence de « inter-threads » à laquelle l’implémentation est requise pour garantir que tous les threads dans une équipe ont une vue cohérente de certains objets (indiqué ci-dessous) dans mémoire. Cela signifie que des évaluations précédentes des expressions qui font référence à ces objets sont terminées et que les évaluations suivantes n’ont pas encore commencé. Par exemple, compilateurs doivent restaurer les valeurs des objets à partir de registres à la mémoire et matériel devrez peut-être vider les mémoires tampons d’écriture dans la mémoire et de recharger les valeurs des objets de la mémoire.  

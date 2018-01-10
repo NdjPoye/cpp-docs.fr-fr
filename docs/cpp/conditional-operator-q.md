@@ -4,29 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '?:'
 - '?'
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - conditional operators [C++]
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: f66e1eb9364503988178c70f3628b44fa3d5b93a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 296ced0754dd12017353469845b3bc4b30e0dc11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conditional-operator--"></a>Opérateur conditionnel : ? :
 ## <a name="syntax"></a>Syntaxe  
@@ -36,7 +34,7 @@ ms.lasthandoff: 09/25/2017
 expression ? expression : expression  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’opérateur conditionnel (**? :**) est un opérateur ternaire (il prend trois opérandes). L'opérateur conditionnel fonctionne comme suit :  
   
 -   Le premier opérande est implicitement converti en type `bool`. Il est évalué et tous les effets secondaires sont résolus avant de continuer.  

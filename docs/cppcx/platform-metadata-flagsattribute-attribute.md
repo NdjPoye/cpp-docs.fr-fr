@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 4e2e4aec3a7b324acbcd99e731a9f4f41d568dc0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d6679fbf59c279fe7abd4bffb8fca9fcde0b8867
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformmetadataflagsattribute-attribute"></a>Platform::Metadata::FlagsAttribute (attribut)
 Indique qu'une énumération peut être traitée comme un champ de bits, c'est-à-dire un ensemble d'indicateurs.  
@@ -36,7 +37,7 @@ public ref class Flags abstract : Attribute
   
  [Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ### <a name="requirements"></a>Spécifications  
  **Minimum pris en charge le client :** Windows 8  

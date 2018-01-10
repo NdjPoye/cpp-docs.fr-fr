@@ -1,63 +1,63 @@
 ---
-title: "__segmentlimit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__segmentlimit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__segmentlimit, intrinsèque"
-  - "lsl, instruction"
+title: __segmentlimit | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __segmentlimit
+dev_langs: C++
+helpviewer_keywords:
+- __segmentlimit intrinsic
+- lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "21"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5e7c93923a3fdbb2a5e62163b41c83be30d0a54e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# __segmentlimit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="segmentlimit"></a>__segmentlimit
+**Section spécifique à Microsoft**  
   
- Génère des instructions d' `lsl` \(limite de segment de charge\).  
+ Génère le `lsl` les instructions (limite du Segment de charge).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-unsigned long __segmentlimit(   
-   unsigned long a   
+unsigned long __segmentlimit(   
+   unsigned long a   
 );  
 ```  
   
-#### Paramètres  
- \[in\] `a`  
- une constante qui spécifie le sélecteur de segment.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `a`  
+ Constante qui spécifie le sélecteur de segment.  
   
-## Valeur de retour  
- la limite de segment du sélecteur de segment spécifié par `a,`à condition que le sélecteur soit valide et visible au niveau d'autorisation actuel.  
+## <a name="return-value"></a>Valeur de retour  
+ La limite du segment du sélecteur de segment spécifié par `a`, à condition que le sélecteur est valide et visible au niveau d’autorisation actuel.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__segmentlimit`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- Si la limite de segment ne peut pas être récupérée, de échec de cette instruction.  En cas de échec, cette instruction désactive la balise de ZF et la valeur de retour est pas définie.  
+## <a name="remarks"></a>Notes  
+ Si la limite du segment ne peut pas être récupérée, cette instruction échoue. En cas d’échec, cette instruction efface l’indicateur ZF et la valeur de retour n’est pas définie.  
   
- Cette routine est uniquement disponible sous forme intrinsèque.  
+ Cette routine est disponible uniquement en tant qu'intrinsèque.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 #include <stdio.h>  
@@ -104,10 +104,14 @@ int main(void)
 }  
 ```  
   
-  **avant : eflags \=0x0 de la limite \=0xbaadbabe de segment**  
-**Après : sur un des segments les eflags \=0x256 de la limite \=0xffffffff eflags.zf \= défini**  
-**Succès.  le SL a été modifié**    
-## détail de FIN Microsoft  
+```Output  
+Before: segment limit =0xbaadbabe eflags =0x0  
+After: segment limit =0xffffffff eflags =0x256 eflags.zf = set  
+Success!  
+sl was changed  
+```  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+**FIN de la section spécifique à Microsoft**  
+  
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

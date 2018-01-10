@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - operator_cpp
 - operator
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - redefinable operators [C++]
 - non-redefinable operators [C++]
@@ -20,16 +18,16 @@ helpviewer_keywords:
 - operators [C++], overloading
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5ac9415ec186760a70394772ffaff011d7c68c95
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 617236d30f3c4473f6c7785db97789105d6cd565
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-overloading"></a>Surcharge d'opérateur
 Le mot clé `operator` déclare une fonction spécifiant la signification de `operator-symbol` quand il est appliqué aux instances d'une classe. Cela donne à l'opérateur plusieurs significations ou le « surcharge ». Le compilateur fait la distinction entre les différentes significations d’un opérateur en examinant les types de ses opérandes.  
@@ -41,7 +39,7 @@ Le mot clé `operator` déclare une fonction spécifiant la signification de `op
 type operator operator-symbol ( parameter-list )  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez redéfinir la fonction de la plupart des opérateurs intégrés de manière globale ou classe par classe. Les opérateurs surchargés sont implémentés en tant que fonctions.  
   
  Le nom d’un opérateur surchargé est `operator x`, où `x` est l’opérateur tel qu’il apparaît dans le tableau suivant. Par exemple, pour surcharger l'opérateur d'addition, vous définissez une fonction appelée `operator+`. De la même façon, pour surcharger l'opérateur d'addition/assignation, `+=`, vous définissez une fonction appelée `operator+=`.  

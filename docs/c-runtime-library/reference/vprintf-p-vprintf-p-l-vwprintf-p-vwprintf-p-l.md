@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -36,8 +35,7 @@ f1_keywords:
 - vtprintf_p
 - _vtprintf_p
 - _vprintf_p
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _vtprintf_p_l function
 - _vtprintf_p function
@@ -53,30 +51,16 @@ helpviewer_keywords:
 - vwprintf_p_l function
 - formatted text [C++]
 ms.assetid: 3f99bde3-c891-493d-908f-30559c421058
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: bcf46edc032856c7fa6b74d928cd08c04dcfac26
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a33f7c8f834e9e1e67a5322d15494423bf10190e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vprintfp-vprintfpl-vwprintfp-vwprintfpl"></a>_vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l
 Écrit la sortie mise en forme en utilisant un pointeur désignant une liste d’arguments et permet de spécifier l’ordre dans lequel les arguments sont utilisés.  
@@ -109,12 +93,12 @@ int _vwprintf_p_l(
  Spécification de format.  
   
  `argptr`  
- Pointeur vers la liste d'arguments.  
+ Pointeur vers la liste d’arguments.  
   
  `locale`  
  Paramètres régionaux à utiliser.  
   
- Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Valeur de retour  
  `_vprintf_p` et `_vwprintf_p` retournent le nombre de caractères écrits, sans le caractère Null de fin, ou une valeur négative si une erreur de sortie se produit.  

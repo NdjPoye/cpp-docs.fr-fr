@@ -1,32 +1,33 @@
 ---
-title: "InterfaceListHelper, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceListHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InterfaceListHelper (structure)"
+title: InterfaceListHelper (Structure) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceListHelper
+dev_langs: C++
+helpviewer_keywords: InterfaceListHelper structure
 ms.assetid: 4297e419-c96b-45df-8a00-7568062125ba
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 241613f94431903c7d9e3957cece46844dc67ad9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# InterfaceListHelper, structure
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="interfacelisthelper-structure"></a>InterfaceListHelper, structure
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template <  
@@ -49,57 +50,57 @@ template <
 struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T0`  
- Paramètre de modèle 0, qui est requis.  
+ Paramètre de modèle 0, ce qui est nécessaire.  
   
  `T1`  
- Paramètre de modèle 1, qui par défaut n'est pas spécifié.  
+ Paramètre de modèle 1, qui par défaut n’est pas spécifié.  
   
  `T2`  
- Paramètre de modèle 2, qui par défaut n'est pas spécifié. Le troisième paramètre de modèle.  
+ Paramètre de modèle 2, qui par défaut n’est pas spécifié. Le troisième paramètre de modèle.  
   
  `T3`  
- Paramètre de modèle 3, qui par défaut n'est pas spécifié.  
+ Paramètre de modèle 3, qui par défaut n’est pas spécifié.  
   
  `T4`  
- Paramètre de modèle 4, qui par défaut n'est pas spécifié.  
+ Paramètre de modèle 4, qui par défaut n’est pas spécifié.  
   
  `T5`  
- Paramètre de modèle 5, qui par défaut n'est pas spécifié.  
+ Paramètre de modèle 5, qui par défaut n’est pas spécifié.  
   
  `T6`  
- Paramètre de modèle 6, qui par défaut n'est pas spécifié.  
+ Paramètre de modèle 6, qui par défaut n’est pas spécifié.  
   
  `T7`  
- Paramètre de modèle 7, qui par défaut n'est pas spécifié.  
+ Paramètre de modèle 7, qui par défaut n’est pas spécifié.  
   
  `T8`  
- Paramètre de modèle 8, qui par défaut n'est pas spécifié.  
+ Paramètre de modèle 8, qui par défaut n’est pas spécifié.  
   
  `T9`  
- Paramètre de modèle 9, qui par défaut n'est pas spécifié.  
+ Paramètre de modèle 9, qui par défaut n’est pas spécifié.  
   
-## Remarques  
- Génère un type InterfaceList en appliquant de manière récursive les arguments de paramètres de modèle spécifiés.  
+## <a name="remarks"></a>Notes  
+ Crée un type InterfaceList en appliquant les arguments de paramètre de modèle spécifié de manière récursive.  
   
- Le modèle InterfaceListHelper utilise le paramètre de modèle `T0` pour définir la première donnée membre dans une structure InterfaceList, puis applique de manière récursive le modèle InterfaceListHelper à tous paramètres restants de modèle.  InterfaceListHelper s'arrête lorsqu'il n'y a aucun paramètre de modèle restant.  
+ Le modèle InterfaceListHelper utilise le paramètre de modèle `T0` pour définir les données du premier membre dans un InterfaceList (structure), puis de manière récursive s’applique le modèle InterfaceListHelper pour toutes les autres paramètres de modèle. InterfaceListHelper s’arrête lorsqu’il n’y a aucun paramètre de modèle restants.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Typedefs publics  
+### <a name="public-typedefs"></a>Typedefs publics  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |`TypeT`|Un synonyme du type InterfaceList.|  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `InterfaceListHelper`  
   
-## Configuration requise  
- **En\-tête:** implements.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** implements.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

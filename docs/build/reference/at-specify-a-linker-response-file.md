@@ -1,55 +1,54 @@
 ---
-title: "@ (Sp&#233;cifier un fichier r&#233;ponse de l&#39;&#201;diteur de liens) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "@"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "@ (option de l'éditeur de liens)"
-  - "fichiers de commandes (C++)"
-  - "fichiers de commandes (C++), fichier réponse de l'éditeur de liens"
-  - "éditeur de liens (C++), fichiers réponse"
-  - "fichiers réponse, éditeur de liens C/C++"
+title: "@ (Spécifier un fichier de réponse de l’éditeur de liens) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '@'
+dev_langs: C++
+helpviewer_keywords:
+- linker [C++], response files
+- command files [C++]
+- command files [C++], linker response file
+- '@ linker option'
+- response files, C/C++ linker
 ms.assetid: 5530014f-17d0-4f6b-a6b0-a6ba34f34cfd
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d384bc3cf657b7e81ea116dd317370ee1ea17cc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# @ (Sp&#233;cifier un fichier r&#233;ponse de l&#39;&#201;diteur de liens)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="-specify-a-linker-response-file"></a>@ (Spécifier un fichier réponse de l'Éditeur de liens)
 ```  
 @response_file  
 ```  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  où :  
   
  `response_file`  
- est un fichier texte spécifiant des commandes de l'éditeur de liens.  
+ Un fichier texte spécifiant des commandes de l’éditeur de liens.  
   
-## Notes  
- Pour plus d'informations, consultez [@ \(Spécifier un fichier réponse du compilateur\)](../../build/reference/at-specify-a-compiler-response-file.md).  
+## <a name="remarks"></a>Notes  
+ Consultez [@ (spécifier un fichier de réponse du compilateur)](../../build/reference/at-specify-a-compiler-response-file.md) pour plus d’informations.  
   
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Cette option de l'éditeur de liens n'est pas disponible dans l'environnement de développement Visual Studio.  
+1.  Cette option de l’éditeur de liens n’est pas disponible à partir de l’environnement de développement Visual Studio.  
   
-### Pour définir cette option de l'éditeur de liens par programme  
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   
-1.  Cette option n'est pas modifiable par programme.  
+1.  Cette option de l’éditeur de liens ne peut pas être modifiée par programmation.  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)

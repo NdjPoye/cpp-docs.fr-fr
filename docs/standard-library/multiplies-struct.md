@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cd7c57c2ddab11772eec3fd30e24a8a1e6ab30be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 41eab9f2c172df43a15a05e6dc10127714417af5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiplies-struct"></a>multiplies, struct
 Objet de fonction prédéfini qui effectue l’opération de multiplication ( `operator*` binaire) sur ses arguments.  
@@ -120,7 +121,7 @@ The element-wise products of vectors V1 & v2
  **Espace de noms :** std  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
 
 

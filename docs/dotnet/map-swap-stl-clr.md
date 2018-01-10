@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b9123c5d54e93bd0e5cb205567b6aa428369125c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f82ac0547b58d3e85afdf8fe1c951ed8cec1f742
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapswap-stlclr"></a>map::swap (STL/CLR)
 Échange le contenu de deux conteneurs.  
@@ -31,10 +34,10 @@ void swap(map<Key, Mapped>% right);
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- droite  
+ droit  
  Conteneur avec lequel échanger le contenu.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction membre échange les séquences contrôlées entre `this` et `right`. Cela se fait en temps constant et ne lève aucune exception. Vous l’utiliser comme un moyen rapide de l’échange le contenu de deux conteneurs.  
   
 ## <a name="example"></a>Exemple  

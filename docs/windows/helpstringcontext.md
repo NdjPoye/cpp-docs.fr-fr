@@ -1,32 +1,33 @@
 ---
-title: "helpstringcontext | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.helpstringcontext"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "helpstringcontext attribute [C++]"
+title: helpstringcontext | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.helpstringcontext
+dev_langs: C++
+helpviewer_keywords: helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3c5492d18085d78e20d6654898a6c66647e3bbe0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# helpstringcontext
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Spécifie l'ID d'une rubrique d'aide dans un fichier de .hlp ou .chm.  
+# <a name="helpstringcontext"></a>helpstringcontext
+Spécifie l’ID d’une rubrique d’aide dans un fichier .hlp ou .chm.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,14 +36,14 @@ Spécifie l'ID d'une rubrique d'aide dans un fichier de .hlp ou .chm.
 ) ]  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `contextID`  
- un identificateur de contexte d'aide 32 bits dans le fichier d'aide.  
+ Identificateur de contexte de l’aide de 32 bits disponible dans le fichier d’aide.  
   
-## Notes  
- L'attribut de **helpstringcontext** C\+\+ a les mêmes fonctionnalités que l'attribut de [helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) \).  
+## <a name="remarks"></a>Notes  
+ Le **helpstringcontext** attribut C++ a les mêmes fonctionnalités que le [helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL (attribut).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cpp_attr_ref_helpstringcontext.cpp  
@@ -61,23 +62,22 @@ __interface IMyI
 };  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**classe**, `interface`, méthode d'interface|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|**classe**, `interface`, méthode d’interface|  
+|**Renouvelable**|Aucune|  
+|**Attributs requis**|Aucun|  
+|**Attributs non valides**|Aucun|  
   
- Pour plus d'informations, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs d’interface](../windows/interface-attributes.md)   
+ [Attributs de classe](../windows/class-attributes.md)   
+ [Attributs de méthode](../windows/method-attributes.md)   
  [module](../windows/module-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

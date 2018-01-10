@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c676f5bb8b667bdc3ef26f823737df5c4f97217
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2285c2237001aa02c77b17241e6de62804d6b700
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-overview"></a>Vue d'ensemble de la bibliothèque standard C++
 Toutes les entités de bibliothèque C++ sont déclarées ou définies dans un ou plusieurs en-têtes standard. Cette implémentation comprend deux en-têtes supplémentaires, `<hash_map>` et `<hash_set>`, qui ne sont pas requis par la norme C++. Pour obtenir la liste complète des en-têtes pris en charge par cette implémentation, consultez [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md).  
@@ -55,11 +56,11 @@ Toutes les entités de bibliothèque C++ sont déclarées ou définies dans un o
   
 -   [Itérateurs vérifiés](../standard-library/checked-iterators.md)  
   
--   [Prise en charge des itérateurs de débogage](../standard-library/debug-iterator-support.md)  
+-   [Debug Iterator Support](../standard-library/debug-iterator-support.md)  
   
--   [Informations de référence sur la bibliothèque C++ Standard](../standard-library/cpp-standard-library-reference.md)  
+-   [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)  
   
--   [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)  
+-   [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)  
   
 -   [stdext, espace de noms](../standard-library/stdext-namespace.md)  
   

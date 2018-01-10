@@ -40,11 +40,12 @@ caps.latest.revision: "36"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 88da6a8a34670da588c0fef25b3060c79b3145f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71d47e67d56da59093db99b5da28daa6f1c18db2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 Crée un thread.  
@@ -97,14 +98,14 @@ uintptr_t _beginthreadex( // MANAGED CODE
  Indicateurs qui contrôlent l'état initial d'un nouveau thread. Affectez `initflag` à la valeur `0` pour une exécution immédiate, ou `CREATE_SUSPENDED` pour créer le thread dans un état interrompu. Utilisez [ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx) pour exécuter le thread. Affectez à `initflag` l'indicateur `STACK_SIZE_PARAM_IS_A_RESERVATION` pour utiliser `stack_size` comme taille de réserve initiale de la pile en octets ; si cet indicateur n'est pas spécifié, `stack_size` spécifie la taille de validation.  
   
  `thrdaddr`  
- Pointe vers une variable 32 bits qui reçoit l'identificateur du thread. Si sa valeur est NULL, il n'est pas utilisé.  
+ Pointe vers une variable 32 bits qui reçoit l'identificateur du thread. Si sa valeur est NULL, il n'est pas utilisé.  
   
 ## <a name="return-value"></a>Valeur de retour  
  En cas de réussite, chacune de ces fonctions retourne un handle au nouveau thread. Toutefois, si le nouveau thread se ferme trop rapidement, `_beginthread` peut ne pas retourner un handle valide. (Consultez la discussion dans la section Notes.) En cas d'erreur, `_beginthread` retourne -1L. Par ailleurs, `errno` prend la valeur `EAGAIN` s'il y a trop de threads, la valeur `EINVAL` si l'argument n'est pas valide ou si la taille de la pile est incorrecte, ou la valeur `EACCES` si les ressources sont insuffisantes (par exemple la mémoire). En cas d'erreur, `_beginthreadex` retourne 0 et `errno` et `_doserrno` sont définis.  
   
  Si `startaddress` a la valeur NULL, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions définissent `errno` avec la valeur `EINVAL` et retournent -1.  
   
- Pour plus d’informations sur ces codes de retour et d’autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour plus d’informations sur ces codes de retour et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
  Pour plus d’informations sur `uintptr_t`, consultez [Types standard](../../c-runtime-library/standard-types.md).  
   
@@ -136,7 +137,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
   
  `arglist` est un paramètre à passer au thread nouvellement créé. En général, il s'agit de l'adresse d'un élément de donnée, tel qu'une chaîne de caractères. `arglist` peut être null s'il n'est pas nécessaire, mais `_beginthread` et `_beginthreadex` doivent avoir une valeur à passer au nouveau thread. Tous les threads sont arrêtés si un thread appelle `abort`, `exit`, `_exit`, ou `ExitProcess`.  
   
- Les paramètres régionaux du nouveau thread sont hérités de son thread parent. Si les paramètres régionaux par thread sont activés par un appel à [_configthreadlocale](../../c-runtime-library/reference/configthreadlocale.md) (globalement ou pour de nouveaux threads uniquement), le thread peut modifier ses paramètres régionaux indépendamment de son parent en appelant `setlocale` ou `_wsetlocale`. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ Les paramètres régionaux du nouveau thread sont hérités de son thread parent. Si les paramètres régionaux par thread sont activés par un appel à [_configthreadlocale](../../c-runtime-library/reference/configthreadlocale.md) (globalement ou pour de nouveaux threads uniquement), le thread peut modifier ses paramètres régionaux indépendamment de son parent en appelant `setlocale` ou `_wsetlocale`. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  Pour le code mixte et pure, `_beginthread` et `_beginthreadex` ont chacun deux surcharges. L'une accepte un pointeur de fonction à convention d'appel native, l'autre accepte un pointeur de fonction `__clrcall` . La première surcharge n'est pas sécurisée au niveau du domaine d'application et ne le sera jamais. Si vous écrivez du code mixte ou du code pure, vous devez vérifier que le nouveau thread accède au domaine d'application correct avant d'accéder à des ressources managées. Pour cela, vous pouvez par exemple utiliser la [fonction call_in_appdomain](../../dotnet/call-in-appdomain-function.md). La seconde surcharge est sécurisée au niveau du domaine d'application ; le nouveau thread finit toujours dans le domaine d'application de l'appelant de `_beginthread` ou `_beginthreadex`.  
   
@@ -147,7 +148,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 |`_beginthread`|\<process.h>|  
 |`_beginthreadex`|\<process.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Bibliothèques  
  Uniquement les versions multithread des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

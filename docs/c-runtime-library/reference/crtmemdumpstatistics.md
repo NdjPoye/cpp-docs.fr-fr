@@ -32,11 +32,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 59379d4916c8414717e886d6fea79e977d31836f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d1c5192d3770a520a26bd7d9fd532f412a3e153
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtmemdumpstatistics"></a>_CrtMemDumpStatistics
 Vide les informations d’en-tête de débogage pour l’état du tas spécifié sous une forme lisible par l’utilisateur (version Debug uniquement).  
@@ -58,7 +59,7 @@ void _CrtMemDumpStatistics(
   
  La fonction `state` doit être un pointeur vers une structure `_CrtMemState` remplie par [_CrtMemCheckpoint](../../c-runtime-library/reference/crtmemcheckpoint.md) ou retournée par [_CrtMemDifference](../../c-runtime-library/reference/crtmemdifference.md) avant l’appel de `_CrtMemDumpStatistics` . Si `state` a la valeur `NULL`, le gestionnaire de paramètres non valide est appelé, comme décrit dans [Parameter Validation](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `errno` prend la valeur `EINVAL` et aucune action n’est retournée. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- Pour plus d’informations sur les fonctions d’état du tas et sur la structure `_CrtMemState`, consultez [Fonctions de création de rapports sur l’état du tas](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version Debug du tas de base, consultez [Détails du tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Pour plus d’informations sur les fonctions d’état du tas et sur la structure `_CrtMemState` , consultez [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version Debug du tas de base, consultez [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -66,7 +67,7 @@ void _CrtMemDumpStatistics(
 |-------------|---------------------|----------------------|  
 |`_CrtMemDumpStatistics`|\<crtdbg.h>|\<errno.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
  **Bibliothèques :** uniquement les versions de débogage des [fonctions de bibliothèque CRT](../../c-runtime-library/crt-library-features.md).  
   

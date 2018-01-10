@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- operator overloading [C++], rules
+dev_langs: C++
+helpviewer_keywords: operator overloading [C++], rules
 ms.assetid: eb2b3754-35f7-4832-b1da-c502893dc0c7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 882c3777d2744a8a693512f564d7c3b1f1c1a46e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 199db318eb847687d10044e0376b70c8d6d44feb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-rules-for-operator-overloading"></a>Règles générales de surcharge d'opérateur
 Les règles suivantes limitent le mode d'implémentation des opérateurs surchargés. Toutefois, ils ne s’appliquent pas à la [nouveau](../cpp/new-operator-cpp.md) et [supprimer](../cpp/delete-operator-cpp.md) operators, qui sont traités séparément.  
@@ -58,13 +55,13 @@ Les règles suivantes limitent le mode d'implémentation des opérateurs surchar
   
 -   Les opérateurs binaires déclarés comme fonctions membres acceptent un argument ; s’ils sont déclarés comme fonctions globales, ils en prennent deux.  
   
--   Si un opérateur peut être utilisé comme un opérateur unaire ou un opérateur binaire (**&**, ** \* **, ** + **, et ** - **), vous pouvez surcharger séparément chaque utilisation.  
+-   Si un opérateur peut être utilisé comme un opérateur unaire ou un opérateur binaire (**&**,  **\*** ,  **+** , et  **-** ), vous pouvez surcharger séparément chaque utilisation.  
   
 -   Les opérateurs surchargés ne peuvent pas avoir d’arguments par défaut.  
   
 -   Tous les opérateurs surchargés à l'exception de l'assignation (`operator=`) sont hérités par des classes dérivées.  
   
--   Le premier argument pour les opérateurs surchargés déclarés comme fonctions membres est toujours le type de classe de l'objet pour lequel l'opérateur est appelé (la classe dans laquelle l'opérateur est déclaré ou une classe dérivée de cette classe). Aucune conversion n'est fournie pour le premier argument.  
+-   Le premier argument pour les opérateurs surchargés déclarés comme fonctions membres est toujours le type de classe de l’objet pour lequel l’opérateur est appelé (la classe dans laquelle l’opérateur est déclaré ou une classe dérivée de cette classe). Aucune conversion n'est fournie pour le premier argument.  
   
  Notez que la signification de n'importe quel opérateur peut être modifiée complètement. Qui inclut la signification de l’adresse de (**&**), l’attribution (**=**) et les opérateurs d’appel de fonction. En outre, les identités sur lesquelles on peut se reposer pour les types intégrés peuvent être modifiées à l'aide de la surcharge d'opérateur. Par exemple, les quatre instructions suivantes sont généralement équivalentes une fois leur évaluation terminée :  
   
@@ -75,7 +72,7 @@ var++;
 ++var;  
 ```  
   
- On ne peut pas se reposer sur cette identité pour les types de classe qui surchargent des opérateurs. De plus, certaines des spécifications implicites dans l'utilisation de ces opérateurs pour les types de base sont allégées pour les opérateurs surchargés. Par exemple, l'opérateur d'addition/assignation, `+=`, requiert que l'opérande gauche soit une l-value en cas d'application à des types de base ; il n'existe aucune spécification de ce genre lorsque l'opérateur est surchargé.  
+ On ne peut pas se reposer sur cette identité pour les types de classe qui surchargent des opérateurs. De plus, certaines des exigences implicites dans l’utilisation de ces opérateurs pour les types de base sont allégées pour les opérateurs surchargés. Par exemple, l'opérateur d'addition/assignation, `+=`, requiert que l'opérande gauche soit une l-value en cas d'application à des types de base ; il n'existe aucune spécification de ce genre lorsque l'opérateur est surchargé.  
   
 > [!NOTE]
 >  Pour des raisons de cohérence, il est souvent préférable de suivre le modèle des types intégrés lors de la définition des opérateurs surchargés. Si la sémantique d'un opérateur surchargé diffère sensiblement de sa signification dans d'autres contextes, il peut être plus perturbant qu'utile.  

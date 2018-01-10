@@ -47,11 +47,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bd687a396b6538d73290a305959ba95f6b49c7e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26763a16c4de59f33622ea904ea8aa132fe0d5f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator, classe
 Implémente un interpolateur de base.  
@@ -70,7 +71,7 @@ class CCustomInterpolator;
 |----------|-----------------|  
 |[CCustomInterpolator::CCustomInterpolator](#ccustominterpolator)|Surchargé. Construit un objet de l’interpolateur personnalisé et initialise la durée et la rapidité des valeurs spécifiées.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Méthodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -94,7 +95,7 @@ class CCustomInterpolator;
 |[CCustomInterpolator::m_initialValue](#m_initialvalue)|La valeur de la variable au début de la transition.|  
 |[CCustomInterpolator::m_initialVelocity](#m_initialvelocity)|La rapidité de la variable au début de la transition.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Dérivez une classe de CCustomInterpolator et remplacez toutes les méthodes nécessaires pour implémenter un algorithme d’interpolation personnalisé. Un pointeur vers cette classe doit être passé en tant que paramètre à CCustomTransition.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -121,7 +122,7 @@ CCustomInterpolator(
   
  `finalValue`  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez CCustomInterpolator::Init pour initialiser la durée et la valeur finale ultérieurement dans le code.  
   
 ##  <a name="getdependencies"></a>CCustomInterpolator::GetDependencies  

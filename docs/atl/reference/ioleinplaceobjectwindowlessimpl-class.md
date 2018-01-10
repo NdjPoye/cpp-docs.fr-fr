@@ -31,11 +31,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c70e8e94e5d944e276340833ca8326e5ef2c6ec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3f455172723be4f46751b45d244e74dda5fcacae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ioleinplaceobjectwindowlessimpl-class"></a>Classe de IOleInPlaceObjectWindowlessImpl
 Cette classe implémente **IUnknown** et fournit des méthodes qui permettent un contrôle sans fenêtre pour recevoir des messages de fenêtre et participer aux opérations de glisser-déplacer.  
@@ -69,7 +70,7 @@ class IOleInPlaceObjectWindowlessImpl
 |[IOleInPlaceObjectWindowlessImpl::SetObjectRects](#setobjectrects)|Indique quelle partie du contrôle sur place est visible.|  
 |[IOleInPlaceObjectWindowlessImpl::UIDeactivate](#uideactivate)|Désactive et supprime l’interface utilisateur qui prend en charge l’activation sur place.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646) interface gère la réactivation la désactivation de la place les contrôles et détermine la quantité du contrôle doit être visible. Le [IOleInPlaceObjectWindowless](http://msdn.microsoft.com/library/windows/desktop/ms687304) interface permet à un contrôle sans fenêtre pour recevoir des messages de fenêtre et participer aux opérations de glisser-déplacer. Classe `IOleInPlaceObjectWindowlessImpl` fournit une implémentation par défaut de `IOleInPlaceObject` et `IOleInPlaceObjectWindowless` et implémente **IUnknown** en envoyant des informations pour le vidage de builds périphérique en mode débogage.  
   
  **Articles connexes** [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md), [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)  
@@ -89,7 +90,7 @@ class IOleInPlaceObjectWindowlessImpl
 HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getdroptarget"></a>IOleInPlaceObjectWindowlessImpl::GetDropTarget  
@@ -99,7 +100,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 HRESULT GetDropTarget(IDropTarget** ppDropTarget);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IOleInPlaceObjectWindowless::GetDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms678535) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getwindow"></a>IOleInPlaceObjectWindowlessImpl::GetWindow  
@@ -109,7 +110,7 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget);
 HRESULT GetWindow(HWND* phwnd);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Certains conteneurs ne fonctionnera pas avec un contrôle qui a été sans fenêtre, même si elle est actuellement fenêtrée. Dans l’implémentation de d’ATL, si membre de données de la classe du contrôle `m_bWasOnceWindowless` est **TRUE**, la fonction retourne **E_FAIL**. Sinon, si *phwnd* n’est pas **NULL**, `GetWindow` définit \* *phwnd* au membre de données de la classe du contrôle `m_hWnd` et retourne `S_OK`.  
   
  Consultez [IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282) dans le Kit de développement logiciel Windows.  
@@ -121,7 +122,7 @@ HRESULT GetWindow(HWND* phwnd);
 HRESULT InPlaceDeactivate(HWND* phwnd);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode effectue une désactivation complète ou partielle selon l’état du contrôle. Si nécessaire, l’interface utilisateur du contrôle est désactivé, et la fenêtre de contrôle, le cas échéant, est détruite. Le conteneur est averti que le contrôle n’est plus actif en place. Le **IOleInPlaceUIWindow** interface utilisée par le conteneur pour négocier des menus et de la bordure d’espace est libérée.  
   
  Consultez [IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) dans le Kit de développement logiciel Windows.  
@@ -137,7 +138,7 @@ HRESULT OnWindowMessage(
     LRESULT plResultParam);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IOleInPlaceObjectWindowless::OnWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms693783) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="reactivateandundo"></a>IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo  
@@ -147,7 +148,7 @@ HRESULT OnWindowMessage(
 HRESULT ReactivateAndUndo();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IOleInPlaceObject::ReactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms691372) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="setobjectrects"></a>IOleInPlaceObjectWindowlessImpl::SetObjectRects  
@@ -157,7 +158,7 @@ HRESULT ReactivateAndUndo();
 HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Met à jour du contrôle `m_rcPos` membre de données et l’affichage de contrôle. Seule la partie du contrôle qui entre en intersection avec la zone de découpage est affichée. Si l’affichage d’un contrôle a été attachée précédemment, mais la capture a été supprimée, cette fonction peut être appelée pour redessiner une vue complète du contrôle.  
   
  Consultez [IOleInPlaceObject::SetObjectRects](http://msdn.microsoft.com/library/windows/desktop/ms683767) dans le Kit de développement logiciel Windows.  
@@ -169,7 +170,7 @@ HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
 HRESULT UIDeactivate();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Définit le membre de données de la classe du contrôle `m_bUIActive` à **FALSE**. L’implémentation ATL de cette fonction toujours renvoie `S_OK`.  
   
  Consultez [IOleInPlaceObject::UIDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms693348) dans le Kit de développement logiciel Windows.  

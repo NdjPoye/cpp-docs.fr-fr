@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b36276a1a4ae64bee40a41cd844b1ad0d38c911a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f88c3eff9c8160a0e322c93dacf6985dc7b8a20b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor, classe
 Permet d’accéder à une source de données lorsque vous n’avez aucune connaissance du schéma de base de données (structure sous-jacente de la base de données).  
@@ -60,7 +63,7 @@ class CDynamicAccessor : public CAccessorBase
 |[SetStatus](../../data/oledb/cdynamicaccessor-setstatus.md)|Définit l’état d’une colonne spécifiée.|  
 |[SetValue](../../data/oledb/cdynamicaccessor-setvalue.md)|Stocke les données dans la mémoire tampon.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez `CDynamicAccessor` méthodes pour obtenir des informations de colonne telles que les noms de colonne, nombre de colonnes, type de données et ainsi de suite. Ces informations de colonne permet ensuite de créer un accesseur dynamiquement au moment de l’exécution.  
   
  Les informations de colonne sont stockées dans une mémoire tampon qui est créée et gérée par cette classe. Obtenir des données à partir de la mémoire tampon à l’aide de [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md).  

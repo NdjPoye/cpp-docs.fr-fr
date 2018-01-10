@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-dev_langs:
-- C++
-helpviewer_keywords:
-- C++, basic language concepts
+dev_langs: C++
+helpviewer_keywords: C++, basic language concepts
 ms.assetid: 961801e6-2ffd-4bf1-bb71-7f55e48d9c79
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: de04abfce744cfaf98d70fb75538222b5cfa55f8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3f47ef027e2ca13e02ed10f186853cb0eb6845ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basic-concepts--c"></a>Concepts de base (C++)
 Cette section explique les concepts qui sont importants pour comprendre C++. Les programmeurs en C sera familiers avec la plupart de ces concepts, mais il existe quelques différences subtiles qui peuvent provoquer des résultats inattendus de programme. Les rubriques suivantes sont incluses :  

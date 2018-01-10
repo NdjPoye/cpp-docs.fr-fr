@@ -49,11 +49,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6178c35ff5d9ed0fbe53af7d488cc24cbcf81f2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2bc6d855b1ff1776cdbb1777a4250317accac68a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timeget-class"></a>time_get, classe
 Cette classe de modèle décrit un objet pouvant servir de facette de paramètres régionaux pour contrôler les conversions de séquences de type `CharType` en valeurs temporelles.  
@@ -236,7 +237,7 @@ virtual iter_type
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un itérateur qui désigne le premier élément non converti. Un échec de conversion définit `ios_base::failbit` dans `state` et retourne `first`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction membre virtuelle convertit et ignore un ou plusieurs éléments dans la plage d’entrée [`first`, `last`) pour déterminer les valeurs stockées dans un ou plusieurs membres de `*pt`. Un échec de conversion définit `ios_base::failbit` dans `state` et retourne `first`. Sinon, la fonction retourne un itérateur désignant le premier élément non converti.  
   
  Les spécificateurs de conversion sont :  
@@ -549,7 +550,7 @@ iter_type get(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un itérateur au premier caractère après les données qui a été utilisées pour affecter le struct d’heure `*ptm`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La première fonction membre retourne `do_get(first, last, iosbase, state, ptm, fmt, mod)`.  
   
  La seconde fonction membre appelle `do_get` sous le contrôle du format délimité par `[fmt_first, fmt_last)`. Elle traite le format comme une séquence de champs, chacun d'entre eux déterminant la conversion de zéro ou plus entrées d'éléments, délimités par `[first, last)`. Elle retourne un itérateur qui désigne le premier élément non converti. Il existe trois types de champs :  

@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 156dd4cec32318be008d7c007d02f03495eeae23
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 31490e3bb591af6568ffecddf68219c89a25e055
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="notification-hooks"></a>Raccordements de notification
 Les raccordements de notification sont appelés juste avant que les actions suivantes sont exécutées dans la routine d’assistance :  
@@ -35,7 +36,7 @@ Les raccordements de notification sont appelés juste avant que les actions suiv
   
 -   En fournissant une nouvelle définition du pointeur **__pfnDliNotifyHook2** qui est initialisé pour pointer vers votre propre fonction qui reçoit les notifications.  
   
-     ou  
+     - ou -  
   
 -   En définissant le pointeur **__pfnDliNotifyHook2** à votre fonction de raccordement avant tout appel à la DLL que le programme de différer le chargement.  
   

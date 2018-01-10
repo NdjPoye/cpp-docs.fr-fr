@@ -38,11 +38,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1758a3d3bec03015abf35626adec69e1db9a7fdb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f1355173bafcf026a7f1bfba771a7769b202c92c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csnapinitemimpl-class"></a>Classe de CSnapInItemImpl
 Cette classe fournit des méthodes pour implémenter un objet de nœud de composant logiciel enfichable.  
@@ -72,7 +73,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 |----------|-----------------|  
 |[CSnapInItemImpl::CSnapInItemImpl](#csnapinitemimpl)|Constructeur.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Méthodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -98,7 +99,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 |[CSnapInItemImpl::m_resultDataItem](#m_resultdataitem)|Les fenêtres **RESULTDATAITEM** structure utilisée par le `CSnapInItemImpl` objet.|  
 |[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|Les fenêtres **SCOPEDATAITEM** structure utilisée par le `CSnapInItemImpl` objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CSnapInItemImpl`Fournit une implémentation de base pour un objet de nœud de composant logiciel enfichable, telles que l’ajout d’éléments de menu et les barres d’outils et de transfert de commandes pour le nœud de composant logiciel enfichable à la fonction gestionnaire approprié. Ces fonctionnalités sont implémentées à l’aide de plusieurs interfaces différentes et mappent les types. L’implémentation par défaut gère les notifications envoyées à l’objet de nœud en déterminant l’instance appropriée de la classe dérivée, puis transférer le message vers l’instance appropriée.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -220,7 +221,7 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
  `pStream`  
  [in] Pointeur vers le flux de données contenant les données d’objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour implémenter correctement cette fonction, copiez les informations correctes dans le flux de données ( `pStream`), selon le format de Presse-papiers indiqué par `cf`.  
   
 ##  <a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType  
@@ -385,7 +386,7 @@ void SetMenuInsertionFlags(
   
 - **CCM_INSERTIONALLOWED_VIEW** les éléments peuvent être insérés dans le menu Affichage de barre d’outils ou dans le sous-menu d’affichage du menu contextuel volet résultat.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si vous développez un composant logiciel enfichable principal, vous pouvez réinitialiser un des indicateurs d’insertion comme un moyen de restreindre le type des éléments de menu qui a une extension de tiers permettre ajouter. Par exemple, le composant logiciel enfichable principal peut effacer la **CCM_INSERTIONALLOWED_NEW** indicateur pour empêcher les extensions d’ajouter leurs propres éléments de menu créer un nouveau.  
   
  Vous ne devez pas essayer de définir des bits `pInsertionAllowed` qui ont été effacées à l’origine. Les versions ultérieures de la console MMC peuvent utiliser bits pas actuellement définis afin de vous ne devez pas modifier les bits qui ne sont pas actuellement définis.  

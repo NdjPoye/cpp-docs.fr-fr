@@ -23,11 +23,14 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c58f69057a7da709ec79c614fe60beef5a203f0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aeb0a4f21487d9d230c72bfbfc6a06928455dfe2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Assemblys mixtes (natif et managé)
 Assemblys mixtes sont capables de contenir des instructions machine non managées et des instructions MSIL. Cela leur permet d’appeler et d’être appelé par les composants de .NET, tout en conservant la compatibilité avec les composants qui ne sont pas entièrement gérés. À l’aide d’assemblys mixtes, les développeurs peuvent créer des applications à l’aide d’un mélange de fonctionnalités managées et non managées. Assemblys mixtes sont donc la solution idéale pour la migration d’applications Visual C++ existantes vers la plateforme .NET.  
@@ -49,7 +52,7 @@ Assemblys mixtes sont capables de contenir des instructions machine non managée
  [Prise en charge de bibliothèque pour les assemblys mixtes](../dotnet/library-support-for-mixed-assemblies.md)  
  Explique comment utiliser des bibliothèques natives dans **/CLR** compilations.  
   
- [Considérations relatives aux performances](../dotnet/performance-considerations-for-interop-cpp.md)  
+ [Considérations sur les performances](../dotnet/performance-considerations-for-interop-cpp.md)  
  Décrit les conséquences sur les performances des assemblys mixtes et le marshaling de données.  
   
  [Domaines d’application et Visual C++](../dotnet/application-domains-and-visual-cpp.md)  

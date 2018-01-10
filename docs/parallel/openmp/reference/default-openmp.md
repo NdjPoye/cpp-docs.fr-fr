@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: caafb7818c32dad7b21ac7a05d10f77753c1da73
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25b1dd9eb2dcdd5a0a41992ed562ddd290014e25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="default-openmp"></a>default (OpenMP)
 Spécifie le comportement de variables non délimités dans une région parallèle.  
@@ -32,7 +33,7 @@ Spécifie le comportement de variables non délimités dans une région parallè
 default(shared | none)  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `shared`, qui est en vigueur si le `default` clause n’est pas spécifiée, signifie que n’importe quelle variable dans une région parallèle sera traité comme s’il a été spécifié avec la [partagé](../../../parallel/openmp/reference/shared-openmp.md) clause. `none`signifie que les variables utilisées dans une région parallèle qui ne sont pas limités par le [privé](../../../parallel/openmp/reference/private-openmp.md), [partagé](../../../parallel/openmp/reference/shared-openmp.md), [réduction](../../../parallel/openmp/reference/reduction.md), [firstprivate](../../../parallel/openmp/reference/firstprivate.md), ou [lastprivate](../../../parallel/openmp/reference/lastprivate.md) clause entraînera une erreur du compilateur.  
   
  `default`s’applique aux directives suivantes :  

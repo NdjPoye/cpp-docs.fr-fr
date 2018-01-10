@@ -1,58 +1,58 @@
 ---
-title: "_ReadWriteBarrier | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_ReadWriteBarrier"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ReadWriteBarrier (intrinsèque)"
-  - "ReadWriteBarrier (intrinsèque)"
+title: "L’intrinsèque _ReadWriteBarrier | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _ReadWriteBarrier
+dev_langs: C++
+helpviewer_keywords:
+- ReadWriteBarrier intrinsic
+- _ReadWriteBarrier intrinsic
 ms.assetid: dd9f58b5-8bb6-494e-bb0f-9fe184f3908d
-caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2235c2089dd23a0572e960b995958c9e1740e108
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# _ReadWriteBarrier
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="readwritebarrier"></a>_ReadWriteBarrier
 **Section spécifique à Microsoft**  
   
  Limite les optimisations du compilateur qui peuvent réordonnancer les accès à la mémoire sur le point de l'appel.  
   
 > [!CAUTION]
->  Les intrinsèques `_ReadBarrier`, `_WriteBarrier` et `_ReadWriteBarrier` du compilateur et la macro `MemoryBarrier` sont tous déconseillés et ne doivent pas être utilisés.  Pour la communication entre threads, utilisez des mécanismes tels que [atomic\_thread\_fence](../Topic/atomic_thread_fence%20Function.md) et [std::atomic\<T\>](../standard-library/atomic.md), qui sont définis dans la [Bibliothèque standard C\+\+](../standard-library/cpp-standard-library-reference.md).  Pour l'accès au matériel, utilisez l'option [\/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) du compilateur avec le mot clé [volatile](../cpp/volatile-cpp.md).  
+>  Les intrinsèques `_ReadBarrier`, `_WriteBarrier` et `_ReadWriteBarrier` du compilateur et la macro `MemoryBarrier` sont tous déconseillés et ne doivent pas être utilisés. Pour la communication entre les threads, utilisez des mécanismes tels que [atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence) et [std::atomic\<T >](../standard-library/atomic.md), qui sont définies dans le [bibliothèque Standard C++](../standard-library/cpp-standard-library-reference.md). Pour l’accès au matériel, utilisez le [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) option du compilateur avec le [volatile](../cpp/volatile-cpp.md) (mot clé).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void _ReadWriteBarrier(void);  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`_ReadWriteBarrier`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  L'intrinsèque `_ReadWriteBarrier` limite les optimisations du compilateur qui peuvent supprimer ou réordonnancer les accès à la mémoire sur le point de l'appel.  
   
-## FIN de la section spécifique à Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [\_ReadBarrier](../intrinsics/readbarrier.md)   
- [\_WriteBarrier](../intrinsics/writebarrier.md)   
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [_ReadBarrier](../intrinsics/readbarrier.md)   
+ [_WriteBarrier](../intrinsics/writebarrier.md)   
+ [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)   
+ [Mots clés](../cpp/keywords-cpp.md)

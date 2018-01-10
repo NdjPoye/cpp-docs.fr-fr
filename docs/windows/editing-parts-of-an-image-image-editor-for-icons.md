@@ -1,87 +1,91 @@
 ---
-title: "Editing Parts of an Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], editing images"
-  - "Clipboard [C++], pasting"
-  - "images [C++], editing"
-  - "images [C++], deleting selected parts"
-  - "images [C++], copying selected parts"
-  - "images [C++], moving selected parts"
-  - "images [C++], dragging and replicating selected parts"
-  - "images [C++], pasting into"
-  - "graphics [C++], editing"
+title: "Modification de parties d’une Image (Éditeur d’images pour les icônes) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], editing images
+- Clipboard [C++], pasting
+- images [C++], editing
+- images [C++], deleting selected parts
+- images [C++], copying selected parts
+- images [C++], moving selected parts
+- images [C++], dragging and replicating selected parts
+- images [C++], pasting into
+- graphics [C++], editing
 ms.assetid: ff4f5fef-71a4-4fd8-825e-049399fed391
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: acd4859bf7c80cf2bbe6cd2d86c39d0fc596351d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Editing Parts of an Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vous pouvez effectuer des opérations de modification standard \(couper, copier, effacer et déplacer\) sur une [sélection](../mfc/selecting-an-area-of-an-image-image-editor-for-icons.md), qu'il s'agisse de l'intégralité de l'image ou d'une partie.  Dans la mesure où l'éditeur d'images utilise les fenêtres presse\-papiers, vous pouvez transférer des images entre l'éditeur d'images et d'autres applications pour Windows.  
+# <a name="editing-parts-of-an-image-image-editor-for-icons"></a>Modification de parties d'une image (Éditeur d'images pour les icônes)
+Vous pouvez effectuer les opérations de modification standard — couper, copier, effacer et déplacement : sur un [sélection](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), indique si la sélection est l’image entière ou une partie de celui-ci. Étant donné que l’éditeur d’images utilise le Presse-papiers Windows, vous pouvez transférer des images entre l’éditeur d’images et d’autres applications pour Windows.  
   
- De plus, vous pouvez redimensionner la sélection, qu'il s'agisse de l'intégralité d'une image ou d'une partie.  
+ En outre, vous pouvez redimensionner la sélection, qu’il s’agisse de l’image entière ou une partie.  
   
-### Pour couper la sélection actuelle et la déplacer dans le Presse\-papiers  
+### <a name="to-cut-the-current-selection-and-move-it-to-the-clipboard"></a>Pour couper la sélection actuelle et les déplacer vers le Presse-papiers  
   
-1.  Dans le menu **Edition**, cliquez sur **Couper**.  
+1.  Cliquez sur **couper** sur la **modifier** menu.  
   
-### Pour copier la sélection  
+### <a name="to-copy-the-selection"></a>Pour copier la sélection  
   
-1.  Placez le pointeur à l'intérieur de la bordure de sélection ou n'importe où sur la bordure à l'exception des poignées de redimensionnement.  
+1.  Placez le pointeur à l’intérieur de la bordure de sélection ou n’importe où sur sauf les poignées de redimensionnement.  
   
-2.  Maintenez la touche **CTRL** enfoncée tout en faisant glisser la sélection vers un nouvel emplacement.  La zone de la sélection d'origine reste inchangée.  
+2.  Maintenez la **CTRL** clé lorsque vous faites glisser la sélection vers un nouvel emplacement. La zone de la sélection d’origine est inchangée.  
   
-3.  Pour copier la sélection dans l'image à l'emplacement actuel, cliquez en dehors du curseur de sélection.  
+3.  Pour copier la sélection dans l’image à son emplacement actuel, cliquez en dehors du curseur de sélection.  
   
-### Pour coller le contenu du Presse\-papiers dans une image  
+### <a name="to-paste-the-clipboard-contents-into-an-image"></a>Pour coller le contenu du Presse-papiers dans une image  
   
-1.  Dans le menu **Edition**, choisissez **Coller**.  
+1.  À partir de la **modifier** menu, choisissez **coller**.  
   
-     Le contenu du Presse\-papiers, entouré par la bordure de sélection, s'affiche dans le coin supérieur gauche du volet.  
+     Le contenu du Presse-papiers, entouré par la bordure de sélection, s’affichent dans le coin supérieur gauche du volet.  
   
-2.  Placez le pointeur à l'intérieur de la bordure de sélection et faites glisser l'image vers l'emplacement souhaité sur l'image.  
+2.  Placez le pointeur à l’intérieur de la bordure de sélection et faites glisser l’image à l’emplacement souhaité sur l’image.  
   
-3.  Pour ancrer l'image à son nouvel emplacement, cliquez en dehors de la bordure de sélection.  
+3.  Pour ancrer l’image à son nouvel emplacement, cliquez en dehors de la bordure de sélection.  
   
-### Pour supprimer la sélection actuelle sans la placer dans le Presse\-papiers  
+### <a name="to-delete-the-current-selection-without-moving-it-to-the-clipboard"></a>Pour supprimer la sélection actuelle sans le déplacer dans le Presse-papiers  
   
-1.  Dans le menu **Edition**, cliquez sur **Supprimer**.  
+1.  À partir de la **modifier** menu, choisissez **supprimer**.  
   
-     La zone d'origine de la sélection est remplie avec la couleur d'arrière\-plan actuelle.  
+     La zone d’origine de la sélection est remplie avec la couleur d’arrière-plan actuelle.  
   
     > [!NOTE]
-    >  Vous pouvez accéder aux commandes Couper, Copier, Coller et Supprimer en cliquant avec le bouton droit dans la fenêtre Affichage des ressources.  
+    >  Vous pouvez accéder à couper, copier, coller et supprimer des commandes en cliquant avec le bouton droit dans la fenêtre Affichage des ressources.  
   
-### Pour déplacer la sélection  
+### <a name="to-move-the-selection"></a>Pour déplacer la sélection  
   
-1.  Placez le pointeur à l'intérieur de la bordure de sélection ou n'importe où sur la bordure à l'exception des poignées de redimensionnement.  
+1.  Placez le pointeur à l’intérieur de la bordure de sélection ou n’importe où sur sauf les poignées de redimensionnement.  
   
 2.  Faites glisser la sélection vers son nouvel emplacement.  
   
-3.  Pour ancrer la sélection dans l'image à son nouvel emplacement, cliquez en dehors de la bordure de sélection.  
+3.  Pour ancrer la sélection dans l’image à son nouvel emplacement, cliquez en dehors de la bordure de sélection.  
   
- Pour plus d'informations sur le dessin avec une sélection, consultez [Création d'un pinceau personnalisé](../mfc/creating-a-custom-brush-image-editor-for-icons.md).  
+ Pour plus d’informations sur le dessin avec une sélection, consultez [création d’un pinceau personnalisé](../windows/creating-a-custom-brush-image-editor-for-icons.md).  
   
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l'ajout de fichiers de ressources aux projets managés, l'accès aux ressources, l'affichage de ressources statiques et l'assignation de chaînes de ressources aux propriétés, et ce manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/fr-fr/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Configuration requise  
+ Spécifications  
   
  Aucun  
   
-## Voir aussi  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Voir aussi  
+ [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Modification de ressources graphiques](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)
+

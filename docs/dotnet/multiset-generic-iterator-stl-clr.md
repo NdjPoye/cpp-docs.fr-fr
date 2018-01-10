@@ -1,32 +1,33 @@
 ---
-title: "multiset::generic_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::generic_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_iterator (membre) (STL/CLR)"
+title: multiset::generic_iterator (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::generic_iterator
+dev_langs: C++
+helpviewer_keywords: generic_iterator member [STL/CLR]
 ms.assetid: 3827b390-2726-419b-861e-e08ce93d991b
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2cdfb7e15be177a75b0025bc88f56441f21e7185
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# multiset::generic_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le type d'un itérateur pour une utilisation avec l'interface générique pour le conteneur.  
+# <a name="multisetgenericiterator-stlclr"></a>multiset::generic_iterator (STL/CLR)
+Le type d’un itérateur pour une utilisation avec l’interface générique pour le conteneur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef Microsoft::VisualC::StlClr::Generic::  
@@ -34,10 +35,10 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_iterator;  
 ```  
   
-## Notes  
- Le type décrit un itérateur générique qui peut être utilisé avec l'interface générique pour cette classe conteneur de modèle.  
+## <a name="remarks"></a>Notes  
+ Le type décrit un itérateur générique qui peut être utilisé avec l’interface générique pour cette classe de conteneur de modèle.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_multiset_generic_iterator.cpp   
@@ -72,14 +73,17 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a**   
-## Configuration requise  
- **En\-tête :** \<cliext\/set\>  
+```Output  
+a b c  
+a b c  
+a  
+```  
   
- **Espace de nom :** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/set >  
   
-## Voir aussi  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::generic\_container](../dotnet/multiset-generic-container-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::generic_container (STL/CLR)](../dotnet/multiset-generic-container-stl-clr.md)

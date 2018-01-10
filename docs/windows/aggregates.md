@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c225de7795171da6bfd82f8750012780d44b636c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f3fc74f10e0b5900030d48b37d1918de8807d152
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="aggregates"></a>agrégats
 Indique que l’objet agrège l’objet spécifié par le CLSID.  
@@ -45,7 +48,7 @@ Indique que l’objet agrège l’objet spécifié par le CLSID.
  `variable_name`  
  Nom de la variable à insérer. Cette variable contient le **IUnknown** de l’objet en cours d’agrégation.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Quand il est appliqué à un objet, l’attribut C++ **aggregates** implémente un wrapper externe pour l’objet en cours d’agrégation (spécifié par `clsid`).  
   
  Cet attribut exige que l’attribut [coclass](../windows/coclass.md), [progid](../windows/progid.md)ou [vi_progid](../windows/vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si **progid** est appliqué, **vi_progid** et **coclass** sont également appliqués.  

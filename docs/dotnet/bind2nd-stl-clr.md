@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 484430c181e13508daa4936f29d078829ddda083
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3617cb917012a48398c6c9f530c2419aa8ea195b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bind2nd-stlclr"></a>bind2nd (STL/CLR)
 Génère un `binder2nd` pour un argument et un functor.  
@@ -35,7 +38,7 @@ template<typename Fun,
   
 ## <a name="template-parameters"></a>Paramètres de modèle  
  Arg  
- Type de l'argument.  
+ Type de l’argument.  
   
  amusement  
  Le type de foncteur.  
@@ -44,10 +47,10 @@ template<typename Fun,
  functor  
  La fonction à encapsuler.  
   
- droite  
+ droit  
  Le deuxième argument de retour à la ligne.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction de modèle retourne [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Vous l’utiliser comme un moyen pratique d’encapsuler un functor deux arguments et le second argument dans un functor un argument qui l’appelle avec un premier argument.  
   
 ## <a name="example"></a>Exemple  

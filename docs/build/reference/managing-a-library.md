@@ -51,11 +51,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6ef7f9b1cbeb3aeab28a4c02bce9099aaaf0078d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 05ced49a960aea0b32365b80fe76095893f63d5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-a-library"></a>Gestion d'une bibliothèque
 Le mode par défaut pour LIB consiste à créer ou modifier une bibliothèque d’objets COFF. LIB s’exécute dans ce mode lorsque vous ne spécifiez pas /EXTRACT (pour copier un objet dans un fichier) ou /DEF (pour générer une bibliothèque d’importation).  
@@ -88,7 +89,7 @@ LIB [options...] files...
  Remplace le nom de fichier de sortie par défaut. Par défaut, la bibliothèque de sortie est créée dans le répertoire actuel, avec le nom de base du premier fichier bibliothèque ou objet sur la ligne de commande et l’extension. lib.  
   
  / REMOVE : *objet*  
- Omet spécifié *objet* à partir de la bibliothèque de sortie. LIB crée une bibliothèque de sortie en combinant tous les objets (que ce soit dans les fichiers objets ou bibliothèques), puis supprimez tous les objets spécifiés avec /Remove..  
+ Omet spécifié *objet* à partir de la bibliothèque de sortie. LIB crée une bibliothèque de sortie en combinant tous les objets (que ce soit dans les fichiers objets ou bibliothèques), puis supprimez tous les objets spécifiés avec /Remove.  
   
  /SUBSYSTEM : {CONSOLE &#124; EFI_APPLICATION &#124; EFI_BOOT_SERVICE_DRIVER &#124; EFI_ROM &#124; UN EFI_RUNTIME_DRIVER &#124; NATIF &#124; POSIX &#124; WINDOWS &#124; WINDOWSCE} [, #[. ##]]  
  Indique le système d’exploitation comment exécuter un programme créé par la liaison à la bibliothèque de sortie. Pour plus d’informations, consultez la description du lien [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) option.  

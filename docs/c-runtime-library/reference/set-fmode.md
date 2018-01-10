@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _set_fmode
+apiname: _set_fmode
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,38 +24,23 @@ apitype: DLLExport
 f1_keywords:
 - _set_fmode
 - set_fmode
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - file translation [C++], default mode
 - _set_fmode function
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dae7815ba349141f746a6debc96c28829976f9d1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d13ee80a8a3d9848841b7fa3b5463e0b5302ffeb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setfmode"></a>_set_fmode
 Définit le mode de traduction de fichier par défaut pour les opérations d’E/S de fichier.  
@@ -88,7 +71,7 @@ errno_t _set_fmode(
 |-------------|---------------------|---------------------|  
 |`_set_fmode`|\<stdlib.h>|\<fcntl.h>, \<errno.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

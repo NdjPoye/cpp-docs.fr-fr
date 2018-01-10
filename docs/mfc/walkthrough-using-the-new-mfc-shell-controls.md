@@ -14,16 +14,17 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0169cf171e519a4fd620cacd7e684c400f94929d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be882671da836f7d96f4c726753d6235735f363d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Procédure pas à pas : utilisation des nouveaux contrôles d'environnement MFC
 Dans cette procédure pas à pas, vous allez créer une application qui ressemble à l’Explorateur de fichiers. Vous allez créer une fenêtre qui contient deux volets. Le volet gauche contiendra un [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) objet qui affiche votre bureau dans une vue hiérarchique. Le volet de droite contiendra un [CMFCShellListCtrl affichant](../mfc/reference/cmfcshelllistctrl-class.md) qui indique que les fichiers dans le dossier sélectionné dans le volet gauche.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
  Cette procédure pas à pas suppose que vous avez configuré [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] à utiliser **paramètres de développement généraux**. Si vous utilisez un paramètre de développement différents, certains [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] windows que nous utilisons dans cette procédure pas à pas ne peuvent pas être affichées par défaut.  
   
 ### <a name="to-create-a-new-mfc-application-by-using-the-mfc-application-wizard"></a>Pour créer une application MFC à l’aide de l’Assistant Application MFC  

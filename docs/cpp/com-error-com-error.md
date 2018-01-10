@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _com_error::_com_error
-dev_langs:
-- C++
-helpviewer_keywords:
-- _com_error method [C++]
+f1_keywords: _com_error::_com_error
+dev_langs: C++
+helpviewer_keywords: _com_error method [C++]
 ms.assetid: 0a69e46c-caab-49ef-b091-eee401253ce6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 81efabf796d8d596326629af999f1932501befb5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: df04357afd35b546fb43c90a102b7dc0cacdc95e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comerrorcomerror"></a>_com_error::_com_error
 **Section spécifique à Microsoft**  
@@ -68,7 +64,7 @@ _com_error err(hr, perrinfo, true);
  `that`  
  Objet `_com_error` existant.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le premier constructeur crée un objet donné un `HRESULT` et facultatifs **IErrorInfo** objet. Le deuxième constructeur crée une copie d'un objet `_com_error` existant.  
   
  **FIN de la section spécifique à Microsoft**  

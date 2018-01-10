@@ -15,18 +15,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 644094c2c2fa498d616369a9147b41bdd6cb3e03
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18a724cd8d0e16b9440e1c4756b35cdf3f3c4821
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2048"></a>Erreur du compilateur C2048
 plusieurs 'default'  
   
  Une instruction `switch` contient plusieurs étiquettes `default` . Supprimez l’une des étiquettes `default` pour résoudre l’erreur.  
   
- L’exemple suivant génère l’erreur C2048 :  
+ L’exemple suivant génère l’erreur C2048 :  
   
 ```  
 // C2048.cpp  
@@ -43,7 +44,7 @@ int main() {
 }  
 ```  
   
- Solution possible :  
+ Résolution possible :  
   
 ```  
 // C2048b.cpp  

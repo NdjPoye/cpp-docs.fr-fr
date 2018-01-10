@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b4359f06b75319014e58e5b961218f7228d86490
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: 90ff6d2be6174f32d7d93252ebd8b693b422076d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="permissive--standards-conformance"></a>/ permissive-(conformité aux normes)
 
@@ -31,7 +32,7 @@ Spécifiez le mode de conformité aux normes pour le compilateur. Utilisez cette
 
 > **/ permissive-**
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Vous pouvez utiliser la **/ permissive-** option du compilateur pour spécifier le comportement de compilateur conforme aux normes. Cette option désactive les comportements permissive et définit les [/Zc](../../build/reference/zc-conformance.md) options du compilateur pour la conformité stricte. Dans l’IDE, cette option permet également le code non conforme de soulignement de moteur IntelliSense. 
 
@@ -398,7 +399,7 @@ virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
 
 Pour résoudre ce problème, compiler des fichiers qui incluent omscript.h sans le **/ permissive-** option ou utilisez **/Zc:strictStrings-** à la place.
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l’environnement de développement Visual Studio
 
 Dans la version de Visual Studio 2017 15.5 et versions ultérieures, utilisez cette procédure :
 

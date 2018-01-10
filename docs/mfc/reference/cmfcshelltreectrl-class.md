@@ -39,11 +39,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aba82dd5e70f3202512b728df2dbcb6f45600c69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 727b0032687ed22692f07f9b5e9e5fe8b2813071
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcshelltreectrl-class"></a>Classe de CMFCShellTreeCtrl
 Le `CMFCShellTreeCtrl` classe étend [CTreeCtrl (classe)](../../mfc/reference/ctreectrl-class.md) fonctionnalités en affichant une hiérarchie des éléments du Shell.  
@@ -73,7 +74,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 |[CMFCShellTreeCtrl::SetFlags](#setflags)|Définit des indicateurs pour le contexte d’arbre de filtre (semblables aux indicateurs utilisés par `IShellFolder::EnumObjects`).|  
 |[CMFCShellTreeCtrl::SetRelatedList](#setrelatedlist)|Définit une relation entre l’actuel `CMFCShellTreeCtrl` objet et un `CMFCShellListCtrl` objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe étend la `CTreeCtrl` classe par l’activation de votre programme afin d’inclure des éléments de l’interpréteur de commandes Windows dans l’arborescence. Cette classe peut être associée un `CMFCShellListCtrl` objet pour créer une fenêtre d’Explorateur terminée. Puis, en sélectionnant un élément dans l’arborescence affiche une liste d’éléments de l’interpréteur de commandes Windows dans la liste associée.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -117,7 +118,7 @@ DWORD GetFlags() const;
 ### <a name="return-value"></a>Valeur de retour  
  A `DWORD` valeur qui spécifie la combinaison d’indicateurs actuellement définie.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les indicateurs définis le `CMFCShellTreeCtrl` sont envoyés à la méthode [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066) chaque fois que l’objet est actualisé. Vous pouvez modifier les indicateurs avec les [CMFCShellTreeCtrl::SetFlags](#setflags) (méthode).  
   
 ##  <a name="getitempath"></a>CMFCShellTreeCtrl::GetItemPath  
@@ -139,7 +140,7 @@ BOOL GetItemPath(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’opération a réussi ; 0 dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si cette méthode échoue, `strPath` contient la chaîne vide.  
   
  Si vous ne spécifiez pas `hTreeItem`, cette méthode essaie d’obtenir la chaîne de l’élément actuellement sélectionné. Si aucun élément n’est sélectionné et `hTreeItem` est `NULL`, cette méthode échoue.  
@@ -154,7 +155,7 @@ CMFCShellListCtrl* GetRelatedList() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le `CMFCShellListCtrl` objet associé à cet objet de contrôle d’arborescence.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En utilisant un `CMFCShellListCtrl` de l’objet avec un `CMFCShellTreeCtrl` de l’objet, vous pouvez créer une fenêtre d’Explorateur. Utilisez la méthode [CMFCShellTreeCtrl::SetRelatedList](#setrelatedlist) pour associer les deux classes. Une fois qu’ils sont associés, le framework met automatiquement à jour la `CMFCShellListCtrl` si la sélection dans le `CMFCShellTreeCtrl` modifications.  
   
 ##  <a name="onchildnotify"></a>CMFCShellTreeCtrl::OnChildNotify  
@@ -176,7 +177,7 @@ virtual BOOL OnChildNotify(
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="ongetitemicon"></a>CMFCShellTreeCtrl::OnGetItemIcon  
 
@@ -193,7 +194,7 @@ virtual int OnGetItemIcon(
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="ongetitemtext"></a>CMFCShellTreeCtrl::OnGetItemText  
 
@@ -207,7 +208,7 @@ virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="refresh"></a>CMFCShellTreeCtrl::Refresh  
  Actualise et redessine le [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md).  
@@ -216,7 +217,7 @@ virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
 void Refresh();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette méthode pour actualiser la hiérarchie des éléments affichés dans le `CMFCShellTreeCtrl`.  
   
 ##  <a name="selectpath"></a>CMFCShellTreeCtrl::SelectPath  
@@ -253,7 +254,7 @@ void SetFlags(
  [in] `bRefresh`  
  Valeur booléenne qui spécifie si le `CMFCShellTreeCtrl` doit être immédiatement actualisé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `CMFCShellTreeCtrl` passe tous les valeur indicateurs [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066). Pour plus d’informations sur les valeurs des différents indicateurs, consultez [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066).  
   
 ##  <a name="setrelatedlist"></a>CMFCShellTreeCtrl::SetRelatedList  
@@ -267,7 +268,7 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
  [in] `pShellList`  
  Un pointeur vers un `CMFCShellListCtrl` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode associe un `CMFCShellListCtrl` avec un `CMFCShellTreeCtrl`. Ces objets peuvent être affichés comme une fenêtre d’Explorateur : si l’utilisateur sélectionne un objet dans le `CMFCShellTreeCtrl`, associés à des éléments dans le `CMFCShellListCtrl` sera automatiquement mis à jour.  
   
  Utilisez la méthode [CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist) pour récupérer le `CMFCShellListCtrl` associé à un `CMFCShellTreeCtrl`.  

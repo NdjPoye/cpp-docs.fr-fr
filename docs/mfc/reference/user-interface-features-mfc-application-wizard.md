@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.appwiz.mfc.exe.ui
-dev_langs:
-- C++
-helpviewer_keywords:
-- MFC Application Wizard, user interface features
+f1_keywords: vc.appwiz.mfc.exe.ui
+dev_langs: C++
+helpviewer_keywords: MFC Application Wizard, user interface features
 ms.assetid: 59e7b829-a665-42eb-be23-3f2a36eb2dad
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5906cf607e09df536825eed88e7b1be59d8fdee2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 78bc0d034c7f4e3b5c34596ee83de1b68d8d9173
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="user-interface-features-mfc-application-wizard"></a>Fonctionnalités de l'interface utilisateur, Assistant Application MFC
+# <a name="user-interface-features-mfc-application-wizard"></a>Fonctionnalités de l’interface utilisateur, Assistant Application MFC
 Cette rubrique décrit les options que vous pouvez utiliser pour spécifier l’apparence de votre application. Les fonctionnalités d’interface utilisateur disponibles pour votre projet varient selon le type d’application spécifié dans le [Type d’Application, Assistant Application MFC](../../mfc/reference/application-type-mfc-application-wizard.md) page de l’Assistant Application MFC. Par exemple, si vous créez une application d’interface monodocument, vous ne peut pas ajouter des styles du frame enfant.  
   
  **Styles du frame principal**  
@@ -71,5 +67,4 @@ Cette rubrique décrit les options que vous pouvez utiliser pour spécifier l’
   
 ## <a name="see-also"></a>Voir aussi  
  [Assistant Application MFC](../../mfc/reference/mfc-application-wizard.md)
-
 

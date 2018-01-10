@@ -45,11 +45,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4fb85ae9aa0c21d2afdc5c4cb5a906154cb42c6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8af8a6c2d96eb0fa4fd37a41e7f022743ab78d7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtoull-strtoulll-wcstoull-wcstoulll"></a>strtoull, _strtoull_l, wcstoull, _wcstoull_l
 Convertit les chaînes en valeur entière de type long long non signée.  
@@ -102,7 +103,7 @@ unsigned long long _wcstoull_l(
 ## <a name="remarks"></a>Notes  
  Chacune de ces fonctions convertit la chaîne d’entrée `nptr` en valeur entière `unsigned long long`.  
   
- La fonction `strtoull` arrête de lire la chaîne `nptr` au premier caractère qu’elle ne peut pas identifier comme faisant partie intégrante d’un nombre. Il peut s’agir du caractère Null de fin ou bien du premier caractère numérique supérieur ou égal à `base`. Le paramètre de la catégorie `LC_NUMERIC` des paramètres régionaux détermine la reconnaissance du caractère de base dans `nptr`. Pour plus d’informations, consultez [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strtoull` et `wcstoull` utilisent les paramètres régionaux actifs ; `_strtoull_l` et `_wcstoull_l` utilisent à la place les paramètres régionaux transmis, mais sont sinon identiques. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La fonction `strtoull` arrête de lire la chaîne `nptr` au premier caractère qu’elle ne peut pas identifier comme faisant partie intégrante d’un nombre. Il peut s’agir du caractère Null de fin ou bien du premier caractère numérique supérieur ou égal à `base`. Le paramètre de la catégorie `LC_NUMERIC` des paramètres régionaux détermine la reconnaissance du caractère de base dans `nptr`. Pour plus d’informations, consultez [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strtoull` et `wcstoull` utilisent les paramètres régionaux actifs ; `_strtoull_l` et `_wcstoull_l` utilisent à la place les paramètres régionaux transmis, mais sont sinon identiques. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  Si `endptr` n’a pas la valeur `NULL`, un pointeur désignant le caractère qui a arrêté l’analyse est stocké à l’emplacement désigné par `endptr`. Si aucune conversion ne peut être effectuée (aucun chiffre valide n’a été trouvé ou la base spécifiée n’est pas valide), la valeur de `nptr` est stockée à l’emplacement désigné par `endptr`.  
   
@@ -130,7 +131,7 @@ unsigned long long _wcstoull_l(
 |`_strtoull_l`|\<stdlib.h>|  
 |`_wcstoull_l`|\<stdlib.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple relatif à [strtod](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md).  

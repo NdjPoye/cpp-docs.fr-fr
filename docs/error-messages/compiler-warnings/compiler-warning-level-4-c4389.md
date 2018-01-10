@@ -1,34 +1,33 @@
 ---
-title: "Avertissement du compilateur (niveau 4) C4389 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "c4389"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4389"
+title: Compilateur avertissement (niveau 4) C4389 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: c4389
+dev_langs: C++
+helpviewer_keywords: C4389
 ms.assetid: fc0e3a8e-f766-437c-b7f1-e61abb2a8765
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3d26260dd3e57c9677cd934605b609577028c7e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 4) C4389
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'opérateur' : incompatibilité signed\/unsigned  
+# <a name="compiler-warning-level-4-c4389"></a>Avertissement du compilateur (niveau 4) C4389
+'opérateur' : incompatibilité signed/unsigned  
   
- Une opération faisait appel à des variables signées et non signées.  Ceci pourrait entraîner une perte de données.  
+ Une opération impliqués variables signés et non signés. Cela peut entraîner une perte de données.  
   
- L'exemple suivant génère l'erreur C4389 :  
+ L’exemple suivant génère l’erreur C4389 :  
   
 ```  
 // C4389.cpp  

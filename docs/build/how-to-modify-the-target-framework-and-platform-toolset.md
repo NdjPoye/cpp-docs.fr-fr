@@ -15,11 +15,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7a9ab87cc24a106e70e9662f58e7c7266dd39d8f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ed85e0f1e1ce94401c505281c0e693a4904f92d
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>comment : modifier la version cible de .Net Framework et l'ensemble d'outils de la plateforme
 Vous pouvez modifier les paramètres de projet Visual C++ pour cibler différentes versions du .NET Framework et utiliser des ensembles d’outils de plateforme différente. Par défaut, le système de projet utilise la version du. Net Framework et la version de l'ensemble d'outils qui correspondent à la version de Visual Studio que vous utilisez pour créer le projet. Vous pouvez changer l'ensemble d'outils de plateforme cible en modifiant les propriétés du projet. Vous pouvez changer la version cible du .Net Framework en modifiant le fichier projet (.vcxproj). Vous n'avez pas besoin de conserver une base de code distincte pour chaque cible de compilation.  
@@ -32,7 +33,7 @@ Vous pouvez modifier les paramètres de projet Visual C++ pour cibler différent
 > [!NOTE]
 >  Pour modifier l'ensemble d'outils de la plateforme cible, la version associée de Visual Studio ou le Kit de développement logiciel (SDK) Windows Platform doit être installé sur votre ordinateur. Par exemple, pour cibler la plateforme Itanium avec l’ensemble d’outils de plateforme **Kit de développement logiciel (SDK) Windows 7.1** , vous devez avoir installé [Microsoft Windows SDK pour Windows 7 et .NET Framework 4 SP1](http://www.microsoft.com/download/details.aspx?id=8279) . Vous pouvez cependant utiliser une autre version compatible de Visual Studio pour effectuer votre travail de développement, à condition de cibler la version du .NET Framework et l’ensemble d’outils de plateforme corrects.  
   
- Vous pouvez étendre davantage la plateforme cible en créant un ensemble d'outils de plateforme personnalisé. Pour plus d’informations, consultez [Multiciblage natif C++](http://go.microsoft.com/fwlink/?LinkId=196619) sur le blog de Visual C++.  
+ Vous pouvez étendre davantage la plateforme cible en créant un ensemble d'outils de plateforme personnalisé. Pour plus d’informations, consultez [C++ multi-ciblage natif](http://go.microsoft.com/fwlink/p/?linkid=196619) sur le blog de Visual C++.  
   
 ### <a name="to-change-the-target-framework"></a>Pour changer la version cible du .Net Framework  
   
@@ -43,7 +44,7 @@ Vous pouvez modifier les paramètres de projet Visual C++ pour cibler différent
   
 2.  Dans la barre de menus, sélectionnez **Fichier**, **Ouvrir**, **Fichier**. Dans la boîte de dialogue **Ouvrir un fichier** , accédez à votre dossier de projet, puis ouvrez le fichier projet (.vcxproj).  
   
-3.  Dans le fichier projet, recherchez l'entrée correspondant à la version du Framework cible. Par exemple, si votre projet est destiné à utiliser .NET Framework 4.5, recherchez `<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>` dans l'élément `<PropertyGroup Label="Globals">` de l'élément `<Project>` . Si l'élément `<TargetFrameworkVersion>` n'est pas présent, votre projet n'utilise pas le .NET Framework et aucune modification n'est requise.  
+3.  Dans le fichier projet, recherchez l'entrée correspondant à la version du Framework cible. Par exemple, si votre projet est destiné à utiliser .NET Framework 4.5, recherchez `<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>` dans l'élément `<PropertyGroup Label="Globals">` de l'élément `<Project>`. Si l'élément `<TargetFrameworkVersion>` n'est pas présent, votre projet n'utilise pas le .NET Framework et aucune modification n'est requise.  
   
 4.  Remplacez la valeur par la version du .NET Framework de votre choix, comme v3.5 ou v4.  
   

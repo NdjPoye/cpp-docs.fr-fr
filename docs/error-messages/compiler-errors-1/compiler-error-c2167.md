@@ -15,13 +15,14 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e6510402bd3c5223932392d8c03e5b60c000bf90
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d378fb71f4806d7c73ac366c1aafecd571c535f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2167"></a>Erreur du compilateur C2167
-'fonction' : paramètres réels de fonction intrinsèque trop nombreux  
+'fonction' : paramètres réels de fonction intrinsèque trop nombreux  
   
  Une référence à une fonction `intrinsic` comprend trop de paramètres.

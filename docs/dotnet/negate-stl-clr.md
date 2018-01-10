@@ -15,11 +15,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 976cec2760669afe86b31778eb09431ba1651557
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b7a9ae9fa1270a2a7f417e46681b21120eeded8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="negate-stlclr"></a>negate (STL/CLR)
 La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourne l’argument de l’opération de négation. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.  
@@ -66,7 +69,7 @@ public:
 |operator()|Calcule la fonction de votre choix.|  
 |opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La classe de modèle décrit un functor un argument. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, elle retourne son argument de l’opération de négation.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  

@@ -15,18 +15,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d43975aea670c695faeb3869517de7b216b0a15d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84f8439a862f049fff902b317c5d185f2898ad54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2110"></a>Erreur du compilateur C2110
-'+' : impossible d’ajouter deux pointeurs  
+'+' : impossible d’ajouter deux pointeurs  
   
  L’utilisateur a tenté d’ajouter deux valeurs de pointeur avec l’opérateur `+` (signe plus).  
   
- L’exemple suivant génère l’erreur C2110 :  
+ L’exemple suivant génère l’erreur C2110 :  
   
 ```  
 // C2110.cpp  

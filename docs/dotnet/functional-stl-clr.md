@@ -1,81 +1,83 @@
 ---
-title: "functional (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "<cliext/functional>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "en-tête <cliext/functional> (STL/CLR)"
-  - "en-tête <functional> (STL/CLR)"
-  - "fonctions fonctionnelles (STL/CLR)"
+title: fonctionnel (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: <cliext/functional>
+dev_langs: C++
+helpviewer_keywords:
+- <functional> header [STL/CLR]
+- <cliext/functional> header [STL/CLR]
+- functional functions [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8e731767401964045307635a428d7606d628aca8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# functional (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Incluez l'en\-tête `<cliext/functional>` de STL\/CLR pour définir plusieurs classes du modèle et les modèles associés de délégués et de fonctions.  
+# <a name="functional-stlclr"></a>functional (STL/CLR)
+Incluez l’en-tête STL/CLR `<cliext/functional>` pour définir l’un nombre de classes de modèle et les fonctions et les délégués de modèle associés.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 #include <functional>  
 ```  
   
-## Déclarations  
+## <a name="declarations"></a>Déclarations  
   
 |Délégué|Description|  
-|-------------|-----------------|  
-|[binary\_delegate](../dotnet/binary-delegate-stl-clr.md)|Délégué de deux arguments.|  
-|[binary\_delegate\_noreturn](../dotnet/binary-delegate-noreturn-stl-clr.md)|Délégué de deux arguments retournant `void`.|  
-|[unary\_delegate](../dotnet/unary-delegate-stl-clr.md)|Délégué d'un argument.|  
-|[unary\_delegate\_noreturn](../dotnet/unary-delegate-noreturn-stl-clr.md)|Délégué d'un argument retournant `void`.|  
+|--------------|-----------------|  
+|[binary_delegate (STL/CLR)](../dotnet/binary-delegate-stl-clr.md)|Délégué à deux arguments.|  
+|[binary_delegate_noreturn (STL/CLR)](../dotnet/binary-delegate-noreturn-stl-clr.md)|Délégué à deux arguments retournant `void`.|  
+|[unary_delegate (STL/CLR)](../dotnet/unary-delegate-stl-clr.md)|Délégué à un argument.|  
+|[unary_delegate_noreturn (STL/CLR)](../dotnet/unary-delegate-noreturn-stl-clr.md)|Délégué à un argument retour `void`.|  
   
 |Classe|Description|  
-|------------|-----------------|  
-|[binary\_negate](../dotnet/binary-negate-stl-clr.md)|Functor pour inverser un functor de deux arguments.|  
-|[binder1st](../dotnet/binder1st-stl-clr.md)|Functor pour lier le premier argument à un functor de deux arguments.|  
-|[binder2nd](../dotnet/binder2nd-stl-clr.md)|Functor pour lier le deuxième argument à un functor de deux arguments.|  
-|[divides](../dotnet/divides-stl-clr.md)|Functor de division.|  
-|[equal\_to](../dotnet/equal-to-stl-clr.md)|Functor de comparaison égale.|  
-|[greater](../dotnet/greater-stl-clr.md)|Functor de comparaison de supériorité.|  
-|[greater\_equal](../dotnet/greater-equal-stl-clr.md)|Functor de comparaison supérieur ou égal.|  
-|[less](../dotnet/less-stl-clr.md)|Functor de comparaison d'infériorité.|  
-|[less\_equal](../dotnet/less-equal-stl-clr.md)|Functor de comparaison inférieur ou égal.|  
-|[logical\_and](../dotnet/logical-and-stl-clr.md)|Functor de ET logique.|  
-|[logical\_not](../dotnet/logical-not-stl-clr.md)|Functor de NON logique.|  
-|[logical\_or](../dotnet/logical-or-stl-clr.md)|Functor de OU logique.|  
-|[minus](../dotnet/minus-stl-clr.md)|Functor de soustraction.|  
-|[modulo](../dotnet/modulus-stl-clr.md)|Functor modulo.|  
-|[multiplies](../dotnet/multiplies-stl-clr.md)|Functor de multiplication.|  
-|[negate](../dotnet/negate-stl-clr.md)|Functor pour retourner l'argument après une négation.|  
-|[not\_equal\_to](../dotnet/not-equal-to-stl-clr.md)|Functor de comparaison de différence.|  
-|[plus](../dotnet/plus-stl-clr.md)|Functor d'addition.|  
-|[unary\_negate](../dotnet/unary-negate-stl-clr.md)|Functor pour inverser un functor à un argument.|  
+|-----------|-----------------|  
+|[binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)|Functor pour annuler un functor deux arguments.|  
+|[binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)|Functor pour lier le premier argument à un functor deux arguments.|  
+|[binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)|Functor pour lier le deuxième argument à un functor deux arguments.|  
+|[divides (STL/CLR)](../dotnet/divides-stl-clr.md)|Diviser functor.|  
+|[equal_to (STL/CLR)](../dotnet/equal-to-stl-clr.md)|Fonction de comparaison égale.|  
+|[greater (STL/CLR)](../dotnet/greater-stl-clr.md)|Fonction de comparaison supérieure.|  
+|[greater_equal (STL/CLR)](../dotnet/greater-equal-stl-clr.md)|Fonction de comparaison supérieur ou égal à.|  
+|[less (STL/CLR)](../dotnet/less-stl-clr.md)|Moins functor de comparaison.|  
+|[less_equal (STL/CLR)](../dotnet/less-equal-stl-clr.md)|Fonction de comparaison inférieur ou égal à.|  
+|[logical_and (STL/CLR)](../dotnet/logical-and-stl-clr.md)|Logique AND functor.|  
+|[logical_not (STL/CLR)](../dotnet/logical-not-stl-clr.md)|Logique pas functor.|  
+|[logical_or (STL/CLR)](../dotnet/logical-or-stl-clr.md)|Functor de OR logique.|  
+|[minus (STL/CLR)](../dotnet/minus-stl-clr.md)|Soustraire functor.|  
+|[modulus (STL/CLR)](../dotnet/modulus-stl-clr.md)|Functor de modulo.|  
+|[multiplies (STL/CLR)](../dotnet/multiplies-stl-clr.md)|Multipliez functor.|  
+|[negate (STL/CLR)](../dotnet/negate-stl-clr.md)|Functor pour retourner l’argument de l’opération de négation.|  
+|[not_equal_to (STL/CLR)](../dotnet/not-equal-to-stl-clr.md)|Fonction de comparaison n’est pas égal.|  
+|[plus (STL/CLR)](../dotnet/plus-stl-clr.md)|Ajoutez un functor.|  
+|[unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)|Functor pour annuler un functor un argument.|  
   
 |Fonction|Description|  
 |--------------|-----------------|  
-|[bind1st](../dotnet/bind1st-stl-clr.md)|Génère un binder1st pour un argument et un functor.|  
-|[bind2nd](../dotnet/bind2nd-stl-clr.md)|Génère un binder2nd pour un argument et un functor.|  
-|[not1](../dotnet/not1-stl-clr.md)|Génère un unary\_negate pour un functor.|  
-|[not1](../dotnet/not1-stl-clr.md)|Génère un binary\_negate pour un functor.|  
+|[bind1st (STL/CLR)](../dotnet/bind1st-stl-clr.md)|Génère un binder1st pour un argument et un functor.|  
+|[bind2nd (STL/CLR)](../dotnet/bind2nd-stl-clr.md)|Génère un binder2nd pour un argument et un functor.|  
+|[not1 (STL/CLR)](../dotnet/not1-stl-clr.md)|Génère un unary_negate pour un functor.|  
+|[not1 (STL/CLR)](../dotnet/not1-stl-clr.md)|Génère un binary_negate pour un functor.|  
   
-## Configuration requise  
- **En\-tête :** \<cliext\/functional\>  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/fonctionnel >  
   
- **Espace de noms :** cliext  
+ **Namespace :** cliext  
   
-## Voir aussi  
- [STL\/CLR, bibliothèque](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Référence de bibliothèque STL/CLR](../dotnet/stl-clr-library-reference.md)

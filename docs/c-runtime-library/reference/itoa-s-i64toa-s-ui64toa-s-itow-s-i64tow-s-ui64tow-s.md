@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -46,8 +45,7 @@ f1_keywords:
 - _ui64tot_s
 - i64tow_s
 - itot_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _ui64toa_s function
 - _itow_s function
@@ -67,30 +65,16 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 7e163c78f3a6b011c8670ad71277fb6770935066
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1499f3feb76219ac03362fef70e4c3b516a8f060
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="itoas-i64toas-ui64toas-itows-i64tows-ui64tows"></a>_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s
 Convertit un entier en chaîne. Ces versions de [_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -166,12 +150,12 @@ errno_t _itow_s(
   
 ### <a name="error-conditions"></a>Conditions d’erreur  
   
-|par défaut|buffer|Taille en caractères|radix|Return|  
+|par défaut|buffer|Taille en caractères|radix|Retourner|  
 |-----------|------------|----------------------|-----------|------------|  
-|any|`NULL`|any|any|`EINVAL`|  
-|any|any|<=0|any|`EINVAL`|  
-|any|any|<= longueur de la chaîne de résultat requise|any|`EINVAL`|  
-|any|any|any|`radix` < 2 ou `radix` > 36|`EINVAL`|  
+|tous|`NULL`|tous|tous|`EINVAL`|  
+|tous|tous|<=0|tous|`EINVAL`|  
+|tous|tous|<= longueur de la chaîne de résultat requise|tous|`EINVAL`|  
+|tous|tous|tous|`radix` < 2 ou `radix` > 36|`EINVAL`|  
   
  **Problèmes de sécurité**  
   
@@ -180,7 +164,7 @@ errno_t _itow_s(
 ## <a name="remarks"></a>Notes  
  Sauf pour les paramètres et la valeur de retour, les fonctions `_itoa_s` ont le même comportement que les versions moins sécurisées correspondantes.  
   
- En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -203,7 +187,7 @@ errno_t _itow_s(
 |`_i64tow_s`|\<stdlib.h> ou \<wchar.h>|  
 |`_ui64tow_s`|\<stdlib.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

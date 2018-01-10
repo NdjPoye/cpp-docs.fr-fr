@@ -53,11 +53,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 010b3f04509852012dac641aadeb4152d666898d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f5d2daf238a952eb7691257e1fab68cf16b969b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 Écrivent des données mises en forme dans une chaîne avec la possibilité de spécifier l’ordre dans lequel les paramètres sont utilisés dans la chaîne de format.  
@@ -109,12 +110,12 @@ int _swprintf_p_l(
  `locale`  
  Paramètres régionaux à utiliser.  
   
- Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Valeur de retour  
  Le nombre de caractères écrits, ou -1 si une erreur s’est produite.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction `_sprintf_p` met en forme une série de caractères et de valeurs et la stocke dans `buffer`. Chaque argument dans le `argument_list` (le cas échéant) est converti et sorti selon la spécification de format correspondante dans `format`. Le `format` argument utilise le [syntaxe de spécification pour les fonctions printf et wprintf format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Un caractère `NULL` est ajouté après le dernier caractère écrit. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini. La différence entre `_sprintf_p` et `sprintf_s` vient du fait que `_sprintf_p` prend en charge les paramètres positionnels, ce qui vous permet de spécifier l'ordre dans lequel les arguments sont utilisés dans la chaîne de format. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).  
   
  `_swprintf_p` est une version à caractères larges de `_sprintf_p` ; les arguments de pointeur de `_swprintf_p` sont des chaînes à caractères larges. La détection d'erreurs d'encodage dans `_swprintf_p` peut différer de celle dans `_sprintf_p`. `_swprintf_p` et `fwprintf_p` se comportent de façon identique, sauf que `_swprintf_p` écrit la sortie dans une chaîne au lieu d'une destination de type `FILE`, et que `_swprintf_p` requiert le paramètre `count` pour spécifier le nombre maximal de caractères à écrire. Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.  
@@ -135,7 +136,7 @@ int _swprintf_p_l(
 |`_sprintf_p`, `_sprintf_p_l`|\<stdio.h>|  
 |`_swprintf_p`, `_swprintf_p_l`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

@@ -1,32 +1,31 @@
 ---
-title: "Avertissement du compilateur (niveau 4) C4610 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4610"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4610"
+title: Compilateur avertissement (niveau 4) C4610 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4610
+dev_langs: C++
+helpviewer_keywords: C4610
 ms.assetid: 23c1a16c-9ca9-4bf6-9911-a72b785560c2
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 49c894789aa64510a7f65e7e3693c94a88f36f82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 4) C4610
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-objet 'classe' ne peut jamais être instancié \- constructeur défini par l'utilisateur requis  
+# <a name="compiler-warning-level-4-c4610"></a>Avertissement du compilateur (niveau 4) C4610
+l’objet 'class' ne peut jamais être instancié - constructeur défini par l’utilisateur requis  
   
- La classe ne possède aucun constructeur défini par l'utilisateur ou constructeur par défaut.  Aucune instanciation n'est effectuée.  L'exemple suivant génère l'erreur C4610 :  
+ La classe n’a pas défini par l’utilisateur ou le constructeur par défaut. Aucune instanciation n’est effectuée. L’exemple suivant génère l’erreur C4610 :  
   
 ```  
 // C4610.cpp  

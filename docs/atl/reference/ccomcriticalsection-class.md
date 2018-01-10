@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ef8ca542ef9bda72bd89b633d42db727bce3e94a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 827ba99a141799af42fab65c36df1f22d212260a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcriticalsection-class"></a>Classe de CComCriticalSection
 Cette classe fournit des méthodes pour obtenir et de libérer la possession d’un objet de section critique.  
@@ -46,7 +47,7 @@ class CComCriticalSection
 |----------|-----------------|  
 |[CComCriticalSection::CComCriticalSection](#ccomcriticalsection)|Constructeur.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Méthodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -61,7 +62,7 @@ class CComCriticalSection
 |----------|-----------------|  
 |[CComCriticalSection::m_sec](#m_sec)|A **CRITICAL_SECTION** objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CComCriticalSection`est semblable à la classe [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md), sauf que vous devez explicitement initialiser et libérer de la section critique.  
   
  En général, vous utilisez `CComCriticalSection` via la `typedef` nom [CriticalSection](ccommultithreadmodel-class.md#criticalsection). Ce nom fait référence à `CComCriticalSection` lorsque [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) est utilisé.  
@@ -79,7 +80,7 @@ class CComCriticalSection
 CComCriticalSection() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Définit le [m_sec](#m_sec) membre de données null **.**  
   
 ##  <a name="init"></a>CComCriticalSection::Init  
@@ -102,7 +103,7 @@ HRESULT Lock() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK` en cas de réussite, **E_OUTOFMEMORY** ou **E_FAIL** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’objet de section critique doit tout d’abord être initialisé avec un appel à la [Init](#init) (méthode). Lorsque le code protégé a terminé l’exécution, le thread doit appeler [Unlock](#unlock) pour libérer la possession de la section critique.  
   
 ##  <a name="m_sec"></a>CComCriticalSection::m_sec  
@@ -122,7 +123,7 @@ HRESULT Term() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une fois `Term` a été appelée, les informations critiques section ne peut plus être utilisée pour la synchronisation.  
   
 ##  <a name="unlock"></a>CComCriticalSection::Unlock  
@@ -135,7 +136,7 @@ HRESULT Unlock() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour tout d’abord obtenir la propriété, le thread doit appeler le [verrou](#lock) (méthode). Chaque appel à `Lock` nécessite un appel correspondant à `Unlock` pour libérer la possession de la section critique.  
   
 ## <a name="see-also"></a>Voir aussi  

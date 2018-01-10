@@ -4,44 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- vc.appwiz.ATL.interface
-dev_langs:
-- C++
+f1_keywords: vc.appwiz.ATL.interface
+dev_langs: C++
 helpviewer_keywords:
 - interfaces, adding to ATL objects
 - Implement Interface ATL wizard
 - controls [ATL], interfaces
 - ATL projects, adding interfaces
 ms.assetid: 7d34b023-2c6b-4155-aca3-d47a40968063
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 10b252047a7bae1bbd54e854445dcd90db06a341
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1c07306a660162b23ecaffa4dd239b2538be0295
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Ajout d’une nouvelle Interface dans un projet ATL
 Lorsque vous ajoutez une interface à votre objet ou contrôle, vous créez extraite des fonctions pour chaque méthode dans cette interface. Dans votre objet ou un contrôle, vous pouvez ajouter uniquement des interfaces figurant actuellement dans une bibliothèque de types existante. En outre, la classe dans laquelle vous ajoutez l’interface doit implémenter la [BEGIN_COM_MAP](com-map-macros.md#begin_com_map) (macro) ou, si le projet est attribué, il doit avoir le `coclass` attribut.  
@@ -73,5 +56,4 @@ Lorsque vous ajoutez une interface à votre objet ou contrôle, vous créez extr
  [Programmation avec ATL et le Code d’exécution C](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [Notions de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)   
  [Configurations de projet ATL par défaut](../../atl/reference/default-atl-project-configurations.md)
-
 

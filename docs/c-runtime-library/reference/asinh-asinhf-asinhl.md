@@ -38,11 +38,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 20e03e80517726689c7d3369e0afc4de30bcf230
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd9e19a9729f53aae9f3a4fd32787a9ae02eae7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 Calcule le sinus hyperbolique inverse.  
@@ -74,7 +75,7 @@ long double asinhl(
 ## <a name="return-value"></a>Valeur de retour  
  Les fonctions `asinh` retournent le sinus hyperbolique inverse (arc sinus hyperbolique) de `x`. Cette fonction est valide sur le domaine à virgule flottante. Si `x` est une valeur NaN silencieuse, est indéfini ou infini, la même valeur est retournée.  
   
-|Entrée|Exception SEH|`_matherr` |  
+|Entrée|Exception SEH|Exception `_matherr`|  
 |-----------|-------------------|--------------------------|  
 |± QNAN, IND, INF|aucun|aucun|  
   
@@ -83,11 +84,11 @@ long double asinhl(
   
 ## <a name="requirements"></a>Spécifications  
   
-|Fonction|En-tête C|En-tête C++|  
+|Fonction|En-tête C|En-tête C++|  
 |--------------|--------------|------------------|  
 |`asinh`, `asinhf`, `asinhl`|\<math.h>|\<cmath>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

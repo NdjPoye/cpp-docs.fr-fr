@@ -51,11 +51,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ffc7f3e830d9caccf3428b2d9d3b70253d8d3b18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c5ec1881695c80c8f493ac2a2848d0349f430aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf, classe
 Décrit une mémoire tampon de flux qui contrôle la transmission d'éléments de type `Elem`, dont les caractéristiques sont déterminées par la classe `Tr`, vers et à partir d'une séquence d'éléments stockés dans un fichier externe.  
@@ -485,7 +486,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
  Si la fonction ne peut pas réussir, elle retourne **traits_type::eof**. Sinon, elle retourne **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre virtuelle protégée remet un élément dans la mémoire tampon d’entrée, puis en fait l’élément actuel (désigné par le pointeur suivant). Si _ *Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof), l’élément à remettre est celui qui se trouve déjà dans le flux avant l’élément actuel. Sinon, cet élément est remplacé par **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). La fonction peut remettre un élément de différentes manières :  
+ La fonction membre virtuelle protégée remet un élément dans la mémoire tampon d’entrée, puis en fait l’élément actuel (désigné par le pointeur suivant). Si _ *Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof), l’élément à remettre est celui qui se trouve déjà dans le flux avant l’élément actuel. Sinon, cet élément est remplacé par **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). La fonction peut replacer un élément de différentes manières :  
   
 -   Si une position de remise est disponible et que la valeur de l’élément stocké est égale à **ch**, elle peut décrémenter le pointeur suivant pour la mémoire tampon d’entrée.  
   
@@ -544,7 +545,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
  Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Si le pointeur de fichier **fp** est un pointeur null, la fonction échoue. Sinon, elle s’efforce de modifier la position du flux en appelant `fsetpos`( **fp**, **&fposn**), où **fposn** est l’objet `fpos_t` stocké dans `pos`. Si la fonction réussit, elle retourne `pos`. Sinon, elle retourne une position de flux non valide. Pour déterminer si la position du flux n’est pas valide, comparez la valeur de retour à `pos_type(off_type(-1))`.  
+ Si le pointeur de fichier **fp** est un pointeur null, la fonction échoue. Sinon, elle s’efforce de modifier la position du flux en appelant `fsetpos`( **fp**, **&fposn**), où **fposn** est l’objet `fpos_t` stocké dans `pos`. Si la fonction réussit, elle retourne `pos`. Sinon, elle retourne une position de flux non valide. Pour déterminer si la position du flux est non valide, comparez la valeur de retour à `pos_type(off_type(-1))`.  
   
 ### <a name="remarks"></a>Notes  
  La fonction membre virtuelle protégée s’efforce de modifier les positions actuelles des flux contrôlés. Pour un objet de classe [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, une position de flux peut être représentée par un objet de type `fpos_t` qui stocke un décalage et toutes les informations d’état nécessaires pour analyser un flux large. Le décalage zéro désigne le premier élément du flux. (Un objet de type `pos_type` stocke au moins un objet `fpos_t`.)  

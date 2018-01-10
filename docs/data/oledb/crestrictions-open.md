@@ -1,35 +1,37 @@
 ---
-title: "CRestrictions::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRestrictions.Open"
-  - "ATL::CRestrictions::Open"
-  - "ATL.CRestrictions.Open"
-  - "CRestrictions::Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Open (méthode)"
+title: CRestrictions::Open | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRestrictions.Open
+- ATL::CRestrictions::Open
+- ATL.CRestrictions.Open
+- CRestrictions::Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: 0aff0cc3-543a-47d2-8d6b-ebb36926b6db
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bbb0b175a6fa5a6cf93b4fe107884d5bb84f2487
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CRestrictions::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retourne un jeu de résultats en fonction des restrictions fournies par l'utilisateur.  
+# <a name="crestrictionsopen"></a>CRestrictions::Open
+Retourne un résultat défini selon les restrictions fournies par l’utilisateur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -46,27 +48,27 @@ Retourne un jeu de résultats en fonction des restrictions fournies par l'utilis
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `session`  
- \[in\] spécifie un objet de session existant utilisé pour se connecter à la source de données.  
+ [in] Spécifie un objet de session existant utilisé pour se connecter à la source de données.  
   
  *lpszParam*  
- \[in\] spécifie les restrictions d'ensemble de lignes de schéma.  
+ [in] Spécifie les restrictions sur l’ensemble de lignes de schéma.  
   
  `bBind`  
- \[in\] spécifie s'il faut lier le mappage de colonnes automatiquement.  La valeur par défaut est **true**, ce qui entraîne le mappage de colonnes à lier automatiquement.  Mettre le paramètre `bBind` à **faux** empêche la liaison automatique du mappage de colonnes afin de pouvoir effectuer la liaison manuellement. \(La liaison manuelle présente un intérêt tout particulier aux utilisateurs d'OLAP\).  
+ [in] Spécifie s’il faut lier automatiquement de mapper les colonnes. La valeur par défaut est **true**, ce qui entraîne le mappage de colonnes à lier automatiquement. Paramètre `bBind` à **false** empêche la liaison automatique de la carte de la colonne afin que vous pouvez lier manuellement. (Liaison manuelle est particulièrement intéressant pour les utilisateurs OLAP).  
   
-## Valeur de retour  
- Une des valeurs standard `HRESULT`  
+## <a name="return-value"></a>Valeur de retour  
+ Un de la norme `HRESULT` valeurs.  
   
-## Notes  
- Vous pouvez spécifier jusqu'à sept restrictions sur un ensemble de lignes de schéma.  
+## <a name="remarks"></a>Notes  
+ Vous pouvez spécifier un maximum de sept restrictions sur un ensemble de lignes de schéma.  
   
- Voir le [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) pour plus d'informations sur les restrictions définies à chaque ensemble de lignes de schéma.  
+ Consultez [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) pour plus d’informations sur les restrictions définies sur chaque ensemble de lignes de schéma.  
   
-## Configuration requise  
- **En\-tête :** atldbsch.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atldbsch.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CRestrictions, classe](../../data/oledb/crestrictions-class.md)   
  [Classes de jeu de lignes du schéma et classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

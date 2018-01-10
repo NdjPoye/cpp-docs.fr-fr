@@ -1,45 +1,46 @@
 ---
-title: "CreatorMap::factoryCache, donn&#233;es de membre | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::CreatorMap::factoryCache"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "factoryCache (membre de données)"
+title: "Creatormap::factorycache, données de membre | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::CreatorMap::factoryCache
+dev_langs: C++
+helpviewer_keywords: factoryCache data member
 ms.assetid: 4301062f-9871-4d9f-8ca0-284d26443a97
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9db547a72f4ec4a95918cb78aa4ca80885c011b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CreatorMap::factoryCache, donn&#233;es de membre
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="creatormapfactorycache-data-member"></a>CreatorMap::factoryCache, données de membre
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 FactoryCache* factoryCache;  
 ```  
   
-## Notes  
- Stocke le pointeur dans le cache de fabrique pour le CreatorMap.  
+## <a name="remarks"></a>Notes  
+ Stocke le pointeur vers le cache de fabrication pour le CreatorMap.  
   
-## Configuration requise  
- **En\-tête:** module.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** module.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
- [CreatorMap, structure](../windows/creatormap-structure.md)   
+## <a name="see-also"></a>Voir aussi  
+ [CreatorMap (Structure)](../windows/creatormap-structure.md)   
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

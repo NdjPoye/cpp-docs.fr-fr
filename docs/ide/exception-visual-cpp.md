@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 687d907b243e62c3fa31b93c0aaebc5180d1cc17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c07dde806938b38dd55a3258b3724b0937d5601d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltexceptiongt-visual-c"></a>&lt;exception&gt; (Visual C++)
 La balise \<exception> vous permet de spécifier quelles exceptions peuvent être levées. Cette balise est appliquée à une définition de méthode.  
@@ -45,7 +46,7 @@ La balise \<exception> vous permet de spécifier quelles exceptions peuvent êtr
  `description`  
  Une description.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Compilez avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  
   
  Le compilateur Visual C++ tente de résoudre les références cref en une seule passe via les commentaires de la documentation.  Par conséquent, si lorsque vous utilisez les règles de recherche C++, un symbole est introuvable par le compilateur, la référence est marquée comme non résolue. Consultez [ \<seealso >](../ide/seealso-visual-cpp.md) pour plus d’informations.  

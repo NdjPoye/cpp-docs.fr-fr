@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ab078acd8aaadef19659ad766233ea191b360e02
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8cbb9a4f8b92a1cd495e1312c1aa8a8f77cefcd3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pgomgr"></a>pgomgr
 Ajoute des données de profil à partir d’un ou plusieurs fichiers .pgc au fichier .pgd.  
@@ -53,7 +54,7 @@ pgomgr [options] pgcfiles pgdfile
  `pgdfile`  
  Le fichier .pgd dans lequel vous fusionnez des données à partir de l’ou les fichiers .pgc.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 > [!NOTE]
 >  Vous pouvez démarrer cet outil uniquement à partir de l'invite de commandes [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Vous ne pouvez pas le démarrer à partir d'une invite de commandes système ni de l'Explorateur de fichiers.  

@@ -4,37 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords: atlbase/ATL::WM_FORWARDMSG
+dev_langs: C++
 ms.assetid: 63abd22c-372d-4148-bb04-c605950ae64f
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: be814c0a2ade7df8f7a4d6863627e79efe0a48bc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6dde3255997b03eb827ef9e318de73b3badee23c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-messages-macros"></a>Macros des Messages Windows
 Cette macro transfère les messages de fenêtre.  
@@ -47,7 +32,7 @@ Cette macro transfère les messages de fenêtre.
  **En-tête :** atlbase.h 
    
 ##  <a name="wm_forwardmsg"></a>WM_FORWARDMSG  
- Cette macro transmet un message reçu par une fenêtre à une autre fenêtre pour le traitement.  
+ Cette macro transfère un message reçu par une fenêtre à une autre fenêtre pour le traitement.  
   
 ```
 WM_FORWARDMSG
@@ -56,7 +41,7 @@ WM_FORWARDMSG
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le message a été traité, zéro dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez `WM_FORWARDMSG` pour transférer un message reçu par une fenêtre à une autre fenêtre pour le traitement. Les paramètres LPARAM et WPARAM sont utilisées comme suit :  
   
 |Paramètre|Utilisation|  
@@ -65,10 +50,9 @@ WM_FORWARDMSG
 |LPARAM|Un pointeur vers un `MSG` structure qui contient des informations sur un message|  
   
 ### <a name="example"></a>Exemple  
- Dans l’exemple suivant, `m_hWndOther` représente l’autre fenêtre qui reçoit le message.  
+ Dans l’exemple suivant, `m_hWndOther` représente l’autre fenêtre qui reçoit ce message.  
   
- [!code-cpp[NVC_ATL_Windowing&#137;](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing#137](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Macros](../../atl/reference/atl-macros.md)
-

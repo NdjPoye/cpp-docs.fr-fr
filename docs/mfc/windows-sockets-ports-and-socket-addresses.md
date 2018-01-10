@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 768ccdc197df8d38cb594c2408bb6fc6998dfdcb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c7b2e15761815b75ba8001ad4eb5a5c276f5056
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets : ports et adresses de socket
 Cet article explique les termes « port » et « address » comme utilisé avec Windows Sockets.  
@@ -45,7 +46,7 @@ Cet article explique les termes « port » et « address » comme utilisé a
 > [!NOTE]
 >  Il est possible que votre ordinateur possède plusieurs cartes réseau (ou votre application s’exécute un jour sur un ordinateur de ce type), représentant chacune un autre réseau. Dans ce cas, vous devrez donner une adresse pour spécifier la carte réseau utilise le socket. Il s’agit d’une utilisation avancée et d’un problème de portabilité possible certaine.  
   
- Pour plus d'informations, voir :  
+ Pour plus d'informations, voir :  
   
 -   [Windows Sockets : utilisation de la classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   

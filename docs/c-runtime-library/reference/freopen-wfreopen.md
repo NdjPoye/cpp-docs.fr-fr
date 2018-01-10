@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _wfreopen
 - _tfreopen
 - freopen
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wfreopen function
 - file pointers [C++], reassigning
@@ -38,30 +36,16 @@ helpviewer_keywords:
 - tfreopen function
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 47b45dd9e2ad07032529652021172ea64b84d652
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d3eb18b70ea672b095dc6d24dfd45e1bdda8f88b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="freopen-wfreopen"></a>freopen, _wfreopen
 Réaffecte un pointeur de fichier. Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [freopen_s, _wfreopen_s](../../c-runtime-library/reference/freopen-s-wfreopen-s.md).  
@@ -89,12 +73,12 @@ FILE *_wfreopen(
  Type d'accès autorisé.  
   
  `stream`  
- Pointeur vers la structure `FILE` .  
+ Pointeur vers la structure `FILE`.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Chacune de ces fonctions retourne un pointeur vers le fichier qui vient d'être ouvert. Si une erreur se produit, le fichier d'origine est fermé et la fonction retourne une valeur de pointeur `NULL`. Si `path`, `mode` ou `stream` est un pointeur null ou si `filename` est une chaîne vide, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions attribuent à `errno` la valeur `EINVAL` et retournent `NULL`.  
   
- Consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d’informations sur ces éléments et autres codes d’erreur.  
+ Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Notes  
  Il existe des versions plus sécurisées de ces fonctions ; consultez [freopen_s, _wfreopen_s](../../c-runtime-library/reference/freopen-s-wfreopen-s.md).  
@@ -141,7 +125,7 @@ FILE *_wfreopen(
  `b`  
  Ouvre en mode binaire (non traduit) ; les traductions ci-dessus sont supprimées.  
   
- Si `t` ou `b` n’est pas donné dans `mode`, le mode de traduction par défaut est défini par la variable globale [_fmode](../../c-runtime-library/fmode.md). Si `t` ou `b` a l'argument comme préfixe, la fonction échoue et retourne `NULL`.  
+ Si `t` ou `b` n'est pas donné dans `mode`, le mode de traduction par défaut est défini par la variable globale [_fmode](../../c-runtime-library/fmode.md). Si `t` ou `b` a l'argument comme préfixe, la fonction échoue et retourne `NULL`.  
   
  Pour en savoir plus sur les modes texte et binaire, consultez [E/S de fichier en mode texte et binaire](../../c-runtime-library/text-and-binary-mode-file-i-o.md).  
   
@@ -152,7 +136,7 @@ FILE *_wfreopen(
 |`freopen`|\<stdio.h>|  
 |`_wfreopen`|\<stdio.h> ou \<wchar.h>|  
   
- La console n'est pas prise en charge dans les applications [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] . Les handles de flux standard associés à la console (`stdin`, `stdout` et `stderr`) doivent être redirigés pour que les fonctions Runtime C puissent les utiliser dans les applications du [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ La console n'est pas prise en charge dans les applications [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] . Les handles de flux standard associés à la console (`stdin`, `stdout` et `stderr`) doivent être redirigés pour que les fonctions Runtime C puissent les utiliser dans les applications du [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

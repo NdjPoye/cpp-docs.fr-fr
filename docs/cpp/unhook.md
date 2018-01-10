@@ -4,29 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __unhook
 - __unhook_cpp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2b1909cf5d7bde440d434bb44ff2276e68679e78
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1513391aedf9a08cd1ece971d79fd5f6913d406d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unhook"></a>__unhook
 Dissocie une méthode de gestionnaire d'un événement.  
@@ -87,7 +85,7 @@ long  __unhook(
 ## <a name="usage"></a>Utilisation  
  Peut s'utiliser dans une portée de fonction quelconque, notamment Main, en dehors de la classe de récepteur d'événements.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la fonction intrinsèque `__unhook` dans un récepteur d'événements pour dissocier ou décrocher une méthode de gestionnaire d'une méthode d'événement.  
   
  Il existe trois formes de `__unhook`. Vous pouvez utiliser la première forme (à quatre arguments) dans la plupart des cas. Vous pouvez utiliser la deuxième forme (à deux arguments) `__unhook` uniquement pour un récepteur d'événements COM ; cela déconnecte toute l'interface d'événement. Vous pouvez utiliser la troisième forme (un argument) pour déconnecter tous les délégués de la source spécifiée.  

@@ -24,11 +24,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb5c6cfb07a430de48cb706980c1d8c6eb1b8a61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7429ec4b451536d3271432d3822de04ecae7dd87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetgetdatahere"></a>CRowset::GetDataHere
 Récupère les données à partir de la ligne actuelle et le place dans la mémoire tampon spécifiée.  
@@ -53,7 +56,7 @@ Récupère les données à partir de la ligne actuelle et le place dans la mémo
 ## <a name="return-value"></a>Valeur de retour  
  `HRESULT` standard.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour obtenir un exemple montrant comment utiliser cette fonction, consultez le [exemple MultiRead](../../visual-cpp-samples.md).  
   
 ## <a name="requirements"></a>Spécifications  

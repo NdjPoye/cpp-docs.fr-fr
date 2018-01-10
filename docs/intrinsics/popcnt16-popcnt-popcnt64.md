@@ -22,11 +22,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2a73775316391fd90698f35a5d5f1fdd7e00ebe3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 45e60a412dc24f685fd375ebc19c109b2bee0e2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 **Section spécifique à Microsoft**  
@@ -64,7 +65,7 @@ unsigned __int64 __popcnt64(
   
  **Fichier d’en-tête** \<intrin.h >  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Chacune de ces fonctions intrinsèques génère le `popcnt` instruction.  La taille de la valeur que la `popcnt` instruction retourne une valeur est identique à la taille de son argument.  En mode 32 bits ne des aucun 64 bits registres à caractère général, par conséquent, ne 64 bits `popcnt`.  
   
  Pour déterminer la prise en charge matérielle pour le `popcnt` instruction, appelez le `__cpuid` intrinsèque avec `InfoType=0x00000001` et vérifiez le bit 23 de `CPUInfo[2] (ECX)`. Ce bit est 1 si l’instruction est prise en charge et 0 dans le cas contraire. Si vous exécutez le code qui utilise cet intrinsèque sur du matériel qui ne prend pas en charge la `popcnt` instruction, les résultats sont imprévisibles.  

@@ -1,33 +1,33 @@
 ---
-title: "unique (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.unique"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unique attribute"
+title: unique (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.unique
+dev_langs: C++
+helpviewer_keywords: unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 88ba3e46a9a383ee72f3e979b23a275cc6f95d0e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# unique (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Spécifie un seul pointeur.  
+# <a name="unique-c"></a>unique (C++)
+Spécifie un pointeur unique.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,27 +35,26 @@ Spécifie un seul pointeur.
   
 ```  
   
-## Notes  
- L'attribut d' **unique** C\+\+ a les mêmes fonctionnalités que l'attribut d' [unique](http://msdn.microsoft.com/library/windows/desktop/aa367294) MIDL.  
+## <a name="remarks"></a>Notes  
+ Le **unique** attribut C++ a les mêmes fonctionnalités que le [unique](http://msdn.microsoft.com/library/windows/desktop/aa367294) attribut MIDL.  
   
-## Exemple  
- Consultez l'exemple de [référence](../windows/ref-cpp.md) pour un usage d'exemple d' **unique**.  
+## <a name="example"></a>Exemple  
+ Consultez le [ref](../windows/ref-cpp.md) exemple pour un exemple d’utilisation de **unique**.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|`typedef`, `struct`, **union**, paramètre de l'interface, méthode d'interface|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|`typedef`, `struct`, **union**, paramètre de l’interface, méthode d’interface|  
+|**Renouvelable**|Aucune|  
+|**Attributs requis**|Aucun|  
+|**Attributs non valides**|Aucun|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union et Struct (attributs)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Attributs de paramètres](../windows/parameter-attributes.md)   

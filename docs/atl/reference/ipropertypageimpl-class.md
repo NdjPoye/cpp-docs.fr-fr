@@ -42,11 +42,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 345379de254338fa8d344ee21b022439380d9851
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fbc62bd72ee5a639e8df0ada365cd7baac7d0c31
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl (classe)
 Cette classe implémente **IUnknown** et fournit une implémentation par défaut de la [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) interface.  
@@ -73,7 +74,7 @@ class IPropertyPageImpl
 |----------|-----------------|  
 |[IPropertyPageImpl::IPropertyPageImpl](#ipropertypageimpl)|Constructeur.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Méthodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -104,7 +105,7 @@ class IPropertyPageImpl
 |[IPropertyPageImpl::m_ppUnk](#m_ppunk)|Pointe vers un tableau de **IUnknown** des pointeurs vers les objets associés à la page de propriétés.|  
 |[IPropertyPageImpl::m_size](#m_size)|Stocke la hauteur et la largeur de la boîte de dialogue de la page de propriétés, en pixels.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) interface permet à un objet gérer une page de propriétés particulière dans une feuille de propriétés. Classe `IPropertyPageImpl` fournit une implémentation par défaut de cette interface et implémente **IUnknown** en envoyant des informations pour le vidage de builds périphérique en mode débogage.  
   
  **Articles connexes** [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md), [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)  
@@ -127,7 +128,7 @@ HRESULT Activate(
     BOOL bModal);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, la boîte de dialogue est toujours non modale, quelle que soit la valeur de la *bModal* paramètre.  
   
  Consultez [IPropertyPage::Activate](http://msdn.microsoft.com/library/windows/desktop/ms682250) dans le Kit de développement logiciel Windows.  
@@ -142,7 +143,7 @@ HRESULT Apply();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IPropertyPage::Apply](http://msdn.microsoft.com/library/windows/desktop/ms691284) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="deactivate"></a>IPropertyPageImpl::Deactivate  
@@ -152,7 +153,7 @@ HRESULT Apply();
 HRESULT Deactivate();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IPropertyPage::Deactivate](http://msdn.microsoft.com/library/windows/desktop/ms682504) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getpageinfo"></a>IPropertyPageImpl::GetPageInfo  
@@ -162,7 +163,7 @@ HRESULT Deactivate();
 HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `GetPageInfo`charge les ressources de chaîne associées [m_dwDocString](#m_dwdocstring), [m_dwHelpFile](#m_dwhelpfile), et [m_dwTitle](#m_dwtitle).  
   
  Consultez [IPropertyPage::GetPageInfo](http://msdn.microsoft.com/library/windows/desktop/ms680714) dans le Kit de développement logiciel Windows.  
@@ -174,7 +175,7 @@ HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
 HRESULT Help(PROPPAGEINFO* pPageInfo);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IPropertyPage::Help](http://msdn.microsoft.com/library/windows/desktop/ms691504) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="ipropertypageimpl"></a>IPropertyPageImpl::IPropertyPageImpl  
@@ -184,7 +185,7 @@ HRESULT Help(PROPPAGEINFO* pPageInfo);
 IPropertyPageImpl();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Initialise tous les membres de données.  
   
 ##  <a name="ispagedirty"></a>IPropertyPageImpl::IsPageDirty  
@@ -194,7 +195,7 @@ IPropertyPageImpl();
 HRESULT IsPageDirty(void);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `IsPageDirty`Retourne `S_OK` si la page a été modifié, car il a été activé.  
   
 ##  <a name="m_bdirty"></a>IPropertyPageImpl::m_bDirty  
@@ -267,7 +268,7 @@ SIZE m_size;
 HRESULT Move(LPCRECT pRect);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IPropertyPage::Move](http://msdn.microsoft.com/library/windows/desktop/ms680118) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="setdirty"></a>IPropertyPageImpl::SetDirty  
@@ -281,7 +282,7 @@ void SetDirty(BOOL bDirty);
  `bDirty`  
  [in] Si **TRUE**, état de la page de propriété est marquée comme étant modifiée. Dans le cas contraire, il est marqué comme non modifié.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si nécessaire, `SetDirty` informe le frame de la page de propriétés a changé.  
   
 ##  <a name="setobjects"></a>IPropertyPageImpl::SetObjects  
@@ -291,7 +292,7 @@ void SetDirty(BOOL bDirty);
 HRESULT SetObjects(ULONG nObjects, IUnknown** ppUnk);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IPropertyPage::SetObjects](http://msdn.microsoft.com/library/windows/desktop/ms678529) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="setpagesite"></a>IPropertyPageImpl::SetPageSite  
@@ -301,7 +302,7 @@ HRESULT SetObjects(ULONG nObjects, IUnknown** ppUnk);
 HRESULT SetPageSite(IPropertyPageSite* pPageSite);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IPropertyPage::SetPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690413) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="show"></a>IPropertyPageImpl::Show  
@@ -311,7 +312,7 @@ HRESULT SetPageSite(IPropertyPageSite* pPageSite);
 HRESULT Show(UINT nCmdShow);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IPropertyPage::Show](http://msdn.microsoft.com/library/windows/desktop/ms694467) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="translateaccelerator"></a>IPropertyPageImpl::TranslateAccelerator  
@@ -321,7 +322,7 @@ HRESULT Show(UINT nCmdShow);
 HRESULT TranslateAccelerator(MSG* pMsg);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IPropertyPage::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms686603) dans le Kit de développement logiciel Windows.  
   
 ## <a name="see-also"></a>Voir aussi  

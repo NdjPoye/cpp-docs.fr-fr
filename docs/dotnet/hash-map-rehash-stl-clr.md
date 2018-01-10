@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 15c0bfbf6b35092858eb10516808dae843b60bdd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3156d5102c4afdf9ec987b8c35870ad46d735b88
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmaprehash-stlclr"></a>hash_map::rehash (STL/CLR)
 Régénère la table de hachage.  
@@ -30,7 +33,7 @@ Régénère la table de hachage.
 void rehash();  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction membre régénère la table de hachage, en s’assurant que [hash_map::load_factor (STL/CLR)](../dotnet/hash-map-load-factor-stl-clr.md) `() <=` [hash_map::max_load_factor (STL/CLR)](../dotnet/hash-map-max-load-factor-stl-clr.md). Sinon, la table de hachage augmente la taille que si nécessaire après une insertion. (Jamais automatiquement diminue la taille.) Il permet d’ajuster la taille de la table de hachage.  
   
 ## <a name="example"></a>Exemple  

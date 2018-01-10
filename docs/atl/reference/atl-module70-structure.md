@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 104596d55ee2580cbee3cfc916ad9ef7390ce4c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8122f733282fa819c3d789a90e60171ee006e27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atlmodule70-structure"></a>Structure de _ATL_MODULE70
 Contient les données utilisées par chaque module ATL.  
@@ -53,7 +54,7 @@ struct _ATL_MODULE70 {
  **m_csStaticDataInitAndTypeInfo**  
  Permet de coordonner l’accès aux données internes dans les situations multithreads.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  [_ATL_MODULE](atl-typedefs.md#_atl_module) est défini comme un typedef de `_ATL_MODULE70`.  
   
 ## <a name="requirements"></a>Spécifications  

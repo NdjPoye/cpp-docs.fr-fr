@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3383634c38db8d4e6e6ee0548207c0ab189ad5ea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 98d82fcbe44daa423371536b08277b990ddae1bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setvaluecomp-stlclr"></a>set::value_comp (STL/CLR)
 Copie le délégué de classement pour les deux valeurs d’éléments.  
@@ -30,7 +33,7 @@ Copie le délégué de classement pour les deux valeurs d’éléments.
 value_compare^ value_comp();  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction membre retourne le délégué de classement utilisé pour ordonner la séquence contrôlée. Il permet de comparer deux valeurs d’éléments.  
   
 ## <a name="example"></a>Exemple  

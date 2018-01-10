@@ -1,32 +1,31 @@
 ---
-title: "SEGMENT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SEGMENT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SEGMENT directive"
+title: SEGMENT | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SEGMENT
+dev_langs: C++
+helpviewer_keywords: SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ce18933c27a62b1a89551320f75df7e25a67ef03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# SEGMENT
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Définit un segment de programme appelé *nom* avaient des attributs de segment  
+# <a name="segment"></a>SEGMENT
+Définit un segment de programme appelé *nom* ayant les attributs de segment  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,42 +34,42 @@ statements
 name ENDS  
 ```  
   
-#### Paramètres  
- *aligner*  
- Les adresses de gamme de mémoire dont une adresse de départ pour le segment peut être sélectionnée.  Le type d'alignement peut être tout l'un des éléments suivants :  
+#### <a name="parameters"></a>Paramètres  
+ *align*  
+ La plage d’adresses de mémoire à partir de laquelle une adresse de début pour le segment peut être sélectionnée. Le type d’alignement peut prendre l’une des opérations suivantes :  
   
-|alignez le type|Démarrer l'adresse|  
-|---------------------|------------------------|  
-|**BYTE**|adresse d'octet disponible suivante.|  
-|**WORD**|adresse de mot disponible suivante \(2 octets par mot\).|  
-|**DWORD**|adresse de double mot disponible suivante \(4 octets par double mot\).|  
-|**PARA**|Adresse suivante disponible de paragraphe \(16 octets par paragraphe\).|  
-|**PG**|Adresse de la page suivante disponible \(256 octets par page\).|  
-|**ALIGNER**\(n\)|*Nth*adresse d'octet disponible suivante.  Consultez la section Notes pour plus d'informations.|  
+|Aligner le Type|Adresse de départ|  
+|----------------|----------------------|  
+|**BYTE**|Adresse suivante octets disponibles.|  
+|**WORD**|Adresse de word disponible suivant (2 octets par word).|  
+|**DWORD**|Prochaine adresse disponible mot double (4 octets par mot double).|  
+|**PARA**|Adresse de paragraphe disponible suivant (16 octets par paragraphe).|  
+|**PAGE**|Adresse de page disponible suivant (256 octets par page).|  
+|**ALIGNER**(*n*)|Suivant disponible  *n* adresse des octets th. Pour plus d’informations, reportez-vous à la section Notes.|  
   
- si ce paramètre n'est pas spécifié, **PARA** est utilisé par défaut.  
+ Si ce paramètre n’est pas spécifié, **PARA** est utilisé par défaut.  
   
  *combine*  
- **PUBLIC**, **PILE**, **COMMUN**, **MÉMOIRE**,*adresse de***À**, **PRIVATE**  
+ **PUBLIC**, **pile**, **commune**, **mémoire**, **à***adresse*, **Privé**  
   
- *utilisation*  
- **USE16**, **USE32**, **APPARTEMENT**  
+ *utiliser*  
+ **USE16**, **USE32**, **PLAT**  
   
  `characteristics`  
- **INFORMATIONS**, **LECTURE**, **ÉCRITURE**, **EXÉCUTER**, **PARTAGÉ**, **NOPAGE**, **NOCACHE**, et **ABANDONNER**  
+ **INFORMATIONS**, **lire**, **écrire**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, et **ignorer**  
   
- Celles\-ci sont prises en charge pour COFF uniquement et correspondent aux spécifications de section COFF du nom similaire \(par exemple, **PARTAGÉ** correspond à IMAGE\_SCN\_MEM\_SHARED\).  La LECTURE définit la balise d'IMAGE\_SCN\_MEM\_READ.  La balise READONLY obsolète a effectué pour désactiver la section la balise d'IMG\_SCN\_MEM\_WRITE.  Si tout `characteristics` sont définis, les caractéristiques par défaut ne sont pas utilisées et seuls les balises programmeur\-spécifiées sont activées.  
+ Ceux-ci sont pris en charge uniquement pour COFF et correspondent aux caractéristiques de section COFF de nom similaire (par exemple, **SHARED** correspond à IMAGE_SCN_MEM_SHARED). LECTURE définit l’indicateur IMAGE_SCN_MEM_READ. L’indicateur READONLY obsolète a provoqué la section Effacer l’indicateur IMG_SCN_MEM_WRITE. Le cas échéant `characteristics` sont définis, les caractéristiques par défaut ne sont pas utilisés et les indicateurs spécifiée par le programmeur sont en vigueur.  
   
  `ALIAS(` `string` `)`  
- Cette chaîne est utilisée comme nom de section dans l'objet émis COFF.  Crée plusieurs sections avec le même nom externe, avec les noms du segment distincts MASM.  
+ Cette chaîne est utilisée en tant que le nom de la section dans l’objet COFF émis.  Crée plusieurs sections portant le même nom externe, avec des noms de segment MASM distincts.  
   
- non pris en charge avec **\/omf**.  
+ Non pris en charge avec **/omf**.  
   
  `class`  
- Indique comment les segments doivent être combinés et classés dans le fichier assemblé.  Les valeurs classiques sont, `'DATA'`, `'CODE'`, `'CONST'` et `'STACK'`  
+ Indique comment les segments doivent être combinés et classés dans le fichier assemblé. Les valeurs courantes sont, `'DATA'`, `'CODE'`, `'CONST'` et`'STACK'`  
   
-## Notes  
- Pour `ALIGN(``n``)`, `n` peut être une puissance de 2 entre 1 et 8192 ; non pris en charge avec **\/omf**.  
+## <a name="remarks"></a>Notes  
+ Pour `ALIGN(n)`, `n` peut être n’importe quel puissance de 2 à partir de 1 à 8192 ; pas pris en charge avec **/omf**.  
   
-## Voir aussi  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)

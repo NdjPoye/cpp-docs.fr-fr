@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21085e730763fab9c7e2261ca7573b46a6502033
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0612b9c2430d316aa9ba3a6d2dd9351342b5d352
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="logical-and-operator-ampamp"></a>Opérateur AND logique :&amp;&amp;
 ## <a name="syntax"></a>Syntaxe  
@@ -35,14 +36,14 @@ expression
   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’opérateur AND logique (**&&**) retourne la valeur booléenne **true** si les deux opérandes sont **true** et retourne **false** dans le cas contraire. Les opérandes sont convertis implicitement vers le type `bool` avant leur évaluation, et le résultat est de type `bool`. L'opérateur logique présente une associativité de gauche à droite.  
   
- Les opérandes de l'opérateur logique AND n'ont pas besoin d'être du même type, mais ils doivent être de type intégral ou de type pointeur. Les opérandes sont souvent des expressions relationnelles ou d'égalité.  
+ Les opérandes de l’opérateur logique AND n’ont pas besoin d’être du même type, mais ils doivent être de type intégral ou de type pointeur. Les opérandes sont souvent des expressions relationnelles ou d’égalité.  
   
- Le premier opérande est complètement évalué et tous les effets secondaires sont terminés avant de continuer l'évaluation de l'expression AND logique.  
+ Le premier opérande est complètement évalué et tous les effets secondaires sont terminés avant de continuer l’évaluation de l’expression AND logique.  
   
- Le deuxième opérande est évalué uniquement si le premier opérande a la valeur true (une valeur différente de zéro). Cette évaluation élimine l'évaluation inutile du deuxième opérande lorsque l'expression AND logique est false. Vous pouvez utiliser cette évaluation de court-circuit pour empêcher le déréférencement du pointeur NULL, comme indiqué dans l'exemple suivant :  
+ Le deuxième opérande est évalué uniquement si le premier opérande a la valeur true (une valeur différente de zéro). Cette évaluation élimine l’évaluation inutile du deuxième opérande lorsque l’expression AND logique est false. Vous pouvez utiliser cette évaluation de court-circuit pour empêcher le déréférencement du pointeur NULL, comme indiqué dans l'exemple suivant :  
   
 ```  
 char *pch = 0;  

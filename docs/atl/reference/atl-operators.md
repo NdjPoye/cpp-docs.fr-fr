@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46bc674a65e2ffc946a4806ce1440fec6e14c355
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bcd8ce5e46617958f0188a3563771061a37d22c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-operators"></a>Opérateurs d’ATL
 Cette section contient les rubriques de référence pour les opérateurs globaux ATL.  
@@ -86,7 +87,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **true** si l’adresse de la `lhs` objet est inférieur à l’adresse de la `rhs` objet, **false** dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cet opérateur agit sur l’adresse de la `CSid` objet ou `SID` de la structure et est implémenté pour assurer la compatibilité avec les classes de collection de bibliothèque C++ Standard.  
   
 ##  <a name="operator_gt"></a>opérateur >  
@@ -106,7 +107,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **true** si l’adresse de la `lhs` est supérieure à l’adresse de la `rhs`, **false** dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cet opérateur agit sur l’adresse de la `CSid` objet ou `SID` de la structure et est implémenté pour assurer la compatibilité avec les classes de collection de bibliothèque C++ Standard.  
   
 ##  <a name="operator_lt__eq"></a>opérateur < =  
@@ -126,7 +127,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **true** si l’adresse de la `lhs` est inférieur ou égal à l’adresse de la `rhs`, **false** dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cet opérateur agit sur l’adresse de la `CSid` objet ou `SID` de la structure et est implémenté pour assurer la compatibilité avec les classes de collection de bibliothèque C++ Standard.  
   
 ##  <a name="operator_gt__eq"></a>opérateur > =  
@@ -146,7 +147,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **true** si l’adresse de la `lhs` est supérieur ou égal à l’adresse de la `rhs`, **false** dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cet opérateur agit sur l’adresse de la `CSid` objet ou `SID` de la structure et est implémenté pour assurer la compatibilité avec les classes de collection de bibliothèque C++ Standard.
 
 

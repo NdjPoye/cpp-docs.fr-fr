@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _RTC_NumErrors
+apiname: _RTC_NumErrors
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,37 +23,22 @@ apitype: DLLExport
 f1_keywords:
 - _RTC_NumErrors
 - RTC_NumErrors
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - run-time errors
 - _RTC_NumErrors function
 - RTC_NumErrors function
 ms.assetid: 7e82adae-38e2-4f8b-bc0b-37bda8109fd1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: e233485881a5783155945589dbb7cf7c59c42a71
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b0d305575a2dca1df3084ab413b82d445260a6e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rtcnumerrors"></a>_RTC_NumErrors
 Retourne le nombre total d’erreurs détectées par les vérifications d’erreurs au moment de l’exécution. Vous pouvez utiliser ce nombre comme contrôle dans une boucle **for**, où chaque valeur de la boucle est transmise à [_RTC_GetErrDesc](../../c-runtime-library/reference/rtc-geterrdesc.md).  
@@ -84,4 +67,4 @@ int _RTC_NumErrors( void );
   
 ## <a name="see-also"></a>Voir aussi  
  [_RTC_GetErrDesc](../../c-runtime-library/reference/rtc-geterrdesc.md)   
- [Vérification des erreurs au moment de l’exécution](../../c-runtime-library/run-time-error-checking.md)
+ [Vérifications des erreurs au moment de l’exécution](../../c-runtime-library/run-time-error-checking.md)

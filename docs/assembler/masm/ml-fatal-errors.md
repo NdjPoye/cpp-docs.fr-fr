@@ -1,26 +1,27 @@
 ---
-title: "ML Fatal Errors | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Erreurs ML irrécupérables | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 5a5b0a84-f84d-494d-a8ff-69c53b88451d
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f63e9286d7181970f348dee0fef2da3a01f6587b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ML Fatal Errors
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Pour plus d'informations sur les erreurs irrécupérables de ML, consultez [messages d'erreur de ML](../../assembler/masm/ml-error-messages.md).  
+# <a name="ml-fatal-errors"></a>Erreurs ML irrécupérables
+Pour plus d’informations sur les erreurs ML irrécupérables, consultez [Messages d’erreur ML](../../assembler/masm/ml-error-messages.md).  
   
-## Voir aussi  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>Voir aussi  
+ [Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)

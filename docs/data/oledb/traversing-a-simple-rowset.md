@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5f4204027d52a5dfd4d7968732fb4d08328f12ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9f792e7a65a55cb63fb275d4d606a743e00a0e2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="traversing-a-simple-rowset"></a>Parcours d'un jeu de lignes simple
 L’exemple suivant montre un accès simple et rapide de la base de données qui n’implique pas de commandes. Le code de consommateur suivant, dans un projet ATL, extrait des enregistrements à partir d’une table appelée *artistes* Microsoft Access, une base de données à l’aide du fournisseur Microsoft OLE DB pour ODBC. Le code crée un [CTable](../../data/oledb/ctable-class.md) objet de table avec un accesseur basé sur la classe d’enregistrement utilisateur `CArtists`. Ouvre une connexion, ouvre une session sur la connexion et la table s’ouvre sur la session.  

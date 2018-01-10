@@ -1,44 +1,43 @@
 ---
-title: "Bo&#238;te de dialogue Type d&#39;image personnalis&#233;e (&#201;diteur d&#39;images pour les ic&#244;nes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.customimage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image personnalisée (boîte de dialogue)"
+title: "Image personnalisée, boîte de dialogue (Éditeur d’images pour les icônes) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.customimage
+dev_langs: C++
+helpviewer_keywords: Custom Image dialog box
 ms.assetid: 68e2cc5c-19de-428e-bc25-ec6b260247d0
-caps.latest.revision: 8
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f0fe8a0087c6f1d1d1ac90f2d379dd812d6dcdf1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Bo&#238;te de dialogue Type d&#39;image personnalis&#233;e (&#201;diteur d&#39;images pour les ic&#244;nes)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vous permet de créer une nouvelle image avec une taille et un nombre de couleurs personnalisés.  Pour plus d'informations sur les tailles d'icône que Windows utilise, consultez [Icônes](_win32_Icons_cpp) dans la documentation du Kit de développement logiciel \(SDK\) Windows.  
-  
+# <a name="custom-image-dialog-box-image-editor-for-icons"></a>Boîte de dialogue Type d'image personnalisée (Éditeur d'images pour les icônes)
+Vous permet de créer une nouvelle image avec une taille personnalisée et le nombre de couleurs.
  **Largeur**  
- Vous permet d'entrer la largeur d'une image personnalisée en pixels \(1 \- 512, limite 2048\).  
+ Offre un espace vous permettant d’entrer la largeur de l’image personnalisée en pixels (1-512, limite 2048).  
   
  **Hauteur**  
- Vous permet d'entrer la hauteur d'une image personnalisée en pixels \(1 \- 512, limite 2048\).  
+ Fournit un espace vous permettant d’entrer la hauteur de l’image personnalisée en pixels (1-512, limite 2048).  
   
  **Couleurs**  
- Vous permet de choisir le nombre de couleurs pour l'image personnalisée : 2, 16 ou 256.  
+ Offre un espace vous permettant de choisir le nombre de couleurs pour l’image personnalisée : 2, 16 ou 256.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Aucun  
   
-## Voir aussi  
- [Nouveau type d’image de \<appareil\>, boîte de dialogue](../mfc/new-device-image-type-dialog-box-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Voir aussi  
+ [Nouvelle \<appareil > boîte de dialogue Type d’Image](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)   
+ [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)

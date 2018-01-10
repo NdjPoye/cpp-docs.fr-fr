@@ -1,6 +1,6 @@
 ---
 title: C4400 des avertissements du compilateur via C4599 | Documents Microsoft
-ms.date: 10/25/2017
+ms.date: 11/17/2017
 ms.technology: cpp-tools
 ms.topic: error-reference
 f1_keywords:
@@ -132,22 +132,20 @@ ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 580f47f53d84cfba5aa55916bb88c8764c63553a
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: 44b0c76c6aba144229923a969cf3da026de54201
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 des avertissements du compilateur via C4599
 
-Les articles de cette partie de la documentation contiennent des informations sur un sous-ensemble des avertissements du compilateur Visual C++. Vous pouvez accéder à ces informations ici ou, dans le **sortie** fenêtre dans Visual Studio, vous pouvez sélectionner un numéro d’avertissement et appuyez sur la touche F1.
+Les articles de cette section de la documentation expliquent un sous-ensemble des messages d’avertissement générés par le compilateur.
 
-> [!NOTE]
-> Pas chaque [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erreur ou un avertissement est documentée dans MSDN. Dans de nombreux cas, le message de diagnostic fournit toutes les informations qui est disponibles. Si vous pensez qu'un message d'erreur nécessite une explication supplémentaire, faites-nous part de vos suggestions. Vous pouvez utiliser le formulaire de commentaires sur cette page, ou accédez à la barre de menus dans Visual Studio et choisissez **aide**, **signaler un bogue**, ou vous pouvez envoyer un rapport de suggestion ou un bogue sur [Microsoft Connect](http://connect.microsoft.com/VisualStudio).
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) est de forum de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ général](http://go.microsoft.com/fwlink/?LinkId=158194) est de forum de questions sur [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).
-
-## <a name="in-this-section"></a>Dans cette section
+## <a name="warning-messages"></a>Messages d’avertissement
 
 |Warning|Message|
 |-------------|-------------|
