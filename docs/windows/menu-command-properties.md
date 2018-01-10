@@ -14,11 +14,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 463db89257623d9464bb1e562261362ecf1dc68c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 186790db57c20abf9f67f693ff60029257ebd4f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menu-command-properties"></a>Propriétés d'une commande de menu
 Les informations ci-dessous sont organisées en fonction des propriétés de menu qui s'affichent dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) quand vous sélectionnez une commande de menu. Elles sont répertoriées par ordre alphabétique. Toutefois, la fenêtre Propriétés vous permet également d'afficher ces propriétés par catégorie.  
@@ -27,7 +30,7 @@ Les informations ci-dessous sont organisées en fonction des propriétés de men
 |--------------|-----------------|  
 |**Break**|Peut avoir l'une des valeurs suivantes :<br /><br /> -   **Aucun** (par défaut) : aucun arrêt.<br />-   **Colonne**: pour les menus statiques, cette valeur permet de placer la commande de menu sur une nouvelle ligne. Pour les menus contextuels, cette valeur permet de placer la commande de menu dans une nouvelle colonne sans ligne de démarcation entre les colonnes. Cette propriété affecte l'apparence du menu uniquement au moment de l'exécution, pas dans l'éditeur de menus.<br />-   **Barre**: identique à Colonne, sauf dans le cas des menus contextuels, où cette valeur sépare la nouvelle colonne de l'ancienne par une ligne verticale. Cette propriété affecte l'apparence du menu uniquement au moment de l'exécution, pas dans l'éditeur de menus.|  
 |**Légende**|Texte qui indique la commande de menu (nom du menu). Pour que l'une des lettres de la légende d'une commande de menu devienne une touche mnémonique, faites-la précéder d'une esperluette (&).|  
-|**Activé**|Si la valeur est True, la commande de menu est initialement activée. Type : Bool. Valeur par défaut : False.|  
+|**Activé**|Si la valeur est True, la commande de menu est initialement activée. Type : Bool. Valeur par défaut : False.|  
 |**Activé**|Si la valeur est **False**, l'élément de menu est désactivé.|  
 |**Grisé**|Si la valeur est True, la commande de menu est initialement grisée et inactive. Type : Bool. Valeur par défaut : False.|  
 |**Aide**|Aligne l'élément de menu à droite. Par exemple, la commande de menu **? (Aide)** est toujours sur la droite dans toutes les applications Windows. Si vous affectez cette propriété à un élément de menu, celui-ci s'affiche à l'extrémité droite et à la fin du menu. S'applique aux éléments de niveau supérieur. Valeur par défaut : **False**.|  
@@ -40,7 +43,7 @@ Les informations ci-dessous sont organisées en fonction des propriétés de men
   
 
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

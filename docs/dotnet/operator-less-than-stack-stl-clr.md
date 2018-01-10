@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b0d2c7ef3da417c85cd7c4ec69714b8b635e46c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5146a1cfd6c7140ba63b1e9e1756c843325222e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorlt-stack-stlclr"></a>opérateur&lt; (pile) (STL/CLR)
 Pile inférieure à comparaison.  
@@ -40,7 +43,7 @@ template<typename Value,
  droite  
  Conteneur de droite à comparer.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’opérateur fonction retourne true si, pour la position la plus basse `i` pour lequel `!(right[i] < left[i])` il est également vrai que `left[i] < right[i]`. Sinon, elle retourne `left->` [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() <` `right->size()` vous l’utiliser pour tester si `left` est classé avant `right` lorsque les deux piles sont comparé élément par élément.  
   
 ## <a name="example"></a>Exemple  
@@ -90,7 +93,7 @@ int main()
 [a b c] < [a b d] is True  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/stack >  
   
  **Namespace :** cliext  

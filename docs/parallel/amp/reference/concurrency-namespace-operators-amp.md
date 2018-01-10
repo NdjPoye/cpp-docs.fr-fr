@@ -6,19 +6,18 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: 
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: 676f3e836082dc3286a45f8d59db83c969964058
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: cb0682a246cc2cd2acd8f22228fd25c99755f1cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Opérateurs d’espace de noms d’accès concurrentiel (AMP)
 ||||  
@@ -42,7 +41,7 @@ bool operator== (
   
 ### <a name="parameters"></a>Paramètres  
  `_Rank`  
- Le rang du tuple arguments.  
+ Le rang des arguments de tuple.  
   
  `_Lhs`  
  Une des tuples à comparer.  
@@ -51,10 +50,10 @@ bool operator== (
  Une des tuples à comparer.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si les tuples sont identiques ; dans le cas contraire, `false`.  
+ `true`Si les tuples sont égales ; dans le cas contraire, `false`.  
   
 ##  <a name="operator_neq"></a>  operator!=   
- Détermine si les arguments spécifiés ne sont pas égales.  
+ Détermine si les arguments spécifiés ne sont pas égaux.  
   
 ```  
 template <
@@ -68,7 +67,7 @@ bool operator!= (
   
 ### <a name="parameters"></a>Paramètres  
  `_Rank`  
- Le rang du tuple arguments.  
+ Le rang des arguments de tuple.  
   
  `_Lhs`  
  Une des tuples à comparer.  
@@ -81,7 +80,7 @@ bool operator!= (
   
 ##  <a name="operator_add"></a>  operator+   
 
- Calcule la somme de component-wise des arguments spécifiés.  
+ Calcule la somme component-wise des arguments spécifiés.  
   
 ```  
 template <
@@ -113,7 +112,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
   
 ### <a name="parameters"></a>Paramètres  
  `_Rank`  
- Le rang du tuple arguments.  
+ Le rang des arguments de tuple.  
   
  `_Lhs`  
  Un des arguments à ajouter.  
@@ -122,7 +121,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
  Un des arguments à ajouter.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Component-wise somme des arguments spécifiés.  
+ La somme component-wise des arguments spécifiés.  
   
 ##  <a name="operator-"></a>  operator-   
 
@@ -158,7 +157,7 @@ _Tuple_type<_Rank>   operator-(
   
 ### <a name="parameters"></a>Paramètres  
  `_Rank`  
- Le rang du tuple arguments.  
+ Le rang des arguments de tuple.  
   
  `_Lhs`  
  L’argument à soustraire.  
@@ -194,7 +193,7 @@ _Tuple_type<_Rank>   operator*(
   
 ### <a name="parameters"></a>Paramètres  
  `_Rank`  
- Le rang du tuple arguments.  
+ Le rang des arguments de tuple.  
   
  `_Lhs`  
  Une des tuples à multiplier.  
@@ -230,7 +229,7 @@ _Tuple_type<_Rank>   operator/(
   
 ### <a name="parameters"></a>Paramètres  
  `_Rank`  
- Le rang du tuple arguments.  
+ Le rang des arguments de tuple.  
   
  `_Lhs`  
  Le tuple à diviser.  
@@ -266,7 +265,7 @@ _Tuple_type<_Rank>   operator%(
   
 ### <a name="parameters"></a>Paramètres  
  `_Rank`  
- Le rang du tuple arguments.  
+ Le rang des arguments de tuple.  
   
  `_Lhs`  
  Le tuple à partir de laquelle le modulo est calculée.  
@@ -275,8 +274,7 @@ _Tuple_type<_Rank>   operator%(
  Le tuple à modulo par.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le résultat premier argument spécifié du modulo de la deuxième argument spécifié.  
+ Le résultat du modulo premier argument spécifié le deuxième argument spécifié.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Accès concurrentiel Namespace](concurrency-namespace-cpp-amp.md)
-

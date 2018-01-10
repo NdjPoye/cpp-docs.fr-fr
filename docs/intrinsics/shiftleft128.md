@@ -1,64 +1,67 @@
 ---
-title: "__shiftleft128 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__shiftleft128"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__shiftleft128 intrinsic"
+title: __shiftleft128 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __shiftleft128
+dev_langs: C++
+helpviewer_keywords: __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e1cfb3ed19fce5c737e7b30139ccaf01739888fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# __shiftleft128
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="shiftleft128"></a>__shiftleft128
 **Section spécifique à Microsoft**  
   
  Décale une quantité de 128 bits, représentée par deux quantités de 64 bits `LowPart` et `HighPart`, vers la gauche d'un nombre de bits spécifié par `Shift` et retourne les 64 bits de poids fort du résultat.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-unsigned __int64 __shiftleft128(     unsigned __int64 LowPart,     unsigned __int64 HighPart,     unsigned char Shift  );  
+unsigned __int64 __shiftleft128(   
+   unsigned __int64 LowPart,   
+   unsigned __int64 HighPart,   
+   unsigned char Shift   
+);  
 ```  
   
-#### Paramètres  
- \[in\] `LowPart`  
+#### <a name="parameters"></a>Paramètres  
+ [in] `LowPart`  
  64 bits de poids faible de la quantité de 128 bits à décaler.  
   
- \[in\] `HighPart`  
+ [in] `HighPart`  
  64 bits de poids fort de la quantité de 128 bits à décaler.  
   
- \[in\] `Shift`  
+ [in] `Shift`  
  Nombre de bits à décaler.  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  64 bits de poids fort du résultat.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__shiftleft128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  La valeur `Shift` est toujours modulo 64 pour que, par exemple, si vous appelez `__shiftleft128(1, 0, 64)`, la fonction décale les `0` bits de la partie inférieure vers la gauche et renvoie une partie élevée de `0` et non `1` comme on pourrait s'y attendre.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // shiftleft128.c  
@@ -91,10 +94,13 @@ int main()
 }  
 ```  
   
-  **0x100000000000000001 \<\< 1 \= 0x200000000000000002**  
-**0x100000000000000001 \>\> 1 \= 0x080000000000000000**   
-## FIN de la section spécifique à Microsoft  
+```Output  
+0x100000000000000001 << 1 = 0x200000000000000002  
+0x100000000000000001 >> 1 = 0x080000000000000000  
+```  
   
-## Voir aussi  
- [\_\_shiftright128](../intrinsics/shiftright128.md)   
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+**FIN de la section spécifique à Microsoft**  
+  
+## <a name="see-also"></a>Voir aussi  
+ [__shiftright128](../intrinsics/shiftright128.md)   
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

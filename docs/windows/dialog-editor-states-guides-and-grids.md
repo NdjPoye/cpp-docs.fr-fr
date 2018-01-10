@@ -1,53 +1,54 @@
 ---
-title: "Dialog Editor States (Guides and Grids) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "Dialog editor, guides and margins"
+title: "États de l’éditeur de boîte de dialogue (repères et grilles) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Dialog editor, guides and margins
 ms.assetid: dbacf9ef-e8b0-4125-a7ce-84911c482e98
-caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 608137d29d71740f8c145e560a7f1516af75a43a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Dialog Editor States (Guides and Grids)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vous pouvez organiser les contrôles dans les boîtes de dialogue à l'aide de l'Éditeur de boîtes de dialogue dans l'un des trois états suivants :  
+# <a name="dialog-editor-states-guides-and-grids"></a>États de l'Éditeur de boîtes de dialogue (repères et grilles)
+Vous pouvez organiser les contrôles dans les boîtes de dialogue avec l’éditeur de boîte de dialogue dans un des trois états différents :  
   
--   Avec les repères et les marges activés \(par défaut\)  
+-   Avec les repères et marges (paramètre par défaut)  
   
--   Avec la grille activée  
+-   Avec la grille de disposition sur  
   
--   Sans fonctionnalité d'alignement  
+-   Sans les fonctionnalités d’alignement  
   
- La [barre d'outils Éditeur de boîtes de dialogue](../mfc/showing-or-hiding-the-dialog-editor-toolbar.md) contient des boutons qui contrôlent l'état.  Pour changer l'état, cliquez sur l'icône appropriée.  Vous pouvez également changer les états en utilisant la commande **Paramètres du repère** dans le menu **Format**.  
+ Le [barre d’outils Éditeur de boîte de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md) contient des boutons qui contrôlent l’état. Pour modifier l’état, cliquez sur l’icône appropriée. Vous pouvez également modifier les États à l’aide de la **Guide paramètres** commande sur le **Format** menu.  
   
--   [Création et définition des repères et des marges](../mfc/creating-and-setting-guides-and-margins.md)  
+-   [Création et définition des repères et des marges](creating-and-setting-guides-and-margins.md)  
   
--   [Alignement des contrôles sur un repère](../mfc/aligning-controls-on-a-guide.md)  
+-   [Alignement des contrôles sur un repère](../windows/aligning-controls-on-a-guide.md)  
   
--   [Désactivation des repères](../mfc/disabling-guides.md)  
+-   [Désactivation des repères](../windows/disabling-guides.md)  
   
--   [Modification de la présentation grille](../mfc/modifying-the-layout-grid.md)  
+-   [Modification de la présentation grille](../windows/modifying-the-layout-grid.md)  
   
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l'ajout de fichiers de ressources aux projets managés, l'accès aux ressources, l'affichage de ressources statiques et l'assignation de chaînes de ressources aux propriétés, et ce manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/fr-fr/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
-## Voir aussi  
- [Arrangement of Controls on Dialog Boxes](../mfc/arrangement-of-controls-on-dialog-boxes.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>Voir aussi  
+ [Organisation des contrôles dans les boîtes de dialogue](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)   
+ [Contrôles (MFC)](../mfc/controls-mfc.md)
+

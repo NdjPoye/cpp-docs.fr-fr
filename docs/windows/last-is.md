@@ -1,32 +1,33 @@
 ---
-title: "last_is | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.last_is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "last_is attribute"
+title: last_is | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.last_is
+dev_langs: C++
+helpviewer_keywords: last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7d7a230299a94ba33a142ca44ebc34981f7201ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# last_is
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-spécifie l'index du dernier élément de tableau à transmettre.  
+# <a name="lastis"></a>last_is
+Spécifie l’index du dernier élément de tableau doit être transmis.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,35 +36,34 @@ spécifie l'index du dernier élément de tableau à transmettre.
 ) ]  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *expression*  
- Une ou plusieurs expressions de langage C.  Il permet des emplacements vides d'argument.  
+ Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont autorisées.  
   
-## Notes  
- L'attribut de **last\_is** C\+\+ a les mêmes fonctionnalités que l'attribut de [last\_is](http://msdn.microsoft.com/library/windows/desktop/aa367066) MIDL.  
+## <a name="remarks"></a>Notes  
+ Le **last_is** attribut C++ a les mêmes fonctionnalités que le [last_is](http://msdn.microsoft.com/library/windows/desktop/aa367066) attribut MIDL.  
   
-## Exemple  
- Consultez [first\_is](../windows/first-is.md) pour un exemple pour spécifier une section d'un tableau.  
+## <a name="example"></a>Exemple  
+ Consultez [first_is](../windows/first-is.md) pour obtenir un exemple montrant comment spécifier une section d’un tableau.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|Champ dans `struct` ou **union**, paramètre de l'interface, méthode d'interface|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|Champ `struct` ou **union**, paramètre de l’interface, méthode d’interface|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
- Pour plus d'informations, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [first\_is](../windows/first-is.md)   
- [max\_is](../windows/max-is.md)   
- [length\_is](../windows/length-is.md)   
- [size\_is](../windows/size-is.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union et Struct (attributs)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Attributs de paramètre](../windows/parameter-attributes.md)   
+ [first_is](../windows/first-is.md)   
+ [max_is](../windows/max-is.md)   
+ [length_is](../windows/length-is.md)   
+ [size_is](../windows/size-is.md)   

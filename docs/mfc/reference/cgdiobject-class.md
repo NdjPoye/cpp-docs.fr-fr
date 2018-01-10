@@ -41,11 +41,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3ed1c892dbd7cef4cee8281f63657144dc8dae10
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2970dddd4711c431b3809127e7eeb6f7cd3f9eb1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgdiobject-class"></a>Classe de CGdiObject
 Fournit une classe de base pour différents genres d'objets GDI (Graphics Device Interface) Windows, par exemple des images bitmap, des zones, des pinceaux, des plumes, des palettes et des polices.  
@@ -93,7 +94,7 @@ class CGdiObject : public CObject
 |----------|-----------------|  
 |[CGdiObject::m_hObject](#m_hobject)|A `HANDLE` contenant le `HBITMAP`, `HPALETTE`, `HRGN`, `HBRUSH`, `HPEN`, ou `HFONT` associé à cet objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous ne créez jamais un `CGdiObject` directement. Au lieu de cela, vous créez un objet à partir d’une de ses classes dérivées, telles que `CPen` ou `CBrush`.  
   
  Pour plus d’informations sur `CGdiObject`, consultez [objets graphiques](../../mfc/graphic-objects.md).  
@@ -103,7 +104,7 @@ class CGdiObject : public CObject
   
  `CGdiObject`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="attach"></a>CGdiObject::Attach  
@@ -127,7 +128,7 @@ BOOL Attach(HGDIOBJ hObject);
 CGdiObject();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous ne créez jamais un `CGdiObject` directement. Au lieu de cela, vous créez un objet à partir d’une de ses classes dérivées, telles que `CPen` ou **Cbrush**.  
   
 ##  <a name="createstockobject"></a>CGdiObject::CreateStockObject  
@@ -144,7 +145,7 @@ BOOL CreateStockObject(int nIndex);
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur différente de zéro si la fonction réussit ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appel de cette fonction avec l’un des dérivés des classes qui correspond au type d’objet Windows GDI, telles que `CPen` pour un stylet.  
   
 ##  <a name="deleteobject"></a>CGdiObject::DeleteObject  
@@ -157,7 +158,7 @@ BOOL DeleteObject();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’objet GDI a été supprimé avec succès ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le stockage associé à la `CGdiObject` objet n’est pas affecté par cet appel. Une application ne doit pas appeler `DeleteObject` sur un `CGdiObject` objet actuellement sélectionné dans un contexte de périphérique.  
   
  Lorsqu’un pinceau de modèle est supprimé, la bitmap associée au pinceau n’est pas supprimée. L’image bitmap doit être supprimée séparément.  
@@ -169,7 +170,7 @@ BOOL DeleteObject();
 static void PASCAL DeleteTempMap();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `DeleteTempMap`Détache l’objet GDI Windows attachée à une valeur temporaire `CGdiObject` objet avant de supprimer le `CGdiObject` objet.  
   
 ### <a name="example"></a>Exemple  
@@ -199,7 +200,7 @@ static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un `CGdiObject` qui peut être temporaire ou permanent.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si un `CGdiObject` objet n’est pas déjà attaché à l’objet GDI de Windows, une valeur temporaire `CGdiObject` objet est créé et attaché.  
   
  Ce fichier temporaire `CGdiObject` objet est uniquement valide jusqu'à la prochaine fois que l’application a des temps d’inactivité dans sa boucle d’événements, auquel cas tous les objets graphiques temporaires sont supprimés. Une autre façon d’autres termes est que l’objet temporaire est valide uniquement lors du traitement du message d’une fenêtre.  
@@ -223,10 +224,10 @@ int GetObject(
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’octets à récupérer ; Sinon, 0 si une erreur se produit.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction récupère une structure de données dont le type varie selon le type d’objet de graphique, comme indiqué par la liste suivante :  
   
-|Objet|Type de tampon|  
+|Object|Type de tampon|  
 |------------|-----------------|  
 |`CPen`|[LOGPEN](../../mfc/reference/logpen-structure.md)|  
 |`CBrush`|[LOGBRUSH](../../mfc/reference/logbrush-structure.md)|  
@@ -247,7 +248,7 @@ UINT GetObjectType() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le type de l’objet, en cas de réussite ; Sinon, 0. La valeur peut être une des opérations suivantes :  
+ Le type de l’objet, en cas de réussite ; Sinon, 0. Il peut avoir l’une des valeurs suivantes :  
   
 - **OBJ_BITMAP** Bitmap  
   
@@ -285,7 +286,7 @@ HGDIOBJ GetSafeHandle() const;
 ### <a name="return-value"></a>Valeur de retour  
  A `HANDLE` à l’objet Windows GDI attaché ; sinon **NULL** si aucun objet n’est attaché.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cela fait partie du paradigme interface handle général et est utile lorsque **NULL** est une valeur valide ou spéciale pour un handle.  
   
 ### <a name="example"></a>Exemple  
@@ -309,7 +310,7 @@ BOOL operator!=(const CGdiObject& obj) const;
  `obj`  
  Un pointeur vers un existant `CGdiObject`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Détermine si un objet GDI sur le côté gauche n’est pas égal à un objet GDI sur le côté droit.  
   
 ##  <a name="operator_eq_eq"></a>CGdiObject::operator ==  
@@ -323,7 +324,7 @@ BOOL operator==(const CGdiObject& obj) const;
  `obj`  
  Une référence à un fichier `CGdiObject`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Détermine si un objet GDI sur le côté gauche est égal à un objet GDI sur le côté droit.  
   
 ##  <a name="operator_hgdiobj"></a>CGdiObject::operator HGDIOBJ  
@@ -343,7 +344,7 @@ BOOL UnrealizeObject();
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Alors que `UnrealizeObject` est une fonction membre de la `CGdiObject` (classe), elle doit être appelée uniquement sur `CBrush` ou `CPalette` objets.  
   
  Pour `CBrush` objets `UnrealizeObject` dirige le système à réinitialiser à l’origine de la forme donnée la prochaine fois qu’il est sélectionné dans un contexte de périphérique. Si l’objet est un `CPalette` objet `UnrealizeObject` dirige le système à l’esprit la palette comme s’il n’avait pas été précédemment réalisé. La prochaine fois que l’application appelle la [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette) fonction de la palette spécifiée, le système remappe complètement la palette logique à la palette système.  

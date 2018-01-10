@@ -1,33 +1,33 @@
 ---
-title: "helpstring | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.helpstring"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "helpstring attribute [C++]"
+title: HelpString | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.helpstring
+dev_langs: C++
+helpviewer_keywords: helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f3df545f5d87d36c26d999dc3a5fbee8720830c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# helpstring
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Spécifie une chaîne de caractères utilisée pour décrire l'élément auquel elle s'applique.  
+# <a name="helpstring"></a>helpstring
+Spécifie une chaîne de caractères qui est utilisée pour décrire l’élément auquel elle s’applique.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -36,35 +36,34 @@ Spécifie une chaîne de caractères utilisée pour décrire l'élément auquel 
 ) ]  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `string`  
- le texte de la chaîne d'aide.  
+ Le texte de la chaîne d’aide.  
   
-## Notes  
- L'attribut de **helpstring** C\+\+ a les mêmes fonctionnalités que l'attribut de [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) MIDL.  
+## <a name="remarks"></a>Notes  
+ Le **helpstring** attribut C++ a les mêmes fonctionnalités que le [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) attribut MIDL.  
   
-## Exemple  
- Consultez l'exemple pour [defaultvalue](../windows/defaultvalue.md) pour un exemple d'utilisation **helpstring**.  
+## <a name="example"></a>Exemple  
+ Consultez l’exemple de [defaultvalue](../windows/defaultvalue.md) pour obtenir un exemple montrant comment utiliser **helpstring**.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
 |**S'applique à**|`interface`, `typedef`, **classe**, méthode, propriété|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
- Pour plus d'informations, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [helpfile](../windows/helpfile.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs d’interface](../windows/interface-attributes.md)   
+ [Attributs de classe](../windows/class-attributes.md)   
+ [Attributs de méthode](../windows/method-attributes.md)   
+ [TypeDef, Enum, Union et Struct (attributs)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [HelpFile](../windows/helpfile.md)   
  [helpcontext](../windows/helpcontext.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

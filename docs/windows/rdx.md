@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3384547f1c7648504137004ce90d0c0f41cda77
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d656af60ec14309227fc73d81bd0f14638637d48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rdx"></a>rdx
 Crée une clé de Registre ou modifie une clé de Registre existante.  
@@ -45,12 +48,12 @@ Crée une clé de Registre ou modifie une clé de Registre existante.
  *regtype*  
  Le type de clé de Registre à ajouter. Peut prendre l’une des opérations suivantes : **texte**, **dword**, **binaire**, ou `CString`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **rdx** attribut C++ crée ou modifie une clé de Registre existante pour un composant COM. L’attribut ajoute une macro BEGIN_RDX_MAP à l’objet qui implémente le membre cible. `RegistryDataExchange`, une fonction injectée à la suite de la macro BEGIN_RDX_MAP, peut être utilisée pour transférer des données entre le Registre et les données membres  
   
  Cet attribut peut être utilisé conjointement avec la [coclasse](../windows/coclass.md), [progid](../windows/progid.md), ou [vi_progid](../windows/vi-progid.md) attributs ou autres attributs qui implique un d'entre eux.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -58,8 +61,8 @@ Crée une clé de Registre ou modifie une clé de Registre existante.
 |-|-|  
 |**S'applique à**|**classe** ou `struct` membre|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

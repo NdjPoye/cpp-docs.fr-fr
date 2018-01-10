@@ -17,18 +17,18 @@ f1_keywords:
 - amp/Concurrency::direct3d_printf
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: a976cc06b49b10d5bb8dcecb10e114efdd89faa8
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aeda566ebd10dbd8ee5e5cfdcb4328537b9ba0c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Fonctions d’espace de noms d’accès concurrentiel (AMP)
 ||||  
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/24/2017
 |[global_memory_fence](#global_memory_fence)|[parallel_for_each, fonction (C++ AMP)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|  
   
 ##  <a name="all_memory_fence"></a>all_memory_fence  
- Empêche l’exécution de tous les threads dans une mosaïque jusqu'à ce que tous les accès mémoire ont été effectuées. Cela garantit que tous les accès mémoire sont visibles à d’autres threads dans la vignette de thread et sont exécutées dans l’ordre du programme.  
+ Bloque l’exécution de tous les threads dans une mosaïque jusqu'à ce que tous les accès mémoire ont été effectuées. Cela garantit que tous les accès mémoire sont visibles à d’autres threads dans la vignette de thread et sont exécutées dans l’ordre du programme.  
   
 ```  
 inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
@@ -53,14 +53,14 @@ inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
  Objet `tile_barrier`.  
   
 ##  <a name="amp_uninitialize"></a>amp_uninitialize  
- N’initialise pas le runtime C++ AMP. Il est permis d’appeler cette fonction plusieurs fois pendant une durée de vie des applications. Appel de toute fois API C++ AMP appeler cette fonction sera réinitialisé le runtime C++ AMP. Notez qu’il est interdit d’utiliser des objets de C++ AMP dans les appels à cette fonction, et cela entraînerait un comportement non défini. En outre, simultanément appeler cette fonction et toutes les autres APIs AMP est non conforme et entraînerait un comportement non défini.  
+ N’initialise pas le runtime C++ AMP. Il est permis d’appeler cette fonction plusieurs fois pendant une durée de vie des applications. Appeler toutes les fois API C++ AMP appel de cette fonction, le runtime C++ AMP sera réinitialisé. Notez que n’est pas autorisé à utiliser les objets C++ AMP entre les appels à cette fonction, et cela entraînerait un comportement non défini. En outre, simultanément appeler cette fonction et toutes les autres APIs AMP est non conforme et entraînerait un comportement non défini.  
   
 ```  
 void __cdecl amp_uninitialize();
 ```  
   
 ##  <a name="atomic_compare_exchange"></a>atomic_compare_exchange  
- Atomiquement compare la valeur stockée dans un emplacement mémoire spécifié dans le premier argument d’égalité avec la valeur du deuxième argument spécifié et si les valeurs sont identiques, la valeur à l’emplacement de mémoire est modifiée et que du troisième argument spécifié.  
+ Atomiquement compare la valeur stockée à un emplacement de mémoire spécifiée dans le premier argument pour l’égalité avec la valeur du deuxième argument spécifié, et si les valeurs sont identiques, la valeur à l’emplacement de mémoire est modifiée pour que du troisième argument spécifié.  
   
 ```  
 inline bool atomic_compare_exchange(
@@ -79,13 +79,13 @@ inline bool atomic_compare_exchange(
   
 ### <a name="parameters"></a>Paramètres  
  `_Dest`  
- La lecture de l’emplacement à partir de quel l’une des valeurs à comparer, et pour lequel la nouvelle valeur, le cas échéant, doit être stocké.  
+ L’emplacement à partir de celle des valeurs à comparer est en lecture et à laquelle la nouvelle valeur, le cas échéant, doit être stocké.  
   
  `_Expected_value`  
- L’emplacement à partir duquel la deuxième valeur à comparer est lu.  
+ L’emplacement à partir duquel la deuxième valeur à comparer est lue.  
   
  `value`  
- La valeur d’être stocké à l’emplacement de mémoire spécifié dans par `_Dest` si `_Dest` est égal à `_Expected_value`.  
+ La valeur à stocker dans l’emplacement de mémoire spécifiée dans par `_Dest` si `_Dest` est égal à `_Expected_value`.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true` si l'opération réussit ; sinon `false`.  
@@ -151,7 +151,7 @@ inline unsigned int atomic_fetch_add(
  La valeur d’origine de l’emplacement de mémoire.  
   
 ##  <a name="atomic_fetch_and"></a>atomic_fetch_and, fonction (C++ AMP)  
- Atomiquement effectue une opération AND au niveau du bit d’une valeur et la valeur d’un emplacement de mémoire.  
+ Atomique effectue une opération AND au niveau du bit d’une valeur et la valeur d’un emplacement de mémoire.  
   
 ```  
 inline int atomic_fetch_and(
@@ -177,7 +177,7 @@ inline unsigned int atomic_fetch_and(
  La valeur d’origine de l’emplacement de mémoire.  
   
 ##  <a name="atomic_fetch_dec"></a>atomic_fetch_dec  
- Atomiquement décrémente la valeur stockée dans l’emplacement mémoire spécifié.  
+ Atomiquement décrémente la valeur stockée à l’emplacement de mémoire spécifiée.  
   
 ```  
 inline int atomic_fetch_dec(_Inout_ int* _Dest  
@@ -229,7 +229,7 @@ inline unsigned int atomic_fetch_max(
   
 ### <a name="parameters"></a>Paramètres  
  `_Dest`  
- La lecture de l’emplacement à partir de quel l’une des valeurs à comparer, et pour lequel la valeur maximale de deux valeurs doit être stocké.  
+ L’emplacement à partir de celle des valeurs à comparer est en lecture et à laquelle la valeur maximale de deux valeurs doit être stocké.  
   
  `value`  
  La valeur à comparer à la valeur à l’emplacement spécifié.  
@@ -255,7 +255,7 @@ inline unsigned int atomic_fetch_min(
   
 ### <a name="parameters"></a>Paramètres  
  `_Dest`  
- La lecture de l’emplacement à partir de quel l’une des valeurs à comparer et à laquelle la valeur minimale de deux valeurs doit être stocké.  
+ L’emplacement à partir de celle des valeurs à comparer est en lecture et à laquelle la valeur minimale de deux valeurs doit être stocké.  
   
  `value`  
  La valeur à comparer à la valeur à l’emplacement spécifié.  
@@ -264,7 +264,7 @@ inline unsigned int atomic_fetch_min(
  La valeur d’origine stockée à l’emplacement de l’emplacement spécifié.  
   
 ##  <a name="atomic_fetch_or"></a>atomic_fetch_or, fonction (C++ AMP)  
- Atomiquement effectue une opération OR au niveau du bit avec une valeur et la valeur d’un emplacement de mémoire.  
+ Atomique effectue une opération OR au niveau du bit avec une valeur et la valeur d’un emplacement de mémoire.  
   
 ```  
 inline int atomic_fetch_or(
@@ -284,7 +284,7 @@ inline unsigned int atomic_fetch_or(
  Pointeur vers l’emplacement de mémoire.  
   
  `value`  
- La valeur à utiliser dans le calcul d’OR au niveau du bit.  
+ La valeur à utiliser dans le calcul OR au niveau du bit.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La valeur d’origine de l’emplacement de mémoire.  
@@ -310,7 +310,7 @@ inline unsigned int atomic_fetch_sub(
  Pointeur vers l’emplacement de destination.  
   
  `value`  
- Valeur à soustraire.  
+ La valeur à soustraire.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La valeur d’origine de l’emplacement de mémoire.  
@@ -427,16 +427,16 @@ void copy(
  Itérateur de sortie à la position de départ à la destination.  
   
  `InputIterator`  
- Le type de l’entrée interator.  
+ Le type de l’interator d’entrée.  
   
  `OutputIterator`  
  Le type de l’itérateur de sortie.  
   
  `_Rank`  
- Le classement de l’objet à copier à partir d’ou de l’objet de destination.  
+ Le rang de l’objet à copier à partir d’ou de l’objet de destination.  
   
  `_Src`  
- Pour l’objet à copier.  
+ À l’objet à copier.  
   
  `_SrcFirst`  
  Un itérateur de début dans le conteneur source.  
@@ -525,16 +525,16 @@ concurrency::completion_future copy_async(
  Itérateur de sortie à la position de départ à la destination.  
   
  `InputIterator`  
- Le type de l’entrée interator.  
+ Le type de l’interator d’entrée.  
   
  `OutputIterator`  
  Le type de l’itérateur de sortie.  
   
  `_Rank`  
- Le classement de l’objet à copier à partir d’ou de l’objet de destination.  
+ Le rang de l’objet à copier à partir d’ou de l’objet de destination.  
   
  `_Src`  
- Pour l’objet à copier.  
+ À l’objet à copier.  
   
  `_SrcFirst`  
  Un itérateur de début dans le conteneur source.  
@@ -549,14 +549,14 @@ concurrency::completion_future copy_async(
  Un `future<void>` qui peut être attendu.  
   
 ##  <a name="direct3d_abort"></a>direct3d_abort  
- Interrompt l’exécution d’une fonction avec la clause de restriction `restrict(amp)` . Lorsque le runtime AMP détecte l’appel, il déclenche une [runtime_exception](runtime-exception-class.md) exception avec le message d’erreur « rastériseur de référence : nuanceur abandonner l’instruction atteint ».  
+ Interrompt l’exécution d’une fonction avec la clause de restriction `restrict(amp)` . Lorsque le runtime AMP détecte l’appel, il déclenche une [runtime_exception](runtime-exception-class.md) exception avec le message d’erreur « rastériseur de référence : Shader abort instruction atteint ».  
   
 ```  
 void direct3d_abort() restrict(amp);
 ```  
   
 ##  <a name="direct3d_errorf"></a>direct3d_errorf  
- Affiche une chaîne mise en forme dans la fenêtre Sortie de Visual Studio. Elle est appelée à partir d’une fonction avec la `restrict(amp)` clause de restriction. Lorsque le runtime AMP détecte l’appel, il déclenche une [runtime_exception](runtime-exception-class.md) exception avec la même chaîne de mise en forme.  
+ Imprime une chaîne mise en forme dans la fenêtre de sortie de Visual Studio. Elle est appelée à partir d’une fonction avec la `restrict(amp)` clause de restriction. Lorsque le runtime AMP détecte l’appel, il déclenche une [runtime_exception](runtime-exception-class.md) exception avec la même chaîne de mise en forme.  
   
 ```  
 void direct3d_errorf(
@@ -565,7 +565,7 @@ void direct3d_errorf(
 ```  
   
 ##  <a name="direct3d_printf"></a>direct3d_printf  
- Affiche une chaîne mise en forme dans la fenêtre Sortie de Visual Studio. Elle est appelée à partir d’une fonction avec la `restrict(amp)` clause de restriction.  
+ Imprime une chaîne mise en forme dans la fenêtre de sortie de Visual Studio. Elle est appelée à partir d’une fonction avec la `restrict(amp)` clause de restriction.  
   
 ```  
 void direct3d_printf(
@@ -574,7 +574,7 @@ void direct3d_printf(
 ```  
   
 ##  <a name="global_memory_fence"></a>global_memory_fence  
- Empêche l’exécution de tous les threads dans une mosaïque jusqu'à ce que l’accès à la mémoire globale toutes ont été effectuées. Cela garantit que les accès à la mémoire globale sont visibles à d’autres threads dans la vignette de thread et sont exécutées dans l’ordre du programme.  
+ Bloque l’exécution de tous les threads dans une mosaïque jusqu'à ce que toute la mémoire globale accède à ont été effectuées. Cela garantit que l’option accès à la mémoire globale sont visibles à d’autres threads dans la vignette de thread et sont exécutées dans l’ordre du programme.  
   
 ```  
 inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
@@ -642,7 +642,7 @@ void parallel_for_each(
   
 ### <a name="parameters"></a>Paramètres  
  `_Accl_view`  
- Le `accelerator_view` pour exécuter le calcul parallèle sur objet.  
+ Le `accelerator_view` objet s’exécute, le calcul parallèle.  
   
  `_Compute_domain`  
  Un `extent` objet qui contient les données pour le calcul.  
@@ -660,13 +660,13 @@ void parallel_for_each(
  Un objet lambda ou une fonction qui accepte un argument de type « index\<_Rank > » et effectue le calcul parallèle.  
   
  `_Kernel_type`  
- Une expression lambda ou le functor.  
+ Une expression lambda ou une fonction.  
   
  `_Rank`  
  Le rang de l’étendue.  
   
 ##  <a name="tile_static_memory_fence"></a>tile_static_memory_fence  
- Bloque l’exécution de tous les threads dans une mosaïque jusqu'à ce que toutes en attente `tile_static` accès mémoire ont été effectuées. Cela garantit que `tile_static` accès mémoire sont visibles à d’autres threads dans la vignette de thread et d’accès sont exécutées dans l’ordre du programme.  
+ Bloque l’exécution de tous les threads dans une mosaïque jusqu'à ce que toutes en suspens `tile_static` accès mémoire ont été effectuées. Cela garantit que `tile_static` accès à la mémoire sont visibles à d’autres threads dans la vignette de thread et d’accès sont exécutées dans l’ordre du programme.  
   
 ```  
 inline void tile_static_memory_fence(const tile_barrier& _Barrier) restrict(amp);
@@ -677,5 +677,4 @@ inline void tile_static_memory_fence(const tile_barrier& _Barrier) restrict(amp)
  Un objet tile_barrier.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accès concurrentiel Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
-
+ [Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)

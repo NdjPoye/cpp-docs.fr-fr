@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad53fea97c98f496d1140725f4232052e2f53d3b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aef7e219190584ec91b08e9c44b4c921ec91d787
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics, espace de noms
 L’espace de noms du graphique fournit des types et des fonctions conçues pour la programmation graphique.  
@@ -45,7 +46,7 @@ namespace graphics;
   
 ### <a name="enumerations"></a>Énumérations  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[address_mode, énumération](concurrency-graphics-namespace-enums.md#address_mode).|Spécifie les modes d’adresse pris en charge pour l’échantillonnage de texture.|  
 |[filter_mode, énumération](concurrency-graphics-namespace-enums.md#filter_mode)|Spécifie les modes de filtre pris en charge pour l’échantillonnage de texture.|  
@@ -86,7 +87,7 @@ namespace graphics;
 |[copy](concurrency-graphics-namespace-functions.md#copy)|Surchargé. Copie le contenu de la texture source dans la mémoire tampon hôte de destination.|  
 |[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|Surchargé. Copie le contenu de la texture de la source de façon asynchrone dans la mémoire tampon hôte de destination.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp_graphics.h  
   
  **Espace de noms :** Concurrency  

@@ -1,33 +1,33 @@
 ---
-title: "logical_not (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::logical_not"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "logical_not (fonction) (STL/CLR)"
+title: logical_not (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::logical_not
+dev_langs: C++
+helpviewer_keywords: logical_not function [STL/CLR]
 ms.assetid: 32a2c6e2-1c58-41ac-8827-f3ee5adfe81d
-caps.latest.revision: 18
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8d27e18d540d9638caf819636a37f243b362d369
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# logical_not (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe du modèle décrit un foncteur qui, lorsqu'il est appelé, renvoie true uniquement si l'un de ses arguments a la valeur false.  Vous l'utilisez pour spécifier un objet fonction au niveau de son type d'argument.  
+# <a name="logicalnot-stlclr"></a>logical_not (STL/CLR)
+La classe de modèle décrit un functor que, lorsqu’elle est appelée, retourne true uniquement si son argument teste comme false. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Arg>  
@@ -48,33 +48,33 @@ public:
     };  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  Arg  
- Type des arguments.  
+ Le type des arguments.  
   
-## Fonctions membres  
+## <a name="member-functions"></a>Fonctions membres  
   
-|Définition de type|Description|  
-|------------------------|-----------------|  
-|type d'argument|Type de l'argument du foncteur.|  
-|delegate\_type|Le type du délégué générique.|  
-|result\_type|Le type du premier argument du résultat du foncteur.|  
+|Définition de types|Description|  
+|---------------------|-----------------|  
+|argument_type|Le type de l’argument functor.|  
+|delegate_type|Le type du délégué générique.|  
+|RESULT_TYPE|Le type du résultat functor.|  
   
 |Membre|Description|  
 |------------|-----------------|  
-|logical\_not|Construit le functor.|  
+|logical_not|Construit le foncteur.|  
   
 |Opérateur|Description|  
-|---------------|-----------------|  
-|operator\(\)|Calcule la fonction souhaitée.|  
-|opérateur delegate\_type^|Convertit le functor en un délégué.|  
+|--------------|-----------------|  
+|operator()|Calcule la fonction de votre choix.|  
+|opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
   
-## Notes  
- La classe du modèle décrit un foncteur à un argument.  Elle définit l'opérateur membre `operator()` afin que, lorsque l'objet est appelé en tant que fonction, elle retourne true si les arguments valent false.  
+## <a name="remarks"></a>Notes  
+ La classe de modèle décrit un functor un argument. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, elle retourne true uniquement si son argument tests comme false.  
   
- Vous pouvez également transmettre l'objet comme argument de fonction dont le type est `delegate_type^` et il sera converti de façon appropriée.  
+ Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_logical_not.cpp   
@@ -107,12 +107,15 @@ int main()
   
 ```  
   
-  **4 0**  
- **0 1**   
-## Configuration requise  
- **Header:** \<cliext\/functional\>  
+```Output  
+4 0  
+0 1  
+```  
   
- **Espace de noms :** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/fonctionnel >  
   
-## Voir aussi  
- [negate](../dotnet/negate-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [negate (STL/CLR)](../dotnet/negate-stl-clr.md)

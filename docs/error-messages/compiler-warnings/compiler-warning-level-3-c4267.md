@@ -1,37 +1,35 @@
 ---
-title: "Avertissement du compilateur (niveau 3) C4267 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4267"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4267"
+title: Compilateur avertissement (niveau 3) C4267 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4267
+dev_langs: C++
+helpviewer_keywords: C4267
 ms.assetid: 2fa2f13f-fa4f-47bb-ad8f-6cb19cfc91e6
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4d1d4069bb7b9e2af52d2777c598e6dc737f7043
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 3) C4267
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'var' : conversion de 'size\_t' en 'type', perte possible de données  
+# <a name="compiler-warning-level-3-c4267"></a>Avertissement du compilateur (niveau 3) C4267
+'var' : conversion de 'size_t' en 'type', perte possible de données  
   
  Le compilateur a détecté une conversion de `size_t` en un type plus petit.  
   
- Pour résoudre cet avertissement, utilisez `size_t` à la place de `type`.  Vous pouvez également utiliser un type intégral au moins aussi grand que `size_t`.  
+ Pour résoudre cet avertissement, utilisez `size_t` à la place de `type`. Vous pouvez également utiliser un type intégral au moins aussi grand que `size_t`.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant génère l'erreur C4267.  
   
 ```  

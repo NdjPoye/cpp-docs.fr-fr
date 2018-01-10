@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b3d6baf4ba1622a9a9b54dcb25ed42eae89c86a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 82b11c4cbe8f862121d89c308ab11d53582931d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collection-class-helpers"></a>Programmes d’assistance pour les classes de collection
 Les classes de collection `CMap`, `CList`, et `CArray` utiliser les fonctions d’assistance globales basé sur un modèle fins telles que la comparaison, la copie et sérialiser des éléments. Dans le cadre de votre implémentation de classes basées sur `CMap`, `CList`, et `CArray`, vous devez remplacer ces fonctions selon les besoins avec des versions adaptées au type de données stockées dans votre carte, une liste ou un tableau. Pour plus d’informations sur les fonctions d’assistance de substitution comme `SerializeElements`, consultez l’article [Collections : comment définir une Collection de Type sécurisé](../../mfc/how-to-make-a-type-safe-collection.md). Notez que **ConstructElements** et **DestructElements** ont été déconseillées.  
@@ -68,14 +69,14 @@ CompareElements(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’objet pointé par `pElement1` est égal à l’objet vers lequel pointé `pElement2`; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `CMap` appelle utiliser le `CMap` les paramètres de modèle *clé* et `ARG_KEY`.  
   
  L’implémentation par défaut retourne le résultat de la comparaison de  *\*pElement1* et  *\*pElement2*. Remplacez cette fonction pour qu’elle compare les éléments d’une manière qui convient à votre application.  
   
  Le langage C++ définit l’opérateur de comparaison ( `==`) pour les types simples ( `char`, `int`, **float**, et ainsi de suite) mais ne définit ne pas un opérateur de comparaison pour les classes et structures. Si vous souhaitez utiliser `CompareElements` ou pour instancier une des classes de collection qui l’utilise, vous devez définir l’opérateur de comparaison ou de surcharge `CompareElements` avec une version qui renvoie les valeurs appropriées.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
    **En-tête :** afxtempl.h   
   
 ##  <a name="copyelements"></a>CopyElements  
@@ -102,12 +103,12 @@ void AFXAPI CopyElements(
  `nCount`  
  Nombre d’éléments à copier.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation par défaut utilise l’opérateur d’assignation simple (  **=**  ) pour effectuer l’opération de copie. Si le type en cours de copie ne dispose pas d’un opérateur surchargé =, l’implémentation par défaut effectue une copie au niveau du bit.  
   
  Pour plus d’informations sur l’implémentation cela et les autres fonctions d’assistance, consultez l’article [Collections : comment définir une Collection de Type sécurisé](../how-to-make-a-type-safe-collection.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxtempl.h  
   
 ##  <a name="dumpelements"></a>DumpElements  
@@ -134,13 +135,13 @@ void  AFXAPI DumpElements(
  `nCount`  
  Nombre d’éléments à être vidées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le **CArray::Dump**, **CList::Dump**, et **CMap::Dump** fonctions appellent cela si la profondeur de l’image mémoire est supérieure à 0.  
   
  L'implémentation par défaut n'exécute aucune opération. Si les éléments de votre collection sont dérivés de `CObject`, votre remplacement sera généralement une itération au sein des éléments de la collection, l’appel `Dump` pour chaque élément à son tour.  
   
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxtempl.h  
   
 ##  <a name="hashkey"></a>HashKey  
@@ -161,7 +162,7 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur de hachage de la clé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction est appelée directement par [CMap::RemoveKey](cmap-class.md#removekey) et indirectement par [CMap::Lookup](cmap-class.md#lookup) et [CMap::Operator &#91; &#93;](cmap-class.md#operator_at).
   
  L’implémentation par défaut crée une valeur de hachage en migrant `key` vers la droite de quatre positions. Remplacez cette fonction afin qu’elle retourne des valeurs de hachage appropriée pour votre application.  
@@ -176,7 +177,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 }
  ```
  
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxtempl.h 
   
 ##  <a name="serializeelements"></a>SerializeElements  
@@ -200,7 +201,7 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
  `nCount`  
  Nombre d’éléments archivés  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation par défaut est une opération de bits de lecture ou d’écriture.  
   
  Pour plus d’informations sur l’implémentation cela et les autres fonctions d’assistance, consultez l’article [Collections : comment définir une Collection de Type sécurisé](../how-to-make-a-type-safe-collection.md).  
@@ -208,7 +209,7 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 ### <a name="example"></a>Exemple  
  Consultez l’exemple dans l’article [Collections : comment définir une Collection de Type sécurisé](../how-to-make-a-type-safe-collection.md).  
  
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxtempl.h 
     
 ## <a name="see-also"></a>Voir aussi  

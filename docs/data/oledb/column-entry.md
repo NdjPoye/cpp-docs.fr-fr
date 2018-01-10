@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4d398f93e84662ca3101a6fcbaacfeb6b477cb1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f509ebc6e3e8a050d6b3bd5fb18b999024ec8af1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="columnentry"></a>COLUMN_ENTRY
 Représente une liaison sur l’ensemble de lignes à la colonne dans l’ensemble de lignes.  
@@ -45,7 +48,7 @@ data
  `data`  
  [in] Le membre de données correspondant dans l’enregistrement utilisateur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `COLUMN_ENTRY` macro est utilisée dans les emplacements suivants :  
   
 -   Entre le [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP](../../data/oledb/end-column-map.md) macros.  
@@ -57,7 +60,7 @@ data
 ## <a name="example"></a>Exemple  
  Consultez les exemples dans les rubriques de la macro, [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

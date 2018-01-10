@@ -1,54 +1,53 @@
 ---
-title: "__readeflags | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__readeflags"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__readeflags, intrinsèque"
+title: __readeflags | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __readeflags
+dev_langs: C++
+helpviewer_keywords: __readeflags intrinsic
 ms.assetid: f9d2f4d8-c428-491f-b8de-04d0566b2b6b
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fc75f84ba3c47ae9406743cefb3506721f3d5f4b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# __readeflags
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Lit le registre d'état et de contrôle du programme \(EFLAGS\).  
+# <a name="readeflags"></a>__readeflags
+Lit que l’état du programme et le contrôle (EFLAGS) inscrire.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 unsigned     int __readeflags(void);  
 unsigned __int64 __readeflags(void);  
 ```  
   
-## Valeur de retour  
- la valeur du registre d'EFLAGS.  La valeur de retour est une longueur minimum de 32 bits sur une plateforme 32 bits et 64 bits de temps sur une plateforme 64 bits.  
+## <a name="return-value"></a>Valeur de retour  
+ La valeur du Registre EFLAGS. La valeur de retour est de 32 bits de temps sur une plateforme 32 bits et 64 bits de temps sur une plateforme 64 bits.  
   
-## Notes  
- Ces routines sont disponibles uniquement comme intrinsèques.  
+## <a name="remarks"></a>Notes  
+ Ces routines sont disponibles seulement comme fonctions intrinsèques.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__readeflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## détail de FIN Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)   
- [\_\_writeeflags](../intrinsics/writeeflags.md)
+## <a name="see-also"></a>Voir aussi  
+ [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)   
+ [__writeeflags](../intrinsics/writeeflags.md)

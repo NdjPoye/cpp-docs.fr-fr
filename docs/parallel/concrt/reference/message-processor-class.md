@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9f93763a3d29e19feaa110b336c4cc9bb832539d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b8c2f30bbab85760020c19a25b098b31eb0a8893
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="messageprocessor-class"></a>message_processor, classe
 La classe `message_processor` est la classe de base abstraite pour le traitement des objets `message`. Aucune garantie n'existe sur l'ordre des messages.  
@@ -66,7 +67,7 @@ class message_processor;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `message_processor`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -83,7 +84,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
  `_Msg`  
  A `message` objet à envoyer de façon asynchrone.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les implémentations de processeur doivent substituer cette méthode.  
   
 ##  <a name="process_incoming_message"></a>process_incoming_message 
@@ -94,7 +95,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 virtual void process_incoming_message() = 0;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les implémentations de bloc de message doivent substituer cette méthode.  
   
 ##  <a name="sync_send"></a>sync_send 
@@ -109,7 +110,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
  `_Msg`  
  A `message` objet à envoyer de façon synchrone.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les implémentations de processeur doivent substituer cette méthode.  
   
 ##  <a name="wait"></a>attente 
@@ -120,7 +121,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 virtual void wait() = 0;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les implémentations de processeur doivent substituer cette méthode.  
   
 ## <a name="see-also"></a>Voir aussi  

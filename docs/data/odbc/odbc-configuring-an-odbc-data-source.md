@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8e347683a079227226513ce82f9623860e826228
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5bf7d2b1708e74d50adb417f531c741a467ed889
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC : configuration d'une source de données ODBC
 Pour utiliser un [source de données](../../data/odbc/data-source-odbc.md) avec une application que vous avez développés, vous devez utiliser l’administrateur ODBC pour la configurer. L’administrateur ODBC assure le suivi des sources de données disponibles et leurs informations de connexion dans le Registre Windows. Utilisez l’administrateur ODBC pour ajouter, modifier et supprimer des sources de données dans le **des Sources de données** boîte de dialogue et d’ajouter et supprimer des pilotes ODBC.  

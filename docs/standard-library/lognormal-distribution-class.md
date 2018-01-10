@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::lognormal_distribution::param_type::s
 - random/std::lognormal_distribution::param_type::operator==
 - random/std::lognormal_distribution::param_type::operator!=
-- random/std::lognormal_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::lognormal_distribution [C++]
 - std::lognormal_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 59d68823195d4fc975827b50225702819cd0f4e4
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 60289557e00642bfd46cbbf2d23084d148307995
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution, classe
 Génère une distribution suivant une loi log-normale.  
@@ -81,7 +78,7 @@ public:
 *RealType*  
 Le type des résultats à virgule flottante est `double` par défaut. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
 La classe de modèle décrit une distribution qui produit des valeurs d'un type intégral spécifié par l'utilisateur, ou du type `double` si aucun n'est fourni, distribuées selon une loi log-normale. Le tableau suivant contient des liens vers des articles sur différents membres.  
   
 ||||  
@@ -91,7 +88,7 @@ La classe de modèle décrit une distribution qui produit des valeurs d'un type 
   
 Les fonctions de propriété `m()` et `s()` retournent les valeurs des paramètres de distribution stockés *m* et *s*, respectivement.  
   
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.  
+Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stockés `param_type`.  
 
 Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.  
   
@@ -101,7 +98,7 @@ Les fonctions membres `operator()` retournent la valeur générée suivante d’
   
 Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).  
   
-Pour plus d’informations sur la distribution suivant une loi log-normale, consultez l’article de Wolfram MathWorld [LogNormal Distribution](http://go.microsoft.com/fwlink/LinkId=400917).  
+Pour plus d’informations sur la distribution suivant une loi log-normale, consultez l’article de Wolfram MathWorld [LogNormal Distribution](http://go.microsoft.com/fwlink/p/?linkid=400917).  
   
 ## <a name="example"></a>Exemple  
   
@@ -187,7 +184,7 @@ Distribution for 10 samples:
     10: 5.4406507912  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<random>  
   
  **Espace de noms :** std  
@@ -241,12 +238,11 @@ Paramètre de distribution `s`.
 *right*  
 Structure `param_type` utilisée pour comparer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
 **Condition préalable :** `0.0 < s`  
   
 Cette structure peut être passée au constructeur de classe de la distribution au moment de l'instanciation, à la fonction membre `param()` pour définir les paramètres stockés d'une distribution existante et à `operator()` pour une utilisation à la place des paramètres stockés.  
   
 ## <a name="see-also"></a>Voir aussi  
 [\<random>](../standard-library/random.md)
-
 

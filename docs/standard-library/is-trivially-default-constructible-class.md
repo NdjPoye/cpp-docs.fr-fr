@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a7c72fea2e3efeb877faf6803c13338017dbd7d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b936e6cfa3557591a5be9ec2cafda36920039c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible, classe
 Teste si le type a un constructeur par défaut trivial.  
@@ -52,7 +53,7 @@ struct is_trivially_default_constructible;
   
 -   les classes de tous les membres de données non statiques de type tableau de classe ont des constructeurs triviaux.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<type_traits>  
   
  **Espace de noms :** std  

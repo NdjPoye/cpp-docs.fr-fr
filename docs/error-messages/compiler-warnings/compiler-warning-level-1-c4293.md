@@ -1,35 +1,34 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4293 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4293"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4293"
+title: Compilateur avertissement (niveau 1) C4293 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4293
+dev_langs: C++
+helpviewer_keywords: C4293
 ms.assetid: babecd96-eb51-41a5-9835-462c7a46dbad
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ba42fc37d03dd872028a3fb487bc9ae72a5f2c59
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4293
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'opérateur' : compteur de décalage négatif ou trop important, comportement non défini  
+# <a name="compiler-warning-level-1-c4293"></a>Avertissement du compilateur (niveau 1) C4293
+'opérateur' : compteur de décalage négatif ou trop grande, comportement non défini  
   
- Si un compteur de décalage est négatif ou trop important, le comportement de l'image résultante n'est pas défini.  
+ Si un compteur de décalage est négatif ou trop grande, le comportement de l’image résultante est indéfini.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C4293 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C4293 :  
   
 ```  
 // C4293.cpp  

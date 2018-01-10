@@ -15,11 +15,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3bb9257e83eb5c94361bb20ce689eff115817912
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc136f33d3653aef1e325a97f6e47ff3742b0182
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="badalloc-class"></a>bad_alloc, classe
 La classe décrit une exception levée pour indiquer qu'une demande d'allocation n'a pas réussi.  
@@ -37,7 +38,7 @@ virtual ~bad_alloc();
 ## <a name="remarks"></a>Notes  
  La valeur retournée par **what** est une chaîne C définie par l’implémentation. Aucune des fonctions membres ne lève d'exception.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<new>  
   
  **Espace de noms :** std  
@@ -69,7 +70,7 @@ int main() {
 bad allocation  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<new>  
   
 ## <a name="see-also"></a>Voir aussi

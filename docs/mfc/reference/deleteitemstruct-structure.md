@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5be80d8b139f04daa0c44fc2808f61538843e3e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 93be7b23ae713caea5fa64e437fe792c550589f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deleteitemstruct-structure"></a>DELETEITEMSTRUCT, structure
 Le `DELETEITEMSTRUCT` structure décrit un owner-drawn zone de liste ou zone de liste déroulante élément supprimé.  
@@ -52,10 +53,10 @@ typedef struct tagDELETEITEMSTRUCT { /* ditms */
  `itemData`  
  Spécifie les données définies par l’application pour l’élément. Cette valeur est passée au contrôle dans le **lParam** paramètre du message qui ajoute l’élément à la zone de liste ou zone de liste déroulante.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Lorsqu’un élément est supprimé de la zone de liste ou zone de liste déroulante ou lorsque la zone de liste ou zone de liste déroulante est détruit, Windows envoie le `WM_DELETEITEM` message au propriétaire de chaque élément supprimé. Le **lParam** paramètre du message contient un pointeur vers cette structure.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

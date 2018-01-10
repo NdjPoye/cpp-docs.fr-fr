@@ -15,11 +15,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 47a2e525158d76182387f8ff82d6d0e08fd003c8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d4940e94619807b85050c7037976e0d47b7a66f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="greater-stlclr"></a>greater (STL/CLR)
 La classe de modèle décrit un functor que, lorsqu’elle est appelée, retourne true uniquement si le premier argument est supérieur au second. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.  
@@ -69,7 +72,7 @@ public:
 |operator()|Calcule la fonction de votre choix.|  
 |opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, il retourne true uniquement si le premier argument est supérieur au second.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
@@ -120,7 +123,7 @@ int main()
 1 0  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/fonctionnel >  
   
  **Namespace :** cliext  

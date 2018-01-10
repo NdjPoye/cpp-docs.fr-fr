@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -30,8 +29,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationVariable::m_lstTransitions
 - AFXANIMATIONCONTROLLER/CAnimationVariable::m_pParentObject
 - AFXANIMATIONCONTROLLER/CAnimationVariable::m_variable
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationVariable [MFC], CAnimationVariable
 - CAnimationVariable [MFC], AddTransition
@@ -53,16 +51,16 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a90db931ca53687c42263df6a4112eb478059227
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 59b6c428f34f0f3eb100d568224399827fb243a2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable, classe
 Représente une variable de l'animation.  
@@ -113,20 +111,20 @@ class CAnimationVariable;
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|Spécifie la valeur par défaut, qui est propagée à IUIAnimationVariable.|  
 |[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|Contient une liste de transitions qui animer cette variable de l’animation.|  
 |[CAnimationVariable::m_pParentObject](#m_pparentobject)|Pointeur vers un objet d’animation qui encapsule cette variable de l’animation.|  
 |[CAnimationVariable::m_variable](#m_variable)|Stocke un pointeur vers l’objet COM IUIAnimationVariable. NULL si l’objet COM n’a pas encore été créé, ou si la création a échoué.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La classe CAnimationVariable encapsule l’objet COM IUIAnimationVariable. Elle contient également une liste de transitions à appliquer à la variable d’animation dans une table de montage séquentiel. Objets CAnimationVariable sont incorporés aux objets d’animation, qui peuvent représenter dans une application une valeur animée, la point, la taille, la couleur et le rectangle.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CAnimationVariable`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="_dtorcanimationvariable"></a>CAnimationVariable :: ~ CAnimationVariable  
@@ -147,7 +145,7 @@ void AddTransition(CBaseTransition* pTransition);
  `pTransition`  
  Pointeur vers une transition à ajouter.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode est appelée pour ajouter une transition à la liste interne des transitions à appliquer à la variable de l’animation. Cette liste doit être effacée lorsqu’une animation a été planifiée.  
   
 ##  <a name="applytransitions"></a>CAnimationVariable::ApplyTransitions  
@@ -170,7 +168,7 @@ void ApplyTransitions(
  `bDependOnKeyframes`  
  TRUE si cette méthode doit ajouter des transitions qui dépendent des images clés.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode ajoute des transitions à partir de la liste interne de l’animation. Elle est appelée à partir du code de niveau supérieur plusieurs fois pour ajouter des transitions qui n’a pas été dépendent des images clés et ajouter des transitions qui dépendent des images clés. Si l’objet COM de la variable d’animation sous-jacente n’a pas été créée, cette méthode crée à ce stade.  
   
 ##  <a name="canimationvariable"></a>CAnimationVariable::CAnimationVariable  
@@ -184,7 +182,7 @@ CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
  `dblDefaultValue`  
  Spécifie la valeur par défaut.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Construit un objet d’animation variable et définit sa valeur par défaut. Une valeur par défaut est utilisée lorsqu’une variable n’est pas animée ou ne peut pas être animée.  
   
 ##  <a name="cleartransitions"></a>CAnimationVariable::ClearTransitions  
@@ -198,7 +196,7 @@ void ClearTransitions(BOOL bAutodestroy);
  `bAutodestroy`  
  Spécifie si cette méthode doit supprimer les objets de transition.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode supprime toutes les transitions de la liste interne des transitions. Si bAutodestroy a la valeur TRUE, ou que m_bAutodestroyTransitions a la valeur TRUE, les transitions sont supprimées. Sinon, l’appelant doit libérer des objets de la transition.  
   
 ##  <a name="create"></a>CAnimationVariable::Create  
@@ -215,7 +213,7 @@ virtual BOOL Create(IUIAnimationManager* pManager);
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la variable d’animation a été créée avec succès ; Sinon, FALSE.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode crée l’objet COM de la variable d’animation sous-jacente et définit sa valeur par défaut.  
   
 ##  <a name="createtransitions"></a>CAnimationVariable::CreateTransitions  
@@ -234,7 +232,7 @@ BOOL CreateTransitions(
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si les transitions ont été créées avec succès ; Sinon, FALSE.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode est appelée par l’infrastructure lorsqu’il a besoin créer des transitions qui ont été ajoutées à la liste interne de la variable de transitions.  
   
 ##  <a name="enableintegervaluechangedevent"></a>CAnimationVariable::EnableIntegerValueChangedEvent  
@@ -253,7 +251,7 @@ void EnableIntegerValueChangedEvent (
  `bEnable`  
  TRUE - activer l’événement, FALSE - désactiver l’événement.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque l’événement ValueChanged est activé, l’infrastructure appelle la méthode virtuelle CAnimationController::OnAnimationIntegerValueChanged. Vous devez la substituer dans une classe dérivée de CAnimationController pour traiter cet événement. Cette méthode est appelée chaque fois que la valeur entière de la variable de l’animation est modifiée.  
   
 ##  <a name="enablevaluechangedevent"></a>CAnimationVariable::EnableValueChangedEvent  
@@ -272,7 +270,7 @@ void EnableValueChangedEvent (
  `bEnable`  
  TRUE - activer l’événement, FALSE - désactiver l’événement.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque l’événement ValueChanged est activé, l’infrastructure appelle la méthode virtuelle CAnimationController::OnAnimationValueChanged. Vous devez la substituer dans une classe dérivée de CAnimationController pour traiter cet événement. Cette méthode est appelée chaque fois que la valeur de la variable de l’animation est modifiée.  
   
 ##  <a name="getdefaultvalue"></a>CAnimationVariable::GetDefaultValue  
@@ -285,7 +283,7 @@ DOUBLE GetDefaultValue() const;
 ### <a name="return-value"></a>Valeur de retour  
  Valeur par défaut.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette fonction pour obtenir la valeur par défaut de la variable de l’animation. La valeur par défaut peut être définie dans le constructeur ou par méthode SetDefaultValue.  
   
 ##  <a name="getparentanimationobject"></a>CAnimationVariable::GetParentAnimationObject  
@@ -298,7 +296,7 @@ CAnimationBaseObject* GetParentAnimationObject();
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers l’objet d’animation parent, si la relation a été établie, sinon NULL.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode peut être appelée pour récupérer un pointeur vers un objet d’animation parent (un conteneur).  
   
 ##  <a name="getvalue"></a>CAnimationVariable::GetValue  
@@ -319,7 +317,7 @@ HRESULT GetValue(INT32& nValue);
 ### <a name="return-value"></a>Valeur de retour  
  S_OK si la valeur a été obtenue avec succès, ou la variable d’animation sous-jacente n’a pas été créée. Sinon, code d’erreur HRESULT.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode peut être appelée pour extraire la valeur actuelle de la variable de l’animation. Si l’objet COM sous-jacent n’a pas été créé, dblValue contient une valeur par défaut, lorsque la fonction retourne.  
   
 ##  <a name="getvariable"></a>CAnimationVariable::GetVariable  
@@ -332,7 +330,7 @@ IUIAnimationVariable* GetVariable();
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur valide vers l’objet COM IUIAnimationVariable, ou NULL si la variable d’animation n’a été créé, ou ne peut pas être créé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction permet d’accéder à l’objet COM IUIAnimationVariable sous-jacent et appeler ses méthodes directement si nécessaire.  
   
 ##  <a name="m_bautodestroytransitions"></a>CAnimationVariable::m_bAutodestroyTransitions  
@@ -342,7 +340,7 @@ IUIAnimationVariable* GetVariable();
 BOOL m_bAutodestroyTransitions;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Définissez cette valeur sur True pour forcer la suppression des objets de transition lorsqu’ils sont supprimés de la liste interne des transitions. Si cette valeur est FALSE, les transitions doivent être supprimées en appelant l’application. La liste de transitions est toujours effacée une fois qu’une animation a été planifiée. La valeur par défaut est FALSE.  
   
 ##  <a name="m_dbldefaultvalue"></a>CAnimationVariable::m_dblDefaultValue  
@@ -384,7 +382,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
  `dblDefaultValue`  
  Spécifie la nouvelle valeur par défaut.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour réinitialiser la valeur par défaut. Cette méthode libère l’objet COM IUIAnimationVariable interne, par conséquent, lors de la variable de l’animation est recréé, l’objet COM sous-jacent obtient la nouvelle valeur par défaut. La valeur par défaut est retournée par GetValue si l’objet COM qui représente la variable d’animation n’est pas créé, ou si la variable n’a pas été animée.  
   
 ##  <a name="setparentanimationobject"></a>CAnimationVariable::SetParentAnimationObject  
@@ -398,9 +396,8 @@ void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
  `pParentObject`  
  Pointeur vers un objet d’animation qui contient cette variable.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode est appelée en interne pour établir la relation entre une variable d’animation et un objet d’animation qui l’encapsule.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classes](../../mfc/reference/mfc-classes.md)
-

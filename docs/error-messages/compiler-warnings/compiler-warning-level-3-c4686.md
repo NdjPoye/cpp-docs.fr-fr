@@ -1,39 +1,36 @@
 ---
-title: "Avertissement du compilateur (niveau 3) C4686 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4686"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4686"
+title: Compilateur avertissement (niveau 3) C4686 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4686
+dev_langs: C++
+helpviewer_keywords: C4686
 ms.assetid: 767c83c2-9e4b-4f9e-88c8-02128ba563f4
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 86484e699945743339d416cec8b375759a0de1de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 3) C4686
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-3-c4686"></a>Avertissement du compilateur (niveau 3) C4686
 **'**   
- ***type défini par l'utilisateur* ' : changement de comportement possible, changement de la convention d'appel de retour UDT**  
+ ***type défini par l’utilisateur* ' : changement de comportement possible, changement de retour UDT convention d’appel**  
   
- Une spécialisation de modèle de classe n'a pas été définie avant d'être utilisée dans un type de retour.  Toute entité qui instancie la classe se résoudra en C4686 ; il est également possible de déclarer une instance ou d'accéder à un membre \(C\<int\>::toute valeur\).  
+ Une spécialisation de modèle de classe n’est définie avant d’être utilisé dans un type de retour. Tout ce qui instancie la classe résoudra C4686 ; déclaration d’une instance ou l’accès à un membre (C\<int > :: rien) sont également des options.  
   
- Cet avertissement résulte de la mise en conformité à la norme ISO C\+\+ de Visual C\+\+ .NET 2003.  
+ Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.  
   
- Cet avertissement est désactivé par défaut.  Pour plus d'informations, consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
-  
- Essayez l’opération suivante :  
+ Essayez la suivante :  
   
 ```  
 // C4686.cpp  

@@ -1,49 +1,50 @@
 ---
-title: "SafeInt, fonctions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fonctions, SafeInt"
+title: SafeInt, fonctions | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: functions, SafeInt
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6ae482b7f58d64a46b82b32c6c6d62d7f69f0dce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# SafeInt, fonctions
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The SafeInt library provides several functions that you can use without creating an instance of the [SafeInt, classe](../windows/safeint-class.md).  If you want to protect a single mathematical operation from integer overflow, you can use these functions.  If you want to protect multiple mathematical operations, you should create `SafeInt` objects.  It is more efficient to create `SafeInt` objects than to use these functions multiple times.  
+# <a name="safeint-functions"></a>SafeInt, fonctions
+La Bibliothèque SafeInt fournit plusieurs fonctions que vous pouvez utiliser sans créer d’instance de la [SafeInt, classe](../windows/safeint-class.md). Si vous souhaitez protéger une seule opération mathématique de dépassement sur les entiers, vous pouvez utiliser ces fonctions. Si vous souhaitez protéger plusieurs opérations mathématiques, vous devez créer `SafeInt` objets. Il est plus efficace de créer `SafeInt` objets que d’utiliser ces fonctions plusieurs fois.  
   
- These functions enable you to compare or perform mathematical operations on two different types of parameters without having to convert them to the same type first.  
+ Ces fonctions permettent de comparer ou effectuer des opérations mathématiques sur deux différents types de paramètres sans avoir à les convertir d’abord vers le même type.  
   
- Each of these functions has two template types: `T` and `U`.  Each of these types can be a Boolean, character, or integral type.  Integral types can be signed or unsigned and any size from 8 bits to 64 bits.  
+ Chacune de ces fonctions a deux types de modèle : `T` et `U`. Chacun de ces types peut être une valeur booléenne, un caractère ou un type intégral. Types intégraux peuvent être signés ou non signés et n’importe quelle taille de 8 bits à 64 bits.  
   
-## Dans cette section  
+## <a name="in-this-section"></a>Dans cette section  
   
 |Fonction|Description|  
 |--------------|-----------------|  
-|[SafeAdd](../windows/safeadd.md)|Adds two numbers and protects against overflow.|  
-|[SafeCast](../windows/safecast.md)|Casts one type of parameter to another type.|  
-|[SafeDivide](../windows/safedivide.md)|Divides two numbers and protects against dividing by zero.|  
-|[SafeEquals](../windows/safeequals.md), [SafeGreaterThan](../windows/safegreaterthan.md), [SafeGreaterThanEquals](../windows/safegreaterthanequals.md), [SafeLessThan](../windows/safelessthan.md), [SafeLessThanEquals](../windows/safelessthanequals.md), [SafeNotEquals](../windows/safenotequals.md)|Compares two numbers.  These functions enable you to compare two different types of numbers without changing their types.|  
-|[SafeModulus](../windows/safemodulus.md)|Performs the modulus operation on two numbers.|  
-|[SafeMultiply](../windows/safemultiply.md)|Multiplies two numbers together and protects against overflow.|  
-|[SafeSubtract](../windows/safesubtract.md)|Subtracts two numbers and protects against overflow.|  
+|[SafeAdd](../windows/safeadd.md)|Ajoute deux nombres et protège contre le dépassement de capacité.|  
+|[SafeCast](../windows/safecast.md)|Convertit un type de paramètre à un autre type.|  
+|[SafeDivide](../windows/safedivide.md)|Divise deux nombres et protège contre la division par zéro.|  
+|[SafeEquals](../windows/safeequals.md), [SafeGreaterThan](../windows/safegreaterthan.md), [SafeGreaterThanEquals](../windows/safegreaterthanequals.md), [SafeLessThan](../windows/safelessthan.md), [SafeLessThanEquals](../windows/safelessthanequals.md), [SafeNotEquals](../windows/safenotequals.md)|Compare deux nombres. Ces fonctions permettent de comparer deux types de nombres sans modifier leurs types.|  
+|[SafeModulus](../windows/safemodulus.md)|Effectue l’opération modulo de deux nombres.|  
+|[SafeMultiply](../windows/safemultiply.md)|Multiplie deux nombres entre eux et protège contre le dépassement de capacité.|  
+|[SafeSubtract](../windows/safesubtract.md)|Soustrait deux nombres et protège contre le dépassement de capacité.|  
   
-## Rubriques connexes  
+## <a name="related-sections"></a>Rubriques connexes  
   
 |Section|Description|  
 |-------------|-----------------|  
-|[SafeInt, classe](../windows/safeint-class.md)|Classe `SafeInt`.|  
-|[SafeIntException, classe](../windows/safeintexception-class.md)|The exception class specific to the SafeInt library.|
+|[SafeInt, classe](../windows/safeint-class.md)|La classe `SafeInt`.|  
+|[SafeIntException Class](../windows/safeintexception-class.md)|La classe d’exception spécifique à la Bibliothèque SafeInt.|

@@ -1,34 +1,32 @@
 ---
-title: "Erreur math&#233;matique M6110 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "M6110"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "M6110"
+title: "Erreur mathématique M6110 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: M6110
+dev_langs: C++
+helpviewer_keywords: M6110
 ms.assetid: aac9ae37-6a6d-46e9-85d4-dfe03f1c3e11
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bd6655487d4d92c16c2a006fe29e8289fc35a2ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Erreur math&#233;matique M6110
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="math-error-m6110"></a>Erreur mathématique M6110
 dépassement de capacité de la pile  
   
- Une expression à virgule flottante a provoqué un dépassement de capacité de la pile à virgule flottante.  
+ Une expression à virgule flottante a provoqué un dépassement de capacité de pile à virgule flottante.  
   
- Les exceptions de virgule flottante de dépassement de la capacité de la pile sont interceptées jusqu'à une limite de sept niveaux en plus des huit niveaux généralement pris en charge par le coprocesseur 8087\/287\/387.  
+ Les exceptions de virgule flottante de dépassement de la pile sont interceptées jusqu'à une limite de sept niveaux en plus de huit niveaux généralement pris en charge par le coprocesseur 8087/287/387.  
   
- Le programme se termine par le code de sortie 138.
+ Programme se termine par le code de sortie 138.

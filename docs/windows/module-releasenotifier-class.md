@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b48374182d9b39d43cbf0ec99cb51075867e914d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: eb640f146109363a8025818b3ec560c250029914
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier, classe
 Appelle un gestionnaire d’événements lorsque le dernier objet dans un module est lancé.  
@@ -49,7 +52,7 @@ class ReleaseNotifier;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `ReleaseNotifier`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL

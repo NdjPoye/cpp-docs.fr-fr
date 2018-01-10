@@ -16,11 +16,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 23e8445e5a407e71061a971bccfb77d6b4170a35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7c12d6a67f6fbe73802d3b876621a2ea606af553
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-display-images-with-the-net-framework"></a>Comment : afficher des images avec le .NET Framework
 L’exemple de code suivant modifie le Gestionnaire d’événements OnPaint pour récupérer un pointeur vers le <xref:System.Drawing.Graphics> objet pour le formulaire principal. Le <xref:System.Windows.Forms.Form.OnPaint%2A> fonction est conçue pour une application Windows Forms, très probablement créée avec l’Assistant application Visual Studio.  
@@ -30,7 +33,7 @@ L’exemple de code suivant modifie le Gestionnaire d’événements OnPaint pou
  Le <xref:System.Drawing.Graphics> et <xref:System.Drawing.Image> classes sont toutes deux dans le <xref:System.Drawing?displayProperty=fullName> espace de noms.  
   
 > [!NOTE]
->  GDI + est fourni avec Windows XP et est disponible en tant que redistribuable pour Windows NT 4.0 Service Pack 6, Windows 2000, Windows 98 et Windows Me. Pour télécharger le redistribuable le plus récent, consultez [http://go.microsoft.com/fwlink/?linkid=11232](http://go.microsoft.com/fwlink/?linkid=11232).   
+>  GDI + est fourni avec Windows XP et est disponible en tant que redistribuable pour Windows NT 4.0 Service Pack 6, Windows 2000, Windows 98 et Windows Me. Pour télécharger le redistribuable le plus récent, consultez [http://go.microsoft.com/fwlink/p/?linkid=11232](http://go.microsoft.com/fwlink/p/?linkid=11232).   
   
 ## <a name="example"></a>Exemple  
   

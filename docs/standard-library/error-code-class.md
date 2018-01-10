@@ -25,17 +25,17 @@ helpviewer_keywords:
 - std::error_code::clear
 - std::error_code::default_error_condition
 - std::error_code::message
-- 
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
 caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7674aeb2a2a1e15ceb38af662f51964884b81ada
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2d451de1cacbb9654d7aafeb59cb1c23006dce9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errorcode-class"></a>error_code, classe
 Représente les erreurs système de bas niveau spécifiques de l’implémentation.  
@@ -55,7 +55,7 @@ class error_code;
 |-|-|  
 |[error_code](#error_code)|Construit un objet de type `error_code`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -81,7 +81,7 @@ class error_code;
 |[operator=](#op_eq)|Assigne une nouvelle valeur d’énumération à l’objet `error_code`.|  
 |[operator bool](#op_bool)|Convertit une variable de type `error_code`.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<system_error>  
   
  **Espace de noms :** std  

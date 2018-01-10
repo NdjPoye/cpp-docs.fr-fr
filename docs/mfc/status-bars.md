@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a6e0b879efa1d96f3f379cc9aa3292a117609fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d9f79fe4def397346e3f44c6dbf50b2583888e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="status-bars"></a>Barres d'état
 Barres d’état donnent à votre application à afficher des messages et des informations utiles à l’utilisateur sans interrompre le travail de l’utilisateur. Généralement affiché au bas d’une fenêtre, barres d’état ont « volets », qui incluent « indicateurs » et « ligne de message ». Les indicateurs de donner à l’état des éléments tels que les verrous de défilement, si l’enregistrement de macro est activée, et ainsi de suite. La ligne du message dans la barre d’état peut afficher des informations sur l’état du programme ou un élément de bouton ou menu de barre d’outils qui pointe vers l’utilisateur avec la souris.  

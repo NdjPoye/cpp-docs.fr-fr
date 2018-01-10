@@ -31,11 +31,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2a0c593042bf92e63b1c1514326440d9aee8101b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 824ca5e9726146323639974f9506d4efbf454d6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stack-class"></a>stack, classe
 Classe d'adaptateur de conteneur modèle qui fournit une restriction des fonctionnalités limitant l'accès à l'élément ajouté le plus récemment pour un type de conteneur sous-jacent. La classe stack est utilisée quand il est important de s'assurer que seules des opérations de pile sont effectuées sur le conteneur.  
@@ -73,7 +74,7 @@ class stack
 |-|-|  
 |[stack](#stack)|Construit un objet `stack` qui est vide ou qui est une copie de l'objet conteneur de base.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -91,7 +92,7 @@ class stack
 |[size](#size)|Retourne le nombre d'éléments d'un `stack`.|  
 |[top](#top)|Retourne une référence à un élément en haut de l'objet la`stack`.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<stack>  
   
  **Espace de noms :** std  
@@ -446,6 +447,6 @@ The element at the top of the stack is 69.
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
 

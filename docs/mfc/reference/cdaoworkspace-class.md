@@ -73,11 +73,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 089841b51421567f2faff9d06508feb20a57e15d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96cc8325ce8084d62f05283b424ead222bc55dd8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace (classe)
 Gère une session de base de données nommée et protégée par mot de passe, de la connexion à la déconnexion, pour un seul utilisateur.  
@@ -133,13 +134,13 @@ class CDaoWorkspace : public CObject
 |----------|-----------------|  
 |[CDaoWorkspace::m_pDAOWorkspace](#m_pdaoworkspace)|Pointe vers l’objet d’espace de travail DAO sous-jacent.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Dans la plupart des cas, vous n’aurez pas plusieurs espaces de travail, et vous ne devez pas créer des objets de l’espace de travail explicites ; Lorsque vous ouvrez des objets de base de données et le jeu d’enregistrements, ils utilisent d’espace de travail par défaut de DAO. Toutefois, si nécessaire, vous pouvez exécuter plusieurs sessions à la fois en créant des objets de l’espace de travail supplémentaires. Chaque objet de l’espace de travail peut contenir plusieurs objets de base de données ouverte dans sa propre collection de bases de données. Dans les MFC, un espace de travail est principalement un gestionnaire de transactions, en spécifiant un ensemble de bases de données ouvertes dans le même « espace de transaction ».  
   
 > [!NOTE]
 >  Les classes de base de données DAO sont distincts des classes de base de données MFC basées sur ODBC Open Database Connectivity (). Tous les noms de classe de base de données DAO ont le préfixe « CDao ». En général, les classes MFC basées sur DAO sont plus efficaces que les classes MFC basées sur ODBC. Les classes DAO accéder aux données via le moteur de base de données Microsoft Jet, y compris des pilotes ODBC. Ils prennent également en charge des opérations de langage de définition de données (DDL), telles que la création de bases de données et ajouter des tables et des champs via les classes, sans avoir à appeler DAO directement.  
   
-## <a name="capabilities"></a>Capacités  
+## <a name="capabilities"></a>Fonctionnalités  
  Classe `CDaoWorkspace` fournit les éléments suivants :  
   
 -   Accès explicite, si nécessaire, à un espace de travail par défaut, créé par l’initialisation du moteur de base de données. En général vous utilisez espace de travail par défaut de DAO d’implicitement en créant des objets de base de données et le jeu d’enregistrements.  
@@ -190,7 +191,7 @@ class CDaoWorkspace : public CObject
   
  `CDaoWorkspace`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdao.h  
   
 ##  <a name="append"></a>CDaoWorkspace::Append  
@@ -200,7 +201,7 @@ class CDaoWorkspace : public CObject
 virtual void Append();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  **Ajouter** ajoute un objet de l’espace de travail nouvellement créé à la collection d’espaces de travail du moteur de base de données. Espaces de travail ne sont pas conservés entre les sessions du moteur de base de données ; elles sont stockées uniquement dans la mémoire, pas sur le disque. Vous n’avez pas à ajouter un espace de travail ; Si vous ne le faites pas, vous pouvez toujours l’utiliser.  
   
  Un espace de travail ajouté reste dans la collection d’espaces de travail, active, un état ouvert, jusqu'à ce que vous appeliez son [fermer](#close) fonction membre.  
@@ -214,7 +215,7 @@ virtual void Append();
 void BeginTrans();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Après avoir appelé **BeginTrans**, que vous apportez à votre structure de données ou de la base de données prendre effet lorsque vous validez la transaction. L’espace de travail définit un espace de transaction unique, la transaction s’applique à toutes les bases de données ouvertes dans l’espace de travail. Il existe deux façons de terminer la transaction :  
   
 -   Appelez le [CommitTrans](#committrans) fonction membre à valider la transaction et enregistrer les modifications apportées à la source de données.  
@@ -232,7 +233,7 @@ void BeginTrans();
 CDaoWorkspace();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Après avoir construit l’objet C++, vous avez deux options :  
   
 -   Appelez l’objet [ouvrir](#open) fonction membre pour ouvrir l’espace de travail par défaut ou d’ouvrir un objet existant dans la collection d’espaces de travail.  
@@ -250,7 +251,7 @@ CDaoWorkspace();
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Fermeture d’un objet de l’espace de travail ouvert libère l’objet DAO sous-jacent et, si l’espace de travail est un membre de la collection d’espaces de travail, il le supprime de la collection. Appel de **fermer** est bonne pratique de programmation.  
   
 > [!CAUTION]
@@ -267,7 +268,7 @@ virtual void Close();
 void CommitTrans();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une transaction est composée d’une série de modifications apportées aux données de la base de données ou sa structure, en commençant par un appel à [BeginTrans](#begintrans). Lorsque vous terminez la transaction, soit valide ou restaure (annuler les modifications) avec [restauration](#rollback). Par défaut, sans transactions, les mises à jour des enregistrements sont immédiatement validées. Appel de **BeginTrans** provoque l’engagement de mises à jour peut être différé jusqu'à ce que vous appeliez **CommitTrans**.  
   
 > [!CAUTION]
@@ -360,7 +361,7 @@ static void PASCAL CompactDatabase(
 > [!CAUTION]
 >  Si une base de données n’est pas chiffré, il est possible, même si vous implémentez la sécurité de l’utilisateur/mot de passe, pour directement lire le fichier binaire sur disque qui constitue la base de données.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque vous modifiez des données dans une base de données, le fichier de base de données peut se fragmenter et utiliser plus d’espace disque que nécessaire. Régulièrement, vous devez compacter votre base de données pour défragmenter le fichier de base de données. La base de données compactée est généralement plus petite. Vous pouvez également choisir de modifier l’ordre de classement, le chiffrement ou la version du format de données pendant que vous copiez et compactez la base de données.  
   
 > [!CAUTION]
@@ -391,7 +392,7 @@ virtual void Create(
  `lpszPassword`  
  Le mot de passe pour le nouvel objet de l’espace de travail. Un mot de passe peut comporter jusqu'à 14 caractères et peut contenir n’importe quel caractère sauf ASCII 0 (null). Les mots de passe respectent la casse. Pour plus d’informations, consultez la rubrique « Propriété de mot de passe » dans l’aide de DAO.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le processus de création générale est la suivante :  
   
 1.  Construire un [CDaoWorkspace](#cdaoworkspace) objet.  
@@ -412,7 +413,7 @@ short GetDatabaseCount();
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de bases de données ouvertes dans l’espace de travail.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `GetDatabaseCount`est utile si vous devez effectuer une boucle sur toutes les bases de données définies dans la collection de bases de données de l’espace de travail. Pour obtenir plus d’informations sur une base de données dans la collection, consultez [GetDatabaseInfo](#getdatabaseinfo). Utilisation typique consiste à appeler `GetDatabaseCount` pour le nombre de bases de données ouvertes, puis utiliser ce nombre comme un index de boucle pour les appels répétés à `GetDatabaseInfo`.  
   
 ##  <a name="getdatabaseinfo"></a>CDaoWorkspace::GetDatabaseInfo  
@@ -450,7 +451,7 @@ void GetDatabaseInfo(
  `lpszName`  
  Le nom de l’objet de base de données, pour la recherche par nom. Le nom est une chaîne qui identifie de façon unique le nouvel objet de l’espace de travail en utilisant jusqu'à 14 caractères.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une version de la fonction vous permet de rechercher une base de données par index. L’autre version vous permet de rechercher une base de données par nom.  
   
  Pour obtenir une description des informations retournées dans `dbinfo`, consultez la [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) structure. Cette structure possède des membres qui correspondent aux éléments d’informations répertoriés ci-dessus dans la description de `dwInfoOptions`. Lorsque vous demandez des informations à un niveau, vous obtenez des informations pour les niveaux de préalables.  
@@ -465,7 +466,7 @@ static CString PASCAL GetIniPath();
 ### <a name="return-value"></a>Valeur de retour  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) contenant l’emplacement de Registre.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous pouvez utiliser l’emplacement pour obtenir des informations sur les paramètres pour le moteur de base de données. Les informations retournées sont en fait le nom d’une sous-clé de Registre.  
   
  Pour plus d’informations, consultez les rubriques « Propriété IniPath » et « Personnalisation de Windows Registre paramètres pour accès aux données » dans l’aide de DAO.  
@@ -480,7 +481,7 @@ BOOL GetIsolateODBCTrans();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si les transactions ODBC sont isolées ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans certaines situations, vous devrez peut-être avoir plusieurs transactions simultanées en cours sur la même base de données ODBC. Pour ce faire, vous devez ouvrir un espace de travail distinct pour chaque transaction. Gardez à l’esprit que bien que chaque espace de travail peut avoir sa propre connexion ODBC à la base de données, cela ralentit les performances du système. Étant donné que l’isolation des transactions est généralement pas nécessaire, les connexions ODBC à partir de plusieurs objets d’espace de travail ouverts par le même utilisateur sont partagées par défaut.  
   
  Certains serveurs ODBC, telles que Microsoft SQL Server, n’autorisent pas les transactions simultanées sur une seule connexion. Si vous avez besoin d’avoir plusieurs transactions en cours sur une base de données, définissez la propriété IsolateODBCTrans **TRUE** sur chaque espace de travail dès que vous l’ouvrez. Cette opération force une connexion ODBC séparée pour chaque espace de travail.  
@@ -497,7 +498,7 @@ static short PASCAL GetLoginTimeout();
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de secondes avant qu’une erreur se produit lorsque vous essayez de vous connecter à une base de données ODBC.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette valeur représente le nombre de secondes avant qu’une erreur se produit lorsque vous essayez de vous connecter à une base de données ODBC. La valeur par défaut LoginTimeout est 20 secondes. Lorsque LoginTimeout est définie sur 0, aucun délai d’expiration se produit et la communication avec la source de données peut cesser de répondre.  
   
  Lorsque vous tentez de vous connecter à une base de données ODBC, telles que Microsoft SQL Server, la connexion peut échouer en raison d’erreurs réseau ou parce que le serveur n’est pas en cours d’exécution. Au lieu d’attendre la valeur par défaut 20 secondes pour se connecter, vous pouvez spécifier la durée pendant laquelle le moteur de base de données doit attendre une erreur produit. La connexion au serveur se produit implicitement dans le cadre d’un nombre d’événements, telles que l’exécution d’une requête sur une base de données du serveur externe.  
@@ -514,7 +515,7 @@ CString GetName();
 ### <a name="return-value"></a>Valeur de retour  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) contenant le nom défini par l’utilisateur de l’objet d’espace de travail DAO.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le nom est utile pour accéder à l’objet d’espace de travail DAO dans la collection d’espaces de travail du moteur de base de données par nom.  
   
  Pour plus d’informations, consultez la rubrique « Nom de propriété » dans l’aide de DAO.  
@@ -529,7 +530,7 @@ CString GetUserName();
 ### <a name="return-value"></a>Valeur de retour  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) qui représente le propriétaire de l’objet de l’espace de travail.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour obtenir ou définir les autorisations pour le propriétaire de l’espace de travail, appeler DAO directement pour vérifier le paramètre de propriété autorisations ; Ce paramètre détermine les autorisations dont dispose cet utilisateur. Pour travailler avec des autorisations, vous avez besoin d’un système. Fichier de l’Assistant Débogage MANAGÉ.  
   
  Pour plus d’informations sur l’appel de DAO directement, consultez [Note technique 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md). Pour plus d’informations, consultez la rubrique « Propriété de nom d’utilisateur » dans l’aide de DAO.  
@@ -544,7 +545,7 @@ static CString PASCAL GetVersion();
 ### <a name="return-value"></a>Valeur de retour  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) qui indique la version du moteur de base de données associé à l’objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La valeur renvoyée représente le numéro de version sous la forme « major.minor » ; par exemple, « 3.0 ». Le numéro de version du produit (par exemple, version 3.0) comprend le numéro de version (3), un point et le numéro de version (0).  
   
  Pour plus d’informations, consultez la rubrique « Propriété de Version » dans l’aide de DAO.  
@@ -559,7 +560,7 @@ short GetWorkspaceCount();
 ### <a name="return-value"></a>Valeur de retour  
  Nombre d’espaces de travail ouverts dans la collection d’espaces de travail.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ce nombre n’inclut pas les espaces de travail ouverts ne pas ajoutés à la collection. `GetWorkspaceCount`est utile si vous devez effectuer une boucle sur tous les espaces de travail définis dans la collection d’espaces de travail. Pour obtenir plus d’informations sur un espace de travail donné dans la collection, consultez [GetWorkspaceInfo](#getworkspaceinfo). Utilisation typique consiste à appeler `GetWorkspaceCount` pour le nombre d’espaces de travail ouverts, puis utiliser ce nombre comme un index de boucle pour les appels répétés à `GetWorkspaceInfo`.  
   
 ##  <a name="getworkspaceinfo"></a>CDaoWorkspace::GetWorkspaceInfo  
@@ -597,7 +598,7 @@ void GetWorkspaceInfo(
  `lpszName`  
  Le nom de l’objet de l’espace de travail, pour la recherche par nom. Le nom est une chaîne qui identifie de façon unique le nouvel objet de l’espace de travail en utilisant jusqu'à 14 caractères.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour obtenir une description des informations retournées dans `wkspcinfo`, consultez la [CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md) structure. Cette structure possède des membres qui correspondent aux éléments d’informations répertoriés ci-dessus dans la description de `dwInfoOptions`. Lorsque vous demandez des informations à un niveau, vous obtenez des informations pour ainsi des niveaux précédents.  
   
 ##  <a name="idle"></a>CDaoWorkspace::Idle  
@@ -611,7 +612,7 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
  `nAction`  
  Action à exécuter pendant le traitement inactif. Actuellement la seule action valide est **dbFreeLocks**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cela est souvent le cas dans les environnements multitâche multi-utilisateur dans lequel il n’est pas suffisamment le temps de traitement en arrière-plan pour conserver tous les enregistrements dans un jeu d’enregistrements actuel.  
   
 > [!NOTE]
@@ -633,13 +634,13 @@ BOOL IsOpen() const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’objet de l’espace de travail est ouvert ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous pouvez appeler les du membre de fonctions d’un espace de travail est dans un état ouvert.  
   
 ##  <a name="m_pdaoworkspace"></a>CDaoWorkspace::m_pDAOWorkspace  
  Pointeur vers l’objet d’espace de travail DAO sous-jacent.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez ce membre de données si vous avez besoin un accès direct à l’objet DAO sous-jacent. Vous pouvez appeler des interfaces de l’objet DAO via ce pointeur.  
   
  Pour plus d’informations sur l’accès à des objets DAO directement, consultez [Note technique 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
@@ -655,7 +656,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
  `lpszName`  
  Le nom de l’objet d’espace de travail DAO pour ouvrir, une chaîne qui identifie de façon unique l’espace de travail en utilisant jusqu'à 14 caractères. Acceptez la valeur par défaut **NULL** à ouvrir explicitement l’espace de travail par défaut. Pour nommer la configuration requise, consultez le `lpszName` paramètre [créer](#create). Pour plus d’informations, consultez la rubrique « Nom de propriété » dans l’aide de DAO.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Après avoir construit un `CDaoWorkspace` d’objet, appelez cette fonction membre pour effectuer l’une des opérations suivantes :  
   
 -   Ouvrir explicitement l’espace de travail par défaut. Passer **NULL** pour `lpszName`.  
@@ -683,7 +684,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
  `lpszName`  
  Le chemin d’accès et le nom de fichier pour un fichier de base de données de moteur Microsoft Jet existant. Si vous omettez le chemin d’accès, uniquement le répertoire actif est recherché. Si votre système prend en charge la convention d’affectation de noms uniforme (UNC), vous pouvez également spécifier un chemin d’accès réseau, tels que : «\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB ». (Deux barres obliques inverses sont nécessaires dans la chaîne de chemin d’accès, car «\\» est le caractère d’échappement de C++.)  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez fermer la base de données spécifiée par `lpszName` avant de la réparer. Dans un environnement multi-utilisateur, les autres utilisateurs ne peuvent pas avoir `lpszName` ouvertes pendant que vous réparez il. Si `lpszName` n’est pas fermée ou n’est pas disponible pour une utilisation exclusive, une erreur se produit.  
   
  Cette fonction membre tente de réparer une base de données qui a été marqué comme peut-être endommagé par une opération d’écriture incomplète. Cela peut se produire si une application en utilisant le moteur de base de données Microsoft Jet fermeture inattendue en raison d’un problème de matériel ordinateur ou de panne d’alimentation. Si vous terminez l’opération et l’appel de la [fermer](../../mfc/reference/cdaodatabase-class.md#close) fonction membre ou si vous quittez l’application de façon habituelle, la base de données n’est pas marqué comme peut-être endommagé.  
@@ -700,7 +701,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 void Rollback();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 > [!CAUTION]
 >  Au sein d’un objet de l’espace de travail, les transactions sont toujours globales dans l’espace de travail et ne sont pas limitées à qu’une seule base de données ou un recordset. Si vous effectuez des opérations sur plus d’une base de données ou un recordset dans une transaction de l’espace de travail, **restauration** restaure toutes les opérations sur toutes les bases de données et les jeux d’enregistrements.  
@@ -721,7 +722,7 @@ static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
  `lpszPassword`  
  Le mot de passe par défaut. Un mot de passe peut comporter jusqu'à 14 caractères et peut contenir n’importe quel caractère sauf ASCII 0 (null). Les mots de passe respectent la casse.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le mot de passe par défaut que vous définissez s’applique aux nouveaux espaces de travail créés après l’appel. Lorsque vous créez des espaces de travail suivants, il est inutile de spécifier un mot de passe dans le [créer](#create) appeler.  
   
  Pour utiliser cette fonction membre :  
@@ -747,7 +748,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
  `lpszDefaultUser`  
  Le nom d’utilisateur par défaut. Un nom d’utilisateur peut comporter 1 à 20 caractères et inclure des caractères alphabétiques, les caractères accentués, nombres, des espaces et les symboles à l’exception de : » (entre guillemets), / (barre oblique), \ (barre oblique inverse), \[ \] (crochets), : (deux-points), &#124; (barre verticale), \< (moins-signe), > (supérieur-signe), signe plus (+), = (signe égal), (point-virgule), (virgule), (interrogation) * (astérisque), des espaces et des caractères de contrôle (ASCII 00 ASCII 31). Pour plus d’informations, consultez la rubrique « Propriété de nom d’utilisateur » dans l’aide de DAO.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le nom d’utilisateur par défaut que vous définissez s’applique aux nouveaux espaces de travail créés après l’appel. Lorsque vous créez des espaces de travail suivants, il est inutile de spécifier un nom d’utilisateur dans le [créer](#create) appeler.  
   
  Pour utiliser cette fonction membre :  
@@ -773,7 +774,7 @@ static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
  *lpszRegistrySubkey*  
  Chaîne contenant le nom d’une sous-clé de Registre Windows pour l’emplacement des paramètres du moteur de base de données Microsoft Jet ou les paramètres requis pour les bases de données ISAM.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez `SetIniPath` uniquement si vous devez spécifier des paramètres spéciaux. Pour plus d’informations, consultez la rubrique « Propriété IniPath » dans l’aide de DAO.  
   
 > [!NOTE]
@@ -792,7 +793,7 @@ void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
  *bIsolateODBCTrans*  
  Passer **TRUE** si vous souhaitez commencer l’isolement des transactions ODBC. Passer **FALSE** si vous souhaitez arrêter l’isolement des transactions ODBC.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans certaines situations, vous devrez peut-être avoir plusieurs transactions simultanées en cours sur la même base de données ODBC. Pour ce faire, vous devez ouvrir un espace de travail distinct pour chaque transaction. Bien que chaque espace de travail peut avoir sa propre connexion ODBC à la base de données, cela ralentit les performances du système. Étant donné que l’isolation des transactions est généralement pas nécessaire, les connexions ODBC à partir de plusieurs objets d’espace de travail ouverts par le même utilisateur sont partagées par défaut.  
   
  Certains serveurs ODBC, telles que Microsoft SQL Server, n’autorisent pas les transactions simultanées sur une seule connexion. Si vous avez besoin d’avoir plusieurs transactions en cours sur une base de données, définissez la propriété IsolateODBCTrans **TRUE** sur chaque espace de travail dès que vous l’ouvrez. Cette opération force une connexion ODBC séparée pour chaque espace de travail.  
@@ -808,7 +809,7 @@ static void PASCAL SetLoginTimeout(short nSeconds);
  `nSeconds`  
  Le nombre de secondes avant qu’une erreur se produit lorsque vous essayez de vous connecter à une base de données ODBC.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette valeur représente le nombre de secondes avant qu’une erreur se produit lorsque vous essayez de vous connecter à une base de données ODBC. La valeur par défaut LoginTimeout est 20 secondes. Lorsque LoginTimeout est définie sur 0, aucun délai d’expiration se produit et la communication avec la source de données peut cesser de répondre.  
   
  Lorsque vous tentez de vous connecter à une base de données ODBC, telles que Microsoft SQL Server, la connexion peut échouer en raison d’erreurs réseau ou parce que le serveur n’est pas en cours d’exécution. Au lieu d’attendre la valeur par défaut 20 secondes pour se connecter, vous pouvez spécifier la durée pendant laquelle le moteur de base de données doit attendre une erreur produit. Ouverture de session le serveur se produit implicitement dans le cadre d’un nombre d’événements, telles que l’exécution d’une requête sur une base de données du serveur externe. La valeur de délai d’expiration est déterminée par le paramètre actuel de la propriété LoginTimeout.  

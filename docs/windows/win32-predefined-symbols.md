@@ -17,11 +17,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01aa83fc5d0be468252b8593ee343ff28648d218
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 865d61611546e2550aaa241220dc226cea9f9b81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="win32-predefined-symbols"></a>Symboles Win32 prédéfinis
 Ces symboles sont définis dans les fichiers d’en-tête Win32 et ils prennent en charge les actions et les fonctions d’application Windows standard. Ces symboles sont utilisés principalement avec les éléments d’interface courants. Lorsque vous travaillez avec des contrôles dans les éditeurs de ressources, ces symboles s’affichent dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) associées aux contrôles communs. Par exemple, si votre barre d’outils doit afficher l’icône de l’application, l’icône sera associée au symbole IDI_SMALL dans la fenêtre Propriétés.  
@@ -43,7 +46,7 @@ Ces symboles sont définis dans les fichiers d’en-tête Win32 et ils prennent 
 |IDS_APP_TITLE|De chaîne : Nom de l’application en cours|  
 |IDYES|Contrôle : Bouton de la boîte de dialogue Oui|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

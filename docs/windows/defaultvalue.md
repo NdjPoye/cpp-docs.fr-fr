@@ -15,11 +15,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 16f75743010087eb13ab38186b6326b4bcc38688
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: eb269a4c7e85269096e5df8a56e16bf898348118
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defaultvalue"></a>defaultvalue
 Autorise la spécification d’une valeur par défaut pour un paramètre optionnel typé.  
@@ -32,10 +35,10 @@ Autorise la spécification d’une valeur par défaut pour un paramètre optionn
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *value*  
+ *valeur*  
  La valeur par défaut pour le paramètre.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **defaultvalue** attribut C++ a les mêmes fonctionnalités que le [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
@@ -63,7 +66,7 @@ __interface IFireTabCtrl : IDispatch {
       version="1.0", helpstring="ATLFire 1.0 Type Library") ];  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -71,8 +74,8 @@ __interface IFireTabCtrl : IDispatch {
 |-|-|  
 |**S'applique à**|Paramètre d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|None|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

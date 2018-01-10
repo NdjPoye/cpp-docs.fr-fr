@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce56bc4839ff7f284a9c8c9bd96331742459fd00
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff208af8bb89dbcb7df00b37ce542a5adae5fa23
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-release-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>Spécifier les paramètres de configuration Release, Assistant Créer un projet à partir de fichiers de code existants
 Utilisez cette page de l’Assistant créer un projet à partir de fichiers de Code existants pour spécifier les paramètres de configuration Release.  
@@ -26,7 +27,7 @@ Utilisez cette page de l’Assistant créer un projet à partir de fichiers de C
 ## <a name="task-list"></a>Liste des tâches  
  [Guide pratique pour créer un projet C++ à partir d’un code existant](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
-## <a name="uielement-list"></a>Liste UIElement  
+## <a name="uielement-list"></a>Liste des éléments d’interface  
  **Identique à la configuration Debug**  
  Spécifie que l’Assistant générera les paramètres de configuration Release identiques pour les paramètres de configuration Debug. Cette option est activée par défaut. Toutes les autres options de cette page sont inactives, sauf si vous décochez cette case.  
   
@@ -43,7 +44,7 @@ Utilisez cette page de l’Assistant créer un projet à partir de fichiers de C
  Spécifie le chemin d’accès du répertoire des fichiers de sortie pour la configuration Debug du nouveau projet. Cette option est activée lorsque le **système de génération externe de l’utilisation** option est sélectionnée dans le **spécifier les paramètres de projet** page.  
   
  **Définitions de préprocesseur (/ D)**  
- Définit les symboles de préprocesseur pour le nouveau projet. Pour plus d’informations, consultez [/D (Définitions de préprocesseur)](../build/reference/d-preprocessor-definitions.md).  
+ Définit les symboles de préprocesseur pour le nouveau projet. Pour plus d'informations, consultez [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md).  
   
  **Chemin de recherche Include (/ I)**  
  Spécifie les chemins d’accès pour l’ajouter à la liste des répertoires dans lesquels le compilateur recherche pour résoudre les références de fichier passées aux directives de préprocesseur dans le nouveau projet. Pour plus d’informations, consultez l’article [/I (Autres répertoires Include)](../build/reference/i-additional-include-directories.md).  

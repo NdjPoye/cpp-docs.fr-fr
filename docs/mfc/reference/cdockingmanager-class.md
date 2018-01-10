@@ -171,11 +171,12 @@ caps.latest.revision: "37"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a19688b10cb0e3b7966044c725cebb236ca30660
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f1a436ab6bfbc5e21e43267d3992310ed6f6a20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdockingmanager-class"></a>Classe de CDockingManager
 Implémente la fonctionnalité principale qui contrôle la disposition d'ancrage dans une fenêtre frame principale.  
@@ -267,7 +268,7 @@ class CDockingManager : public CObject
   
 ### <a name="data-members"></a>Membres de données  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Spécifie si le Gestionnaire d’ancrage masque les volets en mode de conteneur OLE.|  
 |[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)|Spécifie le mode d’ancrage global.|  
@@ -275,7 +276,7 @@ class CDockingManager : public CObject
 |[CDockingManager::m_nTimeOutBeforeDockingBarDock](#m_ntimeoutbeforedockingbardock)|Spécifie la durée, en millisecondes, avant d’un volet d’ancrage est ancré dans le mode d’ancrage immédiat.|  
 |[CDockingManager::m_nTimeOutBeforeToolBarDock](#m_ntimeoutbeforetoolbardock)|Spécifie la durée, en millisecondes, avant une barre d’outils est ancrée à la fenêtre frame principale.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fenêtre frame principale crée et initialise automatiquement de cette classe.  
   
  L’objet du Gestionnaire d’ancrage conserve une liste de tous les volets qui se trouvent dans la mise en page d’accueil et également une liste de tous les [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) windows qui appartiennent à la fenêtre frame principale.  
@@ -307,7 +308,7 @@ class CDockingManager : public CObject
   
  [CDockingManager](../../mfc/reference/cdockingmanager-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxDockingManager.h  
   
 ##  <a name="adddocksite"></a>CDockingManager::AddDockSite  
@@ -367,7 +368,7 @@ BOOL AddPane(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le volet a été correctement inscrit auprès du Gestionnaire d’ancrage ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette méthode pour inscrire les volets non flottant, non redimensionnable avec le Gestionnaire d’ancrage. Si vous n’enregistrez pas les volets, qu’ils n’apparaissent pas correctement lorsque le Gestionnaire d’ancrage est disposé.  
   
 ##  <a name="adjustdockinglayout"></a>CDockingManager::AdjustDockingLayout  
@@ -381,7 +382,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
  [in] `hdwp`  
  Spécifie la structure de fenêtre différée. Pour plus d'informations, consultez [Types de données Windows](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="addminiframe"></a>CDockingManager::AddMiniFrame  
  Ajoute un frame à la liste d’images minidumps.  
@@ -404,7 +405,7 @@ virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 virtual void AdjustPaneFrames();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="adjustrecttoclientarea"></a>CDockingManager::AdjustRectToClientArea  
  Ajuste l’alignement d’un rectangle.  
@@ -425,7 +426,7 @@ virtual BOOL AdjustRectToClientArea(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si l’alignement de la `CRect` objet a été corrigée ; `FALSE` dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `dwAlignment` paramètre peut avoir l’une des valeurs suivantes :  
   
 -   CBRS_ALIGN_TOP  
@@ -531,7 +532,7 @@ void CalcExpectedDockedRect(
  [out] `ppTargetBar`  
  Pointeur vers un pointeur vers le volet cible.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode calcule le rectangle une fenêtre occuperait si un utilisateur a fait glisser la fenêtre au point spécifié par `ptMouse` et il ancré il.  
   
 ##  <a name="create"></a>CDockingManager::Create  
@@ -583,7 +584,7 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 ### <a name="return-value"></a>Valeur de retour  
  L’état d’ancrage.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’état d’ancrage peut être une des valeurs suivantes :  
   
 |Valeur AFX_CS_STATUS|Signification|  
@@ -604,7 +605,7 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
  [in] `bDisable`  
  `TRUE`Pour désactiver le chargement de la mise en page d’accueil à partir du Registre ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette méthode lorsque vous devez conserver la disposition actuelle de barres d’outils et des volets d’ancrage lors du chargement de l’état de l’application.  
   
 ##  <a name="dockpane"></a>CDockingManager::DockPane  
@@ -685,7 +686,7 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
  [in] `bEnable`  
  `TRUE`Pour activer le menu d’ancrage site ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le menu d’ancrage site affiche les options suivantes pour modifier l’état d’ancrage du volet :  
   
 - `Floating`-Fait flotter un volet  
@@ -760,7 +761,7 @@ virtual CBasePane* FindPaneByID(
 ### <a name="return-value"></a>Valeur de retour  
  Le [CBasePane](../../mfc/reference/cbasepane-class.md) objet ayant l’ID du contrôle spécifié, ou `NULL` si le volet spécifié est introuvable.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="finddocksitebypane"></a>CDockingManager::FindDockSiteByPane  
  Retourne la barre de volet qui a l’id du volet barre cible.  
@@ -783,7 +784,7 @@ virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
 virtual void FixupVirtualRects();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque l’utilisateur commence à faire glisser une barre d’outils, l’application souvienne de sa position d’origine dans le *rectangle virtuel*. Lorsque l’utilisateur déplace une barre d’outils sur son site d’ancrage, la barre d’outils peut-être bouger autres barres d’outils. La position d’origine des autres barres d’outils est stockée dans les rectangles virtuels correspondants.  
   
 ##  <a name="framefrompoint"></a>CDockingManager::FrameFromPoint  
@@ -841,7 +842,7 @@ static AFX_DOCK_TYPE GetDockingMode();
   
 - `DT_SMART`  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour définir le mode d’ancrage, appelez [CDockingManager::SetDockingMode](#setdockingmode).  
   
 ##  <a name="getdocksiteframewnd"></a>CDockingManager::GetDockSiteFrameWnd  
@@ -864,7 +865,7 @@ DWORD GetEnabledAutoHideAlignment() const;
 ### <a name="return-value"></a>Valeur de retour  
  Une combinaison d’opérations de `CBRS_ALIGN_` indicateurs, ou 0 si les volets de masquage automatique ne sont pas activées. Pour plus d’informations, consultez [CFrameWnd::EnableDocking](../../mfc/reference/cframewnd-class.md#enabledocking).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La méthode retourne l’alignement activé pour masquer automatiquement les barres de contrôles. Pour activer les barres de masquage automatique, appelez [CFrameWndEx::EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes).  
   
 ##  <a name="getminiframes"></a>CDockingManager::GetMiniFrames  
@@ -911,7 +912,7 @@ void GetPaneList(
  [in] `bIncludeTabs`  
  `TRUE`Pour inclure des onglets ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  S’il existe des volets à onglets dans le Gestionnaire d’ancrage, la méthode retourne des pointeurs vers [cbasetabbedpane, classe](../../mfc/reference/cbasetabbedpane-class.md) objets et que vous devez énumérer les onglets explicitement.  
   
  Utilisez `pRTCFilter` pour obtenir une classe particulière de volets. Par exemple, vous pouvez obtenir uniquement les barres d’outils en définissant cette valeur en conséquence.  
@@ -946,7 +947,7 @@ static CSmartDockingInfo& GetSmartDockingParams();
 ### <a name="return-value"></a>Valeur de retour  
  La classe qui contient les paramètres d’ancrage actives pour le Gestionnaire d’ancrage en cours. Pour plus d’informations, consultez [CSmartDockingInfo classe](../../mfc/reference/csmartdockinginfo-class.md).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="hideautohidepanes"></a>CDockingManager::HideAutoHidePanes  
  Masque un volet qui est en mode de masquage automatique.  
@@ -1010,7 +1011,7 @@ BOOL InsertPane(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le volet de contrôle est ajouté avec succès à la liste des barres de contrôles ; `FALSE` dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode retourne la valeur false si le volet de contrôle est déjà dans la liste des barres de contrôle ou si le volet cible n’existe pas dans la liste des barres de contrôles.  
   
 ##  <a name="isdocksitemenu"></a>CDockingManager::IsDockSiteMenu  
@@ -1023,7 +1024,7 @@ static BOOL IsDockSiteMenu();
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si un menu de site d’ancrage s’affiche dans les légendes de tous les volets d’ancrage ; dans le cas contraire `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous pouvez activer le menu de site d’ancrage en appelant [CDockingManager::EnableDockSiteMenu](#enabledocksitemenu).  
   
 ##  <a name="isinadjustlayout"></a>CDockingManager::IsInAdjustLayout  
@@ -1046,7 +1047,7 @@ BOOL IsOLEContainerMode() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le Gestionnaire d’ancrage est en mode de conteneur OLE ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En mode de conteneur OLE, tous les volets d’ancrage et les barres d’outils de l’application sont masqués. Les volets sont masqués dans ce mode si vous avez défini [CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode) à `TRUE`.  
   
 ##  <a name="ispointneardocksite"></a>CDockingManager::IsPointNearDockSite  
@@ -1112,7 +1113,7 @@ void LockUpdate(BOOL bLock);
  [in] `bLock`  
  `TRUE`Si la fenêtre est verrouillée ; `FALSE` dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsqu’une fenêtre est verrouillée, il ne peut pas être déplacé, et qu’il ne peut pas être redessiné.  
   
 ##  <a name="m_bhidedockingbarsincontainermode"></a>CDockingManager::m_bHideDockingBarsInContainerMode  
@@ -1122,7 +1123,7 @@ void LockUpdate(BOOL bLock);
 AFX_IMPORT_DATA static BOOL m_bHideDockingBarsInContainerMode;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Définissez cette valeur sur `FALSE` si vous souhaitez conserver tous les volets ancrés au frame principal visible lorsque l’application est en mode de conteneur OLE. Par défaut, cette valeur est `TRUE`.  
   
 ##  <a name="m_dockmodeglobal"></a>CDockingManager::m_dockModeGlobal  
@@ -1132,7 +1133,7 @@ AFX_IMPORT_DATA static BOOL m_bHideDockingBarsInContainerMode;
 AFX_IMPORT_DATA static AFX_DOCK_TYPE m_dockModeGlobal;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, chaque volet d’ancrage utilise ce mode d’ancrage. Pour plus d’informations sur les valeurs de ce champ peut être défini sur, consultez [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).  
   
 ##  <a name="m_ndocksensitivity"></a>CDockingManager::m_nDockSensitivity  
@@ -1142,7 +1143,7 @@ AFX_IMPORT_DATA static AFX_DOCK_TYPE m_dockModeGlobal;
 AFX_IMPORT_DATA static int m_nDockSensitivity;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La sensibilité d’ancrage définit comment fermer flottante volet peut permettre d’approcher un volet d’ancrage, un site d’ancrage ou un autre volet avant du framework modifie son état ancrés.  
   
 ##  <a name="m_ntimeoutbeforedockingbardock"></a>CDockingManager::m_nTimeOutBeforeDockingBarDock  
@@ -1152,7 +1153,7 @@ AFX_IMPORT_DATA static int m_nDockSensitivity;
 static UINT m_nTimeOutBeforeDockingBarDock;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Avant d’un volet est ancré, l’infrastructure attend la durée spécifiée. Cela empêche le volet d’ancrage accidentellement à un emplacement pendant que l’utilisateur est toujours en faisant glisser.  
   
 ##  <a name="m_ntimeoutbeforetoolbardock"></a>CDockingManager::m_nTimeOutBeforeToolBarDock  
@@ -1162,7 +1163,7 @@ static UINT m_nTimeOutBeforeDockingBarDock;
 static UINT m_nTimeOutBeforeToolBarDock;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Avant une barre d’outils est ancrée, l’infrastructure attend la durée spécifiée. Cela empêche la barre d’outils d’ancrage par inadvertance dans un emplacement tandis que l’utilisateur est toujours en faisant glisser.  
   
 ##  <a name="onactivateframe"></a>CDockingManager::OnActivateFrame  
@@ -1183,7 +1184,7 @@ virtual void OnActivateFrame(BOOL bActivate);
 void OnClosePopupMenu();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le framework envoie un message WM_DESTROY lorsqu’il est sur le point de fermer la fenêtre principale actuelle. Substituez cette méthode pour gérer les notifications de `CMFCPopupMenu` objets qui appartiennent à la fenêtre frame lorsqu’un `CMFCPopupMenu` de l’objet processus un `WM_DESTROY` message.  
   
 ##  <a name="onmoveminiframe"></a>CDockingManager::OnMoveMiniFrame  
@@ -1256,7 +1257,7 @@ virtual CBasePane* PaneFromPoint(
 ### <a name="return-value"></a>Valeur de retour  
  Le [CBasePane](../../mfc/reference/cbasepane-class.md)-objet qui contient le point donné, dérivé ou `NULL` si aucun volet a été trouvée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque la fonction retourne et un volet a été trouvé, `dwAlignment` contient l’alignement du point spécifié. Par exemple, si le point est la plus proche de la partie supérieure du volet, `dwAlignment` a la valeur `CBRS_ALIGN_TOP`.  
   
 ##  <a name="processpanecontextmenucommand"></a>CDockingManager::ProcessPaneContextMenuCommand  
@@ -1402,7 +1403,7 @@ virtual BOOL SaveState(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si l’état a été enregistré avec succès ; dans le cas contraire `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’enregistrement de l’état d’ancrage du responsable dans le Registre implique l’enregistrement les États des barres de contrôles, les États des barres de masquage automatique et les États des frames minidumps présents dans le Gestionnaire d’ancrage.  
   
 ##  <a name="sendmessagetominiframes"></a>CDockingManager::SendMessageToMiniFrames  
@@ -1439,7 +1440,7 @@ void Serialize(CArchive& ar);
  [in] `ar`  
  Une référence à un objet de l’archive.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’écriture du Gestionnaire d’ancrage dans une archive implique de déterminer le nombre d’ancrage des curseurs et barres de contrôles et l’écriture des barres de contrôles, les frames minidumps, les barres de masquage automatique et les barres avec onglet MDI dans l’archive.  
   
 ##  <a name="setautohidezorder"></a>CDockingManager::SetAutohideZOrder  
@@ -1469,7 +1470,7 @@ static void SetDockingMode(
  `theme`  
  Spécifie le thème à utiliser pour les marqueurs d’ancrage intelligents. Il peut être une des valeurs énumérées suivantes : AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette méthode statique pour définir le mode d’ancrage.  
   
  `dockMode`peut être une des valeurs suivantes :  
@@ -1514,7 +1515,7 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
  [in, out] `params`  
  Définit les paramètres d’ancrage intelligents.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette méthode si vous souhaitez personnaliser l’apparence, la couleur ou la forme des marqueurs d’ancrage intelligents.  
   
  Pour utiliser l’apparence par défaut pour les marqueurs d’ancrage intelligents, passez une instance non initialisée de [CSmartDockingInfo classe](../../mfc/reference/csmartdockinginfo-class.md) à `params`.  
@@ -1572,7 +1573,7 @@ static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’une des valeurs énumérées suivantes : AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

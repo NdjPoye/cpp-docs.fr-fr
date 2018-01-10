@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c464f2fe2261018f2f18282b3cf3c2a62f31fde4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5ce61e03be94695aa48b842b2136b2361c0272cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="public-c-attributes"></a>public (attributs C++)
 Garantit qu’un typedef passera à la bibliothèque de types même s’il n’est pas référencé à partir du fichier .idl.  
@@ -32,7 +35,7 @@ Garantit qu’un typedef passera à la bibliothèque de types même s’il n’e
   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **public** attribut C++ a les mêmes fonctionnalités que le [public](http://msdn.microsoft.com/library/windows/desktop/aa367150) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
@@ -52,7 +55,7 @@ __interface IFireTabCtrl : IDispatch
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -60,8 +63,8 @@ __interface IFireTabCtrl : IDispatch
 |-|-|  
 |**S'applique à**|`typedef`|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

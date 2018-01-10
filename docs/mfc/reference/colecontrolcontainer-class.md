@@ -83,11 +83,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6206c47416ebbc304cb99c273a882001d684e94c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6d04faa904eba416b290515e5e6773ac6ef9837
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colecontrolcontainer-class"></a>Classe de COleControlContainer
 Agit comme un conteneur de contrôles pour les contrôles ActiveX.  
@@ -148,7 +149,7 @@ class COleControlContainer : public CCmdTarget
 |[COleControlContainer::m_pWnd](#m_pwnd)|Pointeur vers la fenêtre du conteneur de contrôle de mise en œuvre.|  
 |[COleControlContainer::m_siteMap](#m_sitemap)|Le plan de site.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour cela, la prise en charge pour un ou plusieurs sites de contrôle ActiveX (implémentée par `COleControlSite`). `COleControlContainer`implémente entièrement le [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) et [IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103) interfaces, ce qui permet des contrôles ActiveX contenus répondre à leurs compétences en tant qu’éléments de la place.  
   
  En règle générale, cette classe est utilisée conjointement avec `COccManager` et `COleControlSite` pour implémenter un conteneur de contrôle ActiveX personnalisé, avec des sites personnalisés pour un ou plusieurs contrôles ActiveX.  
@@ -160,7 +161,7 @@ class COleControlContainer : public CCmdTarget
   
  `COleControlContainer`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxocc.h  
   
 ##  <a name="attachcontrolsite"></a>COleControlContainer::AttachControlSite  
@@ -184,7 +185,7 @@ void AttachControlSite(
  `nIDC`  
  L’ID du contrôle à attacher.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Remplacez cette fonction si vous souhaitez personnaliser ce processus.  
   
 > [!NOTE]
@@ -201,7 +202,7 @@ virtual void BroadcastAmbientPropertyChange(DISPID dispid);
  `dispid`  
  L’ID de dispatch de la propriété ambiante en cours de modification.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction est appelée par l’infrastructure quand une propriété ambiante a changé de valeur. Remplacez cette fonction pour personnaliser ce comportement.  
   
 ##  <a name="checkdlgbutton"></a>COleControlContainer::CheckDlgButton  
@@ -257,7 +258,7 @@ explicit COleControlContainer(CWnd* pWnd);
  `pWnd`  
  Pointeur vers la fenêtre parente du conteneur de contrôle.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une fois que l’objet a été créé avec succès, ajoutez un site de contrôle personnalisé avec un appel à `AttachControlSite`.  
   
 ##  <a name="createcontrol"></a>COleControlContainer::CreateControl  
@@ -331,7 +332,7 @@ BOOL CreateControl(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Seul un sous-ensemble des fenêtres `dwStyle` indicateurs sont pris en charge par `CreateControl`:  
   
 - **WS_VISIBLE** crée une fenêtre est visible initialement. Requis si vous souhaitez que le contrôle soit visible immédiatement, comme des fenêtres ordinaires.  
@@ -382,7 +383,7 @@ void FreezeAllEvents(BOOL bFreeze);
  `bFreeze`  
  Différent de zéro si les événements seront traités ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 > [!NOTE]
 >  Le contrôle n’est pas nécessaire d’arrêter le déclenchement des événements si demandé par le conteneur de contrôle. Il peut continuer, mais tous les événements suivants sont ignorées par le conteneur de contrôle.  
@@ -458,7 +459,7 @@ virtual UINT GetDlgItemInt(
   
  Si `lpTrans` est **NULL**, la fonction ne retourne aucune information sur la réussite ou l’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction traduit le texte récupéré par la suppression des espaces supplémentaires au début du texte, puis en convertissant les chiffres décimaux. La fonction s’arrête de traduction lorsqu’il atteint la fin du texte ou rencontre un caractère non numérique.  
   
  Cette fonction retourne zéro si la valeur convertie est supérieure à **INT_MAX** (pour des nombres signés) ou **UINT_MAX** (pour les nombres non signés).  
@@ -525,7 +526,7 @@ virtual BOOL HandleWindowlessMessage(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Remplacez cette fonction pour personnaliser la gestion des messages de contrôle sans fenêtre.  
   
 ##  <a name="isdlgbuttonchecked"></a>COleControlContainer::IsDlgButtonChecked  
@@ -548,7 +549,7 @@ virtual UINT IsDlgButtonChecked(int nIDButton) const;
   
 - **BST_UNCHECKED** bouton est désactivé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si le bouton est un contrôle de trois états, la fonction membre détermine si elle est grisée, elle est activée, ou aucun.  
   
 ##  <a name="m_crback"></a>COleControlContainer::m_crBack  
@@ -635,7 +636,7 @@ virtual BOOL OnPaint(CDC* pDC);
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le message a été géré ; Sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Remplacez cette fonction pour personnaliser le processus de peinture.  
   
 ##  <a name="onuiactivate"></a>COleControlContainer::OnUIActivate  
@@ -649,7 +650,7 @@ virtual void OnUIActivate(COleControlSite* pSite);
  `pSite`  
  Pointeur vers le site de contrôle sur le point d’être activé sur place.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Activation en place signifie que le menu du conteneur principal est remplacé par un menu composite sur place.  
   
 ##  <a name="onuideactivate"></a>COleControlContainer::OnUIDeactivate  
@@ -663,7 +664,7 @@ virtual void OnUIDeactivate(COleControlSite* pSite);
  `pSite`  
  Pointeur vers le site de contrôle sur le point d’être désactivé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Quand cette notification est reçue, le conteneur doit réinstaller son interface utilisateur et prendre le focus.  
   
 ##  <a name="scrollchildren"></a>COleControlContainer::ScrollChildren  

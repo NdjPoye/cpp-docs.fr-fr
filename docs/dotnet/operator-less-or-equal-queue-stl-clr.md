@@ -1,33 +1,33 @@
 ---
-title: "operator&lt;= (queue) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::operator<="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator<= (membre) (STL/CLR)"
+title: "opérateur&lt;= (file d’attente) (STL/CLR) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::operator<=
+dev_langs: C++
+helpviewer_keywords: operator<= member [STL/CLR]
 ms.assetid: 63b7f908-4f6b-40d6-bcc6-22970760789d
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bb43f8e43197d86f692a84d36e7abe41f88f198c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# operator&lt;= (queue) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Met en file d'attente la comparaison inférieur ou égal.  
+# <a name="operatorlt-queue-stlclr"></a>opérateur&lt;= (file d’attente) (STL/CLR)
+Inférieur ou égal en file d’attente comparaison.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Value,  
@@ -36,17 +36,17 @@ template<typename Value,
         queue<Value, Container>% right);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  left  
  Conteneur de gauche à comparer.  
   
- right  
+ droite  
  Conteneur de droite à comparer.  
   
-## Notes  
- La fonction d'opérateur retourne `!(``right` `<` `left``)`.  Vous l'utilisez pour tester si `left` n'est pas ordonné d'après `right` lorsque les deux files d'attente sont comparées élément par élément.  
+## <a name="remarks"></a>Notes  
+ La fonction d’opérateur retourne `!(right < left)`. Il permet de tester si `left` n’est pas ordonné après `right` lorsque les deux files d’attente sont comparé élément par élément.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_queue_operator_le.cpp   
@@ -86,19 +86,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b d**  
-**\[a b c\] \<\= \[a b c\] est Vrai**  
-**\[a b c\] \<\= \[a b d\] est Faux**   
-## Configuration requise  
- **En\-tête :** \<cliext\/queue\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] <= [a b c] is True  
+[a b d] <= [a b c] is False  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/file d’attente >  
   
-## Voir aussi  
- [queue](../dotnet/queue-stl-clr.md)   
- [operator\=\= \(queue\)](../dotnet/operator-equality-queue-stl-clr.md)   
- [operator\!\= \(queue\)](../dotnet/operator-inequality-queue-stl-clr.md)   
- [operator\< \(queue\)](../dotnet/operator-less-than-queue-stl-clr.md)   
- [operator\>\= \(queue\)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)   
- [operator\> \(queue\)](../dotnet/operator-greater-than-queue-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [file d’attente (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [opérateur == (file d’attente) (STL/CLR)](../dotnet/operator-equality-queue-stl-clr.md)   
+ [opérateur ! = (file d’attente) (STL/CLR)](../dotnet/operator-inequality-queue-stl-clr.md)   
+ [opérateur\< (file d’attente) (STL/CLR)](../dotnet/operator-less-than-queue-stl-clr.md)   
+ [opérateur > = (file d’attente) (STL/CLR)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)   
+ [operator> (queue) (STL/CLR)](../dotnet/operator-greater-than-queue-stl-clr.md)

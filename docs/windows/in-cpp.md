@@ -1,33 +1,33 @@
 ---
-title: "in (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.in"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "in attribute"
+title: dans (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.in
+dev_langs: C++
+helpviewer_keywords: in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 37eaee8d796897b14d4780f0cf65e36908d7c66b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# in (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indique qu'un paramètre doit être passé de la procédure appelante jusqu'à la procédure appelée.  
+# <a name="in-c"></a>in (C++)
+Indique qu’un paramètre est à passer à la procédure appelée à partir de la procédure appelante.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,30 +35,29 @@ Indique qu'un paramètre doit être passé de la procédure appelante jusqu'à l
   
 ```  
   
-## Notes  
- L'attribut de **dans** C\+\+ a les mêmes fonctionnalités que l'attribut de [dans](http://msdn.microsoft.com/library/windows/desktop/aa367051) MIDL.  
+## <a name="remarks"></a>Notes  
+ Le **dans** attribut C++ a les mêmes fonctionnalités que le [dans](http://msdn.microsoft.com/library/windows/desktop/aa367051) attribut MIDL.  
   
-## Exemple  
- Consultez [pouvant être liée](../windows/bindable.md) pour un exemple d'utilisation **dans**.  
+## <a name="example"></a>Exemple  
+ Consultez [pouvant être liés](../windows/bindable.md) pour obtenir un exemple montrant comment utiliser **dans**.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|paramètre d'interface, méthode d'interface|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|**retval**|  
+|**S'applique à**|Paramètre d’interface, méthode d’interface|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|**retval**|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [defaultvalue](../windows/defaultvalue.md)   
- [id](../windows/id.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs de paramètre](../windows/parameter-attributes.md)   
+ [Attributs de méthode](../windows/method-attributes.md)   
+ [DefaultValue](../windows/defaultvalue.md)   
+ [ID](../windows/id.md)   
  [out](../windows/out-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

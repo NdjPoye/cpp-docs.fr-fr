@@ -14,11 +14,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eb71f24cb62beb672979fab30ad335181dbfaba1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3e8d66f134eef5f2ecb75b30fd68874418dbc49d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hstring-class"></a>HString, classe
 Une classe d’assistance pour la gestion de la durée de vie de HSTRING utilisant le modèle RAII.
@@ -29,7 +32,7 @@ Une classe d’assistance pour la gestion de la durée de vie de HSTRING utilisa
 class HString;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le Windows Runtime fournit l’accès aux chaînes par des handles HSTRING. La classe HString fournit les fonctions de commodité et d’opérateurs pour simplifier l’utilisation des handles HSTRING. Cette classe peut gérer la durée de vie de la HSTRING il détient via un modèle RAII. 
   
 ## <a name="members"></a>Membres  
@@ -65,7 +68,7 @@ class HString;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `HString`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

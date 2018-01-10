@@ -1,32 +1,33 @@
 ---
-title: "AsyncBase::CurrentStatus, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::CurrentStatus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CurrentStatus (méthode)"
+title: "Asyncbase::currentStatus, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::CurrentStatus
+dev_langs: C++
+helpviewer_keywords: CurrentStatus method
 ms.assetid: 26ee4c4a-6525-4a5f-b49c-3ca40c365eb6
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c72e66a179e47e890cbe90da7a3e54afa41ce942
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# AsyncBase::CurrentStatus, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Récupère l'état de l'opération asynchrone actuelle.  
+# <a name="asyncbasecurrentstatus-method"></a>AsyncBase::CurrentStatus, méthode
+Récupère l’état de l’opération asynchrone actuelle.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 inline void CurrentStatus(  
@@ -34,18 +35,18 @@ inline void CurrentStatus(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `status`  
- L'emplacement où cette opération enregistre l'état actuel.  
+ L’emplacement où cette opération stocke l’état actuel.  
   
-## Remarques  
- Cette opération est thread\-safe.  
+## <a name="remarks"></a>Notes  
+ Cette opération est thread-safe.  
   
-## Configuration requise  
- **En\-tête:** async.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** async.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
- [AsyncBase, classe](../windows/asyncbase-class.md)   
+## <a name="see-also"></a>Voir aussi  
+ [AsyncBase (classe)](../windows/asyncbase-class.md)   
  [AsyncStatusInternal, énumération](../windows/asyncstatusinternal-enumeration.md)

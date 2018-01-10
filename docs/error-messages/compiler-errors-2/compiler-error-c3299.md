@@ -15,14 +15,15 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3612762f397914b6058516db7d8f56b840873c1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 147615d493b9e2affabd206816b6a5593bc3532c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3299"></a>Erreur du compilateur C3299
-'fonction_membre' : impossible de spécifier les contraintes, elles sont héritées de la méthode de base  
+'fonction_membre' : impossible de spécifier les contraintes, elles sont héritées de la méthode de base  
   
  Quand vous substituez une fonction membre générique, vous ne pouvez pas spécifier des clauses de contrainte (car la répétition de contraintes sous-entend que les contraintes ne sont pas héritées).  
   

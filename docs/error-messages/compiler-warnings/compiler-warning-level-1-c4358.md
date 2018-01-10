@@ -1,34 +1,33 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4358 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4358"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4358"
+title: Compilateur avertissement (niveau 1) C4358 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4358
+dev_langs: C++
+helpviewer_keywords: C4358
 ms.assetid: a9848f84-14b3-405e-81bf-ee3e91a51511
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9e006bed5e805118c394b9107aa5eb91660aa542
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4358
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'opérateur' : le type de retour des délégués combinés n'est pas 'void' ; la valeur retournée n'est pas définie  
+# <a name="compiler-warning-level-1-c4358"></a>Avertissement du compilateur (niveau 1) C4358
+'opérateur' : type de retour des délégués combinés n'est pas 'void' ; valeur retournée n’est pas définie  
   
- Deux délégués ont été combinés et la valeur de retour n'est pas void.  Si deux délégués possédant des valeurs de retour non void sont combinés, le compilateur ne peut pas effectuer une assignation correcte en cas d'utilisation de la valeur de retour du délégué.  
+ Deux délégués ont été combinés et la valeur de retour n’est pas void. Si deux délégués avec les valeurs de retour non void sont combinés, le compilateur ne sera pas en mesure d’effectuer une assignation correcte si la valeur de retour du délégué est utilisée.  
   
- L'exemple suivant génère l'erreur C4358 :  
+ L’exemple suivant génère l’erreur C4358 :  
   
 ```  
 // C4358.cpp  

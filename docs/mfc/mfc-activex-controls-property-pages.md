@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3dd62127d5fb09675d6c91963d85dd6ae7f44f35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dde35df301c34a6c3a29c48d5ad145681b64a72e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Contrôles ActiveX MFC : pages de propriétés
 Pages de propriétés permettent à un utilisateur du contrôle ActiveX afficher et modifier les propriétés du contrôle ActiveX. Ces propriétés sont accessibles en appelant une boîte de dialogue Propriétés du contrôle, qui contient une ou plusieurs pages de propriétés qui fournissent une interface graphique personnalisée pour afficher et modifier les propriétés du contrôle.  

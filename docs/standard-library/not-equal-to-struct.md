@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8dd55dcae614f003f34ed0bea65991124671d846
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dcc4cf11053c4be4ebe7cc2d3088fad0655ce826
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="notequalto-struct"></a>not_equal_to, struct
 Prédicat binaire qui effectue l’opération d’inégalité ( `operator!=`) sur ses arguments.  
@@ -58,7 +59,7 @@ struct not_equal_to<void>
 ## <a name="return-value"></a>Valeur de retour  
  Résultat de `Left != Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator!=`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’égalité des objets de type `Type` doit pouvoir être comparée. `operator!=` défini sur l’ensemble d’objets doit donc satisfaire les propriétés mathématiques d’une relation d’équivalence. Tous les types pointeur et numériques intégrés répondent à cette exigence.  
   
 ## <a name="example"></a>Exemple  
@@ -120,7 +121,7 @@ between v1 & v2 is: ( 0 0 1 0 1 0 )
 */  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<functional>  
   
  **Espace de noms :** std  

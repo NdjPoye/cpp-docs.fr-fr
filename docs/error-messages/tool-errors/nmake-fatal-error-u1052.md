@@ -1,38 +1,36 @@
 ---
-title: "Erreur irr&#233;cup&#233;rable NMAKE U1052 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "U1052"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "U1052"
+title: "Erreur irrécupérable NMAKE U1052 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: U1052
+dev_langs: C++
+helpviewer_keywords: U1052
 ms.assetid: b19b3691-e60b-46bd-8822-8426740a9bc7
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 15ef5b8c537848cffb7d588e2dac435084394c85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Erreur irr&#233;cup&#233;rable NMAKE U1052
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-fichier 'nomfichier' introuvable  
+# <a name="nmake-fatal-error-u1052"></a>Erreur irrécupérable NMAKE U1052
+fichier 'nom_fichier' introuvable  
   
- NMAKE ne trouve pas le fichier spécifié par l'un des éléments suivants :  
+ NMAKE Impossible de trouver le fichier spécifié avec l’une des opérations suivantes :  
   
--   Option **\/F**  
+-   **/F** option  
   
--   Directive de prétraitement **\!INCLUDE**  
+-   **! INCLURE** directive de prétraitement  
   
--   Symbole \(**@**\) pour un fichier réponse  
+-   Arobase (**@**) pour un fichier de réponse  
   
- Vérifiez que le fichier existe et que le nom de fichier est orthographié correctement.
+ Vérifiez que le fichier existe et que le nom de fichier est correctement orthographié.

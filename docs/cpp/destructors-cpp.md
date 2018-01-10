@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4fb96ae6763d9b2ca86f99ee42a10f56e93d7e3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 37aa5ab5cad2367bfc37e2e1b6fd886540eada8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="destructors-c"></a>Destructeurs (C++)
 Un destructeur est une fonction membre qui est appelée automatiquement lorsque l’objet est hors de portée ou est détruite explicitement par un appel à `delete`. Un destructeur a le même nom que la classe précédé d’un tilde (`~`). Par exemple, le destructeur de la classe `String` est déclaré : `~String()`. Si vous ne définissez pas un destructeur, le compilateur fournit par défaut ; Pour de nombreuses classes, cela est suffisant. Vous ne devez définir un destructeur personnalisé lors de la classe stocke des handles vers des ressources système qui doivent être libérées ou détenant la mémoire qu’ils pointent.
@@ -71,7 +72,7 @@ int main() {
   
  Dans l'exemple précédent, le destructeur `String::~String` utilise l'opérateur `delete` pour libérer l'espace dynamiquement alloué pour le stockage de texte.  
   
-## <a name="delcaring-destructors"></a>Déclaration des destructeurs  
+## <a name="declaring-destructors"></a>Déclaration des destructeurs  
  Les destructeurs sont des fonctions ayant le même nom que la classe, mais précédé d'un tilde (`~`).  
   
  Plusieurs règles régissent la déclaration des destructeurs. Les destructeurs :  
@@ -205,7 +206,7 @@ class E : public C, public D, virtual public B
   
  L'ordre de construction ou de destruction est particulièrement important lorsque les constructeurs ou les destructeurs d'une classe reposent sur l'autre composant créé en premier ou persistant plus longtemps (par exemple, si le destructeur de `A` (dans l'illustration ci-dessus) reposait sur la présence de `B` lors de l'exécution de son code, ou vice versa).  
   
- Ces interdépendances entre les classes dans un graphique d'héritage sont fondamentalement dangereuses car les classes dérivées ultérieurement peuvent modifier le tracé à l'extrême gauche, modifiant ainsi l'ordre de construction et de destruction.  
+ Ces interdépendances entre les classes dans un graphique d’héritage sont fondamentalement dangereuses car les classes dérivées ultérieurement peuvent modifier le tracé à l’extrême gauche, modifiant ainsi l’ordre de construction et de destruction.  
   
 ### <a name="nonvirtual-base-classes"></a>Classes de base non virtuelles  
  Les destructeurs pour les classes de base non virtuelles sont appelés dans l'ordre inverse de celui dans lequel les noms de classe de base sont déclarés. Prenons la déclaration de classe suivante :  

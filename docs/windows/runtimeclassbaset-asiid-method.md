@@ -1,33 +1,33 @@
 ---
-title: "RuntimeClassBaseT::AsIID, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::RuntimeClassBaseT::AsIID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AsIID (méthode)"
+title: "Runtimeclassbaset::asiid, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::RuntimeClassBaseT::AsIID
+dev_langs: C++
+helpviewer_keywords: AsIID method
 ms.assetid: 90d7df8a-cf9e-4eef-8837-bc1a25f3fa1a
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 482edbcabf368f68a720910717650be78ac11c62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# RuntimeClassBaseT::AsIID, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="runtimeclassbasetasiid-method"></a>RuntimeClassBaseT::AsIID, méthode
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<  
@@ -40,30 +40,30 @@ __forceinline static HRESULT AsIID(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
- Un type implémentant l'ID d'interface spécifié par le paramètre `riid`.  
+ Un type qui implémente l’ID d’interface spécifié par le paramètre `riid`.  
   
  `implements`  
- Une variable du type spécifié par le paramètre `T`de modèle.  
+ Une variable du type spécifié par le paramètre de modèle `T`.  
   
  `riid`  
- L'ID d'interface à récupérer.  
+ L’ID d’interface à récupérer.  
   
  `ppvObject`  
- Si cette opération est réussie, un pointeur\-vers\-un\-pointeur vers l'interface spécifiée par le paramètre `riid`.  
+ Si cette opération réussit, un pointeur-à-un en pointeur vers l’interface spécifiée par le paramètre `riid`.  
   
-## Valeur de retour  
- S\_OK si l'opération a réussi; sinon, un HRESULT décrivant l'erreur.  
+## <a name="return-value"></a>Valeur de retour  
+ S_OK en cas de réussite ; Sinon, un HRESULT qui décrit l’erreur.  
   
-## Notes  
- Récupère un pointeur vers l'ID d'interface spécifié.  
+## <a name="remarks"></a>Notes  
+ Récupère un pointeur vers l’ID de l’interface spécifiée.  
   
-## Configuration requise  
- **En\-tête:** implements.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** implements.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
- [RuntimeClassBaseT, structure](../windows/runtimeclassbaset-structure.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Runtimeclassbaset, Structure](../windows/runtimeclassbaset-structure.md)   
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

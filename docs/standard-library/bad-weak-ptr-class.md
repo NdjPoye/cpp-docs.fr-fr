@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- memory/std::bad_weak_ptr
-dev_langs:
-- C++
+f1_keywords: memory/std::bad_weak_ptr
+dev_langs: C++
 helpviewer_keywords:
 - bad_weak_ptr
 - bad_weak_ptr class
 ms.assetid: a09336d5-7237-4480-ab6b-3787e0e6025e
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1a91aa087611c9e83146a8ed667dbe582c091f4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 940a497217ffb4788adb24f1a4a67ce3eb04bc12
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="badweakptr-class"></a>bad_weak_ptr, classe
 Signale une exception weak_ptr incorrecte.  
@@ -82,11 +79,10 @@ int main()
 bad weak pointer  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<memory>  
   
  **Espace de noms :** std  
   
 ## <a name="see-also"></a>Voir aussi  
  [weak_ptr, classe](../standard-library/weak-ptr-class.md)
-

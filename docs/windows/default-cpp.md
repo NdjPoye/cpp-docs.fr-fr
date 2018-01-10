@@ -1,62 +1,61 @@
 ---
-title: "default (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.default"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attribut par défaut"
-  - "attributs [C#], attribut par défaut"
-  - "valeurs par défaut, attribut par défaut"
+title: "la valeur par défaut (C++) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.default
+dev_langs: C++
+helpviewer_keywords:
+- default attribute
+- attributes [C#], default attribute
+- defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6b24b0ed9b8e547a52388b6f93a4955da782331b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# default (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="default-c"></a>default (C++)
 Indique que l’interface personnalisée ou dispinterface définie dans une coclasse représente l’interface de programmabilité par défaut.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-[ default(  
-interface1  
-,  
+      [ default(  
+   interface1,  
    interface2  
 ) ]  
-  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *interface1*  
- Interface par défaut qui sera accessible aux environnements de script qui créent un objet en fonction de la classe définie avec l’attribut **default**.  
+ Interface par défaut qui sera accessible aux environnements de script qui créent un objet en fonction de la classe définie avec l’attribut **default** .  
   
  Si aucune interface par défaut n’est spécifiée, la première occurrence d’une interface non source est utilisée par défaut.  
   
- *interface2*\(facultatif\)  
- Interface source par défaut. Vous devez aussi spécifier cette interface avec l’attribut [source](../windows/source-cpp.md).  
+ *interface2*(facultatif)  
+ Interface source par défaut. Vous devez aussi spécifier cette interface avec l’attribut [source](../windows/source-cpp.md) .  
   
  Si aucune interface source par défaut n’est spécifiée, la première interface source est utilisée par défaut.  
   
-## Notes  
- L’attribut C\+\+ **default** a les mêmes fonctionnalités que l’attribut MIDL [default](http://msdn.microsoft.com/library/windows/desktop/aa366787). L’attribut **default** est aussi utilisé avec l’attribut [case](../windows/case-cpp.md).  
+## <a name="remarks"></a>Notes  
+ L’attribut C++ **default** a les mêmes fonctionnalités que l’attribut MIDL [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) . L’attribut **default** est aussi utilisé avec l’attribut [case](../windows/case-cpp.md) .  
   
-## Exemple  
- Le code suivant montre comment l’attribut **default** est utilisé dans la définition d’une coclasse pour spécifier **ICustomDispatch** comme interface de programmabilité par défaut :  
+## <a name="example"></a>Exemple  
+ Le code suivant montre comment l’attribut **default** est utilisé dans la définition d’une coclasse pour spécifier **ICustomDispatch** comme interface de programmabilité par défaut :  
   
 ```  
 // cpp_attr_ref_default.cpp  
@@ -109,21 +108,20 @@ int main() {
   
  Il existe aussi un exemple pour l’attribut [source](../windows/source-cpp.md) qui montre comment utiliser **default**.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### Contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
 |**S'applique à**|**classe**, `struct`, membre de données|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|**coclasse** \(quand il s’applique à une **classe** ou un `struct`\)|  
-|**Attributs non valides**|None|  
+|**Attributs requis**|**coclasse** (quand il s’applique à une **classe** ou un `struct`)|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs de classe](../windows/class-attributes.md)   
  [coclass](../windows/coclass.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

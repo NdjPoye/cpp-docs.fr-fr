@@ -24,11 +24,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40f4c4821a6141e7795f37f5a276a544677ba48b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 07e41d6bf03df1231249a9e2ea5e54e420c9840c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="completionfuture-class"></a>completion_future, classe
 Représente une future qui correspond à une opération asynchrone de C++ AMP.  
@@ -70,7 +71,7 @@ class completion_future;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `completion_future`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amprt.h  
   
  **Espace de noms :** concurrency  
@@ -98,7 +99,7 @@ completion_future(
   
 ### <a name="overloads-list"></a>Liste de surcharge  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |`completion_future();`|Initialise une nouvelle instance de la `completion_future` classe|  
 |`completion_future(const completion_future& _Other);`|Initialise une nouvelle instance de la `completion_future` classe par un constructeur de copie.|  
@@ -147,7 +148,7 @@ completion_future&  operator= (completion_future&& _Other );
   
 ## <a name="overloads-list"></a>Liste de surcharge  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |`completion_future& operator=(const completion_future& _Other);`|Copie le contenu de l’objet `completion_future` objet dans celui-ci, à l’aide d’une copie complète.|  
 |`completion_future& operator=(completion_future&& _Other);`|Copie le contenu de l’objet `completion_future` objet dans celui-ci, à l’aide d’une assignation de déplacement.|  

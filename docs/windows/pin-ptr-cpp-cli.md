@@ -1,107 +1,109 @@
 ---
-title: "pin_ptr (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "pin_ptr_cpp"
-  - "stdcli::language::pin_ptr"
-  - "pin_ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pinning pointers"
-  - "pin_ptr keyword [C++]"
+title: pin_ptr (C + c++ / CLI) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- pin_ptr_cpp
+- stdcli::language::pin_ptr
+- pin_ptr
+dev_langs: C++
+helpviewer_keywords:
+- pinning pointers
+- pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-caps.latest.revision: 28
-caps.handback.revision: 26
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "28"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7205718a3564a3929fe2a9f8b7d8049a320ae1cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# pin_ptr (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Déclare un *pointeur épingle*, qui est utilisé uniquement avec le CLR.  
+# <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
+Déclare un *pointeur épingle*, qui est utilisé uniquement avec le common language runtime.  
   
-## Tous les runtimes  
- \(Aucune note de cette fonctionnalité de langage ne s'applique à tous les runtimes.\)  
+## <a name="all-runtimes"></a>Tous les runtimes  
+ (Aucune remarque pour cette fonctionnalité de langage ne s’applique à tous les runtimes.)  
   
-## Windows Runtime  
- \(Cette fonctionnalité des langages n'est pas prise en charge dans les fenêtres d'exécution.\)  
+## <a name="windows-runtime"></a>Windows Runtime  
+ (Cette fonctionnalité de langage n'est pas pris en charge dans le Windows Runtime.)  
   
-## Common Language Runtime  
- Un *pointeur épingle* est un pointeur interieur qui empêche l'objet désigné de bouger sur le segment récupéré par le garbage collector.  Autrement dit, la valeur d'un pointeur épingle n'est pas modifiée par le CLR.  Cela est necessaire lors de la transmission de l'adresse d'une classe managée à une fonction non managée pour que l'adresse ne change pas de manière inattendue pendant la résolution de l'appel de fonction non managé.  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ A *pointeur épingle* est un pointeur intérieur qui empêche l’objet pointé de le déplacer sur le tas de garbage collection. Autrement dit, la valeur d’un pointeur épingle n’est pas modifiée par le common language runtime. Cela est nécessaire lorsque vous passez l’adresse d’une classe managée à une fonction non managée, afin que l’adresse ne changera pas de manière inattendue lors de la résolution de l’appel de fonction non managée.  
   
-### Syntaxe  
+### <a name="syntax"></a>Syntaxe  
   
 ```cpp  
-[cli::]pin_ptr<cv_qualifier type> var = &initializer;  
+[cli::]pin_ptr<cv_qualifiertype>var = &initializer;  
 ```  
   
-### Paramètres  
- *cv\_qualifier*  
- `const` ou identificateurs `volatile`.  Par défaut, un pointeur épingle est `volatile`.  C'est redondant mais pas une erreur pour déclarer un pointeur épingle `volatile`.  
+### <a name="parameters"></a>Paramètres  
+ *cv_qualifier*  
+ `const`ou `volatile` qualificateurs. Par défaut, un pointeur épingle est `volatile`. Elle est redondante mais pas une erreur pour déclarer un pointeur épingle `volatile`.  
   
  *type*  
- Type de `initializer`.  
+ Type d'élément `initializer`.  
   
  *var*  
- Nom de la variable `pin_ptr`.  
+ Le nom de la `pin_ptr` variable.  
   
  *initializer*  
- Un membre d'un type de référence, un élément d'un tableau managé, ou tout autre objet que vous pouvez attribuer à un pointeur natif.  
+ Un membre d’un type référence, un élément d’un tableau managé ou tout autre objet que vous pouvez affecter à un pointeur natif.  
   
-### Remarques  
- Un `pin_ptr` représente un surensemble des fonctionnalités d'un pointeur natif.  Par conséquent, un problème susceptible d'être affecté à un pointeur natif peut également être affecté à un `pin_ptr`.  Un pointeur intérieur est autorisé à exécuter le même ensemble d'opérations que les pointeurs natifs, notamment la comparaison et retourner les opérations arithmétiques sur les pointeurs.  
+### <a name="remarks"></a>Notes  
+ A `pin_ptr` représente un sur-ensemble de la fonctionnalité d’un pointeur natif. Par conséquent, tout ce qui peut être assigné à un pointeur natif peut également être affecté à un `pin_ptr`. Un pointeur intérieur est autorisé à effectuer le même jeu d’opérations que les pointeurs natifs, y compris la comparaison et l’opération arithmétique de pointeur.  
   
- Objet ou sous\-objet d'une classe managée peut être masquée lorsqu'elle, auquel cas le common langage runtime la ne descendra pas pendant le garbage collection.  L'utilisation principale de cela est de transmettre un pointeur vers les données gérées comme paramètre effectif d'un appel de fonction managé.  Lors d'un cycle de collection, l'exécution inspectera les métadonnées créées pour le pointeur épingle et ne descendra pas l'élément qu'il pointe.  
+ Un objet ou le sous-objet d’une classe managée peut être figée, auquel cas le common language runtime elle ne sera pas déplacée pendant le garbage collection. Son usage principal est de passer un pointeur vers des données managées comme paramètre réel d’un appel de fonction non managée. Pendant un cycle de collecte, le runtime inspecte les métadonnées créées pour le pointeur épingle et ne sera pas déplacée de l’élément vers laquelle il pointe.  
   
- Épinglant objet épingle également les champs de valeurs ; autrement dit, champs de primitive ou du type de valeur.  Toutefois, les champs déclarés par le handle de suivi \(`%`\) ne sont pas épinglés.  
+ L’épinglage d’un objet épingle également ses champs de valeur ; champs de primitive ou valeur de type. Toutefois, les champs sont déclarés par le handle de suivi (`%`) ne sont pas épinglés.  
   
- Épingler un sous\-objet défini dans un objet managé a pour effet d'épingler l'objet entier.  
+ Épingler un sous-objet défini dans un objet managé a pour effet d’épinglage de l’objet entier.  
   
- Si le pointeur épingle est réaffecté pour indiquer une nouvelle valeur, l'instance précédente désignée n'est plus vu comme épinglée.  
+ Si le pointeur épingle est réaffecté pour pointer vers une nouvelle valeur, l’instance précédente vers lequel pointé est n’est plus considéré comme épinglé.  
   
- Objet est épinglé uniquement lorsque des points `pin_ptr` lui.  L'objet n'est plus épinglé lorsque son pointeur épingle sort de l'étendue, ou a la valeur [nullptr](../windows/nullptr-cpp-component-extensions.md).  Après que `pin_ptr` sorte hors de portée, l'objet qui a été épinglé peut être déplacé dans le segment par le garbage collector.  Aucun pointeur natif qui affiche toujours l'objet ne sera mis à jour, et déréférençant l'un d'eux peut lever une exception irrécupérable.  
+ Un objet est épinglé uniquement pendant qu’un `pin_ptr` pointe vers elle. L’objet n’est plus épinglé lorsque son pointeur épingle est hors de portée ou est défini sur [nullptr](../windows/nullptr-cpp-component-extensions.md). Après le `pin_ptr` sort de la portée, l’objet qui a été épinglé peut être déplacées dans le segment de mémoire par le garbage collector. Les pointeurs natifs toujours pointent vers l’objet ne seront pas mis à jour et Annuler faisant référence à un d’eux peut déclencher une exception irrécupérable.  
   
- Si aucun pointeurs épingle ne pointe sur l'objet \(tous les pointeurs épingle sont générés de l'étendue, ont été attribués à nouveau pour afficher d'autres objets, ou on ont été affectés [nullptr](../windows/nullptr-cpp-component-extensions.md)\), l'objet n'est garanti ne pas être épinglé.  
+ Si aucun des pointeurs épingle ne pointent vers l’objet (tous les pointeurs épingles est hors de portée, ont été réaffectés pour pointer vers d’autres objets ou ont été assignés [nullptr](../windows/nullptr-cpp-component-extensions.md)), l’objet ne peut ne pas être épinglé.  
   
- Un pointeur épingler peut pointer vers un handle de référence, un type de valeur, ou un handle enfermé dans une boîte de type, un membre d'un type managé, ou un élément d'un tableau managé.  Il ne peut pas pointer vers un type de référence.  
+ Un pointeur épingle peut pointer vers une poignée de référence de type valeur ou le handle du type boxed, membre d’un type managé ou un élément d’un tableau managé. Il ne peut pas pointer vers un type référence.  
   
- Accepter l'adresse `pin_ptr` qui indique un objet natif d'origine du comportement n'est pas définie.  
+ Prise d’adresse d’un `pin_ptr` que pointe vers un objet natif entraîne un comportement non défini.  
   
- Les pointeurs épingle peuvent être déclarés en tant que variables locales statiques dans la pile.  
+ Pointeurs épingle peuvent uniquement être déclarés en tant que variables locales non statiques sur la pile.  
   
- Les pointeurs épingle ne peuvent pas être utilisés comme suit :  
+ Pointeurs épingle ne peut pas être utilisés en tant que :  
   
 -   paramètres de fonction  
   
--   le type de retour d'une fonction  
+-   le type de retour d’une fonction  
   
--   le membre d'une classe  
+-   un membre d’une classe  
   
--   le type de la cible d'une empreinte  
+-   type de cible d’une conversion.  
   
- `pin_ptr` est dans l'espace de noms `cli`.  Pour plus d'informations, consultez [Platform, default, and cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
+ `pin_ptr`est dans le `cli` espace de noms. Pour plus d’informations, consultez [plateforme, par défaut et espaces de noms cli](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
   
- Pour plus d'informations sur les pointeurs intérieurs, consultez [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md).  
+ Pour plus d’informations sur les pointeurs intérieurs, consultez [interior_ptr (C + c++ / CLI)](../windows/interior-ptr-cpp-cli.md).  
   
- Pour plus d'informations sur les pointeurs épingles, consultez [How to: Pin Pointers and Arrays](../windows/how-to-pin-pointers-and-arrays.md) et [How to: Declare Pinning Pointers and Value Types](../windows/how-to-declare-pinning-pointers-and-value-types.md).  
+ Pour plus d’informations sur les pointeurs épingle, consultez [Comment : pointeurs de code confidentiel et tableaux](../windows/how-to-pin-pointers-and-arrays.md) et [Comment : déclarer des pointeurs épingle et les Types valeur](../windows/how-to-declare-pinning-pointers-and-value-types.md).  
   
-### Conditions requises  
- Option du compilateur : **\/clr**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : **/clr**  
   
-### Exemples  
+### <a name="examples"></a>Exemples  
  **Exemple**  
   
- L'exemple suivant utilise `pin_ptr` pour limiter la position du premier élément d'un tableau.  
+ L’exemple suivant utilise `pin_ptr` pour contraindre la position du premier élément d’un tableau.  
   
 ```  
 // pin_ptr_1.cpp  
@@ -149,9 +151,13 @@ int main() {
   
  **Sortie**  
   
-  **45** **Exemple**  
+```Output  
+45  
+```  
   
- L'exemple suivant montre un pointeur intérieur qui peut être converti en un pointeur épingle, ainsi que le type de retour de l'opérateur d'adresse \(`&`\) pointeur intérieur si l'opérande est sur le segment managé.  
+ **Exemple**  
+  
+ L’exemple suivant montre qu’un pointeur intérieur peut être converti en un pointeur épingle, et que le type de retour de l’opérateur d’adresse (`&`) est un pointeur intérieur lorsque l’opérande est sur le tas managé.  
   
 ```  
 // pin_ptr_2.cpp  
@@ -183,9 +189,13 @@ int main() {
   
  **Sortie**  
   
- **1** **Exemple**  
+```Output  
+1  
+```  
   
- L'exemple suivant montre un pointeur épingle peut être converti en un autre type.  
+ **Exemple**  
+  
+ L’exemple suivant montre qu’un pointeur épingle peut être converti en un autre type.  
   
 ```  
 // pin_ptr_3.cpp  
@@ -211,5 +221,7 @@ int main() {
   
  **Sortie**  
   
- **8**   
-**255**
+```Output  
+8  
+255  
+```

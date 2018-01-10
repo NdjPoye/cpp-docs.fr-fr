@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5e07ce23d2c6416cc98bc2996dbe52d88d3a1cb1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6196cb6bb2e86f39bb738e32c013c4408447e859
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="logicalor-struct"></a>logical_or, struct
 Objet de fonction prédéfini qui effectue l’opération de disjonction logique ( `operator||`) sur ses arguments.  
@@ -58,7 +59,7 @@ struct logical_or<void>
 ## <a name="return-value"></a>Valeur de retour  
  Résultat de `Left || Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator||`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour les types définis par l’utilisateur, il n’y a aucun court-circuit d’évaluation de l’opérande. Les deux arguments sont évalués par `operator||`.  
   
 ## <a name="example"></a>Exemple  
@@ -121,13 +122,13 @@ The deque which is the disjuction of d1 & d2 is:
   
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<functional>  
   
  **Espace de noms :** std  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
 
 

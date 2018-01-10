@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 33467ac3a4397c3f446abe370dca5dc16c1a92ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc28de10a2a0d53ee87920d511ea894ad517a79a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64, _mm_extracti_si64
 **Section spécifique à Microsoft**  
@@ -61,7 +62,7 @@ __m128i _mm_extracti_si64(
 ## <a name="return-value"></a>Valeur de retour  
  Un champ de 128 bits avec le champ extrait dans son bits les moins significatifs.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
@@ -70,7 +71,7 @@ __m128i _mm_extracti_si64(
   
  **Fichier d’en-tête** \<intrin.h >  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cet intrinsèque génère le `extrq` instruction d’extraction des bits de `Source`. Il existe deux versions de cette intrinsèques : `_mm_extracti_si64` est la version immédiate, et `_mm_extract_si64` est celui non immédiate.  L’extrait de chaque version `Source` un champ de bits défini par sa longueur et de l’index de son bit le moins significatif. Les valeurs de la longueur et les index sont extraites mod 64, par conséquent, -1 et 127 sont interprétés en tant que 63. Si la somme des index (réduit) et la longueur de champ (réduit) est supérieure à 64, les résultats sont indéfinis. Une valeur égale à zéro pour la longueur de champ est interprétée comme 64. Si l’index de longueur et les bits du champ est les deux zéro, 63:0 de bits de `Source` sont extraits. Si la longueur de champ est égal à zéro, mais l’index de bits est différente de zéro, les résultats sont indéfinis.  
   
  Dans un appel à _mm_extract_si64, le `Descriptor` contient l’index de bits 13:8 et la longueur du champ des données à extraire dans bits 5:0...  

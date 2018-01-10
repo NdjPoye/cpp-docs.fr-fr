@@ -15,11 +15,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d5293712990685ff63bcafa8e5c9d5a0e8592a25
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5faa84773fbf1fe15fd0223c97f0361f1215b149
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dbaccessor"></a>db_accessor
 Groupes **db_column** attributs participer `IAccessor`-en fonction de liaison.  
@@ -41,7 +44,7 @@ Groupes **db_column** attributs participer `IAccessor`-en fonction de liaison.
  *auto*  
  Valeur booléenne qui spécifie si l’accesseur est automatiquement récupéré (**TRUE**) ou pas récupérés (**FALSE**).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **db_accessor** définit l’accesseur OLE DB sous-jacent pour ultérieures **db_column** et **db_param** attributs au sein de la même classe ou fonction. **db_accessor** est utilisable au niveau du membre et est utilisé pour le groupe **db_column** les attributs qui participent à OLE DB `IAccessor`-liaison basée sur. Il est utilisé conjointement avec l’option le **db_table** ou **db_command** attributs. Appel de cet attribut ressemble à appeler la [BEGIN_ACCESSOR](../data/oledb/begin-accessor.md) et [END_ACCESSOR](../data/oledb/end-accessor.md) macros.  
   
  **db_accessor** génère un ensemble de lignes et le lie aux mappages d’accesseur correspondant. Si vous n’appelez pas **db_accessor**accesseur 0 est automatiquement générée et toutes les liaisons de colonne seront mappées à ce bloc d’accesseur.  
@@ -73,7 +76,7 @@ public:
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -81,8 +84,8 @@ public:
 |-|-|  
 |**S'applique à**|Blocs d’attributs|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

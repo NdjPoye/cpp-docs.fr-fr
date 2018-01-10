@@ -33,11 +33,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43ac6b407de3f828db6b5c4403ab0a2169c8cd49
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: deca38c7c1fdaf9523e4186b801e5ed25042e46e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd (classe)
 Fournit les fonctionnalités d'une fenêtre enfant d'interface multidocument (MDI) Windows, ainsi que des membres permettant de gérer la fenêtre.  
@@ -68,7 +69,7 @@ class CMDIChildWnd : public CFrameWnd
 |[CMDIChildWnd::MDIRestore](#mdirestore)|Restaure cette fenêtre MDI enfant à partir de la taille agrandie ou réduite.|  
 |[CMDIChildWnd::SetHandles](#sethandles)|Définit les handles pour les ressources de menu et d’accélérateur.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une fenêtre enfant MDI ressemble beaucoup à une fenêtre frame classique, à ceci près que la fenêtre enfant MDI s’affiche à l’intérieur d’une fenêtre frame MDI, plutôt que sur le bureau. Une fenêtre enfant MDI ne dispose pas d’une barre de menus de son propre, mais au lieu de cela partage le menu de la fenêtre frame MDI. Le framework modifie automatiquement le menu de frame MDI pour représenter la fenêtre enfant MDI active.  
   
  Pour créer une fenêtre d’enfant MDI utile pour votre application, dérivez une classe de `CMDIChildWnd`. Ajoutez des variables membres à la classe dérivée pour stocker les données spécifiques à votre application. Implémentez des fonctions membres de gestionnaire de messages et une table des messages dans la classe dérivée pour préciser ce qu'il advient quand des messages sont dirigés vers la fenêtre.  
@@ -97,7 +98,7 @@ class CMDIChildWnd : public CFrameWnd
   
 -   Le menu de fenêtre enfant MDI actuellement actif remplace complètement les menus de la fenêtre frame MDI et la légende de la fenêtre enfant MDI active est ajoutée à la légende de la fenêtre de frame MDI. Pour plus d’exemples de fonctions de fenêtre enfant MDI qui sont implémentées en association avec une fenêtre frame MDI, consultez la `CMDIFrameWnd` classe description.  
   
- N’utilisez pas le C++ **supprimer** opérateur pour détruire une fenêtre frame. Utilisez plutôt `CWnd::DestroyWindow` . Le `CFrameWnd` implémentation de `PostNcDestroy` va supprimer l’objet C++ lorsque la fenêtre est détruite. Lorsque l’utilisateur ferme la fenêtre frame, la valeur par défaut `OnClose` gestionnaire appelle `DestroyWindow`.  
+ N’utilisez pas le C++ **supprimer** opérateur pour détruire une fenêtre frame. Utilisez plutôt `CWnd::DestroyWindow`. Le `CFrameWnd` implémentation de `PostNcDestroy` va supprimer l’objet C++ lorsque la fenêtre est détruite. Lorsque l’utilisateur ferme la fenêtre frame, la valeur par défaut `OnClose` gestionnaire appelle `DestroyWindow`.  
   
  Pour plus d’informations sur `CMDIChildWnd`, consultez [fenêtres Frame](../../mfc/frame-windows.md).  
   
@@ -112,7 +113,7 @@ class CMDIChildWnd : public CFrameWnd
   
  `CMDIChildWnd`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="cmdichildwnd"></a>CMDIChildWnd::CMDIChildWnd  
@@ -122,7 +123,7 @@ class CMDIChildWnd : public CFrameWnd
 CMDIChildWnd();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez **créer** pour créer la fenêtre visible.  
   
 ### <a name="example"></a>Exemple  
@@ -163,7 +164,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fenêtre de frame enfant MDI actuellement active peut déterminer la légende de la fenêtre frame parente. Cette fonctionnalité est désactivée en désactivant le **FWS_ADDTOTITLE** bit de style de la fenêtre frame enfant.  
   
  L’infrastructure appelle cette fonction membre en réponse à une commande de l’utilisateur pour créer une fenêtre enfant, et l’infrastructure utilise le `pContext` paramètre pour se connecter correctement la fenêtre enfant à l’application. Lorsque vous appelez **créer**, `pContext` peut être **NULL**.  
@@ -190,7 +191,7 @@ CMDIFrameWnd* GetMDIFrame();
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers la fenêtre frame du parent MDI.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le frame retourné est deux parents retirés le `CMDIChildWnd` et est le parent de la fenêtre de type **MDICLIENT** qui gère la `CMDIChildWnd` objet. Appelez le [GetParent](../../mfc/reference/cwnd-class.md#getparent) fonction membre retourne le `CMDIChildWnd` immédiate de l’objet **MDICLIENT** parent en tant que fichier `CWnd` pointeur.  
   
 ### <a name="example"></a>Exemple  
@@ -203,7 +204,7 @@ CMDIFrameWnd* GetMDIFrame();
 void MDIActivate();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque le frame devient actif, la fenêtre enfant qui a été activée en dernier est également activée.  
   
 ### <a name="example"></a>Exemple  
@@ -216,7 +217,7 @@ void MDIActivate();
 void MDIDestroy();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction membre supprime le titre de la fenêtre enfant à partir de la fenêtre frame et désactive la fenêtre enfant.  
   
 ### <a name="example"></a>Exemple  
@@ -229,7 +230,7 @@ void MDIDestroy();
 void MDIMaximize();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Quand une fenêtre enfant est agrandie, Windows redimensionne pour le rendre sa zone cliente de remplir la zone cliente de la fenêtre frame. Windows place menu contrôle de la fenêtre enfant dans la barre de menus du frame afin que l’utilisateur peut restaurer ou fermer la fenêtre enfant et ajouter le titre de la fenêtre enfant au titre de fenêtre frame.  
   
 ### <a name="example"></a>Exemple  
@@ -261,7 +262,7 @@ void SetHandles(
  `hAccel`  
  Le handle d’une ressource de l’accélérateur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction pour définir les ressources de menu et d’accélérateur utilisées par l’objet de fenêtre enfant MDI.  
   
 ## <a name="see-also"></a>Voir aussi  

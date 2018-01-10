@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0a0b81c90567bb3cebd9a5e128eb6b76d58ee9b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d28b12e19b302f5576d2cd76c931e0036c208185
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="serializing-data-to-and-from-files"></a>Sérialisation des données dans et depuis des fichiers
 L'idée de la persistance est qu'un objet doit pouvoir accéder en écriture à son état actuel, indiquée par les valeurs de variables de ses membres, dans un stockage permanent. Par la suite, l'objet peut être recréé en lisant, ou en "désérialisant", l'état de l'objet à partir du stockage persistant. Un point important est que l'objet lui-même doit lire et écrire son propre état. Par conséquent, pour qu'une classe soit permanente, elle doit implémenter les opérations de sérialisation de base.  

@@ -1,45 +1,46 @@
 ---
-title: "multimap::swap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre swap [STL/CLR]"
+title: multimap::swap (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::swap
+dev_langs: C++
+helpviewer_keywords: swap member [STL/CLR]
 ms.assetid: 198018d2-7814-4237-8ec3-5f3ea950e8af
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7b708ef2abf41595fe7d5012a5df23165ce6dcd8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# multimap::swap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multimapswap-stlclr"></a>multimap::swap (STL/CLR)
 Échange le contenu de deux conteneurs.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void swap(multimap<Key, Mapped>% right);  
 ```  
   
-#### Paramètres  
- right  
+#### <a name="parameters"></a>Paramètres  
+ droit  
  Conteneur avec lequel échanger le contenu.  
   
-## Notes  
- La fonction membre permute les séquences réorganisées entre `this` et `right`.  Elle le fait en un temps constant et ne lève pas d'exception.  Vous l'utilisez comme méthode rapide d'échange de contenu de deux conteneurs.  
+## <a name="remarks"></a>Notes  
+ La fonction membre échange les séquences contrôlées entre `this` et `right`. Cela se fait en temps constant et ne lève aucune exception. Vous l’utiliser comme un moyen rapide de l’échange le contenu de deux conteneurs.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_multimap_swap.cpp   
@@ -82,15 +83,18 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
- **\[d 4\] \[e 5\] \[f 6\]**  
- **\[d 4\] \[e 5\] \[f 6\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## Configuration requise  
- **En\-tête:** \<cliext\/map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+[d 4] [e 5] [f 6]  
+[d 4] [e 5] [f 6]  
+[a 1] [b 2] [c 3]  
+```  
   
- **Espace de noms :** cliext  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<cliext/map >  
   
-## Voir aussi  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::operator\=](../dotnet/multimap-operator-assign-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::operator= (STL/CLR)](../dotnet/multimap-operator-assign-stl-clr.md)

@@ -1,89 +1,92 @@
 ---
-title: "Cr&#233;ation d&#39;un fournisseur actualisable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "notifications, prise en charge dans les fournisseurs"
-  - "fournisseurs OLE DB, créer"
-  - "fournisseurs OLE DB, pouvant être mis à jour"
+title: "Création d’un fournisseur actualisable | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, updatable
+- notifications, support in providers
+- OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a57a54ac330e191961715440d652b9f084006b29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Cr&#233;ation d&#39;un fournisseur actualisable
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ 6.0 prenait en charge uniquement les fournisseurs en lecture seule.  Visual C\+\+.NET prend en charge des fournisseurs actualisables ou des fournisseurs qui peuvent mettre à jour \(modifier\) le magasin de données.  Cette rubrique explique comment créer des fournisseurs actualisables au moyen de modèles OLE DB.  
+# <a name="creating-an-updatable-provider"></a>Création d'un fournisseur actualisable
+Visual C++ prend en charge les fournisseurs actualisables ou des fournisseurs qui peuvent mettre à jour (modifier) le magasin de données. Cette rubrique explique comment créer des fournisseurs de mettre à jour à l’aide de modèles OLE DB.  
   
- Cette rubrique suppose que vous démarrez avec un fournisseur opérationnel.  La création d'un fournisseur actualisable repose sur deux étapes.  Vous devez d'abord déterminer comment le fournisseur apportera des modifications au magasin de données et, notamment, si les modifications doivent être effectuées immédiatement ou différées jusqu'à l'émission d'une commande de mise à jour.  « [Fournisseurs actualisables](#vchowmakingprovidersupdatable) » décrit les modifications et les paramétrages que vous devez effectuer dans le code du fournisseur.  
+ Cette rubrique suppose que vous démarrez avec un fournisseur opérationnel. Il existe deux étapes pour créer un fournisseur actualisable. Vous devez d’abord déterminer comment le fournisseur d’apporter des modifications au magasin de données ; plus précisément, si modifications doivent être effectuées immédiatement ou différée jusqu'à ce que l’émission d’une commande de mise à jour. La section «[fournisseurs actualisables](#vchowmakingprovidersupdatable)» décrit les modifications et les paramètres que vous devez effectuer dans le code du fournisseur.  
   
- Ensuite, vous devez vous assurer que le fournisseur offre toutes les fonctionnalités requises pour prendre en charge tout ce que le consommateur peut lui demander.  Si le consommateur souhaite mettre le magasin de données à jour, le fournisseur doit alors contenir le code qui écrit des données permanentes dans le magasin de données.  Par exemple, vous pouvez utiliser la bibliothèque Runtime C ou MFC pour exécuter de telles opérations sur votre source de données.  « [Écriture dans la source de données](#vchowwritingtothedatasource) » décrit comment accéder en écriture à la source de données, se comporter avec la valeur **NULL** et les valeurs par défaut, et définir des indicateurs de colonnes.  
+ Ensuite, il se peut que vous devez vous assurer que votre fournisseur contient toutes les fonctionnalités pour prendre en charge tout ce que le consommateur peut demander de celui-ci. Si le consommateur souhaite mettre à jour le magasin de données, le fournisseur doit contenir du code qui conserve les données de la banque de données. Par exemple, vous pouvez utiliser la bibliothèque C Run-Time ou MFC pour effectuer ces opérations sur votre source de données. La section «[l’écriture dans la Source de données](#vchowwritingtothedatasource)» décrit comment écrire dans la source de données, traiter les **NULL** et valeurs par défaut et définir des indicateurs de colonnes.  
   
 > [!NOTE]
->  UpdatePV est un exemple de fournisseur actualisable.  UpdatePV est similaire à MyProv sauf qu'il intègre une prise en charge pour la mise à jour.  
+>  UpdatePV est un exemple d’un fournisseur actualisable. UpdatePV est le même que MyProv, mais avec prise en charge de mettre à jour.  
   
-##  <a name="vchowmakingprovidersupdatable"></a> Fournisseurs actualisables  
- Pour rendre un fournisseur actualisable, il est essentiel de comprendre les opérations que le fournisseur doit appliquer au magasin de données et comment il doit exécuter ces opérations.  La principale question consiste, plus particulièrement, à savoir si les mises à jour du magasin de données doivent être effectuées de façon immédiate ou différée \(groupées en batch\) jusqu'à l'émission d'une commande de mise à jour.  
+##  <a name="vchowmakingprovidersupdatable"></a>Fournisseurs actualisables  
+ La clé pour rendre un fournisseur actualisable est de comprendre les opérations que vous souhaitez que votre fournisseur d’effectuer sur le magasin de données et comment vous souhaitez que le fournisseur pour effectuer ces opérations. Plus précisément, le principal problème est si les mises à jour de la banque de données doivent être effectuées immédiatement ou différée (traités par lot) jusqu'à ce qu’une commande de mise à jour est émise.  
   
- Vous devez d'abord déterminer si vous devez hériter des classes `IRowsetChangeImpl` ou `IRowsetUpdateImpl` dans votre classe rowset.  Le fonctionnement des trois méthodes `SetData`, **InsertRows** et `DeleteRows` variera selon l'option que vous avez choisi d'implémenter.  
+ Vous devez d’abord déterminer s’il faut hériter `IRowsetChangeImpl` ou `IRowsetUpdateImpl` dans votre classe rowset. Selon que vous choisissez d’implémenter les fonctionnalités des trois méthodes seront affectées : `SetData`, **InsertRows**, et `DeleteRows`.  
   
--   Si vous héritez de la classe [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md), l'appel de ces trois méthodes modifie immédiatement le magasin de données.  
+-   Si vous héritez [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md), appel de ces trois méthodes modifie immédiatement le magasin de données.  
   
--   Si vous héritez de la classe [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md), les méthodes différeront les modifications à apporter au magasin de données jusqu'à ce que vous appeliez **Update**, `GetOriginalData` ou **Undo**.  Si la mise à jour implique plusieurs modifications, qui sont effectuées en mode batch \(les modifications effectuées en mode batch peuvent exiger des ressources mémoire considérables\).  
+-   Si vous héritez [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md), les méthodes de différeront des modifications au magasin de données jusqu'à ce que vous appeliez **mise à jour**, `GetOriginalData`, ou **Annuler**. Si la mise à jour implique plusieurs modifications, elles sont exécutées en mode de traitement par lots (Notez que le traitement par lot de modifications peut ajouter des ressources mémoire considérables).  
   
- Notez que la classe `IRowsetUpdateImpl` est dérivée de la classe `IRowsetChangeImpl`.  `IRowsetUpdateImpl` vous fait ainsi bénéficier de la fonction batch en plus de la possibilité de modification.  
+ Notez que `IRowsetUpdateImpl` dérive `IRowsetChangeImpl`. Par conséquent, `IRowsetUpdateImpl` permet de modifier de capacité plus de capacité de traitement par lots.  
   
-#### Pour prendre en charge la fonction de mise à jour dans votre fournisseur  
+#### <a name="to-support-updatability-in-your-provider"></a>Pour prendre en charge les mises à jour dans votre fournisseur  
   
-1.  Dans votre classe rowset, héritez de `IRowsetChangeImpl` ou de `IRowsetUpdateImpl`.  Ces classes fournissent les interfaces appropriées pour la modification du magasin de données :  
+1.  Dans votre classe rowset, héritez `IRowsetChangeImpl` ou `IRowsetUpdateImpl`. Ces classes fournissent les interfaces appropriées pour la modification de la banque de données :  
   
      **Ajout de IRowsetChange**  
   
-     Ajoutez `IRowsetChangeImpl` à votre chaîne d'héritage en utilisant la forme suivante :  
+     Ajoutez `IRowsetChangeImpl` à votre chaîne d’héritage à l’aide de ce formulaire :  
   
     ```  
     IRowsetChangeImpl< rowset-name, storage-name >  
     ```  
   
-     Ajoutez également `COM_INTERFACE_ENTRY(IRowsetChange)` à la section `BEGIN_COM_MAP` de votre classe rowset.  
+     Ajoutez également `COM_INTERFACE_ENTRY(IRowsetChange)` à la `BEGIN_COM_MAP` section dans votre classe rowset.  
   
      **Ajout de IRowsetUpdate**  
   
-     Ajoutez `IRowsetUpdate` à votre chaîne d'héritage en utilisant la forme suivante :  
+     Ajoutez `IRowsetUpdate` à votre chaîne d’héritage à l’aide de ce formulaire :  
   
     ```  
     IRowsetUpdateImpl< rowset-name, storage>  
     ```  
   
     > [!NOTE]
-    >  Vous devez supprimer la ligne `IRowsetChangeImpl` de votre chaîne d'héritage.  Cette unique exception à la directive mentionnée plus haut doit inclure le code pour `IRowsetChangeImpl`.  
+    >  Vous devez supprimer la `IRowsetChangeImpl` ligne à partir de votre chaîne d’héritage. Cette unique exception à la directive mentionnée doit inclure le code de `IRowsetChangeImpl`.  
   
-2.  Ajoutez le texte suivant à votre mappage COM \(**BEGIN\_COM\_MAP ... END\_COM\_MAP**\) :  
+2.  Ajoutez le code suivant à votre mappage COM (**BEGIN_COM_MAP... END_COM_MAP**) :  
   
-    |Si vous implémentez|Ajoutez au mappage COM|  
-    |-------------------------|----------------------------|  
+    |Si vous implémentez|Ajouter au mappage COM|  
+    |----------------------|--------------------|  
     |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|  
     |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|  
   
-3.  Dans votre commande, ajoutez le texte suivant au mappage des jeux de propriétés \(**BEGIN\_PROPSET\_MAP ... END\_PROPSET\_MAP**\) :  
+3.  Dans votre commande, ajoutez le code suivant à votre carte de jeu de propriétés (**BEGIN_PROPSET_MAP... END_PROPSET_MAP**) :  
   
-    |Si vous implémentez|Ajoutez au mappage des jeux de propriétés|  
-    |-------------------------|-----------------------------------------------|  
+    |Si vous implémentez|Ajoutez au mappage des propriétés|  
+    |----------------------|-----------------------------|  
     |`IRowsetChangeImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`|  
     |`IRowsetUpdateImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)`|  
   
-4.  Dans le mappage des jeux de propriétés, vous devez également inclure tous les paramètres suivants, tels qu'ils apparaissent ci\-dessous :  
+4.  Dans le mappage de jeu de propriétés, vous incluez également tous les paramètres suivants de telles qu’elles apparaissent ci-dessous :  
   
     ```  
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
@@ -103,93 +106,93 @@ Visual C\+\+ 6.0 prenait en charge uniquement les fournisseurs en lecture seul
       DBPROPFLAGS_READ, VARIANT_FALSE, 0)  
     ```  
   
-     Vous trouverez les valeurs utilisées dans ces appels de macros dans Atldb.h pour les valeurs et les ID des propriétés \(si Atldb.h et la documentation en ligne diffèrent, c'est Atldb.h qui prévaut\).  
+     Vous pouvez trouver les valeurs utilisées dans ces appels de macros dans Atldb.h pour l’ID de propriété et les valeurs (si Atldb.h diffère de la documentation en ligne, Atldb.h remplace la documentation).  
   
     > [!NOTE]
-    >  De nombreux paramètres **VARIANT\_FALSE** et `VARIANT_TRUE` sont requis par les modèles OLE DB ; la spécification OLE DB indique qu'ils peuvent être accessibles en lecture\/écriture, mais les modèles OLE DB ne peuvent prendre en charge qu'une seule valeur.  
+    >  Un grand nombre de la **VARIANT_FALSE** et `VARIANT_TRUE` paramètres sont requis par les modèles OLE DB ; la spécification OLE DB indique qu’ils peuvent être en lecture/écriture, mais les modèles OLE DB peuvent prendre uniquement en charge une seule valeur.  
   
      **Si vous implémentez IRowsetChangeImpl**  
   
-     Si vous implémentez `IRowsetChangeImpl`, vous devez définir les propriétés suivantes sur votre fournisseur.  Ces propriétés sont essentiellement utilisées pour demander les interfaces via **ICommandProperties::SetProperties**.  
+     Si vous implémentez `IRowsetChangeImpl`, vous devez définir les propriétés suivantes sur votre fournisseur. Ces propriétés sont principalement utilisées pour demander les interfaces via **ICommandProperties::SetProperties**.  
   
-    -   `DBPROP_IRowsetChange` : sa définition définit automatiquement **DBPROP\_IRowsetChange**.  
+    -   `DBPROP_IRowsetChange`: Définition de ce automatiquement définit **DBPROP_IRowsetChange**.  
   
-    -   `DBPROP_UPDATABILITY` : masque de bits qui spécifie les méthodes prises en charge par `IRowsetChange` : `SetData`, `DeleteRows` ou `InsertRow`.  
+    -   `DBPROP_UPDATABILITY`: Masque de bits spécifiant les méthodes prises en charge sur `IRowsetChange`: `SetData`, `DeleteRows`, ou `InsertRow`.  
   
-    -   `DBPROP_CHANGEINSERTEDROWS` : le consommateur peut appeler **IRowsetChange::DeleteRows** ou `SetData` pour obtenir les lignes récemment insérées.  
+    -   `DBPROP_CHANGEINSERTEDROWS`: Le consommateur peut appeler **IRowsetChange::DeleteRows** ou `SetData` pour les lignes nouvellement insérées.  
   
-    -   `DBPROP_IMMOBILEROWS` : l'ensemble de lignes ne réorganisera pas de nouveau les lignes insérées ou mises à jour.  
+    -   `DBPROP_IMMOBILEROWS`: Ensemble de lignes ne réorganise pas les lignes insérées ou mises à jour.  
   
      **Si vous implémentez IRowsetUpdateImpl**  
   
-     Si vous implémentez `IRowsetUpdateImpl`, vous devez définir les propriétés suivantes sur votre fournisseur, en plus de la définition de toutes les propriétés pour `IRowsetChangeImpl` répertoriées précédemment :  
+     Si vous implémentez `IRowsetUpdateImpl`, vous devez définir les propriétés suivantes sur votre fournisseur, parallèlement à la définition de toutes les propriétés de `IRowsetChangeImpl` mentionnés précédemment :  
   
     -   `DBPROP_IRowsetUpdate`.  
   
-    -   `DBPROP_OWNINSERT` : doit être READ\_ONLY et VARIANT\_TRUE.  
+    -   `DBPROP_OWNINSERT`: Doit être READ_ONLY et VARIANT_TRUE.  
   
-    -   `DBPROP_OWNUPDATEDELETE` : doit être READ\_ONLY et VARIANT\_TRUE.  
+    -   `DBPROP_OWNUPDATEDELETE`: Doit être READ_ONLY et VARIANT_TRUE.  
   
-    -   `DBPROP_OTHERINSERT` : doit être READ\_ONLY et VARIANT\_TRUE.  
+    -   `DBPROP_OTHERINSERT`: Doit être READ_ONLY et VARIANT_TRUE.  
   
-    -   `DBPROP_OTHERUPDATEDELETE` : doit être READ\_ONLY et VARIANT\_TRUE.  
+    -   `DBPROP_OTHERUPDATEDELETE`: Doit être READ_ONLY et VARIANT_TRUE.  
   
-    -   `DBPROP_REMOVEDELETED` : doit être READ\_ONLY et VARIANT\_TRUE.  
+    -   `DBPROP_REMOVEDELETED`: Doit être READ_ONLY et VARIANT_TRUE.  
   
     -   `DBPROP_MAXPENDINGROWS`.  
   
         > [!NOTE]
-        >  Si vous prenez en charge les notifications, vous pouvez également avoir d'autres propriétés ; consultez la section consacrée à `IRowsetNotifyCP` pour cette liste.  
+        >  Si vous prenez en charge les notifications, peut également avoir d’autres propriétés ; consultez la section sur `IRowsetNotifyCP` pour cette liste.  
   
-     Pour obtenir un exemple de la manière dont les propriétés sont définies, consultez le mappage du jeu de propriétés dans **CUpdateCommand** \(Rowset.h\) dans [UpdatePV](http://msdn.microsoft.com/fr-fr/c8bed873-223c-4a7d-af55-f90138c6f38f).  
+     Par exemple, de la façon dont les propriétés sont définies, consultez définie la propriété dans **CUpdateCommand** (dans Rowset.h) dans [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f).  
   
-##  <a name="vchowwritingtothedatasource"></a> Écriture dans la source de données  
- Pour lire dans la source de données, appelez la fonction **Execute**.  Pour écrire dans la source de données, appelez la fonction `FlushData`. \(Dans un sens général, flush signifie enregistrer sur disque les modifications que vous effectuez dans une table ou un index.\)  
+##  <a name="vchowwritingtothedatasource"></a>Écriture dans la Source de données  
+ Pour lire à partir de la source de données, appelez le **Execute** (fonction). Pour écrire dans la source de données, appelez le `FlushData` (fonction). (Dans un sens général, flush signifie enregistrer les modifications que vous apportez à une table ou un index sur le disque).  
   
 ```  
 FlushData(HROW, HACCESSOR);  
 ```  
   
- Les arguments handle de ligne \(*HROW*\) et handle d'accesseur \(*HACCESSOR*\) vous permettent de spécifier la zone d'écriture.  En principe, vous accédez en écriture à un seul champ de données à la fois.  
+ Le handle de ligne (*HROW*) et le handle d’accesseur (*HACCESSOR*) arguments permettent de spécifier la zone d’écriture. En règle générale, vous écrivez un champ de données à la fois.  
   
- La méthode `FlushData` écrit les données dans le format où elles ont été stockées à l'origine.  Si vous ne substituez pas cette fonction, votre fournisseur fonctionnera correctement, mais les modifications ne seront pas vidées dans le magasin de données.  
+ Le `FlushData` méthode écrit des données dans le format dans lequel elle a été enregistrée à l’origine. Si vous ne substituez pas cette fonction, votre fournisseur fonctionnera correctement mais les modifications ne sont pas vidées vers le magasin de données.  
   
-### Quand effectuer un vidage  
- Les modèles du fournisseur appellent `FlushData` chaque fois que les données doivent être écrites dans le magasin de données ; cela se produit généralement \(mais pas toujours\) à la suite d'appels aux fonctions suivantes :  
+### <a name="when-to-flush"></a>Quand effectuer un vidage  
+ Le modèles du fournisseur appellent `FlushData` chaque fois que les données doivent être écrites dans le magasin de données ; cela généralement (mais pas toujours) se produit suite à des appels aux fonctions suivantes :  
   
 -   **IRowsetChange::DeleteRows**  
   
 -   **IRowsetChange::SetData**  
   
--   **IRowsetChange::InsertRows** \(si de nouvelles données doivent être insérées dans la ligne\)  
+-   **IRowsetChange::InsertRows** (il s'est nouvelles données à insérer dans la ligne)  
   
 -   **IRowsetUpdate::Update**  
   
-### Fonctionnement  
- Le consommateur lance un appel qui requiert un vidage \(**Update**, par exemple\) et cet appel est passé au fournisseur, qui effectue toujours les opérations suivantes :  
+### <a name="how-it-works"></a>Son fonctionnement  
+ Le consommateur effectue un appel qui requiert un vidage (tel que **mise à jour**) et cet appel est passé au fournisseur, qui effectue toujours les éléments suivants :  
   
--   appelle `SetDBStatus` chaque fois que vous avez une limite de valeur d'état \(consultez *OLE DB Programmers Reference,* chapitre 6, *Data Parts: Status*\) ;  
+-   Appels `SetDBStatus` chaque fois que vous avez une valeur d’état liée (consultez *de référence des programmeurs OLE DB*, chapitre 6, *parties de données : état*).  
   
--   vérifie les indicateurs de colonnes ;  
+-   Vérifie les indicateurs de colonne.  
   
--   appelle `IsUpdateAllowed`.  
+-   Appelle `IsUpdateAllowed`.  
   
- Ces trois étapes contribuent à assurer la sécurité.  Ensuite, le fournisseur appelle `FlushData`.  
+ Ces trois étapes assurent la sécurité. Ensuite, le fournisseur appelle `FlushData`.  
   
-### Comment implémenter FlushData  
- Pour implémenter `FlushData`, vous devez tenir compte de plusieurs points :  
+### <a name="how-to-implement-flushdata"></a>Comment implémenter FlushData  
+ Pour implémenter `FlushData`, vous devez prendre en compte plusieurs problèmes :  
   
--   vous assurer que le magasin de données peut gérer les modifications ;  
+-   S’assurer que le magasin de données peut gérer les modifications.  
   
--   gérer les valeurs **NULL** ;  
+-   La gestion des **NULL** valeurs.  
   
--   gérer les valeurs par défaut.  
+-   La gestion des valeurs par défaut.  
   
- Pour implémenter votre propre méthode `FlushData`, vous devez :  
+ Pour implémenter votre propre `FlushData` (méthode), vous devez :  
   
--   accéder à votre classe rowset ;  
+-   Accédez à votre classe rowset.  
   
--   dans la classe rowset, placer la déclaration de :  
+-   Dans l’ensemble de lignes classe placer la déclaration de :  
   
 ```  
 HRESULT FlushData(HROW, HACCESSOR)  
@@ -198,21 +201,21 @@ HRESULT FlushData(HROW, HACCESSOR)
 }  
 ```  
   
--   fournir une implémentation de `FlushData`.  
+-   Fournir une implémentation de `FlushData`.  
   
- Une implémentation correcte de `FlushData` stocke uniquement les lignes et les colonnes qui sont effectivement mises à jour.  Vous pouvez utiliser les paramètres *HROW* et *HACCESSOR* pour déterminer les ligne et colonne qui sont stockées à des fins d'optimisation.  
+ Une implémentation correcte de `FlushData` stocke uniquement les lignes et les colonnes qui sont effectivement mises à jour. Vous pouvez utiliser la *HROW* et *HACCESSOR* paramètres pour déterminer la ligne actuelle et la colonne qui sont stockées pour l’optimisation.  
   
- En principe, le plus grand défi consiste à travailler avec votre propre magasin de données natif.  Si possible, essayez de :  
+ En règle générale, le principal défi fonctionne avec votre propre magasin de données en mode natif. Si possible, essayez :  
   
--   conserver une méthode aussi simple que possible pour l'accès en écriture à votre magasin de données ;  
+-   Conserver la méthode d’écriture à votre magasin de données aussi simple que possible.  
   
--   gérer les valeurs **NULL** \(facultatives mais conseillées\) ;  
+-   Gérer les **NULL** values (facultatif mais conseillées).  
   
--   gérer les valeurs par défaut \(facultatives mais conseillées\).  
+-   Gérer les valeurs par défaut (facultatives mais conseillées).  
   
- La meilleure chose à faire est d'avoir de vraies valeurs spécifiées dans le magasin de données pour les valeurs **NULL** et les valeurs par défaut.  Si vous pouvez extrapoler ces données, c'est encore mieux.  Sinon, il est recommandé de ne pas autoriser les valeurs **NULL** et les valeurs par défaut.  
+ La meilleure chose à faire est d’avoir vraies valeurs spécifiées dans le magasin de données pour **NULL** et valeurs par défaut. Il est préférable si vous pouvez extrapoler ces données. Si non, nous vous recommandons ne pas autoriser **NULL** et valeurs par défaut.  
   
- L'exemple suivant est un exemple de la manière dont la méthode `FlushData` est implémentée dans la classe `RUpdateRowset` de l'exemple [UpdatePV](http://msdn.microsoft.com/fr-fr/c8bed873-223c-4a7d-af55-f90138c6f38f) \(consultez Rowset.h dans l'exemple de code\) :  
+ L’exemple suivant montre comment `FlushData` est implémenté dans le `RUpdateRowset` classe dans le [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) exemple (consultez Rowset.h dans l’exemple de code) :  
   
 ```  
 ///////////////////////////////////////////////////////////////////////////  
@@ -294,24 +297,24 @@ HRESULT FlushData(HROW, HACCESSOR)
 }  
 ```  
   
-### Gestion des modifications  
- Pour que votre fournisseur gère les modifications, vous devrez d'abord vous assurer que le magasin de données \(comme un fichier texte ou un fichier vidéo\) dispose des fonctionnalités requises vous permettant d'effectuer les modifications voulues.  Si ce n'est pas le cas, vous devez créer ce code séparément du projet fournisseur.  
+### <a name="handling-changes"></a>Gestion des modifications  
+ Pour votre fournisseur gère les modifications, vous devez tout d’abord s’assurer que votre banque de données (par exemple, un fichier texte ou un fichier vidéo) comporte des fonctionnalités qui vous permettent d’apporter des modifications. Si elle n’est pas le cas, vous devez créer ce code séparément à partir du projet du fournisseur.  
   
-### Gestion des données NULL  
- Il est possible qu'un utilisateur final envoie des données de type **NULL**.  Lorsque vous écrivez des valeurs **NULL** dans des champs de la source de données, vous pouvez rencontrer des problèmes.  Imaginez une application de prise de commandes qui accepte des valeurs pour la ville et le code postal ; elle peut accepter l'une ou l'autre valeur ou les deux mais pas aucune valeur, car dans ce cas la distribution ne serait pas possible.  Vous devez donc restreindre certaines combinaisons de valeurs **NULL** aux champs qui ont un sens logique dans votre application.  
+### <a name="handling-null-data"></a>La gestion des données de type NULL  
+ Il est possible qu’un utilisateur final envoie **NULL** données. Lorsque vous écrivez **NULL** valeurs aux champs de la source de données, il peut y avoir des problèmes potentiels. Imaginez une application de prise de commande qui accepte des valeurs pour la ville et le code postal ; elle peut accepter un ou les deux valeurs, mais pas aucune des deux, car dans ce cas, remise serait impossible. Vous devez donc restreindre certaines combinaisons de **NULL** valeurs dans les champs qui ont un sens pour votre application.  
   
- En tant que développeur de fournisseurs, vous devez réfléchir à la façon dont vous stockerez les données, à la manière dont vous lirez ces données à partir du magasin de données et à la manière dont vous spécifierez tout cela à l'utilisateur.  Plus précisément, vous devez songer à la façon de changer l'état des données du jeu de lignes dans la source de données \(par exemple, DataStatus \= **NULL**\).  Vous déterminez la valeur à retourner quand un consommateur accède à un champ contenant une valeur **NULL**.  
+ En tant que développeur de fournisseurs, vous devez prendre en compte la façon dont vous souhaitez stocker ces données, comment vous lirez ces données à partir du magasin de données et la façon dont vous spécifiez que pour l’utilisateur. Plus précisément, vous devez considérer comment changer l’état des données du jeu de lignes dans la source de données (par exemple, DataStatus = **NULL**). Vous déterminez la valeur à retourner quand un consommateur accède à un champ contenant une **NULL** valeur.  
   
- Examinez le code dans l'exemple [UpdatePV](http://msdn.microsoft.com/fr-fr/c8bed873-223c-4a7d-af55-f90138c6f38f) ; il illustre la façon dont un fournisseur peut gérer des données **NULL**.  Dans UpdatePV, le fournisseur stocke les données **NULL** en écrivant la chaîne « NULL » dans le magasin de données.  Quand il lit des données **NULL** à partir du magasin de données, il visualise cette chaîne puis vide la mémoire tampon, créant une chaîne **NULL**.  Il dispose également d'une substitution de `IRowsetImpl::GetDBStatus` dans laquelle il retourne **DBSTATUS\_S\_ISNULL** si cette valeur de données est vide.  
+ Examinez le code dans le [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) exemple ; il illustre la façon dont un fournisseur peut gérer **NULL** données. Dans UpdatePV, le fournisseur stocke **NULL** données en écrivant la chaîne « NULL » dans le magasin de données. Lorsqu’il lit **NULL** du magasin de données à partir des données, il visualise cette chaîne puis vide la mémoire tampon, création d’un **NULL** chaîne. Il dispose également d’une substitution de `IRowsetImpl::GetDBStatus` dans laquelle il retourne **DBSTATUS_S_ISNULL** si cette valeur de données est vide.  
   
-### Marquage des colonnes autorisant la valeur Null  
- Si vous implémentez également des rowsets du schéma \(consultez `IDBSchemaRowsetImpl`\), votre implémentation doit spécifier dans le jeu de lignes **DBSCHEMA\_COLUMNS** \(généralement marqué dans le fournisseur par **C***xxx***SchemaColSchemaRowset**\) que la colonne autorise la valeur Null.  
+### <a name="marking-nullable-columns"></a>Marquage des colonnes autorisant des valeurs null  
+ Si vous implémentez également des ensembles de lignes de schéma (voir `IDBSchemaRowsetImpl`), votre implémentation doit spécifier dans le **DBSCHEMA_COLUMNS** ensemble de lignes (généralement marqué dans le fournisseur par **C***xxx* **SchemaColSchemaRowset**) que la colonne est nullable.  
   
- Vous devez aussi spécifier que toutes les colonnes autorisant la valeur Null contiennent la valeur **DBCOLUMNFLAGS\_ISNULLABLE** dans votre version de `GetColumnInfo`.  
+ Vous devez également spécifier que toutes les colonnes contiennent le **DBCOLUMNFLAGS_ISNULLABLE** valeur dans votre version de la `GetColumnInfo`.  
   
- Dans l'implémentation des modèles OLE DB, si vous ne marquez pas les colonnes comme autorisant la valeur Null, le fournisseur suppose qu'elles doivent contenir une valeur et ne permet pas au consommateur de lui envoyer des valeurs null.  
+ Dans l’implémentation des modèles OLE DB, si vous ne marquez pas les colonnes comme autorisant la valeur null, le fournisseur suppose qu’ils doivent contenir une valeur et ne permettra pas au consommateur de lui envoyer des valeurs null.  
   
- L'exemple suivant montre comment la fonction **CommonGetColInfo** est implémentée dans **CUpdateCommand** \(consultez UpProvRS.cpp\) dans UpdatePV.  Notez comment la valeur **DBCOLUMNFLAGS\_ISNULLABLE** se présente pour les colonnes autorisant la valeur Null.  
+ L’exemple suivant montre comment la **CommonGetColInfo** (fonction) est implémentée dans **CUpdateCommand** (consultez UpProvRS.cpp) dans UpdatePV. Notez la façon dont les colonnes ont cela **DBCOLUMNFLAGS_ISNULLABLE** pour les colonnes autorisant des valeurs NULL.  
   
 ```  
 /////////////////////////////////////////////////////////////////////////////  
@@ -366,12 +369,12 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols, bool bBookma
 }  
 ```  
   
-### Valeurs par défaut  
- Comme avec les données **NULL**, il vous appartient de traiter les valeurs par défaut qui peuvent être modifiées.  
+### <a name="default-values"></a>Valeurs par défaut  
+ Comme avec **NULL** des données, vous avez la responsabilité de modifier les valeurs par défaut.  
   
- `FlushData` et **Execute** retournent `S_OK` par défaut.  Par conséquent, si vous ne substituez pas cette fonction, vous avez l'impression que les modifications ont réussi \(`S_OK` est retourné\), mais celles\-ci ne sont pas transmises au magasin de données.  
+ La valeur par défaut de `FlushData` et **Execute** doit retourner `S_OK`. Par conséquent, si vous ne substituez pas cette fonction, les modifications apparaissent réussisse (`S_OK` sera retourné), mais ils ne sont pas transmis au magasin de données.  
   
- Dans l'exemple [UpdatePV](http://msdn.microsoft.com/fr-fr/c8bed873-223c-4a7d-af55-f90138c6f38f) \(dans Rowset.h\), la méthode `SetDBStatus` gère les valeurs par défaut de la façon suivante :  
+ Dans le [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) sample (dans Rowset.h), la `SetDBStatus` méthode gère les valeurs par défaut comme suit :  
   
 ```  
 virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,  
@@ -408,12 +411,12 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 }  
 ```  
   
-### Indicateurs de colonnes  
- Si vous prenez en charge les valeurs par défaut de vos colonnes, vous devez définit cette fonction à l'aide de métadonnées dans la classe**\<***classe fournisseur***\>SchemaRowset**.  Paramétrez *m\_bColumnHasDefault* \= `VARIANT_TRUE`.  
+### <a name="column-flags"></a>Indicateurs de colonne  
+ Si vous prenez en charge les valeurs par défaut sur les colonnes, vous devez définir à l’aide de métadonnées dans le  **\<**  *classe de fournisseur***> SchemaRowset** classe. Définissez *m_bColumnHasDefault* = `VARIANT_TRUE`.  
   
- Il vous revient également de définir les indicateurs de colonnes, qui sont spécifiés à l'aide du type énuméré **DBCOLUMNFLAGS**.  Les indicateurs de colonnes décrivent les caractéristiques des colonnes.  
+ Vous pouvez définir les indicateurs de colonnes, qui sont spécifiées à l’aide de la **DBCOLUMNFLAGS** type énuméré. Les indicateurs de colonnes décrivent les caractéristiques de la colonne.  
   
- Par exemple, au sein de la classe `CUpdateSessionColSchemaRowset` dans [UpdatePV](http://msdn.microsoft.com/fr-fr/c8bed873-223c-4a7d-af55-f90138c6f38f) \(Session.h\), la première colonne est définie de la façon suivante :  
+ Par exemple, dans le `CUpdateSessionColSchemaRowset` classe dans [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) (dans Session.h), la première colonne est configurée de cette façon :  
   
 ```  
 // Set up column 1  
@@ -428,7 +431,7 @@ lstrcpyW(trData[0].m_szColumnDefault, OLESTR("0"));
 m_rgRowData.Add(trData[0]);  
 ```  
   
- Ce code spécifie, entre autres, que la colonne prend en charge une valeur par défaut 0, qu'elle est modifiable et que toutes les données qu'elle contient ont la même longueur.  Si vous voulez que les données d'une colonne aient une longueur variable, évitez alors de définir cet indicateur.  
+ Ce code spécifie, entre autres choses, que la colonne prend en charge une valeur par défaut 0, qu’il soit accessible en écriture, et que toutes les données dans la colonne ont la même longueur. Si vous souhaitez que les données dans une colonne doit avoir une longueur variable, vous définiriez pas cet indicateur.  
   
-## Voir aussi  
- [Création d'un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+## <a name="see-also"></a>Voir aussi  
+ [Création d’un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

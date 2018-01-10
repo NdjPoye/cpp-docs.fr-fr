@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7c15def4acc3daad2cb0739da0f53e2a9871d172
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 86bca4c48403bd41ce40b79a4b9f7c041ebb26e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ctoolbarctrl"></a>Utilisation de CToolBarCtrl
 Vous pouvez utiliser le contrôle de barre d’outils ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) pour créer une fenêtre de contrôle contenant des boutons et des espaces facultatifs. Chaque bouton dans la fenêtre de contrôle de barre d’outils envoie un message de commande à la fenêtre parente lorsque l’utilisateur les sélectionne. En règle générale, les boutons de barre d’outils correspondent aux éléments de menu de l’application, en fournissant un moyen supplémentaire et plus direct pour l’utilisateur d’accéder aux commandes de l’application.  

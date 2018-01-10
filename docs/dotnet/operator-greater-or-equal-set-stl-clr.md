@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37b295712e1a6bd0703c4ca0ed09675622ad8b70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ed921ecf03eea870e26cec1e89093311a67b3320
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorgt-set-stlclr"></a>opérateur&gt;= (set) (STL/CLR)
 Liste supérieur ou égal à comparaison.  
@@ -36,10 +39,10 @@ template<typename Key>
  left  
  Conteneur de gauche à comparer.  
   
- droite  
+ droit  
  Conteneur de droite à comparer.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction d’opérateur retourne `!(left < right)`. Il permet de tester si `left` n’est pas classé avant `right` lorsque les deux jeux sont comparé élément par élément.  
   
 ## <a name="example"></a>Exemple  

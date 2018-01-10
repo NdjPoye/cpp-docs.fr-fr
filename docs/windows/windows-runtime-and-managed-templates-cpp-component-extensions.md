@@ -14,11 +14,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ace505bf8c9da090a3b871dfd06573a7ce1d6400
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 81e803db04ebd9d3a851a04e8656131d85649751
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows Runtime et modèles gérés (extensions du composant C++)
 Les modèles vous permettent de définir un prototype d’un type common language runtime ou le Windows Runtime et ensuite instancier des variantes de ce type à l’aide des paramètres de type de modèle différent.  
@@ -29,15 +32,15 @@ Les modèles vous permettent de définir un prototype d’un type common languag
  Pour plus d’informations sur les modèles de classe C++ standards, consultez [les modèles de classe](../cpp/class-templates.md).  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
- (Aucune note de cette fonctionnalité de langage ne s'applique qu'au Windows Runtime.)  
+ (Aucune note de cette fonctionnalité de langage ne s’applique qu’au Windows Runtime.)  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
  Il existe certaines limitations à la création de modèles de classe à partir de types managés, qui sont illustrées dans les exemples de code suivant.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  

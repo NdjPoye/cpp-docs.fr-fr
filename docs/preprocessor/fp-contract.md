@@ -1,52 +1,53 @@
 ---
-title: "fp_contract | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.fp_contract"
-  - "fp_contract_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fp_contract (pragma)"
-  - "pragmas, fp_contract"
+title: fp_contract | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.fp_contract
+- fp_contract_CPP
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, fp_contract
+- fp_contract pragma
 ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a4feb098555168e07641db30401f23aba2291fc8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# fp_contract
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="fpcontract"></a>fp_contract
 Détermine si la contraction à virgule flottante doit être effectuée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 #pragma fp_contract [ON | OFF]  
 ```  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Par défaut, `fp_contract` a pour valeur ON.  
   
- Pour plus d'informations sur le comportement en virgule flottante, consultez [\/fp \(Spécifier le comportement de virgule flottante\)](../build/reference/fp-specify-floating-point-behavior.md).  
+ Pour plus d’informations sur le comportement de virgule flottante, consultez [/fp (spécifier du comportement de nombres à virgule flottante)](../build/reference/fp-specify-floating-point-behavior.md).  
   
  Les autres pragmas à virgule flottante incluent :  
   
--   [fenv\_access](../preprocessor/fenv-access.md)  
+-   [fenv_access](../preprocessor/fenv-access.md)  
   
--   [float\_control](../preprocessor/float-control.md)  
+-   [float_control](../preprocessor/float-control.md)  
   
-## Exemple  
- Le code généré à partir de cet exemple n'utilise pas l'instruction **fma** \(Fused Multiply Add\) sur les processeurs Itanium.  Si vous placez en commentaires `#pragma fp_contract (off)`, le code généré utilise l'instruction **fma**.  
+## <a name="example"></a>Exemple  
+ Le code généré à partir de cet exemple n’utilise pas le Fused Multiply Add (**fma**) instruction sur les processeurs Itanium. Si vous commentez `#pragma fp_contract (off)`, le code généré utilisera le **fma** instruction.  
   
 ```  
 // pragma_directive_fp_contract.cpp  
@@ -70,15 +71,18 @@ int main() {
 }  
 ```  
   
-  **out\=0.000000000000000e\+000**  
-**out\=6.152500152587891e\+001**  
-**out\=2.351000061035156e\+002**  
-**out\=5.207249755859375e\+002**  
-**out\=9.184000244140625e\+002**  
-**out\=1.428125000000000e\+003**  
-**out\=2.049899902343750e\+003**  
-**out\=2.783724853515625e\+003**  
-**out\=3.629600097656250e\+003**  
-**out\=4.587524902343750e\+003**   
-## Voir aussi  
- [Directives pragma et mot clé \_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+```Output  
+out=0.000000000000000e+000  
+out=6.152500152587891e+001  
+out=2.351000061035156e+002  
+out=5.207249755859375e+002  
+out=9.184000244140625e+002  
+out=1.428125000000000e+003  
+out=2.049899902343750e+003  
+out=2.783724853515625e+003  
+out=3.629600097656250e+003  
+out=4.587524902343750e+003  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Directives pragma et mot clé _Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

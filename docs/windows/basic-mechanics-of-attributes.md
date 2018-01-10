@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ebf81d5bfb20f151cc8f405fb8346b66451f77e2
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 99771e798e4957de5ff69601a5d3494e5fcacc35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basic-mechanics-of-attributes"></a>Mécanismes de base des attributs
 Il existe trois manières d’insérer des attributs dans votre projet. Tout d’abord, vous pouvez les insérer manuellement dans votre code source. Ensuite, vous pouvez insérer dans votre projet à l’aide de la grille des propriétés d’un objet. Enfin, vous pouvez insérer à l’aide des Assistants différents. Pour plus d’informations sur l’utilisation de la fenêtre Propriétés et les divers Assistants, consultez [création et gestion de projets Visual C++](../ide/creating-and-managing-visual-cpp-projects.md).  

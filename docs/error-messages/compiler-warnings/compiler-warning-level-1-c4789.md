@@ -1,34 +1,33 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4789 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4789"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4789"
+title: Compilateur avertissement (niveau 1) C4789 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4789
+dev_langs: C++
+helpviewer_keywords: C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6fde48ccbcf3a4ddec6884ac9e0c259739954772
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4789
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4789"></a>Avertissement du compilateur (niveau 1) C4789
 la mémoire tampon 'identificateur' d'une taille de N octets sera dépassée ; M octets seront écrits en commençant à l'offset L  
   
- Signale tout dépassement de mémoire tampon lors de l'utilisation de fonctions CRT \(Runtime C\) spécifiques, quand des paramètres sont passés et des affectations effectuées, de façon à ce que les tailles des données soient connues au moment de la compilation.  Cet avertissement s'applique aux situations susceptibles d'échapper à la détection standard des non\-correspondances de tailles de données.  
+ Signale tout dépassement de mémoire tampon lors de l'utilisation de fonctions CRT (Runtime C) spécifiques, quand des paramètres sont passés et des affectations effectuées, de façon à ce que les tailles des données soient connues au moment de la compilation. Cet avertissement s'applique aux situations susceptibles d'échapper à la détection standard des non-correspondances de tailles de données.  
   
- L'avertissement s'affiche quand les données, dont la longueur est connue au moment de la compilation, sont copiées et placées dans un bloc de données dont la taille est identifiée au moment de la compilation comme étant trop petite pour les données.  La copie doit être effectuée à l'aide de la forme intrinsèque de l'une des fonctions CRT suivantes :  
+ L'avertissement s'affiche quand les données, dont la longueur est connue au moment de la compilation, sont copiées et placées dans un bloc de données dont la taille est identifiée au moment de la compilation comme étant trop petite pour les données. La copie doit être effectuée à l'aide de la forme intrinsèque de l'une des fonctions CRT suivantes :  
   
 -   [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)  
   
@@ -38,7 +37,7 @@ la mémoire tampon 'identificateur' d'une taille de N octets sera dépassée ;
   
  L'avertissement apparaît également quand le type de données d'un paramètre est incompatible avec un cast et qu'une tentative d'assignation de copie d'une référence lvalue est effectuée ultérieurement.  
   
- Visual C\+\+ peut générer cet avertissement pour un chemin d'accès de code qui ne s'exécute jamais.  Vous pouvez désactiver temporairement l'avertissement à l'aide de `#pragma`, comme illustré dans l'exemple suivant :  
+ Visual C++ peut générer cet avertissement pour un chemin d'accès de code qui ne s'exécute jamais. Vous pouvez désactiver temporairement l'avertissement à l'aide de `#pragma`, comme illustré dans l'exemple suivant :  
   
  `#pragma(push)`  
   
@@ -48,9 +47,9 @@ la mémoire tampon 'identificateur' d'une taille de N octets sera dépassée ;
   
  `#pragma(pop)`  
   
- Cela empêche Visual C\+\+ de générer l'avertissement pour ce bloc de code spécifique.  `#pragma(push)` conserve l'état existant avant que `#pragma warning(disable: 4789)` le modifie.  `#pragma(pop)` restaure l'état de type push et supprime les effets de `#pragma warning(disable:4789)`.  Pour plus d'informations sur la directive de préprocesseur C\+\+ `#pragma`, consultez [warning](../../preprocessor/warning.md) et [Directives pragma et mot clé \_Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
+ Cela empêche Visual C++ de générer l'avertissement pour ce bloc de code spécifique. `#pragma(push)` conserve l'état existant avant que `#pragma warning(disable: 4789)` le modifie. `#pragma(pop)` restaure l'état de type push et supprime les effets de `#pragma warning(disable:4789)`. Pour plus d’informations sur la directive de préprocesseur C++ `#pragma`, consultez [avertissement](../../preprocessor/warning.md) et [Directives Pragma et mot clé _pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant génère l'erreur C4789.  
   
 ```  
@@ -73,7 +72,7 @@ int main()
 }  
 ```  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant génère également l'erreur C4789.  
   
 ```  

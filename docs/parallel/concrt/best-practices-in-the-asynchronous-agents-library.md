@@ -1,120 +1,130 @@
 ---
-title: "meilleures pratiques pour la biblioth&#232;que d’agents asynchrones | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "meilleures pratiques, bibliothèque d’agents asynchrones"
-  - "bibliothèque d’agents asynchrones, meilleure pratiques"
-  - "bibliothèque d’agents asynchrones, pratiques à éviter"
-  - "pratiques à éviter, bibliothèque d’agents asynchrones"
+title: "Meilleures pratiques de la bibliothèque d’Agents asynchrones | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- best practices, Asynchronous Agents Library
+- Asynchronous Agents Library, best practices
+- Asynchronous Agents Library, practices to avoid
+- practices to avoid, Asynchronous Agents Library
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a8d4b52839675334ab343adf48790bdce390dd5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# meilleures pratiques pour la biblioth&#232;que d’agents asynchrones
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ce document décrit comment tirer le meilleur parti de la bibliothèque d'agents asynchrones.  La bibliothèque d'agents fournit un modèle de programmation basé sur acteur et un passage de messages in\-process pour les tâches de traitement « pipeline » et de flux de données de granularité grossière.  
+# <a name="best-practices-in-the-asynchronous-agents-library"></a>meilleures pratiques pour la bibliothèque d’agents asynchrones
+Ce document décrit comment utiliser efficacement la bibliothèque d’Agents asynchrones. La bibliothèque d’Agents promeut un modèle de programmation basé sur acteur et un dans le processus passage des messages de flux de données à granularité grossière et les tâches de traitement « pipeline ».  
   
- Pour plus d'informations sur la Bibliothèque d'agents, consultez [Bibliothèque d'agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md).  
+ Pour plus d’informations sur la bibliothèque d’Agents, consultez [bibliothèque d’Agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md).  
   
 ##  <a name="top"></a> Sections  
- Ce document contient les sections suivantes :  
+ Ce document contient les sections suivantes :  
   
--   [Utiliser des agents pour isoler l'état](#isolation)  
+- [Utiliser des Agents pour isoler l’état](#isolation)  
   
--   [Utiliser un mécanisme de limitation pour restreindre le nombre de messages dans un pipeline de données](#throttling)  
+- [Utiliser un mécanisme de limitation pour limiter le nombre de Messages dans un Pipeline de données](#throttling)  
   
--   [Ne pas exécuter de travail de granularité fine dans un pipeline de données](#fine-grained)  
+- [N’effectuez pas de travail de granularité fine dans un Pipeline de données](#fine-grained)  
   
--   [Ne pas passer de charges de messages volumineux par valeur](#large-payloads)  
+- [Ne passez pas de charges de messages volumineux par valeur](#large-payloads)  
   
--   [Utiliser shared\_ptr dans un réseau de données lorsque la propriété n'est pas définie](#ownership)  
+- [Utiliser shared_ptr dans un données réseau lorsque la propriété n’est pas défini](#ownership)  
   
-##  <a name="isolation"></a> Utiliser des agents pour isoler l'état  
- La bibliothèque d'agents fournit des alternatives à l'état partagé en vous permettant de connecter des composants isolés via un mécanisme asynchrone de passage de message.  Les agents asynchrones sont les plus efficaces lorsqu'il s'agit d'isoler leur état interne d'autres composants.  Lorsque l'état est isolé, plusieurs composants ne traitent généralement pas les données partagées.  L'isolation d'état peut permettre à votre application d'être mise à l'échelle, car elle réduit les conflits sur la mémoire partagée.  L'isolation d'état réduit également le risque d'interblocage et les conditions de concurrence, étant donné que les composants ne doivent pas synchroniser l'accès aux données partagées.  
+##  <a name="isolation"></a>Utiliser des Agents pour isoler l’état  
+ La bibliothèque d’Agents fournit des alternatives à l’état partagé en vous permettant de connecter des composants isolés via un mécanisme de passage de messages asynchrone. Agents asynchrones sont plus efficaces lorsqu’ils isolent leur état interne d’autres composants. En l’état est isolé, plusieurs composants ne traitent généralement pas de données partagées. L’isolation d’état peut permettre à votre application à l’échelle, car il réduit la contention de mémoire partagée. L’isolation d’état réduit également la possibilité de conditions de concurrence et de blocage, car les composants n’ont pas synchroniser l’accès aux données partagées.  
   
- En général, vous isolez l'état dans un agent en maintenant les membres de données dans les sections `private` ou `protected` de la classe d'agent et en utilisant des mémoires tampons de messages pour communiquer les changements d'état.  L'exemple suivant montre la classe `basic_agent`, qui dérive de [concurrency::agent](../../parallel/concrt/reference/agent-class.md).  La classe `basic_agent` utilise deux mémoires tampons de messages pour communiquer avec les composants externes.  Une mémoire tampon de messages contient les messages entrants. L'autre mémoire tampon de messages contient les messages sortants.  
+ En général, vous isolez état dans un agent en maintenant les membres de données dans le `private` ou `protected` sections de la classe de l’agent et à l’aide de mémoires tampons de messages pour communiquer les changements d’état. L’exemple suivant illustre la `basic_agent` (classe), qui dérive de [concurrency::agent](../../parallel/concrt/reference/agent-class.md). La `basic_agent` classe utilise deux mémoires tampons de messages pour communiquer avec les composants externes. Un tampon de messages conserve les messages entrants. l’autre mémoire tampon de messages conserve les messages sortants.  
   
- [!code-cpp[concrt-simple-agent#1](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-asynchronous-agents-library_1.cpp)]  
+ [!code-cpp[concrt-simple-agent#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_1.cpp)]  
   
- Pour obtenir des exemples sur la définition et l'utilisation des agents, consultez [Procédure pas à pas : création d’une application basée sur un agent](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md) et [Procédure pas à pas : création des agents de flux de données](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md).  
+ Pour obtenir des exemples complets sur la façon de définir et utiliser des agents, consultez [procédure pas à pas : création d’une Application basée sur l’Agent](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md) et [procédure pas à pas : création d’un Agent de flux de données](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md).  
   
- \[[Premières](#top)\]  
+ [[Haut](#top)]  
   
-##  <a name="throttling"></a> Utiliser un mécanisme de limitation pour restreindre le nombre de messages dans un pipeline de données  
- De nombreux types de mémoires tampons de messages, tel que [concurrency::unbounded\_buffer](../Topic/unbounded_buffer%20Class.md), peuvent contenir un nombre illimité de messages.  Lorsqu'un producteur de message envoie des messages à un pipeline de données en moins de temps qu'il n'en faut au consommateur pour les traiter, la mémoire de l'application peut s'avérer insuffisante ou faible.  Vous pouvez utiliser un mécanisme de limitation, par exemple, un sémaphore, pour restreindre le nombre de messages actifs simultanément dans un pipeline de données.  
+##  <a name="throttling"></a>Utiliser un mécanisme de limitation pour limiter le nombre de Messages dans un Pipeline de données  
+ De nombreux types de tampon de messages, tels que [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md), peut contenir un nombre illimité de messages. Lorsqu’un producteur de message envoie des messages à un pipeline de données plus rapidement que le consommateur peut traiter ces messages, l’application peut entrer dans un état d’insuffisance de mémoire ou de mémoire insuffisante. Vous pouvez utiliser un mécanisme de limitation, par exemple, un sémaphore, pour limiter le nombre de messages actifs simultanément dans un pipeline de données.  
   
- L'exemple de base suivant montre comment utiliser un sémaphore pour restreindre le nombre de messages dans un pipeline de données.  Le pipeline de données utilise la fonction [concurrency::wait](../Topic/wait%20Function.md) pour simuler une opération qui dure au moins 100 millisecondes.  Étant donné que l'expéditeur produit des messages en moins de temps qu'il n'en faut au consommateur pour les traiter, cet exemple définit la classe `semaphore` pour permettre à l'application de restreindre le nombre de messages actifs.  
+ L’exemple de base suivant montre comment utiliser un sémaphore pour limiter le nombre de messages dans un pipeline de données. Les données de pipeline utilise la [concurrency::wait](reference/concurrency-namespace-functions.md#wait) (fonction) pour simuler une opération qui prend au moins 100 millisecondes. Étant donné que l’expéditeur génère des messages plus rapidement que le consommateur peut traiter ces messages, cet exemple définit la `semaphore` classe pour permettre à l’application limiter le nombre de messages actifs.  
   
- [!code-cpp[concrt-message-throttling#1](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-asynchronous-agents-library_2.cpp)]  
+ [!code-cpp[concrt-message-throttling#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_2.cpp)]  
   
- L'objet `semaphore` restreint le pipeline à traiter à deux messages simultanés maximum.  
+ Le `semaphore` objet limite le pipeline à traiter au maximum deux messages en même temps.  
   
- Dans cet exemple, le producteur envoie relativement peu de messages au consommateur.  Par conséquent, cet exemple ne présente pas une mémoire faible ou insuffisante.  Toutefois, ce mécanisme est utile lorsqu'un pipeline de données contient un nombre de messages relativement élevé.  
+ Le producteur dans cet exemple envoie relativement peu de messages au consommateur. Par conséquent, cet exemple ne présente pas une condition de mémoire insuffisante ou de mémoire insuffisante potentielle. Toutefois, ce mécanisme est utile lorsqu’un pipeline de données contient un nombre relativement élevé de messages.  
   
- Pour plus d'informations sur la création de la classe de sémaphore utilisée dans cet exemple, consultez [Comment : utiliser la classe Context pour implémenter un sémaphore coopératif](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).  
+ Pour plus d’informations sur la création de la classe de sémaphore qui est utilisée dans cet exemple, consultez [Comment : utiliser la classe Context pour implémenter un sémaphore coopératif](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).  
   
- \[[Premières](#top)\]  
+ [[Haut](#top)]  
   
-##  <a name="fine-grained"></a> Ne pas exécuter de travail de granularité fine dans un pipeline de données  
- La bibliothèque d'agents est très utile lorsque la granularité du travail exécuté par un pipeline de données est plutôt grossière.  Par exemple, un composant d'application peut lire des données à partir d'un fichier ou d'une connexion réseau et envoyer de temps en temps cet élément vers un autre composant.  Le protocole utilisé par la bibliothèque d'agents pour propager les messages provoque une surcharge du mécanisme de passage de message plus importante que celle des éléments de tâche parallèles fournis par la [bibliothèque de modèles parallèles](../../parallel/concrt/parallel-patterns-library-ppl.md).  Par conséquent, vous devez vous assurer que le travail effectué par un pipeline de données dure assez longtemps pour compenser cette surcharge.  
+##  <a name="fine-grained"></a>N’effectuez pas de travail de granularité fine dans un Pipeline de données  
+ La bibliothèque d’Agents est très utile lorsque le travail effectué par un pipeline de données est plutôt grossière. Par exemple, un composant d’application peut lire les données à partir d’un fichier ou une connexion réseau et occasionnellement les envoyer à un autre composant. Le protocole utilisé par la bibliothèque d’Agents pour propager des messages provoque le mécanisme de passage de messages à la plus importante que celle des tâche parallèles fournis par le [bibliothèque de modèles parallèles](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL). Par conséquent, assurez-vous que le travail effectué par un pipeline de données est suffisamment longue pour compenser cette surcharge.  
   
- Bien qu'un pipeline de données soit plus efficace lorsque la granularité de ses tâches est grossière, chaque étape du pipeline de données peut utiliser des éléments de la bibliothèque de modèles parallèles, tels que les groupes de tâches et les algorithmes parallèles, pour effectuer un travail de granularité plus fine.  Pour obtenir un exemple de réseau de données de granularité grossière qui utilise un parallélisme de granularité fine à chaque étape de traitement, consultez [Procédure pas à pas : création d'un réseau de traitement d'image](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).  
+ Même si un pipeline de données est plus efficace lorsque ses tâches sont à granularité grossière, chaque étape du pipeline de données permet d’effectuer des constructions de bibliothèque de modèles parallèles telles que les groupes de tâches et des algorithmes parallèles pour plus affinées travailler. Pour obtenir un exemple d’un réseau de données à granularité grossière qui utilise un parallélisme affiné à chaque étape de traitement, consultez [procédure pas à pas : création d’un réseau de traitement d’Image](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).  
   
- \[[Premières](#top)\]  
+ [[Haut](#top)]  
   
-##  <a name="large-payloads"></a> Ne pas passer de charges de messages volumineux par valeur  
- Dans certains cas, le runtime crée une copie de chaque message qu'il passe d'une mémoire tampon de messages à une autre mémoire tampon de messages.  Par exemple, la classe [concurrency::overwrite\_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) offre une copie de chaque message qu'elle reçoit à chacune de ses cibles.  Le runtime crée également une copie des données du message lorsque vous utilisez des fonctions de passage de messages, telles que [concurrency::send](../Topic/send%20Function.md) et [concurrency::receive](../Topic/receive%20Function.md) pour écrire des messages dans un tampon de message et pour lire des messages provenant d'une mémoire tampon de messages.  Bien que ce mécanisme permette d'éliminer le risque d'écrire simultanément sur des données partagées, il peut détériorer les performances de la mémoire lorsque la charge de message est relativement importante.  
+##  <a name="large-payloads"></a>Ne passez pas de charges de messages volumineux par valeur  
+
+ Dans certains cas, le runtime crée une copie de chaque message qu’il transmet à partir d’une mémoire tampon des messages à une autre mémoire tampon des messages. Par exemple, le [concurrency::overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) classe offre une copie de chaque message qu’il reçoit à chacune de ses cibles. Le runtime crée également une copie des données du message lorsque vous utilisez les fonctions de passage de messages, tels que [concurrency::send](reference/concurrency-namespace-functions.md#send) et [concurrency::receive](reference/concurrency-namespace-functions.md#receive) pour écrire et lire des messages à partir d’un message mémoire tampon. Bien que ce mécanisme permet d’éliminer le risque d’écrire simultanément aux données partagées, il peut entraîner des performances médiocres de mémoire lors de la charge utile du message est relativement importante.  
   
- Vous pouvez utiliser des pointeurs ou des références pour améliorer les performances de la mémoire lorsque vous passez des messages dont la charge est importante.  L'exemple suivant compare le passage par valeur de messages importants au passage de pointeurs vers le même type de message.  L'exemple définit deux types d'agent, `producer` et `consumer`, qui agissent sur les objets `message_data`.  L'exemple compare le temps nécessaire pour que le producteur envoie plusieurs objets `message_data` au consommateur au temps nécessaire pour que l'agent producteur envoie plusieurs pointeurs vers des objets `message_data` au consommateur.  
+ Vous pouvez utiliser des pointeurs ou références pour améliorer les performances de la mémoire lorsque vous transmettez des messages qui ont une charge utile importante. L’exemple suivant compare les messages volumineux de passage par valeur au passage de pointeurs vers le même type de message. L’exemple définit deux types d’agents, `producer` et `consumer`, qui agissent sur `message_data` objets. L’exemple compare le temps requis pour le producteur envoie plusieurs `message_data` au consommateur à l’heure qui est requis pour l’agent producteur envoie plusieurs pointeurs vers les objets `message_data` objets au consommateur.  
   
- [!code-cpp[concrt-message-payloads#1](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-asynchronous-agents-library_3.cpp)]  
+ [!code-cpp[concrt-message-payloads#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_3.cpp)]  
   
- Cet exemple génère l'exemple de sortie suivant :  
+ Cet exemple génère la sortie suivante :  
   
-  **Utilisation de message\_data…**  
-**a pris 437ms.**  
-**Utilisation de message\_data\*…**  
-**a pris 47ms.** La version qui utilise des pointeurs est plus performante, car elle n'exige pas que le runtime crée une copie complète de chaque objet `message_data` passé du producteur au consommateur.  
+```Output  
+Using message_data...  
+took 437ms.  
+Using message_data*...  
+took 47ms.  
+```  
   
- \[[Premières](#top)\]  
+ La version qui utilise des pointeurs est plus performante, car elle élimine le besoin pour le runtime créer une copie complète de chaque `message_data` objet qu’il transmet du producteur au consommateur.  
   
-##  <a name="ownership"></a> Utiliser shared\_ptr dans un réseau de données lorsque la propriété n'est pas définie  
- Lorsque vous envoyez un message par le pointeur via un pipeline ou un réseau de passage de message, vous allouez en général de la mémoire pour chaque message à l'avant du réseau et vous libérez de la mémoire à l'arrière du réseau.  Bien que ce mécanisme fonctionne habituellement correctement, il est difficile ou impossible de l'utiliser dans certains cas.  Envisagez le cas où le réseau de données contient plusieurs nœuds de fin.  Dans ce cas, il n'existe aucun emplacement évident pour libérer de la mémoire pour les messages.  
+ [[Haut](#top)]  
   
- Pour résoudre ce problème, vous pouvez utiliser un mécanisme, par exemple, [std::shared\_ptr](../../standard-library/shared-ptr-class.md), qui permet à un pointeur d'être partagé par plusieurs composants.  Lorsque l'objet final `shared_ptr` qui possède une ressource est détruit, la ressource est également libérée.  
+##  <a name="ownership"></a>Utiliser shared_ptr dans un données réseau lorsque la propriété n’est pas défini  
+ Lorsque vous envoyez des messages par le pointeur via un pipeline de transmission de messages ou réseau, vous généralement allouez la mémoire pour chaque message à l’avant du réseau et libérez de la mémoire à la fin de réseau. Bien que ce mécanisme fonctionne habituellement correctement, il existe des cas dans lesquels il est difficile ou impossible à l’utiliser. Par exemple, considérez le cas où le réseau de données contient plusieurs nœuds de fin. Dans ce cas, il n’existe aucun emplacement évident pour libérer la mémoire pour les messages.  
   
- L'exemple suivant illustre l'utilisation de `shared_ptr` pour partager des valeurs de pointeur entre plusieurs mémoires tampons de messages.  L'exemple connecte un objet [concurrency::overwrite\_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) à trois objets [concurrency::call](../../parallel/concrt/reference/call-class.md).  La classe `overwrite_buffer` offre des messages à chacune de ses cibles.  Étant donné qu'il existe plusieurs propriétaires pour les données à l'arrière du réseau de données, cet exemple utilise `shared_ptr` pour permettre à chaque objet `call` de partager la propriété des messages.  
+ Pour résoudre ce problème, vous pouvez utiliser un mécanisme, par exemple, [std::shared_ptr](../../standard-library/shared-ptr-class.md), qui permet à un pointeur qui seront détenus par plusieurs composants. Lors de la dernière `shared_ptr` qui possède une ressource est détruit, la ressource est également libérée.  
   
- [!code-cpp[concrt-message-sharing#1](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-asynchronous-agents-library_4.cpp)]  
+ L’exemple suivant montre comment utiliser `shared_ptr` pour partager des valeurs de pointeur entre plusieurs mémoires tampons de messages. L’exemple se connecte un [concurrency::overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) objet à trois [concurrency::call](../../parallel/concrt/reference/call-class.md) objets. La `overwrite_buffer` classe offre des messages à chacune de ses cibles. Étant donné que plusieurs propriétaires des données à la fin de réseau, cet exemple utilise `shared_ptr` pour permettre à chaque `call` objet à partager la propriété des messages.  
   
- Cet exemple génère l'exemple de sortie suivant :  
+ [!code-cpp[concrt-message-sharing#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_4.cpp)]  
   
-  **Création de la ressource 42...**  
-**receiver1: ressource 42 reçue**  
-**Création de la resource 64...**  
-**receiver2: ressource 42 reçue**  
-**receiver1: ressource 64 reçue**  
-**Ressource de destruction 42…**  
-**receiver2: ressource 64 reçue**  
-**Ressource de destruction 64…**   
-## Voir aussi  
- [Meilleures pratiques sur le runtime d'accès concurrentiel](../../parallel/concrt/concurrency-runtime-best-practices.md)   
- [Bibliothèque d'agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md)   
- [Procédure pas à pas : création d’une application basée sur un agent](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)   
- [Procédure pas à pas : création des agents de flux de données](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)   
- [Procédure pas à pas : création d'un réseau de traitement d'image](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)   
- [Meilleures pratiques de la Bibliothèque de modèles parallèles](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)   
- [Meilleures pratiques en général du runtime d’accès concurrentiel](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
+ Cet exemple génère la sortie suivante :  
+  
+```Output  
+Creating resource 42...  
+receiver1: received resource 42  
+Creating resource 64...  
+receiver2: received resource 42  
+receiver1: received resource 64  
+Destroying resource 42...  
+receiver2: received resource 64  
+Destroying resource 64...  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Meilleures pratiques de Runtime d’accès concurrentiel](../../parallel/concrt/concurrency-runtime-best-practices.md)   
+ [Bibliothèque d’agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md)   
+ [Procédure pas à pas : Création d’une Application basée sur l’Agent](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)   
+ [Procédure pas à pas : Création d’un Agent de flux de données](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)   
+ [Procédure pas à pas : Création d’un réseau de traitement d’Image](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)   
+ [Meilleures pratiques de la bibliothèque de modèles parallèles](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)   
+ [Bonnes pratiques en général du runtime d’accès concurrentiel](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
+

@@ -1,58 +1,62 @@
 ---
-title: "Flipping an Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], flipping and rotating images"
-  - "images [C++], flipping"
-  - "images [C++], rotating"
+title: "Retournement d’une Image (Éditeur d’images pour les icônes) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], flipping and rotating images
+- images [C++], flipping
+- images [C++], rotating
 ms.assetid: a63d251c-7343-4ad6-9442-1faa04a9a2a1
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 394b92ce5103a0aa40cf170ede96624104c868cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Flipping an Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vous pouvez retourner ou faire pivoter une image pour :  
+# <a name="flipping-an-image-image-editor-for-icons"></a>Retournement d'une image (Éditeur d'images pour les icônes)
+Vous pouvez retourner ou faire pivoter une image à :  
   
--   Créer une image miroir de l'original.  
+-   Créer une image miroir d’origine.  
   
--   Retourner l'image.  
+-   Retournez l’image.  
   
--   Faire pivoter l'image vers la droite de 90 degrés.  
+-   Pivoter à droite de 90 degrés à la fois.  
   
-### Pour retourner l'image horizontalement \(image miroir\)  
+### <a name="to-flip-the-image-horizontally-mirror-image"></a>Pour retourner l’image horizontalement (image miroir)  
   
-1.  Dans le menu **Image**, cliquez sur **Retourner horizontalement**.  
+1.  À partir de la **Image** menu, choisissez **retourner horizontalement**.  
   
-### Pour retourner l'image verticalement  
+### <a name="to-flip-the-image-vertically-turn-upside-down"></a>Pour retourner l’image verticalement (renverser)  
   
-1.  Dans le menu **Image**, cliquez sur **Retourner verticalement**.  
+1.  À partir de la **Image** menu, choisissez **retourner verticalement**.  
   
-### Pour faire pivoter une image de 90 degrés  
+### <a name="to-rotate-the-image-90-degrees"></a>Faire pivoter l’image de 90 degrés  
   
-1.  Dans le menu **Image**, cliquez sur **Faire pivoter de 90 degrés**.  
+1.  À partir de la **Image** menu, choisissez **pivoter de 90 degrés**.  
   
     > [!NOTE]
-    >  Vous pouvez également utiliser les [touches accélérateur \(raccourci\)](../mfc/accelerator-keys-image-editor-for-icons.md) pour ces commandes ou accéder aux commandes à partir du menu contextuel \(cliquez en dehors de l'image dans l'Éditeur d'images\).  
+    >  Vous pouvez également utiliser le [touches accélérateur (raccourci)](../windows/accelerator-keys-image-editor-for-icons.md) pour ces commandes ou accéder aux commandes dans le menu contextuel (cliquez en dehors de l’image dans l’éditeur d’images).  
   
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l'ajout de fichiers de ressources aux projets managés, l'accès aux ressources, l'affichage de ressources statiques et l'assignation de chaînes de ressources aux propriétés, et ce manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/fr-fr/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Configuration requise  
   
- Aucun  
+ Aucun.  
   
-## Voir aussi  
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Voir aussi  
+ [Modification de ressources graphiques](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)
+

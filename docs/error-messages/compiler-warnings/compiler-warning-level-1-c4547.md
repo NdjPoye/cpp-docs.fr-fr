@@ -1,36 +1,35 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4547 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4547"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4547"
+title: Compilateur avertissement (niveau 1) C4547 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4547
+dev_langs: C++
+helpviewer_keywords: C4547
 ms.assetid: 3edf1c2e-c0d5-444d-ae83-44a7cce24bb2
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 634301f436a51539aa895f05ac115161088e0f67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4547
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'opérateur' : l'opérateur avant la virgule n'a pas d'effet ; opérateur avec effet secondaire attendu  
+# <a name="compiler-warning-level-1-c4547"></a>Avertissement du compilateur (niveau 1) C4547
+'opérateur' : opérateur avant la virgule n’a pas d’effet ; opérateur avec effet secondaire attendu  
   
  Le compilateur a détecté une expression avec virgules incorrecte.  
   
- Cet avertissement est désactivé par défaut.  Pour plus d'informations, consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Cet avertissement est désactivé par défaut. Pour plus d'informations, consultez [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   
- L'exemple suivant génère l'erreur C4547 :  
+ L’exemple suivant génère l’erreur C4547 :  
   
 ```  
 // C4547.cpp  

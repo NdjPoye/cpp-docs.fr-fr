@@ -22,11 +22,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 09c3ac2317fce1e539ed02a501078fe83c217ca1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aca0affd587eb0d90b312e13687d138300f94570
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt;, opérateurs
 ||||  
@@ -104,7 +105,7 @@ basic_ostream<CharType, Traits>& operator<<(
 ### <a name="remarks"></a>Notes  
  La fonction de modèle surcharge **operator<<** et autorise l’écriture d’un bitset sans d’abord le convertir en chaîne. La fonction de modèle est exécutée :  
   
- **ostr** << _ *Right*. [to_string](https://msdn.microsoft.com/library/2f93c55z.aspx) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )  
+ **ostr** << _ *Right*. [to_string](bitset-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )  
   
 ### <a name="example"></a>Exemple  
   
@@ -161,7 +162,7 @@ _Istr,
  La fonction de modèle retourne la chaîne `_Istr`.  
   
 ### <a name="remarks"></a>Notes  
- La fonction de modèle surcharge **operator>>** pour stocker dans le bitset _ *Right* la valeur bitset( `str`), où `str` est un objet de type [basic_string](https://msdn.microsoft.com/library/syxtdd4f.aspx) < **CharType**, **Traits**, **allocator**\< **CharType**> > **&** extrait de `_Istr`.  
+ La fonction de modèle surcharge **operator>>** pour stocker dans le bitset _ *Right* la valeur bitset( `str`), où `str` est un objet de type [basic_string](basic-string-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > **&** extrait de `_Istr`.  
   
  La fonction de modèle extrait des éléments de `_Istr` et les insère dans le bitset jusqu’à ce que l’une de ces conditions soit remplie :  
   

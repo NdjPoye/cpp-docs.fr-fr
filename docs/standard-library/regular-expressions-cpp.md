@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c32cc76c27b89bd3820e24bc7f38da0d12e0add
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 81eb92a93b60259abdb90020bb6e89cb0664eea5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regular-expressions-c"></a>Expressions régulières (C++)
 La bibliothèque standard C++ prend en charge plusieurs grammaires d’expressions régulières. Cette rubrique décrit les variations de grammaire disponibles lors de l’utilisation d’expressions régulières.  
@@ -34,7 +35,7 @@ La grammaire d’expression régulière à utiliser est spécifiée à l’aide 
 -   `extended`: La POSIX étendue des expressions régulières ou ERE.
 -   `awk`: Il s’agit de `extended`, mais il implique d’autres séquences d’échappement pour les caractères non imprimables.
 -   `grep`: Il s’agit de `basic`, mais il permet également un saut de ligne ('\n') caractères comme séparateur d’alternatives.
--   `egrep`: Il s’agit de `extended`, mais elle permet également de caractères de saut de ligne séparer les alternatios.
+-   `egrep`: Il s’agit de `extended`, mais elle permet également de caractères de saut de ligne séparer les alternatives.
 
 Par défaut, si aucune grammaire n’est spécifiée, `ECMAScript` est supposé. Grammaire qu’une seule peut être spécifiée.  
   
@@ -73,7 +74,7 @@ Zéro ou plusieurs indicateurs peuvent être combinées avec la grammaire pour s
   
 -   Un *échappement d’identité* au format "\\`k`", qui correspond au caractère `k` dans la séquence cible.  
   
- Exemples :  
+ Exemples :  
   
 -   "a" correspond à la séquence cible "a", mais pas aux séquences cibles "B", "b" ou "c".  
   
@@ -109,7 +110,7 @@ Zéro ou plusieurs indicateurs peuvent être combinées avec la grammaire pour s
   
 -   Un *caractère d’échappement dsw* au format "\d", "\D", "\s", "\S", "\w", "\W". Fournit un nom court pour une classe de caractères.  
   
- Exemples :  
+ Exemples :  
   
 -   "(:a)" correspond à la séquence cible "a", mais "(:a)\1" n’est pas valide, car il n’existe aucun groupe de capture 1.  
   
@@ -348,7 +349,7 @@ Zéro ou plusieurs indicateurs peuvent être combinées avec la grammaire pour s
   
  Dans `ECMAScript`, utilisez '\\]' pour représenter le caractère ']' dans une expression entre crochets.  
   
- Exemples :  
+ Exemples :  
   
 -   "[]a" correspond à la séquence cible "a", car l'expression entre crochets est vide.  
   
@@ -462,5 +463,5 @@ Zéro ou plusieurs indicateurs peuvent être combinées avec la grammaire pour s
 |"$nn"||La séquence de caractères qui correspond au groupe de capture à la position `nn`, où `nn` est un nombre compris entre 10 et 99 (`[match[nn].first, match[nn].second)`)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la bibliothèque C++ Standard](../standard-library/cpp-standard-library-overview.md)
+ [Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)
 

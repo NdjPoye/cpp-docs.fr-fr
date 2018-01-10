@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 93bb3b8f1b765b70128537b096142a9d7ac3ae8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 845c2fab98d246ccee51aff721b1ceb011e3803c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Directives pragma et mot clé _Pragma
 Les directives pragma spécifient des fonctionnalités de compilateur spécifiques à l’ordinateur ou au système d’exploitation. Le mot clé `__pragma`, qui est spécifique au compilateur Microsoft, vous permet de coder des directives pragma dans des définitions de macros.  
@@ -40,7 +41,7 @@ Les directives pragma spécifient des fonctionnalités de compilateur spécifiqu
 __pragma(token-string)  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Chaque implémentation de C et C++ prend en charge des fonctionnalités spécifiques de son ordinateur hôte ou de son système d’exploitation. Certains programmes, par exemple, doivent exercer un contrôle précis des zones de mémoire où les données sont placées, ou contrôler la façon dont certaines fonctions reçoivent les paramètres. Les directives `#pragma` permettent à chaque compilateur d'offrir des fonctionnalités propres aux ordinateurs et aux systèmes d'exploitation tout en conservant une compatibilité globale avec les langages C et C++.  
   
  Les pragmas sont spécifiques à l'ordinateur ou au système d'exploitation, par définition, et sont généralement différents pour chaque compilateur. Les pragmas peuvent être utilisés dans les instructions conditionnelles pour fournir de nouvelles fonctionnalités de préprocesseur ou pour fournir des informations définies par l'implémentation au compilateur.  

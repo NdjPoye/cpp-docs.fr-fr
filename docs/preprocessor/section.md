@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bdf0a02155329de5b77ffa67a8bc77ab34cc3e07
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc6035caeb3b2fe466d18ea92300b3135a6189f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="section"></a>section
 Crée une section dans un fichier .obj.  
@@ -35,7 +36,7 @@ Crée une section dans un fichier .obj.
 #pragma section( "section-name" [, attributes] )  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La signification des termes du contrat *segment* et *section* sont interchangeables dans cette rubrique.  
   
  Une fois qu'une section est définie, elle reste valide pour le reste de la compilation. Toutefois, vous devez utiliser [__declspec (Allocate)](../cpp/allocate.md) ou rien ne sera placé dans la section.  

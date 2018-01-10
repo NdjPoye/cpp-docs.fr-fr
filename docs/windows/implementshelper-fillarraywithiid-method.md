@@ -1,32 +1,33 @@
 ---
-title: "ImplementsHelper::FillArrayWithIid, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::ImplementsHelper::FillArrayWithIid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FillArrayWithIid (méthode)"
+title: "Implementshelper::fillarraywithiid, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::ImplementsHelper::FillArrayWithIid
+dev_langs: C++
+helpviewer_keywords: FillArrayWithIid method
 ms.assetid: f60035ee-b7d6-4a08-966d-f88c646944c3
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: eeb2254933dc0f9f5e4b99ba4e010dbe3afbb7cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ImplementsHelper::FillArrayWithIid, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="implementshelperfillarraywithiid-method"></a>ImplementsHelper::FillArrayWithIid, méthode
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void FillArrayWithIid(  
@@ -34,21 +35,21 @@ void FillArrayWithIid(
    _Inout_ IID* iids) throw();  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `index`  
- Un index de base zéro indiquant le premier élément du tableau pour cette opération.  Lorsque cette opération se termine, `index` est incrémenté de 1.  
+ Index de base zéro qui indique l’élément de tableau de départ pour cette opération. Lorsque cette opération est terminée, `index` est incrémentée de 1.  
   
  `iids`  
- Un tableau d'IIDs de type.  
+ Un tableau de type IID.  
   
-## Notes  
- Insère l'ID d'interface spécifié par le zérotième paramètre de modèle actuel dans l'élément de tableau spécifié.  
+## <a name="remarks"></a>Notes  
+ Insère l’ID d’interface spécifié par le paramètre de modèle actuel placée dans l’élément de tableau spécifié.  
   
-## Configuration requise  
- **En\-tête:** implements.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** implements.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
- [ImplementsHelper, structure](../windows/implementshelper-structure.md)   
+## <a name="see-also"></a>Voir aussi  
+ [ImplementsHelper (Structure)](../windows/implementshelper-structure.md)   
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

@@ -14,11 +14,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a47dddb9950378d2b76e30893560dc0c364d7cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e529a40f8eb876791f49559d3970696fdece489d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>Casts de style C avec /clr (C++/CLI)
 La rubrique suivante s’applique uniquement au Common Language Runtime.  
@@ -37,7 +40,7 @@ La rubrique suivante s’applique uniquement au Common Language Runtime.
   
  Si aucun des conversions répertoriées ci-dessus est valide et si le type de l’expression et le type de cible sont des types de référence CLR, cast de style C mappe à une vérification de runtime (instruction de MSIL castclass). Sinon, un cast de style C est considéré comme non valide et que le compilateur émet une erreur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un cast de style C n’est pas recommandé. Lors de la compilation avec [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), utilisez [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
   
  L’exemple suivant montre un cast de style C qui est mappé à un `const_cast`.  
@@ -162,7 +165,7 @@ int main() {
 }  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/clr**  
   
 ## <a name="see-also"></a>Voir aussi  

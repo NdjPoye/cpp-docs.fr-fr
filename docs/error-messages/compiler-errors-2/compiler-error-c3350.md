@@ -15,14 +15,15 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3ec6d0823fe29b51a002f6c46f728f0c526c6169
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14aa2cf76173861decffdd8d951ce0210d82b67e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3350"></a>Erreur du compilateur C3350
-'délégué' : un constructeur délégué attend 'nombre' argument(s)  
+'délégué' : un constructeur délégué attend 'nombre' argument(s)  
   
  Quand vous créez une instance d’un délégué, vous devez passer deux arguments, une instance du type contenant la fonction déléguée et la fonction.  
   

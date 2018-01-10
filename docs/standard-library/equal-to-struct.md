@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 416b506d9008ef808016322f9d1c548bcec93450
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c5f5797bb502fb042f8ea2048fb0ad0558fa959
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="equalto-struct"></a>equal_to, struct
 Prédicat binaire qui effectue l’opération d’égalité ( `operator==`) sur ses arguments.  
@@ -58,7 +59,7 @@ struct equal_to<void>
 ## <a name="return-value"></a>Valeur de retour  
  Résultat de `Left == Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator==`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’égalité des objets de type `Type` doit pouvoir être comparée. `operator==` défini sur l’ensemble d’objets doit donc satisfaire les propriétés mathématiques d’une relation d’équivalence. Tous les types pointeur et numériques intégrés répondent à cette exigence.  
   
 ## <a name="example"></a>Exemple  

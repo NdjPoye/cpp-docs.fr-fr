@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1bf4c7a67abe03a1138eb2eb016426675c20355c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f4a6dc351d0184d43a1cf79f1cec9e9bae33aecf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pack"></a>pack
 Spécifie l'alignement de compression pour des membres de structure, d'union et de classe.  
@@ -35,7 +36,7 @@ Spécifie l'alignement de compression pour des membres de structure, d'union et 
 #pragma pack( [ show ] | [ push | pop ] [, identifier ] , n  )  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La compression d'une classe consiste à placer ses membres directement les uns après les autres dans la mémoire, ce qui peut signifier que certains ou l'ensemble des membres peuvent être alignés sur une limite inférieure à l'alignement par défaut de l'architecture cible. `pack` donne le contrôle au niveau de la déclaration des données. Cela diffère de l’option du compilateur [/Zp](../build/reference/zp-struct-member-alignment.md), qui fournit uniquement un contrôle au niveau du module. `pack` entre en vigueur dès la première déclaration `struct`, `union` ou `class` après détection du pragma. `pack` n'a aucun effet sur les définitions. Appel de `pack` sans arguments affecte `n` à la valeur définie dans l’option du compilateur **/Zp**. Si l'option du compilateur n'est pas définie, la valeur par défaut est 8.  
   
  Si vous modifiez l'alignement d'une structure, il est possible qu'elle n'utilise pas autant d'espace en mémoire, mais vous risquez de constater une baisse des performances ou même d'obtenir une exception générée par le matériel relative au non-alignement de l'accès.  Vous pouvez modifier ce comportement d’exception à l’aide de [SetErrorMode](http://msdn.microsoft.com/library/windows/desktop/ms680621).  

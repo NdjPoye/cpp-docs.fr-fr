@@ -15,11 +15,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 900664f43b132b118a8da0b855d5d5291fd79fee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 929ed0971f9b69bf8e98ae247957110e78ac33ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccreatecontext-structure"></a>Structure de CCreateContext
 L’infrastructure utilise le `CCreateContext` lorsqu’il crée les fenêtres frame et les vues qui sont associés à un document de la structure.  
@@ -30,7 +31,7 @@ L’infrastructure utilise le `CCreateContext` lorsqu’il crée les fenêtres f
 struct CCreateContext  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CCreateContext`est une structure et ne dispose pas d’une classe de base.  
   
  Lorsque vous créez une fenêtre, les valeurs dans cette structure fournissent les informations utilisées pour connecter les composants d’un document à l’affichage de ses données. Vous devez uniquement utiliser `CCreateContext` si vous substituez les parties du processus de création.  
@@ -64,7 +65,7 @@ struct CCreateContext
   
  Pour plus d’informations sur `CCreateContext`, consultez l’exemple MFC [VIEWEX](../../visual-cpp-samples.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxext.h  
   
 ## <a name="see-also"></a>Voir aussi  

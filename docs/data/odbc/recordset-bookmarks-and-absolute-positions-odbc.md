@@ -1,62 +1,64 @@
 ---
-title: "Recordset&#160;: signets et positions absolues (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SetAbsolutePosition"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "positions absolues, ODBC (recordsets)"
-  - "signets"
-  - "signets, CDBVariant"
-  - "signets, ODBC (recordsets)"
-  - "CDBVariant (classe), signets"
-  - "ODBC (curseurs), position absolue dans les recordsets"
-  - "GetBookmark (méthode)"
-  - "ODBC (recordsets), positions absolues"
-  - "ODBC (recordsets), signets"
-  - "positionnement d'enregistrements"
-  - "enregistrements (positions des)"
-  - "recordsets, positions absolues"
-  - "recordsets, signets"
-  - "SetAbsolutePosition (méthode)"
-  - "SetAbsolutePosition (méthode), signets"
-  - "SetBookmark (méthode)"
+title: "Recordset : Signets et Positions absolues (ODBC) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SetAbsolutePosition
+dev_langs: C++
+helpviewer_keywords:
+- CDBVariant class, bookmarks
+- absolute positions, ODBC recordsets
+- bookmarks, CDBVariant
+- bookmarks, ODBC recordsets
+- ODBC recordsets, absolute positions
+- ODBC recordsets, bookmarks
+- cursors [ODBC], absolute position in recordsets
+- recordsets, bookmarks
+- bookmarks
+- SetAbsolutePosition method
+- recordsets, absolute positions
+- positioning records
+- SetBookmark method
+- record positioning
+- GetBookmark method
+- SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4b206e5d09d86613af0585df7510b0f88397984a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Recordset&#160;: signets et positions absolues (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique s'applique aux classes ODBC MFC.  
+# <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Recordset : signets et positions absolues (ODBC)
+Cette rubrique s’applique aux classes ODBC MFC.  
   
- Lorsque vous naviguez au sein d'un recordset, il arrive fréquemment que vous ayez besoin de revenir sur un enregistrement donné.  Deux méthodes, le signet et la position absolue, permettent de répondre à ce besoin.  
+ Lors de la navigation dans un jeu d’enregistrements, vous devez souvent de revenir à un enregistrement particulier. Un signet et la position absolue fournissent deux de ces méthodes.  
   
  Cette rubrique explique :  
   
--   [comment utiliser les signets](#_core_bookmarks_in_mfc_odbc) ;  
+-   [Comment utiliser des signets](#_core_bookmarks_in_mfc_odbc).  
   
--   [comment attribuer une position absolue à l'enregistrement courant](#_core_absolute_positions_in_mfc_odbc).  
+-   [Comment définir l’enregistrement actif à l’aide des positions absolues](#_core_absolute_positions_in_mfc_odbc).  
   
-##  <a name="_core_bookmarks_in_mfc_odbc"></a> Signets dans ODBC MFC  
- Un signet identifie un enregistrement de façon unique.  Lorsque vous naviguez au sein d'un recordset, vous ne pouvez pas toujours vous fier à la position absolue d'un enregistrement dans la mesure où les enregistrements peuvent être supprimés du recordset.  La solution la plus fiable pour conserver la trace de la position d'un enregistrement consiste à utiliser un signet.  La classe `CRecordset` propose des fonctions membres pour :  
+##  <a name="_core_bookmarks_in_mfc_odbc"></a>Signets dans ODBC MFC  
+ Un signet identifie de façon unique un enregistrement. Lorsque vous naviguez dans un jeu d’enregistrements, vous ne pouvez pas compter toujours à la position absolue d’un enregistrement, car les enregistrements peuvent être supprimés à partir de l’ensemble d’enregistrements. La méthode fiable pour effectuer le suivi de la position d’un enregistrement est à utiliser un signet. Classe `CRecordset` fournit les fonctions membres pour :  
   
--   obtenir le signet de l'enregistrement courant, de telle sorte que vous puissiez le sauvegarder dans une variable \([GetBookmark](../Topic/CRecordset::GetBookmark.md)\) ;  
+-   Obtenir le signet de l’enregistrement actuel, afin de pouvoir l’enregistrer dans une variable ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark)).  
   
--   atteindre rapidement un enregistrement donné en indiquant son signet, préalablement sauvegardé dans une variable \([SetBookmark](../Topic/CRecordset::SetBookmark.md)\).  
+-   Atteindre rapidement un enregistrement donné en indiquant son signet, vous avez enregistré plus haut dans une variable ([SetBookmark](../../mfc/reference/crecordset-class.md#setbookmark)).  
   
- L'exemple ci\-après illustre comment utiliser les fonctions membres pour marquer l'enregistrement courant et y revenir par la suite.  
+ L’exemple suivant illustre l’utilisation de ces fonctions membres pour marquer l’enregistrement en cours et y revenir plus tard :  
   
 ```  
 // rs is a CRecordset or  
@@ -71,23 +73,23 @@ rs.GetBookmark( varRecordToReturnTo );
 rs.SetBookmark( varRecordToReturnTo );  
 ```  
   
- Il n'est pas nécessaire d'extraire le type de données sous\-jacent de l'objet [CDBVariant Class](../../mfc/reference/cdbvariant-class.md).  Assignez la valeur à l'aide de `GetBookmark` et accédez au signet avec `SetBookmark`.  
+ Vous n’avez pas besoin d’extraire le type de données sous-jacent à partir de la [CDBVariant (classe)](../../mfc/reference/cdbvariant-class.md) objet. Affectez la valeur avec `GetBookmark` et revenir à ce signet avec `SetBookmark`.  
   
 > [!NOTE]
->  Remarque   Il se peut, en fonction du pilote ODBC et du type du recordset, que les signets ne soient pas pris en charge.  Vous pouvez facilement savoir si les signets sont pris en charge en appelant [CRecordset::CanBookmark](../Topic/CRecordset::CanBookmark.md).  Par ailleurs, si les signets sont pris en charge, vous devez choisir explicitement de les implémenter en précisant l'option **CRecordset::useBookmarks** dans la fonction membre [CRecordset::Open](../Topic/CRecordset::Open.md).  Vous devez également vérifier que les signets persistent après certaines opérations sur les recordsets.  Par exemple, si vous effectuez une opération **Requery** \(lancement d'une nouvelle requête\) sur un recordset, il se peut que les signets ne soient plus valides.  Appelez [CDatabase::GetBookmarkPersistence](../Topic/CDatabase::GetBookmarkPersistence.md) pour vérifier si vous pouvez appeler `SetBookmark`sans risque.  
+>  Selon votre pilote ODBC et le type de jeu d’enregistrements, les signets ne peuvent pas en charge. Vous pouvez facilement déterminer si les signets sont pris en charge en appelant [CRecordset::CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark). En outre, si les signets sont pris en charge, vous devez choisir explicitement de les implémenter en spécifiant le **CRecordset::useBookmarks** option dans le [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) fonction membre. Vous devez également vérifier les signets persistent après certaines opérations de jeu d’enregistrements. Par exemple, si vous **Requery** un jeu d’enregistrements, signets peuvent ne plus être valides. Appelez [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) pour vérifier si vous pouvez appeler en toute sécurité `SetBookmark`.  
   
-##  <a name="_core_absolute_positions_in_mfc_odbc"></a> Positions absolues dans ODBC MFC  
- Outre les signets, la classe `CRecordset` permet de définir l'enregistrement courant en indiquant sa position ordinale.  Cette méthode est appelée positionnement absolu.  
-  
-> [!NOTE]
->  Le positionnement absolu n'est pas disponible pour les recordsets en avant seulement.  Pour plus d'informations sur les recordsets en avant seulement, consultez [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md).  
-  
- Pour déplacer le pointeur d'enregistrement actif qui utilise la position absolue, appelez [CRecordset::SetAbsolutePosition](../Topic/CRecordset::SetAbsolutePosition.md).  Lorsque vous passez une valeur à `SetAbsolutePosition`, l'enregistrement correspondant à cette position ordinale devient l'enregistrement courant.  
+##  <a name="_core_absolute_positions_in_mfc_odbc"></a>Positions absolues dans ODBC MFC  
+ Outre les signets, classe `CRecordset` vous permet de définir l’enregistrement actif en spécifiant une position ordinale. Il s’agit de positionnement absolu.  
   
 > [!NOTE]
->  La position absolue d'un enregistrement n'est potentiellement pas fiable.  Si l'utilisateur supprime des enregistrements du recordset; la position ordinale de tous les enregistrements suivants s'en trouve modifiée.  Les signets constituent la méthode recommandée pour déplacer l'enregistrement courant.  Pour plus d'informations, consultez [Signets dans ODBC MFC](#_core_bookmarks_in_mfc_odbc).  
+>  Le positionnement absolu n’est pas disponible sur les recordsets avant uniquement. Pour plus d’informations sur les recordsets avant uniquement, consultez [Recordset (ODBC)](../../data/odbc/recordset-odbc.md).  
   
- Pour plus d'informations sur la navigation au sein d'un recordset, consultez [Recordset : défilement \(ODBC\)](../../data/odbc/recordset-scrolling-odbc.md).  
+ Pour déplacer le pointeur d’enregistrement actif à l’aide de la position absolue, appelez [CRecordset::SetAbsolutePosition](../../mfc/reference/crecordset-class.md#setabsoluteposition). Lorsque vous passez une valeur à `SetAbsolutePosition`, l’enregistrement correspondant à cette position ordinale devienne l’enregistrement actif.  
   
-## Voir aussi  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)
+> [!NOTE]
+>  La position absolue d’un enregistrement est potentiellement non fiable. Si l’utilisateur supprime des enregistrements du jeu d’enregistrements, la position ordinale de toutes les modifications de l’enregistrement suivant. Les signets sont la méthode recommandée pour déplacer l’enregistrement actif. Pour plus d’informations, consultez [signets dans ODBC MFC](#_core_bookmarks_in_mfc_odbc).  
+  
+ Pour plus d’informations sur la navigation de jeu d’enregistrements, consultez [Recordset : défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)

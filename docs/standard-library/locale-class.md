@@ -32,11 +32,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f53f9a32da84c450825fc61b8316593e1041784c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0227c6bd088337a4ad3024faebed2c72d870d360
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locale-class"></a>locale, classe
 Classe qui décrit un objet de paramètres régionaux encapsulant des informations spécifiques à la culture sous la forme d'un ensemble de facettes qui définissent collectivement un environnement localisé spécifique.  
@@ -47,7 +48,7 @@ Classe qui décrit un objet de paramètres régionaux encapsulant des informatio
 class locale;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une facette est un pointeur vers un objet d’une classe dérivée de la classe [facet](#facet_class) qui contient un objet public au format suivant :  
   
 ```  
@@ -152,7 +153,7 @@ cout.imbue(loc);
 |-|-|  
 |[locale](#locale)|Crée des paramètres régionaux, une copie de paramètres régionaux ou une copie de paramètres régionaux où une facette ou une catégorie a été remplacée par une facette, ou une catégorie provenant d'autres paramètres régionaux.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -185,9 +186,9 @@ cout.imbue(loc);
 |||  
 |-|-|  
 |[facet](#facet_class)|Classe qui sert de classe de base pour toutes les facettes de paramètres régionaux.|  
-|[id](#id_class)|La classe membre fournit un ID unique de facette utilisé comme index pour rechercher les facettes de paramètres régionaux.|  
+|[ID](#id_class)|La classe membre fournit un ID unique de facette utilisé comme index pour rechercher les facettes de paramètres régionaux.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<locale>  
   
  **Espace de noms :** std  
@@ -207,7 +208,7 @@ static const int all = LC_ALL;
 static const int none = 0;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le type est un synonyme d’un type `int` qui peut représenter un groupe d’éléments distincts d’un type de masque de bits local à la classe locale ou qui peut être utilisé pour représenter n’importe laquelle des catégories de paramètres régionaux C correspondantes. Les éléments sont :  
   
 - **collate**, qui correspond à la catégorie C LC_COLLATE  
@@ -240,7 +241,7 @@ static const locale& classic();
 ### <a name="return-value"></a>Valeur de retour  
  Référence aux paramètres régionaux C.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les paramètres régionaux C classiques sont les paramètres régionaux ASCII États-Unis Anglais dans la bibliothèque C standard qui sont implicitement utilisés dans les programmes qui ne sont pas internationalisés.  
   
 ### <a name="example"></a>Exemple  
@@ -341,7 +342,7 @@ private:
      // not defined    
 };  
 ```  
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Notez que vous ne pouvez pas copier ou assigner un objet de la classe facette. Vous pouvez construire et détruire des objets dérivés de la classe `locale::facet`, mais pas des objets de la classe de base proprement dite. En règle générale, vous construisez un objet `_Myfac` dérivé de facet quand vous construisez des paramètres régionaux, comme dans **localeloc**( `locale::classic`( ), **new**`_Myfac`);  
   
  Dans ces cas-là, le constructeur de la classe de base facet doit avoir un argument `_Refs` égal à zéro. Quand l’objet n’est plus nécessaire, il est supprimé. Ainsi, vous fournissez un argument _ *Refs* différent de zéro uniquement dans les rares cas où vous prenez la responsabilité de la durée de vie de l’objet.  
@@ -360,7 +361,7 @@ static locale global(const locale& Loc);
 ### <a name="return-value"></a>Valeur de retour  
  Paramètres régionaux en vigueur avant la réinitialisation des paramètres régionaux par défaut.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Au démarrage du programme, les paramètres régionaux globaux sont les mêmes que les paramètres régionaux classiques. La fonction `global()` appelle `setlocale( LC_ALL, loc.name. c_str())` pour déterminer les paramètres régionaux correspondants dans la bibliothèque C standard.  
   
 ### <a name="example"></a>Exemple  
@@ -396,7 +397,7 @@ The previous locale was: C
   
 class id { protected:    id(); private:    id(const id&) // not defined void operator=(const id&)  // not defined    };  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La classe membre décrit l’objet membre statique exigé par chaque facette de paramètres régionaux unique. Notez que vous ne pouvez pas copier ou assigner un objet de la classe **id**.  
   
 ##  <a name="locale"></a>  locale::locale  
@@ -431,7 +432,7 @@ locale(const locale& Loc, const Facet* Fac);
  `Fac`  
  Facette à substituer dans les paramètres régionaux construits.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le premier constructeur initialise l’objet pour qu’il corresponde aux paramètres régionaux globaux. Les deuxième et troisièmes constructeurs initialisent toutes les catégories de paramètres régionaux pour avoir un comportement cohérent avec le nom de paramètres régionaux `Locname`. Les autres constructeurs copient `Loc`, avec les exceptions suivantes :  
   
  `locale(const locale& Loc, const locale& Other, category Cat);`  
@@ -541,7 +542,7 @@ bool operator!=(const locale& right) const;
 ### <a name="return-value"></a>Valeur de retour  
  Valeur booléenne qui est **true** si les paramètres régionaux ne sont pas des copies des mêmes paramètres régionaux ; **false** si les paramètres régionaux sont des copies des mêmes paramètres régionaux.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Deux paramètres régionaux sont égaux s’ils s’agit des mêmes paramètres régionaux, si l’un est une copie de l’autre, ou s’ils ont des noms identiques.  
   
 ### <a name="example"></a>Exemple  
@@ -610,7 +611,7 @@ bool operator()(
   
 -   0 si les séquences sont équivalentes.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction de modèle exécute :  
   
 ```  
@@ -666,7 +667,7 @@ bool operator==(const locale& right) const;
 ### <a name="return-value"></a>Valeur de retour  
  Valeur booléenne qui est **true** si les paramètres régionaux sont des copies des mêmes paramètres régionaux ; **false** si les paramètres régionaux ne sont pas des copies des mêmes paramètres régionaux.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Deux paramètres régionaux sont égaux s’ils s’agit des mêmes paramètres régionaux, si l’un est une copie de l’autre, ou s’ils ont des noms identiques.  
   
 ### <a name="example"></a>Exemple  

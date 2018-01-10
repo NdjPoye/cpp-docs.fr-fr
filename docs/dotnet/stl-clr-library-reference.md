@@ -1,73 +1,75 @@
 ---
-title: "R&#233;f&#233;rence de biblioth&#232;que STL/CLR | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cliext (répertoire)"
-  - "STL/CLR (bibliothèque)"
-  - "STL/CLR, redistribution"
+title: "Référence de bibliothèque STL/CLR | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- STL/CLR Library
+- STL/CLR, redistribution
+- cliext directory
 ms.assetid: a9d9ca00-7bf2-48c1-b205-3ae6f8c25f82
-caps.latest.revision: 17
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aecb7c509fc1b072086a8772c3430c43b67350be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# R&#233;f&#233;rence de biblioth&#232;que STL/CLR
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La bibliothèque STL\/CLR est un package de la bibliothèque de modèles standard \(STL\), un sous\-ensemble de la bibliothèque C\+\+ standard, qui peut être utilisé avec C\+\+ et le Common Language Runtime \(CLR\) du .NET Framework.  Grâce à STL\/CLR, vous pouvez utiliser tous les conteneurs, itérateurs et algorithmes de STL dans un environnement managé.  
+# <a name="stlclr-library-reference"></a>Référence de bibliothèque STL/CLR
+La bibliothèque STL/CLR est un package d’un sous-ensemble de la bibliothèque C++ Standard pour une utilisation avec C++ et le common language runtime (CLR) du .NET Framework. Avec STL/CLR, vous pouvez utiliser tous les conteneurs, les itérateurs et les algorithmes de la bibliothèque standard dans un environnement géré.  
   
- Pour utiliser STL\/CLR :  
+ Pour utiliser STL/CLR :  
   
--   Incluez les en\-têtes du sous\-répertoire include **cliext** au lieu des équivalents habituels de la bibliothèque C\+\+ standard.  
+-   Inclure les en-têtes à partir de la **cliext** incluent le sous-répertoire au lieu des équivalents de bibliothèque C++ Standard habituelles.  
   
--   Qualifiez les noms de bibliothèques avec `cliext::` au lieu de `std::`.  
+-   Qualifie les noms de bibliothèque avec `cliext::` au lieu de `std::`.  
   
- STL\/CLR expose les types et interfaces génériques qu'il utilise dans les scénarios d'assembly croisé de l'assembly .NET. **Microsoft.VisualC.STLCLR.dll**.  Cette DLL est incluse dans .NET Framework 3.5.  Si vous redistribuez une application qui utilise STL\/CLR, vous devez inclure le .NET Framework 3.5, ainsi que toutes les autres bibliothèques Visual C\+\+ que votre projet utilise, dans la section des dépendances de votre projet d'installation.  
+ STL/CLR expose les types génériques et les interfaces qu’il utilise dans les scénarios inter-assembly dans l’assembly .NET **Microsoft.VisualC.STLCLR.dll**. Cette DLL est incluse dans le .NET Framework 3.5. Si vous redistribuez une application qui utilise STL/CLR, vous devez inclure le .NET Framework 3.5, ainsi que toutes les bibliothèques Visual C++ qui utilise de votre projet, dans la section des dépendances de votre projet d’installation.  
   
-## Dans cette section  
- [cliext, espace de noms](../dotnet/cliext-namespace.md)  
- Présente l'espace de noms qui contient tous les types de la bibliothèque STL\/CLR.  
+## <a name="in-this-section"></a>Dans cette section  
+ [Espace de noms cliext](../dotnet/cliext-namespace.md)  
+ Décrit l’espace de noms qui contient tous les types de la bibliothèque STL/CLR.  
   
- [STL\/CLR, conteneurs](../dotnet/stl-clr-containers.md)  
- Fournit une vue d'ensemble des conteneurs présents dans la bibliothèque C\+\+ standard, notamment les spécifications relatives aux éléments de conteneur, les types d'éléments qui peuvent être insérés et les problèmes de propriété.  
+ [STL/CLR, conteneurs](../dotnet/stl-clr-containers.md)  
+ Fournit une vue d’ensemble des conteneurs qui se trouvent dans la bibliothèque C++ Standard, y compris les exigences d’éléments de conteneur, les types d’éléments qui peuvent être insérées et les problèmes de propriété.  
   
- [Spécifications pour les éléments de conteneur STL\/CLR](../dotnet/requirements-for-stl-clr-container-elements.md)  
- Décrit la configuration minimale requise pour tous les types référence qui sont insérés dans des conteneurs STL.  
+ [Exigences pour les éléments de conteneur STL/CLR](../dotnet/requirements-for-stl-clr-container-elements.md)  
+ Décrit la configuration minimale requise pour tous les types de référence sont insérées dans des conteneurs de bibliothèque C++ Standard.  
   
- [Comment : convertir une collection .NET en conteneur STL\/CLR](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)  
- Décrit comment convertir une collection .NET en un conteneur STL\/CLR.  
+ [Guide pratique pour convertir une collection .NET en conteneur STL/CLR](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)  
+ Décrit comment convertir une collection .NET à un conteneur STL/CLR.  
   
- [Comment : convertir un conteneur STL\/CLR en collection .NET](../dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md)  
- Décrit comment convertir un conteneur STL\/CLR en une collection .NET.  
+ [Guide pratique pour convertir un conteneur STL/CLR en collection .NET](../dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md)  
+ Décrit comment convertir un conteneur STL/CLR en collection .NET.  
   
- [Comment : exposer un conteneur STL\/CLR d'un assembly](../dotnet/how-to-expose-an-stl-clr-container-from-an-assembly.md)  
- Montre comment afficher les éléments de plusieurs conteneurs STL\/CLR écrits dans un assembly C\+\+.  
+ [Guide pratique pour exposer un conteneur STL/CLR d’un assembly](../dotnet/how-to-expose-an-stl-clr-container-from-an-assembly.md)  
+ Montre comment afficher les éléments de plusieurs conteneurs STL/CLR sont écrites dans un assembly C++.  
   
- En outre, cette section décrit également les composants suivants de STL\/CLR :  
+ En outre, cette section décrit également les composants suivants de STL/CLR :  
   
 |||  
 |-|-|  
-|[adapter](../dotnet/adapter-stl-clr.md)|[algorithm](../dotnet/algorithm-stl-clr.md)|  
-|[deque](../dotnet/deque-stl-clr.md)|[for each, in](../dotnet/for-each-in.md)|  
-|[functional](../dotnet/functional-stl-clr.md)|[hash\_map](../dotnet/hash-map-stl-clr.md)|  
-|[hash\_multimap](../dotnet/hash-multimap-stl-clr.md)|[hash\_multiset](../dotnet/hash-multiset-stl-clr.md)|  
-|[hash\_set](../dotnet/hash-set-stl-clr.md)|[list](../dotnet/list-stl-clr.md)|  
-|[map](../dotnet/map-stl-clr.md)|[multimap](../dotnet/multimap-stl-clr.md)|  
-|[multiset](../dotnet/multiset-stl-clr.md)|[numériques](../dotnet/numeric-stl-clr.md)|  
-|[priority\_queue](../dotnet/priority-queue-stl-clr.md)|[queue](../dotnet/queue-stl-clr.md)|  
-|[set](../dotnet/set-stl-clr.md)|[pile](../dotnet/stack-stl-clr.md)|  
-|[utility](../dotnet/utility-stl-clr.md)|[vecteur](../dotnet/vector-stl-clr.md)|  
+|[adapter (STL/CLR)](../dotnet/adapter-stl-clr.md)|[algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)|  
+|[deque (STL/CLR)](../dotnet/deque-stl-clr.md)|[for each, in](../dotnet/for-each-in.md)|  
+|[functional (STL/CLR)](../dotnet/functional-stl-clr.md)|[hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)|  
+|[hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)|[hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)|  
+|[hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)|[list (STL/CLR)](../dotnet/list-stl-clr.md)|  
+|[map (STL/CLR)](../dotnet/map-stl-clr.md)|[multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)|  
+|[multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)|[numeric (STL/CLR)](../dotnet/numeric-stl-clr.md)|  
+|[priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)|[queue (STL/CLR)](../dotnet/queue-stl-clr.md)|  
+|[set (STL/CLR)](../dotnet/set-stl-clr.md)|[stack (STL/CLR)](../dotnet/stack-stl-clr.md)|  
+|[utility (STL/CLR)](../dotnet/utility-stl-clr.md)|[vector (STL/CLR)](../dotnet/vector-stl-clr.md)|  
   
-## Voir aussi  
- [Bibliothèque standard C\+\+](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Bibliothèque C++ Standard](../standard-library/cpp-standard-library-reference.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 954ba431378317a3f9079677f49223a336af5d9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-conversions"></a>Conversions standard
 Le langage C++ définit les conversions entre ses types fondamentaux. Il définit également les conversions pour les types dérivés de pointeur, de référence et de pointeur vers membre. Ces conversions sont appelées « conversions standard ». (Pour plus d’informations sur les types et types dérivés des types standard, consultez [Types](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -136,7 +137,7 @@ int main()
 ## <a name="floating-point-conversions"></a>Conversions de nombres à virgule flottante  
  Un objet de type flottant peut être converti sans risque en type flottant plus précis. Cela permet de ne pas perdre de signification lors de la conversion. Par exemple, les conversions de **float** à **double** ou à partir de **double** à `long double` sont sécurisées et la valeur est inchangée.  
   
- Un objet de type flottant peut également être converti en type moins précis, s'il se trouve dans une plage qui peut être représentée par ce type. (Consultez [limites flottantes](../cpp/floating-limits.md) pour les plages de type flottant.) Si la valeur d'origine ne peut pas être représentée précisément, elle peut être convertie à la valeur représentable inférieure ou supérieure suivante. Si aucune valeur de ce type n'existe, le résultat n'est pas défini. Prenons l'exemple suivant :  
+ Un objet de type flottant peut également être converti en type moins précis, s'il se trouve dans une plage qui peut être représentée par ce type. (Consultez [limites flottantes](../cpp/floating-limits.md) pour les plages de type flottant.) Si la valeur d'origine ne peut pas être représentée précisément, elle peut être convertie à la valeur représentable inférieure ou supérieure suivante. Si aucune valeur de ce type n'existe, le résultat n'est pas défini. Prenons l'exemple suivant :  
   
 ```  
 cout << (float)1E300 << endl;  
@@ -204,13 +205,13 @@ Graphique d'héritage pour l'illustration de l'accessibilité de la classe de ba
   
 |Type de fonction|Dérivation|Conversion de<br /><br /> B * à A\* juridique ?|  
 |----------------------|----------------|-------------------------------------------|  
-|Fonction externe (hors portée de classe)|Privé|Non|  
+|Fonction externe (hors portée de classe)|Private|Non|  
 ||Protected|Non|  
 ||Public|Oui|  
-|Fonction membre B (dans la portée B)|Privé|Oui|  
+|Fonction membre B (dans la portée B)|Private|Oui|  
 ||Protected|Oui|  
 ||Public|Oui|  
-|Fonction membre C (dans la portée C)|Privé|Non|  
+|Fonction membre C (dans la portée C)|Private|Non|  
 ||Protected|Oui|  
 ||Public|Oui|  
   

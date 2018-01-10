@@ -1,37 +1,36 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4965 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4965"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4965"
+title: Compilateur avertissement (niveau 1) C4965 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4965
+dev_langs: C++
+helpviewer_keywords: C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0f92cc2115bc35c669b4d45784e1e1d79875551e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4965
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-conversion boxing implicite de l'entier 0 ; utilisez nullptr ou effectuez un cast explicite  
+# <a name="compiler-warning-level-1-c4965"></a>Avertissement du compilateur (niveau 1) C4965
+boxing implicite de l’entier 0 ; utilisez nullptr ou un cast explicite  
   
- Visual C\+\+ permet le boxing implicite des types valeur.  Une instruction qui a entraîné une assignation nulle à l'aide des extensions managées pour C\+\+ devient désormais une assignation à un type int converti.  
+ Visual C++ propose un boxing implicite de types valeur. Une instruction qui a entraîné une attribution de null à l’aide des Extensions managées pour C++ devient alors une assignation à un type int converti.  
   
- Pour plus d'informations, consultez [Boxing](../../windows/boxing-cpp-component-extensions.md).  
+ Pour plus d’informations, consultez [Boxing](../../windows/boxing-cpp-component-extensions.md).  
   
-## Exemple  
- L'exemple suivant génère l'erreur C4965 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C4965 :.  
   
 ```  
 // C4965.cpp  

@@ -1,45 +1,44 @@
 ---
-title: "Avertissement des outils &#201;diteur de liens LNK4254 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4254"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4254"
+title: "LNK4254 d’avertissement des outils Éditeur de liens | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4254
+dev_langs: C++
+helpviewer_keywords: LNK4254
 ms.assetid: 6f41dfb3-ca21-40d3-bac7-b637e578efa4
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e17bcd03f92114c1b7cd21e63220cf6372c17bf2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement des outils &#201;diteur de liens LNK4254
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-section 'section1' \(offset\) fusionnée dans 'section2' \(offset\) avec des attributs différents  
+# <a name="linker-tools-warning-lnk4254"></a>Avertissement des outils Éditeur de liens LNK4254
+section 'section1' (offset) fusionnée dans 'section2' (offset) avec des attributs différents  
   
- Le contenu d'une section a été fusionné dans celui d'un autre, mais les attributs des deux sections sont différents.  Votre programme peut produire des résultats inattendus.  Par exemple, les données que vous souhaitiez en lecture seule peuvent désormais se trouver dans une section accessible en écriture.  
+ Le contenu d’une section ont été fusionné dans un autre, mais les attributs des deux sections sont différents. Votre programme peut provoquer des résultats inattendus. Par exemple, vous souhaitez lire des données uniquement peuvent maintenant être dans une section accessible en écriture.  
   
- Pour remédier à l'erreur LNK4254, modifiez ou supprimez la demande de fusion.  
+ Pour résoudre l’erreur LNK4254, modifier ou supprimer la demande de fusion.  
   
- Lorsque vous ciblez des ordinateurs x86 et des cibles Windows CE \(ARM, MIPS, SH4 et Thumb\) avec Visual C\+\+, la section .CRT est en lecture seule.  Si votre code dépend du comportement précédent \(les sections .CRT sont accessibles en lecture\/écriture\), un comportement inattendu risque de se produire.  
+ Lorsque vous ciblez x86 ordinateurs et des cibles Windows CE (ARM, MIPS, SH4 et Thumb) avec Visual C++, le. CRT est en lecture seule. Si votre code dépend du comportement précédent (. CRT sont en lecture/écriture), vous pouvez constater un comportement inattendu.  
   
  Pour plus d'informations, consultez  
   
--   [\/MERGE \(Combiner des sections\)](../../build/reference/merge-combine-sections.md)  
+-   [/Merge (combiner des Sections)](../../build/reference/merge-combine-sections.md)  
   
--   [commentaire](../../preprocessor/comment-c-cpp.md)  
+-   [commentaire (C/C++)](../../preprocessor/comment-c-cpp.md)  
   
-## Exemple  
- L'exemple suivant génère l'erreur LNK4254.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur LNK4254.  
   
 ```  
 // LNK4254.cpp  

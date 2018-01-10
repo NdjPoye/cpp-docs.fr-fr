@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3f214fdef7ab79876d5f4d6718db8292dd95eee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4726377c30300ee1a139b2a596346ea5cdc804f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="queuefront-stlclr"></a>queue::front (STL/CLR)
 Accède au premier élément.  
@@ -30,7 +33,7 @@ Accède au premier élément.
 reference front();  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction membre retourne une référence au premier élément de la séquence contrôlée, qui doit être vide. Il permet d’accéder au premier élément, lorsque vous savez qu’il existe.  
   
 ## <a name="example"></a>Exemple  
@@ -72,7 +75,7 @@ front() = a
  x b c  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/file d’attente >  
   
  **Namespace :** cliext  

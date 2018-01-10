@@ -1,42 +1,43 @@
 ---
-title: "hash_multiset::hasher (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::hasher"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hasher (membre) (STL/CLR)"
+title: hash_multiset::hasher (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::hasher
+dev_langs: C++
+helpviewer_keywords: hasher member [STL/CLR]
 ms.assetid: c68c59ae-bc9e-4caf-9240-04eb65273517
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4ed9c1bcf47de2326a0ff051054c1a8d99ab690c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::hasher (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le hachage délègue pour une clé.  
+# <a name="hashmultisethasher-stlclr"></a>hash_multiset::hasher (STL/CLR)
+Délégué d’une clé de hachage.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 Microsoft::VisualC::StlClr::UnaryDelegate<GKey, int>  
     hasher;  
 ```  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Le type décrit un délégué qui convertit une valeur de clé en entier.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_multiset_hasher.cpp   
@@ -56,13 +57,16 @@ int main()
   
 ```  
   
-  **hash\(L'a'\) \= 1616896120**  
-**hash\(L'b'\) \= 570892832**   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_set\>  
+```Output  
+hash(L'a') = 1616896120  
+hash(L'b') = 570892832  
+```  
   
- **Espace de noms :** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/hash_set >  
   
-## Voir aussi  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::hash\_delegate](../dotnet/hash-multiset-hash-delegate-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::hash_delegate (STL/CLR)](../dotnet/hash-multiset-hash-delegate-stl-clr.md)

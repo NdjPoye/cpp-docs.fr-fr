@@ -1,32 +1,31 @@
 ---
-title: "Avertissement du compilateur (niveau 4) C4210 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4210"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4210"
+title: Compilateur avertissement (niveau 4) C4210 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4210
+dev_langs: C++
+helpviewer_keywords: C4210
 ms.assetid: f8600adf-dfe2-4022-a37a-3d4997641dfd
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f4c75203bdd821612a7cd289e52702e606c41344
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 4) C4210
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-extension non standard utilisée : portée du fichier accordée à la fonction  
+# <a name="compiler-warning-level-4-c4210"></a>Avertissement du compilateur (niveau 4) C4210
+extension non standard utilisée : portée du fichier accordée (fonction)  
   
- Avec les extensions Microsoft par défaut \([\/Ze](../../build/reference/za-ze-disable-language-extensions.md)\), les déclarations de fonctions ont une portée sur le fichier.  
+ Avec les extensions Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)), les déclarations de fonction ont une portée de fichier.  
   
 ```  
 // C4210.c  
@@ -42,4 +41,4 @@ int main()
 }                //  /Za passes 4 as type int  
 ```  
   
- Cette extension peut empêcher le portage de votre code vers d'autres compilateurs.
+ Cette extension peut empêcher votre code d’autres compilateurs.

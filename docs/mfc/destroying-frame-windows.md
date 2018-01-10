@@ -25,16 +25,17 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ab4e9999b46bc005f377b51c691f6947519143e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f1cbd96f5044626c7c3c07e8fca115c2b1dca8cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="destroying-frame-windows"></a>Destruction des fenêtres frame
 L’infrastructure MFC gère la destruction des fenêtres ainsi que la création des fenêtres associées avec des vues et des documents de framework. Si vous créez des fenêtres supplémentaires, vous êtes responsable de leur destruction.  
   
- Dans le framework, lorsque l’utilisateur ferme la fenêtre frame, la valeur par défaut de la fenêtre [OnClose](../mfc/reference/cwnd-class.md#onclose) appels du Gestionnaire de [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow). La dernière fonction membre appelée lorsque la fenêtre Windows est détruite est [OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy), qui procède au nettoyage, appelle le [par défaut](../mfc/reference/cwnd-class.md#default) membre de la fonction pour effectuer un nettoyage de Windows et enfin appelle la fonction membre virtuelle [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy). Le [CFrameWnd](../mfc/reference/cframewnd-class.md) implémentation de `PostNcDestroy` supprime l’objet fenêtre C++. Vous ne devez jamais utiliser C++ **supprimer** opérateur sur une fenêtre frame. Utilisez plutôt `DestroyWindow` .  
+ Dans le framework, lorsque l’utilisateur ferme la fenêtre frame, la valeur par défaut de la fenêtre [OnClose](../mfc/reference/cwnd-class.md#onclose) appels du Gestionnaire de [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow). La dernière fonction membre appelée lorsque la fenêtre Windows est détruite est [OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy), qui procède au nettoyage, appelle le [par défaut](../mfc/reference/cwnd-class.md#default) membre de la fonction pour effectuer un nettoyage de Windows et enfin appelle la fonction membre virtuelle [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy). Le [CFrameWnd](../mfc/reference/cframewnd-class.md) implémentation de `PostNcDestroy` supprime l’objet fenêtre C++. Vous ne devez jamais utiliser C++ **supprimer** opérateur sur une fenêtre frame. Utilisez plutôt `DestroyWindow`.  
   
  La fermeture de la fenêtre principale, l’application se ferme. S’il sont modifiés des documents non enregistrés, l’infrastructure affiche une boîte de message pour demander si les documents doivent être enregistrés et permet de s’assurer que les documents appropriés sont enregistrés si nécessaire.  
   

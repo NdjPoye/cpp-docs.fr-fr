@@ -1,33 +1,33 @@
 ---
-title: "optional (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.optional"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "optional attribute"
+title: facultatif (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.optional
+dev_langs: C++
+helpviewer_keywords: optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 028cb0f911ac389e4ad17f54fc16e24f29c8d9db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# optional (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-spécifie un paramètre optionnel pour une fonction membre.  
+# <a name="optional-c"></a>facultatif (C++)
+Spécifie un paramètre facultatif pour une fonction membre.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,11 +35,11 @@ spécifie un paramètre optionnel pour une fonction membre.
   
 ```  
   
-## Notes  
- L'attribut de **facultatif** C\+\+ a les mêmes fonctionnalités que l'attribut de [facultatif](http://msdn.microsoft.com/library/windows/desktop/aa367132) MIDL.  
+## <a name="remarks"></a>Notes  
+ Le **facultatif** attribut C++ a les mêmes fonctionnalités que le [facultatif](http://msdn.microsoft.com/library/windows/desktop/aa367132) attribut MIDL.  
   
-## Exemple  
- Le code suivant montre comment **facultatif** peut être utilisé :  
+## <a name="example"></a>Exemple  
+ Le code suivant montre comment **facultatif** peut être utilisé :  
   
 ```  
 // cpp_attr_ref_optional.cpp  
@@ -54,20 +54,19 @@ __interface IFireTabCtrl : IDispatch
 };  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|paramètre d'interface|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|Paramètre d’interface|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs de paramètres](../windows/parameter-attributes.md)   

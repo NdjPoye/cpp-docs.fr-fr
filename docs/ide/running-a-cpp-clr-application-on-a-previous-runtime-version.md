@@ -1,46 +1,46 @@
 ---
-title: "Ex&#233;cution d&#39;une application&#160;C++ /clr sur une version ant&#233;rieure du runtime | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fichiers app.config, runtime (version spécifiée)"
-  - "déploiement d'applications (C++), runtime (version spécifiée)"
-  - "applications (C++), runtime (version spécifiée)"
-  - "compatibilité descendante (C++), runtime (version spécifiée)"
-  - "Common Language Runtime (C++), version spécifiée"
-  - "compatibilité (C++), runtime (version spécifiée)"
-  - "déployer des applications (C++), runtime (version spécifiée)"
-  - "versions (C++)"
+title: "Une Application de clr - C++ en cours d’exécution sur une Version antérieure du Runtime | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- applications [C++], runtime version specified
+- versions [C++]
+- app.config files, runtime version specified
+- compatibility [C++], runtime version specified
+- backward compatibility [C++], runtime version specified
+- application deployment [C++], runtime version specified
+- common language runtime [C++], version specified
+- deploying applications [C++], runtime version specified
 ms.assetid: 940171b7-6937-4b14-8e87-c199e23f4f2e
-caps.latest.revision: 17
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1f64c0dc31be260332d4d79e8fa38d63bbf6357c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Ex&#233;cution d&#39;une application&#160;C++ /clr sur une version ant&#233;rieure du runtime
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sauf indication contraire, une application .NET de Visual C\+\+ .NET est générée pour s'exécuter sur la version du common langage runtime \(CLR\) que le compilateur utilise pour générer l'application.  Toutefois, il est possible pour une application .exe qui est créée pour une version du runtime à exécuter sur n'importe quelle autre version qui fournit la fonctionnalité requise.  
+# <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>Exécution d'une application C++ /clr sur une version antérieure du runtime
+Sauf indication contraire, une application C++ .NET Framework est générée doit pour s’exécuter sur la version du common language runtime (CLR) que le compilateur utilise pour générer l’application. Toutefois, il est possible pour une application .exe qui est générée pour une version du runtime à s’exécuter sur n’importe quelle autre version qui fournit les fonctionnalités requises.  
   
- Pour ce faire, fournissez un fichier app.config qui contient les informations de version du runtime dans la balise d' `supportedRuntime` .  
+ Pour ce faire, fournissez un fichier app.config qui contient des informations de version d’exécution dans le `supportedRuntime` balise.  
   
- Au moment de l'exécution, le fichier app.config doit avoir un nom de formulaire *filename.ext*.config, où *filename.ext* est le nom du fichier exécutable qui a démarré l'application, et il doit figurer dans le même répertoire que le fichier exécutable.  Par exemple, si votre application est nommée TestApp.exe, le fichier app.config est nommé TestApp.exe.config.  
+ Au moment de l’exécution, le fichier app.config doit avoir un nom sous la forme *nomfichier.ext*.config, où *nomfichier.ext* est le nom du fichier exécutable ayant démarré l’application, et il doit être dans le même répertoire que le fichier exécutable. Par exemple, si votre application se nomme TestApp.exe, le fichier app.config est nommé TestApp.exe.config.  
   
- Si vous spécifiez plusieurs versions du runtime et l'application s'exécute sur un ordinateur doté de plusieurs versions du runtime installée, l'application utilise la première version spécifiée dans le fichier de configuration et est installée.  
+ Si vous spécifiez plusieurs versions du runtime et que l’application s’exécute sur un ordinateur qui possède plusieurs versions du runtime installée, l’application utilise la première version qui est spécifiée dans le fichier de configuration et est installée.  
   
- Pour plus d'informations, consultez [How to: Configure an App to Target a .NET Framework Version](http://msdn.microsoft.com/fr-fr/5247b307-89ca-417b-8dd0-e8f9bd2f4717).  
+ Pour plus d’informations, consultez [Comment : configurer une application pour cibler une Version du .NET Framework](http://msdn.microsoft.com/en-us/5247b307-89ca-417b-8dd0-e8f9bd2f4717).  
   
- Pour exécuter sur la version 1,0 ou la version 1,1 du CLR, une application générée par le compilateur Visual C\+\+ doit être compilée à l'aide de [\/clr:initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md).  
+ Pour s’exécuter sur la version 1.0 ou 1.1 du CLR, une application qui est généré par Visual C++ compilateur doit être compilé à l’aide de [/CLR : initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Voir aussi  
- [Déploiement des applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Déploiement d’Applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md)

@@ -1,42 +1,42 @@
 ---
-title: "pair::first_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::pair::first_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "first_type (membre) (STL/CLR)"
+title: pair::first_type (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::pair::first_type
+dev_langs: C++
+helpviewer_keywords: first_type member [STL/CLR]
 ms.assetid: 8a7792ee-a2f6-4e17-9d0b-9c78007202d9
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4a60068fac82e4094a4aac0307bdc3dd102f63c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# pair::first_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The type of the first wrapped value.  
+# <a name="pairfirsttype-stlclr"></a>pair::first_type (STL/CLR)
+Le type de la première valeur encapsulée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef Value1 first_type;  
 ```  
   
-## Notes  
- The type is a synonym for the template parameter `Value1`.  
+## <a name="remarks"></a>Notes  
+ Le type est un synonyme du paramètre de modèle `Value1`.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_pair_first_type.cpp   
@@ -56,14 +56,17 @@ int main()
   
 ```  
   
-  **\[x, 3\]**   
-## Configuration requise  
- **Header:** \<cliext\/utility\>  
+```Output  
+[x, 3]  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/utilitaire >  
   
-## Voir aussi  
- [paire](../dotnet/pair-stl-clr.md)   
- [pair::first](../dotnet/pair-first-stl-clr.md)   
- [pair::second](../dotnet/pair-second-stl-clr.md)   
- [pair::second\_type](../dotnet/pair-second-type-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [paire (STL/CLR)](../dotnet/pair-stl-clr.md)   
+ [pair::First (STL/CLR)](../dotnet/pair-first-stl-clr.md)   
+ [pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md)   
+ [pair::second_type (STL/CLR)](../dotnet/pair-second-type-stl-clr.md)

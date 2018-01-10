@@ -23,11 +23,12 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: 271ba1705dd48e11f1613e778b2d3bd41df7bba6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: df79acefbd5482238b2ce59885bdb06af128c9b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializerlist-class"></a>initializer_list, classe
 Fournit l'accès à un tableau d'éléments dans lequel chaque membre est du type spécifié.  
@@ -61,7 +62,7 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
 |-|-|  
 |[initializer_list](../standard-library/forward-list-class.md#forward_list)|Construit un objet de type `initializer_list`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -80,7 +81,7 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
 |[end](#end)|Retourne un pointeur vers la position au-delà du dernier élément dans un `initializer_list`.|  
 |[size](#size)|Retourne le nombre d'éléments d'un `initializer_list`.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<initializer_list>  
   
  **Espace de noms :** std  

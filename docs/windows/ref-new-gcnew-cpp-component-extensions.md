@@ -20,11 +20,14 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cabe15639d75a1dfe7c41463ea9b95332f6dafa3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 616117f7274d6f68456aa23614fb354a71982fb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew  (extensions du composant C++)
 Le `ref new` mot clé d’agrégation alloue une instance d’un type qui est le garbage collecté lors de l’objet devienne inaccessible, et qui retourne un handle ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) vers l’objet alloué.  
@@ -39,13 +42,13 @@ Le `ref new` mot clé d’agrégation alloue une instance d’un type qui est le
 ## <a name="windows-runtime"></a>Windows Runtime  
  Utilisez `ref new` pour allouer de la mémoire aux objets Windows Runtime dont vous voulez administrer automatiquement la durée de vie. L'objet est automatiquement désalloué quand son nombre de références atteint zéro, ce qui se produit une fois que la dernière copie de la référence est hors de portée. Pour plus d’informations, consultez [les classes ou structures](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  La mémoire d'un type managé (type référence ou valeur) est allouée par `gcnew`, puis désallouée à l'aide du garbage collection.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  

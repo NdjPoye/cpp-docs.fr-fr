@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2dba219ef2b2e0747d800d45950217e220ab1449
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9eaa0aaecd1ff30e51416aaaccebcc8fe6746222
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetlocateimplcompare"></a>IRowsetLocateImpl::Compare
 Compare deux signets.  
@@ -45,7 +48,7 @@ Compare deux signets.
 #### <a name="parameters"></a>Paramètres  
  Consultez [IRowsetLocate::Compare](https://msdn.microsoft.com/en-us/library/ms709539.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une des signets peuvent être une norme définie par OLE DB [signet standard](https://msdn.microsoft.com/en-us/library/ms712954.aspx) (**DBBMK_FIRST**, **DBBMK_LAST**, ou **DBBMK_INVALID**). La valeur retournée dans `pComparison` indique la relation entre les deux signets :  
   
 -   **DBCOMPARE_LT** (`cbBookmark1` avant `cbBookmark2`.)  
@@ -58,7 +61,7 @@ Compare deux signets.
   
 -   **DBCOMPARE_NOTCOMPARABLE** (les signets ne peuvent pas être comparées).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

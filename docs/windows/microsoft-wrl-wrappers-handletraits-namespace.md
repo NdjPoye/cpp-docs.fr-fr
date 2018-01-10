@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3369f7b9264c7b0fd0bfbb9f137278a9f53848d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: aec9ff1b4294257f692d76a96960820379116b0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoftwrlwrappershandletraits-namespace"></a>Microsoft::WRL::Wrappers::HandleTraits, espace de noms
 Décrit les caractéristiques de types courants de ressources basé sur le handle.  
@@ -46,7 +49,7 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
 |[SRWLockExclusiveTraits, structure](../windows/srwlockexclusivetraits-structure.md)|Décrit des caractéristiques communes de la `SRWLock` classe en mode de verrou exclusif.|  
 |[SRWLockSharedTraits, structure](../windows/srwlocksharedtraits-structure.md)|Décrit des caractéristiques communes de la `SRWLock` classe en mode de verrou partagé.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

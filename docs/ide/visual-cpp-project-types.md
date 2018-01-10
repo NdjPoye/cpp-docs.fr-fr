@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 625489b69b3831d78bbe9bc80d92838e1e79b0c8
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: a837aa04b0e0c2b8d3d9f5cfd48181a9ea23b346
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-project-types"></a>Types de projets Visual C++
 
@@ -95,7 +96,7 @@ Pour une vue d’ensemble des applications Windows universelles en C++, consulte
 |Application de Test unitaire|Projet pour créer une application de tests unitaires pour les applications de plateforme Windows universelle (UWP).|
 |DLL|Un projet pour une bibliothèque de liens dynamiques (DLL) native qui peut être utilisé par un composant d’application ou le runtime de plateforme Windows universelle.|
 |Bibliothèque statique|Un projet pour une bibliothèque de liens statiques native (LIB) qui peut être utilisé par un composant d’application ou le runtime de plateforme Windows universelle.|
-|Composant Windows Runtime|Projet pour un composant Windows Runtime qui peut être utilisé par une application de plateforme Windows universelle, quel que soit le langage de programmation dans lequel l’application est écrite.|
+|Composant Windows Runtime|Projet pour un composant Windows Runtime qui peut être utilisé par une application de plateforme Windows universelle, quel que soit le langage de programmation dans lequel l’application est écrite.|
 |Projet de package d’Application Windows|Un projet qui crée un package UWP qui permet à une application de bureau être distribués via le Store de Microsoft ou de chargement.|
 
 ## <a name="todo-comments"></a>Commentaires TODO
