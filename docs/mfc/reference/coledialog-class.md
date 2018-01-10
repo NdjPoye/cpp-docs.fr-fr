@@ -18,11 +18,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ef2efeb94255631a1d6d66d92a7901ae66cb7ef
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae60b9e5a0d2e79d2bf6d9cc06eebfa9df0c6e23
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledialog-class"></a>Classe de COleDialog
 Fournit les fonctionnalités communes aux boîtes de dialogue pour OLE.  
@@ -41,7 +42,7 @@ class COleDialog : public CCommonDialog
 |----------|-----------------|  
 |[COleDialog::GetLastError](#getlasterror)|Obtient le code d’erreur retourné par la boîte de dialogue.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La bibliothèque Microsoft Foundation Class fournit plusieurs classes dérivées de `COleDialog`:  
   
 - [Classe COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)  
@@ -77,7 +78,7 @@ class COleDialog : public CCommonDialog
   
  `COleDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxodlgs.h  
   
 ##  <a name="getlasterror"></a>COleDialog::GetLastError  
@@ -90,7 +91,7 @@ UINT GetLastError() const;
 ### <a name="return-value"></a>Valeur de retour  
  Les codes d’erreur retournés par `GetLastError` dépendent de la boîte de dialogue spécifique affichée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez le `DoModal` fonction membre dans les classes dérivées pour plus d’informations sur les messages d’erreur spécifiques.  
   
 ## <a name="see-also"></a>Voir aussi  

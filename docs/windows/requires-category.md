@@ -1,32 +1,33 @@
 ---
-title: "requires_category | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.requires_category"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "requires_category attribute"
+title: requires_category | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.requires_category
+dev_langs: C++
+helpviewer_keywords: requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 677e3c94a5db69dafb66a5cd33749c129cb35afb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# requires_category
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-spécifie les catégories de composant requis de la classe cible.  
+# <a name="requirescategory"></a>requires_category
+Spécifie les catégories de composant requis de la classe cible.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,17 +36,17 @@ spécifie les catégories de composant requis de la classe cible.
 ) ]  
 ```  
   
-#### Paramètres  
- *requires\_category*  
- L'ID de la catégorie obligatoire.  
+#### <a name="parameters"></a>Paramètres  
+ *requires_category*  
+ ID de la catégorie obligatoire.  
   
-## Notes  
- l'attribut de **requires\_category** C\+\+ spécifie les catégories de composants requises par la classe cible.  Pour plus d'informations, consultez [REQUIRED\_CATEGORY](../Topic/REQUIRED_CATEGORY.md).  
+## <a name="remarks"></a>Notes  
+ Le **requires_category** attribut C++ Spécifie les catégories de composants requis par la classe cible. Pour plus d’informations, consultez [REQUIRED_CATEGORY](../atl/reference/category-macros.md#required_category).  
   
- Cet attribut requiert que [coclasse](../windows/coclass.md), [progid](../windows/progid.md), ou un attribut de [vi\_progid](../windows/vi-progid.md) \(ou un attribut différent qui implique un d'eux\) également être appliqués au même élément.  
+ Cet attribut exige que l’attribut [coclass](../windows/coclass.md), [progid](../windows/progid.md)ou [vi_progid](../windows/vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément.  
   
-## Exemple  
- Le code suivant requiert que l'objet implémentent la catégorie de contrôle.  
+## <a name="example"></a>Exemple  
+ Le code suivant requiert que l’objet implémente la catégorie de contrôle.  
   
 ```  
 // cpp_attr_ref_requires_category.cpp  
@@ -61,20 +62,19 @@ spécifie les catégories de composant requis de la classe cible.
 class CMyClass {};  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**classe**, `struct`|  
-|**reproductible**|Non|  
-|**attributs requis**|Un ou plusieurs des éléments suivants : **coclasse**, **progid**, ou **vi\_progid**.|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|**class**, `struct`|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Un ou plusieurs des éléments suivants : **coclass**, **progid**ou **vi_progid**.|  
+|**Attributs non valides**|Aucun.|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [COM Attributes](../windows/com-attributes.md)   
- [implements\_category](../windows/implements-category.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs COM](../windows/com-attributes.md)   
+ [implements_category](../windows/implements-category.md)   

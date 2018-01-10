@@ -1,36 +1,35 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4530 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4530"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4530"
+title: Compilateur avertissement (niveau 1) C4530 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4530
+dev_langs: C++
+helpviewer_keywords: C4530
 ms.assetid: a04dcdb2-84db-459d-9e5e-4e743887465f
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: adfa006e3b84517601237bbd844ac983115e74ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4530
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gestionnaire d'exceptions C\+\+ utilisé, mais les sémantiques de déroulement n'ont pas été activées.Spécifiez \/EHsc  
+# <a name="compiler-warning-level-1-c4530"></a>Avertissement du compilateur (niveau 1) C4530
+Gestionnaire d’exceptions C++ utilisé, mais les sémantiques de déroulement ne sont pas activés. Spécifiez /EHsc  
   
- La gestion des exceptions C\+\+ a été utilisée, mais [\/EHsc](../../build/reference/eh-exception-handling-model.md) n'a pas été sélectionné.  
+ Gestion des exceptions C++ a été utilisée mais [/EHsc](../../build/reference/eh-exception-handling-model.md) n’a été sélectionné.  
   
- Quand l'option \/EHsc n'a pas été activée, un objet à stockage automatique dans le frame ne sera pas détruit entre la levée de l'exception et la détection de l'exception par la fonction.  Mais un objet à stockage automatique créé dans un bloc **try** ou **catch** sera bien détruit.  
+ Lorsque l’option /EHsc n’a pas été activée, un objet avec un stockage automatique dans le cadre, entre la fonction de levée de l’exception et la fonction de détection de l’exception ne sera pas détruit. Toutefois, un objet à stockage automatique créé dans un **essayez** ou **catch** bloc sera détruit.  
   
- L'exemple suivant génère l'erreur C4530 :  
+ L’exemple suivant génère l’erreur C4530 :  
   
 ```  
 // C4530.cpp  
@@ -40,4 +39,4 @@ int main() {
 }  
 ```  
   
- Compilez l'exemple avec \/EHsc pour remédier à cet avertissement.
+ Compilez l’exemple avec /EHsc pour résoudre l’avertissement.

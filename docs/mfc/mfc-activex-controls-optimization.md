@@ -25,11 +25,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b1dab85041f63afd3904bc026bdf2a4d94b5301
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46a17a6594db6c59148042f6e8c6cc72c7068dc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-optimization"></a>Contrôles ActiveX MFC : optimisation
 Cet article explique les techniques que vous pouvez utiliser pour optimiser vos contrôles ActiveX pour de meilleures performances.  
@@ -47,11 +48,11 @@ Cet article explique les techniques que vous pouvez utiliser pour optimiser vos 
 |Paramètre de contrôle dans l’Assistant contrôle ActiveX MFC|Action|Complément d'information|  
 |-------------------------------------------------------|------------|----------------------|  
 |**Activer lorsqu’elle est visible** case à cocher|Effacer|[Désactivation de l’activer quand Option Visible](../mfc/turning-off-the-activate-when-visible-option.md)|  
-|**L’activation sans fenêtre** case à cocher|Select|[Mise à disposition de l’activation sans fenêtre](../mfc/providing-windowless-activation.md)|  
-|**Contexte de périphérique non découpé** case à cocher|Select|[Utilisation d’un contexte d’appareil non découpé](../mfc/using-an-unclipped-device-context.md)|  
-|**Activation sans scintillement** case à cocher|Select|[Mise à disposition de l’activation sans scintillement](../mfc/providing-flicker-free-activation.md)|  
-|**Notifications du pointeur pendant l’inactivité de la souris** case à cocher|Select|[Prise en charge de l’interaction souris pendant l’inactivité](../mfc/providing-mouse-interaction-while-inactive.md)|  
-|**Code de dessin optimisé** case à cocher|Select|[Optimisation du contrôle de dessin](../mfc/optimizing-control-drawing.md)|  
+|**L’activation sans fenêtre** case à cocher|Sélectionner|[Mise à disposition de l’activation sans fenêtre](../mfc/providing-windowless-activation.md)|  
+|**Contexte de périphérique non découpé** case à cocher|Sélectionner|[Utilisation d’un contexte d’appareil non découpé](../mfc/using-an-unclipped-device-context.md)|  
+|**Activation sans scintillement** case à cocher|Sélectionner|[Mise à disposition de l’activation sans scintillement](../mfc/providing-flicker-free-activation.md)|  
+|**Notifications du pointeur pendant l’inactivité de la souris** case à cocher|Sélectionner|[Prise en charge de l’interaction souris pendant l’inactivité](../mfc/providing-mouse-interaction-while-inactive.md)|  
+|**Code de dessin optimisé** case à cocher|Sélectionner|[Optimisation du contrôle de dessin](../mfc/optimizing-control-drawing.md)|  
   
  Pour obtenir des informations détaillées sur les fonctions membres qui implémentent ces optimisations, consultez [COleControl](../mfc/reference/colecontrol-class.md). Les fonctions membres sont répertoriées à l’aide, tel que [opérations sans fenêtre](http://msdn.microsoft.com/en-us/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) et [fonctions de gestion de pointeur inactif](http://msdn.microsoft.com/en-us/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df).  
   

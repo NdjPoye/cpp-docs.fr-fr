@@ -30,11 +30,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a77c4b80dc83f64b61fdd3b98f7971b5ef6e5e27
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef97b5e5ab2c21b375814cf117d6155b4a502795
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="to-functions"></a>to, fonctions
 Chaque fonction **to** et sa macro associée, le cas échéant, convertissent un caractère unique en un autre caractère.  
@@ -52,10 +53,10 @@ Chaque fonction **to** et sa macro associée, le cas échéant, convertissent un
 |`__toascii`|`__toascii`|Convertit `c` en caractère ASCII|  
 |`tolower`|`tolower`|Convertit `c` en minuscules si besoin|  
 |`_tolower`|`_tolower`|Convertit `c` en minuscules|  
-|`towlower`|None|Convertit `c` en lettre minuscule à caractères larges correspondante|  
+|`towlower`|Aucun.|Convertit `c` en lettre minuscule à caractères larges correspondante|  
 |`toupper`|`toupper`|Convertit `c` en majuscules si besoin|  
 |`_toupper`|`_toupper`|Convertit `c` en majuscules|  
-|`towupper`|None|Convertit c en lettre majuscule à caractères larges correspondante|  
+|`towupper`|Aucun.|Convertit c en lettre majuscule à caractères larges correspondante|  
   
  Pour utiliser les versions de fonction des routines **to** également définies en tant que macros, supprimez les définitions de macro avec des directives `#undef` ou n’incluez pas CTYPE.H. Si vous utilisez l’option de compilateur /Za, le compilateur utilise la version de fonction `toupper` ou `tolower`. Les déclarations des fonctions `toupper` et `tolower` sont dans STDLIB.H.  
   

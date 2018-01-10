@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3a8be136ad0841c9f81b6df819cb098dbc10ae13
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da05f0b41b4c692a96c235f465d30c2dadc741ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ompgetwtick"></a>omp_get_wtick
 Retourne le nombre de secondes entre les battements d’horloge de processeur.  
@@ -30,7 +31,7 @@ Retourne le nombre de secondes entre les battements d’horloge de processeur.
 double omp_get_wtick( );  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [3.3.2 fonction omp_get_wtick](../../../parallel/openmp/3-3-2-omp-get-wtick-function.md).  
   
 ## <a name="example"></a>Exemple  

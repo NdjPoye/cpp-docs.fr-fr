@@ -1,46 +1,49 @@
 ---
-title: "COM Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributes [C++], reference topics"
-  - "attributes [COM]"
-  - "COM, attributes"
+title: Attributs COM | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- attributes [C++], reference topics
+- attributes [COM]
+- COM, attributes
 ms.assetid: 52a5dd70-e8be-4bba-afd6-daf90fe689a0
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 63e23f6a6520085ff5a5a072cb349d079615b6f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# COM Attributes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les attributs COM injectent un code pour prendre en charge de nombreux domaines du développement COM et le développement du common langage runtime du.NET Framework.  Ces zones sont comprises entre l'implémentation personnalisée d'interface et de la prise en charge des interfaces existantes aux propriétés stock de prise en charge, des méthodes, les événements et.  En outre, la prise en charge est trouvée pour le composite et l'implémentation du contrôle ActiveX.  
+# <a name="com-attributes"></a>Attributs COM
+Le COM injectent du code pour prendre en charge plusieurs domaines de développement COM et le développement du common language runtime du .NET Framework. Ces zones vont de prise en charge d’interfaces existantes et de mise en œuvre de l’interface personnalisée prise en charge des propriétés stock, les méthodes et les événements. En outre, la prise en charge sont accessibles pour composite et de l’implémentation du contrôle ActiveX.  
   
 |Attribut|Description|  
-|--------------|-----------------|  
-|[aggregatable](../windows/aggregatable.md)|indique qu'un contrôle peut être regroupé par un autre contrôle.|  
-|[agrégats](../windows/aggregates.md)|indique qu'un contrôle regroupe la classe cible.|  
-|[coclasse](../windows/coclass.md)|crée un objet COM, qui peut implémenter une interface COM.|  
-|[com\_interface\_entry](../windows/com-interface-entry-cpp.md)|ajoute une entrée d'interface à un mappage COM.|  
-|[implements\_category](../windows/implements-category.md)|Spécifie a implémenté des catégories de composants pour la classe.|  
-|[progid](../windows/progid.md)|définit l'identificateur programmatique pour un contrôle.|  
-|[rdx](../windows/rdx.md)|crée ou modifie une clé de Registre.|  
-|[registration\_script](../windows/registration-script.md)|Exécute le script spécifié d'inscription.|  
-|[requires\_category](../windows/requires-category.md)|spécifie des catégories de composant requis pour la classe.|  
-|[support\_error\_information](../windows/support-error-info.md)|Prend en charge le rapport d'erreurs pour l'objet de la cible.|  
-|[synchronisez](../windows/synchronize.md)|synchronise l'accès à une méthode.|  
-|[threads](../windows/threading-cpp.md)|spécifie le modèle de thread pour un objet COM.|  
-|[vi\_progid](../windows/vi-progid.md)|Définit un identificateur programmatique indépendant de la version d'un contrôle.|  
+|---------------|-----------------|  
+|[aggregatable](../windows/aggregatable.md)|Indique qu’un contrôle peut être agrégé par un autre contrôle.|  
+|[aggregates](../windows/aggregates.md)|Indique qu’un contrôle agrège la classe cible.|  
+|[coclass](../windows/coclass.md)|Crée un objet COM, ce qui peut implémenter une interface COM.|  
+|[COM_INTERFACE_ENTRY](../windows/com-interface-entry-cpp.md)|Ajoute une entrée de l’interface à un mappage COM.|  
+|[implements_category](../windows/implements-category.md)|Spécifie les catégories de composants de mise en œuvre de la classe.|  
+|[progid](../windows/progid.md)|Définit le ProgID pour un contrôle.|  
+|[rdx](../windows/rdx.md)|Crée ou modifie une clé de Registre.|  
+|[registration_script](../windows/registration-script.md)|Exécute le script d’enregistrement spécifié.|  
+|[requires_category](../windows/requires-category.md)|Spécifie les catégories de composants requis pour la classe.|  
+|[support_error_info](../windows/support-error-info.md)|Prend en charge les rapports d’erreurs pour l’objet cible.|  
+|[synchronize](../windows/synchronize.md)|Synchronise l’accès à une méthode.|  
+|[modèle de thread](../windows/threading-cpp.md)|Spécifie le modèle de thread pour un objet COM.|  
+|[vi_progid](../windows/vi-progid.md)|Définit un ProgID indépendants de la version d’un contrôle.|  
   
-## Voir aussi  
- [Attributes by Group](../windows/attributes-by-group.md)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs par groupe](../windows/attributes-by-group.md)

@@ -64,11 +64,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1f571a6d0a84ca6d2990ed4910ef52ea0d54e2d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a2b01ce48463f3aad723bee38ee9f3ef1b499c3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exec-wexec-functions"></a>_exec, _wexec, fonctions
 Chaque fonction dans cette famille charge et exécute un nouveau processus :  
@@ -89,7 +90,7 @@ Chaque fonction dans cette famille charge et exécute un nouveau processus :
 |`p`|La variable d'environnement `PATH` est utilisée pour rechercher le fichier à exécuter.|  
 |`v`|`argv`, un tableau de pointeurs vers des arguments de ligne de commande, est passé à `_exec`. Utilisée généralement quand le nombre de paramètres du nouveau processus est variable.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Chaque fonction `_exec` charge et exécute un nouveau processus. Toutes les fonctions `_exec` utilisent la même fonction de système d’exploitation ([CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx)). Les fonctions `_exec` gèrent automatiquement des arguments de chaîne de caractères multioctets de façon appropriée, en identifiant des séquences de caractères multioctets selon la page de codes multioctets actuellement utilisée. Les fonctions `_wexec` sont des versions à caractères larges des fonctions `_exec`. Les fonctions `_wexec` se comportent de la même façon que leurs équivalents de famille `_exec`, sauf qu'elles ne gèrent pas les chaînes de caractères multioctets.  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
@@ -237,7 +238,7 @@ int main( int ac, char* av[] )
 }  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
  **En-tête :** process.h  
   

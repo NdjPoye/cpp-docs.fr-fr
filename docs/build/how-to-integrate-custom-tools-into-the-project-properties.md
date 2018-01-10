@@ -1,50 +1,49 @@
 ---
-title: "Comment&#160;: int&#233;grer les outils personnalis&#233;s dans les propri&#233;t&#233;s du projet | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "msbuild.cpp.howto.integratecustomtools"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MSBuild (C++), comment : intégrer des outils personnalisés"
+title: "Comment : intégrer les outils personnalisés dans les propriétés du projet | Documents Microsoft"
+ms.custom: 
+ms.date: 04/27/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: msbuild.cpp.howto.integratecustomtools
+dev_langs: C++
+helpviewer_keywords: 'msbuild (c++), howto: integrate custom tools'
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a762fc573953bcfb09180b9b830b761448d87a0d
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
-# Comment&#160;: int&#233;grer les outils personnalis&#233;s dans les propri&#233;t&#233;s du projet
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vous pouvez ajouter des options d'outils personnalisés à la fenêtre Visual Studio **Pages de propriétés** en créant un fichier de schéma XML sous\-jacent.  
+# <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Comment : intégrer les outils personnalisés dans les propriétés du projet
+Vous pouvez ajouter des options de l’outil personnalisé pour Visual Studio **Pages de propriétés** fenêtre en créant un fichier de schéma XML sous-jacent.  
   
- La section **Propriétés de configuration** de la fenêtre **Pages de propriétés** affiche des groupes de paramètres également appelés *règles*.  Chaque règle contient les paramètres d'un outil ou d'un groupe de fonctionnalités.  Par exemple, la règle **Éditeur de liens** contient les paramètres de l'outil Éditeur de liens.  Les paramètres d'une règle peuvent être subdivisés en *catégories*.  
+ Le **propriétés de Configuration** section de la **Pages de propriétés** fenêtre affiche les groupes de paramètres qui sont appelées *règles*. Chaque règle contient les paramètres d’un outil ou d’un groupe de fonctionnalités. Par exemple, le **l’éditeur de liens** règle contient les paramètres de l’outil de l’éditeur de liens. Les paramètres dans une règle peuvent être subdivisées en *catégories*.  
   
- Ce document montre comment créer un fichier dans un répertoire défini qui contient les propriétés de votre outil personnalisé, de sorte que ces propriétés soient chargées au démarrage de Visual Studio.  Pour plus d'informations sur la modification du fichier, consultez [Extensibilité de plateforme : partie 2 \(page éventuellement en anglais\)](http://go.microsoft.com/fwlink/?LinkID=191489) sur le blog de l'équipe de projet Visual Studio.  
+ Ce document explique comment créer un fichier dans un répertoire de jeu qui contient les propriétés de votre outil personnalisé afin que les propriétés sont chargées au démarrage de Visual Studio. Pour plus d’informations sur la façon de modifier le fichier, consultez [plateforme extensibilité partie 2](http://go.microsoft.com/fwlink/p/?linkid=191489) sur le blog de l’équipe de projet Visual Studio.  
   
-### Pour ajouter ou modifier des propriétés de projet  
+### <a name="to-add-or-change-project-properties"></a>Pour ajouter ou modifier les propriétés du projet  
   
-1.  Dans l'Éditeur XML, créez un fichier XML.  
+1.  Dans l’éditeur XML, créez un fichier XML.  
   
-2.  Enregistrez le fichier dans le dossier %ProgramFiles%\\MSBuild\\Microsoft.Cpp\\v4.0\\.  Chaque règle de la fenêtre **Pages de propriétés** est représentée par un fichier XML dans ce dossier.  Assurez\-vous que le fichier est nommé de manière unique dans le dossier.  
+2.  Enregistrez le fichier dans le 2017 Visual Studio `VCTargets\1033` dossier. Vous aurez un autre chemin d’accès pour chaque édition de Visual 2017 Studio qui est installé et pour chaque langue. Par exemple, le chemin d’accès de dossier pour Visual Studio Enterprise edition en anglais est `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033`. Ajustez le chemin d’accès pour votre langue et l’édition de Visual Studio. Chaque règle de la **Pages de propriétés** fenêtre est représentée par un fichier XML dans ce dossier. Assurez-vous que le fichier est nommé de manière unique dans le dossier.  
   
-3.  Copiez le contenu de %ProgramFiles%\\MSBuild\\Microsoft.Cpp\\v4.0\\cl.xml, fermez\-le sans enregistrer les modifications, puis collez le contenu dans votre nouveau fichier XML.  Vous pouvez utiliser n'importe quel fichier de schéma XML. Il s'agit simplement d'un fichier qui peut être utilisé comme modèle de démarrage.  
+3.  Copiez le contenu de `%ProgramFiles%\Microsoft Visual Studio\2017\<VS Edition>\Common7\IDE\VC\VCTargets\<LCID>\cl.xml`, fermez-la sans enregistrer les modifications, puis collez le contenu dans votre nouveau fichier XML. Vous pouvez utiliser n’importe quel fichier de schéma XML - il s’agit d’un seul qui peut être utilisé afin de commencer avec un modèle.  
   
-4.  Dans le nouveau fichier XML, modifiez le contenu en fonction de vos besoins.  Veillez à remplacer **Rule Name** et **Rule.DisplayName** en haut du fichier.  
+4.  Dans le nouveau fichier XML, modifiez le contenu en fonction de vos besoins. Veillez à modifier le **nom de la règle** et **Rule.DisplayName** en haut du fichier.  
   
-5.  Enregistrez les modifications et fermez le fichier.  
+5.  Enregistrer les modifications et fermez le fichier.  
   
-6.  Les fichiers XML situés dans %ProgramFiles%\\MSBuild\\Microsoft.Cpp\\v4.0\\ sont chargés au démarrage de Visual Studio.  Par conséquent, pour tester le nouveau fichier, redémarrez Visual Studio.  
+6.  Le code XML dans les fichiers `%ProgramFiles%\Microsoft Visual Studio\2017\<VS Edition>\Common7\IDE\VC\VCTargets\<LCID>` sont chargés au démarrage de Visual Studio. Par conséquent, pour tester le nouveau fichier, redémarrez Visual Studio.  
   
-7.  Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur un projet, puis cliquez sur **Propriétés**.  Dans la fenêtre **Pages de propriétés**, dans le volet gauche, vérifiez qu'il y a un nouveau nœud qui porte le nom de votre règle.  
+7.  Dans **l’Explorateur de solutions**, avec le bouton droit à un projet, puis sur **propriétés**. Dans le **Pages de propriétés** fenêtre, dans le volet gauche, vérifiez qu’il existe un nouveau nœud avec le nom de votre règle.  
   
-## Voir aussi  
- [MSBuild \(Visual C\+\+\)](../build/msbuild-visual-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)

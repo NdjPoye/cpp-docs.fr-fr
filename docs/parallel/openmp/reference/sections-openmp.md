@@ -1,33 +1,33 @@
 ---
-title: "sections (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "section"
-  - "SECTIONS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sections OpenMP directive"
+title: sections (OpenMP) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- section
+- SECTIONS
+dev_langs: C++
+helpviewer_keywords: sections OpenMP directive
 ms.assetid: 4cd1d776-e198-470e-930a-01fb0ab0a0bd
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 458d62bf17ce7f8778e40a4e90592aa59ba09e4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# sections (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Reconnaît des sections de code à diviser parmi tous les threads.  
+# <a name="sections-openmp"></a>sections (OpenMP)
+Identifie les sections de code pour être réparti entre tous les threads.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 #pragma omp [parallel] sections [clauses]  
@@ -35,20 +35,20 @@ Reconnaît des sections de code à diviser parmi tous les threads.
    #pragma omp section  
    {  
       code_block   
-   }   
+   }   
 }  
 ```  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  où,  
   
- `clause` \(facultatif\)  
- zéro clauses ou plus.  Consultez la section Notes pour une liste des clauses prises en charge par **sections**.  
+ `clause`(facultatif)  
+ Zéro ou plusieurs clauses. Consultez la section Notes pour obtenir la liste des clauses prises en charge par **sections**.  
   
-## Notes  
- la directive de **sections** peut contenir zéro directives ou plus de **section** .  
+## <a name="remarks"></a>Notes  
+ Le **sections** directive peut contenir zéro ou plusieurs **section** directives.  
   
- La directive de **sections** prend en charge les clauses suivantes OpenMP :  
+ Le **sections** directive prend en charge les clauses OpenMP suivantes :  
   
 -   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   
@@ -60,11 +60,11 @@ Reconnaît des sections de code à diviser parmi tous les threads.
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
- Si **parallèle** est également spécifié, `clause` peut être une clause acceptée par les directives de **parallèle** ou de **sections** , sauf `nowait`.  
+ Si **parallèles** est également spécifiée, `clause` peut être n’importe quelle clause acceptée par le **parallèles** ou **sections** directives, à l’exception de `nowait`.  
   
- Pour plus d'informations, consultez [2.4.2 sections Construct](../../../parallel/openmp/2-4-2-sections-construct.md).  
+ Pour plus d’informations, consultez [2.4.2 construction sections](../../../parallel/openmp/2-4-2-sections-construct.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // omp_sections.cpp  
@@ -82,7 +82,10 @@ int main() {
 }  
 ```  
   
-  **Hello du thread 0**  
-**Hello du thread 0**   
-## Voir aussi  
+```Output  
+Hello from thread 0  
+Hello from thread 0  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
  [Directives](../../../parallel/openmp/reference/openmp-directives.md)

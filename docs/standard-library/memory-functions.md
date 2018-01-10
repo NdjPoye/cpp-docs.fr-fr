@@ -84,11 +84,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: 05da7b0a072cfd73b3f3ab2135c780ffdf6a9330
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8b8b3f311861fe8a98d66cef02e3d1c2c11d787
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt;, fonctions
 ||||  
@@ -117,7 +118,7 @@ T* addressof(T& Val);
 ### <a name="return-value"></a>Valeur de retour  
  Adresse réelle de l'objet ou de la fonction référencés par `Val`, même en cas de `operator&()` surchargé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="align"></a>  align  
  Place le stockage de la taille donnée (aligné par la spécification d'alignement donnée) dans la première adresse possible du stockage donné.  
@@ -151,7 +152,7 @@ void* align(
 
  Un pointeur null si la mémoire tampon alignée demandée est plus grande que l'espace disponible ; sinon, la nouvelle valeur de `Ptr`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
 
  Les paramètres modifiés `Ptr` et `Space` permettent d'appeler `align()` à plusieurs reprises pour la même mémoire tampon, éventuellement avec des valeurs différentes pour `Alignment` et `Size`. L'extrait de code suivant illustre une utilisation de `align()`.  
   
@@ -194,7 +195,7 @@ allocate_shared(Allocator Alloc, Types&&... Args);
  `Args`  
  Zéro ou plusieurs arguments qui deviennent les objets.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction crée l’objet `shared_ptr<Type>`, un pointeur vers `Type(Args...)` tel qu’alloué et construit par `Alloc`.  
   
 ##  <a name="const_pointer_cast"></a>  const_pointer_cast  
@@ -216,7 +217,7 @@ const_pointer_cast(const shared_ptr<Other>& sp);
  `Other`  
  Pointeur partagé d’argument.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction de modèle retourne un objet shared_ptr vide si `const_cast<Ty*>(sp.get())` retourne un pointeur Null ; sinon, elle retourne un objet de classe [shared_ptr](../standard-library/shared-ptr-class.md)`<Ty>` qui détient la ressource appartenant à `sp`. L'expression `const_cast<Ty*>(sp.get())` doit être valide.  
   
 ### <a name="example"></a>Exemple  
@@ -260,7 +261,7 @@ void declare_no_pointers(
 |`ptr`|Adresse du premier caractère qui ne contient plus de pointeur traçable.|  
 |`_Size`|Taille du bloc qui commence à `ptr` qui ne contient aucun pointeur traçable.|  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction informe un RÉCUPÉRATEUR de mémoire que la plage d’adresses `[ ptr, ptr + _Size)` ne plus contenir des pointeurs traçables. (Tous les pointeurs vers le stockage alloué ne doivent pas être déréférencés sauf si rendu accessible.)  
   
 ##  <a name="declare_reachable"></a>  declare_reachable  
@@ -274,7 +275,7 @@ void declare_reachable(void* ptr);
  `ptr`  
  Pointeur vers une zone de stockage accessible, allouée et valide.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si `ptr` n’est pas Null, la fonction informe tout récupérateur de mémoire que `ptr` est dorénavant accessible (qu’il pointe vers du stockage alloué valide).  
   
 ##  <a name="default_delete"></a>  default_delete  
@@ -296,7 +297,7 @@ struct default_delete {
  Autre  
  Type des éléments dans le tableau à supprimer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La classe de modèle décrit un `deleter` qui supprime les objets scalaires alloués avec `operator new`, utilisable avec la classe de modèle `unique_ptr`. Il possède également la spécialisation explicite `default_delete<Type[]>`.  
   
 ##  <a name="dynamic_pointer_cast"></a>  dynamic_pointer_cast  
@@ -318,7 +319,7 @@ dynamic_pointer_cast(const shared_ptr<Other>& sp);
  `sp`  
  Pointeur partagé d’argument.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction de modèle retourne un objet shared_ptr vide si `dynamic_cast<Ty*>(sp.get())` retourne un pointeur Null ; sinon, elle retourne un objet de classe [shared_ptr](../standard-library/shared-ptr-class.md)`<Ty>` qui détient la ressource appartenant à `sp`. L'expression `dynamic_cast<Ty*>(sp.get())` doit être valide.  
   
 ### <a name="example"></a>Exemple  
@@ -375,7 +376,7 @@ D* get_deleter(const shared_ptr<Ty>& sp);
  `sp`  
  Pointeur partagé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction de modèle retourne un pointeur vers le suppresseur de type `D` qui appartient à l’objet `sp` de classe [shared_ptr](../standard-library/shared-ptr-class.md) . Si `sp` n’a aucun suppresseur ou si suppresseur n’est pas de type `D`, la fonction retourne 0.  
   
 ### <a name="example"></a>Exemple  
@@ -430,7 +431,7 @@ get_deleter(sp1) != 0 == true
 pointer_safety get_pointer_safety();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction retourne le type de sécurité de pointeur supposé par tout RÉCUPÉRATEUR de mémoire automatique.  
   
 ##  <a name="get_temporary_buffer"></a>  get_temporary_buffer  
@@ -448,7 +449,7 @@ pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 ### <a name="return-value"></a>Valeur de retour  
  `pair` dont le premier composant est un pointeur vers la mémoire qui a été allouée, et dont le deuxième composant donne la taille de la mémoire tampon, indiquant le nombre d’éléments le plus élevé qu’elle puisse stocker.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction effectue une demande de mémoire qui présente des risques d’échec. Si aucune mémoire tampon n’est allouée, la fonction retourne une paire dans laquelle le deuxième élément est égal à zéro et le premier élément est égal au pointeur Null.  
   
  Cette fonction doit être utilisée uniquement pour la mémoire temporaire.  
@@ -501,7 +502,7 @@ make_shared(Types&&... _Args);
 |---------------|-----------------|  
 |`_Args`|Zéro ou plusieurs arguments de constructeur. Selon les arguments fournis, la fonction déduit la surcharge de constructeur à appeler.|  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez `make_shared` comme un moyen simple et plus efficace pour créer un objet et un pointeur `shared_ptr` pour gérer l'accès partagé à l'objet en même temps. Sémantiquement, les deux instructions suivantes sont équivalentes :  
   
 ```cpp  
@@ -620,7 +621,7 @@ make_unique(Types&&...) = delete;
  `Size`  
  Nombre d’éléments pour lesquels allouer de l’espace dans le nouveau tableau.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La première surcharge est utilisée pour les objets uniques, la deuxième surcharge est appelée pour les tableaux, et la troisième surcharge vous empêche de spécifier une taille de tableau dans l’argument de type (make_unique\<T[N]>) ; cette construction n’est pas prise en charge par la norme actuelle. Quand vous utilisez `make_unique` pour créer un `unique_ptr` dans un tableau, vous devez initialiser les éléments du tableau séparément. Si vous envisagez d’utiliser cette surcharge, un meilleur choix peut consister à utiliser un [std::vector](../standard-library/vector-class.md).  
   
  `make_unique` étant implémentée soigneusement pour la protection contre les exceptions, nous vous recommandons d’utiliser `make_unique` au lieu d’appeler directement des constructeurs `unique_ptr`.  
@@ -677,7 +678,7 @@ struct owner_less<weak_ptr<Type>>
  `right`  
  Pointeur partagé ou faible.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les classes de modèle définissent tous leurs opérateurs membres comme retournant `left.owner_before(right)`.  
   
 ##  <a name="return_temporary_buffer"></a>  return_temporary_buffer  
@@ -692,7 +693,7 @@ void return_temporary_buffer(Type* _Pbuf);
  *_Pbuf*  
  Pointeur vers la mémoire à libérer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction doit être utilisée uniquement pour la mémoire temporaire.  
   
 ### <a name="example"></a>Exemple  
@@ -752,7 +753,7 @@ static_pointer_cast(const shared_ptr<Other>& sp);
  `Other`  
  Pointeur partagé d’argument.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction de modèle retourne un objet shared_ptr vide si `sp` est un objet `shared_ptr` vide ; sinon, elle retourne un objet de classe [shared_ptr](../standard-library/shared-ptr-class.md)`<Ty>` qui détient la ressource appartenant à `sp`. L'expression `static_cast<Ty*>(sp.get())` doit être valide.  
   
 ### <a name="example"></a>Exemple  
@@ -814,7 +815,7 @@ void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
  `right`  
  Pointeur partagé/faible de droite.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les fonctions de modèle appellent `left.swap(right)`.  
   
 ### <a name="example"></a>Exemple  
@@ -879,7 +880,7 @@ void undeclare_no_pointers(
     size_t _Size);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction informe un RÉCUPÉRATEUR de mémoire que la plage d’adresses `[ptr, ptr + _Size)` peuvent maintenant contenir des pointeurs traçables.  
   
 ##  <a name="undeclare_reachable"></a>  undeclare_reachable  
@@ -896,7 +897,7 @@ Type *undeclare_reachable(Type* ptr);
 |---------------|-----------------|  
 |`ptr`|Pointeur vers l’adresse mémoire devant être déclarée comme non accessible.|  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si `ptr` n’est pas `nullptr`, la fonction informe un RÉCUPÉRATEUR de mémoire qui `ptr` n’est plus accessible. Il retourne un pointeur en toute sécurité dérivée qui compare égal à `ptr`.  
   
 ##  <a name="uninitialized_copy"></a>  uninitialized_copy  
@@ -920,7 +921,7 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur vers l’avant ciblant la première position au-delà de la plage de destination, à moins que la plage source est vide.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cet algorithme permet de découpler l'allocation de mémoire et la construction d'objet.  
   
  La fonction de modèle est exécutée :  
@@ -1024,7 +1025,7 @@ ForwardIterator uninitialized_copy_n(
 ### <a name="return-value"></a>Valeur de retour  
  Itérateur vers l’avant qui traite la première position au-delà de la destination. Si la plage source est vide, l’itérateur adresses `first`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction de modèle effectue les opérations suivantes :  
   
 ```cpp  
@@ -1054,7 +1055,7 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
  `val`  
  Valeur à utiliser pour initialiser la plage de destination.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cet algorithme permet de découpler l'allocation de mémoire et la construction d'objet.  
   
  La fonction de modèle est exécutée :  
@@ -1123,7 +1124,7 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
  `val`  
  Valeur à utiliser pour initialiser la plage de destination.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cet algorithme permet de découpler l'allocation de mémoire et la construction d'objet.  
   
  La fonction de modèle est exécutée :  

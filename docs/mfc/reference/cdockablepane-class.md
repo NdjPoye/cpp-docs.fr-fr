@@ -143,11 +143,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3072e4504fc70e75888607d4f263b39532f69b51
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb32fc827c576830def3901389d400450b79f5ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Implémente un volet qui peut être ancré dans un site d'ancrage ou être inclus dans un volet à onglets.  
@@ -248,13 +249,13 @@ class CDockablePane : public CPane
   
 ### <a name="data-members"></a>Membres de données  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|Spécifie si l’animation de masquage automatique du volet ancrable est désactivée.|  
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|Détermine le comportement du volet lorsque le volet est en mode de masquage automatique.|  
 |[CDockablePane::m_nSlideSteps](#m_nslidesteps)|Spécifie la vitesse d’animation du volet lorsqu’elle est affichée ou masquée en mode de masquage automatique.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CDockablePane`implémente les fonctionnalités suivantes :  
   
 -   Un volet d’ancrage dans une fenêtre frame principale.  
@@ -314,7 +315,7 @@ class CDockablePane : public CPane
   
  [CDockablePane](../../mfc/reference/cdockablepane-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxDockablePane.h  
   
 ##  <a name="attachtotabwnd"></a>CDockablePane::AttachToTabWnd  
@@ -344,7 +345,7 @@ virtual CDockablePane* AttachToTabWnd(
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le volet actif, si elle n’est pas un volet à onglets ; Sinon, un pointeur vers le volet à onglets qui résulte de l’opération d’attachement. La valeur de retour est `NULL` si le volet actif ne peut pas être attaché, ou si une erreur se produit.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsqu’un volet ancrable est joint à un autre volet, à l’aide de cette méthode, les événements suivants se produisent :  
   
 1.  Les vérifications de framework si le volet cible `pTabControlBarAttachTo` est une expression régulière d’ancrage volet ou si elle est dérivée de [CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md).  
@@ -412,7 +413,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le volet spécifié peut être ancré dans ce volet. dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode avant un volet est ancré sur le volet actif.  
   
  Remplacez cette fonction dans une classe dérivée pour activer ou désactiver l’ancrage d’un volet spécifique.  
@@ -429,7 +430,7 @@ virtual BOOL CanAutoHide() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le volet peut masquer ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `CDockablePane::CanAutoHide`Retourne `FALSE` dans les situations suivantes :  
   
 -   Le volet n’a aucun parent.  
@@ -448,7 +449,7 @@ virtual BOOL CanBeAttached() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le volet ancrable peut être ancré à un autre volet ou à la fenêtre frame principale. dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, cette méthode retourne toujours `TRUE`. Substituez cette méthode dans une classe dérivée pour activer ou désactiver l’ancrage sans appeler [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).  
   
 ##  <a name="cdockablepane"></a>CDockablePane::CDockablePane  
@@ -458,7 +459,7 @@ virtual BOOL CanBeAttached() const;
 CDockablePane();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Après avoir construit un objet de volet ancrable, appelez [CDockablePane::Create](#create) ou [CDockablePane::CreateEx](#createex) pour le créer.  
   
 ##  <a name="converttotabbeddocument"></a>CDockablePane::ConvertToTabbedDocument  
@@ -482,7 +483,7 @@ virtual BOOL CheckAutoHideCondition();
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si la condition de masquage est satisfaite ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’infrastructure utilise un minuteur à vérifier régulièrement s’il faut masquer un volet ancrable masquage automatique. La méthode retourne `TRUE` lorsque le volet n’est pas actif, le volet n’est pas en cours de redimensionnement et le pointeur de la souris ne se trouve pas sur le volet.  
   
  Si toutes les conditions précédentes sont remplies, le framework appelle [CDockablePane::Slide](#slide) pour masquer le volet.  
@@ -501,7 +502,7 @@ virtual BOOL CheckStopSlideCondition(BOOL bDirection);
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si la condition d’arrêt est satisfaite ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsqu’un volet ancrable est défini en mode de masquage automatique, l’infrastructure utilise les effets glissantes pour afficher ou masquer le volet. L’infrastructure appelle cette fonction lorsque le volet est décalée. `CheckStopSlideCondition`Retourne `TRUE` lorsque le volet est totalement visible ou lorsqu’il est complètement masqué.  
   
  Substituez cette méthode dans une classe dérivée pour implémenter les effets de masquage automatique personnalisé.  
@@ -517,7 +518,7 @@ virtual void CopyState(CDockablePane* pOrgBar);
  [in] `pOrgBar`  
  Pointeur vers un volet Ancrable.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `CDockablePane::CopyState`copie de l’état de `pOrgBar` dans le volet en cours en appelant les méthodes suivantes :  
   
 - [CPane::CopyState](../../mfc/reference/cpane-class.md#copystate)  
@@ -594,7 +595,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le volet ancrable est créé avec succès ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Crée un volet de Windows et l’attache à le `CDockablePane` objet.  
   
  Si le `dwStyle` style de fenêtre a le `CBRS_FLOAT_MULTI` indicateur, la fenêtre mini-frame peut flotter avec d’autres volets dans la fenêtre mini-frame. Par défaut, ancrer les volets permettre uniquement faire flotter individuellement.  
@@ -624,10 +625,10 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 ### <a name="return-value"></a>Valeur de retour  
  Cette méthode retourne un pointeur vers le séparateur qui vient d’être créé, ou `NULL` en cas de création de la ligne de séparation.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `dwAlignment`peut être une des valeurs suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |`CBRS_ALIGN_TOP`|Le volet est en cours ancré en haut de la zone cliente d’une fenêtre frame.|  
 |`CBRS_ALIGN_BOTTOM`|Le volet est en cours ancré en bas de la zone cliente d’une fenêtre frame.|  
@@ -685,7 +686,7 @@ virtual BOOL CreateEx(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le volet ancrable est créé avec succès ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Crée un volet de Windows et l’attache à le `CDockablePane` objet.  
   
  Si le `dwStyle` style de fenêtre a le `CBRS_FLOAT_MULTI` indicateur, la fenêtre mini-frame peut flotter avec d’autres volets dans la fenêtre mini-frame. Par défaut, ancrer les volets permettre uniquement faire flotter individuellement.  
@@ -702,7 +703,7 @@ virtual CTabbedPane* CreateTabbedPane();
 ### <a name="return-value"></a>Valeur de retour  
  Le nouveau volet à onglets, ou `NULL` si l’opération de création a échoué.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode lorsqu’il crée un volet à onglets pour remplacer ce volet. Pour plus d’informations, consultez [CDockablePane::AttachToTabWnd](#attachtotabwnd).  
   
  Remplacement de cette méthode dans une classe dérivée de personnaliser des volets à onglets sont créés et initialisés.  
@@ -732,10 +733,10 @@ virtual BOOL DockPaneContainer(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le conteneur a été correctement ancré sur le volet. dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `dwAlignment`peut être une des valeurs suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |`CBRS_ALIGN_TOP`|Le conteneur est en cours ancré en haut du volet.|  
 |`CBRS_ALIGN_BOTTOM`|Le conteneur est en cours ancré en bas du volet.|  
@@ -766,7 +767,7 @@ BOOL CDockablePane::DockToRecentPos();
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le volet est ancré avec succès ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Volets ancrables stockent des informations d’ancrage récentes dans une [CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md) objet.  
   
 ##  <a name="docktowindow"></a>CDockablePane::DockToWindow  
@@ -792,7 +793,7 @@ virtual BOOL DockToWindow(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le volet est ancré avec succès ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette méthode pour ancrer un volet à un autre volet, avec l’alignement spécifié par `dwAlignment`.  
   
 ##  <a name="drawcaption"></a>CDockablePane::DrawCaption  
@@ -811,7 +812,7 @@ virtual void DrawCaption(
  [in] `rectCaption`  
  Spécifie le rectangle englobant du légende du volet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode pour dessiner la légende d’un volet Ancrable.  
   
  Substituez cette méthode dans une classe dérivée pour personnaliser l’apparence de la légende.  
@@ -827,7 +828,7 @@ void EnableAutohideAll(BOOL bEnable = TRUE);
  [in] `bEnable`  
  `TRUE`Pour activer la fonction Masquer automatiquement toutes les fonctionnalités pour le volet ancrable ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque l’utilisateur maintient la `Ctrl` clé et clique sur le bouton pin pour basculer d’un volet en mode de masquage automatique, toutes les autres volets dans le même conteneur sont également passer en mode de masquage automatique.  
   
  Appelez cette méthode avec `bEnable` la valeur `FALSE` pour désactiver cette fonctionnalité pour un volet spécifique.  
@@ -843,7 +844,7 @@ virtual void EnableGripper(BOOL bEnable);
  [in] `bEnable`  
  `TRUE`Pour activer la légende ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque l’infrastructure crée les volets ancrables, ils n’ont pas le **WS_STYLE** style de fenêtre, même s’il est spécifié. Cela signifie que légende du volet est une zone non cliente qui est contrôlée par le framework, mais cette exposition diffère de la légende de fenêtre standard.  
   
  Vous pouvez afficher ou masquer la légende à tout moment. L’infrastructure de la légende est masquée lorsqu’un volet est ajouté sous forme d’onglet dans une fenêtre à onglets ou lorsqu’un volet est affichée dans une fenêtre mini-frame.  
@@ -858,7 +859,7 @@ CRect GetAHRestoredRect() const;
 ### <a name="return-value"></a>Valeur de retour  
  A `CRect` objet qui contient la position du volet lorsqu’il est en mode de masquage automatique.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="getahslidemode"></a>CDockablePane::GetAHSlideMode  
  Récupère le mode de diapositive de masquage automatique pour le volet.  
@@ -870,7 +871,7 @@ virtual UINT GetAHSlideMode() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un `UINT` qui spécifie le mode de diapositive de masquage automatique pour le volet. La valeur de retour peut être `AFX_AHSM_MOVE` ou `AFX_AHSM_STRETCH`, mais l’implémentation utilise uniquement `AFX_AHSM_MOVE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="getcaptionheight"></a>CDockablePane::GetCaptionHeight  
  Retourne la hauteur, en pixels, de la légende en cours.  
@@ -882,7 +883,7 @@ virtual int GetCaptionHeight() const;
 ### <a name="return-value"></a>Valeur de retour  
  La hauteur de la légende, en pixels.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Hauteur de la légende est 0 si la légende est masquée par la [CDockablePane::EnableGripper](#enablegripper) (méthode), ou si le volet ne dispose pas d’une légende.  
   
 ##  <a name="getdefaultpanedivider"></a>CDockablePane::GetDefaultPaneDivider  
@@ -895,7 +896,7 @@ CPaneDivider* GetDefaultPaneDivider() const;
 ### <a name="return-value"></a>Valeur de retour  
  Valide [CPaneDivider](../../mfc/reference/cpanedivider-class.md) objet si le volet ancrable est ancré à la fenêtre frame principale, ou `NULL` si le volet ancrable n’est pas ancré, ou si elle est flottant.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur diviseurs de volet, consultez [CPaneDivider classe](../../mfc/reference/cpanedivider-class.md).  
   
 ##  <a name="getdockingstatus"></a>CDockablePane::GetDockingStatus  
@@ -924,7 +925,7 @@ virtual AFX_CS_STATUS GetDockingStatus(
 |`CS_DELAY_DOCK`|Le pointeur se trouve sur un site d’ancrage qui est un autre volet d’ancrage ou un bord du frame principal. Le framework ancre le volet après un certain délai. Consultez la section Notes pour plus d’informations sur ce délai.|  
 |`CS_DELAY_DOCK_TO_TAB`|Le pointeur se trouve sur un site d’ancrage qui provoque le volet ancré dans une fenêtre à onglets. Cela se produit lorsque le pointeur se trouve sur la légende d’un autre volet d’ancrage ou sur la zone d’onglet d’un volet à onglets.|  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode pour gérer l’ancrage d’un volet flottant.  
   
  Pour les barres d’outils flottantes ou ancrer les volets qui utilisent la `DT_IMMEDIATE` ancrage mode, le framework diffère de la commande d’ancrage pour permettre à l’utilisateur déplacer la fenêtre en dehors de la zone cliente du frame parent avant d’ancrage. La longueur du délai est mesurée en millisecondes et est contrôlée par le [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) membre de données... La valeur par défaut [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) est 200. Ce comportement émule le comportement d’ancrage de [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)] 2007.  
@@ -951,7 +952,7 @@ int GetLastPercentInPaneContainer() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un `int` qui spécifie le pourcentage d’espace occupé par le volet dans son conteneur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode est utilisée lorsque le conteneur s’ajuste à sa disposition.  
   
 ##  <a name="gettabarea"></a>CDockablePane::GetTabArea  
@@ -970,7 +971,7 @@ virtual void GetTabArea(
  [in] `rectTabAreaBottom`  
  `GetTabArea`remplit cette variable avec la zone d’onglet si les onglets sont situés en bas du volet. Si les onglets sont situés en haut du volet, cette variable est remplie avec un rectangle vide.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode est utilisée uniquement dans les classes dérivées de `CDockablePane` et disposent d’onglets. Pour plus d’informations, consultez [CTabbedPane::GetTabArea](../../mfc/reference/ctabbedpane-class.md#gettabarea) et [CMFCOutlookBar::GetTabArea](../../mfc/reference/cmfcoutlookbar-class.md#gettabarea).  
   
 ##  <a name="gettabbedpanertc"></a>CDockablePane::GetTabbedPaneRTC  
@@ -983,7 +984,7 @@ CRuntimeClass* GetTabbedPaneRTC() const;
 ### <a name="return-value"></a>Valeur de retour  
  Les informations de classe runtime pour le volet Ancrable.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette méthode pour récupérer les informations de classe runtime pour les volets à onglets qui sont créés dynamiquement. Cela peut se produire lorsqu’un utilisateur fait glisser un volet à la légende d’un autre volet, ou si vous appelez le [CDockablePane::AttachToTabWnd](#attachtotabwnd) méthode pour créer par programme un volet à onglets à partir de deux volets ancrables.  
   
  Vous pouvez définir les informations de classe runtime en appelant le [CDockablePane::SetTabbedPaneRTC](#settabbedpanertc) (méthode).  
@@ -998,7 +999,7 @@ virtual BOOL HasAutoHideMode() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le volet ancrable peut être basculé en mode de masquage automatique ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Substituez cette méthode dans une classe dérivée pour désactiver le mode de masquage automatique pour un volet ancrable spécifique.  
   
 ##  <a name="hittest"></a>CDockablePane::HitTest  
@@ -1040,7 +1041,7 @@ virtual BOOL IsAutohideAllEnabled() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le volet ancrable et tous les autres volets dans le conteneur, il est possible en mode de masquage automatique ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un utilisateur Active le mode de masquage automatique en cliquant sur le bouton pin d’ancrage tout en maintenant la **Ctrl** clé  
   
  Pour activer ou désactiver ce comportement, appelez le [CDockablePane::EnableAutohideAll](#enableautohideall) (méthode).  
@@ -1065,7 +1066,7 @@ virtual BOOL IsDocked() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le volet ancrable n’appartient pas à une fenêtre mini-frame ou si elle est flottant dans une fenêtre mini-frame avec un autre volet. `FALSE`Si le volet est un enfant d’une fenêtre mini-frame et il n’y a aucune autres volets qui appartiennent à la fenêtre mini-frame.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour déterminer si le volet est ancré à la fenêtre frame principale, appelez [CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider). Si la méthode retourne un pointeur non NULL, le volet est ancré à la fenêtre frame principale.  
   
 ##  <a name="ishideinautohidemode"></a>CDockablePane::IsHideInAutoHideMode  
@@ -1078,7 +1079,7 @@ virtual BOOL IsHideInAutoHideMode() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le volet ancrable doit être masqué en mode de masquage automatique ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsqu’un volet ancrable est en mode de masquage automatique, il comporte différemment lorsque vous appelez `ShowPane` pour masquer ou afficher le volet. Ce comportement est contrôlé par le membre statique [CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode). Si ce membre est `TRUE`, le volet ancrable et sa barre d’outils connexes masquage automatique ou le bouton masquage automatique est masqué ou affiché lorsque vous appelez `ShowPane`. Sinon, le volet ancrable est activé ou désactivé, et sa barre d’outils connexes masquage automatique ou le bouton masquage automatique est toujours visible.  
   
  Substituez cette méthode dans une classe dérivée pour modifier le comportement par défaut pour les volets individuels.  
@@ -1095,7 +1096,7 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le volet est dans une fenêtre frame de plusieurs volets ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="isresizable"></a>CDockablePane::IsResizable  
  Spécifie si le volet est redimensionnable.  
@@ -1107,7 +1108,7 @@ virtual BOOL IsResizable() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le volet est redimensionnable ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, les volets ancrables sont redimensionnables. Pour empêcher le redimensionnement, substituez cette méthode dans une classe dérivée et retourner `FALSE`. Notez qu’un `FALSE` valeur entraîne un échec `ASSERT` dans [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane). Utilisez [CDockingManager::AddPane](../../mfc/reference/cdockingmanager-class.md#addpane) à la place pour ancrer un volet au sein d’un frame parent.  
   
  Les volets qui ne peut pas être redimensionnés peuvent ni float ni entrer en mode de masquage automatique et sont toujours situés au niveau du bord extérieur du frame parent.  
@@ -1122,7 +1123,7 @@ virtual BOOL IsTabLocationBottom() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si les onglets sont situés en bas du volet. `FALSE` si les onglets sont situés en haut du volet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [CTabbedPane::IsTabLocationBottom](../../mfc/reference/ctabbedpane-class.md#istablocationbottom).  
   
 ##  <a name="istracked"></a>CDockablePane::IsTracked  
@@ -1145,7 +1146,7 @@ virtual BOOL IsVisible() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le volet ancrable est visible ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette méthode pour déterminer si un volet ancrable est visible. Vous pouvez utiliser cette méthode au lieu d’appeler [CWnd::IsWindowVisible](../../mfc/reference/cwnd-class.md#iswindowvisible) ou des tests pour le `WS_VISIBLE` style. L’état de visibilité retourné dépend si le mode de masquage automatique est activé ou désactivé et la valeur de la [CDockablePane::IsHideInAutoHideMode](#ishideinautohidemode) propriété.  
   
  Si le volet ancrable est en mode de masquage automatique et `IsHideInAutoHideMode` retourne `FALSE` l’état de visibilité est toujours `FALSE`.  
@@ -1168,7 +1169,7 @@ AFX_IMPORT_DATA static BOOL m_bDisableAnimation;
 AFX_IMPORT_DATA static BOOL m_bHideInAutoHideMode;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette valeur affecte tous les volets d’ancrage de l’application.  
   
  Si vous définissez ce membre sur `TRUE`, volets ancrables seront affichés ou masqués avec leurs boutons et les barres d’outils connexes Masquer automatiquement lorsque vous appelez [CDockablePane::ShowPane](#showpane).  
@@ -1182,7 +1183,7 @@ AFX_IMPORT_DATA static BOOL m_bHideInAutoHideMode;
 AFX_IMPORT_DATA static int m_nSlideSteps;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour un effet d’animation plus rapide, réduisez cette valeur. Pour un effet d’animation plus lent, augmentez cette valeur.  
   
 ##  <a name="onafterchangeparent"></a>CDockablePane::OnAfterChangeParent  
@@ -1195,7 +1196,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ### <a name="parameters"></a>Paramètres  
  [in] `pWndOldParent`  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="onafterdockfromminiframe"></a>CDockablePane::OnAfterDockFromMiniFrame  
  Appelé par le framework lorsqu’une barre d’ancrage flottante est ancré à une fenêtre frame.  
@@ -1204,7 +1205,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 virtual void OnAfterDockFromMiniFrame();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, cette méthode ne fait rien.  
   
 ##  <a name="onbeforechangeparent"></a>CDockablePane::OnBeforeChangeParent  
@@ -1223,7 +1224,7 @@ virtual void OnBeforeChangeParent(
  [in] `bDelay`  
  `BOOL`qui spécifie s’il faut différer le recalcul de la mise en page d’accueil si le volet est déconnecté. Pour plus d’informations, consultez [CDockablePane::UndockPane](#undockpane).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si le volet est ancré et le nouveau parent n’autorise pas l’ancrage, cette méthode détache le volet.  
   
  Si le volet est converti en un document à onglets, cette méthode stocke sa position d’ancrage récente. L’infrastructure utilise la position d’ancrage récente pour restaurer la position du volet quand il est converti dans un état ancré.  
@@ -1247,7 +1248,7 @@ virtual BOOL OnBeforeFloat(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le volet peut être affichée ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode est appelée par l’infrastructure lorsqu’un volet est sur float. Vous pouvez substituer cette méthode dans une classe dérivée si vous souhaitez effectuer un traitement avant le volet flotte.  
   
 ##  <a name="onpressbuttons"></a>CDockablePane::OnPressButtons  
@@ -1261,7 +1262,7 @@ virtual void OnPressButtons(UINT nHit);
  [in] `nHit`  
  Ce paramètre n'est pas utilisé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si vous ajoutez un bouton personnalisé à la légende d’un volet ancrable, substituez cette méthode pour recevoir des notifications lorsque l’utilisateur appuie sur le bouton.  
   
 ##  <a name="onslide"></a>CDockablePane::OnSlide  
@@ -1275,7 +1276,7 @@ virtual void OnSlide(BOOL bSlideOut);
  [in] `bSlideOut`  
  `TRUE`Pour afficher le volet ; `FALSE` pour masquer le volet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Substituez cette méthode dans une classe dérivée pour implémenter les effets de masquage automatique personnalisé.  
   
 ##  <a name="removefromdefaultpanedividier"></a>CDockablePane::RemoveFromDefaultPaneDividier  
@@ -1285,7 +1286,7 @@ virtual void OnSlide(BOOL bSlideOut);
 void RemoveFromDefaultPaneDividier();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode définit le diviseur de volet par défaut `NULL` et supprime le volet de son conteneur.  
   
 ##  <a name="replacepane"></a>CDockablePane::ReplacePane  
@@ -1318,7 +1319,7 @@ BOOL ReplacePane(
 void RestoreDefaultPaneDivider();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le diviseur de volet par défaut restaurée remplace le diviseur de volet par défaut actuel, s’il existe.  
   
 ##  <a name="setautohidemode"></a>CDockablePane::SetAutoHideMode  
@@ -1348,7 +1349,7 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 ### <a name="return-value"></a>Valeur de retour  
  La barre d’outils de masquage automatique a été créé après le passage au mode de masquage automatique, ou `NULL`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode lorsqu’un utilisateur clique sur le bouton pin pour basculer le volet ancrable en mode de masquage automatique ou en mode d’ancrage normal.  
   
  Appelez cette méthode pour basculer d’un volet ancrable en mode masquage automatique par programme. Le volet doit être ancré à la fenêtre frame principale ( [CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider) doit retourner un pointeur valide vers le [CPaneDivider](../../mfc/reference/cpanedivider-class.md)).  
@@ -1380,7 +1381,7 @@ void SetLastPercentInPaneContainer(int n);
  [in] `n`  
  Un `int` qui spécifie le pourcentage d’espace occupé par le volet dans son conteneur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le framework ajuste le volet pour utiliser la nouvelle valeur lors de la disposition est recalculée.  
   
 ##  <a name="setrestoreddefaultpanedivider"></a>CDockablePane::SetRestoredDefaultPaneDivider  
@@ -1394,7 +1395,7 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
  [in] `hRestoredSlider`  
  Handle vers un diviseur de volet (curseur).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un diviseur de volet par défaut est obtenu lorsqu’un volet est désérialisé. Pour plus d’informations, consultez [CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider).  
   
 ##  <a name="settabbedpanertc"></a>CDockablePane::SetTabbedPaneRTC  
@@ -1408,7 +1409,7 @@ void SetTabbedPaneRTC(CRuntimeClass* pRTC);
  [in] `pRTC`  
  Les informations de classe runtime pour le volet à onglets.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette méthode pour définir les informations de classe runtime pour les volets à onglets qui sont créés dynamiquement. Cela peut se produire lorsqu’un utilisateur fait glisser un volet à la légende d’un autre volet, ou si vous appelez le [CDockablePane::AttachToTabWnd](#attachtotabwnd) méthode pour créer par programme un volet à onglets à partir de deux volets ancrables.  
   
  La classe d’exécution par défaut est définie en fonction de la `dwTabbedStyle` paramètre de [CDockablePane::Create](#create) et [CDockablePane::CreateEx](#createex). Pour personnaliser les volets à onglets nouvelle, dérivez votre classe à partir d’une des classes suivantes :  
@@ -1441,7 +1442,7 @@ virtual void ShowPane(
  [in] `bActivate`  
  `TRUE`Pour activer le volet en cas d’affichage ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette méthode à la place de la [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) lors de l’affichage ou masquage des volets ancrables.  
   
 ##  <a name="slide"></a>CDockablePane::Slide  
@@ -1460,7 +1461,7 @@ virtual void Slide(
  [in] `bUseTimer`  
  `TRUE`Pour afficher ou masquer le volet avec l’effet de masquage automatique ; `FALSE` pour afficher ou masquer le volet immédiatement.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode pour animer un volet qui est en mode de masquage automatique.  
   
  Cette méthode utilise le `CDockablePane::m_nSlideDefaultTimeOut` valeur pour déterminer le délai d’attente pour l’effet de diapositive. La valeur par défaut pour le délai d’attente est 1. Si vous personnalisez l’algorithme de masquage automatique, modifiez ce membre pour modifier le délai d’attente.  
@@ -1472,7 +1473,7 @@ virtual void Slide(
 virtual void ToggleAutoHide();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode active ou désactive le mode de masquage automatique pour le volet en appelant [CDockablePane::SetAutoHideMode](#setautohidemode).  
   
 ##  <a name="undockpane"></a>CDockablePane::UndockPane  
@@ -1486,7 +1487,7 @@ virtual void UndockPane(BOOL bDelay = FALSE);
  [in] `bDelay`  
  `TRUE`pour différer le calcul de la disposition d’ancrage ; `FALSE` pour recalculer la disposition d’ancrage immédiatement.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette méthode pour détacher un volet à partir de la fenêtre frame principale ou d’un conteneur de fenêtre mini-frame de multiples (volet est flottant dans une fenêtre mini-frame unique avec d’autres).  
   
  Vous devez annuler l’ancrage un volet avant d’effectuer toute opération externe qui n’est pas effectuée par le [CDockingManager](../../mfc/reference/cdockingmanager-class.md). Par exemple, vous devez déconnecter un volet déplacer par programmation à partir d’un emplacement vers un autre.  

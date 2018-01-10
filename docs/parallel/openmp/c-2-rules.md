@@ -1,65 +1,65 @@
 ---
-title: "C.2 R&#232;gles | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "C.2 règles | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e5efa8d0e7cf4118362b7695bafcd4710b4021f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# C.2 R&#232;gles
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammaire indique les extensions à la grammaire du langage de base pour les directives OpenMP C et C++.  
+# <a name="c2-rules"></a>C.2 Règles
+La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammaire montre les extensions à la grammaire du langage de base pour les directives OpenMP C et C++.  
   
- **/\* en C++ (ISO/IEC 14882:1998) \*/**  
+ **/\*en C++ (ISO/IEC 14882:1998)\*/**  
   
  *instruction-seq*:  
   
- *instruction*  
+ *statement*  
   
  *directive OpenMP*  
   
- *instruction de déclaration-seq*  
+ *instruction-seq instruction*  
   
  *instruction-seq directive openmp*  
   
- **/\* dans C90 (ISO/CEI 9899 : 1990) \*/**  
+ **/\*dans C90 (9899 : 1990 de la norme ISO/IEC)\*/**  
   
- *liste d’instructions*:  
+ *statement-list*:  
   
- *instruction*  
+ *statement*  
   
  *directive OpenMP*  
   
- *instruction-list, instruction*  
+ *statement-list statement*  
   
  *liste d’instructions de la directive openmp*  
   
- **/\* dans la norme C99 (ISO/IEC 9899:1999) \*/**  
+ **/\*dans C99 (ISO/IEC la 9899 : 1999)\*/**  
   
  *élément de bloc*:  
   
  *déclaration*  
   
- *instruction*  
+ *statement*  
   
  *directive OpenMP*  
   
- *instruction*:  
+ *instruction* :  
   
- **/\* instructions standards \*/**  
+ **/\*instructions standards\*/**  
   
  *construction d’OpenMP*  
   
@@ -73,35 +73,35 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
   
  *construction d’unique*  
   
- *parallèle-construction for*  
+ *construction parallèle-for*  
   
  *construction de sections parallèles*  
   
- *maître-construc*  
+ *construc de master*  
   
  *construction Critical*  
   
  *construction atomic*  
   
- *construction commandée*  
+ *construction ordonnée*  
   
  *la directive OpenMP*:  
   
- *directive Barrier*  
+ *directive du cloisonnement*  
   
  *directive du vidage*  
   
  *bloc structuré*:  
   
- *instruction*  
+ *statement*  
   
  *construction parallèle*:  
   
- *bloc structuré directive parallèle*  
+ *bloc structuré de directive parallèle*  
   
  *directive parallèle*:  
   
- **# pragma omp parallel**  *parallèle-clause*optseq *nouvelle ligne*  
+ **# pragma pragma omp parallel***parallèle-clause*optseq *nouvelle ligne*   
   
  *clause parallèle*:  
   
@@ -119,9 +119,9 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
   
  *instruction d’itération pour (directive)*  
   
- *directive pour*:  
+ *pour la directive*:  
   
- **# pragma omp pour** *clause for*optseq *nouvelle ligne*  
+ **# pragma omp de pragma pour** *clause for*optseq *nouvelle ligne*  
   
  *clause for*:  
   
@@ -129,67 +129,67 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
   
  *clause de données*  
   
- **NOWAIT**  
+ **nowait**  
   
  *unique pour la clause*:  
   
  **commandée**  
   
- **planification (** *-type de planification* **)**  
+ **planification (** *genre de planification* **)**  
   
- **planification (** *-type de planification* **,** *expression* **)**  
+ **planification (** *genre de planification* **,** *expression* **)**  
   
  *type de planification*:  
   
- **statique**  
+ **static**  
   
- **dynamique**  
+ **dynamic**  
   
  **Interactive**  
   
- **exécution**  
+ **Runtime**  
   
  *construction de sections*:  
   
- *portée de section-sections (directive)*  
+ *directive de sections section-étendue*  
   
  *directive de sections*:  
   
- **sections de # pragma omp** *sections clause*optseq *nouvelle ligne*  
+ **sections de # pragma omp** *sections-clause*optseq *nouvelle ligne*  
   
  *clause de sections*:  
   
  *clause de données*  
   
- **NOWAIT**  
+ **nowait**  
   
  *étendue de la section*:  
   
- *{section-séquence}*  
+ *{séquence-section}*  
   
  *séquence de la section*:  
   
- *la directive de la section*opt *bloc structuré*  
+ *directive de section*opt *bloc structuré*  
   
- *séquence de section section directive structuré bloc*  
+ *directive de section section séquence structuré par bloc.*  
   
- *la directive de la section*:  
+ *directive de section*:  
   
  **# pragma omp section** *nouvelle ligne*  
   
- *simple-construction*:  
+ *construction d’unique*:  
   
- *bloc structuré directive unique*  
+ *bloc structuré de directive unique*  
   
  *la directive du seul*:  
   
- **# pragma omp unique** *une clause unique*optseq *nouvelle ligne*  
+ **# pragma pragma omp unique** *unique clause*optseq *nouvelle ligne*  
   
- *clause unique*:  
+ *une clause unique*:  
   
  *clause de données*  
   
- **NOWAIT**  
+ **nowait**  
   
  *construction parallèle-for*:  
   
@@ -197,7 +197,7 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
   
  *-parallèle pour la directive*:  
   
- **# pragma omp parallel pour** *parallèle de clause for*optseq *nouvelle ligne*  
+ **# pragma pragma omp parallel pour** *parallèle de clause for*optseq *nouvelle ligne*  
   
  *parallèle de clause for*:  
   
@@ -209,13 +209,13 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
   
  *construction de sections parallèles*:  
   
- *portée de section parallèle-sections (directive)*  
+ *directive parallèle-sections section-étendue*  
   
- *directive de sections parallèles*:  
+ *directive parallèle-sections*:  
   
  **sections de # pragma omp parallel** *parallèle-sections-clause*optseq *nouvelle ligne*  
   
- *sections parallèle-clause*:  
+ *clause de sections de parallèle*:  
   
  *clause unique parallèle*  
   
@@ -235,27 +235,27 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
   
  *directive Critical*:  
   
- **# pragma omp critiques** *une expression de la région*opt *nouvelle ligne*  
+ **# pragma pragma omp critique** *une expression de la région*opt *nouvelle ligne*  
   
  *une expression de la région*:  
   
  *(identificateur)*  
   
- *la directive de la barrière*:  
+ *la directive du cloisonnement*:  
   
  **barrière de # pragma omp** *nouvelle ligne*  
   
  *construction atomic*:  
   
- *instruction d’expression directive atomic*  
+ *instruction d’expression atomic (directive)*  
   
  *directive atomic*:  
   
- **# pragma omp atomic** *nouvelle ligne*  
+ **# pragma pragma omp atomic** *nouvelle ligne*  
   
- *directive Flush*:  
+ *la directive du vidage*:  
   
- **# pragma omp vidage** *flush-var*opt *nouvelle ligne*  
+ **# pragma pragma omp vidage** *var de vidage*opt *nouvelle ligne*  
   
  *Flush-var*:  
   
@@ -263,58 +263,58 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
   
  *construction ordonnée*:  
   
- *bloc structuré directive commandée*  
+ *bloc structuré de directive commandée*  
   
- *directive commandée*:  
+ *la directive classés*:  
   
- **# pragma omp commandée** *nouvelle ligne*  
+ **# pragma omp classés** *nouvelle ligne*  
   
  *déclaration*:  
   
- **/\* déclarations standards \*/**  
+ **/\*déclarations standards\*/**  
   
  *directive threadprivate*  
   
  *la directive threadprivate*:  
   
- **# pragma omp threadprivate (** *liste de variable*  **)** *nouvelle ligne*  
+ **# pragma omp threadprivate (** *variable-list***)** *nouvelle ligne*   
   
  *clause de données*:  
   
- **Private (** *liste de variable* **)**  
+ **privé (** *variable-list* **)**  
   
- **copyprivate (**  *liste de variable*  **)**  
+ **copyprivate (***variable-list***)**   
   
- **firstprivate (**  *liste de variable*  **)**  
+ **firstprivate (***variable-list***)**   
   
- **lastprivate (** *liste de variable*  **)**  
+ **lastprivate (** *variable-list***)**   
   
- **partagé (** *liste de variable* **)**  
+ **partagé (** *variable-list* **)**  
   
- **par défaut (partagée)**  
+ **par défaut (partagé)**  
   
  **par défaut (aucun)**  
   
- **réduction (**  *-opérateur de réduction*  **:**  *liste de variable*  **)**  
+ **la réduction (***opérateur de réduction***:***variable-list***)**   
   
- **copyin (**  *liste de variable*  **)**  
+ **copyin (***variable-list***)**   
   
  *opérateur de réduction*:  
   
- *Un des*: **+ \* -& ^ & #124 ; & & & #124 ; & #124 ;**  
+ *Un des*:  **+  \* -& ^ &#124; & & &#124; &#124;**  
   
- **/\* en C \*/**  
+ **/\*en C\*/**  
   
  *liste de la variable*:  
   
- *Identificateur*  
+ *identifier*  
   
  *liste de la variable* **,** *identificateur*  
   
- **/\* en C++ \*/**  
+ **/\*en C++\*/**  
   
  *liste de la variable*:  
   
- *expression de code*  
+ *ID-expression*  
   
  *liste de la variable* **,** *id-expression*

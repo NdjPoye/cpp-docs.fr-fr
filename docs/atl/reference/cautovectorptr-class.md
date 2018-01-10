@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 304f21e226e88f4c18b218ac580d82fdb2f776a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b01bb9f74793e739ff0930bae070f00cb909dd61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cautovectorptr-class"></a>Classe de CAutoVectorPtr
 Cette classe représente un objet pointeur intelligent à l’aide de nouveau vecteur et supprimer des opérateurs.  
@@ -77,13 +78,13 @@ class CAutoVectorPtr
 |----------|-----------------|  
 |[CAutoVectorPtr::m_p](#m_p)|La variable de membre de données de pointeur.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe fournit des méthodes pour créer et gérer un pointeur intelligent, ce qui aidera à protéger contre des fuites de mémoire par automatiquement la libération des ressources lorsqu’elle se trouve hors de portée. `CAutoVectorPtr`est semblable à `CAutoPtr`, la seule différence étant que `CAutoVectorPtr` utilise [new (vecteur) &#91; &#93;](../../standard-library/new-operators.md#op_new_arr) et [vector delete &#91; &#93;](../../standard-library/new-operators.md#op_delete_arr) pour allouer et libérer de la mémoire à la place de C++ **nouveau** et **supprimer** opérateurs. Consultez [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) si les classes de collection de `CAutoVectorPtr` sont requis.  
 
   
  Consultez [CAutoPtr](../../atl/reference/cautoptr-class.md) pour obtenir un exemple d’utilisation d’une classe de pointeur intelligent.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ##  <a name="allocate"></a>CAutoVectorPtr::Allocate  
@@ -100,7 +101,7 @@ bool Allocate(size_t nElements) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true si la mémoire est correctement alloué, false en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans les versions debug, un échec d’assertion se produit si le [CAutoVectorPtr::m_p](#m_p) variable membre pointe actuellement à une valeur existante ; autrement dit, il n’est pas égal à NULL.  
   
 ##  <a name="attach"></a>CAutoVectorPtr::Attach  
@@ -114,7 +115,7 @@ void Attach(T* p) throw();
  `p`  
  Le `CAutoVectorPtr` objet prendra possession de ce pointeur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsqu’un `CAutoVectorPtr` objet prend possession du pointeur, il la supprime automatiquement le pointeur et les données allouées lorsqu’il devient hors de portée. Si [CAutoVectorPtr::Detach](#detach) est appelée, le programmeur à nouveau donné responsabilité pour libérer les ressources est alloué.  
   
  Dans les versions debug, un échec d’assertion se produit si le [CAutoVectorPtr::m_p](#m_p) variable membre pointe actuellement à une valeur existante ; autrement dit, il n’est pas égal à NULL.  
@@ -132,7 +133,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
  `p`  
  Un pointeur existant.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `CAutoVectorPtr` objet peut être créé à l’aide d’un pointeur existant, auquel cas il transfère la propriété du pointeur.  
   
 ##  <a name="dtor"></a>CAutoVectorPtr :: ~ CAutoVectorPtr  
@@ -142,7 +143,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 ~CAutoVectorPtr() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère les ressources allouées. Appels [CAutoVectorPtr::Free](#free).  
   
 ##  <a name="detach"></a>CAutoVectorPtr::Detach  
@@ -155,7 +156,7 @@ T* Detach() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une copie du pointeur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère la propriété d’un pointeur, définit le [CAutoVectorPtr::m_p](#m_p) variable membre avec la valeur NULL et retourne une copie du pointeur. Après avoir appelé **détachement**, il jusqu’au programmeur de libérer les ressources est allouée sur lequel le `CAutoVectorPtr` objet peut avoir précédemment la responsabilité.  
   
 ##  <a name="free"></a>CAutoVectorPtr::Free  
@@ -165,7 +166,7 @@ T* Detach() throw();
 void Free() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’objet vers lequel pointe le `CAutoVectorPtr` est libéré et la [CAutoVectorPtr::m_p](#m_p) variable membre a la valeur NULL.  
   
 ##  <a name="m_p"></a>CAutoVectorPtr::m_p  
@@ -175,7 +176,7 @@ void Free() throw();
 T* m_p;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette variable membre conserve les informations de pointeur.  
   
 ##  <a name="operator_eq"></a>CAutoVectorPtr::operator =  
@@ -192,7 +193,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une référence à un **CAutoVectorPtr\< T >**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Détache de l’opérateur d’assignation le `CAutoVectorPtr` objet à partir de n’importe quel pointeur actuel et l’attache le nouveau pointeur, `p`, à la place.  
   
 ##  <a name="operator_t__star"></a>CAutoVectorPtr::operator T *  
@@ -202,7 +203,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 operator T*() const throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Retourne un pointeur vers le type de données d’objet défini dans le modèle de classe.  
   
 ## <a name="see-also"></a>Voir aussi  

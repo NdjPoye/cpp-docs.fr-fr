@@ -1,64 +1,62 @@
 ---
-title: "ML Error Messages | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.errors.ml"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MASM (Microsoft Macro Assembler), ML error messages"
+title: "Messages d’erreur ML | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.errors.ml
+dev_langs: C++
+helpviewer_keywords: MASM (Microsoft Macro Assembler), ML error messages
 ms.assetid: e7e164b3-6d65-4b5b-8925-bfbebc043523
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1fa5933c9c676b76ebe342ffa848e7b40926da08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ML Error Messages
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les messages d'erreur générés par les composants de MASM appartiennent à trois catégories :  
+# <a name="ml-error-messages"></a>Messages d'erreur ML
+Les messages d’erreur générés par les composants MASM se répartissent en trois catégories :  
   
--   **erreurs irrécupérables.** Cela indique un problème grave qui empêché l'utilitaire de compléter son processus normal.  
+-   **Erreurs irrécupérables.** Celles-ci indiquent un problème grave qui empêche l’utilitaire à partir de la fin de son processus normal.  
   
--   **erreurs récupérables.** L'utilitaire peut effectuer son processus.  Si tel est le cas, son résultat n'est pas être celui que vous souhaitez.  
+-   **Erreurs récupérables.** L’utilitaire peut terminer son processus. Dans ce cas, son résultat n’est pas susceptible d’être celle qui que vous intéresse.  
   
--   **avertissements.** ces messages indiquent les conditions qui peuvent vous empêcher d'obtenir les résultats que vous souhaitez.  
+-   **Avertissements.** Ces messages indiquent les conditions qui peuvent vous empêcher d’obtenir les résultats souhaités.  
   
- Tous les messages d'erreur prennent la forme suivante :  
+ Tous les messages d’erreur prennent la forme suivante :  
   
 ```  
   
 Utility: Filename (Line) : [Error_type} (Code): Message_text  
 ```  
   
- où :  
+ où :  
   
  `Utility`  
- le programme qui a envoyé le message d'erreur.  
+ Le programme qui a envoyé le message d’erreur.  
   
- *nom de fichier*  
- le fichier qui contient la condition erreur\-générante.  
+ *Nom de fichier*  
+ Le fichier qui contient la condition de la génération d’erreur.  
   
  *Line*  
- la ligne approximative où la condition d'erreur existe.  
+ La ligne approximative où se trouve la condition d’erreur.  
   
- *Error\_type*  
- Erreur irrécupérable, erreur, avertissement ou.  
+ *Error_type*  
+ Irrécupérable erreur, erreur ou avertissement.  
   
  *Code*  
- L'unique 5 ou code d'erreur de 6 chiffres.  
+ Le code d’erreur unique 5 ou 6 chiffres.  
   
  `Message_text`  
- une description courte et générale de la condition d'erreur.  
+ Description courte et générale de la condition d’erreur.  
   
-## Voir aussi  
- [Microsoft Macro Assembler Reference](../../assembler/masm/microsoft-macro-assembler-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)

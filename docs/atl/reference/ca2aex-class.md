@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d682e6db093220557ec7caaa4ac6f3cd7ca5f53a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec54e698723b801823d58a3bad2a53e6f1708369
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ca2aex-class"></a>Classe de CA2AEX
 Cette classe est utilisée par les macros de conversion de chaînes `CA2TEX` et `CT2AEX`et le typedef **CA2A**.  
@@ -65,7 +66,7 @@ class CA2AEX
 |[CA2AEX::m_psz](#m_psz)|Le membre de données qui stocke la chaîne source.|  
 |[CA2AEX::m_szBuffer](#m_szbuffer)|La mémoire tampon statique, utilisé pour stocker la chaîne convertie.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  À moins que des fonctionnalités supplémentaires sont requises, utilisez `CA2TEX`, `CT2AEX`, ou **CA2A** dans votre propre code.  
   
  Cette classe contient une mémoire tampon de taille fixe statique qui est utilisé pour stocker le résultat de la conversion. Si le résultat est trop grand pour tenir dans la mémoire tampon statique, la classe alloue de la mémoire avec `malloc` et libère la mémoire quand l'objet passe en dehors de l'étendue. Cela garantit que, contrairement au texte des macros de conversion disponibles dans les versions précédentes d’ATL, cette classe est plus sûr d’utiliser dans les boucles et qu’il ne sera pas dépassement de la pile.  
@@ -89,7 +90,7 @@ class CA2AEX
 ## <a name="example"></a>Exemple  
  Consultez [ATL et MFC Macros de Conversion de chaînes](string-conversion-macros.md) pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlconv.h  
   
 ##  <a name="ca2aex"></a>CA2AEX::CA2AEX  
@@ -107,7 +108,7 @@ CA2AEX(LPCSTR psz) throw(...);
  `nCodePage`  
  Inutilisé dans cette classe.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Crée la mémoire tampon requise pour la traduction.  
   
 ##  <a name="dtor"></a>CA2AEX :: ~ CA2AEX  
@@ -117,7 +118,7 @@ CA2AEX(LPCSTR psz) throw(...);
 ~CA2AEX() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère la mémoire tampon allouée.  
   
 ##  <a name="m_psz"></a>CA2AEX::m_psz  

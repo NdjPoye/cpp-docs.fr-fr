@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 35d71154ccbfc5f2d3147c55aaedff8cf85a06de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84c8f800e0b68e23fe33ca0a7e1c1d977bcc344e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccrtallocator-class"></a>Classe de CCRTAllocator
 Cette classe fournit des méthodes pour la gestion de la mémoire à l’aide des routines de mémoire CRT.  
@@ -45,10 +46,10 @@ class ATL::CCRTAllocator
 |[CCRTAllocator::Free](#free)|(Statique) Appelez cette méthode pour libérer de la mémoire.|  
 |[CCRTAllocator::Reallocate](#reallocate)|(Statique) Appelez cette méthode pour réallouer la mémoire.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe est utilisée par [CHeapPtr](../../atl/reference/cheapptr-class.md) pour fournir des routines d’allocation de la mémoire CRT. La classe équivalent, [CComAllocator](../../atl/reference/ccomallocator-class.md), fournit les mêmes méthodes que l’utilisation de COM routines.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcore.h  
   
 ##  <a name="allocate"></a>CCRTAllocator::Allocate  
@@ -65,7 +66,7 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur void vers l'espace alloué, ou NULL si la mémoire disponible est insuffisante.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Alloue de la mémoire. Consultez [malloc](../../c-runtime-library/reference/malloc.md) pour plus d’informations.  
   
 ##  <a name="free"></a>CCRTAllocator::Free  
@@ -79,7 +80,7 @@ static void Free(void* p) throw();
  `p`  
  Pointeur vers la mémoire allouée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère la mémoire allouée. Consultez [libre](../../c-runtime-library/reference/free.md) pour plus d’informations.  
   
 ##  <a name="reallocate"></a>CCRTAllocator::Reallocate  
@@ -99,7 +100,7 @@ static __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur void vers l'espace alloué, ou NULL si la mémoire est insuffisante.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Redimensionne la quantité de mémoire allouée. Consultez [realloc](../../c-runtime-library/reference/realloc.md) pour plus d’informations.  
   
 ## <a name="see-also"></a>Voir aussi  

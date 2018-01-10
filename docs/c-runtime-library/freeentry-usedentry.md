@@ -23,11 +23,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ad8cb2b22e0de5d2067da19858a7fff290625fa0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 82f33c60ae5be642e29e588cdab27508b207d62a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="freeentry-usedentry"></a>_FREEENTRY, _USEDENTRY
 ## <a name="syntax"></a>Syntaxe  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
 #include <malloc.h>  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Ces constantes représentent les valeurs affectées par les routines `_heapwalk` à l’élément **_useflag** de la structure **_HEAPINFO**. Ils indiquent l’état de l’entrée de tas.  
   
 ## <a name="see-also"></a>Voir aussi  

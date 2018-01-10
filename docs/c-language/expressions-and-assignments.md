@@ -22,11 +22,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6ab58e3e787afa24114c1bbad2713a7ab2e51a99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3465272e2d582c36a16b9a68a165bd6d371055f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expressions-and-assignments"></a>Expressions et assignations
 Cette section décrit comment former des expressions et assigner des valeurs en langage C. Les constantes, les identificateurs, les chaînes, et les appels de fonction sont tous des opérandes qui sont manipulés dans des expressions. Le langage C dispose de tous les opérateurs habituels de langage. Cette section décrit ces opérateurs ainsi que ceux qui sont uniques à C ou à Microsoft C. Les rubriques abordées incluent :  

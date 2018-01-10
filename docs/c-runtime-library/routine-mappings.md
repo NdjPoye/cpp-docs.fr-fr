@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f7b85af65da564f7231d606933ff1ebbb90d5af0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f44da30387421123ab6998cfbb2855a743aace39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="routine-mappings"></a>Mappages de routine
 Les mappages de routine de texte générique sont définis dans TCHAR.H. `_tccpy` et `_tclen` sont mappés à des fonctions dans le modèle MBCS ; ils sont mappés à des macros ou des fonctions inline dans les modèles SBCS et Unicode par souci d’exhaustivité. Pour plus d’informations sur une routine de texte générique, consultez la rubrique d’aide sur la routine associée à `SBCS`, `_MBCS` ou `_UNICODE` correspondante.  

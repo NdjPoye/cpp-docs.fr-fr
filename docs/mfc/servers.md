@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be83831c79b398de9e9b0791d172cf7608e322aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a0a011201a521ed97cf9ebe4c0a8249526b9d7c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="servers"></a>Serveurs
 Une application serveur (ou une application du composant) crée OLE éléments (ou composants) pour une utilisation par les applications de conteneur. Une application serveur d’édition visuelle prend également en charge la modification visuelle ou l’activation sur place. Une autre forme de serveur OLE est un [serveur automation](../mfc/automation-servers.md). Certaines applications serveur prennent en charge uniquement la création d’éléments incorporés ; d’autres prennent en charge la création d’éléments liés et incorporés. Certains prennent en charge de liaison, bien que cette situation est inhabituelle. Toutes les applications serveur doivent prendre en charge l’activation par les applications conteneur lorsque l’utilisateur souhaite modifier un élément. Une application peut être un conteneur et un serveur. En d’autres termes, il peut les incorporer des données dans ses documents et créer des données qui peuvent être incorporées en tant qu’éléments dans les documents d’autres applications.  

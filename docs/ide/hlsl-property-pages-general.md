@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8c4ad3e504ec9c57a9c0a99d69aeda624407d5f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be548966f6e75afde2c137c8beab38903844667c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hlsl-property-pages-general"></a>Pages de propriétés HLSL : Général
 Pour configurer les propriétés suivantes du compilateur HLSL (fxc.exe), utilisez son **général** page de propriétés. Pour plus d’informations sur l’accès à la **général** page de propriétés dans le dossier HLSL, consultez [utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
   
-## <a name="uielement-list"></a>Liste UIElement  
+## <a name="uielement-list"></a>Liste des éléments d’interface  
  **Autres répertoires Include**  
  Ajoute un ou plusieurs répertoires pour le chemin d’accès include. Utilisez des points-virgules pour séparer les répertoires.  
   

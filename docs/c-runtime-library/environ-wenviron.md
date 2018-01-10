@@ -24,17 +24,18 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f20054dac02857187ef4507b0b4ebfd6b7c6fe0e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f89c777a25da5288709683750c907114dac1e5c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 La variable `_environ` est un pointeur vers un tableau de pointeurs qui désignent les chaînes de caractères multioctets qui constituent l'environnement de processus. Cette variable globale a été déconseillée au profit des versions fonctionnelles plus sécurisées [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) et [putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md), qui doivent être utilisées à la place de la variable globale. `_environ` est déclaré dans Stdlib.h.  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +43,7 @@ La variable `_environ` est un pointeur vers un tableau de pointeurs qui désigne
 extern char **_environ;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Dans un programme qui utilise la fonction `main`, `_environ` est initialisé au démarrage du programme en fonction des paramètres tirés de l'environnement de système d'exploitation. L'environnement se compose d'une ou plusieurs entrées de la forme  
   
  `ENVVARNAME` `=string`  

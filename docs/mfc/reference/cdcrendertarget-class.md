@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,8 +17,7 @@ f1_keywords:
 - AFXRENDERTARGET/CDCRenderTarget::Detach
 - AFXRENDERTARGET/CDCRenderTarget::GetDCRenderTarget
 - AFXRENDERTARGET/CDCRenderTarget::m_pDCRenderTarget
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CDCRenderTarget [MFC], CDCRenderTarget
 - CDCRenderTarget [MFC], Attach
@@ -29,16 +27,16 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 502c9d7cedf782c6ce23ebaf22d30c9b0e5e7409
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: e195979967ac5422be67b634d44e2f5d1afa9263
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget, classe
 Wrapper pour ID2D1DCRenderTarget.  
@@ -75,7 +73,7 @@ class CDCRenderTarget : public CRenderTarget;
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|Pointeur vers un objet ID2D1DCRenderTarget.|  
   
@@ -86,7 +84,7 @@ class CDCRenderTarget : public CRenderTarget;
   
  [CDCRenderTarget](../../mfc/reference/cdcrendertarget-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrendertarget.h  
   
 ##  <a name="attach"></a>CDCRenderTarget::Attach  
@@ -179,4 +177,3 @@ operator ID2D1DCRenderTarget*();
   
 ## <a name="see-also"></a>Voir aussi  
  [Classes](../../mfc/reference/mfc-classes.md)
-

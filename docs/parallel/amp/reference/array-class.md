@@ -32,11 +32,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad9e098ad485c7a96670c4249770b038333e1bc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5b76fcb181d955fc051ade5183b67b9d55b823ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-class"></a>array, classe
 Représente un conteneur de données utilisé pour déplacer des données vers un accélérateur.  
@@ -88,7 +89,7 @@ friend class array;
   
 ### <a name="public-constants"></a>Constantes publiques  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[RANK (constante)](#rank)|Stocke le rang du tableau.|  
   
@@ -101,7 +102,7 @@ friend class array;
 |[cpu_access_type](#cpu_access_type)|Obtient le [access_type](concurrency-namespace-enums-amp.md#access_type) qui représente la façon dont l’UC peut accéder au stockage du tableau.|  
 |[extent](#extent)|Obtient l’étendue qui définit la forme du tableau.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le type `array<T,N>` représente une densité et régulier (ne pas en escalier) *N*-tableau unidimensionnel qui se trouve dans un emplacement spécifique, comme un accélérateur ou de l’UC. Le type de données des éléments du tableau est `T`, qui doit être d’un type qui est compatible avec l’accélérateur cible. Bien que le classement, `N`, (de tableau est déterminé de manière statique et fait partie du type, l’étendue du tableau est déterminée par le runtime et est exprimée en utilisant la classe `extent<N>`.  
   
  Un tableau peut avoir n’importe quel nombre de dimensions, bien que certaines fonctionnalités sont spécialisée pour `array` objets avec un classement, deux et trois. Si vous omettez l’argument de la dimension, la valeur par défaut est 1.  
@@ -121,7 +122,7 @@ friend class array;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `array`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp.h  
   
  **Espace de noms :** Concurrency  
@@ -671,7 +672,7 @@ array_view<const _Value_type2, 1> reinterpret_as() const restrict(amp,cpu);
 ### <a name="return-value"></a>Valeur de retour
 Un array_view ou un objet const array_view qui est basé sur le tableau, avec le type d’élément réinterprétée de T ElementType et le rang réduite de N à 1.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 Il est parfois commode afficher un tableau multidimensionnel, comme si elle est un tableau unidimensionnel linéaire, éventuellement avec un type de valeur différente de la baie source. Vous pouvez utiliser cette méthode pour y parvenir.
 **Attention** réinterprétation un objet tableau à l’aide d’un type valeur différent est une opération potentiellement dangereuse. Nous vous recommandons d’utiliser cette fonctionnalité avec précaution. 
 

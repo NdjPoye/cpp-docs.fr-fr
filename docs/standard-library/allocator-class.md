@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,8 +23,7 @@ f1_keywords:
 - memory/std::allocator::destroy
 - memory/std::allocator::max_size
 - memory/std::allocator::rebind
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::allocator [C++]
 - std::allocator [C++], const_pointer
@@ -43,16 +41,16 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 32e63292ffcb02fa41ea5b8d9e95f7b4cd3f776b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 50967f59b594cfba30167b67dcb2802541a5eafc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocator-class"></a>allocator, classe
 Cette classe de modèle décrit un objet qui gère l’allocation et la libération de stockage pour des tableaux d’objets de type **Type**. Un objet de classe **allocator** est l’objet allocateur par défaut spécifié dans les constructeurs pour plusieurs classes de modèle de conteneur dans la bibliothèque C++ Standard.  
@@ -97,7 +95,7 @@ class allocator
 |-|-|  
 |[allocator](#allocator)|Constructeurs utilisés pour créer des objets `allocator`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -127,7 +125,7 @@ class allocator
 |-|-|  
 |[operator=](#op_eq)|Assigne un objet `allocator` à un autre objet `allocator`.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<memory>  
   
  **Espace de noms :** std  
@@ -530,7 +528,7 @@ void deallocate(pointer ptr, size_type count);
  `count`  
  Nombre d’objets à désallouer dans le stockage.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction membre libère du stockage pour le tableau d’objets de nombre de type **Type** commençant à `ptr`, en appelant `operator delete(ptr)`. Le pointeur `ptr` doit avoir été retourné précédemment par un appel à [allocate](#allocate) pour un objet allocateur dont la valeur est égale à **\*this**, en allouant un objet tableau de même taille et de même type. `deallocate` ne lève jamais d’exception.  
   
 ### <a name="example"></a>Exemple  
@@ -547,7 +545,7 @@ void destroy(pointer ptr);
  `ptr`  
  Pointeur désignant l’adresse de l’objet à détruire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction membre détruit l’objet désigné par `ptr`, en appelant le destructeur `ptr->` **Type**::**~ Type**.  
   
 ### <a name="example"></a>Exemple  
@@ -1051,5 +1049,4 @@ The modified vector v is:
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

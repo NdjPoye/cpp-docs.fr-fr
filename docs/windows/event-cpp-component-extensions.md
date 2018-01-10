@@ -1,47 +1,48 @@
 ---
-title: "event  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "event"
-  - "event_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "event keyword [C++]"
+title: "événements (Extensions du composant C++) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- event
+- event_cpp
+dev_langs: C++
+helpviewer_keywords: event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-caps.latest.revision: 34
-caps.handback.revision: 32
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "34"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bdaef6a98e080da2e1290f1191590b7509c2eccd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# event  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le mot clé `event` déclare un *événement*, qui correspond à une notification envoyée aux abonnés inscrits \(*gestionnaires d'événements*\) pour les informer qu'un fait digne d'intérêt s'est produit.  
+# <a name="event--c-component-extensions"></a>événement  (extensions du composant C++)
+Le `event` mot clé déclare une *événement*, qui est une notification aux abonnés inscrits (*gestionnaires d’événements*) qu’un élément d’intérêt s’est produit.  
   
-## Tous les runtimes  
- C\+\+\/CX prend en charge la déclaration d'un *membre d'événement* ou d'un *bloc d'événement*.  Un membre d'événement est un raccourci pour déclarer un bloc d'événement.  Par défaut, un membre d'événement déclare les fonctions `add()`, `remove()` et `raise()` qui sont déclarées explicitement dans un bloc d'événement.  Pour personnaliser les fonctions dans un membre d'événement, déclarez un bloc d'événement à la place, puis remplacez les fonctions dont vous avez besoin.  
+## <a name="all-runtimes"></a>Tous les runtimes  
+ C + c++ / CX prend en charge la déclaration d’un *membre d’événement* ou *bloc d’événement*. Un membre d'événement est un raccourci pour déclarer un bloc d'événement. Par défaut, un membre d'événement déclare les fonctions `add()`, `remove()` et `raise()` qui sont déclarées explicitement dans un bloc d'événement. Pour personnaliser les fonctions dans un membre d'événement, déclarez un bloc d'événement à la place, puis remplacez les fonctions dont vous avez besoin.  
   
  **Syntaxe**  
   
 ```  
   
 // event data member  
-modifier event delegate^ event_name;     
+modifiereventdelegate^ event_name;     
   
 // event block  
-modifier event delegate^ event_name   
+modifiereventdelegate^ event_name   
 {  
-   modifier return_value add(delegate^ name);  
+   modifierreturn_valueadd(delegate^ name);  
    modifier void remove(delegate^ name);  
    modifier void raise(parameters);  
 }  
@@ -50,60 +51,60 @@ modifier event delegate^ event_name
  **Paramètres**  
   
  *modificateur*  
- Modificateur qui peut être utilisé sur la déclaration event ou une méthode d'accesseur d'événement.  Les valeurs possibles sont `static` et `virtual`.  
+ Modificateur qui peut être utilisé sur la déclaration event ou une méthode d’accesseur d’événement.  Les valeurs possibles sont `static` et `virtual`.  
   
- *délégué*  
- [Délégué](../windows/delegate-cpp-component-extensions.md) dont la signature doit correspondre au gestionnaire d'événements.  
+ *delegate*  
+ Le [déléguer](../windows/delegate-cpp-component-extensions.md), dont le Gestionnaire d’événements doit correspondre à la signature.  
   
- *nom\_événement*  
+ *nom_événement*  
  Nom de l'événement.  
   
- *valeur\_retour*  
- Valeur de retour de la méthode d'accesseur d'événement.  Pour être vérifiable, le type de retour doit être `void`.  
+ *return_value*  
+ Valeur de retour de la méthode d’accesseur d’événement.  Pour être vérifiable, le type de retour doit être `void`.  
   
- *parameters*  
- \(facultatif\) Paramètres de la méthode `raise`, qui correspondent à la signature du paramètre *délégué*.  
+ *paramètres*  
+ (facultatif) Paramètres pour le `raise` (méthode), qui correspond à la signature de la *déléguer* paramètre.  
   
- **Notes**  
+ **Remarques**  
   
- Un événement est une association entre un délégué et une fonction membre \(gestionnaire d'événements\) qui répond au déclenchement de l'événement et permet aux clients de toute classe d'inscrire des méthodes conformes à la signature et au type de retour du délégué sous\-jacent.  
+ Un événement est une association entre un délégué et une fonction membre (gestionnaire d’événements) qui répond au déclenchement de l’événement et permet aux clients de toute classe d’inscrire des méthodes conformes à la signature et au type de retour du délégué sous-jacent.  
   
  Il existe deux types de déclarations d'événements :  
   
- *membre de données d'événement*  
- Le compilateur crée automatiquement le stockage de l'événement sous la forme d'un membre du type délégué et crée des fonctions membres `add()`, `remove()` et `raise()` internes.  Un membre de données d'événement doit être déclaré à l'intérieur d'une classe.  Le type de retour du délégué doit correspondre à celui du gestionnaire d'événements.  
+ *membre de données d’événement*  
+ Le compilateur crée automatiquement le stockage de l'événement sous la forme d'un membre du type délégué et crée des fonctions membres `add()`, `remove()` et `raise()` internes. Un membre de données d'événement doit être déclaré à l'intérieur d'une classe. Le type de retour du délégué doit correspondre à celui du gestionnaire d’événements.  
   
- *bloc d'événement*  
+ *bloc d’événement*  
  Un bloc d'événement vous permet de déclarer et personnaliser explicitement le comportement des méthodes `add()`, `remove()` et `raise()`.  
   
  Vous pouvez utiliser `operators+=` et `operator-=` pour ajouter et supprimer un gestionnaire d'événements ou appeler les méthodes `add()` et `remove()` explicitement.  
   
- `event` est un mot clé contextuel ; consultez [Mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md) pour plus d'informations.  
+ `event`est un mot clé contextuel ; consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md) pour plus d’informations.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows Runtime  
   
-### Notes  
- Pour plus d'informations, consultez [Événements \(C\+\+\/CX\)](http://msdn.microsoft.com/library/windows/apps/hh755799.aspx).  
+### <a name="remarks"></a>Notes  
+ Pour plus d’informations, consultez [événements (C + c++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh755799.aspx).  
   
- Si vous envisagez d'ajouter, puis de supprimer un gestionnaire d'événements, vous devez enregistrer la structure EventRegistrationToken retournée par l'opération d'ajout.  Ensuite, dans l'opération de suppression, vous devez utiliser la structure EventRegistrationToken enregistrée pour identifier le gestionnaire d'événements à supprimer.  
+ Si vous envisagez d'ajouter, puis de supprimer un gestionnaire d'événements, vous devez enregistrer la structure EventRegistrationToken retournée par l'opération d'ajout. Ensuite, dans l'opération de suppression, vous devez utiliser la structure EventRegistrationToken enregistrée pour identifier le gestionnaire d'événements à supprimer.  
   
-### Spécifications  
- Option du compilateur : **\/ZW**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- Le mot clé `event` vous permet de déclarer un événement.  Un événement est un moyen pour une classe de fournir des notifications quand un fait digne d'intérêt se produit.  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ Le mot clé `event` vous permet de déclarer un événement. Un événement est un moyen pour une classe de fournir des notifications quand un fait digne d'intérêt se produit.  
   
  **Syntaxe**  
   
 ```  
   
 // event data member  
-modifier event delegate^ event_name;   
+modifiereventdelegate^ event_name;   
   
 // event block  
-modifier event delegate^ event_name   
+modifiereventdelegate^ event_name   
 {  
-   modifier return_value add(delegate^ name);  
+   modifierreturn_valueadd(delegate^ name);  
    modifier void remove(delegate^ name);  
    modifier void raise(parameters);  
 }  
@@ -112,55 +113,55 @@ modifier event delegate^ event_name
  **Paramètres**  
   
  *modificateur*  
- Modificateur qui peut être utilisé sur la déclaration event ou une méthode d'accesseur d'événement.  Les valeurs possibles sont `static` et `virtual`.  
+ Modificateur qui peut être utilisé sur la déclaration event ou une méthode d’accesseur d’événement.  Les valeurs possibles sont `static` et `virtual`.  
   
- *délégué*  
- [Délégué](../windows/delegate-cpp-component-extensions.md) dont la signature doit correspondre au gestionnaire d'événements.  
+ *delegate*  
+ Le [déléguer](../windows/delegate-cpp-component-extensions.md), dont le Gestionnaire d’événements doit correspondre à la signature.  
   
- *nom\_événement*  
+ *nom_événement*  
  Nom de l'événement.  
   
- *valeur\_retour*  
- Valeur de retour de la méthode d'accesseur d'événement.  Pour être vérifiable, le type de retour doit être `void`.  
+ *return_value*  
+ Valeur de retour de la méthode d’accesseur d’événement.  Pour être vérifiable, le type de retour doit être `void`.  
   
- *parameters*  
- \(facultatif\) Paramètres de la méthode `raise`, qui correspondent à la signature du paramètre *délégué*.  
+ *paramètres*  
+ (facultatif) Paramètres pour le `raise` (méthode), qui correspond à la signature de la *déléguer* paramètre.  
   
- **Notes**  
+ **Remarques**  
   
- Un événement est une association entre un délégué et une fonction membre \(gestionnaire d'événements\) qui répond au déclenchement de l'événement et permet aux clients de toute classe d'inscrire des méthodes conformes à la signature et au type de retour du délégué sous\-jacent.  
+ Un événement est une association entre un délégué et une fonction membre (gestionnaire d’événements) qui répond au déclenchement de l’événement et permet aux clients de toute classe d’inscrire des méthodes conformes à la signature et au type de retour du délégué sous-jacent.  
   
- Le délégué peut avoir une ou plusieurs méthodes associées qui sont appelées quand votre code indique que l'événement s'est produit.  Un événement propre à un programme peut être accessible à d'autres programmes qui ciblent le Common Language Runtime du .NET Framework.  Consultez [Déclenchement d'un événement défini dans un assembly différent](../misc/how-to-raise-events-defined-in-a-different-assembly.md) pour obtenir un exemple.  
+ Le délégué peut avoir une ou plusieurs méthodes associées qui sont appelées quand votre code indique que l'événement s'est produit. Un événement propre à un programme peut être accessible à d'autres programmes qui ciblent le Common Language Runtime du .NET Framework.  
   
  Il existe deux types de déclarations d'événements :  
   
- *membres de données d'événement*  
- Le stockage de l'événement, sous la forme d'un membre du type délégué, est créé par le compilateur pour les événements de membre de données.  Un membre de données d'événement doit être déclaré à l'intérieur d'une classe.  Cet événement est également connu sous le nom d'événement trivial \(consultez l'exemple de code ci\-dessous\).  
+ *membres de données d’événement*  
+ Le stockage de l'événement, sous la forme d'un membre du type délégué, est créé par le compilateur pour les événements de membre de données.  Un membre de données d'événement doit être déclaré à l'intérieur d'une classe. Cet événement est également connu sous le nom d'événement trivial (consultez l'exemple de code ci-dessous).  
   
- *blocs d'événement*  
- Les blocs d'événement vous permettent de personnaliser le comportement des méthodes add, remove et raise, en implémentant ces méthodes.  La signature des méthodes add, remove et raise doivent correspondre à la signature du délégué.  Les événements de bloc d'événement ne sont pas membres de données et toute utilisation en tant que membre de données génère une erreur du compilateur.  Consultez [Définition de méthodes d'accesseur d'événement](../misc/how-to-define-event-accessor-methods.md) pour obtenir un exemple.  
+ *blocs d’événement*  
+ Les blocs d'événement vous permettent de personnaliser le comportement des méthodes add, remove et raise, en implémentant ces méthodes. La signature des méthodes add, remove et raise doivent correspondre à la signature du délégué.  Les événements de bloc d'événement ne sont pas membres de données et toute utilisation en tant que membre de données génère une erreur du compilateur. 
   
- Le type de retour du gestionnaire d'événements doit correspondre à celui du délégué.  
+ Le type de retour du gestionnaire d’événements doit correspondre à celui du délégué.  
   
- Dans .NET Framework, vous pouvez traiter un membre de données comme s'il s'agissait d'une méthode \(autrement dit, la méthode `Invoke` de son délégué correspondant\).  Vous devez prédéfinir le type délégué pour déclarer un membre de données d'événement managé.  En revanche, une méthode d'événement managé définit implicitement le délégué managé correspondant, s'il n'est pas déjà défini.  Consultez l'exemple de code fourni à la fin de cette rubrique pour obtenir un exemple.  
+ Dans .NET Framework, vous pouvez traiter un membre de données comme s'il s'agissait d'une méthode (autrement dit, la méthode `Invoke` de son délégué correspondant). Vous devez prédéfinir le type délégué pour déclarer un membre de données d'événement managé. En revanche, une méthode d'événement managé définit implicitement le délégué managé correspondant, s'il n'est pas déjà défini.  Consultez l'exemple de code fourni à la fin de cette rubrique pour obtenir un exemple.  
   
- Lors de la déclaration d'un événement managé, vous pouvez spécifier des accesseurs add et remove qui sont appelés quand les gestionnaires d'événements sont ajoutés ou supprimés à l'aide des opérateurs \+\= et \-\=.  Les méthodes add, remove et raise peuvent être appelées explicitement.  
+ Lors de la déclaration d'un événement managé, vous pouvez spécifier des accesseurs add et remove qui sont appelés quand les gestionnaires d'événements sont ajoutés ou supprimés à l'aide des opérateurs += et -=. Les méthodes add, remove et raise peuvent être appelées explicitement.  
   
- Les étapes suivantes doivent être suivies pour créer et utiliser des événements en Visual C\+\+ :  
+ Les étapes suivantes doivent être suivies pour créer et utiliser des événements en Visual C++ :  
   
-1.  Créez ou identifiez un délégué.  Si vous définissez votre propre événement, vous devez également vous assurer qu'il existe un délégué à utiliser avec le mot clé `event`.  Si l'événement est prédéfini, dans le .NET Framework par exemple, alors les consommateurs de l'événement doivent uniquement connaître le nom du délégué.  
+1.  Créez ou identifiez un délégué. Si vous définissez votre propre événement, vous devez également vous assurer qu'il existe un délégué à utiliser avec le mot clé `event`. Si l'événement est prédéfini, dans le .NET Framework par exemple, alors les consommateurs de l'événement doivent uniquement connaître le nom du délégué.  
   
 2.  Créez une classe qui contient :  
   
     -   Un événement créé à partir du délégué.  
   
-    -   \(facultatif\) Une méthode qui vérifie qu'une instance du délégué déclaré avec le mot clé `event` existe.  Sinon, cette logique doit être placée dans le code qui déclenche l'événement.  
+    -   (facultatif) Une méthode qui vérifie qu'une instance du délégué déclaré avec le mot clé `event` existe. Sinon, cette logique doit être placée dans le code qui déclenche l'événement.  
   
-    -   Des méthodes qui appellent l'événement.  Ces méthodes peuvent être des substitutions de certaines fonctionnalités de la classe de base.  
+    -   Des méthodes qui appellent l'événement. Ces méthodes peuvent être des substitutions de certaines fonctionnalités de la classe de base.  
   
      Cette classe définit l'événement.  
   
-3.  Définissez une ou plusieurs classes qui connectent les méthodes à l'événement.  Chacune de ces classes associe une ou plusieurs méthodes à l'événement dans la classe de base.  
+3.  Définissez une ou plusieurs classes qui connectent les méthodes à l'événement. Chacune de ces classes associe une ou plusieurs méthodes à l'événement dans la classe de base.  
   
 4.  Utilisez l'événement :  
   
@@ -168,31 +169,17 @@ modifier event delegate^ event_name
   
     -   Créez un objet de la classe qui contient la déclaration de l'événement.  
   
- Pour plus d'informations sur les événements [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)], consultez  
+ Pour plus d’informations sur le langage c++ / CLI, événements, consultez  
   
--   [Événements dans une interface](../dotnet/how-to-use-events-in-cpp-cli.md)  
+-   [Événements dans une Interface](../dotnet/how-to-use-events-in-cpp-cli.md)  
   
--   [Substitution de l'accès par défaut des méthodes add, remove et raise](../misc/how-to-override-default-access-of-add-remove-and-raise-methods.md)  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : **/clr**  
   
--   [Plusieurs gestionnaires pour un événement](../misc/how-to-add-multiple-handlers-to-events.md)  
-  
--   [Événements virtuels managés](../misc/how-to-implement-managed-virtual-events.md)  
-  
--   [Méthodes d'accesseur d'événement](../misc/how-to-define-event-accessor-methods.md)  
-  
--   [Événements statiques](../misc/how-to-define-and-use-static-events.md)  
-  
--   [Déclenchement d'un événement défini dans un assembly différent](../misc/how-to-raise-events-defined-in-a-different-assembly.md)  
-  
--   [Événements abstraits](../misc/how-to-implement-abstract-events.md)  
-  
-### Spécifications  
- Option du compilateur : **\/clr**  
-  
-### Exemples  
+### <a name="examples"></a>Exemples  
  **Exemple**  
   
- L'exemple de code suivant illustre : la déclaration de paires de délégués, d'événements et de gestionnaires d'événements, l'abonnement \(ajout\) des gestionnaires d'événements, l'appel des gestionnaires d'événements, puis l'annulation de l'abonnement \(suppression\) des gestionnaires d'événements.  
+ L'exemple de code suivant illustre : la déclaration de paires de délégués, d'événements et de gestionnaires d'événements, l'abonnement (ajout) des gestionnaires d'événements, l'appel des gestionnaires d'événements, puis l'annulation de l'abonnement (suppression) des gestionnaires d'événements.  
   
 ```  
 // mcppv2_events.cpp  
@@ -247,10 +234,15 @@ int main() {
   
  **Sortie**  
   
-  **OnClick: 7, 3.14159**  
- **OnDblClick: Hello** **Exemple**  
+```Output  
+OnClick: 7, 3.14159  
   
- L'exemple de code suivant illustre la logique utilisée pour générer la méthode `raise` d'un événement trivial : si l'événement a un ou plusieurs abonnés, l'appel à la méthode `raise` permet d'appeler implicitement ou explicitement le délégué.  Si le type de retour du délégué n'est pas `void` et que le nombre d'abonnés à l'événement s'élève à zéro, la méthode `raise` retourne la valeur par défaut pour le type délégué.  En l'absence d'abonnés à l'événement, l'appel à la méthode `raise` entraîne un retour simple et aucune exception n'est levée.  Si le type de retour du délégué n'est pas `void`, le type délégué est retourné.  
+OnDblClick: Hello  
+```  
+  
+ **Exemple**  
+  
+ L'exemple de code suivant illustre la logique utilisée pour générer la méthode `raise` d'un événement trivial : si l'événement a un ou plusieurs abonnés, l'appel à la méthode `raise` permet d'appeler implicitement ou explicitement le délégué. Si le type de retour du délégué n'est pas `void` et que le nombre d'abonnés à l'événement s'élève à zéro, la méthode `raise` retourne la valeur par défaut pour le type délégué. En l'absence d'abonnés à l'événement, l'appel à la méthode `raise` entraîne un retour simple et aucune exception n'est levée. Si le type de retour du délégué n'est pas `void`, le type délégué est retourné.  
   
 ```  
 // trivial_events.cpp  
@@ -286,7 +278,11 @@ int main() {
   
  **Sortie**  
   
-  **0**  
- **688**   
-## Voir aussi  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+0  
+  
+688  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)

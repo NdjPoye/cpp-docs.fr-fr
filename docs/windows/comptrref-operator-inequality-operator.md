@@ -1,34 +1,34 @@
 ---
-title: "ComPtrRef::operator!=, op&#233;rateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRef::operator!="
-dev_langs: 
-  - "C++"
+title: "ComPtrRef::operator ! =, opérateur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRef::operator!=
+dev_langs: C++
 ms.assetid: ab3093cc-6fbd-4039-890a-6df1cde992b6
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7a9c9572ece0f60971449f2e1b519ec662f9867f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtrRef::operator!=, op&#233;rateur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="comptrrefoperator-operator"></a>ComPtrRef::operator!=, opérateur
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
-  
 bool operator!=(  
    const Details::ComPtrRef<ComPtr<T>>& a,  
    const Details::ComPtrRef<ComPtr<U>>& b  
@@ -55,28 +55,28 @@ bool operator!=(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `a`  
  Une référence à un objet ComPtrRef.  
   
  `b`  
- Une référence à un autre objet ComPtrRef, ou un pointeur vers un objet anonyme \(`void*`\).  
+ Une référence à un autre objet ComPtrRef, ou un pointeur vers un objet anonyme (`void*`).  
   
-## Valeur de retour  
- Le premier opérateur produit `true` si l'objet `a` n'est pas égal à un objet `b`; sinon, `false`.  
+## <a name="return-value"></a>Valeur de retour  
+ Premier opérateur rendements `true` si objet `a` n’est pas égal à l’objet `b`; sinon, `false`.  
   
- Les deuxième et troisième opérateurs produisent `true` si l'objet `a` n'est pas égal à `nullptr`; sinon, `false`.  
+ Les deuxième et troisième opérateurs yield `true` si objet `a` n’est pas égal à `nullptr`; sinon, `false`.  
   
- Les quatrième et cinquième opérateurs produisent `true` si l'objet `a` n'est pas égal à un objet `b`; sinon, `false`.  
+ Les opérateurs quatrième et cinquième yield `true` si objet `a` n’est pas égal à l’objet `b`; sinon, `false`.  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Indique si deux objets ComPtrRef ne sont pas égaux.  
   
-## Configuration requise  
- **En\-tête:** client.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** client.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
- [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Microsoft::wrl::Details Namespace](../windows/microsoft-wrl-details-namespace.md)   
  [ComPtrRef, classe](../windows/comptrref-class.md)

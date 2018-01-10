@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 70fc1210df4600fd63c938a7721f09dcdd206cb1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de48e03c62d924334e005ffd7f008e0083fb405f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-project-properties"></a>Utilisation des propriétés de projet
 Dans l’IDE, toutes les informations nécessaires pour générer un projet sont exposées en tant que *propriétés*. Ces informations comprennent le nom de l’application, l’extension (par exemple, les DLL, LIB, EXE), options du compilateur, options de l’éditeur de liens, paramètres du débogueur, les étapes de génération personnalisée et beaucoup d’autres choses. En général, vous utilisez *pages de propriétés* ( **projet &#124; Propriétés**) pour afficher et modifier ces propriétés. 

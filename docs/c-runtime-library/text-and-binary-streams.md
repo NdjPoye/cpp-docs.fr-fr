@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fd9cfcc54e672d16b631662d9d41c02327ac2a57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1665ff1551ffe94b475c463d8f93eba2184eaa27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-and-binary-streams"></a>Flux texte et binaires
 Un flux de texte se compose d'une ou de plusieurs lignes de texte qui peuvent être écrites sur un affichage orienté texte afin qu'elles puissent être lues. Lors de la lecture d'un flux de texte, le programme lit `NL` (saut de ligne) à la fin de chaque ligne. Lors de l'écriture dans un flux de texte, le programme écrit `NL` pour signaler la fin d'une ligne. Pour faire correspondre différentes conventions dans les environnements cibles pour représenter le texte contenu dans les fichiers, les fonctions de la bibliothèque peuvent modifier le nombre et les représentations des caractères transmis entre le programme et un flux de texte.  

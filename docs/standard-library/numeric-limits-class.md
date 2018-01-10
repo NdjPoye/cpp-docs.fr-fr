@@ -81,11 +81,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c52f7aa2b2c7eaa9c46f6e1d5a9d942eb53cc660
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ccd200c1ee710100bbf3390033ca97381b5dddf2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numericlimits-class"></a>numeric_limits, classe
 La classe de modèle décrit les propriétés arithmétiques des types numériques intégrés.  
@@ -143,7 +144,7 @@ class numeric_limits
 |[tinyness_before](#tinyness_before)|Teste si un type peut déterminer qu'une valeur est trop petite pour être représentée sous la forme d'une valeur normalisée avant d'être arrondie.|  
 |[traps](#traps)|Teste si les interceptions qui signalent des exceptions arithmétiques sont implémentées pour un type.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<limits>  
   
  **Espace de noms :** std  
@@ -953,7 +954,7 @@ static Type lowest() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la plus grande valeur finie négative.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Retourne la valeur finie négative plus pour le type (qui est généralement `min()` pour les types entiers et `-max()` pour les types à virgule flottante). La valeur de retour est significative si `is_bounded` a pour valeur `true`.  
   
 ##  <a name="max"></a>  numeric_limits::max  

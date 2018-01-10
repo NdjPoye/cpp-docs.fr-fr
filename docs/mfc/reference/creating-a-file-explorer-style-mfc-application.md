@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e8e97253f74365ef0b3c3a235257c85ceee37b3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6098e451b4ebc4caf2bb7fad99ea2e407e4872c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Création d'une application MFC de style Explorateur de fichiers
 De nombreuses applications de système de Windows utilisent l’interface utilisateur (IU) de l’Explorateur de fichiers. Lorsque vous démarrez l’Explorateur de fichiers, par exemple, vous consultez une application avec un séparateur vertical de la barre séparant la zone cliente. Fournit des fonctionnalités de navigation et le côté gauche de la zone cliente et à droite de la zone cliente affiche des détails relatifs à la sélection dans le volet gauche. Lorsqu’un utilisateur clique sur un élément dans le volet gauche, l’application remplit à nouveau le volet de droite. Dans une application MDI, vous pouvez utiliser des commandes sur le **vue** menu pour modifier la quantité de détail affiché dans le volet droit. (Dans un SDI ou plusieurs documents de niveau supérieur, vous pouvez modifier le détail en utilisant les boutons de barre d’outils uniquement.)  

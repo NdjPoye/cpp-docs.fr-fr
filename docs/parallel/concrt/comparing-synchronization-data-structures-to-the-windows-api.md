@@ -1,91 +1,93 @@
 ---
-title: "Comparaison des structures de donn&#233;es de synchronisation avec l’API Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "structures de données de synchronisation, en comparaison avec l’API Windows"
-  - "event, classe, exemple"
+title: "Comparaison des Structures de données de synchronisation avec l’API Windows | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- synchronization data structures, compared to Windows API
+- event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4590724bfc34d0ed9136e74e85b09db6a805c50c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Comparaison des structures de donn&#233;es de synchronisation avec l’API Windows
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique compare le comportement des structures de données de synchronisation fournies par le runtime d'accès concurrentiel à celles fournies par l'API Windows.  
+# <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>Comparaison des structures de données de synchronisation avec l’API Windows
+Cette rubrique compare le comportement des structures de données de synchronisation fournies par le Runtime d’accès concurrentiel à ceux fournis par l’API Windows.  
   
- Les structures de données de synchronisation fournies par le runtime d'accès concurrentiel suivent le *modèle de thread coopératif*.  Dans le modèle de thread coopératif, les primitives de synchronisation cèdent explicitement leurs ressources de traitement à d'autres threads.  Cela diffère du *modèle de thread préemptif*, selon lequel les ressources de traitement sont transférées à d'autres threads par le système d'exploitation ou le planificateur de contrôle.  
+ Les structures de données de synchronisation fournies par le Runtime d’accès concurrentiel suivent le *coopératif de modèle de thread*. Dans le modèle de thread coopératif, les primitives de synchronisation soumis explicitement leurs ressources de traitement à d’autres threads. Cela diffère de la *préemptif, modèle de thread*, où les ressources de traitement sont transférées à d’autres threads par le Planificateur de contrôle ou d’un système d’exploitation.  
   
-## critical\_section  
- La classe [concurrency::critical\_section](../../parallel/concrt/reference/critical-section-class.md) s'apparente à la structure `CRITICAL_SECTION` Windows, car elle peut uniquement être utilisée par les threads d'un seul processus.  Pour plus d'informations sur les sections critiques dans l'API Windows, consultez [Objets de section critique](http://msdn.microsoft.com/library/windows/desktop/ms682530).  
+## <a name="criticalsection"></a>critical_section  
+ Le [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) ressemble à Windows `CRITICAL_SECTION` car il peut être utilisé uniquement par les threads d’un processus de la structure. Pour plus d’informations sur les sections critiques dans l’API Windows, consultez [objets de Section critique](http://msdn.microsoft.com/library/windows/desktop/ms682530).  
   
-## reader\_writer\_lock  
- La classe [concurrency::reader\_writer\_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) s'apparente aux verrous SRW \(Slim Reader\/Writer\) de Windows.  Le tableau suivant explique quelles sont les similarités et les différences.  
+## <a name="readerwriterlock"></a>reader_writer_lock  
+ Le [concurrency::reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) classe ressemble à des verrous de lecteur/writer compacte (SRW) de Windows. Le tableau suivant explique les similitudes et les différences.  
   
 |Fonctionnalité|`reader_writer_lock`|Verrou SRW|  
-|--------------------|--------------------------|----------------|  
+|-------------|--------------------------|--------------|  
 |Non réentrant|Oui|Oui|  
-|Peut promouvoir un lecteur en enregistreur \(prise en charge de la mise à niveau\)|Non|Non|  
-|Peut rétrograder un enregistreur en lecteur \(prise en charge de la rétrogradation\)|Non|Non|  
-|Verrou à préférence d'écriture|Oui|Non|  
+|Peut promouvoir un lecteur à un writer (mise à niveau prise en charge)|Non|Non|  
+|Peut rétrograder un enregistreur à un lecteur (prise en charge de la rétrogradation)|Non|Non|  
+|Verrou de préférence d’écriture|Oui|Non|  
 |Accès FIFO aux enregistreurs|Oui|Non|  
   
- Pour plus d'informations sur les verrous SRW, consultez la rubrique sur les [verrous SRW \(Slim Reader\/Writer\)](http://msdn.microsoft.com/library/windows/desktop/aa904937) dans le Kit de développement Platform SDK.  
+ Pour plus d’informations sur les verrous SRW, consultez [des verrous de lecture/écriture compacte (SRW)](http://msdn.microsoft.com/library/windows/desktop/aa904937) dans le Kit de développement de plate-forme.  
   
-## event  
- La classe [concurrency::event](../../parallel/concrt/reference/event-class.md) s'apparente à un événement Windows à réinitialisation manuelle sans nom.  Toutefois, un objet `event` se comporte de manière coopérative, alors qu'un événement Windows se comporte de manière préemptive.  Pour plus d'informations sur les événements Windows, consultez [Objets événements](http://msdn.microsoft.com/library/windows/desktop/ms682655).  
+## <a name="event"></a>événement  
+ Le [concurrency::event](../../parallel/concrt/reference/event-class.md) ressemble à un événement de réinitialisation manuelle de Windows sans nom. Toutefois, un `event` objet se comporte de manière coopérative, alors qu’un événement Windows se comporte de manière préemptive. Pour plus d’informations sur les événements Windows, consultez [objets événement](http://msdn.microsoft.com/library/windows/desktop/ms682655).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Description  
- Pour mieux comprendre la différence entre la classe `event` et les événements Windows, considérez l'exemple suivant.  Cet exemple permet au planificateur de créer au plus deux tâches simultanées, puis il appelle deux fonctions semblables qui utilisent la classe `event` et un événement Windows à réinitialisation manuelle.  Chaque fonction crée d'abord plusieurs tâches qui attendent qu'un événement partagé soit signalé.  Chaque fonction cède ensuite aux tâches en cours d'exécution, puis signale l'événement.  Chaque fonction attend ensuite l'événement signalé.  
+### <a name="description"></a>Description  
+ Pour mieux comprendre la différence entre la `event` classe et des événements Windows, considérez l’exemple suivant. Cet exemple active le Planificateur de créer au plus deux tâches simultanées, puis appelle similaire deux fonctions qui utilisent la `event` classe et un événement de réinitialisation manuelle de Windows. Chaque fonction crée d’abord plusieurs tâches qui attendent qu’un événement partagé soit signalé. Chaque fonction produit ensuite aux tâches en cours d’exécution et signale l’événement. Chaque fonction attend ensuite l’événement signalé.  
   
-### Code  
- [!code-cpp[concrt-event-comparison#1](../../parallel/concrt/codesnippet/CPP/comparing-synchronization-data-structures-to-the-windows-api_1.cpp)]  
+### <a name="code"></a>Code  
+ [!code-cpp[concrt-event-comparison#1](../../parallel/concrt/codesnippet/cpp/comparing-synchronization-data-structures-to-the-windows-api_1.cpp)]  
   
-### Commentaires  
- Cet exemple génère l'exemple de sortie suivant :  
+### <a name="comments"></a>Commentaires  
+ Cet exemple génère la sortie suivante :  
   
-  **Événement coopératif :**  
- **Contexte 0 : attente sur un événement.**  
- **Contexte 1 : attente sur un événement.**  
- **Contexte 2 : attente sur un événement.**  
- **Contexte 3 : attente sur un événement.**  
- **Contexte 4 : attente sur un événement.**  
- **Définit l'événement.**  
- **Contexte 5 : a reçu l'événement.**  
- **Contexte 6 : événement reçu.**  
- **Contexte 7 : événement reçu.**  
- **Contexte 8 : événement reçu.**  
- **Contexte 9 : événement reçu.**  
-**Événement Windows**  
- **Contexte 10 : attente d'un événement.**  
- **Contexte 11 : attente d'un événement.**  
- **Définit l'événement.**  
- **Contexte 12 : événement reçu.**  
- **Contexte 14 : attente d'un événement.**  
- **Contexte 15 : événement reçu.**  
- **Contexte 16 : attente d'un événement.**  
- **Contexte 17 : événement reçu.**  
- **Contexte 18 : attente d'un événement.**  
- **Contexte 19 : événement reçu.**  
- **Contexte 13 : événement reçu.** Étant donné que la classe `event` se comporte de manière coopérative, le planificateur peut réaffecter les ressources de traitement à un autre contexte lorsqu'un événement attend de passer à l'état signalé.  Par conséquent, davantage de travail est accompli par la version qui utilise la classe `event`.  Dans la version qui utilise des événements Windows, chaque tâche en attente doit passer à l'état signalé avant que la tâche suivante soit démarrée.  
+```Output  
+Cooperative event:  
+    Context 0: waiting on an event.  
+    Context 1: waiting on an event.  
+    Context 2: waiting on an event.  
+    Context 3: waiting on an event.  
+    Context 4: waiting on an event.  
+    Setting the event.  
+    Context 5: received the event.  
+    Context 6: received the event.  
+    Context 7: received the event.  
+    Context 8: received the event.  
+    Context 9: received the event.  
+Windows event:  
+    Context 10: waiting on an event.  
+    Context 11: waiting on an event.  
+    Setting the event.  
+    Context 12: received the event.  
+    Context 14: waiting on an event.  
+    Context 15: received the event.  
+    Context 16: waiting on an event.  
+    Context 17: received the event.  
+    Context 18: waiting on an event.  
+    Context 19: received the event.  
+    Context 13: received the event.  
+```  
   
- Pour plus d'informations sur les tâches, consultez [Parallélisme des tâches](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
+ Étant donné que la `event` classe se comporte de manière coopérative, le planificateur peut réaffecter les ressources de traitement à un autre contexte lorsqu’un événement est en attente à l’état signalé. Par conséquent, davantage de travail est accompli par la version qui utilise le `event` classe. Dans la version qui utilise des événements Windows, chaque tâche en attente doive entrer l’état signalé avant le début de la tâche suivante.  
   
-## Voir aussi  
- [Structures de données de synchronisation](../../parallel/concrt/synchronization-data-structures.md)   
- [Objets de section critique](http://msdn.microsoft.com/library/windows/desktop/ms682530)   
- [Verrous légers \(SRW\) de lecture\/écriture léger](http://msdn.microsoft.com/library/windows/desktop/aa904937)   
- [Objets événement](http://msdn.microsoft.com/library/windows/desktop/ms682655)
+ Pour plus d’informations sur les tâches, consultez [parallélisme des tâches](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Structures de données de synchronisation](../../parallel/concrt/synchronization-data-structures.md)

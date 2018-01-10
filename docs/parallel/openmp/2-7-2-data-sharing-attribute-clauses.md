@@ -1,48 +1,48 @@
 ---
-title: "2.7.2 Data-Sharing Attribute Clauses | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.7.2 attribut de partage de données Clauses | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 47347d3c-18bd-441f-99cf-7737564c417f
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c63ece0feea0426fffbafa600f578e342e85fc2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# 2.7.2 Data-Sharing Attribute Clauses
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Plusieurs directives acceptent les clauses qui permettent à un utilisateur de contrôler les attributs de partage des variables pour la durée de la zone.  En partageant les clauses d'attribut applique uniquement aux variables dans l'étendue lexicale de la directive sur laquelle la clause apparaît.  Il permet toutes les clauses suivantes sur les directives.  La liste des clauses valides sur une directive particulière sont décrites avec la directive.  
+# <a name="272-data-sharing-attribute-clauses"></a>2.7.2 Clauses d'attributs de partage de données
+Plusieurs directives acceptent les clauses qui lui permet de contrôler les attributs de partage des variables pendant la durée de la région. Les clauses d’attributs de partage s’appliquent uniquement aux variables dans l’étendue lexicale de la directive de sur lequel la clause apparaît. Toutes les clauses suivantes sont autorisées sur toutes les directives. La liste des clauses qui sont valides sur une directive particulière sont décrites dans la directive.  
   
- Si une variable est visible lorsqu'un parallèle ou élément de partage de travail est produit, et la variable n'est pas spécifiée dans une clause d'attribut de partage ou directive de **threadprivate** , la variable est partagée.  Les variables statiques déclarées dans l'étendue dynamique d'une région parallèle partagées.  Amassez la mémoire allouée \(par exemple, l'utilisation **malloc \(\)** en C ou C\+\+ ou l'opérateur de **nouveau** en C\+\+\) est partagé.  \(Le pointeur à cette mémoire, toutefois, peuvent être privés ou partagés.\) Les variables avec la durée automatique de stockage déclarée dans l'étendue dynamique d'une région parallèle sont privées.  
+ Si une variable est visible lorsqu’un parallèle ou de construction de partage de travail se produite et de la variable n’est pas spécifiée dans une clause d’attribut partage ou **threadprivate** directive, puis la variable est partagée. Variables statiques déclarées dans l’étendue dynamique d’une région parallèle sont partagés. Segment de mémoire allouée (par exemple, à l’aide de **malloc()** en C ou C++ ou **nouveau** opérateur en C++) est partagé. (Le pointeur à cette mémoire, toutefois, permettre être privés ou partagés.) Les variables avec une durée de stockage automatique déclarée dans l’étendue dynamique d’une région parallèle sont privés.  
   
- La plupart des clauses reçoivent un argument *de variable\-liste* , qui est une liste avec la virgule comme séparateur des variables qui sont visibles.  Si une variable référencée dans une clause d'attribut de partage de données a un type dérivé à partir d'un modèle, sans aucune autre référence à la variable du programme, le comportement n'est pas défini.  
+ La plupart des clauses accepte un *variable-list* argument, qui est une liste séparée par des virgules de variables qui sont visibles. Si une variable est référencée dans une clause partage des données d’attribut a un type dérivé d’un modèle et il en existe aucune autre référence à cette variable dans le programme, le comportement est indéfini.  
   
- toutes les variables qui apparaissent dans les clauses directives doivent être visibles.  Les clauses peuvent être répétées si nécessaire, mais aucune variable ne peut être spécifiée dans plusieurs clause, sauf qu'une variable peut être spécifiée dans **firstprivate** et une clause d' **elle** .  
+ Toutes les variables qui apparaissent dans les clauses de directive doivent être visibles. Clauses peuvent être répétées en fonction des besoins, mais aucune variable ne peut-être être spécifié dans plusieurs clauses, sauf qu’une variable peut être spécifiée à la fois dans un **firstprivate** et un **lastprivate** clause.  
   
- les sections suivantes décrivent les clauses d'attribut de partage de données :  
+ Les sections suivantes décrivent les clauses d’attributs de partage de données :  
   
--   **privé**, [section 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) à la page 25.  
+-   **privé**, [Section 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) page 25.  
   
--   **firstprivate**, [section 2.7.2.2](../../parallel/openmp/2-7-2-2-firstprivate.md) à la page 26.  
+-   **firstprivate**, [Section 2.7.2.2](../../parallel/openmp/2-7-2-2-firstprivate.md) sur la page 26.  
   
--   **elle**, [section 2.7.2.3](../../parallel/openmp/2-7-2-3-lastprivate.md) à la page 27.  
+-   **lastprivate**, [Section 2.7.2.3](../../parallel/openmp/2-7-2-3-lastprivate.md) page 27.  
   
--   **partagé**, [section 2.7.2.4](../../parallel/openmp/2-7-2-4-shared.md) à la page 27.  
+-   **partagé**, [Section 2.7.2.4](../../parallel/openmp/2-7-2-4-shared.md) page 27.  
   
--   **valeur par défaut**, [section 2.7.2.5](../../parallel/openmp/2-7-2-5-default.md) à la page 28.  
+-   **par défaut**, [Section 2.7.2.5](../../parallel/openmp/2-7-2-5-default.md) à la page 28.  
   
--   **réduction**, [section 2.7.2.6](../../parallel/openmp/2-7-2-6-reduction.md) à la page 28.  
+-   **réduction**, [Section 2.7.2.6](../../parallel/openmp/2-7-2-6-reduction.md) à la page 28.  
   
--   **copyin**, [section 2.7.2.7](../../parallel/openmp/2-7-2-7-copyin.md) à la page 31.  
+-   **copyin**, [Section 2.7.2.7](../../parallel/openmp/2-7-2-7-copyin.md) sur la page 31.  
   
--   **copyprivate**, [section 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) à la page 32.
+-   **copyprivate**, [Section 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) à la page 32.

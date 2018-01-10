@@ -210,11 +210,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 2b70ab848071bb1196ceb57f986a6e74fe43d2de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4f19fcbd350ea13004df5298beb95f10661e1f61
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt;, fonctions
 ||||  
@@ -553,7 +554,7 @@ template<class InputIterator, class OutputIterator>
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur de sortie ciblant la position située immédiatement après le dernier élément de la plage de destination, autrement dit, l’itérateur `result` + ( `last`  -   `first` ).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La plage source doit être valide et il doit y avoir suffisamment d'espace au niveau de la destination pour contenir tous les éléments qui sont copiés.  
   
  Comme l’algorithme copie les éléments sources dans l’ordre en commençant par le premier élément, la plage de destination peut chevaucher la plage source, à condition que la position `last` de la plage source ne soit pas contenue dans la plage de destination. **copy** peut être utilisé pour décaler des éléments vers la gauche mais pas vers la droite, à moins qu’il n’y ait aucun chevauchement entre les plages source et de destination. Pour décaler vers la droite d’un nombre quelconque de positions, utilisez l’algorithme [copy_backward](../standard-library/algorithm-functions.md#copy_backward).  
@@ -642,7 +643,7 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur de sortie ciblant la position située immédiatement après le dernier élément de la plage de destination, autrement dit, l’itérateur `destEnd` -( `last`  -   `first` ).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La plage source doit être valide et il doit y avoir suffisamment d'espace au niveau de la destination pour contenir tous les éléments qui sont copiés.  
   
  L'algorithme `copy_backward` impose des exigences plus strictes que celles de l'algorithme de copie. Ses itérateurs d'entrée et de sortie doivent être bidirectionnels.  
@@ -763,7 +764,7 @@ template<class InputIterator, class Size, class OutputIterator>
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un itérateur de sortie indiquant où les éléments ont été copiés. Il est identique à la valeur retournée du troisième paramètre, `dest`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction de modèle évalue `*(dest + N) = *(first + N))` une fois pour chaque `N` dans la plage `[0, count)`, pour les valeurs strictement croissantes de `N` commençant par la valeur la plus faible. Elle retourne ensuite `dest + N`. Si `dest` et `first` désignent des régions de stockage, `dest` ne doit pas être dans la plage `[first, last)`.  
   
 ##  <a name="count"></a>  count  
@@ -2459,7 +2460,7 @@ RandomAccessIterator is_heap_until(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `end` si la plage spécifiée forme un tas ou contient un élément au maximum. Sinon, retourne un itérateur pointant vers le premier élément trouvé qui ne remplit pas la condition de tas.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La première fonction de modèle retourne le dernier itérateur `next` dans `[ begin , end ]` où `[ begin , next)` est un segment de mémoire classé par l’objet de fonction `std::less<>`. Si la distance `end - begin < 2`, la fonction retourne `end`.  
   
  La deuxième fonction de modèle se comporte comme la première, sauf qu'elle utilise le prédicat `compare` à la place du prédicat `std::less<>` comme condition d'ordonnancement du tas.  
@@ -2633,7 +2634,7 @@ bool is_sorted(
  `comp`  
  Condition à vérifier pour déterminer un ordre entre deux éléments. Un prédicat accepte un seul argument et retourne `true` ou `false`. Il effectue la même tâche que `operator<`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La première fonction de modèle retourne [is_sorted_until](http://msdn.microsoft.com/en-us/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`( first, last ) == last`. Le `operator<` fonction effectue la comparaison de la commande.  
   
  La deuxième fonction de modèle retourne `is_sorted_until( first, last , comp ) == last`. La fonction de prédicat `comp` compare l’ordre.  
@@ -4090,7 +4091,7 @@ template<class ForwardIterator, class BinaryPredicate>
   
  `(`[min_element](../standard-library/algorithm-functions.md#min_element)`(first, last), `[max_element](../standard-library/algorithm-functions.md#max_element)`(first, last))`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La première fonction de modèle retourne  
   
  `pair<ForwardIterator,ForwardIterator>`  
@@ -4142,7 +4143,7 @@ template<class Type, class BinaryPredicate>
  `_IList`  
  initializer_list qui contient les membres à comparer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La première fonction de modèle retourne `pair<const Type&, const Type&>( right , left )` si `right` est inférieure à `left`. Sinon, il retourne `pair<const Type&, const Type&>( left , right )`.  
   
  La deuxième fonction membre retourne une paire où le premier élément est le plus petit et le deuxième est le plus grand dans la comparaison effectuée par le prédicat `comp`.  
@@ -4333,7 +4334,7 @@ template<class InputIterator, class OutputIterator>
  `dest`  
  Itérateur de sortie qui doit contenir les éléments déplacés.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction de modèle évalue `*(dest + N) = move(*(first + N))` une fois pour chaque `N` dans la plage `[0, last - first)`, pour les valeurs strictement croissantes de `N` commençant par la valeur la plus faible. Elle retourne ensuite `dest + N`. Si `dest` et `first` désignent des régions de stockage, `dest` ne doit pas être dans la plage `[first, last)`.  
   
 ##  <a name="move_backward"></a>  move_backward  
@@ -4358,7 +4359,7 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
  `destEnd`  
  Itérateur bidirectionnel se rapportant à la position située immédiatement après l'élément final dans la plage de destination.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction de modèle évalue `*(destEnd - N - 1) = move(*(last - N - 1))` une fois pour chaque `N` dans la plage `[0, last - first)`, pour les valeurs strictement croissantes de `N` commençant par la valeur la plus faible. Elle retourne ensuite `destEnd - (last - first)`. Si `destEnd` et `first` désignent des régions de stockage, `destEnd` ne doit pas être dans la plage `[first, last)`.  
   
  `move` et `move_backward` reviennent fonctionnellement à utiliser `copy` et `copy_backward` avec un itérateur move.  
@@ -4655,7 +4656,7 @@ bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `true` si la condition n’est pas détectée au moins une fois dans la plage spécifiée, `false` si la condition est détectée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction de modèle retourne `true` uniquement si, pour certaines `N` dans la plage `[0, last - first)`, le prédicat `comp(*(first + N))` est toujours `false`.  
   
 ##  <a name="partial_sort"></a>  partial_sort  
@@ -4993,7 +4994,7 @@ template<class InputIterator, class OutputIterator1, class OutputIterator2, clas
  `_Pred`  
  Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à vérifier. Un prédicat accepte un seul argument et retourne `true` ou `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction de modèle copie chaque élément `X` dans `[first,last)` à `*dest1++` si `_Pred(X)` a la valeur true, ou à `*dest2++` si ce n’est pas le cas. Il retourne `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.  
   
 ##  <a name="partition_point"></a>  partition_point  
@@ -5021,7 +5022,7 @@ template<class ForwardIterator, class Predicate>
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un `ForwardIterator` qui référence le premier élément qui ne remplit pas la condition vérifiée par `comp`, ou retourne `last` aucun élément n’est trouvé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction de modèle recherche le premier itérateur `it` dans `[first, last)` pour lequel `comp(*it)` est `false`. La séquence doit être ordonnée par `comp`.  
   
 ##  <a name="pop_heap"></a>  pop_heap  
@@ -5403,7 +5404,7 @@ int main( ) {
 ```  
   
 ##  <a name="random_shuffle"></a>  random_shuffle  
- La fonction std ::random_shuffle() est déconseillée et remplacée par [std::shuffle](../standard-library/algorithm-functions.md#shuffle). Pour un exemple de code et plus d’informations, consultez [ \<aléatoire >](../standard-library/random.md) et la validation Stackoverflow [pourquoi sont les méthodes std::random_shuffle déconseillés dans C ++ 14 ?](http://go.microsoft.com/fwlink/?LinkId=397954).  
+ La fonction std ::random_shuffle() est déconseillée et remplacée par [std::shuffle](../standard-library/algorithm-functions.md#shuffle). Pour un exemple de code et plus d’informations, consultez [ \<aléatoire >](../standard-library/random.md) et la validation Stackoverflow [pourquoi sont les méthodes std::random_shuffle déconseillés dans C ++ 14 ?](http://go.microsoft.com/fwlink/p/?linkid=397954).  
   
 ##  <a name="remove"></a>  remove  
  Élimine une valeur spécifiée d'une plage donnée sans modifier l'ordre des éléments restants, et retourne la fin d'une nouvelle plage exempte de la valeur spécifiée.  

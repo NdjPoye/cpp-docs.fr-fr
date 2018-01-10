@@ -37,11 +37,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 55d3590ce7dab5330989171efcf704f27274a595
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 493d20359d5656f5e97e601d90e831f6a1d5b438
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution, classe
 Génère une distribution binomiale.  
@@ -93,7 +94,7 @@ La classe de modèle décrit une distribution qui produit des valeurs d'un type 
   
 Les membres de propriétés `t()` et `p()` retournent les valeurs des paramètres de distribution stockés actuellement `t` et `p`, respectivement.  
   
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.  
+Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stockés `param_type`.  
 
 Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.  
   
@@ -103,7 +104,7 @@ Les fonctions membres `operator()` retournent la valeur générée suivante d’
   
 Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).  
   
-Pour plus d’informations sur la fonction de probabilité discrète de la loi binomiale, consultez l’article de Wolfram MathWorld [Binomial Distribution](http://go.microsoft.com/fwlink/LinkId=398469).  
+Pour plus d’informations sur la fonction de probabilité discrète de la loi binomiale, consultez l’article de Wolfram MathWorld [Binomial Distribution](http://go.microsoft.com/fwlink/p/?linkid=398469).  
   
 ## <a name="example"></a>Exemple  
   
@@ -230,7 +231,7 @@ Histogram for 100 samples:
     21 :  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
 **En-tête :** \<random>  
   
 **Espace de noms :** std  

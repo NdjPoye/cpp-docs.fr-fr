@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa35ba4b49e491ec8529c3067548dd1cde9b1dc1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a5f61e753e6b87f2dbdbd5fcfe7052ddf8e00724
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wiremarshal"></a>wire_marshal
 Spécifie un type de données qui sera utilisé pour la transmission au lieu d’un type de données spécifiques à l’application.  
@@ -32,7 +35,7 @@ Spécifie un type de données qui sera utilisé pour la transmission au lieu d�
   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **wire_marshal** attribut C++ a les mêmes fonctionnalités que le [wire_marshal](http://msdn.microsoft.com/library/windows/desktop/aa367309) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
@@ -54,7 +57,7 @@ Spécifie un type de données qui sera utilisé pour la transmission au lieu d�
 [export, wire_marshal(TWO_X_TWO_BYTE_DATA)] typedef _FOUR_BYTE_DATA FOUR_BYTE_DATA;  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -62,8 +65,8 @@ Spécifie un type de données qui sera utilisé pour la transmission au lieu d�
 |-|-|  
 |**S'applique à**|`typedef`|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

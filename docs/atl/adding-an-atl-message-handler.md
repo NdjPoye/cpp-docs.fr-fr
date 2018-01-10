@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a30c8d2c26893ddf101d7084a91215c7ed55bf48
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4358dc54589971c559bec48adf77252d4f4cda28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-atl-message-handler"></a>Ajout d’un gestionnaire de messages ATL
 Pour ajouter un gestionnaire de messages (une fonction membre qui gère les messages Windows) à un contrôle, sélectionnez tout d’abord le contrôle dans l’affichage de classes. Ouvrez le **propriétés** fenêtre, sélectionnez le **Messages** icône et cliquez sur la liste déroulante de contrôle dans la zone en regard du message requis. Cette opération ajoute une déclaration pour le Gestionnaire de messages dans le fichier d’en-tête du contrôle et une implémentation squelette du gestionnaire dans le fichier du contrôle .cpp. Il sera également ajouter la table des messages et ajoutez une entrée pour le gestionnaire.  

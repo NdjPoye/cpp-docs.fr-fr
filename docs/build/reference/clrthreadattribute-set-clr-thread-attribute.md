@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e928d24c6257bc64303d667e66cd1f968e003450
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f1aae2dadc2fa7a8c9dc67780bb88b4da60d256e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE (Définir l'attribut de thread CLR)
 Spécifier explicitement l’attribut de thread pour le point d’entrée de votre programme CLR.  
@@ -37,12 +38,12 @@ Spécifier explicitement l’attribut de thread pour le point d’entrée de vot
  Applique l’attribut MTAThreadAttribute au point d’entrée de votre programme.  
   
  AUCUN  
- Identique à ne pas spécifier /CLRTHREADATTRIBUTE..  Permet de définir la valeur par défaut, attribut de thread du Common Language Runtime (CLR).  
+ Identique à ne pas spécifier /CLRTHREADATTRIBUTE.  Permet de définir la valeur par défaut, attribut de thread du Common Language Runtime (CLR).  
   
  STA  
  Applique l’attribut STAThreadAttribute au point d’entrée de votre programme.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Définition de l’attribut de thread est valide uniquement lors de la création d’un .exe, car il affecte le point d’entrée du thread principal.  
   
  Si vous utilisez le point d’entrée par défaut (main ou wmain, par exemple) spécifiez le modèle de thread en utilisant /CLRTHREADATTRIBUTE ou en plaçant l’attribut de thread (STAThreadAttribute ou MTAThreadAttribute) sur la fonction d’entrée par défaut.  

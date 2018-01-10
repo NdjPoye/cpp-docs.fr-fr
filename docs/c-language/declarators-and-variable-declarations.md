@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08165d5e6308697ec75a6d03751b26fb626dbb15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d9b7ce4895d51c50185c5262664dc478af62cfa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declarators-and-variable-declarations"></a>Déclarateurs et déclarations de variable
 Le reste de cette section décrit la forme et la signification des déclarations pour les types de variable répertoriés dans cette liste. Plus particulièrement, les sections restantes expliquent comment déclarer les éléments suivants :  
@@ -47,7 +48,7 @@ __declspec(thread) char *var;
   
  `char` est le spécificateur de type, `__declspec(thread)` et `*` sont les modificateurs, et `var` est le nom de l'identificateur.  
   
- **Fin de la section spécifique à Microsoft**  
+ **FIN de la section spécifique à Microsoft**  
   
  Vous utilisez des déclarateurs pour déclarer des tableaux de valeurs, des pointeurs vers des valeurs et des fonctions qui retournent des valeurs d'un type spécifié. Les déclarateurs sont indiqués dans le tableau et les déclarations de pointeur sont décrites plus loin dans cette section.  
   
@@ -91,7 +92,7 @@ int *aptr[10] // Declares an array of 10 pointers
   
  Le compilateur Microsoft C ne limite pas le nombre de déclarateurs pouvant modifier un type arithmétique, structure ou union. Le nombre est limité uniquement par la mémoire disponible.  
   
- **Fin de la section spécifique à Microsoft**  
+ **FIN de la section spécifique à Microsoft**  
   
 ## <a name="see-also"></a>Voir aussi  
  [Déclarations et types](../c-language/declarations-and-types.md)

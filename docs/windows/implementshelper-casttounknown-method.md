@@ -1,49 +1,49 @@
 ---
-title: "ImplementsHelper::CastToUnknown, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::ImplementsHelper::CastToUnknown"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CastToUnknown (méthode)"
+title: "Implementshelper::casttounknown, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::ImplementsHelper::CastToUnknown
+dev_langs: C++
+helpviewer_keywords: CastToUnknown method
 ms.assetid: 5bcfcbaf-c75f-4d43-87b3-0d6838c838d9
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d07e716e085b7f10220f3ed3db4956ae7b1b3cf9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ImplementsHelper::CastToUnknown, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="implementshelpercasttounknown-method"></a>ImplementsHelper::CastToUnknown, méthode
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 IUnknown* CastToUnknown();  
 ```  
   
-## Valeur de retour  
- Pointeur vers l'interface IUnknown sous\-jacente.  
+## <a name="return-value"></a>Valeur de retour  
+ Pointeur vers l’interface IUnknown sous-jacente.  
   
-## Notes  
- Obtient un pointeur vers l'interface IUnknown sous\-jacente pour la structure Implements actuelle.  
+## <a name="remarks"></a>Notes  
+ Obtient un pointeur vers l’interface IUnknown sous-jacent pour la structure implémente actuelle.  
   
-## Configuration requise  
- **En\-tête:** implements.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** implements.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
- [ImplementsHelper, structure](../windows/implementshelper-structure.md)   
+## <a name="see-also"></a>Voir aussi  
+ [ImplementsHelper (Structure)](../windows/implementshelper-structure.md)   
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

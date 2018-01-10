@@ -21,18 +21,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 44d262e27b47de0826024cb26e7f19280c6ed54e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a741008b894c5349bd198c2abfd13e11a158c4b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="console-and-port-io"></a>Console et port E/S
 Ces routines lisent et écrivent sur votre console ou sur le port spécifié. Les routines d’E/S de console ne sont pas compatibles avec les E/S de flux ou les routines de bibliothèque d’E/S de bas niveau. La console ou le port n’a pas à être ouvert ou fermé avant l’exécution des E/S, il n’y a donc pas de routines ouvertes ou fermées dans cette catégorie. Dans les systèmes d’exploitation Windows, la sortie de ces fonctions est toujours dirigée vers la console et ne peut pas être redirigée.  
   
 ### <a name="console-and-port-io-routines"></a>Routines d'E/S de console et de port  
   
-|Routine|Utilisation|  
+|Routine|Utilisez|  
 |-------------|---------|  
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md), [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|Lire une chaîne de la console|  
 |[_cprintf, _cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md), [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)|Écrire des données mises en forme dans la console|  

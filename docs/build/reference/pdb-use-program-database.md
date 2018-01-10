@@ -22,24 +22,25 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0ea27dd7106e8490e9ba8ec9eacdcbbb02d33036
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9b8b255e88a199397463d26d408d425234571552
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pdb-use-program-database"></a>/PDB (Utiliser la base de données du programme)
 ```  
 /PDB:filename  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  où :  
   
  *filename*  
  Nom spécifié par l’utilisateur pour la base de données du programme (PDB) qui crée de l’éditeur de liens. Il remplace le nom par défaut.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Par défaut, lorsque [/DEBUG](../../build/reference/debug-generate-debug-info.md) est spécifié, l’éditeur de liens crée une base de données du programme (PDB) qui contient des informations de débogage. Nom de fichier par défaut pour le fichier PDB est le nom de base du programme et l’extension .pdb.  
   
  Utilisez/PDB :*nom de fichier* pour spécifier le nom du fichier PDB. Si /DEBUG n’est pas spécifié, l’option /PDB est ignorée.  

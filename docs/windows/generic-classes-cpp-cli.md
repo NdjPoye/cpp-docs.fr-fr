@@ -19,11 +19,14 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e59aafde058565435e0a777a55ff7b010fea705e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 22f2d00c4f8e07ea9d04e03c2e95190be056cbd9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generic-classes-ccli"></a>Classes génériques (C++/CLI)
 Une classe générique est déclarée à l’aide de la forme suivante :  
@@ -41,7 +44,7 @@ class-body
 } [declarators] [;]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Dans la syntaxe ci-dessus, les termes suivants sont utilisés :  
   
  `attributes`(facultatif)  
@@ -74,7 +77,7 @@ class-body
  Une liste qui contient la classe de base et les interfaces implémentées, séparés par des virgules.  
   
  *corps de la classe*  
- Le corps de la classe contenant des champs, des fonctions membres, etc..  
+ Le corps de la classe contenant des champs, des fonctions membres, etc.  
   
  *déclarateurs*  
  Déclarations des variables de ce type. Par exemple : `^` *identificateur*[`,` ...]  

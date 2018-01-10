@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d2a0187c26f8f0a170881d0b683cb462a0a24b81
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a07aeac0f8d139f71bdbe2473dc8eabf7e14ec2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mutexmutex-constructor"></a>Mutex::Mutex, constructeur
 Initialise une nouvelle instance de la classe Mutex.  
@@ -43,7 +46,7 @@ Mutex(
 ## <a name="remarks"></a>Notes  
  Le premier constructeur initialise un objet Mutex à partir du handle spécifié. Le deuxième constructeur initialise un objet Mutex à partir du handle spécifié et la propriété du mutex est alors transférée vers l’objet Mutex actuel.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers

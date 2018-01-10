@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7de92517a70fa094459b6a626802e2e6f4c1ddd6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9864ce3522cf33927a3f6d3572e9d2e12187f5d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccrtheap-class"></a>Classe de CCRTHeap
 Cette classe implémente [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) à l’aide des fonctions de tas CRT.  
@@ -47,7 +48,7 @@ class CCRTHeap : public IAtlMemMgr
 |[CCRTHeap::GetSize](#getsize)|Appelez cette méthode pour obtenir la taille d’un bloc de mémoire allouée par ce gestionnaire de mémoire allouée.|  
 |[CCRTHeap::Reallocate](#reallocate)|Appelez cette méthode pour réallouer la mémoire allouée par ce gestionnaire de mémoire.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CCRTHeap`implémente des fonctions, y compris du segment de mémoire à l’aide de la bibliothèque CRT fonctions d’allocation de mémoire [malloc](../../c-runtime-library/reference/malloc.md), [libre](../../c-runtime-library/reference/free.md), [realloc](../../c-runtime-library/reference/realloc.md), et [_msize](../../c-runtime-library/reference/msize.md).  
   
 ## <a name="example"></a>Exemple  
@@ -58,7 +59,7 @@ class CCRTHeap : public IAtlMemMgr
   
  `CCRTHeap`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlmem.h  
   
 ##  <a name="allocate"></a>CCRTHeap::Allocate  
@@ -75,7 +76,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers le début du bloc de mémoire nouvellement alloué.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez [CCRTHeap::Free](#free) ou [CCRTHeap::Reallocate](#reallocate) pour libérer la mémoire allouée par cette méthode.  
   
  Implémentation à l’aide [malloc](../../c-runtime-library/reference/malloc.md).  
@@ -91,7 +92,7 @@ virtual void Free(void* p) throw();
  `p`  
  Pointeur vers la mémoire précédemment allouée par ce gestionnaire de mémoire. NULL est une valeur valide et ne fait rien.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Implémentation à l’aide [libre](../../c-runtime-library/reference/free.md).  
   
 ##  <a name="getsize"></a>CCRTHeap::GetSize  
@@ -108,7 +109,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la taille du bloc de mémoire allouée en octets.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Implémentation à l’aide [_msize](../../c-runtime-library/reference/msize.md).  
   
 ##  <a name="reallocate"></a>CCRTHeap::Reallocate  
@@ -128,7 +129,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers le début du bloc de mémoire nouvellement alloué.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez [CCRTHeap::Free](#free) pour libérer la mémoire allouée par cette méthode. Implémentation à l’aide [realloc](../../c-runtime-library/reference/realloc.md).  
   
 ## <a name="see-also"></a>Voir aussi  

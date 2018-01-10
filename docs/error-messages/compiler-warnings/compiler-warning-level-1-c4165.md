@@ -1,35 +1,31 @@
 ---
-title: "L’avertissement C4165 avertissement (niveau 1) du compilateur | Documents Microsoft"
+title: "L’avertissement de C4165 du compilateur (niveau 1) d’avertissement. | Documents Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4165
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4165
+f1_keywords: C4165
+dev_langs: C++
+helpviewer_keywords: C4165
 ms.assetid: f5bed515-2290-4f88-8dab-b45d95fe26ef
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
-ms.openlocfilehash: 9f2007a2f43cd7641979b663c58efb3a8e276246
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e31f0e0440b0c31197ded21464edc9d686c4864e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4165"></a>Avertissement de C4165 du compilateur (niveau 1) d’avertissement.
-'HRESULT' est en train d'être converti en 'bool' ; le voulez-vous ?  
+'HRESULT' est converti en 'bool' ; Êtes-vous sûr que c’est ce que vous voulez ?  
   
-Lorsque vous utilisez un HRESULT dans un [si](../../cpp/if-else-statement-cpp.md) instruction, le HRESULT sera converti en un [bool](../../cpp/bool-cpp.md) , sauf si vous explicitement un test de la variable comme HRESULT. Cet avertissement est désactivé par défaut.  
+Lorsque vous utilisez un HRESULT dans un [si](../../cpp/if-else-statement-cpp.md) instruction, le HRESULT est converti en un [bool](../../cpp/bool-cpp.md) , sauf si vous explicitement un test de la variable comme HRESULT. Cet avertissement est désactivé par défaut.  
   
 ## <a name="example"></a>Exemple  
 L’exemple suivant génère l’avertissement C4165.  

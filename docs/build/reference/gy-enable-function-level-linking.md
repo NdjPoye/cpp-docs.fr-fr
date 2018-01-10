@@ -24,14 +24,15 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e7d83e4409d9c46c926859f39029ea68f2411def
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ebe272b12a503a310319526f53f312a033a0ee26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy (Activer la liaison au niveau des fonctions)
-Permet au compilateur d’empaqueter des fonctions individuelles sous la forme de fonctions empaquetées (COMDAT).  
+Permet au compilateur d’empaqueter des fonctions individuelles sous la forme de fonctions empaquetées (COMDATs).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +40,7 @@ Permet au compilateur d’empaqueter des fonctions individuelles sous la forme d
 /Gy[-]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’éditeur de liens requiert que les fonctions soient empaquetées séparément en tant que COMDAT à exclure ou de trier des fonctions individuelles dans un fichier .exe ou DLL.  
   
  Vous pouvez utiliser l’option de l’éditeur de liens [/OPT (optimisations)](../../build/reference/opt-optimizations.md) à exclure des fonctions empaquetées non référencées à partir du fichier .exe.  

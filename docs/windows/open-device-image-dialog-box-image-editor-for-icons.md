@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7081d1ed4c65afea2aab7eca169782ec227a258b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 25a4471a0522f89fd5cf1653398e92694daf887e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>Ouvrez &lt;périphérique&gt; l’Image de la boîte de dialogue (Éditeur d’images pour les icônes)
 Utilisez cette boîte de dialogue pour ouvrir des images de périphérique. Il répertorie les images de périphérique existantes dans la ressource actuelle (les images qui font partie de la ressource actuelle).  
@@ -27,8 +30,8 @@ Utilisez cette boîte de dialogue pour ouvrir des images de périphérique. Il r
  **Images en cours**  
  Répertorie les images incluses dans la ressource. Sélectionnez le type d’image que vous souhaitez ouvrir.  
   
-## <a name="requirements"></a>Spécifications  
- Aucune  
+## <a name="requirements"></a>Configuration requise  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Menu image](../windows/image-menu-image-editor-for-icons.md)   

@@ -275,11 +275,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 47d12b9cef2aa36aae8e43d6de2d74875808a3cb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a4d11da722ee9c933e6fbded6d8724db3da47ff4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clistctrl-class"></a>CListCtrl (classe)
 Encapsule les fonctionnalités d’un contrôle d’affichage de liste, qui affiche une collection d’éléments constitués chacun d’une icône (de liste d’images) et d’une étiquette.  
@@ -431,7 +432,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::SubItemHitTest](#subitemhittest)|Détermine quel élément de la vue liste, si elle existe, est à une position donnée.|  
 |[CListCtrl::Update](#update)|Force le contrôle à redessiner un élément spécifié.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  En plus d’une icône et une étiquette, chaque élément peut avoir des informations affichées dans les colonnes à droite de l’icône et une étiquette. Ce contrôle (et par conséquent la `CListCtrl` classe) est disponible uniquement pour les programmes s’exécutant sous Windows 95/98 et Windows NT version 3.51 et ultérieures.  
   
  Voici une brève vue d’ensemble de la `CListCtrl` classe. Pour une discussion détaillée conceptuelle, consultez [utilisation de CListCtrl](../../mfc/using-clistctrl.md) et [contrôles](../../mfc/controls-mfc.md).  
@@ -521,7 +522,7 @@ class CListCtrl : public CWnd
   
  `CListCtrl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcmn.h  
   
 ##  <a name="approximateviewrect"></a>CListCtrl::ApproximateViewRect  
@@ -544,7 +545,7 @@ CSize ApproximateViewRect(
 ### <a name="return-value"></a>Valeur de retour  
  A `CSize` objet qui contient la largeur approximative et la hauteur nécessaire pour afficher les éléments, en pixels.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_ApproximateViewRect](http://msdn.microsoft.com/library/windows/desktop/bb761231), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="arrange"></a>CListCtrl::Arrange  
@@ -569,7 +570,7 @@ BOOL Arrange(UINT nCode);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `nCode` paramètre spécifie le style d’alignement.  
   
 ### <a name="example"></a>Exemple    
@@ -588,7 +589,7 @@ BOOL Arrange(UINT nCode);
 void CancelEditLabel();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_CANCELEDITLABEL](http://msdn.microsoft.com/library/windows/desktop/bb774886) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="clistctrl"></a>CListCtrl::CListCtrl  
@@ -625,7 +626,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous construisez un `CListCtrl` en deux étapes. Tout d’abord, appelez le constructeur, puis **créer**, ce qui crée le contrôle list view et l’attache à le `CListCtrl` objet.  
   
  Pour appliquer des styles étendus Windows à l’objet de contrôle de liste, appelez [CreateEx](#createex) au lieu de **créer**.  
@@ -670,7 +671,7 @@ virtual BOOL CreateEx(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des styles étendus Windows spécifiés par la préface style étendu de Windows **WS_EX_**.  
   
  `CreateEx`crée le contrôle avec les styles étendus de Windows spécifiés par `dwExStyle`. Pour définir les styles étendus spécifique à un contrôle, appelez [SetExtendedStyle](#setextendedstyle). Par exemple, utilisez `CreateEx` pour définir ces styles comme **WS_EX_CONTEXTHELP**, mais utiliser `SetExtendedStyle` pour définir ces styles comme **LVS_EX_FULLROWSELECT**. Pour plus d’informations, consultez les styles décrites dans la rubrique [Styles étendus de la vue liste](http://msdn.microsoft.com/library/windows/desktop/bb774732) dans le Kit de développement logiciel Windows.  
@@ -694,7 +695,7 @@ CImageList* CreateDragImage(
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers la liste d’images en cas de réussite ; dans le cas contraire **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `CImageList` objet est permanente et vous devez le supprimer une fois. Exemple :  
   
 
@@ -790,7 +791,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
  `lpDrawItemStruct`  
  Un pointeur long désignant un `DRAWITEMSTRUCT` structure qui contient des informations sur le type de dessin nécessaire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le **itemAction** membre de la [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) structure définit l’action de dessin qui doit être effectuée.  
   
  Par défaut, cette fonction membre ne fait rien. Remplacez cette fonction membre pour implémenter le dessin pour un mode owner-draw `CListCtrl` objet.  
@@ -811,7 +812,7 @@ CEdit* EditLabel(int nItem);
 ### <a name="return-value"></a>Valeur de retour  
  En cas de réussite, un pointeur vers le `CEdit` objet qui est utilisé pour modifier le texte de l’élément ; sinon **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un contrôle list view qui a le `LVS_EDITLABELS` style de fenêtre permet à un utilisateur modifier les étiquettes d’élément en place. L’utilisateur commence à modifier en cliquant sur l’étiquette d’un élément qui a le focus.  
   
  Utilisez cette fonction pour commencer la modification sur place du texte de l’élément Affichage de liste spécifiée.  
@@ -848,7 +849,7 @@ LRESULT EnableGroupView(BOOL fEnable);
   
 - **-1** l’opération a échoué.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_ENABLEGROUPVIEW](http://msdn.microsoft.com/library/windows/desktop/bb774900) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="ensurevisible"></a>CListCtrl::EnsureVisible  
@@ -870,7 +871,7 @@ BOOL EnsureVisible(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le contrôle list view défile si nécessaire. Si le `bPartialOK` le paramètre est différente de zéro, sans défilement se produit si l’élément est partiellement visible.  
   
 ### <a name="example"></a>Exemple  
@@ -901,7 +902,7 @@ int FindItem(
 ### <a name="return-value"></a>Valeur de retour  
  Index de l’élément en cas de réussite ou sinon -1.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `pFindInfo` paramètre pointe vers une **LVFINDINFO** structure qui contient les informations utilisées pour rechercher pour un élément de liste.  
   
 ### <a name="example"></a>Exemple  
@@ -948,7 +949,7 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne zéro en cas de réussite, ou zéro dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode implémente le comportement de la macro Win32, [ListView_GetBkImage](http://msdn.microsoft.com/library/windows/desktop/bb761246), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -977,7 +978,7 @@ UINT GetCallbackMask() const;
 ### <a name="return-value"></a>Valeur de retour  
  Masque de rappel du contrôle list view.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un élément « rappel » est un élément de liste pour laquelle l’application, plutôt que le contrôle, stocke le texte, l’icône ou les deux. Bien qu’un contrôle list view peut stocker ces attributs pour vous, vous souhaiterez probablement utiliser des éléments de rappel si votre application a déjà gère certaines de ces informations. Masque de rappel spécifie les bits d’état élément sont gérés par l’application, et elle s’applique à l’ensemble du contrôle plutôt qu’à un élément spécifique. Le masque de rappel est zéro par défaut, c'est-à-dire que le contrôle effectue le suivi de tous les États d’élément. Si une application utilise des éléments de rappel ou spécifie un masque de rappel différent de zéro, il doit être en mesure de fournir des attributs d’élément de vue liste à la demande.  
   
 ### <a name="example"></a>Exemple  
@@ -997,7 +998,7 @@ BOOL GetCheck(int nItem) const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’élément est sélectionné, sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetCheckState](http://msdn.microsoft.com/library/windows/desktop/bb761250), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -1022,7 +1023,7 @@ BOOL GetColumn(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le **LVCOLUMN** structure contient des informations sur une colonne en mode rapport.  
   
 ### <a name="example"></a>Exemple  
@@ -1060,7 +1061,7 @@ BOOL GetColumnOrderArray(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetColumnOrderArray](http://msdn.microsoft.com/library/windows/desktop/bb761254), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -1164,7 +1165,7 @@ CString GetEmptyText() const;
 ### <a name="return-value"></a>Valeur de retour  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) qui contient le texte à afficher si le contrôle est vide.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode envoie le [LVM_GETEMPTYTEXT](http://msdn.microsoft.com/library/windows/desktop/bb774921) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getextendedstyle"></a>CListCtrl::GetExtendedStyle  
@@ -1177,7 +1178,7 @@ DWORD GetExtendedStyle();
 ### <a name="return-value"></a>Valeur de retour  
  Permet d’afficher une combinaison des styles étendus en cours d’utilisation par la liste de contrôle. Pour une liste de description de ces styles étendus, consultez la [Styles étendus de la vue liste](http://msdn.microsoft.com/library/windows/desktop/bb774732) rubrique dans le SDK Windows.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetExtendedListViewStyle](http://msdn.microsoft.com/library/windows/desktop/bb761264), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -1225,7 +1226,7 @@ int GetFocusedGroup() const;
 ### <a name="return-value"></a>Valeur de retour  
  L’index du groupe dont l’état est `LVGS_FOCUSED`, s’il existe un tel groupe ; sinon, -1.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode envoie le [LVM_GETFOCUSEDGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774925) message, ce qui est décrit dans le Kit de développement logiciel Windows. Pour plus d’informations, consultez la `LVGS_FOCUSED` valeur de la `state` membre de la [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) structure.  
   
 ##  <a name="getgroupcount"></a>CListCtrl::GetGroupCount  
@@ -1238,7 +1239,7 @@ int GetGroupCount()const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de groupes dans le contrôle de liste.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode envoie le [LVM_GETGROUPCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774931) message, ce qui est décrit dans le SDK Windows-->.  
   
 ##  <a name="getgroupinfo"></a>CListCtrl::GetGroupInfo  
@@ -1260,7 +1261,7 @@ int GetGroupInfo(
 ### <a name="return-value"></a>Valeur de retour  
  Sinon, retourne l’ID du groupe en cas de réussite, ou -1.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_GETGROUPINFO](http://msdn.microsoft.com/library/windows/desktop/bb774932) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getgroupinfobyindex"></a>CListCtrl::GetGroupInfoByIndex  
@@ -1282,7 +1283,7 @@ BOOL GetGroupInfoByIndex(
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode envoie le [LVM_GETGROUPINFOBYINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774933) message, ce qui est décrit dans le SDK Windows-->.  
   
 ### <a name="example"></a>Exemple  
@@ -1336,7 +1337,7 @@ void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
  `pGroupMetrics`  
  Un pointeur vers un [LVGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774752) contenant les informations de groupe de mesures.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_GETGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774934) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getgrouprect"></a>CListCtrl::GetGroupRect  
@@ -1360,7 +1361,7 @@ BOOL GetGroupRect(
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’appelant est chargé d’allouer le [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure vers laquelle pointe le `pRect` paramètre.  
   
  Cette méthode envoie le [LVM_GETGROUPRECT](http://msdn.microsoft.com/library/windows/desktop/bb774935) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
@@ -1412,7 +1413,7 @@ UINT GetGroupState(
 ### <a name="return-value"></a>Valeur de retour  
  L’état requis pour le groupe spécifié, ou 0 si le groupe ne peut pas être trouvé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La valeur de retour est le résultat d’une opération AND au niveau du bit sur les `dwMask` paramètre et la valeur de la `state` membre d’un [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) structure qui représente le contrôle de liste actuel.  
   
  Cette méthode envoie le [LVM_GETGROUPSTATE](http://msdn.microsoft.com/library/windows/desktop/bb774936) message, ce qui est décrit dans le Kit de développement logiciel Windows. Pour plus d’informations, consultez la [ListView_GetGroupState](http://msdn.microsoft.com/library/windows/desktop/bb761288) (macro).  
@@ -1427,7 +1428,7 @@ CHeaderCtrl* GetHeaderCtrl();
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers le contrôle header, utilisé par le contrôle list view.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetHeader](http://msdn.microsoft.com/library/windows/desktop/bb761290), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -1443,7 +1444,7 @@ HCURSOR GetHotCursor();
 ### <a name="return-value"></a>Valeur de retour  
  Le handle à la ressource curseur à chaud actuelle utilisée par le contrôle list view.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetHotCursor](http://msdn.microsoft.com/library/windows/desktop/bb761292), comme décrit dans le Kit de développement logiciel Windows. Le curseur à chaud, visible uniquement lorsque la sélection est activée, s’affiche lorsque le curseur passe sur n’importe quel élément de la vue liste. Sélection est activée en définissant le **LVS_EX_TRACKSELECT** style étendu.  
   
 ### <a name="example"></a>Exemple    
@@ -1466,7 +1467,7 @@ int GetHotItem();
 ### <a name="return-value"></a>Valeur de retour  
  L’index de l’élément actuel à chaud de contrôle list view.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetHotItem](http://msdn.microsoft.com/library/windows/desktop/bb761294), comme décrit dans le Kit de développement logiciel Windows. L’élément actif est défini comme l’élément actuellement sélectionné lorsqu’à chaud de suivi (et placez la sélection) est activé.  
   
  Si la sélection réactive est activée, lorsqu’un utilisateur est maintenu sur un élément de liste, l’étiquette de l’élément est automatiquement mis en surbrillance sans l’utilisation d’un bouton de la souris.  
@@ -1491,7 +1492,7 @@ DWORD GetHoverTime() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le délai, en millisecondes, pendant lequel le curseur de la souris doit pointer sur un élément avant qu’il soit sélectionné. Si la valeur de retour est -1, le délai de pointage est le délai de pointage par défaut.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetHoverTime](http://msdn.microsoft.com/library/windows/desktop/bb761296), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple    
@@ -1547,7 +1548,7 @@ BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, ou **FALSE** dans le cas contraire. **FALSE** est retournée si la taille de la `cbSize` membre de la **LVINSERTMARK** structure n’est pas égale la taille réelle de la structure.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_GETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774945) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getinsertmarkcolor"></a>CListCtrl::GetInsertMarkColor  
@@ -1560,7 +1561,7 @@ COLORREF GetInsertMarkColor() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) structure qui contient la couleur du point d’insertion.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774947) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getinsertmarkrect"></a>CListCtrl::GetInsertMarkRect  
@@ -1581,7 +1582,7 @@ int GetInsertMarkRect(LPRECT pRect) const;
   
 - **1** point d’insertion trouvé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_GETINSERTMARKRECT](http://msdn.microsoft.com/library/windows/desktop/bb774949) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getitem"></a>CListCtrl::GetItem  
@@ -1598,7 +1599,7 @@ BOOL GetItem(LVITEM* pItem) const;
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le **LVITEM** structure spécifie ou reçoit les attributs d’un élément de liste.  
   
 ##  <a name="getitemcount"></a>CListCtrl::GetItemCount  
@@ -1628,7 +1629,7 @@ DWORD_PTR GetItemData(int nItem) const;
 ### <a name="return-value"></a>Valeur de retour  
  Valeur 32 bits spécifiques à l’application associée à l’élément spécifié.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette valeur est la **lParam** membre de la [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) de la structure, comme décrit dans le Kit de développement logiciel Windows  
   
 ### <a name="example"></a>Exemple  
@@ -1668,7 +1669,7 @@ BOOL GetItemIndexRect(
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode envoie le [LVM_GETITEMINDEXRECT](http://msdn.microsoft.com/library/windows/desktop/bb761046) message, ce qui est décrit dans le Kit de développement logiciel Windows. Pour plus d’informations, consultez [ListView_GetItemIndexRect Macro](http://msdn.microsoft.com/library/windows/desktop/bb774959).  
   
 ### <a name="example"></a>Exemple  
@@ -1828,7 +1829,7 @@ BOOL GetItemSpacing(
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode envoie le [LVM_GETITEMSPACING](http://msdn.microsoft.com/library/windows/desktop/bb761051) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getitemstate"></a>CListCtrl::GetItemState  
@@ -1850,7 +1851,7 @@ UINT GetItemState(
 ### <a name="return-value"></a>Valeur de retour  
  Les indicateurs d’état pour la liste spécifiée afficher l’élément.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  État d’un élément spécifié par le **état** membre de la [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) structure, comme décrit dans le Kit de développement logiciel Windows. Lorsque vous spécifiez ou modifiez l’état d’un élément, le **stateMask** membre spécifie les bits d’état que vous souhaitez modifier.  
   
 ### <a name="example"></a>Exemple  
@@ -1889,7 +1890,7 @@ CString GetItemText(
   
  La version retournant un `CString` retourne le texte de l’élément.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si `nSubItem` est égal à zéro, cette fonction récupère l’étiquette de l’élément ; si `nSubItem` est différent de zéro, il récupère le texte du sous-élément. Pour plus d’informations sur l’argument de sous-élément, consultez la description de la [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) structure dans le SDK Windows.  
   
 ##  <a name="getnextitem"></a>CListCtrl::GetNextItem  
@@ -1950,7 +1951,7 @@ BOOL GetNextItemIndex(
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’appelant est chargé d’allouer et en définissant les membres de la `LVITEMINDEX` structure vers laquelle pointe le `pItemIndex` paramètre.  
   
  Cette méthode envoie le [LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
@@ -1969,7 +1970,7 @@ int GetNextSelectedItem(POSITION& pos) const;
 ### <a name="return-value"></a>Valeur de retour  
  L’index de l’élément identifié par `pos`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous pouvez utiliser `GetNextSelectedItem` dans une boucle itération vers l’avant, si vous établissez la position initiale avec un appel à `GetFirstSelectedItemPosition`.  
   
  Vous devez vous assurer que votre **POSITION** valeur n’est valide. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
@@ -2005,7 +2006,7 @@ UINT GetNumberOfWorkAreas() const;
 ### <a name="return-value"></a>Valeur de retour  
  Pas utilisé pour l’instant.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetNumberOfWorkAreas](http://msdn.microsoft.com/library/windows/desktop/bb774988), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple    
@@ -2047,7 +2048,7 @@ COLORREF GetOutlineColor() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) structure qui contient la couleur de contour.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_GETOUTLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761065) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getorigin"></a>CListCtrl::GetOrigin  
@@ -2074,7 +2075,7 @@ UINT GetSelectedColumn() const;
 ### <a name="return-value"></a>Valeur de retour  
  Index de la colonne sélectionnée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_GETSELECTEDCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb761067) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getselectedcount"></a>CListCtrl::GetSelectedCount  
@@ -2116,7 +2117,7 @@ int GetSelectionMark();
 ### <a name="return-value"></a>Valeur de retour  
  La marque de sélection de base zéro, ou -1 s’il n’existe aucune marque de sélection.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetSelectionMark](http://msdn.microsoft.com/library/windows/desktop/bb774998), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -2143,7 +2144,7 @@ int GetStringWidth(LPCTSTR lpsz) const;
 ### <a name="return-value"></a>Valeur de retour  
  La largeur, en pixels, de la chaîne pointée par `lpsz`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La largeur retournée prend en compte la police du contrôle actuel et les marges de la colonne, mais pas la largeur d’une petite icône.  
   
 ### <a name="example"></a>Exemple  
@@ -2196,7 +2197,7 @@ BOOL GetSubItemRect(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetSubItemRect](http://msdn.microsoft.com/library/windows/desktop/bb775004), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="gettextbkcolor"></a>CListCtrl::GetTextBkColor  
@@ -2239,7 +2240,7 @@ BOOL GetTileInfo(PLVTILEINFO pti) const;
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de retour n’est pas utilisée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_GETTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761081) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="gettileviewinfo"></a>CListCtrl::GetTileViewInfo  
@@ -2256,7 +2257,7 @@ BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de retour n’est pas utilisée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_GETTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb761083) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="gettooltips"></a>CListCtrl::GetToolTips  
@@ -2269,7 +2270,7 @@ CToolTipCtrl* GetToolTips() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un [CToolTipCtrl](ctooltipctrl-class.md) objet à être utilisé par le contrôle de liste. Si le [créer](#create) fonction membre utilise le style **LVS_NOTOOLTIPS**, aucune info-bulles ne sont utilisées, et **NULL** est retourné.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement du message Win32 [LVM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb761085), comme décrit dans le Kit de développement logiciel Windows. L’implémentation MFC de `GetToolTips` retourne un `CToolTipCtrl` objet, qui est utilisé par le contrôle de liste, plutôt qu’un handle à un contrôle d’info-bulle.  
   
 ### <a name="example"></a>Exemple  
@@ -2323,7 +2324,7 @@ DWORD GetView() const;
 ### <a name="return-value"></a>Valeur de retour  
  L’affichage actuel du contrôle list view.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_GETVIEW](http://msdn.microsoft.com/library/windows/desktop/bb761091) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getviewrect"></a>CListCtrl::GetViewRect  
@@ -2340,7 +2341,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La vue de liste doit être en mode icône ou petite icône.  
   
 ##  <a name="getworkareas"></a>CListCtrl::GetWorkAreas  
@@ -2359,7 +2360,7 @@ void GetWorkAreas(
  `prc`  
  Un pointeur vers un tableau de `RECT` structures (ou [CRect](../../atl-mfc-shared/reference/crect-class.md) objets) qui reçoivent les zones de travail du contrôle list view. Les valeurs dans ces structures sont spécifiées en coordonnées clientes.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_GetWorkAreas](http://msdn.microsoft.com/library/windows/desktop/bb775024), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -2379,7 +2380,7 @@ BOOL HasGroup(int iGroupId) const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_HASGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761097) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="hittest"></a>CListCtrl::HitTest  
@@ -2406,7 +2407,7 @@ int HitTest(
 ### <a name="return-value"></a>Valeur de retour  
  L’index de l’élément à la position spécifiée par `pHitTestInfo`, le cas échéant, ou sinon -1.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous pouvez utiliser la `LVHT_ABOVE`, `LVHT_BELOW`, `LVHT_TOLEFT`, et `LVHT_TORIGHT` les valeurs de la structure **indicateur** membre pour déterminer s’il faut faire défiler le contenu d’un contrôle list view. Deux de ces indicateurs peuvent être combinés, par exemple, si la position est au-dessus et à gauche de la zone cliente.  
   
  Vous pouvez tester le **LVHT_ONITEM** valeur de la structure **indicateur** membre pour déterminer si une position donnée est sur un élément de liste. Cette valeur est une opération OR au niveau du bit sur les `LVHT_ONITEMICON`, `LVHT_ONITEMLABEL`, et `LVHT_ONITEMSTATEICON` les valeurs de la structure **indicateur** membre.  
@@ -2473,7 +2474,7 @@ int InsertColumn(
 ### <a name="return-value"></a>Valeur de retour  
  Index de la nouvelle colonne, en cas de réussite ou sinon -1.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La colonne la plus à gauche dans un contrôle list view doit être aligné à gauche.  
   
  Le [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) structure contient les attributs d’une colonne dans la vue rapport. Il est également utilisé pour recevoir des informations sur une colonne. Cette structure est décrite dans le Kit de développement logiciel Windows.  
@@ -2497,7 +2498,7 @@ LRESULT InsertGroup(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’index de l’élément qui a été ajouté au groupe, ou -1 si l’opération a échoué.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_INSERTGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761103) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="insertgroupsorted"></a>CListCtrl::InsertGroupSorted  
@@ -2514,7 +2515,7 @@ LRESULT InsertGroupSorted(PLVINSERTGROUPSORTED pStructInsert);
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de retour n’est pas utilisée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_INSERTGROUPSORTED](http://msdn.microsoft.com/library/windows/desktop/bb761105) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="insertitem"></a>CListCtrl::InsertItem  
@@ -2573,7 +2574,7 @@ int InsertItem(
 ### <a name="return-value"></a>Valeur de retour  
  Index du nouvel élément en cas de réussite ou sinon -1.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appeler cette méthode peut provoquer la **LVM_INSERTITEM** message à envoyer à la fenêtre du contrôle. Le Gestionnaire de messages associé pour le contrôle peut échouer définir le texte de l’élément sous certaines conditions (par exemple à l’aide de styles de fenêtre comme **LVS_OWNERDRAW**). Pour plus d’informations sur ces conditions, consultez [LVM_INSERTITEM](http://msdn.microsoft.com/library/windows/desktop/bb761107) dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -2620,7 +2621,7 @@ int InsertMarkHitTest(
 ### <a name="return-value"></a>Valeur de retour  
  Le point d’insertion le plus proche spécifié point.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_INSERTMARKHITTEST](http://msdn.microsoft.com/library/windows/desktop/bb761131) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="isgroupviewenabled"></a>CListCtrl::IsGroupViewEnabled  
@@ -2633,7 +2634,7 @@ BOOL IsGroupViewEnabled() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** si le mode de groupe est activé, ou **FALSE** dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_ISGROUPVIEWENABLED](http://msdn.microsoft.com/library/windows/desktop/bb761133) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="isitemvisible"></a>CListCtrl::IsItemVisible  
@@ -2652,7 +2653,7 @@ BOOL IsItemVisible(int index) const;
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si l’élément spécifié est visible ; sinon, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode envoie le [LVM_ISITEMVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb761135) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="mapidtoindex"></a>CListCtrl::MapIDToIndex  
@@ -2671,7 +2672,7 @@ UINT MapIDToIndex(UINT id) const;
 ### <a name="return-value"></a>Valeur de retour  
  L’index en cours pour l’ID spécifié.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un contrôle de liste en interne effectue le suivi des éléments par index. Cela peut présenter des problèmes, car l’index peuvent changer pendant la durée de vie du contrôle. Le contrôle list-view pouvez marquer un élément avec un ID lorsque l’élément est créé et vous pouvez utiliser cet ID pour garantir l’unicité pendant la durée de vie de l’affichage de liste.  
   
  Notez que, dans un environnement multithread, l’index est garantie uniquement sur le thread qui héberge le contrôle list-view, pas sur les threads d’arrière-plan.  
@@ -2694,7 +2695,7 @@ UINT MapIndexToID(UINT index) const;
 ### <a name="return-value"></a>Valeur de retour  
  Un ID unique pour l’élément spécifié.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un contrôle de liste en interne effectue le suivi des éléments par index. Cela peut présenter des problèmes, car l’index peuvent changer pendant la durée de vie du contrôle. Le contrôle list-view pouvez marquer un élément avec un ID lorsque l’élément est créé. Vous pouvez utiliser ce code pour accéder à un élément spécifique de la durée de vie de l’affichage de liste.  
   
  Notez que, dans un environnement multithread, l’index est garantie uniquement sur le thread qui héberge le contrôle list-view, pas sur les threads d’arrière-plan.  
@@ -2760,7 +2761,7 @@ LRESULT MoveGroup(
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de retour n’est pas utilisée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_MOVEGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761141) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="moveitemtogroup"></a>CListCtrl::MoveItemToGroup  
@@ -2779,7 +2780,7 @@ void MoveItemToGroup(
  [in] `idGroupTo`  
  L’identificateur du groupe de l’élément sera déplacé vers.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 > [!NOTE]
 >  Cette méthode n’est actuellement pas implémentée.  
@@ -2805,7 +2806,7 @@ BOOL RedrawItems(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les éléments spécifiés ne sont pas réellement redessinés jusqu'à ce que la fenêtre d’affichage de liste reçoit un `WM_PAINT` message. Pour redessiner immédiatement, appelez Windows [UpdateWindow](http://msdn.microsoft.com/library/windows/desktop/dd145167) fonction après l’utilisation de cette fonction.  
   
 ##  <a name="removeallgroups"></a>CListCtrl::RemoveAllGroups  
@@ -2815,7 +2816,7 @@ BOOL RedrawItems(
 void RemoveAllGroups();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_REMOVEALLGROUPS](http://msdn.microsoft.com/library/windows/desktop/bb761147) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="removegroup"></a>CListCtrl::RemoveGroup  
@@ -2832,7 +2833,7 @@ LRESULT RemoveGroup(int iGroupId);
 ### <a name="return-value"></a>Valeur de retour  
  Sinon, retourne l’index du groupe en cas de réussite, ou -1.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_REMOVEGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761149) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="scroll"></a>CListCtrl::Scroll  
@@ -2915,7 +2916,7 @@ BOOL SetBkImage(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne zéro en cas de réussite, ou zéro dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 > [!NOTE]
 >  Étant donné que `CListCtrl::SetBkImage` utilise des fonctionnalités OLE COM, les bibliothèques OLE doivent être initialisées avant d’utiliser `SetBkImage`. Il est préférable d’initialiser les bibliothèques COM lorsque l’application est initialisée et annuler l’initialisation de bibliothèques lors de l’application se termine. Cela est fait automatiquement dans MFC, applications qui utilisent de la technologie ActiveX, OLE Automation, OLE liaison/Embedding ou opérations ODBC/DAO.  
@@ -3028,7 +3029,7 @@ BOOL SetColumnOrderArray(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetColumnOrderArray](http://msdn.microsoft.com/library/windows/desktop/bb775072), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -3067,7 +3068,7 @@ DWORD SetExtendedStyle(DWORD dwNewStyle);
 ### <a name="return-value"></a>Valeur de retour  
  Une combinaison des styles étendus précédentes utilisé par le contrôle list view.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetExtendedListViewStyle](http://msdn.microsoft.com/library/windows/desktop/bb775076), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -3099,7 +3100,7 @@ int SetGroupInfo(
 ### <a name="return-value"></a>Valeur de retour  
  L’ID du groupe si la méthode a réussi ; Sinon, -1.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode envoie le [LVM_SETGROUPINFO](http://msdn.microsoft.com/library/windows/desktop/bb761167) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="setgroupmetrics"></a>CListCtrl::SetGroupMetrics  
@@ -3113,7 +3114,7 @@ void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
  `pGroupMetrics`  
  Un pointeur vers un [LVGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774752) structure contenant les informations de métriques de groupe à définir.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_SETGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb761168) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="sethotcursor"></a>CListCtrl::SetHotCursor  
@@ -3130,7 +3131,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 ### <a name="return-value"></a>Valeur de retour  
  Descripteur de la ressource curseur à chaud précédente utilisée par le contrôle list view.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetHotCursor](http://msdn.microsoft.com/library/windows/desktop/bb775082), comme décrit dans le Kit de développement logiciel Windows.  
   
  Le curseur à chaud, visible uniquement lorsque la sélection est activée, s’affiche lorsque le curseur passe sur n’importe quel élément de la vue liste. Sélection est activée en définissant le **LVS_EX_TRACKSELECT** style étendu.  
@@ -3152,7 +3153,7 @@ int SetHotItem(int iIndex);
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de l’élément précédemment à chaud.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetHotItem](http://msdn.microsoft.com/library/windows/desktop/bb775083), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -3172,7 +3173,7 @@ DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
 ### <a name="return-value"></a>Valeur de retour  
  Le délai précédente de pointage, en millisecondes.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetHoverTime](http://msdn.microsoft.com/library/windows/desktop/bb775084), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -3202,7 +3203,7 @@ CSize SetIconSpacing(CSize size);
 ### <a name="return-value"></a>Valeur de retour  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) objet contenant les valeurs précédentes pour l’espacement des icônes.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetIconSpacing](http://msdn.microsoft.com/library/windows/desktop/bb775085), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -3256,7 +3257,7 @@ BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_SETINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb761180) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="setinsertmark"></a>CListCtrl::SetInsertMark  
@@ -3273,7 +3274,7 @@ BOOL SetInsertMark(LPLVINSERTMARK lvim);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, ou **FALSE** dans le cas contraire. **FALSE** est retournée si la taille de la `cbSize` membre de la **LVINSERTMARK** structure n’est pas égale la taille réelle de la structure, ou lorsqu’une insertion point ne s’applique pas dans l’affichage actuel.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb761182) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="setinsertmarkcolor"></a>CListCtrl::SetInsertMarkColor  
@@ -3290,7 +3291,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un **COLORREF** structure qui contient la couleur précédente.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761184) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="setitem"></a>CListCtrl::SetItem  
@@ -3357,7 +3358,7 @@ BOOL SetItem(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le **iItem** et **iSubItem** membres de la **LVITEM** structure et le `nItem` et `nSubItem` paramètres identifier l’élément et les sous-éléments dont les attributs doivent être définies.  
   
  Le **masque** membre de la **LVITEM** structure et le `nMask` paramètre spécifier quel élément attributs doivent être définies :  
@@ -3380,10 +3381,10 @@ void SetItemCount(int nItems);
  `nItems`  
  Nombre d’éléments qui doit contenir le contrôle.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour définir le nombre d’éléments pour un contrôle list view virtuelle, consultez [CListCtrl::SetItemCountEx](#setitemcountex).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetItemCount](http://msdn.microsoft.com/library/windows/desktop/bb775093), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -3426,7 +3427,7 @@ BOOL SetItemCountEx(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetItemCountEx](http://msdn.microsoft.com/library/windows/desktop/bb775095), comme décrit dans le Windows SDKand doit uniquement être appelée pour les vues de la liste virtuelle.  
   
 ### <a name="example"></a>Exemple  
@@ -3467,7 +3468,7 @@ BOOL SetItemData(int nItem, DWORD_PTR dwData);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette valeur est la **lParam** membre de la [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) de la structure, comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -3503,7 +3504,7 @@ BOOL SetItemIndexState(
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur la `dwState` paramètre, consultez [États d’élément de liste vue](http://msdn.microsoft.com/library/windows/desktop/bb774733).  
   
  Pour plus d’informations sur la `dwMask` paramètre, consultez le `stateMask` membre de la [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) structure.  
@@ -3529,7 +3530,7 @@ BOOL SetItemPosition(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le contrôle doit être en icône ou petite icône.  
   
  Si le contrôle list view a la `LVS_AUTOARRANGE` style, le mode liste est organisé après la position de l’élément est définie.  
@@ -3568,7 +3569,7 @@ BOOL SetItemState(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  État d’un élément « » est une valeur qui indique la disponibilité de l’élément, indique les actions de l’utilisateur ou sinon reflète l’état de la. Un contrôle list view modifie certains bits d’état, telles que lorsque l’utilisateur sélectionne un élément. Une application peut modifier les autres bits d’état pour désactiver ou masquer l’élément, ou pour spécifier une image de superposition ou d’une image d’état.  
   
 ### <a name="example"></a>Exemple  
@@ -3597,7 +3598,7 @@ BOOL SetItemText(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode n’est pas destinée à utiliser avec des contrôles qui contient le style de fenêtre est LVS_OWNERDATA (en fait, que cela entraîne une assertion dans les versions Debug). Pour plus d’informations sur ce style de contrôle de liste, consultez [vue d’ensemble des contrôles List-View](http://msdn.microsoft.com/library/windows/desktop/bb774735).  
   
 ### <a name="example"></a>Exemple  
@@ -3617,7 +3618,7 @@ COLORREF SetOutlineColor(COLORREF color);
 ### <a name="return-value"></a>Valeur de retour  
  Précédent **COLORREF** structure qui contient la couleur de contour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_SETOUTLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761200) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="setselectedcolumn"></a>CListCtrl::SetSelectedColumn  
@@ -3634,7 +3635,7 @@ LRESULT SetSelectedColumn(int iCol);
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de retour n’est pas utilisée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_SETSELECTEDCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb761202) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="setselectionmark"></a>CListCtrl::SetSelectionMark  
@@ -3651,7 +3652,7 @@ int SetSelectionMark(int iIndex);
 ### <a name="return-value"></a>Valeur de retour  
  La marque de sélection précédente, ou -1 s’il y a aucune marque de sélection.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetSelectionMark](http://msdn.microsoft.com/library/windows/desktop/bb775112), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -3722,7 +3723,7 @@ BOOL SetTileInfo(PLVTILEINFO pti);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_SETTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761210) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="settileviewinfo"></a>CListCtrl::SetTileViewInfo  
@@ -3739,7 +3740,7 @@ BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_SETTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb761212) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="settooltips"></a>CListCtrl::SetToolTips  
@@ -3756,7 +3757,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un [CToolTipCtrl](ctooltipctrl-class.md) objet contenant l’info-bulle utilisé précédemment par le contrôle, ou `NULL` si aucune info-bulles ont été précédemment utilisés.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement du message Win32 [LVM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb761216), comme décrit dans le Kit de développement logiciel Windows.  
   
  Pour ne pas utiliser des info-bulles, vous devez indiquer le `LVS_NOTOOLTIPS` style lorsque vous créez le `CListCtrl` objet.  
@@ -3775,7 +3776,7 @@ DWORD SetView(int iView);
 ### <a name="return-value"></a>Valeur de retour  
  Sinon, retourne 1 si l’opération réussit, ou -1. Par exemple, -1 est retourné si la vue n’est pas valide.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_SETVIEW](http://msdn.microsoft.com/library/windows/desktop/bb761220) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="setworkareas"></a>CListCtrl::SetWorkAreas  
@@ -3794,7 +3795,7 @@ void SetWorkAreas(
  `lpRect`  
  L’adresse d’un tableau de `RECT` structures (ou `CRect` objets) qui spécifient les nouvelles zones de travail du contrôle list view. Ces zones doivent être spécifiés en coordonnées clientes. Si ce paramètre est **NULL**, l’espace de travail est défini sur la zone cliente du contrôle.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_SetWorkAreas](http://msdn.microsoft.com/library/windows/desktop/bb775128), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -3825,7 +3826,7 @@ BOOL SortGroups(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `true` en cas de réussite, `false` en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [LVM_SORTGROUPS](http://msdn.microsoft.com/library/windows/desktop/bb761225) d’un message, comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="sortitems"></a>CListCtrl::SortItems  
@@ -3849,7 +3850,7 @@ BOOL SortItems(
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si la méthode réussite ; dans le cas contraire `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode modifie l’index de chaque élément afin de refléter la nouvelle séquence.  
   
  La fonction de comparaison, `pfnCompare`, a la forme suivante :  
@@ -3905,7 +3906,7 @@ BOOL SortItemsEx(
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode modifie l’index de chaque élément afin de refléter la nouvelle séquence.  
   
  La fonction de comparaison, `pfnCompare`, a la forme suivante :  
@@ -3983,7 +3984,7 @@ int SubItemHitTest(LPLVHITTESTINFO pInfo);
 ### <a name="return-value"></a>Valeur de retour  
  Index de base un de l’élément, ou sous-élément, en cours de test (le cas échéant) ou sinon -1.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32, [ListView_SubItemHitTest](http://msdn.microsoft.com/library/windows/desktop/bb775135), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -4021,7 +4022,7 @@ BOOL Update(int nItem);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction permet également d’organiser le contrôle list view s’il a la `LVS_AUTOARRANGE` style.  
   
 ### <a name="example"></a>Exemple  

@@ -18,18 +18,19 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5fca1b898f43670499c9dace3f912b207f5b7933
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6710b4e849ea95aa9d7399a85b3dc7853d34947a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-manipulation-crt"></a>Manipulation de chaînes (CRT)
 Ces routines fonctionnent sur les chaînes de caractères à un octet terminée par le caractère null, les chaînes de caractères larges et les chaînes de caractères multioctets. Utilisez les routines de manipulation de mémoire tampon, décrites dans [Manipulation de la mémoire tampon](../c-runtime-library/buffer-manipulation.md), pour utiliser des tableaux de caractères qui ne se terminent pas par un caractère null.  
   
 ### <a name="string-manipulation-routines"></a>Routines de manipulation de chaînes  
   
-|Routine|Utilisation|  
+|Routine|Utilisez|  
 |-------------|---------|  
 |[strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md), [_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md), [_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md), [_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|Comparer deux chaînes de caractères à l’aide des informations de page de code (`_mbsicoll` et `_mbsnicoll` ne respectent pas la casse)|  
 |[_strdec, _wcsdec, _mbsdec, _mbsdec_l](../c-runtime-library/reference/strdec-wcsdec-mbsdec-mbsdec-l.md)|Déplacer un pointeur de chaîne d’un caractère vers l’arrière|  

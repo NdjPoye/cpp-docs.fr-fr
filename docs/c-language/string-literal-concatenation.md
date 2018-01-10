@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5974e192e32c612fe995cbc736e703f6168a3e8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de245a061ed7d269aaafc856df0a422e31fd6d77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-literal-concatenation"></a>Concaténation de littéraux chaîne
 Pour former des littéraux de chaîne acceptant plusieurs lignes, vous pouvez concaténer les deux chaînes. Pour cela, tapez une barre oblique inverse, puis appuyez sur la touche RETOUR. La barre oblique fait que le compilateur ignore le saut de ligne suivant. Par exemple, la chaîne littérale  

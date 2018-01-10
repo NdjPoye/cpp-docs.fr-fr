@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aeea920579ddf6af71e3c3c9988c6315931f37f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b3516f6968773f8aa866a4f2929c2c184e6ddb95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="punctuation-and-special-characters"></a>Ponctuation et caractères spéciaux
 La ponctuation et les caractères spéciaux du jeu de caractères C ont plusieurs utilisations, qui varient de l’organisation du texte de programme à la définition des tâches effectuées par le compilateur ou le programme compilé. Ils ne spécifient pas d'opération à effectuer. Certains symboles de ponctuation sont également des opérateurs (consultez [Opérateurs](../c-language/c-operators.md)). Le compilateur détermine leur utilisation à partir du contexte.  

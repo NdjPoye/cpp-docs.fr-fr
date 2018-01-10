@@ -23,11 +23,14 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a2f0f4100344fbb2990e9feeb2b455642852c320
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 343f2369260531e828ea8db27cee5e52ea18fd31
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrays-c-component-extensions"></a>Tableaux (extensions du composant C++)
 Le `Platform::Array<T>` type dans C + c++ / CX, ou le `array` mot clé dans C + c++ / CLI, déclare un tableau d’un type spécifié et la valeur initiale.  
@@ -77,11 +80,11 @@ Le `Platform::Array<T>` type dans C + c++ / CX, ou le `array` mot clé dans C + 
  `initialization-list`[facultatif]  
  Une liste délimitée par des virgules des valeurs dans des accolades qui initialise les éléments du tableau. Par exemple, si `rank-size-list` ont été `(3)`, qui déclare un tableau unidimensionnel de 3 éléments, `initialization list` peut être `{1,2,3}`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
  Vous pouvez détecter au moment de la compilation si un type est un tableau de décompte avec `__is_ref_array(type)`. Pour plus d’informations, consultez [prise en charge du compilateur pour les Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/ZW**  
   
 ### <a name="examples"></a>Exemples  
@@ -136,7 +139,7 @@ int main() {
   
  Par exemple, si `rank-size-list` ont été `(3)`, qui déclare un tableau unidimensionnel de 3 éléments, `initialization list` peut être `{1,2,3}`. If `rank-size-list` ont été `(3,2,4)`, qui déclare un tableau à trois dimensions de 3 éléments dans la première dimension, 2 éléments dans la seconde et 4 des éléments dans la troisième, `initialization-list` peut être `{{1,2,3},{0,0},{-5,10,-21,99}}`.)  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
  `array`est dans le [plateforme, par défaut et espaces de noms cli](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) espace de noms.  
   
@@ -150,7 +153,7 @@ int main() {
   
  Au moment de la compilation, vous pouvez détecter si un type est une common language runtime (CLR) `__is_ref_array(type)`. Pour plus d’informations, consultez [prise en charge du compilateur pour les Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  

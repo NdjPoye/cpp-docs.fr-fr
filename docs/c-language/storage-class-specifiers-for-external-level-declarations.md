@@ -27,11 +27,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 729d46f1e228127b712e1533c7eab5976f690663
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3764eb29cc46ec7b6159456131dde1024b187f61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Spécificateurs de classe de stockage pour les déclarations de niveau externe
 Les variables externes sont des variables au niveau de la portée du fichier. Elles sont définies en dehors de toute fonction et sont potentiellement disponibles pour de nombreuses fonctions. Les fonctions ne peuvent être définies qu'au niveau externe, par conséquent elles ne peuvent pas être imbriquées. Par défaut, toutes les références aux variables externes et aux fonctions du même nom sont des références au même objet, ce qui signifie qu'elles possèdent une « liaison externe. » (Vous pouvez utiliser le mot clé **static** pour modifier ce comportement. Pour plus d'informations sur le mot clé **static**, consultez les informations plus loin dans cette section.)  

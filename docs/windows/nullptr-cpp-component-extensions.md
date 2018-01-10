@@ -1,66 +1,68 @@
 ---
-title: "nullptr  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__nullptr keyword (C++)"
-  - "nullptr keyword [C++]"
+title: nullptr (Extensions du composant C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- __nullptr keyword (C++)
+- nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-caps.latest.revision: 24
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "24"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: be7fcc147a5f6f4b96f7bf7dd68376613489946c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# nullptr  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le mot clé `nullptr` représente une *valeur de pointeur null*.  Utilisez le mot clé pour indiquer qu'un handle d'objet, un pointeur intérieur ou un type pointeur natif ne pointe pas sur un objet.  
+# <a name="nullptr--c-component-extensions"></a>nullptr  (extensions du composant C++)
+Le `nullptr` mot clé représente un *valeur de pointeur null*. Utilisez une valeur de pointeur null pour indiquer qu’un handle d’objet, pointeur intérieur ou un type pointeur natif ne pointe pas vers un objet.  
   
- Utilisez `nullptr` avec du code géré ou natif.  Le compilateur emet des instructions appropriés mais différentes pour les valeurs non managées et natives de pointeur null.  Pour plus d'informations sur l'utilisation de la version C\+\+ ISO de ce mot clé, consultez [nullptr](../cpp/nullptr.md).  
+ Utilisez `nullptr` avec le code managé ou natif. Le compilateur émet des instructions appropriées, mais différentes pour les valeurs de pointeur null de natif et managé. Pour plus d’informations sur l’utilisation de la version de C++ ISO standard de ce mot clé, consultez [nullptr](../cpp/nullptr.md).  
   
- Le mot clé `__nullptr` est spécifique à Microsoft et a la même signification que `nullptr`, mais il s'applique uniquement au code natif.  Si vous utilisez `nullptr` avec le code natif de C\/C\+\+ puis que vous le compilez avec l'option du compilateur [\/clr](../build/reference/clr-common-language-runtime-compilation.md), le compilateur ne peut pas déterminer si `nullptr` indique un caractère ou une valeur gérée de pointeur null.  Pour faire votre espace libre d'intention au compilateur, utilisez `nullptr` pour spécifier une valeur managée ou `__nullptr` pour spécifier une valeur native.  
+ Le `__nullptr` le mot clé est un mot clé spécifique à Microsoft qui a la même signification que `nullptr`, mais s’applique uniquement en code natif. Si vous utilisez `nullptr` de code en C/C++ natif et puis compiler avec la [/CLR](../build/reference/clr-common-language-runtime-compilation.md) option du compilateur, le compilateur ne peut pas déterminer si `nullptr` indique une valeur de pointeur null de natif ou managé. Pour rendre votre intention clairement au compilateur, utilisez `nullptr` pour spécifier une valeur managée ou `__nullptr` pour spécifier une valeur native.  
   
- Le mot clé `nullptr` est équivalent a `Nothing` en Visual Basic et à `null` en C\#.  
+ Le `nullptr` mot clé est équivalente à `Nothing` en Visual Basic et `null` en c#.  
   
-## Utilisation  
- Le mot clé `nullptr` peut être utilisé partout où un handle, pointeur natif, l'argument de fonction peut être utilisée.  
+## <a name="usage"></a>Utilisation  
+ Le `nullptr` mot clé peut être utilisé partout où un handle, un pointeur natif ou un argument de fonction peut être utilisée.  
   
- Le mot clé `nullptr` n'est pas un type et n'est pas prise en charge pour une utilisation avec :  
+ Le `nullptr` mot clé n’est pas un type et n’est pas prise en charge pour une utilisation avec :  
   
 -   [sizeof](../cpp/sizeof-operator.md)  
   
 -   [typeid](../cpp/typeid-operator.md)  
   
--   `throw nullptr` \(bien que `throw (Object^)nullptr;` fonctionne\)  
+-   `throw nullptr`(bien que `throw (Object^)nullptr;` fonctionnera)  
   
- Le mot clé `nullptr` peut être utilisé dans l'initialisation des types pointeurs suivants :  
+ Le `nullptr` mot clé peut être utilisé lors de l’initialisation des types pointeur suivants :  
   
 -   Pointeur natif  
   
--   Descripteur d'exécution windows  
+-   Handle Windows Runtime  
   
--   Descripteur managé  
+-   Handle managé  
   
--   Pointeur interieur managé  
+-   Pointeur intérieur managé  
   
- Le mot clé `nullptr` peut être utilisé pour tester si une référence de curseur ou de descripteur est NULL avant que la référence soit utilisée.  
+ Le `nullptr` mot clé peut être utilisé pour tester si une référence de pointeur ou handle est null avant que la référence est utilisée.  
   
- Les appels de fonction parmi les languages qui utilisent des valeurs des pointeurs NULL pour la vérification des erreurs doivent être interprètes correctement.  
+ Appels de fonction entre les langues qui utilisent des valeurs de pointeur null pour la vérification des erreurs doivent être interprétées correctement.  
   
- Vous ne pouvez pas démarrer un descripteur à zéro ; seul `nullptr` peut être utilisé.  L'attribution de la constante 0 à un handle d'objet produit un `Int32` emboité une conversion à `Object^`.  
+ Impossible d’initialiser un handle à zéro ; uniquement `nullptr` peut être utilisé. Affectation de la constante 0 pour un handle d’objet génère un boxed `Int32` et un cast vers `Object^`.  
   
-## Exemple  
- L'exemple de code suivant montre que le mot clé `nullptr` peut être utilisé à chaque fois qu'un handle, pointeur natif, ou argument de fonction peut être utilisé.  Puis l'exemple montre que le mot clé `nullptr` peut s'utiliser pour vérifier une référence avant d'être utilisé.  
+## <a name="example"></a>Exemple  
+ L’exemple de code suivant montre que le `nullptr` mot clé peut être utilisée partout où un handle, pointeur natif, ou argument de fonction peut être utilisé. Et l’exemple montre que le `nullptr` mot-clé peut être utilisé pour vérifier une référence avant de les utiliser.  
   
 ```  
 // mcpp_nullptr.cpp  
@@ -87,10 +89,10 @@ int main() {
 }  
 ```  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  **Exemple**  
   
- L'exemple de code suivant montre que `nullptr` et zéro peuvent donc être utilisés l'un et l'autre sur des pointeurs natifs.  
+ L’exemple de code suivant montre que `nullptr` et zéro peut être utilisée indifféremment sur les pointeurs natifs.  
   
 ```  
 // mcpp_nullptr_1.cpp  
@@ -119,14 +121,20 @@ int main() {
   
  **Sortie**  
   
-  **pMyClass \=\= nullptr**  
- **pMyClass \=\= 0**  
- **pMyClass \=\= nullptr**  
- **pMyClass \=\= 0**   
-## Exemple  
+```Output  
+pMyClass == nullptr  
+  
+pMyClass == 0  
+  
+pMyClass == nullptr  
+  
+pMyClass == 0  
+```  
+  
+## <a name="example"></a>Exemple  
  **Exemple**  
   
- L'exemple de code suivant indique que `nullptr` est interprèté comme un handle à un type ou à un pointeur natif en un type de données.  En cas de surcharge de fonction avec les handles de types différents, une erreur d'ambiguïté est générée.  `nullptr` doit être explicitement converti en type.  
+ L’exemple de code suivant montre que `nullptr` est interprété comme un handle vers n’importe quel type ou un pointeur natif vers n’importe quel type. En cas de surcharge de fonction avec des handles vers des types différents, une erreur d’ambiguïté sera générée. Le `nullptr` devrait être explicitement converties en un type.  
   
 ```  
 // mcpp_nullptr_2.cpp  
@@ -142,10 +150,10 @@ void f_null() {
 }  
 ```  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  **Exemple**  
   
- L'exemple de code suivant indique qu'il permet la conversion de `nullptr` et renvoie un pointeur ou un descripteur du type de conversion qui contient la valeur `nullptr`.  
+ L’exemple de code suivant illustre cette conversion `nullptr` est autorisé et retourne un pointeur ou un handle pour le type de cast qui contient le `nullptr` valeur.  
   
 ```  
 // mcpp_nullptr_3.cpp  
@@ -164,10 +172,10 @@ int main() {
 }  
 ```  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  **Exemple**  
   
- L'exemple de code suivant indique que `nullptr` peut être utilisé comme paramètre de fonction.  
+ L’exemple de code suivant montre que `nullptr` peut être utilisé comme paramètre de fonction.  
   
 ```  
 // mcpp_nullptr_4.cpp  
@@ -184,11 +192,14 @@ int main() {
   
  **Sortie**  
   
-  **tester**   
-## Exemple  
+```Output  
+test  
+```  
+  
+## <a name="example"></a>Exemple  
  **Exemple**  
   
- L'exemple de code suivant montre que lorsque les descripteurs sont déclarés et pas explicitement initialisés, leur valeur par défaut est initialisée à `nullptr`.  
+ L’exemple de code suivant montre que lorsque les descripteurs sont déclarés et ne sont pas explicitement initialisées, ils sont initialisés à par défaut `nullptr`.  
   
 ```  
 // mcpp_nullptr_5.cpp  
@@ -211,11 +222,14 @@ int main() {
   
  **Sortie**  
   
-  **NULL**   
-## Exemple  
+```Output  
+NULL  
+```  
+  
+## <a name="example"></a>Exemple  
  **Exemple**  
   
- L'exemple de code suivant indique que `nullptr` peut être affecté à un pointeur natif lorsque vous compilez avec **\/clr**.  
+ L’exemple de code suivant montre que `nullptr` peut être assigné à un pointeur natif lorsque vous compilez avec **/CLR**.  
   
 ```  
 // mcpp_nullptr_6.cpp  
@@ -226,9 +240,9 @@ int main() {
 }  
 ```  
   
-## Conditions requises  
- Options du compilateur : \(Non obligatoires ; pris en charge par les options de génération de code, y compris **\/ZW** et **\/clr**\)  
+## <a name="requirements"></a>Configuration requise  
+ Option du compilateur : (non requis ; pris en charge par toutes les options de génération de code, y compris **/ZW** et **/CLR**)  
   
-## Voir aussi  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)   
  [nullptr](../cpp/nullptr.md)

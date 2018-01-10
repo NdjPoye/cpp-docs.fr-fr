@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7f521b418b7d179eb506a5e9df2887addec059ef
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 733808006a3c301972c4ab3b3f8de3320d9fde46
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atlwinmodule70-structure"></a>Structure de _ATL_WIN_MODULE70
 Utilisé par le code de fenêtrage dans ATL.  
@@ -53,10 +54,10 @@ struct _ATL_WIN_MODULE70 {
  **m_rgWindowClassAtoms**  
  Utilisé pour effectuer le suivi des inscriptions de classe de fenêtre afin qu’ils puissent être correctement annulées à la fin. Utilisé en interne par ATL.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) est défini comme un typedef de `_ATL_WIN_MODULE70`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ## <a name="see-also"></a>Voir aussi  

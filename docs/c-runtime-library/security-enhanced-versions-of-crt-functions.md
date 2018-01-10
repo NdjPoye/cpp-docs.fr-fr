@@ -17,18 +17,19 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0bd0bdcdfd8f7f367c90787cb7ffdf5f888482dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 468f63d8e98dd161baec0b0db33f5dab8e750695
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>Versions à la sécurité améliorée des fonctions CRT
 Des versions plus sécurisées des routines de bibliothèque Runtime sont disponibles. Pour plus d’informations sur les améliorations de sécurité dans le CRT, consultez [Fonctionnalités de sécurité dans le CRT](../c-runtime-library/security-features-in-the-crt.md).  
   
  **Fonctions sécurisées**  
   
-|Fonction de la bibliothèque CRT|Fonction avec sécurité améliorée|Utilisation|  
+|Fonction de la bibliothèque CRT|Fonction avec sécurité améliorée|Utilisez|  
 |------------------|--------------------------------|---------|  
 |[_access, _waccess](../c-runtime-library/reference/access-waccess.md)|[_access_s, _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|Déterminer l'autorisation d'accès aux fichiers|  
 |[_alloca](../c-runtime-library/reference/alloca.md)|[_malloca](../c-runtime-library/reference/malloca.md)|Allouer de la mémoire sur la pile|  

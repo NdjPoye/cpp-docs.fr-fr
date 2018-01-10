@@ -125,11 +125,12 @@ caps.latest.revision: "42"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5215adddf92cee7ff0bc079cf42d6dceea3f99b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 219d305b382d80e4015578b16531158c0f8d643d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonbutton-class"></a>Cmfcribbonbutton, classe
 La classe `CMFCRibbonButton` implémente des boutons que vous pouvez placer sur des éléments de barre de ruban, tels que les volets, les barres d'outils Accès rapide et les menus contextuels.  
@@ -218,7 +219,7 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
   
  [!code-cpp[NVC_MFC_RibbonApp#7](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_1.cpp)]  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour utiliser un bouton de ruban dans une application, construisez l’objet bouton et ajoutez-le au ruban approprié [panneau](../../mfc/reference/cmfcribbonpanel-class.md).  
   
 ```  
@@ -248,7 +249,7 @@ pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
   
  [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxribbonbutton.h  
   
 ##  <a name="addsubitem"></a>CMFCRibbonButton::AddSubItem  
@@ -276,7 +277,7 @@ virtual BOOL CanBeStretched();
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="cleanupsizes"></a>CMFCRibbonButton::CleanUpSizes  
 
@@ -285,7 +286,7 @@ virtual BOOL CanBeStretched();
 virtual void CleanUpSizes();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="closepopupmenu"></a>CMFCRibbonButton::ClosePopupMenu  
 
@@ -294,7 +295,7 @@ virtual void CleanUpSizes();
 virtual void ClosePopupMenu();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="cmfcribbonbutton"></a>CMFCRibbonButton::CMFCRibbonButton  
  Construit un objet bouton de ruban.  
@@ -353,7 +354,7 @@ CSize DrawBottomText(
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="drawimage"></a>CMFCRibbonButton::DrawImage  
 
@@ -370,7 +371,7 @@ virtual void DrawImage(
  [in] `type`  
  [in] `rectImage`  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="drawribbontext"></a>CMFCRibbonButton::DrawRibbonText  
 
@@ -393,7 +394,7 @@ virtual int DrawRibbonText(
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="findsubitemindexbyid"></a>CMFCRibbonButton::FindSubItemIndexByID  
  Retourne l'index d'un élément de menu contextuel associé à l'ID de commande spécifié.  
@@ -418,7 +419,7 @@ CRect GetCommandRect() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="getcompactsize"></a>CMFCRibbonButton::GetCompactSize  
 
@@ -432,7 +433,7 @@ virtual CSize GetCompactSize(CDC* pDC);
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="geticon"></a>CMFCRibbonButton::GetIcon  
 
@@ -446,7 +447,7 @@ HICON GetIcon(BOOL bLargeIcon = TRUE) const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="getimageindex"></a>CMFCRibbonButton::GetImageIndex  
  Retourne l'index de l'image associée au bouton.  
@@ -474,7 +475,7 @@ virtual CSize GetImageSize(RibbonImageType type) const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="getintermediatesize"></a>CMFCRibbonButton::GetIntermediateSize  
 
@@ -488,7 +489,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="getmenu"></a>CMFCRibbonButton::GetMenu  
  Retourne un handle de menu Windows affecté au bouton du ruban.  
@@ -509,7 +510,7 @@ CRect GetMenuRect() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="getregularsize"></a>CMFCRibbonButton::GetRegularSize  
 
@@ -523,7 +524,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="getsubitems"></a>CMFCRibbonButton::GetSubItems  
 
@@ -534,7 +535,7 @@ const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() cons
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="gettextrowheight"></a>CMFCRibbonButton::GetTextRowHeight  
 
@@ -545,7 +546,7 @@ int GetTextRowHeight() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="gettooltiptext"></a>CMFCRibbonButton::GetToolTipText  
 
@@ -556,7 +557,7 @@ virtual CString GetToolTipText() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="hascompactmode"></a>CMFCRibbonButton::HasCompactMode  
 
@@ -567,7 +568,7 @@ virtual BOOL HasCompactMode() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="hasintermediatemode"></a>CMFCRibbonButton::HasIntermediateMode  
 
@@ -578,7 +579,7 @@ virtual BOOL HasIntermediateMode() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="haslargemode"></a>CMFCRibbonButton::HasLargeMode  
 
@@ -589,7 +590,7 @@ virtual BOOL HasLargeMode() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="hasmenu"></a>CMFCRibbonButton::HasMenu  
 
@@ -600,7 +601,7 @@ virtual BOOL HasMenu() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="isalwaysdrawborder"></a>CMFCRibbonButton::IsAlwaysDrawBorder  
 
@@ -611,7 +612,7 @@ virtual BOOL IsAlwaysDrawBorder() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="isalwayslargeimage"></a>CMFCRibbonButton::IsAlwaysLargeImage  
 
@@ -622,7 +623,7 @@ virtual BOOL IsAlwaysLargeImage() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="isapplicationbutton"></a>CMFCRibbonButton::IsApplicationButton  
 
@@ -633,7 +634,7 @@ virtual BOOL IsApplicationButton() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="iscommandareahighlighted"></a>CMFCRibbonButton::IsCommandAreaHighlighted  
 
@@ -644,7 +645,7 @@ virtual BOOL IsCommandAreaHighlighted() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="isdefaultcommand"></a>CMFCRibbonButton::IsDefaultCommand  
  Spécifie si la commande par défaut pour un bouton du ruban est activée.  
@@ -665,7 +666,7 @@ virtual BOOL IsDefaultPanelButton() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="isdrawtooltipimage"></a>CMFCRibbonButton::IsDrawTooltipImage  
 
@@ -676,7 +677,7 @@ virtual BOOL IsDrawTooltipImage() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="islargeimage"></a>CMFCRibbonButton::IsLargeImage  
 
@@ -687,7 +688,7 @@ BOOL IsLargeImage() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="ismenuareahighlighted"></a>CMFCRibbonButton::IsMenuAreaHighlighted  
 
@@ -698,7 +699,7 @@ virtual BOOL IsMenuAreaHighlighted() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="ismenuonbottom"></a>CMFCRibbonButton::IsMenuOnBottom  
 
@@ -709,7 +710,7 @@ BOOL IsMenuOnBottom() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="ispopupdefaultmenulook"></a>CMFCRibbonButton::IsPopupDefaultMenuLook  
 
@@ -720,7 +721,7 @@ virtual BOOL IsPopupDefaultMenuLook() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="isrightalignmenu"></a>CMFCRibbonButton::IsRightAlignMenu  
  Spécifie si le menu est aligné à droite.  
@@ -741,7 +742,7 @@ BOOL IsSingleLineText() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="oncalctextsize"></a>CMFCRibbonButton::OnCalcTextSize  
 
@@ -753,7 +754,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ### <a name="parameters"></a>Paramètres  
  [in] `pDC`  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="onclick"></a>CMFCRibbonButton::OnClick  
  Appelé par l'infrastructure quand l'utilisateur clique sur le bouton.  
@@ -766,7 +767,7 @@ virtual void OnClick(CPoint point);
  [in] `point`  
  Spécifie la position de la souris.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Substituez cette méthode dans une classe dérivée si vous souhaitez gérer cet événement.  
   
 ##  <a name="ondraw"></a>CMFCRibbonButton::OnDraw  
@@ -779,7 +780,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="parameters"></a>Paramètres  
  [in] `pDC`  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="ondrawborder"></a>CMFCRibbonButton::OnDrawBorder  
 
@@ -791,7 +792,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ### <a name="parameters"></a>Paramètres  
  [in] `pDC`  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="onfillbackground"></a>CMFCRibbonButton::OnFillBackground  
 
@@ -805,7 +806,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="removeallsubitems"></a>CMFCRibbonButton::RemoveAllSubItems  
  Supprime tous les éléments de menu du menu contextuel.  
@@ -847,7 +848,7 @@ virtual BOOL SetACCData(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `TRUE` en cas de réussite, sinon FALSE.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="setalwayslargeimage"></a>CMFCRibbonButton::SetAlwaysLargeImage  
  Précise si le bouton affiche une image grande ou petite quand l‘utilisateur réduit le bouton.  
@@ -871,7 +872,7 @@ void SetDefaultCommand(BOOL bSet=TRUE);
  [in] `bSet`  
  Si `TRUE`, le bouton exécuter sa commande par défaut. Si `FALSE`, le bouton ne peut pas exécuter la commande par défaut.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `bSet`s’applique uniquement lorsque le bouton a un menu. Si `bSet` est `TRUE`, le bouton exécuter sa commande par défaut et le menu contextuel affecté apparaît uniquement lorsqu’un utilisateur clique sur la flèche située à droite du bouton. Sinon, le bouton ne peut pas exécuter la commande par défaut, et le menu contextuel s’affiche, quelle que soit la zone du bouton de l’utilisateur clique sur.  
   
 ##  <a name="setdescription"></a>CMFCRibbonButton::SetDescription  
@@ -884,7 +885,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ### <a name="parameters"></a>Paramètres  
  [in] `lpszText`  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="setimageindex"></a>CMFCRibbonButton::SetImageIndex  
  Affecte un index à l'image du bouton.  
@@ -930,7 +931,7 @@ void SetMenu(
  `uiMenuResID`  
  Un ID de ressource de menu.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque l’application attribue le menu pour le bouton, le bouton affiche une flèche sur le côté droit. Si `bIsDefaultCommand` est `TRUE`, le menu s’affiche uniquement lorsque l’utilisateur clique sur la flèche. Si l’utilisateur clique sur le bouton, la commande par défaut est exécutée. Si `bIsDefaultCommand` est `FALSE`, le menu s’affiche en cliquant n’importe où sur le bouton.  
   
 ##  <a name="setparentcategory"></a>CMFCRibbonButton::SetParentCategory  
@@ -943,7 +944,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ### <a name="parameters"></a>Paramètres  
  [in] `pParent`  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="setrightalignmenu"></a>CMFCRibbonButton::SetRightAlignMenu  
  Aligne le menu contextuel sur le bord du bouton.  
@@ -966,7 +967,7 @@ virtual void SetText(LPCTSTR lpszText);
 ### <a name="parameters"></a>Paramètres  
  [in] `lpszText`  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

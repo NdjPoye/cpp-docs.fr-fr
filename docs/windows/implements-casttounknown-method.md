@@ -1,48 +1,48 @@
 ---
-title: "Implements::CastToUnknown, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Implements::CastToUnknown"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CastToUnknown (méthode)"
+title: "Implements::casttounknown, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Implements::CastToUnknown
+dev_langs: C++
+helpviewer_keywords: CastToUnknown method
 ms.assetid: ca3324f7-4136-406b-8698-7389f4f3d3c7
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ced646ecfe5989dd59b99ef3eb6dff48e4ddb74c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Implements::CastToUnknown, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Obtient un pointeur vers l'interface IUnknown sous\-jacente.  
+# <a name="implementscasttounknown-method"></a>Implements::CastToUnknown, méthode
+Obtient un pointeur vers l’interface IUnknown sous-jacente.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 __forceinline IUnknown* CastToUnknown();  
 ```  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  Cette opération réussit toujours et retourne le pointeur IUnknown.  
   
-## Remarques  
- Fonction d'assistance interne.  
+## <a name="remarks"></a>Notes  
+ Fonction d’assistance interne.  
   
-## Configuration requise  
- **En\-tête:** implements.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** implements.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Implements, structure](../windows/implements-structure.md)

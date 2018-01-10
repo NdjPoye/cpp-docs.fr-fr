@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 98c59ec6c0eed419cdac05a39a65ea1bde624d49
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49cc917ddcd4d7de274a8f6bb1f61c940493a365
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock, classe
 Verrou de lecteur-writer basé sur une file d'attente à préférence de writer avec rotation uniquement locale. Le verrou accorde un accès Premier entré, premier sorti aux writers et prive les lecteurs sous une charge continue de writers.  
@@ -66,13 +67,13 @@ class reader_writer_lock;
 |[try_lock_read](#try_lock_read)|Tente d’acquérir le verrou de lecteur-writer en tant que lecteur sans blocage.|  
 |[unlock](#unlock)|Déverrouille le verrou de lecteur-writer basé sur qui a verrouillé, le lecteur ou writer.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [des Structures de données de synchronisation](../../../parallel/concrt/synchronization-data-structures.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `reader_writer_lock`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -85,7 +86,7 @@ class reader_writer_lock;
 void lock();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il est souvent plus sécurisé d’utiliser la [scoped_lock](#scoped_lock_class) construction pour acquérir et libérer un `reader_writer_lock` objet dans une exception sûre.  
   
  Une fois un writer essaie d’acquérir le verrou, tous les futurs lecteurs bloque jusqu'à ce que les writers aient acquis et libéré le verrou. Ce verrou est influencé vers des writers et peut priver les lecteurs sous une charge continue de writers.  
@@ -102,7 +103,7 @@ void lock();
 void lock_read();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il est souvent plus sécurisé d’utiliser la [scoped_lock_read](#scoped_lock_read_class) construction pour acquérir et libérer un `reader_writer_lock` objet en tant que lecteur d’une exception sûre.  
   
  Si des writers attendent sur le verrou, le lecteur attendra jusqu'à ce que tous les enregistreurs de ligne ont acquis et libéré le verrou. Ce verrou est influencé vers des writers et peut priver les lecteurs sous une charge continue de writers.  
@@ -123,7 +124,7 @@ reader_writer_lock();
 ~reader_writer_lock();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il est probable que le verrou n’est plus maintenu lorsque le destructeur s’exécute. Autoriser le verrou de writer de lecteur détruire avec le verrou maintenu toujours résultats dans un comportement non défini.  
   
 ##  <a name="scoped_lock_class"></a>reader_writer_lock::scoped_lock, classe  
@@ -211,7 +212,7 @@ bool try_lock_read();
 void unlock();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si des writers attendent sur le verrou, la libération du verrou passera toujours au writer suivant dans l’ordre FIFO. Ce verrou est influencé vers des writers et peut priver les lecteurs sous une charge continue de writers.  
   
 ## <a name="see-also"></a>Voir aussi  

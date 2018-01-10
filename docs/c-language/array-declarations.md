@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74cfdf5393487ddd2cda7d478c0940c6db74b35a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 06742239c48503a5917317a674a39f50a38702c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-declarations"></a>Déclarations de tableau
 Une « déclaration de tableau » nomme le tableau et spécifie le type de ses éléments. Elle peut également définir le nombre d'éléments du tableau. Une variable de type tableau est considérée comme un pointeur vers le type des éléments du tableau.  

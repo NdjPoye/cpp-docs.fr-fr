@@ -32,11 +32,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c2c14f4bf492b18107aefc744d6e443fdeef3fec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 81ab3701ac99aece4710208a0a5d19ce645d287a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight, _dstbias, _timezone, et _tzname
 `_daylight`, `_dstbias`, `_timezone` et `_tzname` sont utilisés dans des routines de date et heure pour régler l’heure locale. Ces variables globales ont été dépréciées dans les versions opérationnelles plus sécurisées, qui doivent être utilisées à la place des variables globales.  
@@ -62,7 +63,7 @@ extern char *_tzname[2];
 ## <a name="remarks"></a>Notes  
  Dans un appel à `_ftime`, `localtime` ou `_tzset`, les valeurs de `_daylight`, `_dstbias`, `_timezone` et `_tzname` sont déterminées à partir de la valeur de la variable d’environnement `TZ`. Si vous ne définissez pas explicitement la valeur de `TZ`, `_tzname[0]` et `_tzname[1]` contiennent les paramètres par défaut de « PST » et « PDT » respectivement.  Les fonctions de manipulation de temps ([_tzset](../c-runtime-library/reference/tzset.md), [_ftime](../c-runtime-library/reference/ftime-ftime32-ftime64.md) et [localtime](../c-runtime-library/reference/localtime-localtime32-localtime64.md)) essaient de définir les valeurs de `_daylight`, `_dstbias` et `_timezone` en interrogeant le système d’exploitation pour obtenir la valeur par défaut de chaque variable. Les valeurs des variables globales de fuseau horaire sont présentées dans le tableau suivant.  
   
-|Variable|Valeur|  
+|Variable|Value|  
 |--------------|-----------|  
 |`_daylight`|Différent de zéro si l’heure d’été est spécifiée dans `TZ` ou déterminée à partir du système d’exploitation ; sinon, 0. La valeur par défaut est 1.|  
 |`_dstbias`|Décalage pour l’heure d’été.|  

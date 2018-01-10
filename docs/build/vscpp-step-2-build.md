@@ -1,8 +1,8 @@
 ---
-title: "Étape 2 : générer et exécuter un projet d’application console C++ | Documents Microsoft"
+title: "Générer et exécuter un projet d’application console C++ | Documents Microsoft"
 description: Installer la prise en charge de Visual Studio pour Visual C++
 ms.custom: mvc
-ms.date: 10/17/2017
+ms.date: 12/12/2017
 ms.topic: get-started-article
 ms.technology: devlang-C++
 ms.devlang: C++
@@ -11,21 +11,22 @@ ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 20a8bafa69631ef8df1fb20f613dfbb81578f94a
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: a5b9c250b102b7d8847e99b87139136bc7df808b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Générer et exécuter un projet d’application console C++
 
 Lorsque vous avez créé un projet d’application console C++ et entré votre code, vous pouvez générer et exécuter dans Visual Studio et puis l’exécuter comme une application autonome à partir de la ligne de commande.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 
-- Visual Studio avec le développement de bureau dotées de la charge de travail C++ installé et en cours d’exécution sur votre ordinateur. S’il n’est pas encore installé, suivez les étapes de [étape 0 - prise en charge de l’installation de C++ dans Visual Studio](../build/vscpp-step-0-installation.md).
+- Visual Studio avec le développement de bureau dotées de la charge de travail C++ installé et en cours d’exécution sur votre ordinateur. S’il n’est pas encore installé, suivez les étapes de [prise en charge de l’installation de C++ dans Visual Studio](../build/vscpp-step-0-installation.md).
 
-- Créer un « Hello, World ! » projet et entrez son code source. Si vous n’avez pas cela encore, suivez les étapes de [étape 1 : créer un projet d’application console C++](../build/vscpp-step-1-create.md).
+- Créer un « Hello, World ! » projet et entrez son code source. Si vous n’avez pas cela encore, suivez les étapes de [créer un projet d’application console C++](../build/vscpp-step-1-create.md).
 
 Si Visual Studio ressemble à ceci, vous êtes prêt à générer et exécuter votre application :
 
@@ -67,7 +68,7 @@ Félicitations, vous avez créé et exécuter une application de console dans Vi
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Une fois que vous avez créé et exécuter cette application simple, vous êtes prêt pour les projets plus complexes. Consultez les Démarrages rapides, didacticiels et exemples de Code pour obtenir des exemples des choses que vous pouvez effectuer en C++ à l’aide de Visual Studio.
+Une fois que vous avez créé et exécuter cette application simple, vous êtes prêt pour les projets plus complexes. Consultez [à l’aide de l’IDE de Visual Studio pour le développement de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) pour plus de procédures pas à pas qui explorent les fonctionnalités de Visual C++ dans Visual Studio.
 
 ## <a name="troubleshooting-guide"></a>Guide de dépannage
 

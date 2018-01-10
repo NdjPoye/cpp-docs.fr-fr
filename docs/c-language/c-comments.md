@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 78c3e97530198b6685e402237bda5cdaf9a0754a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c2962669c6d925931d0e8ff0cbf3796dbbd1b430
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-comments"></a>Commentaires en C
 Un « commentaire » est une séquence de caractères commençant par la combinaison d’une barre oblique et d’un astérisque (<b>/\*</b>), traitée comme un espace blanc par le compilateur ou ignoré. Un commentaire peut inclure toute combinaison de caractères du jeu de caractères utilisable, y compris les caractères de saut de ligne, à l’exclusion du séparateur « de fin de commentaire » (<b>\*/</b>). Les commentaires peuvent occuper plusieurs lignes mais ne peuvent pas être imbriqués.  
@@ -87,7 +88,7 @@ printf( "Hello\n" );  /* Comments can go here */
   
  Par défaut pour Microsoft C, les extensions Microsoft sont activées. Utilisez /Za pour désactiver ces extensions.  
   
- **Fin de la section spécifique à Microsoft**  
+ **FIN de la section spécifique à Microsoft**  
   
 ## <a name="see-also"></a>Voir aussi  
  [Jetons C](../c-language/c-tokens.md)

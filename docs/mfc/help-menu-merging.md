@@ -17,14 +17,15 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 218493b6346858d33df042ec5754775272b1d788
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c4d3ae9509edcbe79417bb37d02f4f585b2da653
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="help-menu-merging"></a>Fusion des menus Aide
-Lorsqu’un objet est actif dans un conteneur, le menu protocole des Documents OLE de fusion donne le contrôle complet d’objet de la **aide** menu. Par conséquent, les rubriques d'aide du conteneur ne sont pas disponibles à moins que l'utilisateur désactive l'objet. L'architecture de la relation contenant-contenu de document actif examine les règles de la fusion de menus sur place afin d'autoriser le conteneur et un document actif à partager le menu. Les nouvelles règles sont simplement des conventions supplémentaires sur quel composant possède quelle partie du menu et comment le menu partagé est créé.  
+Lorsqu’un objet est actif dans un conteneur, le menu protocole des Documents OLE de fusion donne le contrôle complet d’objet de la **aide** menu. Par conséquent, les rubriques d'aide du conteneur ne sont pas disponibles à moins que l'utilisateur désactive l'objet. L’architecture de la relation contenant-contenu de document actif développe les règles de la fusion de menus sur place afin d’autoriser le conteneur et un document actif à partager le menu. Les nouvelles règles sont simplement des conventions supplémentaires sur quel composant possède quelle partie du menu et comment le menu partagé est créé.  
   
  La nouvelle convention est simple. Dans les documents actifs, le **aide** menu comporte deux éléments de menu de niveau supérieur organisés comme suit :  
   

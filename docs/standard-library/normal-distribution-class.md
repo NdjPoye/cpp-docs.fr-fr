@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::normal_distribution::param_type::stddev
 - random/std::normal_distribution::param_type::operator==
 - random/std::normal_distribution::param_type::operator!=
-- random/std::normal_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::normal_distribution [C++]
 - std::normal_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bd2fcbd4b607df958aba3c1e3635b7a48f3837d8
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: c93e36a27b14cdd585d1866ad91c7b993746941f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="normaldistribution-class"></a>normal_distribution, classe
 Génère une distribution normale.  
@@ -85,7 +82,7 @@ public:
 *RealType*  
 Le type des résultats à virgule flottante est `double` par défaut. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
 La classe de modèle décrit une distribution qui produit des valeurs d'un type intégral spécifié par l'utilisateur, ou du type `double` si aucun n'est fourni, distribuées selon une loi normale. Le tableau suivant contient des liens vers des articles sur différents membres.  
   
 ||||  
@@ -95,7 +92,7 @@ La classe de modèle décrit une distribution qui produit des valeurs d'un type 
   
 Les fonctions de propriété `mean()` et `stddev()` retournent les valeurs des paramètres de distribution stockés `mean` et `stddev`, respectivement.  
   
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.  
+Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stockés `param_type`.  
 
 Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.  
   
@@ -105,7 +102,7 @@ Les fonctions membres `operator()` retournent la valeur générée suivante d’
   
 Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).  
   
-Pour plus d’informations sur la distribution suivant une loi normale, consultez l’article de Wolfram MathWorld [Normal Distribution](http://go.microsoft.com/fwlink/LinkId=400924).  
+Pour plus d’informations sur la distribution suivant une loi normale, consultez l’article de Wolfram MathWorld [Normal Distribution](http://go.microsoft.com/fwlink/p/?linkid=400924).  
   
 ## <a name="example"></a>Exemple  
   
@@ -192,7 +189,7 @@ Distribution for 10 samples:
     10: 2.7821317338  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
 **En-tête :** \<random>  
   
 **Espace de noms :** std  
@@ -246,14 +243,13 @@ Paramètre de distribution `stddev`.
 *right*  
 Structure `param_type` utilisée pour comparer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
 **Condition préalable :** `0.0 ≤ stddev`  
   
 Cette structure peut être passée au constructeur de classe de la distribution au moment de l'instanciation, à la fonction membre `param()` pour définir les paramètres stockés d'une distribution existante et à `operator()` pour une utilisation à la place des paramètres stockés.  
   
 ## <a name="see-also"></a>Voir aussi  
  [\<random>](../standard-library/random.md)
-
 
 
 

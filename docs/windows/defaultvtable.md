@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0753887cef2b169758351be9fafc0ec532bacb05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 90c3fb3d72d71f4d61aebcef657b71bfaff87efd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defaultvtable"></a>defaultvtable
 Définit une interface en tant que l’interface de vtable par défaut pour un objet COM.  
@@ -37,7 +40,7 @@ Définit une interface en tant que l’interface de vtable par défaut pour un o
  `interface`  
  L’interface désignée que vous souhaitez avoir la vtable de la valeur par défaut pour l’objet COM.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **defaultvtable** attribut C++ a les mêmes fonctionnalités que le [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
@@ -69,7 +72,7 @@ uuid("00000000-0000-0000-0000-000000000004")]
 class CMyC3 : public IMyI3 {};  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -78,7 +81,7 @@ class CMyC3 : public IMyI3 {};
 |**S'applique à**|**class**, `struct`|  
 |**Renouvelable**|Non|  
 |**Attributs requis**|**coclass**|  
-|**Attributs non valides**|None|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

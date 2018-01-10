@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -274,36 +273,21 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::wyx
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 20e8a0ca1291b36ee8b2b3b3aa836eae67fe33fd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 204e33b14c48dee7ad52af65fa55c650b74de5d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorm4-class"></a>unorm_4, classe
-Représente un vecteur de quatre nombres normaux non signés court.  
+Représente un vecteur court de quatre nombres normales non signés.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -323,7 +307,7 @@ class unorm_4;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[unorm_4 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments à 0.|  
+|[unorm_4 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -481,7 +465,7 @@ class unorm_4;
   
 ### <a name="public-constants"></a>Constantes publiques  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[taille (constante)](#unorm_4__size)||  
   
@@ -618,17 +602,17 @@ class unorm_4;
 |unorm_4::ZYX||  
 |unorm_4::zyxw||  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `unorm_4`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp_short_vectors.h  
   
  **Namespace :** Concurrency::graphics  
   
 ##  <a name="ctor"></a>unorm_4 
 
- Par défaut constructeur initialise tous les éléments à 0.  
+ Par défaut constructeur initialise tous les éléments par 0.  
   
 ```  
 unorm_4() restrict(amp,
@@ -705,7 +689,7 @@ explicit inline unorm_4(
  La valeur pour initialiser l’élément 3.  
   
  `_V`  
- La valeur pour l’initialisation.  
+ La valeur de l’initialisation.  
   
  `_Other`  
  Objet utilisé pour initialiser.  
@@ -718,4 +702,3 @@ static const int size = 4;
   
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
-

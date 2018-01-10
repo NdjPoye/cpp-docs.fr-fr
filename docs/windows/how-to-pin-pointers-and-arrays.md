@@ -1,33 +1,36 @@
 ---
-title: "How to: Pin Pointers and Arrays | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pointers, pinning"
-  - "arrays [C++], pinning"
+title: "Comment : épingler des pointeurs et des tableaux | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- pointers, pinning
+- arrays [C++], pinning
 ms.assetid: ee783260-e676-46b8-a38e-11a06f1d57b0
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 68824b9fcdf2f4de47900d5b0c4b03db9e28d9fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# How to: Pin Pointers and Arrays
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Épingler un sous\-objet défini dans un objet managé a pour effet d'épingler l'objet entier.  Par exemple, si un élément d'un tableau est épinglé, alors la table entière est également épinglé.  Il n'y a aucune extension du langage pour déclarer un tableau d'octets épinglé.  Pour figer un tableau, déclarez un pointeur épingle à son type d'élément, et épinglez une de ses éléments.  
+# <a name="how-to-pin-pointers-and-arrays"></a>Comment : épingler des pointeurs et des tableaux
+Épingler un sous-objet défini dans un objet managé a pour effet d’épinglage de l’objet entier.  Par exemple, si un élément d’un tableau est épinglé, la totalité du tableau est épinglé également. Il n’existe aucune extension à la langue pour déclarer un tableau épinglé. Pour épingler un tableau, déclarez un pointeur épingle à son type d’élément et épingler un de ses éléments.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // pin_ptr_array.cpp  
@@ -49,11 +52,11 @@ int main() {
 }  
 ```  
   
-### Sortie  
+### <a name="output"></a>Sortie  
   
 ```  
 ++  
 ```  
   
-## Voir aussi  
- [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md)
+## <a name="see-also"></a>Voir aussi  
+ [pin_ptr (C++-CLI)](../windows/pin-ptr-cpp-cli.md)

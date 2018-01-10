@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5bc3947dc31c1355a67864e509c28dc3569b488b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0cfa27e2d76e546748258a5f6c1af1df9ded28f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-time-routines-by-category"></a>Routines runtime par catégorie
 Cette section répertorie et décrit les routines de la bibliothèque runtime Microsoft par catégorie. Pour des raisons pratiques de référence, certaines routines sont listées dans plusieurs catégories. Les routines de caractères multioctets et les routines de caractères larges sont regroupées avec leurs équivalents à caractères codés sur un octet, s’ils existent.  

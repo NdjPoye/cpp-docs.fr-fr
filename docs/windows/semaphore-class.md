@@ -1,76 +1,78 @@
 ---
-title: "Semaphore, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Semaphore"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Semaphore (classe)"
+title: "Classe de sémaphore | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Semaphore
+dev_langs: C++
+helpviewer_keywords: Semaphore class
 ms.assetid: ded53526-17b4-4381-9c60-ea5e77363db6
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 60373c12220fce57672389b98455a123990f3c93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Semaphore, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Représente un objet de synchronisation qui contrôle une ressource partagée pouvant prendre en charge un nombre limité d'utilisateurs.  
+# <a name="semaphore-class"></a>Semaphore (classe)
+Représente un objet de synchronisation qui contrôle une ressource partagée prenant en charge un nombre limité d’utilisateurs.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
+  
 class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>  
 ```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Typedefs publics  
+### <a name="public-typedefs"></a>Typedefs publics  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|`SyncLock`|Un synonyme pour une classe prenant en charge les verrous synchrones.|  
+|`SyncLock`|Un synonyme pour une classe qui prend en charge les verrous synchrones.|  
   
-### Constructeurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|[Semaphore::Semaphore, constructeur](../windows/semaphore-semaphore-constructor.md)|Initialise une nouvelle instance de la classe Semaphore.|  
+|[Semaphore::Semaphore, constructeur](../windows/semaphore-semaphore-constructor.md)|Initialise une nouvelle instance de la classe de sémaphore.|  
   
-### Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|[InvokeHelper::Invoke, méthode](../windows/invokehelper-invoke-method.md)|Appelle le gestionnaire d'événements dont la signature contient le nombre d'arguments spécifié.|  
+|[InvokeHelper::Invoke, méthode](../windows/invokehelper-invoke-method.md)|Appelle le Gestionnaire d’événements dont la signature contient le nombre spécifié d’arguments.|  
   
-### Données membres publiques  
+### <a name="public-data-members"></a>Membres de données publics  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|[Semaphore::Lock, méthode](../windows/semaphore-lock-method.md)|Attend que l'objet actuel, ou l'objet associé au handle spécifié, soit dans l'état signalé ou que l'intervalle de délai d'attente spécifié se soit écoulé.|  
+|[Semaphore::Lock, méthode](../windows/semaphore-lock-method.md)|Attend que l’objet actif ou l’objet associé au handle spécifié, est dans l’état signalé ou que l’intervalle de délai d’attente spécifié est écoulé.|  
   
-### Opérateurs publics  
+### <a name="public-operators"></a>Op&#233;rateurs publics  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|[Semaphore::operator\=, opérateur](../windows/semaphore-operator-assign-operator.md)|Déplace le handle spécifié d'un objet Semaphore à l'objet Semaphore actuel.|  
+|[Semaphore::operator=, opérateur](../windows/semaphore-operator-assign-operator.md)|Déplace le handle spécifié à partir d’un objet sémaphore à l’objet de sémaphore actuel.|  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Semaphore`  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers  
+ **Namespace :** Microsoft::WRL::Wrappers  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL::Wrappers, espace de noms](../windows/microsoft-wrl-wrappers-namespace.md)

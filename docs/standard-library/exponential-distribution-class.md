@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,9 +19,7 @@ f1_keywords:
 - random/std::exponential_distribution::param_type::lambda
 - random/std::exponential_distribution::param_type::operator==
 - random/std::exponential_distribution::param_type::operator!=
-- random/std::exponential_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::exponential_distribution [C++]
 - std::exponential_distribution [C++], reset
@@ -33,16 +30,16 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ddda6fd1643d828f3ad566b679fa8bf80c49845b
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 2e41b80ba64a40b2faece0c4ac873e124b00719d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution, classe
 Génère une distribution exponentielle.  
@@ -98,7 +95,7 @@ La fonction membre de propriété `param()` définit ou retourne le package de p
   
 Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).  
   
-Pour plus d’informations sur la distribution exponentielle, consultez l’article de Wolfram MathWorld [Exponential Distribution](http://go.microsoft.com/fwlink/LinkId=401098).  
+Pour plus d’informations sur la distribution exponentielle, consultez l’article de Wolfram MathWorld [Exponential Distribution](http://go.microsoft.com/fwlink/p/?linkid=401098).  
   
 ## <a name="example"></a>Exemple  
   
@@ -176,7 +173,7 @@ Distribution for 10 samples:
     10: 2.1201210996  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<random>  
   
  **Espace de noms :** std  
@@ -231,5 +228,4 @@ Cette structure peut être passée au constructeur de classe de la distribution 
   
 ## <a name="see-also"></a>Voir aussi  
 [\<random>](../standard-library/random.md)
-
 

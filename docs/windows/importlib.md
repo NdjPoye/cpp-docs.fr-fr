@@ -1,49 +1,50 @@
 ---
-title: "importlib | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.importlib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "importlib attribute"
+title: importlib | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.importlib
+dev_langs: C++
+helpviewer_keywords: importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7c62db5b1e10f115a57da1ea00cd87760b96a71f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# importlib
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="importlib"></a>importlib
 Rend disponibles les types qui ont déjà été compilés dans une autre bibliothèque de types pour la bibliothèque de types en cours de création.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-        [ importlib(  
+      [ importlib(  
    "tlb_file"  
 ) ];  
 ```  
   
-#### Paramètres  
- *tlb\_file*  
+#### <a name="parameters"></a>Paramètres  
+ *tlb_file*  
  Nom d'un fichier .tlb, entre guillemets, que vous souhaitez importer dans la bibliothèque de types du projet actuel.  
   
-## Notes  
- L'attribut C\+\+ **importlib** entraîne le placement d'une instruction `importlib` dans le bloc de bibliothèque du fichier .idl généré.  L'attribut **importlib** a les mêmes fonctionnalités que l'attribut MIDL [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050).  
+## <a name="remarks"></a>Notes  
+ Le **importlib** C++ attribut entraîne une `importlib` instruction doit être placé dans le bloc de bibliothèque du fichier .idl généré. Le **importlib** attribut a les mêmes fonctionnalités que le [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) attribut MIDL.  
   
-## Exemple  
- Le code suivant montre un exemple d'utilisation d'**importlib** :  
+## <a name="example"></a>Exemple  
+ Le code suivant montre un exemple montrant comment utiliser **importlib**:  
   
 ```  
 // cpp_attr_ref_importlib.cpp  
@@ -52,23 +53,23 @@ Rend disponibles les types qui ont déjà été compilés dans une autre bibliot
 [importlib("importlib.tlb")];  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### Contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
 |**S'applique à**|N'importe où|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|None|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [import](../windows/import.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Attributs du compilateur](../windows/compiler-attributes.md)   
+ [Attributs autonomes](../windows/stand-alone-attributes.md)   
+ [importation](../windows/import.md)   
  [importidl](../windows/importidl.md)   
- [include](../windows/include-cpp.md)   
+ [inclure](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)

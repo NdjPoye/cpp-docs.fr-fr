@@ -38,11 +38,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8a8811703234f2c4e23dab6ad2b99b1aae316c04
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 195dc17d41c2c089600958976d37dd59f2d60232
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="obsolete-functions"></a>Fonctions obsolètes
 Certaines fonctions de la bibliothèque sont obsolètes et ont des équivalents plus récents. Nous vous recommandons d’utiliser les versions mises à jour. D’autres fonctions obsolètes ont été supprimées du CRT. Cette rubrique répertorie les fonctions déconseillées comme obsolètes et celles qui ont été supprimées d’une version particulière de Visual Studio.  
@@ -67,14 +68,14 @@ Certaines fonctions de la bibliothèque sont obsolètes et ont des équivalents 
 |-----------------------|-----------------|  
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|  
 |[gets, _getws](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|  
-|[_get_output_format](../c-runtime-library/get-output-format.md)|Aucune|  
-|[_heapadd](../c-runtime-library/heapadd.md)|Aucune|  
-|[_heapset](../c-runtime-library/heapset.md)|Aucune|  
-|[inp, inpw](../c-runtime-library/inp-inpw.md)|Aucune|  
-|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Aucune|  
-|[outp, outpw](../c-runtime-library/outp-outpw.md)|Aucune|  
-|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Aucune|  
-|[_set_output_format](../c-runtime-library/set-output-format.md)|Aucune|  
+|[_get_output_format](../c-runtime-library/get-output-format.md)|Aucun.|  
+|[_heapadd](../c-runtime-library/heapadd.md)|Aucun.|  
+|[_heapset](../c-runtime-library/heapset.md)|Aucun.|  
+|[inp, inpw](../c-runtime-library/inp-inpw.md)|Aucun.|  
+|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Aucun.|  
+|[outp, outpw](../c-runtime-library/outp-outpw.md)|Aucun.|  
+|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Aucun.|  
+|[_set_output_format](../c-runtime-library/set-output-format.md)|Aucun.|  
   
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Supprimées du CRT dans les versions antérieures de Visual Studio  
  [_lock](../c-runtime-library/lock.md)  

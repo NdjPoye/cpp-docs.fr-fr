@@ -27,11 +27,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0d73f285647d3ef4947454fd4bc831b746ef754c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8532984c8557b095753c0e8cf30b6e63d8b01ce0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lccodepagefunc"></a>___lc_codepage_func
 Fonction CRT interne. Récupère la page de code active du thread.  
@@ -45,14 +46,14 @@ UINT ___lc_codepage_func(void);
 ## <a name="return-value"></a>Valeur de retour  
  Page de code active du thread.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `___lc_codepage_func` est une fonction CRT interne utilisée par d'autres fonctions CRT pour obtenir la page de code active à partir du stockage local des threads pour les données CRT. Ces informations sont également disponibles à l'aide de la fonction [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).  
   
  Une *page de code* est le mappage de codes sur un ou deux octets en caractères individuels. Les différentes pages de code incluent des caractères spéciaux différents, généralement personnalisés pour une langue ou un groupe de langues. Pour plus d’informations sur les pages de code, consultez [Code Pages](../c-runtime-library/code-pages.md).  
   
  Les fonctions CRT internes sont spécifiques à l’implémentation et soumises à modification à chaque nouvelle mise en production. Nous vous déconseillons de les utiliser dans votre code.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,9 +19,7 @@ f1_keywords:
 - random/std::bernoulli_distribution::param_type::p
 - random/std::bernoulli_distribution::param_type::operator==
 - random/std::bernoulli_distribution::param_type::operator!=
-- random/std::bernoulli_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::bernoulli_distribution [C++]
 - std::bernoulli_distribution [C++], reset
@@ -33,16 +30,16 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 19212e7b594b21a08d6f1fb174a3385e9c46d159
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e66f7d0cc0385fea47a9d023f9cb67170de48cb4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution, classe
 Génère une distribution de Bernoulli.  
@@ -91,7 +88,7 @@ La classe décrit une distribution qui produit des valeurs de type `bool`, distr
   
 Le membre de propriété `p()` retourne la valeur du paramètre de distribution actuellement stocké `p`.  
   
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.  
+Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stockés `param_type`.  
 
 Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.  
   
@@ -101,7 +98,7 @@ Les fonctions membres `operator()` retournent la valeur générée suivante d’
   
 Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).  
   
-Pour plus d’informations sur la fonction de probabilité discrète de la loi de Bernoulli, consultez l’article de Wolfram MathWorld [Bernoulli Distribution](http://go.microsoft.com/fwlink/LinkId=398467).  
+Pour plus d’informations sur la fonction de probabilité discrète de la loi de Bernoulli, consultez l’article de Wolfram MathWorld [Bernoulli Distribution](http://go.microsoft.com/fwlink/p/?linkid=398467).  
   
 ## <a name="example"></a>Exemple  
   
@@ -163,7 +160,7 @@ false :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
  true :::::::::::::::::::::::::::::::::::::::::
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
 **En-tête :** \<random>  
   
 **Espace de noms :** std  
@@ -210,6 +207,5 @@ Cette structure peut être passée au constructeur de classe de la distribution 
   
 ## <a name="see-also"></a>Voir aussi  
  [\<random>](../standard-library/random.md)
-
 
 

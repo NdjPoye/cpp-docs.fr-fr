@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c91c3834b5a4647f7c9cd41820dc04e5597277f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aada86ec63ccade17577f5410ced62cb4d5cf03f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structure-declarations"></a>Déclarations de structure
 Une déclaration de structure désigne un type et spécifie une séquence de valeurs variables (appelées membres ou champs de la structure) qui peuvent avoir des types. Un identificateur facultatif, appelé balise indique le nom du type de structure et peut être utilisé dans les références suivantes au type structure. Une variable de ce type structure contient la séquence entière définie par ce type. Les structures en C sont semblables aux types appelés enregistrements dans d'autres langages.  
@@ -187,7 +188,7 @@ p_s->b = 100;  /* A reference to a field in the s structure */
   
  Pour plus d’informations sur les références de structure, consultez [Membres de structure et d’union](../c-language/structure-and-union-members.md).  
   
- **Fin de la section spécifique à Microsoft**  
+ **FIN de la section spécifique à Microsoft**  
   
 ## <a name="see-also"></a>Voir aussi  
  [Déclarateurs et déclarations de variable](../c-language/declarators-and-variable-declarations.md)

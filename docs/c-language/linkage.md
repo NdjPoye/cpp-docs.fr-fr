@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 10b05a8d994b1df7140c7f9bd4db984931b1896f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7d2522169588aa285c91c535eb31360679d8136
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linkage"></a>Liaison
 Les noms d'identificateurs peuvent faire référence à des identificateurs dans différentes portées. Un identificateur déclaré dans différentes portées ou dans la même portée plusieurs fois peut être créé pour faire référence au même identificateur ou fonction par un processus appelé « liaison ». La liaison détermine les parties du programme où un identificateur peut être référencé (sa « visibilité »). Il existe trois types de liaison : [interne](../c-language/internal-linkage.md), [externe](../c-language/external-linkage.md), et [aucune liaison](../c-language/no-linkage.md).  

@@ -13,7 +13,7 @@ f1_keywords:
 - numeric/std::iota
 - numeric/std::partial_sum
 ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
 helpviewer_keywords:
 - std::accumulate [C++]
@@ -21,12 +21,11 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 9b1c992930fb6b35498f04357e783d01db3a229c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt;, fonctions
 ||||  
@@ -201,7 +200,7 @@ OutputIterator adjacent_difference(
 ### <a name="return-value"></a>Valeur de retour  
  Itérateur de sortie qui traite la fin de la plage de destination : `result` + ( `last` - `first`).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La _ d’itérateur de sortie *résultat* ne peut être le même que l’itérateur d’entrée * tout d’abord, * afin que `adjacent_difference`s peuvent être calculées sur place.  
   
  Pour une séquence de valeurs *un*1, *un*2, *un*3, dans une plage d’entrée, la première fonction de modèle stocke une successives **partial_difference**s *un*1, *un*2 - *un*1, a3 - *un*2, dans la plage de destination.  
@@ -324,7 +323,7 @@ Type inner_product(
   
  en remplaçant de manière itérative `val` avec `val` *binary_op1* ( *un*i *binary_op2* *b*i).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La valeur initiale garantit l’obtention d’un résultat bien défini quand la plage est vide, auquel cas `val` est retourné. Les opérations binaires ne sont pas tenues d’être associatives ou commutatives. La plage doit être valide et la complexité est linéaire par rapport à la taille de la plage. Le type de retour de l’opérateur binaire doit être convertible en **Type** pour assurer la fermeture pendant l’itération.  
   
 ### <a name="example"></a>Exemple  
@@ -583,5 +582,4 @@ int main( )
   
 ## <a name="see-also"></a>Voir aussi  
  [\<numeric>](../standard-library/numeric.md)
-
 

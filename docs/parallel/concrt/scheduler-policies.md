@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 85b9c40d5253c707567a7cb0a1c751b1392fc995
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2e669a429bebbfde19f54200610819d0849d8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scheduler-policies"></a>Stratégies de planificateur
 Ce document décrit le rôle des stratégies de planificateur dans le Runtime d’accès concurrentiel. A *stratégie du planificateur* contrôle la stratégie utilisée par le planificateur lorsqu’il gère des tâches. Par exemple, considérez une application qui requiert certaines tâches à exécuter au niveau `THREAD_PRIORITY_NORMAL` et d’autres tâches à exécuter au niveau `THREAD_PRIORITY_HIGHEST`.  Vous pouvez créer deux instances de planificateur : un qui spécifie le `ContextPriority` la stratégie `THREAD_PRIORITY_NORMAL` et l’autre qui spécifie la même stratégie pour être `THREAD_PRIORITY_HIGHEST`.  

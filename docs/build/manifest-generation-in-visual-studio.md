@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ecd9ce0236a305fd31dec2ccc1ac3197d02908bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d701d73103ee2c5ac72eb36d9919132f0578b1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Génération de manifeste dans Visual Studio
 Génération d’un fichier manifeste pour un projet particulier peut être contrôlée dans le projet **Pages de propriétés** boîte de dialogue. Sur le **propriétés de Configuration** , cliquez sur **l’éditeur de liens**, puis **le fichier manifeste**, puis **génération d’un manifeste**. Par défaut, les propriétés du projet de nouveaux projets sont définies pour générer un fichier manifest. Toutefois, il est possible de désactiver la génération du manifeste pour un projet à l’aide de la **génération d’un manifeste** propriété du projet. Lorsque cette propriété a la valeur **Oui**, le manifeste de ce projet est généré. Sinon, l’éditeur de liens ignore les informations d’assembly lors de la résolution des dépendances du code d’application et ne génère pas le manifeste.  

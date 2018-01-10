@@ -30,11 +30,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7ae382ff8f7a37754951327eafdad0cec2239faa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 767b7623a231ad01b51bfc60212a23593544df8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno, _doserrno, _sys_errlist et _sys_nerr
 Macros globales qui contiennent des codes d'erreur définis pendant l'exécution du programme et équivalents chaîne des codes d'erreur pour l'affichage.  
@@ -48,7 +49,7 @@ Macros globales qui contiennent des codes d'erreur définis pendant l'exécution
 #define _sys_nerr (*__sys_nerr())  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les éléments `errno` et `_doserrno` sont définis à 0 par l'exécution lors du démarrage du programme. L'élément `errno` est déclenché en cas d'erreur lors d'un appel au niveau système. Comme `errno` contient la valeur du dernier appel qui le définit, cette valeur peut être modifiée par les appels suivants. Les appels de la bibliothèque Runtime qui déclenchent `errno` en cas d'erreur ne suppriment pas `errno` en cas de réussite. Supprimez toujours `errno` en appelant `_set_errno(0)` juste avant un appel qui peut le déclencher, puis vérifiez-le immédiatement après celui-ci.  
   
  En cas d'erreur, l'élément `errno` n'est pas nécessairement défini à la même valeur que le code d'erreur retourné par un appel système. En ce qui concerne les opérations d'E/S, `_doserrno` stocke les équivalents en codes d'erreur des codes `errno` du système d'exploitation. Pour la plupart des opérations autres que d'E/S, la valeur `_doserrno` n'est pas définie.  
@@ -65,7 +66,7 @@ Macros globales qui contiennent des codes d'erreur définis pendant l'exécution
   
  Toutes les valeurs `errno` du tableau suivant sont des constantes prédéfinies dans \<errno.h> et compatibles avec UNIX. Seuls `ERANGE`, `EILSEQ`, et `EDOM` sont spécifiés dans la norme ISO C99.  
   
-|Constante|Message d'erreur système|Valeur|  
+|Constante|Message d'erreur système|Value|  
 |--------------|--------------------------|-----------|  
 |`EPERM`|Opération non autorisée|1|  
 |`ENOENT`|Aucun fichier ou répertoire de ce type|2|  
@@ -108,7 +109,7 @@ Macros globales qui contiennent des codes d'erreur définis pendant l'exécution
 |`EILSEQ`|Séquence d'octets non conforme|42|  
 |`STRUNCATE`|La chaîne a été tronquée|80|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Macro globale|En-tête requis|En-tête facultatif|  
 |------------------|---------------------|---------------------|  

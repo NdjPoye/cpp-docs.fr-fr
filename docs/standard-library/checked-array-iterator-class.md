@@ -24,11 +24,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fb39271a7df2471c1373e6b272bbf262f34375ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97e0a5f9276d6ae9f4c5b4dea289227e59437525
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator, classe
 La classe `checked_array_iterator` vous permet de transformer un tableau ou un pointeur en un itérateur vérifié. Utilisez cette classe comme wrapper (à l’aide de la fonction [make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)) pour les pointeurs ou tableaux bruts comme un moyen ciblé d’exécuter des vérifications et de gérer les avertissements de pointeur non vérifié, au lieu de désactiver globalement ces avertissements. Si nécessaire, utilisez la version non vérifiée de cette classe, [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md).  
@@ -151,7 +152,7 @@ int main()
 |-|-|  
 |[checked_array_iterator](#checked_array_iterator)|Construit un `checked_array_iterator` par défaut ou un `checked_array_iterator` à partir d'un itérateur sous-jacent.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -185,7 +186,7 @@ int main()
 |[operator-](#operator-)|Décrémente un décalage depuis un itérateur et retourne le nouveau `checked_array_iterator` qui traite l'élément inséré à la nouvelle position décalée.|  
 |[operator&#91;&#93;](#op_at)|Retourne une référence à un élément décalé d'un nombre donné de positions par rapport à l'élément auquel un `checked_array_iterator` se rapportait.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<iterator>  
   
  **Espace de noms :** stdext  

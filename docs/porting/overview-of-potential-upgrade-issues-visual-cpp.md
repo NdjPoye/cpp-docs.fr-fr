@@ -11,11 +11,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 977c13eabe0f25081b1bfe6b25e615002f0e6987
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 1f1a727920ffe5e79bd62fd877e191dc6f6f3cc3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)
 Au fil des années, le compilateur Visual C++ a subi de nombreuses modifications, avec des changements apportés au langage C++ lui-même, à la bibliothèque C++ standard, à la bibliothèque Runtime C (CRT) et à d’autres bibliothèques telles que MFC et ATL. Par conséquent, lors de la mise à niveau d’une application à partir d’une version antérieure de Visual C++, vous pouvez rencontrer des erreurs du compilateur et de l’éditeur de liens ainsi que des avertissements dans le code précédemment compilé correctement. Plus la base de code d’origine est ancienne, plus le risque de telles erreurs est élevé. Cette vue d’ensemble résume les classes les plus courantes des problèmes que vous êtes susceptible de rencontrer, et fournit des liens vers des informations plus détaillées.  

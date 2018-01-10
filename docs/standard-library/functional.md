@@ -20,11 +20,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6f7b09ed7c4b52b45efee0708f65d8d2f3e24cd6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 036da9664c7b61e55e1322f12de3d9c8f72c3f53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 Définit les fonctions de bibliothèque C++ Standard qui aident à construire des *objets de fonction* (également appelés foncteurs) et leurs binders. Un objet de fonction est un objet d'un type qui définit `operator()`. Un objet de fonction peut être un pointeur fonction, mais en général il sert à stocker des informations supplémentaires accessibles pendant un appel de fonction.  
@@ -127,7 +128,7 @@ Définit les fonctions de bibliothèque C++ Standard qui aident à construire de
 |[ref](../standard-library/functional-functions.md#ref)|Construit un `reference_wrapper` à partir d'un argument.|  
 |[swap](../standard-library/functional-functions.md#swap)|Échange deux objets `function`.|  
   
-### <a name="structs"></a>Structures  
+### <a name="structs"></a>Structs  
   
 |||  
 |-|-|  

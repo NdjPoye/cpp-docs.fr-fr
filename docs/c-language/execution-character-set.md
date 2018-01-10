@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc380109f228077e9ee2a928202bf7514a7c2ebd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ba264612923e101c63b5ec3503bbfbce426d8bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execution-character-set"></a>Jeu de caractères d'exécution
 Ce contenu fait souvent référence au jeu de caractères d'exécution. Le jeu de caractères d'exécution n'est pas nécessairement identique au jeu de caractères source utilisé pour écrire des programmes C. Le jeu de caractères d'exécution inclut tous les caractères du jeu de caractères source ainsi que le caractère Null, le caractère de saut de ligne, le retour arrière, la tabulation horizontale, la tabulation verticale, le retour chariot et les séquences d'échappement. Les jeux de caractères source et les jeux de caractères d'exécution peuvent différer dans d'autres implémentations.  

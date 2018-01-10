@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5494a88c51b1b43691fe00144029b0372b7acd59
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a545ac19fdd8db1a80b6daf0b85846e293b21e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator--masm-run-time"></a>==, opérateur (MASM Run Time)
 Est égal à. Utilisé uniquement dans [. IF](../../assembler/masm/dot-if.md), [. Alors que](../../assembler/masm/dot-while.md), ou [. RÉPÉTEZ](../../assembler/masm/dot-repeat.md) bloque et évaluées au moment de l’exécution, pas au moment de l’assembly.  

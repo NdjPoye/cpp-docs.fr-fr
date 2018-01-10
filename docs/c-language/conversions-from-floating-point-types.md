@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4974edd25d0fcdd8d990b60459517bb1148c74ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a95596b2c9e7312d4581d1a4c641c2466420158
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-floating-point-types"></a>Conversions depuis les types à virgule flottante
 Une valeur **float** convertie en valeur **double** ou `long double`, ou une valeur **double** convertie en `long double`, n'entraîne aucune modification de la valeur. Une valeur **double** convertie en valeur **float** est représentée exactement, si possible. La précision peut être perdue si la valeur ne peut pas être représentée exactement. Si le résultat est hors limites, le comportement n'est pas défini. Consultez [Limites sur les constantes à virgule flottante](../c-language/limits-on-floating-point-constants.md) pour la plage de types à virgule flottante.  
@@ -37,7 +38,7 @@ Une valeur **float** convertie en valeur **double** ou `long double`, ou une val
   
 ### <a name="conversions-from-floating-point-types"></a>Conversions depuis les types à virgule flottante  
   
-|De|Pour|Méthode|  
+|De|À|Méthode|  
 |----------|--------|------------|  
 |**float**|`char`|Convertir en **long**. Convertir **long** en `char`|  
 |**float**|**short**|Convertir en **long**. Convertir **long** en **short**|  

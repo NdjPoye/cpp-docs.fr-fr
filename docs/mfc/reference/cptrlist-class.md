@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c9a7d32e202c7184ecbf974dc095c223686d6dff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d7e69c8c0d80fea2720ea436bf0bff796ae57a60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cptrlist-class"></a>Classe de CPtrList
 Prend en charge des listes de pointeurs void.  
@@ -42,7 +43,7 @@ class CPtrList : public CObject
   
  `void*& CPtrList::GetHead() const;`  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CPtrList`incorpore la `IMPLEMENT_DYNAMIC` macro pour prendre en charge les accès de type au moment de l’exécution et le vidage à un `CDumpContext` objet. Si vous avez besoin d’un vidage de pointeur individuels des éléments de liste, vous devez définir la profondeur du contexte de vidage à 1 ou supérieur.  
   
  Listes de pointeur ne peut pas être sérialisés.  
@@ -56,7 +57,7 @@ class CPtrList : public CObject
   
  `CPtrList`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcoll.h  
   
 ## <a name="see-also"></a>Voir aussi  

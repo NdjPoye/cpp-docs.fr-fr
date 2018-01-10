@@ -21,18 +21,19 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b60b1544e277ef4fece8368b6913cf686960dcaa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cee24f0e5142af37681bd293a3be3600ddbd1cc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="process-and-environment-control"></a>Contrôle de processus et d'environnement
 Utilisez les routines de contrôle de processus pour démarrer, arrêter et gérer les processus à partir d’un programme. Utilisez les routines de contrôle de l’environnement pour obtenir et modifier les informations sur l’environnement de système d’exploitation.  
   
 ### <a name="process-and-environment-control-functions"></a>Fonctions de contrôle de processus et d’environnement  
   
-|Routine|Utilisation|  
+|Routine|Utilisez|  
 |-------------|---------|  
 |[abort](../c-runtime-library/reference/abort.md)|Abandonner le processus sans vider les mémoires tampons ou appeler des fonctions enregistrées par `atexit` et `_onexit`|  
 |[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md)|Vérifier une erreur logique|  

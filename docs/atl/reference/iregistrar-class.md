@@ -24,11 +24,12 @@ ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6f79815d873a7c9f5f8c5f0397248f54776a7c20
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c0b304b00b5cc5c613ff7e81818d1c637989e5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iregistrar-interface"></a>Interface IRegistrar
 Cette interface est définie dans atliface.h et est utilisée en interne par les fonctions membres de CAtlModule comme [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
@@ -38,7 +39,7 @@ Cette interface est définie dans atliface.h et est utilisée en interne par les
 ```
 typedef interface IRegistrar IRegistrar;
 ```  
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Consultez la rubrique [à l’aide des paramètres remplaçables (le préprocesseur de Registrar)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) pour plus d’informations.  
 
 ## <a name="members"></a>Membres  
@@ -58,7 +59,7 @@ Consultez la rubrique [à l’aide des paramètres remplaçables (le préprocess
   
 
  
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlifase.h  
   
 ##  <a name="resourceregistersz"></a>IRegistrar::ResourceRegisterSz 

@@ -1,33 +1,33 @@
 ---
-title: "HandleT::operator=, op&#233;rateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleT::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "= (opérateur)"
+title: "HandleT::operator =, opérateur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleT::operator=
+dev_langs: C++
+helpviewer_keywords: operator= operator
 ms.assetid: 9e42dcca-30fa-4e8b-8954-802fd64a5595
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 68afd6b2a0a1c17cd032d6cea84aefde8c368204
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# HandleT::operator=, op&#233;rateur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Déplace la valeur de l'objet HandleT spécifié vers l'objet HandleT actuel.  
+# <a name="handletoperator-operator"></a>HandleT::operator=, opérateur
+Déplace la valeur de l’objet HandleT spécifié à l’objet HandleT actuel.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 HandleT& operator=(  
@@ -35,20 +35,20 @@ HandleT& operator=(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `h`  
  Une référence rvalue à un handle.  
   
-## Valeur de retour  
- Une référence à l'objet HandleT actuel.  
+## <a name="return-value"></a>Valeur de retour  
+ Une référence à l’objet HandleT actuel.  
   
-## Remarques  
- Cette opération invalide l'objet HandleT spécifié par le paramètre `h`.  
+## <a name="remarks"></a>Notes  
+ Cette opération rend non valide l’objet HandleT spécifié par le paramètre `h`.  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers  
+ **Namespace :** Microsoft::WRL::Wrappers  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [HandleT, classe](../windows/handlet-class.md)

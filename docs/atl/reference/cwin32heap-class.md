@@ -26,11 +26,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 95498e3b945947e3cc2abc962e0ca2c2062aef83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 67856242c63639101185eb6f6dcfd4902f0ef48c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwin32heap-class"></a>Classe de CWin32Heap
 Cette classe implémente [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) à l’aide des fonctions d’allocation du tas Win32.  
@@ -71,7 +72,7 @@ class CWin32Heap : public IAtlMemMgr
 |[CWin32Heap::m_bOwnHeap](#m_bownheap)|Indicateur utilisé pour déterminer le propriétaire actuel de la poignée de segment de mémoire.|  
 |[CWin32Heap::m_hHeap](#m_hheap)|Handle vers l’objet de tas.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CWin32Heap`implémente les méthodes d’allocation de mémoire à l’aide des fonctions d’allocation de tas Win32, y compris [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597) et [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701). Contrairement aux autres classes de segment de mémoire, `CWin32Heap` requiert un handle de tas valide doit être fourni avant que la mémoire est allouée : l’autres classes valeur par défaut à l’aide du tas du processus. Le handle peut être fourni au constructeur ou à la [CWin32Heap::Attach](#attach) (méthode). Consultez le [CWin32Heap::CWin32Heap](#cwin32heap) méthode pour plus de détails.  
   
 ## <a name="example"></a>Exemple  
@@ -82,7 +83,7 @@ class CWin32Heap : public IAtlMemMgr
   
  `CWin32Heap`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlmem.h  
   
 ##  <a name="allocate"></a>CWin32Heap::Allocate  
@@ -99,7 +100,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers le bloc de mémoire nouvellement alloué.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez [CWin32Heap::Free](#free) ou [CWin32Heap::Reallocate](#reallocate) pour libérer la mémoire allouée par cette méthode.  
   
  Implémentation à l’aide [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597).  
@@ -118,7 +119,7 @@ void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
  `bTakeOwnership`  
  Une qui indique si d’indicateur le `CWin32Heap` objet est de prendre possession des ressources du segment de mémoire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si `bTakeOwnership` a la valeur TRUE, le `CWin32Heap` objet est chargé de supprimer le handle de tas.  
   
 ##  <a name="cwin32heap"></a>CWin32Heap::CWin32Heap  
@@ -146,7 +147,7 @@ CWin32Heap(
  `nMaxSize`  
  Taille maximale du tas.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Avant d'allouer de la mémoire, il est nécessaire de fournir à l'objet `CWin32Heap` un handle de tas valide. La façon la plus simple d'y parvenir consiste à utiliser le tas du processus :  
   
  [!code-cpp[NVC_ATL_Utilities#92](../../atl/codesnippet/cpp/cwin32heap-class_1.cpp)]  
@@ -170,7 +171,7 @@ CWin32Heap(
 ~CWin32Heap() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Détruit le handle de tas si la `CWin32Heap` objet est le propriétaire du segment de mémoire.  
   
 ##  <a name="detach"></a>CWin32Heap::Detach  
@@ -222,7 +223,7 @@ bool m_bOwnHeap;
 HANDLE m_hHeap;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une variable est utilisée pour stocker un handle vers l’objet de segment de mémoire.  
   
 ##  <a name="reallocate"></a>CWin32Heap::Reallocate  
@@ -242,7 +243,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers le bloc de mémoire nouvellement alloué.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si `p` est NULL, il est supposé que le bloc de mémoire n’a pas encore été alloué et [CWin32Heap::Allocate](#allocate) est appelée avec un argument de `nBytes`.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f9fb74dbc28235f211f24d64ef125f2cccdafc7d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3e5e2f8ffab670c6e6c5eb95d37b4daced5c6b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-runtime-unsupported-crt-functions"></a>Fonctions CRT non prises en charge par Windows Runtime
 Nombreuses sont les API Runtime C (CRT) qui ne peuvent pas être utilisées dans les applications du [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] qui s'exécutent dans Windows Runtime. Ces applications sont générées à l'aide de l'indicateur de compilateur /ZW. Pour obtenir la liste des fonctions CRT non prises en charge, consultez [Fonctions CRT non prises en charge par /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  

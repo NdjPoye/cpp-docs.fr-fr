@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bb9a5662b15e6e4d0b6df09520263528f9fa72c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 07962266c94743968ff407aa5be78f66e189f6aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtdisableperfcritlocks"></a>_(CRT)_DISABLE_PERFCRIT_LOCKS
 Désactive le verrouillage critique pour les performances dans les opérations d’E/S.  
@@ -34,7 +35,7 @@ Désactive le verrouillage critique pour les performances dans les opérations d
 #define _CRT_DISABLE_PERFCRIT_LOCKS  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Définir ce symbole peut améliorer les performances dans les programmes monothreads utilisant des E/S en forçant toutes les opérations d’E/S à considérer que le modèle d’E/S est monothread. Pour plus d'informations, consultez [Performances des bibliothèques multithreads](../c-runtime-library/multithreaded-libraries-performance.md).  
   
 ## <a name="see-also"></a>Voir aussi  

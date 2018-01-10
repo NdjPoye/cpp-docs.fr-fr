@@ -58,11 +58,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 91ed1da73fc6d104e89da9cd928d3d91cfb704f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 79e10e9b93beb811f42e15574014df6a464aadb3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sal-annotations"></a>Annotations SAL
 Si vous examinez les fichiers d'en-tête de bibliothèque, vous remarquerez peut-être des annotations inhabituelles, comme `_In_z` et `_Out_z_cap_(_Size)`. Voici des exemples de la langue d'annotation de code source Microsoft (SEL), qui fournit un ensemble d'annotations pour décrire comment une fonction utilise les paramètres, par exemple, les hypothèses qu'elle fait sur eux et les garanties qu'elle effectue sur le finissage. Le fichier d’en-tête \<sal.h> définit les annotations.  

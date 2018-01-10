@@ -15,11 +15,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1dcbf99843fa4becf0ea97be8700aa534aadb907
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b5224c406f6e10cd4ef9f0ed64fbdbd7c5cc8e62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dbparam"></a>db_param
 Associe la variable membre spécifié avec un paramètre d’entrée ou de sortie et délimite la variable.  
@@ -67,7 +70,7 @@ Associe la variable membre spécifié avec un paramètre d’entrée ou de sorti
  *longueur* (facultatif)  
  Une variable de membre utilisée pour contenir la taille de la colonne en octets.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **db_param** définit les paramètres que vous utilisez dans les commandes ; par conséquent, vous utilisez avec **db_command**. Par exemple, vous pouvez utiliser **db_param** pour lier les paramètres dans les requêtes SQL ou des procédures stockées. Paramètres d’une procédure stockée sont définis par des points d’interrogation ( ?), et vous devez lier les membres de données dans l’ordre dans lequel les paramètres apparaissent.  
   
  **db_param** délimite les données membres qui peuvent être utilisées dans OLE DB `ICommandWithParameters`-en fonction de liaison. Il définit le type de paramètre (entrée ou sortie), de type OLE DB, précision, échelle, état et de longueur pour le paramètre spécifié. Cet attribut insère les macros de consommateur OLE DB BEGIN_PARAM_MAP... END_PARAM_MAP. Chaque membre que vous marquez avec la **db_param** attribut occupera une entrée dans le mappage sous la forme d’un COLUMN_ENTRY.  
@@ -115,7 +118,7 @@ struct CSalesbyYear {
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -123,8 +126,8 @@ struct CSalesbyYear {
 |-|-|  
 |**S'applique à**|**class**, `struct`, member, method, local|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

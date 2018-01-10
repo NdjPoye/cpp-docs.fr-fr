@@ -1,35 +1,33 @@
 ---
-title: "ML Nonfatal Error A2119 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A2119"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A2119"
+title: Erreur ML non fatale A2119 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A2119
+dev_langs: C++
+helpviewer_keywords: A2119
 ms.assetid: 4d4ee6da-3a58-495c-a1da-c3a405c4c18d
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 82f7c34f7a7a26fec4d04f249b9ce6e3c3ec9823
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ML Nonfatal Error A2119
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**le type de langage doit être spécifié**  
+# <a name="ml-nonfatal-error-a2119"></a>Erreur ML non fatale A2119
+**type de langage doit être spécifié.**  
   
- Une définition ou un prototype de la procédure n'a pas été attribué à un type de langage.  
+ Une définition de procédure ou un prototype n’a pas reçu un type de langage.  
   
- un type de langage doit être déclaré dans chaque définition ou prototype de procédure si un type de langue par défaut n'est pas spécifié.  Un type de langue par défaut est défini à l'aide de la directive de [.MODEL](../../assembler/masm/dot-model.md) , **LANG D'OPTION**, ou les options de ligne de commande **\/Gc** ou **\/Gd**de ML.  
+ Un type de langage doit être déclaré dans chaque définition de procédure ou un prototype si un type de la langue par défaut n’est pas spécifié. Un type de la langue par défaut est défini à l’aide du [. MODÈLE](../../assembler/masm/dot-model.md) directive, **OPTION LANG**, ou les options de ligne de commande ML **/Gc** ou **/Gd**.  
   
-## Voir aussi  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>Voir aussi  
+ [Messages d’erreur ML](../../assembler/masm/ml-error-messages.md)

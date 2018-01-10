@@ -18,18 +18,19 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72772912097cf868538a496d3350d4708af5dc83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f6a0c3fe1a85028f4b4220f8e2f111afa1012121
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stream-io"></a>E/S de flux
 Ces fonctions permettent de traiter des données de tailles et de formats différents, des caractères uniques jusqu'aux structures de données volumineuses. Elles assurent aussi une mise en mémoire tampon, ce qui peut améliorer les performances. La taille par défaut d'une mémoire tampon de flux est de 4 Ko. Ces routines concernent uniquement les mémoires tampons créées par les routines de bibliothèque Runtime et n'ont aucun effet sur les mémoires tampons créées par le système d'exploitation.  
   
 ### <a name="stream-io-routines"></a>Routines d'E/S de flux  
   
-|Routine|Utilisation|  
+|Routine|Utilisez|  
 |-------------|---------|  
 |[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|Effacer un indicateur d'erreur de flux|  
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|Fermer un flux|  

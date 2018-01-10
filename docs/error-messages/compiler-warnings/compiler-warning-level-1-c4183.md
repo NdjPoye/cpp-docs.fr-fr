@@ -1,35 +1,33 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4183 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4183"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4183"
+title: Compilateur avertissement (niveau 1) C4183 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4183
+dev_langs: C++
+helpviewer_keywords: C4183
 ms.assetid: dc48312c-4b34-44dd-80ff-eb5f11d5ca47
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ec9462132c0640dc088dc89b36dd78dbfd057864
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4183
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'identificateur' : type de retour manquant ; fonction membre retournant 'int' prise par défaut  
+# <a name="compiler-warning-level-1-c4183"></a>Compilateur avertissement (niveau 1) C4183
+'identificateur' : type de retour manquant censé pour être une fonction membre retournant 'int'  
   
- La définition en ligne d'une fonction membre dans une classe ou une structure n'a pas de type de retour.  Cette fonction membre est supposée avoir un type de retour par défaut `int`.  
+ La définition d’une fonction membre dans une classe ou une structure en ligne n’a pas un type de retour. Cette fonction membre est censée pour avoir une valeur par défaut de type de retour `int`.  
   
- L'exemple suivant génère l'erreur C4183 :  
+ L’exemple suivant génère l’erreur C4183 :  
   
 ```  
 // C4183.cpp  

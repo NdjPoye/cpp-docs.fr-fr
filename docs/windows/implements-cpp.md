@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 44e1ec9a00f1de2ab07d7b2a916d274a9cddce2e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0dbe7d829ae31f53a3dbc35df66bee2d50f14f19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implements-c"></a>implements (C++)
 Spécifie les interfaces de dispatch qui doivent être membres de la coclasse IDL.  
@@ -41,10 +44,10 @@ Spécifie les interfaces de dispatch qui doivent être membres de la coclasse ID
  **dispinterfaces**  
  Liste de l’interface qui sera un membre de la coclasse IDL séparés par des virgules. Une méthode abrégée pour spécifier une dispinterface unique est **implémente (dispinterfaces** *= dispinterface_name***)**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Par défaut, seuls-interfaces COM qui sont des classes de base de la coclasse sont ajoutés dans la coclasse IDL. **implémente** vous permet de forcer d’autres interfaces qui seront membres de coclasse IDL.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -52,8 +55,8 @@ Spécifie les interfaces de dispatch qui doivent être membres de la coclasse ID
 |-|-|  
 |**S'applique à**|**class**, `struct`|  
 |**Renouvelable**|Oui|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|None|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

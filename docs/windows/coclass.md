@@ -1,32 +1,33 @@
 ---
-title: "coclass | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.coclass"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "coclass attribute"
+title: coclasse | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.coclass
+dev_langs: C++
+helpviewer_keywords: coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6bcae762c603f05ce11eae5d14eb2e182c666797
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# coclass
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-crée un objet COM, qui peut implémenter une interface COM.  
+# <a name="coclass"></a>coclasse
+Crée un objet COM, ce qui peut implémenter une interface COM.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -34,55 +35,55 @@ crée un objet COM, qui peut implémenter une interface COM.
   
 ```  
   
-## Notes  
- L'attribut de **coclasse** C\+\+ place un élément coclass dans le fichier généré .idl.  
+## <a name="remarks"></a>Notes  
+ Le **coclasse** attribut C++ place une construction de la coclasse dans le fichier .idl généré.  
   
- En définissant une coclasse, vous pouvez également spécifier [uuid](../windows/uuid-cpp-attributes.md), [version](../windows/version-cpp.md), [threads](../windows/threading-cpp.md), [vi\_progid](../windows/vi-progid.md), les attributs et de [progid](../windows/progid.md) .  Si l'un quelconque d'entre elles ne sont spécifiés, ils sont générés.  
+ Lorsque vous définissez une coclasse, vous pouvez également spécifier le [uuid](../windows/uuid-cpp-attributes.md), [version](../windows/version-cpp.md), [threading](../windows/threading-cpp.md), [vi_progid](../windows/vi-progid.md), et [progid ](../windows/progid.md) attributs. Si l’un d’eux n’est pas spécifié, il sera généré.  
   
- Si plusieurs fichiers d'en\-tête contiennent des classes avec **coclasse** attribut et ne spécifient pas GUID, le compilateur utilise le même GUID pour les deux classes, et qui provoquera une erreur de MIDL.  Par conséquent, vous devez utiliser l'attribut d' `uuid` lorsque vous utilisez **coclasse**.  
+ Si les deux fichiers d’en-tête contiennent des classes avec le **coclasse** d’attribut et ne spécifiez pas un GUID, le compilateur utilise le même GUID pour les deux classes, et qui provoque une erreur MIDL.  Par conséquent, vous devez utiliser le `uuid` d’attribut lorsque vous utilisez **coclasse**.  
   
  **Projets ATL**  
   
- Lorsque cet attribut précède une définition de classe ou de structure dans un projet ATL, il :  
+ Lorsque cet attribut précède une définition de classe ou structure dans un projet ATL, elle :  
   
--   Injecte le code ou des données pour prendre en charge l'inscription automatique à l'objet.  
+-   Injecte le code ou données pour prendre en charge d’inscription automatique pour l’objet.  
   
--   Injecte le code ou des données pour prendre en charge une fabrique de classe COM pour l'objet.  
+-   Injecte le code ou données pour prendre en charge une fabrique de classe COM pour l’objet.  
   
--   Injecte le code ou des données pour implémenter **IUnknown** et effectuer à l'objet un objet de COM\-creatable.  
+-   Injecte le code ou données pour implémenter **IUnknown** et rendre l’objet à un objet COM pouvant être créées.  
   
- spécifiquement, les classes de base suivantes sont ajoutées à l'objet cible :  
+ Plus précisément, les classes de base suivantes sont ajoutées à l’objet cible :  
   
--   [classe de CComCoClass](../atl/reference/ccomcoclass-class.md) fournit le modèle par défaut de fabrique de classes et de regroupement pour l'objet.  
+-   [Classe de CComCoClass](../atl/reference/ccomcoclass-class.md) fournit le modèle de fabrique et l’agrégation de la classe par défaut pour l’objet.  
   
--   [classe de CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) a un modèle selon la classe de modèle de thread spécifié par l'attribut de [threads](../windows/threading-cpp.md) .  si l'attribut de **threads** n'est pas spécifié, le modèle de thread par défaut est cloisonné.  
+-   [CComObjectRootEx classe](../atl/reference/ccomobjectrootex-class.md) a un modèle basé sur la classe de modèle de thread spécifiée par le [threading](../windows/threading-cpp.md) attribut. Si le **threading** attribut n’est pas spécifié, la valeur par défaut de modèle de thread est cloisonné.  
   
--   [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) est ajouté si l'attribut de [noncreatable](../windows/noncreatable.md) n'est pas spécifié pour l'objet de la cible.  
+-   [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) est ajouté si le [noncreatable](../windows/noncreatable.md) attribut n’est pas spécifié pour l’objet cible.  
   
- Enfin, toute interface double qui n'est pas définie dans IDL incorporé est remplacée par la classe correspondante d' [IDispatchImpl](../atl/reference/idispatchimpl-class.md) .  Si l'interface double est définie dans IDL incorporé, l'interface particulière dans la liste de base n'est pas modifiée.  
+ Enfin, n’importe quel interface double n’est pas défini à l’aide d’un IDL incorporé est remplacé avec correspondant [IDispatchImpl](../atl/reference/idispatchimpl-class.md) classe. Si l’interface double est définie dans un IDL incorporé, l’interface particulier dans la liste de base n’est pas modifié.  
   
- L'attribut de **coclasse** rend également les fonctions suivantes disponibles via le code injecté ; en cas de `GetObjectCLSID`, comme une méthode statique dans la classe de base `CComCoClass`:  
+ Le **coclasse** attribut rend également les fonctions suivantes disponibles via le code injecté, ou dans le cas de `GetObjectCLSID`, comme une méthode statique dans la classe de base `CComCoClass`:  
   
--   `UpdateRegistry` enregistre les fabriques de classe de la classe cible.  
+-   `UpdateRegistry`enregistre les fabriques de classe de la classe cible.  
   
--   `GetObjectCLSID`, en rapport avec l'alignement, peut également être utilisé pour obtenir le CLSID de la classe cible.  
+-   `GetObjectCLSID`, qui est liée à l’inscription, peut également servir à obtenir le CLSID de la classe cible.  
   
--   **GetObjectFriendlyName** retourne par défaut une chaîne au format « *name\>*`Object`*de classe*d'\<target ».  si cette fonction est déjà présente, elle n'est pas ajoutée.  Ajoutez cette fonction à la classe cible pour retourner un nom plus convivial que celui généré automatiquement.  
+-   **GetObjectFriendlyName** par défaut retourne une chaîne au format «\<*nom de la classe cible*> `Object`». Si cette fonction est déjà présente, il n’est pas ajouté. Ajoutez cette fonction à la classe cible pour renvoyer un nom convivial que celui généré automatiquement.  
   
--   **GetProgID**, en rapport avec l'alignement, retourne la chaîne spécifiée avec l'attribut de [progid](../windows/progid.md) .  
+-   **GetProgID**, qui est liée à l’inscription, retourne la chaîne spécifiée par le [progid](../windows/progid.md) attribut.  
   
--   **GetVersionIndependentProgID** a les mêmes fonctionnalités que **GetProgID**, mais il retourne la chaîne spécifiée avec [vi\_progid](../windows/vi-progid.md).  
+-   **GetVersionIndependentProgID** a les mêmes fonctionnalités que **GetProgID**, mais elle retourne la chaîne spécifiée avec [vi_progid](../windows/vi-progid.md).  
   
- Les modifications suivantes, qui sont liées au mappage COM, sont apportées à la classe cible :  
+ Les modifications suivantes, qui sont liées au mappage COM, sont apportées à la classe cible :  
   
--   Un mappage COM est ajouté avec les entrées pour toutes les interfaces que la classe cible dérive de et toutes les entrées spécifiées par [points d'entrée d'interface COM](../mfc/com-interface-entry-points.md) les attribut ou celles requis par l'attribut d' [agrégats](../windows/aggregates.md) .  
+-   Un mappage COM est ajouté avec les entrées pour toutes les interfaces qui dérive de la classe cible et toutes les entrées spécifiées par le [Interface COM Points d’entrée](../mfc/com-interface-entry-points.md) attribut ou celles qui sont requises par le [agrégats](../windows/aggregates.md) attribut.  
   
--   une macro d' [OBJECT\_ENTRY\_AUTO](../Topic/OBJECT_ENTRY_AUTO.md) est insérée dans le mappage COM.  Cette macro est semblable à [OBJECT\_ENTRY](http://msdn.microsoft.com/fr-fr/abd10ee2-54f0-4f94-9ec2-ddf8f4c8c8cd) en termes de fonctionnalité mais ne doivent pas faire partie du mappage COM de la classe cible.  
+-   Un [OBJECT_ENTRY_AUTO](../atl/reference/object-map-macros.md#object_entry_auto) macro est insérée dans le mappage COM.
   
- Le nom de la coclasse générée dans le fichier .idl pour la classe porte le même nom que la classe.  Par exemple, et qui fait référence à l'exemple suivant, pour accéder à l'ID de classe d'une coclasse CMyClass, dans un client via le fichier d'en\-tête généré par le compilateur MIDL, utilisez CLSID\_CMyClass.  
+ Le nom de la coclasse généré dans le fichier .idl pour la classe aura le même nom que la classe.  Par exemple, vous faites référence à l’exemple suivant, pour accéder à l’ID de classe pour une coclasse CMyClass, dans un client via le fichier d’en-tête généré par MIDL, utilisez CLSID_CMyClass.  
   
-## Exemple  
- Le code suivant montre comment utiliser l'attribut de **coclasse** :  
+## <a name="example"></a>Exemple  
+ Le code suivant montre comment utiliser le **coclasse** attribut :  
   
 ```  
 // cpp_attr_ref_coclass1.cpp  
@@ -100,7 +101,7 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};  
 ```  
   
- L'exemple suivant montre comment substituer l'implémentation par défaut d'une fonction qui apparaît dans le code injecté par un attribut de **coclasse** .  Consultez [\/Fx](../build/reference/fx-merge-injected-code.md) pour plus d'informations sur le code injecté.  Toutes les classes de base ou interfaces que vous utilisez pour une classe seront apparaissent dans le code injecté.   De plus, si une classe est incluse par défaut dans le code injecté et vous spécifiez explicitement cette classe comme base pour votre coclasse, le fournisseur d'attribut utilise le formulaire spécifié dans votre code.  
+ L’exemple suivant montre comment substituer l’implémentation par défaut d’une fonction qui apparaît dans le code injecté par le **coclasse** attribut. Pour plus d’informations sur l’affichage de code injecté, consultez [/Fx](../build/reference/fx-merge-injected-code.md) . Les classes de base ou les interfaces que vous utilisez pour une classe s’affiche dans le code injecté.   En outre, si une classe est incluse par défaut dans le code injecté et que vous spécifiez explicitement cette classe comme base pour votre coclasse, le fournisseur de l’attribut utilise le formulaire spécifié dans votre code.  
   
 ```  
 // cpp_attr_ref_coclass2.cpp  
@@ -136,22 +137,22 @@ public:
 };  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**classe**, `struct`|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|**class**, `struct`|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [COM Attributes](../windows/com-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs COM](../windows/com-attributes.md)   
+ [Attributs de classe](../windows/class-attributes.md)   
+ [TypeDef, Enum, Union et Struct (attributs)](../windows/typedef-enum-union-and-struct-attributes.md)   
  [appobject](../windows/appobject.md)

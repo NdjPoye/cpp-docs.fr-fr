@@ -23,11 +23,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d95e5dc4b137e050c65bc95b6b872ae1f5391baa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee2fa7f80f47e2d3379bc4e68aec4496e8f4f01a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scanf-width-specification"></a>Spécification de largeur scanf
 Ces informations s'appliquent à l'interprétation des chaînes de format dans la famille `scanf` de fonctions, y compris les versions sécurisées telles que `scanf_s`. Ces fonctions partent normalement de l'hypothèse que le flux d'entrée est divisé en une séquence de jetons. Les jetons sont séparés par un espace blanc (un espace, une tabulation ou une nouvelle ligne), ou dans le cas des types numériques, par la fin naturelle d'un type de données numérique, comme indiqué par le premier caractère qui ne peut pas être converti en texte numérique. Toutefois, la spécification de largeur peut servir à provoquer l'arrêt de l'analyse de l'entrée avant la fin naturelle d'un jeton.  

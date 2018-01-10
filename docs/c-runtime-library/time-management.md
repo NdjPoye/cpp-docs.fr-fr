@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6a634d748a0960e0eda56f89bcca66463780f08f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4cf86c854345244eafff80392cdc575d026c61ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="time-management"></a>Gestion du temps
 Utilisez ces fonctions pour obtenir l’heure actuelle, et la convertir, la régler et la stocker selon vos besoins. L’heure actuelle est l’heure système.  
@@ -32,10 +33,10 @@ Utilisez ces fonctions pour obtenir l’heure actuelle, et la convertir, la rég
   
 ### <a name="time-routines"></a>Routines de temps  
   
-|Fonction|Utilisation|  
+|Fonction|Utilisez|  
 |--------------|---------|  
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|Convertit une heure du type `struct tm` en chaîne de caractères. Les versions de ces fonctions avec le suffixe `_s` sont plus sécurisées.|  
-|[horloge](../c-runtime-library/reference/clock.md)|Retourne le temps horloge écoulé pour le processus.|  
+|[horloge](../c-runtime-library/reference/clock.md)|Renvoie le temps horloge écoulé pour le processus.|  
 |[ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md), [_ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|Convertit une heure du type `time_t`, `__time32_t` ou `__time64_t` en chaîne de caractères. Les versions de ces fonctions avec le suffixe `_s` sont plus sécurisées.|  
 |[difftime, _difftime32, _difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|Calcule la différence entre deux heures.|[System::DateTime::Subtract](https://msdn.microsoft.com/en-us/library/system.datetime.subtract.aspx)|  
 |[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md),[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|Stocke l’heure système actuelle dans une variable de type `struct _timeb` ou `struct __timeb64` Les versions de ces fonctions avec le suffixe `_s` sont plus sécurisées.|  

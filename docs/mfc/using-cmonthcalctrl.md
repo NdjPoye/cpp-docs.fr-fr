@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b16df22efe86310e4d6faeadc35085507e15a7e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee958116b7eed8804bb6c540187eea6b37d750ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cmonthcalctrl"></a>Utilisation de CMonthCalCtrl
 Le contrôle month calendar ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) implémente une interface utilisateur de calendrier. Cela fournit une méthode très intuitive et reconnaissable entrer ou sélectionner une date de l’utilisateur. Le contrôle fournit également l’application les moyens d’obtenir et définir les informations de date dans le contrôle à l’aide des types de données existants. Par défaut, le contrôle month calendar affiche le jour actuel et le mois. Toutefois, l’utilisateur est en mesure de parcourir les mois précédents et suivant et sélectionnez un mois spécifique et/ou d’une année.  

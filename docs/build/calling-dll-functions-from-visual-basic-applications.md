@@ -1,65 +1,66 @@
 ---
-title: "Appel de fonctions de la DLL &#224; partir d&#39;applications Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__stdcall (mot clé C++)"
-  - "appel de fonctions DLL à partir d'applications Visual Basic (C++)"
-  - "fonctions DLL (C++)"
-  - "fonctions DLL (C++), appeler"
-  - "DLL (C++), appeler"
-  - "appels de fonction (C++), DLL (fonctions)"
-  - "fonctions (C++), appeler des fonctions DLL à partir de Visual Basic"
+title: "Appeler des fonctions DLL à partir d’Applications Visual Basic | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- functions [C++], calling DLL functions from Visual Basic
+- DLL functions [C++]
+- function calls [C++], DLL functions
+- DLLs [C++], calling
+- calling DLL functions from VB applications [C++]
+- __stdcall keyword [C++]
+- DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ed99b0ebe41a8f1bc9684638fa74e18556dd51f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Appel de fonctions de la DLL &#224; partir d&#39;applications Visual Basic
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Pour que des applications Visual Basic \(ou des applications écrites dans d'autres langages tels que Pascal ou Fortran\) appellent des fonctions dans une DLL C\/C\+\+, les fonctions doivent être exportées à l'aide de la convention d'appel correcte sans la décoration de noms effectuée par le compilateur.  
+# <a name="calling-dll-functions-from-visual-basic-applications"></a>Appel de fonctions de la DLL à partir d'applications Visual Basic
+Pour les applications Visual Basic (ou les applications dans d’autres langages tels que Pascal ou Fortran) appeler des fonctions dans une DLL C/C++, les fonctions doivent être exportées à l’aide de la convention d’appel correcte sans la décoration de noms effectuée par le compilateur.  
   
- `__stdcall` crée la convention d'appel correcte pour la fonction \(la fonction appelée nettoie le pile et les paramètres sont passés de droite à gauche\) mais décore le nom de la fonction différemment.  Donc, quand le mot clé **\_\_declspec\(dllexport\)** est appliqué à une fonction exportée d'une DLL, le nom décoré est exporté également.  
+ `__stdcall`crée la convention d’appel correcte pour la fonction (la fonction appelée nettoie la pile et les paramètres sont passés de droite à gauche) mais décore le nom de la fonction différemment. Ainsi, lorsque **__declspec (dllexport)** est utilisée sur une fonction exportée dans une DLL, le nom décoré est exporté.  
   
- La décoration de nom `__stdcall` fait précéder le nom du symbole d'un trait de soulignement \(\_\) et annexe au symbole arobase \(@\) suivi du nombre d'octets dans la liste d'arguments \(l'espace de pile requis\).  Lorsqu'elle est déclarée en tant que :  
+ Le `__stdcall` décoration de nom précéder le nom de symbole d’un trait de soulignement (_) et ajoute le symbole avec un arobase (@) suivi par le nombre d’octets dans la liste d’arguments (l’espace de pile requis). Par conséquent, lorsqu’elle est déclarée en tant que :  
   
 ```  
 int __stdcall func (int a, double b)  
 ```  
   
- la fonction est alors décorée de la manière suivante :  
+ est décorée comme :  
   
 ```  
 _func@12  
 ```  
   
- La convention d'appel C \(`__cdecl`\) décore le nom en tant que `_func`.  
+ La convention d’appel C (`__cdecl`) décore le nom en tant que `_func`.  
   
- Pour obtenir le nom décoré, utilisez [\/MAP](../build/reference/map-generate-mapfile.md).  L'utilisation du mot clé **\_\_declspec\(dllexport\)** produit l'effet suivant :  
+ Pour obtenir le nom décoré, utilisez [mappage](../build/reference/map-generate-mapfile.md). Utilisation de **__declspec (dllexport)** effectue les opérations suivantes :  
   
--   Si la fonction est exportée à l'aide de la convention d'appel C \(**\_cdecl**\), elle supprime le trait de soulignement de début \(\_\) quand le nom est exporté.  
+-   Si la fonction est exportée avec la convention d’appel C (**_cdecl**), elle supprime le trait de soulignement (_) quand le nom est exporté.  
   
--   Si la fonction exportée n'utilise pas la convention d'appel C \(par exemple, `__stdcall`\), elle exporte le nom décoré.  
+-   Si la fonction exportée n’utilise pas la convention d’appel C (par exemple, `__stdcall`), elle exporte le nom décoré.  
   
- Comme il n'existe aucun moyen de substituer les cas où le nettoyage de pile se produit, vous devez utiliser `__stdcall`.  Pour supprimer la décoration des noms au moyen de `__stdcall`, vous devez spécifier les noms à l'aide d'alias dans la section EXPORTS du fichier .def.  Cette approche est illustrée ci\-dessous pour la déclaration de fonction suivante :  
+ Comme il n’existe aucun moyen de remplacement dans laquelle le nettoyage de pile se produit, vous devez utiliser `__stdcall`. Pour la décoration des noms avec `__stdcall`, vous devez les spécifier à l’aide d’alias dans la section EXPORTS du fichier .def. Ceci est illustré comme suit pour la déclaration de fonction suivante :  
   
 ```  
 int  __stdcall MyFunc (int a, double b);  
 void __stdcall InitCode (void);  
 ```  
   
- Dans le fichier .DEF :  
+ Dans le. Fichier de définition :  
   
 ```  
 EXPORTS  
@@ -67,21 +68,21 @@ EXPORTS
    INITCODE=_InitCode@0  
 ```  
   
- Pour que les DLL puissent être appelées par des programmes écrits en Visual Basic, la technique des alias décrite dans cette rubrique est nécessaire dans le fichier .def.  Si l'alias est utilisé dans le programme Visual Basic, l'utilisation des alias dans le fichier .def n'est pas nécessaire.  Elle peut être intégrée dans le programme Visual Basic par l'ajout d'une clause d'alias à l'instruction [Declare](../Topic/Declare%20Statement.md).  
+ Pour les DLL puissent être appelées par des programmes écrits en Visual Basic, la technique des alias décrite dans cette rubrique est nécessaire dans le fichier .def. Si l’alias est utilisé dans le programme Visual Basic, utilisez des alias dans le fichier .def n’est pas nécessaire. Il peut être effectuée dans le programme Visual Basic en ajoutant une clause d’alias à la [Declare](/dotnet/visual-basic/language-reference/statements/declare-statement) instruction.  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?  
   
--   [Exportation à partir d'une DLL](../build/exporting-from-a-dll.md)  
+-   [Exportation à partir d’une DLL](../build/exporting-from-a-dll.md)  
   
--   [Exportation à partir d'une DLL à l'aide de fichiers .DEF](../build/exporting-from-a-dll-using-def-files.md)  
+-   [Exportation à partir d’une DLL à l’aide. Fichiers DEF](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [Exportation à partir d'une DLL à l'aide de \_\_declspec\(dllexport\)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [Exportation à partir d’une DLL à l’aide de __declspec (dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [Exportation de fonctions C\+\+ à utiliser dans des exécutables en langage C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
+-   [Exportation de fonctions C++ à utiliser dans des exécutables en langage C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
   
--   [Méthode d'exportation à utiliser](../build/determining-which-exporting-method-to-use.md)  
+-   [Méthode d’exportation à utiliser](../build/determining-which-exporting-method-to-use.md)  
   
 -   [Noms décorés](../build/reference/decorated-names.md)  
   
-## Voir aussi  
- [DLL en Visual C\+\+](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [DLL dans Visual C++](../build/dlls-in-visual-cpp.md)

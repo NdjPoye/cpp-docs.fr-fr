@@ -1,36 +1,35 @@
 ---
-title: "Avertissement du compilateur (niveau 4) C4706 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4706"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4706"
+title: Compilateur avertissement (niveau 4) C4706 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4706
+dev_langs: C++
+helpviewer_keywords: C4706
 ms.assetid: 89cd3f4f-812c-4a4b-9426-65a5a6d1b99c
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 824028fb7fd6d563a7f49017eb6b35d1443490bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 4) C4706
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-assignation au sein d'une expression conditionnelle  
+# <a name="compiler-warning-level-4-c4706"></a>Avertissement du compilateur (niveau 4) C4706
+affectation dans une expression conditionnelle  
   
- La valeur testée dans une expression conditionnelle était le résultat d'une assignation.  
+ La valeur de test dans une expression conditionnelle était le résultat d’une assignation.  
   
- Une assignation possède une valeur \(la valeur à gauche de l'assignation\) qui peut être légalement utilisée dans une autre expression, y compris une expression de test.  
+ Une affectation a la valeur (la valeur sur le côté gauche de l’assignation) qui peut être légalement utilisée dans une autre expression, y compris une expression de test.  
   
- L'exemple suivant génère l'erreur C4706 :  
+ L’exemple suivant génère l’erreur C4706 :  
   
 ```  
 // C4706a.cpp  
@@ -44,7 +43,7 @@ int main()
 }  
 ```  
   
- L'avertissement aura lieu même si vous doublez les parenthèses autour de la condition testée :  
+ L’avertissement se produit même si vous doublez les parenthèses autour de la condition de test :  
   
 ```  
 // C4706b.cpp  
@@ -58,7 +57,7 @@ int main()
 }  
 ```  
   
- Si vous avez l'intention de tester une relation et non pas d'effectuer une assignation, utilisez l'opérateur `==`.  La ligne suivante, par exemple, teste si a et b sont égaux :  
+ Si votre intention est de tester une relation et non ne pas d’effectuer une assignation, utilisez le `==` opérateur. Par exemple, la ligne suivante tests si un et b sont égaux :  
   
 ```  
 // C4706c.cpp  
@@ -72,7 +71,7 @@ int main()
 }  
 ```  
   
- Si vous prévoyez d'utiliser la valeur testée comme résultat d'une assignation, vérifiez que l'assignation est différente de zéro.  Le code suivant, par exemple, ne générera pas cet avertissement :  
+ Si vous souhaitez que votre test de valeur au résultat d’une assignation, tester pour vous assurer que l’affectation est différente de zéro ou non null. Par exemple, le code suivant génère pas cet avertissement :  
   
 ```  
 // C4706d.cpp  

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d32c9e792971b20da99377ad36f3872f5824dcc7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c54b6e9716e7f0aee9a0b211148b76804d9520bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>Types de données SBCS et MBCS
 Toute routine de bibliothèque Runtime `MBCS` Microsoft qui gère un seul caractère multi-octet ou un seul octet de caractère multi-octet attend un argument `unsigned int` (où 0x00 <= valeur du caractère <= 0xFFFF et 0x00 <= valeur de l’octet <= 0xFF). Une routine `MBCS` qui gère des octets ou caractères multi-octets dans un contexte de chaîne attend une chaîne de caractères multi-octets représentée en tant que pointeur `unsigned char`.  

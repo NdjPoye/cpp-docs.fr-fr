@@ -1,38 +1,36 @@
 ---
-title: "@SizeStr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "@SizeStr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "@SizeStr symbol"
+title: '@SizeStr| Documents Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '@SizeStr'
+dev_langs: C++
+helpviewer_keywords: '@SizeStr symbol'
 ms.assetid: 91fa439a-7df1-4dd9-a0c7-82bae2eb68c9
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 036de1809846f0519c1d5b934559636ae61f8116
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# @SizeStr
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Une fonction macro qui retourne la longueur de la chaîne spécifiée.  Retourne un entier.  
+# <a name="sizestr"></a>@SizeStr
+Une fonction de macro qui retourne la longueur de la chaîne donnée. Retourne un entier.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 @SizeStr( string )  
 ```  
   
-## Voir aussi  
- [Symbols Reference](../../assembler/masm/symbols-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les symboles](../../assembler/masm/symbols-reference.md)

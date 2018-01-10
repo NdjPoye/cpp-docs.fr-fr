@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 01d200e716ce4291350584ac7e2f388cca30cedf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e96e9a692622d17c24d4d73b7249f70a1593bf61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameter-validation"></a>Validation de paramètre
 La plupart des fonctions CRT avec sécurité avancée et de nombreuses fonctions préexistantes valident leurs paramètres. Elles peuvent notamment rechercher les pointeurs de valeur NULL, vérifier que les entiers se trouvent dans une plage valide ou encore vérifier que les valeurs d’énumération sont valides. Quand un paramètre non valide est trouvé, son gestionnaire s’exécute.  
@@ -34,4 +35,4 @@ La plupart des fonctions CRT avec sécurité avancée et de nombreuses fonctions
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités de sécurité dans la bibliothèque CRT](../c-runtime-library/security-features-in-the-crt.md)   
- [Fonctionnalités de la bibliothèque CRT](../c-runtime-library/crt-library-features.md)
+ [Fonctionnalités de bibliothèque CRT](../c-runtime-library/crt-library-features.md)

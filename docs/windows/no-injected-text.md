@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7856da95c8bd7563d66fc901bdac1f2a931b7384
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8c74d3134b5381be4ec330742726b26fea6155da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 Empêche le compilateur d’injecter du code à la suite d’utilisation de l’attribut.  
@@ -37,10 +40,10 @@ Empêche le compilateur d’injecter du code à la suite d’utilisation de l’
  `boolean`(facultatif)  
  **true** si vous ne souhaitez aucun code injecté, **false** pour autoriser le code injecté. **true** est la valeur par défaut.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’utilisation la plus courante de la **no_injected_text** attribut C++ est par la [/Fx](../build/reference/fx-merge-injected-code.md) option du compilateur, ce qui insère le **no_injected_text** attribut dans le fichier .mrg.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -48,8 +51,8 @@ Empêche le compilateur d’injecter du code à la suite d’utilisation de l’
 |-|-|  
 |**S'applique à**|N'importe où|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

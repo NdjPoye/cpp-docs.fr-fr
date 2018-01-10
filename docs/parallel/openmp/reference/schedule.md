@@ -4,41 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- schedule
-dev_langs:
-- C++
-helpviewer_keywords:
-- schedule OpenMP clause
+f1_keywords: schedule
+dev_langs: C++
+helpviewer_keywords: schedule OpenMP clause
 ms.assetid: 286f1fc3-6598-4837-b4c8-8b1fa3193965
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9f39e46f38c09967c6109470f7ed8f4f15135ff8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b83c5e6541cbbdfe64b5f2b7731f7a77832f7293
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedule"></a>planification
 S’applique à la [pour](../../../parallel/openmp/reference/for-openmp.md) la directive.  
@@ -62,9 +44,9 @@ schedule(type[,size])
 -   `static`  
   
  `size`(facultatif)  
- Spécifie la taille des itérations. `size`doit être un entier. Non valide lorsque `type` est `runtime`.  
+ Spécifie la taille d’itérations. `size`doit être un entier. Non valide lorsque `type` est `runtime`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [2.4.1 construction for](../../../parallel/openmp/2-4-1-for-construct.md).  
   
 ## <a name="example"></a>Exemple  

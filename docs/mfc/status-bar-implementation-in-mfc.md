@@ -26,11 +26,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad340de74193bedbe817f1cd5bb5cc29b3417195
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d81982e23f100fe75d6cc5769cd19359bfaa6f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implémentation de la barre d'état dans MFC
 A [CStatusBar](../mfc/reference/cstatusbar-class.md) objet est une barre de contrôle avec une ligne de texte des volets de sortie. Les volets de sortie sont fréquemment utilisés comme des lignes de message et comme indicateurs d'états. Exemples : les lignes de message à l’aide de menu qui expliquent brièvement la commande de menu sélectionné et les indicateurs qui indiquent l’état de l’arrêt défil, VERR. NUM et défil.  

@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2b6bd889a20c2c31de8e5fb6d11990fc2579ef2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9df1e5d7559b434c1af0f1feff3b73b8141a8865
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ftmbasemarshalinterface-method"></a>FtmBase::MarshalInterface, méthode
 Écrit dans un flux les données requises pour initialiser l’objet proxy dans un processus client.  
@@ -73,7 +76,7 @@ STDMETHODIMP MarshalInterface(
  E_FAIL  
  L'opération a échoué.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** ftm.h  
   
  **Espace de noms :** Microsoft::WRL  

@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f0ac465ec20d0893add63d8b5791b9445b17f8fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aa6285504a194d909dec7a446437ca9f584272a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-declarations"></a>Vue d'ensemble des déclarations
 Une « déclaration » spécifie l'interprétation et les attributs d'un ensemble d'identificateurs. Une déclaration qui permet également que le stockage soit réservé pour l'objet ou la fonction nommés par l'identificateur est appelée une « définition ». Les déclarations C pour les variables, fonctions et types présentent la syntaxe suivante :  

@@ -38,11 +38,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fc8a2277995cc9ddbb36cbceda68e0ba4a862b59
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6193445dace47b62cf8793d69ad45e0f73a2f10d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gets-getws"></a>gets, _getws
 Obtient une ligne du flux `stdin` Des versions plus sécurisées de ces fonctions sont disponibles. Consultez [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).  
@@ -51,7 +52,7 @@ Obtient une ligne du flux `stdin` Des versions plus sécurisées de ces fonction
 >  Ces fonctions sont obsolètes. Depuis Visual Studio 2015, elles ne sont pas disponibles dans la bibliothèque CRT. Les versions sécurisées de ces fonctions, gets_s et getws_s, sont toujours disponibles. Pour plus d’informations sur ces fonctions alternatives, consultez [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -80,7 +81,7 @@ wchar_t *_getws(
  Retourne son argument en cas de réussite. Un pointeur `NULL` indique une condition d’erreur ou de fin de fichier. Utilisez [ferror](../c-runtime-library/reference/ferror.md) ou [feof](../c-runtime-library/reference/feof.md) pour déterminer laquelle des deux s’est produite. Si `buffer` est `NULL`, ces fonctions appellent un gestionnaire de paramètre non valide, comme décrit dans [Parameter Validation](../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent `NULL` et définissent errno sur `EINVAL`.  
   
 ## <a name="remarks"></a>Notes  
- La fonction `gets` lit une ligne dans le flux d’entrée standard `stdin` et la stocke dans `buffer`. La ligne se compose de tous les caractères jusqu’à et y compris le premier caractère de saut de ligne (« \n »). `gets` remplace ensuite le caractère de saut de ligne par un caractère null (« \0 ») avant de retourner la ligne. En revanche, la fonction `fgets` conserve le caractère de saut de ligne. `_getws` est une version à caractères larges de `gets`; son argument et sa valeur de retour sont des chaînes à caractères larges.  
+ La fonction `gets` lit une ligne dans le flux d’entrée standard `stdin` et la stocke dans `buffer`. La ligne se compose de tous les caractères jusqu’à et y compris le premier caractère de saut de ligne (« \n »). `gets` remplace ensuite le caractère de saut de ligne par un caractère null (« \0 ») avant de retourner la ligne. En revanche, la fonction `fgets` conserve le caractère de saut de ligne. `_getws` est une version à caractères larges de `gets`; son argument et sa valeur de retour sont des chaînes à caractères larges.  
   
 > [!IMPORTANT]
 >  Comme il n’existe aucun moyen de limiter le nombre de caractères lus par gets, une entrée non approuvée peut facilement provoquer des dépassements de la mémoire tampon. Utilisez plutôt `fgets` .  
@@ -93,14 +94,14 @@ wchar_t *_getws(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_getts`|`gets`|`gets`|`_getws`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`gets`|\<stdio.h>|  
 |`_getws`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

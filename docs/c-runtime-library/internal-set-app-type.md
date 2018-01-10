@@ -28,11 +28,12 @@ caps.latest.revision: "2"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4eb5a061e2468c9590dd49c7ae2306091b397aa3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3e70c477884582dbd868c33be34ee6cf70eca10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setapptype"></a>__set_app_type
 Définit le type d’application actuel.  
@@ -49,7 +50,7 @@ void __set_app_type (
  `at`  
  Valeur qui indique le type d’application. Les valeurs possibles sont :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |_UNKNOWN_APP|Type d’application inconnu.|  
 |_CONSOLE_APP|Application console (ligne de commande).|  
@@ -57,7 +58,7 @@ void __set_app_type (
   
 ## <a name="remarks"></a>Notes  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a6ab8b0a644c859afcd73944f048a6549350502
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fc887ad855b00b525c74b66bfc70f2adb3312e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Cast de type des objets de classe MFC
 Macros de conversion de type permettent d’effectuer un cast d’un pointeur spécifié vers un pointeur qui pointe vers un objet de classe spécifique, avec ou sans vérifier que le cast est autorisé.  
@@ -52,7 +53,7 @@ DYNAMIC_DOWNCAST(class, pointer)
  `pointer`  
  Un pointeur pour être converti en un pointeur vers un objet de type `class`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La macro sera effectué le `pointer` paramètre en un pointeur vers un objet de la `class` type du paramètre.  
   
  Si l’objet référencé par le pointeur est un « type de » la classe identifiée, la macro retourne le pointeur approprié. Si elle n’est pas une conversion valides, la macro retourne **NULL**.  
@@ -71,7 +72,7 @@ STATIC_DOWNCAST(class_name, pobject)
  *pObject*  
  Le pointeur d’être converti en un pointeur vers un *class_name* objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  *pObject* doit être **NULL**, ou pointer vers un objet d’une classe qui est dérivée directement ou indirectement, à partir de *class_name*. Dans les versions de votre application avec le **_DEBUG** sera de symbole de préprocesseur défini, la macro **ASSERT** si *pobject* n’est pas **NULL**, ou s’il pointe vers un objet qui n’est pas un « type de » de la classe spécifiée dans le *class_name* paramètre (voir [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)). Non- **_DEBUG** builds, la macro effectue la conversion en sans vérification de type.  
   
  La classe spécifiée dans le *class_name* paramètre doit être dérivé `CObject` et doivent utiliser le `DECLARE_DYNAMIC` et `IMPLEMENT_DYNAMIC`, le `DECLARE_DYNCREATE` et `IMPLEMENT_DYNCREATE`, ou `DECLARE_SERIAL` et `IMPLEMENT_SERIAL`macros comme expliqué dans l’article [classe CObject : dérivation d’une classe de CObject](../../mfc/deriving-a-class-from-cobject.md).  

@@ -1,50 +1,49 @@
 ---
-title: "MMWORD | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MMWORD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MMWORD directive"
+title: MMWORD | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: MMWORD
+dev_langs: C++
+helpviewer_keywords: MMWORD directive
 ms.assetid: b4c5a104-9078-4fb4-afc3-d1e63abe562a
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bbe20f842a97186071431cd73e7de65fa8170bd4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# MMWORD
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Utilisé pour les opérandes multimédias 64 bits avec l'instruction de MMX et de SSE \(XMM\).  
+# <a name="mmword"></a>MMWORD
+Utilisé pour les opérandes de multimédias 64 bits avec des instructions MMX et SSE (XMM).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 MMWORD  
 ```  
   
-## Notes  
- `MMWORD` est un type.  Avant MMWORD ajouté à MASM, la fonctionnalité équivalente peut avoir été effectuée avec :  
+## <a name="remarks"></a>Notes  
+ `MMWORD`est un type.  Avant de MMWORD ajouté à MASM, une fonctionnalité équivalente pourrait avoir été obtenue avec :  
   
 ```  
 mov mm0, qword ptr [ebx]  
 ```  
   
- Bien que les deux instructions fonctionne sur les opérandes 64 bits, `QWORD` est le type pour les entiers non signés 64 bits et `MMWORD` est le type pour une valeur 64 bits de média.  
+ Alors que les deux instructions fonctionnent sur les opérandes de 64 bits, `QWORD` est de type pour les entiers non signés 64 bits et `MMWORD` est le type de valeur multimédia 64 bits.  
   
- `MMWORD` est conçu pour représenter le même type que [\_\_m64](../../cpp/m64.md).  
+ `MMWORD`est destiné à représenter le même type que [__m64](../../cpp/m64.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
-movq     mm0, mmword ptr [ebx]  
+movq     mm0, mmword ptr [ebx]  
 ```

@@ -1,139 +1,138 @@
 ---
-title: "delegate (extensions du composant&#160;C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "delegate_cpp"
-  - "delegate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "delegate (mot clé C++)"
+title: Delegate (Extensions du composant C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- delegate_cpp
+- delegate
+dev_langs: C++
+helpviewer_keywords: delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-caps.latest.revision: 26
-caps.handback.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "26"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 30fd64fd37fb30c34b5d4f5901f16143fb1cd701
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# delegate (extensions du composant&#160;C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Déclare un type qui représente un pointeur fonction.  
+# <a name="delegate--c-component-extensions"></a>delegate (extensions du composant C++)
+Déclare un type qui représente un pointeur de fonction.  
   
-## Tous les runtimes  
- [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] et le Common Language Runtime prennent en charge les délégués.  
+## <a name="all-runtimes"></a>Tous les runtimes  
+ Le Windows Runtime et le common language runtime prend en charge les délégués.  
   
-### Remarques  
- `delegate` est un mot clé contextuel.  Pour plus d'informations, consultez [Mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+### <a name="remarks"></a>Notes  
+ `delegate` est un mot clé contextuel. Pour plus d’informations, consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
- Pour détecter au moment de la compilation si un type est un délégué, utilisez le trait de type `__is_delegate()`.  Pour plus d'informations, consultez [Compiler Support for Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Pour détecter au moment de la compilation si un type est un délégué, utilisez la `__is_delegate()` trait de type. Pour plus d’informations, consultez [prise en charge du compilateur pour les Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
-## Windows Runtime  
- C\+\+\/CX prend en charge les délégués à l'aide de la syntaxe suivante.  
+## <a name="windows-runtime"></a>Windows Runtime  
+ C + c++ / CX prend en charge les délégués avec la syntaxe suivante.  
   
-### Syntaxe  
+### <a name="syntax"></a>Syntaxe  
   
 ```cpp  
+access  
+delegate  
+return-type  
+delegate-type-identifier  
+(  
+[ parameters ]  
+)  
   
-access delegate return-type delegate-type-identifier ([ parameters ])  
 ```  
   
-### Paramètres  
+### <a name="parameters"></a>Paramètres  
  *access*  
- \(facultatif\) Accessibilité du délégué, qui peut être `public` \(par défaut\) ou `private`.  Le prototype de fonction peut également être qualifié avec les mots clés `const` ou `volatile`.  
+ (facultatif) L’accessibilité du délégué, qui peut être `public` (la valeur par défaut) ou `private`. Le prototype de fonction peut également être qualifié avec le `const` ou `volatile` mots clés.  
   
- *return\-type*  
- Type de retour du prototype de fonction.  
+ *type de retour*  
+ Le type de retour du prototype de fonction.  
   
- *delegate\-type\-identifier*  
- Nom du type du délégué déclaré.  
+ *identificateur de type délégué*  
+ Le nom du type délégué déclaré.  
   
- *parameters*  
- \(Facultatif\) Types et identificateurs du prototype de fonction.  
+ *paramètres*  
+ (Facultatif) Les types et les identificateurs du prototype de fonction.  
   
-### Remarques  
- Utilisez *delegate\-type\-identifier* pour déclarer un événement avec le même prototype que le délégué.  Pour plus d'informations, consultez [Délégués \(C\+\+\/CX\)](../Topic/Delegates%20\(C++-CX\).md).  
+### <a name="remarks"></a>Notes  
+ Utilisez le *identificateur de type de délégué* pour déclarer un événement avec le même prototype que le délégué. Pour plus d’informations, consultez [délégués (C + c++ / CX)](../cppcx/delegates-c-cx.md).  
   
-### Conditions requises  
- Option du compilateur : **\/ZW**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : **/ZW**  
   
-## Common Language Runtime  
- Le Common Language Runtime prend en charge les délégués avec la syntaxe suivante.  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ Le common language runtime prend en charge les délégués avec la syntaxe suivante.  
   
-### Syntaxe  
+### <a name="syntax"></a>Syntaxe  
   
 ```cpp  
+access  
+delegate  
+function_declaration  
   
-access delegate function_declaration  
 ```  
   
-### Paramètres  
+### <a name="parameters"></a>Paramètres  
  *access*  
- \(facultatif\) L'accessibilité du délégué en dehors de l'assembly peut être publique et privée.  La valeur par défaut est Privé.  À l'intérieur d'une classe, un délégué peut avoir n'importe quelle accessibilité.  
+ (facultatif) L’accessibilité du délégué en dehors de l’assembly peut être public ou privé.  La valeur par défaut est privé.  À l’intérieur d’une classe, un délégué peut avoir n’importe quelle accessibilité.  
   
- *function\_declaration*  
- Signature de la fonction qui peut être liée au délégué.  Le type de retour d'un délégué peut être tout type managé.  Pour des raisons d'interopérabilité, il est recommandé que le retour d'un délégué soit de type CLS.  
+ *function_declaration*  
+ La signature de la fonction qui peut être liée au délégué. Le type de retour d’un délégué peut être n’importe quel type managé. Pour des raisons d’interopérabilité, il est recommandé que le type de retour d’un délégué est un type CLS.  
   
- Pour définir un délégué indépendant, le premier paramètre de *function\_declaration* doit être le type du pointeur `this` de l'objet.  Pour plus d'informations, consultez [Délégués indépendants](../misc/unbound-delegates.md).  
+ Pour définir un délégué indépendant, le premier paramètre de *function_declaration* doivent être du type de la `this` pointeur pour l’objet. 
   
-### Remarques  
- Les délégués sont multicast : le « pointeur fonction » peut être lié à une ou plusieurs méthodes dans une classe managée.  Le mot clé **délégué** définit un type délégué multicast avec une signature de méthode spécifique.  
+### <a name="remarks"></a>Notes  
+ Les délégués sont multicast : « pointeur de fonction » peut être lié à une ou plusieurs méthodes dans une classe managée. Le **déléguer** (mot clé) définit un type de délégué multicast avec une signature de méthode spécifique.  
   
- Un délégué peut également être lié à une méthode d'une classe Valeur, telle qu'une méthode statique.  
+ Un délégué peut également être lié à une méthode d’une classe de valeur, par exemple, une méthode statique.  
   
- Un délégué possède les caractéristiques suivantes :  
+ Un délégué a les caractéristiques suivantes :  
   
--   Elle hérite de **System::MulticastDelegate**.  
+-   Il hérite de **System::MulticastDelegate**.  
   
--   Il possède un constructeur qui accepte deux arguments : un pointeur vers une classe managée ou **NULL** \(dans le cas de liaison à une méthode statique\) et une méthode qualifiée complète de type spécifié.  
+-   Elle possède un constructeur qui accepte deux arguments : un pointeur vers une classe managée ou **NULL** (dans le cas de liaison à une méthode statique) et une méthode complète du type spécifié.  
   
 -   Elle possède une méthode appelée `Invoke`, dont la signature correspond à la signature déclarée du délégué.  
   
- Lorsqu'un délégué est appelé, ses fonctions sont appelées dans l'ordre dans lequel elles ont été attachées.  
+ Lorsqu’un délégué est appelé, ses fonctions sont appelées dans l’ordre qu’ils ont été liées.  
   
- La valeur de retour d'un délégué est la valeur de retour de sa dernière fonction membre jointe.  
+ La valeur de retour d’un délégué est la valeur de retour à partir de sa dernière fonction membre attaché.  
   
- Les délégués ne peuvent pas être surchargés.  
+ Les délégués ne peuvent pas être surchargées.  
   
- Les délégués peuvent être liés ou indépendants.  
+ Les délégués peuvent être liés ou indépendant.  
   
- Lorsque vous instanciez un délégué lié, le premier argument doit être une référence d'objet.  Le deuxième argument d'une instanciation de délégué doit être l'adresse d'une méthode d'un objet de classe managé, ou un pointeur vers une méthode d'un type valeur.   Le deuxième argument d'une instanciation de délégué doit nommer la méthode avec la syntaxe de portée de classe complète et appliquer l'opérateur address\-of.  
+ Lorsque vous instanciez un délégué lié, le premier argument doit être une référence d’objet.  Le deuxième argument d’une instanciation de délégué doit être l’adresse d’une méthode d’un objet de classe managée ou un pointeur à une méthode d’un type valeur.   Le deuxième argument d’une instanciation de délégué doit nommer la méthode avec la syntaxe de portée de classe complet et appliquer l’opérateur d’adresse.  
   
- Lorsque vous instanciez un délégué indépendant, le premier argument doit être l'adresse d'une méthode d'objet de classe managée, ou un pointeur vers une méthode d'un type valeur.   L'argument doit nommer la méthode avec la syntaxe de portée de classe complète et appliquer l'opérateur address\-of.  
+ Lorsque vous instanciez un délégué indépendant, le premier argument doit être l’adresse d’une méthode d’un objet de classe managée ou un pointeur vers une méthode d’un type valeur.   L’argument doit nommer la méthode avec la syntaxe de portée de classe complet et appliquer l’opérateur d’adresse.  
   
- Lors de la création d'un délégué d'une fonction statique ou globale, un seul paramètre est requis : la fonction \(éventuellement, l'adresse de la fonction\).  
+ Lorsque vous créez un délégué à une fonction globale ou statique, il suffit qu’un seul paramètre : la fonction (le cas échéant, l’adresse de la fonction).  
   
- Pour plus d'informations sur les délégués, consultez  
+ Pour plus d’informations sur les délégués, consultez  
   
--   [Délégués indépendants](../misc/unbound-delegates.md)  
+-   [Guide pratique pour définir et utiliser des délégués (C++-CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)  
   
--   [Comment : définir et utiliser des délégués](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)  
+-   [Délégués génériques (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
   
--   [Délégué à un membre d'une classe Value](../misc/how-to-associate-delegates-to-members-of-a-value-class.md)  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : **/clr**  
   
--   [Délégué à une fonction non managée](../misc/how-to-associate-delegates-to-unmanaged-functions.md)  
-  
--   [Délégués composés](../misc/how-to-compose-delegates.md)  
-  
--   [Comment : passer un délégué ^ à une fonction native qui attend un pointeur de fonction](../misc/how-to-pass-a-delegate-hat-to-a-native-function-expecting-a-function-pointer.md)  
-  
--   [Generic Delegates \(Visual C\+\+\)](../windows/generic-delegates-visual-cpp.md)  
-  
-### Conditions requises  
- Option du compilateur : **\/clr**  
-  
-### Exemples  
+### <a name="examples"></a>Exemples  
  **Exemple**  
   
- L'exemple suivant montre comment déclarer, initialiser et appeler des délégués.  
+ L’exemple suivant montre comment déclarer, initialiser et appeler des délégués.  
   
 ```cpp  
 // mcppv2_delegate.cpp  
@@ -194,10 +193,17 @@ int main () {
   
  **Sortie**  
   
-  **dans func1 8**  
- **dans func1 9**  
- **dans func2 9**  
- **dans func2 10**  
- **dans func3 11 statique**   
-## Voir aussi  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+in func1 8  
+  
+in func1 9  
+  
+in func2 9  
+  
+in func2 10  
+  
+in static func3 11  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)

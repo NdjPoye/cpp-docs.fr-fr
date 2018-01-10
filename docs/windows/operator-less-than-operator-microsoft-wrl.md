@@ -1,31 +1,32 @@
 ---
-title: "operator&lt;, op&#233;rateur (Microsoft::WRL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::operator<"
-dev_langs: 
-  - "C++"
+title: "opérateur&lt; , opérateur (Microsoft::WRL) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::operator<
+dev_langs: C++
 ms.assetid: bfae0e1c-1648-482b-99c2-3217d62aba46
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: fca41cae7c8fdadd215b049228da0b87788d2717
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# operator&lt;, op&#233;rateur (Microsoft::WRL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Détermine si l'adresse d'un objet est inférieure à celle d'une autre.  
+# <a name="operatorlt-operator-microsoftwrl"></a>opérateur&lt; , opérateur (Microsoft::WRL)
+Détermine si l’adresse d’un objet est inférieur à un autre.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
 template<class T, class U>  
@@ -34,20 +35,20 @@ template<class T, class U>
 bool operator<(const Details::ComPtrRef<ComPtr<T>>& a, const Details::ComPtrRef<ComPtr<U>>& b) throw();  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `a`  
- L'objet de gauche.  
+ Objet gauche.  
   
  `b`  
- L'objet de droite.  
+ Objet droit.  
   
-## Valeur de retour  
- `true` si l'adresse de `a` est inférieure à celle de `b`; sinon, `false`.  
+## <a name="return-value"></a>Valeur de retour  
+ `true`Si l’adresse de `a` est inférieure à l’adresse de `b`; sinon, `false`.  
   
-## Configuration requise  
- **En\-tête:** client.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** client.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)

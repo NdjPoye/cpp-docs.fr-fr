@@ -1,36 +1,35 @@
 ---
-title: "Avertissement du compilateur (niveau 4) C4623 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4623"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4623"
+title: Compilateur avertissement (niveau 4) C4623 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4623
+dev_langs: C++
+helpviewer_keywords: C4623
 ms.assetid: e630d8d0-f6ea-469c-a74f-07b027587225
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d9a47f0cc967011465286329461abc72eccb8c80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 4) C4623
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-4-c4623"></a>Avertissement du compilateur (niveau 4) C4623
 '`derived class`' : le constructeur par défaut a été défini de manière implicite comme supprimé, car un constructeur par défaut de la classe de base est inaccessible ou supprimé  
   
- Un constructeur n'était pas accessible dans une classe de base et n'a pas été généré pour la classe dérivée.  Toute tentative pour créer un objet de ce type dans la pile provoquera une erreur du compilateur.  
+ Un constructeur n'était pas accessible dans une classe de base et n'a pas été généré pour la classe dérivée. Toute tentative pour créer un objet de ce type dans la pile provoquera une erreur du compilateur.  
   
- Cet avertissement est désactivé par défaut.  Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.  
+ Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant génère l'avertissement C4623.  
   
 ```  

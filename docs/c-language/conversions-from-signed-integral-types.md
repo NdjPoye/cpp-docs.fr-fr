@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ccda8d6fa2573245f34a38f327395955bf92fdc2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8977c70fc2ebdc6e9fccf22e44a04afaceae1392
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-signed-integral-types"></a>Conversions depuis les types intégraux signés
 Lorsqu'un entier signé est converti en entier non signé de taille égale ou supérieure et que la valeur de l'entier signé n'est pas négative, la valeur reste inchangée. La conversion s'effectue en étendant le signe de l'entier signé. Un entier signé est converti en entier signé plus court en tronquant les bits de poids fort. Le résultat est interprété comme une valeur non signée, comme illustré dans cet exemple.  
@@ -43,7 +44,7 @@ printf_s( "%hu\n", u );  // Prints 65533
   
 ### <a name="conversions-from-signed-integral-types"></a>Conversions depuis les types intégraux signés  
   
-|De|Pour|Méthode|  
+|From|À|Méthode|  
 |----------|--------|------------|  
 |**char**1|**short**|Étendre le signe|  
 |**char**|**long**|Étendre le signe|  
@@ -76,7 +77,7 @@ printf_s( "%hu\n", u );  // Prints 65533
   
  Pour le compilateur Microsoft 32 bits C, un entier est équivalent à un **long**. La procédure de conversion d’une valeur **int** est identique à celle de **long**.  
   
- **Fin de la section spécifique à Microsoft**  
+ **FIN de la section spécifique à Microsoft**  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conversions d’assignation](../c-language/assignment-conversions.md)

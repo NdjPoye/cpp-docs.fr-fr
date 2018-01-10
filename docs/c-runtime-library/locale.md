@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 987691d2eaf8ae2f6c8f724fb8bcf4f26ad68dcd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 835c396c36a23d05a1e3512fa7ad5e4c4e81c795
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locale"></a>Paramètres régionaux
 Les *paramètres régionaux* font référence aux paramètres de pays/région et de langue que vous pouvez utiliser pour personnaliser votre programme. Certaines catégories dépendantes des paramètres régionaux incluent les formats d'affichage des dates et des valeurs monétaires. Pour plus d’informations, consultez [Catégories de paramètres régionaux](../c-runtime-library/locale-categories.md).  

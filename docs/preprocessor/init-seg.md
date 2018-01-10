@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bc8f7c636a3d013d1dd7001e281d35af07961b6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69036ffba2143d166c9ac5c55a5b3ec9008b75bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initseg"></a>init_seg
 **Spécifique à C++**  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
 #pragma init_seg({ compiler | lib | user | "section-name" [, func-name]} )  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La signification des termes du contrat *segment* et *section* sont interchangeables dans cette rubrique.  
   
  Étant donné que l'initialisation d'objets statiques globaux peut impliquer l'exécution de code, vous devez spécifier un mot clé qui définit le moment où les objets doivent être construits. Il est particulièrement important d’utiliser le **init_seg** pragma dans les bibliothèques de liens dynamiques (DLL) ou les bibliothèques nécessitant l’initialisation.  

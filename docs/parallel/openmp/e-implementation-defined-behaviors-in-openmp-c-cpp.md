@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d54705947db5125bd9d30adb8a074a6ac354b94a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8fe890248ad2eb3bcee024bf12ccf4039484e7b2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="e-implementation-defined-behaviors-in-openmp-cc"></a>E. Défini par l’implémentation de comportements dans OpenMP C/C++
 Cette annexe résume les comportements qui sont décrites comme « défini par l’implémentation » dans cette API.  Chaque comportement est une référence croisée à sa description dans la spécification principale.  

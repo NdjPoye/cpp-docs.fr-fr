@@ -1,27 +1,27 @@
 ---
-title: "3.2.2 omp_destroy_lock and omp_destroy_nest_lock Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 3.2.2 fonctions fonctions omp_destroy_lock et omp_destroy_nest_lock | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: d334907d-94f7-4bbf-b20e-41d53484cbff
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5d0b91fd311581235a893a0b3f4f383e724f9aa6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# 3.2.2 omp_destroy_lock and omp_destroy_nest_lock Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ces fonctions permettent de vérifier que l'aigu pour verrouiller *le verrou* variable est pas initialisé.  Le format est comme suit :  
+# <a name="322-ompdestroylock-and-ompdestroynestlock-functions"></a>3.2.2 Fonctions omp_destroy_lock et omp_destroy_nest_lock
+Ces fonctions vous assurer que votre pointeur à la variable de verrou *verrou* n’est pas initialisé. Le format est le suivant :  
   
 ```  
 #include <omp.h>  
@@ -29,4 +29,4 @@ void omp_destroy_lock(omp_lock_t *lock);
 void omp_destroy_nest_lock(omp_nest_lock_t *lock);  
 ```  
   
- Il n'est pas conforme pour appeler l'une ou l'autre de ces routines avec une variable de verrou qui n'est pas initialisée ou déverrouillée.
+ Il n’est pas conforme à appeler une de ces routines avec une variable de verrou qui est initialisée ou déverrouillé.

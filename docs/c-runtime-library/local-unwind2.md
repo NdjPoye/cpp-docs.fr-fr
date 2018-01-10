@@ -29,11 +29,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8ad37d66e0e73e7ee75e2c44869c59c545025bd6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3b0c027623f5b562219e46c67ef730754538d602
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="localunwind2"></a>_local_unwind2
 Fonction CRT interne. Exécute tous les gestionnaires de terminaisons répertoriés dans la table d'étendue.  
@@ -54,7 +55,7 @@ void _local_unwind2(
  [in] `stop`  
  Niveau lexical qui indique là où `_local_unwind2` doit s'arrêter.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette méthode est employé uniquement par l'environnement d'exécution. N'appelez pas la méthode dans votre code.  
   
  Quand cette méthode exécute des gestionnaires de terminaisons, elle part du niveau lexical actuel et parcourt les autres situés au-dessus jusqu'à atteindre celui indiqué par `stop`. Elle n'exécute pas les gestionnaires de terminaisons au niveau indiqué par `stop`.  

@@ -56,11 +56,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 10de882f1d1942d2abec027da76aa40a201bfaad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0634aeb37d0374f5e6e1dfae0ac004792c279fc8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn, _wspawn, fonctions
 Chacune des fonctions `_spawn` crée et exécute un nouveau processus :  
@@ -86,7 +87,7 @@ Chacune des fonctions `_spawn` crée et exécute un nouveau processus :
  `v`  
  `argv`, un tableau de pointeurs vers les arguments de ligne de commande, est passé à la fonction `_spawn`. Ce suffixe est généralement utilisé lorsque plusieurs paramètres d'un nouveau processus sont variables.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les fonctions `_spawn` créent et exécutent chacune un nouveau processus. Elles gèrent automatiquement les arguments de chaîne de caractères multioctets si nécessaire, en identifiant les séquences de caractères multioctets en fonction de la page de codes multioctets en cours d'utilisation. Les fonctions `_wspawn` sont des versions à caractères larges des fonctions `_spawn` ; elles ne gèrent pas les chaînes de caractères multioctets. Sinon, les fonctions `_wspawn` se comportent de la même manière que leurs fonctions équivalentes `_spawn`.  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  

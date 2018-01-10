@@ -851,21 +851,22 @@ ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f2b3dea72647bc4c4f0d49b0af1de9d6bcb0f116
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: bab5e5e8316ff181ce8b2a190c721336fb5032cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internal-crt-globals-and-functions"></a>Fonctions et variables globales CRT internes  
   
-La bibliothèque Runtime C (CRT) contient des fonctions et des variables globales qui sont utilisées uniquement pour prendre en charge l’interface de bibliothèque publique. Certaines d'entre elles sont exposées dans des en-têtes publics comme détails relatifs à l'implémentation. Même si ces fonctions et variables globales sont accessibles via des exportations publiques, elles ne sont pas destinées à être utilisées par votre code. Nous vous conseillons de modifier tout code qui utilise ces fonctions et variables pour employer des équivalents de bibliothèque publique à la place. Ces fonctions peuvent changer d'une version à l'autre. Elles sont répertoriées ici pour vous aider à les identifier. Des liens sont fournis quand il existe une documentation supplémentaire, mais en général ces détails d’implémentation ne sont pas documentés.  
+La bibliothèque Runtime C (CRT) contient des fonctions et des variables globales qui sont utilisées uniquement pour prendre en charge l’interface de bibliothèque publique. Certaines d'entre elles sont exposées dans des en-têtes publics comme détails relatifs à l'implémentation. Même si ces fonctions et variables globales sont accessibles via des exportations publiques, elles ne sont pas destinées à être utilisées par votre code. Nous vous conseillons de modifier tout code qui utilise ces fonctions et variables pour employer des équivalents de bibliothèque publique à la place. Ces fonctions peuvent changer d'une version à l'autre. Elles sont répertoriées ici pour vous aider à les identifier. Des liens sont fournis quand il existe une documentation supplémentaire, mais en général ces détails d’implémentation ne sont pas documentés.  
   
 ## <a name="internal-crt-globals-and-value-macros"></a>Macros de valeurs et variables globales CRT internes  
   
 Ces variables globales et définitions de macro permettent d'implémenter la bibliothèque CRT.  
   
-|Nom|  
+|Name|  
 |----------|  
 |__badioinfo|  
 |[_acmdln](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|  
@@ -884,7 +885,7 @@ Ces variables globales et définitions de macro permettent d'implémenter la bib
 
 Ces macros de fonctions et fonctions permettent d’implémenter la bibliothèque CRT et la bibliothèque C++ Standard.  
   
-|Nom|  
+|Name|  
 |----------|  
 |__acrt_iob_func|  
 |__AdjustPointer|  

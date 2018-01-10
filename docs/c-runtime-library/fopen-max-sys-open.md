@@ -23,11 +23,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4078d13348c56810a42d3c6b3df17f9058f7b27d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 598f40758ccbe4d720a5a35bfa28e534fd9c1338
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fopenmax-sysopen"></a>FOPEN_MAX, _SYS_OPEN
 ## <a name="syntax"></a>Syntaxe  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Il s’agit du nombre maximal de fichiers qui peuvent être ouverts simultanément. `FOPEN_MAX` est le nom compatible ANSI. `_SYS_OPEN` est fourni pour assurer la compatibilité avec le code existant.  
   
 ## <a name="see-also"></a>Voir aussi  

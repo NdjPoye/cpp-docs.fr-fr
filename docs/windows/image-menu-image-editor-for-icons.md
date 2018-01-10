@@ -1,87 +1,87 @@
 ---
-title: "Menu Image (&#201;diteur d&#39;images pour les ic&#244;nes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.bitmap"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "menu Image"
+title: "L’image de Menu (Éditeur d’images pour les icônes) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.bitmap
+dev_langs: C++
+helpviewer_keywords: Image menu
 ms.assetid: ac2b4d53-1919-4fd1-a0af-d3c085c45af2
-caps.latest.revision: 8
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 49da8f90703190be068fe2d35a808b2cafed6f0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Menu Image (&#201;diteur d&#39;images pour les ic&#244;nes)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le menu Image, qui s'affiche uniquement lorsque l'Éditeur d'images est actif, contient des commandes pour modifier les images, gérer les palettes de couleurs et définir les options de la fenêtre Éditeur d'images.  De plus, les commandes pour utiliser les images de périphérique sont disponibles lorsque vous utilisez des icônes et des curseurs.  
+# <a name="image-menu-image-editor-for-icons"></a>Menu Image (Éditeur d'images pour les icônes)
+Le menu Image, qui apparaît uniquement lorsque l’éditeur d’images est active, dispose des commandes pour modifier les images, la gestion des palettes de couleurs et la définition des options de la fenêtre d’éditeur d’images. En outre, les commandes pour l’utilisation des images de périphérique sont disponibles lorsque vous travaillez avec des icônes et des curseurs.  
   
- **Inverser les couleurs**  
- Inverse vos couleurs.  Pour plus d'informations, consultez [Inversion des couleurs dans une sélection](../windows/inverting-the-colors-in-a-selection-image-editor-for-icons.md).  
+ **Couleurs inversées**  
+ Inverse les couleurs. Pour plus d’informations, consultez [inversion des couleurs dans une sélection](../windows/inverting-the-colors-in-a-selection-image-editor-for-icons.md).  
   
- **Retourner horizontalement**  
- Retourne l'image ou la sélection horizontalement.  Pour plus d'informations, consultez [Retournement d'une image](../mfc/flipping-an-image-image-editor-for-icons.md).  
+ **Symétrie horizontale**  
+ Retourne l'image ou la sélection horizontalement. Pour plus d’informations, consultez [retournement d’une Image](../windows/flipping-an-image-image-editor-for-icons.md).  
   
- **Retourner verticalement**  
- Retourne l'image ou la sélection verticalement.  Pour plus d'informations, consultez [Retournement d'une image](../mfc/flipping-an-image-image-editor-for-icons.md).  
+ **Symétrie verticale**  
+ Retourne l'image ou la sélection verticalement. Pour plus d’informations, consultez [retournement d’une Image](../windows/flipping-an-image-image-editor-for-icons.md).  
   
- **Faire pivoter de 90 degrés**  
- Fait pivoter l'image ou la sélection de 90 degrés.  Pour plus d'informations, consultez [Retournement d'une image](../mfc/flipping-an-image-image-editor-for-icons.md).  
+ **Rotation de 90 degrés**  
+ Fait pivoter l'image ou la sélection de 90 degrés. Pour plus d’informations, consultez [retournement d’une Image](../windows/flipping-an-image-image-editor-for-icons.md).  
   
- **Afficher la fenêtre des couleurs**  
- Ouvre la [fenêtre Couleurs](../windows/colors-window-image-editor-for-icons.md), dans laquelle vous pouvez choisir les couleurs à utiliser pour votre image.  Pour plus d'informations, consultez [Utilisation des couleurs](../mfc/working-with-color-image-editor-for-icons.md).  
+ **Afficher la fenêtre couleurs**  
+ Ouvre le [fenêtre couleurs](../windows/colors-window-image-editor-for-icons.md), dans laquelle vous pouvez choisir les couleurs à utiliser pour votre image. Pour plus d’informations, consultez [utilisation des couleurs](../windows/working-with-color-image-editor-for-icons.md).  
   
  **Utiliser la sélection comme pinceau**  
- Vous permet de créer un pinceau personnalisé à partir d'une partie d'une image.  Votre sélection devient un pinceau personnalisé qui distribue les couleurs dans la sélection sur l'image.  Des copies de la sélection sont déposées le long du chemin de déplacement.  Plus vous faites glisser lentement, plus le nombre de copies est important.  Pour plus d'informations, consultez [Création d'un pinceau personnalisé](../mfc/creating-a-custom-brush-image-editor-for-icons.md).  
+ Vous permet de créer un pinceau personnalisé à partir d’une partie d’une image. Votre sélection devient un pinceau personnalisé qui distribue les couleurs dans la sélection sur l’image. Copies de la sélection sont laissées sur le chemin de déplacement. Vous faites glisser plus lentement, le nombre de copies est effectuées. Pour plus d’informations, consultez [création d’un pinceau personnalisé](../windows/creating-a-custom-brush-image-editor-for-icons.md).  
   
- **Copier et entourer la sélection**  
- Crée une copie de la sélection actuelle et met un contour.  Si la couleur de fond est contenue dans la sélection en cours, celle\-ci sera exclue si l'option [transparent](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) est sélectionnée.  
+ **Copie et sélection de plan**  
+ Crée une copie de la sélection actuelle et met un contour. Si la couleur d’arrière-plan est contenue dans la sélection actuelle, il sera exclu si vous avez [transparent](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) sélectionné.  
   
- **Affiner les couleurs**  
- Ouvre le [sélecteur de couleurs personnalisées](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), qui vous permet de personnaliser les couleurs à utiliser pour votre image.  Pour plus d'informations, consultez [Personnalisation ou modification des couleurs](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
+ **Ajuster les couleurs**  
+ Ouvre le [sélecteur de couleurs personnalisées](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), qui vous permet de personnaliser les couleurs à utiliser pour votre image. Pour plus d’informations, consultez [personnalisation ou modification des couleurs](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
   
- **Charger la palette**  
- Ouvre la [boîte de dialogue Charger la palette](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), qui vous permet de charger les couleurs de la palette précédemment enregistrée sous la forme d'un fichier .pal.  
+ **Charger la Palette**  
+ Ouvre le [boîte de dialogue Charger la Palette de couleurs](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), qui vous permet de charger la palette de couleurs précédemment enregistré dans un fichier .pal.  
   
- **Enregistrer la palette**  
- Enregistre les couleurs de la palette dans un fichier .pal.  
+ **Enregistrer la Palette**  
+ Enregistre la palette de couleurs d’un fichier .pal.  
   
- **Dessin opaque**  
- Lorsque cette option est sélectionnée, la sélection actuelle devient opaque.  Lorsque cette option est désactivée, la sélection actuelle devient transparente.  Pour plus d'informations, consultez [Choix d'un arrière\-plan transparent ou opaque](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
+ **Dessiner Opaque**  
+ Cette option convertit la sélection actuelle opaque. Lorsqu’elle est désactivée, rend la sélection actuelle transparent. Pour plus d’informations, consultez [choisir un arrière-plan Transparent ou Opaque](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
   
- **Éditeur de barres d'outils**  
- Ouvre la [boîte de dialogue Nouvelle ressource de barre d'outils](../mfc/new-toolbar-resource-dialog-box.md).  
+ **Éditeur de barres d’outils**  
+ Ouvre le [boîte de dialogue Nouvelle ressource de barre d’outils](../windows/new-toolbar-resource-dialog-box.md).  
   
  **Paramètres de la grille**  
- Ouvre la [boîte de dialogue Paramètres de la grille](../mfc/grid-settings-dialog-box-image-editor-for-icons.md) dans laquelle vous pouvez spécifier des grilles pour votre image.  
+ Ouvre le [boîte de dialogue Paramètres de la grille](../windows/grid-settings-dialog-box-image-editor-for-icons.md) dans lequel vous pouvez spécifier des grilles pour votre image.  
   
- **Nouveau type d'image**  
- Ouvre la [boîte de dialogue Nouveau type d'image \<périphérique\>](../mfc/new-device-image-type-dialog-box-image-editor-for-icons.md).  Une seule ressource icône peut contenir plusieurs images de tailles différentes ; Windows peut utiliser la taille d'icône appropriée en fonction de la façon dont elle va être affichée.  Un nouveau type de périphérique ne modifie pas la taille de l'icône, mais crée une nouvelle image à l'intérieur de l'icône.  S'applique uniquement aux icônes et aux curseurs.  
+ **Nouveau Type d’Image**  
+ Ouvre le [nouveau \<appareil > boîte de dialogue Type d’Image](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md). Une seule ressource icône peut contenir plusieurs images de tailles différentes ; Windows peut utiliser la taille d’icône appropriée en fonction de son affichage. Un nouveau type de périphérique ne modifie pas la taille de l’icône, mais crée une nouvelle image de l’icône. S’applique uniquement aux icônes et des curseurs.  
   
- **Types d'images icônes\/curseur en cours**  
- Ouvre un sous\-menu qui répertorie les premières images curseur ou icône disponibles \(les neuf premières\).  La dernière commande du sous\-menu, **Plus...**, ouvre la [boîte de dialogue Ouvrir l'image \<périphérique\>](../mfc/open-device-image-dialog-box-image-editor-for-icons.md).  
+ **Type d’Image icône/curseur actuel**  
+ Ouvre un sous-menu qui répertorie les premier curseur ou icône images disponibles (les neuf premières). La dernière commande dans le sous-menu, **plus...** , ouvre le [ouvrir \<appareil > boîte de dialogue Image](../windows/open-device-image-dialog-box-image-editor-for-icons.md).  
   
- **Supprimer le type d'image**  
- Supprime l'image du périphérique sélectionné.  
+ **Supprimer le Type d’Image**  
+ Supprime l’image de périphérique sélectionné.  
   
  **Outils**  
- Lance un sous\-menu contenant tous les outils disponibles dans la [barre d'outils Éditeur d'images](../mfc/toolbar-image-editor-for-icons.md).  
+ Lance un sous-menu contenant tous les outils disponibles à partir de la [barre d’outils Éditeur d’images](../windows/toolbar-image-editor-for-icons.md).  
   
-## Configuration requise  
- Aucun  
+## <a name="requirements"></a>Configuration requise  
+ Aucun.  
   
-## Voir aussi  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Voir aussi  
+ [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)
+

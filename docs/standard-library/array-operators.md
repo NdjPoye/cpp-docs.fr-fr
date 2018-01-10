@@ -13,17 +13,15 @@ f1_keywords:
 - array/std::array::operator>
 - array/std::array::operator>=
 - array/std::array::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-caps.latest.revision: 12
+caps.latest.revision: "12"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: e4854303bc80603ccbdf908aefc31f304487fb1a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt;, opérateurs
 L’en-tête \<array> inclut ces fonctions de modèle de comparaison non-membres `array`.  
@@ -460,5 +458,4 @@ false
   
 ## <a name="see-also"></a>Voir aussi  
  [\<array>](../standard-library/array.md)
-
 

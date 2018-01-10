@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c5fa79de11c7c3a1526fc91361eecdc74f8bdcd7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0355b1c6a2731c9ca82e7ced37ad28f30a881eca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Erreurs potentielles de passage d'objets CRT entre frontières DLL
 Lorsque vous passez des objets CRT tels que des handles de fichiers, des paramètres régionaux et des variables d'environnement dans ou hors d'une DDL (appels de fonction sur la limite DDL), un comportement inattendu peut se produire si la DDL, ainsi que les fichiers qui l'appellent, utilisent des copies différentes des librairies CRT.  

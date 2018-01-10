@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65b3c5825b32a30bba5572de3333d8870086a67b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 56af79669b4240a32f7dc6ac134beae4ac402b2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcvtwstringgt"></a>&lt;cvt/wstring&gt;
 L’en-tête `<cvt/wstring>` dans les versions précédentes de Visual Studio définissait la classe de modèle [wstring_convert](../standard-library/wstring-convert-class.md) dans l’espace de noms stdext::cvt. L'en-tête est conservé à des fins de compatibilité descendante. Le nouveau code doit utiliser la version de la classe qui est définie dans [\<locale>](../standard-library/locale.md) dans l’espace de noms `std`  
@@ -34,7 +35,7 @@ L’en-tête `<cvt/wstring>` dans les versions précédentes de Visual Studio d�
   
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)

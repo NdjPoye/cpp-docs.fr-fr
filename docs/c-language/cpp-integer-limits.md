@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c1596f035da98524238e558ffe23816730aa42b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 861310be7e13c0ca5e656edc4214e59f5dacd659
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-integer-limits"></a>Limites d'entier C++
 **Section spécifique à Microsoft**  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="limits-on-integer-constants"></a>Limites appliquées aux constantes entières  
   
-|**Constante**|Signification|Valeur|  
+|**Constante**|Signification|Value|  
 |------------------|-------------|-----------|  
 |**CHAR_BIT**|Nombre de bits dans la plus petite variable qui n'est pas un champ de bits|8|  
 |**SCHAR_MIN**|Valeur minimale d'une variable de type **signed char**.|-128|  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
   
  Si une valeur dépasse la plus grande représentation d'entier, le compilateur Microsoft génère une erreur.  
   
- **Fin de la section spécifique à Microsoft**  
+ **FIN de la section spécifique à Microsoft**  
   
 ## <a name="see-also"></a>Voir aussi  
  [Constantes entières C](../c-language/c-integer-constants.md)

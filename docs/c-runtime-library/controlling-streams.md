@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d2211a2a2bb5121921928166626d726db8dea67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d6b2678add561eda41a7426a840b9c4ad074301
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="controlling-streams"></a>Contrôle des flux
 [fopen](../c-runtime-library/reference/fopen-wfopen.md) retourne l’adresse d’un objet de type `FILE`. Vous utilisez cette adresse en tant qu’argument `stream` pour plusieurs fonctions de bibliothèque afin d’effectuer diverses opérations sur un fichier ouvert. Pour un flux d’octets, toutes les entrées surviennent comme si chaque caractère était lu en appelant [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md) et toutes les sorties surviennet comme si chaque caractère était écrit en appelant [fputc](../c-runtime-library/reference/fputc-fputwc.md). Pour un flux larges, toutes les entrées surviennent comme si chaque caractère était lu en appelant [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md) et toutes les sorties surviennet comme si chaque caractère était écrit en appelant [fputwc](../c-runtime-library/reference/fputc-fputwc.md).  

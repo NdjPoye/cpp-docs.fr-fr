@@ -1,55 +1,57 @@
 ---
-title: "Key, propri&#233;t&#233; d&#39;un acc&#233;l&#233;rateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Key (propriété)"
+title: "Propriété de touche accélérateur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Key property
 ms.assetid: d1570cd9-b414-4cd6-96bd-47c38281eaca
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 365960717f5fe4cedf79615fd3087bc89d6b531c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Key, propri&#233;t&#233; d&#39;un acc&#233;l&#233;rateur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vous trouverez ci\-dessous les entrées valides pour la propriété Key dans la table d'accélérateurs :  
+# <a name="accelerator-key-property"></a>Key, propriété d'un accélérateur
+Les entrées valides pour la propriété de clé dans la table d’accélérateurs sont les suivantes :  
   
--   Un entier compris entre 0 et 255 au format décimal.  Cette valeur détermine si la valeur est traitée comme une valeur ASCII ou ANSI de la façon suivante :  
+-   Nombre entier compris entre 0 et 255 au format décimal. La valeur détermine si la valeur est traitée comme ASCII ou ANSI comme suit :  
   
-    -   Les nombres à un chiffre sont toujours interprétés comme la touche correspondante, plutôt que comme des valeurs ASCII ou ANSI.  
+    -   Les nombres à un chiffre sont toujours interprétées comme la clé correspondante, plutôt que comme des valeurs ASCII ou ANSI.  
   
-    -   Les valeurs comprises entre 1 et 26, lorsqu'elles sont précédées de zéros, sont interprétées comme ^A à ^Z, ce qui représente la valeur ASCII des lettres de l'alphabet lorsque la touche CTRL est enfoncée.  
+    -   Valeurs comprises entre 1 et 26, lorsque précédé par des zéros, sont interprétées comme ^ A à ^ Z, qui représente la valeur ASCII des lettres de l’alphabet lorsque la touche CTRL enfoncée.  
   
-    -   Les valeurs comprises entre 27\-32 sont toujours interprétées comme des valeurs décimales à trois chiffres comprises entre 027 et 032.  
+    -   Valeurs comprises entre 27-32 sont toujours interprétées en tant que valeurs de trois chiffres décimaux 027 et 032.  
   
-    -   Les valeurs 033 à 255, qu'elles soient ou non précédées par des zéros sont interprétées comme des valeurs ANSI.  
+    -   Les valeurs 033 à 255, précédé de 0 ou ne sont pas interprétées comme des valeurs ANSI.  
   
--   Un caractère du clavier unique.  Les majuscules A – Z ou les chiffres 0 – 9 peuvent être des valeurs de touche virtuelles ou ASCII ; les autres caractères sont uniquement ASCII.  
+-   Un caractère unique du clavier. Majuscules de A - Z ou de nombres 0 - 9 peuvent être ASCII ou des valeurs de clé virtuels ; tout autre caractère est ASCII uniquement.  
   
--   Un caractère du clavier unique situé dans la plage A – Z \(majuscule uniquement\), précédé par un signe insertion ^ \(par exemple, ^C\).  Cela entre la valeur ASCII de la touche lorsque la touche CTRL est enfoncée.  
+-   Un caractère du clavier unique dans la plage A - Z (majuscules uniquement), précédé d’un signe insertion (^) (par exemple, ^ C). Cela passe à la valeur ASCII de la clé lorsqu’elle est enfoncée avec la touche CTRL enfoncée.  
   
     > [!NOTE]
-    >  Lorsque vous entrez une valeur ASCII, les options de la propriété Modifier sont limitées.  La seule touche de contrôle disponible est la touche ALT.  
+    >  Lorsque vous entrez une valeur ASCII, les options de la propriété modifier sont limitées. La seule clé de contrôle disponible pour une utilisation est la touche ALT ENFONCÉE.  
   
--   N'importe quel identificateur valide de touche virtuelle.  La zone de liste déroulante de la touche dans la table d'accélérateurs contient une liste des identificateurs de touche virtuelle standard.  
+-   N’importe quel identificateur valid de touche virtuelle. La boîte de clé de liste déroulante dans la table d’accélérateurs contient une liste des identificateurs de clé virtuels standards.  
   
     > [!TIP]
-    >  Une autre méthode pour définir une touche accélérateur est de cliquer avec le bouton droit sur une entrée ou plusieurs entrées dans la table d'accélérateurs, de choisir **Touche enfoncée suivante** dans le menu contextuel et d'appuyer sur les touches ou les combinaisons de touches au clavier.  La commande **Touche enfoncée suivante** est également disponible dans le menu **Edition**.  
+    >  Une autre façon de définir une touche accélérateur est de clic droit sur une entrée ou plusieurs entrées dans la table d’accélérateurs, choisissez **enfoncée suivante** dans le menu contextuel, puis appuyez sur un des serveurs cibles ou des combinaisons de touches du clavier. Le **enfoncée suivante** commande est également disponible à partir de la **modifier** menu.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
-## Voir aussi  
- [Setting Accelerator Properties](../windows/setting-accelerator-properties.md)   
- [Editing in an Accelerator Table](../windows/editing-in-an-accelerator-table.md)   
- [Accelerator Editor](../mfc/accelerator-editor.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des propriétés d’un accélérateur](../windows/setting-accelerator-properties.md)   
+ [Modification d’une table d’accélérateurs](../windows/editing-in-an-accelerator-table.md)   
+ [Éditeur d’accélérateurs](../windows/accelerator-editor.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a7ad2d09d45747733bd79fd6fe2a7139cef5269a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e535fac6330d6268629e8e3681fec47c7b0d65d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-in-remote-automation"></a>Sécurité dans l'automation à distance
 Automation à distance prend en charge un niveau de base de sécurité pour permettre à un writer d’application serveur (ou son administrateur) spécifier la façon dont un objet spécifique peut être activé à distance. Tous les objets automation sur un système donné peuvent être globalement définis à « interdire l’activation à distance » ou « autoriser l’activation à distance ». En outre et plus souvent, des objets individuels peuvent être attribués à ces fonctionnalités. Automation à distance utilise une clé dans les paramètres du Registre de chaque objet, **AllowRemoteActivation**, afin de déterminer si un serveur donné peut être activé à distance. Si les paramètres du système utilisent ce mode, puis chaque objet dans le Registre peut être affecté à cette clé, et l’état individuelle de chacun d’eux peut être définie sur « Oui » ou « non » comme il convient.  

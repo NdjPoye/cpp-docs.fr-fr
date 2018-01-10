@@ -14,11 +14,12 @@ caps.latest.revision: "124"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89b02c277faa3da102909ce88f33aea0c653ea50
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a2207b086b608fd601517c938572248147669ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historique des modifications de Visual C++ entre 2003 et 2015
 Cet article décrit toutes les modifications avec rupture dans Visual Studio 2015 en remontant jusqu’à Visual Studio 2003 et, dans cet article, les termes « nouveau comportement » ou « maintenant » font référence à Visual Studio 2015 et versions ultérieures. Les termes « ancien comportement » et « avant » font référence à Visual Studio 2013 et aux versions antérieures. 
@@ -36,7 +37,7 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
  En outre, les améliorations suivies de la conformité du compilateur peuvent parfois modifier la façon dont le compilateur comprend votre code source existant. Dans ce cas, vous pouvez être confronté à des erreurs nouvelles ou différentes pendant la génération, ou même à des différences de comportement dans le code qui auparavant était généré et paraissait s’exécuter correctement. Même s’il ne s’agit pas là de modifications avec rupture telles que celles présentées dans ce document, des modifications du code source peuvent être nécessaires pour résoudre ces problèmes.  
   
   
-1.  [Modifications avec rupture de la bibliothèque Runtime C (CRT)](#BK_CRT)  
+1.  [Modifications avec rupture de la bibliothèque C Runtime (CRT)](#BK_CRT)  
   
 2.  [Modifications avec rupture de la bibliothèque C++ standard](#BK_STL)  
   
@@ -2923,7 +2924,7 @@ C c;
   
     ```  
   
-### <a name="standard-library"></a>bibliothèque standard  
+### <a name="standard-library"></a>Bibliothèque standard  
  Visual C++ dans Visual Studio 2013 détecte des incompatibilités dans _ITERATOR_DEBUG_LEVEL, qui a été implémenté dans Visual C++ 2010, ainsi que des incompatibilités RuntimeLibrary. Elles se produisent quand les options de compilateur /MT (version statique), /MTd (débogage statique), /MD (version dynamique) et /MDd (débogage dynamique) sont combinées.  
   
 -   Si votre code accepte les modèles d’alias simulés de la version antérieure, vous devez le modifier. Par exemple, au lieu d’allocator_traits\<A>::rebind_alloc\<U>::other, vous devez indiquer allocator_traits\<A>::rebind_alloc\<U>. Bien que ratio_add\<R1, R2>::type ne soit plus nécessaire et qu’il vous soit maintenant recommandé d’indiquer ratio_add\<R1, R2>, le code précédent peut encore être compilé car ratio\<N, D> doit posséder un typedef « type » pour un taux réduit, qui sera le même type s’il est déjà réduit.  
@@ -2950,7 +2951,7 @@ C c;
   
      Effet secondaire de cette modification, le cas d’identité ne s’exécute plus (common_type\<T> ne produit pas toujours le type T). Cela est conforme à la résolution proposée, mais interrompt le code qui était fondé sur le comportement précédent.  
   
-     Si vous avez besoin d’un trait de type d’identité, n’utilisez pas le trait std::identity non standard défini dans <type_traits>, car il ne fonctionnera pas pour \<void>. À la place, implémentez votre propre caractéristique de type d'identité pour répondre à vos besoins. Voici un exemple :  
+     Si vous avez besoin d’un trait de type d’identité, n’utilisez pas le trait std::identity non standard défini dans <type_traits>, car il ne fonctionnera pas pour \<void>. À la place, implémentez votre propre caractéristique de type d'identité pour répondre à vos besoins. Voici un exemple :  
   
     ```cpp  
     template < typename T> struct Identity {  
@@ -3276,7 +3277,7 @@ C c;
   
 -   Dans les versions précédentes de Visual Studio, vous pouviez régénérer les bibliothèques Runtime. Visual C++ 2010 ne prend plus en charge la génération de vos propres copies des fichiers de la bibliothèque Runtime C.  
   
-### <a name="standard-library"></a>bibliothèque standard  
+### <a name="standard-library"></a>Bibliothèque standard  
   
 -   L’en-tête \<iterator> n’est plus inclus automatiquement par de nombreux autres fichiers d’en-tête. Au lieu de cela, incluez cet en-tête explicitement si vous avez besoin d’une prise en charge pour les itérateurs autonomes définis dans l’en-tête <interator>.  
   
@@ -3374,7 +3375,7 @@ C c;
   
 -   Les bibliothèques Runtime C fournies avec Visual Studio ne sont plus dépendantes de la DLL système msvcrt.dll.  
   
-### <a name="standard-library"></a>bibliothèque standard  
+### <a name="standard-library"></a>Bibliothèque standard  
   
 -   La prise en charge de Windows 95, Windows 98, Windows Millennium Edition et Windows NT 4.0 a été supprimée.  
   

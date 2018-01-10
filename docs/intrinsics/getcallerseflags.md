@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 62ba5e7cc24f343565d27c72151cc81df0f82550
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 79944e3d661edd047758dd0c1e92a480d1e184d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getcallerseflags"></a>__getcallerseflags
 **Section spécifique à Microsoft**  
@@ -37,7 +38,7 @@ unsigned int __getcallerseflags(void);
 ## <a name="return-value"></a>Valeur de retour  
  Valeur EFLAGS à partir du contexte de l’appelant.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
@@ -45,7 +46,7 @@ unsigned int __getcallerseflags(void);
   
  **Fichier d’en-tête** \<intrin.h >  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette routine est disponible uniquement en tant qu'intrinsèque.  
   
 ## <a name="example"></a>Exemple  

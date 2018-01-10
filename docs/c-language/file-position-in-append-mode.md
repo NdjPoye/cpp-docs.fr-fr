@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7dd3616dc88d46e7312bbe6b647555d4cf34c9b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d216066e3d52006c8bce9e94aa599046d54b8bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-position-in-append-mode"></a>Position du fichier dans le mode adjonction
 **ANSI 4.9.3** Si l'indicateur de position de fichier d'un flux en mode Append est positionné initialement au début ou à la fin du fichier  
