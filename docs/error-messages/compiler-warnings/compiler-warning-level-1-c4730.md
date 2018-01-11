@@ -1,37 +1,35 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4730 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4730"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4730"
+title: Compilateur avertissement (niveau 1) C4730 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4730
+dev_langs: C++
+helpviewer_keywords: C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 334c53b030097dc822451b0e555a51c90e70d904
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4730
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'principal' : la combinaison de \_m64 et d'expressions en virgule flottante peut entraîner un code erroné  
+# <a name="compiler-warning-level-1-c4730"></a>Avertissement du compilateur (niveau 1) C4730
+'main' : combinaison de _m64 et d’expressions peuvent entraîner un code erroné de virgule flottante  
   
- Une fonction utilise [\_\_m64](../../cpp/m64.md) et des types **float**\/**double**.  Du fait que les registres MMX et de virgule flottante partagent le même espace physique de registre \(ils ne peuvent pas être utilisés simultanément\), l'utilisation de `__m64` et des types **float**\/**double** dans la même fonction peut provoquer une altération des données et éventuellement donner lieu à une exception.  
+ Une fonction utilise [__m64](../../cpp/m64.md) et **float**/**double** types. Espace de Registre, car les intrinsèques MMX et registres en virgule flottante partagent le même physique (ne peut pas être utilisés simultanément), à l’aide de `__m64` et **float**/**double** types dans le même fonction peut entraîner une altération des données et peut provoquer une exception.  
   
- Pour pouvoir utiliser en toute sécurité les types `__m64` et virgule flottante dans la même fonction, chaque instruction qui emploie l'un de ces types doit être séparée intrinsèquement par **\_m\_empty\(\)** \(pour MMX\) ou **\_m\_femms\(\)** \(pour 3DNow\!\).  
+ À utiliser en toute sécurité `__m64` types et les types à virgule flottante dans la même fonction, chaque instruction qui utilise un des types doit être séparée par le **_m_empty()** (pour MMX) ou **_m_femms()** (pour 3DNow !) intrinsèques.  
   
- L'exemple suivant génère l'erreur C4730 :  
+ L’exemple suivant génère l’erreur C4730 :  
   
 ```  
 // C4730.cpp  
