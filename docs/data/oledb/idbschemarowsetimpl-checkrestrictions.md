@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d6e057c56e824327d726e073a02f0fa636553c40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8ee1da1c01fcaa1670449248f3f8208b2a915783
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idbschemarowsetimplcheckrestrictions"></a>IDBSchemaRowsetImpl::CheckRestrictions
 Vérifie la validité des restrictions par rapport à un ensemble de lignes de schéma.  
@@ -48,14 +51,14 @@ Vérifie la validité des restrictions par rapport à un ensemble de lignes de s
  `rgRestrictions`  
  [in] Tableau de longueur *cRestrictions* des valeurs de restriction à définir. Pour plus d'informations, consultez la description du paramètre `rgRestrictions` de [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la méthode `CheckRestrictions` pour vérifier la validité des restrictions par rapport à un ensemble de lignes de schéma. Elle vérifie les restrictions pour les ensembles de lignes de schéma `DBSCHEMA_TABLES`, **DBSCHEMA_COLUMNS**et **DBSCHEMA_PROVIDER_TYPES** . Appelez-la pour déterminer si l’appel d’un consommateur à **IDBSchemaRowset::GetRowset** est correct. Si vous voulez prendre en charge d’autres ensembles de lignes de schéma que ceux répertoriés ci-dessus, vous devez créer votre propre fonction pour mener à bien cette tâche.  
   
  `CheckRestrictions` détermine si le consommateur appelle [GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) avec la restriction et le type de restriction appropriés (par exemple, un `VT_BSTR` pour une chaîne) que le fournisseur prend en charge. De même, elle détermine si le nombre correct de restrictions est pris en charge. Par défaut, `CheckRestrictions` demande au fournisseur, via l’appel [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) , quelles restrictions il prend en charge dans un ensemble de lignes donné. La méthode compare ensuite les restrictions du consommateur à celles que prend en charge le fournisseur avant d’aboutir ou d’échouer.  
   
  Pour plus d’informations sur les ensembles de lignes de schéma, consultez [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) dans les *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,45 +1,46 @@
 ---
-title: "multiset::count (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre count [STL/CLR]"
+title: multiset::Count (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::count
+dev_langs: C++
+helpviewer_keywords: count member [STL/CLR]
 ms.assetid: 6c668667-0047-4101-8dfc-0f538655b3d1
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 149d32a171167d1c75ecbc2f357c2380eb4f4a88
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# multiset::count (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Recherche le nombre d'éléments qui correspondent à une clé spécifiée.  
+# <a name="multisetcount-stlclr"></a>multiset::count (STL/CLR)
+Recherche le nombre d’éléments qui correspondent à une clé spécifiée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 size_type count(key_type key);  
 ```  
   
-#### Paramètres  
- key  
+#### <a name="parameters"></a>Paramètres  
+ clé  
  Valeur de clé à rechercher.  
   
-## Notes  
- La fonction membre retourne le nombre d'éléments dans la séquence contrôlée dont le classement est équivalent à `key`.  Vous l'utilisez pour déterminer le nombre d'éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.  
+## <a name="remarks"></a>Notes  
+ La fonction membre retourne le nombre d’éléments dans la séquence contrôlée qui ont un classement équivalent à `key`. Il permet de déterminer le nombre d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_multiset_count.cpp   
@@ -67,15 +68,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**compte\(L'A'\) \= 0**  
-**compte\(L'b'\) \= 1**  
-**compte\(L'C'\) \= 0**   
-## Configuration requise  
- **En\-tête :** \<cliext\/set\>  
+```Output  
+ a b c  
+count(L'A') = 0  
+count(L'b') = 1  
+count(L'C') = 0  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/set >  
   
-## Voir aussi  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::equal\_range](../dotnet/multiset-equal-range-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::equal_range (STL/CLR)](../dotnet/multiset-equal-range-stl-clr.md)

@@ -1,74 +1,76 @@
 ---
-title: "CRowset::MoveToRatio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MoveToRatio"
-  - "CRowset<TAccessor>::MoveToRatio"
-  - "CRowset::MoveToRatio"
-  - "CRowset<TAccessor>.MoveToRatio"
-  - "ATL.CRowset.MoveToRatio"
-  - "ATL::CRowset::MoveToRatio"
-  - "CRowset.MoveToRatio"
-  - "ATL.CRowset<TAccessor>.MoveToRatio"
-  - "ATL::CRowset<TAccessor>::MoveToRatio"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MoveToRatio (méthode)"
+title: CRowset::MoveToRatio | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MoveToRatio
+- CRowset<TAccessor>::MoveToRatio
+- CRowset::MoveToRatio
+- CRowset<TAccessor>.MoveToRatio
+- ATL.CRowset.MoveToRatio
+- ATL::CRowset::MoveToRatio
+- CRowset.MoveToRatio
+- ATL.CRowset<TAccessor>.MoveToRatio
+- ATL::CRowset<TAccessor>::MoveToRatio
+dev_langs: C++
+helpviewer_keywords: MoveToRatio method
 ms.assetid: 1fa313bd-8fd1-4608-8e85-44993b97dd88
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 70b4d7994bb2175d0d402fdd309a8258f7127dc7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::MoveToRatio
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Extrait des lignes en commençant à une position décimale dans l'ensemble de lignes.  
+# <a name="crowsetmovetoratio"></a>CRowset::MoveToRatio
+Extrait les lignes à partir d’une position décimale dans l’ensemble de lignes.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      HRESULT MoveToRatio(   
-   DBCOUNTITEM nNumerator,   
-   DBCOUNTITEM nDenominator,   
-   bool bForward = true    
+      HRESULT MoveToRatio(   
+   DBCOUNTITEM nNumerator,   
+   DBCOUNTITEM nDenominator,   
+   bool bForward = true    
 ) throw( );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `nNumerator`  
- \[in\] le numérateur utilisé pour déterminer la position décimale à partir de laquelle extraire des données.  
+ [in] Le numérateur permet de déterminer les fractions de seconde position à partir de laquelle extraire des données.  
   
  `nDenominator`  
- \[in\] le dénominateur utilisé pour déterminer la position décimale à partir de laquelle extraire des données.  
+ [in] Le dénominateur permet de déterminer les fractions de seconde position à partir de laquelle extraire des données.  
   
  `bForward`  
- \[in\] indique si le déplacement est en avant ou en arrière.  La valeur par défaut est en avant.  
+ [in] Indique s’il faut déplacer vers l’avant ou vers l’arrière. La valeur par défaut est à compatibilité ascendante.  
   
-## Valeur de retour  
- Un `HRESULT` standard.  
+## <a name="return-value"></a>Valeur de retour  
+ `HRESULT` standard.  
   
-## Notes  
- `MoveToRatio` extrait des lignes selon la formule suivante approximativement :  
+## <a name="remarks"></a>Notes  
+ `MoveToRatio`extrait les lignes conformément à peu près à la formule suivante :  
   
  `( nNumerator *  RowsetSize ) / nDenominator`  
   
- où `RowsetSize` est la taille de l'ensemble de lignes, mesurée en lignes.  La précision de cette formule dépend du fournisseur spécifique.  Pour plus d'informations, consultez [IRowsetScroll::GetRowsAtRatio](https://msdn.microsoft.com/en-us/library/ms709602.aspx).  
+ Où `RowsetSize` est la taille de l’ensemble de lignes, mesurée en lignes. La précision de cette formule varie selon le fournisseur spécifique. Pour plus d’informations, consultez [IRowsetScroll::GetRowsAtRatio](https://msdn.microsoft.com/en-us/library/ms709602.aspx).  
   
- Cette méthode requiert l'interface facultative `IRowsetScroll`, qui ne peut pas être prise en charge sur tous les fournisseurs ; dans ce cas, la méthode retourne **E\_NOINTERFACE**.  Vous devez également définir **DBPROP\_IRowsetScroll** sur `VARIANT_TRUE` avant d'appeler **Ouvrir** sur la table ou la commande contenant l'ensemble de lignes.  
+ Cette méthode requiert l’interface facultative `IRowsetScroll`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si c’est le cas, la méthode retourne **E_NOINTERFACE**. Vous devez également définir **DBPROP_IRowsetScroll** à `VARIANT_TRUE` avant d’appeler **ouvrir** sur la table ou d’une commande qui contient l’ensemble de lignes.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CRowset, classe](../../data/oledb/crowset-class.md)

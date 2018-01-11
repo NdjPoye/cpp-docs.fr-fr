@@ -1,43 +1,45 @@
 ---
-title: "Domaines d&#39;application et Visual&#160;C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr (option du compilateur C++), domaines d'application"
-  - "domaines d'application (C++), C++"
-  - "Interop (C++), domaines d'application"
-  - "interopérabilité (C++), domaines d'application"
-  - "assemblys mixtes (C++), domaines d'application"
+title: "Domaines d’application et Visual C++ | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], application domains
+- application domains [C++], C++
+- /clr compiler option [C++], application domains
+- interoperability [C++], application domains
+- mixed assemblies [C++], application domains
 ms.assetid: 75a08efc-9b02-40ba-99b7-dcbd71010bbf
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a66731b9645458441f1c3e1f211c74be698e7231
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Domaines d&#39;application et Visual&#160;C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Si vous avez une fonction virtuelle `__clrcall`, la vtable sera par domaine d'application \(appdomain\).  Si vous créez un objet dans un appdomain, vous ne pouvez appeler la fonction virtuelle que depuis cet appdomain.  Toutes les fonctions définies dans des compilands **\/clr:pure** utilisent la convention d'appel `__clrcall`.  Par conséquent, toutes les vtables définies dans des compilands **\/clr:pure** sont par appdomain.  En mode mixte \(**\/clr**\), vous aurez des vtables par processus si votre type n'a pas de fonctions virtuelles `__clrcall`.  
+# <a name="application-domains-and-visual-c"></a>Domaines d'application et Visual C++
+Si vous avez un `__clrcall` une fonction virtuelle, la vtable sera par domaine d’application (appdomain). Si vous créez un objet dans un domaine d’application, vous pouvez uniquement appeler la fonction virtuelle à partir de cet AppDomain. Toutes les fonctions définies dans **/CLR : pure** compilands utiliser le `__clrcall` convention d’appel. Par conséquent, toutes les vtables définies dans **/CLR : pure** compilands sont par appdomain. En mode mixte (**/CLR**) aura vtables par processus si votre type n’a pas `__clrcall` fonctions virtuelles. Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015.  
   
  Pour plus d'informations, consultez  
   
 -   [appdomain](../cpp/appdomain.md)  
   
--   [\_\_clrcall](../cpp/clrcall.md)  
+-   [__clrcall](../cpp/clrcall.md)  
   
--   [Comment : effectuer une migration vers \/clr:pure](../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md)  
+-   [Comment : migrer vers/clr : pure (C + c++ / CLI)](../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md)  
   
--   [processus](../cpp/process.md)  
+-   [process](../cpp/process.md)  
   
-## Voir aussi  
- [Assemblys mixtes \(natif et managé\)](../dotnet/mixed-native-and-managed-assemblies.md)
+## <a name="see-also"></a>Voir aussi  
+ [Assemblys mixtes (natif et managé)](../dotnet/mixed-native-and-managed-assemblies.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4846b94a03eb24e1fca8f7e802f4019e0ebaea1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 748bdd1a2ce6b94a2c935df94de68767ee36875e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>Gestionnaires pour les commandes et les notifications de contrôle
 Il n’existe aucun gestionnaire par défaut pour les commandes ou les messages de notification de contrôle. Par conséquent, vous êtes lié uniquement par la convention d’affectation de noms vos gestionnaires pour ces catégories de messages. Lorsque vous mappez la notification de commande ou un contrôle à un gestionnaire, la fenêtre Propriétés propose un nom basé sur le code d’ID ou de notification de contrôle de commande. Vous pouvez accepter le nom proposé, modifier ou remplacer.  

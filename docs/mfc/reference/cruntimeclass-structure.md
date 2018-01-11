@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: db4820fa1496bbedebba8392ab0947cfafdf03e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4b053e963f4e252302ed4c390a648846166aff62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cruntimeclass-structure"></a>Structure de CRuntimeClass
 Chaque classe dérivée de `CObject` est associé un `CRuntimeClass` structure que vous pouvez utiliser pour obtenir des informations sur un objet ou de sa classe de base au moment de l’exécution.  
@@ -55,7 +56,7 @@ struct CRuntimeClass
 |[CRuntimeClass::m_pfnGetBaseClass](#m_pfngetbaseclass)|Retourne le `CRuntimeClass` structure (uniquement disponible quand dynamiquement lié).|  
 |[CRuntimeClass::m_wSchema](#m_wschema)|Le numéro de schéma de la classe.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CRuntimeClass`est une structure et n’a donc pas une classe de base.  
   
  La possibilité de déterminer la classe d’un objet au moment de l’exécution est utile lors de la vérification des arguments de fonction de type supplémentaire est nécessaire, ou lorsque vous devez écrire un code spécial en fonction de la classe d’un objet. Les informations sur la classe d'exécution ne sont pas prises en charge directement par le langage C++.  
@@ -67,7 +68,7 @@ struct CRuntimeClass
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CRuntimeClass`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h  
   
 ##  <a name="createobject"></a>CRuntimeClass::CreateObject  
@@ -88,7 +89,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers l’objet qui vient d’être créé, ou **NULL** si le nom de classe est introuvable ou la mémoire est insuffisante pour créer l’objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les classes dérivées de `CObject` peut de prendre en charge la création dynamique, ce qui est la capacité de créer un objet d’une classe spécifiée au moment de l’exécution. Classes de document, vue et image, par exemple, doivent prendre en charge la création dynamique. Pour plus d’informations sur la création dynamique et le `CreateObject` membre, consultez [CObject (classe)](../../mfc/using-cobject.md) et [CObject (classe) : spécification de niveaux de fonctionnalité](../../mfc/specifying-levels-of-functionality.md).  
   
 ### <a name="example"></a>Exemple  
@@ -129,7 +130,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="return-value"></a>Valeur de retour  
  **TRUE** si l’appel de la classe `IsDerivedFrom` est dérivée de la base de la classe dont `CRuntimeClass` structure est donné en tant que paramètre ; sinon **FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La relation est déterminée par le « parcours » à partir de la classe du membre haut de la chaîne de classes dérivées tout en haut. Cette fonction retourne uniquement **FALSE** si aucune correspondance n’est trouvée pour la classe de base.  
   
 > [!NOTE]
@@ -143,7 +144,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ##  <a name="m_lpszclassname"></a>CRuntimeClass::m_lpszClassName  
  Chaîne se terminant par null qui contient le nom de classe ASCII.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ce nom peut être utilisé pour créer une instance de la classe à l’aide du `FromName` fonction membre.  
   
 ### <a name="example"></a>Exemple  
@@ -152,7 +153,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ##  <a name="m_nobjectsize"></a>CRuntimeClass::m_nObjectSize  
  La taille de l’objet, en octets.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si l’objet possède des membres de données qui pointent vers la mémoire allouée, la taille de cette mémoire n’est pas incluse.  
   
 ### <a name="example"></a>Exemple  
@@ -161,7 +162,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ##  <a name="m_pbaseclass"></a>CRuntimeClass::m_pBaseClass  
  Si votre application liée statiquement à MFC, ce membre de données contient un pointeur vers le `CRuntimeClass` structure de la classe de base.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si votre application est liée dynamiquement à la bibliothèque MFC, consultez [m_pfnGetBaseClass](#m_pfngetbaseclass).  
   
 ### <a name="example"></a>Exemple  
@@ -170,13 +171,13 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ##  <a name="m_pfncreateobject"></a>CRuntimeClass::m_pfnCreateObject  
  Un pointeur de fonction, le constructeur par défaut qui crée un objet de votre classe.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ce pointeur est valide uniquement si la classe prend en charge la création dynamique ; Sinon, la fonction retourne **NULL**.  
   
 ##  <a name="m_pfngetbaseclass"></a>CRuntimeClass::m_pfnGetBaseClass  
  Si votre application utilise la bibliothèque MFC en tant que DLL partagé, ce membre de données pointe vers une fonction qui retourne le `CRuntimeClass` structure de la classe de base.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si votre application liée statiquement à la bibliothèque MFC, consultez [m_pBaseClass](#m_pbaseclass).  
   
 ### <a name="example"></a>Exemple  
@@ -185,7 +186,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ##  <a name="m_wschema"></a>CRuntimeClass::m_wSchema  
  Le numéro de schéma (-1 pour les classes non sérialisable).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur les numéros de schéma, consultez le [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) (macro).  
   
 ### <a name="example"></a>Exemple  

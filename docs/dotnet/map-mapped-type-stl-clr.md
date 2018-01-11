@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ac5a39ed59b224304b0c8f2095a032bf39daef48
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5e2a482582d49680c448c3172a11b54404d8390a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapmappedtype-stlclr"></a>map::mapped_type (STL/CLR)
 Type d'une valeur mappée associée à chaque clé.  
@@ -30,7 +33,7 @@ Type d'une valeur mappée associée à chaque clé.
 typedef Mapped mapped_type;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le type est un synonyme du paramètre de modèle `Mapped`.  
   
 ## <a name="example"></a>Exemple  
@@ -65,7 +68,7 @@ int main()
 1 2 3  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/map >  
   
  **Namespace :** cliext  

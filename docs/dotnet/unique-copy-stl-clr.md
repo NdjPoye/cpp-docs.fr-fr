@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 521e45ab81e9d164e38c1ae9af8b7d0cf1048b4a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ca88897a16a78dcb0f331f2ce56db29ab692a3c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uniquecopy-stlclr"></a>unique_copy (STL/CLR)
 Copie les éléments d'une plage source dans une plage de destination, à l'exception des éléments en double adjacents.  
@@ -34,10 +37,10 @@ template<class _InIt, class _OutIt, class _Pr> inline
         _Pr _Pred);  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette fonction comporte comme la fonction de la bibliothèque Standard C++ `unique_copy`. Pour plus d’informations, consultez [unique_copy](../standard-library/algorithm-functions.md#unique_copy).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/algorithme >  
   
  **Namespace :** cliext  

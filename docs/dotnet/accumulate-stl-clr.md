@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 50334d4468f34afa10639ad18b649c964b126ee4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d9fefc3e7e7a2838891488996518b405972ba0f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accumulate-stlclr"></a>accumulate (STL/CLR)
 Calcule la somme de tous les éléments d’une plage spécifiée incluant une valeur initiale en calculant des sommes partielles successives, ou calcule le résultat des résultats partiels successifs obtenus de la même façon en utilisant une opération binaire spécifiée autre que la somme.  
@@ -33,10 +36,10 @@ template<class _InIt, class _Ty, class _Fn2> inline
     _Ty accumulate(_InIt _First, _InIt _Last, _Ty _Val, _Fn2 _Func);  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette fonction comporte comme la fonction de bibliothèque Standard C++ numérique `accumulate`. Pour plus d’informations, consultez [s’accumulent](../standard-library/numeric-functions.md#accumulate).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/numeric >  
   
  **Namespace :** cliext  

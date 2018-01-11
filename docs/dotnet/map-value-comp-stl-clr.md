@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ded4813f7a8e73efd9afbe6fe538835136c83259
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 91dd7e80c366cd023998f3bc96dcf69900382a69
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapvaluecomp-stlclr"></a>map::value_comp (STL/CLR)
 Copie le délégué de classement pour les deux valeurs d’éléments.  
@@ -30,7 +33,7 @@ Copie le délégué de classement pour les deux valeurs d’éléments.
 value_compare^ value_comp();  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction membre retourne le délégué de classement utilisé pour ordonner la séquence contrôlée. Il permet de comparer deux valeurs d’éléments.  
   
 ## <a name="example"></a>Exemple  
@@ -67,7 +70,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/map >  
   
  **Namespace :** cliext  

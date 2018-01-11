@@ -1,36 +1,38 @@
 ---
-title: "hash_multiset (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "en-tête <cliext/hash_set> [STL/CLR]"
-  - "en-tête <hash_set> [STL/CLR]"
-  - "classe hash_multiset [STL/CLR]"
+title: hash_multiset (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset
+dev_langs: C++
+helpviewer_keywords:
+- <cliext/hash_set> header [STL/CLR]
+- hash_multiset class [STL/CLR]
+- <hash_set> header [STL/CLR]
 ms.assetid: 8462bd21-6829-4dd3-ac81-c42d6fdf92f0
-caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f07e2e063be9c5a30a63b445d06100124e4250a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The template class describes an object that controls a varying\-length sequence of elements that has bidirectional access.  You use the container `hash_multiset` to manage a sequence of elements as a hash table, each table entry storing a bidirectional linked list of nodes, and each node storing one element.  The value of each element is used as a key, for ordering the sequence.  
+# <a name="hashmultiset-stlclr"></a>hash_multiset (STL/CLR)
+La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments ayant un accès bidirectionnel. Vous utilisez le conteneur `hash_multiset` pour gérer une séquence d’éléments comme une table de hachage, chaque entrée de table stockant un bidirectionnel lié à la liste des nœuds et chaque nœud de stocker un élément. La valeur de chaque élément est utilisée comme clé pour le classement de la séquence.  
   
- In the description below, `GValue` is the same as `GKey`, which in turn is the same as `Key` unless the latter is a ref type, in which case it is `Key^`.  
+ Dans la description ci-dessous, `GValue` est identique à `GKey`, qui à son tour est le même que `Key` , sauf si ce dernier est un type référence, auquel cas il est `Key^`.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Key>  
@@ -46,119 +48,119 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### Paramètres  
- Clé  
- Type du composant clé d'un élément dans la séquence contrôlée.  
+#### <a name="parameters"></a>Paramètres  
+ Touche  
+ Le type du composant clé d’un élément dans la séquence contrôlée.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-|Type Definition|Description|  
+|Définition de types|Description|  
 |---------------------|-----------------|  
-|[hash\_multiset::const\_iterator](../dotnet/hash-multiset-const-iterator-stl-clr.md)|Type d'un itérateur constant pour la séquence contrôlée.|  
-|[hash\_multiset::const\_reference](../dotnet/hash-multiset-const-reference-stl-clr.md)|Type d'une référence constante à un élément.|  
-|[hash\_multiset::const\_reverse\_iterator](../dotnet/hash-multiset-const-reverse-iterator-stl-clr.md)|The type of a constant reverse iterator for the controlled sequence.|  
-|[hash\_multiset::difference\_type](../dotnet/hash-multiset-difference-type-stl-clr.md)|The type of a \(possibly signed\) distance between two elements.|  
-|[hash\_multiset::generic\_container](../dotnet/hash-multiset-generic-container-stl-clr.md)|The type of the generic interface for the container.|  
-|[hash\_multiset::generic\_iterator](../dotnet/hash-multiset-generic-iterator-stl-clr.md)|The type of an iterator for the generic interface for the container.|  
-|[hash\_multiset::generic\_reverse\_iterator](../dotnet/hash-multiset-generic-reverse-iterator-stl-clr.md)|The type of a reverse iterator for the generic interface for the container.|  
-|[hash\_multiset::generic\_value](../dotnet/hash-multiset-generic-value-stl-clr.md)|The type of an element for the generic interface for the container.|  
-|[hash\_multiset::hasher](../dotnet/hash-multiset-hasher-stl-clr.md)|The hashing delegate for a key.|  
-|[hash\_multiset::iterator](../dotnet/hash-multiset-iterator-stl-clr.md)|Type d'un itérateur pour la séquence contrôlée.|  
-|[hash\_multiset::key\_compare](../dotnet/hash-multiset-key-compare-stl-clr.md)|The ordering delegate for two keys.|  
-|[hash\_multiset::key\_type](../dotnet/hash-multiset-key-type-stl-clr.md)|Type d'une clé de classement.|  
-|[hash\_multiset::reference](../dotnet/hash-multiset-reference-stl-clr.md)|Type d'une référence à un élément.|  
-|[hash\_multiset::reverse\_iterator](../dotnet/hash-multiset-reverse-iterator-stl-clr.md)|The type of a reverse iterator for the controlled sequence.|  
-|[hash\_multiset::size\_type](../dotnet/hash-multiset-size-type-stl-clr.md)|The type of a \(non\-negative\) distance between two elements.|  
-|[hash\_multiset::value\_compare](../dotnet/hash-multiset-value-compare-stl-clr.md)|The ordering delegate for two element values.|  
-|[hash\_multiset::value\_type](../dotnet/hash-multiset-value-type-stl-clr.md)|Le type d'un élément.|  
+|[hash_multiset::const_iterator (STL/CLR)](../dotnet/hash-multiset-const-iterator-stl-clr.md)|Type d'un itérateur constant pour la séquence contrôlée.|  
+|[hash_multiset::const_reference (STL/CLR)](../dotnet/hash-multiset-const-reference-stl-clr.md)|Type d'une référence constante à un élément.|  
+|[hash_multiset::const_reverse_iterator (STL/CLR)](../dotnet/hash-multiset-const-reverse-iterator-stl-clr.md)|Type d'un itérateur inserve constant pour la séquence contrôlée.|  
+|[hash_multiset::difference_type (STL/CLR)](../dotnet/hash-multiset-difference-type-stl-clr.md)|Le type d’une distance (éventuellement signée) entre deux éléments.|  
+|[hash_multiset::generic_container (STL/CLR)](../dotnet/hash-multiset-generic-container-stl-clr.md)|Le type de l’interface générique pour le conteneur.|  
+|[hash_multiset::generic_iterator (STL/CLR)](../dotnet/hash-multiset-generic-iterator-stl-clr.md)|Le type d’un itérateur pour l’interface générique pour le conteneur.|  
+|[hash_multiset::generic_reverse_iterator (STL/CLR)](../dotnet/hash-multiset-generic-reverse-iterator-stl-clr.md)|Le type d’un itérateur inverse pour l’interface générique pour le conteneur.|  
+|[hash_multiset::generic_value (STL/CLR)](../dotnet/hash-multiset-generic-value-stl-clr.md)|Le type d’un élément pour l’interface générique pour le conteneur.|  
+|[hash_multiset::hasher (STL/CLR)](../dotnet/hash-multiset-hasher-stl-clr.md)|Délégué d’une clé de hachage.|  
+|[hash_multiset::iterator (STL/CLR)](../dotnet/hash-multiset-iterator-stl-clr.md)|Type d'un itérateur pour la séquence contrôlée.|  
+|[hash_multiset::key_compare (STL/CLR)](../dotnet/hash-multiset-key-compare-stl-clr.md)|Délégué de classement pour les deux clés.|  
+|[hash_multiset::key_type (STL/CLR)](../dotnet/hash-multiset-key-type-stl-clr.md)|Type d'une clé de tri.|  
+|[hash_multiset::reference (STL/CLR)](../dotnet/hash-multiset-reference-stl-clr.md)|Type d'une référence à un élément.|  
+|[hash_multiset::reverse_iterator (STL/CLR)](../dotnet/hash-multiset-reverse-iterator-stl-clr.md)|Type d'un itérateur inverse pour la séquence contrôlée.|  
+|[hash_multiset::size_type (STL/CLR)](../dotnet/hash-multiset-size-type-stl-clr.md)|Le type d’une distance (négatif) entre deux éléments.|  
+|[hash_multiset::value_compare (STL/CLR)](../dotnet/hash-multiset-value-compare-stl-clr.md)|Délégué de classement pour les deux valeurs d’éléments.|  
+|[hash_multiset::value_type (STL/CLR)](../dotnet/hash-multiset-value-type-stl-clr.md)|Type d’un élément.|  
   
-|Member Function|Description|  
+|Fonction membre|Description|  
 |---------------------|-----------------|  
-|[hash\_multiset::begin](../dotnet/hash-multiset-begin-stl-clr.md)|Désigne le début de la séquence contrôlée.|  
-|[hash\_multiset::bucket\_count](../dotnet/hash-multiset-bucket-count-stl-clr.md)|Counts the number of buckets.|  
-|[hash\_multiset::clear](../dotnet/hash-multiset-clear-stl-clr.md)|Removes all elements.|  
-|[hash\_multiset::count](../dotnet/hash-multiset-count-stl-clr.md)|Counts elements matching a specified key.|  
-|[hash\_multiset::empty](../dotnet/hash-multiset-empty-stl-clr.md)|Tests whether no elements are present.|  
-|[hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)|Désigne la fin de la séquence contrôlée.|  
-|[hash\_multiset::equal\_range](../dotnet/hash-multiset-equal-range-stl-clr.md)|Finds range that matches a specified key.|  
-|[hash\_multiset::erase](../dotnet/hash-multiset-erase-stl-clr.md)|Supprime les éléments placés aux positions spécifiées.|  
-|[hash\_multiset::find](../dotnet/hash-multiset-find-stl-clr.md)|Recherche un élément qui correspond à une clé spécifiée.|  
-|[hash\_multiset::hash\_delegate](../dotnet/hash-multiset-hash-delegate-stl-clr.md)|Copies the hashing delegate for a key.|  
-|[hash\_multiset::hash\_multiset](../dotnet/hash-multiset-hash-multiset-stl-clr.md)|Construit un objet container.|  
-|[hash\_multiset::insert](../dotnet/hash-multiset-insert-stl-clr.md)|Adds elements.|  
-|[hash\_multiset::key\_comp](../dotnet/hash-multiset-key-comp-stl-clr.md)|Copies the ordering delegate for two keys.|  
-|[hash\_multiset::load\_factor](../dotnet/hash-multiset-load-factor-stl-clr.md)|Counts the average elements per bucket.|  
-|[hash\_multiset::lower\_bound](../dotnet/hash-multiset-lower-bound-stl-clr.md)|Finds beginning of range that matches a specified key.|  
-|[hash\_multiset::make\_value](../dotnet/hash-multiset-make-value-stl-clr.md)|Constructs a value object.|  
-|[hash\_multiset::max\_load\_factor](../dotnet/hash-multiset-max-load-factor-stl-clr.md)|Gets or sets the maximum elements per bucket.|  
-|[hash\_multiset::rbegin](../dotnet/hash-multiset-rbegin-stl-clr.md)|Désigne le début de la séquence contrôlée inversée.|  
-|[hash\_multiset::rehash](../dotnet/hash-multiset-rehash-stl-clr.md)|Régénère la table de hachage.|  
-|[hash\_multiset::rend](../dotnet/hash-multiset-rend-stl-clr.md)|Désigne la fin de la séquence contrôlée inversée.|  
-|[hash\_multiset::size](../dotnet/hash-multiset-size-stl-clr.md)|Compte le nombre d'éléments.|  
-|[hash\_multiset::swap](../dotnet/hash-multiset-swap-stl-clr.md)|Échange le contenu de deux conteneurs.|  
-|[hash\_multiset::to\_array](../dotnet/hash-multiset-to-array-stl-clr.md)|Copies the controlled sequence to a new array.|  
-|[hash\_multiset::upper\_bound](../dotnet/hash-multiset-upper-bound-stl-clr.md)|Finds end of range that matches a specified key.|  
-|[hash\_multiset::value\_comp](../dotnet/hash-multiset-value-comp-stl-clr.md)|Copies the ordering delegate for two element values.|  
+|[hash_multiset::begin (STL/CLR)](../dotnet/hash-multiset-begin-stl-clr.md)|Désigne le début de la séquence contrôlée.|  
+|[hash_multiset::bucket_count (STL/CLR)](../dotnet/hash-multiset-bucket-count-stl-clr.md)|Compte le nombre de compartiments.|  
+|[hash_multiset::clear (STL/CLR)](../dotnet/hash-multiset-clear-stl-clr.md)|Supprime tous les éléments.|  
+|[hash_multiset::count (STL/CLR)](../dotnet/hash-multiset-count-stl-clr.md)|Compte des éléments qui correspondent à une clé spécifiée.|  
+|[hash_multiset::empty (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md)|Vérifie l'absence d'éléments.|  
+|[hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)|Désigne la fin de la séquence contrôlée.|  
+|[hash_multiset::equal_range (STL/CLR)](../dotnet/hash-multiset-equal-range-stl-clr.md)|Recherche une plage qui correspond à une clé spécifiée.|  
+|[hash_multiset::erase (STL/CLR)](../dotnet/hash-multiset-erase-stl-clr.md)|Supprime les éléments placés aux positions spécifiées.|  
+|[hash_multiset::find (STL/CLR)](../dotnet/hash-multiset-find-stl-clr.md)|Recherche un élément qui correspond à une clé spécifiée.|  
+|[hash_multiset::hash_delegate (STL/CLR)](../dotnet/hash-multiset-hash-delegate-stl-clr.md)|Copie le délégué de hachage pour une clé.|  
+|[hash_multiset::hash_multiset (STL/CLR)](../dotnet/hash-multiset-hash-multiset-stl-clr.md)|Construit un objet conteneur.|  
+|[hash_multiset::insert (STL/CLR)](../dotnet/hash-multiset-insert-stl-clr.md)|Ajoute des éléments.|  
+|[hash_multiset::key_comp (STL/CLR)](../dotnet/hash-multiset-key-comp-stl-clr.md)|Copie le délégué de classement pour les deux clés.|  
+|[hash_multiset::load_factor (STL/CLR)](../dotnet/hash-multiset-load-factor-stl-clr.md)|Compte le nombre moyen d'éléments par compartiment.|  
+|[hash_multiset::lower_bound (STL/CLR)](../dotnet/hash-multiset-lower-bound-stl-clr.md)|Début de la recherche de plage qui correspond à une clé spécifiée.|  
+|[hash_multiset::make_value (STL/CLR)](../dotnet/hash-multiset-make-value-stl-clr.md)|Construit un objet de valeur.|  
+|[hash_multiset::max_load_factor (STL/CLR)](../dotnet/hash-multiset-max-load-factor-stl-clr.md)|Obtient ou définit le nombre maximal d’éléments par compartiment.|  
+|[hash_multiset::rbegin (STL/CLR)](../dotnet/hash-multiset-rbegin-stl-clr.md)|Désigne le début de la séquence contrôlée inverse.|  
+|[hash_multiset::rehash (STL/CLR)](../dotnet/hash-multiset-rehash-stl-clr.md)|Régénère la table de hachage.|  
+|[hash_multiset::rend (STL/CLR)](../dotnet/hash-multiset-rend-stl-clr.md)|Désigne la fin de la séquence contrôlée inverse.|  
+|[hash_multiset::size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md)|Compte le nombre d'éléments.|  
+|[hash_multiset::swap (STL/CLR)](../dotnet/hash-multiset-swap-stl-clr.md)|Échange le contenu de deux conteneurs.|  
+|[hash_multiset::to_array (STL/CLR)](../dotnet/hash-multiset-to-array-stl-clr.md)|Copie de la séquence contrôlée vers un nouveau tableau.|  
+|[hash_multiset::upper_bound (STL/CLR)](../dotnet/hash-multiset-upper-bound-stl-clr.md)|Fin de la recherche de plage qui correspond à une clé spécifiée.|  
+|[hash_multiset::value_comp (STL/CLR)](../dotnet/hash-multiset-value-comp-stl-clr.md)|Copie le délégué de classement pour les deux valeurs d’éléments.|  
   
 |Opérateur|Description|  
-|---------------|-----------------|  
-|[hash\_multiset::operator\=](../dotnet/hash-multiset-operator-assign-stl-clr.md)|Replaces the controlled sequence.|  
+|--------------|-----------------|  
+|[hash_multiset::operator= (STL/CLR)](../dotnet/hash-multiset-operator-assign-stl-clr.md)|Remplace la séquence contrôlée.|  
   
-## Interfaces  
+## <a name="interfaces"></a>Interfaces  
   
 |Interface|Description|  
 |---------------|-----------------|  
-|<xref:System.ICloneable>|Duplicate an object.|  
-|<xref:System.Collections.IEnumerable>|Sequence through elements.|  
-|<xref:System.Collections.ICollection>|Maintain group of elements.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Sequence through typed elements.|  
-|<xref:System.Collections.Generic.ICollection%601>|Maintain group of typed elements.|  
-|IHash\<Key, Value\>|Maintain generic container.|  
+|<xref:System.ICloneable>|Dupliquer un objet.|  
+|<xref:System.Collections.IEnumerable>|Dans les éléments de séquence.|  
+|<xref:System.Collections.ICollection>|Conserver le groupe d’éléments.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Séquence via les éléments typés.|  
+|<xref:System.Collections.Generic.ICollection%601>|Conserver le groupe d’éléments typés.|  
+|IHash\<de clé, la valeur >|Mettre à jour de conteneur générique.|  
   
-## Notes  
- The object allocates and frees storage for the sequence it controls as individual nodes in a bidirectional linked list.  To speed access, the object also maintains a varying\-length array of pointers into the list \(the hash table\), effectively managing the whole list as a sequence of sublists, or buckets.  It inserts elements into a bucket that it keeps ordered by altering the links between nodes, never by copying the contents of one node to another.  That means you can insert and remove elements freely without disturbing remaining elements.  
+## <a name="remarks"></a>Notes  
+ L’objet alloue et libère du stockage pour la séquence qu’il contrôle en tant que nœuds individuels dans une liste liée bidirectionnelle. Pour accélérer l’accès, l’objet conserve un tableau de longueur variable de pointeurs dans la liste (la table de hachage), gestion efficace de l’intégralité de la liste comme une séquence de sous-listes, ou compartiments. Elle insère des éléments dans un compartiment il conserve ordonnée en modifiant les liens entre les nœuds, jamais par copie le contenu d’un nœud vers un autre. Cela signifie que vous pouvez insérer et supprimer des éléments librement sans perturber éléments restants.  
   
- The object orders each bucket it controls by calling a stored delegate object of type [hash\_set::key\_compare](../dotnet/hash-set-key-compare-stl-clr.md).  You can specify the stored delegate object when you construct the hash\_set; if you specify no delegate object, the default is the comparison `operator<=(key_type, key_type)`.  
+ Chaque compartiment qu’il contrôle en appelant un objet délégué stocké de type des commandes de l’objet [hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Vous pouvez spécifier l’objet délégué stockées lorsque vous construisez l’objet hash_set ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<=(key_type, key_type)`.  
   
- You access the stored delegate object by calling the member function [hash\_set::key\_comp](../dotnet/hash-set-key-comp-stl-clr.md)`()`.  Such a delegate object must define equivalent ordering between keys of type [hash\_set::key\_type](../dotnet/hash-set-key-type-stl-clr.md).  That means, for any two keys `X` and `Y`:  
+ Pour accéder à l’objet délégué stockée en appelant la fonction membre [hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Cet objet de délégué doit définir un classement équivalent entre les clés de type [hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Cela signifie que, pour toutes les deux clés `X` et `Y`:  
   
- `key_comp()(X, Y)` returns the same Boolean result on every call.  
+ `key_comp()(X, Y)`Retourne la valeur booléenne même résultat à chaque appel.  
   
- If `key_comp()(X, Y) && key_comp()(Y, X)` is true, then `X` and `Y` are said to have equivalent ordering.  
+ Si `key_comp()(X, Y) && key_comp()(Y, X)` est true, puis `X` et `Y` sont considérés comme ayant un classement équivalent.  
   
- Any ordering rule that behaves like `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` or `operator==(key_type, key_type)` defines eqivalent ordering.  
+ Une règle de tri qui se comporte comme `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` ou `operator==(key_type, key_type)` définit l’ordre d’eqivalent.  
   
- Note that the container ensures only that elements whose keys have equivalent ordering \(and which hash to the same integer value\) are adjacent within a bucket.  Unlike template class [hash\_set](../dotnet/hash-set-stl-clr.md), an object of template class `hash_multiset` does not require that keys for all elements are unique. \(Two or more keys can have equivalent ordering.\)  
+ Notez que le conteneur garantit uniquement qu’éléments dont les clés ont un classement équivalent (et le hachage à la même valeur d’entier) sont adjacents dans un compartiment. Contrairement à la classe de modèle [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md), un objet de classe de modèle `hash_multiset` ne nécessite pas que les clés pour tous les éléments sont uniques. (Deux touches ou plus peuvent avoir un classement équivalent.)  
   
- The object determines which bucket should contain a given ordering key by calling a stored delegate object of type [hash\_set::hasher](../dotnet/hash-set-hasher-stl-clr.md).  You access this stored object by calling the member function [hash\_set::hash\_delegate](../dotnet/hash-set-hash-delegate-stl-clr.md)`()` to obtain an integer value that depends on the key value.  You can specify the stored delegate object when you construct the hash\_set; if you specify no delegate object, the default is the function `System::Object::hash_value(key_type)`.  That means, for any keys `X` and `Y`:  
+ L’objet détermine quel compartiment doit contenir une clé de tri spécifique en appelant un objet délégué stocké de type [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Pour accéder à cet objet stocké en appelant la fonction membre [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` pour obtenir une valeur entière qui dépend de la valeur de clé. Vous pouvez spécifier l’objet délégué stockées lorsque vous construisez l’objet hash_set ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la fonction `System::Object::hash_value(key_type)`. Cela signifie que, pour toutes les clés `X` et `Y`:  
   
- `hash_delegate()(X)` returns the same integer result on every call.  
+ `hash_delegate()(X)`Retourne le même résultat entier sur chaque appel.  
   
- If `X` and `Y` have equivalent ordering, then `hash_delegate()(X)` should return the same integer result as `hash_delegate()(Y)`.  
+ Si `X` et `Y` ont un classement équivalent, puis `hash_delegate()(X)` doit retourner le même résultat entier en tant que `hash_delegate()(Y)`.  
   
- Each element serves as both a key and a value.  The sequence is represented in a way that permits lookup, insertion, and removal of an arbitrary element with a number of operations that is independent of the number of elements in the sequence \(constant time\) \-\- at least in the best of cases.  Moreover, inserting an element invalidates no iterators, and removing an element invalidates only those iterators which point at the removed element.  
+ Chaque élément sert à la fois une clé et une valeur. La séquence est représentée d’une façon qui permet la recherche, l’insertion et la suppression d’un élément arbitraire avec un nombre d’opérations qui est indépendant du nombre d’éléments dans la séquence (temps constant)--au moins dans le meilleur des cas. De plus, l'insertion d'un élément n'entraîne pas la non validité des itérateurs, et la suppression d'un élément ne rend non valides que les itérateurs qui pointent vers l'élément supprimé.  
   
- If hashed values are not uniformly distributed, however, a hash table can degenerate.  In the extreme \-\- for a hash function that always returns the same value \-\- lookup, insertion, and removal are proportional to the number of elements in the sequence \(linear time\).  The container endeavors to choose a reasonable hash function, mean bucket size, and hash\-table size \(total number of buckets\), but you can override any or all of these choices.  See, for example, the functions [hash\_set::max\_load\_factor](../dotnet/hash-set-max-load-factor-stl-clr.md) and [hash\_set::rehash](../dotnet/hash-set-rehash-stl-clr.md).  
+ Toutefois, si les valeurs de hachage ne sont pas distribuées uniformément, une table de hachage peut dégénérées. À l’extrême--pour une fonction de hachage qui retourne toujours la même valeur--recherche, d’insertion et de suppression sont proportionnelles au nombre d’éléments dans la séquence (délai linéaire). Le conteneur s’efforce de choisir une fonction de hachage raisonnable, la taille du compartiment moyenne et taille de la table de hachage (nombre total de compartiments), mais vous pouvez remplacer tout ou partie de ces choix. Voir, par exemple, les fonctions [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) et [hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).  
   
- A hash\_multiset supports bidirectional iterators, which means you can step to adjacent elements given an iterator that designates an element in the controlled sequence.  A special head node corresponds to the iterator returned by [hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)`()`.  You can decrement this iterator to reach the last element in the controlled sequence, if present.  You can increment a hash\_multiset iterator to reach the head node, and it will then compare equal to `end()`.  But you cannot dereference the iterator returned by `end()`.  
+ Un objet hash_multiset prend en charge les itérateurs bidirectionnels, ce qui signifie que vous pouvez exécuter pour les éléments adjacents donnés d’un itérateur qui désigne un élément dans la séquence contrôlée. Un nœud principal spécial correspond à l’itérateur retourné par [hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`. Vous pouvez décrémenter cet itérateur afin d’atteindre le dernier élément dans la séquence contrôlée, le cas échéant. Vous pouvez incrémenter un itérateur hash_multiset afin d’atteindre le nœud principal, et il compare ensuite égal à `end()`. Mais vous ne pouvez pas déréférencer l’itérateur retourné par `end()`.  
   
- Note that you cannot refer to a hash\_multiset element directly given its numerical position \-\- that requires a random\-access iterator.  
+ Notez que vous ne pouvez pas faire référence à un élément de hash_multiset directement donné sa position numérique--nécessitant un itérateur à accès aléatoire.  
   
- A hash\_multiset iterator stores a handle to its associated hash\_multiset node, which in turn stores a handle to its associated container.  You can use iterators only with their associated container objects.  A hash\_multiset iterator remains valid so long as its associated hash\_multiset node is associated with some hash\_multiset.  Moreover, a valid iterator is dereferencable \-\- you can use it to access or alter the element value it designates \-\- so long as it is not equal to `end()`.  
+ Un itérateur hash_multiset stocke un handle vers son nœud hash_multiset associé, qui à son tour stocke un handle à son conteneur associé. Vous pouvez utiliser des itérateurs uniquement avec les objets du conteneur associé. Un itérateur hash_multiset reste valide tant que son nœud associé hash_multiset est associé à certaines hash_multiset. En outre, un itérateur valide est dereferencable : vous pouvez l’utiliser pour accéder ou modifier la valeur d’élément qu’il désigne--tant qu’il n’est pas égal à `end()`.  
   
- Erasing or removing an element calls the destructor for its stored value.  Destroying the container erases all elements.  Thus, a container whose element type is a ref class ensures that no elements outlive the container.  Note, however, that a container of handles does `not` destroy its elements.  
+ Effacement ou suppression d’un élément appelle le destructeur de sa valeur stockée. Destruction du conteneur efface tous les éléments. Par conséquent, un conteneur dont le type d’élément est une classe ref garantit qu’aucun élément ne survivent le conteneur. Toutefois, notez qu’un conteneur de handles ne `not` détruire ses éléments.  
   
-## Configuration requise  
- **Header:** \<cliext\/hash\_set\>  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/hash_set >  
   
- **Namespace:** cliext  
+ **Namespace :** cliext  
   
-## Voir aussi  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [map](../dotnet/map-stl-clr.md)   
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset](../dotnet/multiset-stl-clr.md)   
- [set](../dotnet/set-stl-clr.md)   
- [STL\/CLR, bibliothèque](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_multiset](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [carte (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [Set (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [Référence de bibliothèque STL/CLR](../dotnet/stl-clr-library-reference.md)

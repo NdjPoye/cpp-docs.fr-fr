@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d9aefddc6658777488e0c0c499d23541f8c5c029
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2f86fa7455edfc29190593660c365e0cfe5ef629
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dequeswap-stlclr"></a>deque::swap (STL/CLR)
 Échange le contenu de deux conteneurs.  
@@ -34,7 +37,7 @@ void swap(deque<Value>% right);
  droite  
  Conteneur avec lequel échanger le contenu.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction membre échange les séquences contrôlées entre `*this` et `right`. Cela se fait en temps constant et ne lève aucune exception. Vous l’utiliser comme un moyen rapide de l’échange le contenu de deux conteneurs.  
   
 ## <a name="example"></a>Exemple  
@@ -83,7 +86,7 @@ x x x x x
 a b c  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/deque >  
   
  **Namespace :** cliext  

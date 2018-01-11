@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a580c90fdd0b6bedd12b73717c88a7bcf671c43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e317b8523fa5220168c10a9f5e345c65ff5aace7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultimapkeytype-stlclr"></a>hash_multimap::key_type (STL/CLR)
 Type d'une clé de tri.  
@@ -30,7 +33,7 @@ Type d'une clé de tri.
 typedef Key key_type;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le type est un synonyme du paramètre de modèle `Key`.  
   
 ## <a name="example"></a>Exemple  
@@ -65,7 +68,7 @@ int main()
 a b c  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/hash_map >  
   
  **Namespace :** cliext  

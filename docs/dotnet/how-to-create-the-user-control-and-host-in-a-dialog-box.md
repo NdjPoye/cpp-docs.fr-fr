@@ -16,11 +16,14 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cf0372029a6f6f3c2e2d3030d9e04ddcf6483f14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 81a618c46f08366b9de2a02cbf84f73d42e7b108
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Comment : créer le contrôle utilisateur et l'héberger dans une boîte de dialogue
 Les étapes de cet article supposent que vous créez basé sur une boîte de dialogue ([CDialog (classe)](../mfc/reference/cdialog-class.md)) project de Microsoft Foundation Classes (MFC), mais vous pouvez également ajouter la prise en charge pour un contrôle Windows Forms à une boîte de dialogue MFC existante.  

@@ -18,11 +18,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2390a474e289ea41fd676759d12b92e8a22e462a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1ae1bb857353b72551e4766516c571c0091062d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl, classe
 Fournit une implémentation d’ensemble de lignes OLE DB standard sans nécessiter l’héritage multiple de nombreuses interfaces d’implémentation.  
@@ -82,7 +85,7 @@ class CRowsetImpl :
 |[m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)|Contient la commande initiale de l’ensemble de lignes.|  
 |[m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)|Contient l’index de départ de l’ensemble de lignes.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CRowsetImpl`Fournit des remplacements dans le formulaire d’effectue un upcast statique. Les méthodes de contrôlent la manière dans lequel un ensemble de lignes donné validera le texte de la commande. Vous pouvez créer vos propres `CRowsetImpl`-classe de style en effectuant vos interfaces de l’implémentation héritée de multiples. La seule méthode pour laquelle vous devez fournir l’implémentation est **Execute**. Selon le type de l’ensemble de lignes que vous créez, les méthodes creator seront attend à recevoir des signatures différentes pour **Execute**. Par exemple, si vous utilisez un `CRowsetImpl`-dérivée de la classe pour implémenter un ensemble de lignes de schéma, le **Execute** méthode aura la signature suivante :  
   
  `HRESULT Execute(LONG* pcRows, ULONG cRestrictions, const VARIANT* rgRestrictions)`  
@@ -93,5 +96,5 @@ class CRowsetImpl :
   
  Pour mettre en œuvre toutes la `CRowsetImpl`-dérivée **Execute** méthodes, vous devez remplir vos tampons de données interne ([m_rgRowData](../../data/oledb/crowsetimpl-m-rgrowdata.md)).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h

@@ -20,11 +20,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e2b3500c90455c7f180f16eae3c56433f57d0492
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5d3d9ddba2039c1b4445bdb8d4ee77e9a68d9796
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>Services et regroupement des ressources OLE DB
 Pour fonctionner correctement avec le regroupement OLE DB, ou avec n’importe quel service OLE DB, votre fournisseur doit prendre en charge le regroupement de tous les objets. Il s’agit d’une exigence de tout OLE DB fournisseur 1.5 ou ultérieure. Il est essentiel pour tirer parti des services. Les fournisseurs qui ne prennent pas en charge l’agrégation ne peut pas être mis en pool et des services supplémentaires sont fournies.  

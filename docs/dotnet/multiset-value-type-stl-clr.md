@@ -1,41 +1,42 @@
 ---
-title: "multiset::value_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::value_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_type (membre) (STL/CLR)"
+title: multiset::Value_type (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::value_type
+dev_langs: C++
+helpviewer_keywords: value_type member [STL/CLR]
 ms.assetid: 6a88ee7a-27a1-4fbb-a56c-9c8d7abc4471
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 979e0630fde0bddb13d6f658ac6632dd47f4575f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# multiset::value_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le type d'un élément.  
+# <a name="multisetvaluetype-stlclr"></a>multiset::value_type (STL/CLR)
+Type d’un élément.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef generic_value value_type;  
 ```  
   
-## Notes  
- Le type est un synonyme pour `generic_value`  
+## <a name="remarks"></a>Notes  
+ Le type est un synonyme de `generic_value`.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_multiset_value_type.cpp   
@@ -63,14 +64,17 @@ int main()
   
 ```  
   
-  **a b c**   
-## Configuration requise  
- **En\-tête :** \<cliext\/set\>  
+```Output  
+a b c  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/set >  
   
-## Voir aussi  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::const\_reference](../dotnet/multiset-const-reference-stl-clr.md)   
- [multiset::key\_type](../dotnet/multiset-key-type-stl-clr.md)   
- [multiset::reference](../dotnet/multiset-reference-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::const_reference (STL/CLR)](../dotnet/multiset-const-reference-stl-clr.md)   
+ [multiset::KEY_TYPE (STL/CLR)](../dotnet/multiset-key-type-stl-clr.md)   
+ [multiset::reference (STL/CLR)](../dotnet/multiset-reference-stl-clr.md)

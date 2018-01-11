@@ -31,11 +31,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 504ab55aadc315dcf06c07a999f2a7d3dfca630b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71dbbf3c56f81b4987fcadb3db98be8d82e70fb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fsetpos"></a>fsetpos
 Définit l’indicateur de position de flux.  
@@ -61,16 +62,16 @@ int fsetpos(
   
  Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `fsetpos` fonction définit l’indicateur de position de fichier pour `stream` à la valeur de `pos`, qui est obtenu dans un appel antérieur à `fgetpos` contre `stream`. La fonction efface l’indicateur de fin de fichier et annule les effets de [ungetc](../../c-runtime-library/reference/ungetc-ungetwc.md) sur `stream`. Après l’appel à `fsetpos`, l’opération suivante sur `stream` peut être une entrée ou une sortie.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête requis|  
 |--------------|---------------------|  
 |`fsetpos`|\<stdio.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple relatif à [fgetpos](../../c-runtime-library/reference/fgetpos.md).  

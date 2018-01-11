@@ -1,46 +1,47 @@
 ---
-title: "Proc&#233;dure de d&#233;roulement | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Procédure de déroulement | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 82c5d0ca-70be-4d1a-a306-bfe01c29159f
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8b8caa2be1528c26cf374637f3d0357847721de9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Proc&#233;dure de d&#233;roulement
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le tableau des codes de déroulement est trié dans l'ordre décroissant.  Lorsqu'une exception se produit, le contexte complet est stocké par le système d'exploitation dans un enregistrement de contexte.  Ensuite, la logique de distribution des exceptions est appelée afin d'exécuter à plusieurs reprises les étapes suivantes pour rechercher un gestionnaire d'exceptions.  
+# <a name="unwind-procedure"></a>Procédure de déroulement
+Le tableau des codes de déroulement est trié dans l’ordre décroissant. Lorsqu’une exception se produit, le contexte complet est stocké par le système d’exploitation dans un enregistrement de contexte. La logique de répartition d’exception est ensuite appelée, ce qui exécute à plusieurs reprises les étapes suivantes pour rechercher un gestionnaire d’exceptions.  
   
-1.  Utilisez le RIP actuel stocké dans l'enregistrement de contexte pour rechercher une entrée de la table RUNTIME\_FUNCTION qui décrit la fonction en cours \(ou la partie de la fonction, en cas d'entrées UNWIND\_INFO chaînées\).  
+1.  Utilisez le RIP actuel stocké dans l’enregistrement de contexte pour rechercher une entrée de table RUNTIME_FUNCTION qui décrit la fonction en cours (ou une partie de la fonction, dans le cas d’entrées UNWIND_INFO chaînées).  
   
-2.  Si aucune entrée de table de fonctions n'est détectée, elle se trouve dans une fonction feuille, et RSP adresse directement le pointeur de retour.  Le pointeur de retour situé au niveau de \[RSP\] est stocké dans le contexte mis à jour, le RSP simulé est incrémenté de 8 et l'étape 1 est répétée.  
+2.  Si aucune entrée de la fonction table n’est trouvée, il s’agit d’une fonction de la feuille, et RSP adresse directement le pointeur de retour. Le pointeur de retour à [RSP] est stocké dans le contexte mis à jour, le RSP simulé est incrémenté de 8 et l’étape 1 est répétée.  
   
-3.  Si une entrée de table de fonctions est recherchée, le RIP peut se trouver dans trois régions a\) dans un épilogue, b\) dans le prologue ou c\) dans le code qui peut être couvert par un gestionnaire d'exceptions.  
+3.  Si une entrée de la fonction table est trouvée, RIP peut se trouver dans trois régions a) dans un épilogue, b) dans le prologue ou c) dans le code qui peut-être être couverts par un gestionnaire d’exceptions.  
   
-    -   Cas a\) Si le RIP est dans un épilogue, le contrôle quitte la fonction, aucun gestionnaire d'exceptions ne peut être associé à cette exception pour cette fonction et les effets de l'épilogue doivent être poursuivis pour calculer le contexte de la fonction appelante.  Pour déterminer si le RIP se trouve dans un épilogue, le flux de code du RIP est examiné.  Si ce flux de code peut être mis en correspondance avec la partie finale d'un épilogue légitime, alors il se trouve dans un épilogue et la partie restante de l'épilogue est simulée, l'enregistrement de contexte étant mis à jour à mesure que chaque instruction est traitée.  Ensuite, l'étape 1 est répétée.  
+    -   Cas un) si le protocole RIP est dans un épilogue, puis contrôle quitte la fonction, il ne peut y avoir aucun gestionnaire d’exceptions associé à cette exception pour cette fonction et les effets de l’épilogue doivent être poursuivies pour calculer le contexte de la fonction appelante. Pour déterminer si le protocole RIP se trouve dans un épilogue, le flux de code à partir de RIP sur est examiné. Ce flux de code peut être mis en correspondance avec la partie finale d’un épilogue, il se trouve dans un épilogue, puis sur la partie restante de l’épilogue est simulée, avec l’enregistrement de contexte mis à jour en tant que chaque instruction est traitée. Après cela, l’étape 1 est répétée.  
   
-    -   Cas b\) Si le RIP se trouve dans le prologue, le contrôle n'a pas accédé à la fonction, aucun gestionnaire d'exceptions ne peut être associé à cette exception pour cette fonction et les effets du prologue doivent être annulés pour calculer le contexte de la fonction appelante.  Le RIP se trouve dans le prologue si la distance qui sépare le début de la fonction du RIP est inférieure ou égale à la taille du prologue encodée dans les informations de déroulement.  Les effets du prologue sont déroulés en recherchant, dans le tableau de codes de déroulement, la première entrée possédant un offset inférieur ou égal à l'offset du RIP à partir du début de la fonction et en annulant ensuite l'effet de tous les éléments restants dans le tableau des codes de déroulement.  L'étape 1 est répétée.  
+    -   Cas b) si le RIP se trouve dans le prologue, le contrôle n’a pas accédé à la fonction, il ne peut y avoir aucun gestionnaire d’exceptions associé à cette exception pour cette fonction et les effets du prologue doivent être annulés pour calculer le contexte de la fonction appelante. Le protocole RIP se trouve dans le prologue si la distance entre le début de la fonction et le protocole RIP est inférieure ou égale à la taille du prologue encodée dans les informations de déroulement. Les effets du prologue sont déroulés en recherchant, dans le tableau de codes de déroulement pour la première entrée avec un décalage inférieur ou égal à l’offset du RIP à partir du début de la fonction, puis en annulant l’effet de tous les éléments restants dans le tableau des codes de déroulement. Étape 1 est ensuite répétée.  
   
-    -   Cas c\) Si le RIP ne se trouve pas dans un prologue ou un épilogue et si la fonction possède un gestionnaire d'exceptions \(UNW\_FLAG\_EHANDLER est défini\), le gestionnaire spécifique au langage est appelé.  Il analyse ses données et appelle des fonctions de filtre le cas échéant.  Le gestionnaire spécifique au langage peut retourner que l'exception a été gérée ou que la recherche doit se poursuivre.  Il peut également initialiser directement un déroulement.  
+    -   Cas c) si le protocole RIP n’est pas dans un prologue ou épilogue et la fonction a un gestionnaire d’exceptions (UNW_FLAG_EHANDLER est défini), puis le gestionnaire spécifique au langage est appelé. Le Gestionnaire d’analyse ses données et les appels des fonctions comme il convient de filtre. Gestionnaire spécifique au langage peut retourner que l’exception a été gérée ou que la recherche doit être poursuivie. Il peut également initier un déroulement directement.  
   
-4.  Si le gestionnaire spécifique au langage retourne un état géré, l'exécution se poursuit à l'aide de l'enregistrement de contexte d'origine.  
+4.  Si le gestionnaire spécifique au langage retourne un état géré, l’exécution se poursuite à l’aide de l’enregistrement de contexte d’origine.  
   
-5.  S'il n'existe aucun gestionnaire spécifique au langage ou si le gestionnaire retourne un état « continuer la recherche », l'enregistrement de contexte doit être déroulé à l'état de l'appelant.  Cela s'effectue en traitant tous les éléments du tableau des codes de déroulement et annulant l'effet de chacun.  L'étape 1 est répétée.  
+5.  S’il n’existe aucun gestionnaire spécifique au langage ou le gestionnaire retourne un état « continuer la recherche », l’enregistrement de contexte doit être déroulé à l’état de l’appelant. Pour cela, vous devez traiter tous les éléments du tableau du code de déroulement, annulant l’effet de chacune. Étape 1 est ensuite répétée.  
   
- Si des informations de déroulement chaînées sont impliquées, ces étapes de base sont quand même exécutées.  La seule différence réside dans le fait que lorsque la fin du tableau est atteinte, lors du parcours du tableau de codes de déroulement en vue de dérouler les effets d'un prologue, elles sont liées aux informations de déroulement parentes et l'intégralité du tableau des codes de déroulement détecté à cet endroit est parcourue.  Cette liaison se poursuit jusqu'à ce qu'elle atteigne des informations de déroulement sans l'indicateur UNW\_CHAINED\_INFO et qu'elle ait terminé de parcourir son tableau des codes de déroulement.  
+ Lorsqu’il est chaîné déroulement info est impliqué, ces étapes de base sont toujours suivies. La seule différence est que, pendant le parcours du tableau des codes de déroulement pour dérouler les effets d’un prologue, une fois que la fin du tableau, il est ensuite lié aux informations de déroulement parent et le tableau des codes de déroulement entière est trouvé est parcouru. Cette liaison se poursuit jusqu'à ce qu’au niveau des informations de déroulement sans l’indicateur UNW_CHAINED_INFO et terminé de parcourir son tableau des codes de déroulement.  
   
- Le plus petit jeu de données de déroulement a une taille de 8 octets.  Cela pourrait représenter une fonction qui n'a alloué que 128 octets de pile maximum, et a éventuellement enregistré un registre non volatil.  Il s'agit étalement de la taille de la structure des informations de déroulement chaînées pour un prologue de longueur nulle sans code de déroulement.  
+ Le plus petit jeu de données de déroulement est de 8 octets. Cela représente une fonction qui alloués seulement 128 octets de pile maximum et éventuellement enregistré un Registre non volatil. Il s’agit également de la taille d’une chaîne pour un prologue de longueur nulle avec les codes de déroulement aucune structure d’informations de déroulement.  
   
-## Voir aussi  
- [Gestion des exceptions \(x64\)](../build/exception-handling-x64.md)
+## <a name="see-also"></a>Voir aussi  
+ [Gestion des exceptions (x64)](../build/exception-handling-x64.md)

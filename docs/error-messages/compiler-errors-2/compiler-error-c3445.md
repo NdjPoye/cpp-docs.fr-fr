@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 04/10/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3445
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3445
+f1_keywords: C3445
+dev_langs: C++
+helpviewer_keywords: C3445
 ms.assetid: 0d272bfc-136b-4025-a9ba-5e4eea5f8215
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bf0ba819aa1e8f0a7651e7c42e457b5766c9eefd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: e880eca87816973d531a2662486dde0ae7c77987
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3445"></a>C3445 d’erreur du compilateur
 initialisation de liste copie de '*type*' ne peut pas utiliser un constructeur explicite  

@@ -24,11 +24,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a7b3e68ef75344b6ee0e612fb104c9a21ea1bde
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 08dd2a80040c4affb89b19dfff3b22103b4e9547
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetfindnextrow"></a>CRowset::FindNextRow
 Recherche la ligne correspondante suivante après le signet spécifié.  
@@ -77,12 +80,12 @@ Recherche la ligne correspondante suivante après le signet spécifié.
 ## <a name="return-value"></a>Valeur de retour  
  `HRESULT` standard.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette méthode requiert l’interface facultative **IRowsetFind**, qui ne peut pas être pris en charge sur tous les fournisseurs ; si c’est le cas, la méthode retourne **E_NOINTERFACE**. Vous devez également définir **DBPROP_IRowsetFind** à `VARIANT_TRUE` avant d’appeler **ouvrir** sur la table ou d’une commande qui contient l’ensemble de lignes.  
   
  Pour plus d’informations sur l’utilisation de signets dans des consommateurs, consultez [à l’aide de signets](../../data/oledb/using-bookmarks.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

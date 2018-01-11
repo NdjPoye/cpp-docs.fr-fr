@@ -1,32 +1,34 @@
 ---
-title: "Types manag&#233;s et la fonction principale (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "main (fonction), dans les applications managées"
-  - "code managé, main() (fonction)"
+title: "Types managés et fonction main (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- main function, in managed applications
+- managed code, main() function
 ms.assetid: 9d0e9620-58c4-4dac-a0e1-ffeb95f80fa5
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 706cd8b15dffb1cde4fc5bbc399789b2aafd6ddf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Types manag&#233;s et la fonction principale (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Lors de l'écriture d'une application à l'aide de **\/clr**, les arguments de la fonction **main\(\)** ne peuvent pas être de type managé.  
+# <a name="managed-types-and-the-main-function-ccli"></a>Types managés et la fonction principale (C++/CLI)
+Lorsque vous écrivez une application en utilisant **/CLR**, les arguments de la **main()** fonction ne peut pas être d’un type managé.  
   
- Exemple de signature appropriée :  
+ Est un exemple d’une signature correcte :  
   
 ```  
 // managed_types_and_main.cpp  
@@ -34,5 +36,5 @@ Lors de l'écriture d'une application à l'aide de **\/clr**, les arguments de l
 int main(int, char*[], char*[]) {}  
 ```  
   
-## Voir aussi  
- [Types managés](../dotnet/managed-types-cpp-cli.md)
+## <a name="see-also"></a>Voir aussi  
+ [Types managés (C++-CLI)](../dotnet/managed-types-cpp-cli.md)

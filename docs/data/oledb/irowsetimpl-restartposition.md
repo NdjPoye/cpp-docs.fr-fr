@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 28aeb5548235fc49c8dd4c412e2a27eaa38a02d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d8ed3217a635f8a0b9af5e2c94fff325e07bff61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetimplrestartposition"></a>IRowsetImpl::RestartPosition
 Repositionne la prochaine position d’extraction à sa position initiale ; Autrement dit, sa position lors de l’ensemble de lignes est initialement créé.  
@@ -41,10 +44,10 @@ Repositionne la prochaine position d’extraction à sa position initiale ; Aut
 #### <a name="parameters"></a>Paramètres  
  Consultez [IRowset::RestartPosition](https://msdn.microsoft.com/en-us/library/ms712877.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La position de l’ensemble de lignes n’est pas définie tant que **GetNextRow** est appelée. Vous pouvez déplacer vers l’arrière dans un rowet en appelant `RestartPosition` , puis l’extraction ou le défilement vers l’arrière.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

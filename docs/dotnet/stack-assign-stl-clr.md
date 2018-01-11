@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 11214550141cc32c589ef090c48775390bc26627
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 240a7776fd60cb9917e195b89f72c135ce7454f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stackassign-stlclr"></a>stack::assign (STL/CLR)
 Remplace tous les éléments.  
@@ -34,7 +37,7 @@ void assign(stack<Value, Container>% right);
  droite  
  Adaptateur de conteneur à insérer.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction membre assigne `right.get_container()` au conteneur sous-jacent. Il permet de modifier le contenu entier de la pile.  
   
 ## <a name="example"></a>Exemple  
@@ -73,7 +76,7 @@ a b c
 a b c  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/stack >  
   
  **Namespace :** cliext  

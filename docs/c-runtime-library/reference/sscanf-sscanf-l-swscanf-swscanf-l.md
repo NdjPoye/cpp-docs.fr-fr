@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -32,8 +31,7 @@ f1_keywords:
 - _stscanf_l
 - sscanf
 - _swscanf_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - swscanf function
 - _stscanf function
@@ -49,30 +47,16 @@ helpviewer_keywords:
 - sscanf_l function
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: b124ba5aa0fef8efd6d44b405fbc608709e05d72
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2143605464eafb569fae003a6e574c51be4e2453
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
 Lisent les données mises en forme d’une chaîne. Il existe des versions plus sécurisées de ces fonctions. Consultez [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).  
@@ -141,14 +125,14 @@ int _swscanf_l(
 |`_stscanf`|`sscanf`|`sscanf`|`swscanf`|  
 |`_stscanf_l`|`_sscanf_l`|`_sscanf_l`|`_swscanf_l`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`sscanf`, `_sscanf_l`|\<stdio.h>|  
 |`swscanf`, `_swscanf_l`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

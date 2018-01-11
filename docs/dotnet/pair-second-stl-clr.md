@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2f0393664bd49f4e961e9348b4e957f0e95038ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e313a8fbc4961e046132abc0bda36292874fa112
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pairsecond-stlclr"></a>pair::second (STL/CLR)
 Le deuxième de valeur encapsulée.  
@@ -30,7 +33,7 @@ Le deuxième de valeur encapsulée.
 Value2 second;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’objet stocke la deuxième valeur encapsulée.  
   
 ## <a name="example"></a>Exemple  
@@ -57,7 +60,7 @@ int main()
 [x, 3]  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/utilitaire >  
   
  **Namespace :** cliext  

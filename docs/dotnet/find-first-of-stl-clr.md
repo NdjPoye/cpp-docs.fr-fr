@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 910760f9964c612096a97e175ff0a8771a91003a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 473c2c5314cb8508fbcbff125e58956b0fb29630
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="findfirstof-stlclr"></a>find_first_of (STL/CLR)
 Recherche la première occurrence parmi plusieurs valeurs d’une plage cible, ou la première occurrence parmi plusieurs éléments qui sont équivalents, selon une condition spécifiée par un prédicat binaire, à un ensemble d’éléments spécifiés.  
@@ -35,10 +38,10 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
         _FwdIt2 _First2, _FwdIt2 _Last2, _Pr _Pred);  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette fonction comporte comme la fonction de la bibliothèque Standard C++ `find_first_of`. Pour plus d’informations, consultez [find_first_of](../standard-library/algorithm-functions.md#find_first_of).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/algorithme >  
   
  **Namespace :** cliext  

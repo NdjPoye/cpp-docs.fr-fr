@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 399286325a38ac7272e2159d24f8ed4cb9360f62
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 32301bdb518b9bcf22f10d76de9a810d2d61ae6f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorgt-pair-stlclr"></a>opérateur&gt; (paire) (STL/CLR)
 Supérieure à la comparaison de la paire.  
@@ -40,7 +43,7 @@ template<typename Value1,
  droite  
  Paire de droit à comparer.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction d’opérateur retourne `right` `<` `left`. Il permet de tester si `left` est trié après `right` lorsque deux paires sont comparé élément par élément.  
   
 ## <a name="example"></a>Exemple  
@@ -73,7 +76,7 @@ int main()
 [x 4] > [x 3] is True  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/utilitaire >  
   
  **Namespace :** cliext  

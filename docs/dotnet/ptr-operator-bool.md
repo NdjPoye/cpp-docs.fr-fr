@@ -1,51 +1,53 @@
 ---
-title: "ptr::operator (bool) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr::operator bool"
-  - "ptr.operator bool"
-  - "operator bool"
-  - "msclr::com::ptr::operator bool"
-  - "msclr.com.ptr.operator bool"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::operator (bool)"
+title: PTR::operator (bool) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr::operator bool
+- ptr.operator bool
+- operator bool
+- msclr::com::ptr::operator bool
+- msclr.com.ptr.operator bool
+dev_langs: C++
+helpviewer_keywords: ptr::operator bool
 ms.assetid: 31123377-6ecd-4cef-9b75-3db3996fbcd1
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5aaec44d5b8f2e8b43a94fa5d0e8b4250ac7bf49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::operator (bool)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Opérateur pour l'utilisation de `com::ptr` dans une expression conditionnelle.  
+# <a name="ptroperator-bool"></a>ptr::operator (bool)
+Opérateur pour l’utilisation de `com::ptr` dans une expression conditionnelle.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 operator bool();  
 ```  
   
-## Valeur de retour  
- `true` si l'objet possédé COM est valide; sinon `false`.  
+## <a name="return-value"></a>Valeur de retour  
+ `true`Si l’objet COM détenue est valide ; `false` dans le cas contraire.  
   
-## Notes  
- L'objet COM possédé n'est pas valide s'il n'est pas `nullptr`.  
+## <a name="remarks"></a>Notes  
+ L’objet COM détenue est valide si elle n’est pas `nullptr`.  
   
- L'opérateur convertit en fait à `_detail_class::_safe_bool` qui est plus sûr que `bool` car il ne peut pas être converti en un type intégral.  
+ Cet opérateur convertit effectivement en `_detail_class::_safe_bool` qui est plus sûr que `bool` car il ne peut pas être converti en un type intégral.  
   
-## Exemple  
- Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son objet membre privé `IXMLDOMDocument`.  La fonction membre d' `CreateInstance` utilise `operator bool` après avoir créé le nouvel objet de document pour déterminer si il est valide et l'écrit dans la console si tel est le cas.  
+## <a name="example"></a>Exemple  
+ Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet. Le `CreateInstance` fonction membre utilise `operator bool` après la création de l’objet document pour déterminer si elle est valide et qu’elle écrit dans la console s’il s’agit.  
   
 ```  
 // comptr_op_bool.cpp  
@@ -92,12 +94,15 @@ int main() {
 }  
 ```  
   
-  **Document DOM créé.**   
-## Configuration requise  
- **Fichier d'en\-tête** \<msclr\\com\\ptr.h\>  
+```Output  
+DOM Document created.  
+```  
   
- **Espace de nommage** msclr::com  
+## <a name="requirements"></a>Configuration requise  
+ **Fichier d’en-tête** \<msclr\com\ptr.h >  
   
-## Voir aussi  
- [ptr, membres](../dotnet/ptr-members.md)   
- [ptr::operator\!](../dotnet/ptr-operator-logical-not.md)
+ **Namespace** msclr::com  
+  
+## <a name="see-also"></a>Voir aussi  
+ [PTR, membres](../dotnet/ptr-members.md)   
+ [ptr::operator!](../dotnet/ptr-operator-logical-not.md)

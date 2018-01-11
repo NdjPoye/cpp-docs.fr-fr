@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92a7604c30070cc7b2023a73ecc4285a8d5152d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1c1ef21d52990a639ed8000674aa12d64dbbbf76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multisetend-stlclr"></a>multiset::end (STL/CLR)
 Désigne la fin de la séquence contrôlée.  
@@ -30,7 +33,7 @@ Désigne la fin de la séquence contrôlée.
 iterator end();  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction membre retourne un itérateur bidirectionnel qui pointe juste après la fin de la séquence contrôlée. Vous l’utilisez pour obtenir un itérateur qui désigne la fin de la séquence contrôlée ; son état ne change pas si la longueur de la séquence contrôlée change.  
   
 ## <a name="example"></a>Exemple  
@@ -69,7 +72,7 @@ int main()
 *--end() = c  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/set >  
   
  **Namespace :** cliext  

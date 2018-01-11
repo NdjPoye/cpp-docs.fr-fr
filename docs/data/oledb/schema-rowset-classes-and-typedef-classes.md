@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 27cb8085711ae9756b9bb5c1042bbe5475619025
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a48ad06318f71b637cc0d16e577d4a15a29177cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Classes de jeu de lignes du schéma et classes Typedef
 Un schéma est une collection d’objets de base de données qui appartiennent, ou qui ont été créés par un utilisateur particulier. Un catalogue peut contenir un ou plusieurs schémas, mais doit toujours contenir un schéma appelé INFORMATION_SCHEMA, qui contient les vues et les domaines du schéma d’informations. Informations de schéma dans OLE DB sont récupérées à l’aide des ensembles de lignes de schéma prédéfinis et incluent des types, tables, colonnes, index, vues, des assertions et contraintes, statistiques, les jeux de caractères, les classements et domaines.  
@@ -63,7 +66,7 @@ Un schéma est une collection d’objets de base de données qui appartiennent, 
 |[AFFICHAGE](https://msdn.microsoft.com/en-us/library/ms723122.aspx)|[CViews](../../data/oledb/cviews-cviewinfo.md)|[CViewInfo](../../data/oledb/cviews-cviewinfo.md)|  
 |[VIEW_TABLE_USAGE](https://msdn.microsoft.com/en-us/library/ms719727.aspx)|[CViewTableUsage](../../data/oledb/cviewtableusage-cviewtableinfo.md)|[CViewTableInfo](../../data/oledb/cviewtableusage-cviewtableinfo.md)|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbsch.h  
   
 ## <a name="see-also"></a>Voir aussi  

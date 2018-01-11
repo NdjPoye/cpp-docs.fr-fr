@@ -55,11 +55,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb4852990bd928a00c5aaf8de4669ed791f68468
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a911ff6251a6b34162377610ae139cfa3a7cefaa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 La classe de base pour les classes de barre de contrôle [CStatusBar](../../mfc/reference/cstatusbar-class.md), [CToolBar](../../mfc/reference/ctoolbar-class.md), [CDialogBar](../../mfc/reference/cdialogbar-class.md), [CReBar](../../mfc/reference/crebar-class.md), et [ COleResizeBar](../../mfc/reference/coleresizebar-class.md).  
@@ -106,7 +107,7 @@ class CControlBar : public CWnd
 |[CControlBar::m_bAutoDelete](#m_bautodelete)|Si elle est différente de zéro, le `CControlBar` objet est supprimé lorsque la barre de contrôle de Windows est détruite.|  
 |[CControlBar::m_pInPlaceOwner](#m_pinplaceowner)|Le propriétaire de la place de la barre de contrôle.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une barre de contrôle est une fenêtre qui est généralement alignée à gauche ou à droite d’une fenêtre frame. Il peut contenir des éléments enfants qui sont soit `HWND`- en fonction des contrôles, qui sont des fenêtres qui génèrent et répondent aux messages de Windows, ou non - `HWND`-en fonction des éléments qui ne sont pas des fenêtres et sont gérés par le code d’application ou le code d’infrastructure. Zones de liste et les contrôles d’édition sont des exemples de `HWND`- en fonction des contrôles ; les volets de barre d’état et des boutons de bitmap sont des exemples de non - `HWND`-en fonction des contrôles.  
   
  Windows de la barre de contrôle sont généralement les fenêtres enfants d’une fenêtre frame parente et sont généralement frères de la vue du client ou du client MDI de la fenêtre frame. A `CControlBar` objet utilise plus d’informations sur le rectangle client de la fenêtre parente pour se positionner. Il informe ensuite la fenêtre parente à la quantité d’espace reste non alloué dans la zone cliente de la fenêtre parente.  
@@ -128,7 +129,7 @@ class CControlBar : public CWnd
   
  `CControlBar`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxext.h  
   
 ##  <a name="calcdynamiclayout"></a>CControlBar::CalcDynamicLayout  
@@ -160,7 +161,7 @@ virtual CSize CalcDynamicLayout(
 ### <a name="return-value"></a>Valeur de retour  
  La barre de contrôle de taille, en pixels, d’un [CSize](../../atl-mfc-shared/reference/csize-class.md) objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Remplacez cette fonction membre pour fournir votre propre disposition dynamique dans les classes dérivées de `CControlBar`. Les classes MFC dérivées de `CControlBar`, tel que [CToolbar](../../mfc/reference/ctoolbar-class.md), remplacez cette fonction membre et de fournir leur propre implémentation.  
   
 ##  <a name="calcfixedlayout"></a>CControlBar::CalcFixedLayout  
@@ -182,7 +183,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="return-value"></a>Valeur de retour  
  La barre de contrôle de taille, en pixels, d’un `CSize` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Barres de contrôle tels que les barres d’outils peuvent d’étendre horizontalement ou verticalement pour accueillir les boutons contenus dans la barre de contrôle.  
   
  Si `bStretch` est **TRUE**, étendre la dimension de l’orientation, fournie par `bHorz`. En d’autres termes, si `bHorz` est **FALSE**, la barre de contrôle est étirée verticalement. Si `bStretch` est **FALSE**, aucune extension se produit. Le tableau suivant montre les permutations possibles et les styles de barre de contrôle résultante, de `bStretch` et `bHorz`.  
@@ -210,7 +211,7 @@ virtual void CalcInsideRect(
  `bHorz`  
  Indique que la barre est orientée horizontalement ou verticalement. Le `bHorz` paramètre est différente de zéro si la barre est orientée horizontalement et 0 s’il est orienté verticalement.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction est appelée avant que la barre de contrôle est peint.  
   
  Remplacez cette fonction pour personnaliser le rendu de la bordure et la barre de redimensionnement de la barre de contrôle.  
@@ -233,7 +234,7 @@ virtual void DoPaint(CDC* pDC);
  `pDC`  
  Pointe vers le contexte de périphérique à utiliser pour le rendu de la bordure et la barre de redimensionnement de la barre de contrôle.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Remplacez cette fonction pour personnaliser le comportement de dessin de la barre de contrôle.  
   
  Une autre méthode de personnalisation consiste à remplacer le `DrawBorders` et `DrawGripper` des fonctions et ajoutez le code de dessin personnalisé pour les bordures et la barre de redimensionnement. Étant donné que ces méthodes sont appelées par la valeur par défaut `DoPaint` d’une méthode, une substitution de `DoPaint` n’est pas nécessaire.  
@@ -254,7 +255,7 @@ virtual void DrawBorders(
  `rect`  
  A `CRect` objet qui contient les dimensions de la barre de contrôle.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Remplacez cette fonction pour personnaliser l’apparence des bordures de barre de contrôle.  
   
 ##  <a name="drawgripper"></a>CControlBar::DrawGripper  
@@ -273,7 +274,7 @@ virtual void DrawGripper(
  `rect`  
  A `CRect` objet qui contient les dimensions de la barre de redimensionnement de barre de contrôle.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Remplacez cette fonction pour personnaliser l’apparence de la barre de redimensionnement de barre de contrôle.  
   
 ##  <a name="enabledocking"></a>CControlBar::EnableDocking  
@@ -301,7 +302,7 @@ void EnableDocking(DWORD dwDockStyle);
   
  La valeur 0 (autrement dit, ce qui indique aucun indicateur), la barre de contrôle ne sera pas ancrer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les côtés spécifiées doivent correspondre à un des côtés activées pour l’ancrage dans la fenêtre frame de destination, ou la barre de contrôle ne peut pas être ancrée à cette fenêtre frame.  
   
 ##  <a name="getbarstyle"></a>CControlBar::GetBarStyle  
@@ -314,7 +315,7 @@ DWORD GetBarStyle();
 ### <a name="return-value"></a>Valeur de retour  
  En cours **CBRS_** (styles de barre de contrôle) des paramètres de la barre de contrôle. Consultez [fonctions CControlBar::SetBarStyle](#setbarstyle) pour la liste complète des styles disponibles.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ne gère pas **WS_** (fenêtre) de style.  
   
 ##  <a name="getborders"></a>CControlBar::GetBorders  
@@ -337,7 +338,7 @@ int GetCount() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de non - `HWND` sur les éléments de la `CControlBar` objet. Cette fonction retourne 0 pour un [CDialogBar](../../mfc/reference/cdialogbar-class.md) objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le type de l’élément dépend de l’objet dérivé : volets pour [CStatusBar](../../mfc/reference/cstatusbar-class.md) objets et des boutons et des séparateurs pour [CToolBar](../../mfc/reference/ctoolbar-class.md) objets.  
   
 ##  <a name="getdockingframe"></a>CControlBar::GetDockingFrame  
@@ -352,7 +353,7 @@ CFrameWnd* GetDockingFrame() const;
   
  Si la barre de contrôle n’est pas ancrée à une fenêtre frame (autrement dit, si la barre de contrôle est flottant), cette fonction retourne un pointeur à son parent [CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur les barres de contrôle, consultez [CControlBar::EnableDocking](#enabledocking) et [CFrameWnd::DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar).  
   
 ##  <a name="isfloating"></a>CControlBar::IsFloating  
@@ -365,7 +366,7 @@ BOOL IsFloating() const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la barre de contrôle est flottante. Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour modifier l’état d’une barre de contrôle à partir d’ancré en virgule flottante, appelez [CFrameWnd::FloatControlBar](../../mfc/reference/cframewnd-class.md#floatcontrolbar).  
   
 ##  <a name="m_bautodelete"></a>CControlBar::m_bAutoDelete  
@@ -375,7 +376,7 @@ BOOL IsFloating() const;
 BOOL m_bAutoDelete;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `m_bAutoDelete`est une variable publique de type **BOOL**.  
   
  Un objet de barre de contrôle est généralement incorporé dans un objet fenêtre frame. Dans ce cas, `m_bAutoDelete` est 0, car l’objet de barre de contrôle incorporé est détruite quand la fenêtre frame est détruite.  
@@ -405,7 +406,7 @@ virtual void OnUpdateCmdUI(
  `bDisableIfNoHndler`  
  Indicateur qui indique si un contrôle qui ne possède aucun gestionnaire de mise à jour doit être affiché automatiquement comme étant désactivé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour mettre à jour d’un bouton ou un volet, utilisez le `ON_UPDATE_COMMAND_UI` macro dans votre table des messages pour définir un gestionnaire de mise à jour de manière appropriée. Consultez [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) pour plus d’informations sur l’utilisation de cette macro.  
   
  `OnUpdateCmdUI`est appelé par l’infrastructure lors de l’application est inactive. La fenêtre frame à mettre à jour doit être au moins indirectement, une fenêtre enfant, d’une fenêtre frame visible. `OnUpdateCmdUI`avancée substituable.  
@@ -447,7 +448,7 @@ void SetBarStyle(DWORD dwStyle);
   
 - **CBRS_GRIPPER** provoque une barre de redimensionnement, semblable à celle utilisée sur les bandes dans un **CReBar** à dessiner pour tout objet `CControlBar`-classe dérivée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  N’affecte pas la **WS_** les paramètres (style de fenêtre).  
   
 ##  <a name="setborders"></a>CControlBar::SetBorders  
@@ -495,7 +496,7 @@ void SetInPlaceOwner(CWnd* pWnd);
  `pWnd`  
  Un pointeur vers un `CWnd` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple MFC CTRLBARS](../../visual-cpp-samples.md)   

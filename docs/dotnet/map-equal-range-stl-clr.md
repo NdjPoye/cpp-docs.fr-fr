@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 13500bbd5842460dff5cf071bd626555bf1c5cc9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 665475d63129bab1c1413d51f6324aba52806fc3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapequalrange-stlclr"></a>map::equal_range (STL/CLR)
 Recherche une plage qui correspond à une clé spécifiée.  
@@ -34,7 +37,7 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
  clé  
  Valeur de clé à rechercher.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction membre retourne une paire d’itérateurs `cliext::pair<iterator, iterator>(` [map::lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md) `(key),` [map::upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md)`(key))`. Il permet de déterminer la plage d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.  
   
 ## <a name="example"></a>Exemple  
@@ -80,7 +83,7 @@ equal_range(L'x') empty = True
  [b 2]  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/map >  
   
  **Namespace :** cliext  

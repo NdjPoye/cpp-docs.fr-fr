@@ -19,11 +19,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc7dbfdd5ca20ab330a0c4dd855593b6c91fb953
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ae02518b60190dd129443f00d82b377317c816b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptr-class"></a>com::ptr, classe
 Wrapper pour un objet COM qui peut être utilisé en tant que membre d’une classe CLR.  Le wrapper automatise également la gestion de la durée de vie de l’objet COM à libérer détenus toutes les références sur l’objet lorsque son destructeur est appelé. Analogue à [classe CComPtr](../atl/reference/ccomptr-class.md).  
@@ -39,7 +42,7 @@ ref class ptr;
  `_interface_type`  
  Interface COM.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un `com::ptr` peut également servir comme une variable de fonction locale pour simplifier les différentes tâches de COM et d’automatiser la gestion de la durée de vie.  
   
  A `com::ptr` ne peut pas être utilisé directement comme un paramètre de fonction ; utilisez un [opérateur de référence de suivi](../windows/tracking-reference-operator-cpp-component-extensions.md) ou un [Handle sur l’opérateur Object (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) à la place.  
@@ -161,7 +164,7 @@ int main() {
 <word>persnickety</word>  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  

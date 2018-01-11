@@ -20,11 +20,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0843e3e9798087a1ed5d9415e8397149b0cd74f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 159b80fcc015db2999309fe99e9617f7dcd409ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Appel à des fonctions natives à partir de code managé
 Le common language runtime fournit des Services d’appel de plateforme, ou PInvoke, qui permet de code managé d’appeler des fonctions de style C dans les bibliothèques liées dynamiques (DLL) natives. Les marshaling de données mêmes sont utilisées pour l’interopérabilité de COM avec le runtime et pour le mécanisme « It Just Works » ou IJW.  
@@ -177,7 +180,7 @@ int main() {
   
  Toutefois, vous devez marshaler les types qui n’ont pas le même formulaire. Cela inclut les types char, string et struct. Le tableau suivant montre les mappages utilisés par le marshaleur pour différents types :  
   
-|Wtypes.h|Visual C++|Visual C++ avec /clr|Common Language Runtime|  
+|Wtypes.h|Visual C++|Visual C++ avec /clr|Common Language Runtime|  
 |--------------|------------------|-----------------------------|-----------------------------|  
 |HANDLE|void *|void *|IntPtr, UIntPtr|  
 |BYTE|unsigned char|unsigned char|Byte|  

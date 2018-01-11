@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4dcec1f501d2f05018410fcd293a4ed649e607b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e06e1d5b0a5aa34116456c342f9cec233edcb6a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Substitution d’un accesseur dynamique
 Lorsque vous utilisez un accesseur dynamique tel que `CDynamicAccessor`, la commande **ouvrir** méthode crée un accesseur pour vous automatiquement, en fonction des informations de colonne de l’ensemble de lignes ouvert. Vous pouvez substituer l’accesseur dynamique pour contrôler exactement comment les colonnes sont liées.  

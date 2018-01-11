@@ -1,45 +1,46 @@
 ---
-title: "hash_multiset::find (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::find"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre find [STL/CLR]"
+title: hash_multiset::Find (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::find
+dev_langs: C++
+helpviewer_keywords: find member [STL/CLR]
 ms.assetid: fbedeb37-242e-4c2a-b1f8-234bcfd9cd25
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b2635ad3ad0b5c1573d7691bf1ad17028c19c315
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::find (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultisetfind-stlclr"></a>hash_multiset::find (STL/CLR)
 Recherche un élément qui correspond à une clé spécifiée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 iterator find(key_type key);  
 ```  
   
-#### Paramètres  
- key  
+#### <a name="parameters"></a>Paramètres  
+ clé  
  Valeur de clé à rechercher.  
   
-## Notes  
- Si au moins un élément dans la séquence contrôlée à un classement équivalent à `key`, la fonction membre retourne un itérateur indiquant un de ces éléments ; sinon il renvoie [hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)`()`.  Vous l'utilisez pour localiser un élément actuellement dans la séquence contrôlée qui correspond à une clé spécifiée.  
+## <a name="remarks"></a>Notes  
+ Si au moins un élément dans la séquence contrôlée a un classement équivalent à `key`, la fonction membre retourne un itérateur désignant un de ces éléments ; sinon, elle retourne [hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) `()`. Il permet de localiser un élément actuellement dans la séquence contrôlée qui correspond à une clé spécifiée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_multiset_find.cpp   
@@ -70,20 +71,23 @@ int main()
   
 ```  
   
-  **a b c**  
-**find A \= False**  
-**find b \= b**  
-**find C \= False**   
-## Description  
- Remarquez que `find` ne garantit pas quel élément il trouve parmi plusieurs.  
+```Output  
+ a b c  
+find A = False  
+find b = b  
+find C = False  
+```  
   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_set\>  
+## <a name="description"></a>Description  
+ Notez que `find` ne garantit pas parmi plusieurs élément qu’il trouve.  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/hash_set >  
   
-## Voir aussi  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::equal\_range](../dotnet/hash-multiset-equal-range-stl-clr.md)   
- [hash\_multiset::lower\_bound](../dotnet/hash-multiset-lower-bound-stl-clr.md)   
- [hash\_multiset::upper\_bound](../dotnet/hash-multiset-upper-bound-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::equal_range (STL/CLR)](../dotnet/hash-multiset-equal-range-stl-clr.md)   
+ [hash_multiset::lower_bound (STL/CLR)](../dotnet/hash-multiset-lower-bound-stl-clr.md)   
+ [hash_multiset::upper_bound (STL/CLR)](../dotnet/hash-multiset-upper-bound-stl-clr.md)

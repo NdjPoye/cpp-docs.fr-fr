@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2d4f5a54d71a49d76b1fbc2ba31a0ffe42738b92
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: debda931ae121e109c4b1008054ace11a714f065
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>Comment : stocker la référence d'un objet dans une mémoire non managée
 Vous pouvez utiliser gcroot.h, qui encapsule <xref:System.Runtime.InteropServices.GCHandle>, pour conserver une référence d’objet CLR dans la mémoire non managée. Vous pouvez également utiliser `GCHandle` directement.  

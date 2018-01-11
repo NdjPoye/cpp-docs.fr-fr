@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f57894bc22cc469e000663d871be7c4739db22e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 75e92f48729d0aae9f85cc7b7c5c97e4778f96a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cutlprops-class"></a>CUtlProps, classe
 Implémente des propriétés pour un large éventail d’interfaces de propriété OLE DB (par exemple, `IDBProperties`, `IDBProperties`, et `IRowsetInfo`).  
@@ -47,14 +50,14 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 |[OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)|Appelé après la définition d’une propriété de gérer des propriétés chaînées.|  
 |[SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)|Définit une propriété dans un jeu de propriétés.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La plupart de cette classe est un détail d’implémentation.  
   
  `CUtlProps`contient deux membres pour définir les propriétés en interne : [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) et [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).  
   
  Pour plus d’informations sur les macros utilisées dans un mappage de jeu de propriétés, consultez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) et [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

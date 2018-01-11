@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f1d27012a1a0bc1ed64d621b5fc4909a604dafe8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: cf3a241159eaa24cc313627d41839519097b2d27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashsetgenericiterator-stlclr"></a>hash_set::generic_iterator (STL/CLR)
 Le type d’un itérateur pour une utilisation avec l’interface générique pour le conteneur.  
@@ -32,7 +35,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_iterator;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le type décrit un itérateur générique qui peut être utilisé avec l’interface générique pour cette classe de conteneur de modèle.  
   
 ## <a name="example"></a>Exemple  
@@ -76,7 +79,7 @@ a b c
 a  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/hash_set >  
   
  **Namespace :** cliext  

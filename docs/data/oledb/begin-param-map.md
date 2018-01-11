@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0afb13e4d9d89f819b4f88138e8ac8cbc650c7a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 448558ad32bb558f9daa417b49ebc733664295d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="beginparammap"></a>BEGIN_PARAM_MAP
 Marque le début des entrées de mappage de paramètre.  
@@ -38,13 +41,13 @@ x
  *x*  
  [in] Nom de la classe d’enregistrement utilisateur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les paramètres sont utilisés par [commandes](https://msdn.microsoft.com/en-us/library/ms724608.aspx).  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple de la [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) (macro).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

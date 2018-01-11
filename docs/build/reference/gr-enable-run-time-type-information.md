@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3420af666ac4b9dca648b780ae99e794265515bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 993465bd1666e624777e52cb1c3d3a54545589dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gr-enable-run-time-type-information"></a>/GR (Activer les informations de type au moment de l'exécution)
 Ajoute du code pour vérifier les types d’objet en cours d’exécution.  
@@ -38,7 +39,7 @@ Ajoute du code pour vérifier les types d’objet en cours d’exécution.
 /GR[-]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Lorsque **/GR** est activé, le compilateur définit le `_CPPRTTI` macro de préprocesseur. Par défaut, **/GR** sur. **/GR-** désactive les informations de type au moment de l’exécution.  
   
  Utilisez **/GR** si le compilateur ne peut pas résoudre statiquement de type d’objet dans votre code. Vous devez généralement le **/GR** option lorsque votre code utilise [opérateur dynamic_cast](../../cpp/dynamic-cast-operator.md) ou [typeid](../../cpp/typeid-operator.md). Toutefois, **/GR** augmente la taille des sections .rdata de votre image. Si votre code n’utilise pas **dynamic_cast** ou **typeid**, **/GR-** peut produire une image plus petite.  

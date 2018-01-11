@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cce27c9924a68ffc39421a529875d836b4597efb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 14b1becbbfdb9db8deeafb377bbf13fbcb71eb79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multimapconstreference-stlclr"></a>multimap::const_reference (STL/CLR)
 Type d'une référence constante à un élément.  
@@ -30,7 +33,7 @@ Type d'une référence constante à un élément.
 typedef value_type% const_reference;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le type décrit une référence constante à un élément.  
   
 ## <a name="example"></a>Exemple  
@@ -65,7 +68,7 @@ int main()
 [a 1] [b 2] [c 3]  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/map >  
   
  **Namespace :** cliext  

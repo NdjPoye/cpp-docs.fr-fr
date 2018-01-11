@@ -1,31 +1,34 @@
 ---
-title: "Comment&#160;: obtenir un pointeur vers un tableau d&#39;octets | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tableaux d'octets"
-  - "pointeurs, vers un tableau d'octets"
+title: "Comment : obtenir un pointeur vers un tableau d’octets | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- pointers, to Byte array
+- Byte arrays
 ms.assetid: aea18073-3341-47f4-9f0e-04e03327037e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 270f2b6b79edc4b5c3ab0846381bb65788b12504
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Comment&#160;: obtenir un pointeur vers un tableau d&#39;octets
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vous pouvez obtenir un pointeur vers le bloc de tableau contenu dans un tableau <xref:System.Byte> en prenant l'adresse du premier élément et en l'assignant à un pointeur.  
+# <a name="how-to-obtain-a-pointer-to-byte-array"></a>Comment : obtenir un pointeur vers un tableau d'octets
+Vous pouvez obtenir un pointeur vers le bloc de tableau dans un <xref:System.Byte> tableau par la prise d’adresse du premier élément et en l’assignant à un pointeur.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // pointer_to_Byte_array.cpp  
@@ -40,5 +43,5 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
- [Utilisation de l'interopérabilité C\+\+ \(PInvoke implicite\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

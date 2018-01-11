@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 84f2a643f9dc1b19a0c14aa065bd4860a3c7c557
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0e2b5f38a0ea48ee864dc282b5cd1985b7e6afd3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdbpropidsetaddpropertyid"></a>CDBPropIDSet::AddPropertyID
 Ajoute un ID de propriété à la propriété ID définie.  
@@ -42,7 +45,7 @@ Ajoute un ID de propriété à la propriété ID définie.
  `propid`  
  [in] Définir l’ID de propriété à ajouter à l’ID de propriété.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

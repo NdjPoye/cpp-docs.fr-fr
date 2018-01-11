@@ -1,36 +1,38 @@
 ---
-title: "lock::try_acquire | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "try_acquire"
-  - "lock.try_acquire"
-  - "msclr.lock.try_acquire"
-  - "lock::try_acquire"
-  - "msclr::lock::try_acquire"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock::try_acquire"
+title: Lock::try_acquire | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- try_acquire
+- lock.try_acquire
+- msclr.lock.try_acquire
+- lock::try_acquire
+- msclr::lock::try_acquire
+dev_langs: C++
+helpviewer_keywords: lock::try_acquire
 ms.assetid: ef0649a9-e611-4495-84bd-2784533221d9
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: da2372f513d9799cfddbebeefa7e9160d1a6b135
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# lock::try_acquire
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Acquiert un verrou sur un objet, en attendant une quantité spécifique d'heure et retourne `bool` pour indiquer la réussite de l'acquisition au lieu de lever d'exception.  
+# <a name="locktryacquire"></a>lock::try_acquire
+Acquiert un verrou sur un objet, en attente pour un laps de temps et en retournant un `bool` pour signaler la réussite de l’acquisition au lieu de lever une exception.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 bool try_acquire(  
@@ -41,18 +43,18 @@ bool try_acquire(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `_timeout`  
- Valeur du délai d'attente en millisecondes ou en tant que <xref:System.TimeSpan>.  
+ Valeur de délai d’attente en millisecondes, ou comme un <xref:System.TimeSpan>.  
   
-## Valeur de retour  
- `true` si le verrou a été acquis ; sinon, `false`.  
+## <a name="return-value"></a>Valeur de retour  
+ `true`Si le verrou a été acquis, `false` dans le cas contraire.  
   
-## Notes  
- Si un verrou a déjà été acquis, cette fonctionnalité n'a aucun effet.  
+## <a name="remarks"></a>Notes  
+ Si un verrou a déjà été acquis, cette fonction ne fait rien.  
   
-## Exemple  
- Cet exemple utilise une seule instance d'une classe entre des threads multiples.  La classe utilise un verrou sur elle\-même pour garantir que les accès à ses données internes sont cohérents pour chaque thread.  Le thread d'application principale utilise un verrou sur la même instance de la classe pour vérifier régulièrement si les threads de travail existent toujours, et attend pour quitter jusqu'à ce que tous les threads de travail aient terminé leurs tâches.  
+## <a name="example"></a>Exemple  
+ Cet exemple utilise une seule instance d’une classe sur plusieurs threads.  La classe utilise un verrou sur lui-même pour vous assurer que l’accès à ses données internes sont cohérents pour chaque thread.  Le thread d’application principale utilise un verrou sur la même instance de la classe à vérifier régulièrement si les threads de travail existent toujours, et attend de quitter jusqu'à ce que tous les threads de travail ont terminé leurs tâches.  
   
 ```  
 // msl_lock_try_acquire.cpp  
@@ -126,22 +128,25 @@ int main() {
 }  
 ```  
   
-  **Dans le thread 3, Compteur \= 0**  
-**Dans le thread 3, Compteur \= 10**  
-**Dans le thread 5, Compteur \= 0**  
-**Dans le thread 5, Compteur \= 10**  
-**Dans le thread 7, Compteur \= 0**  
-**Dans le thread 7, Compteur \= 10**  
-**Dans le thread 4, Compteur \= 0**  
-**Dans le thread 4, Compteur \= 10**  
-**Dans le thread 6, Compteur \= 0**  
-**Dans le thread 6, Compteur \= 10**  
-**Tous les threads sont terminés.**   
-## Configuration requise  
- **Fichier d'en\-tête** \<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- **Espace de nommage** msclr  
+## <a name="requirements"></a>Configuration requise  
+ **Fichier d’en-tête** \<msclr\lock.h >  
   
-## Voir aussi  
- [lock, membres](../dotnet/lock-members.md)   
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Lock, membres](../dotnet/lock-members.md)   
  [lock::acquire](../dotnet/lock-acquire.md)

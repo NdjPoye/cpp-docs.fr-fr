@@ -1,50 +1,51 @@
 ---
-title: "CDataConnection::Copy | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataConnection.Copy"
-  - "ATL.CDataConnection.Copy"
-  - "ATL::CDataConnection::Copy"
-  - "CDataConnection::Copy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Copy (méthode)"
+title: CDataConnection::Copy | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataConnection.Copy
+- ATL.CDataConnection.Copy
+- ATL::CDataConnection::Copy
+- CDataConnection::Copy
+dev_langs: C++
+helpviewer_keywords: Copy method
 ms.assetid: a3dbd70d-36be-49e0-a527-00e3910a7a56
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: eb2a5aa351afec2d5a379b6c8c0543e69db2f045
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CDataConnection::Copy
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Crée une copie d'une connexion de données existante.  
+# <a name="cdataconnectioncopy"></a>CDataConnection::Copy
+Crée une copie d’une connexion de données existante.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      CDataConnection& Copy(   
-   const CDataConnection & ds    
+      CDataConnection& Copy(   
+   const CDataConnection & ds    
 ) throw( );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `ds`  
- \[in\] référence à une connexion de données existante à copier.  
+ [in] Une référence à une connexion de données existante à copier.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CDataConnection, classe](../../data/oledb/cdataconnection-class.md)

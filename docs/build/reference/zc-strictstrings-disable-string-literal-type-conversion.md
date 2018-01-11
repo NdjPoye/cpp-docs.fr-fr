@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 09ba2ca14a935c9d412fece89099f508dbd32ae3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f316c5fc9209f968219d770a15e6576880b69954
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>/Zc:strictStrings (Désactiver la conversion du type de littéral de chaîne)
 Quand il est spécifié, le compilateur requiert une conformité de qualification `const` stricte pour les pointeurs initialisés à l'aide de littéraux de chaîne.  
@@ -37,7 +38,7 @@ Quand il est spécifié, le compilateur requiert une conformité de qualificatio
 /Zc:strictStrings[-]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si **/Zc : strictstrings** est spécifié, le compilateur applique le standard C++ `const` qualifications des littéraux de chaîne en tant que type ' tableau de `const char`' ou ' tableau de `const wchar_t`», en fonction de la déclaration. Les littéraux de chaîne sont immuables et une tentative de modification du contenu d'un de ces littéraux entraîne une erreur de violation d'accès au moment de l'exécution. Vous devez déclarer un pointeur de chaîne en tant que `const` pour l'initialiser en utilisant un littéral de chaîne ou utilisez un `const_cast` explicite pour initialiser un pointeur non `const`. Par défaut, ou si **/Zc:strictStrings-** est spécifié, le compilateur n’applique pas le standard C++ `const` qualifications pour les pointeurs de chaîne initialisés à l’aide de littéraux de chaîne.  
   
  Utilisez le **/Zc : strictstrings** option pour empêcher la compilation de code incorrect. Cet exemple montre comment une simple erreur de déclaration conduit à un incident au moment de l'exécution :  

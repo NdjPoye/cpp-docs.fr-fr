@@ -1,42 +1,44 @@
 ---
-title: "Erreur du compilateur C2461 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2461"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2461"
+title: Erreur du compilateur C2461 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C2461
+dev_langs: C++
+helpviewer_keywords: C2461
 ms.assetid: e64ba651-f441-4fdb-b5cb-4209bbbe4db4
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0e5e1593e37bd3a02897d023e308593e23d3d73b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Erreur du compilateur C2461
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'classe' : absence de paramètres formels dans la syntaxe du constructeur  
+# <a name="compiler-error-c2461"></a>Erreur du compilateur C2461
   
- Le constructeur de la classe ne spécifie aucun paramètre formel.  La déclaration d'un constructeur doit spécifier un paramètre formel. \(La liste peut être nulle.\)  
+> '*classe*' : syntaxe de constructeur absence de paramètres formels  
   
- Ajoutez des parenthèses après `class``::``class`.  
+ Le constructeur de la classe ne spécifie pas de tous les paramètres formels. La déclaration d’un constructeur doit spécifier une liste de paramètres formels. La liste peut être vide.  
   
- L'exemple suivant génère l'erreur C2461 :  
+Pour résoudre ce problème, ajoutez une paire de parenthèses après la déclaration de *classe*:: **classe*.  
   
-```  
+## <a name="example"></a>Exemple  
+  
+L’exemple suivant montre comment la corriger C2461 :  
+  
+```cpp  
 // C2461.cpp  
 // compile with: /c  
 class C {  
-   C::C;   // C2461  
+   C::C;     // C2461  
    C::C();   // OK  
 };  
 ```

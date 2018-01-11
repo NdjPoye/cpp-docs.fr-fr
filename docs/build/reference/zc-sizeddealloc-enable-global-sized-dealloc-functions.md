@@ -22,11 +22,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: baab49fb4eb49f872a8d285f1d8f08ccda569a6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1343c037f87aee609de2b082cb87f7f1f2832221
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcsizeddealloc-enable-global-sized-deallocation-functions"></a>/Zc:sizedDealloc (activer des fonctions de Global désallocation dimensionnée)  
 Le `/Zc:sizedDealloc` option du compilateur indique au compilateur d’appeler préférence global `operator delete` ou `operator delete[]` des fonctions ayant un deuxième paramètre de type `size_t` lorsque la taille de l’objet est disponible. Ces fonctions peuvent utiliser le `size_t` paramètre pour optimiser les performances d’annulateur d’allocation.   
@@ -34,7 +35,7 @@ Le `/Zc:sizedDealloc` option du compilateur indique au compilateur d’appeler p
 ## <a name="syntax"></a>Syntaxe  
 `/Zc:sizedDealloc`[`-`\]  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 Dans la norme C ++ 11, vous pouvez définir les fonctions membres statiques `operator delete` et `operator delete[]` qui accepte un deuxième, `size_t` paramètre. En général, ceux-ci sont utilisés en association avec [new, opérateur](../../cpp/new-operator-cpp.md) fonctions pour mettre en œuvre plus efficace des allocateurs et annulateurs d’allocation de l’objet. Toutefois, C ++ 11 n’ont pas défini un ensemble équivalent de fonctions de désallocation dans une portée globale. Dans C ++ 11, désallocation global des fonctions ayant un deuxième paramètre de type `size_t` sont considérés comme des fonctions de positionnement delete. Elles doivent être appelées explicitement en passant un argument de taille.  
   

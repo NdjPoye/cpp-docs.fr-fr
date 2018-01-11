@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 9c7d0c53464a000f74a4e552694e40af9d201992
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b572d829c21c37457fc9fdab5f745616a6318ff1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator, classe
 Fournit un itérateur Standard Template Library pour les objets dérivés de l’exécution de Windows`IVectorView` interface.  
@@ -78,7 +79,7 @@ class VectorViewIterator;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `VectorViewIterator`  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** collection.h  
   
  **Espace de noms :** Platform::Collections  
@@ -112,7 +113,7 @@ VectorViewIterator operator--(int);
 ### <a name="return-value"></a>Valeur de retour  
  La première syntaxe décrémente l’objet VectorViewIterator actif, puis le retourne. La deuxième syntaxe retourne une copie de l’objet VectorViewIterator actif, puis le décrémente.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La première syntaxe VectorViewIterator prédécrémente l’objet VectorViewIterator actif.  
   
  La deuxième syntaxe postdécrémente l’objet VectorViewIterator actif. Le `int` type dans la deuxième syntaxe indique une opération de post-décrémentation, pas un opérande entier réel.  
@@ -203,7 +204,7 @@ VectorViewIterator operator++(int);
 ### <a name="return-value"></a>Valeur de retour  
  La première syntaxe incrémente l'objet VectorViewIterator actuel, puis le retourne. La deuxième syntaxe retourne une copie de l'objet VectorViewIterator actuel, puis l'incrémente.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La première syntaxe VectorViewIterator préincrémente l'objet VectorViewIterator actuel.  
   
  La deuxième syntaxe postincrémente l'objet VectorViewIterator actuel. Le type `int` dans la deuxième syntaxe n'indique pas un opérande entier réel mais une post-incrémentation.  
@@ -394,7 +395,7 @@ explicit VectorViewIterator(
  `v`  
  Un IVectorView\<T > objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le premier exemple de syntaxe est le constructeur par défaut. Le deuxième exemple de syntaxe est un constructeur explicite qui est utilisé pour construire un VectorViewIterator à partir d’un IVectorView\<T > objet.  
   
 

@@ -1,57 +1,58 @@
 ---
-title: "CDynamicAccessor::GetBookmark | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicAccessor.GetBookmark"
-  - "GetBookmark"
-  - "CDynamicAccessor::GetBookmark"
-  - "ATL.CDynamicAccessor.GetBookmark"
-  - "ATL::CDynamicAccessor::GetBookmark"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetBookmark (méthode)"
+title: CDynamicAccessor::GetBookmark | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicAccessor.GetBookmark
+- GetBookmark
+- CDynamicAccessor::GetBookmark
+- ATL.CDynamicAccessor.GetBookmark
+- ATL::CDynamicAccessor::GetBookmark
+dev_langs: C++
+helpviewer_keywords: GetBookmark method
 ms.assetid: 6d0a2970-0c62-4a34-bac7-149d8e990f81
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e090df30db8abfcd2aee4dc87543be72183f7960
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::GetBookmark
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicaccessorgetbookmark"></a>CDynamicAccessor::GetBookmark
 Récupère le signet pour la ligne actuelle.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      HRESULT GetBookmark(   
-   CBookmark< >* pBookmark    
+      HRESULT GetBookmark(   
+   CBookmark< >* pBookmark    
 ) const throw( );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `pBookmark`  
- \[out\] pointeur à l'objet [CBookmark](../../data/oledb/cbookmark-class.md).  
+ [out] Un pointeur vers le [CBookmark](../../data/oledb/cbookmark-class.md) objet.  
   
-## Valeur de retour  
- Une des valeurs standard `HRESULT`.  
+## <a name="return-value"></a>Valeur de retour  
+ Un de la norme `HRESULT` valeurs.  
   
-## Notes  
- Vous devez définir **DBPROP\_IRowsetLocate** à `VARIANT_TRUE` pour extraire un signet.  
+## <a name="remarks"></a>Notes  
+ Vous devez définir **DBPROP_IRowsetLocate** à `VARIANT_TRUE` pour récupérer un signet.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CDynamicAccessor, classe](../../data/oledb/cdynamicaccessor-class.md)

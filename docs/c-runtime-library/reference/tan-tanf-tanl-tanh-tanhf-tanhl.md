@@ -55,11 +55,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0f094272514966655e8ecfe45a3f35e179db333
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a418683e23525d6e3c46853312b217788c0969e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tan-tanf-tanl-tanh-tanhf-tanhl"></a>tan, tanf, tanl, tanh, tanhf, tanhl
 Calcule la tangente (`tan`, `tanf` ou `tanl`) ou la tangente hyperbolique (`tanh`, `tanhf` ou `tanhl`).  
@@ -116,13 +117,13 @@ long double tanhl(
 ## <a name="remarks"></a>Notes  
  Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de `tan` et `tanh` qui acceptent et retournent des valeurs `float` ou `long double`. Dans un programme C, `tan` et `tanh` acceptent et retournent toujours un `double`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`tan`, `tanf`, `tanl`, `tanh`, `tanhf`, `tanhl`|\<math.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

@@ -1,41 +1,42 @@
 ---
-title: "hash_multimap::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type (membre) (STL/CLR)"
+title: hash_multimap::size_type (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 4d266b1f-d0d6-4575-9abd-70fab719eb76
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bd2887c6ada923d60b501dcc29f12d0c065cae1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le type d'une distance signée entre deux éléments.  
+# <a name="hashmultimapsizetype-stlclr"></a>hash_multimap::size_type (STL/CLR)
+Le type d’une distance signée entre deux éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef int size_type;  
 ```  
   
-## Notes  
- Le type décrit un nombre non négatif d'éléments.  
+## <a name="remarks"></a>Notes  
+ Le type décrit un nombre non négatif élément.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_multimap_size_type.cpp   
@@ -65,13 +66,16 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**end\(\)\-begin\(\) \= 3**   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+end()-begin() = 3  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/hash_map >  
   
-## Voir aussi  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::empty](../dotnet/hash-multimap-empty-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::empty (STL/CLR)](../dotnet/hash-multimap-empty-stl-clr.md)

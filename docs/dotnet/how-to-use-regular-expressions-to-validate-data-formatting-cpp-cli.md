@@ -1,33 +1,35 @@
 ---
-title: "Comment&#160;: valider la mise en forme de donn&#233;es &#224; l&#39;aide d&#39;expressions r&#233;guli&#232;res (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "données (C++), mettre en forme"
-  - "expressions régulières (C++), valider la mise en forme des données"
-  - "chaînes (C++), mettre en forme"
+title: "Utiliser des Expressions régulières pour valider la mise en forme (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- strings [C++], formatting
+- data [C++], formatting
+- regular expressions [C++], validating data formatting
 ms.assetid: 225775c3-3efc-4734-bde2-1fdf73e3d397
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6e67b6de0b7769322d0b7f1176245c8f68634afb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Comment&#160;: valider la mise en forme de donn&#233;es &#224; l&#39;aide d&#39;expressions r&#233;guli&#232;res (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'exemple de code suivant illustre l'utilisation d'expressions régulières pour vérifier la mise en forme d'une chaîne.  Dans l'exemple de code suivant, la chaîne doit contenir un numéro de téléphone valide.  L'exemple de code suivant utilise la chaîne "\\d{3}\-\\d{3}\-\\d{4}" pour indiquer que chaque champ représente un numéro de téléphone valide.  Le "d" dans la chaîne indique un chiffre, et l'argument situé après chaque "d" indique le nombre de chiffres qui doivent être présents.  Dans ce cas, le nombre doit être séparé par des tirets.  
+# <a name="how-to-use-regular-expressions-to-validate-data-formatting-ccli"></a>Comment : valider la mise en forme de données à l'aide d'expressions régulières (C++/CLI)
+L’exemple de code suivant illustre l’utilisation d’expressions régulières pour vérifier la mise en forme d’une chaîne. Dans l’exemple de code suivant, la chaîne doit contenir un numéro de téléphone valide. L’exemple de code suivant utilise la chaîne « \d{3}-\d{3}-\d{4} » pour indiquer que chaque champ représente un numéro de téléphone valide. « D » dans la chaîne indique un chiffre, et l’argument après chaque « d » indique le nombre de chiffres qui doivent être présents. Dans ce cas, le nombre est nécessaire pour être séparés par des tirets.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // regex_validate.cpp  
@@ -66,6 +68,6 @@ int main()
 }  
 ```  
   
-## Voir aussi  
- [Expressions régulières du .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [Programmation .NET avec C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [.NET Framework (expressions régulières)](/dotnet/standard/base-types/regular-expressions)   
+ [Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -18,16 +18,19 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1e653c477864f4e8676da8125ce9e75df37188e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4c9d28d64b450d14ba1579597f0276cfe3a0cf39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-migrate-to-clrsafe-ccli"></a>Comment : effectuer une migration vers /clr:safe (C++/CLI)
 Visual C++ peut générer des composants vérifiables à l’aide de **/CLR : safe**, ce qui entraîne le compilateur à générer des erreurs pour chaque construction de code non vérifiable.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les problèmes suivants génèrent des erreurs de vérifiabilité :  
   
 -   Types natifs. Même s’il n’est pas utilisé, la déclaration de classes natives, des structures, des pointeurs ou des tableaux empêchera la compilation.  

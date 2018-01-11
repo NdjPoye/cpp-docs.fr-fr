@@ -1,33 +1,33 @@
 ---
-title: "map::map (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::map"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "map (membre) (STL/CLR)"
+title: Map::Map (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::map
+dev_langs: C++
+helpviewer_keywords: map member [STL/CLR]
 ms.assetid: c91f699a-4742-4859-b2b3-c2a01a750bea
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 320c3c4223996826fe1e7b3104540baddd82da5a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# map::map (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Construit un objet container.  
+# <a name="mapmap-stlclr"></a>map::map (STL/CLR)
+Construit un objet conteneur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 map();  
@@ -44,7 +44,7 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  premier  
  Début de la plage à insérer.  
   
@@ -52,71 +52,63 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
  Fin de la plage à insérer.  
   
  pred  
- Classer l'attribut de la séquence contrôlée.  
+ Classement de prédicat pour la séquence contrôlée.  
   
- right  
+ droite  
  Objet ou plage à insérer.  
   
-## Notes  
- Le constructeur :  
+## <a name="remarks"></a>Notes  
+ Le constructeur :  
   
  `map();`  
   
- démarre la séquence contrôlée sans éléments, avec le prédicat de classement par défaut `key_compare()`.  Vous l'utilisez pour spécifier une séquence initiale contrôlée vide, avec le prédicat de classement par défaut.  
+ Initialise la séquence contrôlée sans aucun élément, avec la valeur par défaut classement prédicat `key_compare()`. Il permet de spécifier une séquence contrôlée initiale vide avec la valeur par défaut de classement de prédicat.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `explicit map(key_compare^ pred);`  
   
- démarre la séquence contrôlée sans éléments, avec le prédicat de classement `pred`.  Vous l'utilisez pour spécifier une séquence initiale contrôlée vide, avec le prédicat de classement spécifié.  
+ Initialise la séquence contrôlée sans aucun élément, avec le prédicat de tri `pred`. Il permet de spécifier une séquence contrôlée initiale vide avec le prédicat de tri spécifié.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `map(map<Key, Mapped>% right);`  
   
- démarre la séquence contrôlée par la séquence `[``right``.`[map::begin](../dotnet/map-begin-stl-clr.md)`(),` `right``.`[map::end](../dotnet/map-end-stl-clr.md)`())`, avec le prédicat de classement par défaut.  Vous l'utilisez pour spécifier une séquence initiale contrôlée qui est une copie de la séquence contrôlée par l'objet map `right`, avec le prédicat de classement par défaut.  
+ Initialise la séquence contrôlée par la séquence [`right.begin()`, `right.end()`), avec la valeur par défaut de classement de prédicat. Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet map `right`, avec la valeur par défaut de classement de prédicat.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `map(map<Key, Mapped>^ right);`  
   
- démarre la séquence contrôlée par la séquence `[``right``->`[map::begin](../dotnet/map-begin-stl-clr.md)`(),` `right``->`[map::end](../dotnet/map-end-stl-clr.md)`())`, avec le prédicat de classement par défaut.  Vous l'utilisez pour spécifier une séquence initiale contrôlée qui est une copie de la séquence contrôlée par l'objet map `right`, avec le prédicat de classement par défaut.  
+ Initialise la séquence contrôlée par la séquence [`right->begin()`, `right->end()`), avec la valeur par défaut de classement de prédicat. Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet map `right`, avec la valeur par défaut de classement de prédicat.  
   
- Le constructeur :  
+ Le constructeur :  
   
- `template<typename InIter>`  
+ `template<typename InIter> map(InIter first, InIter last);`  
   
- `map(InIter first, InIter last);`  
+ Initialise la séquence contrôlée par la séquence [`first`, `last`), avec la valeur par défaut de classement de prédicat. Il permet de rendre la séquence contrôlée une copie d’une autre séquence, avec la valeur par défaut de classement de prédicat.  
   
- démarre la séquence contrôlée par la séquence `[``first``,` `last``)`, avec le prédicat de classement par défaut.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence, avec le prédicat de classement par défaut.  
+ Le constructeur :  
   
- Le constructeur :  
+ `template<typename InIter> map(InIter first, InIter last, key_compare^ pred);`  
   
- `template<typename InIter>`  
+ Initialise la séquence contrôlée par la séquence [`first`, `last`), avec le prédicat de tri `pred`. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence, avec le prédicat de tri spécifié.  
   
- `map(InIter first, InIter last,`  
-  
- `key_compare^ pred);`  
-  
- démarre la séquence contrôlée par la séquence `[``first``,` `last``)`, avec le prédicat de classement par défaut `pred`.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence, avec le prédicat de classement spécifié.  
-  
- Le constructeur :  
+ Le constructeur :  
   
  `map(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- démarre la séquence contrôlée par la séquence désignée par l'énumérateur `right`, avec le prédicat de classement par défaut.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence décrite par un énumérateur, avec le prédicat de classement par défaut.  
+ Initialise la séquence contrôlée par la séquence désignée par l’énumérateur `right`, avec la valeur par défaut de classement de prédicat. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec la valeur par défaut de classement de prédicat.  
   
- Le constructeur :  
+ Le constructeur :  
   
- `map(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ Initialise la séquence contrôlée par la séquence désignée par l’énumérateur `right`, avec le prédicat de tri `pred`. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par l’énumérateur, avec le prédicat de tri spécifié.  
   
- démarre la séquence contrôlée par la séquence désignée par l'énumérateur `right`, avec le prédicat de classement par défaut `pred`.  Vous l'utilisez pour faire de la séquence contrôlée une copie d'une autre séquence décrite par un énumérateur, avec le prédicat de classement spécifié.  
+## <a name="example"></a>Exemple  
   
-## Exemple  
-  
-```  
+```cpp  
 // cliext_map_construct.cpp   
 // compile with: /clr   
 #include <cliext/map>   
@@ -190,22 +182,25 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## Configuration requise  
- **En\-tête :** \<cliext\/map\>  
+```Output  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+```  
   
- **Espace de noms :** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/map >  
   
-## Voir aussi  
- [map](../dotnet/map-stl-clr.md)   
- [map::generic\_container](../dotnet/map-generic-container-stl-clr.md)   
- [map::operator\=](../dotnet/map-operator-assign-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [carte (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map::generic_container (STL/CLR)](../dotnet/map-generic-container-stl-clr.md)   
+ [map::operator= (STL/CLR)](../dotnet/map-operator-assign-stl-clr.md)

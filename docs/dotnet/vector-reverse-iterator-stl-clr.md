@@ -1,42 +1,42 @@
 ---
-title: "vector::reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reverse_iterator (membre) (STL/CLR)"
+title: Vector::reverse_iterator (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::reverse_iterator
+dev_langs: C++
+helpviewer_keywords: reverse_iterator member [STL/CLR]
 ms.assetid: 0a90c5ee-a95f-4f71-a027-f1668000ccd4
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 476cf4370e7f2a94f41b9186042b70b15df81a68
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# vector::reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Type d'un itérateur inversé pour la séquence contrôlée.  
+# <a name="vectorreverseiterator-stlclr"></a>vector::reverse_iterator (STL/CLR)
+Type d'un itérateur inverse pour la séquence contrôlée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef T3 reverse_iterator;  
 ```  
   
-## Notes  
- Le type décrit un objet de type non spécifié `T3` qui peut servir d'itérateur inversé pour la séquence contrôlée.  
+## <a name="remarks"></a>Notes  
+ Le type décrit un objet de type non spécifié `T3` qui peut servir d’itérateur inverse pour la séquence contrôlée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_vector_reverse_iterator.cpp   
@@ -67,15 +67,18 @@ int main()
   
 ```  
   
-  **c b a**  
- **x b a**   
-## Configuration requise  
- **En\-tête:** \<cliext\/vector\>  
+```Output  
+c b a  
+x b a  
+```  
   
- **Espace de noms:** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/vector >  
   
-## Voir aussi  
- [vecteur](../dotnet/vector-stl-clr.md)   
- [vector::const\_iterator](../dotnet/vector-const-iterator-stl-clr.md)   
- [vector::const\_reverse\_iterator](../dotnet/vector-const-reverse-iterator-stl-clr.md)   
- [vector::iterator](../dotnet/vector-iterator-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [vecteur (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Vector::const_iterator (STL/CLR)](../dotnet/vector-const-iterator-stl-clr.md)   
+ [Vector::const_reverse_iterator (STL/CLR)](../dotnet/vector-const-reverse-iterator-stl-clr.md)   
+ [vector::iterator (STL/CLR)](../dotnet/vector-iterator-stl-clr.md)

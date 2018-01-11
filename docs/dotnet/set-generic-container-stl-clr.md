@@ -1,32 +1,33 @@
 ---
-title: "set::generic_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::generic_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_container (membre) (STL/CLR)"
+title: Set::generic_container (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::generic_container
+dev_langs: C++
+helpviewer_keywords: generic_container member [STL/CLR]
 ms.assetid: 8677f211-7feb-4a23-ad02-6d4ab4713857
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0b6c48e70048cc320bb874b1e1b950fdd4146f3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# set::generic_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le type de l'interface générique pour le conteneur.  
+# <a name="setgenericcontainer-stlclr"></a>set::generic_container (STL/CLR)
+Le type de l’interface générique pour le conteneur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef Microsoft::VisualC::StlClr::  
@@ -34,10 +35,10 @@ typedef Microsoft::VisualC::StlClr::
     generic_container;  
 ```  
   
-## Notes  
- Le type décrit l'interface générique pour cette classe de conteneur de modèle.  
+## <a name="remarks"></a>Notes  
+ Le type décrit l’interface générique pour cette classe de conteneur de modèle.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_set_generic_container.cpp   
@@ -79,15 +80,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a b c d**  
- **a b c d e**   
-## Configuration requise  
- **En\-tête :** \<cliext\/set\>  
+```Output  
+a b c  
+a b c  
+a b c d  
+a b c d e  
+```  
   
- **Espace de nom :** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/set >  
   
-## Voir aussi  
- [set](../dotnet/set-stl-clr.md)   
- [set::generic\_iterator](../dotnet/set-generic-iterator-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Set (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set::generic_iterator (STL/CLR)](../dotnet/set-generic-iterator-stl-clr.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3e20432f603f1bd68749ad31d2e74abc333db48f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 23682b9aea37b13fa399f045e22c6148ef384f9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multimaperase-stlclr"></a>multimap::erase (STL/CLR)
 Supprime les éléments placés aux positions spécifiées.  
@@ -45,7 +48,7 @@ bool erase(key_type key)
  où  
  Élément à effacer.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La première fonction membre supprime l’élément de la séquence contrôlée vers lequel pointé `where`et retourne un itérateur qui désigne le premier élément restant après l’élément supprimé, ou [multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `()` si cet élément n’existe. Il permet de supprimer un seul élément.  
   
  La deuxième fonction membre supprime les éléments de la séquence contrôlée dans la plage [`first`, `last`) et retourne un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou `end()` si aucun élément correspondant existe... Il permet de supprimer de zéro ou plusieurs éléments contigus.  
@@ -112,7 +115,7 @@ erase(L'x') = 0
 erase(L'e') = 1  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/map >  
   
  **Namespace :** cliext  

@@ -1,60 +1,62 @@
 ---
-title: "CManualAccessor, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CManualAccessor"
-  - "ATL.CManualAccessor"
-  - "CManualAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CManualAccessor (classe)"
+title: Classe CManualAccessor | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CManualAccessor
+- ATL.CManualAccessor
+- CManualAccessor
+dev_langs: C++
+helpviewer_keywords: CManualAccessor class
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f32046f36aefa2c19c8c364f7598a06b71d71bd4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CManualAccessor, classe
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Représente un type d'accesseur destiné aux utilisateurs expérimentés.  
+# <a name="cmanualaccessor-class"></a>CManualAccessor, classe
+Représente un type d’accesseur conçu pour une utilisation avancée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 class CManualAccessor : public CAccessorBase  
 ```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Méthodes  
+### <a name="methods"></a>Méthodes  
   
 |||  
 |-|-|  
-|[AjoutEntreeLien](../../data/oledb/cmanualaccessor-addbindentry.md)|Ajoute une entrée de lien aux colonnes de sortie.|  
-|[AjoutParametreEntree](../../data/oledb/cmanualaccessor-addparameterentry.md)|Ajoute une entrée de paramètre de l'accesseur de paramètre.|  
-|[CreerAccesseur](../../data/oledb/cmanualaccessor-createaccessor.md)|Attribue la mémoire pour les structures de colonnes de lien et initialise les colonnes des données des membres.|  
-|[CreerParametreAccesseur](../../data/oledb/cmanualaccessor-createparameteraccessor.md)|Attribue la mémoire pour les structures de paramètres liés et initialise les paramètres des données des membres.|  
+|[AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md)|Ajoute une entrée de liaison pour les colonnes de sortie.|  
+|[AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)|Ajoute une entrée de paramètre dans l’accesseur de paramètre.|  
+|[CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)|Alloue de la mémoire pour la colonne des structures de liaison et initialise les membres de données de colonne.|  
+|[CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)|Alloue de la mémoire pour le paramètre de structures de liaison et initialise les membres de données de paramètre.|  
   
-## Notes  
- Utilisation `CManualAccessor`, vous pouvez spécifier la liaison selon les colonnes et de paramètres de sortie des appels de fonction CLR.  
+## <a name="remarks"></a>Notes  
+ À l’aide de `CManualAccessor`, vous pouvez spécifier le paramètre et liaison de colonne de sortie par les appels de fonction de l’exécution.  
   
-## Configuration requise  
- **En\-tête :** : atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
- [DBViewer](../../top/visual-cpp-samples.md)   
- [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessor, classe](../../data/oledb/caccessor-class.md)   
- [CDynamicAccessor, classe](../../data/oledb/cdynamicaccessor-class.md)   
+## <a name="see-also"></a>Voir aussi  
+ [DBViewer](../../visual-cpp-samples.md)   
+ [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Référence des modèles de consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [CAccessor (classe)](../../data/oledb/caccessor-class.md)   
+ [CDynamicAccessor (classe)](../../data/oledb/cdynamicaccessor-class.md)   
  [CDynamicParameterAccessor, classe](../../data/oledb/cdynamicparameteraccessor-class.md)

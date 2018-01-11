@@ -1,46 +1,46 @@
 ---
-title: "stack::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "opérateur= membre [STL/CLR]"
+title: Stack::operator = (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 6f23b5fc-667e-4c6c-b43a-88b30da2ecac
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 58a73316bf6928ca690fdc01b5211fc55d8cca7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# stack::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stackoperator-stlclr"></a>stack::operator= (STL/CLR)
 Remplace la séquence contrôlée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 stack <Value, Container>% operator=(stack <Value, Container>% right);  
 ```  
   
-#### Paramètres  
- right  
+#### <a name="parameters"></a>Paramètres  
+ droite  
  Adaptateur de conteneur à copier.  
   
-## Notes  
- L'opérateur membre copie `right` dans l'objet, puis retourne `*this`.  Vous l'utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans `right`.  
+## <a name="remarks"></a>Notes  
+ Les copies d’opérateur de membre `right` à l’objet, puis retourne `*this`. Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans `right`.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_stack_operator_as.cpp   
@@ -71,13 +71,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## Configuration requise  
- **En\-tête :** \<cliext\/stack\>  
+```Output  
+a b c  
+a b c  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/stack >  
   
-## Voir aussi  
- [pile](../dotnet/stack-stl-clr.md)   
- [stack::assign](../dotnet/stack-assign-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [pile (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::assign (STL/CLR)](../dotnet/stack-assign-stl-clr.md)

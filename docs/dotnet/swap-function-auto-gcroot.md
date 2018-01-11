@@ -1,34 +1,35 @@
 ---
-title: "swap, fonction (auto_gcroot) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::swap"
-  - "msclr.swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap (fonction)"
+title: swap, fonction (auto_gcroot) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::swap
+- msclr.swap
+dev_langs: C++
+helpviewer_keywords: swap function
 ms.assetid: 2fe8146b-a7f7-445a-9ae9-53b5556be701
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8696d5029b0ed412f31a2be3fe7af35239a99e3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# swap, fonction (auto_gcroot)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Permute des objets entre un `auto_gcroot` et un autre.  
+# <a name="swap-function-autogcroot"></a>swap, fonction (auto_gcroot)
+Échange des objets entre un `auto_gcroot` et un autre.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename _element_type>  
@@ -38,14 +39,14 @@ void swap(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `_left`  
  Élément `auto_gcroot`.  
   
  `_right`  
- Autre `auto_gcroot`.  
+ Un autre `auto_gcroot`.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // msl_swap_auto_gcroot.cpp  
@@ -67,13 +68,16 @@ int main() {
 }  
 ```  
   
-  **s1 \= 'string one', s2 \= 'string two'**  
-**s1 \= 'string two', s2 \= 'string one'**   
-## Configuration requise  
- **Fichier d'en\-tête** \<msclr\\auto\_gcroot.h\>  
+```Output  
+s1 = 'string one', s2 = 'string two'  
+s1 = 'string two', s2 = 'string one'  
+```  
   
- **Espace de noms** msclr  
+## <a name="requirements"></a>Configuration requise  
+ **Fichier d’en-tête** \<msclr\auto_gcroot.h >  
   
-## Voir aussi  
- [auto\_gcroot](../dotnet/auto-gcroot.md)   
- [auto\_gcroot::swap](../dotnet/auto-gcroot-swap.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Voir aussi  
+ [auto_gcroot](../dotnet/auto-gcroot.md)   
+ [auto_gcroot::swap](../dotnet/auto-gcroot-swap.md)

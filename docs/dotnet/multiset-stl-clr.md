@@ -18,11 +18,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 801f6a99a6b479ebc72f62c59fc5fcf099814996
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9f964fd511d87d2fd5ca460eb72dc5c9db8351ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments ayant un accès bidirectionnel. Vous utilisez le conteneur `multiset` pour gérer une séquence d’éléments sous forme d’arborescence triée à charge équilibrée (presque) des nœuds, chacun stocker un élément.  
@@ -114,7 +117,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|Conserver le groupe d’éléments typés.|  
 |ITree\<de clé, la valeur >|Mettre à jour de conteneur générique.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’objet alloue et libère du stockage pour la séquence qu’il contrôle en tant que nœuds individuels. Il insère des éléments dans une arborescence à charge équilibrée (presque) il conserve ordonnée en modifiant les liens entre les nœuds, jamais par copie le contenu d’un nœud vers un autre. Cela signifie que vous pouvez insérer et supprimer des éléments librement sans perturber éléments restants.  
   
  L’objet ordonne la séquence qu’il contrôle en appelant un objet délégué stocké de type [multiset::key_compare (STL/CLR)](../dotnet/multiset-key-compare-stl-clr.md). Vous pouvez spécifier l’objet délégué stockées lors de la construction de la classe multiset ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<(key_type, key_type)`. Pour accéder à cet objet stocké en appelant la fonction membre [multiset::key_comp (STL/CLR)](../dotnet/multiset-key-comp-stl-clr.md)`()`.  
@@ -141,7 +144,7 @@ template<typename Key>
   
  Effacement ou suppression d’un élément appelle le destructeur de sa valeur stockée. Destruction du conteneur efface tous les éléments. Par conséquent, un conteneur dont le type d’élément est une classe ref garantit qu’aucun élément ne survivent le conteneur. Toutefois, notez qu’un conteneur de handles ne `not` détruire ses éléments.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/set >  
   
  **Namespace :** cliext  

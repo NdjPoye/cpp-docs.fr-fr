@@ -1,36 +1,37 @@
 ---
-title: "auto_handle::swap | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::auto_handle::swap"
-  - "auto_handle.swap"
-  - "auto_handle::swap"
-  - "msclr..auto_handle.swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::swap"
+title: auto_handle::swap | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::auto_handle::swap
+- auto_handle.swap
+- auto_handle::swap
+- msclr..auto_handle.swap
+dev_langs: C++
+helpviewer_keywords: auto_handle::swap
 ms.assetid: 3ebf82d7-9b69-4a72-a22d-69b4f640f9b0
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5b0a92773cbeae8e37cd2b2978ab51bcbfda7de1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# auto_handle::swap
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Echange des objets avec un autre `auto_handle`.  
+# <a name="autohandleswap"></a>auto_handle::swap
+Échange les objets avec un autre `auto_handle`.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void swap(  
@@ -38,11 +39,11 @@ void swap(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `_right`  
- Le `auto_handle` avec lequel échanger des objets.  
+ Le `auto_handle` pour échanger des objets.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // msl_auto_handle_swap.cpp  
@@ -64,13 +65,16 @@ int main() {
 }  
 ```  
   
-  **s1 \= 'string one', s2 \= 'string two'**  
-**s1 \= 'string two', s2 \= 'string one'**   
-## Configuration requise  
- **Fichier d'en\-tête** \<msclr\\auto\_handle.h\>  
+```Output  
+s1 = 'string one', s2 = 'string two'  
+s1 = 'string two', s2 = 'string one'  
+```  
   
- **Espace de noms** msclr  
+## <a name="requirements"></a>Configuration requise  
+ **Fichier d’en-tête** \<msclr\auto_handle.h >  
   
-## Voir aussi  
- [auto\_handle, membres](../dotnet/auto-handle-members.md)   
- [swap, fonction \(auto\_handle\)](../dotnet/swap-function-auto-handle.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Voir aussi  
+ [auto_handle, membres](../dotnet/auto-handle-members.md)   
+ [swap, fonction (auto_handle)](../dotnet/swap-function-auto-handle.md)

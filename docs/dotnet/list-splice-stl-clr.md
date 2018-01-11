@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9bbc7517013edd4c7af7c40c3787d8ec7749df32
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ba4513f8ff7e6ce51a50faacbdbe08c6fca34d01
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="listsplice-stlclr"></a>list::splice (STL/CLR)
 Restitch les liens entre les nœuds.  
@@ -47,7 +50,7 @@ void splice(iterator where, list<Value>% right,
  où  
  Emplacement dans le conteneur à splice avant.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La première fonction membre insère la séquence contrôlée par `right` avant l’élément dans la séquence contrôlée vers lequel pointée `where`. Elle supprime également tous les éléments de `right`. (`%right` ne doit pas correspondre `this`.) Il permet de splice tous d’une liste dans un autre.  
   
  La deuxième fonction membre supprime l’élément vers lequel pointé `first` dans la séquence contrôlée par `right` et l’insère avant l’élément dans la séquence contrôlée vers lequel pointe `where`. (Si `where` `==` `first` `||` `where` `== ++first`, aucune modification se produit.) Il permet de splice un élément unique d’une liste dans un autre.  
@@ -112,7 +115,7 @@ c1.size() = 0
 c2.size() = 0  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/liste >  
   
  **Namespace :** cliext  

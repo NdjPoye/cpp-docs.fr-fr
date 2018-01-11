@@ -18,11 +18,14 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5315f13588aa22696989be208e8b5e7dce5fc586
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9bd847b2641e6670a91d2edf1eb926aca423ad2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une séquence à longueur variable d’éléments ayant un accès aléatoire. Vous utilisez le conteneur `deque` pour gérer une séquence d’éléments qui ressemble à un bloc contigu de stockage, mais qui peuvent augmenter ou réduire à chaque extrémité sans avoir besoin de copier les éléments restants. Par conséquent, elle peut implémenter efficacement un `double-ended queue`. (Par conséquent, le nom.)  
@@ -49,7 +52,7 @@ template<typename Value>
  GValue  
  Le type générique d’un élément dans la séquence contrôlée.  
   
- Valeur  
+ Value  
  Type d'un élément dans la séquence contrôlée.  
   
 ## <a name="members"></a>Membres  
@@ -122,7 +125,7 @@ template<typename Value>
 |<xref:System.Collections.Generic.IList%601>|Mettre à jour un groupe ordonné d’éléments typés.|  
 |IDeque < valeur\>|Mettre à jour de conteneur générique.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un tableau stocké de handles qui désigne des blocs de `Value` éléments. Le module s’étend à la demande. Croissance se produit de manière à ce que le coût de l’ajoutant au début ou de l’ajout d’un nouvel élément est le temps constant, et aucuns autres éléments ne sont perturbés. Vous pouvez également supprimer un élément à des extrémités dans le temps et sans perturber éléments restants. Par conséquent, un deque est un bon candidat pour le conteneur sous-jacent pour la classe de modèle [la file d’attente (STL/CLR)](../dotnet/queue-stl-clr.md) ou classe de modèle [pile (STL/CLR)](../dotnet/stack-stl-clr.md).  
   
  A `deque` objet prend en charge les itérateurs à accès aléatoire, ce qui signifie que vous pouvez faire référence à un élément donné directement de sa position numérique, en partant de zéro pour le premier élément (avant), à [deque::size (STL/CLR)](../dotnet/deque-size-stl-clr.md) `() - 1` pour le dernier élément (précédent). Cela signifie également qu’un deque est un bon candidat pour le conteneur sous-jacent pour la classe de modèle [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).  
@@ -133,7 +136,7 @@ template<typename Value>
   
  Effacement ou suppression d’un élément appelle le destructeur de sa valeur stockée. Destruction du conteneur efface tous les éléments. Par conséquent, un conteneur dont le type d’élément est une classe ref garantit qu’aucun élément ne survivent le conteneur. Toutefois, notez qu’un conteneur de handles ne `not` détruire ses éléments.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/deque >  
   
  **Namespace :** cliext  

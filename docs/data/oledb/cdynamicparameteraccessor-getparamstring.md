@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a123d5585447d71076dbe96bd58dfb87a68df147
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ed04d3258ad5f4d5ed68a32b32923432577453ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicparameteraccessorgetparamstring"></a>CDynamicParameterAccessor::GetParamString
 Récupère les données de chaîne du paramètre spécifié stocké en mémoire tampon.  
@@ -68,7 +71,7 @@ bool GetParamString(
  `pMaxLen`  
  [out] Un pointeur vers la taille de la mémoire tampon pointée par `pBuffer` (en caractères, y compris le caractère NULL de fin).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Retourne **true** en cas de réussite ou **false** en cas d’échec.  
   
  Si `pBuffer` est NULL, cette méthode définit la taille de la mémoire tampon requise dans la mémoire vers laquelle pointée `pMaxLen` et retourner **true** sans copier les données.  
@@ -77,7 +80,7 @@ bool GetParamString(
   
  Utilisez `GetParamString` pour récupérer les données de paramètre de chaîne à partir de la mémoire tampon. Utilisez [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) pour récupérer des données de paramètre de chaîne à partir de la mémoire tampon.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

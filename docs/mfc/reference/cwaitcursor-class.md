@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b4e30b024b6a83a7ea2069386cff3166ce518faa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1cf5c850158e445e7695b85e540b1e0c162e621c
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cwaitcursor-class"></a>Classe de CWaitCursor
 Permet en une ligne d'afficher un curseur d'attente, généralement sous forme de sablier, pendant que vous effectuez une longue opération.  
@@ -50,7 +51,7 @@ class CWaitCursor
 |----------|-----------------|  
 |[CWaitCursor::Restore](#restore)|Restaure le curseur d’attente après sa modification.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CWaitCursor`ne dispose pas d’une classe de base.  
   
  Windows bonnes pratiques de programmation nécessitent que vous Affrichez un curseur d’attente chaque fois que vous effectuez une opération qui prend un certain temps.  
@@ -72,7 +73,7 @@ class CWaitCursor
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CWaitCursor`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ## <a name="example"></a>Exemple  
@@ -85,7 +86,7 @@ class CWaitCursor
 CWaitCursor();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le constructeur entraîne automatiquement le curseur d’attente à afficher.  
   
  Lorsque l’objet est hors de portée (à la fin du bloc dans lequel la `CWaitCursor` objet est déclaré), son destructeur définit le curseur jusqu’au curseur précédent. En d’autres termes, l’objet effectue automatiquement le nettoyage nécessaire.  
@@ -105,7 +106,7 @@ CWaitCursor();
 void Restore();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il s’agit d’appeler OK **restaurer** même lorsque le curseur d’attente est affiché.  
   
  Si vous devez restaurer le curseur d’attente dans une fonction différente de celle dans laquelle le `CWaitCursor` objet est déclaré, vous pouvez appeler [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor).  
@@ -119,7 +120,7 @@ void Restore();
  [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)   
  [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)   
  [CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)   
- [Comment faire : modifier le curseur de souris dans une Application Microsoft Foundation](http://go.microsoft.com/fwlink/linkid=128044)
+ [Comment faire : modifier le curseur de souris dans une Application Microsoft Foundation](http://go.microsoft.com/fwlink/p/?linkid=128044)
 
 
 

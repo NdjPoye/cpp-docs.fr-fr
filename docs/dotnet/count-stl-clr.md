@@ -1,32 +1,33 @@
 ---
-title: "count (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "count (fonction) (STL/CLR)"
+title: nombre (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::count
+dev_langs: C++
+helpviewer_keywords: count function [STL/CLR]
 ms.assetid: 6d10abb4-3c48-469c-804c-281015b12865
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ce8169f5a9fa5ac7f483921bc6c261ffbc4e8842
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# count (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="count-stlclr"></a>count (STL/CLR)
 Retourne le nombre d'éléments d'une plage dont les valeurs correspondent à une valeur spécifiée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<class _InIt, class _Ty> inline  
@@ -34,13 +35,13 @@ template<class _InIt, class _Ty> inline
         count(_InIt _First, _InIt _Last, const _Ty% _Val);  
 ```  
   
-## Notes  
- Cette fonction se comporte comme la fonction `count` de STL.  Pour plus d'informations, consultez [count](../Topic/count.md).  
+## <a name="remarks"></a>Notes  
+ Cette fonction comporte comme la fonction de la bibliothèque Standard C++ `count`. Pour plus d’informations, consultez [nombre](../standard-library/algorithm-functions.md#count).  
   
-## Configuration requise  
- **En\-tête :** \<cliext\/algorithm\>  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/algorithme >  
   
- **Espace de noms** cliext  
+ **Namespace :** cliext  
   
-## Voir aussi  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Voir aussi  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

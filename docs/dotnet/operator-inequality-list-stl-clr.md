@@ -1,33 +1,33 @@
 ---
-title: "operator!= (list) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::operator!="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator!= (membre) (STL/CLR)"
+title: "opérateur ! = (liste) (STL/CLR) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::operator!=
+dev_langs: C++
+helpviewer_keywords: operator!= member [STL/CLR]
 ms.assetid: aa4e1461-8137-43df-a99c-fbec8dd3269f
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9411ff9e6e4a6f96059c89893eb4770442be7671
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# operator!= (list) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Comparaison "non égale" de listes  
+# <a name="operator-list-stlclr"></a>operator!= (list) (STL/CLR)
+Liste de comparaison n’est pas égal.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Value>  
@@ -35,17 +35,17 @@ template<typename Value>
         list<Value>% right);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  left  
  Conteneur de gauche à comparer.  
   
- right  
+ droite  
  Conteneur de droite à comparer.  
   
-## Notes  
- La fonction d'opérateur retourne `!(``left` `==` `right``)`.  Vous l'utilisez pour tester si `left` n'est pas ordonné comme `right` lorsque les deux listes sont comparés élément par élément.  
+## <a name="remarks"></a>Notes  
+ La fonction d’opérateur retourne `!(left == right)`. Il permet de tester si `left` n’est pas ordonné identique `right` lorsque les deux listes sont comparées d’élément par élément.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_list_operator_ne.cpp   
@@ -84,19 +84,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b d**  
-**\[a b c\] \!\= \[a b c\] est Faux**  
-**\[a b c\] \!\= \[a b c\] est Vrai**   
-## Configuration requise  
- **En\-tête :** \<cliext\/list\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] != [a b c] is False  
+[a b c] != [a b d] is True  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/liste >  
   
-## Voir aussi  
- [list](../dotnet/list-stl-clr.md)   
- [operator\=\= \(list\)](../dotnet/operator-equality-list-stl-clr.md)   
- [operator\< \(list\)](../dotnet/operator-less-than-list-stl-clr.md)   
- [operator\>\= \(list\)](../dotnet/operator-greater-or-equal-list-stl-clr.md)   
- [operator\> \(list\)](../dotnet/operator-greater-than-list-stl-clr.md)   
- [operator\<\= \(list\)](../dotnet/operator-less-or-equal-list-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [opérateur == (liste) (STL/CLR)](../dotnet/operator-equality-list-stl-clr.md)   
+ [opérateur\< (liste) (STL/CLR)](../dotnet/operator-less-than-list-stl-clr.md)   
+ [opérateur > = (liste) (STL/CLR)](../dotnet/operator-greater-or-equal-list-stl-clr.md)   
+ [opérateur > (liste) (STL/CLR)](../dotnet/operator-greater-than-list-stl-clr.md)   
+ [operator<= (list) (STL/CLR)](../dotnet/operator-less-or-equal-list-stl-clr.md)

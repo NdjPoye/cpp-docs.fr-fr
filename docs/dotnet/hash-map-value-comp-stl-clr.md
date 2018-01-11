@@ -1,41 +1,42 @@
 ---
-title: "hash_map::value_comp (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::value_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre value_comp [STL/CLR]"
+title: hash_map::value_comp (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::value_comp
+dev_langs: C++
+helpviewer_keywords: value_comp member [STL/CLR]
 ms.assetid: b11a2dee-07e8-450c-8f85-979c0a15ae64
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 069bbf77946c24022c1f36744063b20576341a1f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::value_comp (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copie le classement délégué pour deux valeurs d'éléments.  
+# <a name="hashmapvaluecomp-stlclr"></a>hash_map::value_comp (STL/CLR)
+Copie le délégué de classement pour les deux valeurs d’éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 value_compare^ value_comp();  
 ```  
   
-## Notes  
- La méthode retourne le délégué de tri utilisé pour trier la séquence contrôlée.  Vous l'utilisez pour comparer les valeurs de deux éléments.  
+## <a name="remarks"></a>Notes  
+ La fonction membre retourne le délégué de classement utilisé pour ordonner la séquence contrôlée. Il permet de comparer deux valeurs d’éléments.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_map_value_comp.cpp   
@@ -63,15 +64,18 @@ int main()
   
 ```  
   
-  **compare \(L'a', L'a'\) \= True**  
-**compare\(\[L'a', 1\], \[L'b', 2\]\) \= Vrai**  
-**compare\(\[L'b', 2\], \[L'a', 1\]\) \= Faux**   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_map\>  
+```Output  
+compare([L'a', 1], [L'a', 1]) = True  
+compare([L'a', 1], [L'b', 2]) = True  
+compare([L'b', 2], [L'a', 1]) = False  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/hash_map >  
   
-## Voir aussi  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::value\_compare](../dotnet/hash-map-value-compare-stl-clr.md)   
- [hash\_map::value\_type](../dotnet/hash-map-value-type-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::value_compare (STL/CLR)](../dotnet/hash-map-value-compare-stl-clr.md)   
+ [hash_map::value_type (STL/CLR)](../dotnet/hash-map-value-type-stl-clr.md)

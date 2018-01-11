@@ -1,60 +1,63 @@
 ---
-title: "Comment&#160;: cr&#233;er le contr&#244;le utilisateur et h&#233;berger l&#39;affichage MDI | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC (C++), contrôles Windows Forms"
-  - "Windows Forms (C++), prise en charge des MFC"
+title: "Comment : créer le contrôle utilisateur et héberger l’affichage MDI | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], Windows Forms Controls
+- Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-caps.latest.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8b9b3c8ff385aed22785386c035ed537d8d97e97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Comment&#160;: cr&#233;er le contr&#244;le utilisateur et h&#233;berger l&#39;affichage MDI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les étapes suivantes indiquent comment créer un contrôle utilisateur .NET Framework, comment le créer dans une bibliothèque de classes de contrôle \(en particulier un projet de bibliothèque de contrôles Windows\), puis compiler le projet dans un assembly.  Le contrôle peut ensuite être consommé à partir d'une application MFC qui utilise des classes dérivées de la [CView Class](../mfc/reference/cview-class.md) et de la [CWinFormsView Class](../mfc/reference/cwinformsview-class.md).  
+# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Comment : créer le contrôle utilisateur et héberger l'affichage MDI
+Les étapes suivantes montrent comment créer un contrôle utilisateur de .NET Framework, créer le contrôle utilisateur dans une bibliothèque de classes de contrôle (plus précisément, un projet de bibliothèque de contrôles Windows), puis compiler le projet dans un assembly. Le contrôle peut ensuite être consommé à partir d’une application MFC qui utilise des classes dérivées de [classe CView](../mfc/reference/cview-class.md) et [classe CWinFormsView](../mfc/reference/cwinformsview-class.md).  
   
- Pour plus d'informations sur la création d'un contrôle utilisateur Windows Forms et la création d'une bibliothèque de classes de contrôle, voyez [How to: Author User Controls](../Topic/How%20to:%20Author%20Composite%20Controls.md).  
+ Pour plus d’informations sur la façon de créer un contrôle utilisateur Windows Forms et de créer une bibliothèque de classes de contrôle, consultez [Comment : créer des contrôles utilisateur](/dotnet/framework/winforms/controls/how-to-author-composite-controls).  
   
 > [!NOTE]
->  Dans certains cas, des contrôles Windows Forms \(comme un contrôle Grid tiers\) peuvent ne pas se comporter de façon fiable au sein de l'application MFC qui les héberge.  Une solution de contournement conseillée sera de placer un contrôle utilisateur Windows Forms dans l'application MFC et de placer le contrôle Grid tiers à l'intérieur du contrôle utilisateur.  
+>  Dans certains cas, les contrôles Windows Forms, par exemple un contrôle de grille tiers, ne peuvent pas se comportent de façon fiable lorsqu’il est hébergé dans une application MFC. Une solution de contournement recommandée consiste à placer un contrôle Windows Forms utilisateur dans l’application MFC et le contrôle de grille de tiers à l’intérieur du contrôle utilisateur.  
   
- Cette procédure suppose que vous avez créé un projet de bibliothèque de contrôles Windows Forms nommé WindowsFormsControlLibrary1, selon la procédure exposée dans [Comment : créer le contrôle utilisateur et l'héberger dans une boîte de dialogue](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).  
+ Cette procédure suppose que vous avez créé un projet de bibliothèque de contrôles Windows Forms nommé WindowsFormsControlLibrary1, selon la procédure décrite dans [Comment : créer le contrôle utilisateur et l’hôte dans une boîte de dialogue](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).  
   
-### Pour créer l'application MFC hôte  
+### <a name="to-create-the-mfc-host-application"></a>Pour créer l’application MFC hôte  
   
-1.  Créez un projet d'application MFC.  
+1.  Créer un projet d’Application MFC.  
   
-     Dans le menu **Fichier**, sélectionnez **Nouveau**, puis cliquez sur **Projet**.  Dans le dossier **Visual C\+\+**, sélectionnez **Application MFC**.  
+     Sur le **fichier** menu, sélectionnez **nouveau**, puis cliquez sur **projet**. Dans le **Visual C++** dossier, sélectionnez **Application MFC**.  
   
-     Dans la zone **Nom**, entrez `MFC02` et remplacez le paramètre **Solution** par **Ajouter à la solution**.  Cliquez sur **OK**.  
+     Dans le **nom** , entrez `MFC02` et modifiez le **Solution** à **ajouter à la Solution**. Cliquez sur **OK**.  
   
-     Dans l'**Assistant Application MFC**, acceptez toutes les valeurs par défaut, puis cliquez sur **Terminer**.  Cela crée une application MFC avec une interface multidocument.  
+     Dans le **Assistant Application MFC**, acceptez les valeurs par défaut, puis cliquez sur **Terminer**. Cette opération crée une application MFC avec une Interface multidocument.  
   
-2.  Configurez le projet pour la prise en charge du Common Language Runtime \(CLR\).  
+2.  Configurer le projet pour la prise en charge du Common Language Runtime (CLR).  
   
-     Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur le nœud du projet `MFC01`, puis sélectionnez **Propriétés** dans le menu contextuel.  La boîte de dialogue **Pages de propriétés** s'affiche.  
+     Dans **l’Explorateur de solutions**, cliquez sur le `MFC01` nœud de projet, puis sélectionnez **propriétés** dans le menu contextuel. Le **Pages de propriétés** boîte de dialogue s’affiche.  
   
-     Sous **Propriétés de configuration**, sélectionnez **Général**.  Sous la section **Paramètres par défaut du projet**, attribuez à **Prise en charge du Common Language Runtime** la valeur **Prise en charge du Common Language Runtime \(\/clr\)**.  
+     Sous **propriétés de Configuration**, sélectionnez **général**. Sous le **projet par défaut est** section, définissez **prise en charge du Common Language Runtime** à **prise en charge du Common Language Runtime (/ clr)**.  
   
-     Sous **Propriétés de configuration**, développez **C\/C\+\+**, puis cliquez sur le nœud **Général**.  Affectez à **Format des informations de débogage** la valeur **Base de données du programme \(\/Zi\)**.  
+     Sous **propriétés de Configuration**, développez **C/C++** et cliquez sur le **général** nœud. Définissez **Format des informations de débogage** à **(/ Zi) de la base de données du programme**.  
   
-     Cliquez sur le nœud **Génération de code**.  Affectez à **Activation de la régénération minimale** la valeur **Non \(\/Gm\-\)**.  Attribuez également à **Vérifications de base à l'exécution** la valeur **Par défaut**.  
+     Cliquez sur le **génération de Code** nœud. Définissez **activer la régénération minimale** à **non (/ Gm-)**. Définissez également **base Runtime vérifie** à **par défaut**.  
   
-     Cliquez sur **OK** pour enregistrer les modifications apportées.  
+     Cliquez sur **OK** pour appliquer vos modifications.  
   
-3.  Dans stdafx.h, ajoutez la ligne suivante :  
+3.  Dans le fichier stdafx.h, ajoutez la ligne suivante :  
   
     ```  
     #using <System.Windows.Forms.dll>  
@@ -62,23 +65,23 @@ Les étapes suivantes indiquent comment créer un contrôle utilisateur .NET Fr
   
 4.  Ajoutez une référence au contrôle .NET.  
   
-     Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur le nœud du projet `MFC02` et sélectionnez **Ajouter**, **Références**.  Dans **Page de propriétés**, cliquez sur **Ajouter une nouvelle référence**, sélectionnez WindowsFormsControlLibrary1 \(sous l'onglet **Projets**\) et cliquez sur **OK**.  Cela ajoute une référence sous la forme d'une option du compilateur [\/FU](../build/reference/fu-name-forced-hash-using-file.md) afin que le programme exécute la compilation ; cela copie également WindowsFormsControlLibrary1.dll dans le répertoire du projet `MFC02` afin que le programme s'exécute.  
+     Dans **l’Explorateur de solutions**, avec le bouton droit le `MFC02` le nœud de projet et sélectionnez **ajouter**, **références**. Dans le **Page de propriétés**, cliquez sur **ajouter une nouvelle référence**, sélectionnez WindowsFormsControlLibrary1 (sous la **projets** onglet), puis cliquez sur **OK** . Cette opération ajoute une référence sous la forme d’un [/FU](../build/reference/fu-name-forced-hash-using-file.md) option du compilateur afin que le programme exécute la compilation ; il copie également WindowsFormsControlLibrary1.dll dans le `MFC02` répertoire du projet afin que le programme s’exécute.  
   
-5.  Dans stdafx.h, recherchez la ligne suivante :  
+5.  Dans le fichier stdafx.h, recherchez cette ligne :  
   
     ```  
     #endif // _AFX_NO_AFXCMN_SUPPORT   
     ```  
   
-     Ajoutez ces lignes au\-dessus :  
+     Ajoutez ces lignes au-dessus d’elle :  
   
     ```  
     #include <afxwinforms.h>   // MFC Windows Forms support  
     ```  
   
-6.  Modifiez la classe d'affichage afin qu'elle hérite de [CWinFormsView](../mfc/reference/cwinformsview-class.md).  
+6.  Modifier la classe d’affichage afin qu’elle hérite de [CWinFormsView](../mfc/reference/cwinformsview-class.md).  
   
-     Dans MFC02View.h, remplacez [CView](../mfc/reference/cview-class.md) par [CWinFormsView](../mfc/reference/cwinformsview-class.md) afin que le code apparaisse comme ceci :  
+     Dans MFC02View.h, remplacez [CView](../mfc/reference/cview-class.md) avec [CWinFormsView](../mfc/reference/cwinformsview-class.md) afin que le code s’affiche comme suit :  
   
     ```  
     class CMFC02View : public CWinFormsView  
@@ -86,9 +89,9 @@ Les étapes suivantes indiquent comment créer un contrôle utilisateur .NET Fr
     };  
     ```  
   
-     Si vous souhaitez ajouter des affichages supplémentaires à votre application MDI, vous devez appeler [CWinApp::AddDocTemplate](../Topic/CWinApp::AddDocTemplate.md) pour chaque affichage que vous créez.  
+     Si vous souhaitez ajouter des affichages supplémentaires à votre application MDI, vous devez appeler [CWinApp::AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) pour chaque vue que vous créez.  
   
-7.  Modifiez le fichier MFC02View.cpp pour transformer CView en CWinFormsView dans la macro IMPLEMENT\_DYNCREATE et la table des messages, puis remplacez le constructeur vide existant par le constructeur indiqué dessous :  
+7.  Modifiez le fichier MFC02View.cpp pour transformer CView en CWinFormsView dans l’Explorateur de macros et message IMPLEMENT_DYNCREATE et remplacez le constructeur vide existant avec le constructeur illustré ci-dessous :  
   
     ```  
     IMPLEMENT_DYNCREATE(CMFC02View, CWinFormsView)  
@@ -103,11 +106,11 @@ Les étapes suivantes indiquent comment créer un contrôle utilisateur .NET Fr
   
 8.  Générez et exécutez le projet.  
   
-     Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur MFC02, puis sélectionnez **Définir comme projet de démarrage**.  
+     Dans **l’Explorateur de solutions**, MFC02 d’avec le bouton droit et sélectionnez **définir comme projet de démarrage**.  
   
-     Dans le menu **Générer**, cliquez sur **Générer la solution**.  
+     Dans le menu **Générer** , cliquez sur **Générer la solution**.  
   
-     Dans le menu **Déboguer**, cliquez sur **Exécuter sans débogage**.  
+     Sur le **déboguer** menu, cliquez sur **démarrer sans débogage**.  
   
-## Voir aussi  
- [Hébergement d'un contrôle utilisateur Windows Forms en tant que vue MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)
+## <a name="see-also"></a>Voir aussi  
+ [Hébergement d’un contrôle utilisateur Windows Forms en tant que vue MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)

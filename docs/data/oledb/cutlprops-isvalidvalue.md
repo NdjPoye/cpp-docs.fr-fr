@@ -1,35 +1,36 @@
 ---
-title: "CUtlProps::IsValidValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CUtlProps::IsValidValue"
-  - "CUtlProps.IsValidValue"
-  - "IsValidValue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsValidValue (méthode)"
+title: CUtlProps::IsValidValue | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CUtlProps::IsValidValue
+- CUtlProps.IsValidValue
+- IsValidValue
+dev_langs: C++
+helpviewer_keywords: IsValidValue method
 ms.assetid: 1164556e-8d98-429c-a396-fc9a699e0e97
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 06193b8c560c5ac6006698813222e698a98bccc3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CUtlProps::IsValidValue
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Utilisé pour valider une valeur avant de définir une propriété.  
+# <a name="cutlpropsisvalidvalue"></a>CUtlProps::IsValidValue
+Permet de valider une valeur avant de définir une propriété.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -39,21 +40,21 @@ Utilisé pour valider une valeur avant de définir une propriété.
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `iCurSet`  
- L'index dans le tableau de propriété ; zéro s'il n'existe qu'un seul jeu de propriétés.  
+ L’index dans le tableau de jeu de propriétés ; zéro s’il existe une seule propriété ensemble.  
   
  `pDBProp`  
- L'ID de propriété et une nouvelle valeur dans une structure [DBPROP](https://msdn.microsoft.com/en-us/library/ms717970.aspx).  
+ L’ID de propriété et la nouvelle valeur dans un [DBPROP](https://msdn.microsoft.com/en-us/library/ms717970.aspx) structure.  
   
-## Valeur de retour  
- Un `HRESULT` standard.  La valeur renvoyée par défaut est `S_OK`.  
+## <a name="return-value"></a>Valeur de retour  
+ `HRESULT` standard. La valeur par défaut valeur de retour est `S_OK`.  
   
-## Notes  
- Si vous avez des routines de validation à effectuer sur une valeur que vous êtes sur le point d'utiliser pour définir une propriété, vous devez substituer cette fonction.  Par exemple, vous pouvez valider **DBPROP\_AUTH\_PASSWORD** sur une table de mot de passe pour déterminer une valeur valide.  
+## <a name="remarks"></a>Notes  
+ Si vous avez des routines de validation à exécuter sur une valeur que vous allez utiliser pour définir une propriété, vous devez substituer cette fonction. Par exemple, vous pourriez valider **DBPROP_AUTH_PASSWORD** sur une table de mot de passe pour déterminer une valeur valide.  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CUtlProps, classe](../../data/oledb/cutlprops-class.md)

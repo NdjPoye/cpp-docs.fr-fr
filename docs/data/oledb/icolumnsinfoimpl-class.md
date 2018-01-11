@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dea39c02dbf89ff18bc10cb538fe243a2cd4a5f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 18d23120a4a84f9d637a50e379a579389354ff08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl, classe
 Fournit une implémentation de la [IColumnsInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx) interface.  
@@ -51,10 +54,10 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 |[GetColumnInfo](../../data/oledb/icolumnsinfoimpl-getcolumninfo.md)|Retourne les métadonnées de colonne requises par la plupart des consommateurs.|  
 |[MapColumnIDs](../../data/oledb/icolumnsinfoimpl-mapcolumnids.md)|Retourne un tableau d’ordinaux des colonnes dans un ensemble de lignes qui sont identifiés par l’ID de colonne spécifié.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une interface obligatoire sur les commandes et les ensembles de lignes. Pour modifier le comportement de votre fournisseur de `IColumnsInfo` mise en œuvre, vous devez modifier le mappage de colonnes du fournisseur.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -32,11 +32,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d11fd489fc732428b257c50dd6a2792131d0396a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b041da3df2b745f1764440ed5afafa2cd7690b68
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vsscanfs-vswscanfs"></a>vsscanf_s, vswscanf_s
 Lit les données mises en forme d’une chaîne. Ces versions de [vsscanf, vswscanf](../../c-runtime-library/reference/vsscanf-vswscanf.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -93,14 +94,14 @@ int vswscanf_s(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vstscanf_s`|`vsscanf_s`|`vsscanf_s`|`vswscanf_s`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`vsscanf_s`|\<stdio.h>|  
 |`vswscanf_s`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

@@ -1,43 +1,46 @@
 ---
-title: "Modifications de la s&#233;mantique du destructeur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "destructeurs, C++"
-  - "finaliseurs (C++)"
+title: "Modifications apportées à la sémantique du destructeur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- finalizers [C++]
+- destructors, C++
 ms.assetid: f1869944-a407-452f-b99a-04d8c209f0dc
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c85ac0b082e8ea1dfbff007a68061e6a286390cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Modifications de la s&#233;mantique du destructeur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La sémantique des destructeurs de classe a été considérablement modifiée entre Extensions managées pour C\+\+ et [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+# <a name="changes-in-destructor-semantics"></a>Modifications de la sémantique du destructeur
+Sémantique des destructeurs de classe ont considérablement évolué depuis les Extensions managées pour C++ vers Visual C++.  
   
- En Extensions managées, un destructeur de classe était autorisé dans une classe de référence, mais pas dans une classe value.  Cela reste inchangé dans la nouvelle syntaxe.  Toutefois, la sémantique du destructeur de classe a été modifiée.  Cette rubrique se concentre sur les raisons de cette modification et explique comment elle affecte la traduction du code CLR existant.  Il s'agit probablement de la modification la plus importante au niveau du programmeur apportée entre les deux versions du langage.  
+ Dans les Extensions managées, un destructeur de classe a été autorisé dans une classe de référence mais pas dans une classe value. Cela n’a pas changé dans la nouvelle syntaxe. Toutefois, la sémantique du destructeur de classe ont été modifiés. Cette rubrique se concentre sur les raisons de cette modification et explique comment elle affecte la traduction du code CLR existant. Il s’agit probablement de la modification au niveau du programmeur plus importante entre les deux versions du langage.  
   
-## Finalisation non déterministe  
- Avant que la mémoire associée à un objet ne soit récupérée par le garbage collector, une méthode associée `Finalize` est appelée, à condition que cette dernière soit présente.  Vous pouvez imaginer cette méthode comme une sorte de super\-destructeur, car elle n'est pas liée à la durée de vie de l'objet dans le programme.  Nous appelons cela finalisation.  On ne peut pas définir le moment précis où une méthode `Finalize` sera appelée, ni même si elle le sera.  C'est ce que nous entendons lorsque nous disons que l'opération de garbage collection expose une finalisation non déterministe.  
+## <a name="non-deterministic-finalization"></a>Finalisation non déterministe  
+ Avant que la mémoire associée à un objet est récupérée par le garbage collector, associé à un `Finalize` méthode, le cas échéant, est appelée. Vous pouvez considérer cette méthode comme un type de destructeur super, car il n’est pas lié à la durée de vie du programme de l’objet. Nous appelons cela finalisation. Le minutage de simplement lorsque ou même si un `Finalize` méthode est appelée n’est pas défini. C’est ce que nous entendons lorsque nous disons que le garbage collection expose une finalisation non déterministe.  
   
- La finalisation non déterministe fonctionne efficacement avec la gestion dynamique de la mémoire.  Lorsque la mémoire disponible devient rare, le garbage collector entre en action.  Dans un environnement récupéré par le garbage collector, les destructeurs chargés de libérer de la mémoire sont inutiles.  En revanche, la finalisation non déterministe ne fonctionne pas bien si un objet conserve une ressource critique, telle qu'une connexion de base de données ou un verrouillage quelconque.  Dans ce cas, il faut libérer cette ressource au plus tôt.  Dans le monde natif, cette action est accomplie en utilisant une paire constructeur\/destructeur.  Dès que la durée de vie d'un objet prend fin, que ce soit par l'achèvement du bloc local dans lequel il est déclaré ou par le dénouement de la pile en raison de la levée d'une exception, le destructeur entre en action et la ressource est automatiquement libérée.  Cette fonctionnalité, qui manquait cruellement en Extensions managées, s'avère très efficace.  
+ Finalisation non déterministe fonctionne bien avec gestion de la mémoire dynamique. Lorsque la mémoire disponible devient rare, le garbage collector entre en action. Sous un garbage collectées environnement, les destructeurs pour libérer de la mémoire ne sont pas nécessaires. Finalisation non déterministe ne fonctionne pas, toutefois, lorsqu’un objet détient une ressource critique, comme une connexion de base de données ou un verrou quelconque. Dans ce cas, il faut libérer cette ressource, dès que possible. Dans le monde natif, qui est obtenue à l’aide d’une paire constructeur/destructeur. Dès la fin de la durée de vie de l’objet, à la fin de bloc local dans lequel elle est déclarée, ou lors de la pile dénouement en raison de la levée d’une exception, le destructeur s’exécute et la ressource est automatiquement libérée. Cette approche fonctionne très bien, et son absence dans les Extensions managées malheureusement omise.  
   
- La solution fournie par le CLR consiste en l'implémentation par une classe de la méthode `Dispose` de l'interface `IDisposable`.  Le problème qui se pose alors est que `Dispose` requiert un appel explicite par l'utilisateur.  Cette solution constitue un risque d'erreur.  Le langage C\# fournit une forme relative d'automatisation par le biais d'une instruction `using` spéciale.  La conception des Extensions managées ne fournissait aucune assistance spéciale.  
+ La solution fournie par le CLR est pour une classe implémenter le `Dispose` méthode de la `IDisposable` interface. Le problème ici est que `Dispose` requiert un appel explicite par l’utilisateur. Il s’agit d’erreurs. Le langage c# fournit une forme relative d’automatisation sous la forme d’un spécial `using` instruction. La conception des Extensions managées fourni sans prise en charge spéciale.  
   
-## Destructeurs dans les Extensions managées pour C\+\+  
- Dans les Extensions managées, le destructeur d'une classe de référence est implémenté via les deux étapes suivantes :  
+## <a name="destructors-in-managed-extensions-for-c"></a>Destructeurs dans les Extensions managées pour C++  
+ Dans les Extensions managées, le destructeur d’une classe de référence est implémenté à l’aide de le des deux étapes suivantes :  
   
-1.  Le destructeur fourni par l'utilisateur est renommé en interne en `Finalize`.  Si la classe possède une classe de base \(pour mémoire, sous le modèle objet CLR, seul l'héritage unique est pris en charge\), le compilateur injecte un appel de son finaliseur suite à l'exécution du code fourni par utilisateur.  Par exemple, considérez la hiérarchie suivante, issue de la spécification du langage des Extensions managées :  
+1.  Le destructeur fourni par l’utilisateur est renommé en interne en `Finalize`. Si la classe a une classe de base (pour mémoire, sous le modèle objet CLR, seul l’héritage unique est pris en charge), le compilateur injecte un appel de son finaliseur suite à l’exécution du code fourni par l’utilisateur. Par exemple, considérez la hiérarchie suivante extraite de la spécification du langage des Extensions managées :  
   
 ```  
 __gc class A {  
@@ -51,7 +54,7 @@ public:
 };  
 ```  
   
- Dans cet exemple, les deux destructeurs sont renommés `Finalize`.  `Finalize` de `B` se voit ajouter un appel de la méthode `Finalize` de `A` à la suite de l'appel de `WriteLine`.  Il s'agit de ce que le garbage collector appellera par défaut au cours de la finalisation.  Cette transformation interne doit se présenter de la façon suivante :  
+ Dans cet exemple, les deux destructeurs sont renommés `Finalize`. `B`de `Finalize` a un appel à `A`de `Finalize` méthode ajoutée après l’appel de `WriteLine`. C’est ce que le garbage collector entraîne par défaut lors de la finalisation. Voici à quoi peut ressembler cette transformation interne :  
   
 ```  
 // internal transformation of destructor under Managed Extensions  
@@ -69,9 +72,9 @@ public:
 };  
 ```  
   
-1.  Dans la deuxième étape, le compilateur synthétise un destructeur virtuel.  Ce destructeur est ce que nos programmes utilisateur Extensions managées appellent soit directement, soit par le biais d'une application de l'expression de suppression.  Il n'est jamais appelé par le garbage collector.  
+1.  Dans la deuxième étape, le compilateur synthétise un destructeur virtuel. Ce destructeur est ce que nos programmes d’utilisateur des Extensions managées appeler directement ou via une application de l’expression de suppression. Il n’est jamais appelé par le garbage collector.  
   
-     Deux instructions sont placées au sein de ce destructeur synthétisé.  L'une consiste en un appel de `GC::SuppressFinalize` visant à garantir qu'il n'y aura plus d'appels de `Finalize`.  La seconde est l'appel réel de `Finalize`, qui représente le destructeur fourni par utilisateur pour cette classe.  Le résultat doit ressembler à ceci :  
+     Deux instructions sont placées dans ce destructeur synthétisé. Un est un appel à `GC::SuppressFinalize` pour vous assurer qu’il n’y a aucune appels de `Finalize`. Le deuxième est l’appel réel de `Finalize`, qui représente le destructeur fourni par l’utilisateur pour cette classe. Voici ce que cela peut se présenter comme :  
   
 ```  
 __gc class A {  
@@ -91,10 +94,10 @@ public:
 };  
 ```  
   
- Bien que cette implémentation permette à l'utilisateur d'appeler explicitement la méthode `Finalize` de la classe, à l'instant présent de préférence à un instant où vous n'avez pas le contrôle, elle ne correspond pas vraiment à la solution de la méthode `Dispose`.  Cela a été modifié dans [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+ Alors que cette implémentation permet à l’utilisateur d’appeler explicitement la classe `Finalize` méthode maintenant plutôt qu’à un moment que vous n’avez aucun contrôle, il ne pas vraiment à la `Dispose` solution de la méthode. Elle est modifiée dans Visual C++.  
   
-## Destructeurs dans la nouvelle syntaxe  
- Dans la nouvelle syntaxe, le destructeur est renommé en interne en méthode `Dispose` et la classe de référence est étendue automatiquement pour implémenter l'interface `IDispose`.  Plus précisément, sous [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)], notre paire de classes est transformée comme suit :  
+## <a name="destructors-in-new-syntax"></a>Destructeurs dans la nouvelle syntaxe  
+ Dans la nouvelle syntaxe, le destructeur est renommé en interne en le `Dispose` (méthode) et la classe de référence est automatiquement étendue pour implémenter le `IDispose` interface. Autrement dit, sous Visual C++, notre paire de classes est transformée comme suit :  
   
 ```  
 // internal transformation of destructor under the new syntax  
@@ -116,14 +119,14 @@ public:
 };  
 ```  
   
- Si un destructeur est appelé explicitement dans la nouvelle syntaxe, ou si `delete` est appliqué à un handle de suivi, la méthode `Dispose` sous\-jacente est appelée automatiquement.  S'il s'agit d'une classe dérivée, un appel de la méthode `Dispose` de la classe de base est inséré à la fin de la méthode synthétisée.  
+ Quand un destructeur est appelé explicitement dans la nouvelle syntaxe, ou quand `delete` est appliqué à un handle de suivi, sous-jacent `Dispose` méthode est appelée automatiquement. Si elle est une classe dérivée, un appel de la `Dispose` méthode de la classe de base est inséré à la fin de la méthode synthétisée.  
   
- Cependant, cela ne nous conduit pas directement à la finalisation déterministe.  Pour y parvenir, la prise en charge additionnelle d'objets de référence locaux est nécessaire. \(Il n'existe pas de prise en charge analogue en Extensions managées, ce n'est donc pas un problème de traduction.\)  
+ Mais cela n’obtient pas de nous jusqu'à la finalisation déterministe. Pour y parvenir, nous devons la prise en charge supplémentaire des objets de référence locale. (Cela n’a aucune prise en charge analogue dans les Extensions managées, et par conséquent, il n’est pas un problème de traduction).  
   
-## Déclaration d'un objet de référence  
- [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] prend en charge la déclaration d'un objet d'une classe de référence sur la pile locale ou en tant que membre d'une classe comme s'il était directement accessible.  Ceci combiné avec l'association du destructeur et de la méthode `Dispose`, le résultat est un appel automatisé de la sémantique de finalisation sur les types référence.  
+## <a name="declaring-a-reference-object"></a>Déclaration d’un objet de référence  
+ Visual C++ prend en charge la déclaration d’un objet d’une classe de référence sur la pile locale ou en tant que membre d’une classe comme si elle était directement accessible. Lorsqu’elles sont combinées avec l’association du destructeur avec le `Dispose` , le résultat est un appel automatisé de la sémantique de finalisation sur les types référence.  
   
- Nous commencerons par définir notre classe de référence de façon à ce que la création d'objets fonctionne comme l'acquisition d'une ressource via son constructeur de classe.  Ensuite, dans le destructeur de classe, nous diffuserons la ressource acquise lorsque l'objet a été créé.  
+ Tout d’abord, nous définissons notre classe de référence telles que la création d’objets fonctionne comme l’acquisition d’une ressource via son constructeur de classe. Ensuite, dans le destructeur de classe, nous diffuserons la ressource acquise lorsque l’objet a été créé.  
   
 ```  
 public ref class R {  
@@ -131,23 +134,23 @@ public:
    R() { /* acquire expensive resource */ }  
    ~R() { /* release expensive resource */ }  
   
-   // … everything else …  
+   // everything else...  
 };  
 ```  
   
- L'objet se déclare localement à l'aide du nom de type, mais sans le chapeau d'accompagnement.  Toutes les utilisations de l'objet, tel que l'appel d'une méthode, se font via le point de sélection de membre \(`.`\) plutôt qu'avec la flèche \(`->`\).  À la fin du bloc, le destructeur associé, transformé en `Dispose`, est automatiquement appelé, comme illustré ci\-après :  
+ L’objet est déclaré localement en utilisant le nom de type mais sans le chapeau d’accompagnement. Toutes les utilisations de l’objet, comme l’appel d’une méthode, sont effectuées via le point de sélection de membre (`.`) au lieu de flèche (`->`). À la fin du bloc, le destructeur associé, transformé en `Dispose`, est automatiquement appelé, comme indiqué ici :  
   
 ```  
 void f() {  
    R r;   
    r.methodCall();  
   
-   // r is automatically destructed here –  
+   // r is automatically destructed here -  
    // that is, r.Dispose() is invoked  
 }  
 ```  
   
- Comme avec l'instruction `using` en C\#, cela n'empêche pas la contrainte CLR selon laquelle tous les types référence doivent être alloués sur le tas CLR.  La sémantique sous\-jacente reste inchangée.  L'utilisateur aurait tout aussi bien pu écrire la formule équivalente suivante \(et c'est d'ailleurs probablement la transformation interne qu'effectue le compilateur\) :  
+ Comme avec la `using` instruction en c#, cela ne Relevez pas la contrainte CLR sous-jacente que tous les types référence doivent être alloués sur le tas CLR. La sémantique sous-jacente reste inchangée. L’utilisateur pourrait aurait écrire les éléments suivants (et c’est probablement la transformation interne effectuée par le compilateur) :  
   
 ```  
 // equivalent implementation  
@@ -160,10 +163,10 @@ void f() {
 }  
 ```  
   
- Dans l'effet, dans la nouvelle syntaxe, les destructeurs sont à nouveau appariés aux constructeurs comme un mécanisme automatique d'acquisition\/libération lié à la durée de vie d'un objet local.  
+ En effet, dans la nouvelle syntaxe, les destructeurs sont à nouveau appariés aux constructeurs comme une acquisition/la libération automatique mécanisme liée à la durée de vie d’un objet local.  
   
-## Déclaration d'une méthode Finalize explicite  
- Dans la nouvelle syntaxe, comme nous l'avons vu, le destructeur est synthétisé dans la méthode `Dispose`.  Cela signifie que lorsque le destructeur n'est pas appelé explicitement, le garbage collector, au cours de la finalisation, ne trouvera pas, comme il le faisait auparavant, de méthode `Finalize` associée pour l'objet.  Pour prendre en charge à la fois la destruction et la finalisation, nous avons introduit une syntaxe spéciale pour fournir un finaliseur.  Par exemple :  
+## <a name="declaring-an-explicit-finalize"></a>Déclaration d’une méthode Finalize explicite  
+ Dans la nouvelle syntaxe, comme nous l’avons vu, le destructeur est synthétisé dans le `Dispose` (méthode). Cela signifie que lorsque le destructeur n’est pas appelé explicitement, le garbage collector, lors de la finalisation, pas comme avant recherchera des associé à un `Finalize` méthode pour l’objet. Pour prendre en charge de destruction et la finalisation, nous avons introduit une syntaxe spéciale pour fournir un finaliseur. Exemple :  
   
 ```  
 public ref class R {  
@@ -172,7 +175,7 @@ public:
 };  
 ```  
   
- Le préfixe `!` est analogue au tilde \(`~`\), qui présente un destructeur de classe. Autrement dit, les deux méthodes de post\-durée de vie possèdent un jeton qui préfixe le nom de la classe.  Si la méthode `Finalize` synthétisée se produit dans une classe dérivée, un appel de la méthode `Finalize` de la classe de base est inséré à sa fin.  Si le destructeur est appelé explicitement, le finaliseur est supprimé.  Le résultat de la transformation doit ressembler à ceci :  
+ Le `!` préfixe est analogue à un tilde (`~`) qui présente un destructeur, autrement dit, les deux méthodes de durée de vie après aboutissent un jeton en ajoutant le préfixe le nom de la classe. Si la synthèse `Finalize` méthode se produit dans une classe dérivée, un appel à la classe de base `Finalize` (méthode) est insérée à sa fin. Si le destructeur est appelé explicitement, le finaliseur est supprimé. Voici à quoi peut ressembler la transformation :  
   
 ```  
 // internal transformation under new syntax  
@@ -184,17 +187,17 @@ public:
 };   
 ```  
   
-## Transfert des Extensions managées pour C\+\+ vers Visual C\+\+ 2010  
- Cela signifie que le comportement à l'exécution d'un programme Extensions managées pour C\+\+ est modifié lorsqu'il est compilé sous [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)], chaque fois qu'une classe de référence contient un destructeur non trivial.  L'algorithme de traduction requis se présente ainsi :  
+## <a name="moving-from-managed-extensions-for-c-to-visual-c-2010"></a>Transfert des Extensions managées pour C++ vers Visual C++ 2010  
+ Le comportement d’exécution d’un programme Extensions managées pour C++ est modifié lorsqu’il est compilé sous Visual C++, chaque fois qu’une classe de référence contient un destructeur non trivial. L’algorithme de traduction requis est similaire à ce qui suit :  
   
-1.  Si un destructeur est présent, réécrivez\-le pour en faire le finaliseur de la classe.  
+1.  Si un destructeur est présent, réécrivez-la pour être le finaliseur de classe.  
   
-2.  Si une méthode `Dispose` est présente, réécrivez\-la pour en faire le destructeur de classe.  
+2.  Si un `Dispose` méthode est présente, réécrivez-la pour en faire le destructeur de classe.  
   
-3.  Si un destructeur est présent mais qu'il n'existe aucune méthode `Dispose`, conservez le destructeur en mettant en œuvre le premier élément.  
+3.  Si un destructeur est présent, mais aucune `Dispose` méthode, conservez le destructeur lors de l’exécution du premier élément.  
   
- En transférant votre code des Extensions managées vers la nouvelle syntaxe, vous risquez de manquer l'exécution de cette transformation.  Si l'application dépendait d'une manière ou d'une autre de l'exécution de méthodes de finalisation associées, son comportement sera silencieusement différent de celui que vous attendiez.  
+ Lors du déplacement de votre code à partir des Extensions managées pour la nouvelle syntaxe, vous risquez de manquer exécution de cette transformation. Si l’application dépendait d’une certaine manière de l’exécution des méthodes de finalisation associées, le comportement de l’application sera silencieusement différent de celui prévu.  
   
-## Voir aussi  
- [Types managés \(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md)   
- [Destructeurs et finaliseurs dans Visual C\+\+](../misc/destructors-and-finalizers-in-visual-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Types managés (C + c++ / CL)](../dotnet/managed-types-cpp-cl.md)   
+ [Destructeurs et finaliseurs dans Comment : définir et consommer des classes et structs (C + c++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)

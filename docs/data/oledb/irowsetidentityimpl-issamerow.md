@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: baab48b21ab624d285fecac0e888f8d32e86342b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 002979151b6c076cc1f5d7f7a7ec2868ae897df3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetidentityimplissamerow"></a>IRowsetIdentityImpl::IsSameRow
 Compare deux handles de ligne pour voir s’ils font référence à la même ligne.  
@@ -42,10 +45,10 @@ Compare deux handles de ligne pour voir s’ils font référence à la même lig
 #### <a name="parameters"></a>Paramètres  
  Consultez [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/en-us/library/ms719629.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour comparer les handles de ligne, cette méthode convertit le **HROW** gère à **RowClass** membres et appelle `memcmp` sur les pointeurs.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

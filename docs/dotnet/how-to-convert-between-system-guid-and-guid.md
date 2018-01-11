@@ -1,32 +1,35 @@
 ---
-title: "Comment&#160;: proc&#233;der &#224; une conversion entre System::Guid et _GUID | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GUID, convertir en System::GUID"
-  - "System::GUID"
-  - "System::GUID, convertir en GUID"
+title: "Comment : effectuer une conversion entre System::Guid et _GUID | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- System::GUID
+- GUID, converting to System::GUID
+- System::GUID, converting to GUID
 ms.assetid: 022c934c-3395-4f04-b498-85ad9bf8c646
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f284532e96e0a985aad8797a8caac0306f1f56f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Comment&#160;: proc&#233;der &#224; une conversion entre System::Guid et _GUID
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'exemple de code suivant indique comment effectuer une conversion entre <xref:System.Guid> et `_GUID`.  
+# <a name="how-to-convert-between-systemguid-and-guid"></a>Comment : procéder à une conversion entre System::Guid et _GUID
+L’exemple de code suivant montre comment effectuer une conversion entre un <xref:System.Guid> et un `_GUID`.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // convert_guids.cpp  
@@ -68,7 +71,10 @@ int main() {
 }  
 ```  
   
-  **11111111\-2222\-3333\-4455\-555555555555**  
-**11111111\-2222\-3333\-4455\-555555555555**   
-## Voir aussi  
- [Utilisation de l'interopérabilité C\+\+ \(PInvoke implicite\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+11111111-2222-3333-4455-555555555555  
+11111111-2222-3333-4455-555555555555  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

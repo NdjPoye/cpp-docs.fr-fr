@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f03d3f2bb10fa6b12cb046fd77f45a2bc6153064
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2412ab15317604e1d6cccc5535226d429d8ba6b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specifying-the-pathname"></a>Spécification du nom de chemin
 Chaque option de fichier de sortie accepte un *chemin d’accès* argument peut spécifier un emplacement et un nom pour le fichier de sortie. L’argument peut inclure un nom de lecteur, le répertoire et le nom de fichier. Aucun espace n’est autorisé entre l’option et l’argument.  

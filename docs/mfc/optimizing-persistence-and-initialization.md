@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7b1e38a6ca424a71418790b18b3c115d12bb3065
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eeddfe4c67de2e96d42c7714619463ae3be45187
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Optimisation de la persistance et de l'initialisation
 Par défaut, la persistance et l'initialisation dans un contrôle sont gérées par la fonction membre `DoPropExchange`. Dans un contrôle type, cette fonction contient des appels à plusieurs **PX_** fonctions (`PX_Color`, `PX_Font`, et ainsi de suite), une pour chaque propriété.  

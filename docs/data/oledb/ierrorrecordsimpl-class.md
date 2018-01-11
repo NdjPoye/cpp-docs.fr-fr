@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6bd2b342f2e7b29103b08c67fa973ed4a8c64869
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 30589266bc4f9b2c083de5ccd82af5bec02cd4ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl, classe
 Implémente le OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) interface, ajouter des enregistrements à et récupérer des enregistrements d’un membre de données ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) de type **CAtlArray <** `RecordClass`**>**.  
@@ -73,7 +76,7 @@ class IErrorRecordsImpl : public IErrorRecords
 |-|-|  
 |[m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)|Tableau d’enregistrements d’erreur.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

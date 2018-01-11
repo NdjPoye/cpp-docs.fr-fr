@@ -1,48 +1,51 @@
 ---
-title: "Utilisation des proc&#233;dures stock&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modèles du fournisseur OLE DB, procédures stockées"
-  - "OLE DB, procédures stockées"
-  - "procédures stockées, à propos des procédures stockées"
-  - "procédures stockées, OLE DB"
-  - "procédures stockées, Visual C++"
+title: "À l’aide de procédures stockées | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB, stored procedures
+- stored procedures, Visual C++
+- stored procedures, about stored procedures
+- OLE DB provider templates, stored procedures
+- stored procedures, OLE DB
 ms.assetid: 90507e4c-eca2-46c9-ad8c-07e10dc1d41b
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 093cbd3d2ae101bbc06c45a920f8a2c108eb3bfa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Utilisation des proc&#233;dures stock&#233;es
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Une procédure stockée est un objet exécutable stocké dans une base de données.  L'appel d'une procédure stockée est similaire à l'appel d'une commande SQL.  L'utilisation de procédures stockées sur la source de données \(au lieu d'exécuter ou de préparer une instruction dans l'application cliente\) peut offrir plusieurs avantages, notamment les suivants : des performances accrues, une charge réseau réduite ainsi qu'une cohérence et une précision améliorées.  
+# <a name="using-stored-procedures"></a>Utilisation des procédures stockées
+Une procédure stockée est un objet exécutable stocké dans une base de données. Appel d’une procédure stockée est similaire à l’appel d’une commande SQL. À l’aide de procédures stockées sur la source de données (au lieu d’exécuter ou de préparation d’une instruction dans l’application cliente) peut fournir plusieurs avantages, notamment des performances accrues, une charge réseau réduite et améliorer la cohérence et la précision.  
   
- Une procédure stockée peut avoir un nombre quelconque \(y compris zéro\) de paramètres d'entrée et de sortie, et peut passer une valeur de retour.  Vous pouvez soit coder en dur les valeurs de paramètre comme des valeurs de données spécifiques, soit utiliser un marqueur de paramètre \(point d'interrogation '?'\).  
+ Une procédure stockée peut avoir un nombre quelconque de (y compris zéro) d’entrée ou de paramètres de sortie et pouvez passer une valeur de retour. Vous pouvez soit coder en dur les valeurs de paramètre comme valeurs de données spécifiques ou utilisent un marqueur de paramètre (un point d’interrogation « ? »).  
   
 > [!NOTE]
->  Les procédures stockées SQL Server du CLR créées avec Visual C\+\+ doivent être compilées avec l'option **\/clr:safe** du compilateur.  
+>  CLR SQL Server et les procédures stockées créées à l’aide de Visual C++ doivent être compilés avec les **/CLR : safe** option du compilateur.  
   
- Le fournisseur OLE DB pour SQL Server \(SQLOLEDB\) prend en charge les mécanismes suivants, que les procédures stockées utilisent pour retourner des données :  
+ Le fournisseur OLE DB pour SQL Server (SQLOLEDB) prend en charge les mécanismes suivants, que les procédures stockées utilisent pour retourner des données :  
   
 -   Chaque instruction SELECT dans la procédure génère un jeu de résultats.  
   
--   La procédure peut retourner des données par l'intermédiaire de paramètres de sortie.  
+-   La procédure peut retourner des données via des paramètres de sortie.  
   
--   La procédure peut avoir un code de retour d'entiers.  
+-   La procédure peut avoir un nombre entier de code de retour.  
   
 > [!NOTE]
->  Vous ne pouvez pas utiliser les procédures stockées avec le fournisseur OLE DB pour Jet car ce fournisseur ne prend pas en charge les procédures stockées ; seules des constantes sont admises dans les chaînes de requêtes.  
+>  Vous ne pouvez pas utiliser les procédures stockées avec le fournisseur OLE DB pour Jet car ce fournisseur ne prend pas en charge les procédures stockées ; Seules des constantes sont autorisées dans les chaînes de requête.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utilisation des modèles du consommateur OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

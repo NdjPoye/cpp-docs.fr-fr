@@ -17,11 +17,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f130c5d17a1a753d97cded0ab987305cc6a75c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: df532b1ffdc8eba635af93f34e0d77fd3da0d115
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-programming"></a>Programmation OLE DB
 Microsoft OLE DB est une technologie héritée ; pour les nouvelles applications, il est l’API d’accès données requises pour les serveurs liés SQL. Toutes les autres nouvelles applications doivent utiliser ODBC. Le fournisseur OLE DB actuel pour SQL Server est SQLNCLI11. DLL. Le fournisseur est toujours celle de SQL Server 2016. Cette documentation s’adresse aux développeurs chargés de la maintenance des applications existantes qui utilisent déjà OLE DB.

@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 51ebc0fd2b3d13227cec2db5a755bed8a6739674
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f7d0dc96f34da1c5924f7d80c9a03477c480f23b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collectionadapteroperator-stlclr"></a>collection_adapter::operator= (STL/CLR)
 Remplace le handle BCL stocké.  
@@ -34,7 +37,7 @@ collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);
  droite  
  Carte à copier.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les copies d’opérateur de membre `right` à l’objet, puis retourne `*this`. Utilisez-le pour remplacer le handle BCL stocké avec une copie du handle BCL stockée dans `right`.  
   
 ## <a name="example"></a>Exemple  
@@ -76,7 +79,7 @@ a b c
 a b c  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/carte >  
   
  **Namespace :** cliext  

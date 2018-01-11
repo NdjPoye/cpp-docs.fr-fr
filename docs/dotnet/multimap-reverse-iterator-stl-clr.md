@@ -15,11 +15,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e5c28d23b60f909f0baa44e8f5b80b861a03a589
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fd4132f8d2da22ed2e936c16859eeada40dd8506
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multimapreverseiterator-stlclr"></a>multimap::reverse_iterator (STL/CLR)
 Type d'un itérateur inverse pour la séquence contrôlée.  
@@ -30,7 +33,7 @@ Type d'un itérateur inverse pour la séquence contrôlée.
 typedef T3 reverse_iterator;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le type décrit un objet de type non spécifié `T3` qui peut servir d’itérateur inverse pour la séquence contrôlée.  
   
 ## <a name="example"></a>Exemple  
@@ -62,7 +65,7 @@ int main()
 [c 3] [b 2] [a 1]  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/map >  
   
  **Namespace :** cliext  

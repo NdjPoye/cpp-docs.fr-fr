@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4bc32fee9ac91f73536053afdc47e2cfc5d161bf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 49187874965ac9f79b4f8dcbf6630c0cc9117017
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dequeconstreference-stlclr"></a>deque::const_reference (STL/CLR)
 Type d'une référence constante à un élément.  
@@ -30,7 +33,7 @@ Type d'une référence constante à un élément.
 typedef value_type% const_reference;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le type décrit une référence constante à un élément.  
   
 ## <a name="example"></a>Exemple  
@@ -64,7 +67,7 @@ int main()
 a b c  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/deque >  
   
  **Namespace :** cliext  

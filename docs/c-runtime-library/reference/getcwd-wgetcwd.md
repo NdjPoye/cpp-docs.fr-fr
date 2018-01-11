@@ -44,11 +44,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e72618467666a98bdda5867b23d9ef2ce37319f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14047c8143d982bc6b26bef6e46679341d9abd36
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getcwd-wgetcwd"></a>_getcwd, _wgetcwd
 Obtient le répertoire de travail actuel.  
@@ -76,7 +77,7 @@ wchar_t *_wgetcwd(
 ## <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers `buffer`. Une valeur de retour `NULL` indique une erreur et `errno` prend la valeur `ENOMEM`, ce qui indique que la mémoire est insuffisante pour allouer `maxlen` octets (quand un argument `NULL` est donné comme `buffer`), ou la valeur `ERANGE`, ce qui indique que le chemin d’accès fait plus de `maxlen` caractères. Si `maxlen` est inférieur ou égal à zéro, cette fonction appelle un gestionnaire de paramètre non valide, comme décrit dans [Parameter Validation](../../c-runtime-library/parameter-validation.md).  
   
- Pour plus d’informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Notes  
  La fonction `_getcwd` obtient le chemin complet du répertoire de travail actuel pour le lecteur spécifié et le stocke dans `buffer`. L’argument entier `maxlen` spécifie la longueur maximale du chemin. Une erreur se produit si la longueur du chemin (y compris le caractère null de fin) dépasse `maxlen`. La fonction `buffer` peut être `NULL`; une mémoire tampon d’une taille d’au moins `maxlen` (plus seulement si nécessaire) est allouée automatiquement, en utilisant `malloc`, pour stocker le chemin. Cette mémoire tampon ultérieurement peut être libérée en appelant `free` et en lui passant la valeur de retour `_getcwd` (un pointeur vers la mémoire tampon allouée).  
@@ -93,14 +94,14 @@ wchar_t *_wgetcwd(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tgetcwd`|`_getcwd`|`_getcwd`|`_wgetcwd`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_getcwd`|\<direct.h>|  
 |`_wgetcwd`|\<direct.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

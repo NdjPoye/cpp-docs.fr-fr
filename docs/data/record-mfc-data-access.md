@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 02d5b302bd8407109bf845d80de8803ff0eb9353
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f15be890b69f559e304fdab39e53a696cbb7c34d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-mfc-data-access"></a>Enregistrement (Accès aux données MFC)
 Un enregistrement est une collection de données relatives à une seule entité, telle qu’un compte ou un client, stockée dans une table (une ligne de la table). Un enregistrement est constitué d'un groupe de colonnes contiguës (parfois appelées champs) qui contiennent des données de différents types. Un ensemble d'enregistrements sélectionnés à partir d'une source de données (souvent appelé jeu de résultats en termes de base de données) est appelé recordset dans MFC. Pour plus d’informations, consultez [Recordset (ODBC)](../data/odbc/recordset-odbc.md).  

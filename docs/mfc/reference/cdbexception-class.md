@@ -23,11 +23,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2b171766fd4376478a11b4bab4dacf7cef58129a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 295b0d9ed9ce37988766455741a168b8c1d5ee6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdbexception-class"></a>Classe de CDBException
 Représente une condition d'exception résultant des classes de base de données.  
@@ -48,7 +49,7 @@ class CDBException : public CException
 |[CDBException::m_strError](#m_strerror)|Contient une chaîne qui décrit l’erreur en termes d’alphanumériques.|  
 |[CDBException::m_strStateNativeOrigin](#m_strstatenativeorigin)|Contient une chaîne décrivant l’erreur en termes des codes d’erreur retourné par ODBC.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La classe inclut deux membres de données publics que vous pouvez utiliser pour déterminer la cause de l’exception ou pour afficher un message décrivant l’exception. `CDBException`objets sont créés et levées par les fonctions membres des classes de base de données.  
   
 > [!NOTE]
@@ -67,13 +68,13 @@ class CDBException : public CException
   
  `CDBException`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdb.h  
   
 ##  <a name="m_nretcode"></a>CDBException::m_nRetCode  
  Contient un code d’erreur de type ODBC **et RETCODE contient** retourné par la fonction d’API (interface) de programmation d’applications ODBC.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ce type inclut les codes SQL avec le préfixe définis par ODBC et AFX_SQL avec le préfixe défini par les classes de base de données. Pour un `CDBException`, ce membre contient une des valeurs suivantes :  
   
 - **AFX_SQL_ERROR_API_CONFORMANCE** le pilote pour un `CDatabase::OpenEx` ou `CDatabase::Open` appel n’est pas conforme au niveau de compatibilité d’API ODBC requis 1 ( **SQL_OAC_LEVEL1**).  
@@ -123,13 +124,13 @@ class CDBException : public CException
 ##  <a name="m_strerror"></a>CDBException::m_strError  
  Contient une chaîne décrivant l’erreur qui a provoqué l’exception.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La chaîne décrit l’erreur en termes d’alphanumériques. Pour plus d’informations, consultez **m_strStateNativeOrigin**.  
   
 ##  <a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
  Contient une chaîne décrivant l’erreur qui a provoqué l’exception.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La chaîne est le formulaire « état : % s, natif : % ld, origine : % s », où les codes de format, dans l’ordre, sont remplacées par les valeurs qui décrivent :  
   
 -   Le **SQLSTATE**, une chaîne se terminant par null contenant un code d’erreur à cinq caractères retourné dans le *szSqlState* paramètre de la fonction ODBC **SQLError**. **SQLSTATE** valeurs sont répertoriées dans l’annexe A, [Codes d’erreur ODBC](https://msdn.microsoft.com/library/ms714687.aspx), dans le *de référence du programmeur ODBC*. Exemple : « S0022 ».  

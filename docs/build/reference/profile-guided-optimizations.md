@@ -16,11 +16,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 467888dc773a8d84e5a1b3fc1fd2c337b06654be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f2d72ddda460a88830f7f7692f4c9707fa3101a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="profile-guided-optimizations"></a>Optimisations guidées par profil
 L'optimisation guidée par profil vous permet d'optimiser un fichier de sortie alors que l'optimiseur utilise les données de séries de tests du fichier .exe ou .dll. Les données représentent la manière dont le programme est susceptible de s'exécuter dans un environnement de production.  

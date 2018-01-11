@@ -1,36 +1,35 @@
 ---
-title: "__vmx_on | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_on"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VMXON, instruction"
-  - "__vmx_on, intrinsèque"
+title: __vmx_on | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_on
+dev_langs: C++
+helpviewer_keywords:
+- VMXON instruction
+- __vmx_on intrinsic
 ms.assetid: 16804991-6a75-4adf-8ec2-bc95acfa4801
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 457866d54fe3f290c40ca70b07e19ec3f337de41
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
-# __vmx_on
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="vmxon"></a>__vmx_on
+**Section spécifique à Microsoft**  
   
- active l'opération d'extensions d'ordinateur virtuel \(VMX\) dans le processeur.  
+ Active l’opération d’ordinateur virtuel (VMX) les extensions dans le processeur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 unsigned char __vmx_on(  
@@ -38,30 +37,30 @@ unsigned char __vmx_on(
 );  
 ```  
   
-#### Paramètres  
- \[in\] `VmsSupportPhysicalAddress`  
- Un pointeur vers une adresse physique 64 bits qui pointe vers une structure de contrôle d'ordinateur \(VMCS\) virtuel.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `VmsSupportPhysicalAddress`  
+ Pointeur vers une adresse physique 64 bits qui pointe vers une structure de contrôle de machine virtuelle (VMCS).  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
   
-|Valeur|Signification|  
-|------------|-------------------|  
-|0|l'opération réussie.|  
-|1|L'opération a échoué avec l'état étendu disponible dans `VM-instruction error field` du actuel VMCS.|  
-|2|L'opération a échoué sans état disponible.|  
+|Value|Signification|  
+|-----------|-------------|  
+|0|L’opération a réussi.|  
+|1|L’opération a échoué avec l’état étendu disponible dans le `VM-instruction error field` de la VMCS actuelle.|  
+|2|L’opération a échoué sans état disponible.|  
   
-## Notes  
- la fonction d' `__vmx_on` correspond à l'instruction machine d' `VMXON` .  cette fonction prend en charge l'interaction du moniteur d'ordinateurs virtuels d'un hôte avec un système d'exploitation invité et ses applications.  Pour plus d'informations, recherchez le document, « spécification technique de virtualisation Intel pour l'architecture de IA\-32 Intel, » numéro de document C97063 \-002, [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) au site.  
+## <a name="remarks"></a>Notes  
+ Le `__vmx_on` fonction correspond à la `VMXON` instruction machine. Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document, « Intel virtualisation technique spécification pour l’Architecture IA-32 Intel, » document numéro est C97063-002, sur le [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__vmx_on`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## détail de FIN Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

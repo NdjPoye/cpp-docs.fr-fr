@@ -1,29 +1,31 @@
 ---
-title: "Erreur irr&#233;cup&#233;rable C1854 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1854"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1854"
+title: "Erreur irrécupérable C1854 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C1854
+dev_langs: C++
+helpviewer_keywords: C1854
 ms.assetid: 8c21a9cc-1737-475c-9e57-8725cd8937c1
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0e0a26e902b1a40203bb4323bce8e28e687e9647
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Erreur irr&#233;cup&#233;rable C1854
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-impossible de remplacer les informations obtenues lors de la création de l'en\-tête précompilé du fichier objet : 'NomFichier'  
+# <a name="fatal-error-c1854"></a>Erreur irrécupérable C1854
   
- Vous avez spécifié l'option **\/Yu** \(utiliser un en\-tête précompilé\) après spécification de **\/Yc** \(créer un en\-tête précompilé\) pour le même fichier.  Certaines déclarations \(telles que les déclarations incluant `__declspec` `dllexport`\) rendent cette opération non valide.
+> ne peut pas remplacer les informations obtenues lors de la création de l’en-tête précompilé du fichier objet : '*nom de fichier*'  
+  
+Vous avez spécifié le [/Yu (utiliser un en-tête précompilé)](../../build/reference/yu-use-precompiled-header-file.md) option après avoir spécifié le [/Yc (créer un en-tête précompilé)](../../build/reference/yc-create-precompiled-header-file.md) option pour le même fichier.  
+  
+Pour résoudre ce problème, en général, ne définir qu’un seul fichier dans votre projet doit être compilé à l’aide de la **/Yc** option et définissez tous les autres fichiers à compiler à l’aide de la **/Yu** option. Pour plus d’informations sur l’utilisation de la **/Yc** option et la définir dans l’IDE de Visual Studio, consultez [/Yc (créer un en-tête précompilé)](../../build/reference/yc-create-precompiled-header-file.md). Pour plus d’informations sur l’utilisation d’en-têtes précompilés, consultez [création de fichiers d’en-tête précompilés](../../build/reference/creating-precompiled-header-files.md).  

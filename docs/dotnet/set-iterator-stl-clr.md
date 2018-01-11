@@ -1,41 +1,42 @@
 ---
-title: "set::iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iterator (membre) (STL/CLR)"
+title: Set::iterator (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::iterator
+dev_langs: C++
+helpviewer_keywords: iterator member [STL/CLR]
 ms.assetid: 7e54276b-4cb3-4bff-a3a6-23ae328aa369
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 48f42936702e394fcf8e2080ff50a5ca949b3f9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# set::iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="setiterator-stlclr"></a>set::iterator (STL/CLR)
 Type d'un itérateur pour la séquence contrôlée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef T1 iterator;  
 ```  
   
-## Notes  
- Le type décrit un objet de type non spécifié `T1` qui peut servir d'itérateur bidirectionnel pour la séquence contrôlée.  
+## <a name="remarks"></a>Notes  
+ Le type décrit un objet de type non spécifié `T1` qui peut servir d’itérateur bidirectionnel pour la séquence contrôlée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_set_iterator.cpp   
@@ -60,12 +61,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## Configuration requise  
- **En\-tête :** \<cliext\/set\>  
+```Output  
+a b c  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/set >  
   
-## Voir aussi  
- [set](../dotnet/set-stl-clr.md)   
- [set::const\_iterator](../dotnet/set-const-iterator-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Set (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set::const_iterator (STL/CLR)](../dotnet/set-const-iterator-stl-clr.md)

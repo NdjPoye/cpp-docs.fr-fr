@@ -22,24 +22,25 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 957d9679c57cd15162c5820ccd7dc41bdea0fa2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f8e842f4cf0f9c52945c04739879d0132eb34171
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Spécification d'options de ligne de commande MIDL)
 ```  
 /MIDL:@file  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  où :  
   
  `file`  
  Le nom du fichier qui contient [les options de ligne de commande MIDL](http://msdn.microsoft.com/library/windows/desktop/aa366839).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Toutes les options pour la conversion d’un fichier IDL dans un fichier TLB doivent être indiquées `file`; Les options de ligne de commande MIDL ne peut pas être spécifiées sur la ligne de commande de l’éditeur de liens. Si /MIDL n’est pas spécifié, le compilateur MIDL sera appelé avec uniquement le nom de fichier IDL et aucune autre option.  
   
  Le fichier doit contenir une option de ligne de commande MIDL par ligne.  

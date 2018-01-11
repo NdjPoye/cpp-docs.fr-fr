@@ -1,47 +1,48 @@
 ---
-title: "hash_map::equal_range (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::equal_range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre equal_range [STL/CLR]"
+title: hash_map::equal_range (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::equal_range
+dev_langs: C++
+helpviewer_keywords: equal_range member [STL/CLR]
 ms.assetid: 9b9a18b8-42fd-4d17-91bd-df85e583cf61
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8d5e8b628e96fbf147e3b757f0c5ba778dc7a22c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::equal_range (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Recherche la plage qui correspond à une clé spécifiée.  
+# <a name="hashmapequalrange-stlclr"></a>hash_map::equal_range (STL/CLR)
+Recherche une plage qui correspond à une clé spécifiée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 cliext::pair<iterator, iterator> equal_range(key_type key);  
 ```  
   
-#### Paramètres  
- key  
- Valeur clé à rechercher  
+#### <a name="parameters"></a>Paramètres  
+ `key`  
+ Valeur de clé à rechercher.  
   
-## Notes  
- La fonction membre retourne une paire d'itérateurs `cliext::pair<iterator, iterator>(` [hash\_map::lower\_bound](../dotnet/hash-map-lower-bound-stl-clr.md)`(``key``),` [hash\_map::upper\_bound](../dotnet/hash-map-upper-bound-stl-clr.md)`(``key``))`.  Vous l'utilisez pour déterminer la plage d'éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.  
+## <a name="remarks"></a>Notes  
+ La fonction membre retourne une paire d’itérateurs `cliext::pair<iterator, iterator>(lower_bound(key), upper_bound(key))`. Il permet de déterminer la plage d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // cliext_hash_map_equal_range.cpp   
 // compile with: /clr   
 #include <cliext/hash_map>   
@@ -76,17 +77,20 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**equal\_range\(L'x'\) empty \= True**  
- **\[b 2\]**   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+equal_range(L'x') empty = True  
+ [b 2]  
+```  
   
- **Espace pour le nom :** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/hash_map >  
   
-## Voir aussi  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::count](../dotnet/hash-map-count-stl-clr.md)   
- [hash\_map::find](../dotnet/hash-map-find-stl-clr.md)   
- [hash\_map::lower\_bound](../dotnet/hash-map-lower-bound-stl-clr.md)   
- [hash\_map::upper\_bound](../dotnet/hash-map-upper-bound-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::Count (STL/CLR)](../dotnet/hash-map-count-stl-clr.md)   
+ [hash_map::Find (STL/CLR)](../dotnet/hash-map-find-stl-clr.md)   
+ [hash_map::lower_bound (STL/CLR)](../dotnet/hash-map-lower-bound-stl-clr.md)   
+ [hash_map::upper_bound (STL/CLR)](../dotnet/hash-map-upper-bound-stl-clr.md)

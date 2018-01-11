@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f3e4dc59154d64d79db0f4d15471b51ce67bed58
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 621878aacaf2a1b36ed0014451ada504d8a24556
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ (Activer les vérifications des erreurs au moment de l'exécution pour le frame de pile)
 Effectue les mêmes opérations que les [/RTC (vérifications des erreurs Run-Time)](../../build/reference/rtc-run-time-error-checks.md) option. Obsolète.  
@@ -35,7 +36,7 @@ Effectue les mêmes opérations que les [/RTC (vérifications des erreurs Run-Ti
 /GZ  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **GZ** doit uniquement être utilisée dans un code ([/Od (désactiver (débogage))](../../build/reference/od-disable-debug.md)) générer.  
   
  **GZ** est déconseillée depuis Visual Studio 2005 ; utilisez [/RTC (vérifications des erreurs Run-Time)](../../build/reference/rtc-run-time-error-checks.md) à la place. Pour obtenir la liste des options du compilateur déconseillées, consultez **déconseillées et supprimées des Options du compilateur** dans [Options du compilateur classées par catégorie](../../build/reference/compiler-options-listed-by-category.md).  

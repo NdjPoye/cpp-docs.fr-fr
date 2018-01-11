@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a38c2edeffbdd2c37e69ce0886c24ca0d2f0b68a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e7a696562a94a52b444f751ae621ae458ca7e89f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-consumer-templates-c"></a>Modèles du consommateur OLE DB (C++)
 Les modèles de consommateurs OLE DB prennent ne charge la spécification OLE DB version 2.6. (Les modèles de consommateurs OLE DB sont testés pour OLE DB 2.6, mais il ne prennent pas en charge chacune des interfaces de la spécification.) Les modèles de consommateurs réduisent la quantité de code que vous devez écrire pour implémenter un consommateur OLE DB. Les modèles fournissent :  

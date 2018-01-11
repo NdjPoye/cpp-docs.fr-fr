@@ -22,11 +22,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d2961da1882dcdc607d8dfbefe995e887d74b5ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5164bcd56c61868649af6185c8b84ebf20098b18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idbschemarowsetimplgetrowset"></a>IDBSchemaRowsetImpl::GetRowset
 Retourne un ensemble de lignes de schéma.  
@@ -72,12 +75,12 @@ Retourne un ensemble de lignes de schéma.
  `ppRowset`  
  [out] Pointeur désignant l’interface demandée sur l’ensemble de lignes de schéma nouvellement créé.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette méthode impose à l’utilisateur de disposer d’un mappage de schéma dans la classe session. À partir des informations de mappage de schéma, `GetRowset` crée un objet rowset donné si le paramètre `rguidSchema` est égal à l’un des GUID d’entrée de mappage. Consultez [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) pour obtenir une description de l’entrée de mappage.  
   
  Consultez [IDBSchemaRowset::GetRowset](https://msdn.microsoft.com/en-us/library/ms722634.aspx) dans le Kit de développement logiciel Windows.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

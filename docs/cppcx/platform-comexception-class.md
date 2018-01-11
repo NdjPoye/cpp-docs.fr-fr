@@ -18,11 +18,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 28475df3c5d13d1b90483213173f5343f6b85d79
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de0f7546019096e5126938d47443f6584bf4edb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException (classe)
 Représente les erreurs COM qui se produisent lors de l'exécution de l'application. COMException est la classe de base pour un jeu d'exceptions prédéfinies et standard.  
@@ -60,7 +61,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 ## <a name="derived-exceptions"></a>Exceptions dérivées  
  Les exceptions prédéfinies suivantes sont dérivées de COMException. Elles diffèrent de COMException uniquement au niveau de leur nom, du nom de leur constructeur et de leur valeur HRESULT sous-jacente.  
   
-|Nom|HRESULT sous-jacent|Description|  
+|Name|HRESULT sous-jacent|Description|  
 |----------|------------------------|-----------------|  
 |COMException|*hresult défini par l’utilisateur*|Levée lorsqu'un HRESULT non reconnu est retourné d'un appel de méthode COM.|  
 |AccessDeniedException|E_ACCESSDENIED|Levée lorsque l'accès est refusé à une ressource ou à une fonctionnalité.|  
@@ -76,7 +77,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 |OutOfBoundsException|E_BOUNDS|Levée lorsqu'une opération tente d'accéder aux données en dehors de la plage valide.|  
 |OutOfMemoryException|E_OUTOFMEMORY|Levée en cas de mémoire insuffisante pour terminer l'opération.|  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **Minimum pris en charge le client :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  
@@ -112,7 +113,7 @@ public:property int HResult {    int get();}
 ## <a name="property-value"></a>Valeur de propriété  
  Valeur HRESULT qui spécifie l'erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur la manière d’interpréter la valeur HRESULT, consultez [Structure of COM Error Codes](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
 
 ## <a name="message"></a>COMException::Message (propriété)

@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 695c716b29e8d43c0190b4721285f6b4f6959e29
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2264296d288f9105a59c0ac5099c1dedef55ee2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="order-put-functions-in-order"></a>/ORDER (Mettre les fonctions dans l'ordre)
 
@@ -42,7 +43,7 @@ Spécifier l’ordre de liaison pour les fonctions séparément empaquetées (CO
 *filename*  
 Un fichier texte qui spécifie l’ordre de liaison des fonctions COMDAT.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Le **/Order** option du compilateur vous permet d’optimiser le comportement de pagination de votre programme en regroupant une fonction avec les fonctions qu’elle appelle. Vous pouvez également regrouper les fonctions appelées fréquemment ensemble. Ces techniques, appelés *réglage de l’échange* ou *l’optimisation de la pagination*, augmente la probabilité qu’une fonction appelée est en mémoire lorsqu’il est nécessaire et ne doit pas être notifié par radiomessagerie à partir du disque.
 

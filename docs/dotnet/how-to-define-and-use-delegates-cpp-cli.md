@@ -1,38 +1,40 @@
 ---
-title: "Comment&#160;: d&#233;finir et utiliser des d&#233;l&#233;gu&#233;s (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "délégués"
+title: "Comment : définir et utiliser des délégués (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7f400a03f1b9ae877ee7ec681cb038698a92598a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Comment&#160;: d&#233;finir et utiliser des d&#233;l&#233;gu&#233;s (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cet article explique comment définir et utiliser les délégués dans [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)].  
+# <a name="how-to-define-and-use-delegates-ccli"></a>Comment : définir et utiliser des délégués (C++/CLI)
+Cet article explique comment définir et utiliser des délégués dans C + c++ / CLI.  
   
- Bien que le .NET Framework fournisse plusieurs délégués, vous devrez peut\-être définir de nouveaux délégués.  
+ Bien que le .NET Framework fournit un nombre de délégués, parfois, vous devrez définir de nouveaux délégués.  
   
- L'exemple suivant définit un délégué d'événement nommé `MyCallback`.  Le code de gestion des événements \(fonction appelée lorsque ce nouveau délégué est déclenché\) doit être de type de retour `void` et prendre une référence <xref:System.String>.  
+ L’exemple de code suivant définit un délégué nommé `MyCallback`. Le code de gestion des événements, la fonction est appelée lorsque ce nouveau délégué est déclenché, doit avoir un type de retour de `void` et prendre une <xref:System.String> référence.  
   
- La fonction principale utilise une méthode statique définie par `SomeClass` pour instancier le délégué de `MyCallback`.  Le délégué devient méthode alternative pour appeler cette fonction, comme illustré en envoyant la chaîne « single » sur l'objet délégué.  Les instances supplémentaires `MyCallback` sont liées ensemble puis exécutées par un appel à l'objet délégué.  
+ La principale fonction utilise une méthode statique qui est définie par `SomeClass` pour instancier le `MyCallback` déléguer. Le délégué devient alors une autre méthode d’appel de cette fonction, comme illustré dans l’envoi de la chaîne « unique » à l’objet de délégué. Suivants, d’autres instances de `MyCallback` sont liées entre elles et ensuite exécutée par un appel à l’objet de délégué.  
   
 ```  
-// use_delegate.cpp  
+  
+      // use_delegate.cpp  
 // compile with: /clr  
 using namespace System;  
   
@@ -85,11 +87,15 @@ int main( )
   
  **Sortie**  
   
-  **static SomeClass::Func \- single**  
-**static SomeClass::Func \- chained**  
-**static SomeClass::Func \- chained**  
-**OtherClass::Method \- chained, num \= 99**  
-**OtherClass::Method \- chained, num \= 100** L'exemple de code suivant montre comment associer un délégué à un membre d'une plage de valeurs.  
+```Output  
+static SomeClass::Func - single  
+static SomeClass::Func - chained  
+static SomeClass::Func - chained  
+OtherClass::Method - chained, num = 99  
+OtherClass::Method - chained, num = 100  
+```  
+  
+ L’exemple de code suivant montre comment associer un délégué à un membre d’une classe value.  
   
 ```  
 // mcppv2_del_mem_value_class.cpp  
@@ -116,10 +122,13 @@ int main() {
   
  **Sortie**  
   
-  **tester**  
-**tester**   
-## Comment composer des délégués  
- Utilisez l'opérateur `-` pour supprimer un délégué composant d'un délégué composé  
+```Output  
+test  
+test  
+```  
+  
+## <a name="how-to-compose-delegates"></a>Comment composer des délégués  
+ Vous pouvez utiliser le «`-`» (opérateur) pour supprimer un délégué de composant d’un délégué composé.  
   
 ```  
 // mcppv2_compose_delegates.cpp  
@@ -159,19 +168,22 @@ int main() {
   
  **Sortie**  
   
-  **Appeler le délégué a :**  
-**Hello, A\!**  
-**Appeler le délégué b :**  
- **Goodbye, B\!**  
-**Appeler le délégué c:**  
-**Hello, C\!**  
- **Goodbye, C\!**  
-**Appeler le délégué d :**  
- **Goodbye, D\!**   
-## Passer un délégué^ vers une fonction native qui attend un pointeur de fonction.  
- Depuis un composant managé vous pouvez appeler une fonction native avec des paramètres de pointeur fonction où la fonction native peut ensuite appeler la fonction membre du délégué du composant managé.  
+```Output  
+Invoking delegate a:  
+Hello, A!  
+Invoking delegate b:  
+  Goodbye, B!  
+Invoking delegate c:  
+Hello, C!  
+  Goodbye, C!  
+Invoking delegate d:  
+  Goodbye, D!  
+```  
   
- Cet exemple crée la .dll qui exporte la fonction native :  
+## <a name="pass-a-delegate-to-a-native-function-that-expects-a-function-pointer"></a>Passer un délégué ^ à une fonction native qui attend un pointeur de fonction  
+ À partir d’un composant managé vous pouvez appeler une fonction native avec fonction de paramètres de pointeur où la fonction native puis permettre appeler la fonction membre de délégué du composant managé.  
+  
+ Cet exemple crée la DLL qui exporte la fonction native :  
   
 ```  
 // delegate_to_native_function.cpp  
@@ -185,7 +197,7 @@ extern "C" {
 }  
 ```  
   
- L'exemple suivant consomme le .dll et passe le handle délégué à la fonction native qui attend un pointeur fonction.  
+ L’exemple suivant utilise le fichier .dll et passe un handle de délégué à la fonction native qui attend un pointeur de fonction.  
   
 ```  
 // delegate_to_native_function_2.cpp  
@@ -213,9 +225,12 @@ int main() {
   
  **Sortie**  
   
-  **Appel de fonction managée**   
-## Associer des délégués à des fonctions non managées  
- Pour associer un délégué à une fonction native, vous devez inclure la fonction native dans un type managé et déclarer la fonction à appeler dans `PInvoke`.  
+```Output  
+Call to Managed Function  
+```  
+  
+## <a name="to-associate-delegates-with-unmanaged-functions"></a>Pour associer des délégués avec des fonctions non managées  
+ Pour associer un délégué à une fonction native, vous devez encapsuler la fonction native dans un type managé et déclarez la fonction à appeler via `PInvoke`.  
   
 ```  
 // mcppv2_del_to_umnangd_func.cpp  
@@ -253,19 +268,22 @@ int main() {
   
  **Sortie**  
   
-  **hello**   
-## Pour utiliser les délégués indépendants  
- Vous pouvez utiliser un délégué indépendant pour transmettre une instance du type dont vous voulez appeler la fonction lorsque le délégué est appelé.  
+```Output  
+hello  
+```  
   
- Les délégués indépendants sont particulièrement utiles si vous voulez parcourir les objets dans une collenction \(en utilisantdes mots clés [for each, in](../dotnet/for-each-in.md)\) et appeler une fonction membre sur chaque instance.  
+## <a name="to-use-unbound-delegates"></a>Pour utiliser des délégués indépendants  
+ Vous pouvez utiliser un délégué indépendant de passer une instance du type dont la fonction à appeler lorsque le délégué est appelé.  
   
- Voici comment déclarer, instancier, puis appeler les délégués liés et déliés :  
+ Délégués indépendants sont particulièrement utiles si vous souhaitez effectuer une itération au sein des objets dans une collection, à l’aide de [pour chacun, dans](../dotnet/for-each-in.md) mots clés et appeler une fonction membre sur chaque instance.  
   
-|Action|Délégués liés|Délégués indépendants|  
-|------------|-------------------|---------------------------|  
-|Declare|La signature du délégué doit correspondre à la signature de la fonction que vous souhaitez appeler via le délégué.|Le premier paramètre de la signature du délégué est le type de `this` de l'objet que vous souhaitez appeler.<br /><br /> Après le premier paramètre, la signature du commercial doit correspondre à la signature de la fonction que vous souhaitez appeler via le délégué.|  
-|instancier|Lorsque vous instanciez un délégué lié, spécifiez une fonction d'instance, ou un agrégat ou une fonction membre statique.<br /><br /> Pour spécifier une fonction d'instance, le premier paramètre est une instance du type dont vous voulez appeler la fonction membre et le deuxième paramètre représente l'adresse de la fonction que vous souhaitez appeler.<br /><br /> Si vous souhaitez appeler une fonction membre globale ou statique, passez simplement le nom d'une fonction globale ou de la fonction membre statique.|Lorsque vous instanciez un délégué indépendant, passez à l'adresse de la fonction que vous souhaitez appeler.|  
-|Call|Lorsque vous appelez un délégué lié, passez uniquement les paramètres requis par la signature du délégué.|Comme pour un délégué lié, mais rappelez vous que le premier paramètre doit être une instance de l'objet qui contient la fonction à appeler.|  
+ Voici comment déclarer, instancier et appel liés et indépendants des délégués :  
+  
+|Action|Liée de délégués|Délégués indépendants|  
+|------------|---------------------|-----------------------|  
+|Déclarer|La signature du délégué doit correspondre à la signature de la fonction que vous souhaitez appeler via le délégué.|Le premier paramètre de la signature du délégué est le type de `this` pour l’objet que vous souhaitez appeler.<br /><br /> Après le premier paramètre, la signature du délégué doit correspondre à la signature de la fonction que vous souhaitez appeler via le délégué.|  
+|Instancier|Lorsque vous instanciez un délégué lié, vous pouvez spécifier une fonction d’instance, ou une fonction membre globale ou statique.<br /><br /> Pour spécifier une fonction d’instance, le premier paramètre est une instance du type dont vous souhaitez appeler la fonction membre et le deuxième paramètre est l’adresse de la fonction à appeler.<br /><br /> Si vous souhaitez appeler une fonction membre globale ou statique, passez simplement le nom d’une fonction globale ou le nom de la fonction membre statique.|Lorsque vous instanciez un délégué indépendant, simplement passer l’adresse de la fonction à appeler.|  
+|Appel|Lorsque vous appelez un délégué lié, simplement passer les paramètres qui sont requis par la signature du délégué.|Identique à une limite délégué, mais rappelez-vous que le premier paramètre doit être une instance de l’objet qui contient la fonction que vous souhaitez appeler.|  
   
  Cet exemple montre comment déclarer, instancier et appeler des délégués indépendants :  
   
@@ -332,16 +350,20 @@ int main() {
   
  **Sortie**  
   
-  **2**  
-**3**  
-**2**  
-**3**  
-**2**  
-**7**  
-**8**  
-**7**  
-**8**  
-**7** L'exemple suivant montre comment utiliser les délégués entiers et les mots clés de [for each, in](../dotnet/for-each-in.md) pour parcourir les objets dans une collection et pour appeler une fonction membre sur chaque instance.  
+```Output  
+2  
+3  
+2  
+3  
+2  
+7  
+8  
+7  
+8  
+7  
+```  
+  
+ L’exemple suivant montre comment utiliser des délégués indépendants et les [pour chacun, dans](../dotnet/for-each-in.md) mots clés pour une itération au sein des objets d’une collection et d’appeler une fonction membre sur chaque instance.  
   
 ```  
 // unbound_delegates_2.cpp  
@@ -373,7 +395,7 @@ int main() {
 }  
 ```  
   
- Cet exemple crée un délégué indépendant pour des fonctions de l'accesseur d'une propriété :  
+ Cet exemple crée un délégué indépendant pour les fonctions d’accesseur d’une propriété :  
   
 ```  
 // unbound_delegates_3.cpp  
@@ -404,7 +426,11 @@ int main() {
   
  **Sortie**  
   
-  **11** L'exemple suivant indique comment appeler un délégué multicast, où une instance est liée et une instance est déliée.  
+```Output  
+11  
+```  
+  
+ L’exemple suivant montre comment appeler un délégué multicast, où une seule instance est liée et une instance est indépendante.  
   
 ```  
 // unbound_delegates_4.cpp  
@@ -439,8 +465,12 @@ int main() {
   
  **Sortie**  
   
-  **in f\(R ^ r\)**  
-**in f\(\)** L'exemple suivant montre comment créer et appeler un délégué générique indépendant.  
+```Output  
+in f(R ^ r)  
+in f()  
+```  
+  
+ L’exemple suivant montre comment créer et appeler un délégué générique indépendant.  
   
 ```  
 // unbound_delegates_5.cpp  
@@ -479,7 +509,10 @@ int main() {
   
  **Sortie**  
   
-  **12**  
-**14**   
-## Voir aussi  
- [délégué](../windows/delegate-cpp-component-extensions.md)
+```Output  
+12  
+14  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [delegate (extensions du composant C++)](../windows/delegate-cpp-component-extensions.md)

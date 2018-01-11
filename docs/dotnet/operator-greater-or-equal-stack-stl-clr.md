@@ -1,33 +1,33 @@
 ---
-title: "operator&gt;= (stack) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::operator>="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator>= (membre) (STL/CLR)"
+title: "opérateur&gt;= (pile) (STL/CLR) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::operator>=
+dev_langs: C++
+helpviewer_keywords: operator>= member [STL/CLR]
 ms.assetid: d0c757fa-9d40-40c7-89f7-baf30b22d899
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8d258b56a1768499fe1546adeccc590211dc12bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# operator&gt;= (stack) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Une comparaison « supérieur ou égal à ».  
+# <a name="operatorgt-stack-stlclr"></a>opérateur&gt;= (pile) (STL/CLR)
+La pile supérieur ou égal à comparaison.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Value,  
@@ -36,17 +36,17 @@ template<typename Value,
         stack<Value, Container>% right);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  left  
  Conteneur de gauche à comparer.  
   
- right  
- Conteneur de droit à comparer.  
+ droite  
+ Conteneur de droite à comparer.  
   
-## Notes  
- La fonction d'opérateur retourne `!(``left` `<` `right``)`.  Vous l'utilisez pour tester si `left` n'est pas ordonné avant `right` lorsque les deux deques d'éléments sont comparées élément par élément.  
+## <a name="remarks"></a>Notes  
+ La fonction d’opérateur retourne `!(left < right)`. Il permet de tester si `left` n’est pas classé avant `right` lorsque les deux piles sont comparé élément par élément.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_stack_operator_ge.cpp   
@@ -86,19 +86,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b d**  
-**\[a b c\] \>\= \[a b c\] est Vrai**  
-**\[a b c\] \>\= \[a b d\] est Faux**   
-## Configuration requise  
- **En\-tête:** \<cliext\/stack\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] >= [a b c] is True  
+[a b c] >= [a b d] is False  
+```  
   
- **Espace pour le nom :** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/stack >  
   
-## Voir aussi  
- [pile](../dotnet/stack-stl-clr.md)   
- [operator\=\= \(stack\)](../dotnet/operator-equality-stack-stl-clr.md)   
- [operator\!\= \(stack\)](../dotnet/operator-inequality-stack-stl-clr.md)   
- [operator\< \(stack\)](../dotnet/operator-less-than-stack-stl-clr.md)   
- [operator\> \(stack\)](../dotnet/operator-greater-than-stack-stl-clr.md)   
- [operator\<\= \(stack\)](../dotnet/operator-less-or-equal-stack-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [pile (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [opérateur == (pile) (STL/CLR)](../dotnet/operator-equality-stack-stl-clr.md)   
+ [opérateur ! = (pile) (STL/CLR)](../dotnet/operator-inequality-stack-stl-clr.md)   
+ [opérateur\< (pile) (STL/CLR)](../dotnet/operator-less-than-stack-stl-clr.md)   
+ [opérateur > (pile) (STL/CLR)](../dotnet/operator-greater-than-stack-stl-clr.md)   
+ [operator<= (stack) (STL/CLR)](../dotnet/operator-less-or-equal-stack-stl-clr.md)

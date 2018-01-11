@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6954c3eecfb3e6048a653401f4238b950e3aecf0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b7410d34b7b9f31c96cf7e991133770099735a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unhandled-c-exceptions"></a>Exceptions C++ non gérées
 Si un gestionnaire correspondant (ou points de suspension **catch** gestionnaire) est introuvable pour l’exception actuelle, prédéfinie `terminate` Runtime est appelée. (Vous pouvez également appeler explicitement `terminate` dans vos gestionnaires.) L'action par défaut de `terminate` est d'appeler `abort`. Si vous souhaitez `terminate` pour appeler une autre fonction dans votre programme avant de quitter l'application, appelez la fonction `set_terminate` avec le nom de la fonction à appeler comme unique argument. Vous pouvez appeler `set_terminate` à tout moment dans votre programme. Le `terminate` routine appelle toujours la dernière fonction donnée comme argument à `set_terminate`.  

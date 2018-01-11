@@ -57,11 +57,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33ffe578169721453211c183a190f663b5b38810
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2f98125e8e84ec0271bb3dff2eab01e0cfef368
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl, classe
 Il s’agit d’une classe qui simplifie la logique de paire de valeur à la fois des segments et des propriétés.  
@@ -110,10 +111,10 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 |----------|-----------------|  
 |[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|Une fonction d’assistance qui définit les propriétés communes du segment.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour utiliser, vous créez simplement une cmfcfilterchunkvalueimpl, classe du type approprié  
   
- Exemple :  
+ Exemple :  
   
  CMFCFilterChunkValueImpl segment ;  
   
@@ -128,7 +129,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
   
  [CMFCFilterChunkValueImpl](../../mfc/reference/cmfcfilterchunkvalueimpl-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="clear"></a>CMFCFilterChunkValueImpl::Clear  
@@ -138,7 +139,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 void Clear();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="cmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
  Construit l’objet.  
@@ -147,7 +148,7 @@ void Clear();
 CMFCFilterChunkValueImpl();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl :: ~ CMFCFilterChunkValueImpl  
  Destruction de l’objet.  
@@ -156,7 +157,7 @@ CMFCFilterChunkValueImpl();
 virtual ~CMFCFilterChunkValueImpl();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="copychunk"></a>CMFCFilterChunkValueImpl::CopyChunk  
  Copie ce segment vers une structure qui décrit les caractéristiques d’un segment.  
@@ -172,7 +173,7 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
 ### <a name="return-value"></a>Valeur de retour  
  S_OK en cas de réussite ; Sinon, un code d’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="copyfrom"></a>CMFCFilterChunkValueImpl::CopyFrom  
  Initialise cette valeur de bloc à partir de l’autre valeur.  
@@ -185,7 +186,7 @@ void CopyFrom (IFilterChunkValue* pValue);
  `pValue`  
  Spécifie la valeur de la source d’origine.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="getchunkguid"></a>CMFCFilterChunkValueImpl::GetChunkGUID  
  Récupère le GUID du segment.  
@@ -197,7 +198,7 @@ REFGUID GetChunkGUID() const;
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à un GUID qui identifie le segment.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="getchunkpid"></a>CMFCFilterChunkValueImpl::GetChunkPID  
  Récupère le segment PID (ID de propriété).  
@@ -209,7 +210,7 @@ DWORD GetChunkPID() const;
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur DWORD qui contient l’ID de propriété.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="getchunktype"></a>CMFCFilterChunkValueImpl::GetChunkType  
  Récupère le type de segment.  
@@ -221,7 +222,7 @@ CHUNKSTATE GetChunkType() const;
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur CHUNKSTATE énuméré, qui spécifie si le segment actuel est une propriété de type texte ou une propriété de type de valeur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="getstring"></a>CMFCFilterChunkValueImpl::GetString  
  Récupère la valeur de chaîne.  
@@ -233,7 +234,7 @@ CString &GetString();
 ### <a name="return-value"></a>Valeur de retour  
  Chaîne contenant la valeur du segment.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="getvalue"></a>CMFCFilterChunkValueImpl::GetValue  
  Récupère la valeur en un propvariant alloué.  
@@ -249,7 +250,7 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
 ### <a name="return-value"></a>Valeur de retour  
  S_OK si PROPVARIANT a été alloué correctement et que la valeur du segment a été copiée correctement dans `ppPropVariant`; sinon un code d’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="getvaluenoalloc"></a>CMFCFilterChunkValueImpl::GetValueNoAlloc  
  Retourne la valeur non alloué (valeur interne).  
@@ -261,7 +262,7 @@ PROPVARIANT GetValueNoAlloc ();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de segment actuel.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="isvalid"></a>CMFCFilterChunkValueImpl::IsValid  
  Vérifie si la valeur de cette propriété est valide ou non.  
@@ -273,7 +274,7 @@ BOOL IsValid() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si la valeur de segment actuel est valide ; dans le cas contraire `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="setboolvalue"></a>CMFCFilterChunkValueImpl::SetBoolValue  
  Surchargé. Définit la propriété par clé à une valeur booléenne.  
@@ -324,7 +325,7 @@ HRESULT SetBoolValue(
 ### <a name="return-value"></a>Valeur de retour  
  S_OK en cas de réussite ; Sinon, un code d’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="setchunk"></a>CMFCFilterChunkValueImpl::SetChunk  
  Une fonction d’assistance qui définit les propriétés communes du segment.  
@@ -361,7 +362,7 @@ HRESULT SetChunk(
 ### <a name="return-value"></a>Valeur de retour  
  S_OK en cas de réussite ; code d’erreur dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="setdwordvalue"></a>CMFCFilterChunkValueImpl::SetDwordValue  
  Définir la propriété par clé vers un DWORD.  
@@ -402,7 +403,7 @@ HRESULT SetDwordValue(
 ### <a name="return-value"></a>Valeur de retour  
  S_OK en cas de réussite ; Sinon, un code d’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="setfiletimevalue"></a>CMFCFilterChunkValueImpl::SetFileTimeValue  
  Définir la propriété par clé en filetime.  
@@ -443,7 +444,7 @@ HRESULT SetFileTimeValue(
 ### <a name="return-value"></a>Valeur de retour  
  S_OK en cas de réussite ; Sinon, un code d’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="setint64value"></a>CMFCFilterChunkValueImpl::SetInt64Value  
  Définir la propriété par clé pour un int64.  
@@ -484,7 +485,7 @@ HRESULT SetInt64Value(
 ### <a name="return-value"></a>Valeur de retour  
  S_OK en cas de réussite ; Sinon, un code d’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="setintvalue"></a>CMFCFilterChunkValueImpl::SetIntValue  
  Définir la propriété à une clé à un entier.  
@@ -525,7 +526,7 @@ HRESULT SetIntValue(
 ### <a name="return-value"></a>Valeur de retour  
  S_OK en cas de réussite ; Sinon, un code d’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="setlongvalue"></a>CMFCFilterChunkValueImpl::SetLongValue  
  Définir la propriété par clé pour une longue durée.  
@@ -566,7 +567,7 @@ HRESULT SetLongValue(
 ### <a name="return-value"></a>Valeur de retour  
  S_OK en cas de réussite ; Sinon, un code d’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="setsystemtimevalue"></a>CMFCFilterChunkValueImpl::SetSystemTimeValue  
  Définit la propriété par clé pour un objet SystemTime.  
@@ -607,7 +608,7 @@ HRESULT SetSystemTimeValue(
 ### <a name="return-value"></a>Valeur de retour  
  S_OK en cas de réussite ; Sinon, un code d’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="settextvalue"></a>CMFCFilterChunkValueImpl::SetTextValue  
  Définit la propriété par clé en une chaîne Unicode.  
@@ -648,7 +649,7 @@ HRESULT SetTextValue(
 ### <a name="return-value"></a>Valeur de retour  
  S_OK en cas de réussite ; Sinon, un code d’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classes](../../mfc/reference/mfc-classes.md)

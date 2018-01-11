@@ -54,16 +54,19 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cda2e1ccfa479eb2b71a4a21f49b67b127e9984c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 12645df8ba7bf53d562b91917e85797681120f86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctableconstraints-ctableconstraintinfo"></a>CTableConstraints, CTableConstraintInfo
 Appelez la classe typedef **CTableConstraints** pour implémenter sa classe de paramètre **CTableConstraintInfo**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Consultez [Classes de jeu de lignes de schéma et Classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation de classes typedef.  
   
  Cette classe identifie les contraintes de table, définies dans le catalogue, qui sont détenus par un utilisateur donné.  
@@ -83,7 +86,7 @@ Appelez la classe typedef **CTableConstraints** pour implémenter sa classe de p
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|  
 |m_szDescription|DESCRIPTION|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbsch.h  
   
 ## <a name="see-also"></a>Voir aussi  

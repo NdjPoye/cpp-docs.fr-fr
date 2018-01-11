@@ -15,14 +15,15 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 932f12c5465d08db22c7bac977dfeab94d61f1f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4de819b0c18e141061f5d180f24558946bbf156b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-c4958"></a>Avertissement du compilateur C4958
-'opération' : l’opération arithmétique de pointeur n’est pas vérifiable  
+'opération' : l’opération arithmétique de pointeur n’est pas vérifiable  
   
  L’utilisation d’une opération arithmétique de pointeur produira une image non vérifiable.  
   

@@ -1,41 +1,42 @@
 ---
-title: "stack::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array (membre) (STL/CLR)"
+title: Stack::to_array (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: e83bd7c4-ffdb-4151-bd2b-c36ca828e12f
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: de22f0f50eb62edf6eebf416b1fdd7265b4aab51
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# stack::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copie la séquence contrôlée dans un tableau.  
+# <a name="stacktoarray-stlclr"></a>stack::to_array (STL/CLR)
+Copie de la séquence contrôlée vers un nouveau tableau.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 cli::array<Value>^ to_array();  
 ```  
   
-## Notes  
- La fonction membre retourne un tableau qui contient la séquence contrôlée.  Vous l'utilisez pour obtenir une copie de la séquence contrôlée sous forme de tableau.  
+## <a name="remarks"></a>Notes  
+ La fonction membre retourne un tableau contenant la séquence contrôlée. Il permet d’obtenir une copie de la séquence contrôlée sous forme de tableau.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_stack_to_array.cpp   
@@ -67,12 +68,15 @@ int main()
   
 ```  
   
-  **a b c d**  
- **a b c**   
-## Configuration requise  
- **En\-tête :** \<cliext\/stack\>  
+```Output  
+a b c d  
+a b c  
+```  
   
- **Espace de nom :** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/stack >  
   
-## Voir aussi  
- [pile](../dotnet/stack-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [stack (STL/CLR)](../dotnet/stack-stl-clr.md)

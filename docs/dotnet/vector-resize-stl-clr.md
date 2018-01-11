@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43616dbc6bf0cd0eca6493d4f474ce20d02b8e2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3b4fbc196f9e4ca14ee8d8e744da380e08ec4d8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vectorresize-stlclr"></a>vector::resize (STL/CLR)
 Modifie le nombre d’éléments.  
@@ -38,7 +41,7 @@ void resize(size_type new_size, value_type val);
  Val  
  Valeur de l’élément de remplissage.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les deux fonctions membres Vérifiez que [vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `()` retourne désormais `new_size`. Si elle doit rallonger la séquence contrôlée, la première fonction membre ajoute des éléments avec la valeur `value_type()`, tandis que la deuxième fonction membre ajoute des éléments avec la valeur `val`. Pour rendre la séquence contrôlée plus courte, les deux fonctions membres effacement efficacement le dernier élément [vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `() -` `new_size` fois. Vous l’utilisez pour vous assurer que la séquence contrôlée est de taille `new_size`, par la suppression ou la séquence contrôlée en cours de remplissage.  
   
 ## <a name="example"></a>Exemple  
@@ -79,7 +82,7 @@ size() = 0
  x x x x x  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/vector >  
   
  **Namespace :** cliext  

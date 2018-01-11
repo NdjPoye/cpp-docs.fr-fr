@@ -20,18 +20,19 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0d3b1dd8f3bac22fc2359b447a69f42d7bcfafdb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2183a67679fc216396d03ac31a5a11db8d011454
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Exporter une fonction)
 ```  
 /EXPORT:entryname[,@ordinal[,NONAME]][,DATA]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Avec cette option, vous pouvez exporter une fonction à partir de votre programme afin que d’autres programmes peuvent appeler la fonction. Vous pouvez également exporter des données. Les exportations sont généralement définies dans une DLL.  
   
  Le *nom d’entrée* est le nom de l’élément de données ou de la fonction tel qu’il doit être utilisé par le programme appelant. `ordinal`Spécifie un index dans la table d’exportations compris entre 1 et 65 535 ; Si vous ne spécifiez pas `ordinal`, assigne un. Le **NONAME** mot clé exporte la fonction uniquement comme ordinal, sans une *nom d’entrée*.  

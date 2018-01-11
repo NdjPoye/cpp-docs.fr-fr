@@ -23,18 +23,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 936af84fea09f129cd5f455a0b57731393600e02
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9da4258c1f2b45b2ad6a0dbe3c57cc5f1f304cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="merge-combine-sections"></a>/MERGE (Combiner des sections)
 ```  
 /MERGE:from=to  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette option associe la première section (*de*) avec la deuxième section (*à*), nommant le résultat *à*. Par exemple, `/merge:.rdata=.text`.  
   
  Si la deuxième section n’existe pas, LINK renomme la section *de* en tant que *à*.  

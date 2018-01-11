@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 860870628d8558ad252657c06d90f195fd707eb8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c458eaf7c1e41ade5d29fa020bacfebb2b278e82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cutlpropsoninterfacerequested"></a>CUtlProps::OnInterfaceRequested
 Gère les demandes d’une interface facultative lorsqu’un consommateur appelle une méthode sur l’un de l’objet des interfaces de création.  
@@ -37,7 +40,7 @@ Gère les demandes d’une interface facultative lorsqu’un consommateur appell
  `riid`  
  [in] L’IID de l’interface demandée. Pour plus d’informations, consultez la description de la `riid` paramètre de `ICommand::Execute` dans les *de référence du programmeur OLE DB* (dans le *MDAC SDK*).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **OnInterfaceRequested** gère les demandes de consommateur d’une interface facultative lorsqu’un consommateur appelle une méthode sur l’un de l’objet des interfaces de création (tel que **IDBCreateSession**, **IDBCreateCommand**, `IOpenRowset`, ou `ICommand`). Il définit la propriété OLE DB correspondante pour l’interface demandée. Par exemple, si le consommateur demande **IID_IRowsetLocate**, **OnInterfaceRequested** définit le **DBPROP_IRowsetLocate** interface. Cela tient à jour l’état approprié lors de la création de l’ensemble de lignes.  
   
  Cette méthode est appelée lorsque le consommateur appelle **IOpenRowset::OpenRowset** ou `ICommand::Execute`.  
@@ -56,7 +59,7 @@ Gère les demandes d’une interface facultative lorsqu’un consommateur appell
   
  Si vous souhaitez gérer d’autres interfaces, remplacez cette fonction dans votre classe de source, de session, de commande ou d’ensemble de lignes de données pour les fonctions de processus. Votre substitution doit passer par les interfaces de propriétés set/get normal pour vous assurer que définir des propriétés définit également des propriétés chaînées (consultez [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

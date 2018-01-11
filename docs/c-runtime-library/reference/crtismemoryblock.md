@@ -32,11 +32,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 739a3625f264492ec59d3b5e9f9fef67b3c20df7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec6bea115ba509c7275a2d220cf4b10c6faecae9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 Vérifie qu’un bloc de mémoire spécifié est dans le tas local et qu’il a un identificateur de type de bloc de tas de débogage valide (version de débogage uniquement).  
@@ -84,15 +85,15 @@ _ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,
 &filename, &linenumber ) );  
 ```  
   
- Pour plus d’informations sur la façon dont `_CrtIsMemoryBlock` peut être utilisé avec d’autres macros et fonctions de débogage, consultez [Macros pour la création de rapports](/visualstudio/debugger/macros-for-reporting). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, consultez [Détails du tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Pour plus d’informations sur la façon dont `_CrtIsMemoryBlock` peut être utilisé avec d’autres macros et fonctions de débogage, consultez [Macros pour la création de rapports](/visualstudio/debugger/macros-for-reporting). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version de débogage du tas de base, voir [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_CrtIsMemoryBlock`|\<crtdbg.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="libraries"></a>Bibliothèques  
  Uniquement les versions de débogage des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

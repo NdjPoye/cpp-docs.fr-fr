@@ -1,51 +1,53 @@
 ---
-title: "Impl&#233;mentation d&#39;un consommateur simple | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clients, créer"
-  - "consommateurs OLE DB, implémenter"
+title: "Implémentation d’un consommateur Simple | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- clients, creating
+- OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 43ebcd38a3125db7373755b1ebf5366cae8af56b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Impl&#233;mentation d&#39;un consommateur simple
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les rubriques suivantes montrent comment modifier les fichiers créés par l'Assistant Application MFC et l'Assistant Consommateur OLE DB ATL pour créer un consommateur simple.  Cet exemple comprend les parties suivantes :  
+# <a name="implementing-a-simple-consumer"></a>Implémentation d'un consommateur simple
+Les rubriques suivantes montrent comment modifier les fichiers créés par l’Assistant Application MFC et l’Assistant Consommateur OLE DB ATL pour créer un consommateur simple. Cet exemple comporte les parties suivantes :  
   
--   La section « Récupération de données à l'aide du consommateur » explique comment implémenter le code dans le consommateur qui lit toutes les données, ligne par ligne, d'une table de base de données.  
+-   « Récupération de données avec le consommateur » montre comment implémenter le code dans le consommateur qui lit toutes les données, ligne par ligne, à partir d’une table de base de données.  
   
--   La section « Ajout de la prise en charge de signets à un consommateur » explique comment ajouter une prise en charge des signets dans le consommateur.  
+-   « Ajout de prise en charge de signet au consommateur » montre comment ajouter la prise en charge de signet au consommateur.  
   
--   La section « Ajout de la prise en charge XML au consommateur » explique comment modifier le code du consommateur pour obtenir la sortie des données du jeu de lignes récupérées sous forme de données XML.  
+-   « Ajout de prise en charge XML au consommateur » montre comment modifier le code de consommateur pour exporter les données de l’ensemble de lignes extraites en tant que données XML.  
   
 > [!NOTE]
->  Vous pouvez utiliser l'application consommateur décrite dans cette section pour tester les exemples de fournisseurs MyProv et Provider.  
+>  Vous pouvez utiliser l’application consommateur décrite dans cette section pour tester les exemples de fournisseurs MyProv et Provider.  
   
 > [!NOTE]
->  Pour générer une application consommateur en vue de tester MyProv \(le même fournisseur décrit dans [Amélioration du fournisseur simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md)\), vous devez inclure une prise en charge des signets comme indiqué dans la section « Ajout de la prise en charge de signets à un consommateur ».  
+>  Pour générer une application consommateur pour tester MyProv (le même fournisseur décrit dans [amélioration du fournisseur Simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md)), vous devez inclure la prise en charge de signet comme décrit dans « Ajout de la prise en charge de signet au consommateur ».  
   
 > [!NOTE]
->  Pour générer une application consommateur en vue de tester Provider, abandonnez la prise en charge des signets décrite dans « Ajout de la prise en charge de signets à un consommateur » et ignorez la section « Ajout de la prise en charge XML au consommateur ».  
+>  Pour générer une application consommateur pour tester le fournisseur, ignorer la prise en charge des signets décrite dans « Ajout de signet prend en charge au consommateur » et passez à le « Ajout de la prise en charge XML au consommateur ».  
   
-## Récupération de données à l'aide du consommateur  
+## <a name="retrieving-data-with-the-consumer"></a>La récupération des données avec le consommateur  
   
-#### Pour modifier l'application console en vue d'utiliser le consommateur OLE DB  
+#### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Pour modifier l’application console à utiliser le consommateur OLE DB  
   
-1.  Dans MyCons.cpp, modifiez le code principal en insérant le texte en gras, comme ci\-dessous :  
+1.  Dans MyCons.cpp, modifiez le code principal en insérant le texte en gras comme suit :  
   
     ```  
     // MyCons.cpp : Defines the entry point for the console application.  
@@ -55,37 +57,37 @@ Les rubriques suivantes montrent comment modifier les fichiers créés par l'Ass
     ...  
     int main(int argc, char* argv[])  
     {  
-       HRESULT hr = CoInitialize(NULL);        // Instantiate rowset    CProducts rs;        hr = rs.OpenAll();    ATLASSERT( SUCCEEDED( hr ) );    hr = rs.MoveFirst();        // Iterate through the rowset    while( SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )    {       // Print out the column information for each row       printf("Product ID: %d, Name: %s, Unit Price: %d, Quantity per Unit: %d, Units in Stock %d, Reorder Level %d\n",              rs.m_ProductID, rs.m_ProductName, rs.m_UnitPrice, rs.m_QuantityPerUnit, rs.m_UnitsInStock, rs.m_ReorderLevel );       hr = rs.MoveNext();    }        rs.Close();    rs.ReleaseCommand();        CoUninitialize();  
+       HRESULT hr = CoInitialize(NULL);   // Instantiate rowset   CProducts rs;   hr = rs.OpenAll();   ATLASSERT( SUCCEEDED( hr ) );   hr = rs.MoveFirst();   // Iterate through the rowset   while( SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )   {      // Print out the column information for each row      printf("Product ID: %d, Name: %s, Unit Price: %d, Quantity per Unit: %d, Units in Stock %d, Reorder Level %d\n",             rs.m_ProductID, rs.m_ProductName, rs.m_UnitPrice, rs.m_QuantityPerUnit, rs.m_UnitsInStock, rs.m_ReorderLevel );      hr = rs.MoveNext();   }   rs.Close();   rs.ReleaseCommand();   CoUninitialize();  
   
        return 0;  
     }  
     ```  
   
-## Ajout de la prise en charge de signets à un consommateur  
- Un signet est une colonne qui identifie de manière unique chaque ligne d'une table.  En principe, il s'agit de la colonne clé, mais pas toujours ; il est spécifique du fournisseur.  Cette section vous explique comment ajouter la prise en charge de signets.  Pour ce faire, vous devez effectuer les tâches suivantes dans la classe d'enregistrement utilisateur :  
+## <a name="adding-bookmark-support-to-the-consumer"></a>Ajout de prise en charge de signet au consommateur  
+ Un signet est une colonne qui identifie de façon unique les lignes dans la table. En général, c’est la colonne clé, mais pas toujours ; Il est spécifique au fournisseur. Cette section vous montre comment ajouter la prise en charge du signet. Pour ce faire, vous devez effectuer les opérations suivantes dans la classe d’enregistrement utilisateur :  
   
--   Instanciez les signets.  Il s'agit d'objets de type [CBookmark](../../data/oledb/cbookmark-class.md).  
+-   Instanciez les signets. Ce sont des objets de type [CBookmark](../../data/oledb/cbookmark-class.md).  
   
--   Demandez une colonne signet au fournisseur en définissant la propriété **DBPROP\_IRowsetLocate**.  
+-   Demander un signet de colonne à partir du fournisseur en définissant le **DBPROP_IRowsetLocate** propriété.  
   
--   Ajoutez une entrée signet dans le mappage de colonnes en utilisant la macro [BOOKMARK\_ENTRY](../../data/oledb/bookmark-entry.md).  
+-   Ajouter une entrée de signet dans le mappage de colonnes à l’aide de la [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) (macro).  
   
- Les étapes précédentes vous fournissent une prise en charge de signets et un objet signet avec lequel travailler.  Cet exemple de code illustre l'utilisation d'un signet, de la manière suivante :  
+ Les étapes précédentes vous fournissent une prise en charge du signet et un objet signet avec lequel travailler. Cet exemple de code illustre un signet comme suit :  
   
--   Ouvrez un fichier pour l'écriture.  
+-   Ouvrez un fichier en écriture.  
   
--   Effectuez une sortie des données du jeu de lignes dans le fichier, ligne par ligne.  
+-   Ensemble de lignes des données dans le fichier de sortie ligne par ligne.  
   
--   Déplacez le curseur du jeu de lignes jusqu'au signet en appelant [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).  
+-   Déplacer le curseur de l’ensemble de lignes vers le signet en appelant [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).  
   
--   Effectuez la sortie de la ligne marquée par un signet, en l'ajoutant à la fin du fichier.  
+-   La ligne marquée par un signet, ajouter à la fin du fichier de sortie.  
   
 > [!NOTE]
->  Si vous utilisez cette application consommateur pour tester l'application fournisseur de l'exemple Provider, abandonnez la prise en charge de signets décrite dans cette section.  
+>  Si vous utilisez cette application consommateur pour tester l’application fournisseur exemple provider, abandonnez la prise en charge des signets décrite dans cette section.  
   
-#### Pour instancier le signet  
+#### <a name="to-instantiate-the-bookmark"></a>Pour instancier le signet  
   
-1.  L'accesseur doit contenir un objet de type [CBookmark](../../data/oledb/cbookmark-class.md).  Le paramètre `nSize` spécifie la taille de la mémoire tampon du signet en octets \(généralement, 4 pour les plateformes 32 bits et 8 pour les plateformes 64 bits\).  Ajoutez la déclaration suivante aux données membres des colonnes dans la classe d'enregistrement utilisateur :  
+1.  L’accesseur doit contenir un objet de type [CBookmark](../../data/oledb/cbookmark-class.md). Le `nSize` paramètre spécifie la taille de la mémoire tampon du signet en octets (généralement, 4 pour les plateformes 32 bits) et 8 pour les plateformes 64 bits. Ajoutez la déclaration suivante pour les membres de données de colonne dans la classe d’enregistrement utilisateur :  
   
     ```  
     //////////////////////////////////////////////////////////////////////  
@@ -98,9 +100,9 @@ Les rubriques suivantes montrent comment modifier les fichiers créés par l'Ass
        ...  
     ```  
   
-#### Pour demander une colonne signet au fournisseur  
+#### <a name="to-request-a-bookmark-column-from-the-provider"></a>Pour demander un signet de colonne à partir du fournisseur  
   
-1.  Ajoutez le code suivant à la méthode `GetRowsetProperties` dans la classe d'enregistrement utilisateur :  
+1.  Ajoutez le code suivant dans la `GetRowsetProperties` méthode dans la classe d’enregistrement utilisateur :  
   
     ```  
     // Set the DBPROP_IRowsetLocate property.  
@@ -108,13 +110,13 @@ Les rubriques suivantes montrent comment modifier les fichiers créés par l'Ass
     {  
        pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
        pPropSet->AddProperty(DBPROP_CANSCROLLBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
-       // Add DBPROP_IRowsetLocate property to support bookmarks    pPropSet->AddProperty(DBPROP_IRowsetLocate, true);  
+       // Add DBPROP_IRowsetLocate property to support bookmarks   pPropSet->AddProperty(DBPROP_IRowsetLocate, true);  
     }  
     ```  
   
-#### Pour ajouter une entrée de signet dans le mappage de colonnes  
+#### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Pour ajouter une entrée de signet dans le mappage de colonnes  
   
-1.  Ajoutez l'entrée suivante au mappage de colonnes dans la classe d'enregistrement utilisateur :  
+1.  Ajoutez l’entrée suivante au mappage de colonnes dans la classe d’enregistrement utilisateur :  
   
     ```  
     // Set a bookmark entry in the column map.  
@@ -126,9 +128,9 @@ Les rubriques suivantes montrent comment modifier les fichiers créés par l'Ass
     END_COLUMN_MAP()  
     ```  
   
-#### Pour ajouter un signet à votre code principal  
+#### <a name="to-use-a-bookmark-in-your-main-code"></a>Pour ajouter un signet dans votre code principal  
   
-1.  Dans le fichier MyCons.cpp de l'application console que vous avez créée précédemment, remplacez le code principal par le texte suivant.  Pour utiliser des signets, le code principal doit instancier son propre objet signet \(`myBookmark`\) ; celui\-ci est différent de celui de l'accesseur \(`m_bookmark`\).  
+1.  Dans le fichier MyCons.cpp à partir de l’application console que vous avez créé précédemment, modifiez le code principal comme suit. Pour utiliser des signets, le code principal doit instancier son propre objet signet (`myBookmark`) ; il s’agit d’un signet différent de celui de l’accesseur (`m_bookmark`).  
   
     ```  
     ///////////////////////////////////////////////////////////////////////  
@@ -197,22 +199,22 @@ Les rubriques suivantes montrent comment modifier les fichiers créés par l'Ass
     }  
     ```  
   
- Pour plus d'informations sur les signets, consultez [Utilisation des signets](../../data/oledb/using-bookmarks.md).  L'utilisation des signets est également illustrée par des exemples dans [Mise à jour des jeux de lignes](../../data/oledb/updating-rowsets.md).  
+ Pour plus d’informations sur les signets, consultez [à l’aide de signets](../../data/oledb/using-bookmarks.md). Exemples de signets sont également présentés dans [mise à jour des ensembles de lignes de](../../data/oledb/updating-rowsets.md).  
   
-## Ajout de la prise en charge XML au consommateur  
- Comme expliqué dans [Accès aux données XML](../../data/oledb/accessing-xml-data.md), il existe deux façons de récupérer des données XML d'une source de données : utiliser [CStreamRowset](../../data/oledb/cstreamrowset-class.md) ou [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md).  Cet exemple utilise `CStreamRowset`, qui est plus efficace mais requiert que SQL Server 2000 soit actif sur l'ordinateur sur lequel vous exécutez cet exemple d'application.  
+## <a name="adding-xml-support-to-the-consumer"></a>Ajout de prise en charge XML au consommateur  
+ Comme indiqué dans [accès aux données XML](../../data/oledb/accessing-xml-data.md), il existe deux façons de récupérer des données XML à partir d’une source de données : à l’aide de [CStreamRowset](../../data/oledb/cstreamrowset-class.md) ou à l’aide de [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). Cet exemple utilise `CStreamRowset`, qui est plus efficace, mais vous avez besoin en cours d’exécution sur l’ordinateur sur lequel vous exécutez cet exemple d’application SQL Server 2000.  
   
-#### Pour modifier la classe de commande en vue d'hériter de CStreamRowset  
+#### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Pour modifier la classe de commande pour hériter de CStreamRowset  
   
-1.  Dans l'application consommateur créée précédemment, modifiez la déclaration `CCommand` de façon à spécifier `CStreamRowset` comme classe rowset, de la manière suivante :  
+1.  Dans l’application consommateur que vous avez créé précédemment, modifiez votre `CCommand` déclaration pour spécifier `CStreamRowset` en tant qu’ensemble de lignes de la classe comme suit :  
   
     ```  
     class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
     ```  
   
-#### Pour modifier le code principal afin de récupérer et d'obtenir une sortie des données XML  
+#### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Pour modifier le code principal afin d’extraire et de sortie des données XML  
   
-1.  Dans le fichier MyCons.cpp de l'application console que vous avez créée précédemment, remplacez le code principal par le texte suivant :  
+1.  Dans le fichier MyCons.cpp à partir de l’application console que vous avez créé précédemment, modifiez le code principal comme suit :  
   
     ```  
     ///////////////////////////////////////////////////////////////////////  
@@ -267,5 +269,5 @@ Les rubriques suivantes montrent comment modifier les fichiers créés par l'Ass
     }  
     ```  
   
-## Voir aussi  
- [Création d'un consommateur OLE DB en utilisant l'Assistant](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+## <a name="see-also"></a>Voir aussi  
+ [Création d’un consommateur OLE DB en utilisant l’Assistant](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

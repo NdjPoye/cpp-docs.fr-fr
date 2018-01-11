@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1e8d78b299541cddc30b6030020054809fab765
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3a1385262fdbf6500397cc481f9c12e777ab05d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-stlclr"></a>find (STL/CLR)
 Recherche la position de la première occurrence d'un élément d'une plage ayant une valeur spécifiée.  
@@ -31,10 +34,10 @@ template<class _InIt, class _Ty> inline
     _InIt find(_InIt _First, _InIt _Last, const _Ty% _Val);  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette fonction comporte comme la fonction de la bibliothèque Standard C++ `find`. Pour plus d’informations, consultez [trouver](../standard-library/algorithm-functions.md#find).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/algorithme >  
   
  **Namespace :** cliext  

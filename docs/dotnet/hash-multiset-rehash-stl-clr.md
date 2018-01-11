@@ -1,41 +1,42 @@
 ---
-title: "hash_multiset::rehash (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::rehash"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre rehash [STL/CLR]"
+title: hash_multiset::rehash (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::rehash
+dev_langs: C++
+helpviewer_keywords: rehash member [STL/CLR]
 ms.assetid: 1208cffc-acee-4c75-87b5-ce9ec641c3b6
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 53904a8fa5e66bf9997fbda33adff165f18645b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::rehash (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultisetrehash-stlclr"></a>hash_multiset::rehash (STL/CLR)
 Régénère la table de hachage.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void rehash();  
 ```  
   
-## Notes  
- La fonction membre reconstruit la table de hachage, ce qui garantit [hash\_multiset::load\_factor](../dotnet/hash-multiset-load-factor-stl-clr.md)`() <=` [hash\_multiset::max\_load\_factor](../dotnet/hash-multiset-max-load-factor-stl-clr.md).  Sinon, la table de hachage augmente sa taille de la manière nécessaire après une insertion. \(Cela ne diminue jamais automatiquement de taille.\) Vous l'utilisez pour ajuster la taille de la table de hachage.  
+## <a name="remarks"></a>Notes  
+ La fonction membre régénère la table de hachage, en s’assurant que [hash_multiset::load_factor (STL/CLR)](../dotnet/hash-multiset-load-factor-stl-clr.md) `() <=` [hash_multiset::max_load_factor (STL/CLR)](../dotnet/hash-multiset-max-load-factor-stl-clr.md). Sinon, la table de hachage augmente la taille que si nécessaire après une insertion. (Jamais automatiquement diminue la taille.) Il permet d’ajuster la taille de la table de hachage.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_multiset_rehash.cpp   
@@ -81,23 +82,28 @@ int main()
   
 ```  
   
-  **a b c**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 4**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 0.25**  
-**bucket\_count\(\) \= 128**  
-**load\_factor\(\) \= 0,0234375**  
-**max\_load\_factor\(\) \= 0,25**   
-## Configuration requise  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
   
- **Espace de noms:** cliext  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
   
-## Voir aussi  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::bucket\_count](../dotnet/hash-multiset-bucket-count-stl-clr.md)   
- [hash\_multiset::load\_factor](../dotnet/hash-multiset-load-factor-stl-clr.md)   
- [hash\_multiset::max\_load\_factor](../dotnet/hash-multiset-max-load-factor-stl-clr.md)
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/hash_set >  
+  
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::bucket_count (STL/CLR)](../dotnet/hash-multiset-bucket-count-stl-clr.md)   
+ [hash_multiset::load_factor (STL/CLR)](../dotnet/hash-multiset-load-factor-stl-clr.md)   
+ [hash_multiset::max_load_factor (STL/CLR)](../dotnet/hash-multiset-max-load-factor-stl-clr.md)

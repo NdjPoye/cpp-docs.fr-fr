@@ -1,34 +1,35 @@
 ---
-title: "collection_adapter::collection_adapter (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter"
-  - "cliext::collection_adapter::collection_adapter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "collection_adapter (membre) (STL/CLR)"
+title: collection_adapter::collection_adapter (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::collection_adapter
+- cliext::collection_adapter::collection_adapter
+dev_langs: C++
+helpviewer_keywords: collection_adapter member [STL/CLR]
 ms.assetid: 7e2bb75b-d735-4135-9523-719683e06fe9
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 190379cbfeea0f1bbf747d537f9501f076f6bb0e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# collection_adapter::collection_adapter (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Construit un objet adaptateur.  
+# <a name="collectionadaptercollectionadapter-stlclr"></a>collection_adapter::collection_adapter (STL/CLR)
+Construit un objet d’adaptateur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 collection_adapter();  
@@ -37,39 +38,39 @@ collection_adapter(collection_adapter<Coll>^ right);
 collection_adapter(Coll^ collection);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  collection  
- Descripteur BCL à inclure.  
+ Handle BCL à encapsuler.  
   
- right  
+ droite  
  Objet à copier.  
   
-## Notes  
- Le constructeur :  
+## <a name="remarks"></a>Notes  
+ Le constructeur :  
   
  `collection_adapter();`  
   
- initialise le handle stocké avec `nullptr`.  
+ Initialise le handle stocké avec `nullptr`.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `collection_adapter(collection_adapter<Coll>% right);`  
   
- initialise le handle stocké avec  `right``.`[collection\_adapter::base](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
+ Initialise le handle stocké avec `right.` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `collection_adapter(collection_adapter<Coll>^ right);`  
   
- initialise le handle stocké avec `right``->`[collection\_adapter::base](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
+ Initialise le handle stocké avec `right->` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
   
- Le constructeur :  
+ Le constructeur :  
   
  `collection_adapter(Coll^ collection);`  
   
- initialise le descripteur stockée avec avec `collection`.  
+ Initialise le handle stocké avec `collection`.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_collection_adapter_construct.cpp   
@@ -110,15 +111,18 @@ int main()
   
 ```  
   
-  **base\(\) null \= True**  
- **x x x x x x**  
- **x x x x x x**  
- **x x x x x x**   
-## Configuration requise  
- **En\-tête :** \<cliext\/adapter\>  
+```Output  
+base() null = True  
+ x x x x x x  
+ x x x x x x  
+ x x x x x x  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/carte >  
   
-## Voir aussi  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [collection\_adapter::operator\=](../dotnet/collection-adapter-operator-assign-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::operator= (STL/CLR)](../dotnet/collection-adapter-operator-assign-stl-clr.md)

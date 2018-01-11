@@ -1,41 +1,42 @@
 ---
-title: "collection_adapter::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre size [STL/CLR]"
+title: collection_adapter::Size (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 71866719-9e29-4572-bfb9-60321f2937c5
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 670b91a1b01f3234cf3a41b89498994836691fc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# collection_adapter::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="collectionadaptersize-stlclr"></a>collection_adapter::size (STL/CLR)
 Compte le nombre d'éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 size_type size();  
 ```  
   
-## Notes  
- La méthode retourne la longueur de la séquence contrôlée.  Elles ne sont pas définies dans une spécialisation pour `IEnumerable` ou `IEnumerable<Value>`.  
+## <a name="remarks"></a>Notes  
+ La fonction membre retourne la longueur de la séquence contrôlée. Il n’est pas défini dans une spécialisation pour `IEnumerable` ou `IEnumerable<Value>`.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_collection_adapter_size.cpp   
@@ -60,12 +61,15 @@ int main()
   
 ```  
   
-  **x x x x x x**  
-**size\(\) \= 6**   
-## Configuration requise  
- **En\-tête :** \<cliext\/adapter\>  
+```Output  
+ x x x x x x  
+size() = 6  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/carte >  
   
-## Voir aussi  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)

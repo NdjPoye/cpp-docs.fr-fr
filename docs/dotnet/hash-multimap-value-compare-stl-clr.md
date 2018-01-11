@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c6738717f2718a1552237d3c77aa563c123e66b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0a718fa7d3259592b4deb99dba4a5f22d082e9ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultimapvaluecompare-stlclr"></a>hash_multimap::value_compare (STL/CLR)
 Délégué de classement pour les deux valeurs d’éléments.  
@@ -31,7 +34,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>
     value_compare;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le type est un synonyme pour le délégué qui détermine l’ordre de ses arguments de valeur.  
   
 ## <a name="example"></a>Exemple  
@@ -68,7 +71,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/hash_map >  
   
  **Namespace :** cliext  

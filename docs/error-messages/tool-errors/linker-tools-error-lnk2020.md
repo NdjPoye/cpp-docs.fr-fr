@@ -1,41 +1,40 @@
 ---
-title: "Erreur des outils &#201;diteur de liens LNK2020 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2020"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2020"
+title: "Erreur LNK2020 des outils Éditeur de liens | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2020
+dev_langs: C++
+helpviewer_keywords: LNK2020
 ms.assetid: 4dd017d0-5e83-471b-ac8a-538ac1ed6870
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 394cafe23851df5320a78a4e165a90422fc305de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Erreur des outils &#201;diteur de liens LNK2020
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-jeton 'jeton' non résolu  
+# <a name="linker-tools-error-lnk2020"></a>Erreur des outils Éditeur de liens LNK2020
+jeton non résolu 'jeton'  
   
- Comparable à une erreur externe non définie, sauf que la référence est par des métadonnées.  Dans les métadonnées, toutes les fonctions et données doivent être définies.  
+ Semblable à une erreur externe non définie, sauf que la référence est via des métadonnées. Dans les métadonnées, toutes les fonctions et des données doivent être définies.  
   
  Pour résoudre :  
   
--   Définissez la fonction ou les données manquantes, ou  
+-   Définir la fonction ou les données manquantes ou  
   
--   Incluez le fichier objet ou la bibliothèque dans lequel la fonction ou les données manquantes sont déjà définies.  
+-   Inclure le fichier objet ou la bibliothèque dans lequel la fonction ou les données manquantes sont déjà définies.  
   
-## Exemple  
- L'exemple suivant génère l'erreur LNK2020.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur LNK2020.  
   
 ```  
 // LNK2020.cpp  
@@ -52,10 +51,10 @@ ref struct B {
 };  
 ```  
   
-## Exemple  
- L'erreur LNK2020 est également générée si vous créez une variable d'un type de modèle managé, sans instancier également le type.  
+## <a name="example"></a>Exemple  
+ LNK2020 se produit également si vous créez une variable d’un type de modèle managé, mais que vous n’instanciez pas également le type.  
   
- L'exemple suivant génère l'erreur LNK2020.  
+ L’exemple suivant génère l’erreur LNK2020.  
   
 ```  
 // LNK2020_b.cpp  

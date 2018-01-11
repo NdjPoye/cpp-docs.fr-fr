@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f92bce6ea3bf0cafc1b14def19505d191cc3a185
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6451dcd954e85e539a007778214923ea377196dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultisethashdelegate-stlclr"></a>hash_multiset::hash_delegate (STL/CLR)
 Recherche un élément qui correspond à une clé spécifiée.  
@@ -30,7 +33,7 @@ Recherche un élément qui correspond à une clé spécifiée.
 hasher^ hash_delegate();  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction membre retourne le délégué utilisé pour convertir une valeur de clé en entier. Il permet d’une clé de hachage.  
   
 ## <a name="example"></a>Exemple  
@@ -58,7 +61,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/hash_set >  
   
  **Namespace :** cliext  

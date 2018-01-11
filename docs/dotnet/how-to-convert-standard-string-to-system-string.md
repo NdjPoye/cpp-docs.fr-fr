@@ -1,32 +1,35 @@
 ---
-title: "Comment&#160;: convertir une cha&#238;ne standard en System::String | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bibliothèque C++ standard, convertir des chaînes en System::String"
-  - "conversion de chaînes (C++), chaîne de la bibliothèque C++ standard"
-  - "chaînes (C++), convertir"
+title: "Comment : convertir une chaîne Standard en System::String | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++ Standard Library, converting strings to System::String
+- string conversion [C++], C++ Standard Library string
+- strings [C++], converting
 ms.assetid: 1fde79a0-9d0b-44e5-981b-e8f2676c199d
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c6a2bc4fb1a73954e182ea192047a7ec6ca20c1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Comment&#160;: convertir une cha&#238;ne standard en System::String
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique décrit comment convertir une chaîne de bibliothèque C\+\+ standard \([\<string\>](../standard-library/string.md)\) en <xref:System.String>.  
+# <a name="how-to-convert-standard-string-to-systemstring"></a>Comment : convertir une chaîne standard en System::String
+Cette rubrique montre comment convertir une chaîne de la bibliothèque Standard C++ ([\<chaîne >](../standard-library/string.md)) à un <xref:System.String>.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // convert_standard_string_to_system_string.cpp  
@@ -48,8 +51,11 @@ int main() {
 }  
 ```  
   
-  **tester**  
-**tester**  
-**tester**   
-## Voir aussi  
- [Utilisation de l'interopérabilité C\+\+ \(PInvoke implicite\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+test  
+test  
+test  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

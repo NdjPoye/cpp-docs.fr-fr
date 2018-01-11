@@ -1,41 +1,42 @@
 ---
-title: "hash_set::reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reverse_iterator (membre) (STL/CLR)"
+title: hash_set::reverse_iterator (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::reverse_iterator
+dev_langs: C++
+helpviewer_keywords: reverse_iterator member [STL/CLR]
 ms.assetid: 24180a51-7426-4319-9e59-65a5957de54e
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f543083050dcd3f36d48341cfe0187a4bd83ffaf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set::reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le type d'un itérateur inversé pour la séquence contrôlée.  
+# <a name="hashsetreverseiterator-stlclr"></a>hash_set::reverse_iterator (STL/CLR)
+Type d'un itérateur inverse pour la séquence contrôlée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef T3 reverse_iterator;  
 ```  
   
-## Notes  
- Le type décrit un objet de type non spécifié `T3` qui peut servir d'itérateur inversé pour la séquence contrôlée.  
+## <a name="remarks"></a>Notes  
+ Le type décrit un objet de type non spécifié `T3` qui peut servir d’itérateur inverse pour la séquence contrôlée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_set_reverse_iterator.cpp   
@@ -60,14 +61,17 @@ int main()
   
 ```  
   
-  **c b a**   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_set\>  
+```Output  
+c b a  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/hash_set >  
   
-## Voir aussi  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::const\_iterator](../dotnet/hash-set-const-iterator-stl-clr.md)   
- [hash\_set::const\_reverse\_iterator](../dotnet/hash-set-const-reverse-iterator-stl-clr.md)   
- [hash\_set::iterator](../dotnet/hash-set-iterator-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::const_iterator (STL/CLR)](../dotnet/hash-set-const-iterator-stl-clr.md)   
+ [hash_set::const_reverse_iterator (STL/CLR)](../dotnet/hash-set-const-reverse-iterator-stl-clr.md)   
+ [hash_set::iterator (STL/CLR)](../dotnet/hash-set-iterator-stl-clr.md)

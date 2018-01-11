@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -30,8 +29,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CBaseTransition::m_pStartKeyframe
 - AFXANIMATIONCONTROLLER/CBaseTransition::m_transition
 - AFXANIMATIONCONTROLLER/CBaseTransition::m_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CBaseTransition [MFC], CBaseTransition
 - CBaseTransition [MFC], AddToStoryboard
@@ -53,16 +51,16 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a925de05d301d213d67bb699af47d0453478ffc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 2bb7fb5599e508656686637477b776ab7a9708d0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition, classe
 Représente une transition de base.  
@@ -107,7 +105,7 @@ class CBaseTransition : public CObject;
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CBaseTransition::m_bAdded](#m_badded)|Spécifie si une transition a été ajoutée à un plan conceptuel.|  
 |[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|Stocke un pointeur vers l’image clé qui spécifie la fin de la transition.|  
@@ -116,7 +114,7 @@ class CBaseTransition : public CObject;
 |[CBaseTransition::m_transition](#m_transition)|Stocke un pointeur à IUIAnimationTransition. NULL si un objet de transition COM n’a pas été créé.|  
 |[CBaseTransition::m_type](#m_type)|Stocke le type de transition.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe encapsule l’interface IUIAnimationTransition et sert de classe de base pour toutes les transitions.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -124,7 +122,7 @@ class CBaseTransition : public CObject;
   
  `CBaseTransition`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="_dtorcbasetransition"></a>CBaseTransition :: ~ CBaseTransition  
@@ -148,7 +146,7 @@ BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la transition a été ajoutée à un plan conceptuel.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Applique la transition à la variable connexe dans le plan conceptuel. S’il s’agit de la première transition appliquée à cette variable dans ce plan conceptuel, la transition commence au début de la table de montage séquentiel. Sinon, la transition est ajoutée à la dernière transition ajoutée à la variable.  
   
 ##  <a name="addtostoryboardatkeyframes"></a>CBaseTransition::AddToStoryboardAtKeyframes  
@@ -165,7 +163,7 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la transition a été ajoutée à un plan conceptuel.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Applique la transition à la variable connexe dans le plan conceptuel. Si l’image clé de démarrage a été spécifiée, la transition commence à cette image clé. Si l’image clé de fin a été spécifiée, la transition commence à l’image clé de démarrage et, s’arrête à l’image clé de fin. Si la transition a été créée avec un paramètre de durée spécifié, cette durée est remplacée par la durée de temps entre les images clés de début et de fin. Si aucune image clé n’a été spécifiée, la transition est ajoutée à la dernière transition ajoutée à la variable.  
   
 ##  <a name="cbasetransition"></a>CBaseTransition::CBaseTransition  
@@ -182,7 +180,7 @@ CBaseTransition();
 void Clear();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode doit être appelée à partir de la méthode de création d’une classe dérivée afin d’éviter la fuite de l’interface IUITransition.  
   
 ##  <a name="create"></a>CBaseTransition::Create  
@@ -204,7 +202,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si un objet de transition COM a été créé avec succès ; Sinon, FALSE.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il s’agit d’une fonction virtuelle pure qui doit être substituée dans une classe dérivée. Elle est appelée par l’infrastructure pour instancier l’objet de transition COM sous-jacent.  
   
 ##  <a name="getendkeyframe"></a>CBaseTransition::GetEndKeyframe  
@@ -217,7 +215,7 @@ CBaseKeyFrame* GetEndKeyframe();
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur valide vers une image clé, ou NULL si une transition ne doit pas être insérée entre les images clés.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode peut être utilisée pour accéder à un objet d’image clé qui a été précédemment défini par SetKeyframes. Elle est appelée par le code de niveau supérieur lorsque les transitions sont ajoutées au storyboard.  
   
 ##  <a name="getrelatedvariable"></a>CBaseTransition::GetRelatedVariable  
@@ -230,7 +228,7 @@ CAnimationVariable* GetRelatedVariable();
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur valide à la variable de l’animation, ou NULL si une variable d’animation n’a pas été définie par SetRelatedVariable.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il s’agit d’un accesseur à une variable d’animation connexe.  
   
 ##  <a name="getstartkeyframe"></a>CBaseTransition::GetStartKeyframe  
@@ -243,7 +241,7 @@ CBaseKeyFrame* GetStartKeyframe();
 ### <a name="return-value"></a>Valeur de retour  
  Obtenir un pointeur valide vers une image clé, ou NULL si une transition ne doit pas démarrer après une image clé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode peut être utilisée pour accéder à un objet d’image clé qui a été précédemment défini par SetKeyframes. Elle est appelée par le code de niveau supérieur lorsque les transitions sont ajoutées au storyboard.  
   
 ##  <a name="gettransition"></a>CBaseTransition::GetTransition  
@@ -267,7 +265,7 @@ IUIAnimationTransition* GetTransition();
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur valide à IUIAnimationTransition ou NULL si la transition sous-jacente ne peut pas être créé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode retourne un pointeur vers un objet de transition COM sous-jacent et il crée si nécessaire.  
   
 ##  <a name="gettype"></a>CBaseTransition::GetType  
@@ -280,7 +278,7 @@ TRANSITION_TYPE GetType() const;
 ### <a name="return-value"></a>Valeur de retour  
  Une des TRANSITION_TYPE valeurs énumérées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode peut être utilisée pour identifier un objet de transition par son type. Le type est défini dans un constructeur dans une classe dérivée.  
   
 ##  <a name="isadded"></a>CBaseTransition::IsAdded  
@@ -293,7 +291,7 @@ BOOL IsAdded();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE si une transition a été ajoutée à un storyboard, sinon FALSE.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cet indicateur est défini en interne lorsque le code de niveau supérieur ajoute des transitions au storyboard.  
   
 ##  <a name="m_badded"></a>CBaseTransition::m_bAdded  
@@ -354,7 +352,7 @@ void SetKeyframes(
  `pEnd`  
  Une image clé qui spécifie la fin de la transition.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode indique à la transition pour démarrer après l’image clé spécifiée et, éventuellement, si pEnd n’est pas NULL, se terminer avant l’image clé spécifiée. Si la transition a été créée avec un paramètre de durée spécifié, cette durée est remplacée par la durée de temps entre les images clés de début et de fin.  
   
 ##  <a name="setrelatedvariable"></a>CBaseTransition::SetRelatedVariable  
@@ -368,7 +366,7 @@ void SetRelatedVariable(CAnimationVariable* pVariable);
  `pVariable`  
  Pointeur vers la variable d’animation connexe.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Établit une relation entre la variable de l’animation et de transition. Une transition peut être appliquée uniquement à une variable.  
   
 ##  <a name="transition_type_enumeration"></a>Énumération CBaseTransition::TRANSITION_TYPE  
@@ -378,9 +376,8 @@ void SetRelatedVariable(CAnimationVariable* pVariable);
 enum TRANSITION_TYPE;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un type de transition est défini dans le constructeur de transition spécifique. Par exemple, CSinusoidalTransitionFromRange définit son type avec la valeur SINUSOIDAL_FROM_RANGE.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classes](../../mfc/reference/mfc-classes.md)
-

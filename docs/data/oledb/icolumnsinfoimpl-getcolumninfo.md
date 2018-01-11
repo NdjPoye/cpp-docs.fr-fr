@@ -1,39 +1,40 @@
 ---
-title: "IColumnsInfoImpl::GetColumnInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetColumnInfo"
-  - "ATL::IColumnsInfoImpl::GetColumnInfo"
-  - "ATL.IColumnsInfoImpl.GetColumnInfo"
-  - "ATL::IColumnsInfoImpl<T>::GetColumnInfo"
-  - "IColumnsInfoImpl::GetColumnInfo"
-  - "IColumnsInfoImpl<T>::GetColumnInfo"
-  - "IColumnsInfoImpl.GetColumnInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetColumnInfo (méthode)"
+title: IColumnsInfoImpl::GetColumnInfo | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetColumnInfo
+- ATL::IColumnsInfoImpl::GetColumnInfo
+- ATL.IColumnsInfoImpl.GetColumnInfo
+- ATL::IColumnsInfoImpl<T>::GetColumnInfo
+- IColumnsInfoImpl::GetColumnInfo
+- IColumnsInfoImpl<T>::GetColumnInfo
+- IColumnsInfoImpl.GetColumnInfo
+dev_langs: C++
+helpviewer_keywords: GetColumnInfo method
 ms.assetid: a6739a39-7402-496a-b544-a5b1ed05fadf
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f2b21f37d8e71390a43a25b486466c99771ff649
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# IColumnsInfoImpl::GetColumnInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retourne les métadonnées de colonne exigées par la plupart des consommateurs.  
+# <a name="icolumnsinfoimplgetcolumninfo"></a>IColumnsInfoImpl::GetColumnInfo
+Retourne les métadonnées de colonne requises par la plupart des consommateurs.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -44,12 +45,12 @@ Retourne les métadonnées de colonne exigées par la plupart des consommateurs.
 );  
 ```  
   
-#### Paramètres  
- Voir [IColumnsInfo::AvoiInformationsColonnes](https://msdn.microsoft.com/en-us/library/ms722704.aspx) dans *Guide de référence du programmeur OLE DB*.  
+#### <a name="parameters"></a>Paramètres  
+ Consultez [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
- [IColumnsInfoImpl, classe](../../data/oledb/icolumnsinfoimpl-class.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Icolumnsinfoimpl, classe](../../data/oledb/icolumnsinfoimpl-class.md)   
  [IColumnsInfoImpl::MapColumnIDs](../../data/oledb/icolumnsinfoimpl-mapcolumnids.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 63f58bed44dcea47c925f94b90e9438eb1082962
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e02bafc9319a6a3a4c5e07b46c9da6586f440d59
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="svmskinit"></a>__svm_skinit
 **Section spécifique à Microsoft**  
@@ -42,14 +43,14 @@ void __svm_skinit(
 |---------------|-----------------|  
 |`SLB`|L’adresse physique de 32 bits d’un octet de 64 Ko Secure chargeur de bloc (SLB).|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `__svm_skinit` fonction est équivalente à la `SKINIT` instruction machine. Cette fonction fait partie d’un système de sécurité qui utilise le processeur et un Module de plateforme approuvée (TPM) pour vérifier et charger des logiciels approuvés appelé un noyau de sécurité (SK). Un moniteur d’ordinateur virtuel est un exemple d’un noyau de sécurité. Le système de sécurité vérifie les composants du programme chargé pendant le processus d’initialisation et protège les composants contre la falsification à des interruptions, accès à l’appareil ou un autre programme si l’ordinateur est un multiprocesseur.  
   
  Le `SLB` paramètre spécifie l’adresse physique d’un bloc de 64 Ko de mémoire appelée le *sécuriser le bloc chargeur* (SLB). Le SLB contient un programme appelé le chargeur sécurisé qui établit l’environnement d’exploitation de l’ordinateur et par la suite charge le noyau de sécurité.  
   
- Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document, « de Volume manuelle AMD64 Architecture programmeur 2 : programmation du système, « numéro 24593, 3.11, de révision du document à la [corporation d’AMD](http://go.microsoft.com/fwlink/?LinkId=23746) site.  
+ Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document, « de Volume manuelle AMD64 Architecture programmeur 2 : programmation du système, « numéro 24593, 3.11, de révision du document à la [corporation d’AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) site.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  

@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c87ca4fdf95134e0857dac327d9663c68e014453
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 960a6d943ee5caf4ad6ba288db4f51a3c0ca2637
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="queuegenericcontainer-stlclr"></a>queue::generic_container (STL/CLR)
 Le type de l’interface générique pour l’adaptateur de conteneur.  
@@ -31,7 +34,7 @@ typedef Microsoft::VisualC::StlClr::IQueue<Value>
     generic_container;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le type décrit l’interface générique pour cette classe de l’adaptateur de conteneur de modèle.  
   
 ## <a name="example"></a>Exemple  
@@ -83,7 +86,7 @@ a b c d
 a b c d e  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/file d’attente >  
   
  **Namespace :** cliext  

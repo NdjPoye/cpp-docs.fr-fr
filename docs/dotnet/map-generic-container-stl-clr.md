@@ -1,32 +1,33 @@
 ---
-title: "map::generic_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::generic_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_container (membre) (STL/CLR)"
+title: Map::generic_container (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::generic_container
+dev_langs: C++
+helpviewer_keywords: generic_container member [STL/CLR]
 ms.assetid: fba16c90-475c-4c06-9b1b-f2c015f0d801
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5310fb1a5eddb105191e9eee36ca8ce1ccfc123e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# map::generic_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le type de l'interface générique pour le conteneur.  
+# <a name="mapgenericcontainer-stlclr"></a>map::generic_container (STL/CLR)
+Le type de l’interface générique pour le conteneur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef Microsoft::VisualC::StlClr::  
@@ -34,10 +35,10 @@ typedef Microsoft::VisualC::StlClr::
     generic_container;  
 ```  
   
-## Notes  
- Le type décrit l'interface générique pour cette classe de conteneur de modèle.  
+## <a name="remarks"></a>Notes  
+ Le type décrit l’interface générique pour cette classe de conteneur de modèle.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_map_generic_container.cpp   
@@ -79,15 +80,18 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\] \[d 4\]**  
- **\[a 1\] \[b 2\] \[c 3\] \[d 4\] \[e 5\]**   
-## Configuration requise  
- **En\-tête :** \<cliext\/map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3] [d 4]  
+[a 1] [b 2] [c 3] [d 4] [e 5]  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/map >  
   
-## Voir aussi  
- [map](../dotnet/map-stl-clr.md)   
- [map::generic\_iterator](../dotnet/map-generic-iterator-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [carte (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::generic_iterator (STL/CLR)](../dotnet/map-generic-iterator-stl-clr.md)

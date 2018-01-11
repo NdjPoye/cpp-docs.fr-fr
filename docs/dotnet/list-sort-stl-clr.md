@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6531459f26605aa63eccbe69c84959b2abe70493
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 159391bc7d362c755c194f478692b2a271d779ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="listsort-stlclr"></a>list::sort (STL/CLR)
 Ordonne la séquence contrôlée.  
@@ -36,7 +39,7 @@ template<typename Pred2>
  pred  
  Comparateur pour les paires d’éléments.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La première fonction membre réorganise les éléments dans la séquence contrôlée afin qu’ils sont classés par `operator<` --éléments ne réduisez pas de valeur au cours de la séquence. Vous utilisez cette fonction membre pour trier la séquence dans l’ordre croissant.  
   
  La deuxième fonction membre comporte comme la première, sauf que la séquence est triée par `pred`  --  `pred(X, Y)` a la valeur false pour tout élément `X` qui suit l’élément `Y` dans la séquence résultante. Il permet de trier la séquence dans un ordre que vous spécifiez à une fonction de prédicat ou un délégué.  
@@ -84,7 +87,7 @@ c b a
 a b c  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/liste >  
   
  **Namespace :** cliext  

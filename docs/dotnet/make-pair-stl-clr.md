@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8fba63cb9e10fcdccba8ed5c6a8a405184a4bca5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 34f86aefd9a7bad7b3b1f03f98d3df8965020e48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makepair-stlclr"></a>make_pair (STL/CLR)
 Rendre un `pair` à partir d’une paire de valeurs.  
@@ -45,7 +48,7 @@ template<typename Value1,
  `second`  
  Seconde valeur à encapsuler.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction de modèle retourne `pair<Value1, Value2>(first, second)`. Utilisez-la pour construire un `pair<Value1, Value2>` objet à partir d’une paire de valeurs.  
   
 ## <a name="example"></a>Exemple  
@@ -72,7 +75,7 @@ int main()
 [y, 4]  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/utilitaire >  
   
  **Namespace :** cliext  

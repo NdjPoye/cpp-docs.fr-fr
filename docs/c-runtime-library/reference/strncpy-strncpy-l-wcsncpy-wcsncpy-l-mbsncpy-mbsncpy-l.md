@@ -72,11 +72,12 @@ caps.latest.revision: "42"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 29d91de13d5fba6402018fa96f2bd5946db04936
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd0bd262dea70d7d78e90b4b0433166a763e4290
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 Copie les caractères d'une chaîne vers une autre. Il existe des versions plus sécurisées de ces fonctions. Consultez [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md).  
@@ -187,7 +188,7 @@ unsigned char *_mbsncpy_l(
   
  `wcsncpy` et `_mbsncpy` sont des versions à caractères larges et à caractères multioctets de `strncpy`. Les arguments et la valeur de retour de `wcsncpy` et `_mbsncpy` varient en conséquence. Sinon, ces six fonctions se comportent à l'identique.  
   
- Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -201,7 +202,7 @@ unsigned char *_mbsncpy_l(
 > [!NOTE]
 >  `_strncpy_l` et `_wcsncpy_l` n'ont aucune dépendance vis-à-vis des paramètres régionaux ; elles sont uniquement fournies pour `_tcsncpy_l` et ne sont pas destinées à être appelées directement.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

@@ -37,16 +37,19 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 96b6602bb4bf472979ff11bb1d4df351559cc066
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ee3acc16d5b0d39967960a0a78f4e0821edf90bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctranslations-ctranslationinfo"></a>CTranslations, CTranslationInfo
 Appelez la classe typedef **CTranslations** pour implémenter sa classe de paramètre **CTranslationInfo**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Consultez [Classes de jeu de lignes de schéma et Classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation de classes typedef.  
   
  Cette classe identifie les conversions de caractères définies dans le catalogue qui sont accessibles à un utilisateur donné.  
@@ -65,7 +68,7 @@ Appelez la classe typedef **CTranslations** pour implémenter sa classe de param
 |m_szTargetSchema|TARGET_CHARACTER_SET_SCHEMA|  
 |m_szTargetName|TARGET_CHARACTER_SET_NAME|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbsch.h  
   
 ## <a name="see-also"></a>Voir aussi  

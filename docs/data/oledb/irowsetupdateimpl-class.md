@@ -21,11 +21,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fe93031417b8fc7717be13007b0fcfc5d08a2c40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 206f3d25069eaa12efce8150e82c4f54fc96f4fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl, classe
 L’implémentation de modèles OLE DB de la [IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx) interface.  
@@ -95,7 +98,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 |-|-|  
 |[m_mapCachedData](../../data/oledb/irowsetupdateimpl-m-mapcacheddata.md)|Contient les données d’origine pour l’opération différée.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous devez tout d’abord lire et comprendre la documentation de [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx), car tous les éléments y s’appliquent également ici. Vous devez également lire le chapitre 6 de la *de référence du programmeur OLE DB* sur la définition de données.  
   
  `IRowsetUpdateImpl`implémente le OLE DB `IRowsetUpdate` interface, ce qui permet aux consommateurs de retarder la transmission des modifications apportées avec `IRowsetChange` de source de données et annuler les modifications avant la transmission.  
@@ -109,7 +112,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
   
 -   Consultez également la `RUpdateRowset` classe est utilisée dans l’exemple UpdatePV  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

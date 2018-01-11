@@ -22,11 +22,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c03e57dd492263ef9ad170e08b49c3bd54d3b556
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7cdd27cfdd173e556bb9d4c6fd27a9d801a7f8c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicparameteraccessorgetparam"></a>CDynamicParameterAccessor::GetParam
 Récupère les données de chaîne pour un paramètre spécifique à partir de la mémoire tampon de paramètre.  
@@ -69,7 +72,7 @@ void* GetParam(
   
  Utilisez `GetParam` pour récupérer des données de paramètre de chaîne à partir de la mémoire tampon. Utilisez [GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md) pour récupérer les données de paramètre de chaîne à partir de la mémoire tampon.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

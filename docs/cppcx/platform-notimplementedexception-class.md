@@ -1,47 +1,49 @@
 ---
-title: "Platform::NotImplementedException, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::NotImplementedException"
-  - "Platform/Platform::NotImplementedException::NotImplementedException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::NotImplementedException"
+title: Platform::NotImplementedException, classe | Documents Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCCORLIB/Platform::NotImplementedException
+- VCCORLIB/Platform::NotImplementedException::NotImplementedException
+dev_langs: C++
+helpviewer_keywords: Platform::NotImplementedException
 ms.assetid: 6da26cc2-dde8-4aea-aa85-67aac55cf97b
-caps.latest.revision: 3
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b1c4053f31da7324ebe418e8603f788a52cbed63
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::NotImplementedException, classe
+# <a name="platformnotimplementedexception-class"></a>Platform::NotImplementedException, classe
 Levée lorsqu'un membre d'interface n'est pas implémenté dans un type dérivé.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
 public ref class NotImplementedException : COMException,    IException,    IPrintable,    IEquatable  
 ```  
   
-## Notes  
- Pour plus d'informations, consultez la classe [COMException](../cppcx/platform-comexception-class.md).  
+### <a name="remarks"></a>Notes  
+ Pour plus d'informations, consultez la classe [COMException](../cppcx/platform-comexception-class.md) .  
   
-## Configuration requise  
- **Client minimum pris en charge :** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>Configuration requise  
+ **Minimum pris en charge le client :** Windows 8  
   
- **Serveur minimum pris en charge :** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Minimum de serveur pris en charge :** Windows Server 2012  
   
- **Espace de noms :** Platform  
+ **Espace de noms :** Platform  
   
- **Métadonnées :** platform.winmd  
+ **Métadonnées :** platform.winmd  
   
-## Voir aussi  
- [Platform::COMException \(classe\)](../cppcx/platform-comexception-class.md)
+## <a name="see-also"></a>Voir aussi  
+ [Platform::COMException, classe](../cppcx/platform-comexception-class.md)

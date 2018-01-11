@@ -22,11 +22,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c52e429804fdc3eb84ca14005bbc65e00603a4c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4de823b4cdb2d7926b2a9d640b2e8f7352e389fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomsafearraybound-class"></a>Classe de CComSafeArrayBound
 Cette classe est un wrapper pour un [SAFEARRAYBOUND](http://msdn.microsoft.com/en-us/303a9bdb-71d6-4f14-8747-84cf84936c6d) structure.  
@@ -56,12 +57,12 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 |-|-|  
 |[opérateur =](#operator_eq)|Définit le `CComSafeArrayBound` une nouvelle valeur.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe est un wrapper pour le **SAFEARRAYBOUND** structure utilisée par [CComSafeArray](../../atl/reference/ccomsafearray-class.md). Il fournit des méthodes de recherche et de définir les limites supérieures et inférieures d’une dimension unique d’un `CComSafeArray` objet et le nombre d’éléments qu’il contient. Un multidimensionnels `CComSafeArray` objet utilise un tableau de `CComSafeArrayBound` objets, un pour chaque dimension. Par conséquent, lorsque vous utilisez des méthodes telles que [GetCount](#getcount), sachez que cette méthode ne retournera pas le nombre total d’éléments dans un tableau multidimensionnel.  
   
  **En-tête :** atlsafe.h  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsafe.h  
   
 ##  <a name="ccomsafearraybound"></a>CComSafeArrayBound::CComSafeArrayBound  
@@ -78,7 +79,7 @@ CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
  `lLowerBound`  
  La limite inférieure à partir de laquelle le tableau est numéroté.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si le tableau est accessible à partir d’un programme Visual C++, il est recommandé que la limite inférieure est défini sur 0. Il peut être préférable d’utiliser une valeur de limite inférieure différente si le tableau doit être utilisé avec d’autres langages, tels que Visual Basic.  
   
 ##  <a name="getcount"></a>CComSafeArrayBound::GetCount  
@@ -91,7 +92,7 @@ ULONG GetCount() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le nombre d’éléments.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si le texte associé `CComSafeArray` objet représente un tableau multidimensionnel, cette méthode retourne uniquement le nombre total d’éléments dans la dimension la plus à droite. Utilisez [CComSafeArray::GetCount](../../atl/reference/ccomsafearray-class.md#getcount) pour obtenir le nombre total d’éléments.  
   
 ##  <a name="getlowerbound"></a>CComSafeArrayBound::GetLowerBound  
@@ -114,7 +115,7 @@ LONG GetUpperBound() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la limite supérieure de la `CComSafeArrayBound` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La limite supérieure varie selon le nombre d’éléments et la valeur de limite inférieure. Par exemple, si la limite inférieure est 0 et le nombre d’éléments est de 10, la limite supérieure est automatiquement fixée à 9.  
   
 ##  <a name="operator_eq"></a>CComSafeArrayBound::operator =  
@@ -135,7 +136,7 @@ CComSafeArrayBound& operator= (ULONG ulCount) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers le `CComSafeArrayBound` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `CComSafeArrayBound` objet peut être assigné à l’aide d’un fichier `CComSafeArrayBound`, ou en fournissant le nombre d’éléments, dans laquelle les cas de la limite inférieure est définie sur 0 par défaut.  
   
 ##  <a name="setcount"></a>CComSafeArrayBound::SetCount  
@@ -166,7 +167,7 @@ LONG SetLowerBound(LONG lLowerBound) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la nouvelle limite inférieure de la `CComSafeArrayBound` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si le tableau est accessible à partir d’un programme Visual C++, il est recommandé que la limite inférieure est défini sur 0. Il peut être préférable d’utiliser une valeur de limite inférieure différente si le tableau doit être utilisé avec d’autres langages, tels que Visual Basic.  
   
  La limite supérieure varie selon le nombre d’éléments et la valeur de limite inférieure. Par exemple, si la limite inférieure est 0 et le nombre d’éléments est de 10, la limite supérieure est automatiquement fixée à 9.  

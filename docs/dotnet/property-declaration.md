@@ -1,32 +1,35 @@
 ---
-title: "D&#233;claration de propri&#233;t&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__property (mot clé)"
-  - "déclarer des propriétés, C++"
-  - "property (mot clé C++)"
+title: "Déclaration de propriété | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __property keyword
+- declaring properties, C++
+- property keyword [C++]
 ms.assetid: de169378-a8b8-49f4-a586-76bffc9b5c9f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c047e1efbe030591e26fb410c9b2df254734e08b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# D&#233;claration de propri&#233;t&#233;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La déclaration d'une propriété dans une classe managée a été modifiée entre Extensions managées pour C\+\+ et [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+# <a name="property-declaration"></a>Déclaration de propriété
+La manière de déclarer une propriété dans une classe managée a été modifiée à partir des Extensions managées pour C++ vers Visual C++.  
   
- Dans la conception des Extensions managées, chaque accesseur de propriété `set` ou `get` est spécifié comme méthode indépendante.  La déclaration de chaque méthode est préfixée avec le mot clé `__property`.  Le nom de la méthode commence par `set_` ou `get_`, suivi du nom réel de la propriété \(visible par l'utilisateur\).  Donc, un `Vector` fournissant une propriété `get` de coordonnée `x` la nommerait `get_x` et l'utilisateur l'appellerait `x`.  Cette convention d'affectation de noms et la spécification séparée des méthodes reflètent réellement l'implémentation sous\-jacente de la propriété à l'exécution.  Par exemple, voici notre `Vector` avec un jeu de propriétés coordonnées :  
+ Dans les Extensions managées concevoir, chacun d’eux `set` ou `get` accesseur de propriété est spécifiée comme une méthode indépendante. La déclaration de chaque méthode est préfixée avec la `__property` (mot clé). Le nom de la méthode commence par `set_` ou `get_` suivi par le nom réel de la propriété (visible par l’utilisateur). Par conséquent, un `Vector` en fournissant une `x` coordonner `get` propriété `get_x` et l’utilisateur peut appeler en tant que `x`. Cette convention d’affectation de noms et la spécification séparée des méthodes réellement reflète l’implémentation sous-jacente du runtime de la propriété. Par exemple, voici notre `Vector` avec un jeu de propriétés coordonnées :  
   
 ```  
 public __gc __sealed class Vector {  
@@ -41,7 +44,7 @@ public:
 };  
 ```  
   
- Il s'ensuit une répartition des fonctionnalités associées à une propriété et l'utilisateur doit unifier de façon lexicale les commandes get et set associées.  En outre, c'est en clair.  Dans la nouvelle syntaxe, plus proche de celle de C\#, le mot clé `property` est suivi du type de la propriété et de son nom sans ornement.  Les méthodes d'accès `set` et `get` sont placées dans un bloc qui suit le nom de la propriété.  Notez que contrairement à C\#, la signature de la méthode d'accès est spécifiée.  Par exemple, voici la traduction dans la nouvelle syntaxe de l'exemple de code ci\-dessus.  
+ Cela permet de répartir la fonctionnalité associée à une propriété et oblige l’utilisateur à lexicalement unifier la Get et Set associées. En outre, il est détaillé. Dans la nouvelle syntaxe, ce qui est plus similaire à celle de c#, le `property` mot clé est suivi par le type de la propriété et son nom sans ornement. Le `set` et `get` les méthodes d’accès sont placées dans un bloc après le nom de propriété. Notez que, contrairement à c#, la signature de la méthode d’accès est spécifiée. Par exemple, voici l’exemple de code ci-dessus traduit dans la nouvelle syntaxe.  
   
 ```  
 public ref class Vector sealed {   
@@ -58,7 +61,7 @@ public:
 };  
 ```  
   
- Si les méthodes d'accès de la propriété reflètent des niveaux d'accès distincts \- tel qu'un `get` `public` et un `set` `private` ou `protected`, une étiquette d'accès explicite peut être spécifiée.  Par défaut, le niveau d'accès de la propriété reflète celui du niveau d'accès englobant.  Par exemple, les deux méthodes `get` et `set` sont `public` dans la définition ci\-dessus de `Vector`.  Pour rendre la méthode `set` `protected` ou `private`, la définition serait modifiée comme suit :  
+ Si les méthodes d’accès de la propriété reflètent des niveaux d’accès distincts - comme une `public get` et un `private` ou `protected set`, une étiquette d’accès explicite peut être spécifiée. Par défaut, le niveau d’accès de la propriété reflète celle du niveau d’accès englobant. Par exemple, dans la définition ci-dessus de `Vector`, à la fois le `get` et `set` sont des méthodes `public`. Pour rendre le `set` méthode `protected` ou `private`, la définition serait modifiée comme suit :  
   
 ```  
 public ref class Vector sealed {   
@@ -73,7 +76,7 @@ public:
          _x = newx;  
       }  
   
-   } // note: extent of private culminates here …  
+   } // note: extent of private culminates here  
   
 // note: dot is a public method of Vector  
 double dot( const Vector^ wv );  
@@ -82,17 +85,17 @@ double dot( const Vector^ wv );
 };  
 ```  
   
- La portée d'un mot clé d'accès dans une propriété s'étend soit jusqu'à l'accolade fermante de la propriété, soit jusqu'à la spécification d'un mot clé d'accès supplémentaire.  Elle ne s'étend pas au\-delà de la définition de la propriété, jusqu'au niveau d'accès englobant dans lequel la propriété est définie.  Dans la déclaration ci\-dessus, par exemple, `Vector::dot()` est une méthode publique.  
+ La portée d’un mot clé d’accès dans une propriété s’étend jusqu'à ce que soit l’accolade fermante de la propriété ou la spécification d’un mot clé d’accès supplémentaire. Il n’étend pas au-delà de la définition de la propriété au niveau d’accès englobant dans lequel la propriété est définie. Dans la déclaration ci-dessus, par exemple, `Vector::dot()` est une méthode publique.  
   
- L'écriture des propriétés set\/get pour les trois coordonnées `Vector` implique trois étapes :  
+ L’écriture des propriétés set/get pour les trois `Vector` coordonnées implique trois étapes :  
   
-1.  déclarez un membre d'état privé du type approprié.  
+1.  Déclarez un membre d’état privé du type approprié.  
   
-2.  retournez\-le lorsque l'utilisateur souhaite obtenir sa valeur.  
+2.  Retournez la bande lorsque l’utilisateur souhaite obtenir sa valeur.  
   
-3.  assignez\-lui la nouvelle valeur.  
+3.  Elle attribue la nouvelle valeur.  
   
- Dans la nouvelle syntaxe, une syntaxe de propriété abrégée existe pour automatiser ce modèle d'utilisation :  
+ Dans la nouvelle syntaxe, une syntaxe de propriété abrégée est disponible qui automatise ce modèle d’utilisation :  
   
 ```  
 public ref class Vector sealed {   
@@ -104,8 +107,8 @@ public:
 };  
 ```  
   
- Un effet secondaire intéressant de la syntaxe de propriété abrégée est que, pendant que le membre state en arrière plan est automatiquement généré par le compilateur, il n'est pas accessible dans la classe, sauf à travers les accesseurs set\/get.  
+ L’effet secondaire intéressant de la syntaxe de propriété abrégée est que même si le membre est généré par le compilateur, il n’est pas accessible dans la classe, sauf via les accesseurs set/get.  
   
-## Voir aussi  
- [Déclarations de membre dans une classe ou interface \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [property](../windows/property-cpp-component-extensions.md)
+## <a name="see-also"></a>Voir aussi  
+ [Déclarations de membre dans une classe ou Interface (C + c++ / CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ [propriété](../windows/property-cpp-component-extensions.md)

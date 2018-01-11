@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3482
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3482
+f1_keywords: C3482
+dev_langs: C++
+helpviewer_keywords: C3482
 ms.assetid: bf99558e-bef4-421c-bb16-dcd9c54c1011
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4ff7a17d663be7168c5743838d782043d7c0ee92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: b19769a8a326613401263fa7700b85c36a9dbbe1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3482"></a>Erreur du compilateur C3482
 'this' peut uniquement être utilisé en tant que capture lambda dans une fonction membre non statique  

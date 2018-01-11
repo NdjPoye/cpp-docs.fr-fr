@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 31d6de0a537ffc6971e6d59d167959e41221d1f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 83b65a0439591d9783595bd2e0868e2d63568143
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="columnname"></a>COLUMN_NAME
 Représente une liaison sur l’ensemble de lignes à la colonne dans l’ensemble de lignes. Semblable à [COLUMN_ENTRY](../../data/oledb/column-entry.md), sauf que cette macro prend le nom de colonne au lieu du numéro de colonne.  
@@ -43,7 +46,7 @@ data
  `data`  
  [in] Le membre de données correspondant dans l’enregistrement utilisateur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **COLUMN_NAME_\***  sont utilisées dans les mêmes emplacements que [COLUMN_ENTRY](../../data/oledb/column-entry.md):  
   
 -   Entre le [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP](../../data/oledb/end-column-map.md) macros.  
@@ -52,7 +55,7 @@ data
   
 -   Entre le [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) macros.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

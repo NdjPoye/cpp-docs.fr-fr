@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: facb6498d38c05d513b08016b85865438174ed5b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a757c6102851851ab4175f939a6f76d8136fa61c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetlocateimplgetrowsat"></a>IRowsetLocateImpl::GetRowsAt
 Extrait les lignes en commençant à la ligne spécifiée par un décalage à partir d’un signet.  
@@ -48,12 +51,12 @@ Extrait les lignes en commençant à la ligne spécifiée par un décalage à pa
 #### <a name="parameters"></a>Paramètres  
  Consultez [IRowsetLocate::GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour récupérer à partir de la position du curseur au lieu de cela, utilisez [IRowset::GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx).  
   
  `IRowsetLocateImpl::GetRowsAt`ne modifie pas la position du curseur.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

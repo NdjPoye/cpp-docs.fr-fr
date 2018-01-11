@@ -1,42 +1,42 @@
 ---
-title: "priority_queue::pop (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::pop"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre pop [STL/CLR]"
+title: priority_queue::POP (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::pop
+dev_langs: C++
+helpviewer_keywords: pop member [STL/CLR]
 ms.assetid: d363b3f1-247b-466a-a300-c5918b0dfd4e
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6894a4acff991b069f7c5b587fd8a90c5a3a40ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::pop (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supprime l'élément dont la priorité est la plus élevée.  
+# <a name="priorityqueuepop-stlclr"></a>priority_queue::pop (STL/CLR)
+Supprime l’élément le plus élevé-proirity.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void pop();  
 ```  
   
-## Notes  
- La fonction membre supprime l'élément dont la priorité est la plus élevée de la séquence contrôlée, qui doit être non\-vide.  Vous l'utilisez pour raccourcir la file d'attente par un élément en arrière\-plan.  
+## <a name="remarks"></a>Notes  
+ La fonction membre supprime l’élément de priorité la plus élevée de la séquence contrôlée, qui doit être vide. Il permet de raccourcir la file d’attente d’un élément à l’arrière.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_priority_queue_pop.cpp   
@@ -66,13 +66,16 @@ int main()
   
 ```  
   
-  **c a b**  
- **b a**   
-## Configuration requise  
- **En\-tête :** \<cliext\/queue\>  
+```Output  
+c a b  
+b a  
+```  
   
- **Espace de nom :** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/file d’attente >  
   
-## Voir aussi  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::push](../dotnet/priority-queue-push-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::push (STL/CLR)](../dotnet/priority-queue-push-stl-clr.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4bcc7ff31a21b94353280829d86ab3336253ee64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 244d8ff41f1021ae10ec164cb1acf8b44d3288ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dequeconstiterator-stlclr"></a>deque::const_iterator (STL/CLR)
 Type d'un itérateur constant pour la séquence contrôlée.  
@@ -30,7 +33,7 @@ Type d'un itérateur constant pour la séquence contrôlée.
 typedef T2 const_iterator;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le type décrit un objet de type non spécifié `T2` qui peut servir d’un itérateur à accès aléatoire constant pour la séquence contrôlée.  
   
 ## <a name="example"></a>Exemple  
@@ -61,7 +64,7 @@ int main()
 a b c  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/deque >  
   
  **Namespace :** cliext  

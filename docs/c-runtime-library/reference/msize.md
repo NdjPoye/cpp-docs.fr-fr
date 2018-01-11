@@ -34,11 +34,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e678d5ba1abcf552fa5e4576578a5a220fe50f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ebc066e9ad01ff08014ed9174d0ca4915ea1868f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="msize"></a>_msize
 Retourne la taille d’un bloc de mémoire alloué dans le tas.  
@@ -66,13 +67,13 @@ Retourne la taille d’un bloc de mémoire alloué dans le tas.
   
  Cette fonction valide son paramètre. Si `memblock` est un pointeur Null, `_msize` appelle un gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’erreur est gérée, la fonction définit `errno` sur `EINVAL` et retourne -1.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_msize`|\<malloc.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

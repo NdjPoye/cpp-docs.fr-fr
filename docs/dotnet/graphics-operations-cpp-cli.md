@@ -1,51 +1,53 @@
 ---
-title: "Op&#233;rations graphiques (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET Framework (C++), graphiques"
-  - "GDI+ (C++)"
-  - "GDI+ (C++), à propos des opérations graphiques"
-  - "graphiques (C++), .NET Framework et"
-  - "images (C++), .NET Framework et"
+title: "Opérations graphiques (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- GDI+ [C++]
+- .NET Framework [C++], graphics
+- images [C++], .NET Framework and
+- GDI+ [C++], about graphics operations
+- graphics [C++], .NET Framework and
 ms.assetid: bba27228-b9b3-4c9c-b31c-a04b76702a95
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d80d490dd53a6a27c610532cb26825dc29f34cde
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Op&#233;rations graphiques (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Illustre la manipulation d'images à l'aide du [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
+# <a name="graphics-operations-ccli"></a>Opérations graphiques (C++/CLI)
+Illustre la manipulation d’image à l’aide du [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
   
- Les rubriques suivantes illustrent l'utilisation de la classe <xref:System.Drawing.Image?displayProperty=fullName> pour manipuler des images.  
+ Les rubriques suivantes illustrent l’utilisation de la <xref:System.Drawing.Image?displayProperty=fullName> classe pour manipuler des images.  
   
-## Dans cette section  
- [Comment : convertir des fichiers au format image avec le .NET Framework](../dotnet/how-to-convert-image-file-formats-with-the-dotnet-framework.md)  
+## <a name="in-this-section"></a>Dans cette section  
+ [Guide pratique pour convertir des fichiers au format image avec le .NET Framework](../dotnet/how-to-convert-image-file-formats-with-the-dotnet-framework.md)  
   
- [Comment : afficher des images avec le .NET Framework](../dotnet/how-to-display-images-with-the-dotnet-framework.md)  
+ [Guide pratique pour afficher des images avec le .NET Framework](../dotnet/how-to-display-images-with-the-dotnet-framework.md)  
   
- [Comment : dessiner des formes avec le .NET Framework](../dotnet/how-to-draw-shapes-with-the-dotnet-framework.md)  
+ [Guide pratique pour dessiner des formes avec le .NET Framework](../dotnet/how-to-draw-shapes-with-the-dotnet-framework.md)  
   
- [Comment : faire pivoter des images avec le .NET Framework](../dotnet/how-to-rotate-images-with-the-dotnet-framework.md)  
+ [Guide pratique pour faire pivoter des images avec le .NET Framework](../dotnet/how-to-rotate-images-with-the-dotnet-framework.md)  
   
-## Rubriques connexes  
- [Mise en route de la programmation graphique](../Topic/Getting%20Started%20with%20Graphics%20Programming.md)  
+## <a name="related-sections"></a>Rubriques connexes  
+ [Mise en route de la programmation graphique](/dotnet/framework/winforms/advanced/getting-started-with-graphics-programming)  
   
- [À propos du code managé GDI\+](../Topic/About%20GDI+%20Managed%20Code.md)  
+ [À propos du code managé GDI+](/dotnet/framework/winforms/advanced/about-gdi-managed-code)  
   
  <xref:System.Drawing?displayProperty=fullName>  
   
-## Voir aussi  
- [Programmation .NET avec C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

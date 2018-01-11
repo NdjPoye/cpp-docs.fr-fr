@@ -1,31 +1,34 @@
 ---
-title: "Activation et d&#233;sactivation des services OLE&#160;DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "services OLE DB, activer et désactiver"
-  - "fournisseurs de services (OLE DB)"
+title: "Activation et désactivation des Services OLE DB | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB services [OLE DB], enabling and disabling
+- service providers [OLE DB]
 ms.assetid: 445f97eb-32a8-41c2-ad26-1169f78a074f
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 59b1a50c44d5719cf3c699a14e5139d9e9816938
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Activation et d&#233;sactivation des services OLE&#160;DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-OLE DB Service Component Manager compare les propriétés spécifiées par le consommateur à celles prises en charge par le fournisseur afin de déterminer si des composants de services individuels peuvent être appelés pour répondre à la demande de fonctionnalités étendues formulée par le consommateur.  Par exemple, si une application demande un curseur à défilement alors que le fournisseur prend en charge uniquement un curseur à défilement vers l'avant, le Service Component Manager appelle le composant de service du moteur du curseur client pour fournir une fonctionnalité de défilement.  Si l'application compte sur une fonctionnalité étendue prise en charge par défaut sur le jeu de lignes du fournisseur, et si l'application ne définit pas de manière explicite les propriétés de manière à demander cette fonctionnalité, la fonctionnalité peut ne pas apparaître sur le rowset retourné par le moteur du curseur client.  Pour être interopérable, les applications doivent toujours définir les propriétés de façon à demander explicitement une fonctionnalité étendue quand c'est nécessaire.  
+# <a name="enabling-and-disabling-ole-db-services"></a>Activation et désactivation des services OLE DB
+Le Gestionnaire de composants de Service OLE DB compare les propriétés spécifiées par le consommateur à celles prises en charge par le fournisseur pour déterminer si les composants de service individuels peuvent être appelés pour répondre à des fonctionnalités étendues demandées par le consommateur. Par exemple, si une application demande un curseur de défilement et le fournisseur prend en charge uniquement un curseur avant uniquement, le Gestionnaire de composants de Service appelle le composant de service de moteur de curseur Client pour fournir la fonctionnalité de défilement. Si l’application repose sur les fonctionnalités étendues prises en charge par défaut sur l’ensemble de lignes du fournisseur, et que l’application ne définit pas explicitement les propriétés à demander cette fonctionnalité, la fonctionnalité ne peut pas apparaître sur l’ensemble de lignes retourné par le Client Moteur de curseur. Pour être interopérable, les applications doivent toujours définir propriétés demander explicitement une fonctionnalité étendue quand cela est nécessaire.  
   
- Dans certains cas, il peut être nécessaire de désactiver des services OLE DB particuliers afin d'obtenir un fonctionnement correct des applications existantes qui font des hypothèses sur les caractéristiques d'un fournisseur.  Les services OLE DB permettent de désactiver des services particuliers, ou tous les services, selon une base connexion par connexion ou pour toutes les applications au moyen d'un fournisseur unique.  
+ Dans certains cas, il peut être nécessaire de désactiver des services OLE DB pour fonctionner avec les applications existantes qui font des hypothèses sur les caractéristiques d’un fournisseur. Services OLE DB offrent la possibilité de désactiver des services individuels, ou tous les services, sur une base de connexion par connexion ou pour toutes les applications à l’aide d’un fournisseur unique.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Services et regroupement des ressources OLE DB](../../data/oledb/ole-db-resource-pooling-and-services.md)

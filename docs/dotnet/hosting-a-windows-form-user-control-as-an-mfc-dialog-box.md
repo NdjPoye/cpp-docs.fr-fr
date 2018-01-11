@@ -17,11 +17,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 50b1b3c6fb425885c7d48975a3815951454f3bf1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7ad1d800619eb84a470dbc5e472e9191d13e8796
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hébergement d'un contrôle utilisateur Windows Form en tant que boîte de dialogue MFC
 MFC fournit la classe de modèle [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) afin que vous pouvez héberger un contrôle utilisateur Windows Forms (<xref:System.Windows.Forms.UserControl>) dans une boîte de dialogue modale ou non MFC. `CWinFormsDialog`est dérivé de la classe MFC [CDialog](../mfc/reference/cdialog-class.md), de sorte que la boîte de dialogue peut être lancée en tant que modale ou non modale.  

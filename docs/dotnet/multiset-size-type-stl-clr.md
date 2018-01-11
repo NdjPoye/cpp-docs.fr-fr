@@ -1,41 +1,42 @@
 ---
-title: "multiset::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type (membre) (STL/CLR)"
+title: multiset::size_type (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 6ddadf69-ab2d-4b06-a59c-982c2e29f718
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 75c740a19ebc516e8f942e95b58fa2eae10e2ac1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# multiset::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le type d'une distance signée entre deux éléments.  
+# <a name="multisetsizetype-stlclr"></a>multiset::size_type (STL/CLR)
+Le type d’une distance signée entre deux éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef int size_type;  
 ```  
   
-## Notes  
- Le type décrit un nombre non négatif d'éléments.  
+## <a name="remarks"></a>Notes  
+ Le type décrit un nombre non négatif élément.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_multiset_size_type.cpp   
@@ -65,13 +66,16 @@ int main()
   
 ```  
   
-  **a b c**  
-**end\(\)\-begin\(\) \= 3**   
-## Configuration requise  
- **En\-tête :** \<cliext\/set\>  
+```Output  
+ a b c  
+end()-begin() = 3  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/set >  
   
-## Voir aussi  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::empty](../dotnet/multiset-empty-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::empty (STL/CLR)](../dotnet/multiset-empty-stl-clr.md)

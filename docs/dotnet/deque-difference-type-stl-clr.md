@@ -1,41 +1,42 @@
 ---
-title: "deque::difference_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::difference_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "difference_type (membre) (STL/CLR)"
+title: deque::difference_type (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::difference_type
+dev_langs: C++
+helpviewer_keywords: difference_type member [STL/CLR]
 ms.assetid: deb00a44-80c7-42f8-ad17-1d36377dec88
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: afe6714852272a49c0b37f0b3892cfda7937701e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# deque::difference_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les types d'une distance signée entre deux éléments.  
+# <a name="dequedifferencetype-stlclr"></a>deque::difference_type (STL/CLR)
+Les types d’une distance signée entre deux éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef int difference_type;  
 ```  
   
-## Notes  
- Le type décrit un compte d'éléments signés.  
+## <a name="remarks"></a>Notes  
+ Le type décrit un nombre d’éléments signés.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_deque_difference_type.cpp   
@@ -70,14 +71,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**end\(\)\-begin\(\) \= 3**  
-**begin\(\)\-end\(\) \= \-3**   
-## Configuration requise  
- **En\-tête :** \<cliext\/deque\>  
+```Output  
+ a b c  
+end()-begin() = 3  
+begin()-end() = -3  
+```  
   
- **Espace de nom :** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/deque >  
   
-## Voir aussi  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::size\_type](../dotnet/deque-size-type-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::size_type (STL/CLR)](../dotnet/deque-size-type-stl-clr.md)

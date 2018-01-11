@@ -15,14 +15,15 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6470ec9177ee1478c691fa3afb2c5e997e16be8a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a6d4ccfd4f532c8f7c64f775e17260f26f8d457
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3069"></a>Erreur du compilateur C3069
-'operator' : non autorisé pour un type d’énumération  
+'operator' : non autorisé pour un type d’énumération  
   
  Un opérateur n’est pas pris en charge dans les énumérations CLR.  Pour plus d’informations, consultez [Comment : définir et consommer des énumérateurs dans c++ / CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).  
   

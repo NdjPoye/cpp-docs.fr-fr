@@ -1,60 +1,62 @@
 ---
-title: "CRowset::GetData | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowset<TAccessor>::GetData"
-  - "ATL::CRowset<TAccessor>::GetData"
-  - "ATL::CRowset::GetData"
-  - "ATL.CRowset<TAccessor>.GetData"
-  - "CRowset<TAccessor>.GetData"
-  - "CRowset::GetData"
-  - "CRowset.GetData"
-  - "ATL.CRowset.GetData"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetData (méthode) (OLE DB)"
+title: CRowset::GetData | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowset<TAccessor>::GetData
+- ATL::CRowset<TAccessor>::GetData
+- ATL::CRowset::GetData
+- ATL.CRowset<TAccessor>.GetData
+- CRowset<TAccessor>.GetData
+- CRowset::GetData
+- CRowset.GetData
+- ATL.CRowset.GetData
+dev_langs: C++
+helpviewer_keywords: GetData method [OLE DB]
 ms.assetid: 1e0347b5-3e24-4ff8-a790-839616c1522f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 074d47fef9476a0a5140ac56e1ccf077142a2c18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::GetData
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Récupère des données de la copie du jeu de lignes de la ligne.  
+# <a name="crowsetgetdata"></a>CRowset::GetData
+Récupère les données à partir de la copie de l’ensemble de lignes de la ligne.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      HRESULT GetData( ) throw( );   
-HRESULT GetData(   
-   int nAccessor    
+      HRESULT GetData( ) throw( );   
+HRESULT GetData(   
+   int nAccessor    
 ) throw( );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `nAccessor`  
- \[in\] le numéro d'indice \(sans décalage\) de l'accesseur à utiliser pour accéder aux données.  
+ [in] Le numéro d’index (décalage de zéro) de l’accesseur à utiliser pour accéder aux données.  
   
-## Valeur de retour  
- Un `HRESULT` standard.  
+## <a name="return-value"></a>Valeur de retour  
+ `HRESULT` standard.  
   
-## Notes  
- Si vous spécifiez un accesseur qui n'est pas un autoaccesseur dans [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md), utilisez cette méthode pour obtenir les données de manière explicite en passant le numéro d'accesseur.  
+## <a name="remarks"></a>Notes  
+ Si vous spécifiez un accesseur qui n’est pas un auto-accesseur dans [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md), cette méthode permet d’obtenir explicitement les données en passant le numéro de l’accesseur.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CRowset, classe](../../data/oledb/crowset-class.md)

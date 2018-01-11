@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4fc4e22274b30047e027e2fa76aba618d9d9fca4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c7e9c134bfc379bbcd747f45e3d0e6eb093e92d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorgt-deque-stlclr"></a>opérateur&gt;= (deque) (STL/CLR)
 Comparaison supérieur ou égal à deque.  
@@ -39,7 +42,7 @@ template<typename Value>
  droite  
  Conteneur de droite à comparer.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction d’opérateur retourne `!(left` `<` `right)`. Il permet de tester si `left` n’est pas classé avant `right` lorsque les deux classes deque est comparé élément par élément.  
   
 ## <a name="example"></a>Exemple  
@@ -88,7 +91,7 @@ int main()
 [a b c] >= [a b d] is False  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/deque >  
   
  **Namespace :** cliext  

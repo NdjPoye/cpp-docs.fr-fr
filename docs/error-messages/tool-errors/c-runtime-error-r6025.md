@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 06fd7aa6458a3c7e89d80146ec20a0e3f7587b4b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cfb7413cd6fd8dca976d668763fab678bb5c9ebf
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="c-runtime-error-r6025"></a>Erreur d’exécution C R6025
 appel de fonction virtuelle pure  
@@ -39,4 +40,4 @@ appel de fonction virtuelle pure
   
  Cette erreur est due en appelant une fonction virtuelle dans une classe de base abstraite via un pointeur qui est créé par un cast vers le type de la classe dérivée, mais est en fait un pointeur vers la classe de base. Cela peut se produire lors de la conversion d’un **void\***  vers un pointeur vers une classe lorsque le **void\***  a été créé pendant la construction de la classe de base.  
   
- Pour plus d’informations, consultez la [prise en charge Microsoft](http://go.microsoft.com/fwlink/?LinkId=75220) site Web.
+ Pour plus d’informations, consultez la [prise en charge Microsoft](http://go.microsoft.com/fwlink/p/?linkid=75220) site Web.

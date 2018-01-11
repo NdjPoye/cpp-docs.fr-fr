@@ -1,33 +1,33 @@
 ---
-title: "list::merge (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::merge"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre merge [STL/CLR]"
+title: List::Merge (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::merge
+dev_langs: C++
+helpviewer_keywords: merge member [STL/CLR]
 ms.assetid: f8e93cd3-bd08-4086-859b-08a2899cc9a6
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0fdf7ee26bdb465e8a86109a4450353c4dc642a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# list::merge (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listmerge-stlclr"></a>list::merge (STL/CLR)
 Fusionne deux séquences contrôlées ordonnées.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void merge(list<Value>% right);  
@@ -35,21 +35,21 @@ template<typename Pred2>
     void merge(list<Value>% right, Pred2 pred);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  pred  
- Comparateur pour les paires d'éléments.  
+ Comparateur pour les paires d’éléments.  
   
- right  
- Conteneur dans lequel fusionner.  
+ droite  
+ Conteneur à fusionner.  
   
-## Notes  
- La première fonction membre supprime tous les éléments de la séquence contrôlée par `right` et les insère dans la séquence contrôlée.  Les séquences doivent être préalablement triées par `operator<` \-\- les éléments ne doivent pas diminuer de valeur lorsque vous progressez dans l'une ou l'autre des séquences.  La séquence qui en résulte est également ordonnée par `operator<`.  Vous utilisez cette fonction membre pour fusionner deux séquences qui augmentent de valeur dans une séquence qui augmente également de valeur.  
+## <a name="remarks"></a>Notes  
+ La première fonction membre supprime tous les éléments de la séquence contrôlée par `right` et les insérer dans la séquence contrôlée. Les deux séquences doivent être triés précédemment par `operator<` --éléments ne doivent pas diminuer de valeur au cours de chaque séquence. La séquence résultante est également classée par `operator<`. Vous utilisez cette fonction membre pour fusionner deux séquences qui augmentent la valeur dans une séquence qui augmente également de valeur.  
   
- La deuxième fonction membre se comporte de la même manière que la première, sauf que les séquences sont triées par `pred` \-\- `pred``(X, Y)` doit être faux pour un élément `X` qui suit l'élément `Y` de la séquence résultante.  Vous l'utilisez pour fusionner deux séquences ordonnées par une fonction de prédicat ou un délégué que vous spécifiez.  
+ La deuxième fonction membre comporte comme la première, sauf que les séquences sont classés par `pred`  --  `pred(X, Y)` doit avoir la valeur false pour tout élément `X` qui suit l’élément `Y` dans la séquence. Il permet de fusionner deux séquences classés par une fonction de prédicat ou un délégué que vous spécifiez.  
   
- Les deux fonctions effectuent une fusion stable \-\- aucune paire d'éléments l'une ou l'autre des séquence contrôlée originale n'est inversée dans la séquence contrôlée obtenue.  Aussi, si une paire d'éléments `X` et `Y`dans la séquence obtenue contrôlée a une organisation équivalente \(`!(X < Y) && !(X < Y)` \), un élément de la séquence contrôlée originale apparaît avant un élément de la séquence contrôlée par `right`.  
+ Les fonctions permettent d’effectuer une fusion stable--aucune paire d’éléments dans une des séquences contrôlées d’origine n’est inversée dans la séquence contrôlée qui en résulte. En outre, si une paire d’éléments `X` et `Y` dans la séquence contrôlée qui en résulte a un classement équivalent-- `!(X < Y) && !(X < Y)` --un élément à partir de la séquence contrôlée d’origine apparaît avant un élément de la séquence contrôlée par `right`.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_list_merge.cpp   
@@ -108,20 +108,23 @@ int main()
   
 ```  
   
-  **a c e**  
- **b d f**  
- **a b c d e f**  
-**c2.size\(\) \= 0**  
- **e c a**  
- **f e d c b a**  
- **f e e d c c b a a**  
-**c1.size\(\) \= 0**   
-## Configuration requise  
- **En\-tête :** \<cliext\/list\>  
+```Output  
+ a c e  
+ b d f  
+ a b c d e f  
+c2.size() = 0  
+ e c a  
+ f e d c b a  
+ f e e d c c b a a  
+c1.size() = 0  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/liste >  
   
-## Voir aussi  
- [list](../dotnet/list-stl-clr.md)   
- [list::sort](../dotnet/list-sort-stl-clr.md)   
- [list::splice](../dotnet/list-splice-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)   
+ [list::splice (STL/CLR)](../dotnet/list-splice-stl-clr.md)

@@ -23,11 +23,12 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5e81058e96d057c55b177d0ead2f9df59b1393c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f499c5593460b10957c7d09e01c0f458529df0d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>Classe de CMFCToolBarFontComboBox
 Un bouton de barre d’outils qui contient un contrôle de zone de liste modifiable qui permet à l’utilisateur de sélectionner une police dans la liste des polices système.  
@@ -57,7 +58,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
  [CMFCToolBarFontComboBox::m_nFontHeight](#m_nfontheight)  
  La hauteur des caractères dans la zone de liste déroulante de police.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour ajouter un bouton de zone de liste déroulante de police à une barre d’outils, procédez comme suit :  
   
 1.  Réservez un ID de ressource factice pour le bouton dans la ressource de la barre d'outils parente.  
@@ -81,7 +82,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
  [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxtoolbarfontcombobox.h  
   
 ##  <a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
@@ -140,7 +141,7 @@ CMFCToolBarFontComboBox();
  [out] `pLstFontsExternal`  
  Pointeur vers un [CObList classe](../../mfc/reference/coblist-class.md) objet qui stocke les polices disponibles.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En règle générale, `CMFCToolBarFontComboBox` objets stockent la liste des polices disponibles dans une seule partagée `CObList` objet. Si vous utilisez la deuxième surcharge de constructeur et fournir un pointeur valide vers `pLstFontsExternal`, qui `CMFCToolBarFontComboBox` objet remplira à la place la `CObList` qui `pLstFontsExternal` pointe vers des polices disponibles.  
   
 ### <a name="example"></a>Exemple  
@@ -169,7 +170,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 static int m_nFontHeight  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si la `m_nFontHeight` est égale à 0, la hauteur est calculée automatiquement en fonction de la police par défaut de la zone de liste déroulante. La hauteur inclut à la fois la hauteur de caractères au-dessus de la ligne de base et la profondeur des caractères en dessous de la ligne de base.  
   
 ##  <a name="setfont"></a>CMFCToolBarFontComboBox::SetFont  
@@ -195,7 +196,7 @@ BOOL SetFont(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la police a été activée avec succès ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si `bExact` est `TRUE`, cette méthode sélectionne une police qui correspond exactement au nom que vous avez spécifié en tant que `lpszName`. Si `bExact` est `FALSE`, cette méthode sélectionne une police qui commence par le texte spécifié en tant que `lpszName` et qui utilise le jeu de caractères que vous avez spécifié en tant que `nCharSet`. Si `nCharSet` est définie à DEFAULT_CHARSET, le jeu de caractères sera ignoré et seuls `lpszName` permet de sélectionner une police.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1ce0f4fe011c730a3264cea65b7ab5d10dbcd7ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f40dad6feff9e49deeb495e8acbf2584dea3e41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pogosafemode"></a>PogoSafeMode
 Spécifiez s’il faut utiliser le mode rapide ou en mode sans échec pour le profilage de l’application.  
@@ -29,7 +30,7 @@ Spécifiez s’il faut utiliser le mode rapide ou en mode sans échec pour le pr
 PogoSafeMode  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’optimisation guidée par profil (PGO) a deux modes possibles pendant la phase de profilage : mode rapide et mode sans échec. Lorsque le profilage est en mode rapide, il utilise le **INC** instruction pour incrémenter des compteurs de données. Le **INC** instruction est plus rapide, mais n’est pas thread-safe. Lorsque le profilage est en mode sans échec, il utilise le **LOCK INC** instruction pour incrémenter des compteurs de données. Le **LOCK INC** instruction a les mêmes fonctionnalités que le **INC** instruction a et qu’il est thread-safe, mais il est plus lente que la **INC** instruction.  
   
  Par défaut, le profilage PGO fonctionne en mode rapide. `PogoSafeMode`est uniquement requis si vous souhaitez utiliser le mode sans échec.  

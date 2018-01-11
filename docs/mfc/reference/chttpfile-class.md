@@ -37,11 +37,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 603d20c7083a65dac8944c7891d36702043aa6ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e9af23bb74ba8e96f29a5b7cc4139d2932df8c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chttpfile-class"></a>Classe de CHttpFile
 Fournit les fonctionnalités permettant de demander et de lire des fichiers sur un serveur HTTP.  
@@ -74,7 +75,7 @@ class CHttpFile : public CInternetFile
 |[CHttpFile::SendRequest](#sendrequest)|Envoie une demande à un serveur HTTP.|  
 |[CHttpFile::SendRequestEx](#sendrequestex)|Envoie une demande à un serveur HTTP à l’aide du [écrire](../../mfc/reference/cinternetfile-class.md#write) ou [WriteString](../../mfc/reference/cinternetfile-class.md#writestring) méthodes de `CInternetFile`.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si votre session Internet lit des données à partir d’un serveur HTTP, vous devez créer une instance de `CHttpFile`.  
   
  Pour en savoir plus sur la façon `CHttpFile` fonctionne avec les autres classes MFC Internet, consultez l’article [de programmation Internet avec WinInet](../../mfc/win32-internet-extensions-wininet.md).  
@@ -90,7 +91,7 @@ class CHttpFile : public CInternetFile
   
  `CHttpFile`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxinet.h  
   
 ##  <a name="addrequestheaders"></a>CHttpFile::AddRequestHeaders  
@@ -132,7 +133,7 @@ BOOL AddRequestHeaders(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelé pour déterminer la cause de l’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `AddRequestHeaders`Ajoute des en-têtes supplémentaires, au format libre pour le handle de requête HTTP. Elle est destinée aux clients sophistiquées qui ont besoin de contrôler la demande exacte envoyée au serveur HTTP.  
   
 > [!NOTE]
@@ -180,7 +181,7 @@ CHttpFile(
  `pConnection`  
  Un pointeur vers un [objet CHttpConnection](../../mfc/reference/chttpconnection-class.md) objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Impossible de créer un `CHttpFile` l’objet directement ; appelez plutôt [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) ou [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) à la place.  
   
  La valeur par défaut `dwContext` est envoyé par MFC pour le `CHttpFile` à partir de l’objet le [CInternetSession](../../mfc/reference/cinternetsession-class.md) de l’objet qui a créé le `CHttpFile` objet. Lorsque vous appelez `CInternetSession::OpenURL` ou `CHttpConnection` pour construire un `CHttpFile` de l’objet, vous pouvez remplacer la valeur par défaut pour définir l’identificateur de contexte pour une valeur de votre choix. L’identificateur de contexte est retourné à [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) pour fournir l’état de l’objet avec lequel il est identifié. Consultez l’article [Internet premières étapes : WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identificateur de contexte.  
@@ -208,7 +209,7 @@ BOOL EndRequest(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, déterminer la cause du problème en examinant la levée [CInternetException](../../mfc/reference/cinternetexception-class.md) objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La valeur par défaut `dwContext` est envoyé par MFC pour le `CHttpFile` à partir de l’objet le [CInternetSession](../../mfc/reference/cinternetsession-class.md) de l’objet qui a créé le `CHttpFile` objet. Lorsque vous appelez [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) ou [objet CHttpConnection](../../mfc/reference/chttpconnection-class.md) pour construire un `CHttpFile` de l’objet, vous pouvez remplacer la valeur par défaut pour définir l’identificateur de contexte pour une valeur de votre choix. L’identificateur de contexte est retourné à [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) pour fournir l’état de l’objet avec lequel il est identifié. Consultez l’article [Internet premières étapes : WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identificateur de contexte.  
   
 ##  <a name="getfileurl"></a>CHttpFile::GetFileURL  
@@ -221,7 +222,7 @@ virtual CString GetFileURL() const;
 ### <a name="return-value"></a>Valeur de retour  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) objet qui contient une URL faisant référence à la ressource associée à ce fichier.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette fonction membre uniquement après un appel réussi à [envoi demande](#sendrequest) ou sur un `CHttpFile` objet créé avec succès par [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
 ##  <a name="getobject"></a>CHttpFile::GetObject  
@@ -234,7 +235,7 @@ CString GetObject() const;
 ### <a name="return-value"></a>Valeur de retour  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) objet contenant le nom de l’objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette fonction membre uniquement après un appel réussi à [envoi demande](#sendrequest) ou sur un `CHttpFile` objet créé avec succès par [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
 ##  <a name="getverb"></a>CHttpFile::GetVerb  
@@ -247,7 +248,7 @@ CString GetVerb() const;
 ### <a name="return-value"></a>Valeur de retour  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) objet contenant le nom du verbe HTTP (ou de méthode).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette fonction membre uniquement après un appel réussi à [envoi demande](#sendrequest) ou sur un `CHttpFile` objet créé avec succès par [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
 ##  <a name="queryinfo"></a>CHttpFile::QueryInfo  
@@ -306,7 +307,7 @@ BOOL QueryInfo(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelé pour déterminer la cause de l’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette fonction membre uniquement après un appel réussi à [envoi demande](#sendrequest) ou sur un `CHttpFile` objet créé avec succès par [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
  Vous pouvez récupérer les types suivants de données à partir de `QueryInfo`:  
@@ -381,7 +382,7 @@ BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelé pour déterminer la cause de l’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette fonction membre uniquement après un appel réussi à [envoi demande](#sendrequest) ou sur un `CHttpFile` objet créé avec succès par [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
  Codes d’état HTTP sont répartis en groupes indiquant la réussite ou l’échec de la demande. Les tableaux suivants décrivent les groupes de codes d’état et les codes d’état HTTP courants.  
@@ -476,7 +477,7 @@ BOOL SendRequestEx(
 ### <a name="return-value"></a>Valeur de retour  
  Non nul en cas de réussite. Si l’appel échoue, déterminer la cause du problème en examinant la levée [CInternetException](../../mfc/reference/cinternetexception-class.md) objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction permet à votre application envoyer des données à l’aide de la [écrire](../../mfc/reference/cinternetfile-class.md#write) et [WriteString](../../mfc/reference/cinternetfile-class.md#writestring) méthodes de `CInternetFile`. Vous devez connaître la longueur des données à envoyer avant d’appeler une substitution de cette fonction. La première substitution permet de vous permet de spécifier la longueur des données que vous souhaitez envoyer. La deuxième substitution accepte des pointeurs vers **INTERNET_BUFFERS** structures, ce qui peuvent être utilisés pour décrire la mémoire tampon dans les moindres détails.  
   
  Une fois que le contenu est écrit dans le fichier, appelez [EndRequest](#endrequest) de terminer l’opération.  

@@ -1,11 +1,10 @@
 ---
 title: Erreurs de Build C/C++ | Documents Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -186,7 +185,6 @@ f1_keywords:
 - LNK4020
 - LNK4030
 - LNK4031
-- LNK4037
 - LNK4038
 - LNK4040
 - LNK4041
@@ -302,52 +300,31 @@ f1_keywords:
 - R6022
 - R6023
 - R6034
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - builds [C++], errors
 - errors [C++]
 - error messages [C++], build errors
 - errors [C++], builds
 ms.assetid: 2470b496-28fa-47e7-a238-a086d99b06ca
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 1a370ddc7c314cae0cb1a048cacb704480525b0a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 80e723e5fc51ee166b61999396ddfe6be7bdd991
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-build-errors"></a>Erreurs de build C/C++
-Les articles de cette section de la documentation expliquent les messages d'erreur générés par les outils de génération. Le compilateur [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] et les outils de génération peuvent signaler de nombreux genres d'erreurs et d'avertissements. Les outils de génération peuvent faire des hypothèses quant à l'intention du code et tenter de continuer après détection d'une erreur ou d'un avertissement, afin de signaler davantage de problèmes en même temps. Si les outils suivent une hypothèse incorrecte, les erreurs ou avertissements ultérieurs peuvent ne pas s'appliquer à votre projet. Lors de la résolution de problèmes dans votre projet, démarrez toujours par la première erreur ou le premier avertissement signalé et effectuez régulièrement une régénération.  
-  
- Pour obtenir de l’aide sur un message d’erreur dans Visual Studio, sélectionnez un numéro d’erreur dans le **sortie** fenêtre et appuyez sur la touche F1 pour ouvrir le site Web MSDN de page pour cette erreur. Dans MSDN, vous pouvez également rechercher des articles sur les erreurs ou parcourir la liste d'erreurs par catégorie dans le volet de navigation.  
-  
-> [!NOTE]
->  Pas chaque [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erreur ou un avertissement est documentée dans MSDN. Dans de nombreux cas, le message de diagnostic fournit toutes les informations qui est disponibles. Si vous pensez qu'un message d'erreur nécessite une explication supplémentaire, faites-nous part de vos suggestions. Vous pouvez utiliser le formulaire de commentaires sur cette page, ou accédez à la barre de menus dans Visual Studio et choisissez **aide**, **signaler un bogue**, ou vous pouvez envoyer un rapport de suggestion ou un bogue sur [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
-  
- Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) est de forum de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ générales](http://go.microsoft.com/fwlink/?LinkId=158194) forum concerne les questions de [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).  
-  
- Pour obtenir des liens vers des ressources supplémentaires sur [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)], consultez [l’aide de Visual C++ et la Communauté](../../visual-cpp-help-and-community.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence à la génération C/C++](../../build/reference/c-cpp-building-reference.md)   
- [Débogage dans Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
+
+Les articles de cette section de la documentation expliquent erreur de diagnostic et les messages d’avertissement générés par les outils de génération.
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
+
+## <a name="see-also"></a>Voir aussi
+
+[Référence à la génération C/C++](../../build/reference/c-cpp-building-reference.md)   
+[Débogage dans Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)

@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 289c885269c9c40690e58c33d481e4a4081eda00
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1bce912c9b530c39a5c7121c60e6a9a8a80ae852
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multisetempty-stlclr"></a>multiset::empty (STL/CLR)
 Vérifie l'absence d'éléments.  
@@ -30,7 +33,7 @@ Vérifie l'absence d'éléments.
 bool empty();  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction membre retourne la valeur true pour une séquence contrôlée vide. Elle est équivalente à [multiset::size (STL/CLR)](../dotnet/multiset-size-stl-clr.md)`() == 0`. Il permet de tester si le multiensemble est vide.  
   
 ## <a name="example"></a>Exemple  
@@ -72,7 +75,7 @@ size() = 0
 empty() = True  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/set >  
   
  **Namespace :** cliext  

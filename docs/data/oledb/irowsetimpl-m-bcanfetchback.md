@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 09440f8453fe0ee13297c600b148927bacafc5da
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7ba8cacdb172158f2afdb5574dd58e2db7e922bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetimplmbcanfetchback"></a>IRowsetImpl::m_bCanFetchBack
 Indique si un fournisseur prend en charge l’extraction vers l’arrière.  
@@ -37,10 +40,10 @@ unsigned m_bCanFetchBack:1;
   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Lié à la **DBPROP_CANFETCHBACKWARDS** propriété dans le **DBPROPSET_ROWSET** groupe. Le fournisseur doit prendre en charge **DBPROP_CANFETCHBACKWARDS** pour **m_bCanFetchBackwards** avoir la valeur true.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

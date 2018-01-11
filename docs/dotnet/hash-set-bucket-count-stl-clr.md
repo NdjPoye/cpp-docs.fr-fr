@@ -1,42 +1,42 @@
 ---
-title: "hash_set::bucket_count (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::bucket_count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre bucket_count [STL/CLR]"
+title: hash_set::bucket_count (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::bucket_count
+dev_langs: C++
+helpviewer_keywords: bucket_count member [STL/CLR]
 ms.assetid: 3ff49f99-b70d-4455-93e8-2bdc983a0e67
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7e0d7535c651af38930d2e0f411d4caf03b17005
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set::bucket_count (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsetbucketcount-stlclr"></a>hash_set::bucket_count (STL/CLR)
 Compte le nombre de compartiments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int bucket_count();  
 ```  
   
-## Notes  
- Les méthodes retournent le nombre actuel de compartiments.  Vous l'utilisez pour déterminer la taille de la table de hachage.  
+## <a name="remarks"></a>Notes  
+ Les fonctions membres retourne le nombre actuel de compartiments. Il permet de déterminer la taille de la table de hachage.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_set_bucket_count.cpp   
@@ -82,22 +82,27 @@ int main()
   
 ```  
   
-  **a b c**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 4**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 0,25**  
-**bucket\_count\(\) \= 128**  
-**load\_factor\(\) \= 0,0234375**  
-**max\_load\_factor\(\) \= 0,25**   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
   
- **Espace de noms** cliext  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
   
-## Voir aussi  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::load\_factor](../dotnet/hash-set-load-factor-stl-clr.md)   
- [hash\_set::max\_load\_factor](../dotnet/hash-set-max-load-factor-stl-clr.md)
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/hash_set >  
+  
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md)   
+ [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md)
