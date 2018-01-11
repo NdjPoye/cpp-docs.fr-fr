@@ -4,43 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- swap method
+dev_langs: C++
+helpviewer_keywords: swap method
 ms.assetid: 898c219c-bc8e-4d14-a149-6240426c693f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: 33ec601dcc8d32b85c2c38ed3fc5a07842a056fc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 09229429c64e895a722d52d203f0259cf69e6d24
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="container-classswap"></a>Conteneur Class::swap
 > [!NOTE]
->  Cette rubrique fait partie de la documentation Visual C++ comme exemple non fonctionnel de conteneurs utilisés dans la bibliothèque C++ Standard. Pour plus d’informations, consultez [Conteneurs disponibles dans la bibliothèque C++ Standard](../standard-library/stl-containers.md).  
+>  Cette rubrique fait partie de la documentation Visual C++ comme exemple non fonctionnel de conteneurs utilisés dans la bibliothèque standard C++. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).  
   
 Échange les séquences contrôlées entre **\*this** et son argument.  
   
@@ -55,4 +38,3 @@ Si **\*this.get\_allocator ==** _right_**.get_allocator**, l’échange est effe
   
 ## <a name="see-also"></a>Voir aussi  
 [Exemple de classe de conteneur](../standard-library/sample-container-class.md)
-

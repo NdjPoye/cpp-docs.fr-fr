@@ -51,11 +51,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: 5ddb30840a3f92de70d688cc763394e92b356417
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7d96b4a03085a2a6486fa2f2fe0d7050323682c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocatortraits-class"></a>allocator_traits, classe
 La classe de modèle décrit un objet qui complète un *type d’allocateur*. Un type d’allocateur est tout type qui décrit un objet allocateur utilisé pour la gestion de stockage alloué. Plus précisément, pour tout type d’allocateur `Alloc`, vous pouvez utiliser `allocator_traits<Alloc>` afin de déterminer toutes les informations nécessaires pour un conteneur compatible avec l’allocateur. Pour plus d’informations, consultez [allocator, classe](../standard-library/allocator-class.md).  
@@ -67,7 +68,7 @@ template <class Alloc>
 class allocator_traits;
 ```  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -86,7 +87,7 @@ class allocator_traits;
 ### <a name="static-methods"></a>Méthodes statiques  
  Les méthodes statiques suivantes appellent la méthode correspondante sur un paramètre d’allocateur donné.  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[allocate](#allocate)|Méthode statique qui alloue de la mémoire en utilisant le paramètre d’allocateur donné.|  
 |[construct](#construct)|Méthode statique qui utilise un allocateur spécifié pour construire un objet.|  
@@ -95,7 +96,7 @@ class allocator_traits;
 |[max_size](#max_size)|Méthode statique qui utilise un allocateur spécifié pour déterminer le nombre maximal d’objets pouvant être alloués.|  
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|Méthode statique qui appelle `select_on_container_copy_construction` sur l’allocateur spécifié.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<memory>  
   
  **Espace de noms :** std  

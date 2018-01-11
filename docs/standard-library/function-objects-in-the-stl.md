@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 90b37372123031026017e23c683a5a65555577ca
-ms.sourcegitcommit: b3ffb717e2af6ca8072b56bf4aa96b3afff73414
+ms.workload: cplusplus
+ms.openlocfilehash: 2ba5024590a0682f8d65c7d21ca2cb15d2f481b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Objets de fonction dans la bibliothèque C++ Standard
 Un *objet de fonction*, ou *foncteur*, est n’importe quel type implémentant operator(). Cet opérateur est appelé *opérateur d’appel* ou parfois *opérateur d’application*. La bibliothèque C++ Standard utilise des objets de fonction essentiellement comme critère de tri pour les conteneurs et dans les algorithmes.  
@@ -30,7 +31,7 @@ Un *objet de fonction*, ou *foncteur*, est n’importe quel type implémentant o
  Les objets de fonctions offrent deux avantages par rapport à un appel de fonction direct. Le premier est qu’un objet de fonction peut contenir l’état. Le deuxième est qu’un objet fonction est aussi un type et peut donc être utilisé comme paramètre de modèle.  
   
 ## <a name="creating-a-function-object"></a>Création d’un objet de fonction  
- Pour créer un objet de fonction, créez un type et implémentez operator(), par exemple :  
+ Pour créer un objet de fonction, créez un type et implémentez operator(), par exemple :  
   
 ```
 class Functor  

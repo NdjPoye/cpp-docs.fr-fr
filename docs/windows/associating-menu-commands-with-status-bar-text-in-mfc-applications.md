@@ -1,43 +1,46 @@
 ---
-title: "Associating Menu Commands with Status Bar Text in MFC Applications | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "status bars, associating menu items"
-  - "menus, status bar text"
+title: "Associer des commandes de Menu avec le texte de barre d’état dans les Applications MFC | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- status bars, associating menu items
+- menus, status bar text
 ms.assetid: 757c0e02-bc97-493f-bccd-6cc6887ebc64
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ea0f68bbd0c426aee8141c27d6852bfaaa6ed523
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Associating Menu Commands with Status Bar Text in MFC Applications
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>Association de commandes de menu au texte de la barre d'état dans des applications MFC
+Votre application peut afficher un texte descriptif pour chacune des commandes de menu qu'un utilisateur peut sélectionner. Pour ce faire, assignez une chaîne de texte à chaque commande de menu à l'aide de la propriété **Invite** dans la fenêtre Propriétés. Si vous avez une chaîne dans la [table de chaînes](../windows/string-editor.md) dont l'ID est identique à la commande, une application MFC affiche automatiquement cette ressource de chaîne dans la barre d'état de l'application en cours d'exécution quand un utilisateur pointe sur un élément de menu.  
+  
+### <a name="to-associate-a-menu-command-with-a-status-bar-text-string"></a>Pour associer une commande de menu à une chaîne de texte de barre d'état  
+  
+1.  Dans l' **éditeur de menus** , sélectionnez la commande de menu.  
+  
+2.  Dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), tapez le texte de barre d'état associé dans la zone **Invite** .  
+  
 
-Votre application peut afficher un texte descriptif pour chacune des commandes de menu qu'un utilisateur peut sélectionner. Pour ce faire, assignez une chaîne de texte à chaque commande de menu à l'aide de la propriété **Invite** dans la fenêtre Propriétés. Si vous avez une chaîne dans la [table de chaînes](../mfc/string-editor.md) dont l'ID est identique à la commande, une application MFC affiche automatiquement cette ressource de chaîne dans la barre d'état de l'application en cours d'exécution quand un utilisateur pointe sur un élément de menu.  
-  
-### Pour associer une commande de menu à une chaîne de texte de barre d'état  
-  
-1.  Dans l'**éditeur de menus**, sélectionnez la commande de menu.  
-  
-2.  Dans la [fenêtre Propriétés](../Topic/Properties%20Window.md), tapez le texte de barre d'état associé dans la zone **Invite**.  
-  
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel de fichiers de ressources aux projets managés, l’accès aux ressources, l’affichage de ressources statiques et l’assignation de chaînes de ressources à des propriétés, consultez [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
   
  **Spécifications**  
   
  MFC  
   
-## Voir aussi  
- [Chaînes](../atl-mfc-shared/strings-atl-mfc.md)   
- [Adding Commands to a Menu](../windows/adding-commands-to-a-menu.md)   
- [Menu Editor](../mfc/menu-editor.md)
+## <a name="see-also"></a>Voir aussi  
+ [Chaînes (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
+ [Ajout de commandes à un Menu](../windows/adding-commands-to-a-menu.md)   
+ [Éditeur de menus](../windows/menu-editor.md)

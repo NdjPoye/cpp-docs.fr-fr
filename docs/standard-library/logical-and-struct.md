@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::logical_and
-- logical_and
-dev_langs:
-- C++
+f1_keywords: xfunctional/std::logical_and
+dev_langs: C++
 helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 8108658a9efceeb048aac2c9aa4ffd160626a31b
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 033cb6ffdfab217be5642f5ce5c9bb6ab9af68fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="logicaland-struct"></a>logical_and, struct
 Objet de fonction prédéfini qui effectue l’opération de conjonction logique ( `operator&&`) sur ses arguments.  
@@ -75,9 +57,9 @@ struct logical_and<void>
  Opérande droit de l’opération de conjonction logique. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `U`.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Résultat de `Left``&&``Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator&&`.  
+ Résultat de `Left && Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator&&`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour les types définis par l’utilisateur, il n’y a aucun court-circuit d’évaluation de l’opérande. Les deux arguments sont évalués par `operator&&`.  
   
 ## <a name="example"></a>Exemple  
@@ -152,15 +134,14 @@ The deque which is the conjuction of d1 & d2 is:
  */  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<functional>  
   
  **Espace de noms :** std  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

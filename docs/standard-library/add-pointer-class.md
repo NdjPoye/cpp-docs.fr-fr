@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c8a55af99a2a058c967ad87dadb038ce06cf56b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a7af4a099d06b98ceb5fdd4bfb6dca0071c3f4a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="addpointer-class"></a>add_pointer, classe
 Crée un pointeur vers un type à partir d'un type spécifié.  
@@ -68,7 +69,7 @@ int main()
 add_pointer_t<int> == int *  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<type_traits>  
   
  **Espace de noms :** std  

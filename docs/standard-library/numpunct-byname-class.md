@@ -15,11 +15,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d73e5835d0b3b8e871afe4a9d61765c479d20adc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84f71302d43a983772890611e55c56af9b21e922
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numpunctbyname-class"></a>numpunct_byname, classe
 La classe de modèle dérivée décrit un objet pouvant servir de facette `numpunct` de paramètres régionaux donnés, permettant la mise en forme et la ponctuation d’expressions numériques et booléennes.  
@@ -47,7 +48,7 @@ protected:
 ## <a name="remarks"></a>Notes  
  Son comportement est déterminé par les paramètres régionaux [nommés](../standard-library/locale-class.md#name) `_Locname`. Le constructeur initialise son objet de base avec [numpunct](../standard-library/numpunct-class.md#numpunct)\<CharType>( `_Refs`).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<locale>  
   
  **Espace de noms :** std  

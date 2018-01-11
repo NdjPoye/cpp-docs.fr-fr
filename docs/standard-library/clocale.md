@@ -1,5 +1,5 @@
 ---
-title: '&lt;cfenv&gt; | Microsoft Docs'
+title: '&lt;clocale&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -7,26 +7,28 @@ ms.suite:
 ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: <clocale>
 dev_langs: C++
-ms.assetid: 6a17ad51-2182-4e91-8108-65997382acd3
-caps.latest.revision: "15"
+helpviewer_keywords: clocale header
+ms.assetid: 5bde3e01-cf67-4f1f-a383-447ec814d00e
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 7327f2e5bd24e08856fbf1c3fe6512a42742f132
+ms.openlocfilehash: 3a8b0ad6a279771923bf8504b620d2fdba7f827e
 ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="ltcfenvgt"></a>&lt;cfenv&gt;
-Inclut l’en-tête \<fenv.h> de la bibliothèque C Standard et ajoute les noms associés à l’espace de noms `std`.  
+# <a name="ltclocalegt"></a>&lt;clocale&gt;
+Inclut l’en-tête \<locale.h> de la bibliothèque C Standard et ajoute les noms associés à l’espace de noms `std`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-#include <cfenv>  
+#include <clocale>  
   
 ```  
   

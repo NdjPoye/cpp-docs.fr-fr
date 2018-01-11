@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c4192b39c2bb60c9bb2a896a6c30769acff15fb5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ac3034f1384bbd38cb0ca90d0df8ff5bed411d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits, struct
 Struct d’assistance de modèle utilisé pour spécifier toutes les définitions de type critiques qu’un itérateur doit avoir.  
@@ -38,7 +39,7 @@ struct iterator_traits {
    typedef typename Iterator::reference reference;
    };  
 ```    
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le struct de modèle définit les types de membres  
   
 - **iterator_category** : synonyme de **Iterator::iterator_category**.  
@@ -122,14 +123,14 @@ struct std::bidirectional_iterator_tag
 *\  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<iterator>  
   
  **Espace de noms :** std  
   
 ## <a name="see-also"></a>Voir aussi  
  [\<iterator>](../standard-library/iterator.md)   
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
 
 

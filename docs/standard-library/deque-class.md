@@ -99,11 +99,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 852a9d97fed21835c966b4f47af4fb24ad026546
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 58f66f264e5586b2cfbc0125329be4dec34298d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deque-class"></a>deque, classe
 Organise les éléments d'un type en un arrangement linéaire et, comme un vecteur, permet un accès aléatoire rapide à n'importe quel élément, ainsi que l'insertion et la suppression efficace à l'arrière du conteneur. Cependant, contrairement à un vecteur, la classe `deque` prend également en charge l'insertion et la suppression efficace à l'avant du conteneur.  
@@ -145,7 +146,7 @@ class deque
 |-|-|  
 |[deque](#deque)|Construit un `deque.`. Plusieurs constructeurs sont fournis pour configurer le contenu de la nouvelle `deque` de différentes façons : vide ; chargée avec un nombre spécifié d'éléments vides ; contenu déplacé ou copié depuis une autre `deque` ; contenu copié ou déplacé à l'aide d'un itérateur ; un élément copié `count` fois dans la `deque`. Certains constructeurs permettent l'utilisation d'un `allocator` personnalisé pour créer des éléments.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -203,7 +204,7 @@ class deque
 |[operator&#91;&#93;](#op_at)|Retourne une référence à l'élément d'un objet `deque` à une position spécifiée.|  
 |[operator=](#op_eq)|Remplace les éléments de l'objet `deque` par une copie d'un autre objet `deque`.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête** : \<deque>  
   
 ##  <a name="allocator_type"></a>  deque::allocator_type  
@@ -465,7 +466,7 @@ const_iterator cbegin() const;
 ### <a name="remarks"></a>Notes  
  Avec la valeur de retour `cbegin`, les éléments de la plage ne peuvent pas être modifiés.  
   
- Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, il est supposé que `Container` est un conteneur modifiable (non-`const`) de tout type, prenant en charge `begin()` et `cbegin()`.  
+ Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, `Container` est supposé être un conteneur modifiable (autre que `const`) de type indéfini prenant en charge `begin()` et `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -1539,7 +1540,7 @@ const_reference operator[](size_type pos) const;
 ### <a name="remarks"></a>Notes  
  Si la valeur de retour de `operator[]` est assignée à `const_reference`, l’objet de file d’attente à deux extrémités ne peut pas être modifié. Si la valeur de retour de `operator[]` est assignée à **reference**, l’objet de file d’attente à deux extrémités peut être modifié.  
   
- En cas de compilation avec [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) défini sur 1 ou 2, une erreur d’exécution se produit si vous essayez d’accéder à un élément en dehors des limites de la file d’attente à deux extrémités.  Consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md) pour plus d’informations.  
+ En cas de compilation avec [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) défini sur 1 ou 2, une erreur d’exécution se produit si vous essayez d’accéder à un élément en dehors des limites de la file d’attente à deux extrémités.  Pour plus d’informations, voir [Itérateurs vérifiés](../standard-library/checked-iterators.md).  
   
 ### <a name="example"></a>Exemple  
   
@@ -2266,6 +2267,6 @@ int main( )
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
 

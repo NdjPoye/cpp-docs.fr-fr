@@ -14,15 +14,16 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 32b8c5c5f9e1f11f59e1af992fc28cac05d8c8ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36952410bb414dc009d21db58c465dfac680e861
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="container-classsizetype"></a>Conteneur Class::size_type
 > [!NOTE]
->  Cette rubrique fait partie de la documentation Visual C++ comme exemple non fonctionnel de conteneurs utilisés dans la bibliothèque C++ Standard. Pour plus d’informations, consultez [Conteneurs disponibles dans la bibliothèque C++ Standard](../standard-library/stl-containers.md).  
+>  Cette rubrique fait partie de la documentation Visual C++ comme exemple non fonctionnel de conteneurs utilisés dans la bibliothèque standard C++. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).  
   
  Décrit un objet qui peut représenter la longueur de n’importe quelle séquence contrôlée.  
   

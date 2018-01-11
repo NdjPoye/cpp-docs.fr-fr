@@ -29,11 +29,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: da4c8dd6a3141b16b9960720c6bb1789cd06f317
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a07538c7f3ddd58e45fc23a4fc2c9c13850f08a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-class"></a>function, classe
 Wrapper pour un objet pouvant être appelé.  
@@ -116,7 +117,7 @@ public:
 |-|-|  
 |[function](#function)|Construit un wrapper qui est vide ou stocke un objet pouvant être appelé de type arbitraire avec une signature fixe.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -128,7 +129,7 @@ public:
 |-|-|  
 |[assign](#assign)|Assigne un objet pouvant être appelé à cet objet de fonction.|  
 |[swap](#swap)|Échange deux objets pouvant être appelés.|  
-|[cible](#target)|Vérifie si l’objet pouvant être appelé stocké peut être appelé comme spécifié.|  
+|[target](#target)|Vérifie si l’objet pouvant être appelé stocké peut être appelé comme spécifié.|  
 |[target_type](#target_type)|Obtient les informations de type sur l'objet pouvant être appelé.|  
   
 ### <a name="operators"></a>Opérateurs  
@@ -139,7 +140,7 @@ public:
 |[function::operator()](#op_call)|Appelle un objet pouvant être appelé.|  
 |[function::operator=](#op_eq)|Remplace l’objet pouvant être appelé stocké.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<functional>  
   
  **Espace de noms :** std  

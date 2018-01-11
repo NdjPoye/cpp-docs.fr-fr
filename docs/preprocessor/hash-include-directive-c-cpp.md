@@ -1,5 +1,5 @@
 ---
-title: '#<a name="include-directive-cc--microsoft-docs"></a>Include, Directive (C/C++) | Documents Microsoft'
+title: '#Include, Directive (C/C++) | Documents Microsoft'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 218a19225286de9dbcb75bf3e134b9ae66e0271a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f724d566703300d0f929df680b659b7adbfa9577
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="include-directive-cc"></a>#include, directive (C/C++)
 Indique au préprocesseur de traiter le contenu d'un fichier spécifique, comme s'il figurait dans le programme source à l'emplacement où figure la directive.  
@@ -35,14 +36,14 @@ Indique au préprocesseur de traiter le contenu d'un fichier spécifique, comme 
 #include  <path-spec>  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez organiser les définitions de constantes et de macros dans des fichiers Include, puis utiliser des directives `#include` pour les ajouter à un fichier source quelconque. Les fichiers Include sont également utiles pour incorporer des déclarations de variables externes et de types de données complexes. Les types peuvent être définis et nommés une seule fois dans un fichier Include créé à cet effet.  
   
  `path-spec` est un nom de fichier pouvant éventuellement être précédé d'une spécification de répertoire. Le nom de fichier doit désigner un fichier existant. La syntaxe du nom `path-spec` dépend du système d'exploitation sur lequel le programme est compilé.  
   
  Pour plus d’informations sur la façon de référencer des assemblys dans une application C++ qui est compilé à l’aide de [/CLR](../build/reference/clr-common-language-runtime-compilation.md), consultez [#using](../preprocessor/hash-using-directive-cpp.md).  
   
- Les deux formes de syntaxe provoquent le remplacement de cette directive par le contenu complet du fichier Include spécifié. La différence entre ces deux formes concerne l'ordre dans lequel le préprocesseur recherche les fichiers d'en-tête lorsque le chemin d'accès est spécifié de manière incomplète. Le tableau ci-dessous montre la différence entre les deux formes de syntaxe.  
+ Les deux formes de syntaxe provoquent le remplacement de cette directive par le contenu complet du fichier Include spécifié. La différence entre ces deux formes concerne l’ordre dans lequel le préprocesseur recherche les fichiers d’en-tête lorsque le chemin d’accès est spécifié de manière incomplète. Le tableau ci-dessous montre la différence entre les deux formes de syntaxe.  
   
 |Forme syntaxique|Action|  
 |-----------------|------------|  
@@ -51,7 +52,7 @@ Indique au préprocesseur de traiter le contenu d'un fichier spécifique, comme 
   
  Le préprocesseur arrête de chercher dès qu'il trouve un fichier portant le nom spécifié. Si vous spécifiez un chemin d'accès complet et non équivoque pour le fichier Include entre guillemets doubles (" "), le préprocesseur recherche uniquement dans le répertoire défini par ce chemin d'accès et ignore les répertoires standard.  
   
- Si le nom de fichier placé entre guillemets doubles est un chemin d'accès incomplet, le préprocesseur commence la recherche dans le répertoire du fichier parent. Le fichier parent est le fichier qui contient la directive `#include`. Par exemple, si vous incluez un fichier nommé `file2` dans un fichier nommé `file1`, `file1` est le fichier parent.  
+ Si le nom de fichier placé entre guillemets doubles est un chemin d’accès incomplet, le préprocesseur commence la recherche dans le répertoire du fichier parent. Le fichier parent est le fichier qui contient la directive `#include`. Par exemple, si vous incluez un fichier nommé `file2` dans un fichier nommé `file1`, `file1` est le fichier parent.  
   
  Les fichiers Include peuvent être « imbriqués ». En d'autres termes, une directive `#include` peut figurer dans un fichier nommé par une autre directive `#include`. Par exemple, `file2` peut inclure `file3`. Dans ce cas, `file1` reste le parent de `file2` et représente le « grand-parent » de `file3`.  
   

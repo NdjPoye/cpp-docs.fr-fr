@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5bc98560000cc0f12270a55547aa0ee082d312a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fe32798dc98335dbada12e1914a77e89f0d78a25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isnothrowassignable-class"></a>is_nothrow_assignable, classe
 Teste si une valeur de type `From` peut être assignée au type `To` et si l’assignation est connue comme ne levant pas d’exception.  
@@ -43,7 +44,7 @@ struct is_nothrow_assignable;
 ## <a name="remarks"></a>Notes  
  L’expression `declval<To>() = declval<From>()` doit être bien formée et le compilateur doit savoir qu’elle ne lève pas d’exception. `From` et `To` doivent tous deux être des types complets, `void`, ou des tableaux de limite inconnue.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<type_traits>  
   
  **Espace de noms :** std  
