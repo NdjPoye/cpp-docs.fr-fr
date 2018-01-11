@@ -52,11 +52,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4eb4bbd2888b0da8fb1c8431cfb7150ed468d86d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e9bfbad40112632642a0e0a4698e48a19cc334c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fprintfp-fprintfpl-fwprintfp-fwprintfpl"></a>_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
 Envoie les données mises en forme vers un flux.  
@@ -107,7 +108,7 @@ int _fwprintf_p_l(
 ## <a name="remarks"></a>Notes  
  `_fprintf_p` met en forme et envoie une série de caractères et de valeurs vers la sortie `stream`. Chaque fonction `argument` (le cas échéant) est convertie et sortie selon la spécification de format correspondante dans `format`. Pour `_fprintf_p`, l’argument `format` a les mêmes syntaxe et utilisation que dans `_printf_p`. Ces fonctions prennent en charge les paramètres positionnels, ce qui signifie que l’ordre des paramètres utilisés par la chaîne de format peut être modifié. Pour plus d’informations sur les paramètres positionnels, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).  
   
- `_fwprintf_p` est une version à caractères larges de `_fprintf_p` ; dans `_fwprintf_p`, `format` est une chaîne à caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. `_fprintf_p` ne prend actuellement pas en charge la sortie vers un flux UNICODE.  
+ `_fwprintf_p` est une version à caractères larges de `_fprintf_p` ; dans `_fwprintf_p`, `format` est une chaîne à caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. `_fprintf_p` ne prend pas en charge la sortie vers un flux UNICODE pour l’instant.  
   
  Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.  
   
@@ -123,16 +124,16 @@ int _fwprintf_p_l(
 |`_ftprintf_p`|`_fprintf_p`|`_fprintf_p`|`_fwprintf_p`|  
 |`_ftprintf_p_l`|`_fprintf_p_l`|`_fprintf_p_l`|`_fwprintf_p_l`|  
   
- Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête requis|  
 |--------------|---------------------|  
 |`_fprintf_p`, `_fprintf_p_l`|\<stdio.h>|  
 |`_fwprintf_p`, `_fwprintf_p_l`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

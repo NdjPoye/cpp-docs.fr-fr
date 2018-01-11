@@ -1,35 +1,34 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4369 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4369"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4369"
+title: Compilateur avertissement (niveau 1) C4369 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4369
+dev_langs: C++
+helpviewer_keywords: C4369
 ms.assetid: ade87e84-36be-4e00-be99-2930af848feb
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3c0419908ed7d914196cd65d07a3fb43a16d75ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4369
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'énumérateur' : la valeur de l'énumérateur 'valeur' ne peut pas être représentée sous la forme 'type', la valeur est 'nouvelle\_valeur'  
+# <a name="compiler-warning-level-1-c4369"></a>Avertissement du compilateur (niveau 1) C4369
+'énumérateur' : valeur de l’énumérateur 'value' ne peut pas être représentée comme 'type', la valeur est 'nouvelle_valeur'  
   
- Un énumérateur a été calculé comme supérieur à la plus grande valeur du type sous\-jacent spécifié.  Cela est dû à un dépassement de capacité et le compilateur a encapsulé la valeur de l'énumérateur dans la plus faible valeur possible pour le type.  
+ Un énumérateur a été calculé est supérieure à la valeur la plus élevée pour le type sous-jacent spécifié.  Cela a provoqué un dépassement de capacité et le compilateur a la valeur de l’énumérateur à la valeur la plus faible possible pour le type encapsulé.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C4369 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C4369 :.  
   
 ```  
 // C4369.cpp  

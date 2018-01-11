@@ -30,11 +30,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0466b374869ac34c56f58c94111c1738980286a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec7383340e9502764514bb61ce8e10f6cb64c616
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choice-class"></a>Classe choice
 Un bloc de messagerie `choice` est un bloc à plusieurs sources et à cible unique qui représente une interaction de flux de contrôle avec un jeu de sources. Le bloc choice attend que l'une des multiples sources produise un message et propage l'index de la source qui a généré le message.  
@@ -84,7 +85,7 @@ class choice: public ISource<size_t>;
 |[unlink_targets](#unlink_targets)|Dissocie toutes les cibles à partir de ce `choice` bloc de messagerie. (Substitue [ISource::unlink_targets](isource-class.md#unlink_targets).)|  
 |[value](#value)|Obtient le message dont l’index a été sélectionnée par le `choice` bloc de messagerie.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le bloc choice garantit qu’un seul des messages entrants est consommée.  
   
  Pour plus d’informations, consultez [des blocs de messages asynchrones](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -94,7 +95,7 @@ class choice: public ISource<size_t>;
   
  `choice`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -131,7 +132,7 @@ virtual void acquire_ref(_Inout_ ITarget<size_t>* _PTarget);
  `_PTarget`  
  Pointeur vers le bloc cible qui appelle cette méthode.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode est appelée par une `ITarget` objet lié à cette source pendant le `link_target` (méthode).  
   
 ##  <a name="ctor"></a>choix 
@@ -170,7 +171,7 @@ choice(
  `_Choice`  
  Bloc de messagerie `choice` à partir duquel la copie est effectuée. Notez que l’objet d'origine est orphelin, ce qui en fait un constructeur de déplacement.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le runtime utilise le planificateur par défaut si vous ne spécifiez pas les paramètres `_PScheduler` ou `_PScheduleGroup` .  
   
  La construction du déplacement ne s’exécute pas en présence d’un verrou, ce qui signifie que c’est à l’utilisateur de s’assurer qu’il n’y a pas de tâches non activables en vol au moment du déplacement. Sinon, de nombreuses courses peuvent se produire, ce qui aboutit à des exceptions ou à un état incohérent.  
@@ -203,7 +204,7 @@ virtual message<size_t>* consume(
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le `message` que l’appelant possède désormais la propriété de l’objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `consume` méthode est similaire à `accept`, mais doit toujours être précédé d’un appel à `reserve` qui retourné `true`.  
   
 ##  <a name="has_value"></a>has_value 
@@ -230,7 +231,7 @@ size_t index();
 ### <a name="return-value"></a>Valeur de retour  
  L’index de message.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La charge utile de message peut être extraite à l’aide de la `get` (méthode).  
   
 ##  <a name="link_target"></a>link_target 
@@ -274,7 +275,7 @@ virtual void release_ref(_Inout_ ITarget<size_t>* _PTarget);
  `_PTarget`  
  Pointeur vers le bloc cible qui appelle cette méthode.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode est appelée par un `ITarget` objet dissocié de cette source. Le bloc source est autorisé à libérer les ressources réservées pour le bloc cible.  
   
 ##  <a name="reserve"></a>réserve 
@@ -297,7 +298,7 @@ virtual bool reserve(
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si le message a été réservé avec succès, `false` dans le cas contraire. Les réservations peuvent échouer pour de nombreuses raisons, notamment : le message a été déjà réservé ou accepté par une autre cible, la source pourrait refuser des réservations et ainsi de suite.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Après avoir appelé `reserve`, si elle réussit, vous devez appeler `consume` ou `release` afin d’accepter ou renoncer possession du message, respectivement.  
   
 ##  <a name="unlink_target"></a>unlink_target 
@@ -320,7 +321,7 @@ virtual void unlink_target(_Inout_ ITarget<size_t>* _PTarget);
 virtual void unlink_targets();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode ne doit pas être appelée à partir du destructeur, car le destructeur pour interne `single_assignment` bloc annulera la liaison correctement.  
   
 ##  <a name="value"></a>valeur 
@@ -341,7 +342,7 @@ _Payload_type const& value();
 ### <a name="return-value"></a>Valeur de retour  
  La charge utile du message.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Car un `choice` bloc de messagerie peut prendre les entrées avec les types de charge utile différents, vous devez spécifier le type de la charge utile au point de récupération. Vous pouvez déterminer le type selon le résultat de la `index` (méthode).  
   
 ## <a name="see-also"></a>Voir aussi  

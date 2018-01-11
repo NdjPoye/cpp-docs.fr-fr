@@ -1,55 +1,57 @@
 ---
-title: "CDBPropSet::SetGUID | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDBPropSet.SetGUID"
-  - "CDBPropSet.SetGUID"
-  - "ATL::CDBPropSet::SetGUID"
-  - "SetGUID"
-  - "CDBPropSet::SetGUID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddProperty (méthode)"
-  - "SetGUID (méthode)"
+title: CDBPropSet::SetGUID | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDBPropSet.SetGUID
+- CDBPropSet.SetGUID
+- ATL::CDBPropSet::SetGUID
+- SetGUID
+- CDBPropSet::SetGUID
+dev_langs: C++
+helpviewer_keywords:
+- SetGUID method
+- AddProperty method
 ms.assetid: a4cce036-cf1f-4897-9712-7b01eaf887ff
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e0fed876cabd9a197d022a35829174bcc7e43e97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CDBPropSet::SetGUID
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Affectez la valeur au champ de **EnsembleProprietesGuide** dans la structure de **DBPROPSET**.  
+# <a name="cdbpropsetsetguid"></a>CDBPropSet::SetGUID
+Définit le **guidPropertySet** champ dans le **DBPROPSET** structure.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      void SetGUID(   
-   const GUID& guid    
+      void SetGUID(   
+   const GUID& guid    
 ) throw( );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `guid`  
- \[in\] UN GUIDE utilisé pour définir le champ de **ObtenirProprieteGuide** de la structure de [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx).  
+ [in] Un GUID utilisé pour définir le **guidPropertySet** champ le [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) structure.  
   
-## Notes  
- Ce champ peut également être défini par [constructeur](../../data/oledb/cdbpropset-cdbpropset.md).  
+## <a name="remarks"></a>Notes  
+ Ce champ peut être défini le [constructeur](../../data/oledb/cdbpropset-cdbpropset.md) également.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CDBPropSet, classe](../../data/oledb/cdbpropset-class.md)

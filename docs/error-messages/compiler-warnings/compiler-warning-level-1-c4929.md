@@ -1,35 +1,34 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4929 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4929"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4929"
+title: Compilateur avertissement (niveau 1) C4929 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4929
+dev_langs: C++
+helpviewer_keywords: C4929
 ms.assetid: 95f8ab4f-4468-4caa-acd5-8f4592f03b3c
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 38bfd20538db1f11ab2f7f20ab4079e9ed201bc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4929
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'fichier : typelibrary contient une union ; qualificateur 'embedded\_idl' ignoré  
+# <a name="compiler-warning-level-1-c4929"></a>Avertissement du compilateur (niveau 1) C4929
+'fichier' : typelibrary contient une union ; en ignorant le qualificateur 'embedded_idl ' ignoré  
   
- L'attribut embedded\_idl de [\#import](../../preprocessor/hash-import-directive-cpp.md) ne peut s'appliquer à la bibliothèque de types car une union est présente dans la bibliothèque de types.  Pour résoudre ce problème, n'utilisez pas l'attribut embedded\_idl.  
+ L’attribut embedded_idl de [#import](../../preprocessor/hash-import-directive-cpp.md) pas pu être appliquée à la bibliothèque de types car une union est présente dans la bibliothèque de types. Pour résoudre cet avertissement, n’utilisez pas embedded_idl.  
   
-## Exemple  
- L'exemple suivant définit un composant.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant définit un composant.  
   
 ```  
 // C4929a.cpp  
@@ -61,8 +60,8 @@ struct C : I {
 };  
 ```  
   
-## Exemple  
- L'exemple suivant génère l'erreur C4929 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’avertissement C4929.  
   
 ```  
 // C4929b.cpp  

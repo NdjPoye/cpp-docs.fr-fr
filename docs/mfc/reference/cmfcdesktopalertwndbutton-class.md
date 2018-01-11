@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ddf357c8da29f7e52546c8185f148b854a9611c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae1153546851e6a34c14dacd33db04091de24557
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>Classe de CMFCDesktopAlertWndButton
 Permet de boutons à ajouter à une boîte de dialogue alerte sur le bureau.  
@@ -58,7 +59,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
   
 |||  
 |-|-|  
-|Nom|Description|  
+|Name|Description|  
 |`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|Valeur booléenne qui spécifie si le bouton est affiché dans la zone de légende de la boîte de dialogue d’alerte.|  
 |`CMFCDesktopAlertWndButton::m_bIsCloseButton`|Valeur booléenne qui spécifie si le bouton ferme la boîte de dialogue d’alerte.|  
   
@@ -86,7 +87,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
   
  [CMFCDesktopAlertWndButton](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdesktopalertwnd.h  
   
 ##  <a name="iscaptionbutton"></a>CMFCDesktopAlertWndButton::IsCaptionButton  

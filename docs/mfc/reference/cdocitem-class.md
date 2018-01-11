@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3d8ca7968011061b36fe0b0e54bea457ee40c431
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a4987554965674612eaf8d9aa78c659f7f28b75
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdocitem-class"></a>Classe de CDocItem
 Classe de base des éléments de document, qui sont les composants des données d'un document.  
@@ -45,7 +46,7 @@ class CDocItem : public CCmdTarget
 |[CDocItem::GetDocument](#getdocument)|Retourne le document qui contient l’élément.|  
 |[CDocItem::IsBlank](#isblank)|Détermine si l’élément contient toutes les informations.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CDocItem`objets sont utilisés pour représenter des éléments OLE dans des documents de client et le serveur.  
   
  Pour plus d’informations, consultez l’article [conteneurs : implémentation d’un conteneur](../../mfc/containers-implementing-a-container.md).  
@@ -57,7 +58,7 @@ class CDocItem : public CCmdTarget
   
  `CDocItem`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxole.h  
   
 ##  <a name="getdocument"></a>CDocItem::GetDocument  
@@ -70,7 +71,7 @@ CDocument* GetDocument() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le document qui contient l’élément ; **NULL**, si l’élément n’est pas partie d’un document.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction est substituée dans les classes dérivées [COleClientItem](../../mfc/reference/coleclientitem-class.md) et [COleServerItem](../../mfc/reference/coleserveritem-class.md), qui retourne un pointeur soit un [COleDocument](../../mfc/reference/coledocument-class.md), un [ COleLinkingDoc plutôt](../../mfc/reference/colelinkingdoc-class.md), ou un [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) objet.  
   
 ##  <a name="isblank"></a>CDocItem::IsBlank  
@@ -83,7 +84,7 @@ virtual BOOL IsBlank() const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’élément ne contient aucune information ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, `CDocItem` objets ne sont pas vides. [COleClientItem](../../mfc/reference/coleclientitem-class.md) objets sont parfois vides, car ils dérivent directement `CDocItem`. Toutefois, [COleServerItem](../../mfc/reference/coleserveritem-class.md) les objets sont toujours vides. Par défaut, les applications OLE contenant `COleClientItem` les objets qui n’ont aucune x ou les y étendue sont sérialisés. Pour ce faire, vous devez retourner **TRUE** à partir d’une substitution de `IsBlank` lorsque l’élément n’a ni y ni x étendue.  
   
  Remplacez cette fonction si vous souhaitez implémenter d’autres actions pendant la sérialisation.  

@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d5ed046555b102c77b8213fc8755220d1f2d0777
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 92d748b9242dcf9e068774703cceba86fce747c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="movsb"></a>__movsb
 **Section spécifique à Microsoft**  
@@ -49,7 +50,7 @@ void __movsb(
  [in] `Count`  
  Nombre d'octets à copier.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
@@ -57,7 +58,7 @@ void __movsb(
   
  **Fichier d’en-tête** \<intrin.h >  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le résultat est que la première `Count` octets vers lequel pointe `Source` sont copiés vers le `Destination` chaîne.  
   
  Cette routine est disponible uniquement en tant qu'intrinsèque.  

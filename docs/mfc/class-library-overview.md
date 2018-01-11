@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 014e1792a3431fee8dad673d17afdb84ef620936
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce5a658c86611c9fdd0663145ae3c09ef6544aa0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="class-library-overview"></a>Vue d'ensemble de la bibliothèque de classes
 Cette vue d’ensemble de la catégorie et décrit les classes dans les MFC Microsoft Foundation Class Library () version 9.0. Les classes de MFC, ensemble, constituent une infrastructure d’application, l’infrastructure d’une application écrite pour l’API Windows. Votre tâche de programmation consiste à fournir le code qui est spécifique à votre application.  

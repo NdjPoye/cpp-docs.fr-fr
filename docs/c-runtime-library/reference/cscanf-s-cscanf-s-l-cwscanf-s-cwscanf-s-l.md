@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -38,8 +37,7 @@ f1_keywords:
 - _tcscanf_s_l
 - tcscanf_s
 - tcscanf_s_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - cscanf_s function
 - _cwscanf_s_l function
@@ -57,36 +55,22 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: af647340f579d6dfba8bcc1a67a4e90b40753a4e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8fa7fd0f387b74396f57b511aaaa6a042d78f945
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cscanfs-cscanfsl-cwscanfs-cwscanfsl"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 Lit les données mises en forme à partir de la console. Ces versions plus sécurisées de [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md) intègrent des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -126,7 +110,7 @@ int _cwscanf_s_l(
   
  Ces fonctions valident leurs paramètres. Si `format` est un pointeur Null, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent `EOF` et `errno` a la valeur `EINVAL`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction `_cscanf_s` lit les données directement à partir de la console dans les emplacements donnés par `argument`. La fonction [_getche](../../c-runtime-library/reference/getch-getwch.md) est utilisée pour lire les caractères. Chaque paramètre facultatif doit être un pointeur désignant une variable dont le type correspond à un spécificateur de type dans `format`. Le format contrôle l’interprétation des champs d’entrée et a les mêmes forme et fonction que le paramètre `format` de la fonction [scanf_s](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md). `_cscanf_s` renvoie normalement le caractère d’entrée, sauf si le dernier appel était destiné à `_ungetch`.  
   
  Comme les autres versions sécurisées des fonctions dans le `scanf` famille, `_cscanf_s` et `_cswscanf_s` requièrent des arguments de taille pour les caractères du champ de type `c`, `C`, `s`, `S`, et `[`. Pour plus d’informations, consultez [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).  
@@ -143,14 +127,14 @@ int _cwscanf_s_l(
 |`_tcscanf_s`|`_cscanf_s`|`_cscanf_s`|`_cwscanf_s`|  
 |`_tcscanf_s_l`|`_cscanf_s_l`|`_cscanf_s_l`|`_cwscanf_s_l`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_cscanf_s`,`_cscanf_s_l`|\<conio.h>|  
 |`_cwscanf_s`, `_cwscanf_s_l`|\<conio.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

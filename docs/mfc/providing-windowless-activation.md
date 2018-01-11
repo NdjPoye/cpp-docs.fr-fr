@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 536788ec2a09d00f4bd92cc602ea9a558415ef72
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb33f1dd9f8be8cb06cdfcc2aeecb653c2762410
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="providing-windowless-activation"></a>Mise à disposition de l'activation sans fenêtre
 Code de création de fenêtre (autrement dit, tout ce qui se produit lorsque vous appelez **CreateWindow**) est coûteux à exécuter. Un contrôle qui gère une fenêtre affichée à l'écran doit gérer les messages de la fenêtre. Les contrôles sans fenêtre sont donc plus rapides que les contrôles avec fenêtre.  
@@ -59,7 +60,7 @@ Code de création de fenêtre (autrement dit, tout ce qui se produit lorsque vou
   
  Dans les contrôles sans fenêtre, vous devez toujours utiliser les fonctions membres `COleControl` au lieu des fonctions membres `CWnd` correspondantes ou leurs fonctions API Win32 associées.  
   
- Vous pouvez souhaiter qu'un contrôle sans fenêtre soit la cible d'une opération glisser-déplacer OLE. Normalement, cela suppose que la fenêtre de contrôle soit stockée en tant que cible de déplacement. Puisque le contrôle n'a aucune fenêtre qui lui est propre, le conteneur utilise sa propre fenêtre comme cible de déplacement. Le contrôle fournit une implémentation de l'interface de `IDropTarget` à laquelle le conteneur peut déléguer des appels au moment opportun. Pour exposer cette interface au conteneur, vous devez substituer [COleControl::GetWindowlessDropTarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget). Exemple :  
+ Vous pouvez souhaiter qu’un contrôle sans fenêtre soit la cible d’une opération glisser-déposer OLE. Normalement, cela suppose que la fenêtre de contrôle soit stockée en tant que cible de dépôt. Puisque le contrôle n’a aucune fenêtre qui lui est propre, le conteneur utilise sa propre fenêtre comme cible de dépôt. Le contrôle fournit une implémentation de l'interface de `IDropTarget` à laquelle le conteneur peut déléguer des appels au moment opportun. Pour exposer cette interface au conteneur, vous devez substituer [COleControl::GetWindowlessDropTarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget). Exemple :  
   
  [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/cpp/providing-windowless-activation_4.cpp)]  
   

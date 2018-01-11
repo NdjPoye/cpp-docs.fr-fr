@@ -1,37 +1,39 @@
 ---
-title: "CDataConnection::operator CDataSource&amp; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataSource&"
-  - "CDataConnection.operatorCDataSource&"
-  - "operatorCDataSource&"
-  - "CDataConnection::operatorCDataSource&"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDataSource& (opérateur)"
-  - "opérateur & (CDataSource)"
+title: CDataConnection::operator CDataSource&amp; | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataSource&
+- CDataConnection.operatorCDataSource&
+- operatorCDataSource&
+- CDataConnection::operatorCDataSource&
+dev_langs: C++
+helpviewer_keywords:
+- CDataSource& operator
+- operator & (CDataSource)
 ms.assetid: 852faeee-f1b1-4465-9828-b261d1edf022
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5cd6c1821f49ba56b8d6ca27932b6cd7f0e17bf6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CDataConnection::operator CDataSource&amp;
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retourne une référence à l'objet contenu `CDataSource`.  
+# <a name="cdataconnectionoperator-cdatasourceamp"></a>CDataConnection::operator CDataSource&amp;
+Retourne une référence à la relation contenant-contenu `CDataSource` objet.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -39,19 +41,19 @@ operator const CDataSource&() throw( );
   
 ```  
   
-## Notes  
- Cet opérateur retourne un pointeur vers l'objet `CDataSource`, qui vous permet de passer un objet `CDataConnection` là où une référence `CDataSource` est attendue.  
+## <a name="remarks"></a>Notes  
+ Cet opérateur retourne une référence à la relation contenant-contenu `CDataSource` objet, ce qui vous permet de passer un `CDataConnection` objet sur lequel un `CDataSource` référence est attendue.  
   
-## Exemple  
- Si vous avez une fonction \(comme par exemple `func` ci\-dessous\) qui prend une référence `CDataSource`, vous pouvez utiliser **CDataSource&** pour passer un objet `CDataConnection` à la place.  
+## <a name="example"></a>Exemple  
+ Si vous avez une fonction (tel que `func` ci-dessous) qui prend un `CDataSource` référence, vous pouvez utiliser **CDataSource &** pour passer un `CDataConnection` à la place de l’objet.  
   
- [!code-cpp[NVC_OLEDB_Consumer#3](../../data/oledb/codesnippet/CPP/cdataconnection-operator-cdatasource-amp_1.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#3](../../data/oledb/codesnippet/cpp/cdataconnection-operator-cdatasource-amp_1.cpp)]  
   
- [!code-cpp[NVC_OLEDB_Consumer#4](../../data/oledb/codesnippet/CPP/cdataconnection-operator-cdatasource-amp_2.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#4](../../data/oledb/codesnippet/cpp/cdataconnection-operator-cdatasource-amp_2.cpp)]  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
- [CDataConnection, classe](../../data/oledb/cdataconnection-class.md)   
- [CDataConnection::operator CDataSource\*](../../data/oledb/cdataconnection-operator-cdatasource-star.md)
+## <a name="see-also"></a>Voir aussi  
+ [CDataConnection (classe)](../../data/oledb/cdataconnection-class.md)   
+ [CDataConnection::operator CDataSource*](../../data/oledb/cdataconnection-operator-cdatasource-star.md)

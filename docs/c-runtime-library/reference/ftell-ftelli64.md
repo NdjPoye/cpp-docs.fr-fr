@@ -38,11 +38,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4b37db89ca7d9e3facb7de2fbce2dc819cfa03e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: df0feee9beb2b2fc5144974f1fc06ff2b8d02b80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ftell-ftelli64"></a>ftell, _ftelli64
 Obtient la position actuelle d’un pointeur de fichier.  
@@ -67,7 +68,7 @@ __int64 _ftelli64(
   
  Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `ftell` et `_ftelli64` fonctions récupèrent la position actuelle du pointeur de fichier (le cas échéant) associée à `stream`. La position est exprimée sous la forme d’un décalage par rapport au début du flux.  
   
  Notez que quand un fichier est ouvert pour un ajout de données, la position de fichier actuelle est déterminée par la dernière opération d’E/S, pas par l’emplacement auquel l’écriture suivante se produirait. Par exemple, si un fichier est ouvert pour un ajout et que la dernière opération était une lecture, la position de fichier est le point où l’opération de lecture suivante commencerait, pas celui où l’écriture suivante démarrerait. (Quand un fichier est ouvert pour un ajout, la position de fichier est déplacée vers la fin du fichier avant toute opération d’écriture.) Si aucune opération d’E/S ne s’est produite sur un fichier ouvert pour un ajout, la position de fichier correspond au début du fichier.  
@@ -76,14 +77,14 @@ __int64 _ftelli64(
   
  Cette fonction verrouille le thread appelant pendant l’exécution et est donc thread-safe. Pour une version sans verrouillage, voir `_ftell_nolock`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête requis|En-têtes facultatifs|  
 |--------------|---------------------|----------------------|  
 |`ftell`|\<stdio.h>|\<errno.h>|  
 |`_ftelli64`|\<stdio.h>|\<errno.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

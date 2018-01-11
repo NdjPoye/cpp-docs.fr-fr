@@ -28,14 +28,15 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 20f916f9168789dc9d95952ae05b087fdeab7ec8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0ec12a9da8a468d3b81e30961eb3eff25de9894a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgets"></a>cgets
 Cette fonction POSIX est déconseillée. Utilisez plutôt [_cgets](../../c-runtime-library/cgets-cgetws.md) ou sa version sécurisée [_cgets_s](../../c-runtime-library/reference/cgets-s-cgetws-s.md), qui sont conformes à la spécification ISO C++.  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [HYPERLINK "http://msdn.microsoft.com/en-us/library/windows/apps/jj606124.aspx" \o "CRT functions not supported with /ZW" CRT functions not supported with /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) (Fonctions CRT non prises en charge avec /ZW).
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [HYPERLINK "http://msdn.microsoft.com/en-us/library/windows/apps/jj606124.aspx" \o "CRT functions not supported with /ZW" CRT functions not supported with /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) (Fonctions CRT non prises en charge avec /ZW).

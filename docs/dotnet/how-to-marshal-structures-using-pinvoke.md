@@ -18,11 +18,14 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 52fa9aece3f31cf20029e58352d459f91bb56526
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5bfca720a97ac8462afa970e54f13e0bd74a7808
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Comment : marshaler des structures à l’aide de PInvoke
 Ce document explique comment les fonctions natives qui acceptent des chaînes de style C peuvent être appelées à partir de fonctions managées qui fournissent une instance de <xref:System.String> à l’aide de P/Invoke. Bien que nous vous recommandons d’utiliser les fonctionnalités d’interopérabilité C++ au lieu de P/Invoke, car P/Invoke fournit peu compilation rapport d’erreurs, n’est pas de type sécurisé et peut être fastidieux à implémenter, si l’API non managée est empaqueté en tant que DLL et le code source n’est pas disponible, P/Invoke est la seule option. Dans le cas contraire, consultez les documents suivants :  

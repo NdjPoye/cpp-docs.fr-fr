@@ -145,11 +145,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9033d754830a173e261ca7977302da09ef4a809b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a958bf441809da24b317b777fd2f79946f3dc727
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset, classe
 La classe de modèle décrit un objet qui contrôle une séquence de longueur variable constituée d'éléments de type `const Key`. La séquence est triée par ordre faible avec une fonction de hachage, qui partitionne la séquence en un ensemble trié de sous-séquences appelées compartiments. Dans chaque compartiment, une fonction de comparaison détermine si des paires d'éléments possèdent un ordre équivalent. Chaque élément sert à la fois de clé de tri et de valeur. La séquence est représentée de façon à permettre la recherche, l'insertion et la suppression d'un élément arbitraire à l'aide d'un certain nombre d'opérations qui peut être indépendant du nombre d'éléments de la séquence (temps constant), du moins lorsque les compartiments sont de longueur à peu près équivalente. Dans le pire des cas, lorsque tous les éléments se trouvent dans un compartiment, le nombre d'opérations est proportionnel au nombre d'éléments de la séquence (temps linéaire). De plus, l'insertion d'un élément n'entraîne pas la non validité des itérateurs, et la suppression d'un élément ne rend non valides que les itérateurs qui pointent vers l'élément supprimé.  
@@ -240,13 +241,13 @@ class unordered_multiset;
   
  L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un objet allocateur stocké de type [unordered_multiset::allocator_type](#allocator_type). Un tel objet allocateur doit avoir la même interface externe qu'un objet de classe de modèle `allocator`. Notez que l'objet allocateur stocké n'est pas copié lorsque l'objet conteneur est assigné.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<unordered_set>  
   
  **Espace de noms :** std  
   
 ##  <a name="allocator_type"></a>  unordered_multiset::allocator_type  
- Type d’un allocateur pour la gestion du stockage.  
+ Type d'un allocateur pour la gestion du stockage.  
   
 ```  
 typedef Alloc allocator_type;  
@@ -558,7 +559,7 @@ const_iterator cbegin() const;
 ### <a name="remarks"></a>Notes  
  Avec la valeur de retour `cbegin`, les éléments de la plage ne peuvent pas être modifiés.  
   
- Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, il est supposé que `Container` est un conteneur modifiable (autre que `const`) de tout type, prenant en charge `begin()` et `cbegin()`.  
+ Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, `Container` est supposé être un conteneur modifiable (autre que `const`) de type indéfini prenant en charge `begin()` et `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -667,7 +668,7 @@ typedef T1 const_iterator;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type décrit un objet pouvant servir d'itérateur vers l'avant constant pour la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l'implémentation `T1`.  
+ Le type décrit un objet pouvant servir d'itérateur vers l'avant constant pour la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l’implémentation `T1`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -899,7 +900,7 @@ typedef T3 difference_type;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type d'entier signé décrit un objet qui peut représenter la différence entre les adresses de deux éléments quelconques dans la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l'implémentation `T3`.  
+ Le type d'entier signé décrit un objet qui peut représenter la différence entre les adresses de deux éléments quelconques dans la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l’implémentation `T3`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -967,7 +968,7 @@ iterator emplace(Args&&... args);
 ### <a name="return-value"></a>Valeur de retour  
  Itérateur vers l’élément qui vient d’être inséré.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Aucune référence aux éléments conteneurs n’est invalidée par cette fonction, mais elle peut invalider tous les itérateurs du conteneur.  
   
  Durant l’insertion, si une exception est levée mais qu’elle ne se produit pas dans la fonction de hachage du conteneur, le conteneur n’est pas modifié. Si l'exception est levée dans la fonction de hachage, le résultat n'est pas défini.  
@@ -975,7 +976,7 @@ iterator emplace(Args&&... args);
  Pour obtenir un exemple de code, consultez [multiset::emplace](../standard-library/multiset-class.md#emplace).  
   
 ##  <a name="emplace_hint"></a>  unordered_multiset::emplace_hint  
- Insère un élément construit sur place (aucune opération de copie ni de déplacement n’est effectuée) avec un indicateur de positionnement.  
+ Insère un élément construit sur place (sans opération de copie ni de déplacement) avec un indicateur de positionnement.  
   
 ```  
 template <class... Args>  
@@ -995,7 +996,7 @@ iterator emplace_hint(
 ### <a name="return-value"></a>Valeur de retour  
  Itérateur vers l’élément qui vient d’être inséré.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Aucune référence aux éléments conteneurs n’est invalidée par cette fonction, mais elle peut invalider tous les itérateurs du conteneur.  
   
  Durant l’insertion, si une exception est levée mais qu’elle ne se produit pas dans la fonction de hachage du conteneur, le conteneur n’est pas modifié. Si l'exception est levée dans la fonction de hachage, le résultat n'est pas défini.  
@@ -1697,7 +1698,7 @@ typedef T4 local_iterator;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type décrit un objet pouvant servir d'itérateur vers l'avant pour un compartiment. Il est décrit ici comme un synonyme du type défini par l'implémentation `T4`.  
+ Le type décrit un objet pouvant servir d'itérateur vers l'avant pour un compartiment. Il est décrit ici comme un synonyme du type défini par l’implémentation `T4`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2247,7 +2248,7 @@ typedef T2 size_type;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type d'entier non signé décrit un objet qui peut représenter la longueur de n'importe quelle séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l'implémentation `T2`.  
+ Le type d'entier non signé décrit un objet qui peut représenter la longueur de n'importe quelle séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l’implémentation `T2`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2477,6 +2478,6 @@ int main()
 ## <a name="see-also"></a>Voir aussi  
  [<unordered_set>](../standard-library/unordered-set.md)   
  [Conteneurs](../cpp/containers-modern-cpp.md)   
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
 

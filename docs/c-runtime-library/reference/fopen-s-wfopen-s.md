@@ -44,11 +44,12 @@ caps.latest.revision: "41"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 49a884b8ae4ea34c02a0ca57563077add4d9d6fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3205577627967fa58c3fbc0d1318a48fc5525561
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
 Ouvre un fichier. Ces versions de [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md) intègrent des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -209,7 +210,7 @@ errno_t _wfopen_s(
 |`b`|`_O_BINARY`|  
 |`t`|`_O_TEXT`|  
 |`c`|Aucun|  
-|`n`|Aucun|  
+|`n`|Aucun.|  
 |`S`|`_O_SEQUENTIAL`|  
 |`R`|`_O_RANDOM`|  
 |`T`|`_O_SHORTLIVED`|  
@@ -220,14 +221,14 @@ errno_t _wfopen_s(
   
  Si vous utilisez le mode `rb`, vous n'aurez pas besoin de porter votre code, et attendez-vous à lire une majeure partie du fichier et/ou ne vous souciez pas des performances réseau ; des fichiers Win32 mappés en mémoire peuvent aussi être une option.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête requis|  
 |--------------|---------------------|  
 |`fopen_s`|\<stdio.h>|  
 |`_wfopen_s`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

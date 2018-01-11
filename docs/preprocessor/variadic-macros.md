@@ -1,36 +1,37 @@
 ---
-title: "Macros Variadic | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "macros variadiques (C++)"
-  - "__VA_ARGS__ (spécificateur de macros variadiques)"
+title: Macros Variadic | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- variadic macros [C++]
+- __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bf4d669f1a716751d02e06c2c52de5df5128b1a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Macros Variadic
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les macros variadic sont des macros similaires à des fonctions qui contiennent un nombre variable d'arguments.  
+# <a name="variadic-macros"></a>Macros Variadic
+Macros Variadic sont des macros de type fonction contenant un nombre variable d’arguments.  
   
-## Notes  
- Pour utiliser des macros variadic, les points de suspension peuvent être spécifiés comme argument formel final dans une définition de macro, et l'identificateur de remplacement `__VA_ARGS__` peut être utilisé dans la définition afin d'insérer des arguments supplémentaires.  `__VA_ARGS__` est remplacé par tous les arguments qui correspondent aux points de suspension, notamment les virgules entre elles.  
+## <a name="remarks"></a>Notes  
+ Pour utiliser des macros variadiques, les points de suspension peut être spécifié comme argument formel final dans une définition de macro et l’identificateur de remplacement `__VA_ARGS__` peut être utilisée dans la définition d’insérer les arguments en trop.  `__VA_ARGS__`est remplacé par tous les arguments qui correspondent à des points de suspension, y compris des virgules entre eux.  
   
- La norme C spécifie qu'au moins un argument doit être passé aux points de suspension, pour garantir que la macro ne se résout pas à une expression avec une virgule de fin.  L'implémentation Visual C\+\+ supprime une virgule de fin si aucun argument n'est passé aux points de suspension.  
+ La norme du C indique qu’au moins un argument doit être transmis à la sélection, pour vous assurer que la macro n’est pas résolu en une expression avec une virgule de fin.  L’implémentation Visual C++ permettent de supprimer une virgule de fin si aucun argument pour les points de suspension.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```cpp  
 // variadic_macros.cpp  
@@ -59,7 +60,7 @@ int main() {
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 here are some varargs1(1)  
@@ -67,8 +68,7 @@ here are some varargs2(4)
 here are some varargs3(5)  
 hello, world  
 error  
-  
 ```  
   
-## Voir aussi  
- [Macros](../preprocessor/macros-c-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Macros (C/C++)](../preprocessor/macros-c-cpp.md)

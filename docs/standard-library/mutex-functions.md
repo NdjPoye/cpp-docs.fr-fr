@@ -13,7 +13,7 @@ f1_keywords:
 - mutex/std::lock
 - mutex/std::try_to_lock
 ms.assetid: 78ab3c8b-c7db-4226-ac93-e2e78ff8b964
-caps.latest.revision: 11
+caps.latest.revision: "11"
 manager: ghogen
 helpviewer_keywords:
 - std::adopt_lock [C++]
@@ -21,12 +21,11 @@ helpviewer_keywords:
 - std::defer_lock [C++]
 - std::lock [C++]
 - std::try_to_lock [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: a81d134a4fb49f9123dbed5b4146976d5c676379
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt;, fonctions et variables
 ||||  
@@ -60,7 +59,7 @@ void call_once(once_flag& Flag,
  `A`  
  Liste d’arguments.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si `Flag` n’est pas valide, la fonction lève une [system_error](../standard-library/system-error-class.md) dont le code d’erreur est `invalid_argument`. Sinon, la fonction de modèle utilise son argument `Flag` pour s’assurer qu’elle appelle `F(A...)` correctement exactement une fois, quel que soit le nombre de fois où la fonction de modèle est appelée. Si `F(A...)` se termine en levant une exception, l’appel n’a pas réussi.  
   
 ##  <a name="defer_lock"></a>  defer_lock, variable  
@@ -78,7 +77,7 @@ template <class L1, class L2, class... L3>
 void lock(L1&, L2&, L3&...);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les arguments de la fonction de modèle doivent être des *types mutex*, sauf que les appels à `try_lock` peuvent lever des exceptions.  
   
  La fonction verrouille tous ses arguments sans blocage par des appels à `lock`, `try_lock` et `unlock`. Si un appel à `lock` ou `try_lock` lève une exception, la fonction appelle `unlock` sur l’un des objets mutex qui ont été correctement verrouillés avant de relever l’exception.  
@@ -92,7 +91,6 @@ const try_to_lock_t try_to_lock;
   
 ## <a name="see-also"></a>Voir aussi  
  [\<mutex>](../standard-library/mutex.md)
-
 
 
 

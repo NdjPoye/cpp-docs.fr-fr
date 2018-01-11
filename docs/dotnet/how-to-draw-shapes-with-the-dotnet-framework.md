@@ -1,37 +1,39 @@
 ---
-title: "Comment&#160;: dessiner des formes avec le .NET Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dessiner, formes"
-  - "GDI+, dessiner des formes"
-  - "formes"
-  - "formes, dessiner"
+title: "Comment : dessiner des formes avec le .NET Framework | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- GDI+, drawing shapes
+- drawing, shapes
+- shapes
+- shapes, drawing
 ms.assetid: ffad5ae7-6ef4-4550-8940-be3f209a101d
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 62579ca21ba4a4dcf89aea6ff717ce6c884073b3
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
-# Comment&#160;: dessiner des formes avec le .NET Framework
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'exemple de code suivant utilise la classe <xref:System.Drawing.Graphics> pour modifier le gestionnaire d'événements <xref:System.Windows.Forms.Form.OnPaint%2A> afin de récupérer un pointeur vers l'objet <xref:System.Drawing.Graphics> pour le formulaire principal.  Ensuite, ce pointeur est utilisé pour définir la couleur d'arrière\-plan du formulaire et dessiner une ligne ainsi qu'un arc à l'aide des méthodes <xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName> et <xref:System.Drawing.Graphics.DrawArc%2A>.  
+# <a name="how-to-draw-shapes-with-the-net-framework"></a>Comment : dessiner des formes avec le .NET Framework
+Le de code suivant montre comment utiliser le <xref:System.Drawing.Graphics> classe pour modifier le <xref:System.Windows.Forms.Form.OnPaint%2A> Gestionnaire d’événements à récupérer un pointeur vers le <xref:System.Drawing.Graphics> objet pour le formulaire principal. Ce pointeur est ensuite utilisé pour définir la couleur d’arrière-plan du formulaire et dessiner une ligne et un à l’aide de l’arc le <xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName> et <xref:System.Drawing.Graphics.DrawArc%2A> méthodes.  
   
 > [!NOTE]
->  GDI\+ est fourni avec Windows XP et est disponible en tant que redistribuable pour Windows NT 4.0 SP 6, Windows 2000, Windows 98 et Windows Me.  Pour télécharger le dernier redistribuable, consultez [http:\/\/go.microsoft.com\/fwlink\/?linkid\=11232](http://go.microsoft.com/fwlink/?linkid=11232).  Pour plus d'informations, consultez [GDI\+](_gdiplus_GDI_start_cpp).  
+>  GDI + est fourni avec Windows XP et est disponible en tant que redistribuable pour Windows NT 4.0 Service Pack 6, Windows 2000, Windows 98 et Windows Me. Pour télécharger le redistribuable le plus récent, consultez [http://go.microsoft.com/fwlink/p/?linkid=11232](http://go.microsoft.com/fwlink/p/?linkid=11232). 
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 #using <system.drawing.dll>  
@@ -61,6 +63,6 @@ virtual Void Form1::OnPaint(PaintEventArgs^ pe ) override
 }  
 ```  
   
-## Voir aussi  
- [Programmation .NET avec C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
- [System.Drawing \(espace de noms\)](https://msdn.microsoft.com/en-us/library/system.drawing.aspx)
+## <a name="see-also"></a>Voir aussi  
+ [Programmation .NET avec c++ / CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
+ [Espace de noms System.Drawing](https://msdn.microsoft.com/en-us/library/system.drawing.aspx)

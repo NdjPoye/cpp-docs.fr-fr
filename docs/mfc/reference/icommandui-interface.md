@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,21 +17,19 @@ f1_keywords:
 - AFXWINFORMS/ICommandUI::Index
 - AFXWINFORMS/ICommandUI::Radio
 - AFXWINFORMS/ICommandUI::Text
-dev_langs:
-- C++
-helpviewer_keywords:
-- ICommandUI interface [MFC]
+dev_langs: C++
+helpviewer_keywords: ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4971ceaea57b91ff708315a2c32c7bac2801798f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: c616d5b6a569cec5f54970f7b4cb3778841738bc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="icommandui-interface"></a>Interface de ICommandUI
 Gère les commandes de l’interface utilisateur.  
@@ -57,7 +54,7 @@ interface class ICommandUI
 |[ICommandUI::Radio](#radio)|Définit l’élément d’interface utilisateur pour cette commande à l’état d’activation appropriée.|  
 |[ICommandUI::Text](#text)|Définit le texte de l’élément d’interface utilisateur pour cette commande.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette interface fournit les méthodes et propriétés qui gèrent les commandes de l’interface utilisateur. `ICommandUI`est semblable à [CCmdUI (classe)](../../mfc/reference/ccmdui-class.md), sauf que `ICommandUI` est utilisé pour les applications MFC qui interagissent avec des composants .NET.  
   
  `ICommandUI`est utilisé dans une `ON_UPDATE_COMMAND_UI` gestionnaire dans un [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-classe dérivée. Lorsqu’un utilisateur d’une application active (sélectionne ou clics) un menu, chaque élément de menu s’affiche comme activé ou désactivé. La cible de chaque commande de menu fournit ces informations en implémentant un `ON_UPDATE_COMMAND_UI` gestionnaire. Pour chacun des objets d’interface utilisateur commande dans votre application, utilisez la fenêtre Propriétés pour créer une entrée de table des messages et le prototype de fonction pour chaque gestionnaire.  
@@ -73,7 +70,7 @@ Définit l’élément d’interface utilisateur pour cette commande à l’éta
 ```
 property UICheckState Check;
 ```
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
 Cette propriété définit l’élément d’interface utilisateur pour cette commande à l’état d’activation appropriée. Vérification de l’ensemble les valeurs suivantes :  
 - Désactivez 0  
 - 1 vérification  
@@ -84,7 +81,7 @@ Indique au mécanisme de routage de commande pour continuer le routage du messag
 ```
 void ContinueRouting();
 ```
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Il s’agit d’une fonction membre avancée qui doit être utilisée conjointement avec un gestionnaire ON_COMMAND_EX qui renvoie la valeur FALSE. Pour plus d’informations, consultez Technical Note TN006 : tables des messages.
 
 ## <a name="enabled"></a>ICommandUI::Enabled 
@@ -92,7 +89,7 @@ Active ou désactive l’élément d’interface utilisateur pour cette commande
 ```
 property bool Enabled;
 ```
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Cette propriété Active ou désactive l’élément d’interface utilisateur pour cette commande. Définir Enabled à True pour activer l’élément de la valeur FALSE pour la désactiver.
 
 ## <a name="id"></a>ICommandUI::ID  
@@ -100,7 +97,7 @@ Obtient l’ID de l’objet d’interface utilisateur représenté par l’objet
 ```
 property unsigned int ID;
 ```
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Cette propriété obtient l’ID de l’élément de menu, le bouton de barre d’outils ou un autre objet d’interface utilisateur représenté par l’objet ICommandUI (un handle).
 
 ## <a name="index"></a>ICommandUI::Index   
@@ -108,7 +105,7 @@ Obtient l’index de l’objet d’interface utilisateur représenté par l’ob
 ```
 property unsigned int Index;
 ```
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Cette propriété obtient l’index de l’élément de menu, le bouton de barre d’outils ou un autre objet d’interface utilisateur représenté par l’objet ICommandUI (un handle).
 
 ## <a name="radio"></a>ICommandUI::Radio 
@@ -116,7 +113,7 @@ Définit l’élément d’interface utilisateur pour cette commande à l’éta
 ```
 property bool Radio;
 ```
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Cette propriété définit l’élément d’interface utilisateur pour cette commande à l’état d’activation appropriée. Définir des cases d’option à True pour activer l’élément ; Sinon, FALSE.
 
 ## <a name="text"></a>ICommandUI::Text 
@@ -124,12 +121,11 @@ Définit le texte de l’élément d’interface utilisateur pour cette commande
 ```
 property String^ Text;
 ```
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Cette propriété définit le texte de l’élément d’interface utilisateur pour cette commande. Définir le texte à un descripteur de chaîne de texte.
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwinforms.h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)  
   
 ## <a name="see-also"></a>Voir aussi  
  [CCmdUI, classe](../../mfc/reference/ccmdui-class.md)
-

@@ -17,18 +17,19 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: be54f9b0d82b2c860c12dfcdeeb2c44c9c67547c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ba928d4a81252b76856273160af63ed8707e7e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Procédure pas à pas : test d'un projet (C++)
 Lorsque vous exécutez un programme en mode débogage, vous pouvez utiliser des points d’arrêt pour interrompre le programme pour examiner l’état des variables et des objets.  
   
  Dans cette procédure pas à pas, vous observez la valeur d’une variable que le programme s’exécute et déduisez pourquoi la valeur n’est pas ce que vous attendez.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
   
 -   Cette procédure pas à pas part du principe que vous comprenez les notions de base du langage C++.  
   

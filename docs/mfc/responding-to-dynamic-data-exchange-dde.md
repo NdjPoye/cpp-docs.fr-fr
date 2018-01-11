@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a10f66a52dfacca20fed2732a107b35630ffd76d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be516725520cb408d9fd8663eaa82d3617396a5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>Réponse à un échange dynamique de données (DDE)
 La fenêtre frame peut répondre aux demandes d’échange (DDE) de données dynamiques pour ouvrir des fichiers à partir du Gestionnaire de fichiers (si l’extension de fichier est enregistrée ou associée à l’application). Consultez [l’inscription du Shell](../mfc/special-cwinapp-services.md).  

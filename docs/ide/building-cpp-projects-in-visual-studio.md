@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0aea958eb441f3b2b4d1adb993f1b92ae8359530
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: cd4934f3075f963efe59e8d73d8c72347fd53912
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Génération de projets C++ dans Visual Studio
 Dans l'environnement de développement intégré (IDE) de Visual Studio, il existe plusieurs façons de générer une solution complète ou un seul projet dans cette solution. Vous pouvez également modifier les paramètres de build et spécifier des étapes de génération personnalisées pour rendre plus efficace votre processus de développement.  

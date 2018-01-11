@@ -1,61 +1,196 @@
 ---
-title: "Platform::WriteOnlyArray (classe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
+title: Platform::WriteOnlyArray (classe) | Documents Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
 s.suite: 
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::WriteOnlyArray"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::WriteOnlyArray (classe)"
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCCORLIB/Platform::WriteOnlyArray::begin
+- VCCORLIB/Platform::WriteOnlyArray::Data
+- VCCORLIB/Platform::WriteOnlyArray::end
+- VCCORLIB/Platform::WriteOnlyArray::FastPass
+- VCCORLIB/Platform::WriteOnlyArray::Length
+- VCCORLIB/Platform::WriteOnlyArray::set
+dev_langs: C++
+helpviewer_keywords: Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-caps.latest.revision: 11
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7d7300247c32c5f18190c6a5a1b6469e4c8173be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::WriteOnlyArray (classe)
+# <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray (classe)
 Représente un tableau unidimensionnel utilisé comme paramètre d'entrée lorsque l'appelant transmet un tableau à remplir pour la méthode.  
   
- Cette classe ref est déclarée comme privée dans vccorlib.h. Par conséquent, elle n'est pas émise dans les métadonnées et est uniquement consommable à partir de C\+\+. Cette classe est prévue uniquement pour être utilisée comme paramètre d'entrée qui accepte un tableau que l'appelant a alloué. Elle n'est pas constructible à partir du code utilisateur. Il permet à la méthode C\+\+ d'écrire directement dans ce tableau, un modèle appelé modèle *FillArray*. Pour plus d'informations, consultez [Array et WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).  
+ Cette classe ref est déclarée comme privée dans vccorlib.h. Par conséquent, elle n'est pas émise dans les métadonnées et est uniquement consommable à partir de C++. Cette classe est prévue uniquement pour être utilisée comme paramètre d'entrée qui accepte un tableau que l'appelant a alloué. Elle n'est pas constructible à partir du code utilisateur. Il permet à la méthode C++ d'écrire directement dans ce tableau, un modèle appelé modèle *FillArray* . Pour plus d’informations, consultez [Array et WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
 private ref class WriteOnlyArray<T, 1>  
 ```  
   
-## Membres  
+### <a name="members"></a>Membres  
   
-### M&\#233;thodes publiques  
- Ces méthodes offrent une accessibilité interne, c'est\-à\-dire qu'elles ne sont accessibles que dans l'application ou le composant C\+\+.  
+### <a name="public-methods"></a>M&#233;thodes publiques  
+ Ces méthodes offrent une accessibilité interne, c'est-à-dire qu'elles ne sont accessibles que dans l'application ou le composant C++.  
   
-|Nom|Description|  
-|---------|-----------------|  
-|[WriteOnlyArray::begin \(méthode\)](../cppcx/writeonlyarray-begin-method.md)|Itérateur qui pointe vers le premier élément du tableau.|  
-|[WriteOnlyArray::Data, propriété](../cppcx/writeonlyarray-data-property.md)|Pointeur vers le tampon de données.|  
-|[WriteOnlyArray::end \(méthode\)](../cppcx/writeonlyarray-end-method.md)|Itérateur qui pointe vers un élément au\-delà du dernier élément du tableau.|  
-|[WriteOnlyArray::FastPass, propriété](../cppcx/writeonlyarray-fastpass-property.md)|Indique si le tableau peut utiliser le mécanisme FastPass, qui est une optimisation exécutée en toute transparence par le système. N'utilisez pas cela dans votre code|  
-|[WriteOnlyArray::Length, propriété](../cppcx/writeonlyarray-length-property.md)|Retourne le nombre d'éléments du tableau.|  
-|[WriteOnlyArray::set \(fonction\)](../cppcx/writeonlyarray-set-function.md)|Définit l'élément spécifié sur la valeur spécifiée.|  
+|Name|Description|  
+|----------|-----------------|  
+
+|[WriteOnlyArray::begin](#begin)| Itérateur qui pointe vers le premier élément du tableau. |  
+|[WriteOnlyArray::Data](#data)| Un pointeur vers le tampon de données. |  
+|[WriteOnlyArray::end](#end)| Itérateur qui pointe vers un suit le dernier élément du tableau. |  
+|[WriteOnlyArray::FastPass](#fastpass)| Indique si le tableau peut utiliser le mécanisme FastPass, qui est une optimisation exécutée en toute transparence par le système. N’utilisez pas cela dans votre code |  
+|[WriteOnlyArray::Length](#length)| Retourne le nombre d’éléments dans le tableau. |  
+|[WriteOnlyArray::set](#set)| Définit l’élément spécifié à la valeur spécifiée. |  
+
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `WriteOnlyArray`  
   
-## Configuration requise  
- Option du compilateur : **\/ZW**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : **/ZW**  
   
- **Métadonnées :** platform.winmd  
+ **Métadonnées :** platform.winmd  
   
- **Espace de noms :** Platform  
+ **Espace de noms :** Platform  
+
+## <a name="begin"></a>  WriteOnlyArray::begin (méthode)
+Retourne un pointeur désignant le premier élément du tableau.  
   
-## Voir aussi  
- [\(NOTINBUILD\) Espace de noms Platform](http://msdn.microsoft.com/fr-fr/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)   
- [Création de composants Windows Runtime en C\+\+](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf)
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+T* begin() const;  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Pointeur désignant le premier élément du tableau.  
+  
+### <a name="remarks"></a>Notes  
+ Cet itérateur peut être utilisé avec les algorithmes STL tels que `std::sort` pour exécuter des opérations sur les élément du tableau.  
+  
+
+
+## <a name="data"></a>  WriteOnlyArray::Data, propriété
+Pointeur vers le tampon de données.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+property T* Data{  
+   T* get() const;  
+}  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Un pointeur vers les octets bruts de tableau.  
+  
+
+
+## <a name="end"></a>  WriteOnlyArray::end (méthode)
+Retourne un pointeur sur un point suivant au-delà du dernier élément du tableau.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+T* end() const;  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Itérateur de pointeur sur un point suivant au-delà du dernier élément du tableau.  
+  
+### <a name="remarks"></a>Notes  
+ Cet itérateur peut être utilisé avec les algorithmes STL pour exécuter des opérations telles que `std::sort` sur les éléments de tableau.  
+  
+
+
+## <a name="fastpass"></a>  WriteOnlyArray::FastPass, propriété
+Indique si l'optimisation interne FastPass peut être exécutée. Non destiné à être utilisé par le code utilisateur.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+property bool FastPass{  
+   bool get() const;  
+}  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Valeur booléenne qui indique si le tableau est FastPass.  
+  
+
+
+## <a name="get"></a>WriteOnlyArray::get (méthode)
+Retourne l'élément à l'index spécifié.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+T& get(  
+   unsigned int indexArg) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `indexArg`  
+  
+### <a name="return-value"></a>Valeur de retour  
+  
+
+
+## <a name="length"></a>  WriteOnlyArray::Length, propriété
+Retourne le nombre d'éléments du tableau alloué par l'appelant.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+property unsigned int Length{  
+   unsigned int get() const;  
+}  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Nombre d’éléments dans le tableau.  
+  
+
+
+## <a name="set"></a>  WriteOnlyArray::set (fonction)
+Définit la valeur spécifiée à l'index spécifié dans le tableau.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+T& set(  
+   unsigned int indexArg,  
+   T valueArg);  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `indexArg`  
+ Index de l'élément à définir.  
+  
+ `valueArg`  
+ Valeur à définir à `indexArg`.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Référence à l'élément qui vient d'être défini.  
+  
+
+  
+### <a name="remarks"></a>Notes  
+ Pour plus d’informations sur la manière d’interpréter la valeur HRESULT, consultez [Structure of COM Error Codes](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
+  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Plateforme Namespace](platform-namespace-c-cx.md)   
+ [Création de composants Windows Runtime en C++](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md)

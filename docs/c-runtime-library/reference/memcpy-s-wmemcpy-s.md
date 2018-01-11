@@ -35,11 +35,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ac0b4cd7783cd41d480777fe8116a0facea58a28
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5748077731b07a0deeb4e601221b0ba412be391f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
 Copie des octets entre les mémoires tampon. Ces versions de [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -81,8 +82,8 @@ errno_t wmemcpy_s(
   
 |`dest`|`destSize`|`src`|`count`|Valeur de retour|Contenu de `dest`|  
 |------------|----------------|-----------|---|------------------|------------------------|  
-|any|any|any|0|0|Non modifié|  
-|`NULL`|any|any|Différent de zéro|`EINVAL`|Non modifié|  
+|any|any|any|0|0|Non modifiée|  
+|`NULL`|any|any|Différent de zéro|`EINVAL`|Non modifiée|  
 |any|any|`NULL`|Différent de zéro|`EINVAL`|`dest` est effacé|  
 |any|< `count`|any|Différent de zéro|`ERANGE`|`dest` est effacé|  
   
@@ -91,14 +92,14 @@ errno_t wmemcpy_s(
   
  Ces fonctions valident leurs paramètres. Si `count` est différent de zéro, que `dest` ou `src` est un pointeur Null ou que `destSize` est inférieur à `count`, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent `EINVAL` ou `ERANGE` et définissent `errno` sur la valeur de retour.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`memcpy_s`|\<memory.h> ou \<string.h>|  
 |`wmemcpy_s`|\<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

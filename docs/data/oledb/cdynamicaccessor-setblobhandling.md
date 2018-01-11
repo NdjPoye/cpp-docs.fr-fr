@@ -1,37 +1,38 @@
 ---
-title: "CDynamicAccessor::SetBlobHandling | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicAccessor::SetBlobHandling"
-  - "CDynamicAccessor.SetBlobHandling"
-  - "ATL::CDynamicAccessor::SetBlobHandling"
-  - "SetBlobHandling"
-  - "ATL.CDynamicAccessor.SetBlobHandling"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetBlobHandling (méthode)"
+title: CDynamicAccessor::SetBlobHandling | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicAccessor::SetBlobHandling
+- CDynamicAccessor.SetBlobHandling
+- ATL::CDynamicAccessor::SetBlobHandling
+- SetBlobHandling
+- ATL.CDynamicAccessor.SetBlobHandling
+dev_langs: C++
+helpviewer_keywords: SetBlobHandling method
 ms.assetid: fa8b0bb3-a21b-4d64-aeef-e79bf61d079c
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 02b9be4b187f55d9bfb8f3ee5e572f682742f538
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::SetBlobHandling
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Règle la valeur de gestion BLOB pour la ligne actuelle.  
+# <a name="cdynamicaccessorsetblobhandling"></a>CDynamicAccessor::SetBlobHandling
+Définit l’objet BLOB de valeur de la ligne en cours de traitement.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -40,23 +41,23 @@ Règle la valeur de gestion BLOB pour la ligne actuelle.
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `eBlobHandling`  
- Spécifie comment les données BLOB doivent être gérées.  Cela peut prendre les valeurs suivantes :  
+ Spécifie la façon dont les données BLOB doit être gérée. Elle peut prendre les valeurs suivantes :  
   
--   **DBBLOBHANDLING\_DEFAULT**: Traiter les données d'une colonne plus grandes que`nBlobSize` \(défini par `SetBlobSizeLimit`\) comme données d'objet BLOB et les récupérez\- via un objet `ISequentialStream` ou `IStream`.  Cette option essaie de lier chaque colonne qui contient des données plus grandes que `nBlobSize` ou répertoriées comme **DBTYPE\_IUNKNOWN** en tant que données BLOB.  
+-   **DBBLOBHANDLING_DEFAULT**: gérer les données de colonne supérieures à `nBlobSize` (comme défini par `SetBlobSizeLimit`) en tant que données d’objets BLOB et récupérer par le biais d’un `ISequentialStream` ou `IStream` objet. Cette option va tenter de lier chaque colonne contenant des données plus importante que `nBlobSize` ou répertoriés sous la forme **DBTYPE_IUNKNOWN** en tant que données d’objet BLOB.  
   
--   **DBBLOBHANDLING\_NOSTREAMS**: Traiter les données de colonne plus grandes que `nBlobSize` \(défini par `SetBlobSizeLimit`\) comme données d'objet BLOB et récupérez\-les par référence dans la mémoire allouée par le fournisseur et possédée par le consommateur.  Cette option est utile pour les tables qui ont plusieurs colonnes BLOB, et quand le fournisseur prend en charge uniquement un objet `ISequentialStream` par accesseur.  
+-   **DBBLOBHANDLING_NOSTREAMS**: gérer les données de colonne supérieures à `nBlobSize` (comme défini par `SetBlobSizeLimit`) en tant que données d’objets BLOB et les récupérer via la référence dans la mémoire allouée par le fournisseur, appartenant à un consommateur. Cette option est utile pour les tables qui ont plus d’une colonne BLOB, et le fournisseur prend en charge qu’un seul `ISequentialStream` objet par l’accesseur.  
   
--   **DBBLOBHANDLING\_SKIP**: Ignorez \(pas de liaison\) les colonnes qui se qualifient comme contenant des objets blob \(l'accesseur ne liera pas ou ne récupèrera pas la valeur de la colonne mais il récupère toujours l'état et la longueur de colonne\).  
+-   **DBBLOBHANDLING_SKIP**: ignorer (ne pas lier) les colonnes éligibles comme contenant des objets BLOB (l’accesseur ne sera pas lier ou récupérer la valeur de colonne, mais il sera toujours récupérer l’état de colonne et la longueur).  
   
-## Notes  
- Vous devez appeler `SetBlobHandling` avant d'appeler **Ouvrir**.  
+## <a name="remarks"></a>Notes  
+ Vous devez appeler `SetBlobHandling` avant d’appeler **ouvrir**.  
   
- La méthode de constructeur [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) définit la valeur de gestion BLOB à **DBBLOBHANDLING\_DEFAULT**.  
+ La méthode de constructeur [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) définit l’objet BLOB de valeur de la gestion des **DBBLOBHANDLING_DEFAULT**.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CDynamicAccessor, classe](../../data/oledb/cdynamicaccessor-class.md)

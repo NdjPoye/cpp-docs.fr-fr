@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,38 +30,23 @@ f1_keywords:
 - math/_fpclass
 - float/_fpclass
 - math/_fpclassf
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - fpclass function
 - floating-point numbers, IEEE representation
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 9f061841ea6f4050945caeb2cacb9acfdce77c44
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 92501f119d0f0222de0ffeca0611e5fd6c96b697
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fpclass-fpclassf"></a>_fpclass, _fpclassf
 Retourne une valeur indiquant la classification à virgule flottante de l’argument.  
@@ -86,7 +70,7 @@ int _fpclassf(
 ## <a name="return-value"></a>Valeur de retour  
  Les fonctions `_fpclass` et `_fpclassf` retournent une valeur entière qui indique la classification à virgule flottante de l’argument `x`. La classification peut avoir une des valeurs suivantes, définies dans \<float.h>.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |`_FPCLASS_SNAN`|NaN signalant|  
 |`_FPCLASS_QNAN`|NaN silencieux|  
@@ -100,9 +84,9 @@ int _fpclassf(
 |`_FPCLASS_PINF`|Infini positif (+INF)|  
   
 ## <a name="remarks"></a>Notes  
- Les fonctions `_fpclass` et `_fpclassf` sont des fonctions fournies par Microsoft. Elles sont similaires à [fpclassify](../../c-runtime-library/reference/fpclassify.md), mais retournent des informations plus détaillées sur l’argument. La fonction `_fpclassf` n’est disponible que quand elle est compilée pour la plateforme x64.  
+ Les fonctions `_fpclass` et `_fpclassf` sont propres à Microsoft. Elles sont similaires à [fpclassify](../../c-runtime-library/reference/fpclassify.md), mais retournent des informations plus détaillées sur l’argument. La fonction `_fpclassf` n’est disponible que quand elle est compilée pour la plateforme x64.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête requis|  
 |--------------|---------------------|  

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - primary expressions
 - expressions [C++], name
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2ba603c19a88849c15c9402e21d2acf39bb9f54d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0a6e811e1fe074ce488b09fca29926989bc7f355
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="primary-expressions"></a>Expressions primaires
 Les expressions primaires sont des blocs de construction d'expressions plus complexes. Il s'agit de littéraux, de noms et de noms qualifiés par l'opérateur résolution-portée (`::`).  Une expression primaire peut prendre chacune des formes suivantes :  
@@ -42,7 +40,7 @@ Les expressions primaires sont des blocs de construction d'expressions plus comp
   
  Le **cela** (mot clé) est un pointeur vers un objet de classe. Il est disponible dans les fonctions membres non statiques et pointe vers l'instance de la classe pour laquelle la fonction est appelée. Le **cela** mot clé ne peut pas être utilisé en dehors du corps d’une fonction membre de classe.  
   
- Le type de la **cela** pointeur est `type` ** \*const** (où `type` est le nom de classe) dans les fonctions de modification ne sont pas spécifiquement le **cette** pointeur. L’exemple suivant affiche des membres, déclarations de fonction et les types de **cela**:  
+ Le type de la **cela** pointeur est `type`  **\*const** (où `type` est le nom de classe) dans les fonctions de modification ne sont pas spécifiquement le **cette** pointeur. L’exemple suivant affiche des membres, déclarations de fonction et les types de **cela**:  
   
 ```  
 // expre_Primary_Expressions.cpp  

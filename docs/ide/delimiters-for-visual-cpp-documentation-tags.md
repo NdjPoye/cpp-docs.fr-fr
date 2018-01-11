@@ -1,49 +1,48 @@
 ---
-title: "D&#233;limiteurs pour les balises de documentation Visual&#160;C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "documentation XML, délimiteurs"
+title: "Délimiteurs pour les balises de Documentation Visual C++ | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: XML documentation, delimiters
 ms.assetid: debfbdd9-63fa-4c58-a18e-a4d203d241d7
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 134605f86ef8019d34f5246fd75abbbf94d40fbc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# D&#233;limiteurs pour les balises de documentation Visual&#160;C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'utilisation des balises de documentation requiert les séparateurs, qui indique au compilateur où un commentaire de documentation commence et se termine.  
+# <a name="delimiters-for-visual-c-documentation-tags"></a>Délimiteurs pour les étiquettes de documentation Visual C++
+L’utilisation de balises de documentation requiert des délimiteurs, qui indiquent au compilateur où un commentaire de documentation commence et se termine.  
   
- Vous pouvez utiliser les types de délimiteurs ci\-dessous avec les balises de documentation XML :  
+ Vous pouvez utiliser les genres de délimiteurs ci-dessous avec les balises de documentation XML :  
   
  `///`  
- C'est le formulaire qui est indiqué dans les exemples de documentation et utilisée par les modèles de projet Visual C\+\+.  
+ Il s’agit de l’écran qui est indiqué dans les exemples de documentation et utilisée par les modèles de projet Visual C++.  
   
  `/** */`  
- Ce sont les séparateurs multilignes.  
+ Il s’agit de délimiteurs multilignes.  
   
- Il existe des règles de mise en forme en utilisant les séparateurs d' `/** */` :  
+ Certaines mises en forme règles s’appliquent à l’aide de la `/** */` délimiteurs :  
   
--   Pour la ligne qui contient le séparateur d' `/**`, si le reste de la ligne est l'espace blanc, la ligne n'est pas traitée pour les commentaires.  Si le premier caractère est un espace blanc, ce caractère d'espace blanc est ignoré et le reste de la ligne est traité.  Sinon, tout le texte de la ligne qui suit le délimiteur `/**` est traité comme une partie du commentaire.  
+-   Pour la ligne qui contienne le `/**` délimiteur, si le reste de la ligne est un espace blanc, la ligne n’est pas traitée pour les commentaires. Si le premier caractère est un espace blanc, est ignoré et le reste de la ligne est traité. Sinon, tout le texte de la ligne après le délimiteur `/**` est traité comme faisant partie du commentaire.  
   
--   Pour la ligne qui contient le séparateur d' `*/`, s'il n'existe qu'un espace blanc jusqu'au séparateur d' `*/`, que la ligne est ignoré.  Sinon, le texte précédant le délimiteur `*/` sur la ligne est traité comme une partie du commentaire, sujet aux règles des critères spéciaux décrites dans le paragraphe suivant.  
+-   Pour la ligne qui contienne le `*/` délimiteur, s’il existe uniquement des espaces jusqu'à la `*/` délimiteur, cette ligne est ignorée. Sinon, le texte de la ligne jusqu’au délimiteur `*/` est traité comme faisant partie du commentaire, conformément aux règles de critères spéciaux décrites dans la puce suivante.  
   
--   Pour ligne après celui qui commence par le séparateur d' `/**`, le compilateur recherche un modèle commun au début de chaque ligne qui se compose de l'espace blanc facultatif et d'un astérisque \(`*`\), suivie de l'espace blanc plus facultatif.  Si le compilateur recherche un ensemble commun de caractères au début de chaque ligne, il ignore ce modèle pour toutes les lignes après le séparateur d' `/**`, jusqu'à et éventuellement y compris la ligne qui contient le séparateur d' `*/` .  
+-   Pour les lignes après celle qui commence par le `/**` délimiteur, le compilateur recherche un modèle commun au début de chaque ligne se compose d’un espace blanc facultatif et un astérisque (`*`), suivi par plus d’un espace blanc facultatif. Si le compilateur trouve un ensemble commun de caractères au début de chaque ligne, il ignore ce modèle pour toutes les lignes situées après la `/**` délimiteur et peut éventuellement contenir la ligne qui contient le `*/` délimiteur.  
   
  Voici quelques exemples :  
   
--   La seule partie du commentaire suivant qui sera traitée est la ligne commençant par `<summary>`.  Les deux formats suivants de balise produisent les mêmes commentaires :  
+-   La seule partie du commentaire suivant qui sera traitée est la ligne qui commence par `<summary>`. Les formats suivants de la deux balise produit les mêmes commentaires :  
   
     ```  
     /**  
@@ -52,7 +51,7 @@ L'utilisation des balises de documentation requiert les séparateurs, qui indiqu
     /** <summary>text</summary> */  
     ```  
   
--   Le compilateur applique un modèle de « \* » pour ignorer au début de la deuxième et troisième lignes.  
+-   Le compilateur applique un modèle de « * » pour ignorer au début des deuxième et troisième lignes.  
   
     ```  
     /**  
@@ -60,7 +59,7 @@ L'utilisation des balises de documentation requiert les séparateurs, qui indiqu
      *  text </summary>*/  
     ```  
   
--   Le compilateur ne trouve pas de modèle dans ce commentaire car il n'existe aucun astérisque sur la deuxième ligne.  Par conséquent, tout le texte sur les deuxième et troisième lignes, en haut de jusqu'à `*/`, sera traité dans le cadre de le commentaire.  
+-   Le compilateur trouve aucune séquence dans ce commentaire, car il n’existe aucun astérisque sur la deuxième ligne. Par conséquent, tout le texte sur les deuxième et troisième lignes, jusqu’au délimiteur le `*/`, est traité comme une partie du commentaire.  
   
     ```  
     /**  
@@ -68,7 +67,7 @@ L'utilisation des balises de documentation requiert les séparateurs, qui indiqu
        text </summary>*/  
     ```  
   
--   Le compilateur ne trouve pas de modèle dans ce commentaire pour deux raisons.  D'abord, il n'y a aucune ligne qui commence par un nombre cohérent des espaces avant l'astérisque.  D'autre part, la cinquième ligne commence par une tabulation, qui ne correspond pas à des espaces.  Par conséquent, tout le texte de la deuxième ligne jusqu'à `*/` sera traité dans le cadre de le commentaire.  
+-   Le compilateur ne trouve aucun modèle dans ce commentaire pour deux raisons. Tout d’abord, il n’existe aucune ligne qui commence par un nombre constant d’espaces avant l’astérisque. Ensuite, la cinquième ligne commence par une tabulation, qui ne correspond pas à des espaces. Par conséquent, tout le texte de la deuxième ligne jusqu'à ce que le `*/` sera traitée comme étant le commentaire.  
   
     ```  
     /**  
@@ -79,5 +78,5 @@ L'utilisation des balises de documentation requiert les séparateurs, qui indiqu
     */  
     ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Documentation XML](../ide/xml-documentation-visual-cpp.md)

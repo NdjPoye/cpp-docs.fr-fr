@@ -40,11 +40,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c44e5773920d42c9b37e24a11b015adccc8e1be8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c819f62f36966363f32eb16b7af758de274d3d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 Convertit un caractère large en caractère multioctet correspondant. Version de [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -91,8 +92,8 @@ errno_t _wctomb_s_l(
 |`mbchar`|`sizeInBytes`|Valeur de retour|`pRetValue`|  
 |--------------|-------------------|------------------|-----------------|  
 |`NULL`|>0|`EINVAL`|non modifié|  
-|indifférent|>`INT_MAX`|`EINVAL`|non modifié|  
-|indifférent|trop petite|`EINVAL`|non modifié|  
+|any|>`INT_MAX`|`EINVAL`|non modifié|  
+|any|trop petite|`EINVAL`|non modifié|  
   
  Si l’une des conditions d’erreur ci-dessus se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à continuer, `wctomb` retourne `EINVAL` et définit `errno` à `EINVAL`.  
   
@@ -101,16 +102,16 @@ errno_t _wctomb_s_l(
   
  Si `wctomb_s` convertit le caractère large en caractère multioctet, elle place le nombre d’octets (qui n’est jamais supérieure à `MB_CUR_MAX`) figurant dans le caractère large dans l’entier vers lequel pointe `pRetValue`. Si `wchar` correspond au caractère Null à caractère large (L'\0'), `wctomb_s` complète `pRetValue` avec la valeur 1. Si le pointeur cible `mbchar` a la valeur NULL, `wctomb_s` affecte à `pRetValue` la valeur 0. Si la conversion n’est pas possible dans les paramètres régionaux, `wctomb_s` place -1 dans `pRetValue`.  
   
- `wctomb_s` utilise les paramètres régionaux actifs pour les informations dépendantes des paramètres régionaux ; la fonction `_wctomb_s_l` est identique à ceci près qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ `wctomb_s` utilise les paramètres régionaux actifs pour les informations dépendantes des paramètres régionaux ; la fonction `_wctomb_s_l` est identique à ceci près qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`wctomb_s`|\<stdlib.h>|  
 |`_wctomb_s_l`|\<stdlib.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
  Ce programme illustre le comportement de la fonction `wctomb`.  

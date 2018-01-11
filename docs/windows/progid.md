@@ -1,32 +1,33 @@
 ---
-title: "progid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.progid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "progid attribute"
+title: ProgID | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.progid
+dev_langs: C++
+helpviewer_keywords: progid attribute
 ms.assetid: afcf559c-e432-481f-aa9a-bd3bb72c02a8
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 862629af7e279cf1f03a5e9adc9424b330ee1d90
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# progid
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-spécifie l'identificateur programmatique pour un objet COM.  
+# <a name="progid"></a>progid
+Spécifie le ProgID d’un objet COM.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,42 +36,41 @@ spécifie l'identificateur programmatique pour un objet COM.
 ) ];  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *name*  
- l'identificateur programmatique représentant l'objet.  
+ Le ProgID qui représente l’objet.  
   
- Présent de Progid une version explicite de l'identificateur de classe \(CLSID\) utilisé pour identifier des objets COM\/ActiveX.  
+ ProgID présentent une version lisible de l’identificateur de classe (CLSID) utilisé pour identifier les objets COM/ActiveX.  
   
-## Notes  
- L'attribut de **progid** C\+\+ vous permet de spécifier l'identificateur programmatique pour un objet COM.  Un progid a la forme *name1.name2.version*.  Si vous ne spécifiez pas *de version* d'un identificateur programmatique, la version par défaut est 1.  si vous ne spécifiez pas *name1.name2*, le nom par défaut est *classname.classname**.* Si vous ne spécifiez pas **progid** et vous spécifiez **vi\_progid**, *name1.name2*sont pris de **vi\_progid** et la version \(numéro séquentiel suivant\) est ajoutée.  
+## <a name="remarks"></a>Notes  
+ Le **progid** attribut C++ vous permet de spécifier le ProgID d’un objet COM. Un ProgID présente sous la forme *name1.name2.version*. Si vous ne spécifiez pas un *version* pour un ProgID, la version par défaut est 1. Si vous ne spécifiez pas *name1.name2*, le nom par défaut est *classname.classname*. Si vous ne spécifiez pas **progid** et que vous ne spécifiez pas **vi_progid**, *name1.name2* proviennent de **vi_progid** et (suivant séquentielles version de nombre) est ajoutée.  
   
- Si un bloc d'attributs qui utilise **progid** n'utilise pas également `uuid`, le compilateur vérifiera le Registre pour voir si `uuid` existe pour **progid**spécifié.  Si **progid** n'est pas spécifié, la version \(et le nom de la coclasse, si vous créez une coclasse\) seront utilisés pour générer **progid**.  
+ Si un bloc d’attributs qui utilise **progid** n’utilise pas également `uuid`, le compilateur doit rechercher le Registre afin de déterminer si un `uuid` existe pour le texte spécifié **progid**. Si **progid** n’est pas spécifié, la version (et le nom de la coclasse, si la création d’une coclasse) doit être utilisées pour générer un **progid**.  
   
- **progid** implique l'attribut de **coclasse** , c. autrement dit., si vous spécifiez **progid**, c'est la même que spécifiant les attributs de **coclasse** et de **progid** .  
+ **ProgID** implique la **coclasse** d’attribut, autrement dit, si vous spécifiez **progid**, il s’agit de la même chose que la spécification de la **coclasse** et  **ProgID** attributs.  
   
- l'attribut de **progid** provoque une classe à enregistrer automatiquement sous le nom spécifié.  Le fichier généré .idl n'affiche pas la valeur de **progid** .  
+ Le **progid** attribut entraîne une classe soit automatiquement inscrite sous le nom spécifié. Le fichier .idl généré n’affichera pas le **progid** valeur.  
   
- Lorsque cet attribut est utilisé dans un projet qui utilise ATL, le comportement de l'attribut change.  Outre le comportement ci\-dessus, les informations spécifiées avec cet attribut sont utilisées dans la fonction de **GetProgID** , injectée par l'attribut de **coclasse** .  Pour plus d'informations, consultez l'attribut de [coclasse](../windows/coclass.md) .  
+ Lorsque cet attribut est utilisé dans un projet qui utilise ATL, le comportement de l’attribut change. En plus du comportement ci-dessus, les informations spécifiées avec cet attribut sont utilisées dans le **GetProgID** fonction, injectée par le **coclasse** attribut. Pour plus d’informations, consultez la [coclasse](../windows/coclass.md) attribut.  
   
-## Exemple  
- Consultez l'exemple pour [coclasse](../windows/coclass.md) pour un usage d'exemple de **progid**.  
+## <a name="example"></a>Exemple  
+ Consultez l’exemple de [coclasse](../windows/coclass.md) pour un exemple d’utilisation de **progid**.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**classe**, `struct`|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|**class**, `struct`|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [ProgID Key](http://msdn.microsoft.com/library/windows/desktop/dd542719)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs de classe](../windows/class-attributes.md)   
+ [TypeDef, Enum, Union et Struct (attributs)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Clé progID](http://msdn.microsoft.com/library/windows/desktop/dd542719)   

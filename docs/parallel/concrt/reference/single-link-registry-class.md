@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,35 +16,19 @@ f1_keywords:
 - AGENTS/concurrency::single_link_registry::contains
 - AGENTS/concurrency::single_link_registry::count
 - AGENTS/concurrency::single_link_registry::remove
-dev_langs:
-- C++
-helpviewer_keywords:
-- single_link_registry class
+dev_langs: C++
+helpviewer_keywords: single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: fc99e9af586520d60c20302e8b828a188df9efda
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 11e02e4adb2e2bdb79f275537047199f434a57c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry, classe
 L'objet `single_link_registry` est un `network_link_registry` qui gère uniquement un seul bloc source ou cible.  
@@ -59,7 +42,7 @@ class single_link_registry : public network_link_registry<_Block>;
   
 #### <a name="parameters"></a>Paramètres  
  `_Block`  
- Le bloc type de données qui est stocké dans le `single_link_registry` objet.  
+ Le bloc type de données sont stockées dans le `single_link_registry` objet.  
   
 ## <a name="members"></a>Membres  
   
@@ -76,16 +59,16 @@ class single_link_registry : public network_link_registry<_Block>;
 |----------|-----------------|  
 |[add](#add)|Ajoute un lien vers le `single_link_registry` objet. (Substitue [network_link_registry::add](network-link-registry-class.md#add).)|  
 |[begin](#begin)|Retourne un itérateur au premier élément dans le `single_link_registry` objet. (Substitue [network_link_registry::begin](network-link-registry-class.md#begin).)|  
-|[contient](#contains)|Recherche le `single_link_registry` objet un bloc spécifié. (Substitue [network_link_registry::contains](network-link-registry-class.md#contains).)|  
+|[contient](#contains)|Recherche le `single_link_registry` objet pour un bloc spécifié. (Substitue [network_link_registry::contains](network-link-registry-class.md#contains).)|  
 |[count](#count)|Compte le nombre d’éléments dans le `single_link_registry` objet. (Substitue [network_link_registry::count](network-link-registry-class.md#count).)|  
 |[remove](#remove)|Supprime un lien à partir de la `single_link_registry` objet. (Substitue [network_link_registry::remove](network-link-registry-class.md#remove).)|  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [network_link_registry](network-link-registry-class.md)  
   
  `single_link_registry`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -102,7 +85,7 @@ virtual void add(_EType _Link);
  `_Link`  
  Pointeur vers un bloc à ajouter.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La méthode lève un [invalid_link_target](invalid-link-target-class.md) exception s’il existe déjà un lien dans ce Registre.  
   
 ##  <a name="begin"></a>commencer 
@@ -114,14 +97,14 @@ virtual iterator begin();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un itérateur qui traite le premier élément de la `single_link_registry` objet.  
+ Un itérateur qui traite le premier élément dans le `single_link_registry` objet.  
   
-### <a name="remarks"></a>Remarques  
- L’état de fin est indiqué par une `NULL` lien.  
+### <a name="remarks"></a>Notes  
+ L’état de fin est indiqué par un `NULL` lien.  
   
 ##  <a name="contains"></a>contient 
 
- Recherche le `single_link_registry` objet un bloc spécifié.  
+ Recherche le `single_link_registry` objet pour un bloc spécifié.  
   
 ```
 virtual bool contains(_EType _Link);
@@ -129,7 +112,7 @@ virtual bool contains(_EType _Link);
   
 ### <a name="parameters"></a>Paramètres  
  `_Link`  
- Pointeur vers un bloc qui doit être recherché dans le `single_link_registry` objet.  
+ Un pointeur vers un bloc qui consiste à rechercher dans le `single_link_registry` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si le lien a été trouvé, `false` dans le cas contraire.  
@@ -155,7 +138,7 @@ virtual bool remove(_EType _Link);
   
 ### <a name="parameters"></a>Paramètres  
  `_Link`  
- Pointeur vers un bloc à supprimer, si trouvé.  
+ Un pointeur vers un bloc doit être supprimée, si trouvée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si le lien a été trouvé et supprimé, `false` dans le cas contraire.  
@@ -182,4 +165,3 @@ virtual ~single_link_registry();
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   
  [multi_link_registry, classe](multi-link-registry-class.md)
-

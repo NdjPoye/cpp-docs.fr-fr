@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ffa10eb29796be61b2c5f35809fd0ac65fc158a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7a4205131ba5690f24216997fcfd8884077d0d9c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rotr8-rotr16"></a>_rotr8, _rotr16
 **Section spécifique à Microsoft**  
@@ -53,7 +54,7 @@ unsigned short _rotr16(
 ## <a name="return-value"></a>Valeur de retour  
  Valeur ayant fait l'objet d'une rotation.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
@@ -62,7 +63,7 @@ unsigned short _rotr16(
   
  **Fichier d’en-tête** \<intrin.h >  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Contrairement à une opération de décalage vers la droite, lors de l'exécution d'une rotation vers la droite, les bits de poids faible qui se trouvent hors limite sont placés dans les positions de bits de poids fort.  
   
 ## <a name="example"></a>Exemple  

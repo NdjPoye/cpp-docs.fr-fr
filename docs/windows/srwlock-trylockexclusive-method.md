@@ -1,32 +1,33 @@
 ---
-title: "SRWLock::TryLockExclusive, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::SRWLock::TryLockExclusive"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TryLockExclusive (méthode)"
+title: "SRWLOCK::trylockexclusive, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::SRWLock::TryLockExclusive
+dev_langs: C++
+helpviewer_keywords: TryLockExclusive method
 ms.assetid: 661e8b19-3058-4511-8742-c9fbb90412c7
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ebeaae465bd387d3939f9588be3c4a8e5eaf507b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# SRWLock::TryLockExclusive, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Essaie d'acquérir un objet SRWLock en mode exclusif pour l'objet SRWLock actuel ou spécifié.  Si l'appel est effectué, le thread appelant devient propriétaire du verrou.  
+# <a name="srwlocktrylockexclusive-method"></a>SRWLock::TryLockExclusive, méthode
+Tente d’acquérir un objet SRWLock en mode exclusif pour l’objet SRWLock actuelle ou spécifiée. Si l’appel réussit, le thread appelant prend possession du verrou.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 SyncLockExclusive TryLockExclusive();  
@@ -36,17 +37,17 @@ static SyncLockExclusive TryLockExclusive(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `lock`  
  Pointeur vers un objet SRWLock.  
   
-## Valeur de retour  
- En cas de réussite, un objet SRWLock en mode exclusif et le thread appelant prend possession du verrou.  Sinon, un objet SRWLock dont l'état est incorrect.  
+## <a name="return-value"></a>Valeur de retour  
+ En cas de réussite, un objet SRWLock en mode exclusif et que le thread appelant prend possession du verrou. Sinon, une SRWLock de l’objet dont l’état n’est pas valide.  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers  
+ **Namespace :** Microsoft::WRL::Wrappers  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SRWLock, classe](../windows/srwlock-class.md)

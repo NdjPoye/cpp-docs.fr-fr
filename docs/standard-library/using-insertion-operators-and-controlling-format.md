@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2860a0bfd050c4e2a86e948c7008327d237bc5ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9af3a0fe28e0b5d26f17f16a6e217dce9fd82969
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Utilisation des opérateurs d'insertion et contrôle du format
 Cette rubrique montre comment contrôler le format et comment créer des opérateurs d'insertion pour vos propres classes. L’opérateur d’insertion (**<<**), qui préprogrammé pour tous les types de données C++ standard, envoie des octets à un objet de flux de sortie. Les opérateurs d’insertion fonctionnent avec des « manipulateurs » prédéfinis, qui sont des éléments qui modifient le format par défaut des arguments de type entier.  

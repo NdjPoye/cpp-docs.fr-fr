@@ -1,32 +1,33 @@
 ---
-title: "SemaphoreTraits::Unlock, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits::Unlock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Unlock (méthode)"
+title: "Semaphoretraits::Unlock, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits::Unlock
+dev_langs: C++
+helpviewer_keywords: Unlock method
 ms.assetid: 4e0ea808-b70d-43f7-81ef-998c3b34e3a0
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 819f7d7e4e4d5b6182da6172bd91a1e799379b52
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# SemaphoreTraits::Unlock, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Libère le contrôle d'une ressource partagée.  
+# <a name="semaphoretraitsunlock-method"></a>SemaphoreTraits::Unlock, méthode
+Contrôle des versions d’une ressource partagée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 inline static void Unlock(  
@@ -34,17 +35,17 @@ inline static void Unlock(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `h`  
- Handle vers un objet sémaphore.  
+ Handle vers un objet de sémaphore.  
   
-## Remarques  
- Si l'opération de débloquage échoue, Unlock\(\) émet une erreur indiquant la cause de l'échec.  
+## <a name="remarks"></a>Notes  
+ Si l’opération de déverrouillage échoue, Unlock() émet une erreur qui indique la cause de l’échec.  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers::HandleTraits  
+ **Namespace :** Microsoft::WRL::Wrappers::HandleTraits  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SemaphoreTraits, structure](../windows/semaphoretraits-structure.md)

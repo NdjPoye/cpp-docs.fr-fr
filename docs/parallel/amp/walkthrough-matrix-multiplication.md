@@ -13,16 +13,17 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8b66a95499c64970c31c7d71fe5dc43f1aa7854d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f91bed0b33ae29d7928ec7df3420eb4878b51eef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Procédure pas à pas : Multiplication des matrices
 Cette procédure pas à pas montre comment utiliser C++ AMP pour accélérer l’exécution de la multiplication des matrices. Deux algorithmes sont présentés sans mosaïque et l’autre avec une disposition en mosaïque.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
  Avant de commencer :  
   
 -   Lecture [présentation de C++ AMP](../../parallel/amp/cpp-amp-overview.md).  
@@ -39,7 +40,7 @@ Cette procédure pas à pas montre comment utiliser C++ AMP pour accélérer l�
   
 3.  Sélectionnez **projet vide**, entrez `MatrixMultiply` dans les **nom** zone, puis choisissez le **OK** bouton.  
   
-4.  Choisissez le **suivant** bouton.  
+4.  Choisissez le bouton **Suivant**.  
   
 5.  Dans **l’Explorateur de solutions**, ouvrez le menu contextuel pour **fichiers sources**, puis choisissez **ajouter**, **un nouvel élément**.  
   

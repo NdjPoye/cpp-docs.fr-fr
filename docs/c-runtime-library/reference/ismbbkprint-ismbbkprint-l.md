@@ -39,11 +39,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c3f0f105b27c97a0ed775ab18ff3331e7c8627f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 21d2eff34518abd778ac5c19efce9ebedebf7a16
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint, _ismbbkprint_l
 Détermine si un caractère multioctet particulier est un symbole de ponctuation.  
@@ -68,16 +69,16 @@ int _ismbbkprint_l(
  Paramètres régionaux à utiliser.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `_ismbbkprint` retourne une valeur différente de zéro si l’entier `c` est un texte non-ASCII ou un symbole de ponctuation non-ASCII, ou 0 dans le cas contraire. Par exemple, dans la page de codes 932 uniquement, `_ismbbkprint` teste s’il s’agit de katakanas alphanumériques ou de ponctuation katakana (plage : 0xA1 - 0xDF). `_ismbbkprint` utilise les paramètres régionaux actifs pour les valeurs des caractères dépendant des paramètres régionaux. `_ismbbkprint_l` est identique, excepté qu’il utilise les paramètres régionaux passés en entrée. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ `_ismbbkprint` retourne une valeur différente de zéro si l’entier `c` est un texte non-ASCII ou un symbole de ponctuation non-ASCII, ou 0 dans le cas contraire. Par exemple, dans la page de codes 932 uniquement, `_ismbbkprint` teste s’il s’agit de katakanas alphanumériques ou de ponctuation katakana (plage : 0xA1 - 0xDF). `_ismbbkprint` utilise les paramètres régionaux actifs pour les valeurs des caractères dépendant des paramètres régionaux. `_ismbbkprint_l` est identique, excepté qu’il utilise les paramètres régionaux passés en entrée. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_ismbbkprint`|\<mbctype.h>|  
 |`_ismbbkprint_l`|\<mbctype.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classification d’octet](../../c-runtime-library/byte-classification.md)   

@@ -1,61 +1,63 @@
 ---
-title: "__umulh | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__umulh"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__umulh, intrinsèque"
+title: __umulh | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __umulh
+dev_langs: C++
+helpviewer_keywords: __umulh intrinsic
 ms.assetid: d241b53a-e6f7-4af1-9f6e-84e149158f03
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 57d1a4cc5d06f9a2053dbf3b2e27d79b1ee18b1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# __umulh
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="umulh"></a>__umulh
 **Section spécifique à Microsoft**  
   
  Retourner les 64 bits de poids fort du produit de deux entiers non signés 64 bits.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-unsigned __int64 __umulh(     unsigned __int64 a,     unsigned __int64 b  );  
+unsigned __int64 __umulh(   
+   unsigned __int64 a,   
+   unsigned __int64 b   
+);  
 ```  
   
-#### Paramètres  
- \[in\] `a`  
+#### <a name="parameters"></a>Paramètres  
+ [in] `a`  
  Premier nombre à multiplier.  
   
- \[in\] `b`  
+ [in] `b`  
  Second nombre à multiplier.  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  64 bits de poids fort du résultat 128 bits de la multiplication.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__umulh`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Ces routines sont disponibles seulement comme fonctions intrinsèques.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // umulh.cpp  
@@ -77,8 +79,11 @@ int main()
 }  
 ```  
   
-  **0x10 \* 0xfedcba9876543210 \= 0xfedcba98765432100**    
-## FIN de la section spécifique à Microsoft  
+```Output  
+0x10 * 0xfedcba9876543210 = 0xfedcba98765432100   
+```  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+**FIN de la section spécifique à Microsoft**  
+  
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

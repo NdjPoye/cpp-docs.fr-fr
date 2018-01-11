@@ -14,11 +14,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e1abb5cdebca8c19aeeb4ec00fbc46b3120170d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7f5a767995ce0484552d96429573e0b355820207
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="consuming-generics-ccli"></a>Utilisation de génériques (C++/CLI)
 Génériques créés dans un langage .NET peuvent être utilisés dans d’autres langages .NET. Contrairement aux modèles, un type générique dans un assembly compilé reste toujours générique. Par conséquent, un peut instancier le type générique dans un autre assembly, même dans une langue autre que celle de l’assembly dans lequel le type générique a été défini.  

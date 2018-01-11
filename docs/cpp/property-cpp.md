@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- property_cpp
-dev_langs:
-- C++
+f1_keywords: property_cpp
+dev_langs: C++
 helpviewer_keywords:
 - property __declspec keyword
 - __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: d4cb68d02f9ee543c2d3271bc48ad4318352faa2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: afc8fb6ad9808bf0a0139e838982a08820d2fb88
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-c"></a>property (C++)
 **Section spécifique à Microsoft**  
@@ -41,7 +38,7 @@ __declspec( property( put=put_func_name ) ) declarator
 __declspec( property( get=get_func_name, put=put_func_name ) ) declarator  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Lorsque le compilateur détecte une donnée membre déclarée avec cet attribut sur la droite d’un opérateur de sélection de membres («**.**« ou »**->**»), il convertit l’opération à un **obtenir** ou **put** fonction, selon que cette expression est une l-value ou une r-value. Plus compliquée contextes, tels que «`+=`», une réécriture est effectuée en exécutant les deux **obtenir** et **put**.  
   
  Cet attribut peut également être utilisé dans la déclaration d'un tableau vide dans une définition de classe ou de structure. Exemple :  

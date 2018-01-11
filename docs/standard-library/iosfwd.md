@@ -15,11 +15,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 046fb6b682191f40545b95c41cea97bb7802c3e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a86259fc066ff97ed84c3387140180d79b5eebfc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
 Déclare des références anticipées à plusieurs classes de modèles utilisées dans des iostreams. Toutes ces classes de modèle sont définies dans d’autres en-têtes standard. Vous incluez cet en-tête explicitement uniquement quand vous avez besoin de l’une de ses déclarations, mais pas de sa définition.  
@@ -31,7 +32,7 @@ Déclare des références anticipées à plusieurs classes de modèles utilisée
   
 ```  
   
-## <a name="typedefs"></a>Typedefs  
+## <a name="typedefs"></a>Typedef  
   
 ```
 typedef T1 streamoff;
@@ -136,7 +137,7 @@ class basic_fstream;
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)   
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream, programmation](../standard-library/iostream-programming.md)   
  [iostreams, conventions](../standard-library/iostreams-conventions.md)
 

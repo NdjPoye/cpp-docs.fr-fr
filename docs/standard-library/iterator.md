@@ -17,11 +17,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2d0e3c65101455958772415228d5cf0d95fbd4d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3f0918b5d4c222506173c03859cb74ec3fd13bdd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 Définit les primitives des itérateurs, les itérateurs prédéfinis et les itérateurs de flux, ainsi que plusieurs modèles de prise en charge. Les itérateurs prédéfinis incluent des adaptateurs d'insertion et d'inversion. Il existe trois classes d'adaptateurs d'itérateur d'insertion : avant, arrière et général. Ils fournissent une sémantique d'insertion, différente de la sémantique de remplacement que les itérateurs de fonctions membres de conteneurs fournissent.  
@@ -33,7 +34,7 @@ Définit les primitives des itérateurs, les itérateurs prédéfinis et les it�
   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les itérateurs sont une généralisation des pointeurs qui s’abstrait de leurs contraintes de telle sorte qu’un programme C++ puisse gérer différentes structures de données de manière uniforme. Les itérateurs se comportent comme des intermédiaires entre les conteneurs et les algorithmes génériques. Au lieu de traiter des types de données spécifiques, les algorithmes sont définis pour traiter une plage spécifiée par un type d'itérateur. Toute structure de données répondant aux exigences de l'itérateur peut être traitée par l'algorithme. Il existe cinq types ou catégories d'itérateur, chacun possédant son propre ensemble d'exigences et de fonctionnalités résultantes :  
   
 -   De sortie : se déplace vers l'avant, peut stocker mais pas récupérer des valeurs, fourni par ostream et inserter.  

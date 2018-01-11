@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- _SCL_SECURE_NO_DEPRECATE
-dev_langs:
-- C++
+f1_keywords: _SCL_SECURE_NO_DEPRECATE
+dev_langs: C++
 helpviewer_keywords:
 - Safe Libraries
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 20b68338dd15eaea0d74af9299da5ce8657f65f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 62c5e582773f534aa046eeaeda439b43358e07c2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safe-libraries-c-standard-library"></a>Bibliothèques sécurisées : bibliothèque standard C++
 Plusieurs améliorations ont été apportées aux bibliothèques fournies avec Visual C++, notamment la bibliothèque standard C++, pour les rendre plus sécurisées.  
@@ -52,9 +49,8 @@ Plusieurs améliorations ont été apportées aux bibliothèques fournies avec V
   
  [Checked Iterators](../standard-library/checked-iterators.md)  
   
- [Prise en charge des itérateurs de débogage](../standard-library/debug-iterator-support.md)  
+ [Debug Iterator Support](../standard-library/debug-iterator-support.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble de la bibliothèque C++ Standard](../standard-library/cpp-standard-library-overview.md)
-
+ [Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)
 

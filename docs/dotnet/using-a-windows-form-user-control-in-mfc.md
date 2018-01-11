@@ -1,33 +1,36 @@
 ---
-title: "Utilisation d&#39;un contr&#244;le utilisateur Windows Form dans MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC (C++), prise en charge Windows Forms"
-  - "interopérabilité (C++), Windows Forms dans MFC"
-  - "interopérabilité (C++), MFC"
-  - "Interop (C++), Windows Forms dans MFC"
-  - "Interop (C++), MFC"
-  - "Windows Forms (C++), MFC prend en charge"
+title: "À l’aide d’une fenêtre de former le contrôle utilisateur dans MFC | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], Windows Forms support
+- interoperability [C++], Windows Forms in MFC
+- interoperability [C++], MFC
+- interop [C++], Windows Forms in MFC
+- interop [C++], MFC
+- Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
-caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 59b4d974a6b25b896067bce0042d9a5ff9221cc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Utilisation d&#39;un contr&#244;le utilisateur Windows Form dans MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-À l’aide des classes de prise en charge MFC Windows Forms, vous pouvez héberger des contrôles Windows Forms dans vos applications MFC comme contrôle ActiveX dans des vues ou des boîtes de dialogue MFC. En outre, les formulaires Windows Forms peuvent être hébergés comme boîtes de dialogue MFC.  
+# <a name="using-a-windows-form-user-control-in-mfc"></a>Utilisation d'un contrôle utilisateur Windows Form dans MFC
+À l’aide des classes de prise en charge de MFC Windows Forms, vous pouvez héberger des contrôles Windows Forms dans vos applications MFC comme contrôle ActiveX dans des vues ou des boîtes de dialogue MFC. En outre, les formulaires Windows Forms peuvent être hébergés en tant que les boîtes de dialogue MFC.  
   
  Les sections suivantes décrivent comment :  
   
@@ -35,56 +38,52 @@ caps.handback.revision: 19
   
 -   Héberger un contrôle utilisateur Windows Forms en tant que vue MFC.  
   
--   Héberger un formulaire Windows Forms sous la forme d’une boîte de dialogue MFC.  
+-   Héberger un formulaire Windows Forms en tant que boîte de dialogue MFC.  
   
 > [!NOTE]
->  Intégration de MFC Windows Forms fonctionne uniquement dans les projets qui se lient dynamiquement avec MFC (projets dans lesquels AFXDLL est défini).  
+>  Intégration de MFC Windows Forms fonctionne uniquement dans les projets qui lient dynamiquement à MFC (projets dans lesquels AFXDLL est défini).  
   
 > [!NOTE]
->  Lorsque vous générez votre application à l’aide d’une copie privée (modifiée) des interfaces MFC Windows Forms DLL (mfcmifc80.dll), il ne s’installe dans le GAC, sauf si vous remplacez la clé Microsoft par votre propre clé de fournisseur. Pour plus d’informations sur la signature d’assembly, consultez [programmation avec des assemblys](../Topic/Programming%20with%20Assemblies.md) et [les assemblys de nom fort (signature d’Assembly) (C + c++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
+>  Lorsque vous générez votre application à l’aide d’une copie privée (modifiée) des interfaces MFC Windows Forms DLL (mfcmifc80.dll), il échouera à installer dans le GAC, sauf si vous remplacez la clé Microsoft par votre propre clé de fournisseur. Pour plus d’informations sur la signature d’assembly, consultez [programmation avec des assemblys](/dotnet/framework/app-domains/programming-with-assemblies) et [les assemblys de nom fort (signature d’Assembly) (C + c++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
   
- Pour plus d’exemples d’applications à l’aide de Windows Forms, consultez [BirthdayPicker, exemple : illustre les ressources du .NET Framework avec Windows Forms](http://msdn.microsoft.com/fr-fr/ac932aed-5502-4667-be29-709bca435317), [exemple Calculator : calculatrice de poche Windows Forms](http://msdn.microsoft.com/fr-fr/2283b516-3b7e-45f2-80c4-fdcfb366ce25), et [exemple Scribble : Application de dessin MDI](http://msdn.microsoft.com/fr-fr/f025da3e-659b-4222-b991-554a1b8b2358).  
+ Pour plus d’exemples d’applications à l’aide de Windows Forms, consultez [BirthdayPicker, exemple : illustre les ressources du .NET Framework avec Windows Forms](http://msdn.microsoft.com/en-us/ac932aed-5502-4667-be29-709bca435317), [exemple Calculator : calculatrice de poche Windows Forms](http://msdn.microsoft.com/en-us/2283b516-3b7e-45f2-80c4-fdcfb366ce25)et [ Scribble, exemple : Application de dessin MDI](http://msdn.microsoft.com/en-us/f025da3e-659b-4222-b991-554a1b8b2358).  
   
- Pour un exemple d’application illustrant des Windows Forms avec les MFC, consultez [intégration de Windows Forms et MFC](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).  
+ Pour un exemple d’application qui affiche des Windows Forms avec les MFC, consultez [intégration de Windows Forms et MFC](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).  
   
- Si votre application MFC utilise Windows Forms, vous devez redistribuer mfcmifc90.dll avec votre application. Pour plus d’informations, consultez [redistribuer la bibliothèque MFC](../ide/redistributing-the-mfc-library.md).  
+ Si votre application MFC utilise des Windows Forms, vous devez redistribuer mfcmifc90.dll avec votre application. Pour plus d’informations, consultez [redistribution de la bibliothèque MFC](../ide/redistributing-the-mfc-library.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Hébergement d’un contrôle Windows Form utilisateur dans la boîte de dialogue MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)  
+ [Hébergement d’un contrôle utilisateur Windows Form dans une boîte de dialogue MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)  
   
- [Hébergement d’un contrôle utilisateur Windows Forms en tant que vue MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)  
+ [Hébergement d’un contrôle utilisateur Windows Forms en tant que vue MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)  
   
  [Hébergement d’un contrôle utilisateur Windows Form en tant que boîte de dialogue MFC](../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)  
   
 ## <a name="reference"></a>Référence  
- [CWinFormsControl (classe)](../mfc/reference/cwinformscontrol-class.md)  
+ [CWinFormsControl, classe](../mfc/reference/cwinformscontrol-class.md)  
   
- [CWinFormsDialog (classe)](../mfc/reference/cwinformsdialog-class.md)  
+ [CWinFormsDialog, classe](../mfc/reference/cwinformsdialog-class.md)  
   
- [Classe CWinFormsView](../mfc/reference/cwinformsview-class.md)  
+ [CWinFormsView, classe](../mfc/reference/cwinformsview-class.md)  
   
- [Interface de ICommandSource](../mfc/reference/icommandsource-interface.md)  
+ [ICommandSource, interface](../mfc/reference/icommandsource-interface.md)  
   
- [Interface de ICommandTarget](../mfc/reference/icommandtarget-interface.md)  
+ [ICommandTarget, interface](../mfc/reference/icommandtarget-interface.md)  
   
- [Interface de ICommandUI](../mfc/reference/icommandui-interface.md)  
+ [ICommandUI, interface](../mfc/reference/icommandui-interface.md)  
   
- [Interface IView](../mfc/reference/iview-interface.md)  
+ [IView, interface](../mfc/reference/iview-interface.md)  
   
- [CommandHandler](../Topic/CommandHandler%20Delegate.md)  
+ [CommandHandler](../atl/commandhandler.md)  
   
- [CommandUIHandler](../Topic/CommandUIHandler%20Delegate.md)  
+ [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)  
   
- [DDX_ManagedControl](../Topic/DDX_ManagedControl.md)  
-  
- [UICheckState](../Topic/UICheckState%20Enumeration.md)  
+ [UICheckState](../mfc/reference/uicheckstate-enumeration.md)  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Windows Forms](../Topic/Windows%20Forms.md)  
+ [Windows Forms](/dotnet/framework/winforms/index)  
   
- [Contrôles Windows Forms](../Topic/Windows%20Forms%20Controls.md)  
-  
- [Contrôles utilisateur ASP.NET](../Topic/ASP.NET%20User%20Controls.md)  
+ [Contrôles Windows Forms](/dotnet/framework/winforms/controls/index)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Éléments d’Interface utilisateur](../mfc/user-interface-elements-mfc.md)   

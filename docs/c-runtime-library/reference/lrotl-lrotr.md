@@ -42,11 +42,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25577b776c5a3caf0c47c3cf56a88b7de58392bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 92dd4ea8251a0131fa9b7224aa5ea0aa021584fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lrotl-lrotr"></a>_lrotl, _lrotr
 Soumet des bits à un décalage circulaire vers la gauche (`_lrotl`) ou vers la droite (`_lrotr`).  
@@ -66,7 +67,7 @@ unsigned long _lrotr(
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *value*  
+ *valeur*  
  Valeur à soumettre à un décalage circulaire.  
   
  `shift`  
@@ -78,7 +79,7 @@ unsigned long _lrotr(
 ## <a name="remarks"></a>Notes  
  Les fonctions `_lrotl` et `_lrotr` soumettent *value* à un décalage circulaire de `shift` bits. `_lrotl` applique un décalage circulaire vers la gauche. `_lrotr` fait pivoter la valeur vers la droite. Les deux fonctions enveloppent les bits ayant fait l’objet d’une rotation d’un bout à l’autre de *value*.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

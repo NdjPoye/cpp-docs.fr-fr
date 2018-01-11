@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1d408e0e6fe021caf7f3722a55528020d94bb83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8946c87c18e1781f95df7a91e8cc4fa0eba02158
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="aliases-and-typedefs-c"></a>Alias et typedefs (C++)
 Vous pouvez utiliser un *déclaration d’alias* pour déclarer un nom à utiliser comme un synonyme pour un type déclaré précédemment. (Ce mécanisme est également appelé de manière informelle un *alias de type*). Vous pouvez également utiliser ce mécanisme pour créer un *modèle d’alias*, qui peut être particulièrement utile pour les allocateurs personnalisés.  
@@ -29,7 +30,7 @@ Vous pouvez utiliser un *déclaration d’alias* pour déclarer un nom à utilis
 using identifier = type;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `identifier`  
  Nom de l'alias.  
   
@@ -147,14 +148,14 @@ int main ()
 1701 1764 1664  
 ```  
   
-## <a name="typedefs"></a>Typedefs  
+## <a name="typedefs"></a>Typedef  
  A `typedef` déclaration introduit un nom qui, dans sa portée, devient un synonyme pour le type donné par le *déclaration de type* partie de la déclaration.  
   
  Vous pouvez utiliser des déclarations typedef pour construire des noms plus courts ou plus explicites pour des types déjà définis par le langage ou pour des types que vous avez déclarés. Les noms typedef vous permettent d'encapsuler des détails d'implémentation susceptibles de changer.  
   
  Contrairement à la **classe**, `struct`, **union**, et `enum` déclarations, `typedef` n’introduisent pas de nouveaux types, ils introduisent de nouveaux noms pour des types existants.  
   
- Les noms déclarés à l'aide de `typedef` occupent le même espace de noms que d'autres identificateurs (sauf les étiquettes d'instruction). Par conséquent, ils ne peuvent pas utiliser le même identificateur qu'un nom déclaré précédemment, sauf dans une déclaration de type classe. Prenons l'exemple suivant :  
+ Les noms déclarés à l'aide de `typedef` occupent le même espace de noms que d'autres identificateurs (sauf les étiquettes d'instruction). Par conséquent, ils ne peuvent pas utiliser le même identificateur qu'un nom déclaré précédemment, sauf dans une déclaration de type classe. Prenons l'exemple suivant :  
   
 ```  
 // typedef_names1.cpp  

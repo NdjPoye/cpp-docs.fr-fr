@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6bd5f210632d3f53a26ab6a88f218edeb455bb25
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ee63988571f7db0a872bf0286dae952f3066f0e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="out-c"></a>out (C++)
 Identifie des paramètres pointeurs qui sont retournés de la procédure appelée à la procédure appelante (du serveur au client).  
@@ -32,13 +35,13 @@ Identifie des paramètres pointeurs qui sont retournés de la procédure appelé
   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’attribut C++ **out** a les mêmes fonctionnalités que l’attribut MIDL [out](http://msdn.microsoft.com/library/windows/desktop/aa367136) .  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple pour [bindable](../windows/bindable.md) pour obtenir un exemple d’utilisation de **out**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -46,8 +49,8 @@ Identifie des paramètres pointeurs qui sont retournés de la procédure appelé
 |-|-|  
 |**S'applique à**|Paramètre d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
@@ -55,4 +58,4 @@ Identifie des paramètres pointeurs qui sont retournés de la procédure appelé
  [Attributs IDL](../windows/idl-attributes.md)   
  [Attributs de paramètre](../windows/parameter-attributes.md)   
  [DefaultValue](../windows/defaultvalue.md)   
- [id](../windows/id.md)   
+ [ID](../windows/id.md)   

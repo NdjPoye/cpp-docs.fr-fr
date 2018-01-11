@@ -22,11 +22,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: af687c482ee3565d7b350672b83291194a2edf44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e3edffb10aad7b5793907c8c95ad5028f4d1d23
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iexecutioncontext-structure"></a>IExecutionContext, structure
 Interface avec un contexte d'exécution qui peut s'exécuter sur un processeur virtuel donné et dont le contexte peut être commuté de manière coopérative.  
@@ -49,13 +50,13 @@ struct IExecutionContext;
 |[IExecutionContext::GetScheduler](#getscheduler)|Retourne une interface au planificateur auquel appartient ce contexte d’exécution.|  
 |[IExecutionContext::SetProxy](#setproxy)|Associe un proxy de thread à ce contexte d’exécution. Le proxy de thread associé appelle cette méthode juste avant l’exécution du contexte de `Dispatch` (méthode).|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si vous implémentez un planificateur personnalisé qui interagit avec le Gestionnaire de ressources du Runtime d’accès concurrentiel, vous devez implémenter la `IExecutionContext` interface. Les threads créés par le Gestionnaire de ressources effectuent le travail pour le compte de votre planificateur en exécutant la `IExecutionContext::Dispatch` (méthode).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `IExecutionContext`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrtrm.h  
   
  **Espace de noms :** concurrency  
@@ -81,7 +82,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Un identificateur entier unique.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez utiliser la méthode `GetExecutionContextId` pour obtenir un identificateur unique pour l’objet qui implémente le `IExecutionContext` interface, avant d’utiliser l’interface en tant que paramètre aux méthodes fournies par le Gestionnaire de ressources. Vous devez retourner le même identificateur lorsque la `GetId` fonction est appelée.  
   
  Un identificateur obtenu à partir d’une autre source peut entraîner un comportement non défini.  
@@ -96,7 +97,7 @@ virtual IThreadProxy* GetProxy() = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Interface `IThreadProxy`. Si le proxy de thread du contexte d’exécution n’a pas été initialisé avec un appel à `SetProxy`, la fonction doit retourner `NULL`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelle le Gestionnaire de ressources la `SetProxy` méthode sur un contexte d’exécution, avec une `IThreadProxy` interface comme paramètre, avant d’entrer le `Dispatch` méthode sur le sur le contexte. Vous devez stocker cet argument et le retourner lors des appels à `GetProxy()`.  
   
 ##  <a name="getscheduler"></a>IExecutionContext::GetScheduler, méthode  
@@ -109,7 +110,7 @@ virtual IScheduler* GetScheduler() = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Interface `IScheduler`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez initialiser le contexte d’exécution avec un nom `IScheduler` interface avant de l’utiliser en tant que paramètre aux méthodes fournies par le Gestionnaire de ressources.  
   
 ##  <a name="setproxy"></a>IExecutionContext::SetProxy, méthode  
@@ -123,7 +124,7 @@ virtual void SetProxy(_Inout_ IThreadProxy* pThreadProxy) = 0;
  `pThreadProxy`  
  Une interface pour le proxy de thread qui est sur le point d’entrer le `Dispatch` méthode sur ce contexte d’exécution.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous êtes tenu d’enregistrer le paramètre `pThreadProxy` et retourner lors d’un appel à la `GetProxy` (méthode). Le Gestionnaire des ressources garantit que le proxy de thread associé au contexte d’exécution ne changera pas pendant que le proxy de thread est en cours d’exécution le `Dispatch` (méthode).  
   
 ## <a name="see-also"></a>Voir aussi  

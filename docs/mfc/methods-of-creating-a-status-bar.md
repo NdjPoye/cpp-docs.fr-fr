@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f077c54902f69d181adbdfc8788f826f00239230
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce14870db466727f93daea15b60c99d975783e87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="methods-of-creating-a-status-bar"></a>Méthodes de création d'une barre d'état
 MFC fournit deux classes pour créer des barres d’état : [CStatusBar](../mfc/reference/cstatusbar-class.md) et [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) (qui encapsule le API de contrôle commun de Windows). `CStatusBar`fournit toutes les fonctionnalités de la barre d’état contrôle commun, il interagit avec les menus et barres d’outils automatiquement, et il traite la plupart des paramètres des contrôles communs requis et des structures pour vous. Toutefois, votre fichier exécutable obtenu sera plus grand que celui créé à l’aide de `CStatusBarCtrl`.  

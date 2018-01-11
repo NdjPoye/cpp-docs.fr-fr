@@ -35,11 +35,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b245286294a74718b7527728d5d9e8dea9793234
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9fc9b3d85ffb2a268ab4e09b082d4678b4efedde
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="querynewhandler"></a>_query_new_handler
 Retourne l’adresse de la routine de nouveau gestionnaire actuelle.  
@@ -58,13 +59,13 @@ _PNH _query_new_handler(
 ## <a name="remarks"></a>Notes  
  La fonction C++ `_query_new_handler` retourne l’adresse de la fonction de gestion des exceptions actuelle définie par la fonction C++ [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md). `_set_new_handler` permet de spécifier la fonction de gestion des exceptions qui doit prendre le contrôle si l’opérateur **new** ne parvient pas allouer de la mémoire. Pour plus d’informations, consultez la description des [opérateurs new et delete](../../cpp/new-and-delete-operators.md) dans la Référence du langage C++.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_query_new_handler`|\<new.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

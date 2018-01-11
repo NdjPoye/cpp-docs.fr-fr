@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e27cf6cbcf4e56b5560991b502c5ed66d60487ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 890b46f044c018f68226f3698c65603f931f01fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assume"></a>__assume
 **Section spécifique à Microsoft**  
@@ -40,7 +41,7 @@ __assume(
  `expression`  
  Toute expression supposée être évaluée à True.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L'optimiseur part du principe que la condition représentée par `expression` est remplie au point où le mot clé apparaît et le reste jusqu'à ce qu'`expression` soit modifiée (par exemple, par assignation à une variable). Une utilisation sélective des indications passées à l'optimiseur par `__assume` peut améliorer l'optimisation.  
   
  Si l'instruction `__assume` est écrite sous la forme d'une contradiction (expression toujours évaluée à False), elle est toujours considérée comme `__assume(0)`. Si votre code ne se comporte pas comme prévu, assurez-vous que l'`expression` que vous avez définie est valide et a la valeur True, comme indiqué plus haut. Pour plus d'informations sur le comportement attendu de `__assume(0)`, consultez les notes plus loin dans cet article.  
@@ -54,7 +55,7 @@ __assume(
   
  L'instruction `__assume(0)` est un cas spécial. Utilisez `__assume(0)` pour indiquer un chemin d'accès de code qui ne peut pas être atteint. L'exemple suivant montre comment utiliser `__assume(0)` pour indiquer que le cas par défaut d'une instruction switch ne peut pas être atteint. Il illustre l'utilisation la plus courante de `__assume(0)`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  

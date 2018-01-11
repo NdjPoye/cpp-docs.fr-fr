@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - function templates
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
-ms.openlocfilehash: c3a740bb922a9e0e644275b5c7b8d3f4c50304d4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 721e466e5d7e77592e66aa3ebacb3ad59eb89bb5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-templates"></a>Modèles de fonctions
 Les modèles de classe définissent une famille de classes connexes basées sur les arguments de type passés à la classe lors de son instanciation. Les modèles de fonction sont semblables aux modèles de classe mais définissent une famille de fonctions. Avec les modèles de fonction, vous pouvez spécifier un ensemble de fonctions basées sur le même code mais agir sur différents types ou différentes classes. Le modèle de fonction suivant permute deux éléments :  
@@ -56,7 +54,7 @@ MySwap( j, Hello );      //error
   
  Le deuxième appel `MySwap` déclenche une erreur de compilation, car le compilateur ne peut pas générer de fonction `MySwap` avec des paramètres de types différents. Si des pointeurs void étaient utilisés, les deux appels de fonction se compileraient correctement, mais la fonction ne fonctionnerait pas correctement au moment de l'exécution.  
   
- Il est autorisé de spécifier explicitement les arguments template d'un modèle de fonction. Exemple :  
+ Il est autorisé de spécifier explicitement les arguments template d’un modèle de fonction. Exemple :  
   
 ```cpp
 // function_templates2.cpp  
@@ -74,4 +72,3 @@ int main(int j) {
  [Instanciation du modèle de fonction](../cpp/function-template-instantiation.md)   
  [Instanciation explicite](../cpp/explicit-instantiation.md)   
  [Spécialisation explicite de modèles de fonctions](../cpp/explicit-specialization-of-function-templates.md)
-

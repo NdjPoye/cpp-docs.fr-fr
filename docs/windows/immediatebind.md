@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3656a8a8b60c5492d6fe1d155e2b1274a0f03b16
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 31dddbbb205715e46de5d3382923ef4d73261b53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="immediatebind"></a>immediatebind
 Indique que la base de données est immédiatement avertie de toutes les modifications apportées à une propriété d’un objet lié aux données.  
@@ -32,13 +35,13 @@ Indique que la base de données est immédiatement avertie de toutes les modific
   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **immediatebind** attribut C++ a les mêmes fonctionnalités que le [immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
  Consultez [pouvant être liés](../windows/bindable.md) pour obtenir un exemple montrant comment utiliser **immediatebind**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -46,8 +49,8 @@ Indique que la base de données est immédiatement avertie de toutes les modific
 |-|-|  
 |**S'applique à**|Méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|None|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

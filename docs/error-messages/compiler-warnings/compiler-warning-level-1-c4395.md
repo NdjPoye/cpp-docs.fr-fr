@@ -1,34 +1,33 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4395 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4395"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4395"
+title: Compilateur avertissement (niveau 1) C4395 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4395
+dev_langs: C++
+helpviewer_keywords: C4395
 ms.assetid: 8051469a-3a39-4677-80f7-1300fbffe8ea
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4befed8df0b9fe9960db1060150b238c0707d8f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4395
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'fonction' : la fonction membre sera appelée sur une copie des données membre initonly 'membre'  
+# <a name="compiler-warning-level-1-c4395"></a>Avertissement du compilateur (niveau 1) C4395
+'fonction' : fonction membre sera appelée sur une copie des données membres initonly 'membre'  
   
- Une fonction membre a été appelée sur des données membre [initonly](../../dotnet/initonly-cpp-cli.md).  L'erreur C4395 signale que les données membre **initonly** ne peuvent pas être modifiées par la fonction.  
+ Une fonction membre a été appelée sur un [initonly (C + c++ / CLI)](../../dotnet/initonly-cpp-cli.md) membre de données.  L’erreur C4395 signale que le **initonly** membre de données ne peut pas être modifié par la fonction.  
   
- L'exemple suivant génère l'erreur C4395 :  
+ L’exemple suivant génère l’erreur C4395 :  
   
 ```  
 // C4395.cpp  

@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2853c40a5eaa3ccb8dbbf5855b92b4cba9b3a140
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0223d9733f9290d989183a34b91779ee1f4d5e28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="virtual-list-controls"></a>Contrôles de liste virtuels
 Un contrôle de liste virtuelle est un contrôle list view qui a le **est LVS_OWNERDATA** style. Ce style permet au contrôle prendre en charge d’un nombre d’éléments jusqu'à une `DWORD` (le nombre d’éléments par défaut s’étend uniquement à un `int`). Toutefois, le principal avantage de ce style est la possibilité d’avoir uniquement un sous-ensemble d’éléments de données en mémoire à tout moment. Ainsi, la liste virtuelle contrôle view lui-même pour une utilisation avec des bases de données de grande taille où les méthodes spécifiques de l’accès aux données sont déjà en place.  

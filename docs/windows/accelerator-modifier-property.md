@@ -1,44 +1,45 @@
 ---
-title: "Modifier, propri&#233;t&#233; d&#39;un acc&#233;l&#233;rateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Modifier (propriété)"
+title: "Propriété du modificateur d’un accélérateur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Modifier property
 ms.assetid: f05a9379-e037-4cfb-b6ef-d2c655bcfa7f
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 63d6a4b526fc1f2aeb2a942e682a8c7cc6f9b58c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Modifier, propri&#233;t&#233; d&#39;un acc&#233;l&#233;rateur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vous trouverez ci\-dessous les entrées valides pour la propriété Modifier dans la table d'accélérateurs.  
+# <a name="accelerator-modifier-property"></a>Modifier, propriété d'un accélérateur
+Les éléments suivants sont des entrées valides pour la propriété Modifier dans la table d’accélérateurs.  
   
-|Valeur|Description|  
-|------------|-----------------|  
-|**Aucun**|L'utilisateur appuie uniquement sur la valeur de touche.  Valeur utilisée avec les valeurs ASCII\/ANSI 001 à 026, ce qui correspond à ^A à ^Z \(CTRL\-A à CTRL\-Z\).|  
-|**Alt**|L'utilisateur doit appuyer sur la touche ALT avant la valeur de la touche.|  
-|**Ctrl**|L'utilisateur doit appuyer sur la touche CTRL avant la valeur de la touche.  Non valide avec le type ASCII.|  
-|**Shift**|L'utilisateur doit appuyer sur la touche MAJ avant la valeur de la touche.|  
-|**Ctrl\+Alt**|L'utilisateur doit appuyer sur la touche CTRL et la touche ALT avant la valeur de la touche.  Non valide avec le type ASCII.|  
-|**Ctrl\+Maj**|L'utilisateur doit appuyer sur la touche CTRL et la touche MAJ avant la valeur de la touche.  Non valide avec le type ASCII.|  
-|**Alt\+Maj**|L'utilisateur doit appuyer sur la touche ALT et la touche MAJ avant la valeur de la touche.  Non valide avec le type ASCII.|  
-|**Ctrl\+Alt\+Maj**|L'utilisateur doit appuyer sur les touches CTRL, ALT et MAJ avant la valeur de la touche.  Non valide avec le type ASCII.|  
+|Value|Description|  
+|-----------|-----------------|  
+|**Aucun**|Utilisateur appuie sur uniquement la valeur de clé. Utilisé avec les valeurs ASCII/ANSI 001 à 026, ce qui est ^ A à ^ Z (CTRL-A à CTRL-Z).|  
+|**ALT**|Utilisateur doit appuyer sur la touche ALT avant la valeur de clé.|  
+|**CTRL**|Utilisateur doit appuyer sur la touche CTRL ENFONCÉE avant que la valeur de clé. Non valide avec le Type ASCII.|  
+|**Touche MAJ enfoncée**|Utilisateur doit appuyer sur la touche MAJ avant la valeur de clé.|  
+|**Ctrl + Alt**|Utilisateur doit appuyer sur la touche CTRL et la touche ALT avant la valeur de clé. Non valide avec le Type ASCII.|  
+|**CTRL + MAJ**|Utilisateur doit appuyer sur la touche CTRL et la touche MAJ avant la valeur de clé. Non valide avec le Type ASCII.|  
+|**ALT + MAJ**|Utilisateur doit appuyer sur la touche ALT et la touche MAJ avant la valeur de clé. Non valide avec le Type ASCII.|  
+|**Ctrl + Alt + Maj**|Utilisateur doit appuyer sur MAJ, CTRL et ALT avant la valeur de clé. Non valide avec le Type ASCII.|  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
-## Voir aussi  
- [Setting Accelerator Properties](../windows/setting-accelerator-properties.md)   
- [Accelerator Editor](../mfc/accelerator-editor.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des propriétés d’un accélérateur](../windows/setting-accelerator-properties.md)   
+ [Éditeur d’accélérateurs](../windows/accelerator-editor.md)

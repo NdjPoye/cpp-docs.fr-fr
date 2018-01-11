@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - defaults, arguments
 - function definitions
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 4196abd9d33595c59ae291ea4eba9e8806cce984
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a5fa20f0a2236d6458490784d2fa0f1b53b13241
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions-c"></a>Fonctions (C++)
 Une fonction est un bloc de code qui effectue une opération. Une fonction peut éventuellement définir les paramètres d'entrée qui permettent aux appelants de passer des arguments dans la fonction. Une fonction peut éventuellement retourner une valeur en tant que sortie. Les fonctions sont utiles pour encapsuler les opérations courantes dans un seul bloc réutilisable, idéalement avec un nom qui décrit clairement ce que fait la fonction. La fonction suivante accepte deux entiers à partir d’un appelant et retourne leur somme ; `a` et `b` sont *paramètres* de type `int`.  
@@ -230,7 +228,7 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 ## <a name="function-local-variables"></a>Variables locales de fonction  
  Une variable qui est déclarée à l’intérieur d’un corps de fonction est appelée un *variable locale* ou simplement un *local*. Les variables locales non statiques sont uniquement visibles à l'intérieur du corps de la fonction et, si elles sont déclarées sur la pile, sortent de la portée lors de la fermeture de la fonction. Quand vous construisez une variable locale et la retournez par valeur, le compilateur peut généralement exécuter l'optimisation de la valeur de retour pour éviter des opérations de copie inutiles. Si vous retournez une variable locale par référence, le compilateur émet un avertissement, car toute tentative d'utiliser cette référence par l'appelant se produit après la destruction de la variable locale.  
   
- Les objets statiques locaux sont détruits durant l'arrêt spécifié par `atexit`. Si un objet statique n'a pas été construit car le flux de contrôle du programme a contourné sa déclaration, aucune tentative de destruction de cet objet n'est effectuée.  
+ Les objets statiques locaux sont détruits durant l'arrêt spécifié par `atexit`. Si un objet statique n’a pas été construit car le flux de contrôle du programme a contourné sa déclaration, aucune tentative de destruction de cet objet n’est effectuée.  
   
 ### <a name="static-local-variables"></a>Variables locales statiques  
  En C++, une variable locale peut être déclarée comme statique. La variable n'est visible que dans le corps de fonction, mais une seule copie de la variable existe pour toutes les instances de la fonction.  
@@ -380,7 +378,7 @@ int main()
 ## <a name="function-pointers"></a>Pointeurs fonction  
  C++ prend en charge les pointeurs de fonction de la même manière que le langage C. Toutefois, une alternative de type plus sécurisé consiste généralement à utiliser un objet de fonction.  
   
- Il est recommandé d'utiliser `typedef` pour déclarer un alias pour le type de pointeur fonction si vous déclarez une fonction qui retourne un type de pointeur fonction.  Exemple :  
+ Il est recommandé d'utiliser `typedef` pour déclarer un alias pour le type de pointeur fonction si vous déclarez une fonction qui retourne un type de pointeur fonction.  Exemple :  
   
 ```  
 typedef int (*fp)(int);  

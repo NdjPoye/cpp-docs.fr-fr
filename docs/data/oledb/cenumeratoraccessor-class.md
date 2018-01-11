@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b78307c1b8f9df1945ab2376b939db2c41b8ad23
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4a82b09a65cb4ebe6f0f796ba9aeb46ac5a2106a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor, classe
 Utilisé par [CEnumerator](../../data/oledb/cenumerator-class.md) pour accéder aux données à partir de l’ensemble de lignes d’énumérateur.  
@@ -45,10 +48,10 @@ class CEnumeratorAccessor
 |[m_szName](../../data/oledb/cenumeratoraccessor-m-szname.md)|Le nom de la source de données ou de l’énumérateur.|  
 |[m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)|Chaîne à passer au [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) pour obtenir un moniker pour la source de données ou de l’énumérateur.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cet ensemble de lignes se compose des sources de données et les énumérateurs visibles à partir de l’énumérateur en cours.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

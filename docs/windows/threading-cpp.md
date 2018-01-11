@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c85287a590dfa9cf3c931ce358dca8b303f4737a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e44fec96391fff6700ecf4a453d7455bd75e9df7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="threading-c"></a>thread (C++)
 Spécifie le modèle de thread pour un objet COM.  
@@ -49,7 +52,7 @@ Spécifie le modèle de thread pour un objet COM.
   
  La valeur par défaut est **cloisonnement**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **threading** attribut C++ n’apparaît pas dans le fichier .idl généré, mais sera utilisé dans l’implémentation de votre objet COM.  
   
  Dans les projets ATL, si le [coclasse](../windows/coclass.md) attribut est également présent, le modèle de thread spécifié par *modèle* est passé comme paramètre de modèle pour le [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) classe , inséré par le **coclasse** attribut.  
@@ -59,7 +62,7 @@ Spécifie le modèle de thread pour un objet COM.
 ## <a name="example"></a>Exemple  
  Consultez le [concédé sous licence](../windows/licensed.md) exemple pour un exemple d’utilisation de **threading**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -68,7 +71,7 @@ Spécifie le modèle de thread pour un objet COM.
 |**S'applique à**|**class**, `struct`|  
 |**Renouvelable**|Non|  
 |**Attributs requis**|**coclass**|  
-|**Attributs non valides**|Aucun|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

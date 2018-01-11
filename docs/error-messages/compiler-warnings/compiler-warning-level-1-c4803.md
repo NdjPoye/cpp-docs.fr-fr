@@ -4,50 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4803
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4803
+f1_keywords: C4803
+dev_langs: C++
+helpviewer_keywords: C4803
 ms.assetid: 2552f3a6-c418-49f4-98a2-a929857be658
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 2581d4240306e88d75fe5fcc0249371005853b7e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b6725685e84e1c9ce0fc5c3f58f4ff163870d278
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4803"></a>Avertissement du compilateur (niveau 1) C4803
-'méthode' : la méthode raise a une classe de stockage différente de celle de l’événement, 'événement'  
+'méthode' : la méthode raise a une classe de stockage différente de celle de l’événement, 'event'  
   
-Méthodes d’événements doivent avoir la même classe de stockage que la déclaration d’événement. Le compilateur ajuste les méthodes d’événement afin que les classes de stockage sont identiques.  
+Méthodes d’événement doivent avoir la même classe de stockage que la déclaration d’événement. Le compilateur ajuste les méthodes d’événement afin que les classes de stockage sont les mêmes.  
   
-Cet avertissement peut se produire si vous avez une classe qui implémente un événement à partir d’une interface. Le compilateur ne génère pas implicitement une méthode raise pour un événement dans une interface. Lorsque vous implémentez cette interface dans une classe, le compilateur génère implicitement une méthode raise et cette méthode ne sera pas virtuelle, d'où l’avertissement. Pour plus d’informations sur les événements, consultez la page [événement](../../windows/event-cpp-component-extensions.md).  
+Cet avertissement peut se produire si vous avez une classe qui implémente un événement à partir d’une interface. Le compilateur ne génère pas implicitement une méthode raise pour un événement dans une interface. Lorsque vous implémentez cette interface dans une classe, le compilateur génère implicitement une méthode raise et cette méthode ne sera pas virtuelle, par conséquent, l’avertissement. Pour plus d’informations sur les événements, consultez [événement](../../windows/event-cpp-component-extensions.md).  
   
-Consultez la page [avertissement](../../preprocessor/warning.md) pragma pour plus d’informations sur la façon de désactiver un avertissement.  
+Consultez [avertissement](../../preprocessor/warning.md) pragma pour plus d’informations sur la façon de désactiver un avertissement.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant génère l’erreur C4803.  
@@ -89,4 +71,3 @@ int main() {
    ep->E1();  
 }  
 ```  
-

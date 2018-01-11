@@ -37,11 +37,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ceca13bd09483c788c430d420b53c88bb97ed34d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de1e30e6ca9f404199c6db43837f35d612a02b69
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Classe de CMFCEditBrowseCtrl
 La `CMFCEditBrowseCtrl` classe prend en charge le contrôle d’édition Parcourir, qui est une zone de texte modifiable contenant éventuellement un bouton Parcourir. Lorsque l’utilisateur clique sur le bouton Parcourir, le contrôle effectue une action personnalisée ou affiche une boîte de dialogue standard qui contient un explorateur de fichiers ou de dossiers.  
@@ -77,7 +78,7 @@ class CMFCEditBrowseCtrl : public CEdit
 |`CMFCEditBrowseCtrl::PreTranslateMessage`|Convertit les messages de fenêtre avant d’être distribués à le [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) fonctions Windows. Pour la syntaxe et plus d’informations, consultez [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
 |[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|Définit une image personnalisée pour le bouton Parcourir.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez un contrôle d’édition Parcourir pour sélectionner un nom de fichier ou dossier. Si vous le souhaitez, utiliser le contrôle pour effectuer une action personnalisée comme pour afficher une boîte de dialogue. Vous pouvez afficher ou n’affiche pas le bouton Parcourir, et vous pouvez appliquer une étiquette personnalisée ou une image sur le bouton.  
   
  Le *en mode de navigation* du modifier pour parcourir le contrôle détermine s’il affiche un bouton Parcourir et l’action qui se produit lorsque le bouton est activé. Pour plus d’informations, consultez la [GetMode](#getmode) (méthode).  
@@ -127,7 +128,7 @@ class CMFCEditBrowseCtrl : public CEdit
  [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#7](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxeditbrowsectrl.h  
   
 ##  <a name="enablebrowsebutton"></a>CMFCEditBrowseCtrl::EnableBrowseButton  
@@ -146,7 +147,7 @@ void EnableBrowseButton(
  `szLabel`  
  L’étiquette qui s’affiche sur le bouton Parcourir. La valeur par défaut est « **...** ".  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si le `bEnable` paramètre est `TRUE`, implémenter une action personnalisée pour effectuer un clic sur le bouton Parcourir. Pour implémenter une action personnalisée, dérivez une classe à partir de la `CMFCEditBrowseCtrl` classe et substituer sa [OnBrowse](#onbrowse) (méthode).  
   
  Si le `bEnable` paramètre est `TRUE`, le mode de navigation du contrôle est `BrowseMode_Default`; sinon, le mode de navigation est `BrowseMode_None`. Pour plus d’informations sur les modes de navigation, consultez la [GetMode](#getmode) (méthode).  
@@ -171,7 +172,7 @@ void EnableFileBrowseButton(
  `dwFlags`  
  Indicateurs de boîte de dialogue. La valeur par défaut est une combinaison (OR) au niveau du bit de OFN_HIDEREADONLY et OFN_OVERWRITEPROMPT.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Quand le contrôle de zone de modification est en mode de navigation de fichiers et que l'utilisateur clique sur le bouton parcourir, le contrôle affiche la boîte de dialogue de sélection de fichier standard.  
   
  Pour obtenir une liste complète des indicateurs disponibles, consultez [structure OPENFILENAME](https://msdn.microsoft.com/library/ms646839.aspx).  
@@ -183,7 +184,7 @@ void EnableFileBrowseButton(
 void EnableFolderBrowseButton();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque le contrôle edit est en mode de navigation de dossier et que l’utilisateur clique sur le bouton Parcourir, le contrôle affiche la boîte de dialogue Sélection standard.  
   
 ##  <a name="getmode"></a>CMFCEditBrowseCtrl::GetMode  
@@ -198,14 +199,14 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
   
  Le tableau ci-dessous répertorie les valeurs de retour possibles.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |`BrowseMode_Default`|`custom mode`. Une action définie par le programmeur est effectuée.|  
 |`BrowseMode_File`|`file mode`. La boîte de dialogue navigateur standard s’affiche.|  
 |`BrowseMode_Folder`|`folder mode`. La boîte de dialogue navigateur standard s’affiche.|  
 |`BrowseMode_None`|Le bouton Parcourir n’est pas affiché.|  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, un `CMFCEditBrowseCtrl` objet est initialisé à `BrowseMode_None` mode. Modifier le mode de navigation avec le [CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton), [CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton), et [CMFCEditBrowseCtrl::EnableFolderBrowseButton ](#enablefolderbrowsebutton) méthodes.  
   
 ##  <a name="onafterupdate"></a>CMFCEditBrowseCtrl::OnAfterUpdate  
@@ -215,7 +216,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
 virtual void OnAfterUpdate();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Substituez cette méthode dans une classe dérivée pour implémenter une action personnalisée.  
   
 ##  <a name="onbrowse"></a>CMFCEditBrowseCtrl::OnBrowse  
@@ -225,7 +226,7 @@ virtual void OnAfterUpdate();
 virtual void OnBrowse();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode permet d’exécuter du code personnalisé lorsque l’utilisateur clique sur le bouton Parcourir le parcourir de contrôle d’édition. Dérivez votre propre classe de la `CMFCEditBrowseCtrl` classe et substituer sa `OnBrowse` (méthode). Dans cette méthode, implémentent une action Parcourir personnalisée et éventuellement mettre à jour la zone de texte du contrôle d’édition Parcourir. Dans votre application, utilisez le [EnableBrowseButton](#enablebrowsebutton) méthode permettant de placer le contrôle d’édition Parcourir *Parcourir personnalisée* mode.  
   
 ##  <a name="onchangelayout"></a>CMFCEditBrowseCtrl::OnChangeLayout  
@@ -235,7 +236,7 @@ virtual void OnBrowse();
 virtual void OnChangeLayout();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode lorsque le mode de navigation du modifier, accédez contrôler les modifications apportées. Pour plus d’informations, consultez [CMFCEditBrowseCtrl::GetMode](#getmode).  
   
 ##  <a name="ondrawbrowsebutton"></a>CMFCEditBrowseCtrl::OnDrawBrowseButton  
@@ -262,7 +263,7 @@ virtual void OnDrawBrowseButton(
  `bIsButtonHot`  
  `TRUE`Si le bouton est mis en surbrillance ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Remplacez cette fonction dans une classe dérivée pour personnaliser l’apparence du bouton Parcourir.  
   
 ##  <a name="setbrowsebuttonimage"></a>CMFCEditBrowseCtrl::SetBrowseButtonImage  
@@ -294,7 +295,7 @@ void SetBrowseButtonImage(UINT uiBmpResId);
  `bAutoDestroy`  
  `TRUE`Pour supprimer l’icône spécifiée ou bitmap lorsque cette méthode se termine ; dans le cas contraire, `FALSE`. La valeur par défaut est `TRUE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour appliquer une image personnalisée pour le bouton Parcourir. Par défaut, l’infrastructure Obtient une image standard lorsque le contrôle edit est dans *parcourir les fichiers* ou *recherche de dossiers* mode.  
   
 ##  <a name="onillegalfilename"></a>CMFCEditBrowseCtrl::OnIllegalFileName  
@@ -311,7 +312,7 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
 ### <a name="return-value"></a>Valeur de retour  
  Doit retourner `FALSE` si ce nom de fichier ne peut pas être transmis plus en détail la boîte de dialogue de fichier. Dans ce cas, le focus est défini au contrôle d’édition et l’utilisateur doit continuer à modifier. L’implémentation par défaut affiche une boîte de message indiquant à l’utilisateur sur le nom de fichier non autorisé et retourne `FALSE`. Vous pouvez substituer cette méthode, veuillez corriger le nom de fichier et de retour `TRUE` pour un traitement ultérieur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c00e5a26979556c07b3ea40e4e981a8d2e4dee9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0a83b635dc7d408b6296c0407984ddfb9a9f3659
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="embeddedidl"></a>embedded_idl
 **Spécifique à C++**  
@@ -50,7 +51,7 @@ embedded_idl[("param")]
 #import "\school\bin\importlib.tlb" embedded_idl("no_emitidl")  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **FIN spécifique à C++**  
   
 ## <a name="see-also"></a>Voir aussi  

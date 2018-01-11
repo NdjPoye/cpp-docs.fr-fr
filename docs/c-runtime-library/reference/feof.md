@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- feof
+apiname: feof
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,38 +21,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- feof
-dev_langs:
-- C++
+f1_keywords: feof
+dev_langs: C++
 helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 345ebdff9733ac25bd3a42dc5a5465d501e1f28f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ef20a9653263a87e0818450b1d6d0b1241f91b8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="feof"></a>feof
 Teste la fin de fichier sur un flux.  
@@ -74,20 +56,20 @@ int feof(
 ## <a name="return-value"></a>Valeur de retour  
  La fonction `feof` retourne une valeur différente de zéro si une opération de lecture a tenté de lire au-delà de la fin du fichier ; sinon, elle retourne 0. Si le pointeur de flux est `NULL`, la fonction appelle le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `errno` a la valeur `EINVAL`, et `feof` retourne 0.  
   
- Consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d’informations sur ces éléments et autres codes d’erreur.  
+ Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Notes  
  La routine `feof` (implémentée à la fois en tant que fonction et que macro) détermine si la fin de `stream` a été passée. Quand la fin du fichier est passée, les opérations de lecture retournent un indicateur de fin de fichier jusqu’à ce que le flux soit fermé ou que `rewind`, `fsetpos`, `fseek` ou `clearerr` soit appelé sur lui.  
   
  Par exemple, si un fichier contient 10 octets et que vous lisez 10 octets du fichier, `feof` retourne 0 car, même si le pointeur de fichier est à la fin du fichier, vous n’avez pas essayé de lire au-delà de la fin. C’est seulement si vous tentez de lire un 11e octet que `feof` retourne une valeur différente de zéro.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête requis|  
 |--------------|---------------------|  
 |`feof`|\<stdio.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

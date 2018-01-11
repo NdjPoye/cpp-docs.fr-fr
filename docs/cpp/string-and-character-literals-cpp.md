@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- R
-dev_langs:
-- C++
+f1_keywords: R
+dev_langs: C++
 helpviewer_keywords:
 - L constant
 - escape sequences
@@ -25,16 +22,16 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c7254d4cc8dcbbaa0916a77ee6c52da05dc8ec9c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="string-and-character-literals--c"></a>Littéraux de chaîne et caractères (C++)
 C++ prend en charge divers types de chaîne et de caractère, et fournit les moyens d'exprimer les valeurs littérales de chacun de ces types. Dans votre code source, vous exprimez le contenu de vos littéraux de caractère et de chaîne à l’aide d’un jeu de caractères. Les noms de caractères universels et les caractères d’échappement vous permettent d’exprimer une chaîne en utilisant uniquement le jeu de caractères sources de base. Un littéral de chaîne brut vous permet d'éviter d'utiliser des caractères d'échappement et peut servir à exprimer tous les types de littéral de chaîne. Vous pouvez également créer des littéraux std::string sans avoir à effectuer d’étapes de conversion ou de construction supplémentaires.  
@@ -115,7 +112,7 @@ int main()
 ###  <a name="bkmk_Escape"></a> Séquences d'échappement  
  Il existe trois types de séquence d’échappement : simple, octal et hexadécimal. Les séquences d'échappement peuvent être de l'une des formes suivantes :  
   
-|Valeur|Séquence d'échappement|Valeur|Séquence d'échappement|  
+|Valeur|Séquence d'échappement|Value|Séquence d'échappement|  
 |-----------|---------------------|-----------|---------------------|  
 |saut de ligne|\n|barre oblique inverse|\\\|  
 |tabulation horizontale|\t|point d'interrogation|? ou \\?|  
@@ -156,14 +153,14 @@ char c0    = 'abcd';    // C4305, C4309, truncates to 'd'
 wchar_t w0 = 'abcd';    // C4305, C4309, truncates to '\x6364'  
 ```  
   
- Une séquence d'échappement octale est une barre oblique inverse suivie de trois chiffres octaux maximum. Une séquence d’échappement octale qui contient plus de trois chiffres est considérée comme une séquence octale à 3 chiffres suivie de caractères. Cela peut entraîner des résultats inattendus. Exemple :  
+ Une séquence d'échappement octale est une barre oblique inverse suivie de trois chiffres octaux maximum. Une séquence d’échappement octale qui contient plus de trois chiffres est considérée comme une séquence octale à 3 chiffres suivie de caractères. Cela peut entraîner des résultats inattendus. Exemple :  
   
 ```cpp  
 char c1 = '\100';   // '@'  
 char c2 = '\1000';  // C4305, C4309, truncates to '0'   
 ```  
   
- Les séquences d’échappement qui contiennent des caractères non octaux sont évaluées sous forme de séquences octales jusqu’au dernier caractère octal, suivi des caractères restants. Exemple :  
+ Les séquences d’échappement qui contiennent des caractères non octaux sont évaluées sous forme de séquences octales jusqu’au dernier caractère octal, suivi des caractères restants. Exemple :  
   
 ```cpp  
 char c3 = '\009';   // '9'  
@@ -251,7 +248,7 @@ auto s4 = U"hello"; // const char32_t*
 ```  
   
 ### <a name="raw-string-literals-c11"></a>Littéraux de chaîne bruts (C++11)  
- Un littéral de chaîne brut est un tableau se terminant par null, de tout type de caractère, qui contient tout caractère graphique, y compris le guillemet double («), barre oblique inverse (\\), ou un caractère de saut de ligne. Les littéraux de chaîne bruts sont souvent utilisés dans les expressions régulières qui utilisent des classes de caractères et dans des chaînes XML et des chaînes HTML. Pour obtenir des exemples, consultez l’article du [FAQ de Bjarne Stroustrup sur C++11](http://go.microsoft.com/fwlink/?LinkId=401172).  
+ Un littéral de chaîne brut est un tableau se terminant par null, de tout type de caractère, qui contient tout caractère graphique, y compris le guillemet double («), barre oblique inverse (\\), ou un caractère de saut de ligne. Les littéraux de chaîne bruts sont souvent utilisés dans les expressions régulières qui utilisent des classes de caractères et dans des chaînes XML et des chaînes HTML. Pour obtenir des exemples, consultez l’article suivant : [Forum aux questions de Bjarne Stroustrup C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=401172).  
   
 ```cpp  
 // represents the string: An unescaped \ character  

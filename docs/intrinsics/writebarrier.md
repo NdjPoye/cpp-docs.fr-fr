@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 33644d332a83f1bb80f6812f04daefb227fd8a65
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e619341e05d868b97d67fef068999c16fb2b4e60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writebarrier"></a>_WriteBarrier
 **Section spécifique à Microsoft**  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/24/2017
 void _WriteBarrier(void);  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
@@ -45,7 +46,7 @@ void _WriteBarrier(void);
   
  **Fichier d’en-tête** \<intrin.h >  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L'intrinsèque `_WriteBarrier` limite les optimisations du compilateur qui peuvent supprimer ou réordonnancer les opérations d'accès à la mémoire sur le point de l'appel.  
   
 **FIN de la section spécifique à Microsoft**  

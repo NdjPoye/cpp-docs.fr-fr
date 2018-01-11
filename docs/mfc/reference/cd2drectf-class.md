@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 14938e6e3ccb6cff6247534e0ae321254bf1b9a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b0919780e4fcad86772892bb0b300a735df81e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2drectf-class"></a>CD2DRectF, classe
 Wrapper pour `D2D1_RECT_F`.  
@@ -61,7 +62,7 @@ class CD2DRectF : public D2D1_RECT_F;
   
  `CD2DRectF`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrendertarget.h  
   
 ##  <a name="cd2drectf"></a>CD2DRectF::CD2DRectF  

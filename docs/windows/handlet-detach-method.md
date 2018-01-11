@@ -1,47 +1,48 @@
 ---
-title: "HandleT::Detach, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleT::Detach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Detach (méthode)"
+title: "Handlet::Detach, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleT::Detach
+dev_langs: C++
+helpviewer_keywords: Detach method
 ms.assetid: f7df0f90-fafb-4d1b-a215-a6c62941f6b0
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 25ee0e3ea826d77795bbdfafda780071d7a817a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# HandleT::Detach, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dissocie l'objet HandleT actuel de son handle sous\-jacent.  
+# <a name="handletdetach-method"></a>HandleT::Detach, méthode
+Dissocie l’objet HandleT actuel à partir de son handle sous-jacent.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typename HandleTraits::Type Detach();  
 ```  
   
-## Valeur de retour  
- Le handle sous\-jacent.  
+## <a name="return-value"></a>Valeur de retour  
+ Le handle sous-jacent.  
   
-## Remarques  
- Lorsque cette opération se termine, le HandleT actuel est défini à l'état non valide.  
+## <a name="remarks"></a>Notes  
+ Lorsque cette opération est terminée, le HandleT actuelle est définie sur l’état non valide.  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers  
+ **Namespace :** Microsoft::WRL::Wrappers  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [HandleT, classe](../windows/handlet-class.md)

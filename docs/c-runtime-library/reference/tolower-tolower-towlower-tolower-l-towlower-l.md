@@ -53,11 +53,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bd7c3fd10461033c6b66a96eecd4d5e6ec5941b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7fe06748a6e349f612fdf564c9aed917e43f164b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
 Convertit un caractère en minuscule.  
@@ -95,7 +96,7 @@ int _towlower_l(
  Chacune de ces routines convertit une copie de `c` en minuscule si la conversion est possible, et retourne le résultat. Il n’existe aucune valeur de retour réservée pour indiquer une erreur.  
   
 ## <a name="remarks"></a>Notes  
- Chacune de ces routines convertit une lettre majuscule donnée en lettre minuscule si cela est possible et approprié. La conversion de la casse de `towlower` est spécifique aux paramètres régionaux. Seuls les caractères relevant des paramètres régionaux actifs changent de casse. Les fonctions sans suffixe `_l` utilisent les paramètres régionaux actuellement définis. Les versions de ces fonctions avec suffixe `_l` prennent les paramètres régionaux comme paramètre et les utilisent à la place des paramètres régionaux actuellement définis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ Chacune de ces routines convertit une lettre majuscule donnée en lettre minuscule si cela est possible et approprié. La conversion de la casse de `towlower` est spécifique aux paramètres régionaux. Seuls les caractères relevant des paramètres régionaux actifs changent de casse. Les fonctions sans suffixe `_l` utilisent les paramètres régionaux actuellement définis. Les versions de ces fonctions avec suffixe `_l` prennent les paramètres régionaux comme paramètre et les utilisent à la place des paramètres régionaux actuellement définis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  Pour que `_tolower` donne les résultats attendus, [__isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) et [isupper](../../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md) doivent retourner une valeur différente de zéro.  
   
@@ -109,7 +110,7 @@ int _towlower_l(
 > [!NOTE]
 >  Les routines `_tolower_l` et `_towlower_l` ne dépendent pas des paramètres régionaux et ne sont pas destinées à être appelées directement. Elles sont fournies pour une utilisation en interne par `_totlower_l`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
@@ -117,7 +118,7 @@ int _towlower_l(
 |`_tolower`|\<ctype.h>|  
 |`towlower`|\<ctype.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple dans [to, fonctions](../../c-runtime-library/to-functions.md).  

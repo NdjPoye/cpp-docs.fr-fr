@@ -1,28 +1,28 @@
 ---
-title: "3.3 Timing Routines | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 3.3 Routines de minutage | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 21060d64-cbe8-4e38-8718-3a68d6a57be3
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 05f9e7c8eedbf1803e1bfbc3c744c5d8b9c9fd99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# 3.3 Timing Routines
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les fonctions décrites de cette section prennent en charge une minuterie portable d'horloge murale\) :  
+# <a name="33-timing-routines"></a>3.3 Routines de minutage
+Les fonctions décrites dans cette section prennent en charge un minuteur d’horloge portables :  
   
--   Le retour de la fonction d' `omp_get_wtime` se sont écoulés temps d'horloge murale\).  
+-   Le `omp_get_wtime` fonction retourne le temps horloge écoulé.  
   
--   La fonction d' `omp_get_wtick` retourne les secondes entre les battements d'horloge consécutifs.
+-   Le `omp_get_wtick` fonction retourne les secondes entre les battements d’horloge successives.

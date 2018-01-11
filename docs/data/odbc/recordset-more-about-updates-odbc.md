@@ -1,111 +1,114 @@
 ---
-title: "Recordset&#160;: informations compl&#233;mentaires sur les mises &#224; jour (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "environnements multi-utilisateurs, mises à jour des recordsets"
-  - "ODBC (recordsets), mettre à jour"
-  - "enregistrements, mettre à jour"
-  - "recordsets, mettre à jour"
-  - "défilement, mises à jour des recordsets"
-  - "transactions, mettre à jour des recordsets"
-  - "mettre à jour des recordsets"
+title: "Recordset : en savoir plus sur les mises à jour (ODBC) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- records, updating
+- transactions, updating recordsets
+- ODBC recordsets, updating
+- multiuser environments, updates to recordsets
+- scrolling, updates to recordsets
+- updating recordsets
+- recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1ad9042c4001fc1a0e0c8c8d19e5ac53b6312875
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Recordset&#160;: informations compl&#233;mentaires sur les mises &#224; jour (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique s'applique aux classes ODBC MFC.  
+# <a name="recordset-more-about-updates-odbc"></a>Recordset : informations complémentaires sur les mises à jour (ODBC)
+Cette rubrique s’applique aux classes ODBC MFC.  
   
  Cette rubrique explique :  
   
--   [l'influence des autres opérations, comme les transactions, sur les mises à jour](#_core_how_transactions_affect_updates) ;  
+-   [Répercussions des autres opérations, telles que les transactions, sur les mises à jour](#_core_how_transactions_affect_updates).  
   
--   [vos propres mises à jour et celles des autres utilisateurs](#_core_your_updates_and_the_updates_of_other_users) ;  
+-   [Les mises à jour et celles des autres utilisateurs](#_core_your_updates_and_the_updates_of_other_users).  
   
--   [des informations complémentaires sur les fonctions membres Update et Delete](#_core_more_about_update_and_delete).  
+-   [Plus d’informations sur les fonctions membres Update et Delete](#_core_more_about_update_and_delete).  
   
 > [!NOTE]
->  Cette rubrique s'applique aux objets dérivés de `CRecordset` dans lesquels l'extraction de lignes en bloc n'a pas été implémentée.  Si vous avez implémenté l'extraction de lignes en bloc, certaines des informations ne s'appliquent pas.  Par exemple, vous ne pouvez pas appeler les fonctions membres `AddNew`, **Edit**, **Delete** et **Update** ; cependant, il est possible d'effectuer des transactions.  Pour plus d'informations sur l'extraction de lignes en bloc, consultez [Recordset : extraction globale d'enregistrements \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Cette rubrique s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous avez implémenté l’extraction de lignes en bloc, certaines informations ne s’applique pas. Par exemple, vous ne pouvez pas appeler la `AddNew`, **modifier**, **supprimer**, et **mise à jour** les fonctions membres ; Toutefois, vous pouvez effectuer des transactions. Pour plus d’informations sur l’extraction de lignes en bloc, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="_core_how_other_operations_affect_updates"></a> Influence des autres opérations sur les mises à jour  
- Vos mises à jour sont affectées par les transactions au moment de la mise à jour, lorsque vous fermez le recordset ou vous déplacez par défilement avant de terminer une transaction.  
+##  <a name="_core_how_other_operations_affect_updates"></a>Répercussions des autres opérations sur les mises à jour  
+ Les mises à jour sont affectées par les transactions au moment de la mise à jour, en fermant le jeu d’enregistrements avant d’effectuer une transaction et en faisant défiler avant la fin d’une transaction.  
   
-###  <a name="_core_how_transactions_affect_updates"></a> Influence des transactions sur les mises à jour  
- En plus de la compréhension du fonctionnement de `AddNew`, **Edit** et **Delete**, il importe de maîtriser comment les fonctions membres **BeginTrans**, **CommitTrans** et **Rollback** de [CDatabase](../../mfc/reference/cdatabase-class.md) coopèrent avec les fonctions de mise à jour de [CRecordset](../../mfc/reference/crecordset-class.md).  
+###  <a name="_core_how_transactions_affect_updates"></a>Répercussions des Transactions sur les mises à jour  
+ Au-delà de comprendre comment `AddNew`, **modifier**, et **supprimer** travail, il est important de comprendre comment les **BeginTrans**, **CommitTrans**, et **restauration** les fonctions membres de [CDatabase](../../mfc/reference/cdatabase-class.md) fonctionnent avec les fonctions de mise à jour de [CRecordset](../../mfc/reference/crecordset-class.md).  
   
- Par défaut, les appels de `AddNew` et **Edit** affectent immédiatement la source de données lorsque vous appelez **Update**.  Les appels de **Delete** prennent effet immédiatement.  Mais vous pouvez créer une transaction et exécuter ces appels sous forme de lot.  Les mises à jour ne sont pas définitives tant que vous ne les avez pas validées.  Si vous changez d'avis, vous pouvez annuler la transaction au lieu de la valider.  
+ Par défaut, les appels à `AddNew` et **modifier** affectent la source de données immédiatement lorsque vous appelez **mise à jour**. **Supprimer** appels prennent effet immédiatement. Mais vous pouvez établir une transaction et exécuter un traitement de ces appels. Les mises à jour ne sont pas permanentes jusqu'à ce que vous les validez. Si vous changez d’avis, vous pouvez restaurer la transaction au lieu de sa validation.  
   
- Pour plus d'informations sur les transactions, consultez [Transaction \(ODBC\)](../../data/odbc/transaction-odbc.md).  
+ Pour plus d’informations sur les transactions, consultez [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-###  <a name="_core_how_closing_the_recordset_affects_updates"></a> Influence de la fermeture du recordset sur les mises à jour  
- Si vous fermez un recordset ou son objet associé `CDatabase`, avec une transaction en cours \([CDatabase::CommitTrans](../Topic/CDatabase::CommitTrans.md) ou [CDatabase::Rollback](../Topic/CDatabase::Rollback.md) n'ont pas été appelées\), la transaction est annulée automatiquement \(à moins que la base de données principale ne soit le moteur de base de données Microsoft Jet\).  
+###  <a name="_core_how_closing_the_recordset_affects_updates"></a>Impact de la fermeture de l’ensemble d’enregistrements sur les mises à jour  
+ Si vous fermez un jeu d’enregistrements, ou qui lui est associée `CDatabase` objet, avec une transaction en cours (vous n’avez pas appelé [CDatabase::CommitTrans](../../mfc/reference/cdatabase-class.md#committrans) ou [CDatabase::Rollback](../../mfc/reference/cdatabase-class.md#rollback)), la transaction est restaurée. sauvegarder automatiquement (à moins que votre base de données principale est le moteur de base de données Microsoft Jet).  
   
 > [!CAUTION]
->  Si vous utilisez le moteur de base de données Microsoft Jet, la fermeture d'un recordset à l'intérieur d'une transaction explicite n'entraîne pas la libération des lignes modifiées ou des verrous placés tant que la transaction explicite n'a pas été validée ou annulée.  Il est recommandé que vous ouvriez et fermiez les recordsets à l'intérieur ou à l'extérieur d'une transaction Jet explicite.  
+>  Si vous utilisez le moteur de base de données Microsoft Jet, la fermeture d’un jeu d’enregistrements à l’intérieur d’une transaction explicite n’entraîne pas la libération des lignes qui ont été modifiées ou des verrous qui ont été placés jusqu'à ce que la transaction explicite est validée ou restaurée. Il est recommandé que vous ouvrez et fermez les jeux d’enregistrements à l’intérieur ou en dehors d’une transaction Jet explicite.  
   
-###  <a name="_core_how_scrolling_affects_updates"></a> Influence du défilement sur les mises à jour  
- Lorsque vous [Recordset : défilement \(ODBC\)](../../data/odbc/recordset-scrolling-odbc.md) un recordset, le tampon d'édition est rempli à l'aide de chaque nouvel enregistrement courant \(l'enregistrement précédent n'est pas stocké d'abord\).  Le défilement ignore les enregistrements préalablement supprimés.  Si vous vous déplacez par défilement après avoir appelé `AddNew` ou **Edit** sans avoir appelé **Update**, **CommitTrans** ou **Rollback**, toutes les modifications sont perdues \(sans que vous en soyez averti\) lorsqu'un nouvel enregistrement est placé dans le tampon d'édition.  Le tampon d'édition est rempli par l'enregistrement auquel vous avez accédé par défilement, l'enregistrement stocké est libéré et aucune modification n'est effectuée sur la source de données.  Cela s'applique à la fois à `AddNew` et **Edit**.  
+###  <a name="_core_how_scrolling_affects_updates"></a>Influence du défilement mises à jour  
+ Lorsque vous [Recordset : défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) dans un jeu d’enregistrements, le tampon d’édition est rempli avec chaque nouvel enregistrement courant (l’enregistrement précédent n’est pas stocké d’abord). Défilement ignore les enregistrements supprimés précédemment. Si vous faites défiler après une `AddNew` ou **modifier** appel sans appeler **mise à jour**, **CommitTrans**, ou **restauration** première, toutes les modifications sont perdues (aucun avertissement vous) lorsqu’un nouvel enregistrement est placé dans le tampon d’édition. Le tampon d’édition est rempli avec l’enregistrement de défilement à l’enregistrement stocké est libéré et aucune modification se produit sur la source de données. Cela s’applique aux deux `AddNew` et **modifier**.  
   
-##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> Vos propres mises à jour et celles des autres utilisateurs  
- Lorsque vous utilisez un recordset pour modifier les données, vos mises à jour affectent les autres utilisateurs.  De même, les mises à jour des autres utilisateurs pendant la durée de vie de votre recordset influent sur les vôtres.  
+##  <a name="_core_your_updates_and_the_updates_of_other_users"></a>Les mises à jour et les mises à jour d’autres utilisateurs  
+ Lorsque vous utilisez un jeu d’enregistrements à mettre à jour des données, vos mises à jour affectent les autres utilisateurs. De même, les mises à jour des autres utilisateurs pendant la durée de vie de votre recordset vous affectent.  
   
- Dans un environnement multi\-utilisateur, les autres utilisateurs peuvent ouvrir des recordsets qui contiennent certains enregistrements identiques à ceux qui sont sélectionnés dans votre recordset.  Les modifications apportées à un enregistrement avant que vous ne le récupériez sont répercutées dans le recordset.  Comme les feuilles de réponse dynamiques récupèrent un enregistrement chaque fois que vous y accédez par défilement, elles répercutent les modifications chaque fois que vous accédez par défilement à un enregistrement.  Comme les instantanés récupèrent un enregistrement lorsque vous y accédez par défilement la première fois, ils ne répercutent que les modifications intervenues avant que vous n'accédiez à l'enregistrement.  
+ Dans un environnement multi-utilisateur, les autres utilisateurs peuvent ouvrir des jeux d’enregistrements qui contiennent certains enregistrements identiques à ceux que vous avez sélectionné dans le jeu d’enregistrements. Modifications apportées à un enregistrement avant que vous récupériez sont répercutées dans le jeu d’enregistrements. Étant donné que les feuilles de réponse dynamiques récupèrent un enregistrement chaque fois que vous accédez par défilement, répercutent les modifications chaque fois que vous accédez à un enregistrement. Instantanés de récupérer un enregistrement de la première fois que vous accédez par défilement, instantanés reflètent uniquement les modifications qui se produisent avant que vous accédiez à l’enregistrement.  
   
- Les enregistrements ajoutés par d'autres utilisateurs après que vous avez ouvert le recordset n'apparaissent pas dans le recordset tant que vous ne lancez pas une nouvelle requête.  Si le recordset est une feuille de réponse dynamique, les modifications d'enregistrements existants apparaissent effectivement dans la feuille de réponse dynamique lorsque vous accédez par défilement à l'enregistrement concerné.  Si le recordset est un instantané, les modifications n'apparaissent pas tant que vous ne lancez pas une nouvelle requête sur l'instantané.  Si vous voulez voir les enregistrements ajoutés ou supprimés par d'autres utilisateurs dans l'instantané, ou les enregistrements ajoutés par d'autres utilisateurs dans la feuille de réponse dynamique, appelez [CRecordset::Requery](../Topic/CRecordset::Requery.md) pour reconstruire le recordset. \(Remarquez que les suppressions des autres utilisateurs apparaissent dans la feuille de réponse dynamique\). Vous pouvez aussi appeler **Requery** pour voir les enregistrements que vous ajoutez, mais non pour voir vos propres suppressions.  
+ Les enregistrements ajoutés par d’autres utilisateurs après avoir ouvert le jeu d’enregistrements ne s’affichent pas dans le jeu d’enregistrements, sauf si vous actualisez. Si le recordset est une feuille de réponse dynamique, modifications d’enregistrements existants par d’autres utilisateurs s’affichent dans votre feuille de réponse dynamique lorsque vous faites défiler à l’enregistrement concerné. Si votre jeu d’enregistrements est un instantané, les modifications n’apparaissent pas jusqu'à ce que vous actualisez l’instantané. Si vous souhaitez voir les enregistrements ajoutés ou supprimés par d’autres utilisateurs dans l’instantané, ou les enregistrements ajoutés par d’autres utilisateurs dans votre feuille de réponse dynamique, appelez [CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery) pour reconstruire le recordset. (Notez que les suppressions des autres utilisateurs apparaissent dans votre feuille de réponse dynamique). Vous pouvez aussi appeler **Requery** pour afficher les enregistrements vous ajoutez, mais ne pas pour voir vos propres suppressions.  
   
 > [!TIP]
->  Pour imposer la mise en cache immédiate de la totalité d'un instantané, appelez `MoveLast` dès que vous avez ouvert l'instantané,  Appelez ensuite **MoveFirst** pour commencer à utiliser les enregistrements.  `MoveLast` est équivalent au défilement sur tous les enregistrements, mais il les extrait tous à la fois.  Notez, cependant, que les performances peuvent s'en trouver dégradées et que cette action est déconseillée dans le cas de certains pilotes.  
+>  Pour forcer la mise en cache de l’intégralité d’un instantané, appelez `MoveLast` immédiatement après l’ouverture de l’instantané. Appelez ensuite **MoveFirst** pour commencer à travailler avec les enregistrements. `MoveLast`est équivalent au défilement sur tous les enregistrements, mais ceux-ci sont tous en même temps. Toutefois, notez que cela peut réduire les performances et ne peut pas être nécessaire pour certains pilotes.  
   
- Vos mises à jour influent sur celles des autres utilisateurs de la même façon que les leurs influent sur les vôtres.  
+ Les effets de vos mises à jour sur les autres utilisateurs sont semblables aux effets sur vous.  
   
-##  <a name="_core_more_about_update_and_delete"></a> Informations complémentaires sur Update et Delete  
- La présente section propose des informations complémentaires sur l'utilisation de **Update** et de **Delete**.  
+##  <a name="_core_more_about_update_and_delete"></a>Plus d’informations sur la mise à jour et de suppression  
+ Cette section fournit des informations supplémentaires pour vous aider à utiliser avec **mise à jour** et **supprimer**.  
   
-### Bon déroulement ou échec d'Update  
- Si **Update** se déroule avec succès, le mode `AddNew` ou **Edit** prend fin.  Pour revenir de nouveau au mode `AddNew` ou **Edit**, appelez `AddNew` ou **Edit**.  
+### <a name="update-success-and-failure"></a>Réussite de la mise à jour et d’échec  
+ Si **mise à jour** réussit, le `AddNew` ou **modifier** fin en mode. Pour commencer un `AddNew` ou **modifier** à nouveau le mode, appelez `AddNew` ou **modifier**.  
   
- Si **Update** échoue \(la valeur **FALSE** est retournée ou une exception est levée\), vous demeurez en mode `AddNew` ou **Edit**, selon la fonction qui a été appelée en dernier.  Vous pouvez alors effectuer l'une des actions suivantes :  
+ Si **mise à jour** échoue (retourne **FALSE** ou lève une exception), vous gardez le `AddNew` ou **modifier** mode, selon que la fonction a été appelée en dernier. Vous pouvez ensuite effectuer une des opérations suivantes :  
   
--   Modifier un membre de données de type champ et essayer **Update** de nouveau.  
+-   Modifier un membre de données de champ et essayez du **mise à jour** à nouveau.  
   
--   Appeler `AddNew` pour réinitialiser les membres de données de type champ avec la valeur Null, puis définir les valeurs des membres de données de type champ et appeler de nouveau **Update**.  
+-   Appelez `AddNew` pour réinitialiser les données membres de champ null, définissez les valeurs des membres de données du champ, puis appelez **mise à jour** à nouveau.  
   
--   Appeler **Edit** pour recharger les valeurs qui se trouvaient dans le recordset avant le premier appel de `AddNew` ou **Edit**, puis définir les valeurs des membres de données de type champ et appeler de nouveau **Update**.  Lorsque l'appel de **Update** s'est déroulé avec succès \(sauf après un appel de `AddNew`\), les membres de données de type champ conservent leurs nouvelles valeurs.  
+-   Appelez **modifier** pour recharger les valeurs qui se trouvaient dans le jeu d’enregistrements avant le premier appel à `AddNew` ou **modifier**, définissez les valeurs des membres de données du champ, puis appelez **mettre à jour**à nouveau. Après la réussite **mise à jour** appeler (sauf après un `AddNew` appeler), les membres de données de champ conservent leurs nouvelles valeurs.  
   
--   Appeler **Move** \(y compris l'appel de **Move** incluant un paramètre de **AFX\_MOVE\_REFRESH**, ou 0\), qui purge les modifications effectuées et met fin au mode `AddNew` ou **Edit** en vigueur.  
+-   Appelez **déplacer** (y compris **déplacer** avec un paramètre de **AFX_MOVE_REFRESH**, ou 0), qui vide les modifications et met fin `AddNew` ou **modifier** mode en vigueur.  
   
-### Update et Delete  
- Cette section s'applique à **Update** et à **Delete**.  
+### <a name="update-and-delete"></a>Mise à jour et suppression  
+ Cette section s’applique aux deux **mise à jour** et **supprimer**.  
   
- Lors d'une opération **Update** ou **Delete**, un enregistrement et un seul doit être mis à jour.  Cet enregistrement constitue l'enregistrement courant, qui correspond aux valeurs des données dans les champs du recordset.  Si pour une raison ou une autre, aucun enregistrement n'est concerné ou que deux ou plusieurs enregistrements le sont, une exception est levée et **RETCODE** contient l'une des valeurs suivantes :  
+ Sur un **mise à jour** ou **supprimer** opération, un seul enregistrement et doit être mis à jour. Cet enregistrement est l’enregistrement actif, ce qui correspond aux valeurs de données dans les champs de l’objet recordset. Si pour une raison quelconque aucun enregistrement n’est affectées ou de plusieurs enregistrements est affectée, une exception est levée contenant l’une des opérations suivantes **et RETCODE contient** valeurs :  
   
--   **AFX\_SQL\_ERROR\_NO\_ROWS\_AFFECTED**  
+-   **AFX_SQL_ERROR_NO_ROWS_AFFECTED**  
   
--   **AFX\_SQL\_ERROR\_MULTIPLE\_ROWS\_AFFECTED**  
+-   **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED APPARAÎT**  
   
- Lorsque ces exceptions sont levées, vous demeurez dans le mode `AddNew` ou **Edit** où vous vous trouviez lors de l'appel de **Update** ou **Delete**.  Vous trouverez ci\-après quelques\-uns des cas de figure où ces exceptions sont susceptibles de se produire.  Par exemple :  
+ Lorsque ces exceptions sont levées, vous gardez le `AddNew` ou **modifier** état vous étiez lorsque vous avez appelé **mise à jour** ou **supprimer**. Voici les scénarios les plus courants dans lesquels vous visualiserez ces exceptions. Vous êtes probablement voir :  
   
--   **AFX\_SQL\_ERROR\_NO\_ROWS\_AFFECTED** apparaît quand vous utilisez le mode de verrouillage optimiste et qu'un autre utilisateur a modifié l'enregistrement de telle façon que l'infrastructure ne peut identifier correctement l'enregistrement à modifier ou à supprimer.  
+-   **AFX_SQL_ERROR_NO_ROWS_AFFECTED** lorsque vous utilisez le mode de verrouillage optimisé et un autre utilisateur a modifié l’enregistrement d’une manière qui empêche l’infrastructure d’identifier l’enregistrement à mettre à jour ou supprimer.  
   
--   **AFX\_SQL\_ERROR\_MULTIPLE\_ROWS\_AFFECTED** apparaît lorsque la table que vous mettez à jour ne possède pas de clé primaire ou d'index unique, et que vous n'avez pas un nombre suffisant de colonnes dans le recordset pour identifier de façon unique la ligne d'une table.  
+-   **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED apparaît** lorsque la table que vous mettez à jour ne possède aucune clé primaire ou index unique et que vous n’avez pas suffisamment de colonnes dans le jeu d’enregistrements pour identifier de façon unique une ligne de table.  
   
-## Voir aussi  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Recordset : sélection d'enregistrements par les recordsets \(ODBC\)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)   
- [Record Field Exchange \(RFX\)](../../data/odbc/record-field-exchange-rfx.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Jeu d’enregistrements (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Recordset : Comment Recordsets sélection d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)   
+ [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md)   
  [SQL](../../data/odbc/sql.md)   
  [Exceptions : exceptions de base de données](../../mfc/exceptions-database-exceptions.md)

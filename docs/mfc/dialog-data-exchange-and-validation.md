@@ -26,11 +26,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1e7e481f7108b61f9af8d255bffac76f26a90200
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af38919a65c7ecb16692f5833873a630e713951c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-data-exchange-and-validation"></a>Échange et validation de données de boîtes de dialogue
 Échange de données de boîtes de dialogue (DDX) est un moyen simple pour initialiser les contrôles dans votre boîte de dialogue et pour collecter des données d’entrée par l’utilisateur. Validation de données de boîtes de dialogue (DDV) est un moyen simple de valider l’entrée de données dans une boîte de dialogue. Pour tirer parti de DDX et DDV dans vos boîtes de dialogue, utilisez le [Assistant Ajout de Variable membre](../ide/add-member-variable-wizard.md) pour créer les membres de données et de définir leurs types de données et de spécifier des règles de validation.  

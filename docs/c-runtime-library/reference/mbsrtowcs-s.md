@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- mbsrtowcs_s
+apiname: mbsrtowcs_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,37 +21,20 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- mbsrtowcs_s
-dev_langs:
-- C++
-helpviewer_keywords:
-- mbsrtowcs_s function
+f1_keywords: mbsrtowcs_s
+dev_langs: C++
+helpviewer_keywords: mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 920af1d0e06c7af71c3a98bf07f451f4d50f2659
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b701362fd8ed19575f5de34f998bc8fd4f7e6de1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
 Convertir une chaîne de caractères multioctets correspondant aux paramètres régionaux actuels en sa représentation sous forme de chaîne de caractères larges. Version de [mbsrtowcs](../../c-runtime-library/reference/mbsrtowcs.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -123,13 +104,13 @@ errno_t mbsrtowcs_s(
   
  Si `count` correspond à la valeur spéciale [_TRUNCATE](../../c-runtime-library/truncate.md), `mbsrtowcs_s` convertit la plus grande partie possible de la chaîne en fonction de la capacité de la mémoire tampon de destination, tout en laissant de l’espace pour une marque de fin Null.  
   
- Si `mbsrtowcs_s` convertit correctement la chaîne source, elle place la taille en caractères larges de la chaîne convertie et la marque de fin Null dans `*``pReturnValue`, à condition que `pReturnValue` ne soit pas un pointeur Null. Cela se produit même si l'argument `wcstr` est un pointeur Null et vous laisse déterminer la taille de mémoire tampon requise. Notez que si `wcstr` est un pointeur Null, `count` est ignoré.  
+ Si `mbsrtowcs_s` convertit correctement la chaîne source, elle place la taille en caractères larges de la chaîne convertie et la marque de fin Null dans `*pReturnValue`, à condition que `pReturnValue` ne soit pas un pointeur Null. Cela se produit même si l'argument `wcstr` est un pointeur Null et vous laisse déterminer la taille de mémoire tampon requise. Notez que si `wcstr` est un pointeur Null, `count` est ignoré.  
   
  Si `wcstr` n'est pas un pointeur Null, l'objet de pointeur pointé par `mbstr` est affecté d'un pointeur Null si la conversion a été arrêtée, car un caractère Null de fin a été atteint. Sinon, il est affecté de l'adresse qui se trouve juste après le dernier caractère multioctet converti, le cas échéant. Ceci permet à un appel de fonction ultérieur de redémarrer la conversion où cet appel s'est arrêté.  
   
  Si `mbstate` est un pointeur Null, l'objet statique d'état de la conversion `mbstate_t` interne de la bibliothèque est utilisé. Comme cet objet statique interne n'est pas thread-safe, nous vous recommandons de passer votre propre valeur de `mbstate`.  
   
- Si `mbsrtowcs_s` rencontre un caractère multioctet qui n’est pas valide dans les paramètres régionaux actuels, il place -1 dans `*``pReturnValue`, définit la mémoire tampon de destination `wcstr` avec une chaîne vide, définit `errno` à `EILSEQ` et retourne `EILSEQ`.  
+ Si `mbsrtowcs_s` rencontre un caractère multioctet qui n’est pas valide dans les paramètres régionaux actuels, il place -1 dans `*pReturnValue`, définit la mémoire tampon de destination `wcstr` avec une chaîne vide, définit `errno` à `EILSEQ` et retourne `EILSEQ`.  
   
  Si les séquences pointées par `mbstr` et `wcstr` se chevauchent, le comportement de `mbsrtowcs_s` n'est pas défini. `mbsrtowcs_s` est affecté par la catégorie LC_TYPE des paramètres régionaux actuels.  
   
@@ -138,12 +119,12 @@ errno_t mbsrtowcs_s(
   
  La fonction `mbsrtowcs_s` diffère de [mbstowcs_s, _mbstowcs_s_l](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md) par sa capacité à redémarrer. L'état de la conversion est stocké dans `mbstate` pour les appels suivants à la même ou à d'autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables. Par exemple, une application doit utiliser `mbsrlen` au lieu de `mbslen`, si un appel ultérieur à `mbsrtowcs_s` est utilisé à la place de`mbstowcs_s.`  
   
- En C++, l’utilisation de cette fonction est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument de taille) et elles peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalents plus récents et sécurisés. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, l’utilisation de cette fonction est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument de taille) et elles peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalents plus récents et sécurisés. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ## <a name="exceptions"></a>Exceptions  
  La fonction `mbsrtowcs_s` est multithread-safe si aucune fonction du thread actif n'appelle `setlocale` aussi longtemps que cette fonction s'exécute et que l'argument `mbstate` n'est pas un pointeur Null.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

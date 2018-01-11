@@ -24,11 +24,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ca65d1e021bc1710386bf7b448b55378af96f56e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0a88cfafe9bbfdc04776050a0a956bf9a8b6766e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager, structure
 Interface avec un gestionnaire des ressources du runtime d'accès concurrentiel. Il s'agit de l'interface par laquelle les planificateurs communiquent avec le gestionnaire des ressources.  
@@ -58,13 +59,13 @@ struct IResourceManager;
 |[IResourceManager::RegisterScheduler](#registerscheduler)|Inscrit un planificateur avec le Gestionnaire de ressources. Une fois que le planificateur est inscrit, il doit communiquer avec le Gestionnaire de ressources à l’aide du `ISchedulerProxy` interface qui est retournée.|  
 |[IResourceManager::Release](#release)|Décrémente le décompte de références sur l’instance du Gestionnaire de ressources. Le Gestionnaire de ressources est détruit lorsque son décompte de références atteint `0`.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez le [CreateResourceManager](concurrency-namespace-functions.md) fonction pour obtenir une interface pour l’instance du Gestionnaire de ressources du singleton. La méthode incrémente un décompte de références sur le Gestionnaire de ressources, et vous devez appeler la [IResourceManager::Release](#release) méthode pour libérer la référence lorsque vous avez terminé avec le Gestionnaire de ressources. En général, chaque planificateur que vous créez cette méthode est appelée lors de la création et libérer la référence au Gestionnaire de ressources après sa fermeture.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `IResourceManager`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrtrm.h  
   
  **Espace de noms :** concurrency  
@@ -93,7 +94,7 @@ virtual void CreateNodeTopology(
  `pProcessorGroups`  
  Un tableau qui spécifie le groupe de processeurs auquel chaque nœud appartient.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  [invalid_argument](../../../standard-library/invalid-argument-class.md) est levée si le paramètre `nodeCount` a la valeur `0` a été passé, ou si le paramètre `pCoreCount` a la valeur `NULL`.  
   
  [invalid_operation](invalid-operation-class.md) est levée si cette méthode est appelée lorsque d’autres planificateurs existent dans le processus.  
@@ -154,7 +155,7 @@ virtual ISchedulerProxy *RegisterScheduler(
 ### <a name="return-value"></a>Valeur de retour  
  Le `ISchedulerProxy` interface du Gestionnaire de ressources a associé à votre planificateur. Votre planificateur doit utiliser cette interface pour communiquer avec le Gestionnaire de ressources à partir de ce point sur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour initialiser la communication avec le Gestionnaire de ressources. La méthode associe le `IScheduler` interface pour votre planificateur avec un `ISchedulerProxy` interface et fait appel à nouveau pour vous. Vous pouvez utiliser l’interface retournée pour demander des ressources d’exécution pour une utilisation par votre planificateur, ou abonner des threads avec le Gestionnaire de ressources. Le Gestionnaire de ressources utilisera les éléments de la stratégie du planificateur retournée par la [IScheduler::GetPolicy](ischeduler-structure.md#getpolicy) devez méthode pour déterminer le type du Planificateur de threads exécuter le travail. Si votre `SchedulerKind` clé de stratégie a la valeur `UmsThreadDefault` et la valeur est lue hors de la stratégie en tant que la valeur `UmsThreadDefault`, le `IScheduler` interface passé à la méthode doit être un `IUMSScheduler` interface.  
   
  La méthode lève un `invalid_argument` exception si le paramètre `pScheduler` a la valeur `NULL` ou si le paramètre `version` n’est pas une version valide pour l’interface de communication.  

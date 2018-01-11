@@ -15,16 +15,17 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c6d71e5bfe442f2b3f2225cd4dc6cb88fc73d24a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 807574f0f94f989726ca19d3260b9668f6c84055
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2588"></a>Erreur du compilateur C2588
 ' :: ~ identificateur ' : destructeur global non conforme  
   
- Le destructeur est défini pour un élément autre qu’une classe, structure ou union. Cela n'est pas autorisé.  
+ Le destructeur est défini pour un élément autre qu’une classe, structure ou union. Cette opération n’est pas autorisée.  
   
  Cette erreur peut être provoquée par un manquant nom de classe, structure ou union sur le côté gauche de la résolution de portée (`::`) (opérateur).  
   

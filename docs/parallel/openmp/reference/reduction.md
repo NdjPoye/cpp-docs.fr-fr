@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33c629253db2d891f5e52347db291a3eec00bd03
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 67e8b7740c4e346b3e6a0751376c4cecb3437e82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reduction"></a>reduction
 Spécifie qu’une ou plusieurs variables qui sont privés pour chaque thread font l’objet d’une opération de réduction à la fin de la région parallèle.  
@@ -30,7 +31,7 @@ Spécifie qu’une ou plusieurs variables qui sont privés pour chaque thread fo
 reduction(operation:var)  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  où,  
   
  `operation`  
@@ -39,7 +40,7 @@ reduction(operation:var)
  `var`  
  Variables de plus d’un sur laquelle effectuer la réduction scalaire. Si plusieurs variables est spécifié, séparez les noms de variables par des virgules.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `reduction`s’applique aux directives suivantes :  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  

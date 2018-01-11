@@ -1,67 +1,67 @@
 ---
-title: "_mm_cvtsi64x_ss | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_cvtsi64x_ss"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cvtsi2ss, instruction"
-  - "_mm_cvtsi64x_ss, intrinsèque"
+title: _mm_cvtsi64x_ss | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_cvtsi64x_ss
+dev_langs: C++
+helpviewer_keywords:
+- cvtsi2ss instruction
+- _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a567b33e55092e7e8e0361faa0ce54b2498827a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# _mm_cvtsi64x_ss
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
+**Section spécifique à Microsoft**  
   
- génère la version étendue par [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] de l'entier 64 bits de converti à l'instruction scalaire de valeur à virgule flottante simple précision \(`cvtsi2ss`\).  
+ Génère le [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] version étendue de la convertir en entier 64 bits en à la valeur de nombres à virgule flottante simple précision scalaire (`cvtsi2ss`) instruction.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-__m128 _mm_cvtsi64x_ss(   
-   __m128 a,   
-   __int64 b   
+__m128 _mm_cvtsi64x_ss(   
+   __m128 a,   
+   __int64 b   
 );  
 ```  
   
-#### Paramètres  
- \[in\] `a`  
- Une structure d' `__m128` contenant quatre valeurs à virgule flottante simple précision.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `a`  
+ Un `__m128` structure qui contient quatre valeurs à virgule flottante simple précision.  
   
- \[in\] `b`  
- Entier 64 bits à convertir une valeur à virgule flottante.  
+ [in] `b`  
+ Un entier 64 bits à convertir en valeur à virgule flottante.  
   
-## Valeur de retour  
- une structure d' `__m128` dont la première valeur à virgule flottante est le résultat de la conversion.  Les trois autres valeurs sont copiées inchangé d' `a`.  
+## <a name="return-value"></a>Valeur de retour  
+ Un `__m128` structure dont la première valeur à virgule flottante est le résultat de la conversion. Les trois autres valeurs sont copiées telles quelles à partir de `a`.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
-|`_mm_cvtsi64x_ss`|x64|  
+|---------------|------------------|  
+|`_mm_cvtsi64x_ss`|X64|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- La structure d' `__m128` représente un registre XMM, cette intrinsèque permet la valeur `b` de la mémoire système à entrer dans un registre XMM.  
+## <a name="remarks"></a>Notes  
+ Le `__m128` structure représente un registre XMM, par conséquent, cette fonction intrinsèque autorise une valeur `b` de la mémoire système à déplacer vers un XMM inscrire.  
   
- Cette routine est uniquement disponible sous forme intrinsèque.  
+ Cette routine est disponible uniquement en tant qu'intrinsèque.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // _mm_cvtsi64x_ss.cpp  
@@ -89,9 +89,12 @@ int main()
 }  
 ```  
   
-  **54.000000 0.000000 0.000000 0.000000**   
-## détail de FIN Microsoft  
+```Output  
+54.000000 0.000000 0.000000 0.000000  
+```  
   
-## Voir aussi  
- [\_\_m128](../cpp/m128.md)   
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+**FIN de la section spécifique à Microsoft**  
+  
+## <a name="see-also"></a>Voir aussi  
+ [__m128](../cpp/m128.md)   
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

@@ -1,32 +1,33 @@
 ---
-title: "appobject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.appobject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "appobject attribute"
+title: appobject | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.appobject
+dev_langs: C++
+helpviewer_keywords: appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 19462987cf4f9b5cc295766a694f01b8b4fac8ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# appobject
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Identifie la coclasse comme un objet d'application, associé à une application complète .exe, et indique que les fonctions et les propriétés de la coclasse sont globalement disponibles dans ce [bibliothèque de types](../mfc/automation-clients-using-type-libraries.md).  
+# <a name="appobject"></a>appobject
+Identifie la coclasse comme un objet de l’application, qui est associé à une application .exe complet et indique que les fonctions et les propriétés de la coclasse sont disponibles dans cette [bibliothèque de types](../mfc/automation-clients-using-type-libraries.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -34,11 +35,11 @@ Identifie la coclasse comme un objet d'application, associé à une application 
   
 ```  
   
-## Notes  
- L'attribut d' **appobject** C\+\+ a les mêmes fonctionnalités que l'attribut d' [appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) MIDL.  
+## <a name="remarks"></a>Notes  
+ Le **appobject** attribut C++ a les mêmes fonctionnalités que le [appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) attribut MIDL.  
   
-## Exemple  
- Le code suivant illustre une définition de classe simple précédée par un bloc d'attributs qui inclut **appobject**:  
+## <a name="example"></a>Exemple  
+ Le code suivant montre une définition de classe simple précédée d’un bloc d’attributs incluant **appobject**:  
   
 ```  
 // cpp_attr_ref_appobject.cpp  
@@ -55,21 +56,20 @@ class A : public ICustom {
 };  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**classe**, `struct`|  
-|**reproductible**|Non|  
-|**attributs requis**|**coclasse**|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|**class**, `struct`|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|**coclass**|  
+|**Attributs non valides**|Aucun.|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs de classe](../windows/class-attributes.md)   
+ [Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)   

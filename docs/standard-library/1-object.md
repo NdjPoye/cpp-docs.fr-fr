@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4364868619359ca23ba50802037eeeb3530c96d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a28c730015f1c8005c71a7171a36b9bed9a71251
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="1-object"></a>_1, objet
 Espaces réservés pour les arguments remplaçables.  
@@ -36,7 +37,7 @@ namespace placeholders {
  } // namespace placeholders (within std)  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les objets `_1, _2, ... _M` sont des espaces réservés désignant la première, deuxième,..., argument de mois, respectivement, dans un appel de fonction à un objet retourné par [lier](../standard-library/functional-functions.md#bind). Vous utilisez `_N` pour spécifier l’emplacement où le N-ième argument doit être inséré quand la liaison est évaluée.  
   
  Dans cette implémentation, la valeur de `M` est 20.  
@@ -93,7 +94,7 @@ int main()
 3^2 == 9  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<functional>  
   
  **Espace de noms :** std  

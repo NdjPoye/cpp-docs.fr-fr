@@ -15,16 +15,17 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba2178c2dc06001476d8e9ff4b9aef239aa13fea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2d7678738d7da4528b23551e56bf3766970cbfe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fastcall"></a>__fastcall
 **Section spécifique à Microsoft**  
   
- La convention d'appel `__fastcall` spécifie que les arguments des fonctions doivent être passés dans les registres, lorsque cela est possible. Cette convention d'appel s'applique uniquement à l'architecture x86. La liste suivante illustre l'implémentation de cette convention d'appel.  
+ La convention d'appel `__fastcall` spécifie que les arguments des fonctions doivent être passés dans les registres, lorsque cela est possible. Cette convention d’appel s’applique uniquement à l’architecture x86. La liste suivante illustre l’implémentation de cette convention d’appel.  
   
 |Élément|Implémentation|  
 |-------------|--------------------|  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
  Le mot clé `__fastcall` est accepté et ignoré par les compilateurs qui ciblent les architectures ARM et x64 ; sur un processeur x64, par convention, les quatre premiers arguments sont transmis dans les registres si possible, et les arguments supplémentaires sont transmis sur la pile. Pour plus d’informations, consultez [vue d’ensemble de x64 Conventions d’appel](../build/overview-of-x64-calling-conventions.md). Sur un processeur ARM, jusqu’à quatre arguments entiers et huit arguments à virgule flottante peuvent être transmis dans les registres, et des arguments supplémentaires sont transmis sur la pile.  
   
- Pour les fonctions de classe non statiques, si la fonction est définie hors ligne, il n'est pas nécessaire de spécifier le modificateur de convention d'appel dans la définition hors ligne. En d'autres termes, pour les méthodes membres non statiques de classe, la convention d'appel spécifiée dans le cadre de la déclaration est utilisée par défaut au stade de la définition. Compte tenu de la définition de classe suivante :  
+ Pour les fonctions de classe non statiques, si la fonction est définie hors ligne, il n’est pas nécessaire de spécifier le modificateur de convention d’appel dans la définition hors ligne. En d’autres termes, pour les méthodes membres non statiques de classe, la convention d’appel spécifiée dans le cadre de la déclaration est utilisée par défaut au stade de la définition. Compte tenu de la définition de classe suivante :  
   
 ```cpp  
 struct CMyClass {  

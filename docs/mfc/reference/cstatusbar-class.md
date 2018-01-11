@@ -47,11 +47,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d5a669551bcc28328054e369ff70bbccbc505c5c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c373f21762c1bf7f21d2a775453bab74c735891d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstatusbar-class"></a>CStatusBar (classe)
 Barre de contrôles avec une ligne de volets de sortie de texte ou « indicateurs ».  
@@ -89,7 +90,7 @@ class CStatusBar : public CControlBar
 |[CStatusBar::SetPaneStyle](#setpanestyle)|Définit le style d’indicateur d’un index donné.|  
 |[CStatusBar::SetPaneText](#setpanetext)|Définit le texte de l’indicateur d’un index donné.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les volets de sortie sont fréquemment utilisés en tant que lignes de message et comme indicateurs d’état. Exemples : les lignes de message à l’aide de menu qui expliquent brièvement la commande de menu sélectionné et les indicateurs qui indiquent l’état de l’arrêt défil, VERR. NUM et défil.  
   
  [CStatusBar::GetStatusBarCtrl](#getstatusbarctrl), une fonction membre new 4.0 de MFC, vous permet de tirer parti de la prise en charge du contrôle commun Windows pour des fonctionnalités supplémentaires et de personnalisation de la barre d’état. `CStatusBar`fonctions membres vous donnent la plupart des fonctionnalités des contrôles communs Windows ; Toutefois, lorsque vous appelez `GetStatusBarCtrl`, vous pouvez donner à vos barres d’état davantage les caractéristiques d’une barre d’état Windows 95/98. Lorsque vous appelez `GetStatusBarCtrl`, il retourne une référence à un `CStatusBarCtrl` objet. Consultez [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) pour plus d’informations sur la conception des barres d’outils à l’aide de contrôles communs Windows. Pour plus d’informations sur les contrôles communs, consultez [contrôles communs](http://msdn.microsoft.com/library/windows/desktop/bb775493) dans le Kit de développement logiciel Windows.  
@@ -129,7 +130,7 @@ class CStatusBar : public CControlBar
   
  `CStatusBar`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxext.h  
   
 ##  <a name="commandtoindex"></a>CStatusBar::CommandToIndex  
@@ -146,7 +147,7 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="return-value"></a>Valeur de retour  
  L’index de l’indicateur en cas de réussite ; -1 en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’index du premier indicateur est 0.  
   
 ##  <a name="create"></a>CStatusBar::Create  
@@ -178,7 +179,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Également définit la police initiale et définit l’état de la hauteur de la barre à la valeur par défaut.  
   
 ##  <a name="createex"></a>CStatusBar::CreateEx  
@@ -214,7 +215,7 @@ virtual BOOL CreateEx(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction définit la police initiale également et définit l’état de la hauteur de la barre à la valeur par défaut.  
   
  Utilisez `CreateEx`, au lieu de [créer](#create), lorsque certains styles doivent être présentes au cours de la création du contrôle de barre d’état incorporée. Par exemple, définissez `dwCtrlStyle` à **SBT_TOOLTIPS** pour afficher des info-bulles dans un objet de barre d’état.  
@@ -237,7 +238,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
  `lpDrawItemStruct`  
  Un pointeur vers un [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) structure qui contient des informations sur le type de dessin nécessaire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le **itemAction** membre de la `DRAWITEMSTRUCT` structure définit l’action de dessin qui doit être effectuée. Remplacez cette fonction membre pour implémenter le dessin pour un mode owner-draw `CStatusBar` objet. L’application doit restaurer tous les objets interface GDI périphérique graphique sélectionnés pour le contexte d’affichage fournie dans `lpDrawItemStruct` avant l’arrêt de cette fonction membre.  
   
 ##  <a name="getitemid"></a>CStatusBar::GetItemID  
@@ -270,7 +271,7 @@ void GetItemRect(
  `lpRect`  
  Pointe vers un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure ou un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet qui reçoit les coordonnées de l’indicateur spécifié par `nIndex`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Coordonnées sont exprimées en pixels par rapport au coin supérieur gauche de la barre d’état.  
   
 ##  <a name="getpaneinfo"></a>CStatusBar::GetPaneInfo  
@@ -311,7 +312,7 @@ UINT GetPaneStyle(int nIndex) const;
 ### <a name="return-value"></a>Valeur de retour  
  Le style du volet de barre d’état spécifié par `nIndex`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les style d’un volet détermine comment le volet s’affiche.  
   
  Pour obtenir la liste des styles disponibles pour les barres d’état, consultez [créer](#create).  
@@ -333,7 +334,7 @@ CString GetPaneText(int nIndex) const;  void GetPaneText(int nIndex, CString& rS
 ### <a name="return-value"></a>Valeur de retour  
  A `CString` objet contenant du texte du volet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La deuxième forme de ce membre fonction remplit un `CString` objet avec le texte de la chaîne.  
   
 ##  <a name="getstatusbarctrl"></a>CStatusBar::GetStatusBarCtrl  
@@ -346,7 +347,7 @@ CStatusBarCtrl& GetStatusBarCtrl() const;
 ### <a name="return-value"></a>Valeur de retour  
  Contient une référence à un [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez `GetStatusBarCtrl` pour tirer parti des fonctionnalités du contrôle commun de barre d’état Windows et pour tirer parti de la prise en charge [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) fournit pour la personnalisation de la barre d’état. Par exemple, à l’aide du contrôle commun, vous pouvez spécifier un style qui inclut une poignée de dimensionnement dans la barre d’état, ou vous pouvez spécifier un style pour que la barre d’état s’affichent en haut de la zone cliente de la fenêtre parente.  
   
  Pour plus d’informations sur les contrôles communs, consultez [contrôles communs](http://msdn.microsoft.com/library/windows/desktop/bb775493) dans le Kit de développement logiciel Windows.  
@@ -394,7 +395,7 @@ void SetPaneInfo(
  `cxWidth`  
  Nouvelle largeur du volet de l’indicateur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les styles d’indicateur suivants sont pris en charge :  
   
 - **SBPS_NOBORDERS** aucune bordure 3D autour du volet.  
@@ -423,7 +424,7 @@ void SetPaneStyle(
  `nStyle`  
  Style du volet dont le style doit être défini.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les style d’un volet détermine comment le volet s’affiche.  
   
  Pour obtenir la liste des styles disponibles pour les barres d’état, consultez [SetPaneInfo](#setpaneinfo).  
@@ -451,7 +452,7 @@ BOOL SetPaneText(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Après avoir appelé `SetPaneText`, vous devez ajouter un gestionnaire de mise à jour de l’interface utilisateur pour afficher le nouveau texte dans la barre d’état.  
   
 ### <a name="example"></a>Exemple  

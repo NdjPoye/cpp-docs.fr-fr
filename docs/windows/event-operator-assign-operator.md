@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6001462a5618251acc838d1d8fad3bd93968c81
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: de46ba0d6749120fc391b4a55527904ed1321ad9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventoperator-operator"></a>Event::operator=, opérateur
 Assigne la référence Event spécifiée à l'instance Event actuelle.  
@@ -39,7 +42,7 @@ WRL_NOTHROW Event& operator=(
 ## <a name="return-value"></a>Valeur de retour  
  Pointeur vers l’instance Event actuelle.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c3ed33157c73c48b4d00b85e37f36a110ab3f721
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fea0b26b6aeaaa1c10316a8b17c6a988f3130bf3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4378"></a>Avertissement du compilateur (niveau 1) C4378
 Les pointeurs de fonction pour l’exécution des initialiseurs ; envisagez de System::ModuleHandle::ResolveMethodHandle  

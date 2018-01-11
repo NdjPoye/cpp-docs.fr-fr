@@ -75,11 +75,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b839096e87feee970491e393998eb4049df820af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3731d6d7a1455dc51ee03ea942666cbfc0f48e27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl (classe)
 Fournit les fonctionnalités du contrôle commun d'en-tête Windows.  
@@ -131,7 +132,7 @@ class CHeaderCtrl : public CWnd
 |[CHeaderCtrl::SetItem](#setitem)|Définit les attributs de l’élément spécifié dans un contrôle header.|  
 |[CHeaderCtrl::SetOrderArray](#setorderarray)|Définit l’ordre de gauche à droite des éléments dans un contrôle header.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un contrôle header est une fenêtre qui se trouve généralement au-dessus d’un ensemble de colonnes de texte ou des nombres. Il contient un titre pour chaque colonne, et il peut être divisé en parties. L’utilisateur peut faire glisser les séparateurs qui séparent les parties pour définir la largeur de chaque colonne. Pour obtenir une illustration d’un contrôle header, consultez [contrôles Header](http://msdn.microsoft.com/library/windows/desktop/bb775238).  
   
  Ce contrôle (et par conséquent la `CHeaderCtrl` classe) est disponible uniquement pour les programmes qui s’exécutent sous Windows 95/98 et Windows NT version 3.51 et ultérieures.  
@@ -159,7 +160,7 @@ class CHeaderCtrl : public CWnd
   
  `CHeaderCtrl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcmn.h  
   
 ##  <a name="cheaderctrl"></a>CHeaderCtrl::CHeaderCtrl  
@@ -182,7 +183,7 @@ BOOL ClearAllFilters();
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode implémente le comportement du message Win32 [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306) avec une valeur de colonne égale à-1, comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -202,7 +203,7 @@ BOOL ClearFilter(int nColumn);
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode implémente le comportement du message Win32 [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -235,7 +236,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’initialisation a réussi ; Sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous construisez un `CHeaderCtrl` objet en deux étapes. Tout d’abord, appelez le constructeur, puis **créer**, ce qui crée le contrôle header et l’attache à le `CHeaderCtrl` objet.  
   
  Outre les styles de contrôle d’en-tête, vous pouvez utiliser les styles de contrôle courants suivants pour déterminer comment le contrôle header positionne et redimensionne (consultez [des Styles de contrôle courants](http://msdn.microsoft.com/library/windows/desktop/bb775498) pour plus d’informations) :  
@@ -300,7 +301,7 @@ virtual BOOL CreateEx(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez `CreateEx` au lieu de **créer** pour appliquer des styles étendus Windows spécifiés par la préface style étendu de Windows **WS_EX_**.  
   
 ##  <a name="createdragimage"></a>Fonction membre CHeaderCtrl::CreateDragImage  
@@ -317,7 +318,7 @@ CImageList* CreateDragImage(int nIndex);
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) objet en cas de réussite ; **NULL**. La liste retournée contient uniquement une image.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement du message Win32 [HDM_CREATEDRAGIMAGE](http://msdn.microsoft.com/library/windows/desktop/bb775308), comme décrit dans le Kit de développement logiciel Windows. Il est fourni pour prendre en charge d’en-tête élément glisser -déplacer.  
   
  Le `CImageList` objet auquel les points de pointeur retourné est un objet temporaire et est supprimé dans le traitement des temps d’inactivité suivant.  
@@ -350,7 +351,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
  `lpDrawItemStruct`  
  Un pointeur vers un [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) structure décrivant l’élément à peindre.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le **itemAction** membre de la `DRAWITEMSTRUCT` structure définit l’action de dessin qui doit être effectuée.  
   
  Par défaut, cette fonction membre ne fait rien. Remplacez cette fonction membre pour implémenter le dessin pour un mode owner-draw `CHeaderCtrl` objet.  
@@ -381,7 +382,7 @@ BOOL EditFilter(
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode implémente le comportement du message Win32 [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -397,7 +398,7 @@ int GetBitmapMargin() const;
 ### <a name="return-value"></a>Valeur de retour  
  La largeur de la marge d’image bitmap en pixels.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement du message Win32 [HDM_GETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775314), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -413,7 +414,7 @@ int GetFocusedItem() const;
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de l’élément d’en-tête qui a le focus.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode envoie le [HDM_GETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775330) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -436,7 +437,7 @@ CImageList* GetImageList() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement du message Win32 [HDM_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775332), comme décrit dans le Kit de développement logiciel Windows. Le `CImageList` objet auquel les points de pointeur retourné est un objet temporaire et est supprimé dans le traitement des temps d’inactivité suivant.  
   
 ### <a name="example"></a>Exemple  
@@ -496,7 +497,7 @@ BOOL GetItemDropDownRect(
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette fonction a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode envoie le [HDM_GETITEMDROPDOWNRECT](http://msdn.microsoft.com/library/windows/desktop/bb775339) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -528,7 +529,7 @@ BOOL GetItemRect(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode implémente le comportement du message Win32 [HDM_GETITEMRECT](http://msdn.microsoft.com/library/windows/desktop/bb775341), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getorderarray"></a>CHeaderCtrl::GetOrderArray  
@@ -550,7 +551,7 @@ BOOL GetOrderArray(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement du message Win32 [HDM_GETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775343), comme décrit dans le Kit de développement logiciel Windows. Il est fourni pour prendre en charge le classement des éléments d’en-tête.  
   
 ### <a name="example"></a>Exemple  
@@ -572,7 +573,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette fonction a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si le contrôle de l’en-tête contient trop d’éléments peuvent être affichés simultanément, le contrôle peut afficher un bouton de dépassement de capacité qui défile à des éléments qui ne sont pas visibles. Le contrôle de l’en-tête doit avoir le `HDS_OVERFLOW` et `HDF_SPLITBUTTON` styles pour afficher le bouton de dépassement de capacité. Le rectangle englobant englobe le bouton de dépassement de capacité et existe uniquement lorsque le bouton de dépassement de capacité s’affiche. Pour plus d’informations, consultez [Styles de contrôle d’en-tête](http://msdn.microsoft.com/library/windows/desktop/bb775241).  
   
  Cette méthode envoie le [HDM_GETOVERFLOWRECT](http://msdn.microsoft.com/library/windows/desktop/bb775345) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
@@ -603,7 +604,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de l’élément d’en-tête, le cas échéant, à la position spécifiée ; Sinon, -1.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode envoie le [HDM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb775349) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -652,7 +653,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction est utilisée pour déterminer les dimensions appropriées pour un nouveau contrôle d’en-tête qui doit occuper le rectangle donné.  
   
 ### <a name="example"></a>Exemple  
@@ -672,7 +673,7 @@ int OrderToIndex(int nOrder) const;
 ### <a name="return-value"></a>Valeur de retour  
  L’index de l’élément, en fonction de son ordre dans le contrôle header. L’index de compte de gauche à droite, en commençant par 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32 [HDM_ORDERTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb775355), comme décrit dans le Kit de développement logiciel Windows. Il est fourni pour prendre en charge le classement des éléments d’en-tête.  
   
 ##  <a name="setbitmapmargin"></a>CHeaderCtrl::SetBitmapMargin  
@@ -689,7 +690,7 @@ int SetBitmapMargin(int nWidth);
 ### <a name="return-value"></a>Valeur de retour  
  La largeur de la marge d’image bitmap en pixels.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement du message Win32 [HDM_SETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775357), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -709,7 +710,7 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
 ### <a name="return-value"></a>Valeur de retour  
  L’index du contrôle de filtre en cours de modification.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement du message Win32 [HDM_SETFILTERCHANGETIMEOUT](http://msdn.microsoft.com/library/windows/desktop/bb775359), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -731,7 +732,7 @@ BOOL SetFocusedItem(int iItem);
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode envoie le [HDM_SETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775361) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -762,7 +763,7 @@ int SetHotDivider(int nIndex);
 ### <a name="return-value"></a>Valeur de retour  
  Index de la ligne de séparation en surbrillance.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement du message Win32 [HDM_SETHOTDIVIDER](http://msdn.microsoft.com/library/windows/desktop/bb775363), comme décrit dans le Kit de développement logiciel Windows. Il est fourni pour prendre en charge d’en-tête élément glisser -déplacer.  
   
 ### <a name="example"></a>Exemple  
@@ -782,7 +783,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le [CImageList](../../mfc/reference/cimagelist-class.md) objet précédemment assigné au contrôle header.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement du message Win32 [HDM_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775365), comme décrit dans le Kit de développement logiciel Windows. Le `CImageList` objet auquel les points de pointeur retourné est un objet temporaire et est supprimé dans le traitement des temps d’inactivité suivant.  
   
 ### <a name="example"></a>Exemple  
@@ -829,7 +830,7 @@ BOOL SetOrderArray(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la macro Win32 [HDM_SETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775369), comme décrit dans le Kit de développement logiciel Windows. Il est fourni pour prendre en charge le classement des éléments d’en-tête.  
   
 ### <a name="example"></a>Exemple  

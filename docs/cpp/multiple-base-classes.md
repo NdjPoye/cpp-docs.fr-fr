@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43f15ec1bf80c15f160d2a0b08a899806a3a7e01
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b765fabe8b83169353650286d05d02301dcb4807
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiple-base-classes"></a>Plusieurs classes de base
 Comme décrit dans [l’héritage Multiple](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca), une classe peut être dérivée de plusieurs classes de base. Dans un modèle d’héritage multiple (où les classes sont dérivées de plusieurs classes de base), les classes de base sont spécifiées à l’aide de la *base-list* élément de grammaire. Par exemple, la déclaration de classe pour `CollectionOfBook`, dérivé de `Collection` et `Book`, peut être spécifiée :  
@@ -42,7 +43,7 @@ class CollectionOfBook : public Book, public Collection {
   
 -   L'ordre dans lequel l'initialisation du constructeur est exécutée. Si votre code repose sur la partie `Book` de `CollectionOfBook` à initialiser avant la partie `Collection`, l'ordre des spécifications est important. L’initialisation a lieu dans l’ordre les classes sont spécifiées dans le *base-list*.  
   
--   L'ordre dans lequel les destructeurs sont appelés pour effectuer le nettoyage. Là encore, si un « élément » particulier de la classe doit être présent lorsque l'autre élément est détruit, l'ordre a une importance. Les destructeurs sont appelés dans l’ordre inverse des classes spécifiées dans le *base-list*.  
+-   L'ordre dans lequel les destructeurs sont appelés pour effectuer le nettoyage. Là encore, si un « élément » particulier de la classe doit être présent lorsque l’autre élément est détruit, l’ordre a une importance. Les destructeurs sont appelés dans l’ordre inverse des classes spécifiées dans le *base-list*.  
   
     > [!NOTE]
     >  L'ordre de spécification des classes de base peut avoir une incidence sur la disposition de mémoire de la classe. Ne prenez aucune décision de programmation concernant l'ordre des membres de base en mémoire.  
@@ -108,7 +109,7 @@ class GetReal : virtual public { ... };
 ```  
   
 ## <a name="name-ambiguities"></a>Ambiguïtés au niveau du nom  
- L'héritage multiple présente le risque que les noms soient hérités le long de plusieurs chemins. Les noms de membre de classe le long de ces chemins d'accès ne sont pas nécessairement uniques. Ces conflits de nom sont appelés « ambiguïtés. »  
+ L’héritage multiple présente le risque que les noms soient hérités le long de plusieurs chemins. Les noms de membre de classe le long de ces chemins d'accès ne sont pas nécessairement uniques. Ces conflits de nom sont appelés « ambiguïtés. »  
   
  Toute expression qui fait référence à un membre de classe doit faire une référence qui ne soit pas ambigu. L'exemple suivant montre comment développer les ambiguïtés :  
   
@@ -208,7 +209,7 @@ Conversion ambiguë des pointeurs vers des classes de base
 ```  
   
 ### <a name="ambiguities-and-virtual-base-classes"></a>Ambiguïtés et classes de base virtuelles  
- Si des classes de base virtuelles sont utilisées, les fonctions, les objets, les types et les énumérateurs sont accessibles via plusieurs chemins d'héritage. Comme il n'existe qu'une instance de la classe de base, il n'y a aucune ambiguïté lors de l'accès à ces noms.  
+ Si des classes de base virtuelles sont utilisées, les fonctions, les objets, les types et les énumérateurs sont accessibles via plusieurs chemins d’héritage. Comme il n'existe qu'une instance de la classe de base, il n'y a aucune ambiguïté lors de l'accès à ces noms.  
   
  L'illustration suivante montre comment les objets sont composés à l'aide de l'héritage virtuel et non virtuel.  
   

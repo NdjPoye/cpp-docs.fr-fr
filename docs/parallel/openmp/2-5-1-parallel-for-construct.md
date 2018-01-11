@@ -1,39 +1,38 @@
 ---
-title: "2.5.1 parallel for Construct | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.5.1 parallèle construction for | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a233e7ed-2462-4f7a-9a5d-556ab9f363d8
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7dcd763b68a78e11c3c33bf3d750a26e88ad02ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# 2.5.1 parallel for Construct
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La directive de **parallèle pour** est un raccourci pour une zone de **parallèle** qui contient uniquement une directive unique de **pour** .  La syntaxe de la directive de **parallèle pour** est la suivante :  
+# <a name="251-parallel-for-construct"></a>2.5.1 Construction for parallèle
+Le **parallèles pour** la directive est un raccourci pour un **parallèles** région qui contient un seul **pour** la directive. La syntaxe de la **parallèles pour** la directive est la suivante :  
   
 ```  
-#pragma omp parallel for [clause[[,] clause] ...] new-line  
-   for-loop  
+#pragma omp parallel for [clause[[,] clause] ...] new-linefor-loop  
 ```  
   
- Cette directive toutes les clauses de la directive de **parallèle** et de la directive de **pour** , à l'exception de la clause d' `nowait` , avec des significations et restrictions identiques.  La sémantique est identique à spécifier explicitement une directive de **parallèle** immédiatement suivie d'une directive de **pour** .  
+ Cette directive permet toutes les clauses de la **parallèles** la directive et le **pour** directive, sauf le `nowait` clause, avec une signification identique et des restrictions. La sémantique est identique à spécifier explicitement un **parallèles** directive immédiatement suivie d’un **pour** la directive.  
   
-## Références croisées :  
+## <a name="cross-references"></a>Références externes :  
   
--   la directive de**parallèle** , consultez [section 2,3](../../parallel/openmp/2-3-parallel-construct.md) à la page 8.  
+-   **parallèle** directive, voir [Section 2.3](../../parallel/openmp/2-3-parallel-construct.md) page 8.  
   
--   la directive de**pour** , consultez [section 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) à la page 11.  
+-   **pour** directive, voir [Section 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) à la page 11.  
   
--   Les clauses d'attribut de données, consultez [2.7.2 Data\-Sharing Attribute Clauses](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) à la page 25.
+-   Les clauses d’attributs de données, consultez [2.7.2 Clauses d’attributs de partage de données](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) page 25.

@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb5b9968ad652e5ab6ef4dd29eb3c6ccc6da7493
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17853a43d3a94be779b659b0da825467fa66f61c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-documentation-visual-c"></a>Documentation XML (Visual C++)
 Dans Visual C++, vous pouvez ajouter des commentaires à votre code source qui sera traitée dans un fichier .xml. Ce fichier peut ensuite être l’entrée à un processus qui crée la documentation pour les classes dans votre code.  
@@ -40,7 +41,7 @@ Dans Visual C++, vous pouvez ajouter des commentaires à votre code source qui s
   
  Pour plus d’informations sur la création d’un fichier .xml avec les commentaires de documentation, consultez les rubriques suivantes.  
   
-|Pour plus d’informations sur|Voir|  
+|Pour obtenir des informations sur|Voir|  
 |---------------------------|---------|  
 |Les options du compilateur à utiliser|[/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
 |Les balises que vous pouvez utiliser pour fournir couramment utilisé la fonctionnalité de documentation|[Balises recommandées pour les commentaires de documentation](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)|  

@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c82a3ae65ae65dfe43cb0ed645f802161f7a17f6
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9987c539bb67e3989af851c3e4088e25b67f9136
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="runtimeclassgetruntimeclassname-method"></a>RuntimeClass::GetRuntimeClassName, méthode
 
@@ -42,11 +45,11 @@ Lorsque cette opération est terminée, le nom de la classe runtime.
 
 S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Une erreur d’assertion est émis if, #95 ; &#95; WRL_STRICT &#95; &#95; ou &#95; &#95; WRL_FORCE_INSPECTABLE_CLASS_MACRO &#95; &#95; n’est pas définie.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** implements.h
 

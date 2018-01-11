@@ -1,32 +1,33 @@
 ---
-title: "ActivationFactory::GetTrustLevel, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ActivationFactory::GetTrustLevel"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetTrustLevel (méthode)"
+title: "Activationfactory::gettrustlevel, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ActivationFactory::GetTrustLevel
+dev_langs: C++
+helpviewer_keywords: GetTrustLevel method
 ms.assetid: 31547ae6-d2ab-4039-923c-154d53fb1a8b
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 48db1632c50726073372e314a338cdca543c29e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ActivationFactory::GetTrustLevel, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Obtient le niveau de confiance de l'objet qu'instancie l'ActivationFactory actuelle.  
+# <a name="activationfactorygettrustlevel-method"></a>ActivationFactory::GetTrustLevel, méthode
+Obtient le niveau de confiance de l’objet qui instancie la ActivationFactory actuel.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 STDMETHOD(  
@@ -34,17 +35,17 @@ STDMETHOD(
 )(_Out_ TrustLevel* trustLvl);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `trustLvl`  
- Lorsque cette opération se termine, le niveau de confiance de la classe d'exécution que l'ActivationFactory instancie.  
+ Lorsque cette opération est terminée, le niveau de confiance de la classe runtime qui le ActivationFactory instancie.  
   
-## Valeur de retour  
- S\_OK si l'opération a réussi; sinon, une erreur d'assertion est émise et le `trustLvl` est défini à FullTrust.  
+## <a name="return-value"></a>Valeur de retour  
+ S_OK en cas de réussite ; Sinon, une erreur d’assertion est émise et `trustLvl` est défini à confiance totale.  
   
-## Configuration requise  
- **En\-tête:** module.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** module.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ActivationFactory, classe](../windows/activationfactory-class.md)

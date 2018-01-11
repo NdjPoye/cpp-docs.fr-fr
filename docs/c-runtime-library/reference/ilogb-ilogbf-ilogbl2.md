@@ -42,11 +42,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f0b2e084e27b951676fddfb20b53d5f74944089e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ecf7f9bb38cdd844514001126a98bced67617e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 Récupère un entier qui représente l’exposant en base 2 non biaisé de la valeur spécifiée.  
@@ -88,7 +89,7 @@ int ilogbl(
 |Entrée|Résultat|  
 |-----------|------------|  
 |±0|FP_ILOGB0|  
-|±inf, ±nan, indéfini|FP_ILOGBNAN|  
+|±inf, ±nan, indéterminée|FP_ILOGBNAN|  
   
  Les erreurs sont signalées comme indiqué dans [_matherr](../../c-runtime-library/reference/matherr.md).  
   
@@ -97,13 +98,13 @@ int ilogbl(
   
  Appeler cette fonction revient à appeler la fonction `logb` équivalente, puis à effectuer un cast de la valeur de retour vers `int`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
-|Routine|En-tête C|En-tête C++|  
+|Routine|En-tête C|En-tête C++|  
 |-------------|--------------|------------------|  
 |`ilogb`,                `ilogbf`,  `ilogbl`|\<math.h>|\<cmath>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

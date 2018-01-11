@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 14bdfdf5ab570567f78befd3c99bca5c56c5195e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 047eee60eb409e86d77faf6f637a88a56f271094
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math, espace de noms
 Les fonctions dans le `fast_math` espace de noms a une précision inférieure, prennent en charge uniquement simple précision (`float`) et appeler les fonctions intrinsèques de DirectX. Il existe deux versions de chaque fonction, par exemple `cos` et `cosf`. Les deux versions acceptent et retournent un `float`, mais chacun appels DirectX même intrinsèque.  
@@ -101,7 +102,7 @@ namespace fast_math;
 |[trunc](concurrency-fast-math-namespace-functions.md#trunc)|Tronque l’argument de la partie entière|  
 |[truncf](concurrency-fast-math-namespace-functions.md#truncf)|Tronque l’argument de la partie entière|  
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp_math.h  
   
  **Namespace :** Concurrency::fast_math  

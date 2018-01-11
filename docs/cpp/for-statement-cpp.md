@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 700a5d39d2752ba334f06b04382dab792d5f81e5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8358af0cd6784b1974767456602350a8ccf1c57f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-statement-c"></a>for, instruction (C++)
 Exécute une instruction à plusieurs reprises jusqu'à ce que la condition soit false. Pour plus d’informations sur la plage pour l’instruction, consultez [Range-based d’instruction (C++)](../cpp/range-based-for-statement-cpp.md).  
@@ -30,7 +31,7 @@ for ( init-expression ; cond-expression ; loop-expression )
     statement;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez l'instruction `for` pour créer des boucles qui doivent être exécutées un certain nombre de fois.  
   
  L'instruction `for` se compose de trois parties facultatives, comme indiqué dans le tableau suivant.  

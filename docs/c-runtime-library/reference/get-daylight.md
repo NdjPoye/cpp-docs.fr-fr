@@ -36,11 +36,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e6f9143b3a9f458a403fd044194cd79ac5f2388e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0407b18bed459aefaa904e32c39f491af73cba6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getdaylight"></a>_get_daylight
 Récupère le décalage de l'heure d'été en heures.  
@@ -68,13 +69,13 @@ Récupère le décalage de l'heure d'été en heures.
   
  Nous vous recommandons d'utiliser cette fonction au lieu de la macro `_daylight` ou de la fonction déconseillée `__daylight`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_get_daylight`|\<time.h>|  
   
- Pour plus d’informations, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion du temps](../../c-runtime-library/time-management.md)   

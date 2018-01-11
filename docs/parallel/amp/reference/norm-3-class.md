@@ -83,11 +83,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92d2567a3f4754413c51c75b1c18b0a031e343d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3145aa734b37a965430810727962f3f13e5fe49f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="norm3-class"></a>norm_3, classe
 Représente un vecteur court de trois nombres normales.  
@@ -168,7 +169,7 @@ class norm_3;
   
 ### <a name="public-constants"></a>Constantes publiques  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[taille (constante)](#size)||  
   
@@ -210,7 +211,7 @@ class norm_3;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `norm_3`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp_short_vectors.h  
   
  **Namespace :** Concurrency::graphics  

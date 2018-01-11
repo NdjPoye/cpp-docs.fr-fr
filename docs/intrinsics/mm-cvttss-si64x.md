@@ -1,63 +1,63 @@
 ---
-title: "_mm_cvttss_si64x | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_cvttss_si64x"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mm_cvttss_si64x, intrinsèque"
-  - "cvttss2si, instruction"
+title: _mm_cvttss_si64x | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_cvttss_si64x
+dev_langs: C++
+helpviewer_keywords:
+- _mm_cvttss_si64x intrinsic
+- cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b93426c814378ea3b52dfadd1617b641a7564f16
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# _mm_cvttss_si64x
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
+**Section spécifique à Microsoft**  
   
- Effectue la version étendue par x64 du converti avec le nombre à virgule flottante simple précision de troncation à l'instruction d'entiers 64 bits \(`cvttss2si`\).  
+ Émet le x64 étendu version de la conversion avec le nombre de nombres à virgule flottante simple précision de troncation en entier 64 bits (`cvttss2si`) instruction.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-__int64 _mm_cvttss_si64x(   
-   __m128 value   
+__int64 _mm_cvttss_si64x(   
+   __m128 value   
 );  
 ```  
   
-#### Paramètres  
- \[in\] `value`  
- Une structure d' `__m128` qui contiennent des valeurs à virgule flottante simple précision.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `value`  
+ Un `__m128` structure contenant les valeurs à virgule flottante simple précision.  
   
-## Valeur de retour  
- le résultat de la conversion de la première valeur à virgule flottante à un entier 64 bits.  
+## <a name="return-value"></a>Valeur de retour  
+ Le résultat de la conversion de la première valeur à virgule flottante en un entier 64 bits.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`_mm_cvttss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- L'intrinsèque diffère d' `_mm_cvtss_si64x` uniquement dans la mesure où les conversions inexactes sont tronquées à zéro.  Comme la structure d' `__m128` représente un registre XMM, les instructions générées entre des données à partir d'un registre XMM dans la mémoire système.  
+## <a name="remarks"></a>Notes  
+ La fonction intrinsèque diffère `_mm_cvtss_si64x` uniquement qu’inexactes conversions sont tronquées vers zéro. Étant donné que le `__m128` structure représente un registre XMM, l’instruction générée déplace les données à partir d’un registre XMM dans la mémoire système.  
   
- Cette routine est uniquement disponible sous forme intrinsèque.  
+ Cette routine est disponible uniquement en tant qu'intrinsèque.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // _mm_cvttss_si64x.cpp  
@@ -87,9 +87,12 @@ int main()
 }  
 ```  
   
-  **101**   
-## détail de FIN Microsoft  
+```Output  
+101  
+```  
   
-## Voir aussi  
- [\_\_m128](../cpp/m128.md)   
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+**FIN de la section spécifique à Microsoft**  
+  
+## <a name="see-also"></a>Voir aussi  
+ [__m128](../cpp/m128.md)   
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

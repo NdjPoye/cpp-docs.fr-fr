@@ -1,32 +1,33 @@
 ---
-title: "importidl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.importidl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "importidl attribute"
+title: importidl | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.importidl
+dev_langs: C++
+helpviewer_keywords: importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: cd3fb56898107b1eca7cd30e06d75d253a02655e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# importidl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Insère le fichier spécifié .idl dans le fichier généré .idl.  
+# <a name="importidl"></a>importidl
+Insère le fichier .idl spécifié dans le fichier .idl généré.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,16 +36,16 @@ Insère le fichier spécifié .idl dans le fichier généré .idl.
 ) ];  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `idl_file`  
- Identifie le nom du fichier .idl à fusionner avec le fichier .idl qui sera généré pour votre application.  
+ Identifie le nom du fichier .idl que vous souhaitez fusionner avec le fichier .idl qui sera généré pour votre application.  
   
-## Notes  
- L'attribut d' **importidl** C\+\+ place la section en dehors de le bloc bibliothèque \(dans `idl_file`\) dans le fichier généré .idl de votre programme et la section bibliothèque \(dans `idl_file`\) dans la section bibliothèque du fichier généré .idl de votre programme.  
+## <a name="remarks"></a>Notes  
+ Le **importidl** attribut C++ place la section en dehors du bloc de bibliothèque (dans `idl_file`) dans le fichier .idl généré de votre programme et de la section de la bibliothèque (dans `idl_file`) dans la section de la bibliothèque de votre programme fichier .idl généré.  
   
- Vous pouvez utiliser **importidl**, par exemple, si vous souhaitez utiliser un fichier main\-codé .idl à votre fichier généré .idl.  
+ Il pouvez que vous souhaitez utiliser **importidl**, par exemple, si vous souhaitez utiliser un fichier .idl de codé manuellement votre fichier .idl généré.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cpp_attr_ref_importidl.cpp  
@@ -53,24 +54,23 @@ Insère le fichier spécifié .idl dans le fichier généré .idl.
 [importidl("import.idl")];  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|n'importe où|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|N'importe où|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
- Pour plus d'informations, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [import](../windows/import.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Attributs du compilateur](../windows/compiler-attributes.md)   
+ [Attributs autonomes](../windows/stand-alone-attributes.md)   
+ [importation](../windows/import.md)   
  [importlib](../windows/importlib.md)   
- [include](../windows/include-cpp.md)   
+ [inclure](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

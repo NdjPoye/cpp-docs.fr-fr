@@ -1,33 +1,33 @@
 ---
-title: "ref (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.ref"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ref attribute"
+title: ref (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.ref
+dev_langs: C++
+helpviewer_keywords: ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: fc63f89b8b8ff40198efbff69c64c3553dafd12f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ref (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-identifie un pointeur de référence.  
+# <a name="ref-c"></a>ref (C++)
+Identifie un pointeur de référence.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,11 +35,11 @@ identifie un pointeur de référence.
   
 ```  
   
-## Notes  
- L'attribut d' `ref` C\+\+ a les mêmes fonctionnalités que l'attribut de [référence](http://msdn.microsoft.com/library/windows/desktop/aa367153) MIDL.  
+## <a name="remarks"></a>Notes  
+ Le `ref` attribut C++ a les mêmes fonctionnalités que le [ref](http://msdn.microsoft.com/library/windows/desktop/aa367153) attribut MIDL.  
   
-## Exemple  
- Le code suivant montre comment utiliser l'attribut d' `ref` :  
+## <a name="example"></a>Exemple  
+ Le code suivant montre comment utiliser le `ref` attribut :  
   
 ```  
 // cpp_attr_ref_ref.cpp  
@@ -53,21 +53,20 @@ __interface IFireTabCtrl
 };  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|`typedef`, paramètre de l'interface, méthode d'interface|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|`typedef`, paramètre d’interface, la méthode d’interface|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union et Struct (attributs)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Attributs de paramètres](../windows/parameter-attributes.md)   

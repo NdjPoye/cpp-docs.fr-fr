@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 70e50f4ab18cdfddc3330e5c23e5808040c354bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3f3a9794f7b00a2029f6706db3a846ba127a4d5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="synclockt-class"></a>SyncLockT (classe)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -66,14 +69,14 @@ class SyncLockT;
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[SyncLockT::sync_, données de membre](../windows/synclockt-sync-data-member.md)|Contient la ressource sous-jacente représentée par la classe SyncLockT.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `SyncLockT`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers::Details  

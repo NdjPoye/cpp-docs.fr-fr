@@ -1,42 +1,42 @@
 ---
-title: "queue::back (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::back"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre back [STL/CLR]"
+title: Queue::Back (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::back
+dev_langs: C++
+helpviewer_keywords: back member [STL/CLR]
 ms.assetid: 983a5c0f-0a2f-475f-932b-e7dec9eaffbb
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8b6f9cd950e42e31727c54aff29b637739bcf6f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# queue::back (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="queueback-stlclr"></a>queue::back (STL/CLR)
 Accède au dernier élément.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 reference back();  
 ```  
   
-## Notes  
- La méthode retourne une référence au dernier élément de la séquence contrôlée, qui doit être non vide.  Vous l'utilisez pour accéder au dernier élément, lorsque vous savez qu'il existe.  
+## <a name="remarks"></a>Notes  
+ La fonction membre retourne une référence au dernier élément de la séquence contrôlée, qui doit être vide. Il permet d’accéder au dernier élément, lorsque vous savez qu’il existe.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_queue_back.cpp   
@@ -69,16 +69,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**back\(\) \= c**  
- **a b x**   
-## Configuration requise  
- **En\-tête :** \<cliext\/queue\>  
+```Output  
+ a b c  
+back() = c  
+ a b x  
+```  
   
- **Espace de nom :** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/file d’attente >  
   
-## Voir aussi  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::back\_item](../dotnet/queue-back-item-stl-clr.md)   
- [queue::front](../dotnet/queue-front-stl-clr.md)   
- [queue::front\_item](../dotnet/queue-front-item-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [file d’attente (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [Queue::back_item (STL/CLR)](../dotnet/queue-back-item-stl-clr.md)   
+ [Queue::Front (STL/CLR)](../dotnet/queue-front-stl-clr.md)   
+ [queue::front_item (STL/CLR)](../dotnet/queue-front-item-stl-clr.md)

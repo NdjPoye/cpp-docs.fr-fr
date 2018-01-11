@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 868e167e68cf2fba6a8252ba390ab73268a78005
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0dc7610b56d55fc5d42a0c4b73a5405be3d4dda9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Options du compilateur et de l'éditeur de liens (C++/CX)
 Une variable d’environnement + C, c++ / CX les options de compilateur et les options de l’éditeur de liens prennent en charge la création d’applications pour Windows Runtime.  
@@ -44,7 +45,7 @@ Une variable d’environnement + C, c++ / CX les options de compilateur et les o
 |/WINMDKEYCONTAINER:*nom*|Spécifie un conteneur de clé pour signer un assembly. Le paramètre *nom* correspond au conteneur de clé qui est utilisé pour signer le fichier de métadonnées.|  
 |/WINMDKEYFILE:*nom_fichier*|Spécifie une clé ou une paire de clés pour signer l’assembly. Le paramètre *nom_fichier* correspond au conteneur de clé qui est utilisé pour signer le fichier de métadonnées.|  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Quand vous utilisez **/ZW**, le compilateur effectue automatiquement la liaison à la version DLL de C Runtime (CRT). La liaison vers la version de la bibliothèque statique n’est pas autorisée et toute utilisation de fonctions CRT qui ne sont pas autorisés dans une application de plateforme Windows universelle entraîne une erreur de compilation.  
   
 ## <a name="see-also"></a>Voir aussi  

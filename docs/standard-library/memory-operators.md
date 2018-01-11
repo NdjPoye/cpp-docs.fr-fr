@@ -14,19 +14,18 @@ f1_keywords:
 - memory/std::operator<=
 - memory/std::operator<<
 - memory/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 957be55cd6f38f6ff1ea271b09dcdaa1a241c945
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 95563f5eeb70d33e3ebba4de0aead276a2230669
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt;, opérateurs
 ||||  
@@ -71,7 +70,7 @@ bool operator!=(
 ### <a name="return-value"></a>Valeur de retour  
  **true** si les objets ne sont pas égaux, **false** si les objets sont égaux.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le premier opérateur de modèle retourne false. (Tous les allocateurs par défaut sont égaux).  
   
  Les deuxième et troisième opérateurs de modèle retournent `!(left == right)`.  
@@ -169,7 +168,7 @@ bool operator==(
 ### <a name="return-value"></a>Valeur de retour  
  `true` si les objets sont égaux, `false` si les objets ne sont pas égaux.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le premier opérateur de modèle retourne true. (Tous les allocateurs par défaut sont égaux).  
   
  Les deuxième et troisième opérateurs de modèle retournent ` left.get() ==  right.get()`.  
@@ -270,7 +269,7 @@ bool operator>=(
  `Ty2`  
  Type contrôlé par le pointeur partagé de droite.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les opérateurs de modèle retournent `left.get() >= right.get()`.  
   
 ##  <a name="op_lt"></a>  operator&lt;  
@@ -329,7 +328,7 @@ bool operator<=(
  `Ty2`  
  Type contrôlé par le pointeur partagé de droite.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les opérateurs de modèle de retour`left.get() <= right.get()`  
   
 ##  <a name="op_gt"></a>  operator&gt;  
@@ -385,7 +384,7 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
  `sp`  
  Pointeur partagé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction de modèle retourne `out << sp.get()`.  
   
 ### <a name="example"></a>Exemple  
@@ -413,5 +412,4 @@ sp0 == 3f3040 (varies)
   
 ## <a name="see-also"></a>Voir aussi  
  [\<memory>](../standard-library/memory.md)
-
 

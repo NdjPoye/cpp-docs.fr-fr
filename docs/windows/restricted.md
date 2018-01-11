@@ -1,32 +1,33 @@
 ---
-title: "restricted | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.restricted"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "restricted attribute"
+title: restreint | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.restricted
+dev_langs: C++
+helpviewer_keywords: restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 569d57da691f40857f54dcae1c383ff7758564f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# restricted
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-spécifie qu'un membre d'un module, d'une interface, ou d'une dispinterface ne peut pas être appelé arbitrairement.  
+# <a name="restricted"></a>restricted
+Spécifie qu’un membre d’un module, une interface ou une dispinterface ne peut pas être appelé arbitrairement.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,15 +36,15 @@ spécifie qu'un membre d'un module, d'une interface, ou d'une dispinterface ne p
 ) ]  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `interfaces`  
- Une ou plusieurs interfaces qui ne peuvent être appelées arbitrairement sur un objet COM.  Ce paramètre est uniquement valide appliqué à une classe.  
+ Une ou plusieurs interfaces qui ne peuvent pas être appelées arbitrairement sur un objet COM. Ce paramètre est uniquement valide lorsqu’il est appliqué à une classe.  
   
-## Notes  
- L'attribut de **limité** C\+\+ a les mêmes fonctionnalités que l'attribut de [limité](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL.  
+## <a name="remarks"></a>Notes  
+ Le **restreint** attribut C++ a les mêmes fonctionnalités que le [restreint](http://msdn.microsoft.com/library/windows/desktop/aa367157) attribut MIDL.  
   
-## Exemple  
- Le code suivant montre comment utiliser l'attribut de **limité** :  
+## <a name="example"></a>Exemple  
+ Le code suivant montre comment utiliser le **restreint** attribut :  
   
 ```  
 // cpp_attr_ref_restricted.cpp  
@@ -68,21 +69,20 @@ class c : public a, public b
 };  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|méthode d'interface, `interface`, **classe**, `struct`|  
-|**reproductible**|Non|  
-|**attributs requis**|**coclasse** \(appliqué à **classe** ou à `struct`\)|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|Méthode, de l’interface `interface`, **classe**,`struct`|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|**coclasse** (quand il s’applique à une **classe** ou un `struct`)|  
+|**Attributs non valides**|Aucun.|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs d’interface](../windows/interface-attributes.md)   
+ [Attributs de méthode](../windows/method-attributes.md)   

@@ -35,11 +35,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 922fed9dde6e3f38ae1276034ce84a97db9f99be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9bd77d18f63885aa29f49ce8bd497f935d292e0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fcvts"></a>_fcvt_s
 Convertir un nombre à virgule flottante en chaîne. Il s’agit d’une version de [_fcvt](../../c-runtime-library/reference/fcvt.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -91,7 +92,7 @@ errno_t _fcvt_s(
   
 ### <a name="error-conditions"></a>Conditions d’erreur  
   
-|`buffer`|`sizeInBytes`|valeur|count|dec|sign|Return|Valeur dans `buffer`|  
+|`buffer`|`sizeInBytes`|par défaut|count|dec|sign|Return|Valeur dans `buffer`|  
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|  
 |`NULL`|any|any|any|any|any|`EINVAL`|Non modifiée.|  
 |Pas `NULL` (pointe vers une mémoire valide)|<=0|any|any|any|any|`EINVAL`|Non modifiée.|  
@@ -111,17 +112,17 @@ errno_t _fcvt_s(
   
  La différence entre `_ecvt_s` et `_fcvt_s` réside dans l’interprétation du paramètre `count`. `_ecvt_s`interprète `count` comme le nombre total de chiffres dans la chaîne de sortie, et `_fcvt_s` interprète `count` en tant que le nombre de chiffres après la virgule décimale.  
   
- En C++, l’utilisation de cette fonction est simplifiée par une surcharge de modèle ; la surcharge peut déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, l’utilisation de cette fonction est simplifiée par une surcharge de modèle ; la surcharge peut déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  La version de débogage de cette fonction remplit d’abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête requis|En-tête facultatif|  
 |--------------|---------------------|---------------------|  
 |`_fcvt_s`|\<stdlib.h>|\<errno.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
  **Bibliothèques :** toutes les versions des [fonctions de bibliothèque CRT](../../c-runtime-library/crt-library-features.md).  
   

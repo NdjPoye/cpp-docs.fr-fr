@@ -1,73 +1,73 @@
 ---
-title: "_InterlockedDecrement, fonctions intrins&#232;ques | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_InterlockedDecrement16_rel_cpp"
-  - "_InterlockedDecrement16_acq_cpp"
-  - "_InterlockedDecrement16_rel"
-  - "_InterlockedDecrement64_acq"
-  - "_InterlockedDecrement_nf"
-  - "_InterlockedDecrement16_nf"
-  - "_InterlockedDecrement64_rel_cpp"
-  - "_InterlockedDecrement_rel_cpp"
-  - "_InterlockedDecrement16_acq"
-  - "_InterlockedDecrement64_acq_cpp"
-  - "_InterlockedDecrement_rel"
-  - "_InterlockedDecrement64_nf"
-  - "_InterlockedDecrement16_cpp"
-  - "_InterlockedDecrement64"
-  - "_InterlockedDecrement_cpp"
-  - "_InterlockedDecrement64_rel"
-  - "_InterlockedDecrement16"
-  - "_InterlockedDecrement"
-  - "_InterlockedDecrement64_cpp"
-  - "_InterlockedDecrement_acq"
-  - "_InterlockedDecrement_acq_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_InterlockedDecrement, intrinsèque"
-  - "_InterlockedDecrement_acq, intrinsèque"
-  - "_InterlockedDecrement_nf, intrinsèque"
-  - "_InterlockedDecrement_rel, intrinsèque"
-  - "_InterlockedDecrement16, intrinsèque"
-  - "_InterlockedDecrement16_acq, intrinsèque"
-  - "_InterlockedDecrement16_nf, intrinsèque"
-  - "_InterlockedDecrement16_rel, intrinsèque"
-  - "_InterlockedDecrement64, intrinsèque"
-  - "_InterlockedDecrement64_acq, intrinsèque"
-  - "_InterlockedDecrement64_nf, intrinsèque"
-  - "_InterlockedDecrement64_rel, intrinsèque"
-  - "InterlockedDecrement, intrinsèque"
-  - "InterlockedDecrement_acq, intrinsèque"
-  - "InterlockedDecrement_rel, intrinsèque"
-  - "InterlockedDecrement16, intrinsèque"
-  - "InterlockedDecrement64, intrinsèque"
-  - "InterlockedDecrement64_acq, intrinsèque"
-  - "InterlockedDecrement64_rel, intrinsèque"
+title: "_InterlockedDecrement, fonctions intrinsèques | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _InterlockedDecrement16_rel_cpp
+- _InterlockedDecrement16_acq_cpp
+- _InterlockedDecrement16_rel
+- _InterlockedDecrement64_acq
+- _InterlockedDecrement_nf
+- _InterlockedDecrement16_nf
+- _InterlockedDecrement64_rel_cpp
+- _InterlockedDecrement_rel_cpp
+- _InterlockedDecrement16_acq
+- _InterlockedDecrement64_acq_cpp
+- _InterlockedDecrement_rel
+- _InterlockedDecrement64_nf
+- _InterlockedDecrement16_cpp
+- _InterlockedDecrement64
+- _InterlockedDecrement_cpp
+- _InterlockedDecrement64_rel
+- _InterlockedDecrement16
+- _InterlockedDecrement
+- _InterlockedDecrement64_cpp
+- _InterlockedDecrement_acq
+- _InterlockedDecrement_acq_cpp
+dev_langs: C++
+helpviewer_keywords:
+- InterlockedDecrement64_rel intrinsic
+- InterlockedDecrement64 intrinsic
+- _InterlockedDecrement16 intrinsic
+- _InterlockedDecrement16_acq intrinsic
+- _InterlockedDecrement intrinsic
+- _InterlockedDecrement_nf intrinsic
+- _InterlockedDecrement_acq intrinsic
+- _InterlockedDecrement64_rel intrinsic
+- _InterlockedDecrement16_rel intrinsic
+- InterlockedDecrement intrinsic
+- InterlockedDecrement16 intrinsic
+- _InterlockedDecrement16_nf intrinsic
+- InterlockedDecrement64_acq intrinsic
+- _InterlockedDecrement_rel intrinsic
+- InterlockedDecrement_acq intrinsic
+- _InterlockedDecrement64_acq intrinsic
+- _InterlockedDecrement64 intrinsic
+- _InterlockedDecrement64_nf intrinsic
+- InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-caps.latest.revision: 23
-caps.handback.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "23"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8e1ade673c13ed69912ddadc5f6a4d75e7a8e0a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# _InterlockedDecrement, fonctions intrins&#232;ques
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement, fonctions intrinsèques
 **Section spécifique à Microsoft**  
   
- Fournit une prise en charge des intrinsèques du compilateur pour la fonction Win32 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] [InterlockedDecrement](http://msdn.microsoft.com/library/ms683580.aspx).  
+ Fournit la prise en charge intrinsèque de compilateur pour Win32 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] [InterlockedDecrement](http://msdn.microsoft.com/library/ms683580.aspx) (fonction).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 long _InterlockedDecrement(  
@@ -108,34 +108,34 @@ __int64 _InterlockedDecrement64_nf(
 );  
 ```  
   
-#### Paramètres  
- \[in, out\] `lpAddend`  
+#### <a name="parameters"></a>Paramètres  
+ [in, out] `lpAddend`  
  Pointeur vers la variable à décrémenter.  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  La valeur de retour est la valeur décrémentée résultante.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Il existe plusieurs variantes de `_InterlockedDecrement` qui varient selon les types de données qu'elles impliquent et l'utilisation d'une sémantique acquire ou release spécifique au processeur.  
   
  La fonction `_InterlockedDecrement` opère sur des valeurs entières de 32 bits, `_InterlockedDecrement16` sur des valeurs entières de 16 bits et `_InterlockedDecrement64` sur des valeurs entières de 64 bits.  
   
- Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d'une section critique.  Les fonctions intrinsèques avec un suffixe `_nf` \(pour « no fence », « pas de délimitation »\) n'agissent pas comme une barrière mémoire.  
+ Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d'une section critique. Les fonctions intrinsèques avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agissent pas comme une barrière mémoire.  
   
- La variable vers laquelle pointe le paramètre `lpAddend` doit être alignée sur une limite de 32 bits. Dans le cas contraire, cette fonction échoue sur les systèmes x86 multiprocesseurs et les systèmes autres que x86.  Pour plus d'informations, consultez [align](../cpp/align-cpp.md).  
+ La variable vers laquelle pointe le paramètre `lpAddend` doit être alignée sur une limite de 32 bits. Dans le cas contraire, cette fonction échoue sur les systèmes x86 multiprocesseurs et les systèmes autres que x86. Pour plus d’informations, consultez [aligner](../cpp/align-cpp.md).  
   
  Ces routines sont disponibles seulement comme fonctions intrinsèques.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // compiler_intrinsics_interlocked.cpp  
@@ -203,7 +203,7 @@ void __cdecl SimpleThread(void* pParam) {
 }  
 ```  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)   
+ [Mots clés](../cpp/keywords-cpp.md)   
  [Conflits avec le compilateur x86](../build/conflicts-with-the-x86-compiler.md)

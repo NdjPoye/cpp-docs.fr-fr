@@ -18,17 +18,18 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3830f91683399eba4784b5348ca252e9caa22d57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6914ace20d299b526dc7c0d5b066948a2759287
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-classes-c"></a>Classes de stockage (C++)  
   
 A *classe de stockage* dans le contexte de C++, les déclarations de variable est un spécificateur de type qui régit l’emplacement de mémoire, la liaison et la durée de vie des objets. Un objet donné ne peut avoir qu'une seule classe de stockage. Les variables définies dans un bloc ont un stockage automatique, sauf indication contraire avec les spécificateurs `extern`, `static` ou `thread_local`. Les objets automatiques et les variables n'ont aucune liaison ; ils ne sont pas visibles pour le code en dehors du bloc.  
   
-**Remarques**  
+**Notes**  
   
 1.  Le [mutable](../cpp/mutable-data-members-cpp.md) mot clé peut être considéré comme un spécificateur de classe de stockage. Toutefois, il est uniquement disponible dans la liste des membres d'une définition de classe.  
   
@@ -217,14 +218,12 @@ void DoSomething()
 ```  
   
 Points à noter concernant le `thread_local` spécificateur :  
+
+- Les variables locales de thread dynamiquement initialisés dans des DLL ne peuvent pas correctement initialisés sur tous les threads appelant. Pour plus d’informations, consultez [thread](thread.md).
   
 -  Le `thread_local` spécificateur peut être combiné avec `static` ou `extern`.  
   
 -  Vous pouvez appliquer `thread_local` uniquement aux déclarations de données et les définitions ; `thread_local` ne peut pas être utilisé sur des définitions ou déclarations de fonction.  
-  
--  L’utilisation de `thread_local` peut interférer avec [chargement différé](../build/reference/linker-support-for-delay-loaded-dlls.md) des importations de DLL. 
-  
--  Sur les systèmes XP, `thread_local` peut ne pas fonctionner correctement si une DLL utilise `thread_local` données et elle est chargée dynamiquement via `LoadLibrary`.  
   
 -  Vous pouvez spécifier `thread_local` uniquement sur les éléments de données ayant une durée de stockage statique. Cela inclut les objets de données globaux (à la fois `static` et `extern`), les objets statiques locaux et les membres de données statiques des classes. Toute variable locale déclarée `thread_local` est implicitement statique si aucune autre classe de stockage n’est fourni ; en d’autres termes, à la portée de bloc `thread_local` équivaut à `thread_local static`. 
   

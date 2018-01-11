@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- clock
+apiname: clock
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,10 +21,8 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- clock
-dev_langs:
-- C++
+f1_keywords: clock
+dev_langs: C++
 helpviewer_keywords:
 - processor time used, calculating
 - time, calculating processor
@@ -34,30 +30,16 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3a226377499df1747a022325b762b3cdfdd35ea6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7e48d06b3170da0ded81473affec957f3eae0e3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clock"></a>horloge
 Calcule le temps horloge utilisé par le processus appelant.  
@@ -76,13 +58,13 @@ La fonction `clock` indique combien de temps horloge s’est écoulé depuis l�
   
 Selon la durée écoulée, la valeur retournée par `clock` peut dépasser la valeur positive maximale de `clock_t`. Quand le processus s’exécute plus longtemps, la valeur retournée par `clock` est toujours `(clock_t)(-1)`, tel que spécifié par les normes ISO C99 (7.23.2.1) et ISO C11 (7.27.2.1). Microsoft implémente `clock_t` en tant que `long`, entier signé 32 bits, et la macro `CLOCKS_PER_SEC` est définie avec la valeur 1000. Cela donne pour la fonction `clock` une valeur de retour maximale de 2 147 483,647 secondes ou 24,8 jours environ. Ne vous fiez pas à la valeur retournée par `clock` dans les processus qui durent plus longtemps que cet intervalle de temps. Vous pouvez utiliser la fonction `time` 64 bits ou la fonction Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904) pour enregistrer des durées de processus couvrant plusieurs années.  
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`clock`|\<time.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

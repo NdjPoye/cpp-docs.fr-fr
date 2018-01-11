@@ -1,32 +1,33 @@
 ---
-title: "ActivationFactory::GetRuntimeClassName, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ActivationFactory::GetRuntimeClassName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetRuntimeClassName (méthode)"
+title: "Activationfactory::getruntimeclassname, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ActivationFactory::GetRuntimeClassName
+dev_langs: C++
+helpviewer_keywords: GetRuntimeClassName method
 ms.assetid: 74e34f0a-9c51-4b40-89f5-45c6c5886ece
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2d4c90c9025a38a46a65ecff7ad5b706420ccd96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ActivationFactory::GetRuntimeClassName, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Obtient le nom de la classe d'exécution de l'objet que l'ActivationFactory actuel instancie.  
+# <a name="activationfactorygetruntimeclassname-method"></a>ActivationFactory::GetRuntimeClassName, méthode
+Obtient le nom de la classe runtime de l’objet qui instancie la ActivationFactory actuel.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 STDMETHOD(  
@@ -34,17 +35,17 @@ STDMETHOD(
 )(_Out_ HSTRING* runtimeName);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `runtimeName`  
- Lorsque cette opération se termine, un handle à une chaîne contenant le nom de la classe d'exécution de l'objet que l'ActivationFactory actuel instancie.  
+ Lorsque cette opération est terminée, un handle vers une chaîne qui contient le nom de la classe runtime de l’objet qui instancie la ActivationFactory actuel.  
   
-## Valeur de retour  
- S\_OK si réussie; sinon, un HRESULT décrivant l'anomalie.  
+## <a name="return-value"></a>Valeur de retour  
+ S_OK en cas de succès. Sinon, valeur HRESULT qui décrit l’erreur.  
   
-## Configuration requise  
- **En\-tête:** module.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** module.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ActivationFactory, classe](../windows/activationfactory-class.md)

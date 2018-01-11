@@ -50,11 +50,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d14c4fd98a9191e8a92d3f24dc24c19de2433e15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2733adb5cfc2328fdc0fb39650f6013c11960b3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 Obtiennent un message d’erreur système (`strerror_s`, `_wcserror_s`) ou impriment un message d’erreur fourni par l’utilisateur (`_strerror_s`, `__wcserror_s`). Ces versions de [strerror, _strerror, _wcserror, \__wcserror](../../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -150,7 +151,7 @@ if (( _access( "datafile",2 )) == -1 )
   
  `_strerror_s`, `_wcserror_s`, et `__wcserror_s` ne font pas partie de la définition ANSI mais sont plutôt des extensions de Microsoft. Ne les utilisez pas si vous avez besoin d’une portabilité ; pour bénéficier d’une compatibilité ANSI, utilisez plutôt `strerror_s`.  
   
- En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; celles-ci peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -160,14 +161,14 @@ if (( _access( "datafile",2 )) == -1 )
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcserror_s`|`strerror_s`|`strerror_s`|`_wcserror_s`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`strerror_s`, `_strerror_s`|\<string.h>|  
 |`_wcserror_s`, `__wcserror_s`|\<string.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple relatif à [perror](../../c-runtime-library/reference/perror-wperror.md).  

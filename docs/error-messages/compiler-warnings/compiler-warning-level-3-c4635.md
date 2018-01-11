@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4635
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4635
+f1_keywords: C4635
+dev_langs: C++
+helpviewer_keywords: C4635
 ms.assetid: b2ba90de-c093-4a76-8076-b65878467574
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: d4c85ca32903e20ea18a731872c25ee999b67f89
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 16b6a19618afeed952cfa594961a0e4ccb777d26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="compiler-warning-level-3-c4635"></a>Avertissement du compilateur (niveau 3) C4635
+# <a name="compiler-warning-level-3-c4635"></a>Avertissement du compilateur (niveau 3) C4635
 Cible de commentaire de document XML : code XML incorrect : raison  
   
  Le compilateur a détecté un problème avec les balises XML.  Corrigez le problème et recompilez.  
@@ -62,4 +43,4 @@ public ref class Test {};
   
  Notez que la sortie de cet exemple indique : **La balise de fin 'member' ne correspond pas à la balise de début 'summary'.**  
   
- Le problème avec cet exemple est que la balise de fin pour \<résumé > est mal formée, et le compilateur ne la reconnaît pas comme la \<résumé > la balise de fin.  Le \<membre > est incorporée dans le fichier .xdc par le compilateur dans chaque compilation /doc.  Par conséquent, le problème ici est que la balise de fin \</Member >, ne correspond pas à la balise de début précédente traité par le compilateur (\<résumé >.
+ Le problème avec cet exemple est que la balise de fin pour \<Résumé > est mal formée, et le compilateur ne la reconnaît pas comme la \<Résumé > balise de fin.  Le \<membre > est incorporée dans le fichier .xdc par le compilateur dans chaque compilation /doc.  Par conséquent, le problème ici est que la balise de fin \</Member >, ne correspond pas à la balise de début précédente traité par le compilateur (\<Résumé >.

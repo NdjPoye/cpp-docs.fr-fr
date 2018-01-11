@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6fc6f6876bffbad693d05c4f1154df2dbba77811
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 19ae221f2c94c91d9a2446170937b06f27884637
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invokehelpercallback-data-member"></a>InvokeHelper::callback_, donnée de membre
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -30,12 +33,12 @@ Prend en charge l’infrastructure WRL et n’est pas destinée à être utilis�
 TCallback callback_;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Représente un gestionnaire d’événements à appeler lorsqu’un événement se produit.  
   
  Le `TCallback` paramètre de modèle spécifie le type du Gestionnaire d’événements.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** event.h  
   
  **Namespace :** Microsoft::WRL::Details  

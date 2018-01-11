@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,24 +12,23 @@ f1_keywords:
 - allocators/stdext::sync_none::allocate
 - allocators/stdext::sync_none::deallocate
 - allocators/stdext::sync_none::equals
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stdext::sync_none
 - stdext::sync_none [C++], allocate
 - stdext::sync_none [C++], deallocate
 - stdext::sync_none [C++], equals
 ms.assetid: f7473cee-14f3-4fe1-88bc-68cd085e59e1
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bf0d71bc517e97a99db79dfc905935fba81faed0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 6cd96ec71098bed30fdbbb0fa84cfd7e61e33a7b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="syncnone-class"></a>sync_none, classe
 Décrit un [filtre de synchronisation](../standard-library/allocators-header.md) qui ne fournit aucune synchronisation.  
@@ -56,7 +54,7 @@ class sync_none
 |[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|  
 |[equals](#equals)|Compare l'égalité de deux caches.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<allocators>  
   
  **Espace de noms :** stdext  
@@ -115,7 +113,6 @@ bool equals(const sync<Cache>& Other) const;
   
 ## <a name="see-also"></a>Voir aussi  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

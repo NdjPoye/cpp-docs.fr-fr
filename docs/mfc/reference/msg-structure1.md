@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b856ea17e4542bee68d55b22069e559592199939
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b504f116dcbff7fa45e741ff9715070ee0c74583
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="msg-structure1"></a>MSG Structure1
 Le `MSG` structure contient des informations de message à partir de la file d’attente des messages d’un thread.  
@@ -56,7 +57,7 @@ typedef struct tagMSG {     // msg
  `pt`  
  Spécifie la position du curseur, en coordonnées d’écran, lorsque le message a été publié.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** winuser.h  
   
 ## <a name="see-also"></a>Voir aussi  

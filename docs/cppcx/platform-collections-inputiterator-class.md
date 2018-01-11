@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 15dd1d6ece1af3d561801c497b87f7be4f7d5397
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6041a3701bfac1561ab58ac2a6f504d255fc31c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator, classe
 Fournit un InputIterator de bibliothèque de modèles Standard pour les collections dérivées de l’exécution de Windows.  
@@ -66,7 +67,7 @@ class InputIterator;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `InputIterator`  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** collection.h  
   
  **Espace de noms :** Platform::Collections  
@@ -146,7 +147,7 @@ InputIterator operator++(int);
 ### <a name="return-value"></a>Valeur de retour  
  La première syntaxe incrémente l'objet InputIterator actuel puis le retourne. La deuxième syntaxe retourne une copie de l'objet InputIterator actuel, puis incrémente l'objet InputIterator actuel.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La première syntaxe InputIterator préincrémente l'objet InputIterator actuel.  
   
  La deuxième syntaxe postincrémente l'objet InputIterator actuel. Le type `int` dans la deuxième syntaxe n'indique pas un opérande entier réel mais une post-incrémentation.  

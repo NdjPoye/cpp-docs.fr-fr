@@ -144,11 +144,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5250ab17fa6da4ed54d5bda84e32b409ca53869d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: edcce2cd9f21766065cbc43f7059c638a302abd2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math, espace de noms
 Les fonctions dans le `precise_math` espace de noms sont C99 conforme. À la fois simple précision et double précision versions de chaque fonction sont incluses. Par exemple, `acos` est la version double précision et `acosf` est la version simple précision. Ces fonctions, y compris les fonctions simple précision, nécessitent la prise en charge de double précision étendue sur l’accélérateur. Vous pouvez utiliser la [accelerator::supports_double_precision](accelerator-class.md#supports_double_precision) pour déterminer si vous pouvez exécuter ces fonctions sur un accélérateur spécifique. 
@@ -300,7 +301,7 @@ namespace precise_math;
 |[trunc](concurrency-precise-math-namespace-functions.md#trunc)|Surchargé. Tronque l’argument de la partie entière|  
 |[truncf](concurrency-precise-math-namespace-functions.md#truncf)|Tronque l’argument de la partie entière|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp_math.h  
   
  **Espace de noms :** Concurrency  

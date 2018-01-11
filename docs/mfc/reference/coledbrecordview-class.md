@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb13fc956ffffe2e58953aa29f02c56344b07a44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd827d729af5186d6872536cdaa3d8863d1f8d10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView (classe)
 Vue qui affiche des enregistrements de base de données dans des contrôles.  
@@ -53,7 +54,7 @@ class COleDBRecordView : public CFormView
 |[COleDBRecordView::OnGetRowset](#ongetrowset)|Retourne une norme `HRESULT` valeur.|  
 |[COleDBRecordView::OnMove](#onmove)|Met à jour l’enregistrement en cours (si elle est « Dirty ») sur la source de données, puis déplace à l’enregistrement spécifié (suivante, précédente, première ou dernière).|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La vue est une vue de formulaire directement connectée à un `CRowset` objet. La vue est créée à partir d’une ressource de modèle de boîte de dialogue et affiche les champs de la `CRowset` objet dans les contrôles du modèle de boîte de dialogue. Le `COleDBRecordView` objet utilise l’échange de données de boîtes de dialogue (DDX) et les fonctionnalités de navigation intégrées `CRowset`, pour automatiser le déplacement des données entre les contrôles du formulaire et les champs de l’ensemble de lignes. `COleDBRecordView`fournit également une implémentation par défaut pour le déplacement à la première, suivant, précédent ou le dernier enregistrement et une interface pour la mise à jour de l’enregistrement actuellement affiché.  
   
  Vous pouvez utiliser des fonctions DDX avec **COleDbRecordView** pour obtenir des données directement à partir de l’ensemble d’enregistrements de base de données et les afficher dans un contrôle de boîte de dialogue. Vous devez utiliser le **DDX_\***  méthodes (tel que `DDX_Text`), et non le **DDX_Field\***  fonctions (telles que `DDX_FieldText`) avec **COleDbRecordView** . `DDX_FieldText`ne fonctionne pas avec **COleDbRecordView** car `DDX_FieldText` prend un argument supplémentaire de type **CRecordset\***  (pour `CRecordView`) ou **CDaoRecordset \***  (pour `CDaoRecordView`).  
@@ -80,7 +81,7 @@ class COleDBRecordView : public CFormView
   
  `COleDBRecordView`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxoledb.h  
   
 ##  <a name="coledbrecordview"></a>COleDBRecordView::COleDBRecordView  
@@ -98,7 +99,7 @@ COleDBRecordView(UINT nIDTemplate);
  `nIDTemplate`  
  Contient le numéro d’ID d’une ressource de modèle de boîte de dialogue.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque vous créez un objet d’un type dérivé de `COleDBRecordView`, appelez un des constructeurs pour créer l’objet de vue et identifier la ressource de boîte de dialogue sur lequel est basée la vue. Vous pouvez identifier la ressource par son nom (passez une chaîne comme argument au constructeur) ou par son ID (passer un entier non signé en tant que l’argument).  
   
 > [!NOTE]
@@ -115,7 +116,7 @@ virtual CRowset<>* OnGetRowset() = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez substituer cette fonction membre pour créer ou obtenir un objet d’ensemble de lignes et de retourner un handle à ce dernier. Si vous déclarez votre classe de vue de l’enregistrement avec ClassWizard, l’Assistant écrit un remplacement par défaut pour vous. Implémentation de ClassWizard par défaut retourne le handle de l’ensemble de lignes stocké dans la vue de l’enregistrement s’il en existe. Si non, il construit un objet d’ensemble de lignes du type que vous avez spécifié avec ClassWizard et appelle son **ouvrir** membres de fonction pour ouvrir la table ou exécuter la requête, puis retourne un handle vers l’objet.  
   
 > [!NOTE]
@@ -148,7 +149,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le déplacement a réussi ; 0 dans le cas contraire, si la demande de déplacement a été refusée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation par défaut appelle approprié **déplacer** fonction membre de la `CRowset` objet associé à la vue de l’enregistrement.  
   
  Par défaut, `OnMove` met à jour l’enregistrement en cours sur la source de données si l’utilisateur a été modifié dans la vue de l’enregistrement.  

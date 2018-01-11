@@ -145,11 +145,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dfc07d8cd923b945c04c8fb9a89e7f8ee8af1316
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ed62216483b23c75133759f0df39697e74e463a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorderedset-class"></a>unordered_set, classe
 La classe de modèle décrit un objet qui contrôle une séquence de longueur variable constituée d'éléments de type `const Key`. La séquence est triée par ordre faible avec une fonction de hachage, qui partitionne la séquence en un ensemble trié de sous-séquences appelées compartiments. Dans chaque compartiment, une fonction de comparaison détermine si des paires d'éléments possèdent un ordre équivalent. Chaque élément sert à la fois de clé de tri et de valeur. La séquence est représentée de façon à permettre la recherche, l'insertion et la suppression d'un élément arbitraire à l'aide d'un certain nombre d'opérations qui peut être indépendant du nombre d'éléments de la séquence (temps constant), du moins lorsque les compartiments sont de longueur à peu près équivalente. Dans le pire des cas, lorsque tous les éléments se trouvent dans un compartiment, le nombre d'opérations est proportionnel au nombre d'éléments de la séquence (temps linéaire). De plus, l'insertion d'un élément n'entraîne pas la non validité des itérateurs, et la suppression d'un élément ne rend non valides que les itérateurs qui pointent vers l'élément supprimé.  
@@ -241,13 +242,13 @@ class unordered_set;
   
  L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un objet allocateur stocké de type [unordered_set::allocator_type](#allocator_type). Un tel objet allocateur doit avoir la même interface externe qu'un objet de classe de modèle `allocator`. Notez que l'objet allocateur stocké n'est pas copié lorsque l'objet conteneur est assigné.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<unordered_set>  
   
  **Espace de noms :** std  
   
 ##  <a name="allocator_type"></a>  unordered_set::allocator_type  
- Type d’un allocateur pour la gestion du stockage.  
+ Type d'un allocateur pour la gestion du stockage.  
   
 ```  
 typedef Alloc allocator_type;  
@@ -666,7 +667,7 @@ typedef T1 const_iterator;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type décrit un objet pouvant servir d'itérateur vers l'avant constant pour la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l'implémentation `T1`.  
+ Le type décrit un objet pouvant servir d'itérateur vers l'avant constant pour la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l’implémentation `T1`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -888,7 +889,7 @@ typedef T3 difference_type;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type d'entier signé décrit un objet qui peut représenter la différence entre les adresses de deux éléments quelconques dans la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l'implémentation `T3`.  
+ Le type d'entier signé décrit un objet qui peut représenter la différence entre les adresses de deux éléments quelconques dans la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l’implémentation `T3`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -964,7 +965,7 @@ Args&&... args);
  Pour obtenir un exemple de code, consultez [set::emplace](../standard-library/set-class.md#emplace).  
   
 ##  <a name="emplace_hint"></a>  unordered_set::emplace_hint  
- Insère un élément construit sur place (aucune opération de copie ni de déplacement n’est effectuée) avec un indicateur de positionnement.  
+ Insère un élément construit sur place (sans opération de copie ni de déplacement) avec un indicateur de positionnement.  
   
 ```  
 template <class... Args>  
@@ -1138,7 +1139,7 @@ equal_range(const Key& keyval) const;
  `keyval`  
  Valeur de clé à rechercher.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction membre retourne une paire d’itérateurs `X` telles que`[X.first, X.second)` délimite uniquement les éléments de la séquence contrôlée qui ont un classement équivalent à `keyval`. Si aucun de ces éléments n’existe, les deux itérateurs sont `end()`.  
   
 ### <a name="example"></a>Exemple  
@@ -1672,7 +1673,7 @@ typedef T4 local_iterator;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type décrit un objet pouvant servir d'itérateur vers l'avant pour un compartiment. Il est décrit ici comme un synonyme du type défini par l'implémentation `T4`.  
+ Le type décrit un objet pouvant servir d'itérateur vers l'avant pour un compartiment. Il est décrit ici comme un synonyme du type défini par l’implémentation `T4`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1930,7 +1931,7 @@ unordered_set& operator=(unordered_set&& right);
 |Paramètre|Description|  
 |`right`|Le[unordered_set](../standard-library/unordered-set-class.md) copié dans le `unordered_set`.|  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Après avoir supprimé les éléments existants dans un objet `unordered_set`, `operator=` copie ou déplace le contenu de `right` dans l’objet `unordered_set`.  
   
 ### <a name="example"></a>Exemple  
@@ -2203,7 +2204,7 @@ typedef T2 size_type;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type d'entier non signé décrit un objet qui peut représenter la longueur de n'importe quelle séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l'implémentation `T2`.  
+ Le type d'entier non signé décrit un objet qui peut représenter la longueur de n'importe quelle séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l’implémentation `T2`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2354,7 +2355,7 @@ unordered_set(
 |`Right`|Conteneur à copier.|  
 |`IList`|Objet initializer_list contenant les éléments à copier.|  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le premier constructeur spécifie une copie de la séquence contrôlée par `Right`. Le deuxième constructeur spécifie une séquence vide contrôlée. Le troisième constructeur spécifie une copie de la séquence en déplaçant `Right`. Les quatrième à huitième constructeurs utilisent une initializer_list pour spécifier les éléments à copier. Le neuvième constructeur insère la séquence de valeurs d’élément `[first, last)`.  
   
  Tous les constructeurs initialisent également plusieurs valeurs stockées. Pour le constructeur de copie, les valeurs sont obtenues à partir de `Right`. Sinon :  
@@ -2420,6 +2421,6 @@ int main()
 ## <a name="see-also"></a>Voir aussi  
  [<unordered_set>](../standard-library/unordered-set.md)   
  [Conteneurs](../cpp/containers-modern-cpp.md)   
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
 

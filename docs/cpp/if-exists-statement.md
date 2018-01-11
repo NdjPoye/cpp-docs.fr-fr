@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __if_exists_cpp
-dev_langs:
-- C++
+f1_keywords: __if_exists_cpp
+dev_langs: C++
 helpviewer_keywords:
 - identifiers, testing for existence
 - symbols, testing for existence
 - __if_exists keyword [C++]
 ms.assetid: d3eb34b6-f3a9-4063-a286-b62a28c0c7fa
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 3d0eaa00abb1f833ef491fc27bfee01790776edb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c7950e2fcd933bd4748c06adf93f5ce1c271b162
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ifexists-statement"></a>__if_exists, instruction
 L'instruction `__if_exists` vérifie si l'identificateur spécifié existe. Si l'identificateur existe, le bloc d'instructions spécifié est exécuté.  
@@ -46,7 +43,7 @@ statements
 |`identifier`|Identificateur dont vous voulez tester l'existence.|  
 |`statements`|Une ou plusieurs instructions à exécuter si `identifier` existe.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 > [!CAUTION]
 >  Pour obtenir les résultats les plus fiables, utilisez l'instruction `__if_exists` sous les contraintes suivantes.  

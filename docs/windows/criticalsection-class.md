@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89587f87bd71d2688bba2c128d28c01212b50b71
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e2bf6e4728bac6622f9872ab939e084b14f49ae8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="criticalsection-class"></a>CriticalSection (classe)
 Représente un objet de section critique.  
@@ -34,7 +37,7 @@ class CriticalSection;
   
 ### <a name="constructor"></a>Constructeur  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CriticalSection::CriticalSection, constructeur](../windows/criticalsection-criticalsection-constructor.md)|Initialise un objet de synchronisation qui est similaire à un objet mutex, mais peut être utilisé par uniquement les threads d’un processus unique.|  
 |[CriticalSection::~CriticalSection, destructeur](../windows/criticalsection-tilde-criticalsection-destructor.md)|Désinitialise et détruit l’objet CriticalSection actuel.|  
@@ -49,14 +52,14 @@ class CriticalSection;
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CriticalSection::cs_, données de membre](../windows/criticalsection-cs-data-member.md)|Déclare un membre de données de section critique.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CriticalSection`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

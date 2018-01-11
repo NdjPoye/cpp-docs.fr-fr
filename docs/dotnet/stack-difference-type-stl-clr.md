@@ -1,41 +1,42 @@
 ---
-title: "stack::difference_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::difference_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "difference_type (membre) (STL/CLR)"
+title: Stack::difference_type (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::difference_type
+dev_langs: C++
+helpviewer_keywords: difference_type member [STL/CLR]
 ms.assetid: 953a0d2a-873c-41e7-b792-15cf18e7a5b4
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1ca3415114d6425ede57e726c4a5ca2c36a33a9d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# stack::difference_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les types d'une distance signée entre deux éléments.  
+# <a name="stackdifferencetype-stlclr"></a>stack::difference_type (STL/CLR)
+Les types d’une distance signée entre deux éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef int difference_type;  
 ```  
   
-## Notes  
- Le type décrit un nombre non négatif d'éléments.  
+## <a name="remarks"></a>Notes  
+ Le type décrit un nombre d’éléments éventuellement négatif.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_stack_difference_type.cpp   
@@ -74,14 +75,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**poussant 2 \= \-2**  
-**dépilant 3 \= 3**   
-## Configuration requise  
- **En\-tête :** \<cliext\/stack\>  
+```Output  
+ a b c  
+pushing 2 = -2  
+popping 3 = 3  
+```  
   
- **Espace de nom :** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/stack >  
   
-## Voir aussi  
- [pile](../dotnet/stack-stl-clr.md)   
- [stack::size\_type](../dotnet/stack-size-type-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [pile (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::size_type (STL/CLR)](../dotnet/stack-size-type-stl-clr.md)

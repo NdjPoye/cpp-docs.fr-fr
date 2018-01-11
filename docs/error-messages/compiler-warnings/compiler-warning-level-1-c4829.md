@@ -1,33 +1,31 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4829 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4829"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4829"
+title: Compilateur avertissement (niveau 1) C4829 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4829
+dev_langs: C++
+helpviewer_keywords: C4829
 ms.assetid: 4ffabe2b-2ddc-4c52-8564-d1355c93cfa6
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5d662aaf24526320c0ced706534099d4c94a3c9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4829
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Paramètres potentiellement incorrects de la fonction main.Considérez 'int main\(Platform::Array\<Platform::String^\>^ argv\)'  
+# <a name="compiler-warning-level-1-c4829"></a>Avertissement du compilateur (niveau 1) C4829
+Paramètres potentiellement incorrects de la fonction main. Considérez ' intmain (Platform::Array\<Platform::String ^ > ^ argv)'  
   
- Certaines fonctions, telles que main, ne peuvent pas prendre de paramètres de type référence.  La compilation réussira, mais l'image résultante ne fonctionnera probablement pas.  
+ Certaines fonctions, telles que main, ne peuvent pas prendre de paramètres de type référence. La compilation réussira, mais l'image résultante ne fonctionnera probablement pas.  
   
  L'exemple suivant génère l'erreur C4829 :  
   

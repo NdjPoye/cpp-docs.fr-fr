@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 60480cef84f04c8c962e94d8f550823f637cfd84
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 37d5a89ebf95d8852664dcd50e44e82009ebd95e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 Bien que Windows et Visual C++ prennent en charge la gestion structurée des exceptions (SEH), nous vous recommandons d'utiliser la gestion des exceptions C++ conforme à la norme ISO, car elle rend le code plus portable et plus flexible. Néanmoins, vous devrez peut-être encore utiliser SEH dans le code existant ou pour des types particuliers de programmes.  
@@ -38,7 +39,7 @@ Bien que Windows et Visual C++ prennent en charge la gestion structurée des exc
   
  `__except`( `expression` ) *compound-statement*  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Avec SEH, vous pouvez garantir que les ressources telles que les blocs de mémoire et les fichiers seront corrects si l'exécution se termine de façon inattendue. Vous pouvez également gérer des problèmes spécifiques (par exemple, une mémoire insuffisante) en utilisant un code structuré concis qui ne repose pas sur les instructions `goto` ni sur des tests élaborés de codes de retour.   
   
  Les instructions try-except et try-finally référencées dans cet article sont des extensions Microsoft du langage C. Elles prennent en charge SEH en permettant aux applications de prendre le contrôle d'un programme après des événements qui termineraient sinon son exécution. Bien que la gestion SEH fonctionne avec des fichiers sources C++, elle n'est pas spécifiquement conçue pour C++. Si vous l’utilisez dans un programme C++ que vous compilez à l’aide de la [/EH](../build/reference/eh-exception-handling-model.md) option — avec certains modificateurs, les destructeurs d’objets locaux sont appelés, mais d’autres comportements d’exécution non à vos attentes. (Pour obtenir une illustration, consultez l'exemple présenté plus loin dans cet article.)  Dans la plupart des cas, au lieu de SEH nous vous recommandons d’utiliser à la norme ISO [gestion des exceptions C++](../cpp/try-throw-and-catch-statements-cpp.md), lequel Visual C++ prend également en charge. En utilisant la gestion des exceptions C++, vous pouvez garantir que votre code est plus portable et gérer les exceptions de tout type.  

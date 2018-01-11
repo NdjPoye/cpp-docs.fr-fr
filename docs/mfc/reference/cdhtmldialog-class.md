@@ -127,11 +127,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a82079e43a5c4e1bfbcb9bb339663314d4ab2a49
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb546ffc35438e19bd5230d6e71db28061109bc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdhtmldialog-class"></a>Classe CDHtmlDialog
 Permet de créer des boîtes de dialogue qui utilisent HTML plutôt que des ressources de la boîte de dialogue pour implémenter l’interface utilisateur.  
@@ -215,7 +216,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |[CDHtmlDialog::m_strCurrentUrl](#m_strcurrenturl)|L’URL actuelle.|  
 |[CDHtmlDialog::m_szHtmlResID](#m_szhtmlresid)|Version de chaîne de l’ID de ressource HTML.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **CDHtmlDialog** peut charger le code HTML à afficher à partir d’une ressource HTML ou une URL.  
   
  `CDHtmlDialog`peuvent également données échanger avec les contrôles HTML et gérer les événements de contrôles HTML, tels que les clics de bouton.  
@@ -239,7 +240,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
   
  `CDHtmlDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdhtml.h  
   
 ##  <a name="ddx_dhtml_helper_macros"></a>Macros d’assistance DDX_DHtml  
@@ -303,7 +304,7 @@ CDHtmlDialog(
  `nHtmlResID`  
  Contient le numéro d’ID d’une ressource HTML.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La deuxième forme du constructeur fournit l’accès à la ressource de boîte de dialogue par le nom du modèle. La troisième forme du constructeur fournit l’accès à la ressource de boîte de dialogue par l’ID du modèle de ressource. En règle générale, l’ID commence par la **IDD_** préfixe.  
   
 ##  <a name="_dtorcdhtmldialog"></a>CDHtmlDialog :: ~ CDHtmlDialog  
@@ -313,7 +314,7 @@ CDHtmlDialog(
 virtual ~CDHtmlDialog();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le [CWnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow) fonction membre doit être utilisée pour détruire les boîtes de dialogue non modale qui sont créés par [CDialog::Create](../../mfc/reference/cdialog-class.md#create).  
   
 ##  <a name="createcontrolsite"></a>CDHtmlDialog::CreateControlSite  
@@ -337,7 +338,7 @@ virtual BOOL CreateControlSite(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous pouvez remplacer cette fonction membre pour retourner une instance de votre propre classe de site du contrôle.  
   
 ##  <a name="ddx_dhtml_axcontrol"></a>CDHtmlDialog::DDX_DHtml_AxControl  
@@ -394,7 +395,7 @@ void DDX_DHtml_CheckBox(
  `szId`  
  La valeur que vous avez spécifié pour le paramètre d’ID du contrôle HTML.  
   
- *value*  
+ *valeur*  
  La valeur qui est échangée.  
   
 ### <a name="example"></a>Exemple  
@@ -463,7 +464,7 @@ void DDX_DHtml_ElementText(
  *DISPID*  
  L’ID de dispatch de l’élément HTML avec laquelle vous souhaitez échanger des données.  
   
- *value*  
+ *valeur*  
  La valeur qui est échangée.  
   
 ##  <a name="ddx_dhtml_radio"></a>CDHtmlDialog::DDX_DHtml_Radio  
@@ -483,7 +484,7 @@ void DDX_DHtml_Radio(
  `szId`  
  La valeur que vous avez spécifié pour le paramètre d’ID du contrôle HTML.  
   
- *value*  
+ *valeur*  
  La valeur qui est échangée.  
   
 ##  <a name="ddx_dhtml_selectindex"></a>CDHtmlDialog::DDX_DHtml_SelectIndex  
@@ -503,7 +504,7 @@ void DDX_DHtml_SelectIndex(
  `szId`  
  La valeur que vous avez spécifié pour le paramètre d’id du contrôle HTML.  
   
- *value*  
+ *valeur*  
  La valeur qui est échangée.  
   
 ##  <a name="ddx_dhtml_selectstring"></a>CDHtmlDialog::DDX_DHtml_SelectString  
@@ -523,7 +524,7 @@ void DDX_DHtml_SelectString(
  `szId`  
  La valeur que vous avez spécifié pour le paramètre d’ID du contrôle HTML.  
   
- *value*  
+ *valeur*  
  La valeur qui est échangée.  
   
 ##  <a name="ddx_dhtml_selectvalue"></a>CDHtmlDialog::DDX_DHtml_SelectValue  
@@ -543,7 +544,7 @@ void DDX_DHtml_SelectValue(
  `szId`  
  La valeur que vous avez spécifié pour le paramètre d’ID du contrôle HTML.  
   
- *value*  
+ *valeur*  
  La valeur qui est échangée.  
   
 ### <a name="example"></a>Exemple  
@@ -570,7 +571,7 @@ STDMETHOD(EnableModeless)(BOOL fEnable);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre est mise en œuvre de CDHtmlDialog de [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="filterdataobject"></a>CDHtmlDialog::FilterDataObject  
@@ -592,7 +593,7 @@ STDMETHOD(FilterDataObject)(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **S_FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre est mise en œuvre de CDHtmlDialog de [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getcontroldispatch"></a>CDHtmlDialog::GetControlDispatch  
@@ -649,7 +650,7 @@ VARIANT GetControlProperty(
 ### <a name="return-value"></a>Valeur de retour  
  Une variante contenant la propriété demandée ou une variante vide si le contrôle ou la propriété est introuvable.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les surcharges sont répertoriés à partir de moins efficace en haut à la plus efficace en bas.  
   
 ##  <a name="getcurrenturl"></a>CDHtmlDialog::GetCurrentUrl  
@@ -696,7 +697,7 @@ STDMETHOD(GetDropTarget)(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre est mise en œuvre de CDHtmlDialog de [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getelement"></a>CDHtmlDialog::GetElement  
@@ -730,7 +731,7 @@ HRESULT GetElement(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez la première surcharge si vous avez besoin gérer les conditions dans lesquelles il peut y avoir plus d’un élément avec l’ID spécifié. Vous pouvez utiliser le dernier paramètre pour déterminer si le pointeur d’interface retourné est à une collection ou un seul élément. Si le pointeur d’interface est une collection, vous pouvez interroger pour les **IHTMLElementCollection** et utiliser ses **élément** propriété pour faire référence aux éléments par position ordinale.  
   
  La deuxième surcharge échoue s’il existe plusieurs éléments avec le même ID dans la page.  
@@ -827,7 +828,7 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction doit être appelée uniquement à partir d’un gestionnaire d’événements DHTML.  
   
 ##  <a name="getexternal"></a>CDHtmlDialog::GetExternal  
@@ -844,7 +845,7 @@ STDMETHOD(GetExternal)(IDispatch** ppDispatch);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK` en cas de réussite ou **E_NOTIMPL** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre est mise en œuvre de CDHtmlDialog de [IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="gethostinfo"></a>CDHtmlDialog::GetHostInfo  
@@ -861,7 +862,7 @@ STDMETHOD(GetHostInfo)(DOCHOSTUIINFO* pInfo);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre est mise en œuvre de CDHtmlDialog de [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getoptionkeypath"></a>CDHtmlDialog::GetOptionKeyPath  
@@ -883,7 +884,7 @@ STDMETHOD(GetOptionKeyPath)(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre est mise en œuvre de CDHtmlDialog de [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="hideui"></a>CDHtmlDialog::HideUI  
@@ -896,7 +897,7 @@ STDMETHOD(HideUI)(void);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre est mise en œuvre de CDHtmlDialog de [IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="isexternaldispatchsafe"></a>CDHtmlDialog::IsExternalDispatchSafe  
@@ -934,7 +935,7 @@ BOOL LoadFromResource(UINT nRes);
 BOOL m_bUseHtmlTitle;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si **m**_ **bUseHtmlTitle** est **true**, la légende de la boîte de dialogue a la valeur égale au titre du document HTML ; sinon, la légende dans la ressource de boîte de dialogue est utilisée.  
   
 ##  <a name="m_nhtmlresid"></a>CDHtmlDialog::m_nHtmlResID  
@@ -1056,7 +1057,7 @@ STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre est l’implémentation de CDHtmlDialog de [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="onframewindowactivate"></a>CDHtmlDialog::OnFrameWindowActivate  
@@ -1073,7 +1074,7 @@ STDMETHOD(OnFrameWindowActivate)(BOOL fActivate);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre est mise en œuvre de CDHtmlDialog de [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="oninitdialog"></a>CDHtmlDialog::OnInitDialog  
@@ -1086,7 +1087,7 @@ virtual BOOL OnInitDialog();
 ### <a name="return-value"></a>Valeur de retour  
  L’implémentation par défaut retourne **TRUE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ce message est envoyé à la boîte de dialogue lors de la **créer**, `CreateIndirect`, ou `DoModal` appels, qui se produisent immédiatement avant l’affichage de la boîte de dialogue.  
   
  Remplacez cette fonction membre, si vous avez besoin effectuer un traitement spécial lors de l’initialisation de la boîte de dialogue. Dans la version substituée, commencer par appeler la classe de base `OnInitDialog` mais ne pas tenir compte de sa valeur de retour. Vous allez normalement retourner **TRUE** à partir de votre fonction membre substitué.  
@@ -1287,7 +1288,7 @@ STDMETHOD(ShowContextMenu)(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **S_FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre est mise en œuvre de CDHtmlDialog de [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="showui"></a>CDHtmlDialog::ShowUI  
@@ -1321,7 +1322,7 @@ STDMETHOD(ShowUI)(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **S_FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre est mise en œuvre de CDHtmlDialog de [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="translateaccelerator"></a>CDHtmlDialog::TranslateAccelerator  
@@ -1347,7 +1348,7 @@ STDMETHOD(TranslateAccelerator)(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **S_FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre est mise en œuvre de CDHtmlDialog de [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="translateurl"></a>CDHtmlDialog::TranslateUrl  
@@ -1373,7 +1374,7 @@ STDMETHOD(TranslateUrl)(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **S_FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre est mise en œuvre de CDHtmlDialog de [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="updateui"></a>CDHtmlDialog::UpdateUI  
@@ -1386,7 +1387,7 @@ STDMETHOD(UpdateUI)(void);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre est mise en œuvre de CDHtmlDialog de [IDocHostUIHandler::UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx), comme décrit dans le Kit de développement logiciel Windows.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -42,11 +42,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b2362db1db1686bcf87cb171b3f29da48226d54b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c53394391c34dc86e3516c54806c9bbd2b62ca7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-wopen"></a>_open, _wopen
 Ouvre un fichier. Ces fonctions sont dépréciées, car des versions plus sécurisées sont disponibles. Consultez [_sopen_s, _wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md).  
@@ -186,14 +187,14 @@ int _wopen(
   
  Si la valeur spécifiée pour `pmode` est différente d’une combinaison de `_S_IREAD` et `_S_IWRITE` (même si elle spécifie un `pmode` valide dans un autre système d’exploitation) ou si elle se différencie des valeurs `oflag` autorisées, la fonction génère une assertion en mode débogage et appelle le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, la fonction retourne -1 et définit `errno` avec la valeur `EINVAL`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|En-tête facultatif|  
 |-------------|---------------------|---------------------|  
 |`_open`|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|  
 |`_wopen`|\<io.h> ou \<wchar.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|  
   
- `_open` et `_wopen` sont des extensions Microsoft. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ `_open` et `_wopen` sont des extensions Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

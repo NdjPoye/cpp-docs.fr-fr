@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f5741f6b09ec466c04794bf049222d344df34a85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ef95c252621aa7f725098dfcd08c7b5b3620826
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wizard-support-for-other-languages"></a>Prise en charge d'autres langues par l'Assistant
 Lorsque vous installez Visual Studio, le programme d’installation détecte les paramètres régionaux installé sur votre système et installe les modèles pour ces paramètres régionaux ou un modèle de langage approprié. Par exemple, pour les paramètres régionaux européens occidentales, le programme d’installation installe anglais, Français, italien, espagnol et allemand. Ces langues figurent dans le **langue de ressource** liste sur le [Type d’Application](../mfc/reference/application-type-mfc-application-wizard.md) page de l’Assistant Application MFC.  
@@ -39,11 +40,11 @@ Lorsque vous installez Visual Studio, le programme d’installation détecte les
   
 ### <a name="language-templates-provided-in-visual-studio-net"></a>Modèles de langue fournis dans Visual Studio .NET  
   
-|Langage|Modèle|  
+|Langue|Modèle|  
 |--------------|--------------|  
 |Chinois (traditionnel)|1028|  
 |Chinois (simplifié)|2052|  
-|Anglais|1036|  
+|Anglais|1033|  
 |Français|1036|  
 |Allemand|1031|  
 |Italien|1040|  

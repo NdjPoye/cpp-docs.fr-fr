@@ -27,11 +27,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c703a1daf3c32229a13f6c47d1a56084b849edbb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6669f5a2b54c376e545b1ba6b9227d6137726256
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdockstate-class"></a>Classe de CDockState
 Classe `CObject` sérialisée qui charge, décharge ou désactive l'état d'une ou de plusieurs barres de contrôles d'ancrage en mémoire persistante (un fichier).  
@@ -59,7 +60,7 @@ class CDockState : public CObject
 |----------|-----------------|  
 |[CDockState::m_arrBarInfo](#m_arrbarinfo)|Tableau de pointeurs vers les données stockées ancrer les informations d’état avec une entrée pour chaque barre de contrôle.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’état d’ancrage inclut la taille et la position de la barre et si elle est ancrée. Lorsque la récupération stocké ancrer état, `CDockState` vérifie la barre position et, si la barre n’est pas visible avec les paramètres actuels de l’écran, `CDockState` met à l’échelle de la barre de position afin qu’il soit visible. L’objectif principal de `CDockState` pour conserver l’état complet d’un nombre de barres de contrôles et pour autoriser cet état doit être enregistré et chargé dans du Registre, l’application. Fichier INI, ou sous forme binaire dans le cadre d’un `CArchive` contenu de l’objet.  
   
  La barre peut être n’importe quel contrôle de la barre, y compris une barre d’outils, la barre d’état ou la barre de boîte de dialogue. `CDockState`les objets sont écrites et lues vers ou à partir d’un fichier via un `CArchive` objet.  
@@ -73,7 +74,7 @@ class CDockState : public CObject
   
  `CDockState`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxadv.h  
   
 ##  <a name="clear"></a>CDockState::Clear  
@@ -83,7 +84,7 @@ class CDockState : public CObject
 void Clear();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cela inclut non seulement si la barre est ancrée ou non, mais la taille et la position de la barre et si elle est visible ou non.  
   
 ##  <a name="getversion"></a>CDockState::GetVersion  
@@ -96,7 +97,7 @@ DWORD GetVersion();
 ### <a name="return-value"></a>Valeur de retour  
  1 si la barre stockée informations sont antérieures à actuelle de la barre d’état ; 2 si la barre stockée informations sont le même que l’actuel barre d’état.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Prise en charge de la version permet une barre révisée ajouter de nouvelles propriétés persistantes et toujours être en mesure de détecter et charger l’état persistant créé par une version antérieure de la barre.  
   
 ##  <a name="loadstate"></a>CDockState::LoadState  
@@ -110,7 +111,7 @@ void LoadState(LPCTSTR lpszProfileName);
  `lpszProfileName`  
  Pointe vers une chaîne null-teminated qui spécifie le nom d’une section dans le fichier d’initialisation ou une clé dans le Registre Windows où sont stockées les informations d’état.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le nom du profil est la section de l’application. Ini ou le Registre qui contient les informations d’état des barres. Vous pouvez enregistrer le contrôle de barre d’informations d’état dans le Registre ou. Fichier INI avec `SaveState`.  
   
 ##  <a name="m_arrbarinfo"></a>CDockState::m_arrBarInfo  
@@ -131,7 +132,7 @@ void SaveState(LPCTSTR lpszProfileName);
  `lpszProfileName`  
  Pointe vers une chaîne null-teminated qui spécifie le nom d’une section dans le fichier d’initialisation ou une clé dans le Registre Windows où sont stockées les informations d’état.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le nom du profil est la section de l’application. Fichier INI ou du Registre qui contient les informations d’état de la barre de contrôle. `SaveState`enregistre également la taille de l’écran actuel. Vous pouvez récupérer des informations de barre de contrôle à partir du Registre ou. Fichier INI avec `LoadState`.  
   
 ## <a name="see-also"></a>Voir aussi  

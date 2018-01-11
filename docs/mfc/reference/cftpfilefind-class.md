@@ -25,11 +25,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ff064892172a4d1ab9d31c67be031935650c6c16
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d4fe3b188d5b03c9e727349b9e30982cf52006c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind (classe)
 Contribue à la recherche des fichiers Internet sur les serveurs FTP.  
@@ -56,7 +57,7 @@ class CFtpFileFind : public CFileFind
 |[CFtpFileFind::FindNextFile](#findnextfile)|Continue la recherche d’un fichier à partir d’un appel précédent à [FindFile](#findfile).|  
 |[CFtpFileFind::GetFileURL](#getfileurl)|Obtient l’URL, y compris le chemin d’accès, du fichier trouvé.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CFtpFileFind`inclut des fonctions membres qui lancer une recherche, recherchez un fichier et retournent l’URL ou autres informations descriptives sur le fichier.  
   
  Classes MFC conçus pour Internet et la recherche de fichiers local incluent [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) et [CFileFind](../../mfc/reference/cfilefind-class.md). Avec `CFtpFileFind`, ces classes fournissent un mécanisme transparent pour le client à des fichiers spécifiques, quel que soit le serveur de trouver le type de fichier ou de protocole (un ordinateur local ou un serveur distant). Notez qu’il n’existe aucune classe MFC pour la recherche sur les serveurs HTTP car HTTP ne prend pas en charge la manipulation directe de fichiers requise pour les recherches.  
@@ -75,7 +76,7 @@ class CFtpFileFind : public CFileFind
   
  `CFtpFileFind`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxinet.h  
   
 ##  <a name="cftpfilefind"></a>CFtpFileFind::CFtpFileFind  
@@ -94,7 +95,7 @@ explicit CFtpFileFind(
  `dwContext`  
  L’identificateur de contexte pour le `CFtpFileFind` objet. Consultez **remarques** pour plus d’informations sur ce paramètre.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La valeur par défaut `dwContext` est envoyé par MFC pour le `CFtpFileFind` à partir de l’objet le [CInternetSession](../../mfc/reference/cinternetsession-class.md) de l’objet qui a créé le `CFtpFileFind` objet. Vous pouvez remplacer la valeur par défaut pour définir l’identificateur de contexte pour une valeur de votre choix. L’identificateur de contexte est retourné à [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) pour fournir l’état de l’objet avec lequel il est identifié. Consultez l’article [Internet premières étapes : WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identificateur de contexte.  
   
 ### <a name="example"></a>Exemple  
@@ -129,7 +130,7 @@ virtual BOOL FindFile(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0. Pour obtenir des informations d’erreur plus complètes, appelez la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Après avoir appelé **FindFile** pour récupérer le premier fichier FTP, vous pouvez appeler [FindNextFile](#findnextfile) pour extraire les fichiers suivants de FTP.  
   
 ### <a name="example"></a>Exemple  
@@ -145,7 +146,7 @@ virtual BOOL FindNextFile();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro s’il existe plusieurs fichiers ; zéro si le fichier est le dernier dans le répertoire, ou si une erreur s’est produite. Pour obtenir des informations d’erreur plus complètes, appelez la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Si le fichier est le dernier fichier dans le répertoire, ou si aucun des fichiers peuvent être trouvés, la `GetLastError` fonction retourne ERROR_NO_MORE_FILES.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez appeler cette fonction au moins une fois avant d’appeler une fonction de l’attribut (voir [CFileFind::FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile)).  
   
  `FindNextFile`encapsule la fonction Win32 [FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428).  
@@ -163,7 +164,7 @@ CString GetFileURL() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le fichier et le chemin d’accès de l’URL Universal Resource Locator ().  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `GetFileURL`est similaire à la fonction membre [CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath), à ceci près qu’elle renvoie l’URL sous la forme `ftp://moose/dir/file.txt`.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a9a5a383e32a4fa5cb626dee499d5b2262abe37c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cd67039848eedc0568e68e1e62f6192b822b9f3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Ajout d'une interface à votre fournisseur
 Déterminez l’objet auquel vous souhaitez ajouter l’interface (généralement, des objets data source, ensemble de lignes, commandes ou session créés par l’Assistant fournisseur OLE DB). Il est possible que l’objet que vous devez ajouter l’interface est par votre fournisseur ne prend pas en charge actuellement. Dans ce cas, exécutez l’Assistant fournisseur OLE DB ATL pour créer l’objet. Cliquez sur le projet dans l’affichage de classes, cliquez sur **ajouter une classe** à partir de la **ajouter** menu, puis sur **fournisseur OLE DB ATL**. Vous pouvez souhaiter placer le code d’interface dans un répertoire différent, puis copiez les fichiers à votre projet de fournisseur.  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - valarray/std::valarray::size
 - valarray/std::valarray::sum
 - valarray/std::valarray::swap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::valarray [C++]
 - std::valarray [C++], value_type
@@ -37,16 +35,16 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3a335ffe93f0a695643c84b60cbc581ea5545da9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 171b30710f6135a6aee13a12c035b957ec038bbb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="valarray-class"></a>valarray, classe
 La classe de modèle décrit un objet qui contrôle une séquence d'éléments de type **Type** qui sont stockés sous forme de tableau, conçu pour effectuer des opérations mathématiques très rapides et optimisé pour les performances de calcul.  
@@ -72,7 +70,7 @@ La classe de modèle décrit un objet qui contrôle une séquence d'éléments d
 |-|-|  
 |[valarray](#valarray)|Construit un `valarray` de taille spécifique ou avec des éléments d'une valeur spécifique, ou comme copie d'un autre `valarray` ou comme sous-ensemble d'un autre `valarray`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -114,7 +112,7 @@ La classe de modèle décrit un objet qui contrôle une séquence d'éléments d
 |[operator&#124;=](#op_or_eq)|Obtient le résultat d'une opération `OR` au niveau du bit des éléments d'un tableau avec les éléments correspondants d'un `valarray` spécifié ou avec une valeur du type d'élément.|  
 |[operator~](#op_dtor)|Un opérateur unaire qui obtient les valeurs `NOT` au niveau du bit de chaque élément d'un `valarray`.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<valarray>  
   
  **Espace de noms :** std  
@@ -1214,7 +1212,7 @@ valarray<Type>& operator|=(const Type& right);
 ### <a name="return-value"></a>Valeur de retour  
  Un valarray dont les éléments sont l’élément par élément, exclusif logique **XOR** du valarray d’opérandes et `right`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ou exclusif logique, connu sous le nom **XOR**, a la sémantique suivante : étant donnés les éléments *e*1 et *e*2, *e*1 **XOR** *e*2 a la valeur **true** si exactement un des éléments a la valeur true ; **false** si les deux éléments ont la valeur false ou si les deux éléments ont la valeur true.  
   
 ### <a name="example"></a>Exemple  
@@ -1283,7 +1281,7 @@ valarray<Type>& operator|=(const Type& right);
 ### <a name="return-value"></a>Valeur de retour  
  Un valarray dont les éléments sont l’élément par élément au niveau du bit `OR` du valarray d’opérandes en `right`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une opération de bits peut uniquement servir à manipuler des bits dans les types de données `char` et `int`, et leurs variantes, et non pas sur des types de données plus complexes **float**, **double**, **longdouble**, `void`, `bool` ou autres.  
   
  L’opérateur de bits `OR` a la même table de vérité que l’opérateur `OR` logique, mais il s’applique au type de données au niveau des bits individuels. Étant donnés les bits *b*1 et *b*2, *b*1 `OR` *b*2 a la valeur **true** si au moins un des bits a la valeur true ; **false** si les deux bits ont la valeur false.  
@@ -1891,5 +1889,4 @@ The resulting valarray is:  ( 0 -10 20 -10 40 -10 60 -10 80 -10 ).
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

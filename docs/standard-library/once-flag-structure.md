@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dded28d846ded9472ff9cee140366e5bab18b49a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc66f322490bc728ab6d25e185f6b8d4ce0f0179
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="onceflag-structure"></a>once_flag, structure
 Représente un `struct` utilisé avec la fonction de modèle [call_once](../standard-library/mutex-functions.md#call_once) pour garantir que le code d’initialisation est appelé une seule fois, même en présence de plusieurs threads d’exécution.  
@@ -27,12 +28,12 @@ Représente un `struct` utilisé avec la fonction de modèle [call_once](../stan
   
 struct once_flag { constexpr once_flag() noexcept; once_flag(const once_flag&); once_flag& operator=(const once_flag&); };  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `once_flag` `struct` possède uniquement un constructeur par défaut.  
   
  Les objets de type `once_flag` peuvent être créés, mais ils ne peuvent pas être copiés.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<mutex >  
   
  **Espace de noms :** std  

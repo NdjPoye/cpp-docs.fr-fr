@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 93288308f78d719c4b2cad60ac4a95a607726f4f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24a66bf9e062e43225827afdbb0bba45511c5f13
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-sheets-and-property-pages-in-mfc"></a>Pages et feuilles de propriétés dans MFC
 Une feuille de propriétés, également connu sous une onglet boîte de dialogue, est une boîte de dialogue qui contient les pages de propriétés. Chaque page de propriétés est basé sur une ressource de modèle de boîte de dialogue et contient des contrôles. Il est placé sur une page avec un onglet en haut. L’onglet Nom de la page et indique sa finalité. Les utilisateurs cliquent sur un onglet dans la feuille de propriétés pour sélectionner un ensemble de contrôles.  

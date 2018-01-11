@@ -1,40 +1,43 @@
 ---
-title: "Param&#232;tres de sortie | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB, procédures stockées"
-  - "appels de procédure"
-  - "appels de procédure, procédures stockées"
-  - "procédures stockées, appeler"
-  - "procédures stockées, paramètres"
+title: "Paramètres de sortie | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB, stored procedures
+- stored procedures, calling
+- stored procedures, parameters
+- procedure calls
+- procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 061766f73b554895f8d7ad8952dc6172fd381169
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Param&#232;tres de sortie
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'appel d'une procédure stockée est similaire à l'appel d'une commande SQL.  La principale différence est que les procédures stockées utilisent des paramètres de sortie et des valeurs de retour.  
+# <a name="output-parameters"></a>Paramètres de sortie
+Appel d’une procédure stockée est similaire à l’appel d’une commande SQL. La principale différence est que les procédures stockées utilisent des paramètres de sortie (ou des paramètres de « sortie ») et retournent des valeurs.  
   
- Dans la procédure stockée suivante, le premier point d'interrogation « ? » correspond à la valeur de retour \(phone\) et le deuxième point d'interrogation « ? » au paramètre d'entrée \(name\) :  
+ L’exemple suivant de procédure stockée le premier ' ? 'est la valeur de retour (phone) et le deuxième' ?' est le paramètre d’entrée (nom) :  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }")  
 ```  
   
- Vous spécifiez les paramètres d'entrée et de sortie dans le mappage de paramètres :  
+ Vous spécifiez dans les paramètres de sortie dans le mappage de paramètres :  
   
 ```  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
@@ -45,12 +48,12 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
- Votre application doit gérer la sortie retournée à partir des procédures stockées.  Différents fournisseurs OLE DB retournent des paramètres de sortie et des valeurs de retour à différents moments pendant le traitement des résultats.  Par exemple, le fournisseur Microsoft OLE DB pour SQL Server \(SQLOLEDB\) ne fournit des paramètres de sortie et des codes de retour qu'une fois que le consommateur a récupéré ou annulé les jeux de résultats retournés par la procédure stockée.  La sortie est retournée dans le dernier paquet TDS provenant du serveur.  
+ Votre application doit gérer la sortie retournée à partir de procédures stockées. Différents fournisseurs OLE DB retournent des paramètres de sortie et valeurs de retour à différents moments pendant le traitement des résultats. Par exemple, le fournisseur Microsoft OLE DB pour SQL Server (SQLOLEDB) ne pas fournir les paramètres de sortie et codes de retour qu’une fois que le consommateur a récupéré ou annulé les jeux de résultats retournés par la procédure stockée. La sortie est retournée dans le dernier paquet TDS à partir du serveur.  
   
-## Nombre de lignes  
- Si vous utilisez les modèles du consommateur OLE DB pour exécuter une procédure stockée qui possède des paramètres de sortie, le nombre de lignes n'est défini qu'à la fermeture du jeu de lignes.  
+## <a name="row-count"></a>Nombre de lignes  
+ Si vous utilisez des modèles du consommateur OLE DB pour exécuter une procédure stockée qui a des paramètres de sortie, le nombre de lignes n’est pas défini jusqu'à la fermeture de l’ensemble de lignes.  
   
- Prenons l'exemple d'une procédure stockée dotée d'un jeu de lignes et d'un paramètre de sortie :  
+ Par exemple, considérez une procédure stockée avec un ensemble de lignes et un paramètre de sortie :  
   
 ```  
 create procedure sp_test  
@@ -61,7 +64,7 @@ as
 return 0  
 ```  
   
- Le paramètre de sortie @\_rowcount indique le nombre de lignes effectivement retournées à partir de la table de test.  Toutefois, cette procédure stockée limite le nombre de lignes à un maximum de 50.  Par exemple, s'il y avait 100 lignes dans le test, le compteur de ligne serait 50 \(parce que ce code extrait uniquement les 50 lignes supérieures\).  S'il y avait uniquement 30 lignes dans la table, le compteur de ligne serait 30.  Vous devez appeler **Close** ou **CloseAll** pour remplir l'outparameter avant d'extraire sa valeur.  
+ Le @_rowcount paramètre de sortie indique le nombre de lignes ont été retourné à partir de la table de test. Toutefois, cette procédure stockée limite le nombre de lignes à un maximum de 50. Par exemple, si elle existait 100 lignes dans le test, le nombre de lignes serait 50 (car ce code récupère uniquement les 50 premières lignes). S’il existe uniquement 30 lignes dans la table, le nombre de lignes serait 30. Vous devez appeler **fermer** ou **CloseAll** pour renseigner le paramètre de sortie avant d’extraire sa valeur.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utilisation des procédures stockées](../../data/oledb/using-stored-procedures.md)

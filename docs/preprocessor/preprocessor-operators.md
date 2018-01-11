@@ -1,38 +1,39 @@
 ---
-title: "Op&#233;rateurs de pr&#233;processeur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "opérateurs (C++), préprocesseur"
-  - "opérateurs de préprocesseur"
+title: "Opérateurs de préprocesseur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- preprocessor operators
+- operators [C++], preprocessor
 ms.assetid: 884126d1-0ce2-48b6-9e06-8a2d7c4a9656
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f28d2eba75636d6000f909ffe4527ca2b037dd85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Op&#233;rateurs de pr&#233;processeur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Quatre opérateurs spécifiques aux préprocesseurs sont utilisés dans le contexte de la directive `#define` \(consultez la liste suivante pour un résumé de chaque\).  Les opérateurs d'enchaînement, de charizing, et de collage de jetons sont traités dans les trois sections suivantes.  Pour plus d'informations sur l'opérateur **Défini**, consultez [Le \#if, le \#elif, le \#else, et les directives de \#endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).  
+# <a name="preprocessor-operators"></a>Opérateurs de préprocesseur
+Quatre opérateurs propres au préprocesseur sont utilisées dans le contexte de la `#define` directive (voir la liste suivante pour obtenir un récapitulatif de chaque). Les opérateurs d’enchaînement charizing et collage de jeton sont décrites dans les trois sections suivantes. Pour plus d’informations sur la **défini** (opérateur), consultez [le #if, #elif, #else et #endif Directives](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).  
   
 |Opérateur|Action|  
-|---------------|------------|  
-|[Opérateur d'enchaînement \(\#\)](../preprocessor/stringizing-operator-hash.md)|Cause la mise entre guillemets doubles de l'argument correspondant|  
-|[Opérateur charizing \(\#@\)](../preprocessor/charizing-operator-hash-at.md)|Cause la mise entre guillemets simples de l'argument et son traitement en tant que un caractère \(lMicrosoft Specific\)|  
-|[Opérateur de collage de jetons \(\#\#\)](../preprocessor/token-pasting-operator-hash-hash.md)|Autorise les jetons utilisés comme arguments à être concaténés pour former d'autres jetons|  
-|[opérateur défini](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|Simplifie l'écriture d'expressions composées dans certaines macro directives|  
+|--------------|------------|  
+|[Opérateur d’enchaînement (#)](../preprocessor/stringizing-operator-hash.md)|Provoque l’argument réel correspondant à être placés entre guillemets doubles|  
+|[Opérateur charizing (#@)](../preprocessor/charizing-operator-hash-at.md)|Provoque l’argument correspondant à être placés entre guillemets simples et est traitée comme un caractère (Specific Microsoft)|  
+|[Opérateur de collage de jeton (##)](../preprocessor/token-pasting-operator-hash-hash.md)|Autorise les jetons sont utilisés en tant qu’arguments réels pour être concaténées pour former d’autres jetons|  
+|[Defined (opérateur)](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|Simplifie l’écriture des expressions composées dans certaines directives de macro|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Directives de préprocesseur](../preprocessor/preprocessor-directives.md)   
  [Macros prédéfinies](../preprocessor/predefined-macros.md)   
- [Référence du préprocesseur C\/C\+\+](../preprocessor/c-cpp-preprocessor-reference.md)
+ [Informations de référence sur le préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)

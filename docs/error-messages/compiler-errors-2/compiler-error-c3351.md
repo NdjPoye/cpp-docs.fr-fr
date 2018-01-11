@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3351
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3351
+f1_keywords: C3351
+dev_langs: C++
+helpviewer_keywords: C3351
 ms.assetid: c021bbbe-1067-4f51-af4f-940d2b792eb5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1d848ae18c4610b9f2078ce54532c392f489154f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: c6a449d904e0b5122ec1a8d2ae9734a6dd3f8b00
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3351"></a>Erreur du compilateur C3351
 'object' : constructeur délégué : le second argument doit être l’adresse d’une fonction globale ou d’une fonction membre statique  
@@ -54,4 +50,3 @@ int main() {
    System::Delegate ^pD2 = gcnew D(&C::mf2);  
 }  
 ```  
-

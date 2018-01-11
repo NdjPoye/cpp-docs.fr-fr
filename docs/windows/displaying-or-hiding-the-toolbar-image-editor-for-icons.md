@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 78755b526ba5073224c2c9942526b1e8d09e4860
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 85927d747735bcf66251a5112775cc5a67214cfb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>Affichage ou masquage de la barre d'outils (Éditeur d'images pour les icônes)
 Étant donné que la plupart des outils de dessin sont disponibles à partir de la [clavier](../windows/accelerator-keys-image-editor-for-icons.md), il est parfois utile de masquer la barre d’outils Éditeur d’images.  
@@ -33,11 +36,11 @@ ms.lasthandoff: 10/24/2017
     > [!NOTE]
     >  Éléments à partir de cette barre d’outils seront affiche pas disponibles lorsqu’un fichier image à partir du projet actuel ou la solution n’est pas ouverte dans l’éditeur d’images. Consultez [création d’une icône ou une autre Image](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), pour plus d’informations sur l’ajout de fichiers image à vos projets.  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](https://msdn.microsoft.com/library/f45fce5x.aspx) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](https://msdn.microsoft.com/library/xbx3z216.aspx). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Spécifications  
+ Configuration requise  
   
- Aucune  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fenêtre couleurs](../windows/colors-window-image-editor-for-icons.md)   

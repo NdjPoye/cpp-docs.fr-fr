@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -46,8 +45,7 @@ f1_keywords:
 - CORECRT_WSTRING/_wcsnicmp_l
 - string/_strnicmp
 - string/_strnicmp_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tcsnicmp function
 - _tcsncicmp function
@@ -74,36 +72,22 @@ helpviewer_keywords:
 - mbsnicmp function
 - _wcsnicmp function
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: d1e4b6e775ad1b46c988c5c5ca3af1ceafa29135
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c926c23553545a76bc8e1d0a0427c20ea65f3156
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 Compare le nombre spécifié de caractères de deux chaînes sans tenir compte de la casse.  
   
 > [!IMPORTANT]
-> Les fonctions  `_mbsnicmp` et `_mbsnicmp_l` ne peuvent pas être utilisées dans les applications qui s'exécutent dans [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsnicmp` et `_mbsnicmp_l` ne peuvent pas être utilisées dans les applications qui s'exécutent dans Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -169,9 +153,9 @@ int _mbsnicmp_l(
   
  Les caractères compris entre 91 et 96 dans la table ASCII (« [ », « \\ », « ] », « ^ », « _ » et « \` ») sont évalués comme étant inférieurs à n’importe quel caractère alphabétique. Ce classement est identique à celui de `stricmp`.  
   
- `_wcsnicmp` et `_mbsnicmp` sont des versions à caractères larges et à caractères multioctets de `_strnicmp`. Les arguments de `_wcsnicmp` sont des chaînes de caractères larges ; ceux de `_mbsnicmp` sont des chaînes de caractères multioctets. `_mbsnicmp` reconnaît les séquences de caractères multioctets selon la page de codes multioctets active et retourne `_NLSCMPERROR` en cas d'erreur. Pour plus d’informations, consultez [Pages de codes](../../c-runtime-library/code-pages.md). Ces trois fonctions se comportent sinon de façon identique. Ces fonctions sont affectées par les paramètres régionaux : les versions qui n'ont pas le suffixe `_l` utilisent les paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux et les versions qui ont le suffixe `_l` utiliser le paramètre `locale` qui est passé en entrée. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ `_wcsnicmp` et `_mbsnicmp` sont des versions à caractères larges et à caractères multioctets de `_strnicmp`. Les arguments de `_wcsnicmp` sont des chaînes de caractères larges ; ceux de `_mbsnicmp` sont des chaînes de caractères multioctets. `_mbsnicmp` reconnaît les séquences de caractères multioctets selon la page de codes multioctets active et retourne `_NLSCMPERROR` en cas d'erreur. Pour plus d’informations, consultez [Pages de codes](../../c-runtime-library/code-pages.md). Ces trois fonctions se comportent sinon de façon identique. Ces fonctions sont affectées par les paramètres régionaux : les versions qui n'ont pas le suffixe `_l` utilisent les paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux et les versions qui ont le suffixe `_l` utiliser le paramètre `locale` qui est passé en entrée. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
- Toutes ces fonctions valident leurs paramètres. Si `string1` ou `string2` est un pointeur null, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent `_NLSCMPERROR` et définissent `errno` avec la valeur `EINVAL`.  
+ Toutes ces fonctions valident leurs paramètres. Si `string1` ou `string2` est un pointeur Null, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent `_NLSCMPERROR` et définissent `errno` avec la valeur `EINVAL`.  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
@@ -181,7 +165,7 @@ int _mbsnicmp_l(
 |`_tcsnicmp`|`_strnicmp`|`_mbsnbicmp`|`_wcsnicmp`|  
 |`_tcsncicmp_l`|`_strnicmp_l`|`_mbsnicmp_l`|`_wcsnicmp_l`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
@@ -189,7 +173,7 @@ int _mbsnicmp_l(
 |`_wcsnicmp`, `_wcsnicmp_l`|<string.h> ou <wchar.h>|  
 |`_mbsnicmp`, `_mbsnicmp_l`|\<mbstring.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple relatif à [strncmp](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md).  

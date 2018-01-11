@@ -1,36 +1,36 @@
 ---
-title: "2.6 Master and Synchronization Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.6 maître et Directives de synchronisation | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 9cf07327-1b8d-4dce-954c-b1c59d0ea51d
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fe114409f5cac168ecd411473ba828f7bf4bf671
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# 2.6 Master and Synchronization Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-les sections suivantes décrivent :  
+# <a name="26-master-and-synchronization-directives"></a>2.6 Directives principales et directives de synchronisation
+Les sections suivantes décrivent :  
   
--   l'élément de **page maître** .  
+-   le **master** construire.  
   
--   l'élément de **critique** .  
+-   le **critique** construire.  
   
--   la directive de **cloisonnement** .  
+-   le **barrière** directive.  
   
--   l'élément d' **atomique** .  
+-   le **atomique** construire.  
   
--   la directive de **vide** .  
+-   le **vider** directive.  
   
--   l'élément de **dimensionné** .
+-   le **classés** construire.

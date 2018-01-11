@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7390f68d7bc7c7856d1fef35ba1fb180b8341559
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f7633bcd784fa7b9b5f7255e25e8ddc52c5b93db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Microsoft::WRL::Wrappers, espace de noms
 Définit les types de wrapper de l’initialisation d’est d’Acquisition de ressources (RAII) qui simplifient la gestion de la durée de vie des objets, les chaînes et les handles.  
@@ -52,7 +55,7 @@ namespace Microsoft::WRL::Wrappers;
 |[Semaphore, classe](../windows/semaphore-class.md)|Représente un objet de synchronisation qui contrôle une ressource partagée prenant en charge un nombre limité d’utilisateurs.|  
 |[SRWLock, classe](../windows/srwlock-class.md)|Représente un verrou de lecteur/writer compacte.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

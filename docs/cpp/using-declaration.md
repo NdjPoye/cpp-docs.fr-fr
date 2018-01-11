@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - using declaration
 - declaring namespaces, unqualified names in namespaces
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - using keyword [C++]
 - declarations [C++], namespaces
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c55abac758c636bce596b0613e0ad5671fc9c430
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c6bf39dfdb4f59bcf54ce1ddd5174f1e3a55e3a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-declaration"></a>déclaration using
 La déclaration using introduit un nom dans la région déclarative dans laquelle la déclaration using s’affiche.  
@@ -50,7 +48,7 @@ using declarator-list ;
 *liste de déclarateurs*  
     Une liste séparée par des virgules de [`typename`] *spécificateur de nom imbriqué* *-id non qualifiés* déclarateurs, suivies éventuellement d’un bouton de sélection.
     
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
 Une déclaration using présente un nom non qualifié comme un synonyme pour une entité déclarée ailleurs. Il permet à un nom unique à partir d’un espace de noms spécifique pour être utilisés sans qualification explicite dans la région de déclaration dans lequel elle apparaît. Ceci est le contraire de la [à l’aide de la directive](../cpp/namespaces-cpp.md#using_directives), ce qui permet de *tous les* les noms dans un espace de noms pour être utilisés sans qualification. Le `using` (mot clé) est également utilisé pour [alias de type](../cpp/aliases-and-typedefs-cpp.md).  
   
 ## <a name="example"></a>Exemple  

@@ -25,11 +25,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7f19e255b2c8b63558dfe178ccfd7a23f8992861
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 167947e51ed773f765432148cbe879c926c57d5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defining-mnemonics-access-keys"></a>Définition des mnémoniques (Touches d'accès rapide)
 Normalement, les utilisateurs du clavier déplacement le focus d’entrée à partir d’un contrôle à l’autre dans une boîte de dialogue avec les touches TAB et flèche. Toutefois, vous pouvez définir une clé d’accès (un nom mnémonique ou facile à retenir) qui permet aux utilisateurs de choisir un contrôle en appuyant sur une clé unique.  
@@ -40,7 +43,7 @@ Normalement, les utilisateurs du clavier déplacement le focus d’entrée à pa
   
 2.  Dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), dans le **légende** propriété, tapez un nouveau nom pour le contrôle en tapant une esperluette (**&**) devant la lettre que vous souhaitez définir comme le clé d’accès pour ce contrôle. Par exemple, `&Radio1`.  
   
-3.  Appuyez sur **entrez**.  
+3.  Appuyez sur **Entrée**.  
   
      Un soulignement s’affiche dans la légende pour indiquer la clé d’accès, par exemple, **R**adio1.  
   
@@ -58,9 +61,9 @@ Normalement, les utilisateurs du clavier déplacement le focus d’entrée à pa
   
 1.  Sur le **Format** menu, cliquez sur **vérifier les mnémoniques**.  
   
- Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](https://msdn.microsoft.com/library/f45fce5x.aspx) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](https://msdn.microsoft.com/library/xbx3z216.aspx). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

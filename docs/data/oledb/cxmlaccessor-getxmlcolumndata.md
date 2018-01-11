@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b0e0d34a9e726912cd631972091df65157de061d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9183521d8c627d2d4befb33aa171a1651451ea12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cxmlaccessorgetxmlcolumndata"></a>CXMLAccessor::GetXMLColumnData
 Récupère les informations de type de colonne d’une table en tant que données de chaîne au format XML, par colonne.  
@@ -45,7 +48,7 @@ Récupère les informations de type de colonne d’une table en tant que donnée
 ## <a name="return-value"></a>Valeur de retour  
  Un de la norme `HRESULT` valeurs.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’exemple suivant montre comment les informations de type de colonne sont au format XML. `type`Spécifie le type de données de la colonne. Notez que les types de données sont basées sur les types de données OLE DB, pas celles de la base de données en cours d’accès.  
   
  `<columninfo>`  
@@ -54,7 +57,7 @@ Récupère les informations de type de colonne d’une table en tant que donnée
   
  `</columninfo>`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

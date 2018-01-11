@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,24 +14,23 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CLinearTransitionFromSpeed::Create
 - AFXANIMATIONCONTROLLER/CLinearTransitionFromSpeed::m_dblFinalValue
 - AFXANIMATIONCONTROLLER/CLinearTransitionFromSpeed::m_dblSpeed
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CLinearTransitionFromSpeed [MFC], CLinearTransitionFromSpeed
 - CLinearTransitionFromSpeed [MFC], Create
 - CLinearTransitionFromSpeed [MFC], m_dblFinalValue
 - CLinearTransitionFromSpeed [MFC], m_dblSpeed
 ms.assetid: 8f159a1c-8893-4017-951e-09e5758aba7d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8ae7d972c97bdf2d94596004baa71462de7532c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 0a1081012d7c474592a9af4033f214c9810c6b6f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clineartransitionfromspeed-class"></a>CLinearTransitionFromSpeed, classe
 Encapsule une transition de vitesse linéaire.  
@@ -64,7 +62,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 |[CLinearTransitionFromSpeed::m_dblFinalValue](#m_dblfinalvalue)|La valeur de la variable à la fin de la transition de l’animation.|  
 |[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|La valeur absolue de la rapidité de la variable.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pendant une transition de vitesse linéaire, la valeur de la variable d’animation change à un taux spécifié. La durée de la transition est déterminée par la différence entre la valeur initiale et la valeur finale spécifiée. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l’aide de nouvel opérateur. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup, jusqu'à ce que puis sa valeur est NULL. La modification de variables membres après que la création de cet objet COM n’a aucun effet.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -74,7 +72,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
   
  [CLinearTransitionFromSpeed](../../mfc/reference/clineartransitionfromspeed-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="clineartransitionfromspeed"></a>CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
@@ -125,4 +123,3 @@ DOUBLE m_dblSpeed;
   
 ## <a name="see-also"></a>Voir aussi  
  [Classes](../../mfc/reference/mfc-classes.md)
-

@@ -21,11 +21,14 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa42bfc67a94ed4e25045dc6656651a7b9bd645e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d6f43bd1953cc13189f53d97090d3913a49072ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling--c-component-extensions"></a>Gestion des exceptions (extensions du composant C++)
 Les applications compilées avec les **/ZW** option du compilateur ou **/CLR** option du compilateur utilisent tous deux *exceptions* pour gérer les erreurs inattendues pendant l’exécution du programme. Les rubriques suivantes abordent la gestion des exceptions dans soit C + c++ / CX ou C + c++ / applications de CLI.  

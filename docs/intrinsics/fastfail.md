@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f7a9fe4f4a70f55061addab05f90bda389fd8949
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efdd067376d8e1430ed8636c0a77afe950858e9a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fastfail"></a>__fastfail
 **Section spécifique à Microsoft**  
@@ -37,7 +38,7 @@ void __fastfail(unsigned int code);
 ## <a name="return-value"></a>Valeur de retour  
  Le `__fastfail` intrinsèque ne retourne pas.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `__fastfail` intrinsèque fournit un mécanisme pour un *rapide échouent* demande : un moyen pour un processus potentiellement endommagé à l’arrêt immédiat du processus de demande. Les défaillances critiques qui ont peut-être endommagé l'état du programme et la pile au-delà de toute récupération ne peuvent pas être gérées par la fonctionnalité de gestion des exceptions ordinaire. Utilisez `__fastfail` pour arrêter le processus à l'aide d'une surcharge minimale.  
   
  En interne, `__fastfail` est implémentée à l'aide de plusieurs mécanismes spécifiques à l'architecture :  
@@ -58,7 +59,7 @@ void __fastfail(unsigned int code);
   
  `__fastfail` est uniquement disponible en tant qu'intrinsèque.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  

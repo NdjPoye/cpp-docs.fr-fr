@@ -1,34 +1,36 @@
 ---
-title: "Comment&#160;: &#233;crire des donn&#233;es dans le Registre Windows (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Registre, écrire dans"
-  - "Visual C++, écrire dans le registre Windows"
+title: "Comment : écrire des données dans le Registre Windows (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- registry, writing to
+- Visual C++, writing to Windows Registry
 ms.assetid: 3d40b978-4baa-4779-bfe3-47e2917b757f
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f3bd5cedbf3c981964c9d03eb8a30fc5e1652081
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Comment&#160;: &#233;crire des donn&#233;es dans le Registre Windows (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'exemple de code suivant utilise la clé <xref:Microsoft.Win32.Registry.CurrentUser> pour créer une instance accessible en écriture de la classe <xref:Microsoft.Win32.RegistryKey> qui correspond à la clé **Software**.  La méthode <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A> est ensuite utilisée pour créer une nouvelle clé et l'ajouter aux paires clé\/valeur.  
+# <a name="how-to-write-data-to-the-windows-registry-ccli"></a>Comment : écrire des données dans le Registre Windows (C++/CLI)
+Le de code suivant montre comment utiliser le <xref:Microsoft.Win32.Registry.CurrentUser> clé à créer une instance accessible en écriture de la <xref:Microsoft.Win32.RegistryKey> classe correspondant à la **logiciel** clé. Le <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A> méthode est ensuite utilisée pour créer une nouvelle clé et l’ajouter aux paires clé/valeur.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // registry_write.cpp  
@@ -74,9 +76,9 @@ int main()
 }  
 ```  
   
-## Remarques  
- Vous pouvez utiliser le .NET Framework pour accéder au Registre avec les classes <xref:Microsoft.Win32.Registry> and [RegistryKey](https://msdn.microsoft.com/en-us/library/microsoft.win32.registrykey.aspx) qui sont toutes les deux définies dans l'espace de noms <xref:Microsoft.Win32>.  La classe **Registry** est un conteneur pour les instances statiques de la classe <xref:Microsoft.Win32.RegistryKey>.  Chaque instance représente un nœud du Registre de la racine.  Les instances sont <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine> et <xref:Microsoft.Win32.Registry.Users>.  
+## <a name="remarks"></a>Notes  
+ Vous pouvez utiliser le .NET Framework pour accéder au Registre avec le <xref:Microsoft.Win32.Registry> et [RegistryKey](https://msdn.microsoft.com/en-us/library/microsoft.win32.registrykey.aspx) classes, qui sont tous deux définis dans le <xref:Microsoft.Win32> espace de noms. Le **Registre** classe est un conteneur pour les instances statiques de la <xref:Microsoft.Win32.RegistryKey> classe. Chaque instance représente un nœud racine de Registre. Les instances sont <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, et <xref:Microsoft.Win32.Registry.Users>.  
   
-## Voir aussi  
- [Comment : lire les données du Registre Windows](../dotnet/how-to-read-data-from-the-windows-registry-cpp-cli.md)   
- [Programmation .NET avec C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Comment : lire des données à partir du Registre Windows (C + c++ / CLI)](../dotnet/how-to-read-data-from-the-windows-registry-cpp-cli.md)   
+ [Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: f4879acaa0f8f5a033f4650c5db58b6ed08ac3a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aa984d52ea050d6e17d904cc159ff5c6d3e36a91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformoperationcanceledexception-class"></a>Platform::OperationCanceledException, classe
 Levée lorsqu'une opération est abandonnée.  
@@ -32,10 +33,10 @@ Levée lorsqu'une opération est abandonnée.
 public ref class OperationCanceledException : COMException,    IException,    IPrintable,    IEquatable  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d'informations, consultez la classe [COMException](../cppcx/platform-comexception-class.md) .  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **Minimum pris en charge le client :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  

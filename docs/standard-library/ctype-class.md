@@ -47,11 +47,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 10bc57e29383386df63de4cd6f27299a8f9986a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 866ec8b37852f6c4fea6fdeeefa5eb9fdf21d819
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctype-class"></a>ctype, classe
 Classe fournissant une facette utilisée pour la classification des caractères et la conversion entre majuscules et minuscules et entre le jeu de caractères natif et celui utilisé par les paramètres régionaux.  
@@ -90,7 +91,7 @@ class ctype : public ctype_base;
 |-|-|  
 |[ctype](#ctype)|Constructeur des objets de classe `ctype` qui servent de facettes de paramètres régionaux pour les caractères.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -115,7 +116,7 @@ class ctype : public ctype_base;
 |[toupper](#toupper)|Convertit un caractère ou une plage de caractères en majuscules.|  
 |[widen](#widen)|Convertit un caractère de type `char` dans le jeu de caractères natif en caractère correspondant de type `CharType` utilisé par les paramètres régionaux.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<locale>  
   
  **Espace de noms :** std  
@@ -236,7 +237,7 @@ virtual const CharType* do_narrow(
   
  La deuxième fonction membre protégée retourne un pointeur vers la plage de destination de caractères natifs convertis à partir de caractères de type `CharType`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La seconde protégé par la fonction de modèle membre stocke dans `dest`[ `I`] la valeur `do_narrow`( `first` [ `I`], `default`), pour `I` dans l’intervalle [0, `last`  -  `first`).  
   
 ### <a name="example"></a>Exemple  
@@ -325,7 +326,7 @@ virtual const CharType *do_tolower(
 ### <a name="return-value"></a>Valeur de retour  
  La première fonction membre protégée retourne la forme minuscule du paramètre `ch`. Si la forme minuscule n’existe pas, elle retourne `ch`. La deuxième fonction membre protégée retourne `last`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La deuxième fonction de modèle membre protégé remplace chaque élément `first` [ `I`], pour `I` dans l’intervalle [0, `last`  -  `first`), avec `do_tolower`( `first` [ `I`]).  
   
 ### <a name="example"></a>Exemple  
@@ -356,7 +357,7 @@ virtual const CharType *do_toupper(
 ### <a name="return-value"></a>Valeur de retour  
  La première fonction membre protégée retourne la forme majuscule du paramètre `ch`. Si la forme majuscule n’existe pas, elle retourne `ch`. La deuxième fonction membre protégée retourne `last`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La deuxième fonction de modèle membre protégé remplace chaque élément `first` [ `I`], pour `I` dans l’intervalle [0, `last`  -  `first`), avec `do_toupper`( `first` [ `I`]).  
   
 ### <a name="example"></a>Exemple  

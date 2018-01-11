@@ -14,17 +14,20 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4612df74e360c389c34e750dd315074de415447c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f208a62fd49e7aea67acf5b7e3e49d3571f8d910
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>nouveau (nouvel emplacement dans vtable)  (extensions du composant C++)
 Le `new` mot clé indique qu’un membre virtuel obtiendra un nouvel emplacement dans vtable.  
   
 ## <a name="all-runtimes"></a>Tous les runtimes  
- (Aucune remarque pour cette fonctionnalité de langage ne s'applique à tous les runtimes.)  
+ (Aucune remarque pour cette fonctionnalité de langage ne s’applique à tous les runtimes.)  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
  Non pris en charge dans Windows Runtime.  
@@ -40,7 +43,7 @@ Le `new` mot clé indique qu’un membre virtuel obtiendra un nouvel emplacement
   
 -   [Énumération MethodAttributes](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  

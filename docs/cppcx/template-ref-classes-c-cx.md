@@ -1,29 +1,33 @@
 ---
-title: "Classes ref de mod&#232;le (C++/CX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/22/2017"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Classes ref de modèle (C + c++ / CX) | Documents Microsoft"
+ms.custom: 
+ms.date: 01/22/2017
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a24d5f45-8dbb-4540-958f-c76c90d8ed93
-caps.latest.revision: 15
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2b8bb720ef9275f9023cf15986f011573f4c510b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Classes ref de mod&#232;le (C++/CX)
-Les modèles C\+\+ ne sont pas publiés aux métadonnées et ne peuvent donc pas avoir une accessibilité publique ou protégée dans votre programme. Vous pouvez, bien sûr, utiliser les modèles C\+\+ standard en interne dans votre programme. En outre, vous pouvez définir une classe ref privée comme un modèle et vous pouvez déclarer une classe ref de modèle explicitement spécialisé comme membre privé dans une classe ref publique.  
+# <a name="template-ref-classes-ccx"></a>Classes ref de modèle (C++/CX)
+Les modèles C++ ne sont pas publiés aux métadonnées et ne peuvent donc pas avoir une accessibilité publique ou protégée dans votre programme. Vous pouvez, bien sûr, utiliser les modèles C++ standard en interne dans votre programme. En outre, vous pouvez définir une classe ref privée comme un modèle et vous pouvez déclarer une classe ref de modèle explicitement spécialisé comme membre privé dans une classe ref publique.  
   
-## Création de modèles de classe ref  
- L'exemple suivant indique comment déclarer une classe ref privée comme modèle, et également comment déclarer un modèle C\+\+ standard et comment déclarer les deux en tant que membres d'une classe ref publique. Notez que le modèle C\+\+ standard peut être spécialisé par un type [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] dans ce cas, un type Platform::String^.  
+## <a name="authoring-ref-class-templates"></a>Création de modèles de classe ref  
+ L'exemple suivant indique comment déclarer une classe ref privée comme modèle, et également comment déclarer un modèle C++ standard et comment déclarer les deux en tant que membres d'une classe ref publique. Notez que le modèle C++ standard peut être spécialisé par un type Windows Runtime, dans ce cas, un type Platform::String ^.  
   
- [!code-cpp[cx_templates#01](../snippets/cpp/VS_Snippets_Misc/cx_templates/cpp/class1.h#01)]  
+ [!code-cpp[cx_templates#01](../cppcx/codesnippet/CPP/templatedemo/class1.h#01)]  
   
-## Voir aussi  
- [Système de type \(C\+\+\/CX\)](../cppcx/type-system-c-cx.md)   
- [Référence du langage Visual C\+\+](../cppcx/visual-c-language-reference-c-cx.md)   
- [Référence aux espaces de noms](../cppcx/namespaces-reference-c-cx.md)
+## <a name="see-also"></a>Voir aussi  
+ [Système de type (C++/CX)](../cppcx/type-system-c-cx.md)   
+ [Référence du langage Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
+ [Référence des espaces de noms](../cppcx/namespaces-reference-c-cx.md)

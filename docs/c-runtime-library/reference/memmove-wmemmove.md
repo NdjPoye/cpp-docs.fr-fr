@@ -35,11 +35,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b907524992b1fee2696856fe13cfc983fdfb8c61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: baf823d7ab09109a4b06a15039ed3fd9d7540191
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memmove-wmemmove"></a>memmove, wmemmove
 Déplace une mémoire tampon vers une autre. Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [memmove_s, wmemmove_s](../../c-runtime-library/reference/memmove-s-wmemmove-s.md).  
@@ -72,7 +73,7 @@ wchar_t *wmemmove(
 ## <a name="return-value"></a>Valeur de retour  
  la valeur de la propriété `dest` ;  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Copies `count` octets (`memmove`) ou de caractères (`wmemmove`) à partir de `src` à `dest`. Si certaines régions de la zone source et de la destination se chevauchent, les deux fonctions garantissent que les octets source d’origine dans la région de chevauchement sont copiés avant d’être remplacés.  
   
  **Remarque relative à la sécurité** Vérifiez que la mémoire tampon de destination est d’une taille identique ou supérieure à celle de la mémoire tampon source. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
@@ -87,14 +88,14 @@ or
 #include <wchar.h>  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`memmove`|\<string.h>|  
 |`wmemmove`|\<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

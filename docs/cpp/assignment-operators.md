@@ -47,11 +47,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 29ad3d47b88f7af2b5d98bc4e4be19c973399b3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c84244a619873dcd61b52dee317a751ff28ec3ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assignment-operators"></a>Opérateurs d'assignation
 ## <a name="syntax"></a>Syntaxe  
@@ -63,8 +64,8 @@ assignment-operator : one of
    =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  
 ```  
   
-## <a name="remarks"></a>Remarques  
- Les opérateurs d’assignation stockent une valeur dans l’objet indiqué par l’opérande de gauche. Il existe deux types d'opérations d'assignation : l'assignation simple, dans laquelle la valeur du deuxième opérande est stockée dans l'objet spécifié par le premier opérande, et l'assignation composée, dans laquelle une opération arithmétique, de décalage ou de bits est effectuée avant d'enregistrer le résultat. Tous les opérateurs d'assignation décrits dans le tableau suivant, à l'exception de l'opérateur =, sont des opérateurs d'assignation composée.  
+## <a name="remarks"></a>Notes  
+ Les opérateurs d’assignation stockent une valeur dans l’objet indiqué par l’opérande de gauche. Il existe deux types d’opérations d’assignation : l’assignation simple, dans laquelle la valeur du deuxième opérande est stockée dans l’objet spécifié par le premier opérande, et l’assignation composée, dans laquelle une opération arithmétique, de décalage ou de bits est effectuée avant d’enregistrer le résultat. Tous les opérateurs d'assignation décrits dans le tableau suivant, à l'exception de l'opérateur =, sont des opérateurs d'assignation composée.  
   
 ### <a name="assignment-operators"></a>Opérateurs d'assignation  
   
@@ -119,7 +120,7 @@ int main() {
 ```  
   
 ## <a name="simple-assignment"></a>Assignation simple  
- L'opérateur d'assignation simple (=) entraîne le stockage de la valeur du second opérande dans l'objet spécifié par le premier opérande. Si les deux objets sont de type arithmétique, l'opérande droit est converti en type de l'opérande gauche avant le stockage de la valeur.  
+ L’opérateur d’assignation simple (=) entraîne le stockage de la valeur du second opérande dans l’objet spécifié par le premier opérande. Si les deux objets sont de type arithmétique, l’opérande droit est converti en type de l’opérande gauche avant le stockage de la valeur.  
   
  Les objets de types const et volatile peuvent être assignés à des lvalues de types qui sont simplement volatile ou qui ne sont ni const ni volatile.  
   
@@ -195,7 +196,7 @@ B = A;
   
  Le *e1* `op` =  *e2* formulaire se comporte comme *e1* *= e1* `op` *e2*, mais *e1* est évaluée qu’une seule fois.  
   
- L'assignation composée en type énuméré génère un message d'erreur. Si l'opérande de gauche est d'un type pointeur, l'opérande de droite doit être d'un type pointeur ou il doit être une expression constante qui correspond à 0. Si l'opérande de gauche est d'un type intégral, l'opérande de droite ne doit pas être d'un type pointeur.  
+ L'assignation composée en type énuméré génère un message d'erreur. Si l'opérande de gauche est d'un type pointeur, l'opérande de droite doit être d'un type pointeur ou il doit être une expression constante qui correspond à 0. Si l’opérande de gauche est d’un type intégral, l’opérande de droite ne doit pas être d’un type pointeur.  
   
 ## <a name="result-of-assignment-operators"></a>Résultat des opérateurs d'assignation  
  Les opérateurs d'assignation retournent la valeur de l'objet spécifié par l'opérande gauche après l'assignation. Le type résultant est le type de l'opérande gauche. Le résultat d'une expression d'assignation est toujours une l-value. Ces opérateurs ont une associativité de droite à gauche. L'opérande gauche doit être une l-value modifiable.  

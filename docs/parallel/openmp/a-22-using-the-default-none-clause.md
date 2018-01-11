@@ -1,27 +1,27 @@
 ---
-title: "A.22   Using the default(none) Clause | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A.22 à l’aide de la Clause default (None) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a3fa4e62-1e92-4896-ae3f-be268067d917
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a889866d214e6139cdb2b615e60002706c4e4972
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# A.22   Using the default(none) Clause
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'exemple suivant respecte les variables qui sont affectées par la clause d' `default(none)` de ceux qui ne sont pas :  
+# <a name="a22---using-the-defaultnone-clause"></a>A.22   Utilisation de la clause default(none)
+L’exemple suivant fait la distinction les variables qui sont affectés par la `default(none)` clause de celles qui ne sont pas :  
   
 ```  
 // openmp_using_clausedefault.c  
@@ -56,4 +56,4 @@ void fun(int a) {
 }  
 ```  
   
- Pour plus d'informations sur la clause d' `default` , consultez [section 2.7.2.5](../../parallel/openmp/2-7-2-5-default.md) à la page 28.
+ Pour plus d’informations sur la `default` clause, consultez [Section 2.7.2.5](../../parallel/openmp/2-7-2-5-default.md) à la page 28.

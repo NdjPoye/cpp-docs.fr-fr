@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0153adbae458d0f4ab432c2c7cb8c71621d76418
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 196b69a0d86c3809415e030adb567c8642051f40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colecontrolmodule-class"></a>Classe de COleControlModule
 Classe de base à partir de laquelle vous dérivez un objet de module de contrôle OLE.  
@@ -34,7 +35,7 @@ Classe de base à partir de laquelle vous dérivez un objet de module de contrô
 class COleControlModule : public CWinApp  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe fournit des fonctions membres pour l’initialisation du module de votre contrôle. Chaque module de contrôle OLE qui utilise les classes Microsoft Foundation ne peut contenir un objet dérivé de `COleControlModule`. Cet objet est construit lors de l’établissement d’autres objets globaux de C++. Déclarez votre dérivée `COleControlModule` objet au niveau global.  
   
  Pour plus d’informations sur l’utilisation de la `COleControlModule` de classe, consultez la [CWinApp](../../mfc/reference/cwinapp-class.md) classe et l’article [contrôles ActiveX](../../mfc/mfc-activex-controls.md).  
@@ -50,7 +51,7 @@ class COleControlModule : public CWinApp
   
  `COleControlModule`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxctl.h  
   
 ## <a name="see-also"></a>Voir aussi  

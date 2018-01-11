@@ -1,36 +1,38 @@
 ---
-title: "IErrorRecordsImpl::GetCustomErrorObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::IErrorRecordsImpl::GetCustomErrorObject"
-  - "IErrorRecordsImpl::GetCustomErrorObject"
-  - "ATL.IErrorRecordsImpl.GetCustomErrorObject"
-  - "IErrorRecordsImpl.GetCustomErrorObject"
-  - "GetCustomErrorObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetCustomErrorObject (méthode)"
+title: IErrorRecordsImpl::GetCustomErrorObject | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::IErrorRecordsImpl::GetCustomErrorObject
+- IErrorRecordsImpl::GetCustomErrorObject
+- ATL.IErrorRecordsImpl.GetCustomErrorObject
+- IErrorRecordsImpl.GetCustomErrorObject
+- GetCustomErrorObject
+dev_langs: C++
+helpviewer_keywords: GetCustomErrorObject method
 ms.assetid: 96d3549b-a49c-4552-94b2-71babaf1bf20
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 918c5800d645575f99450b1fbc3b9f2bfb303e20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# IErrorRecordsImpl::GetCustomErrorObject
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retourne un pointeur vers une interface sur un objet personnalisé d'erreur.  
+# <a name="ierrorrecordsimplgetcustomerrorobject"></a>IErrorRecordsImpl::GetCustomErrorObject
+Retourne un pointeur vers une interface sur un objet d’erreur personnalisé.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -41,11 +43,11 @@ Retourne un pointeur vers une interface sur un objet personnalisé d'erreur.
 );  
 ```  
   
-#### Paramètres  
- Pour plus d'informations sur les curseurs, consultez le [IErrorRecords::GetCustomErrorObject](https://msdn.microsoft.com/en-us/library/ms725417.aspx) du *Guide de référence du programmeur OLE DB*.  
+#### <a name="parameters"></a>Paramètres  
+ Consultez [IErrorRecords::GetCustomErrorObject](https://msdn.microsoft.com/en-us/library/ms725417.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [IErrorRecordsImpl, classe](../../data/oledb/ierrorrecordsimpl-class.md)

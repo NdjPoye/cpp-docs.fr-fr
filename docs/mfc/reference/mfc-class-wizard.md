@@ -4,35 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.wizards.classwizard
-dev_langs:
-- C++
+f1_keywords: vc.wizards.classwizard
+dev_langs: C++
 helpviewer_keywords:
 - wizards (MFC)
 - MFC Class Wizard
 ms.assetid: 8b0dd867-5d07-4214-99be-2a1c1995e6d9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 66ef4c3595e25fecf4930cf62275847d8c264044
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 2d8a0e18da58829175a973bf31b2597240e23bd8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-class-wizard"></a>Classe MFC (Assistant)
 Vous permet d’ajouter des messages et des gestionnaires de messages aux classes dans votre projet. Vous pouvez également démarrer d’autres Assistants ou ajouter une classe à votre projet.  
   
  Pour ouvrir la **Assistant classe MFC**, dans le **projet** menu, cliquez sur **Assistant classe**. Pour ouvrir l’Assistant avec un raccourci clavier, tapez CTRL + MAJ + X.  
   
-## <a name="uielement-list"></a>Liste UIElement  
+## <a name="uielement-list"></a>Liste des éléments d’interface  
  **Projet**  
  Le nom d’un projet dans votre solution.  
   
@@ -105,4 +102,3 @@ Vous permet d’ajouter des messages et des gestionnaires de messages aux classe
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajout d’une classe](../../ide/adding-a-class-visual-cpp.md)
-

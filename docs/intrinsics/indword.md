@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4ca5030fc99a8d8c713994271644b31c1d838b98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fcd6b2483a89aeae0cb5622619e892913a4d5cb6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="indword"></a>__indword
 **Section spécifique à Microsoft**  
@@ -45,7 +46,7 @@ unsigned long __indword(
 ## <a name="return-value"></a>Valeur de retour  
  Le mot de lecture à partir du port.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  
@@ -53,7 +54,7 @@ unsigned long __indword(
   
  **Fichier d’en-tête** \<intrin.h >  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette routine est disponible uniquement en tant qu'intrinsèque.  
   
 **FIN de la section spécifique à Microsoft**  

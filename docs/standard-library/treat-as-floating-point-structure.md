@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8bfdda5bab6db19a1cf6d123f141f87249b62478
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1679f6819da685a2c49587d703659b941bf45db6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="treatasfloatingpoint-structure"></a>treat_as_floating_point, structure
 Spécifie si `Rep` peut être traité comme un type à virgule flottante.  
@@ -33,7 +34,7 @@ struct treat_as_floating_point : is_floating_point<Rep>;
 ## <a name="remarks"></a>Notes  
  `Rep` peut être traité comme un type à virgule flottante uniquement lorsque la spécialisation `treat_as_floating_point<Rep>` est dérivée de [true_type](../standard-library/type-traits-typedefs.md#true_type). La classe de modèle peut être spécialisée pour un type défini par l’utilisateur.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<chrono >  
   
  **Espace de noms :** std::chrono  

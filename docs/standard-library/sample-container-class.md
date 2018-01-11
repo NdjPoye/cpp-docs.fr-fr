@@ -14,15 +14,16 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3469645ad62b86b58a30396bbf9af639e392d180
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3666bf4ee03149a9c00ec93d9fc1dc536ce2d080
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sample-container-class"></a>sample container, classe
 > [!NOTE]
->  Cette rubrique fait partie de la documentation Visual C++. Elle fournit un exemple non opérationnel de conteneurs utilisés dans la bibliothèque standard C++. Pour plus d’informations, consultez [Conteneurs disponibles dans la bibliothèque standard C++](../standard-library/stl-containers.md).  
+>  Cette rubrique fait partie de la documentation Visual C++ comme exemple non fonctionnel de conteneurs utilisés dans la bibliothèque standard C++. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).  
   
  Décrit un objet qui contrôle une séquence de longueur variable constituée d’éléments ayant généralement le type **Ty**. La séquence est stockée de différentes manières en fonction du conteneur utilisé.  
   
@@ -91,7 +92,7 @@ ms.lasthandoff: 10/24/2017
   
 -   Le type **Alloc::pointer** n’est pas forcément identique à **Ty \***. (Un pointeur peut être une classe.)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête** : \<sample container>  
   
 ## <a name="see-also"></a>Voir aussi  

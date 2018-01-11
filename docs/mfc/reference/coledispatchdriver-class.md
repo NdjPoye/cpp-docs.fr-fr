@@ -37,11 +37,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e19bfb11a564f23ce41bbc963a19fd239476dfb7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 059ff922689eaf354d4b4ae9b89fb49ab8c5a885
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledispatchdriver-class"></a>Classe COleDispatchDriver
 Implémente le côté client d'OLE automation.  
@@ -86,7 +87,7 @@ class COleDispatchDriver
 |[COleDispatchDriver::m_bAutoRelease](#m_bautorelease)|Spécifie s’il faut libérer le `IDispatch` pendant `ReleaseDispatch` ou la destruction d’objets.|  
 |[COleDispatchDriver::m_lpDispatch](#m_lpdispatch)|Indique le pointeur vers le `IDispatch` interface attaché à ce `COleDispatchDriver`.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `COleDispatchDriver`ne dispose pas d’une classe de base.  
   
  Interfaces de dispatch OLE fournissent un accès aux méthodes et les propriétés d’un objet. Fonctions membres de `COleDispatchDriver` attacher, détacher, créer et libérer une connexion de répartition de type `IDispatch`. Autres fonctions membres utilisent des listes d’arguments variables pour simplifier l’appel **IDispatch::Invoke**.  
@@ -102,7 +103,7 @@ class COleDispatchDriver
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `COleDispatchDriver`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdisp.h  
   
 ##  <a name="attachdispatch"></a>COleDispatchDriver::AttachDispatch  
@@ -121,7 +122,7 @@ void AttachDispatch(
  `bAutoRelease`  
  Spécifie si l’objet dispatch doit être libéré lorsque cet objet est hors de portée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction libère tout pointeur `IDispatch` qui est déjà attaché à l’objet `COleDispatchDriver` .  
   
 ### <a name="example"></a>Exemple  
@@ -146,7 +147,7 @@ COleDispatchDriver(LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE);
  `dispatchSrc`  
  Référence à un fichier `COleDispatchDriver` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le formulaire `COleDispatchDriver`( `LPDISPATCH lpDispatch`, **BOOL**`bAutoRelease` = **TRUE**) se connecte le [IDispatch](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945) interface.  
   
  Le formulaire `COleDispatchDriver`( **const**`COleDispatchDriver`& `dispatchSrc`) copie existant `COleDispatchDriver` de l’objet et incrémente le décompte de références.  
@@ -196,7 +197,7 @@ LPDISPATCH DetachDispatch();
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le OLE précédemment attaché `IDispatch` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `IDispatch` n’est pas libérée.  
   
  Pour plus d’informations sur la `LPDISPATCH` de type, consultez [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945) dans le Kit de développement logiciel Windows.  
@@ -258,7 +259,7 @@ void AFX_CDECL InvokeHelper(
  *...*  
  Liste variable de paramètres, des types spécifiés dans `pbParamInfo`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le paramètre `pbParamInfo` spécifie les types des paramètres passés à la méthode ou propriété. La liste variable d’arguments est représentée par **...** dans la déclaration de syntaxe.  
   
  Les valeurs possibles de l’argument `vtRet` proviennent de l’énumération `VARENUM` . Les valeurs possibles sont les suivantes :  
@@ -295,7 +296,7 @@ void AFX_CDECL InvokeHelper(
 BOOL m_bAutoRelease;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, `m_bAutoRelease` a la valeur **TRUE** dans le constructeur.  
   
  Pour plus d’informations sur la libération d’objets COM, consultez [mise en œuvre un comptage de références](http://msdn.microsoft.com/library/windows/desktop/ms693431) et [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) dans le Kit de développement logiciel Windows.  
@@ -310,7 +311,7 @@ BOOL m_bAutoRelease;
 LPDISPATCH m_lpDispatch;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `m_lpDispatch` membre de données est une variable publique de type `LPDISPATCH`.  
   
  Pour plus d’informations, consultez [IDispatch](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945) dans le Kit de développement logiciel Windows.  
@@ -346,7 +347,7 @@ operator LPDISPATCH();
 void ReleaseDispatch();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si la libération automatique a été définie pour cette connexion, cette fonction appelle **IDispatch::Release** avant de libérer de l’interface.  
   
 ### <a name="example"></a>Exemple  

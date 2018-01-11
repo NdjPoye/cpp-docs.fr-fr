@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - operators [C++], postfix
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c72b54a3941731d95ec12bcdae552651b9176d9a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8b965027e67cc2b2581c2ab00e51d2be7a899302
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="postfix-expressions"></a>Expressions suffixées
 Les expressions suffixées se composent d'expressions primaires ou d'expressions dans lesquelles les opérateurs suffixés suivent une expression primaire. Les opérateurs suffixés sont répertoriées dans le tableau suivant.  
@@ -73,11 +71,11 @@ simple-type-name ( expression-list )
 ## <a name="formal-and-actual-arguments"></a>Arguments formels et arguments réels  
  Les programmes appelants passent des informations aux fonctions appelées dans des « arguments réels ». Les fonctions appelées accèdent aux informations à l'aide des « arguments formels » correspondants.  
   
- Lorsqu'une fonction est appelée, les tâches suivantes sont effectuées :  
+ Lorsqu’une fonction est appelée, les tâches suivantes sont effectuées :  
   
--   Tous les arguments réels (ceux fournis par l'appelant) sont évalués. Il n'y a pas d'ordre implicite dans lequel ces arguments sont évalués, mais ils sont tous évalués et les effets secondaires sont résolus avant l'entrée dans la fonction.  
+-   Tous les arguments réels (ceux fournis par l’appelant) sont évalués. Il n'y a pas d'ordre implicite dans lequel ces arguments sont évalués, mais ils sont tous évalués et les effets secondaires sont résolus avant l'entrée dans la fonction.  
   
--   Chaque argument formel est initialisé avec son argument réel correspondant dans la liste d'expressions. (Un argument formel est un argument déclaré dans l'en-tête de fonction et utilisé dans le corps d'une fonction.) Les conversions sont effectuées suite à une initialisation — les conversions standard et celles définies par l'utilisateur sont exécutées en convertissant un argument réel en type correct. L'initialisation exécutée est illustrée conceptuellement par le code suivant :  
+-   Chaque argument formel est initialisé avec son argument réel correspondant dans la liste d'expressions. (Un argument formel est un argument déclaré dans l'en-tête de fonction et utilisé dans le corps d'une fonction.) Les conversions sont effectuées suite à une initialisation — les conversions standard et celles définies par l’utilisateur sont exécutées en convertissant un argument réel en type correct. L'initialisation exécutée est illustrée conceptuellement par le code suivant :  
   
     ```  
     void Func( int i ); // Function prototype  

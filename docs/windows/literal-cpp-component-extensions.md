@@ -1,61 +1,62 @@
 ---
-title: "literal (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "literal"
-  - "literal_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "literal keyword [C++]"
+title: "littéral (Extensions du composant C++) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- literal
+- literal_cpp
+dev_langs: C++
+helpviewer_keywords: literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-caps.latest.revision: 20
-caps.handback.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f858e94bf916c2d441cee607739bb9e08da09b85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# literal (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Une variable \(membre de données\) est marqué comme `literal` dans une compilation **\/clr** revient au format natif d'une variable `static const`.  
+# <a name="literal-c-component-extensions"></a>littéral (extensions du composant C++)
+Une variable (membre de données) est marqué comme `literal` dans un **/CLR** compilation est l’équivalent natif d’un `static const` variable.  
   
-## Toutes les plateformes  
+## <a name="all-platforms"></a>Toutes les plateformes  
  **Remarques**  
   
- \(Aucune note de cette fonctionnalité de langage ne s'applique à tous les runtimes.\)  
+ (Aucune remarque pour cette fonctionnalité de langage ne s’applique à tous les runtimes.)  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows Runtime  
  **Remarques**  
   
- \(Aucune note de cette fonctionnalité de langage ne s'applique qu'au Windows Runtime.\)  
+ (Aucune note de cette fonctionnalité de langage ne s’applique qu’au Windows Runtime.)  
   
-### Conditions requises  
- Option du compilateur : **\/ZW**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : **/ZW**  
   
-## Common Language Runtime  
+## <a name="common-language-runtime"></a>Common Language Runtime  
   
-## Notes  
- Un membre de données marqué comme `literal`doit être initialisé lorsqu'elle est déclarée et la valeur doit être une intégrale, une énumération, ou un type chaîne constante.  La conversion du type de l'expression d'initialisation vers le type du membre de données const statique ne doit pas avoir une conversion définie par l'utilisateur.  
+## <a name="remarks"></a>Notes  
+ Un membre de données marqué comme `literal` doit être initialisé lorsque déclaré et la valeur doit être une constante intégrale, enum ou type chaîne. Conversion du type de l’expression d’initialisation pour le type de données-membres const static ne doit pas nécessiter une conversion définie par l’utilisateur.  
   
- Aucune mémoire n'est allouée pour le champ littéral au moment de l'exécution ; le compilateur insère uniquement sa valeur dans les métadonnées pour la classe.  
+ Aucune mémoire est allouée pour le champ littéral lors de l’exécution ; le compilateur insère uniquement sa valeur dans les métadonnées pour la classe.  
   
- Une variable marquée par `static const` n'est pas disponible dans les métadonnées pour d'autres compilateurs.  
+ Une variable marquée `static const` ne seront pas disponibles dans les métadonnées à d’autres compilateurs.  
   
- Pour plus d’informations, consultez [Statique](../misc/static-cpp.md) et [const](../cpp/const-cpp.md).  
+ Pour plus d’informations, consultez [statique](../cpp/storage-classes-cpp.md) et [const](../cpp/const-cpp.md).  
   
- `literal` est un mot clé contextuel.  Pour plus d'informations, consultez [Mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `literal` est un mot clé contextuel. Consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md) pour plus d’informations.  
   
-## Exemple  
- Cet exemple montre qu'une variable `literal` implique `static`.  
+## <a name="example"></a>Exemple  
+ Cet exemple montre qu’un `literal` implique de variable `static`.  
   
 ```  
 // mcppv2_literal.cpp  
@@ -69,8 +70,8 @@ int main() {
 }  
 ```  
   
-## Exemple  
- L'exemple suivant montre l'effet du littéral dans les métadonnées :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant montre l’effet de littéral dans les métadonnées :  
   
 ```  
 // mcppv2_literal2.cpp  
@@ -81,7 +82,7 @@ public ref struct A {
 };  
 ```  
   
- Notez la différence dans les métadonnées de `sc` et `lit`: la directive `modopt` est appliquée à `sc`, ce qui signifie qu'elle peut être ignorée par d'autres compilateurs.  
+ Notez la différence dans les métadonnées pour `sc` et `lit`: le `modopt` directive est appliquée à `sc`, ce qui signifie qu’il peut être ignoré par d’autres compilateurs.  
   
 ```  
 .field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)  
@@ -91,8 +92,8 @@ public ref struct A {
 .field public static literal int32 lit = int32(0x0000000A)  
 ```  
   
-## Exemple  
- L'exemple suivant, créé en c, référence les métadonnées créées dans l'exemple précédent et affiche l'effet de `literal` et des variables `static const`:  
+## <a name="example"></a>Exemple  
+ L’exemple suivant, créé en c#, référence les métadonnées créées dans l’exemple précédent et montre l’effet de `literal` et `static const` variables :  
   
 ```  
 // mcppv2_literal3.cs  
@@ -123,8 +124,8 @@ class B {
 }  
 ```  
   
-## Conditions requises  
- Option du compilateur : **\/clr**  
+## <a name="requirements"></a>Configuration requise  
+ Option du compilateur : **/clr**  
   
-## Voir aussi  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Voir aussi  
+ [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)

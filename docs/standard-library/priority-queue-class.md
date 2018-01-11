@@ -31,11 +31,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 705ffaa38222d83fe02e20f20c47ee4c06f22294
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2e8768fa138da74761bc581f8b9f54a2fe432776
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="priorityqueue-class"></a>priority_queue, classe
 Classe d’adaptateur de conteneur de modèle qui fournit une restriction de fonctionnalité limitant l’accès à l’élément supérieur d’un certain type de conteneur sous-jacent, qui est toujours le plus grand ou de la priorité la plus élevée. De nouveaux éléments peuvent être ajoutés à la classe priority_queue, et l’élément supérieur dans priority_queue peut être inspecté ou supprimé.  
@@ -60,7 +61,7 @@ class priority_queue
 ## <a name="remarks"></a>Notes  
  Les éléments de la classe **Type** stipulés dans le premier paramètre de modèle d’un objet queue sont synonymes de [value_type](#value_type) et doivent correspondre au type d’élément de la classe de conteneur sous-jacent **Container** stipulé par le deuxième paramètre de modèle. La classe **Type** doit pouvoir faire l’objet d’une assignation, pour qu’il soit possible de copier des objets de ce type et d’assigner des valeurs aux variables de ce type.  
   
- La classe priority_queue trie la séquence qu’elle contrôle en appelant un objet de fonction stocké de la classe **Traits**. En général, les éléments ne doivent pas être tout à fait comparables, afin que, à l'aide de deux événements quelconques donnés, il soit possible de déterminer, soit qu'ils soient équivalents (dans le sens où l'un n'est pas inférieur à l'autre), soit que l'un est inférieur à l'autre. Cela entraîne le tri des éléments non équivalents. D’un point de vue plus technique, la fonction de comparaison est un prédicat binaire qui induit un ordre faible strict au sens mathématique du terme.  
+ La classe priority_queue trie la séquence qu’elle contrôle en appelant un objet de fonction stocké de la classe **Traits**. En général, les éléments ne doivent pas être tout à fait comparables, afin que, à l'aide de deux événements quelconques donnés, il soit possible de déterminer, soit qu'ils soient équivalents (dans le sens où l'un n'est pas inférieur à l'autre), soit que l'un est inférieur à l'autre. Cela entraîne le tri des éléments non équivalents. D’un point de vue plus technique, la fonction de comparaison est un prédicat binaire qui induit un ordre faible strict au sens mathématique du terme.  
   
  Les classes de conteneurs sous-jacents appropriées pour priority_queue incluent la [classe deque](../standard-library/deque-class.md) et la [classe vector](../standard-library/vector-class.md) par défaut ou tout autre conteneur de séquence qui prend en charge les opérations `front`, `push_back` et `pop_back` ainsi qu’un itérateur à accès aléatoire. La classe de conteneur sous-jacent est encapsulée dans l'adaptateur de conteneur, qui expose seulement l'ensemble limité de fonctions membres du conteneur de séquence comme une interface publique.  
   
@@ -80,7 +81,7 @@ class priority_queue
 |-|-|  
 |[priority_queue](#priority_queue)|Construit un `priority_queue` qui est vide ou qui est une copie d’une plage d’un objet conteneur de base ou d’un autre `priority_queue`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -98,7 +99,7 @@ class priority_queue
 |[size](#size)|Retourne le nombre d'éléments d'un `priority_queue`.|  
 |[top](#top)|Retourne une référence const à l’élément le plus grand en haut du `priority_queue`.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<queue>  
   
  **Espace de noms :** std  
@@ -556,6 +557,6 @@ The element at the top of the priority_queue is 69.
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
 

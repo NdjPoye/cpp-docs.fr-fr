@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e308d95f25b25a99fecde976d8ba6433316f460f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7559bdf725727b79f99ed3bfcd4d6b7301528110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Spécifications d’exception (throw, noexcept) (C++)
 Spécifications d’exceptions sont une fonctionnalité du langage C++ qui indiquent l’intention du programmeur sur les types d’exception qui peuvent être propagées par une fonction. Vous pouvez spécifier qu’une fonction peut ou peut ne pas quitte par une exception à l’aide un *spécification d’exception*. Le compilateur peut utiliser ces informations pour optimiser les appels à la fonction, et la fonction d’échappement pour terminer le programme si une exception inattendue. Il existe deux types de spécification d’exception. Le *noexcept spécification* est une nouveauté dans C ++ 11. Il spécifie si l’ensemble des exceptions potentielles qui échappent à la fonction est vide. Le *spécification d’exception dynamiques*, ou `throw(optional_type_list)` spécification, est déconseillée dans C ++ 11 et n'est que partiellement prise en charge par Visual Studio. Cette spécification d’exception a été conçue pour fournir des informations résumées concernant les exceptions pouvant être levées en dehors d’une fonction, mais dans la pratique, il a été trouvé pour poser des problèmes. La spécification d’exception dynamique un qui s’est révélée quelque peu utile a été l’inconditionnel `throw()` spécification. Par exemple, la déclaration de fonction :  

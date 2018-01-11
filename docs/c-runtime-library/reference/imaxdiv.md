@@ -29,11 +29,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65c7b71030bff65a2806d20690554a9828871268
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7a6dbcd5b25fe1a8b1b21b2e2f6ac7a8cc99cc06
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="imaxdiv"></a>imaxdiv
 Calcule le quotient et le reste de deux valeurs entières de n’importe quelle taille en une seule opération.  
@@ -60,13 +61,13 @@ imaxdiv_t imaxdiv(
 ## <a name="remarks"></a>Notes  
  La fonction `imaxdiv` divise `numer` par `denom`, calculant ainsi le quotient et le reste. La structure `imaxdiv_t` contient le quotient, `intmax_t quot`, et le reste, `intmax_t rem`. Le signe du quotient est identique à celui du quotient mathématique. Sa valeur absolue est le plus grand entier qui est inférieur à la valeur absolue du quotient mathématique. Si le dénominateur est 0, le programme se termine par un message d’erreur.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`imaxdiv`|\<inttypes.h>|  
   
- Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

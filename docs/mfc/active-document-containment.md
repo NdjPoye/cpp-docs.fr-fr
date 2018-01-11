@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 749d4badb3a7b5a2c61fa753a840765f14e2a329
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16c0311c3eedc13cbc47214b44fc8810dee3eecd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-document-containment"></a>Relation contenant-contenu de document actif
 Relation contenant-contenu de document actif est une technologie qui fournit un frame unique permettant de travailler avec des documents, au lieu de vous obliger à créer et utiliser plusieurs frames d’application pour chaque type de document. Il diffère de technologie OLE de base dans la mesure où OLE fonctionne avec des objets incorporés dans un document composé dans lequel seule une partie du contenu peut être active. Avec la relation contenant-contenu de document actif, vous activez un document entier (autrement dit, une application entière, y compris les menus associés, les barres d’outils, etc.) dans le contexte d’un frame unique.  

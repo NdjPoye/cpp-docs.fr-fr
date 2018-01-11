@@ -37,11 +37,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6664c7109b96896a09f131fc142426144047bf68
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a5e38d9a8df63fd4c2880fda7becec545c9584a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ldexp"></a>ldexp
 Multiplie un nombre à virgule flottante par une puissance intégrale de deux.  
@@ -86,13 +87,13 @@ long double ldexpl(
 ## <a name="remarks"></a>Notes  
  C++ autorisant la surcharge, vous pouvez appeler des surcharges de `ldexp` qui acceptent des types `float` ou `long double`. Dans un programme C, `ldexp` accepte toujours `double` et `int`, et retourne `double`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
-|Routine|En-tête C|En-tête C++|  
+|Routine|En-tête C|En-tête C++|  
 |-------------|--------------|------------------|  
 |`ldexp`, `ldexpf`, `ldexpl`|\<math.h>|\<cmath>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

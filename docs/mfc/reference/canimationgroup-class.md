@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -31,8 +30,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationGroup::m_pStoryboard
 - AFXANIMATIONCONTROLLER/CAnimationGroup::m_nGroupID
 - AFXANIMATIONCONTROLLER/CAnimationGroup::m_pParentController
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationGroup [MFC], CAnimationGroup
 - CAnimationGroup [MFC], Animate
@@ -55,16 +53,16 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2d047940ac1ef3103168aa40b53c726ce0767b52
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 9c59bd895187d0d9a047c626426736a957a4d6b5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup, classe
 Implémente un groupe d’animation, qui combine un storyboard d’animation, des objets d’animation et des transitions pour définir une animation.  
@@ -118,18 +116,18 @@ class CAnimationGroup;
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CAnimationGroup::m_nGroupID](#m_ngroupid)|Identificateur unique du groupe d’animation.|  
 |[CAnimationGroup::m_pParentController](#m_pparentcontroller)|Pointeur vers le contrôleur de l’animation qu'appartient ce groupe.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Groupes d’animation sont créés automatiquement par le contrôleur de l’animation (CAnimationController) lorsque vous ajoutez des objets d’animation à l’aide de CAnimationController::AddAnimationObject. Un groupe d’animation est identifié par GroupID qui est généralement considéré comme un paramètre pour manipuler des groupes d’animation. GroupID est pris du premier objet d’animation qui est ajouté à un nouveau groupe d’animation. Un storyboard encapsulé est créé après l’appel de CAnimationController::AnimateGroup et est accessible via m_pStoryboard du membre public.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CAnimationGroup`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="_dtorcanimationgroup"></a>CAnimationGroup :: ~ CAnimationGroup  
@@ -186,7 +184,7 @@ BOOL Animate(
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode réussit ; Sinon, FALSE.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode crée un storyboard interne, crée et applique des transitions et planifie une animation si bScheduleNow a la valeur TRUE. Si bScheduleNow a la valeur FALSE, vous devez appeler la planification pour démarrer l’animation à l’heure spécifiée.  
   
 ##  <a name="applytransitions"></a>CAnimationGroup::ApplyTransitions  
@@ -196,7 +194,7 @@ BOOL Animate(
 void ApplyTransitions();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode déclare en mode débogage si le storyboard n’a pas été créé. Il crée toutes les transitions tout d’abord, puis ajoute les images clés « statiques » (images clés qui dépendent des offsets), ajoute des transitions qui ne dépendent pas des images clés, ajoute des images clés en fonction des transitions et autres images clés et enfin ajoute des transitions qui dépendent des images clés .  
   
 ##  <a name="canimationgroup"></a>CAnimationGroup::CAnimationGroup  
@@ -310,7 +308,7 @@ ATL::CComPtr<IUIAnimationStoryboard> m_pStoryboard;
 void RemoveKeyframes();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si m_bAutodestroyKeyframes du membre est TRUE, puis les images clés sont supprimées et détruites, sinon les images clés sont supprimées uniquement à partir de la liste interne des images clés.  
   
 ##  <a name="removetransitions"></a>CAnimationGroup::RemoveTransitions  
@@ -320,7 +318,7 @@ void RemoveKeyframes();
 void RemoveTransitions();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si l’indicateur m_bAutoclearTransitions est définie sur TRUE, cette méthode effectue une itération sur tous les objets d’animation qui appartiennent au groupe et appelle CAnimationObject::ClearTransitions (false).  
   
 ##  <a name="schedule"></a>CAnimationGroup::Schedule  
@@ -340,7 +338,7 @@ BOOL Schedule(IUIAnimationTimer* pTimer, UI_ANIMATION_SECONDS time);
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la méthode réussit ; FALSE si la méthode échoue ou si l’animation ne possède pas été appelé avec bScheduleNow défini sur FALSE.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction pour planifier une animation à l’heure spécifiée. Vous devez appeler animer avec bScheduleNow tout d’abord la valeur FALSE.  
   
 ##  <a name="setautodestroytransitions"></a>CAnimationGroup::SetAutodestroyTransitions  
@@ -354,9 +352,8 @@ void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
  `bAutoDestroy`  
  Spécifie comment détruire les transitions.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Définissez cette valeur sur FALSE uniquement si vous allouez des transitions sur la pile. La valeur par défaut est TRUE, par conséquent, il a fortement recommandé d’allouer des objets de transition à l’aide de nouvel opérateur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classes](../../mfc/reference/mfc-classes.md)
-

@@ -23,24 +23,25 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9a260882b7e4623149e9e82a3a635f7230b6985a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a552edab9f2de646de3b869bf84467924b5db348
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tlbid-specify-resource-id-for-typelib"></a>/TLBID (Spécifier l'ID de ressource de TypeLib)
 ```  
 /TLBID:id  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  où :  
   
  `id`  
  Une valeur spécifiée par l’utilisateur pour une bibliothèque de types créée par l’éditeur de liens. Il remplace l’ID de ressource par défaut de 1.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Lorsque la compilation d’un programme qui utilise des attributs, l’éditeur de liens crée une bibliothèque de types. L’éditeur de liens affecte un ID de ressource de 1 à la bibliothèque de types.  
   
  Si cet ID de ressource est en conflit avec l’un de vos ressources existantes, vous pouvez spécifier un autre ID avec /TLBID. La plage de valeurs que vous pouvez passer à `id` est comprise entre 1 et 65535.  

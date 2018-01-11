@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,9 +19,7 @@ f1_keywords:
 - random/std::poisson_distribution::param_type::mean
 - random/std::poisson_distribution::param_type::operator==
 - random/std::poisson_distribution::param_type::operator!=
-- random/std::poisson_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::poisson_distribution [C++]
 - std::poisson_distribution [C++], reset
@@ -33,16 +30,16 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e9ebeb453aefee8310e45779f1fd60c7bd207771
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 1033cc69a3076762cb6ac1b5c50bf6fe7ca2df7b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="poissondistribution-class"></a>poisson_distribution, classe
 Génère une probabilité d'une variable aléatoire suivant une loi de Poisson.  
@@ -102,7 +99,7 @@ Les fonctions membres `operator()` retournent la valeur générée suivante d’
   
 Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).  
   
-Pour plus d’informations sur la distribution de Poisson, consultez l’article de Wolfram MathWorld [Poisson Distribution](http://go.microsoft.com/fwlink/LinkId=401112).  
+Pour plus d’informations sur la distribution de Poisson, consultez l’article de Wolfram MathWorld [Poisson Distribution](http://go.microsoft.com/fwlink/p/?linkid=401112).  
   
 ## <a name="example"></a>Exemple  
   
@@ -202,7 +199,7 @@ Distribution for 100 samples:
    17 :  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<random>  
   
  **Espace de noms :** std  
@@ -253,5 +250,4 @@ Cette structure peut être passée au constructeur de classe de la distribution 
   
 ## <a name="see-also"></a>Voir aussi  
  [\<random>](../standard-library/random.md)
-
 

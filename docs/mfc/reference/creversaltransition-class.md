@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 30d616bb63953e302973d3b6cbb254869c5f2491
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fdce13f41e95cda592fec03fcedb01984fb34ab9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creversaltransition-class"></a>CReversalTransition, classe
 Encapsule une transition inverse.  
@@ -58,7 +59,7 @@ class CReversalTransition : public CBaseTransition;
 |----------|-----------------|  
 |[CReversalTransition::m_duration](#m_duration)|La durée de la transition.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une transition inverse change sans heurts de direction sur une durée donnée. La valeur finale sera identique à la valeur initiale et la rapidité finale sera la valeur négative de la rapidité initiale. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l’aide de nouvel opérateur. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup, jusqu'à ce que puis sa valeur est NULL. La modification de variables membres après que la création de cet objet COM n’a aucun effet.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -68,7 +69,7 @@ class CReversalTransition : public CBaseTransition;
   
  [CReversalTransition](../../mfc/reference/creversaltransition-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="create"></a>CReversalTransition::Create  

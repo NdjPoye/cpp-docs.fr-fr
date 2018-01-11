@@ -1,34 +1,33 @@
 ---
-title: "Erreur des outils &#201;diteur de liens LNK2004 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2004"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2004"
+title: "LNK2004 d’erreur des outils Éditeur de liens | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2004
+dev_langs: C++
+helpviewer_keywords: LNK2004
 ms.assetid: 07645371-e67b-4a2c-b0e0-dde24c94ef7e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3fdbd32bbc59d9c18df5544f07ec7e7097b9e02e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Erreur des outils &#201;diteur de liens LNK2004
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-dépassement de la correction gp relative à 'cible' ; la section short 'section' est trop grande ou hors limites.  
+# <a name="linker-tools-error-lnk2004"></a>Erreur des outils Éditeur de liens LNK2004
+dépassement de la correction relative GP à 'cible' ; la section short 'section' est trop grande ou hors limites.  
   
  La section était trop grande.  
   
- Pour résoudre cette erreur, réduisez la taille de la section short, soit en insérant explicitement des données dans les sections long via \#pragma section\(".NomSection", read, write, long\) et en utilisant `__declspec(allocate(".sectionname"))` sur les définitions de données et les déclarations.  Par exemple :  
+ Pour résoudre cette erreur, réduisez la taille de la section short, soit en insérant explicitement des données dans les sections long via #pragma section (« .sectionname », lecture, écriture, long) à l’aide de `__declspec(allocate(".sectionname"))` sur les déclarations et définitions de données.  Par exemple :  
   
 ```  
 #pragma section(".data$mylong", read, write, long)  
@@ -41,7 +40,7 @@ char    rg4[16] = { 1 };
 char    rg5[32] = { 1 };  
 ```  
   
- Vous pouvez également déplacer des données groupées de manière logique dans leur propre structure qui sera une collection de données supérieure à 8 octets allouée ensuite par le compilateur dans une section de données long.  Par exemple :  
+ Vous pouvez également déplacer des données groupées logiquement dans leur propre structure qui sera une collection de données supérieure à 8 octets, allouée par le compilateur dans une section de données de type long.  Par exemple :  
   
 ```  
 // from this...  
@@ -60,4 +59,4 @@ struct X {
   
 ```  
   
- Ce message d'erreur est suivi de l'erreur irrécupérable `LNK1165`.
+ Cette erreur est suivie d’une erreur irrécupérable `LNK1165`.

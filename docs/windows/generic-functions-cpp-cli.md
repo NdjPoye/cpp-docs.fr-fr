@@ -19,11 +19,14 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2ffaee4b452b6f7eb31ad81a8b7b1216eb670e7f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9ebafa409680609d6e097b803be2b539ccdc7601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generic-functions-ccli"></a>Fonctions génériques (C++/CLI)
 Une fonction générique est une fonction déclarée avec les paramètres de type. Lorsqu’elle est appelée, les types réels sont utilisés à la place les paramètres de type.  
@@ -38,7 +41,7 @@ Une fonction générique est une fonction déclarée avec les paramètres de typ
   
  Cette fonctionnalité n’est pas pris en charge dans le Windows Runtime.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
@@ -89,7 +92,7 @@ return-type identifier<type-parameter identifier(s)>
   
  Lorsqu’elle est appelée, le paramètre de type générique est remplacé par un type réel. Le type réel peut-être être spécifié explicitement dans les crochets à l’aide d’une syntaxe semblable à un appel de fonction de modèle. Si elle est appelée sans paramètres de type, le compilateur tente de déduire le type réel à partir des paramètres fournis dans l’appel de fonction. Si l’argument de type prévu ne peut pas être déduit des paramètres utilisés, le compilateur signale une erreur.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  

@@ -27,11 +27,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f7d59d91f82a0fa86efcae7214874e0b2ca16a12
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 720a1de11dcf4c37b4b321bb0e014a9ae4e2e459
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonundobutton-class"></a>Classe de CMFCRibbonUndoButton
 La `CMFCRibbonUndoButton` classe implémente un bouton de liste déroulante qui contient les commandes d’utilisateur les plus récentes. Les utilisateurs peuvent sélectionner un ou plusieurs des commandes les plus récentes à partir de la liste déroulante pour les annuler ou rétablir.  
@@ -59,7 +60,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 |[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|Détermine le nombre d’éléments dont un utilisateur a sélectionné dans la liste déroulante.|  
 |[CMFCRibbonUndoButton::HasMenu](#hasmenu)|Indique si l’objet contienne un menu.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La `CMFCRibbonUndoButton` classe utilise une pile pour représenter la liste déroulante.  
   
 ## <a name="example"></a>Exemple  
@@ -78,7 +79,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
   
  [CMFCRibbonUndoButton](../../mfc/reference/cmfcribbonundobutton-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxribbonundobutton.h  
   
 ##  <a name="addundoaction"></a>CMFCRibbonUndoButton::AddUndoAction  
@@ -152,7 +153,7 @@ virtual BOOL HasMenu() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne toujours `TRUE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

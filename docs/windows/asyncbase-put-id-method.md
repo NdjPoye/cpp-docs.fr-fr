@@ -1,32 +1,33 @@
 ---
-title: "AsyncBase::put_Id, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::put_Id"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "put_Id (méthode)"
+title: "Asyncbase::put_id, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::put_Id
+dev_langs: C++
+helpviewer_keywords: put_Id method
 ms.assetid: aebad85f-4774-42de-b625-a9cf5f65cb4e
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 60135d69f6f3f8b73256fd65d89651351bd100e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# AsyncBase::put_Id, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Définit le handle de l'opération asynchrone.  
+# <a name="asyncbaseputid-method"></a>AsyncBase::put_Id, méthode
+Définit le handle de l’opération asynchrone.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 STDMETHOD(  
@@ -34,17 +35,17 @@ STDMETHOD(
 )(const unsigned int id);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `id`  
- Un handle différent de zéro.  
+ Un handle différente de zéro.  
   
-## Valeur de retour  
- S\_OK si l'opération a réussi; sinon, E\_INVALIDARG ou E\_ILLEGAL\_METHOD\_CALL.  
+## <a name="return-value"></a>Valeur de retour  
+ S_OK en cas de réussite ; Sinon, E_INVALIDARG ou des E_ILLEGAL_METHOD_CALL.  
   
-## Configuration requise  
- **En\-tête:** async.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** async.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [AsyncBase, classe](../windows/asyncbase-class.md)

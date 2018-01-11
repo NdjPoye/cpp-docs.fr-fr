@@ -28,11 +28,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 39cc7164a22b95f2c269c7bb1bd558374f56fa3c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 923c3599d2dc3b1dc5b0787669ade4ea14cd2086
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unexpected-crt"></a>unexpected (CRT)
 Appelle `terminate` ou la fonction que vous spécifiez à l’aide de `set_unexpected`.  
@@ -46,7 +47,7 @@ void unexpected( void );
 ## <a name="remarks"></a>Notes  
  La routine `unexpected` n’est pas utilisée avec l’implémentation actuelle de la gestion des exceptions C++. `unexpected` appelle `terminate` par défaut. Vous pouvez modifier ce comportement par défaut en écrivant une fonction d’arrêt personnalisée et en appelant `set_unexpected` avec le nom de votre fonction comme argument. `unexpected` appelle la dernière fonction transmise comme argument à `set_unexpected`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

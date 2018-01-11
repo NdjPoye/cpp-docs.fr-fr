@@ -15,11 +15,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b1ce02c71fb7745465d21c7a4004ebc00ea7ddb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3a39161c0715ef709d9f343188851a0b94abfe40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isnothrowcopyconstructible-class"></a>is_nothrow_copy_constructible, classe
 Teste si le type a un constructeur de copie **nothrow**.  
@@ -38,7 +39,7 @@ struct is_nothrow_copy_constructible;
 ## <a name="remarks"></a>Notes  
  Une instance du prédicat de type a la valeur true si le type `Ty` a un constructeur de copie nothrow. Sinon, sa valeur est false.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<type_traits>  
   
  **Espace de noms :** std  

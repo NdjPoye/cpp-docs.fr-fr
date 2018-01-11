@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- friend_cpp
-dev_langs:
-- C++
+f1_keywords: friend_cpp
+dev_langs: C++
 helpviewer_keywords:
 - member access, from friend functions
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2d8dd1c80e9b006b3689b6d17ad9d7635670cc98
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 46caba9230676e30cde02e31cc231d606f446767
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="friend-c"></a>friend (C++)
 Dans certaines circonstances, il est plus pratique d’accorder l’accès au niveau des membres à des fonctions qui ne sont pas membres d’une classe ou à tous les membres dans une classe distincte. Seul l'implémenteur de classe peut déclarer qui sont ses fonctions friend. Une fonction ou une classe ne peut pas se déclarer elle-même en tant que fonction ou classe friend d'une classe. Dans une définition de classe, utilisez le `friend` (mot clé) et le nom d’une fonction non membre ou autre classe pour lui accorder un accès aux membres privés et protégés de votre classe.         Dans une définition de modèle, un paramètre de type peut être déclaré en tant que friend.  
@@ -164,7 +161,7 @@ int main()
 ```  
   
 ## <a name="class-members-as-friends"></a>Membres de classes en tant que friends  
- Les fonctions membres de classe peuvent être déclarées en tant que Friends dans d'autres classes. Prenons l'exemple suivant :  
+ Les fonctions membres de classe peuvent être déclarées en tant que Friends dans d'autres classes. Prenons l'exemple suivant :  
   
 ```cpp  
 // classes_as_friends1.cpp  

@@ -40,11 +40,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d4a89e5599823bb60d65f0845044185fbbe560dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ca0d3229f539c05817fd9dddc4e8cd30ec5abdb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 Versions de [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md) qui utilisent la version de débogage de `malloc` pour allouer de la mémoire.  
@@ -92,7 +93,7 @@ wchar_t *_wfullpath_dbg(
 ## <a name="return-value"></a>Valeur de retour  
  Chaque fonction retourne un pointeur vers une mémoire tampon contenant le nom de chemin d'accès absolu (`absPath`). En cas d'erreur (par exemple, si la valeur passée dans `relPath` comprend une lettre de lecteur qui n'est pas valide ou qui est introuvable, ou si la longueur du nom de chemin d'accès absolu créé (`absPath`) est supérieure à `maxLength`) la fonction retourne `NULL`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `_fullpath_dbg` et `_wfullpath_dbg` fonctions sont identiques aux `_fullpath` et `_wfullpath` , sauf que, lorsque `_DEBUG` est défini, ces fonctions utilisent la version debug de `malloc`, `_malloc_dbg`, allocation de mémoire si NULL est passé comme premier paramètre. Pour plus d’informations sur les fonctionnalités de débogage de `_malloc_dbg`, consultez [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
   
  Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. À la place, vous pouvez définir l'indicateur `_CRTDBG_MAP_ALLOC`. Quand `_CRTDBG_MAP_ALLOC` est défini, les appels à `_fullpath` et `_wfullpath` sont remappés à `_fullpath_dbg` et `_wfullpath_dbg`, respectivement, avec `blockType` défini sur `_NORMAL_BLOCK`. Ainsi, vous n'avez pas besoin d'appeler ces fonctions de manière explicite sauf si vous souhaitez marquer les blocs du tas comme `_CLIENT_BLOCK`. Pour plus d’informations, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).  
@@ -103,7 +104,7 @@ wchar_t *_wfullpath_dbg(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tfullpath_dbg`|`_fullpath_dbg`|`_fullpath_dbg`|`_wfullpath_dbg`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête requis|  
 |--------------|---------------------|  

@@ -1,77 +1,66 @@
 ---
-title: "Generics  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "generic_cpp"
-  - "generic"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generics [C++]"
+title: "Génériques (Extensions du composant C++) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- generic_cpp
+- generic
+dev_langs: C++
+helpviewer_keywords: generics [C++]
 ms.assetid: c7ccc316-a411-4c00-b2e2-f0c0eadc6cfd
-caps.latest.revision: 24
-caps.handback.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "24"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 415da036c9ac2f285b97096368754f176d655eff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Generics  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les génériques sont des types paramétrables et des méthodes.  Dans cette section, déterminez quelles fonctionnalités génériques sont prises en charge par le runtime windows et le CLR, et celles prises en charge uniquement par le CLR.  En outre, déterminez comment créer vos propres méthodes génériques et vos types dans Visual C\+\+, et comment utiliser des types de générique créés dans un langage.NET Framework dans Visual C\+\+.  Enfin, cette section fournit une comparaison de génériques et les modèles C\+\+.  
+# <a name="generics--c-component-extensions"></a>Génériques  (extensions du composant C++)
+Les génériques sont des méthodes et des types paramétrables. Dans cette section, Découvrez les fonctionnalités génériques sont pris en charge par le Windows Runtime et le common language runtime, et qui sont pris en charge uniquement le common language runtime. En outre, découvrez comment créer vos propres méthodes et types génériques dans Visual C++ et comment utiliser des types génériques créés dans un langage .NET Framework dans Visual C++. Enfin, cette section fournit une comparaison des modèles C++ et les génériques.  
   
-## Dans cette section  
- **Pris en charge par le runtime windows et CLR**  
+## <a name="in-this-section"></a>Dans cette section  
+ **Prise en charge par le Windows Runtime et le Common Language Runtime**  
   
- [Overview of Generics in Visual C\+\+](../windows/overview-of-generics-in-visual-cpp.md)  
- Les informations sur les génériques sont, la motivation de la fonctionnalité de langues, les définitions des termes utilisés pour décrire les génériques, ainsi que des informations sur l'utilisation des types référence et des types de valeurs en tant que paramètres de type pour les génériques.  
+ [Vue d’ensemble de génériques dans Visual C++](../windows/overview-of-generics-in-visual-cpp.md)  
+ Informations sur les génériques sont la motivation de la fonctionnalité de langage, définitions des termes utilisés pour décrire des génériques et les informations sur l’utilisation des types référence et les types valeur en tant que paramètres de type pour les génériques.  
   
- [Generic Interfaces \(Visual C\+\+\)](../windows/generic-interfaces-visual-cpp.md)  
- Informations sur la définition et l'utilisation des interfaces génériques.  
+ [Interfaces génériques (Visual C++)](../windows/generic-interfaces-visual-cpp.md)  
+ Informations sur la définition et à l’aide d’interfaces génériques.  
   
- [Generic Delegates \(Visual C\+\+\)](../windows/generic-delegates-visual-cpp.md)  
- Informations sur la définition et l'utilisation des délégués génériques.  
+ [Délégués génériques (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
+ Informations sur la définition et utilisation de délégués génériques.  
   
- [Constraints on Generic Type Parameters \(C\+\+\/CLI\)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
- Informations sur l'utilisation des contraintes dans les types génériques.  
+ [Contraintes sur les paramètres de type générique (C++-CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+ Informations sur l’utilisation de contraintes dans des types génériques.  
   
- [Consuming Generics \(C\+\+\/CLI\)](../windows/consuming-generics-cpp-cli.md)  
- Informations sur l'utilisation des caractères génériques définies dans les assemblys. net, éventuellement créés dans d'autres langues, dans Visual C\+\+.  
+ [Utilisation de génériques (C++-CLI)](../windows/consuming-generics-cpp-cli.md)  
+ Informations sur l’utilisation de génériques définis dans des assemblys .NET, éventuellement créés dans d’autres langages, dans Visual C++.  
   
- [Generics and Templates \(Visual C\+\+\)](../windows/generics-and-templates-visual-cpp.md)  
- Comparer les génériques et les modèles, quand utiliser chacune, et comment les combiner utilement.  
+ [Génériques et modèles (Visual C++)](../windows/generics-and-templates-visual-cpp.md)  
+ Une comparaison des modèles, utilisez chaque et comment les combiner utilement et génériques.  
   
- **Pris en charge par le Common Language Runtime.**  
+ **Prise en charge par le Common Language Runtime**  
   
- [Generic Functions \(C\+\+\/CLI\)](../windows/generic-functions-cpp-cli.md)  
- Informations sur la définition et l'utilisation des fonctions génériques et les méthodes.  
+ [Fonctions génériques (C++-CLI)](../windows/generic-functions-cpp-cli.md)  
+ Informations sur la définition et à l’aide des méthodes et des fonctions génériques.  
   
- [Generic Classes \(C\+\+\/CLI\)](../windows/generic-classes-cpp-cli.md)  
- Informations sur la définition et l'utilisation des classes génériques.  
+ [Classes génériques (C++-CLI)](../windows/generic-classes-cpp-cli.md)  
+ Informations sur la définition et à l’aide des classes génériques.  
   
-## Rubriques connexes  
- [Comment : itérer au sein d'une collection générique en utilisant for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)  
- Utilisation du mot clé [for each, in](../dotnet/for-each-in.md) sur une collection générique.  
+## <a name="related-sections"></a>Rubriques connexes  
+ [Guide pratique pour itérer au sein d’une collection générique en utilisant for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)  
+ À l’aide de la [pour chacun, dans](../dotnet/for-each-in.md) mot clé dans une collection générique.  
   
- [Génériques dans la bibliothèque de classes .NET Framework](../Topic/Generics%20in%20the%20.NET%20Framework%20Class%20Library%20\(C%23%20Programming%20Guide\).md)  
- Parle de l'espace de noms de la bibliothèque de classes .NET Framework `System.Collections.Generic`, qui comprend plusieurs classes de collection génériques prêtes à l'emploi et les interfaces associées.  
-  
- [Introduction aux génériques](../Topic/Introduction%20to%20Generics%20\(C%23%20Programming%20Guide\).md)  
- La section génériques dans la documentation visual C\#.  
-  
- [Types génériques Visual Basic](../Topic/Generic%20Types%20in%20Visual%20Basic%20\(Visual%20Basic\).md)  
- La section de génériques dans la documentation Visual Basic.  
-  
- [Vue d'ensemble des modèles](../Topic/Templates%20Overview.md)  
- Les informations sur les modèles en C\+\+.  
-  
-## Voir aussi  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Voir aussi  
+ [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)

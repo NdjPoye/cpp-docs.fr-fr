@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c7f06878b5d7c364704cd028ae87a5b43bd0d738
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7229392e763450e658fc26762751c732bf743bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3860"></a>Erreur du compilateur C3860
 liste d’arguments de type suivant le nom de la classe doit répertorier les paramètres dans l’ordre utilisé dans la liste de paramètres de type  
@@ -40,7 +41,7 @@ template <class T2, class T1>
 void A<T1, T2>::f() {}   // C3860  
 ```  
   
- Résolution possible :  
+ Solution possible :  
   
 ```  
 // C3860b.cpp  
@@ -68,7 +69,7 @@ generic<class T, class U>
 void GC<T,T>::f() {}   // C3860  
 ```  
   
- Résolution possible :  
+ Solution possible :  
   
 ```  
 // C3860d.cpp  

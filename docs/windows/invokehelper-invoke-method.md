@@ -1,32 +1,33 @@
 ---
-title: "InvokeHelper::Invoke, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::InvokeHelper::Invoke"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Invoke (méthode)"
+title: "InvokeHelper::Invoke, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::InvokeHelper::Invoke
+dev_langs: C++
+helpviewer_keywords: Invoke method
 ms.assetid: 98618815-c30e-4699-b3dd-203c91b1bf3b
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a8707ac96c0417eddb015d7e802433bf071dda80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# InvokeHelper::Invoke, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="invokehelperinvoke-method"></a>InvokeHelper::Invoke, méthode
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 STDMETHOD(  
@@ -61,7 +62,7 @@ STDMETHOD(
 )( typename Traits;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `arg1`  
  Argument 1.  
   
@@ -78,7 +79,7 @@ STDMETHOD(
  Argument 5.  
   
  `arg6`  
- Argument 6.  
+ Arguments 6.  
   
  `arg7`  
  Argument 7.  
@@ -89,17 +90,17 @@ STDMETHOD(
  `arg9`  
  Argument 9.  
   
-## Valeur de retour  
- S\_OK si l'opération a réussi; sinon, un HRESULT décrivant l'erreur.  
+## <a name="return-value"></a>Valeur de retour  
+ S_OK en cas de réussite ; Sinon, un HRESULT qui décrit l’erreur.  
   
-## Notes  
- Appelle le gestionnaire d'événements dont la signature contient le nombre d'arguments spécifié.  
+## <a name="remarks"></a>Notes  
+ Appelle le Gestionnaire d’événements dont la signature contient le nombre spécifié d’arguments.  
   
-## Configuration requise  
- **En\-tête:** event.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** event.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
- [InvokeHelper, structure](../windows/invokehelper-structure.md)   
+## <a name="see-also"></a>Voir aussi  
+ [InvokeHelper (Structure)](../windows/invokehelper-structure.md)   
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 32fbc99ab51736b5950ce7982457dd0f2f1bc1b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96233323e5a95f88a43fb56162393238f8c2e091
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="if-else-statement-c"></a>if-else, instruction (C++)
 Contrôles création de branches conditionnelles. Les instructions dans le *-bloc if* sont exécutés uniquement si la *expression if* prend une valeur différente de zéro (ou `true`). Si la valeur de *expression* est différent de zéro, *statement1* et toutes les autres instructions du bloc sont exécutées et l’autre bloc, le cas échéant, est ignoré. Si la valeur de *expression* est égal à zéro, puis le bloc if est ignoré et l’autre bloc, le cas échéant, est exécuté. Sont des expressions qui correspondent à zéro

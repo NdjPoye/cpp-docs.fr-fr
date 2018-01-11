@@ -1,29 +1,28 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4098 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4098"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4098"
+title: Compilateur avertissement (niveau 1) C4098 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4098
+dev_langs: C++
+helpviewer_keywords: C4098
 ms.assetid: 8c8aef1c-1639-44ec-a3dd-c0dfe9aa727d
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2422ca5a9037ad573d2ed0fd4cef8eca347d0d86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4098
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'fonction' : fonction 'void' retournant une valeur  
+# <a name="compiler-warning-level-1-c4098"></a>Compilateur avertissement (niveau 1) C4098
+'fonction' : une fonction retournant une valeur void  
   
- Une fonction déclarée avec un type de retour [void](../../cpp/void-cpp.md) a une instruction `return` qui retourne une valeur.  Le compilateur suppose que la fonction retourne une valeur de type `int`.
+ Une fonction déclarée avec le type de retour [void](../../cpp/void-cpp.md) a un `return` instruction qui retourne une valeur. Le compilateur suppose que la fonction retourne une valeur de type `int`.

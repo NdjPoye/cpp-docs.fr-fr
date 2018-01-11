@@ -1,50 +1,50 @@
 ---
-title: "Avertissement des outils &#201;diteur de liens LNK4210 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4210"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4210"
+title: "LNK4210 d’avertissement des outils Éditeur de liens | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4210
+dev_langs: C++
+helpviewer_keywords: LNK4210
 ms.assetid: db48cff8-a2be-4a77-8d03-552b42c228fa
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e4e2d596527b60735b42fb4edfff6f36d0be808d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement des outils &#201;diteur de liens LNK4210
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-la section 'section' existe ; il se peut qu'il y ait des terminateurs ou des initialiseurs static non gérés  
+# <a name="linker-tools-warning-lnk4210"></a>Avertissement des outils Éditeur de liens LNK4210  
   
- Du code a introduit des initialiseurs ou terminateurs statiques, mais le CRT ou son équivalent \(qui doit les exécuter\) n'est pas exécuté au démarrage de l'application.  Voici quelques exemples de code qui provoqueraient cette situation :  
+> section *section* existe ; il se peut qu’il y ait des terminateurs ou des initialiseurs static non gérés  
   
--   Une variable de classe globale avec une table de constructeurs, de destructeurs ou de fonctions virtuelles.  
+Du code a introduit des terminateurs ou des initialiseurs statiques, mais le code de démarrage de bibliothèque VCRuntime ou son équivalent (qui doit exécuter les terminateurs ou des initialiseurs statiques) n’est pas exécuté lorsque l’application démarre. Voici quelques exemples de code qui requiert des terminateurs ou des initialiseurs statiques :  
   
--   Une variable globale initialisée avec une constante à un moment autre que lors de la compilation.  
+-   Variable de classe globale avec un constructeur, un destructeur ou une table de fonctions virtuelles.  
   
- Pour résoudre ce problème, essayez l'une des actions suivantes :  
+-   Variable globale initialisée avec une constante au moment de compilation.  
   
--   Supprimez tout le code contenant des initialiseurs statiques.  
+Pour résoudre ce problème, essayez l’une des opérations suivantes :  
   
--   N'utilisez pas [\/NOENTRY](../../build/reference/noentry-no-entry-point.md).  Une fois \/NOENTRY supprimé, vous devrez peut\-être également ajouter msvcrt.lib, libcmt.lib ou libcmtd.lib à votre ligne de commande de l'éditeur de liens.  
+-   Supprimez tout le code avec des initialiseurs statiques.  
   
--   Ajoutez msvcrt.lib, libcmt.lib ou libcmtd.lib à votre ligne de commande de l'éditeur de liens.  
+-   N’utilisez pas [/NOENTRY](../../build/reference/noentry-no-entry-point.md). Après avoir supprimé /NOENTRY, vous devrez peut-être également supprimer [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) à partir de votre ligne de commande de l’éditeur de liens.  
   
--   Lors du déplacement de la compilation \/clr:pure vers \/clr, supprimez l'option [\/ENTRY](../../build/reference/entry-entry-point-symbol.md) de la ligne de l'éditeur de liens.  L'initialisation du CRT est alors activée et permet l'exécution des initialiseurs statiques au démarrage de l'application.  
+-   Si votre build utilise/MT, ajoutez libcmt.lib, libvcruntime.lib et libucrt.lib à votre ligne de commande de l’éditeur de liens. Si votre build utilise /MTd, ajoutez libcmtd.lib, vcruntimed.lib et libucrtd.lib.  
   
--   Si votre projet est généré avec [\/ENTRY](../../build/reference/entry-entry-point-symbol.md), et si une fonction autre que `_DllMainCRTStartup` est passée à \/ENTRY, la fonction doit appeler CRT\_INIT.  Consultez [Comportement de la bibliothèque d'exécutables](../../build/run-time-library-behavior.md) et l'article Q94248 de la Base de connaissances, [http:\/\/support.microsoft.com\/default.aspx?scid\=kb;en\-us;94248](http://support.microsoft.com/default.aspx?scid=kb;en-us;94248) pour plus d'informations.  
+-   Lors du déplacement de/CLR : pure compilation vers/CLR, supprimez le [/ENTRY](../../build/reference/entry-entry-point-symbol.md) option à partir de la ligne de l’éditeur de liens. Cela permet l’initialisation CRT et les initialiseurs statiques puissent être exécutés au démarrage de l’application.  
   
- L'option du compilateur [\/GS](../../build/reference/gs-buffer-security-check.md) requiert du code de démarrage CRT.  
+ Le [/GS](../../build/reference/gs-buffer-security-check.md) option du compilateur exige l’initialisation par le `__security_init_cookie` (fonction). Cette initialisation est fournie par défaut dans le code de démarrage de bibliothèque VCRuntime qui s’exécute dans `_DllMainCRTStartup`.  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)
+-   Si votre projet est généré à l’aide de /ENTRY et si /ENTRY est passé une fonction autre que `_DllMainCRTStartup`, la fonction doit appeler `_CRT_INIT` pour initialiser la bibliothèque CRT. Cet appel seul n’est pas suffisant si votre DLL utilise/GS, nécessite des initialiseurs statiques ou est appelée dans le contexte du code MFC ou ATL. Consultez [DLL et Visual C++ comportement de la bibliothèque Runtime](../../build/run-time-library-behavior.md) pour plus d’informations.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)

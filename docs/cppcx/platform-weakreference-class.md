@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c161bf901b0e055885858d8570925f58e2eb971a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8666896b0e3414dca8f4cd1f8c4e2f34e9b98050
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformweakreference-class"></a>Platform::WeakReference, classe
 Représente une référence faible à une instance d'une classe ref.  
@@ -51,7 +52,7 @@ class WeakReference
 |[WeakReference::operator=](#operator-assign)|Assigne une nouvelle valeur à l'objet WeakReference.|  
 |[WeakReference::operator BoolType](#booltype)|Implémente le modèle booléen sécurisé.|  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La classe WeakReference elle-même n'est pas une classe ref et par conséquent elle n'hérite pas de Platform::Object^ et ne peut pas être utilisée dans la signature d'une méthode publique.  
 
 ## <a name="operator-assign"></a>WeakReference::operator =
@@ -66,7 +67,7 @@ WeakReference& operator=(WeakReference&& otherArg);
 WeakReference& operator=(const volatile ::Platform::Object^ const otherArg); 
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La dernière surcharge de la liste ci-dessus vous permet d'assigner une classe ref à une variable WeakReference. Dans ce cas, la classe ref est castée en aval en [Platform::Object](../cppcx/platform-object-class.md)^. Vous restaurez le type d’origine ultérieurement en le spécifiant comme argument pour le paramètre de type dans le [WeakReference::Resolve\<T >](#resolve) fonction membre.  
   
 ## <a name="booltype"></a>WeakReference::operator BoolType
@@ -95,7 +96,7 @@ T^ Resolve() const
  Handle vers la classe ref à laquelle l'objet WeakReference était associé précédemment ou nullptr.  
   
 ### <a name="example"></a>Exemple  
- Il s'agit de la description d'un exemple de code.  
+ Il s'agit de la description pour un exemple de code.  
   
 ```  
   

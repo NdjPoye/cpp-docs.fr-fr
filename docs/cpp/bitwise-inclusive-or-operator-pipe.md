@@ -4,31 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - bitor
 - '|'
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - OR operator [C++], bitwise inclusive
 - bitwise operators [C++], OR operator
 - inclusive OR operator
 - '| operator'
 ms.assetid: 4c8a6a68-d828-447d-875a-aedb4ce3aa9a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: bb2fcc7c85e112b80929b2a8392f0e6c19ab97f2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: eaef650cc747cdb9e628ae3b786bc1c1e21b5bdf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bitwise-inclusive-or-operator-"></a>Opérateur de bits OR inclusif : |
 ## <a name="syntax"></a>Syntaxe  
@@ -41,7 +39,7 @@ expression
   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’opérateur OR inclusif au niveau du bit (**&#124;**) compare chaque bit de son premier opérande au bit correspondant de son second opérande. Si l'un des bits est 1, le bit correspondant de résultat a la valeur 1. Sinon, le bit de résultat correspondant a la valeur 0.  
   
  Les deux opérandes de l’opérateur OR inclusif de bits doivent être de types intégraux. Les conversions arithmétiques courantes traitées dans [Conversions Standard](standard-conversions.md) sont appliquées aux opérandes.  
@@ -69,5 +67,4 @@ int main() {
 ## <a name="see-also"></a>Voir aussi  
  [Les opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Opérateurs de bits C](../c-language/c-bitwise-operators.md)
-
 

@@ -25,11 +25,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1235006856831c97de436a9f2b10d4aa1ad65852
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4188647b821fc233835ea4780804848c4b03228
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csplitbutton-class"></a>Classe de CSplitButton
 La `CSplitButton` classe représente un contrôle bouton partagé. Le contrôle bouton partagé exécute un comportement par défaut lorsqu’un utilisateur clique sur la partie principale du bouton et affiche un menu déroulant lorsqu’un utilisateur clique sur la flèche déroulante du bouton.  
@@ -61,7 +62,7 @@ class CSplitButton : public CButton
 |----------|-----------------|  
 |[CSplitButton::OnDropDown](#ondropdown)|Gère la `BCN_DROPDOWN` notification envoyé par le système lorsqu’un utilisateur clique sur la flèche déroulante du contrôle de bouton Fractionner en cours.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `CSplitButton` classe est dérivée de la [CButton](../../mfc/reference/cbutton-class.md) classe. Le contrôle bouton partagé est un contrôle bouton dont le style est `BS_SPLITBUTTON`. Il affiche un menu personnalisé lorsqu’un utilisateur clique sur la flèche déroulante. Pour plus d’informations, consultez la `BS_SPLITBUTTON` et `BS_DEFSPLITBUTTON` styles dans [les Styles de bouton](http://msdn.microsoft.com/library/windows/desktop/bb775951).  
   
  La figure suivante représente une boîte de dialogue qui contient un contrôle pager et un contrôle bouton partagé (1). La flèche déroulante (2) a déjà été cliqué et le sous-menu (3) s’affiche.  
@@ -79,7 +80,7 @@ class CSplitButton : public CButton
   
  `CSplitButton`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcmn.h  
   
  Cette classe est pris en charge dans [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] et versions ultérieures.  
@@ -130,7 +131,7 @@ CSplitButton(CMenu* pMenu)
 |[in] `nSubMenuId`|L’ID de ressource d’un sous-menu.|  
 |[in] `pMenu`|Un pointeur vers un [CMenu](../../mfc/reference/cmenu-class.md) objet qui spécifie un sous-menu. Le `CSplitButton` supprime l’objet le `CMenu` objet et qui lui est associée `HMENU` lorsque le `CSplitButton` objet devient hors de portée.|  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez le [CSplitButton::Create](#create) méthode pour créer un contrôle bouton partagé et l’attacher à la `CSplitButton` objet.  
   
 ##  <a name="ondropdown"></a>CSplitButton::OnDropDown  
@@ -149,7 +150,7 @@ afx_msg void OnDropDown(
 |[in] `pNMHDR`|Pointeur vers un [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) structure qui contient des informations sur la [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) notification.|  
 |[out] `pResult`|(Pas utilisé ; aucune valeur n’est retournée.) Valeur de retour de la [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) notification.|  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque l’utilisateur clique sur la flèche de déroulement sur un contrôle bouton partagé, le système envoie un `BCN_DROPDOWN` notification d’un message, ce qui le `OnDropDown` descripteurs de méthode. Toutefois, le `CSplitButton` objet ne transfère pas le `BCN_DROPDOWN` notification pour le contrôle qui contient le contrôle bouton partagé. Par conséquent, le contrôle conteneur ne peut pas prendre en charge une action personnalisée en réponse à la notification.  
   
  Pour implémenter une action personnalisée qui prend en charge le contrôle conteneur, utilisez un [CButton](../../mfc/reference/cbutton-class.md) objet avec un style de `BS_SPLITBUTTON` au lieu d’un `CSplitButton` objet. Ensuite implémenter un gestionnaire pour le `BCN_DROPDOWN` notification dans le `CButton` objet. Pour plus d’informations, consultez [les Styles de bouton](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
@@ -182,7 +183,7 @@ void SetDropDownMenu(CMenu* pMenu);
 |[in] `nSubMenuId`|L’ID de ressource d’un sous-menu.|  
 |[in] `pMenu`|Pointeur vers un [CMenu](../../mfc/reference/cmenu-class.md) objet qui spécifie un sous-menu. Le `CSplitButton` supprime l’objet le `CMenu` objet et qui lui est associée `HMENU` lorsque le `CSplitButton` objet devient hors de portée.|  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `nMenuId` paramètre identifie une barre de menus, qui est une liste horizontale d’éléments de barre de menus. Le `nSubMenuId` paramètre est un nombre index de base zéro qui identifie un sous-menu qui correspond à la liste déroulante d’éléments de menu associé à chaque élément de barre de menus. Par exemple, une application de type a un menu qui contient les éléments de barre de menu « Fichier », « Modifier » et « Help ». L’élément de barre de menu « Fichier » a un sous-menu qui contient les éléments de menu « Ouvrir », « Fermer » et « Exit ». Lorsque vous cliquez sur la flèche déroulante du contrôle bouton partagé, le contrôle affiche le sous-menu spécifié, pas la barre de menus.  
   
  La figure suivante représente une boîte de dialogue qui contient un contrôle pager et un contrôle bouton partagé (1). La flèche déroulante (2) a déjà été cliqué et le sous-menu (3) s’affiche.  

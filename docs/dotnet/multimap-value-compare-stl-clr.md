@@ -1,42 +1,43 @@
 ---
-title: "multimap::value_compare (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::value_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_compare (membre) (STL/CLR)"
+title: multimap::value_compare (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::value_compare
+dev_langs: C++
+helpviewer_keywords: value_compare member [STL/CLR]
 ms.assetid: a066968b-df6e-40a7-83fd-b8520b07a1e0
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a25d548380ec82b4cf64d77b352967d0c33d0153
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# multimap::value_compare (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le délégué de classement pour deux valeurs d'éléments.  
+# <a name="multimapvaluecompare-stlclr"></a>multimap::value_compare (STL/CLR)
+Délégué de classement pour les deux valeurs d’éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
   
-## Notes  
- Le type est un synonyme de délégué qui détermine le classement de ses valeurs d'arguments.  
+## <a name="remarks"></a>Notes  
+ Le type est un synonyme pour le délégué qui détermine l’ordre de ses arguments de valeur.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_multimap_value_compare.cpp   
@@ -64,16 +65,19 @@ int main()
   
 ```  
   
-  **compare\(\[L'a', 1\], \[L'a', 1\]\) \= Faux**  
-**compare\(\[L'a', 1\], \[L'b', 2\]\) \= Vrai**  
-**compare\(\[L'b', 2\], \[L'a', 1\]\) \= Faux**   
-## Configuration requise  
- **En\-tête :** \<cliext\/map\>  
+```Output  
+compare([L'a', 1], [L'a', 1]) = False  
+compare([L'a', 1], [L'b', 2]) = True  
+compare([L'b', 2], [L'a', 1]) = False  
+```  
   
- **Espace de nom** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/map >  
   
-## Voir aussi  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::key\_compare](../dotnet/multimap-key-compare-stl-clr.md)   
- [multimap::value\_comp](../dotnet/multimap-value-comp-stl-clr.md)   
- [multimap::value\_type](../dotnet/multimap-value-type-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)   
+ [multimap::value_comp (STL/CLR)](../dotnet/multimap-value-comp-stl-clr.md)   
+ [multimap::value_type (STL/CLR)](../dotnet/multimap-value-type-stl-clr.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: a1d70fbcd3096b00f74df3a5a97891da5c198e97
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7a093998cb5e6da2e45566e2f4221c904c213f8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformdetails-namespace"></a>Platform::Details (espace de noms)
 Cet espace de noms n'est destiné qu'à une utilisation interne et non à des fins de développement.  
@@ -36,7 +37,7 @@ namespace Platform {
 ### <a name="members"></a>Membres  
  Bien que cet espace de noms est destiné à un usage interne, les navigateurs peuvent afficher les membres suivants de cet espace de noms.  
   
-|Nom|Note|  
+|Name|Note|  
 |----------|------------|  
 |Console|Classe Affiche la sortie dans les tests d'unité.|  
 |GUID|Struct|  
@@ -54,7 +55,7 @@ namespace Platform {
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Platform`  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **Métadonnées :** platform.winmd  
   
  **Espace de noms :** Platform::Details  

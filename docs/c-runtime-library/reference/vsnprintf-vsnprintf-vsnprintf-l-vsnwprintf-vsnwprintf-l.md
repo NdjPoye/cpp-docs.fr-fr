@@ -63,11 +63,12 @@ caps.latest.revision: "35"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4850299b43b805c93136a59d5ee227e8bf79d2dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 710f4119ef943be5b58e4b617c1da1bc75e01c3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 Écrivez la sortie mise en forme en utilisant un pointeur désignant une liste d’arguments. Il existe des versions plus sécurisées de ces fonctions. Consultez [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md).  
@@ -162,7 +163,7 @@ int _vsnwprintf_l(
  `locale`  
  Paramètres régionaux à utiliser.  
   
- Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Valeur de retour  
  La fonction `vsnprintf` retourne le nombre de caractères écrits, sans compter le caractère null de fin. Si la taille de mémoire tampon spécifiée par `count` n’est pas suffisante pour contenir la sortie spécifiée par `format` et `argptr`, la valeur de retour de `vsnprintf` est le nombre de caractères qui seraient écrits, sans compter le caractère null, si la valeur de `count` était suffisamment grande. Si la valeur de retour est supérieure à `count` - 1, la sortie a été tronquée. La valeur de retour -1 indique qu’une erreur de codage s’est produite.  
@@ -197,14 +198,14 @@ int _vsnwprintf_l(
 |`_vsntprintf`|`_vsnprintf`|`_vsnprintf`|`_vsnwprintf`|  
 |`_vsntprintf_l`|`_vsnprintf_l`|`_vsnprintf_l`|`_vsnwprintf_l`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis (C)|En-tête requis (C++)|  
 |-------------|---------------------------|-------------------------------|  
 |`vsnprintf`, `_vsnprintf`, `_vsnprintf_l`|\<stdio.h>|\<stdio.h> ou \<cstdio>|  
 |`_vsnwprintf`, `_vsnwprintf_l`|\<stdio.h> ou \<wchar.h>|\<stdio.h>, \<wchar.h>, \<cstdio> ou \<cwchar>|  
   
- Les fonctions `_vsnprintf`, `_vsnprintf_l`, `_vsnwprintf` et `_vsnwprintf_l` sont des fonctions fournies par Microsoft. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Les fonctions `_vsnprintf`, `_vsnprintf_l`, `_vsnwprintf` et `_vsnwprintf_l` sont des fonctions fournies par Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

@@ -30,11 +30,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 422d01cf138da0468a430e1a802369e8ecda093a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff31849020c9daed7999ae1569e8c12249a4b834
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="propagatorblock-class"></a>propagator_block, classe
 La classe `propagator_block` est une classe de base abstraite pour les blocs de messages qui sont à la fois une source et une cible. Elle combine les fonctionnalités des classes `source_block` et `target_block`.  
@@ -73,7 +74,7 @@ class propagator_block : public source_block<_TargetLinkRegistry,
 |[propagator_block](#ctor)|Construit un objet `propagator_block`.|  
 |[~ propagator_block, destructeur](#dtor)|Détruit un objet `propagator_block`.|  
   
-### <a name="public-methods"></a>Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -95,7 +96,7 @@ class propagator_block : public source_block<_TargetLinkRegistry,
 |[unlink_source](#unlink_source)|Dissocie un bloc source spécifié à partir de ce `propagator_block` objet.|  
 |[unlink_sources](#unlink_sources)|Dissocie tous les blocs de code source à partir de ce `propagator_block` objet. (Substitue [ITarget::unlink_sources](itarget-class.md#unlink_sources).)|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour éviter l’héritage multiple, la `propagator_block` classe hérite de la `source_block` classe et `ITarget` classe abstraite. La plupart des fonctionnalités dans le `target_block` classe est répliquée ici.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -107,7 +108,7 @@ class propagator_block : public source_block<_TargetLinkRegistry,
   
  `propagator_block`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -120,7 +121,7 @@ class propagator_block : public source_block<_TargetLinkRegistry,
 void decline_incoming_messages();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode est appelée par le destructeur pour vous assurer que les nouveaux messages sont refusés pendant que la destruction est en cours d’exécution.  
   
 ##  <a name="initialize_source_and_target"></a>initialize_source_and_target 
@@ -183,7 +184,7 @@ virtual message_status propagate(
 ### <a name="return-value"></a>Valeur de retour  
  A [message_status](concurrency-namespace-enums.md) indication de ce que la cible décidé de faire avec le message.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `propagate` méthode est appelée sur un bloc cible par un bloc source lié. Il la file d’attente une tâche asynchrone pour gérer le message, si un n’est pas déjà en attente ou de l’exécution.  
   
  La méthode lève un [invalid_argument](../../../standard-library/invalid-argument-class.md) exception si le `_PMessage` ou `_PSource` paramètre est `NULL`.  
@@ -264,7 +265,7 @@ virtual message_status send(
 ### <a name="return-value"></a>Valeur de retour  
  A [message_status](concurrency-namespace-enums.md) indication de ce que la cible décidé de faire avec le message.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode lève un [invalid_argument](../../../standard-library/invalid-argument-class.md) exception si le `_PMessage` ou `_PSource` paramètre est `NULL`.  
   
 ##  <a name="send_message"></a>send_message 
@@ -280,7 +281,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>Valeur de retour  
  A [message_status](concurrency-namespace-enums.md) indication de ce que la cible décidé de faire avec le message.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, ce bloc retourne `declined` sauf substitution par une classe dérivée.  
   
 ##  <a name="unlink_source"></a>unlink_source 

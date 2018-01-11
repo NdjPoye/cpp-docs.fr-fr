@@ -16,11 +16,14 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b7c96ff7be36ac90560d36c3c0989379eea24777
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9d974e8526f983801ed011520f7f78ff8c6cb564
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>Attributs définis par l'utilisateur  (extensions du composant C++)
 Attributs personnalisés permettent d’étendre les métadonnées d’une interface, classe ou structure, méthode, paramètre ou énumération.  
@@ -33,13 +36,13 @@ Attributs personnalisés permettent d’étendre les métadonnées d’une inter
   
 ### <a name="remarks"></a>Notes  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
  Attributs personnalisés vous permettent d’étendre les métadonnées d’un élément géré. Pour plus d’informations, consultez [Attributs](/dotnet/standard/attributes/index).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les informations et la syntaxe présentée dans cette rubrique est destinée à remplacer les informations présentées dans [attribut](../windows/attribute.md).  
   
  Vous pouvez définir un attribut personnalisé par la définition d’un type en apportant <xref:System.Attribute> une classe de base pour le type et éventuellement appliquer le <xref:System.AttributeUsageAttribute> attribut.  
@@ -54,7 +57,7 @@ Attributs personnalisés permettent d’étendre les métadonnées d’une inter
   
  Pour plus d’informations sur la signature d’assemblys dans Visual C++, consultez [les assemblys de nom fort (signature d’Assembly) (C + c++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  

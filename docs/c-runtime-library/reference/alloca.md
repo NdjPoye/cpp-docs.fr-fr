@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _alloca
+apiname: _alloca
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,37 +23,22 @@ apitype: DLLExport
 f1_keywords:
 - _alloca
 - alloca
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - memory allocation, stack
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 5875a26dc5758674665fba2fde5b51c2ff53420e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a48b0ab3e9717416736acf4187a27df2c737089b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alloca"></a>_alloca
 Alloue de la mémoire sur la pile. Cette fonction est déconseillée, car une version plus sécurisée est disponible ; consultez [_malloca](../../c-runtime-library/reference/malloca.md).  
@@ -77,7 +60,7 @@ void *_alloca(
   
  Une exception de dépassement de capacité de pile est générée si l’espace ne peut pas être alloué. L’exception de dépassement de capacité de pile n’est pas une exception C++ ; il s’agit d’une exception structurée. Au lieu d’utiliser la gestion des exceptions C++, vous devez utiliser la [gestion des exceptions structurée](../../cpp/structured-exception-handling-c-cpp.md) (SEH).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `_alloca`alloue `size` octets à partir de la pile du programme. L’espace alloué est automatiquement libérée lorsque la fonction d’appel s’arrête (pas lors de l’allocation n’est hors de portée). Par conséquent, ne passez pas de la valeur du pointeur retournée par `_alloca` en tant qu’argument à [libre](../../c-runtime-library/reference/free.md).  
   
  Des restrictions s’appliquent à l’appel explicite de `_alloca` dans un gestionnaire d’exceptions (EH). Les routines EH qui s’exécutent sur des processeurs de classe x86 opèrent dans le cadre de leur propre mémoire : elles effectuent leurs tâches dans un espace mémoire qui n’est pas basé sur l’emplacement actuel du pointeur de pile de la fonction englobante. Les implémentations les plus courantes incluent les expressions de gestion des exceptions structurées Windows NT (SEH) et les expressions de clause catch C++. Ainsi, appeler explicitement `_alloca` dans l’un des scénarios suivants entraîne l’échec du programme pendant le retour à la routine EH appelante :  
@@ -95,7 +78,7 @@ void *_alloca(
   
  Outre les restrictions ci-dessus, lorsque vous utilisez la[/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) option, `_alloca` ne peut pas être utilisé dans `__except` blocs. Pour plus d'informations, consultez [/clr Restrictions](../../build/reference/clr-restrictions.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

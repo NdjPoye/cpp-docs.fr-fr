@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 8c1f90be99cd0471dfd78c5e64cee14f4b7737a3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 92b7a4ce126a5260b55d8a3cbaeb2bee36f4a27a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformdetailsiprintable-interface"></a>Platform::Details::IPrintable (interface)
 Cette interface est destinée à une utilisation interne uniquement, et non à des fins de développement.  
@@ -31,13 +32,13 @@ Cette interface est destinée à une utilisation interne uniquement, et non à d
 interface class IPrintable;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette interface est fournie uniquement par souci d’exhaustivité, car elle peut être inspectée avec les navigateurs.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Platform`  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **Métadonnées :** platform.winmd  
   
  **Espace de noms :** Platform::Details  

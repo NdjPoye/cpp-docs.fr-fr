@@ -1,37 +1,35 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4172 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4172"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4172"
+title: "Du compilateur (niveau 1) d’avertissement C4172 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4172
+dev_langs: C++
+helpviewer_keywords: C4172
 ms.assetid: a8d2bf65-d8b1-4fe3-8340-a223d7e7fde6
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3cda1f5c578be76bbe98b60d014a70e970fcc2d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4172
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-retourne l'adresse d'une variable locale ou temporaire  
+# <a name="compiler-warning-level-1-c4172"></a>Du compilateur (niveau 1) d’avertissement C4172
+Retourne l’adresse d’une variable locale ou temporaire  
   
- Une fonction retourne l'adresse d'une variable locale ou d'un objet temporaire.  Les variables locales et objets temporaires sont détruits au retour d'une fonction, donc l'adresse retournée n'est pas valide.  
+ Une fonction retourne l’adresse d’un objet temporaire ou de variable local. Variables locales et les objets temporaires sont détruits lorsqu’une fonction retourne, l’adresse retournée n’est pas valide.  
   
- Revoyez la conception de la fonction afin qu'elle ne retourne pas l'adresse d'un objet local.  
+ Reconcevez la fonction afin qu’il ne retourne pas de l’adresse d’un objet local.  
   
- L'exemple suivant génère l'erreur C4172 :  
+ L’exemple suivant génère l’erreur C4172 :  
   
 ```  
 // C4172.cpp  

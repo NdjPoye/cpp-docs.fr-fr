@@ -4,16 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - catch_cpp
 - try_cpp
 - throw_cpp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - catch keyword [C++]
 - keywords [C++], exception handling
@@ -28,16 +26,16 @@ helpviewer_keywords:
 - throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 89db418a92239460379d1ea41d2d49a8073095c2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b100f1ee61b06639e75290fafd01dca6a10a820c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="try-throw-and-catch-statements-c"></a>Instructions try, throw et catch (C++)
 Pour implémenter la gestion des exceptions dans C++, utilisez les expressions `try`, `throw` et `catch`.  
@@ -85,7 +83,7 @@ MyData GetNetworkResource()
 }  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le code suivant la clause `try` représente la section protégée du code. Le `throw` expression *lève*: autrement dit, déclenche : une exception. Le bloc de code après la clause `catch` constitue le gestionnaire d'exceptions. Il s’agit du gestionnaire qui *intercepte* l’exception est levée si les types dans les `throw` et `catch` expressions sont compatibles. Pour obtenir la liste des règles qui régissent la mise en correspondance de type dans `catch` blocs, consultez [comment les blocs Catch sont évalués](../cpp/how-catch-blocks-are-evaluated-cpp.md). Si l'instruction `catch` spécifie des points de suspension (...) au lieu d'un type, le bloc `catch` gère chaque type d'exception. Lorsque vous compilez avec le [/EHa](../build/reference/eh-exception-handling-model.md) option, celles-ci peuvent inclure des exceptions structurées par C et des exceptions asynchrones générées par le système ou générés par l’application telles que des violations de division par zéro et à virgule flottante de protection, de mémoire . Les blocs `catch` étant traités dans l'ordre du programme pour trouver un type correspondant, le gestionnaire de points de suspension devra être le dernier gestionnaire associé au bloc `try`. Utilisez `catch(...)` avec précaution ; n'autorisez pas un programme à continuer sans que le bloc catch sache comment gérer l'exception spécifique qui est interceptée. En général, un bloc `catch(...)` est utilisé pour enregistrer des erreurs et effectuer un nettoyage spécial avant l'arrêt de l'exécution du programme.  
   
  Une expression `throw` sans opérande lève à nouveau l'exception en cours de traitement. Nous recommandons ce format lorsqu'une exception est levée à nouveau, car celui-ci préserve les informations de type polymorphe de l'exception d'origine. Une telle expression doit être utilisée uniquement dans un gestionnaire `catch` ou dans une fonction appelée depuis un gestionnaire `catch`. L'objet d'une exception levée à nouveau est l'objet de l'exception d'origine, pas une copie.  

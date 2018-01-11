@@ -33,11 +33,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ef5576dbe5df784f9e93de6b1d4167d4ee6afa74
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 327c2b70a1c5afd26953f830217d0a9c05e4d4e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="feclearexcept"></a>feclearexcept
 Tente d’effacer les indicateurs d’exception de virgule flottante spécifiés par l’argument.  
@@ -71,13 +72,13 @@ int feclearexcept(
   
  L’argument `excepts` peut être zéro ou l’opération OR au niveau du bit d’une ou de plusieurs des macros d’exception prises en charge. Le résultat de toute autre valeur d’argument est indéfini.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête C|En-tête C++|  
 |--------------|--------------|------------------|  
 |`feclearexcept`|\<fenv.h>|\<cfenv>|  
   
- Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

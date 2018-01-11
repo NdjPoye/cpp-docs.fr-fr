@@ -1,32 +1,33 @@
 ---
-title: "InterfaceTraits::FillArrayWithIid, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceTraits::FillArrayWithIid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FillArrayWithIid (méthode)"
+title: "Interfacetraits::fillarraywithiid, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceTraits::FillArrayWithIid
+dev_langs: C++
+helpviewer_keywords: FillArrayWithIid method
 ms.assetid: 73583177-adc9-4fcb-917d-fa7e6d07c990
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c626955e957bd3db4b4d34255a38751f3339dcf9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# InterfaceTraits::FillArrayWithIid, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="interfacetraitsfillarraywithiid-method"></a>InterfaceTraits::FillArrayWithIid, méthode
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 __forceinline static void FillArrayWithIid(  
@@ -36,25 +37,25 @@ __forceinline static void FillArrayWithIid(
   
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `index`  
- Pointeur vers un champ qui contient une valeur d'index de base zéro.  
+ Pointeur vers un champ qui contient une valeur d’index de base zéro.  
   
  `iids`  
- Un tableau d'IDs d'interface.  
+ Tableau d’ID d’interface.  
   
-## Remarques  
- Assigne l'ID d'interface de `Base` à l'élément de tableau spécifié par l'argument d'index.  
+## <a name="remarks"></a>Notes  
+ Attribue l’ID de l’interface de `Base` à l’élément de tableau spécifié par l’argument d’index.  
   
- Contrairement au nom de cette API, un seul élément du tableau est modifié; pas le tableau entièr.  
+ Contraire à celui de cette API, un seul groupe est modifié ; pas l’intégralité du tableau.  
   
- Pour plus d'informations sur `Base`, consultez la section Typedefs Publiques dans [InterfaceTraits, structure](../windows/interfacetraits-structure.md).  
+ Pour plus d’informations sur `Base`, consultez la section Typedefs publics dans [interfacetraits, Structure](../windows/interfacetraits-structure.md).  
   
-## Configuration requise  
- **En\-tête:** implements.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** implements.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
- [InterfaceTraits, structure](../windows/interfacetraits-structure.md)   
+## <a name="see-also"></a>Voir aussi  
+ [InterfaceTraits (Structure)](../windows/interfacetraits-structure.md)   
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

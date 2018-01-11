@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 81a1e90cb331bc559084ce536bc1038ff1f0b5d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d7aa3a29615f6c744a3c790dd7b223225bc31f87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformarray-class"></a>Platform::Array (classe)
 Représente un tableau unidimensionnel et modifiable qui peut être reçu et passé via l'interface binaire d'application (ABI).  
@@ -54,7 +55,7 @@ private ref class Array<TArg, 1> :
 |-|-|  
 |[Array::value](#value)|Récupère un handle vers le tableau actuel.|  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La classe Array est sealed et ne peut pas être héritée.  
   
  Le système de type Windows Runtime ne prend pas en charge le concept des tableaux en escalier et par conséquent, vous ne pouvez pas utiliser un IVector < Platform::Array\<T >> comme paramètre de méthode ou de la valeur de retour. Pour passer un tableau en escalier ou une séquence de séquences à travers l'ABI, utilisez `IVector<IVector<T>^>`.  
@@ -65,7 +66,7 @@ private ref class Array<TArg, 1> :
   
  Cette classe est définie dans l'en-tête vccorlib.h, qui est inclus automatiquement par le compilateur. Elle est visible dans Intellisense mais pas dans l'Explorateur d'objets, car elle n'est pas de type public défini dans platform.winmd.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/ZW**  
 
  
@@ -89,7 +90,7 @@ Array(T* data, unsigned int size);
  `data`  
  Pointeur vers un tableau de données de type `T` utilisé pour initialiser l'objet Array.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur la façon de créer des instances de Platform::Array, consultez [Array et WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
 ## <a name="get"></a>Array::Get (méthode)

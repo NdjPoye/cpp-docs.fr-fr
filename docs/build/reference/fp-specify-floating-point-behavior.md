@@ -22,11 +22,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 02ca51ef8c32e59a94f87419dd4a959022a30cde
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f4a86c7bbbd38887944080a5a5c8124310fdd4a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (Spécifier le comportement de virgule flottante)
 Spécifie le comportement de la virgule flottante dans un fichier de code source.  
@@ -76,7 +77,7 @@ Spécifie le comportement de la virgule flottante dans un fichier de code source
  **strict**  
  Modèle de virgule flottante le plus strict. **/ fp : strict** entraîne [fp_contract](../../preprocessor/fp-contract.md) OFF et [fenv_access](../../preprocessor/fenv-access.md) on. **/ fp : sauf** est implicite et peut être désactivée en spécifiant explicitement **/fp : à l’exception de-**. Lorsqu’il est utilisé avec **/fp : à l’exception de-**, **/fp : strict** applique une sémantique à virgule flottante stricte, mais sans tenir compte des événements exceptionnels.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Plusieurs **/FP** options peuvent être spécifiées dans la même compilation.  
   
  Pour contrôler le comportement de virgule flottante par fonction, consultez le [float_control](../../preprocessor/float-control.md) pragma. Cela remplace le **/FP** paramètre du compilateur. Nous vous conseillons d'enregistrer et de restaurer le comportement local en matière de virgule flottante :  

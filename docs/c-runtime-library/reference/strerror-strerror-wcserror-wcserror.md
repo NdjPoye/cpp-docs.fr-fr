@@ -54,11 +54,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b534c0a43c78c42265fa3b36aca523dc27e170fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a268830c14025f3a9581a4ad28481a54fa9f4f71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strerror-strerror-wcserror-wcserror"></a>strerror, _strerror, _wcserror, __wcserror
 Obtient une chaîne de message d'erreur système (`strerror`, `_wcserror`) ou met en forme une chaîne de message d'erreur fournie par l'utilisateur (`_strerror`, `__wcserror`). Il existe des versions plus sécurisées de ces fonctions. Consultez [strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md).  
@@ -114,7 +115,7 @@ if (( _access( "datafile",2 )) == -1 )
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcserror`|`strerror`|`strerror`|`_wcserror`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
@@ -122,7 +123,7 @@ if (( _access( "datafile",2 )) == -1 )
 |`_strerror`|\<string.h>|  
 |`_wcserror`, `__wcserror`|\<string.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple relatif à [perror](../../c-runtime-library/reference/perror-wperror.md).  

@@ -1,57 +1,59 @@
 ---
-title: "ctan, ctanf, ctanl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "ctan"
-  - "ctanf"
-  - "ctanl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "ctan"
-  - "ctanf"
-  - "ctanl"
-  - "complex/ctan"
-  - "complex/ctanf"
-  - "complex/ctanl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ctan (fonction)"
-  - "ctanf (fonction)"
-  - "ctanl (fonction)"
+title: ctan, ctanf, ctanl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- ctan
+- ctanf
+- ctanl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- ctan
+- ctanf
+- ctanl
+- complex/ctan
+- complex/ctanf
+- complex/ctanl
+dev_langs: C++
+helpviewer_keywords:
+- ctan function
+- ctanf function
+- ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e8cf5ceb03a91210ed7ce03c59cef38b36bea487
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ctan, ctanf, ctanl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ctan-ctanf-ctanl"></a>ctan, ctanf, ctanl
 Récupère la tangente d’un nombre complexe.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 _Dcomplex ctan(   
@@ -71,30 +73,30 @@ _Lcomplex ctanl(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `z`  
- Un nombre complexe qui représente l’angle, en radians.  
+ Nombre complexe qui représente l’angle, en radians.  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  Tangente de `z`.  
   
 |Entrée|Exception SEH|Exception `_matherr`|  
-|------------|-------------------|--------------------------|  
-|± ∞, QNAN, IND|aucun|\_DOMAIN|  
-|± ∞ \(`tan`, `tanf`\)|NON VALIDE|\_DOMAIN|  
+|-----------|-------------------|--------------------------|  
+|± ∞, QNAN, IND|aucun|_DOMAIN|  
+|± ∞ (`tan`, `tanf`)|INVALID|_DOMAIN|  
   
-## Notes  
- C\+\+ autorisant la surcharge, vous pouvez appeler des surcharges de `ctan` qui acceptent et retournent des valeurs `_Fcomplex` et `_Lcomplex`. Dans un programme C, `ctan` accepte et retourne toujours un `_Dcomplex` valeur.  
+## <a name="remarks"></a>Notes  
+ C++ autorisant la surcharge, vous pouvez appeler des surcharges de `ctan` qui acceptent et retournent des valeurs `_Fcomplex` et `_Lcomplex`. Dans un programme C, `ctan` accepte et retourne toujours une valeur `_Dcomplex` .  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-|Routine|En\-tête C|En\-tête C\+\+|  
-|-------------|----------------|--------------------|  
-|`ctan`, `ctanf`, `ctanl`|\<complex.h\>|\< ccomplex \>|  
+|Routine|En-tête C|En-tête C++|  
+|-------------|--------------|------------------|  
+|`ctan`,               `ctanf`, `ctanl`|\<complex.h>|\<ccomplex>|  
   
  Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
  [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   

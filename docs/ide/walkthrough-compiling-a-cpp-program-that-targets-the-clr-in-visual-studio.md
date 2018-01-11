@@ -18,18 +18,19 @@ caps.latest.revision: "40"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 152d26874af277d742b106db29a4d9dd9c254c9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eca6960d23c43fbe27d753ab4f79a27dea7bd7e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>Procédure pas à pas : compilation d'un programme C++ qui cible le CLR dans Visual Studio
 Vous pouvez créer des programmes Visual C++ qui utilisent des classes .NET et les compiler à l’aide de l’environnement de développement Visual Studio.  
   
  Pour cette procédure, vous pouvez taper votre propre programme Visual C++ ou utiliser un des exemples de programmes. L’exemple de programme que nous utilisons dans cette procédure crée un fichier texte nommé textfile.txt et l’enregistre dans le répertoire du projet.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
  Ces rubriques supposent que vous comprenez les notions de base du langage C++.  
   
 ### <a name="to-create-a-new-project-in-visual-studio-and-add-a-new-source-file"></a>Pour créer un nouveau projet dans Visual Studio et ajoutez un nouveau fichier source  

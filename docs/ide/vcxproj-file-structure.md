@@ -14,11 +14,12 @@ caps.latest.revision: "1"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc57a69b71bd7fbdbf97d5c34e7e6ec0694bb5df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bdfd703b819b40a2fc391c1c6cb17edd0eff4cb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcxproj-and-props-file-structure"></a>structure du fichier .vcxproj et .props
 MSBuild est le système de projet par défaut dans Visual Studio ; Lorsque vous choisissez **fichier | Nouveau projet** dans Visual C++, vous créez un projet MSBuild dont les paramètres sont stockés dans un fichier de projet XML portant l’extension `.vcxproj`. Le fichier projet peut également importer des fichiers .targets où les paramètres peuvent être stockées et les fichiers .props. Dans la plupart des cas, vous évite de devoir modifier manuellement le fichier projet et en fait vous ne devez pas modifier manuellement à moins d’avoir une bonne compréhension de MSBuild. Chaque fois que possible, vous devez utiliser les pages de propriétés de Visual Studio pour modifier les paramètres de projet (consultez [utilisation des propriétés de projet](working-with-project-properties.md). Toutefois, dans certains cas, vous devrez peut-être modifier une feuille de fichier ou de la propriété de projet manuellement. Pour ces scénarios, cet article contient des informations de base sur la structure du fichier. 
@@ -193,7 +194,7 @@ Les références sont spécifiées dans un ItemGroup, et ils ont ces limitations
 ```xml
 <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 ```
-Définit (directement ou via des importations) Visual C++ cibles permettant notamment la génération, nettoyer, etc..
+Définit (directement ou via des importations) Visual C++ cibles permettant notamment la génération, nettoyer, etc.
 
 ```xml
 <ImportGroup Label="ExtensionTargets" />

@@ -22,16 +22,17 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1220ec0fa20eb285af755a67fae7ae09bd3d4fdf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f0bb076a2cfd8a97c2a3cfc5dc8f33e5390c27a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt;, énumérations
 Cette rubrique décrit les énumérations de l’en-tête filesystem.
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<experimental/filesystem>    
  **Espace de noms :** std::experimental::filesystem  
 
@@ -109,7 +110,7 @@ enum class file_type {
   
 ### <a name="values"></a>Valeurs  
   
-|Nom|Valeur|Description|  
+|Nom|Value|Description|  
 |----------|-----------|-----------------|  
 |`not_found`|-1|Représente un fichier qui n'existe pas.|  
 |`none`|0|Représente un fichier qui n'a aucun attribut de type. (Non pris en charge.)|  

@@ -1,73 +1,74 @@
 ---
-title: "snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_snwprintf"
-  - "_snprintf"
-  - "_snprintf_l"
-  - "_snwprintf_l"
-  - "snprintf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_snprintf"
-  - "snprintf_l"
-  - "snwprintf_l"
-  - "sntprintf"
-  - "snprintf"
-  - "_sntprintf"
-  - "_sntprintf_l"
-  - "sntprintf_l"
-  - "snwprintf"
-  - "_snprintf_l"
-  - "_snwprintf"
-  - "_snwprintf_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "snwprintf_l (fonction)"
-  - "sntprintf_l (fonction)"
-  - "snprintf_l (fonction)"
-  - "_snwprintf_l (fonction)"
-  - "_sntprintf_l (fonction)"
-  - "_snwprintf (fonction)"
-  - "_snprintf (fonction)"
-  - "_sntprintf (fonction)"
-  - "_snprintf_l (fonction)"
-  - "snwprintf (fonction)"
-  - "snprintf (fonction)"
-  - "sntprintf (fonction)"
-  - "texte mis en forme (C++)"
+title: snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _snwprintf
+- _snprintf
+- _snprintf_l
+- _snwprintf_l
+- snprintf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _snprintf
+- snprintf_l
+- snwprintf_l
+- sntprintf
+- snprintf
+- _sntprintf
+- _sntprintf_l
+- sntprintf_l
+- snwprintf
+- _snprintf_l
+- _snwprintf
+- _snwprintf_l
+dev_langs: C++
+helpviewer_keywords:
+- snwprintf_l function
+- sntprintf_l function
+- snprintf_l function
+- _snwprintf_l function
+- _sntprintf_l function
+- _snwprintf function
+- _snprintf function
+- _sntprintf function
+- _snprintf_l function
+- snwprintf function
+- snprintf function
+- sntprintf function
+- formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-caps.latest.revision: 35
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 35
+caps.latest.revision: "35"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0441f2debf2e030702727c92a6e27bea63cb0564
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Écrit des données mises en forme dans une chaîne. Des versions plus sécurisées de ces fonctions sont disponibles. Consultez [\_snprintf\_s, \_snprintf\_s\_l, \_snwprintf\_s, \_snwprintf\_s\_l](../../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).  
+# <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
+Écrit des données mises en forme dans une chaîne. Il existe des versions plus sécurisées de ces fonctions. Consultez [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](../../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int snprintf(  
@@ -134,7 +135,7 @@ int _snwprintf_l(
 ); // C++ only  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `buffer`  
  Emplacement de stockage pour la sortie.  
   
@@ -150,56 +151,56 @@ int _snwprintf_l(
  `locale`  
  Paramètres régionaux à utiliser.  
   
- Pour plus d'informations, consultez [Syntaxe de spécification de format : fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Pour plus d’informations, consultez [Syntaxe de spécification de format : fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
-## Valeur de retour  
- Laissez `len` être de la longueur de la chaîne de données mise en forme, à l'exclusion de la marque de fin null.`len` et `count` sont tous deux en octets pour `snprintf` et `_snprintf`, caractères larges pour `_snwprintf`.  
+## <a name="return-value"></a>Valeur de retour  
+ Laissez `len` être de la longueur de la chaîne de données mise en forme, à l'exclusion de la marque de fin null. `len` et `count` sont tous deux en octets pour `snprintf` et `_snprintf`, caractères larges pour `_snwprintf`.  
   
- Pour toutes les fonctions, si `len` \< `count`, `len` caractères sont stockés dans `buffer`, une marque de fin null est ajoutée, et `len` est retourné.  
+ Pour toutes les fonctions, si `len` < `count`, `len` caractères sont stockés dans `buffer`, une marque de fin null est ajoutée, et `len` est retourné.  
   
  La fonction `snprintf` tronque le résultat quand `len` est supérieur ou égal à `count`, en plaçant une marque de fin null au niveau de `buffer[count-1]`. La valeur retournée est `len`, le nombre de caractères produits si `count` était assez important. La fonction `snprintf` retourne une valeur négative en cas d’erreur de codage.  
   
- Pour toutes les fonctions autres que `snprintf`, si `len` \= `count`, `len` caractères sont stockés dans `buffer`, aucune marque de fin null n’est ajoutée, et `len` est retourné. Si `len` \> `count`, les caractères `count` sont stockés dans `buffer`, aucune marque de fin null n'est ajoutée, et une valeur négative est retournée.  
+ Pour toutes les fonctions autres que `snprintf`, si `len` = `count`, `len` caractères sont stockés dans `buffer`, aucune marque de fin null n’est ajoutée, et `len` est retourné. Si `len` > `count`, `count` caractères sont stockés dans `buffer`, aucune marque de fin null n'est ajoutée, et une valeur négative est retournée.  
   
- Si `buffer` est un pointeur null et `count` est égal à zéro, `len` est retourné comme nombre de caractères requis pour mettre en forme la sortie, à l'exception de la marque de fin null. Pour effectuer un appel réussi avec le même `argument` et les paramètres `locale`, allouez une mémoire tampon contenant au moins `len` \+ 1 caractères.  
+ Si `buffer` est un pointeur null et `count` est égal à zéro, `len` est retourné comme nombre de caractères requis pour mettre en forme la sortie, à l'exception de la marque de fin null. Pour effectuer un appel réussi avec le même `argument` et les paramètres `locale` , allouez une mémoire tampon contenant au moins `len` + 1 caractères.  
   
- Si `buffer` est un pointeur null et `count` est différent de zéro, ou si `format` est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent \-1 et définissent `errno` avec la valeur `EINVAL`.  
+ Si `buffer` est un pointeur null et `count` est différent de zéro, ou si `format` est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Parameter Validation](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent -1 et définissent `errno` avec la valeur `EINVAL`.  
   
- Pour plus d’informations sur ces codes et d’autres codes d’erreur, consultez [errno, \_doserrno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Notes  
- La fonction `snprintf` et la famille de fonctions `_snprintf` mettent en forme et stockent `count` caractères au maximum dans `buffer`. La fonction `snprintf` stocke toujours un caractère null de fin et tronque la sortie si nécessaire. La famille de fonctions `_snprintf` ajoute uniquement un caractère null de fin si la longueur de la chaîne mise en forme est strictement inférieure à `count` caractères. Chaque `argument` \(le cas échéant\) est converti et sorti selon la spécification de format correspondante dans `format`. Le format se compose de caractères ordinaires et a la même forme et fonction que l'argument `format` pour [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md). Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.  
+## <a name="remarks"></a>Notes  
+ La fonction `snprintf` et la famille de fonctions `_snprintf` mettent en forme et stockent `count` caractères au maximum dans `buffer`. La fonction `snprintf` stocke toujours un caractère null de fin et tronque la sortie si nécessaire. La famille de fonctions `_snprintf` ajoute uniquement un caractère null de fin si la longueur de la chaîne mise en forme est strictement inférieure à `count` caractères. Chaque `argument` (le cas échéant) est converti et sorti selon la spécification de format correspondante dans `format`. Le format se compose de caractères ordinaires et a la même forme et fonction que l'argument `format` pour [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md). Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.  
   
 > [!IMPORTANT]
->  Assurez\-vous que `format` n'est pas une chaîne définie par l'utilisateur. Les fonctions `_snprintf` ne garantissant pas la marque de fin NULL, en particulier quand la valeur de retour est `count`, vérifiez qu’elles sont suivies du code qui ajoute la marque de fin null. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  Assurez-vous que `format` n'est pas une chaîne définie par l'utilisateur. Les fonctions `_snprintf` ne garantissant pas la marque de fin NULL, en particulier quand la valeur de retour est `count`, vérifiez qu’elles sont suivies du code qui ajoute la marque de fin null. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
- Depuis le composant UCRT dans Visual Studio 2015 et Windows 10, `snprintf` n’est plus identique à `_snprintf`. Le comportement de la fonction `snprintf` est désormais conforme à la norme C99.  
+ Depuis le composant UCRT dans Visual Studio 2015 et Windows 10, `snprintf` n’est plus identique à `_snprintf`. Le comportement de la fonction `snprintf` est désormais conforme à la norme C99.  
   
- `_snwprintf` est une version à caractères larges de `_snprintf` ; les arguments de pointeur de `_snwprintf` sont des chaînes à caractères larges. La détection d'erreurs d'encodage dans `_snwprintf` peut différer de celle dans `_snprintf`.`_snwprintf`, tout comme `swprintf`, écrit la sortie dans une chaîne au lieu d'une destination de type `FILE`.  
+ `_snwprintf` est une version à caractères larges de `_snprintf`; les arguments de pointeur de `_snwprintf` sont des chaînes à caractères larges. La détection d'erreurs d'encodage dans `_snwprintf` peut différer de celle dans `_snprintf`. `_snwprintf`, tout comme `swprintf`, écrit la sortie dans une chaîne au lieu d'une destination de type `FILE`.  
   
  Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.  
   
- En C\+\+, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine Tchar.h|\_UNICODE et \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|-------------------------------------|-------------------|----------------------|  
+|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_sntprintf`|`_snprintf`|`_snprintf`|`_snwprintf`|  
 |`_sntprintf_l`|`_snprintf_l`|`_snprintf_l`|`_snwprintf_l`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`snprintf`, `_snprintf`,  `_snprintf_l`|\<stdio.h\>|  
-|`_snwprintf`, `_snwprintf_l`|\<stdio.h\> ou \<wchar.h\>|  
+|`snprintf`, `_snprintf`,  `_snprintf_l`|\<stdio.h>|  
+|`_snwprintf`, `_snwprintf_l`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```c  
+```C  
 // crt_snprintf.c  
 // compile with: /W3  
 #include <stdio.h>  
@@ -301,14 +302,20 @@ int main(void)
 ```  
   
 ```Output  
-Output: String: computer Character: l Integer: 35 Real: 1.732053 character count = 69  
+Output:  
+   String: computer  
+   Character: l  
+   Integer: 35  
+   Real: 1.732053  
+  
+character count = 69  
 ```  
   
-## Voir aussi  
- [E\/S de flux](../../c-runtime-library/stream-i-o.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [Fonctions vprintf](../../c-runtime-library/vprintf-functions.md)
+## <a name="see-also"></a>Voir aussi  
+ [E/S de flux](../../c-runtime-library/stream-i-o.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+ [vprintf, fonctions](../../c-runtime-library/vprintf-functions.md)

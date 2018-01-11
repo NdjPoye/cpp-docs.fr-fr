@@ -1,44 +1,44 @@
 ---
-title: "Avertissement du compilateur (niveau&#160;4) C4437 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: Compilateur avertissement (niveau 4) C4437 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a50534ca7e25b18d32d37a9120e478f78ea56daf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau&#160;4) C4437
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-le dynamic\_cast de la base virtuelle « class1 » à « class2 » peut échouer dans certains contextes      Compilez avec \/vd2 ou définissez « class2 » avec le vtordisp de \#pragma \(2\) activé  
+# <a name="compiler-warning-level-4-c4437"></a>Avertissement du compilateur (niveau 4) C4437
+dynamic_cast de la base virtuelle 'classe1' en 'classe2' peut échouer dans certains contextes compilation avec/vd2 ou définissez 'classe2' avec #pragma vtordisp (2) système en vigueur  
   
- Cet avertissement est désactivé par défaut.  Pour plus d'informations, consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.  
   
- Le compilateur a rencontré une opération de `dynamic_cast` avec les caractéristiques suivantes.  
+ Le compilateur a rencontré un `dynamic_cast` opération avec les caractéristiques suivantes.  
   
--   Le cast consiste en un pointeur de base de la classe converti en un pointeur dérivé de la classe.  
+-   La conversion est d’un pointeur de classe de base à un pointeur de la classe dérivée.  
   
 -   La classe dérivée hérite pratiquement de la classe de base.  
   
--   La classe dérivée n'a aucun champ de `vtordisp` pour la base virtuelle.  
+-   La classe dérivée n’a pas un `vtordisp` pour la base virtuelle.  
   
--   La conversion est introuvable dans un constructeur ou un destructeur de la classe dérivée, ou d'une classe qui hérite davantage de la classe dérivée \(dans le cas contraire, l'avertissement du compilateur C4436 est émis\).  
+-   La conversion ne se trouve pas dans un constructeur ou un destructeur de la classe dérivée, ou une classe qui concourent hérite de la classe dérivée (Avertissement du compilateur dans le cas contraire, C4436 va être émis).  
   
- L'avertissement indique que le `dynamic_cast` peut ne pas s'exécuter correctement s'il fonctionne sur un objet construit partiellement.  Cette situation se produit lorsque la fonction englobante est appelée d'un constructeur ou d'un destructeur d'une classe qui hérite de la classe dérivée nommée dans l'avertissement.  Si la classe dérivée nommée dans l'avertissement n'est jamais dérivée davantage, ou si la fonction englobante n'est pas appelée pendant la construction ou la destruction de l'objet, l'avertissement peut être ignoré.  
+ L’avertissement indique que le `dynamic_cast` peuvent ne pas fonctionner correctement si elle s’exécute dans un objet partiellement construit.  Cette situation se produit lorsque la fonction englobante est appelée à partir d’un constructeur ou un destructeur d’une classe qui hérite de la classe dérivée qui est nommée dans l’avertissement.  Si la classe dérivée qui est nommée dans l’avertissement n’est jamais plue dérivé, ou la fonction englobante n’est pas appelée au cours de construction d’objet ou une destruction, vous pouvez ignorer l’avertissement.  
   
-## Exemple  
- L'échantillon suivant génère l'erreur C4437 et illustre le problème de génération de code qui résulte du champ manquant de `vtordisp`.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C4437 et illustre le problème de génération de code qui découle manquants `vtordisp` champ.  
   
 ```cpp  
 // C4437.cpp  
@@ -86,7 +86,7 @@ int main()
 }  
 ```  
   
-## Voir aussi  
- [dynamic\_cast, opérateur](../../cpp/dynamic-cast-operator.md)   
+## <a name="see-also"></a>Voir aussi  
+ [dynamic_cast, opérateur](../../cpp/dynamic-cast-operator.md)   
  [vtordisp](../../preprocessor/vtordisp.md)   
- [Avertissement du compilateur \(niveau 1\) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)
+ [Avertissement du compilateur (niveau 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)

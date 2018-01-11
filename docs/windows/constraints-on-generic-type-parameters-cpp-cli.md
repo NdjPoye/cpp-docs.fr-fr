@@ -17,14 +17,17 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01cd21e00cbf8947f5eb2ff8d2f578ab4912a03a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e59c5ecb6101667c7d8546afcc6cbbfb9e024488
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Contraintes sur les paramètres de type générique (C++/CLI)
-Dans les déclarations de méthode ou de type générique, vous pouvez qualifier un paramètre de type avec des contraintes. Une contrainte est une condition à laquelle les types utilisés comme arguments de type doivent respecter. Par exemple, une contrainte peut indiquer que l'argument de type doit implémenter une certaine interface ou hériter d'une classe spécifique.  
+Dans les déclarations de méthode ou de type générique, vous pouvez qualifier un paramètre de type avec des contraintes. Une contrainte est une exigence que les types utilisés comme arguments de type doivent respecter. Par exemple, une contrainte peut indiquer que l'argument de type doit implémenter une certaine interface ou hériter d'une classe spécifique.  
   
  Les contraintes sont facultatives ; ne pas spécifier de contrainte sur un paramètre revient à limiter ce paramètre à <xref:System.Object>.  
   
@@ -42,18 +45,18 @@ where type-parameter: constraint list
  *liste de contraintes*  
  *liste de contraintes* est une liste séparée par des virgules de spécifications de contrainte. La liste peut inclure des interfaces à implémenter par le paramètre de type.  
   
- La liste peut également inclure une classe. Pour que l'argument de type satisfasse une contrainte de classe de base, il doit être de la même classe que la contrainte ou dériver de la contrainte.  
+ La liste peut également inclure une classe. Pour que l’argument de type satisfasse une contrainte de classe de base, il doit être de la même classe que la contrainte ou dériver de la contrainte.  
   
  Vous pouvez également spécifier `gcnew()` pour indiquer que l'argument de type doit disposer d'un constructeur public sans paramètre ; ou `ref class` pour indiquer que l'argument de type doit être un type de référence, y compris tout type de classe, d'interface, de délégué ou de tableau ; ou `value class` pour indiquer que l'argument de type doit être un type de valeur. Toute valeur de type, hormis Nullable\<T > peut être spécifié.  
   
- Vous pouvez également spécifier un paramètre générique en tant que contrainte. L'argument de type disponible pour le type que vous contraignez doit être, ou dériver du, type de la contrainte. Il s'agit d'une contrainte de type naked.  
+ Vous pouvez également spécifier un paramètre générique en tant que contrainte. L’argument de type disponible pour le type que vous contraignez doit être, ou dériver du, type de la contrainte. Il s'agit d'une contrainte de type naked.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La clause de contrainte se compose de **où** suivi d’un paramètre de type, un signe deux-points (**:**) et la contrainte, qui spécifie la nature de la restriction sur le paramètre de type. **où** est un mot clé contextuel ; consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md) pour plus d’informations. Séparer plusieurs **où** clauses avec un espace.  
   
  Les contraintes sont appliquées aux paramètres de type pour placer des restrictions sur les types qui peuvent être utilisés comme arguments pour un type générique ou une méthode générique.  
   
- La classe et les contraintes d'interface spécifient les types d'argument qui doivent être, ou hériter, d'une classe spécifiée ou implémentent une interface spécifiée.  
+ La classe et les contraintes d’interface spécifient les types d’argument qui doivent être, ou hériter, d’une classe spécifiée ou implémentent une interface spécifiée.  
   
  L’application des contraintes sur un type ou une méthode générique permet au code de ce type ou de cette méthode de tirer parti des fonctionnalités connues des types de contraintes. Par exemple, vous pouvez déclarer une classe générique telle que le paramètre de type implémente le **IComparable\<T >** interface :  
   
@@ -72,7 +75,7 @@ ref class List {};
   
  Une contrainte ne peut pas être un type valeur, y compris les types intégrés tels que `int` ou **double**. Puisque les types de valeur ne peuvent avoir de classes dérivées, seule une classe sera toujours en mesure de satisfaire la contrainte. Dans ce cas, le générique peut être réécrit avec le paramètre de type remplacé par le type de valeur spécifique.  
   
- Les contraintes sont requises dans certains cas puisque la compilation n'autorisera pas l'utilisation des méthodes ou autres fonctionnalités d'un type inconnu à moins que les contraintes n'impliquent que le type inconnu prenne en charge les méthodes ou les interfaces.  
+ Les contraintes sont requises dans certains cas puisque la compilation n’autorisera pas l’utilisation des méthodes ou autres fonctionnalités d’un type inconnu à moins que les contraintes n’impliquent que le type inconnu prenne en charge les méthodes ou les interfaces.  
   
  Plusieurs contraintes pour le même paramètre de type peuvent être spécifiés dans une liste séparée par des virgules  
   
@@ -181,7 +184,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemple  
- Lorsqu’un paramètre de type générique est utilisé comme contrainte, il est appelé une contrainte de type naked. Les contraintes de type naked sont utiles lorsqu'une fonction membre avec son propre paramètre de type doit limiter ce paramètre au paramètre de type contenant le type.  
+ Lorsqu’un paramètre de type générique est utilisé comme contrainte, il est appelé une contrainte de type naked. Les contraintes de type naked sont utiles lorsqu’une fonction membre avec son propre paramètre de type doit limiter ce paramètre au paramètre de type contenant le type.  
   
  Dans l'exemple suivant, T est une contrainte de type naked dans le contexte de la méthode Add.  
   

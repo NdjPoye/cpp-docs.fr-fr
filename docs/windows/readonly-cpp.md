@@ -1,33 +1,33 @@
 ---
-title: "readonly (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.readonly"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attribut en lecture seule"
+title: ReadOnly (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.readonly
+dev_langs: C++
+helpviewer_keywords: readonly attribute
 ms.assetid: 1246cadd-5304-43a9-beea-51153d12704d
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 829ca2126ec43be54d96a98b2ada4f5952626e21
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# readonly (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="readonly-c"></a>readonly (C++)
 Interdit l’assignation à un membre de données.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,12 +35,12 @@ Interdit l’assignation à un membre de données.
   
 ```  
   
-## Notes  
- L’attribut C\+\+ **readonly** a les mêmes fonctionnalités que l’attribut MIDL [readonly](http://msdn.microsoft.com/library/windows/desktop/aa367152).  
+## <a name="remarks"></a>Notes  
+ L’attribut C++ **readonly** a les mêmes fonctionnalités que l’attribut MIDL [readonly](http://msdn.microsoft.com/library/windows/desktop/aa367152) .  
   
- Si vous souhaitez interdire la modification d’un paramètre de méthode, utilisez l’attribut [in](../windows/in-cpp.md).  
+ Si vous souhaitez interdire la modification d’un paramètre de méthode, utilisez l’attribut [in](../windows/in-cpp.md) .  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  Le code suivant illustre une utilisation de l’attribut **readonly** :  
   
 ```  
@@ -57,20 +57,19 @@ __interface IFireTabCtrl
 };  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### Contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
 |**S'applique à**|Méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|None|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Data Member Attributes](../windows/data-member-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs de membre de données](../windows/data-member-attributes.md)   

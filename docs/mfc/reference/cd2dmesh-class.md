@@ -35,11 +35,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0b639bf69a58c132dab604b26a100d4c92d87086
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9b1a83fb222c1133e8ea59c7daf53a49b4472de2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dmesh-class"></a>CD2DMesh, classe
 Wrapper pour ID2D1Mesh.  
@@ -79,7 +80,7 @@ class CD2DMesh : public CD2DResource;
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CD2DMesh::m_pMesh](#m_pmesh)|Pointeur vers un ID2D1Mesh.|  
   
@@ -90,7 +91,7 @@ class CD2DMesh : public CD2DResource;
   
  `CD2DMesh`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dmesh"></a>CD2DMesh :: ~ CD2DMesh  

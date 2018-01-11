@@ -1,37 +1,35 @@
 ---
-title: "Avertissement du compilateur (niveau 4) C4233 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4233"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4233"
+title: Compilateur avertissement (niveau 4) C4233 | Documents Microsoft
+ms.custom: 
+ms.date: 10/25/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4233
+dev_langs: C++
+helpviewer_keywords: C4233
 ms.assetid: 9aa51fc6-8ef3-43b5-bafb-c9333cf60de3
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ad27d2ec3d59df147d8bfc26372a2d25397e651f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 4) C4233
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="compiler-warning-level-4-c4233"></a>Avertissement du compilateur (niveau 4) C4233
 
-extension non standard utilisée : mot clé 'MotClé'  pris en charge uniquement en C\+\+, non en C  
-  
- Le compilateur a compilé votre code source comme C au lieu de C\+\+, et vous avez utilisé un mot clé qui n'est valide qu'en C\+\+.  Le compilateur compile votre fichier source en C si l'extension du fichier source est .c ou si vous utilisez [\/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md).  
-  
- Cet avertissement est automatiquement transformé en erreur.  Si vous souhaitez modifier ce comportement, utilisez [\#pragma warning](../../preprocessor/warning.md).  Par exemple, afin que C4233 soit un avertissement de niveau 4, incluez  
-  
-```  
-#pragma warning(2:4233)  
-```  
-  
- dans votre fichier de code source.
+> extension non standard utilisée : '*mot clé*' mot clé uniquement pris en charge en C++, non en C
+
+Le compilateur a compilé votre code source C plutôt que C++, et que vous avez utilisé un mot clé qui n’est pas valide en C++. Le compilateur compile votre fichier source en C si l’extension du fichier source est .c ou si vous utilisez [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md).
+
+Cet avertissement est automatiquement promu en une erreur. Si vous souhaitez modifier ce comportement, utilisez [#pragma warning](../../preprocessor/warning.md). Par exemple, pour que C4233 soit un problème d’avertissement de niveau 4, ajoutez cette ligne à votre fichier de code source :
+
+```cpp
+#pragma warning(4:4233)
+```

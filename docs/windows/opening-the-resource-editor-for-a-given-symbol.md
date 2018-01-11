@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 752a9b82bd6515f5ccceb89869e0d8b09577f057
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6b2d8da5a03289d65dd00d280d6fc3ef3f13b038
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol"></a>Ouverture de l'Éditeur de ressources pour un symbole donné
 Lorsque vous parcourez les symboles dans le [boîte de dialogue Symboles des ressources](../windows/resource-symbols-dialog-box.md), vous souhaiterez peut-être plus d’informations sur l’utilisation d’un symbole particulier. Le **afficher l’utilisation** bouton fournit un moyen rapide d’obtenir ces informations.  
@@ -39,7 +42,7 @@ Lorsque vous parcourez les symboles dans le [boîte de dialogue Symboles des res
   
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.*  
   
- Spécifications  
+ Configuration requise  
   
  Win32  
   

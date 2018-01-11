@@ -1,32 +1,33 @@
 ---
-title: "WeakRef::WeakRef, constructeur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::WeakRef::WeakRef"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WeakRef, constructeur"
+title: Weakref::weakref, constructeur | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::WeakRef::WeakRef
+dev_langs: C++
+helpviewer_keywords: WeakRef, constructor
 ms.assetid: 589f87e0-8dcc-4e82-aab2-f2f66f1ec47c
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 125fe25179ddbe975530a0c368a4dfc7e4caaf1a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# WeakRef::WeakRef, constructeur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="weakrefweakref-constructor"></a>WeakRef::WeakRef, constructeur
 Initialise une nouvelle instance de la classe WeakRef.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 WeakRef();  
@@ -51,17 +52,17 @@ WeakRef(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `ptr`  
- Un pointeur, une référence, ou une référence rvalue à un objet existant qui initialise l'objet WeakRef actuel.  
+ Un pointeur, une référence ou une référence rvalue à un objet existant qui initialise l’objet WeakRef actif.  
   
-## Remarques  
- Le premier constructeur initialise un objet WeakRef vide.  Le deuxième constructeur initialise un objet WeakRef à partir d'un pointeur vers l'interface IWeakReference.  Le troisième constructeur initialise un objet WeakRef à partir d'une référence à un objet ComPtr\< IWeakReference\> .  Les quatrième et cinquième constructeurs initialisent un objet WeakRef à partir d'un autre objet WeakRef.  
+## <a name="remarks"></a>Notes  
+ Le premier constructeur initialise un objet WeakRef vide. Le deuxième constructeur initialise un objet WeakRef à partir d’un pointeur vers l’interface IWeakReference. Le troisième constructeur initialise un objet WeakRef à partir d’une référence à un ComPtr\< IWeakReference > objet. Les quatrième et cinquième constructeurs initialise un objet WeakRef à partir d’un autre objet WeakRef.  
   
-## Configuration requise  
- **En\-tête :** client.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** client.h  
   
- **Espace de noms :** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [WeakRef, classe](../windows/weakref-class.md)

@@ -31,11 +31,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 65c1fd6d86c153881f8674732db2b61edcfab8cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5431461c7c2cc33131f72f059edcfbd984eae5fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfont-class"></a>CFont (classe)
 Encapsule une police GDI (Graphics Device Interface) Windows et fournit des fonctions membres pour la manipuler.  
@@ -71,7 +72,7 @@ class CFont : public CGdiObject
 |----------|-----------------|  
 |[CFont::operator HFONT](#operator_hfont)|Retourne le handle de police GDI Windows attaché à la `CFont` objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour utiliser un `CFont` de l’objet, construisez un `CFont` de l’objet et attacher une police Windows à l’aide de [CreateFont](#createfont), [CreateFontIndirect](#createfontindirect), [CreatePointFont](#createpointfont), ou [CreatePointFontIndirect](#createpointfontindirect), puis utilisez les fonctions membres de l’objet pour manipuler la police.  
   
  Le `CreatePointFont` et `CreatePointFontIndirect` fonctions sont souvent plus faciles à utiliser que `CreateFont` ou `CreateFontIndirect` , car ils ne la conversion de la hauteur de la police à partir d’une taille de point sur les unités logiques automatiquement.  
@@ -85,7 +86,7 @@ class CFont : public CGdiObject
   
  `CFont`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="cfont"></a>CFont::CFont  
@@ -95,7 +96,7 @@ class CFont : public CGdiObject
 CFont();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’objet résultant doit être initialisée avec `CreateFont`, `CreateFontIndirect`, `CreatePointFont`, ou `CreatePointFontIndirect` avant de pouvoir être utilisé.  
   
 ### <a name="example"></a>Exemple  
@@ -178,7 +179,7 @@ BOOL CreateFont(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La police peut ensuite être sélectionnée comme la police pour n’importe quel contexte de périphérique.  
   
  Le `CreateFont` (fonction) ne crée pas une nouvelle police Windows GDI. Il sélectionne simplement la plus proche à partir de polices physiques disponibles pour l’interface GDI.  
@@ -204,7 +205,7 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La police peut ensuite être sélectionnée comme la police actuelle de n’importe quel appareil.  
   
  Cette police présente les caractéristiques spécifiées dans le [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure. Lorsque la police est activée à l’aide de la [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) fonction membre, le mappeur de police GDI essaie de correspondre à la police logique avec une police physique existante. Si le mappeur de polices ne parvient pas à trouver une correspondance exacte pour la police logique, il fournit une autre police dont les caractéristiques correspondent à autant de caractéristiques demandées que possible.  
@@ -237,7 +238,7 @@ BOOL CreatePointFont(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro en cas de réussite, sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il convertit automatiquement la hauteur en `nPointSize` sur des unités logiques à l’aide de la `CDC` objet pointé par `pDC`.  
   
  Lorsque vous avez terminé avec le `CFont` objet créé par le `CreatePointFont` de fonction, tout d’abord sélectionner la police hors du contexte de périphérique, puis supprimez le `CFont` objet.  
@@ -264,7 +265,7 @@ BOOL CreatePointFontIndirect(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro en cas de réussite, sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction convertit automatiquement la hauteur en **lfHeight** sur des unités logiques à l’aide de la `CDC` objet pointé par `pDC` avant de passer le `LOGFONT` structure une session sur Windows.  
   
  Lorsque vous avez terminé avec le `CFont` objet créé par le `CreatePointFontIndirect` de fonction, tout d’abord sélectionner la police hors du contexte de périphérique, puis supprimez le `CFont` objet.  
@@ -286,7 +287,7 @@ static CFont* PASCAL FromHandle(HFONT hFont);
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un `CFont` objet en cas de réussite ; **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si un `CFont` objet n’est pas déjà attaché au handle, un fichier temporaire `CFont` objet est créé et attaché. Ce fichier temporaire `CFont` objet est valide uniquement jusqu'à ce que la prochaine fois que l’application possède des temps d’inactivité dans la boucle d’événements, alors graphique temporaire tous les objets sont supprimés. Une autre façon d’autres termes est que l’objet temporaire est valide uniquement lors du traitement du message d’une fenêtre.  
   
 ### <a name="example"></a>Exemple  
@@ -319,7 +320,7 @@ operator HFONT() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le handle de l’objet de police Windows GDI attaché à `CFont` cas de réussite ; **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans la mesure où cet opérateur est automatiquement utilisé pour les conversions entre `CFont` à [polices et texte](http://msdn.microsoft.com/library/windows/desktop/dd144819), vous pouvez passer `CFont` objets aux fonctions qui attendent **HFONT**s.  
   
  Pour plus d’informations sur l’utilisation des objets graphiques, consultez [graphique objets](http://msdn.microsoft.com/library/windows/desktop/dd144962) dans le Kit de développement logiciel Windows.  

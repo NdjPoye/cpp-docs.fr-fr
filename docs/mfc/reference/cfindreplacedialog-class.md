@@ -43,11 +43,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 153653244534a1783b2b675f91216a8af3738e80
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ca1d0b5658da375c2202729e6888fa078063beb4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfindreplacedialog-class"></a>Classe de CFindReplaceDialog
 Vous permet d’implémenter des boîtes de dialogue Rechercher/Remplacer des chaînes standard dans votre application.  
@@ -88,7 +89,7 @@ class CFindReplaceDialog : public CCommonDialog
 |----------|-----------------|  
 |[CFindReplaceDialog::m_fr](#m_fr)|Une structure utilisée pour personnaliser un `CFindReplaceDialog` objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Contrairement à d’autres Windows communs boîtes de dialogue, `CFindReplaceDialog` objets sont non modales, ce qui permet aux utilisateurs d’interagir avec d’autres fenêtres pendant qu’elles sont à l’écran. Il existe deux types de `CFindReplaceDialog` objets : rechercher des boîtes de dialogue et les boîtes de dialogue Rechercher/Remplacer. Bien que les boîtes de dialogue Autoriser l’utilisateur à la recherche d’entrée et les chaînes de recherche/remplacement, ils n’effectuent pas la recherche ou de remplacement des fonctions. Vous devez les ajouter à l’application.  
   
  Pour construire un `CFindReplaceDialog` d’objet, utilisez le constructeur fourni (qui n’a aucun argument). Comme il s’agit d’une boîte de dialogue non modale, d’allouer l’objet sur le segment de mémoire à l’aide de la **nouveau** (opérateur), plutôt que sur la pile.  
@@ -122,7 +123,7 @@ class CFindReplaceDialog : public CCommonDialog
   
  `CFindReplaceDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdlgs.h  
   
 ##  <a name="cfindreplacedialog"></a>CFindReplaceDialog::CFindReplaceDialog  
@@ -132,7 +133,7 @@ class CFindReplaceDialog : public CCommonDialog
 CFindReplaceDialog();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Étant donné que la `CFindReplaceDialog` objet est une boîte de dialogue non modale, vous devez construire sur le segment de mémoire à l’aide de la `new` opérateur.  
   
  Au cours de destruction, le framework essaie d’exécuter un `delete this` sur le pointeur vers la boîte de dialogue. Si vous avez créé la boîte de dialogue dans la pile, le `this` pointeur n’existe pas et un comportement non défini.  
@@ -173,7 +174,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’objet de boîte de dialogue a été créé avec succès ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans l’ordre de la fenêtre parente d’être averti des demandes de recherche/remplacement, vous devez utiliser les fenêtres [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) fonction dont la valeur de retournée est un message unique à l’instance de l’application. Votre fenêtre frame doit avoir une entrée de mappage de message qui déclare la fonction de rappel ( `OnFindReplace` dans l’exemple qui suit) qui gère ce message enregistré. Le fragment de code suivant est un exemple de procédure à suivre pour une classe de fenêtre frame nommée `CMyRichEditView`:  
   
  [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]  
@@ -224,7 +225,7 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers la boîte de dialogue.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il doit être utilisé pour accéder à la boîte de dialogue, appeler son membre, fonctions et accès dans votre fonction de rappel du `m_fr` structure.  
   
 ### <a name="example"></a>Exemple  
@@ -255,7 +256,7 @@ BOOL IsTerminating() const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’utilisateur a décidé de mettre fin à la boîte de dialogue Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si cette fonction retourne différente de zéro, vous devez appeler la `DestroyWindow` fonction membre de la boîte de dialogue active et ensemble toute boîte de dialogue zone variable pointeur **NULL**. Si vous le souhaitez, vous pouvez également stocker le texte de recherche/remplacement dernier entré et l’utiliser pour initialiser la boîte de dialogue Rechercher/Remplacer suivante.  
   
 ### <a name="example"></a>Exemple  
@@ -268,7 +269,7 @@ BOOL IsTerminating() const;
 FINDREPLACE m_fr;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `m_fr`est une structure de type [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Ses membres stockent les caractéristiques de l’objet de la boîte de dialogue. Après avoir construit un `CFindReplaceDialog` de l’objet, vous pouvez utiliser `m_fr` pour modifier des valeurs différentes dans la boîte de dialogue.  
   
  Pour plus d’informations sur cette structure, consultez la **FINDREPLACE** structure dans le SDK Windows.  

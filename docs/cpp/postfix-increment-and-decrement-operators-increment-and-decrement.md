@@ -25,11 +25,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cbf22e57abaefc7b14be9c4eab404f7c20cb9359
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e1d6c13da3023073f3d8b3e9625fa141253ba2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Opérateurs suffixés d'incrémentation et de décrémentation : ++ et --
 ## <a name="syntax"></a>Syntaxe  
@@ -39,7 +40,7 @@ postfix-expression ++
 postfix-expression --  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  C++ fournit des opérateurs d'incrémentation et de décrémentation préfixés et suffixés. Cette section décrit uniquement les opérateurs d'incrémentation et de décrémentation suffixés. (Pour plus d’informations, consultez [préfixe opérateurs d’incrémentation et décrémentation](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md).) La différence entre les deux est que, dans la notation suffixée, l’opérateur apparaît après *postfix-expression*, alors que dans la notation de préfixe, l’opérateur apparaît avant *expression.* L'exemple suivant montre un opérateur d'incrémentation suffixé :  
   
 ```  

@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df7da9810a65d2726341a59c368e0d0f78f6c202
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32ea2fbcbdee22e12487d7497f651b0d70b59c0e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dllexport-dllimport"></a>dllexport, dllimport
 **Section spécifique à Microsoft**  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
 __declspec( dllexport ) declarator  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Ces attributs définissent explicitement l'interface de la DLL à son client, qui peut être un fichier exécutable ou une autre DLL. La déclaration de fonctions comme `dllexport` élimine le besoin d'avoir un fichier de définition de module (.def), au moins en ce qui concerne la spécification des fonctions exportées. L'attribut `dllexport` remplace le mot clé `__export`.  
   
  Si une classe est marquée declspec(dllexport), les spécialisations des modèles de classe dans la hiérarchie de classes sont implicitement marquées comme declspec(dllexport). Cela signifie que les modèles de classe sont instanciés explicitement et que les membres de la classe doivent être définis.  

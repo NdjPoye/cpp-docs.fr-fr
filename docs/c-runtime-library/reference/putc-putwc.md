@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _puttc
 - putwc
 - putc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - streams, writing characters to
 - characters, writing
@@ -38,31 +36,16 @@ helpviewer_keywords:
 - _puttc function
 - puttc function
 ms.assetid: a37b2e82-9d88-4565-8190-ff8d04c0ddb9
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: e7df1c7810719092874990286c1b22b7e7ec6faa
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7a381664f64f89f2a7040b04885b1f01efe885c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putc-putwc"></a>putc, putwc
 Écrit un caractère dans un flux.  
@@ -94,7 +77,7 @@ wint_t putwc(
  Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Notes  
- La routine `putc` écrit le caractère unique `c` dans la sortie `stream` à la position actuelle. Il est possible de passer un entier à `putc`, mais seuls les 8 bits inférieurs sont écrits. La routine `putchar` est identique à **putc(** `c`**, stdout)**. Pour chaque routine, si une erreur de lecture se produit, l’indicateur d’erreur du flux est défini. Les routines `putc` et `putchar` sont comparables, respectivement, à `fputc` et `_fputchar`, mais elles sont implémentées à la fois comme fonctions et macros (consultez [Choix entre une fonction et une macro](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). `putwc` et `putwchar` sont, respectivement, des versions à caractères larges de `putc` et `putchar`. `putwc` et `putc` se comportent de la même façon si le flux est ouvert en mode ANSI. `putc` ne prend actuellement pas en charge la sortie vers un flux UNICODE.  
+ La routine `putc` écrit le caractère unique `c` dans la sortie `stream` à la position actuelle. Il est possible de passer un entier à `putc`, mais seuls les 8 bits inférieurs sont écrits. La routine `putchar` est identique à **putc(** `c`**, stdout)**. Pour chaque routine, si une erreur de lecture se produit, l’indicateur d’erreur du flux est défini. Les routines `putc` et `putchar` sont comparables, respectivement, à `fputc` et `_fputchar`, mais elles sont implémentées à la fois comme fonctions et macros (consultez [Choix entre une fonction et une macro](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). `putwc` et `putwchar` sont, respectivement, des versions à caractères larges de `putc` et `putchar`. `putwc` et `putc` se comportent de la même façon si le flux est ouvert en mode ANSI. `putc` ne prend pas en charge la sortie vers un flux UNICODE pour l’instant.  
   
  Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles ne sont pas protégées contre les interférences avec d’autres threads. Pour plus d’informations, consultez **_putc_nolock, _putwc_nolock**.  
   
@@ -104,14 +87,14 @@ wint_t putwc(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_puttc`|`putc`|`putc`|**putwc**|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`putc`|\<stdio.h>|  
 |`putwc`|\<stdio.h> ou \<wchar.h>|  
   
- La console n'est pas prise en charge dans les applications [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] . Les handles de flux standard associés à la console (`stdin`, `stdout` et `stderr`) doivent être redirigés pour que les fonctions Runtime C puissent les utiliser dans les applications du [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ La console n'est pas prise en charge dans les applications [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] . Les handles de flux standard associés à la console (`stdin`, `stdout` et `stderr`) doivent être redirigés pour que les fonctions Runtime C puissent les utiliser dans les applications du [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtSetDebugFillThreshold
+apiname: _CrtSetDebugFillThreshold
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,8 +23,7 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetDebugFillThreshold
 - CrtSetDebugFillThreshold
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - debug, buffer-filling behavior
 - CrtSetDebugFillThreshold function
@@ -34,16 +31,16 @@ helpviewer_keywords:
 - buffer-filling behavior
 - 0xFD
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0d8fcbf7f354def49056c1e519e910edccde56cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 4af73cd84e21ea23f7bdacdeff91cacdda322198
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 Récupère ou modifie le seuil de contrôle du comportement de remplissage de la mémoire tampon dans les fonctions de débogage.  
@@ -63,7 +60,7 @@ size_t _CrtSetDebugFillThreshold(
 ## <a name="return-value"></a>Valeur de retour  
  Seuil précédent.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les versions debug de certaines fonctions CRT sécurisé remplissent la mémoire tampon passée les uns aux autres par un caractère spécial (0xFE). Cela permet de rechercher les cas où une taille incorrecte a été passée à la fonction. Malheureusement, cela réduit aussi les performances. Pour améliorer les performances, utilisez `_CrtSetDebugFillThreshold` pour désactiver le remplissage de la mémoire tampon pour les mémoires tampons qui dépassent le seuil. Un seuil égal à 0 désactive le remplissage pour toutes les mémoires tampons.  
   
  La valeur de seuil par défaut est `SIZE_T_MAX`.  
@@ -106,13 +103,13 @@ size_t _CrtSetDebugFillThreshold(
   
 -   [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_CrtSetDebugFillThreshold`|\<crtdbg.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="libraries"></a>Bibliothèques  
  Uniquement les versions de débogage des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

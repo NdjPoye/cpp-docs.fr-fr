@@ -1,32 +1,33 @@
 ---
-title: "BEGIN_PROPSET_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_PROPSET_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_PROPSET_MAP (macro)"
+title: BEGIN_PROPSET_MAP | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_PROPSET_MAP
+dev_langs: C++
+helpviewer_keywords: BEGIN_PROPSET_MAP macro
 ms.assetid: c3a30618-6025-4d49-8688-a171294d2e93
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 24fe8ed41888ab2b3d303a29cd9d004f26b6c6b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# BEGIN_PROPSET_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Marque le début des entrées de mappage de l'ensemble de propriété.  
+# <a name="beginpropsetmap"></a>BEGIN_PROPSET_MAP
+Marque le début de la propriété définie les entrées de mappage.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -36,26 +37,26 @@ Class
   
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *Classe*  
- \[in\] la classe dans laquelle cette propriété est spécifiée.  Un jeu de propriétés peut être spécifié dans les objets OLE DB suivants :  
+ [in] La classe dans laquelle cette propriété la valeur est spécifiée. Un jeu de propriétés peut être spécifié dans les objets OLE DB suivants :  
   
--   [\<caps:sentence id\="tgt4" sentenceid\="75bbb794f21139fcd243c18fff6050d2" class\="tgtSentence"\>Données Source Objet\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms721278.aspx)  
+-   [Objets Source de données](https://msdn.microsoft.com/en-us/library/ms721278.aspx)  
   
--   [\<caps:sentence id\="tgt5" sentenceid\="e423b0fba10fc83bd76e01e3eee2fd69" class\="tgtSentence"\>Objet Session\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms711572.aspx)  
+-   [Objets de session](https://msdn.microsoft.com/en-us/library/ms711572.aspx)  
   
--   [\<caps:sentence id\="tgt6" sentenceid\="5f6bc08c46cee6f21bfcdd08aff6e8aa" class\="tgtSentence"\>Commandes\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms724608.aspx)  
+-   [Commandes](https://msdn.microsoft.com/en-us/library/ms724608.aspx)  
   
-## Exemple  
- Voici un mappage de jeu de propriété d'exemple :  
+## <a name="example"></a>Exemple  
+ Voici un exemple de mappage de jeu de propriétés :  
   
- [!code-cpp[NVC_OLEDB_Provider#3](../../data/oledb/codesnippet/CPP/begin-propset-map_1.h)]  
+ [!code-cpp[NVC_OLEDB_Provider#3](../../data/oledb/codesnippet/cpp/begin-propset-map_1.h)]  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
- [Macros pour les modèles du fournisseur OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
- [Création d'un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+## <a name="see-also"></a>Voir aussi  
+ [Macros pour les modèles du fournisseur OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+ [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
+ [Création d’un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

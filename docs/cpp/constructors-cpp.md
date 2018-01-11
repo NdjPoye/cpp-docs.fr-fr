@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 77007b3d3805bb2fa159680c88d8e41825336da2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 57854ec15d3104d80e8dbba68ebc33937222172f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constructors-c"></a>Constructeurs (C++)
 Un constructeur est un type de fonction membre qui initialise une instance de sa classe. Un constructeur porte le même nom que la classe et n'a aucune valeur de retour. Un constructeur peut avoir un nombre quelconque de paramètres et une classe peut avoir un nombre quelconque de constructeurs surchargés. Les constructeurs peuvent avoir n'importe quelle accessibilité : publique, protégée ou privée. Si vous ne définissez pas de constructeurs, le compilateur génère un constructeur par défaut qui n'accepte aucun paramètre ; vous pouvez substituer ce comportement en déclarant un constructeur par défaut comme supprimé.  

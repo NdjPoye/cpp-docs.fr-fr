@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - _strdup
 - _ftcsdup
 - _wcsdup
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wcsdup function
 - ftcsdup function
@@ -51,36 +49,22 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 959fe23b5d1af1c783bc06485cdcbcfc877b8990
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: da8d1341e9ce46e2ab2040812622a78d3bd3830d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strdup-wcsdup-mbsdup"></a>_strdup, _wcsdup, _mbsdup
 Duplique les chaînes.  
   
 > [!IMPORTANT]
->  `_mbsdup` ne peut pas être utilisée dans les applications qui s’exécutent dans                  [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Pour plus d’informations, consultez                  [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsdup`ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez                  [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -106,7 +90,7 @@ unsigned char *_mbsdup(
 ## <a name="remarks"></a>Notes  
  La fonction `_strdup` appelle [malloc](../../c-runtime-library/reference/malloc.md) pour allouer de l’espace de stockage pour une copie de `strSource` et copie ensuite `strSource` dans l’espace alloué.  
   
- `_wcsdup` et `_mbsdup` sont des versions à caractères larges et à caractères multioctets de `_strdup`. Les arguments et la valeur de retour de `_wcsdup` sont des chaînes de caractères larges ; ceux de `_mbsdup` sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.  
+ `_wcsdup` et `_mbsdup` sont des versions à caractères larges et à caractères multioctets de `_strdup`. Les arguments et la valeur de retour de `_wcsdup` sont des chaînes de caractères larges ; ceux de `_mbsdup` sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
@@ -118,7 +102,7 @@ unsigned char *_mbsdup(
   
  Si `_DEBUG` et `_CRTDBG_MAP_ALLOC` sont définis, `_strdup` et `_wcsdup` sont remplacés par les appels à `_strdup_dbg` et `_wcsdup_dbg` pour prévoir le débogage des allocations de mémoire. Pour plus d’informations, consultez [_strdup_dbg, _wcsdup_dbg](../../c-runtime-library/reference/strdup-dbg-wcsdup-dbg.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
@@ -126,7 +110,7 @@ unsigned char *_mbsdup(
 |`_wcsdup`|\<string.h> ou \<wchar.h>|  
 |`_mbsdup`|\<mbstring.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

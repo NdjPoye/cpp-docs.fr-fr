@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71011177634e92b22cce1bc88a2ee711ad9537ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eeb53dea24ccd4d34ef90045e3254915135e70c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-macros-and-globals"></a>Macros et objet Globals MFC
 La bibliothèque Microsoft Foundation Class peut être divisée en deux sections principales : (1) le classes MFC et les macros (2) et les variables globales. Si une fonction ou une variable n’est pas un membre d’une classe, il est une fonction globale ou une variable.  

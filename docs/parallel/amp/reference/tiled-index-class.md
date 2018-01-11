@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,35 +22,19 @@ f1_keywords:
 - AMP/Concurrency::tiled_index::tile_dim2
 - AMP/Concurrency::tiled_index::tile_origin
 - AMP/Concurrency::tiled_index::tile_extent
-dev_langs:
-- C++
-helpviewer_keywords:
-- tiled_index class
+dev_langs: C++
+helpviewer_keywords: tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3a436635b456bd196a863ac5e9e8a5c10b679644
-ms.openlocfilehash: ed5c024e47eb8a822115822ae83e0e02fd8cf111
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/21/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 46467930b1d8bfaffe6bac4f862986d445315f87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tiledindex-class"></a>tiled_index, classe
 Fournit un index dans une [tiled_extent](tiled-extent-class.md) objet. Cette classe possède des propriétés pour accéder aux éléments par rapport à l’origine de la vignette local et par rapport à l’origine global. Pour plus d’informations sur les espaces en mosaïque, consultez [à l’aide de mosaïques](../../../parallel/amp/using-tiles.md).  
@@ -107,7 +90,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 ### <a name="public-constants"></a>Constantes publiques  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[cloisonnement (constante)](#tiled_index__barrier)|Stocke un [tile_barrier](tile-barrier-class.md) objet qui représente un objet barrier dans la vignette actuel de threads.|  
 |||  
@@ -133,7 +116,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
  `tiled_index`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp.h  
   
  **Espace de noms :** Concurrency  
@@ -179,7 +162,7 @@ tiled_index(
   
 |||  
 |-|-|  
-|Nom|Description|  
+|Name|Description|  
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|Initialise une nouvelle instance de la `tile_index` classe à partir de l’index de la vignette dans les coordonnées globales et la position relative dans la vignette dans le système de coordonnées locales. Le `_Global` et `_Tile_origin` paramètres sont calculées.|  
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Initialise une nouvelle instance de la `tile_index` classe en copiant spécifié `tiled_index` objet.|  
 
@@ -285,4 +268,3 @@ __declspec(property(get= get_tile_extent)) extent<rank> tile_extent;
   
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be6c812864c6b5284b8db27d212ce82f8307e70c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9b998cc18ac0c357b57bc841f6db13700b078063
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colelinksdialog-class"></a>Classe de COleLinksDialog
 Utilisée pour la boîte de dialogue OLE Modifier les liens.  
@@ -58,7 +59,7 @@ class COleLinksDialog : public COleDialog
 |----------|-----------------|  
 |[COleLinksDialog::m_el](#m_el)|Une structure de type **OLEUIEDITLINKS** qui contrôle le comportement de la boîte de dialogue.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Créer un objet de classe `COleLinksDialog` lorsque vous souhaitez appeler cette boîte de dialogue. Après un `COleLinksDialog` objet a été construit, vous pouvez utiliser la [m_el](#m_el) structure pour initialiser les valeurs ou les États des contrôles dans la boîte de dialogue. Le `m_el` structure est de type **OLEUIEDITLINKS**. Pour plus d’informations sur l’utilisation de cette classe de boîte de dialogue, consultez la [DoModal](#domodal) fonction membre.  
   
 > [!NOTE]
@@ -83,7 +84,7 @@ class COleLinksDialog : public COleDialog
   
  `COleLinksDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxodlgs.h  
   
 ##  <a name="domodal"></a>COleLinksDialog::DoModal  
@@ -102,7 +103,7 @@ virtual INT_PTR DoModal();
   
 - **IDABORT** si une erreur s’est produite. Si **IDABORT** est retourné, appelez le `COleDialog::GetLastError` fonction membre pour obtenir plus d’informations sur le type d’erreur qui s’est produite. Pour obtenir la liste des erreurs possibles, consultez la [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) fonction dans le SDK Windows.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si vous souhaitez initialiser le contrôle de boîte de dialogue différentes en définissant les membres de la [m_el](#m_el) structure, vous devez le faire avant d’appeler `DoModal`, mais une fois que l’objet de la boîte de dialogue est construit.  
   
 ##  <a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog  
@@ -129,7 +130,7 @@ COleLinksDialog (
  `pParentWnd`  
  Pointe vers l’objet de fenêtre parente ou propriétaire (de type `CWnd`) auquel appartient l’objet de la boîte de dialogue. S’il s’agit **NULL**, la fenêtre parente de la boîte de dialogue est définie dans la fenêtre principale de l’application.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction crée uniquement une `COleLinksDialog` objet. Pour afficher la boîte de dialogue, appelez le [DoModal](#domodal) (fonction).  
   
 ##  <a name="m_el"></a>COleLinksDialog::m_el  
@@ -139,7 +140,7 @@ COleLinksDialog (
 OLEUIEDITLINKS m_el;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Membres de cette structure peuvent être modifiés directement ou via les fonctions membres.  
   
  Pour plus d’informations, consultez la [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) structure dans le SDK Windows.  

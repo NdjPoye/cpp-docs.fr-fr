@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - operators [C++], bitwise
 - exclusive OR operator
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c6d7713a28fa6c0dbe7a5543afa65cd927f614e7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6d6bd80c7144ea3f4a2288e07b7801612ed62efd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Opérateur de bits OR exclusif : ^
 ## <a name="syntax"></a>Syntaxe  
@@ -37,13 +35,13 @@ ms.lasthandoff: 09/25/2017
 expression ^ expression  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
 L’opérateur OR exclusif au niveau du bit (**^**) compare chaque bit de son premier opérande au bit correspondant de son second opérande. Si un bit est 0 et que l'autre bit est 1, le bit de résultat correspondant prend la valeur 1. Sinon, le bit de résultat correspondant a la valeur 0.  
   
 Les deux opérandes de l’opérateur de bits OR exclusif doivent être de types intégraux. Les conversions arithmétiques courantes traitées dans [Conversions Standard](standard-conversions.md) sont appliquées aux opérandes.  
   
 ## <a name="operator-keyword-for-"></a>Mot clé d'opérateur pour ^  
-Le **xor** opérateur est l’équivalent textuel de ** ^ **. Il existe deux moyens d’accéder à la **xor** opérateur dans vos programmes : incluez le fichier d’en-tête `iso646.h`, ou compilez avec le [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
+Le **xor** opérateur est l’équivalent textuel de  **^** . Il existe deux moyens d’accéder à la **xor** opérateur dans vos programmes : incluez le fichier d’en-tête `iso646.h`, ou compilez avec le [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
   
 ## <a name="example"></a>Exemple  
   
@@ -63,6 +61,5 @@ int main() {
   
 ## <a name="see-also"></a>Voir aussi  
  [Opérateurs intégrés, priorité et associativité C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
-
 
 

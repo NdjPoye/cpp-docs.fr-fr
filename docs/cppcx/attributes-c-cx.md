@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 4cffb903bcfa22654d4b8ff65609342fab267412
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6dcd3818d21b644211891ae4779a6b9bf5074e6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributes-ccx"></a>Attributs (C++/CX)
 Un attribut est un type spécial de classe ref qui peut être ajouté entre crochets aux types Windows Runtime et des méthodes pour spécifier certains comportements de la création de métadonnées. Plusieurs attributs prédéfinis, par exemple, [Windows::Foundation::Metadata::WebHostHidden](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx), sont couramment utilisés dans C + c++ / code CX. Cet exemple montre comment l'attribut est appliqué à une classe :  

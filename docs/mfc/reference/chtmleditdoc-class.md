@@ -25,11 +25,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6df8123e69a4ecccc9aaa7af7b82678a211cc28e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c1e60c3b175346268b2c6b755786adbd8eb86467
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chtmleditdoc-class"></a>Classe de CHtmlEditDoc
 Avec [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), fournit les fonctionnalités de la plateforme d’édition WebBrowser dans le contexte de l’architecture document / vue MFC.  
@@ -65,7 +66,7 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
   
  `CHtmlEditDoc`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxhtml.h  
   
 ##  <a name="chtmleditdoc"></a>CHtmlEditDoc::CHtmlEditDoc  

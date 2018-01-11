@@ -77,11 +77,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4449ebd1563fe02705913fd4f19e51d195b3d732
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c23129c1ac857e812b0da837b19322741087934
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar, classe
 A `CMFCCaptionBar` objet est une barre de contrôle qui peut afficher trois éléments : un bouton, une étiquette de texte et une image bitmap. Elle ne peut afficher qu'un élément de chaque type à la fois. Vous pouvez aligner chaque élément sur le bord gauche ou droit du contrôle ou le centrer. Vous pouvez également appliquer un style 2D ou 3D aux bordures supérieure et inférieure de la barre de légende.  
@@ -133,13 +134,13 @@ class CMFCCaptionBar : public CPane
   
 ### <a name="data-members"></a>Membres de données  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|La couleur d’arrière-plan de la barre de légende.|  
 |[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|La couleur de la bordure de la barre de légende.|  
 |[CMFCCaptionBar::m_clrBarText](#m_clrbartext)|Couleur de texte de la barre de légende.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour créer une barre de légende, procédez comme suit :  
   
 1.  Construire la `CMFCCaptionBar` objet. En règle générale, vous devez ajouter la barre de légende à une classe de fenêtre frame.  
@@ -173,7 +174,7 @@ class CMFCCaptionBar : public CPane
   
  [CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcaptionbar.h  
   
 ##  <a name="create"></a>CMFCCaptionBar::Create  
@@ -207,7 +208,7 @@ BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le contrôle de barre de légende est créé avec succès ; `FALSE` dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous construisez un `CMFCCaptionBar` objet en deux étapes. Tout d’abord, vous appelez le constructeur, et que vous appelez ensuite la `Create` méthode, ce qui crée le contrôle Windows et l’attache à le `CMFCCaptionBar` objet.  
   
 ##  <a name="doesallowdyninsertbefore"></a>CMFCCaptionBar::DoesAllowDynInsertBefore  
@@ -220,7 +221,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `FALSE` , sauf si la substitution.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="enablebutton"></a>CMFCCaptionBar::EnableButton  
  Active ou désactive le bouton de la barre de légende.  
@@ -247,7 +248,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 ### <a name="return-value"></a>Valeur de retour  
  L’alignement d’un élément, comme un bouton, une image bitmap, texte ou une icône.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’alignement de l’élément peut être une des valeurs suivantes :  
   
 -   ALIGN_INVALID  
@@ -298,7 +299,7 @@ BOOL IsMessageBarMode() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si la barre de légende est en mode de la barre de message ; `FALSE` dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En mode de la barre de message, la barre de légende affiche une image avec une info-bulle, un message texte et un bouton.  
   
 ##  <a name="m_clrbarbackground"></a>CMFCCaptionBar::m_clrBarBackground  
@@ -338,7 +339,7 @@ virtual void OnDrawBackground(
  [in] `rect`  
  Le rectangle à remplir.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `OnDrawBackground` méthode est appelée lorsque l’arrière-plan de la barre de légende est sur le point d’être rempli. L’implémentation par défaut remplit l’arrière-plan à l’aide de la [CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground) couleur.  
   
  Substituez cette méthode dans un `CMFCCaptionBar` dérivée de la classe pour personnaliser l’apparence de la barre de légende.  
@@ -359,7 +360,7 @@ virtual void OnDrawBorder(
  [in] `rect`  
  Rectangle englobant.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, les bordures ont le style à deux dimensions.  
   
  Substituez cette méthode dans un `CMFCCaptionBar` dérivée de la classe pour personnaliser l’apparence des bordures de la barre de légende.  
@@ -388,7 +389,7 @@ virtual void OnDrawButton(
  [in] `bEnabled`  
  `TRUE`Si le bouton est activé ; `FALSE` dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Substituez cette méthode dans un `CMFCCaptionBar` dérivée de la classe pour personnaliser l’apparence du bouton de la barre de légende.  
   
 ##  <a name="ondrawimage"></a>CMFCCaptionBar::OnDrawImage  
@@ -407,7 +408,7 @@ virtual void OnDrawImage(
  [in] `rect`  
  Spécifie le rectangle englobant de l’image.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Substituez cette méthode dans un `CMFCCaptionBar` dérivée de la classe pour personnaliser l’apparence de l’image.  
   
 ##  <a name="ondrawtext"></a>CMFCCaptionBar::OnDrawText  
@@ -430,7 +431,7 @@ virtual void OnDrawText(
  [in] `strText`  
  La chaîne de texte à afficher.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation par défaut affiche le texte à l’aide de `CDC::DrawText` et [CMFCCaptionBar::m_clrBarText](#m_clrbartext) couleur.  
   
  Substituez cette méthode dans un `CMFCCaptionBar` dérivée de la classe pour personnaliser l’apparence du texte de la barre de légende.  
@@ -449,7 +450,7 @@ void RemoveBitmap();
 void RemoveButton();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La disposition des éléments de barre de légende sont ajustés automatiquement.  
   
 ##  <a name="removeicon"></a>CMFCCaptionBar::RemoveIcon  
@@ -497,7 +498,7 @@ void SetBitmap(
  [in] `bmpAlignment`  
  L’alignement de l’image bitmap.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour définir une image bitmap sur une barre de légende.  
   
  L’image bitmap précédent est supprimé automatiquement. Si la barre de légende affiche une icône, car vous avez appelé la [CMFCCaptionBar::SetIcon](#seticon) (méthode), l’image bitmap ne s’affichera pas sauf si vous supprimez l’icône en appelant [CMFCCaptionBar::RemoveIcon](#removeicon).  
@@ -601,7 +602,7 @@ void SetIcon(
  [in] `iconAlignment`  
  L’alignement de l’icône.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Barres de légende peuvent afficher des icônes ou bitmaps. Consultez [CMFCCaptionBar::SetBitmap](#setbitmap) pour savoir comment afficher une image bitmap. Si vous définissez une icône et une image bitmap, l’icône est toujours affichée. Appelez [CMFCCaptionBar::RemoveIcon](#removeicon) pour supprimer une icône de la barre de légende.  
   
  L’icône est aligné en fonction de la `iconAlignment` paramètre. Il peut être une de ces `BarElementAlignment` valeurs :  
@@ -657,7 +658,7 @@ void SetText(
  [in] `textAlignment`  
  L’alignement du texte.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’étiquette de texte est aligné comme spécifié par le `textAlignment` paramètre. Il peut être une de ces `BarElementAlignment` valeurs :  
   
 -   ALIGN_INVALID  

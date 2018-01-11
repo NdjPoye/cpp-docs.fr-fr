@@ -35,11 +35,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 30e36ec884b1f073eb3d061923687a4318c0138f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 58918a45daa1a6f64c160d79f52503e3a3c61cff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl (classe)
 Fournit les fonctionnalités du contrôle commun d'animation Windows.  
@@ -71,7 +72,7 @@ class CAnimateCtrl : public CWnd
 |[CAnimateCtrl::Seek](#seek)|Affiche un frame unique sélectionné du clip AVI.|  
 |[CAnimateCtrl::Stop](#stop)|Arrête la lecture du clip AVI.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Ce contrôle (et par conséquent la `CAnimateCtrl` classe) est disponible uniquement pour les programmes s’exécutant sous Windows 95, Windows 98 et Windows NT version 3.51 et ultérieures.  
   
  Un contrôle animation est une fenêtre rectangulaire qui affiche un clip au format AVI (Audio Video Interleaved), le format audio/vidéo Windows standard. Un clip AVI est une série d’images bitmap, comme un film.  
@@ -105,7 +106,7 @@ class CAnimateCtrl : public CWnd
   
  `CAnimateCtrl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcmn.h  
   
 ##  <a name="canimatectrl"></a>CAnimateCtrl::CAnimateCtrl  
@@ -115,7 +116,7 @@ class CAnimateCtrl : public CWnd
 CAnimateCtrl();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez appeler la [créer](#create) fonction membre avant d’effectuer d’autres opérations sur l’objet que vous créez.  
   
 ### <a name="example"></a>Exemple  
@@ -161,7 +162,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous construisez un `CAnimateCtrl` en deux étapes. Tout d’abord, appelez le constructeur, puis **créer**, ce qui crée le contrôle de l’animation et l’attache à le `CAnimateCtrl` objet.  
   
  Appliquez ce qui suit [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) à un contrôle de l’animation.  
@@ -210,7 +211,7 @@ virtual BOOL CreateEx(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des styles étendus Windows spécifiés par la préface style étendu de Windows **WS_EX_**.  
   
 ##  <a name="isplaying"></a>CAnimateCtrl::IsPlaying  
@@ -223,7 +224,7 @@ BOOL IsPlaying() const;
 ### <a name="return-value"></a>Valeur de retour  
  `true`la lecture d’un clip AVI ; dans le cas contraire, `false`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="open"></a>CAnimateCtrl::Open  
@@ -244,7 +245,7 @@ BOOL Open(UINT nID);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La ressource AVI est chargée à partir du module qui a créé le contrôle de l’animation.  
   
  **Ouvrez** ne prend pas en charge son dans un clip AVI ; vous pouvez ouvrir uniquement les éléments AVI en mode silencieux.  
@@ -281,7 +282,7 @@ BOOL Play(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le contrôle de l’animation est lue l’élément en arrière-plan pendant que votre thread continue l’exécution. Si le contrôle de l’animation a `ACS_TRANSPARENT` style, du clip AVI est lu à l’aide d’un arrière-plan transparent, plutôt que la couleur d’arrière-plan spécifiée dans l’élément d’animation.  
   
 ### <a name="example"></a>Exemple  
@@ -301,7 +302,7 @@ BOOL Seek(UINT nTo);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si le contrôle de l’animation a `ACS_TRANSPARENT` style, du clip AVI sera dessiné à l’aide d’un arrière-plan transparent au lieu de la couleur d’arrière-plan spécifiée dans l’élément d’animation.  
   
 ### <a name="example"></a>Exemple  

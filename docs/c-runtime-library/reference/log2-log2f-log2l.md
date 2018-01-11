@@ -32,11 +32,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f825304439e3e1c27f5dc1e41a1ae4c311450625
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e96e572070471d59e91c8f10a382c2770dcc6385
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 Détermine le logarithme (base 2) binaire de la valeur spécifiée.  
@@ -90,13 +91,13 @@ long double log2l(
 ## <a name="remarks"></a>Notes  
  Si x est un entier, cette fonction retourne essentiellement l’index de base zéro du bit 1 le plus significatif de `x`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête C|En-tête C++|  
 |--------------|--------------|------------------|  
 |`log2`,                `log2f`,  `log2l`|\<math.h>|\<cmath>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

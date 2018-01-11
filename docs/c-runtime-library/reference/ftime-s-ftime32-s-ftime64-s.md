@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -32,8 +31,7 @@ f1_keywords:
 - _ftime32_s
 - ftime32_s
 - ftime64_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ftime32_s function
 - ftime_s function
@@ -44,30 +42,16 @@ helpviewer_keywords:
 - _ftime_s function
 - _ftime32_s function
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 20611bb1f40ae900ad2653395da6a0d8279252db
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: eb90c8f9ed18355821e3a067b0f2b9b92562b08c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ftimes-ftime32s-ftime64s"></a>_ftime_s, _ftime32_s, _ftime64_s
 Obtient l’heure actuelle. Ces versions de [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -93,7 +77,7 @@ errno_t _ftime64_s(
 ## <a name="return-value"></a>Valeur de retour  
  Zéro si l'opération a réussi, un code d'erreur en cas d'échec. Si `timeptr` est `NULL`, la valeur de retour est `EINVAL`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `_ftime_s` fonction obtient l’heure locale actuelle et la stocke dans la structure vers laquelle pointée `timeptr`. Le `_timeb`, `__timeb32`, et `__timeb64` structures sont définies dans SYS\Timeb.h. Elles contiennent quatre champs, qui sont présentés dans le tableau suivant.  
   
  `dstflag`  
@@ -114,7 +98,7 @@ errno_t _ftime64_s(
   
  `_ftime_s` valide ses paramètres. Si elle reçoit un pointeur null en guise de paramètre `timeptr`, la fonction appelle le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction définit `errno` sur `EINVAL`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête requis|  
 |--------------|---------------------|  
@@ -122,7 +106,7 @@ errno_t _ftime64_s(
 |`_ftime32_s`|\<sys/types.h> et \<sys/timeb.h>|  
 |`_ftime64_s`|\<sys/types.h> et \<sys/timeb.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

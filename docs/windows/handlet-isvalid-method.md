@@ -1,44 +1,45 @@
 ---
-title: "HandleT::IsValid, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleT::IsValid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsValid (méthode)"
+title: "Handlet::IsValid, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleT::IsValid
+dev_langs: C++
+helpviewer_keywords: IsValid method
 ms.assetid: 2c3e72fd-e67b-4908-9929-9007e1a4fc25
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 666aa484273068cbc080c638520e473403ace727
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# HandleT::IsValid, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indique si l'objet HandleT actuel représente un handle.  
+# <a name="handletisvalid-method"></a>HandleT::IsValid, méthode
+Indique si l’objet HandleT actuel représente un handle.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 bool IsValid() const;  
 ```  
   
-## Valeur de retour  
- `true` si le HandleT représente un handle ; sinon, `false`.  
+## <a name="return-value"></a>Valeur de retour  
+ `true`Si la HandleT représente un handle ; dans le cas contraire, `false`.  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers  
+ **Namespace :** Microsoft::WRL::Wrappers  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [HandleT, classe](../windows/handlet-class.md)

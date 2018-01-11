@@ -4,47 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4703
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4703
+f1_keywords: C4703
+dev_langs: C++
+helpviewer_keywords: C4703
 ms.assetid: 5dad454e-69e3-4931-9168-050a861c05f8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 75aa17d24abfad3eec3bc74f82218af6ceedadec
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f8c2bacdb938cacc451011cffed2b41a1092dabe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="compiler-warning-level-4-c4703"></a>Avertissement du compilateur (niveau 4) C4703
-Potentiellement non initialisée variable pointeur local 'nom' utilisée  
+# <a name="compiler-warning-level-4-c4703"></a>Avertissement du compilateur (niveau 4) C4703
+Potentiellement non initialisée variable de pointeur locale 'name' utilisé  
   
- La variable pointeur local *nom* a peut-être été utilisé sans valeur assignée. Cela peut entraîner des résultats imprévisibles.  
+ La variable de pointeur locale *nom* a peut-être été utilisé sans assignée une valeur. Cela peut entraîner des résultats imprévisibles.  
   
 ## <a name="example"></a>Exemple  
  Le code suivant génère C4701 et C4703.  
@@ -99,4 +80,4 @@ void main()
   
 ## <a name="see-also"></a>Voir aussi  
  [Compilateur avertissement (niveau 4) C4701](../../error-messages/compiler-warnings/compiler-warning-level-4-c4701.md)   
- [Avertissements, /sdl et amélioration de la détection de variable non initialisée](http://blogs.msdn.com/b/sdl/archive/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection.aspx)
+ [Avertissements, /sdl et amélioration de la détection des variable non initialisées](http://blogs.msdn.com/b/sdl/archive/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection.aspx)

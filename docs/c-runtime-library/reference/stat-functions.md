@@ -117,11 +117,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 18cfdda310149c18ef8983b10afb5c901b256510
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed4a232cc5d563a724adf29500e70aa28cf36432
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 Obtenir des informations sur l’état d’un fichier.  
@@ -189,7 +190,7 @@ int _wstat64i32(
 ## <a name="return-value"></a>Valeur de retour  
  Chacune de ces fonctions retourne 0 si les informations sur l’état des fichiers sont obtenues. Une valeur de retour de -1 indique une erreur, auquel cas `errno` a la valeur `ENOENT`, indiquant que le nom de fichier ou le chemin d’accès est introuvable. Une valeur de retour de `EINVAL` indique un paramètre non valide ; dans ce cas, `errno` prend également la valeur `EINVAL` .  
   
- Pour plus d’informations sur ce code de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour plus d’informations sur ce code de retour et sur les autres codes, consultez [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .  
   
  L’horodatage d’un fichier peut être représenté s’il est ultérieur au 1er janvier 1970 à minuit et antérieur au 31 décembre 3000 à 23:59:59, heure UTC, sauf si vous utilisez `_stat32` ou `_wstat32`, ou si vous avez défini `_USE_32BIT_TIME_T`, auquel cas la date peut être représentée uniquement jusqu’au 18 janvier 2038 à 23:59:59, heure UTC.  
   
@@ -198,7 +199,7 @@ int _wstat64i32(
   
  `_wstat` est une version à caractères larges de `_stat`; l'argument `path` de `_wstat` est une chaîne à caractères larges. `_wstat` et `_stat` se comportent de la même manière, sauf que `_wstat` ne gère pas les chaînes de caractères multioctets.  
   
- Les variantes de ces fonctions prennent en charge les types d’heures 32 ou 64 bits et les longueurs de fichiers 32 ou 64 bits. Le premier suffixe numérique (`32` ou `64`) indique la taille du type d’heure utilisé ; le deuxième suffixe est `i32` ou `i64`, qui indique si la taille du fichier est représentée comme un entier 32 bits ou 64 bits.  
+ Les variantes de ces fonctions prennent en charge les types d’heures 32 ou 64 bits et les longueurs de fichiers 32 ou 64 bits. Le premier suffixe numérique (`32` ou `64`) indique la taille du type d’heure utilisé ; le deuxième suffixe est `i32` ou `i64`, qui indique si la taille du fichier est représentée comme un entier 32 bits ou 64 bits.  
   
  `_stat` équivaut à `_stat64i32`, et `struct _stat` contient une heure 64 bits. Cela est vrai, sauf si `_USE_32BIT_TIME_T` est défini, auquel cas l’ancien comportement est appliqué. `_stat` utilise une heure 32 bits et `struct _stat` contient une heure 32 bits. La même remarque s’applique à `_stati64`.  
   
@@ -267,14 +268,14 @@ int _wstat64i32(
   
  Si `path` fait référence à un périphérique, le `st_size`, divers champs d’heure et les champs `st_dev`et `st_rdev` dans la structure `_stat` n’ont aucune signification. Étant donné que STAT.H utilise le type [_dev_t](../../c-runtime-library/standard-types.md) défini dans TYPES.H, vous devez inclure TYPES.H avant STAT.H dans votre code.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|En-têtes facultatifs|  
 |-------------|---------------------|----------------------|  
 |`_stat`, `_stat32`, `_stat64`, `_stati64`, `_stat32i64`, `_stat64i32`|\<<sys/types.h> suivi de \<sys/stat.h>|\<errno.h>|  
 |`_wstat`, `_wstat32`, `_wstat64`, `_wstati64`, `_wstat32i64`, `_wstat64i32`|\<sys/types.h> suivi de \<sys/stat.h> ou \<wchar.h>|\<errno.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

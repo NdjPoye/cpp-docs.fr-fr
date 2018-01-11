@@ -1,41 +1,42 @@
 ---
-title: "priority_queue::difference_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::difference_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "difference_type (membre) (STL/CLR)"
+title: priority_queue::difference_type (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::difference_type
+dev_langs: C++
+helpviewer_keywords: difference_type member [STL/CLR]
 ms.assetid: 4bedce11-244c-428b-b5e2-e6bbf5674803
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a918bf5317c99fcd62854b17dad8929d3a8ad6a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::difference_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les types d'une distance signée entre deux éléments.  
+# <a name="priorityqueuedifferencetype-stlclr"></a>priority_queue::difference_type (STL/CLR)
+Les types d’une distance signée entre deux éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 typedef int difference_type;  
 ```  
   
-## Notes  
- Le type décrit un nombre d'éléments qui peut être négatif.  
+## <a name="remarks"></a>Notes  
+ Le type décrit un nombre d’éléments éventuellement négatif.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_priority_queue_difference_type.cpp   
@@ -74,14 +75,17 @@ int main()
   
 ```  
   
-  **c a b**  
-**poussant 2 \= \-2**  
-**dépilant 3 \= 3**   
-## Configuration requise  
- **En\-tête :** \<cliext\/queue\>  
+```Output  
+ c a b  
+pushing 2 = -2  
+popping 3 = 3  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/file d’attente >  
   
-## Voir aussi  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::size\_type](../dotnet/priority-queue-size-type-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::size_type (STL/CLR)](../dotnet/priority-queue-size-type-stl-clr.md)

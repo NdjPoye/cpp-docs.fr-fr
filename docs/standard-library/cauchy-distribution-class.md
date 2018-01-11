@@ -37,11 +37,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4910c1e65ac8e758b1b7790c27b8addf732dc32e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 53ecdd04ebb24c6380e61f8bc5536d24df4dc21b
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cauchydistribution-class"></a>cauchy_distribution, classe
 Génère une distribution suivant une loi de Cauchy.  
@@ -93,7 +94,7 @@ La classe de modèle décrit une distribution qui produit des valeurs d’un typ
   
 Les fonctions de propriété `a()` et `b()` retournent leurs valeurs respectives pour les paramètres de distribution stockés `a` et `b`.  
   
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.  
+Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stockés `param_type`.  
 
 Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.  
   
@@ -103,7 +104,7 @@ Les fonctions membres `operator()` retournent la valeur générée suivante d’
   
 Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).  
   
-Pour plus d’informations sur la loi de Cauchy, consultez l’article de Wolfram MathWorld [Cauchy Distribution](http://go.microsoft.com/fwlink/LinkId=400523).  
+Pour plus d’informations sur la loi de Cauchy, consultez l’article de Wolfram MathWorld [Cauchy Distribution](http://go.microsoft.com/fwlink/p/?linkid=400523).  
   
 ## <a name="example"></a>Exemple  
   
@@ -240,7 +241,7 @@ Distribution for 10 samples:
     10: 35.2531547063  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
 **En-tête :** \<random>  
   
 **Espace de noms :** std  

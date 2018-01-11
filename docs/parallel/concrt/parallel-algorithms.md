@@ -14,11 +14,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 191d368d6152f5eb8bd9bb3c7ff7e77a54182a2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbabb499d67a2248ebaefa5cbc787afe2c6cfc08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parallel-algorithms"></a>Algorithmes parallèles
 La bibliothèque de modèles parallèles (PPL) fournit des algorithmes qui exécutent simultanément du travail sur des collections de données. Ces algorithmes ressemblent à celles fournies par la bibliothèque C++ Standard.  
@@ -147,7 +148,7 @@ La bibliothèque de modèles parallèles (PPL) fournit des algorithmes qui exéc
 >  Le `parallel_transform` et `parallel_reduce` algorithmes prennent en charge uniquement, bidirectionnel et transmettre itérateurs d’accès aléatoire, car ces itérateurs produisent adresses mémoire stable. En outre, ces itérateurs doivent produire non -`const` l-values.  
   
 ###  <a name="parallel_transform"></a>Algorithme parallel_transform  
- Vous pouvez utiliser la `parallel transform` algorithme pour effectuer de nombreuses opérations de la parallélisation de données. Par exemple, vous pouvez :  
+ Vous pouvez utiliser la `parallel transform` algorithme pour effectuer de nombreuses opérations de la parallélisation de données. Par exemple, vous pouvez :  
   
 -   Ajuster la luminosité d’une image et effectuer d’autres opérations de traitement d’image.  
   
@@ -247,7 +248,7 @@ La bibliothèque de modèles parallèles (PPL) fournit des algorithmes qui exéc
   
 |Algorithme|Description|Mécanisme de tri|Stabilité de tri|Besoins en mémoire|Complexité du temps|Itérateur|  
 |---------------|-----------------|-----------------------|--------------------|-------------------------|---------------------|---------------------|  
-|`parallel_sort`|Tri en fonction de comparaison à usage général.|En fonction de comparaison (croissant)|Instable|Aucune|O((N/P)log(N/P) + 2N((P-1)/P))|Aléatoire|  
+|`parallel_sort`|Tri en fonction de comparaison à usage général.|En fonction de comparaison (croissant)|Instable|Aucun.|O((N/P)log(N/P) + 2N((P-1)/P))|Aléatoire|  
 |`parallel_buffered_sort`|Plus rapide à usage général en fonction de comparaison de tri qui nécessite un espace o (n).|En fonction de comparaison (croissant)|Instable|Nécessite plus d’espace o (n)|O((N/P)log(N))|Aléatoire|  
 |`parallel_radixsort`|Entier basée sur clé tri qui nécessite un espace o (n).|En fonction de hachage|Stable|Nécessite plus d’espace o (n)|O(N/P)|Aléatoire|  
   

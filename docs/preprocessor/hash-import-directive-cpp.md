@@ -22,11 +22,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 797ef6e17f1681e0e44af2f131e5b324a607297d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d104f25dfc45a0d2b24650289b6ce49f8468c39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="import-directive-c"></a>#import, directive (C++)
 **Spécifique à C++**  
@@ -79,13 +80,13 @@ ms.lasthandoff: 10/24/2017
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only  
 ```  
   
- ou  
+ - ou -  
   
 ```  
 #import "..\drawctl\drawctl.tlb" no_namespace raw_interfaces_only  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ##  <a name="_predir_the_23import_directive_searchorderforfilename"></a>Ordre de recherche de nom de fichier  
  *nom de fichier* est éventuellement précédé d’une spécification de répertoire. Le nom de fichier doit désigner un fichier existant. La différence entre les deux formes de syntaxe provient de l'ordre dans lequel le préprocesseur recherche les fichiers de bibliothèque de type lorsque le chemin d'accès est spécifié de manière incomplète.  

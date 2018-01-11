@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- override Identifier
+dev_langs: C++
+helpviewer_keywords: override Identifier
 ms.assetid: b286fb46-9374-4ad8-b2e7-4607119b6133
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 54c3b0de90ef3455af31c49592c6b405c345b0e9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 677a6a0e0107f3ed0d0dc402f36e9d6dd4505c7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="override-specifier"></a>Spécificateur de substitution
 Vous pouvez utiliser le mot clé `override` pour désigner les fonctions membres qui remplacent une fonction virtuelle dans une classe de base.  
@@ -34,7 +31,7 @@ Vous pouvez utiliser le mot clé `override` pour désigner les fonctions membres
 function-declaration override;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `override` est contextuel et a une signification spéciale uniquement lorsqu'il est utilisé après une déclaration de fonction membre ; sinon, ce n'est pas un mot clé réservé.  
   
 ## <a name="example"></a>Exemple  

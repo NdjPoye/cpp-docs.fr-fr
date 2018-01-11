@@ -38,11 +38,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 69b64f699cd98a98355aac5d64bc84c779927ac4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5185820e3b8bcb2b5fab1adfaee247743f2e464f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isblank-iswblank-isblankl-iswblankl"></a>isblank, iswblank, _isblank_l, _iswblank_l
 Détermine si un entier représente un caractère vide.  
@@ -74,7 +75,7 @@ int _iswblank_l(
  Paramètres régionaux à utiliser.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Chacune de ces routines retourne une valeur différente de zéro si `c` est une représentation particulière d’un espace ou d’un caractère de tabulation horizontale, ou appartient à un ensemble de caractères spécifiques à des paramètres régionaux et utilisés pour séparer les mots d’une ligne de texte. `isblank` retourne une valeur différente de zéro si `c` est un espace (0x20) ou un caractère de tabulation horizontale (0x09). Le résultat de la condition de test pour les fonctions `isblank` varie selon le paramètre de catégorie `LC_CTYPE` des paramètres régionaux ; pour plus d’informations, consultez [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe `_l` utilisent les paramètres régionaux actuels pour tout comportement dépendant des paramètres. Les versions avec le suffixe `_l` sont identiques, à ceci près qu’elles utilisent à la place les paramètres régionaux qui sont transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ Chacune de ces routines retourne une valeur différente de zéro si `c` est une représentation particulière d’un espace ou d’un caractère de tabulation horizontale, ou appartient à un ensemble de caractères spécifiques à des paramètres régionaux et utilisés pour séparer les mots d’une ligne de texte. `isblank` retourne une valeur différente de zéro si `c` est un espace (0x20) ou un caractère de tabulation horizontale (0x09). Le résultat de la condition de test pour les fonctions `isblank` varie selon le paramètre de catégorie `LC_CTYPE` des paramètres régionaux ; pour plus d’informations, consultez [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe `_l` utilisent les paramètres régionaux actuels pour tout comportement dépendant des paramètres. Les versions avec le suffixe `_l` sont identiques, à ceci près qu’elles utilisent à la place les paramètres régionaux qui sont transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  `iswblank` retourne une valeur différente de zéro si `c` est un caractère large qui correspond à un caractère d’espace ou de tabulation horizontale standard.  
   
@@ -87,7 +88,7 @@ int _iswblank_l(
 |`_istblank`|`isblank`|[_ismbcblank](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswblank`|  
 |`_istblank_l`|`_isblank_l`|[_ismbcblank_l](../../c-runtime-library/reference/ismbcgraph-functions.md)|`_iswblank_l`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
@@ -96,7 +97,7 @@ int _iswblank_l(
 |`_isblank_l`|\<ctype.h>|  
 |`_iswblank_l`|\<ctype.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classifications des caractères](../../c-runtime-library/character-classification.md)   

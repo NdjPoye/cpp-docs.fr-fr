@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c9fc4999b1ca5c04abf2e867c46fc568d3da95c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 83eeb1c7fd3032ae33c213f17522b171bdb46e55
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-the-framework-calls-your-code"></a>Méthode d'appel de votre code par le Framework
 Il est essentiel de comprendre la relation entre votre code source et le code dans l’infrastructure MFC. Lorsque votre application s’exécute, la plupart des flux de contrôle se trouve dans le code de l’infrastructure. Le framework gère la boucle de messages qui Récupère les messages à partir de Windows que l’utilisateur choisit des commandes et modifie des données dans une vue. Événements de l’infrastructure peut gérer en lui-même ne comptent pas du tout sur votre code. Par exemple, l’infrastructure sait comment fermer les fenêtres et quitter l’application en réponse aux commandes de l’utilisateur. Quand elle gère ces tâches, l’infrastructure utilise des gestionnaires de messages et des fonctions virtuelles C++ pour vous donner la possibilité de répondre à ces événements. Votre code n’est pas dans le contrôle est de l’infrastructure.  

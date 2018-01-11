@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1326a0813e0d4092a7033e3e995336ac1f29056
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 019884793eb3472e52c7772351b2f5826520a193
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignment-c-declarations"></a>Alignement (déclarations C++)
 Une des fonctionnalités de bas niveau de C++ est la possibilité de spécifier avec précision l’alignement des objets en mémoire afin d’exploiter au mieux les capacités d’une architecture matérielle spécifique. Par défaut, le compilateur aligne les membres de classe et de structure par rapport à leur taille : les objets bool et char sont alignés sur des limites d'un octet, les objets short sur deux octets, les objets int sur quatre octets, et les objets long, double et long double sur huit octets. Dans la plupart des scénarios, vous n'avez pas à vous préoccuper de l'alignement, car l'alignement par défaut est déjà optimal. Dans certains cas toutefois, vous pouvez améliorer nettement les performances ou consommer beaucoup moins de mémoire en spécifiant un alignement personnalisé pour vos structures de données. Avant Visual Studio 2015, vous pouviez utiliser les mots clés Microsoft spécifiques __alignof et declspec(alignas) pour spécifier un alignement supérieur à la valeur par défaut. À compter de Visual Studio 2015, vous devez utiliser les C ++ 11 mots clés standard [alignof et alignas](../cpp/alignof-and-alignas-cpp.md) pour la portabilité du code maximale. Les nouveaux mots clés se comportant intrinsèquement de la même façon que les extensions Microsoft, la documentation de ces extensions s’applique également aux nouveaux mots clés. Consultez [__alignof, opérateur](../cpp/alignof-operator.md) et [aligner](../cpp/align-cpp.md) pour plus d’informations. La norme C++ ne spécifie pas le comportement de compression pour l’alignement sur les limites inférieures à la valeur par défaut du compilateur pour la plateforme cible, donc vous devez toujours utiliser le #pragma Microsoft [pack](../preprocessor/pack.md) dans ce cas.  

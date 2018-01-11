@@ -1,32 +1,31 @@
 ---
-title: "master | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "master"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "master OpenMP directive"
+title: principal | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: master
+dev_langs: C++
+helpviewer_keywords: master OpenMP directive
 ms.assetid: 559ed974-e02a-486e-a23f-31556429b2c4
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 135b0494300fd687e9ce4dbcbac43d9c9d62977a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# master
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Spécifie que seul le principal threadshould exécutent une section du programme.  
+# <a name="master"></a>maître
+Spécifie qu’uniquement le maître threadshould exécuter une section du programme.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 #pragma omp master  
@@ -35,14 +34,14 @@ Spécifie que seul le principal threadshould exécutent une section du programme
 }  
 ```  
   
-## Notes  
- La directive de **page maître** ne prend en charge aucune clauses OpenMP.  
+## <a name="remarks"></a>Notes  
+ Le **master** directive prend en charge aucune clauses OpenMP.  
   
- La directive de [single](../../../parallel/openmp/reference/single.md) vous permet de spécifier qu'une section de code doit être exécutée sur un thread unique, pas nécessairement le thread principal.  
+ Le [unique](../../../parallel/openmp/reference/single.md) directive vous permet de spécifier qu’une section de code doit être exécutée sur un seul thread, pas nécessairement le thread principal.  
   
- Pour plus d'informations, consultez [2.6.1 master Construct](../../../parallel/openmp/2-6-1-master-construct.md).  
+ Pour plus d’informations, consultez [2.6.1 maître construction](../../../parallel/openmp/2-6-1-master-construct.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // omp_master.cpp  
@@ -77,10 +76,13 @@ int main( )
 }  
 ```  
   
-  **une fonction \[0\] \= 0**  
-**une fonction \[1\] \= 1**  
-**une fonction \[2\] \= 4**  
-**une fonction \[3\] \= 9**  
-**une fonction \[4\] \= 16**   
-## Voir aussi  
+```Output  
+a[0] = 0  
+a[1] = 1  
+a[2] = 4  
+a[3] = 9  
+a[4] = 16  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
  [Directives](../../../parallel/openmp/reference/openmp-directives.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 622fb25c957749b9fbd2f4fee51ffa131cfef7f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf9bea3e2a0b79e8e38fbdb61c851f5a1ab72f01
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-the-framework-searches-message-maps"></a>Comment le Framework effectue des recherches dans les tables des messages
 L’infrastructure recherche la table de la table des messages pour les correspondances avec les messages entrants. Une fois que vous écrivez une entrée de table des messages pour chaque message que vous souhaitez une classe pour gérer et écrit les gestionnaires correspondants, l’infrastructure appelle automatiquement vos gestionnaires. Les rubriques suivantes expliquent la recherche de la table des messages :  

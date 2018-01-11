@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dbc32b173d3f0d0f1130fff50bdca09a6010937b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1555812fb3607f3271ba87c88839767ce79f9ecc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 Décrit un objet qui stocke une paire ordonnée d’objets de type **float***,* le premier représentant la partie réelle d’un nombre complexe et le deuxième représentant la partie imaginaire.  
@@ -119,14 +120,14 @@ Argument of c3 is recovered from c3 using:
 *\  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête** : \<complex>  
   
  **Espace de noms :** std  
   
 ## <a name="see-also"></a>Voir aussi  
  [complex, classe](../standard-library/complex-class.md)   
- [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

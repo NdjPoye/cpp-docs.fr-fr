@@ -23,11 +23,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 49401bc59ef6858f501c2613199ab5a9114a1e8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 98536344e3282008ace529565e6c8d805b546ef2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbulkrowsetmovetoratio"></a>CBulkRowset::MoveToRatio
 Extrait les lignes à partir d’une position décimale dans l’ensemble de lignes.  
@@ -52,14 +55,14 @@ Extrait les lignes à partir d’une position décimale dans l’ensemble de lig
 ## <a name="return-value"></a>Valeur de retour  
  `HRESULT` standard.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `MoveToRatio`extrait les lignes à peu près en fonction de la formule suivante :  
   
  `( nNumerator *  RowsetSize ) / nDenominator`  
   
  Où `RowsetSize` est la taille de l’ensemble de lignes, mesurée en lignes. La précision de cette formule varie selon le fournisseur spécifique. Pour plus d’informations, consultez [IRowsetScroll::GetRowsAtRatio](https://msdn.microsoft.com/en-us/library/ms709602.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

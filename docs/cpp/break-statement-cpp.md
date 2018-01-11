@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- break_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- break keyword [C++]
+f1_keywords: break_cpp
+dev_langs: C++
+helpviewer_keywords: break keyword [C++]
 ms.assetid: 63739928-8985-4b05-93ce-016322e6da3d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2e016ccc90ef53ca5f269a73d3f5b7ed3185f550
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d1f9c9a09652eb76511c7d059cc70eae3fb99ffd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="break-statement-c"></a>break, instruction (C++)
 L'instruction `break` arrête l'exécution de la boucle englobante ou de l'instruction conditionnelle la plus proche dans laquelle elle apparaît. Le contrôle est passé à l'instruction qui suit l'instruction terminée, le cas échéant.  
@@ -35,7 +31,7 @@ L'instruction `break` arrête l'exécution de la boucle englobante ou de l'instr
 break;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `break` instruction est utilisée avec l’attribut conditional [commutateur](../cpp/switch-statement-cpp.md) instruction et avec le [faire](../cpp/do-while-statement-cpp.md), [pour](../cpp/for-statement-cpp.md), et [tandis que](../cpp/while-statement-cpp.md) boucle instructions.  
   
  Dans une instruction `switch`, l'instruction `break` entraîne l'exécution de la prochaine instruction située à l'extérieur de l'instruction `switch`. En l'absence d'une instruction `break`, toutes les instructions, depuis l'étiquette `case` correspondante jusqu'à la fin de l'instruction `switch`, y compris la clause `default`, sont exécutées.  

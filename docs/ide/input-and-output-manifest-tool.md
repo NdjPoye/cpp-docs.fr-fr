@@ -21,18 +21,19 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6042a480eef506af736ad958643288efa67402d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 77137e9bc0a4af60080234aac85afa59034d2c6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Entrée et sortie, outil, les propriétés de Configuration, manifeste &lt;nom_projet&gt; boîte de dialogue Pages de propriétés
 Utilisez cette boîte de dialogue pour spécifier les options d’entrée et de sortie pour [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
   
  Pour accéder à cette boîte de dialogue de page de propriétés, ouvrez les pages de propriétés pour votre projet ou votre feuille de propriétés. Développez le **outil manifeste** nœud sous **propriétés de Configuration**, puis sélectionnez **d’entrée et sortie**.  
   
-## <a name="uielement-list"></a>Liste UIElement  
+## <a name="uielement-list"></a>Liste des éléments d’interface  
  **Fichiers manifeste supplémentaires**  
  Utilise le **de manifeste** permettant de spécifier les chemins complets des fichiers manifeste supplémentaires que l’outil manifeste traitera ou de fusion. Chemins d’accès complets sont délimités par un point-virgule.  
   

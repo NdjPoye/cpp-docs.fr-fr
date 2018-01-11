@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 007d95d5db0785deae08744b46738d7188e4da70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3543adfe0cb25f7946e6ed6c81c4bd66a7b60324
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="local-c"></a>local (C++)
 Lorsqu’il est utilisé dans l’en-tête de l’interface, vous permet d’utiliser le compilateur MIDL comme un générateur d’en-tête. Lorsqu’il est utilisé dans une fonction individuelle, désigne une procédure locale pour lequel aucun stub n’est générés.  
@@ -32,13 +35,13 @@ Lorsqu’il est utilisé dans l’en-tête de l’interface, vous permet d’uti
   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `local` attribut C++ a les mêmes fonctionnalités que le [local](http://msdn.microsoft.com/library/windows/desktop/aa367071) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
  Consultez [call_as](../windows/call-as.md) pour obtenir un exemple montrant comment utiliser `local`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -46,7 +49,7 @@ Lorsqu’il est utilisé dans l’en-tête de l’interface, vous permet d’uti
 |-|-|  
 |**S'applique à**|`interface`, méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
+|**Attributs requis**|Aucun.|  
 |**Attributs non valides**|**dispinterface**|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  

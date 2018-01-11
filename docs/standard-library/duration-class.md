@@ -21,11 +21,12 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 helpviewer_keywords: std::chrono [C++], duration
-ms.openlocfilehash: 70dc3b3b21961946a73f73e44ae3bed7c283bd4c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e25b632554f56054793f60f3fe058791798894d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="duration-class"></a>duration, classe
 Décrit un type contenant un *intervalle de temps*, qui est le temps écoulé entre deux points dans le temps.  
@@ -82,7 +83,7 @@ class duration <duration<Rep, Period1>, Period2>;
 |[duration::operator+=](#op_add_eq)|Ajoute le nombre de battements d’un objet `duration` spécifié au nombre de battements stocké.|  
 |[duration::operator-=](#operator-_eq)|Soustrait le nombre de battements d’un objet `duration` spécifié du nombre de battements stocké.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<chrono >  
   
  **Espace de noms :** std::chrono  

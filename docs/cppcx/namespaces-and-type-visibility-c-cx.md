@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 09d0000dd7ac6fbe7c57d0b903694754e2d390e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03e86a7cbb36a0cfdf0ad2d32d625eae0102b25a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Visibilité des espaces de noms et des types (C++/CX)
 Un espace de noms est une construction C++ standard qui sert à grouper les types qui ont des fonctionnalités associées et à empêcher les collisions de noms dans les bibliothèques. Le système de type Windows Runtime nécessite que tous les types Windows Runtime publics, y compris celles figurant dans votre propre code, doivent être déclarées dans un espace de noms à la portée espace de noms. Les types publics déclarés au niveau de la portée globale ou imbriqués au sein d'une autre classe génèrent une erreur de compilation.  
@@ -39,7 +40,7 @@ Un espace de noms est une construction C++ standard qui sert à grouper les type
 |Modificateur|Signification|Émis vers des métadonnées ?|  
 |private|Accessibilité par défaut. Même signification que dans le langage C++ standard.|Non|  
 |protected|Même signification qu'en C++ standard, à la fois dans l'application ou le composant et dans les métadonnées.|Oui|  
-|public|Même signification que dans le langage C++ standard.|Oui|  
+|public|Même signification que dans le langage C++ standard.|Oui|  
 |`public protected`- ou -`protected public`|Accessibilité protégée dans les métadonnées, publique dans l'application ou le composant.|Oui|  
 |`protected private` ou `private protected`|Non visible dans les métadonnées ; accessibilité protégée dans l'application ou le composant.||  
 |`internal` ou `private public`|Le membre est public dans l'application ou le composant, mais n'est pas visible dans les métadonnées.|Non|  
@@ -52,7 +53,7 @@ Un espace de noms est une construction C++ standard qui sert à grouper les type
   
 |||  
 |-|-|  
-|**Namespace**|**Description**|  
+|**Espace de noms**|**Description**|  
 |default|Contient les types numérique et char16 intégrés. Ces types sont dans la portée dans chaque espace de noms et une instruction `using` n'est jamais requise.|  
 |Plateforme|Contient les types essentiellement publics qui correspondent aux types Windows Runtime, tels que `Array<T>`, `String`, `Guid`, et `Boolean`. Inclut également les types d'assistance spécialisés tels que `Platform::Agile<T>` et `Platform::Box<T>`.|  
 |Platform::Collections|Contient les classes de collection concrètes qui implémentent les interfaces de collection Windows Runtime `IVector`, `IMap`, et ainsi de suite. Ces types ne sont pas définis dans platform.winmd mais dans le fichier d'en-tête collection.h.|  

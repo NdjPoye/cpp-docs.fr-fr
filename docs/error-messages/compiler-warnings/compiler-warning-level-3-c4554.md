@@ -1,32 +1,31 @@
 ---
-title: "Avertissement du compilateur (niveau 3) C4554 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4554"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4554"
+title: Compilateur avertissement (niveau 3) C4554 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4554
+dev_langs: C++
+helpviewer_keywords: C4554
 ms.assetid: 55bb68f0-2e80-4330-8921-51083c4f8d53
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d783663d463895143f1782649f9082b6f7b76581
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 3) C4554
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'opérateur' : vérifiez la priorité des opérateurs comme cause possible d'erreur ; utilisez des parenthèses pour rendre plus claires les priorités  
+# <a name="compiler-warning-level-3-c4554"></a>Avertissement du compilateur (niveau 3) C4554
+'opérateur' : Vérifiez la priorité des opérateurs pour erreur possible ; Utilisez des parenthèses pour clarifier la priorité  
   
- L'exemple suivant génère l'erreur C4554 :  
+ L’exemple suivant génère C4554 :  
   
 ```  
 // C4554.cpp  

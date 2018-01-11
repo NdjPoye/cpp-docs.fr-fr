@@ -33,11 +33,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 82e9a4d904f28f528dbc9ed6871d9cd350d36014
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f7ce46b8db587337b7a9c98279efd4b89ffa8f9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setsetranslator"></a>_set_se_translator
 Gère les exceptions Win32 (exceptions structurées par C) en tant qu'exceptions typées C++.  
@@ -78,7 +79,7 @@ typedef void (*_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS
   
  Lorsque vous utilisez `_set_se_translator` à partir du code managé (code compilé avec /clr) ou du code natif et managé mixte, sachez que le traducteur affecte les exceptions générées en code natif uniquement. Les exceptions managées générées en code managé (par exemple, en déclenchant `System::Exception`) ne sont pas acheminées par le biais de la fonction de traduction. Les exceptions générées en code managé à l'aide de la fonction Win32 `RaiseException` ou provoquées par une exception système telle qu'une exception de division par zéro sont acheminées via le traducteur.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

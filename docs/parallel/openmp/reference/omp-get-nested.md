@@ -1,48 +1,46 @@
 ---
-title: "omp_get_nested | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_get_nested"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_get_nested OpenMP function"
+title: omp_get_nested | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_get_nested
+dev_langs: C++
+helpviewer_keywords: omp_get_nested OpenMP function
 ms.assetid: e9784847-516e-40d3-89f7-b8b6898d8667
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 557625a40707119633adc1d73775b1e66f67efec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# omp_get_nested
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Retourne une valeur qui indique si le parallélisme imbriqué est activé.  
+# <a name="ompgetnested"></a>omp_get_nested
+Retourne une valeur qui indique si le parallélisme imbriquée est activée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int omp_get_nested( );  
 ```  
   
-## Valeur de retour  
- si une valeur différente de zéro, parallélisme imbriqué est activé.  
+## <a name="return-value"></a>Valeur de retour  
+ Si elle est différente de zéro, parallélisme imbriquée est activée.  
   
-## Notes  
- le parallélisme imbriqué est spécifié avec [omp\_set\_nested](../../../parallel/openmp/reference/omp-set-nested.md) et [OMP\_NESTED](../../../parallel/openmp/reference/omp-nested.md).  
+## <a name="remarks"></a>Notes  
+ Parallélisme imbriquée est spécifié avec [omp_set_nested](../../../parallel/openmp/reference/omp-set-nested.md) et [OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md).  
   
- Pour plus d'informations, consultez [3.1.10 omp\_get\_nested Function](../../../parallel/openmp/3-1-10-omp-get-nested-function.md).  
+ Pour plus d’informations, consultez [3.1.10 fonction omp_get_nested](../../../parallel/openmp/3-1-10-omp-get-nested-function.md).  
   
-## Exemple  
- Consultez l' [omp\_set\_nested](../../../parallel/openmp/reference/omp-set-nested.md) pour un exemple d'utilisation `omp_get_nested`.  
+## <a name="example"></a>Exemple  
+ Consultez [omp_set_nested](../../../parallel/openmp/reference/omp-set-nested.md) pour obtenir un exemple d’utilisation de `omp_get_nested`.  
   
-## Voir aussi  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+## <a name="see-also"></a>Voir aussi  
+ [Fonctions](../../../parallel/openmp/reference/openmp-functions.md)

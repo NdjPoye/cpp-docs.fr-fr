@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 05b83a284dcf599890985f1f01d8327ac5ef75e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 98a6a535071246f75d877e7f63d3a0e9d86053be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-operator-c"></a>new, opérateur (C++)
 Alloue de la mémoire pour un objet ou un tableau d’objets de *type-name* du magasin gratuit et retourne un pointeur différent de zéro, correctement typé vers l’objet.  
@@ -33,7 +34,7 @@ Alloue de la mémoire pour un objet ou un tableau d’objets de *type-name* du m
 [::] new [placement] ( type-name ) [new-initializer]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  En cas d’échec, **nouveau** retourne zéro ou lève une exception ; consultez [le nouveau et supprimer des opérateurs](../cpp/new-and-delete-operators.md) pour plus d’informations. Vous pouvez modifier ce comportement par défaut en écrivant une routine de gestion des exceptions personnalisée appelant le [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) fonction de bibliothèque avec votre nom de fonction comme argument.  
   
  Pour plus d’informations sur la création d’un objet sur le tas managé, consultez [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md).  

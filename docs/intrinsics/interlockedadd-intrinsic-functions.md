@@ -1,73 +1,105 @@
 ---
-title: "_InterlockedAdd, fonctions intrins&#232;ques | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_InterlockedAdd64_acq_cpp"
-  - "_InterlockedAdd64_acq"
-  - "_InterlockedAdd_acq"
-  - "_InterlockedAdd_nf"
-  - "_InterlockedAdd64_rel"
-  - "_InterlockedAdd64"
-  - "_InterlockedAdd_cpp"
-  - "_InterlockedAdd_rel_cpp"
-  - "_InterlockedAdd_rel"
-  - "_InterlockedAdd64_rel_cpp"
-  - "_InterlockedAdd64_cpp"
-  - "_InterlockedAdd_acq_cpp"
-  - "_InterlockedAdd64_nf"
-  - "_InterlockedAdd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_InterlockedAdd, intrinsèque"
-  - "_InterlockedAdd_acq, intrinsèque"
-  - "_InterlockedAdd_nf, intrinsèque"
-  - "_InterlockedAdd_rel, intrinsèque"
-  - "_InterlockedAdd64, intrinsèque"
-  - "_InterlockedAdd64_acq, intrinsèque"
-  - "_InterlockedAdd64_nf, intrinsèque"
-  - "_InterlockedAdd64_rel, intrinsèque"
+title: "_Interlockedadd, fonctions intrinsèques | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _InterlockedAdd64_acq_cpp
+- _InterlockedAdd64_acq
+- _InterlockedAdd_acq
+- _InterlockedAdd_nf
+- _InterlockedAdd64_rel
+- _InterlockedAdd64
+- _InterlockedAdd_cpp
+- _InterlockedAdd_rel_cpp
+- _InterlockedAdd_rel
+- _InterlockedAdd64_rel_cpp
+- _InterlockedAdd64_cpp
+- _InterlockedAdd_acq_cpp
+- _InterlockedAdd64_nf
+- _InterlockedAdd
+dev_langs: C++
+helpviewer_keywords:
+- _InterlockedAdd_nf intrinsic
+- _InterlockedAdd_rel intrinsic
+- _InterlockedAdd intrinsic
+- _InterlockedAdd64 intrinsic
+- _InterlockedAdd64_acq intrinsic
+- _InterlockedAdd64_nf intrinsic
+- _InterlockedAdd_acq intrinsic
+- _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 22c801b95eff65093a6ff93bfbe99b0ea83358ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# _InterlockedAdd, fonctions intrins&#232;ques
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="interlockedadd-intrinsic-functions"></a>_InterlockedAdd, fonctions intrinsèques
 **Section spécifique à Microsoft**  
   
  Effectuer une addition atomique, ce qui permet de s'assurer que l'opération se termine avec succès quand plusieurs threads ont accès à une variable partagée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-long _InterlockedAdd(    long volatile * Addend,    long Value ); long _InterlockedAdd_acq(    long volatile * Addend,    long Value ); long _InterlockedAdd_nf(    long volatile * Addend,    long Value ); long _InterlockedAdd_rel(    long volatile * Addend,    long Value ); __int64 _InterlockedAdd64(    __int64 volatile * Addend,    __int64 Value ); __int64 _InterlockedAdd64_acq(    __int64 volatile * Addend,    __int64 Value ); __int64 _InterlockedAdd64_nf (    __int64 volatile * Addend,    __int64 Value ); __int64 _InterlockedAdd64_rel(    __int64 volatile * Addend,    __int64 Value );  
+long _InterlockedAdd(  
+   long volatile * Addend,  
+   long Value  
+);  
+long _InterlockedAdd_acq(  
+   long volatile * Addend,  
+   long Value  
+);  
+long _InterlockedAdd_nf(  
+   long volatile * Addend,  
+   long Value  
+);  
+long _InterlockedAdd_rel(  
+   long volatile * Addend,  
+   long Value  
+);  
+__int64 _InterlockedAdd64(  
+   __int64 volatile * Addend,  
+   __int64 Value  
+);  
+__int64 _InterlockedAdd64_acq(  
+   __int64 volatile * Addend,  
+   __int64 Value  
+);  
+__int64 _InterlockedAdd64_nf (  
+   __int64 volatile * Addend,  
+   __int64 Value  
+);  
+__int64 _InterlockedAdd64_rel(  
+   __int64 volatile * Addend,  
+   __int64 Value  
+);  
 ```  
   
-#### Paramètres  
- \[in, out\] `Addend`  
+#### <a name="parameters"></a>Paramètres  
+ [in, out] `Addend`  
  Pointeur vers le nombre entier auquel il faut ajouter ; remplacé par le résultat de l'addition.  
   
- \[in\] `Value`  
+ [in] `Value`  
  Valeur à ajouter.  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  Ces deux fonctions renvoient le résultat de l'addition.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`_InterlockedAdd`|ARM|  
 |`_InterlockedAdd_acq`|ARM|  
 |`_InterlockedAdd_nf`|ARM|  
@@ -77,14 +109,14 @@ long _InterlockedAdd(    long volatile * Addend,    long Value ); long _Interloc
 |`_InterlockedAdd64_nf`|ARM|  
 |`_InterlockedAdd64_rel`|ARM|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- Les versions de ces fonctions avec le suffixe `_acq` ou `_rel` effectuent une addition verrouillée respectant la sémantique acquire ou release.  La sémantique acquire signifie que le résultat de l'opération est rendu visible à tous les threads et les processeurs avant toute lecture ou écriture en mémoire ultérieure.  Elle est utile lors de l'entrée d'une section critique.  La sémantique release signifie que toutes les lectures et écritures en mémoire sont obligatoirement rendues visibles à tous les threads et les processeurs avant que le résultat de l'opération soit lui\-même rendu visible.  Elle est utile quand vous quittez une section critique.  Les fonctions intrinsèques avec un suffixe `_nf` \(pour « no fence », « pas de délimitation »\) n'agissent pas comme une barrière mémoire.  
+## <a name="remarks"></a>Notes  
+ Les versions de ces fonctions avec le suffixe `_acq` ou `_rel` effectuent une addition verrouillée respectant la sémantique acquire ou release. La sémantique acquire signifie que le résultat de l'opération est rendu visible à tous les threads et les processeurs avant toute lecture ou écriture en mémoire ultérieure. Elle est utile lors de l'entrée d'une section critique. La sémantique release signifie que toutes les lectures et écritures en mémoire sont obligatoirement rendues visibles à tous les threads et les processeurs avant que le résultat de l'opération soit lui-même rendu visible. Elle est utile quand vous quittez une section critique. Les fonctions intrinsèques avec un suffixe `_nf` (pour « no fence », « pas de délimitation ») n'agissent pas comme une barrière mémoire.  
   
  Ces routines sont disponibles seulement comme fonctions intrinsèques.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // interlockedadd.cpp  
@@ -105,13 +137,13 @@ int main()
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 0xffffff00 0xff0000 0xffffff00  
 ```  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // interlockedadd64.cpp  
@@ -135,15 +167,15 @@ int main()
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 ff0000000000 + ff0000ffffffff = ffff00ffffffff  
 Return value: ffff00ffffffff  
 ```  
   
-### FIN de la section spécifique à Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)   
  [Conflits avec le compilateur x86](../build/conflicts-with-the-x86-compiler.md)

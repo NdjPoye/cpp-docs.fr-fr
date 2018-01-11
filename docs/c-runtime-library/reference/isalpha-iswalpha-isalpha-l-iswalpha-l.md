@@ -49,11 +49,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e93b18a5fc29f74ba9ea9fb990d4a7a0715872b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d7ef7443a37d8d68b40f47f3eacfee8bac2626a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 Détermine si un entier représente un caractère alphabétique.  
@@ -87,7 +88,7 @@ int _iswalpha_l(
 ## <a name="return-value"></a>Valeur de retour  
  Chacune de ces routines retourne une valeur différente de zéro si `c` est une représentation particulière d’un caractère alphabétique. `isalpha`Retourne une valeur différente de zéro si `c` est inclus dans la plage A - Z ou a - z. `iswalpha` retourne une valeur différente de zéro uniquement pour les caractères larges pour lesquels `iswupper` ou `iswlower` est différent de zéro, autrement dit, pour tout caractère large appartenant à un jeu défini par l’implémentation pour lequel aucun des éléments `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` n’est différent de zéro. Chacune de ces routines retourne 0 si `c` ne répond pas à la condition de test.  
   
- Les versions de ces fonctions qui ont le suffixe `_l` utilisent à la place des paramètres régionaux actuels, les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ Les versions de ces fonctions qui ont le suffixe `_l` utilisent à la place des paramètres régionaux actuels, les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  Le comportement de `isalpha` et `_isalpha_l` n’est pas défini si `c` n’est pas EOF ou n’appartient pas à la plage 0 à 0xFF, inclus. Quand une bibliothèque CRT de débogage est utilisée et que `c` ne fait pas partie de ces valeurs, les fonctions déclenchent une assertion.  
   
@@ -98,7 +99,7 @@ int _iswalpha_l(
 |`_istalpha`|`isalpha`|`_ismbcalpha`|`iswalpha`|  
 |`_istalpha_l`|`_isalpha_l`|`_ismbcalpha_l`|`_iswalpha_l`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
@@ -107,7 +108,7 @@ int _iswalpha_l(
 |`_isalpha_l`|\<ctype.h>|  
 |`_iswalpha_l`|\<ctype.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classifications des caractères](../../c-runtime-library/character-classification.md)   

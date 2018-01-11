@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - classes [C++], scope
 - scope [C++]
@@ -19,21 +17,21 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 3502a16c0cbbccdfd5d73aafe776d907c9845c1f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 55baa4496522336a5a64ee81daa7a8ce484534c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scope-visual-c"></a>Portée (Visual C++)
 Les noms C++ peuvent être utilisés uniquement dans certaines zones d'un programme. Cette zone est appelée « portée » du nom. La portée détermine la « durée de vie » d'un nom qui ne désigne pas un objet d'étendue static. La portée détermine également la visibilité d'un nom, lorsque les constructeurs et les destructeurs de classe sont appelés, et lorsque des variables locales à la portée sont initialisées. (Pour plus d’informations, consultez [constructeurs](../cpp/constructors-cpp.md) et [destructeurs](../cpp/destructors-cpp.md).) Il existe cinq types de portée :  
   
--   **Portée locale** un nom déclaré dans un bloc est uniquement accessible dans ce bloc et les blocs qu’il contient et uniquement après le point de déclaration. Les noms des arguments formels à une fonction dans la portée du bloc le plus à l’extérieur de la fonction ont une portée locale, comme s’ils avaient été déclarés dans le bloc contenant le corps de la fonction. Prenons le fragment de code suivant :  
+-   **Portée locale** un nom déclaré dans un bloc est uniquement accessible dans ce bloc et les blocs qu’il contient et uniquement après le point de déclaration. Les noms des arguments formels à une fonction dans la portée du bloc le plus à l’extérieur de la fonction ont une portée locale, comme s’ils avaient été déclarés dans le bloc contenant le corps de la fonction. Prenons le fragment de code suivant :  
   
     ```  
     {  
@@ -49,7 +47,7 @@ Les noms C++ peuvent être utilisés uniquement dans certaines zones d'un progr
   
      En C++, la portée de fichier est également appelée portée de l'espace de noms.  
   
--   **Portée de classe** noms de membres de classe ont une portée de classe. Fonctions membres de classe sont accessibles seulement via les opérateurs de sélection de membre (**.** ou ** -> **) ou des opérateurs de pointeur vers membre (**.\* ** ou ** -> \* **) sur un objet ou un pointeur vers un objet de cette classe ; les données de membre de classe non statique sont considérée comme locales à l’objet de cette classe. Prenons la déclaration de classe suivante :  
+-   **Portée de classe** noms de membres de classe ont une portée de classe. Fonctions membres de classe sont accessibles seulement via les opérateurs de sélection de membre (**.** ou  **->** ) ou des opérateurs de pointeur vers membre (**.\***  ou  **-> \*** ) sur un objet ou un pointeur vers un objet de cette classe ; les données de membre de classe non statique sont considérée comme locales à l’objet de cette classe. Prenons la déclaration de classe suivante :  
   
     ```  
     class Point  
@@ -120,7 +118,7 @@ int main()
 ```  
   
 > [!NOTE]
->  À chaque fois que le nom de classe (`Account`) est appelé, la classe de mots clés doit être utilisée pour le différencier du compte de variable avec portée de fichier. Cette règle ne s'applique pas lorsque le nom de classe apparaît à gauche de l'opérateur de résolution de portée (::). Les noms à gauche de l’opérateur de résolution de portée sont toujours considérés comme des noms de classe.  
+>  À chaque fois que le nom de classe (`Account`) est appelé, la classe de mots clés doit être utilisée pour le différencier du compte de variable avec portée de fichier. Cette règle ne s’applique pas lorsque le nom de classe apparaît à gauche de l’opérateur de résolution de portée (::). Les noms à gauche de l’opérateur de résolution de portée sont toujours considérés comme des noms de classe.  
   
  L’exemple suivant montre comment déclarer un pointeur vers un objet de type `Account` à l’aide de la **classe** (mot clé) :  
   

@@ -1,47 +1,46 @@
 ---
-title: "Avertissement du compilateur (niveau 2) C4146 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4146"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4146"
+title: Compilateur avertissement (niveau 2) C4146 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4146
+dev_langs: C++
+helpviewer_keywords: C4146
 ms.assetid: d6c31ab1-3120-40d5-8d80-32b5f7046e32
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d7a9a67beb4dc122c25318c1796e22a4c35dbe38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 2) C4146
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-2-c4146"></a>Compilateur avertissement (niveau 2) C4146
 opérateur moins unaire appliqué à un type non signé, le résultat sera non signé  
   
- Les types non signés ne peuvent contenir que des valeurs positives ou nulles, donc le moins unaire \(opposé\) n'a d'habitude aucune signification s'il s'applique à un type non signé.  L'opérande et le résultat sont tous deux positifs ou nuls.  
+ Types non signés peuvent contenir des valeurs de négatif uniquement, donc unaire (négation) n’est pas généralement pertinent quand il est appliqué à un type non signé. L’opérande et le résultat ne sont pas négatifs.  
   
- En pratique, cela se produit lorsque le programmeur tente d'exprimer la valeur entière minimale, qui correspond à \-2147483648.  Cette valeur ne peut pas être écrite sous la forme \-2147483648 car l'expression est traitée en deux étapes :  
+ En pratique, cela se produit lorsque le programmeur tente d’exprimer la valeur entière minimale, qui est -2147483648. Cette valeur ne peut pas être écrite comme -2147483648 car l’expression est traitée en deux étapes :  
   
-1.  Le nombre 2147483648 est évalué.  Comme il est supérieur à la valeur entière maximale 2147483647, le type de 2147483648 n'est pas [int](../../c-language/integer-types.md), mais `unsigned int`.  
+1.  Le nombre 2147483648 est évalué. Comme il est supérieur à la valeur entière maximale 2147483647, le type de 2147483648 n’est pas [int](../../c-language/integer-types.md), mais `unsigned int`.  
   
-2.  Le moins unaire est appliqué à la valeur, avec un résultat non signé, qui se trouve être 2147483648.  
+2.  Moins unaire est appliqué à la valeur, avec un résultat non signé, ce qui se trouve être 2147483648.  
   
- Le type non signé du résultat peut générer un comportement inattendu.  Si le résultat est utilisé dans une comparaison, c'est peut\-être une comparaison non signée qui sera effectuée, alors que l'autre opérande est un `int`.  Ceci explique pourquoi le programme ci\-dessous n'imprime qu'une ligne.  
+ Le type non signé du résultat peut provoquer un comportement inattendu. Si le résultat est utilisé dans une comparaison, une comparaison non signée peut être utilisée, par exemple, lorsque l’autre opérande est un `int`. Cela explique pourquoi l’exemple de programme ci-dessous imprime qu’une ligne.  
   
- La deuxième ligne attendue, `1 is greater than the most negative int`, n'est pas imprimée parce que l'expression `((unsigned int)1) > 2147483648`  est false.  
+ La deuxième ligne attendue, `1 is greater than the most negative int`, n’est pas imprimé car `((unsigned int)1) > 2147483648` a la valeur false.  
   
- Vous pouvez éviter C4146 en utilisant INT\_MIN défini dans limits.h, qui a le type **signed int**.  
+ Vous pouvez éviter C4146 en utilisant INT_MIN défini dans limits.h, qui a le type **type signed int**.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C4146 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C4146 :  
   
 ```  
 // C4146.cpp  

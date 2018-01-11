@@ -18,11 +18,14 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bf02b1c8aa84688df5ef29f4c5e69fa818b31904
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 14bcf198d527fae51a579a2aa6e072a4c57424f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (extensions du composant C++)
 L'opération `safe_cast` retourne l'expression spécifiée en tant que type spécifié, en cas de réussite ; sinon, lève une exception `InvalidCastException`.  
@@ -43,7 +46,7 @@ expression
   
 ### <a name="parameters"></a>Paramètres  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
  `safe_cast` vous permet de modifier le type d'une expression spécifiée. Dans les situations où vous vous attendez à ce qu'une variable ou un paramètre soit convertible en un certain type, vous pouvez utiliser safe_cast sans bloc try-catch pour détecter les erreurs de programmation pendant le développement. Pour plus d’informations, consultez [cast (C + c++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx).  
@@ -66,10 +69,10 @@ expression
  *expression*  
  Expression qui s'évalue en handle vers un type référence ou type valeur, type valeur ou référence de suivi vers un type référence ou valeur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `safe_cast`lève `InvalidCastException` si elle ne peut pas convertir *expression* pour le type spécifié par *id de type*. Pour intercepter `InvalidCastException`, spécifiez la [/EH (modèle de gestion des exceptions)](../build/reference/eh-exception-handling-model.md) option du compilateur et l’utilisation d’une instruction try/catch.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/ZW**  
   
 ### <a name="examples"></a>Exemples  
@@ -130,7 +133,7 @@ expression
  *expression*  
  Expression qui s'évalue en handle vers un type référence ou type valeur, type valeur ou référence de suivi vers un type référence ou valeur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’expression `safe_cast<` *id de type*`>(`*expression* `)` convertit l’expression d’opérande en objet de type id de type.  
   
  Le compilateur accepte un [static_cast](../cpp/static-cast-operator.md) dans la plupart des cas il n’acceptera une `safe_cast`.  Toutefois, `safe_cast` garantit la production de code MSIL vérifiable, alors qu'un `static_cast` peut produire du code MSIL non vérifiable.  Consultez [Code pur et vérifiable (C + c++ / CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) et [Peverify.exe (outil PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) pour plus d’informations sur le code vérifiable.  
@@ -149,7 +152,7 @@ expression
   
 -   [Guide pratique pour utiliser safe_cast dans C++-CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  

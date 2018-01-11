@@ -1,32 +1,33 @@
 ---
-title: "ComPtrRef, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRef"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ComPtrRef (classe)"
+title: Comptrref, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRef
+dev_langs: C++
+helpviewer_keywords: ComPtrRef class
 ms.assetid: d6bdfd20-e977-45b4-9ac1-1b8efbdb77de
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9b1bbe134f15fdba6863f1725cbcc7effcb6d94f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtrRef, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="comptrref-class"></a>ComPtrRef (classe)
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template <  
@@ -35,48 +36,48 @@ template <
 class ComPtrRef : public ComPtrRefBase<T>;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
- Un type [CoomPtr\<T\>](../windows/comptr-class.md) ou un type dérivé de celui\-ci, pas seulement l'interface représentée par le ComPtr.  
+ A [ComPtr\<T >](../windows/comptr-class.md) type ou un type dérivé, pas simplement l’interface représentée par le ComPtr.  
   
-## Notes  
- Représente une référence vers un objet de type ComPtr\<T\>.  
+## <a name="remarks"></a>Notes  
+ Représente une référence à un objet de type ComPtr\<T >.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
-  
-|Nom|Description|  
-|---------|-----------------|  
-|[ComPtrRef::ComPtrRef, constructeur](../windows/comptrref-comptrref-constructor.md)|Initialise une nouvelle instance de la classe ComPtrRef à partir du pointeur vers un autre objet ComPtrRef spécifié.|  
-  
-### M&\#233;thodes publiques  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[ComPtrRef::GetAddressOf, méthode](../windows/comptrref-getaddressof-method.md)|Récupère l'adresse d'un pointeur vers l'interface représentée par l'objet ComPtrRef objet.|  
-|[ComPtrRef::ReleaseAndGetAddressOf, méthode](../windows/comptrref-releaseandgetaddressof-method.md)|Supprime l'objet ComPtrRef actuel et retourne un pointeur\-vers\-un\-pointeur vers l'interface représentée par l'objet ComPtrRef.|  
+|----------|-----------------|  
+|[ComPtrRef::ComPtrRef, constructeur](../windows/comptrref-comptrref-constructor.md)|Initialise une nouvelle instance de la classe ComPtrRef à partir du pointeur spécifié vers un autre objet ComPtrRef.|  
   
-### Op&\#233;rateurs publics  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[ComPtrRef::operator InterfaceType\*\*, opérateur](../windows/comptrref-operator-interfacetype-star-star-operator.md)|Supprime l'objet ComPtrRef actuel et retourne un pointeur\-vers\-un\-pointeur vers l'interface représentée par l'objet ComPtrRef.|  
-|[ComPtrRef::operator T\*, opérateur](../windows/comptrref-operator-t-star-operator.md)|Retourne la valeur de la donnée membre [ptr\_](../windows/comptrrefbase-ptr-data-member.md) de l'objet ComPtrRef actuel.|  
-|[ComPtrRef::operator void\*\*, opérateur](../windows/comptrref-operator-void-star-star-operator.md)|Supprime l'objet ComPtrRef actuel, caste le pointeur vers l'interface représentée par l'objet ComPtrRef comme un pointeur\-vers\-pointeur\-vers `void`, puis retourne le pointeur de cast.|  
-|[ComPtrRef::operator\*, opérateur](../windows/comptrref-operator-star-operator.md)|Récupère le pointeur vers l'interface représentée par l'objet ComPtrRef actuel.|  
-|[ComPtrRef::operator\=\=, opérateur](../windows/comptrref-operator-equality-operator.md)|Indique si deux objets ComPtrRef sont égaux.|  
-|[ComPtrRef::operator\!\=, opérateur](../windows/comptrref-operator-inequality-operator.md)|Indique si deux objets ComPtrRef ne sont pas égaux.|  
+|----------|-----------------|  
+|[ComPtrRef::GetAddressOf, méthode](../windows/comptrref-getaddressof-method.md)|Récupère l’adresse d’un pointeur vers l’interface représentée par l’objet ComPtrRef en cours.|  
+|[ComPtrRef::ReleaseAndGetAddressOf, méthode](../windows/comptrref-releaseandgetaddressof-method.md)|Supprime l’objet ComPtrRef actuel et retourne un pointeur-à-un en pointeur vers l’interface qui a été représenté par l’objet ComPtrRef.|  
   
-## Hiérarchie d'héritage  
+### <a name="public-operators"></a>Op&#233;rateurs publics  
+  
+|Nom|Description|  
+|----------|-----------------|  
+|[ComPtrRef::operator InterfaceType**, opérateur](../windows/comptrref-operator-interfacetype-star-star-operator.md)|Supprime l’objet ComPtrRef actuel et retourne un pointeur-à-un en pointeur vers l’interface qui a été représenté par l’objet ComPtrRef.|  
+|[ComPtrRef::operator T*, opérateur](../windows/comptrref-operator-t-star-operator.md)|Retourne la valeur de la [ptr_](../windows/comptrrefbase-ptr-data-member.md) membre de données de l’objet ComPtrRef en cours.|  
+|[ComPtrRef::operator void**, opérateur](../windows/comptrref-operator-void-star-star-operator.md)|Supprime l’objet ComPtrRef actif, convertit le pointeur vers l’interface qui a été représenté par l’objet ComPtrRef comme un pointeur à pointeur-à `void`, puis retourne le pointeur de cast.|  
+|[ComPtrRef::operator*, opérateur](../windows/comptrref-operator-star-operator.md)|Récupère le pointeur vers l’interface représentée par l’objet ComPtrRef en cours.|  
+|[ComPtrRef::operator==, opérateur](../windows/comptrref-operator-equality-operator.md)|Indique si deux objets ComPtrRef sont égaux.|  
+|[ComPtrRef::operator!=, opérateur](../windows/comptrref-operator-inequality-operator.md)|Indique si deux objets ComPtrRef ne sont pas égaux.|  
+  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `ComPtrRefBase`  
   
  `ComPtrRef`  
   
-## Configuration requise  
- **En\-tête :** client.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** client.h  
   
- **Espace de noms :** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

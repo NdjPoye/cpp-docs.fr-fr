@@ -34,16 +34,19 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8356034c9111740ccc6039514c4b8a3766089221
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6839893f0beffa13ee2c2688d465369688627ca0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cviewtableusage-cviewtableinfo"></a>CViewTableUsage, CViewTableInfo
 Appelez la classe typedef **CViewTableUsage** pour implémenter sa classe de paramètre **CViewTableInfo**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Consultez [Classes de jeu de lignes de schéma et Classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation de classes typedef.  
   
  Cette classe identifie les tables affichées, définies dans le catalogue, qui sont accessibles à un utilisateur donné.  
@@ -59,7 +62,7 @@ Appelez la classe typedef **CViewTableUsage** pour implémenter sa classe de par
 |m_szTableSchema|TABLE_SCHEMA|  
 |m_szTableName|TABLE_NAME|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbsch.h  
   
 ## <a name="see-also"></a>Voir aussi  

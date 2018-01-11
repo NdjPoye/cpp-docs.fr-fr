@@ -61,11 +61,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 160f85f402ee7f44f348bcb4e2ca1ed59e3b0e22
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e22677bd88fe9e39b8c36734a9e5f3596c1a1224
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstringlist-class"></a>Classe de CStringList
 Prend en charge des listes d'objets `CString` .  
@@ -125,7 +126,7 @@ class CStringList : public CObject
 |[CObList::RemoveTail](../../mfc/reference/coblist-class.md#removetail)|Supprime l’élément de la fin de la liste.|  
 |[CObList::SetAt](../../mfc/reference/coblist-class.md#setat)|Définit l’élément à une position donnée.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Toutes les comparaisons sont effectuées par valeur, qui signifie que les caractères de la chaîne sont comparés à la place les adresses des chaînes.  
   
  `CStringList` incorpore la macro `IMPLEMENT_SERIAL` pour prendre en charge la sérialisation et le vidage de ses éléments. Si une liste de `CString` objets est stocké dans une archive, avec un opérateur d’insertion surchargés ou avec le `Serialize` fonction membre, chaque `CString` élément est sérialisé à son tour.  
@@ -139,7 +140,7 @@ class CStringList : public CObject
   
  `CStringList`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcoll.h  
   
 ## <a name="see-also"></a>Voir aussi  

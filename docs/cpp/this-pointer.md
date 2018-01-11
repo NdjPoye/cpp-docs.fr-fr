@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- this_cpp
-dev_langs:
-- C++
+f1_keywords: this_cpp
+dev_langs: C++
 helpviewer_keywords:
 - nonstatic member functions [C++]
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 86ccf50a089b1497bdc166ee9367215dc59b3ca1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 814e7518c6ed7052abc93b9e4705be93172b1e7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="this-pointer"></a>Pointeur this
 Le **cela** pointeur est accessible uniquement dans les fonctions membres non statiques d’un **classe**, `struct`, ou **union** type. Il pointe vers l'objet pour lequel la fonction membre est appelée. Les fonctions membres statiques n’ont pas un **cela** pointeur.  
@@ -39,7 +36,7 @@ Le **cela** pointeur est accessible uniquement dans les fonctions membres non st
 this->member-identifier  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  D’un objet **cela** pointeur ne fait pas partie de l’objet lui-même ; il n’est pas reflétée dans le résultat d’une `sizeof` instruction sur l’objet. En revanche, lorsqu’une fonction membre non statique est appelée pour un objet, l’adresse de l’objet est passée par le compilateur comme argument masqué à la fonction. Par exemple, l'appel de fonction suivant :  
   
 ```  
@@ -182,7 +179,7 @@ int main()
   
  Le type de **cela** un membre de la fonction est décrite par la syntaxe suivante, où *cv-qualifier-list* est déterminée par le déclarateur de fonctions membres et peut être **const**ou **volatile** (ou les deux), et *de type classe* est le nom de la classe :  
   
- *type de classe [cv-qualifier-list]* ** \* const cela  **  
+ *type de classe [cv-qualifier-list]*  **\* const cela**   
   
  En d’autres termes, **cela** est toujours un pointeur const ; il ne peut pas être réassigné.  Le **const** ou `volatile` qualificateurs utilisés dans la déclaration de fonction membre s’appliquent à l’instance de classe vers laquelle pointé **cela** dans l’étendue de cette fonction.  
   

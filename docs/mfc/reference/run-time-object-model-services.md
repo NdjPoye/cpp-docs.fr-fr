@@ -15,16 +15,17 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce8ca431a8bdecf2330be67b3ac46ccc394bde91
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 986657681dabf1136b072f65b2df76b63f216504
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-time-object-model-services"></a>Services du modèle objet au moment de l'exécution
 Les classes [CObject](../../mfc/reference/cobject-class.md) et [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) encapsulent plusieurs services d’objet, notamment l’accès aux informations de classe d’exécution, la sérialisation et la création d’objet dynamique. Toutes les classes dérivées de `CObject` héritent de cette fonctionnalité.  
   
- L'accès aux informations sur la classe d'exécution vous permet de déterminer les informations sur une classe d'objets au moment de l'exécution. La capacité de déterminer la classe d'un objet au moment de l'exécution est utile lorsque vous avez besoin de vérifications de type supplémentaires d'arguments de fonction et lorsque vous devez écrire un code spécial en fonction de la classe d'un objet. Les informations sur la classe d'exécution ne sont pas prises en charge directement par le langage C++.  
+ L'accès aux informations sur la classe d'exécution vous permet de déterminer les informations sur une classe d'objets au moment de l'exécution. La capacité de déterminer la classe d’un objet au moment de l’exécution est utile lorsque vous avez besoin de vérifications de type supplémentaires d’arguments de fonction et lorsque vous devez écrire un code spécial en fonction de la classe d’un objet. Les informations sur la classe d'exécution ne sont pas prises en charge directement par le langage C++.  
   
  La sérialisation est le processus d'écriture ou de lecture du contenu d'un objet vers et à partir d'un fichier. Vous pouvez utiliser la sérialisation pour stocker le contenu d'un objet même après que l'application se termine. L'objet peut ensuite être lu à partir du fichier lorsque l'application est redémarrée. De tels objets de données sont dits "persistants".  
   
@@ -84,10 +85,10 @@ AFX_COMCTL32_IF_EXISTS(  proc );
  `proc`  
  Pointeur vers une chaîne terminée par le caractère null qui contient le nom de fonction, ou spécifie la valeur ordinale de la fonction. Si ce paramètre est une valeur ordinale, il doit être dans le mot de poids faible ; le mot de poids fort doit être égal à zéro. Ce paramètre doit être au format Unicode.  
    
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette macro pour déterminer si la bibliothèque de contrôles communs la fonction spécifiée par `proc` (au lieu d’appeler [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212).  
    
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  afxcomctl32.h, afxcomctl32.inl  
    
 ### <a name="see-also"></a>Voir aussi  
@@ -104,10 +105,10 @@ AFX_COMCTL32_IF_EXISTS2( proc );
  `proc`  
  Pointeur vers une chaîne terminée par le caractère null qui contient le nom de fonction, ou spécifie la valeur ordinale de la fonction. Si ce paramètre est une valeur ordinale, il doit être dans le mot de poids faible ; le mot de poids fort doit être égal à zéro. Ce paramètre doit être au format Unicode.  
    
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette macro pour déterminer si la bibliothèque de contrôles communs la fonction spécifiée par `proc` (au lieu d’appeler [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212). Cette macro est la version Unicode de `AFX_COMCTL32_IF_EXISTS`.  
    
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  afxcomctl32.h, afxcomctl32.inl  
    
 ### <a name="see-also"></a>Voir aussi  
@@ -126,7 +127,7 @@ DECLARE_DYNAMIC(class_name)
  *CLASS_NAME*  
  Le nom réel de la classe.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ajouter le `DECLARE_DYNAMIC` macro pour le module d’en-tête (.h) pour la classe, puis inclure ce module dans tous les modules .cpp qui ont besoin d’accéder aux objets de cette classe.  
   
  Si vous utilisez la **DECLARE**_ **dynamique** et `IMPLEMENT_DYNAMIC` macros comme décrit, vous pouvez ensuite utiliser le `RUNTIME_CLASS` (macro) et le `CObject::IsKindOf` pour déterminer la classe de vos objets à exécuter (fonction) heure.  
@@ -138,7 +139,7 @@ DECLARE_DYNAMIC(class_name)
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [IMPLEMENT_DYNAMIC](#implement_dynamic).  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h 
 
 ##  <a name="declare_dyncreate"></a>DECLARE_DYNCREATE  
@@ -152,7 +153,7 @@ DECLARE_DYNCREATE(class_name)
  *CLASS_NAME*  
  Le nom réel de la classe.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’infrastructure utilise cette possibilité de créer des objets de manière dynamique. Par exemple, le nouvel affichage créé lorsque vous ouvrez un nouveau document. Document, vue et classes de frame doivent prendre en charge la création dynamique, car l’infrastructure doit créer dynamiquement.  
   
  Ajouter le `DECLARE_DYNCREATE` macro dans un module .h pour la classe, puis inclure ce module dans tous les modules .cpp qui ont besoin d’accéder aux objets de cette classe.  
@@ -167,7 +168,7 @@ DECLARE_DYNCREATE(class_name)
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [IMPLEMENT_DYNCREATE](#implement_dyncreate).  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h 
 
  
@@ -182,10 +183,10 @@ DECLARE_OLECTLTYPE( class_name )
  *CLASS_NAME*  
  Le nom de la classe du contrôle.  
    
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  **GetUserTypeNameID** et `GetMiscStatus` sont des fonctions virtuelles pures, déclarées dans `COleControl`. Étant donné que ces fonctions sont pures virtuelle, il doivent être substituées dans votre classe de contrôle. En plus de **DECLARE_OLECTLTYPE**, vous devez ajouter le `IMPLEMENT_OLECTLTYPE` macro pour que votre déclaration de classe du contrôle.  
    
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afxctl.h  
    
 ### <a name="see-also"></a>Voir aussi  
@@ -203,12 +204,12 @@ DECLARE_PROPPAGEIDS( class_name )
  *CLASS_NAME*  
  Le nom de la classe de contrôle qui possède les pages de propriétés.  
    
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez le `DECLARE_PROPPAGEIDS` (macro) à la fin de votre déclaration de classe. Ensuite, dans le fichier .cpp qui définit les fonctions membres de la classe, utilisez le `BEGIN_PROPPAGEIDS` (macro), les entrées de la macro pour chacune des pages de propriétés de votre contrôle et le `END_PROPPAGEIDS` macro pour déclarer la fin de la liste de propriétés de page.  
   
  Pour plus d’informations sur les pages de propriétés, consultez l’article [contrôles ActiveX : Pages de propriétés](../mfc-activex-controls-property-pages.md).  
    
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afxctl.h  
    
 ### <a name="see-also"></a>Voir aussi   
@@ -226,7 +227,7 @@ DECLARE_SERIAL(class_name)
  *CLASS_NAME*  
  Le nom réel de la classe.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La sérialisation est le processus d’écriture ou de la lecture du contenu d’un objet vers et à partir d’un fichier.  
   
  Utilisez le `DECLARE_SERIAL` macro dans un module .h, puis inclure ce module dans tous les modules .cpp qui ont besoin d’accéder aux objets de cette classe.  
@@ -244,7 +245,7 @@ DECLARE_SERIAL(class_name)
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCObjectSample#21](../../mfc/codesnippet/cpp/run-time-object-model-services_2.h)]  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h 
 
 ##  <a name="implement_dynamic"></a>IMPLEMENT_DYNAMIC  
@@ -261,7 +262,7 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
  `base_class_name`  
  Le nom de la classe de base.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez le `IMPLEMENT_DYNAMIC` macro dans un module de .cpp, puis liez l’objet résultant de code qu’une seule fois.  
   
  Pour plus d’informations, consultez [rubriques de la classe CObject](../../mfc/using-cobject.md).  
@@ -271,7 +272,7 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
   
  [!code-cpp[NVC_MFCCObjectSample#3](../../mfc/codesnippet/cpp/run-time-object-model-services_4.cpp)]  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h 
 
 ##  <a name="implement_dyncreate"></a>IMPLEMENT_DYNCREATE  
@@ -288,7 +289,7 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
  `base_class_name`  
  Le nom réel de la classe de base.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’infrastructure utilise cette possibilité de créer des objets de manière dynamique, par exemple, lorsqu’il lit un objet à partir du disque pendant la sérialisation. Ajouter le `IMPLEMENT_DYNCREATE` macro dans le fichier d’implémentation de classe. Pour plus d’informations, consultez [rubriques de la classe CObject](../../mfc/using-cobject.md).  
   
  Si vous utilisez la `DECLARE_DYNCREATE` et `IMPLEMENT_DYNCREATE` macros, vous pouvez ensuite utiliser le `RUNTIME_CLASS` macro et `CObject::IsKindOf` fonction membre pour déterminer la classe de vos objets au moment de l’exécution.  
@@ -302,7 +303,7 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
   
  [!code-cpp[NVC_MFCCObjectSample#23](../../mfc/codesnippet/cpp/run-time-object-model-services_6.cpp)]  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h 
 
 ## <a name="implement_olecreate_flags"></a>IMPLEMENT_OLECREATE_FLAGS
@@ -332,7 +333,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
  *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4*, *b5*, *b6*, *b7*, *M8*  
  Composants de la classe **CLSID**.  
    
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 > [!NOTE]
 >  Si vous utilisez `IMPLEMENT_OLECREATE_FLAGS`, vous pouvez spécifier le modèle de thread votre objet prend en charge à l’aide de le `nFlags` paramètre. Si vous souhaitez prendre en charge le modèle la marche périlleuse unique, utilisez `IMPLEMENT_OLECREATE`.  
@@ -341,7 +342,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
   
  L’ID de classe est un identificateur unique de 128 bits pour l’objet. Il se compose d’une **long**, deux **WORD**s et huit **octets**s, telle que représentée par *l*, *w1*, *w2*, et *b1* via *M8* dans la description de la syntaxe. Les Assistants code et Assistant Application créent unique ID de classe OLE pour vous, en fonction des besoins.  
    
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdisp.h  
    
 ### <a name="see-also"></a>Voir aussi  
@@ -367,7 +368,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
  *dwOleMisc*  
  Énumération qui contient un ou plusieurs indicateurs. Pour plus d’informations sur cette énumération, consultez [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) dans le Kit de développement logiciel Windows.  
    
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En plus de `IMPLEMENT_OLECTLTYPE`, vous devez ajouter le **DECLARE_OLECTLTYPE** macro pour que votre déclaration de classe du contrôle.  
   
  Le **GetUserTypeNameID** fonction membre retourne la chaîne de ressource qui identifie la classe du contrôle. `GetMiscStatus`Retourne le **OLEMISC** bits pour votre contrôle. Cette énumération spécifie une collection de paramètres qui décrivent les diverses caractéristiques de votre contrôle. Pour obtenir une description complète de la **OLEMISC** paramètres, voir [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) dans le Kit de développement logiciel Windows.  
@@ -375,7 +376,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 > [!NOTE]
 >  Les paramètres par défaut utilisés par le ActiveX ControlWizard sont : **OLEMISC_ACTIVATEWHENVISIBLE**, **OLEMISC_SETCLIENTSITEFIRST**, **OLEMISC_INSIDEOUT**, **OLEMISC_CANTLINKINSIDE**, et **OLEMISC_RECOMPOSEONRESIZE**.  
    
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afxctl.h  
    
 ### <a name="see-also"></a>Voir aussi  
@@ -399,7 +400,7 @@ IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
  *wSchema*  
  A **UINT** « numéro de version » qui doit être encodé dans l’archive pour activer un programme de la désérialisation identifier et gérer les données créées par programme plus tôt les versions. Le numéro de schéma de classe ne doit pas être -1.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez le `IMPLEMENT_SERIAL` macro dans un module .cpp ; puis lier le code d’objet qui en résulte qu’une seule fois.  
   
  Vous pouvez utiliser la **AFX_API** macro pour exporter automatiquement la `CArchive` opérateur d’extraction pour les classes qui utilisent la `DECLARE_SERIAL` et `IMPLEMENT_SERIAL` macros. Crochet les déclarations de classe (situées dans le fichier .h) avec le code suivant :  
@@ -411,7 +412,7 @@ IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCObjectSample#24](../../mfc/codesnippet/cpp/run-time-object-model-services_7.cpp)]  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h 
 
 ##  <a name="runtime_class"></a>RUNTIME_CLASS  
@@ -425,7 +426,7 @@ RUNTIME_CLASS(class_name)
  *CLASS_NAME*  
  Le nom réel de la classe (ne pas entourée guillemets).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `RUNTIME_CLASS`Retourne un pointeur vers un [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) structure pour la classe spécifiée par *class_name*. Uniquement `CObject`-déclarés avec des classes dérivées `DECLARE_DYNAMIC`, `DECLARE_DYNCREATE`, ou `DECLARE_SERIAL` retourne des pointeurs vers un `CRuntimeClass` structure.  
   
  Pour plus d’informations, consultez [rubriques de la classe CObject](../../mfc/using-cobject.md).  
@@ -433,7 +434,7 @@ RUNTIME_CLASS(class_name)
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCObjectSample#25](../../mfc/codesnippet/cpp/run-time-object-model-services_8.cpp)]  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h 
    
 ##  <a name="declare_olecreate"></a>DECLARE_OLECREATE  
@@ -447,14 +448,14 @@ DECLARE_OLECREATE(class_name)
  *CLASS_NAME*  
  Le nom réel de la classe.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette macro permet d’autres applications OLE créer des objets de ce type.  
   
  Ajouter le `DECLARE_OLECREATE` macro dans un module pour la classe, .h, puis inclure ce module dans tous les modules .cpp qui ont besoin d’accéder aux objets de cette classe.  
   
  Si `DECLARE_OLECREATE` est inclus dans la déclaration de classe, puis `IMPLEMENT_OLECREATE` doit être inclus dans l’implémentation de classe. Une déclaration de classe à l’aide de `DECLARE_OLECREATE` doit également utiliser `DECLARE_DYNCREATE` ou `DECLARE_SERIAL`.  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête**: afxdisp.h  
 
 ##  <a name="implement_olecreate"></a>IMPLEMENT_OLECREATE  
@@ -474,7 +475,7 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
  *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4*, *b5*, *b6*, *b7*, *M8*  
  Composants de la classe **CLSID**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 > [!NOTE]
 >  Si vous utilisez `IMPLEMENT_OLECREATE`, par défaut, vous prenez en charge le modèle de thread unique. Si vous utilisez `IMPLEMENT_OLECREATE_FLAGS`, vous pouvez spécifier le modèle de thread votre objet prend en charge à l’aide de le `nFlags` paramètre.  
@@ -483,7 +484,7 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
   
  L’ID de classe est un identificateur unique de 128 bits pour l’objet. Il se compose d’une **long**, deux **WORD**s et huit **octets**s, telle que représentée par *l*, *w1*, *w2*, et *b1* via *M8* dans la description de la syntaxe. Les Assistants code et Assistant Application créent unique ID de classe OLE pour vous, en fonction des besoins.  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête**: afxdisp.h 
 
 ## <a name="see-also"></a>Voir aussi  

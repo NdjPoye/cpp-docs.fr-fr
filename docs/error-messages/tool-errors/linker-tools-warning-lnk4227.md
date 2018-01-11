@@ -4,44 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK4227
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK4227
+f1_keywords: LNK4227
+dev_langs: C++
+helpviewer_keywords: LNK4227
 ms.assetid: 941a0414-9964-4e02-8487-f9daa42ef7f9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: ee566318c7d19159f9a2c084d348b5010a65e2de
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c603110d77b06fac59a725ba448f058bd4ad7a38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="linker-tools-warning-lnk4227"></a>Avertissement des outils Éditeur de liens LNK4227
-Avertissement d’opération de métadonnées (HRESULT) : message_avertissement  
+# <a name="linker-tools-warning-lnk4227"></a>Avertissement des outils Éditeur de liens LNK4227  
+  
+> Avertissement d’opération de métadonnées (*HRESULT*) : *message_avertissement*  
   
 L’éditeur de liens a détecté des différences de métadonnées lors de la fusion :  
   
@@ -49,17 +32,19 @@ L’éditeur de liens a détecté des différences de métadonnées lors de la f
   
 -   Un ou plusieurs fichiers de code source une compilation.  
   
-Par exemple, LNK4227 peut se produire si vous avez deux fonctions globales portant le même nom mais les informations sur les paramètres déclarés différemment (les déclarations ne sont pas cohérentes dans tous les compilands). Utilisez ildasm.exe /TEXT /METADATA `object_file` sur chaque .obj fichier et vous devez voir comment les types sont différents.  
+Par exemple, LNK4227 peut être dû si vous avez deux fonctions globales portant le même nom mais les informations sur les paramètres déclarés différemment (autrement dit, les déclarations ne sont pas cohérentes dans tous les compilands). Utilisez ildasm.exe /TEXT /METADATA *object_file* sur chaque fichier .obj pour voir comment les types sont différents.  
   
-LNK4227 signale également des problèmes provenant d’un autre outil. Par exemple, al.exe ; consultez la page [Al.exe Tool Errors and Warnings](http://msdn.microsoft.com/en-us/7f125d49-0a03-47a6-9ba9-d61a679a7d4b).  
+LNK4227 est également utilisé pour signaler des problèmes qui proviennent d’un autre outil. Recherchez le message d’avertissement pour plus d’informations.  
   
 Les problèmes de métadonnées doivent être corrigées pour résoudre l’avertissement.  
   
-Par exemple, LNK4227 est généré lorsqu’un assembly référencé a été signé différemment de l’assembly qui y fait référence.  
+## <a name="example"></a>Exemple  
+  
+LNK4227 est généré lorsqu’un assembly référencé a été signé différemment de l’assembly qui y fait référence.  
   
 L’exemple suivant génère l’erreur LNK4227 :  
   
-```  
+```cpp  
 // LNK4227.cpp  
 // compile with: /clr  
 using namespace System::Reflection;  
@@ -71,7 +56,7 @@ int main() {}
   
  Et puis  
   
-```  
+```cpp  
 // LNK4227b.cpp  
 // compile with: /clr LNK4227.cpp /FeLNK4227b.exe  
 using namespace System::Reflection;  
@@ -86,11 +71,13 @@ ref class MyClass
 };  
 ```  
   
-LNK4227 peut également être générée lorsque les numéros de version dans un format incorrect sont passés aux attributs de l’assembly.  Le ' *' notation est spécifique à AssemblyVersionAttribute.  Pour résoudre cet avertissement, utilisez uniquement des nombres dans les attributs de version autres que AssemblyVersionAttribute.  
+## <a name="example"></a>Exemple  
+  
+LNK4227 peut également être générée lorsque des numéros de version dans un format incorrect sont passés aux attributs de l’assembly.  Le ' *' notation est spécifique à la `AssemblyVersionAttribute`.  Pour résoudre cet avertissement, utilisez uniquement les nombres dans les attributs de version autre que `AssemblyVersionAttribute`.  
   
 L’exemple suivant génère l’erreur LNK4227 :  
   
-```  
+```cpp  
 // LNK4227e.cpp  
 // compile with: /clr /LD /W1  
 using namespace System::Reflection;  

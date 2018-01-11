@@ -1,30 +1,30 @@
 ---
-title: "Assignation de caract&#232;re | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caractères (C++), assignations"
-  - "MBCS (C++), assignation de caractère"
+title: "Assignation de caractère | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- characters [C++], assignments
+- MBCS [C++], character assignments
 ms.assetid: dcc329cd-92df-4e20-817d-364be62ff28f
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 266d3284716647fa073f76ef6ef871a3abd179bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Assignation de caract&#232;re
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dans l'exemple suivant la boucle `while` analyse une chaîne et copie tous les caractères à l'exception de « X » dans une autre chaîne :  
+# <a name="character-assignment"></a>Assignation de caractère
+Prenons l’exemple suivant, dans lequel le `while` boucle analyse une chaîne et copie tous les caractères, à l’exception de « X » dans une autre chaîne :  
   
 ```  
 while( *sz2 )  
@@ -36,7 +36,7 @@ while( *sz2 )
 }  
 ```  
   
- Le code copie l'octet situé au niveau `sz2` à l'emplacement vers lequel pointe `sz1`, puis incrémente `sz1` pour recevoir l'octet suivant.  Mais si le caractère suivant dans `sz2` est un caractère codé sur deux octets, l'assignation à `sz1` copie uniquement le premier octet.  Le code suivant utilise une fonction portable pour copier le caractère et une autre pour incrémenter `sz1` et `sz2` correctement :  
+ Le code copie l’octet à `sz2` à l’emplacement vers lequel pointé `sz1`, puis incrémente `sz1` pour recevoir l’octet suivant. Toutefois, si le caractère suivant dans `sz2` est un caractère codés sur deux octets, l’assignation à `sz1` copie uniquement le premier octet. Le code suivant utilise une fonction portable pour copier le caractère et une autre pour incrémenter `sz1` et `sz2` correctement :  
   
 ```  
 while( *sz2 )  
@@ -52,6 +52,6 @@ while( *sz2 )
 }  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Conseils de programmation MBCS](../text/mbcs-programming-tips.md)   
  [Comparaison de caractères](../text/character-comparison.md)

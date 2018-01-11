@@ -1,33 +1,33 @@
 ---
-title: "InterfaceList, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceList"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InterfaceList (structure)"
+title: InterfaceList (Structure) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceList
+dev_langs: C++
+helpviewer_keywords: InterfaceList structure
 ms.assetid: 6ec3228d-eb3e-4b7e-aef1-7dcf17bdf61a
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: def0a79556d74616d153a97ee5a0cc9f521944ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# InterfaceList, structure
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="interfacelist-structure"></a>InterfaceList (structure)
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template <  
@@ -37,32 +37,32 @@ template <
 struct InterfaceList;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
- Un nom d'interface; la première interface dans la liste récursive.  
+ Un nom d’interface ; la première interface dans la liste récursive.  
   
  `U`  
- Un nom d'interface; les interfaces restantes dans la liste récursive.  
+ Un nom d’interface ; les interfaces restantes dans la liste récursive.  
   
-## Notes  
- Utilisé pour créer une liste récurrente d'interfaces.  
+## <a name="remarks"></a>Notes  
+ Utilisé pour créer une liste récursive des interfaces.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Typedefs publics  
+### <a name="public-typedefs"></a>Typedefs publics  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|`FirstT`|Synonyme du paramètre de modèle `T`.|  
-|`RestT`|Synonyme du paramètre de modèle `U`.|  
+|`FirstT`|Synonyme pour le paramètre de modèle `T`.|  
+|`RestT`|Synonyme pour le paramètre de modèle `U`.|  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `InterfaceList`  
   
-## Configuration requise  
- **En\-tête:** implements.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** implements.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

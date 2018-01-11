@@ -1,39 +1,39 @@
 ---
-title: "__emul, __emulu | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__emulu_cpp"
-  - "__emul"
-  - "__emul_cpp"
-  - "__emulu"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__emul, intrinsèque"
-  - "__emulu, intrinsèque"
+title: __emul, __emulu | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __emulu_cpp
+- __emul
+- __emul_cpp
+- __emulu
+dev_langs: C++
+helpviewer_keywords:
+- __emul intrinsic
+- __emulu intrinsic
 ms.assetid: 79545236-cca2-40b8-a4e1-8abce9b26311
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8592633b0b2356f5a3e9bbdefb509a8f1d1a878d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# __emul, __emulu
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="emul-emulu"></a>__emul, __emulu
+**Section spécifique à Microsoft**  
   
- Effectue des multiplications dépassant du ce qu'un entier 32 bits peut contenir.  
+ Effectue des multiplications un dépassement de ce que peut contenir un entier 32 bits.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 __int64 __emul(  
@@ -46,31 +46,31 @@ unsigned __int64 __emulu(
 );  
 ```  
   
-#### Paramètres  
- \[in\] `a`  
- le premier opérande entier de la multiplication.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `a`  
+ Le premier opérande entier de la multiplication.  
   
- \[in\] `b`  
- le deuxième opérande entier de la multiplication.  
+ [in] `b`  
+ Le second opérande entier de la multiplication.  
   
-## Valeur de retour  
- le résultat de la multiplication.  
+## <a name="return-value"></a>Valeur de retour  
+ Le résultat de la multiplication.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__emul`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__emulu`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- `__emul` prend deux valeurs signés 32 bits et retourne le résultat de la multiplication comme valeur d'entier signé 64 bits.  
+## <a name="remarks"></a>Notes  
+ `__emul`accepte deux valeurs de 32 bits signés et retourne le résultat de la multiplication comme valeur de l’entier signé 64 bits.  
   
- `__emulu` prend deux valeurs d'entiers 32 bits non signé et retourne le résultat de la multiplication comme valeur entière non signé 64 bits.  
+ `__emulu`accepte deux valeurs de l’entier non signé 32 bits et retourne le résultat de la multiplication comme valeur de l’entier non signé 64 bits.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // emul.cpp  
@@ -102,14 +102,14 @@ int main()
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 -268435456 * 2 = -536870912  
 4294967295 * 251658240 = 1080863910317260800  
 ```  
   
-### TERMINEZ le détail de Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

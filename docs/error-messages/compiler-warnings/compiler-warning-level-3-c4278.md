@@ -1,31 +1,30 @@
 ---
-title: "Avertissement du compilateur (niveau 3) C4278 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4278"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4278"
+title: Compilateur avertissement (niveau 3) C4278 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4278
+dev_langs: C++
+helpviewer_keywords: C4278
 ms.assetid: 4b6053fb-df62-4c04-b6c8-c011759557b8
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 249b13b70f3f10942852d7a9aa13dcf4f08e1f7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 3) C4278
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'identificateur' : l'identificateur de la bibliothèque de types 'tlb' est déjà une macro ; utilisez le qualificateur 'rename'  
+# <a name="compiler-warning-level-3-c4278"></a>Avertissement du compilateur (niveau 3) C4278
+'identificateur' : identificateur de la bibliothèque de types 'tlb' est déjà une macro ; Utilisez le qualificateur 'rename'  
   
- Lors de l'utilisation de [\#import](../../preprocessor/hash-import-directive-cpp.md), un identificateur dans le typelib en cours d'importation tente de déclarer un identificateur ***identificateur***.  Mais cet identificateur est déjà un symbole valide.  
+ Lorsque vous utilisez [#import](../../preprocessor/hash-import-directive-cpp.md), un identificateur dans la bibliothèque de types que vous importez tente de déclarer un identificateur ***identificateur***. Toutefois, il est déjà un symbole valide.  
   
- Utilisez l'attribut `#import` **rename** pour assigner un alias au symbole dans la bibliothèque de types.
+ Utilisez le `#import` **renommer** attribut pour assigner un alias au symbole dans la bibliothèque de types.

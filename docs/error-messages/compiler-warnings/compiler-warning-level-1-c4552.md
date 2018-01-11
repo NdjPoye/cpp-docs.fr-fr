@@ -1,36 +1,35 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4552 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4552"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4552"
+title: Compilateur avertissement (niveau 1) C4552 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4552
+dev_langs: C++
+helpviewer_keywords: C4552
 ms.assetid: ebbbb5ee-1c19-45bd-b386-41a19630fc76
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fb12d5774094040a3caacba8c0cdfe8d8b604252
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4552
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'opérateur' : opérateur sans effet ; opérateur avec effet secondaire attendu  
+# <a name="compiler-warning-level-1-c4552"></a>Avertissement du compilateur (niveau 1) C4552
+'opérateur' : opérateur n’a aucun effet ; opérateur avec effet secondaire attendu  
   
- Si une instruction d'expression contient un opérateur sans effet au début de l'expression, c'est sans doute une erreur.  
+ Si une instruction d’expression a un opérateur sans effet au début de l’expression, il est probablement une erreur.  
   
- Pour substituer cet avertissement, mettez l'expression entre parenthèses.  
+ Pour ignorer cet avertissement, placez l’expression entre parenthèses.  
   
- L'exemple suivant génère l'erreur C4552 :  
+ L’exemple suivant génère l’erreur C4552 :  
   
 ```  
 // C4552.cpp  

@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 91067753fcb02dd88165e406dc5c0a39183e5d33
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5fa3b2d3910a71d189f5177e13fbd91930e15ee8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="troubleshooting-build-customizations"></a>Dépannage des personnalisations de génération
 Si vos étapes de génération ou les événements ne sont comportent pas comme prévu, il existe plusieurs possibilités pour essayer de comprendre ce qui ne va pas.  

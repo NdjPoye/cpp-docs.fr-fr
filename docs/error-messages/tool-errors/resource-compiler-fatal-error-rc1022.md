@@ -1,31 +1,30 @@
 ---
-title: "Erreur irr&#233;cup&#233;rable RC1022 du compilateur de ressources  | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC1022"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC1022"
+title: "Erreur irrécupérable RC1022 du compilateur de ressources | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC1022
+dev_langs: C++
+helpviewer_keywords: RC1022
 ms.assetid: 30a0f3c7-08a8-4c40-b0de-46ee5feb789d
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a28a18ea569e16c8a829cd681df88e4af3d6287d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Erreur irr&#233;cup&#233;rable RC1022 du compilateur de ressources 
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'\#endif' attendu  
+# <a name="resource-compiler-fatal-error-rc1022"></a>Erreur irrécupérable RC1022 du compilateur de ressources 
+'#endif' attendu  
   
- Il manque une directive `#endif` après une directive `#if`, **\#ifdef** ou **\#ifndef**.  
+ Un `#if`, **#ifdef**, ou **#ifndef** directive n’a pas été terminée avec un `#endif` la directive.  
   
- Assurez\-vous que cette instruction est précédée d'une instruction `#if`, **\#ifdef** ou **\#ifndef** en vigueur.
+ Assurez-vous qu’il existe un `#if`, **#ifdef**, ou **#ifndef** instruction en vigueur avant cette instruction.

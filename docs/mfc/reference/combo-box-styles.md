@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,8 +21,7 @@ f1_keywords:
 - CBS_HASSTRINGS
 - CBS_DISABLENOSCROLL
 - CBS_OWNERDRAWFIXED
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CBS_OWNERDRAWVARIABLE constant [MFC]
 - CBS_NOINTEGRALHEIGHT constant [MFC]
@@ -40,16 +38,16 @@ helpviewer_keywords:
 - CBS_UPPERCASE constant [MFC]
 - CBS_DROPDOWNLIST constant
 ms.assetid: d21a5023-e6a2-495b-a6bd-010a515cbc63
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 028a58c443ba45a4b8167a17f73f6f3fa54e4ca7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 52cfd21df2f0f72da10589745fb3a8be3e0b24e1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="combo-box-styles"></a>Styles de zone de liste modifiable
 Les styles de zone de liste modifiable suivants sont disponibles dans MFC.  
@@ -83,7 +81,6 @@ Les styles de zone de liste modifiable suivants sont disponibles dans MFC.
 ## <a name="see-also"></a>Voir aussi  
  [Styles utilisés par MFC](../../mfc/reference/styles-used-by-mfc.md)   
  [CComboBox::Create] (ccombobox-class.md #ccombobox__create   
-
 
 
 

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d5335b36e9ac80399a965c3717fcc0f5c2bab1fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 02669609e25fc772f1efa49f55045eaddbaad6b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source, classe
 La classe `cancellation_token_source` représente la capacité d'annulation d'une opération annulable.  
@@ -64,7 +65,7 @@ class cancellation_token_source;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `cancellation_token_source`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** pplcancellation_token.h  
   
  **Espace de noms :** concurrency  

@@ -27,11 +27,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a44b005738103b91fd435bdc88f5fef9a1888a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0646e703f172777817aa569fa28d3430624ccae8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cevent-class"></a>CEvent (classe)
 Représente un événement, qui est un objet de synchronisation qui permet à un thread de notifier à un autre qu’un événement s’est produit.  
@@ -59,7 +60,7 @@ class CEvent : public CSyncObject
 |[CEvent::SetEvent](#setevent)|Affecte à l’événement disponible (signalé) et libère tous les threads en attente.|  
 |[CEvent::Unlock](#unlock)|Libère l’objet d’événement.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les événements sont utiles lorsqu’un thread doit savoir à quel moment effectuer sa tâche. Par exemple, un thread qui copie les données vers une archive de données doit être averti lorsque de nouvelles données sont disponibles. En utilisant un `CEvent` objet de notifier le thread de copie lorsque de nouvelles données sont disponibles, le thread peut effectuer sa tâche dès que possible.  
   
  `CEvent`objets ont deux types : automatique et manuel.  
@@ -88,7 +89,7 @@ class CEvent : public CSyncObject
   
  `CEvent`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxmt.h  
   
 ##  <a name="cevent"></a>CEvent::CEvent  
@@ -115,7 +116,7 @@ CEvent(
  `lpsaAttribute`  
  Attributs de sécurité pour l’objet d’événement. Pour obtenir une description complète de cette structure, consultez [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) dans le Kit de développement logiciel Windows.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Accéder ou de libérer un `CEvent` d’objet, de créer un [CMultiLock](../../mfc/reference/cmultilock-class.md) ou [CSingleLock](../../mfc/reference/csinglelock-class.md) objet et appeler ses [verrou](../../mfc/reference/csinglelock-class.md#lock) et [Unlock](../../mfc/reference/csinglelock-class.md#unlock) fonctions membres.  
   
  Pour modifier l’état d’un `CEvent` objet signalé (threads de ne pas ont à attendre), appelez [SetEvent](#setevent) ou [PulseEvent](#pulseevent). Pour définir l’état d’un `CEvent` objet à "non signalé" (threads doivent attendre), appelez [ResetEvent](#resetevent).  
@@ -133,7 +134,7 @@ BOOL PulseEvent();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la fonction a réussi ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si l’événement est manuel, tous les threads en attente sont publiées, l’événement est défini à "non signalé", et `PulseEvent` retourne. Si l’événement est automatique, un seul thread est lancé, l’événement est défini à "non signalé", et `PulseEvent` retourne.  
   
  Si aucun thread en attente ou aucun thread ne puisse être libérée immédiatement, `PulseEvent` définit l’état de l’événement à "non signalé" et le retourne.  
@@ -150,7 +151,7 @@ BOOL ResetEvent();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la fonction a réussi ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ainsi, tous les threads qui souhaitent accéder à cet événement d’attente.  
   
  Cette fonction membre n’est pas utilisée par les événements automatiques.  
@@ -165,7 +166,7 @@ BOOL SetEvent();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la fonction a réussi, sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si l’événement est manuelle, l’événement reste signalé jusqu'à ce que [ResetEvent](#resetevent) est appelée. Plusieurs threads peuvent être lancées dans ce cas. Si l’événement est automatique, l’événement reste signalé jusqu'à ce qu’un seul thread est libéré. Le système définit ensuite l’état de l’événement à "non signalé". Si aucun thread n’est en attente, l’état reste signalé jusqu'à ce qu’un seul thread est libéré.  
   
 ##  <a name="unlock"></a>CEvent::Unlock  
@@ -178,7 +179,7 @@ BOOL Unlock();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le thread propriétaire de l’objet d’événement et l’événement est un événement automatique ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre est appelée par les threads qui possèdent actuellement un événement automatique pour libérer une fois terminés, si leur objet verrou doit être réutilisé. Si l’objet de verrouillage n’est ne pas à être réutilisé, cette fonction est appelée par le destructeur de l’objet de verrouillage.  
   
 ## <a name="see-also"></a>Voir aussi  

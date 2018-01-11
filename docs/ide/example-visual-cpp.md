@@ -1,48 +1,48 @@
 ---
-title: "&lt;example&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<example>"
-  - "example"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<example> (balise XML C++)"
-  - "example (balise XML C++)"
+title: '&lt;exemple&gt; (Visual C++) | Documents Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <example>
+- example
+dev_langs: C++
+helpviewer_keywords:
+- <example> C++ XML tag
+- example C++ XML tag
 ms.assetid: c821aaa7-7ea7-4bee-9922-6705ad57f877
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 939c14d0a0e04ad8970dea7da7888a94bb4de08f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;example&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La balise \<example\> vous permet de spécifier un exemple d'utilisation d'une méthode ou de tout autre membre de bibliothèque.  En général, cela comporterait également l'utilisation de la balise d' [\<code\>](../ide/code-visual-cpp.md) .  
+# <a name="ltexamplegt-visual-c"></a>&lt;exemple&gt; (Visual C++)
+La balise \<example> vous permet de spécifier un exemple d’utilisation d’une méthode ou de tout autre membre de bibliothèque. En règle générale, cela implique également l’utilisation de la [ \<code >](../ide/code-visual-cpp.md) balise.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 <example>description</example>  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `description`  
- Description de l'exemple de code.  
+ Description de l’exemple de code.  
   
-## Notes  
- Compilez avec [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour traiter les commentaires de documentation et les placer dans un fichier.  
+## <a name="remarks"></a>Notes  
+ Compilez avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // xml_example_tag.cpp  
@@ -69,5 +69,5 @@ public:
 };  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Documentation XML](../ide/xml-documentation-visual-cpp.md)

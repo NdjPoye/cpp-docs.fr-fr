@@ -1,71 +1,71 @@
 ---
-title: "Mutex, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Mutex"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Mutex (classe)"
+title: Mutex Class1 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Mutex
+dev_langs: C++
+helpviewer_keywords: Mutex class
 ms.assetid: 682a0963-721c-46a2-8871-000e9997505b
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c0e849d1fee7eca67f3b5765d31b54e0660eaa25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Mutex, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Représente un objet de synchronisation contrôlant exclusivement une ressource partagée.  
+# <a name="mutex-class1"></a>Mutex Class1
+Représente un objet de synchronisation qui contrôle exclusivement une ressource partagée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 class Mutex : public HandleT<HandleTraits::MutexTraits>  
-  
 ```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Typedefs publics  
+### <a name="public-typedefs"></a>Typedefs publics  
+  
+|Nom|Description|  
+|----------|-----------------|  
+|**SyncLock**|Un synonyme pour une classe qui prend en charge les verrous synchrones.|  
+  
+### <a name="public-constructor"></a>Constructeur public  
   
 |Name|Description|  
 |----------|-----------------|  
-|**SyncLock**|Un synonyme pour une classe prenant en charge les verrous synchrones.|  
+|[Mutex::mutex, constructeur](../windows/mutex-mutex-constructor.md)|Initialise une nouvelle instance de la classe Mutex.|  
   
-### Constructeur public  
-  
-|Name|Description|  
-|----------|-----------------|  
-|[Mutex::Mutex, constructeur](../windows/mutex-mutex-constructor.md)|Initialise une nouvelle instance de la classe Mutex.|  
-  
-### Membres publics  
+### <a name="public-members"></a>Membres publics  
   
 |Name|Description|  
 |----------|-----------------|  
-|[Mutex::Lock, méthode](../windows/mutex-lock-method.md)|Attend que l'objet actuel, ou l'objet Mutex associé au handle spécifié, libère le mutex ou que l'intervalle de délai d'attente spécifié se soit écoulé.|  
+|[Mutex::lock, méthode](../windows/mutex-lock-method.md)|Attend que l’objet actif ou l’objet Mutex associé au handle spécifié, libère le mutex ou l’intervalle de délai d’attente spécifié est écoulé.|  
   
-### Opérateur public  
+### <a name="public-operator"></a>Opérateur public  
   
 |Name|Description|  
 |----------|-----------------|  
-|[Mutex::operator\=, opérateur](../windows/mutex-operator-assign-operator.md)|Assigne \(déplace\) l'objet Mutex spécifié à l'objet Mutex actuel.|  
+|[Mutex::operator=, opérateur](../windows/mutex-operator-assign-operator.md)|Affecte (se déplace) le Mutex spécifié de l’objet à l’objet Mutex actuel.|  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Mutex`  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers  
+ **Namespace :** Microsoft::WRL::Wrappers  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL::Wrappers, espace de noms](../windows/microsoft-wrl-wrappers-namespace.md)

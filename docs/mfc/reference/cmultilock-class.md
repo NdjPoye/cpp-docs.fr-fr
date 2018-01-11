@@ -25,11 +25,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d90e9898d830dd9468e51ca615f5d25417ed2f01
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dc3c391c624351b2835e1ec497d78bc191eb1fe7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmultilock-class"></a>CMultiLock (classe)
 Représente le mécanisme de contrôle d'accès utilisé pour accéder aux ressources dans un programme multithread.  
@@ -56,7 +57,7 @@ class CMultiLock
 |[CMultiLock::Lock](#lock)|Attend sur le tableau d’objets de synchronisation.|  
 |[CMultiLock::Unlock](#unlock)|Libère tous les objets de synchronisation lui appartenant.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CMultiLock`ne dispose pas d’une classe de base.  
   
  Pour utiliser les classes de synchronisation [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), et [CEvent](../../mfc/reference/cevent-class.md), vous pouvez créer un **CMultiLock** ou [CSingleLock](../../mfc/reference/csinglelock-class.md) objet attendent et libérer l’objet de synchronisation. Utilisez **CMultiLock** lorsqu’il existe plusieurs objets que vous pouvez utiliser à un moment donné. Utilisez `CSingleLock` lorsque vous devez uniquement d’attente sur un objet à la fois.  
@@ -70,7 +71,7 @@ class CMultiLock
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CMultiLock`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxmt.h  
   
 ##  <a name="cmultilock"></a>CMultiLock::CMultiLock  
@@ -93,7 +94,7 @@ CMultiLock(
  `bInitialLock`  
  Spécifie s’il faut initialement essayer d’accéder à toutes les objets fournis.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction est appelée après la création d’un tableau d’objets de synchronisation pour être attendu. Elle est généralement appelée dans le thread doit attendre pour un des objets de synchronisation soient disponibles.  
   
 ##  <a name="islocked"></a>CMultiLock::IsLocked  
@@ -149,7 +150,7 @@ DWORD Lock(
   
      L’intervalle de délai d’expiration spécifié dans *dwTimeOut* la réussite d’attente a expiré.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si `bWaitForAll` est **TRUE**, `Lock` retournera correctement dès que tous les objets de synchronisation soient signalés simultanément. Si `bWaitForAll` est **FALSE**, `Lock` retourne dès qu’un ou plusieurs des objets de synchronisation sont signalé.  
   
  Si `Lock` n’est pas en mesure de retourner immédiatement, il devra attendre pas plus que le nombre de millisecondes spécifié dans le *dwTimeOut* paramètre avant de retourner. Si *dwTimeOut* est **infinie**, `Lock` ne retourne pas jusqu'à ce que l’accès à un objet est acquise ou une condition spécifiée dans `dwWakeMask` a été remplie. Sinon, si `Lock` a été en mesure d’acquérir un objet de synchronisation, elle retournera avec succès ; dans le cas contraire, elle retournera l’échec.  
@@ -176,7 +177,7 @@ BOOL Unlock(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la fonction a réussi ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction est appelée par `CMultiLock`du destructeur.  
   
  La première forme de `Unlock` tente de déverrouiller l’objet de synchronisation géré par `CMultiLock`. La deuxième forme de `Unlock` tente de déverrouiller le `CSemaphore` objets détenus par `CMultiLock`. Si `CMultiLock` ne possède pas les verrouillé `CSemaphore` de l’objet, la fonction retourne **FALSE**; sinon, elle retourne **TRUE**. `lCount`et `lpPrevCount` sont exactement les mêmes que les paramètres de [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock). La deuxième forme de `Unlock` est rarement applicable aux situations multilock.  

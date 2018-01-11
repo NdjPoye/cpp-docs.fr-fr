@@ -1,34 +1,33 @@
 ---
-title: "Avertissement du compilateur (niveau 4) C4324 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4324"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4324"
+title: Compilateur avertissement (niveau 4) C4324 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4324
+dev_langs: C++
+helpviewer_keywords: C4324
 ms.assetid: 420fa929-d9c0-40b4-8808-2d8ad3ca8090
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6ef3e94e84621de6cd19bf7abba9c3d21b8d3eef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 4) C4324
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'nom\_struct' : la structure a été remplie à cause de \_\_declspec\(align\(\)\)  
+# <a name="compiler-warning-level-4-c4324"></a>Avertissement du compilateur (niveau 4) C4324
+'nom_struct' : structure a été remplie en raison de __declspec(align())  
   
- Un remplissage a été ajouté à l'extrémité d'une structure parce que vous avez spécifié une valeur [\_\_declspec\(align\)](../../cpp/align-cpp.md).  
+ Remplissage a été ajouté à la fin d’une structure, car vous avez spécifié un [__declspec (Align)](../../cpp/align-cpp.md) valeur.  
   
- Par exemple, le code suivant génère l'erreur C4324 :  
+ Par exemple, le code suivant génère C4324 :  
   
 ```  
 // C4324.cpp  

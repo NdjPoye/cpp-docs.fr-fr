@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0fdbaf9af73940ab342e915edb475f9f35027eaa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7daa7527c8eea2cfca3b8933b9c3e1f042883e2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="boolstruct-structure"></a>BoolStruct (structure)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -30,7 +33,7 @@ Prend en charge l’infrastructure WRL et n’est pas destinée à être utilis�
 struct BoolStruct;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La structure BoolStruct définit si un ComPtr gère la durée de vie d’une interface. BoolStruct est utilisé en interne par le [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) opérateur.  
   
 ## <a name="members"></a>Membres  
@@ -44,7 +47,7 @@ struct BoolStruct;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `BoolStruct`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** internal.h  
   
  **Namespace :** Microsoft::WRL::Details  

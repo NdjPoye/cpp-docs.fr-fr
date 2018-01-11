@@ -1,60 +1,62 @@
 ---
-title: "Selecting Multiple Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "Dialog editor, selecting controls"
-  - "dialog box controls, selecting in editor"
-  - "controls [C++], selecting"
-  - "controls [C++], removing from groups"
+title: "Sélection de plusieurs contrôles | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Dialog editor, selecting controls
+- dialog box controls, selecting in editor
+- controls [C++], selecting
+- controls [C++], removing from groups
 ms.assetid: efbdbade-0a3a-4328-b36e-a6376c06e8de
-caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b91e6d1bcadede053d1960cb15de6e2257190761
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Selecting Multiple Controls
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Pour sélectionner plusieurs contrôles  
+# <a name="selecting-multiple-controls"></a>Sélection de plusieurs contrôles
+### <a name="to-select-multiple-controls"></a>Pour sélectionner plusieurs contrôles  
   
-1.  Dans la [fenêtre Boîte à outils](../Topic/Toolbox.md), sélectionnez l'outil **Pointeur**.  
+1.  Dans le [fenêtre Boîte à outils](/visualstudio/ide/reference/toolbox), sélectionnez le **pointeur** outil.  
   
-2.  Faites glisser le pointeur pour dessiner une boîte de sélection autour des contrôles que vous souhaitez sélectionner dans votre boîte de dialogue.  
+2.  Faites glisser le pointeur pour dessiner une zone de sélection autour des contrôles que vous souhaitez sélectionner dans votre boîte de dialogue.  
   
-     Lorsque vous relâchez le bouton de la souris, tous les contrôles situés dans la boîte de sélection ou à l'intersection sont sélectionnés.  
+     Lorsque vous relâchez le bouton de la souris, tous les contrôles à l’intérieur ou à l’intersection de la zone de sélection sont sélectionnés.  
   
-     \- ou \-  
+     \- ou -  
   
 -   Maintenez la touche MAJ enfoncée et cliquez sur les contrôles que vous souhaitez inclure dans la sélection.  
   
-     \- ou \-  
+     \- ou -  
   
--   Maintenez la touche CTRL enfoncée et cliquez sur les contrôles que vous souhaitez inclure dans la sélection.  
+-   Maintenez la touche Ctrl enfoncée et cliquez sur les contrôles que vous souhaitez inclure dans la sélection.  
   
-#### Pour supprimer un contrôle d'un groupe de contrôles sélectionnés ou pour ajouter un contrôle à un groupe de contrôles sélectionnés  
+#### <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>Pour supprimer un contrôle d’un groupe de contrôles sélectionnés ou pour ajouter un contrôle à un groupe de contrôles sélectionnés  
   
-1.  Lorsqu'un groupe de contrôle est sélectionné, maintenez la touche MAJ enfoncée et cliquez sur le contrôle que vous souhaitez supprimer ou ajouter à la sélection existante.  
+1.  Avec un groupe de contrôles sélectionnés, maintenez la touche MAJ enfoncée et cliquez sur le contrôle que vous souhaitez supprimer ou ajouter à la sélection existante.  
   
     > [!NOTE]
-    >  Si vous maintenez la touche CTRL enfoncée et cliquez sur un contrôle contenu dans une sélection, ce contrôle deviendra le contrôle dominant.  Pour plus d'informations, consultez [Spécification du contrôle dominant](../mfc/specifying-the-dominant-control.md).  
+    >  En maintenant enfoncée la touche CTRL ENFONCÉE et en cliquant sur un contrôle dans une sélection rend qui contrôlent le contrôle dominant dans cette sélection. Pour plus d’informations, consultez [spécification du contrôle Dominant](../windows/specifying-the-dominant-control.md).  
   
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l'ajout de fichiers de ressources aux projets managés, l'accès aux ressources, l'affichage de ressources statiques et l'assignation de chaînes de ressources aux propriétés, et ce manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/fr-fr/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### Configuration requise  
+### <a name="requirements"></a>Configuration requise  
  Win32  
   
-## Voir aussi  
- [Selecting Controls](../mfc/selecting-controls.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)
+## <a name="see-also"></a>Voir aussi  
+ [Sélection de contrôles](../windows/selecting-controls.md)   
+ [Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)
+

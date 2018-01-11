@@ -1,67 +1,68 @@
 ---
-title: "CRowset::SetData | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CRowset<TAccessor>.SetData"
-  - "SetData"
-  - "ATL::CRowset::SetData"
-  - "CRowset<TAccessor>.SetData"
-  - "CRowset::SetData"
-  - "ATL.CRowset.SetData"
-  - "CRowset.SetData"
-  - "CRowset<TAccessor>::SetData"
-  - "ATL::CRowset<TAccessor>::SetData"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetData (méthode)"
+title: CRowset::SetData | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CRowset<TAccessor>.SetData
+- SetData
+- ATL::CRowset::SetData
+- CRowset<TAccessor>.SetData
+- CRowset::SetData
+- ATL.CRowset.SetData
+- CRowset.SetData
+- CRowset<TAccessor>::SetData
+- ATL::CRowset<TAccessor>::SetData
+dev_langs: C++
+helpviewer_keywords: SetData method
 ms.assetid: 68125142-8510-4132-9393-e39efd39c784
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0aafc521e130a7f737083390fe5f825c88aa5844
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::SetData
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Définit les valeurs de données dans une ou plusieurs colonnes d'une ligne.  
+# <a name="crowsetsetdata"></a>CRowset::SetData
+Définit les valeurs de données dans une ou plusieurs colonnes d’une ligne.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      HRESULT SetData( ) const throw( );   
+      HRESULT SetData( ) const throw( );   
 HRESULT SetData(  
    int nAccessor   
 ) const throw( );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `nAccessor`  
- \[in\] L'index de l'accesseur à utiliser pour accéder aux données.  
+ [in] Le numéro de l’accesseur à utiliser pour accéder aux données.  
   
-## Valeur de retour  
- Un `HRESULT` standard.  
+## <a name="return-value"></a>Valeur de retour  
+ `HRESULT` standard.  
   
-## Notes  
- Pour la forme `SetData` qui n'accepte aucun argument, tous les accesseurs sont utilisés pour mettre à jour.  Vous appelez en général **SetData** pour définir des valeurs de données à la suite dans les colonnes, puis appelez [Mettre à jour](../../data/oledb/crowset-update.md) pour transmettre ces modifications.  
+## <a name="remarks"></a>Notes  
+ Pour le `SetData` formulaire qui accepte aucun argument, tous les utilisateurs connectés sont utilisés pour mettre à jour. En général, vous appelez **SetData** pour définir les valeurs de données dans des colonnes dans une ligne, puis appelez [mise à jour](../../data/oledb/crowset-update.md) pour transmettre ces modifications.  
   
- Cette méthode requiert l'interface facultative `IRowsetChange`, qui peut ne pas être prise en charge chez tous les fournisseurs ; dans ce cas, la méthode retourne **E\_NOINTERFACE**.  Vous devez également définir **DBPROP\_IRowsetChange** sur `VARIANT_TRUE` avant d'appeler **Ouvrir** sur la table ou la commande contenant l'ensemble de lignes.  
+ Cette méthode requiert l’interface facultative `IRowsetChange`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si c’est le cas, la méthode retourne **E_NOINTERFACE**. Vous devez également définir **DBPROP_IRowsetChange** à `VARIANT_TRUE` avant d’appeler **ouvrir** sur la table ou d’une commande qui contient l’ensemble de lignes.  
   
- L'opération de paramètre peut échouer si une ou plusieurs colonnes n'est pas activé en écriture.  Modifiez le mappage du curseur pour remédier à cette situation.  
+ L’opération de paramétrage peut échouer si une ou plusieurs colonnes n’est pas accessible en écriture. Modifier le mappage de votre curseur pour corriger ce problème.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
- [CRowset, classe](../../data/oledb/crowset-class.md)   
+## <a name="see-also"></a>Voir aussi  
+ [CRowset (classe)](../../data/oledb/crowset-class.md)   
  [CRowset::Update](../../data/oledb/crowset-update.md)

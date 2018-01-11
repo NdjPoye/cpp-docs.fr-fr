@@ -1,52 +1,108 @@
 ---
-title: "Classe de valeur Platform::IntPtr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::IntPtr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::IntPtr (structure)"
+title: Classe de valeur Platform::IntPtr | Documents Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCCORLIB/PlatformIntPtr::IntPtr
+- VCCORLIB/PlatformIntPtr::op_explicit Operator
+- VCCORLIB/PlatformIntPtr::ToInt32
+dev_langs: C++
+helpviewer_keywords: Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 787e8aaa0dc46a651fc4d0ac8b16d9521aebd010
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Classe de valeur Platform::IntPtr
-Représente un pointeur ou un handle signé dont la taille est propre à la plateforme \(32 bits ou 64 bits\).  
+# <a name="platformintptr-value-class"></a>Classe de valeur Platform::IntPtr
+Représente un pointeur ou un handle signé dont la taille est propre à la plateforme (32 bits ou 64 bits).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
 public value struct IntPtr  
 ```  
   
-## Membres  
- IntPtr a les membres suivants :  
+### <a name="members"></a>Membres  
+ IntPtr a les membres suivants :  
   
 |Membre|Description|  
 |------------|-----------------|  
-|[IntPtr::IntPtr \(constructeur\)](../cppcx/intptr-intptr-constructor.md)|Initialise une nouvelle instance d'IntPtr.|  
-|[IntPtr::op\_explicit, opérateur](../cppcx/intptr-op-explicit-operator.md)|Convertit le paramètre spécifié en un IntPtr ou un pointeur en une valeur IntPtr.|  
-|[IntPtr::ToInt32 \(méthode\)](../cppcx/intptr-toint32-method.md)|Convertit l'IntPtr actif en un entier 32 bits.|  
+|[IntPtr::IntPtr](#ctor)|Initialise une nouvelle instance d'IntPtr.|  
+|[IntPtr::op_explicit, opérateur](#op-explicit)|Convertit le paramètre spécifié en un IntPtr ou un pointeur en une valeur IntPtr.|  
+|[IntPtr::ToInt32](#toint32)|Convertit l'IntPtr actif en un entier 32 bits.|  
   
-## Configuration requise  
- **Client minimum pris en charge :** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>Configuration requise  
+ **Minimum pris en charge le client :** Windows 8  
   
- **Serveur minimum pris en charge :** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Minimum de serveur pris en charge :** Windows Server 2012  
   
- **Espace de noms :** Platform  
+ **Espace de noms :** Platform  
   
- **Métadonnées :** platform.winmd  
+ **Métadonnées :** platform.winmd  
+
+## <a name="ctor"> </a> IntPtr::IntPtr (constructeur)
+Initialise une nouvelle instance d'IntPtr avec la valeur spécifiée.  
   
-## Voir aussi  
- [Espace de noms de plateforme](../cppcx/platform-namespace-c-cx.md)
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+IntPtr( __int64 handle-or-pointer );   IntPtr( void* value );   IntPtr( int 32-bit_value );  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ par défaut  
+ Handle ou pointeur 64 bits ou pointeur vers une valeur 64 bits, ou valeur 32 bits qui peut être convertie en valeur 64 bits.  
+  
+
+
+## <a name="op-explicit"> </a> IntPtr::op_explicit, opérateur
+Convertit le paramètre spécifié en un IntPtr ou un pointeur en une valeur IntPtr.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+static IntPtr::operator IntPtr( void* value1);   static IntPtr::operator IntPtr( int value2);   static IntPtr::operator void*( IntPtr value3 );  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ value1  
+ Pointeur vers un handle ou un IntPtr.  
+  
+ value2  
+ Entier 32 bits qui peut être converti en IntPtr.  
+  
+ valeur3  
+ Un IntPtr.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Le premier et le deuxième opérateur retournent un IntPtr. Le troisième opérateur retourne un pointeur vers la valeur représentée par l'IntPtr actuel.  
+  
+
+
+## <a name="toint32"></a> IntPtr::ToInt32 (méthode)
+Convertit la valeur IntPtr actuelle en un entier 32 bits.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+int32 IntPtr::ToInt32();  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Entier 32 bits.  
+  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)

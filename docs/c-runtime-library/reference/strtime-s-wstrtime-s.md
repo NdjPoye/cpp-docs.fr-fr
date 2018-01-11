@@ -41,11 +41,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4b317e80379137bd7ada957b6b89b1c8b82c115a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3f7a2d8baac49543f09d3d2fa35764ae127f5507
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
 Copient l’heure actuelle dans une mémoire tampon. Ces versions de [_strtime, _wstrtime](../../c-runtime-library/reference/strtime-wstrtime.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -88,7 +89,7 @@ errno_t _wstrtime_s(
 |`buffer`|`numberOfElements`|Retourner|Contenu de `buffer`|  
 |--------------|------------------------|------------|--------------------------|  
 |`NULL`|(indifférent)|`EINVAL`|Non modifié|  
-|Non `NULL` (pointant vers la mémoire tampon valide)|0|`EINVAL`|Non modifié|  
+|Non `NULL` (pointant vers la mémoire tampon valide)|0|`EINVAL`|Non modifiée|  
 |Non `NULL` (pointant vers la mémoire tampon valide)|0 < taille < 9|`EINVAL`|Chaîne vide|  
 |Non `NULL` (pointant vers la mémoire tampon valide)|Taille > 9|0|Heure actuelle au format spécifié dans la section Notes|  
   
@@ -102,7 +103,7 @@ errno_t _wstrtime_s(
   
  `_wstrtime` est une version à caractères larges de `_strtime` ; l'argument et la valeur de retour de `_wstrtime` sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique.  
   
- En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mapping"></a>Mappage de routines de texte générique :  
   
@@ -110,14 +111,14 @@ errno_t _wstrtime_s(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tstrtime_s`|`_strtime_s`|`_strtime_s`|`_wstrtime_s`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_strtime_s`|\<time.h>|  
 |`_wstrtime_s`|\<time.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

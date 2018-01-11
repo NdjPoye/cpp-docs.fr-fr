@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b1a3b76d56c6d1b78218d75ca596ae7311e13ac6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: adacffa4dbce4cc908c393cb5019375234e9ff85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="case-c"></a>cas (C++)
 Utilisé avec le [switch_type](../windows/switch-type.md) d’attribut dans un **union**.  
@@ -34,7 +37,7 @@ Utilisé avec le [switch_type](../windows/switch-type.md) d’attribut dans un *
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *value*  
+ *valeur*  
  Une valeur d’entrée possible pour lequel vous souhaitez fournir le traitement. Le type de **valeur** peut être un des types suivants :  
   
 -   `int`  
@@ -47,7 +50,7 @@ Utilisé avec le [switch_type](../windows/switch-type.md) d’attribut dans un *
   
  ou un identificateur d’un tel type.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **cas** attribut C++ a les mêmes fonctionnalités que le **cas** attribut MIDL. Cet attribut est utilisé uniquement avec les [switch_type](../windows/switch-type.md) attribut.  
   
 ## <a name="example"></a>Exemple  
@@ -70,7 +73,7 @@ struct SizedValue2 {
 [module(name="ATLFIRELib")];  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -78,8 +81,8 @@ struct SizedValue2 {
 |-|-|  
 |**S'applique à**|Membre d’un **classe** ou`struct`|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

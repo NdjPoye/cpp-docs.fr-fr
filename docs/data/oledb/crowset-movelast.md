@@ -24,11 +24,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a84fd6027ef147bbbe52e8ffee5d3c7b21efd38
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d57885232fb10f302aeb36c6c074e7a88f0fb67b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetmovelast"></a>CRowset::MoveLast
 Déplace le curseur vers la dernière ligne.  
@@ -44,12 +47,12 @@ HRESULT MoveLast( ) throw( );
 ## <a name="return-value"></a>Valeur de retour  
  `HRESULT` standard.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Appels [IRowset::RestartPosition](https://msdn.microsoft.com/en-us/library/ms712877.aspx) pour redéfinir l’emplacement d’extraction suivant à la dernière position et récupère la dernière ligne.  
   
  Cette méthode requiert que vous définissez **DBPROP_CANSCROLLBACKWARDS** à `VARIANT_TRUE` avant d’appeler **ouvrir** sur la table ou d’une commande qui contient l’ensemble de lignes. (Pour de meilleures performances, vous pouvez également définir **DBPROP_QUICKRESTART** à `VARIANT_TRUE`.)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

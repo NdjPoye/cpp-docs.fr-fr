@@ -4,49 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4794
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4794
+f1_keywords: C4794
+dev_langs: C++
+helpviewer_keywords: C4794
 ms.assetid: badc9c36-fa1a-4fec-929b-7bfda7a7b79f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 8f73e3da504960f737f175fff4c9d7b07084833a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5c6878e2e0fb3fed9cb349bd0dd651a24c02aae9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="compiler-warning-level-1-c4794"></a>Avertissement du compilateur (niveau 1) C4794
+# <a name="compiler-warning-level-1-c4794"></a>Avertissement du compilateur (niveau 1) C4794
 segment de variable de thread de stockage local 'variable' modifié de 'section name' en '.tls$'  
   
- Vous avez utilisé [#pragma data_seg](../../preprocessor/data-seg.md) pour mettre une variable tls dans une section qui ne commence ne pas par .tls$.  
+ Vous avez utilisé [#pragma data_seg](../../preprocessor/data-seg.md) pour placer une variable tls dans une section qui ne commence pas par .tls$.  
   
- Le .tls$*x* section existera dans le fichier objet où [__declspec (thread)](../../cpp/thread.md) variables sont définies. Une section .tls dans le fichier EXE ou DLL résulte de ces sections.  
+ La section .tls$*x* existe dans le fichier objet dans lequel sont définies des variables [__declspec(thread)](../../cpp/thread.md) . Une section .tls dans le fichier EXE ou DLL résulte de ces sections.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant génère l’avertissement C4794 :  

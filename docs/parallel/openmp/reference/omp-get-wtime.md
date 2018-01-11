@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b071564cc6c5059d8978d45f80ce3e008622ec2f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c9a4d66789a94e30c2562c5a6d071cab1012b32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ompgetwtime"></a>omp_get_wtime
 Retourne qu'une valeur en secondes du temps écoulé à partir d’un moment donné.  
@@ -33,7 +34,7 @@ double omp_get_wtime( );
 ## <a name="return-value"></a>Valeur de retour  
  Retourne qu'une valeur en secondes de la durée écoulée entre le moment de certaines arbitraire, mais il est cohérent.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Ce point reste cohérent lors de l’exécution du programme, ce qui rend les comparaisons suivantes possible.  
   
  Pour plus d’informations, consultez [3.3.1 fonction omp_get_wtime](../../../parallel/openmp/3-3-1-omp-get-wtime-function.md).  

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40c0f03b09a5f056ae260641c588996d3bd2043b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 88fe05ab0c0e6a1c433bf2b6007fb63c18fb5850
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-access-control-c"></a>Contrôle d'accès aux membres (C++)
 Des contrôles d’accès permettent de séparer la [public](../cpp/public-cpp.md) interface d’une classe à partir de la [privé](../cpp/private-cpp.md) détails d’implémentation et la [protégé](../cpp/protected-cpp.md) membres qui sont uniquement pour les utilisent en classes dérivées. Le spécificateur d'accès s'applique à tous les membres déclarés après lui jusqu'à ce que le spécificateur d'accès suivant soit rencontré.  
@@ -109,7 +110,7 @@ int main()
   
  Dans `DerivedClass2`, les fonctions `PublicFunc` et `ProtectedFunc` sont considérées comme des membres privés car `BaseClass` est une classe de base privée. À nouveau, `PrivateFunc` est privé pour `BaseClass` et inaccessible à toutes les classes dérivées.  
   
- Vous pouvez déclarer une classe dérivée sans spécificateur d'accès de classe de base. Dans ce cas, la dérivation est considérée comme privée si la déclaration de classe dérivée utilise le **classe** (mot clé). La dérivation est considérée comme publique si la déclaration de classe dérivée utilise le mot clé `struct`. Par exemple, le code suivant :  
+ Vous pouvez déclarer une classe dérivée sans spécificateur d'accès de classe de base. Dans ce cas, la dérivation est considérée comme privée si la déclaration de classe dérivée utilise le **classe** (mot clé). La dérivation est considérée comme publique si la déclaration de classe dérivée utilise le mot clé `struct`. Par exemple, le code suivant :  
   
 ```  
 class Derived : Base  
@@ -145,7 +146,7 @@ struct Derived : public Base
 >  Pour spécifier une classe de base privée, il est recommandé d'utiliser explicitement le mot clé `private` afin que les utilisateurs de la classe dérivée comprennent l'accès au membre.  
   
 ## <a name="access-control-and-static-members"></a>Contrôle d'accès et membres statiques  
- Lorsque vous spécifiez une classe de base comme `private`, elle affecte uniquement les membres non statiques. Les membres publics static sont toujours accessibles dans les classes dérivées. Toutefois, l'accès aux membres de la classe de base à l'aide de pointeurs, de références ou d'objets peut nécessiter une conversion, à laquelle le contrôle d'accès est encore appliqué. Prenons l'exemple suivant :  
+ Lorsque vous spécifiez une classe de base comme `private`, elle affecte uniquement les membres non statiques. Les membres publics static sont toujours accessibles dans les classes dérivées. Toutefois, l'accès aux membres de la classe de base à l'aide de pointeurs, de références ou d'objets peut nécessiter une conversion, à laquelle le contrôle d'accès est encore appliqué. Prenons l'exemple suivant :  
   
 ```  
 // access_control.cpp  
@@ -222,7 +223,7 @@ int main()
 >  La fonction virtuelle `GetState` peut être appelée en utilisant un pointeur vers la classe de base `VFuncBase`. Cela ne signifie pas que la fonction appelée est la version de classe de base de cette fonction.  
   
 ## <a name="access-control-with-multiple-inheritance"></a>Contrôle d'accès avec héritage multiple  
- Dans les treillis à héritage multiple impliquant des classes de base virtuelles, un nom donné est accessible via plusieurs chemins. Comme un contrôle d'accès différent peut être appliqué le long de ces différents chemins, le compilateur choisit le chemin qui fournit le plus souvent l'accès. Voir l'illustration suivante.  
+ Dans les treillis à héritage multiple impliquant des classes de base virtuelles, un nom donné est accessible via plusieurs chemins. Comme un contrôle d’accès différent peut être appliqué le long de ces différents chemins, le compilateur choisit le chemin qui fournit le plus souvent l’accès. Voir l'illustration suivante.  
   
  ![Accès le long des chemins d’accès d’un graphique d’héritage](../cpp/media/vc38v91.gif "vc38V91")  
 Graphique d’accès le long des chemins d’un héritage  

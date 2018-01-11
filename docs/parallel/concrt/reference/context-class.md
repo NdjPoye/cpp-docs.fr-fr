@@ -30,11 +30,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dc49f795fb4c8f987271bd4f147a04e3ac873e33
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7a15b041f638312081417daae8c800647fbfb7d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="context-class"></a>Context, classe
 Représente une abstraction pour un contexte d'exécution.  
@@ -71,7 +72,7 @@ class Context;
 |[VirtualProcessorId](#virtualprocessorid)|Retourne un identificateur pour le processeur virtuel d’exécution sur le contexte actuel.|  
 |[Yield](#yield)|Produit l'exécution pour qu'un autre contexte puisse s'exécuter. Si aucun autre contexte n'est disponible pour la production, le planificateur peut produire dans un autre thread du système d'exploitation.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le Planificateur de Runtime d’accès concurrentiel (voir [planificateur](scheduler-class.md)) utilise des contextes d’exécution pour exécuter le travail en file d’attente à celui-ci par votre application. Un thread Win32 est un exemple d’un contexte d’exécution sur un système d’exploitation de Windows.  
   
  À tout moment, le niveau d’accès concurrentiel d’un planificateur est égal au nombre de processeurs virtuels accordées à ce dernier par le Gestionnaire de ressources. Un processeur virtuel est une abstraction pour une ressource de traitement et le mappe à un thread matériel sur le système sous-jacent. Uniquement un contexte de planificateur unique peut exécuter sur un processeur virtuel à un moment donné.  
@@ -81,7 +82,7 @@ class Context;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Context`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -94,7 +95,7 @@ class Context;
 static void __cdecl Block();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode entraîne la création du planificateur par défaut du processus et/ou son attachement au contexte d'appel s'il n'existe aucun planificateur actuellement associé au contexte d'appel.  
   
  Si le contexte d’appel s’exécute sur un processeur virtuel, le processeur virtuel trouve un autre contexte exécutable à exécuter ou peut éventuellement créer un nouveau.  
@@ -120,7 +121,7 @@ static Context* __cdecl CurrentContext();
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers le contexte actuel.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode entraîne la création du planificateur par défaut du processus et/ou son attachement au contexte d'appel s'il n'existe aucun planificateur actuellement associé au contexte d'appel.  
   
 ##  <a name="getid"></a>GetId 
@@ -145,7 +146,7 @@ virtual unsigned int GetScheduleGroupId() const = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Un identificateur pour le groupe de planification que le contexte fonctionne actuellement.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La valeur de retour de cette méthode est un échantillonnage instantané du groupe de planification d’exécution sur le contexte. Si cette méthode est appelée sur un contexte autre que le contexte actuel, la valeur peut être obsolète au moment où elle est retournée et ne peut pas être fiables. En règle générale, cette méthode est utilisée pour le débogage ou uniquement à des fins de suivi.  
   
 ##  <a name="getvirtualprocessorid"></a>GetVirtualProcessorId 
@@ -159,7 +160,7 @@ virtual unsigned int GetVirtualProcessorId() const = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Si le contexte est en cours d’exécution sur un processeur virtuel, un identificateur pour le processeur virtuel sur lequel le contexte est en cours d’exécution. Sinon, la valeur `-1`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La valeur de retour de cette méthode est un échantillonnage instantané du processeur virtuel sur lequel le contexte s’exécute. Cette valeur peut être obsolète au moment où elle est retournée et ne peut pas être fiables. En règle générale, cette méthode est utilisée pour le débogage ou uniquement à des fins de suivi.  
   
 ##  <a name="id"></a>ID 
@@ -195,7 +196,7 @@ virtual bool IsSynchronouslyBlocked() const = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Indique si le contexte est bloqué de façon synchrone.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un contexte est considéré comme bloqué de façon synchrone s’il a exécuté une action qui a conduit à bloquer explicitement. Dans le Planificateur de threads, cela indique un appel direct à la `Context::Block` méthode ou un objet de synchronisation qui a été généré à l’aide de la `Context::Block` (méthode).  
   
  La valeur de retour de cette méthode est un échantillonnage instantané montrant si le contexte est bloqué de façon synchrone. Cette valeur peut être périmée au moment où elle est retournée et est utilisable uniquement dans des circonstances très spécifiques.  
@@ -243,7 +244,7 @@ static unsigned int __cdecl ScheduleGroupId();
 virtual void Unblock() = 0;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il est parfaitement conforme pour un appel à la `Unblock` méthode avant un appel correspondant à la [bloc](#block) (méthode). Tant que les appels à la `Block` et `Unblock` méthodes sont appariés correctement, le runtime gère correctement le naturel des deux ordres. Un `Unblock` appel avant une `Block` appel annule simplement l’effet de la `Block` appeler.  
   
  Il existe plusieurs exceptions peuvent être levées à partir de cette méthode. Si un contexte tente d’appeler le `Unblock` méthode sur lui-même, un [context_self_unblock](context-self-unblock-class.md) exception sera levée. Si les appels à `Block` et `Unblock` ne sont pas correctement associés (par exemple, deux appels à `Unblock` sont effectuées pour un contexte qui est en cours d’exécution), un [context_unblock_unbalanced](context-unblock-unbalanced-class.md) exception sera levée.  
@@ -261,7 +262,7 @@ static unsigned int __cdecl VirtualProcessorId();
 ### <a name="return-value"></a>Valeur de retour  
  Si le contexte actuel est associé à un planificateur, un identificateur pour le processeur virtuel sur lequel le contexte actuel s’exécute ; Sinon, la valeur `-1`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La valeur de retour de cette méthode est un échantillonnage instantané du processeur virtuel sur lequel s’exécute le contexte actuel. Cette valeur peut être obsolète au moment où elle est retournée et ne peut pas être fiables. En règle générale, cette méthode est utilisée pour le débogage ou uniquement à des fins de suivi.  
   
 ##  <a name="yield"></a>Yield 
@@ -272,7 +273,7 @@ static unsigned int __cdecl VirtualProcessorId();
 static void __cdecl Yield();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode entraîne la création du planificateur par défaut du processus et/ou son attachement au contexte d'appel s'il n'existe aucun planificateur actuellement associé au contexte d'appel.  
   
 ##  <a name="yieldexecution"></a>YieldExecution 
@@ -283,7 +284,7 @@ static void __cdecl Yield();
 static void __cdecl YieldExecution();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode entraîne la création du planificateur par défaut du processus et/ou son attachement au contexte d'appel s'il n'existe aucun planificateur actuellement associé au contexte d'appel.  
   
  Cette fonction est une nouveauté de [!INCLUDE[vs_dev14](../../../ide/includes/vs_dev14_md.md)] et est identique à la [Yield](#yield) de fonctionner mais n’est pas en conflit avec la macro Yield dans Windows.h.  

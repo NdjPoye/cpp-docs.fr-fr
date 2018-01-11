@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f1048cdce98be99b13d306e9ff36eb75b30e43cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6bcc43d4e8b32a8766eef7c50e45bece569ef5c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="containers-client-item-states"></a>Conteneurs : états d'élément client
 Cet article explique les différents états par lesquels passe un élément client pendant son cycle de vie.  
@@ -45,7 +46,7 @@ Cet article explique les différents états par lesquels passe un élément clie
   
  Lorsqu'un élément a été ouvert dans la fenêtre du serveur au lieu d'être ouvert sur place dans le document du conteneur, il se trouve dans l'état ouvert (ou entièrement ouvert). Dans cet état, une hachure croisée est généralement dessinée sur la représentation de l'élément dans la fenêtre du conteneur pour indiquer que l'élément est actif ailleurs.  
   
- Lorsqu'un élément a été activé sur place, il ne passe généralement que brièvement par l'état actif. Il passe ensuite à l'état actif de l'interface utilisateur, dans lequel le serveur a fusionné ses menus, barres d'outils et autres composants d'interface utilisateur avec ceux du conteneur. La présence de ces composants d'interface utilisateur fait la distinction entre l'état actif de l'interface utilisateur et l'état actif. Sinon, l'état actif s'apparente à l'état actif de l'interface utilisateur. Si le serveur prend en charge l'annulation, il doit conserver les informations d'état d'annulation de l'élément OLE jusqu'à ce que ce dernier atteigne l'état chargé ou ouvert.  
+ Lorsqu'un élément a été activé sur place, il ne passe généralement que brièvement par l'état actif. Il passe ensuite à l’état actif de l’interface utilisateur, dans lequel le serveur a fusionné ses menus, barres d’outils et autres composants d’interface utilisateur avec ceux du conteneur. La présence de ces composants d'interface utilisateur fait la distinction entre l'état actif de l'interface utilisateur et l'état actif. Sinon, l'état actif s'apparente à l'état actif de l'interface utilisateur. Si le serveur prend en charge l'annulation, il doit conserver les informations d'état d'annulation de l'élément OLE jusqu'à ce que ce dernier atteigne l'état chargé ou ouvert.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conteneurs](../mfc/containers.md)   

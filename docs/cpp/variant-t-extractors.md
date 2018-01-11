@@ -59,11 +59,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4db692b4847bf6a8aa7fb1ffca3f4a2d96de833c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8876cd486662ec1c20aea7148563fd28e8790a47
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="variantt-extractors"></a>Extracteurs _variant_t
 **Section spécifique à Microsoft**  
@@ -94,7 +95,7 @@ operator __int64() const;
 operator unsigned __int64() const;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Extrait des données brutes d’un encapsulé **variante**. Si le **VARIANT** n’est pas déjà le type approprié, **VariantChangeType** est utilisé pour effectuer une conversion, et une erreur est générée en cas d’échec :  
   
 -   **operator short ()** extrait un **court** valeur entière.  

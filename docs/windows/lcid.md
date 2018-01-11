@@ -1,32 +1,33 @@
 ---
-title: "lcid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.lcid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LCID attribute"
+title: LCID | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.lcid
+dev_langs: C++
+helpviewer_keywords: LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 36ccb085c2f6128012d446f6be15dff94c718e35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# lcid
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="lcid"></a>lcid
 Vous permet de passer un identificateur de paramètres régionaux à une fonction.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -34,10 +35,10 @@ Vous permet de passer un identificateur de paramètres régionaux à une fonctio
   
 ```  
   
-## Notes  
- L'attribut de **LCID** C\+\+ implémente les fonctionnalités de l'attribut de [LCID](http://msdn.microsoft.com/library/windows/desktop/aa367067) MIDL.  si vous souhaitez implémenter des paramètres régionaux pour un bloc bibliothèque, utilisez le paramètre de **lcid\=**`lcid` à l'attribut de [module](../windows/module-cpp.md) .  
+## <a name="remarks"></a>Notes  
+ Le **lcid** attribut C++ implémente les fonctionnalités de la [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) attribut MIDL. Si vous souhaitez implémenter des paramètres régionaux pour un bloc de bibliothèque, utilisez le **lcid =** `lcid` paramètre à la [module](../windows/module-cpp.md) attribut.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cpp_attr_ref_lcid.cpp  
@@ -52,20 +53,19 @@ __interface IStatic {
 };  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|paramètre d'interface|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|Paramètre d’interface|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
- Pour plus d'informations, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs de paramètres](../windows/parameter-attributes.md)   

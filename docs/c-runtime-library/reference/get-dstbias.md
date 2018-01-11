@@ -38,11 +38,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7e6c96fba04fff658c30fe9378748ed2549668ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a8abd59f8871ca03eee91ad49a1a67c95878d98
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getdstbias"></a>_get_dstbias
 Récupère le décalage de l'heure d'été en secondes.  
@@ -70,13 +71,13 @@ Récupère le décalage de l'heure d'été en secondes.
   
  Nous vous recommandons d'utiliser cette fonction au lieu de la macro `_dstbias` ou de la fonction déconseillée `__dstbias`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_get_dstbias`|\<time.h>|  
   
- Pour plus d’informations, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion du temps](../../c-runtime-library/time-management.md)   

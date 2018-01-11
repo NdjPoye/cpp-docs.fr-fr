@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58dd056bc3a4d397fc8e77b8e2c0b508b489eb2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 518e0b7bef29e9d10e7cf603fc3bf387d986fa09
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentunorderedmultiset-class"></a>concurrent_unordered_multiset, classe
 La `concurrent_unordered_multiset` classe est un conteneur d’accès concurrentiel sécurisé qui contrôle une séquence à longueur variable d’éléments de type K. La séquence est représentée d’une manière qui permet d’accès concurrentiel sécurisé Ajout, l’accès à un élément, un itérateur et opérations de traversée d’itérateur.  
@@ -106,7 +107,7 @@ template <typename K,
 |----------|-----------------|  
 |[operator=](#operator_eq)|Surchargé. Assigne le contenu d’un autre `concurrent_unordered_multiset` objet à celui-ci. Cette méthode n’est pas d’accès concurrentiel sécurisé.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour plus d’informations sur la `concurrent_unordered_multiset` de classe, consultez [conteneurs et objets parallèles](../../../parallel/concrt/parallel-containers-and-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -116,7 +117,7 @@ template <typename K,
   
  `concurrent_unordered_multiset`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concurrent_unordered_set.h  
   
  **Espace de noms :** concurrency  
@@ -218,7 +219,7 @@ concurrent_unordered_multiset(
  `_Uset`  
  La source `concurrent_unordered_multiset` déplacer les éléments d’objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Tous les constructeurs stockent un objet allocateur `_Allocator` et initialiser la classe multiset non triée.  
   
  Le premier constructeur spécifie un multiensemble initial vide et spécifie explicitement les fonctions de hachage et d’égalité et allocateur tapez le nombre de compartiments, pour être utilisé.  
@@ -257,7 +258,7 @@ bool empty() const;
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si le conteneur simultané est vide, `false` dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En présence d’insertions simultanées, ou non le conteneur simultané est vide peut changer immédiatement après l’appel de cette fonction, avant que la valeur de retour soit encore lu.  
   
 ##  <a name="end"></a>fin 
@@ -294,7 +295,7 @@ std::pair<const_iterator,
 ### <a name="return-value"></a>Valeur de retour  
  A [paire](http://msdn.microsoft.com/en-us/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) où le premier élément est un itérateur au début et le deuxième élément est un itérateur à la fin de la plage.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il est possible pour les insertions simultanées à provoquer des clés supplémentaires à insérer après l’itérateur begin et avant l’itérateur de fin.  
   
 ##  <a name="find"></a>Rechercher 
@@ -386,7 +387,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur pointant vers l’emplacement d’insertion.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La première fonction membre insère l’élément `value` dans la séquence contrôlée, puis retourne l’itérateur qui désigne l’élément inséré.  
   
  La deuxième fonction membre retourne insert ( `value`), à l’aide `_Where` comme point de départ dans la séquence contrôlée pour rechercher le point d’insertion.  
@@ -444,7 +445,7 @@ size_type max_size() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre maximal d’éléments qui peuvent être insérées dans ce conteneur simultané.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette valeur limite supérieure peut être supérieure à ce que le conteneur peut recevoir réellement.  
   
 ##  <a name="operator_eq"></a>opérateur = 
@@ -464,7 +465,7 @@ concurrent_unordered_multiset& operator= (concurrent_unordered_multiset&& _Uset)
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à ce `concurrent_unordered_multiset` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Après avoir supprimé les éléments existants dans un multiensemble simultané non trié, `operator=` copie ou déplace le contenu de `_Uset` dans la simultanées désordonnés multiset.  
   
 ##  <a name="rehash"></a>rehash) 
@@ -479,7 +480,7 @@ void rehash(size_type _Buckets);
  `_Buckets`  
  Le nombre souhaité de compartiments.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction membre modifie le nombre de compartiments pour qu’il soit au moins égal à `_Buckets` et régénère la table de hachage en fonction des besoins. Le nombre de compartiments doit être une puissance de 2. Si pas une puissance de 2, il est arrondi à la plus grande puissance de 2 suivante.  
   
  Elle lève une [out_of_range](../../../standard-library/out-of-range-class.md) exception si le nombre de compartiments n’est pas valide (0 ou supérieur au nombre maximal de compartiments).  
@@ -495,7 +496,7 @@ size_type size() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’éléments dans le conteneur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En présence d’insertions simultanées, le nombre d’éléments dans le conteneur simultané peut changer immédiatement après l’appel de cette fonction, avant que la valeur de retour soit encore lu.  
   
 ##  <a name="swap"></a>swap 
@@ -643,7 +644,7 @@ size_type unsafe_erase(
 ### <a name="return-value"></a>Valeur de retour  
  Les deux premières fonctions membres retournent un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou [fin](#end)() si cet élément n’existe. La troisième fonction membre retourne le nombre d’éléments, qu'il le supprime.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La première fonction membre supprime l’élément vers lequel pointé `_Where`. La deuxième fonction membre supprime les éléments de la plage [ `_Begin`, `_End`).  
   
  La troisième fonction membre supprime les éléments de la plage délimitée par [equal_range](#equal_range)(KVal).  

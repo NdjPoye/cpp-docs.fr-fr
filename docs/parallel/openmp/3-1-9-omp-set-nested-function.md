@@ -1,43 +1,43 @@
 ---
-title: "3.1.9 omp_set_nested Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 3.1.9 fonction omp_set_nested | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: e4afc3aa-bb96-4314-9849-fd5df5f437d9
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0910e7df0ebd423b9967fd0eb7931b7434ba94fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# 3.1.9 omp_set_nested Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-la fonction d' **omp\_set\_nested** active ou désactive le parallélisme imbriqué.  Le format est comme suit :  
+# <a name="319-ompsetnested-function"></a>3.1.9 Fonction omp_set_nested
+Le **omp_set_nested** fonction active ou désactive le parallélisme imbriqué. Le format est le suivant :  
   
 ```  
 #include <omp.h>  
 void omp_set_nested(int nested);  
 ```  
   
- Si *imbriqué* correspond à 0, le parallélisme imbriqué est désactivé, qui est la valeur par défaut, les régions et parallèles imbriquées sont sérialisées et exécutées par le thread actuel.  Si *imbriqué* prend une valeur différente de zéro, le parallélisme imbriqué est activé, et des zones de parallèle qui sont imbriquées peuvent déployer des threads supplémentaires pour former les équipes imbriquées.  
+ Si *imbriquée* prend la valeur 0, imbriqués parallélisme est désactivé, ce qui est la valeur par défaut, et les régions parallèles imbriquées sont sérialisées et exécutées par le thread actuel. Si *imbriquée* prend une valeur différente de zéro, parallélisme imbriquée est activée, et les régions parallèles imbriquées peuvent déployer des threads supplémentaires pour les équipes imbriquée.  
   
- Cette fonction a les effets décrits ci\-dessus en cas de appel d'une partie du programme où la fonction d' **omp\_in\_parallel** retourne zéro.  S'il s'agit d'une partie du programme où la fonction d' **omp\_in\_parallel** retourne une valeur différente de zéro, le comportement de cette fonction n'est pas défini.  
+ Cette fonction a les effets décrits ci-dessus, lorsqu’elle est appelée à partir d’une partie du programme où la **omp_in_parallel** fonction retourne zéro. Si elle est appelée à partir d’une partie du programme où la **omp_in_parallel** fonction retourne une valeur différente de zéro, le comportement de cette fonction n’est pas défini.  
   
- Cet appel est prioritaire sur la variable d'environnement **OMP\_NESTED** .  
+ Cet appel est prioritaire sur la **OMP_NESTED** variable d’environnement.  
   
- Lorsque le parallélisme imbriqué est activé, le nombre de threads utilisés pour exécuter les régions parallèles imbriquées implémentation\-est défini.  Par conséquent, il permet aux des implémentations OpenMP\-conformes pour sérialiser les régions parallèles imbriquées même lorsque le parallélisme imbriqué est activé.  
+ Lorsque le parallélisme imbriqué est activé, le nombre de threads utilisés pour exécuter les régions parallèles imbriquées est défini par l’implémentation. Par conséquent, les implémentations conformes OpenMP sont autorisées à sérialiser les régions parallèles imbriquées, même lorsque le parallélisme imbriquée est activée.  
   
-## Références croisées :  
+## <a name="cross-references"></a>Références externes :  
   
--   La variable d'environnement**OMP\_NESTED** , consultez [section 4,4](../../parallel/openmp/4-4-omp-nested.md) à la page 49.  
+-   **OMP_NESTED** voir variable d’environnement [Section 4.4](../../parallel/openmp/4-4-omp-nested.md) page 49.  
   
--   la fonction d'**omp\_in\_parallel** , consultez [section 3.1.6](../../parallel/openmp/3-1-6-omp-in-parallel-function.md) à la page 38.
+-   **omp_in_parallel** , consultez [Section 3.1.6](../../parallel/openmp/3-1-6-omp-in-parallel-function.md) sur la page de 38.

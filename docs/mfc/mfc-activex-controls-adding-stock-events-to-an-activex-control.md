@@ -53,11 +53,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4e3226618c645a1f96c776a5aef5fbbf55f30bfe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99de785bba9f566c5dbb4751f788320b96782427
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Contrôles ActiveX MFC : ajout d'événements stock à un contrôle ActiveX
 Événements stock diffèrent des événements personnalisés dans la mesure où ils sont déclenchés automatiquement par la classe [COleControl](../mfc/reference/colecontrol-class.md). `COleControl`contient des fonctions membres prédéfinies qui déclenchent des événements résultant d’actions communes. Certaines actions courantes implémentées par `COleControl` inclure unique - et double - clicks sur le contrôle, les événements de clavier et les modifications dans l’état des boutons de souris. Entrées de mappage des événements pour les événements stock sont toujours précédées du **EVENT_STOCK** préfixe.  
@@ -67,11 +68,11 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="stock-events"></a>Événements stock  
   
-|Événement|Fonction de déclenchement|Commentaires|  
+|événement|Fonction de déclenchement|Commentaires|  
 |-----------|---------------------|--------------|  
 |Clic|**void FireClick ()**|Déclenché lorsque le contrôle capture la souris, tout **BUTTONUP** (gauche, du milieu ou de droit) de message est reçu et le bouton est relâché sur le contrôle. Le stock MouseDown et MouseUp événements se produisent avant cet événement.<br /><br /> Entrée de mappage d’événement : **EVENT_STOCK_CLICK)**|  
 |Double clic|**void FireDblClick ()**|Similaire à Click mais déclenché quand un **BUTTONDBLCLK** message est reçu.<br /><br /> Entrée de mappage d’événement : **EVENT_STOCK_DBLCLICK)**|  
-|Erreur|**void FireError (SCODE***scode* **, LPCSTR** `lpszDescription` **, UINT**`nHelpID`**= 0)** |Déclenché lorsqu’une erreur se produit au sein de votre contrôle ActiveX en dehors de l’étendue d’un accès d’appel ou de la propriété de méthode.<br /><br /> Entrée de mappage d’événement : **EVENT_STOCK_ERROREVENT)**|  
+|Error|**void FireError (SCODE***scode* **, LPCSTR** `lpszDescription` **, UINT**`nHelpID`**= 0)** |Déclenché lorsqu’une erreur se produit au sein de votre contrôle ActiveX en dehors de l’étendue d’un accès d’appel ou de la propriété de méthode.<br /><br /> Entrée de mappage d’événement : **EVENT_STOCK_ERROREVENT)**|  
 |KeyDown|**void FireKeyDown (court** `nChar` **, short**`nShiftState`**)** |Déclenché quand un `WM_SYSKEYDOWN` ou `WM_KEYDOWN` message est reçu.<br /><br /> Entrée de mappage d’événement : **EVENT_STOCK_KEYDOWN)**|  
 |KeyPress|**void FireKeyPress (court\***`pnChar`**)** |Déclenché quand un `WM_CHAR` message est reçu.<br /><br /> Entrée de mappage d’événement : **EVENT_STOCK_KEYPRESS)**|  
 |KeyUp|**void FireKeyUp (court** `nChar` **, short**`nShiftState`**)** |Déclenché quand un `WM_SYSKEYUP` ou `WM_KEYUP` message est reçu.<br /><br /> Entrée de mappage d’événement : **EVENT_STOCK_KEYUP)**|  

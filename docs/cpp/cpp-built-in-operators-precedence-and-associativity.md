@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a286be3d29e22cc3bae3d34241f08735f5f7b0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 95cbb68740fe43fa8a76624abb57284cb68e7805
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Les opérateurs C++ intégrés, priorité et associativité
 
@@ -63,7 +64,7 @@ Opérateur *priorité* Spécifie l’ordre des opérations dans les expressions 
 |[Adresse](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
 |[Indirection](../cpp/indirection-operator-star.md)|[&#42;](../cpp/indirection-operator-star.md)|
 |[Création d’objet](../cpp/new-operator-cpp.md)|[new](../cpp/new-operator-cpp.md)|
-|[Détruire un objet](../cpp/delete-operator-cpp.md)|[supprimer](../cpp/delete-operator-cpp.md)|
+|[Détruire un objet](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
 |[Cast](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
 |**Priorité de groupe 4, de gauche à droite associativité**|
 |[Pointeur vers membre (objets ou pointeurs)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; ou -> &#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
@@ -72,7 +73,7 @@ Opérateur *priorité* Spécifie l’ordre des opérations dans les expressions 
 |[Division](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |[Modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |**Priorité de groupe 6, de gauche à droite associativité**|
-|[Ajout](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
+|[Addition](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
 |[Soustraction](../cpp/additive-operators-plus-and.md)|[-](../cpp/additive-operators-plus-and.md)|
 |**Groupe de priorité 7, de gauche à droite associativité**|
 |[Décalage vers la gauche](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|[<<](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|
@@ -86,7 +87,7 @@ Opérateur *priorité* Spécifie l’ordre des opérations dans les expressions 
 |[Égalité](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[==](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
 |[Inégalité](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[!=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
 |**Priorité de groupe 10 de gauche à droite associativité**|
-|[Opération de bits AND](../cpp/bitwise-and-operator-amp.md)|[&amp;](../cpp/bitwise-and-operator-amp.md)|
+|[AND au niveau du bit](../cpp/bitwise-and-operator-amp.md)|[&amp;](../cpp/bitwise-and-operator-amp.md)|
 |**Priorité de groupe 11, de gauche à droite associativité**|
 |[Opérateur de bits OR exclusif](../cpp/bitwise-exclusive-or-operator-hat.md)|[^](../cpp/bitwise-exclusive-or-operator-hat.md)|
 |**Priorité de groupe 12, de gauche à droite associativité**|

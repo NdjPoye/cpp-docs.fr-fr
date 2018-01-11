@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d44d1f5f9a9d37bd38f441820dd75cb9a4b92df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a33cf8113825804ac831b518e371c4150f2620ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automation-servers"></a>Serveurs Automation
 L'Automation rend possible pour votre application la manipulation d'objets implémentés dans une autre application, ou l'exposition d'objets pour qu'ils puissent être manipulés. Un serveur Automation est une application qui expose des objets programmables (appelés objets Automation) à d’autres applications (appelées [clients Automation](../mfc/automation-clients.md)). Les serveurs Automation sont parfois appelés composants Automation.  
@@ -39,7 +40,7 @@ L'Automation rend possible pour votre application la manipulation d'objets impl�
 ##  <a name="_core_support_for_automation_servers"></a>Prise en charge pour les serveurs Automation  
  Visual C++ et le framework MFC fournissent la prise en charge complète des serveurs Automation. Ils gèrent une grande partie de la charge mémoire générée par un serveur Automation, donc vous pouvez concentrer vos efforts sur la fonctionnalité de votre application.  
   
- Le mécanisme principal du framework pour la prise en charge de l'Automation est la table de dispatch, un ensemble de macros qui s'étend dans les déclarations et les appels nécessaires pour exposer les méthodes et les propriétés pour OLE. Une table de dispatch classique ressemble à ceci :  
+ Le mécanisme principal du framework pour la prise en charge de l’Automation est la table de dispatch, un ensemble de macros qui se développe en déclarations et en appels nécessaires pour exposer les méthodes et les propriétés pour OLE. Une table de dispatch classique ressemble à ceci :  
   
  [!code-cpp[NVC_MFCAutomation#1](../mfc/codesnippet/cpp/automation-servers_1.cpp)]  
   

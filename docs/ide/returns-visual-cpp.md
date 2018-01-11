@@ -1,48 +1,48 @@
 ---
-title: "&lt;returns&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "returns"
-  - "<returns>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<returns> (balise XML C++)"
-  - "returns (balise XML C++)"
+title: '&lt;Retourne&gt; (Visual C++) | Documents Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- returns
+- <returns>
+dev_langs: C++
+helpviewer_keywords:
+- returns C++ XML tag
+- <returns> C++ XML tag
 ms.assetid: 5e3b0ed9-838d-4953-a93e-76d2d0a19fb9
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1c09540308ea87093cab74dbe0833587e9828e42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;returns&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La balise \<returns\> doit être utilisée dans le commentaire pour une déclaration de méthode afin de décrire la valeur de retour.  
+# <a name="ltreturnsgt-visual-c"></a>&lt;Retourne&gt; (Visual C++)
+La balise \<returns> doit être utilisée dans le commentaire relatif à une déclaration de méthode pour décrire la valeur de retour.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 <returns>description</returns>  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `description`  
- Description de la valeur retournée.  
+ Description de la valeur de retour.  
   
-## Notes  
- Compilez avec [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour traiter les commentaires de documentation et les placer dans un fichier.  
+## <a name="remarks"></a>Notes  
+ Compilez avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // xml_returns_tag.cpp  
@@ -57,5 +57,5 @@ public:
 };  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Documentation XML](../ide/xml-documentation-visual-cpp.md)

@@ -1,35 +1,33 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4311 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4311"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4311"
+title: Compilateur avertissement (niveau 1) C4311 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4311
+dev_langs: C++
+helpviewer_keywords: C4311
 ms.assetid: ddc579d0-d051-47bc-915d-71ffb32323c9
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5ae2f4b7d7c9ac57f5bdc3fd219c7682e0ec639d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4311
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4311"></a>Avertissement du compilateur (niveau 1) C4311
 'variable' : troncation de pointeur de 'type' à 'type'  
   
- Cet avertissement détecte les problèmes de troncation de pointeur 64 bits.  Par exemple, si le code est compilé pour une architecture 64 bits, la valeur d'un pointeur \(64 bits\) est tronquée si elle est affectée à un `int` \(32 bits\).  Pour plus d'informations, consultez [Règles d'utilisation des pointeurs](http://msdn.microsoft.com/library/windows/desktop/aa384242).  
+ Cet avertissement détecte les problèmes de troncation de pointeur 64 bits. Par exemple, si le code est compilé pour une architecture 64 bits, la valeur d'un pointeur (64 bits) est tronquée si elle est affectée à un `int` (32 bits). Pour plus d’informations, consultez [les règles d’utilisation des pointeurs](http://msdn.microsoft.com/library/windows/desktop/aa384242).  
   
- Pour plus d'informations sur les causes courantes de l'avertissement C4311, consultez [Erreurs courantes du compilateur](http://msdn.microsoft.com/library/windows/desktop/aa384160).  
+ Pour plus d’informations sur les causes courantes de l’avertissement C4311, consultez [les erreurs courantes du compilateur](http://msdn.microsoft.com/library/windows/desktop/aa384160).  
   
  L'exemple de code suivant génère l'avertissement C4311 quand il est compilé pour une cible 64 bits, puis indique comment le corriger :  
   

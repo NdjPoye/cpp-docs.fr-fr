@@ -1,31 +1,33 @@
 ---
-title: "Opening a Resource for Binary Editing | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.binary"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary data, editing"
-  - "resources [Visual Studio], opening for binary editing"
+title: "Ouverture d’une ressource pour l’édition binaire | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.binary
+dev_langs: C++
+helpviewer_keywords:
+- binary data, editing
+- resources [Visual Studio], opening for binary editing
 ms.assetid: d3cdb0e4-da66-410d-8e49-b29073ff2929
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 92a0c0459626f139b7a8d7ae2313439c66d2a11c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Opening a Resource for Binary Editing
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Pour ouvrir une ressource de bureau Windows pour l’édition binaire  
+# <a name="opening-a-resource-for-binary-editing"></a>Ouverture d'une ressource à des fins d'édition binaire
+### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Pour ouvrir une ressource de bureau Windows pour l’édition binaire  
   
 1.  Dans [Affichage des ressources](../windows/resource-view-window.md), sélectionnez le fichier de ressources que vous souhaitez modifier.  
   
@@ -35,33 +37,34 @@ caps.handback.revision: 9
 2.  Cliquez avec le bouton droit sur la ressource et cliquez sur **Ouvrir au format binaire** dans le menu contextuel.  
   
     > [!NOTE]
-    >  Si vous utilisez la fenêtre [Affichage des ressources](../windows/resource-view-window.md) pour ouvrir une ressource ayant un format que Visual Studio ne reconnaît pas \(comme RCDATA ou une ressource personnalisée\), la ressource s’ouvre automatiquement dans l’éditeur binaire.  
+    >  Si vous utilisez la fenêtre [Affichage des ressources](../windows/resource-view-window.md) pour ouvrir une ressource ayant un format que Visual Studio ne reconnaît pas (comme RCDATA ou une ressource personnalisée), la ressource s’ouvre automatiquement dans l’éditeur binaire.  
   
-### Pour ouvrir une ressource managée pour l’édition binaire  
+### <a name="to-open-a-managed-resource-for-binary-editing"></a>Pour ouvrir une ressource managée pour l’édition binaire  
   
 1.  Dans l’Explorateur de solutions, sélectionnez le fichier de ressources que vous souhaitez modifier.  
   
 2.  Cliquez avec le bouton droit sur la ressource et choisissez **Ouvrir avec** dans le menu contextuel.  
   
-3.  Dans la boîte de dialogue **Ouvrir avec**, sélectionnez **Éditeur binaire**.  
+3.  Dans la boîte de dialogue **Ouvrir avec** , sélectionnez **Éditeur binaire**.  
   
     > [!NOTE]
-    >  Vous pouvez utiliser l’[éditeur d’images](../mfc/image-editor-for-icons.md) et l’[éditeur binaire](../mfc/binary-editor.md) pour travailler avec des fichiers de ressources dans des projets managés. Toutes les ressources managées que vous souhaitez modifier doivent être liées. Les éditeurs de ressources Visual Studio ne prennent pas en charge la modification des ressources incorporées.  
+    >  Vous pouvez utiliser l’ [éditeur d’images](../windows/image-editor-for-icons.md) et l’ [éditeur binaire](binary-editor.md) pour travailler avec des fichiers de ressources dans des projets managés. Toutes les ressources managées que vous souhaitez modifier doivent être liées. Les éditeurs de ressources Visual Studio ne prennent pas en charge la modification des ressources incorporées.  
   
     > [!NOTE]
-    >  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l’ajout de fichiers de ressources aux projets managés, l’accès aux ressources, l’affichage de ressources statiques et l’assignation de chaînes de ressources à des propriétés, et ceci manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/fr-fr/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+    >  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).   
   
- ![Éditeur binaire](../mfc/media/vcbinaryeditor2.png "vcBinaryEditor2")  
+ ![Éditeur binaire](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")  
 Données binaires pour une boîte de dialogue affichée dans l’éditeur binaire  
   
- Seules certaines valeurs ASCII sont représentées dans l’éditeur binaire \(0x20 à 0x7E\). Les caractères étendus sont affichés sous forme de points dans la section Valeur ASCII de l’éditeur binaire \(volet droit\). Les caractères « imprimables » sont les valeurs ASCII comprises entre 32 et 126.  
+ Seules certaines valeurs ASCII sont représentées dans l’éditeur binaire (0x20 à 0x7E). Les caractères étendus sont affichés sous forme de points dans la section Valeur ASCII de l’éditeur binaire (volet droit). Les caractères « imprimables » sont les valeurs ASCII comprises entre 32 et 126.  
   
 > [!NOTE]
 >  Si vous souhaitez utiliser l’éditeur binaire sur une ressource déjà en cours de modification dans une autre fenêtre d’éditeur, fermez d’abord l’autre fenêtre d’éditeur.  
   
  **Spécifications**  
   
- Aucune  
+ Aucun.  
   
-## Voir aussi  
- [Binary Editor](../mfc/binary-editor.md)
+## <a name="see-also"></a>Voir aussi  
+ [Binary Editor](binary-editor.md)
+

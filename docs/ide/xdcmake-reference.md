@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad0744da891c93dab44c980ed10aa4213a4dddb3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea635d701b4dea2471067072083d9568f11f3d82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xdcmake-reference"></a>Référence XDCMake
 xdcmake.exe est un programme qui compile les fichiers .xdc dans un fichier .xml. Un fichier .xdc est créé par le compilateur Visual C++ pour chaque fichier de code source lorsque le code source est compilé avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) et lorsque le fichier de code source contient des commentaires de documentation marqués avec des balises XML.  
@@ -54,7 +55,7 @@ xdcmake.exe est un programme qui compile les fichiers .xdc dans un fichier .xml.
 |/nologo|Supprimer le message de copyright.|  
 |/ out :*nom de fichier*|Permet de spécifier le nom du fichier .xml.  Par défaut, le nom du fichier .xml est le nom de fichier du premier fichier .xdc traité par xdcmake.exe.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Visual Studio appelle xdcmake.exe automatiquement lors de la génération d’un projet. Vous pouvez également appeler xdcmake.exe à la ligne de commande.  
   
  Consultez [balises recommandées pour commentaires de Documentation](../ide/recommended-tags-for-documentation-comments-visual-cpp.md) pour plus d’informations sur l’ajout de commentaires de documentation pour les fichiers de code source.  

@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc04d6f14c1d3c728afc63b2818de8c491efd1a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0455a544a83340c003917cc71eb2127d98722cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bstrtassign"></a>_bstr_t::Assign
 **Section spécifique à Microsoft**  
@@ -38,7 +39,7 @@ void Assign(
  `s`  
  `BSTR` à copier dans le `BSTR` encapsulé par un `_bstr_t`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `Assign` effectue une copie binaire, ce qui signifie que toute la longueur du `BSTR` est copiée, indépendamment du contenu.  
   
 ## <a name="example"></a>Exemple  

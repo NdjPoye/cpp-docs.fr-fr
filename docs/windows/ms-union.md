@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f70f4403c3318729ae0dcf42e717902c48c8759b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2b187c23c60c7294170a66a819f78bebfd5e5f8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="msunion"></a>ms_union
 Contrôle l’alignement de représentation sous forme de données de réseau d’unions nonencapsulated.  
@@ -32,7 +35,7 @@ Contrôle l’alignement de représentation sous forme de données de réseau d�
   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **ms_union** attribut C++ a les mêmes fonctionnalités que le [ms_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
@@ -61,7 +64,7 @@ __interface IFireTabCtrl {
 [module(name="ATLFIRELib")];  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -69,7 +72,7 @@ __interface IFireTabCtrl {
 |-|-|  
 |**S'applique à**|Unions nonencapsulated|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
+|**Attributs requis**|Aucun.|  
 |**Attributs non valides**|**dispinterface**|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  

@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 47d8fdec93c9d77e6648c5f648171a8ff349474d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c4e86ffe91c2c0bf6a914e8f735b5faca6ae45f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-type-system-modern-c"></a>Système de type C++ (Modern C++)
 Le concept de *type* est très important en C++. Chaque variable, argument de fonction et valeur de retour de fonction doit avoir un type pour être compilé. En outre, chaque expression (y compris les valeurs littérales) reçoit implicitement un type du compilateur avant d'être évaluée. Des exemples de types `int` pour stocker les valeurs intégrales, `double` pour stocker les valeurs à virgule flottante (également appelé *scalaire* des types de données), ou de la classe de bibliothèque Standard [std::basic_string](../standard-library/basic-string-class.md) pour stocker du texte. Vous pouvez créer votre propre type en définissant une `class` ou un `struct`. Le type spécifie la quantité de mémoire qui sera allouée à la variable (ou au résultat de l'expression), les types de valeurs qui peuvent être stockés dans cette variable, la façon dont ces valeurs (en tant que séries de bits) sont interprétées et les opérations qu'il y est possible d'exécuter. Cet article contient une présentation informelle des principales fonctionnalités du système de type C++.  
@@ -70,14 +71,14 @@ int maxValue;                // Not recommended! maxValue contains
   
  Le tableau suivant répertorie les types fondamentaux les plus souvent utilisés :  
   
-|Type|Taille|Commentaire|  
+|Type|Size|Commentaire|  
 |----------|----------|-------------|  
 |int|4 octets|Choix par défaut pour les valeurs intégrales.|  
 |double|8 octets|Choix par défaut pour les valeurs à virgule flottante.|  
-|bool|1 octet|Représente des valeurs qui peuvent être true ou false.|  
-|char|1 octet|À utiliser pour les caractères ASCII dans les chaînes de style C plus anciennes ou les objets std::string qui ne devront jamais être convertis en UNICODE.|  
-|wchar_t|2 octets|Représente les valeurs à caractères « larges » qui peuvent être encodées au format UNICODE (UTF-16 sur Windows, mais peut varier sur les autres systèmes d'exploitation). Type de caractère utilisé dans les chaînes de type `std::wstring`.|  
-|unsigned char|1 octet|C++ n'a aucun type `byte` intégré.  Utilisez le caractère non signé pour représenter une valeur d'octet.|  
+|bool|1 octet|Représente des valeurs qui peuvent être true ou false.|  
+|char|1 octet|À utiliser pour les caractères ASCII dans les chaînes de style C plus anciennes ou les objets std::string qui ne devront jamais être convertis en UNICODE.|  
+|wchar_t|2 octets|Représente les valeurs à caractères « larges » qui peuvent être encodées au format UNICODE (UTF-16 sur Windows, mais peut varier sur les autres systèmes d'exploitation). Type de caractère utilisé dans les chaînes de type `std::wstring`.|  
+|unsigned char|1 octet|C++ n'a aucun type `byte` intégré.  Utilisez le caractère non signé pour représenter une valeur d'octet.|  
 |unsigned int|4 octets|Option par défaut pour les bits indicateurs.|  
 |long long|8 octets|Représente des valeurs entières très grandes.|  
   

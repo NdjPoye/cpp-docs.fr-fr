@@ -14,11 +14,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 7a157af2b9c7a8a99dc8f1e255071c1790365213
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 067ead44f000aae8999c0815191089f081edaa67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defaulttypenamegethashcode-method"></a>default::(type_name)::GetHashCode, méthode
 Retourne le code de hachage de cette instance.  
@@ -32,7 +33,7 @@ public:int GetHashCode()
 ### <a name="return-value"></a>Valeur de retour  
  Code de hachage de cette instance.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **Minimum pris en charge le client :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  

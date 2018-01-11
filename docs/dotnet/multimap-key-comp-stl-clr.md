@@ -1,42 +1,42 @@
 ---
-title: "multimap::key_comp (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::key_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre key_comp [STL/CLR]"
+title: multimap::key_comp (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::key_comp
+dev_langs: C++
+helpviewer_keywords: key_comp member [STL/CLR]
 ms.assetid: 05250549-d589-4e1d-8ae9-321ff4ad384b
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fc39cc3202c25fd0993831b46cc2961ef19f1826
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# multimap::key_comp (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copie le délégué de classement pour deux clés.  
+# <a name="multimapkeycomp-stlclr"></a>multimap::key_comp (STL/CLR)
+Copie le délégué de classement pour les deux clés.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 key_compare^key_comp();  
 ```  
   
-## Notes  
- La fonction considérée retourne le délégué de classement utilisé pour ordonner la séquence contrôlée.  Vous l'utilisez pour comparer deux clés.  
+## <a name="remarks"></a>Notes  
+ La fonction membre retourne le délégué de classement utilisé pour ordonner la séquence contrôlée. Il permet de comparer deux clés.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_multimap_key_comp.cpp   
@@ -72,18 +72,22 @@ int main()
   
 ```  
   
-  **compare\(L'a', L'a'\) \= Faux**  
-**compare\(L'a', L'b'\) \= Vrai**  
-**compare\(L'b', L'a'\) \= Faux**  
-**compare\(L'a', L'a'\) \= Faux**  
-**compare\(L'a', L'b'\) \= Faux**  
-**compare\(L'b', L'a'\) \= Vrai**   
-## Configuration requise  
- **En\-tête :** \<cliext\/map\>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
   
- **Espace de nom :** cliext  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
   
-## Voir aussi  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::key\_compare](../dotnet/multimap-key-compare-stl-clr.md)   
- [multimap::key\_type](../dotnet/multimap-key-type-stl-clr.md)
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/map >  
+  
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)   
+ [multimap::key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md)

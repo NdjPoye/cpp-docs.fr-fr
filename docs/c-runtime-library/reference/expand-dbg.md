@@ -33,11 +33,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6062cec95c2471408db4e67f97dac4fddb5233e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2df087072d7f34123b00acafe52c130598592a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expanddbg"></a>_expand_dbg
 Redimensionne un bloc de mémoire spécifié dans le tas en étendant ou en réduisant le bloc (version de débogage uniquement).  
@@ -70,7 +71,7 @@ void *_expand_dbg(
  `linenumber`  
  Numéro de ligne dans le fichier source où l’opération d’extension a été demandée ou `NULL`.  
   
- Les paramètres `filename` et `linenumber` sont disponibles uniquement quand `_expand_dbg` a été appelée explicitement ou quand la constante du préprocesseur [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) a été définie.  
+ Les paramètres `filename` et `linenumber` sont disponibles uniquement quand `_expand_dbg` a été appelée explicitement ou que la constante du préprocesseur [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) a été définie.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Si l’opération réussit, `_expand_dbg` retourne un pointeur désignant le bloc de mémoire redimensionné. Étant donné que la mémoire n’est pas déplacée, l’adresse est identique à userData. Si une erreur s’est produite ou que le bloc n’a pas pu être étendu à la taille demandée, la fonction retourne `NULL`. En cas d’échec, `errno` comporte des informations issues du système d’exploitation sur la nature de l’échec. Pour plus d’informations sur `errno`, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
@@ -86,13 +87,13 @@ void *_expand_dbg(
   
  Cette fonction valide ses paramètres. Si `memblock` est un pointeur null ou que la taille est supérieure à `_HEAP_MAXREQ`, cette fonction appelle un gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, `errno` a la valeur `EINVAL` et la fonction retourne une valeur `NULL`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_expand_dbg`|\<crtdbg.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Bibliothèques  
  Uniquement les versions de débogage des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

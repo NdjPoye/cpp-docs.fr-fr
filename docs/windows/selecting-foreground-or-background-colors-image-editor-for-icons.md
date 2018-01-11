@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c6829b393bdf6b0b9b36256c86b66003c63e1311
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2ca53c5205fb24f7881943d5e78490cd32129981
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Sélection de couleurs de premier plan ou d'arrière-plan (Éditeur d'images pour les icônes)
 À l’exception de la **gomme**, les outils sur le **Éditeur d’images** dessin de barre d’outils avec la couleur de premier plan ou d’arrière-plan actuelle lorsque vous appuyez sur le bouton gauche ou droit de la souris, respectivement.  
@@ -36,9 +39,9 @@ ms.lasthandoff: 10/24/2017
   
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.*  
   
- Spécifications  
+ Configuration requise  
   
- Aucune  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)   

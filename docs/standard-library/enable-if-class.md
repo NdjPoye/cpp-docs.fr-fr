@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::enable_if
-dev_langs:
-- C++
+f1_keywords: type_traits/std::enable_if
+dev_langs: C++
 helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4df9da47925919a005d3c235d35f57f54a3568aa
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 4d01230a1e185ad793f554afa7fa2fe2942b27a6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="enableif-class"></a>enable_if, classe
 Crée une instance d’un type pour une résolution de surcharge SFINAE sous certaines conditions. Le typedef `enable_if<Condition,Type>::type` imbriqué existe et est synonyme de `Type` si et seulement si `Condition` a la valeur `true`.  
@@ -56,7 +53,7 @@ template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```  
   
- En C++, l’échec du remplacement des paramètres de modèle n’est pas une erreur en soi : il est désigné sous le nom de *SFINAE* (Substitution Failure Is Not An Error). En règle générale, `enable_if` permet de supprimer des candidats de la résolution de surcharge (autrement dit, elle trie l'ensemble des surcharges) pour qu'une définition puisse être rejetée en faveur d'une autre. Cette opération est conforme au comportement SFINAE. Pour plus d’informations sur SFINAE, consultez [Substitution failure is not an error](http://go.microsoft.com/fwlink/LinkId=394798) (l’échec du remplacement n’est pas une erreur) sur Wikipedia.  
+ En C++, l’échec du remplacement des paramètres de modèle n’est pas une erreur en soi : il est désigné sous le nom de *SFINAE* (Substitution Failure Is Not An Error). En règle générale, `enable_if` permet de supprimer des candidats de la résolution de surcharge (autrement dit, elle trie l'ensemble des surcharges) pour qu'une définition puisse être rejetée en faveur d'une autre. Cette opération est conforme au comportement SFINAE. Pour plus d’informations sur SFINAE, consultez [Substitution failure is not an error](http://go.microsoft.com/fwlink/p/?linkid=394798) (l’échec du remplacement n’est pas une erreur) sur Wikipedia.  
   
  Voici quatre exemples de scénarios :  
   
@@ -140,14 +137,13 @@ func(make_pair("foo", "bar"));
   
  C++11 a résolu cette ambiguïté en utilisant `enable_if` pour garantir que `pair<A, B>(const pair<X, Y>&)` existe **uniquement** quand `const X&` est implicitement convertible en `A` et que `const Y&` est implicitement convertible en `B`.  Cela permet à la résolution de surcharge de déterminer que `pair<const char *, const char *>` n'est pas convertible en `pair<int, int>` et que la surcharge qui accepte `pair<string, string>` est valide.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<type_traits>  
   
  **Espace de noms :** std  
   
 ## <a name="see-also"></a>Voir aussi  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

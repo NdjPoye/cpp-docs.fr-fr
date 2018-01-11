@@ -25,11 +25,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 908f7f595f2312bc16a01cdc3b6784c3e56f21bf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7437bfe26f95b57584f294a7280540014e4a1b85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numget-class"></a>num_get, classe
 Classe de modèle qui décrit un objet pouvant servir de facette de paramètres régionaux pour contrôler les conversions de séquences de type `CharType` en valeurs numériques.  
@@ -48,7 +49,7 @@ class num_get : public locale::facet;
  `InputIterator`  
  Type d'itérateur depuis lequel les fonctions get numériques lisent leur entrée.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet statique possède une valeur stockée initiale de zéro. La première tentative d’accès à sa valeur stockée entraîne le stockage d’une valeur positive unique dans **id.**  
   
 ### <a name="constructors"></a>Constructeurs  
@@ -57,7 +58,7 @@ class num_get : public locale::facet;
 |-|-|  
 |[num_get](#num_get)|Constructeur des objets de type `num_get` utilisés pour extraire des valeurs numériques depuis des séquences.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -71,7 +72,7 @@ class num_get : public locale::facet;
 |[do_get](#do_get)|Fonction virtuelle appelée pour extraire une valeur numérique ou booléenne depuis une séquence de caractères.|  
 |[get](#get)|Extrait une valeur numérique ou booléenne d'une séquence de caractères.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<locale>  
   
  **Espace de noms :** std  
@@ -187,7 +188,7 @@ virtual iter_type do_get(
 ### <a name="return-value"></a>Valeur de retour  
  Itérateur une fois que la valeur a été lue.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La première fonction membre protégée virtuelle,  
   
 ```  
@@ -429,7 +430,7 @@ iter_type get(
 ### <a name="return-value"></a>Valeur de retour  
  Itérateur une fois que la valeur a été lue.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Toutes les fonctions membres retournent [do_get](#do_get)( `first`, `last`, `_Iosbase`, `_State`, `val`).  
   
  La première fonction membre protégée virtuelle tente de faire correspondre des éléments séquentiels en commençant au premier dans la séquence [ `first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée d’entier complet et non vide. En cas de réussite, elle convertit ce champ en sa valeur équivalente comme type **long** et stocke le résultat dans `val`. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée numérique. Sinon, la fonction ne stocke rien dans `val` et définit `ios_base::failbit` dans _ *State*. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée d’entier valide. Dans les deux cas, si la valeur de retour est égale à **last**, la fonction définit `ios_base::eofbit` dans `_State`.  

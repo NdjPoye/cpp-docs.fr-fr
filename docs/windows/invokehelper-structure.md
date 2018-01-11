@@ -1,33 +1,33 @@
 ---
-title: "InvokeHelper, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::InvokeHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InvokeHelper (structure)"
+title: InvokeHelper (Structure) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::InvokeHelper
+dev_langs: C++
+helpviewer_keywords: InvokeHelper structure
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: acabc6833e23c4f17bc337b67a89578bc95bbd6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# InvokeHelper, structure
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="invokehelper-structure"></a>InvokeHelper (structure)
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<  
@@ -88,50 +88,50 @@ template<
 struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `TDelegateInterface`  
  `TCallback`  
- Le type de la fonction du gestionnaire d'événements.  
+ Le type de la fonction de gestionnaire d’événements.  
   
  `argCount`  
- Le nombre d'arguments dans une spécialisation d'InvokeHelper.  
+ Le nombre d’arguments dans une spécialisation InvokeHelper.  
   
-## Notes  
- Fournit une implémentation de la méthode Invoke\(\) en fonction du nombre et du type d'arguments spécifiés.  
+## <a name="remarks"></a>Notes  
+ Fournit une implémentation de la méthode Invoke() selon le nombre spécifié et le type d’arguments.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Typedefs publics  
+### <a name="public-typedefs"></a>Typedefs publics  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|`Traits`|Un synonyme de la classe définissant le type de chaque argument du gestionnaire d'événements.|  
+|`Traits`|Un synonyme de la classe qui définit le type de chaque argument de gestionnaire d’événements.|  
   
-### Constructeurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[InvokeHelper::InvokeHelper, constructeur](../windows/invokehelper-invokehelper-constructor.md)|Initialise une nouvelle instance de la classe InvokeHelper.|  
   
-### Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|[InvokeHelper::Invoke, méthode](../windows/invokehelper-invoke-method.md)|Appelle le gestionnaire d'événements dont la signature contient le nombre d'arguments spécifié.|  
+|[InvokeHelper::Invoke, méthode](../windows/invokehelper-invoke-method.md)|Appelle le Gestionnaire d’événements dont la signature contient le nombre spécifié d’arguments.|  
   
-### Données membres publiques  
+### <a name="public-data-members"></a>Membres de données publics  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|[InvokeHelper::callback\_, donnée de membre](../windows/invokehelper-callback-data-member.md)|Représente le gestionnaire d'événements à appeler lorsqu'un événement se produit.|  
+|[InvokeHelper::callback_, donnée de membre](../windows/invokehelper-callback-data-member.md)|Représente un gestionnaire d’événements à appeler lorsqu’un événement se produit.|  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `InvokeHelper`  
   
-## Configuration requise  
- **En\-tête:** event.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** event.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

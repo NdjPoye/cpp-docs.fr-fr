@@ -1,31 +1,32 @@
 ---
-title: "Callback, fonction (biblioth&#232;que de mod&#232;les Windows Runtime C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Callback"
-dev_langs: 
-  - "C++"
+title: "La fonction de rappel (Windows Runtime C++ modèle bibliothèque) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Callback
+dev_langs: C++
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2b2d83096ce4e6ff9245a9e26516d6a487155695
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Callback, fonction (biblioth&#232;que de mod&#232;les Windows Runtime C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="callback-function-windows-runtime-c-template-library"></a>Callback, fonction (bibliothèque de modèles Windows Runtime C++)
 Crée un objet dont la fonction membre est une méthode de rappel.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<  
@@ -198,7 +199,7 @@ ComPtr<TDelegateInterface> Callback(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `TDelegateInterface`  
  Paramètre de modèle qui spécifie l'interface du délégué à appeler lorsqu'un événement se produit.  
   
@@ -244,16 +245,16 @@ ComPtr<TDelegateInterface> Callback(
  `method`  
  Fonction membre à appeler lorsqu'un événement se produit.  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  Objet dont la fonction membre est la méthode de rappel spécifiée.  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  La base d'un objet délégué doit être IUnknown, et non IInspectable.  
   
-## Configuration requise  
- **En\-tête :** event.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** event.h  
   
- **Espace de noms :** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)

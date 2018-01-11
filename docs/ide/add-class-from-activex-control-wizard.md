@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 97b92735bba9445b7fd5d0ee2a303468ff199846
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2b3b1d2b15db47eea8ebc10b2a73cafba5d6952
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-class-from-activex-control-wizard"></a>Assistant Ajout d’une classe à partir d’un contrôle ActiveX
 Utilisez cet Assistant pour ajouter une classe MFC à partir d’un contrôle ActiveX disponible. L’Assistant crée une classe pour chaque interface que vous ajoutez à partir du contrôle ActiveX sélectionné.  
@@ -31,7 +32,7 @@ Utilisez cet Assistant pour ajouter une classe MFC à partir d’un contrôle Ac
   
 |Option|Description|  
 |------------|-----------------|  
-|**Registre**|La bibliothèque de types est enregistrée dans le système. Bibliothèques de types inscrits sont répertoriés dans **contrôles ActiveX disponibles**.|  
+|**Registry**|La bibliothèque de types est enregistrée dans le système. Bibliothèques de types inscrits sont répertoriés dans **contrôles ActiveX disponibles**.|  
 |**Fichier**|La bibliothèque de types n’est pas nécessairement inscrite dans le système, mais est contenue dans un fichier. Vous devez fournir l’emplacement du fichier dans **emplacement**.|  
   
  **Contrôles ActiveX disponibles**  

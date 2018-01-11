@@ -54,11 +54,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7a3b2048a7d5e05032960cdba7be4c5952b0a755
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84e0cae612e1ee27b841089176ce1e2dfa368d29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scprintfp-scprintfpl-scwprintfp-scwprintfpl"></a>_scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l
 Retourne le nombre de caractères contenus dans la chaîne mise en forme, avec la possibilité de spécifier l’ordre dans lequel les arguments sont utilisés dans la chaîne de format.  
@@ -120,14 +121,14 @@ int _scwprintf_p _l(
 |`_sctprintf_p`|`_scprintf_p`|`_scprintf_p`|`_scwprintf_p`|  
 |`_sctprintf_p_l`|`_scprintf_p_l`|`_scprintf_p_l`|`_scwprintf_p_l`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_scprintf_p`, `_scprintf_p_l`|\<stdio.h>|  
 |`_scwprintf_p`, `_scwprintf_p_l`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="see-also"></a>Voir aussi  
  [E/S de flux](../../c-runtime-library/stream-i-o.md)   

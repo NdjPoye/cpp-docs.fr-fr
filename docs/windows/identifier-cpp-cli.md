@@ -1,57 +1,57 @@
 ---
-title: "__identifier (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__identifier"
-  - "__identifier_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__identifier keyword [C++]"
+title: __identifier (c + c++ / CLI) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __identifier
+- __identifier_cpp
+dev_langs: C++
+helpviewer_keywords: __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4d68d21fc9436bff0e39fa474b97ec54138e15b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# __identifier (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Permet d'utiliser des mots clés Visual C\+\+ comme identificateurs.  
+# <a name="identifier-ccli"></a>__identifier (C++/CLI)
+Permet l’utilisation de mots clés Visual C++ en tant qu’identificateurs.  
   
-## Toutes les plateformes  
- **Syntaxe**  
+## <a name="all-platforms"></a>Toutes les plateformes  
+**Syntaxe**  
   
 ```  
-  
 __identifier(  
 Visual_C++_keyword  
 )  
   
 ```  
   
- **Remarques**  
+**Remarques**  
   
- L'utilisation du mot clé `__identifier` des identificateurs qui ne sont pas des mots clés est autorisée, mais fortement déconseillée en question de style.  
+Utilisation de la `__identifier` mot clé pour les identificateurs qui ne sont pas des mots clés est autorisée, mais fortement déconseillée en termes de style.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows Runtime  
   
-### Conditions requises  
- Option du compilateur : **\/ZW**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : **/ZW**  
   
-### Exemples  
+### <a name="examples"></a>Exemples  
  **Exemple**  
   
- Dans l'exemple suivant, une classe nommée `template` est créée en c et distribuées en tant que DLL.  Dans le programme Visual C\+\+ qui utilise la classe `template`, le mot clé `__identifier` cache le fait que `template` est un mot clé de langage C\+\+.  
+ Dans l’exemple suivant, une classe nommée `template` est créé en c# et distribué en tant que DLL. Dans le programme Visual C++ qui utilise le `template` (classe), le `__identifier` mot clé masque le fait que `template` est un mot clé C++ standard.  
   
 ```  
 // identifier_template.cs  
@@ -71,18 +71,18 @@ int main() {
 }  
 ```  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Remarques**  
   
- Le mot clé `__identifier` est valide avec les options du compilateur **\/clr** et **\/clr:oldSyntax**.  
+ Le `__identifier` mot clé est valide avec le **/CLR** option du compilateur.  
   
-### Conditions requises  
- Option du compilateur : **\/clr**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : **/clr**  
   
-### Exemples  
+### <a name="examples"></a>Exemples  
  **Exemple**  
   
- Dans l'exemple suivant, une classe nommée `template` est créée en c et distribuées en tant que DLL.  Dans le programme Visual C\+\+ qui utilise la classe `template`, le mot clé `__identifier` cache le fait que `template` est un mot clé de langage C\+\+.  
+ Dans l’exemple suivant, une classe nommée `template` est créé en c# et distribué en tant que DLL. Dans le programme Visual C++ qui utilise le `template` (classe), le `__identifier` mot clé masque le fait que `template` est un mot clé C++ standard.  
   
 ```  
 // identifier_template.cs  
@@ -103,6 +103,6 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Voir aussi  
+ [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)   
+ [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)

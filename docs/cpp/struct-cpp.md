@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- struct_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- struct constructors
+f1_keywords: struct_cpp
+dev_langs: C++
+helpviewer_keywords: struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 4918adb779a620afd4a0c1e4ef64ef9892de1ba8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 331244a7f9c8e719756c8cf691946f3babc594cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="struct-c"></a>struct (C++)
 Le mot clé `struct` définit un type structure et/ou une variable d'un type structure.  
@@ -50,7 +46,7 @@ Le mot clé `struct` définit un type structure et/ou une variable d'un type str
  Spécification de classe de stockage facultative. Pour plus d’informations, reportez-vous à la [__declspec](../cpp/declspec.md) (mot clé).  
   
  `tag`  
- Nom de type donné à la structure. La balise devient un mot réservé dans la portée de la structure. La balise est facultative. Si elle est omise, une structure anonyme est définie. Pour plus d’informations, consultez [des Types de classe anonymes](../cpp/anonymous-class-types.md).  
+ Nom de type donné à la structure. L’étiquette devient un mot réservé dans la portée de la structure. L’étiquette est facultative. Si elle est omise, une structure anonyme est définie. Pour plus d’informations, consultez [des Types de classe anonymes](../cpp/anonymous-class-types.md).  
   
  `base-list`  
  Liste facultative des classes ou structures dont dérivent les membres de cette structure. Consultez [des Classes de Base](../cpp/base-classes.md) pour plus d’informations. Chaque nom de classe ou une structure de base peut être précédée d’un spécificateur d’accès ([public](../cpp/public-cpp.md), [privé](../cpp/private-cpp.md), [protégé](../cpp/protected-cpp.md)) et le [virtuels](../cpp/virtual-cpp.md) mot clé. Consultez le tableau de l’accès aux membres dans [contrôle de l’accès aux membres de classe](member-access-control-cpp.md) pour plus d’informations.  
@@ -61,7 +57,7 @@ Le mot clé `struct` définit un type structure et/ou une variable d'un type str
  `declarators`  
  Liste des déclarateurs spécifiant les noms de la classe. Les listes des déclarateurs déclarent une ou plusieurs instances du type structure. Les déclarateurs peuvent inclure des listes d'initialiseurs si toutes les données membres de la classe sont `public`. Les listes d'initialiseurs sont fréquentes dans les structures, car les membres de données sont `public` par défaut.  Consultez [vue d’ensemble des déclarateurs](../cpp/overview-of-declarators.md) pour plus d’informations.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un type structure est un type composite défini par l'utilisateur. Il comprend des champs ou des membres qui peuvent avoir différents types.  
   
  En C++, une structure est identique à une classe sauf que ses membres sont `public` par défaut.  
@@ -116,4 +112,3 @@ int main() {
 // my_cell.character = 1  
 ```  
   
-

@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3c9e5978d82b1bbaed08eaa05dda53c78160579f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3f6f7121b5cc93c3f8f6f34f22d16cef888bbf15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xform-structure"></a>XFORM, structure
 Le `XFORM` structure a la forme suivante :  
@@ -37,7 +38,7 @@ typedef struct  tagXFORM {  /* xfrm */
 } XFORM;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `XFORM` structure spécifie un espace universel pour la transformation de l’espace de page. Le **eDx** et **eDy** membres spécifient les composants de traduction horizontales et verticales, respectivement. Le tableau suivant montre comment les autres membres sont utilisés, selon l’opération :  
   
 |Opération|eM11|eM12|eM21|eM22|  
@@ -47,7 +48,7 @@ typedef struct  tagXFORM {  /* xfrm */
 |**Inclinaison**|Nothing|Constante de proportionnalité horizontal|Constante de proportionnalité vertical|Nothing|  
 |**Réflexion**|Composant de réflexion horizontal|Nothing|Nothing|Composant de réflexion vertical|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** wingdi.h  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -43,11 +43,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 982760deff4c5e2439c8743aa0de736a24faa02a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ea88de83d10699c07dd387a616178c0043e925c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isnan-isnan-isnanf"></a>isnan, _isnan, _isnanf
 Teste si une valeur à virgule flottante n’est pas un nombre (NAN).  
@@ -87,16 +88,16 @@ bool isnan(
   
  Durant sa compilation en C++, la macro `isnan` n’est pas définie. Une fonction de modèle `isnan` est définie à la place. Elle retourne une valeur de type `bool` au lieu d’un entier.  
   
- Les fonctions `_isnan` et `_isnanf` sont des fonctions fournies par Microsoft. La fonction `_isnanf` n’est disponible que quand elle est compilée pour x64.  
+ Les fonctions `_isnan` et `_isnanf` sont propres à Microsoft. La fonction `_isnanf` n’est disponible que quand elle est compilée pour x64.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis (C)|En-tête requis (C++)|  
 |-------------|---------------------------|-------------------------------|  
 |`isnan`, `_isnanf`|\<math.h>|\<math.h> ou \<cmath>|  
 |`_isnan`|\<float.h>|\<float.h> ou \<cfloat>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   

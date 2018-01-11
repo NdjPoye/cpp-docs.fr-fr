@@ -33,11 +33,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 449bdf4e56377cd4464f7759f59d0f0b5bf21be8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 968c15b1382233dc166a174e4ef074033c76619c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crecentfilelist-class"></a>Classe de CRecentFileList
 Prend en charge le contrôle de la liste des derniers fichiers utilisés (MRU).  
@@ -74,7 +75,7 @@ class CRecentFileList
 |----------|-----------------|  
 |[[] De CRecentFileList::operator](#operator_at)|Retourne un `CString` objet à une position donnée.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les fichiers peuvent être ajoutés ou supprimés dans la liste des derniers fichiers utilisés, la liste des fichiers peut être lues ou écrite dans le Registre ou un. Ini et le menu Affichage de la liste des derniers fichiers peuvent être mis à jour.  
   
  Pour plus d’informations sur les éléments de menu des derniers fichiers utilisés, consultez  
@@ -84,7 +85,7 @@ class CRecentFileList
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CRecentFileList`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxadv.h  
   
 ##  <a name="add"></a>CRecentFileList::Add  
@@ -130,7 +131,7 @@ void Add(
  `pidl`  
  Spécifie le conjointe pour l’élément de l’interpréteur de commandes qui doit être ajouté dans le dossier de documents récents.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le nom de fichier sera ajouté en haut de la liste des derniers fichiers utilisés. Si le nom de fichier existe déjà dans la liste des derniers fichiers utilisés, il sera déplacé vers le haut.  
   
 ##  <a name="crecentfilelist"></a>CRecentFileList::CRecentFileList  
@@ -161,7 +162,7 @@ CRecentFileList(
  `nMaxDispLen`  
  Longueur maximale, en caractères, disponibles pour l’affichage du menu d’un nom de fichier dans la liste des derniers fichiers utilisés.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La chaîne de format vers lequel pointe `lpszEntryFormat` doit contenir « %d », qui sera utilisé pour la substitution de l’index de chaque élément des derniers fichiers utilisés. Par exemple, si la chaîne de format est `"file%d"` ensuite les entrées sont nommées `file0`, `file1`, et ainsi de suite.  
   
 ##  <a name="getdisplayname"></a>CRecentFileList::GetDisplayName  
@@ -195,7 +196,7 @@ virtual BOOL GetDisplayName(
 ### <a name="return-value"></a>Valeur de retour  
  **FALSE** si il n’existe aucun nom de fichier à l’index spécifié dans la liste des fichiers récemment utilisée (MRU).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si le fichier est dans le répertoire actif, la fonction laisse le répertoire désactive l’affichage. Si le nom de fichier est trop long, le répertoire et l’extension sont supprimés. Si le nom de fichier est toujours trop long, le nom d’affichage est défini sur une chaîne vide, sauf si `bAtLeastName` est différente de zéro.  
   
 ##  <a name="getsize"></a>CRecentFileList::GetSize  

@@ -85,11 +85,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 07065470a7dda56650224bc794579a5038c9b643
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1dae44f60c61222659304bea4ee811999d50280b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cimagelist-class"></a>CImageList (classe)
 Fournit les fonctionnalités du contrôle commun de liste d'images Windows.  
@@ -157,7 +158,7 @@ class CImageList : public CObject
 |----------|-----------------|  
 |[CImageList::m_hImageList](#m_himagelist)|Handle qui contient la liste d’images associée à cet objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une « liste d’images » est une collection d’images de même taille, chacun d’eux peut être référencé par son index de base zéro. Listes d’images sont utilisées pour gérer efficacement les grands ensembles d’icônes ou de bitmaps. Toutes les images dans une liste d’images sont contenues dans une seule grande bitmap au format de périphérique d’écran. Une liste d’images peut-être également inclure une image bitmap monochrome contenant des masques utilisés pour dessiner des images en toute transparence (style d’icône). L’application Microsoft Win32 (API) d’interface de programmation fournit image répertorie les fonctions qui vous permettent de dessiner des images, créer et détruire des listes d’images, ajouter et supprimer des images, remplacer les images, fusionner des images et faire glisser des images.  
   
  Ce contrôle (et par conséquent la `CImageList` classe) est disponible uniquement pour les programmes s’exécutant sous Windows 95/98 et Windows NT version 3.51 et ultérieures.  
@@ -169,7 +170,7 @@ class CImageList : public CObject
   
  `CImageList`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcmn.h  
   
 ##  <a name="add"></a>CImageList::Add  
@@ -204,7 +205,7 @@ int Add(HICON hIcon);
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de la nouvelle image en cas de réussite ; Sinon, - 1.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous êtes responsable de la libération du handle d’icône lorsque vous avez terminé avec lui.  
   
 ### <a name="example"></a>Exemple  
@@ -246,7 +247,7 @@ BOOL BeginDrag(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction crée une liste d’images temporaire qui est utilisée pour faire glisser. L’image associe le curseur actuel de l’image spécifiée et son masque. En réponse à ultérieures `WM_MOUSEMOVE` messages, vous pouvez déplacer l’image glissée à l’aide de la `DragMove` fonction membre. Pour terminer l’opération de glissement, vous pouvez utiliser la `EndDrag` fonction membre.  
   
 ### <a name="example"></a>Exemple  
@@ -286,7 +287,7 @@ BOOL Copy(
  `uFlags`  
  La valeur d’indicateur de bits qui spécifie le type d’opération de copie doit être effectuée. Ce paramètre peut être une des valeurs suivantes :  
   
-|Valeur|Signification|  
+|Value|Signification|  
 |-----------|-------------|  
 |`ILCF_MOVE`|L’image source est copié dans les index de l’image de destination. Cette opération entraîne plusieurs instances d’une image donnée. `ILCF_MOVE` est la valeur par défaut.|  
 |`ILCF_SWAP`|Les images source et destination échangent des positions dans la liste d’images.|  
@@ -347,7 +348,7 @@ BOOL Create(CImageList* pImageList);
  `nFlags`  
  Spécifie le type de liste d’images à créer. Ce paramètre peut être une combinaison des valeurs suivantes, mais il peut inclure uniquement un de le `ILC_COLOR` valeurs.  
   
-|Valeur|Signification|  
+|Value|Signification|  
 |-----------|-------------|  
 |`ILC_COLOR`|Utiliser le comportement par défaut si aucune autre `ILC_COLOR`* indicateurs sont spécifiés. En règle générale, la valeur par défaut est `ILC_COLOR4`; mais les anciens pilotes d’affichage, la valeur par défaut est `ILC_COLORDDB`.|  
 |`ILC_COLOR4`|Utilisation d’une section du bitmap indépendante du périphérique (DIB) de 4 bits (16 couleurs) en tant que l’image bitmap de la liste d’images.|  
@@ -397,7 +398,7 @@ BOOL Create(CImageList* pImageList);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous construisez un `CImageList` en deux étapes. Tout d’abord, appelez le constructeur, puis `Create`, ce qui crée la liste d’images et l’attache à le `CImageList` objet.  
   
 ### <a name="example"></a>Exemple  
@@ -436,7 +437,7 @@ HIMAGELIST Detach();
 ### <a name="return-value"></a>Valeur de retour  
  Handle vers un objet de liste d’images.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction retourne un handle vers l’objet de liste d’images.  
   
 ### <a name="example"></a>Exemple  
@@ -461,7 +462,7 @@ static BOOL PASCAL DragEnter(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les coordonnées étant relatif au coin supérieur gauche de la fenêtre, vous devez compenser la largeur des éléments de la fenêtre, telles que la bordure, la barre de titre et la barre de menus, lorsque vous spécifiez les coordonnées.  
   
  Si `pWndLock` est **NULL**, cette fonction Dessine l’image dans le contexte d’affichage associé à la fenêtre du bureau, et les coordonnées sont exprimées par rapport à l’angle supérieur gauche de l’écran.  
@@ -502,7 +503,7 @@ static BOOL PASCAL DragMove(CPoint pt);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction est généralement appelée en réponse à une `WM_MOUSEMOVE` message. Pour commencer une opération glisser, utiliser le `BeginDrag` fonction membre.  
   
 ### <a name="example"></a>Exemple  
@@ -522,7 +523,7 @@ static BOOL PASCAL DragShowNolock(BOOL bShow);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le [CImageList::DragEnter](#dragenter) fonction verrouille toutes les mises à jour de la fenêtre pendant une opération glisser. Toutefois, cette fonction, ne verrouille pas la fenêtre.  
   
 ##  <a name="draw"></a>CImageList::Draw  
@@ -549,7 +550,7 @@ BOOL Draw(
  `nStyle`  
  Indicateur spécifiant le style de dessin. Il peut être une ou plusieurs des valeurs suivantes :  
   
-|Valeur|Signification|  
+|Value|Signification|  
 |-----------|-------------|  
 |`ILD_BLEND25`, **ILD_FOCUS**|Dessine l’image, 25 pour cent avec la couleur de surbrillance du système de fusion. Cette valeur n’a aucun effet si la liste d’images ne contient pas un masque.|  
 |`ILD_BLEND50`, **ILD_SELECTED**, **ILD_BLEND**|Dessine l’image, 50 pour cent avec la couleur de surbrillance du système de fusion. Cette valeur n’a aucun effet si la liste d’images ne contient pas un masque.|  
@@ -602,7 +603,7 @@ BOOL DrawEx(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction utilise le style de dessin spécifié et fusionne l’image avec la couleur spécifiée.  
   
 ### <a name="example"></a>Exemple  
@@ -662,7 +663,7 @@ BOOL DrawIndirect(
  *rgbBack*  
  La couleur d’arrière-plan d’image, par défaut `CLR_DEFAULT`. Ce paramètre peut être une valeur RVB définies par l’application ou l’une des valeurs suivantes :  
   
-|Valeur|Signification|  
+|Value|Signification|  
 |-----------|-------------|  
 |`CLR_DEFAULT`|Couleur d’arrière-plan par défaut. L’image est dessinée à l’aide de la couleur d’arrière-plan de liste image.|  
 |`CLR_NONE`|Aucune couleur d’arrière-plan. L’image est dessinée en toute transparence.|  
@@ -670,7 +671,7 @@ BOOL DrawIndirect(
  *rgbFore*  
  Couleur de premier plan, de l’image par défaut `CLR_DEFAULT`. Ce paramètre peut être une valeur RVB définies par l’application ou l’une des valeurs suivantes :  
   
-|Valeur|Signification|  
+|Value|Signification|  
 |-----------|-------------|  
 |`CLR_DEFAULT`|Couleur de premier plan par défaut. L’image est dessinée à l’aide de la couleur de surbrillance système en tant que la couleur de premier plan.|  
 |`CLR_NONE`|Aucune couleur de dégradé. L’image est fusionnée avec la couleur du contexte de périphérique de destination.|  
@@ -693,7 +694,7 @@ BOOL DrawIndirect(
 ### <a name="return-value"></a>Valeur de retour  
  **TRUE** si l’image a été dessiné ; sinon **FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez la première version, si vous souhaitez remplir la structure Win32 vous-même. Utilisez la deuxième version, si vous souhaitez tirer parti d’un ou plusieurs des arguments par défaut MFC ou éviter la gestion de la structure.  
   
  Une image de superposition est une image qui est dessinée sur l’image principale, spécifiée dans cette fonction membre par la `nImage` paramètre. Dessiner un masque de superposition à l’aide de la [dessiner](#draw) fonction membre avec l’index de base un du masque de superposition spécifié à l’aide de la [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) (macro).  
@@ -708,7 +709,7 @@ BOOL DrawIndirect(
 static void PASCAL EndDrag();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour commencer une opération glisser, utiliser le `BeginDrag` fonction membre.  
   
 ### <a name="example"></a>Exemple  
@@ -728,7 +729,7 @@ HICON ExtractIcon(int nImage);
 ### <a name="return-value"></a>Valeur de retour  
  Handle de l’icône en cas de réussite ; dans le cas contraire **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode s’appuie sur le comportement de la [ImageList_ExtractIcon](http://msdn.microsoft.com/library/windows/desktop/bb761401) macro pour créer l’icône. Reportez-vous à la [ImageList_ExtractIcon](http://msdn.microsoft.com/library/windows/desktop/bb761401) macro pour plus d’informations sur la création de l’icône et le nettoyage.  
   
 ### <a name="example"></a>Exemple  
@@ -748,7 +749,7 @@ static CImageList* PASCAL FromHandle(HIMAGELIST hImageList);
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un `CImageList` objet en cas de réussite ; **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si un `CImageList` n’est pas déjà attaché au handle, un fichier temporaire `CImageList` objet est créé et attaché. Ce fichier temporaire `CImageList` objet est valide uniquement jusqu'à ce que la prochaine fois que l’application possède des temps d’inactivité dans la boucle d’événements, auquel cas tous les objets temporaires sont supprimés.  
   
 ### <a name="example"></a>Exemple  
@@ -768,7 +769,7 @@ static CImageList* PASCAL FromHandlePermanent(HIMAGELIST hImageList);
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un `CImageList` objet en cas de réussite ; **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si un `CImageList` objet n’est pas attaché au handle, **NULL** est retourné.  
   
 ### <a name="example"></a>Exemple  
@@ -838,7 +839,7 @@ BOOL GetImageInfo(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `IMAGEINFO` structure contient des informations sur une image dans une liste d’images.  
   
 ##  <a name="getsafehandle"></a>CImageList::GetSafeHandle  
@@ -859,7 +860,7 @@ HIMAGELIST GetSafeHandle() const;
   
  **HIMAGELIST m_hImageList ;**  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le **m_hImageList** membre de données est une variable publique de type `HIMAGELIST`.  
   
 ### <a name="example"></a>Exemple  
@@ -875,7 +876,7 @@ operator HIMAGELIST() const;
 ### <a name="return-value"></a>Valeur de retour  
  Si réussie, un handle vers la liste d’images représenté par le `CImageList` de l’objet ; sinon **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cet opérateur est un opérateur de cast, qui prend en charge l’utilisation directe d’une `HIMAGELIST` objet.  
   
 ### <a name="example"></a>Exemple  
@@ -912,7 +913,7 @@ BOOL Remove(int nImage);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Tous les éléments qui suivent `nImage` se déplacent vers le bas une position. Par exemple, si une liste d’images contient deux éléments, la suppression du premier élément provoquera l’élément restant à figurer dans la première position. `nImage`= 0 pour l’élément dans la première position.  
   
 ### <a name="example"></a>Exemple  
@@ -951,7 +952,7 @@ int Replace(
   
  La version retour `int` retourne l’index de base zéro de l’image de cas de réussite ; sinon - 1.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction membre après avoir appelé [fonction SetImageCount](#setimagecount) pour affecter le nouveau, images valides pour l’espace réservé de numéros d’index de l’image.  
   
 ### <a name="example"></a>Exemple  
@@ -993,7 +994,7 @@ BOOL SetDragCursorImage(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Étant donné que les fonctions de glissement utilisent la nouvelle image pendant une opération glisser, vous devez utiliser les fenêtres [ShowCursor](http://msdn.microsoft.com/library/windows/desktop/ms648396) afin de masquer le curseur de la souris réel après avoir appelé `CImageList::SetDragCursorImage`. Sinon, le système peut sembler être composé de deux curseurs de souris pour la durée de l'opération Glisser-déplacer.  
   
 ##  <a name="setimagecount"></a>CImageList::SetImageCount  
@@ -1010,7 +1011,7 @@ BOOL SetImageCount(UINT uNewCount);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro en cas de réussite ; sinon, zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si vous appelez cette fonction membre pour augmenter le nombre d’images de la liste, puis appelez [remplacer](#replace) pour chaque image supplémentaire à affecter les nouveaux index pour les images valides. Si vous ne parvenez pas à attribuer les index à des images valides, les opérations de dessin qui créent des nouvelles images est imprévisibles.  
   
  Si vous réduisez la taille d’une liste d’images à l’aide de cette fonction, les images tronquées sont libérées.  
@@ -1037,7 +1038,7 @@ BOOL SetOverlayImage(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Jusqu'à quatre index peut être ajoutés à la liste.  
   
  Un masque de superposition est une image dessinée en transparence sur une autre image. Dessiner un masque de superposition sur une image à l’aide de la [CImageList::Draw](#draw) fonction membre avec l’index de base un du masque de superposition spécifié à l’aide de la **INDEXTOOVERLAYMASK** (macro).  

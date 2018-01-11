@@ -32,11 +32,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4e52046f648d3a2d5ca1e80dba861afda8e79f34
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae0b23c099bb681b43daf4b61af84a52bba24982
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wctob"></a>wctob
 Détermine si un caractère large correspond à un caractère multioctet et retourne sa représentation de caractère multioctet.  
@@ -56,18 +57,18 @@ int wctob(
 ## <a name="return-value"></a>Valeur de retour  
  Si la fonction `wctob` convertit correctement un caractère large, elle retourne sa représentation de caractère multioctet, uniquement si la longueur du caractère multioctet est d’un octet exactement. Si `wctob` rencontre un caractère large, elle ne peut pas convertir en un caractère multioctet ou le caractère multioctet est pas exactement un seul octet long, il retourne une valeur -1.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction `wctob` convertit un caractère large contenu dans `wchar` en caractère multioctet correspondant qui est passé par la valeur de retour `int`, dans la mesure où la longueur du caractère multioctet est d’un octet exactement.  
   
  Si `wctob` a échoué et qu’aucun caractère multioctet correspondant n’a été trouvé, la fonction affecte à `errno` la valeur `EILSEQ` et retourne -1.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`wctob`|\<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
  Ce programme illustre le comportement de la fonction `wcstombs`.  

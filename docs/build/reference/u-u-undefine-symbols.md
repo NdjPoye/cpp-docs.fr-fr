@@ -24,11 +24,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 35064566c7a6b1c2e5ad468e9b32f58dcba40808
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18fdaf0c2cb980f1ed19fdfc0577769a9985cf85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (Annuler la définition de symboles)
 Le **/U** option du compilateur annule la définition du symbole de préprocesseur spécifié. Le **/u** option du compilateur annule les symboles spécifiques à Microsoft que le compilateur définit.  
@@ -44,7 +45,7 @@ Le **/U** option du compilateur annule la définition du symbole de préprocesse
  `symbol`  
  Le symbole de préprocesseur pour annuler la définition.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Ni le **/U** ou **/u** option peut annuler la définition d’un symbole créé à l’aide de la **#define** directive.  
   
  Le **/U** option peut annuler la définition d’un symbole qui a été précédemment défini à l’aide de la **/D** option.  

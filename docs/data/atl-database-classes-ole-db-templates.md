@@ -17,11 +17,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 711ddfb76ea9e8be2420ea9a9a31af4cfb5f6c93
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ca7607c037cdb1f6a42a2267d64ef274d1041cb2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Classes de bases de données ATL (modèles OLE DB)
 Microsoft fournit plusieurs implémentations d’OLE DB, un ensemble d’interfaces COM qui assurent un accès uniforme aux données de diverses sources d’informations et de formats.  OLE DB est officiellement déconseillée ; Cette documentation est destiné aux développeurs chargés de la maintenance code hérité. Nouvelles applications doivent utiliser ODBC pour se connecter aux sources de données SQL.
@@ -38,7 +41,7 @@ Microsoft fournit plusieurs implémentations d’OLE DB, un ensemble d’interfa
   
  Notez que la bibliothèque MFC contient une classe, [COleDBRecordView](../mfc/reference/coledbrecordview-class.md), qui affiche des enregistrements de base de données dans des contrôles. La vue est une vue de formulaire directement connectée à un `CRowset` de l’objet et affiche les champs de la `CRowset` objet dans les contrôles du modèle de boîte de dialogue.  
   
- Pour plus d’informations, consultez [programmation OLE DB](../data/oledb/ole-db-programming.md) et [Guide du programmeur OLE DB](http://go.microsoft.com/fwlink/?linkid=121548).  
+ Pour plus d’informations, consultez [programmation OLE DB](../data/oledb/ole-db-programming.md) et [Guide du programmeur OLE DB](http://go.microsoft.com/fwlink/p/?linkid=121548).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’un consommateur OLE DB](../data/oledb/creating-an-ole-db-consumer.md)   

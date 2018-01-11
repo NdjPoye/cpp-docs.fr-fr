@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3d48aac7e14092c8406db28910263e7048c17bee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e9417b3950e4df98ed4e13ea1bb40e76c383868e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces (structure)
 Spécifie les fonctions de vérification et d'initialisation pouvant être appliquées à un ensemble d'ID d'interface.  
@@ -110,7 +113,7 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
   
 ### <a name="protected-constants"></a>Constantes protégés  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[ChainInterfaces::IidCount, constante](../windows/chaininterfaces-iidcount-constant.md)|Le nombre total d’ID contenus dans les interfaces spécifiées par les paramètres de modèle d’interface `I0` via `I9`.|  
   
@@ -119,7 +122,7 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
   
  `ChainInterfaces`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Espace de noms :** Microsoft::WRL  

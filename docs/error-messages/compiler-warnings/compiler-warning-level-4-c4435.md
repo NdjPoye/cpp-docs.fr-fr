@@ -1,33 +1,34 @@
 ---
-title: "Avertissement du compilateur (niveau&#160;4) C4435 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: Compilateur avertissement (niveau 4) C4435 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
 ms.assetid: a04524af-2b71-4ff9-9729-d9d1d1904ed7
-caps.latest.revision: 2
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7136cfb61a7452b7e835030216d08f064874df8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau&#160;4) C4435
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'classe1' : la disposition des objets sous \/vd2 sera modifiée en raison de la base virtuelle 'classe2'  
+# <a name="compiler-warning-level-4-c4435"></a>Avertissement du compilateur (niveau 4) C4435
+'classe1' : la disposition des objets sous /vd2 sera modifiée en raison de la base virtuelle 'classe2'  
   
- Cet avertissement est désactivé par défaut.  Pour plus d'informations, consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.  
   
- Dans l'option de compilation par défaut de \/vd1, la classe dérivée n'a pas de champ de `vtordisp` pour la base virtuelle indiquée.  Si \/vd2 ou `#pragma vtordisp(2)` est activé, un champ de `vtordisp` sera présent, modifiant la disposition de l'objet.  Cela peut provoquer des problèmes de compatibilité binaire si les modules en interaction sont compilés avec des paramètres de `vtordisp` différents.  
+ Sous la valeur par défaut l’option de/vd1 de compilation, la classe dérivée n’a pas un `vtordisp` pour la base virtuelle indiquée.  Si/vd2 ou `#pragma vtordisp(2)` est activée, un `vtordisp` champ est présent, la modification de la disposition de l’objet.  Cela peut entraîner des problèmes de compatibilité binaire si l’interaction des modules compilés avec différents `vtordisp` paramètres.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C4435.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C4435.  
   
 ```cpp  
 // C4435.cpp  
@@ -43,6 +44,6 @@ class B : public virtual A  // C4435
 {};  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [vtordisp](../../preprocessor/vtordisp.md)   
- [\/vd \(Désactiver les déplacements de construction\)](../../build/reference/vd-disable-construction-displacements.md)
+ [/vd (désactiver les déplacements de Construction)](../../build/reference/vd-disable-construction-displacements.md)

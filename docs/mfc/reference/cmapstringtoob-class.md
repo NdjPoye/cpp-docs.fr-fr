@@ -45,11 +45,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e5ffa1822a983e3792e1484b612ee11288dd547
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a840677819710247e73aa8e3bcb904be756f852
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb (classe)
 Classe de collection de dictionnaires qui mappe des objets `CString` uniques à des pointeurs `CObject` .  
@@ -92,7 +93,7 @@ class CMapStringToOb : public CObject
 |----------|-----------------|  
 |[[] De CMapStringToOb::operator](#operator_at)|Insère un élément dans la classe map : substitution de l’opérateur pour `SetAt`.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une fois que vous avez inséré un `CString` -  `CObject*` paire (élément) dans le mappage, vous pouvez efficacement récupérer ou de supprimer la paire à l’aide d’une chaîne ou un `CString` valeur en tant que clé. Vous pouvez également itérer sur tous les éléments dans le mappage.  
   
  Une variable de type **POSITION** est utilisé pour les accès autre entrée dans toutes les variations de la carte. Vous pouvez utiliser un **POSITION** pour « se souviennent » une entrée et une itération au sein de la carte. Vous pouvez considérer que cette itération est séquentielle par valeur de clé ; Il n’est pas le cas. La séquence des éléments récupérés est indéterminée.  
@@ -110,7 +111,7 @@ class CMapStringToOb : public CObject
   
  `CMapStringToOb`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxcoll.h  
   
 ##  <a name="cmapstringtoob"></a>CMapStringToOb::CMapStringToOb  
@@ -124,7 +125,7 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
  `nBlockSize`  
  Spécifie la granularité d’allocation de mémoire pour l’extension de la carte.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  À mesure que la carte augmente, la mémoire est allouée en unités de `nBlockSize` entrées.  
   
  Le tableau suivant présente les autres membres des fonctions qui sont semblables aux **CMapStringToOb :: CMapStringToOb**.  
@@ -153,7 +154,7 @@ INT_PTR GetCount() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’éléments dans ce mappage.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le tableau suivant présente les autres membres des fonctions qui sont semblables aux `CMapStringToOb::GetCount`.  
   
 |Classe|Fonction membre|  
@@ -180,7 +181,7 @@ UINT GetHashTableSize() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le nombre d’éléments dans la table de hachage.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le tableau suivant présente les autres membres des fonctions qui sont semblables aux `CMapStringToOb::GetHashTableSize`.  
   
 |Classe|Fonction membre|  
@@ -212,7 +213,7 @@ void GetNextAssoc(
  *rValue*  
  Spécifie la valeur retournée de l’élément récupéré (un **CObject** pointeur). Pour plus d’informations sur ce paramètre, consultez la section Notes.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction est particulièrement utile pour l’itération au sein de tous les éléments dans le mappage. Notez que la séquence de position n’est pas nécessairement identique à la séquence de la valeur de clé.  
   
  Si l’élément récupéré est le dernier dans le mappage, puis la nouvelle valeur de *rNextPosition* a la valeur **NULL**.  
@@ -259,7 +260,7 @@ INT_PTR GetSize() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’éléments dans le mappage.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette méthode pour récupérer le nombre d’éléments de la carte.  
   
  Le tableau suivant présente les autres membres des fonctions qui sont semblables aux `CMapStringToOb::GetSize`.  
@@ -286,7 +287,7 @@ POSITION GetStartPosition() const;
 ### <a name="return-value"></a>Valeur de retour  
  A **POSITION** valeur qui indique une position de départ pour une itération de la carte ; ou **NULL** si la carte est vide.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La séquence d’itération n’est pas prévisible ; Par conséquent, le « premier élément dans le mappage de » n’a aucune signification spéciale.  
   
  Le tableau suivant présente les autres membres des fonctions qui sont semblables aux `CMapStringToOb::GetStartPosition`.  
@@ -317,7 +318,7 @@ UINT HashKey(LPCTSTR key) const;
 ### <a name="return-value"></a>Valeur de retour  
  Valeur de hachage de la clé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le tableau suivant présente les autres membres des fonctions qui sont semblables aux `CMapStringToOb::HashKey`.  
   
 |Classe|Fonction membre|  
@@ -345,7 +346,7 @@ void InitHashTable(
  `bAllocNow`  
  Si **TRUE**, alloue de la table de hachage lors de l’initialisation ; sinon, la table est allouée lorsque nécessaire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour de meilleures performances, la taille de table de hachage doit être un nombre premier. Pour réduire les conflits, la taille doit être environ 20 pour cent supérieur le plus grand jeu de données prévu.  
   
  Le tableau suivant présente les autres membres des fonctions qui sont semblables aux `CMapStringToOb::InitHashTable`.  
@@ -372,7 +373,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [RemoveAll](#removeall).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le tableau suivant présente les autres membres des fonctions qui sont semblables aux **CMapStringToOb :: IsEmpty**.  
   
 |Classe|Fonction membre|  
@@ -403,7 +404,7 @@ BOOL Lookup(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’élément a été trouvé ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `Lookup`utilise un algorithme de hachage pour trouver rapidement l’élément de carte avec une clé qui correspond exactement ( `CString` valeur).  
   
  Le tableau suivant présente les autres membres des fonctions qui sont semblables aux `CMapStringToOb::LookUp`.  
@@ -441,7 +442,7 @@ BOOL LookupKey(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la clé a été trouvée ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  À l’aide d’une référence à une clé est unsafe si utilisé après la suppression de l’élément associé à partir de la carte ou une fois que la carte a été détruite.  
   
  Le tableau suivant présente les autres membres des fonctions qui sont semblables aux **CMapStringToOb :: LookupKey**.  
@@ -461,7 +462,7 @@ CObject*& operator[ ](lpctstr key);
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à un pointeur vers un `CObject` de l’objet ; ou **NULL** si la carte est vide ou `key` est hors limites.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par conséquent, il peut être utilisé uniquement sur le côté gauche d’une instruction d’assignation (une l-value). S’il n’existe aucun élément de carte avec la clé spécifiée, un nouvel élément est créé.  
   
  Aucun (r-value) « droite » n’est équivalent à cet opérateur, car il est possible qu’une clé peut être introuvable dans le mappage. Utilisez le `Lookup` fonction membre pour l’extraction d’un élément.  
@@ -497,7 +498,7 @@ CObject*& operator[ ](lpctstr key);
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `CObject` objets référencés par chaque clé ne sont pas détruits. Le `RemoveAll` fonction peut entraîner des fuites de mémoire si vous ne garantissent pas que référencé `CObject` les objets sont détruits.  
   
  La fonction fonctionne correctement si la carte est déjà vide.  
@@ -532,7 +533,7 @@ BOOL RemoveKey(LPCTSTR key);
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’entrée a été trouvée et supprimée avec succès ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cela peut entraîner des fuites de mémoire si la `CObject` objet n’est pas supprimé ailleurs.  
   
  Le tableau suivant présente les autres membres des fonctions qui sont semblables aux `CMapStringToOb::RemoveKey`.  
@@ -577,7 +578,7 @@ void SetAt(
  `newValue`  
  Spécifie le `CObject` pointeur qui est la valeur du nouvel élément.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Tout d’abord, la clé est recherchée. Si la clé est trouvée, la valeur correspondante est modifiée. Sinon, un nouvel élément de valeur de clé est créé.  
   
  Le tableau suivant présente les autres membres des fonctions qui sont semblables aux `CMapStringToOb::SetAt`.  

@@ -47,11 +47,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3046dd304224aa4f92f48757bb936d721cd49a39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ce9abdccba549e0b0fd3c55bfb7fbaee6a11e27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledatasource-class"></a>Classe de COleDataSource
 Agit comme un cache dans lequel une application place les données qu’elle proposera pendant les opérations de transfert de données, par exemple les opérations du Presse-papiers ou de glisser-déposer.  
@@ -89,7 +90,7 @@ class COleDataSource : public CCmdTarget
 |[COleDataSource::OnSetData](#onsetdata)|Appelé pour remplacer les données dans le `COleDataSource` objet.|  
 |[COleDataSource::SetClipboard](#setclipboard)|Place un `COleDataSource` objet dans le Presse-papiers.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez créer des sources de données OLE directement. Vous pouvez également le [COleClientItem](../../mfc/reference/coleclientitem-class.md) et [COleServerItem](../../mfc/reference/coleserveritem-class.md) classes créent des sources de données OLE en réponse à leurs `CopyToClipboard` et `DoDragDrop` fonctions membres. Consultez [COleServerItem::CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) pour une brève description. Remplacer la `OnGetClipboardData` fonction membre de votre classe client d’élément article ou de serveur pour ajouter des formats de Presse-papiers supplémentaires aux données dans la source de données OLE créé pour le `CopyToClipboard` ou `DoDragDrop` fonction membre.  
   
  Chaque fois que vous souhaitez préparer les données pour un transfert, vous devez créer un objet de cette classe et le remplir avec vos données à l’aide de la méthode la plus appropriée pour vos données. La méthode, il est inséré dans une source de données est directement affectée par indique si les données sont fournies immédiatement (rendu immédiat) ou à la demande (rendu retardé). Pour chaque format de Presse-papiers dans lequel vous fournissez des données en passant le format de Presse-papiers pour être utilisé (et éventuellement un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure), appelez [DelayRenderData](#delayrenderdata).  
@@ -103,7 +104,7 @@ class COleDataSource : public CCmdTarget
   
  `COleDataSource`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxole.h  
   
 ##  <a name="cachedata"></a>COleDataSource::CacheData  
@@ -126,7 +127,7 @@ void CacheData(
  `lpFormatEtc`  
  Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données doit être proposé. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par `cfFormat`. S’il s’agit **NULL**, valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez fournir les données, car cette fonction fournit à l’aide de rendu immédiat. Les données sont mis en cache jusqu'à ce que nécessaire.  
   
  Spécifiez les données à l’aide un [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure. Vous pouvez également utiliser le `CacheGlobalData` fonction membre si la quantité de données que vous fournissez est assez petite pour être transféré à l’aide de manière efficace un `HGLOBAL`.  
@@ -159,7 +160,7 @@ void CacheGlobalData(
  `lpFormatEtc`  
  Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données doit être proposé. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par `cfFormat`. S’il s’agit **NULL**, valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction fournit les données à l’aide de rendu immédiate, vous devez fournir les données lors de l’appel de la fonction ; les données sont mis en cache jusqu'à ce que nécessaire. Utilisez le `CacheData` fonction membre si vous fournissez une grande quantité de données ou si vous avez besoin d’un support de stockage structuré.  
   
  Pour utiliser le rendu retardé, appelez le [DelayRenderData](#delayrenderdata) ou [DelayRenderFileData](#delayrenderfiledata) fonction membre. Pour plus d’informations sur le rendu retardé comme géré par MFC, consultez l’article [des objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
@@ -191,7 +192,7 @@ void DelayRenderData(
  `lpFormatEtc`  
  Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données doit être proposé. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par `cfFormat`. S’il s’agit **NULL**, valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction fournit les données à l’aide de rendu retardé, les données ne sont pas fournies immédiatement. Le [se](#onrenderdata) ou [OnRenderGlobalData](#onrenderglobaldata) fonction membre est appelée pour demander les données.  
   
  Utilisez cette fonction si vous ne souhaitez pas fournir de vos données grâce à une `CFile` objet. Si vous vous apprêtez à fournir les données via un `CFile` de l’objet, appelez le [DelayRenderFileData](#delayrenderfiledata) fonction membre. Pour plus d’informations sur le rendu retardé comme géré par MFC, consultez l’article [des objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
@@ -218,7 +219,7 @@ void DelayRenderFileData(
  `lpFormatEtc`  
  Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données doit être proposé. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par `cfFormat`. S’il s’agit **NULL**, valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction fournit les données à l’aide de rendu retardé, les données ne sont pas fournies immédiatement. Le [OnRenderFileData](#onrenderfiledata) fonction membre est appelée pour demander les données.  
   
  Utilisez cette fonction si vous vous apprêtez à utiliser un `CFile` objet pour fournir les données. Si vous ne souhaitez pas utiliser un `CFile` de l’objet, appelez le [DelayRenderData](#delayrenderdata) fonction membre. Pour plus d’informations sur le rendu retardé comme géré par MFC, consultez l’article [des objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
@@ -245,7 +246,7 @@ void DelaySetData(
  `lpFormatEtc`  
  Pointe vers un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure qui décrit le format dans lequel les données doit être remplacé. Indiquez une valeur pour ce paramètre si vous souhaitez spécifier des informations de format supplémentaires au-delà du format de Presse-papiers spécifié par `cfFormat`. S’il s’agit **NULL**, valeurs par défaut sont utilisées pour les autres champs de la **FORMATETC** structure.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  [OnSetData](#onsetdata) sera appelé par le framework lorsque cela se produit. Il est utilisé uniquement lorsque le framework retourne la source de données à partir de [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Si `DelaySetData` n’est pas appelée, votre `OnSetData` fonction ne sera jamais appelée. `DelaySetData`doit être appelée pour chaque Presse-papiers ou **FORMATETC** format pris en charge.  
   
  Pour plus d’informations, consultez la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure dans le SDK Windows.  
@@ -283,7 +284,7 @@ DROPEFFECT DoDragDrop(
 ### <a name="return-value"></a>Valeur de retour  
  Effet généré par l’opération de glisser-déplacer ; dans le cas contraire `DROPEFFECT_NONE` si l’opération commence jamais, car l’utilisateur a relâché le bouton de la souris avant de quitter le rectangle fourni.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’opération de glisser-déposer ne commence pas immédiatement. Il attend jusqu'à ce que le curseur de la souris quitte le rectangle spécifié par `lpRectStartDrag` ou jusqu'à ce qu’un nombre spécifié de millisecondes écoulées. Si `lpRectStartDrag` est **NULL**, la taille du rectangle est un pixel.  
   
  Délai d’attente est spécifié par un paramètre de clé de Registre. Vous pouvez modifier le délai d’attente en appelant [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) ou [CWinApp::WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint). Si vous ne spécifiez pas de délai d’attente, 200 millisecondes comme valeur par défaut est utilisée. Faites glisser retarder l’heure est stockée comme suit :  
@@ -305,7 +306,7 @@ DROPEFFECT DoDragDrop(
 void Empty();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les deux mises en cache et les formats de rendu de délai sont vidées afin qu’elles puissent être réutilisées.  
   
  Pour plus d’informations, consultez [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) dans le Kit de développement logiciel Windows.  
@@ -317,7 +318,7 @@ void Empty();
 static void PASCAL FlushClipboard();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez [l’activation du Presse-papiers](#setclipboard) pour placer des données dans le Presse-papiers.  
   
 ##  <a name="getclipboardowner"></a>COleDataSource::GetClipboardOwner  
@@ -349,7 +350,7 @@ virtual BOOL OnRenderData(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le format spécifié est un auparavant placé dans le `COleDataSource` à l’aide de l’objet le [DelayRenderData](#delayrenderdata) ou [DelayRenderFileData](#delayrenderfiledata) fonction membre pour le rendu retardé. L’implémentation par défaut de cette fonction appelle [OnRenderFileData](#onrenderfiledata) ou [OnRenderGlobalData](#onrenderglobaldata) si le support de stockage fourni est un fichier ou la mémoire, respectivement. Si aucune de ces formats sont fournis, l’implémentation par défaut retourne 0 et ne rien faire. Pour plus d’informations sur le rendu retardé comme géré par MFC, consultez l’article [des objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
  Si `lpStgMedium` ->  *tymed* est **TYMED_NULL**, le **STGMEDIUM** doit être alloué et rempli comme spécifié par *lpFormatEtc -> TYMED*. Si elle n’est pas **TYMED_NULL**, le **STGMEDIUM** devrait normalement être en place avec les données.  
@@ -377,7 +378,7 @@ virtual BOOL OnRenderFileData(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le format spécifié est un auparavant placé dans le `COleDataSource` à l’aide de l’objet le [DelayRenderData](#delayrenderdata) fonction membre pour le rendu retardé. L’implémentation par défaut de cette fonction retourne simplement **FALSE**.  
   
  Il s’agit d’une avancée substituable. Remplacez cette fonction pour fournir vos données dans le format demandé et le support. En fonction de vos données, vous souhaiterez peut-être substituer l’une des autres versions de cette fonction à la place. Si vous souhaitez gérer plusieurs supports de stockage, remplacez [se](#onrenderdata). Si vos données sont dans un fichier, ou de taille variable, substituez `OnRenderFileData`. Pour plus d’informations sur le rendu retardé comme géré par MFC, consultez l’article [des objets de données et Sources de données : Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
@@ -403,7 +404,7 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le format spécifié est un auparavant placé dans le `COleDataSource` à l’aide de l’objet le [DelayRenderData](#delayrenderdata) fonction membre pour le rendu retardé. L’implémentation par défaut de cette fonction retourne simplement **FALSE**.  
   
  Si `phGlobal` est **NULL**, puis une nouvelle `HGLOBAL` doit être allouée et retournée dans `phGlobal`. Dans le cas contraire, le `HGLOBAL` spécifié par `phGlobal` doit être rempli avec les données. La quantité de données placées dans le `HGLOBAL` ne doit pas dépasser la taille actuelle du bloc de mémoire. En outre, le bloc ne peut pas être réaffecté à une plus grande taille.  
@@ -435,7 +436,7 @@ virtual BOOL OnSetData(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La source de données ne prend pas la propriété des données jusqu'à ce qu’il a obtenu avec succès. Autrement dit, il ne prend pas possession si `OnSetData` retourne 0. Si la source de données prend la propriété, il libère le support de stockage en appelant le [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) (fonction).  
   
  L'implémentation par défaut n'exécute aucune opération. Remplacez cette fonction pour remplacer les données dans le format spécifié. Il s’agit d’une avancée substituable.  

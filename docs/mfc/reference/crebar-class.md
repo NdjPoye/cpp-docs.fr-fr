@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b396ef048172c1cd8458346db2dc7b1dd5de9bfc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2cd32c4df0465426d99ca6246648520d160f382e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crebar-class"></a>CReBar (classe)
 Barre de contrôles qui fournit des informations de disposition, de persistance et d'état pour les contrôles rebar.  
@@ -48,7 +49,7 @@ class CReBar : public CControlBar
 |[CReBar::Create](#create)|Crée le contrôle rebar et l’attache à le `CReBar` objet.|  
 |[CReBar::GetReBarCtrl](#getrebarctrl)|Permet un accès direct au contrôle commun sous-jacent.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un objet rebar peut contenir plusieurs fenêtres enfants, généralement d'autres contrôles, notamment des zones d'édition, des barres d'outils et des zones de liste. Un objet rebar peut afficher les fenêtres enfants sur une image bitmap spécifiée. Votre application peut redimensionner automatiquement le rebar, ou l’utilisateur peut redimensionner manuellement le rebar en cliquant ou en faisant glisser sa barre de redimensionnement.  
   
  ![Exemple de RebarMenu](../../mfc/reference/media/vc4sc61.gif "vc4sc61")  
@@ -72,7 +73,7 @@ class CReBar : public CControlBar
   
  `CReBar`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxext.h  
   
 ##  <a name="addbar"></a>CReBar::AddBar  
@@ -159,7 +160,7 @@ CReBarCtrl& GetReBarCtrl() const;
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à un [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction membre pour tirer parti des fonctionnalités du contrôle commun rebar de Windows sur la personnalisation de votre contrôle rebar. Lorsque vous appelez `GetReBarCtrl`, elle retourne un objet de référence pour le `CReBarCtrl` afin de pouvoir utiliser l’ensemble des fonctions membres de l’objet.  
   
  Pour plus d’informations sur l’utilisation de `CReBarCtrl` pour personnaliser votre rebar, consultez [à l’aide de CReBarCtrl](../../mfc/using-crebarctrl.md).  
