@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e8f5cbbf26d85ebd5199d439cbaf4cc06cd9dcaa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 79d7c0d73d311e6d5f56811655aab04009b1f33f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multisetlowerbound-stlclr"></a>multiset::lower_bound (STL/CLR)
 Début de la recherche de plage qui correspond à une clé spécifiée.  
@@ -34,7 +37,7 @@ iterator lower_bound(key_type key);
  clé  
  Valeur de clé à rechercher.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction membre détermine le premier élément `X` dans la séquence contrôlée qui a un classement équivalent à `key`. Si cet élément n’existe, elle retourne [multiset::end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`; sinon, elle retourne un itérateur qui désigne `X`. Il permet de localiser le début d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.  
   
 ## <a name="example"></a>Exemple  
@@ -76,7 +79,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/set >  
   
  **Namespace :** cliext  

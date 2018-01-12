@@ -1,32 +1,33 @@
 ---
-title: "swap_ranges (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::swap_ranges"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap_ranges (fonction) (STL/CLR)"
+title: swap_ranges (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::swap_ranges
+dev_langs: C++
+helpviewer_keywords: swap_ranges function [STL/CLR]
 ms.assetid: 3fb39a84-b088-48f1-8bb7-2bbe68b048a9
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c3b486446ff1f2061fa28a31bceaf5e560beec15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# swap_ranges (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Échange des éléments d'une plage avec les éléments d'une autre plage de taille égale.  
+# <a name="swapranges-stlclr"></a>swap_ranges (STL/CLR)
+Échange les éléments d'une plage avec ceux d'une autre plage de taille égale.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<class _FwdIt1, class _FwdIt2> inline  
@@ -34,13 +35,13 @@ template<class _FwdIt1, class _FwdIt2> inline
         _FwdIt2 _First2);  
 ```  
   
-## Notes  
- Cette fonction se comporte comme la fonction `swap_ranges` de STL.  Pour plus d'informations, consultez [swap\_ranges](../Topic/swap_ranges.md).  
+## <a name="remarks"></a>Notes  
+ Cette fonction comporte comme la fonction de la bibliothèque Standard C++ `swap_ranges`. Pour plus d’informations, consultez [swap_ranges](../standard-library/algorithm-functions.md#swap_ranges).  
   
-## Configuration requise  
- **En\-tête :** \<cliext\/algorithm\>  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/algorithme >  
   
- **Espace de noms** cliext  
+ **Namespace :** cliext  
   
-## Voir aussi  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Voir aussi  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)
