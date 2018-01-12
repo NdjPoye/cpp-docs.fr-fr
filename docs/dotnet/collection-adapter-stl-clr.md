@@ -15,11 +15,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 79dbc2ff2e47e7aa277a2176dbd8605c5a78c749
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4a1a03dd6ecc52cd3921428e681fe5affa11d275
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collectionadapter-stlclr"></a>collection_adapter (STL/CLR)
 Encapsule une collection de .NET à utiliser comme un conteneur STL/CLR. A `collection_adapter` est une classe de modèle qui décrit un objet de conteneur STL/CLR simple. Il inclut une interface de bibliothèque de classes de Base (BCL) et retourne une paire itérateur qui vous permet de manipuler la séquence contrôlée.  
@@ -99,10 +102,10 @@ template<typename Key,
 |--------------|-----------------|  
 |[collection_adapter::operator= (STL/CLR)](../dotnet/collection-adapter-operator-assign-stl-clr.md)|Remplace le handle BCL stocké.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe de modèle vous permet de manipuler un conteneur BCL comme un conteneur STL/CLR. La `collection_adapter` stocke un handle vers une interface BCL, qui à son tour contrôle une séquence d’éléments. A `collection_adapter` objet `X` retourne une paire d’itérateurs d’entrée `X.begin()` et `X.end()` que vous utilisez pour consulter des éléments dans l’ordre. Parmi les spécialisations vous permettent également d’écrire `X.size()` pour déterminer la longueur de la séquence contrôlée.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/carte >  
   
  **Namespace :** cliext  

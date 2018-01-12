@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eab712aabf524b0fb577fffd6302e54341fe905b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 28291b62ec3ce9e6e4a70d4bd7d723b45be3bc0d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="queuevaluetype-stlclr"></a>queue::value_type (STL/CLR)
 Type d’un élément.  
@@ -30,7 +33,7 @@ Type d’un élément.
 typedef Value value_type;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le type est un synonyme du paramètre de modèle `Value`.  
   
 ## <a name="example"></a>Exemple  
@@ -65,7 +68,7 @@ int main()
 a b c  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/file d’attente >  
   
  **Namespace :** cliext  

@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90e201ea917ea50b64c85d8b1b103e186b267b88
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6ab4f50af1a7fd161ec192890fb7be3134ad4c72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multimapmultimap-stlclr"></a>multimap::multimap (STL/CLR)
 Construit un objet conteneur.  
@@ -54,7 +57,7 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
  droite  
  Objet ou plage à insérer.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le constructeur :  
   
  `multimap();`  
@@ -192,7 +195,7 @@ size() = 0
  [a 1] [b 2] [c 3]  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/map >  
   
  **Namespace :** cliext  

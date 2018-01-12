@@ -1,41 +1,42 @@
 ---
-title: "stack::pop (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::pop"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre pop [STL/CLR]"
+title: Stack::POP (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::pop
+dev_langs: C++
+helpviewer_keywords: pop member [STL/CLR]
 ms.assetid: b7565385-9e6b-432d-8c71-c62c9c6ad90d
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 059e65ff61f478a854364c7c128573f2b3486bd1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# stack::pop (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stackpop-stlclr"></a>stack::pop (STL/CLR)
 Supprime le dernier élément.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void pop();  
 ```  
   
-## Notes  
- La méthode supprime le dernier élément de la séquence contrôlée, qui doit être non\-vide.  Vous l'utilisez pour raccourcir l'empilement d'un élément à la fin.  
+## <a name="remarks"></a>Notes  
+ La fonction membre supprime le dernier élément de la séquence contrôlée, qui doit être vide. Il permet de réduire la pile d’un élément à l’arrière.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_stack_pop.cpp   
@@ -65,13 +66,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b**   
-## Configuration requise  
- **En\-tête :** \<cliext\/stack\>  
+```Output  
+a b c  
+a b  
+```  
   
- **Espace de nommage** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/stack >  
   
-## Voir aussi  
- [pile](../dotnet/stack-stl-clr.md)   
- [stack::push](../dotnet/stack-push-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [pile (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::push (STL/CLR)](../dotnet/stack-push-stl-clr.md)

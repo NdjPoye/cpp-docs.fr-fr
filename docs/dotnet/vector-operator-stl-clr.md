@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73d58a8e1c4a677a248c0a4af90199fd50b36d56
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4fa87557c7df4560abf77999d414d630de7e6da1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vectoroperatorstlclr"></a>vector::operator(STL/CLR)
 Accède à un élément à une position spécifiée.  
@@ -34,7 +37,7 @@ reference operator[](size_type pos);
  pos  
  Position de l'élément auquel accéder.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’opérateur membre retourne un referene à l’élément à la position `pos`. Il permet d’accéder à un élément dont vous connaissez la position.  
   
 ## <a name="example"></a>Exemple  
@@ -71,7 +74,7 @@ a b c
 a x c  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/vector >  
   
  **Namespace :** cliext  

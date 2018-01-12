@@ -1,37 +1,36 @@
 ---
-title: "Avertissement du compilateur (niveau 4) C4702 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4702"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4702"
+title: Compilateur avertissement (niveau 4) C4702 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4702
+dev_langs: C++
+helpviewer_keywords: C4702
 ms.assetid: d8198c1e-8762-42a6-9e6b-cb568b7a1686
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9ef7420f3699363d33d195e2455ab9fddf88de40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 4) C4702
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-impossible d'atteindre le code  
+# <a name="compiler-warning-level-4-c4702"></a>Avertissement du compilateur (niveau 4) C4702
+code inaccessible  
   
- Cet avertissement résulte de la mise en conformité de Visual Studio .NET 2003 : code inaccessible.  Lorsque le compilateur \(back end\) détecte un code inaccessible, il génère C4702, avertissement de niveau 4.  
+ Cet avertissement est le résultat du travail de mise en conformité du compilateur pour Visual Studio .NET 2003 : code inaccessible. Lorsque le compilateur (principal) détecte un code inaccessible, il génère C4702, un avertissement de niveau 4.  
   
- Pour produire un code valide dans les versions Visual Studio .NET 2003 et Visual Studio .NET de Visual C\+\+, retirez le code inaccessible ou assurez\-vous que tout le code source est accessible par un flux d'exécution.  
+ Pour le code qui est valide dans les versions de Visual Studio .NET 2003 et de Visual Studio .NET de Visual C++, supprimez le code inaccessible ou assurez-vous que tout le code source est accessible par un flux d’exécution.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C4702 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C4702.  
   
 ```  
 // C4702.cpp  
@@ -44,12 +43,12 @@ int main() {
 }  
 ```  
   
-## Exemple  
- Lors de la compilation avec **\/GX**, **\/EHc**, **\/EHsc** ou  **\/EHac** et de l'utilisation de fonctions extern C, le code peut devenir inaccessible, car ces dernières sont censées ne pas lever d'exception ; par conséquent, le bloc catch n'est pas accessible.  S'il vous semble que cet avertissement n'est pas valide parce qu'une fonction peut lever une exception, compilez avec **\/EHa** ou **\/EHs**, selon l'exception levée.  
+## <a name="example"></a>Exemple  
+ Lors de la compilation avec **/GX**, **/EHc**, **/EHsc**, ou **/EHac** et à l’aide de fonctions C extern, code peut devenir inaccessible, car C extern les fonctions sont supposées ne pas lever, par conséquent, le bloc catch n’est pas accessible.  Si vous estimez que cet avertissement n’est pas valide, car une fonction peut lever une exception, compilez avec **/EHa** ou **/EHs**, en fonction de l’exception levée.  
   
- Pour plus d'informations, consultez [\/EH \(Modèle de gestion des exceptions\)](../../build/reference/eh-exception-handling-model.md).  
+ Pour plus d’informations, consultez [/EH (modèle de gestion des exceptions)](../../build/reference/eh-exception-handling-model.md) pour plus d’informations.  
   
- L'exemple suivant génère l'erreur C4702 :  
+ L’exemple suivant génère C4702.  
   
 ```  
 // C4702b.cpp  

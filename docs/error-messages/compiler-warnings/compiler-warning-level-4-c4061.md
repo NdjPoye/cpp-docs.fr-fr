@@ -1,7 +1,7 @@
 ---
 title: "Du compilateur (niveau 4) d’avertissement C4061 | Documents Microsoft"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/30/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -15,39 +15,43 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a24a3d1929184e02e03fd1609b2a5220a84fad0a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 930cca345b23cc9a9122aea14a55e499f01ae710
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4061"></a>Du compilateur (niveau 4) d’avertissement C4061
-l’énumérateur 'identificateur' dans le switch de l’enum 'énumération' n’est pas géré explicitement par une étiquette case  
-  
- L’énumération n’a pas de handler associé une `switch` instruction.  
-  
- Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.  
-  
- L’exemple suivant génère l’erreur C4061 :  
-  
-```  
-// C4061.cpp  
-// compile with: /W4  
-#pragma warning(default : 4061)  
-  
-enum E { a, b, c };  
-void func ( E e )  
-{  
-   switch(e)  
-   {  
-      case a:  
-      case b:  
-      default:  
-         break;  
-   }   // C4061 c' not handled  
-}  
-  
-int main()  
-{  
-}  
+
+> énumérateur '*identificateur*'dans le switch de l’enum'*énumération*' n’est pas géré explicitement par une étiquette case
+
+L’énumérateur n’a aucun handler associé une `switch` instruction.
+
+Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère l’erreur de C4061 ; Ajoutez un cas de l’énumérateur manquante à corriger :
+
+```cpp
+// C4061.cpp
+// compile with: /W4
+#pragma warning(default : 4061)
+
+enum E { a, b, c };
+void func ( E e )
+{
+   switch(e)
+   {
+      case a:
+      case b:
+      default:
+         break;
+   }   // C4061 c' not handled
+}
+
+int main()
+{
+}
 ```

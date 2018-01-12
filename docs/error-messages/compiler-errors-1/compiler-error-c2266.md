@@ -15,13 +15,14 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b17d8c98e5afd00cbb98e8db5191544d9ad9ca13
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3491db8177e2bfe4c08176b5aa5e7515f7113b4f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2266"></a>Erreur du compilateur C2266
-'identifier' : la référence à un tableau à limite non constante n’est pas conforme  
+'identifier' : la référence à un tableau à limite non constante n’est pas conforme  
   
  Une référence est déclarée pour un tableau avec une limite non constante. Le tableau doit avoir des limites constantes.

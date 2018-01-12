@@ -1,32 +1,33 @@
 ---
-title: "binary_delegate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binary_delegate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fonction binary_delegate [STL/CLR]"
+title: binary_delegate (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binary_delegate
+dev_langs: C++
+helpviewer_keywords: binary_delegate function [STL/CLR]
 ms.assetid: 52a9291a-e354-4b9e-a035-78dac1179ec5
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 178aad61a49740e9194014b5e63e0e9dcbdfff78
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# binary_delegate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe générique décrit un délégué à deux arguments.  Vous l'utiliserez pour spécifier un délégué par son argument et le type de son résultat.  
+# <a name="binarydelegate-stlclr"></a>binary_delegate (STL/CLR)
+La classe genereic décrit un délégué à deux arguments. Vous l’utilisez spécifier en termes de ses types d’arguments et de retour d’un délégué.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 generic<typename Arg1,  
@@ -35,26 +36,26 @@ generic<typename Arg1,
     delegate Result binary_delegate(Arg1, Arg2);  
 ```  
   
-#### Paramètres  
- Arg1  
- Type du premier argument.  
+#### <a name="parameters"></a>Paramètres  
+ arg1  
+ Le type du premier argument.  
   
  Arg2  
  Le type du second argument.  
   
  Résultat  
- Le type du résultat.  
+ Type de retour.  
   
-## Notes  
- Le délégué générique décrit une fonction à deux arguments.  
+## <a name="remarks"></a>Notes  
+ Le délégué genereic décrit une fonction de deux arguments.  
   
- Notez que pour :  
+ Notez que pour :  
   
  `binary_delegate<int, int, int> Fun1;`  
   
  `binary_delegate<int, int, int> Fun2;`  
   
- les types `Fun1` et `Fun2` sont synonymes, tandis que pour:  
+ les types `Fun1` et `Fun2` sont des synonymes, tandis que pour :  
   
  `delegate int Fun1(int, int);`  
   
@@ -62,7 +63,7 @@ generic<typename Arg1,
   
  ils ne sont pas du même type.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_binary_delegate.cpp   
@@ -91,15 +92,18 @@ int main()
   
 ```  
   
-  **compare\(L'a', L'a'\) \= False**  
-**compare\(L'a', L'b'\) \= True**  
-**compare\(L'b', L'a'\) \= False**   
-## Configuration requise  
- **En\-tête :** \<cliext\/functional\>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/fonctionnel >  
   
-## Voir aussi  
- [binary\_delegate\_noreturn](../dotnet/binary-delegate-noreturn-stl-clr.md)   
- [unary\_delegate](../dotnet/unary-delegate-stl-clr.md)   
- [unary\_delegate\_noreturn](../dotnet/unary-delegate-noreturn-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [binary_delegate_noreturn (STL/CLR)](../dotnet/binary-delegate-noreturn-stl-clr.md)   
+ [unary_delegate (STL/CLR)](../dotnet/unary-delegate-stl-clr.md)   
+ [unary_delegate_noreturn (STL/CLR)](../dotnet/unary-delegate-noreturn-stl-clr.md)

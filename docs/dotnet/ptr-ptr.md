@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 99016a9006bb13be70fe38fd222ad25a08792b20
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 49013e718ad540e88a1cbd00eceb6bb3dc0071b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ptrptr"></a>ptr::ptr
 Construit un `com::ptr` pour encapsuler un objet COM.  
@@ -41,7 +44,7 @@ ptr(
  `P`  
  Pointeur d'interface COM.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le constructeur sans argument affecte `nullptr` au handle d’objet sous-jacent. Les appels suivants à la `com::ptr` valide l’objet interne et échoueront jusqu'à ce qu’un objet est réellement créé ou attaché.  
   
  Le constructeur d’un argument ajoute une référence à l’objet COM, mais ne libère pas de référence de l’appelant, l’appelant doit appeler `Release` sur l’objet COM réellement abandonne le contrôle. Lorsque le `com::ptr`du destructeur est appelé il publiera automatiquement ses références sur l’objet COM.  
@@ -110,7 +113,7 @@ int main() {
 }  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  

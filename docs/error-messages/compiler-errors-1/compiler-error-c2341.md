@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5460ff70c95fd593539a16140c52fa1490bffc4e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03ceeb7f34ca7aca58151174c327161b18f3678f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2341"></a>Erreur du compilateur C2341
 'section name' : segment doit être défini à l’aide de #pragma data_seg, code_seg ou section avant d’utiliser  
@@ -35,7 +36,7 @@ __declspec(allocate(".test"))   // C2341
 int j = 1;  
 ```  
   
- Résolution possible :  
+ Solution possible :  
   
 ```  
 // C2341b.cpp  

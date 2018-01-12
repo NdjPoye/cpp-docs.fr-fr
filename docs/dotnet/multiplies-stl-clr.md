@@ -15,11 +15,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c816361e20dd571bb243b11870bd4e0571e2364e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1012997408f108192425a4a7c127baa873b34795
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiplies-stlclr"></a>multiplies (STL/CLR)
 La classe de modèle décrit un functor qui, lorsqu’elle est appelée, retourne le premier argument heures la seconde. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.  
@@ -69,7 +72,7 @@ public:
 |operator()|Calcule la fonction de votre choix.|  
 |opérateur delegate_type ^|Effectue un cast de la fonction d’un délégué.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La classe de modèle décrit un functor deux arguments. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, elle retourne le premier argument heures la seconde.  
   
  Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
@@ -120,7 +123,7 @@ int main()
 8 3  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/fonctionnel >  
   
  **Namespace :** cliext  

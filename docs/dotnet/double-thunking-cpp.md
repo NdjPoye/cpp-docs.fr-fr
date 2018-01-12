@@ -19,16 +19,19 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 80f444e48d786b0543aeb5de64e5659cdca6ff5d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1d905f962af6a9cf07ecb0926503fc24e21c0136
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="double-thunking-c"></a>Double conversion de code (thunking) (C++)
 Double médiateur fait référence à la perte de performances que peuvent se produire lorsqu’un appel de fonction dans un contexte managé appelle une Visual C++ fonction managée et où l’exécution du programme appelle le point d’entrée natif de la fonction afin d’appeler la fonction managée. Cette rubrique traite des cas de double médiateur et comment vous pouvez l’éviter pour améliorer les performances.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Par défaut, lors de la compilation avec **/CLR**, la définition d’une fonction managée, le compilateur générer un point d’entrée managé et un point d’entrée natif. Ainsi, la fonction managée à être appelée à partir des sites d’appel natif et managé. Toutefois, lorsqu’un point d’entrée natif existe, il peut être le point d’entrée pour tous les appels à la fonction. Si une fonction appelante est gérée, le point d’entrée natif appellera ensuite le point d’entrée managé. En effet, les deux appels sont requis pour appeler la fonction (d'où le double médiateur). Par exemple, les fonctions virtuelles sont toujours appelées via un point d’entrée natif.  
   
  Une solution consiste à indiquer au compilateur de ne pas générer de point d’entrée natif pour une fonction managée et que la fonction est uniquement appelée à partir d’un contexte managé, à l’aide de la [__clrcall](../cpp/clrcall.md) convention d’appel.  

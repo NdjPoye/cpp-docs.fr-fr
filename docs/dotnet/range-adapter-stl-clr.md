@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5455c1912b3108291f530ee9488a4e0078ba39a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b9adb22c14fb5b59dfb4e89e69c724ca8c7462bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rangeadapter-stlclr"></a>range_adapter (STL/CLR)
 Classe de modèle qui encapsule une paire d’itérateurs qui permettent d’implémenter plusieurs interfaces de la bibliothèque de classes de Base (BCL). Le range_adapter vous permettent de manipuler une plage STL/CLR comme s’il s’agissait d’une collection BCL.  
@@ -60,10 +63,10 @@ template<typename Iter>
 |<xref:System.Collections.Generic.IEnumerable%601>|Itère au sein des éléments typés dans la collection...|  
 |<xref:System.Collections.Generic.ICollection%601>|Gère un groupe d’éléments typés.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La range_adapter stocke une paire d’itérateurs, qui à son tour délimiter une séquence d’éléments. L’objet implémente quatre interfaces BCL qui vous permettent de parcourir les éléments, dans l’ordre. Cette classe de modèle vous permet de manipuler des plages comme BCL conteneurs STL/CLR.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/carte >  
   
  **Namespace :** cliext  

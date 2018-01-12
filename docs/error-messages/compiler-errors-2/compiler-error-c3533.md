@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b519a08080edb8dda37760bd826224657365afae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7bcd9c710ac5cdd50b966a72291918459d984be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3533"></a>Erreur du compilateur C3533
 'type' : un paramètre ne peut pas avoir un type contenant 'auto'  
@@ -50,4 +51,4 @@ template<auto T> class C{}; // C3533
   
 ## <a name="see-also"></a>Voir aussi  
  [auto, mot clé](../../cpp/auto-keyword.md)   
- [/ Zc : auto (déduire le Type de Variable)](../../build/reference/zc-auto-deduce-variable-type.md)
+ [/Zc:auto (Déduire le type de variable)](../../build/reference/zc-auto-deduce-variable-type.md)

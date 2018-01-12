@@ -1,32 +1,33 @@
 ---
-title: "replace_copy (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::replace_copy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "replace_copy (fonction) (STL/CLR)"
+title: replace_copy (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::replace_copy
+dev_langs: C++
+helpviewer_keywords: replace_copy function [STL/CLR]
 ms.assetid: b531b49b-b16d-4b04-8f80-74f43dd496a4
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e9fe31190eb340e619bd2ed9266056dba13062d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# replace_copy (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Examine chaque élément d'une plage source et le remplace s'il correspond à un attribut spécifié lors de la copie du résultat dans une nouvelle plage de destination.  
+# <a name="replacecopy-stlclr"></a>replace_copy (STL/CLR)
+Examine tous les éléments d'une plage source et les remplace s'ils correspondent à une valeur spécifiée, tout en copiant le résultat dans une nouvelle plage de destination.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<class _InIt, class _OutIt, class _Ty> inline  
@@ -34,13 +35,13 @@ template<class _InIt, class _OutIt, class _Ty> inline
         const _Ty% _Oldval, const _Ty% _Newval);  
 ```  
   
-## Notes  
- Cette fonction se comporte comme la fonction `replace_copy` de STL.  Pour plus d'informations, consultez [replace\_copy](../Topic/replace_copy.md).  
+## <a name="remarks"></a>Notes  
+ Cette fonction comporte comme la fonction de la bibliothèque Standard C++ `replace_copy`. Pour plus d’informations, consultez [replace_copy](../standard-library/algorithm-functions.md#replace_copy).  
   
-## Configuration requise  
- **En\-tête :** \<cliext\/algorithm\>  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/algorithme >  
   
- **Espace de nommage** cliext  
+ **Namespace :** cliext  
   
-## Voir aussi  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Voir aussi  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

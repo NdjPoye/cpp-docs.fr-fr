@@ -1,33 +1,33 @@
 ---
-title: "operator&lt;= (vector) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::operator<="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator<= (membre) (STL/CLR)"
+title: "opérateur&lt;= (vecteur) (STL/CLR) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::operator<=
+dev_langs: C++
+helpviewer_keywords: operator<= member [STL/CLR]
 ms.assetid: d4f9d0ba-1fa3-4895-aef4-c9f9a06dbe05
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e1ba24b8d41638b07d11ed6126ff9fdc0e7258ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# operator&lt;= (vector) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vector less than or equal comparison.  
+# <a name="operatorlt-vector-stlclr"></a>opérateur&lt;= (vecteur) (STL/CLR)
+Inférieur ou égal de vecteur comparaison.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Value>  
@@ -35,17 +35,17 @@ template<typename Value>
         vector<Value>% right);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  left  
- Left container to compare.  
+ Conteneur de gauche à comparer.  
   
- right  
- Right container to compare.  
+ droite  
+ Conteneur de droite à comparer.  
   
-## Notes  
- The operator function returns `!(``right` `<` `left``)`.  You use it to test whether `left` is not ordered after `right` when the two vectors are compared element by element.  
+## <a name="remarks"></a>Notes  
+ La fonction d’opérateur retourne `!(right < left)`. Il permet de tester si `left` n’est pas ordonné après `right` lorsque les deux vecteurs sont comparé élément par élément.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_vector_operator_le.cpp   
@@ -84,19 +84,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b d**  
-**\[a b c\] \<\= \[a b c\] is True**  
-**\[a b d\] \<\= \[a b c\] is False**   
-## Configuration requise  
- **Header:** \<cliext\/vector\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] <= [a b c] is True  
+[a b d] <= [a b c] is False  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/vector >  
   
-## Voir aussi  
- [vecteur](../dotnet/vector-stl-clr.md)   
- [operator\=\= \(vector\)](../dotnet/operator-equality-vector-stl-clr.md)   
- [operator\!\= \(vector\)](../dotnet/operator-inequality-vector-stl-clr.md)   
- [operator\< \(vector\)](../dotnet/operator-less-than-vector-stl-clr.md)   
- [operator\>\= \(vector\)](../dotnet/operator-greater-or-equal-vector-stl-clr.md)   
- [operator\> \(vector\)](../dotnet/operator-greater-than-vector-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [vecteur (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [opérateur == (vecteur) (STL/CLR)](../dotnet/operator-equality-vector-stl-clr.md)   
+ [opérateur ! = (vecteur) (STL/CLR)](../dotnet/operator-inequality-vector-stl-clr.md)   
+ [opérateur\< (vecteur) (STL/CLR)](../dotnet/operator-less-than-vector-stl-clr.md)   
+ [opérateur > = (vecteur) (STL/CLR)](../dotnet/operator-greater-or-equal-vector-stl-clr.md)   
+ [operator> (vector) (STL/CLR)](../dotnet/operator-greater-than-vector-stl-clr.md)

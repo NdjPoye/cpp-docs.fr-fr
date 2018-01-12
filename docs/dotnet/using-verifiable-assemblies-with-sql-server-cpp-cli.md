@@ -1,41 +1,42 @@
 ---
-title: "Utilisation d&#39;assemblys v&#233;rifiables avec SQL Server (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assemblys vérifiables (C++), à SQL Server"
+title: "Utilisation d’assemblys vérifiables avec SQL Server (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-caps.latest.revision: 21
-caps.handback.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d03d54dd52f95f3fbba35bb896594e90aa92e867
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Utilisation d&#39;assemblys v&#233;rifiables avec SQL Server (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les procédures stockées étendues, empaquetées comme bibliothèques de liens dynamiques \(DLL\), permettent d'étendre les fonctionnalités de SQL Server à travers des fonctions développées à l'aide de [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)].  Les procédures stockées étendues sont implémentées en tant que fonctions à l'intérieur des DLL.  En plus des fonctions, les procédures stockées étendues peuvent définir également des [types définis par l'utilisateur](../cpp/classes-and-structs-cpp.md) et des [fonctions d'agrégation](http://msdn.microsoft.com/fr-fr/de255454-f45e-4281-81f9-bc61893ac5da), telles que SUM ou AVG.  
+# <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Utilisation d'assemblys vérifiables avec SQL Server (C++/CLI)
+Procédures stockées étendues, empaquetées comme bibliothèques de liens dynamiques (DLL), permettent d’étendre les fonctionnalités de SQL Server via les fonctions développées à l’aide de Visual C++. Les procédures stockées étendues sont implémentées en tant que fonctions dans les DLL. En plus des fonctions, procédures stockées étendues peuvent également définir [types définis par l’utilisateur](../cpp/classes-and-structs-cpp.md) et [des fonctions d’agrégation](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (telles que SUM ou AVG).  
   
- Lorsqu'un client exécute une procédure stockée étendue, SQL Server recherche la DLL associée à la procédure stockée étendue et charge la DLL.  SQL Server appelle la procédure stockée étendue demandée et l'exécute sous un contexte de sécurité spécifié.  La procédure stockée étendue passe ensuite des jeux de résultats et retourne les paramètres au serveur.  
+ Lorsqu’un client exécute une procédure stockée étendue, SQL Server recherche la DLL associée à la procédure stockée étendue et charge la DLL. SQL Server appelle la procédure stockée étendue demandée et l’exécute sous un contexte de sécurité spécifié. La procédure stockée étendue transmet résultat définit et retourne les paramètres sur le serveur.  
   
- [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)] fournit des extensions à Transact\-SQL \(T\-SQL\) pour vous permettre d'installer des assemblys vérifiables dans SQL Server.  Le jeu d'autorisations SQL Server spécifie le contexte de sécurité, avec les niveaux de sécurité suivants :  
+ [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)]Fournit des extensions à Transact-SQL (T-SQL) pour vous permettre d’installer des assemblys vérifiables dans SQL Server. Le jeu d’autorisations SQL Server spécifie le contexte de sécurité, avec les niveaux de sécurité suivants :  
   
--   Mode non restreint : exécutez le code à votre propre risque ; le code ne doit pas être de type sécurisé vérifié.  
+-   Mode non restreint : exécuter du code à vos propres risques ; code n’a pas besoin être de type sécurisé.  
   
--   Mode sans échec : exécutez le code de type sécurisé vérifié ; compilé avec \/clr:safe.  
+-   Mode sans échec : exécuter sécurisé vérifié le code de type sécurisé ; compilé avec/clr : safe.  
   
- Le mode sans échec nécessite que les assemblys exécutés soient de type sécurisé vérifié.  
+ Mode sans échec nécessite les assemblys exécutés être vérifiable de type sécurisé.  
   
- Pour créer et charger un assembly vérifiable dans SQL Server, utilisez les commandes Transact\-SQL CREATE ASSEMBLY et DÉPLACEMENT ASSEMBLY comme suit :  
+ Pour créer et charger un assembly vérifiable dans SQL Server, utilisez les commandes Transact-SQL CREATE ASSEMBLY et déplacement ASSEMBLY comme suit :  
   
 ```  
 CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH   
@@ -43,9 +44,9 @@ CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
 DROP ASSEMBLY <assemblyName>  
 ```  
   
- La commande PERMISSION\_SET spécifie le contexte de sécurité et peut avoir les valeurs UNRESTRICTED, SAFE ou EXTENDED.  
+ La commande PERMISSION_SET spécifie le contexte de sécurité et peut avoir les valeurs UNRESTRICTED, SAFE ou EXTENDED.  
   
- De plus, vous pouvez utiliser la commande CREATE FUNCTION pour lier aux noms de méthodes dans une classe :  
+ En outre, vous pouvez utiliser la commande CREATE FUNCTION pour lier à des noms de méthode dans une classe :  
   
 ```  
 CREATE FUNCTION <FunctionName>(<FunctionParams>)  
@@ -53,8 +54,8 @@ RETURNS returnType
 [EXTERNAL NAME <AssemblyName>:<ClassName>::<StaticMethodName>]  
 ```  
   
-## Exemple  
- Le script SQL suivant \(par exemple, "MyScript.sql" nommé\) charge un assembly dans SQL Server et rend une méthode d'une classe disponible :  
+## <a name="example"></a>Exemple  
+ Le script SQL suivant (par exemple, « MyScript.sql nommé ») charge un assembly dans SQL Server et rend une méthode d’une classe disponible :  
   
 ```  
 -- Create assembly without external access  
@@ -78,12 +79,12 @@ select dbo.GetQuoteNoEA('MSFT')
 go  
 ```  
   
- Les scripts SQL peuvent être exécutés de façon interactive dans l'Analyseur de requêtes SQL ou sur la ligne de commande avec l'utilitaire sqlcmd.exe.  La ligne de commande suivante se connecte à MyServer, utilise la base de données par défaut, utilise une connexion approuvée, entre MyScript.sql et renvoie MyResult.txt.  
+ Scripts SQL peuvent être exécutées de manière interactive dans l’Analyseur de requêtes SQL ou à la ligne de commande avec l’utilitaire sqlcmd.exe. La ligne de commande se connecte à MyServer, utilise la base de données par défaut, utilise une connexion approuvée, entre MyScript.sql et renvoie MyResult.txt.  
   
 ```  
-sqlcmd –S MyServer -E –i myScript.sql –o myResult.txt  
+sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt  
 ```  
   
-## Voir aussi  
- [Comment : effectuer une migration vers \/clr:safe](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Comment : migrer vers/clr : safe (C + c++ / CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
  [Classes et structs](../cpp/classes-and-structs-cpp.md)

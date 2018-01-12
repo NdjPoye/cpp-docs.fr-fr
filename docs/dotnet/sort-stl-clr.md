@@ -1,32 +1,33 @@
 ---
-title: "sort (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::sort"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sort (fonction) (STL/CLR)"
+title: tri (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::sort
+dev_langs: C++
+helpviewer_keywords: sort function [STL/CLR]
 ms.assetid: e30f3e97-60c4-4a8e-89f1-75ec056f587a
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5cd5fb3c684a1cdb3ad2e67237a1473a0519955c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# sort (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Organise les éléments dans une plage spécifiée dans un ordre non décroissant, ou selon un critère de classement spécifié par un prédicat binaire, en parallèle.  
+# <a name="sort-stlclr"></a>sort (STL/CLR)
+Réorganise les éléments d’une plage spécifiée, dans un ordre non décroissant, ou selon un critère de tri spécifié par un prédicat binaire.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<class _RanIt> inline  
@@ -35,13 +36,13 @@ template<class _RanIt, class _Pr> inline
     void sort(_RanIt _First, _RanIt _Last, _Pr _Pred);  
 ```  
   
-## Notes  
- Cette fonction se comporte comme la fonction `sort` de STL.  Pour plus d'informations, consultez [tri](../Topic/sort.md).  
+## <a name="remarks"></a>Notes  
+ Cette fonction comporte comme la fonction de la bibliothèque Standard C++ `sort`. Pour plus d’informations, consultez [tri](../mfc/reference/cmfclistctrl-class.md#sort).  
   
-## Configuration requise  
- **En\-tête :** \<cliext\/algorithm\>  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/algorithme >  
   
- **Espace de noms** cliext  
+ **Namespace :** cliext  
   
-## Voir aussi  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Voir aussi  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

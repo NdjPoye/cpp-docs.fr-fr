@@ -1,37 +1,39 @@
 ---
-title: "Comment&#160;: marshaler des pointeurs incorpor&#233;s &#224; l&#39;aide de l&#39;interop&#233;rabilit&#233; C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interopérabilité C++, pointeurs incorporés"
-  - "marshaling de données (C++), pointeurs incorporés"
-  - "Interop (C++), pointeurs incorporés"
-  - "marshaling (C++), pointeurs incorporés"
-  - "pointeurs (C++), marshaling"
-  - "structures (C++), marshaling de pointeurs incorporés"
+title: "Comment : marshaler des pointeurs à l’aide de C++ Interop incorporés | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- structures [C++], marshaling embedded pointers
+- interop [C++], embedded pointers
+- C++ Interop, embedded pointers
+- marshaling [C++], embedded pointers
+- pointers [C++], marshaling
+- data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 202d48e44419da3bf5dd5832845d63aac8408061
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Comment&#160;: marshaler des pointeurs incorpor&#233;s &#224; l&#39;aide de l&#39;interop&#233;rabilit&#233; C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les exemples de code suivants utilisent les directives \#pragma [managé, non managé](../preprocessor/managed-unmanaged.md) pour implémenter des fonctions managées et non managées dans le même fichier, mais ces fonctions interagissent de la même manière si elles sont définies dans des fichiers séparés.  Les fichiers qui contiennent uniquement des fonctions non managées ne doivent pas être compilés avec [\/clr \(Compilation pour le Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  
+# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Comment : marshaler des pointeurs incorporés à l’aide de l’interopérabilité C++
+Exemple de code suit le [managé, non managé](../preprocessor/managed-unmanaged.md) directives #pragma pour implémenter des fonctions managées et dans le même fichier, mais ces fonctions interagissent de la même manière, si elles sont définies dans des fichiers distincts. Fichiers contenant uniquement des fonctions non managées ne doivent pas être compilés avec [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Exemple  
- L'exemple suivant montre comment une fonction non managée qui prend une structure contenant des pointeurs peut être appelée à partir d'une fonction managée.  La fonction managée crée une instance de la structure et initialise le pointeur incorporé avec le mot clé new \(plutôt que le mot clé [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)\).  Comme cette opération alloue la mémoire sur le tas natif, il n'est pas nécessaire d'épingler le tableau pour supprimer le garbage collection.  Toutefois, la mémoire doit être supprimée explicitement pour éviter toute fuite de mémoire.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant montre comment une fonction non managée qui prend une structure contenant des pointeurs peut être appelée à partir d’une fonction managée. La fonction managée crée une instance de la structure et initialise le pointeur incorporé avec le mot clé new (au lieu du [gcnew de nouveau, ref](../windows/ref-new-gcnew-cpp-component-extensions.md) mot clé). Il alloue la mémoire sur le tas natif, il n’est pas nécessaire pour épingler le tableau pour supprimer le garbage collection. Toutefois, la mémoire doit être supprimée explicitement pour éviter les fuites de mémoire.  
   
 ```  
 // marshal_embedded_pointer.cpp  
@@ -74,27 +76,30 @@ int main() {
 }  
 ```  
   
-  **\[managed\] count \= 10**  
-**array\[0\] \= 72.624326996796**  
-**array\[1\] \= 81.7325359590969**  
-**array\[2\] \= 76.8022689394663**  
-**array\[3\] \= 55.8161191436537**  
-**array\[4\] \= 20.6033154021033**  
-**array\[5\] \= 55.8884794618415**  
-**array\[6\] \= 90.6027066011926**  
-**array\[7\] \= 44.2177873310716**  
-**array\[8\] \= 97.754975314138**  
-**array\[9\] \= 27.370445768987**  
-**\[unmanaged\] count \= 10**  
-**array\[0\] \= 72.624327**  
-**array\[1\] \= 81.732536**  
-**array\[2\] \= 76.802269**  
-**array\[3\] \= 55.816119**  
-**array\[4\] \= 20.603315**  
-**array\[5\] \= 55.888479**  
-**array\[6\] \= 90.602707**  
-**array\[7\] \= 44.217787**  
-**array\[8\] \= 97.754975**  
-**array\[9\] \= 27.370446**   
-## Voir aussi  
- [Utilisation de l'interopérabilité C\+\+ \(PInvoke implicite\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+[managed] count = 10  
+array[0] = 72.624326996796  
+array[1] = 81.7325359590969  
+array[2] = 76.8022689394663  
+array[3] = 55.8161191436537  
+array[4] = 20.6033154021033  
+array[5] = 55.8884794618415  
+array[6] = 90.6027066011926  
+array[7] = 44.2177873310716  
+array[8] = 97.754975314138  
+array[9] = 27.370445768987  
+[unmanaged] count = 10  
+array[0] = 72.624327  
+array[1] = 81.732536  
+array[2] = 76.802269  
+array[3] = 55.816119  
+array[4] = 20.603315  
+array[5] = 55.888479  
+array[6] = 90.602707  
+array[7] = 44.217787  
+array[8] = 97.754975  
+array[9] = 27.370446  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

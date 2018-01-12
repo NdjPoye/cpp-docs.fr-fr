@@ -15,13 +15,14 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1c52e0230504e9da79033def009aa8513c7e663c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 044bfcaeb70a2a1ab3b4a349bf9019879210e82b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2557"></a>Erreur du compilateur C2557
-'identificateur' : impossible d’initialiser des membres privés et protégés sans un constructeur  
+'identificateur' : impossible d’initialiser des membres privés et protégés sans un constructeur  
   
  Seuls les membres et les amis peuvent assigner une valeur à un membre privé ou protégé. Les membres non publics doivent être initialisés dans le constructeur de classe.

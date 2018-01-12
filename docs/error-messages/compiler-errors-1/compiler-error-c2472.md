@@ -15,14 +15,15 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed41a3d78ab9652d1e88ceefe29011eb5b2225a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5267f20aaed4ebf1c320d3d960684376e29814ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2472"></a>Erreur du compilateur C2472
-'function' ne peut pas être généré dans le code managé : 'message' ; compilez avec /clr pour générer une image mixte  
+'function' ne peut pas être généré dans le code managé : 'message' ; compilez avec /clr pour générer une image mixte  
   
  Cette erreur se produit quand des types non pris en charge par le code managé sont utilisés dans un environnement CLR pur. Compilez avec **/clr** pour résoudre l’erreur.  
   
@@ -49,4 +50,4 @@ int main()
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [/CLR (Compilation pour le common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)

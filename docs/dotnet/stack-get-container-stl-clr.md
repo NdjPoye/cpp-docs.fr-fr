@@ -1,41 +1,42 @@
 ---
-title: "stack::get_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::get_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre get_container [STL/CLR]"
+title: Stack::get_container (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::get_container
+dev_langs: C++
+helpviewer_keywords: get_container member [STL/CLR]
 ms.assetid: ba6fc541-fc18-4d1c-8e3f-6baaed427cbb
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 721cd51a268a487e9fe18f988e98bfcf5e9d714b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# stack::get_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Accède au conteneur sous\-jacent.  
+# <a name="stackgetcontainer-stlclr"></a>stack::get_container (STL/CLR)
+Accède au conteneur sous-jacent.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 container_type^ get_container();  
 ```  
   
-## Notes  
- La fonction membre retourne un handle du conteneur sous\-jacent.  Vous l'utilisez pour ignorer les restrictions qui sont imposées par le wrapper de conteneur.  
+## <a name="remarks"></a>Notes  
+ La fonction membre retourne un handle pour le conteneur sous-jacent. Il permet de contourner les restrictions imposées par le wrapper de conteneur.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_stack_get_container.cpp   
@@ -60,12 +61,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## Configuration requise  
- **En\-tête :** \<cliext\/stack\>  
+```Output  
+a b c  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/stack >  
   
-## Voir aussi  
- [pile](../dotnet/stack-stl-clr.md)   
- [stack::container\_type](../dotnet/stack-container-type-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [pile (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::container_type (STL/CLR)](../dotnet/stack-container-type-stl-clr.md)

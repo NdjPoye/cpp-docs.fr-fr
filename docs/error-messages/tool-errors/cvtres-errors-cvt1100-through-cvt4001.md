@@ -1,7 +1,7 @@
 ---
 title: "Erreurs CVTRES CVT1100 à CVT4001 | Documents Microsoft"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -14,11 +14,15 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7333e4602419d9b8697d924139863dedf4f4fc85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c83bd98e881604c4256b24a4091a01452296457c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cvtres-errors-cvt1100-through-cvt4001"></a>Erreurs CVTRES CVT1100 à CVT4001
-Cette section est une référence des erreurs générées par les outils de génération. Pour obtenir de l’aide sur un message d’erreur particulier, cliquez sur un numéro d’erreur dans la fenêtre Sortie et appuyez sur F1 ou tapez le numéro d’erreur dans le **recherchez** zone dans l’Index.
+
+Cette section est une référence des erreurs et avertissements générés par le CVTRES outil de génération.
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]

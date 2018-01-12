@@ -15,14 +15,15 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 383d7a5d4eb77efeaaabbbd2e29c3618f9a7b582
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3b949a2abb602c3945ad6d3592b4eee6ddb14549
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3224"></a>Erreur du compilateur C3224
-'type' : aucune classe générique surchargée n’accepte 'nombre' arguments de type générique  
+'type' : aucune classe générique surchargée n’accepte 'nombre' arguments de type générique  
   
  Le compilateur n’a pas trouvé de surcharge appropriée.  
   

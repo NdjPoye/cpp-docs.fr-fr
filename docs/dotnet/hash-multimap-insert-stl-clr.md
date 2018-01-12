@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: edb34d3dc976034fd4040ee3d0bd6abf33dd6fab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6b0535c43ebc3e1a969f19c5d2779b54c90aa397
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultimapinsert-stlclr"></a>hash_multimap::insert (STL/CLR)
 Ajoute des éléments.  
@@ -50,7 +53,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  où  
  Emplacement dans le conteneur à insérer (hint uniquement).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Chacune des fonctions membres insère une séquence spécifiée par les opérandes restants.  
   
  La première fonction membre insère un élément avec la valeur `val`et retourne un itérateur qui désigne l’élément nouvellement inséré. Il permet d’insérer un élément unique.  
@@ -137,7 +140,7 @@ insert(begin(), [L'y' 25]) = [y 25]
  [a 1] [b 2] [b 2] [c 3] [x 24] [y 25]  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/hash_map >  
   
  **Namespace :** cliext  

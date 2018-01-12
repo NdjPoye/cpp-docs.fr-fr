@@ -1,44 +1,46 @@
 ---
-title: "multimap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "en-tête <cliext/map> (STL/CLR)"
-  - "en-tête <map> (STL/CLR)"
-  - "multimap (classe) (STL/CLR)"
+title: multimap (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap
+dev_langs: C++
+helpviewer_keywords:
+- <map> header [STL/CLR]
+- <cliext/map> header [STL/CLR]
+- multimap class [STL/CLR]
 ms.assetid: 3dfe329d-a078-462a-b050-7999ce6110ad
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2c42fc8d71871a70e3a2d3ffa93a78a4e42d2f53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# multimap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe du modèle décrit un objet qui contrôle une séquence de longueur variable d'éléments ayant un accès bidirectionnel.  Vous utilisez le conteneur `multimap` pour gérer une séquence d'éléments en tant qu'arbre \(presque\) équilibré de noeuds, chacun stockant un élément.  Un élément se compose d'une clé, pour classer la séquence, et d'une valeur mappée.  
+# <a name="multimap-stlclr"></a>multimap (STL/CLR)
+La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments ayant un accès bidirectionnel. Vous utilisez le conteneur `multimap` pour gérer une séquence d’éléments sous forme d’arborescence triée à charge équilibrée (presque) des nœuds, chacun stocker un élément. Un élément est constitué d’une clé, pour le classement de la séquence et une valeur mappée, qui aborde le long de la conduite.  
   
- Dans la description ci\-dessous, `GValue` est la même chose que :  
+ Dans la description ci-dessous, `GValue` est identique à :  
   
  `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`  
   
- où :  
+ où :  
   
- `GKey` est la même chose que `Key` sauf si ce dernier est un type de référence, auquel cas il s'agit de `Key^`.  
+ `GKey`est le même que `Key` , sauf si ce dernier est un type référence, auquel cas il est`Key^`  
   
- `GMapped` est la même chose que `Mapped` sauf si ce dernier est un type de référence, auquel cas il s'agit de `Mapped^`.  
+ `GMapped`est le même que `Mapped` , sauf si ce dernier est un type référence, auquel cas il est`Mapped^`  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Key,  
@@ -55,117 +57,117 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### Paramètres  
- Clé  
- Type du composant clé d'un élément dans la séquence contrôlée.  
+#### <a name="parameters"></a>Paramètres  
+ Touche  
+ Le type du composant clé d’un élément dans la séquence contrôlée.  
   
- Mapped  
- Le type du composant additionel d'un élément dans la séquence contrôlée.  
+ mappé  
+ Le type du composant supplémentaire d’un élément dans la séquence contrôlée.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-|Définition de type|Description|  
-|------------------------|-----------------|  
-|[multimap::const\_iterator](../dotnet/multimap-const-iterator-stl-clr.md)|Type d'un itérateur constant pour la séquence contrôlée.|  
-|[multimap::const\_reference](../dotnet/multimap-const-reference-stl-clr.md)|Type d'une référence constante à un élément.|  
-|[multimap::const\_reverse\_iterator](../dotnet/multimap-const-reverse-iterator-stl-clr.md)|Le type d'un itérateur inverse constant pour la séquence contrôlée.|  
-|[multimap::difference\_type](../dotnet/multimap-difference-type-stl-clr.md)|Le type d'une distance \(possiblement signée\) entre deux éléments.|  
-|[multimap::generic\_container](../dotnet/multimap-generic-container-stl-clr.md)|Le type de l'interface générique pour le conteneur.|  
-|[multimap::generic\_iterator](../dotnet/multimap-generic-iterator-stl-clr.md)|Le type d'un itérateur pour l'interface générique pour le conteneur.|  
-|[multimap::generic\_reverse\_iterator](../dotnet/multimap-generic-reverse-iterator-stl-clr.md)|Le type d'un itérateur inversé pour l'interface générique pour le conteneur.|  
-|[multimap::generic\_value](../dotnet/multimap-generic-value-stl-clr.md)|Le type d'un élément pour l'interface générique pour le conteneur.|  
-|[multimap::iterator](../dotnet/multimap-iterator-stl-clr.md)|Type d'un itérateur pour la séquence contrôlée.|  
-|[multimap::key\_compare](../dotnet/multimap-key-compare-stl-clr.md)|Le classement délégue pour deux clés.|  
-|[multimap::key\_type](../dotnet/multimap-key-type-stl-clr.md)|Type d'une clé de classement.|  
-|[multimap::mapped\_type](../dotnet/multimap-mapped-type-stl-clr.md)|Le type de la valeur mappée associée à chaque clé.|  
-|[multimap::reference](../dotnet/multimap-reference-stl-clr.md)|Type d'une référence à un élément.|  
-|[multimap::reverse\_iterator](../dotnet/multimap-reverse-iterator-stl-clr.md)|Le type d'un itérateur inversé pour la séquence contrôlée.|  
-|[multimap::size\_type](../dotnet/multimap-size-type-stl-clr.md)|Le type d'une distance \(non\-négative\) entre deux éléments.|  
-|[multimap::value\_compare](../dotnet/multimap-value-compare-stl-clr.md)|Le classement délégué pour deux valeurs d'élements.|  
-|[multimap::value\_type](../dotnet/multimap-value-type-stl-clr.md)|Le type d'un élément.|  
+|Définition de types|Description|  
+|---------------------|-----------------|  
+|[multimap::const_iterator (STL/CLR)](../dotnet/multimap-const-iterator-stl-clr.md)|Type d'un itérateur constant pour la séquence contrôlée.|  
+|[multimap::const_reference (STL/CLR)](../dotnet/multimap-const-reference-stl-clr.md)|Type d'une référence constante à un élément.|  
+|[multimap::const_reverse_iterator (STL/CLR)](../dotnet/multimap-const-reverse-iterator-stl-clr.md)|Type d'un itérateur inserve constant pour la séquence contrôlée.|  
+|[multimap::difference_type (STL/CLR)](../dotnet/multimap-difference-type-stl-clr.md)|Le type d’une distance (éventuellement signée) entre deux éléments.|  
+|[multimap::generic_container (STL/CLR)](../dotnet/multimap-generic-container-stl-clr.md)|Le type de l’interface générique pour le conteneur.|  
+|[multimap::generic_iterator (STL/CLR)](../dotnet/multimap-generic-iterator-stl-clr.md)|Le type d’un itérateur pour l’interface générique pour le conteneur.|  
+|[multimap::generic_reverse_iterator (STL/CLR)](../dotnet/multimap-generic-reverse-iterator-stl-clr.md)|Le type d’un itérateur inverse pour l’interface générique pour le conteneur.|  
+|[multimap::generic_value (STL/CLR)](../dotnet/multimap-generic-value-stl-clr.md)|Le type d’un élément pour l’interface générique pour le conteneur.|  
+|[multimap::iterator (STL/CLR)](../dotnet/multimap-iterator-stl-clr.md)|Type d'un itérateur pour la séquence contrôlée.|  
+|[multimap::key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)|Délégué de classement pour les deux clés.|  
+|[multimap::key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md)|Type d'une clé de tri.|  
+|[multimap::mapped_type (STL/CLR)](../dotnet/multimap-mapped-type-stl-clr.md)|Le type de la valeur mappée associée à chaque clé.|  
+|[multimap::reference (STL/CLR)](../dotnet/multimap-reference-stl-clr.md)|Type d'une référence à un élément.|  
+|[multimap::reverse_iterator (STL/CLR)](../dotnet/multimap-reverse-iterator-stl-clr.md)|Type d'un itérateur inverse pour la séquence contrôlée.|  
+|[multimap::size_type (STL/CLR)](../dotnet/multimap-size-type-stl-clr.md)|Le type d’une distance (négatif) entre deux éléments.|  
+|[multimap::value_compare (STL/CLR)](../dotnet/multimap-value-compare-stl-clr.md)|Délégué de classement pour les deux valeurs d’éléments.|  
+|[multimap::value_type (STL/CLR)](../dotnet/multimap-value-type-stl-clr.md)|Type d’un élément.|  
   
-|Méthode|Description|  
-|-------------|-----------------|  
-|[multimap::begin](../dotnet/multimap-begin-stl-clr.md)|Désigne le début de la séquence contrôlée.|  
-|[multimap::clear](../dotnet/multimap-clear-stl-clr.md)|Supprime tous les éléments.|  
-|[multimap::count](../dotnet/multimap-count-stl-clr.md)|Compte les éléments qui correspondent à une clé spécifiée.|  
-|[multimap::empty](../dotnet/multimap-empty-stl-clr.md)|Teste si aucun élément n'est présent.|  
-|[multimap::end](../dotnet/multimap-end-stl-clr.md)|Désigne la fin de la séquence contrôlée.|  
-|[multimap::equal\_range](../dotnet/multimap-equal-range-stl-clr.md)|Recherche la plage qui correspond à une clé spécifiée.|  
-|[multimap::erase](../dotnet/multimap-erase-stl-clr.md)|Supprime les éléments placés aux positions spécifiées.|  
-|[multimap::find](../dotnet/multimap-find-stl-clr.md)|Recherche un élément qui correspond à une clé spécifiée.|  
-|[multimap::insert](../dotnet/multimap-insert-stl-clr.md)|Ajoute les éléments.|  
-|[multimap::key\_comp](../dotnet/multimap-key-comp-stl-clr.md)|Copie le délégué de commande pour deux clés.|  
-|[multimap::lower\_bound](../dotnet/multimap-lower-bound-stl-clr.md)|Recherche le début de la plage qui correspond à une clé spécifiée.|  
-|[multimap::make\_value](../dotnet/multimap-make-value-stl-clr.md)|Construit un objet doté d'une valeur.|  
-|[multimap::multimap](../dotnet/multimap-multimap-stl-clr.md)|Construit un objet container.|  
-|[multimap::rbegin](../dotnet/multimap-rbegin-stl-clr.md)|Désigne le début de la séquence contrôlée inversée.|  
-|[multimap::rend](../dotnet/multimap-rend-stl-clr.md)|Désigne la fin de la séquence contrôlée inversée.|  
-|[multimap::size](../dotnet/multimap-size-stl-clr.md)|Compte le nombre d'éléments.|  
-|[multimap::swap](../dotnet/multimap-swap-stl-clr.md)|Échange le contenu de deux conteneurs.|  
-|[multimap::to\_array](../dotnet/multimap-to-array-stl-clr.md)|Copie la séquence contrôlée dans un tableau.|  
-|[multimap::upper\_bound](../dotnet/multimap-upper-bound-stl-clr.md)|Recherche la fin de la plage qui correspond à une clé spécifiée.|  
-|[multimap::value\_comp](../dotnet/multimap-value-comp-stl-clr.md)|Copie le classement délégué pour deux valeurs d'éléments.|  
+|Fonction membre|Description|  
+|---------------------|-----------------|  
+|[multimap::begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md)|Désigne le début de la séquence contrôlée.|  
+|[multimap::clear (STL/CLR)](../dotnet/multimap-clear-stl-clr.md)|Supprime tous les éléments.|  
+|[multimap::count (STL/CLR)](../dotnet/multimap-count-stl-clr.md)|Compte des éléments qui correspondent à une clé spécifiée.|  
+|[multimap::empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)|Vérifie l'absence d'éléments.|  
+|[multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)|Désigne la fin de la séquence contrôlée.|  
+|[multimap::equal_range (STL/CLR)](../dotnet/multimap-equal-range-stl-clr.md)|Recherche une plage qui correspond à une clé spécifiée.|  
+|[multimap::erase (STL/CLR)](../dotnet/multimap-erase-stl-clr.md)|Supprime les éléments placés aux positions spécifiées.|  
+|[multimap::find (STL/CLR)](../dotnet/multimap-find-stl-clr.md)|Recherche un élément qui correspond à une clé spécifiée.|  
+|[multimap::insert (STL/CLR)](../dotnet/multimap-insert-stl-clr.md)|Ajoute des éléments.|  
+|[multimap::key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)|Copie le délégué de classement pour les deux clés.|  
+|[multimap::lower_bound (STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md)|Début de la recherche de plage qui correspond à une clé spécifiée.|  
+|[multimap::make_value (STL/CLR)](../dotnet/multimap-make-value-stl-clr.md)|Construit un objet de valeur.|  
+|[multimap::multimap (STL/CLR)](../dotnet/multimap-multimap-stl-clr.md)|Construit un objet conteneur.|  
+|[multimap::rbegin (STL/CLR)](../dotnet/multimap-rbegin-stl-clr.md)|Désigne le début de la séquence contrôlée inverse.|  
+|[multimap::rend (STL/CLR)](../dotnet/multimap-rend-stl-clr.md)|Désigne la fin de la séquence contrôlée inverse.|  
+|[multimap::size (STL/CLR)](../dotnet/multimap-size-stl-clr.md)|Compte le nombre d'éléments.|  
+|[multimap::swap (STL/CLR)](../dotnet/multimap-swap-stl-clr.md)|Échange le contenu de deux conteneurs.|  
+|[multimap::to_array (STL/CLR)](../dotnet/multimap-to-array-stl-clr.md)|Copie de la séquence contrôlée vers un nouveau tableau.|  
+|[multimap::upper_bound (STL/CLR)](../dotnet/multimap-upper-bound-stl-clr.md)|Fin de la recherche de plage qui correspond à une clé spécifiée.|  
+|[multimap::value_comp (STL/CLR)](../dotnet/multimap-value-comp-stl-clr.md)|Copie le délégué de classement pour les deux valeurs d’éléments.|  
   
 |Opérateur|Description|  
-|---------------|-----------------|  
-|[multimap::operator\=](../dotnet/multimap-operator-assign-stl-clr.md)|Remplace la séquence contrôlée.|  
-|[operator\!\= \(multimap\)](../dotnet/operator-inequality-multimap-stl-clr.md)|Détermine si un objet de `multimap` n'est pas égal à un autre objet de `multimap`.|  
-|[operator\< \(multimap\)](../dotnet/operator-less-than-multimap-stl-clr.md)|Détermine si un objet de `multimap` est inférieur à un autre objet de `multimap`.|  
-|[operator\<\= \(multimap\)](../dotnet/operator-less-or-equal-multimap-stl-clr.md)|Détermine si un objet de `multimap` est inférieur ou égal à un objet de `multimap`.|  
-|[operator\=\= \(multimap\)](../dotnet/operator-equality-multimap-stl-lr.md)|Détermine si un objet de `multimap` n'est pas égal à un autre objet de `multimap`.|  
-|[operator\> \(multimap\)](../dotnet/operator-greater-than-multimap-stl-clr.md)|Détermine si un objet de `multimap` est plus grand qu'un autre objet de `multimap`.|  
-|[operator\>\= \(multimap\)](../dotnet/operator-greater-or-equal-multimap-stl-clr.md)|Détermine si un objet de `multimap` est supérieur ou égal à un objet de `multimap`.|  
+|--------------|-----------------|  
+|[multimap::operator= (STL/CLR)](../dotnet/multimap-operator-assign-stl-clr.md)|Remplace la séquence contrôlée.|  
+|[operator!= (multimap) (STL/CLR)](../dotnet/operator-inequality-multimap-stl-clr.md)|Détermine si un `multimap` objet n’est pas égal à un autre `multimap` objet.|  
+|[operator< (multimap) (STL/CLR)](../dotnet/operator-less-than-multimap-stl-clr.md)|Détermine si un `multimap` objet est inférieur à un autre `multimap` objet.|  
+|[operator<= (multimap) (STL/CLR)](../dotnet/operator-less-or-equal-multimap-stl-clr.md)|Détermine si un `multimap` objet est inférieur ou égal à un autre `multimap` objet.|  
+|[operator== (multimap) (STL/CLR)](../dotnet/operator-equality-multimap-stl-clr.md)|Détermine si un `multimap` objet est égal à un autre `multimap` objet.|  
+|[operator> (multimap) (STL/CLR)](../dotnet/operator-greater-than-multimap-stl-clr.md)|Détermine si un `multimap` objet est supérieur à un autre `multimap` objet.|  
+|[operator>= (multimap) (STL/CLR)](../dotnet/operator-greater-or-equal-multimap-stl-clr.md)|Détermine si un `multimap` objet est supérieur ou égal à un autre `multimap` objet.|  
   
-## Interfaces  
+## <a name="interfaces"></a>Interfaces  
   
 |Interface|Description|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Dupliquer un objet.|  
-|<xref:System.Collections.IEnumerable>|Parcourir les éléments.|  
-|<xref:System.Collections.ICollection>|Maintenirle groupe d'éléments.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Parcourir les éléments typés.|  
-|<xref:System.Collections.Generic.ICollection%601>|Maintenir le groupe d'éléments typés.|  
-|ITree\<Key, Value\>|Maintenir le conteneur générique.|  
+|<xref:System.Collections.IEnumerable>|Dans les éléments de séquence.|  
+|<xref:System.Collections.ICollection>|Conserver le groupe d’éléments.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Séquence via les éléments typés.|  
+|<xref:System.Collections.Generic.ICollection%601>|Conserver le groupe d’éléments typés.|  
+|ITree\<de clé, la valeur >|Mettre à jour de conteneur générique.|  
   
-## Notes  
- L'objet alloue et libère du stockage pour la séquence qu'il contrôle en tant que nœuds individuels.  Il insère des éléments dans un arbre \(presque\) équilibré qu'il garde trié en modifiant les liens entre les nœuds, jamais en copiant le contenu d'un nœud vers un autre.  Cela signifie que vous pouvez insérer et supprimer des éléments librement sans déranger les éléments restants.  
+## <a name="remarks"></a>Notes  
+ L’objet alloue et libère du stockage pour la séquence qu’il contrôle en tant que nœuds individuels. Il insère des éléments dans une arborescence à charge équilibrée (presque) il conserve ordonnée en modifiant les liens entre les nœuds, jamais par copie le contenu d’un nœud vers un autre. Cela signifie que vous pouvez insérer et supprimer des éléments librement sans perturber éléments restants.  
   
- L'objet classifie la séquence qu'il contrôle en appelant un objet délégué stocké de type [multimap::key\_compare](../dotnet/multimap-key-compare-stl-clr.md).  Vous pouvez spécifier l'objet délégué stocké lorsque vous construisez le multimap; si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<(key_type, key_type)`.  Vous accédez à cet objet stocké en appelant la méthode [multimap::key\_comp](../dotnet/multimap-key-comp-stl-clr.md)`()`.  
+ L’objet ordonne la séquence qu’il contrôle en appelant un objet délégué stocké de type [multimap::key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md). Vous pouvez spécifier l’objet délégué stockées lors de la construction du mappage multiple ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<(key_type, key_type)`. Pour accéder à cet objet stocké en appelant la fonction membre [multimap::key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`.  
   
- Cet objet délégué doit appliquer un ordre strict faible sur les clés du type [multimap::key\_type](../dotnet/multimap-key-type-stl-clr.md).  Cela signifie, pour deux clés quelconques `X` et `Y`:  
+ Cet objet de délégué doit imposer un classement faible strict sur les clés de type [multimap::key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md). Cela signifie que, pour toutes les deux clés `X` et `Y`:  
   
- `key_comp()(X, Y)` retourne le même résultat booléen à chaque appel.  
+ `key_comp()(X, Y)`Retourne la valeur booléenne même résultat à chaque appel.  
   
- Si `key_comp()(X, Y)` est true, alors `key_comp()(Y, X)` doit être false.  
+ Si `key_comp()(X, Y)` est true, puis `key_comp()(Y, X)` doit avoir la valeur false.  
   
- Si `key_comp()(X, Y)` est true, alors `X` devient donc classé avant `Y`.  
+ Si `key_comp()(X, Y)` est true, puis `X` on dit d’être classé avant `Y`.  
   
- Si `!key_comp()(X, Y) && !key_comp()(Y, X)` est vrai, alors `X` et `Y` ont un classement équivalent.  
+ Si `!key_comp()(X, Y) && !key_comp()(Y, X)` est true, puis `X` et `Y` sont considérés comme ayant un classement équivalent.  
   
- Pour tout élément `X` qui précède `Y` dans la séquence contrôlée, `key_comp()(Y, X)` est false. \(Pour l'objet délégué par défaut, les clés ne perdent jamais en valeur.\) Contrairement à la classe de modèle [map](../dotnet/map-stl-clr.md), un objet de classe de modèle `multimap` n'a pas forcément besoin que les clés pour les éléments soient uniques. \(Deux clés ou plus peuvent être classées de manière équivalente.\)  
+ Pour tout élément `X` qui précède `Y` dans la séquence contrôlée, `key_comp()(Y, X)` a la valeur false. (Pour l’objet de délégué par défaut, les clés jamais diminuent dans valeur.) Contrairement à la classe de modèle [carte (STL/CLR)](../dotnet/map-stl-clr.md), un objet de classe de modèle `multimap` ne nécessite pas que les clés pour tous les éléments sont uniques. (Deux touches ou plus peuvent avoir un classement équivalent.)  
   
- Chaque élément contient une clé distincte et une valeur mappée.  La séquence est représentée d'une manière qui autorise la recherche, l'insertion, et la suppression d'un élément aléatoire avec un nombre d'opérations proportionnel au logarithme du nombre d'éléments dans la séquence \(complexité logarithmique\).  De plus, insérer un élément n'invalide aucun itérateur, et la suppression d'un élément invalide uniquement les itérateurs pointant vers l'élément supprimé.  
+ Chaque élément contient une clé séparée et une valeur mappée. La séquence est représentée de façon à permettre la recherche, l’insertion et la suppression d’un élément arbitraire avec un nombre d’opérations proportionnels au logarithme du nombre d’éléments dans la séquence (temps logarithmique). De plus, l'insertion d'un élément n'entraîne pas la non validité des itérateurs, et la suppression d'un élément ne rend non valides que les itérateurs qui pointent vers l'élément supprimé.  
   
- Un multimap prend en charge les itérateurs bidirectionnels, ce qui signifie que vous pouvez passer aux éléments adjacents à partir d'un itérateur qui indique un élément dans la séquence contrôlée.  Un nœud principal spécial correspond à l'itérateur retourné par [multimap::end](../dotnet/multimap-end-stl-clr.md)`()`.  Vous pouvez décrémenter l'itérateur pour atteindre le dernier élément de la séquence contrôlée, s'il est présent.  Vous pouvez incrémenter un itérateur de multimap pour atteindre le nœud principal, et il est alors égal à `end()`.  Mais vous ne pouvez pas déréférencer l'itérateur retourné par `end()`.  
+ Une classe multimap prend en charge les itérateurs bidirectionnels, ce qui signifie que vous pouvez exécuter pour les éléments adjacents donnés d’un itérateur qui désigne un élément dans la séquence contrôlée. Un nœud principal spécial correspond à l’itérateur retourné par [multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`. Vous pouvez décrémenter cet itérateur afin d’atteindre le dernier élément dans la séquence contrôlée, le cas échéant. Vous pouvez incrémenter un itérateur multimap afin d’atteindre le nœud principal, et il compare ensuite égal à `end()`. Mais vous ne pouvez pas déréférencer l’itérateur retourné par `end()`.  
   
- Notez que vous ne pouvez pas faire référence à une multimap directement avec sa position numérique \-\- cela requiert un itérateur à accès aléatoire.  
+ Notez que vous ne pouvez pas faire référence à un élément multimap directement donné sa position numérique--nécessitant un itérateur à accès aléatoire.  
   
- Un itérateur de multimap contient un descripteur vers son nœud associé à la multimap, qui elle\-même contient un descripteur vers son conteneur associé.  Vous pouvez utiliser les itérateurs uniquement avec leurs objets conteneurs associés.  Un itérateur de multimap reste valide à condition que son nœud de multimap associé soit associé à un multimap.  De plus, un itérateur valide est déréférencable \-\- vous pouvez l'utiliser pour accéder et modifier la valeur de l'élément qu'il indique \-\- sous réserve qu'il ne soit pas égal à `end()`.  
+ Un itérateur multimap stocke un handle vers son nœud multimap associé, qui à son tour stocke un handle à son conteneur associé. Vous pouvez utiliser des itérateurs uniquement avec les objets du conteneur associé. Un itérateur multimap reste valide tant que son nœud multimap associé est associé à une classe multimap. En outre, un itérateur valide est dereferencable : vous pouvez l’utiliser pour accéder ou modifier la valeur d’élément qu’il désigne--tant qu’il n’est pas égal à `end()`.  
   
- Effacer ou supprimer un élément appelle le destructeur pour sa valeur stockée.  Détruire le conteneur efface tous les éléments.  Par conséquent, un conteneur dont le type d'élément est une classe de base garantit qu'aucun élément ne survive au conteneur.  Notez, toutefois, qu'un conteneur de descripteurs ne détruit pas \(`not`\) ses éléments.  
+ Effacement ou suppression d’un élément appelle le destructeur de sa valeur stockée. Destruction du conteneur efface tous les éléments. Par conséquent, un conteneur dont le type d’élément est une classe ref garantit qu’aucun élément ne survivent le conteneur. Toutefois, notez qu’un conteneur de handles ne `not` détruire ses éléments.  
   
-## Configuration requise  
- **En\-tête :** \<cliext\/map\>  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/map >  
   
- **Espace de noms** cliext  
+ **Namespace :** cliext  
   
-## Voir aussi  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [map](../dotnet/map-stl-clr.md)   
- [multiset](../dotnet/multiset-stl-clr.md)   
- [set](../dotnet/set-stl-clr.md)   
- [STL\/CLR, bibliothèque](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [carte (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [Set (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [Référence de bibliothèque STL/CLR](../dotnet/stl-clr-library-reference.md)

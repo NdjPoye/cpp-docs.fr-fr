@@ -15,14 +15,15 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05d0cc8f381335b22a53a4cc699172cd289126a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c99b0665ac5a4384c494b60fd78dc8fcf3ebc426
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3018"></a>Erreur du compilateur C3018
-'var1' : le test ou l’incrément de l’instruction 'for' OpenMP doivent utiliser la variable d’index 'var2'  
+'var1' : le test ou l’incrément de l’instruction 'for' OpenMP doivent utiliser la variable d’index 'var2'   
   
  Une boucle `for` dans une instruction OpenMP doit utiliser la même variable pour son test et l’incrémentation que celle qu’elle utilise pour ses index.  
   

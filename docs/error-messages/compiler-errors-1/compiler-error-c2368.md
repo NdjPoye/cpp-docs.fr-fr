@@ -15,13 +15,14 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 48510b32294642861d19ac75963c2ae26ab293a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 801c569126bbfe5036c8658fa093f4dab2231b0e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2368"></a>Erreur du compilateur C2368
-'identificateur' : redéfinition ; spécificateurs d'allocation différents  
+'identificateur' : redéfinition ; spécificateurs d'allocation différents  
   
  La déclaration et la définition du symbole spécifient des attributs `__declspec` différents.

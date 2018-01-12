@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ca78fcc1de8b579a647dd9080dc64db0fde54e9b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 056f15dc0e7808a7f0ada7267a60e13d4c75d83b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="listunique-stlclr"></a>list::unique (STL/CLR)
 Supprime des éléments adjacents qui réussissent un test spécifié.  
@@ -36,7 +39,7 @@ template<typename Pred2>
  pred  
  Comparateur pour les paires d’éléments.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La première fonction membre supprime de la séquence contrôlée (efface) chaque élément dont la valeur est égale à son élément précédent--si élément `X` précède l’élément `Y` et `X == Y`, la fonction membre supprime `Y`. Utilisez-le pour supprimer un seul copie de chaque sous-séquence des éléments adjacents qu’égal à comparer. Notez que si la séquence contrôlée est triée, par exemple en appelant [list::sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)`()`, la fonction membre laisse uniquement les éléments avec des valeurs uniques. (D’où leur nom.)  
   
  La deuxième fonction membre comporte comme la première, à ceci près qu’elle supprime chaque élément `Y` suivant d’un élément `X` pour lequel `pred(X, Y)`. Il permet de supprimer un seul copie de chaque sous-séquence des éléments adjacents qui satisfont une fonction de prédicat ou un délégué que vous spécifiez. Notez que si la séquence contrôlée est triée, par exemple en appelant `sort(pred)`, la fonction membre laisse uniquement les éléments qui n’ont pas un classement équivalent à d’autres éléments.  
@@ -85,7 +88,7 @@ a b c
 a a  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/liste >  
   
  **Namespace :** cliext  

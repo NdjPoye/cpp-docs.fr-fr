@@ -1,37 +1,35 @@
 ---
-title: "Avertissement du compilateur (niveau 4) C4254 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "c4254"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4254"
+title: Compilateur avertissement (niveau 4) C4254 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: c4254
+dev_langs: C++
+helpviewer_keywords: C4254
 ms.assetid: c7dcef24-d535-4c98-bb41-fc3d2b88fd11
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e3f19b0bca7c53e63039bec207a33a1cfcd3fe1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 4) C4254
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-4-c4254"></a>Avertissement du compilateur (niveau 4) C4254
 'opérateur' : conversion de 'type1' en 'type2', perte possible de données  
   
- Un champ de bits a été assigné à un champ de bits plus petit.  Une perte de données est possible.  
+ Un plus grand champ de bits a été assigné à un champ de bits plus petit. Il peut exister une perte de données.  
   
- Cet avertissement est désactivé par défaut.  Pour plus d'informations, consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.  
   
- L'exemple suivant génère l'erreur C4254 :  
+ L’exemple suivant génère C4254 :  
   
 ```  
 // C4254.cpp  

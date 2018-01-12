@@ -1,46 +1,47 @@
 ---
-title: "Mots cl&#233;s de langage (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mots clés (C++)"
+title: "Mots clés de langage (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: keywords [C++]
 ms.assetid: 021013b2-70ac-4df9-aa77-4af1c67a1a67
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e1107ad45feaae470ed2a7481f80bb17c389042d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Mots cl&#233;s de langage (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Plusieurs mots clés de langage ont été modifiés entre Extensions managées pour C\+\+ et [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+# <a name="language-keywords-ccli"></a>Mots clés de langage (C++/CLI)
+Plusieurs mots clés de langage changés entre les Extensions managées pour C++ vers Visual C++.  
   
- Dans la nouvelle syntaxe [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)], le trait de soulignement double est supprimé comme préfixe de tous les mots clés \(avec une exception : `__identifier` est conservé\).  Par exemple, une propriété se déclare à présent sous la forme `property`, et non `__property`.  
+ Dans la nouvelle syntaxe Visual C++, le trait de soulignement double est supprimé comme préfixe de tous les mots clés (avec une exception près : `__identifier` est conservé). Par exemple, une propriété est désormais déclarée en tant que `property`, et non `__property`.  
   
- Il y avait deux raisons majeures pour utiliser le préfixe de trait de soulignement double en Extensions managées :  
+ Il existait deux raisons principales pour utiliser le préfixe de trait de soulignement double dans les Extensions managées :  
   
--   Il s'agit de la méthode conforme servant à fournir des extensions locales sous la norme ISO\-C\+\+.  Un des objectifs essentiels de la conception d'Extensions managées était ne pas introduire d'incompatibilités avec le langage standard, tel que de nouveaux mots clés ou jetons.  C'est en grande partie cette raison qui motivait le choix d'une syntaxe de pointeur pour déclarer des objets de types référence managés.  
+-   Il s’agit de la méthode conforme de fournir des extensions locales à la norme ISO-C++. Des principaux objectifs de la conception des Extensions managées était ne pas introduire d’incompatibilités avec le langage standard, tels que les nouveaux mots clés et des jetons. Il était donc en grande partie, qui ont motivé le choix de la syntaxe de pointeur de la déclaration d’objets des types de référence managée.  
   
--   Le trait de soulignement double, en dehors de sa dimension conforme, offre par ailleurs une garantie raisonnable de non\-invasion de la base de code existante des utilisateurs du langage.  C'était là le deuxième grand objectif de la conception d'Extensions managées.  
+-   L’utilisation d’un trait de soulignement double, en dehors de sa conformité, est également une garantie raisonnable de non invasif de la base de code existante des utilisateurs du langage. Il s’agissait d’un deuxième objectif principal de la conception des Extensions managées.  
   
- En dépit de la suppression des traits de soulignement doubles, Microsoft maintient son engagement de conformité.  Cependant, la prise en charge du modèle d'objet dynamique du CLR représente un paradigme de programmation à la fois novateur et puissant.  La prise en charge de ce nouveau paradigme requiert ses propres jetons et mots clés de haut niveau.  Nous avons cherché à exprimer ce nouveau paradigme avec un maximum d'efficacité tout en l'intégrant et en prenant en charge le langage standard.  La nouvelle conception de la syntaxe représente un véritable progrès en matière de programmation de ces deux modèles d'objets disparates.  
+ En dépit de supprimez les traits de soulignement doubles, Microsoft s’engage à être conforme. Toutefois, la prise en charge pour le modèle d’objet dynamique CLR représente un paradigme de programmation nouveau et puissant. Prise en charge de ce nouveau paradigme requiert ses propres mots clés de niveau supérieur et les jetons. Nous avons recherché fournir une expression de première classe de ce nouveau paradigme lors de l’intégration et prendre en charge le langage standard. La nouvelle conception de syntaxe fournit une expérience de programmation de première classe de ces deux modèles d’objets disparates.  
   
- De même, nous avons à cœur de préserver la nature non invasive de ces nouveaux mots clés du langage.  Nous y sommes parvenus grâce à l'utilisation de mots clés contextuels et espacés.  Avant de nous pencher sur la nouvelle syntaxe du langage elle\-même, essayons de comprendre le sens de ces deux versions très particulières des mots clés.  
+ De même, nous concernent la nature non invasif de ces nouveaux mots clés de langage. Cette opération a été effectuée avec l’utilisation de mots clés contextuels et espacés. Avant d’examiner la nouvelle syntaxe du langage réel, essayons sens de ces deux versions de mot clé spécial.  
   
- Un mot clé contextuel a une signification spéciale dans des contextes de programme spécifiques.  Dans le programme général, par exemple, `sealed` est traité comme un identificateur ordinaire.  Toutefois, lorsqu'il survient dans la partie déclarative d'un type de classe de référence managé, il est traité comme un mot clé dans le contexte de cette déclaration de classe.  Cela réduit l'impact potentiellement invasif de l'introduction d'un nouveau mot clé dans le langage, ce qui nous semblait très important vis\-à\-vis des utilisateurs possédant déjà une base de code.  En même temps, cela permet aux utilisateurs des nouvelles fonctionnalités de tirer le meilleur bénéfice de cette fonctionnalité de langage supplémentaire – ce qui n'était pas possible avec les Extensions managées.  Pour obtenir un exemple de la façon dont `sealed` est utilisé, consultez [Déclaration d'un type de classe managée](../dotnet/declaration-of-a-managed-class-type.md).  
+ Un mot clé contextuel a une signification spéciale dans des contextes de programme spécifique. Dans le programme général, par exemple, `sealed` est traité comme un identificateur ordinaire. Toutefois, lorsqu’il se produit dans la partie de la déclaration d’un type de classe de référence managée, il est traité comme un mot clé dans le contexte de cette déclaration de classe. Cela réduit l’impact potentiel invasif d’introduire un nouveau mot clé dans le langage, quelque chose que nous estimons est très importante pour les utilisateurs avec une base de code existante. En même temps, il permet aux utilisateurs de la nouvelle fonctionnalité de bénéficier d’une expérience de première classe de la fonctionnalité de langage supplémentaire - quelque chose qui n’était pas possible avec les Extensions managées. Pour obtenir un exemple de procédure `sealed` sert consultez [déclaration d’un Type de classe gérée](../dotnet/declaration-of-a-managed-class-type.md).  
   
- Un mot clé espacé, tel que `value class`, est un cas particulier de mot clé contextuel.  Il apparie un mot clé existant et un modificateur contextuel, séparés par un espace.  La paire est traitée en tant qu'unité, plutôt que comme deux mots clés séparés.  
+ Un mot clé espacé, tel que `value class`, est un cas spécial d’un mot clé contextuel. Il associe un mot clé existant avec un modificateur contextuel séparé par un espace. La paire est traitée comme une unité unique plutôt que comme deux mots clés distincts.  
   
-## Voir aussi  
- [Initiation à la migration de C\+\+\/CLI](../dotnet/cpp-cli-migration-primer.md)   
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Voir aussi  
+ [C + c++ / CLI Initiation à la Migration](../dotnet/cpp-cli-migration-primer.md)   
+ [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)

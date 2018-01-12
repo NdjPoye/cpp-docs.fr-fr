@@ -1,32 +1,33 @@
 ---
-title: "Comment&#160;: d&#233;finir et consommer des &#233;num&#233;rateurs dans C++/CLI | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "enum, classe, spécifier des types sous-jacents"
+title: "Comment : définir et consommer des énumérateurs dans c++ / CLI | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 59d3619daecfad221bd9eac31c4950bae5ace4a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Comment&#160;: d&#233;finir et consommer des &#233;num&#233;rateurs dans C++/CLI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-This topic discusses enums in C\+\+\/CLI.  
+# <a name="how-to-define-and-consume-enums-in-ccli"></a>Comment : définir et consommer des énumérateurs dans C++/CLI
+Cette rubrique traite des énumérateurs dans c++ / CLI.  
   
-## Specifying the underlying type of an enum  
- By default, the underlying type of an enumeration is `int`.  However, you can specify the type to be signed or unsigned forms of `int`, `short`, `long`, `__int32`, or `__int64`.  You can also use `char`.  
+## <a name="specifying-the-underlying-type-of-an-enum"></a>Spécification du type sous-jacent d’un enum  
+ Par défaut, le type sous-jacent d’une énumération est `int`.  Toutefois, vous pouvez spécifier le type doit être signés ou non signés des formes de `int`, `short`, `long`, `__int32`, ou `__int64`.  Vous pouvez également utiliser `char`.  
   
 ```  
 // mcppv2_enum_3.cpp  
@@ -49,12 +50,15 @@ int main() {
   
  **Sortie**  
   
-  **sun**  
-**0**  
-**1**  
-**2**   
-## How to convert between managed and standard enumerations  
- There is no standard conversion between an enum and an integral type; a cast is required.  
+```Output  
+sun  
+0  
+1  
+2  
+```  
+  
+## <a name="how-to-convert-between-managed-and-standard-enumerations"></a>Comment effectuer une conversion entre des énumérations managées et standards  
+ Il n’existe aucune conversion standard entre un enum et un type intégral ; un cast n’est requis.  
   
 ```  
 // mcppv2_enum_4.cpp  
@@ -76,24 +80,27 @@ int main() {
   
  **Sortie**  
   
-  **a and day2 are the same**   
-## Operators and enums  
- The following operators are valid on enums in C\+\+\/CLI:  
+```Output  
+a and day2 are the same  
+```  
+  
+## <a name="operators-and-enums"></a>Opérateurs et énumérations  
+ Les opérateurs suivants sont valides sur les énumérateurs dans c++ / CLI :  
   
 |Opérateur|  
-|---------------|  
-|\=\= \!\= \< \> \<\= \>\=|  
-|\+ \-|  
+|--------------|  
+|== != \< > \<= >=|  
+|+ -|  
 |&#124; ^ & ~|  
-|\+\+ \-\-|  
+|++ --|  
 |sizeof|  
   
- Operators &#124; ^ & ~ \+\+ \-\- are defined only for enumerations with integral underlying types, not including bool.  Both operands must be of the enumeration type.  
+ Opérateurs &#124; ^ & ~ ++--sont définies uniquement pour les énumérations avec intégrale types, y compris les booléen ne pas sous-jacents.  Les deux opérandes doivent être du type énumération.  
   
- The compiler does no static or dynamic checking of the result of an enum operation; an operation may result in a value not in the range of the enum's valid enumerators.  
+ Le compilateur n’effectue aucune vérification statique ou dynamique du résultat d’une opération d’énumération ; une opération peut entraîner une valeur pas dans la plage des énumérateurs de valide de l’énumération.  
   
 > [!NOTE]
->  C\+\+11 introduces enum class types in unmanaged code which are significantly different than managed enum classes in C\+\+\/CLI.  In particular, the C\+\+11 enum class type does not support the same operators as the managed enum class type in C\+\+\/CLI, and C\+\+\/CLI source code must provide an accessibility specifier in managed enum class declarations in order to distinguish them from unmanaged \(C\+\+11\) enum class declarations.  For more information about enum classes in C\+\+\/CLI, C\+\+\/CX, and C\+\+11, see [enum, classe](../windows/enum-class-cpp-component-extensions.md).  
+>  C ++ 11 présente les types de classe enum dans le code non managé qui sont fondamentalement différentes classes d’énumération managée dans C + c++ / CLI. En particulier, le type de classe C ++ 11 enum ne prend pas en charge les opérateurs de mêmes que le type de classe d’énumération managée dans C + c++ / CLI et c++ / CLI le code source doit fournir un spécificateur d’accessibilité dans l’énumération managée de déclarations de classe afin de les distinguer des non managé (C++ 11) les déclarations de classe enum. Pour plus d’informations sur les classes enum dans C + c++ / CLI, C + c++ / CX et C ++ 11, consultez [classe enum](../windows/enum-class-cpp-component-extensions.md).  
   
 ```  
 // mcppv2_enum_5.cpp  
@@ -130,8 +137,11 @@ int main() {
   
  **Sortie**  
   
-  **4**  
-**1**  
-**True**   
-## Voir aussi  
+```Output  
+4  
+1  
+True  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
  [enum, classe](../windows/enum-class-cpp-component-extensions.md)

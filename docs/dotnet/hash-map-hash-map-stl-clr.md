@@ -1,33 +1,33 @@
 ---
-title: "hash_map::hash_map (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::hash_map"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_map (membre) (STL/CLR)"
+title: hash_map::hash_map (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::hash_map
+dev_langs: C++
+helpviewer_keywords: hash_map member [STL/CLR]
 ms.assetid: d65eb3fa-4bf9-4186-95f8-5517c90ef1fa
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e53d52a2d057854bdaf4b5471b548ce39fc86f66
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::hash_map (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Construit un objet container.  
+# <a name="hashmaphashmap-stlclr"></a>hash_map::hash_map (STL/CLR)
+Construit un objet conteneur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 hash_map();  
@@ -50,104 +50,90 @@ hash_map(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred, hasher^ hashfn);  
 ```  
   
-#### Paramètres  
- first  
- Beginning of range to insert.  
+#### <a name="parameters"></a>Paramètres  
+ premier  
+ Début de la plage à insérer.  
   
  hashfn  
- Hash function for mapping keys to buckets.  
+ Fonction pour les clés de mappage pour les compartiments de hachage.  
   
  last  
- End of range to insert.  
+ Fin de la plage à insérer.  
   
  pred  
- Ordering predicate for the controlled sequence.  
+ Classement de prédicat pour la séquence contrôlée.  
   
- right  
- Object or range to insert.  
+ droite  
+ Objet ou plage à insérer.  
   
-## Notes  
- The constructor:  
+## <a name="remarks"></a>Notes  
+ Le constructeur :  
   
  `hash_map();`  
   
- initializes the controlled sequence with no elements, with the default ordering predicate `key_compare()`, and with the default hash function.  You use it to specify an empty initial controlled sequence, with the default ordering predicate and hash function.  
+ Initialise la séquence contrôlée sans aucun élément, avec la valeur par défaut classement prédicat `key_compare()`et avec la fonction de hachage par défaut. Il permet de spécifier une séquence contrôlée initiale vide avec la fonction de prédicat et hachage de classement par défaut.  
   
- The constructor:  
+ Le constructeur :  
   
  `explicit hash_map(key_compare^ pred);`  
   
- initializes the controlled sequence with no elements, with the ordering predicate `pred`, and with the default hash function.  You use it to specify an empty initial controlled sequence, with the specified ordering predicate and the default hash function.  
+ Initialise la séquence contrôlée sans aucun élément, avec le prédicat de tri `pred`et avec la fonction de hachage par défaut. Il permet de spécifier une séquence contrôlée initiale vide avec le prédicat de tri spécifié et la fonction de hachage par défaut.  
   
- The constructor:  
+ Le constructeur :  
   
  `hash_map(key_compare^ pred, hasher^ hashfn);`  
   
- initializes the controlled sequence with no elements, with the ordering predicate `pred`, and with the hash function `hashfn`.  You use it to specify an empty initial controlled sequence, with the specified ordering predicate and hash function.  
+ Initialise la séquence contrôlée sans aucun élément, avec le prédicat de tri `pred`et avec la fonction de hachage `hashfn`. Il permet de spécifier une séquence contrôlée initiale vide avec la fonction de prédicat et hachage de tri spécifiée.  
   
- The constructor:  
+ Le constructeur :  
   
  `hash_map(hash_map<Key, Mapped>% right);`  
   
- initializes the controlled sequence with the sequence `[``right``.`[hash\_map::begin](../dotnet/hash-map-begin-stl-clr.md)`(),` `right``.`[hash\_map::end](../dotnet/hash-map-end-stl-clr.md)`())`, with the default ordering predicate, and with the default hash function.  You use it to specify an initial controlled sequence that is a copy of the sequence controlled by the hash\_map object `right`, with the default ordering predicate and hash function.  
+ Initialise la séquence contrôlée par la séquence [`right.begin()`, `right.end()`), avec la valeur par défaut de classement de prédicat et avec la fonction de hachage par défaut. Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet hash_map `right`avec le prédicat de tri par défaut et la fonction de hachage.  
   
- The constructor:  
+ Le constructeur :  
   
  `hash_map(hash_map<Key, Mapped>^ right);`  
   
- initializes the controlled sequence with the sequence `[``right``->`[hash\_map::begin](../dotnet/hash-map-begin-stl-clr.md)`(),` `right``->`[hash\_map::end](../dotnet/hash-map-end-stl-clr.md)`())`, with the default ordering predicate, and with the default hash function.  You use it to specify an initial controlled sequence that is a copy of the sequence controlled by the hash\_map object `right`, with the default ordering predicate and hash function.  
+ Initialise la séquence contrôlée par la séquence [`right->begin()`, `right->end()`), avec la valeur par défaut de classement de prédicat et avec la fonction de hachage par défaut. Il permet de spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet hash_map `right`avec le prédicat de tri par défaut et la fonction de hachage.  
   
- The constructor:  
+ Le constructeur :  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_map(InIter first, InIter last);`  
   
- `hash_map(InIter first, InIter last);`  
+ Initialise la séquence contrôlée par la séquence [`first`, `last`), avec la valeur par défaut de classement de prédicat et avec la fonction de hachage par défaut. Il permet de rendre la séquence contrôlée une copie d’une autre séquence, avec la fonction de prédicat et hachage de classement par défaut.  
   
- initializes the controlled sequence with the sequence `[``first``,` `last``)`, with the default ordering predicate, and with the default hash function.  You use it to make the controlled sequence a copy of another sequence, with the default ordering predicate and hash function.  
+ Le constructeur :  
   
- The constructor:  
+ `template<typename InIter> hash_map(InIter first, InIter last, key_compare^ pred);`  
   
- `template<typename InIter>`  
+ Initialise la séquence contrôlée par la séquence [`first`, `last`), avec le prédicat de tri `pred`et avec la fonction de hachage par défaut. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence, avec le prédicat de tri spécifié et la fonction de hachage par défaut.  
   
- `hash_map(InIter first, InIter last,`  
+ Le constructeur :  
   
- `key_compare^ pred);`  
+ `template<typename InIter> hash_map(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
   
- initializes the controlled sequence with the sequence `[``first``,` `last``)`, with the ordering predicate `pred`, and with the default hash function.  You use it to make the controlled sequence a copy of another sequence, with the specified ordering predicate and the default hash function.  
+ Initialise la séquence contrôlée par la séquence [`first`, `last`), avec le prédicat de tri `pred`et avec la fonction de hachage `hashfn`. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence, avec la fonction de prédicat et hachage de tri spécifiée.  
   
- The constructor:  
-  
- `template<typename InIter>`  
-  
- `hash_map(InIter first, InIter last,`  
-  
- `key_compare^ pred, hasher^ hashfn);`  
-  
- initializes the controlled sequence with the sequence `[``first``,` `last``)`, with the ordering predicate `pred`, and with the hash function `hashfn`.  You use it to make the controlled sequence a copy of another sequence, with the specified ordering predicate and hash function.  
-  
- The constructor:  
+ Le constructeur :  
   
  `hash_map(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- initializes the controlled sequence with the sequence designated by the enumerator `right`, with the default ordering predicate, and with the default hash function.  You use it to make the controlled sequence a copy of another sequence described by an enumerator, with the default ordering predicate and hash function.  
+ Initialise la séquence contrôlée par la séquence désignée par l’énumérateur `right`, avec la valeur par défaut de classement de prédicat et avec la fonction de hachage par défaut. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec la fonction de prédicat et hachage de classement par défaut.  
   
- The constructor:  
+ Le constructeur :  
   
- `hash_map(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ Initialise la séquence contrôlée par la séquence désignée par l’énumérateur `right`, avec le prédicat de tri `pred`et avec la fonction de hachage par défaut. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par l’énumérateur avec la fonction de hachage par défaut et le prédicat de tri spécifiée.  
   
- initializes the controlled sequence with the sequence designated by the enumerator `right`, with the ordering predicate `pred`, and with the default hash function.  You use it to make the controlled sequence a copy of another sequence described by an enumerator, with the specified ordering predicate and default hash function.  
+ Le constructeur :  
   
- The constructor:  
+ `hash_map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
   
- `hash_map(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ Initialise la séquence contrôlée par la séquence désignée par l’énumérateur `right`, avec le prédicat de tri `pred`et avec la fonction de hachage `hashfn`. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par l’énumérateur, avec la fonction de prédicat et hachage de tri spécifiée.  
   
- `key_compare^ pred, hasher^ hashfn);`  
-  
- initializes the controlled sequence with the sequence designated by the enumerator `right`, with the ordering predicate `pred`, and with the hash function `hashfn`.  You use it to make the controlled sequence a copy of another sequence described by an enumerator, with the specified ordering predicate and hash function.  
-  
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_map_construct.cpp   
@@ -259,26 +245,32 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0**  
- **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## Configuration requise  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [c 3] [b 2] [a 1]  
   
- **Namespace:** cliext  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
   
-## Voir aussi  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::generic\_container](../dotnet/hash-map-generic-container-stl-clr.md)   
- [hash\_map::operator\=](../dotnet/hash-map-operator-assign-stl-clr.md)
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/hash_map >  
+  
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::generic_container (STL/CLR)](../dotnet/hash-map-generic-container-stl-clr.md)   
+ [hash_map::operator= (STL/CLR)](../dotnet/hash-map-operator-assign-stl-clr.md)

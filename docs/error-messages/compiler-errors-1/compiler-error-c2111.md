@@ -4,30 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C2111
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2111
+f1_keywords: C2111
+dev_langs: C++
+helpviewer_keywords: C2111
 ms.assetid: 38fd42ec-1480-4a44-aaca-ae4593ed5f50
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c8054ddee86aa0bbd8f7200f2bea2e768e5f2daf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 02c2783f156fbdd0c805c0dff71e53a681dc3327
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2111"></a>Erreur du compilateur C2111
-'+' : l’addition d’un pointeur exige un opérande de type entier  
+'+' : l’addition d’un pointeur exige un opérande de type entier  
   
  Une tentative a été effectuée d’ajouter une valeur non entière à un pointeur avec l’opérateur plus ( `+` ).  
   

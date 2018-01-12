@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a776a19d3b06fce5c7355ba512693d63e529d3b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d8e3a107bef12ca7f1bcd89098d35ed6a124775f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ptrattach"></a>ptr::Attach
 Attache un objet COM d’un `com::ptr`.  
@@ -43,7 +46,7 @@ void Attach(
 ## <a name="exceptions"></a>Exceptions  
  Si le `com::ptr` possède déjà une référence à un objet COM, `Attach` lève <xref:System.InvalidOperationException>.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un appel à `Attach` fait référence à l’objet COM, mais ne libère pas de référence de l’appelant à celui-ci.  
   
  Passage `NULL` à `Attach` aboutit à aucune action effectuée.  
@@ -123,7 +126,7 @@ int main() {
 }  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  

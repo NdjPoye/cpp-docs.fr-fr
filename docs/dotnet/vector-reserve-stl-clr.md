@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3e84ba7b9d59e1c15c2d01ecc7cc73eab9209c34
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2c8c5ac474cc2b94baedab64854fec3ca3e0a78a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vectorreserve-stlclr"></a>vector::reserve (STL/CLR)
 Garantit une capacité minimale de croissance pour le conteneur.  
@@ -34,7 +37,7 @@ void reserve(size_type count);
  count  
  Nouvelle capacité minimale du conteneur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction membre garantit que `capacity()` dorénavant retourne au moins `count`. Il permet de vous assurer que le conteneur ne doive pas réaffecter le stockage pour la séquence contrôlée jusqu'à ce qu’il a atteint la taille spécifiée.  
   
 ## <a name="example"></a>Exemple  
@@ -77,7 +80,7 @@ capacity() = 9, ok = True
 ## <a name="description"></a>Description  
  Notez que la capacité réelle peut différer les valeurs indiquées ici, aussi longtemps que tous les `ok` signalent la valeur true.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/vector >  
   
  **Namespace :** cliext  

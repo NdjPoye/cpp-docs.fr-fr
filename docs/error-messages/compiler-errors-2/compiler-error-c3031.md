@@ -15,14 +15,15 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3ddf6809081cae78d0280c57f9ecc156f82e2821
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d74a10a87da0f9ed52f2ef91c159b539209f177
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3031"></a>Erreur du compilateur C3031
-'variable' : la variable de la clause 'reduction' doit avoir un type arithmétique scalaire  
+'variable' : la variable de la clause 'reduction' doit avoir un type arithmétique scalaire  
   
  Une variable du mauvais type a été passée à une clause reduction.  
   

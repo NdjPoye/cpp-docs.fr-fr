@@ -1,32 +1,33 @@
 ---
-title: "set_difference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set_difference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "set_difference (fonction) (STL/CLR)"
+title: set_difference (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set_difference
+dev_langs: C++
+helpviewer_keywords: set_difference function [STL/CLR]
 ms.assetid: 47a34d92-53d7-4065-9302-9e2e70e46c4d
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d31be8ebb5385348e99f4688b8c5447a70edcb5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# set_difference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Unit tous les éléments qui appartiennent à une plage source triée, mais pas à une seconde, en une seule plage de destination triée, où le critère de classement peut être spécifié par un attribut binaire.  
+# <a name="setdifference-stlclr"></a>set_difference (STL/CLR)
+Regroupe tous les éléments qui appartiennent à une plage source triée, mais pas à une autre plage source triée, en une même plage de destination triée. Un critère de tri peut être spécifié par un prédicat binaire.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<class _InIt1, class _InIt2, class _OutIt> inline  
@@ -37,13 +38,13 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
         _InIt2 _First2, _InIt2 _Last2, _OutIt _Dest, _Pr _Pred);  
 ```  
   
-## Notes  
- Cette fonction se comporte comme la fonction `set_difference` de STL.  Pour plus d'informations, consultez [set\_difference](../Topic/set_difference.md).  
+## <a name="remarks"></a>Notes  
+ Cette fonction comporte comme la fonction de la bibliothèque Standard C++ `set_difference`. Pour plus d’informations, consultez [set_difference](../standard-library/algorithm-functions.md#set_difference).  
   
-## Configuration requise  
- **En\-tête :** \<cliext\/algorithm\>  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/algorithme >  
   
- **Espace de noms** cliext  
+ **Namespace :** cliext  
   
-## Voir aussi  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Voir aussi  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)
