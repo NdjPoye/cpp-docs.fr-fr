@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -24,10 +23,8 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- wctomb
-dev_langs:
-- C++
+f1_keywords: wctomb
+dev_langs: C++
 helpviewer_keywords:
 - string conversion, wide characters
 - wide characters, converting
@@ -37,30 +34,16 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3d199cba90dd2440a7a467c95d32e2a5a75f8cbf
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 462fecfcd9400d10dbc943fded0d04fb7a0cf010
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
 Convertit un caractère large en caractère multioctet correspondant. Il existe des versions plus sécurisées de ces fonctions. Consultez [wctomb_s, _wctomb_s_l](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md).  
@@ -89,18 +72,18 @@ int _wctomb_l(
 ## <a name="return-value"></a>Valeur de retour  
  Si `wctomb` convertit le caractère large en caractère multioctet, il retourne le nombre d’octets (qui n’est jamais supérieure à `MB_CUR_MAX`) dans le caractère large. Si `wchar` correspond au caractère Null à caractère large (L'\0'), `wctomb` retourne 1. Si le pointeur cible `mbchar` a la valeur NULL, `wctomb` retourne 0. Si la conversion n’est pas possible dans les paramètres régionaux, `wctomb` retourne -1 et `errno` a la valeur `EILSEQ`.  
   
-## <a name="remarks"></a>Remarques  
- La fonction `wctomb` convertit son argument `wchar` en caractère multioctet correspondant et stocke le résultat au niveau de `mbchar`. Vous pouvez appeler la fonction de n’importe quel endroit dans n’importe quel programme. La fonction `wctomb` utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; la fonction `_wctomb_l` est identique à `wctomb` sauf qu'elle utilise les paramètres régionaux passés à la place. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+## <a name="remarks"></a>Notes  
+ La fonction `wctomb` convertit son argument `wchar` en caractère multioctet correspondant et stocke le résultat au niveau de `mbchar`. Vous pouvez appeler la fonction de n’importe quel endroit dans n’importe quel programme. La fonction `wctomb` utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; la fonction `_wctomb_l` est identique à `wctomb` sauf qu'elle utilise les paramètres régionaux passés à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  `wctomb` valide ses paramètres. Si `mbchar` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `errno` est défini sur `EINVAL` et la fonction retourne -1.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`wctomb`|\<stdlib.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
  Ce programme illustre le comportement de la fonction wctomb.  

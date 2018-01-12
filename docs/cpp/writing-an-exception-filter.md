@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- exception handling [C++], filters
+dev_langs: C++
+helpviewer_keywords: exception handling [C++], filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 07bce97cdac37a920716e72f88bdda2d164fc479
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 40afc6872ac04522c4c42f0a0d890b791ac03d53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-an-exception-filter"></a>Écriture d'un filtre d'exception
 Vous pouvez gérer une exception en accédant au niveau du gestionnaire d'exceptions ou en reprenant l'exécution. Au lieu d’utiliser le code de gestionnaire d’exceptions pour gérer l’exception et passer, vous pouvez utiliser *filtre* pour nettoyer le problème et puis, en retournant -1, reprendre le flux normal sans nettoyer la pile.  

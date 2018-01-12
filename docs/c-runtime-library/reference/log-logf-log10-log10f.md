@@ -45,11 +45,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8146d4ebe041fa3419aff3614edcd8fe9fa8b8d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d60347bc47c05a19cb1487e7a6738d328c78f846
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="log-logf-log10-log10f"></a>log, logf, log10, log10f
 Calcule le logarithme.  
@@ -102,13 +103,13 @@ float log10f (
 ## <a name="remarks"></a>Notes  
  C++ autorisant la surcharge, vous pouvez appeler des surcharges de **log** et `log10`. Dans un programme C, **log** et `log10` acceptent et retournent toujours un double.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |**log**, `logf`, `log10`, `log10f`|\<math.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

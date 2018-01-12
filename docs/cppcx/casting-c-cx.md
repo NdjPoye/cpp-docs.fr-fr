@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: f1373686ca960f86ca9e8b2ea4756911906fd66d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18963860b1f9398343370378140ebee7314690b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="casting-ccx"></a>Effectuer un cast (C++/CX)
 Quatre opérateurs de cast différents s’appliquent aux types Windows Runtime : [opérateur static_cast](../cpp/static-cast-operator.md), [opérateur dynamic_cast](../cpp/dynamic-cast-operator.md), **opérateur safe_cast**, et [ Opérateur reinterpret_cast](../cpp/reinterpret-cast-operator.md). `safe_cast` et `static_cast` lèvent une exception lorsque la conversion ne peut pas être exécutée. L' [opérateur static_cast](../cpp/static-cast-operator.md) effectue également une vérification de type au moment de la compilation. `dynamic_cast` retourne `nullptr` s'il ne réussit pas à convertir le type. Même si `reinterpret_cast` retourne une valeur non null, elle peut ne pas être valide. C'est la raison pour laquelle nous vous recommandons de ne pas utiliser `reinterpret_cast` , sauf si vous savez que le cast va réussir. En outre, nous vous conseillons pas casts de style C dans votre C + c++ / CX de code, car ils sont identiques à `reinterpret_cast`.  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - _mbsspn
 - _tcsspn
 - strspn
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wcsspn function
 - strings [C++], searching
@@ -49,30 +47,16 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 71c5c3e7d3dd747926a02940c5ef95f9d1ef243f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a0c4f57aac2f0b673cac716e5bdd94bd66534f6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 Retourne l’index du premier caractère, dans une chaîne, qui n’appartient pas à un jeu de caractères.  
@@ -115,12 +99,12 @@ size_t _mbsspn_l(
 ## <a name="return-value"></a>Valeur de retour  
  Retourne une valeur entière spécifiant la longueur de la sous-chaîne dans `str` qui se compose uniquement de caractères dans `strCharSet`. Si `str` commence par un caractère ne figurant pas dans `strCharSet`, la fonction retourne 0.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction `strspn` retourne l’index du premier caractère de `str` qui n’appartient pas au jeu de caractères de `strCharSet`. La recherche n’inclut pas les caractères Null de fin.  
   
  `wcsspn` et `_mbsspn` sont des versions à caractères larges et à caractères multioctets de `strspn`. Les arguments de `wcsspn` sont des chaînes de caractères larges ; ceux de `_mbsspn` sont des chaînes de caractères multioctets. `_mbsspn` valide ses paramètres. Si `str` ou `strCharSet` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `_mbspn` affecte à `errno` la valeur `EINVAL` et retourne 0. `strspn` et `wcsspn` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.  
   
- La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe `_l` utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe `_l` utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
@@ -129,7 +113,7 @@ size_t _mbsspn_l(
 |`_tcsspn`|`strspn`|`_mbsspn`|`wcsspn`|  
 |**n/a**|**n/a**|`_mbsspn_l`|**n/a**|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
@@ -137,7 +121,7 @@ size_t _mbsspn_l(
 |`wcsspn`|\<string.h> ou \<wchar.h>|  
 |`_mbsspn`, `_mbsspn_l`|\<mbstring.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

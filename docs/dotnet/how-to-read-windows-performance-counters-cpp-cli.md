@@ -1,42 +1,44 @@
 ---
-title: "Comment&#160;: lire les compteurs de performance Windows (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compteurs, lire les compteurs de performance Windows"
-  - "performances"
-  - "compteurs de performance"
-  - "compteurs de performance, lire les compteurs de performance Windows"
-  - "analyse des performances"
-  - "analyse des performances, compteurs de performance Windows"
-  - "performances, compteurs"
+title: "Comment : lire les compteurs de performances Windows (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- performance counters
+- performance counters, reading Windows performance counters
+- performance monitoring, Windows performance counters
+- performance, counters
+- counters, reading Windows performance counters
+- performance
+- performance monitoring
 ms.assetid: 9e1c836c-cb0f-4f37-9a93-3dca6412d6b1
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e3bbfcf020d1700effdc770b5a5e04892b72d8cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Comment&#160;: lire les compteurs de performance Windows (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Quelques applications et sous\-systèmes Windows exposent les données de performances par le biais du système de performances Windows.  Vous pouvez accéder à ces compteurs par l'intermédiaire des classes <xref:System.Diagnostics.PerformanceCounterCategory> et <xref:System.Diagnostics.PerformanceCounter> qui résident dans l'espace de noms <xref:System.Diagnostics?displayProperty=fullName>.  
+# <a name="how-to-read-windows-performance-counters-ccli"></a>Comment : lire les compteurs de performance Windows (C++/CLI)
+Certaines applications et certains sous-systèmes Windows exposent les données de performances via le système de performances Windows. Ces compteurs sont accessibles à l’aide de la <xref:System.Diagnostics.PerformanceCounterCategory> et <xref:System.Diagnostics.PerformanceCounter> classes, qui se trouvent dans le <xref:System.Diagnostics?displayProperty=fullName> espace de noms.  
   
- L'exemple de code suivant utilise ces classes pour récupérer et afficher un compteur mis à jour par Windows afin d'indiquer le temps d'occupation du processeur \(en pour cent\).  
+ L’exemple de code suivant utilise ces classes pour récupérer et afficher un compteur qui est mis à jour par Windows pour indiquer le pourcentage de temps que le processeur est occupé.  
   
 > [!NOTE]
->  Cet exemple requiert l'exécution des privilèges d'administrateur sous Windows Vista.  
+>  L’exécution de cet exemple sur Windows Vista nécessite des privilèges d’administrateur.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // processor_timer.cpp  
@@ -125,7 +127,7 @@ int main()
 }  
 ```  
   
-## Voir aussi  
- [Introduction to Monitoring Performance](http://msdn.microsoft.com/fr-fr/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)   
- [Opérations Windows](../dotnet/windows-operations-cpp-cli.md)   
- [Programmation .NET avec C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Introduction à la surveillance des performances](http://msdn.microsoft.com/en-us/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)   
+ [Opérations Windows (C + c++ / CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

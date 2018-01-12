@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2cc927d2e06def1eba726f3123e9968003e62d1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 888370cac57025418bc70b322703d8569a4be3d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Comment : accéder aux caractères d'un System::String
 Vous pouvez accéder aux caractères d’un <xref:System.String> des fonctions de l’objet pour les appels de hautes performances à non managé utilisant `wchar_t*` chaînes. La méthode génère un pointeur intérieur vers le premier caractère de la <xref:System.String> objet. Ce pointeur peut être manipulé directement ou épinglé et passé à une fonction qui attend un ordinaire `wchar_t` chaîne.  

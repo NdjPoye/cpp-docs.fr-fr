@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - arguments [C++], variable number of
 - variable argument lists
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - declaring functions [C++], variables
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: e7a1f434b9c286bfa625d703023080f55586f0a8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a2f22f24206a125f9575529a203e5433f1b825a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Répertorie les fonctions avec des arguments de Variable (C++)
 Les déclarations de fonction dans lesquelles le dernier membre d’argument-declaration-list est représenté par les points de suspension (...) peuvent prendre une quantité variable d’arguments. Dans ces cas-là, C++ fournit une vérification du type uniquement pour les arguments déclarés explicitement. Vous pouvez utiliser des listes d’arguments variables lorsque vous devez rendre une fonction si générale que même le nombre et les types des arguments peuvent varier. La famille de fonctions est un exemple de fonctions qui utilisent des listes d’arguments variables. `printf` *argument-declaration-list.*  
@@ -41,7 +39,7 @@ Les déclarations de fonction dans lesquelles le dernier membre d’argument-dec
   
  **FIN de la section spécifique à Microsoft**  
   
- La déclaration d’une fonction qui accepte une quantité variable d’arguments nécessite au moins un argument d’espace réservé, même si elle n’est pas utilisée. Si cet argument d'espace réservé n'est pas fourni, il est impossible d'accéder aux arguments restants.  
+ La déclaration d’une fonction qui accepte une quantité variable d’arguments nécessite au moins un argument d’espace réservé, même si elle n’est pas utilisée. Si cet argument d’espace réservé n’est pas fourni, il est impossible d’accéder aux arguments restants.  
   
  Lorsque des arguments de type `char` sont passés comme arguments variables, ils sont convertis en type `int`. De même, lorsque les arguments de type **float** sont passés comme arguments variables, ils sont convertis en type **double**. Les arguments d'autres types sont soumis aux promotions intégrales et à virgule flottante classiques. Consultez [Conversions Standard](standard-conversions.md) pour plus d’informations.  
   

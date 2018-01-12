@@ -1,83 +1,86 @@
 ---
-title: "Recordset&#160;: ajout, modification et suppression d&#39;enregistrements (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddNew (méthode)"
-  - "données dans les recordsets (C++)"
-  - "ODBC (recordsets C++), ajouter des enregistrements"
-  - "ODBC (recordsets C++), supprimer des enregistrements"
-  - "ODBC (recordsets C++), modifier les enregistrements"
-  - "modification d'enregistrements (C++)"
-  - "modification d'enregistrements (C++), dans les recordsets"
-  - "enregistrements (C++), ajouter"
-  - "enregistrements (C++), supprimer"
-  - "enregistrements (C++), modifier"
-  - "enregistrements (C++), mettre à jour"
-  - "recordsets (C++), ajouter des enregistrements"
-  - "recordsets (C++), supprimer des enregistrements"
-  - "recordsets (C++), modifier les enregistrements"
-  - "recordsets (C++), mettre à jour"
+title: "Recordset : Ajout, modification et suppression d’enregistrements (ODBC) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- records [C++], updating
+- record editing [C++], in recordsets
+- recordsets [C++], adding records
+- records [C++], adding
+- ODBC recordsets [C++], adding records
+- recordsets [C++], editing records
+- recordsets [C++], updating
+- records [C++], deleting
+- AddNew method
+- ODBC recordsets [C++], deleting records
+- data in recordsets [C++]
+- record editing [C++]
+- recordsets [C++], deleting records
+- ODBC recordsets [C++], editing records
+- records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cad50d25f6b9e2cc619fb19e21c2b6575ababa47
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Recordset&#160;: ajout, modification et suppression d&#39;enregistrements (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique s'applique aux classes ODBC MFC.  
+# <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Recordset : ajout, modification et suppression d'enregistrements (ODBC)
+Cette rubrique s’applique aux classes ODBC MFC.  
   
 > [!NOTE]
->  Vous pouvez désormais ajouter des enregistrements en bloc de façon plus efficace.  Pour plus d'informations, consultez [Recordset : ajout global d'enregistrements \(ODBC\)](../../data/odbc/recordset-adding-records-in-bulk-odbc.md).  
+>  Vous pouvez maintenant ajouter des enregistrements en bloc plus efficacement. Pour plus d’informations, consultez [Recordset : ajout d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-adding-records-in-bulk-odbc.md).  
   
 > [!NOTE]
->  Cette rubrique s'applique aux objets dérivés de `CRecordset` dans lesquels l'extraction de lignes en bloc n'a pas été implémentée.  Si vous utilisez l'extraction de lignes en bloc, consultez [Recordset : extraction globale d'enregistrements \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Cette rubrique s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous utilisez l’extraction de lignes en bloc, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Les instantanés et les feuilles de réponse dynamiques permettent d'ajouter, de modifier ou de supprimer des enregistrements.  Cette rubrique explique :  
+ Les instantanés et les feuilles de réponse dynamiques permettent d’ajouter, de modifier et supprimer des enregistrements. Cette rubrique explique :  
   
--   [comment déterminer si un recordset est modifiable](#_core_determining_whether_your_recordset_is_updatable) ;  
+-   [Comment déterminer si le jeu d’enregistrements est modifiable](#_core_determining_whether_your_recordset_is_updatable).  
   
--   [comment ajouter un nouvel enregistrement](#_core_adding_a_record_to_a_recordset) ;  
+-   [Comment ajouter un nouvel enregistrement](#_core_adding_a_record_to_a_recordset).  
   
--   [comment modifier un enregistrement](#_core_editing_a_record_in_a_recordset) ;  
+-   [Comment modifier un enregistrement existant](#_core_editing_a_record_in_a_recordset).  
   
--   [comment supprimer un enregistrement](#_core_deleting_a_record_from_a_recordset).  
+-   [Comment supprimer un enregistrement](#_core_deleting_a_record_from_a_recordset).  
   
- Pour plus d'informations sur la façon dont les modifications sont effectuées et sur la façon dont elles apparaissent aux autres utilisateurs, consultez [Recordset : modification des enregistrements par les recordsets \(ODBC\)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  En principe, lorsque vous ajoutez, modifiez ou supprimez un enregistrement, le recordset modifie aussitôt la source de données.  Vous pouvez à la place traiter en lot, sous forme de transactions, les mises à jour associées.  Si une transaction est en cours, la modification ne devient effective que lorsque la transaction a été validée.  Cela permet de reprendre ou d'annuler les modifications effectuées.  Pour plus d'informations sur les transactions, consultez [Transaction \(ODBC\)](../../data/odbc/transaction-odbc.md).  
+ Pour plus d’informations sur la façon dont les mises à jour sont effectuées et sur la façon dont vos mises à jour apparaissent à d’autres utilisateurs, consultez [Recordset : modification des enregistrements de jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md). En règle générale, lorsque vous ajoutez, modifiez ou supprimez un enregistrement, le jeu d’enregistrements modifie immédiatement la source de données. Vous pouvez à la place par lot mises à jour associées dans des transactions. Si une transaction est en cours d’exécution, la mise à jour ne devient-elle pas final jusqu'à ce que vous validez la transaction. Cela vous permet de reprendre ou d’annuler les modifications. Pour plus d’informations sur les transactions, consultez [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
- Le tableau suivant résume les options disponibles pour les recordsets, accompagnées des différentes caractéristiques de mise à jour.  
+ Le tableau suivant résume les options disponibles pour les jeux d’enregistrements avec les caractéristiques de mise à jour différents.  
   
-### Options lecture\/modification d'un recordset  
+### <a name="recordset-readupdate-options"></a>Options de lecture/mise à jour de jeu d’enregistrements  
   
-|Type|Lire|Modification d'un enregistrement|Suppression d'un enregistrement|Ajout d'un enregistrement|  
-|----------|----------|--------------------------------------|-------------------------------------|-------------------------------|  
-|En lecture seule|Y|N|N|N|  
-|Ajout seul|Y|N|N|Y|  
+|Type|Lecture|Modifier l’enregistrement|Suppression de l’enregistrement|Ajouter de nouvelles (Ajouter)|  
+|----------|----------|-----------------|-------------------|------------------------|  
+|Propriétés en lecture seule|Y|N|N|N|  
+|En mode Append-only|Y|N|N|Y|  
 |Pleinement modifiable|Y|Y|Y|Y|  
   
-##  <a name="_core_determining_whether_your_recordset_is_updatable"></a> Détermination du caractère modifiable du recordset  
- Un objet recordset est modifiable si la source de données l'est et que le recordset a été ouvert comme étant modifiable.  Son caractère modifiable dépend également de l'instruction SQL que vous utilisez, des capacités du pilote ODBC et de l'éventuel chargement en mémoire de la bibliothèque de curseurs ODBC.  Il est impossible de modifier une source de données ou un recordset en lecture seule.  
+##  <a name="_core_determining_whether_your_recordset_is_updatable"></a>Déterminer si votre jeu d’enregistrements est modifiable  
+ Un objet recordset est modifiable si la source de données est modifiable et que vous avez ouvert le jeu d’enregistrements en tant que mise à jour. Sa mise à jour dépend également de l’instruction SQL que vous utilisez, les fonctionnalités du pilote ODBC, et si la bibliothèque de curseurs ODBC est en mémoire. Vous ne pouvez pas mettre à jour une source de données ou le jeu d’enregistrements en lecture seule.  
   
-#### Pour déterminer si le recordset est modifiable  
+#### <a name="to-determine-whether-your-recordset-is-updatable"></a>Pour déterminer si le jeu d’enregistrements est modifiable  
   
-1.  Appelez la fonction membre [CanUpdate](../Topic/CRecordset::CanUpdate.md) de l'objet recordset.  
+1.  Appelez l’objet recordset [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) fonction membre.  
   
-     `CanUpdate` retourne une valeur différente de zéro si le recordset est modifiable.  
+     `CanUpdate`Retourne une valeur différente de zéro si le jeu d’enregistrements est modifiable.  
   
- Par défaut, les recordsets sont entièrement modifiables \(vous pouvez effectuer les opérations `AddNew`, **Edit** et **Delete**\).  Mais vous pouvez également utiliser l'option [appendOnly](../Topic/CRecordset::Open.md) pour ouvrir des recordsets modifiables.  Un recordset ouvert de cette façon ne permet que l'ajout de nouveaux enregistrements à l'aide de `AddNew`.  Il n'est pas possible de modifier ou de supprimer des enregistrements existants.  Vous pouvez tester si un recordset est uniquement ouvert pour l'ajout en appelant la fonction membre [CanAppend](../Topic/CRecordset::CanAppend.md).  `CanAppend` retourne une valeur différente de zéro si le recordset est complètement modifiable ou ouvert uniquement pour l'ajout.  
+ Par défaut, les jeux d’enregistrements est entièrement modifiables (vous pouvez effectuer `AddNew`, **modifier**, et **supprimer** operations). Mais vous pouvez également utiliser le [appendOnly](../../mfc/reference/crecordset-class.md#open) option pour ouvrir des recordsets modifiables. Un jeu d’enregistrements ouvert de cette façon permet uniquement l’ajout de nouveaux enregistrements avec `AddNew`. Vous ne pouvez pas modifier ou supprimer des enregistrements existants. Vous pouvez tester si un jeu d’enregistrements est ouvert uniquement pour l’ajout en appelant le [CanAppend](../../mfc/reference/crecordset-class.md#canappend) fonction membre. `CanAppend`Retourne une valeur différente de zéro si le jeu d’enregistrements est modifiable ou ouvert uniquement pour l’ajout.  
   
- Le code suivant illustre comment vous pouvez utiliser `CanUpdate` pour un objet recordset appelé `rsStudentSet` :  
+ Le code suivant montre comment vous pouvez utiliser `CanUpdate` pour un objet recordset appelé `rsStudentSet`:  
   
 ```  
 if( !rsStudentSet.Open( ) )  
@@ -90,30 +93,30 @@ if( !rsStudentSet.CanUpdate( ) )
 ```  
   
 > [!CAUTION]
->  Lorsque vous vous préparez à modifier un recordset en appelant **Update**, prenez soin que le recordset comporte toutes les colonnes composant la clé primaire de la table \(ou toutes les colonnes d'un index unique de la table\).  Dans certains cas, l'infrastructure ne peut utiliser que les colonnes sélectionnées dans le recordset pour identifier l'enregistrement de la table à modifier.  Sans toutes les colonnes nécessaires, plusieurs enregistrements risquent d'être modifiés dans la table et l'intégrité référentielle de celle\-ci peut s'en trouver altérée.  Dans ce cas, l'infrastructure lève une exception quand vous appelez **Update**.  
+>  Lorsque vous vous préparez à mettre à jour un jeu d’enregistrements en appelant **mettre à jour**, prenez soin que le jeu d’enregistrements comporte toutes les colonnes constituant la clé primaire de la table (ou toutes les colonnes d’un index unique sur la table). Dans certains cas, l’infrastructure peut utiliser uniquement les colonnes sélectionnées dans le jeu d’enregistrements pour identifier l’enregistrement de la table à mettre à jour. Sans toutes les colonnes nécessaires, plusieurs enregistrements peuvent être mis à jour dans la table, éventuellement endommager l’intégrité référentielle de la table. Dans ce cas, le framework lève des exceptions lorsque vous appelez **mise à jour**.  
   
-##  <a name="_core_adding_a_record_to_a_recordset"></a> Ajout d'un enregistrement à un recordset  
- Vous pouvez ajouter de nouveaux enregistrements à un recordset si sa fonction membre [CanAppend](../Topic/CRecordset::CanAppend.md) retourne une valeur différente de zéro.  
+##  <a name="_core_adding_a_record_to_a_recordset"></a>Ajout d’un enregistrement à un jeu d’enregistrements  
+ Vous pouvez ajouter de nouveaux enregistrements à un jeu d’enregistrements si sa [CanAppend](../../mfc/reference/crecordset-class.md#canappend) fonction membre retourne une valeur différente de zéro.  
   
-#### Pour ajouter un nouvel enregistrement à un recordset  
+#### <a name="to-add-a-new-record-to-a-recordset"></a>Pour ajouter un nouvel enregistrement à un jeu d’enregistrements  
   
-1.  Assurez\-vous que des enregistrements peuvent être ajoutés au recordset.  
+1.  Assurez-vous que le jeu d’enregistrements est modifiable.  
   
-2.  Appelez la fonction membre [AddNew](../Topic/CRecordset::AddNew.md) de l'objet recordset.  
+2.  Appelez l’objet recordset [AddNew](../../mfc/reference/crecordset-class.md#addnew) fonction membre.  
   
-     `AddNew` prépare le recordset de telle sorte qu'il fasse office de tampon d'édition.  Tous les membres de données de type champ sont définis avec la valeur particulière Null et marqués comme non modifiés, de sorte que seules les valeurs modifiées \(« dirty »\) sont écrites dans la source de données lorsque vous appelez [Update](../Topic/CRecordset::Update.md).  
+     `AddNew`prépare le jeu d’enregistrements en tant que tampon d’édition. Tous les membres de données de champ sont définis sur la valeur spéciale Null et marqués comme non modifié afin que modifié (erronée) les valeurs sont écrites dans la source de données lorsque vous appelez [mise à jour](../../mfc/reference/crecordset-class.md#update).  
   
-3.  Définissez les valeurs des membres de données de type champ du nouvel enregistrement.  
+3.  Définir les valeurs des membres de données de champ du nouvel enregistrement.  
   
-     Assignez des valeurs aux membres de données de type champ.  Ceux auxquels ne sont pas assignées de valeurs ne sont pas écrits dans la source de données.  
+     Assigner des valeurs aux membres de données de champ. Ceux que vous n’affectez pas ne sont pas écrites dans la source de données.  
   
-4.  Appelez la fonction membre **Update** de l'objet recordset.  
+4.  Appelez l’objet recordset **mise à jour** fonction membre.  
   
-     **Update** termine l'ajout en écrivant le nouvel enregistrement dans la source de données.  Pour plus d'informations sur ce qui se passe en cas d'échec de l'appel de la fonction **Update**, consultez [Recordset : modification des enregistrements par les recordsets \(ODBC\)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
+     **Mise à jour** termine l’ajout en écrivant le nouvel enregistrement à la source de données. Pour plus d’informations sur se produit si vous ne pouvez pas appeler **mise à jour**, consultez [Recordset : modification des enregistrements de jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
   
- Pour plus d'informations sur le fonctionnement de l'ajout d'enregistrements et sur la disponibilité des enregistrements ajoutés dans le recordset, consultez [Recordset : fonctionnement d'AddNew, Edit et Delete \(ODBC\)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md).  
+ Pour plus d’informations sur le fonctionnement de l’ajout d’enregistrements et lorsque les enregistrements ajoutés sont visibles dans le jeu d’enregistrements, consultez [Recordset : fonctionnement d’AddNew, Edit et Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md).  
   
- L'exemple suivant illustre l'ajout d'un nouvel enregistrement :  
+ L’exemple suivant montre comment ajouter un nouvel enregistrement :  
   
 ```  
 if( !rsStudent.Open( ) )  
@@ -132,32 +135,32 @@ if( !rsStudent.Update( ) )
 ```  
   
 > [!TIP]
->  Pour annuler un appel de `AddNew` ou **Edit**, effectuez simplement un nouvel appel de `AddNew` ou **Edit** ou appelez **Move** avec le paramètre **AFX\_MOVE\_REFRESH**.  Les membres de données sont réinitialisés à leurs valeurs précédentes et vous demeurez en mode **Edit** ou **Add**.  
+>  Pour annuler un `AddNew` ou **modifier** appeler, rendez un autre appel à `AddNew` ou **modifier** ou appelez **déplacer** avec la **AFX_MOVE_REFRESH**  paramètre. Membres de données sont réinitialisés à leurs valeurs précédentes et vous êtes toujours dans **modifier** ou **ajouter** mode.  
   
-##  <a name="_core_editing_a_record_in_a_recordset"></a> Modification d'un enregistrement dans un recordset  
- Vous pouvez modifier des enregistrements existants si la fonction membre [CanUpdate](../Topic/CRecordset::CanUpdate.md) de votre recordset retourne une valeur différente de zéro.  
+##  <a name="_core_editing_a_record_in_a_recordset"></a>Modification d’un enregistrement dans un jeu d’enregistrements  
+ Vous pouvez modifier des enregistrements existants si le jeu d’enregistrements [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) fonction membre retourne une valeur différente de zéro.  
   
-#### Pour modifier un enregistrement existant dans un recordset  
+#### <a name="to-edit-an-existing-record-in-a-recordset"></a>Pour modifier un enregistrement existant dans un jeu d’enregistrements  
   
-1.  Assurez\-vous que le recordset est modifiable.  
+1.  Assurez-vous que le jeu d’enregistrements est modifiable.  
   
-2.  Accédez à l'enregistrement à mettre à jour.  
+2.  Accédez à l’enregistrement que vous souhaitez mettre à jour.  
   
-3.  Appelez la fonction membre [Edit](../Topic/CRecordset::Edit.md) de l'objet recordset.  
+3.  Appelez l’objet recordset [modifier](../../mfc/reference/crecordset-class.md#edit) fonction membre.  
   
-     **Edit** prépare le recordset de telle sorte qu'il fasse office de tampon d'édition.  Tous les membres de données de type champ sont marqués de sorte que le recordset peut savoir, par la suite, s'ils ont été modifiés.  Les nouvelles valeurs des membres de données de type champ modifiés sont écrites dans la source de données quand vous appelez [Update](../Topic/CRecordset::Update.md).  
+     **Modifier** prépare le jeu d’enregistrements en tant que tampon d’édition. Tous les membres de données de champ sont marqués pour que le jeu d’enregistrements peut indiquer ultérieurement s’ils ont été modifiés. Les nouvelles valeurs des membres de données de champ modifiés sont écrites dans la source de données lorsque vous appelez [mise à jour](../../mfc/reference/crecordset-class.md#update).  
   
-4.  Définissez les valeurs des membres de données de type champ du nouvel enregistrement.  
+4.  Définir les valeurs des membres de données de champ du nouvel enregistrement.  
   
-     Assignez des valeurs aux membres de données de type champ.  Les membres auxquels ne sont pas assignées de valeurs demeurent inchangés.  
+     Assigner des valeurs aux membres de données de champ. Ces derniers que vous n’affectez pas de valeurs rester inchangées.  
   
-5.  Appelez la fonction membre **Update** de l'objet recordset.  
+5.  Appelez l’objet recordset **mise à jour** fonction membre.  
   
-     **Update** termine la modification en écrivant l'enregistrement modifié dans la source de données.  Pour plus d'informations sur ce qui se passe en cas d'échec de l'appel de la fonction **Update**, consultez [Recordset : modification des enregistrements par les recordsets \(ODBC\)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
+     **Mise à jour** termine la modification en écrivant l’enregistrement modifié dans la source de données. Pour plus d’informations sur se produit si vous ne pouvez pas appeler **mise à jour**, consultez [Recordset : modification des enregistrements de jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
   
- Après que vous avez modifié un enregistrement, celui\-ci demeure l'enregistrement courant.  
+ Après avoir modifié un enregistrement, celui-ci demeure l’enregistrement actif.  
   
- L'exemple suivant montre une opération **Edit**.  L'exemple présume que l'utilisateur a atteint l'enregistrement qu'il souhaite modifier.  
+ L’exemple suivant montre une **modifier** opération. Il suppose que l’utilisateur a été déplacé vers un enregistrement qu’il souhaite modifier.  
   
 ```  
 rsStudent.Edit( );  
@@ -173,37 +176,37 @@ if( !rsStudent.Update( ) )
 ```  
   
 > [!TIP]
->  Pour annuler un appel de `AddNew` ou **Edit**, effectuez simplement un nouvel appel de `AddNew` ou **Edit** ou appelez **Move** avec le paramètre **AFX\_MOVE\_REFRESH**.  Les membres de données sont réinitialisés à leurs valeurs précédentes et vous demeurez en mode **Edit** ou **Add**.  
+>  Pour annuler un `AddNew` ou **modifier** appeler, rendez un autre appel à `AddNew` ou **modifier** ou appelez **déplacer** avec la **AFX_MOVE_REFRESH**  paramètre. Membres de données sont réinitialisés à leurs valeurs précédentes et vous êtes toujours dans **modifier** ou **ajouter** mode.  
   
-##  <a name="_core_deleting_a_record_from_a_recordset"></a> Suppression d'un enregistrement du recordset  
- Vous pouvez supprimer des enregistrements si la fonction membre [CanUpdate](../Topic/CRecordset::CanUpdate.md) de votre recordset retourne une valeur différente de zéro.  
+##  <a name="_core_deleting_a_record_from_a_recordset"></a>Suppression d’un enregistrement à partir d’un jeu d’enregistrements  
+ Vous pouvez supprimer des enregistrements si votre jeu d’enregistrements [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) fonction membre retourne une valeur différente de zéro.  
   
-#### Pour supprimer un enregistrement  
+#### <a name="to-delete-a-record"></a>Pour supprimer un enregistrement  
   
-1.  Assurez\-vous que le recordset est modifiable.  
+1.  Assurez-vous que le jeu d’enregistrements est modifiable.  
   
-2.  Accédez à l'enregistrement à mettre à jour.  
+2.  Accédez à l’enregistrement que vous souhaitez mettre à jour.  
   
-3.  Appelez la fonction membre [Delete](../Topic/CRecordset::Delete.md) de l'objet recordset.  
+3.  Appelez l’objet recordset [supprimer](../../mfc/reference/crecordset-class.md#delete) fonction membre.  
   
-     **Delete** marque immédiatement l'enregistrement comme supprimé, à la fois dans le recordset et dans la source de données.  
+     **Supprimer** marque immédiatement l’enregistrement comme supprimé, à la fois dans le jeu d’enregistrements et sur la source de données.  
   
-     Contrairement à `AddNew` et **Edit**, **Delete** n'appelle pas la fonction **Update**.  
+     Contrairement aux `AddNew` et **modifier**, **supprimer** n’est associée à aucun **mise à jour** appeler.  
   
-4.  Accédez par défilement à un autre enregistrement.  
+4.  Accédez à un autre enregistrement.  
   
     > [!NOTE]
-    >  Lorsque vous vous déplacez dans un recordset, les enregistrements supprimés ne peuvent pas être ignorés.  Pour plus d'informations, consultez la fonction membre [IsDeleted](../Topic/CRecordset::IsDeleted.md).  
+    >  Lorsque vous déplacez le jeu d’enregistrements, enregistrements supprimés ne peuvent pas être ignorés. Pour plus d’informations, consultez la [IsDeleted](../../mfc/reference/crecordset-class.md#isdeleted) fonction membre.  
   
- L'exemple suivant montre une opération **Delete**.  L'exemple présume que l'utilisateur a atteint l'enregistrement qu'il souhaite supprimer.  Après l'appel de **Delete**, il est important de se déplacer jusqu'à un nouvel enregistrement.  
+ L’exemple suivant montre un **supprimer** opération. Il suppose que l’utilisateur a été déplacé vers un enregistrement de l’utilisateur souhaite supprimer. Après avoir **supprimer** est appelée, il est important de se déplacer vers un nouvel enregistrement.  
   
 ```  
 rsStudent.Delete( );  
 rsStudent.MoveNext( );  
 ```  
   
- Pour plus d'informations sur les conséquences des fonctions membres `AddNew`, **Edit** et **Delete**, consultez [Recordset : modification des enregistrements par les recordsets \(ODBC\)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
+ Pour plus d’informations sur les effets de la `AddNew`, **modifier**, et **supprimer** fonctions membres, consultez [Recordset : mise à jour des enregistrements de jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
   
-## Voir aussi  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Recordset : verrouillage d'enregistrements \(ODBC\)](../../data/odbc/recordset-locking-records-odbc.md)
+## <a name="see-also"></a>Voir aussi  
+ [Jeu d’enregistrements (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Recordset : verrouillage d’enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

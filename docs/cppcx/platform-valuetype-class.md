@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 2f39c4f74e439fe50c13aabe2a07024536058be4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4dba418e74affb2531e3ebbd43d95c35601e9a26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformvaluetype-class"></a>Platform::ValueType (classe)
 Classe de base pour les instances de types de valeur.  
@@ -36,10 +37,10 @@ public ref class ValueType : Object
 |-|-|  
 |[ValueType::ToString](#tostring)|Retourne une représentation sous forme de chaîne de l’objet. Hérité de [Platform::Object](../cppcx/platform-object-class.md).|  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La classe ValueType est utilisée pour construire des types valeur. ValueType est dérivée d’Object, qui a des membres de base. Toutefois, le compilateur détache ces membres de base des types valeur qui sont dérivés de la classe ValueType. Le compilateur réattache ces membres de base lorsqu’un type valeur est boxed.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **Minimum pris en charge le client :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -26,36 +25,21 @@ apitype: DLLExport
 f1_keywords:
 - memchr
 - wmemchr
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: aad3d578cececad6af6a6f4aaf1107460a23d784
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f0eb93347f76c7becf44fb7f36fb066fe41f3f41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 Rechercher des caractères dans une mémoire tampon.  
@@ -111,9 +95,9 @@ const wchar_t *wmemchr(
 ## <a name="remarks"></a>Notes  
  `memchr` et `wmemchr` recherchent la première occurrence de `c` dans les `count` premiers octets de `buf`. Elles s’arrêtent quand elles trouvent `c` ou qu’elles ont vérifié les `count` premiers octets.  
   
- En C, ces fonctions acceptent un pointeur `const` comme premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers `const` retourne un pointeur vers `const` ; la version qui accepte un pointeur vers non-`const` retourne un pointeur vers non-`const`. La macro _CONST_CORRECT_OVERLOADS est définie si les versions `const` et non-`const` de ces fonctions sont disponibles. Si vous avez besoin d’un comportement non-`const` pour les deux surcharges C++ dans C++, définissez le symbole _CONST_RETURN.  
+ En C, ces fonctions acceptent un pointeur `const` comme premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers `const` retourne un pointeur vers `const` ; la version qui accepte un pointeur vers non-`const` retourne un pointeur vers non-`const`. La macro _CRT_CONST_CORRECT_OVERLOADS est défini si les deux le `const` et non-`const` versions de ces fonctions sont disponibles. Si vous avez besoin d’un comportement non-`const` pour les deux surcharges C++ dans C++, définissez le symbole _CONST_RETURN.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

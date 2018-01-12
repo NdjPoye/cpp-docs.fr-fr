@@ -1,37 +1,40 @@
 ---
-title: "Extraction de donn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "données (C++), extraction"
-  - "extraction"
-  - "OLE DB (modèles du consommateur) (C++), récupérer les données"
-  - "jeux de lignes (C++), extraction"
+title: "Extraction de données | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data [C++], fetching
+- rowsets [C++], fetching
+- fetching
+- OLE DB consumer templates [C++], fetching data
 ms.assetid: b07f747f-9855-4f27-a03d-b1d5b10fa284
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b18847666d4f0f57d23e9b179e3e186a1b3ff736
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Extraction de donn&#233;es
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Après avoir ouvert les objets source de données, session et jeu de lignes, vous pouvez extraire les données.  Selon le type d'accesseur que vous utilisez, vous devrez peut\-être lier les colonnes.  
+# <a name="fetching-data"></a>Récupération de données
+Après avoir ouvert la source de données, de session et objets d’ensemble de lignes, vous pouvez extraire les données. Selon le type d’accesseur que vous utilisez, vous devrez peut-être lier les colonnes.  
   
-### Pour extraire des données  
+### <a name="to-fetch-data"></a>Pour extraire des données  
   
-1.  Ouvrez le jeu de lignes en utilisant la commande **Ouvrir** appropriée.  
+1.  Ouvrir l’ensemble de lignes en utilisant le pilote **ouvrir** commande.  
   
-2.  Si vous utilisez `CManualAccessor`, liez les colonnes de sortie, si ce n'est déjà fait.  Pour lier les colonnes, appelez `GetColumnInfo`, puis créez un accesseur avec les liaisons, comme illustré dans l'exemple suivant :  
+2.  Si vous utilisez `CManualAccessor`, liez les colonnes de sortie si vous ne le n'avez pas déjà fait. Pour lier les colonnes, appelez `GetColumnInfo`, puis créez un accesseur avec les liaisons, comme illustré dans l’exemple suivant :  
   
     ```  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
@@ -48,7 +51,7 @@ Après avoir ouvert les objets source de données, session et jeu de lignes, vou
     rs.Bind();  
     ```  
   
-3.  Écrivez une boucle `while` pour récupérer les données.  Dans la boucle, appelez `MoveNext` pour déplacer le curseur et comparez la valeur de retour à S\_OK, comme le montre l'exemple suivant :  
+3.  Écrire un `while` boucle pour récupérer les données. Dans la boucle, appelez `MoveNext` pour faire avancer le curseur et de tester la valeur de retour à S_OK, comme illustré dans l’exemple suivant :  
   
     ```  
     while (rs.MoveNext() == S_OK)  
@@ -58,9 +61,9 @@ Après avoir ouvert les objets source de données, session et jeu de lignes, vou
     }  
     ```  
   
-4.  Dans la boucle `while`, vous pouvez extraire les données en fonction du type d'accesseur.  
+4.  Dans la `while` boucle, vous pouvez extraire les données en fonction du type d’accesseur.  
   
-    -   Si vous utilisez la classe [CAccessor](../../data/oledb/caccessor-class.md), vous devez avoir un enregistrement utilisateur qui contient des données membres.  Vous pouvez accéder aux données en utilisant ces données membres, comme indiqué dans l'exemple suivant :  
+    -   Si vous utilisez la [CAccessor](../../data/oledb/caccessor-class.md) (classe), vous devez avoir un enregistrement d’utilisateur qui contient les membres de données. Vous pouvez accéder vos données à l’aide de ces données membres, comme indiqué dans l’exemple suivant :  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -72,7 +75,7 @@ Après avoir ouvert les objets source de données, session et jeu de lignes, vou
         }  
         ```  
   
-    -   Si vous utilisez la classe `CDynamicAccessor` ou `CDynamicParameterAccessor`, vous pouvez extraire les données en utilisant les fonctions d'accès `GetValue` et `GetColumn`, comme le montre l'exemple suivant.  Si vous voulez déterminer le type de données que vous utilisez, faites appel à `GetType`.  
+    -   Si vous utilisez la `CDynamicAccessor` ou `CDynamicParameterAccessor` (classe), vous pouvez extraire les données en utilisant les fonctions d’accès `GetValue` et `GetColumn`, comme illustré dans l’exemple suivant. Si vous souhaitez déterminer le type de données que vous utilisez, utilisez `GetType`.  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -87,7 +90,7 @@ Après avoir ouvert les objets source de données, session et jeu de lignes, vou
         }  
         ```  
   
-    -   Si vous utilisez `CManualAccessor`, vous devez spécifier vos propres données membres, les lier vous\-même et y accéder directement, comme indiqué dans l'exemple suivant :  
+    -   Si vous utilisez `CManualAccessor`, vous devez spécifier vos propres données membres, les lier et accéder directement, comme indiqué dans l’exemple suivant :  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -99,5 +102,5 @@ Après avoir ouvert les objets source de données, session et jeu de lignes, vou
         }  
         ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utilisation des modèles du consommateur OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

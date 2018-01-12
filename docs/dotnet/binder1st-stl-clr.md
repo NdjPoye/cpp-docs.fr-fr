@@ -1,32 +1,33 @@
 ---
-title: "binder1st (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binder1st"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binder1st (fonction) (STL/CLR)"
+title: binder1st (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binder1st
+dev_langs: C++
+helpviewer_keywords: binder1st function [STL/CLR]
 ms.assetid: a989c9cc-a485-45d9-bd19-519018e6974b
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 550340bad45c6a71a633f7924afdd0eaf775005f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# binder1st (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe du modèle décrit un functor d'un argument qui, lorsqu'il est appelé, retourne son functor à deux arguments appelé avec le premier argument stocké et le deuxième argument fourni.  Vous utilisez pour spécifier un objet fonction au niveau de son functor stocké.  
+# <a name="binder1st-stlclr"></a>binder1st (STL/CLR)
+La classe de modèle décrit un functor un argument qui, lorsqu’elle est appelée, retourne sa functor deux arguments stockée appelée avec le premier argument stockée et le deuxième argument fourni. Vous l’utilisez spécifier un objet de fonction en termes de son functor stockée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Fun>  
@@ -49,35 +50,35 @@ public:
     };  
 ```  
   
-#### Paramètres  
- Fun  
- Le type de functor stocké.  
+#### <a name="parameters"></a>Paramètres  
+ amusement  
+ Le type de la fonction stockée.  
   
-## Fonctions membres  
+## <a name="member-functions"></a>Fonctions membres  
   
-|Définition de type|Description|  
-|------------------------|-----------------|  
-|type\_délégué|Le type du délégué générique.|  
-|premier\_type\_argument|Le type du premier argument de foncteur|  
-|resultat\_type|Le type du premier argument du résultat du foncteur.|  
-|second\_type\_argument|Le type du deuxième argument de foncteur.|  
-|type\_de\_fonction\_stocké|Type du foncteur.|  
+|Définition de types|Description|  
+|---------------------|-----------------|  
+|delegate_type|Le type du délégué générique.|  
+|first_argument_type|Le type du premier argument functor.|  
+|RESULT_TYPE|Le type du résultat functor.|  
+|second_argument_type|Le type du second argument functor.|  
+|stored_function_type|Le type de foncteur.|  
   
 |Membre|Description|  
 |------------|-----------------|  
 |binder1st|Construit le foncteur.|  
   
 |Opérateur|Description|  
-|---------------|-----------------|  
-|\(\) \(opérateur\)|Calcule la fonction souhaitée.|  
-|opérateur type\_délégué^\(\)|Convertit le foncteur en un délégué.|  
+|--------------|-----------------|  
+|operator()|Calcule la fonction de votre choix.|  
+|opérateur delegate_type^()|Effectue un cast de la fonction d’un délégué.|  
   
-## Notes  
- La classe du modèle décrit un functor d'une argument qui stocke un functor de deux arguments et un premier argument.  Elle définit l'opérateur membre `operator()` afin que, lorsque l'objet est appelé en tant que fonction, elle retourne le résultat de l'appel du functor stockées au premier argument stocké et le deuxième argument fourni.  
+## <a name="remarks"></a>Notes  
+ La classe de modèle décrit un functor un argument qui stocke un functor deux arguments et un premier argument. Il définit l’opérateur membre `operator()` , afin que, lorsque l’objet est appelée en tant que fonction, elle retourne le résultat de l’appel de la fonction stockée avec le premier argument stocké et le deuxième argument fourni.  
   
- Vous pouvez également transmettre l'objet comme argument de fonction dont le type est `delegate_type^` et il sera converti de façon appropriée.  
+ Vous pouvez également passer l’objet comme un argument de fonction dont le type est `delegate_type^` et il sera converti en conséquence.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_binder1st.cpp   
@@ -120,13 +121,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **\-1 0**  
- **\-1 0**   
-## Configuration requise  
- **En\-tête :** \<cliext\/functional\>  
+```Output  
+4 3  
+-1 0  
+-1 0  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/fonctionnel >  
   
-## Voir aussi  
- [bind1st](../dotnet/bind1st-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [bind1st (STL/CLR)](../dotnet/bind1st-stl-clr.md)

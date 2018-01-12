@@ -1,36 +1,38 @@
 ---
-title: "IRowsetInfoImpl::GetProperties | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IRowsetInfoImpl.GetProperties"
-  - "IRowsetInfoImpl.GetProperties"
-  - "ATL::IRowsetInfoImpl::GetProperties"
-  - "IRowsetInfoImpl::GetProperties"
-  - "GetProperties"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetProperties (méthode)"
+title: IRowsetInfoImpl::GetProperties | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IRowsetInfoImpl.GetProperties
+- IRowsetInfoImpl.GetProperties
+- ATL::IRowsetInfoImpl::GetProperties
+- IRowsetInfoImpl::GetProperties
+- GetProperties
+dev_langs: C++
+helpviewer_keywords: GetProperties method
 ms.assetid: 62c12063-28e0-4a06-ad4d-21c5c1e9ccea
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c1b45cc94236d02bd7b7e8174de9752192c7e3c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetInfoImpl::GetProperties
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retourne les paramètres actuels des propriétés du groupe de **DBPROPSET\_ROWSET**.  
+# <a name="irowsetinfoimplgetproperties"></a>IRowsetInfoImpl::GetProperties
+Retourne les paramètres actuels pour les propriétés dans le **DBPROPSET_ROWSET** groupe.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -42,13 +44,13 @@ Retourne les paramètres actuels des propriétés du groupe de **DBPROPSET\_ROWS
 );  
 ```  
   
-#### Paramètres  
- Consultez [IRowsetInfo::GetProperties](https://msdn.microsoft.com/en-us/library/ms719611.aspx) dans *OLE DB Programmer's Reference*.  
+#### <a name="parameters"></a>Paramètres  
+ Consultez [IRowsetInfo::GetProperties](https://msdn.microsoft.com/en-us/library/ms719611.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
- [IRowsetInfoImpl, classe](../../data/oledb/irowsetinfoimpl-class.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Irowsetinfoimpl, classe](../../data/oledb/irowsetinfoimpl-class.md)   
  [IRowsetInfoImpl::GetReferencedRowset](../../data/oledb/irowsetinfoimpl-getreferencedrowset.md)   
  [IRowsetInfoImpl::GetSpecification](../../data/oledb/irowsetinfoimpl-getspecification.md)

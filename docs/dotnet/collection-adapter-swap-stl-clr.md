@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ef46dd324b2da8ed34298c82245af25ef0ce479b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fdf4e8230745f92a99ce9392b1cbeb3855c47086
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collectionadapterswap-stlclr"></a>collection_adapter::swap (STL/CLR)
 Échange le contenu de deux conteneurs.  
@@ -34,7 +37,7 @@ void swap(collection_adapter<Coll>% right);
  droite  
  Conteneur avec lequel échanger le contenu.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction membre échange les poignées BCL stockées entre `*this` et `right`.  
   
 ## <a name="example"></a>Exemple  
@@ -88,7 +91,7 @@ x x x x x
 a b c  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/carte >  
   
  **Namespace :** cliext  

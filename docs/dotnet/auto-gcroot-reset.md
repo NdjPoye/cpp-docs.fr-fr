@@ -1,35 +1,37 @@
 ---
-title: "auto_gcroot::reset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::auto_gcroot::reset"
-  - "auto_gcroot::reset"
-  - "msclr.auto_gcroot.reset"
-  - "auto_gcroot.reset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reset (méthode)"
+title: auto_gcroot::Reset | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::auto_gcroot::reset
+- auto_gcroot::reset
+- msclr.auto_gcroot.reset
+- auto_gcroot.reset
+dev_langs: C++
+helpviewer_keywords: reset method
 ms.assetid: dd58467f-3885-4a15-99fb-ed6dd5d19622
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2dc5664ba1313fa09229447c0a86eec2b2b7b31f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# auto_gcroot::reset
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Détruisez l'objet détenu actuel et prenez éventuellement possession d'un nouvel objet.  
+# <a name="autogcrootreset"></a>auto_gcroot::reset
+Détruire l’objet enfant en cours et éventuellement prendre possession d’un nouvel objet.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void reset(  
@@ -37,11 +39,11 @@ void reset(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `_new_ptr`  
- \(Facultatif\) Le nouvel objet.  
+ (Facultatif) Le nouvel objet.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // msl_auto_gcroot_reset.cpp  
@@ -81,19 +83,22 @@ int main()
 }  
 ```  
   
-  **Constructeur de ClassA : premier**  
-**Bonjour du premier A\!**  
-**Constructeur de ClassA : deuxième**  
-**Destructeur de ClassA : premier**  
-**Bonjour du deuxième A \!**  
-**Destructeur de ClassA : deuxième**  
-**done**   
-## Configuration requise  
- **Fichier d'en\-tête** \<msclr\\auto\_gcroot.h\>  
+```Output  
+ClassA constructor: first  
+Hello from first A!  
+ClassA constructor: second  
+ClassA destructor: first  
+Hello from second A!  
+ClassA destructor: second  
+done  
+```  
   
- **Espace de noms** msclr  
+## <a name="requirements"></a>Configuration requise  
+ **Fichier d’en-tête** \<msclr\auto_gcroot.h >  
   
-## Voir aussi  
- [auto\_gcroot, membres](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::release](../dotnet/auto-gcroot-release.md)   
- [auto\_gcroot::attach](../dotnet/auto-gcroot-attach.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Voir aussi  
+ [auto_gcroot, membres](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::Release](../dotnet/auto-gcroot-release.md)   
+ [auto_gcroot::attach](../dotnet/auto-gcroot-attach.md)

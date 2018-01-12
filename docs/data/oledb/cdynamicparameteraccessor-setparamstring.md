@@ -1,70 +1,72 @@
 ---
-title: "CDynamicParameterAccessor::SetParamString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDynamicParameterAccessor.SetParamString"
-  - "ATL::CDynamicParameterAccessor::SetParamString"
-  - "SetParamString"
-  - "CDynamicParameterAccessor::SetParamString"
-  - "CDynamicParameterAccessor.SetParamString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetParamString (méthode)"
+title: CDynamicParameterAccessor::SetParamString | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDynamicParameterAccessor.SetParamString
+- ATL::CDynamicParameterAccessor::SetParamString
+- SetParamString
+- CDynamicParameterAccessor::SetParamString
+- CDynamicParameterAccessor.SetParamString
+dev_langs: C++
+helpviewer_keywords: SetParamString method
 ms.assetid: 77a38d23-7e33-4e5a-bda6-c12c4c3fe2e4
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 75d6e9887b609349a092bb67e55508ca1429387b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::SetParamString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Définit les données de chaîne du paramètre stocké en mémoire tampon.  
+# <a name="cdynamicparameteraccessorsetparamstring"></a>CDynamicParameterAccessor::SetParamString
+Définit les données de chaîne du paramètre spécifié stocké en mémoire tampon.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      bool SetParamString(   
-   DBORDINAL nParam,   
-   const CHAR* pString,   
-   DBSTATUS status = DBSTATUS_S_OK    
+      bool SetParamString(   
+   DBORDINAL nParam,   
+   const CHAR* pString,   
+   DBSTATUS status = DBSTATUS_S_OK    
 ) throw( );  
-bool SetParamString(   
-   DBORDINAL nParam,   
-   const WCHAR* pString,   
-   DBSTATUS status = DBSTATUS_S_OK    
+bool SetParamString(   
+   DBORDINAL nParam,   
+   const WCHAR* pString,   
+   DBSTATUS status = DBSTATUS_S_OK    
 ) throw( );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `nParam`  
- \[in\] Le nombre de paramètre \(décalage de 1\).  Le paramètre 0 est réservé pour les valeurs de retour.  Le numéro de paramètre représente l'index du paramètre en fonction de son ordre dans l'appel SQL ou celui d'une procédure stockée.  Consultez [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) pour obtenir un exemple.  
+ [in] Le numéro de paramètre (offset à partir de 1). Le paramètre 0 est réservé pour les valeurs de retournés. Le paramètre est l’index du paramètre en fonction de son ordre dans le SQL ou d’un appel de procédure stockée. Consultez [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) pour obtenir un exemple.  
   
  `pString`  
- \[in\] Un pointeur vers les données de chaîne ANSI \(**CHAR**\) ou Unicode \(**WCHAR**\) du paramètre.  Voir `DBSTATUS` dans oledb.h.  
+ [in] Un pointeur vers l’ANSI (**CHAR**) ou Unicode (**WCHAR**) chaîne de données du paramètre spécifié. Consultez `DBSTATUS` dans oledb.h.  
   
  *status*  
- \[in\] L'état `DBSTATUS` du paramètre spécifié.  Pour plus d'informations sur les valeurs de `DBSTATUS`, consultez l'[État](https://msdn.microsoft.com/en-us/library/ms722617.aspx) dans *OLE DB guide de référence du programmeur*, ou recherchez dans `DBSTATUS` oledb.h.  
+ [in] Le `DBSTATUS` état du paramètre spécifié. Pour plus d’informations sur `DBSTATUS` valeurs, consultez [état](https://msdn.microsoft.com/en-us/library/ms722617.aspx) dans les *de référence du programmeur OLE DB*, ou recherchez `DBSTATUS` dans oledb.h.  
   
-## Notes  
- Retourne la valeur **vrai** en cas de réussite, ou **faux** en cas d'échec.  
+## <a name="remarks"></a>Notes  
+ Retourne **true** en cas de réussite ou **false** en cas d’échec.  
   
- `SetParamString` échouera si vous essayez de définir une chaîne qui dépasse la taille maximale pour `pString`.  
+ `SetParamString`échoue si vous essayez de définir une chaîne qui est supérieure à la taille maximale spécifiée pour `pString`.  
   
- Utilisez`SetParamString` pour définir les paramètre de chaîne dans la mémoire tampon.  Utilisez [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) pour définir les données qui ne sont pas de type chaîne en mémoire tampon.  
+ Utilisez `SetParamString` pour définir les données de paramètre de chaîne dans la mémoire tampon. Utilisez [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) pour définir les données de paramètre de chaîne dans la mémoire tampon.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CDynamicParameterAccessor, classe](../../data/oledb/cdynamicparameteraccessor-class.md)

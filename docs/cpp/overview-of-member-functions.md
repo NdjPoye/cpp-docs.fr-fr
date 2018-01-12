@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cfc355a58ae87bcb32d7abd72f1ff5cb6e980a6d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6389197119135e7e800a4f5ec142bf42b1ef6d39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-member-functions"></a>Vue d'ensemble des fonctions membres
 Les fonctions membres sont statique ou non statique. Le comportement des fonctions membres statique diffère d’autres fonctions membres, car les fonctions membres statiques n’ont pas implicite **cela** argument. Les fonctions membres non statiques ont un **cela** pointeur. Les fonctions membres (statique ou non statique) peuvent être définies à l'intérieur ou à l'extérieur de la déclaration de classe.  

@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 351bb06f697fa896f12f38e76b9cbd24cbf7b96f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4042e26a5831239a1a7baeead51ea3844453533b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultisetvaluetype-stlclr"></a>hash_multiset::value_type (STL/CLR)
 Type d’un élément.  
@@ -30,7 +33,7 @@ Type d’un élément.
 typedef generic_value value_type;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le type est un synonyme de `generic_value`.  
   
 ## <a name="example"></a>Exemple  
@@ -65,7 +68,7 @@ int main()
 a b c  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/hash_set >  
   
  **Namespace :** cliext  

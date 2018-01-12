@@ -34,11 +34,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fda23a5c3addaf0dc05882593d592300c4a06bef
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6434ee3c2f2ad7a1c1d4e263f4548e5dd22e630
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scalb"></a>_scalb
 Met à l’échelle un argument par une puissance de 2.  
@@ -67,7 +68,7 @@ double _scalb(
 ## <a name="remarks"></a>Notes  
  La fonction `_scalb` calcule la valeur de `x *` 2exp.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

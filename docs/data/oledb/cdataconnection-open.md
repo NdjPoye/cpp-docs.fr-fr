@@ -1,52 +1,54 @@
 ---
-title: "CDataConnection::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataConnection.Open"
-  - "ATL.CDataConnection.Open"
-  - "CDataConnection::Open"
-  - "ATL::CDataConnection::Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Open (méthode)"
+title: CDataConnection::Open | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataConnection.Open
+- ATL.CDataConnection.Open
+- CDataConnection::Open
+- ATL::CDataConnection::Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: 2c6f0c01-4954-43ba-973e-861ac8e82892
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1c97d6bbf2c603d8bb3ab703a1e97b83a8bcbb08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CDataConnection::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Établit une connexion à une source de données à l'aide d'une chaîne d'initialisation.  
+# <a name="cdataconnectionopen"></a>CDataConnection::Open
+Ouvre une connexion à une source de données à l’aide d’une chaîne d’initialisation.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      HRESULT Open(   
-   LPCOLESTR szInitString    
+      HRESULT Open(   
+   LPCOLESTR szInitString    
 ) throw( );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *szInitString*  
- \[in\] La chaîne d'initialisation pour la source de données.  
+ [in] La chaîne d’initialisation pour la source de données.  
   
-## Valeur de retour  
- Un `HRESULT` standard.  
+## <a name="return-value"></a>Valeur de retour  
+ `HRESULT` standard.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CDataConnection, classe](../../data/oledb/cdataconnection-class.md)

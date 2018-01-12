@@ -18,11 +18,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 88ba3c853bbd12c1512dbb8c70c0941718b1396f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 23b01a776a624f0fa463c7071e164b70111b2e8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crestrictions-class"></a>CRestrictions, classe
 Une classe générique qui vous permet de spécifier des restrictions pour les ensembles de lignes de schéma.  
@@ -59,7 +62,7 @@ class CRestrictions : public CSchemaRowset <
 |-|-|  
 |[Ouvrir](../../data/oledb/crestrictions-open.md)|Retourne un résultat défini selon les restrictions fournies par l’utilisateur.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbsch.h  
   
 ## <a name="see-also"></a>Voir aussi  

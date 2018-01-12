@@ -43,11 +43,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ec9c46f1a6d52a8769e5db454d44baf9ec9d8a8a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 785ad16e8f86f74252c4391044d2def96091fe61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 Mettent en forme une chaîne d’heure.  
@@ -106,7 +107,7 @@ size_t _wcsftime_l(
   
  Le nombre de caractères présents dans `strDest` est égal au nombre de caractères littéraux contenus dans `format` et des caractères éventuellement ajoutés à `format` via des codes de mise en forme. Le caractère Null de fin d’une chaîne n’est pas compté dans la valeur de retour.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `strftime` et `wcsftime` format de fonctions la `tm` temps dans `timeptr` en fonction de l’élément `format` argument et le résultat dans la mémoire tampon de magasin `strDest`. Tout au plus, des caractères `maxsize` sont placés dans la chaîne. Pour obtenir une description des champs de la structure `timeptr`, consultez [asctime](../../c-runtime-library/reference/asctime-wasctime.md). `wcsftime` est l’équivalent en caractères larges de `strftime` ; son argument de pointeur de chaîne pointe vers une chaîne de caractères larges. Ces fonctions se comportent sinon de façon identique.  
   
 > [!NOTE]
@@ -120,7 +121,7 @@ size_t _wcsftime_l(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsftime`|`strftime`|`strftime`|`wcsftime`|  
   
- L’argument `format` se compose d’un ou plusieurs codes ; comme dans `printf`, les codes de mise en forme sont précédés d’un signe de pourcentage (`%`). Les caractères qui ne commencent pas par `%` sont copiées telles quelles à `strDest`. La catégorie `LC_TIME` des paramètres régionaux actifs affecte la mise en forme de sortie de `strftime`. (Pour plus d’informations sur `LC_TIME`, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).) Les fonctions sans suffixe `_l` utilisent les paramètres régionaux actuellement définis. Les versions de ces fonctions avec suffixe `_l` sont identiques, sauf qu’elles prennent les paramètres régionaux comme paramètre et les utilisent à la place des paramètres régionaux actuellement définis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ L’argument `format` se compose d’un ou plusieurs codes ; comme dans `printf`, les codes de mise en forme sont précédés d’un signe de pourcentage (`%`). Les caractères qui ne commencent pas par `%` sont copiées telles quelles à `strDest`. La catégorie `LC_TIME` des paramètres régionaux actifs affecte la mise en forme de sortie de `strftime`. (Pour plus d’informations sur `LC_TIME`, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).) Les fonctions sans suffixe `_l` utilisent les paramètres régionaux actuellement définis. Les versions de ces fonctions avec suffixe `_l` sont identiques, sauf qu’elles prennent les paramètres régionaux comme paramètre et les utilisent à la place des paramètres régionaux actuellement définis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  Les codes de mise en forme de `strftime` sont répertoriés ci-dessous :  
   
@@ -199,7 +200,7 @@ size_t _wcsftime_l(
 |`%#x`|Représentation longue de la date correspondant aux paramètres régionaux actifs. Par exemple : « Mardi 14 mars 1995 ».|  
 |`%#d, %#H, %#I, %#j, %#m, %#M, %#S, %#U, %#w, %#W, %#y, %#Y`|Supprime les zéros non significatifs éventuels.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
@@ -208,7 +209,7 @@ size_t _wcsftime_l(
 |`_strftime_l`|\<time.h>|  
 |`_wcsftime_l`|\<time.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple relatif à [time](../../c-runtime-library/reference/time-time32-time64.md).  

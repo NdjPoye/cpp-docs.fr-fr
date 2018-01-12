@@ -16,18 +16,21 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1e7938022bfe2ba1a8f97420a217590de659d9e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2ed069e1f9d7effa686cd572bd505a41dcf60c04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-consume-a-c-indexer-ccli"></a>Comment : consommer un indexeur C# (C++/CLI)
 Visual C++ ne contient pas d’indexeur ; Il possède des propriétés indexées. Pour consommer un indexeur c#, accédez à l’indexeur comme s’il s’agissait d’une propriété indexée.  
   
  Pour plus d’informations à propos des indexeurs, consultez :  
   
--   [Indexeurs](https://msdn.microsoft.com/library/6x16t2tx.aspx)  
+-   [Indexeurs](/dotnet/csharp/programming-guide/indexers/index)  
   
 ## <a name="example"></a>Exemple  
  L’exemple de programme c# suivant définit un indexeur.  

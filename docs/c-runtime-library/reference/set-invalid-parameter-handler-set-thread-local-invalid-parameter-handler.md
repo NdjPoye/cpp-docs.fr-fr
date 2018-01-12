@@ -38,11 +38,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2eeda6539e10bd785e5b4ee63091e208ff159f43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 336a2f362ac9a67cb8bb176948fbb7b5c83329a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setinvalidparameterhandler-setthreadlocalinvalidparameterhandler"></a>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 Définit une fonction qui doit être appelée quand la bibliothèque CRT détecte un argument non valide.  
@@ -84,13 +85,13 @@ void _invalid_parameter(
   
  L’argument `expression` est une représentation de chaîne large de l’expression d’argument qui a généré l’erreur. L’argument `function` correspond au nom de la fonction CRT qui a reçu l’argument non valide. L’argument `file` correspond au nom du fichier source CRT qui contient la fonction. L’argument `line` correspond au numéro de ligne dans ce fichier. Le dernier argument est réservé. Les paramètres ont tous la valeur `NULL`, à moins qu’une version debug de la bibliothèque CRT soit utilisée.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_set_invalid_parameter_handler`, `_set_thread_local_invalid_parameter_handler`|C : \<stdlib.h><br /><br /> C++ : \<cstdlib> ou \<stdlib.h>|  
   
- Les fonctions `_set_invalid_parameter_handler` et `_set_thread_local_invalid_parameter_handler` sont propres à Microsoft. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Les fonctions `_set_invalid_parameter_handler` et `_set_thread_local_invalid_parameter_handler` sont propres à Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
  Dans l’exemple suivant, un gestionnaire d’erreur de paramètre non valide est utilisé pour imprimer la fonction qui a reçu le paramètre non valide, ainsi que le fichier et la ligne des sources CRT. Quand la bibliothèque CRT de débogage est utilisée, les erreurs de paramètre non valide déclenchent aussi une assertion, ce qui est désactivé dans cet exemple via [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md).  

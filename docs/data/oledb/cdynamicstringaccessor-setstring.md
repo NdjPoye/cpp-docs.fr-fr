@@ -1,33 +1,35 @@
 ---
-title: "CDynamicStringAccessor::SetString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicStringAccessor::SetString"
-  - "CDynamicStringAccessor.SetString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetString (méthode)"
+title: CDynamicStringAccessor::SetString | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicStringAccessor::SetString
+- CDynamicStringAccessor.SetString
+dev_langs: C++
+helpviewer_keywords: SetString method
 ms.assetid: 94846d8b-4c1b-47fe-acdc-1752981cee25
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7c05186d8ea7f62ad07cae9a4b4689083543e485
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicStringAccessor::SetString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicstringaccessorsetstring"></a>CDynamicStringAccessor::SetString
 Définit les données de la colonne spécifiée sous forme de chaîne.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 HRESULT SetString(  
@@ -44,26 +46,26 @@ HRESULT SetString(
 ) throw( );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `nColumn`  
- \[in\] Le numéro de colonne.  Les numéros de colonne commencent à 1.  La valeur spéciale de 0 fait référence à la colonne du signet le cas échéant.  
+ [in] Le numéro de colonne. Les numéros de colonne commencent à 1. La valeur spéciale 0 fait référence à la colonne de signet, le cas échéant.  
   
  `pColumnName`  
- \[in\] Un pointeur vers une chaîne de caractères contenant le nom de la colonne.  
+ [in] Pointeur vers une chaîne de caractères qui contient le nom de colonne.  
   
  `data`  
- \[in\] Un pointeur vers les données de chaîne à écrire dans la colonne spécifiée.  
+ [in] Pointeur vers les données de chaîne à écrire dans la colonne spécifiée.  
   
-## Valeur de retour  
- Pointeur vers la valeur de chaîne à laquelle il faut définir la colonne spécifiée.  La valeur est de type `BaseType`, qui sera `CHAR` ou selon que `_UNICODE` de `WCHAR` est activée ou non.  
+## <a name="return-value"></a>Valeur de retour  
+ Pointeur vers la valeur de chaîne pour lequel définir la colonne spécifiée. La valeur est de type `BaseType`, qui sera `CHAR` ou `WCHAR` selon que `_UNICODE` est défini ou non.  
   
-## Notes  
- Le second format de priorité prend le nom de colonne comme une chaîne ANSI et la troisième forme de priorité prend le nom de colonne comme chaîne Unicode.  
+## <a name="remarks"></a>Notes  
+ La seconde substituer formulaire prend le nom de colonne sous forme de chaîne ANSI ainsi le troisième formulaire prend le nom de colonne sous forme de chaîne Unicode.  
   
- Si `_SECURE_ATL` est défini de manière à posséder une valeur différente de zéro, un échec d'assertion d'exécution est généré si la chaîne de `data` d'entrée est supérieure à la longueur maximale autorisée de la colonne de données référencée.  Sinon, la chaîne d'entrée sera tronquée si elle est supérieure à la longueur maximale autorisée.  
+ Si `_SECURE_ATL` est défini pour avoir une valeur différente de zéro, un échec d’assertion runtime sera généré si l’entrée `data` chaîne est plus longue que la longueur maximale autorisée de la colonne de données référencée. Sinon, la chaîne d’entrée sera être tronquée si elle est supérieure à la longueur maximale autorisée.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CDynamicStringAccessor, classe](../../data/oledb/cdynamicstringaccessor-class.md)

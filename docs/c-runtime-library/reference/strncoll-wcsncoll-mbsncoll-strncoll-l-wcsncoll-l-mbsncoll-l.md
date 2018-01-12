@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -43,8 +42,7 @@ f1_keywords:
 - _strncoll
 - _tcsncoll
 - mbsncoll
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _strncoll_l function
 - code pages, using for string comparisons
@@ -69,36 +67,22 @@ helpviewer_keywords:
 - ftcsnccoll function
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: d9498ca8aaab36e7443488a1c98b70ad4b7604d5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 51777605e24d9bb3ddf6fa7e6b9ad9c332165881
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 Compare les chaînes à partir des informations propres aux paramètres régionaux.  
   
 > [!IMPORTANT]
-> Les fonctions  `_mbsncoll` et `_mbsncoll_l` ne peuvent pas être utilisées dans les applications qui s'exécutent dans [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsncoll` et `_mbsncoll_l` ne peuvent pas être utilisées dans les applications qui s'exécutent dans Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -160,7 +144,7 @@ int _mbsncoll_l(
  Chacune de ces fonctions retourne `_NLSCMPERROR`. Pour utiliser `_NLSCMPERROR`, incluez STRING.h ou MBSTRING.h. `_wcsncoll` peut échouer si `string1` ou `string2` contient des codes à caractères larges qui se trouvent hors du domaine de l'ordre de tri. Quand une erreur se produit, `_wcsncoll` peut attribuer à `errno` la valeur `EINVAL`. Pour rechercher la présence d'une erreur dans un appel à `_wcsncoll`, attribuez à `errno` la valeur 0, puis vérifiez `errno` après avoir appelé `_wcsncoll`.  
   
 ## <a name="remarks"></a>Notes  
- Chacune de ces fonctions effectue une comparaison sensible à la casse des `count` premiers caractères de `string1` et `string2`, en fonction de la page de codes en cours d'utilisation. N'utilisez ces fonctions que s'il existe une différence entre l'ordre du jeu de caractères et l'ordre lexicographique des caractères dans la page de codes, et si cette différence présente un intérêt pour la comparaison de chaînes. L'ordre du jeu de caractères dépend des paramètres régionaux. Les versions de ces fonctions qui sont dépourvues du suffixe `_l` utilisent les paramètres régionaux actifs, mais celles qui possèdent le suffixe `_l` utilisent les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ Chacune de ces fonctions effectue une comparaison sensible à la casse des `count` premiers caractères de `string1` et `string2`, en fonction de la page de codes en cours d'utilisation. N'utilisez ces fonctions que s'il existe une différence entre l'ordre du jeu de caractères et l'ordre lexicographique des caractères dans la page de codes, et si cette différence présente un intérêt pour la comparaison de chaînes. L'ordre du jeu de caractères dépend des paramètres régionaux. Les versions de ces fonctions qui sont dépourvues du suffixe `_l` utilisent les paramètres régionaux actifs, mais celles qui possèdent le suffixe `_l` utilisent les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  Toutes ces fonctions valident leurs paramètres. Si `string1` ou `string2` est un pointeur null ou si la valeur de `count` est supérieure à celle de `INT_MAX`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent `_NLSCMPERROR` et définissent `errno` avec la valeur `EINVAL`.  
   
@@ -171,7 +155,7 @@ int _mbsncoll_l(
 |`_tcsnccoll`|`_strncoll`|`_mbsncoll`|`_wcsncoll`|  
 |`_tcsncoll`|`_strncoll`|[_mbsnbcoll](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|`_wcsncoll`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

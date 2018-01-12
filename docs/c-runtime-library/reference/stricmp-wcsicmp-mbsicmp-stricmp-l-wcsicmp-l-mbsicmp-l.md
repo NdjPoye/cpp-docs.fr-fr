@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -42,8 +41,7 @@ f1_keywords:
 - _fstricmp
 - mbsicmp_l
 - mbsicmp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wcsicmp function
 - _stricmp_l function
@@ -65,30 +63,16 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3502f864ce5450e86acd673d2911ed7f5393e5fe
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 15b581d0d47da824f1faaade1214d1320e29bb03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 Effectue une comparaison de chaînes sans tenir compte de la casse.  
@@ -147,7 +131,7 @@ int _mbsicmp_l(
  En cas d’erreur, `_mbsicmp` retourne `_NLSCMPERROR`, qui est défini dans \<string.h> et \<mbstring.h>.  
   
 ## <a name="remarks"></a>Notes  
- La fonction `_stricmp` effectue une comparaison ordinale de `string1` et de `string2` après la conversion de chaque caractère en minuscule, et retourne une valeur qui indique leur relation. `_stricmp` diffère de `_stricoll` en cela que la comparaison de `_stricmp` est affectée seulement par `LC_CTYPE`, qui détermine quels caractères sont en majuscule et en minuscule. La fonction `_stricoll` compare des chaînes en fonction à la fois des catégories `LC_CTYPE` et `LC_COLLATE` des paramètres régionaux, ce qui comprend la casse et l'ordre de classement. Pour plus d’informations sur la catégorie `LC_COLLATE`, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) et[Catégories de paramètres régionaux](../../c-runtime-library/locale-categories.md). Les versions de ces fonctions sans le suffixe `_l` utilisent les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. Les versions avec le suffixe sont identiques, sauf qu'elles utilisent à la place les paramètres régionaux passés en entrée. Si les paramètres régionaux n'ont pas été définis, les paramètres régionaux C sont utilisés. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La fonction `_stricmp` effectue une comparaison ordinale de `string1` et de `string2` après la conversion de chaque caractère en minuscule, et retourne une valeur qui indique leur relation. `_stricmp` diffère de `_stricoll` en cela que la comparaison de `_stricmp` est affectée seulement par `LC_CTYPE`, qui détermine quels caractères sont en majuscule et en minuscule. La fonction `_stricoll` compare des chaînes en fonction à la fois des catégories `LC_CTYPE` et `LC_COLLATE` des paramètres régionaux, ce qui comprend la casse et l'ordre de classement. Pour plus d’informations sur la catégorie `LC_COLLATE`, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) et[Catégories de paramètres régionaux](../../c-runtime-library/locale-categories.md). Les versions de ces fonctions sans le suffixe `_l` utilisent les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. Les versions avec le suffixe sont identiques, sauf qu'elles utilisent à la place les paramètres régionaux passés en entrée. Si les paramètres régionaux n'ont pas été définis, les paramètres régionaux C sont utilisés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
 > [!NOTE]
 >  `_stricmp` équivaut à `_strcmpi`. Elles peuvent être utilisés indifféremment, mais `_stricmp` est la norme préférée.  
@@ -190,7 +174,7 @@ int main() {
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsicmp`|`_stricmp`|`_mbsicmp`|`_wcsicmp`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
@@ -198,7 +182,7 @@ int main() {
 |`_wcsicmp`, `_wcsicmp_l`|\<string.h> ou \<wchar.h>|  
 |`_mbsicmp`, `_mbsicmp_l`|\<mbstring.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

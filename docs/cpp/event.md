@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2819cfbc03fc5873bd3c50138c1d0838302157d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4750d156ef4f0f817e1eecec1f4a0842fc229046
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event"></a>__event
 Déclare un événement.  
@@ -39,7 +40,7 @@ __event __interface interface-specifier;
 __event member-declarator;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le mot clé `__event` peut être appliqué à une déclaration de méthode, une déclaration d'interface ou une déclaration de membre de données. Toutefois, vous ne pouvez pas utiliser le mot clé `__event` pour qualifier un membre d'une classe imbriquée.  
   
  Selon que votre source et votre récepteur d'événements sont C++ natif, COM ou managé (.NET Framework), vous pouvez utiliser les constructions suivantes en tant qu'événements :  

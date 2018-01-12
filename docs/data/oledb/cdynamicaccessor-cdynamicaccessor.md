@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 863c6f1c83a57f9c8843bba8cf4db9c839abd309
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3f063652b95cc5e778d7e1ffcbc809b9425f5425
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicaccessorcdynamicaccessor"></a>CDynamicAccessor::CDynamicAccessor
 Instancie et initialise le `CDynamicAccessor` objet.  
@@ -45,12 +48,12 @@ Instancie et initialise le `CDynamicAccessor` objet.
  `nBlobSize`  
  La taille maximale de BLOB en octets ; données de la colonne sur cette valeur sont traitées comme un objet BLOB. La valeur par défaut est 8 000 caractères. Consultez [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) pour plus d’informations.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si vous utilisez le constructeur pour initialiser le `CDynamicAccessor` de l’objet, vous pouvez spécifier comment il liera des objets BLOB. Objets BLOB peut contenir des données binaires telles que des graphiques, audio ou des codes compilés. Le comportement par défaut consiste à traiter les colonnes dépasse 8 000 octets en tant qu’objets BLOB et essayez de les lier à un `ISequentialStream` objet. Toutefois, vous pouvez spécifier une valeur différente pour la taille de l’objet BLOB.  
   
  Vous pouvez également spécifier comment `CDynamicAccessor` gère les données de colonne sont des données d’objet BLOB : il peut gérer des données BLOB dans la méthode par défaut ; il peut ignorer (ne pas lier) les données BLOB ; ou il pouvez lier des données d’objet BLOB dans la mémoire allouée par le fournisseur.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

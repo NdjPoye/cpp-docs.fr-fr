@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc08403d0d8cf7875700ca539a3e68a0ed788104
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b077e4c92d9307b8ff99126c824d0a902ce1ff83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dequedeque-stlclr"></a>deque::deque (STL/CLR)
 Construit un objet conteneur.  
@@ -53,7 +56,7 @@ deque(System::Collections::Generic::IEnumerable<Value>^ right);
  `val`  
  Valeur de l’élément à insérer.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le constructeur :  
   
  `deque();`  
@@ -164,7 +167,7 @@ size() = 0
  x x x x x x  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/deque >  
   
  **Namespace :** cliext  

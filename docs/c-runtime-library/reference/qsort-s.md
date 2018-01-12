@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- qsort_s
+apiname: qsort_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,40 +21,24 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- qsort_s
-dev_langs:
-- C++
+f1_keywords: qsort_s
+dev_langs: C++
 helpviewer_keywords:
 - arrays [C++], sorting
 - quick-sort algorithm
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: e4ba4fcb5acc8c914cf240e5b858a945bd55cc86
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 333473d0b0b7e50e2b0faebef02835dcaf577440
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="qsorts"></a>qsort_s
 Effectue un tri rapide. Version de [qsort](../../c-runtime-library/reference/qsort.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -119,13 +101,13 @@ compare( context, (void *) & elem1, (void *) & elem2 );
   
  La fonction `qsort_s` affiche le même comportement que `qsort`, mais elle possède le paramètre `context` et définit `errno`. En passant un paramètre `context`, les fonctions de comparaison peuvent utiliser un pointeur d’objet pour accéder à la fonctionnalité d’objet ou à d’autres informations non accessibles via un pointeur d’élément. L’ajout de la `context` paramètre rend `qsort_s` plus sûre car `context` peut être utilisé pour éviter les bogues de réentrance introduites à l’aide de variables statiques pour rendre les informations partagées disponibles pour le `compare` (fonction).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`qsort_s`|\<stdlib.h> et \<search.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
  **Bibliothèques :** toutes les versions des [Fonctionnalités de bibliothèque CRT](../../c-runtime-library/crt-library-features.md).  
   

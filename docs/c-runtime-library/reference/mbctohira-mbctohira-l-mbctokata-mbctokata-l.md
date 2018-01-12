@@ -49,17 +49,18 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0a398e2d0b55a8c3292a77ba957982fa5a5e21f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5fd3af95988ffeac5801e2d64f81c0947f26c3cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 Convertit des caractères Hiragana en caractères Katakana et inversement  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -98,11 +99,11 @@ unsigned int _mbctokata_l(
 |`_mbctohira,_mbctohira_l`|Katakana multioctet en hiragana multioctet.|  
 |`_mbctokata,_mbctokata_l`|Hiragana multioctet en katakana multioctet.|  
   
- La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sont identiques, à ceci près que celles qui n'ont pas le suffixe `_l` utilisent les paramètres régionaux actifs pour ce comportement dépendant de ces paramètres, et celles qui ont le suffixe `_l` utilisent plutôt les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sont identiques, à ceci près que celles qui n'ont pas le suffixe `_l` utilisent les paramètres régionaux actifs pour ce comportement dépendant de ces paramètres, et celles qui ont le suffixe `_l` utilisent plutôt les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  Dans les versions antérieures, `_mbctohira` était nommé `jtohira` et `_mbctokata` s'appelait `jtokata`. Pour le nouveau code, utilisez les nouveaux noms.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
@@ -111,7 +112,7 @@ unsigned int _mbctokata_l(
 |`_mbctokata`|\<mbstring.h>|  
 |`_mbctokata_l`|\<mbstring.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   

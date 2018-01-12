@@ -33,11 +33,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 792407af9497148bea95333ee18028e0f8c953e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3149c1be671566785f67963368a50cdf2eee3809
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rtcgeterrdesc"></a>_RTC_GetErrDesc
 Retourne une brève description d’un type de vérification d’erreurs au moment de l’exécution.  
@@ -58,7 +59,7 @@ Retourne une brève description d’un type de vérification d’erreurs au mome
 ## <a name="return-value"></a>Valeur de retour  
  Une chaîne de caractères qui contient une brève description d’un des types d’erreurs détectées par le système de vérification d’erreurs au moment de l’exécution. Si l’erreur est inférieure à zéro ou supérieure ou égale à la valeur retournée par [_RTC_NumErrors](../../c-runtime-library/reference/rtc-numerrors.md), `_RTC_GetErrDesc` retourne NULL.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
@@ -71,4 +72,4 @@ Retourne une brève description d’un type de vérification d’erreurs au mome
   
 ## <a name="see-also"></a>Voir aussi  
  [_RTC_NumErrors](../../c-runtime-library/reference/rtc-numerrors.md)   
- [Vérification des erreurs au moment de l’exécution](../../c-runtime-library/run-time-error-checking.md)
+ [Vérifications des erreurs au moment de l’exécution](../../c-runtime-library/run-time-error-checking.md)

@@ -40,11 +40,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b5f9a386283e38c508c9e46e3302bffeacc981e7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b5c57a82bef1a56925b414302fe2017df255ce2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wcstombss-wcstombssl"></a>wcstombs_s, _wcstombs_s_l
 
@@ -120,7 +121,7 @@ Zéro si l'opération a réussi, un code d'erreur en cas d'échec.
   
 Si l’une de ces conditions se présente, l’exception de paramètre non valide est appelée, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à continuer, la fonction retourne un code d'erreur et définit `errno`, comme indiqué dans le tableau.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
 
 Le `wcstombs_s` fonction convertit une chaîne de caractères larges pointés par *wcstr* en caractères multioctets stockés dans la mémoire tampon vers laquelle pointée *mbstr*. La conversion se poursuit pour chaque caractère jusqu'à ce qu'une des conditions suivantes soit remplie :  
   
@@ -143,17 +144,17 @@ Si les séquences pointées par *wcstr* et *mbstr* se chevauchent, le comporteme
 > [!IMPORTANT]
 >  Vérifiez que *wcstr* et *mbstr* ne se chevauchent pas et que *nombre* reflète fidèlement le nombre de caractères larges à convertir.  
   
-La fonction `wcstombs_s` utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; la fonction `_wcstombs_s_l` est identique à `wcstombs` sauf qu'elle utilise les paramètres régionaux passés à la place. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+La fonction `wcstombs_s` utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; la fonction `_wcstombs_s_l` est identique à `wcstombs` sauf qu'elle utilise les paramètres régionaux passés à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
-En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`wcstombs_s`|\<stdlib.h>|  
   
-Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
 

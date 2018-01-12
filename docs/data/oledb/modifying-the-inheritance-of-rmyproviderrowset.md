@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e8ecfe35d61762b8beaa217eaacc4202a588debb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ff6e953bf706e0e8767fe6f97fe1d31b70431d08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>Modification de l'héritage de RMyProviderRowset
 Pour ajouter le `IRowsetLocate` interface à l’exemple de fournisseur simple en lecture seule, modifiez l’héritage de **RMyProviderRowset**. Au départ, **RMyProviderRowset** hérite `CRowsetImpl`. Vous devez modifier pour qu’elle hérite de **CRowsetBaseImpl**.  

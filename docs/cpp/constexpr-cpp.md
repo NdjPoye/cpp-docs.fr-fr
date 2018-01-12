@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ff111b73d81fd3c008e53db0f5e41b82f9e3753
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf1094be23074fe71e65a3077de51263f01a81c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 Le mot clé `constexpr` a été introduit dans C++11 et amélioré dans C++14. Cela signifie que *expression constante*. Comme le mot clé `const`, il peut être appliqué aux variables pour spécifier que leur valeur n'est pas modifiable. Si du code tente de modifier la valeur, une erreur de compilation se produit. Contrairement à `const`, `constexpr` peut également être appliqué aux fonctions et aux constructeurs de classe. `constexpr` indique que la valeur ou la valeur de retour est constante et qu'elle sera calculée au moment de la compilation, si possible.  Une valeur intégrale `constexpr` peut être utilisée partout où un entier const est requis, comme dans les arguments de modèle et les déclarations de tableau. Et, lorsqu’une valeur peut être calculée au moment de la compilation au lieu de l’exécution, il peut aider votre programme de s’exécuter plus rapidement et utilisent moins de mémoire.  
@@ -190,7 +191,7 @@ int main()
   
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Visual Studio 2015  
   
 ## <a name="see-also"></a>Voir aussi  

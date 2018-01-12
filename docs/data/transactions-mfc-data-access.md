@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 655c8e2cc900aa369055e5f1b9975e02c1a8ac88
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2f0c028eaf58e828366ae9534ff06b53254e3601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transactions--mfc-data-access"></a>Transactions (Accès aux données MFC)
 Le concept de transaction a été développé pour gérer les cas dans lesquels l’état résultant de la base de données dépend du succès total d’une série d’opérations. Cette situation peut survenir car des opérations successives peuvent modifier les résultats des opérations précédentes. Dans ce cas, si l'une des opérations échoue, l'état résultant pourrait être indéterminé.  

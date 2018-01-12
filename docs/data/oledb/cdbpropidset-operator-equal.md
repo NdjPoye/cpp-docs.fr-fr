@@ -1,48 +1,50 @@
 ---
-title: "CDBPropIDSet::operator = | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDBPropIDSet.operator="
-  - "ATL.CDBPropIDSet.operator="
-  - "ATL::CDBPropIDSet::operator="
-  - "CDBPropIDSet::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "= (opérateur), avec les modèles OLE DB (C++)"
-  - "opérateur =, sets de propriétés"
-  - "= (opérateur), sets de propriétés"
+title: CDBPropIDSet::operator = | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDBPropIDSet.operator=
+- ATL.CDBPropIDSet.operator=
+- ATL::CDBPropIDSet::operator=
+- CDBPropIDSet::operator=
+dev_langs: C++
+helpviewer_keywords:
+- operator =, property sets
+- = operator, with OLE DB templates
+- operator=, property sets
 ms.assetid: 8741fca9-201e-4821-af61-71ba998d0886
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6648cd488fec0ac8cbe1b4475b4276ae6d783375
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CDBPropIDSet::operator =
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Affecte le contenu d'un jeu d'ID de propriété à un autre jeu d'ID de propriété.  
+# <a name="cdbpropidsetoperator-"></a>CDBPropIDSet::operator =
+Assigne le contenu d’une propriété ID est défini sur un autre ID de propriété définie.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      CDBPropIDSet& operator =(   
-   CDBPropIDSet& propset    
+      CDBPropIDSet& operator =(   
+   CDBPropIDSet& propset    
 ) throw( );  
 ```  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CDBPropIDSet, classe](../../data/oledb/cdbpropidset-class.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a8fda58768b68a5edf6caa1c673beaa9205719b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 81e27b23a3847c6ed6ccfc6e4b0e37c73664b9a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmaplowerbound-stlclr"></a>hash_map::lower_bound (STL/CLR)
 Début de la recherche de plage qui correspond à une clé spécifiée.  
@@ -34,7 +37,7 @@ iterator lower_bound(key_type key);
  clé  
  Valeur de clé à rechercher.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction membre détermine le premier élément `X` dans la séquence contrôlée qui hache le même compartiment en tant que `key` et a un classement équivalent à `key`. Si cet élément n’existe, elle retourne [hash_map::end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`; sinon, elle retourne un itérateur qui désigne `X`. Il permet de localiser le début d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.  
   
 ## <a name="example"></a>Exemple  
@@ -78,7 +81,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = [b 2]  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/hash_map >  
   
  **Namespace :** cliext  

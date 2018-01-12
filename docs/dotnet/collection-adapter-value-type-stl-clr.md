@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a66c99d4e37021898a90ac7b553d298a40f55e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d4cf6b22ab5b08bc1ac2746f7b0ed7e5f98e79b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collectionadaptervaluetype-stlclr"></a>collection_adapter::value_type (STL/CLR)
 Type d’un élément.  
@@ -30,7 +33,7 @@ Type d’un élément.
 typedef Value value_type;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le type est un synonyme du paramètre de modèle `Value`, s’il est présent dans la spécialisation ; sinon, il est un synonyme de `System::Object^`.  
   
 ## <a name="example"></a>Exemple  
@@ -69,7 +72,7 @@ int main()
 a b c  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/carte >  
   
  **Namespace :** cliext  

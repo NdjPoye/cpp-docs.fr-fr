@@ -1,41 +1,42 @@
 ---
-title: "Platform::IDisposable (interface) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/03/2017"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::IDisposable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::IDisposable (interface)"
+title: Platform::IDisposable (Interface) | Documents Microsoft
+ms.custom: 
+ms.date: 02/03/2017
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::IDisposable
+dev_langs: C++
+helpviewer_keywords: Platform::IDisposable Interface
 ms.assetid: f4344056-7030-42ed-bc98-b140edffddcd
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: db500bc5a205b97ba49d92356d2e878be3e10caf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::IDisposable (interface)
+# <a name="platformidisposable-interface"></a>Platform::IDisposable (interface)
 Utilisée pour libérer des ressources non managées.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
 public interface class IDisposable  
 ```  
   
-## Attributs  
- **GuidAttribute**\(« de0cbaea\-8065\-4a45\-b196\-c9d443f9bab3 »\)  
+## <a name="attributes"></a>Attributs  
+ **GuidAttribute**(« de0cbaea-8065-4a45-b196-c9d443f9bab3 »)  
   
- **VersionAttribute**\(NTDDI\_WIN8\)  
+ **VersionAttribute**(NTDDI_WIN8)  
   
-## Membres  
+### <a name="members"></a>Membres  
  L’interface IDisposable hérite de l’interface IUnknown. IDisposable a également les types de membre suivants :  
   
  **Méthodes**  
@@ -43,12 +44,12 @@ public interface class IDisposable
  L’interface IDisposable possède les méthodes suivantes.  
   
 |Méthode|Description|  
-|-------------|-----------------|  
-|HYPERLINK "http:\/\/msdnpreview.redmond.corp.microsoft.com\/en\-us\/library\/windows\/apps\/platform.idisposable.dispose.aspx" Dispose|Utilisée pour libérer des ressources non managées.|  
+|------------|-----------------|  
+|Suppression|Utilisée pour libérer des ressources non managées.|  
   
-## Configuration requise  
- **Client minimum pris en charge :** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>Configuration requise  
+ **Minimum pris en charge le client :** Windows 8  
   
- **Serveur minimum pris en charge :** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Minimum de serveur pris en charge :** Windows Server 2012  
   
- **Espace de noms :** Platform
+ **Espace de noms :** Platform

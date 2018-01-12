@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ff57d6012fd4a3a98ec29fe58072711654b3ab23
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69b52b3029271ffae3d4a7b3441c49a01270abb4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scope-resolution-operator-"></a>Opérateur de résolution de portée : ::
 L'opérateur de résolution de portée `::` est utilisé pour identifier et lever l'ambiguïté des identificateurs utilisés dans différentes portées. Pour plus d’informations sur l’étendue, consultez [étendue](../cpp/scope-visual-cpp.md).  
@@ -38,7 +39,7 @@ enum class :: identifier
 enum struct :: identifier  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `identifier` peut être une variable, une fonction ou une valeur d'énumération.  
   
 ## <a name="with-classes-and-namespaces"></a>Avec les classes et les espaces de noms  

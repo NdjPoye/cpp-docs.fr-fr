@@ -1,34 +1,36 @@
 ---
-title: "lock_when, Enum | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::lock_when"
-  - "msclr.lock_when"
-  - "lock_when"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock_when (enum)"
+title: lock_when, Enum | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::lock_when
+- msclr.lock_when
+- lock_when
+dev_langs: C++
+helpviewer_keywords: lock_when enum
 ms.assetid: 6b87bbe9-63cd-450d-a02e-bb91ffd0dcea
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: cf57b2ec972eee7ad207b72ba5851f575b8ef692
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# lock_when, Enum
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Spécifie un différé le verrouillage.  
+# <a name="lockwhen-enum"></a>lock_when, Enum
+Spécifie un verrouillage différée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 enum lock_when {  
@@ -36,11 +38,11 @@ enum lock_when {
 };  
 ```  
   
-## Notes  
- Lorsque le passage à [lock::lock](../dotnet/lock-lock.md), `lock_later` spécifie que le verrou ne doit pas être pris maintenant.  
+## <a name="remarks"></a>Notes  
+ Lorsqu’il est passé à [lock::lock](../dotnet/lock-lock.md), `lock_later` Spécifie que le verrou est ne peut être présent.  
   
-## Exemple  
- Cet exemple utilise une seule instance d'une classe entre des threads multiples.  La classe utilise un verrou sur elle\-même pour garantir que les accès à ses données internes sont cohérents pour chaque thread.  Le thread d'application principale utilise un verrou sur la même instance de la classe pour vérifier régulièrement si les threads de travail existent toujours, et attend pour quitter jusqu'à ce que tous les threads de travail aient terminé leurs tâches.  
+## <a name="example"></a>Exemple  
+ Cet exemple utilise une seule instance d’une classe sur plusieurs threads.  La classe utilise un verrou sur lui-même pour vous assurer que l’accès à ses données internes sont cohérents pour chaque thread.  Le thread d’application principale utilise un verrou sur la même instance de la classe à vérifier régulièrement si les threads de travail existent toujours, et attend de quitter jusqu'à ce que tous les threads de travail ont terminé leurs tâches.  
   
 ```  
 // msl_lock_lock_when.cpp  
@@ -114,21 +116,24 @@ int main() {
 }  
 ```  
   
-  **Dans le thread 3, Compteur \= 0**  
-**Dans le thread 3, Compteur \= 10**  
-**Dans le thread 5, Compteur \= 0**  
-**Dans le thread 5, Compteur \= 10**  
-**Dans le thread 7, Compteur \= 0**  
-**Dans le thread 7, Compteur \= 10**  
-**Dans le thread 4, Compteur \= 0**  
-**Dans le thread 4, Compteur \= 10**  
-**Dans le thread 6, Compteur \= 0**  
-**Dans le thread 6, Compteur \= 10**  
-**Tous les threads sont terminés.**   
-## Configuration requise  
- **Fichier d'en\-tête** \<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- **Espace de noms** msclr  
+## <a name="requirements"></a>Configuration requise  
+ **Fichier d’en-tête** \<msclr\lock.h >  
   
-## Voir aussi  
- [verrou](../dotnet/lock.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Voir aussi  
+ [lock](../dotnet/lock.md)

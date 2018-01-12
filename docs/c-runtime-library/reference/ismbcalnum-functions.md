@@ -57,17 +57,18 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3ad428851bd89dd2e9efd49a900ccdc28066b246
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 40566a3f4f6855da3a7ee7d122357f392d234ff0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 Vérifie si un caractère multioctet est un caractère alphanumérique, alphabétique ou numérique.  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -114,7 +115,7 @@ int _ismbcdigit_l
 ## <a name="remarks"></a>Notes  
  Chacune de ces routines teste un caractère multioctet fourni pour un état donné.  
   
- Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
 |Routine|Condition de test|Exemple de page de codes 932|  
 |-------------|--------------------|---------------------------|  
@@ -122,7 +123,7 @@ int _ismbcdigit_l
 |`_ismbcalpha,_ismbcalpha_l`|Alphabétique|Retourne une valeur différente de zéro si et seulement si `c` est une représentation sur un octet d’une lettre de l’alphabet anglais ASCII : 0x41<=`c`<=0x5A ou 0x61<=`c`<=0x7A ; ou une lettre katakana : 0xA6<=`c`<=0xDF.|  
 |`_ismbcdigit,_ismbcdigit`|Chiffre|Retourne une valeur différente de zéro si et seulement si `c` est une représentation sur un octet d’un chiffre ASCII : 0x30<=`c`<=0x39.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
@@ -130,7 +131,7 @@ int _ismbcdigit_l
 |`_ismbcalpha,_ismbcalpha_l`|\<mbstring.h>|  
 |`_ismbcdigit,_ismbcdigit_l`|\<mbstring.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classifications des caractères](../../c-runtime-library/character-classification.md)   

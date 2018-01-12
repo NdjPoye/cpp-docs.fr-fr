@@ -30,11 +30,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25023a1bfa0854d628931d5de9a852cae1d88ba5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 864aacbc30d9d50e1d0335d0d74c7ed63119d132
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="longjmp"></a>longjmp
 Restaure l’environnement de la pile et les paramètres régionaux d’exécution.  
@@ -53,7 +54,7 @@ Restaure l’environnement de la pile et les paramètres régionaux d’exécuti
  `env`  
  Variable dans laquelle l’environnement est stocké.  
   
- *value*  
+ *valeur*  
  Valeur à retourner à l’appel `setjmp`.  
   
 ## <a name="remarks"></a>Notes  
@@ -73,13 +74,13 @@ Restaure l’environnement de la pile et les paramètres régionaux d’exécuti
   
  Pour plus d’informations, consultez [Utilisation de setjmp et longjmp](../../cpp/using-setjmp-longjmp.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`longjmp`|\<setjmp.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

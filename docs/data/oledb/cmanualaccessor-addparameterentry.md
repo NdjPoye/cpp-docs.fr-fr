@@ -1,36 +1,38 @@
 ---
-title: "CManualAccessor::AddParameterEntry | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CManualAccessor::AddParameterEntry"
-  - "ATL.CManualAccessor.AddParameterEntry"
-  - "CManualAccessor.AddParameterEntry"
-  - "AddParameterEntry"
-  - "ATL::CManualAccessor::AddParameterEntry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddParameterEntry (méthode)"
+title: CManualAccessor::AddParameterEntry | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CManualAccessor::AddParameterEntry
+- ATL.CManualAccessor.AddParameterEntry
+- CManualAccessor.AddParameterEntry
+- AddParameterEntry
+- ATL::CManualAccessor::AddParameterEntry
+dev_langs: C++
+helpviewer_keywords: AddParameterEntry method
 ms.assetid: 9048b164-052b-41b1-a861-227fc529e0b5
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 66c88bf072cbae6c86949d52ded121dd694c0e97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CManualAccessor::AddParameterEntry
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Adds a parameter entry to the parameter entry structures.  
+# <a name="cmanualaccessoraddparameterentry"></a>CManualAccessor::AddParameterEntry
+Ajoute une entrée de paramètre pour les structures d’entrée de paramètre.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -45,37 +47,37 @@ Adds a parameter entry to the parameter entry structures.
 ) throw ( );  
 ```  
   
-#### Paramètres  
- See [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) in the *OLE DB Programmer's Reference*.  
+#### <a name="parameters"></a>Paramètres  
+ Consultez [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) dans les *de référence du programmeur OLE DB*.  
   
  `nOrdinal`  
- \[in\] Parameter number.  
+ [in] Numéro de paramètre.  
   
  `wType`  
- \[in\] Data type.  
+ [in] Type de données.  
   
  `nColumnSize`  
- \[in\] Column size in bytes.  
+ [in] Taille de la colonne en octets.  
   
  `pData`  
- \[in\] A pointer to the column data stored in the buffer.  
+ [in] Pointeur vers les données de colonne stockées dans la mémoire tampon.  
   
  `pLength`  
- \[in\] A pointer to the field length, if required.  
+ [in] Pointeur vers la longueur de champ, si nécessaire.  
   
  `pStatus`  
- \[in\] A pointer to the variable to be bound to the column status, if required.  
+ [in] Pointeur vers la variable à lier à l’état de la colonne, si nécessaire.  
   
  *eParamIO*  
- \[in\] Specifies whether the parameter with which the binding is associated is an input, input\/output, or output parameter.  
+ [in] Spécifie si le paramètre auquel la liaison est associée est un paramètre d’entrée, d’entrée/sortie ou de sortie.  
   
-## Notes  
- To use this function, you must first call [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md).  
+## <a name="remarks"></a>Notes  
+ Pour utiliser cette fonction, vous devez d’abord appeler [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md).  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
- [CManualAccessor, classe](../../data/oledb/cmanualaccessor-class.md)   
+## <a name="see-also"></a>Voir aussi  
+ [CManualAccessor (classe)](../../data/oledb/cmanualaccessor-class.md)   
  [CManualAccessor::AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md)   
- [DBViewer sample](../../top/visual-cpp-samples.md)
+ [Exemple DBVIEWER](../../visual-cpp-samples.md)

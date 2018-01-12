@@ -1,38 +1,40 @@
 ---
-title: "Acc&#232;s &#224; ODBC et SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "appels d'API (C++), appeler DAO ou ODBC directement"
-  - "ODBC (C++), API (fonctions)"
-  - "ODBC (fonctions API) (C++)"
-  - "ODBC (fonctions API) (C++), appeler à partir de MFC"
-  - "SQL (C++), appeler des fonctions API ODBC"
-  - "API Windows (C++), appeler à partir de MFC"
+title: "Accès à ODBC et SQL | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- API calls [C++], calling DAO or ODBC directly
+- Windows API [C++], calling from MFC
+- ODBC API functions [C++]
+- ODBC API functions [C++], calling from MFC
+- SQL [C++], calling ODBC API functions
+- ODBC [C++], API functions
 ms.assetid: 5613d7dc-00b7-4646-99ae-1116c05c52b4
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 25e9533752e47e5cf3ea50e594a23b99e19355ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Acc&#232;s &#224; ODBC et SQL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La bibliothèque MFC encapsule de nombreux appels d'API Windows et vous permet également d'appeler directement toute fonction API Windows.  Les classes de base de données vous offrent la même flexibilité en ce qui concerne les API ODBC.  Les classes de base de données vous évitent la complexité de ODBC, vous pouvez donc appeler directement des fonctions API ODBC à partir de n'importe quel endroit de votre programme.  
+# <a name="access-to-odbc-and-sql"></a>Accès à ODBC et SQL
+La bibliothèque Microsoft Foundation Class encapsule de nombreux appels d’API Windows et vous permet également d’appeler directement toute fonction API Windows. Les classes de base de données vous donnent la flexibilité même en ce qui concerne l’API ODBC. Alors que les classes de base de données vous évitent de la complexité d’ODBC, vous pouvez appeler des fonctions API ODBC directement à partir de n’importe où dans votre programme.  
   
- De même, grâce aux classes de bases de données, vous pouvez ne pas utiliser [SQL](../../data/odbc/sql.md), sauf si vous souhaitez l'utiliser directement.  Vous pouvez personnaliser des objets Recordset en passant une instruction SQL personnalisée \(ou en définissant des parties de l'instruction par défaut\) lorsque vous ouvrez un recordset.  Vous pouvez aussi effectuer des appels SQL directs à l'aide de la fonction membre [ExecuteSQL](../Topic/CDatabase::ExecuteSQL.md) de la classe [CDatabase](../../mfc/reference/cdatabase-class.md).  
+ De même, les classes de base de données vous évitent d’avoir à fonctionnent avec [SQL](../../data/odbc/sql.md), mais vous pouvez utiliser SQL directement si vous le souhaitez. Vous pouvez personnaliser des objets recordset en passant une instruction SQL personnalisée (ou en définissant des parties de l’instruction par défaut) lorsque vous ouvrez le jeu d’enregistrements. Vous pouvez également effectuer des appels SQL directement à l’aide de la [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) fonction membre de classe [CDatabase](../../mfc/reference/cdatabase-class.md).  
   
- Pour plus d'informations, consultez [ODBC : appel direct de fonctions API ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) et [SQL : appels SQL directs \(ODBC\)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).  
+ Pour plus d’informations, consultez [ODBC : appel direct de fonctions API ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) et [SQL : appels SQL directs (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ODBC et MFC](../../data/odbc/odbc-and-mfc.md)

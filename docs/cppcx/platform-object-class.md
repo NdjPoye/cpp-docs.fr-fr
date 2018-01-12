@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: ae0c7a99ca64287c91cb1392f81ac82db103d29d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ee718205aa235ee2d93183f131f06ba9f01e40e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformobject-class"></a>Platform::Object, classe
 Fournit un comportement commun pour les classes ref et les structs ref dans les applications du Windows Store. Toute instance de classe ref ou de struct ref est implicitement convertible en objet Platform::Object^ et peut remplacer sa méthode ToString virtuelle.  
@@ -59,7 +60,7 @@ public ref class Object : Object
   
  `Object`  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** vccorlib.h  
   
  **Espace de noms :** Platform  
@@ -98,7 +99,7 @@ public:int GetHashCode()
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur numérique qui identifie de façon unique cet objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous pouvez utiliser GetHashCode afin de créer des clés pour les objets des cartes. Vous pouvez comparer les codes de hachage à l’aide de [Object::Equals](#equals). Si le chemin de code est extrêmement critique et `GetHashCode` et `Equals` ne sont pas suffisamment rapides, vous pouvez alors accéder à la couche COM sous-jacente et effectuer des comparaisons de pointeurs `IUnknown` natifs.  
   
 
@@ -116,7 +117,7 @@ Object::GetType()
 ### <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  A [Platform::Type](../cppcx/platform-type-class.md) objet qui décrit le type de runtime de l’objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La méthode statique [Type::GetTypeCode](../cppcx/platform-type-class.md#gettypecode) peut être utilisée pour obtenir un [Platform::TypeCode (énumération)](../cppcx/platform-typecode-enumeration.md) valeur qui représente le type actuel. Ceci est particulièrement utile pour les types intégrés. Le code de type pour toute classe ref en plus [Platform::String](../cppcx/platform-string-class.md) est Object (1).  
   
  Le [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) classe est utilisée dans les API Windows comme un moyen indépendant du langage de passer des informations de type entre les applications et des composants de Windows. Le T[classe Platform::Type](../cppcx/platform-type-class.md) a des opérateurs de conversion entre `Type` et `TypeName`.  

@@ -1,69 +1,133 @@
 ---
-title: "Platform::ArrayReference (classe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::ArrayReference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::ArrayReference (classe)"
+title: Platform::ArrayReference (classe) | Documents Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::ArrayReference::ArrayReference
+dev_langs: C++
+helpviewer_keywords: Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7d624422fd7dc1fcdb5e96f0995e8beef5fb8239
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::ArrayReference (classe)
-`ArrayReference` est un type d'optimisation que vous pouvez remplacer par [Platform::Array^](../cppcx/platform-array-class.md) dans les paramètres d'entrée lorsque vous souhaitez remplir un tableau de style C avec les données d'entrée.  
+# <a name="platformarrayreference-class"></a>Platform::ArrayReference (classe)
+`ArrayReference` est un type d'optimisation que vous pouvez remplacer par [Platform::Array^](../cppcx/platform-array-class.md) dans les paramètres d'entrée lorsque vous souhaitez remplir un tableau de style C avec les données d'entrée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
-```vb  
+```cpp  
+class ArrayReference  
+```
+  
+### <a name="members"></a>Membres  
+  
+### <a name="public-constructors"></a>Constructeurs publics  
+  
+|Nom|Description|  
+|----------|-----------------|  
+|[ArrayReference::ArrayReference](#ctor)|Initialise une nouvelle instance de la classe `ArrayReference`.|  
+  
+### <a name="public-operators"></a>Op&#233;rateurs publics  
+  
+|Nom|Description|  
+|----------|-----------------|  
+|[ArrayReference::operator(), opérateur](#operator-call)|Convertit cette `ArrayReference` en une `Platform::Array<T>^*`.|  
+|[ArrayReference::operator=, opérateur](#operator-assign)|Assigne le contenu d'une autre `ArrayReference` à cette instance.|  
+  
+## <a name="exceptions"></a>Exceptions  
+  
+### <a name="remarks"></a>Notes  
+ En utilisant un `ArrayReference` pour remplir un tableau de style C, vous évitez l'opération de copie supplémentaire nécessaire en copiant d'abord vers une variable `Platform::Array` , puis dans le tableau de style C. Lorsque vous utilisez une `ArrayReference`, il n'existe qu'une seule opération de copie. Pour obtenir un exemple de code, consultez [Array et WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).  
+  
+### <a name="requirements"></a>Configuration requise  
+ **Minimum pris en charge le client :** Windows 8  
+  
+ **Minimum de serveur pris en charge :** Windows Server 2012  
+  
+ **Espace de noms :** Platform  
+  
+ **En-tête :** vccorlib.h  
+  
+## <a name="ctor"></a>Arrayreference::arrayreference, constructeur
+Initialise une nouvelle instance de la [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) classe.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+ArrayReference(TArg* ataArg, unsigned int sizeArg, bool needsInitArg = false);  
+ArrayReference(ArrayReference&& otherArg)  
   
 ```  
   
-```csharp  
+### <a name="parameters"></a>Paramètres  
+ `dataArg`  
+ Pointeur vers les données de tableau.  
+  
+ `sizeArg`  
+ Nombre d'éléments du tableau source.  
+  
+ `otherArg`  
+ Objet `ArrayReference` dont les données sont déplacées pour initialiser la nouvelle instance.  
+  
+### <a name="remarks"></a>Notes  
+  
+
+
+## <a name="operator-assign"></a>ArrayReference::operator =, opérateur
+Assigne l’objet spécifié à l’actuel [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) objet à l’aide d’une sémantique de déplacement.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+  
+ArrayReference& operator=(ArrayReference&& otherArg);  
   
 ```  
   
-## Membres  
+### <a name="parameters"></a>Paramètres  
+ `otherArg`  
+ Objet déplacé vers l'objet `ArrayReference` actif.  
   
-### Constructeurs publics  
+### <a name="return-value"></a>Valeur de retour  
+ Référence à un objet de type `ArrayReference`.  
   
-|Nom|Description|  
-|---------|-----------------|  
-|[ArrayReference::ArrayReference, constructeur](../cppcx/arrayreference-arrayreference-constructor.md)|Initialise une nouvelle instance de la classe `ArrayReference`.|  
+### <a name="remarks"></a>Notes  
+ `Platform::ArrayReference` est un modèle de classe C++ standard, et non une classe de référence.  
   
-### Op&\#233;rateurs publics  
+
+
+## <a name="operator-call"></a>Opérateur d’Arrayreference::operator
+Convertit en cours [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) de l’objet à un [Platform::Array](../cppcx/platform-array-class.md) classe.  
   
-|Nom|Description|  
-|---------|-----------------|  
-|[ArrayReference::operator\(\), opérateur](../cppcx/arrayreference-operator-call-operator.md)|Convertit cette `ArrayReference` en une `Platform::Array<T>^*`.|  
-|[ArrayReference::operator\=, opérateur](../cppcx/arrayreference-operator-assign-operator.md)|Assigne le contenu d'une autre `ArrayReference` à cette instance.|  
+### <a name="syntax"></a>Syntaxe  
   
-## Exceptions  
+```cpp  
   
-## Notes  
- En utilisant un `ArrayReference` pour remplir un tableau de style C, vous évitez l'opération de copie supplémentaire nécessaire en copiant d'abord vers une variable `Platform::Array`, puis dans le tableau de style C. Lorsque vous utilisez une `ArrayReference`, il n'existe qu'une seule opération de copie. Pour obtenir un exemple de code, consultez [Array et WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).  
+Array<TArg>^ operator ();  
   
-## Configuration requise  
- **Client minimum pris en charge :** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+```  
   
- **Serveur minimum pris en charge :** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+### <a name="return-value"></a>Valeur de retour  
+ Handle vers l'objet de type `Array<TArg>^`  
   
- **Espace de noms :** Platform  
+### <a name="remarks"></a>Notes  
+ [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) et [Platform::Array](../cppcx/platform-array-class.md) sont des classes de modèles de classe C++ standard, pas ref.  
   
- **En\-tête** : vccorlib.h  
+
+
   
-## Titre de la sous\-section  
   
-## Voir aussi  
- [Espace de noms de plateforme](../cppcx/platform-namespace-c-cx.md)
+## <a name="see-also"></a>Voir aussi  
+ [Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)

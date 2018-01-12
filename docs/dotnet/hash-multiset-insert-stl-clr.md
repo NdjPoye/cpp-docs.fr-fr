@@ -1,32 +1,33 @@
 ---
-title: "hash_multiset::insert (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre insert [STL/CLR]"
+title: hash_multiset::Insert (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::insert
+dev_langs: C++
+helpviewer_keywords: insert member [STL/CLR]
 ms.assetid: e7254f30-a514-4ddc-bf53-38aafbe9e8eb
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3e309fa84ad67b7148ae92d95fa083c24173b6c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::insert (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Adds elements.  
+# <a name="hashmultisetinsert-stlclr"></a>hash_multiset::insert (STL/CLR)
+Ajoute des éléments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 iterator insert(value_type val);  
@@ -36,36 +37,36 @@ template<typename InIter>
 void insert(System::Collections::Generic::IEnumerable<value_type>^ right);  
 ```  
   
-#### Paramètres  
- first  
- Beginning of range to insert.  
+#### <a name="parameters"></a>Paramètres  
+ premier  
+ Début de la plage à insérer.  
   
  last  
- End of range to insert.  
+ Fin de la plage à insérer.  
   
- right  
- Enumeration to insert.  
+ droite  
+ Énumération à insérer.  
   
- val  
- Key value to insert.  
+ Val  
+ Valeur de clé à insérer.  
   
- where  
- Where in container to insert \(hint only\).  
+ où  
+ Emplacement dans le conteneur à insérer (hint uniquement).  
   
-## Notes  
- Each of the member functions inserts a sequence specified by the remaining operands.  
+## <a name="remarks"></a>Notes  
+ Chacune des fonctions membres insère une séquence spécifiée par les opérandes restants.  
   
- The first member function inserts an element with value `val`, and returns an iterator that designates the newly inserted element.  You use it to insert a single element.  
+ La première fonction membre insère un élément avec la valeur `val`et retourne un itérateur qui désigne l’élément nouvellement inséré. Il permet d’insérer un élément unique.  
   
- The second member function inserts an element with value `val`, using `where` as a hint \(to improve performance\), and returns an iterator that designates the newly inserted element.  You use it to insert a single element which might be adjacent to an element you know.  
+ La deuxième fonction membre insère un élément avec la valeur `val`, à l’aide `where` en tant qu’indicateur (pour améliorer les performances) et retourne un itérateur qui désigne l’élément nouvellement inséré. Il permet d’insérer un élément unique qui peut être adjacent à un élément que vous connaissez.  
   
- The third member function inserts the sequence `[``first``,` `last``)`.  You use it to insert zero or more elements copied from another sequence.  
+ La troisième fonction membre insère la séquence [`first`, `last`). Il permet d’insérer de zéro ou plusieurs des éléments copiés à partir d’une autre séquence.  
   
- The fourth member function inserts the sequence designated by the `right`.  You use it to insert a sequence described by an enumerator.  
+ La quatrième fonction membre insère la séquence désignée par le `right`. Il permet d’insérer une séquence décrite par l’énumérateur.  
   
- Each element insertion takes time proportional to the logarithm of the number of elements in the controlled sequence.  Insertion can occur in amortized constant time, however, given a hint that designates an element adjacent to the insertion point.  
+ Chaque insertion des éléments du temps proportionnel au logarithme du nombre d’éléments dans la séquence contrôlée. Insertion peut se produire dans le temps fixe amorti, toutefois, étant donné un indicateur qui désigne un élément adjacent au point d’insertion.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_multiset_insert.cpp   
@@ -123,18 +124,21 @@ int main()
   
 ```  
   
-  **a b c**  
-**insert\(L'x'\) \= x**  
-**insert\(L'b'\) \= b**  
- **a b b c x**  
-**insert\(begin\(\), L'y'\) \= y**  
- **a b b c x y**  
- **a b b c x**  
- **a b b c x y**   
-## Configuration requise  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+insert(L'x') = x  
+insert(L'b') = b  
+ a b b c x  
+insert(begin(), L'y') = y  
+ a b b c x y  
+ a b b c x  
+ a b b c x y  
+```  
   
- **Namespace:** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/hash_set >  
   
-## Voir aussi  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)

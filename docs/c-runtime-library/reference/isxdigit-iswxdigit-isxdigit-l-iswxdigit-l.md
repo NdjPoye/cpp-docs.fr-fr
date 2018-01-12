@@ -45,11 +45,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 363a1b30e410bbb13a9101c268d48a2cb6ff1787
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ba714f78696cd806cbf1f200e72e09a03168d94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isxdigit-iswxdigit-isxdigitl-iswxdigitl"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 Détermine si un entier représente un caractère qui est un chiffre hexadécimal.  
@@ -85,7 +86,7 @@ int _iswxdigit_l(
   
  Pour les paramètres régionaux « C », la fonction `iswxdigit` ne prend pas en charge les caractères hexadécimaux à pleine chasse Unicode.  
   
- Pour leur comportement dépendant des paramètres régionaux, les versions de ces fonctions avec le suffixe `_l` utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ Pour leur comportement dépendant des paramètres régionaux, les versions de ces fonctions avec le suffixe `_l` utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  Le comportement de `isxdigit` et `_isxdigit_l` n’est pas défini si `c` n’est pas EOF ou n’appartient pas à la plage 0 à 0xFF, inclus. Quand une bibliothèque CRT de débogage est utilisée et que `c` ne fait pas partie de ces valeurs, les fonctions déclenchent une assertion.  
   
@@ -95,7 +96,7 @@ int _iswxdigit_l(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_istxdigit`|`isxdigit`|`isxdigit`|`iswxdigit`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
@@ -104,7 +105,7 @@ int _iswxdigit_l(
 |`_isxdigit_l`|\<ctype.h>|  
 |`_iswxdigit_l`|\<ctype.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classifications des caractères](../../c-runtime-library/character-classification.md)   

@@ -16,11 +16,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6517b367e8c3d59538a4e36839ccc7f93d8b1817
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 255f2fb393ecf2c2748beada4b250b60ca965e25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>Comment : récupérer du texte du Presse-papiers (C++/CLI)
 Le code suivant exemple utilise le <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> fonction membre pour retourner un pointeur vers le <xref:System.Windows.Forms.IDataObject> interface. Cette interface peut être interrogée pour le format des données et permet de récupérer les données réelles.  

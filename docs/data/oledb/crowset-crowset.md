@@ -24,11 +24,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad5401daa0032d613ee55519c3973f84a8096746
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bd028b432ec2a59c775509dbd3821292330d9ea1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetcrowset"></a>CRowset::CRowset
 Crée un nouveau `CRowset` de l’objet et l’associe (facultatif) une [IRowset](https://msdn.microsoft.com/en-us/library/ms720986.aspx) interface fournie en tant que paramètre.  
@@ -47,7 +50,7 @@ CRowset(
  `pRowset`  
  [in] Un pointeur vers un `IRowset` interface à associer à cette classe.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

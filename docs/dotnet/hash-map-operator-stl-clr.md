@@ -1,45 +1,46 @@
 ---
-title: "hash_map::operator(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::operator[]"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator[] (membre) (STL/CLR)"
+title: hash_map::operator(STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::operator[]
+dev_langs: C++
+helpviewer_keywords: operator[] member [STL/CLR]
 ms.assetid: b0b8c1bd-4250-447d-9c69-3f8c34e9b6af
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1bb6b9a9a1a3fbdeb3c8efc572c81cdef7876957
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::operator(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmapoperatorstlclr"></a>hash_map::operator(STL/CLR)
 Mappe une clé à sa valeur mappée associée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 mapped_type operator[](key_type key);  
 ```  
   
-#### Paramètres  
- key  
+#### <a name="parameters"></a>Paramètres  
+ clé  
  Valeur de clé à rechercher.  
   
-## Notes  
- Les fonctions membres tente de trouver un élément avec un classement équivalent à `key`.  Si elle en trouve un, elle retourne la valeur mappée associée ; sinon, elle insère `value_type(``key``, mapped_type())` et retourne la valeur \(par défaut\) mappée associée.  Vous l'utilisez pour rechercher une valeur mappée connaissant sa clé associée, ou pour garantir qu'une entrée existe pour la clé si aucune n'est trouvée.  
+## <a name="remarks"></a>Notes  
+ Les fonctions membres domaines à rechercher un élément avec un classement équivalent à `key`. S’il en trouve, il retourne la valeur mappée associée ; dans le cas contraire, il insère `value_type(key, mapped_type())` et retourne les informations associé valeur mis en correspondance (valeur par défaut). Utilisez-la pour rechercher une valeur mappée en fonction de sa clé associée, ou pour vérifier qu’une entrée existe pour la clé si aucun n’est trouvé.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_map_operator_sub.cpp   
@@ -80,17 +81,20 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**c1\[A\] \= 0**  
-**c1\[b\] \= 2**  
- **\[a 1\] \[A 0\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[A 10\] \[b 2\] \[c 13\]**   
-## Configuration requise  
- **En\-tête :** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+c1[A] = 0  
+c1[b] = 2  
+ [a 1] [A 0] [b 2] [c 3]  
+ [a 1] [A 10] [b 2] [c 13]  
+```  
   
- **Espace de noms** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/hash_map >  
   
-## Voir aussi  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::find](../dotnet/hash-map-find-stl-clr.md)   
- [hash\_map::insert](../dotnet/hash-map-insert-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::Find (STL/CLR)](../dotnet/hash-map-find-stl-clr.md)   
+ [hash_map::insert (STL/CLR)](../dotnet/hash-map-insert-stl-clr.md)

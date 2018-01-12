@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f6cb6e9755b1a9a02c87fa713a9774945856b461
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 244af2a6afe87757c6a242c8a750f1bc3c99e557
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sizeof-operator"></a>sizeof, opérateur
 Donne la taille de son opérande par rapport à la taille du type `char`.  
@@ -34,7 +35,7 @@ sizeof unary-expression
 sizeof  ( type-name )  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le résultat de l'opérateur `sizeof` est de type `size_t`, un type intégral défini dans le fichier Include STDDEF.H. Cet opérateur vous permet d'éviter de spécifier les tailles de données dépendantes de l'ordinateur dans vos programmes.  
   
  L'opérande de `sizeof` peut être l'un des opérandes suivants :  

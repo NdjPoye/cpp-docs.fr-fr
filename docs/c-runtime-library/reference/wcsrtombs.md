@@ -32,11 +32,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 71924eb149097c90fbfe2f3ceb2981ea45e97995
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7fb18e5f66f431afb86e86815f50217782902b8d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 Convertit une chaîne de caractères larges dans sa représentation de chaîne de caractères multioctets. Il existe une version plus sécurisée de cette fonction. Consultez [wcsrtombs_s](../../c-runtime-library/reference/wcsrtombs-s.md).  
@@ -84,7 +85,7 @@ size_t wcsrtombs(
   
  Si l’argument `mbstr` a la valeur `NULL`, `wcsrtombs` retourne la taille requise de la chaîne de destination en octets. Si `mbstate` a la valeur Null, l’état de conversion `mbstate_t` interne est utilisé. Si la séquence de caractères `wchar` n'a pas de représentation correspondante en caractères multioctets, la valeur -1 est retournée et `errno` est défini à `EILSEQ`.  
   
- En C++, cette fonction a une surcharge de modèle qui appelle l'équivalent plus récent et sécurisé de cette fonction. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, cette fonction a une surcharge de modèle qui appelle l'équivalent plus récent et sécurisé de cette fonction. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ## <a name="exceptions"></a>Exceptions  
  La fonction `wcsrtombs` est multithread-safe tant qu’aucune fonction du thread actif n’appelle `setlocale` pendant l’exécution de cette fonction et que `mbstate` n’a pas la valeur Null.  
@@ -135,7 +136,7 @@ int main()
 The string was successfuly converted.  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

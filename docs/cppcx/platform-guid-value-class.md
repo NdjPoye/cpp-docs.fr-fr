@@ -1,56 +1,167 @@
 ---
-title: "Classe de valeur Platform::Guid | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Guid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::Guid (structure)"
+title: Classe de valeur Platform::GUID | Documents Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::Guid
+dev_langs: C++
+helpviewer_keywords: Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-caps.latest.revision: 6
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e65f4d046f35656cb91374c085ef2a6e4a507302
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Classe de valeur Platform::Guid
+# <a name="platformguid-value-class"></a>Classe de valeur Platform::Guid
 Représente un type [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) dans le système de type Windows Runtime.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
 public value struct Guid  
 ```  
   
-## Membres  
- Le Guid contient les méthodes Equals\(\), GetHashCode\(\), et ToString\(\) dérivées de la [Platform::Object, classe](../cppcx/platform-object-class.md), et la méthode GetTypeCode\(\) dérivée de la [Platform::Type \(classe\)](../cppcx/platform-type-class.md). Le GUID comporte également les membres suivants.  
+### <a name="members"></a>Membres  
+ Le Guid contient les méthodes Equals(), GetHashCode(), et ToString() dérivées de la [Platform::Object Class](../cppcx/platform-object-class.md), et la méthode GetTypeCode() dérivée de la [Platform::Type Class](../cppcx/platform-type-class.md). Le GUID comporte également les membres suivants.  
   
 |Membre|Description|  
 |------------|-----------------|  
-|Guid|Initialise une nouvelle instance du struct GUID.|  
-|operator\=\=|Opérateur Equals.|  
-|\!\=, opérateur|Opérateur Not Equals.|  
-|operator\(\)|Convertit un Guid en GUID.|  
+|[Guid](#ctor)|Initialise une nouvelle instance du struct GUID.|  
+|[operator==](#operator-equality)|Opérateur Equals.|  
+|[!=, opérateur](#operator-not-equal)|Opérateur Not Equals.|  
+|[operator()](#operator-call)|Convertit un Guid en GUID.|  
   
-## Notes  
- Pour un exemple de génération d'un nouveau Platform::Guid à l'aide de la fonction Windows [CoCreateGuid](http://msdn.microsoft.com/library/windows/desktop/ms688568\(v=vs.85\).aspx), consultez [Composant WinRT : comment générer un GUID ?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
+### <a name="remarks"></a>Notes  
+ Pour un exemple de génération d'un nouveau Platform::Guid à l'aide de la fonction Windows [CoCreateGuid](http://msdn.microsoft.com/library/windows/desktop/ms688568\(v=vs.85\).aspx), consultez [Composant WinRT : comment générer un GUID ?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
   
-## Configuration requise  
- **Client minimum pris en charge :** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>Configuration requise  
+ **Minimum pris en charge le client :** Windows 8  
   
- **Serveur minimum pris en charge :** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Minimum de serveur pris en charge :** Windows Server 2012  
   
- **Espace de noms :** Platform  
+ **Espace de noms :** Platform  
   
- **Métadonnées :** platform.winmd  
+ **Métadonnées :** platform.winmd  
+
+ 
+## <a name="ctor"></a>GUID::GUID, constructeurs
+Initialise une nouvelle instance d'une structure de Guid.  
   
-## Voir aussi  
- [Espace de noms de plateforme](../cppcx/platform-namespace-c-cx.md)
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+  
+    Guid(  
+        unsigned int a,   
+        unsigned short b,   
+        unsigned short c,   
+        unsigned char d,   
+        unsigned char e,   
+        unsigned char f,   
+        unsigned char g,   
+        unsigned char h,   
+        unsigned char i,   
+        unsigned char j,   
+        unsigned char k  );  
+  
+    Guid(GUID m);  
+  
+    Guid(  
+        unsigned int a,   
+        unsigned short b,   
+        unsigned short c,   
+        Array<unsigned char>^ n );  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `a`  
+ Quatre premiers octets du GUID.  
+  
+ `b`  
+ Deux octets suivants du GUID.  
+  
+ `c`  
+ Deux octets suivants du GUID.  
+  
+ `d`  
+ Octet suivant du GUID.  
+  
+ `e`  
+ Octet suivant du GUID.  
+  
+ `f`  
+ Octet suivant du GUID.  
+  
+ `g`  
+ Octet suivant du GUID.  
+  
+ `h`  
+ Octet suivant du GUID.  
+  
+ `i`  
+ Octet suivant du GUID.  
+  
+ `j`  
+ Octet suivant du GUID.  
+  
+ `k`  
+ Octet suivant du GUID.  
+  
+ `m`  
+ GUID défini.  
+  
+ `n`  
+ Huit octets restants du GUID.  
+  
+
+## <a name="operator-equality"></a>GUID::operator ==, opérateur
+Compare deux GUID.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+Platform::Guid::operator==  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ True si les deux GUID sont égaux.
+
+## <a name="operator-inequality"></a>GUID::operator ! =, opérateur
+Compare deux GUID.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+Platform::Guid::operator!=  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ True si les deux GUID ne sont pas égales.
+
+
+
+## <a name="operator-call"></a>Opérateur de GUID::operator
+Convertit implicitement un [structure GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)GUID Platform::GUID.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp  
+Platform::Guid operator()  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Structure de GUID.  
+  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)

@@ -1,30 +1,31 @@
 ---
-title: "Platform::Runtime::CompilerServices (espace de noms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Runtime::CompilerServices"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::Runtime::CompilerServices (espace de noms)"
+title: Platform::Runtime Namespace | Documents Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::Runtime::CompilerServices
+dev_langs: C++
+helpviewer_keywords: Platform::Runtime::CompilerServices Namespace
 ms.assetid: 8613b6b3-b193-45d1-b956-881a4a700788
-caps.latest.revision: 3
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1477c6623b2e30b6ba9feaa9c477e12bf7fd51cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::Runtime::CompilerServices (espace de noms)
+# <a name="platformruntimecompilerservices-namespace"></a>Platform::Runtime::CompilerServices (espace de noms)
 Cet espace de noms n'est destiné qu'à une utilisation interne et non à des fins de développement.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
   
@@ -33,11 +34,11 @@ namespace Platform {
 }}  
 ```  
   
-## Membres  
+### <a name="members"></a>Membres  
  Bien que cet espace de noms est destiné à un usage interne, les navigateurs peuvent afficher les membres suivants de cet espace de noms.  
   
-|Nom|Note|  
-|---------|----------|  
+|Name|Note|  
+|----------|------------|  
 |CallConvCdecl||  
 |CallConvFastcall||  
 |CallConvStdcall||  
@@ -56,13 +57,13 @@ namespace Platform {
 |IsVolatile||  
 |OnePhaseConstructedAttribute||  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Platform`  
   
-## Configuration requise  
- **Métadonnées :** platform.winmd  
+### <a name="requirements"></a>Configuration requise  
+ **Métadonnées :** platform.winmd  
   
- **Espace de noms :** Platform::CompilerServices  
+ **Espace de noms :** Platform::CompilerServices  
   
-## Voir aussi  
- [\(NOTINBUILD\) Espace de noms Platform](http://msdn.microsoft.com/fr-fr/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)
+## <a name="see-also"></a>Voir aussi  
+ [Plateforme Namespace](platform-namespace-c-cx.md)

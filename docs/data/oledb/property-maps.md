@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c51d50cb52562b60c1d9615e0617a02bef0cbcf3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 05bd576e6e55c94306a8dd648c57a4d606bed696
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-maps"></a>Mappages des propriétés
 En plus de la session, un ensemble de lignes et un objet de commande facultatifs, chaque fournisseur prend en charge une ou plusieurs propriétés. Ces propriétés sont définies dans les mappages de propriété contenus dans les fichiers d’en-tête créés par l’Assistant fournisseur OLE DB. Chaque fichier d’en-tête contient un mappage pour les propriétés dans le groupe de propriétés OLE DB définis pour l’ou les objets définis dans ce fichier. Le fichier d’en-tête qui contient l’objet de source de données contient également le mappage de propriété pour le [propriétés DataSource](https://msdn.microsoft.com/en-us/library/ms724188\(v=vs.140\).aspx). Session.h contient le mappage de propriété pour le [propriétés de la Session](https://msdn.microsoft.com/en-us/library/ms714221.aspx). Les objets rowset et command résident dans un fichier d’en-tête unique, appelé *nom_projet*RS.h. Ces propriétés sont membres de la [propriétés de l’ensemble de lignes](https://msdn.microsoft.com/en-us/library/ms711252.aspx) groupe.  

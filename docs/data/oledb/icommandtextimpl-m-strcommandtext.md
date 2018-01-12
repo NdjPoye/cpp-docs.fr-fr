@@ -1,38 +1,40 @@
 ---
-title: "ICommandTextImpl::m_strCommandText | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::ICommandTextImpl::m_strCommandText"
-  - "ICommandTextImpl<T>::m_strCommandText"
-  - "m_strCommandText"
-  - "ICommandTextImpl.m_strCommandText"
-  - "ICommandTextImpl::m_strCommandText"
-  - "ATL::ICommandTextImpl<T>::m_strCommandText"
-  - "ATL.ICommandTextImpl.m_strCommandText"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_strCommandText"
+title: ICommandTextImpl::m_strCommandText | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::ICommandTextImpl::m_strCommandText
+- ICommandTextImpl<T>::m_strCommandText
+- m_strCommandText
+- ICommandTextImpl.m_strCommandText
+- ICommandTextImpl::m_strCommandText
+- ATL::ICommandTextImpl<T>::m_strCommandText
+- ATL.ICommandTextImpl.m_strCommandText
+dev_langs: C++
+helpviewer_keywords: m_strCommandText
 ms.assetid: a15e7b2c-e5ff-4570-a7d7-171a60914c7d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d9400f7b95f4233408e65d444e0d59fcc77b6279
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ICommandTextImpl::m_strCommandText
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Enregistre la chaîne de texte de la commande.  
+# <a name="icommandtextimplmstrcommandtext"></a>ICommandTextImpl::m_strCommandText
+Stocke la chaîne de texte de commande.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -40,10 +42,10 @@ CComBSTR m_strCommandText;
   
 ```  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ICommandTextImpl, classe](../../data/oledb/icommandtextimpl-class.md)   
  [ICommandTextImpl::GetCommandText](../../data/oledb/icommandtextimpl-getcommandtext.md)   
  [ICommandTextImpl::SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)

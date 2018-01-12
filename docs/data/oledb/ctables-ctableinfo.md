@@ -1,72 +1,74 @@
 ---
-title: "CTables, CTableInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szCatalog"
-  - "TABLE_SCHEMA"
-  - "CTables"
-  - "TABLE_NAME"
-  - "TABLE_CATALOG"
-  - "CTableInfo"
-  - "m_guidTable"
-  - "m_szType"
-  - "m_szSchema"
-  - "m_szName"
-  - "TABLE_GUID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTableInfo (classe de paramètre)"
-  - "CTables (classe typedef)"
-  - "DESCRIPTION (classe) (données membres)"
-  - "m_guidTable"
-  - "m_szCatalog"
-  - "m_szDescription"
-  - "m_szName"
-  - "m_szSchema"
-  - "m_szType"
-  - "TABLE_CATALOG"
-  - "TABLE_GUID"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: CTables, CTableInfo | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szCatalog
+- TABLE_SCHEMA
+- CTables
+- TABLE_NAME
+- TABLE_CATALOG
+- CTableInfo
+- m_guidTable
+- m_szType
+- m_szSchema
+- m_szName
+- TABLE_GUID
+dev_langs: C++
+helpviewer_keywords:
+- DESCRIPTION class data member
+- m_szSchema
+- TABLE_CATALOG
+- m_szType
+- m_szCatalog
+- TABLE_NAME
+- TABLE_SCHEMA
+- TABLE_GUID
+- m_szName
+- m_szDescription
+- CTables typedef class
+- m_guidTable
+- CTableInfo parameter class
 ms.assetid: 57670f1b-ba99-43b0-b406-4c75b44f14f6
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7344086a3712d2555470ab2115ddb1b57ca7f713
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CTables, CTableInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Appelez la classe **CTables** de typedef pour implémenter la classe **CTableInfo**de paramètre.  
+# <a name="ctables-ctableinfo"></a>CTables, CTableInfo
+Appelez la classe typedef **CTables** pour implémenter sa classe de paramètre **CTableInfo**.  
   
-## Notes  
- Consultez [Classes d'ensemble de lignes d'un schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d'informations sur l'utilisation des classes typedef.  
+## <a name="remarks"></a>Notes  
+ Consultez [Classes de jeu de lignes de schéma et Classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation de classes typedef.  
   
- Cette classe identifie les privilèges des tables, définis dans le catalogue, qui sont disponibles ou accordés par un utilisateur donné.  
+ Cette classe identifie les privilèges sur les tables définies dans le catalogue, qui sont disponibles pour ou accordé par un utilisateur donné.  
   
- Le tableau suivant répertorie les membres de la classe de donnée et leurs colonnes OLE DB correspondantes.  Consultez [TABLES Rowset](https://msdn.microsoft.com/en-us/library/ms716980.aspx) dans le *OLE DB Programmer's Reference* pour plus d'informations sur les schémas et les colonnes.  
+ Le tableau suivant répertorie les membres de données de la classe et les colonnes correspondantes de OLE DB. Consultez [ensemble de lignes TABLES](https://msdn.microsoft.com/en-us/library/ms716980.aspx) dans les *de référence du programmeur OLE DB* pour plus d’informations sur le schéma et les colonnes.  
   
-|Données membres|Colonnes OLE DB|  
-|---------------------|---------------------|  
-|m\_szCatalog|TABLE\_CATALOG|  
-|m\_szSchema|TABLE\_SCHEMA|  
-|m\_szName|TABLE\_NAME|  
-|m\_szType|TABLE\_TYPE|  
-|m\_guidTable|TABLE\_GUID|  
-|m\_szDescription|DESCRIPTION|  
+|Données membres|Colonnes de OLE DB|  
+|------------------|--------------------|  
+|m_szCatalog|TABLE_CATALOG|  
+|m_szSchema|TABLE_SCHEMA|  
+|m_szName|TABLE_NAME|  
+|m_szType|TABLE_TYPE|  
+|m_guidTable|TABLE_GUID|  
+|m_szDescription|DESCRIPTION|  
   
-## Conditions requises  
- **En\-tête :** atldbsch.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbsch.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CRestrictions, classe](../../data/oledb/crestrictions-class.md)

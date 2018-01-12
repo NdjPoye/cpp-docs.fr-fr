@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- protected_cpp
-dev_langs:
-- C++
+f1_keywords: protected_cpp
+dev_langs: C++
 helpviewer_keywords:
 - protected keyword [C++], member access
 - protected keyword [C++]
 ms.assetid: 863d299f-fc0d-45d5-a1a7-bd24b7778a93
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b65c73c7ecc3419f4a2a40e4bf693049226bd8b7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 02366a53f02142f66aa5dca493c5460c9f2d1d92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="protected-c"></a>protected (C++)
 ## <a name="syntax"></a>Syntaxe  
@@ -36,7 +33,7 @@ protected:
 protected base-class  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `protected` mot clé spécifie l’accès aux membres de classe dans le *-liste des membres* jusqu’au spécificateur d’accès suivant (**public** ou `private`) ou à la fin de la définition de classe. Les membres de classe déclarés comme `protected` peuvent être uniquement utilisés par ce qui suit :  
   
 -   Les fonctions membres de la classe qui a initialement déclaré ces membres.  

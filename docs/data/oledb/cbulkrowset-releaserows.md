@@ -1,39 +1,41 @@
 ---
-title: "CBulkRowset::ReleaseRows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ReleaseRows"
-  - "ATL.CBulkRowset<TAccessor>.ReleaseRows"
-  - "ATL::CBulkRowset<TAccessor>::ReleaseRows"
-  - "ATL.CBulkRowset.ReleaseRows"
-  - "CBulkRowset<TAccessor>::ReleaseRows"
-  - "ATL::CBulkRowset::ReleaseRows"
-  - "CBulkRowset::ReleaseRows"
-  - "CBulkRowset.ReleaseRows"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ReleaseRows (méthode)"
+title: CBulkRowset::ReleaseRows | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ReleaseRows
+- ATL.CBulkRowset<TAccessor>.ReleaseRows
+- ATL::CBulkRowset<TAccessor>::ReleaseRows
+- ATL.CBulkRowset.ReleaseRows
+- CBulkRowset<TAccessor>::ReleaseRows
+- ATL::CBulkRowset::ReleaseRows
+- CBulkRowset::ReleaseRows
+- CBulkRowset.ReleaseRows
+dev_langs: C++
+helpviewer_keywords: ReleaseRows method
 ms.assetid: ba48aff3-0887-47ba-aed7-7ff28fa1c4a8
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8bf0f048d38b8b73bdd69f1a862336220fecaa47
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CBulkRowset::ReleaseRows
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Appelle [IRowset::ReleaseRows](https://msdn.microsoft.com/en-us/library/ms719771.aspx) pour décrémenter le nombre de références pour toutes les lignes actuellement récupérées de l'ensemble de lignes en bloc.  
+# <a name="cbulkrowsetreleaserows"></a>CBulkRowset::ReleaseRows
+Appels [IRowset::ReleaseRows](https://msdn.microsoft.com/en-us/library/ms719771.aspx) pour décrémenter le décompte de références pour toutes les lignes actuellement récupérées à partir de l’ensemble de lignes en bloc.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -41,12 +43,12 @@ HRESULT ReleaseRows( ) throw( );
   
 ```  
   
-## Valeur de retour  
- Un `HRESULT` standard.  
+## <a name="return-value"></a>Valeur de retour  
+ `HRESULT` standard.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
- [CBulkRowset, classe](../../data/oledb/cbulkrowset-class.md)   
+## <a name="see-also"></a>Voir aussi  
+ [CBulkRowset (classe)](../../data/oledb/cbulkrowset-class.md)   
  [CBulkRowset::AddRefRows](../../data/oledb/cbulkrowset-addrefrows.md)

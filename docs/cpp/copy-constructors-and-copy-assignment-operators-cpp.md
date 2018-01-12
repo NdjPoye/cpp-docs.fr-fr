@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - = operator [C++], copying objects
 - assignment statements [C++], copying objects
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - copying objects
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: cf4bda1b14450a5be3ffa9a95661db7d1ad360d2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1f2ebf51f28912c3cb798acc1ff4aa377c1bebb5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Constructeurs de copie et opérateurs d'assignation de copie (C++)
 > [!NOTE]
@@ -82,14 +80,14 @@ int main()
 ```  
   
 > [!NOTE]
->  Utilisez le type d’argument du constructeur de copie *const-nom de la classe* ** & ** autant que possible. Cela empêche le constructeur de copie de modifier accidentellement l'objet à partir duquel il effectue la copie. Il permet également de copie à partir de **const** objets.  
+>  Utilisez le type d’argument du constructeur de copie *const-nom de la classe*  **&**  autant que possible. Cela empêche le constructeur de copie de modifier accidentellement l'objet à partir duquel il effectue la copie. Il permet également de copie à partir de **const** objets.  
   
 ## <a name="compiler-generated-copy-constructors"></a>Constructeurs de copie générés par le compilateur  
  Les constructeurs de copie générés par le compilateur, comme les constructeurs de copie défini par l’utilisateur, ont un seul argument de type « référence à *-nom de la classe*. » Une exception se produit lorsque toutes les classes de base et les classes de membre possèdent des constructeurs de copie déclarés comme prenant un argument unique de type **const** *-nom de la classe***&**. Dans ce cas, les arguments du constructeur de copie générés par le compilateur est également **const**.  
   
  Lorsque le type d’argument au constructeur de copie n’est pas **const**, l’initialisation en copiant un **const** objet génère une erreur. L’inverse n’est pas vrai : si l’argument est **const**, vous pouvez initialiser en copiant un objet qui n’est pas **const**.  
   
- Opérateurs d’assignation générés par le compilateur suivent le même modèle concerne **const.** Ils acceptent un argument unique de type *-nom de la classe* ** & ** à moins que les opérateurs d’assignation dans toutes les classes de base et membres acceptent des arguments de type **const** *-nom de la classe &.* Dans ce cas, la classe générée du affectation opérateur prend un **const** argument.  
+ Opérateurs d’assignation générés par le compilateur suivent le même modèle concerne **const.** Ils acceptent un argument unique de type *-nom de la classe*  **&**  à moins que les opérateurs d’assignation dans toutes les classes de base et membres acceptent des arguments de type **const** *-nom de la classe &.* Dans ce cas, la classe générée du affectation opérateur prend un **const** argument.  
   
 > [!NOTE]
 >  Lorsque des classes de base virtuelles sont initialisées par des constructeurs de copie, générés par le compilateur ou définis par l'utilisateur, elles ne sont initialisées qu'une seule fois : au moment où elles sont construites.  
@@ -98,4 +96,3 @@ int main()
   
  Pour plus d’informations sur les opérateurs d’assignation surchargés, consultez [affectation](../cpp/assignment.md).  
   
-

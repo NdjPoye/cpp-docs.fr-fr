@@ -1,77 +1,73 @@
 ---
-title: "IDBSchemaRowsetImpl::SetRestrictions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDBSchemaRowsetImpl::SetRestrictions"
-  - "SetRestrictions"
-  - "IDBSchemaRowsetImpl.SetRestrictions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetRestrictions (méthode)"
+title: IDBSchemaRowsetImpl::SetRestrictions | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDBSchemaRowsetImpl::SetRestrictions
+- SetRestrictions
+- IDBSchemaRowsetImpl.SetRestrictions
+dev_langs: C++
+helpviewer_keywords: SetRestrictions method
 ms.assetid: 707d5065-b853-4d38-9b67-3066b4d3b279
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 23d4932508d8abeb96dad1dd0f70e396c7240168
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# IDBSchemaRowsetImpl::SetRestrictions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="idbschemarowsetimplsetrestrictions"></a>IDBSchemaRowsetImpl::SetRestrictions
 Spécifie les restrictions que vous prenez en charge sur un ensemble de lignes de schéma particulier.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-void SetRestrictions(  
-   ULONG   
-cRestrictions  
-,  
-   GUID* /*   
-rguidSchema  
-*/,  
-   ULONG*   
-rgRestrictions  
+      void SetRestrictions(  
+   ULONG cRestrictions,  
+   GUID* /* rguidSchema */,  
+   ULONG* rgRestrictions   
 );  
-  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `cRestrictions`  
- \[in\] Nombre de restrictions présentes dans le tableau `rgRestrictions` et nombre de GUID figurant dans le tableau `rguidSchema`.  
+ [in] Nombre de restrictions présentes dans le tableau `rgRestrictions` et nombre de GUID figurant dans le tableau `rguidSchema` .  
   
  `rguidSchema`  
- \[in\] Tableau des GUID des ensembles de lignes de schéma pour lesquels les restrictions doivent être récupérées. Chaque élément de tableau contient le GUID d’un ensemble de lignes de schéma \(par exemple, `DBSCHEMA_TABLES`\).  
+ [in] Tableau des GUID des ensembles de lignes de schéma pour lesquels les restrictions doivent être récupérées. Chaque élément de tableau contient le GUID d’un ensemble de lignes de schéma (par exemple, `DBSCHEMA_TABLES`).  
   
  `rgRestrictions`  
- \[in\] Tableau de longueur `cRestrictions` des valeurs de restriction à définir. Chaque élément correspond aux restrictions de l’ensemble de lignes de schéma identifié par le GUID. Si un ensemble de lignes de schéma n’est pas pris en charge par le fournisseur, la valeur définie de l’élément est zéro. Dans le cas contraire, la valeur **ULONG** contient un masque de bits qui représente les restrictions prises en charge sur cet ensemble de lignes de schéma. Pour plus d’informations sur les restrictions correspondant à un ensemble de lignes de schéma déterminé, consultez le tableau des GUID d’ensemble de lignes de schéma dans [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) dans les *Informations de référence du programmeur OLE DB* du [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Tableau de longueur `cRestrictions` des valeurs de restriction à définir. Chaque élément correspond aux restrictions de l’ensemble de lignes de schéma identifié par le GUID. Si un ensemble de lignes de schéma n’est pas pris en charge par le fournisseur, la valeur définie de l’élément est zéro. Dans le cas contraire, la valeur **ULONG** contient un masque de bits qui représente les restrictions prises en charge sur cet ensemble de lignes de schéma. Pour plus d’informations sur les restrictions correspondant à un ensemble de lignes de schéma particulier, consultez la table de l’ensemble de lignes de schéma GUID dans [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) dans les *de référence du programmeur OLE DB* dans les fenêtres KIT DE DÉVELOPPEMENT LOGICIEL.  
   
-## Notes  
- L’objet **IDBSchemaRowset** appelle la méthode `SetRestrictions` pour identifier les restrictions que vous prenez en charge sur un ensemble de lignes de schéma déterminé \(elle est appelée par [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) via un pointeur converti en supertype\). Les restrictions permettent aux consommateurs de récupérer uniquement les lignes correspondantes \(par exemple, toutes les colonnes de la table « MaTable »\). Les restrictions sont facultatives, et dans le cas où aucune n’est prise en charge \(par défaut\), toutes les données sont systématiquement retournées.  
+## <a name="remarks"></a>Notes  
+ L’objet **IDBSchemaRowset** appelle la méthode `SetRestrictions` pour identifier les restrictions que vous prenez en charge sur un ensemble de lignes de schéma déterminé (elle est appelée par [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) via un pointeur converti en supertype). Les restrictions permettent aux consommateurs de récupérer uniquement les lignes correspondantes (par exemple, toutes les colonnes de la table « MaTable »). Les restrictions sont facultatives, et dans le cas où aucune n’est prise en charge (par défaut), toutes les données sont systématiquement retournées.  
   
  L’implémentation par défaut de cette méthode attribue aux éléments de tableau `rgRestrictions` la valeur 0. Remplacez la valeur par défaut dans votre classe session pour définir d’autres restrictions que celle par défaut.  
   
  Pour plus d’informations sur l’implémentation de la prise en charge des ensembles de lignes de schéma, consultez [Prise en charge des ensembles de lignes de schéma](../../data/oledb/supporting-schema-rowsets.md).  
   
- Pour obtenir un exemple de fournisseur qui prend en charge les ensembles de lignes de schéma, consultez l’exemple [UpdatePV](../../top/visual-cpp-samples.md).  
+ Pour obtenir un exemple de fournisseur qui prend en charge les ensembles de lignes de schéma, consultez l’exemple [UpdatePV](../../visual-cpp-samples.md) .  
   
- Pour plus d’informations sur les ensembles de lignes de schéma, consultez [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) dans les *Informations de référence du programmeur OLE DB* du [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Pour plus d’informations sur les ensembles de lignes de schéma, consultez [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) dans les *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows.  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
- [IDBSchemaRowsetImpl, classe](../../data/oledb/idbschemarowsetimpl-class.md)   
- [IDBSchemaRowsetImpl Class Members](http://msdn.microsoft.com/fr-fr/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
- [Classes de jeu de lignes du schéma et classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)   
- [Prise en charge des jeux de lignes du schéma](../../data/oledb/supporting-schema-rowsets.md)   
- [UpdatePV](../../top/visual-cpp-samples.md)
+## <a name="see-also"></a>Voir aussi  
+ [IDBSchemaRowsetImpl (classe)](../../data/oledb/idbschemarowsetimpl-class.md)   
+ [Membres IDBSchemaRowsetImpl (classe)](http://msdn.microsoft.com/en-us/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
+ [Classes d’ensemble de lignes de schéma et Classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)   
+ [Prise en charge des ensembles de lignes de schéma](../../data/oledb/supporting-schema-rowsets.md)   
+ [UpdatePV](../../visual-cpp-samples.md)

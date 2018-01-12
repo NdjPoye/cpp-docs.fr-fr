@@ -1,32 +1,33 @@
 ---
-title: "PROPERTY_INFO_ENTRY | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROPERTY_INFO_ENTRY"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROPERTY_INFO_ENTRY (macro)"
+title: PROPERTY_INFO_ENTRY | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROPERTY_INFO_ENTRY
+dev_langs: C++
+helpviewer_keywords: PROPERTY_INFO_ENTRY macro
 ms.assetid: f7bd23d6-52b4-4d6a-aa9a-1fca9834c8dc
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8b5193748f7a4f59abb8806e3d09bf0c77274b89
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# PROPERTY_INFO_ENTRY
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="propertyinfoentry"></a>PROPERTY_INFO_ENTRY
 Représente une propriété spécifique dans un jeu de propriétés.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -36,21 +37,21 @@ dwPropID
   
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *dwPropID*  
- \[in\] Valeur [DBPROPID](https://msdn.microsoft.com/en-us/library/ms723882.aspx) qui peut être utilisée en combinaison avec le GUID du jeu de propriétés pour identifier une propriété.  
+ [in] Valeur [DBPROPID](https://msdn.microsoft.com/en-us/library/ms723882.aspx) qui peut être utilisée en combinaison avec le GUID du jeu de propriétés pour identifier une propriété.  
   
-## Notes  
- Cette macro attribue à la propriété de type `DWORD` une valeur par défaut définie dans ATLDB.H. Pour attribuer à la propriété une valeur de votre choix, utilisez [PROPERTY\_INFO\_ENTRY\_VALUE](../../data/oledb/property-info-entry-value.md). Pour définir en même temps [VARTYPE](http://msdn.microsoft.com/fr-fr/317b911b-1805-402d-a9cb-159546bc88b4) et [DBPROPFLAGS](https://msdn.microsoft.com/en-us/library/ms724342.aspx) pour la propriété, utilisez [PROPERTY\_INFO\_ENTRY\_EX](../../data/oledb/property-info-entry-ex.md).  
+## <a name="remarks"></a>Notes  
+ Cette macro attribue à la propriété de type `DWORD` une valeur par défaut définie dans ATLDB.H. Pour attribuer à la propriété une valeur de votre choix, utilisez [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Pour définir en même temps [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) et [DBPROPFLAGS](https://msdn.microsoft.com/en-us/library/ms724342.aspx) pour la propriété, utilisez [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
   
-## Exemple  
- Consultez [BEGIN\_PROPSET\_MAP](../../data/oledb/begin-propset-map.md).  
+## <a name="example"></a>Exemple  
+ Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
- [Macros pour les modèles du fournisseur OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
- [Création d'un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+## <a name="see-also"></a>Voir aussi  
+ [Macros pour les modèles du fournisseur OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+ [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
+ [Création d’un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

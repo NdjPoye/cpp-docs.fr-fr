@@ -1,46 +1,46 @@
 ---
-title: "hash_set::lower_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::lower_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre lower_bound [STL/CLR]"
+title: hash_set::lower_bound (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::lower_bound
+dev_langs: C++
+helpviewer_keywords: lower_bound member [STL/CLR]
 ms.assetid: 54fe8ee5-1977-4192-9cc6-b51e84b03a16
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e1591f8309efda56305fffddc5faad4f1d54457c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set::lower_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Recherche le début de la plage qui correspond à une clé spécifiée.  
+# <a name="hashsetlowerbound-stlclr"></a>hash_set::lower_bound (STL/CLR)
+Début de la recherche de plage qui correspond à une clé spécifiée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 iterator lower_bound(key_type key);  
 ```  
   
-#### Paramètres  
- key  
+#### <a name="parameters"></a>Paramètres  
+ clé  
  Valeur de clé à rechercher.  
   
-## Notes  
- La fonction membre détermine le premier élément `X` de la séquence contrôlée qui est découpée dans le même compartiment que `key` et qui a un ordonnancement équivalent à `key`.  Si aucun de ces éléments n'existe, il renvoie [hash\_set::end](../dotnet/hash-set-end-stl-clr.md)`()`; sinon il renvoie un itérateur qui indique `X`.  Vous l'utilisez pour rechercher le début d'une séquence d'éléments figurant actuellement dans la séquence contrôlée qui correspond à une clé spécifiée.  
+## <a name="remarks"></a>Notes  
+ La fonction membre détermine le premier élément `X` dans la séquence contrôlée qui hache le même compartiment en tant que `key` et a un classement équivalent à `key`. Si cet élément n’existe, elle retourne [hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`; sinon, elle retourne un itérateur qui désigne `X`. Il permet de localiser le début d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_set_lower_bound.cpp   
@@ -72,18 +72,21 @@ int main()
   
 ```  
   
-  **a b c**  
-**faible\_limite\(L'x'\)\=\=fin\(\) \= Vrai**  
-**\*lower\_bound \(A\) \= a**  
-**L'\*lower\_bound \(B\) \= b**   
-## Configuration requise  
- **En\-tête:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+lower_bound(L'x')==end() = True  
+*lower_bound(L'a') = a  
+*lower_bound(L'b') = b  
+```  
   
- **Espace de noms :** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/hash_set >  
   
-## Voir aussi  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::count](../dotnet/hash-set-count-stl-clr.md)   
- [hash\_set::equal\_range](../dotnet/hash-set-equal-range-stl-clr.md)   
- [hash\_set::find](../dotnet/hash-set-find-stl-clr.md)   
- [hash\_set::upper\_bound](../dotnet/hash-set-upper-bound-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::Count (STL/CLR)](../dotnet/hash-set-count-stl-clr.md)   
+ [hash_set::equal_range (STL/CLR)](../dotnet/hash-set-equal-range-stl-clr.md)   
+ [hash_set::Find (STL/CLR)](../dotnet/hash-set-find-stl-clr.md)   
+ [hash_set::upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)

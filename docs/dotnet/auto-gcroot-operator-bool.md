@@ -20,11 +20,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 375816231f10545411cfdc359df556163c2c6039
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c327f0ff6e1be74831bb3e0f319ebaf429e7ca70
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autogcrootoperator-bool"></a>auto_gcroot::operator bool
 Opérateur pour l’utilisation de `auto_gcroot` dans une expression conditionnelle.  
@@ -38,7 +41,7 @@ operator bool() const;
 ## <a name="return-value"></a>Valeur de retour  
  `true`Si l’objet encapsulé est valide ; `false` dans le cas contraire.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cet opérateur convertit effectivement en `_detail_class::_safe_bool` qui est plus sûr que `bool` car il ne peut pas être converti en un type intégral.  
   
 ## <a name="example"></a>Exemple  
@@ -70,7 +73,7 @@ now s is valid
 now s is invalid  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  

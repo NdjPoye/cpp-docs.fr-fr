@@ -1,33 +1,35 @@
 ---
-title: "CMyProviderCommand (MyProviderRS.H) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cmyprovidercommand"
-  - ""myproviderrs.h""
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMyProviderCommand (classe dans MyProviderRS.H)"
-  - "fournisseurs OLE DB, fichiers générés par l'Assistant"
+title: CMyProviderCommand (MyProviderRS.H) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- cmyprovidercommand
+- myproviderrs.h
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, wizard-generated files
+- CMyProviderCommand class in MyProviderRS.H
 ms.assetid: b30b956e-cc91-4cf5-9fe6-f8b1ce9cc2a5
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 67a394ce3c3b05e3f5eea49cbd3a234a0dd89df2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CMyProviderCommand (MyProviderRS.H)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La classe `CMyProviderCommand` est l'implémentation de l'objet command du fournisseur.  Elle assure l'implémentation pour les interfaces `IAccessor`, `ICommandText` et **ICommandProperties**.  L'interface `IAccessor` est la même que celle du jeu de lignes.  L'objet command utilise l'accesseur pour spécifier les liaisons des paramètres.  L'objet rowset les utilise pour spécifier les liaisons des colonnes de sortie.  L'interface `ICommandText` offre un moyen pratique pour la spécification textuelle d'une commande.  Cet exemple utilise l'interface `ICommandText` ultérieurement quand il ajoutera un code personnalisé ; il substitue également la méthode `ICommand::Execute`.  L'interface **ICommandProperties** gère toutes les propriétés des objets command et rowset.  
+# <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
+La `CMyProviderCommand` classe est l’implémentation de l’objet de commande fournisseur. Il fournit l’implémentation pour la `IAccessor`, `ICommandText`, et **ICommandProperties** interfaces. Le `IAccessor` interface est le même que celui de l’ensemble de lignes. L’objet de commande utilise l’accesseur pour spécifier les liaisons de paramètres. L’objet rowset les utilise pour spécifier les liaisons pour les colonnes de sortie. Le `ICommandText` interface est un moyen utile pour spécifier une commande textuelle. Cet exemple utilise le `ICommandText` interface ultérieurement lors de l’ajout de code personnalisé ; il remplace également le `ICommand::Execute` (méthode). Le **ICommandProperties** interface gère toutes les propriétés pour les objets command et rowset.  
   
 ```  
 // CMyProviderCommand  
@@ -42,11 +44,11 @@ class ATL_NO_VTABLE CMyProviderCommand :
    public IColumnsInfoImpl<CMyProviderCommand>  
 ```  
   
- L'interface `IAccessor` gère toutes les liaisons utilisées dans les commandes et les jeux de lignes.  Le consommateur appelle **IAccessor::CreateAccessor** à l'aide d'un tableau de structures **DBBINDING**.  Chaque structure **DBBINDING** contient les informations indiquant comment les liaisons des colonnes doivent être gérées \(type et longueur, par exemple\).  Le fournisseur reçoit les structures puis détermine comment les données doivent être transférées et si des conversions sont nécessaires.  L'interface `IAccessor` est utilisée dans l'objet command pour gérer éventuellement les paramètres de la commande.  
+ Le `IAccessor` interface gère toutes les liaisons utilisées dans les commandes et les ensembles de lignes. Le consommateur appelle **IAccessor::CreateAccessor** avec un tableau de **DBBINDING** structures. Chaque **DBBINDING** structure contient des informations sur comment les liaisons de colonnes doivent être gérés (par exemple, le type et la longueur). Le fournisseur reçoit les structures, puis détermine comment les données doivent être transférées et si des conversions sont nécessaires. Le `IAccessor` interface est utilisée dans l’objet de commande pour gérer les paramètres de la commande.  
   
- L'objet command assure également une implémentation de l'interface `IColumnsInfo`.  OLE DB requiert l'interface `IColumnsInfo`.  Cette interface permet au consommateur de récupérer des informations sur les paramètres à partir de la commande.  L'objet rowset utilise l'interface `IColumnsInfo` pour retourner au fournisseur des informations sur les colonnes de sortie.  
+ L’objet de commande fournit également une implémentation de `IColumnsInfo`. OLE DB requiert le `IColumnsInfo` interface. L’interface permet au consommateur de récupérer les informations sur les paramètres de la commande. L’objet rowset utilise le `IColumnsInfo` interface à retourner des informations sur les colonnes de sortie pour le fournisseur.  
   
- Le fournisseur contient également une interface appelée `IObjectWithSite`.  L'interface `IObjectWithSite` a été implémentée dans ATL 2.0 et permet à l'implémenteur de passer des informations sur lui\-même à son enfant.  L'objet command utilise les informations de l'interface `IObjectWithSite` pour indiquer aux objets rowset éventuellement générés qui les a créés.  
+ Le fournisseur contient également une interface appelée `IObjectWithSite`. Le `IObjectWithSite` interface a été implémentée dans ATL 2.0 et permet à l’implémenteur de passer des informations sur lui-même à son enfant. L’objet de commande utilise le `IObjectWithSite` pour indiquer les informations générées objets ensemble de lignes qui les a créés.  
   
-## Voir aussi  
- [Fichiers générés par l'Assistant Fournisseur](../../data/oledb/provider-wizard-generated-files.md)
+## <a name="see-also"></a>Voir aussi  
+ [Fichiers générés par l’Assistant Fournisseur](../../data/oledb/provider-wizard-generated-files.md)

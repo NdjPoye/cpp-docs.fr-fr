@@ -8,7 +8,7 @@ ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: class_cpp
-dev_langs: C++
+dev_langs: CPP
 helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43ceb1a6f2f2830f042ab2989839763cdf581ade
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed344d5c15e709b09b760dee74a986dde6383d22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="class-c"></a>class (C++)
 Le `class` mot clé déclare un type de classe ou définit un objet d’un type de classe.  
@@ -60,7 +61,7 @@ Le `class` mot clé déclare un type de classe ou définit un objet d’un type 
  `declarators`  
  Liste des déclarateurs spécifiant les noms d’une ou plusieurs instances du type de classe. Les déclarateurs peuvent inclure des listes d'initialiseurs si toutes les données membres de la classe sont `public`. Il s’agit plus courant dans les structures de données dont les membres sont `public` par défaut, que dans les classes. Consultez [vue d’ensemble des déclarateurs](../cpp/overview-of-declarators.md) pour plus d’informations.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour plus d’informations sur les classes en général, consultez une des rubriques suivantes :  
   
 -   [struct](../cpp/struct-cpp.md)  

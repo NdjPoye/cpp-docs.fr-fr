@@ -1,28 +1,30 @@
 ---
-title: "Stockage de cha&#238;nes dans le fournisseur OLE&#160;DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "enregistrements utilisateur, modifier"
+title: "Stockage de chaînes dans le fournisseur OLE DB | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 11c058bacee52eb2b1df771a27d8695113f1c71d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Stockage de cha&#238;nes dans le fournisseur OLE&#160;DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dans MyProviderRS.h, l'Assistant Fournisseur OLE DB ATL crée un enregistrement utilisateur par défaut appelé `CWindowsFile`.  Pour gérer les deux chaînes, modifiez `CWindowsFile` ou ajoutez votre propre enregistrement utilisateur comme illustré dans le code suivant :  
+# <a name="storing-strings-in-the-ole-db-provider"></a>Stockage de chaînes dans le fournisseur OLE DB
+Dans MyProviderRS.h, l’Assistant fournisseur OLE DB ATL crée un enregistrement d’utilisateur par défaut appelé `CWindowsFile`. Pour gérer les deux chaînes, vous devez soit modifier `CWindowsFile` ou ajoutez votre propre enregistrement utilisateur comme indiqué dans le code suivant :  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -49,11 +51,11 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- Les données membres `szCommand` et `szText` représentent les deux chaînes, `szCommand2` et `szText2` fournissant des colonnes supplémentaires le cas échéant.  Les données membres `dwBookmark` ne sont pas nécessaires pour ce fournisseur simple accessible en lecture seule mais sont utilisées ultérieurement pour ajouter une interface `IRowsetLocate` ; consultez [Amélioration du fournisseur simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md).  L'opérateur `==` compare des instances \(l'implémentation de cet opérateur est facultative\).  
+ Les membres de données `szCommand` et `szText` représentent les deux chaînes, avec `szCommand2` et `szText2` fournissant des colonnes supplémentaires si nécessaire. Le membre de données `dwBookmark` n’est pas nécessaire pour ce fournisseur en lecture seule simple mais est utilisée ultérieurement pour ajouter une `IRowsetLocate` interface ; consultez [amélioration en lecture uniquement fournisseur Simple](../../data/oledb/enhancing-the-simple-read-only-provider.md). Le `==` opérateur compare des instances (l’implémentation de cet opérateur est facultative).  
   
- Une fois cette opération effectuée, le fournisseur est normalement prêt pour la compilation et l'exécution.  Pour tester le fournisseur, vous avez besoin d'un consommateur doté de fonctionnalités correspondantes.  [Implémentation d'un consommateur simple](../../data/oledb/implementing-a-simple-consumer.md) montre comment créer un tel consommateur de test.  Exécutez le consommateur de test avec le fournisseur.  Vérifiez que le consommateur de test récupère les chaînes appropriées à partir du fournisseur lorsque vous cliquez sur le bouton **Exécuter** dans la boîte de dialogue **Consommateur de test**.  
+ Dans ce cas, votre fournisseur doit être prêt à compiler et exécuter. Pour tester le fournisseur, vous avez besoin d’un consommateur avec la fonctionnalité de correspondance. [Implémentation d’un consommateur Simple](../../data/oledb/implementing-a-simple-consumer.md) montre comment créer un tel consommateur de test. Exécutez le consommateur de test avec le fournisseur. Vérifiez que le consommateur de test récupère les chaînes appropriées à partir du fournisseur lorsque vous cliquez sur le **exécuter** situé dans le **consommateur de Test** boîte de dialogue.  
   
- Une fois que vous avez testé avec succès votre fournisseur, vous pouvez le cas échéant améliorer son fonctionnement en implémentant des interfaces supplémentaires.  Un exemple est fourni dans [Amélioration du fournisseur simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
+ Lorsque vous avez testé avec succès votre fournisseur, vous souhaiterez peut-être améliorer ses fonctionnalités en implémentant des interfaces supplémentaires. Voici un exemple dans [amélioration du fournisseur Simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
   
-## Voir aussi  
- [Implémentation d'un fournisseur simple accessible en lecture seule](../../data/oledb/implementing-the-simple-read-only-provider.md)
+## <a name="see-also"></a>Voir aussi  
+ [Implémentation d’un fournisseur simple accessible en lecture seule](../../data/oledb/implementing-the-simple-read-only-provider.md)

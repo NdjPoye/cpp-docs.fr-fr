@@ -51,11 +51,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4df8de18c2256b4e9034b4b0c80f7c4edf85fe91
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46e905408faed138b1509362a1ec56e727742ce9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 Déplace un pointeur de chaîne d’un caractère en arrière.  
@@ -101,7 +102,7 @@ unsigned char *_mbsdec_l(
 ## <a name="remarks"></a>Notes  
  Les fonctions `_mbsdec` et `_mbsdec_l` retournent un pointeur désignant le premier octet du caractère multioctet qui précède immédiatement `current` dans la chaîne qui contient `start`.  
   
- La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  `_mbsdec` reconnaît les séquences de caractères multioctets en fonction des paramètres régionaux actuellement utilisés, tandis que `_mbsdec_l` est identique, à ceci près qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  `_mbsdec` reconnaît les séquences de caractères multioctets en fonction des paramètres régionaux actuellement utilisés, tandis que `_mbsdec_l` est identique, à ceci près qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  Si `start` ou `current` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, cette fonction retourne `EINVAL` et affecte la valeur `errno` à `EINVAL`.  
   
@@ -118,7 +119,7 @@ unsigned char *_mbsdec_l(
   
  Pour plus d’informations, consultez [Utilisation de mappages de texte générique](../../c-runtime-library/using-generic-text-mappings.md) et [Mappages de texte générique](../../c-runtime-library/generic-text-mappings.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|En-tête facultatif|  
 |-------------|---------------------|---------------------|  
@@ -127,7 +128,7 @@ unsigned char *_mbsdec_l(
 |`_strdec`|\<tchar.h>||  
 |`_wcsdec`|\<tchar.h>||  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant illustre une utilisation de `_tcsdec`.  

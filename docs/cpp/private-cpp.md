@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4f6a60a1e152d211ea3894d6dcd221ab543d3997
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: baa3a23eacc8428bcbeb6ee5a88a835ff193ee02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="private-c"></a>private (C++)
 ## <a name="syntax"></a>Syntaxe  
@@ -30,7 +31,7 @@ private:
 private base-class  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Lorsqu'il précède une liste de membres de classe, le mot clé `private` indique que ces membres sont accessibles à partir de n'importe quelle fonction et friends de la classe. Cela s'applique à tous les membres déclarés jusqu'au spécificateur d'accès suivant de la classe.  
   
  En faisant précéder le nom d'une classe de base, le mot clé `private` indique que les membres publics et protégés de la classe de base sont des membres privés de la classe dérivée.  

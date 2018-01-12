@@ -1,41 +1,42 @@
 ---
-title: "list::begin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::begin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre begin [STL/CLR]"
+title: List::Begin (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::begin
+dev_langs: C++
+helpviewer_keywords: begin member [STL/CLR]
 ms.assetid: 3431467b-951a-498a-af8d-50f631da1646
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a98c73ae1bd89b4c963b3f65df86c0df5ac4574b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# list::begin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listbegin-stlclr"></a>list::begin (STL/CLR)
 Désigne le début de la séquence contrôlée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 iterator begin();  
 ```  
   
-## Notes  
- La méthode retourne un itérateur d'accès aléatoire qui désigne le premier élément de la séquence contrôlée ou la position juste après la fin d'une séquence vide.  Vous l'utilisez pour obtenir un itérateur qui désigne le début `current` de la séquence contrôlée, mais son état peut changer si la longueur de la séquence contrôlée change.  
+## <a name="remarks"></a>Notes  
+ La fonction membre retourne un itérateur à accès aléatoire qui désigne le premier élément de la séquence contrôlée ou juste après la fin d’une séquence vide. Vous l’utilisez pour obtenir un itérateur qui désigne le `current` début de la séquence contrôlée, mais son état peut changer si la longueur de la séquence contrôlée change.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_list_begin.cpp   
@@ -70,17 +71,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*begin\(\) \= a**  
-**\*\+\+begin\(\) \= b**  
- **x y c**   
-## Configuration requise  
- **En\-tête :** \<cliext\/list\>  
+```Output  
+ a b c  
+*begin() = a  
+*++begin() = b  
+ x y c  
+```  
   
- **Espace de noms :** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/liste >  
   
-## Voir aussi  
- [list](../dotnet/list-stl-clr.md)   
- [list::end](../dotnet/list-end-stl-clr.md)   
- [list::front](../dotnet/list-front-stl-clr.md)   
- [list::front\_item](../dotnet/list-front-item-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [liste (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::end (STL/CLR)](../dotnet/list-end-stl-clr.md)   
+ [List::Front (STL/CLR)](../dotnet/list-front-stl-clr.md)   
+ [list::front_item (STL/CLR)](../dotnet/list-front-item-stl-clr.md)

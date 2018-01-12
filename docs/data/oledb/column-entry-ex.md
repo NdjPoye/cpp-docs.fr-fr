@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 837bd4eccc0246de5fa719df0c79f5e71e790589
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1c477d2142fd64461754633593e07d86dc7f4d60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="columnentryex"></a>COLUMN_ENTRY_EX
 Représente une liaison sur l’ensemble de lignes à la colonne dans la base de données.  
@@ -75,7 +78,7 @@ status
  *status*  
  [in] La variable à lier à l’état de la colonne.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `COLUMN_ENTRY_EX` macro est utilisée dans les emplacements suivants :  
   
 -   Entre le [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP](../../data/oledb/end-column-map.md) macros.  
@@ -87,7 +90,7 @@ status
 ## <a name="example"></a>Exemple  
  Consultez [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

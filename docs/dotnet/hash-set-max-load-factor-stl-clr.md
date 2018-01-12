@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 82f1208969cc10b8cb5a3baa6f866291ce6380bf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6532e22b058b3ec002689790fe546ad574b4eb0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashsetmaxloadfactor-stlclr"></a>hash_set::max_load_factor (STL/CLR)
 Obtient ou définit le nombre maximal d’éléments par compartiment.  
@@ -35,7 +38,7 @@ void max_load_factor(float new_factor);
  new_factor  
  Nouvelle valeur maximale de charger facteur à stocker.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La première fonction membre retourne le facteur de charge maximale stockée en cours. Il permet de déterminer la taille du compartiment moyenne maximale.  
   
  La deuxième fonction membre remplace le facteur de charge maximale de magasin avec `new_factor`. Aucun aborderont automatique se produit jusqu'à une insertion ultérieure.  
@@ -101,7 +104,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/hash_set >  
   
  **Namespace :** cliext  

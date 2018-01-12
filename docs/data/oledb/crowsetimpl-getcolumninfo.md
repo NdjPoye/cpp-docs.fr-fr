@@ -1,34 +1,36 @@
 ---
-title: "CRowsetImpl::GetColumnInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetColumnInfo"
-  - "CRowsetImpl.GetColumnInfo"
-  - "CRowsetImpl::GetColumnInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetColumnInfo (méthode)"
+title: CRowsetImpl::GetColumnInfo | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetColumnInfo
+- CRowsetImpl.GetColumnInfo
+- CRowsetImpl::GetColumnInfo
+dev_langs: C++
+helpviewer_keywords: GetColumnInfo method
 ms.assetid: 9ef76525-f996-4c6f-81b9-68eb260350ef
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: acfc7e4afa0036c6f6e66aaef65305fc05ef6d14
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CRowsetImpl::GetColumnInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Récupère les informations de colonne pour une demande d'un client particulière.  
+# <a name="crowsetimplgetcolumninfo"></a>CRowsetImpl::GetColumnInfo
+Récupère les informations de colonne pour une demande de client particulier.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -38,27 +40,27 @@ Récupère les informations de colonne pour une demande d'un client particulièr
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `pv`  
- \[in\] le pointeur à `CRowsetImpl` de l'utilisateur est dérivé la classe.  
+ [in] Un pointeur vers l’utilisateur `CRowsetImpl` classe dérivée.  
   
  `pcCols`  
- \[in\] le pointeur d'un objet \(sortie\) vers le nombre de colonnes retourné.  
+ [in] Un pointeur (sortie) au nombre de colonnes retourné.  
   
-## Valeur de retour  
- Pointeur vers une structure de **ATLCOLUMNINFO** statique.  
+## <a name="return-value"></a>Valeur de retour  
+ Un pointeur vers un statique **ATLCOLUMNINFO** structure.  
   
-## Notes  
- Cette méthode est une substitution avancée.  
+## <a name="remarks"></a>Notes  
+ Cette méthode est un remplacement avancé.  
   
- Cette méthode est appelée par plusieurs classes de base d'implémentation pour extraire les informations de colonne pour une demande d'un client particulière.  Généralement, cette méthode est appelée par `IColumnsInfoImpl`.  Si vous remplacez cette méthode, vous devez placer une version dans la méthode dans votre `CRowsetImpl`\- classe dérivée.  Comme la méthode peut être placée dans une classe non mise en modèle, vous devez modifier `pv` à la classe dérivée de `CRowsetImpl`appropriée.  
+ Cette méthode est appelée par plusieurs classes d’implémentation de base pour récupérer les informations de colonne pour une demande de client particulier. En règle générale, cette méthode appelée `IColumnsInfoImpl`. Si vous substituez cette méthode, vous devez placer une version de la méthode dans votre `CRowsetImpl`-classe dérivée. Étant donné que la méthode peut être placée dans une classe non transformer en modèle, vous devez modifier `pv` approprié `CRowsetImpl`-classe dérivée.  
   
- L'exemple suivant illustre l'utilisation de **GetColumnInfo's**.  Dans cet exemple, **CMyRowset** est `CRowsetImpl`\- une classe dérivée.  Pour remplacer `GetColumnInfo` pour toutes les instances de cette classe, placez la méthode suivante dans la définition de la classe de **CMyRowset**:  
+ L’exemple suivant montre comment **de GetColumnInfo** utilisation. Dans cet exemple, **CMyRowset** est un `CRowsetImpl`-classe dérivée. Afin de pouvoir remplacer `GetColumnInfo` pour toutes les instances de cette classe, placez la méthode suivante dans le **CMyRowset** définition de classe :  
   
- [!code-cpp[NVC_OLEDB_Provider#1](../../data/oledb/codesnippet/CPP/crowsetimpl-getcolumninfo_1.h)]  
+ [!code-cpp[NVC_OLEDB_Provider#1](../../data/oledb/codesnippet/cpp/crowsetimpl-getcolumninfo_1.h)]  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CRowsetImpl, classe](../../data/oledb/crowsetimpl-class.md)

@@ -55,16 +55,19 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1c502a9c74f0de5c27af788a0f23778c42db8c20
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1ae6f0d10b3c7dca22ded5a65ac5930258c89ca2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccolumnprivileges-ccolumnprivilegeinfo"></a>CColumnPrivileges, CColumnPrivilegeInfo
 Appelez la classe typedef **CColumnPrivileges** pour implémenter sa classe de paramètre **CColumnPrivilegeInfo**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Consultez [Classes de jeu de lignes de schéma et Classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation de classes typedef.  
   
  Cette classe identifie les privilèges sur les colonnes des tables définies dans le catalogue, qui sont disponibles pour ou accordés par un utilisateur donné.  
@@ -84,7 +87,7 @@ Appelez la classe typedef **CColumnPrivileges** pour implémenter sa classe de p
 |m_szPrivilegeType|PRIVILEGE_TYPE|  
 |m_bIsGrantable|IS_GRANTABLE|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbsch.h  
   
 ## <a name="see-also"></a>Voir aussi  

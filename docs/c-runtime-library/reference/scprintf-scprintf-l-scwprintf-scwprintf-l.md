@@ -55,11 +55,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: abe5d2f6666923e3fe1892375bbe439b9e5bdd93
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d0746dcd985bc5d7a9b0e42708778f4021961874
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scprintf-scprintfl-scwprintf-scwprintfl"></a>_scprintf, _scprintf_l, _scwprintf, _scwprintf_l
 Retourne le nombre de caractères présents dans la chaîne mise en forme.  
@@ -97,7 +98,7 @@ int _scwprintf_l(
  `locale`  
  Paramètres régionaux à utiliser.  
   
- Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Valeur de retour  
  Retourne le nombre de caractères qui seraient générés si la chaîne devait était imprimée ou envoyée vers un fichier ou une mémoire tampon en utilisant les codes de mise en forme spécifiés. La valeur retournée n’inclut pas le caractère Null de fin. `_scwprintf` exécute la même fonction pour les caractères larges.  
@@ -121,14 +122,14 @@ int _scwprintf_l(
 |`_sctprintf`|`_scprintf`|`_scprintf`|`_scwprintf`|  
 |`_sctprintf_l`|`_scprintf_l`|`_scprintf_l`|`_scwprintf_l`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_scprintf`, `_scprintf_l`|\<stdio.h>|  
 |`_scwprintf`, `_scwprintf_l`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

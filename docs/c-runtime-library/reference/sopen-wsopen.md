@@ -43,11 +43,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2a28e6a05676b7340c4dfbf3e963e6046c7beafa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bce1d0aac8b6b4d835b956a9ac05eece4e2e6428
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sopen-wsopen"></a>_sopen, _wsopen
 Ouvre un fichier pour le partage. Il existe des versions plus sécurisées de ces fonctions. Consultez [_sopen_s, _wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md).  
@@ -102,7 +103,7 @@ int _wsopen(
  `ENOENT`  
  Fichier ou chemin d'accès introuvable.  
   
- Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Notes  
  La fonction `_sopen` ouvre le fichier spécifié par `filename` et prépare le fichier pour la lecture ou l'écriture partagée, comme défini par `oflag` et `shflag`. `_wsopen` est une version à caractères larges de `_sopen` ; l'argument `filename` de `_wsopen` est une chaîne à caractères larges. Sinon, `_wsopen` et `_sopen` se comportent de la même façon.  
@@ -204,14 +205,14 @@ int _wsopen(
   
  `_sopen` applique le masque d'autorisation de fichier actif à `pmode` avant que les autorisations soient définies. (Voir [_umask](../../c-runtime-library/reference/umask.md).)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|En-tête facultatif|  
 |-------------|---------------------|---------------------|  
 |`_sopen`|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|  
 |`_wsopen`|\<io.h> ou \<wchar.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple relatif à [_locking](../../c-runtime-library/reference/locking.md).  

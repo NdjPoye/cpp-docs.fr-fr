@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: bf096ef9849856e9995ff634d7aca26cd7f3f8e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3617f4e9209a9726fcf4801e803259ef921c7b60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference, classe
 Type d'optimisation que vous pouvez utiliser pour passer des données de type chaîne des paramètres d'entrée `Platform::String^` à d'autres méthodes avec un minimum d'opérations de copie.  
@@ -34,7 +35,7 @@ Type d'optimisation que vous pouvez utiliser pour passer des données de type ch
 class StringReference  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ### <a name="members"></a>Membres  
   
@@ -60,7 +61,7 @@ class StringReference
 |[StringReference::operator =](#operator-assign)|Assigne une `StringReference` à une nouvelle instance de `StringReference` .|  
 |[Stringreference::operator](#operator-call)|Convertit une `StringReference` en une `Platform::String^`.|  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **Minimum pris en charge le client :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  
@@ -96,7 +97,7 @@ __abi_HSTRING GetHSTRING() const
 ### <a name="return-value"></a>Valeur de retour  
  `__abi_HSTRING` contenant les données de type chaîne.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 
 
@@ -125,7 +126,7 @@ unsigned int Length() const
 ### <a name="return-value"></a>Valeur de retour  
  Entier non signé qui Spécifie le nombre de caractères de la chaîne.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 
 
@@ -149,7 +150,7 @@ StringReference& operator=(const ::default::char16* __strArg);
 ### <a name="return-value"></a>Valeur de retour  
  Référence à un objet de type `StringReference`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Étant donné que `StringReference` est une classe C++ standard et non une classe ref, elle n’apparaît pas dans le **Explorateur d’objets**.  
   
 
@@ -195,7 +196,7 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg)
  `__lenArg`  
  Nombre d'éléments de `__strArg`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La première version de ce constructeur est le constructeur par défaut. La deuxième version initialise une nouvelle classe d'instance `StringReference` de l'objet spécifié par le paramètre `__fstrArg`. Les troisième et quatrième surcharges initialisent une nouvelle `StringReference` instance à partir d’un tableau de valeurs char16. char16 représente un caractère de texte UNICODE 16 bits.  
   
 

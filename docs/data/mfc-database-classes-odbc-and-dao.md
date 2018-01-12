@@ -1,46 +1,44 @@
 ---
-title: "Classes de bases de donn&#233;es MFC (ODBC et DAO) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DAO (Data Access Objects), et MFC"
-  - "MFC, DAO et"
-  - "MFC, applications de bases de données"
-  - "ODBC, classes ODBC"
+title: "Classes de base de données MFC (ODBC et DAO) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC, ODBC classes
+- MFC, database applications
 ms.assetid: 88aabe65-84e3-4122-b636-5d334a5fe570
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8a8f34bbe05a01c2015b74dca04a5408ec2ad1a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Classes de bases de donn&#233;es MFC (ODBC et DAO)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mfc-database-classes"></a>Classes de base de données MFC 
 > [!NOTE]
->  Microsoft recommande l'utilisation d'OLE DB ou d'ODBC pour les nouveaux projets.  La technologie DAO doit être réservée aux applications existantes.  
-  
- Dans la mesure où la bibliothèque MFC implémente DAO et ODBC différemment, la documentation de chaque classe est presque totalement distincte.  Le kit de développement DAO SDK est fourni sur le CD\-ROM Visual C\+\+, alors que le kit de développement ODBC SDK se trouve sur le CD\-ROM de MSDN Library.  Le tableau suivant indique la prochaine rubrique à lire si vous commencez juste à vous intéresser aux classes DAO MFC ou aux classes ODBC MFC.  
-  
- Pour plus d'informations, consultez les rubriques suivantes :  
+>  Microsoft recommande l’utilisation de ODBC via Microsoft ODBC Driver 13 (ou version ultérieure) pour SQL Server pour les nouveaux projets. DAO n’est plus pris en charge.    
+
+ Pour plus d’informations, consultez les rubriques suivantes :  
+-   [Feuille de route des technologies d’accès aux données](https://msdn.microsoft.com/en-us/library/ms810810.aspx) 
+
+-   [ODBC Driver 13.1 for SQL Server est publié](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) Microsoft ODBC Driver 13 for SQL Server doit être utilisé pour créer des applications ou améliorer des applications existantes qui doivent tirer parti des nouvelles fonctionnalités de SQL Server 2016.
   
 -   [ODBC et MFC](../data/odbc/odbc-and-mfc.md)  
   
--   [Documentation des bases de données MFC](../data/mfc-database-documentation.md)  
+-   [À l’aide des Classes de base de données avec des Documents et vues](../data/mfc-using-database-classes-with-documents-and-views.md)  
   
--   [Utilisation des classes de bases de données avec des documents et des vues](../data/mfc-using-database-classes-with-documents-and-views.md)  
+-   [À l’aide des Classes de base de données sans document ni vue](../data/mfc-using-database-classes-without-documents-and-views.md)  
   
--   [Utilisation des classes de bases de données sans document ni vue](../data/mfc-using-database-classes-without-documents-and-views.md)  
-  
--   Consultez le site Web Microsoft Universal Data Access à l'adresse [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=121548](http://go.microsoft.com/fwlink/?LinkId=121548) pour des mises à jour et des informations récentes concernant ODBC et DAO.  
-  
-## Voir aussi  
- [Programmation de l'accès aux données \(MFC\/ATL\)](../data/data-access-programming-mfc-atl.md)
+## <a name="see-also"></a>Voir aussi  
+ [Programmation (MFC/ATL) d’accès aux données](../data/data-access-programming-mfc-atl.md)

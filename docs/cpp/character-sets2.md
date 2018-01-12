@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9261cf2573a5494a49f2f544772738afcdbbb0c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db505809c1fbc2c49e116b9c2f850f6e14dfbdf6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-sets"></a>Jeux de caractères
 Le texte d’un programme C++ est stocké dans des fichiers sources qui utilisent un encodage des caractères particulier. La norme C++ spécifie un jeu de caractères sources de base pour les fichiers sources, et un jeu de caractères d’exécution de base pour les fichiers compilés. Visual C++ permet l’utilisation d’un jeu supplémentaire de caractères spécifiques à des paramètres régionaux dans les fichiers sources et les fichiers compilés.  

@@ -23,11 +23,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e2b0a3a3a10ae2cc18ab83800cc50f25903a3607
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bd997b25125a48dd6103629e6957843295532901
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetmovenext"></a>CRowset::MoveNext
 Déplace le curseur à l’enregistrement suivant.  
@@ -53,7 +56,7 @@ HRESULT MoveNext(
 ## <a name="return-value"></a>Valeur de retour  
  `HRESULT` standard. Lorsque la fin de l’ensemble de lignes a été atteinte, retourne **DB_S_ENDOFROWSET**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Extrait la ligne suivante séquentielle à partir de la `CRowset` objet, sans oublier la position précédente. Si vous le souhaitez, vous pouvez choisir d’ignorer `lSkip` lignes ou en arrière.  
   
  Cette méthode requiert que vous définissez les propriétés suivantes avant d’appeler **ouvrir** sur la table ou d’une commande qui contient l’ensemble de lignes :  
@@ -64,7 +67,7 @@ HRESULT MoveNext(
   
  Dans le cas contraire (si `lSkip` > = 0 et `bForward` = true), vous n’avez pas besoin de définir des propriétés supplémentaires.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

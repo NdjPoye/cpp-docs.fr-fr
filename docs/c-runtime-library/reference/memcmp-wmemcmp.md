@@ -35,11 +35,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 423334c3300d0218eb76df8f90a2eb30ea8cc369
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 05869e1497ab173bc0f847482225ff215f3690af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 Compare les caractères dans deux mémoires tampons.  
@@ -81,14 +82,14 @@ int wmemcmp(
 ## <a name="remarks"></a>Notes  
  Compare les `count` premiers caractères de `buf1` et `buf2` et retourne une valeur qui indique leur relation. Le signe d’une valeur de retour non Nulle est le signe de la différence entre la première paire de valeurs différente dans les mémoires tampons. Les valeurs sont interprétées en tant que `unsigned char` pour `memcmp` et que `wchar_t` pour `wmemcmp`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`memcmp`|\<memory.h> ou \<string.h>|  
 |`wmemcmp`|\<wchar.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions de la [bibliothèque Runtime C](../../c-runtime-library/crt-library-features.md).  

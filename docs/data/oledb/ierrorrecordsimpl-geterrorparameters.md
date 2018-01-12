@@ -1,36 +1,38 @@
 ---
-title: "IErrorRecordsImpl::GetErrorParameters | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IErrorRecordsImpl::GetErrorParameters"
-  - "ATL.IErrorRecordsImpl.GetErrorParameters"
-  - "IErrorRecordsImpl.GetErrorParameters"
-  - "GetErrorParameters"
-  - "ATL::IErrorRecordsImpl::GetErrorParameters"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetErrorParameters (méthode)"
+title: IErrorRecordsImpl::GetErrorParameters | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IErrorRecordsImpl::GetErrorParameters
+- ATL.IErrorRecordsImpl.GetErrorParameters
+- IErrorRecordsImpl.GetErrorParameters
+- GetErrorParameters
+- ATL::IErrorRecordsImpl::GetErrorParameters
+dev_langs: C++
+helpviewer_keywords: GetErrorParameters method
 ms.assetid: 9bafac52-399e-4e0e-8365-b9f83074cdd5
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 57d0454cefbf97c8d9b94b92f868b9a83b561038
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# IErrorRecordsImpl::GetErrorParameters
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retourne le paramètre d'erreur.  
+# <a name="ierrorrecordsimplgeterrorparameters"></a>IErrorRecordsImpl::GetErrorParameters
+Retourne les paramètres de l’erreur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -40,11 +42,11 @@ Retourne le paramètre d'erreur.
 );  
 ```  
   
-#### Paramètres  
- Pour plus d'informations sur les curseurs, consultez le [Guide de référence du programmeur OLE DB](https://msdn.microsoft.com/en-us/library/ms715793.aspx) du .  
+#### <a name="parameters"></a>Paramètres  
+ Consultez [IErrorRecords::GetErrorParameters](https://msdn.microsoft.com/en-us/library/ms715793.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## Configuration requise  
- **En\-tête :** atldb.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldb.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [IErrorRecordsImpl, classe](../../data/oledb/ierrorrecordsimpl-class.md)

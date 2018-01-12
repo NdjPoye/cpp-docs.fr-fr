@@ -29,11 +29,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e2e3a202eb50159c43c57c96f785c74156336af8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b51f8ccbac43e30202598499613d3b1c7c6e0a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsrtowcs"></a>mbsrtowcs
 Convertit une chaîne de caractères multioctets dans les paramètres régionaux actuels en une chaîne de caractères larges correspondante, avec la capacité de redémarrer au milieu d'un caractère multioctet. Une version plus sécurisée de cette fonction est disponible ; consultez [mbsrtowcs_s](../../c-runtime-library/reference/mbsrtowcs-s.md).  
@@ -85,12 +86,12 @@ size_t mbsrtowcs(
   
  Si `mbstr` est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, cette fonction affecte à `errno` la valeur `EINVAL` et retourne -1.  
   
- En C++, cette fonction a une surcharge de modèle qui appelle l'équivalent plus récent et sécurisé de cette fonction. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, cette fonction a une surcharge de modèle qui appelle l'équivalent plus récent et sécurisé de cette fonction. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ## <a name="exceptions"></a>Exceptions  
  La fonction `mbsrtowcs` est multithread-safe tant qu'aucune fonction dans le thread actif n'appelle `setlocale` dès lors que cette fonction est en cours d'exécution et que l'argument `mbstate` n'est pas un pointeur null.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

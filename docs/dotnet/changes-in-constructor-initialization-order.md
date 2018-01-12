@@ -1,49 +1,51 @@
 ---
-title: "Modifications dans l&#39;ordre d&#39;initialisation des constructeurs | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "constructeurs, C++"
+title: "Modifications dans l’ordre d’initialisation constructeur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: constructors, C++
 ms.assetid: 8892c38d-6bf7-4cf7-ac8f-15e052135a79
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 499855ec5052c039e007df8348db094aee356411
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Modifications dans l&#39;ordre d&#39;initialisation des constructeurs
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'ordre d'initialisation des constructeurs de classe a changé entre Extensions managées pour C\+\+ et [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+# <a name="changes-in-constructor-initialization-order"></a>Modifications dans l'ordre d'initialisation des constructeurs
+L’ordre d’initialisation des constructeurs de classe a changé entre les Extensions managées pour C++ vers Visual C++.  
   
-## Comparaison de l'ordre d'initialisation des constructeurs  
- Sous les Extensions managées pour C\+\+, l'initialisation des constructeurs obéissait à l'ordre suivant :  
+## <a name="comparison-of-constructor-initialization-order"></a>Comparaison de l’ordre d’initialisation de constructeur  
+ Sous les Extensions managées pour C++, l’initialisation du constructeur s’est produite dans l’ordre suivant :  
   
-1.  Le constructeur de la classe de base, s'il existe, est appelé.  
+1.  Le constructeur de la classe de base, le cas échéant, est appelé.  
   
-2.  La liste d'initialisation de la classe est évaluée.  
+2.  La liste d’initialisation de la classe est évaluée.  
   
-3.  Le corps de code du constructeur de classes est exécuté.  
+3.  Le corps de code du constructeur de classe est exécuté.  
   
- Cet ordre d'exécution suit les mêmes conventions que dans la programmation C\+\+ native.  Le nouveau langage Visual C\+\+ prescrit l'ordre d'exécution suivant pour les classes CLR :  
+ Cet ordre d’exécution suit les mêmes conventions que dans la programmation en C++ native. Le nouveau langage Visual C++ prescrit l’ordre d’exécution suivants pour les classes CLR :  
   
-1.  La liste d'initialisation de la classe est évaluée.  
+1.  La liste d’initialisation de la classe est évaluée.  
   
-2.  Le constructeur de la classe de base, s'il existe, est appelé.  
+2.  Le constructeur de la classe de base, le cas échéant, est appelé.  
   
-3.  Le corps de code du constructeur de classes est exécuté.  
+3.  Le corps de code du constructeur de classe est exécuté.  
   
- Notez que cette modification s'applique uniquement aux classes CLR ; les classes natives [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] obéissent encore aux conventions antérieures.  Dans les deux cas, ces règles s'exécutent en cascade de bas en haut à travers la totalité de la chaîne de hiérarchie d'une classe donnée.  
+ Notez que cette modification s’applique uniquement aux classes CLR ; les classes natives dans Visual C++ néanmoins suivent les conventions antérieures. Dans les deux cas, ces règles en cascade vers le haut dans la chaîne de l’ensemble de la hiérarchie d’une classe donnée.  
   
- Considérez l'exemple de code suivant utilisant les Extensions managées pour C\+\+ :  
+ Prenons l’exemple de code suivant à l’aide des Extensions managées pour C++ :  
   
 ```  
 __gc class A  
@@ -68,15 +70,15 @@ private:
 };  
 ```  
   
- D'après l'ordre d'initialisation des constructeurs prescrit ci\-dessus, nous devons voir l'ordre suivant d'exécution lorsque les nouvelles instances de classe `B` sont construites :  
+ Après l’ordre d’initialisation des constructeurs prescrit ci-dessus, nous devons voir l’ordre suivant d’exécution lorsque les nouvelles instances de classe `B` sont construits :  
   
-1.  Le constructeur de la classe de base `A` est appelé.  Le membre `_n` est initialisé avec la valeur `1`.  
+1.  Le constructeur de la classe de base `A` est appelé. Le `_n` membre est initialisé à `1`.  
   
-2.  La liste d'initialisation pour la classe `B` est évaluée.  Le membre `_m` est initialisé avec la valeur `1`.  
+2.  La liste d’initialisation pour la classe `B` est évaluée. Le `_m` membre est initialisé à `1`.  
   
-3.  Le corps de code de la classe `B` est exécuté.  
+3.  Le corps de code de classe `B` est exécutée.  
   
- Maintenant, considérez le même code dans la nouvelle syntaxe Visual C\+\+ :  
+ Examinons à présent le même code dans la nouvelle syntaxe Visual C++ :  
   
 ```  
 ref class A  
@@ -101,20 +103,20 @@ private:
 };  
 ```  
   
- L'ordre d'exécution lorsque les nouvelles instances de la classe `B` sont construites avec la nouvelle syntaxe est le suivant :  
+ L’ordre d’exécution lorsque de nouvelles instances de classe `B` sont construites avec la nouvelle syntaxe est :  
   
-1.  La liste d'initialisation pour la classe `B` est évaluée.  Le membre `_m` est initialisé avec la valeur `0` \(`0` est la valeur non initialisée du membre de classe `_m`\).  
+1.  La liste d’initialisation pour la classe `B` est évaluée. Le `_m` membre est initialisé à `0` (`0` est la valeur non initialisée de le `_m` membre de classe).  
   
-2.  Le constructeur de la classe de base `A` est appelé.  Le membre `_n` est initialisé avec la valeur `1`.  
+2.  Le constructeur de la classe de base `A` est appelé. Le `_n` membre est initialisé à `1`.  
   
-3.  Le corps de code de la classe `B` est exécuté.  
+3.  Le corps de code de classe `B` est exécutée.  
   
- Notez qu'une syntaxe semblable produit des résultats différents pour ces exemples de code.  Le constructeur de la classe `B` dépend de la valeur de la classe de base `A` pour initialiser son membre.  Toutefois, le constructeur de la classe `A` n'a pas encore été appelé.  Une telle dépendance peut être particulièrement dangereuse lorsque la classe héritée dépend de la mémoire ou d'une allocation de ressources pour se produire dans le constructeur de la classe de base.  
+ Notez qu’une syntaxe semblable produit des résultats différents pour ces exemples de code. Le constructeur de classe `B` dépend d’une valeur à partir de la classe de base `A` pour initialiser son membre. Toutefois, le constructeur de classe `A` n’a pas encore été appelée. Une telle dépendance peut être particulièrement dangereuse lorsque la classe héritée dépend d’une allocation de mémoire ou une ressource à se produire dans le constructeur de classe de base.  
   
-## Ce que signifie le passage d'Extensions managées pour C\+\+ à Visual C\+\+ 2010  
- Dans de nombreux cas, les modifications apportées à l'ordre d'exécution des constructeurs de classe doivent être transparentes pour le programmeur parce que les classes de base n'ont aucune notion du comportement des classes héritées.  Cependant, comme ces exemples de code l'illustrent, les constructeurs des classes héritées peuvent être grandement affectés lorsque leurs listes d'initialisation dépendent des valeurs des membres de la classe de base.  Lorsque vous transférez votre code des Extensions managées pour C\+\+ vers la nouvelle syntaxe, pensez à déplacer de telles constructions vers le corps du constructeur de classe, où l'exécution est garantie se produire à la fin.  
+## <a name="what-this-means-going-from-managed-extensions-for-c-to-visual-c-2010"></a>Ce que signifie le passage d’Extensions managées pour C++ vers Visual C++ 2010  
+ Dans de nombreux cas, les modifications apportées à l’ordre d’exécution des constructeurs de classe doivent être transparentes au programmeur, car les classes de base n’ont aucune notion du comportement des classes héritées. Toutefois, comme l’illustrent les exemples de code, les constructeurs des classes héritées peuvent être considérablement affectées lorsque leurs listes d’initialisation dépendent des valeurs des membres de classe de base. Lorsque vous déplacez votre code à partir des Extensions managées pour C++ vers la nouvelle syntaxe, déplacez ces constructions dans le corps du constructeur de classe, où l’exécution est garantie pour avoir lieu en dernier.  
   
-## Voir aussi  
- [Types managés \(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Types managés (C + c++ / CL)](../dotnet/managed-types-cpp-cl.md)   
  [Constructeurs](../cpp/constructors-cpp.md)   
- [Initialiseurs de constructeur](../misc/constructor-initializers.md)
+ 

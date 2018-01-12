@@ -39,11 +39,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ebfeefa7a0a0e5f065ad397e71dfcbc26012aa65
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 830e86fad45d77a90fcc7ce22d484ad36d6b03b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbalnum-ismbbalnuml"></a>_ismbbalnum, _ismbbalnum_l
 Détermine si un caractère multioctet spécifié est alphabétique ou numérique.  
@@ -73,18 +74,18 @@ int _ismbbalnum_l(
 isalnum || _ismbbkalnum  
 ```  
   
- est différent de zéro pour `c`, ou 0 dans le cas contraire.  
+ est différente de zéro pour `c`, ou 0 dans le cas contraire.  
   
  La version de cette fonction avec le suffixe `_l` est identique, à ceci près qu’elle utilise les paramètres régionaux passés au lieu des paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_ismbbalnum`|\<mbctype.h>|  
 |`_ismbbalnum_l`|\<mbctype.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

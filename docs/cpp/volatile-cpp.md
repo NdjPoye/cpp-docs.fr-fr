@@ -19,11 +19,12 @@ caps.latest.revision: "43"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: efee0b7f789862a6dad4f9bbe85b0ba55dd8a8b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 02560da98c583281cc05921f2e924a12f41688c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="volatile-c"></a>volatile (C++)
 Qualificateur de type que vous pouvez utiliser pour déclarer qu'un objet peut être modifié dans le programme par le matériel.  
@@ -35,7 +36,7 @@ Qualificateur de type que vous pouvez utiliser pour déclarer qu'un objet peut �
 volatile declarator ;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez utiliser la [/volatile](../build/reference/volatile-volatile-keyword-interpretation.md) commutateur de compilateur pour modifier la façon dont le compilateur interprète ce mot clé.  
   
  Visual Studio interprète le mot clé `volatile` différemment selon l'architecture cible. Pour ARM, si aucun **/volatile** option du compilateur est spécifiée, le compilateur agit comme si **/volatile:iso** ont été spécifiés. Pour les architectures autres qu’ARM, si aucun **/volatile** option du compilateur est spécifiée, le compilateur effectue comme si **/volatile:ms** ont été spécifiées ; par conséquent, pour les architectures autres que ARM, nous vous Il est recommandé que vous spécifiez **/volatile:iso**et utiliser des primitives de synchronisation explicites et les intrinsèques du compilateur lorsque vous travaillez avec une mémoire qui est partagée entre plusieurs threads.  
@@ -64,7 +65,7 @@ volatile declarator ;
 ## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
  Lorsque le **/volatile:ms** option du compilateur est utilisée, par défaut lorsque les architectures autres que ARM sont ciblées, le compilateur génère un code supplémentaire pour conserver l’ordre des références aux objets volatiles, en plus de conserver ordre des références à d’autres objets globaux. En particulier :  
   
--   L'écriture dans un objet volatile (également appelée "écriture volatile") a une sémantique Release, c'est-à-dire, une référence à un objet global ou statique qui se produit avant qu'une écriture dans un objet volatile de la séquence d'instructions ne se produise avant cette écriture volatile dans le fichier binaire compilé.  
+-   L’écriture dans un objet volatile (également appelée "écriture volatile") a une sémantique Release, c’est-à-dire, une référence à un objet global ou statique qui se produit avant qu’une écriture dans un objet volatile de la séquence d’instructions ne se produise avant cette écriture volatile dans le fichier binaire compilé.  
   
 -   La lecture d'un objet volatile (également appelée "lecture volatile") a une sémantique Acquire, c'est-à-dire, une référence à un objet global ou statique qui se produit après qu'une lecture de la mémoire volatile dans la séquence d'instructions se produit après cette lecture volatile dans le fichier binaire compilé.  
   

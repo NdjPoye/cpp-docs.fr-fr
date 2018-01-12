@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 335776f2b0318e520479bf990615ccdfb1c47995
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0cd87cf23bd3d151225e4814eaa7fa57aac6f11c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autohandle"></a>auto_handle
 Définit le `auto_handle` classe et `swap` (fonction).  
@@ -30,7 +33,7 @@ Définit le `auto_handle` classe et `swap` (fonction).
 #include <msclr\auto_handle.h>  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Dans ce fichier d’en-tête :  
   
  [auto_handle, classe](../dotnet/auto-handle-class.md)  

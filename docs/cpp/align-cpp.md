@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- align_cpp
-dev_langs:
-- C++
+f1_keywords: align_cpp
+dev_langs: C++
 helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: a805d53a043a4b502cae4490ae01e2ff47a7cdb1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3bc721131e5cb47bf17d7e683f3a6df249f4dd38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="align-c"></a>align (C++)
 Dans Visual Studio 2015 et versions ultérieures, utilisez la norme C ++ 11 `alignas` spécificateur pour contrôler l’alignement. Pour plus d’informations, consultez [alignement](../cpp/alignment-cpp-declarations.md).  
@@ -40,7 +37,7 @@ Dans Visual Studio 2015 et versions ultérieures, utilisez la norme C ++ 11 `ali
 __declspec( align( # ) ) declarator  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L'écriture d'applications qui utilisent les dernières instructions du processeur introduit de nouvelles contraintes et de nouveaux problèmes. En particulier, de nombreuses nouvelles instructions nécessitent que les données soient alignées sur des limites de 16 octets. En outre, en alignant fréquemment les données utilisées sur la taille de ligne de cache d'un processeur spécifique, vous améliorez la performance du cache. Par exemple, si vous définissez une structure dont la taille est inférieure à 32 octets, vous pouvez l'aligner sur 32 octets pour garantir que les objets de ce type de structure sont mis en cache efficacement.  
   
  \#est la valeur d’alignement. Les entrées valides sont des puissances entières de deux comprises entre 1 et 8192 (octets), telles que 2, 4, 8, 16, 32 ou 64. `declarator` correspond aux données que vous déclarez comme alignées.  
@@ -253,4 +250,3 @@ struct S {
  [__declspec](../cpp/declspec.md)   
  [Vue d’ensemble des Conventions ABI ARM](../build/overview-of-arm-abi-conventions.md)   
  [Vue d’ensemble des conventions d’appel x64](../build/overview-of-x64-calling-conventions.md)
-

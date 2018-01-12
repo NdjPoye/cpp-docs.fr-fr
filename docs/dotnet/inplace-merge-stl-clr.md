@@ -1,32 +1,33 @@
 ---
-title: "inplace_merge (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::inplace_merge"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inplace_merge (fonction) (STL/CLR)"
+title: inplace_merge (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::inplace_merge
+dev_langs: C++
+helpviewer_keywords: inplace_merge function [STL/CLR]
 ms.assetid: e6948c03-8c5b-4a7c-915c-0a531946a321
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6fbe1e70f17ac558da58b819c952e0f26026690c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# inplace_merge (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Associe les éléments de deux plages triées consécutives dans une seule plage triée, où le respect du classement peut être spécifié par un attribut binaire.  
+# <a name="inplacemerge-stlclr"></a>inplace_merge (STL/CLR)
+Regroupe les éléments de deux plages triées consécutives au sein d’une même plage triée. Le critère de tri peut être spécifié par un prédicat binaire.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<class _BidIt> inline  
@@ -36,13 +37,13 @@ template<class _BidIt, class _Pr> inline
         _Pr _Pred);  
 ```  
   
-## Notes  
- Cette fonction se comporte de la même manière que la fonction `inplace_merge` de STL pour plus d'informations, consultez [inplace\_merge](../Topic/inplace_merge.md).  
+## <a name="remarks"></a>Notes  
+ Cette fonction comporte comme la fonction de la bibliothèque Standard C++ `inplace_merge` pour plus d’informations, consultez [inplace_merge](../standard-library/algorithm-functions.md#inplace_merge).  
   
-## Configuration requise  
- **En\-tête :** \<cliext\/algorithm\>  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/algorithme >  
   
- **Espace de nom :** cliext  
+ **Namespace :** cliext  
   
-## Voir aussi  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Voir aussi  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

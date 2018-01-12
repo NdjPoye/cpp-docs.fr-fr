@@ -39,17 +39,18 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f358376a16d811274978ccc730268e7cbe806df7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 327c55d92b9d23644807ecd52dbecf0fd0b62375
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
 Convertit un caractère multioctet codé sur deux octets en caractère multioctet codé sur un octet correspondant.  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -73,21 +74,21 @@ unsigned int _mbctombb_l(
 ## <a name="return-value"></a>Valeur de retour  
  En cas de réussite, `_mbctombb` et `_mbctombb_l` retourne le caractère sur un octet qui correspond à `c`; sinon, elle retourne `c`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `_mbctombb` et `_mbctombb_l` fonctions convertissent un caractère multioctet fourni pour un caractère multioctet sur un octet correspondant. Caractères doivent correspondre à des caractères codés sur un octet dans la plage 0 x 20 – 0x7E ou 0xA1 - 0xDF à convertir.  
   
- La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La version de cette fonction dépourvue du suffixe `_l` utilise les paramètres régionaux actifs pour ce comportement dépendant des paramètres régionaux ; la version assortie du suffixe `_l` est identique, à ceci près qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La version de cette fonction dépourvue du suffixe `_l` utilise les paramètres régionaux actifs pour ce comportement dépendant des paramètres régionaux ; la version assortie du suffixe `_l` est identique, à ceci près qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
- Dans les versions précédentes, `_mbctombb` s’appelait `zentohan`. Utilisez plutôt `_mbctombb` .  
+ Dans les versions précédentes, `_mbctombb` s’appelait `zentohan`. Utilisez plutôt `_mbctombb`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_mbctombb`|\<mbstring.h>|  
 |`_mbctombb_l`|\<mbstring.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   

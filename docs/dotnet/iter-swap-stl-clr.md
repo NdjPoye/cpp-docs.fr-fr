@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 28e73cfea302ed6204922bc16eccd6c9cfc5a4c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5d07b2bf1e2e0f6bec66d66b46a55dd11fbf22de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iterswap-stlclr"></a>iter_swap (STL/CLR)
 Échange deux valeurs référencées par une paire d'itérateurs spécifiés.  
@@ -31,10 +34,10 @@ template<class _FwdIt1, class _FwdIt2> inline
     void iter_swap(_FwdIt1 _Left, _FwdIt2 _Right);  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette fonction comporte comme la fonction de la bibliothèque Standard C++ `iter_swap`. Pour plus d’informations, consultez [iter_swap](../standard-library/algorithm-functions.md#iter_swap).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/algorithme >  
   
  **Namespace :** cliext  

@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b7a758c690d1ddb2cda6d6265b6a65c80bd46322
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a4d1ba6ccc6544c578ad1ce8375d8d4943a6b34c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="findend-stlclr"></a>find_end (STL/CLR)
 Recherche dans une plage la dernière sous-séquence qui est identique à une séquence spécifiée ou qui est équivalente, selon une condition spécifiée par un prédicat binaire.  
@@ -35,10 +38,10 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
         _FwdIt2 _First2, _FwdIt2 _Last2, _Pr _Pred);  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette fonction comporte comme la fonction de la bibliothèque Standard C++ `find_end`. Pour plus d’informations, consultez [find_end](../standard-library/algorithm-functions.md#find_end).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/algorithme >  
   
  **Namespace :** cliext  

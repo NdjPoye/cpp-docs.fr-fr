@@ -1,51 +1,49 @@
 ---
-title: "Platform::Metadata::Attribute Attribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Metadata::Attribute"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::Metadata::Attribute Attribute"
+title: Attribut de Platform::Metadata::attribute | Documents Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::Metadata::Attribute
+dev_langs: C++
+helpviewer_keywords: Platform::Metadata::Attribute Attribute
 ms.assetid: 0e69727f-429b-4f7d-85c6-eea614f14dd7
-caps.latest.revision: 3
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f1993fe604ee575da9956bfbfb108dd0355adb08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::Metadata::Attribute Attribute
+# <a name="platformmetadataattribute-attribute"></a>Platform::Metadata::Attribute Attribute
 Représente la classe de base pour tous les attributs.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
-  
 public ref class Attribute abstract : Object  
 ```  
   
-## Héritage  
- [Platform::Object](../cppcx/object-object-constructor.md)  
+## <a name="inheritance"></a>Héritage  
+ [Platform::Object](../cppcx/platform-object-class.md)  
   
  [Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)  
   
-## Notes  
+### <a name="requirements"></a>Configuration requise  
+ **Minimum pris en charge le client :** Windows 8  
   
-## Configuration requise  
- **Client minimum pris en charge :** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+ **Minimum de serveur pris en charge :** Windows Server 2012  
   
- **Serveur minimum pris en charge :** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Espace de noms :** Platform::Metadata  
   
- **Espace de noms :** Platform::Metadata  
+ **Métadonnées :** platform.winmd  
   
- **Métadonnées :** platform.winmd  
-  
-## Voir aussi  
- [Platform::Metadata \(espace de noms\)](../cppcx/platform-metadata-namespace.md)
+## <a name="see-also"></a>Voir aussi  
+ [Platform::Metadata (espace de noms)](../cppcx/platform-metadata-namespace.md)

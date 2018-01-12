@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a658f8a39e5e41729329854b73bda24bb780dbf7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ff1f7e9815ae5cea9a96c95f7faad30340bf548d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idbcreatecommandimplcreatecommand"></a>IDBCreateCommandImpl::CreateCommand
 Crée une nouvelle commande et retourne l’interface demandée.  
@@ -47,7 +50,7 @@ Crée une nouvelle commande et retourne l’interface demandée.
 |--------------------------------|------------------------------------------------|  
 |*ppvCommand*|*ppCommand*|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

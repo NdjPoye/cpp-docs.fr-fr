@@ -51,16 +51,19 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b63ce6c4949da67640de51d74dab79a8a281139f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 41945cbb34c8e984922d46671b591426d94067cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccharactersets-ccharactersetinfo"></a>CCharacterSets, CCharacterSetInfo
 Appelez la classe typedef **CCharacterSets** pour implémenter sa classe de paramètre **CCharacterSetInfo**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Consultez [Classes de jeu de lignes de schéma et Classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation de classes typedef.  
   
  Cette classe identifie les jeux de caractères définies dans le catalogue qui sont accessibles à un utilisateur donné.  
@@ -78,7 +81,7 @@ Appelez la classe typedef **CCharacterSets** pour implémenter sa classe de para
 |m_szCollateSchema|DEFAULT_COLLATE_SCHEMA|  
 |m_szCollateName|DEFAULT_COLLATE_NAME|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbsch.h  
   
 ## <a name="see-also"></a>Voir aussi  

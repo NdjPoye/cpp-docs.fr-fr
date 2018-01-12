@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a9066ca8439ddaa39f28eaef81f1d01f2fe5571a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0c0507ed572fcea6ba9f73cb0c16ae079f9ae857
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="columnentrypsstatus"></a>COLUMN_ENTRY_PS_STATUS
 Représente une liaison sur l’ensemble de lignes à la colonne dans la base de données.  
@@ -60,7 +63,7 @@ status
  *status*  
  [in] La variable à lier à l’état de la colonne.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous permet de spécifier la précision et l’échelle de la colonne que vous souhaitez lier. Cette macro prend en charge la *état* variable. Il est utilisé dans les emplacements suivants :  
   
 -   Entre le [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP](../../data/oledb/end-column-map.md) macros.  
@@ -69,7 +72,7 @@ status
   
 -   Entre le [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) macros.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

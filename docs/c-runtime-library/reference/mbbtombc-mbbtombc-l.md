@@ -39,17 +39,18 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba3dc3100469e207fcfa2e653a9f1a771cfe0d1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aeb470a34fd6c00557cfe452503e8bf299c49182
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbbtombc-mbbtombcl"></a>_mbbtombc, _mbbtombc_l
 Convertit un caractère multioctet codé sur un octet en caractère multioctet codé sur deux octets correspondant.  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -76,18 +77,18 @@ unsigned int _mbbtombc_l(
 ## <a name="remarks"></a>Notes  
  La fonction `_mbbtombc` convertit un certain caractère multioctet codé sur un octet en caractère multioctet codé sur deux octets correspondant. Les caractères doivent être dans la plage 0 x 20 – 0x7E ou 0xA1 - 0xDF à convertir.  
   
- La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de cette fonction sont identiques, à ceci près que `_mbbtombc` utilise les paramètres régionaux actifs pour ce comportement dépendant des paramètres régionaux et `_mbbtombc_l` utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de cette fonction sont identiques, à ceci près que `_mbbtombc` utilise les paramètres régionaux actifs pour ce comportement dépendant des paramètres régionaux et `_mbbtombc_l` utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  Dans les versions antérieures, `_mbbtombc` était nommé `hantozen`. Pour le nouveau code, utilisez `_mbbtombc`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_mbbtombc`|\<mbstring.h>|  
 |`_mbbtombc_l`|\<mbstring.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   

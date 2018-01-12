@@ -40,11 +40,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fa142902722ac5df6ac93b28daf9e76b99f54f5e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ee05d4e8c8b36d92794293679992cb2c5ad5c36
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
 Convertit une séquence de caractères larges en une séquence correspondante de caractères multioctets. Il existe des versions plus sécurisées de ces fonctions. Consultez [wcstombs_s, _wcstombs_s_l](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md).  
@@ -94,27 +95,27 @@ size_t _wcstombs_l(
 ## <a name="return-value"></a>Valeur de retour  
  Si la fonction `wcstombs` convertit correctement la chaîne multioctet, elle retourne le nombre d’octets écrits dans la chaîne de sortie multioctet, à l’exclusion du caractère `NULL` de fin (le cas échéant). Si l’argument `mbstr` a la valeur `NULL`, `wcstombs` retourne la taille requise de la chaîne de destination en octets. Si `wcstombs` rencontre un caractère large, elle ne peut pas convertir en un caractère multioctet, elle retourne -1 castée en type `size_t` et définit `errno` à `EILSEQ`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction `wcstombs` convertit la chaîne de caractères larges vers laquelle pointe `wcstr` en caractères multioctets correspondants et stocke les résultats dans le tableau `mbstr`. Le paramètre `count` indique le nombre maximal d’octets qui peuvent être stockés dans la chaîne de sortie multioctet (c’est-à-dire, la taille de `mbstr`). En général, le nombre d’octets exigé au moment de la conversion d’une chaîne de caractères larges n’est pas connu. Certains caractères larges peuvent en exiger un seul dans la chaîne de sortie, alors que d’autres peuvent en exiger deux. Si la chaîne de sortie multioctet contient deux octets pour chaque caractère large présent dans la chaîne d’entrée (en incluant le caractère large `NULL`), le résultat est assuré de s’intégrer.  
   
  Si la fonction `wcstombs` rencontre le caractère null à caractère large (L'\0') avant ou quand `count` est atteint, elle le convertit en 0 de 8 bits et s’arrête. Par conséquent, la chaîne de caractères multioctets au niveau de `mbstr` se termine par un caractère null seulement si `wcstombs` rencontre un caractère null de caractère large pendant la conversion. Si les séquences pointées par `wcstr` et `mbstr` se chevauchent, le comportement de `wcstombs` n'est pas défini.  
   
- Si l’argument `mbstr` a la valeur `NULL`, `wcstombs` retourne la taille requise en octets de la chaîne de destination.  
+ Si l’argument `mbstr` a la valeur `NULL`, `wcstombs` retourne la taille requise de la chaîne de destination en octets.  
   
  `wcstombs` valide ses paramètres. Si `wcstr` est `NULL`, ou si `count` est supérieur à `INT_MAX`, cette fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, la fonction définit `errno` avec la valeur `EINVAL` et retourne -1.  
   
- La fonction `wcstombs` utilise les paramètres régionaux actifs pour tout comportement dépendant des paramètres régionaux ; la fonction `_wcstombs_l` est identique sauf qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La fonction `wcstombs` utilise les paramètres régionaux actifs pour tout comportement dépendant des paramètres régionaux ; la fonction `_wcstombs_l` est identique sauf qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
- En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`wcstombs`|\<stdlib.h>|  
 |`_wcstombs_l`|\<stdlib.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
  Ce programme illustre le comportement de la fonction `wcstombs`.  

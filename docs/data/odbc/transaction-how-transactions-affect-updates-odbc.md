@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ee5e34ce0af330ec9a788ceda758a412e3d7ac2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 59eb8aecbf2dd2138c8a0469d71364b55fd82774
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Transaction : répercussions des transactions sur les mises à jour (ODBC)
 Met à jour vers la [source de données](../../data/odbc/data-source-odbc.md) sont managées pendant les transactions grâce à l’utilisation d’une mémoire tampon de modification (la même méthode utilisée en dehors des transactions). Données membres de champ d’un recordset jouent collectivement le rôle en tant que tampon d’édition qui contient l’enregistrement en cours, ce qui le jeu d’enregistrements sauvegardé temporairement pendant une `AddNew` ou **modifier**. Pendant un **supprimer** opération, l’enregistrement actif n’est pas sauvegardée dans une transaction. Pour plus d’informations sur la mémoire tampon de modification et comment les mises à jour de stocker l’enregistrement actif, consultez [Recordset : modification des enregistrements de jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  

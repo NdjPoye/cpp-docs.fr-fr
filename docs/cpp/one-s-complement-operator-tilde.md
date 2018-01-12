@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- ~
-dev_langs:
-- C++
+f1_keywords: ~
+dev_langs: C++
 helpviewer_keywords:
 - tilde (~) one's complement operator
 - one's complement operator
@@ -19,16 +16,16 @@ helpviewer_keywords:
 - compl operator
 - ~ operator [C++], syntax
 ms.assetid: 4bf81967-34f7-4b4b-aade-fd03d5da0174
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 918555af04d20be2533b488ee26f031e10a54ca4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 635a3e3b2d270d2164adc3f25a260085d7c50d60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="one39s-complement-operator-"></a>Un &#39; opérateur de complément s : ~
 ## <a name="syntax"></a>Syntaxe  
@@ -38,8 +35,8 @@ ms.lasthandoff: 09/25/2017
 ~ cast-expression  
 ```  
   
-## <a name="remarks"></a>Remarques  
- L'opérateur de complément à un (`~`), parfois appelé l'opérateur de complément de bits, génère un complément à un au niveau du bit de son opérande. Autrement dit, chaque bit qui est 1 dans l'opérande est 0 dans le résultat. Inversement, chaque bit qui est 0 dans l'opérande est 1 dans le résultat. L'opérande de l'opérateur de complément à un doit être un type intégral.  
+## <a name="remarks"></a>Notes  
+ L'opérateur de complément à un (`~`), parfois appelé l'opérateur de complément de bits, génère un complément à un au niveau du bit de son opérande. Autrement dit, chaque bit qui est 1 dans l'opérande est 0 dans le résultat. Inversement, chaque bit qui est 0 dans l’opérande est 1 dans le résultat. L'opérande de l'opérateur de complément à un doit être un type intégral.  
   
 ## <a name="operator-keyword-for-"></a>Mot clé Operator pour ~  
  L'opérateur `compl` est l'équivalent textuel de `~`. Il existe deux moyens d’accéder à la `compl` opérateur dans vos programmes : incluez le fichier d’en-tête `iso646.h`, ou compilez avec [/Za](../build/reference/za-ze-disable-language-extensions.md).  

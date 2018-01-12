@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,38 +28,23 @@ f1_keywords:
 - ismbbpunct_l
 - _ismbbpunct_l
 - _ismbbpunct
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ismbbpunct function
 - _ismbbpunct function
 - ismbbpunct_l function
 - _ismbbpunct_l function
 ms.assetid: 1976c9d3-7d1a-415f-ac52-2715c7bb56eb
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 91887834f7bfc9dc078cd3af4248f84ce0bf7753
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3b64f00a805fc54f295d4cf86df6c4a780bb7bdb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbpunct-ismbbpunctl"></a>_ismbbpunct, _ismbbpunct_l
 Détermine si un caractère particulier est un caractère de ponctuation.  
@@ -85,16 +69,16 @@ int _ismbbpunct_l(
  Paramètres régionaux à utiliser.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `_ismbbpunct` retourne une valeur différente de zéro si l'entier `c` est un symbole de ponctuation non ASCII. `_ismbbpunct` utilise les paramètres régionaux actifs pour les paramètres de caractères dépendants des paramètres régionaux. `_ismbbpunct_l` est identique, à ceci près qu’il utilise les paramètres régionaux qui sont transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ `_ismbbpunct` retourne une valeur différente de zéro si l'entier `c` est un symbole de ponctuation non ASCII. `_ismbbpunct` utilise les paramètres régionaux actifs pour les paramètres de caractères dépendants des paramètres régionaux. `_ismbbpunct_l` est identique, à ceci près qu’il utilise les paramètres régionaux qui sont transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_ismbbpunct`|\<mbctype.h>|  
 |`_ismbbpunct_l`|\<mbctype.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classification d’octet](../../c-runtime-library/byte-classification.md)   

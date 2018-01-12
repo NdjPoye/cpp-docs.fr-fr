@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - strrchr
 - wcsrchr
 - _mbsrchr
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mbsrchr function
 - tcsrchr function
@@ -50,30 +48,16 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: a545d1813bb03160495c331b3213f947603b20b9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7f498dc526d6989e18aaf8aea916ad9fc602cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strrchr-wcsrchr-mbsrchr-mbsrchrl"></a>strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 Analyse une chaîne à la recherche de la dernière occurrence d’un caractère.  
@@ -155,11 +139,11 @@ const unsigned char *_mbsrchr_l(
   
  `wcsrchr` et `_mbsrchr` sont des versions à caractères larges et à caractères multioctets de `strrchr`. Les arguments et la valeur de retour de `wcsrchr` sont des chaînes de caractères larges ; ceux de `_mbsrchr` sont des chaînes de caractères multioctets.  
   
- En C, ces fonctions acceptent un pointeur `const` comme premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers `const` retourne un pointeur vers `const` ; la version qui accepte un pointeur vers non-`const` retourne un pointeur vers non-`const`. La macro _CONST_CORRECT_OVERLOADS est définie si les versions `const` et non-`const` de ces fonctions sont disponibles. Si vous avez besoin d'un comportement non-`const` pour les deux surcharges C++, définissez le symbol _CONST_RETURN.  
+ En C, ces fonctions acceptent un pointeur `const` comme premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers `const` retourne un pointeur vers `const` ; la version qui accepte un pointeur vers non-`const` retourne un pointeur vers non-`const`. La macro `_CRT_CONST_CORRECT_OVERLOADS` est défini si les deux le `const` et non-`const` versions de ces fonctions sont disponibles. Si vous avez besoin non -`const` comportement pour les deux surcharges C++, définissez le symbole `_CONST_RETURN`.  
   
  `_mbsrchr` valide ses paramètres. Si `str` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `errno` prend la valeur `EINVAL` et `_mbsrchr` retourne 0. `strrchr` et `wcsrchr` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.  
   
- La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe `_l` utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe `_l` utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
@@ -168,7 +152,7 @@ const unsigned char *_mbsrchr_l(
 |`_tcsrchr`|`strrchr`|`_mbsrchr`|`wcsrchr`|  
 |**n/a**|**n/a**|`_mbsrchr_l`|**n/a**|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
@@ -176,7 +160,7 @@ const unsigned char *_mbsrchr_l(
 |`wcsrchr`|\<string.h> ou \<wchar.h>|  
 |`_mbsrchr`, `_mbsrchr_l`|\<mbstring.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de `strrchr`, consultez [cerr](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md).  

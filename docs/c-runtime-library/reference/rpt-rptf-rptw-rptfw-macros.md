@@ -97,11 +97,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 43efb76381db85f4f1d601cb6d83dd82074e960a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 453b04174325a7c112105bdef1147e1b7909ccdb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW, macros
 Suit la progression d’une application en générant un rapport de débogage (version debug uniquement). Notez que  *n*  Spécifie le nombre d’arguments dans `args` et peut être 0, 1, 2, 3, 4 ou 5.  
@@ -144,7 +145,7 @@ _RPTFWn(
  `args`  
  Arguments de substitution utilisés par `format`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Toutes ces macros prennent le `reportType` et `format` paramètres. De plus, il peuvent aussi accepter jusqu’à quatre arguments supplémentaires, ce qui est indiqué par le nombre ajouté au nom de la macro. Par exemple, `_RPT0` et `_RPTF0` n’acceptent aucun argument supplémentaire, tandis que `_RPT1` et `_RPTF1` prennent `arg1`, `_RPT2` et `_RPTF2` prend `arg1` et `arg2`, et ainsi de suite.  
   
  Les macros `_RPT` et `_RPTF` sont comparables à la fonction [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) dans le sens où elles permettent de suivre la progression d’une application pendant le processus de débogage. Cependant, ces macros sont plus flexibles que `printf`, car elles n’ont pas besoin d’être incluses dans des instructions `#ifdef` pour éviter qu’elles soient appelées dans la version commerciale d’une application. Cette souplesse est à mettre à l’actif de la macro [_DEBUG](../../c-runtime-library/debug.md) ; les macros `_RPT` et `_RPTF` sont disponibles uniquement quand l’indicateur `_DEBUG` est défini. Quand `_DEBUG` n’est pas définie, les appels à ces macros sont supprimés lors du prétraitement.  
@@ -167,7 +168,7 @@ _RPTFWn(
   
  Deux autres macros génèrent un rapport de débogage. La macro [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) génère un rapport, mais seulement quand l’argument d’expression est évalué à FALSE. [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) est en tout point identique à `_ASSERT`, à ceci près qu’elle inclut l’expression qui a échoué dans le rapport généré.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Macro|En-tête requis|  
 |-----------|---------------------|  
@@ -176,7 +177,7 @@ _RPTFWn(
 |Macros `_RPTW`|\<crtdbg.h>|  
 |Macros `_RPTFW`|\<crtdbg.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="libraries"></a>Bibliothèques  
  Uniquement les versions de débogage des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

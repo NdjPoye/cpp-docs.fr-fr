@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 756e85d0fd3c00b65c3fee2f1f225327cf63a32a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a5787e031ca2874e201a0e904fd69aad62f767bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccommandreleasecommand"></a>CCommand::ReleaseCommand
 Libère l’accesseur de paramètre, puis libère de la commande elle-même.  
@@ -35,10 +38,10 @@ void CCommandBase::ReleaseCommand( ) throw( );
   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `ReleaseCommand`est utilisé conjointement avec **fermer**. Consultez [fermer](../../data/oledb/ccommand-close.md) pour plus de détails.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

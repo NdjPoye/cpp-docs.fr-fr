@@ -1,34 +1,37 @@
 ---
-title: "Modifications apport&#233;es aux op&#233;rateurs de conversion | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "opérateurs de conversion"
-  - "conversions, explicites"
-  - "explicit (mot clé C++)"
-  - "opérateurs (C++), conversion de type explicite"
-  - "conversion de types, conversions explicites"
+title: "Modifications apportées aux opérateurs de Conversion | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- conversion operators
+- operators [C++], explicit type conversion
+- type conversion, explicit conversions
+- conversions, explicit
+- explicit keyword [C++]
 ms.assetid: 9b83925c-71b7-4bd3-ac2e-843dd7c7f184
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8f89c49035e2e48dde8d502b1d61fa33d198f69a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Modifications apport&#233;es aux op&#233;rateurs de conversion
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La syntaxe des opérateurs de conversion a été modifiée entre Extensions managées pour C\+\+ et [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+# <a name="changes-to-conversion-operators"></a>Modifications apportées aux opérateurs de conversion
+La syntaxe pour les opérateurs de conversion a changé entre les Extensions managées pour C++ vers Visual C++.  
   
- Un exemple consiste à écrire `op_Implicit` pour spécifier une conversion.  Par exemple, voici une définition de `MyDouble` extraite des spécifications du langage :  
+ Un exemple consiste à écrire `op_Implicit` pour spécifier une conversion. Voici une définition de `MyDouble` obtenue à partir de la spécification de langage :  
   
 ```  
 __gc struct MyDouble {  
@@ -38,9 +41,9 @@ __gc struct MyDouble {
 };  
 ```  
   
- Cette formule dit qu'étant donné un entier, l'algorithme pour convertir cet entier en `MyDouble` est fourni par l'opérateur `op_Implicit`.  De plus, cette conversion sera effectuée implicitement par le compilateur.  De même, étant donné un objet `MyDouble`, les deux opérateurs `op_Explicit` fournissent les algorithmes respectifs pour convertir cet objet en un entier ou une entité `String` managée.  Pourtant, le compilateur n'effectuera pas la conversion à moins que l'utilisateur ne le demande explicitement.  
+ Cela indique que, si un entier, l’algorithme pour convertir cet entier en un `MyDouble` est fournie par le `op_Implicit` opérateur. En outre, cette conversion sera effectuée implicitement par le compilateur. De même, étant donné un `MyDouble` (objet), les deux `op_Explicit` opérateurs fournissent les algorithmes respectifs pour convertir cet objet en un entier ou managé `String` entité. Toutefois, le compilateur n’effectuera pas la conversion sauf demande explicite par l’utilisateur.  
   
- En C\#, ce cas se présente de la façon suivante :  
+ En c#, cela se présente comme suit :  
   
 ```  
 class MyDouble {  
@@ -50,13 +53,13 @@ class MyDouble {
 };  
 ```  
   
- Le code C\# ressemble plus à du code C\+\+ que les Extensions managées pour C\+\+.  Ce n'est pas le cas dans la nouvelle syntaxe.  
+ Le code c# ressemble plus à C++ que les extensions managées pour C++. Qui n’est pas le cas dans la nouvelle syntaxe.  
   
- La commission ISO\-C\+\+ a introduit un mot clé, `explicit`, destiné à maîtriser les conséquences involontaires – par exemple, une classe `Array` qui prend un seul argument entier comme dimension convertit implicitement tout entier en un objet `Array` qui n'est pas celui que vous souhaitez.  Une façon d'empêcher cette situation est l'idiome de conception d'un deuxième argument factice d'un constructeur.  
+ Le comité ISO-C++ a introduit un mot clé, `explicit`, pour atténuer des conséquences inattendues - par exemple, un `Array` classe qui prend un argument entier unique comme une dimension convertit implicitement tout entier en un `Array` de l’objet qui n’est pas ce que vous souhaitez. Une façon d’éviter ce problème est un idiome de conception d’un deuxième argument factice d’un constructeur  
   
- En revanche, vous ne devez pas fournir de paire de conversion lors de la conception d'un type de classe en C\+\+.  Le meilleur exemple en est la classe de chaîne standard.  La conversion implicite est le constructeur à argument unique qui prend une chaîne de style C.  Elle ne fournit cependant pas l'opérateur de conversion implicite correspondant \(celui convertissant un objet chaîne en une chaîne de style C, mais requiert plutôt que l'utilisateur appelle une fonction nommée explicitement\) : ici, `c_str()`.  
+ En revanche, vous ne devez pas fournir une paire de conversion lors de la conception d’un type de classe dans C++. L’exemple suivant pour qui est la classe de chaîne standard. La conversion implicite est le constructeur à argument unique qui prend une chaîne de style C. Toutefois, il ne fournit pas l’opérateur de conversion implicite correspondant - qui de conversion d’une chaîne de l’objet en une chaîne de style C, mais au lieu de cela, l’utilisateur doit appeler explicitement une fonction nommée - dans ce cas, `c_str()`.  
   
- Ainsi, l'association d'un comportement implicite\/explicite sur un opérateur de conversion \(de même que l'encapsulation du jeu de conversions sous un seul format de déclaration\) semble être une amélioration par rapport à la prise en charge C\+\+ d'origine des opérateurs de conversion, qui a finalement conduit au mot clé `explicit`.  La prise en charge des opérateurs de conversion par le langage [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] se présente de la façon suivante, légèrement moins prolixe que celle de C\# en raison du comportement par défaut de l'opérateur qui prend en charge une application implicite de l'algorithme de conversion :  
+ Par conséquent, association d’un comportement implicite/explicite sur un opérateur de conversion (de même que l’encapsulation du jeu de conversions sous un seul format de déclaration) semble être une amélioration par rapport à la prise en charge C++ d’origine pour les opérateurs de conversion, qui a finalement conduit le `explicit` (mot clé). La prise en charge du langage Visual C++ pour les opérateurs de conversion se présente comme suit, légèrement moins détaillé que celle de c# en raison du comportement par défaut de l’opérateur prenant en charge une application implicite de l’algorithme de conversion :  
   
 ```  
 ref struct MyDouble {  
@@ -67,7 +70,7 @@ public:
 };  
 ```  
   
- Une autre modification est le fait qu'un constructeur à argument unique est traité comme s'il était déclaré comme `explicit`.  Cela signifie que pour déclencher ses appels, il faut passer par un cast explicite.  Notez toutefois que si un opérateur de conversion explicite est défini, c'est lui, et non le constructeur à argument unique, qui est appelé.  
+ Une autre modification est qu’un constructeur à argument unique est traité comme s’il est déclaré comme `explicit`. Cela signifie que pour déclencher ses appels, un cast explicite est requis. Toutefois, notez que si un opérateur de conversion explicite est défini, il et pas le constructeur à argument unique, est appelée.  
   
-## Voir aussi  
- [Déclarations de membre dans une classe ou interface \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)
+## <a name="see-also"></a>Voir aussi  
+ [Déclarations de membre dans une classe ou interface (C++-CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)

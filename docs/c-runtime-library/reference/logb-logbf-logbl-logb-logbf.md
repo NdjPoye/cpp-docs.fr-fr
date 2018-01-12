@@ -49,11 +49,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 81d44f12b363cf74efd334e8ff7daadb4fee5036
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4042e5f7b67db8e29d167f96457a91a6d47c4bfa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="logb-logbf-logbl-logb-logbf"></a>logb, logbf, logbl, _logb, _logbf
 Extrait la valeur d’exposant d’un argument à virgule flottante.  
@@ -98,17 +99,17 @@ float _logbf(
   
 |Entrée|Exception SEH|exception Matherr|  
 |-----------|-------------------|-----------------------|  
-|± QNAN,IND|None|_DOMAIN|  
+|± QNAN,IND|Aucun.|_DOMAIN|  
 |± 0|ZERODIVIDE|_SING|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_logb`|\<float.h>|  
 |`logb`, `logbf`, `logbl`, `_logbf`|\<math.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

@@ -34,11 +34,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2af66326d69aa5764922499bbd63a71cd0663216
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c5186a3d373c541f120197a9ebf89f9e33aabd0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lockfile"></a>_lock_file
 Verrouille un objet `FILE` pour garantir la cohérence des threads qui accèdent simultanément à l’objet `FILE`.  
@@ -58,13 +59,13 @@ void _lock_file(
 ## <a name="remarks"></a>Notes  
  La fonction `_lock_file` verrouille l’objet `FILE` spécifié par `file`. Le fichier sous-jacent n’est pas verrouillé par `_lock_file`. Utilisez [_unlock_file](../../c-runtime-library/reference/unlock-file.md) pour libérer le verrou sur le fichier. Les appels à `_lock_file` et `_unlock_file` doivent être mis en correspondance dans un thread.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_lock_file`|\<stdio.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

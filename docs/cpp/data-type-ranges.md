@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - float keyword [C++]
 - char keyword [C++]
@@ -44,16 +42,16 @@ helpviewer_keywords:
 - long int keyword [C++]
 - unsigned long int [C++]
 ms.assetid: 3691ceca-05fb-4b82-b1ae-5c4618cda91a
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 372d65a3d862fee4fddc2c9ba67c94341d1a6c87
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: af0601299046276c135571be2bac615df1571140
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-ranges"></a>plages de types de données
 Les compilateurs Visual C++ 32 bits et 64 bits identifient les types de la table dans la suite de cet article.  
@@ -85,7 +83,7 @@ Les compilateurs Visual C++ 32 bits et 64 bits identifient les types de la table
 |__int8|1|char|-128 à 127|  
 |unsigned __int8|1|unsigned char|0 à 255|  
 |__int16|2|short, short int, signed short int|de -32 768 à 32 767|  
-|unsigned __int16|2|unsigned short, unsigned short int|0 à 65 535|  
+|unsigned __int16|2|unsigned short, unsigned short int|0 à 65 535|  
 |__int32|4|signed, signed int, int|-2,147,483,648 en 2,147,483,647|  
 |unsigned __int32|4|unsigned, unsigned int|de 0 à 4 294 967 295|  
 |__int64|8|long long, signed long long|-9 223 372 036 854 775 808 à 9 223 372 036 854 775 807|  
@@ -93,11 +91,11 @@ Les compilateurs Visual C++ 32 bits et 64 bits identifient les types de la table
 |bool|1|aucun|false ou true|  
 |char|1|aucun|-128 à 127 par défaut<br /><br /> 0 à 255 une fois compilé à l’aide de [/J](../build/reference/j-default-char-type-is-unsigned.md)|  
 |signed char|1|aucun|-128 à 127|  
-|unsigned char|1|aucun|0 à 255|  
+|unsigned char|1|aucun|0 à 255|  
 |short|2|short int, signed short int|de -32 768 à 32 767|  
 |unsigned short|2|unsigned short int|0 à 65 535|  
 |long|4|long int, signed long int|-2,147,483,648 en 2,147,483,647|  
-|unsigned long|4|unsigned long int|de 0 à 4 294 967 295|  
+|unsigned long|4|unsigned long int|de 0 à 4 294 967 295|  
 |long long|8|aucun (mais équivaut à __int64)|-9 223 372 036 854 775 808 à 9 223 372 036 854 775 807|  
 |unsigned long long|8|aucun (mais équivaut à unsigned __int64)|de 0 à 18 446 744 073 709 551 615|  
 |enum|selon le cas|aucun| |  

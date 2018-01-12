@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0cbb19795b1e16323258e9979e43df2051eeb342
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 94fe53c70e6f11af31f40822e4a66b3fc77ea833
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmapoperator-stlclr"></a>hash_map::operator= (STL/CLR)
 Remplace la séquence contrôlée.  
@@ -34,7 +37,7 @@ hash_map<Key, Mapped>% operator=(hash_map<Key, Mapped>% right);
  droite  
  Conteneur à copier.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les copies d’opérateur de membre `right` à l’objet, puis retourne `*this`. Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans `right`.  
   
 ## <a name="example"></a>Exemple  
@@ -74,7 +77,7 @@ int main()
 [a 1] [b 2] [c 3]  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/hash_map >  
   
  **Namespace :** cliext  

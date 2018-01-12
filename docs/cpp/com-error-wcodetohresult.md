@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 925e1f7a2675dc0aaed3a0cab064e01681de673c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ca20bfa7574f604187734040b3ccc001d6aaf68d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comerrorwcodetohresult"></a>_com_error::WCodeToHRESULT
 **Section spécifique à Microsoft**  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="return-value"></a>Valeur de retour  
  `HRESULT` 32 bits mappé à partir de `wCode` 16 bits.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Consultez le [WCode](../cpp/com-error-wcode.md) fonction membre.  
   
  **FIN de la section spécifique à Microsoft**  

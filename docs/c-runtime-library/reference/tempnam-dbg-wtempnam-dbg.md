@@ -41,11 +41,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6d1c4013dcfcbc6049957978316398566c60089b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 41c81b94187d2cd01adfa4a4ec469d78c6659897
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg, _wtempnam_dbg
 Versions des fonctions [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) qui utilisent la version debug de `malloc, _malloc_dbg`.  
@@ -91,7 +92,7 @@ wchar_t *_wtempnam_dbg(
 > [!NOTE]
 >  `free` (ou `free_dbg`) doit être appelé pour les pointeurs alloués par `_tempnam_dbg` et `_wtempnam_dbg`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `_tempnam_dbg` et `_wtempnam_dbg` fonctions sont identiques aux `_tempnam` et `_wtempnam` , sauf que, lorsque `_DEBUG` est défini, ces fonctions utilisent la version debug de `malloc` et `_malloc_dbg`, allocation de mémoire si `NULL` est passée comme premier paramètre. Pour plus d’informations, consultez [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
   
  Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. À la place, vous pouvez définir l'indicateur `_CRTDBG_MAP_ALLOC`. Quand `_CRTDBG_MAP_ALLOC` est défini, les appels à `_tempnam` et `_wtempnam` sont remappés à `_tempnam_dbg` et `_wtempnam_dbg`, respectivement, avec `blockType` défini sur `_NORMAL_BLOCK`. Ainsi, vous n'avez pas besoin d'appeler ces fonctions de manière explicite sauf si vous souhaitez marquer les blocs du tas comme `_CLIENT_BLOCK`. Pour plus d’informations, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).  
@@ -102,7 +103,7 @@ wchar_t *_wtempnam_dbg(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ttempnam_dbg`|`_tempnam_dbg`|`_tempnam_dbg`|`_wtempnam_dbg`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

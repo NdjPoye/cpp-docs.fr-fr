@@ -37,11 +37,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 67899d1dd082ffd023ca78ac8a4961288ffd0165
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71279b111e50c40bb974d9a5da68b575aecc1ebc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="umasks"></a>_umask_s
 Définit le masque d’autorisation de fichier par défaut. Version de [_umask](../../c-runtime-library/reference/umask.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -69,12 +70,12 @@ errno_t _umask_s(
   
 |`mode`|`pOldMode`|**Valeur de retour**|**Contenu de**  `oldMode`|  
 |------------|----------------|----------------------|--------------------------------|  
-|indifférent|`NULL`|`EINVAL`|non modifié|  
-|mode non valide|indifférent|`EINVAL`|non modifié|  
+|any|`NULL`|`EINVAL`|non modifié|  
+|mode non valide|any|`EINVAL`|non modifié|  
   
  Si l’une des conditions ci-dessus se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à continuer, `_umask_s` retourne `EINVAL` et définit `errno` à `EINVAL`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `_umask_s` fonction définit le masque d’autorisation de fichier du processus en cours pour le mode spécifié par `mode`. Le masque d’autorisation de fichier modifie le paramètre d’autorisation des nouveaux fichiers créés par `_creat`, `_open` ou `_sopen`. Si un bit a la valeur 1 dans le masque, le bit correspondant dans la valeur d’autorisation demandée du fichier prend la valeur 0 (non autorisé). Si un bit a la valeur 0 dans le masque, le bit correspondant est inchangé. Le paramètre d’autorisation d’un nouveau fichier n’est pas défini tant qu’il n’est pas fermé pour la première fois.  
   
  L’expression d’entier `pmode` contient l’une des constantes manifestes suivantes (ou les deux), définies dans SYS\STAT.H :  
@@ -92,13 +93,13 @@ errno_t _umask_s(
   
  Si `pmode` n’est pas une combinaison de l’une des constantes manifestes ou incorpore un autre ensemble de constantes, la fonction les ignore simplement.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_umask_s`|\<io.h>, \<sys/stat.h> et \<sys/types.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

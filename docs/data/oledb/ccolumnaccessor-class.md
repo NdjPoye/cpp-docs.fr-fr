@@ -1,63 +1,65 @@
 ---
-title: "CColumnAccessor, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CColumnAccessor"
-  - "ATL::CColumnAccessor"
-  - "ATL.CColumnAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CColumnAccessor (classe)"
+title: Ccolumnaccessor, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CColumnAccessor
+- ATL::CColumnAccessor
+- ATL.CColumnAccessor
+dev_langs: C++
+helpviewer_keywords: CColumnAccessor class
 ms.assetid: 6ce1e67f-6a20-490d-9326-c168b43eee7e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 55c77a53cb6e6c4a103c509aa3d527803d91af3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CColumnAccessor, classe
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-génère du code de consommation qui est injecté.  
+# <a name="ccolumnaccessor-class"></a>CColumnAccessor, classe
+Génère le code de consommateur injecté.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 class CColumnAccessor : public CAccessorBase  
 ```  
   
-## Notes  
- Dans le code injecté, chaque colonne est liée comme accesseur distinct.  Vous devez savoir que cette classe est utilisée dans le code injecté \(par exemple, vous pouvez le constater le débogage\), mais en général ne devez jamais utiliser directement il ses méthodes.  
+## <a name="remarks"></a>Notes  
+ Dans le code injecté, chaque colonne est liée en tant qu’un accesseur séparé. Vous devez être conscient que cette classe est utilisée dans le code injecté (par exemple, vous pouvez rencontrer il lors du débogage), mais vous devez en général jamais directement l’utiliser ou ses méthodes.  
   
- `CColumnAccessor` implémente les méthodes stub suivantes, chacune qui correspondent aux fonctionnalités des autres méthodes de la classe d'accesseur :  
+ `CColumnAccessor`implémente les méthodes stub suivantes, chacune d’elles correspondant de fonctionnalités à d’autres méthodes d’accesseur de classe :  
   
--   `CColumnAccessor` le constructeur ; les instanciés et initialise l'objet `CColumnAccessor`.  
+-   `CColumnAccessor`Le constructeur ; instancie et initialise le `CColumnAccessor` objet.  
   
--   `CreateAccessor` Attribue la mémoire pour les structures de colonnes de lien et initialise les colonnes des données des membres.  
+-   `CreateAccessor`Alloue de la mémoire pour la colonne de structures de liaison et initialise les membres de données de colonne.  
   
--   **BindColumns** Lie les colonnes aux accesseurs.  
+-   **BindColumns** lie les colonnes aux accesseurs.  
   
--   **SetParameterBuffer** alloue les mémoires tampons de paramètres.  
+-   **SetParameterBuffer** alloue des mémoires tampons pour les paramètres.  
   
--   `AddParameter` ajoute une entrée de paramètres aux structures d'entrée de paramètre.  
+-   `AddParameter`Ajoute une entrée de paramètre pour les structures d’entrée de paramètre.  
   
--   **HasOutputColumns** détermine si l'accesseur a des colonnes de sortie  
+-   **HasOutputColumns** détermine si l’accesseur a des colonnes de sortie  
   
--   **HasParameters** détermine si l'accesseur a des paramètres.  
+-   **HasParameters** détermine si l’accesseur a des paramètres.  
   
--   `BindParameters` lie les paramètres créés aux colonnes.  
+-   `BindParameters`Lie les paramètres aux colonnes.  
   
-## Configuration requise  
- **En\-tête :** : atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
- [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -20,11 +20,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45454de445b0f8304a78e46a098e23173bb9889f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4108baa84028c4168d2c08557b9837fa845facb8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autohandleoperator-bool"></a>auto_handle::operator (bool)
 Opérateur pour l’utilisation de `auto_handle` dans une expression conditionnelle.  
@@ -38,7 +41,7 @@ operator bool();
 ## <a name="return-value"></a>Valeur de retour  
  `true`Si l’objet encapsulé est valide ; `false` dans le cas contraire.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cet opérateur convertit effectivement en `_detail_class::_safe_bool` qui est plus sûr que `bool` car il ne peut pas être converti en un type intégral.  
   
 ## <a name="example"></a>Exemple  
@@ -70,7 +73,7 @@ s2 is valid
 s2 is now invalid  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\auto_handle.h >  
   
  **Namespace** msclr  

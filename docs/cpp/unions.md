@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- union_cpp
-dev_langs:
-- C++
+f1_keywords: union_cpp
+dev_langs: C++
 helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 3a4cbede49c32fd7ae60320fa13b9dd4e3c729a8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9371aaf978f2ea9498445d0124b9be16cf3b0fa7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unions"></a>Unions
 Une `union` est un type défini par l'utilisateur dans lequel tous les membres partagent le même emplacement de mémoire. Cela signifie qu'à un moment donné une union ne peut pas contenir plusieurs objets de sa liste de membres. Cela signifie également que, quel que soit le nombre de membres dans une union, elle utilise toujours uniquement assez de mémoire pour stocker le plus grand membre.  
@@ -45,7 +42,7 @@ union [name]  { member-list };
  `member-list`  
  Membres que l'union peut contenir. Consultez la section Notes.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ## <a name="declaring-a-union"></a>Déclaration d'une union  
  Commencez la déclaration d'une union avec le mot clé `union` et placez la liste des membres entre accolades :  

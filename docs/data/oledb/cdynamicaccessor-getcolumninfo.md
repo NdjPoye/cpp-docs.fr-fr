@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c3d3b24ffce579d3a74706ca9a238059ed8eb08f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ece75eeb539dff60b29396e3076cd2465571453a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicaccessorgetcolumninfo"></a>CDynamicAccessor::GetColumnInfo
 Retourne les métadonnées de colonne requises par la plupart des consommateurs.  
@@ -57,10 +60,10 @@ Retourne les métadonnées de colonne requises par la plupart des consommateurs.
 ## <a name="return-value"></a>Valeur de retour  
  Un de la norme `HRESULT` valeurs.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Consultez [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) dans les *de référence du programmeur OLE DB* pour plus d’informations sur les types de données **DBORDINAL**, **DBCOLUMNINFO**, et **OLECHAR**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

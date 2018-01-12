@@ -1,69 +1,71 @@
 ---
-title: "CRowset::GetApproximatePosition | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CRowset::GetApproximatePosition"
-  - "ATL::CRowset<TAccessor>::GetApproximatePosition"
-  - "CRowset.GetApproximatePosition"
-  - "CRowset::GetApproximatePosition"
-  - "GetApproximatePosition"
-  - "ATL.CRowset.GetApproximatePosition"
-  - "CRowset<TAccessor>::GetApproximatePosition"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetApproximatePosition (méthode)"
+title: CRowset::GetApproximatePosition | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CRowset::GetApproximatePosition
+- ATL::CRowset<TAccessor>::GetApproximatePosition
+- CRowset.GetApproximatePosition
+- CRowset::GetApproximatePosition
+- GetApproximatePosition
+- ATL.CRowset.GetApproximatePosition
+- CRowset<TAccessor>::GetApproximatePosition
+dev_langs: C++
+helpviewer_keywords: GetApproximatePosition method
 ms.assetid: 8f9ccd41-0590-468e-b202-6731d0f99d21
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 86d6e17c3bfe01cc579e9a0afab8f555419e5116
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::GetApproximatePosition
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Returns the approximate position of a row corresponding to a bookmark.  
+# <a name="crowsetgetapproximateposition"></a>CRowset::GetApproximatePosition
+Retourne la position approximative d’une ligne correspondant à un signet.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      HRESULT GetApproximatePosition(   
-   const CBookmarkBase* pBookmark,   
-   DBCOUNTITEM* pPosition,   
-   DBCOUNTITEM* pcRows    
+      HRESULT GetApproximatePosition(   
+   const CBookmarkBase* pBookmark,   
+   DBCOUNTITEM* pPosition,   
+   DBCOUNTITEM* pcRows    
 ) throw( );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `pBookmark`  
- \[in\] A pointer to a bookmark that identifies the row whose position is to be found.  **NULL** if only the row count is required.  
+ [in] Pointeur vers un signet qui identifie la ligne dont la position doit être trouvé. **NULL** si seul le nombre de lignes est requis.  
   
  *pPosition*  
- \[out\] A pointer to the location where `GetApproximatePosition` returns the position of the row.  **NULL** if the position is not required.  
+ [out] Un pointeur vers l’emplacement où `GetApproximatePosition` retourne la position de la ligne. **NULL** si la position n’est pas nécessaire.  
   
  `pcRows`  
- \[out\] A pointer to the location where `GetApproximatePosition` returns the total number of rows.  **NULL** if the row count is not required.  
+ [out] Un pointeur vers l’emplacement où `GetApproximatePosition` retourne le nombre total de lignes. **NULL** si le nombre de lignes n’est pas nécessaire.  
   
-## Valeur de retour  
- A standard `HRESULT`.  
+## <a name="return-value"></a>Valeur de retour  
+ `HRESULT` standard.  
   
-## Notes  
- This method requires the optional interface `IRowsetScroll`, which might not be supported on all providers; if this is the case, the method returns **E\_NOINTERFACE**.  You must also set **DBPROP\_IRowsetScroll** to `VARIANT_TRUE` before calling **Open** on the table or command containing the rowset.  
+## <a name="remarks"></a>Notes  
+ Cette méthode requiert l’interface facultative `IRowsetScroll`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si c’est le cas, la méthode retourne **E_NOINTERFACE**. Vous devez également définir **DBPROP_IRowsetScroll** à `VARIANT_TRUE` avant d’appeler **ouvrir** sur la table ou d’une commande qui contient l’ensemble de lignes.  
   
- For information about using bookmarks in consumers, see [Using Bookmarks](../../data/oledb/using-bookmarks.md).  
+ Pour plus d’informations sur l’utilisation de signets dans des consommateurs, consultez [à l’aide de signets](../../data/oledb/using-bookmarks.md).  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
- [CRowset, classe](../../data/oledb/crowset-class.md)   
+## <a name="see-also"></a>Voir aussi  
+ [CRowset (classe)](../../data/oledb/crowset-class.md)   
  [IRowsetScroll::GetApproximatePosition](https://msdn.microsoft.com/en-us/library/ms712901.aspx)

@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e77b77cc87cd03210bb629640272cc6d4a053928
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1b392647920b29c10579bcb8465a290ee68487ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="beginpropertyset"></a>BEGIN_PROPERTY_SET
 Marque le début d’une propriété défini dans une propriété de mappage d’ensemble.  
@@ -41,7 +44,7 @@ guid
 ## <a name="example"></a>Exemple  
  Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

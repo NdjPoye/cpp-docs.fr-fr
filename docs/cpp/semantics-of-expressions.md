@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6c41ed94dcaee6632c3db7ae8590d570bb0e06c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efdf3f67e488af0e7c20c882552b18c533a031b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="semantics-of-expressions"></a>Sémantique des expressions
 Les expressions sont évaluées selon la priorité et le regroupement de leurs opérateurs. ([La priorité des opérateurs et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md) dans [Conventions lexicales](../cpp/lexical-conventions.md), montre les relations C++ opérateurs appliquent aux expressions.)  
@@ -84,7 +85,7 @@ Ordre Expression-Évaluation avec parenthèses
  Comme les règles précédentes peuvent toujours être utilisées de manière combinée, un pointeur const vers un objet volatile peut être fourni là où un pointeur est attendu.  
   
 ## <a name="ambiguous-expressions"></a>Expressions ambiguës  
- La signification de certaines expressions est ambiguë. Ces expressions se rencontrent généralement lorsque la valeur d'un objet change plusieurs fois dans la même expression. Elles reposent sur un ordre particulier d'évaluation lorsque le langage n'en définit aucun. Prenons l'exemple suivant :  
+ La signification de certaines expressions est ambiguë. Ces expressions se rencontrent généralement lorsque la valeur d'un objet change plusieurs fois dans la même expression. Elles reposent sur un ordre particulier d'évaluation lorsque le langage n'en définit aucun. Prenons l'exemple suivant :  
   
 ```  
 int i = 7;  
@@ -99,13 +100,13 @@ func( i, ++i );
   
  La définition de langage C++ ne spécifie pas actuellement les points de séquence. Microsoft C++ utilise les mêmes points de séquence que C ANSI pour toute expression utilisant des opérateurs C et n'impliquent pas les opérateurs surchargés. Lorsque des opérateurs sont surchargés, la sémantique passe de la séquence par l'opérateur à la séquence par l'appel de fonction. Microsoft C++ utilise les points de séquence ci-dessous.  
   
--   Opérande de gauche de l'opérateur AND logique (&&). L'opérande gauche de l'opérateur AND logique est complètement évalué et tous les effets secondaires sont terminés avant de continuer. Il n’existe aucune garantie que l’opérande droite de l’opérateur AND logique sera évalué.  
+-   Opérande de gauche de l’opérateur AND logique (&&). L’opérande gauche de l’opérateur AND logique est complètement évalué et tous les effets secondaires sont terminés avant de continuer. Il n’existe aucune garantie que l’opérande droite de l’opérateur AND logique sera évalué.  
   
--   Opérande gauche de l’opérateur OR logique (&#124; &#124;). L’opérande gauche de l’opérateur OR logique est complètement évalué et tous les effets secondaires sont terminés avant de continuer. Il n'existe aucune garantie que l'opérande droite de l'opérateur OR logique sera évalué.  
+-   Opérande gauche de l’opérateur OR logique (&#124; &#124;). L’opérande gauche de l’opérateur OR logique est complètement évalué et tous les effets secondaires sont terminés avant de continuer. Il n’existe aucune garantie que l’opérande droite de l’opérateur OR logique sera évalué.  
   
--   Opérande gauche de l'opérateur virgule. L'opérande gauche de l'opérateur virgule est complètement évalué et tous les effets secondaires sont terminés avant de continuer. Les deux opérandes de l'opérateur virgule sont toujours évalués.  
+-   Opérande gauche de l'opérateur virgule. L’opérande gauche de l’opérateur virgule est complètement évalué et tous les effets secondaires sont terminés avant de continuer. Les deux opérandes de l'opérateur virgule sont toujours évalués.  
   
--   Opérateur d'appel de fonction. L'expression appel-fonction et tous les arguments d'une fonction, notamment les arguments par défaut, sont évalués et tous les effets secondaires sont terminés avant l'entrée dans la fonction. Il n'y a aucun ordre spécifié d'évaluation entre les arguments ou l'expression appel-fonction.  
+-   Opérateur d'appel de fonction. L’expression appel-fonction et tous les arguments d’une fonction, notamment les arguments par défaut, sont évalués et tous les effets secondaires sont terminés avant l’entrée dans la fonction. Il n'y a aucun ordre spécifié d'évaluation entre les arguments ou l'expression appel-fonction.  
   
 -   Premier opérande de l'opérateur conditionnel. Le premier opérande de l'opérateur conditionnel est complètement évalué et tous les effets secondaires sont terminés avant de continuer.  
   

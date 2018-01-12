@@ -47,11 +47,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1d891b5b049e83a621514da6981a8f836d687b7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26db1617206393b8a3756987233d1e38e8ea79c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="printfs-printfsl-wprintfs-wprintfsl"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 Imprime une sortie mise en forme dans le flux de sortie standard. Ces versions de [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -101,7 +102,7 @@ int _wprintf_s_l(
   
  `printf_s`et `fprintf_s` se comportent de façon identique, sauf que `printf_s` écrit la sortie vers `stdout` plutôt qu’à une destination de type `FILE`. Pour plus d’informations, consultez [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
   
- `wprintf_s` est une version à caractères larges de `printf_s` ; `format` est une chaîne de caractères larges. `wprintf_s` et `printf_s` se comportent de la même façon si le flux est ouvert en mode ANSI. `printf_s` ne prend actuellement pas en charge la sortie vers un flux UNICODE.  
+ `wprintf_s` est une version à caractères larges de `printf_s` ; `format` est une chaîne de caractères larges. `wprintf_s` et `printf_s` se comportent de la même façon si le flux est ouvert en mode ANSI. `printf_s` ne prend pas en charge la sortie vers un flux UNICODE pour l’instant.  
   
  Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.  
   
@@ -130,14 +131,14 @@ Line one
 > [!IMPORTANT]
 >  Assurez-vous que `format` n'est pas une chaîne définie par l'utilisateur.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`printf_s`, `_printf_s_l`|\<stdio.h>|  
 |`wprintf_s`, `_wprintf_s_l`|\<stdio.h> ou \<wchar.h>|  
   
- La console n'est pas prise en charge dans les applications [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] . Les handles de flux standard associés à la console (`stdin`, `stdout` et `stderr`) doivent être redirigés pour que les fonctions Runtime C puissent les utiliser dans les applications du [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ La console n'est pas prise en charge dans les applications [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] . Les handles de flux standard associés à la console (`stdin`, `stdout` et `stderr`) doivent être redirigés pour que les fonctions Runtime C puissent les utiliser dans les applications du [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Exemple  
   

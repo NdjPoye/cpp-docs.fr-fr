@@ -35,11 +35,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5ab5d0da21b7034d1a5ab336854b87ae2d2cc429
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 581942f828bb666606b8f176ae3e2bb3454cbf98
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 Transfère le contrôle à votre mécanisme de gestion des erreurs si l'opérateur `new` ne peut pas allouer de mémoire.  
@@ -90,7 +91,7 @@ _PNH old_handler = _set_new_handler( my_handler );
    // Code that requires old_handler  
 ```  
   
- La fonction C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) définit le mode de nouveau gestionnaire pour [malloc](../../c-runtime-library/reference/malloc.md). Le nouveau mode de gestionnaire indique si, en cas d'échec, `malloc` doit appeler la nouvelle routine de gestionnaire, telle qu'elle est définie par `_set_new_handler`. Par défaut, `malloc` n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, quand `malloc` ne parvient pas à allouer de la mémoire, `malloc` appelle la routine de nouveau gestionnaire de la même façon que l’opérateur `new` quand il échoue pour la même raison. Pour substituer la valeur par défaut, appelez :  
+ La fonction C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) définit le mode de nouveau gestionnaire pour [malloc](../../c-runtime-library/reference/malloc.md). Le nouveau mode de gestionnaire indique si, en cas d'échec, `malloc` doit appeler la nouvelle routine de gestionnaire, telle qu'elle est définie par `_set_new_handler`. Par défaut, `malloc` n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, quand _`malloc` ne parvient pas à allouer de la mémoire, `malloc` appelle la routine de nouveau gestionnaire de la même façon que l’opérateur `new` quand il échoue pour la même raison. Pour substituer la valeur par défaut, appelez :  
   
 ```  
 _set_new_mode(1)  
@@ -104,13 +105,13 @@ _set_new_mode(1)
   
  Il existe un seul gestionnaire `_set_new_handler` pour tous les exécutables et DLL dynamiquement liés. Même si vous appelez `_set_new_handler`, votre gestionnaire peut être remplacé par un autre, ou vous remplacez un ensemble de gestionnaires par une autre DLL ou un autre exécutable.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_set_new_handler`|\<new.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
  Dans cet exemple, lorsque l'allocation échoue, le contrôle est transféré à MyNewHandler. L'argument passé à MyNewHandler est le nombre d'octets demandés. La valeur retournée par MyNewHandler est un indicateur qui spécifie si l'allocation doit être réexécutée : une valeur autre que zéro indique que l'allocation doit être réexécutée, une valeur zéro indique que l'allocation a échoué.  

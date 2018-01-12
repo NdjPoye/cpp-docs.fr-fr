@@ -16,15 +16,16 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6076869ac21f5d934e06e6338215da7ed3e7f6dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: afdc7d91e11936ebfd1775477f8c684ae4ff6d62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-example-function-prototype-and-call"></a>Exemple d'appel : Prototype et appel de fonction
 ## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
- L'exemple suivant montre les résultats d'un appel de fonction effectué à l'aide de différentes conventions d'appel.  
+ L’exemple suivant montre les résultats d’un appel de fonction effectué à l’aide de différentes conventions d’appel.  
   
  Cet exemple repose sur la structure de fonction suivante. Remplacez `calltype` par la convention d'appel appropriée.  
   

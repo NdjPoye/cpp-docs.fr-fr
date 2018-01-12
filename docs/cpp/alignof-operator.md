@@ -4,16 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - alignas_cpp
 - __alignof_cpp
 - alignof_cpp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - alignas [C++]
 - alignment of structures
@@ -21,16 +19,16 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 66ec7ff196a4f22aec043d8b76faf0189e05cd0f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 50a8d6e524847d46d62b5f1da134332f35edcf92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignof-operator"></a>__alignof, opérateur
 C++11 présente l'opérateur `alignof` qui retourne l'alignement, en octets, du type spécifié. Pour une portabilité maximale, vous devez utiliser l'opérateur alignof au lieu de l'opérateur __alignof spécifique à Microsoft.  
@@ -48,10 +46,10 @@ C++11 présente l'opérateur `alignof` qui retourne l'alignement, en octets, du 
 )  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Exemple :  
   
-|Expression|Valeur|  
+|Expression|Value|  
 |----------------|-----------|  
 |**__alignof (char)**|1|  
 |**__alignof (short)**|2|  
@@ -94,7 +92,7 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
   
 -   [__unaligned](../cpp/unaligned.md)  
   
--   [/Zp (alignement des membres de la structure)](../build/reference/zp-struct-member-alignment.md)  
+-   [/Zp (Alignement des membres de la structure)](../build/reference/zp-struct-member-alignment.md)  
   
 -   [Exemples d’alignement de Structure](../build/examples-of-structure-alignment.md) (x64 spécifique)  
   

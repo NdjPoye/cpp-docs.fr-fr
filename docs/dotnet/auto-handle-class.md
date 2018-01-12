@@ -1,49 +1,51 @@
 ---
-title: "auto_handle, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle, msclr::auto_handle"
-  - "msclr.auto_handle"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle (classe)"
+title: auto_handle, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle, msclr::auto_handle
+- msclr.auto_handle
+dev_langs: C++
+helpviewer_keywords: auto_handle class
 ms.assetid: a65604d1-ecbb-44fd-ae2f-696ddeeed9d6
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 09b44565be95afa9e25608f5875200b6e561df31
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# auto_handle, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gestion des ressources automatique qui peut être utilisée pour incorporer un descripteur virtuel en un type managé.  
+# <a name="autohandle-class"></a>auto_handle, classe
+Gestion automatique des ressources qui peut être utilisée pour incorporer un handle virtuel dans un type managé.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename _element_type>  
 ref class auto_handle;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `_element_type`  
  Le type managé à incorporer.  
   
-## Configuration requise  
- **Fichier d'en\-tête** \<msclr\\auto\_handle.h\>  
+## <a name="requirements"></a>Configuration requise  
+ **Fichier d’en-tête** \<msclr\auto_handle.h >  
   
- **Espace de nommage** msclr  
+ **Namespace** msclr  
   
-## Voir aussi  
- [auto\_handle](../dotnet/auto-handle.md)   
- [auto\_handle, membres](../dotnet/auto-handle-members.md)   
- [auto\_gcroot, classe](../dotnet/auto-gcroot-class.md)
+## <a name="see-also"></a>Voir aussi  
+ [auto_handle](../dotnet/auto-handle.md)   
+ [auto_handle, membres](../dotnet/auto-handle-members.md)   
+ [auto_gcroot Class](../dotnet/auto-gcroot-class.md)

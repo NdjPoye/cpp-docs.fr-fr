@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 154904eb201f39852b57f253b97fba864084381a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ad82c1d867c511121cd024f2affd5df98b4642bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clr-enum-type"></a>Type Enum du CLR
 La déclaration et le comportement des enums a changé entre les Extensions managées pour C++ vers Visual C++.  
@@ -69,7 +72,7 @@ enum class status;   // new syntax: error
 -   Dans la nouvelle syntaxe, un enum du CLR conserve sa propre portée, ce qui n’est pas le cas dans les Extensions managées. Auparavant, les énumérateurs étaient visibles dans la portée contenant l’enum. Maintenant, les énumérateurs sont encapsulés dans la portée de l’enum.  
   
 ## <a name="clr-enums-are-a-kind-of-object"></a>Les énumérations CLR sont une sorte d’objet  
- Prenons le fragment de code suivant :  
+ Prenons le fragment de code suivant :  
   
 ```  
 __value enum status { fail, pass };  
@@ -173,7 +176,7 @@ public:
   
  Cela modifie la stratégie de conception entre natif et un enum du CLR. Avec un enum du CLR conservant une portée associée dans Visual C++, il n’est ni nécessaire ni efficace d’encapsuler la déclaration de l’enum dans une classe. Cet idiome a évolué à l’époque de cfront 2.0 dans les laboratoires Bell également afin de résoudre le problème de la pollution du nom global.  
   
- Dans la version bêta d’origine de la nouvelle bibliothèque iostream par Jerry Schwarz dans les laboratoires Bell, Jerry n’avait pas encapsulé tous les enums associés définis pour la bibliothèque et les énumérateurs courants tels que `read`, `write`, `append`, etc. , rend pratiquement impossible pour les utilisateurs compiler leur code existant. Une solution aurait été de supprimer les noms, tel que `io_read`, `io_write`, etc.. Une deuxième solution aurait été de modifier le langage en ajoutant la portée à un enum, mais cela n’était pas possible à la fois. La solution intermédiaire a été pour encapsuler l’enum dans la classe ou la hiérarchie de classes, où le nom de balise et les énumérateurs de l’enum remplissent la portée de classe englobante.) Autrement dit, la motivation pour placer des enums dans des classes, au moins à l’origine, n’était pas philosophique, mais une réponse pratique au problème pollution d’espace de noms global.  
+ Dans la version bêta d’origine de la nouvelle bibliothèque iostream par Jerry Schwarz dans les laboratoires Bell, Jerry n’avait pas encapsulé tous les enums associés définis pour la bibliothèque et les énumérateurs courants tels que `read`, `write`, `append`, etc. , rend pratiquement impossible pour les utilisateurs compiler leur code existant. Une solution aurait été de supprimer les noms, tel que `io_read`, `io_write`, etc. Une deuxième solution aurait été de modifier le langage en ajoutant la portée à un enum, mais cela n’était pas possible à la fois. La solution intermédiaire a été pour encapsuler l’enum dans la classe ou la hiérarchie de classes, où le nom de balise et les énumérateurs de l’enum remplissent la portée de classe englobante.) Autrement dit, la motivation pour placer des enums dans des classes, au moins à l’origine, n’était pas philosophique, mais une réponse pratique au problème pollution d’espace de noms global.  
   
  Avec l’enum de Visual C++, il n’est plus avantage majeur pour encapsuler un enum dans une classe. En fait, si vous examinez le `System` espaces de noms, vous verrez qu’enums, classes et interfaces tous occupent le même espace de déclaration.  
   

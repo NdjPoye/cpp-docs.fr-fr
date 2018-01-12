@@ -24,11 +24,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d0b38e91830157621835ad12edaeb37c24b8e11d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 63d5bef87a50b5027a743e9927f22c84636c1c9c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbookmarkcbookmark"></a>CBookmark::CBookmark
 Constructeur.  
@@ -47,13 +50,13 @@ CBookmark(
  `nSize`  
  [in] Taille de la mémoire tampon du signet en octets.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La première fonction définit la mémoire tampon **NULL** et la taille de mémoire tampon à 0. La deuxième fonction définit la taille de mémoire tampon sur `nSize`et la mémoire tampon vers un tableau d’octets de `nSize` octets.  
   
 > [!NOTE]
 >  Cette fonction est disponible uniquement dans **CBookmark\<0 >**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

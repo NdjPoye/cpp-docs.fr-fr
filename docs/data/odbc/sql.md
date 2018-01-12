@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1879def3a66765c48d9f86e4b7f0c56785a0cf91
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0c4283e73b800ac0fd4d448d5137372807f893d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql"></a>SQL
 SQL (Structured Query Language) est un moyen pour communiquer avec une base de données relationnelle qui vous permet de définir, interroger, de modifier et de contrôler les données. À l’aide de la syntaxe SQL, vous pouvez construire une instruction qui extrait des enregistrements en fonction de critères que vous spécifiez.  
@@ -54,9 +57,9 @@ SQL (Structured Query Language) est un moyen pour communiquer avec une base de d
   
 |Mot clé SQL|Utilisent les Assistants et les classes de base de données|  
 |-----------------|---------------------------------------------|  
-|**SÉLECTIONNEZ**|Pour identifier les tables et les colonnes dans la source de données doivent être utilisées.|  
-|**OÙ**|Pour appliquer un filtre qui restreint la sélection.|  
-|**TRIER PAR**|Pour appliquer un ordre de tri pour le jeu d’enregistrements.|  
+|**SELECT**|Pour identifier les tables et les colonnes dans la source de données doivent être utilisées.|  
+|**WHERE**|Pour appliquer un filtre qui restreint la sélection.|  
+|**ORDER BY**|Pour appliquer un ordre de tri pour le jeu d’enregistrements.|  
 |**INSERT**|Pour ajouter de nouveaux enregistrements à un jeu d’enregistrements.|  
 |**SUPPRIMER**|Pour supprimer des enregistrements à partir d’un jeu d’enregistrements.|  
 |**MISE À JOUR**|Pour modifier les champs d’un enregistrement.|  

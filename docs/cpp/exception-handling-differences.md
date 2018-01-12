@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - structured exception handling [C++], vs. C++ exception handling
 - structured exception handling [C++], vs. unstructured
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - C++ exception handling [C++], vs. structured exception handling
 - wrapper classes [C++], C exception
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 191b59d21f56ee810a981082806a6775bc6ea40d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 63fff00222aa083bcb392e0d71411bfcf5c0f418
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-differences"></a>Différences de gestion des exceptions
 La principale différence entre la gestion structurée des exceptions et la gestion des exceptions C++ est que le modèle de gestion des exceptions C++ traite des types, alors que le modèle de gestion structurée des exceptions C traite des exceptions d'un seul type (plus spécifiquement `unsigned int`). Autrement dit, les exceptions C sont identifiées par une valeur entière non signée, tandis que les exceptions C++ sont identifiées par le type de données. Lorsqu'une exception est levée en C, chaque gestionnaire possible exécute un filtre qui examine le contexte d'exception C et détermine s'il faut accepter l'exception, la passer à un autre gestionnaire ou l'ignorer. Lorsqu'une exception est levée en C++, elle peut être de n'importe quelle type.  
@@ -71,7 +69,7 @@ Caught a C exception.
 ```  
   
 ##  <a name="_core_c_exception_wrapper_class"></a>Classe Wrapper d’Exception C  
- Dans un exemple simple comme celui-ci, l’exception C peut être interceptée uniquement par les points de suspension (**... **) **catch** gestionnaire. Aucune information sur le type ou la nature de l'exception n'est communiquée au gestionnaire. Bien que cette méthode fonctionne, vous devez parfois définir une transformation entre les deux modèles de gestion des exceptions afin que chaque exception C soit associée à une classe spécifique. Pour cela, vous pouvez définir une classe « wrapper » d'exception C, qui peut être utilisée ou dont il est possible de dériver pour attribuer un type de classe spécifique à l'exception C. En procédant ainsi, chaque exception C peut être gérée par une C++ **catch** Gestionnaire plus séparément que dans l’exemple précédent.  
+ Dans un exemple simple comme celui-ci, l’exception C peut être interceptée uniquement par les points de suspension (**...** ) **catch** gestionnaire. Aucune information sur le type ou la nature de l'exception n'est communiquée au gestionnaire. Bien que cette méthode fonctionne, vous devez parfois définir une transformation entre les deux modèles de gestion des exceptions afin que chaque exception C soit associée à une classe spécifique. Pour cela, vous pouvez définir une classe « wrapper » d'exception C, qui peut être utilisée ou dont il est possible de dériver pour attribuer un type de classe spécifique à l'exception C. En procédant ainsi, chaque exception C peut être gérée par une C++ **catch** Gestionnaire plus séparément que dans l’exemple précédent.  
   
  Votre classe wrapper peut avoir une interface constituée de certaines fonctions membres qui déterminent la valeur de l'exception et qui accèdent aux informations de contexte d'exception étendues fournies par le modèle d'exception C. Vous pouvez également définir un constructeur par défaut et un constructeur qui accepte un argument `unsigned int` (pour les besoins de la représentation d'exception C sous-jacente), ainsi qu'un constructeur de copie de bits. Voici une implémentation possible d'une classe wrapper d'exception C :  
   

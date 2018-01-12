@@ -1,63 +1,66 @@
 ---
-title: "CProcedures, CProcedureInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CProcedures"
-  - "m_szCatalog"
-  - "CProcedureInfo"
-  - "m_szSchema"
-  - "m_szDefinition"
-  - "m_szName"
-  - "m_nType"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CProcedureInfo (classe de paramètre)"
-  - "CProcedures (classe typedef)"
-  - "DESCRIPTION (classe) (données membres)"
-  - "m_nType"
-  - "m_szCatalog"
-  - "m_szDefinition"
-  - "m_szDescription"
-  - "m_szName"
-  - "m_szSchema"
+title: CProcedures, CProcedureInfo | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CProcedures
+- m_szCatalog
+- CProcedureInfo
+- m_szSchema
+- m_szDefinition
+- m_szName
+- m_nType
+dev_langs: C++
+helpviewer_keywords:
+- DESCRIPTION class data member
+- m_szSchema
+- m_nType
+- m_szCatalog
+- CProcedureInfo parameter class
+- m_szName
+- m_szDescription
+- m_szDefinition
+- CProcedures typedef class
 ms.assetid: d0c7375e-ee0c-441d-aae6-6108150860a0
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 66cf60f5697c9fea951dd167256cab83e71ce003
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CProcedures, CProcedureInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Appelle la classe **CProcedures** de typedef pour implémenter ses paramètres de classe **CProcedureInfo**.  
+# <a name="cprocedures-cprocedureinfo"></a>CProcedures, CProcedureInfo
+Appelez la classe typedef **CProcedures** pour implémenter sa classe de paramètre **CProcedureInfo**.  
   
-## Notes  
- Voir [Classes d'ensemble de lignes de schéma et de classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d'informations sur l'utilisation les classes de typedef.  
+## <a name="remarks"></a>Notes  
+ Consultez [Classes de jeu de lignes de schéma et Classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation de classes typedef.  
   
- Cette classe identifie les procédures, définies dans le catalogue, qui sont détenues par un utilisateur donné.  
+ Cette classe identifie les procédures définies dans le catalogue, qui sont détenus par un utilisateur donné.  
   
- Le tableau suivant répertorie les membres de la classe de donnée et leurs colonnes OLE DB correspondantes.  Voir [Ensemble de lignes TRANSLATIONS](https://msdn.microsoft.com/en-us/library/ms724021.aspx) dans *OLE DB guide de référence du programmeur* pour plus d'informations sur le schéma et les colonnes.  
+ Le tableau suivant répertorie les membres de données de la classe et les colonnes correspondantes de OLE DB. Consultez [ensemble de lignes de procédures](https://msdn.microsoft.com/en-us/library/ms724021.aspx) dans les *de référence du programmeur OLE DB* pour plus d’informations sur le schéma et les colonnes.  
   
-|Données concernées|Colonnes OLE DB|  
-|------------------------|---------------------|  
-|m\_szCatalog|PROCEDURE\_CATALOG|  
-|m\_szSchema|PROCEDURE\_SCHEMA|  
-|m\_szName|PROCEDURE\_NAME|  
-|m\_nType|PROCEDURE\_TYPE|  
-|m\_szDefinition|PROCEDURE\_DEFINITION|  
-|m\_szDescription|DESCRIPTION|  
+|Données membres|Colonnes de OLE DB|  
+|------------------|--------------------|  
+|m_szCatalog|PROCEDURE_CATALOG|  
+|m_szSchema|PROCEDURE_SCHEMA|  
+|m_szName|PROCEDURE_NAME|  
+|m_nType|PROCEDURE_TYPE|  
+|m_szDefinition|PROCEDURE_DEFINITION|  
+|m_szDescription|DESCRIPTION|  
   
-## Conditions requises  
- **En\-tête :** atldbsch.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbsch.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CRestrictions, classe](../../data/oledb/crestrictions-class.md)

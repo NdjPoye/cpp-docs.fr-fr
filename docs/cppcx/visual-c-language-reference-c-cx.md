@@ -1,50 +1,46 @@
 ---
-title: "Informations de r&#233;f&#233;rence sur le langage Visual C++ (C++-CX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Référence du langage Visual C++ (C + c++ / CX) | Documents Microsoft"
+ms.custom: 
+ms.date: 09/15/2017
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-caps.latest.revision: 27
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3a0e7cba73d85253db28d719932d02cfb3cdecca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Informations de r&#233;f&#233;rence sur le langage Visual C++ (C++-CX)
-Les [!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] \([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\) désignent un jeu d’extensions en langage C\+\+ qui permet de créer des applications Windows et des composants [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] dans un idiome aussi proche que possible du langage C\+\+ récent. Utilisez les [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] pour écrire des applications et des composants Windows en code natif qui interagissent facilement avec Visual C\#, Visual Basic et JavaScript, ainsi que d’autres langages prenant en charge [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]. Dans les cas rares qui nécessitent l’accès direct aux interfaces COM brutes ou au code non exceptionnel, vous pouvez utiliser la [Bibliothèque de modèles Windows Runtime C\+\+ \(WRL\)](~/windows/windows-runtime-cpp-template-library-wrl.md).  
-  
- Le modèle représente la prochaine génération de programmation C\+\+ natif dans Windows. Ainsi, vous pouvez créer :  
-  
--   Des applications Windows C\+\+ qui utilisent XAML pour définir l’interface utilisateur et utiliser la pile native. Pour plus d’informations, consultez [Créer une application « Hello World » en C\+\+ \(Windows 10\)](http://msdn.microsoft.com/library/windows/apps/dn996906.aspx).  
-  
--   Des composants [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] C\+\+ qui peuvent être utilisés par les applications Windows JavaScript. Pour plus d’informations, consultez [Création de composants Windows Runtime en C\+\+](http://msdn.microsoft.com/library/hh441569.aspx)[Création de composants Windows Runtime en C\+\+](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf).  
-  
--   Des jeux et des applications à intensité graphique Windows DirectX. Pour plus d’informations, consultez [Créer un jeu de plateforme Windows universelle \(UWP\) simple avec DirectX](http://msdn.microsoft.com/library/windows/apps/xaml/mt210793.aspx).  
-  
-## Articles connexes  
-  
-|||  
-|-|-|  
-|[Aide\-mémoire](../cppcx/quick-reference-c-cx.md)|Tableau de mots clés et des opérateurs pour [!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] \([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\).|  
-|[système de type](../cppcx/type-system-c-cx.md)|Décrit les types et les éléments de programmation [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] de base, ainsi que le mode d'utilisation de [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] pour consommer et créer des types [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)].|  
-|[Génération d'applications et de bibliothèques](../cppcx/building-apps-and-libraries-c-cx.md)|Explique comment utiliser l'IDE pour générer des applications et les lier aux bibliothèques et DLL statiques.|  
-|[Interopérabilité avec d'autres langages](../cppcx/interoperating-with-other-languages-c-cx.md)|Décrit comment les composants écrits à l'aide de [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] peuvent être utilisés avec les composants écrits dans JavaScript, n'importe quel langage managé ou la [!INCLUDE[cppwrl](../cppcx/includes/cppwrl-md.md)].|  
-|[Thread et Marshaling](../cppcx/threading-and-marshaling-c-cx.md)|Explique comment spécifier le comportement de threads et de marshaling des composants que vous créez.|  
-|[Référence aux espaces de noms](../cppcx/namespaces-reference-c-cx.md)|Documentation de référence sur l’espace de noms par défaut, l’espace de noms de plateforme, Platform::Collections et les espaces de noms associés.|  
-|[Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Répertorie les fonctions CRT qui ne peuvent pas être utilisées dans les applications Windows Runtime.|  
-|[Guides de procédures pour les applications Windows 10](http://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Fournit des instructions détaillées sur les applications Windows 10, ainsi que des liens vers d’autres informations.|  
-  
-1.  [C\+\+\/CX Partie 0 sur \[n\] : introduction](http://blogs.msdn.com/b/vcblog/archive/2012/08/29/cxxcxpart00anintroduction.aspx)  
-  
-2.  [C\+\+\/CX Partie 0 sur \[n\] : introduction](http://blogs.msdn.com/b/vcblog/archive/2012/08/29/cxxcxpart00anintroduction.aspx)  
-  
-3.  [C\+\+\/CX Partie 2 sur \[n\] : types avec chapeau \(^\)](http://blogs.msdn.com/b/vcblog/archive/2012/09/17/cxxcxpart02typesthatwearhats.aspx)  
-  
-4.  [C\+\+\/CX Partie 3 sur \[n\] : en construction](http://blogs.msdn.com/b/vcblog/archive/2012/10/05/cxxcxpart03underconstruction.aspx)  
-  
-5.  [C\+\+\/CX Partie 4 sur \[n\] : fonctions membres static](http://blogs.msdn.com/b/vcblog/archive/2012/10/19/cxxcxpart04staticmemberfunctions.aspx)
+# <a name="visual-c-language-reference-ccx"></a>Référence du langage Visual C++ (C++/CX)
+
+C + c++ / CX est un ensemble d’extensions du langage C++ qui permet de créer des applications Windows et de composants Windows Runtime dans un idiome aussi proche que possible moderne C++. Utiliser c++ / CX pour écrire des applications Windows et des composants dans le code natif qui interagissent facilement avec Visual c#, Visual Basic et JavaScript et d’autres langages qui prennent en charge le Windows Runtime. Dans ces cas rares qui nécessitent un accès direct aux interfaces COM brutes ou au code non exceptionnel, vous pouvez utiliser la [bibliothèque de modèles Windows Runtime C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
+
+Le modèle représente la prochaine génération de programmation C++ natif dans Windows. Ainsi, vous pouvez créer :
+
+- Les applications C++ Universal Windows Platform (UWP) qui utilisent XAML pour définir l’utilisateur de l’interface et utilisent la pile native. Pour plus d’informations, consultez [créer une application « hello world » dans C++ (UWP)](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
+
+- Composants C++ Windows Runtime qui peuvent être utilisés par les applications Windows JavaScript. Pour plus d’informations, consultez [création de composants Windows Runtime en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+
+- Des jeux et des applications à intensité graphique Windows DirectX. Pour plus d’informations, consultez [créer un jeu UWP simple avec DirectX](/windows/uwp/gaming/tutorial--create-your-first-metro-style-directx-game).
+
+## <a name="related-articles"></a>Articles connexes
+
+|||
+|-|-|
+|[Référence rapide](../cppcx/quick-reference-c-cx.md)|Tableau de mots clés et des opérateurs pour C + c++ / CX.|
+|[Système de type](../cppcx/type-system-c-cx.md)|Décrit la base C + c++ / CX types et les constructions de programmation et comment utiliser C + c++ / CX pour consommer et créer des types Windows Runtime.|
+|[Génération d’applications et de bibliothèques](../cppcx/building-apps-and-libraries-c-cx.md)|Explique comment utiliser l'IDE pour générer des applications et les lier aux bibliothèques et DLL statiques.|
+|[Interopérabilité avec d’autres langages](../cppcx/interoperating-with-other-languages-c-cx.md)|Explique comment les composants qui sont écrits à l’aide de C + c++ / CX peut être utilisé avec les composants qui sont écrites en JavaScript, un langage managé ou la [!INCLUDE[cppwrl](../cppcx/includes/cppwrl-md.md)].|
+|[Thread et Marshaling](../cppcx/threading-and-marshaling-c-cx.md)|Explique comment spécifier le comportement de threads et de marshaling des composants que vous créez.|
+|[Référence des espaces de noms](../cppcx/namespaces-reference-c-cx.md)|Documentation de référence sur l’espace de noms par défaut, l’espace de noms de plateforme, Platform::Collections et les espaces de noms associés.|
+|[Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Répertorie les fonctions CRT qui ne peuvent pas être utilisées dans les applications Windows Runtime.|
+|[Guides de procédures pour les applications Windows 10](http://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Fournit des instructions détaillées sur les applications Windows 10, ainsi que des liens vers d’autres informations.|
+|[C + c++ / CX partie 0 sur \[ n \]: Introduction](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + c++ / CX partie 1 sur \[ n \]: une classe Simple](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + c++ / CX partie 2 sur \[ n \]: Types avec chapeaux](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + c++ / CX partie 3 sur \[ n \]: en cours d’élaboration](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + c++ / CX partie 4 sur \[ n \]: les fonctions membres Static](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Une série blog Visual C++ sur C + c++ / CX.|

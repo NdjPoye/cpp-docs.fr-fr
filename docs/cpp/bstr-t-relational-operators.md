@@ -40,11 +40,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9d495bd2e0ec1a80b0d3909fdc4d190676bf2ed5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 474485258c69f55c957cbdde43900965f1e99c9d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bstrt-relational-operators"></a>Opérateurs relationnels _bstr_t
 **Section spécifique à Microsoft**  
@@ -76,7 +77,7 @@ bool operator>=(
 ) const throw( );  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Ces opérateurs comparent deux objets `_bstr_t` du point de vue lexicographique. Les opérateurs retournent **true** si les comparaisons sont positives et sinon retourner **false**.  
   
  **FIN de la section spécifique à Microsoft**  

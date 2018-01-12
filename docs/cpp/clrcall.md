@@ -15,16 +15,17 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d216e196f4b23deb7916bd4d9255c32d782ababb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d11211e90f0517c11213d7bdd2815c2f937fc79a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clrcall"></a>__clrcall
 **Section spécifique à Microsoft**  
   
- Spécifie qu'une fonction peut uniquement être appelée à partir du code managé.  Utilisez `__clrcall` pour toutes les fonctions virtuelles qui seront uniquement appelées à partir du code managé. Toutefois, cette convention d'appel ne peut pas être utilisée pour les fonctions qui sont appelées à partir du code natif.  
+ Spécifie qu'une fonction peut uniquement être appelée à partir du code managé.  Utilisez `__clrcall` pour toutes les fonctions virtuelles qui seront uniquement appelées à partir du code managé. Toutefois, cette convention d’appel ne peut pas être utilisée pour les fonctions qui sont appelées à partir du code natif.  
   
  Utilisez `__clrcall` pour améliorer les performances lors d'un appel à partir d'une fonction managée à une fonction managée virtuelle ou à partir de la fonction managée à la fonction managée via le pointeur.  
   

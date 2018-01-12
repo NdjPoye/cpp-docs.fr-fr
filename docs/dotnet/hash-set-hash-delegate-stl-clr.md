@@ -1,41 +1,42 @@
 ---
-title: "hash_set::hash_delegate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::hash_delegate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membre hash_delegate [STL/CLR]"
+title: hash_set::hash_delegate (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::hash_delegate
+dev_langs: C++
+helpviewer_keywords: hash_delegate member [STL/CLR]
 ms.assetid: 34e39d2d-f2ef-4755-9201-3cdb4e41ea56
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 76ca826d0ef6b8eb0189a70ea34367546ccad8e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set::hash_delegate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsethashdelegate-stlclr"></a>hash_set::hash_delegate (STL/CLR)
 Recherche un élément qui correspond à une clé spécifiée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 hasher^ hash_delegate();  
 ```  
   
-## Notes  
- La fonction retourne le délégué utilisé pour convertir une valeur de clé en entier.  Vous l'utilisez pour hacher une clé.  
+## <a name="remarks"></a>Notes  
+ La fonction membre retourne le délégué utilisé pour convertir une valeur de clé en entier. Il permet d’une clé de hachage.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_set_hash_delegate.cpp   
@@ -55,13 +56,16 @@ int main()
   
 ```  
   
-  **hash\(L'a'\) \= 1616896120**  
-**hash\(L'b'\) \= 570892832**   
-## Configuration requise  
- **En\-tête:** \<cliext\/hash\_set\>  
+```Output  
+hash(L'a') = 1616896120  
+hash(L'b') = 570892832  
+```  
   
- **Espace de noms :** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/hash_set >  
   
-## Voir aussi  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::hasher](../dotnet/hash-set-hasher-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md)

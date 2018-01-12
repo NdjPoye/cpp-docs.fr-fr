@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- typename_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- typename template specifier
+f1_keywords: typename_cpp
+dev_langs: C++
+helpviewer_keywords: typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 95283efc5d3b92a461ba6507e669f6f3e2af2689
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a276d13172b675cc6856e726cd7139e36fa97d41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="typename"></a>typename
 Dans les définitions de modèle, fournit une indication au compilateur qu’un identificateur inconnu est un type. Dans les listes de paramètres de modèle, est utilisé pour spécifier un paramètre de type.  
@@ -36,7 +32,7 @@ Dans les définitions de modèle, fournit une indication au compilateur qu’un 
 typename identifier;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Ce mot clé doit être utilisé si un nom dans une définition de modèle est un nom qualifié qui dépend d’un argument de modèle ; Il est facultatif si le nom qualifié n’est pas dépendant. Pour plus d’informations, consultez [modèles et résolution de noms](../cpp/templates-and-name-resolution.md).  
   
  **nom de type** peut être utilisé par n’importe quel type de n’importe où dans une définition ou déclaration de modèle. Il n’est pas autorisé dans la liste des classes de base sauf sous forme d’argument template pour une classe de base de modèle.  

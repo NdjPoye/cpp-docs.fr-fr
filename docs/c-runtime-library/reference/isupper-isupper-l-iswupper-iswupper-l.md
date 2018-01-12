@@ -44,11 +44,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65ba046c6e2f592dece527f73186220084ca576b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 242646319193e070e59256c71c53a25268e10e64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isupper-isupperl-iswupper-iswupperl"></a>isupper, _isupper_l, iswupper, _iswupper_l
 Détermine si un entier représente un caractère majuscule.  
@@ -82,7 +83,7 @@ int _iwsupper_l(
 ## <a name="return-value"></a>Valeur de retour  
  Chacune de ces routines retourne une valeur différente de zéro si `c` est une représentation particulière d’un caractère majuscule. `isupper`Retourne une valeur différente de zéro si `c` est un caractère majuscule (A - Z). `iswupper` retourne une valeur différente de zéro si `c` est un caractère large qui correspond à une lettre majuscule, ou si `c` appartient à un jeu de caractères larges défini par l’implémentation pour lequel aucun des éléments `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` n’est différent de zéro. Chacune de ces routines retourne 0 si `c` ne répond pas à la condition de test.  
   
- Pour leur comportement dépendant des paramètres régionaux, les versions de ces fonctions avec le suffixe `_l` utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ Pour leur comportement dépendant des paramètres régionaux, les versions de ces fonctions avec le suffixe `_l` utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  Le comportement de `isupper` et `_isupper_l` n’est pas défini si `c` n’est pas EOF ou n’appartient pas à la plage 0 à 0xFF, inclus. Quand une bibliothèque CRT de débogage est utilisée et que `c` ne fait pas partie de ces valeurs, les fonctions déclenchent une assertion.  
   
@@ -93,7 +94,7 @@ int _iwsupper_l(
 |`_istupper`|`isupper`|[_ismbcupper](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`iswupper`|  
 |`_istupper_l`|`_isupper_l`|[_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`_iswupper_l`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

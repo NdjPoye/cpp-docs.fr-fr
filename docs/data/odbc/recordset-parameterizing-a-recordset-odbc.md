@@ -1,73 +1,77 @@
 ---
-title: "Recordset&#160;: param&#233;trage d&#39;un recordset (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ODBC (recordsets), paramétrer"
-  - "paramétrer des recordsets"
-  - "passer des paramètres, aux requêtes au moment de l'exécution"
-  - "recordsets, paramétrer"
+title: "Recordset : Paramétrage d’un Recordset (ODBC) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- parameterizing recordsets
+- ODBC recordsets, parameterizing
+- recordsets, parameterizing
+- passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 38b17950a7aaf89cc041c4933768bf6b2da0c9b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Recordset&#160;: param&#233;trage d&#39;un recordset (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique s'applique aux classes ODBC MFC.  
+# <a name="recordset-parameterizing-a-recordset-odbc"></a>Recordset : paramétrage d'un recordset (ODBC)
+Cette rubrique s’applique aux classes ODBC MFC.  
   
- Il peut arriver que vous souhaitiez sélectionner des enregistrements à l'exécution, à l'aide d'informations préalablement calculées ou fournies par l'utilisateur final.  Les paramètres de recordset permettent d'atteindre cet objectif.  
+ Vous pouvez parfois être en mesure de sélectionner des enregistrements en cours d’exécution, à l’aide des informations que vous avez calculé ou obtenu à partir de votre utilisateur final. Les paramètres vous permettent d’atteindre cet objectif.  
   
  Cette rubrique explique :  
   
--   [l'objectif d'un recordset paramétré](#_core_parameterized_recordsets) ;  
+-   [L’objectif d’un recordset paramétré](#_core_parameterized_recordsets).  
   
--   [quand et pourquoi paramétrer un recordset](#_core_when_to_use_parameters) ;  
+-   [Quand et pourquoi vous souhaiterez peut-être paramétrer un jeu d’enregistrements](#_core_when_to_use_parameters).  
   
--   [comment déclarer des membres de données de type paramètre dans votre classe de recordset](#_core_parameterizing_your_recordset_class) ;  
+-   [Comment déclarer des membres de données dans votre classe de recordset paramètre](#_core_parameterizing_your_recordset_class).  
   
--   [comment passer les informations sur les paramètres à un objet recordset lors de l'exécution](#_core_passing_parameter_values_at_run_time).  
+-   [Comment transmettre des informations sur les paramètres à un objet recordset en cours d’exécution](#_core_passing_parameter_values_at_run_time).  
   
-##  <a name="_core_parameterized_recordsets"></a> Recordsets paramétrés  
- Un recordset paramétré permet de passer des informations sur les paramètres à l'exécution.  Il s'ensuit deux conséquences appréciables :  
+##  <a name="_core_parameterized_recordsets"></a>Jeux d’enregistrements paramétrés  
+ Un jeu d’enregistrements paramétré permet de transmettre des informations de paramètre au moment de l’exécution. Cela a deux conséquences appréciables :  
   
--   une exécution en principe plus rapide ;  
+-   Cela peut entraîner une meilleure vitesse d’exécution.  
   
--   la possibilité de créer une requête à l'exécution, à partir d'informations non disponibles au moment du design, comme celles qui sont calculées ou fournies par un utilisateur lors de l'exécution.  
+-   Il vous permet de générer une requête en cours d’exécution, en fonction des informations non disponibles au moment du design, telles que les informations fournies par l’utilisateur ou calculée au moment de l’exécution.  
   
- Quand vous appelez la fonction **Open** pour exécuter la requête, le recordset utilise les informations sur les paramètres pour compléter son instruction **SQL SELECT**.  Tout recordset peut être paramétré.  
+ Lorsque vous appelez **ouvrir** pour exécuter la requête, le jeu d’enregistrements utilise les informations de paramètre pour terminer son **SQL SELECT** instruction. Vous pouvez paramétrer un jeu d’enregistrements.  
   
-##  <a name="_core_when_to_use_parameters"></a> Quand utiliser les paramètres  
- Parmi les utilisations de paramètres les plus classiques figurent les utilisations suivantes :  
+##  <a name="_core_when_to_use_parameters"></a>Quand utiliser les paramètres  
+ Utilisations courantes des paramètres sont les suivantes :  
   
--   Passage, lors de l'exécution, d'arguments à une requête prédéfinie.  
+-   Passage des arguments d’exécution pour une requête prédéfinie.  
   
-     Pour passer des paramètres à une procédure stockée, vous devez définir une instruction **CALL** ODBC personnalisée complète \(avec des emplacements réservés de paramètres\) lorsque vous appelez la fonction **Open**, substituant ainsi l'instruction SQL par défaut du recordset.  Pour plus d'informations, consultez [CRecordset::Open](../Topic/CRecordset::Open.md) dans *Class Library Reference* ainsi que [SQL : personnalisation de l'instruction SQL du recordset \(ODBC\)](../../data/odbc/sql-customizing-your-recordset’s-sql-statement-odbc.md) et [Recordset : déclaration de la classe d'une requête prédéfinie \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).  
+     Pour passer des paramètres à une procédure stockée, vous devez spécifier un ODBC personnalisé complète **appeler** instruction, avec des espaces réservés de paramètre, lorsque vous appelez **ouvrir**, remplaçant l’instruction SQL de valeur par défaut du jeu d’enregistrements. Pour plus d’informations, consultez [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) dans les *Class Library Reference* et [SQL : personnalisation du Recordset SQL instruction (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) et [ Recordset : Déclaration de la classe d’une requête prédéfinie (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).  
+
   
--   Exécution efficace de nombreuses requêtes comportant différentes informations sur les paramètres.  
+-   Exécution efficace de nombreuses requêtes comportant des informations sur les différents paramètres.  
   
-     Par exemple, chaque fois que l'utilisateur final recherche des informations sur un étudiant dans la base de données des étudiants inscrits; vous pouvez définir le nom de l'étudiant ou son ID comme étant des paramètres fournis par l'utilisateur.  Ensuite, quand vous appelez la fonction membre **Requery** du recordset, la requête ne sélectionne que l'enregistrement concernant cet étudiant.  
+     Par exemple, chaque fois que l’utilisateur final recherche des informations sur un étudiant dans la base de données d’inscription étudiant, vous pouvez spécifier nom ou ID de l’étudiant en tant que paramètre obtenu à partir de l’utilisateur. Ensuite, lorsque vous appelez votre jeu d’enregistrements **Requery** fonction membre, la requête sélectionne uniquement que l’enregistrement étudiant.  
   
-     La chaîne de filtre du recordset, stockée dans **m\_strFilter**, a la forme suivante :  
+     Chaîne de filtre du recordset, stockée dans **m_strFilter**, peut ressembler à ceci :  
   
     ```  
     "StudentID = ?"  
     ```  
   
-     Imaginons que l'ID de l'étudiant soit placé dans la variable `strInputID`.  Lorsque vous définissez un paramètre pour `strInputID` \(par exemple, l'ID étudiant 100\) la valeur de la variable est associée à l'emplacement de paramètre réservé, représenté par le « ? » dans la chaîne de filtre.  
+     Imaginons que l’ID de l’étudiant dans la variable `strInputID`. Lorsque vous définissez un paramètre pour `strInputID` (par exemple, l’ID étudiant 100) la valeur de la variable est liée à l’espace réservé de paramètre représenté par le « ? » dans la chaîne de filtre.  
   
-     Assignez la valeur du paramètre de la façon suivante :  
+     Affectez la valeur du paramètre comme suit :  
   
     ```  
     strInputID = "100";  
@@ -75,36 +79,36 @@ Cette rubrique s'applique aux classes ODBC MFC.
     m_strParam = strInputID;  
     ```  
   
-     Vous ne pourriez pas définir une chaîne de filtre de la façon suivante :  
+     Vous ne souhaitez pas configurer une chaîne de filtrage de cette façon :  
   
     ```  
     m_strFilter = "StudentID = 100";   // 100 is incorrectly quoted  
                                        // for some drivers  
     ```  
   
-     Pour plus d'informations sur l'utilisation appropriée des guillemets dans les chaînes de filtre, consultez [Recordset : filtrage d'enregistrements \(ODBC\)](../../data/odbc/recordset-filtering-records-odbc.md).  
+     Pour plus d’informations sur l’utilisation de guillemets correctement pour les chaînes de filtre, consultez [Recordset : filtrage d’enregistrements (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).  
   
-     La valeur du paramètre diffère à chaque fois que vous lancez une nouvelle requête sur le recordset avec un nouvel ID étudiant.  
+     La valeur du paramètre est différente à chaque fois que vous actualisez le jeu d’enregistrements pour un nouvel ID étudiant.  
   
     > [!TIP]
-    >  L'utilisation d'un paramètre est plus efficace que la seule utilisation d'un filtre.  Dans le cas d'un recordset paramétré, la base de données ne doit traiter qu'une seule fois une instruction SQL **SELECT**.  Dans le cas d'un recordset filtré, l'instruction **SELECT** doit être exécutée chaque fois que vous lancez une nouvelle requête \(**Requery**\) avec une nouvelle valeur de filtre.  
+    >  À l’aide d’un paramètre est plus efficace que simplement un filtre. Pour un jeu d’enregistrements paramétré, la base de données doit traiter une SQL **sélectionnez** instruction qu’une seule fois. Pour un jeu d’enregistrements filtré sans paramètres, le **sélectionnez** instruction doit être exécutée chaque fois que vous **Requery** avec une nouvelle valeur de filtre.  
   
- Pour plus d'informations sur les filtres, consultez [Recordset : filtrage d'enregistrements \(ODBC\)](../../data/odbc/recordset-filtering-records-odbc.md).  
+ Pour plus d’informations sur les filtres, consultez [Recordset : filtrage d’enregistrements (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).  
   
-##  <a name="_core_parameterizing_your_recordset_class"></a> Paramétrage de la classe de recordset  
+##  <a name="_core_parameterizing_your_recordset_class"></a>Paramétrage de la classe de votre jeu d’enregistrements  
   
 > [!NOTE]
->  Cette section s'applique aux objets dérivés de `CRecordset` dans lesquels l'extraction de lignes en bloc n'a pas été implémentée.  Si vous utilisez l'extraction de lignes en bloc, l'implémentation de paramètres obéit à un processus similaire.  Pour plus d'informations, consultez [Recordset : extraction globale d'enregistrements \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Cette section s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous utilisez l’extraction, l’implémentation des paramètres de lignes en bloc est un processus similaire. Pour plus d’informations, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Avant de créer la classe de recordset, déterminez les paramètres dont vous avez besoin, leurs types de données et comment le recordset les utilise.  
+ Avant de créer la classe de recordset, déterminez les paramètres vous avez besoin, leurs types de données, et comment le recordset les utilise.  
   
-#### Pour paramétrer une classe de recordset  
+#### <a name="to-parameterize-a-recordset-class"></a>Pour paramétrer une classe de recordset  
   
-1.  Exécutez l'[Assistant Consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) à partir de l'Assistant **Ajouter une classe** pour créer la classe.  
+1.  Exécutez le [Assistant Consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) de **ajouter une classe** pour créer la classe.  
   
-2.  Indiquez les membres de données de type champ des colonnes du recordset.  
+2.  Spécifier les données membres de champ pour les colonnes du jeu d’enregistrements.  
   
-3.  Une fois que l'Assistant a écrit la classe dans un fichier du projet, accédez au fichier .h et ajoutez manuellement un ou plusieurs membres de données de type paramètre à la déclaration de classe.  Cet ajout est similaire à celui de l'exemple suivant, relatif à une classe instantanée conçue pour répondre à la question « Which students are in the senior class? » \(« Quels étudiants font partie de la classe senior ? »\).  
+3.  Une fois que l’Assistant écrit la classe dans un fichier dans votre projet, accédez au fichier .h et ajouter manuellement un ou plusieurs membres de données de paramètre à la déclaration de classe. L’ajout peut ressembler à l’exemple suivant, la partie d’une classe de l’instantané est conçu pour répondre à la requête « qui les étudiants sont dans la classe parent ? »  
   
     ```  
     class CStudentSet : public CRecordset  
@@ -119,43 +123,44 @@ Cette rubrique s'applique aux classes ODBC MFC.
     };  
     ```  
   
-     Ajoutez les membres de données de type paramètre après les membres de données de type champ générés par l'Assistant.  Par convention, le mot « Param » est ajouté à chaque nom de paramètre défini par l'utilisateur.  
+     Ajouter les membres de données de paramètre après les membres de données générées par l’Assistant de champ. La convention consiste à ajouter le mot « Param » pour chaque nom de paramètre défini par l’utilisateur.  
   
-4.  Modifiez la définition de la fonction membre [DoFieldExchange](../Topic/CRecordset::DoFieldExchange.md) dans le fichier .cpp.  Ajoutez un appel de fonctions RFX pour chaque membre de données de type paramètre ajouté à la classe.  Pour plus d'informations sur l'écriture de fonctions RFX, consultez [Record Field Exchange : fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  Faites précéder les appels RFX des paramètres par un appel unique à :  
+4.  Modifier la [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) définition de fonction membre dans le fichier .cpp. Ajoutez un appel de fonctions RFX pour chaque membre de données paramètre que vous avez ajouté à la classe. Pour plus d’informations sur l’écriture de fonctions RFX, consultez [Record Field Exchange : fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Faites précéder les appels RFX pour les paramètres avec un seul appel à :  
   
     ```  
     pFX->SetFieldType( CFieldExchange::param );  
     // RFX calls for parameter data members  
     ```  
   
-5.  Dans le constructeur de la classe de recordset, incrémentez le compteur de paramètres, `m_nParams`.  
+5.  Dans le constructeur de la classe de recordset, incrémente le nombre de paramètres, `m_nParams`.  
   
-     Pour des informations, consultez [Record Field Exchange : utilisation du code écrit par l'Assistant](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md).  
+     Pour plus d’informations, consultez [Record Field Exchange : utilisation du Code de l’Assistant](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md).  
   
-6.  Lorsque vous écrivez le code créant l'objet recordset de la classe, placez un « ? » \(point d'interrogation\) à chaque endroit de l'instruction SQL où un paramètre doit être remplacé par une valeur.  
+6.  Lorsque vous écrivez le code qui crée un objet de jeu d’enregistrements de cette classe, placez un « ? » symbole (point d’interrogation) à chaque endroit dans l’instruction SQL où un paramètre doit être remplacé.  
   
-     Au moment de l'exécution, les emplacements réservés « ? » sont remplacés dans l'ordre par les valeurs que vous passez.  Le premier membre de données de type paramètre défini après l'appel de [SetFieldType](../Topic/CFieldExchange::SetFieldType.md) remplace le premier « ? » de la chaîne SQL, le deuxième membre de données de type paramètre remplace le deuxième « ? », et ainsi de suite.  
+     Au moment de l’exécution, « ? » des espaces réservés sont remplis, dans l’ordre, par les valeurs de paramètre que vous passez. Le premier membre de données de paramètre définie après la [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) appel remplace le premier « ? « dans la chaîne SQL, le deuxième membre de données de paramètre remplace le deuxième » ? », et ainsi de suite.  
   
 > [!NOTE]
->  L'ordre des paramètres est important : l'ordre des appels RFX des paramètres dans la fonction `DoFieldExchange` doit être identique à celui des emplacements de paramètres réservés dans la chaîne SQL.  
+>  L’ordre des paramètres est important : l’ordre des appels RFX des paramètres dans votre `DoFieldExchange` fonction doit correspondre à l’ordre des espaces réservés de paramètre dans la chaîne SQL.  
   
 > [!TIP]
->  Il est probable que la chaîne utilisée soit celle que vous avez définie, le cas échéant, pour le membre de données [m\_strFilter](../Topic/CRecordset::m_strFilter.md) de la classe, mais certains pilotes ODBC autorisent des paramètres dans d'autres clauses SQL.  
+
+>  La chaîne la plus probable pour travailler avec est la chaîne que vous spécifiez (le cas échéant) pour la classe [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) membre de données, mais certains pilotes ODBC autorisent des paramètres dans d’autres clauses SQL.  
   
-##  <a name="_core_passing_parameter_values_at_run_time"></a> Passage des valeurs des paramètres à l'exécution  
- Vous devez définir les valeurs des paramètres avant d'appeler les fonctions **Open** \(dans le cas d'un nouvel objet recordset\) ou **Requery** \(dans le cas d'un objet recordset existant\).  
+##  <a name="_core_passing_parameter_values_at_run_time"></a>Passage de valeurs de paramètre au moment de l’exécution  
+ Vous devez spécifier des valeurs de paramètre avant d’appeler **ouvrir** (pour un nouvel objet recordset) ou **Requery** (pour un type existant).  
   
-#### Pour passer les valeurs des paramètres à un objet recordset à l'exécution  
+#### <a name="to-pass-parameter-values-to-a-recordset-object-at-run-time"></a>Pour passer des valeurs de paramètre à un objet recordset en cours d’exécution  
   
-1.  Construisez l'objet recordset.  
+1.  Construisez l’objet recordset.  
   
-2.  Préparez une ou plusieurs chaînes, comme **m\_strFilter**, contenant la totalité ou une partie de l'instruction SQL.  Placez les emplacements réservés « ? » à l'endroit où les informations des paramètres doivent prendre place.  
+2.  Préparation d’une ou plusieurs chaînes, telles que la **m_strFilter** chaîne, qui contient l’instruction SQL ou des parties de celui-ci. Placez « ? » des espaces réservés dans lequel les informations de paramètre sont d’accéder.  
   
-3.  Assignez la valeur du paramètre fournie lors de l'exécution à chaque membre de données de type paramètre de l'objet.  
+3.  Affecter une valeur de paramètre d’exécution à chaque membre de données de paramètre de l’objet.  
   
-4.  Appelez la fonction membre **Open** \(ou **Requery** pour un recordset existant\).  
+4.  Appelez le **ouvrir** fonction membre (ou **Requery**, pour un objet recordset existant).  
   
- Imaginons, par exemple, que vous vouliez définir une chaîne de filtre pour le recordset en utilisant les informations fournies lors de l'exécution.  Considérons que vous avez construit préalablement un recordset de la classe `CStudentSet` — appelé `rsStudent`s — et que vous voulez maintenant lancer une nouvelle requête pour obtenir un type particulier d'informations sur les étudiants.  
+ Par exemple, supposons que vous souhaitez spécifier une chaîne de filtre pour le jeu d’enregistrements à l’aide des informations obtenues au moment de l’exécution. Supposons que vous avez construit un jeu d’enregistrements de la classe `CStudentSet` précédemment, appelé `rsStudents` et que vous souhaitez maintenant lancer une nouvelle requête pour un type particulier d’informations sur les étudiants.  
   
 ```  
 // Set up a filter string with   
@@ -174,12 +179,12 @@ if( !rsStudents.Requery( ) )
     return FALSE;  
 ```  
   
- Le recordset contient les enregistrements obéissant aux conditions définies par le filtre, construit à partir des paramètres fournis à l'exécution.  Dans le cas présent, le recordset contient les enregistrements de tous les « senior students » \(étudiants seniors\).  
+ Le jeu d’enregistrements contient des enregistrements pour les étudiants dont les enregistrements remplissent les conditions spécifiées par le filtre, ce qui a été construit à partir des paramètres d’exécution. Dans ce cas, le jeu d’enregistrements contient les enregistrements pour tous les étudiants seniors.  
   
 > [!NOTE]
->  Si nécessaire, vous pouvez définir un membre de données de type paramètre avec la valeur Null, à l'aide de [SetParamNull](../Topic/CRecordset::SetParamNull.md).  Vous pouvez de même vérifier si un membre de données de type paramètre a la valeur Null, à l'aide de [IsFieldNull](../Topic/CRecordset::IsFieldNull.md).  
+>  Si nécessaire, vous pouvez définir la valeur d’un membre de données de paramètre avec la valeur Null, à l’aide de [SetParamNull](../../mfc/reference/crecordset-class.md#setparamnull). Vous pouvez également vérifier si un membre de données du paramètre est Null, à l’aide de [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull).  
   
-## Voir aussi  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Recordset : ajout, modification et suppression d'enregistrements \(ODBC\)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)   
- [Recordset : sélection d'enregistrements par les recordsets \(ODBC\)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+## <a name="see-also"></a>Voir aussi  
+ [Jeu d’enregistrements (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Recordset : Ajout, modification et suppression d’enregistrements (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)   
+ [Recordset : sélection d’enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

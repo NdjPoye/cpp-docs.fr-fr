@@ -1,34 +1,36 @@
 ---
-title: "Comment&#160;: &#233;crire un fichier binaire (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fichiers binaires, écrire en C++"
-  - "fichiers (C++), binaire"
+title: "Comment : écrire un fichier binaire (C + c++ / CLI) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- binary files, writing in C++
+- files [C++], binary
 ms.assetid: 35d97ee6-fc7e-4c36-be18-8bbb3b44b3ae
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 66d4c46fa82713e55ce39880f5e379cafcdf9ec6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Comment&#160;: &#233;crire un fichier binaire (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'exemple de code suivant illustre l'écriture de données binaires dans un fichier.  Deux classes de l'espace de noms <xref:System.IO> sont utilisées : <xref:System.IO.FileStream> et <xref:System.IO.BinaryWriter>.  <xref:System.IO.FileStream> représente le fichier réel, tandis que <xref:System.IO.BinaryWriter> fournit une interface vers le flux de données qui autorise l'accès binaire.  
+# <a name="how-to-write-a-binary-file-ccli"></a>Comment : écrire un fichier binaire (C++/CLI)
+L’exemple de code suivant montre comment écrire des données binaires dans un fichier. Deux classes à partir de la <xref:System.IO> espace de noms sont utilisés : <xref:System.IO.FileStream> et <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream>représente le fichier réel, tandis que <xref:System.IO.BinaryWriter> fournit une interface pour le flux de données qui autorise l’accès binaire.  
   
- L'exemple de code suivant écrit un fichier qui contient des entiers au format binaire.  Ce fichier peut être lu à l'aide du code fourni dans la rubrique [Comment : lire un fichier binaire](../dotnet/how-to-read-a-binary-file-cpp-cli.md).  
+ L’exemple de code suivant écrit un fichier contenant des entiers au format binaire. Ce fichier peut être lu par le code de [Comment : lire un fichier binaire (C + c++ / CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // binary_write.cpp  
@@ -65,6 +67,6 @@ int main()
 }  
 ```  
   
-## Voir aussi  
- [Fichier et flux de données E\/S](../Topic/File%20and%20Stream%20I-O.md)   
- [Programmation .NET avec C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Fichier et flux de données E/S](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

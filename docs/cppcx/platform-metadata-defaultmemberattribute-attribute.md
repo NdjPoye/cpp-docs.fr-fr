@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 76b3145eeb463a8e5e62f63b18b1652f39337ef0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d99d8953595621d8a741e5657d662e82571533fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformmetadatadefaultmemberattribute-attribute"></a>Platform::Metadata::DefaultMemberAttribute (attribut)
 Indique la fonction par défaut à appeler parmi plusieurs fonctions surchargées possibles.  
@@ -36,10 +37,10 @@ public ref class DefaultMember abstract : Attribute
   
  [Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appliquez l'attribut DefaultMember à une méthode qui est consommée par une application JavaScript.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **Minimum pris en charge le client :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  

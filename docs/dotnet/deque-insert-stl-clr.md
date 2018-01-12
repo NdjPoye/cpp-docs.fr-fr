@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 814d6669092b6cabe4ef52cb64a6888b8143e310
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 79e03fe5db67162134f5267fc54fab74e4e6b20f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dequeinsert-stlclr"></a>deque::insert (STL/CLR)
 Ajoute des éléments à la position spécifiée.  
@@ -54,7 +57,7 @@ void insert(iterator where,
  `where`  
  Emplacement dans le conteneur à insérer avant.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Chaque membre fonctions insertions, avant l’élément vers lequel pointé `where` dans la séquence contrôlée, une séquence spécifiée par les opérandes restants.  
   
  La première fonction membre insère un élément avec la valeur `val` et retourne un itérateur qui désigne l’élément nouvellement inséré. Il permet d’insérer un élément unique avant un endroit désigné par un itérateur.  
@@ -128,7 +131,7 @@ insert(begin()+1, L'x') = x
  a x b c y y a x b  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/deque >  
   
  **Namespace :** cliext  

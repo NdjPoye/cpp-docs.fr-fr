@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b28aa56905271da3e60cdfc08da855b6b4a23cc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6aa2a61dff4f20c5da7157a8a60700d9a8a10c06
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-call-operator-"></a>Opérateur d'appel de fonction : ()
 Une expression suffixée suivie par l’opérateur d’appel de fonction, **()**, spécifie un appel de fonction.  
@@ -37,7 +38,7 @@ postfix-expression
 ( [argument-expression-list ] )  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les arguments de l’opérateur d’appel de fonction sont zéro expression ou plus séparées par des virgules, les arguments réels de la fonction.  
   
  Le *postfix-expression* doit correspondre à une adresse de fonction (par exemple, un identificateur de fonction ou la valeur d’un pointeur fonction), et *argument-expression-list* est une liste d’expressions (séparées par des virgules) dont les valeurs (les arguments) sont passés à la fonction. L’argument *argument-expression-list* peut être vide.  

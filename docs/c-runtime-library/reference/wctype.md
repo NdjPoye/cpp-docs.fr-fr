@@ -1,49 +1,46 @@
 ---
-title: "wctype | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wctype"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wctype"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "wctype (fonction)"
-  - "caractères larges"
+title: wctype | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: wctype
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords: wctype
+dev_langs: C++
+helpviewer_keywords:
+- wctype function
+- wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6dec5a3fd89703b3e27f9acf8c9edf976fdd18f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# wctype
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Détermine une règle de classification pour les codes de caractères étendus.  
+# <a name="wctype"></a>wctype
+Détermine une règle de classification pour les codes à caractères larges.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 wctype_t wctype(  
@@ -51,18 +48,18 @@ wctype_t wctype(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `property`  
- Propriété de chaîne.  
+ Chaîne de propriété.  
   
-## Valeur de retour  
- Si la catégorie `LC_CTYPE` des paramètres régionaux actuels ne définit pas de règle de classification dont le nom correspond à la catégorie chaîne de caractères `property`, la fonction retourne zéro.  Sinon, elle retourne une valeur non nulle appropriée à utiliser comme deuxième argument pour un appel suivant à [towctrans](../../c-runtime-library/reference/towctrans.md).  
+## <a name="return-value"></a>Valeur de retour  
+ Si la catégorie `LC_CTYPE` des paramètres régionaux actifs ne définit pas une règle de classification dont le nom correspond à la chaîne de propriété `property`, la fonction retourne zéro. Sinon, elle retourne une valeur différente de zéro qui peut être utilisée comme deuxième argument dans un appel ultérieur à [towctrans](../../c-runtime-library/reference/towctrans.md).  
   
-## Notes  
- La fonction détermine une règle de classification pour les codes de caractères étendus.  Les paires suivantes d'appels ont le même comportement dans les paramètres régionaux \(mais une implémentation peut définir des règles supplémentaires de classification même dans les paramètres régionaux « c » c\) :  
+## <a name="remarks"></a>Notes  
+ La fonction détermine une règle de classification pour les codes à caractères larges. Les paires d’appels suivantes présentent le même comportement dans tous les paramètres régionaux (mais une implémentation peut définir des règles de classification supplémentaires même dans les paramètres régionaux « C ») :  
   
-|Fonction|Identique à .|  
-|--------------|-------------------|  
+|Fonction|Identique à|  
+|--------------|-------------|  
 |`iswalnum(`  `c`  `)`|`iswctype(`  `c` `, wctype( "alnum" ) )`|  
 |`iswalpha(`  `c`  `)`|`iswctype(`  `c` `, wctype( "alpha" ) )`|  
 |`iswcntrl(`  `c`  `)`|`iswctype(`  `c` `, wctype( "cntrl" ) )`|  
@@ -75,14 +72,14 @@ wctype_t wctype(
 |`iswupper(`  `c`  `)`|`iswctype(`  `c` `, wctype( "upper" ) )`|  
 |`iswxdigit(`  `c`  `)`|`iswctype(`  `c` `, wctype( "xdigit" ) )`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`wctype`|\<wctype.h\>|  
+|`wctype`|\<wctype.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   
- [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)

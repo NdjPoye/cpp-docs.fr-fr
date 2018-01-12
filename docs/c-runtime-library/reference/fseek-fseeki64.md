@@ -38,11 +38,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 723dbef32f053bd522dcb25c78d6ed805bce6ee5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 90af1581910ceaadf814050be39bc537cfc3881c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fseek-fseeki64"></a>fseek, _fseeki64
 Déplace le pointeur de fichier vers un emplacement spécifié.  
@@ -75,7 +76,7 @@ int _fseeki64(
 ## <a name="return-value"></a>Valeur de retour  
  En cas de réussite, `fseek` et `_fseeki64` retournent 0. Sinon, elles retournent une valeur différente de zéro. Sur les appareils incapables de rechercher, la valeur de retour n’est pas définie. Si `stream` est un pointeur Null ou que `origin` n’est pas une des valeurs autorisées décrites ci-dessous, `fseek` et `_fseeki64` appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions définissent `errno` avec la valeur `EINVAL` et retournent -1.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `fseek` et `_fseeki64` déplace le pointeur de fichier (le cas échéant) associé à des fonctions `stream` vers un nouvel emplacement est `offset` octets à partir de `origin`. L’opération suivante sur le flux a lieu au nouvel emplacement. Sur un flux ouvert pour la mise à jour, l’opération suivante peut être une lecture ou une écriture. L’argument origin doit être une des constantes suivantes, définies dans STDIO.H :  
   
  `SEEK_CUR`  
@@ -103,14 +104,14 @@ int _fseeki64(
   
  Cette fonction verrouille les autres threads pendant l’exécution et est donc thread-safe. Pour une version sans verrouillage, consultez [_fseek_nolock, _fseeki64_nolock](../../c-runtime-library/reference/fseek-nolock-fseeki64-nolock.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête requis|  
 |--------------|---------------------|  
 |`fseek`|\<stdio.h>|  
 |`_fseeki64`|\<stdio.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

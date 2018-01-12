@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __cdecl_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- __cdecl keyword [C++]
+f1_keywords: __cdecl_cpp
+dev_langs: C++
+helpviewer_keywords: __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5216462ad00d332aec2d00eba78f5d84cdfd7c82
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d73de8b2a158c09ebd61306683f6fdc1ad0f514e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdecl"></a>__cdecl
 **Section spécifique à Microsoft**  
@@ -41,11 +37,11 @@ ms.lasthandoff: 09/25/2017
 > [!NOTE]
 >  Pour plus d’informations, consultez [noms décorés](../build/reference/decorated-names.md).  
   
- Placez le modificateur `__cdecl` avant un nom de variable ou de fonction. Étant donné que les noms et conventions d’appel C sont la valeur par défaut, le seul moment où vous devez utiliser `__cdecl` dans x86 code est lorsque vous avez spécifié le **GV** (vectorcall), **GZ** (stdcall) ou ** GR** option du compilateur (fastcall). Le [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) du compilateur option force le `__cdecl` convention d’appel.  
+ Placez le modificateur `__cdecl` avant un nom de variable ou de fonction. Étant donné que les noms et conventions d’appel C sont la valeur par défaut, le seul moment où vous devez utiliser `__cdecl` dans x86 code est lorsque vous avez spécifié le **GV** (vectorcall), **GZ** (stdcall) ou  **GR** option du compilateur (fastcall). Le [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) du compilateur option force le `__cdecl` convention d’appel.  
   
  Sur les processeurs ARM et x64, `__cdecl` est accepté mais en général ignoré par le compilateur. Par convention sur ARM et x64, les arguments sont passés dans les registres le cas échéant, et les arguments suivants sont passés sur la pile. Dans x64 de code, utilisez `__cdecl` pour remplacer le **GV** option du compilateur et l’utilisation de la convention d’appel par défaut x64.  
   
- Pour les fonctions de classe non statiques, si la fonction est définie hors ligne, il n’est pas nécessaire de spécifier le modificateur de convention d’appel dans la définition hors ligne. En d'autres termes, pour les méthodes membres non statiques de classe, la convention d'appel spécifiée dans le cadre de la déclaration est utilisée par défaut au stade de la définition. Compte tenu de la définition de classe suivante :  
+ Pour les fonctions de classe non statiques, si la fonction est définie hors ligne, il n’est pas nécessaire de spécifier le modificateur de convention d’appel dans la définition hors ligne. En d’autres termes, pour les méthodes membres non statiques de classe, la convention d’appel spécifiée dans le cadre de la déclaration est utilisée par défaut au stade de la définition. Compte tenu de la définition de classe suivante :  
   
 ```cpp  
 struct CMyClass {  

@@ -18,11 +18,12 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4eaccef4253d2b677f01801b680bb94d8a4d3516
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c01d4718bbc1781ea4705945bb90874384e09058
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="char-wchart-char16t-char32t"></a>char, wchar_t, char16_t, char32_t
 Les types char, wchar_t, char16_t et char32_t sont des types intégrés qui représentent des caractères alphanumériques, ainsi que des glyphes non alphanumériques et des caractères non imprimables. char a une taille de huit bits, wchar_t et char16_t ont une taille de 16 bits et char32_t a une taille de 32 bits.  
@@ -36,7 +37,7 @@ char16_t ch3{ L'a' };// or {L'a'}
 char32_t ch4{ L'a' };// or {L'a'}  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le type `char` était le type de caractère d'origine en C et C++. Il peut être utilisé pour stocker des caractères du jeu de caractères ASCII, de l'un des jeux de caractères ISO-8859 ou du jeu de caractères UTF-8. Le type `unsigned char` est souvent utilisée pour représenter un *octets* qui n’est pas un type intégré en C++. Le type char n'est pas adapté au texte dans de nombreuses langues. En général, les programmes modernes doivent utiliser l'un des types à caractères larges pour représenter du texte. Unicode est le  
   
  Dans la bibliothèque standard C++, le type basic_string est spécialisé pour les chaînes étroites et étendues. Utilisez std::string quand les caractères sont de type char et std::wstring quand les caractères sont de type wchar_t. D'autres types qui représentent du texte, y compris std::stringstream et std::cout ont des spécialisations pour les chaînes étroites et étendues.  

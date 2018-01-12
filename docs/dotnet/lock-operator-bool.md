@@ -20,11 +20,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1b797057679a1d0613936ae00bc8f76d32febd17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1156576abd9a8fe98270ee6a8edb864793d127fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lockoperator-bool"></a>lock::operator bool
 Opérateur pour l’utilisation de `lock` dans une expression conditionnelle.  
@@ -38,7 +41,7 @@ operator bool();
 ## <a name="return-value"></a>Valeur de retour  
  `true`Si un verrou est maintenu, `false` dans le cas contraire.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cet opérateur convertit effectivement en `_detail_class::_safe_bool` qui est plus sûr que `bool` car il ne peut pas être converti en un type intégral.  
   
 ## <a name="example"></a>Exemple  
@@ -131,7 +134,7 @@ In thread 6, Counter = 10
 All threads completed.  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<msclr\lock.h >  
   
  **Namespace** msclr  

@@ -1,39 +1,41 @@
 ---
-title: "CDynamicParameterAccessor::SetParam | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDynamicParameterAccessor::SetParam"
-  - "ATL::CDynamicParameterAccessor::SetParam<ctype>"
-  - "CDynamicParameterAccessor.SetParam"
-  - "ATL.CDynamicParameterAccessor.SetParam"
-  - "SetParam"
-  - "CDynamicParameterAccessor:SetParam"
-  - "CDynamicParameterAccessor::SetParam<ctype>"
-  - "CDynamicParameterAccessor::SetParam"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetParam (méthode)"
+title: CDynamicParameterAccessor::SetParam | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDynamicParameterAccessor::SetParam
+- ATL::CDynamicParameterAccessor::SetParam<ctype>
+- CDynamicParameterAccessor.SetParam
+- ATL.CDynamicParameterAccessor.SetParam
+- SetParam
+- CDynamicParameterAccessor:SetParam
+- CDynamicParameterAccessor::SetParam<ctype>
+- CDynamicParameterAccessor::SetParam
+dev_langs: C++
+helpviewer_keywords: SetParam method
 ms.assetid: e2349220-545c-46ad-90da-9113ac52551a
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b092dad600c1698d3cbe550f16e05a8307f030fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::SetParam
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Définit la mémoire tampon de paramètre à l'aide de les données spécifiées \(non string\).  
+# <a name="cdynamicparameteraccessorsetparam"></a>CDynamicParameterAccessor::SetParam
+Définit la mémoire tampon de paramètre en utilisant les données (autre qu’une chaîne) spécifiées.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -52,31 +54,31 @@ bool SetParam(
 ) throw( );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `ctype`  
- Un paramètre basé sur des modèles qui est le type de données.  
+ Un paramètre basé sur un modèle qui est le type de données.  
   
  `nParam`  
- \[in\] Le nombre de paramètre \(décalage de 1\).  Le paramètre 0 est réservé pour les valeurs de retour.  Le numéro de paramètre représente l'index du paramètre en fonction de son ordre dans l'appel SQL ou celui d'une procédure stockée.  Par exemple :  
+ [in] Le numéro de paramètre (offset à partir de 1). Le paramètre 0 est réservé pour les valeurs de retournés. Le paramètre est l’index du paramètre en fonction de son ordre dans le SQL ou d’un appel de procédure stockée. Exemple :  
   
- [!code-cpp[NVC_OLEDB_Consumer#8](../../data/oledb/codesnippet/CPP/cdynamicparameteraccessor-setparam_1.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#8](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-setparam_1.cpp)]  
   
  `pParamName`  
- \[in\] Nom du paramètre.  
+ [in] Le nom du paramètre.  
   
  `pData`  
- \[in\] Le pointeur vers la mémoire contenant les données à écrire dans la mémoire tampon.  
+ [in] Pointeur vers la mémoire contenant les données à écrire dans la mémoire tampon.  
   
  *status*  
- \[in\] La colonne d'état `DBSTATUS` .  Pour plus d'informations sur les valeurs de `DBSTATUS`, consultez [État](https://msdn.microsoft.com/en-us/library/ms722617.aspx) dans *OLE DB guide de référence du programmeur*, ou recherchez dans `DBSTATUS` oledb.h.  
+ [in] Le `DBSTATUS` état de colonne. Pour plus d’informations sur `DBSTATUS` valeurs, consultez [état](https://msdn.microsoft.com/en-us/library/ms722617.aspx) dans les *de référence du programmeur OLE DB*, ou recherchez `DBSTATUS` dans oledb.h.  
   
-## Valeur de retour  
- Retourne la valeur **vrai** en cas de réussite, ou **faux** en cas d'échec.  
+## <a name="return-value"></a>Valeur de retour  
+ Retourne **true** en cas de réussite ou **false** en cas d’échec.  
   
- Utilisez `SetParam` pour définir les paramètre de type non\-chaîne dans la mémoire tampon.  Utilisez [SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) pour définir les paramètre de chaîne dans la mémoire tampon.  
+ Utilisez `SetParam` pour définir les données de paramètre de chaîne dans la mémoire tampon. Utilisez [SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) pour définir les données de paramètre de chaîne dans la mémoire tampon.  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CDynamicParameterAccessor, classe](../../data/oledb/cdynamicparameteraccessor-class.md)

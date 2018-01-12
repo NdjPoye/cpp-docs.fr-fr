@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,8 +30,7 @@ f1_keywords:
 - localtime_s
 - localtime64_s
 - _localtime64_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _localtime64_s function
 - localtime32_s function
@@ -41,30 +39,16 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: e068c6711630976a2d8b3baea01010bc5e34ed6e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ddce7d73919e7e7942d8ddd7954ce6cbec4789fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
 Convertit une valeur de temps et effectue une correction en fonction du fuseau horaire local. Ces versions de [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -116,7 +100,7 @@ errno_t _localtime64_s(
   
  `_localtime64_s`, qui utilise la structure `__time64_t`, permet d’exprimer les dates jusqu’au 18 janvier 3001 à 23:59:59,, heure UTC (temps universel coordonné), tandis que `_localtime32_s` représente les dates jusqu’au 18 janvier 2038 à 23:59:59, heure UTC.  
   
- `localtime_s` est une fonction inline qui prend la valeur `_localtime64_s`, tandis que `time_t` équivaut à `__time64_t`. Si vous devez forcer le compilateur à interpréter `time_t` comme l’ancien `time_t` 32 bits, vous pouvez définir `_USE_32BIT_TIME_T`. Ainsi, `localtime_s` prend la valeur `_localtime32_s`. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.  
+ `localtime_s` est une fonction inline qui prend la valeur `_localtime64_s`, tandis que `time_t` équivaut à `__time64_t`. Si vous devez forcer le compilateur à interpréter `time_t` comme ancien `time_t`32 bits, vous pouvez définir `_USE_32BIT_TIME_T`. Ainsi, `localtime_s` prend la valeur `_localtime32_s`. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.  
   
  Les champs du type de structure [tm](../../c-runtime-library/standard-types.md) stockent les valeurs suivantes, chacune d’elles étant un `int`.  
   
@@ -147,7 +131,7 @@ errno_t _localtime64_s(
  `tm_isdst`  
  Valeur positive si l’heure d’été est en vigueur ; 0 si l’heure d’été n’est pas appliquée ; valeur négative si l’état de l’heure d’été est inconnu. Si la variable d’environnement `TZ` est définie, la bibliothèque runtime C suppose que les règles de calcul de l’heure d’été appropriées sont celles des États-Unis.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
@@ -155,7 +139,7 @@ errno_t _localtime64_s(
 |`_localtime32_s`|\<time.h>|  
 |`_localtime64_s`|\<time.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   
@@ -222,4 +206,3 @@ Fri Apr 25 01:19:27 PM
  [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
  [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
  [_tzset](../../c-runtime-library/reference/tzset.md)
-

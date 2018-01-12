@@ -46,11 +46,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 75aadec105b126da7d8821196aacbeef8334bf9b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 75e363d786459d2188da3567b130a8a0ad183963
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ftime-ftime32-ftime64"></a>_ftime, _ftime32, _ftime64
 Obtenir l’heure actuelle. Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [_ftime_s, _ftime32_s, _ftime64_s](../../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md).  
@@ -73,7 +74,7 @@ void _ftime64(
  `timeptr`  
  Pointeur désignant une structure `_timeb`, `__timeb32` ou `__timeb64`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `_ftime` fonction obtient l’heure locale actuelle et la stocke dans la structure vers laquelle pointée `timeptr`. Le `_timeb`, `__timeb32`, et `__timeb64` structures sont définies dans SYS\Timeb.h. Elles contiennent quatre champs, qui sont présentés dans le tableau suivant.  
   
  `dstflag`  
@@ -94,7 +95,7 @@ void _ftime64(
   
  `_ftime` valide ses paramètres. Si elle reçoit un pointeur null en guise de paramètre `timeptr`, la fonction appelle le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction définit `errno` sur `EINVAL`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête requis|  
 |--------------|---------------------|  
@@ -102,7 +103,7 @@ void _ftime64(
 |`_ftime32`|\<sys/types.h> et \<sys/timeb.h>|  
 |`_ftime64`|\<sys/types.h> et \<sys/timeb.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

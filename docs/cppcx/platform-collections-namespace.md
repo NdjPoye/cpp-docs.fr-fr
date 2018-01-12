@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 04514a4d4ddbba8b6c28e35e964deb153803580f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c328ebbaa18ad318981a63c717cafd614bc1521
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections (espace de noms)
 L'espace de noms Platform::Collection contient les classes `Map`, `MapView`, `Vector`et `VectorView` . Ces classes sont des implémentations concrètes des interfaces correspondantes qui sont définies dans l’espace de noms [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) . Les types de collection concrets ne sont pas portables à travers l'ABI (par exemple, lorsqu'un programme JavaScript ou C# fait appel au composant C++), mais ils sont implicitement convertibles en leurs types d'interface correspondants. Par exemple, si vous implémentez une méthode publique qui remplit et retourne une collection, utilisez [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) pour implémenter la collection en interne et utilisez [Windows::Foundation::Collections::IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) comme type de retour. Pour plus d’informations, consultez [Collections](../cppcx/collections-c-cx.md) et [création de composants Windows Runtime en C++](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md).  
@@ -41,7 +42,7 @@ using namespace Platform::Collection;
 ### <a name="members"></a>Membres  
  Cet espace de noms contient les membres ci-dessous.  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[Platform::Collections::BackInsertIterator, classe](../cppcx/platform-collections-backinsertiterator-class.md)|Représente un itérateur qui insère un élément à la fin d'une collection.|  
 |[Platform::Collections::InputIterator, classe](../cppcx/platform-collections-inputiterator-class.md)|Représente un itérateur qui insère un élément au début d'une collection.|  
@@ -55,7 +56,7 @@ using namespace Platform::Collection;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **Métadonnées :** platform.winmd  
   
  **Espace de noms :** Platform::Collections  

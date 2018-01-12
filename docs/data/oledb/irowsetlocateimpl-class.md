@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ff76d78cd3f624e3bdb0d21af550a340a2aa498e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: da010f02ec29b4882ffeb1bdf1c5fa7fd67c8615
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl, classe
 Implémente le OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interface, qui extrait des lignes arbitraires à partir d’un ensemble de lignes.  
@@ -86,7 +89,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 |-|-|  
 |[m_rgBookmarks](../../data/oledb/irowsetlocateimpl-m-rgbookmarks.md)|Un tableau de signets.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `IRowsetLocateImpl`est l’implémentation de modèles OLE DB de la [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interface. `IRowsetLocate`est utilisé pour extraire des lignes arbitraires à partir d’un ensemble de lignes. Un ensemble de lignes qui n’implémente pas cette interface est une `sequential` ensemble de lignes. Lorsque `IRowsetLocate` est présent sur un ensemble de lignes, la colonne 0 est le signet pour les lignes ; la lecture de cette colonne obtiendra la valeur d’un signet qui peut être utilisée pour repositionner à la même ligne.  
   
  `IRowsetLocateImpl`est utilisé pour implémenter la prise en charge signets dans les fournisseurs. Les signets sont des espaces réservés (index sur un ensemble de lignes) qui permettent au consommateur de revenir rapidement à une ligne, ce qui permet un accès rapide aux données. Le fournisseur détermine ce que les signets peuvent uniquement identifier une ligne. À l’aide de `IRowsetLocateImpl` méthodes, vous pouvez comparer des signets, les lignes de l’extraction en décalage, l’extraction des lignes par un signet et retournent des valeurs de hachage de signets.  
@@ -95,7 +98,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
   
  Pour plus d’informations sur l’implémentation de prise en charge de signet, consultez [fournisseur prend en charge des signets par](../../data/oledb/provider-support-for-bookmarks.md) dans les *Guide du programmeur Visual C++* et [signets](https://msdn.microsoft.com/en-us/library/ms709728.aspx) dans les *De référence du programmeur OLE DB* dans la Kit de développement logiciel de plateforme.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête**: atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

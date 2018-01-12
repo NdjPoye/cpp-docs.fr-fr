@@ -1,46 +1,46 @@
 ---
-title: "hash_multiset::make_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::make_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_value (membre) (STL/CLR)"
+title: hash_multiset::make_value (STL/CLR) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::make_value
+dev_langs: C++
+helpviewer_keywords: make_value member [STL/CLR]
 ms.assetid: 33a4df1c-5451-44f2-af2e-a8419f9be3b9
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fd1d3dbeec874a123b3ab9359f184f8988dfe742
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::make_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Construit un objet valeur.  
+# <a name="hashmultisetmakevalue-stlclr"></a>hash_multiset::make_value (STL/CLR)
+Construit un objet de valeur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 static value_type make_value(key_type key);  
 ```  
   
-#### Paramètres  
- key  
- Valeur clé à utiliser.  
+#### <a name="parameters"></a>Paramètres  
+ clé  
+ Valeur de clé à utiliser.  
   
-## Notes  
- La méthode retourne un objet `value_type` dont la clé est `key`.  Vous l'utilisez pour composer un objet utilisable avec plusieurs autres méthodes.  
+## <a name="remarks"></a>Notes  
+ La fonction membre retourne un `value_type` objet dont la clé est `key`. Il permet de composer un objet pouvant être utilisé avec plusieurs autres fonctions membres.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cliext_hash_multiset_make_value.cpp   
@@ -64,13 +64,16 @@ int main()
   
 ```  
   
-  **a b c**   
-## Configuration requise  
- **En\-tête:** \<cliext\/hash\_set\>  
+```Output  
+a b c  
+```  
   
- **Espace de noms :** cliext  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<cliext/hash_set >  
   
-## Voir aussi  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::key\_type](../dotnet/hash-multiset-key-type-stl-clr.md)   
- [hash\_multiset::value\_type](../dotnet/hash-multiset-value-type-stl-clr.md)
+ **Namespace :** cliext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::KEY_TYPE (STL/CLR)](../dotnet/hash-multiset-key-type-stl-clr.md)   
+ [hash_multiset::value_type (STL/CLR)](../dotnet/hash-multiset-value-type-stl-clr.md)

@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc5480896ed931fffdd4087eb5f39cfd8bbe67aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 347fab2782f9ff19681dbaab25b7ec86ef8721ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 L’en-tête STL/CLR `<cliext/adapter>` spécifie deux classes de modèle (`collection_adapter` et `range_adapter`) et la fonction de modèle `make_collection`.  
@@ -33,7 +36,7 @@ L’en-tête STL/CLR `<cliext/adapter>` spécifie deux classes de modèle (`coll
 #include <cliext/adapter>  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 |Classe|Description|  
 |-----------|-----------------|  
@@ -44,7 +47,7 @@ L’en-tête STL/CLR `<cliext/adapter>` spécifie deux classes de modèle (`coll
 |--------------|-----------------|  
 |[make_collection (STL/CLR)](../dotnet/make-collection-stl-clr.md)|Crée une carte de la plage à l’aide d’une paire d’itérateur.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<cliext/carte >  
   
  **Namespace :** cliext  

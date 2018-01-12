@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 317fdaadd622571f6e90be11a2b55a778806c39e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c132def87ce2ba2fbe72f8a4696071ab62fda82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lexical-conventions"></a>Conventions lexicales
 Cette section introduit les éléments fondamentaux d'un programme C++. Vous utilisez ces éléments, appelés « éléments lexicaux » ou « jetons », pour élaborer les instructions, les définitions, les déclarations, etc., utilisées pour construire des programmes complets. Les éléments lexicaux suivants sont présentés dans cette section :  

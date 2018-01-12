@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 10c3cd585548cf406db71b54aadabf246d0054d0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae9da167a3210e704b9d8b209e601e8269311513
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-apps-and-libraries-ccx"></a>Génération d’applications et de bibliothèques (C++/CX)
 Les rubriques de cette section fournissent quelques détails sur l’utilisation du système de génération pour générer une application de plateforme Windows universelle ou un composant Windows Runtime.  

@@ -39,17 +39,18 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: badaf05406cc74c4cbf0112f948360fffb93c4c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae66b1c0765f496dcfe460c4ea7ff4f84e9333ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbbtype-mbbtypel"></a>_mbbtype, _mbbtype_l
 Retourne le type d'octet en se basant sur l'octet précédent.  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -86,14 +87,14 @@ int _mbbtype_l(
 |1|Octet de fin valide|`_MBC_TRAIL` (2)|Fin des octets de caractères multioctets (0 x 40 - 0x7E, 0 x 80 - 0xFC)|  
 |1|Octet de fin valide|`_MBC_ILLEGAL`<br /><br /> ( -1)|Caractère non valide (toute valeur sauf 0 x 20 – 0x7E, 0xA1 - 0xDF, 0 x 81 - 0x9F, 0xE0 - 0xFC|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction `_mbbtype` détermine le type d'un octet dans un caractère multioctet. Si la valeur de `type` est une valeur différente de 1, `_mbbtype` teste la présence d'un octet unique ou d'un octet de tête valide dans un caractère multioctet. Si la valeur de `type` est égale à 1, `_mbbtype` teste la présence d'un octet de fin valide dans un caractère multioctet.  
   
- La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La version `_mbbtype` de cette fonction utilise les paramètres régionaux actifs pour ce comportement dépendant des paramètres régionaux ; la version `_mbbtype_l` est identique, sauf qu'elle utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La version `_mbbtype` de cette fonction utilise les paramètres régionaux actifs pour ce comportement dépendant des paramètres régionaux ; la version `_mbbtype_l` est identique, sauf qu'elle utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
  Dans les versions antérieures, `_mbbtype` était nommé `chkctype`. Pour le nouveau code, utilisez `_mbbtype`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|En-tête facultatif|  
 |-------------|---------------------|---------------------|  

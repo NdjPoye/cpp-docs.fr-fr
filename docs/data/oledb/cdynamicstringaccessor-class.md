@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cbd9526904eca0a4b0cc59c1aac22970b83d3090
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d6c24e6eaac83d72f8710b039b312f40517fd7e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor, classe
 Permet d’accéder à une source de données lorsque vous n’avez aucune connaissance du schéma de base de données (structure sous-jacente de la base de données).  
@@ -41,7 +44,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 |[GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)|Récupère les données de la colonne spécifiée sous forme de chaîne.|  
 |[SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)|Définit les données de la colonne spécifiée sous forme de chaîne.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Alors que [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) demande des données dans le format natif indiqué par le fournisseur, `CDynamicStringAccessor` demande que le fournisseur récupère toutes les données accessibles à partir du magasin de données en tant que données de type chaîne. Cela est particulièrement utile pour les tâches simples qui ne nécessitent pas de calcul de valeurs dans le magasin de données, telles que l’affichage ou l’impression du contenu du magasin de données.  
   
  Le type natif de données de la colonne dans le magasin de données n’a pas d’importance ; tant que le fournisseur peut prendre en charge la conversion de données, il fournit les données sous forme de chaîne. Si le fournisseur ne prend pas en charge la conversion du type de données natif en une chaîne (qui n’est pas courant), l’appel de demande retourne la valeur de réussite **DB_S_ERRORSOCCURED**, et l’état de la colonne correspondante indiquer un problème de conversion de **DBSTATUS_E_CANTCONVERTVALUE**.  
@@ -52,7 +55,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
   
  Pour une discussion et des exemples d’utilisation des classes d’accesseurs dynamiques, consultez [à l’aide d’accesseurs dynamiques](../../data/oledb/using-dynamic-accessors.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête**: atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -42,11 +42,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72568970159c1b334232bb81f0295d829a5221af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a75cc474d66a42f3faeb7444f3168c7cc3283514
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 Scinde une valeur à virgule flottante en une partie fractionnaire et une partie entière.  
@@ -89,17 +90,17 @@ long double modfl(
 ## <a name="remarks"></a>Notes  
  Les fonctions `modf` scindent la valeur à virgule flottante `x` en une partie fractionnaire et une partie entière, chacune d’elles ayant le même signe que `x`. La partie fractionnaire signée de `x` est retournée. La partie entière est stockée en tant que valeur à virgule flottante dans `intptr.`  
   
- `modf` présente une implémentation qui utilise SSE2 (Streaming SIMD Extensions 2). Consultez [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.  
+ `modf` propose une implémentation qui utilise SSE2 (Streaming SIMD Extensions 2). Consultez [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.  
   
  C++ autorisant la surcharge, vous pouvez appeler des surcharges de `modf` qui acceptent et retournent des paramètres `float` ou `long double`. Dans un programme C, `modf` prend deux valeurs doubles et en retourne une systématiquement.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`modf`, `modff`, `modfl`|C : \<math.h><br /><br /> C++ : \<cmath> ou \<math.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 32c65fc68bc9e7be2770e951de466e48f482af90
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 935bee8447ad0d49ae965fb92538d2e260ec68ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="templates-c"></a>Modèles (C++)
 Les modèles constituent la base pour la programmation générique en C++. Comme un langage fortement typé, C++ exige toutes les variables ayant un type spécifique, soit explicitement déclarés par le programmeur ou déduit par le compilateur. Toutefois, plusieurs algorithmes et des structures de données identiques, quel que soit le type, elles s’exécutent sur. Activer les modèles vous permet de définir les opérations d’une classe ou une fonction et vous permettent de spécifier quels concrète des types ces opérations doit fonctionner sur.  

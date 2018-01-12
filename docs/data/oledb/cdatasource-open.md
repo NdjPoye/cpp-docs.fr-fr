@@ -1,39 +1,41 @@
 ---
-title: "CDataSource::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDataSource::Open"
-  - "ATL.CDataSource.Open"
-  - "CDataSource::Open"
-  - "CDataSource.Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Open (méthode)"
+title: CDataSource::Open | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDataSource::Open
+- ATL.CDataSource.Open
+- CDataSource::Open
+- CDataSource.Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: a6d28bd1-799a-48ed-8993-5f82d1705b77
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3f2215b84600e2691f6b3aeb0407c5c6b96ebd00
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CDataSource::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ouvre une connexion à une source de données en utilisant un moniker **CLSID**, **ProgID** ou `CEnumerator` ou présente une invite à l'utilisateur sous forme de boîte de dialogue de recherche.  
+# <a name="cdatasourceopen"></a>CDataSource::Open
+Ouvre une connexion à une source de données à l’aide un **CLSID**, **ProgID**, ou `CEnumerator` moniker ou invite l’utilisateur avec une boîte de dialogue de recherche.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-        HRESULT Open(  
+      HRESULT Open(  
    const CLSID& clsid,  
    DBPROPSET* pPropSet = NULL,  
    ULONG nPropertySets = 1   
@@ -73,69 +75,69 @@ HRESULT Open(
    HWND hWnd = GetActiveWindow( ),  
    DBPROMPTOPTIONS dwPromptOptions = DBPROMPTOPTIONS_WIZARDSHEET   
 ) throw( );  
-HRESULT Open(   
-   LPCWSTR szProgID,   
-   DBPROPSET* pPropSet = NULL,   
-   ULONG nPropertySets = 1   
+HRESULT Open(   
+   LPCWSTR szProgID,   
+   DBPROPSET* pPropSet = NULL,   
+   ULONG nPropertySets = 1   
 ) throw( );  
-HRESULT Open(   
-   LPCSTR szProgID,   
-   LPCTSTR pName,   
-   LPCTSTR pUserName = NULL,   
-   LPCTSTR pPassword = NULL,   
-   long nInitMode = 0   
+HRESULT Open(   
+   LPCSTR szProgID,   
+   LPCTSTR pName,   
+   LPCTSTR pUserName = NULL,   
+   LPCTSTR pPassword = NULL,   
+   long nInitMode = 0   
 ) throw( );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `clsid`  
- \[in\] **CLSID** du fournisseur de données.  
+ [in] Le **CLSID** du fournisseur de données.  
   
  *pPropSet*  
- \[in\] Pointeur désignant un tableau de structures [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) contenant les propriétés et les valeurs à définir.  Consultez [Jeux de propriétés et groupes de propriétés](https://msdn.microsoft.com/en-us/library/ms713696.aspx) dans le *Guide de référence du programmeur OLE DB* dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Un pointeur vers un tableau de [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) les structures contenant des propriétés et valeurs à définir. Consultez [jeux de propriétés et des groupes de propriétés](https://msdn.microsoft.com/en-us/library/ms713696.aspx) dans les *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows.  
   
  *nPropertySets*  
- \[in\] Nombre de structures [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) passées dans l'argument *pPropSet*.  
+ [in] Le nombre de [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) structures passées dans le *pPropSet* argument.  
   
  *pName*  
- \[in\] Nom de la base de données à laquelle se connecter.  
+ [in] Nom de la base de données à laquelle se connecter.  
   
  *pUserName*  
- \[in\] Nom de l'utilisateur.  
+ [in] Nom de l'utilisateur.  
   
- *pPassword*  
- \[in\] Mot de passe de l'utilisateur.  
+ *pmotdepasse*  
+ [in] Mot de passe de l'utilisateur.  
   
  `nInitMode`  
- \[in\] Mode d'initialisation de la base de données.  Pour obtenir la liste des modes d'initialisation valides, consultez [Propriétés d'initialisation](https://msdn.microsoft.com/en-us/library/ms723127.aspx)dans le *Guide de référence du programmeur OLE DB* dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  Si `nInitMode` est égal à zéro, aucun mode d'initialisation n'est inclus dans le jeu de propriétés utilisé pour ouvrir la connexion.  
+ [in] Mode d'initialisation de la base de données. Consultez [propriétés d’initialisation](https://msdn.microsoft.com/en-us/library/ms723127.aspx)dans les *de référence du programmeur OLE DB* dans le SDK Windows pour obtenir la liste des modes d’initialisation valides. Si `nInitMode` est égal à zéro, aucun mode d'initialisation n'est inclus dans le jeu de propriétés utilisé pour ouvrir la connexion.  
   
  `szProgID`  
- \[in\] Identificateur de programme.  
+ [in] Identificateur de programme.  
   
  `enumerator`  
- \[in\] Objet [CEnumerator](../../data/oledb/cenumerator-class.md) utilisé pour obtenir un moniker pour ouvrir la connexion quand l'appelant ne spécifie pas de **CLSID**.  
+ [in] A [CEnumerator](../../data/oledb/cenumerator-class.md) objet utilisé pour obtenir un moniker pour ouvrir la connexion lorsque l’appelant ne spécifie pas un **CLSID**.  
   
  `hWnd`  
- \[in\] Handle de fenêtre devant être le parent de la boîte de dialogue.  L'utilisation de la surcharge de fonction avec le paramètre `hWnd` a pour effet d'appeler automatiquement les composants de service ; consultez les Notes pour plus d'informations.  
+ [in] Handle de fenêtre devant être le parent de la boîte de dialogue. L'utilisation de la surcharge de fonction avec le paramètre `hWnd` a pour effet d'appeler automatiquement les composants de service ; consultez les Notes pour plus d'informations.  
   
  `dwPromptOptions`  
- \[in\] Détermine le style de la boîte de dialogue de recherche à afficher.  Consultez Msdasc.h pour connaître les valeurs possibles.  
+ [in] Détermine le style de la boîte de dialogue de recherche à afficher. Consultez Msdasc.h pour connaître les valeurs possibles.  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  `HRESULT` standard.  
   
-## Notes  
- La surcharge de méthode qui utilise le paramètre `hWnd` ouvre un objet source de données à l'aide des composants de service d'oledb32.dll ; cette DLL contient l'implémentation des fonctionnalités Composants de service telles que la mise en pool de ressources, l'inscription de transaction automatique, etc.  Pour plus d'informations, consultez « Services OLE DB » dans le Guide de référence du programmeur OLE DB à l'adresse [http:\/\/msdn.microsoft.com\/library\/default.asp?url\=\/library\/oledb\/htm\/oledbole\_db\_services.asp?frame\=true](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+## <a name="remarks"></a>Notes  
+ La surcharge de méthode qui utilise le paramètre `hWnd` ouvre un objet source de données à l'aide des composants de service d'oledb32.dll ; cette DLL contient l'implémentation des fonctionnalités Composants de service telles que la mise en pool de ressources, l'inscription de transaction automatique, etc. Pour plus d’informations, consultez « Services OLE DB » dans la référence du programmeur OLE DB à l’adresse [http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
   
- Les surcharges de méthode qui n'utilisent pas le paramètre `hWnd` ouvrent un objet source de données sans utiliser les composants de service dans oledb32.dll.  Un objet [CDataSource](../../data/oledb/cdatasource-class.md) ouvert avec ces surcharges de fonction ne peut utiliser aucune fonctionnalité des composants de service.  
+ Les surcharges de méthode qui n'utilisent pas le paramètre `hWnd` ouvrent un objet source de données sans utiliser les composants de service dans oledb32.dll. A [CDataSource](../../data/oledb/cdatasource-class.md) objet ouvert avec ces surcharges de fonction ne pourra pas utiliser aucune des fonctionnalités de composants de Service.  
   
-## Exemple  
- Le code suivant montre comment ouvrir une source de données Jet 4.0 avec les modèles OLE DB.  Même si vous traitez la source de données Jet comme une source de données OLE DB,  votre appel à **Open** a besoin de deux jeux de propriétés : un pour **DBPROPSET\_DBINIT** et un autre pour **DBPROPSET\_JETOLEDB\_DBINIT**, ce qui vous permet de définir **DBPROP\_JETOLEDB\_DATABASEPASSWORD**.  
+## <a name="example"></a>Exemple  
+ Le code suivant montre comment ouvrir une source de données Jet 4.0 avec les modèles OLE DB. Même si vous traitez la source de données Jet comme une source de données OLE DB, Toutefois, votre appel à **ouvrir** a besoin de deux jeux de propriétés : un pour **DBPROPSET_DBINIT** et l’autre pour **DBPROPSET_JETOLEDB_DBINIT**, afin que vous puissiez définir  **DBPROP_JETOLEDB_DATABASEPASSWORD**.  
   
- [!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/CPP/cdatasource-open_1.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/cpp/cdatasource-open_1.cpp)]  
   
-## Configuration requise  
- **En\-tête :** atldbcli.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** atldbcli.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CDataSource, classe](../../data/oledb/cdatasource-class.md)

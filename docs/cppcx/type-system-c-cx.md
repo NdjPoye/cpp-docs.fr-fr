@@ -12,11 +12,12 @@ caps.latest.revision: "28"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c1839fad0c929f6e24b74f74c2cc91e29e07005b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f5c0db625db458bf4fb530ba4b07e742b1aad964
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-system-ccx"></a>Système de type (C++/CX)
 À l’aide de l’architecture de Windows Runtime, vous pouvez utiliser C + c++ / CX, Visual Basic, Visual c# et JavaScript pour écrire des applications et composants qui directement accéder à l’API Windows et interagissent avec d’autres applications Windows Runtime et les composants. Les applications de plateforme Windows universelles qui sont écrites en C++ Compiler en code natif qui s’exécute directement dans l’UC. Les applications de plateforme Windows universelles qui sont écrits en c# ou Visual Basic compilent en langage intermédiaire Microsoft (MSIL) et s’exécutent dans le common language runtime (CLR). Les applications de plateforme Windows universelles qui sont écrites en JavaScript s’exécutent dans un environnement d’exécution. Les composants du système d’exploitation Windows Runtime eux-mêmes sont écrits en C++ et exécutés en code natif. Tous ces composants et les applications de plateforme Windows universelle communiquent directement via l’interface binaire d’application Windows Runtime (ABI).  
@@ -128,7 +129,7 @@ ms.lasthandoff: 10/24/2017
   
  Pour plus d’informations, consultez [Interfaces](../cppcx/interfaces-c-cx.md).  
   
-### <a name="enums"></a>Énumérations  
+### <a name="enums"></a>Enums  
  Une classe enum dans Windows Runtime ressemble à un enum limité en C++. Le type sous-jacent est int32 sauf si l'attribut [Flags] est appliqué, auquel cas le type sous-jacent est uint32.  
   
  Pour plus d'informations, consultez [Énumérations](../cppcx/enums-c-cx.md).  

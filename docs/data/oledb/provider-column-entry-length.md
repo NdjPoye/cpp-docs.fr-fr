@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0a2d976dd079eb0100d4eb7cf56ef7c9dcfd0175
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e7f0d4ed3eeff7d60aa91849d62446d17765ce52
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="providercolumnentrylength"></a>PROVIDER_COLUMN_ENTRY_LENGTH
 Représente une colonne spécifique pris en charge par le fournisseur.  
@@ -46,13 +49,13 @@ name
  `member`  
  [in] La variable de membre dans `dataClass` qui stocke les données de colonne.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous permet de spécifier la taille de la colonne.  
   
 ## <a name="example"></a>Exemple  
  Consultez [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

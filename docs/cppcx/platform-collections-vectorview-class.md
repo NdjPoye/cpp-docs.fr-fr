@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c69052eec58bb84416561de93df845a09514490f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ef351759814ee03b54160cac2340eafd304d5f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView, classe
 Représente une vue en lecture seule d'une collection d'objets séquentielle qui peut être accessible individuellement par index. Le type de chaque objet de la collection est défini par le paramètre de modèle.  
@@ -44,7 +45,7 @@ template <typename T, typename E>
  `E`  
  Spécifie un prédicat binaire pour tester l'égalité des valeurs de type `T`. La valeur par défaut est `std::equal_to<T>`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `VectorView` la classe implémente le [Windows::Foundation::Collections::IVectorView\<T >](http://go.microsoft.com/fwlink/p/?LinkId=262411) interface et la prise en charge des itérateurs Standard Template Library.  
   
 ### <a name="members"></a>Membres  
@@ -68,7 +69,7 @@ template <typename T, typename E>
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `VectorView`  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** collection.h  
   
  **Espace de noms :** Platform::Collections  
@@ -87,7 +88,7 @@ virtual Windows::Foundation::Collections::IIterator<T>^
 ### <a name="return-value"></a>Valeur de retour  
  Itérateur qui spécifie le premier élément de l'objet VectorView.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un moyen pratique de contenir l’itérateur retourné par First() est d’assigner la valeur de retournée à une variable déclarée avec le **automatique** mot clé de déduction de type. Par exemple, `auto x = myVectorView->First();`.  
   
 

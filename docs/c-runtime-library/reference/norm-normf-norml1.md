@@ -1,57 +1,59 @@
 ---
-title: "Norm, normf, norml1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "norm"
-  - "normf"
-  - "norml"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "norm"
-  - "normf"
-  - "norml"
-  - "complex/norm"
-  - "complex/normf"
-  - "complex/norml"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "norm (fonction)"
-  - "normf (fonction)"
-  - "norml (fonction)"
+title: norm, normf, norml1 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- norm
+- normf
+- norml
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- norm
+- normf
+- norml
+- complex/norm
+- complex/normf
+- complex/norml
+dev_langs: C++
+helpviewer_keywords:
+- norm function
+- normf function
+- norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c4bd4fa2b595148350b071f9718d8376f51962a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Norm, normf, norml
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Récupère la grandeur carrée d’un nombre complexe.  
+# <a name="norm-normf-norml"></a>norm, normf, norml
+Récupère la grandeur au carré d’un nombre complexe.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 double norm(   
@@ -71,29 +73,29 @@ long double norml(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `z`  
  Nombre complexe.  
   
-## Valeur de retour  
- La grandeur du carré `z`.  
+## <a name="return-value"></a>Valeur de retour  
+ Grandeur au carré de `z`.  
   
-## Notes  
- C\+\+ autorisant la surcharge, vous pouvez appeler des surcharges de `norm` acceptant `_Fcomplex` ou `_Lcomplex` valeurs et retourner `float` ou `long double` valeurs. Dans un programme C, `norm` a toujours un `_Dcomplex` valeur et retourne un `double` valeur.  
+## <a name="remarks"></a>Notes  
+ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de `norm` qui acceptent des valeurs `_Fcomplex` ou `_Lcomplex` et retournent des valeurs `float` ou `long double`. Dans un programme C, `norm` accepte toujours une valeur `_Dcomplex` et retourne une valeur `double`.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-|Routine|En\-tête C|En\-tête C\+\+|  
-|-------------|----------------|--------------------|  
-|`norm`, `normf`, `norml`|\<complex.h\>|\< ccomplex \>|  
+|Routine|En-tête C|En-tête C++|  
+|-------------|--------------|------------------|  
+|`norm`,               `normf`, `norml`|\<complex.h>|\<ccomplex>|  
   
  Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
  [cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [Conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
+ [conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
  [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
  [carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
- [fichiers CAB, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+ [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)

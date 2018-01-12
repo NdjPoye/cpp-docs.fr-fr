@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b8fb0ab344f5ee9e34c1157d661bced369afac41
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 024cf67033cdc35917f37c2e6183e60042c40d45
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setparamtype"></a>SET_PARAM_TYPE
 Spécifie les macros `COLUMN_ENTRY` qui suivent l’entrée, la sortie ou l’entrée/sortie de macro `SET_PARAM_TYPE` .  
@@ -38,7 +41,7 @@ type
  `type`  
  [in] Type à définir pour le paramètre.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les fournisseurs prennent en charge uniquement les types d’entrée/sortie de paramètres qui sont pris en charge par la source de données sous-jacente. Le type est une combinaison d’une ou plusieurs valeurs **DBPARAMIO** (voir [Structures DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) dans les *Informations de référence du programmeur OLE DB*) :  
   
 -   **DBPARAMIO_NOTPARAM** L’accesseur n’a aucun paramètre. En général, vous affectez cette valeur à **eParamIO** dans les accesseurs de ligne pour rappeler à l’utilisateur que les paramètres sont ignorés.  
@@ -90,7 +93,7 @@ END_COLUMN_MAP()
 };
 ``` 
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

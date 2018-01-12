@@ -33,11 +33,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 10f81913113073c48c4d68c9647db7d67cba01f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fcdeab9e61eda17164be06498e9ce42695faf8ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="malloca"></a>_malloca
 Alloue de la mémoire sur la pile. Il s’agit d’une version de [_alloca](../../c-runtime-library/reference/alloca.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -77,7 +78,7 @@ void *_malloca(
   
  Outre les restrictions ci-dessus, quand vous utilisez l’option [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md), `_malloca` ne peut pas être utilisée dans des blocs `__except`. Pour plus d’informations, consultez [Restrictions de /clr](../../build/reference/clr-restrictions.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

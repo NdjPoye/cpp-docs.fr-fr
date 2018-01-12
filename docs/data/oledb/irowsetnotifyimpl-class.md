@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7473e63c7ca67dff200d5cf96f1774ca9a2d6817
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ddc410a22318b471fd59c1b29ff09fc9d771c767
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl, classe
 Implémente et enregistre [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx) sur le consommateur (également appelé « récepteur ») afin qu’il puisse gérer les notifications.  
@@ -43,12 +46,12 @@ class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
 |[OnRowChange](../../data/oledb/irowsetnotifyimpl-onrowchange.md)|Notifie le consommateur de la première modification à une ligne ou d’une modification qui affecte la ligne entière.|  
 |[OnRowsetChange](../../data/oledb/irowsetnotifyimpl-onrowsetchange.md)|Notifie le consommateur de toute modification qui affecte l’ensemble de lignes.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Consultez [réception des Notifications](../../data/oledb/receiving-notifications.md) sur l’implémentation de l’interface de point de connexion sur le consommateur.  
   
  `IRowsetNotifyImpl`Fournit une implémentation factice pour `IRowsetNotify`, avec des fonctions vides pour le `IRowsetNotify` méthodes [OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx), [OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx), et [OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx). Si vous héritez de cette classe lorsque vous implémentez un `IRowsetNotify` interface, vous pouvez implémenter uniquement les méthodes que vous avez besoin. Vous devez également fournir des implémentations vides pour les autres méthodes vous-même.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

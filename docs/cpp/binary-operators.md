@@ -17,18 +17,19 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a76b9505d11f17848232c69650c8e523bad91c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15c52d48359210a21b23caa72afee7e2a3bcd8cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binary-operators"></a>Opérateurs binaires
 Le tableau suivant affiche une liste des opérateurs qui peuvent être surchargés.  
   
 ### <a name="redefinable-binary-operators"></a>Opérateurs binaires redéfinissables  
   
-|Opérateur|Nom|  
+|Opérateur|Name|  
 |--------------|----------|  
 |**,**|Virgule|  
 |`!=`|Inégalité|  
