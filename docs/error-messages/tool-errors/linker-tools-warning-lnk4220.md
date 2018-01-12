@@ -1,29 +1,28 @@
 ---
-title: "Avertissement des outils &#201;diteur de liens LNK4220 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4220"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4220"
+title: "LNK4220 d’avertissement des outils Éditeur de liens | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4220
+dev_langs: C++
+helpviewer_keywords: LNK4220
 ms.assetid: ba0cddfc-9c56-4a09-8207-f7b840a24b4d
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c3ad13f5d9efc79292c949971a22645279a2731d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement des outils &#201;diteur de liens LNK4220
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-valeur 'option Éditeur de liens' non valide 'valeur' ; valeur prise par défaut  
+# <a name="linker-tools-warning-lnk4220"></a>Avertissement des outils Éditeur de liens LNK4220
+non valide 'option de l’éditeur de liens' valeur 'valeur' ; par défaut  
   
- Une valeur hors limites a été spécifiée avec l'option [\/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md).  La valeur par défaut **\/TLBID** est 1.
+ Une valeur hors limites a été spécifiée avec le [/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) option. La valeur par défaut **/TLBID** est 1.

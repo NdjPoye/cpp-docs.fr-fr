@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3551
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3551
+f1_keywords: C3551
+dev_langs: C++
+helpviewer_keywords: C3551
 ms.assetid: c8ee23da-6568-40db-93a6-3ddb7ac47712
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: be8a55c6033150c5f1c4220885b01b4af8b8a6bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 450bd97efc9cfbf07eac84a3e6a693af698fc64f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3551"></a>Erreur du compilateur C3551
 « type de retour spécifié à la fin attendu »  

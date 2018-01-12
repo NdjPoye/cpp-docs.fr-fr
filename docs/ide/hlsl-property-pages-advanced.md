@@ -1,38 +1,39 @@
 ---
-title: "Pages de propri&#233;t&#233;s HLSL&#160;: Avanc&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.FXCompilerTool.SuppressStartupBanner"
-  - "VC.Project.FXCompilerTool.TreatWarningAsError"
-dev_langs: 
-  - "C++"
+title: "Pages de propriétés HLSL : Avancé | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.FXCompilerTool.SuppressStartupBanner
+- VC.Project.FXCompilerTool.TreatWarningAsError
+dev_langs: C++
 ms.assetid: a4f05aed-2c0e-4e7d-b7a4-bc2f228112c5
-caps.latest.revision: 6
-author: "BrianPeek"
-ms.author: "brpeek"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c913a5b1d5c6861fc6337f5a7343506420dd5c83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Pages de propri&#233;t&#233;s HLSL&#160;: Avanc&#233;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Pour configurer les propriétés suivantes du compilateur de HLSL \(fxc.exe\), utilisez sa page de propriétés **Avancé** .  Pour plus d'informations sur l'accès à la page de propriétés **Avancé** dans le dossier de HLSL, consultez [Comment : spécifier des propriétés de projet avec des pages de propriétés](../misc/how-to-specify-project-properties-with-property-pages.md).  
+# <a name="hlsl-property-pages-advanced"></a>Pages de propriétés HLSL : Avancé
+Pour configurer les propriétés suivantes du compilateur HLSL (fxc.exe), utilisez son **avancé** page de propriétés. Pour plus d’informations sur l’accès à la **avancé** page de propriétés dans le dossier HLSL, consultez [utilisation des propriétés de projet](../ide/working-with-project-properties.md).  
   
-## Liste UIElement  
+## <a name="uielement-list"></a>Liste des éléments d’interface  
  **Suppression de la bannière de démarrage**  
- **Oui \(\/nologo\)** pour supprimer l'affichage de la bannière de démarrage et des messages d'information ; sinon, **Non**.  Par défaut, la valeur est **Oui \(\/nologo\)**.  
+ **Oui (/ nologo)** pour supprimer l’affichage du message informations et de la bannière de démarrage ; sinon, **non**. Par défaut, la valeur est **Oui (/ nologo)**.  
   
- **Avertissements de traiter comme des erreurs**  
- **Oui \(\/WX\)** pour traiter tous les avertissements de compilateur comme des erreurs ; sinon, **Non**.  
+ **Considérer les avertissements comme des erreurs**  
+ **Oui (/WX)** à traiter tous les avertissements du compilateur comme des erreurs ; sinon, **non**.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Pages de propriétés HLSL](../ide/hlsl-property-pages.md)   
- [Pages de propriétés HLSL : Général](../ide/hlsl-property-pages-general.md)   
- [Pages de propriétés HLSL : fichiers de sortie](../ide/hlsl-property-pages-output-files.md)
+ [Pages de propriétés HLSL : général](../ide/hlsl-property-pages-general.md)   
+ [HLSL, page de propriétés : fichiers de sortie](../ide/hlsl-property-pages-output-files.md)

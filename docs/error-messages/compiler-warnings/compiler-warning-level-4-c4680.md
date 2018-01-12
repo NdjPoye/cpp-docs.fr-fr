@@ -1,34 +1,33 @@
 ---
-title: "Avertissement du compilateur (niveau 4) C4680 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4680"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4680"
+title: Compilateur avertissement (niveau 4) C4680 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4680
+dev_langs: C++
+helpviewer_keywords: C4680
 ms.assetid: 6e043f4c-c601-4b77-8130-920cff1d912e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d460e705a928e01b8bb203e24ea4df21ae79e087
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 4) C4680
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'classe' : la coclasse ne spécifie pas d'interface par défaut  
+# <a name="compiler-warning-level-4-c4680"></a>Avertissement du compilateur (niveau 4) C4680
+'classe' : coclasse ne spécifie pas une interface par défaut  
   
- Une interface par [default](../../windows/default-cpp.md) n'a pas été spécifiée pour une classe qui était marquée avec l'attribut [coclass](../../windows/coclass.md).  Pour qu'un objet soit utile, il doit implémenter une interface.  
+ A [par défaut](../../windows/default-cpp.md) interface n’a pas été spécifié pour une classe qui a été marquée avec la [coclasse](../../windows/coclass.md) attribut. Dans l’ordre pour un objet soit utile, il doit implémenter une interface.  
   
- L'exemple suivant génère l'erreur C4680 :  
+ L’exemple suivant génère l’erreur C4680 :  
   
 ```  
 // C4680.cpp  

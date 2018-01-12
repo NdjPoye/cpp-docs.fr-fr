@@ -4,48 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4382
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4382
+f1_keywords: C4382
+dev_langs: C++
+helpviewer_keywords: C4382
 ms.assetid: 34be9ad3-bae6-411a-8f80-0c8fd0d2c092
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 4571fe618b0ae89251d2748fbbcdfcb654201054
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4b0cef09795553759487e28ef61babe75b35ce03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4382"></a>Avertissement du compilateur (niveau 1) C4382
-levée de 'type' : un type avec le constructeur de copie ou le destructeur __clrcall ne peut être intercepté dans/CLR : pure module  
+levée de 'type' : un type avec le constructeur de copie ou le destructeur __clrcall ne peut être intercepté que dans/CLR : pure module  
   
  Le **/CLR : pure** option du compilateur est déconseillée dans Visual Studio 2015.  
   
- Lorsque vous compilez avec **/clr** (pas **/CLR : pure**), la gestion des exceptions s’attend aux fonctions membres dans un type natif soient [__cdecl](../../cpp/cdecl.md) et non [__clrcall](../../cpp/clrcall.md). Les types natifs possédant des fonctions membres à l’aide de `__clrcall` convention d’appel ne peut pas être interceptée dans un module compilé avec **/clr**.  
+ Lors de la compilation avec **/CLR** (pas **/CLR : pure**), la gestion des exceptions attend les fonctions membres dans un type natif soient [__cdecl](../../cpp/cdecl.md) et non [__clrcall](../../cpp/clrcall.md). Les types natifs avec des fonctions de membre à l’aide de `__clrcall` convention d’appel ne peut pas être interceptée dans un module compilé avec **/CLR**.  
   
  Si l’exception est interceptée dans un module compilé avec **/CLR : pure**, vous pouvez ignorer cet avertissement.  
   

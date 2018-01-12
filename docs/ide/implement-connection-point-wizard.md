@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a7efade7f0bd0a3c35e02439818873b923c1ac1d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f29b4f25d937c2f538373ff85819f7315150e712
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implement-connection-point-wizard"></a>Assistant Implémentation d'un point de connexion
 Cet Assistant implémente un point de connexion pour un objet COM. Un objet connectable (c'est-à-dire une source) peut exposer un point de connexion pour ses propres interfaces ou pour toute interface sortante. Visual C++ et Windows fournissent tous deux bibliothèques de types qui ont des interfaces sortantes. Chaque interface sortante peut être implémentée par un client sur un objet (autrement dit, un récepteur).  

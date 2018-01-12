@@ -1,56 +1,54 @@
 ---
-title: "COM isol&#233;, Outil Manifeste, Propri&#233;t&#233;s de configuration, bo&#238;te de dialogue Pages de propri&#233;t&#233;s de &lt;NomProjet&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCManifestTool.RegistrarScriptFile"
-  - "VC.Project.VCManifestTool.ComponentFileName"
-  - "VC.Project.VCManifestTool.TypeLibraryFile"
-  - "VC.Project.VCManifestTool.ReplacementsFile"
-dev_langs: 
-  - "C++"
+title: "Outil manifeste isolé des propriétés de COM (Visual C++) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCManifestTool.RegistrarScriptFile
+- VC.Project.VCManifestTool.ComponentFileName
+- VC.Project.VCManifestTool.TypeLibraryFile
+- VC.Project.VCManifestTool.ReplacementsFile
+dev_langs: C++
 ms.assetid: 457582b8-cfde-49c0-92e3-3a6b9e8c08eb
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fe2098c4caead6ebc9ad4747354ae96f093f2c91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# COM isol&#233;, Outil Manifeste, Propri&#233;t&#233;s de configuration, bo&#238;te de dialogue Pages de propri&#233;t&#233;s de &lt;NomProjet&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Utilisez cette boîte de dialogue pour spécifier les options **Isolated COM** pour [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Isolé COM, outil manifeste, propriétés de Configuration, &lt;nom_projet&gt; boîte de dialogue Pages de propriétés
+Utilisez cette boîte de dialogue pour spécifier **COM isolé** des options pour [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
   
- Pour accéder à cette boîte de dialogue de page de propriétés, ouvrez les pages de propriétés pour votre projet ou votre feuille de propriétés.  Développez le nœud **Outil Manifeste** sous **Propriétés communes**, puis sélectionnez **COM isolé**.  
+ Pour accéder à cette boîte de dialogue de page de propriétés, ouvrez les pages de propriétés pour votre projet ou votre feuille de propriétés. Développez le **outil manifeste** nœud sous **propriétés communes**, puis sélectionnez **COM isolé**.  
   
-## Liste des tâches  
+## <a name="task-list"></a>Liste des tâches  
   
--   [Comment : générer des applications isolées pour consommer des composants COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
+-   [Guide pratique pour générer des applications isolées pour consommer des composants COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
   
-## Liste UIElement  
+## <a name="uielement-list"></a>Liste des éléments d’interface  
  **Fichier bibliothèque de types**  
- Utilise l'option \/tlb pour spécifier le nom du fichier bibliothèque de types \(fichier .tlb\) que l'outil Manifeste utilisera pour générer le fichier manifeste.  
+ Utilise l’option /tlb pour spécifier le nom de fichier de bibliothèque de types (fichier .tlb) que l’outil manifeste utilisera pour générer le fichier manifest.  
   
- **Fichier de script d'inscription**  
- Utilise l'option \/rgs pour spécifier le nom du fichier de script d'inscription \(fichier .rgs\) que l'outil Manifeste utilisera pour générer le fichier manifeste.  
+ **Fichier de Script d’inscription**  
+ Utilise l’option /rgs pour spécifier le nom du fichier de script d’inscription (fichier .rgs) que l’outil manifeste utilisera pour générer le fichier manifest.  
   
- **Nom de fichier du composant**  
- Utilise l'option \/dll pour spécifier le nom de la ressource que l'outil Manifeste générera.  Vous devez entrer une valeur pour cette propriété lorsque des valeurs sont spécifiées pour **Fichier bibliothèque de types** ou **Fichier de script d'inscription**.  
+ **Nom de fichier de composant**  
+ Utilise l’option /dll pour spécifier le nom de la ressource qui génère l’outil manifeste. Vous devez entrer une valeur pour cette propriété lorsque les valeurs pour une **fichier bibliothèque de types** ou **fichier de Script de** sont spécifiés.  
   
  **Fichier de remplacement**  
- Utilise l'option \/replacements pour spécifier le chemin d'accès complet au fichier qui contient des valeurs pour les chaînes remplaçables dans le fichier .rgs.  
+ Utilise l’option /replacements pour spécifier le chemin d’accès complet au fichier qui contient des valeurs pour les chaînes dans le fichier .rgs.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Applications isolées](http://msdn.microsoft.com/library/aa375190)   
- [Assemblys côte à côte](_win32_side_by_side_assemblies)   
- [ClickOnce Application Manifest](../Topic/ClickOnce%20Application%20Manifest.md)   
- [Pages de propriétés de l'outil Manifeste](../ide/manifest-tool-property-pages.md)   
- [Comment : ouvrir les pages de propriétés d'un projet](../misc/how-to-open-project-property-pages.md)   
- [Comment : modifier les feuilles de propriétés d'un projet](../misc/how-to-edit-project-property-sheets.md)
+ [Manifeste d’Application ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
+ [Pages de propriétés outil manifeste](../ide/manifest-tool-property-pages.md)   
+ [Utilisation des propriétés de projet](../ide/working-with-project-properties.md)   

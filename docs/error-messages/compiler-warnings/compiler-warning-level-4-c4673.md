@@ -1,34 +1,33 @@
 ---
-title: "Avertissement du compilateur (niveau 4) C4673 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4673"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4673"
+title: Compilateur avertissement (niveau 4) C4673 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4673
+dev_langs: C++
+helpviewer_keywords: C4673
 ms.assetid: 95626ec6-f05b-43c7-8b9a-a60a6f98dd30
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bff39a9045ba1543f42eb7e02b82565421969d8d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 4) C4673
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-si 'identificateur' est levé, les types suivants ne seront pas pris en compte au niveau du site d'interception  
+# <a name="compiler-warning-level-4-c4673"></a>Avertissement du compilateur (niveau 4) C4673
+lever des types suivants de 'identificateur' ne sera plus utilisé que sur le site catch  
   
- Un objet levé ne peut pas être traité dans le bloc **catch**.  Chaque type qui ne peut pas être traité est énuméré dans le message d'erreur immédiatement après la ligne contenant cet avertissement.  Chaque type non traité possède son propre avertissement.  Lisez l'avertissement de chaque type spécifique pour plus d'informations.  
+ Un objet levé ne peut pas être traité dans le **catch** bloc. Chaque type qui ne peut pas être gérée est répertorié dans la sortie d’erreur immédiatement après la ligne contenant cet avertissement. Chaque type non gérée a son propre avertissement. Lisez l’avertissement pour chaque type spécifique pour plus d’informations.  
   
- L'exemple suivant génère l'erreur C4673 :  
+ L’exemple suivant génère l’erreur C4673 :  
   
 ```  
 // C4673.cpp  

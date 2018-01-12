@@ -1,35 +1,33 @@
 ---
-title: "Avertissement du compilateur (niveau 3) C4197 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4197"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4197"
+title: Compilateur avertissement (niveau 3) C4197 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4197
+dev_langs: C++
+helpviewer_keywords: C4197
 ms.assetid: f766feef-82b0-4d81-8a65-33628c7db196
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: eaa66b3d1effe1afd6adbe3a70b82ab98e162569
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 3) C4197
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'type' : le qualificateur 'volatile' de niveau supérieur dans le cast est ignoré  
+# <a name="compiler-warning-level-3-c4197"></a>Compilateur avertissement (niveau 3) C4197
+'type' : volatile de niveau supérieur dans le cast est ignoré.  
   
- Le compilateur a détecté un cast de type vers un type r\-value qualifié [volatile](../../cpp/volatile-cpp.md) ou un cast de type d'un type r\-value vers un autre type qualifié de volatile.  Conformément à la norme C \(6.5.3\), les propriétés associées aux types qualifiés n'ont de sens que pour les expressions l\-value.  
+ Le compilateur a détecté un cast de type vers un type qualifié [volatile](../../cpp/volatile-cpp.md), ou un cast de type vers un type en un type qualifié de volatile. Selon la norme du C (6.5.3), les propriétés associées aux types qualifiés sont significatives uniquement pour les expressions l-value.  
   
- L'exemple suivant génère l'erreur C4197 :  
+ L’exemple suivant génère l’erreur C4197 :  
   
 ```  
 // C4197.cpp  

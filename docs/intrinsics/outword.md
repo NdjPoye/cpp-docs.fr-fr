@@ -1,62 +1,62 @@
 ---
-title: "__outword | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__outword"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__outword, intrinsèque"
-  - "out, instruction"
+title: __outword | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __outword
+dev_langs: C++
+helpviewer_keywords:
+- __outword intrinsic
+- out instruction
 ms.assetid: 995f8834-0f50-4b4f-a7a2-af0e7c371cda
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: eced2be2f5ccc29be5f9ac936dfeae9f4cdb03a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# __outword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="outword"></a>__outword
+**Section spécifique à Microsoft**  
   
- Génère des instructions d' `out` , qui envoie le mot `Data` le port d'E\/S spécifié par `Port`.  
+ Génère le `out` instruction, qui envoie le mot `Data` le port d’e/s spécifié par `Port`.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-void __outword(   
-   unsigned short Port,   
-   unsigned short Data   
+void __outword(   
+   unsigned short Port,   
+   unsigned short Data   
 );  
 ```  
   
-#### Paramètres  
- \[in\] `Port`  
- Le port pour renvoyer les données à.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `Port`  
+ Le port pour envoyer les données.  
   
- \[in\] `Data`  
- les données à envoyer.  
+ [in] `Data`  
+ Les données à envoyer.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__outword`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- Cette routine est uniquement disponible sous forme intrinsèque.  
+## <a name="remarks"></a>Notes  
+ Cette routine est disponible uniquement en tant qu'intrinsèque.  
   
-## détail de FIN Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

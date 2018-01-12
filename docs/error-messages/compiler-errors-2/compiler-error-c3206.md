@@ -15,14 +15,15 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4faf775e3a3a179e49f013b21a948c49a4f89f74
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: c5f4318aabb2ecc616f08e98dfd08a2edd537d87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3206"></a>Erreur du compilateur C3206
-'fonction' : argument type non valide pour 'param', liste d’arguments type absente dans le type de classe 'nom_type'  
+'fonction' : argument type non valide pour 'param', liste d’arguments type absente dans le type de classe 'nom_type'  
   
  Une fonction avec modèle est définie comme prenant un argument de type de modèle. Toutefois, un argument de type de modèle a été passé.  
   
@@ -75,7 +76,7 @@ int main() {
 }  
 ```  
   
- Résolution possible :  
+ Solution possible :  
   
 ```  
 // C3206d.cpp  
@@ -109,7 +110,7 @@ int main() {
 }  
 ```  
   
- Résolution possible :  
+ Solution possible :  
   
 ```  
 // C3206f.cpp  

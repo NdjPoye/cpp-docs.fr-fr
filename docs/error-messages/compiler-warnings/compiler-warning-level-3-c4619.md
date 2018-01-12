@@ -1,37 +1,35 @@
 ---
-title: "Avertissement du compilateur (niveau 3) C4619 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4619"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4619"
+title: Compilateur avertissement (niveau 3) C4619 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4619
+dev_langs: C++
+helpviewer_keywords: C4619
 ms.assetid: 701fea21-01aa-4bea-93d4-1cb8824170b0
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 01f2b9d3e7cc935b100272e74c94da9dec5c5a92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 3) C4619
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-\#pragma warning : numéro d'avertissement inexistant 'numéro'  
+# <a name="compiler-warning-level-3-c4619"></a>Avertissement du compilateur (niveau 3) C4619
+\#(pragma) warning : numéro d’avertissement inexistant 'nombre'  
   
- Vous avez essayé de désactiver un avertissement qui n'existe pas.  
+ Une tentative a été effectuée pour désactiver un avertissement qui n’existe pas.  
   
- Cet avertissement est désactivé par défaut.  Pour plus d'informations, consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.  
   
- L'exemple suivant génère l'erreur C4619 :  
+ L’exemple suivant génère l’erreur C4619 :  
   
 ```  
 // C4619.cpp  

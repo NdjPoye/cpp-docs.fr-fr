@@ -1,23 +1,27 @@
 ---
-title: "Erreurs de l&#39;&#233;valuateur d&#39;expression CXX0000 &#224; CXX0072 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "Erreurs de l’évaluateur d’expression CXX0000 à CXX0072 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/17/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
 ms.assetid: a47a9866-7fb2-4b21-978c-2b77402c7105
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 053fa173c19c8aa32169cbe67834cbcf8b7ed7de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Erreurs de l&#39;&#233;valuateur d&#39;expression CXX0000 &#224; CXX0072
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="expression-evaluator-errors-cxx0000-through-cxx0072"></a>Erreurs de l'évaluateur d'expression CXX0000 à CXX0072
 
-Cette section est une référence des erreurs générées par les outils de génération.  Pour obtenir de l'aide sur un message d'erreur particulier, vous pouvez soit cliquer sur un numéro d'erreur dans la fenêtre Sortie et appuyer sur F1, soit taper le numéro d'erreur dans la zone **Rechercher** de l'index.
+Cette section est une référence pour les erreurs générées par les outils de diagnostic.
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]

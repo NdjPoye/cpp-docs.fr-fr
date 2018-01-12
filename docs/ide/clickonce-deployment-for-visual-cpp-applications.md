@@ -1,60 +1,61 @@
 ---
-title: "D&#233;ploiement de ClickOnce pour les applications Visual C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "déploiement d’applications [C++], ClickOnce"
-  - "application, déploiement [C++], ClickOnce"
-  - "ClickOnce, déploiement [C++], applications C++"
+title: "Déploiement ClickOnce pour les Applications Visual C++ | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- deploying applications [C++], ClickOnce
+- application deployment [C++], ClickOnce
+- ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-caps.latest.revision: 17
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e1a036a1520a747448c5541f367f0b43711e30b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# D&#233;ploiement de ClickOnce pour les applications Visual C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] proposent deux technologies différentes pour déployer les applications Windows : le déploiement ClickOnce ou le déploiement [Windows Installer](http://msdn.microsoft.com/library/cc185688).  
+# <a name="clickonce-deployment-for-visual-c-applications"></a>Déploiement de ClickOnce pour les applications Visual C++
+Visual Studio fournit deux technologies différentes pour déployer des applications Windows : le déploiement ClickOnce ou [Windows Installer](http://msdn.microsoft.com/library/cc185688) déploiement.  
   
-## Déploiement ClickOnce en C\+\+  
- L'environnement de développement de [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] ne prend pas directement en charge le déploiement de projets [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] avec [!INCLUDE[ndptecclick](../ide/includes/ndptecclick_md.md)], mais les outils pour l'utiliser sont disponibles.  
+## <a name="clickonce-deployment-in-c"></a>Déploiement ClickOnce en C++  
+ L’environnement de développement Visual C++ ne prend pas directement en charge le déploiement de projets Visual C++ avec ClickOnce, mais les outils sont disponibles pour l’utiliser.  
   
 > [!NOTE]
->  [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] prend en charge [!INCLUDE[ndptecclick](../ide/includes/ndptecclick_md.md)] dans les environnements de développement [!INCLUDE[csprcs](../ide/includes/csprcs_md.md)] et [!INCLUDE[vbprvb](../dotnet/includes/vbprvb_md.md)].  Si votre projet [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] est une dépendance d'un projet [!INCLUDE[csprcs](../ide/includes/csprcs_md.md)], vous pouvez publier l'application \(y compris ses dépendances\) à l'aide du déploiement [!INCLUDE[ndptecclick](../ide/includes/ndptecclick_md.md)] à partir de l'environnement de développement [!INCLUDE[csprcs](../ide/includes/csprcs_md.md)].  
+>  Visual Studio ne prend pas en charge ClickOnce dans les environnements de développement Visual c# et Visual Basic. Si votre projet Visual C++ est une dépendance d’un projet Visual c#, vous pouvez publier l’application (y compris ses dépendances) à l’aide du déploiement ClickOnce à partir de l’environnement de développement Visual c#.  
   
- Pour déployer une application [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] à l'aide de [!INCLUDE[ndptecclick](../ide/includes/ndptecclick_md.md)], vous devez tout d'abord générer un [ClickOnce Application Manifest](../Topic/ClickOnce%20Application%20Manifest.md) et un [ClickOnce Deployment Manifest](../Topic/ClickOnce%20Deployment%20Manifest.md) à l'aide de [Mage.exe \(outil Manifest Generation and Editing\)](../Topic/Mage.exe%20\(Manifest%20Generation%20and%20Editing%20Tool\).md) ou de sa version avec interface utilisateur graphique \(pour plus d'informations, consultez [MageUI.exe \(Manifest Generation and Editing Tool, Graphical Client\)](../Topic/MageUI.exe%20\(Manifest%20Generation%20and%20Editing%20Tool,%20Graphical%20Client\).md)\).  
+ Pour déployer une application Visual C++ à l’aide de ClickOnce, vous devez tout d’abord créer un [manifeste d’Application ClickOnce](/visualstudio/deployment/clickonce-application-manifest) et un [le manifeste de déploiement ClickOnce](/visualstudio/deployment/clickonce-deployment-manifest) à l’aide de la [Mage.exe (manifeste Outil Generation and Editing)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) ou sa version de l’interface utilisateur graphique (pour plus d’informations, consultez [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)).  
+
   
- Utilisez d'abord Mage.exe pour générer le manifeste d'application ; le fichier résultant portera l'extension .manifest.  Utilisez ensuite Mage.exe pour générer le manifeste de déploiement ; le fichier résultant portera l'extension .application.  Signez alors les manifestes.  
+ Utilisez d’abord Mage.exe pour générer le manifeste d’application ; le fichier résultant portera l’extension .manifest. Utilisez ensuite Mage.exe pour générer le manifeste de déploiement ; le fichier résultant portera l’extension .application. Signez alors les manifestes.  
   
- Le manifeste d'application doit spécifier le processeur cible \(**x86**, **x64** ou **ARM**\).  Consultez [Composants requis pour le déploiement d'applications 64 bits](../Topic/Deploying%20Prerequisites%20for%2064-bit%20Applications.md) pour plus d'informations sur ces options.  
+ Le manifeste d’application doit spécifier le processeur cible (**x86**, **x64**, ou **ARM**). Consultez [déploiement des composants requis pour les Applications 64 bits](/visualstudio/deployment/deploying-prerequisites-for-64-bit-applications) pour plus d’informations sur ces options.  
   
- Par ailleurs, les noms de l'application et des manifestes de déploiement doivent être différents du nom de l'application C\+\+.  Cela évite le conflit entre le manifeste d'application, créé par Mage.exe, et le manifeste externe, qui fait partie de l'application C\+\+.  
+ Par ailleurs, les noms de l'application et des manifestes de déploiement doivent être différents du nom de l'application C++. Cela évite le conflit entre le manifeste d'application, créé par Mage.exe, et le manifeste externe, qui fait partie de l'application C++.  
   
- Votre déploiement devra installer les bibliothèques [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] dont votre application dépend.  Pour déterminer les dépendances d'une application particulière, vous pouvez utiliser depends.exe ou l'utilitaire DUMPBIN avec l'option \/DEPENDENTS.  Pour plus d'informations sur les dépendances, consultez [Fonctionnement des dépendances d'une application Visual C\+\+](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md).  Vous aurez peut\-être besoin d'exécuter VCRedist.exe ; cet utilitaire installe des bibliothèques [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] sur l'ordinateur cible.  
+ Votre déploiement devra installer les bibliothèques Visual C++ dont dépend votre application. Pour déterminer les dépendances d'une application particulière, vous pouvez utiliser depends.exe ou l'utilitaire DUMPBIN avec l'option /DEPENDENTS. Pour plus d’informations sur les dépendances, consultez [comprendre les dépendances d’une Application Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Vous devrez peut-être exécuter VCRedist.exe ; Cet utilitaire installe des bibliothèques Visual C++ sur l’ordinateur cible.  
   
- Vous devrez peut\-être également générer un programme d'amorçage \(programme d'installation de composants requis\) de votre application pour déployer des composants requis ; pour plus d'informations sur le programme d'amorçage, consultez [Création de packages de programme d'amorçage](../Topic/Creating%20Bootstrapper%20Packages.md).  
+ Vous devez également créer un programme d’amorçage (programme d’installation des composants requis) pour votre application à déployer les composants requis ; Pour plus d’informations sur le programme d’amorçage, consultez [création de Packages de programme d’amorçage](/visualstudio/deployment/creating-bootstrapper-packages).  
   
- Pour une description détaillée de la technologie, consultez [ClickOnce Security and Deployment](../Topic/ClickOnce%20Security%20and%20Deployment.md).  Pour un exemple détaillé de déploiement [!INCLUDE[ndptecclick](../ide/includes/ndptecclick_md.md)], consultez [Walkthrough: Manually Deploying a ClickOnce Application](../Topic/Walkthrough:%20Manually%20Deploying%20a%20ClickOnce%20Application.md).  
+ Pour obtenir une description plus détaillée de la technologie, consultez [sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Pour obtenir un exemple détaillé de déploiement ClickOnce, consultez [procédure pas à pas : déploiement manuel d’une Application ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  
   
-## Voir aussi  
- [Mage.exe \(outil Manifest Generation and Editing\)](../Topic/Mage.exe%20\(Manifest%20Generation%20and%20Editing%20Tool\).md)   
- [MageUI.exe \(Manifest Generation and Editing Tool, Graphical Client\)](../Topic/MageUI.exe%20\(Manifest%20Generation%20and%20Editing%20Tool,%20Graphical%20Client\).md)   
- [Makecert.exe \(Certificate Creation Tool\)](../Topic/Makecert.exe%20\(Certificate%20Creation%20Tool\).md)   
- [Déploiement des applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md)   
- [Déploiement d'applications, de services et de composants](../Topic/Deploying%20Applications,%20Services,%20and%20Components.md)   
- [Windows Installer Deployment](http://msdn.microsoft.com/fr-fr/121be21b-b916-43e2-8f10-8b080516d2a0)   
- [ClickOnce Security and Deployment](../Topic/ClickOnce%20Security%20and%20Deployment.md)   
- [Création de packages de programme d'amorçage](../Topic/Creating%20Bootstrapper%20Packages.md)   
- [Programmation .NET avec C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Mage.exe (outil Manifest Generation and Editing)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)   
+ [MageUI.exe (outil Manifest Generation and Editing, client graphique)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)   
+ [Makecert.exe (outil de la création du certificat)](https://msdn.microsoft.com/library/windows/desktop/aa386968)   
+ [Déploiement d’Applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md)   
+ [Déploiement d’Applications, Services et composants](/visualstudio/deployment/deploying-applications-services-and-components)   
+ [Déploiement de Windows Installer](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)   
+ [Sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)   
+ [Création de Packages de programme d’amorçage](/visualstudio/deployment/creating-bootstrapper-packages)   
+ [Programmation .NET avec c++ / CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
  [Interopérabilité native et .NET](../dotnet/native-and-dotnet-interoperability.md)

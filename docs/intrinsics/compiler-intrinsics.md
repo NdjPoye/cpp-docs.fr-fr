@@ -18,16 +18,17 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 53d6986d569bbf928282dce9e9e1cba0601bc4ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ffbe20fb6c2b35cef46f975e99191bf96fdc6b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-intrinsics"></a>compilateur, intrinsèques
 La plupart des fonctions sont contenues dans des bibliothèques, mais certaines sont intégrées au compilateur (c'est-à-dire intrinsèques). On les appelle des fonctions intrinsèques ou tout simplement des intrinsèques.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si une fonction est intrinsèque, le code de cette fonction est généralement inséré inline, ce qui évite la surcharge liée à un appel de fonction et permet d'exécuter des instructions machine hautement efficaces pour cette fonction. Une intrinsèque est souvent plus rapide que l'assembly inline équivalent, car l'optimiseur a une connaissance intégrée du comportement de nombreuses intrinsèques. Certaines optimisations peuvent ainsi être disponibles, alors qu'elles ne le sont pas quand un assembly inline est utilisé. De plus, l'optimiseur peut développer l'intrinsèque différemment, aligner les mémoires tampons différemment ou apporter d'autres ajustements en fonction du contexte et des arguments de l'appel.  
   
  L'utilisation d'intrinsèques affecte la portabilité du code, car les intrinsèques disponibles dans Visual C++ peuvent ne pas être disponibles si le code est compilé avec d'autres compilateurs et certaines intrinsèques qui peuvent être disponibles pour certaines architectures cibles ne sont pas disponibles pour toutes les architectures. Toutefois, les intrinsèques sont généralement plus portables que les assemblys inline. Les intrinsèques sont nécessaires sur les architectures 64 bits où les assemblys inline ne sont pas pris en charge.  

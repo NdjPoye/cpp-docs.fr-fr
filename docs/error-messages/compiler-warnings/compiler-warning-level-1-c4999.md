@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e28b30610ae411fc4b5a94c584f2deac8574dfb1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d88e3c8cf2be355c045e5adda6f86cdb15eca7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4999"></a>Avertissement du compilateur (niveau 1) C4999
 AVERTISSEMENT INCONNU Choisissez la commande Support technique du menu ? (Aide) de Visual C++ ou ouvrez le fichier d’aide du support technique pour plus d’informations  

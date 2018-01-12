@@ -29,11 +29,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 678d8dbed5d8ba659a6c0a33752f28b3e2d2c61b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 70017721fb59fa0c6d18d568546d9618257328b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activation-c"></a>Activation (C++)
 Cet article explique le rôle de l'activation dans la modification visuelle des éléments OLE. Une fois qu'un utilisateur a incorporé un élément OLE dans un document conteneur, il peut être amené à l'utiliser. Pour ce faire, il double-clique sur l'élément, ce qui l'active. L'activité la plus fréquente pour l'activation est la modification. De nombreux éléments OLE actuels, une fois activés pour la modification, provoquent la modification des menus et barres d'outils de la fenêtre frame actuelle pour refléter ceux appartenant à l'application serveur qui a créé l'élément. Ce comportement, appelé activation sur place, permet à l'utilisateur de modifier un élément incorporé dans un document composite sans quitter la fenêtre du document conteneur.  

@@ -1,16 +1,13 @@
 ---
-title: "C4800 des avertissements du compilateur à C4999 | Documents Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-cpp
-ms.tgt_pltfrm: 
+title: C4800 des avertissements du compilateur via C5999 | Documents Microsoft
+ms.date: 11/17/2017
+ms.technology: cpp-tools
 ms.topic: error-reference
 f1_keywords:
 - C4806
 - C4807
+- C4808
+- C4809
 - C4810
 - C4811
 - C4812
@@ -20,6 +17,10 @@ f1_keywords:
 - C4822
 - C4825
 - C4827
+- C4837
+- C4840
+- C4841
+- C4842
 - C4872
 - C4880
 - C4881
@@ -74,132 +75,160 @@ f1_keywords:
 - C4997
 - C4998
 - C4999
-- C4808
-- C4809
-dev_langs:
-- C++
+- C5022
+- C5023
+- C5024
+- C5025
+- C5026
+- C5027
+- C5028
+- C5029
+- C5030
+- C5031
+- C5032
+- C5033
+- C5034
+- C5035
+- C5036
+- C5037
+- C5038
+dev_langs: C++
 ms.assetid: c3182430-8b3b-4ab2-a532-5cd436707dc8
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: ac03a99c1a9413b697b6e40101bf1c3e2be9a3a6
-ms.lasthandoff: 04/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6f3c9a15c61a859564bb5613a3b8059cb011ca80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="compiler-warnings-c4800-through-c4999"></a>C4800 des avertissements du compilateur à C4999
-Les articles de cette partie de la documentation contiennent des informations sur un sous-ensemble des avertissements du compilateur Visual C++. Vous pouvez accéder à ces informations ici ou, dans la fenêtre Sortie dans Visual Studio, vous pouvez sélectionner un numéro d’erreur et appuyez sur la touche F1.  
-  
-> [!NOTE]
->  Pas chaque [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erreur ou un avertissement est documentée dans MSDN. Dans de nombreux cas, le message de diagnostic fournit toutes les informations qui est disponibles. Si vous pensez qu'un message d'erreur nécessite une explication supplémentaire, faites-nous part de vos suggestions. Vous pouvez utiliser le formulaire de commentaires sur cette page, ou accédez à la barre de menus dans Visual Studio et choisissez **aide**, **signaler un bogue**, ou vous pouvez envoyer un rapport de suggestion ou un bogue sur [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
-  
-Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) est de forum de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ général](http://go.microsoft.com/fwlink/?LinkId=158194) est de forum de questions sur [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).  
-  
-## <a name="in-this-section"></a>Dans cette section  
-  
-|Warning|Message|  
-|-------------|-------------|  
-|[Avertissement du compilateur (niveau 3) C4800](../../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md)|'type' : valeur forcée à booléenne 'true' ou 'false' (avertissement sur les performances)|  
-|[Avertissement du compilateur (niveau 1) C4803](../../error-messages/compiler-warnings/compiler-warning-level-1-c4803.md)|'méthode' : la méthode raise a une classe de stockage différente de celle de l’événement, 'event'|  
-|[Avertissement du compilateur (niveau 1) C4804](../../error-messages/compiler-warnings/compiler-warning-level-1-c4804.md)|'opération' : utilisation risquée du type 'bool' dans l’opération|  
-|[Avertissement du compilateur (niveau 1) C4805](../../error-messages/compiler-warnings/compiler-warning-level-1-c4805.md)|'opération' : mélange risqué de type 'type' et le type 'type' dans l’opération|  
-|Avertissement du compilateur (niveau 1) C4806|'opération' : opération risquée : aucune valeur de type 'type' promue en type 'type' ne peut être la constante donnée|  
-|Avertissement du compilateur (niveau 1) C4807|'opération' : mélange risqué de type 'type' et le champ de bits signé de type 'type'|  
-|Avertissement du compilateur (niveau 1) C4808|'valeur' case n’est pas une valeur valide pour la condition switch de type 'bool'|  
-|Avertissement du compilateur (niveau 1) C4809|l'instruction switch a une étiquette 'default' redondante ; toutes les étiquettes 'case' possibles sont fournies|  
-|Avertissement du compilateur (niveau 1) C4810|valeur de pragma pack(show) == n|  
-|Avertissement du compilateur (niveau 1) C4811|valeur de pragma conform(forScope, show) == value|  
-|Avertissement du compilateur (niveau 1) C4812|style de déclaration obsolète : utilisez 'nouvelle_syntaxe' à la place|  
-|Avertissement du compilateur (niveau 1) C4813|'fonction' : une fonction friend d’une classe locale doit avoir été précédemment déclarée|  
-|Avertissement du compilateur (niveau 4) C4816|'param' : le paramètre a un tableau de taille zéro qui sera tronqué (sauf si l’objet est passé par référence)|  
-|Avertissement du compilateur (niveau 1) l’erreur c4817 :|'membre' : utilisation non conforme de '.' pour accéder à ce membre ; compilateur remplacé par '->'|  
-|[Avertissement du compilateur (niveau 1) C4819](../../error-messages/compiler-warnings/compiler-warning-level-1-c4819.md)|Le fichier contient un caractère qui ne peut pas être représenté dans la page de codes actuelle (numéro). Enregistrez le fichier au format Unicode pour éviter la perte de données|  
-|[Avertissement du compilateur (niveau 4) C4820](../../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md)|'octets' octets de remplissage ajoutés après construction 'nom_membre'|  
-|[Avertissement du compilateur (niveau 1) C4821](../../error-messages/compiler-warnings/compiler-warning-level-1-c4821.md)|Impossible de déterminer le type d'encodage Unicode, enregistrez le fichier avec la signature (BOM)|  
-|Avertissement du compilateur (niveau 1) C4822|'member function' : fonction membre de classe locale n’a pas un corps|  
-|[Avertissement du compilateur (niveau 3) C4823](../../error-messages/compiler-warnings/compiler-warning-level-3-c4823.md)|'fonction' : utilise des pointeurs épingle mais déroulement sémantique n’est pas activée. Utilisez /EHa|  
-|Avertissement du compilateur (niveau 4) C4825||  
-|Avertissement du compilateur (niveau 3) C4827|Une méthode 'ToString' publique avec 0 paramètre doit être marquée comme virtual et override|  
-|[Avertissement du compilateur (niveau 1) C4829](../../error-messages/compiler-warnings/compiler-warning-level-1-c4829.md)|Paramètres potentiellement incorrects de la fonction main. Considérez ' int main (Platform::Array\<Platform::String ^ > ^ argv)'|  
-|[Avertissement du compilateur (niveau 1) C4835](../../error-messages/compiler-warnings/compiler-warning-level-1-c4835.md)|'variable' : l’initialiseur des données exportées ne sera pas exécuté jusqu'à ce que le code managé exécuté au préalable dans l’assembly hôte|  
-|[Avertissement du compilateur (niveau 1) C4838](../../error-messages/compiler-warnings/compiler-warning-level-1-c4838.md)|la conversion de 'type_1' en 'type_2' requiert une conversion restrictive|  
-|[Avertissement du compilateur C4867](../../error-messages/compiler-warnings/compiler-warning-c4867.md)|'fonction' : appel de fonction pas de liste d’arguments ; Utilisez 'appel' pour créer un pointeur vers membre|  
-|[Avertissement du compilateur C4868](../../error-messages/compiler-warnings/compiler-warning-c4868.md)|compilateur de 'file(line_number)' ne peut pas appliquer ordre d’évaluation de gauche à droite dans la liste d’initialisation entre accolades|  
-|Avertissement du compilateur (niveau 2) C4872|division par zéro en virgule flottante détectée lors de la compilation du graphique des appels pour concurrency::parallel_for_each à l'emplacement '%s'|  
-|Avertissement du compilateur (niveau 1) C4880|conversion de 'type_1 const' en 'type_2' : cast d’à partir d’un pointeur ou une référence peut entraîner un comportement non défini dans une fonction restreinte à amp|  
-|Avertissement du compilateur (niveau 4) C4881|le constructeur et/ou le destructeur ne sera pas appelé pour la variable tile_static 'variable'|  
-|Avertissement du compilateur (niveau 1) C4882|le passage de foncteurs avec opérateurs d'appels non const à concurrency::parallel_for_each est déconseillé|  
-|Avertissement C4900 du compilateur|Incompatibilité de il entre 'outil1' version 'version1' et 'outil2' version 'version2'|  
-|[Avertissement du compilateur (niveau 1) C4905](../../error-messages/compiler-warnings/compiler-warning-level-1-c4905.md)|cast de littéral de chaîne étendu en 'LPSTR'|  
-|[Avertissement du compilateur (niveau 1) C4906](../../error-messages/compiler-warnings/compiler-warning-level-1-c4906.md)|cast de littéral de chaîne en 'LPWSTR'|  
-|Avertissement du compilateur (niveau 1) C4910|'\<identificateur > : '__declspec (dllexport)' et 'extern' sont incompatibles sur une instanciation explicite|  
-|Avertissement du compilateur (niveau 1) C4912|'attribute' : comportement indéfini de l’attribut sur un UDT imbriqué|  
-|Avertissement du compilateur (niveau 4) C4913|l'opérateur binaire défini par l'utilisateur ',' existe mais aucune surcharge n'a pu convertir tous les opérandes, opérateur binaire intégré par défaut ',' utilisé|  
-|Avertissement du compilateur (niveau 1) C4916|pour avoir un dispid, '%$S' : doit être présenté(e) par une interface|  
-|[Avertissement du compilateur (niveau 1) C4917](../../error-messages/compiler-warnings/compiler-warning-level-1-c4917.md)|'déclarateur' : un GUID ne peut être associé à une classe, d’interface ou espace de noms|  
-|Avertissement du compilateur (niveau 4) C4918|'caractère' : caractère non valide dans la liste d’optimisation pragma|  
-|Avertissement du compilateur (niveau 1) C4920|enum enum membre member_1 = value_1 déjà rencontré dans enum enum comme member_2 = value_2|  
-|Avertissement du compilateur (niveau 3) C4921|'%s' : la valeur d'attribut '%s' ne doit pas être spécifiée plusieurs fois|  
-|Avertissement du compilateur (niveau 1) C4925|'méthode' : la méthode dispinterface ne peut pas être appelée à partir d’un script|  
-|Avertissement du compilateur (niveau 1) C4926|'identifier' : symbole déjà défini : attributs ignorés|  
-|[Avertissement du compilateur (niveau 1) C4927](../../error-messages/compiler-warnings/compiler-warning-level-1-c4927.md)|conversion non conforme ; plusieurs conversions définies par l'utilisateur ont été appliquées implicitement|  
-|[Avertissement du compilateur (niveau 1) C4928](../../error-messages/compiler-warnings/compiler-warning-level-1-c4928.md)|initialisation de copie non conforme ; plusieurs conversions définies par l'utilisateur ont été appliquées implicitement|  
-|[Avertissement du compilateur (niveau 1) C4929](../../error-messages/compiler-warnings/compiler-warning-level-1-c4929.md)|'fichier' : typelibrary contient une union ; en ignorant le qualificateur 'embedded_idl ' ignoré|  
-|[Avertissement du compilateur (niveau 1) C4930](../../error-messages/compiler-warnings/compiler-warning-level-1-c4930.md)|'prototype' : fonction prototypée non appelée (était une définition de variable souhaitée ?)|  
-|[Avertissement du compilateur (niveau 4) C4931](../../error-messages/compiler-warnings/compiler-warning-level-4-c4931.md)|bibliothèque de types présumée construite pour des pointeurs 'nombre' bits|  
-|Avertissement du compilateur (niveau 4) C4932|__identifier (identifier) et \__identifier(identifier) sont impossibles à distinguer|  
-|Avertissement du compilateur (niveau 1) C4934|'__delegate (Multicast)' est déconseillé, utilisez '\__delegate' à la place|  
-|Avertissement du compilateur (niveau 1) C4935|Spécificateur d’accès à l’assembly modifié à partir de 'accès'|  
-|Avertissement du compilateur (niveau 1) C4936|ce __declspec est pris en charge uniquement lorsqu'il est compilé avec /clr ou /clr:pure|  
-|Avertissement du compilateur (niveau 4) C4937|impossible de distinguer 'text1' et 'text2' comme arguments de 'directive'|  
-|Avertissement du compilateur (niveau 4) C4938|'var' : variable de réduction de la virgule flottante peut entraîner des résultats incohérents sous/fp : strict ou #pragma fenv_access|  
-|Avertissement C4939 du compilateur|#pragma vtordisp est déconseillé et sera supprimée dans une prochaine version de Visual C++|  
-|Avertissement du compilateur (niveau 1) C4944|'symbole' : Impossible d’importer le symbole de 'assembly1' : car 'symbole' existe déjà dans la portée actuelle|  
-|[Avertissement du compilateur (niveau 1) C4945](../../error-messages/compiler-warnings/compiler-warning-level-1-c4945.md)|'symbole' : Impossible d’importer le symbole de 'assembly1' : car 'symbole' a déjà été importé à partir d’un autre assembly 'assembly2'|  
-|[Avertissement du compilateur (niveau 1) C4946](../../error-messages/compiler-warnings/compiler-warning-level-1-c4946.md)|reinterpret_cast utilisé entre des classes connexes : 'classe1' et 'classe2'|  
-|Avertissement du compilateur (niveau 1) C4947|'type_ou_membre' : marqué comme obsolète|  
-|[Avertissement du compilateur (niveau 2) C4948](../../error-messages/compiler-warnings/compiler-warning-level-2-c4948.md)|type de retour de 'accesseur' ne correspond pas au dernier type de paramètre de la méthode setter correspondante|  
-|[Avertissement du compilateur (niveaux 1 et 4) C4949](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4949.md)|les pragmas 'managed' et 'unmanaged' sont significatifs uniquement lors de la compilation avec ' / clr [ : option]'|  
-|Avertissement du compilateur (niveau 1) C4950|'type_ou_membre' : marqué comme obsolète|  
-|Avertissement C4951 du compilateur|'function' a été modifié depuis que les données de profil ont été regroupées ; données de profil de fonction non utilisées|  
-|Avertissement C4952 du compilateur|'fonction' : aucune donnée de profil trouvée dans le programme de base de données 'pgd_file 'du|  
-|Avertissement C4953 du compilateur|Inline 'fonction' a été modifié depuis la collecte des données de profil des données de profil non utilisées|  
-|Avertissement C4954 du compilateur|'fonction' : non profilé (contient l’expression de switch __int64)|  
-|Avertissement C4955 du compilateur|'importation2' : importation ignorée ; déjà importé à partir de 'importation1'|  
-|Avertissement du compilateur (niveau 1) C4956|'type' : ce type n’est pas vérifiable|  
-|Avertissement du compilateur (niveau 1) C4957|'cast' : cast explicite de 'cast de' en 'cast_to' n’est pas vérifiable|  
-|Avertissement du compilateur (niveau 1) l’avertissement C4958|'opération' : opération arithmétique de pointeur n’est pas vérifiable|  
-|Avertissement du compilateur (niveau 1) C4959|Impossible de définir 'type' de type non managé en/clr : safe, car l’accès à ses membres génère du code non vérifiable|  
-|Avertissement C4960 du compilateur|'function' est trop grand pour être profilé|  
-|Avertissement C4961 du compilateur|Aucune donnée de profil n’a été fusionnée dans 'fichier .pgd', les optimisations guidées par profil sont désactivées|  
-|Avertissement C4962 du compilateur|'fonction' : les optimisations guidées par profil désactivées, car elles génèrent des incohérences au niveau des données de profil|  
-|Avertissement C4963 du compilateur|%se : données de profil introuvables ; autres options du compilateur ont été utilisées dans la génération instrumentée|  
-|[Avertissement du compilateur (niveau 1) C4964](../../error-messages/compiler-warnings/compiler-warning-level-1-c4964.md)|Aucune option d'optimisation n'a été spécifiée ; les informations de profil ne seront pas recueillies|  
-|[Avertissement du compilateur (niveau 1) C4965](../../error-messages/compiler-warnings/compiler-warning-level-1-c4965.md)|boxing implicite de l'entier 0 ; utilisez nullptr ou effectuez un cast explicite|  
-|Avertissement C4966 du compilateur|'%s' a une annotation __code_seg avec un nom de segment non pris en charge, l'annotation est ignorée|  
-|Avertissement C4970 du compilateur|constructeur délégué : objet cible ignoré, car '%$pS' est statique|  
-|Avertissement du compilateur (niveau 1) C4971|Ordre des arguments : \<objet cible >, \<fonction cible > de constructeur délégué est déconseillé, utilisez \<fonction cible >, \<objet cible = « » >|  
-|Avertissement du compilateur (niveau 1) C4972|La modification ou le traitement direct du résultat d'une conversion unboxing comme lvalue est non vérifiable|  
-|Avertissement C4973 du compilateur|'%$S' : marqué comme déconseillé|  
-|Avertissement C4974 du compilateur|'%$S' : marqué comme déconseillé|  
-|Avertissement C4981 du compilateur|Warbird : fonction '%$pD' marquée comme __forceinline non inline, car elle contient une sémantique des exceptions|  
-|Avertissement du compilateur (niveau 3) C4985|nom de symbole ' : attributs absents de la déclaration précédente.|  
-|[Avertissement du compilateur C4986](../../error-messages/compiler-warnings/compiler-warning-c4986.md)|'%$pS' : la spécification d'exception ne correspond pas à la déclaration précédente|  
-|Avertissement du compilateur (niveau 4) C4987|extension non standard utilisée : 'throw (...)'|  
-|Avertissement du compilateur (niveau 4) C4988|'%$S' : variable déclarée en dehors de la portée classe/fonction|  
-|Avertissement C4989 du compilateur|'%s' : le type a des définitions en conflit.|  
-|Avertissement C4990 du compilateur|Warbird : %s|  
-|Avertissement C4991 du compilateur|Warbird : fonction '%$pD' marquée comme __forceinline non inline, car le niveau de protection de l'inlinee est supérieur à celui du parent|  
-|Avertissement C4992 du compilateur|Warbird : fonction '%$pD' marquée comme __forceinline non inline, car elle contient un assembly inline qui ne peut pas être protégé|  
-|[Avertissement du compilateur (niveau 3) C4995](../../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)|'fonction' : nom a été marqué comme #pragma deprecated|  
-|[Avertissement du compilateur (niveau 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)|'%$pS': %$*|  
-|Avertissement du compilateur (niveau 1) C4997|'classe' : une coclasse n’implémente pas d’interface COM ou de pseudo-interface|  
-|Avertissement du compilateur (niveau 1) C4998|ÉCHEC DE L'ATTENTE : %s(%d)|  
-|Avertissement C4999 du compilateur|AVERTISSEMENT INCONNU %$N Choisissez la commande Support technique du menu ? (Aide) de Visual C++ %$N ou ouvrez le fichier d'aide du Support technique pour plus d'informations|
+# <a name="compiler-warnings-c4800-through-c5999"></a>C4800 des avertissements du compilateur via C5999
+
+Les articles de cette section de la documentation expliquent un sous-ensemble des messages d’avertissement générés par le compilateur.
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
+
+## <a name="warning-messages"></a>Messages d’avertissement
+
+|Warning|Message|
+|-------------|-------------|
+|[Avertissement du compilateur (niveau 3) C4800](compiler-warning-level-3-c4800.md)|'type' : valeur forcée à booléenne 'true' ou 'false' (avertissement sur les performances)|
+|[Avertissement du compilateur (niveau 1) C4803](compiler-warning-level-1-c4803.md)|'méthode' : la méthode raise a une classe de stockage différente de celle de l’événement, 'event'|
+|[Avertissement du compilateur (niveau 1) C4804](compiler-warning-level-1-c4804.md)|'opération' : utilisation risquée du type 'bool' dans l’opération|
+|[Avertissement du compilateur (niveau 1) C4805](compiler-warning-level-1-c4805.md)|'opération' : mélange risqué de type 'type' et le type 'type' dans l’opération|
+|Avertissement du compilateur (niveau 1) C4806|'opération' : opération risquée : aucune valeur de type 'type' promue en type 'type' ne peut être la constante donnée|
+|Avertissement du compilateur (niveau 1) C4807|'opération' : mélange risqué de type 'type' et le champ de bits signé de type 'type'|
+|Avertissement du compilateur (niveau 1) C4808|'valeur' case n’est pas une valeur valide pour la condition switch de type 'bool'|
+|Avertissement du compilateur (niveau 1) C4809|l’instruction switch a une étiquette 'default' redondante ; toutes les étiquettes 'case' possibles sont fournies.|
+|Avertissement du compilateur (niveau 1) C4810|valeur de pragma pack(show) == n|
+|Avertissement du compilateur (niveau 1) C4811|valeur de pragma conform(forScope, show) == value|
+|Avertissement du compilateur (niveau 1) C4812|style de déclaration obsolète : utilisez 'nouvelle_syntaxe' à la place|
+|Avertissement du compilateur (niveau 1) C4813|'fonction' : une fonction friend d’une classe locale doit avoir été précédemment déclarée|
+|Avertissement du compilateur (niveau 4) C4816|'param' : le paramètre a un tableau de taille zéro qui sera tronqué (sauf si l’objet est passé par référence)|
+|Avertissement du compilateur (niveau 1) l’erreur c4817 :|'membre' : utilisation non conforme de '.' pour accéder à ce membre ; compilateur remplacé par '->'|
+|[Avertissement du compilateur (niveau 1) C4819](compiler-warning-level-1-c4819.md)|Le fichier contient un caractère qui ne peut pas être représenté dans la page de codes actuelle (numéro). Enregistrez le fichier au format Unicode pour éviter la perte de données|
+|[Avertissement du compilateur (niveau 4) C4820](compiler-warning-level-4-c4820.md)|'octets' octets de remplissage ajoutés après construction 'nom_membre'|
+|[Avertissement du compilateur (niveau 1) C4821](compiler-warning-level-1-c4821.md)|Impossible de déterminer le type d’encodage Unicode, enregistrez le fichier avec la signature (BOM)|
+|Avertissement du compilateur (niveau 1) C4822|'member function' : fonction membre de classe locale n’a pas de corps|
+|[Avertissement du compilateur (niveau 3) C4823](compiler-warning-level-3-c4823.md)|'fonction' : utilise des pointeurs épingle mais déroulement sémantique n’est pas activée. Utilisez /EHa|
+|Avertissement du compilateur (niveau 2) C4826|La conversion de '*type1*'à'*type2*' est de type signe étendu. Cela peut entraîner un comportement inattendu.|
+|Avertissement du compilateur (niveau 3) C4827|Une méthode 'ToString' publique avec 0 paramètre doit être marqué comme virtual et remplacer|
+|[Avertissement du compilateur (niveau 1) C4829](compiler-warning-level-1-c4829.md)|Paramètres potentiellement incorrects de la fonction main. Considérez ' int main (Platform::Array\<Platform::String ^ > ^ argv)'|
+|[Avertissement du compilateur (niveau 1) C4835](compiler-warning-level-1-c4835.md)|'variable' : l’initialiseur des données exportées ne sera pas exécuté jusqu'à ce que le code managé exécuté au préalable dans l’assembly hôte|
+|Avertissement du compilateur (niveau 4) C4837|trigraphe détecté : ' ?? *caractère*« remplacé par »*caractère*'|
+|[Avertissement du compilateur (niveau 1) C4838](compiler-warning-level-1-c4838.md)|la conversion de 'type_1' en 'type_2' requiert une conversion restrictive|
+|[Avertissement du compilateur (niveau 3) C4839](compiler-warning-level-3-c4839.md)|utilisation non standard de la classe*type*' en tant qu’argument à une fonction variadique|
+|Avertissement du compilateur (niveau 4) C4840|utilisation non portable de la classe*type*' en tant qu’argument à une fonction variadique|
+|Avertissement du compilateur (niveau 4) C4841|extension non standard utilisée : indicateur composée membre utilisé dans offsetof|
+|Avertissement du compilateur (niveau 4) C4842|le résultat de « offsetof' appliqué à un type à l’aide de l’héritage multiple n’est pas garanti pour être cohérent entre les versions du compilateur|
+|[Avertissement (erreur) du compilateur C4867](compiler-warning-c4867.md)|'fonction' : appel de fonction pas de liste d’arguments ; Utilisez 'appel' pour créer un pointeur vers membre|
+|[Du compilateur (niveau 4) d’avertissement C4868](compiler-warning-c4868.md)|'_fichier_(*line_number*)' compilateur ne peut pas appliquer l’ordre d’évaluation de gauche à droite dans la liste d’initialisation entre accolades|
+|Avertissement du compilateur (niveau 2) C4872|flottante point de division par zéro détecté lors de la compilation du graphique des appels pour Concurrency::parallel_for_each à l’emplacement : '*emplacement*'|
+|Avertissement du compilateur (niveau 1) C4880|conversion de 'type_1 const' en 'type_2' : cast d’à partir d’un pointeur ou une référence peut entraîner un comportement non défini dans une fonction restreinte à amp|
+|Avertissement du compilateur (niveau 4) C4881|le constructeur et/ou le destructeur ne sera pas appelé pour la variable tile_static 'variable'|
+|Avertissement du compilateur (niveau 1) C4882|passage de foncteurs avec opérateurs d’appels non const à concurrency::parallel_for_each est déconseillé.|
+|Avertissement C4900 du compilateur|Incompatibilité de il entre 'outil1' version 'version1' et 'outil2' version 'version2'|
+|[Avertissement du compilateur (niveau 1) C4905](compiler-warning-level-1-c4905.md)|cast de littéral de chaîne étendu en 'LPSTR'|
+|[Avertissement du compilateur (niveau 1) C4906](compiler-warning-level-1-c4906.md)|cast de littéral de chaîne en 'LPWSTR'|
+|Avertissement du compilateur (niveau 1) C4910|'\<identificateur > : '__declspec (dllexport)' et 'extern' sont incompatibles sur une instanciation explicite|
+|Avertissement du compilateur (niveau 1) C4912|'attribute' : comportement indéfini de l’attribut sur un UDT imbriqué|
+|Avertissement du compilateur (niveau 4) C4913|l'opérateur binaire défini par l'utilisateur ',' existe mais aucune surcharge n'a pu convertir tous les opérandes, opérateur binaire intégré par défaut ',' utilisé|
+|Avertissement du compilateur (niveau 1) C4916|pour avoir un dispid, '*description*' : doivent être introduites par une interface|
+|[Avertissement du compilateur (niveau 1) C4917](compiler-warning-level-1-c4917.md)|'déclarateur' : un GUID ne peut être associé à une classe, d’interface ou espace de noms|
+|Avertissement du compilateur (niveau 4) C4918|'caractère' : caractère non valide dans la liste d’optimisation pragma|
+|Avertissement du compilateur (niveau 1) C4920|enum enum membre member_1 = value_1 déjà rencontré dans enum enum comme member_2 = value_2|
+|Avertissement du compilateur (niveau 3) C4921|'*description*' : valeur de l’attribut '*attribut*' ne doit pas être spécifié plusieurs fois|
+|Avertissement du compilateur (niveau 1) C4925|'méthode' : la méthode dispinterface ne peut pas être appelée à partir d’un script|
+|Avertissement du compilateur (niveau 1) C4926|'identifier' : symbole déjà défini : attributs ignorés|
+|[Avertissement du compilateur (niveau 1) C4927](compiler-warning-level-1-c4927.md)|conversion non conforme ; plusieurs conversions définies par l’utilisateur ont été appliquées implicitement|
+|[Avertissement du compilateur (niveau 1) C4928](compiler-warning-level-1-c4928.md)|initialisation de copie non conforme ; plusieurs conversions définies par l'utilisateur ont été appliquées implicitement|
+|[Avertissement du compilateur (niveau 1) C4929](compiler-warning-level-1-c4929.md)|'fichier' : typelibrary contient une union ; en ignorant le qualificateur 'embedded_idl ' ignoré|
+|[Avertissement du compilateur (niveau 1) C4930](compiler-warning-level-1-c4930.md)|'prototype' : fonction prototypée non appelée (était une définition de variable souhaitée ?)|
+|[Avertissement du compilateur (niveau 4) C4931](compiler-warning-level-4-c4931.md)|bibliothèque de types présumée construite pour des pointeurs 'nombre' bits|
+|Avertissement du compilateur (niveau 4) C4932|__identifier (*identificateur*) et \__identifier (*identificateur*) sont impossibles à distinguer|
+|Avertissement du compilateur (niveau 1) C4934|'__delegate (Multicast)' est déconseillé, utilisez '\__delegate' à la place|
+|Avertissement du compilateur (niveau 1) C4935|Spécificateur d’accès à l’assembly modifié à partir de 'accès'|
+|Avertissement du compilateur (niveau 1, erreur) C4936|ce __declspec est pris en charge uniquement lorsqu'il est compilé avec /clr ou /clr:pure|
+|Avertissement du compilateur (niveau 4) C4937|impossible de distinguer 'text1' et 'text2' comme arguments de 'directive'|
+|Avertissement du compilateur (niveau 4) C4938|'var' : variable de réduction de la virgule flottante peut entraîner des résultats incohérents sous/fp : strict ou #pragma fenv_access|
+|Avertissement C4939 du compilateur|#pragma vtordisp est déconseillé et sera supprimé dans une mise en production ultérieure de Visual C++|
+|Avertissement du compilateur (niveau 1) C4944|'symbole' : Impossible d’importer le symbole de 'assembly1' : car 'symbole' existe déjà dans la portée actuelle|
+|[Avertissement du compilateur (niveau 1) C4945](compiler-warning-level-1-c4945.md)|'symbole' : Impossible d’importer le symbole de 'assembly1' : car 'symbole' a déjà été importé à partir d’un autre assembly 'assembly2'|
+|[Avertissement du compilateur (niveau 1) C4946](compiler-warning-level-1-c4946.md)|reinterpret_cast utilisé entre des classes connexes : 'classe1' et 'classe2'|
+|Avertissement du compilateur (niveau 1) C4947|'type_ou_membre' : marqué comme obsolète|
+|[Avertissement du compilateur (niveau 2) C4948](compiler-warning-level-2-c4948.md)|type de retour de 'accesseur' ne correspond pas au dernier type de paramètre de la méthode setter correspondante|
+|[Avertissement du compilateur (niveaux 1 et 4) C4949](compiler-warning-level-1-and-level-4-c4949.md)|les pragmas 'managed' et 'unmanaged' sont significatifs uniquement lors de la compilation avec ' / clr [ : option]'|
+|Avertissement du compilateur (niveau 1, erreur) C4950|'type_ou_membre' : marqué comme obsolète|
+|Avertissement du compilateur (niveau 1) C4951|'function' a été modifié depuis que les données de profil ont été regroupées ; données de profil de fonction non utilisées|
+|Avertissement du compilateur (niveau 1) C4952|'fonction' : aucune donnée de profil trouvée dans le programme de base de données 'pgd_file 'du|
+|Avertissement du compilateur (niveau 1) C4953|'function' Inline a été modifié depuis le rassemblement des données de profil ; données de profil non utilisées|
+|Avertissement C4954 du compilateur|'fonction' : non profilé (contient l’expression de switch __int64)|
+|Avertissement C4955 du compilateur|'importation2' : importation ignorée ; déjà importé à partir de 'importation1'|
+|Avertissement du compilateur (niveau 1, erreur) C4956|'type' : ce type n’est pas vérifiable|
+|Avertissement du compilateur (niveau 1, erreur) C4957|'cast' : cast explicite de 'cast de' en 'cast_to' n’est pas vérifiable|
+|Avertissement du compilateur (niveau 1, erreur) l’avertissement C4958|'opération' : opération arithmétique de pointeur n’est pas vérifiable|
+|Avertissement du compilateur (niveau 1, erreur) C4959|Impossible de définir 'type' de type non managé en/clr : safe, car l’accès à ses membres génère du code non vérifiable|
+|Avertissement du compilateur (niveau 4) C4960|'function' est trop grand pour être profilé|
+|Avertissement du compilateur (niveau 1) C4961|Aucune donnée de profil n’a été fusionnée dans 'fichier .pgd', les optimisations guidées par profil sont désactivées|
+|Avertissement du compilateur (niveau 4) C4962|'fonction' : les optimisations guidées par profil désactivées, car elles génèrent des incohérences au niveau des données de profil|
+|Avertissement du compilateur (niveau 1) C4963|'*description*' : données de profil introuvables ; d’autres options du compilateur ont été utilisées dans la génération instrumentée|
+|[Avertissement du compilateur (niveau 1) C4964](compiler-warning-level-1-c4964.md)|Aucune option d’optimisation ont été spécifiées ; les informations de profil ne seront pas collectées.|
+|[Avertissement du compilateur (niveau 1) C4965](compiler-warning-level-1-c4965.md)|boxing implicite de l’entier 0 ; utilisez nullptr ou un cast explicite|
+|Avertissement du compilateur (niveau 1) C4966|'*fonction*' a une annotation __code_seg avec le nom du segment non pris en charge, annotation est ignorée|
+|Avertissement C4970 du compilateur|constructeur délégué : objet cible ignoré, car '*type*' est statique|
+|Avertissement du compilateur (niveau 1) C4971|Ordre des arguments : \<objet cible >, \<fonction cible > de constructeur délégué est déconseillé, utilisez \<fonction cible >, \<objet cible = « » >|
+|Avertissement du compilateur (niveau 1, erreur) C4972|La modification ou le traitement direct du résultat d'une conversion unboxing comme lvalue est non vérifiable|
+|Avertissement du compilateur (niveau 1) C4973|'*symbole*' : marqué comme déconseillé|
+|Avertissement du compilateur (niveau 1) C4974|'*symbole*' : marqué comme déconseillé|
+|Avertissement du compilateur (niveau 3) C4981|Warbird : fonction '*fonction*' marquée comme __forceinline non inline, car elle contient une sémantique des exceptions|
+|Avertissement du compilateur (niveau 3) C4985|nom de symbole ' : attributs absents de la déclaration précédente.|
+|[Avertissement du compilateur C4986](compiler-warning-c4986.md)|'*déclaration*' : spécification d’exception ne correspond pas à la déclaration précédente|
+|Avertissement du compilateur (niveau 4) C4987|extension non standard utilisée : 'throw (...)'|
+|Avertissement du compilateur (niveau 4) C4988|'*variable*' : variable déclarée en dehors de la portée classe/fonction|
+|Avertissement du compilateur (niveau 4) C4989|'*type*' : type a des définitions en conflit.|
+|Avertissement du compilateur (niveau 3) C4990|Warbird : *message*|
+|Avertissement du compilateur (niveau 3) C4991|Warbird : fonction '*fonction*' marquée comme __forceinline non inline, car le niveau de protection de l’inlinee est supérieur à un parent|
+|Avertissement du compilateur (niveau 3) C4992|Warbird : fonction '*fonction*' marquée comme __forceinline non inline, car elle contient un assembly inline qui ne peut pas être protégé.|
+|[Avertissement du compilateur (niveau 3) C4995](compiler-warning-level-3-c4995.md)|'fonction' : nom a été marqué comme #pragma deprecated|
+|[Avertissement du compilateur (niveau 3) C4996](compiler-warning-level-3-c4996.md)|'*description*' : *message*|
+|Avertissement du compilateur (niveau 1) C4997|'classe' : une coclasse n’implémente pas d’interface COM ou de pseudo-interface|
+|Avertissement du compilateur (niveau 1) C4998|Échec du résultat attendu : *attente*(*valeur*)|
+|Avertissement C4999 du compilateur|Avertissement inconnu, choisissez la commande Support technique dans le menu aide de Visual C++ ou ouvrez le fichier d’aide le Support technique pour plus d’informations|
+|Avertissement C5022 du compilateur|'*type*' : plusieurs constructeurs de déplacement spécifiés|
+|Avertissement C5023 du compilateur|'*type*' : plusieurs opérateurs d’assignation de déplacement spécifiés|
+|Avertissement du compilateur (niveau 4) C5024|'*type*' : constructeur de déplacement a été implicitement défini comme étant supprimé|
+|Avertissement du compilateur (niveau 4) C5025|'*type*' : déplacer l’opérateur d’assignation a été implicitement défini comme étant supprimé|
+|Avertissement du compilateur (niveaux 1 et 4) C5026|'*type*' : constructeur de déplacement a été implicitement défini comme étant supprimé|
+|Avertissement du compilateur (niveaux 1 et 4) C5027|'*type*' : déplacer l’opérateur d’assignation a été implicitement défini comme étant supprimé|
+|Avertissement du compilateur (niveau 1) C5028|'*nom*' : alignement spécifié dans la déclaration antérieure (*nombre*) non spécifiée dans la définition|
+|Avertissement du compilateur (niveau 4) C5029|extension non standard utilisée : les attributs d’alignement en C++ s’appliquent aux variables, les membres de données et les types de balises uniquement|
+|Avertissement du compilateur (niveau 3) C5030|attribut '*attribut*' n’est pas reconnu|
+|Avertissement du compilateur (niveau 4) C5031|#pragma warning (pop) : incompatibilité probable, l’affichage d’état d’avertissement émis dans un autre fichier|
+|Avertissement du compilateur (niveau 4) C5032|détecté #pragma warning (push) sans Warning (pop) correspondant #pragma|
+|Avertissement du compilateur (niveau 1) C5033|'*classe de stockage*' n’est plus une classe de stockage pris en charge|
+|Avertissement C5034 du compilateur|utilisation d’intrinsèques '*intrinsèque*' provoque la fonction *fonction* doit être compilé comme code de l’invité|
+|Avertissement C5035 du compilateur|l’utilisation de fonctionnalité '*fonctionnalité*' provoque la fonction *fonction* doit être compilé comme code de l’invité|
+|Avertissement du compilateur (niveau 1) C5036|conversion de pointeur de fonction varargs lors de la compilation avec /hybrid:x86arm64 '*type1*'à'*type2*'|
+|Avertissement du compilateur (erreur) C5037|'*fonction membre*' : une définition hors ligne d’un membre d’un modèle de classe ne peut pas avoir d’arguments par défaut|

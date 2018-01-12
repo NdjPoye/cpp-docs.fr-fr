@@ -1,67 +1,75 @@
 ---
-title: "_bittestandset, _bittestandset64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_bittestandset_cpp"
-  - "_bittestandset64_cpp"
-  - "_bittestandset64"
-  - "_bittestandset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_bittestandset intrinsic"
-  - "_bittestandset64 intrinsic"
-  - "bts instruction"
+title: _bittestandset, _bittestandset64 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _bittestandset_cpp
+- _bittestandset64_cpp
+- _bittestandset64
+- _bittestandset
+dev_langs: C++
+helpviewer_keywords:
+- bts instruction
+- _bittestandset intrinsic
+- _bittestandset64 intrinsic
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0a4cdd4940ce5c75f1575b50d2cd411a04d6d31d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# _bittestandset, _bittestandset64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="bittestandset-bittestandset64"></a>_bittestandset, _bittestandset64
 **Section spécifique à Microsoft**  
   
  Générer une instruction qui examine le bit `b` de l'adresse `a`, retourne sa valeur actuelle et affecte la valeur 1 au bit.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-unsigned char _bittestandset(    long *a,    long b ); unsigned char _bittestandset64(    __int64 *a,    __int64 b );  
+unsigned char _bittestandset(  
+   long *a,  
+   long b  
+);  
+unsigned char _bittestandset64(  
+   __int64 *a,  
+   __int64 b  
+);  
 ```  
   
-#### Paramètres  
- \[in, out\] `a`  
+#### <a name="parameters"></a>Paramètres  
+ [in, out] `a`  
  Pointeur vers la mémoire à examiner.  
   
- \[in\] `b`  
+ [in] `b`  
  Position du bit à tester.  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  Bit à la position spécifiée.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`_bittestandset`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`_bittestandset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Cette routine est disponible uniquement en tant qu'intrinsèque.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // bittestandset.cpp  
@@ -137,13 +145,16 @@ int main()
 }  
 ```  
   
-  **Indicateurs : 0x2**  
-**Indicateurs : 0x6**  
-**Indicateurs : 0xe**  
-**Indicateurs : 0x6**  
-**Indicateurs : 0x4**  
-**Indicateurs : 0x0**   
-## FIN de la section spécifique à Microsoft  
+```Output  
+Flags: 0x2  
+Flags: 0x6  
+Flags: 0xe  
+Flags: 0x6  
+Flags: 0x4  
+Flags: 0x0  
+```  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+**FIN de la section spécifique à Microsoft**  
+  
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

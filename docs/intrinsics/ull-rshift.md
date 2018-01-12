@@ -1,65 +1,65 @@
 ---
-title: "__ull_rshift | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__ull_rshift"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ull_rshift, intrinsèque"
-  - "__ull_rshift, intrinsèque"
+title: __ull_rshift | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __ull_rshift
+dev_langs: C++
+helpviewer_keywords:
+- ull_rshift intrinsic
+- __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c0951a930ad5baec5b293aee0fe8e70c0a38a12f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# __ull_rshift
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="ullrshift"></a>__ull_rshift
+**Section spécifique à Microsoft**  
   
- sur x64, décalages une valeur 64 bits spécifié par le premier paramètre vers la droite selon un certain nombre de bits spécifié par le deuxième paramètre.  
+ sur x64, déplace une valeur 64 bits spécifiée par le premier paramètre à droite d’un nombre de bits spécifié par le deuxième paramètre.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-unsigned __int64 __ull_rshift(   
-   unsigned __int64 mask,    
-   int nBit   
+unsigned __int64 __ull_rshift(   
+   unsigned __int64 mask,    
+   int nBit   
 );  
 ```  
   
-#### Paramètres  
- \[in\] `mask`  
- La valeur entière 64 bits pour déplacer la droite.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `mask`  
+ La valeur d’entier 64 bits de décalage vers la droite.  
   
- \[in\] `nBit`  
- Le nombre de bits à déplacer, du modulo 32 sur x86, et du modulo 64 sur x64.  
+ [in] `nBit`  
+ Le nombre de bits de décalage, modulo 32 sur x86 et modulo 64 sur x64.  
   
-## Valeur de retour  
- Le masque déplacé par les bits d' `nBit` .  
+## <a name="return-value"></a>Valeur de retour  
+ Le masque décale `nBit` bits.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__ull_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- Si le deuxième paramètre est supérieur à 31 sur les ordinateurs x86 \(63 sur x64\), ce nombre est le modulo pris 32 \(64 sous x64\) pour déterminer le nombre de bits pour déplacer.  `ull` dans l'étiquette indique `unsigned long long (unsigned __int64)`.  
+## <a name="remarks"></a>Notes  
+ Si le deuxième paramètre est supérieur à 31 sur x86 (63 sur x64), ce nombre est effectuée modulo 32 (64 sur x64) pour déterminer le nombre de bits à décaler. Le `ull` dans le nom indique `unsigned long long (unsigned __int64)`.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // ull_rshift.cpp  
@@ -80,15 +80,15 @@ int main()
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 1  
 ```  
   
-### détail de FIN Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [\_\_ll\_lshift](../intrinsics/ll-lshift.md)   
- [\_\_ll\_rshift](../intrinsics/ll-rshift.md)   
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>Voir aussi  
+ [__ll_lshift](../intrinsics/ll-lshift.md)   
+ [__ll_rshift](../intrinsics/ll-rshift.md)   
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

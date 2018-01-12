@@ -1,29 +1,28 @@
 ---
-title: "Erreur irr&#233;cup&#233;rable RC1017 du compilateur de ressources  | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC1017"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC1017"
+title: "Erreur irrécupérable RC1017 du compilateur de ressources | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC1017
+dev_langs: C++
+helpviewer_keywords: RC1017
 ms.assetid: 62ac1356-4481-49a0-8873-36daf42ffdcd
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9f72177c9eebf079fef04d7c1bf23843eb154987
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Erreur irr&#233;cup&#233;rable RC1017 du compilateur de ressources 
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="resource-compiler-fatal-error-rc1017"></a>Erreur irrécupérable RC1017 du compilateur de ressources 
 expression constante entière non valide  
   
- L'expression d'une directive `#if` n'existe pas ou ne correspond pas à une constante.
+ L’expression dans une `#if` directive n’existe pas ou ne correspond pas à une constante.

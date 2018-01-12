@@ -1,34 +1,34 @@
 ---
-title: "Fonctions intrins&#232;ques du compilateur et langage assembleur | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Intrinsèques du compilateur et langage assembleur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: ddd51620-d01b-44cf-853b-e11420d13137
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e9f8c6db8b5359748f350d3c9da73fd0e527bf50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Fonctions intrins&#232;ques du compilateur et langage assembleur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-intrinsics-and-assembly-language"></a>Fonctions intrinsèques du compilateur et langage assembleur
 Cette section de la documentation contient des informations sur les intrinsèques du compilateur et le langage assembleur.  
   
-## Articles connexes  
+## <a name="related-articles"></a>Articles connexes  
   
 |Titre|Description|  
 |-----------|-----------------|  
-|[compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)|Décrit les fonctions intrinsèques disponibles dans Microsoft C et C\+\+ pour les architectures x86, ARM et x64.|  
-|[Assembleur inline](../assembler/inline/inline-assembler.md)|Explique comment utiliser l'assembleur inline de Visual C\/C\+\+ avec des processeurs x86 :|  
-|[ARM Assembler Reference](../assembler/arm/arm-assembler-reference.md)|Fournit des documents de référence sur Microsoft ARM Assembler \(ARMASM\) et les outils connexes.|  
-|[Microsoft Macro Assembler Reference](../assembler/masm/microsoft-macro-assembler-reference.md)|Fournit des documents de référence sur Microsoft Macro Assembler \(MASM\).|  
-|[Visual C\+\+](../top/visual-cpp-in-visual-studio-2015.md)|L'élément de niveau supérieur pour la documentation Visual C\+\+.|
+|[compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)|Décrit les fonctions intrinsèques disponibles dans Microsoft C et C++ pour les architectures x86, ARM et x64.|  
+|[Assembleur inline](../assembler/inline/inline-assembler.md)|Explique comment utiliser l'assembleur inline de Visual C/C++ avec des processeurs x86 :|  
+|[Référence de l’assembleur ARM](../assembler/arm/arm-assembler-reference.md)|Fournit des documents de référence sur Microsoft ARM Assembler (ARMASM) et les outils connexes.|  
+|[Informations de référence sur Microsoft Macro Assembler](../assembler/masm/microsoft-macro-assembler-reference.md)|Fournit des documents de référence sur Microsoft Macro Assembler (MASM).|  
+|[Visual C++](../top/visual-cpp-in-visual-studio.md)|L'élément de niveau supérieur pour la documentation Visual C++.|

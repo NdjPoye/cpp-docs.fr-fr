@@ -1,36 +1,35 @@
 ---
-title: "Avertissement du compilateur (niveau 2) C4250 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4250"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4250"
+title: Compilateur avertissement (niveau 2) C4250 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4250
+dev_langs: C++
+helpviewer_keywords: C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d92a337e3ded4b958bb9d1dbb7359d21f28d619c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 2) C4250
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-2-c4250"></a>Avertissement du compilateur (niveau 2) C4250
 'classe1' : hérite de 'classe2::membre' via la dominance  
   
- Deux ou plusieurs membres ont le même nom.  Celui de `class2` est hérité parce que c'est une classe de base pour les autres classes qui contenaient ce membre.  
+ Deux membres ou plus ont le même nom. Celui de `class2` est héritée car il s’agit d’une classe de base pour les autres classes qui contenaient ce membre.  
   
- Pour supprimer l'erreur C4250, utilisez le pragma [warning](../../preprocessor/warning.md).  
+ Pour supprimer l’erreur C4250, utilisez le [avertissement](../../preprocessor/warning.md) pragma.  
   
- Comme une classe de base virtuelle est partagée entre plusieurs classes dérivées, un nom dans une classe dérivée domine un nom dans une classe de base.  Par exemple, dans la hiérarchie de classes suivante, il existe deux définitions de func héritées dans un losange : l'instance de vbc::func\(\) dans la classe faible, et l'instance de dominant::func\(\) dans la classe dominante.  Un appel non qualifié de func\(\) par l'intermédiaire d'un objet de classe en losange, appelle toujours l'instance de dominate::func\(\).  Si la classe faible devait introduire une instance de func\(\), aucune définition ne dominerait, et l'appel serait signalé comme ambigu.  
+ Étant donné que la classe de base virtuelle est partagée entre plusieurs classes dérivées, un nom dans une classe dérivée domine un nom dans une classe de base. Par exemple, la hiérarchie de classe suivante, il existe deux définitions de func héritées dans un losange : l’instance ::Func() via la classe faible et le dominante :: func() via la classe dominante. Un appel non qualifié de func() via un objet de classe en losange, appelle toujours l’instance dominate::func.  Si la classe faible devait introduire une instance de func(), ni dépasse celle de définition et l’appel est marqué comme ambiguë.  
   
 ```  
 // C4250.cpp  
@@ -54,8 +53,8 @@ int main() {
 }  
 ```  
   
-## Exemple  
- L'exemple suivant génère l'erreur C4250 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C4250.  
   
 ```  
 // C4250_b.cpp  
@@ -86,8 +85,8 @@ int main() {
 }  
 ```  
   
-## Exemple  
- Cet exemple illustre une situation plus complexe.  L'exemple suivant génère l'erreur C4250 :  
+## <a name="example"></a>Exemple  
+ Cet exemple montre une situation plus complexe. L’exemple suivant génère l’erreur C4250.  
   
 ```  
 // C4250_c.cpp  

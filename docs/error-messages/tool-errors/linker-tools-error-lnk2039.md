@@ -1,40 +1,38 @@
 ---
-title: "Erreur des outils &#201;diteur de liens LNK2039 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2039"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2039"
+title: "LNK2039 d’erreur des outils Éditeur de liens | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2039
+dev_langs: C++
+helpviewer_keywords: LNK2039
 ms.assetid: eaa296bd-4901-41f6-8410-6d03ee827144
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 441765d85ce65a80102ed94b3f4394ae48c0e29f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Erreur des outils &#201;diteur de liens LNK2039
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-l'importation du '\<type\>' de la classe de référence qui est défini dans another.obj; il doit être soit importé soit défini, mais pas les deux  
+# <a name="linker-tools-error-lnk2039"></a>Erreur des outils Éditeur de liens LNK2039
+l’importation de la classe ref\<type >' qui est définie dans another.obj ; il doit être importée ou définie, mais pas les deux  
   
- La classe '\<`type`\>' de référence est importée dans le fichier .obj spécifié mais est également définie dans un autre fichier .obj.  Cette condition peut provoquer l'échec de l'exécution ou un autre comportement inattendu.  
+ La classe ref ' <`type`>' est importé dans le fichier .obj spécifié mais est également défini dans un autre fichier .obj. Cette condition peut entraîner la défaillance d’exécution ou tout autre comportement inattendu.  
   
-### Pour corriger cette erreur  
+### <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Vérifiez si '`type`' doit être défini dans l'autre fichier .obj et contrôlez s'il doit être importé à partir du fichier .winmd.  
+1.  Vérifiez si «`type`' doit être défini dans l’autre fichier .obj et vérifier si elle doit être importé à partir du fichier .winmd.  
   
-2.  Supprimez soit la définition soit l'importation.  
+2.  Supprimer la définition ou l’importation.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Erreurs et avertissements des outils Éditeur de liens](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)   
  [Erreur des outils Éditeur de liens LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)

@@ -1,33 +1,32 @@
 ---
-title: "Avertissement de ligne de commande D9043 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "D9043"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "D9043"
+title: Avertissement de ligne de commande D9043 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: D9043
+dev_langs: C++
+helpviewer_keywords: D9043
 ms.assetid: 9263e28d-217b-414c-bfb6-86efd3c27a77
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a8986926db2c32d9ae5ca73517c74ae9625e6bf5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement de ligne de commande D9043
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-valeur 'niveau\_avertissement' non valide pour 'option\_compilateur' ; '4999' pris par défaut ; les avertissements liés à l'analyse du code ne sont pas associés à des niveaux d'avertissement  
+# <a name="command-line-warning-d9043"></a>Avertissement de ligne de commande D9043
+valeur non valide 'niveau_avertissement ' non valide pour 'option_compilateur' ; en supposant que 4999 ; Avertissements d’analyse du code ne sont pas associés à des niveaux d’avertissement  
   
-## Exemple  
- L'exemple suivant génère l'erreur C9043 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C9043 :.  
   
 ```  
 // D9043.cpp  

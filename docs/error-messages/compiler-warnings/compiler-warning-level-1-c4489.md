@@ -1,37 +1,36 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4489 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4489"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4489"
+title: Compilateur avertissement (niveau 1) C4489 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4489
+dev_langs: C++
+helpviewer_keywords: C4489
 ms.assetid: 43b51c8c-27b5-44c9-b974-fe4b48f4896f
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 06f12ddb0289ad8c4d6acbfa6643b8426f64f1c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4489
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'spécificateur' : non autorisé sur la méthode d'interface 'méthode' ; les spécificateurs de substitution sont uniquement autorisés sur les méthodes des classes ref et value  
+# <a name="compiler-warning-level-1-c4489"></a>Avertissement du compilateur (niveau 1) C4489
+'spécificateur' : non autorisé sur une méthode d’interface 'méthode' ; remplacer les spécificateurs sont autorisés uniquement sur les méthodes de classe ref classe et la valeur  
   
- Un mot clé spécificateur a été utilisé incorrectement dans une méthode d'interface.  
+ Un mot clé spécificateur a été utilisé incorrectement sur une méthode d’interface.  
   
- Pour plus d'informations, consultez [Spécificateurs de substitution](../../windows/override-specifiers-cpp-component-extensions.md).  
+ Pour plus d’informations, consultez [des spécificateurs de substitution](../../windows/override-specifiers-cpp-component-extensions.md).  
   
-## Exemple  
- L'exemple suivant génère l'erreur C4489 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C4489.  
   
 ```  
 // C4489.cpp  

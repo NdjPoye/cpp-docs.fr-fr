@@ -15,16 +15,17 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b4d2f74f23c58b234f6962f9a6a17ceec0f1bbc9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea23a13a338e5d09eac0714914d9c1020b5908cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3390"></a>Erreur du compilateur C3390
-'type_arg' : argument de type non valide pour le paramètre générique 'param' du générique 'generic_type', doit être un type référence  
+'type_arg' : argument de type non valide pour le paramètre générique 'param' du générique 'generic_type', doit être un type référence  
   
-Un type générique a été instancié de manière incorrecte.  Vérifiez la définition du type.  Pour plus d’informations, consultez [Génériques](../../windows/generics-cpp-component-extensions.md).  
+Un type générique a été instancié de manière incorrecte.  Vérifiez la définition du type.  Pour plus d’informations, consultez la page [Génériques](../../windows/generics-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Exemple  
 Le premier exemple utilise c# pour créer un composant qui contient un type générique qui a certaines contraintes qui ne sont pas pris en charge lors de la création de types génériques dans le langage c++ / CLR. Pour plus d’informations, consultez [Contraintes sur les paramètres de type](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).  

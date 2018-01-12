@@ -1,32 +1,32 @@
 ---
-title: "&#201;valuateur d&#39;expression, erreur CXX0056 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0056"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0056"
-  - "CXX0056"
+title: "Évaluateur d’expression, erreur CXX0056 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0056
+dev_langs: C++
+helpviewer_keywords:
+- CXX0056
+- CAN0056
 ms.assetid: a67c90e0-933c-43f2-a548-0ba272920331
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 879918d6455c388ddaed77814ce9eacd33448e59
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# &#201;valuateur d&#39;expression, erreur CXX0056
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-erreur à la ligne  
+# <a name="expression-evaluator-error-cxx0056"></a>Évaluateur d'expression, erreur CXX0056
+erreur dans le numéro de ligne  
   
  Un numéro de ligne non valide a été spécifié.  
   
- Erreur identique à CAN0056.
+ Cette erreur est identique à CAN0056.

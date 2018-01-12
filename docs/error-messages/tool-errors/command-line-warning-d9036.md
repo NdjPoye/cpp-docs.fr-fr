@@ -1,30 +1,28 @@
 ---
-title: "Avertissement de ligne de commande D9036 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "D9036"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "D9036"
+title: Avertissement de ligne de commande D9036 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: D9036
+dev_langs: C++
+helpviewer_keywords: D9036
 ms.assetid: 68276e84-8d4e-4d4a-a9db-2874c81dfe66
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 060462a1d3b42e543aa976dcf34e7494803da93f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement de ligne de commande D9036
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'option\_2' au lieu de 'option\_1'  
+# <a name="command-line-warning-d9036"></a>Avertissement de ligne de commande D9036
+'option_2' au lieu de 'option_1'  
   
- L'avertissement D9036 est la suite de [Avertissement de ligne de commande D9035](../../error-messages/tool-errors/command-line-warning-d9035.md).
+ Avertissement D9036 est la suite de [avertissement de ligne de commande D9035](../../error-messages/tool-errors/command-line-warning-d9035.md).

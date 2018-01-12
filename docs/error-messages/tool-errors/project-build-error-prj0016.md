@@ -1,43 +1,42 @@
 ---
-title: "Erreur de g&#233;n&#233;ration de projet PRJ0016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0016"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0016"
+title: "PRJ0016 d’erreur de Build de projet | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0016
+dev_langs: C++
+helpviewer_keywords: PRJ0016
 ms.assetid: e9745336-883a-4c70-9c40-7753e02f0325
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 056a033ce95926ca8bbf59e6bbc7b11656fcd015
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Erreur de g&#233;n&#233;ration de projet PRJ0016
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les paramètres de sécurité de l'utilisateur empêchent la création du processus.Ces paramètres sont requis pour la génération.  
+# <a name="project-build-error-prj0016"></a>Erreur de génération de projet PRJ0016
+Les paramètres de sécurité de l’utilisateur empêchent le processus de création. Ces paramètres sont requis pour la génération.  
   
- Vous avez ouvert une session en tant qu'utilisateur ne disposant pas des autorisations nécessaires pour créer des processus à l'aide d'un processus.  Vous devez modifier les niveaux d'autorisation de ce compte d'utilisateur ou contacter votre administrateur de compte.  
+ Vous êtes connecté en tant qu’utilisateur qui ne dispose pas des autorisations nécessaires pour créer des processus à l’aide d’un processus. Vous devez modifier les niveaux d’autorisation pour ce compte d’utilisateur, ou contactez votre administrateur de compte.  
   
- Cette erreur peut également se produire si la clé de Registre suivante est définie :  
+ Cette erreur peut également se produire si la valeur de la clé de Registre suivante :  
   
- \\\\HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\RestrictRun  
+ \\\HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun  
   
- Pour corriger cette erreur, supprimez la clé RestrictRun.  Si cette clé de Registre est nécessaire, ajoutez **vcspawn.exe** à la liste des entrées dans la clé.  
+ Pour résoudre cette erreur, supprimez la clé RestrictRun. Si cette clé de Registre est nécessaire, ajoutez **vcspawn.exe** à la liste des entrées dans la clé.  
   
- Cette erreur peut également provenir du fait que votre paramètre de stratégie n'inclut pas VCSpawn.exe sous la clé de Registre HKEY\_CURRENT\_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\RestrictRun comme programme Windows autorisé pour ce compte d'utilisateur.  
+ Une autre cause de cette erreur est que le paramètre de stratégie n’inclut pas VCSpawn.exe sous la clé de Registre HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun comme programme Windows autorisé pour ce compte d’utilisateur.  
   
- Pour plus d'informations, consultez :  
+ Pour plus d’informations, consultez :  
   
--   L'article 324153 de la Base de connaissances, qui est disponible sur [http:\/\/support.microsoft.com\/default.aspx?scid\=kb;en\-us;324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153).  
+-   Base de connaissances l’article 324153, qui est disponible sur [http://support.microsoft.com/default.aspx?scid=kb;en-us;324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153).  
   
--   [Respect des paramètres de la stratégie système](http://msdn.microsoft.com/library/aa372139), section « Exécuter uniquement les applications Windows autorisées ».
+-   [Respect des paramètres de stratégie système](http://msdn.microsoft.com/library/aa372139), la section « Exécuter uniquement les applications Windows autorisées ».

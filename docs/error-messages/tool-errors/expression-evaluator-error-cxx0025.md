@@ -1,34 +1,34 @@
 ---
-title: "&#201;valuateur d&#39;expression, erreur CXX0025 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0025"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0025"
-  - "CXX0025"
+title: "Évaluateur d’expression, erreur CXX0025 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0025
+dev_langs: C++
+helpviewer_keywords:
+- CAN0025
+- CXX0025
 ms.assetid: 3e2fb541-63b3-46ac-9f93-3dadb253bcf6
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3f4154ca0aa0dcebecce40ed60420be0da6de456
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# &#201;valuateur d&#39;expression, erreur CXX0025
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-l'opérateur requiert struct\/union  
+# <a name="expression-evaluator-error-cxx0025"></a>Évaluateur d'expression, erreur CXX0025
+l’opérateur requiert struct/union  
   
- Un opérateur qui requiert une expression de type `struct` ou **union** est appliqué à une expression qui n'est pas de type `struct` ou **union**.  
+ Un opérateur qui prend une expression de `struct` ou **union** type a été appliqué à une expression qui n’est pas un `struct` ou **union**.  
   
- Les composants des variables de classe, de structure ou d'union doivent avoir un nom qualifié complet.  Il n'est pas possible d'entrer un composant sans sa spécification complète.  
+ Composants de la classe, structure ou unions variables doivent avoir un nom qualifié complet. Composants ne peut pas être écrit sans spécification complète.  
   
- Erreur identique à CAN0025.
+ Cette erreur est identique à CAN0025.

@@ -1,35 +1,33 @@
 ---
-title: "Avertissement du compilateur (niveau 4) C4564 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4564"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4564"
+title: Compilateur avertissement (niveau 4) C4564 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4564
+dev_langs: C++
+helpviewer_keywords: C4564
 ms.assetid: 555b301b-313e-4262-9f81-eb878674be60
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 25f9f8755acafd71a9ac75a68f601660b781746a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 4) C4564
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-la méthode 'méthode' de la classe 'classe' définit un paramètre par défaut non pris en charge 'paramètre'  
+# <a name="compiler-warning-level-4-c4564"></a>Avertissement du compilateur (niveau 4) C4564
+la méthode 'méthode' de la classe 'class' définit le paramètre par défaut non pris en charge 'paramètre'  
   
- Le compilateur a détecté une méthode avec un ou plusieurs paramètres comportant des valeurs par défaut.  La ou les valeurs par défaut des paramètres seront ignorées à l'appel de la méthode ; spécifiez explicitement les valeurs de ces paramètres.  Si vous ne spécifiez pas explicitement de valeurs pour ces paramètres, le compilateur C\+\+ générera une erreur.  
+ Le compilateur a détecté une méthode avec un ou plusieurs paramètres avec valeurs par défaut. Les valeurs par défaut pour les paramètres seront ignorées lorsque la méthode est appelée ; spécifier explicitement des valeurs pour ces paramètres. Si vous ne spécifiez pas explicitement de valeurs pour ces paramètres, le compilateur C++ génère une erreur.  
   
- Soit la dll ci\-dessous créée avec Visual Basic, qui autorise les paramètres par défaut sur les arguments de méthode :  
+ Soit la DLL ci-dessous créée avec Visual Basic, ce qui permet des paramètres par défaut sur les arguments de méthode :  
   
 ```  
 ' C4564.vb  
@@ -41,7 +39,7 @@ Public class TestClass
 End class  
 ```  
   
- L'exemple C\+\+ ci\-dessous utilise la .dll créée avec Visual Basic.  
+ Et l’exemple C++ suivant qui utilise la DLL créée avec Visual Basic,  
   
 ```  
 // C4564.cpp  

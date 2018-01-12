@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba55de8c308e7f2a76559006ff5dad0a7fe6f5d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 390f094b05994dcf2b3b2351a24f163b06554f84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="messages-and-commands-in-the-framework"></a>Messages et commandes dans le Framework
 Les applications écrites pour Microsoft Windows sont « orientées messages ». En réponse aux événements tels que les clics de souris, les séquences de touches, les mouvements de la fenêtre, etc., Windows envoie des messages à la fenêtre appropriée. Applications Framework traitent les messages Windows comme toute autre application pour Windows. Mais le framework fournit également quelques améliorations qui simplifient le traitement des messages plus facile et plus faciles à gérer une meilleure encapsulé.  

@@ -1,36 +1,37 @@
 ---
-title: "__inbyte | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__inbyte"
-  - "__inbyte_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "in, instruction"
-  - "__inbyte, intrinsèque"
+title: __inbyte | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __inbyte
+- __inbyte_cpp
+dev_langs: C++
+helpviewer_keywords:
+- in instruction
+- __inbyte intrinsic
 ms.assetid: 03b61799-2a08-474d-adc4-2cbf7c81a4d5
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 20781d2e8f925cec9bacb8ca125f68c3e9f7c201
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# __inbyte
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="inbyte"></a>__inbyte
+**Section spécifique à Microsoft**  
   
- Génère des instructions d' `in` , en retournant la lecture d'octets du port spécifié par `Port`.  
+ Génère le `in` instruction, retournant un octet lu à partir du port spécifié par `Port`.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 unsigned char __inbyte(  
@@ -38,25 +39,25 @@ unsigned char __inbyte(
 );  
 ```  
   
-#### Paramètres  
- \[in\] `Port`  
+#### <a name="parameters"></a>Paramètres  
+ [in] `Port`  
  Le port à lire.  
   
-## Valeur de retour  
- La lecture d'octets du port spécifié.  
+## <a name="return-value"></a>Valeur de retour  
+ Octet lu dans le port spécifié.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__inbyte`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## détail de FIN Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Notes  
- Cette routine est uniquement disponible sous forme intrinsèque.  
+## <a name="remarks"></a>Notes  
+ Cette routine est disponible uniquement en tant qu'intrinsèque.  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

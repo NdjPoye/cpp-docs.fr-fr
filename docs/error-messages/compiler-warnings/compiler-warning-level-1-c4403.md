@@ -1,31 +1,30 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4403 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4403"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4403"
+title: Compilateur avertissement (niveau 1) C4403 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4403
+dev_langs: C++
+helpviewer_keywords: C4403
 ms.assetid: d95597c9-4762-4f33-86e4-1d98f0e80d52
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: db9c0c07ebab0bfc36a39876db1773d5af102c64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4403
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4403"></a>Avertissement du compilateur (niveau 1) C4403
 opérateur PTR non conforme  
   
- Un opérateur PTR est utilisé de façon inappropriée dans du code assembleur inline.  
+ Un opérateur PTR est utilisé de façon inappropriée dans code assembleur inline.  
   
- Le compilateur a ignoré l'opérateur PTR.
+ Le compilateur a ignoré l’opérateur PTR.

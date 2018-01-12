@@ -1,63 +1,63 @@
 ---
-title: "__writemsr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__writemsr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Instruction d’écriture de Registre spécifique à un modèle"
-  - "wrmsr, instruction"
-  - "__writemsr, intrinsèque"
+title: __writemsr | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __writemsr
+dev_langs: C++
+helpviewer_keywords:
+- Write Model Specific Register instruction
+- wrmsr instruction
+- __writemsr intrinsic
 ms.assetid: 938b1553-51a8-4822-a818-6bed79b0fde5
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9a4b60fcc303afcb0c645561009279dd9fced8db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# __writemsr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="writemsr"></a>__writemsr
+**Section spécifique à Microsoft**  
   
- Génère écrivent pour modéliser les instructions spécifiques de registre \(`wrmsr`\).  
+ Génère l’écriture dans le Registre spécifique à un modèle (`wrmsr`) instruction.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-void __writemsr(   
-   unsigned long Register,   
-   unsigned __int64 Value   
+void __writemsr(   
+   unsigned long Register,   
+   unsigned __int64 Value   
 );  
 ```  
   
-#### Paramètres  
- \[in\] `Register`  
- le registre spécifique de modèle.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `Register`  
+ Le Registre spécifique du modèle.  
   
- \[in\] `Value`  
+ [in] `Value`  
  Valeur à écrire.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__writemsr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## Notes  
- Cette fonction peut uniquement être utilisée en mode noyau, et cette routine est uniquement disponible sous forme intrinsèque.  
+## <a name="remarks"></a>Notes  
+ Cette fonction peut uniquement être utilisée en mode noyau, et cette routine est disponible uniquement comme intrinsèque.  
   
-## détail de FIN Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

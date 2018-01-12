@@ -1,7 +1,7 @@
 ---
 title: Erreurs de Build et des avertissements projet (PRJxxxx) | Documents Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -13,11 +13,15 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 095994d3c7545d214cc835823b8d4069652ccf19
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 183bbc0cfce9ad0ac049380acf89dbe610999a7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-build-errors-and-warnings-prjxxxx"></a>Erreurs et avertissements de génération de projet (PRJxxxx)
-Cette section est une référence des erreurs générées par les outils de génération. Pour obtenir de l’aide sur un message d’erreur particulier, cliquez sur un numéro d’erreur dans la fenêtre Sortie et appuyez sur F1 ou tapez le numéro d’erreur dans le **recherchez** zone dans l’Index.
+
+Cette section est une référence des erreurs générées par le projet des outils de génération.
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]

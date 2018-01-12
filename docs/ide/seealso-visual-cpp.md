@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bd43a5252481a8b21220dac14248ac5ae9f01d09
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2e1d50162989e5148cd0755afb48f4413ce51269
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltseealsogt-visual-c"></a>&lt;seealso&gt; (Visual C++)
 La balise \<seealso> vous permet de spécifier le texte que vous souhaitez voir apparaître dans une section Voir aussi. Utilisez [\<see>](../ide/see-visual-cpp.md) pour spécifier un lien à partir de l’intérieur du texte.  
@@ -42,7 +43,7 @@ La balise \<seealso> vous permet de spécifier le texte que vous souhaitez voir 
   
  Pour plus d’informations sur la création d’une référence cref à un type générique, consultez [\<see>](../ide/see-visual-cpp.md).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Compilez avec [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  
   
  Pour obtenir un exemple d’utilisation de \<seealso>, consultez [\<summary>](../ide/summary-visual-cpp.md).  

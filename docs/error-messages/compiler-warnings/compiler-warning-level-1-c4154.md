@@ -1,34 +1,33 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4154 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4154"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4154"
+title: Compilateur avertissement (niveau 1) C4154 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4154
+dev_langs: C++
+helpviewer_keywords: C4154
 ms.assetid: 4511afeb-e893-4cc6-83b6-4c7a0477f76b
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d4568c107bab90587054310f2cd6b7aa3ce8f199
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4154
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-suppression d'une expression array ; conversion en pointeur fournie  
+# <a name="compiler-warning-level-1-c4154"></a>Compilateur avertissement (niveau 1) C4154
+suppression d’une expression de tableau ; conversion en pointeur fournie  
   
- Étant donné que vous ne pouvez pas utiliser `delete` sur un tableau, le compilateur convertit le tableau en pointeur.  
+ Vous ne pouvez pas utiliser `delete` sur un tableau, par conséquent, le compilateur convertit le tableau en un pointeur.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // C4154.cpp  

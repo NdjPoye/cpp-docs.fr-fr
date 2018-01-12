@@ -1,34 +1,33 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4550 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4550"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4550"
+title: Compilateur avertissement (niveau 1) C4550 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4550
+dev_langs: C++
+helpviewer_keywords: C4550
 ms.assetid: f902b4ed-5f17-48ea-b693-92f4fb8c8054
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 08b0e586500b4de2ed0005d118f6302e67ecc7d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Avertissement du compilateur (niveau 1) C4550
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-l'expression évalue une fonction dans laquelle manque une liste d'arguments  
+# <a name="compiler-warning-level-1-c4550"></a>Avertissement du compilateur (niveau 1) C4550
+expression correspond à une fonction qui n’a pas une liste d’arguments  
   
- Il manque une liste d'arguments dans un pointeur vers une fonction déréférencée.  
+ Il manque une liste d’arguments un pointeur déréférencé à une fonction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // C4550.cpp  

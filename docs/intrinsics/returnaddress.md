@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7cc2682aa4c6d4662e188911dab0d0a61baf49ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d207fcba6846d0a5e599d6273f5b35bb554bda40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="returnaddress"></a>_ReturnAddress
 ## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
   
  Lorsque `_ReturnAddress` est utilisée dans un programme compilé avec [/CLR](../build/reference/clr-common-language-runtime-compilation.md), la fonction contenant le `_ReturnAddress` appel sera compilé dans une fonction native. Lorsqu’une fonction compilée comme géré appelle la fonction contenant `_ReturnAddress`, `_ReturnAddress` peut ne pas fonctionner comme prévu.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Fichier d’en-tête** \<intrin.h >  
   
 ## <a name="example"></a>Exemple  

@@ -1,32 +1,32 @@
 ---
-title: "&#201;valuateur d&#39;expression, erreur CXX0053 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0053"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0053"
-  - "CXX0053"
+title: "Évaluateur d’expression, erreur CXX0053 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0053
+dev_langs: C++
+helpviewer_keywords:
+- CAN0053
+- CXX0053
 ms.assetid: fe74ed9e-9241-4df1-881f-104348e296c6
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3701ae770dc26f43d97fd1af110f8f1d73d3f117
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# &#201;valuateur d&#39;expression, erreur CXX0053
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-le symbole trouvé pendant la liaison des points d'arrêt n'est pas celui d'une fonction  
+# <a name="expression-evaluator-error-cxx0053"></a>Évaluateur d'expression, erreur CXX0053
+le symbole trouvé pendant la liaison des points d’arrêt  
   
- Un symbole utilisé comme point d'arrêt n'est pas une fonction.  Vous pouvez provoquer cette erreur en spécifiant une donnée membre comme point d'arrêt.  
+ Un symbole utilisé comme point d’arrêt n’a pas une fonction. Spécification d’un membre de données comme un point d’arrêt peut provoquer cette erreur.  
   
- Erreur identique à CAN0053.
+ Cette erreur est identique à CAN0053.

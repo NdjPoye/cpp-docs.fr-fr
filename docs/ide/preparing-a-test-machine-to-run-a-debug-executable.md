@@ -1,47 +1,47 @@
 ---
-title: "Pr&#233;paration d&#39;un ordinateur de test pour lancer un ex&#233;cutable de d&#233;bogage | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "exécutable de débogage, préparer un ordinateur de test pour lancer un"
+title: "Préparation d’un ordinateur de Test pour exécuter un exécutable de débogage | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 344f413eb2325156996700b6975826600ab997f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Pr&#233;paration d&#39;un ordinateur de test pour lancer un ex&#233;cutable de d&#233;bogage
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Pour préparer un ordinateur à tester la version debug d'une application développée en Visual C\+\+, vous devez déployer les versions debug des DLLs des bibliothèques Visual C\+\+ dont l'application dépend.  Pour identifier les DLLs à déployer, suivez les étapes présentées dans [Fonctionnement des dépendances d'une application Visual C\+\+](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md).  En général, les versions debug des DLL de bibliothèque Visual C\+\+ ont un nom qui se termine par « d » ; par exemple, la version debug de msvcr100.dll se nomme msvcr100d.dll.  
+# <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Préparation d'un ordinateur de test pour lancer un exécutable de débogage
+Pour préparer un ordinateur à tester la version debug d'une application développée en Visual C++, vous devez déployer les versions debug des DLL de la bibliothèque Visual C++ dont l'application dépend. Pour identifier les DLL doivent être déployées, suivez les étapes de [comprendre les dépendances d’une Application Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). En général, les versions debug des DLL de la bibliothèque Visual C++ ont un nom qui se termine par "d" ; par exemple, la version debug de msvcr100.dll se nomme msvcr100d.dll.  
   
 > [!NOTE]
->  Les versions debug d'une application ne sont pas redistribuables , et les versions debug des DLLs de la bibliothèques Visual C\+\+ ne le sont pas non plus.  Vous pouvez déployer les versions debug des applications et les DLL Visual C\+\+ uniquement à vos ordinateurs, dans le seul but du débogage et du test des applications sur un ordinateur qui ne dispose pas Visual Studio installée.  Pour plus d'informations, consultez [Redistribution des fichiers Visual C\+\+](../ide/redistributing-visual-cpp-files.md).  
+>  Les versions debug d'une application ne sont pas redistribuables, et les versions debug des DLL de la bibliothèque Visual C++ ne le sont pas non plus. Vous pouvez déployer les versions debug des applications et des DLL Visual C++ uniquement sur vos autres ordinateurs, dans le seul but de déboguer et de tester les applications sur un ordinateur où Visual Studio n'est pas installé. Pour plus d'informations, consultez [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).  
   
- Il existe trois façons de déployer les versions debug des DLLs de la bibliothèques Visual C\+\+ en même temps que la version debug d'une application :  
+ Il existe trois façons de déployer les versions debug des DLL de la bibliothèque Visual C++ ainsi que la version debug d'une application :  
   
--   Utilisez le déploiement central pour installer une version debug d'une DLL Visual C\+\+ particulière dans le répertoire %windir%\\system32\\ en utilisant un projet d'installation qui inclut les modules de fusion pour la bonnes version de bibliothèque et architecture de votre application.  Les modules de fusion sont trouvés dans Program Files ou Program Files \(x86\) répertoire\\Fichiers communs\\Modules de fusion\\.  La version Debug d'un module de fusion a le débogage dans l'exemple de namefor, Microsoft\_VC110\_DebugCRT\_x86.msm.  Un exemple de ce déploiement se trouve dans [Procédure pas à pas : déploiement d'une application Visual C\+\+ à l'aide d'un projet d'installation](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).  
+-   Utilisez le déploiement central pour installer une version debug d’une DLL Visual C++ particulière dans le répertoire %windir%\system32\ en utilisant un projet d’installation qui inclut des modules de fusion pour la version et l’architecture de bibliothèque appropriées de votre application. Les modules de fusion se trouvent dans le répertoire Program Files (x86) \Common Modules ou de Program Files\\. La version debug d’un module de fusion a un nom contenant le mot Debug, par exemple, Microsoft_VC110_DebugCRT_x86.msm. Un exemple de ce déploiement se trouve dans [procédure pas à pas : déploiement d’un Visual C++ Application à l’aide d’un projet d’installation](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).  
   
--   Utilisez le déploiement local pour installer une version debug d'une DLL Visual C\+\+ particulière dans le répertoire d'installation de l'application en utilisant des fichiers qui sont fournis dans le répertoire Program Files ou Program Files \(x86\) \\Microsoft Visual Studio \<version\>\\VC\\redist\\Debug\_NonRedist\\.  
+-   Utilisez le déploiement local pour installer une version debug d’une DLL Visual C++ particulière dans le répertoire d’installation de l’application à l’aide de fichiers qui sont fournis dans le répertoire Program Files (x86) \Microsoft Visual Studio ou de Program Files \<version > \VC\redist\Debug_NonRedist\\.  
   
     > [!NOTE]
-    >  Pour le débogage distant de votre application générée à l'aide de Visual C\+\+ 2005 ou Visual C\+\+ 2008 sur un autre ordinateur, vous devez déployer les versions Debug des DLL de bibliothèque Visual C\+\+ comme assemblys côte à côte partagés.  Utilisez soit un projet d'installation soit Windows Installer pour installer les modules de fusion correspondants.  
+    >  Pour le débogage distant de votre application développée en Visual C++ 2005 ou Visual C++ 2008 sur un autre ordinateur, vous devez déployer les versions debug des DLL de la bibliothèque Visual C++ en tant qu'assemblys côte à côte partagés. Vous pouvez utiliser un projet d’installation ou Windows Installer pour installer les modules de fusion correspondants.  
   
--   Utilisez l'option**Déployer** dans la boîte de dialogue **Gestionnaire de configurations** dans Visual Studio pour copier la sortie de projet et d'autres fichiers sur l'ordinateur distant.  Un exemple de ce déploiement se trouve dans [Configuration du débogage distant pour un projet Visual Studio](../Topic/Set%20Up%20Remote%20Debugging%20for%20a%20Visual%20Studio%20Project.md).  
+-   Utilisez l’option**déployer** option dans le **Configuration Manager** boîte de dialogue dans Visual Studio pour copier la sortie du projet et autres fichiers à l’ordinateur distant. 
   
- Après avoir installé les bibliothèques Visual C\+\+, exécutez un débogueur distant sur un partage réseau.  Pour plus d'informations sur le débogage distant, consultez [Configurer les outils de contrôle à distance sur le périphérique](../Topic/Set%20Up%20the%20Remote%20Tools%20on%20the%20Device.md).  
+ Après avoir installé les DLL Visual C++, vous pouvez exécuter un débogueur distant sur un partage réseau. Pour plus d’informations sur le débogage distant, consultez [débogage distant](/visualstudio/debugger/remote-debugging.md).  
   
-## Voir aussi  
- [Configurer les outils de contrôle à distance sur le périphérique](../Topic/Set%20Up%20the%20Remote%20Tools%20on%20the%20Device.md)   
- [Déploiement dans Visual C\+\+](../ide/deployment-in-visual-cpp.md)   
- [Options de ligne de commande Windows Installer](http://msdn.microsoft.com/library/windows/desktop/aa367988.aspx)   
- [Exemples de déploiement](../ide/deployment-examples.md)
+## <a name="see-also"></a>Voir aussi  
+ 
+ [Déploiement dans Visual C++](../ide/deployment-in-visual-cpp.md)   
+ [Options de ligne de commande de Windows Installer](http://msdn.microsoft.com/library/windows/desktop/aa367988.aspx)   
+ [Exemples de déploiement](../ide/deployment-examples.md) [le débogage distant](/visualstudio/debugger/remote-debugging.md)

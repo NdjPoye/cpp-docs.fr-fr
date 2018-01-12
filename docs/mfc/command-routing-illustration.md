@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 03f9547197e2d5dca26fd17c9d4090eb20e795ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24ac591005d5df6b18102d296352b8b2528ba839
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-routing-illustration"></a>Illustration du routage des commandes
 Pour illustrer cela, envisagez d’un message de commande à partir d’un élément de menu Effacer tout dans le menu Edition d’une application MDI. Supposons que la fonction de gestionnaire pour cette commande est une fonction membre de classe de document de l’application. Voici comment la commande parvient jusqu'à son gestionnaire d’une fois que l’utilisateur choisit l’élément de menu :  

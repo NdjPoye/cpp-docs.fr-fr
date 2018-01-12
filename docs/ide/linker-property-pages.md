@@ -1,62 +1,70 @@
 ---
-title: "Pages de propri&#233;t&#233;s de l&#39;&#201;diteur de liens | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.RegisterOutput"
-  - "VC.Project.VCLinkerTool.IgnoreImportLibrary"
-  - "VC.Project.VCLinkerTool.UseLibraryDependencyInputs"
-  - "VC.Project.VCLinkerTool.LinkLibraryDependencies"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "redirection par utilisateur"
-  - "pages de propriétés de l'Éditeur de liens"
+title: "Pages de propriétés de l’éditeur de liens | Documents Microsoft"
+ms.custom: 
+ms.date: 11/21/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.RegisterOutput
+- VC.Project.VCLinkerTool.OVERWRITEImportLibrary
+- VC.Project.VCLinkerTool.UseLibraryDependencyInputs
+- VC.Project.VCLinkerTool.LinkLibraryDependencies
+dev_langs: C++
+helpviewer_keywords:
+- per-user redirection
+- Linker property pages
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1b8a1d0d4775955ee55aa0f40ac10a75cda54379
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Pages de propri&#233;t&#233;s de l&#39;&#201;diteur de liens
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="linker-property-pages"></a>pages de propriétés de l'Éditeur de liens
 
-Cette rubrique décrit les propriétés suivantes de la page de propriétés **Général** de l'Éditeur de liens :  
-  
- **Bibliothèque d'importation ignorée**  
- Indique à l'Éditeur de liens de ne pas tenter de lier de fichier .lib créé à partir de cette génération dans n'importe quel projet dépendant.  Vous autorisez ainsi le système de projet à gérer les fichiers .dll qui ne créent pas de fichier .lib lors de la génération.  Si un projet dépend d'un autre projet créant une DLL, le système de projet lie automatiquement le fichier .lib produit par ce projet enfant.  Il se peut que cette option ne soit pas nécessaire pour les projets créant des DLL COM ou des DLL de ressource uniquement. En effet, ces DLL ne possèdent pas d'exportation significative.  Si une DLL ne possède aucune exportation, l'Éditeur de liens ne crée pas de fichier .lib.  Si aucun fichier .lib d'exportation n'est présent sur le disque et si le système de projet indique à l'Éditeur de liens d'effectuer la liaison à cette DLL \(manquante\), la liaison échoue.  
-  
- Utilisez l'option **Bibliothèque d'importation ignorée** pour résoudre ce problème.  Si elle a la valeur `Yes`, le système de projet ignore la présence ou l'absence de ce fichier .lib et empêche la liaison d'un projet dépendant de ce projet avec le fichier .lib manquant.  
-  
- Pour accéder par programme à cette propriété, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>.  
-  
- **Inscription de la sortie**  
- Exécute regsvr32.exe \/s $\(TargetPath\), qui est valide uniquement sur les projets .dll.  Pour les projets .exe, cette propriété est ignorée.  Si vous souhaitez inscrire un fichier de sortie .exe, définissez un événement post\-build dans la configuration afin d'effectuer l'inscription personnalisée obligatoire pour les fichiers .exe inscrits.  
-  
- Pour accéder par programme à cette propriété, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RegisterOutput%2A>.  
-  
- **Redirection par utilisateur**  
- L'inscription dans [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] s'effectue traditionnellement dans HKEY\_CLASSES\_ROOT \(HKCR\).  Avec [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)], pour accéder à HKCR vous devez exécuter [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] en mode élevé.  Les développeurs ne souhaitent pas toujours exécuter l'application en mode élevé mais sont toujours obligés de s'inscrire.  La redirection par utilisateur vous permet de vous inscrire sans avoir à exécuter ce mode.  
-  
- La redirection par utilisateur forcera toutes les écritures dans HKCR à être redirigées vers HKEY\_CURRENT\_USER \(HKCU\).  Si la redirection par utilisateur est désactivée, cela peut provoquer [Erreur de génération de projet PRJ0050](../error-messages/tool-errors/project-build-error-prj0050.md) lorsque le programme essaie d'écrire dans HKCR.  
-  
- **Dépendances de bibliothèque de liens**  
- Permet de lier les fichiers .lib qui sont produits par les projets dépendants.  En général, vous souhaiterez lier le fichier .lib.  
-  
- Vous pouvez également spécifier un fichier .obj en fournissant le nom du fichier et le chemin d'accès relatif, par exemple **..\\..\\MyLibProject\\MyObjFile.obj**.  Si le code source du fichier .obj des \#inclue un en\-tête précompilé, par exemple pch.h, alors le fichier pch.obj est situé dans le même dossier que **MyObjFile.obj** et vous devez également ajouter **pch.obj** comme dépendance supplémentaire.  
-  
- **Utiliser les entrées de dépendance de bibliothèque**  
- Dans un grand projet, lorsqu'un projet dépendant produit un fichier .lib, la liaison incrémentielle est désactivée.  S'il existe plusieurs projets dépendants qui génèrent des fichiers .lib, la génération de l'application peut prendre un certain temps.  Lorsque cette propriété a la valeur `Yes`, le système de projet lie les fichiers .obj des fichiers .libs produits par les projets dépendants, activant ainsi la liaison incrémentielle.  
-  
- Pour plus d'informations sur l'accès à la page de propriétés **Général**, consultez [Comment : spécifier des propriétés de projet avec des pages de propriétés](../misc/how-to-specify-project-properties-with-property-pages.md).  
-  
-## Voir aussi  
- [VC\+\+ Directories, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/fr-fr/e027448b-c811-4c3d-8531-4325ad3f6e02)   
- [Pages de propriétés](../ide/property-pages-visual-cpp.md)
+Cette rubrique décrit les propriétés suivantes sur le **général** page de propriétés de l’éditeur de liens. Pour la version Linux de cette page, consultez [propriétés de l’éditeur de liens (C++ Linux)](../linux/prop-pages/linker-linux.md).
+
+## <a name="general-page-properties"></a>Propriétés de la page Général
+
+### <a name="ignore-import-library"></a>Bibliothèque d’importation ignorée
+
+Cette propriété indique à l’éditeur de liens ne pas lier de sortie .lib généré à partir de cette génération dans n’importe quel projet dépendant. Ainsi, le système de projet gérer les fichiers .dll qui ne produisent pas un fichier .lib lors de la génération. Si un projet dépend d’un autre projet qui produit une DLL, le système de projet lie automatiquement le fichier .lib produit par ce projet enfant. Cela ne peut pas être nécessaire par les projets qui produisent des DLL COM ou des DLL de ressource uniquement ; Ces DLL n’ont pas d’exportation significative. Si une DLL n’a aucune exportation, l’éditeur de liens ne génère pas un fichier .lib. Si aucun fichier .lib d’exportation n’est présent sur le disque et le système de projet indique à l’éditeur de liens à lier à cette DLL (manquante), la liaison échoue. Utilisez le **bibliothèque d’importation ignorée** propriété pour résoudre ce problème. Lorsque la valeur **Oui**, le système de projet ignore la présence ou l’absence de ce fichier .lib et entraîne un projet dépendant de ce projet ne pas de liaison avec le fichier .lib.
+
+Pour accéder par programmation à cette propriété, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>.
+
+### <a name="register-output"></a>Inscription de la sortie
+
+S’exécute `regsvr32.exe /s $(TargetPath)` sur la sortie de génération, qui n’est valide uniquement sur les projets .dll. Pour les projets .exe, cette propriété est ignorée. Pour enregistrer un fichier de sortie .exe, définissez un événement post-build dans la configuration à effectuer l’inscription personnalisée qui est toujours requise pour les fichiers .exe inscrits.
+
+Pour accéder par programmation à cette propriété, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RegisterOutput%2A>.
+
+### <a name="per-user-redirection"></a>Redirection par utilisateur
+
+L’inscription dans Visual Studio a effectue traditionnellement dans HKEY_CLASSES_ROOT (HKCR). Avec [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)], pour accéder à HKCR vous devez exécuter Visual Studio en mode élevé. Les développeurs ne souhaitent pas toujours s’exécuter en mode élevé mais toujours doivent s’inscrire. Redirection par utilisateur vous permet de vous inscrire sans avoir à exécuter dans ce mode.
+
+Redirection par utilisateur force toutes les écritures dans HKCR à être redirigées vers HKEY\_actuel\_utilisateur (HKCU). Si la redirection par utilisateur est désactivée, cela peut provoquer [Project Build Error PRJ0050](../error-messages/tool-errors/project-build-error-prj0050.md) lorsque le programme tente d’écrire dans HKCR.
+
+### <a name="link-library-dependencies"></a>Lier les dépendances de la bibliothèque
+
+Spécifie s’il faut lier les fichiers .lib produits par les projets dépendants. En règle générale, vous souhaitez lier les fichiers .lib, mais cela ne peut pas être le cas pour certains fichiers DLL.
+
+Vous pouvez également spécifier un fichier .obj par en fournissant le nom de fichier et le chemin d’accès relatif, par exemple «.. \\.. \MyLibProject\MyObjFile.obj ». Si la source du code pour le fichier .obj #includes un en-tête précompilé pch.h par exemple, le fichier pch.obj se trouve dans le même dossier que MyObjFile.obj, et vous devez également ajouter pch.obj en tant que dépendance supplémentaire.
+
+### <a name="use-library-dependency-inputs"></a>Utiliser les entrées de dépendance de la bibliothèque
+
+Dans un grand projet, lorsqu’un projet dépendant produit un fichier .lib, liaison incrémentielle est désactivée. S’il existe plusieurs projets dépendants qui génèrent des fichiers .lib, la génération de l’application peut prendre un certain temps. Lorsque cette propriété a la valeur **Oui**, le système de projet lie les fichiers .obj de .libs produits par les projets dépendants, activant ainsi la liaison incrémentielle.
+
+Pour plus d’informations sur l’accès à la **général** page de propriétés de l’éditeur de liens, consultez [utilisation des propriétés de projet](../ide/working-with-project-properties.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Paramètres du projet VC++, Projets et solutions, boîte de dialogue Options](/visualstudio/ide/reference/vcpp-project-settings-projects-and-solutions-options-dialog-box)  
+[Pages de propriétés](../ide/property-pages-visual-cpp.md)  

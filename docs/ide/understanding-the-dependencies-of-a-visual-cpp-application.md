@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 94e1978c5c0188410cf8d6d6bfdfe08d9af620e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64b7974b16767d226df5e71e7f3ae0e61514ed37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Fonctionnement des dépendances d'une application Visual C++
 Pour déterminer les bibliothèques Visual C++ dans une application dépend, vous pouvez afficher les propriétés du projet. (Dans l’Explorateur de solutions, avec le bouton droit sur le projet et choisissez **propriétés** pour ouvrir le **Pages de propriétés** boîte de dialogue.) Vous pouvez également utiliser le Dependency Walker (depends.exe), qui donne une image plus complète des dépendances.  
