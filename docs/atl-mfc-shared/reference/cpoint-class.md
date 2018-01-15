@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eb04a51ef9127daa32cb428b058eb6ac7007ba9b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7140e2db55db8a28c1af63f89517708f4dc0d835
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpoint-class"></a>Classe de CPoint
 Semblable à la structure `POINT` Windows.  
@@ -62,7 +63,7 @@ class CPoint : public tagPOINT
 |[CPoint::operator =](#operator_-_eq)|Décalages `CPoint` en soustrayant une taille ou un point.|  
 |[CPoint::operator ==](#operator_eq_eq)|Vérifie l’égalité entre deux points.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Il comprend également des fonctions de membre pour manipuler `CPoint` et [POINT](../../mfc/reference/point-structure1.md) structures.  
   
  A `CPoint` objet peut être utilisé partout où un `POINT` structure est utilisée. Les opérateurs qui interagissent avec une « taille » de cette classe acceptent [CSize](../../atl-mfc-shared/reference/csize-class.md) objets ou [taille](http://msdn.microsoft.com/library/windows/desktop/dd145106) structures, étant donné que les deux sont interchangeables.  
@@ -78,7 +79,7 @@ class CPoint : public tagPOINT
   
  `CPoint`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atltypes.h  
   
 ##  <a name="cpoint"></a>CPoint::CPoint
@@ -108,7 +109,7 @@ CPoint(LPARAM dwPoint) throw();
  `dwPoint`  
  Définit le membre `x` en fonction du mot de poids faible de `dwPoint` et le membre `y` en fonction du mot de poids fort de `dwPoint`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si aucun argument n'est fourni, les membres `x` et `y` ont la valeur 0.  
   
 ### <a name="example"></a>Exemple  
@@ -212,7 +213,7 @@ void operator+=(POINT point) throw();
  `point`  
  Contient un [POINT](../../mfc/reference/point-structure1.md) structure ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La deuxième surcharge ajoute un point à la `CPoint`.  
   
  Dans les deux cas, l’addition est effectuée en ajoutant le **x** (ou **cx**) membre de l’opérande de droite à la **x** membre de la `CPoint` et en ajoutant le **y**  (ou **cy**) membre de l’opérande droit à la **y** membre de la `CPoint`.  
@@ -237,7 +238,7 @@ void operator-=(POINT point) throw();
  `point`  
  Contient un [POINT](../../mfc/reference/point-structure1.md) structure ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La deuxième surcharge soustrait un point à partir de la `CPoint`.  
   
  Dans les deux cas, la soustraction est effectuée en soustrayant la **x** (ou **cx**) membre de l’opérande de droite à partir de la **x** membre de la `CPoint` et en soustrayant la **y** (ou **cy**) membre de l’opérande de droite à partir de la **y** membre de la `CPoint`.  
@@ -269,7 +270,7 @@ CRect operator+(const RECT* lpRect) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  A `CPoint` qui est compensée par une taille, un **CPoint** qui est décalée par un point, ou un **CRect** décalée par un point de rapport.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par exemple, à l’aide d’une des deux premières surcharges décalage `CPoint(25, -19)` par un point de `CPoint(15, 5)` ou taille `CSize(15, 5)` retourne la valeur `CPoint(40, -14)`.  
   
  Ajout d’un rectangle à un point retourne le rectangle après décalé par les **x** et **y** valeurs spécifiées dans le point. Par exemple, à l’aide de la dernière surcharge pour le décalage d’un rectangle `CRect(125, 219, 325, 419)` par un point de `CPoint(25, -19)` retourne `CRect(150, 200, 350, 400)`.  
@@ -300,7 +301,7 @@ CPoint operator-() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  A `CSize` qui correspond à la différence entre deux points, une `CPoint` qui est compensée par la négation d’une taille, un `CRect` qui est compensée par la négation d’un point, ou un `CPoint` qui est la négation d’un point.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La troisième surcharge décalages un `CRect` selon la négation de `CPoint`. Enfin, utilisez l’opérateur unaire pour inverser le signe `CPoint`.  
   
  Par exemple, à l’aide de la première surcharge pour rechercher la différence entre deux points `CPoint(25, -19)` et `CPoint(15, 5)` retourne `CSize(10, -24)`.  

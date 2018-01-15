@@ -1,46 +1,46 @@
 ---
-title: "Utilisation des symboles C ou C++ dans les blocs __asm | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm (mot clé) (C++), éléments de C/C++ dans"
-  - "__asm (mot clé) (C++), syntaxe"
-  - "symboles, in __asm (blocs)"
-  - "Visual C, symbols in __asm (blocs)"
-  - "Visual C++, in __asm (blocs)"
+title: "À l’aide de symboles C ou C++ dans les blocs __asm | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __asm keyword [C++], syntax
+- symbols, in __asm blocks
+- Visual C, symbols in __asm blocks
+- __asm keyword [C++], C/C++ elements in
+- Visual C++, in __asm blocks
 ms.assetid: 0758ffdc-dfe9-41c8-a5e1-fd395bcac328
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b6a39b747c8c576d148bafff19a664a95fcb43e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Utilisation des symboles C ou C++ dans les blocs __asm
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Spécifique à Microsoft  
- Un  `__asm`bloc peut faire référence à n'importe quel symbole de C ou C\+\+ dans la portée dans laquelle le bloc apparaît.  \(Symboles C et C\+\+ sont des noms de variables, des noms de fonction et des étiquettes ; Autrement dit, les noms qui ne sont pas des constantes symboliques ou  `enum`membres.  Vous ne pouvez pas appeler membres C\+\+ fonctions.\)  
+# <a name="using-c-or-c-symbols-in-asm-blocks"></a>Utilisation des symboles C ou C++ dans les blocs __asm
+## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
+ Un bloc `__asm` peut faire référence à n'importe quel symbole C ou C++ dans la portée où le bloc apparaît. (Les symboles C et C++ sont des noms de variables, des noms de fonctions et des étiquettes ; autrement dit, des noms qui ne sont pas des constantes symboliques ni des membres `enum`. Vous ne pouvez pas appeler les fonctions membres C++.)  
   
- Certaines restrictions s'appliquent à l'utilisation de symboles C et C\+\+ :  
+ Quelques restrictions s'appliquent à l'utilisation des symboles C et C++ :  
   
--   Chaque instruction de langage d'assemblage peut contenir uniquement un seul C ou le symbole de C\+\+.  Plusieurs symboles peuvent apparaître dans la même instruction assembly uniquement avec  **longueur**,  **TYPE de**, et  **taille** expressions.  
+-   Chaque instruction en langage assembleur peut contenir un seul symbole C ou C++. Plusieurs symboles peuvent apparaître dans la même instruction assembleur uniquement avec **longueur**, **TYPE**, et **taille** expressions.  
   
--   Les fonctions référencées dans une  `__asm`bloc doit être déclaré \(prototypée\) plus haut dans le programme.  Dans le cas contraire, le compilateur ne peut pas faire la distinction entre les noms de fonction et des étiquettes de la  `__asm`bloc.  
+-   Les fonctions référencées dans un bloc `__asm` doivent être déclarées (prototypées) auparavant dans le programme. Sinon, le compilateur ne peut pas distinguer les noms de fonctions et les étiquettes dans le bloc `__asm`.  
   
--   Un  `__asm`bloc ne peut pas utiliser de symboles C ou C\+\+ avec la même orthographe en tant que mots réservé de MASM \(indépendamment de la casse\).  Mots réservé de MASM incluent les noms des instructions telles que  **PUSH** et d'enregistrer des noms comme SI.  
+-   Un bloc `__asm` ne peut utiliser aucun symbole C ou C++ avec la même orthographe que les mots réservés MASM (indépendamment de la casse). Mots réservés MASM incluent les noms d’instructions, tels que **PUSH** et inscrire des noms, tels que SI.  
   
--   Balises de structure et d'union ne sont pas reconnues dans  `__asm`blocs.  
+-   Les balises de structure et d'union ne sont pas reconnues dans les blocs `__asm`.  
   
- **FIN spécifique à Microsoft**  
+ **FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [Utilisation de C ou C\+\+ dans les blocs \_\_asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)
+## <a name="see-also"></a>Voir aussi  
+ [Utilisation de C ou C++ dans les blocs __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)

@@ -1,40 +1,40 @@
 ---
-title: "operator XOR | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "operator XOR"
-  - "Xor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator XOR"
-  - "XOR operator"
+title: "XOR, opérateur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- operator XOR
+- Xor
+dev_langs: C++
+helpviewer_keywords:
+- operator XOR
+- XOR operator
 ms.assetid: 856eb920-314a-49b9-aebf-7d50e5384e4d
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d173efd898d37649dad675a4adfabfcc37371075
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# operator XOR
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retourne le résultat d'une opération de bits de **XOR** pour *expression1* et *expression2*.  
+# <a name="operator-xor"></a>XOR, opérateur
+Retourne le résultat d’une opération de bits **XOR** opération pour *expression1* et *expression2*.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 expression1 XOR expression2  
 ```  
   
-## Voir aussi  
- [Operators Reference](../../assembler/masm/operators-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)

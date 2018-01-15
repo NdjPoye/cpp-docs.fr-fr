@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 98194aef9fd6da0420a0eb2d9242f83bd659c04f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6dd0b2aae6f067d334be37061a1ed7c28fc15ed7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nocref"></a>.NOCREF
 Supprime la liste des symboles dans le fichier de table et le navigateur de symbole.  
@@ -31,7 +32,7 @@ Supprime la liste des symboles dans le fichier de table et le navigateur de symb
 .NOCREF [[name[[, name]]...]]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si les noms sont spécifiés, seuls les noms donnés sont supprimées. Identique à [. XCREF](../../assembler/masm/dot-xcref.md).  
   
 ## <a name="see-also"></a>Voir aussi  

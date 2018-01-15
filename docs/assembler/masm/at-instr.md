@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05a2ffa5f886318524267aeb348557a413960f7c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ea488841290ff1e5eaa7279e209dff2928b82c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="instr"></a>@InStr
 Fonction macro qui recherche la première occurrence de *chaîne2* dans *string1*, en commençant par *position* dans *string1*. Si *position* n’apparaît pas, la recherche commence au début de *string1*. Retourne un entier de position ou 0 si *chaîne2* est introuvable.  

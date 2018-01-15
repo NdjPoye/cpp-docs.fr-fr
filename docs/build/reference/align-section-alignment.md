@@ -1,68 +1,67 @@
 ---
-title: "/ALIGN (Alignement des sections) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.Alignment"
-  - "/align"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ALIGN (option de l'éditeur de liens)"
-  - "ALIGN (option de l'éditeur de liens)"
-  - "-ALIGN (option de l'éditeur de liens)"
-  - "alignement des sections"
-  - "sections"
-  - "sections, spécifier l'alignement"
-ms.assetid: f2f8ac24-e90e-4bea-8205-f2960a3b1740
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+title: /ALIGN (alignement des sections) | Documents Microsoft
+ms.custom: 
+ms.date: 12/29/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.Alignment
+- /align
+dev_langs: C++
+helpviewer_keywords:
+- sections, specifying alignment
+- ALIGN linker option
+- /ALIGN linker option
+- -ALIGN linker option
+- section alignment
+- sections
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4ca4572e84c7ad32be2d03a312f7bb7d8a3f3f29
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
-# /ALIGN (Alignement des sections)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="align-section-alignment"></a>/ALIGN (Alignement des sections)
 
-```  
-/ALIGN[:number]  
-```  
-  
-## Notes  
- où :  
-  
- `number`  
- Valeur d'alignement.  
-  
-## Notes  
- L'option \/ALIGN spécifie l'alignement de chaque section au sein de l'espace d'adressage linéaire du programme.  L'argument `number`, exprimé en octets, doit être une puissance de deux.  La valeur par défaut est 4 Ko \(4096\).  L'éditeur de liens émet un avertissement si l'alignement génère une image non valide.  
-  
- Vous ne devez pas modifier l'alignement, sauf si vous écrivez une application telle qu'un pilote de périphérique.  
-  
- Il est possible de modifier l'alignement d'une section donnée à l'aide du paramètre d'alignement de l'option [\/SECTION](../../build/reference/section-specify-section-attributes.md).  
-  
- La valeur d'alignement spécifiée ne peut être inférieure à la valeur d'alignement la plus grande de la section.  
-  
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
-  
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Définition des propriétés de projets Visual C\+\+](../../ide/working-with-project-properties.md).  
-  
-2.  Cliquez sur le dossier **Éditeur de liens**.  
-  
-3.  Cliquez sur la page de propriétés **Ligne de commande**.  
-  
-4.  Tapez l'option dans la zone **Options supplémentaires**.  
-  
-### Pour définir cette option de l'éditeur de liens par programme  
-  
--   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+## <a name="syntax"></a>Syntaxe
+
+> **/ALIGN**[**:**_nombre_]
+
+### <a name="arguments"></a>Arguments
+
+*nombre*  
+La valeur d’alignement en octets.
+
+## <a name="remarks"></a>Notes
+
+Le **/ALIGN** option spécifie l’alignement de chaque section dans l’espace d’adressage linéaire du programme. Le *nombre* argument est exprimée en octets et doit être une puissance de deux. La valeur par défaut est de 4 Ko (4096). L’éditeur de liens émet un avertissement si l’alignement génère une image non valide.
+
+Sauf si vous écrivez une application telle qu’un pilote de périphérique, vous ne devez pas modifier l’alignement.
+
+Il est possible de modifier l’alignement d’une section donnée avec le paramètre d’alignement de la [/SECTION](../../build/reference/section-specify-section-attributes.md) option.
+
+La valeur d’alignement que vous spécifiez ne peut pas être inférieure à l’alignement de section plus grand.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
+
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+
+1. Choisissez le **propriétés de Configuration** > **l’éditeur de liens** > **ligne de commande** page de propriétés.
+
+1. Entrez l’option dans le **des Options supplémentaires** boîte. Choisissez **OK** ou **appliquer** pour appliquer la modification.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
+
+- Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Voir aussi
+
+[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)  
+[Options de l’éditeur de liens](../../build/reference/linker-options.md)  

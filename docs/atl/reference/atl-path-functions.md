@@ -7,15 +7,53 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: "ATL, chemin d’accès"
+f1_keywords:
+- ATLPATH/ATL::ATLPath::AddBackslash
+- ATLPATH/ATL::ATLPath::AddExtension
+- ATLPATH/ATL::ATLPath::Append
+- ATLPATH/ATL::ATLPath::BuildRoot
+- ATLPATH/ATL::ATLPath::Canonicalize
+- ATLPATH/ATL::ATLPath::Combine
+- ATLPATH/ATL::ATLPath::CommonPrefix
+- ATLPATH/ATL::ATLPath::CompactPath
+- ATLPATH/ATL::ATLPath::CompactPathEx
+- ATLPATH/ATL::ATLPath::FileExists
+- ATLPATH/ATL::ATLPath::FindExtension
+- ATLPATH/ATL::ATLPath::FindFileName
+- ATLPATH/ATL::ATLPath::GetDriveNumber
+- ATLPATH/ATL::ATLPath::IsDirectory
+- ATLPATH/ATL::ATLPath::IsFileSpec
+- ATLPATH/ATL::ATLPath::IsPrefix
+- ATLPATH/ATL::ATLPath::IsRelative
+- ATLPATH/ATL::ATLPath::IsRoot
+- ATLPATH/ATL::ATLPath::IsSameRoot
+- ATLPATH/ATL::ATLPath::IsUNC
+- ATLPATH/ATL::ATLPath::IsUNCServer
+- ATLPATH/ATL::ATLPath::IsUNCServerShare
+- ATLPATH/ATL::ATLPath::MakePretty
+- ATLPATH/ATL::ATLPath::MatchSpec
+- ATLPATH/ATL::ATLPath::QuoteSpaces
+- ATLPATH/ATL::ATLPath::RelativePathTo
+- ATLPATH/ATL::ATLPath::RemoveArgs
+- ATLPATH/ATL::ATLPath::RemoveBackslash
+- ATLPATH/ATL::ATLPath::RemoveBlanks
+- ATLPATH/ATL::ATLPath::RemoveExtension
+- ATLPATH/ATL::ATLPath::RemoveFileSpec
+- ATLPATH/ATL::ATLPath::RenameExtension
+- ATLPATH/ATL::ATLPath::SkipRoot
+- ATLPATH/ATL::ATLPath::StripPath
+- ATLPATH/ATL::ATLPath::StripToRoot
+- ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
 caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 97d585eb8bbe59a8ccd92b866819fb869d35f64c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 29d41c0dc09620d34299a52a505d872096a7da8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-path-functions"></a>Fonctions de chemin d’accès ATL
 
@@ -76,7 +114,7 @@ ATL fournit la classe ATLPath permettant de manipuler des chemins d’accès sou
 |[ATLPath::StripToRoot](#striptoroot)|Cette fonction est un wrapper surchargé de [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757).|  
 |[ATLPath::UnquoteSpaces](#unquotespaces)|Cette fonction est un wrapper surchargé de [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763).|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlpath.h  
 
 ## <a name="addbackslash"></a>ATLPath::AddBackSlash
@@ -90,7 +128,7 @@ inline char* AddBackslash(char* pszPath);
 inline wchar_t* AddBackslash(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561) pour plus d’informations.  
   
  
@@ -106,7 +144,7 @@ inline BOOL AddExtension(char* pszPath, const char* pszExtension);
 inline BOOL AddExtension(wchar_t* pszPath, const wchar_t* pszExtension);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563) pour plus d’informations. 
   
 ## <a name="append"></a>ATLPath::Append
@@ -119,7 +157,7 @@ inline BOOL Append(char* pszPath, const char* pszMore);
 inline BOOL Append(wchar_t* pszPath, const wchar_t* pszMore);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565) pour plus d’informations.  
   
  
@@ -135,7 +173,7 @@ inline char* BuildRoot(char* pszPath, int iDrive);
 inline wchar_t* BuildRoot(wchar_t* pszPath, int iDrive);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567) pour plus d’informations.  
   
  
@@ -151,7 +189,7 @@ inline BOOL Canonicalize(char* pszDest, const char* pszSrc);
 inline BOOL Canonicalize(wchar_t* pszDest, const wchar_t* pszSrc);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569) pour plus d’informations.  
   
  
@@ -173,7 +211,7 @@ inline wchar_t* Combine(
    const wchar_t* pszDir,
    const wchar_t* pszFile);
 ```
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 Pour plus d’informations, consultez PathCombine.
 
 
@@ -194,7 +232,7 @@ inline int CommonPrefix(
    wchar_t* pszDest);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574) pour plus d’informations.  
   
  
@@ -217,7 +255,7 @@ inline BOOL CompactPath(
    UINT dx);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575) pour plus d’informations.  
   
  
@@ -242,7 +280,7 @@ inline BOOL CompactPathEx(
    DWORD dwFlags);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578) pour plus d’informations.  
   
  
@@ -258,7 +296,7 @@ inline BOOL FileExists(const char* pszPath);
 inline BOOL FileExists(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584) pour plus d’informations.  
   
  
@@ -274,7 +312,7 @@ inline char* FindExtension(const char* pszPath);
 inline wchar_t* FindExtension(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587) pour plus d’informations.  
   
  
@@ -290,7 +328,7 @@ inline char* FindFileName(const char* pszPath);
 inline wchar_t* FindFileName(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) pour plus d’informations.  
   
  
@@ -306,7 +344,7 @@ inline int GetDriveNumber(const char* pszPath);
 inline int GetDriveNumber(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612) pour plus d’informations.  
   
  
@@ -319,7 +357,7 @@ Cette fonction est un wrapper surchargé de [PathIsDirectory](https://msdn.micro
 inline BOOL IsDirectory(const char* pszPath);
 inline BOOL IsDirectory(const wchar_t* pszPath);
 ```  
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 Pour plus d’informations, consultez PathIsDirectory.  
 
 ## <a name="isfilespec"></a>ATLPath::IsFileSpec
@@ -332,7 +370,7 @@ inline BOOL IsFileSpec(const char* pszPath);
 inline BOOL IsFileSpec(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627) pour plus d’informations.  
   
  
@@ -348,7 +386,7 @@ inline BOOL IsPrefix(const char* pszPrefix, const char* pszPath);
 inline BOOL IsPrefix(const wchar_t* pszPrefix, const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650) pour plus d’informations.  
   
  
@@ -364,7 +402,7 @@ inline BOOL IsRelative(const char* pszPath);
 inline BOOL IsRelative(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660) pour plus d’informations.  
   
  
@@ -380,7 +418,7 @@ inline BOOL IsRoot(const char* pszPath);
 inline BOOL IsRoot(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674) pour plus d’informations.  
   
  
@@ -396,7 +434,7 @@ inline BOOL IsSameRoot(const char* pszPath1, const char* pszPath2);
 inline BOOL IsSameRoot(const wchar_t* pszPath1, const wchar_t* pszPath2);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687) pour plus d’informations.  
   
  
@@ -412,7 +450,7 @@ inline BOOL IsUNC(const char* pszPath);
 inline BOOL IsUNC(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712) pour plus d’informations.  
   
  
@@ -428,7 +466,7 @@ inline BOOL IsUNCServer(const char* pszPath);
 inline BOOL IsUNCServer(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722) pour plus d’informations.  
   
  
@@ -444,7 +482,7 @@ inline BOOL IsUNCServerShare(const char* pszPath);
 inline BOOL IsUNCServerShare(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723) pour plus d’informations.  
   
  
@@ -460,7 +498,7 @@ inline BOOL MakePretty(char* pszPath);
 inline BOOL MakePretty(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725) pour plus d’informations.  
   
  
@@ -476,7 +514,7 @@ inline BOOL MatchSpec(const char* pszPath, const char* pszSpec);
 inline BOOL MatchSpec(const wchar_t* pszPath, const wchar_t* pszSpec);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727) pour plus d’informations.  
   
  
@@ -492,7 +530,7 @@ inline void QuoteSpaces(char* pszPath);
 inline void QuoteSpaces(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739) pour plus d’informations.  
   
  
@@ -519,7 +557,7 @@ inline BOOL RelativePathTo(
    DWORD dwAttrTo);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740) pour plus d’informations.  
   
  
@@ -535,7 +573,7 @@ inline void RemoveArgs(char* pszPath);
 inline void RemoveArgs(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742) pour plus d’informations.  
   
  
@@ -551,7 +589,7 @@ inline char* RemoveBackslash(char* pszPath);
 inline wchar_t* RemoveBackslash(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743) pour plus d’informations.  
   
  
@@ -567,7 +605,7 @@ inline void RemoveBlanks(char* pszPath);
 inline void RemoveBlanks(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745) pour plus d’informations.  
   
  
@@ -583,7 +621,7 @@ inline void RemoveExtension(char* pszPath);
 inline void RemoveExtension(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746) pour plus d’informations.  
   
  
@@ -599,7 +637,7 @@ inline BOOL RemoveFileSpec(char* pszPath);
 inline BOOL RemoveFileSpec(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748) pour plus d’informations.  
   
  
@@ -615,7 +653,7 @@ inline BOOL RenameExtension(char* pszPath, const char* pszExt);
 inline BOOL RenameExtension(wchar_t* pszPath, const wchar_t* pszExt);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749) pour plus d’informations.  
   
  
@@ -631,7 +669,7 @@ inline char* SkipRoot(const char* pszPath);
 inline wchar_t* SkipRoot(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754) pour plus d’informations.  
   
  
@@ -647,7 +685,7 @@ inline void StripPath(char* pszPath);
 inline void StripPath(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756) pour plus d’informations.  
   
  
@@ -664,7 +702,7 @@ inline BOOL StripToRoot(char* pszPath);
 inline BOOL StripToRoot(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757) pour plus d’informations.  
   
  
@@ -680,7 +718,7 @@ inline void UnquoteSpaces(char* pszPath);
 inline void UnquoteSpaces(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763) pour plus d’informations.  
   
  

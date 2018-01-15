@@ -1,40 +1,40 @@
 ---
-title: "operator HIGHWORD | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "HIGHWORD"
-  - "operator HIGHWORD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator HIGHWORD"
-  - "HIGHWORD operator"
+title: "highword, opérateur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- HIGHWORD
+- operator HIGHWORD
+dev_langs: C++
+helpviewer_keywords:
+- operator HIGHWORD
+- HIGHWORD operator
 ms.assetid: 6a3e4d60-e7b6-4cab-b4d7-d4cb7fb307c9
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2d36e4fed90435e6380022ab1d52850447e18817
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# operator HIGHWORD
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retourne les bits de grande 16 des bits du bas 32 *de l'expression*.  Les expressions MASM sont des valeurs 64 bits.  
+# <a name="operator-highword"></a>HIGHWORD, opérateur
+Retourne les 16 bits de poids fort de 32 bits de poids faibles de *expression*. Expressions MASM sont des valeurs 64 bits.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 HIGHWORD expression  
 ```  
   
-## Voir aussi  
- [Operators Reference](../../assembler/masm/operators-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les opérateurs](../../assembler/masm/operators-reference.md)

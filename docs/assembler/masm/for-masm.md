@@ -1,32 +1,31 @@
 ---
-title: "FOR (MASM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "for"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FOR directive"
+title: POUR (MASM) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: for
+dev_langs: C++
+helpviewer_keywords: FOR directive
 ms.assetid: 99872e61-f503-4d34-b305-59f8556ba6b7
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 97afccc8667fcd24fbe92014d2a1d61bb6d91993
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# FOR (MASM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Marque un bloc qui sera répété une fois pour chaque `argument`, avec `argument` actuel en remplaçant `parameter` sur chaque répétition.  
+# <a name="for-masm"></a>FOR (MASM)
+Marque un bloc qui est répété une fois pour chaque `argument`, avec en cours `argument` en remplaçant `parameter` à chaque répétition.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -36,8 +35,8 @@ statements
 ENDM  
 ```  
   
-## Notes  
- De la même manière qu' [En\-tête pack IRP](../../assembler/masm/irp.md).  
+## <a name="remarks"></a>Notes  
+ Identique à [IRP](../../assembler/masm/irp.md).  
   
-## Voir aussi  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)

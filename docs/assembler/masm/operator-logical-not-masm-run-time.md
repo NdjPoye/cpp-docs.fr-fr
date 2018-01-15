@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b3c86e2455372f151225d2b2ebf871ce39678379
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 678edef7df252e62e971c446d7372760c6d3ad86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator--masm-run-time"></a>opérateur ! (Durée d’exécution MASM)
 Négation logique. Utilisé uniquement dans [. IF](../../assembler/masm/dot-if.md), [. Alors que](../../assembler/masm/dot-while.md), ou [. RÉPÉTEZ](../../assembler/masm/dot-repeat.md) bloque et évaluées au moment de l’exécution, pas au moment de l’assembly.  

@@ -1,33 +1,31 @@
 ---
-title: ".FPO | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".FPO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".FPO directive"
+title: . FPO | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .FPO
+dev_langs: C++
+helpviewer_keywords: .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 61d9209b5cf817d89e9e017626222a9cc73e209e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# .FPO
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La directive de .FPO contrôle l'émission des enregistrements de débogage dans le segment ou à la section de .debug$F.  
+# <a name="fpo"></a>.FPO
+La barre d’outils. La directive de FPO contrôle l’émission d’enregistrements de débogage à la section ou du segment de .debug$ F.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -47,24 +45,24 @@ cbFrame
   
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `cdwLocals`  
- Nombre de variables locales, une valeur de 32 bits non signées.  
+ Nombre de variables locales, une valeur non signée 32 bits.  
   
  `cdwParams`  
- Taille des paramètres dans des valeurs de type DWORD, une valeur de 16 bits non signées.  
+ Taille des paramètres dans les valeurs de type DWORD, une valeur non signé 16 bits.  
   
  *cbProlog*  
- Nombre d'octets dans le code du prologue de fonction, une valeur de 8 bits non signées.  
+ Nombre d’octets dans le code de prologue de fonction, une valeur non signé 8 bits.  
   
  `cbRegs`  
- Registres de nombres enregistrés.  
+ Registres enregistrés des numéros.  
   
  `fUseBP`  
- Indique si le registre EBP a été alloué.  0 ou 1.  
+ Indique si le registre EBP a été alloué. 0 ou 1.  
   
  *cbFrame*  
- indique le type de frame.  Consultez [FPO\_DATA](http://msdn.microsoft.com/library/windows/desktop/ms679352) pour plus d'informations.  
+ Indique le type de frame.  Consultez [FPO_DATA](http://msdn.microsoft.com/library/windows/desktop/ms679352) pour plus d’informations.  
   
-## Voir aussi  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les directives](../../assembler/masm/directives-reference.md)

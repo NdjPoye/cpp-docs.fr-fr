@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c335d5146e28d3331fac8b0073a6bd6c7d1def5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f7197ce84098961623ea95ccf22a7cec47ac6cb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>Boîtes de dialogue et Assistants ATL
 Les Assistants de la bibliothèque ATL (Active Template) génèrent un code réutilisable pour différents types d’objets COM. Vous pouvez exécuter les Assistants en ouvrant le menu contextuel pour un projet dans **l’Explorateur de solutions** et en choisissant **ajouter**, **classe**.  

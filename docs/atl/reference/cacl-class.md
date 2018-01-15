@@ -32,11 +32,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2b49d7bf064d65e9a160311d23b304745f4d1b04
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd3b17c3cf74e87b709353a8dd2cd00c5355c7fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cacl-class"></a>Classe de CAcl
 Cette classe est un wrapper pour un `ACL` structure (liste de contrôle d’accès).  
@@ -90,7 +91,7 @@ class CAcl
 |[Les ACL const CAcl::operator *](#operator_const_acl__star)|Les casts un `CAcl` de l’objet à un `ACL` structure.|  
 |[CAcl::operator =](#operator_eq)|Opérateur d'assignation.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **ACL** structure est l’en-tête d’une liste ACL (liste de contrôle d’accès). Une liste ACL contient une liste séquentielle de zéro ou plusieurs [ACE](http://msdn.microsoft.com/library/windows/desktop/aa374868) (entrées de contrôle d’accès). Les entrées individuelles dans une liste ACL sont numérotées de 0 à *n-1*, où  *n*  est le nombre d’entrées dans la liste ACL. Lorsque vous modifiez une liste ACL, une application fait référence à une entrée de contrôle d’accès (ACE) dans la liste ACL par son index.  
   
  Il existe deux types de liste ACL :  
@@ -107,7 +108,7 @@ class CAcl
   
  Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le Kit de développement logiciel Windows.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h  
   
 ##  <a name="caccessmaskarray"></a>CAcl::CAccessMaskArray  
@@ -117,7 +118,7 @@ class CAcl
 typedef CAtlArray<ACCESS_MASK> CAccessMaskArray;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ce typedef Spécifie le type de tableau qui peut être utilisé pour stocker les droits d’accès utilisés dans les entrées de contrôle d’accès (ACE).  
   
 ##  <a name="caceflagarray"></a>CAcl::CAceFlagArray  
@@ -127,7 +128,7 @@ typedef CAtlArray<ACCESS_MASK> CAccessMaskArray;
 typedef CAtlArray<BYTE> CAceFlagArray;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ce typedef Spécifie le type de tableau utilisé pour définir les indicateurs de contrôle spécifique au type de contrôle d’accès (ACE) d’entrée. Consultez le [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) définition pour la liste complète des indicateurs possibles.  
   
 ##  <a name="cacetypearray"></a>CAcl::CAceTypeArray  
@@ -137,7 +138,7 @@ typedef CAtlArray<BYTE> CAceFlagArray;
 typedef CAtlArray<BYTE> CAceTypeArray;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ce typedef Spécifie le type de tableau permet de définir la nature des objets d’entrée de contrôle d’accès, telles que ACCESS_ALLOWED_ACE_TYPE ou ACCESS_DENIED_ACE_TYPE. Consultez le [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) définition pour la liste complète des types possibles.  
   
 ##  <a name="cacl"></a>CAcl::CAcl  
@@ -152,7 +153,7 @@ CAcl(const CAcl& rhs) throw(...);
  `rhs`  
  Objet `CAcl` existant.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `CAcl` objet peut être éventuellement créé à l’aide d’un existant `CAcl` objet.  
   
 ##  <a name="dtor"></a>CAcl :: ~ CAcl  
@@ -162,7 +163,7 @@ CAcl(const CAcl& rhs) throw(...);
 virtual ~CAcl() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le destructeur libère les ressources acquises par l’objet.  
   
 ##  <a name="getacecount"></a>CAcl::GetAceCount  
@@ -199,7 +200,7 @@ void GetAclEntries(
  *pAceFlags*  
  Le **ACE** indicateurs.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode remplit des paramètres de tableau avec les détails de chaque **ACE** objet contenu dans le `CAcl` objet. Utilisez NULL lorsque les détails de ce tableau particulière ne sont pas requis.  
   
  Le contenu de chaque tableau correspondre à l’autre, autrement dit, le premier élément de la `CAccessMaskArray` tableau correspond au premier élément dans le `CSidArray` tableau et ainsi de suite.  
@@ -242,7 +243,7 @@ void GetAclEntry(
  `pInheritedObjectType`  
  Le type d’objet hérité. Cela est fixé à GUID_NULL si le type d’objet hérité n’est pas spécifié dans l’entrée du contrôle, ou si l’ACE n’est pas un ACE de l’objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode récupère toutes les informations à propos d’un ACE individuel, en fournissant plus d’informations que [CAcl::GetAclEntries](#getaclentries) seul rend disponibles.  
   
  Consultez [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) pour plus d’informations sur les types d’ACE et les indicateurs.  
@@ -274,7 +275,7 @@ const ACL* GetPACL() const throw(...);
 bool IsEmpty() const throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Retourne **true** si le `CAcl` objet n’est pas NULL et ne contient aucune entrée. Retourne **false** si le `CAcl` objet est NULL ou contient au moins une entrée.  
   
 ##  <a name="isnull"></a>CAcl::IsNull  
@@ -294,7 +295,7 @@ bool IsNull() const throw();
 operator const ACL *() const throw(...);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Retourne l’adresse de la **ACL** structure.  
   
 ##  <a name="operator_eq"></a>CAcl::operator =  
@@ -322,7 +323,7 @@ void RemoveAce(UINT nIndex) throw();
  `nIndex`  
  Index de l’entrée ACE à supprimer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode est dérivée de [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
   
 ##  <a name="removeaces"></a>CAcl::RemoveAces  
@@ -343,7 +344,7 @@ bool RemoveAces(const CSid& rSid) throw(...)
 void SetEmpty() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `CAcl` peut être définie sur une valeur vide ou une valeur NULL : les deux États sont différents.  
   
 ##  <a name="setnull"></a>CAcl::SetNull  
@@ -353,7 +354,7 @@ void SetEmpty() throw();
 void SetNull() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `CAcl` peut être définie sur une valeur vide ou une valeur NULL : les deux États sont différents.  
   
 ## <a name="see-also"></a>Voir aussi  

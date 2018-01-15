@@ -45,11 +45,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fda1737c32bbc63f4ffdd4e1226459a09595f635
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dbe0e831a644dfc09c6b4afb3c54f23b220850d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledatetime-class"></a>COleDateTime (classe)
 Encapsule la `DATE` type de données qui est utilisé dans OLE automation.  
@@ -109,14 +110,14 @@ class COleDateTime
 |[COleDateTime::m_dt](#m_dt)|Contient l’objet sous-jacent **DATE** pour ce `COleDateTime` objet.|  
 |[COleDateTime::m_status](#m_status)|Contient l’état de ce `COleDateTime` objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `COleDateTime`ne dispose pas d’une classe de base.  
   
  C’est un des types possibles pour le [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) type de données d’OLE automation. A `COleDateTime` valeur représente une date absolue et la valeur d’heure.  
   
  Le `DATE` type est implémenté en tant que valeur à virgule flottante. Jours sont mesurées du 30 décembre 1899 à minuit. Le tableau suivant présente certaines dates et leurs valeurs associées :  
   
-|Date|Valeur|  
+|Date|Value|  
 |----------|-----------|  
 |29 décembre 1899, minuit|-1.0|  
 |29 décembre 1899, 6 h|-1.25|  
@@ -144,7 +145,7 @@ class COleDateTime
   
  Pour plus d’informations sur la `COleDateTime` et `COleDateTimeSpan` des classes, consultez l’article [Date et heure : prise en charge Automation](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** ATLComTime.h  
   
 ##  <a name="coledatetime_relational_operators"></a>Opérateurs relationnels COleDateTime  
@@ -163,7 +164,7 @@ bool operator>=(const COleDateTime& date) const throw();
  `date`  
  Le **COleDateTime** objet à comparer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 > [!NOTE]
 >  Un ATLASSERT ; se produit si une des deux opérandes n’est pas valide.  
@@ -228,7 +229,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
  `dbts`  
  Une référence à un [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) structure qui contient l’heure locale actuelle.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Créent tous les constructeurs de ces `COleDateTime` objet initialisé à la valeur spécifiée. Le tableau suivant présente les plages valides pour chaque composant de date et d’heure :  
   
 |Composant de date/heure|Plage valide|  
@@ -313,7 +314,7 @@ CString Format(UINT nFormatID) const;
 ### <a name="return-value"></a>Valeur de retour  
  Un `CString` qui contient la valeur de date/heure de mise en forme.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si l’état de ce `COleDateTime` objet est null, la valeur de retour est une chaîne vide. Si l’état n’est pas valide, la chaîne de retour est spécifiée par la ressource de chaîne `ATL_IDS_DATETIME_INVALID`.  
   
  Une brève description des trois formes pour cette fonction suit :  
@@ -344,7 +345,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Stocke l'heure résultante dans la structure `dbts` référencée. Le **DBTIMESTAMP** structure de données initialisée par cette fonction aura son **fraction** membre défini à zéro.  
   
 ### <a name="example"></a>Exemple  
@@ -364,7 +365,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **true** en cas de réussite ; **false** si la conversion échoue, ou si le `COleDateTime` objet est **NULL** ou non valide.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `GetAsSystemTime`stocke l’heure résultante dans référencé *sysTime* objet. Le `SYSTEMTIME` structure de données initialisée par cette fonction aura son **wMilliseconds** membre défini à zéro.  
   
  Consultez [GetStatus](#getstatus) pour plus d’informations sur les informations d’état contenues dans un `COleDateTime` objet.  
@@ -383,7 +384,7 @@ bool GetAsUDATE(UDATE& udate) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **true** en cas de réussite ; **false** si la conversion échoue, ou si le `COleDateTime` objet est **NULL** ou non valide.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  A **UDATE** structure représente une date de « décompressée ».  
   
 ##  <a name="getcurrenttime"></a>COleDateTime::GetCurrentTime  
@@ -406,7 +407,7 @@ int GetDay() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Le jour du mois représenté par la valeur de cet `COleDateTime` objet ou `COleDateTime::error` si le jour n’a pas pu être obtenu.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Plage de valeurs de retour valide compris entre 1 et 31.  
   
  Pour plus d’informations sur les autres fonctions membres qui interrogent la valeur de cette `COleDateTime` d’objets, consultez les fonctions membres suivantes :  
@@ -438,7 +439,7 @@ int GetDayOfWeek() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Le jour de semaine représenté par la valeur de cet `COleDateTime` objet ou `COleDateTime::error` si le jour de la semaine n’a pas pu être obtenu.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les valeurs de retour valide compris entre 1 et 7, où 1 = dimanche, 2 = lundi et ainsi de suite.  
   
  Pour plus d’informations sur les autres fonctions membres qui interrogent la valeur de cette `COleDateTime` d’objets, consultez les fonctions membres suivantes :  
@@ -470,7 +471,7 @@ int GetDayOfYear() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Le jour de l’année représenté par la valeur de cet `COleDateTime` objet ou `COleDateTime::error` si le jour de l’année n’a pas pu être obtenu.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Retour valide les valeurs sont comprises entre 1 et 366, où le 1er janvier = 1.  
   
  Pour plus d’informations sur les autres fonctions membres qui interrogent la valeur de cette `COleDateTime` d’objets, consultez les fonctions membres suivantes :  
@@ -502,7 +503,7 @@ int GetHour() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  L’heure représentée par la valeur de cet `COleDateTime` objet ou `COleDateTime::error` si l’heure n’a pas pu être obtenue.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Plage de valeurs de retour valide comprise entre 0 et 23.  
   
  Pour plus d’informations sur les autres fonctions membres qui interrogent la valeur de cette `COleDateTime` d’objets, consultez les fonctions membres suivantes :  
@@ -534,7 +535,7 @@ int GetMinute() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  La minute représentée par la valeur de ce `COleDateTime` objet ou `COleDateTime::error` si la minute n’a pas pu être obtenue.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Plage de valeurs de retour valide comprise entre 0 et 59.  
   
  Pour plus d’informations sur les autres fonctions membres qui interrogent la valeur de cette `COleDateTime` d’objets, consultez les fonctions membres suivantes :  
@@ -566,7 +567,7 @@ int GetMonth() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Mois représenté par la valeur de cet `COleDateTime` objet ou `COleDateTime::error` si le mois n’a pas pu être obtenu.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Plage de valeurs de retour valide compris entre 1 et 12.  
   
  Pour plus d’informations sur les autres fonctions membres qui interrogent la valeur de cette `COleDateTime` d’objets, consultez les fonctions membres suivantes :  
@@ -598,7 +599,7 @@ int GetSecond() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  La seconde représentée par la valeur de ce `COleDateTime` objet ou `COleDateTime::error` si la seconde n’a pas pu être obtenue.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Plage de valeurs de retour valide comprise entre 0 et 59.  
   
 > [!NOTE]
@@ -635,7 +636,7 @@ DateTimeStatus GetStatus() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’état de ce `COleDateTime` valeur. Si vous appelez **GetStatus** sur un `COleDateTime` objet construit avec la valeur par défaut, elle retournera valide. Si vous appelez **GetStatus** sur un `COleDateTime` objet initialisé avec la constructeur a la valeur null, **GetStatus** retourne la valeur null. Consultez **remarques** pour plus d’informations.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La valeur de retour est définie par le **DateTimeStatus** type énuméré, qui est défini dans la `COleDateTime` classe.  
   
 ```  
@@ -697,7 +698,7 @@ int GetYear() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  L’année représenté par la valeur de cet `COleDateTime` objet ou `COleDateTime::error` si l’année n’a pas pu être obtenue.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Plage de valeurs de retour valide comprise entre 100 et 9999, qui inclut le siècle.  
   
  Pour plus d’informations sur les autres fonctions membres qui interrogent la valeur de cette `COleDateTime` d’objets, consultez les fonctions membres suivantes :  
@@ -728,7 +729,7 @@ int GetYear() const throw();
 DATE m_dt;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 > [!CAUTION]
 >  Modification de la valeur dans la **DATE** accédé par le pointeur retourné par cette fonction modifie la valeur de cet `COleDateTime` objet. Il ne modifie pas l’état de ce `COleDateTime` objet.  
@@ -742,7 +743,7 @@ DATE m_dt;
 DateTimeStatus m_status;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le type de ce membre de données est le type énuméré **DateTimeStatus**, qui est défini dans la `COleDateTime` classe. Consultez [COleDateTime::GetStatus](#getstatus) pour plus d’informations.  
   
 > [!CAUTION]
@@ -761,7 +762,7 @@ COleDateTime& operator=(const FILETIME& filetimeSrc) throw();
 COleDateTime& operator=(const UDATE& udate) throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ces opérateurs d’assignation surchargés copiez la valeur de date/heure source dans cette `COleDateTime` objet. Une brève description de chacune de ces surchargée suit d’opérateurs d’assignation :  
   
 - **opérateur = (** `dateSrc` **)** la valeur et l’état de l’opérande sont copiés dans ce `COleDateTime` objet.  
@@ -795,7 +796,7 @@ COleDateTime operator-(COleDateTimeSpan dateSpan) const throw();
 COleDateTimeSpan operator-(const COleDateTime& date) const throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `COleDateTime`objets représentent les heures absolues. [COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md) objets représentent les heures relatifs. Les deux premiers opérateurs permettent d’ajouter ou soustraire un `COleDateTimeSpan` valeur un `COleDateTime` valeur. Le troisième opérateur vous permet de soustraire un `COleDateTime` valeur d’une autre pour produire un `COleDateTimeSpan` valeur.  
   
  Si un des opérandes est null, l’état de la `COleDateTime` la valeur est null.  
@@ -821,7 +822,7 @@ COleDateTime& operator+=(COleDateTimeSpan dateSpan) throw();
 COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ces opérateurs permettent d’ajouter ou soustraire un `COleDateTimeSpan` valeur vers et à partir de ce `COleDateTime`. Si un des opérandes est null, l’état de la `COleDateTime` la valeur est null.  
   
  Si résultant `COleDateTime` valeur se situe en dehors des limites de valeurs acceptables, l’état de ce `COleDateTime` a la valeur à non valide.  
@@ -841,7 +842,7 @@ COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
 operator DATE() const throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cet opérateur retourne un **DATE** objet dont la valeur est copiée à partir de ce `COleDateTime` objet. Pour plus d’informations sur l’implémentation de la **DATE** d’objets, consultez l’article [Date et heure : prise en charge Automation](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
  Le **DATE** opérateur vérifie si le `COleDateTime` objet est défini avec la valeur null. Consultez [les opérateurs relationnels COleDateTime](#coledatetime_relational_operators) pour obtenir un exemple.  
@@ -875,7 +876,7 @@ bool ParseDateTime(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **true** si la chaîne a été correctement convertie en valeur de date/heure, sinon **false**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si la chaîne a été correctement convertie en une date/heure de valeur, la valeur de cet `COleDateTime` objet est défini pour cette valeur et son état valide.  
   
 > [!NOTE]
@@ -920,7 +921,7 @@ int SetDate(
 ### <a name="return-value"></a>Valeur de retour  
  Zéro si la valeur de cet `COleDateTime` objet a été défini avec succès ; sinon, 1. Cette valeur de retour est basée sur le **DateTimeStatus** type énuméré. Pour plus d’informations, consultez la [SetStatus](#setstatus) fonction membre.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La date est définie pour les valeurs spécifiées. L’heure est définie à l’heure 0, minuit.  
   
  Consultez le tableau suivant pour les limites pour les valeurs de paramètre :  
@@ -937,9 +938,9 @@ int SetDate(
   
  Voici quelques exemples de valeurs de date :  
   
-|`nYear`|`nMonth`|`nDay`|Valeur|  
+|`nYear`|`nMonth`|`nDay`|Value|  
 |-------------|--------------|------------|-----------|  
-|2000|2|29|29 février 2000|  
+|2 000|2|29|29 février 2000|  
 |1776|7|4|4 juillet 1776|  
 |1925|4|35|35 avril 1925 (date non valide)|  
 |10000|1|1|1er janvier 10000 (date non valide)|  
@@ -989,7 +990,7 @@ int SetDateTime(
 ### <a name="return-value"></a>Valeur de retour  
  Zéro si la valeur de cet `COleDateTime` objet a été défini avec succès ; sinon, 1. Cette valeur de retour est basée sur le **DateTimeStatus** type énuméré. Pour plus d’informations, consultez la [SetStatus](#setstatus) fonction membre.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez le tableau suivant pour les limites pour les valeurs de paramètre :  
   
 |Paramètre|Limites|  
@@ -1007,7 +1008,7 @@ int SetDateTime(
   
  Voici quelques exemples de valeurs d’heure :  
   
-|`nHour`|`nMin`|`nSec`|Valeur|  
+|`nHour`|`nMin`|`nSec`|Value|  
 |-------------|------------|------------|-----------|  
 |1|3|3|01:03:03|  
 |23|45|0|23:45:00|  
@@ -1016,7 +1017,7 @@ int SetDateTime(
   
  Voici quelques exemples de valeurs de date :  
   
-|`nYear`|`nMonth`|`nDay`|Valeur|  
+|`nYear`|`nMonth`|`nDay`|Value|  
 |-------------|--------------|------------|-----------|  
 |1995|4|15|15 avril 1995|  
 |1789|7|14|17 juillet 1789|  
@@ -1059,7 +1060,7 @@ void SetStatus(DateTimeStatus status) throw();
  *status*  
  La nouvelle valeur pour ce `COleDateTime` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le *état* la valeur du paramètre est définie par le **DateTimeStatus** type énuméré, qui est défini dans la `COleDateTime` classe. Consultez [COleDateTime::GetStatus](#getstatus) pour plus d’informations.  
   
 > [!CAUTION]
@@ -1085,7 +1086,7 @@ int SetTime(
 ### <a name="return-value"></a>Valeur de retour  
  Zéro si la valeur de cet `COleDateTime` objet a été défini avec succès ; sinon, 1. Cette valeur de retour est basée sur le **DateTimeStatus** type énuméré. Pour plus d’informations, consultez la [SetStatus](#setstatus) fonction membre.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’heure est définie pour les valeurs spécifiées. La date est définie à la date 0, ce qui signifie le 30 décembre 1899.  
   
  Consultez le tableau suivant pour les limites pour les valeurs de paramètre :  
@@ -1100,7 +1101,7 @@ int SetTime(
   
  Voici quelques exemples de valeurs d’heure :  
   
-|`nHour`|`nMin`|`nSec`|Valeur|  
+|`nHour`|`nMin`|`nSec`|Value|  
 |-------------|------------|------------|-----------|  
 |1|3|3|01:03:03|  
 |23|45|0|23:45:00|  
