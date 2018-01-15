@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3369ef30758b687c94c97e5fb0cf18bb7565ea83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0cc0b9f85392a69191ee3c948985c61bd2d1f494
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coleresizebar-class"></a>Classe de COleResizeBar
 Type de barre de contrôle qui prend en charge le redimensionnement des éléments OLE sur place.  
@@ -50,7 +51,7 @@ class COleResizeBar : public CControlBar
 |----------|-----------------|  
 |[COleResizeBar::Create](#create)|Crée et initialise une fenêtre enfant Windows et l’associe à la `COleResizeBar` objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `COleResizeBar`les objets apparaissent en tant qu’un [CRectTracker](../../mfc/reference/crecttracker-class.md) avec une bordure hachurée et externe des poignées de redimensionnement.  
   
  `COleResizeBar`les objets sont généralement incorporés membres d’objets de fenêtre frame dérivés de la [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) classe.  
@@ -68,7 +69,7 @@ class COleResizeBar : public CControlBar
   
  `COleResizeBar`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxole.h  
   
 ##  <a name="coleresizebar"></a>COleResizeBar::COleResizeBar  
@@ -78,7 +79,7 @@ class COleResizeBar : public CControlBar
 COleResizeBar();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez **créer** pour créer l’objet de barre de redimensionnement.  
   
 ##  <a name="create"></a>COleResizeBar::Create  

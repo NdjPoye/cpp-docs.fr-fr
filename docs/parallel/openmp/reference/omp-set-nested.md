@@ -4,41 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- omp_set_nested
-dev_langs:
-- C++
-helpviewer_keywords:
-- omp_set_nested OpenMP function
+f1_keywords: omp_set_nested
+dev_langs: C++
+helpviewer_keywords: omp_set_nested OpenMP function
 ms.assetid: fa1cb08c-7b8b-42c9-8654-2c33dcffb5b6
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d120c4eca49a917cb34fc3b8a873c08f5e2815eb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f08fec246b5df4b5a6dc965917e0a6438b58042f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ompsetnested"></a>omp_set_nested
 Active le parallélisme imbriqué.  
@@ -55,14 +37,14 @@ void omp_set_nested(
  où,  
   
  `val`  
- Si elle est différente de zéro, Active le parallélisme imbriqué. Si zéro, désactive le parallélisme imbriqué.  
+ Si elle est différente de zéro, permet de parallélisme imbriqué. Si zéro, désactive le parallélisme imbriqué.  
   
 ## <a name="remarks"></a>Notes  
  OMP imbriqué parallélisme peut être activé avec `omp_set_nested`, ou en définissant le [OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md) variable d’environnement.  
   
- Le paramètre de `omp_set_nested` remplacera le paramètre de la `OMP_NESTED` variable d’environnement.  
+ Le paramètre de `omp_set_nested` remplace le paramètre de la `OMP_NESTED` variable d’environnement.  
   
- Lorsque activé, la variable d’environnement peut interrompre un programme opérationnel dans le cas contraire, car le nombre de threads augmente de façon exponentielle lors de l’imbrication de régions parallèles.  Par exemple, une fonction que récursivement 6 fois avec le nombre de threads OMP défini sur 4 requiert 4 096 (4 à la puissance de 6) les threads en général, diminuent les performances de votre application si le nombre de threads dépasse le nombre de processeurs. Une exception à cela serait de qu'applications liées aux e/s.  
+ Lorsque activé, la variable d’environnement peut interrompre un programme opérationnel dans le cas contraire, car le nombre de threads augmente de façon exponentielle lors de l’imbrication de régions parallèles.  Par exemple, une fonction que récursivement 6 fois avec le nombre de threads OMP défini à 4 requiert 4 096 (4 à la puissance de 6) les threads en général, réduit les performances de votre application si le nombre de threads dépasse le nombre de processeurs. Une exception à cela serait qu'e/s liée d’applications.  
   
  Utilisez [omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md) pour afficher le paramètre actuel de `omp_set_nested`.  
   

@@ -33,11 +33,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2bd077c1c657b79cc8b32b3ede075eb5311271e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9cce595095600769743a1320d75b00ec1109275c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collate-class"></a>collate, classe
 Classe de modèle qui décrit un objet pouvant servir de facette de paramètres régionaux pour contrôler le tri et le regroupement des caractères d'une chaîne, pour leur comparaison et pour le hachage des chaînes.  
@@ -62,7 +63,7 @@ class collate : public locale::facet;
 |-|-|  
 |[collate](#collate)|Constructeur des objets de la classe `collate` qui sert de facette de paramètres régionaux pour la gestion des conventions de tri de chaînes.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -80,7 +81,7 @@ class collate : public locale::facet;
 |[hash](#hash)|Détermine la valeur de hachage d'une séquence en fonction de ses règles de facette.|  
 |[transform](#transform)|Convertit une séquence de caractères de paramètres régionaux en une chaîne qui peut être utilisée dans des comparaisons lexicographiques avec d'autres séquences de caractères, elles aussi converties depuis les mêmes paramètres régionaux.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<locale>  
   
  **Espace de noms :** std  
@@ -116,7 +117,7 @@ protected:
  `_Locname`  
  Nom des paramètres régionaux.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les valeurs possibles pour le paramètre `_Refs` et leur signification sont les suivantes :  
   
 -   0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.  
@@ -221,7 +222,7 @@ virtual int do_compare(const CharType* first1,
   
 -   0 si les séquences sont équivalentes.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction membre virtuelle protégée compare la séquence à [* first1, Last1) * avec la séquence à *[first2, last2*). Elle compare les valeurs en appliquant **operator<** entre les paires d’éléments correspondants du type **CharType**. La première séquence est inférieure si elle a le plus petit élément dans la première paire inégale des séquences ou si aucune paire inégale n’existe, mais que la première séquence est plus courte.  
   
 ### <a name="example"></a>Exemple  

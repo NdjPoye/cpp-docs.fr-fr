@@ -1,32 +1,33 @@
 ---
-title: "AsyncBase::TryTransitionToError, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::TryTransitionToError"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TryTransitionToError (méthode)"
+title: "Asyncbase::trytransitiontoerror, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::TryTransitionToError
+dev_langs: C++
+helpviewer_keywords: TryTransitionToError method
 ms.assetid: f6d11c25-1ce3-43f9-af1c-97c4dc0f6f0f
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6da3d84e3e5e1ee0fd71da1cf59ec79497f81d35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# AsyncBase::TryTransitionToError, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indique si le code d'erreur spécifié peut modifier l'état d'erreur interne.  
+# <a name="asyncbasetrytransitiontoerror-method"></a>AsyncBase::TryTransitionToError, méthode
+Indique si le code d’erreur peut modifier l’état d’erreur interne.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 bool TryTransitionToError(  
@@ -34,20 +35,20 @@ bool TryTransitionToError(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `error`  
- Un HRESULT d'erreur.  
+ Une erreur HRESULT.  
   
-## Valeur de retour  
- `true` si l'état d'erreur interne a été modifié; sinon, `false`.  
+## <a name="return-value"></a>Valeur de retour  
+ `true`Si l’état d’une erreur interne a été modifié ; dans le cas contraire, `false`.  
   
-## Remarques  
- Cette opération modifie l'état d'erreur uniquement si celui\-ci est déjà défini à S\_OK.  Cette opération n'a aucun effet si l'état d'erreur est déjà erreur, annulé, effectué, ou fermé.  
+## <a name="remarks"></a>Notes  
+ Cette opération modifie l’état d’erreur uniquement si l’état d’erreur est déjà défini à S_OK. Cette opération n’a aucun effet si l’état d’erreur est déjà erreur, annulé, terminé ou fermé.  
   
-## Configuration requise  
- **En\-tête:** async.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** async.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [AsyncBase, classe](../windows/asyncbase-class.md)

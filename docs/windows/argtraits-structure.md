@@ -1,33 +1,33 @@
 ---
-title: "ArgTraits, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::ArgTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ArgTraits (structure)"
+title: ArgTraits (Structure) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::ArgTraits
+dev_langs: C++
+helpviewer_keywords: ArgTraits structure
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 64ec29d674f6213992fbb1424093931b20ed45b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ArgTraits, structure
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="argtraits-structure"></a>ArgTraits (structure)
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<  
@@ -121,9 +121,9 @@ template<
 struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9)>;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `TMemberFunction`  
- Le paramètre Typename pour une structure ArgTraits ne pouvant correspondre à une signature de la méthode Invoke.  
+ Paramètre de nom de type pour une ArgTraits (structure) qui ne peut pas correspondre à n’importe quelle signature de méthode Invoke.  
   
  `TDelegateInterface`  
  Une interface de délégué.  
@@ -132,7 +132,7 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
  Le type du premier argument de la méthode Invoke.  
   
  `TArg2`  
- Le type du deuxième argument de la méthode Invoke.  
+ Le type du second argument de la méthode Invoke.  
   
  `TArg3`  
  Le type du troisième argument de la méthode Invoke.  
@@ -141,52 +141,52 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
  Le type du quatrième argument de la méthode Invoke.  
   
  `TArg5`  
- Le type du cinquième argument de la méthode Invoke.  
+ Type du cinquième argument de la méthode Invoke.  
   
  `TArg6`  
- Le type du sixième argument de la méthode Invoke.  
+ Type du sixième argument de la méthode Invoke.  
   
  `TArg7`  
- Le type du septième argument de la méthode Invoke.  
+ Type du septième argument de la méthode Invoke.  
   
  `TArg8`  
- Le type du huitième argument de la méthode Invoke.  
+ Type du huitième argument de la méthode Invoke.  
   
  `TArg9`  
- Le type du neuvième argument de la méthode Invoke.  
+ Type du neuvième argument de la méthode Invoke.  
   
-## Notes  
- La structure `ArgTraits` déclare une interface de délégué spécifiée et une fonction membre anonyme possédant un nombre de paramètres spécifié.  
+## <a name="remarks"></a>Notes  
+ Le `ArgTraits` structure déclare un délégué spécifié interface et une fonction membre anonyme qui a un nombre spécifié de paramètres.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Typedefs publics  
+### <a name="public-typedefs"></a>Typedefs publics  
+  
+|Nom|Description|  
+|----------|-----------------|  
+|`Arg1Type`|Le typedef pour TArg1.|  
+|`Arg2Type`|Le typedef pour TArg2.|  
+|`Arg3Type`|Le typedef pour TArg3.|  
+|`Arg4Type`|Le typedef pour TArg4.|  
+|`Arg5Type`|Le typedef pour TArg5.|  
+|`Arg6Type`|Le typedef pour TArg6.|  
+|`Arg7Type`|Le typedef pour TArg7.|  
+|`Arg8Type`|Le typedef pour TArg8.|  
+|`Arg9Type`|Le typedef pour TArg9.|  
+  
+### <a name="public-constants"></a>Constantes publiques  
   
 |Name|Description|  
 |----------|-----------------|  
-|`Arg1Type`|Le typedef de TArg1.|  
-|`Arg2Type`|Le typedef de TArg2.|  
-|`Arg3Type`|Le typedef de TArg3.|  
-|`Arg4Type`|Le typedef de TArg4.|  
-|`Arg5Type`|Le typedef de TArg5.|  
-|`Arg6Type`|Le typedef de TArg6.|  
-|`Arg7Type`|Le typedef de TArg7.|  
-|`Arg8Type`|Le typedef de TArg8.|  
-|`Arg9Type`|Le typedef de TArg9.|  
+|[ArgTraits::args, constante](../windows/argtraits-args-constant.md)|Conserve le décompte du nombre de paramètres dans la méthode Invoke d’une interface de délégué.|  
   
-### Constantes publiques  
-  
-|Name|Description|  
-|----------|-----------------|  
-|[ArgTraits::args, constante](../windows/argtraits-args-constant.md)|Conserve le nombre de paramètres de la méthode Invoke d'une interface de délégué.|  
-  
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `ArgTraits`  
   
-## Configuration requise  
- **En\-tête:** event.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** event.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

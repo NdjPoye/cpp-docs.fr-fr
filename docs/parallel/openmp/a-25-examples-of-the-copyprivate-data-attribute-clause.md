@@ -1,27 +1,27 @@
 ---
-title: "A.25   Examples of the copyprivate Data Attribute Clause | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Exemples A.25 de la Clause d’attribut de données copyprivate | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 7b1cb6a5-5691-4b95-b3ac-d7543ede6405
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7cdf7598e00bab72966fe79454567b0a59dcbaae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# A.25   Examples of the copyprivate Data Attribute Clause
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**exemple 1 :** la clause d' `copyprivate` \([section 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) à la page 32\) peut être utilisé pour diffuser des valeurs acquises par un thread unique directement à toutes les instances des variables privées dans les autres threads.  
+# <a name="a25---examples-of-the-copyprivate-data-attribute-clause"></a>A.25   Exemples de la clause d'attribut de données copyprivate
+**Exemple 1 :** le `copyprivate` clause ([Section 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) à la page 32) peut être utilisé pour la diffusion des valeurs acquis par un seul thread directement à toutes les instances des variables privées dans les autres threads.  
   
 ```  
 float x, y;  
@@ -41,9 +41,9 @@ void init( )
 }  
 ```  
   
- Si *l'init* actuelle est appelé d'une zone série, son comportement n'est pas affecté par la présence de directives.  Après l'appel à la routine *de get\_values* a été exécuté par un thread, aucun thread ne quitte l'élément jusqu'à ce que les objets privés indiqués par *a*, *b*, *x*, *y* et dans tous les threads sont devenus défini avec la lecture de valeurs.  
+ Si la routine *init* est appelée à partir d’une région de série, son comportement n’est pas affecté par la présence des directives. Après l’appel à la *get_values* routine a été exécutée par un thread, aucun thread ne quitte la construction jusqu'à ce que les objets privés désignés par *un*, *b*, *x*, et *y* dans tous les threads sont définis avec les valeurs lues.  
   
- **exemple 2 :** contrairement à l'exemple précédent, supposent que la lecture doit être exécutée par un thread particulier, de déterminer le thread principal.  Dans ce cas, la clause d' `copyprivate` ne peut pas être utilisée pour effectuer la diffusion directement, mais elle peut être utilisée pour fournir l'accès à un objet partagé temporaire.  
+ **Exemple 2 :** Contrairement à l’exemple précédent, supposons que la lecture doit être exécutée par un thread particulier, par exemple le thread principal. Dans ce cas, le `copyprivate` clause ne peut pas être utilisée pour effectuer la diffusion directement, mais il peut être utilisé pour fournir l’accès à un objet temporaire.  
   
 ```  
 float read_next( )   
@@ -74,7 +74,7 @@ float read_next( )
 }  
 ```  
   
- **exemple 3 :** supposent que le nombre d'objets lock requis dans une région parallèle ne peut pas être facilement déterminé avant de l'écrire.  La clause d' `copyprivate` peut être utilisée pour fournir l'accès aux objets de verrou partagé qui sont alloués dans cette région parallèle.  
+ **Exemple 3 :** Supposons que le nombre d’objets de verrou requis dans une région parallèle ne peut pas être déterminé facilement avant la saisie de celui-ci. Le `copyprivate` clause peut être utilisée pour fournir l’accès aux objets de verrou partagé sont alloués dans cette région parallèle.  
   
 ```  
 #include <omp.h>  

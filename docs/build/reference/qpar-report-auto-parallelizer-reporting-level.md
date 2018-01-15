@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 96dff858d068f9d9bf9c6c47e1f444603c2a5729
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 70ae055d69341cc773b8b40ed1111b65ba5683cf
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report (Niveau de rapport du paralléliseur automatique)
 Active la fonctionnalité de création de rapports du compilateur [PARALLÉLISEUR](../../parallel/auto-parallelization-and-auto-vectorization.md) et spécifie le niveau des messages d’information pour la sortie pendant la compilation.  
@@ -28,7 +29,7 @@ Active la fonctionnalité de création de rapports du compilateur [PARALLÉLISEU
 /Qpar-report:{1}{2}  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **/ Qpar-report : 1**  
  Génère un message d'information pour les boucles parallélisées.  
   
@@ -53,4 +54,4 @@ Active la fonctionnalité de création de rapports du compilateur [PARALLÉLISEU
  [/Q (opérations de bas niveau), options](../../build/reference/q-options-low-level-operations.md)   
  [Options du compilateur](../../build/reference/compiler-options.md)   
  [Définition des Options du compilateur](../../build/reference/setting-compiler-options.md)   
- [Programmation parallèle en Code natif](http://go.microsoft.com/fwlink/?LinkId=263662)
+ [Programmation parallèle en Code natif](http://go.microsoft.com/fwlink/p/?linkid=263662)

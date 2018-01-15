@@ -1,33 +1,33 @@
 ---
-title: "com_interface_entry (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.com_interface_entry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "com_interface_entry attribute"
+title: COM_INTERFACE_ENTRY (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.com_interface_entry
+dev_langs: C++
+helpviewer_keywords: com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 58c74602c4170cbe0816dcdf14e0196cca44af42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# com_interface_entry (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-ajoute une entrée d'interface dans le mappage COM de la classe cible.  
+# <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
+Ajoute une entrée de l’interface dans le mappage COM de la classe cible.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -36,28 +36,28 @@ ajoute une entrée d'interface dans le mappage COM de la classe cible.
 ) ]  
 ```  
   
-#### Paramètres  
- *com\_interface\_entry*  
- Chaîne contenant le texte réel de l'entrée.  Pour une liste des valeurs possibles, consultez [macros de COM\_INTERFACE\_ENTRY](../Topic/COM_INTERFACE_ENTRY%20Macros.md).  
+#### <a name="parameters"></a>Paramètres  
+ *COM_INTERFACE_ENTRY*  
+ Chaîne contenant le texte de l’entrée. Pour obtenir la liste des valeurs possibles, consultez [Macros COM_INTERFACE_ENTRY](../atl/reference/com-interface-entry-macros.md).  
   
-## Notes  
- L'attribut d' `com_interface_entry` C\+\+ insère le contenu intégral d'une chaîne de caractères dans le mappage d'interfaces COM de l'objet de la cible.  Si l'attribut est appliqué qu'une seule fois à l'objet cible, l'entrée est insérée dans le début du mappage d'interfaces existant.  Si l'attribut est appliqué à plusieurs reprises au même objet cible, les entrées sont insérées au début du mappage d'interfaces dans l'ordre dans lequel elles sont reçues.  
+## <a name="remarks"></a>Notes  
+ Le `com_interface_entry` attribut C++ insère le contenu ondes ultracourtes d’une chaîne de caractères dans le mappage d’interface COM de l’objet cible. Si l’attribut est appliqué une fois à l’objet cible, l’entrée est insérée au début de la table d’interface. Si l’attribut est appliqué à plusieurs reprises pour le même objet cible, les entrées sont insérées au début de la table d’interface dans l’ordre de que leur réception.  
   
- Cet attribut requiert que [coclasse](../windows/coclass.md), [progid](../windows/progid.md), ou un attribut de [vi\_progid](../windows/vi-progid.md) \(ou un attribut différent qui implique un d'eux\) également être appliqués au même élément.  Si attribut unique en est utilisé, les deux autres sont automatiquement appliqués.  par exemple, si **progid** est appliqué, **vi\_progid** et **coclasse** sont également appliqués.  
+ Cet attribut exige que l’attribut [coclass](../windows/coclass.md), [progid](../windows/progid.md)ou [vi_progid](../windows/vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si **progid** est appliqué, **vi_progid** et **coclass** sont également appliqués.  
   
- Étant donné que la première utilisation d' `com_interface_entry` provoque la nouvelle interface à insérer au début du mappage d'interface, il doit être l'un des types suivants de COM\_INTERFACE\_ENTRY :  
+ Étant donné que la première utilisation de `com_interface_entry` provoque la nouvelle interface à insérer au début de la table d’interface, il doit être un des types de COM_INTERFACE_ENTRY suivantes :  
   
--   COM\_INTERFACE\_ENTRY  
+-   COM_INTERFACE_ENTRY  
   
--   COM\_INTERFACE\_ENTRY\_IID  
+-   COM_INTERFACE_ENTRY_IID  
   
--   COM\_INTERFACE\_ENTRY2  
+-   COM_INTERFACE_ENTRY2  
   
--   COM\_INTERFACE\_ENTRY2\_IID  
+-   COM_INTERFACE_ENTRY2_IID  
   
- les utilisations supplémentaires de l'attribut d' `com_interface_entry` peuvent utiliser tous les types pris en charge de COM\_INTERFACE\_ENTRY.  
+ Utilisations supplémentaires de la `com_interface_entry` attribut peut utiliser des types de COM_INTERFACE_ENTRY toutes prises en charge.  
   
- Cette restriction est nécessaire car ATL utilise la première entrée dans la table d'interface comme identité **IUnknown**; par conséquent, l'entrée doit être une interface valide.  Par exemple, l'exemple de code suivant est pas valide car la première entrée dans la table d'interface ne spécifie pas une interface COM réelle.  
+ Cette restriction est nécessaire car ATL utilise la première entrée dans la table d’interface comme identité **IUnknown**; par conséquent, l’entrée doit être une interface valide. Par exemple, l’exemple de code suivant n’est pas valide, car la première entrée de la table d’interface ne spécifie pas une interface COM réelle.  
   
 ```  
 [ coclass, com_interface_entry =  
@@ -68,8 +68,8 @@ ajoute une entrée d'interface dans le mappage COM de la classe cible.
    };  
 ```  
   
-## Exemple  
- Le code suivant ajoute deux entrées au mappage d'IU existant COM de **CMyBaseClass**.  La première est une interface standard, et la deuxième masque l'interface d' **IDebugTest** .  
+## <a name="example"></a>Exemple  
+ Le code suivant ajoute deux entrées à la carte d’interface COM existante de **CMyBaseClass**. La première est une interface standard, et le second masque la **IDebugTest** interface.  
   
 ```  
 // cpp_attr_ref_com_interface_entry.cpp  
@@ -99,7 +99,7 @@ class CMyClass: public IMyClass, public IDebugTest
 };  
 ```  
   
- Le mappage résultant d'objet COM pour **CMyBaseClass** est la suivante :  
+ La table des objets COM qui en résulte pour **CMyBaseClass** est comme suit :  
   
 ```  
 BEGIN_COM_MAP(CMyClass)  
@@ -112,21 +112,20 @@ BEGIN_COM_MAP(CMyClass)
 END_COM_MAP()  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**classe**, `struct`|  
-|**reproductible**|Oui|  
-|**attributs requis**|Un ou plusieurs des éléments suivants : **coclasse**, **progid**, ou **vi\_progid**.|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|**class**, `struct`|  
+|**Renouvelable**|Oui|  
+|**Attributs requis**|Un ou plusieurs des éléments suivants : **coclass**, **progid**ou **vi_progid**.|  
+|**Attributs non valides**|Aucun.|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [COM Attributes](../windows/com-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs COM](../windows/com-attributes.md)   
+ [Attributs de classe](../windows/class-attributes.md)   
+ [Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)   

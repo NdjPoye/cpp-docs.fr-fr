@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01bd114c92b7056ead29b57c70801d2cbbacb554
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c7cf2568005049cfabd9178ea4c8732a5a985954
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-template-library-atl-concepts"></a>Concepts ATL (Active Template Library)
 La bibliothèque ATL (Active Template) est un ensemble de classes C++ basées sur des modèles qui vous permettent de créer des objets de modèle COM (Component Object) petits et rapides. Il prend en charge les principales fonctionnalités COM, y compris les implémentations stock, les interfaces doubles, les interfaces d’énumérateurs COM standards, points de connexion, interfaces détachables et des contrôles ActiveX.  

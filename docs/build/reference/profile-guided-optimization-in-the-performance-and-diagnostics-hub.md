@@ -13,18 +13,19 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e462fb157f035be275e6d97b9ccb35e136c24d4f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a51cab03c1361c178846e8b7f00ba7111dc8d731
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="profile-guided-optimization-in-the-performance-and-diagnostics-hub"></a>Optimisation guidée par profil dans le concentrateur Performances et diagnostics
 L'optimisation guidée par profil du plug-in Visual C++ dans le concentrateur de performances et de diagnostics rationalise l'expérience d'optimisation guidée par profil des développeurs. Vous pouvez [télécharger le plug-in](http://go.microsoft.com/fwlink/p/?LinkId=327915) depuis le site Web de Visual Studio.  
   
- L'optimisation guidée par profil (PGO) vous aide à créer des builds d'applications natives x86 et x64 qui sont optimisées pour la manière dont les utilisateurs interagissent avec elles. PGO est un processus à plusieurs étapes : vous créez une build d'application instrumentée pour le profilage, puis vous effectuez la "formation", c'est-à-dire, vous exécutez l'application instrumentée via des scénarios d'interaction utilisateur courants. Vous enregistrez les données de profilage capturées, puis vous régénérez votre application en utilisant les résultats pour guider l'optimisation de l'ensemble du programme. Bien que vous puissiez exécuter ces étapes individuellement dans Visual Studio ou sur la ligne de commande, le plug-in PGO centralise et simplifie le processus. Le plug-in PGO définit toutes les options requises, vous guide tout au long de chaque étape, affiche l'analyse, puis utilise les résultats pour configurer la build et optimiser la taille ou la vitesse de chaque fonction. Le plug-in PGO facilite également la réexécution de votre formation d'application et la mise à jour des données d'optimisation de build lorsque vous modifiez votre code.  
+ L'optimisation guidée par profil (PGO) vous aide à créer des builds d'applications natives x86 et x64 qui sont optimisées pour la manière dont les utilisateurs interagissent avec elles. PGO est un processus à plusieurs étapes : vous créez une build d’application instrumentée pour le profilage, puis vous effectuez la "formation", c’est-à-dire, vous exécutez l’application instrumentée via des scénarios d’interaction utilisateur courants. Vous enregistrez les données de profilage capturées, puis vous régénérez votre application en utilisant les résultats pour guider l'optimisation de l'ensemble du programme. Bien que vous puissiez exécuter ces étapes individuellement dans Visual Studio ou sur la ligne de commande, le plug-in PGO centralise et simplifie le processus. Le plug-in PGO définit toutes les options requises, vous guide tout au long de chaque étape, affiche l'analyse, puis utilise les résultats pour configurer la build et optimiser la taille ou la vitesse de chaque fonction. Le plug-in PGO facilite également la réexécution de votre formation d’application et la mise à jour des données d’optimisation de build lorsque vous modifiez votre code.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
  Vous devez [télécharger le plug-in PGO](http://go.microsoft.com/fwlink/p/?LinkId=327915) et l’installer dans Visual Studio avant de pouvoir l’utiliser dans le Hub performances et Diagnostics.  
   
 ## <a name="walkthrough-using-the-pgo-plug-in-to-optimize-an-app"></a>Procédure pas à pas : utilisation du plug-in PGO pour optimiser une application  
@@ -42,7 +43,7 @@ L'optimisation guidée par profil du plug-in Visual C++ dans le concentrateur d
   
 5.  Sur le **vue d’ensemble** page de la **Assistant Application MFC** boîte de dialogue, choisissez le **Terminer** bouton.  
   
- Ensuite, affectez à la configuration de build de votre application la valeur Version finale pour la préparer aux étapes de génération et de formation PGO.  
+ Ensuite, affectez à la configuration de build de votre application la valeur Mise en production pour la préparer aux étapes de génération et de formation PGO.  
   
 #### <a name="to-set-the-build-configuration"></a>Pour définir la configuration de build  
   

@@ -11,11 +11,12 @@ ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.topic: article
 dev_langs: C++
 manager: ghogen
-ms.openlocfilehash: de5825e64abac210561cb8cbe0dc3320a740cbee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0728827cb2cd604ec4e7ff1ef58b68ed8fb64532
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg : Gestionnaire de package C++ pour Windows 
 vcpkg est un gestionnaire de package en ligne de commande qui simplifie considérablement l’acquisition et l’installation des bibliothèques tierces sur Windows. Si votre projet utilise des bibliothèques tierces, nous vous recommandons d’utiliser vcpkg pour les installer. vcpkg prend en charge les bibliothèques open source et propriétaires. Toutes les bibliothèques du catalogue public vcpkg ont été testées au niveau de la compatibilité avec Visual Studio 2015 et Visual Studio 2017. À compter de mai 2017, plus de 238 bibliothèques sont listées dans le catalogue et la Communauté C++ ajoute régulièrement des bibliothèques supplémentaires.
@@ -107,14 +108,16 @@ Exiger que tous les membres d’une équipe téléchargent et génèrent des bib
 Le catalogue public est mis à jour avec les versions les plus récentes des bibliothèques. Pour déterminer lesquelles de vos bibliothèques locales sont obsolètes, utilisez `vcpkg update`. Lorsque vous êtes prêt à mettre à jour votre collection de ports pour la version la plus récente du catalogue public, effectuez tout simplement une opération d’extraction git sur le dépôt github, ou créez un clone tout en conservant l’ancien s’il est toujours nécessaire.
 
 ### <a name="contribute-new-libraries"></a>Apporter de nouvelles bibliothèques
-Vous pouvez inclure toutes les bibliothèques que vous souhaitez dans votre collection de ports privés. Pour suggérer une nouvelle bibliothèque pour le catalogue public, 
-
+Vous pouvez inclure toutes les bibliothèques que vous souhaitez dans votre collection de ports privés. Pour suggérer une nouvelle bibliothèque pour le catalogue public, ouvrez un problème sur la [page des problèmes vcpkg de GitHub](https://github.com/Microsoft/vcpkg/issues).
 
 ### <a name="remove-a-library"></a>Supprimer une bibliothèque
 Tapez `vcpkg remove` pour supprimer une bibliothèque installée. Si d’autres bibliothèques dépendent de celle-ci, vous êtes amené à réexécuter la commande avec `--recurse`, ce qui entraîne la suppression de toutes les bibliothèques en aval.
 
 ### <a name="customize-vcpkg"></a>Personnaliser vcpkg
 Vous pouvez modifier votre clone de vcpkg comme vous le souhaitez. Vous pouvez créer plusieurs clones de vcpkg et modifier les portfiles dans chacun d’eux pour obtenir des versions spécifiques de bibliothèques, ou pour spécifier des paramètres de ligne de commande. Dans une entreprise, par exemple, un groupe de développeurs peut travailler sur des logiciels disposant d’un ensemble de dépendances tandis qu’un autre groupe peut utiliser un ensemble différent. Vous pouvez configurer deux clones de vcpkg et, selon vos besoins, modifier chacun d’eux pour télécharger les versions des bibliothèques et des commutateurs de compilation, etc. 
+
+### <a name="uninstall-vcpkg"></a>Désinstaller vcpkg
+Supprimez simplement le répertoire. 
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>La hiérarchie des dossiers vcpkg
 Toutes les données et les fonctionnalités de vcpkg sont totalement autonomes dans une hiérarchie de répertoires unique : c’est ce qu’on appelle une « instance ». Il n’existe pas de paramètre de Registre ni de variable d’environnement. Vous pouvez avoir le nombre d’instances de vcpkg que vous voulez sur un ordinateur, celles-ci n’interfèrent pas les unes avec les autres. 

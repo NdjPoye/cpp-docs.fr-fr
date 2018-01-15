@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 34208bb376f374f72bf3eb88ead6e10b2f1a7c20
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fe1bcd8d8198304c92584f01522048c4d29b827
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ipersiststreaminitimpl-class"></a>Classe IPersistStreamInitImpl
 Cette classe implémente **IUnknown** et fournit une implémentation par défaut de la [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) interface.  
@@ -63,7 +64,7 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 |[IPersistStreamInitImpl::Load](#load)|Charge les propriétés de l’objet à partir du flux spécifié.|  
 |[IPersistStreamInitImpl::Save](#save)|Enregistre les propriétés de l’objet dans le flux spécifié.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) interface permet à un client de demander que votre objet de charge et enregistre ses données persistantes dans un flux unique. Classe `IPersistStreamInitImpl` fournit une implémentation par défaut de cette interface et implémente **IUnknown** en envoyant des informations pour le vidage de builds périphérique en mode débogage.  
   
  **Articles connexes** [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md), [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)  
@@ -73,7 +74,7 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
   
  `IPersistStreamInitImpl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
   
 ##  <a name="getclassid"></a>IPersistStreamInitImpl::GetClassID  
@@ -83,7 +84,7 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 STDMETHOD(GetClassID)(CLSID* pClassID);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getsizemax"></a>IPersistStreamInitImpl::GetSizeMax  
@@ -96,7 +97,7 @@ STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IPersistStreamInit::GetSizeMax](http://msdn.microsoft.com/library/windows/desktop/ms687287) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="initnew"></a>IPersistStreamInitImpl::InitNew  
@@ -106,7 +107,7 @@ STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
 STDMETHOD(InitNew)();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="isdirty"></a>IPersistStreamInitImpl::IsDirty  
@@ -116,7 +117,7 @@ STDMETHOD(InitNew)();
 STDMETHOD(IsDirty)();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IPersistStreamInit::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms680092) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="load"></a>IPersistStreamInitImpl::Load  
@@ -126,7 +127,7 @@ STDMETHOD(IsDirty)();
 STDMETHOD(Load)(LPSTREAM pStm);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  ATL utilise le mappage des propriétés de l’objet pour récupérer ces informations.  
   
  Consultez [IPersistStreamInit::Load](http://msdn.microsoft.com/library/windows/desktop/ms680730) dans le Kit de développement logiciel Windows.  
@@ -138,7 +139,7 @@ STDMETHOD(Load)(LPSTREAM pStm);
 STDMETHOD(Save)(LPSTREAM pStm, BOOL fClearDirty);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  ATL utilise le mappage des propriétés de l’objet pour stocker ces informations.  
   
  Consultez [IPersistStreamInit::Save](http://msdn.microsoft.com/library/windows/desktop/ms694439) dans le Kit de développement logiciel Windows.  

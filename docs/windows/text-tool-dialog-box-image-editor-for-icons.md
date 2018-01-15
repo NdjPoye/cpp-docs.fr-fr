@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f913d3a7eea55547558602cb2ce37fd623434989
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ed1a15dbe8947bc52c8a91d94ca12fee6badcf77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-tool-dialog-box-image-editor-for-icons"></a>Boîte de dialogue Outil texte (Éditeur d'images pour les icônes)
 Utilisez le **outil texte** boîte de dialogue pour ajouter du texte à une ressource curseur, bitmap ou icône.  
@@ -39,8 +42,8 @@ Utilisez le **outil texte** boîte de dialogue pour ajouter du texte à une ress
   
  Vous pouvez avec le bouton droit sur le **outil texte** boîte de dialogue pour accéder à un menu de raccourci par défaut qui contient une liste de commandes Windows standard.  
   
-## <a name="requirements"></a>Spécifications  
- Aucune  
+## <a name="requirements"></a>Configuration requise  
+ Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modification de ressources graphiques](../windows/editing-graphical-resources-image-editor-for-icons.md)

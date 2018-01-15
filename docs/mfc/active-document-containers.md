@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a411c27bda093e1abba915fc23cbd5d0619675a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 87546f3c02025438b3e60cd2038fdc885dfedf9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-document-containers"></a>Conteneurs de documents actifs
 Un conteneur de documents actifs, tels que le classeur Microsoft Office ou Internet Explorer, vous permet de travailler avec plusieurs documents de différents types d’applications au sein d’un frame unique (au lieu de vous obliger à créer et utiliser plusieurs frames d’application pour chaque type de document).  
@@ -37,7 +38,7 @@ Un conteneur de documents actifs, tels que le classeur Microsoft Office ou Inter
   
 -   [Objets de vue de Site](#view_site_objects)  
   
--   [Objet frame](#frame_object)  
+-   [Cadrer sur l’objet](#frame_object)  
   
 -   [Fusion des menus Aide](../mfc/help-menu-merging.md)  
   

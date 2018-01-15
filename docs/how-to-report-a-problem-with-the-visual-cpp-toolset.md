@@ -1,23 +1,22 @@
 ---
 title: "Guide pratique pour signaler un problème avec l’ensemble d’outils Visual C++ | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/03/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: C++
-ms.assetid: ec24a49c-411d-47ce-aa4b-8398b6d3e8f6
-caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4a669b2935e4c21421d0c760e6de0c5c7340bed4
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: b1a5cdb873d536702ecf8536d9a9e7c0205cc923
+ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Guide pratique pour signaler un problème avec l’ensemble d’outils Visual C++
 
@@ -29,9 +28,9 @@ Dans ce document, vous obtiendrez plus d’informations sur les procédures suiv
 
 - [Comment préparer votre rapport](#prepare) et les éléments essentiels à un bon rapport.
 
-- [Modes d’envoi de votre rapport](#send) et leurs différences.
-
 - [Comment générer une reproduction](#generate) et les différents types de reproductions.
+
+- [Modes d’envoi de votre rapport](#send) et leurs différences.
 
 Vos rapports sont importants pour nous ainsi que pour d’autres développeurs comme vous. Merci de nous aider à améliorer Visual C++ !
 
@@ -47,7 +46,7 @@ Au minimum, votre rapport doit contenir les éléments suivants :
 
 - Description détaillée du problème rencontré.
 
-- « Reproduction », code source qui illustre le problème.
+- « Reproduction », code source qui illustre le problème.
 
 Poursuivez votre lecture pour en savoir plus sur les informations spécifiques dont nous avons besoin et l’endroit où vous pouvez les trouver.
 
@@ -94,7 +93,7 @@ L’endroit le plus approprié pour trouver ces informations se situe dans le jo
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>Pour signaler le contenu de la ligne de commande
 
-1. Recherchez le fichier **CL.command.1.tlog** et ouvrez-le. Par défaut, ce fichier se trouve dans \\...\Visual Studio Version\Projects\SolutionName\ProjectName\Config\ProjectName.tlog\CL.command.1.tlog.
+1. Recherchez le fichier **CL.command.1.tlog** et ouvrez-le. Par défaut, ce fichier se trouve dans \\...\Visual Studio *version*\Projects\\*NomSolution*\\*NomProjet*\Config\\*NomProjet*.tlog\CL.command.1.tlog.
 
    Dans ce fichier, vous trouverez les noms des fichiers de code source suivis des arguments de ligne de commande utilisés pour les compiler, chacun sur une ligne distincte.
 
@@ -213,7 +212,7 @@ CONTEXT:
   Dr2    = 0000000000000000  Dr7    = 0000000000000000
 ```
 
-Si l’édition des liens incrémentielle est activée et que le blocage se produit uniquement après l’édition des liens initiale, autrement dit uniquement après la première édition des liens complète sur laquelle repose l’édition des liens incrémentielle à venir, fournissez également une copie des fichiers objet (.obj) et bibliothèque (.lib) qui correspondent aux fichiers sources qui ont été modifiés à la fin de l’édition des liens initiale.
+Si l’édition des liens incrémentielle est activée et que le blocage se produit seulement après l’édition initiale des liens (autrement dit, seulement après la première édition complète des liens sur laquelle l’édition des liens incrémentielle suivante est basée), fournissez également une copie des fichiers objet (.obj) et bibliothèque (.lib) correspondant aux fichiers sources qui ont été modifiés une fois l’édition initiale des liens terminée.
 
 #### <a name="bad-code-generation"></a>Génération de code incorrect
 
@@ -221,50 +220,13 @@ La génération de code incorrect est rare, mais se produit quand le compilateur
 
 Pour ce type de blocage, fournissez une [reproduction de lien](#link-repros) si vous utilisez la génération de code durant l’édition de liens (LTCG) ou une [reproduction prétraitée](#preprocessed-repros) dans le cas contraire. La génération LTCG est activée par l’argument de ligne de commande `/GL` sur cl.exe.
 
-## <a name="send"></a> Modes d’envoi de votre rapport
-
-Vous disposez de plusieurs moyens pour nous faire parvenir votre rapport. Vous pouvez utiliser [l’outil intégré Signaler un problème](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) de Visual Studio, ou nous envoyer un e-mail. Le meilleur choix pour votre rapport dépend du type de problème que vous avez rencontré, comment vous souhaitez interagir avec les ingénieurs qui vont étudier votre rapport et si vous souhaitez suivre sa progression ou le partager avec la communauté.
-
-> [!NOTE]
-> Quelle que soit la manière dont vous envoyez votre rapport, Microsoft respecte votre vie privée. Pour plus d’informations sur la façon dont nous utilisons les données que vous nous envoyez, consultez [Déclaration de confidentialité des produits Microsoft Visual Studio](https://www.visualstudio.com/dn948229).
-
-### <a name="send-an-email"></a>Envoyer un e-mail
-
-L’e-mail représente un autre moyen d’envoyer votre rapport directement à l’équipe Visual C++ ; vous pouvez nous contacter à l’adresse [compilercrash@microsoft.com](mailto:compilercrash@microsoft.com).
-
-Si vous choisissez d’envoyer votre rapport par e-mail, vous pouvez utiliser le modèle suivant comme corps de votre message. N’oubliez pas de joindre le code source ou d’autres fichiers si vous n’indiquez pas ces informations dans le corps du message.
-
-```Example
-To: compilercrash@microsoft.com
-Subject: Visual C++ Error Report
------
-
-Compiler version:
-
-CL.EXE command line:
-
-Problem description:
-
-Source code and repro steps:
-
-```
-
-### <a name="use-the-report-a-problem-tool"></a>Utiliser l’outil Signaler un problème
-
-L’outil Signaler un problème dans Visual Studio est un moyen pour les utilisateurs de Visual Studio de signaler divers problèmes en quelques clics. Il fournit un formulaire simple qui vous permet de spécifier des informations détaillées sur le problème que vous avez rencontré et d’envoyer ensuite votre rapport sans jamais quitter l’IDE.
-
-Le signalement de votre problème via l’outil Signaler un problème n’est pas courant pour les types de problèmes d’ensembles d’outils présentés dans ce document ; néanmoins, il s’agit d’une option que vous pouvez choisir si elle vous convient.
-
-> [!TIP]
-> Pour d’autres types de problèmes que vous pouvez rencontrer dans Visual Studio et qui ne sont pas liés à l’ensemble d’outils (par exemple, des problèmes d’interface utilisateur, des fonctionnalités IDE altérées ou des blocages d’ordre général), l’outil Signaler un problème peut s’avérer être un choix particulièrement judicieux en raison de ses fonctionnalités de capture d’écran et de sa capacité à enregistrer les actions de l’interface utilisateur qui aboutissent au problème que vous avez rencontré. Vous ne devez jamais signaler ces autres types d’erreurs en envoyant un e-mail à compilercrash@microsoft.com.
-
 ## <a name="generate"></a> Générer une reproduction
 
-Une reproduction est un exemple de code complet et autonome qui illustre le problème que vous signalez. Une reproduction n’est **pas** un extrait de code, mais doit être un exemple complet capable de générer et de s’exécuter (ou qui devrait, sans les erreurs produites par le problème que vous signalez). Elle doit contenir toutes les directives #include nécessaires, même pour les en-têtes standard.
+Une reproduction est un exemple de code complet et autonome qui illustre le problème que vous signalez. Une reproduction **n’est pas** un extrait de code : ce doit être un exemple complet qui peut être généré et exécuté (ou qui devrait pouvoir l’être sans les erreurs produites par le problème que vous signalez). Elle doit contenir toutes les directives #include nécessaires, même pour les en-têtes standard.
 
 En outre, une bonne reproduction
 
-- **Est minimale.** Les reproductions doivent être aussi réduites que possible tout en illustrant toujours avec précision le problème rencontré. Elles ne doivent pas être complexes ni réalistes, mais de préférence simples et pertinentes. Il n’est pas obligatoire d’y inclure des contre-exemples de code qui fonctionne, mais cela est possible à titre d’illustration ; seul l’exemple de code à l’origine du problème est nécessaire.
+- **Est minimale.** Les reproductions doivent être aussi réduites que possible tout en illustrant toujours avec précision le problème rencontré. Elles ne doivent pas nécessairement être complexes ou réalistes : les reproductions simples et pertinentes sont préférables. Il n’est pas obligatoire d’y inclure des contre-exemples de code qui fonctionne, mais cela est possible à titre d’illustration ; seul l’exemple de code à l’origine du problème est nécessaire.
 
 - **Est autonome.** Les reproductions doivent éviter les dépendances inutiles. Si vous pouvez reproduire le problème sans bibliothèques tierces, faites-le. Si vous pouvez reproduire le problème sans aucun code de bibliothèque (`std::out`, `printf()` sont acceptés), faites-le. Vous nous aiderez considérablement en réduisant la quantité de code que nous devons examiner comme facteur possible du problème.
 
@@ -330,3 +292,51 @@ Enfin, empaquetez la reproduction en compressant l’ensemble du répertoire dan
 Si vous ne pouvez pas réduire le problème à un fichier source unique ou une reproduction prétraitée et que le problème ne nécessite pas une reproduction de lien, nous pouvons examiner un projet IDE. Le code dans le projet doit toujours être minimal et tous les conseils de ce document s’appliquent encore.
 
 Créez votre reproduction comme un projet IDE minimal, puis empaquetez-la en compressant l’intégralité de la structure de répertoire dans un fichier .zip ou similaire et attachez-la à votre rapport.
+
+## <a name="send"></a> Modes d’envoi de votre rapport
+
+Vous disposez de plusieurs moyens pour nous faire parvenir votre rapport. Vous pouvez utiliser les pages intégrées de Visual Studio [Outil Signaler un problème](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) ou [Communauté de développeurs Visual Studio](https://developercommunity.visualstudio.com/). Il est également possible d’envoyer un e-mail avec votre rapport, mais les deux premières méthodes sont préférables. Le choix dépend de la façon dont vous voulez communiquer avec les ingénieurs qui vont étudier votre rapport, et si vous voulez suivre sa progression ou le partager avec la communauté.
+
+> [!NOTE]
+> Quelle que soit la manière dont vous envoyez votre rapport, Microsoft respecte votre vie privée. Pour plus d’informations sur la façon dont nous utilisons les données que vous nous envoyez, consultez [Déclaration de confidentialité des produits Microsoft Visual Studio](https://www.visualstudio.com/dn948229).
+
+### <a name="use-the-report-a-problem-tool"></a>Utiliser l’outil Signaler un problème
+
+L’outil **Signaler un problème** dans Visual Studio est un moyen pour les utilisateurs de Visual Studio de signaler différents problèmes en quelques clics. Il fournit un formulaire simple qui vous permet de spécifier des informations détaillées sur le problème que vous avez rencontré et d’envoyer ensuite votre rapport sans jamais quitter l’IDE.
+
+L’outil **Signaler un problème** est facile et pratique à utiliser à partir de l’IDE. Vous pouvez y accéder à partir de la barre de titre en choisissant l’icône **Envoyer des commentaires** à côté de la zone de recherche **Lancement rapide**, ou vous pouvez le trouver sur la barre de menus dans **Aide** >  **Envoyer des commentaires** > **Signaler un problème**.
+
+Quand vous choisissez de signaler un problème, cherchez d’abord s’il en existe de similaires dans la Communauté des développeurs. Si votre problème a déjà été signalé, votez pour la rubrique et ajoutez des commentaires qui ajoutent de nouveaux éléments. Si vous ne voyez pas de problème similaire, choisissez le bouton **Signaler un nouveau problème** dans le bas de la boîte de dialogue Commentaires sur Visual Studio et suivez les étapes pour signaler votre problème.
+
+### <a name="use-the-visual-studio-developer-community-pages"></a>Utiliser les pages de la Communauté des développeurs Visual Studio
+
+Les pages de la Communauté des développeurs Visual Studio sont un autre moyen pratique de signaler des problèmes et trouver des solutions pour Visual Studio, le compilateur C++, les outils et les bibliothèques. La page [Visual Studio Questions](https://developercommunity.visualstudio.com/spaces/8/index.html) est l’endroit où vous pouvez signaler des problèmes avec l’IDE ou l’installation. Pour les problèmes relatifs au compilateur, à l’éditeur de liens, et aux autres outils et bibliothèques C++, utilisez la page [C++ Questions](https://developercommunity.visualstudio.com/spaces/62/index.html).
+
+Dans la bannière Communauté de développeurs située en haut de chaque page se trouve une zone de recherche, que vous pouvez utiliser pour rechercher des publications ou des rubriques qui signalent des problèmes similaires aux vôtres. Il est possible qu’une solution ou d’autres informations utiles relatives à votre problème soient déjà disponibles dans une rubrique existante. Si quelqu’un a signalé le même problème, votez pour cette rubrique et ajoutez-y des commentaires au lieu de signaler un nouveau problème.
+
+Si votre problème n’a pas déjà été signalé, choisissez le bouton **Signaler un problème** en regard de la zone de recherche de la page Communauté des développeurs. Vous pouvez être invité à vous connecter à votre compte Visual Studio et à accepter de donner à l’application Communauté des développeurs un accès à votre profil. Une fois connecté, vous accédez directement à une page où vous pouvez signaler le problème. Vous pouvez inclure le code et la ligne de commande de votre reproduction, des captures d’écran, des liens vers des discussions qui s’y rapportent, et toute autre information que vous pensez pertinente et utile.
+
+### <a name="send-an-email"></a>Envoyer un e-mail
+
+Un e-mail constitue un autre moyen d’envoyer votre rapport directement à l’équipe Visual C++. Vous pouvez nous contacter à l’adresse [compilercrash@microsoft.com](mailto:compilercrash@microsoft.com). Utilisez cette méthode seulement si les deux autres ne sont pas disponibles, car les e-mails ne sont pas suivis d’aussi près que les problèmes signalés à la Communauté des développeurs via l’outil **Signaler un problème** ou via les pages web, et les commentaires et les solutions ne sont pas visibles par d’autres utilisateurs de Visual Studio.
+
+Si vous choisissez d’envoyer votre rapport par e-mail, vous pouvez utiliser le modèle suivant comme corps de votre message. N’oubliez pas de joindre le code source ou d’autres fichiers si vous n’indiquez pas ces informations dans le corps du message.
+
+```Example
+To: compilercrash@microsoft.com
+Subject: Visual C++ Error Report
+-----
+
+Compiler version:
+
+CL.EXE command line:
+
+Problem description:
+
+Source code and repro steps:
+
+```
+
+> [!TIP]
+> Pour d’autres types de problèmes que vous pouvez rencontrer dans Visual Studio et qui ne sont pas liés à l’ensemble d’outils (par exemple, des problèmes d’interface utilisateur, des fonctionnalités IDE altérées ou des blocages d’ordre général), l’outil Signaler un problème peut s’avérer être un choix particulièrement judicieux en raison de ses fonctionnalités de capture d’écran et de sa capacité à enregistrer les actions de l’interface utilisateur qui aboutissent au problème que vous avez rencontré. Vous ne devez jamais signaler ces autres types d’erreurs en envoyant un e-mail à compilercrash@microsoft.com.
+

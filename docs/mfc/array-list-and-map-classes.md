@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ff37c762049121750a342eac1cf7f310b2fbce63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7de6f3c72b31ea9094af032bc81e9f2506606cce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-list-and-map-classes"></a>Classes de tableaux, listes et mappages
 Pour gérer des agrégats de données, la bibliothèque de classes fournit un groupe de classes de collection (tableaux, listes et mappages) pouvant contenir différents types d’objets et types prédéfinis. Les collections sont dimensionnées de manière dynamique. Ces classes peuvent être utilisées dans n'importe quel programme écrit pour Windows ou non. Toutefois, elles sont plus utiles pour implémenter les structures de données qui définissent les classes de votre document dans le framework d'application. Vous pouvez facilement dériver les classes de collection spécialisées à partir de ces éléments, ou vous pouvez les créer en fonction des classes du modèle. Pour plus d’informations sur ces méthodes, consultez l’article [Collections](../mfc/collections.md). Pour obtenir la liste des classes de collection de modèle, consultez l’article [Classes de modèle pour les tableaux, listes et mappages](../mfc/template-classes-for-arrays-lists-and-maps.md).  

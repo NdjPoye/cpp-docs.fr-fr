@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -31,38 +30,22 @@ f1_keywords:
 - ATLCOLL/ATL::CRBTree::RemoveAll
 - ATLCOLL/ATL::CRBTree::RemoveAt
 - ATLCOLL/ATL::CRBTree::SetValueAt
-dev_langs:
-- C++
-helpviewer_keywords:
-- CRBTree class
+dev_langs: C++
+helpviewer_keywords: CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 7dec5cc56d28c4574f923fe2cbb952b628e2689f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8f436a3661f027ba1026a60982cb18b48a2c48cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="crbtree-class"></a>CRBTree (classe)
-Cette classe fournit des méthodes pour la création et l’utilisation d’une arborescence rouge-noire.  
+# <a name="crbtree-class"></a>Classe de CRBTree
+Cette classe fournit des méthodes pour la création et utilisation d’une arborescence rouge-noire.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -76,13 +59,13 @@ class CRBTree
   
 #### <a name="parameters"></a>Paramètres  
  `K`  
- Le type d’élément clé.  
+ Le type d’élément de clé.  
   
  *V*  
  Le type d’élément de valeur.  
   
  `KTraits`  
- Le code utilisé pour copier ou déplacer des éléments clés. Consultez la page [CElementTraits classe](../../atl/reference/celementtraits-class.md) pour plus de détails.  
+ Le code utilisé pour copier ou déplacer des éléments clés. Consultez [CElementTraits classe](../../atl/reference/celementtraits-class.md) pour plus d’informations.  
   
  `VTraits`  
  Le code utilisé pour copier ou déplacer des éléments de valeur.  
@@ -102,7 +85,7 @@ class CRBTree
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CRBTree::CPair (classe)](#cpair_class)|Une classe qui contient les éléments de la clé et la valeur.|  
+|[Classe de CRBTree::CPair](#cpair_class)|Une classe qui contient les éléments de la clé et la valeur.|  
   
 ### <a name="public-constructors"></a>Constructeurs publics  
   
@@ -114,44 +97,44 @@ class CRBTree
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)|Appelez cette méthode pour rechercher la position de l’élément qui utilise la clé disponible suivante.|  
+|[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)|Appelez cette méthode pour trouver la position de l’élément qui utilise la clé disponible suivante.|  
 |[CRBTree::GetAt](#getat)|Appelez cette méthode pour obtenir l’élément à une position donnée dans l’arborescence.|  
 |[CRBTree::GetCount](#getcount)|Appelez cette méthode pour obtenir le nombre d’éléments dans l’arborescence.|  
-|[CRBTree::GetHeadPosition](#getheadposition)|Appelez cette méthode pour obtenir la valeur de position de l’élément au début de l’arborescence.|  
+|[CRBTree::GetHeadPosition](#getheadposition)|Appelez cette méthode pour obtenir la valeur de la position de l’élément au début de l’arborescence.|  
 |[CRBTree::GetKeyAt](#getkeyat)|Appelez cette méthode pour obtenir la clé à partir d’une position donnée dans l’arborescence.|  
 |[CRBTree::GetNext](#getnext)|Appelez cette méthode pour obtenir un pointeur vers un élément stocké dans le `CRBTree` de l’objet et avance la position de l’élément suivant.|  
-|[CRBTree::GetNextAssoc](#getnextassoc)|Appelez cette méthode pour obtenir la clé et la valeur d’un élément stocké dans la table et avance la position de l’élément suivant.|  
+|[CRBTree::GetNextAssoc](#getnextassoc)|Appelez cette méthode pour obtenir la clé et la valeur d’un élément stocké dans le mappage et avance la position de l’élément suivant.|  
 |[CRBTree::GetNextKey](#getnextkey)|Appelez cette méthode pour obtenir la clé d’un élément stocké dans l’arborescence et avance la position de l’élément suivant.|  
 |[CRBTree::GetNextValue](#getnextvalue)|Appelez cette méthode pour obtenir la valeur d’un élément stocké dans l’arborescence et avance la position de l’élément suivant.|  
 |[CRBTree::GetPrev](#getprev)|Appelez cette méthode pour obtenir un pointeur vers un élément stocké dans le `CRBTree` de l’objet, puis mettre à jour la position de l’élément précédent.|  
 |[CRBTree::GetTailPosition](#gettailposition)|Appelez cette méthode pour obtenir la valeur de position de l’élément à la fin de l’arborescence.|  
 |[CRBTree::GetValueAt](#getvalueat)|Appelez cette méthode pour récupérer la valeur stockée à une position donnée dans le `CRBTree` objet.|  
-|[CRBTree::IsEmpty](#isempty)|Appelez cette méthode pour tester un objet de l’arborescence vide.|  
-|[CRBTree::RemoveAll](#removeall)|Appelez cette méthode pour supprimer tous les éléments de la **CRBTree** objet.|  
+|[CRBTree::IsEmpty](#isempty)|Appelez cette méthode pour tester un objet d’arborescence vide.|  
+|[CRBTree::RemoveAll](#removeall)|Appelez cette méthode pour supprimer tous les éléments à partir de la **CRBTree** objet.|  
 |[CRBTree::RemoveAt](#removeat)|Appelez cette méthode pour supprimer l’élément à la position donnée dans le **CRBTree** objet.|  
 |[CRBTree::SetValueAt](#setvalueat)|Appelez cette méthode pour modifier la valeur stockée à une position donnée dans le `CRBTree` objet.|  
   
 ## <a name="remarks"></a>Notes  
- Une arborescence rouge-noire est une arborescence de recherche binaire qui utilise un supplément peu d’informations par nœud pour vous assurer qu’il reste « équilibre », « qui est, la hauteur de l’arbre ne disproportionnellement d’augmenter et affecter les performances.  
+ Une arborescence rouge-noire est une arborescence de recherche binaire qui utilise un fichier extra bits d’information par nœud pour vous assurer qu’il reste « équilibrée, » qui est, la hauteur de l’arbre n’augmente disproportionnellement élevée et affecter les performances.  
   
  Cette classe de modèle est conçue pour être utilisé par [CRBMap](../../atl/reference/crbmap-class.md) et [CRBMultiMap](../../atl/reference/crbmultimap-class.md). La majeure partie des méthodes qui composent ces classes dérivées sont fournis par `CRBTree`.  
   
- Pour une description plus complète des diverses classes de collection et leurs fonctionnalités et les caractéristiques de performance, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
+ Pour obtenir une description plus complète de diverses classes de collection et leurs fonctions et les caractéristiques de performances, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcoll.h  
   
-##  <a name="cpair_class"></a>CRBTree::CPair (classe)  
+##  <a name="cpair_class"></a>Classe de CRBTree::CPair  
  Une classe qui contient les éléments de la clé et la valeur.  
   
 ```
 class CPair : public __POSITION
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette classe est utilisée par les méthodes [CRBTree::GetAt](#getat), [CRBTree::GetNext](#getnext), et [CRBTree::GetPrev](#getprev) pour accéder aux éléments de clé et la valeur stockées dans la structure arborescente.  
   
- Les membres sont les suivants :  
+ Les membres sont les suivantes :  
   
 |||  
 |-|-|  
@@ -165,11 +148,11 @@ class CPair : public __POSITION
 ~CRBTree() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Libère toutes les ressources allouées. Appels [CRBTree::RemoveAll](#removeall) supprimer tous les éléments.  
+### <a name="remarks"></a>Notes  
+ Libère les ressources allouées. Appels [CRBTree::RemoveAll](#removeall) supprimer tous les éléments.  
   
 ##  <a name="findfirstkeyafter"></a>CRBTree::FindFirstKeyAfter  
- Appelez cette méthode pour rechercher la position de l’élément qui utilise la clé disponible suivante.  
+ Appelez cette méthode pour trouver la position de l’élément qui utilise la clé disponible suivante.  
   
 ```
 POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
@@ -182,8 +165,8 @@ POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de la position de l’élément qui utilise la clé disponible suivante. S’il n’y a plus d’éléments, la valeur NULL est retournée.  
   
-### <a name="remarks"></a>Remarques  
- Cette méthode facilite parcourir l’arborescence sans avoir à calculer les valeurs de position au préalable.  
+### <a name="remarks"></a>Notes  
+ Cette méthode rend faciles à parcourir l’arborescence sans avoir à calculer les valeurs de position au préalable.  
   
 ##  <a name="getat"></a>CRBTree::GetAt  
  Appelez cette méthode pour obtenir l’élément à une position donnée dans l’arborescence.  
@@ -201,14 +184,14 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
  `key`  
  La variable qui reçoit la clé.  
   
- *value*  
+ *valeur*  
  La variable qui reçoit la valeur.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Les deux premières formes retournent un pointeur vers un [CPair](#cpair_class). La troisième forme obtienne une clé et une valeur pour la position donnée.  
   
-### <a name="remarks"></a>Remarques  
- La valeur de position permettre être préalablement déterminée par un appel à une méthode comme [CRBTree::GetHeadPosition](#getheadposition) ou [CRBTree::GetTailPosition](#gettailposition).  
+### <a name="remarks"></a>Notes  
+ La valeur de position peut être précédemment déterminée avec un appel à une méthode comme [CRBTree::GetHeadPosition](#getheadposition) ou [CRBTree::GetTailPosition](#gettailposition).  
   
  Dans les versions debug, un échec d’assertion se produit si `pos` est égal à NULL.  
   
@@ -223,7 +206,7 @@ size_t GetCount() const throw();
  Retourne le nombre d’éléments (chaque paire clé/valeur est un élément) stockés dans l’arborescence.  
   
 ##  <a name="getheadposition"></a>CRBTree::GetHeadPosition  
- Appelez cette méthode pour obtenir la valeur de position de l’élément au début de l’arborescence.  
+ Appelez cette méthode pour obtenir la valeur de la position de l’élément au début de l’arborescence.  
   
 ```
 POSITION GetHeadPosition() const throw();
@@ -232,7 +215,7 @@ POSITION GetHeadPosition() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de la position de l’élément au début de l’arborescence.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La valeur retournée par `GetHeadPosition` peut être utilisé avec des méthodes telles que [CRBTree::GetKeyAt](#getkeyat) ou [CRBTree::GetNext](#getnext) pour parcourir l’arborescence et récupérer des valeurs.  
   
 ##  <a name="getkeyat"></a>CRBTree::GetKeyAt  
@@ -267,11 +250,11 @@ CPair* GetNext(POSITION& pos) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers la prochaine [CPair](#cpair_class) valeur dans l’arborescence.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `pos` position est mis à jour après chaque appel. Si l’élément récupéré est le dernier dans l’arborescence, `pos` a la valeur NULL.  
   
 ##  <a name="getnextassoc"></a>CRBTree::GetNextAssoc  
- Appelez cette méthode pour obtenir la clé et la valeur d’un élément stocké dans la table et avance la position de l’élément suivant.  
+ Appelez cette méthode pour obtenir la clé et la valeur d’un élément stocké dans le mappage et avance la position de l’élément suivant.  
   
 ```
 void GetNextAssoc(
@@ -285,12 +268,12 @@ void GetNextAssoc(
  Le compteur de position, retourné par un appel précédent à des méthodes telles que [CRBTree::GetHeadPosition](#getheadposition) ou [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).  
   
  `key`  
- Paramètre de modèle spécifiant le type de clé de l’arborescence.  
+ Paramètre de modèle en spécifiant le type de clé de l’arborescence.  
   
- *value*  
- Paramètre de modèle spécifiant le type de valeur de l’arborescence.  
+ *valeur*  
+ Paramètre de modèle en spécifiant le type de valeur de l’arborescence.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `pos` position est mis à jour après chaque appel. Si l’élément récupéré est le dernier dans l’arborescence, `pos` a la valeur NULL.  
   
 ##  <a name="getnextkey"></a>CRBTree::GetNextKey  
@@ -307,8 +290,8 @@ const K& GetNextKey(POSITION& pos) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une référence à la clé suivante dans l’arborescence.  
   
-### <a name="remarks"></a>Remarques  
- Met à jour le compteur de position actuelle, `pos`. S’il n’y a aucune entrée dans l’arborescence, le compteur de position est défini sur NULL.  
+### <a name="remarks"></a>Notes  
+ Met à jour le compteur de position actuelle, `pos`. S’il n’y a aucune entrée dans l’arborescence, le compteur de position a la valeur NULL.  
   
 ##  <a name="getnextvalue"></a>CRBTree::GetNextValue  
  Appelez cette méthode pour obtenir la valeur d’un élément stocké dans l’arborescence et avance la position de l’élément suivant.  
@@ -326,7 +309,7 @@ V& GetNextValue(POSITION& pos) throw();
  Retourne une référence à la valeur suivante dans l’arborescence.  
   
 ### <a name="remarks"></a>Notes  
- Met à jour le compteur de position actuelle, `pos`. S’il n’y a aucune entrée dans l’arborescence, le compteur de position est défini sur NULL.  
+ Met à jour le compteur de position actuelle, `pos`. S’il n’y a aucune entrée dans l’arborescence, le compteur de position a la valeur NULL.  
   
 ##  <a name="getprev"></a>CRBTree::GetPrev  
  Appelez cette méthode pour obtenir un pointeur vers un élément stocké dans le `CRBTree` de l’objet, puis mettre à jour la position de l’élément précédent.  
@@ -343,8 +326,8 @@ CPair* GetPrev(POSITION& pos) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers la précédente [CPair](#cpair_class) valeur stockée dans l’arborescence.  
   
-### <a name="remarks"></a>Remarques  
- Met à jour le compteur de position actuelle, `pos`. S’il n’y a aucune entrée dans l’arborescence, le compteur de position est défini sur NULL.  
+### <a name="remarks"></a>Notes  
+ Met à jour le compteur de position actuelle, `pos`. S’il n’y a aucune entrée dans l’arborescence, le compteur de position a la valeur NULL.  
   
 ##  <a name="gettailposition"></a>CRBTree::GetTailPosition  
  Appelez cette méthode pour obtenir la valeur de position de l’élément à la fin de l’arborescence.  
@@ -356,7 +339,7 @@ POSITION GetTailPosition() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de la position de l’élément à la fin de l’arborescence.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La valeur retournée par `GetTailPosition` peut être utilisé avec des méthodes telles que [CRBTree::GetKeyAt](#getkeyat) ou [CRBTree::GetPrev](#getprev) pour parcourir l’arborescence et récupérer des valeurs.  
   
 ##  <a name="getvalueat"></a>CRBTree::GetValueAt  
@@ -375,7 +358,7 @@ V& GetValueAt(POSITION pos) throw();
  Retourne une référence à la valeur stockée à la position donnée dans le `CRBTree` objet.  
   
 ##  <a name="isempty"></a>CRBTree::IsEmpty  
- Appelez cette méthode pour tester un objet de l’arborescence vide.  
+ Appelez cette méthode pour tester un objet d’arborescence vide.  
   
 ```
 bool IsEmpty() const throw();
@@ -399,14 +382,14 @@ typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 ```  
   
 ##  <a name="removeall"></a>CRBTree::RemoveAll  
- Appelez cette méthode pour supprimer tous les éléments de la `CRBTree` objet.  
+ Appelez cette méthode pour supprimer tous les éléments à partir de la `CRBTree` objet.  
   
 ```
 void RemoveAll() throw();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Efface le `CRBTree` objet, la mémoire utilisée pour stocker les éléments.  
+ Efface le `CRBTree` objet, la libération de la mémoire utilisée pour stocker les éléments.  
   
 ##  <a name="removeat"></a>CRBTree::RemoveAt  
  Appelez cette méthode pour supprimer l’élément à la position donnée dans le **CRBTree** objet.  
@@ -419,8 +402,8 @@ void RemoveAt(POSITION pos) throw();
  `pos`  
  Le compteur de position, retourné par un appel précédent à des méthodes telles que [CRBTree::GetHeadPosition](#getheadposition) ou [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).  
   
-### <a name="remarks"></a>Remarques  
- Supprime la paire clé/valeur stockée à la position spécifiée. La mémoire utilisée pour stocker l’élément est libérée. La POSITION référencée par `pos` devient non valide et pendant que la POSITION de tous les autres éléments dans l’arborescence reste valide, elles ne font pas nécessairement conserver le même ordre.  
+### <a name="remarks"></a>Notes  
+ Supprime la paire clé/valeur stockée à la position spécifiée. La mémoire utilisée pour stocker l’élément est libérée. La POSITION référencée par `pos` devient non valide et pendant que la POSITION de tous les autres éléments dans l’arborescence de la validité, ils n’êtes pas obligé conserver le même ordre.  
   
 ##  <a name="setvalueat"></a>CRBTree::SetValueAt  
  Appelez cette méthode pour modifier la valeur stockée à une position donnée dans le `CRBTree` objet.  
@@ -433,10 +416,10 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
  `pos`  
  Le compteur de position, retourné par un appel précédent à des méthodes telles que [CRBTree::GetHeadPosition](#getheadposition) ou [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).  
   
- *value*  
+ *valeur*  
  La valeur à ajouter à la `CRBTree` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Remplace l’élément de la valeur stockée à la position donnée dans le `CRBTree` objet.  
   
 ##  <a name="vinargtype"></a>CRBTree::VINARGTYPE  
@@ -455,4 +438,3 @@ typedef VTraits::OUTARGTYPE VOUTARGTYPE;
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

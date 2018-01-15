@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,38 +12,22 @@ f1_keywords:
 - ATLCOLL/ATL::CAutoVectorPtrElementTraits
 - ATLCOLL/ATL::CAutoVectorPtrElementTraits::INARGTYPE
 - ATLCOLL/ATL::CAutoVectorPtrElementTraits::OUTARGTYPE
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAutoVectorPtrElementTraits class
+dev_langs: C++
+helpviewer_keywords: CAutoVectorPtrElementTraits class
 ms.assetid: 16b81a56-55fb-46ca-b376-66a1884231a6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: d7b7418b713993f539f56e70715296d5af265d28
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e69be3fa7136b0d411b92299d99d877710d5f118
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="cautovectorptrelementtraits-class"></a>CAutoVectorPtrElementTraits (classe)
-Cette classe fournit des méthodes et fonctions statiques typedefs utiles pour la création de collections de pointeurs intelligents à l’aide de nouveau vecteur et supprimer des opérateurs.  
+# <a name="cautovectorptrelementtraits-class"></a>Classe de CAutoVectorPtrElementTraits
+Cette classe fournit des méthodes, les fonctions statiques et typedefs utiles lors de la création de collections de pointeurs intelligents à l’aide de nouveau vecteur et supprimer des opérateurs.  
   
 > [!IMPORTANT]
 >  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
@@ -70,10 +53,10 @@ class CAutoVectorPtrElementTraits :
 |[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|Le type de données à utiliser pour l’ajout d’éléments à l’objet de classe de collection.|  
 |[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collection.|  
   
-## <a name="remarks"></a>Remarques  
- Cette classe fournit des méthodes, des fonctions statiques et typedefs pour contribuer à la création d’objets de classe de collection qui contient des pointeurs intelligents. Contrairement aux [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md), cette classe vector nouveaux et supprimer des opérateurs.  
+## <a name="remarks"></a>Notes  
+ Cette classe fournit des méthodes, les fonctions statiques et typedefs pour contribuer à la création d’objets de classe de collection qui contient des pointeurs intelligents. Contrairement aux [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md), cette classe vector nouveaux et supprimer des opérateurs.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
   
  [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)  
@@ -84,7 +67,7 @@ class CAutoVectorPtrElementTraits :
   
  `CAutoVectorPtrElementTraits`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcoll.h  
   
 ##  <a name="inargtype"></a>CAutoVectorPtrElementTraits::INARGTYPE  
@@ -102,7 +85,6 @@ typedef T*& OUTARGTYPE;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [CDefaultElementTraits (classe)](../../atl/reference/cdefaultelementtraits-class.md)   
- [CAutoVectorPtr (classe)](../../atl/reference/cautovectorptr-class.md)   
+ [Classe de CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
+ [Classe de CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

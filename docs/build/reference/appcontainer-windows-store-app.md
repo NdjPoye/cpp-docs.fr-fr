@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 34a1c480e63b5e514e1184d5d3220176b9ba6932
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22ca7bec885f20518950626d33f7e3af553d0d52
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appcontainer-windows-store-app"></a>/APPCONTAINER (Application Windows Store)
 Spécifie si l’éditeur de liens crée une image exécutable qui doit être exécutée dans un conteneur d’application.  
@@ -28,7 +29,7 @@ Spécifie si l’éditeur de liens crée une image exécutable qui doit être ex
 /APPCONTAINER[:NO]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Par défaut, /APPCONTAINER est désactivée.  
   
  Cette option modifie un fichier exécutable pour indiquer si l’application doit être exécutée dans l’environnement d’isolation des processus appcontainer. Spécifiez /APPCONTAINER pour une application qui doit s’exécuter dans l’environnement appcontainer — par exemple, un [!INCLUDE[win8_appstore_long](../../build/reference/includes/win8_appstore_long_md.md)] application. (L’option est définie automatiquement dans Visual Studio lorsque vous créez un [!INCLUDE[win8_appstore_long](../../build/reference/includes/win8_appstore_long_md.md)] application à partir d’un modèle.) Pour une application de bureau, spécifiez /APPCONTAINER:NO ou omettez simplement l’option.  

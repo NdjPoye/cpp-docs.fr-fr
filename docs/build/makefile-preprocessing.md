@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e242610d2755091704386b0cb3cd85f3cbba70a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f08b1568bd205b02ff2069e096725a7a52730f4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makefile-preprocessing"></a>Prétraitement d'un makefile
 Vous pouvez contrôler la session NMAKE en utilisant des expressions et des directives de prétraitement. Instructions de prétraitement peuvent être placées dans le fichier Make ou Tools.ini. À l’aide de directives, vous pouvez conditionnellement traiter votre makefile, afficher des messages d’erreur, inclure d’autres makefiles, annuler la définition d’une macro et activer ou désactiver les certaines options.  

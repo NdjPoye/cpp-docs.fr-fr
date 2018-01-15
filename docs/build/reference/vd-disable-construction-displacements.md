@@ -26,11 +26,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0c06c67142e3e0af4582292304ff2eee8445e014
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b945c4a3191554d5299522ff376772d6362a616c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (Désactiver les déplacements de construction)
 ## <a name="syntax"></a>Syntaxe  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
   
  **/ vd2** ajoute un champ vtordisp lorsque vous utilisez une base virtuelle avec des fonctions virtuelles. **/ vd1** doit être suffisante. Les plus courants de cas où **/vd2** est nécessaire est lorsque la seule fonction virtuelle dans votre base virtuelle est un destructeur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Ces options s’appliquent uniquement au code C++ qui utilise des bases virtuelles.  
   
  [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]implémente la prise en charge de déplacement de construction C++ dans les situations où l’héritage virtuel est utilisé. Les déplacements de construction résout le problème créé lorsqu’une fonction virtuelle, déclarée dans une base virtuelle et de substitution dans une classe dérivée, est appelée à partir d’un constructeur pendant la construction d’une classe plus dérivée.  

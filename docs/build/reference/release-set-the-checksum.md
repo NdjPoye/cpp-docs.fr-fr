@@ -1,59 +1,59 @@
 ---
-title: "/RELEASE (D&#233;finir le total de Checksum) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/release"
-  - "VC.Project.VCLinkerTool.SetChecksum"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/RELEASE (option de l'éditeur de liens)"
-  - "définition du checksum"
-  - "RELEASE (option de l'éditeur de liens)"
-  - "-RELEASE (option de l'éditeur de liens)"
+title: "-RELEASE (jeu de la somme de contrôle) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /release
+- VC.Project.VCLinkerTool.SetChecksum
+dev_langs: C++
+helpviewer_keywords:
+- -RELEASE linker option
+- /RELEASE linker option
+- checksum setting
+- RELEASE linker option
 ms.assetid: 93bcadf4-29ac-4824-914b-6997e3751d22
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b961c55f04b4f830de30c3d886d9aaee9ef71ea2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# /RELEASE (D&#233;finir le total de Checksum)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="release-set-the-checksum"></a>/RELEASE (Définir le total de Checksum)
 ```  
 /RELEASE  
 ```  
   
-## Notes  
- L'option \/RELEASE définit le checksum dans l'en\-tête d'un fichier .exe.  
+## <a name="remarks"></a>Notes  
+ L’option /RELEASE définit le Checksum dans l’en-tête d’un fichier .exe.  
   
- Le système d'exploitation a besoin de ce total de Checksum pour les pilotes de périphérique.  Il est recommandé de définir le total de Checksum pour les versions commercialisées des pilotes de périphérique afin de garantir la compatibilité avec les futurs systèmes d'exploitation.  
+ Le système d’exploitation requiert la somme de contrôle pour les pilotes de périphérique. Définissez la somme de contrôle pour les versions des pilotes de périphérique pour assurer la compatibilité avec les futurs systèmes d’exploitation.  
   
- L'option \/RELEASE est définie par défaut lorsque l'option [\/SUBSYSTEM:NATIVE](../../build/reference/subsystem-specify-subsystem.md) est spécifiée.  
+ L’option /RELEASE est définie par défaut lors de la [/SUBSYSTEM : native](../../build/reference/subsystem-specify-subsystem.md) option est spécifiée.  
   
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Définition des propriétés de projets Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Cliquez sur le dossier **Éditeur de liens**.  
+2.  Cliquez sur le **l’éditeur de liens** dossier.  
   
-3.  Cliquez sur la page de propriétés **Avancé**.  
+3.  Cliquez sur le **avancé** page de propriétés.  
   
-4.  Modifiez la propriété **Activation du Checksum**.  
+4.  Modifier la **activation du Checksum** propriété.  
   
-### Pour définir cette option de l'éditeur de liens par programme  
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SetChecksum%2A>.  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)

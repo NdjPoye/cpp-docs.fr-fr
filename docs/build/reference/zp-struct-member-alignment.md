@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0743c9c11af61356806eb0f42efb8bba8139479b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d387e0ab020e96afb3e2975b5c8686b668cbc10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (Alignement des membres de la structure)
 Contrôle la façon dont les membres d’une structure sont compressés en mémoire et spécifie la même compression pour toutes les structures dans un module.  
@@ -37,7 +38,7 @@ Contrôle la façon dont les membres d’une structure sont compressés en mémo
 /Zp[1|2|4|8|16]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Lorsque vous spécifiez cette option, chaque membre de structure après le premier est stocké sur la taille du type du membre ou `n`-limites d’octets (où `n` est 1, 2, 4, 8 ou 16), plus petite étant retenue.  
   
  Les valeurs disponibles sont décrits dans le tableau suivant.  

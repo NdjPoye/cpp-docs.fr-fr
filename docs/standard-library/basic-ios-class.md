@@ -66,11 +66,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0558bd962d8f646cc599ba604dbe749f5a02138b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7068c2b94637a859c35c662350c27f157103e37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicios-class"></a>basic_ios, classe
 La classe de modèle décrit les fonctions membres et de stockage communes aux flux d’entrée (de classe de modèle [basic_istream](../standard-library/basic-istream-class.md)) et de sortie (de classe de modèle [basic_ostream](../standard-library/basic-ostream-class.md)) qui dépendent des paramètres de modèle. (La classe [ios_base](../standard-library/ios-base-class.md) décrit ce qui est commun et non dépendant des paramètres de modèle.) Un objet de classe **basic_ios\<class Elem, class Traits>** permet de contrôler un flux avec des éléments de type **Elem** dont les caractéristiques sont déterminées par la classe **Traits**.  
@@ -109,7 +110,7 @@ class basic_ios : public ios_base
 |-|-|  
 |[basic_ios](#basic_ios)|Construit la classe `basic_ios`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -151,7 +152,7 @@ class basic_ios : public ios_base
 |[opérateur void *](#op_void_star)|Indique si le flux est toujours en bon état.|  
 |[operator!](#op_not)|Indique si le flux n'est pas en mauvais état.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<ios>  
   
  **Espace de noms :** std  
@@ -252,7 +253,7 @@ const basic_ios<Elem, Traits>& right);
 ### <a name="return-value"></a>Valeur de retour  
  Objet **this** pour le flux dans lequel vous copiez les indicateurs.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction membre signale l’événement de rappel **effacer\_événement**. Elle copie ensuite `right` dans **\*this**, le caractère de remplissage, le pointeur de lien et les informations de mise en forme. Avant de modifier le masque d’exception, il signale l’événement de rappel **copyfmt_event**. Si, une fois que la copie est terminée, **state &**[exceptions](#exceptions) est différent de zéro, la fonction appelle [clear](#clear) avec l’argument [rdstate](#rdstate). Elle retourne ensuite **\*this**.  
   
 ### <a name="example"></a>Exemple  
@@ -575,7 +576,7 @@ char narrow(char_type Char, char Default = '\0') const;
 ### <a name="return-value"></a>Valeur de retour  
  `char` équivalent à un `char_type` donné.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction membre retourne [use_facet](../standard-library/basic-filebuf-class.md#open)\<ctype\<E >> ( [getloc](../standard-library/ios-base-class.md#getloc)()).`narrow` ( `Char`, `Default`).  
   
 ### <a name="example"></a>Exemple  
@@ -936,7 +937,7 @@ void swap(basic_ios&& right);
  La fonction de membre protégée échange toutes les valeurs stockées dans `right` avec `*this`, sauf le `stream buffer pointer` stocké.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream, programmation](../standard-library/iostream-programming.md)   
  [iostreams, conventions](../standard-library/iostreams-conventions.md)
 

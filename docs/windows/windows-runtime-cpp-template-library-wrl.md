@@ -13,11 +13,14 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a37b20af7ee9ef43c64fc0df24b47a380000eb6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e742b5509fd9a7889321e5e8c576e4fa3c8401cd
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Bibliothèque de modèles Windows Runtime C++ (WRL)
 La bibliothèque de modèles C++ (WRL) de Windows Runtime est une bibliothèque de modèles qui fournit un moyen de bas niveau pour créer et utiliser des composants Windows Runtime.  
@@ -38,7 +41,7 @@ La bibliothèque de modèles C++ (WRL) de Windows Runtime est une bibliothèque 
   
 -   L’objectif et la conception de la bibliothèque de modèles Windows Runtime C++ est inspirée par la bibliothèque ATL (Active Template), qui est un ensemble de classes C++ basées sur un modèle qui simplifient la programmation d’objets COM. Étant donné que la bibliothèque de modèles Windows Runtime C++ utilise du C++ standard pour encapsuler le Windows Runtime, vous pouvez plus facilement le port et interagir avec de nombreux composants COM existants écrits en ATL vers le Windows Runtime. Si vous connaissez déjà ATL, vous constaterez peut-être que la programmation de la bibliothèque de modèles Windows Runtime C++ est plus facile.  
   
-## <a name="getting-started"></a>Commencer  
+## <a name="getting-started"></a>Prise en main  
  Voici quelques ressources qui peuvent vous aider à utiliser avec la bibliothèque de modèles Windows Runtime C++ immédiatement.  
   
  [La bibliothèque Windows Runtime (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
@@ -142,5 +145,5 @@ La bibliothèque de modèles C++ (WRL) de Windows Runtime est une bibliothèque 
 |[Modèle de projet de bibliothèque de classes](../windows/wrl-class-library-project-template.md)|Décrit comment accéder au modèle de projet WRL Class Library. Ce modèle permet de simplifier la tâche de l’utilisation de Visual Studio pour créer des composants Windows Runtime.|  
 |[API principales par catégorie](../windows/key-wrl-apis-by-category.md)|Met en surbrillance de la principale bibliothèque de modèles Windows Runtime C++ types, fonctions et les macros.|  
 |[Référence](../windows/wrl-reference.md)|Contient des informations de référence pour la bibliothèque de modèles Windows Runtime C++.|  
-|[Référence rapide (Windows Runtime et Visual C++)](http://go.microsoft.com/fwlink/?LinkId=229180)|Décrit brièvement le C + c++ / fonctionnalités CX qui prennent en charge le Windows Runtime.|  
-|[À l’aide de composants Windows Runtime en C++](http://go.microsoft.com/fwlink/?LinkId=229155)|Montre comment utiliser c++ / CX pour créer un composant Windows Runtime de base.|
+|[Référence rapide (Windows Runtime et Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Décrit brièvement le C + c++ / fonctionnalités CX qui prennent en charge le Windows Runtime.|  
+|[À l’aide de composants Windows Runtime en C++](http://go.microsoft.com/fwlink/p/?linkid=229155)|Montre comment utiliser c++ / CX pour créer un composant Windows Runtime de base.|

@@ -22,18 +22,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c38710707397a5990266544d88a252daf8c40151
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c898121a4ac29cc05022504ebfe33949b44eca7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (Nommer le fichier .TLB)
 ```  
 /TLBOUT:[path\]filename  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  où :  
   
  *path*  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/24/2017
  *filename*  
  Spécifie le nom du fichier .tlb créé par le compilateur MIDL. Aucune extension de fichier n’est supposée ; Spécifiez *nom de fichier*.tlb si vous souhaitez une extension .tlb.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’option /TLBOUT Spécifie le nom et l’extension du fichier .tlb.  
   
  Le compilateur MIDL est appelé par l’éditeur de liens Visual C++ lors de la liaison des projets qui ont le [module](../../windows/module-cpp.md) attribut.  

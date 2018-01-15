@@ -1,66 +1,68 @@
 ---
-title: "Generics and Templates (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generics [C++], vs. templates"
-  - "templates, C++"
+title: "Génériques et les modèles (Visual C++) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- generics [C++], vs. templates
+- templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-caps.latest.revision: 19
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 307cc39e64a6fd91f3f5f96da634e47d3e9a9030
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Generics and Templates (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les génériques et les modèles sont des fonctionnalités de langage qui assurent la prise en charge des types paramétrés.  Toutefois, elles sont différentes et ont différentes utilisations.  Cette rubrique propose une vue d'ensemble des nombreuses differences.  
+# <a name="generics-and-templates-visual-c"></a>Génériques et modèles (Visual C++)
+Génériques et les modèles sont des fonctionnalités de langage qui prennent en charge pour les types paramétrables. Cependant, ils sont différents et que vous ont différentes utilisations. Cette rubrique fournit une vue d’ensemble des nombreuses différences.  
   
- Pour plus d’informations, consultez [Windows Runtime and Managed Templates](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md) et [Vue d'ensemble des modèles](../Topic/Templates%20Overview.md).  
+ Pour plus d’informations, consultez [Windows Runtime et modèles gérés](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
   
-## Comparer des modèles et les génériques  
- Différences clés entre les génériques et les templates C\+\+:  
+## <a name="comparing-templates-and-generics"></a>Comparaison des modèles et les génériques  
+ Principales différences entre les génériques et les modèles C++ :  
   
--   Les génériques sont génériques jusqu'à ce que les types soient substitués eux au moment de l'exécution.  Les modèles sont spécialisés au moment de la compilation pour qu'ils ne soient plus des types paramétrables au moment de l'exécution  
+-   Les génériques sont génériques jusqu'à ce que les types sont substitués pour eux lors de l’exécution. Les modèles sont spécialisés au moment de la compilation afin qu’ils ne soient pas des types paramétrables toujours lors de l’exécution  
   
--   Le CLR prend en charge spécifiquement les génériques dans le langage MSIL.  Étant donné que le runtime connait les génériques, les types spécifiques peuvent être substitués en types génériques en faisant référence à un assembly qui contient un type générique.  Les modèles, en revanche, se change en types ordinaires au moment de la compilation et les types résultant ne peuvent être spécialisés dans d'autres assemblys.  
+-   Le common language runtime prend en charge les génériques dans le langage MSIL. Étant donné que le runtime sait à propos des génériques, des types spécifiques peuvent être remplacés pour les types génériques, lorsque vous référencez un assembly contenant un type générique. En revanche, résoudre des modèles, en des types ordinaires au moment de la compilation et les types qui en résulte ne peuvent pas être spécialisés dans d’autres assemblys.  
   
--   Les génériques spécialisés dans deux assemblys distincts avec les mêmes arguments de type sont du même type.  Les modèles spécialisés dans deux assemblys distincts avec les mêmes arguments de type sont considérées par le runtime comme étant des types différents.  
+-   Génériques spécialisés dans deux assemblys différents avec le même type arguments sont du même type. Les modèles spécialisés dans deux assemblys différents avec le même type que les arguments sont considérés comme par le runtime sont de types différents.  
   
--   Les génériques sont générés en une seule partie de code exécutable utilisé pour tous les arguments de type référence \(qui n'est pas vrai pour les types de valeur, qui ont une implémentation par type de valeur\).  Le compilateur JIT connait les génériques et peut optimiser le code pour la référence ou pour les types de valeur utilisés comme arguments de type.  Les modèles génèrent un code d'exécution distinct pour chaque spécialisation.  
+-   Les génériques sont générées en tant qu’un seul élément de code exécutable qui est utilisé pour tous les arguments de type référence (cela n’est pas vrai pour les types valeur, qui ont une implémentation unique par le type de valeur). Le compilateur JIT sait à propos des génériques et est en mesure d’optimiser le code pour les types référence ou valeur qui sont utilisés comme arguments de type. Modèles génèrent du code d’exécution distinct pour chaque spécialisation.  
   
--   Les génériques n'autorise pas les paramètres de modèle sans type, tels que `template <int i> C {}`.  Les modèles le permettent.  
+-   Génériques n’autorisent pas les paramètres de modèle sans type, tel que `template <int i> C {}`. Modèles et les autorisent.  
   
--   Les génériques ne prennent pas en charge la spécialisation explicite, \(à savoir l'implémentation personnalisée d'un modèle pour un type spécifique\).  Les modèles, si.  
+-   Les génériques ne permettent pas de spécialisation explicite (autrement dit, une implémentation personnalisée d’un modèle pour un type spécifique). Modèles de le faire.  
   
--   Les génériques ne prennent pas en charge la spécialisation partielle, \(à savoir l'implémentation personnalisée d'un sous\-ensemble des arguments de type\).  Les modèles, si.  
+-   Les génériques ne permettent pas de spécialisation partielle (une implémentation personnalisée pour un sous-ensemble des arguments de type). Modèles de le faire.  
   
--   Les génériques n'autorisent pas le paramètre de type à être utilisé comme classe de base pour le type générique.  Les modèles, si.  
+-   Génériques n’autorisent pas le paramètre de type à utiliser comme classe de base pour le type générique. Modèles de le faire.  
   
--   Les modèles prennent en charge les paramètres modèle\-modèle \(par exemple  `template<template<class T> class X> class MyClass`\), mais les génériques ne le font pas.  
+-   Modèles prennent en charge les paramètres de modèle de modèle (par exemple, `template<template<class T> class X> class MyClass`), mais pas les génériques.  
   
-## Combiner des modèles et des génériques  
+## <a name="combining-templates-and-generics"></a>Génériques et les modèles de combinaison  
   
--   La différence de base dans les génériques a des implications pour générer des applications qui combinent les modèles et les génériques.  Par exemple, supposez que vous possédez une classe de modèle pour lequel vous souhaitez créer un wrapper générique pour exposer ce modèle à d'autres langues comme générique.  Vous ne pouvez pas autoriser un génériqueà prendre un paramètre de type qu'il passe ensuite au modèle, puisque le modèle doit posséder ce paramètre de type au moment de la compilation, mais le générique ne va pas résoudre le paramètre de type avant l'exécution.  L'imbrication d'un modèle dans un générique ne fonctionnera pas non plus parce qu'il n'existe aucun moyen de développer des modèles de compilation pour les types génériques aléatoires qui peuvent être instanciés au moment de l'exécution.  
+-   La principale différence dans les génériques a des implications en matière de création d’applications qui combinent des modèles et les génériques. Par exemple, supposons que vous avez une classe de modèle que vous souhaitez créer un wrapper générique pour exposer ce modèle à d’autres langages comme un type générique. Ne peut pas avoir le générique prennent un paramètre de type qu’il transmet ensuite directement vers le modèle, dans la mesure où le modèle doit être pour que ce paramètre de type au moment de la compilation, mais le type générique ne sont pas résoudre le paramètre de type jusqu'à l’exécution. Imbrication d’un modèle à l’intérieur d’un type générique ne fonctionnera, car il n’existe aucun moyen pour développer les modèles au moment de la compilation pour les types génériques arbitraires qui peut être instancié lors de l’exécution.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Description  
- L'exemple suivant montre un exemple simple de modèles et de génériques d'utilisation ensemble.  Dans cet exemple, la classe du modèle passe le paramètre au type générique.  L'inverse n'est pas possible.  
+### <a name="description"></a>Description  
+ L’exemple suivant montre un exemple simple de l’utilisation conjointe de modèles et les génériques. Dans cet exemple, la classe de modèle transmet son paramètre via au type générique. L’inverse n’est pas possible.  
   
- Cet idiome peut être utilisée lorsque vous souhaitez générer sur une API générique existante avec le code du modèle local à un assembly Visual C\+\+, ou lorsque vous devez ajouter une couche supplémentaire de paramétrage à un type générique, pour tirer profit de certaines fonctionnalités des modèles non pris en charge par les génériques.  
+ Cet idiome pourrait être utilisé lorsque vous souhaitez générer sur une API générique existante avec le code de modèle qui est locale à un assembly de Visual C++, ou lorsque vous devez ajouter une couche supplémentaire de paramétrage à un type générique, pour tirer parti de certaines fonctionnalités des modèles non prises en charge d par génériques.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // templates_and_generics.cpp  
@@ -95,11 +97,11 @@ int main() {
 }  
 ```  
   
-### Sortie  
+### <a name="output"></a>Sortie  
   
 ```  
 F  
 ```  
   
-## Voir aussi  
- [Generics](../windows/generics-cpp-component-extensions.md)
+## <a name="see-also"></a>Voir aussi  
+ [Génériques](../windows/generics-cpp-component-extensions.md)

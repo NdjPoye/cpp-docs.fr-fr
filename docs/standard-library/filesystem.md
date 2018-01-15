@@ -20,11 +20,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 14d81a2039005e3ab301a865d9834de048a74ac5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c8e09c494ee23d227321a807c8c533d16f981a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 Incluez l’en-tête &lt;filesystem> pour accéder aux classes et aux fonctions qui manipulent et récupèrent des informations sur les chemins, les fichiers et les répertoires.  
@@ -109,9 +110,9 @@ using namespace std::experimental::filesystem::v1;
 |[recursive_directory_iterator, classe](../standard-library/recursive-directory-iterator-class.md)|Décrit un itérateur d'entrée qui parcourt les noms de fichiers dans un répertoire de système de fichiers. L'itérateur peut également descendre dans des sous-répertoires.|  
 |[file_status, classe](../standard-library/file-status-class.md)|Encapsule un `file_type`.|  
   
-## <a name="structs"></a>Structures  
+## <a name="structs"></a>Structs  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[space_info, structure](../standard-library/space-info-structure.md)|Contient des informations sur un volume.|  
   
@@ -123,7 +124,7 @@ using namespace std::experimental::filesystem::v1;
   
 ## <a name="enumerations"></a>Énumérations  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) qui détermine le comportement si un fichier de destination existe déjà.|  
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Énumération qui spécifie les options pour les itérateurs de répertoire.|  

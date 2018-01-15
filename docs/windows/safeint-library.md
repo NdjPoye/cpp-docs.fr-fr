@@ -1,42 +1,44 @@
 ---
-title: "Biblioth&#232;que SafeInt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-f1_keywords: 
-  - "SafeInt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bibliothèques, SafeInt"
-  - "SafeInt (bibliothèque)"
+title: "Bibliothèque SafeInt | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+f1_keywords: SafeInt
+dev_langs: C++
+helpviewer_keywords:
+- libraries, SafeInt
+- SafeInt library
 ms.assetid: 5321e875-67c5-49d7-9650-85a876552d14
-caps.latest.revision: 10
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2ba809ae6672983c86841640d0b6603bfdba7184
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Biblioth&#232;que SafeInt
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La bibliothèque SafeInt aide à empêcher le dépassement sur les entiers ainsi que d'autres erreurs exploitables pouvant survenir lorsque l'application exécute des opérations mathématiques.  
+# <a name="safeint-library"></a>Bibliothèque SafeInt
+La Bibliothèque SafeInt vous aide à éviter les dépassements d’entier pouvant survenir lorsque l’application exécute des opérations mathématiques.  
   
-## Dans cette section  
+## <a name="in-this-section"></a>Dans cette section  
   
 |Section|Description|  
 |-------------|-----------------|  
-|[SafeInt, classe](../windows/safeint-class.md)|Cette classe protège contre des dépassements sur des entiers.|  
-|[SafeInt, fonctions](../windows/safeint-functions.md)|Fonctions qui peuvent être utilisées sans créer un objet `SafeInt`.|  
-|[SafeIntException, classe](../windows/safeintexception-class.md)|Une classe d'exceptions liées à la classe `SafeInt`.|  
+|[SafeInt, classe](../windows/safeint-class.md)|Cette classe protège contre les dépassements de capacité de nombre entier.|  
+|[SafeInt, fonctions](../windows/safeint-functions.md)|Les fonctions qui peuvent être utilisées sans création d’un `SafeInt` objet.|  
+|[SafeIntException Class](../windows/safeintexception-class.md)|Une classe d’exceptions liées à la `SafeInt` classe.|  
   
-## Rubriques connexes  
+## <a name="related-sections"></a>Rubriques connexes  
   
 |Section|Description|  
 |-------------|-----------------|  
-|[Langage C\+\+ et bibliothèques standard](../cpp/c-cpp-language-and-standard-libraries.md)|Référence et le contenu conceptuel sur les langages C et C\+\+ et les bibliothèques standard.|
+|[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)|Référence et contenu conceptuel pour le langage C++.|

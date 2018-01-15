@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- <mutex>
-dev_langs:
-- C++
+f1_keywords: <mutex>
+dev_langs: C++
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9da491492437f5bf8ed245c84a33f44174ac44ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 78c6476712f17c5a730b54f7db1a87e187af3720
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 Incluez l’en-tête standard \<mutex> pour définir les classes `mutex`, `recursive_mutex`, `timed_mutex` et `recursive_timed_mutex`, les modèles `lock_guard` et `unique_lock`, ainsi que les types et fonctions qui définissent les régions de code de mutex.  
@@ -36,7 +33,7 @@ Incluez l’en-tête standard \<mutex> pour définir les classes `mutex`, `recur
 #include <mutex>  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 > [!NOTE]
 >  Dans le code est compilé à l’aide de **/CLR**, cet en-tête est bloqué.  
@@ -79,7 +76,7 @@ Incluez l’en-tête standard \<mutex> pour définir les classes `mutex`, `recur
   
 ### <a name="structs"></a>Structures  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[adopt_lock_t, structure](../standard-library/adopt-lock-t-structure.md)|Représente un type utilisé pour définir `adopt_lock`.|  
 |[defer_lock_t, structure](../standard-library/defer-lock-t-structure.md)|Représente un type qui définit un objet `defer_lock` permettant de sélectionner l'un des constructeurs surchargés de `unique_lock`.|  
@@ -88,7 +85,7 @@ Incluez l’en-tête standard \<mutex> pour définir les classes `mutex`, `recur
   
 ### <a name="variables"></a>Variables  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Représente un objet pouvant être passé aux constructeurs pour `lock_guard` et `unique_lock` afin d'indiquer que l'objet mutex qui est également passé au constructeur est verrouillé.|  
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Représente un objet pouvant être passé au constructeur pour `unique_lock`, afin d'indiquer que le constructeur ne doit pas verrouiller l'objet mutex qui lui est également passé.|  
@@ -96,7 +93,6 @@ Incluez l’en-tête standard \<mutex> pour définir les classes `mutex`, `recur
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

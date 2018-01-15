@@ -33,37 +33,22 @@ f1_keywords:
 - math/fma
 - math/fmaf
 - math/fmal
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - fma function
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 59238cf511be936b0d882c2f00320ee7422904e0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: cd4178718380502e91bb7f019164f2398c93323c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 Multiplie deux valeurs, ajoute une troisième valeur, puis arrondit le résultat, sans perdre de précision en raison d’un arrondi intermédiaire.  
@@ -120,8 +105,8 @@ long double fmal(
   
 |Problème|Retour|  
 |-----------|------------|  
-|`x` = INFINITY, `y` = 0 ou<br /><br /> `x` = 0, `y` = INFINITY|NaN|  
-|`x` ou `y` = exact ± INFINITY, `z` = INFINITY avec le signe opposé|NaN|  
+|`x` = INFINITY, `y` = 0 ou<br /><br /> `x`= 0, `y` = INFINI|NaN|  
+|`x`ou `y` = ± exacte infini, `z` = infini avec le signe opposé|NaN|  
 |`x` ou `y` = NaN|NaN|  
 |Pas (`x` = 0, `y`= indéfini) et `z` = NaN<br /><br /> Pas (`x` = indéfini, `y` = 0) et `z` = NaN|NaN|  
 |Erreur de plage avec dépassement|±HUGE_VAL, ±HUGE_VALF ou ±HUGE_VALL|  
@@ -129,18 +114,18 @@ long double fmal(
   
  Les erreurs sont signalées comme indiqué dans [_matherr](../../c-runtime-library/reference/matherr.md).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  C++ autorisant la surcharge, vous pouvez appeler des surcharges de `fma` qui acceptent et retournent **float** et **long double** types. Dans un programme C, `fma` accepte et retourne toujours un **double**.  
   
  Cette fonction calcule la valeur avec une précision infinie, puis arrondit le résultat final.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête C|En-tête C++|  
 |--------------|--------------|------------------|  
 |`fma`, `fmaf`, `fmal`|\<math.h>|\<cmath>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

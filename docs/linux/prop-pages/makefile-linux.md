@@ -11,21 +11,21 @@ ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-f1_keywords:
-- VC.Project.VCConfiguration.OutputDirectory
-- VC.Project.VCConfiguration.IntermediateDirectory
-- VC.Project.VCConfiguration.ConfigurationType
-- VC.Project.VCConfiguration.BuildLogFile
-ms.openlocfilehash: 9507ab2ed54d8160afdd8071b0779b51d6802bef
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: afebfa3585f780ea54961804174e8e763f51f34f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/03/2018
 ---
-# <a name="makefile-project-properties-linux-c"></a>Projet Makefile, propriétés (Linux C++)
-Il s’agit d’une liste partielle des propriétés disponibles dans un projet Makefile Linux. Plusieurs propriétés de projet MakeFile sont identiques à 
+# <a name="makefile-project-properties-linux-c"></a>Projet Makefile, propriétés (Linux C++)
+
+Il s’agit d’une liste partielle des propriétés disponibles dans un projet Makefile Linux. Beaucoup de propriétés de projet Makefile sont identiques aux propriétés de projet d’application de console C++ Linux.
 
 ## <a name="general"></a>Général
+
 Propriété | Description | Options
 --- | ---| ---
 Répertoire de sortie | Spécifie un chemin relatif vers le répertoire de fichiers de sortie ; peut inclure des variables d’environnement.
@@ -37,14 +37,17 @@ Répertoire racine de build distant | Spécifie le chemin d’un répertoire sur
 Répertoire de projet de build distant | Spécifie le chemin d’un répertoire sur la machine ou l’appareil distant du projet.
 
 ## <a name="debugging"></a>Débogage
+
 Consultez [Débogage, propriétés (Linux C++)](debugging-linux.md)
 
 ## <a name="copy-sources"></a>Copier les sources
+
 Consultez [Copier les sources, propriétés de projet (Linux C++)](copy-sources-project.md).
 
 ## <a name="build-events"></a>Événements de build
 
 ### <a name="pre-build-event"></a>Événement prébuild
+
 Propriété | Description
 --- | ---
 Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement prébuild à exécuter.
@@ -53,18 +56,27 @@ Utilisation dans la génération | Spécifie si cet événement de build est exc
 Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier sur le système distant. Vous pouvez éventuellement fournir la liste sous forme de paires de mappage entre l’emplacement local et l’emplacement distant en utilisant la syntaxe suivante : fulllocalpath1:=fullremotepath1;fulllocalpath2:=fullremotepath2, où un fichier local peut être copié vers l’emplacement distant spécifié sur le système distant.
 
 ### <a name="post-build-event"></a>Événement post-build
-Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement post-build à exécuter.
+
+Propriété | Description
+--- | ---
+Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement postbuild à exécuter.
 Description | Spécifie une description de l’outil d’événement post-build à afficher.
 Utilisation dans la génération | Spécifie si cet événement de build est exclu de la génération pour la configuration actuelle.
 Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier sur le système distant. Vous pouvez éventuellement fournir la liste sous forme de paires de mappage entre l’emplacement local et l’emplacement distant en utilisant la syntaxe suivante : fulllocalpath1:=fullremotepath1;fulllocalpath2:=fullremotepath2, où un fichier local peut être copié vers l’emplacement distant spécifié sur le système distant.
 
 ### <a name="remote-pre-build-event"></a>Événement prébuild distant
+
+Propriété | Description
+--- | ---
 Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement prébuild à exécuter sur le système distant.
 Description | Spécifie une description de l’outil d’événement prébuild à afficher.
 Utilisation dans la génération | Spécifie si cet événement de build est exclu de la génération pour la configuration actuelle.
 Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier à partir du système distant. Vous pouvez éventuellement fournir la liste sous forme de paires de mappage entre l’emplacement distant et l’emplacement local en utilisant la syntaxe suivante : fullremotepath1:=fulllocalpath1;fullremotepath2:=fulllocalpath2, où un fichier distant peut être copié vers l’emplacement spécifié sur la machine locale.
 
 ### <a name="remote-post-build-event"></a>Événement post-build distant
+
+Propriété | Description
+--- | ---
 Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement post-build à exécuter sur le système distant.
 Description | Spécifie une description de l’outil d’événement post-build à afficher.
 Utilisation dans la génération | Spécifie si cet événement de build est exclu de la génération pour la configuration actuelle.
@@ -73,6 +85,7 @@ Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à
 ## <a name="cc"></a>C/C++
 
 ### <a name="intellisense"></a>IntelliSense
+
 Les propriétés IntelliSense peuvent être définies au niveau du projet ou du fichier pour fournir des indications au moteur IntelliSense. Elles n’impactent pas la compilation.
 
 Propriété | Description
@@ -84,6 +97,7 @@ Annuler la définition de définitions de préprocesseur | Spécifie l’annulat
 Options supplémentaires | Spécifie les commutateurs du compilateur supplémentaires utilisés par IntelliSense durant l’analyse des fichiers C++.
 
 ### <a name="build"></a>Générer
+
 Propriété | Description
 --- | ---
 Ligne de commande Build | Spécifie la ligne de commande à exécuter pour la commande 'Build'.
@@ -91,10 +105,10 @@ Ligne de commande Rebuild All | Spécifie la ligne de commande à exécuter pour
 Ligne de commande Clean | Spécifie la ligne de commande à exécuter pour la commande 'Clean'.
 
 ### <a name="remote-build"></a>Build distante
+
 Propriété | Description
 --- | ---
 Ligne de commande Build | Spécifie la ligne de commande à exécuter pour la commande 'Build'. Cette commande est exécutée sur le système distant.
 Ligne de commande Rebuild All | Spécifie la ligne de commande à exécuter pour la commande 'Rebuild All'. Cette commande est exécutée sur le système distant.
 Ligne de commande Clean | Spécifie la ligne de commande à exécuter pour la commande 'Clean'. Cette commande est exécutée sur le système distant.
 Sorties | Spécifie les sorties générées par la build distante sur le système distant.
-

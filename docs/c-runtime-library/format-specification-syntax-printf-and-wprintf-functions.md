@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3e8c81bfa9f87d9612d989cef84ddf538ff28d98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 437657857b87f2f7df140576d09467d6276549f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntaxe de spécification de format : fonctions printf et wprintf
 
@@ -73,14 +74,14 @@ Les types entier tels que `short`, `int`, `long`, `long long`, ainsi que leurs v
 |**u**|Entier|Entier décimal non signé.|
 |**x**|Entier|Entier hexadécimal non signé ; utilise « abcdef ».|
 |**X**|Entier|Entier hexadécimal non signé ; utilise « ABCDEF ».|
-|**e**|Virgule flottante|Valeur signée se présentant sous la forme [-]*d.dddd*__e±__*dd*[*d*] où *d* correspond à un chiffre décimal, *dddd* à un ou plusieurs chiffres décimaux selon la précision spécifiée (ou six par défaut), et *dd*[*d*] à deux ou trois chiffres décimaux selon le [format de sortie](../c-runtime-library/set-output-format.md) et la taille de l’exposant.|
+|**e**|Virgule flottante|Valeur signée se présentant sous la forme [-]*d.dddd*__e±__*dd*[*d*] où *d* correspond à un chiffre décimal, *dddd* à un ou plusieurs chiffres décimaux selon la précision spécifiée (ou six par défaut), et *dd*[*d*] à deux ou trois chiffres décimaux, selon le [format de sortie](../c-runtime-library/set-output-format.md) et la taille de l’exposant.|
 |**E**|Virgule flottante|Identique au format **e** sauf que l’exposant est introduit par **E** et non par **e**.|
 |**f**|Virgule flottante|Valeur signée se présentant sous la forme [-]*dddd*__.__*dddd*, où *dddd* correspond à un ou plusieurs chiffres décimaux. Le nombre de chiffres avant la virgule décimale dépend de l’ampleur du nombre, et le nombre de chiffres après la virgule décimale dépend de la précision demandée (ou six par défaut).|
 |**F**|Virgule flottante|Identique au format **f**, sauf que la sortie de l’infini et NAN est en majuscules.|
 |**g**|Virgule flottante|Les valeurs signées sont affichées au format **f** ou **e**, selon celui qui est le plus compact pour la valeur et la précision en question. Le format **e** est utilisé uniquement quand l’exposant de la valeur est inférieur à -4 ou supérieur ou égal à l’argument *precision*. Les zéros de droite sont tronqués et la virgule décimale apparaît uniquement si elle est suivie d'un ou plusieurs chiffres.|
 |**G**|Virgule flottante|Identique au format **g**, sauf que l’exposant est introduit par **E** et non par **e** (selon le cas).|
-|**a**|Virgule flottante|Valeur à virgule flottante double précision hexadécimale signée se présentant sous la forme [-]0x*h.hhhh*__p±__*dd*, où *h.hhhh* correspond aux chiffres hexadécimaux (utilisant des lettres minuscules) de la mantisse et *dd* à un ou plusieurs chiffres de l’exposant. La précision indique le nombre de chiffres après la virgule.|
-|**A**|Virgule flottante|Valeur à virgule flottante double précision hexadécimale signée se présentant sous la forme [-]0X*h.hhhh*__P±__*dd*, où *h.hhhh* correspond aux chiffres hexadécimaux (utilisant des lettres majuscules) de la mantisse et *dd* à un ou plusieurs chiffres pour l’exposant. La précision indique le nombre de chiffres après la virgule.|
+|**a**|Virgule flottante|Valeur à virgule flottante double précision hexadécimale signée se présentant sous la forme [-]0x*h.hhhh*__p±__*dd*, où *h.hhhh* correspond aux chiffres hexadécimaux (utilisant des lettres minuscules) de la mantisse, et *dd* à un ou plusieurs chiffres de l’exposant. La précision indique le nombre de chiffres après la virgule.|
+|**A**|Virgule flottante|Valeur à virgule flottante double précision hexadécimale signée se présentant sous la forme [-]0X*h.hhhh*__P±__*dd*, où *h.hhhh* correspond aux chiffres hexadécimaux (utilisant des lettres majuscules) de la mantisse, et *dd* à un ou plusieurs chiffres pour l’exposant. La précision indique le nombre de chiffres après la virgule.|
 |**n**|Pointeur désignant un entier|Nombre de caractères correctement écrits jusqu'à présent dans le flux ou la mémoire tampon. Cette valeur est stockée dans l’entier dont l’adresse est fournie sous forme d’argument. La taille de l’entier désigné par le pointeur peut être contrôlée par un préfixe de spécification de la taille de l’argument. Le spécificateur **n** est désactivé par défaut ; pour plus d’informations, consultez la remarque importante sur la sécurité.|
 |**p**|Type de pointeur|Affiche l’argument sous forme d’adresse composée de chiffres hexadécimaux.|
 |**s**|Chaîne|Quand il est utilisé avec les fonctions `printf`, spécifie une chaîne de caractères codés sur un octet ou multioctets ; quand il est utilisé avec les fonctions `wprintf`, spécifie une chaîne de caractères larges. Les caractères s’affichent jusqu’au premier caractère Null ou jusqu’à ce que la valeur de *precision* soit atteinte.|
@@ -89,7 +90,7 @@ Les types entier tels que `short`, `int`, `long`, `long long`, ainsi que leurs v
 
 À compter de Visual Studio 2015, si l’argument qui correspond à un spécificateur de conversion de valeurs à virgule flottante (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) est infini, indéfini ou NaN, la sortie mise en forme est conforme à la norme C99. Ce tableau répertorie les sorties mises en forme :
 
-|Valeur|Sortie|
+|Value|Sortie|
 |-----------|------------|
 |infinity|`inf`|
 |NaN silencieux|`nan`|
@@ -100,7 +101,7 @@ Ces valeurs peuvent toutes être précédées d’un signe. Si un caractère sp�
 
 Avant Visual Studio 2015, le CRT utilisait un autre format non standard pour la sortie des valeurs infinies, indéfinies et NaN :
 
-|Valeur|Sortie|
+|Value|Sortie|
 |-----------|------------|
 |+ infini|`1.#INF` *chiffres aléatoires*|
 |- infini|`-1.#INF` *chiffres aléatoires*|

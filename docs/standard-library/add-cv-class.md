@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: be91a6c0567b06c033d71d07ba6fb64eec18acb7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ccea9fe28ab942341a431585b7d536687dd85345
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="addcv-class"></a>add_cv, classe
 Crée un type volatile const à partir d’un type.  
@@ -90,7 +91,7 @@ invoked volatile S.f()
 invoked const volatile S.f()  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
 **En-tête :** \<type_traits>  
 **Espace de noms :** std  
   

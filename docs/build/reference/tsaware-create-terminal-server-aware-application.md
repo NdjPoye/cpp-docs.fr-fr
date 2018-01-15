@@ -1,70 +1,70 @@
 ---
-title: "/TSAWARE (Cr&#233;er une application sensible &#224; Terminal Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/tsaware"
-  - "VC.Project.VCLinkerTool.TerminalServerAware"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/TSAWARE (option de l'éditeur de liens)"
-  - "Terminal Server"
-  - "Terminal Server, applications Terminal Server"
-  - "TSAWARE (option de l'éditeur de liens)"
-  - "-TSAWARE (option de l'éditeur de liens)"
+title: "-TSAWARE (créer une Application prenant en charge du serveur Terminal Server) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /tsaware
+- VC.Project.VCLinkerTool.TerminalServerAware
+dev_langs: C++
+helpviewer_keywords:
+- Terminal Server
+- /TSAWARE linker option
+- Terminal Server, Terminal Server-aware applications
+- -TSAWARE linker option
+- TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4c6fb783f717f730945f8d34c8fe2a03f5e1f6d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# /TSAWARE (Cr&#233;er une application sensible &#224; Terminal Server)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Créer une application sensible à Terminal Server)
 ```  
 /TSAWARE[:NO]  
 ```  
   
-## Notes  
- L'option \/TSAWARE définit un indicateur dans le champ DllCharacteristics IMAGE\_OPTIONAL\_HEADER de l'en\-tête facultatif de l'image du programme.  Lorsque cet indicateur est défini, Terminal Server n'apporte pas certaines modifications à l'application.  
+## <a name="remarks"></a>Notes  
+ L’option /TSAWARE définit un indicateur dans le champ DllCharacteristics IMAGE_OPTIONAL_HEADER de l’en-tête facultatif de l’image du programme. Si cet indicateur est défini, le serveur Terminal Server n’apportera aucune modification à l’application.  
   
- Lorsqu'une application n'est pas compatible Terminal Server \(on parle alors d'application héritée ou legacy\), Terminal Server lui apporte des modifications pour la faire fonctionner correctement dans un environnement multi\-utilisateur.  Par exemple, il va créer un dossier Windows virtuel, de sorte que chaque utilisateur possède un dossier Windows au lieu d'utiliser le répertoire système Windows.  Les utilisateurs ont ainsi la possibilité d'accéder à leurs propres fichiers INI.  De plus, Terminal Server modifie quelque peu le Registre d'une application héritée \(legacy\).  Ces modifications ralentissent le chargement de l'application héritée \(legacy\) sur Terminal Server.  
+ Lorsqu’une application n’est pas compatible Terminal Server (également appelé une application héritée), serveur Terminal Server apporte des modifications pour l’application héritée pour qu’il fonctionne correctement dans un environnement multi-utilisateur. Par exemple, serveur Terminal Server créera un dossier virtuel de Windows, telles que chaque utilisateur obtienne un dossier Windows au lieu d’obtenir le répertoire du système Windows. Cela fournit aux utilisateurs un accès à leurs propres fichiers INI. En outre, Terminal Server modifie certains ajustements dans le Registre pour une application héritée. Ces modifications ralentissent le chargement de l’application héritée sur le serveur Terminal Server.  
   
- Si une application est compatible Terminal Server, elle ne doit ni s'appuyer sur les fichiers INI, ni écrire sur la clé de Registre **HKEY\_CURRENT\_USER** pendant la configuration.  
+ Si une application est compatible Terminal Server, il doit s’appuient sur les fichiers INI ni écrire dans le **HKEY_CURRENT_USER** Registre pendant l’installation.  
   
- Si vous utilisez \/TSAWARE et que votre application continue d'utiliser les fichiers INI, les fichiers seront partagés par tous les utilisateurs du système.  Si cela fonctionne, vous pouvez toujours lier votre application à l'aide de l'option \/TSAWARE ; sinon, vous devez utiliser \/TSAWARE:NO.  
+ Si vous utilisez /TSAWARE et que votre application utilise toujours les fichiers INI, les fichiers seront partagés par tous les utilisateurs du système. Si ce n’est acceptable, vous pouvez toujours lier votre application avec l’option /TSAWARE ; Sinon, vous devez utiliser/TSAWARE : no.  
   
- L'option \/TSAWARE est activée par défaut pour Windows 2000 et versions ultérieures, pour Windows et les applications de console.  Pour plus d'informations, consultez [\/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) et [\/VERSION](../../build/reference/version-version-information.md)  
+ L’option /TSAWARE est activée par défaut pour Windows 2000 et versions ultérieures, pour Windows et les applications de console. Consultez [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) et [/VERSION](../../build/reference/version-version-information.md) pour plus d’informations.  
   
- \/TSAWARE n'est pas valide pour les pilotes, les pilotes de périphériques virtuels \(VxD\) ou les DLL.  
+ /TSAWARE n’est pas valide pour les pilotes, VXD ou DLL.  
   
- Si une application a été liée avec l'option \/TSAWARE, DUMPBIN [\/HEADERS](../../build/reference/headers.md) affichera des informations à cet effet.  
+ Si une application a été liée avec l’option/TSAWARE, DUMPBIN [/HEADERS](../../build/reference/headers.md) affiche des informations à cet effet.  
   
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Définition des propriétés de projets Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Cliquez sur le dossier **Éditeur de liens**.  
+2.  Cliquez sur le **l’éditeur de liens** dossier.  
   
-3.  Cliquez sur la page de propriétés **Système**.  
+3.  Cliquez sur le **système** page de propriétés.  
   
-4.  Modifiez la propriété **Terminal Server**.  
+4.  Modifier la **Terminal Server** propriété.  
   
-### Pour définir cette option de l'éditeur de liens par programme  
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A>.  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)   
- [Storing User\-Specific Information](http://msdn.microsoft.com/library/aa383452)   
- [Legacy Applications in a Terminal Services Environment](https://msdn.microsoft.com/en-us/library/aa382957.aspx)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)   
+ [Stocker des informations spécifiques à l’utilisateur](http://msdn.microsoft.com/library/aa383452)   
+ [Applications héritées dans un environnement de Services Terminal Server](https://msdn.microsoft.com/en-us/library/aa382957.aspx)

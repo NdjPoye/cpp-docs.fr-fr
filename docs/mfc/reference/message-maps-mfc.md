@@ -19,16 +19,17 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 677a4a06402af1115f419dcd5979a13a84d79e08
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 958f308a089f2f503159b2ce56c2096595fc7613
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-maps-mfc"></a>Tables des messages (MFC)
 Cette section de la référence répertorie tous les [macros de mappage de message](../../mfc/reference/message-map-macros-mfc.md) et tous les [CWnd](../../mfc/reference/cwnd-class.md) les entrées de table des messages, ainsi que le membre correspondant des prototypes de fonction :  
   
-|Catégorie|Description|  
+|Category|Description|  
 |--------------|-----------------|  
 |ON\_Gestionnaire de messages de commande|Gère les `WM_COMMAND` messages générés par les sélections de menu utilisateur ou les touches d’accès rapide.|  
 |[Gestionnaires pour les messages de notification de fenêtre enfant](../../mfc/reference/child-window-notification-message-handlers.md)|Gérer les messages de notification à partir des fenêtres enfants.|  

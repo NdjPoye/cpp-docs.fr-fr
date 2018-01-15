@@ -41,11 +41,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a800ff5c8c071e966bbc1e5297fb706627c8d17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a20ee1e3de4d5c9f61437c79bd2eda4240947947
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cftpconnection-class"></a>Classe de CFtpConnection
 Gère votre connexion FTP à un serveur Internet et permet une manipulation directe des répertoires et fichiers sur ce serveur.  
@@ -80,7 +81,7 @@ class CFtpConnection : public CInternetConnection
 |[CFtpConnection::Rename](#rename)|Renomme un fichier sur le serveur.|  
 |[CFtpConnection::SetCurrentDirectory](#setcurrentdirectory)|Définit le répertoire FTP en cours.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  FTP est un des trois services Internet reconnus par les classes WinInet MFC.  
   
  Pour communiquer avec un serveur FTP Internet, vous devez d’abord créer une instance de [CInternetSession](../../mfc/reference/cinternetsession-class.md), puis créez un `CFtpConnection` objet. Vous ne créez jamais un `CFtpConnection` directement l’objet ; au lieu de cela, appelez [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), qui crée le `CFtpConnection` de l’objet et retourne un pointeur vers elle.  
@@ -97,7 +98,7 @@ class CFtpConnection : public CInternetConnection
   
  `CFtpConnection`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxinet.h  
   
 ##  <a name="cftpconnection"></a>CFtpConnection::CFtpConnection  
@@ -153,7 +154,7 @@ CFtpConnection(
  `bPassive`  
  Spécifie le mode passif ou actif pour cette session FTP. Si la valeur **TRUE**, il définit l’API Win32 `dwFlag` à **INTERNET_FLAG_PASSIVE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous ne créez jamais un `CFtpConnection` directement l’objet. Au lieu de cela, appelez [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), ce qui crée le **CFptConnection** objet.  
   
 ##  <a name="command"></a>CFtpConnection::Command  
@@ -187,7 +188,7 @@ CInternetFile* Command(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133) de fonction, comme décrit dans le Kit de développement logiciel Windows.  
   
  Si une erreur se produit, MFC lève une exception de type [CInternetException](../../mfc/reference/cinternetexception-class.md).  
@@ -206,7 +207,7 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Windows [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelé pour déterminer la cause de l’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez `GetCurrentDirectory` pour déterminer le répertoire de travail en cours pour cette connexion au serveur. Ne supposez pas que le système distant a vous connecté dans le répertoire racine.  
   
  Le `pstrDirName` paramètre peut être soit un partiellement ou un nom de fichier qualifié complet relatif au répertoire actif. Une barre oblique inverse (\\) ou une barre oblique (/) peut être utilisée comme séparateur de répertoire pour le nom. `CreateDirectory`traduit les séparateurs de nom de répertoire pour les caractères appropriés avant de les utiliser.  
@@ -240,7 +241,7 @@ BOOL GetCurrentDirectory(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelé pour déterminer la cause de l’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour obtenir le nom du répertoire en tant qu’URL au lieu de cela, appelez [GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl).  
   
  Les paramètres `pstrDirName` ou `strDirName` peut être soit noms partiellement qualifiés relatif au répertoire actif ou complet. Une barre oblique inverse (\\) ou une barre oblique (/) peut être utilisée comme séparateur de répertoire pour le nom. `GetCurrentDirectory`traduit les séparateurs de nom de répertoire pour les caractères appropriés avant de les utiliser.  
@@ -274,7 +275,7 @@ BOOL GetCurrentDirectoryAsURL(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelé pour déterminer la cause de l’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `GetCurrentDirectoryAsURL`se comporte comme [GetCurrentDirectory](#getcurrentdirectory)  
   
  Le paramètre `strDirName` peut être soit noms partiellement qualifiés relatif au répertoire actif ou complet. Une barre oblique inverse (\\) ou une barre oblique (/) peut être utilisée comme séparateur de répertoire pour le nom. `GetCurrentDirectoryAsURL`traduit les séparateurs de nom de répertoire pour les caractères appropriés avant de les utiliser.  
@@ -330,7 +331,7 @@ BOOL GetFile(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelé pour déterminer la cause de l’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `GetFile`est une routine de haut niveau qui gère l’ensemble de la surcharge associée à la lecture d’un fichier à partir d’un serveur FTP et le stockage localement. Les applications qui ne récupérer que les données de fichier, ou qui requièrent un contrôle fermer le transfert de fichiers, doivent utiliser `OpenFile` et [CInternetFile::Read](../../mfc/reference/cinternetfile-class.md#read) à la place.  
   
  Si `dwFlags` est FILE_TRANSFER_TYPE_ASCII, traduction de données de fichiers également convertit contrôle et mise en forme de caractères à équivalents Windows. Le transfert de la valeur par défaut est en mode binaire, où le fichier est téléchargé dans le même format qu’il est stocké sur le serveur.  
@@ -370,7 +371,7 @@ CInternetFile* OpenFile(
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un [CInternetFile](../../mfc/reference/cinternetfile-class.md) objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `OpenFile`doit être utilisé dans les situations suivantes :  
   
 -   Une application possède des données devant être envoyées et créée en tant que fichier sur le serveur FTP, mais que les données ne sont pas dans un fichier local. Une fois `OpenFile` ouvre un fichier, l’application utilise [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write) pour envoyer les données de fichier FTP sur le serveur.  
@@ -412,7 +413,7 @@ BOOL PutFile(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelé pour déterminer la cause de l’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `PutFile`est une routine de haut niveau qui gère toutes les opérations associées au stockage d’un fichier sur un serveur FTP. Les applications qui envoient uniquement des données, ou qui requièrent un contrôle plus près le transfert de fichiers doivent utiliser [OpenFile](#openfile) et [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write).  
   
  Remplacer la `dwContext` par défaut pour définir l’identificateur de contexte pour une valeur de votre choix. L’identificateur de contexte est associé à cette opération spécifique de la `CFtpConnection` objet créé par son [CInternetSession](../../mfc/reference/cinternetsession-class.md) objet. La valeur est retournée à [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) pour fournir l’état de l’opération avec laquelle il est identifié. Consultez l’article [Internet premières étapes : WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identificateur de contexte.  
@@ -431,7 +432,7 @@ BOOL Remove(LPCTSTR pstrFileName);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelé pour déterminer la cause de l’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `pstrFileName` paramètre peut être soit un partiellement qualifié nom de fichier qualifié complet ou relatif au répertoire actif. Une barre oblique inverse (\\) ou une barre oblique (/) peut être utilisée comme séparateur de répertoire pour le nom. Le **supprimer** fonction traduit les séparateurs de nom de répertoire pour les caractères appropriés avant de les utiliser.  
   
 ##  <a name="removedirectory"></a>CFtpConnection::RemoveDirectory  
@@ -448,7 +449,7 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelé pour déterminer la cause de l’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez [GetCurrentDirectory](#getcurrentdirectory) pour déterminer le répertoire de travail actuel du serveur. Ne supposez pas que le système distant a vous connecté dans le répertoire racine.  
   
  Le `pstrDirName` paramètre peut être soit un nom de fichier qualifié complet ou partiel relatif au répertoire actif. Une barre oblique inverse (\\) ou une barre oblique (/) peut être utilisée comme séparateur de répertoire pour le nom. `RemoveDirectory`traduit les séparateurs de nom de répertoire pour les caractères appropriés avant de les utiliser.  
@@ -472,7 +473,7 @@ BOOL Rename(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelé pour déterminer la cause de l’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `pstrExisting` et `pstrNew` les paramètres peuvent être soit un partiellement qualifié nom de fichier qualifié complet ou relatif au répertoire actif. Une barre oblique inverse (\\) ou une barre oblique (/) peut être utilisée comme séparateur de répertoire pour le nom. **Renommer** se traduit par des séparateurs de nom de répertoire pour les caractères appropriés avant de les utiliser.  
   
 ##  <a name="setcurrentdirectory"></a>CFtpConnection::SetCurrentDirectory  
@@ -489,7 +490,7 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) peut être appelé pour déterminer la cause de l’erreur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `pstrDirName` paramètre peut être soit un nom de fichier qualifié complet ou partiel relatif au répertoire actif. Une barre oblique inverse (\\) ou une barre oblique (/) peut être utilisée comme séparateur de répertoire pour le nom. `SetCurrentDirectory`traduit les séparateurs de nom de répertoire pour les caractères appropriés avant de les utiliser.  
   
  Utilisez [GetCurrentDirectory](#getcurrentdirectory) pour déterminer le répertoire de travail en cours d’un serveur FTP. Ne supposez pas que le système distant a vous connecté dans le répertoire racine.  

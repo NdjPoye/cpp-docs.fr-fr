@@ -39,11 +39,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e88736c6255118141d49fbd85134fffbeaeba6db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f85a1e6992e8d679401f4e0f97080efcf991446
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledataobject-class"></a>Classe de COleDataObject
 Utilisée dans les transferts de données pour récupérer des données dans divers formats depuis le Presse-papiers, par glisser-déposer ou depuis un élément OLE incorporé.  
@@ -77,7 +78,7 @@ class COleDataObject
 |[COleDataObject::IsDataAvailable](#isdataavailable)|Vérifie si les données sont disponibles dans un format spécifié.|  
 |[COleDataObject::Release](#release)|Détache et libère associé `IDataObject` objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `COleDataObject`ne dispose pas d’une classe de base.  
   
  Ces types de transferts de données incluent une source et une destination. La source de données est implémentée en tant qu’objet de la [COleDataSource](../../mfc/reference/coledatasource-class.md) classe. Chaque fois qu’une application de destination contient des données supprimées qu’il contient ou qu’il est invitée à effectuer une opération de collage depuis le Presse-papiers, un objet de la `COleDataObject` classe doit être créée.  
@@ -91,7 +92,7 @@ class COleDataObject
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `COleDataObject`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxole.h  
   
 ##  <a name="attach"></a>COleDataObject::Attach  
@@ -110,7 +111,7 @@ void Attach(
  `bAutoRelease`  
  **TRUE** si l’objet de données OLE doit être libérée lorsque la `COleDataObject` objet est détruite ; sinon **FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="attachclipboard"></a>COleDataObject::AttachClipboard  
@@ -123,7 +124,7 @@ BOOL AttachClipboard();
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 > [!NOTE]
 >  Appel de cette fonction de verrouille le Presse-papiers jusqu'à ce que cet objet de données est libéré. L’objet de données est libéré dans le destructeur de la `COleDataObject`. Pour plus d’informations, consultez [ouverture du Presse-papiers](http://msdn.microsoft.com/library/windows/desktop/ms649048) et [CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) dans la documentation de Win32.  
@@ -135,7 +136,7 @@ BOOL AttachClipboard();
 void BeginEnumFormats();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Après un appel à `BeginEnumFormats`, la position du premier format pris en charge par cet objet de données est stockée. Les appels successifs à `GetNextFormat` énumère la liste des formats disponibles dans l’objet de données.  
   
  Pour vérifier la disponibilité des données dans un format donné, utilisez [COleDataObject::IsDataAvailable](#isdataavailable).  
@@ -149,7 +150,7 @@ void BeginEnumFormats();
 COleDataObject();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un appel à [COleDataObject::Attach](#attach) ou [COleDataObject::AttachClipboard](#attachclipboard) doivent être effectuées avant d’appeler d’autres `COleDataObject` fonctions.  
   
 > [!NOTE]
@@ -165,7 +166,7 @@ LPDATAOBJECT Detach();
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers l’objet de données OLE qui a été détachée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="getdata"></a>COleDataObject::GetData  
  Appelez cette fonction pour récupérer des données à partir de l’élément dans le format spécifié.  
@@ -190,7 +191,7 @@ BOOL GetData(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431), [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), et [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) dans le Kit de développement logiciel Windows.  
   
  Pour plus d’informations, consultez [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) dans le Kit de développement logiciel Windows.  
@@ -214,7 +215,7 @@ CFile* GetFileData(
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers la nouvelle `CFile` ou `CFile`-dérivée objet contenant les données de cas de réussite ; **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Selon le support, les données sont stockées dans, le type réel désigné par la valeur de retour peut être `CFile`, `CSharedFile`, ou `COleStreamFile`.  
   
 > [!NOTE]
@@ -243,7 +244,7 @@ HGLOBAL GetGlobalData(
 ### <a name="return-value"></a>Valeur de retour  
  Le handle du bloc de mémoire globale qui contient les données en cas de réussite ; dans le cas contraire **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) dans le Kit de développement logiciel Windows.  
   
  Pour plus d’informations, consultez [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) dans le Kit de développement logiciel Windows.  
@@ -262,7 +263,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si un autre format n’est disponible ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Après un appel à [COleDataObject::BeginEnumFormats](#beginenumformats), la position du premier format pris en charge par cet objet de données est stockée. Les appels successifs à `GetNextFormat` énumère la liste des formats disponibles dans l’objet de données. Utilisez ces fonctions pour répertorier les formats disponibles.  
   
  Pour vérifier la disponibilité d’un format donné, appelez [COleDataObject::IsDataAvailable](#isdataavailable).  
@@ -288,7 +289,7 @@ BOOL IsDataAvailable(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si les données sont disponibles dans le format spécifié ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction est utile avant d’appeler `GetData`, `GetFileData`, ou `GetGlobalData`.  
   
  Pour plus d’informations, consultez [IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) et [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) dans le Kit de développement logiciel Windows.  
@@ -305,7 +306,7 @@ BOOL IsDataAvailable(
 void Release();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `IDataObject` a été associé à la `COleDataObject` en appelant **attacher** ou `AttachClipboard` ou explicitement par l’infrastructure. Si le `bAutoRelease` paramètre de **Attach** est **FALSE**, le `IDataObject` objet n’est pas libéré. Dans ce cas, l’appelant est responsable de la libération du `IDataObject` en appelant [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
   
 ## <a name="see-also"></a>Voir aussi  

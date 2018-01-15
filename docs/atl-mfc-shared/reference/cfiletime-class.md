@@ -31,11 +31,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 23727110219af5ff7a38036b4607e9636d5c9c3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d48e899bb058ed27559a4ef699a3a53267064f98
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfiletime-class"></a>Classe de CFileTime
 Cette classe fournit des méthodes pour gérer les valeurs de date et l’heure associées à un fichier.  
@@ -82,7 +83,7 @@ class CFileTime :  public FILETIME
   
 ### <a name="public-constants"></a>Constantes publiques  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CFileTime::Day](#day)|Une donnée membre static stockant le nombre d’intervalles de 100 nanosecondes qui composent un jour.|  
 |[CFileTime::Hour](#hour)|Une donnée membre static stockant le nombre d’intervalles de 100 nanosecondes qui composent une heure.|  
@@ -91,7 +92,7 @@ class CFileTime :  public FILETIME
 |[CFileTime::Second](#second)|Une donnée membre static stockant le nombre d’intervalles de 100 nanosecondes qui composent une seconde.|  
 |[CFileTime::Week](#week)|Une donnée membre static stockant le nombre d’intervalles de 100 nanosecondes qui composent une semaine.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe fournit des méthodes pour gérer les valeurs de date et l’heure associées à la création, l’accès et la modification des fichiers. Les méthodes et les données de cette classe sont fréquemment utilisées conjointement avec `CFileTimeSpan` objets, qui traitent des valeurs d’heure relative.  
   
  La valeur de date et d’heure est stockée en tant qu’une valeur 64 bits représentant le nombre d’intervalles de 100 nanosecondes depuis le 1er janvier 1601. Il s’agit du format de temps universel coordonné (UTC).  
@@ -114,7 +115,7 @@ class CFileTime :  public FILETIME
   
  `CFileTime`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atltime.h  
   
 ##  <a name="cfiletime"></a>CFileTime::CFileTime  
@@ -133,7 +134,7 @@ CFileTime(ULONGLONG nTime) throw();
  `nTime`  
  Date et heure exprimées sous forme d’une valeur 64 bits.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `CFileTime` objet peut être créé à l’aide d’une date existante et l’heure dans un `FILETIME` structure ou exprimé comme une valeur 64 bits (en local ou de formats d’heure temps universel coordonné (UTC)). Le constructeur par défaut définit l’heure à 0.  
   
 ##  <a name="day"></a>CFileTime::Day  

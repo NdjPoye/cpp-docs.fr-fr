@@ -119,11 +119,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04605ec5df5512549822d0e585bf1b28eb0b42e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 39098fc501ba94c4fa2cd6cf779e7c5c71cc2f1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iosbase-class"></a>ios_base, classe
 La classe décrit les fonctions membres et de stockage communes aux flux d'entrée et de sortie qui ne dépendent pas des paramètres du modèle. (La classe de modèle [basic_ios](../standard-library/basic-ios-class.md) décrit ce qui est commun et qui dépend des paramètres de modèle.)  
@@ -150,7 +151,7 @@ La classe décrit les fonctions membres et de stockage communes aux flux d'entr�
 |-|-|  
 |[ios_base](#ios_base)|Construit des objets `ios_base`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -227,7 +228,7 @@ La classe décrit les fonctions membres et de stockage communes aux flux d'entr�
 |-|-|  
 |[operator=](#op_eq)|Opérateur d'affectation pour les objets `ios_base`.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<ios>  
   
  **Espace de noms :** std  
@@ -411,7 +412,7 @@ public:
 };  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
  Prend en charge les manipulateurs dans [ios](../standard-library/ios.md).  
   
@@ -519,7 +520,7 @@ locale imbue(const locale& _Loc);
 class Init { };  
 ```
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
  La classe imbriquée décrit un objet dont la construction garantit que les objets iostreams standard sont construits correctement, même avant l’exécution d’un constructeur d’objet statique arbitraire.  
   
@@ -551,7 +552,7 @@ public:
 };  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
  Le type est un type de masque de bits qui décrit un objet pouvant stocker des informations d’état de flux. Les valeurs distinctes des indicateurs (éléments) sont :  
   
@@ -603,7 +604,7 @@ public:
 };  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
  Le type est un `bitmask type` qui décrit un objet capable de stocker le mode d’ouverture de plusieurs objets iostreams. Les valeurs distinctes des indicateurs (éléments) sont :  
   
@@ -744,7 +745,7 @@ void register_callback(
  `idx`  
  Nombre défini par l’utilisateur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
  La fonction membre exécute un push de la paire `{pfn, idx}` dans la pile de rappel stockée [pile de rappel](../standard-library/ios-base-class.md). Lorsqu’un événement de rappel **ev** est signalée, les fonctions sont appelées dans l’ordre inverse du Registre, par l’expression `(*pfn)(ev, *this, idx)`.  
  
@@ -852,7 +853,7 @@ namespace std {
 }  
 ```  
  
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 Le type est un type énuméré qui décrit un objet qui peut stocker le mode de recherche utilisé en tant qu’argument pour les fonctions membres de plusieurs classes iostream. Les valeurs distinctes des indicateurs sont :  
  
@@ -1063,6 +1064,6 @@ testing
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream, programmation](../standard-library/iostream-programming.md)   
  [iostreams, conventions](../standard-library/iostreams-conventions.md)

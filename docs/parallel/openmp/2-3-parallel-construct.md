@@ -1,109 +1,108 @@
 ---
-title: "2.3 parallel Construct | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.3 construction parallèle | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 190eacdf-2c16-4c06-8cb7-ac60eb211425
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 89167547085682a81cc1d281f4f32ab55022d27c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# 2.3 parallel Construct
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La directive suivante définit une région parallèle, qui est une zone de programme qui doit être exécuté par plusieurs threads en parallèle.  Il s'agit de l'élément fondamental qui commence l'exécution parallèle.  
+# <a name="23-parallel-construct"></a>2.3 Construction parallèle
+La directive suivante définit une région parallèle, qui est une région du programme qui doit être exécutée par plusieurs threads en parallèle. Il s’agit de la construction fondamentale qui démarre l’exécution en parallèle.  
   
 ```  
-#pragma omp parallel [clause[ [, ]clause] ...] new-line  
-   structured-block  
+#pragma omp parallel [clause[ [, ]clause] ...] new-line   structured-block  
 ```  
   
- *La clause* est l'une des opérations suivantes :  
+ Le *clause* est une des opérations suivantes :  
   
- *grandeur\-expression* **\)**de**si \(**  
+ **Si (** *expression scalaire* **)**  
   
- *variable\-liste* **\)**de**privé \(**  
+ **privé (** *variable-list* **)**  
   
- *variable\-liste* **\)**de**firstprivate \(**  
+ **firstprivate (** *variable-list* **)**  
   
- **valeur par défaut \(partagée &#124; aucun\)**  
+ **par défaut (partagé &#124; none)**  
   
- *variable\-liste* **\)**de**\(partagé**  
+ **partagé (** *variable-list* **)**  
   
- *variable\-liste* **\)**de**copyin \(**  
+ **copyin (** *variable-list* **)**  
   
- *variable\-liste* **\)**de**Numéro de téléphone :** d'*opérateur de***réduction \(**  
+ **la réduction (** *opérateur* **:***variable-list* **)**   
   
- *entier\-expression* **\)**de**num\_threads \(**  
+ **num_threads (** *entier* **)**  
   
- Lorsqu'un thread rencontre un élément parallèle, une équipe de threads est créée si l'un des cas suivants est vrai :  
+ Lorsqu’un thread rencontre une construction parallèle, une équipe de threads est créée si une des situations suivantes est vraie :  
   
--   aucune clause d' **if** n'est présente.  
+-   Ne **si** clause n’est présente.  
   
--   L'expression d' **if** prend une valeur différente de zéro.  
+-   Le **si** expression correspond à une valeur différente de zéro.  
   
- Ce thread devient le thread principal de l'équipe, avec un nombre de threads de 0, et tous les threads de l'équipe, notamment le thread principal, exécutent la zone en parallèle.  si la valeur de l'expression d' **if** est zéro, la zone est sérialisée.  
+ Ce thread devient le thread principal de l’équipe, avec un nombre de threads de 0, et tous les threads de l’équipe, y compris le thread principal, exécutent la région en parallèle. Si la valeur de la **si** expression est égale à zéro, la région est sérialisée.  
   
- Pour déterminer le nombre de threads qui sont demandés, les règles suivantes sont considérées comme dans l'ordre.  La première règle dont la condition est satisfaite sera appliquée :  
+ Pour déterminer le nombre de threads qui sont demandées, les règles suivantes sont considérées dans l’ordre. La première règle dont la condition est remplie est appliquée :  
   
-1.  Si la clause de **num\_threads** est présente, la valeur de l'expression entière est le nombre de threads demandés.  
+1.  Si le **num_threads** clause est spécifiée, la valeur de l’expression d’entier est le nombre de threads demandé.  
   
-2.  Si la fonction de bibliothèque d' **omp\_set\_num\_threads** a été appelée, la valeur de l'argument dans l'appel récemment exécution est le nombre de threads demandés.  
+2.  Si le **omp_set_num_threads** fonction de bibliothèque a été appelée, la valeur de l’argument dans l’appel exécuté le plus récemment est le nombre de threads demandé.  
   
-3.  Si la variable d'environnement **OMP\_NUM\_THREADS** est définie, la valeur de cette variable d'environnement est le nombre de threads demandés.  
+3.  Si la variable d’environnement **OMP_NUM_THREADS** est défini, la valeur de cette variable d’environnement est le nombre de threads demandé.  
   
-4.  Si aucune des méthodes ci\-dessus n'a été utilisée, le nombre de threads demandés implémentation\-est défini.  
+4.  Si aucune des méthodes ci-dessus ont été utilisés, le nombre de threads demandé est défini par l’implémentation.  
   
- Si la clause de **num\_threads** est présent puis elle remplace le nombre de threads demandés par la fonction de bibliothèque d' **omp\_set\_num\_threads** ou la variable d'environnement **OMP\_NUM\_THREADS** uniquement pour la région parallèle qu'elle s'applique.  Les régions parallèles suivantes ne sont pas affectées par elle.  
+ Si le **num_threads** clause est présente, il remplace le nombre de threads demandé par le **omp_set_num_threads** fonction de la bibliothèque ou le **OMP_NUM_THREADS** variable d’environnement uniquement pour la région parallèle, il est appliqué à. Les régions parallèles suivantes ne sont pas affectées par celui-ci.  
   
- Le nombre de threads qui exécutent la région parallèle également dépend au moment si le réglage dynamique du nombre de threads est activé.  Si le réglage dynamique est désactivé, le nombre demandé de thread exécute la région parallèle.  Si le réglage dynamique est activé le nombre demandé de threads est le nombre maximal de threads qui peuvent s'exécuter la région parallèle.  
+ Le nombre de threads qui s’exécutent de la région parallèle dépend également de l’ajustement dynamique du nombre de threads est activé ou non. Si l’ajustement dynamique est désactivée, le nombre demandé de threads exécutera la région parallèle. Si l’ajustement dynamique est activé le nombre demandé de threads est le nombre maximal de threads qui peuvent s’exécuter à la région parallèle.  
   
- Si une région parallèle est produite lors de la modification dynamique du nombre de threads est désactivé, et le nombre de threads demandés pour la région parallèle dépasse le nombre que le système runtime peut fournir, le comportement du programme implémentation\-est défini.  Une implémentation peut, par exemple, interrompre l'exécution du programme, ou elle peut sérialiser la région parallèle.  
+ Si une région parallèle est rencontrée pendant que l’ajustement dynamique du nombre de threads est désactivé, et le nombre de threads demandé pour la région parallèle dépasse le nombre qui peut fournir un système d’exécution, le comportement du programme est défini par l’implémentation. Une implémentation d’interruption peut, par exemple, l’exécution du programme, ou il peut sérialiser la région parallèle.  
   
- La fonction de bibliothèque d' **omp\_set\_dynamic** et la variable d'environnement **OMP\_DYNAMIC** peuvent être utilisées pour activer et désactiver le réglage dynamique du nombre de threads.  
+ Le **omp_set_dynamic** fonction de bibliothèque et la **OMP_DYNAMIC** variable d’environnement peut être utilisée pour activer et désactiver l’ajustement dynamique du nombre de threads.  
   
- Le nombre de processeurs physiques qui hébergent réellement les threads à un moment donné implémentation\-est défini.  Une fois créées, le nombre de threads dans l'équipe reste constant pour la durée de cette zone parallèle.  Elle peut être modifiée explicitement par l'utilisateur ou automatiquement par le système d'exécution d'une région parallèle à un autre.  
+ Le nombre de processeurs physiques hébergeant les threads à un moment donné est défini par l’implémentation. Une fois créé, le nombre de threads de l’équipe reste constant pour la durée de cette région parallèle. Il peut être modifié explicitement par l’utilisateur ou automatiquement par le système d’exécution à partir d’une région parallèle à l’autre.  
   
- Les instructions contenues dans l'étendue dynamique de la zone parallèle sont exécutées par chaque thread, et chaque thread peut exécuter un chemin d'accès des instructions qui est différent des autres threads.  Les directives produites en dehors de l'étendue lexicale d'une région parallèle renvoie aux directives orphelines.  
+ Les instructions contenues dans l’étendue dynamique de la région parallèle sont exécutées par chaque thread, et chaque thread peut exécuter un chemin d’accès d’instructions qui est différent des autres threads. Directives rencontrés en dehors de l’étendue lexicale d’une région parallèle sont appelés des directives orphelins.  
   
- Il existe un cloisonnement implicite à la fin d'une zone parallèle.  Seul le thread principal de l'équipe l'exécution se poursuit à la fin d'une zone parallèle.  
+ Il existe une barrière implicite à la fin d’une région parallèle. Seul le thread principal de l’équipe poursuit l’exécution à la fin d’une région parallèle.  
   
- Si un thread dans une équipe qui exécute une région parallèle rencontre un autre élément parallèle, elle crée une nouvelle équipe, et il devient la forme de base de cette nouvelle équipe.  Les régions parallèles imbriquées sont sérialisées par défaut.  En conséquence, par défaut, une région parallèle imbriquée est exécutée par l'équipe composée d'un thread.  Le comportement par défaut peut être modifié à l'aide de la fonction de la bibliothèque Runtime **omp\_set\_nested** ou de la variable d'environnement **OMP\_NESTED**.  Toutefois, le nombre de threads dans une équipe qui exécutent une région parallèle imbriquée implémentation\-est défini.  
+ Si un thread dans une équipe de l’exécution d’une région parallèle rencontre une autre construction parallèle, il crée une nouvelle équipe, et il devient le maître de cette nouvelle équipe. Les régions parallèles imbriquées sont sérialisées par défaut. Par conséquent, par défaut, une région parallèle imbriquée est exécutée par une équipe composée d’un thread. Le comportement par défaut peut être modifié à l’aide de la fonction de bibliothèque runtime **omp_set_nested** ou la variable d’environnement **OMP_NESTED**. Toutefois, le nombre de threads qui s’exécutent une région parallèle imbriquée dans une équipe est défini par l’implémentation.  
   
- Les restrictions à la directive de **parallèle** sont les suivantes :  
+ Restrictions à le **parallèles** directive sont les suivantes :  
   
--   Au plus une clause d' **if** peut apparaître sur la directive.  
+-   Au plus un **si** clause peut s’afficher dans la directive.  
   
--   Il n'est pas spécifiée si tous les effets secondaires à l'intérieur de si l'expression ou l'expression de **num\_threads** se produisent.  
+-   Il n’est pas spécifié si un côté d’effets dans le cas expression ou **num_threads** expression se produisent.  
   
--   Un intérieur exécuté par **throw** une région parallèle doit provoquer l'exécution au résumé dans l'étendue dynamique du même bloc structuré, et il doit être intercepté par le même thread qui a levé l'exception.  
+-   A **lever** exécutée à l’intérieur d’une région parallèle doit provoquer l’exécution de reprise dans l’étendue dynamique de la même bloc structuré, et elle doit être interceptée par le même thread que celui qui a levé l’exception.  
   
--   Uniquement une clause unique de **num\_threads** peut apparaître sur la directive.  L'expression de **num\_threads** est évaluée en dehors de le contexte de la zone parallèle, et doit prendre une valeur entière positive.  
+-   Un seul **num_threads** clause peut s’afficher dans la directive. Le **num_threads** expression est évaluée en dehors du contexte de la région parallèle et doit correspondre à une valeur entière positive.  
   
--   L'ordre d'évaluation des clauses d' **if** et de **num\_threads** n'est pas spécifiée.  
+-   L’ordre d’évaluation de la **si** et **num_threads** clauses n’est pas spécifié.  
   
-## Références croisées :  
+## <a name="cross-references"></a>Références externes :  
   
--   **privé**, **firstprivate**, **valeur par défaut**, **partagé**, **copyin**, et les clauses de **réduction** , consultez [section 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) à la page 25.  
+-   **privé**, **firstprivate**, **par défaut**, **partagé**, **copyin**, et **réduction**clauses, consultez [Section 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) page 25.  
   
--   Variable d'environnement**OMP\_NUM\_THREADS** , [section 4,2](../../parallel/openmp/4-2-omp-num-threads.md) à la page 48.  
+-   **OMP_NUM_THREADS** variable d’environnement, [Section 4.2](../../parallel/openmp/4-2-omp-num-threads.md) page 48.  
   
--   la fonction de bibliothèque d'**omp\_set\_dynamic** , consultez [section 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) à la page 39.  
+-   **omp_set_dynamic** fonction de bibliothèque, consultez [Section 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) sur la page 39.  
   
--   La variable d'environnement**OMP\_DYNAMIC** , consultez [section 4,3](../../parallel/openmp/4-3-omp-dynamic.md) à la page 49.  
+-   **OMP_DYNAMIC** voir variable d’environnement [Section 4.3](../../parallel/openmp/4-3-omp-dynamic.md) page 49.  
   
--   la fonction d'**omp\_set\_nested** , consultez [section 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md) à la page 40.  
+-   **omp_set_nested** , consultez [Section 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md) page 40.  
   
--   La variable d'environnement**OMP\_NESTED** , consultez [section 4,4](../../parallel/openmp/4-4-omp-nested.md) à la page 49.  
+-   **OMP_NESTED** voir variable d’environnement [Section 4.4](../../parallel/openmp/4-4-omp-nested.md) page 49.  
   
--   la fonction de bibliothèque d'**omp\_set\_num\_threads** , consultez [section 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) à la page 36.
+-   **omp_set_num_threads** fonction de bibliothèque, consultez [Section 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) sur la page 36.

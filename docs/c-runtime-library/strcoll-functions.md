@@ -27,11 +27,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 224c30dfbc79ab91e60f7f55f4835d3f627c454c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e5f025d90d4ffac5f9dc293f621023591b5eb4f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcoll-functions"></a>strcoll, fonctions
 Chacune des fonctions `strcoll` et `wcscoll` compare deux chaînes en fonction du paramètre de catégorie `LC_COLLATE` de la page de codes des paramètres régionaux en cours d’utilisation. Chacune des fonctions `_mbscoll` compare deux chaînes en fonction de la page de codes multioctets en cours d’utilisation. Utilisez les fonctions `coll` pour les comparaisons de chaînes s’il existe une différence entre l’ordre du jeu de caractères et l’ordre lexicographique des caractères dans la page de codes actuelle, et si cette différence présente un intérêt pour la comparaison. Utilisez les fonctions `cmp` correspondantes pour tester uniquement pour l’égalité des chaînes.  
@@ -45,10 +46,10 @@ Chacune des fonctions `strcoll` et `wcscoll` compare deux chaînes en fonction d
 |[_strncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_wcsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_mbsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|Assembler les premiers caractères `count` de deux chaînes|  
 |[_strnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_wcsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_mbsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|Assembler les premiers caractères `count` de deux chaînes (qui ne respectent pas la casse)|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les versions jeu de caractères codés sur un octet (SBCS) de ces fonctions (`strcoll`, `stricoll`, `_strncoll` et `_strnicoll`) comparent `string1` et `string2` conformément au paramètre de catégorie `LC_COLLATE` des paramètres régionaux actuels. Ces fonctions diffèrent des fonctions `strcmp` correspondantes en cela que les fonctions `strcoll` utilisent les informations de page de code de paramètres régionaux qui fournissent des séquences de classement. Pour les comparaisons de chaînes dans les paramètres régionaux dans lesquelles l’ordre du jeu de caractères et celui de l’ordre lexicographique des caractères diffèrent, les fonctions `strcoll` doivent être utilisées à la place des fonctions `strcmp` correspondantes. Pour plus d’informations sur `LC_COLLATE`, consultez [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).  
   
- Pour certaines pages de codes et les jeux de caractères correspondants, l’ordre des caractères dans le jeu de caractères peut différer de l’ordre lexicographique des caractères. Dans les paramètres régionaux « C », ce n’est pas le cas : l’ordre des caractères dans le jeu de caractères ASCII est le même que l’ordre lexicographique des caractères. Toutefois, dans certaines pages de codes européennes, par exemple, le caractère « a » (valeur 0x61) précède le caractère « ä » (valeur 0xE4) dans le jeu de caractères, mais le caractère « ä » précède le caractère « a » sur le plan lexicographique. Pour effectuer une comparaison lexicographique dans un cas comme celui-ci, utilisez `strcoll` plutôt que `strcmp`. Vous pouvez aussi utiliser `strxfrm` sur les chaînes d'origine, puis utiliser `strcmp` sur les chaînes résultantes.  
+ Pour certaines pages de codes et les jeux de caractères correspondants, l’ordre des caractères dans le jeu de caractères peut différer de l’ordre lexicographique des caractères. Dans les paramètres régionaux « C », ce n’est pas le cas : l’ordre des caractères dans le jeu de caractères ASCII est le même que l’ordre lexicographique des caractères. Cependant, dans certaines pages de code européennes, par exemple, le caractère « a » (valeur 0x61) précède le caractère « ä » (valeur 0xE4) dans le jeu de caractères, alors que d’un point de vue lexicographique, le caractère « ä » précède le caractère « a ». Pour effectuer une comparaison lexicographique dans un cas comme celui-ci, utilisez `strcoll` plutôt que `strcmp`. Vous pouvez aussi utiliser `strxfrm` sur les chaînes d'origine, puis utiliser `strcmp` sur les chaînes résultantes.  
   
  `strcoll`, `stricoll`, `_strncoll` et `_strnicoll` gèrent automatiquement les chaînes de caractères multioctets en fonction de la page de codes des paramètres régionaux en cours d’utilisation, comme le font leurs équivalents à caractères larges (Unicode). Les versions de jeu de caractères multioctets (MBCS) de ces fonctions cependant, assemblent les chaînes caractère par caractère en fonction de la page de codes multioctets en cours d’utilisation.  
   

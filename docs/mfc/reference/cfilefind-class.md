@@ -67,11 +67,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e12874dcc35c4c98b765aa773d5307d3b35dbe60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e890e59896d1f69264ab479168385cf2a05d9fb7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfilefind-class"></a>Classe de CFileFind
 Effectue des recherches de fichiers local et est la classe de base pour [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) et [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), qui effectuent des recherches dans des fichiers Internet.  
@@ -125,11 +126,11 @@ class CFileFind : public CObject
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CFileFind::m_pTM](#m_ptm)|Pointeur vers un `CAtlTransactionManager` objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CFileFind`inclut des fonctions membres qui lancer une recherche, recherchez un fichier et retournent le titre, le nom ou le chemin d’accès du fichier. Pour les recherches sur Internet, la fonction membre [GetFileURL](#getfileurl) renvoie l’URL du fichier.  
   
  `CFileFind`est la classe de base pour les deux autres classes MFC conçue pour rechercher des types de serveurs particulier : `CGopherFileFind` fonctionne avec les serveurs gopher, en particulier et `CFtpFileFind` fonctionne avec les serveurs FTP. Ensemble, ces trois classes fournissent un mécanisme transparent pour le client rechercher des fichiers, quel que soit le protocole de serveur, le type de fichier ou l’emplacement, sur un ordinateur local ou sur un serveur distant.  
@@ -147,7 +148,7 @@ class CFileFind : public CObject
   
  `CFileFind`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h  
   
 ##  <a name="cfilefind"></a>CFileFind::CFileFind  
@@ -172,7 +173,7 @@ CFileFind(CAtlTransactionManager* pTM);
 void Close();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Après avoir appelé **fermer**, vous n’êtes pas obligé de créer un nouveau `CFileFind` instance avant d’appeler [FindFile](#findfile) pour commencer une nouvelle recherche.  
   
 ### <a name="example"></a>Exemple  
@@ -185,7 +186,7 @@ void Close();
 virtual void CloseContext();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ferme le fichier spécifié par la valeur actuelle de la poignée de la recherche. Remplacez cette fonction pour modifier le comportement par défaut.  
   
  Vous devez appeler la [FindFile](#findfile) ou [FindNextFile](#findnextfile) fonctions au moins une fois pour récupérer un handle de recherche valide. Le **FindFile** et `FindNextFile` fonctions utilisent le handle de recherche pour rechercher des fichiers portant des noms qui correspondent à un nom donné.  
@@ -209,7 +210,7 @@ virtual BOOL FindFile(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0. Pour obtenir des informations d’erreur plus complètes, appelez la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Après avoir appelé **FindFile** pour commencer la recherche de fichiers, appelez [FindNextFile](#findnextfile) pour extraire les fichiers suivants. Vous devez appeler `FindNextFile` au moins une fois avant d’appeler les fonctions membres d’attribut suivant :  
   
 - [GetCreationTime](#getcreationtime)  
@@ -263,7 +264,7 @@ virtual BOOL FindNextFile();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro s’il existe plusieurs fichiers ; zéro si le fichier est le dernier dans le répertoire, ou si une erreur s’est produite. Pour obtenir des informations d’erreur plus complètes, appelez la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Si le fichier est le dernier fichier dans le répertoire, ou si aucun des fichiers peuvent être trouvés, la `GetLastError` fonction retourne ERROR_NO_MORE_FILES.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez appeler `FindNextFile` au moins une fois avant d’appeler les fonctions membres d’attribut suivant :  
   
 - [GetCreationTime](#getcreationtime)  
@@ -327,7 +328,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’opération a réussi ; 0 en cas d’échec. `GetCreationTime`Renvoie la valeur 0 uniquement si [FindNextFile](#findnextfile) n’a jamais été appelée sur ce `CFileFind` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez appeler [FindNextFile](#findnextfile) au moins une fois avant d’appeler `GetCreationTime`.  
   
 > [!NOTE]
@@ -346,7 +347,7 @@ virtual CString GetFileName() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nom du fichier récemment trouvé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez appeler [FindNextFile](#findnextfile) au moins une fois avant d’appeler GetFileName.  
   
  `GetFileName`est un des trois `CFileFind` fonctions membres qui retournent une forme du nom de fichier. La liste suivante décrit les trois et comment ils varient :  
@@ -370,7 +371,7 @@ virtual CString GetFilePath() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le chemin d’accès du fichier spécifié.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez appeler [FindNextFile](#findnextfile) au moins une fois avant d’appeler `GetFilePath`.  
   
  `GetFilePath`est un des trois `CFileFind` fonctions membres qui retournent une forme du nom de fichier. La liste suivante décrit les trois et comment ils varient :  
@@ -394,7 +395,7 @@ virtual CString GetFileTitle() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le titre du fichier.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez appeler [FindNextFile](#findnextfile) au moins une fois avant d’appeler `GetFileTitle`.  
   
  `GetFileTitle`est un des trois `CFileFind` fonctions membres qui retournent une forme du nom de fichier. La liste suivante décrit les trois et comment ils varient :  
@@ -418,7 +419,7 @@ virtual CString GetFileURL() const;
 ### <a name="return-value"></a>Valeur de retour  
  L’URL complète.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez appeler [FindNextFile](#findnextfile) au moins une fois avant d’appeler `GetFileURL`.  
   
  `GetFileURL`est similaire à la fonction membre [GetFilePath](#getfilepath), à ceci près qu’elle renvoie l’URL sous la forme `file://path`. Par exemple, l’appel `GetFileURL` pour obtenir l’URL complète de `myfile.txt` renvoie l’URL `file://c:\myhtml\myfile.txt`.  
@@ -444,7 +445,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’opération a réussi ; 0 en cas d’échec. `GetLastAccessTime`Renvoie la valeur 0 uniquement si [FindNextFile](#findnextfile) n’a jamais été appelée sur ce `CFileFind` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez appeler [FindNextFile](#findnextfile) au moins une fois avant d’appeler `GetLastAccessTime`.  
   
 > [!NOTE]
@@ -471,7 +472,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’opération a réussi ; 0 en cas d’échec. `GetLastWriteTime`Renvoie la valeur 0 uniquement si [FindNextFile](#findnextfile) n’a jamais été appelée sur ce `CFileFind` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez appeler [FindNextFile](#findnextfile) au moins une fois avant d’appeler `GetLastWriteTime`.  
   
 > [!NOTE]
@@ -490,7 +491,7 @@ ULONGLONG GetLength() const;
 ### <a name="return-value"></a>Valeur de retour  
  La longueur du fichier trouvé, en octets.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez appeler [FindNextFile](#findnextfile) au moins une fois avant d’appeler `GetLength`.  
   
  `GetLength`utilise la structure Win32 [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) pour obtenir et retourner la valeur de la taille du fichier, en octets.  
@@ -511,7 +512,7 @@ virtual CString GetRoot() const;
 ### <a name="return-value"></a>Valeur de retour  
  La racine de la recherche active.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez appeler [FindNextFile](#findnextfile) au moins une fois avant d’appeler `GetRoot`.  
   
  Cette fonction membre retourne le spécificateur de lecteur et le nom de chemin d’accès utilisé pour lancer une recherche. Par exemple, l’appel [FindFile](#findfile) avec `*.dat` entraîne `GetRoot` retournant une chaîne vide. Transmettre un chemin d’accès, tel que `c:\windows\system\*.dll`à **FindFile** résultats `GetRoot` retour `c:\windows\system\`.  
@@ -529,7 +530,7 @@ BOOL IsArchived() const;
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Applications marquer un fichier d’archive, qui doit être sauvegardé ou supprimé, à FILE_ATTRIBUTE_ARCHIVE, un attribut de fichier identifié dans le [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure.  
   
  Vous devez appeler [FindNextFile](#findnextfile) au moins une fois avant d’appeler `IsArchived`.  
@@ -549,7 +550,7 @@ BOOL IsCompressed() const;
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un fichier compressé est marqué avec FILE_ATTRIBUTE_COMPRESSED, un attribut de fichier identifié dans le [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure. Pour un fichier, cet attribut indique que toutes les données dans le fichier est compressé. Pour un répertoire, cet attribut indique que la compression est la valeur par défaut pour les fichiers nouvellement créés et les sous-répertoires.  
   
  Vous devez appeler [FindNextFile](#findnextfile) au moins une fois avant d’appeler `IsCompressed`.  
@@ -569,7 +570,7 @@ BOOL IsDirectory() const;
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un fichier est un répertoire est marqué avec FILE_ATTRIBUTE_DIRECTORY un attribut de fichier identifié dans le [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure.  
   
  Vous devez appeler [FindNextFile](#findnextfile) au moins une fois avant d’appeler `IsDirectory`.  
@@ -591,7 +592,7 @@ virtual BOOL IsDots() const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le fichier trouvé porte le nom «. « ou ».. », ce qui signifie que le fichier trouvé est un répertoire. Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez appeler [FindNextFile](#findnextfile) au moins une fois avant d’appeler `IsDots`.  
   
 ### <a name="example"></a>Exemple  
@@ -607,7 +608,7 @@ BOOL IsHidden() const;
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les fichiers cachés, qui sont marquées avec FILE_ATTRIBUTE_HIDDEN, un attribut de fichier identifié dans le [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure. Un fichier masqué n’est pas inclus dans une liste de répertoires ordinaires.  
   
  Vous devez appeler [FindNextFile](#findnextfile) au moins une fois avant d’appeler `IsHidden`.  
@@ -627,7 +628,7 @@ BOOL IsNormal() const;
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les fichiers marqués avec FILE_ATTRIBUTE_NORMAL, un attribut de fichier identifié dans le [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure. Un fichier normal n’a aucun autres attributs définis. Tous les autres attributs de fichier remplacent cet attribut.  
   
  Vous devez appeler [FindNextFile](#findnextfile) au moins une fois avant d’appeler `IsNormal`.  
@@ -647,7 +648,7 @@ BOOL IsReadOnly() const;
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un fichier en lecture seule est marqué avec ATTRIBUT_FICHIER_LECTURESEULE, un attribut de fichier identifié dans le [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure. Applications peuvent lire un fichier de ce type, mais ils ne peuvent pas écrire ou supprimer.  
   
  Vous devez appeler [FindNextFile](#findnextfile) au moins une fois avant d’appeler `IsReadOnly`.  
@@ -667,7 +668,7 @@ BOOL IsSystem() const;
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un fichier système est marqué avec FILE_ATTRIBUTE_SYSTEM, un attribut de fichier identifié dans le [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure. Fait partie d’un fichier système, ou est utilisé exclusivement par le système d’exploitation.  
   
  Vous devez appeler [FindNextFile](#findnextfile) au moins une fois avant d’appeler `IsSystem`.  
@@ -687,7 +688,7 @@ BOOL IsTemporary() const;
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un fichier temporaire est marqué avec FILE_ATTRIBUTE_TEMPORARY, un attribut de fichier identifié dans le [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure. Un fichier temporaire est utilisé pour le stockage temporaire. Les applications doivent écrire dans le fichier uniquement en cas de nécessité absolue. La plupart des données du fichier reste en mémoire sans vidés sur le support, car le fichier sera supprimé prochainement.  
   
  Vous devez appeler [FindNextFile](#findnextfile) au moins une fois avant d’appeler `IsTemporary`.  
@@ -704,7 +705,7 @@ BOOL IsTemporary() const;
 CAtlTransactionManager* m_pTM;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="matchesmask"></a>CFileFind::MatchesMask  
  Appelez cette fonction membre pour tester les attributs de fichier sur le fichier trouvé.  
@@ -736,7 +737,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0. Pour obtenir des informations d’erreur plus complètes, appelez la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez appeler [FindNextFile](#findnextfile) au moins une fois avant d’appeler `MatchesMask`.  
   
 ### <a name="example"></a>Exemple  

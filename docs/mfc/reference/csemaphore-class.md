@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0184d013b0a36aeb77bebbba9f6e4ecef47b7f85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 378007ee4ebbb457fb8922d44d063b3bdf05729d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csemaphore-class"></a>CSemaphore (classe)
 Un objet de classe `CSemaphore` représente un « sémaphore », un objet de synchronisation qui permet à un nombre limité de threads dans un ou plusieurs processus pour accéder à un maintien un décompte du nombre de threads qui accèdent actuellement à une ressource spécifiée.  
@@ -41,7 +42,7 @@ class CSemaphore : public CSyncObject
 |----------|-----------------|  
 |[CSemaphore::CSemaphore](#csemaphore)|Construit un objet `CSemaphore`.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Sémaphores nommés sont utiles pour contrôler l’accès à une ressource partagée qui peut prendre uniquement en charge un nombre limité d’utilisateurs. Le nombre actuel de la `CSemaphore` objet est le nombre d’utilisateurs supplémentaires autorisés. Lorsque le décompte atteint zéro, toutes les tentatives d’utiliser la ressource contrôlée par le **CSemaphore** objet sera insérée dans une file d’attente système et ils attendre un délai d’attente ou le nombre se situe au-dessus de 0. Le nombre maximal d’utilisateurs pouvant accéder simultanément à la ressource contrôlée est spécifié pendant la construction de la `CSemaphore` objet.  
   
  Pour utiliser un **CSemaphore** de l’objet, construisez la `CSemaphore` lorsqu’il est nécessaire de l’objet. Spécifiez le nom du sémaphore que vous souhaitez attendre, et il doit initialement propriétaire de votre application. Vous pouvez ensuite accéder le sémaphore lorsque le constructeur est retournée. Appelez [CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock) lorsque vous avez terminé l’accès à la ressource contrôlée.  
@@ -61,7 +62,7 @@ class CSemaphore : public CSyncObject
   
  `CSemaphore`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxmt.h  
   
 ##  <a name="csemaphore"></a>CSemaphore::CSemaphore  
@@ -88,7 +89,7 @@ CSemaphore(
  *lpsaAttributes*  
  Attributs de sécurité pour l’objet de sémaphore. Pour obtenir une description complète de cette structure, consultez [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) dans le Kit de développement logiciel Windows.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Accéder ou de libérer un `CSemaphore` d’objet, de créer un [CMultiLock](../../mfc/reference/cmultilock-class.md) ou [CSingleLock](../../mfc/reference/csinglelock-class.md) objet et appeler ses [verrou](../../mfc/reference/csinglelock-class.md#lock) et [Unlock](../../mfc/reference/csinglelock-class.md#unlock) fonctions membres.  
   
 > [!IMPORTANT]

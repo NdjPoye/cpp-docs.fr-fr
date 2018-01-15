@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 08c3b48ebfc96a93961c6c810312daa6072e8f40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9166f62c51344cc9c620da34d9c6fcee4665f400
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Concepts d'applications isolées et d'assemblys côte à côte
 Une application est considérée comme une [application isolée](http://msdn.microsoft.com/library/aa375190) si tous ses composants sont des [assemblys côte à côte](http://msdn.microsoft.com/library/ff951640). Un assembly côte à côte est une collection de ressources (un groupe de DLL, de classes de fenêtres, de serveurs COM, de bibliothèques de types ou d'interfaces) déployées ensemble et qu'une application peut utiliser au moment de l'exécution. En général, un assembly côte à côte est composé d'une ou de plusieurs DLL.  

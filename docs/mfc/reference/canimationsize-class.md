@@ -37,11 +37,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9d44533dd17a64bb25eb9c482cdf767b2a13a37e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2acbdad3ec5b08ef5d83b3a6cfdb2eadd3c0e17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationsize-class"></a>CAnimationSize, classe
 Implémente les fonctionnalités d'un objet taille dont les dimensions peuvent être animées.  
@@ -86,12 +87,12 @@ class CAnimationSize : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CAnimationSize::m_cxValue](#m_cxvalue)|La variable d’animation encapsulée qui représente la largeur de la taille de l’animation.|  
 |[CAnimationSize::m_cyValue](#m_cyvalue)|La variable d’animation encapsulée qui représente la hauteur de la taille de l’animation.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La classe CAnimationSize encapsule deux objets CAnimationVariable et peut représenter dans les applications une taille. Par exemple, vous pouvez utiliser cette classe pour animer une taille de n’importe quel objet bidimensionnel sur l’écran (comme un rectangle, contrôler etc.). Pour utiliser cette classe dans l’application, uniquement instancier un objet de cette classe, ajoutez-le au contrôleur de l’animation à l’aide de CAnimationController::AddAnimationObject et appeler AddTransition pour chaque transition à appliquer à la largeur ou hauteur.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -101,7 +102,7 @@ class CAnimationSize : public CAnimationBaseObject;
   
  `CAnimationSize` 
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="addtransition"></a>CAnimationSize::AddTransition  
@@ -120,7 +121,7 @@ void AddTransition(
  `pCYTransition`  
  Pointeur vers la transition pour la hauteur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction pour ajouter les transitions spécifiées à la liste interne des transitions à appliquer aux variables d’animation pour la largeur et la hauteur. Lorsque vous ajoutez des transitions, elles ne sont pas appliquées immédiatement et stockées dans une liste interne. Transitions sont appliquées (ajoutée à une table de montage séquentiel pour une valeur particulière) lorsque vous appelez CAnimationController::AnimateGroup. Si vous n’avez pas besoin d’appliquer une transition à une des dimensions, vous pouvez passer NULL.  
   
 ##  <a name="canimationsize"></a>CAnimationSize::CAnimationSize  
@@ -150,7 +151,7 @@ CAnimationSize(
  `dwUserData`  
  Spécifie les données définies par l’utilisateur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’objet est construit avec les valeurs par défaut pour la largeur, hauteur, ID d’objet et ID de groupe, qui sera défini à 0. Ils peuvent être modifiés ultérieurement lors de l’exécution avec SetDefaultValue et SetID.  
   
 ##  <a name="getanimationvariablelist"></a>CAnimationSize::GetAnimationVariableList  
@@ -176,7 +177,7 @@ CAnimationVariable& GetCX();
 ### <a name="return-value"></a>Valeur de retour  
  Référence à CAnimationVariable encapsulée qui représente la largeur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous pouvez appeler cette méthode pour obtenir un accès direct à l’objet CAnimationVariable sous-jacent représentant la largeur.  
   
 ##  <a name="getcy"></a>CAnimationSize::GetCY  
@@ -189,7 +190,7 @@ CAnimationVariable& GetCY();
 ### <a name="return-value"></a>Valeur de retour  
  Référence à CAnimationVariable encapsulée qui représente la hauteur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous pouvez appeler cette méthode pour obtenir un accès direct à l’objet CAnimationVariable sous-jacent représentant la hauteur.  
   
 ##  <a name="getdefaultvalue"></a>CAnimationSize::GetDefaultValue  
@@ -202,7 +203,7 @@ CSize GetDefaultValue();
 ### <a name="return-value"></a>Valeur de retour  
  Un objet CSize contenant les valeurs par défaut.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction pour récupérer la valeur par défaut, ce qui a été définie précédemment par le constructeur ou SetDefaultValue.  
   
 ##  <a name="getvalue"></a>CAnimationSize::GetValue  
@@ -219,7 +220,7 @@ BOOL GetValue(CSize& szValue);
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la valeur actuelle a été correctement récupérée ; Sinon, FALSE.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction pour extraire la valeur actuelle de la taille de l’animation. Si cette méthode échoue ou des objets COM sous-jacents pour la largeur et la taille n’ont pas été initialisés, szValue contient la valeur par défaut, ce qui a été définie précédemment dans le constructeur ou SetDefaultValue.  
   
 ##  <a name="m_cxvalue"></a>CAnimationSize::m_cxValue  
@@ -246,7 +247,7 @@ operator CSize();
 ### <a name="return-value"></a>Valeur de retour  
  Valeur actuelle de la taille de l’animation CSize.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction a appelle GetValue en interne. Si GetValue échoue pour une raison quelconque, la taille retournée contient les valeurs par défaut pour la largeur et la hauteur.  
   
 ##  <a name="operator_eq"></a>CAnimationSize::operator =  
@@ -260,7 +261,7 @@ void operator=(const CSize& szSrc);
  `szSrc`  
  Fait référence à CSize ou SIZE.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Assigne szSrc à CAnimationSize. Il est recommandé du pour faire avant le démarrage de l’animation, parce que cet opérateur appelle SetDefaultValue qui recrée les objets COM sous-jacents pour la largeur et la hauteur si elles ont été créées. Si vous êtes inscrit cet objet d’animation aux événements (ValueChanged ou IntegerValueChanged), vous devez réactiver ces événements.  
   
 ##  <a name="setdefaultvalue"></a>CAnimationSize::SetDefaultValue  
@@ -274,7 +275,7 @@ void SetDefaultValue(const CSize& szDefault);
  `szDefault`  
  Spécifie la nouvelle taille par défaut.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette fonction pour définir une valeur par défaut pour l’objet d’animation. Ces méthodes assignent des valeurs par défaut pour la largeur et la hauteur de la taille de l’animation. Il recrée également les objets COM sous-jacents s’ils ont été créés. Si vous êtes inscrit cet objet d’animation aux événements (ValueChanged ou IntegerValueChanged), vous devez réactiver ces événements.  
   
 ## <a name="see-also"></a>Voir aussi  

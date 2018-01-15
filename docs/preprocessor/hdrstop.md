@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: be26e2139ab0cf0e31e63331a8e87df8769fe715
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf1bd1d80f692695c1cbf4ad535d2c5e759e4ea5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hdrstop"></a>hdrstop
 Vous permet de mieux contrôler les noms des fichiers de précompilation et l'emplacement auquel l'état de compilation est enregistré.  
@@ -35,7 +36,7 @@ Vous permet de mieux contrôler les noms des fichiers de précompilation et l'em
 #pragma hdrstop [( "filename" )]    
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le *nom de fichier* est le nom du fichier d’en-tête précompilé à utiliser ou créer (selon que [/Yu](../build/reference/yu-use-precompiled-header-file.md) ou [/Yc](../build/reference/yc-create-precompiled-header-file.md) est spécifié). Si *nom de fichier* ne contient pas une spécification de chemin d’accès, le fichier d’en-tête précompilé est censé pour se trouver dans le même répertoire que le fichier source.  
   
  Si un fichier C ou C++ contient une **hdrstop** pragma lors de la compilation avec/Yc, le compilateur enregistre l’état de la compilation jusqu'à l’emplacement du pragma. L'état compilé de tout code qui suit le pragma n'est pas enregistré.  

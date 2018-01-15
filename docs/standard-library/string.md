@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed07a18729996097afd588bf084a18593a3946d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14442f2de89c055b35614951a277366616e00250
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 Définit la classe de modèle de conteneur `basic_string` et divers modèles de prise en charge.  
@@ -41,7 +42,7 @@ Définit la classe de modèle de conteneur `basic_string` et divers modèles de 
   
 -   objets de classe de modèle, de type `basic_string`, qui gèrent tous les arguments de modèle de type `char`.  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -101,7 +102,7 @@ Définit la classe de modèle de conteneur `basic_string` et divers modèles de 
 |[char_traits<char16_t>, struct](../standard-library/char-traits-char16-t-struct.md)|Struct qui est une spécialisation du struct de modèle `char_traits`\<CharType> d’un élément de type `char16_t`.|  
 |[char_traits<char32_t>, struct](../standard-library/char-traits-char32-t-struct.md)|Struct qui est une spécialisation du struct de modèle `char_traits`\<CharType> d’un élément de type `char32_t`.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 - **En-tête :** \<string>  
   

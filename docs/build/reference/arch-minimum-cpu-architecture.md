@@ -20,18 +20,19 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0677ca5b2eaf10b753f129078c96aacc11326eff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25aa27e65c6cd9b7a928ac7d6ba65b079b3b811f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arch-minimum-cpu-architecture"></a>/arch (Architecture d'UC minimale)
 Les options de l’architecture spécifient l’architecture pour la génération de code. Sélectionnez l’architecture matérielle de base que vous travaillez pour voir/arch des options pour cette plateforme cible.  
   
--   [/ arch (x86)](../../build/reference/arch-x86.md)  
+-   [/arch (x86)](../../build/reference/arch-x86.md)  
   
--   [/ arch (x64)](../../build/reference/arch-x64.md)  
+-   [/arch (x64)](../../build/reference/arch-x64.md)  
   
 -   [/arch (ARM)](../../build/reference/arch-arm.md)  
   

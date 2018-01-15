@@ -1,34 +1,36 @@
 ---
-title: "SafeIntException::SafeIntException | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeIntException"
-  - "SafeIntException.SafeIntException"
-  - "SafeIntException::SafeIntException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeIntException, constructeur"
+title: SafeIntException::SafeIntException | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- SafeIntException
+- SafeIntException.SafeIntException
+- SafeIntException::SafeIntException
+dev_langs: C++
+helpviewer_keywords: SafeIntException, constructor
 ms.assetid: 8e5a0c24-a56b-4c80-9ee8-876604b1e7dc
-caps.latest.revision: 6
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 85bf6bae5ba07154bdeb807171dd2d3df61d0774
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# SafeIntException::SafeIntException
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="safeintexceptionsafeintexception"></a>SafeIntException::SafeIntException
 Crée un objet `SafeIntException`.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 SafeIntException();  
@@ -38,12 +40,12 @@ SafeIntException(
 );  
 ```  
   
-#### Paramètres  
- \[in\] `code`  
- An enumerated data value that describes the error that occurred.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `code`  
+ Une valeur de données énuméré qui décrit l’erreur qui s’est produite.  
   
-## Notes  
- The possible values for `code` are defined in the file Safeint.h.  For convenience, the possible values are also listed here.  
+## <a name="remarks"></a>Notes  
+ Les valeurs possibles pour `code` sont définis dans le fichier Safeint.h. Pour plus de commodité, les valeurs possibles sont également répertoriés ici.  
   
 -   `SafeIntNoError`  
   
@@ -51,12 +53,12 @@ SafeIntException(
   
 -   `SafeIntDivideByZero`  
   
-## Configuration requise  
- **Header:** safeint.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** safeint.h  
   
- **Namespace:** msl::utilities  
+ **Namespace :** msl::utilities  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Bibliothèque SafeInt](../windows/safeint-library.md)   
  [SafeIntException, classe](../windows/safeintexception-class.md)   
  [SafeInt, classe](../windows/safeint-class.md)

@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d60eb8f3fbb782deadc89a3d9c3e3c44974d849c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c1439fcf15a9359d3a548945edc76c1ddcf8675f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-global-functions"></a>Fonctions de sécurité Global
 Ces fonctions prennent en charge la modification des objets de SID et la liste ACL.  
@@ -51,7 +52,7 @@ Ces fonctions prennent en charge la modification des objets de SID et la liste A
 |[AtlSetSacl](#atlsetsacl)|Appelez cette fonction pour définir les informations relatives à la liste de contrôle d'accès système (SACL) d'un objet spécifique.|  
 |[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|Appelez cette fonction pour récupérer le descripteur de sécurité d'un objet donné.|  
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h 
 
 ##  <a name="atlgetdacl"></a>AtlGetDacl  
@@ -80,7 +81,7 @@ inline bool AtlGetDacl(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans les versions debug, une erreur d’assertion se produit si le paramètre `hObject` ou `pDacl` n’est pas valide.  
   
 ##  <a name="atlsetdacl"></a>AtlSetDacl  
@@ -113,9 +114,9 @@ inline bool AtlSetDacl(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans les versions debug, une erreur d’assertion se produit si `hObject` n’est pas valide, ou si `dwInheritanceFlowControl` n’est pas une des trois valeurs autorisées.  
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h 
 
 ##  <a name="atlgetgroupsid"></a>AtlGetGroupSid  
@@ -144,7 +145,7 @@ inline bool AtlGetGroupSid(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h 
 
 ##  <a name="atlsetgroupsid"></a>AtlSetGroupSid  
@@ -173,7 +174,7 @@ inline bool AtlSetGroupSid(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h 
 
 ##  <a name="atlgetownersid"></a>AtlGetOwnerSid  
@@ -202,7 +203,7 @@ inline bool AtlGetOwnerSid(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h 
 
 ##  <a name="atlsetownersid"></a>AtlSetOwnerSid  
@@ -231,7 +232,7 @@ inline bool AtlSetOwnerSid(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h 
 
 ##  <a name="atlgetsacl"></a>AtlGetSacl  
@@ -264,10 +265,10 @@ inline bool AtlGetSacl(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si `AtlGetSacl` doit être appelée plusieurs fois sur de nombreux objets différents, il sera plus efficace pour activer le privilège SE_SECURITY_NAME qu’une seule fois avant d’appeler la fonction, avec `bRequestNeededPrivileges` défini sur false.  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h 
 
 ##  <a name="atlsetsacl"></a>AtlSetSacl  
@@ -304,12 +305,12 @@ inline bool AtlSetSacl(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans les versions debug, une erreur d’assertion se produit si `hObject` n’est pas valide, ou si `dwInheritanceFlowControl` n’est pas une des trois valeurs autorisées.  
   
  Si `AtlSetSacl` doit être appelée plusieurs fois sur de nombreux objets différents, il sera plus efficace pour activer le privilège SE_SECURITY_NAME qu’une seule fois avant d’appeler la fonction, avec `bRequestNeededPrivileges` défini sur false.  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h 
 
 ##  <a name="atlgetsecuritydescriptor"></a>AtlGetSecurityDescriptor  
@@ -348,10 +349,10 @@ inline bool AtlGetSecurityDescriptor(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si `AtlGetSecurityDescriptor` doit être appelée plusieurs fois sur de nombreux objets différents, il sera plus efficace pour activer le privilège SE_SECURITY_NAME qu’une seule fois avant d’appeler la fonction, avec `bRequestNeededPrivileges` défini sur false.  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h 
    
 ## <a name="see-also"></a>Voir aussi  

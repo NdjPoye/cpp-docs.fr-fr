@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -26,8 +25,7 @@ f1_keywords:
 - AFXWIN/CMFCPreviewCtrlImpl::m_clrTextColor
 - AFXWIN/CMFCPreviewCtrlImpl::m_font
 - AFXWIN/CMFCPreviewCtrlImpl::m_pDocument
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], CMFCPreviewCtrlImpl
 - CMFCPreviewCtrlImpl [MFC], Create
@@ -45,16 +43,16 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8def8a8085bebdd09ce58cb6d9abd026fe713fe8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: df96faf5d4df30024e93ed701b956984399a8c3e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl, classe
 Cette classe implémente une fenêtre qui est placée dans une fenêtre hôte fournie par l’interpréteur de commandes pour l’aperçu riche.  
@@ -96,14 +94,14 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|Couleur d’arrière-plan de la fenêtre d’aperçu.|  
 |[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|Couleur du texte de la fenêtre d’aperçu.|  
 |[CMFCPreviewCtrlImpl::m_font](#m_font)|Police utilisée pour afficher le texte dans la fenêtre d’aperçu.|  
 |[CMFCPreviewCtrlImpl::m_pDocument](#m_pdocument)|Pointeur vers un document dont le contenu est affiché dans le contrôle.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h    
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -309,7 +307,7 @@ virtual void SetRect(
  `bRedraw`  
  Spécifie si le contrôle doit être redessiné.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Généralement, un rectangle englobant est défini lorsque le contrôle hôte est redimensionné.  
 
 ## <a name="dtor"></a>CMFCPreviewCtrlImpl :: ~ CMFCPreviewCtrlImpl  
@@ -321,4 +319,3 @@ Destruction d’un objet de contrôle de version préliminaire.
 virtual ~CMFCPreviewCtrlImpl();  
 ```  
   
-

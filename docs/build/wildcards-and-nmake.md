@@ -1,29 +1,30 @@
 ---
-title: "NMAKE et les caract&#232;res g&#233;n&#233;riques | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "programme NMAKE, caractères génériques"
-  - "caractères génériques, développer"
+title: "NMAKE et les caractères génériques | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- NMAKE program, wildcards
+- wildcards, expanding
 ms.assetid: 8f5d4b2a-8fa7-46a9-92ac-c8185c99239b
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a1f27d82eb2b9d92b130b4b062379e0ea2ea844a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# NMAKE et les caract&#232;res g&#233;n&#233;riques
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-NMAKE développe des caractères génériques de nom de fichier \(\* et ?\) dans des lignes de dépendance.  Le caractère générique défini dans une commande est passé à la commande ; NMAKE ne le développe pas.  
+# <a name="wildcards-and-nmake"></a>NMAKE et les caractères génériques
+NMAKE développe des caractères génériques de nom de fichier (* et ?) dans les lignes de dépendance. Un caractère générique spécifié dans une commande est passé à la commande. NMAKE ne s’étend pas.  
   
-## Voir aussi  
- [Contenu d'un makefile](../build/contents-of-a-makefile.md)
+## <a name="see-also"></a>Voir aussi  
+ [Contenu d’un makefile](../build/contents-of-a-makefile.md)

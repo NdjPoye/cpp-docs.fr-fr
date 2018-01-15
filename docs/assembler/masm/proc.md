@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2567099c26682bd7d448175b1283aeab56054516
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4b8b5259e3a7e42e7eb08cb4832496a6f3c35c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="proc"></a>PROC
 Marque le début et fin d’un bloc de procédure appelé *étiquette*. Les instructions dans le bloc peuvent être appelées avec le **appeler** instruction ou [INVOKE](../../assembler/masm/invoke.md) directive.  
@@ -35,7 +36,7 @@ statements
 label ENDP  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  [Image [ :*ehandler adresse*]] est uniquement valide avec ml64.exe et génère MASM générer une entrée de table de fonction dans .pdata et .xdata des informations de déroulement pour une fonction de structuré comportement de déroulement de la gestion des exceptions.  
   
  Lorsque le **FRAME** attribut est utilisé, il doit être suivi par un [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) la directive.  

@@ -33,11 +33,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46aa51c97ec58d5e083b2cad7b622e3b75a04749
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 411d89c7796ea9ab48c013d4efd53aedd9225aba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmemfile-class"></a>Classe CMemFile
 Le [CFile](../../mfc/reference/cfile-class.md)-classe dérivée qui prend en charge les fichiers de mémoire.  
@@ -73,7 +74,7 @@ class CMemFile : public CFile
 |[CMemFile::Memcpy](#memcpy)|Substituer pour modifier le comportement de copie de mémoire lors de la lecture et écriture de fichiers.|  
 |[CMemFile::Realloc](#realloc)|Remplacement pour modifier le comportement des opérations de réallocation de mémoire.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Ces fichiers de mémoire se comportent comme les fichiers de disque, sauf que le fichier est stocké dans la mémoire RAM, plutôt que sur le disque. Un fichier de mémoire est utile pour le stockage temporaire rapide ou le transfert d’octets bruts ou objets sérialisés entre des processus indépendants.  
   
  `CMemFile`objets peuvent allouer automatiquement leur propre mémoire, ou vous pouvez attacher votre propre bloc de mémoire à la `CMemFile` objet en appelant [attacher](#attach). Dans les deux cas, la mémoire pour la croissance d’automatiquement le fichier de mémoire est allouée dans `nGrowBytes`-taille par incréments si `nGrowBytes` n’est pas zéro.  
@@ -97,7 +98,7 @@ class CMemFile : public CFile
   
  `CMemFile`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h  
   
 ##  <a name="alloc"></a>CMemFile::Alloc  
@@ -114,7 +115,7 @@ virtual BYTE* Alloc(SIZE_T nBytes);
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le bloc de mémoire qui a été alloué, ou **NULL** si l’allocation a échoué.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Remplacez cette fonction pour implémenter l’allocation de mémoire personnalisée. Si vous remplacez cette fonction, vous souhaiterez probablement substituer [libre](#free) et [Realloc](#realloc) également.  
   
  L’implémentation par défaut utilise la fonction de la bibliothèque Runtime [malloc](../../c-runtime-library/reference/malloc.md) pour allouer de la mémoire.  
@@ -139,7 +140,7 @@ void Attach(
  `nGrowBytes`  
  L’incrément de l’allocation de mémoire en octets.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cela entraîne `CMemFile` à utiliser le bloc de mémoire que le fichier de mémoire.  
   
  Si `nGrowBytes` est 0, `CMemFile` provoquera la longueur du fichier `nBufferSize`. Cela signifie que les données dans le bloc de mémoire avant qu’il a été attaché à `CMemFile` sera utilisé comme le fichier. Mémoire créé de cette manière ne peut pas être augmenté.  
@@ -171,7 +172,7 @@ CMemFile(
  `nBufferSize`  
  Entier qui spécifie la taille de la mémoire tampon de fichier, en octets.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Notez que le fichier est ouvert par le constructeur, et que vous ne devez pas appeler [CFile::Open](../../mfc/reference/cfile-class.md#open).  
   
  La deuxième surcharge comporte comme si vous utilisé le premier constructeur et immédiatement appelé [attacher](#attach) avec les mêmes paramètres. Consultez **attacher** pour plus d’informations.  
@@ -189,7 +190,7 @@ BYTE* Detach();
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers le bloc de mémoire qui contient le contenu du fichier en mémoire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appel de cette fonction se ferme également la `CMemFile`. Vous pouvez rattacher le bloc de mémoire `CMemFile` en appelant [attacher](#attach). Si vous souhaitez rattacher le fichier et d’utiliser les données qu’elle contient, vous devez appeler [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) pour obtenir la longueur du fichier avant d’appeler **détachement**. Notez que si vous attachez un bloc de mémoire `CMemFile` afin que vous puissiez utiliser ses données ( `nGrowBytes` == 0), puis vous ne pourrez pas la croissance du fichier de mémoire.  
   
 ##  <a name="free"></a>CMemFile::Free  
@@ -203,7 +204,7 @@ virtual void Free(BYTE* lpMem);
  `lpMem`  
  Pointeur vers la mémoire à libérer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Remplacez cette fonction pour implémenter la désallocation de mémoire personnalisée. Si vous remplacez cette fonction, vous souhaiterez probablement substituer [Alloc](#alloc) et [Realloc](#realloc) également.  
   
 ##  <a name="growfile"></a>CMemFile::GrowFile  
@@ -217,7 +218,7 @@ virtual void GrowFile(SIZE_T dwNewLen);
  `dwNewLen`  
  Nouvelle taille du fichier en mémoire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous pouvez le remplacer si vous souhaitez modifier comment `CMemFile` augmente son fichier. L’implémentation par défaut appelle [Realloc](#realloc) atteindre un bloc existant (ou [Alloc](#alloc) pour créer un bloc de mémoire), allocation de mémoire par multiples de la `nGrowBytes` valeur spécifiée dans le constructeur ou [Attacher](#attach) appeler.  
   
 ##  <a name="memcpy"></a>CMemFile::Memcpy  
@@ -243,7 +244,7 @@ virtual BYTE* Memcpy(
 ### <a name="return-value"></a>Valeur de retour  
  Copie de l'objet `lpMemTarget`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Remplacez cette fonction si vous souhaitez modifier la façon dont qui `CMemFile` est ces copies de la mémoire.  
   
 ##  <a name="realloc"></a>CMemFile::Realloc  
@@ -265,7 +266,7 @@ virtual BYTE* Realloc(
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le bloc de mémoire réalloué (et éventuellement déplacé), ou **NULL** en cas d’échec de la réallocation.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Remplacez cette fonction pour implémenter les opérations de réallocation mémoire personnalisé. Si vous remplacez cette fonction, vous souhaiterez probablement substituer [Alloc](#alloc) et [libre](#free) également.  
   
 ## <a name="see-also"></a>Voir aussi  

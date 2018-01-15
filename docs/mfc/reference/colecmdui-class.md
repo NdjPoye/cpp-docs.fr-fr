@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 17eb8bd65277c5aa97996261fabc74dc668dc10e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9d26ce9e674168f3d3d1c67dc48bb16b1a87169
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colecmdui-class"></a>Classe de COleCmdUI
 Implémente une méthode pour que MFC mette à jour l'état des objets d'interface utilisateur associés aux fonctionnalités pilotées par `IOleCommandTarget`de votre application.  
@@ -56,7 +57,7 @@ class COleCmdUI : public CCmdUI
 |[COleCmdUI::SetCheck](#setcheck)|Définit l’état d’un bouton bascule activé/désactivé commande.|  
 |[COleCmdUI::SetText](#settext)|Retourne une chaîne de texte Nom ou l’état d’une commande.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Dans une application qui n’est pas activée pour DocObjects, lorsque l’utilisateur affiche un menu dans l’application, le processus MFC **UPDATE_COMMAND_UI** notifications en vertu. La fonction de chaque notification un [CCmdUI](../../mfc/reference/ccmdui-class.md) objet qui peut être manipulé pour refléter l’état d’une commande particulière. Toutefois, lorsque votre application est activée pour DocObjects, MFC traite **UPDATE_OLE_COMMAND_UI** notifications et lui affecte `COleCmdUI` objets.  
   
  `COleCmdUI`autorise DocObject à recevoir des commandes qui proviennent de l’interface d’utilisateur de son conteneur (par exemple, le fichier-nouveau, ouvrir, imprimer et ainsi de suite), et permet à un conteneur de recevoir des commandes qui proviennent de l’interface utilisateur de la DocObject. Bien que `IDispatch` peut être utilisé pour distribuer les mêmes commandes `IOleCommandTarget` offre un moyen plus simple pour interroger et exécuter, car il s’appuie sur un ensemble standard de commandes, généralement sans arguments, et qu’aucune information de type n’est impliquée. `COleCmdUI`peut être utilisé pour activer, de mettre à jour et de définir d’autres propriétés de commandes d’interface utilisateur de DocObject. Lorsque vous souhaitez appeler la commande, appelez [COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd).  
@@ -68,7 +69,7 @@ class COleCmdUI : public CCmdUI
   
  `COleCmdUI`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdocobj.h  
   
 ##  <a name="colecmdui"></a>COleCmdUI::COleCmdUI  
@@ -91,7 +92,7 @@ COleCmdUI(
  `pGroup`  
  Pointeur vers un GUID qui identifie un ensemble de commandes.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `COleCmdUI` objet fournit une interface de programmation pour la mise à jour des objets d’interface utilisateur DocObject tels que les éléments de menu ou des boutons de barre de contrôle. Les objets d’interface utilisateur peuvent être activés, désactivés, vérifiées et/ou désactivées via la `COleCmdUI` objet.  
   
 ##  <a name="enable"></a>COleCmdUI::Enable  
@@ -116,7 +117,7 @@ virtual void SetCheck(int nCheck);
  `nCheck`  
  Une valeur qui détermine l’état à définir un bouton bascule activé/désactivé commande. Les valeurs possibles sont :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Définit la commande à on.|  
 |**2**|Définit la commande à indéterminé ; l’état ne peut pas être déterminé, car l’attribut de cette commande est à la fois et désactiver les États dans la sélection appropriée.|  

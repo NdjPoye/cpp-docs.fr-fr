@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,23 +13,22 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CConstantTransition::CConstantTransition
 - AFXANIMATIONCONTROLLER/CConstantTransition::Create
 - AFXANIMATIONCONTROLLER/CConstantTransition::m_duration
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CConstantTransition [MFC], CConstantTransition
 - CConstantTransition [MFC], Create
 - CConstantTransition [MFC], m_duration
 ms.assetid: f6fa4780-a71b-4cd6-80aa-d4792ace36c2
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: eafd1276b8d4476f5021b3d83a84a1884d78870d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: ebf6536421814ba9e08e497b1c29eed7e17ede06
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cconstanttransition-class"></a>CConstantTransition, classe
 Encapsule une transition constante.  
@@ -61,7 +59,7 @@ class CConstantTransition : public CBaseTransition;
 |----------|-----------------|  
 |[CConstantTransition::m_duration](#m_duration)|La durée de la transition.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pendant une transition constante, la valeur d’une variable d’animation conserve la valeur initiale pendant la durée de la transition. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l’aide de nouvel opérateur. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup, jusqu'à ce que puis sa valeur est NULL. La modification de variables membres après que la création de cet objet COM n’a aucun effet.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -71,7 +69,7 @@ class CConstantTransition : public CBaseTransition;
   
  `CConstantTransition`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="cconstanttransition"></a>CConstantTransition::CConstantTransition  
@@ -110,4 +108,3 @@ UI_ANIMATION_SECONDS m_duration;
   
 ## <a name="see-also"></a>Voir aussi  
  [Classes](../../mfc/reference/mfc-classes.md)
-

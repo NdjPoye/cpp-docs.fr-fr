@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3eb7d6c18e1a1fd77e0c0c8506d46536add5cb21
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9956e48f88988dfec7e04cda5bba95e514ec109
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets : utilisation de sockets avec des archives
 Cet article décrit le [modèle de programmation CSocket](#_core_the_csocket_programming_model). Classe [CSocket](../mfc/reference/csocket-class.md) fournit la prise en charge de socket à un niveau supérieur d’abstraction de la classe [CAsyncSocket](../mfc/reference/casyncsocket-class.md). `CSocket`utilise une version de protocole de sérialisation MFC pour passer des données vers et à partir d’un objet socket via un MFC [CArchive](../mfc/reference/carchive-class.md) objet. `CSocket` fournit un blocage (lors de la gestion du traitement en arrière-plan des messages Windows) et vous donne accès à `CArchive`, qui gère de nombreux aspects de la communication que vous devriez faire en utilisant l'API brute ou la classe `CAsyncSocket`.  
@@ -54,7 +55,7 @@ Cet article décrit le [modèle de programmation CSocket](#_core_the_csocket_pro
   
 3.  Si le socket est un client, appelez [CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect) pour se connecter de l’objet socket à un socket de serveur.  
   
-     ou  
+     - ou -  
   
      Si le socket est un serveur, appelez [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen) pour commencer à écouter les tentatives de connexion à partir d’un client. Lorsqu’il reçoit une demande de connexion, acceptez-la en appelant [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).  
   

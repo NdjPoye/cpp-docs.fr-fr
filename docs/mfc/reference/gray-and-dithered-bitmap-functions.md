@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 372fd343bbca8bfac4ec31a34b3920cf29d35957
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7f895fb22e4f4d2649cdec1e4c9925b69b013e49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>fonctions d'image bitmap tramée et grise
 **Fonctions d’image bitmap grise**  
@@ -76,7 +77,7 @@ void AFXAPI AfxDrawGrayBitmap(
  `crBackground`  
  Nouvelle couleur d’arrière-plan (généralement grise, comme COLOR_MENU).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une image bitmap dessinée avec `AfxDrawGrayBitmap` a l’apparence d’un contrôle désactivé.  
   
  ![Comparaison des versions d’icônes grises et d’origine](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
@@ -84,7 +85,7 @@ void AFXAPI AfxDrawGrayBitmap(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#191](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
 
 ##  <a name="afxgetgraybitmap"></a>  AfxGetGrayBitmap  
@@ -107,7 +108,7 @@ void AFXAPI AfxGetGrayBitmap(
  `crBackground`  
  Nouvelle couleur d’arrière-plan (généralement grise, comme COLOR_MENU).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une image bitmap copiée avec `AfxGetGrayBitmap` a l’apparence d’un contrôle désactivé.  
   
  ![Comparaison des versions d’icônes grises et d’origine](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
@@ -115,7 +116,7 @@ void AFXAPI AfxGetGrayBitmap(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#193](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="afxdrawditheredbitmap"></a>  AfxDrawDitheredBitmap  
@@ -150,7 +151,7 @@ void AFXAPI AfxDrawDitheredBitmap(
  `cr2`  
  Autres tramage couleur, généralement gris clair (COLOR_MENU).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le bitmap source est dessiné sur le contrôleur de domaine de destination avec deux couleurs ( `cr1` et `cr2`) Damier remplacer l’arrière-plan de l’image bitmap. L’arrière-plan de l’image bitmap source est défini comme son blanc et tous les pixels correspondant à la couleur du pixel dans le coin supérieur gauche de l’image bitmap.  
   
  ![Comparaison des versions d’icônes dégradées et d’origine](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
@@ -158,7 +159,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#190](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
 
 
@@ -186,7 +187,7 @@ void AFXAPI AfxGetDitheredBitmap(
  `cr2`  
  Autres tramage couleur, généralement gris clair (COLOR_MENU).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le bitmap source est copié vers le bitmap de destination avec deux couleurs ( `cr1` et `cr2`) Damier remplaçant arrière-plan de l’image du bitmap source. L’arrière-plan de l’image bitmap source est défini comme son blanc et tous les pixels correspondant à la couleur du pixel dans le coin supérieur gauche de l’image bitmap.  
   
  ![Comparaison des versions d’icônes dégradées et d’origine](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
@@ -194,7 +195,7 @@ void AFXAPI AfxGetDitheredBitmap(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#192](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ## <a name="see-also"></a>Voir aussi  

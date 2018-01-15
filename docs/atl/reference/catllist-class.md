@@ -47,11 +47,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 80f8f66787d2268c6543f8f7a66ca7d13ae167ff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 13d26ba7107e21e64ad65ec53264b4f3740fd13a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catllist-class"></a>Classe de CAtlList
 Cette classe fournit des méthodes pour créer et gérer un objet de liste.  
@@ -118,14 +119,14 @@ class CAtlList
 |[CAtlList::SetAt](#setat)|Appelez cette méthode pour définir la valeur de l’élément à une position donnée dans la liste.|  
 |[CAtlList::SwapElements](#swapelements)|Appelez cette méthode pour remplacer les éléments de la liste.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La `CAtlList` classe prend en charge les listes ordonnées d’objets non uniques accessibles séquentiellement ou par valeur. `CAtlList`listes se comportent comme une liste doublement liée. Chaque liste a un début et une fin, et les nouveaux éléments (ou les listes dans certains cas) peuvent être ajoutés à chaque extrémité de la liste, ou insérer avant ou après des éléments spécifiques.  
   
  La plupart de la `CAtlList` méthodes utilisent une valeur de position. Cette valeur est utilisée par les méthodes pour faire référence à l’emplacement mémoire réel où les éléments sont stockés et ne doivent pas être calculées ou prédit directement. S’il est nécessaire pour accéder à la  *n* élément th dans la liste, la méthode [CAtlList::FindIndex](#findindex) retournera la valeur correspondante de la position d’un index donné. Les méthodes [CAtlList::GetNext](#getnext) et [CAtlList::GetPrev](#getprev) peut être utilisé pour effectuer une itération au sein des objets de la liste.  
   
  Pour plus d’informations sur les classes de collection disponibles avec ATL, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcoll.h  
   
 ##  <a name="addhead"></a>CAtlList::AddHead  
@@ -143,7 +144,7 @@ POSITION AddHead(INARGTYPE element);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la position de l’élément qui vient d’être ajouté.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si la première version est utilisée, un élément vide est créé à l’aide de son constructeur par défaut, plutôt que son constructeur de copie.  
   
 ### <a name="example"></a>Exemple  
@@ -160,7 +161,7 @@ void AddHeadList(const CAtlList<E, ETraits>* plNew);
  `plNew`  
  La liste à ajouter.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La liste désignée par `plNew` est inséré au début de la liste existante. Dans les versions debug, un échec d’assertion se produit si `plNew` est égal à NULL.  
   
 ### <a name="example"></a>Exemple  
@@ -181,7 +182,7 @@ POSITION AddTail(INARGTYPE element);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la POSITION de l’élément qui vient d’être ajouté.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si la première version est utilisée, un élément vide est créé à l’aide de son constructeur par défaut, plutôt que son constructeur de copie. L’élément est ajouté à la fin de la liste, et par conséquent, il devient alors la fin. Cette méthode peut être utilisée avec une liste vide.  
   
 ### <a name="example"></a>Exemple  
@@ -198,7 +199,7 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
  `plNew`  
  La liste à ajouter.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La liste désignée par `plNew` est inséré après le dernier élément (le cas échéant) de l’objet de liste. Le dernier élément dans le `plNew` liste devient donc la fin. Dans les versions debug, un échec d’assertion se produit si *plNew* est égal à NULL.  
   
 ### <a name="example"></a>Exemple  
@@ -211,7 +212,7 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 void AssertValid() const;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans les versions debug, un échec d’assertion se produit si l’objet de liste n’est pas valide. Pour être valide, une liste vide doit avoir à la fois les emplacements qui pointe sur la valeur NULL, et une liste qui n’est pas vide doit avoir à la fois les emplacements pointant vers des adresses valides.  
   
 ### <a name="example"></a>Exemple  
@@ -228,7 +229,7 @@ CAtlList(UINT nBlockSize = 10) throw();
  `nBlockSize`  
  La taille du bloc.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le constructeur de la `CAtlList` objet. La taille de bloc est une mesure de la quantité de mémoire allouée lorsqu’un nouvel élément est requis. Tailles de bloc supérieures réduisent les appels aux routines d’allocation de mémoire, mais utilisent davantage de ressources.  
   
 ### <a name="example"></a>Exemple  
@@ -241,7 +242,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 ~CAtlList() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère toutes les ressources attribuées, y compris un appel à [CAtlList::RemoveAll](#removeall) pour supprimer tous les éléments de la liste.  
   
  Dans les versions debug, un échec d’assertion se produit si la liste contient toujours des éléments après l’appel à `RemoveAll`.  
@@ -263,7 +264,7 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur POSITION de l’élément s’il existe, sinon retourne NULL.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans les versions debug, un échec d’assertion se produit si l’objet de liste n’est pas valide, ou si le `posStartAfter` est hors limites.  
   
 ### <a name="example"></a>Exemple  
@@ -283,7 +284,7 @@ POSITION FindIndex(size_t iElement) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de la POSITION correspondante, ou NULL si `iElement` est hors limites.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode retourne la POSITION correspondant à une valeur d’index donnée, ce qui permet d’accéder à la  *n* élément th dans la liste.  
   
  Dans les versions debug, un échec d’assertion se produit si l’objet de liste n’est pas valide.  
@@ -306,7 +307,7 @@ const E& GetAt(POSITION pos) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à, ou une copie de l’élément.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si la liste est **const**, `GetAt` retourne une copie de l’élément. Cela permet à la méthode à être utilisé uniquement sur le côté droit d’une instruction d’assignation et protège la liste à partir de la modification.  
   
  Si la liste n’est pas **const**, `GetAt` retourne une référence à l’élément. Cela permet la méthode à utiliser sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
@@ -340,7 +341,7 @@ const E& GetHead() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une référence, ou une copie de l’élément au début de la liste.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si la liste est **const**, `GetHead` retourne une copie de l’élément au début de la liste. Cela permet à la méthode à être utilisé uniquement sur le côté droit d’une instruction d’assignation et protège la liste à partir de la modification.  
   
  Si la liste n’est pas **const**, `GetHead` retourne une référence à l’élément au début de la liste. Cela permet la méthode à utiliser sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
@@ -360,7 +361,7 @@ POSITION GetHeadPosition() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur POSITION correspondant à l’élément au début de la liste.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si la liste est vide, la valeur retournée est NULL.  
   
 ### <a name="example"></a>Exemple  
@@ -383,7 +384,7 @@ const E& GetNext(POSITION& pos) const throw();
   
  Si la liste n’est pas **const**, `GetNext` retourne une référence à l’élément suivant de la liste. Cela permet la méthode à utiliser sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le compteur de POSITION, `pos`, est mis à jour pour pointer vers l’élément suivant dans la liste, ou NULL si aucun élément plus. Dans les versions debug, un échec d’assertion se produit si `pos` est égal à NULL.  
   
 ### <a name="example"></a>Exemple  
@@ -406,7 +407,7 @@ const E& GetPrev(POSITION& pos) const throw();
   
  Si la liste n’est pas **const**, `GetPrev` retourne une référence à un élément de la liste. Cela permet la méthode à utiliser sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le compteur de POSITION, `pos`, est mis à jour pour pointer vers l’élément précédent dans la liste, ou NULL si aucun élément plus. Dans les versions debug, un échec d’assertion se produit si `pos` est égal à NULL.  
   
 ### <a name="example"></a>Exemple  
@@ -423,7 +424,7 @@ const E& GetTail() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une référence, ou une copie de l’élément à la fin de la liste.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si la liste est **const**, `GetTail` retourne une copie de l’élément au début de la liste. Cela permet à la méthode à être utilisé uniquement sur le côté droit d’une instruction d’assignation et protège la liste à partir de la modification.  
   
  Si la liste n’est pas **const**, `GetTail` retourne une référence à l’élément au début de la liste. Cela permet la méthode à utiliser sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
@@ -443,7 +444,7 @@ POSITION GetTailPosition() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur POSITION correspondant à l’élément à la fin de la liste.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si la liste est vide, la valeur retournée est NULL.  
   
 ### <a name="example"></a>Exemple  
@@ -473,7 +474,7 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de la POSITION du nouvel élément.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans les versions debug, un échec d’assertion se produit si la liste n’est pas valide, si l’insertion échoue, ou si une tentative est faite pour insérer l’élément après la fin.  
   
 ### <a name="example"></a>Exemple  
@@ -496,7 +497,7 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de la POSITION du nouvel élément.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans les versions debug, un échec d’assertion se produit si la liste n’est pas valide, si l’insertion échoue, ou si une tentative est faite pour insérer l’élément avant le début.  
   
 ### <a name="example"></a>Exemple  
@@ -526,7 +527,7 @@ void MoveToHead(POSITION pos) throw();
  `pos`  
  La valeur de la POSITION de l’élément à déplacer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’élément spécifié est déplacée depuis sa position actuelle vers le début de la liste. Dans les versions debug, un échec d’assertion se produit si `pos` est égal à NULL.  
   
 ### <a name="example"></a>Exemple  
@@ -543,7 +544,7 @@ void MoveToTail(POSITION pos) throw();
  `pos`  
  La valeur de la POSITION de l’élément à déplacer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’élément spécifié est déplacée depuis sa position actuelle et la fin de la liste. Dans les versions debug, un échec d’assertion se produit si `pos` est égal à NULL.  
   
 ### <a name="example"></a>Exemple  
@@ -556,7 +557,7 @@ void MoveToTail(POSITION pos) throw();
 void RemoveAll() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode supprime tous les éléments de la liste et libère la mémoire allouée. Dans les versions débogue un ATLASSERT ; sera déclenchée si tous les éléments ne sont pas supprimés, ou si la structure de liste a été endommagée.  
   
 ### <a name="example"></a>Exemple  
@@ -573,7 +574,7 @@ void RemoveAt(POSITION pos) throw();
  `pos`  
  La valeur de la POSITION de l’élément à supprimer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’élément référencé par `pos` est supprimé, et la mémoire est libérée. Il est acceptable d’utiliser `RemoveAt` pour supprimer la tête ou queue de la liste.  
   
  Dans les versions debug, un échec d’assertion se produit si la liste n’est pas valide ou si la liste de mémoire qui ne fait pas partie de la structure de la liste entraîne une suppression de l’élément.  
@@ -591,7 +592,7 @@ E RemoveHead();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’élément au début de la liste.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’élément head est supprimé de la liste, et la mémoire est libérée. Une copie de l’élément est retournée. Dans les versions debug, un échec d’assertion se produit si la liste est vide.  
   
 ### <a name="example"></a>Exemple  
@@ -604,7 +605,7 @@ E RemoveHead();
 void RemoveHeadNoReturn() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’élément head est supprimé de la liste, et la mémoire est libérée. Dans les versions debug, un échec d’assertion se produit si la liste est vide.  
   
 ### <a name="example"></a>Exemple  
@@ -620,7 +621,7 @@ E RemoveTail();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’élément à la fin de la liste.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’élément de fin est supprimé de la liste, et la mémoire est libérée. Une copie de l’élément est retournée. Dans les versions debug, un échec d’assertion se produit si la liste est vide.  
   
 ### <a name="example"></a>Exemple  
@@ -633,7 +634,7 @@ E RemoveTail();
 void RemoveTailNoReturn() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’élément de fin est supprimé de la liste, et la mémoire est libérée. Dans les versions debug, un échec d’assertion se produit si la liste est vide.  
   
 ### <a name="example"></a>Exemple  
@@ -653,7 +654,7 @@ void SetAt(POSITION pos, INARGTYPE element);
  `element`  
  La nouvelle valeur de l’élément.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Remplace la valeur existante avec `element`. Dans les versions debug, un échec d’assertion se produit si `pos` est égal à NULL.  
   
 ### <a name="example"></a>Exemple  
@@ -673,7 +674,7 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
  *pos2*  
  La deuxième valeur POSITION.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Échange les éléments à deux positions spécifiées. Dans les versions debug, un échec d’assertion se produit si une valeur de position est égale à NULL.  
   
 ### <a name="example"></a>Exemple  

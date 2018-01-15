@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0cb598a5b0f87080a937218962037d849275d7bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aed7ed0ed32f73927f3755c0ba3733aaef084818
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-tiles"></a>Utilisation des mosaïques
 Vous pouvez utiliser la disposition en mosaïque pour optimiser l’accélération de votre application. Mosaïque divise les threads en sous-ensembles rectangulaires égales ou *vignettes*. Si vous utilisez une taille de la vignette appropriée et un algorithme en mosaïque, vous pouvez obtenir davantage d’accélération à partir de votre code C++ AMP. Les composants de la mosaïque de base sont :  

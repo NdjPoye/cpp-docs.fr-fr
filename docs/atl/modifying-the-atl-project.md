@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0385903a0580d06c03d3973e697e7a7fc88bbd1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7de670642e80a32158b84c739d7081ca02d483a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modifying-the-atl-project"></a>Modification du projet ATL
 À ce stade, votre projet de contrôle composite implémente les objets nécessaires pour votre contrôle composite. L’étape suivante consiste à ajouter les contrôles que le contrôle composite contenir et de gérer les événements nécessaires.  

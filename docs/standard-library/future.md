@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- <future>
-dev_langs:
-- C++
+f1_keywords: <future>
+dev_langs: C++
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7894e47b14dffc1685fbce8194f0fc45ed6b5d1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: fa19a2df51eb53d7cbd66b13b650580df61d9877
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 Incluez l’en-tête standard \<future> pour définir des classes de modèle et des modèles de prise en charge qui simplifient l’exécution d’une fonction (éventuellement dans un thread séparé) et la récupération de son résultat. Le résultat est la valeur retournée par la fonction ou une exception émise par la fonction, mais qui n’est pas interceptée dans la fonction.  
@@ -35,7 +32,7 @@ Incluez l’en-tête standard \<future> pour définir des classes de modèle et 
 #include <future>  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 > [!NOTE]
 >  Dans le code est compilé à l’aide de **/CLR**, cet en-tête est bloqué.  
@@ -85,7 +82,7 @@ Incluez l’en-tête standard \<future> pour définir des classes de modèle et 
   
 ### <a name="enumerations"></a>Énumérations  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[future_errc](../standard-library/future-enums.md#future_errc)|Fournit des noms symboliques pour toutes les erreurs signalées par la classe `future_error`.|  
 |[état_futur](../standard-library/future-enums.md#future_status)|Fournit les noms symboliques pour les raisons qu’une fonction d’attente chronométrée peut retourner.|  
@@ -93,7 +90,6 @@ Incluez l’en-tête standard \<future> pour définir des classes de modèle et 
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

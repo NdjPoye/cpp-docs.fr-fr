@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a1a039b086b806c22e9cfe5ceda907916a7cf5de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b2b9c4cf871e8436a8da34a862d205541e7dc5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conflicts-with-the-x86-compiler"></a>Conflits avec le compilateur x86
 Types de données qui sont supérieures à 4 octets ne sont pas alignées automatiquement sur la pile lorsque vous utilisez la x86 compilateur de compiler une application. Étant donné que l’architecture pour le x86 compilateur est une pile alignée sur 4 octets, toute valeur supérieure à 4 octets, par exemple, un entier 64 bits, ne peut pas être alignée automatiquement à une adresse de 8 octets.  

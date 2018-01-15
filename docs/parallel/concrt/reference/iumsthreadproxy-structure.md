@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 87ac2a36c83e6b05e671c0110b054325d53fc887
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d9d9b200db84ddbf25e514e1432fa0915d5ee383
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy, structure
 Abstraction d'un thread d'exécution. Si vous voulez que votre planificateur reçoive des threads UMS (User-Mode Scheduling), affectez à l'élément de stratégie du planificateur `SchedulerKind` la valeur `UmsThreadDefault`, puis implémentez l'interface `IUMSScheduler`. Les threads UMS sont uniquement pris en charge sur les systèmes d'exploitation 64 bits avec Windows 7 et ses versions ultérieures.  
@@ -54,7 +55,7 @@ struct IUMSThreadProxy : public IThreadProxy;
   
  `IUMSThreadProxy`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrtrm.h  
   
  **Espace de noms :** concurrency  
@@ -79,7 +80,7 @@ virtual int EnterHyperCriticalRegion() = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Nouvelle profondeur de la région hyper critique. Régions Hyper critiques sont réentrantes.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le planificateur doit être extrêmement prudent lorsque vous les méthodes qu’il appelle et quels verrous il acquiert dans ces régions. Si le code dans une région de ce type se bloque sur un verrou est détenu par quelque chose sur que le planificateur est chargé pour la planification, le blocage peut-être survenir.  
   
 ##  <a name="exitcriticalregion"></a>IUMSThreadProxy::ExitCriticalRegion, méthode  

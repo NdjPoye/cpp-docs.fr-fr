@@ -45,11 +45,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33e0ca4c92d22d8afaed4523a7f274b6b5d20a2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22922d29c09ee97a8b2a292953b4bf903ab6649e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cbitmap-class"></a>CBitmap (classe)
 Encapsule une bitmap GDI (Graphics Device Interface) Windows et fournit des fonctions membres pour la manipuler.  
@@ -92,7 +93,7 @@ class CBitmap : public CGdiObject
 |----------|-----------------|  
 |[CBitmap::operator HBITMAP](#operator_hbitmap)|Retourne le handle Windows associé à la `CBitmap` objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour utiliser un `CBitmap` de l’objet, construisez l’objet, attacher un handle de bitmap à l’aide d’une des fonctions membres d’initialisation et ensuite, appelez les fonctions membres de l’objet.  
   
  Pour plus d’informations sur l’utilisation des objets graphiques comme `CBitmap`, consultez [les objets de graphique](../../mfc/graphic-objects.md).  
@@ -104,7 +105,7 @@ class CBitmap : public CGdiObject
   
  `CBitmap`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="cbitmap"></a>CBitmap::CBitmap  
@@ -114,7 +115,7 @@ class CBitmap : public CGdiObject
 CBitmap();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’objet résultant doit être initialisée avec l’une des fonctions de membre de l’initialisation.  
   
 ##  <a name="createbitmap"></a>CBitmap::CreateBitmap  
@@ -148,7 +149,7 @@ BOOL CreateBitmap(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour une image bitmap de couleur, le paramètre `nPlanes` ou `nBitcount` doit être défini avec la valeur 1. Si ces deux paramètres sont définis avec la valeur 1, `CreateBitmap` crée une image bitmap monochrome.  
   
  Bien qu’une image bitmap ne peut pas être directement sélectionnée pour un périphérique d’affichage, il peut être sélectionné en tant qu’image bitmap active pour un « contexte de périphérique de mémoire » à l’aide de [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) et copiés vers n’importe quel contexte de périphérique compatible à l’aide de la [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) (fonction).  
@@ -171,7 +172,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Bien qu’une image bitmap ne peut pas être directement sélectionnée pour un périphérique d’affichage, il peut être sélectionné en tant qu’image bitmap active pour un contexte de périphérique de mémoire à l’aide de [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) et copiés vers n’importe quel contexte de périphérique compatible à l’aide de la [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) ou [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) (fonction). (Le [CDC::PatBlt](../../mfc/reference/cdc-class.md#patblt) fonction pouvez copier l’image bitmap pour le pinceau actuel directement dans le contexte de périphérique d’affichage.)  
   
  Si le **BITMAP** structure vers laquelle pointe le `lpBitmap` paramètre a été renseigné à l’aide de la `GetObject` (fonction), les bits de l’image bitmap ne sont pas spécifiés, et l’image bitmap n’est pas initialisé. Pour initialiser l’image bitmap, une application peut utiliser une fonction comme [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) ou [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) pour copier les bits du bitmap identifiée par le premier paramètre de `CGdiObject::GetObject` à l’image bitmap créé par `CreateBitmapIndirect`.  
@@ -201,7 +202,7 @@ BOOL CreateCompatibleBitmap(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La bitmap a le même nombre de plans de couleur ou le même format de bits par pixel que le contexte de périphérique spécifié. Il peut être sélectionné en tant qu’image bitmap active pour n’importe quel appareil de mémoire qui est compatible avec celui spécifié par `pDC`.  
   
  Si `pDC` est un contexte de périphérique de mémoire, la bitmap retournée a le même format que l’image bitmap actuellement sélectionnée dans ce contexte de périphérique. Un « contexte de périphérique de mémoire » est un bloc de mémoire qui représente une surface d’affichage. Il peut être utilisé pour préparer des images en mémoire avant de les copier à la surface d’affichage du périphérique compatible.  
@@ -235,7 +236,7 @@ BOOL CreateDiscardableBitmap(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La bitmap a le même nombre de plans de couleur ou le même format de bits par pixel que le contexte de périphérique spécifié. Une application peut sélectionner cette image bitmap en tant qu’image bitmap active pour un périphérique de mémoire qui est compatible avec celui spécifié par `pDC`.  
   
  Windows peut ignorer une bitmap créée par cette fonction uniquement si une application ne le n'a pas sélectionné dans un contexte d’affichage. Si Windows ignore la bitmap lorsqu’il n’est pas sélectionnée et ultérieurement l’application tente de sélectionner, le [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) fonction retournera **NULL**.  
@@ -256,7 +257,7 @@ static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un `CBitmap` objet en cas de réussite ; **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si un `CBitmap` objet n’est pas déjà attaché au handle, un fichier temporaire `CBitmap` objet est créé et attaché. Ce fichier temporaire `CBitmap` objet est valide uniquement jusqu'à ce que la prochaine fois que l’application possède des temps d’inactivité dans la boucle d’événements, alors graphique temporaire tous les objets sont supprimés. Une autre façon d’autres termes est que l’objet temporaire est valide uniquement lors du traitement du message d’une fenêtre.  
   
 ##  <a name="getbitmap"></a>CBitmap::GetBitmap  
@@ -273,7 +274,7 @@ int GetBitmap(BITMAP* pBitMap);
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la méthode a réussi ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="getbitmapbits"></a>CBitmap::GetBitmapBits  
  Copie le modèle binaire de l’image bitmap jointe dans la mémoire tampon spécifiée.  
@@ -294,7 +295,7 @@ DWORD GetBitmapBits(
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’octets copiés dans la mémoire tampon si la méthode a réussi ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez [CBitmap::GetBitmap](#getbitmap) pour déterminer la taille de la mémoire tampon requise.  
   
 ##  <a name="getbitmapdimension"></a>CBitmap::GetBitmapDimension  
@@ -307,7 +308,7 @@ CSize GetBitmapDimension() const;
 ### <a name="return-value"></a>Valeur de retour  
  La largeur et la hauteur de l’image bitmap, mesurée en unités de millimètre de 0,1. La hauteur est dans le **cy** membre de la `CSize` objet et la largeur est dans le **cx** membre. Si la largeur du bitmap et la hauteur n’ont pas été définies à l’aide de `SetBitmapDimension`, la valeur de retour est 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La hauteur et la largeur sont supposées avoir été définie précédemment à l’aide de la [SetBitmapDimension](#setbitmapdimension) fonction membre.  
   
 ##  <a name="loadbitmap"></a>CBitmap::LoadBitmap  
@@ -328,7 +329,7 @@ BOOL LoadBitmap(UINT nIDResource);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’image bitmap chargé est attaché à la `CBitmap` objet.  
   
  Si l’image bitmap est identifié par `lpszResourceName` n’existe pas ou si la mémoire est insuffisante pour charger l’image bitmap, la fonction retourne 0.  
@@ -371,10 +372,10 @@ BOOL LoadMappedBitmap(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, `LoadMappedBitmap` mappera couleurs couramment utilisées dans les glyphes de bouton.  
   
- Pour plus d’informations sur la création d’une image bitmap mappée, consultez la fonction Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/linkid=230562) et [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) structure dans le SDK Windows.  
+ Pour plus d’informations sur la création d’une image bitmap mappée, consultez la fonction Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) et [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) structure dans le SDK Windows.  
   
 ##  <a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap  
  Charge une bitmap prédéfinie utilisée par Windows.  
@@ -410,7 +411,7 @@ BOOL LoadOEMBitmap(UINT nIDBitmap);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Bitmap des noms qui commencent par **OBM_OLD** représentent les bitmaps utilisées par les versions de Windows antérieures à 3.0.  
   
  Notez que la constante **OEMRESOURCE** doit être défini avant l’inclusion de WINDOWS. H pour pouvoir utiliser le **OBM_** constantes.  
@@ -425,7 +426,7 @@ operator HBITMAP() const;
 ### <a name="return-value"></a>Valeur de retour  
  Si réussie, un handle vers l’objet GDI Windows représenté par le `CBitmap` de l’objet ; sinon **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cet opérateur est un opérateur de cast, qui prend en charge l’utilisation directe d’une `HBITMAP` objet.  
   
  Pour plus d’informations sur l’utilisation des objets graphiques, consultez [graphique objets](http://msdn.microsoft.com/library/windows/desktop/dd144962) dans le Kit de développement logiciel Windows.  
@@ -468,7 +469,7 @@ CSize SetBitmapDimension(
 ### <a name="return-value"></a>Valeur de retour  
  Les dimensions de bitmap précédente. Hauteur est dans le **cy** variable membre de la `CSize` objet et la largeur est dans le **cx** variable membre.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’interface GDI n’utilise pas ces valeurs à l’exception de to les retourner lorsqu’une application appelle la [GetBitmapDimension](#getbitmapdimension) fonction membre.  
   
 ## <a name="see-also"></a>Voir aussi  

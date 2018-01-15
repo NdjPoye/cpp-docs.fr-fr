@@ -1,49 +1,50 @@
 ---
-title: "/GUARD (activer les contr&#244;les de protection) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "-GUARD (activer les contrôles de protection) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 72758e23-70ac-4616-94d7-d767477406d1
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 48abdc4f923ed01ecba482b82da897d06fd56dcd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# /GUARD (activer les contr&#244;les de protection)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Spécifie la prise en charge pour les contrôles de protection du flux de contrôle de l'image exécutable.  
+# <a name="guard-enable-guard-checks"></a>/GUARD (activer les contrôles de protection)
+Spécifie la prise en charge pour les contrôles de protection du flux de contrôle de l’image exécutable.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 /GUARD:{CF|NO}  
 ```  
   
-## Notes  
- Quand \/GUARD:CF est spécifié, l'éditeur de liens modifie l'en\-tête d'un fichier .dll ou .exe pour indiquer la prise en charge des contrôles d'exécution de la protection du flux de contrôle \(CFG\).  L'éditeur de liens ajoute également les données d'adresse cible du flux de contrôle nécessaire dans l'en\-tête.  Par défaut, \/GUARD:CF est désactivé.  Il peut être désactivé explicitement en spécifiant \/GUARD:NO.  Pour que \/GUARD:CF soit activé, l'option [\/DYNAMICBASE \(Utiliser la randomisation du format d'espace d'adresse\)](../../build/reference/dynamicbase-use-address-space-layout-randomization.md) de l'éditeur de liens doit également être activée \(elle l'est par défaut\).  
+## <a name="remarks"></a>Notes  
+ Quand /GUARD:CF est spécifié, l'éditeur de liens modifie l'en-tête d'un fichier .dll ou .exe pour indiquer la prise en charge des contrôles d'exécution de la protection du flux de contrôle (CFG). L'éditeur de liens ajoute également les données d'adresse cible du flux de contrôle nécessaire dans l'en-tête. Par défaut, /GUARD:CF est désactivé. Il peut être désactivé explicitement en spécifiant /GUARD:NO. Pour être efficaces, / Guard : CF requiert également le [/DYNAMICBASE (utiliser espace randomisation du format adresse)](../../build/reference/dynamicbase-use-address-space-layout-randomization.md) option de l’éditeur de liens, qui est activé par défaut.  
   
- Quand le code source est compilé avec l'option [\/guard:cf](../../build/reference/guard-enable-control-flow-guard.md), le compilateur analyse le flux de contrôle en examinant tous les appels indirects pour les adresses cibles possibles.  Le compilateur insère le code pour vérifier que l'adresse cible d'une instruction d'appel indirect figure dans la liste des adresses cibles connues au moment de l'exécution.  Les systèmes d'exploitation qui prennent en charge la protection CFG arrêtent tout programme qui ne satisfait pas une vérification à l'exécution CFG.  Il est ainsi plus difficile pour un attaquant d'exécuter du code malveillant en recourant à une altération des données pour modifier une cible d'appel.  
+ Lorsque le code source est compilé à l’aide de la [/Guard : CF](../../build/reference/guard-enable-control-flow-guard.md) option, le compilateur analyse le flux de contrôle en examinant tous les appels indirects pour les adresses cibles possibles. Le compilateur insère le code pour vérifier que l'adresse cible d'une instruction d'appel indirect figure dans la liste des adresses cibles connues au moment de l'exécution. Les systèmes d'exploitation qui prennent en charge la protection CFG arrêtent tout programme qui ne satisfait pas une vérification à l'exécution CFG. Il est ainsi plus difficile pour un attaquant d'exécuter du code malveillant en recourant à une altération des données pour modifier une cible d'appel.  
   
- L'option \/GUARD:CF doit être spécifiée dans le compilateur et l'éditeur de liens pour créer des images exécutables avec protection CFG.  Le code qui est compilé, mais pas lié avec l'option \/GUARD:CF implique un coût de vérifications à l'exécution, mais n'active pas la protection CFG.  Quand l'option \/GUARD:CF est spécifiée dans la commande `cl` pour compiler et lier le code en une seule étape, le compilateur passe l'indicateur à l'éditeur de liens.  Si la propriété de **protection du flux de contrôle** est définie dans Visual Studio, l'option \/GUARD:CF est passée au compilateur et à l'éditeur de liens.  Si des fichiers objets ou des bibliothèques ont été compilés séparément, l'option doit être spécifiée explicitement dans la commande `link`.  
+ L'option /GUARD:CF doit être spécifiée dans le compilateur et l'éditeur de liens pour créer des images exécutables avec protection CFG. Le code qui est compilé, mais pas lié avec l'option /GUARD:CF implique un coût de vérifications à l'exécution, mais n'active pas la protection CFG. Lorsque l’option/Guard : CF est spécifiée dans le `cl` commande pour compiler et lier en une seule étape, le compilateur passe l’indicateur à l’éditeur de liens. Lorsque le **du flux de contrôle** est définie dans Visual Studio, l’option/Guard : CF est passée au compilateur et l’éditeur de liens. Lorsque les fichiers objets ou bibliothèques ont été compilés séparément, l’option doit être spécifiée explicitement dans la `link` commande.  
   
-### Pour définir cette option d'éditeur de liens dans Visual Studio  
+### <a name="to-set-this-linker-option-in-visual-studio"></a>Pour définir cette option d'éditeur de liens dans Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriétés** du projet.  Pour plus d'informations, voir [Comment : ouvrir les pages de propriétés d'un projet](../../misc/how-to-open-project-property-pages.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
-2.  Développez **Propriétés de configuration**, **Éditeur de liens**, **Ligne de commande**.  
+2.  Développez **propriétés de Configuration**, **l’éditeur de liens**, **ligne de commande**.  
   
-3.  Dans **Options supplémentaires**, entrez `/GUARD:CF`.  
+3.  Dans **des Options supplémentaires**, entrez `/GUARD:CF`.  
   
-## Voir aussi  
- [\/guard \(Activer la protection du flux de contrôle\)](../../build/reference/guard-enable-control-flow-guard.md)   
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [/Guard (activer le contrôle de la protection du flux)](../../build/reference/guard-enable-control-flow-guard.md)   
+ [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)

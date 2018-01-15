@@ -22,11 +22,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c8334a446c995155fb0632ed135ca9578f6ff881
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d3d352394b61f95e083a2e6e6f0d888fe210b37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/Zc:referenceBinding (appliquer les règles de liaison aux référence)
 Lorsque le **/Zc:referenceBinding** est spécifiée, le compilateur n’autorise pas une référence non const lvalue à lier à une variable temporaire.  
@@ -37,7 +38,7 @@ Lorsque le **/Zc:referenceBinding** est spécifiée, le compilateur n’autorise
 /Zc:referenceBinding[-]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
 Si **/Zc:referenceBinding** est spécifié, le compilateur suit la section 8.5.3 de la norme C ++ 11 et n’autorise pas les expressions qui lient un type défini par l’utilisateur temporaire vers une référence non const lvalue. Par défaut, ou si **/Zc:referenceBinding-** est spécifié, le compilateur autorise ces expressions comme une extension Microsoft, mais un avertissement de niveau 4. Pour la sécurité du code, la portabilité et de la conformité, nous vous recommandons d’utiliser **/Zc:referenceBinding**. Le [/ permissive-](permissive-standards-conformance.md) option du compilateur définit implicitement cette option, mais elle peut être substituée à l’aide de **/Zc:referenceBinding-**.  
   
 ## <a name="example"></a>Exemple  
@@ -77,4 +78,4 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 ## <a name="see-also"></a>Voir aussi  
 [Options du compilateur](../../build/reference/compiler-options.md)   
 [Définition des Options du compilateur](../../build/reference/setting-compiler-options.md)   
-[/Zc (conformité)](../../build/reference/zc-conformance.md)
+[/Zc (Conformité)](../../build/reference/zc-conformance.md)

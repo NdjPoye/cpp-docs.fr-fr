@@ -9,18 +9,18 @@ ms.topic: article
 f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a9def518f951e6fbae788b69893cc7205053b411
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7338e634c7ce10b06e7b599494ed934942febe42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Fonctions d’espace de noms Concurrency::Graphics
 |||  
@@ -150,13 +150,13 @@ void copy (
  Offset dans la destination à partir duquel commencer la copie.  
   
  `InputIterator`  
- Le type de l’entrée interator.  
+ Le type de l’interator d’entrée.  
   
  `OutputIterator`  
  Le type de l’itérateur de sortie.  
   
  `_Src`  
- Pour l’objet à copier.  
+ À l’objet à copier.  
   
  `_Src_byte_size`  
  Le nombre d’octets dans la source.  
@@ -174,7 +174,7 @@ void copy (
  Un itérateur de fin dans le conteneur source.  
   
 ##  <a name="copy_async"></a>copy_async, fonction (Concurrency::graphics Namespace)  
- Copie de manière asynchrone une texture source dans une mémoire tampon de destination, ou copie d’une mémoire tampon source dans un mémoire tampon de destination et renvoie un [completion_future](completion-future-class.md) objet qui peut être attendu. Impossible de copier les données lorsque le code s’exécute sur un accélérateur. La forme générale de cette fonction est `copy(src, dest)`.  
+ Copie de façon asynchrone une texture source dans une mémoire tampon de destination, ou copie d’une mémoire tampon source dans un mémoire tampon de destination, puis retourne un [completion_future](completion-future-class.md) objet qui peut être attendu. Impossible de copier les données lorsque le code s’exécute sur un accélérateur. La forme générale de cette fonction est `copy(src, dest)`.  
   
 ```  
 template<
@@ -292,13 +292,13 @@ concurrency::completion_future copy_async(_Src_type& _Src,
  Offset dans la destination à partir duquel commencer la copie.  
   
  `InputIterator`  
- Le type de l’entrée interator.  
+ Le type de l’interator d’entrée.  
   
  `OutputIterator`  
  Le type de l’itérateur de sortie.  
   
  `_Src`  
- Pour l’objet à copier.  
+ À l’objet à copier.  
   
  `_Src_byte_size`  
  Le nombre d’octets dans la source.  
@@ -315,11 +315,10 @@ concurrency::completion_future copy_async(_Src_type& _Src,
  `last`  
  Un itérateur de fin dans le conteneur source.  
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp_graphics.h  
   
  **Namespace :** Concurrency::graphics 
 
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
-

@@ -62,11 +62,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e217f73afcf00d5569f731d86c726ae3191ffa93
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3df4c5ac46c159cd3ed955621af914c677182a57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="caccesstoken-class"></a>Classe de CAccessToken
 Cette classe est un wrapper pour un jeton d’accès.  
@@ -138,12 +139,12 @@ class CAccessToken
 |[CAccessToken::SetOwner](#setowner)|Appelez cette méthode pour définir le propriétaire de la `CAccessToken` objet.|  
 |[CAccessToken::SetPrimaryGroup](#setprimarygroup)|Appelez cette méthode pour définir le groupe principal de le `CAccessToken` objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un [jeton d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374909) est un objet qui décrit le contexte de sécurité d’un processus ou thread et est alloué à chaque utilisateur connecté à un système Windows NT ou Windows 2000.  
   
  Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le Kit de développement logiciel Windows.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h  
   
 ##  <a name="attach"></a>CAccessToken::Attach  
@@ -157,7 +158,7 @@ void Attach(HANDLE hToken) throw();
  *hToken*  
  Handle vers le jeton d’accès.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans les versions debug, une erreur d’assertion se produit si le `CAccessToken` objet dispose déjà de la propriété d’un jeton d’accès.  
   
 ##  <a name="dtor"></a>CAccessToken :: ~ CAccessToken  
@@ -167,7 +168,7 @@ void Attach(HANDLE hToken) throw();
 virtual ~CAccessToken() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère toutes les ressources attribuées.  
   
 ##  <a name="checktokenmembership"></a>CAccessToken::CheckTokenMembership  
@@ -189,7 +190,7 @@ bool CheckTokenMembership(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `CheckTokenMembership` méthode vérifie la présence du SID de l’utilisateur et le SID du jeton d’accès de groupe. Si le SID est présent et a l’attribut SE_GROUP_ENABLED, *pbIsMember* est définie sur true ; sinon, elle est définie sur false.  
   
  Dans les versions debug, une erreur d’assertion se produit si `pbIsMember` n’est pas un pointeur valide.  
@@ -216,7 +217,7 @@ bool CreateImpersonationToken(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `CreateImpersonationToken`appels [DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616) pour créer un nouveau jeton d’emprunt d’identité.  
   
 ##  <a name="createprimarytoken"></a>CAccessToken::CreatePrimaryToken  
@@ -242,7 +243,7 @@ bool CreatePrimaryToken(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `CreatePrimaryToken`appels [DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617) pour créer un nouveau jeton principal.  
   
 ##  <a name="createprocessasuser"></a>CAccessToken::CreateProcessAsUser  
@@ -296,7 +297,7 @@ bool CreateProcessAsUser(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  **CreateProcessAsUser** utilise le `CreateProcessAsUser` fonction Win32 pour créer un nouveau processus qui s’exécute dans le contexte de sécurité de l’utilisateur représenté par le `CAccessToken` objet. Consultez la description de la [CreateProcessAsUser](http://msdn.microsoft.com/library/windows/desktop/ms682429) fonction pour obtenir une présentation complète des paramètres requis.  
   
  Pour que cette méthode réussisse, le `CAccessToken` objet doit contenir AssignPrimaryToken (à moins qu’il s’agit d’un jeton restreint) et les privilèges de IncreaseQuota.  
@@ -328,7 +329,7 @@ bool CreateRestrictedToken(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `CreateRestrictedToken`utilise le [CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) fonction Win32 pour créer un nouveau `CAccessToken` objet, avec des restrictions.  
   
 > [!NOTE]
@@ -347,7 +348,7 @@ HANDLE Detach() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le handle pour le `CAccessToken` qui a été détaché.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode révoque le `CAccessToken`de la propriété du jeton d’accès.  
   
 ##  <a name="disableprivilege"></a>CAccessToken::DisablePrivilege  
@@ -507,7 +508,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans les versions debug, une erreur d’assertion se produit si `pluid` est une valeur non valide.  
   
 ##  <a name="getlogonsid"></a>CAccessToken::GetLogonSid  
@@ -524,7 +525,7 @@ bool GetLogonSid(CSid* pSid) const throw(...);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans les versions debug, une erreur d’assertion se produit si *pSid* est une valeur non valide.  
   
 ##  <a name="getowner"></a>CAccessToken::GetOwner  
@@ -541,7 +542,7 @@ bool GetOwner(CSid* pSid) const throw(...);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le propriétaire est défini par défaut sur tous les objets créés alors que ce jeton d’accès est en vigueur.  
   
 ##  <a name="getprimarygroup"></a>CAccessToken::GetPrimaryGroup  
@@ -558,7 +559,7 @@ bool GetPrimaryGroup(CSid* pSid) const throw(...);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le groupe est défini par défaut sur tous les objets créés alors que ce jeton d’accès est en vigueur.  
   
 ##  <a name="getprivileges"></a>CAccessToken::GetPrivileges  
@@ -592,7 +593,7 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `true` en cas de réussite, `false` en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelle le [OpenProcessToken](http://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) fonction Win32.  
   
 ##  <a name="getprofile"></a>CAccessToken::GetProfile  
@@ -700,7 +701,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le **TOKEN_TYPE** type énumération contient des valeurs qui distinguer un jeton principal et un jeton d’emprunt d’identité.  
   
 ##  <a name="getuser"></a>CAccessToken::GetUser  
@@ -741,7 +742,7 @@ bool Impersonate(HANDLE hThread = NULL) const throw(...);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans les versions debug, une erreur d’assertion se produit si `CAccessToken` n’a pas un pointeur valide vers un jeton.  
   
  Le [CAutoRevertImpersonation classe](../../atl/reference/cautorevertimpersonation-class.md) peut être utilisé pour rétablir automatiquement les jetons d’accès avec emprunt d’identité.  
@@ -756,7 +757,7 @@ bool ImpersonateLoggedOnUser() const throw(...);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 > [!IMPORTANT]
 >  Si un appel à une fonction de l’emprunt d’identité échoue pour une raison quelconque, le client n’est pas empruntée et la demande du client est effectuée dans le contexte de sécurité du processus à partir de laquelle l’appel a été effectué. Si le processus s’exécute sous un compte disposant de privilèges élevés, ou en tant que membre d’un groupe d’administration, l’utilisateur peut être en mesure d’effectuer des actions qu’il serait sinon pas autorisée. Par conséquent, la valeur de retour pour cette fonction doit toujours être confirmée.  
@@ -781,7 +782,7 @@ bool LoadUserProfile() throw(...);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans les versions debug, une erreur d’assertion se produit si le `CAccessToken` ne contient pas un jeton valide, ou si un utilisateur de profil déjà existe.  
   
 ##  <a name="logonuser"></a>CAccessToken::LogonUser  
@@ -815,7 +816,7 @@ bool LogonUser(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’accès au jeton résultant de l’ouverture de session sera associé le `CAccessToken`. Pour que cette méthode réussisse, le `CAccessToken` objet détenir des privilèges SE_TCB_NAME, identifiant le détenteur du cadre de l’ordinateur approuvé base. Consultez [LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184) pour plus d’informations sur les privilèges requis.  
   
 ##  <a name="opencomclienttoken"></a>CAccessToken::OpenCOMClientToken  
@@ -843,7 +844,7 @@ bool OpenCOMClientToken(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le [CAutoRevertImpersonation classe](../../atl/reference/cautorevertimpersonation-class.md) peut être utilisé pour rétablir automatiquement les jetons d’accès avec emprunt d’identité créés en définissant le `bImpersonate` indicateur *true*.  
   
 ##  <a name="opennamedpipeclienttoken"></a>CAccessToken::OpenNamedPipeClientToken  
@@ -875,7 +876,7 @@ bool OpenNamedPipeClientToken(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le [CAutoRevertImpersonation classe](../../atl/reference/cautorevertimpersonation-class.md) peut être utilisé pour rétablir automatiquement les jetons d’accès avec emprunt d’identité créés en définissant le `bImpersonate` indicateur *true*.  
   
 ##  <a name="openrpcclienttoken"></a>CAccessToken::OpenRPCClientToken  
@@ -907,7 +908,7 @@ bool OpenRPCClientToken(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le [CAutoRevertImpersonation classe](../../atl/reference/cautorevertimpersonation-class.md) peut être utilisé pour rétablir automatiquement les jetons d’accès avec emprunt d’identité créés en définissant le `bImpersonate` indicateur *true*.  
   
 ##  <a name="openthreadtoken"></a>CAccessToken::OpenThreadToken  
@@ -939,7 +940,7 @@ bool OpenThreadToken(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `OpenThreadToken`est semblable à [CAccessToken::GetThreadToken](#getthreadtoken), mais permet de définir le niveau d’emprunt d’identité avant d’initialiser le `CAccessToken` à partir du jeton d’accès du thread.  
   
  Le [CAutoRevertImpersonation classe](../../atl/reference/cautorevertimpersonation-class.md) peut être utilisé pour rétablir automatiquement les jetons d’accès avec emprunt d’identité créés en définissant le `bImpersonate` indicateur *true*.  
@@ -963,7 +964,7 @@ bool PrivilegeCheck(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque `PrivilegeCheck` retourne, le **attributs** membre de chaque [LUID_AND_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379263) structure est définie sur SE_PRIVILEGE_USED_FOR_ACCESS si le privilège correspondant est activé. Cette méthode appelle la [PrivilegeCheck](http://msdn.microsoft.com/library/windows/desktop/aa379304) fonction Win32.  
   
 ##  <a name="revert"></a>CAccessToken::Revert  
@@ -980,7 +981,7 @@ bool Revert(HANDLE hThread = NULL) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Rétablir les jetons d’emprunt d’identité peut être effectuée automatiquement avec le [CAutoRevertImpersonation classe](../../atl/reference/cautorevertimpersonation-class.md).  
   
 ##  <a name="setdefaultdacl"></a>CAccessToken::SetDefaultDacl  
@@ -997,7 +998,7 @@ bool SetDefaultDacl(const CDacl& rDacl) throw(...);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La valeur par défaut DACL est la liste DACL est utilisé par défaut lorsque de nouveaux objets sont créés avec ce jeton d’accès en vigueur.  
   
 ##  <a name="setowner"></a>CAccessToken::SetOwner  
@@ -1014,7 +1015,7 @@ bool SetOwner(const CSid& rSid) throw(...);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le propriétaire est le propriétaire par défaut qui est utilisé pour les nouveaux objets créés alors que ce jeton d’accès est en vigueur.  
   
 ##  <a name="setprimarygroup"></a>CAccessToken::SetPrimaryGroup  
@@ -1031,7 +1032,7 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le groupe principal est le groupe par défaut pour les nouveaux objets créés alors que ce jeton d’accès est en vigueur.  
   
 ## <a name="see-also"></a>Voir aussi  

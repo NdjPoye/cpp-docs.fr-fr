@@ -13,11 +13,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f09bdc306bc91184b546ff951dc36b94cda72bb5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3cb17a3c60f7b3f9271ed5ff569d9cd139ce80fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Comment : utiliser winmdidl.exe et midlrt.exe pour créer les fichiers .h à partir des métadonnées Windows
 Winmdidl.exe et midlrt.exe permettent l'interaction de niveau COM entre le code C++ natif et les composants Windows Runtime. Winmdidl.exe prend comme entrée un fichier .winmd qui contient des métadonnées pour un composant Windows Runtime et génère un fichier IDL. Midlrt.exe convertit ce fichier IDL en fichiers d'en-tête que le code C++ peut utiliser. Les deux outils sont exécutés sur la ligne de commande.  
@@ -58,7 +61,7 @@ Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:fil
  Le format du fichier sera UTF-8.  
   
  `Winmdfile`  
- Nom du fichier .winmd à analyser. Si le chemin d'accès contient des espaces, placez-le entre guillemets.  
+ Nom du fichier .winmd à analyser. Si le chemin d’accès contient des espaces, placez-le entre guillemets.  
   
 ## <a name="midlrt-command-line-arguments"></a>Arguments de ligne de commande Midlrt  
  Consultez [composants MIDLRT et Windows Runtime](http://msdn.microsoft.com/library/windows/desktop/hh869900\(v=vs.85\).aspx).  
@@ -76,7 +79,7 @@ Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:fil
   
  **C:\Program Files (x86) \Microsoft Visual Studio 12.0 > midlrt « c:\users\mblome\documents\test_for_winmdidl.idl » /metadata_dir « C:\Windows\System32\WinMetadata »**  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le fichier de sortie d'une opération winmdidl a le même nom que le fichier d'entrée, mais porte l'extension de nom de fichier .idl.  
   
  Si vous développez un composant Windows Runtime qui est accessible à partir de la bibliothèque WRL, vous pouvez spécifier que winmdidl.exe et midlrt.exe s'exécutent en guise d'étapes post-builds pour que les fichiers .idl et .h soient générés sur chaque build. Pour obtenir un exemple, consultez [déclenchement d’événements dans les composants Windows Runtime](/uwp/winrt-components/raising-events-in-windows-runtime-components).

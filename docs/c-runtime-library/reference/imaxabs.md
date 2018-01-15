@@ -29,11 +29,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2bdd796b23275b4585f0e94aeb20197f7e6b893a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15bd5e6a83449e161a2756ffcc22e60e1c0eebab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="imaxabs"></a>imaxabs
 Calcule la valeur absolue d’un entier de n’importe quelle taille.  
@@ -56,13 +57,13 @@ intmax_t imaxabs(
 > [!NOTE]
 >  Étant donné que la plage d’entiers négatifs qui peuvent être représentés à l’aide de `intmax_t` est supérieure à la plage d’entiers positifs qui peuvent être représentés, il est possible de fournir un argument à `imaxabs` qui ne peut pas être converti. Si la valeur absolue de l’argument ne peut pas être représentée par le type de retour, le comportement de `imaxabs` n’est pas défini.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`imaxabs`|\<inttypes.h>|  
   
- Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  

@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 735d47c2ecf172de207de3c551ed9e42319a5ada
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a3627af10dfb6fd18c54f772d26c33123127613a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="devnames-structure"></a>DEVNAMES, structure
 Le `DEVNAMES` structure contient des chaînes qui identifient le pilote, appareil et les noms de port de sortie d’une imprimante.  
@@ -50,10 +51,10 @@ typedef struct tagDEVNAMES { /* dvnm */
  *wDefault*  
  Spécifie si les chaînes contenues dans le `DEVNAMES` structure identifier l’imprimante par défaut. Cette chaîne est utilisée pour vérifier que l’imprimante par défaut n’a pas changé depuis la dernière opération d’impression. En entrée, si le **DN_DEFAULTPRN** indicateur est défini, les autres valeurs dans le `DEVNAMES` structure sont vérifiées par rapport à l’imprimante par défaut en cours. Si aucune de ces chaînes ne correspondent pas, un message d’avertissement s’affiche pour informer l’utilisateur qui doivent être remises en forme le document. En sortie, le **wDefault** membre est modifié uniquement si la boîte de dialogue Configuration de l’impression est affichée et l’utilisateur a choisi le bouton OK. Le **DN_DEFAULTPRN** indicateur est défini si l’imprimante par défaut a été sélectionnée. Si une imprimante spécifique est sélectionnée, l’indicateur n’est pas défini. Tous les autres bits dans ce membre sont réservés à un usage interne par la procédure de boîte de dialogue d’impression.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **PrintDlg** fonction utilise ces chaînes pour initialiser les membres dans la boîte de dialogue Imprimer définies par le système. Lorsque l’utilisateur ferme la boîte de dialogue, les informations sur l’imprimante sélectionnée sont retournées dans cette structure.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** commdlg.h  
   
 ## <a name="see-also"></a>Voir aussi  

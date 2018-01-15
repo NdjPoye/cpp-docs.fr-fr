@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -53,35 +52,19 @@ f1_keywords:
 - ATLPATH/ATL::CPathT::StripToRoot
 - ATLPATH/ATL::CPathT::UnquoteSpaces
 - ATLPATH/ATL::CPathT::m_strPath
-dev_langs:
-- C++
-helpviewer_keywords:
-- CPathT class
+dev_langs: C++
+helpviewer_keywords: CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 98b00e3f888d5f6bfb33f6ee24c4af2860bb470f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 781f2f6a3fba0e7ca4698809f196e623cfbb6bb8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpatht-class"></a>Classe de CPathT
 Cette classe représente un chemin d’accès.  
@@ -162,9 +145,9 @@ class CPathT
   
 |Nom|Description|  
 |----------|-----------------|  
-|[StringType de const CPathT::operator se](#operator_const_stringtype_amp)|Cet opérateur permet à l’objet à être traitée comme une chaîne.|  
+|[StringType de const CPathT::operator &](#operator_const_stringtype_amp)|Cet opérateur permet à l’objet à être traitée comme une chaîne.|  
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|Cet opérateur permet à l’objet à être traitée comme une chaîne.|  
-|[CPathT::operator StringType se](#operator_stringtype)|Cet opérateur permet à l’objet à être traitée comme une chaîne.|  
+|[CPathT::operator StringType &](#operator_stringtype)|Cet opérateur permet à l’objet à être traitée comme une chaîne.|  
 |[CPathT::operator +=](#operator_add_eq)|Cet opérateur ajoute une chaîne pour le chemin d’accès.|  
   
 ### <a name="public-data-members"></a>Membres de données publics  
@@ -182,7 +165,7 @@ class CPathT
   
  `typedef CPathT< CStringW > CPathW;`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlpath.h  
   
 ##  <a name="addbackslash"></a>CPathT::AddBackslash  
@@ -192,7 +175,7 @@ class CPathT
 void AddBackslash();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathAddBackSlash](http://msdn.microsoft.com/library/windows/desktop/bb773561).  
   
 ##  <a name="addextension"></a>CPathT::AddExtension  
@@ -209,7 +192,7 @@ BOOL AddExtension(PCXSTR pszExtension);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563).  
   
 ##  <a name="append"></a>CPathT::Append  
@@ -226,7 +209,7 @@ BOOL Append(PCXSTR pszMore);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565).  
   
 ##  <a name="buildroot"></a>CPathT::BuildRoot  
@@ -240,7 +223,7 @@ void BuildRoot(int iDrive);
  *iDrive*  
  Le numéro du lecteur (0 est a, 1 b : et ainsi de suite).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567).  
   
 ##  <a name="canonicalize"></a>CPathT::Canonicalize  
@@ -267,7 +250,7 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
  *pszFile*  
  Le chemin d’accès du fichier.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571).  
   
 ##  <a name="commonprefix"></a>CPathT::CommonPrefix  
@@ -353,7 +336,7 @@ BOOL FileExists() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE si le fichier existe, FALSE dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584).  
   
 ##  <a name="findextension"></a>CPathT::FindExtension  
@@ -379,7 +362,7 @@ int FindFileName() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la position du nom de fichier. Si aucun nom de fichier n’est trouvé, retourne -1.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589).  
   
 ##  <a name="getdrivenumber"></a>CPathT::GetDriveNumber  
@@ -392,7 +375,7 @@ int GetDriveNumber() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le numéro de disque en tant qu’entier comprise entre 0 et 25 (correspondant à 'A' à 'Z') si le chemin d’accès comporte une lettre de lecteur, ou -1 dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612).  
   
 ##  <a name="getextension"></a>CPathT::GetExtension  
@@ -415,7 +398,7 @@ BOOL IsDirectory() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une valeur différente de zéro (16) si le chemin d’accès est un répertoire, `FALSE` dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621).  
   
 ##  <a name="isfilespec"></a>CPathT::IsFileSpec  
@@ -445,7 +428,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE si le chemin d’accès contient le préfixe, ou FALSE dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650).  
   
 ##  <a name="isrelative"></a>CPathT::IsRelative  
@@ -458,7 +441,7 @@ BOOL IsRelative() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE si le chemin d’accès est relatif, ou FALSE si elle est absolue.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660).  
   
 ##  <a name="isroot"></a>CPathT::IsRoot  
@@ -488,7 +471,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE si les deux chaînes ont le même composant racine, ou FALSE dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687).  
   
 ##  <a name="isunc"></a>CPathT::IsUNC  
@@ -514,7 +497,7 @@ BOOL IsUNCServer() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE si la chaîne est un chemin d’accès UNC d’un serveur uniquement (aucun nom de partage) valide, ou FALSE dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722).  
   
 ##  <a name="isuncservershare"></a>CPathT::IsUNCServerShare  
@@ -537,7 +520,7 @@ BOOL IsUNCServerShare() const;
 StringType m_strPath;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `StringType`est le paramètre de modèle `CPathT`.  
   
 ##  <a name="makepretty"></a>CPathT::MakePretty  
@@ -550,7 +533,7 @@ BOOL MakePretty();
 ### <a name="return-value"></a>Valeur de retour  
  Sinon, retourne la valeur TRUE si le chemin d’accès a été convertie, ou FALSE.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725).  
   
 ##  <a name="matchspec"></a>CPathT::MatchSpec  
@@ -567,7 +550,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 ### <a name="return-value"></a>Valeur de retour  
  Sinon, retourne si la chaîne correspond à la valeur TRUE ou FALSE.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727).  
   
 ##  <a name="operator_add_eq"></a>CPathT::operator +=  
@@ -621,7 +604,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 typedef StringType::PCXSTR PCXSTR;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `StringType`est le paramètre de modèle `CPathT`.  
   
 ##  <a name="pxstr"></a>CPathT::PXSTR  
@@ -631,7 +614,7 @@ typedef StringType::PCXSTR PCXSTR;
 typedef StringType::PXSTR PXSTR;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `StringType`est le paramètre de modèle `CPathT`.  
   
 ##  <a name="quotespaces"></a>CPathT::QuoteSpaces  
@@ -681,7 +664,7 @@ BOOL RelativePathTo(
 void RemoveArgs();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742).  
   
 ##  <a name="removebackslash"></a>CPathT::RemoveBackslash  
@@ -691,7 +674,7 @@ void RemoveArgs();
 void RemoveBackslash();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743).  
   
 ##  <a name="removeblanks"></a>CPathT::RemoveBlanks  
@@ -701,7 +684,7 @@ void RemoveBackslash();
 void RemoveBlanks();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745).  
   
 ##  <a name="removeextension"></a>CPathT::RemoveExtension  
@@ -711,7 +694,7 @@ void RemoveBlanks();
 void RemoveExtension();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746).  
   
 ##  <a name="removefilespec"></a>CPathT::RemoveFileSpec  
@@ -764,7 +747,7 @@ int SkipRoot() const;
 void StripPath();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756).  
   
 ##  <a name="striptoroot"></a>CPathT::StripToRoot  
@@ -777,7 +760,7 @@ BOOL StripToRoot();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne TRUE si une lettre de lecteur valide a été trouvé dans le chemin d’accès, ou FALSE dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757).  
   
 ##  <a name="unquotespaces"></a>CPathT::UnquoteSpaces  
@@ -787,7 +770,7 @@ BOOL StripToRoot();
 void UnquoteSpaces();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763).  
   
 ##  <a name="xchar"></a>CPathT::XCHAR  
@@ -797,7 +780,7 @@ void UnquoteSpaces();
 typedef StringType::XCHAR XCHAR;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `StringType`est le paramètre de modèle `CPathT`.  
   
 ## <a name="see-also"></a>Voir aussi  

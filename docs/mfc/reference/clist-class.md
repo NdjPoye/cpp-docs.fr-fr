@@ -61,11 +61,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ed7cd5ca4a1c3ef08707efc722c8f6ee299295c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7d96a9c1a1b91d7738f768387bf0c24abd01ba22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clist-class"></a>CList (classe)
 Prend en charge les listes ordonnées d'objets non uniques accessibles séquentiellement ou par valeur.  
@@ -118,7 +119,7 @@ class CList : public CObject
  `ARG` *_* `TYPE`  
  Type utilisé pour référencer des objets stockés dans la liste. Peut être une référence.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CList`listes se comportent comme les listes à chaînage double.  
   
  Une variable de type **POSITION** est une clé pour la liste. Vous pouvez utiliser un **POSITION** variable comme un itérateur pour parcourir une liste de manière séquentielle et comme un signet à un espace réservé. Une position n’est pas identique à un index, toutefois.  
@@ -139,7 +140,7 @@ class CList : public CObject
   
  `CList`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxtempl.h  
   
 ##  <a name="addhead"></a>CList::AddHead  
@@ -163,7 +164,7 @@ void AddHead(CList* pNewList);
 ### <a name="return-value"></a>Valeur de retour  
  La première version retourne le **POSITION** valeur de l’élément nouvellement inséré.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La liste peut être vide avant l’opération.  
   
 ### <a name="example"></a>Exemple  
@@ -190,7 +191,7 @@ void AddTail(CList* pNewList);
 ### <a name="return-value"></a>Valeur de retour  
  La première version retourne le **POSITION** valeur de l’élément nouvellement inséré.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La liste peut être vide avant l’opération.  
   
 ### <a name="example"></a>Exemple  
@@ -207,7 +208,7 @@ CList(INT_PTR nBlockSize = 10);
  `nBlockSize`  
  La granularité d’allocation de mémoire pour l’extension de la liste.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  À mesure que la liste augmente, la mémoire est allouée en unités de `nBlockSize` entrées.  
   
 ### <a name="example"></a>Exemple  
@@ -252,7 +253,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
 ### <a name="return-value"></a>Valeur de retour  
  A **POSITION** valeur qui peut être utilisée pour l’itération ou l’extraction de pointeur d’objet ; **NULL** si `nIndex` est négatif ou trop grande.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il démarre une analyse séquentielle du début de la liste, l’arrêt sur la  *n* élément th.  
   
 ### <a name="example"></a>Exemple  
@@ -276,7 +277,7 @@ const TYPE& GetAt(POSITION position) const;
 ### <a name="return-value"></a>Valeur de retour  
  Consultez la description de la valeur de retour de `GetHead`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `GetAt`Retourne l’élément (ou une référence à l’élément) associée à une position donnée. Il n’est pas identique à un index, et vous ne pouvez pas utiliser un **POSITION** valeur vous-même. Une variable de type **POSITION** est une clé pour la liste.  
   
  Vous devez vous assurer que votre **POSITION** valeur représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
@@ -294,7 +295,7 @@ INT_PTR GetCount() const;
 ### <a name="return-value"></a>Valeur de retour  
  Valeur entière qui contient le nombre d’éléments.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appel de cette méthode génère le même résultat que la [CList::GetSize](#getsize) (méthode).  
   
 ### <a name="example"></a>Exemple  
@@ -318,7 +319,7 @@ TYPE& GetHead();
   
  Si la liste n’est pas **const**, `GetHead` retourne une référence à l’élément au début de la liste. Cela permet la fonction doit être utilisé sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez vous assurer que la liste n’est pas vide avant d’appeler `GetHead`. Si la liste est vide, la version Debug de la bibliothèque Microsoft Foundation Class déclare. Utilisez [IsEmpty](#isempty) pour vérifier que la liste contient des éléments.  
   
 ### <a name="example"></a>Exemple  
@@ -357,7 +358,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
   
  Si la liste n’est pas **const**, `GetNext` retourne une référence à un élément de la liste. Cela permet la fonction doit être utilisé sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous pouvez utiliser `GetNext` dans une boucle itération vers l’avant, si vous établissez la position initiale avec un appel à `GetHeadPosition` ou **trouver**.  
   
  Vous devez vous assurer que votre **POSITION** valeur représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
@@ -387,7 +388,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
   
  Si la liste n’est pas **const**, `GetPrev` retourne une référence à un élément de la liste. Cela permet la fonction doit être utilisé sur chaque côté d’une instruction d’assignation et par conséquent, les entrées de liste à modifier.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous pouvez utiliser `GetPrev` dans une boucle d’itération inverse si vous établissez la position initiale avec un appel à `GetTailPosition` ou **trouver**.  
   
  Vous devez vous assurer que votre **POSITION** valeur représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
@@ -407,7 +408,7 @@ INT_PTR GetSize() const;
 ### <a name="return-value"></a>Valeur de retour  
  Nombre d'éléments de la liste.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette méthode pour récupérer le nombre d’éléments dans la liste.  Appel de cette méthode génère le même résultat que la [CList::GetCount](#getcount) (méthode).  
   
 ### <a name="example"></a>Exemple  
@@ -428,7 +429,7 @@ const TYPE& GetTail() const;
 ### <a name="return-value"></a>Valeur de retour  
  Consultez la description de la valeur de retour de [GetHead](../../mfc/reference/coblist-class.md#gethead).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez vous assurer que la liste n’est pas vide avant d’appeler `GetTail`. Si la liste est vide, la version Debug de la bibliothèque Microsoft Foundation Class déclare. Utilisez [IsEmpty](../../mfc/reference/coblist-class.md#isempty) pour vérifier que la liste contient des éléments.  
   
 ### <a name="example"></a>Exemple  
@@ -490,7 +491,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur **POSITION** qui peut être utilisé pour l’itération ou l’extraction d’un élément de liste.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si *position* est **NULL**, l’élément est inséré au début de la liste.  
   
 ### <a name="example"></a>Exemple  
@@ -516,7 +517,7 @@ BOOL IsEmpty() const;
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Aucune erreur n’est générée si la liste est déjà vide.  
   
 ### <a name="example"></a>Exemple  
@@ -533,7 +534,7 @@ void RemoveAt(POSITION position);
  *position*  
  La position de l’élément à supprimer de la liste.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez vous assurer que votre **POSITION** valeur représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
   
 ### <a name="example"></a>Exemple  
@@ -553,7 +554,7 @@ TYPE RemoveHead();
 ### <a name="return-value"></a>Valeur de retour  
  L’élément précédemment au début de la liste.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez vous assurer que la liste n’est pas vide avant d’appeler `RemoveHead`. Si la liste est vide, la version Debug de la bibliothèque Microsoft Foundation Class déclare. Utilisez [IsEmpty](#isempty) pour vérifier que la liste contient des éléments.  
   
 ### <a name="example"></a>Exemple  
@@ -573,7 +574,7 @@ TYPE RemoveTail();
 ### <a name="return-value"></a>Valeur de retour  
  L’élément qui était à la fin de la liste.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez vous assurer que la liste n’est pas vide avant d’appeler `RemoveTail`. Si la liste est vide, la version Debug de la bibliothèque Microsoft Foundation Class déclare. Utilisez [IsEmpty](#isempty) pour vérifier que la liste contient des éléments.  
   
 ### <a name="example"></a>Exemple  
@@ -596,7 +597,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
  `newElement`  
  L’élément à ajouter à la liste.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il n’est pas identique à un index, et vous ne pouvez pas utiliser un **POSITION** valeur vous-même. `SetAt`écrit l’élément à la position spécifiée dans la liste.  
   
  Vous devez vous assurer que votre **POSITION** valeur représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  

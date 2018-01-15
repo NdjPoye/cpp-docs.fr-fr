@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bb8e05ca3ef52515af58db455ed83da593d6bdfb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8985434365cb8144fc2ee3680ef19c5b8ed99301
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="weakreference-class1"></a>WeakReference Class1
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -30,7 +33,7 @@ Prend en charge l’infrastructure WRL et n’est pas destinée à être utilis�
 class WeakReference;  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Représente un *référence faible* qui peut être utilisé avec le Windows Runtime ou le COM classique. Une référence faible représente un objet qui peut être accessible ou non.  
   
  A `WeakReference` objet conserve un *référence forte*, qui est un pointeur vers un objet et un *nombre de référence forte*, qui est le nombre de copies de la référence forte qui ont été distribuées par la méthode Resolve(). Alors que le nombre de référence forte est différente de zéro, la référence forte est valide et l’objet est accessible. Lorsque le nombre de référence forte devient égal à zéro, la référence forte n’est pas valide et que l’objet n’est pas accessible.  
@@ -60,7 +63,7 @@ class WeakReference;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `WeakReference`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  

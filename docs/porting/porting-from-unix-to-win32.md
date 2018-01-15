@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa15cb2eac229201dd0f686428133224b2f32afe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b10ee9e9b5a53d6f9f936c4bc158db8ebfb6be13
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="porting-from-unix-to-win32"></a>Portage d'UNIX vers Win32
 Pour effectuer la migration d'applications d'UNIX vers Windows, vous avez le choix entre plusieurs options :  
@@ -44,11 +45,11 @@ Pour effectuer la migration d'applications d'UNIX vers Windows, vous avez le cho
 ### <a name="unix-migration-guides"></a>Guides de migration d'UNIX  
  Le manuel « UNIX Custom Application Migration Guide » fournit une aide technique sur la migration du code de l'environnement UNIX vers l'environnement Win32.  
   
- [http://go.microsoft.com/fwlink/?LinkId=95428](http://go.microsoft.com/fwlink/?LinkId=95428)  
+ [http://go.microsoft.com/fwlink/p/?linkid=95428](http://go.microsoft.com/fwlink/p/?linkid=95428)  
   
  Le manuel « Unix Migration Project Guide » vient compléter le manuel « UNIX Custom Application Migration Guide » en proposant une aide détaillée sur la migration de projets majeurs d'UNIX vers Win32. Ce guide fournit des conseils relatifs aux problèmes susceptibles de se produire aux différentes étapes de la migration d'un projet. Il peut être téléchargé à l'adresse suivante :  
   
- [http://go.microsoft.com/fwlink/?linkid=20012](http://go.microsoft.com/fwlink/?linkid=20012)  
+ [http://go.microsoft.com/fwlink/p/?linkid=20012](http://go.microsoft.com/fwlink/p/?linkid=20012)  
   
 ### <a name="microsoft-windows-services-for-unix-sfu"></a>Microsoft Windows Services for UNIX (SFU)  
  Microsoft Windows Services for UNIX (SFU) fournit une gamme complète de services multiplateforme pour intégrer Windows dans les environnements UNIX existants. Ces services permettent le partage de fichiers, l’administration et l’accès à distance, la synchronisation de mot de passe et la gestion d’annuaires communs. Ils fournissent aussi un ensemble d’utilitaires communs et un shell.  

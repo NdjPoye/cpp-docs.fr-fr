@@ -25,11 +25,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a30b1c8a9949ab00259dc3335bb842ffc80a0f4f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae7ceb640e7b92829e4134350a6e6c97747bfd77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-constants"></a>constantes d’espace de noms d’accès concurrentiel
 ||||  
@@ -56,7 +57,7 @@ const __declspec(selectany) GUID ChoreEventGuid =
     { 0x7E854EC7, 0xCDC4, 0x405a, { 0xB5, 0xB2, 0xAA, 0xF7, 0xC9, 0xE7, 0xD4, 0x0C } };
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette catégorie d’événements n’est pas actuellement déclenchée par le Runtime d’accès concurrentiel.  
   
 ##  <a name="concrt_providerguid"></a>ConcRT_ProviderGuid  
@@ -82,7 +83,7 @@ const __declspec(selectany) GUID ConcRTEventGuid =
     { 0x72B14A7D, 0x704C, 0x423e, { 0x92, 0xF8, 0x7E, 0x6D, 0x64, 0xBC, 0xB9, 0x2A } };
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette catégorie d’événements n’est pas actuellement déclenchée par le Runtime d’accès concurrentiel.  
   
 ##  <a name="cooperative_timeout_infinite"></a>COOPERATIVE_TIMEOUT_INFINITE  
@@ -122,7 +123,7 @@ const __declspec(selectany) GUID LockEventGuid =
     { 0x79A60DC6, 0x5FC8, 0x4952, { 0xA4, 0x1C, 0x11, 0x63, 0xAE, 0xEC, 0x5E, 0xB8 } };
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette catégorie d’événements n’est pas actuellement déclenchée par le Runtime d’accès concurrentiel.  
   
 ##  <a name="maxexecutionresources"></a>MaxExecutionResources  
@@ -164,7 +165,7 @@ const __declspec(selectany) GUID ResourceManagerEventGuid =
     { 0x2718D25B, 0x5BF5, 0x4479, { 0x8E, 0x88, 0xBA, 0xBC, 0x64, 0xBD, 0xBF, 0xCA } };
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette catégorie d’événements n’est pas actuellement déclenchée par le Runtime d’accès concurrentiel.  
   
 ##  <a name="schedulegroupeventguid"></a>ScheduleGroupEventGuid  
@@ -175,7 +176,7 @@ const __declspec(selectany) GUID ScheduleGroupEventGuid =
     { 0xE8A3BF1F, 0xA86B, 0x4390, { 0x9C, 0x60, 0x53, 0x90, 0xB9, 0x69, 0xD2, 0x2C } };
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette catégorie d’événements n’est pas actuellement déclenchée par le Runtime d’accès concurrentiel.  
   
 ##  <a name="schedulereventguid"></a>SchedulerEventGuid  

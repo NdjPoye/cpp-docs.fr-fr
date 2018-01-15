@@ -39,11 +39,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc8329781d794d2abb460c3bc93948939b26d2ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: edb579cff639da9965c7214c2dd8abce8459d254
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Classe de CMFCBaseVisualManager
 Une couche entre dérivée gestionnaires visuels et de l’API de thème Windows.  
@@ -90,7 +91,7 @@ class CMFCBaseVisualManager: public CObject
 |[CMFCBaseVisualManager::CleanUpThemes](#cleanupthemes)|Appels `CloseThemeData` pour tous les handles obtenu dans `UpdateSystemColors`.|  
 |[CMFCBaseVisualManager::UpdateSystemColors](#updatesystemcolors)|Appels `OpenThemeData` pour obtenir des handles pour les différents contrôles de dessin : windows, des barres d’outils, des boutons et ainsi de suite.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous n’avez pas instancier directement des objets de cette classe.  
   
  S’agissant d’une classe de base pour tous les gestionnaires visuels, vous pouvez simplement appeler [CMFCVisualManager::GetInstance](../../mfc/reference/cmfcvisualmanager-class.md#getinstance), obtenir un pointeur vers le gestionnaire Visual actuel et accéder aux méthodes de `CMFCBaseVisualManager` à l’aide de ce pointeur. Toutefois, si vous disposez d’un contrôle à l’aide du thème actuel de Windows, il est préférable d’utiliser le `CMFCVisualManagerWindows` interface.  
@@ -100,7 +101,7 @@ class CMFCBaseVisualManager: public CObject
   
  [CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxvisualmanager.h  
   
 ##  <a name="cleanupthemes"></a>CMFCBaseVisualManager::CleanUpThemes  
@@ -110,7 +111,7 @@ class CMFCBaseVisualManager: public CObject
 void CleanUpThemes();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Uniquement réservé à un usage interne.  
   
 ##  <a name="cmfcbasevisualmanager"></a>CMFCBaseVisualManager::CMFCBaseVisualManager  
@@ -159,7 +160,7 @@ virtual BOOL DrawCheckBox(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le thème API est activée ; dans le cas contraire `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les valeurs de `nState` correspondent aux styles de case à cocher suivante.  
   
 |nState|Style de la case à cocher|  
@@ -383,7 +384,7 @@ virtual WinXpTheme GetStandardWindowsTheme();
 void UpdateSystemColors();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Uniquement réservé à un usage interne.  
   
 ## <a name="see-also"></a>Voir aussi  

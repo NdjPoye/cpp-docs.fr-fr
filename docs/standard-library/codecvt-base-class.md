@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5ead26920f0b1aa7f49c43b60640a03241138163
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f8bdb75c1b6ad9340b4ae774899863762cbef4a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="codecvtbase-class"></a>codecvt_base, classe
 Classe de base de la classe codecvt utilisée pour définir un type d’énumération appelé **result**, utilisé comme type de retour pour les fonctions membres de la classe facet afin d’indiquer le résultat d’une conversion.  
@@ -54,7 +55,7 @@ protected:
   
 - **noconv** si la fonction n’exécute aucune conversion.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<locale>  
   
  **Espace de noms :** std  

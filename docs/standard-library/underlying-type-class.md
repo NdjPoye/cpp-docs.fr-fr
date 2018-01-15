@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b539f62e1e9c6b9bf11b176bd50f7dca63508ddd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c345c6751ac962602a863d52addce2a7d4f0fcb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="underlyingtype-class"></a>underlying_type, classe
 Génère le type intégral sous-jacent pour un type d’énumération.  
@@ -40,7 +41,7 @@ struct underlying_type;
 ## <a name="remarks"></a>Notes  
  Le typedef de membre `type` de la classe de modèle désigne le type intégral sous-jacent de `T`, lorsque `T` est un type d’énumération ; sinon il n’existe aucun typedef de membre `type`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<type_traits>  
   
  **Espace de noms :** std  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,37 +13,19 @@ f1_keywords:
 - AFXDB_/CLongBinary::CLongBinary
 - AFXDB_/CLongBinary::m_dwDataLength
 - AFXDB_/CLongBinary::m_hData
-dev_langs:
-- C++
-helpviewer_keywords:
-- BLOB (binary large object)
-- CLongBinary class
-- BLOB (binary large object), CLongBinary class
+dev_langs: C++
+helpviewer_keywords: CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 4f06c6ef0b988a348f074d50ce7a33e8015a20fe
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 49661932192a32550d50edfbbc52d7967cb78dcd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clongbinary-class"></a>CLongBinary (classe)
 Simplifie l'utilisation d'objets de données binaires de très grande taille (souvent appelés BLOB ou « objets blob ») dans une base de données.  
@@ -70,7 +51,7 @@ class CLongBinary : public CObject
 |[CLongBinary::m_dwDataLength](#m_dwdatalength)|Contient la taille réelle en octets de l’objet de données dont le handle est stocké dans `m_hData`.|  
 |[CLongBinary::m_hData](#m_hdata)|Contient un Windows `HGLOBAL` handle vers l’objet de l’image réelle.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Par exemple, un champ d’enregistrement dans une table SQL peut contenir une image bitmap représentant une image. A `CLongBinary` objet stocke un tel objet et effectue le suivi de sa taille.  
   
 > [!NOTE]
@@ -82,12 +63,12 @@ class CLongBinary : public CObject
   
  Pour plus d’informations sur les objets de grande taille et l’utilisation de `CLongBinary`, consultez les articles [Recordset (ODBC)](../../data/odbc/recordset-odbc.md) et [Recordset : utilisation avec les éléments de données volumineux (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CLongBinary`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdb_.h  
   
 ##  <a name="clongbinary"></a>CLongBinary::CLongBinary  
@@ -104,7 +85,7 @@ CLongBinary();
 SQLULEN m_dwDataLength;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette taille peut être inférieure à la taille du bloc de mémoire allouée pour les données. Appelez Win32 [GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593) fonction permettant d’obtenir la taille allouée.  
   
 ##  <a name="m_hdata"></a>CLongBinary::m_hData  
@@ -118,4 +99,3 @@ HGLOBAL m_hData;
  [CObject (classe)](../../mfc/reference/cobject-class.md)   
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
  [CRecordset, classe](../../mfc/reference/crecordset-class.md)
-

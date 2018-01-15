@@ -28,11 +28,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce4021ee01052f1c830bba5ad1932898fd84b281
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d18afdfe08a97a7a685b373b1f8951799836ab1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Agrégation et Macros de fabrique de classe
 Ces macros fournissent des méthodes de contrôle de l’agrégation et de la déclaration des fabriques de classes.  
@@ -52,7 +53,7 @@ Ces macros fournissent des méthodes de contrôle de l’agrégation et de la d�
 |[MACRO DECLARE_PROTECT_FINAL_CONSTRUCT](#declare_protect_final_construct)|Protège l’objet externe d’une suppression pendant la construction d’un objet interne.|  
 |[DECLARE_VIEW_STATUS](#declare_view_status)|Spécifie le **VIEWSTATUS** indicateurs au conteneur.|  
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
    
 ##  <a name="declare_aggregatable"></a>DECLARE_AGGREGATABLE  
@@ -66,7 +67,7 @@ DECLARE_AGGREGATABLE( x )
  *x*  
  [in] Le nom de la classe que vous définissez comme peuvent être agrégées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  [CComCoClass](../../atl/reference/ccomcoclass-class.md) contient cette macro afin de spécifier le modèle d’agrégation par défaut. Pour remplacer cette valeur par défaut, spécifiez la [DECLARE_NOT_AGGREGATABLE](#declare_not_aggregatable) ou [DECLARE_ONLY_AGGREGATABLE](#declare_only_aggregatable) macro dans votre définition de classe.  
   
 ### <a name="example"></a>Exemple  
@@ -79,7 +80,7 @@ DECLARE_AGGREGATABLE( x )
 DECLARE_CLASSFACTORY()
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  [CComCoClass](../../atl/reference/ccomcoclass-class.md) utilise cette macro pour déclarer la fabrique de classe par défaut pour votre objet.  
   
 ### <a name="example"></a>Exemple  
@@ -93,7 +94,7 @@ class CComClassFactory : public IClassFactory,
 public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `CComClassFactory`implémente le [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interface, qui contient des méthodes pour la création d’un objet d’un CLSID particulier, ainsi que le verrouillage de la fabrique de classe en mémoire afin d’autoriser de nouveaux objets à créer plus rapidement. **IClassFactory** doit être implémentée pour chaque classe que vous inscrivez dans le Registre système et à laquelle vous affectez un CLSID.  
   
  Objets ATL acquièrent normalement une fabrique de classe en dérivant de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Cette classe inclut la macro [DECLARE_CLASSFACTORY](#declare_classfactory), qui déclare `CComClassFactory` en tant que la fabrique de classe par défaut. Pour remplacer cette valeur par défaut, spécifiez l’une de le `DECLARE_CLASSFACTORY` *XXX* macros dans votre définition de classe. Par exemple, le [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex) macro utilise la classe spécifiée pour la fabrique de classe :  
@@ -121,7 +122,7 @@ DECLARE_CLASSFACTORY_EX( cf )
  `cf`  
  [in] Le nom de la classe qui implémente votre objet de fabrique de classe.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `cf` paramètre doit dériver de [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) et remplacez le `CreateInstance` (méthode).  
   
  [CComCoClass](../../atl/reference/ccomcoclass-class.md) inclut la [DECLARE_CLASSFACTORY](#declare_classfactory) (macro), qui spécifie `CComClassFactory` comme la fabrique de classe par défaut. Toutefois, en incluant le `DECLARE_CLASSFACTORY_EX` macro dans la définition de classe de votre objet, vous remplacez cette valeur par défaut.  
@@ -140,7 +141,7 @@ DECLARE_CLASSFACTORY2( lic )
  *contrat de licence d'*  
  [in] Une classe qui implémente `VerifyLicenseKey`, `GetLicenseKey`, et `IsLicenseValid`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  [CComCoClass](../../atl/reference/ccomcoclass-class.md) inclut la [DECLARE_CLASSFACTORY](#declare_classfactory) (macro), laquelle spécifie [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) en tant que la fabrique de classe par défaut. Toutefois, en incluant le `DECLARE_CLASSFACTORY2` macro dans la définition de classe de votre objet, vous remplacez cette valeur par défaut.  
   
 ### <a name="example"></a>Exemple  
@@ -166,7 +167,7 @@ class  CComClassFactory2 : public IClassFactory2,
   
 - **(de) BOOL IsLicenseValid statiques ;**  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `CComClassFactory2`implémente le [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interface, qui est une extension de [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). **IClassFactory2** contrôles création une licence par le biais d’un objet. Une fabrique de classe s’exécutant sur un ordinateur sous licence peut fournir une clé de licence d’exécution. Cette clé de licence permet à une application instancier des objets lorsqu’il n’existe pas d’une licence de l’ordinateur complet.  
   
  Objets ATL acquièrent normalement une fabrique de classe en dérivant de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Cette classe inclut la macro [DECLARE_CLASSFACTORY](#declare_classfactory), qui déclare [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) en tant que la fabrique de classe par défaut. Pour utiliser `CComClassFactory2`, spécifiez la [macro DECLARE_CLASSFACTORY2](#declare_classfactory2) macro dans la définition de classe de votre objet. Exemple :  
@@ -186,7 +187,7 @@ class  CComClassFactory2 : public IClassFactory2,
 DECLARE_CLASSFACTORY_AUTO_THREAD()
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  [CComCoClass](../../atl/reference/ccomcoclass-class.md) inclut la [DECLARE_CLASSFACTORY](#declare_classfactory) (macro), laquelle spécifie [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) en tant que la fabrique de classe par défaut. Toutefois, en incluant le `DECLARE_CLASSFACTORY_AUTO_THREAD` macro dans la définition de classe de votre objet, vous remplacez cette valeur par défaut.  
   
  Lorsque vous créez des objets dans des cloisonnements plusieurs (dans un serveur out-of-process), ajoutez `DECLARE_CLASSFACTORY_AUTO_THREAD` à votre classe.  
@@ -205,7 +206,7 @@ class CComClassFactoryAutoThread : public IClassFactory,
 public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `CComClassFactoryAutoThread`est semblable à [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), mais permet aux objets d’être créés dans des cloisonnements plusieurs. Pour tirer parti de cette prise en charge, dérivez votre module EXE [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
   
  Objets ATL acquièrent normalement une fabrique de classe en dérivant de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Cette classe inclut la macro [DECLARE_CLASSFACTORY](#declare_classfactory), qui déclare [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) en tant que la fabrique de classe par défaut. Pour utiliser `CComClassFactoryAutoThread`, spécifiez la [DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread) macro dans la définition de classe de votre objet. Exemple :  
@@ -223,7 +224,7 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
  `obj`  
  [in] Le nom de votre objet de classe.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  [CComCoClass](../../atl/reference/ccomcoclass-class.md) inclut la [DECLARE_CLASSFACTORY](#declare_classfactory) (macro), laquelle spécifie [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) en tant que la fabrique de classe par défaut. Toutefois, en incluant le `DECLARE_CLASSFACTORY_SINGLETON` macro dans la définition de classe de votre objet, vous remplacez cette valeur par défaut.  
   
 ### <a name="example"></a>Exemple  
@@ -246,7 +247,7 @@ class CComClassFactorySingleton : public CComClassFactory
   
  `CComClassFactorySingleton`dérive de [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) et utilise [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) pour construire un objet unique. Chaque appel à la `CreateInstance` méthode interroge simplement cet objet pour un pointeur d’interface.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Objets ATL acquièrent normalement une fabrique de classe en dérivant de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Cette classe inclut la macro [DECLARE_CLASSFACTORY](#declare_classfactory), qui déclare `CComClassFactory` en tant que la fabrique de classe par défaut. Pour utiliser `CComClassFactorySingleton`, spécifiez la [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton) macro dans la définition de classe de votre objet. Exemple :  
   
  [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]  
@@ -258,7 +259,7 @@ class CComClassFactorySingleton : public CComClassFactory
 DECLARE_GET_CONTROLLING_UNKNOWN()
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ajoutez cette macro à votre objet, si vous obtenez le message d’erreur du compilateur `GetControllingUnknown` n’est pas défini (par exemple, dans **CComAggregateCreator**).  
   
 ##  <a name="declare_not_aggregatable"></a>DECLARE_NOT_AGGREGATABLE  
@@ -272,7 +273,7 @@ DECLARE_NOT_AGGREGATABLE( x )
  *x*  
  [in] Le nom de l’objet de classe que vous définissez en tant que ne peut pas être agrégé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `DECLARE_NOT_AGGREGATABLE`entraîne `CreateInstance` pour retourner une erreur ( **CLASS_E_NOAGGREGATION**) si une tentative est faite à agréger sur votre objet.  
   
  Par défaut, [CComCoClass](../../atl/reference/ccomcoclass-class.md) contient le [DECLARE_AGGREGATABLE](#declare_aggregatable) (macro), ce qui indique que votre objet peut être agrégée. Pour remplacer ce comportement par défaut, incluez `DECLARE_NOT_AGGREGATABLE` dans votre définition de classe.  
@@ -291,7 +292,7 @@ DECLARE_ONLY_AGGREGATABLE( x )
  *x*  
  [in] Le nom de l’objet de classe que vous définissez comme uniquement peut être agrégé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `DECLARE_ONLY_AGGREGATABLE`provoque une erreur ( **E_FAIL**) si une tentative est faite pour **CoCreate** votre objet en tant qu’objet brutes et non agrégée.  
   
  Par défaut, [CComCoClass](../../atl/reference/ccomcoclass-class.md) contient le [DECLARE_AGGREGATABLE](#declare_aggregatable) (macro), ce qui indique que votre objet peut être agrégée. Pour remplacer ce comportement par défaut, incluez `DECLARE_ONLY_AGGREGATABLE` dans votre définition de classe.  
@@ -310,7 +311,7 @@ DECLARE_POLY_AGGREGATABLE( x )
  *x*  
  [in] Le nom de l’objet de classe que vous définissez peuvent être agrégées ou ne peut pas être agrégé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lors de la création, la valeur de l’inconnu extérieur est vérifiée. S’il s’agit **NULL**, **IUnknown** est implémenté pour un objet brutes et non agrégée. Si l’inconnu extérieur n’est pas **NULL**, **IUnknown** est implémenté pour un objet.  
   
  L’avantage d’utiliser `DECLARE_POLY_AGGREGATABLE` est que vous n’avez pas à la fois `CComAggObject` et `CComObject` dans votre module pour gérer les cas regroupés et. Un seul `CComPolyObject` objet gère les deux cas. Cela ne signifie qu’une seule copie de vtable et une seule copie des fonctions existent dans votre module. Si votre vtable est volumineuse, cela peut réduire considérablement la taille de votre module. Toutefois, si votre vtable est petite, à l’aide de `CComPolyObject` peut entraîner une taille légèrement supérieure de module, car il n’est pas optimisée pour un objet regroupé ou, comme le sont `CComAggObject` et `CComObject`.  

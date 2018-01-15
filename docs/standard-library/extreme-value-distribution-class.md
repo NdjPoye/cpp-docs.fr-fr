@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::extreme_value_distribution::param_type::b
 - random/std::extreme_value_distribution::param_type::operator==
 - random/std::extreme_value_distribution::param_type::operator!=
-- random/std::extreme_value_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::extreme_value_distribution [C++]
 - std::extreme_value_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b0825641039828073da4520c2f0704f50e0e6f21
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 5cf43efdbe6f7c0cd79bee18e8a696986d0b5446
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="extremevaluedistribution-class"></a>extreme_value_distribution, classe
 Génère une distribution suivant la loi d'extremum.  
@@ -98,7 +95,7 @@ Le type des résultats à virgule flottante est `double` par défaut. Pour conna
   
  Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).  
   
- Pour plus d’informations sur la distribution suivant la loi d’extremum, consultez l’article de Wolfram MathWorld [Extreme Value Distribution](http://go.microsoft.com/fwlink/LinkId=401110).  
+ Pour plus d’informations sur la distribution suivant la loi d’extremum, consultez l’article de Wolfram MathWorld [Extreme Value Distribution](http://go.microsoft.com/fwlink/p/?linkid=401110).  
   
 ## <a name="example"></a>Exemple  
   
@@ -183,7 +180,7 @@ Distribution for 10 samples:
     10: 2.0568757061  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<random>  
   
  **Espace de noms :** std  
@@ -245,7 +242,6 @@ struct param_type {
   
 ## <a name="see-also"></a>Voir aussi  
  [\<random>](../standard-library/random.md)
-
 
 
 

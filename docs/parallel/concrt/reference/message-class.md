@@ -22,11 +22,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5f0c62e8b783b7d97a6158a3f4a55501ed4450b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 55d1744d67156bcfcf6f76c757fc97ab0d4fd380
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-class"></a>message, classe
 Enveloppe de message de base contenant la charge utile de données transmise entre les blocs de messagerie.  
@@ -71,13 +72,13 @@ class message : public ::Concurrency::details::_Runtime_object;
 |----------|-----------------|  
 |[charge utile](#payload)|La charge utile de la `message` objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [des blocs de messages asynchrones](../../../parallel/concrt/asynchronous-message-blocks.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `message`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -122,7 +123,7 @@ message(
  `_Msg`  
  Une référence ou un pointeur vers un `message` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le constructeur qui prend un pointeur vers un `message` de l’objet comme argument lève une [invalid_argument](../../../standard-library/invalid-argument-class.md) exception si le paramètre `_Msg` est `NULL`.  
   
 ##  <a name="dtor"></a>~ message 

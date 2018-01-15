@@ -1,94 +1,96 @@
 ---
-title: "Prise en charge du compilateur pour les Type Traits (extensions du composant C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__is_simple_value_class"
-  - "__has_trivial_destructor"
-  - "__has_assign"
-  - "__is_union"
-  - "__is_class"
-  - "__is_abstract"
-  - "__has_trivial_assign"
-  - "__has_virtual_destructor"
-  - "__is_ref_array"
-  - "__is_base_of"
-  - "__has_copy"
-  - "__is_polymorphic"
-  - "__has_nothrow_constructor"
-  - "__is_ref_class"
-  - "__is_delegate"
-  - "__is_convertible_to"
-  - "__is_value_class"
-  - "__is_interface_class"
-  - "__has_nothrow_copy"
-  - "__is_sealed"
-  - "__has_trivial_constructor"
-  - "__has_trivial_copy"
-  - "__is_enum"
-  - "__has_nothrow_assign"
-  - "__has_finalizer"
-  - "__is_empty"
-  - "__is_pod"
-  - "__has_user_destructor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__is_class (mot clé) (C++)"
-  - "__is_pod (mot clé) (C++)"
-  - "__is_delegate (mot clé) (C++)"
-  - "__is_value_class (mot clé) (C++)"
-  - "__has_copy (mot clé) (C++)"
-  - "__has_nothrow_copy (mot clé) (C++)"
-  - "__is_interface_class (mot clé) (C++)"
-  - "__is_sealed (mot clé) (C++)"
-  - "__is_convertible_to (mot clé) (C++)"
-  - "__is_ref_class (mot clé) (C++)"
-  - "__has_trivial_copy (mot clé) (C++)"
-  - "__has_user_destructor (mot clé) (C++)"
-  - "__is_abstract (mot clé) (C++)"
-  - "__is_empty (mot clé) (C++)"
-  - "__has_trivial_assign (mot clé) (C++)"
-  - "__has_nothrow_constructor (mot clé) (C++)"
-  - "__is_ref_array (mot clé) (C++)"
-  - "__is_base_of (mot clé) (C++)"
-  - "__has_nothrow_assign (mot clé) (C++)"
-  - "__has_virtual_destructor (mot clé) (C++)"
-  - "__has_finalizer (mot clé) (C++)"
-  - "__is_union (mot clé) (C++)"
-  - "__has_assign (mot clé) (C++)"
-  - "__has_trivial_destructor (mot clé) (C++)"
-  - "__is_polymorphic (mot clé) (C++)"
-  - "__is_enum (mot clé) (C++)"
-  - "__is_simple_value_class (mot clé) (C++)"
-  - "__has_trivial_constructor (mot clé) (C++)"
+title: Prise en charge du compilateur pour les Type Traits (Extensions du composant C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __is_simple_value_class
+- __has_trivial_destructor
+- __has_assign
+- __is_union
+- __is_class
+- __is_abstract
+- __has_trivial_assign
+- __has_virtual_destructor
+- __is_ref_array
+- __is_base_of
+- __has_copy
+- __is_polymorphic
+- __has_nothrow_constructor
+- __is_ref_class
+- __is_delegate
+- __is_convertible_to
+- __is_value_class
+- __is_interface_class
+- __has_nothrow_copy
+- __is_sealed
+- __has_trivial_constructor
+- __has_trivial_copy
+- __is_enum
+- __has_nothrow_assign
+- __has_finalizer
+- __is_empty
+- __is_pod
+- __has_user_destructor
+dev_langs: C++
+helpviewer_keywords:
+- __is_class keyword [C++]
+- __is_pod keyword [C++]
+- __is_delegate keyword [C++]
+- __is_value_class keyword [C++]
+- __has_copy keyword [C++]
+- __has_nothrow_copy keyword [C++]
+- __is_interface_class keyword [C++]
+- __is_sealed keyword [C++]
+- __is_convertible_to keyword [C++]
+- __is_ref_class keyword [C++]
+- __has_trivial_copy keyword [C++]
+- __has_user_destructor keyword [C++]
+- __is_abstract keyword [C++]
+- __is_empty keyword [C++]
+- __has_trivial_assign keyword [C++]
+- __has_nothrow_constructor keyword [C++]
+- __is_ref_array keyword [C++]
+- __is_base_of keyword [C++]
+- __has_nothrow_assign keyword [C++]
+- __has_virtual_destructor keyword [C++]
+- __has_finalizer keyword [C++]
+- __is_union keyword [C++]
+- __has_assign keyword [C++]
+- __has_trivial_destructor keyword [C++]
+- __is_polymorphic keyword [C++]
+- __is_enum keyword [C++]
+- __is_simple_value_class keyword [C++]
+- __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-caps.latest.revision: 27
-caps.handback.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c069645e91d9d895309f00c5f39ddda950084e07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Prise en charge du compilateur pour les Type Traits (extensions du composant C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La prise en charge du compilateur *type traits*, qui indiquent les différentes caractéristiques d’un type au moment de la compilation.  
+# <a name="compiler-support-for-type-traits-c-component-extensions"></a>Prise en charge du compilateur pour les Type Traits (extensions du composant C++)
+Le compilateur prend en charge *les caractéristiques de type*, qui indiquent diverses caractéristiques d’un type au moment de la compilation.  
   
 ## <a name="all-runtimes"></a>Tous les runtimes  
- **Section Notes**  
+ **Remarques**  
   
  Les traits de type s'avèrent particulièrement utiles pour les programmeurs qui écrivent des bibliothèques.  
   
- La liste suivante contient les caractéristiques de type prises en charge par le compilateur. Tous les traits de type retournent `false` si la condition spécifiée par le nom du trait de type n'est pas remplie.  
+ La liste suivante contient les caractéristiques de type qui sont pris en charge par le compilateur. Tous les traits de type retournent `false` si la condition spécifiée par le nom du trait de type n'est pas remplie.  
   
- (Dans la liste suivante, les exemples de code sont écrits uniquement dans [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)]. Mais le trait de type correspondant est également pris en charge dans [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] sauf indication contraire. Le terme « type de plateforme » fait référence aux types [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] ou aux types du Common Language Runtime.)  
+ (Dans la liste suivante, les exemples de code sont écrits uniquement en c++ / CLI. Mais le trait de type correspondant est également pris en charge dans [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] sauf indication contraire. Le terme « type de plateforme » fait référence à des types Windows Runtime ou types common language runtime).  
   
 -   `__has_assign(` `type` `)`  
   
@@ -124,7 +126,7 @@ La prise en charge du compilateur *type traits*, qui indiquent les différentes 
   
 -   `__has_finalizer(` `type` `)`  
   
-     (Non pris en charge dans [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)].) Retourne la valeur true si le type CLR a un finaliseur. Consultez [destructeurs et finaliseurs dans Visual C++](../misc/destructors-and-finalizers-in-visual-cpp.md) Pour plus d’informations.  
+     (Non pris en charge dans [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)].) Retourne la valeur true si le type CLR a un finaliseur. Consultez [destructeurs et finaliseurs dans Comment : définir et consommer des classes et structs (C + c++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) pour plus d’informations.  
   
     ```  
   
@@ -304,7 +306,7 @@ La prise en charge du compilateur *type traits*, qui indiquent les différentes 
   
      Retourne la valeur true si le type est un type abstrait. Pour plus d’informations sur les types abstraits natifs, consultez [abstraite](../windows/abstract-cpp-component-extensions.md).  
   
-     `__is_abstract` fonctionne également pour les types de plateforme. Une interface avec au moins un membre est un type abstrait, à l'instar d'un type référence avec au moins un membre abstrait. Pour plus d’informations sur les types de plateforme abstrait, voir [des Classes abstraites](../cpp/abstract-classes-cpp.md)  
+     `__is_abstract` fonctionne également pour les types de plateforme. Une interface avec au moins un membre est un type abstrait, à l'instar d'un type référence avec au moins un membre abstrait. Pour plus d’informations sur les types de plateforme abstraits, consultez [Classes abstraites](../cpp/abstract-classes-cpp.md)  
   
     ```  
   
@@ -325,7 +327,7 @@ La prise en charge du compilateur *type traits*, qui indiquent les différentes 
   
      Retourne la valeur true si le premier type est une classe de base du second type, ou si ces deux types sont les mêmes.  
   
-     `__is_base_of` fonctionne également sur les types de plateforme. Par exemple, il renvoie la valeur true si le premier type est une [classe d’interface](../windows/interface-class-cpp-component-extensions.md) et le second type implémente l’interface.  
+     `__is_base_of` fonctionne également sur les types de plateforme. Par exemple, il retourne true si le premier type est un [classe d’interface](../windows/interface-class-cpp-component-extensions.md) et le second type implémente l’interface.  
   
     ```  
   
@@ -382,7 +384,7 @@ La prise en charge du compilateur *type traits*, qui indiquent les différentes 
   
 -   `__is_delegate(` `type` `)`  
   
-     Retourne la valeur true si `type` est un délégué. Pour plus d’informations, consultez [délégué (Extensions du composant C++)](../windows/delegate-cpp-component-extensions.md).  
+     Retourne la valeur true si `type` est un délégué. Pour plus d’informations, consultez [delegate (Extensions du composant C++)](../windows/delegate-cpp-component-extensions.md).  
   
     ```  
   
@@ -503,7 +505,7 @@ La prise en charge du compilateur *type traits*, qui indiquent les différentes 
   
 -   `__is_ref_class(` `type` `)`  
   
-     Retourne la valeur true si une classe de référence est passée. Pour plus d’informations sur les types référence définis par l’utilisateur, consultez la page [les Classes et Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Retourne la valeur true si une classe de référence est passée. Pour plus d’informations sur les types référence définis par l’utilisateur, consultez [les Classes et Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
   
     ```  
   
@@ -518,7 +520,7 @@ La prise en charge du compilateur *type traits*, qui indiquent les différentes 
   
 -   `__is_sealed(` `type` `)`  
   
-     Retourne la valeur true si un type de plateforme ou natif marquée comme sealed est passé. Pour plus d’informations, consultez [scellé](../windows/sealed-cpp-component-extensions.md).  
+     Retourne la valeur true si un type de plateforme ou natif marquée comme sealed est passé. Pour plus d’informations, consultez [sealed](../windows/sealed-cpp-component-extensions.md).  
   
     ```  
   
@@ -531,7 +533,7 @@ La prise en charge du compilateur *type traits*, qui indiquent les différentes 
   
 -   `__is_simple_value_class(` `type` `)`  
   
-     Retourne la valeur true si un type valeur qui ne contient aucune référence au tas récupéré par le garbage collector est passé. Pour plus d’informations sur les types valeur définis par l’utilisateur, consultez la page [les Classes et Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Retourne la valeur true si un type valeur qui ne contient aucune référence au tas récupéré par le garbage collector est passé. Pour plus d’informations sur les types valeur définis par l’utilisateur, consultez [les Classes et Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
   
     ```  
   
@@ -570,7 +572,7 @@ La prise en charge du compilateur *type traits*, qui indiquent les différentes 
   
 -   `__is_value_class(` `type` `)`  
   
-     Retourne la valeur true si un type valeur est passé. Pour plus d’informations sur les types valeur définis par l’utilisateur, consultez la page [les Classes et Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Retourne la valeur true si un type valeur est passé. Pour plus d’informations sur les types valeur définis par l’utilisateur, consultez [les Classes et Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
   
     ```  
   
@@ -582,26 +584,26 @@ La prise en charge du compilateur *type traits*, qui indiquent les différentes 
   
     ```  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- **Section Notes**  
+## <a name="windows-runtime"></a>Windows Runtime  
+ **Remarques**  
   
- Le `__has_finalizer(`*type*`)` caractéristique de type n’est pas pris en charge, car cette plate-forme ne prend pas en charge les finaliseurs.  
+ Le `__has_finalizer(` *type* `)` trait de type n’est pas pris en charge, car cette plateforme ne prend pas en charge les finaliseurs.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **Section Notes**  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ **Remarques**  
   
  (Il n’existe aucune note spécifique à la plateforme pour cette fonctionnalité.)  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  
  **Exemple**  
   
- L’exemple de code suivant montre comment utiliser un modèle de classe pour exposer un trait de type du compilateur pour un **/clr** compilation. Pour plus d’informations, consultez [Windows Runtime et modèles gérés](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
+ L’exemple de code suivant montre comment utiliser un modèle de classe pour exposer un trait de type du compilateur pour un **/CLR** compilation. Pour plus d’informations, consultez [Windows Runtime et modèles gérés](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
   
 ```  
 // compiler_type_traits.cpp  
@@ -630,4 +632,4 @@ R is a ref class
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extensions du composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)
+ [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b9341221ecafc6204a9f126ea50eb22d54ffec35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b06584862e7aa09b7a271f1c999787eed84d7af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vtordisp"></a>vtordisp
 **Spécifique à C++**  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/24/2017
  `off`  
  Équivalent à `#pragma vtordisp(0)`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le pragma `vtordisp` peut s'appliquer uniquement à du code qui utilise des bases virtuelles. Si une classe dérivée remplace une fonction virtuelle qu'elle hérite d'une classe de base virtuelle et si un constructeur ou un destructeur pour la classe dérivée appelle cette fonction à l'aide d'un pointeur vers la classe de base virtuelle, le compilateur peut introduire des champs `vtordisp` masqués supplémentaires dans les classes dotées de bases virtuelles.  
   
  Le pragma `vtordisp` affecte la disposition des classes qui le suivent. Les options /vd0, /vd1 et /vd2 spécifient le même comportement pour les modules complets. La spécification de `0` ou `off` supprime les membres `vtordisp` masqués. Désactivez `vtordisp` seulement s'il n'est pas possible que les constructeurs et les destructeurs de la classe appellent des fonctions virtuelles sur l'objet vers lequel pointe le pointeur `this`.  

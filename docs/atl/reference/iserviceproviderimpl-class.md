@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 39dbab33f631ab9e0dc2b605169e92b6d12d78a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4946a88e6bf6767de0e3965670f94b91d1ddaf90
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iserviceproviderimpl-class"></a>Classe de IServiceProviderImpl
 Cette classe fournit une implémentation par défaut de la `IServiceProvider` interface.  
@@ -48,7 +49,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 |----------|-----------------|  
 |[Méthode IServiceProviderImpl::QueryService](#queryservice)|Crée ou accède au service spécifié et retourne un pointeur d’interface à l’interface spécifiée pour le service.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `IServiceProvider` interface recherche un service spécifié par son GUID et retourne le pointeur d’interface pour l’interface demandée sur le service. Classe `IServiceProviderImpl` fournit une implémentation par défaut de cette interface.  
   
  **IServiceProviderImpl** spécifie une méthode : [QueryService](#queryservice), qui crée ou accède au service spécifié et retourne un pointeur d’interface à l’interface spécifiée pour le service.  
@@ -62,7 +63,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
   
  `IServiceProviderImpl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
   
 ##  <a name="queryservice"></a>Méthode IServiceProviderImpl::QueryService  
@@ -96,7 +97,7 @@ STDMETHOD(QueryService)(
 |E_UNEXPECTED|Une erreur inconnue s'est produite.|  
 |E_NOINTERFACE|L’interface demandée ne fait pas partie de ce service, ou le service est inconnu.|  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `QueryService`Retourne un pointeur indirect vers l’interface demandée dans le service spécifié. L’appelant est responsable de la libération de ce pointeur lorsqu’il n’est plus nécessaire.  
   
  Lorsque vous appelez `QueryService`, vous passez à la fois un identificateur de service ( `guidService`) et un identificateur d’interface ( `riid`). Le `guidService` Spécifie le service auquel vous souhaitez accéder, et le `riid` identifie une interface qui fait partie du service. En retour, vous recevez un pointeur indirect vers l’interface.  

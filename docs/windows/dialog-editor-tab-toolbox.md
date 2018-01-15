@@ -1,75 +1,77 @@
 ---
-title: "&#201;diteur de bo&#238;tes de dialogue, onglet de la bo&#238;te &#224; outils | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Boîte à outils (C++), onglet Éditeur de boîtes de dialogue"
-  - "contrôles (C++), types"
-  - "contrôles syslink dans les boîtes de dialogue"
-  - "contrôles personnalisés (Visual Studio), boîtes de dialogue"
-  - "contrôles (C++), standard"
-  - "Éditeur de boîtes de dialogue, création de contrôles"
-  - "contrôles [C++], ajouter aux boîtes de dialogue"
+title: "Onglet Éditeur de la boîte de dialogue, la boîte à outils | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Toolbox [C++], Dialog Editor tab
+- controls [C++], types
+- syslink controls ino dialog boxes
+- custom controls [Visual Studio], dialog boxes
+- controls [C++], standard
+- Dialog editor, creating controls
+- controls [C++], adding to dialog boxes
 ms.assetid: 253885c2-dcb9-4d8e-ac9b-805ea31cbf5e
-caps.latest.revision: 12
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9db31d6e152be10f2c4934b7b1f239d1e08387f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# &#201;diteur de bo&#238;tes de dialogue, onglet de la bo&#238;te &#224; outils
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L’onglet Éditeur de boîtes de dialogue s’affiche dans la fenêtre [Boîte à outils](../Topic/Toolbox.md) lorsque vous travaillez dans l’Éditeur de boîtes de dialogue. Pour ajouter des contrôles à votre nouvelle boîte de dialogue, faites\-les glisser de la boîte à outils vers la boîte de dialogue que vous créez \(pour plus d’informations, consultez [Ajout d’un contrôle dans une boîte de dialogue](../mfc/adding-a-control-to-a-dialog-box.md)\). Vous pouvez ensuite déplacer les contrôles ou modifier leur taille et leur forme.  
+# <a name="dialog-editor-tab-toolbox"></a>Éditeur de boîtes de dialogue, onglet de la boîte à outils
+L’onglet d’éditeur de boîte de dialogue s’affiche dans le [fenêtre Boîte à outils](/visualstudio/ide/reference/toolbox) lorsque vous travaillez dans l’éditeur de boîte de dialogue. Pour ajouter des contrôles à votre nouvelle boîte de dialogue, faites glisser les contrôles à partir de la boîte à outils vers la boîte de dialogue que vous créez (pour plus d’informations, consultez [Ajout d’un contrôle à une boîte de dialogue](adding-a-control-to-a-dialog-box.md)). Vous pouvez ensuite déplacer les contrôles ou modifier leur taille et leur forme.  
   
  Les contrôles standard disponibles dans la boîte à outils sont les suivants :  
   
--   [Contrôle Button](../mfc/reference/cbutton-class.md)  
+-   [Contrôle de bouton](../mfc/reference/cbutton-class.md)  
   
--   [Contrôle Check Box](../mfc/reference/button-styles.md)  
+-   [Contrôle de case à cocher](../mfc/reference/styles-used-by-mfc.md#button-styles)  
   
 -   [Contrôle Combo Box](../mfc/reference/ccombobox-class.md)  
   
--   [Contrôle Edit](../mfc/reference/cedit-class.md)  
+-   [Contrôle d’édition](../mfc/reference/cedit-class.md)  
   
 -   Contrôle Group box  
   
--   [Contrôle List Box](../mfc/reference/clistbox-class.md)  
+-   [Contrôle de zone de liste](../mfc/reference/clistbox-class.md)  
   
--   [Contrôle Radio Button](../mfc/reference/button-styles.md)  
+-   [Contrôle Radio Button](../mfc/reference/styles-used-by-mfc.md#button-styles)  
   
 -   [Contrôle Static Text](../mfc/reference/cstatic-class.md)  
   
--   [Contrôle Picture](../mfc/reference/cpictureholder-class.md)  
+-   [Contrôle d’image](../mfc/reference/cpictureholder-class.md)  
   
--   [Contrôle Rich Edit 2.0](../mfc/using-cricheditctrl.md)  
+-   [Contrôle Rich Edit 2.0](../mfc/using-cricheditctrl.md)  
   
 -   [Contrôle de barre de défilement](../mfc/reference/cscrollbar-class.md)  
   
- Les [Contrôles communs Windows](../mfc/controls-mfc.md) disponibles dans la boîte à outils fournissent des fonctionnalités améliorées dans votre application. Ils comprennent :  
+ Le [les contrôles communs Windows](../mfc/controls-mfc.md) disponibles dans la boîte à outils fournissent des fonctionnalités améliorées dans votre application. Elles comprennent :  
   
 -   [Contrôle Slider](../mfc/slider-control-styles.md)  
   
--   [Contrôle Spin](../mfc/using-cspinbuttonctrl.md)  
+-   [Contrôle toupie](../mfc/using-cspinbuttonctrl.md)  
   
--   [Contrôle Progress](../mfc/styles-for-the-progress-control.md)  
+-   [Contrôle de progression](../mfc/styles-for-the-progress-control.md)  
   
 -   [Contrôle Hot Key](../mfc/using-a-hot-key-control.md)  
   
--   [Contrôle List](../mfc/list-control-and-list-view.md)  
+-   [Contrôle de liste](../mfc/list-control-and-list-view.md)  
   
--   [Contrôle Tree](../mfc/tree-control-styles.md)  
+-   [Contrôle d’arborescence](../mfc/tree-control-styles.md)  
   
--   [Contrôle Tab](../mfc/tab-controls-and-property-sheets.md)  
+-   [Contrôle onglet](../mfc/tab-controls-and-property-sheets.md)  
   
 -   [Contrôle Animation](../mfc/using-an-animation-control.md)  
   
@@ -77,30 +79,31 @@ L’onglet Éditeur de boîtes de dialogue s’affiche dans la fenêtre [Boîte 
   
 -   [Contrôle Month Calendar](../mfc/month-calendar-control-examples.md)  
   
--   [Contrôle IP Address](../mfc/reference/cipaddressctrl-class.md)  
+-   [Contrôle d’adresse IP](../mfc/reference/cipaddressctrl-class.md)  
   
 -   [Contrôle Extended Combo Box](../mfc/creating-an-extended-combo-box-control.md)  
   
--   [Contrôle personnalisé](../mfc/custom-controls-in-the-dialog-editor.md)  
+-   [Contrôle personnalisé](custom-controls-in-the-dialog-editor.md)  
   
- Vous pouvez ajouter des contrôles personnalisés à la boîte de dialogue en sélectionnant l’icône **Contrôle personnalisé** dans la boîte à outils et en la faisant glisser vers votre boîte de dialogue. Pour ajouter un contrôle Syslink, ajoutez un contrôle personnalisé, puis attribuez la valeur **Syslink** à la propriété **Classe** du contrôle. Cela entraînera l’actualisation des propriétés et l’affichage des propriétés du contrôle Syslink. Pour plus d’informations sur la classe wrapper MFC, consultez [CLinkCtrl](../mfc/reference/clinkctrl-class.md).  
+ Vous pouvez ajouter des contrôles personnalisés à la boîte de dialogue en sélectionnant le **contrôle personnalisé** icône dans la boîte à outils et faites-la glisser vers votre boîte de dialogue. Pour ajouter un contrôle Syslink, ajoutez un contrôle personnalisé, puis modifiez le **classe** propriété **Syslink**. Cela entraînera l’actualisation des propriétés et l’affichage des propriétés du contrôle Syslink. Pour plus d’informations sur la classe wrapper MFC, consultez [CLinkCtrl](../mfc/reference/clinkctrl-class.md).  
   
- Vous pouvez également [ajouter des contrôles ActiveX à votre boîte de dialogue](../mfc/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
+ Vous pouvez également [ajouter des contrôles ActiveX à votre boîte de dialogue](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
   
- Vous pouvez également personnaliser la fenêtre Boîte à outils pour faciliter son utilisation. Pour plus d’informations, consultez [Gestion des éléments et des onglets de la boîte à outils](http://msdn.microsoft.com/fr-fr/21285050-cadd-455a-b1f5-a2289a89c4db). Par exemple, vous pouvez placer des contrôles dans la fenêtre Boîte à outils pour en faciliter l’accès. Pour plus d’informations, consultez [Personnaliser la boîte de dialogue Boîte à outils](http://msdn.microsoft.com/fr-fr/bd07835f-18a8-433e-bccc-7141f65263bb).  
+ Vous pouvez également personnaliser la fenêtre Boîte à outils pour faciliter son utilisation. Pour plus d’informations, consultez [Utilisation de la boîte à outils](/visualstudio/ide/using-the-toolbox).  
+
+ Pour plus d’informations sur l’utilisation du contrôle RichEdit 1.0 avec MFC, consultez [à l’aide du contrôle RichEdit 1.0 avec MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
   
- Pour plus d’informations sur l’utilisation du contrôle RichEdit 1.0 avec MFC, consultez [Utilisation du contrôle RichEdit 1.0 avec MFC](../mfc/using-the-richedit-1-0-control-with-mfc.md).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l’ajout de fichiers de ressources aux projets managés, l’accès aux ressources, l’affichage de ressources statiques et l’assignation de chaînes de ressources à des propriétés, et ceci manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/fr-fr/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
-  
-## Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Contrôles](../mfc/controls-mfc.md)   
  [Classes de contrôle](../mfc/control-classes.md)   
  [Classes de boîte de dialogue](../mfc/dialog-box-classes.md)   
- [Styles de barre de défilement](../mfc/reference/scroll-bar-styles.md)   
- [Exemples de contrôle RichEdit](../mfc/rich-edit-control-examples.md)   
- [Adding Event Handlers for Dialog Box Controls](../mfc/adding-event-handlers-for-dialog-box-controls.md)   
+ [Styles de barre de défilement](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)   
+ [Exemples du contrôle RichEdit](../mfc/rich-edit-control-examples.md)   
+ [Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [Contrôles de boîtes de dialogue et types de variables](../ide/dialog-box-controls-and-variable-types.md)
+

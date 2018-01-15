@@ -1,60 +1,62 @@
 ---
-title: "RoInitializeWrapper, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper"
-dev_langs: 
-  - "C++"
+title: Roinitializewrapper, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper
+dev_langs: C++
 ms.assetid: 4055fbe0-63a7-4c06-b5a0-414fda5640e5
-caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5f6330c78a6bbac5f14e94c253f05515e3d29575
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# RoInitializeWrapper, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Initialise [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
+# <a name="roinitializewrapper-class"></a>RoInitializeWrapper, classe
+Initialise le Windows Runtime.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 class RoInitializeWrapper  
 ```  
   
-## Remarques  
- RoInitializeWrapper est une pratique qui initialise le [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] et retourne un HRESULT indiquant si l'opération a réussi.  
+## <a name="remarks"></a>Notes  
+ RoInitializeWrapper est un outil qui initialise l’exécution de Windows et retourne un HRESULT qui indique si l’opération a réussi.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[RoInitializeWrapper::RoInitializeWrapper, constructeur](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|Initialise une nouvelle instance de la classe RoInitializeWrapper.|  
-|[RoInitializeWrapper::~RoInitializeWrapper, destructeur](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|Détruit l'instance actuelle de la classe RoInitializeWrapper.|  
+|[RoInitializeWrapper::~RoInitializeWrapper, destructeur](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|Détruit l’instance actuelle de la classe RoInitializeWrapper.|  
   
-### Opérateurs publics  
+### <a name="public-operators"></a>Op&#233;rateurs publics  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|[RoInitializeWrapper::HRESULT\(\), opérateur](../windows/roinitializewrapper-hresult-parens-operator.md)|Récupère le HRESULT produit par le constructeur de RoInitializeWrapper.|  
+|[RoInitializeWrapper::HRESULT(), opérateur](../windows/roinitializewrapper-hresult-parens-operator.md)|Récupère la valeur HRESULT produite par le constructeur RoInitializeWrapper.|  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `RoInitializeWrapper`  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers  
+ **Namespace :** Microsoft::WRL::Wrappers  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL::Wrappers, espace de noms](../windows/microsoft-wrl-wrappers-namespace.md)

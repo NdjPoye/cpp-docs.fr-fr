@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5acbd7fbeccf89b13be9a1ed6c6084ce4b4b73a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f1c84074eae22e4263646abc1623ff96a374c04d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-atl"></a>Introduction à ATL
 ATL est Active Template Library, un ensemble de C++ basées sur un modèle de classes avec lesquels vous pouvez facilement créer petits et rapides des objets de modèle COM (Component Object). Il prend en charge les principales fonctionnalités COM, notamment : implémentations stock de [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364), [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720), et `IDispatch`; double interfaces ; interfaces d’énumérateurs COM standard ; points de connexion ; interfaces détachables ; et les contrôles ActiveX.  

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7952b6a5cafa2abd24a7edaf6f7d27afdf068e24
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc1f64a7e088d274e8dde2e2616edab64de7f8db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structures-used-by-mfc"></a>Structures utilisées par MFC
 Le tableau suivant répertorie les structures qui sont appelées à partir de différentes fonctions membres. Pour plus d’informations sur l’utilisation de structure individuel, consultez les classes et les fonctions membres répertoriées dans la liste Voir aussi pour chaque structure.  

@@ -95,11 +95,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b54a2cecf6ae091680582a3997cc8ee9c1c625d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 104c965da403040308386e019d56684577318eee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmenu-class"></a>CMenu (classe)
 Encapsulation du `HMENU`Windows.  
@@ -174,7 +175,7 @@ class CMenu : public CObject
 |----------|-----------------|  
 |[CMenu::m_hMenu](#m_hmenu)|Spécifie le handle vers le menu Windows attaché à la `CMenu` objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Il fournit des fonctions membres pour créer, de suivi, la mise à jour et la destruction d’un menu.  
   
  Créer un `CMenu` objet sur le frame de pile comme local, puis appelez `CMenu`de fonctions de membre pour manipuler le nouveau menu, en fonction des besoins. Ensuite, appelez [CWnd::SetMenu](../../mfc/reference/cwnd-class.md#setmenu) pour définir le menu à une fenêtre, suivi immédiatement par un appel à la `CMenu` l’objet [détachement](#detach) fonction membre. Le `CWnd::SetMenu` fonction membre définit le menu fenêtre pour le nouveau menu, la fenêtre à être redessiné pour refléter la modification de menu et le passe également la propriété du menu dans la fenêtre. L’appel à **détachement** détache le `HMENU` à partir de la `CMenu` objet, que quand local `CMenu` variable passe hors de portée, la `CMenu` destructeur d’objet ne tente pas détruire un menu il aucun plus il est propriétaire. Le menu en question est automatiquement détruit lorsque la fenêtre est détruite.  
@@ -186,7 +187,7 @@ class CMenu : public CObject
   
  `CMenu`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="appendmenu"></a>CMenu::AppendMenu  
@@ -227,7 +228,7 @@ BOOL AppendMenu(
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur différente de zéro si la fonction réussit ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’application peut spécifier l’état de l’élément de menu en définissant les valeurs de `nFlags`. Lorsque `nIDNewItem` spécifie un menu contextuel, il devient partie intégrante du menu auquel il est ajouté. Si ce menu est détruit, le menu ajouté sera également détruit. Un menu ajouté doit être détaché d’un `CMenu` objet pour éviter tout conflit. Notez que **MF_STRING** et `MF_OWNERDRAW` ne sont pas valides pour la version de l’image bitmap de `AppendMenu`.  
   
  La liste suivante décrit les indicateurs qui peuvent être définis dans `nFlags`:  
@@ -283,7 +284,7 @@ BOOL Attach(HMENU hMenu);
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’opération a réussi ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction ne doit pas être appelée si un menu est déjà attaché à la `CMenu` objet. Le handle de menu est stocké dans le `m_hMenu` membre de données.  
   
  Si le menu que vous souhaitez manipuler est déjà associé à une fenêtre, vous pouvez utiliser la [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu) fonction permettant d’obtenir un handle vers le menu.  
@@ -318,7 +319,7 @@ UINT CheckMenuItem(
 ### <a name="return-value"></a>Valeur de retour  
  L’état précédent de l’élément : **MF_CHECKED** ou **MF_UNCHECKED**, ou 0xFFFFFFFF si l’élément de menu n’existe pas.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `nIDCheckItem` paramètre spécifie l’élément à modifier.  
   
  Le `nIDCheckItem` paramètre peut identifier un élément de menu contextuel ainsi que d’un élément de menu. Aucune des étapes spéciales ne sont requises pour rechercher un élément de menu contextuel. Les éléments de menu de niveau supérieur ne peut pas être vérifiées. Un élément de menu contextuel doit être vérifié par position, car il n’a pas un identificateur d’élément de menu associé.  
@@ -358,7 +359,7 @@ BOOL CheckMenuRadioItem(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’opération a réussi ; Sinon, 0  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En même temps, la fonction désactive tous les autres éléments de menu dans le groupe associé et efface l’indicateur de type d’élément de case d’option correspondant à ces éléments. Les éléments cochés s’affiche à l’aide d’un bitmap de cases d’option bouton (ou puce) au lieu d’une image bitmap de coche.  
   
 ### <a name="example"></a>Exemple  
@@ -371,7 +372,7 @@ BOOL CheckMenuRadioItem(
 CMenu();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le menu n’est pas créé tant que vous appelez l’une des fonctions membres create ou charge de **CMenu :**  
   
 - [CreateMenu](#createmenu)  
@@ -394,7 +395,7 @@ BOOL CreateMenu();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le menu a été créé avec succès ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le menu est initialement vide. Éléments de menu peuvent être ajoutés à l’aide de la `AppendMenu` ou `InsertMenu` fonction membre.  
   
  Si le menu est assigné à une fenêtre, il est automatiquement détruit la fenêtre est détruite.  
@@ -414,7 +415,7 @@ BOOL CreatePopupMenu();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le menu contextuel a été créé avec succès ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le menu est initialement vide. Éléments de menu peuvent être ajoutés à l’aide de la `AppendMenu` ou `InsertMenu` fonction membre. L’application peut ajouter le menu contextuel à un menu existant ou un menu contextuel. Le `TrackPopupMenu` fonction membre peut être utilisée pour afficher ce menu comme un menu contextuel flottant et pour effectuer le suivi des sélections dans le menu contextuel.  
   
  Si le menu est assigné à une fenêtre, il est automatiquement détruit la fenêtre est détruite. Si le menu est ajouté à un menu existant, il est automatiquement détruite lorsque ce menu est détruit.  
@@ -448,7 +449,7 @@ BOOL DeleteMenu(
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur différente de zéro si la fonction réussit ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si l’élément de menu possède un menu contextuel associé, `DeleteMenu` détruit le handle pour le menu contextuel et libère la mémoire utilisée par le menu contextuel.  
   
  Chaque fois qu’un menu qui réside dans une fenêtre est modifiée (ou non la fenêtre s’affiche), l’application doit appeler [CWnd::DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar).  
@@ -463,7 +464,7 @@ BOOL DeleteMenu(
 static void PASCAL DeleteTempMap();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `DeleteTempMap`Détache l’objet de menu Windows attachée à une valeur temporaire `CMenu` objet avant de supprimer le `CMenu` objet.  
   
 ### <a name="example"></a>Exemple  
@@ -479,7 +480,7 @@ BOOL DestroyMenu();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le menu est détruit ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le menu est détaché de la `CMenu` de l’objet avant d’être détruit. Les fenêtres `DestroyMenu` fonction est appelée automatiquement dans le `CMenu` destructeur.  
   
 ### <a name="example"></a>Exemple  
@@ -495,7 +496,7 @@ HMENU Detach();
 ### <a name="return-value"></a>Valeur de retour  
  Le handle, de type `HMENU`, à un menu Windows, en cas de réussite ; **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `m_hMenu` membre de données est défini **NULL**.  
   
 ### <a name="example"></a>Exemple  
@@ -512,7 +513,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
  `lpDrawItemStruct`  
  Un pointeur vers un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure qui contient des informations sur le type de dessin nécessaire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `itemAction` membre de la `DRAWITEMSTRUCT` structure définit l’action de dessin qui doit être effectuée. Remplacez cette fonction membre pour implémenter le dessin pour un mode owner-draw `CMenu` objet. L’application doit restaurer tous les objets interface GDI périphérique graphique sélectionnés pour le contexte d’affichage fournie dans `lpDrawItemStruct` avant l’arrêt de cette fonction membre.  
   
  Consultez [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) pour obtenir une description de la `DRAWITEMSTRUCT` structure.  
@@ -551,7 +552,7 @@ UINT EnableMenuItem(
 ### <a name="return-value"></a>Valeur de retour  
  État précédent ( **MF_DISABLED**, `MF_ENABLED`, ou **MF_GRAYED**) ou -1 si elle est non valide.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le [CreateMenu](#createmenu), [InsertMenu](#insertmenu), [ModifyMenu](#modifymenu), et [LoadMenuIndirect](#loadmenuindirect) fonctions membres peuvent également définir l’état (activé, désactivé ou grisé) d’un élément de menu.  
   
  À l’aide de la **MF_BYPOSITION** valeur requiert une application pour utiliser le bon `CMenu`. Si le `CMenu` du menu barre est utilisée, un élément de menu de niveau supérieur (il s’agit d’un élément dans la barre de menus) est affecté. Pour définir l’état d’un élément dans un menu contextuel ou imbriqué par position, une application doit spécifier le `CMenu` du menu contextuel.  
@@ -575,7 +576,7 @@ static CMenu* PASCAL FromHandle(HMENU hMenu);
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un `CMenu` qui peut être temporaire ou permanent.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si un `CMenu` objet n’est pas déjà attaché à l’objet menu Windows, une valeur temporaire `CMenu` objet est créé et attaché.  
   
  Ce fichier temporaire `CMenu` objet est uniquement valide jusqu'à la prochaine fois que l’application a des temps d’inactivité dans sa boucle d’événements, auquel cas tous les objets temporaires sont supprimés.  
@@ -596,7 +597,7 @@ UINT GetDefaultItem(
  *gmdiFlags*  
  Valeur qui spécifie la façon dont la fonction de recherche des éléments de menu. Ce paramètre peut être none, une ou une combinaison des valeurs suivantes :  
   
-|Valeur|Signification|  
+|Value|Signification|  
 |-----------|-------------|  
 |**GMDI_GOINTOPOPUPS**|Spécifie que, si la valeur par défaut est un élément qui ouvre un sous-menu, la fonction à rechercher dans le sous-menu correspondant de manière récursive. Si le sous-menu a pas de valeur par défaut, la valeur de retour identifie l’élément qui ouvre le sous-menu.<br /><br /> Par défaut, la fonction retourne le premier élément de la valeur par défaut dans le menu spécifié, qu’il s’agisse d’un élément qui ouvre un sous-menu.|  
 |**GMDI_USEDISABLED**|Spécifie que la fonction doit renvoyer un élément par défaut, même si elle est désactivée.<br /><br /> Par défaut, la fonction ignore les éléments désactivées et grisées.|  
@@ -607,7 +608,7 @@ UINT GetDefaultItem(
 ### <a name="return-value"></a>Valeur de retour  
  Si la fonction réussit, la valeur de retour est l’identificateur ou la position de l’élément de menu. Si la fonction échoue, la valeur de retour est - 1.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la fonction Win32 [GetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647976), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -640,7 +641,7 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
 ### <a name="return-value"></a>Valeur de retour  
  Si la fonction réussit, la valeur de retour est différent de zéro ; Sinon, la valeur de retour est zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction pour récupérer des informations sur le menu.  
   
 ##  <a name="getmenuitemcount"></a>CMenu::GetMenuItemCount  
@@ -696,7 +697,7 @@ BOOL GetMenuItemInfo(
 ### <a name="return-value"></a>Valeur de retour  
  Si la fonction réussit, la valeur de retour est différente de zéro. Si la fonction échoue, la valeur de retour est égale à zéro. Pour obtenir des informations d’erreur plus complètes, utilisez la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360), comme décrit dans le Kit de développement logiciel Windows.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la de la fonction Win32 [GetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms647980), comme décrit dans le Kit de développement logiciel Windows. Notez que dans l’implémentation MFC de `GetMenuItemInfo`, vous n’utilisez pas un handle à un menu.  
   
 ### <a name="example"></a>Exemple  
@@ -784,7 +785,7 @@ int GetMenuString(
 ### <a name="return-value"></a>Valeur de retour  
  Spécifie le nombre réel de caractères copiés dans la mémoire tampon, non compris le terminateur null.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `nMaxCount` paramètre doit être supérieure au nombre de caractères dans l’étiquette en fonction du caractère null qui met fin à une chaîne.  
   
 ### <a name="example"></a>Exemple  
@@ -865,7 +866,7 @@ BOOL InsertMenu(
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur différente de zéro si la fonction réussit ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’application peut spécifier l’état de l’élément de menu en définissant les valeurs de `nFlags`.  
   
  Chaque fois qu’un menu qui réside dans une fenêtre est modifiée (ou non la fenêtre s’affiche), l’application doit appeler `CWnd::DrawMenuBar`.  
@@ -897,7 +898,7 @@ BOOL InsertMenuItem(
  `fByPos`  
  Consultez la description de `fByPosition` dans **InsertMenuItem** dans le Kit de développement logiciel Windows.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction encapsule [InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="loadmenu"></a>CMenu::LoadMenu  
@@ -918,7 +919,7 @@ BOOL LoadMenu(UINT nIDResource);
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la ressource de menu a été chargée avec succès ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Avant de quitter, l’application doit libérer les ressources système associées à un menu si le menu n’est pas assigné à une fenêtre. Une application libère un menu en appelant le [DestroyMenu](#destroymenu) fonction membre.  
   
 ### <a name="example"></a>Exemple  
@@ -938,7 +939,7 @@ BOOL LoadMenuIndirect(const void* lpMenuTemplate);
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la ressource de menu a été chargée avec succès ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un modèle de menu est un en-tête suivi d’une collection d’un ou plusieurs [MENUITEMTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms647581) structures, chacun d’eux peut contenir un ou plusieurs éléments de menu et les menus contextuels.  
   
  Le numéro de version doit être 0.  
@@ -973,7 +974,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
  `lpMeasureItemStruct`  
  Un pointeur vers un `MEASUREITEMSTRUCT` structure.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, cette fonction membre ne fait rien. Remplacez cette fonction membre et renseignez la `MEASUREITEMSTRUCT` structure pour informer Windows de dimensions du menu.  
   
  Consultez [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) pour obtenir une description de la `MEASUREITEMSTRUCT` structure.  
@@ -1031,7 +1032,7 @@ BOOL ModifyMenu(
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur différente de zéro si la fonction réussit ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’application spécifie le nouvel état de l’élément de menu en définissant les valeurs de `nFlags`. Si cette fonction remplace un menu contextuel associé à l’élément de menu, il supprime le menu contextuel ancien et libère la mémoire utilisée par le menu contextuel.  
   
  Lorsque `nIDNewItem` spécifie un menu contextuel, il devient partie intégrante du menu dans lequel elle est insérée. Si ce menu est détruit, le menu inséré sera également détruit. Un menu inséré doit être détaché d’un `CMenu` objet pour éviter tout conflit.  
@@ -1051,7 +1052,7 @@ operator HMENU() const;
 ### <a name="return-value"></a>Valeur de retour  
  En cas de réussite, le handle de la `CMenu` de l’objet ; sinon, **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous pouvez utiliser le handle d’appeler directement des API Windows.  
   
 ##  <a name="operator_neq"></a>CMenu::operator ! =  
@@ -1065,7 +1066,7 @@ BOOL operator!=(const CMenu& menu) const;
  `menu`  
  A `CMenu` objet pour la comparaison.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Teste si un objet de menu sur le côté gauche n’est pas égal à un objet de menu située à droite.  
   
 ##  <a name="operator_eq_eq"></a>CMenu::operator ==  
@@ -1079,7 +1080,7 @@ BOOL operator==(const CMenu& menu) const;
  `menu`  
  A `CMenu` objet pour la comparaison.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Teste si un objet de menu sur le côté gauche est égal (en termes de la `HMENU` valeur) à un objet de menu située à droite.  
   
 ##  <a name="removemenu"></a>CMenu::RemoveMenu  
@@ -1106,7 +1107,7 @@ BOOL RemoveMenu(
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur différente de zéro si la fonction réussit ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Elle ne supprime pas le handle d’un menu contextuel, le menu peut donc être réutilisé. Avant d’appeler cette fonction, l’application peut appeler le `GetSubMenu` fonction membre pour récupérer la fenêtre contextuelle `CMenu` objet pour une réutilisation.  
   
  Chaque fois qu’un menu qui réside dans une fenêtre est modifiée (ou non la fenêtre s’affiche), l’application doit appeler `CWnd::DrawMenuBar`.  
@@ -1133,7 +1134,7 @@ BOOL SetDefaultItem(
 ### <a name="return-value"></a>Valeur de retour  
  Si la fonction réussit, la valeur de retour est différente de zéro. Si la fonction échoue, la valeur de retour est égale à zéro. Pour obtenir des informations d’erreur plus complètes, utilisez la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360), comme décrit dans le Kit de développement logiciel Windows.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement de la fonction Win32 [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996), comme décrit dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
@@ -1153,7 +1154,7 @@ BOOL SetMenuContextHelpId(DWORD dwContextHelpId);
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’opération a réussi ; Sinon, 0  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Tous les éléments dans le menu partagent cet identificateur, il n’est pas possible d’attacher un identificateur de contexte d’aide pour les éléments de menu individuels.  
   
 ### <a name="example"></a>Exemple  
@@ -1173,7 +1174,7 @@ BOOL SetMenuInfo(LPCMENUINFO lpcmi);
 ### <a name="return-value"></a>Valeur de retour  
  Si la fonction réussit, la valeur de retour est différent de zéro ; Sinon, la valeur de retour est zéro.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction pour définir des informations spécifiques sur le menu.  
   
 ##  <a name="setmenuitembitmaps"></a>CMenu::SetMenuItemBitmaps  
@@ -1208,7 +1209,7 @@ BOOL SetMenuItemBitmaps(
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur différente de zéro si la fonction réussit ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si l’élément de menu est activée ou désactivée, Windows affiche le bitmap appropriée en regard de l’élément de menu.  
   
  Si le paramètre `pBmpUnchecked` ou `pBmpChecked` est **NULL**, puis Windows n’affiche rien en regard de l’élément de menu pour l’attribut correspondant. Si les deux paramètres sont **NULL**, Windows utilise la case à cocher par défaut lorsque l’élément est activé et supprime la case à cocher lorsque l’élément est désactivé.  
@@ -1242,7 +1243,7 @@ BOOL SetMenuItemInfo(
  `fByPos`  
  Consultez la description de `fByPosition` dans **SetMenuItemInfo** dans le Kit de développement logiciel Windows.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction encapsule [SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001), comme décrit dans le Kit de développement logiciel Windows.  
   
 ##  <a name="trackpopupmenu"></a>CMenu::TrackPopupMenu  
@@ -1276,7 +1277,7 @@ BOOL TrackPopupMenu(
 ### <a name="return-value"></a>Valeur de retour  
  Cette méthode retourne le résultat de l’appel de [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) dans le Kit de développement logiciel Windows.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un menu contextuel flottant peut apparaître n’importe où sur l’écran.  
   
 ### <a name="example"></a>Exemple  
@@ -1315,7 +1316,7 @@ BOOL TrackPopupMenuEx(
   
  Si vous ne spécifiez pas **TPM_RETURNCMD** dans le `fuFlags` paramètre, la valeur de retour est différent de zéro si la fonction réussit et 0 en cas d’échec. Pour obtenir des informations d’erreur plus complètes, appelez [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un menu contextuel flottant peut apparaître n’importe où sur l’écran. Pour plus d’informations sur la gestion des erreurs lors de la création du menu contextuel, consultez [fonction TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003).  
   
 ## <a name="see-also"></a>Voir aussi  

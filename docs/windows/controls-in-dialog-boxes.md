@@ -1,65 +1,69 @@
 ---
-title: "Controls in Dialog Boxes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], dialog boxes"
-  - "dialog box controls, about dialog box controls"
-  - "dialog box controls"
+title: "Contrôles dans les boîtes de dialogue | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], dialog boxes
+- dialog box controls, about dialog box controls
+- dialog box controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 02ca3523de9341c14d2e2a9837ba84f5625a3379
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Controls in Dialog Boxes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vous pouvez ajouter des contrôles à une boîte de dialogue en utilisant l'[onglet Éditeur de boîtes de dialogue](../mfc/dialog-editor-tab-toolbox.md) dans la [fenêtre Boîte à outils](../Topic/Toolbox.md), ce qui vous permet de choisir le contrôle souhaité et de le faire glisser sur la boîte de dialogue.  Par défaut, la fenêtre Boîte à outils se masque automatiquement.  Elle s'affiche sous la forme d'un onglet dans la marge gauche de votre solution lorsque l'Éditeur de boîtes de dialogue est ouvert.  Cependant, vous pouvez ancrer la fenêtre Boîte à outils en cliquant sur le bouton **Masquer automatiquement** dans le coin supérieur droit de la fenêtre.  Pour plus d'informations sur le contrôle du comportement de cette fenêtre, consultez [Gestion des fenêtres](../Topic/Customizing%20window%20layouts%20in%20Visual%20Studio.md).  
+# <a name="controls-in-dialog-boxes"></a>Contrôles dans les boîtes de dialogue
+Vous pouvez ajouter des contrôles à une boîte de dialogue à l’aide de la [onglet Éditeur de la boîte de dialogue](../windows/dialog-editor-tab-toolbox.md) dans les [fenêtre Boîte à outils](/visualstudio/ide/reference/toolbox), ce qui vous permet de choisir le contrôle souhaité et faites-le glisser sur la boîte de dialogue. Par défaut, la fenêtre Boîte à outils est définie pour masquer automatiquement. Il s’affiche sous forme d’onglet dans la marge gauche de votre solution lorsque l’éditeur de boîte de dialogue est ouverte. Toutefois, vous pouvez épingler la fenêtre Boîte à outils dans la position en cliquant sur le **Masquer automatiquement** bouton dans le coin supérieur droit de la fenêtre. Pour plus d’informations sur la façon de contrôler le comportement de cette fenêtre, consultez [gestion des fenêtres](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
   
- La façon la plus rapide d'ajouter des contrôles à une boîte de dialogue, de repositionner des contrôles existants ou de déplacer des contrôles d'une boîte de dialogue à une autre, est d'utiliser la méthode du glisser\-déplacer.  La position du contrôle est entourée d'une ligne pointillée jusqu'à ce qu'il soit déplacé dans la boîte de dialogue.  Lorsque vous ajoutez un contrôle à une boîte de dialogue avec la méthode du glisser\-déplacer, la hauteur donnée au contrôle est standard en fonction de son type.  
+ Le moyen le plus rapide pour ajouter des contrôles à une boîte de dialogue, de repositionner des contrôles existants ou de déplacer les contrôles à partir d’une boîte de dialogue à l’autre est d’utiliser la méthode glisser-déplacer. La position du contrôle est décrite dans une ligne pointillée jusqu'à ce qu’il est déposé dans la boîte de dialogue. Lorsque vous ajoutez un contrôle à une boîte de dialogue avec la méthode glisser-déplacer, le contrôle est donné à une hauteur standard appropriée pour ce type de contrôle.  
   
- Lorsque vous ajoutez un contrôle à une boîte de dialogue ou repositionnez un contrôle, son emplacement final peut être déterminé par les repères ou les marges ou l'activation de la grille.  
+ Lorsque vous ajoutez un contrôle à une boîte de dialogue ou repositionnez, son emplacement final peut être déterminé par les repères ou les marges, ou si vous disposez de la grille de disposition sous tension.  
   
- Une fois que vous avez ajouté un contrôle à la boîte de dialogue, vous pouvez changer les propriétés, par exemple sa légende dans la [fenêtre Propriétés](../Topic/Properties%20Window.md).  Vous pouvez sélectionner plusieurs contrôles et changer leurs propriétés en même temps.  
+ Une fois que vous avez ajouté un contrôle à la boîte de dialogue, vous pouvez modifier les propriétés, telles que sa légende dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Vous pouvez sélectionner plusieurs contrôles et modifier leurs propriétés à la fois.  
   
--   [Ajout, modification ou suppression de contrôles](../mfc/adding-editing-or-deleting-controls.md)  
+-   [Ajout, modification ou suppression de contrôles](adding-editing-or-deleting-controls.md)  
   
--   [Sélection de contrôles](../mfc/selecting-controls.md)  
+-   [Sélection de contrôles](../windows/selecting-controls.md)  
   
--   [Dimensionnement de contrôles individuels](../mfc/sizing-individual-controls.md)  
+-   [Dimensionnement de contrôles individuels](../windows/sizing-individual-controls.md)  
   
--   [Définition de la même largeur, hauteur ou taille pour des contrôles](../mfc/making-controls-the-same-width-height-or-size.md)  
+-   [Définition de la même largeur, hauteur ou taille pour des contrôles](../windows/making-controls-the-same-width-height-or-size.md)  
   
--   [Définition de la taille d'une zone de liste déroulante et de sa liste déroulante](../mfc/setting-the-size-of-the-combo-box-and-its-drop-down-list.md)  
+-   [Définition de la taille d’une zone de liste déroulante et de sa liste déroulante](setting-the-size-of-the-combo-box-and-its-drop-down-list.md)  
   
--   [Ajout de valeurs à un contrôle Combo Box](../mfc/adding-values-to-a-combo-box-control.md)  
+-   [Ajout de valeurs à un contrôle Combo Box](../windows/adding-values-to-a-combo-box-control.md)  
   
--   [Définition de la largeur d'une barre de défilement horizontale](../mfc/setting-the-width-of-a-horizontal-scroll-bar.md)  
+-   [Définition de la largeur d’une barre de défilement horizontale](../windows/setting-the-width-of-a-horizontal-scroll-bar.md)  
   
--   [Organisation des contrôles dans les boîtes de dialogue](../mfc/arrangement-of-controls-on-dialog-boxes.md)  
+-   [La disposition des contrôles dans les boîtes de dialogue](../windows/arrangement-of-controls-on-dialog-boxes.md)  
   
--   [Contrôles personnalisés dans l'Éditeur de boîtes de dialogue](../mfc/custom-controls-in-the-dialog-editor.md)  
+-   [Contrôles personnalisés dans l’Éditeur de boîtes de dialogue](custom-controls-in-the-dialog-editor.md)  
   
--   [Définition des mnémoniques \(Touches d'accès rapide\)](../mfc/defining-mnemonics-access-keys.md)  
+-   [Définition des mnémoniques (Touches d’accès rapide)](../windows/defining-mnemonics-access-keys.md)  
   
--   [Spécification de l'emplacement et de la taille d'une boîte de dialogue](../mfc/specifying-the-location-and-size-of-a-dialog-box.md)  
+-   [Spécification de l’emplacement et de la taille d’une boîte de dialogue](../windows/specifying-the-location-and-size-of-a-dialog-box.md)  
   
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l'ajout de fichiers de ressources aux projets managés, l'accès aux ressources, l'affichage de ressources statiques et l'assignation de chaînes de ressources aux propriétés, et ce manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/fr-fr/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
-## Voir aussi  
- [Adding Event Handlers for Dialog Box Controls](../mfc/adding-event-handlers-for-dialog-box-controls.md)   
- [Contrôles de boîtes de dialogue et types de variables](../ide/dialog-box-controls-and-variable-types.md)   
- [Dialog Editor](../mfc/dialog-editor.md)
+## <a name="see-also"></a>Voir aussi  
+ [Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue](../windows/adding-event-handlers-for-dialog-box-controls.md)   
+ [Contrôles de boîte de dialogue et Types de variables](../ide/dialog-box-controls-and-variable-types.md)   
+ [Éditeur de boîtes de dialogue](../windows/dialog-editor.md)
+

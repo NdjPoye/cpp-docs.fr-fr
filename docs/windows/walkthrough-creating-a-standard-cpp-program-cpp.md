@@ -19,11 +19,14 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67b44b8f21f2c8deea7cd6b9c89e87004e088d63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 52066be1d67bddb7173841e9df6c5013c86ac0dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Procédure pas à pas : Création d’un programme C++ Standard (C++)
 Vous pouvez utiliser Visual C++ dans l’environnement de développement intégré (IDE) Visual Studio pour créer des programmes C++ Standard. En suivant les étapes décrites dans cette procédure pas à pas, vous pouvez créer un projet, ajouter un nouveau fichier au projet, modifiez le fichier pour ajouter du code C++, puis compiler et exécuter le programme à l’aide de [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
@@ -35,7 +38,7 @@ Vous pouvez utiliser Visual C++ dans l’environnement de développement intégr
 > [!NOTE]
 >  Si la conformité avec la norme est requise, utilisez le **/Za** option du compilateur pour désactiver les extensions Microsoft de la norme. Pour plus d’informations, consultez [/Za, /Ze (désactiver les Extensions de langage)](../build/reference/za-ze-disable-language-extensions.md).  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
  Pour compléter cette procédure pas à pas, vous devez comprendre les notions de base du langage C++.  
   
 ### <a name="to-create-a-project-and-add-a-source-file"></a>Pour créer un projet et ajouter un fichier source  

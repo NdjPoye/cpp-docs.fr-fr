@@ -4,39 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- compiler options, macros
+dev_langs: C++
+f1_keywords:
+- _ATL_ALL_WARNINGS
+- _ATL_APARTMENT_THREADED
+- '_ATL_CSTRING_EXPLICIT_CONSTRUCTORS '
+- _ATL_ENABLE_PTM_WARNING
+- _ATL_FREE_THREADED
+- _ATL_MULTI_THREADED
+- _ATL_NO_AUTOMATIC_NAMESPACE
+- _ATL_NO_COM_SUPPORT
+- ATL_NO_VTABLE
+- ATL_NOINLINE
+- _ATL_SINGLE_THREADED
+helpviewer_keywords: compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: dbce962873194c1bdcb063537247650cff568e35
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f48abc864133849353aeccf82ea3eb9aab1edb5a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-options-macros"></a>Macros d’Options du compilateur
 Ces macros contrôlent les fonctionnalités de compilateur spécifique.  
@@ -44,13 +39,13 @@ Ces macros contrôlent les fonctionnalités de compilateur spécifique.
 |||  
 |-|-|  
 |[_ATL_ALL_WARNINGS](#_atl_all_warnings)|Un symbole qui active les erreurs dans les projets convertis à partir de versions précédentes d’ATL.|  
-|[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Définir si un ou plusieurs de vos objets utilisent le thread cloisonné.|  
-|[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|Rend certains `CString` constructeurs explicites, empêchant toute conversion involontaire.|  
-|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Définir cette macro pour pouvoir utiliser C++ conforme syntaxe standard, ce qui génère l’erreur de compilateur C4867 lorsqu’une syntaxe non standard est utilisée pour initialiser un pointeur vers une fonction membre.|  
-|[_ATL_FREE_THREADED](#_atl_free_threaded)|Définir si un ou plusieurs de vos objets utilisent le thread libre ou neutre.|  
+|[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Définir si un ou plusieurs de vos objets utilisent le cloisonnement des threads.|  
+|[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|S’assure que certaines `CString` constructeurs explicites, ce qui empêche toute conversion involontaire.|  
+|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Définir cette macro afin d’utiliser C++ conforme syntaxe standard, ce qui génère l’erreur du compilateur C4867 lorsqu’une syntaxe non standard est utilisée pour initialiser un pointeur vers une fonction membre.|  
+|[_ATL_FREE_THREADED](#_atl_free_threaded)|Définir si un ou plusieurs de vos objets utilisent le threading de libre ou neutre.|  
 |[_ATL_MULTI_THREADED](#_atl_multi_threaded)|Un symbole qui indique le projet aura des objets qui sont marqués comme les deux, libre ou neutre. La macro [_ATL_FREE_THREADED](#_atl_free_threaded) doit être utilisé à la place.|  
 |[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|Un symbole qui empêche l’utilisation de la valeur par défaut de l’espace de noms comme ATL.|  
-|[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|Un symbole qui empêche que code lié à COM qui est compilé avec votre projet.|  
+|[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|Un symbole qui empêche que code COM associé qui est compilé avec votre projet.|  
 |[ATL_NO_VTABLE](#atl_no_vtable)|Un symbole qui empêche le pointeur vtable ne soit initialisé dans le constructeur et le destructeur de la classe.|  
 |[ATL_NOINLINE](#atl_noinline)|Un symbole qui indique une fonction ne doit pas être inline.|  
 |[_ATL_SINGLE_THREADED](#_atl_single_threaded)|Définir si tous les objets utilisent le modèle de thread unique.|  
@@ -63,85 +58,85 @@ Ces macros contrôlent les fonctionnalités de compilateur spécifique.
 ```  
   
 ### <a name="remarks"></a>Notes  
- Avant Visual C++ .NET 2002, ATL désactivé un grand nombre d’avertissements et en les désactiver pour qu’ils s’affichaient jamais dans le code utilisateur. Plus précisément :  
+ Avant Visual C++ .NET 2002, ATL désactivé d’un grand nombre d’avertissements et en les désactiver pour qu’ils s’affichaient jamais dans le code utilisateur. Plus précisément :  
   
--   Expression conditionnelle C4127 est constante  
+-   L’expression conditionnelle C4127 est constante  
   
 -   C4786 'identificateur' : identificateur tronqué à 'nombre' caractères dans les informations de débogage  
   
--   Extension non standard C4201 utilisée : struct/union sans nom.  
+-   C4201 extension non standard utilisée : struct/union sans nom  
   
--   C4103 'NomFichier' : pack #pragma utilisé pour modifier l’alignement  
+-   C4103 'nom_fichier' : #pragma pack utilisé pour modifier l’alignement  
   
--   C4291 'déclaration' : opérateur delete correspondant est trouvé ; mémoire ne sera pas libérée si l’initialisation lève une exception  
+-   C4291 'déclaration' : opérateur delete correspondant a été trouvé. mémoire ne sera pas libérée si l’initialisation lève une exception  
   
--   C4268 'identificateur' : 'const' données statique/globale initialisées avec le constructeur par défaut de générés par le compilateur remplissent l’objet de zéros  
+-   C4268 'identificateur' : 'const' données static/global initialisées avec le constructeur de valeur par défaut généré par le compilateur remplissent l’objet de zéros  
   
 -   Code inaccessible C4702  
   
  Dans les projets convertis à partir de versions précédentes, ces avertissements sont toujours désactivées par les en-têtes de bibliothèques.  
   
- En ajoutant la ligne suivante au fichier stdafx.h avant d’inclure les en-têtes bibliothèques, ce comportement peut être modifié.  
+ En ajoutant la ligne suivante dans le fichier stdafx.h avant d’inclure les en-têtes de bibliothèques, ce comportement peut être modifié.  
   
- [!code-cpp[NVC_ATL_Utilities&#97;](../../atl/codesnippet/cpp/compiler-options-macros_1.h)]  
+ [!code-cpp[NVC_ATL_Utilities#97](../../atl/codesnippet/cpp/compiler-options-macros_1.h)]  
   
- Si cette `#define` est ajoutée, les en-têtes ATL sont veiller à conserver l’état de ces avertissements afin qu’ils ne sont pas désactivés globalement (ou si l’utilisateur désactive explicitement des avertissements individuels, ne pas pour les activer).  
+ Si cette `#define` est ajoutée, les en-têtes ATL sont faites attention de ne conserver l’état de ces avertissements afin qu’ils ne sont pas désactivées globalement (ou si l’utilisateur désactive explicitement des avertissements individuels, ne pas pour les activer).  
   
- Nouveaux projets générés avec Visual C++ .NET 2002 sont `#define` définie dans le fichier stdafx.h par défaut.  
+ Nouveaux projets ont ce `#define` la valeur par défaut dans le fichier stdafx.h.  
   
 ##  <a name="_atl_apartment_threaded"></a>_ATL_APARTMENT_THREADED  
- Définir si un ou plusieurs de vos objets utilisent le thread cloisonné.  
+ Définir si un ou plusieurs de vos objets utilisent le cloisonnement des threads.  
   
 ```
 _ATL_APARTMENT_THREADED
 ```  
   
-### <a name="remarks"></a>Remarques  
- Spécifie le modèle de thread cloisonné. Consultez la page [en spécifiant le modèle de thread du projet](../../atl/specifying-the-threading-model-for-a-project-atl.md) pour d’autres options, de thread et [Options, Assistant objet Simple ATL](../../atl/reference/options-atl-simple-object-wizard.md) pour obtenir une description de la thread modèles disponibles pour un objet ATL.  
+### <a name="remarks"></a>Notes  
+ Spécifie le modèle de thread cloisonné. Consultez [en spécifiant le modèle de thread du projet](../../atl/specifying-the-threading-model-for-a-project-atl.md) pour d’autres options, de thread et [Options, Assistant objet Simple ATL](../../atl/reference/options-atl-simple-object-wizard.md) pour obtenir une description de la thread les modèles disponibles pour un objet ATL.  
   
 ##  <a name="_atl_cstring_explicit_constructors"></a>_ATL_CSTRING_EXPLICIT_CONSTRUCTORS  
- Rend certains `CString` constructeurs explicites, empêchant toute conversion involontaire.  
+ S’assure que certaines `CString` constructeurs explicites, ce qui empêche toute conversion involontaire.  
   
 ```
 _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 ```  
   
-### <a name="remarks"></a>Remarques  
- Lorsqu’il est défini, tous les constructeurs CString qui prennent un paramètre unique sont compilées avec le mot clé explicit, ce qui empêche les conversions implicites des arguments d’entrée. Cela signifie, par exemple, que si _UNICODE est défini, si vous essayez d’utiliser une chaîne char * comme un argument de constructeur CString, entraîne une erreur du compilateur. Utilisez la macro dans les situations où vous devez empêcher les conversions implicites entre les types de chaîne étroits et étendus.  
+### <a name="remarks"></a>Notes  
+ Lorsqu’il est défini, tous les constructeurs CString qui prennent un paramètre unique sont compilés avec le mot clé explicit, ce qui empêche les conversions implicites des arguments d’entrée. Cela signifie, par exemple, que lorsque vous _UNICODE est défini, si vous essayez d’utiliser une chaîne char * en tant qu’argument d’un constructeur CString, entraîne une erreur du compilateur. Utilisez cette macro dans les situations où vous devez empêcher les conversions implicites entre types de chaînes étroites et étendues.  
   
- À l’aide de la macro _T sur tous les arguments de chaîne de constructeur, vous pouvez définir _ATL_CSTRING_EXPLICIT_CONSTRUCTORS et éviter les erreurs de compilation si _UNICODE est défini.  
+ À l’aide de la macro _T sur tous les arguments de chaîne du constructeur, vous pouvez définir des _ATL_CSTRING_EXPLICIT_CONSTRUCTORS et éviter les erreurs de compilation si _UNICODE est défini.  
   
 ##  <a name="_atl_enable_ptm_warning"></a>_ATL_ENABLE_PTM_WARNING  
- Définir cette macro afin de forcer l’utilisation de la syntaxe compatible avec la norme C++ ANSI pour le pointeur aux fonctions membres. À l’aide de cette macro entraîne l’erreur de compilateur C4867 soient générés lors de la syntaxe non standard est utilisé pour initialiser un pointeur vers une fonction membre.  
+ Définir cette macro afin de forcer l’utilisation de la syntaxe de compatible avec la norme ANSI C++ pour les fonctions pointeur vers membre. L’utilisation de cette macro entraîne l’erreur du compilateur C4867 soient générés lors de la syntaxe non standard est utilisé pour initialiser un pointeur vers une fonction membre.  
   
 ```
 #define _ATL_ENABLE_PTM_WARNING
 ```  
   
 ### <a name="remarks"></a>Notes  
- Les bibliothèques ATL et MFC ont été modifiés pour correspondre à la conformité du C++ standard améliorée du compilateur Visual C++. Selon la norme ANSI C++, la syntaxe d’un pointeur vers une fonction membre de classe doit être `&CMyClass::MyFunc`.  
+ Les bibliothèques ATL et MFC ont été modifiées pour correspondre à la conformité du C++ standard améliorée du compilateur Visual C++. Selon la norme ANSI C++, la syntaxe d’un pointeur vers une fonction membre de classe doit être `&CMyClass::MyFunc`.  
   
- Lors de la [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) n’est pas défini (le cas par défaut), ATL et MFC désactive l’erreur C4867 dans les mappages de macro (notamment message mappe) afin que le code qui a été créé dans les versions antérieures permettre continuer à générer comme avant. Si vous définissez **_ATL_ENABLE_PTM_WARNING**, votre code doit être conforme à C++ standard.  
+ Lorsque [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) n’est pas défini (le cas par défaut), ATL et MFC désactive l’erreur C4867 dans les mappages de macro (notamment message mappe) afin que le code qui a été créé dans les versions antérieures permettre continuer à créer comme avant. Si vous définissez **_ATL_ENABLE_PTM_WARNING**, votre code doit être conforme à la norme C++.  
   
- Toutefois, le formulaire non standard est déconseillé, vous devez déplacer le code existant à la syntaxe standard C++. Par exemple, les éléments suivants :  
+ Toutefois, la forme non standard est déconseillée, donc vous devez déplacer le code existant à la syntaxe standard C++. Par exemple, les éléments suivants :  
   
- [!code-cpp[NVC_MFCListView&#14;](../../atl/reference/codesnippet/cpp/compiler-options-macros_2.cpp)]  
+ [!code-cpp[NVC_MFCListView#14](../../atl/reference/codesnippet/cpp/compiler-options-macros_2.cpp)]  
   
- Doit être remplacé par :  
+ Doit être changé en :  
   
- [!code-cpp[NVC_MFCListView&#11;](../../atl/reference/codesnippet/cpp/compiler-options-macros_3.cpp)]  
+ [!code-cpp[NVC_MFCListView#11](../../atl/reference/codesnippet/cpp/compiler-options-macros_3.cpp)]  
   
- Notez que pour les macros de mappage qui ajoutent le caractère « < », vous ne devez pas l’ajouter à nouveau dans votre code.  
+ Notez que pour les macros de mappage que vous ajoutez le caractère '&', vous ne devez pas l’ajouter à nouveau dans votre code.  
   
 ##  <a name="_atl_free_threaded"></a>_ATL_FREE_THREADED  
- Définir si un ou plusieurs de vos objets utilisent le thread libre ou neutre.  
+ Définir si un ou plusieurs de vos objets utilisent le threading de libre ou neutre.  
   
 ```
 _ATL_FREE_THREADED
 ```  
   
-### <a name="remarks"></a>Remarques  
- Spécifie le modèle de thread libre. Ce qui équivaut à un modèle multithread cloisonné. Consultez la page [en spécifiant le modèle de thread du projet](../../atl/specifying-the-threading-model-for-a-project-atl.md) pour d’autres options, de thread et [Options, Assistant objet Simple ATL](../../atl/reference/options-atl-simple-object-wizard.md) pour obtenir une description de la thread modèles disponibles pour un objet ATL.  
+### <a name="remarks"></a>Notes  
+ Spécifie le modèle de thread libre. Ce qui équivaut à un modèle de cloisonnement multithread. Consultez [en spécifiant le modèle de thread du projet](../../atl/specifying-the-threading-model-for-a-project-atl.md) pour d’autres options, de thread et [Options, Assistant objet Simple ATL](../../atl/reference/options-atl-simple-object-wizard.md) pour obtenir une description de la thread les modèles disponibles pour un objet ATL.  
   
 ##  <a name="_atl_multi_threaded"></a>_ATL_MULTI_THREADED  
  Un symbole qui indique le projet aura des objets qui sont marqués comme les deux, libre ou neutre.  
@@ -150,8 +145,8 @@ _ATL_FREE_THREADED
 _ATL_MULTI_THREADED
 ```  
   
-### <a name="remarks"></a>Remarques  
- Si ce symbole est défini, ATL extrait de code qui va synchroniser correctement les accès aux données globales. Nouveau code doit utiliser la macro équivalente [_ATL_FREE_THREADED](#_atl_free_threaded) à la place.  
+### <a name="remarks"></a>Notes  
+ Si ce symbole est défini, ATL doivent extraire dans le code qui va synchroniser correctement les accès aux données globales. Nouveau code doit utiliser la macro équivalente [_ATL_FREE_THREADED](#_atl_free_threaded) à la place.  
   
 ##  <a name="_atl_no_automatic_namespace"></a>_ATL_NO_AUTOMATIC_NAMESPACE  
  Un symbole qui empêche l’utilisation de la valeur par défaut de l’espace de noms comme ATL.  
@@ -160,11 +155,11 @@ _ATL_MULTI_THREADED
 _ATL_NO_AUTOMATIC_NAMESPACE
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si ce symbole n’est pas défini, y compris atlbase.h effectue **à l’aide de l’espace de noms ATL** par défaut, ce qui peut entraîner des conflits de noms. Pour éviter ce problème, définissez ce symbole.  
   
 ##  <a name="_atl_no_com_support"></a>_ATL_NO_COM_SUPPORT  
- Un symbole qui empêche que code lié à COM qui est compilé avec votre projet.  
+ Un symbole qui empêche que code COM associé qui est compilé avec votre projet.  
   
 ```
 _ATL_NO_COM_SUPPORT```  
@@ -210,4 +205,3 @@ _ATL_SINGLE_THREADED
   
 ## See Also  
  [Macros](../../atl/reference/atl-macros.md)
-

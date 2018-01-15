@@ -1,67 +1,69 @@
 ---
-title: "Class Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributes [C++], class attributes"
-  - "class attributes"
+title: Attributs de classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- attributes [C++], class attributes
+- class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: afc3f277170dbbdf92f280d341bffb042ab70af2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Class Attributes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-les attributs suivants s'appliquent à [classe](../cpp/class-cpp.md) C\+\+ le mot clé.  
+# <a name="class-attributes"></a>Attributs de classe
+Les attributs suivants s’appliquent à la [classe](../cpp/class-cpp.md) mot clé C++.  
   
 |Attribut|Description|  
-|--------------|-----------------|  
-|[aggregatable](../windows/aggregatable.md)|indique que la classe prend en charge le regroupement.|  
-|[agrégats](../windows/aggregates.md)|indique qu'un contrôle regroupe la classe cible.|  
-|[appobject](../windows/appobject.md)|Identifie la coclasse comme un objet d'application, associé à une application complète .exe, et indique que les fonctions et les propriétés de la coclasse sont globalement disponibles à cette bibliothèque de types.|  
-|[case](../windows/case-cpp.md)|utilisé avec l'attribut de [switch\_type](../windows/switch-type.md) dans une union.|  
-|[coclasse](../windows/coclass.md)|crée un contrôle ActiveX.|  
-|[com\_interface\_entry](../windows/com-interface-entry-cpp.md)|ajoute une entrée d'interface à un mappage COM.|  
-|[Contrôle](../windows/control.md)|spécifie que le type défini par l'utilisateur est un contrôle.|  
-|[custom](../windows/custom-cpp.md)|Vous permet de définir votre propre attribut.|  
-|[db\_command](../windows/db-command.md)|Crée une commande OLE DB.|  
-|[db\_param](../windows/db-param.md)|associe la variable membre spécifiée avec une entrée ou un paramètre de sortie et délimite la variable.|  
-|[db\_source](../windows/db-source.md)|crée une connexion à une source de données.|  
-|[db\_table](../windows/db-table.md)|Ouvre une table OLE DB.|  
-|[par défaut](../windows/default-cpp.md)|Indique que le personnalisé ou la dispinterface définie dans une coclasse représente l'interface par défaut de programmabilité.|  
-|[defaultvtable](../windows/defaultvtable.md)|Définit une interface en tant qu'interface vtable par défaut pour un contrôle.|  
-|[event\_receiver](../windows/event-receiver.md)|crée un récepteur d'événements.|  
-|[event\_source](../windows/event-source.md)|crée une source d'événement.|  
-|[helpcontext](../windows/helpcontext.md)|Spécifie un ID de contexte qui laisse les informations de voir sur cet élément dans le fichier d'aide.|  
-|[helpfile](../windows/helpfile.md)|définit le nom du fichier d'aide pour une bibliothèque de types.|  
-|[helpstringcontext](../windows/helpstringcontext.md)|Spécifie l'ID d'une rubrique d'aide dans un fichier de .hlp ou .chm.|  
-|[helpstring](../windows/helpstring.md)|Spécifie une chaîne de caractères utilisée pour décrire l'élément auquel elle s'applique.|  
-|[hidden](../windows/hidden.md)|Indique que l'élément existe mais ne doit pas être affiché dans un navigateur orienté utilisateur.|  
-|[implements](../windows/implements-cpp.md)|Spécifie les interfaces de dispatch qui sont converties pour être des membres de la coclasse IDL.|  
-|[implements\_category](../windows/implements-category.md)|Spécifie a implémenté des catégories de composants pour la classe.|  
-|[module](../windows/module-cpp.md)|Définit le bloc bibliothèque dans le fichier .idl.|  
-|[noncreatable](../windows/noncreatable.md)|définit un objet qui ne peut pas être instancié par lui\-même.|  
-|[progid](../windows/progid.md)|définit l'identificateur programmatique pour un contrôle.|  
-|[registration\_script](../windows/registration-script.md)|Exécute le script spécifié d'inscription.|  
-|[requestedit](../windows/requestedit.md)|indique que la propriété prend en charge la notification d' **OnRequestEdit** .|  
-|[source](../windows/source-cpp.md)|Spécifie les interfaces sources du contrôle sur les points de connexion sur une classe.  Sur une propriété ou une méthode, l'attribut source indique que le membre retourne un objet ou a VARIANT qui représentent une source d'événements.|  
-|[support\_error\_information](../windows/support-error-info.md)|Prend en charge le rapport d'erreurs pour l'objet de la cible.|  
-|[threads](../windows/threading-cpp.md)|spécifie le modèle de thread pour un contrôle.|  
-|[uuid](../windows/uuid-cpp-attributes.md)|Spécifie l'identificateur unique d'une classe ou une interface.|  
-|[version](../windows/version-cpp.md)|Identifie une version particulière entre plusieurs versions d'une classe.|  
-|[vi\_progid](../windows/vi-progid.md)|spécifie un formulaire indépendant de la version de l'identificateur programmatique.|  
+|---------------|-----------------|  
+|[aggregatable](../windows/aggregatable.md)|Indique que la classe prend en charge l’agrégation.|  
+|[aggregates](../windows/aggregates.md)|Indique qu’un contrôle agrège la classe cible.|  
+|[appobject](../windows/appobject.md)|Identifie la coclasse comme un objet de l’application, qui est associé à une application .exe complet et indique que les fonctions et les propriétés de la coclasse sont disponibles dans cette bibliothèque de types.|  
+|[case](../windows/case-cpp.md)|Utilisé avec le [switch_type](../windows/switch-type.md) attribut dans une union.|  
+|[coclass](../windows/coclass.md)|Crée un contrôle ActiveX.|  
+|[COM_INTERFACE_ENTRY](../windows/com-interface-entry-cpp.md)|Ajoute une entrée de l’interface à un mappage COM.|  
+|[control](../windows/control.md)|Spécifie que le type défini par l’utilisateur est un contrôle.|  
+|[personnalisé](../windows/custom-cpp.md)|Permet de définir votre propre attribut.|  
+|[db_command](../windows/db-command.md)|Crée une commande OLE DB.|  
+|[db_param](../windows/db-param.md)|Associe la variable membre spécifié avec un paramètre d’entrée ou de sortie et délimite la variable.|  
+|[db_source](../windows/db-source.md)|Crée une connexion à une source de données.|  
+|[db_table](../windows/db-table.md)|Ouvre une table OLE DB.|  
+|[default](../windows/default-cpp.md)|Indique que l’interface personnalisée ou dispinterface définie dans une coclasse représente l’interface de programmabilité par défaut.|  
+|[defaultvtable](../windows/defaultvtable.md)|Définit une interface en tant que l’interface de vtable par défaut pour un contrôle.|  
+|[event_receiver](../windows/event-receiver.md)|Crée un récepteur d’événements.|  
+|[event_source](../windows/event-source.md)|Crée une source d'événement.|  
+|[helpcontext](../windows/helpcontext.md)|Spécifie un ID de contexte qui permet à l’utilisateur afficher des informations sur cet élément dans le fichier d’aide.|  
+|[helpfile](../windows/helpfile.md)|Définit le nom du fichier d’aide pour une bibliothèque de types.|  
+|[helpstringcontext](../windows/helpstringcontext.md)|Spécifie l’ID d’une rubrique d’aide dans un fichier .hlp ou .chm.|  
+|[helpstring](../windows/helpstring.md)|Spécifie une chaîne de caractères qui est utilisée pour décrire l’élément auquel elle s’applique.|  
+|[hidden](../windows/hidden.md)|Indique que l’élément existe, mais ne doit pas être affiché dans un navigateur orienté utilisateur.|  
+|[implémente](../windows/implements-cpp.md)|Spécifie les interfaces de dispatch qui doivent être membres de la coclasse IDL.|  
+|[implements_category](../windows/implements-category.md)|Spécifie les catégories de composants de mise en œuvre de la classe.|  
+|[module](../windows/module-cpp.md)|Définit le bloc de bibliothèque dans le fichier .idl.|  
+|[noncreatable](../windows/noncreatable.md)|Définit un objet qui ne peut pas être instancié par lui-même.|  
+|[progid](../windows/progid.md)|Définit le ProgID pour un contrôle.|  
+|[registration_script](../windows/registration-script.md)|Exécute le script d’enregistrement spécifié.|  
+|[requestedit](../windows/requestedit.md)|Indique que la propriété prend en charge la **OnRequestEdit** notification.|  
+|[source](../windows/source-cpp.md)|Spécifie les interfaces de source du contrôle des points de connexion sur une classe. Sur une propriété ou une méthode, le **source** attribut indique que le membre retourne un objet ou un VARIANT et qui est une source d’événements.|  
+|[support_error_info](../windows/support-error-info.md)|Prend en charge les rapports d’erreurs pour l’objet cible.|  
+|[modèle de thread](../windows/threading-cpp.md)|Spécifie le modèle de thread pour un contrôle.|  
+|[UUID](../windows/uuid-cpp-attributes.md)|Spécifie l’ID unique pour une classe ou interface.|  
+|[version](../windows/version-cpp.md)|Identifie une version particulière entre plusieurs versions d’une classe.|  
+|[vi_progid](../windows/vi-progid.md)|Spécifie un formulaire indépendant de la version du ProgID.|  
   
-## Voir aussi  
- [Attributes by Usage](../windows/attributes-by-usage.md)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs par utilisation](../windows/attributes-by-usage.md)

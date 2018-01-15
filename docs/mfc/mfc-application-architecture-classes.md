@@ -19,16 +19,17 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0b809daac194e1fed3abe98452c02f1521111fee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 623775d6c3306ba4afdb01eb78ea70b05f7a3365
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-application-architecture-classes"></a>Classes d'architecture des applications MFC
 Les classes de cette catégorie contribuent à l'architecture d'une application framework. Elles fournissent la fonctionnalité commune à la plupart des applications. Vous remplissez le framework pour ajouter des fonctionnalités spécifiques à l'application. En général, cela se produit en faisant dériver de nouvelles classes à partir des classes de l'architecture, puis en ajoutant de nouveaux membres ou en remplaçant les fonctions membres existantes.  
   
- [Assistants application](../mfc/reference/mfc-application-wizard.md) générer plusieurs types d’applications, qui utilisent l’infrastructure d’application de différentes façons. Les applications SDI (interface monodocument) et MDI (interface multidocument) utilisent pleinement le framework appelée architecture Document/Vue. D'autres types d'applications, telles que les applications basées sur les boîtes de dialogue, sur les formulaires et les DLL, utilisent uniquement certaines des fonctionnalités de l'architecture Document/Vue.  
+ [Assistants application](../mfc/reference/mfc-application-wizard.md) générer plusieurs types d’applications, qui utilisent l’infrastructure d’application de différentes façons. Les applications SDI (interface monodocument) et MDI (interface multidocument) utilisent pleinement le framework appelée architecture Document/Vue. D’autres types d’applications, telles que les applications basées sur les boîtes de dialogue, sur les formulaires et les DLL, utilisent uniquement certaines des fonctionnalités de l’architecture Document/Vue.  
   
  Les applications Document/Vue contiennent un ou plusieurs jeux de documents, de vues et fenêtres frame. Un objet de modèle de document associe les classes pour chaque document/vue/ensemble de frames.  
   

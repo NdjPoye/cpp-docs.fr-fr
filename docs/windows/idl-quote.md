@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8ca11d9b92ba1dd0dc7f5437bf1dec812f2edfcc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 288d90bf2e32024792eaf5ec44825a9ac992bd71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idlquote"></a>idl_quote
 Vous pouvez utiliser des constructions IDL qui ne sont pas pris en charge dans la version actuelle de Visual C++ et les transmettre au fichier .idl généré.  
@@ -37,7 +40,7 @@ Vous pouvez utiliser des constructions IDL qui ne sont pas pris en charge dans l
  *texte*  
  Le nom d’attribut que vous avez l’intention le compilateur Visual C++ pour passer directement vers le fichier .idl généré sans retourner une erreur du compilateur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si le **idl_quote** attribut C++ est utilisé en tant qu’attribut autonome (avec un point-virgule après le crochet fermant), puis *texte* est placé dans le fichier .idl fusionné. Si **idl_quote** est utilisé sur un symbole, *texte* est placé dans le bloc d’attributs de ce symbole.  
   
 ## <a name="example"></a>Exemple  
@@ -78,7 +81,7 @@ __interface IStatic{
   
  Ce code entraîne MYFLOT et MYDUB et *texte* entrée doit être placé dans le fichier .idl généré. Le *nom* paramètre force *texte* doit être placé avant tout ce qui fait référence à *nom* dans le fichier .idl généré. Le *dépendances* paramètre force les définitions de liste de dépendance doit être placé avant *texte* dans le fichier .idl généré.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -86,8 +89,8 @@ __interface IStatic{
 |-|-|  
 |**S'applique à**|N'importe où|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|None|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

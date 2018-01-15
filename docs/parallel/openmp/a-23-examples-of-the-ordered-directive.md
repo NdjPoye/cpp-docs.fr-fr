@@ -1,31 +1,31 @@
 ---
-title: "A.23   Examples of the ordered Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Exemples A.23 de la Directive ordonnée | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: f8fa761b-7fc5-4447-95f9-8571e9ca31bf
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 83d77bb4f064a7ee69b013b36de919b57486b3e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# A.23   Examples of the ordered Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Il est possible d'avoir les sections classées par plusieurs avec `for` spécifié avec la clause d' `ordered` .  le premier exemple est non conforme parce que l'API spécifie ce qui suit :  
+# <a name="a23---examples-of-the-ordered-directive"></a>A.23   Exemples de directive ordered
+Il est possible d’avoir plusieurs sections triées avec une `for` spécifié avec le `ordered` clause. Le premier exemple n’est pas conforme parce que l’API spécifie les éléments suivants :  
   
- « Une itération d'une boucle avec un élément d' `for` ne doit pas effectuer la même directive d' `ordered` plusieurs fois, et elle ne doit pas exécuter plusieurs directive d' `ordered` ». \(Consultez [section 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) à la page 22\)  
+ « Une itération d’une boucle avec une `for` construction ne doit pas exécuter le même `ordered` directive plus qu’une seule fois et il ne doivent pas exécuter plusieurs `ordered` directive. » (Consultez [Section 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) à la page 22)  
   
- dans cet exemple non conforme, toutes les itérations exécutent 2 sections classées :  
+ Dans cet exemple non conforme, toutes les itérations exécutent 2 sections ordonnées :  
   
 ```  
 #pragma omp for ordered  
@@ -41,7 +41,7 @@ for (i=0; i<n; i++)
 }  
 ```  
   
- L'exemple conforme suivant montre `for` avec plusieurs section classée :  
+ L’exemple conforme suivant un `for` avec plusieurs triées section :  
   
 ```  
 #pragma omp for ordered  

@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b66e9f40e3fb7f4c9a6c9f6fcb9bcd9c2a45fdd3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84594f668d0fc807ebb815cc519c7d45f62e8b12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="switch-statement-c"></a>switch, instruction (C)
 Les instructions `switch` et **case** aident à contrôler les opérations conditionnelles et de création de branche complexes. L'instruction `switch` transfère le contrôle à une instruction dans son corps.  
@@ -134,7 +135,7 @@ case 'f' :  hexcvt(c);
   
  Par défaut pour Microsoft C, les extensions Microsoft sont activées. Utilisez l’option du compilateur /Za pour désactiver ces extensions.  
   
- **Fin de la section spécifique à Microsoft**  
+ **FIN de la section spécifique à Microsoft**  
   
 ## <a name="see-also"></a>Voir aussi  
  [switch, instruction (C++)](../cpp/switch-statement-cpp.md)

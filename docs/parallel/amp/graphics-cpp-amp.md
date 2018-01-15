@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 601cf58a8238e34b1186e9d5d022a315342d4e6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9e1b8c6205560e7ea07b529acff3ccfe9db4ea6
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="graphics-c-amp"></a>Graphiques (C++ AMP)
 C++ AMP contient plusieurs API dans le [Concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) espace de noms que vous pouvez utiliser pour accéder à la prise en charge de texture sur le GPU. Voici quelques scénarios courants :  
@@ -32,7 +33,7 @@ C++ AMP contient plusieurs API dans le [Concurrency::graphics](../../parallel/am
  Le `norm` et `unorm` types sont des types scalaires qui limitent la plage de `float` valeurs ; il s’agit en tant que *serrage*. Ces types peuvent être explicitement construits à partir d'autres types scalaires. Dans un casting, la valeur est tout d’abord castée en `float` , puis fixée à la zone respective autorisée par norm [-1.0, 1.0] ou unorm [0.0, 1.0]. Le cast de +/- infini retourne +/-1. Le cast depuis NaN n'est pas défini. Un norm peut être implicitement construit à partir d'un unorm sans perte de données. L'opérateur de conversion implicite en float est défini sur ces types. Opérateurs binaires sont définis entre ces types et d’autres types scalaires intégrés tels que `float` et `int`: +, -, *, /, ==, ! =, >, \<, > =, < =. Les opérateurs d’assignation composée sont également pris en charge : +=, -=, \*=, / =. L'opérateur de négation unaire (-) est défini pour les types norm.  
   
 ## <a name="short-vector-library"></a>Bibliothèque de vecteurs courts  
- La bibliothèque de vecteurs courts fournit certaines des fonctionnalités de la [Type de vecteur](http://go.microsoft.com/fwlink/p/linkid=248500) qui est défini en langage HLSL et est généralement utilisé pour définir des texels. Un vecteur court est une structure de données contenant une à quatre valeurs du même type. Les types pris en charge sont `double`, `float`, `int`, `norm`, `uint` et `unorm`. Les noms des types sont affichés dans le tableau suivant. Pour chaque type, il existe également un `typedef` correspondant sans trait de soulignement (underscore) dans son nom. Les types ayant les traits de soulignement sont dans le [Concurrency::graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md). Les types qui n’ont pas les traits de soulignement sont dans le [Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) afin qu’ils sont clairement séparées à partir des types fondamentaux portent comme `__int8` et `__int16`.  
+ La bibliothèque de vecteurs courts fournit certaines des fonctionnalités de la [Type de vecteur](http://go.microsoft.com/fwlink/p/?linkid=248500) qui est défini en langage HLSL et est généralement utilisé pour définir des texels. Un vecteur court est une structure de données contenant une à quatre valeurs du même type. Les types pris en charge sont `double`, `float`, `int`, `norm`, `uint` et `unorm`. Les noms des types sont affichés dans le tableau suivant. Pour chaque type, il existe également un `typedef` correspondant sans trait de soulignement (underscore) dans son nom. Les types ayant les traits de soulignement sont dans le [Concurrency::graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md). Les types qui n’ont pas les traits de soulignement sont dans le [Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) afin qu’ils sont clairement séparées à partir des types fondamentaux portent comme `__int8` et `__int16`.  
   
 ||Length 2|Longueur de 3|Longueur de 4|  
 |-|--------------|--------------|--------------|  
@@ -71,7 +72,7 @@ C++ AMP contient plusieurs API dans le [Concurrency::graphics](../../parallel/am
   
 -   Un vecteur court ayant deux ou quatre composants. La seule exception est `double_4`, qui n'est pas autorisée.  
   
- L'objet `texture` peut avoir un rang de 1, 2 ou 3. L'objet `texture` peut être capturé uniquement par référence dans le lambda d'un appel à `parallel_for_each`. La texture est stockée sur le GPU en tant qu'objet de texture Direct3D. Pour plus d’informations sur les textures et des texels dans Direct3D, consultez [présentation de Textures dans Direct3D 11](http://go.microsoft.com/fwlink/p/linkid=248502).  
+ L'objet `texture` peut avoir un rang de 1, 2 ou 3. L'objet `texture` peut être capturé uniquement par référence dans le lambda d'un appel à `parallel_for_each`. La texture est stockée sur le GPU en tant qu'objet de texture Direct3D. Pour plus d’informations sur les textures et des texels dans Direct3D, consultez [présentation de Textures dans Direct3D 11](http://go.microsoft.com/fwlink/p/?linkid=248502).  
   
  Le type de texel que vous utilisez peut être l'un des nombreux formats de texture utilisés dans la programmation graphique. Par exemple, un format RVBA peut utiliser 32 bits, avec 8 bits pour chacun des éléments scalaires R, G, B et A. Le matériel de texture d'une carte graphique peut accéder à chaque élément selon son format. Par exemple, si vous utilisez le format RVBA, le matériel de texture peut extraire chaque élément de 8 bits dans une forme 32 bits. En C++ AMP, vous pouvez définir des bits par élément scalaire de votre texel afin d'accéder automatiquement aux éléments scalaires individuels dans le code sans utiliser le décalage de bits.  
   
@@ -278,7 +279,7 @@ void copyHostArrayToTexture() { *// Copy from source array to texture object by 
  
 ```  
   
- Vous pouvez également copier à partir d’une texture à un autre à l’aide de la [texture::copy_to](reference/texture-class.md#copy_to) (méthode). Les deux textures peuvent être sur des accelerator_views différents. Lorsque vous effectuez une copie vers un objet `writeonly_texture_view`, les données sont copiées dans l'objet `texture` sous-jacent. Les bits par élément scalaire et l'extent doivent être identiques sur les objets `texture` sources et de destination. Si ces conditions ne sont pas satisfaites, le runtime lève une exception.  
+ Vous pouvez également copier à partir d’une texture à un autre à l’aide de la [texture::copy_to](reference/texture-class.md#copy_to) (méthode). Les deux textures peuvent être sur des accelerator_views différents. Lorsque vous effectuez une copie vers un objet `writeonly_texture_view`, les données sont copiées dans l'objet `texture` sous-jacent. Les bits par élément scalaire et l'extent doivent être identiques sur les objets `texture` sources et de destination. Si ces exigences ne sont pas satisfaites, le runtime lève une exception.  
 
   
 ## <a name="texture-view-classes"></a>Classes d'affichage de texture  
@@ -368,7 +369,7 @@ void declareTextureViews()
 |texture_view\<const T, N >|1, 2, 4|Oui|Non (1)|Oui|Oui, indexable. La plage est déterminée à l'instanciation.|  
 |Texture_view\<T, N >|1<br /><br /> 2, 4|Oui<br /><br /> Non (2)|Oui<br /><br /> Oui|Non (1)<br /><br /> Non (1)|Oui, un niveau. Le niveau est déterminé à l'instanciation.<br /><br /> Oui, un niveau. Le niveau est déterminé à l'instanciation.|  
   
- Dans ce tableau, vous pouvez constater que les vues de texture en lecture seule prennent en charge les nouvelles fonctions pour compenser l'impossibilité d'accéder en écriture à la vue. Les vues de texture accessibles en écriture sont limitées car elles peuvent uniquement accéder à un niveau de mipmap. Les vues de texture en lecture-écriture sont encore plus spécialisées que celles accessibles en écriture, car elles ajoutent la condition que le type d'élément de la vue de texture comporte uniquement un seul composant. Notez que l'exemple n'est pas pris en charge pour les vues de texture accessibles en écriture, car il s'agit d'une opération orientée lecture seule.  
+ Dans ce tableau, vous pouvez constater que les vues de texture en lecture seule prennent en charge les nouvelles fonctions pour compenser l'impossibilité d'accéder en écriture à la vue. Les vues de texture accessibles en écriture sont limitées car elles peuvent uniquement accéder à un niveau de mipmap. Les vues de texture en lecture-écriture sont encore plus spécialisées que celles accessibles en écriture, car elles ajoutent l’exigence que le type d’élément de la vue de texture comporte uniquement un seul composant. Notez que l'exemple n'est pas pris en charge pour les vues de texture accessibles en écriture, car il s'agit d'une opération orientée lecture seule.  
   
 ### <a name="reading-from-texture-view-objects"></a>Lecture des objets de la vue Texture  
  La lecture de données de texture non échantillonnées via un affichage de texture revient à effectuer la lecture depuis la texture elle-même, mais les textures sont capturées par référence, alors que les vues de texture sont capturées par valeur. Voici deux exemples de code. Le premier utilise uniquement `texture` :  
@@ -429,7 +430,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
   
 ## <a name="interoperability"></a>Interopérabilité  
 
- Le runtime C++ AMP prend en charge l’interopérabilité entre `texture<T,1>` et [ID3D11Texture1D interface](http://go.microsoft.com/fwlink/p/LinkId=248503), entre `texture<T,2>` et [ID3D11Texture2D interface](http://go.microsoft.com/fwlink/p/LinkId=255317)et entre `texture<T,3>`et [ID3D11Texture3D interface](http://go.microsoft.com/fwlink/p/LinkId=255377). Le [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) méthode prend un `texture` objet et retourne un `IUnknown` interface. Le [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) méthode prend un `IUnknown` interface et un `accelerator_view` objet et retourne un `texture` objet.  
+ Le runtime C++ AMP prend en charge l’interopérabilité entre `texture<T,1>` et [ID3D11Texture1D interface](http://go.microsoft.com/fwlink/p/?linkId=248503), entre `texture<T,2>` et [ID3D11Texture2D interface](http://go.microsoft.com/fwlink/p/?linkId=255317)et entre `texture<T,3>`et [ID3D11Texture3D interface](http://go.microsoft.com/fwlink/p/?linkId=255377). Le [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) méthode prend un `texture` objet et retourne un `IUnknown` interface. Le [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) méthode prend un `IUnknown` interface et un `accelerator_view` objet et retourne un `texture` objet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [double_2, classe](../../parallel/amp/reference/double-2-class.md)   

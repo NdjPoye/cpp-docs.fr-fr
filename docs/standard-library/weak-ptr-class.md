@@ -39,11 +39,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: db0ab662735a29e1b37536ebbccf3e94fa056070
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 821992a6a0684e965f804729b470075038310ef1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="weakptr-class"></a>weak_ptr, classe
 Encapsule un pointeur faiblement lié.  
@@ -111,7 +112,7 @@ public:
 |-|-|  
 |[operator=](#op_eq)|Remplace la ressource détenue.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<memory>  
   
  **Espace de noms :** std  
@@ -337,7 +338,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
  `ptr`  
  Référence `lvalue` à un `shared_ptr` ou à un `weak_ptr`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction membre de modèle retourne `true` si `*this` est `ordered before` `ptr`.  
   
 ##  <a name="reset"></a>  reset  

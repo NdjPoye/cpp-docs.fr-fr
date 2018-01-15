@@ -1,85 +1,89 @@
 ---
-title: "Changing the Tab Order of Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], tab order"
-  - "focus, tab order"
-  - "tab controls, tab order"
-  - "Tabstop property for controls"
-  - "controls [C++], focus"
-  - "dialog box controls, tab order"
+title: "Modification de l’ordre de tabulation des contrôles | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], tab order
+- focus, tab order
+- tab controls, tab order
+- Tabstop property for controls
+- controls [C++], focus
+- dialog box controls, tab order
 ms.assetid: e2cee764-4367-42d7-9563-65a68f76f5ff
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: dca6b1bb894aa2219a0352ba9c359e6f3c5a4677
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Changing the Tab Order of Controls
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'ordre de tabulation est l'ordre en fonction duquel le focus d'entrée se déplace d'un contrôle à l'autre dans une boîte de dialogue lorsque vous appuyez sur la touche TABULATION.  En règle générale, l'ordre de tabulation est défini de gauche à droite et de haut en bas dans une boîte de dialogue.  Chaque contrôle dispose d'une propriété **Tabstop** qui détermine si un contrôle reçoit le focus d'entrée.  
+# <a name="changing-the-tab-order-of-controls"></a>Modification de l'ordre de tabulation des contrôles
+L’ordre de tabulation est l’ordre dans lequel la touche TAB déplace le focus d’entrée d’un contrôle à l’autre dans une boîte de dialogue. Généralement, l’ordre de tabulation se déroule de gauche à droite et de haut en bas de la boîte de dialogue. Chaque contrôle possède un **Tabstop** propriété qui détermine si un contrôle reçoit le focus d’entrée.  
   
-### Pour définir le focus d'entrée pour un contrôle  
+### <a name="to-set-input-focus-for-a-control"></a>Pour définir le focus d’entrée pour un contrôle  
   
-1.  Dans la [fenêtre Propriétés](../Topic/Properties%20Window.md), sélectionnez **True** ou **False** dans la propriété **Tabstop**.  
+1.  Dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), sélectionnez **True** ou **False** dans les **Tabstop** propriété.  
   
- Même les contrôles dont la propriété Tabstop n'a pas la valeur True doivent faire partie de l'ordre de tabulation.  Cela est important, par exemple, lorsque vous [définissez des touches d'accès rapide \(mnémoniques\)](../mfc/defining-mnemonics-access-keys.md) pour les contrôles qui n'ont pas de légende.  Le texte statique qui contient une touche d'accès rapide pour un contrôle associé doit immédiatement précéder le contrôle associé dans l'ordre de tabulation.  
+ Même les contrôles qui n’ont pas la propriété Tabstop a la valeur True doivent faire partie de l’ordre de tabulation. Cela peut être important, par exemple, lorsque vous [définir des touches d’accès rapide (mnémoniques)](../windows/defining-mnemonics-access-keys.md) pour les contrôles qui n’ont pas de légende. Texte statique qui contient une clé d’accès pour un contrôle lié doit précéder immédiatement le contrôle associé dans l’ordre de tabulation.  
   
 > [!NOTE]
->  Si votre boîte de dialogue contient des contrôles superposés, la modification de l'ordre de tabulation peut changer la façon dont les contrôles sont affichés.  Les contrôles qui viennent ensuite dans l'ordre de tabulation sont toujours affichés au\-dessus des contrôles superposés qui les précèdent dans l'ordre de tabulation.  
+>  Si votre boîte de dialogue contient des contrôles qui se chevauchent, la modification de l’ordre de tabulation peut changer la façon des que contrôles sont affichés. Contrôles fournis plus loin dans l’ordre de tabulation sont toujours affichés au-dessus des contrôles superposés qui les précèdent dans l’ordre de tabulation.  
   
-#### Pour afficher l'ordre de tabulation actuel pour tous les contrôles d'une boîte de dialogue  
+#### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Pour afficher l’ordre de tabulation actuel pour tous les contrôles dans une boîte de dialogue  
   
-1.  Dans le menu **Format**, cliquez sur **Ordre de tabulation**.  
+1.  Sur le **Format** menu, cliquez sur **l’ordre de tabulation**.  
   
- \- ou \-  
+ \- ou -  
   
--   Appuyez sur CTRL \+ D.  
+-   Appuyez sur CTRL + D.  
   
-#### Pour changer l'ordre de tabulation pour tous les contrôles d'une boîte de dialogue  
+#### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Pour modifier l’ordre de tabulation pour tous les contrôles dans une boîte de dialogue  
   
-1.  Dans le menu **Format**, cliquez sur **Ordre de tabulation**.  
+1.  Sur le **Format** menu, cliquez sur **l’ordre de tabulation**.  
   
-     Un chiffre dans le coin supérieur gauche de chaque contrôle affiche sa place dans l'ordre de tabulation actuel.  
+     Un nombre dans le coin supérieur gauche de chaque contrôle affiche sa place dans l’ordre de tabulation actuel.  
   
-2.  Définissez l'ordre de tabulation en cliquant sur chaque contrôle dans l'ordre que doit suivre la touche TABULATION.  
+2.  Définir l’ordre de tabulation en cliquant sur chaque contrôle dans l’ordre que vous souhaitez que la touche TAB à suivre.  
   
-3.  Appuyez sur **ENTRÉE** pour quitter le mode **Ordre de tabulation**.  
+3.  Appuyez sur **entrée** pour quitter **l’ordre de tabulation** mode.  
   
     > [!TIP]
-    >  Lorsque vous êtes en mode Ordre de tabulation, vous pouvez appuyer sur ÉCHAP ou sur ENTRÉE pour désactiver la possibilité de changer l'ordre de tabulation.  
+    >  Une fois que vous entrez le mode de l’ordre de tabulation, vous pouvez appuyer sur ÉCHAP ou entrée pour désactiver la possibilité de modifier l’ordre de tabulation.  
   
-#### Pour changer l'ordre de tabulation pour plusieurs contrôles  
+#### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>Pour modifier l’ordre de tabulation pour deux ou plusieurs contrôles  
   
-1.  Dans le menu **Format**, cliquez sur **Ordre de tabulation**.  
+1.  À partir de la **Format** menu, choisissez **l’ordre de tabulation**.  
   
-2.  Spécifiez où l'ordre doit commencer à changer.  Pour ce faire, maintenez la touche **CTRL** enfoncée et cliquez sur le contrôle qui précède celui à partir duquel vous souhaitez modifier l'ordre.  
+2.  Spécifier l’emplacement où commence la modification dans l’ordre. Pour ce faire, maintenez la **CTRL** clé et cliquez sur le contrôle avant celle où vous souhaitez modifier l’ordre.  
   
-     Par exemple, si vous souhaitez changer l'ordre des contrôles 7 à 9, maintenez la touche CTRL enfoncée, puis sélectionnez en premier le contrôle 6.  
+     Par exemple, si vous souhaitez modifier l’ordre des contrôles 7 à 9, maintenez la touche CTRL, puis sélectionnez d’abord le contrôle 6.  
   
     > [!NOTE]
-    >  Pour attribuer la valeur 1 à un contrôle spécifique \(premier dans l'ordre de tabulation\), double\-cliquez sur le contrôle.  
+    >  Pour définir un contrôle spécifique dans le numéro 1 (premier dans l’ordre de tabulation), double-cliquez sur le contrôle.  
   
-3.  Relâchez la touche CTRL, puis cliquez sur les contrôles dans l'ordre de tabulation souhaité à partir de ce contrôle.  
+3.  Relâchez la touche CTRL, puis cliquez sur les contrôles dans l’ordre de la touche TAB à partir de ce point.  
   
-4.  Appuyez sur **ENTRÉE** pour quitter le mode **Ordre de tabulation**.  
+4.  Appuyez sur **entrée** pour quitter **l’ordre de tabulation** mode.  
   
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l'ajout de fichiers de ressources aux projets managés, l'accès aux ressources, l'affichage de ressources statiques et l'assignation de chaînes de ressources aux propriétés, et ce manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/fr-fr/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### Configuration requise  
+### <a name="requirements"></a>Configuration requise  
  Win32  
   
-## Voir aussi  
- [Arrangement of Controls on Dialog Boxes](../mfc/arrangement-of-controls-on-dialog-boxes.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Organisation des contrôles dans les boîtes de dialogue](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Contrôles dans les boîtes de dialogue](../windows/controls-in-dialog-boxes.md)   
  [Contrôles](../mfc/controls-mfc.md)
+

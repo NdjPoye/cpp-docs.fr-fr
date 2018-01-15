@@ -1,45 +1,44 @@
 ---
-title: "Utility Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.classes.utility"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "utility classes"
+title: "Classes d’utilitaire (ATL) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.classes.utility
+dev_langs: C++
+helpviewer_keywords: utility classes
 ms.assetid: 33d5da9d-89a5-49f9-a873-a26499299d17
-caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 827d489f01187a75c822314ef79c3b77d63178b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Utility Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="utility-classes"></a>Classes d’utilitaire
+Les classes d’utilitaire MFC indépendant suivantes sont fournies :  
+  
+-   [CImage](../atl-mfc-shared/reference/cimage-class.md) fournit amélioré la prise en charge de la bitmap, y compris la possibilité de charger et enregistrer les images JPEG, GIF, BMP et met en forme graphique PNG (Portable Network).  
+  
+-   [CPoint](../atl-mfc-shared/reference/cpoint-class.md) fournit une implémentation pour le stockage des paires de coordonnées (x, y).  
+  
+-   [CRect](../atl-mfc-shared/reference/crect-class.md) fournit une implémentation pour le stockage des coordonnées de zones rectangulaires.  
+  
+-   [CSize](../atl-mfc-shared/reference/csize-class.md) fournit une implémentation pour le stockage de la distance, les positions relatives ou les paires de valeurs.  
+  
+-   [CString](../atl-mfc-shared/reference/cstringt-class.md) fournit une implémentation pour le stockage des chaînes de caractères.  
+  
+-   [CAdapt](../atl/reference/cadapt-class.md) un modèle simple utilisé pour encapsuler les classes qui redéfinissent l’opérateur d’adresse.  
+  
+-   [_U_RECT](../atl/reference/u-rect-class.md) une classe d’adaptateur argument qui permet soit `RECT` pointeurs ou références à passer à une fonction qui est implémentée en termes de pointeurs.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Vue d’ensemble de la classe](../atl/atl-class-overview.md)
 
-Les classes de service par MFC indépendantes suivantes sont fournies :  
-  
--   Prise en charge de bitmap amélioré Fournit de[CImage](../atl-mfc-shared/reference/cimage-class.md) , notamment la possibilité de charger et d'enregistrer les images dans JPEG, GIF, BMP, et les formats de définition de données \(PNG\) PNG.  
-  
--   [CPoint](../atl-mfc-shared/reference/cpoint-class.md) fournit une implémentation pour stocker la coordonnée \(x, y\) des paires.  
-  
--   [CRect](../atl-mfc-shared/reference/crect-class.md) fournit une implémentation pour stocker les coordonnées des régions rectangulaires.  
-  
--   [CSize](../atl-mfc-shared/reference/csize-class.md) fournit une implémentation pour stocker la distance, les positions de parent, ou les valeurs couplées.  
-  
--   [CString](../atl-mfc-shared/reference/cstringt-class.md) fournit une implémentation pour stocker des chaînes.  
-  
--   Modèle simple de[CAdapt](../atl/reference/cadapt-class.md) A utilisé pour encapsuler les classes qui redéfinissent l'opérateur d'adresse.  
-  
--   [\_U\_RECT](../atl/reference/u-rect-class.md) Une classe d'adaptateur d'argument qui permet aux pointeurs d' `RECT` ou les référence pour être passés à une fonction qui est implémentée en termes de pointeurs.  
-  
-## Voir aussi  
- [Class Overview](../atl/atl-class-overview.md)

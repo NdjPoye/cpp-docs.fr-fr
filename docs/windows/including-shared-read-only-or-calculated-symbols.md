@@ -22,11 +22,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fefc31c6ac9eb1f66c2fb6481bd7bb63171a8a8f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bf0beeb90e2d4c4d22f45322f881bb7a247acf12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>Ajout de symboles partagés (lecture seule) ou calculés
 La première fois que l'environnement de développement lit un fichier de ressources créé par une autre application, il marque tous les fichiers d'en-tête inclus en lecture seule. Ensuite, vous pouvez utiliser la [boîte de dialogue Include des ressources](../windows/resource-includes-dialog-box.md) pour ajouter des fichiers d’en-tête de symbole en lecture seule.  
@@ -75,7 +78,7 @@ La première fois que l'environnement de développement lit un fichier de ressou
   
 
   
- Spécifications  
+ Configuration requise  
   
  Win32  
   

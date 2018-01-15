@@ -24,11 +24,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 476e64d052912e9937d054e52c66e1397b8da66f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a45425215fcaf336c0b1630634d0adf37ba3984
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zm-specify-precompiled-header-memory-allocation-limit"></a>/Zm (Spécifier la limite d’allocation mémoire d’en-tête précompilé)
 Détermine la quantité de mémoire que le compilateur alloue pour construire des en-têtes précompilés.  
@@ -45,7 +46,7 @@ Détermine la quantité de mémoire que le compilateur alloue pour construire de
   
  L'argument `factor` est un pourcentage de la taille par défaut d'une mémoire tampon de travail définie par le compilateur. La valeur par défaut de `factor` est 100 (pour cent), mais vous pouvez spécifier des quantités plus grandes ou plus petites.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Dans les versions antérieures de Visual C++, le compilateur utilisait plusieurs tas discrets, chacun avec une limite finie. Actuellement, le compilateur augmente dynamiquement les tas selon les besoins, jusqu’à ce que la limite de la taille totale des tas soit atteinte. Il requiert ensuite une mémoire tampon de taille fixe uniquement pour construire des en-têtes précompilés. Par conséquent, le **/Zm** option du compilateur est rarement nécessaire.  
   
  Si le compilateur suffisamment d’espace du tas et émet le [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) message d’erreur lorsque vous utilisez la **/Zm** option du compilateur, vous avez réservé trop de mémoire. Envisagez de supprimer le **/Zm** option. Si le compilateur émet le [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) être associé à un message d’erreur [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) message Spécifie le `factor` argument à utiliser lorsque vous recompilez à l’aide de la **/Zm** option du compilateur.  
@@ -58,7 +59,7 @@ Détermine la quantité de mémoire que le compilateur alloue pour construire de
 |100|75 MO|  
 |200|150 MO|  
 |1000|750 MO|  
-|2000|1 500 MO|  
+|2 000|1 500 MO|  
   
 ## <a name="other-ways-to-set-the-memory-allocation-limit"></a>Autres moyens de définir la limite d'allocation de mémoire  
   

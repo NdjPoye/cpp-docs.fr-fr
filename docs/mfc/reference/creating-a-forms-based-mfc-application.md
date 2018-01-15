@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 764721114bb87127c892563211f7fcc85171ea68
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e5d43412da21edce2633c17b5a38e4b1b787495
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Création d'une application MFC basée sur les formulaires
 Un formulaire est une boîte de dialogue avec des contrôles qui permettent à un utilisateur accéder et modifier des données. Vous souhaiterez développer une application dans laquelle l’utilisateur effectue une sélection de formulaires. En règle générale, une application basée sur des formulaires vous permet des formulaires d’accès utilisateur à un clic sur **nouveau** à partir de la **fichier** menu. Une application basée sur une boîte de dialogue, qui ne permet pas aux utilisateurs l’accès à un **nouveau** option dans le **fichier** menu, est considérée également comme une application basée sur des formulaires.  

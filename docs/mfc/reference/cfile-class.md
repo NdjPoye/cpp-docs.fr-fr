@@ -71,11 +71,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4db8a7ee97c414a7775df393d419c7d12d61cdbf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f7a2b0e1dd95b460d6b6007e79378bc69f1b4ce
+ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cfile-class"></a>CFile (classe)
 Classe de base pour les classes de fichier Microsoft Foundation Class.  
@@ -137,11 +138,11 @@ class CFile : public CObject
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CFile::m_pTM](#m_ptm)|Pointeur vers `CAtlTransactionManager` objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Il fournit directement des services d’entrée/sortie de disque sans tampon, binaire, et il indirectement prend en charge les fichiers texte et les fichiers de mémoire via ses classes dérivées. `CFile`fonctionne en association avec la `CArchive` classe pour prendre en charge la sérialisation d’objets de Microsoft Foundation Class.  
   
  La relation hiérarchique entre cette classe et ses classes dérivées permet au programme de fonctionner sur tous les objets de fichiers via le polymorphe `CFile` interface. Un fichier de mémoire, se comporte, par exemple, comme un fichier de disque.  
@@ -157,7 +158,7 @@ class CFile : public CObject
   
  `CFile`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afx.h  
   
 ##  <a name="abort"></a>CFile::Abort  
@@ -167,7 +168,7 @@ class CFile : public CObject
 virtual void Abort();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si vous n’avez pas fermé le fichier avant de détruire l’objet, le destructeur ferme pour vous.  
   
  Lors de la gestion des exceptions, `CFile::Abort` diffère `CFile::Close` de deux manières. Tout d’abord, le **abandonner** fonction pas lève une exception lors d’échecs de, car les échecs sont ignorées par **abandonner**. Ensuite, **abandonner** ne seront pas **ASSERT** si le fichier n’a pas été ouverte ou a été précédemment fermé.  
@@ -183,7 +184,7 @@ virtual void Abort();
 ```  
 CFile();  
 CFile(CAtlTransactionManager* pTM);  
-  CFile(HANDLE hFile);
+CFile(HANDLE hFile);
 
  
 CFile(
@@ -210,7 +211,7 @@ CAtlTransactionManager* pTM);
  `pTM`  
  Pointeur vers l'objet CAtlTransactionManager  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les cinq tableaux suivants répertorient les options possibles du paramètre `nOpenFlags`.  
   
  Choisissez une seule des options suivantes pour le mode d'accès aux fichiers. Le mode d'accès aux fichiers par défaut est `CFile::modeRead`, c'est-à-dire en lecture seule.  
@@ -280,7 +281,7 @@ CAtlTransactionManager* pTM);
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si vous n’avez pas fermé le fichier avant de détruire l’objet, le destructeur ferme pour vous.  
   
  Si vous avez utilisé **nouveau** pour allouer la `CFile` de l’objet sur le tas, vous devez le supprimer après la fermeture du fichier. **Fermer** définit `m_hFile` à `CFile::hFileNull`.  
@@ -298,7 +299,7 @@ virtual CFile* Duplicate() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un doublon `CFile` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cela équivaut à la fonction runtime C `_dup`.  
   
 ##  <a name="flush"></a>CFile::Flush  
@@ -308,7 +309,7 @@ virtual CFile* Duplicate() const;
 virtual void Flush();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’utilisation de `Flush` ne garantit pas que le vidage de `CArchive` mémoires tampons. Si vous utilisez une archive, appelez [CArchive::Flush](../../mfc/reference/carchive-class.md#flush) premier.  
   
 ### <a name="example"></a>Exemple  
@@ -324,7 +325,7 @@ virtual CString GetFileName() const;
 ### <a name="return-value"></a>Valeur de retour  
  Nom du fichier.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par exemple, lorsque vous appelez `GetFileName` pour générer un message à l’utilisateur sur le fichier `c:\windows\write\myfile.wri`, le nom de fichier, `myfile.wri`, est retourné.  
   
  Pour retourner le chemin d’accès complet du fichier, y compris le nom, appelez [GetFilePath](#getfilepath). Pour renvoyer le titre du fichier ( `myfile`), appelez [GetFileTitle](#getfiletitle).  
@@ -344,7 +345,7 @@ virtual CString GetFilePath() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le chemin d’accès complet du fichier spécifié.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par exemple, lorsque vous appelez `GetFilePath` pour générer un message à l’utilisateur sur le fichier `c:\windows\write\myfile.wri`, le chemin d’accès du fichier, `c:\windows\write\myfile.wri`, est retourné.  
   
  Pour retourner uniquement le nom du fichier ( `myfile.wri`), appelez [GetFileName](#getfilename). Pour renvoyer le titre du fichier ( `myfile`), appelez [GetFileTitle](#getfiletitle).  
@@ -362,7 +363,7 @@ virtual CString GetFileTitle() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le titre du fichier sous-jacent.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode appelle [GetFileTitle](http://msdn.microsoft.com/library/windows/desktop/ms646924) pour récupérer le titre du fichier. En cas de réussite, la méthode retourne la chaîne par le système pour afficher le nom de fichier pour l’utilisateur. Sinon, la méthode appelle [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) pour récupérer le nom de fichier (y compris l’extension de fichier) du fichier sous-jacent. Par conséquent, l’extension de fichier n’est pas toujours être incluse dans la chaîne de titre du fichier retourné. Pour plus d’informations, consultez [GetFileTitle](http://msdn.microsoft.com/library/windows/desktop/ms646924) et [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) dans le Kit de développement logiciel Windows.  
   
  Pour retourner le chemin d’accès complet du fichier, y compris le nom, appelez [GetFilePath](#getfilepath). Pour retourner uniquement le nom du fichier, appelez [GetFileName](#getfilename).  
@@ -433,7 +434,7 @@ static BOOL PASCAL GetStatus(
 ### <a name="return-value"></a>Valeur de retour  
  **TRUE** si les informations d’état pour le fichier spécifié sont correctement obtenues ; sinon, **FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La version non statiques de **GetStatus** récupère les informations d’état du fichier ouvert associé à la donnée `CFile` objet.  La version statique de **GetStatus** Obtient l’état du fichier à partir d’un chemin d’accès de fichier donné sans réellement l’ouverture du fichier. Cela est utile pour tester les droits d’accès et d’existence d’un fichier.  
   
  Le **m_attribute** membre de la **CFileStatus** structure fait référence à l’ensemble d’attributs de fichier. Le `CFile` classe fournit le **attribut** type d’énumération des attributs de fichier peut donc être spécifiés symboliquement :  
@@ -460,7 +461,7 @@ enum Attribute {
 static AFX_DATA const HANDLE hFileNull;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette constante est utilisée pour déterminer si le `CFile` objet possède un descripteur de fichier valide.  
   
  L’exemple suivant illustre cette opération :  
@@ -483,7 +484,7 @@ virtual void LockRange(
  `dwCount`  
  Le nombre d’octets dans la plage à verrouiller.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le verrouillage d’octets dans un fichier empêche l’accès à ces octets par d’autres processus. Vous pouvez verrouiller plus d’une région d’un fichier, mais aucune région qui se chevauche n’est autorisées.  
   
  Lorsque vous déverrouillez la région, à l’aide du `UnlockRange` fonction membre, la plage d’octets doit correspondre exactement à la région qui a été précédemment verrouillée. Le `LockRange` fonction ne fusionne pas les régions adjacentes ; Si deux régions verrouillées sont adjacentes, vous devez déverrouiller séparément chaque région.  
@@ -501,7 +502,7 @@ virtual void LockRange(
 HANDLE m_hFile;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `m_hFile`est une variable publique de type **UINT**. Il contient `CFile::hFileNull` (un indicateur de vider le fichier indépendant du système d’exploitation) si le handle n’a pas été affecté.  
   
  Utilisation de `m_hFile` n’est pas recommandée, car les sens du membre dépend de la classe dérivée. `m_hFile`est établie à un membre public à des fins de prise en charge non polymorphes d’utilisation de la classe.  
@@ -513,7 +514,7 @@ HANDLE m_hFile;
 CAtlTransactionManager* m_pTM;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="open"></a>CFile::Open  
  Surchargé. **Ouvrez** est conçu pour une utilisation avec la valeur par défaut `CFile` constructeur.  
@@ -548,7 +549,7 @@ virtual BOOL Open(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’ouverture a réussi ; Sinon, 0. Le `pError` paramètre n’est significatif uniquement si 0 est retourné.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les deux fonctions constituent une méthode « sécurisée » pour ouvrir un fichier dans lequel une défaillance est une condition normale, attendue.  
   
  Alors que le `CFile` constructeur lève une exception dans une condition d’erreur, **ouvrir** retournera **FALSE** de conditions d’erreur. **Ouvrez** peut toujours initialiser un [CFileException](../../mfc/reference/cfileexception-class.md) objet décrivant l’erreur, toutefois. Si vous ne fournissez pas le `pError` paramètre, ou si vous passez **NULL** pour `pError`, **ouvrir** retournera **FALSE** et ne pas lever un `CFileException`. Si vous passez un pointeur à une `CFileException`, et **ouvrir** rencontre une erreur, la fonction sera remplir avec des informations décrivant l’erreur. Dans ces cas seront **ouvrir** lève une exception.  
@@ -614,7 +615,7 @@ static void PASCAL Remove(
  `pTM`  
  Pointeur vers l'objet CAtlTransactionManager  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Elle ne supprime pas un répertoire.  
   
  Le **supprimer** fonction membre lève une exception si le fichier connecté est ouvert ou si le fichier ne peut pas être supprimé. Cela équivaut à la commande DEL.  
@@ -642,7 +643,7 @@ static void PASCAL Rename(
  `pTM`  
  Pointeur vers l'objet CAtlTransactionManager  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Impossible de renommer les répertoires. Cela équivaut à la commande REN.  
   
 ### <a name="example"></a>Exemple  
@@ -667,10 +668,10 @@ UINT nFrom);
 ### <a name="return-value"></a>Valeur de retour  
  La position du pointeur de fichier si la méthode a réussi ; Sinon, la valeur de retour n’est pas définie et un pointeur vers un `CFileException` exception est levée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le tableau suivant répertorie les valeurs possibles pour le `nFrom` paramètre.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |`CFile::begin`|Recherche à partir du début du fichier.|  
 |`CFile::current`|Recherche de l’emplacement actuel du pointeur de fichier.|  
@@ -692,7 +693,7 @@ UINT nFrom);
 void SeekToBegin();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `SeekToBegin()` équivaut à `Seek( 0L, CFile::begin )`.  
   
 ### <a name="example"></a>Exemple  
@@ -708,7 +709,7 @@ ULONGLONG SeekToEnd();
 ### <a name="return-value"></a>Valeur de retour  
  Longueur du fichier en octets.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `SeekToEnd()` équivaut à `CFile::Seek( 0L, CFile::end )`.  
   
 ### <a name="example"></a>Exemple  
@@ -725,7 +726,7 @@ virtual void SetFilePath(LPCTSTR lpszNewName);
  `lpszNewName`  
  Pointeur vers une chaîne qui spécifie le nouveau chemin d’accès.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 > [!NOTE]
 > `SetFilePath`ne pas ouvrir le fichier ou de créer le fichier ; Il associe simplement le `CFile` objet avec un nom de chemin d’accès, qui peut ensuite être utilisé.  
@@ -744,7 +745,7 @@ virtual void SetLength(ULONGLONG dwNewLen);
  `dwNewLen`  
  Longueur souhaitée du fichier en octets. Cette valeur peut être supérieure ou inférieure à la longueur actuelle du fichier. Le fichier sera étendu ou tronqué selon le cas.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 > [!NOTE]
 >  Avec `CMemFile`, cette fonction peut lever un `CMemoryException` objet.  
@@ -772,7 +773,7 @@ static void PASCAL SetStatus(
  `pTM`  
  Pointeur vers l'objet CAtlTransactionManager  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour définir l’heure, vous devez modifier le **m_mtime** champ *état*.  
   
  Notez que lorsque vous effectuez un appel à `SetStatus` dans une tentative de modifier uniquement les attributs du fichier et le **m_mtime** membre de la structure d’état de fichier est différente de zéro, les attributs peuvent également être affectées (modification de l’horodatage peut avoir effets sur les attributs). Si vous souhaitez uniquement modifier les attributs du fichier, vous devez tout d’abord définir le **m_mtime** membre de la structure d’état de fichier à zéro et effectuez un appel à `SetStatus`.  
@@ -796,7 +797,7 @@ virtual void UnlockRange(
  `dwCount`  
  Le nombre d’octets dans la plage à déverrouiller.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez la description de la [LockRange](#lockrange) fonction membre pour plus d’informations.  
   
 > [!NOTE]
@@ -821,7 +822,7 @@ virtual void Write(
  `nCount`  
  Le nombre d’octets à transférer de la mémoire tampon. Pour les fichiers en mode texte, les paires de sauts de ligne de chariot sont comptabilisés comme caractères uniques.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  **Écrire** lève une exception en réponse à plusieurs conditions, y compris la condition de disque plein.  
   
 ### <a name="example"></a>Exemple  

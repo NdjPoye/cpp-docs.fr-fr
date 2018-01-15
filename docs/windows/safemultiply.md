@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 27b03278e3f6cdf526f6df4bdded67be640caab0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 37ea091136521fc83fc63a8fb752e0f4f72cb49f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safemultiply"></a>SafeMultiply
 Multiplie deux nombres ensemble d’une manière qui protège contre le dépassement de capacité.  
@@ -48,7 +51,7 @@ inline bool SafeMultiply (
 ## <a name="return-value"></a>Valeur de retour  
  `true`Si aucune erreur ne se produit ; `false` si une erreur se produit.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette méthode fait partie de [Bibliothèque SafeInt](../windows/safeint-library.md) et est conçu pour une opération de multiplication unique sans créer d’instance de la [SafeInt, classe](../windows/safeint-class.md).  
   
 > [!NOTE]
@@ -56,7 +59,7 @@ inline bool SafeMultiply (
   
  Pour plus d’informations sur les types de modèles T, U, consultez [SafeInt, fonctions](../windows/safeint-functions.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** safeint.h  
   
  **Namespace :** Microsoft::Utilities  

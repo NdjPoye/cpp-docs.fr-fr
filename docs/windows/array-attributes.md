@@ -1,34 +1,36 @@
 ---
-title: "Array Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arrays [C++], attributes"
+title: Attributs de tableau | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: arrays [C++], attributes
 ms.assetid: 36f80b76-7f20-41ae-a6bf-460e5379f26b
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 10667e62113bb2a1759c05f547183ebfb97199a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Array Attributes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les attributs suivants s'appliquent aux tableaux ou au **SAFEARRAY**S.  
+# <a name="array-attributes"></a>Attributs de tableau
+Les attributs suivants s’appliquent à des tableaux ou **SAFEARRAY**s.  
   
 |Attribut|Description|  
-|--------------|-----------------|  
-|[library\_block](../windows/library-block.md)|Place un élément à l'intérieur de le bloc bibliothèque du fichier .idl.|  
-|[satype](../windows/satype.md)|spécifie le type de données de la structure de SAFEARRAY.|  
-|[string](../windows/string-cpp.md)|Indique qu' `char`unidimensionnel, `wchar_t`, le tableau de **byte** \(ou équivalent\) ou le pointeur à une telle tableau doivent être traités comme chaîne.|  
+|---------------|-----------------|  
+|[library_block](../windows/library-block.md)|Place une construction à l’intérieur du bloc de bibliothèque du fichier .idl.|  
+|[satype](../windows/satype.md)|Spécifie le type de données de la structure SAFEARRAY.|  
+|[string](../windows/string-cpp.md)|Indique que la dimension `char`, `wchar_t`, **octets** (ou équivalent) tableau ou pointeur vers ce type de tableau doit être traité en tant que chaîne.|  
   
-## Voir aussi  
- [Attributes by Usage](../windows/attributes-by-usage.md)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs par utilisation](../windows/attributes-by-usage.md)

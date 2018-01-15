@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1309f822ae8f7ab7e4735525439f9d3529754001
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3b2003ab35bf76a8ac3e70288576af821a6c8e6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (Nom du fichier Include imposé)
 Indique au préprocesseur de traiter le fichier d’en-tête spécifié.  
@@ -38,7 +39,7 @@ Indique au préprocesseur de traiter le fichier d’en-tête spécifié.
 /FI[ ]pathname  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette option a le même effet que la spécification du fichier avec des guillemets doubles dans une `#include` directive sur la première ligne de chaque fichier source indiqué sur la ligne de commande dans la variable d’environnement CL, ou dans un fichier de commandes. Si vous utilisez plusieurs **/FI** options, les fichiers sont incluses dans l’ordre qu’ils sont traités par CL.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  

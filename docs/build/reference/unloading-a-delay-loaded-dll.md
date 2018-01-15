@@ -1,32 +1,32 @@
 ---
-title: "D&#233;chargement d&#39;une DLL &#224; chargement diff&#233;r&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__FUnloadDelayLoadedDLL2"
-  - "chargement différé de DLL, déchargement"
+title: "Déchargement d’une DLL à chargement différé | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __FUnloadDelayLoadedDLL2
+- delayed loading of DLLs, unloading
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8b47969da4c560f28c07ac09caef83873e362ddc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# D&#233;chargement d&#39;une DLL &#224; chargement diff&#233;r&#233;
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'assistance de chargement différé fournie par défaut vérifie que les descripteurs de chargement différé ont un pointeur et une copie de la table des adresses d'importation \(IAT\) d'origine dans le champ pUnloadIAT.  Si c'est bien le cas, l'assistance enregistre un pointeur dans une liste dans le descripteur de différé des importations.  Cela permet à la fonction d'assistance de rechercher la DLL par son nom pour prendre en charge le déchargement explicite de cette DLL.  
+# <a name="unloading-a-delay-loaded-dll"></a>Déchargement d'une DLL à chargement différé
+L’application d’assistance de chargement différé fournie par défaut vérifie si les descripteurs de chargement différé ont un pointeur et une copie de la table des adresses importation (IAT) d’origine dans le champ pUnloadIAT. Dans ce cas, il enregistre un pointeur dans une liste pour le descripteur de délai d’importation. Cela permet à la fonction d’assistance de trouver la DLL par un nom pour prendre en charge le déchargement explicite de cette DLL.  
   
- Voici les structures et fonctions associées permettant le déchargement explicite d'une DLL à chargement différé :  
+ Voici les structures et fonctions associées pour le déchargement explicite d’une DLL à chargement différé :  
   
 ```  
 //  
@@ -53,11 +53,11 @@ ExternC
 PUnloadInfo __puiHead;  
 ```  
   
- La structure UnloadInfo est implémentée à l'aide d'une classe C\+\+ qui utilise les implémentations de **LocalAlloc** et **LocalFree** respectivement comme ses opérateurs **new** et **delete**.  Ces options sont conservées dans une liste liée standard avec \_\_puiHead comme tête de liste.  
+ La structure UnloadInfo est implémentée à l’aide d’une classe C++ qui utilise **LocalAlloc** et **LocalFree** mises en œuvre en tant que son opérateur **nouveau** et opérateur  **supprimer** respectivement. Ces options sont conservées dans une liste liée standard avec __puiHead comme le début de la liste.  
   
- L'appel de \_\_FUnloadDelayLoadedDLL résulte en une tentative de recherche du nom que vous fournissez dans la liste des DLL chargées \(une correspondance exacte est nécessaire\).  Si ce nom est trouvé, la copie de la table IAT dans pUnloadIAT est copiée sur la table IAT en cours d'exécution pour restaurer les pointeurs de thunk, la bibliothèque est libérée avec **FreeLibrary**, l'enregistrement **UnloadInfo** correspondant est détaché de la liste et supprimé et, enfin, la valeur TRUE est retournée.  
+ Appel __FUnloadDelayLoadedDLL va tenter de trouver le nom vous fournissez dans la liste des DLL chargées (une correspondance exacte est nécessaire). Si la trouvé, la copie de la table IAT dans pUnloadIAT est copiée sur la partie supérieure de la table IAT en cours d’exécution pour restaurer les pointeurs de thunk, la bibliothèque est libérée avec **FreeLibrary**, la mise en correspondance **UnloadInfo** enregistrement est dissocié de la liste et supprimées et TRUE est.  
   
- L'argument de la fonction \_\_FUnloadDelayLoadedDLL2 respecte la casse.  Par exemple, vous spécifiez :  
+ L’argument de la fonction __FUnloadDelayLoadedDLL2 respecte la casse. Par exemple, vous devez spécifier :  
   
 ```  
 __FUnloadDelayLoadedDLL2("user32.DLL");  
@@ -69,5 +69,5 @@ __FUnloadDelayLoadedDLL2("user32.DLL");
 __FUnloadDelayLoadedDLL2("User32.DLL");.  
 ```  
   
-## Voir aussi  
- [Understanding the Helper Function](http://msdn.microsoft.com/fr-fr/6279c12c-d908-4967-b0b3-cabfc3e91d3d)
+## <a name="see-also"></a>Voir aussi  
+ [Présentation de la fonction d’assistance](understanding-the-helper-function.md)

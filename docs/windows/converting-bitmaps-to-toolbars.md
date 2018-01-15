@@ -1,53 +1,56 @@
 ---
-title: "Converting Bitmaps to Toolbars | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bitmaps [C++], converting to toolbars"
-  - "Toolbar editor, converting bitmaps"
-  - "toolbars [C++], converting bitmaps"
+title: "Conversion de Bitmaps en barres d’outils | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- bitmaps [C++], converting to toolbars
+- Toolbar editor, converting bitmaps
+- toolbars [C++], converting bitmaps
 ms.assetid: 971c181b-40f5-44be-843d-677a7c235667
-caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d189395bbedff4d73cc690d454ddd07af4d109e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Converting Bitmaps to Toolbars
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vous pouvez créer une nouvelle barre d'outils en convertissant une bitmap.  Le graphique de la bitmap est converti en images de bouton pour une barre d'outils.  En règle générale, la bitmap contient plusieurs images de bouton dans une seule bitmap, avec une image pour chaque bouton.  Les images peuvent être de n'importe quelle taille ; la valeur par défaut est 16 pixels de large et la hauteur de l'image.  Vous pouvez spécifier la taille des images de bouton dans la [boîte de dialogue Nouvelle ressource de barre d'outils](../mfc/new-toolbar-resource-dialog-box.md) lorsque vous choisissez Éditeur de barres d'outils dans le menu **Image** quand vous vous trouvez dans l'Éditeur d'images.  
+# <a name="converting-bitmaps-to-toolbars"></a>Conversion de bitmaps en barres d'outils
+Vous pouvez créer une nouvelle barre d’outils en convertissant une image bitmap. Le graphique de la bitmap convertit les images du bouton d’une barre d’outils. L’image bitmap contient généralement plusieurs images de bouton dans une seule bitmap, avec une image pour chaque bouton. Les images peuvent être n’importe quelle taille ; la valeur par défaut est 16 pixels de large et la hauteur de l’image. Vous pouvez spécifier la taille des images de bouton dans le [boîte de dialogue Nouvelle ressource de barre d’outils](../windows/new-toolbar-resource-dialog-box.md) lorsque vous choisissez Éditeur de barre d’outils à partir de la **Image** menu dans l’éditeur d’images.  
   
-### Pour convertir des bitmaps en barre d'outils  
+### <a name="to-convert-bitmaps-to-a-toolbar"></a>Pour convertir des bitmaps en une barre d’outils  
   
-1.  Ouvrez une ressource bitmap existante dans l'[Éditeur d'images](../mfc/image-editor-for-icons.md).  \(Si la bitmap ne se trouve pas déjà dans votre fichier .rc, cliquez avec le bouton droit sur le fichier .rc, choisissez **Importer** dans le menu contextuel, recherchez la bitmap que vous souhaitez ajouter à votre fichier .rc, puis cliquez sur **Ouvrir**.\)  
+1.  Ouvrez une ressource bitmap existante dans le [Éditeur d’images](../windows/image-editor-for-icons.md). (Si l’image bitmap n’est pas déjà dans votre fichier .rc, cliquez sur le fichier .rc, choisissez **importation** dans le menu contextuel, accédez à l’image bitmap que vous souhaitez ajouter à votre fichier .rc, puis cliquez sur **ouvrir**.)  
   
-2.  Dans le menu **Image**, choisissez **Éditeur de barres d'outils**.  
+2.  À partir de la **Image** menu, choisissez **barre d’outils Éditeur**.  
   
-     La [boîte de dialogue Nouvelle ressource de barre d'outils](../mfc/new-toolbar-resource-dialog-box.md) apparaît.  Vous pouvez changer la largeur et la hauteur des images d'icône afin qu'elles correspondent à celles de la bitmap.  L'image de la barre d'outils s'affiche dans l'Éditeur de barres d'outils.  
+     Le [boîte de dialogue Nouvelle ressource de barre d’outils](../windows/new-toolbar-resource-dialog-box.md) s’affiche. Vous pouvez modifier la largeur et la hauteur des images d’icône pour correspondre à l’image bitmap. L’image de la barre d’outils s’affiche ensuite dans l’éditeur de la barre d’outils.  
   
-3.  Pour terminer la conversion, changez l'**ID** de commande du bouton en utilisant la [fenêtre Propriétés](../Topic/Properties%20Window.md).  Tapez le nouvel **ID** ou sélectionnez\-en un dans la liste déroulante **ID**.  
+3.  Pour terminer la conversion, modifiez la commande **ID** du bouton en utilisant la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Tapez le nouveau **ID** ou sélectionnez un **ID** dans la liste déroulante.  
   
     > [!TIP]
-    >  La fenêtre Propriétés contient un bouton punaise dans la barre de titre.  Un clic sur ce bouton active ou désactive le masquage automatique de la fenêtre.  Pour parcourir rapidement toutes les propriétés des boutons de barre d'outils sans rouvrir chaque fenêtre Propriétés individuellement, désactivez le masquage automatique afin que la fenêtre Propriétés reste visible.  
+    >  La fenêtre Propriétés contient un bouton punaise dans la barre de titre. Ce bouton Active ou désactive le masquage automatique de la fenêtre. Pour parcourir rapidement toutes les propriétés de bouton de barre d’outils sans rouvrir les fenêtres des propriétés individuelles, désactivez le masquage automatique afin que la fenêtre Propriétés reste visible.  
   
- Vous pouvez également changer les ID de commande des boutons sur la nouvelle barre d'outils en utilisant la [fenêtre Propriétés](../Topic/Properties%20Window.md).  Pour plus d'informations sur la nouvelle barre d'outils, consultez [Création, déplacement et modification de boutons de barre d'outils](../mfc/creating-moving-and-editing-toolbar-buttons.md).  
+ Vous pouvez également modifier les ID de commande des boutons sur la nouvelle barre d’outils à l’aide de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Pour plus d’informations sur la nouvelle barre d’outils, consultez [création, déplacement et modification de boutons de barre d’outils](../windows/creating-moving-and-editing-toolbar-buttons.md).  
   
- Pour plus d'informations sur l'ajout de ressources aux projets managés, consultez [Ressources dans les applications](../Topic/Resources%20in%20Desktop%20Apps.md) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l'ajout de fichiers de ressources aux projets managés, l'accès aux ressources, l'affichage de ressources statiques et l'assignation de chaînes de ressources aux propriétés, et ce manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/fr-fr/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Configuration requise  
   
  MFC ou ATL  
   
-## Voir aussi  
- [Creating New Toolbars](../mfc/creating-new-toolbars.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>Voir aussi  
+ [Création de nouvelles barres d’outils](../windows/creating-new-toolbars.md)   
+ [Éditeur de barres d’outils](../windows/toolbar-editor.md)
+

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d8481c0efb54a397db004f321fb48c217cba8ebc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3fca67cb50cf91195d7edfb1e5e2fccfc9f8c5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="14-compliance"></a>1.4 Conformité
 Une implémentation de l’API de C/C++ OpenMP est *conforme OpenMP* si il reconnaît et conserve la sémantique de tous les éléments de cette spécification, tel qu’indiqué dans les chapitres 1, 2, 3, 4, et l’annexe C. annexes A, B, D, E et F sont pour informations uniquement et ne font pas partie de la spécification. Les implémentations qui incluent uniquement un sous-ensemble de l’API ne sont pas compatibles OpenMP.  

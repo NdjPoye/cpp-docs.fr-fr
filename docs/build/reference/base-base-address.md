@@ -31,11 +31,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f59837f5c64e694893b941b1fe2e507e1a05938c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ddf399757d881484817be676ca3077b4fc21709
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="base-base-address"></a>/BASE (Adresse de base)
 ```  
@@ -67,7 +68,7 @@ two    0x28100000    0x00300000    ; for DLLTWO.DLL
 link dlltwo.obj /dll /base:@dlls.txt,two  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour des raisons de sécurité, Microsoft recommande d’utiliser le [/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md) option au lieu de spécifier les adresses de base pour les fichiers exécutables. Cela génère une image exécutable qui peut être redéfinie de façon aléatoire au moment du chargement à l’aide de la fonctionnalité espace d’adresse (ASLR) de randomisation de Windows. L’option /DYNAMICBASE est activé par défaut.  
   
  Une autre consiste à définir l’adresse de base à l’aide de la *BASE* argument dans un [nom](../../build/reference/name-c-cpp.md) ou [bibliothèque](../../build/reference/library.md) instruction. Le /BASE et [/DLL](../../build/reference/dll-build-a-dll.md) options réunies sont équivalentes à la **bibliothèque** instruction.  

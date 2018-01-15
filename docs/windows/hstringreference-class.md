@@ -1,68 +1,70 @@
 ---
-title: "HStringReference, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HStringReference"
-dev_langs: 
-  - "C++"
+title: Hstringreference, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HStringReference
+dev_langs: C++
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 97900bd44dfdcede187b20b181c64d235eac60fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# HStringReference, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Représente un HSTRING créé à partir d'une chaîne existante.  
+# <a name="hstringreference-class"></a>HStringReference, classe
+Représente un HSTRING est créé à partir d’une chaîne existante.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
 class HStringReference;  
 ```  
   
-## Remarques  
- La durée de vie de la mémoire tampon en charge dans le nouveau HSTRING n'est pas gérée par [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  L'appelant alloue une chaîne source sur la pile pour éviter une allocation sur le tas et ainsi éliminer le risque de fuites mémoire.  En outre, l'appelant doit garantir que la chaîne source reste inchangée pendant la durée de vie du HSTRING attaché.  Pour plus d'informations, consultez [WindowsCreateStringReference function](http://msdn.microsoft.com/fr-fr/0361bb7e-da49-4289-a93e-de7aab8712ac).  
+## <a name="remarks"></a>Notes  
+ La durée de vie de la mémoire tampon de stockage dans la nouvelle HSTRING n’est pas gérée par le Windows Runtime. L’appelant alloue une chaîne source sur le frame de pile pour éviter une allocation de tas et réduire le risque d’une fuite de mémoire. En outre, l’appelant doit s’assurer que la chaîne source reste inchangée pendant la durée de vie de la HSTRING attaché. Pour plus d’informations, consultez [WindowsCreateStringReference fonction](http://msdn.microsoft.com/en-us/0361bb7e-da49-4289-a93e-de7aab8712ac).  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[HStringReference::HStringReference, constructeur](../windows/hstringreference-hstringreference-constructor.md)|Initialise une nouvelle instance de la classe HStringReference.|  
+|----------|-----------------|  
+|[HStringReference::HStringReference, constructeur](../windows/hstringreference-hstringreference-constructor.md)|Initialise une nouvelle instance de la hstringreference, classe.|  
   
-### Membres  
+### <a name="members"></a>Membres  
   
 |Membre|Description|  
 |------------|-----------------|  
-|[HStringReference::CopyTo, méthode](../windows/hstringreference-copyto-method.md)|Copie l'objet HStringReference actuel dans un objet HSTRING.|  
-|[HStringReference::Get, méthode](../windows/hstringreference-get-method.md)|Récupère la valeur du handle HSTRING sous\-jacent.|  
+|[HStringReference::CopyTo, méthode](../windows/hstringreference-copyto-method.md)|Copie le HStringReference en cours de l’objet à un objet HSTRING.|  
+|[HStringReference::Get, méthode](../windows/hstringreference-get-method.md)|Récupère la valeur du handle HSTRING sous-jacent.|  
   
-### Opérateurs publics  
+### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[HStringReference::Operator\=, opérateur](../windows/hstringreference-operator-assign-operator.md)|Déplace la valeur d'un autre objet HStringReference vers l'objet HStringReference actuel.|  
-|[HStringReference::Operator\=\=, opérateur](../windows/hstringreference-operator-equality-operator.md)|Indique si les deux paramètres sont égaux.|  
-|[HStringReference::Operator\!\=, opérateur](../windows/hstringreference-operator-inequality-operator.md)|Indique si les deux paramètres ne sont pas égaux.|  
+|----------|-----------------|  
+|[HStringReference::Operator=, opérateur](../windows/hstringreference-operator-assign-operator.md)|Déplace la valeur d’un autre objet HStringReference à l’objet HStringReference actuel.|  
+|[HStringReference::Operator==, opérateur](../windows/hstringreference-operator-equality-operator.md)|Indique si les deux paramètres sont égaux.|  
+|[HStringReference::Operator!=, opérateur](../windows/hstringreference-operator-inequality-operator.md)|Indique si les deux paramètres ne sont pas égales.|  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `HStringReference`  
   
-## Configuration requise  
- **En\-tête :** corewrappers.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms :** Microsoft::WRL::Wrappers  
+ **Namespace :** Microsoft::WRL::Wrappers  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL::Wrappers, espace de noms](../windows/microsoft-wrl-wrappers-namespace.md)

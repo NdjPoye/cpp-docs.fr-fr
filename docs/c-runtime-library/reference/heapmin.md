@@ -37,11 +37,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1318e8d18ddeb5031efdf3066f9fa3020c8e9afd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a43374b9e4453bf1584ffb4d33c6b8b9a1c8acf2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="heapmin"></a>_heapmin
 Libère la mémoire de tas inutilisée au profit du système d’exploitation.  
@@ -60,13 +61,13 @@ int _heapmin( void );
 ## <a name="remarks"></a>Notes  
  La fonction `_heapmin` réduit le tas en libérant la mémoire de tas inutilisée au profit du système d’exploitation. Si le système d’exploitation ne prend pas en charge `_heapmin`(par exemple, Windows 98), la fonction retourne -1 et définit `errno` à `ENOSYS`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|En-tête facultatif|  
 |-------------|---------------------|---------------------|  
 |`_heapmin`|\<malloc.h>|\<errno.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Allocation de mémoire](../../c-runtime-library/memory-allocation.md)   

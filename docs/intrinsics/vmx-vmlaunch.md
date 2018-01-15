@@ -1,65 +1,65 @@
 ---
-title: "__vmx_vmlaunch | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmlaunch"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VMLAUNCH, instruction"
-  - "__vmx_vmlaunch, intrinsèque"
+title: __vmx_vmlaunch | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmlaunch
+dev_langs: C++
+helpviewer_keywords:
+- VMLAUNCH instruction
+- __vmx_vmlaunch intrinsic
 ms.assetid: 708f7c38-b7c1-4ee7-bfc4-0daeb9cc9360
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 45986af1a63f79e4466227f767fdf96fd1c2cb35
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
-# __vmx_vmlaunch
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="vmxvmlaunch"></a>__vmx_vmlaunch
+**Section spécifique à Microsoft**  
   
- Place l'application appelante dans VMX l'état de l'opération de non\-racine \(l'ordinateur virtuel entrée\) à l'aide de la structure de contrôle actuelle de l'ordinateur \(VMCS\) virtuel.  
+ Place l’application appelante dans un état d’opération non racine VMX (entrée de la machine virtuelle) à l’aide de la structure de contrôle de machine virtuelle actuelle (VMCS).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 unsigned char __vmx_vmlaunch(  
    void);  
 ```  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
   
-|Valeur|Signification|  
-|------------|-------------------|  
-|0|l'opération réussie.|  
-|1|L'opération a échoué avec l'état étendu disponible dans `VM-instruction error field` du actuel VMCS.|  
-|2|L'opération a échoué sans état disponible.|  
+|Value|Signification|  
+|-----------|-------------|  
+|0|L’opération a réussi.|  
+|1|L’opération a échoué avec l’état étendu disponible dans le `VM-instruction error field` de la VMCS actuelle.|  
+|2|L’opération a échoué sans état disponible.|  
   
-## Notes  
- une application peut exécuter une opération de VM\-entrer à l'aide de [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md) ou de la fonction de [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md) .  La fonction de [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md) peut être utilisée qu'avec un VMCS dont l'état de lancement est `Clear`, et la fonction de [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md) peut être utilisée qu'avec un VMCS dont l'état de lancement est `Launched`.  Par conséquent, utilisez la fonction de [\_\_vmx\_vmclear](../intrinsics/vmx-vmclear.md) pour définir la condition de lancement d'un VMCS à `Clear`, puis utilisez la fonction de [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md) de votre première VM\-entrent l'opération et la fonction de [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md) pour suivant VM\-entrent des opérations.  
+## <a name="remarks"></a>Notes  
+ Une application peut effectuer une opération VM-enter à l’aide du [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) ou [__vmx_vmresume](../intrinsics/vmx-vmresume.md) (fonction). Le [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) fonction peut être utilisée uniquement avec une VMCS dont l’état de lancement est `Clear`et le [__vmx_vmresume](../intrinsics/vmx-vmresume.md) fonction peut être utilisée uniquement avec une VMCS dont l’état de lancement est `Launched`. Par conséquent, utilisez le [__vmx_vmclear](../intrinsics/vmx-vmclear.md) fonction pour définir l’état de lancement d’une VMCS sur `Clear`, puis utilisez le [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) fonction pour votre première opération VM-enter et la [__vmx_vmresume](../intrinsics/vmx-vmresume.md) fonction pour les opérations VM-enter ultérieures.  
   
- La fonction d' `__vmx_vmlaunch` équivaut à l'instruction machine d' `VMLAUNCH` .  cette fonction prend en charge l'interaction du moniteur d'ordinateurs virtuels d'un hôte avec un système d'exploitation invité et ses applications.  Pour plus d'informations, recherchez le document, « spécification technique de virtualisation Intel pour l'architecture de IA\-32 Intel, » numéro de document C97063 \-002, [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) au site.  
+ Le `__vmx_vmlaunch` fonction est équivalente à la `VMLAUNCH` instruction machine. Cette fonction prend en charge l’interaction du moniteur de machines virtuelles d’un hôte avec un système d’exploitation invité et ses applications. Pour plus d’informations, recherchez le document, « Intel virtualisation technique spécification pour l’Architecture IA-32 Intel, » document numéro est C97063-002, sur le [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__vmx_vmlaunch`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## détail de FIN Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md)   
- [\_\_vmx\_vmclear](../intrinsics/vmx-vmclear.md)
+## <a name="see-also"></a>Voir aussi  
+ [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)   
+ [__vmx_vmresume](../intrinsics/vmx-vmresume.md)   
+ [__vmx_vmclear](../intrinsics/vmx-vmclear.md)

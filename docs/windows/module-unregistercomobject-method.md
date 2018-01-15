@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43ea6ab8f3990316be7bce27c06b3aee0df8fbf4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 45a6dc776feb1534cd7e58240a40cc173e7459de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moduleunregistercomobject-method"></a>Module::UnregisterCOMObject, méthode
 Annule l’inscription d’un ou plusieurs objets COM, ce qui empêche d’autres applications de se connecter à ceux-ci.  
@@ -46,7 +49,7 @@ virtual HRESULT UnregisterCOMObject(
 ## <a name="return-value"></a>Valeur de retour  
  S_OK si cette opération a réussi ; Sinon, une erreur HRESULT qui indique la raison pour laquelle l’opération a échoué.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL

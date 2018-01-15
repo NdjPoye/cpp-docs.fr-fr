@@ -71,11 +71,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c703ecd53b8c74c44d13a67013313cbc816e67d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 39c7a471b5c397c430f419514b9ebf1d4da62f62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colesafearray-class"></a>Classe de COleSafeArray
 Classe pour utiliser des tableaux de type et de dimension arbitraires.  
@@ -135,7 +136,7 @@ class COleSafeArray : public tagVARIANT
 |[COleSafeArray::operator ==](#operator_eq_eq)|Compare deux tableaux variants ( **SAFEARRAY**, **variante**, `COleVariant`, ou `COleSafeArray` tableaux).|  
 |[COleSafeArray::operator&lt;&lt;](#operator_lt_lt)|Renvoie le contenu d’un `COleSafeArray` objet dans le contexte de dump.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `COleSafeArray`dérive de l’OLE **VARIANT** structure. OLE **SAFEARRAY** fonctions membres sont disponibles via `COleSafeArray`, ainsi que comme un ensemble de fonctions membres spécifiquement conçu pour les tableaux unidimensionnels d’octets.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -143,7 +144,7 @@ class COleSafeArray : public tagVARIANT
   
  `COleSafeArray`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdisp.h  
   
 ##  <a name="accessdata"></a>COleSafeArray::AccessData  
@@ -157,7 +158,7 @@ void AccessData(void** ppvData);
  `ppvData`  
  Pointeur vers un pointeur vers les données de tableau.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En cas d’erreur, la fonction lève un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) ou [COleException](../../mfc/reference/coleexception-class.md).  
   
 ### <a name="example"></a>Exemple  
@@ -170,7 +171,7 @@ void AccessData(void** ppvData);
 void AllocData();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En cas d’erreur, la fonction lève un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) ou [COleException](../../mfc/reference/coleexception-class.md).  
   
 ##  <a name="allocdescriptor"></a>COleSafeArray::AllocDescriptor  
@@ -184,7 +185,7 @@ void AllocDescriptor(DWORD dwDims);
  `dwDims`  
  Nombre de dimensions dans le tableau sécurisé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En cas d’erreur, la fonction lève un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) ou [COleException](../../mfc/reference/coleexception-class.md).  
   
 ##  <a name="attach"></a>COleSafeArray::Attach  
@@ -198,7 +199,7 @@ void Attach(VARIANT& varSrc);
  *varSrc*  
  A **VARIANT** objet. Le *varSrc* le paramètre doit avoir la [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)**VT_ARRAY**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La source de **VARIANT**de type est défini sur `VT_EMPTY`. Cette fonction efface les données de tableau en cours, le cas échéant.  
   
 ### <a name="example"></a>Exemple  
@@ -211,7 +212,7 @@ void Attach(VARIANT& varSrc);
 void Clear();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction efface un tableau sécurisé en définissant le `VARTYPE` de l’objet à `VT_EMPTY`. Le contenu actuel est libéré et que le tableau est libéré.  
   
 ##  <a name="colesafearray"></a>COleSafeArray::COleSafeArray  
@@ -252,7 +253,7 @@ COleSafeArray(const COleVariant& varSrc);
  `pSrc`  
  Un pointeur vers un **VARIANT** à copier dans le nouvel objet `COleSafeArray` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Toutes ces constructeurs créent de nouveaux `COleSafeArray` objets. S’il n’existe aucun paramètre, vide `COleSafeArray` objet est créé ( `VT_EMPTY`). Si le `COleSafeArray` est copié à partir d’un autre tableau dont [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) est appelée implicitement (un `COleSafeArray`, `COleVariant`, ou **VARIANT**), la **VARTYPE** de le tableau source est conservé et ne doive pas être spécifié. Si le `COleSafeArray` est copié à partir d’un autre tableau dont **VARTYPE** n’est pas connu ( **SAFEARRAY**), la **VARTYPE** doit être spécifié dans le `vtSrc` paramètre.  
   
  En cas d’erreur, la fonction lève un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) ou [COleException](../../mfc/reference/coleexception-class.md).  
@@ -268,7 +269,7 @@ void Copy(LPSAFEARRAY* ppsa);
  *ppsa*  
  Pointeur vers un emplacement dans lequel retourner le nouveau descripteur de tableau.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En cas d’erreur, la fonction lève un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) ou [COleException](../../mfc/reference/coleexception-class.md).  
   
 ##  <a name="create"></a>COleSafeArray::Create  
@@ -300,7 +301,7 @@ void Create(
  *rgsabounds*  
  Pointeur vers un vecteur de limites (une pour chaque dimension) à allouer pour le tableau.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction efface les données de tableau en cours si nécessaire. En cas d’erreur, la fonction lève un [CMemoryException](../../mfc/reference/cmemoryexception-class.md).  
   
 ### <a name="example"></a>Exemple  
@@ -330,7 +331,7 @@ void CreateOneDim(
  *nLBound*  
  La limite inférieure du tableau.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction alloue et initialise les données pour le tableau, en copiant les données spécifiées si le pointeur `pvSrcData` n’est pas **NULL**.  
   
  En cas d’erreur, la fonction lève un [CMemoryException](../../mfc/reference/cmemoryexception-class.md).  
@@ -345,7 +346,7 @@ void CreateOneDim(
 void Destroy();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si les objets sont stockés dans le tableau, chaque objet est libérée. En cas d’erreur, la fonction lève un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) ou [COleException](../../mfc/reference/coleexception-class.md).  
   
 ##  <a name="destroydata"></a>COleSafeArray::DestroyData  
@@ -355,7 +356,7 @@ void Destroy();
 void DestroyData();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si les objets sont stockés dans le tableau, chaque objet est libérée. En cas d’erreur, la fonction lève un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) ou [COleException](../../mfc/reference/coleexception-class.md).  
   
 ##  <a name="destroydescriptor"></a>COleSafeArray::DestroyDescriptor  
@@ -365,7 +366,7 @@ void DestroyData();
 void DestroyDescriptor();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En cas d’erreur, la fonction lève un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) ou [COleException](../../mfc/reference/coleexception-class.md).  
   
 ##  <a name="detach"></a>COleSafeArray::Detach  
@@ -378,7 +379,7 @@ VARIANT Detach();
 ### <a name="return-value"></a>Valeur de retour  
  Sous-jacent **VARIANT** valeur dans le `COleSafeArray` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction détache les données dans un tableau sécurisé en définissant le [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) de l’objet à `VT_EMPTY`. Il incombe l’appelant de libérer le tableau en appelant la fonction Windows [VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835).  
   
  En cas d’erreur, la fonction lève un [COleException](../../mfc/reference/coleexception-class.md).  
@@ -426,7 +427,7 @@ void GetElement(
  `pvData`  
  Pointeur vers l’emplacement pour placer l’élément du tableau.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction appelle automatiquement les fonctions windows `SafeArrayLock` et `SafeArrayUnlock` avant et après la récupération de l’élément. Si l’élément de données est une chaîne, un objet ou un variant, la fonction de copie l’élément dans la méthode correcte. Le paramètre `pvData` doit pointer vers une mémoire tampon insuffisante pour contenir l’élément.  
   
  En cas d’erreur, la fonction lève un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) ou [COleException](../../mfc/reference/coleexception-class.md).  
@@ -460,7 +461,7 @@ void GetLBound(
  *pLBound*  
  Pointeur vers l’emplacement pour retourner la limite inférieure.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En cas d’erreur, la fonction lève un [COleException](../../mfc/reference/coleexception-class.md).  
   
 ### <a name="example"></a>Exemple  
@@ -495,7 +496,7 @@ void GetUBound(
  *pUBound*  
  Pointeur vers l’emplacement pour retourner la limite supérieure.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En cas d’erreur, la fonction lève un [COleException](../../mfc/reference/coleexception-class.md).  
   
 ### <a name="example"></a>Exemple  
@@ -508,7 +509,7 @@ void GetUBound(
 void Lock();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En cas d’erreur, elle lève une [COleException](../../mfc/reference/coleexception-class.md).  
   
  Le pointeur dans le descripteur de tableau est valide tant que `Unlock` est appelée. Les appels à `Lock` peuvent être imbriqués ; un nombre égal d’appels à `Unlock` sont requis.  
@@ -529,7 +530,7 @@ operator LPCVARIANT() const;
 operator LPVARIANT();
 ```   
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Notez que si vous modifiez la valeur dans la **VARIANT** structure accédé par le pointeur retourné par cette fonction modifie la valeur de ce `COleSafeArray` objet.  
   
 ##  <a name="operator_eq"></a>COleSafeArray::operator =  
@@ -542,7 +543,7 @@ COleSafeArray& operator=(const VARIANT& varSrc);
 COleSafeArray& operator=(const COleVariant& varSrc);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une brève description de chaque opérateur suit :  
   
 - **opérateur = (** *saSrc* **)** copie existant `COleSafeArray` objet dans cet objet.  

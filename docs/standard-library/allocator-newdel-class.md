@@ -20,11 +20,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 76ecf50e5f8e120dd4139d47b28688a79cda3791
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 430e55c1252eb1f1dabbdd39a6a72c76a14459a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocatornewdel-class"></a>allocator_newdel, classe
 Implémente un allocateur qui utilise `operator delete` pour désallouer un bloc de mémoire et `operator new` pour allouer un bloc de mémoire.  
@@ -45,7 +46,7 @@ class allocator_newdel;
 ## <a name="remarks"></a>Notes  
  La macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) transmet cette classe comme paramètre `name` dans l’instruction suivante : `ALLOCATOR_DECL(CACHE_FREELIST stdext::allocators::max_none), SYNC_DEFAULT, allocator_newdel);`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<allocators>  
   
  **Espace de noms :** stdext  

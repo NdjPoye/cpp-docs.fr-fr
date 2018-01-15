@@ -22,11 +22,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4995d413cfce885bf1a78068948bc7a06518692e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 50ea26172e2f5112e760aa02d9247d07afbead2b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventreceiver"></a>event_receiver
 Crée un récepteur d'événements (récepteur).  
@@ -62,7 +65,7 @@ Crée un récepteur d'événements (récepteur).
   
 -   **false** (par défaut) signifie que la classe de stockage et la convention d’appel (virtuelle, statique, etc.) n’est pas nécessaire correspondre à la méthode d’événement et les gestionnaires ; ni d’avez besoin des noms des gestionnaires faire correspondre les noms de méthode interface source d’événements.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **event_receiver** attribut C++ Spécifie que la classe ou structure auquel il est appliqué est un récepteur d’événements, à l’aide du modèle d’événement unifié Visual C++.  
   
  **event_receiver** est utilisé avec le [event_source](../windows/event-source.md) attribut et la [__hook](../cpp/hook.md) et [__unhook](../cpp/unhook.md) mots clés. Utilisez **event_source** pour créer des sources d’événements. Utilisez `__hook` dans les méthodes d’un récepteur d’événements pour associer des méthodes de récepteur d’événements (« raccorder ») pour les événements d’une source d’événement. Utilisez `__unhook` pour dissocier les.  
@@ -72,7 +75,7 @@ Crée un récepteur d'événements (récepteur).
 > [!NOTE]
 >  Une classe ou structure modélisée ne peut pas contenir d'événements.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -81,7 +84,7 @@ Crée un récepteur d'événements (récepteur).
 |**S'applique à**|**class**, `struct`|  
 |**Renouvelable**|Non|  
 |**Attributs requis**|**coclasse** lorsque *layout_dependent*=**true**|  
-|**Attributs non valides**|None|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

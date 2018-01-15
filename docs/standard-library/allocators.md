@@ -4,40 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 74e453298857b94c2c4eb62c5387d4e727f7bb7c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: eb2c193fd12578e69abef2db555ebbc4fa061e1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocators"></a>Allocateurs
 Les allocateurs sont utilisés par la bibliothèque C++ Standard pour gérer l’allocation et la désallocation des éléments stockés dans des conteneurs. Tous les conteneurs de bibliothèque C++ Standard sauf std::array ont un paramètre de modèle de type `allocator<Type>`, où `Type` représente le type de l’élément conteneur. Par exemple, la classe vector est déclarée comme suit :  
@@ -147,7 +131,6 @@ void Mallocator<T>::deallocate(T * const p, size_t) const noexcept
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence de bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

@@ -1,84 +1,83 @@
 ---
-title: "/Ox (Optimisation compl&#232;te) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.ToolOptimization"
-  - "/ox"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Ox (option du compilateur C++)"
-  - "code rapide"
-  - "optimisation complète"
-  - "Ox (option du compilateur C++)"
-  - "-Ox (option du compilateur C++)"
+title: -Ox (activer la plupart des optimisations de vitesse) | Documents Microsoft
+ms.custom: 
+ms.date: 09/25/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.ToolOptimization
+- /ox
+dev_langs: C++
+helpviewer_keywords:
+- Ox compiler option [C++]
+- fast code [C++]
+- /Ox compiler option [C++]
+- -Ox compiler option [C++]
 ms.assetid: 3ad7c30b-c615-428c-b1d0-2e024f81c760
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 85efa8a2beab34d0dcf1bdb74e3cf89008b10d6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# /Ox (Optimisation compl&#232;te)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="ox-enable-most-speed-optimizations"></a>/Ox (activer la plupart des optimisations de vitesse)
 
-L'option du compilateur **\/Ox** génère du code qui favorise la vitesse d'exécution par rapport à la réduction de la taille du code.  
-  
-## Syntaxe  
-  
-```  
-/Ox  
-```  
-  
-## Notes  
- La spécification de l'option du compilateur **\/Ox** a le même effet que celui de l'utilisation des options suivantes :  
-  
--   [\/Ob \(Expansion des fonctions Inline\)](../../build/reference/ob-inline-function-expansion.md), où l'option de paramètre est 2 \(**\/Ob2**\)  
-  
--   [\/Og \(Optimisations globales\)](../../build/reference/og-global-optimizations.md)  
-  
--   [\/Oi \(Générer des fonctions intrinsèques\)](../../build/reference/oi-generate-intrinsic-functions.md)  
-  
--   [\/Ot \(Favoriser la vitesse du code\)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)  
-  
--   [\/Oy \(Omission du pointeur frame\)](../../build/reference/oy-frame-pointer-omission.md)  
-  
- **\/Ox** et les options ci\-dessous s'excluent mutuellement :  
-  
--   [\/O1 \(Réduire la taille\)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)  
-  
--   [\/O2 \(Augmenter la vitesse\)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)  
-  
--   [\/Od \(Désactiver \(Débogage\)\)](../../build/reference/od-disable-debug.md)  
-  
- L'option du compilateur **\/Ox** active également l'optimisation de valeur de retour nommée, qui élimine le constructeur de copie et le destructeur d'une valeur de retour basée sur la pile.  Pour plus d'informations, consultez [\/O1, \/O2 \(Réduire la taille, augmenter la vitesse\)](../../build/reference/o1-o2-minimize-size-maximize-speed.md).  
-  
- Vous pouvez annuler l'option du compilateur **\/Ox** si vous spécifiez **\/Oxs**, qui combine l'option du compilateur avec **\/Ox**[\/Os \(Favoriser la taille du code\)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md).  Les options combinées favorisent la réduction de la taille du code.  
-  
- En général, spécifiez [\/O2 \(Augmenter la vitesse\)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) au lieu de **\/Ox** et [\/O1 \(Réduire la taille\)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) au lieu de **\/Oxs**.  
-  
-### Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
-  
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Comment : ouvrir les pages de propriétés d'un projet](../../misc/how-to-open-project-property-pages.md).  
-  
-2.  Cliquez sur le dossier **C\/C\+\+**.  
-  
-3.  Cliquez sur la page de propriétés **Optimisation**.  
-  
-4.  Modifiez la propriété **Optimisation**.  
-  
-### Pour définir cette option du compilateur par programmation  
-  
--   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Optimization%2A>.  
-  
-## Voir aussi  
- [\/O \(Optimiser le code\), options](../../build/reference/o-options-optimize-code.md)   
- [Options du compilateur](../../build/reference/compiler-options.md)   
- [Définition des options du compilateur](../../build/reference/setting-compiler-options.md)
+Le **/Ox** option du compilateur permet une combinaison d’optimisations qui favorise la vitesse. Dans certaines versions de l’IDE de Visual Studio et le message d’aide du compilateur, il s’agit *optimisation complète*, mais la **/Ox** option du compilateur permet uniquement un sous-ensemble des options d’optimisation vitesse activé par **/O2**.
+
+## <a name="syntax"></a>Syntaxe
+
+> /Ox
+
+## <a name="remarks"></a>Notes
+
+Le **/Ox** permet d’option du compilateur le **/O** cette vitesse de favoriser des options de compilateur. Le **/Ox** option du compilateur n’inclut pas les autres [/GF (éliminer les doublons)](../../build/reference/gf-eliminate-duplicate-strings.md) et [/Gy (activer la liaison au niveau des fonctions)](../../build/reference/gy-enable-function-level-linking.md) options activées par [/O1 ou/O2 (réduire la taille, augmenter la vitesse)](../../build/reference/o1-o2-minimize-size-maximize-speed.md). Les options supplémentaires appliquées par **/O1** et **/O2** peut entraîner des pointeurs vers les chaînes ou les fonctions de partager une adresse cible, ce qui peut affecter le débogage et la conformité de la syntaxe de langue stricte. Le **/Ox** option est un moyen simple pour activer la plupart des optimisations sans inclure **/GF** et **/Gy**. Pour plus d’informations, consultez les descriptions de la [/GF](../../build/reference/gf-eliminate-duplicate-strings.md) et [/Gy](../../build/reference/gy-enable-function-level-linking.md) options.
+
+Le **/Ox** option du compilateur est identique à l’aide des options suivantes en combinaison :
+
+- [/OB (Expansion des fonctions Inline)](../../build/reference/ob-inline-function-expansion.md), où le paramètre option 2 (**/Ob2**)
+
+- [/Og (Optimisations globales)](../../build/reference/og-global-optimizations.md)
+
+- [/Oi (Générer des fonctions intrinsèques)](../../build/reference/oi-generate-intrinsic-functions.md)
+
+- [/Ot (favoriser la vitesse du Code rapide)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)
+
+- [/Oy (Omission du pointeur frame)](../../build/reference/oy-frame-pointer-omission.md)
+
+**/Ox** s’excluent mutuellement :
+
+- [/ O1 (réduire la taille)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
+
+- [/ O2 (augmenter la vitesse)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
+
+- [/Od (Désactiver (Débogage))](../../build/reference/od-disable-debug.md)
+
+Vous pouvez annuler le décalage par rapport à la vitesse de la **/Ox** option du compilateur si vous spécifiez **/Oxs**, qui associe le **/Ox** option du compilateur avec [/Os (favoriser la vitesse petite Code)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). Les options combinées favorisent la taille du code.
+
+Pour appliquer toutes les optimisations au niveau des fichiers disponibles pour les versions release, nous vous recommandons de vous spécifiez [/O2 (augmenter la vitesse)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) au lieu de **/Ox**, et [/O1 (réduire la taille)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) à la place de **/Oxs**. Pour les versions davantage d’optimisation de mise en production, vous devez également envisager le [/GL (optimisation de l’ensemble du programme)](../../build/reference/gl-whole-program-optimization.md) option du compilateur et [/LTCG (génération de Code d’édition de liens)](../../build/reference/ltcg-link-time-code-generation.md) option de l’éditeur de liens.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
+
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+
+1. Sous **propriétés de Configuration**, ouvrez **C/C++** , puis choisissez le **optimisation** page de propriétés.
+
+1. Modifier la **optimisation** propriété.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
+
+- Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Optimization%2A>.
+
+## <a name="see-also"></a>Voir aussi
+
+[/O, options (Optimiser le code)](../../build/reference/o-options-optimize-code.md)  
+[Options du compilateur](../../build/reference/compiler-options.md)  
+[Définition des options du compilateur](../../build/reference/setting-compiler-options.md)

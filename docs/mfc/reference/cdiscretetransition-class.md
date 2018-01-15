@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,8 +15,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CDiscreteTransition::m_dblFinalValue
 - AFXANIMATIONCONTROLLER/CDiscreteTransition::m_delay
 - AFXANIMATIONCONTROLLER/CDiscreteTransition::m_hold
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CDiscreteTransition [MFC], CDiscreteTransition
 - CDiscreteTransition [MFC], Create
@@ -25,16 +23,16 @@ helpviewer_keywords:
 - CDiscreteTransition [MFC], m_delay
 - CDiscreteTransition [MFC], m_hold
 ms.assetid: b4d84fb3-ccaa-451c-a69b-6b50dcb9b9c8
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bd4b1b7c868c13176d2cd99204b0bae1e2b9992d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 4c79d2afb95ad5be1ae2f79e02deaeb8309a748f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition, classe
 Encapsule une transition discrète.  
@@ -67,7 +65,7 @@ class CDiscreteTransition : public CBaseTransition;
 |[CDiscreteTransition::m_delay](#m_delay)|La quantité de temps en temps le commutateur instantané à la valeur finale.|  
 |[CDiscreteTransition::m_hold](#m_hold)|La quantité de temps permettant de contenir la variable à sa valeur finale.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pendant une transition discrète, la variable d’animation conserve la valeur initiale pour un délai spécifié, puis passe instantanément à une valeur définitive spécifiée et conserve cette valeur pour une durée donnée. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l’aide de nouvel opérateur. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup, jusqu'à ce que puis sa valeur est NULL. La modification de variables membres après que la création de cet objet COM n’a aucun effet.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -77,7 +75,7 @@ class CDiscreteTransition : public CBaseTransition;
   
  [CDiscreteTransition](../../mfc/reference/cdiscretetransition-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="cdiscretetransition"></a>CDiscreteTransition::CDiscreteTransition  
@@ -139,4 +137,3 @@ UI_ANIMATION_SECONDS m_hold;
   
 ## <a name="see-also"></a>Voir aussi  
  [Classes](../../mfc/reference/mfc-classes.md)
-

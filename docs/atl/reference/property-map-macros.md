@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9e6ed73ffbf5823cde4b45e03d20742a63d9ae95
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dfd99fa59fc5e1d97011ac3dba4d16dd222c35b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-map-macros"></a>Macros de mappage de propriété
 Ces macros définissent les mappages de propriété et les entrées.  
@@ -39,7 +40,7 @@ Ces macros définissent les mappages de propriété et les entrées.
 |[PROP_PAGE](#prop_page)|Insère une page de propriétés CLSID dans le mappage de propriété.|  
 |[END_PROP_MAP](#end_prop_map)|Marque la fin de la table de propriétés ATL.|  
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
    
 ##  <a name="begin_prop_map"></a>BEGIN_PROP_MAP  
@@ -53,7 +54,7 @@ BEGIN_PROP_MAP(theClass)
  `theClass`  
  [in] Spécifie la classe contenant le mappage de propriété.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le mappage de propriété stocke les descriptions de propriété, propriété DISPID, page de propriétés CLSID, et `IDispatch` IID. Classes [IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md), [IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md), [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), et [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)utiliser le mappage de propriété pour récupérer et définir ces informations.  
   
  Lorsque vous créez un objet avec l’Assistant Projet ATL, l’Assistant va créer un mappage de propriété vide en spécifiant `BEGIN_PROP_MAP` suivie [END_PROP_MAP](#end_prop_map).  
@@ -80,7 +81,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
  *vt*  
  [in] Spécifie le type VARIANT de la propriété.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette macro génère des données membres à rendre persistantes.  
   
  Lorsque vous créez un contrôle ActiveX, l’Assistant insère cette macro après la macro de mappage de propriété [BEGIN_PROP_MAP](#begin_prop_map) et avant la macro de mappage de propriété [END_PROP_MAP](#end_prop_map).  
@@ -112,7 +113,7 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
  `vt`  
  [in] Le type de propriété.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `PROP_ENTRY` macro a été non sécurisé et déconseillées. Elle a été remplacée par `PROP_ENTRY_TYPE`.  
   
  Le [BEGIN_PROP_MAP](#begin_prop_map) macro marque le début du mappage de propriété ; le [END_PROP_MAP](#end_prop_map) macro marque la fin.  
@@ -143,7 +144,7 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
  `vt`  
  [in] Le type de propriété.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `PROP_ENTRY_EX` macro a été non sécurisé et déconseillées. Elle a été remplacée par `PROP_ENTRY_TYPE_EX`.  
   
  Le [BEGIN_PROP_MAP](#begin_prop_map) macro marque le début du mappage de propriété ; le [END_PROP_MAP](#end_prop_map) macro marque la fin.  
@@ -164,7 +165,7 @@ PROP_PAGE(clsid)
  `clsid`  
  [in] Le CLSID d’une page de propriétés.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `PROP_PAGE`est semblable à [PROP_ENTRY_TYPE](#prop_entry_type), mais ne nécessite pas une description de la propriété ou un DISPID.  
   
 > [!NOTE]
@@ -182,7 +183,7 @@ PROP_PAGE(clsid)
 END_PROP_MAP()
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque vous créez un objet avec l’Assistant Projet ATL, l’Assistant va créer un mappage de propriété vide en spécifiant [BEGIN_PROP_MAP](#begin_prop_map) suivie `END_PROP_MAP`.  
   
 ### <a name="example"></a>Exemple  

@@ -25,11 +25,12 @@ caps.latest.revision: "40"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 21ebf470372c24a4e1ab5922f1d98c1a434691a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e5699830a090f42feb92b24ec43fbae36634c4df
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="gs-buffer-security-check"></a>/GS (vérification de la sécurité des mémoires tampons)  
   
@@ -41,9 +42,9 @@ Détecte des dépassements de mémoire tampon qui remplacent l’adresse de reto
 /GS[-]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
-**/GS** est activé par défaut. Si vous pensez que votre application sans risque pour la sécurité, utilisez **/GS-**. Pour plus d’informations sur **/GS**, consultez [du compilateur sécurité Contrôles approfondis de](http://go.microsoft.com/fwlink/?linkid=7260). Pour plus d’informations sur la détection de dépassement de mémoire tampon de suppression, consultez [safebuffers](../../cpp/safebuffers.md).  
+**/GS** est activé par défaut. Si vous pensez que votre application sans risque pour la sécurité, utilisez **/GS-**. Pour plus d’informations sur **/GS**, consultez [du compilateur sécurité Contrôles approfondis de](http://go.microsoft.com/fwlink/p/?linkid=7260). Pour plus d’informations sur la détection de dépassement de mémoire tampon de suppression, consultez [safebuffers](../../cpp/safebuffers.md).  
   
 ## <a name="security-checks"></a>Vérifications de sécurité  
   

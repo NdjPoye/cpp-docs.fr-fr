@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,35 +13,19 @@ f1_keywords:
 - ATLCONV/ATL::CW2AEX::CW2AEX
 - ATLCONV/ATL::CW2AEX::m_psz
 - ATLCONV/ATL::CW2AEX::m_szBuffer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CW2AEX class
+dev_langs: C++
+helpviewer_keywords: CW2AEX class
 ms.assetid: 44dc2cf5-dd30-440b-a9b9-b21b43f49843
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 007dc4a40f0784984981c9b2741ec79ce6f12d9b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d135797ff6902a9a63e89a692a25919b08b47f6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cw2aex-class"></a>Classe de CW2AEX
 Cette classe est utilisée par les macros de conversion de chaînes `CT2AEX`, `CW2TEX`, `CW2CTEX`, et `CT2CAEX`et le typedef **CW2A**.  
@@ -83,7 +66,7 @@ class CW2AEX
 |[CW2AEX::m_psz](#m_psz)|Le membre de données qui stocke la chaîne source.|  
 |[CW2AEX::m_szBuffer](#m_szbuffer)|La mémoire tampon statique, utilisé pour stocker la chaîne convertie.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  À moins que des fonctionnalités supplémentaires sont requises, utilisez `CT2AEX`, `CW2TEX`, `CW2CTEX`, `CT2CAEX`, ou **CW2A** dans votre code.  
   
  Cette classe contient une mémoire tampon de taille fixe statique qui est utilisé pour stocker le résultat de la conversion. Si le résultat est trop grand pour tenir dans la mémoire tampon statique, la classe alloue de la mémoire avec `malloc` et libère la mémoire quand l'objet passe en dehors de l'étendue. Cela garantit que, contrairement au texte des macros de conversion disponibles dans les versions précédentes d’ATL, cette classe est plus sûr d’utiliser dans les boucles et qu’il ne sera pas dépassement de la pile.  
@@ -111,7 +94,7 @@ class CW2AEX
 ## <a name="example"></a>Exemple  
  Consultez [ATL et MFC Macros de Conversion de chaînes](string-conversion-macros.md) pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlconv.h  
   
 ##  <a name="cw2aex"></a>CW2AEX::CW2AEX  
@@ -127,9 +110,9 @@ CW2AEX(LPCWSTR psz) throw(...);
  La chaîne de texte à convertir.  
   
  `nCodePage`  
- La page de codes utilisée pour effectuer la conversion. Consultez la discussion de paramètre de page de code pour le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] fonction [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) pour plus d’informations.  
+ La page de codes utilisée pour effectuer la conversion. Consultez la discussion de paramètre de page de code pour la fonction du Kit de développement logiciel Windows [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) pour plus d’informations.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Alloue de la mémoire tampon utilisée dans le processus de traduction.  
   
 ##  <a name="dtor"></a>CW2AEX :: ~ CW2AEX  
@@ -139,7 +122,7 @@ CW2AEX(LPCWSTR psz) throw(...);
 ~CW2AEX() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère la mémoire tampon allouée.  
   
 ##  <a name="m_psz"></a>CW2AEX::m_psz  
@@ -173,4 +156,3 @@ operator LPSTR() const throw();
  [Classe de CW2CWEX](../../atl/reference/cw2cwex-class.md)   
  [Classe de CW2WEX](../../atl/reference/cw2wex-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

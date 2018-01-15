@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 05545ee760092f8a8b3a243dc67acd212c1bb7cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 91df3462297c2a45a8938d815cc3b6a3b8ca6edb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Gestionnaires pour les messages Windows standard
 Gestionnaires pour les messages Windows standards par défaut (**WM_**) sont prédéfinies dans la classe `CWnd`. La bibliothèque de classes base les noms de ces gestionnaires sur le nom du message. Par exemple, le gestionnaire du message `WM_PAINT` est déclaré dans `CWnd` comme suit :  
@@ -38,13 +39,13 @@ Gestionnaires pour les messages Windows standards par défaut (**WM_**) sont pr�
  Dans certains cas, le gestionnaire doit appeler le gestionnaire de remplacement dans la classe de base pour que la classe de base et Windows puissent traiter le message. L'emplacement où vous appelez le gestionnaire de classe de base dans votre substitution dépend des circonstances. Parfois vous devez appeler le gestionnaire de classe de base en premier et parfois en dernier. Parfois vous appelez le gestionnaire de classe de base de manière conditionnelle, si vous choisissez de ne pas traiter le message vous-même. Parfois vous devez appeler le gestionnaire de classe de base, puis exécuter de manière conditionnelle votre propre code gestionnaire, selon la valeur et l'état retourné par le gestionnaire de la classe de base.  
   
 > [!CAUTION]
->  Il n'est pas sécurisé de modifier les arguments passés dans un gestionnaire si vous envisagez de les transmettre à un gestionnaire de la classe de base. Par exemple, vous pouvez être tenté de modifier l'argument `nChar` du gestionnaire `OnChar` (à convertir en majuscules, par exemple). Ce comportement est relativement obscur, mais si vous avez besoin accomplir cet effet, utilisez le `CWnd` fonction membre **SendMessage** à la place.  
+>  Il n’est pas sécurisé de modifier les arguments passés dans un gestionnaire si vous envisagez de les transmettre à un gestionnaire de la classe de base. Par exemple, vous pouvez être tenté de modifier l'argument `nChar` du gestionnaire `OnChar` (à convertir en majuscules, par exemple). Ce comportement est relativement obscur, mais si vous avez besoin accomplir cet effet, utilisez le `CWnd` fonction membre **SendMessage** à la place.  
   
  Comment déterminer la méthode appropriée pour remplacer un message donné lors de la fenêtre Propriétés crée le squelette de la fonction de gestionnaire pour un message donné, un `OnCreate` gestionnaire pour `WM_CREATE`, par exemple, il prend la forme de l’architecture recommandée substitution de fonction membre. L’exemple suivant recommande le gestionnaire tout d’abord appeler le Gestionnaire de classe de base et passer qu’à condition qu’elle ne retourne pas -1.  
   
  [!code-cpp[NVC_MFCMessageHandling#3](../mfc/codesnippet/cpp/handlers-for-standard-windows-messages_1.cpp)]  
   
- Par convention, les noms de ces gestionnaires commencent par le préfixe "On". Certains de ces gestionnaires n'occupent aucun argument, tandis que d'autres en ont plusieurs. Certains ont également un type de retour autre que `void`. Les gestionnaires par défaut pour toutes les **WM_** messages décrits dans le *référence MFC* en tant que fonctions membres de classe `CWnd` dont les noms commencent par « On ». Les déclarations de fonction membre dans `CWnd` portent le préfixe **afx_msg**.  
+ Par convention, les noms de ces gestionnaires commencent par le préfixe "On". Certains de ces gestionnaires n’occupent aucun argument, tandis que d’autres en ont plusieurs. Certains ont également un type de retour autre que `void`. Les gestionnaires par défaut pour toutes les **WM_** messages décrits dans le *référence MFC* en tant que fonctions membres de classe `CWnd` dont les noms commencent par « On ». Les déclarations de fonction membre dans `CWnd` portent le préfixe **afx_msg**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Déclaration des fonctions de gestionnaire de messages](../mfc/declaring-message-handler-functions.md)

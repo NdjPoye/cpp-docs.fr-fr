@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1e9466c2081b7d9622776702d367ccae64a36b4f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c3ef0cdc45d4f3b84c738e5eec24d76a1f9b7fe2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcurrency-class"></a>Classe de CComCurrency
 `CComCurrency` a des méthodes et des opérateurs pour créer et gérer un objet CURRENCY.  
@@ -86,7 +87,7 @@ class CComCurrency
 |----------|-----------------|  
 |[CComCurrency::m_currency](#m_currency)|Variable `CURRENCY` créée par votre instance de classe.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CComCurrency`est un wrapper pour le **devise** type de données. **DEVISE** est implémenté comme un entier de 8 octets de complément à 2 multiplié par 10 000. Ceci fournit un nombre à virgule fixe avec 15 chiffres à gauche du séparateur décimal et 4 chiffres à droite. Le **devise** type de données est très utile pour les calculs impliquant des valeurs monétaires, ou pour les calculs à virgule fixe où la précision est importante.  
   
  Le **CComCurrency** wrapper implémente des opérations arithmétiques, de comparaison et assignation de ce type à virgule fixe. Les applications prises en charge ont été sélectionnées pour contrôler les erreurs d'arrondi qui peuvent se produire lors de calculs à virgule fixe.  
@@ -95,14 +96,14 @@ class CComCurrency
   
  Lorsque vous spécifiez les composantes entière et fractionnaire d’un **CComCurrency** d’objet, n’oubliez pas que la partie fractionnaire est un nombre dans la plage comprise entre 0 et 9999. Ceci est important dans le cas d'une devise telle que le dollar américain, où les sommes sont exprimées avec seulement deux chiffres significatifs après le séparateur décimal. Bien que les deux derniers chiffres ne soient pas affichés, ils doivent être pris en compte.  
   
-|Valeur|Affectations CComCurrency possibles|  
+|Value|Affectations CComCurrency possibles|  
 |-----------|---------------------------------------|  
 |$10.50|CComCurrency (10,5000) *ou* CComCurrency (10.50)|  
 |$10.05|CComCurrency (10,500) *ou* CComCurrency (10.05)|  
   
  Les valeurs **CY_MIN_FRACTION**, **CY_MAX_FRACTION**, et **CY_SCALE** sont définies dans atlcur.h.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcur.h  
   
 ##  <a name="ccomcurrency"></a>CComCurrency::CComCurrency  
@@ -153,7 +154,7 @@ explicit CComCurrency(LPCSTR szSrc);
  `szSrc`  
  Chaîne ANSI ou Unicode contenant la valeur initiale. Les paramètres régionaux du thread actuel sont utilisé pour effectuer la conversion.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le constructeur définit la valeur initiale de [CComCurrency::m_currency](#m_currency)et accepte un large éventail de types de données, y compris des entiers, chaînes, nombres à virgule flottante, **devise** variables et autres `CComCurrency` objets. Si aucune valeur n’est fournie, `m_currency` est définie sur 0.  
   
  En cas d’erreur, par exemple un dépassement de capacité, les constructeurs ne dispose pas d’une spécification d’exception vide ( **throw()**) appeler `AtlThrow` avec un HRESULT qui décrit l’erreur.  
@@ -180,7 +181,7 @@ SHORT GetFraction() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la partie fractionnaire de la `m_currency` membre de données.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La partie fractionnaire est une valeur d’entier de 4 chiffres comprise entre -9999 ( **CY_MIN_FRACTION**) et + 9999 ( **CY_MAX_FRACTION**). `GetFraction`Retourne cette valeur multipliée par 10 000 ( **CY_SCALE**). Les valeurs de **CY_MIN_FRACTION**, **CY_MAX_FRACTION**, et **CY_SCALE** sont définies dans atlcur.h.  
   
 ### <a name="example"></a>Exemple  
@@ -206,7 +207,7 @@ LONGLONG GetInteger() const;
 CURRENCY m_currency;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ce membre contient la devise accessibles et manipulées par les méthodes de cette classe.  
   
 ##  <a name="operator_-"></a>CComCurrency::operator-  

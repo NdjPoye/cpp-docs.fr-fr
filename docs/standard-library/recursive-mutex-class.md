@@ -25,11 +25,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 5d2567c5ced5b42dc40529a07535458e9fe34d75
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d5eadeac762e894a409fb6c3d949e38aaeabdf04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recursivemutex-class"></a>recursive_mutex, classe
 Représente un *type mutex*. Contrairement à [mutex](../standard-library/mutex-class-stl.md), le comportement est bien défini pour les appels aux méthodes de verrouillage sur des objets qui sont déjà verrouillés.  
@@ -57,7 +58,7 @@ class recursive_mutex;
 |[try_lock](#try_lock)|Tente d’obtenir la propriété du mutex sans bloquer le thread.|  
 |[unlock](#unlock)|Libère la propriété du mutex.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<mutex >  
   
  **Espace de noms :** std  

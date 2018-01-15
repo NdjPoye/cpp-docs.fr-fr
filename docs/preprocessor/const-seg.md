@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bcd84415737ee5fb8584f04b56c1df895145a3b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49d145bc80b524176b381b2b5938c9707e8c1b19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constseg"></a>const_seg
 Spécifie le segment où [const](../cpp/const-cpp.md) variables sont stockées dans le fichier .obj.  
@@ -34,7 +35,7 @@ Spécifie le segment où [const](../cpp/const-cpp.md) variables sont stockées d
 #pragma const_seg ( [ [ { push | pop}, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La signification des termes du contrat *segment* et *section* sont interchangeables dans cette rubrique.  
   
  Fichiers OBJ peuvent être affichés avec le [dumpbin](../build/reference/dumpbin-command-line.md) application. Dans le fichier .obj, le segment par défaut pour les variables `const` est .rdata. Certaines variables `const`, telles que les scalaires, sont automatiquement incluses en ligne dans le flux de code. Le code inline n'apparaîtra pas dans .rdata.  

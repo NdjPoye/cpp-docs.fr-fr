@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 33804c3876d378fe8138795b78a26f36a52e3c96
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd2f0ff353e1243685c94da0c28f29e810b2a9ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcauto-deduce-variable-type"></a>/Zc:auto (déduire le type de variable)
 Le **/Zc : auto [-]** option du compilateur indique au compilateur comment utiliser le [auto, mot clé](../../cpp/auto-keyword.md) pour déclarer des variables. Si vous spécifiez l’option par défaut, **/Zc : auto**, le compilateur déduit le type de la variable déclarée de son expression d’initialisation. Si vous spécifiez **/Zc:auto-**, le compilateur alloue la variable à la classe de stockage automatique.  
@@ -34,7 +35,7 @@ Le **/Zc : auto [-]** option du compilateur indique au compilateur comment util
 /Zc:auto[-]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le standard C++ définit une signification originale et une autre révisée pour le mot clé `auto`. Avant de [!INCLUDE[cpp_dev10_long](../../build/includes/cpp_dev10_long_md.md)], le mot clé déclare une variable dans la classe de stockage automatique ; autrement dit, une variable qui a une durée de vie locale. En commençant par [!INCLUDE[cpp_dev10_long](../../build/includes/cpp_dev10_long_md.md)], le mot clé déduit le type d’une variable à partir de l’expression d’initialisation de la déclaration. Utilisez le **/Zc : auto [-]** option du compilateur pour indiquer au compilateur d’utiliser la signification originale ou modifiée de la `auto` (mot clé).  
   
  Le compilateur émet un message de diagnostic approprié si votre usage du mot clé `auto` contredit l'option de compilateur actuelle. Pour plus d’informations, consultez [auto, mot clé](../../cpp/auto-keyword.md). Pour plus d’informations sur les problèmes de conformité avec Visual C++, consultez [comportement non standard](../../cpp/nonstandard-behavior.md).  

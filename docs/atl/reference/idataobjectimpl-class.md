@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,44 +20,29 @@ f1_keywords:
 - ATLCTL/ATL::IDataObjectImpl::GetDataHere
 - ATLCTL/ATL::IDataObjectImpl::QueryGetData
 - ATLCTL/ATL::IDataObjectImpl::SetData
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - data transfer [C++]
 - data transfer [C++], Uniform Data Transfer
 - IDataObjectImpl class
 - IDataObject, ATL implementation
 ms.assetid: b680f0f7-7795-40a1-a0f6-f48768201c89
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: afd5fe7cf9bbac582e59ed46dc33e99de5fc2876
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 644f498a491605fb69b18ec53afee689f5f90a26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="idataobjectimpl-class"></a>IDataObjectImpl (classe)
-Cette classe fournit des méthodes pour prendre en charge le transfert de données uniforme et la gestion des connexions.  
+# <a name="idataobjectimpl-class"></a>Classe de IDataObjectImpl
+Cette classe fournit des méthodes pour prendre en charge le transfert de données uniforme et de gestion des connexions.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s'exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -78,31 +62,31 @@ class IDataObjectImpl
 |Nom|Description|  
 |----------|-----------------|  
 |[IDataObjectImpl::DAdvise](#dadvise)|Établit une connexion entre l’objet de données et un récepteur de notifications. Ainsi, le récepteur de notifications recevoir des notifications de modifications dans l’objet.|  
-|[IDataObjectImpl::DUnadvise](#dunadvise)|Met fin à une connexion précédemment établie par `DAdvise`.|  
-|[IDataObjectImpl::EnumDAdvise](#enumdadvise)|Crée un énumérateur pour itérer sur les connexions de notifications actuelles.|  
-|[IDataObjectImpl::EnumFormatEtc](#enumformatetc)|Crée un énumérateur pour itérer au sein du **FORMATETC** structures pris en charge par l’objet de données. Retourne l’implémentation ATL **E_NOTIMPL**.|  
+|[IDataObjectImpl::DUnadvise](#dunadvise)|Termine une connexion précédemment établie via `DAdvise`.|  
+|[IDataObjectImpl::EnumDAdvise](#enumdadvise)|Crée un énumérateur pour itérer au sein des connexions de notifications actuelles.|  
+|[IDataObjectImpl::EnumFormatEtc](#enumformatetc)|Crée un énumérateur pour itérer au sein du **FORMATETC** structures pris en charge par l’objet de données. L’implémentation ATL retourne **E_NOTIMPL**.|  
 |[IDataObjectImpl::FireDataChange](#firedatachange)|Envoie une notification de modification à chaque récepteur de notifications.|  
-|[IDataObjectImpl::GetCanonicalFormatEtc](#getcanonicalformatetc)|Récupère un logiquement équivalente **FORMATETC** structure à celui qui est plus complexe. Retourne l’implémentation ATL **E_NOTIMPL**.|  
-|[IDataObjectImpl::GetData](#getdata)|Transfère des données à partir de l’objet de données au client. Les données sont décrites dans un **FORMATETC** de la structure et est transférée via un **STGMEDIUM** structure.|  
-|[IDataObjectImpl::GetDataHere](#getdatahere)|Semblable à `GetData`, hormis le fait que le client doit allouer la **STGMEDIUM** structure. Retourne l’implémentation ATL **E_NOTIMPL**.|  
-|[IDataObjectImpl::QueryGetData](#querygetdata)|Détermine si l’objet de données prend en charge un particulier **FORMATETC** structure de transfert de données. Retourne l’implémentation ATL **E_NOTIMPL**.|  
-|[IDataObjectImpl::SetData](#setdata)|Transfère des données à partir du client à l’objet de données. Retourne l’implémentation ATL **E_NOTIMPL**.|  
+|[IDataObjectImpl::GetCanonicalFormatEtc](#getcanonicalformatetc)|Récupère un logiquement équivalentes **FORMATETC** structure par celle qui est plus complexe. L’implémentation ATL retourne **E_NOTIMPL**.|  
+|[IDataObjectImpl::GetData](#getdata)|Transfère des données à partir de l’objet de données au client. Décrit les données dans un **FORMATETC** de la structure et est transférée via un **STGMEDIUM** structure.|  
+|[IDataObjectImpl::GetDataHere](#getdatahere)|Semblable à `GetData`, sauf le client doit allouer la **STGMEDIUM** structure. L’implémentation ATL retourne **E_NOTIMPL**.|  
+|[IDataObjectImpl::QueryGetData](#querygetdata)|Détermine si l’objet de données prend en charge un particulier **FORMATETC** structure pour le transfert de données. L’implémentation ATL retourne **E_NOTIMPL**.|  
+|[IDataObjectImpl::SetData](#setdata)|Transfère des données à partir du client à l’objet de données. L’implémentation ATL retourne **E_NOTIMPL**.|  
   
-## <a name="remarks"></a>Remarques  
- Le [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) interface fournit des méthodes pour prendre en charge le transfert de données uniforme. `IDataObject`utilise les structures du format standard [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) et [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) pour récupérer et stocker les données.  
+## <a name="remarks"></a>Notes  
+ Le [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) interface fournit des méthodes pour prendre en charge le transfert de données uniforme. `IDataObject`utilise les structures de format standard [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) et [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) pour récupérer et stocker des données.  
   
- `IDataObject`gère également les connexions pour informer les récepteurs pour gérer les notifications de modification de données. Le client peut recevoir des notifications de modification de données à partir de l’objet de données, le client doit implémenter les [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) interface sur un objet appelé un récepteur de notifications. Lorsque le client appelle ensuite **IDataObject::DAdvise**, une connexion est établie entre l’objet de données et le récepteur de notifications.  
+ `IDataObject`gère également des connexions pour informer les récepteurs pour gérer les notifications de modification de données. Pour que le client de recevoir des notifications de modification de données à partir de l’objet de données, le client doit implémenter la [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) interface sur un objet appelé un récepteur de notifications. Lorsque le client appelle ensuite **IDataObject::DAdvise**, une connexion est établie entre l’objet de données et le récepteur de notifications.  
   
- Classe `IDataObjectImpl` fournit une implémentation par défaut de `IDataObject` et implémente **IUnknown** en envoyant des informations de dump génère l’appareil en mode de débogage.  
+ Classe `IDataObjectImpl` fournit une implémentation par défaut de `IDataObject` et implémente **IUnknown** en envoyant des informations pour le vidage de builds périphérique en mode débogage.  
   
  **Articles connexes** [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md), [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `IDataObject`  
   
  `IDataObjectImpl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlctl.h  
   
 ##  <a name="dadvise"></a>IDataObjectImpl::DAdvise  
@@ -116,25 +100,25 @@ HRESULT DAdvise(
     DWORD* pdwConnection);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ainsi, le récepteur de notifications recevoir des notifications de modifications dans l’objet.  
   
- Pour terminer la connexion, appelez [DUnadvise](#dunadvise).  
+ Pour mettre fin à la connexion, appelez [DUnadvise](#dunadvise).  
   
- Consultez la page [IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consultez [IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="dunadvise"></a>IDataObjectImpl::DUnadvise  
- Met fin à une connexion précédemment établie par [DAdvise](#dadvise).  
+ Termine une connexion précédemment établie via [DAdvise](#dadvise).  
   
 ```
 HRESULT DUnadvise(DWORD dwConnection);
 ```  
   
-### <a name="remarks"></a>Remarques  
- Consultez la page [IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Notes  
+ Consultez [IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="enumdadvise"></a>IDataObjectImpl::EnumDAdvise  
- Crée un énumérateur pour itérer sur les connexions de notifications actuelles.  
+ Crée un énumérateur pour itérer au sein des connexions de notifications actuelles.  
   
 ```
 HRESULT DAdvise(
@@ -145,7 +129,7 @@ HRESULT DAdvise(
 ```  
   
 ### <a name="remarks"></a>Notes  
- Consultez la page [IDataObject::EnumDAdvise](http://msdn.microsoft.com/library/windows/desktop/ms680127) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consultez [IDataObject::EnumDAdvise](http://msdn.microsoft.com/library/windows/desktop/ms680127) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="enumformatetc"></a>IDataObjectImpl::EnumFormatEtc  
  Crée un énumérateur pour itérer au sein du **FORMATETC** structures pris en charge par l’objet de données.  
@@ -156,14 +140,14 @@ HRESULT EnumFormatEtc(
     IEnumFORMATETC** ppenumFormatEtc);
 ```  
   
-### <a name="remarks"></a>Remarques  
- Consultez la page [IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Notes  
+ Consultez [IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) dans le Kit de développement logiciel Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
 ##  <a name="firedatachange"></a>IDataObjectImpl::FireDataChange  
- Envoie une notification de modification à chaque récepteur de notifications en cours de gestion.  
+ Envoie une notification de modification à chaque récepteur de notifications qui est actuellement géré.  
   
 ```
 HRESULT FireDataChange();
@@ -173,7 +157,7 @@ HRESULT FireDataChange();
  Valeur `HRESULT` standard.  
   
 ##  <a name="getcanonicalformatetc"></a>IDataObjectImpl::GetCanonicalFormatEtc  
- Récupère un logiquement équivalente **FORMATETC** structure à celui qui est plus complexe.  
+ Récupère un logiquement équivalentes **FORMATETC** structure par celle qui est plus complexe.  
   
 ```
 HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut);
@@ -182,8 +166,8 @@ HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut)
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-### <a name="remarks"></a>Remarques  
- Consultez la page [IDataObject::GetCanonicalFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms680685) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Notes  
+ Consultez [IDataObject::GetCanonicalFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms680685) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getdata"></a>IDataObjectImpl::GetData  
  Transfère des données à partir de l’objet de données au client.  
@@ -194,13 +178,13 @@ HRESULT GetData(
     STGMEDIUM* pmedium);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le *pformatetcIn* paramètre doit spécifier un type de support de stockage de **TYMED_MFPICT**.  
   
- Consultez la page [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consultez [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getdatahere"></a>IDataObjectImpl::GetDataHere  
- Semblable à `GetData`, hormis le fait que le client doit allouer la **STGMEDIUM** structure.  
+ Semblable à `GetData`, sauf le client doit allouer la **STGMEDIUM** structure.  
   
 ```
 HRESULT GetDataHere(
@@ -211,11 +195,11 @@ HRESULT GetDataHere(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-### <a name="remarks"></a>Remarques  
- Consultez la page [IDataObject::GetDataHere a](http://msdn.microsoft.com/library/windows/desktop/ms687266) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Notes  
+ Consultez [IDataObject::GetDataHere a](http://msdn.microsoft.com/library/windows/desktop/ms687266) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="querygetdata"></a>IDataObjectImpl::QueryGetData  
- Détermine si l’objet de données prend en charge un particulier **FORMATETC** structure de transfert de données.  
+ Détermine si l’objet de données prend en charge un particulier **FORMATETC** structure pour le transfert de données.  
   
 ```
 HRESULT QueryGetData(FORMATETC* pformatetc);
@@ -224,8 +208,8 @@ HRESULT QueryGetData(FORMATETC* pformatetc);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-### <a name="remarks"></a>Remarques  
- Consultez la page [IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Notes  
+ Consultez [IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="setdata"></a>IDataObjectImpl::SetData  
  Transfère des données à partir du client à l’objet de données.  
@@ -241,8 +225,7 @@ HRESULT SetData(
  Retourne **E_NOTIMPL**.  
   
 ### <a name="remarks"></a>Notes  
- Consultez la page [IDataObject::SetData](http://msdn.microsoft.com/library/windows/desktop/ms686626) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consultez [IDataObject::SetData](http://msdn.microsoft.com/library/windows/desktop/ms686626) dans le Kit de développement logiciel Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
-

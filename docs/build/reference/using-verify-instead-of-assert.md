@@ -1,43 +1,43 @@
 ---
-title: "Utilisation de VERIFY au lieu d&#39;ASSERT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "assert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "instructions ASSERT"
-  - "assertions, débogage"
-  - "assertions, dépanner les instructions ASSERT"
-  - "déboguer (MFC), instructions ASSERT"
-  - "déboguer les assertions"
-  - "VERIFY (macro)"
+title: "Utilisation de VERIFY au lieu d’ASSERT | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: assert
+dev_langs: C++
+helpviewer_keywords:
+- ASSERT statements
+- debugging [MFC], ASSERT statements
+- VERIFY macro
+- assertions, troubleshooting ASSERT statements
+- debugging assertions
+- assertions, debugging
 ms.assetid: 4c46397b-3fb1-49c1-a09b-41a72fae3797
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4ffe046a281bbbbefc251b48df55ecd275515e60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Utilisation de VERIFY au lieu d&#39;ASSERT
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Supposons que vous ne rencontriez pas de problème lorsque vous exécutez la version debug de votre application MFC.  Cependant, la version release de la même application se bloque, retourne des résultats incorrects et\/ou se comporte anormalement.  
+# <a name="using-verify-instead-of-assert"></a>Utilisation de VERIFY au lieu d'ASSERT
+Supposons que lorsque vous exécutez la version debug de votre application MFC, il n’existe aucun problème. Toutefois, la version de la même application se bloque, retourne des résultats incorrects et/ou présente certains autres comportement anormal.  
   
- Ce problème peut trouver son origine dans la quantité importante de code que vous placez dans une instruction ASSERT pour confirmer sa parfaite exécution.  Dans la mesure où les instructions ASSERT sont mises en commentaire dans la version release d'un programme MFC, le code ne s'exécute pas dans une version release.  
+ Ce problème peut apparaître lorsque vous placez le code importante dans une instruction ASSERT pour vérifier qu’elle s’exécute correctement. Étant donné que les instructions ASSERT sont commentées dans une version Release d’un programme MFC, le code ne s’exécute pas dans une version Release.  
   
- Si vous utilisez ASSERT pour vérifier qu'un appel de fonction a réussi, pensez à utiliser [VERIFY](../Topic/VERIFY.md) à la place.  La macro VERIFY évalue ses propres arguments dans les deux versions debug et release de l'application.  
+ Si vous utilisez ASSERT pour confirmer qu’un appel de fonction a réussi, envisagez d’utiliser [Vérifiez](../../mfc/reference/diagnostic-services.md#verify) à la place. La macro VERIFY évalue ses propres arguments dans les versions debug et les versions release de l’application.  
   
- Une autre technique préférable consiste à assigner la valeur de retour de la fonction à une variable temporaire, puis à tester la variable dans une instruction ASSERT.  
+ Une autre technique consiste à affecter la valeur de retour de la fonction dans une variable temporaire, puis tester la variable dans une instruction ASSERT de préférence.  
   
- Examinons le fragment de code suivant :  
+ Examinez le fragment de code suivant :  
   
 ```  
 enum {  
@@ -49,15 +49,15 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );  
 ```  
   
- Ce code s'exécute parfaitement dans la version debug d'une application MFC.  Si l'appel à `calloc( )` échoue, un message de diagnostic comprenant le fichier et le numéro de ligne apparaît.  Cependant, dans la version commerciale d'une application MFC :  
+ Ce code s’exécute parfaitement dans une version debug d’une application MFC. Si l’appel à `calloc( )` échoue, un message de diagnostic qui inclut le fichier et numéro de ligne apparaît. Toutefois, dans une version commerciale d’une application MFC :  
   
--   l'appel à `calloc( )` ne survient jamais, laissant `buf` non initialisée, ou  
+-   l’appel à `calloc( )` ne se produit jamais, en laissant `buf` non initialisée, ou  
   
--   `strcpy_s( )` copie "`Hello, World`" dans une partie aléatoire de mémoire, bloquant probablement l'application, entraînant l'arrêt du système ou  
+-   `strcpy_s( )`copies «`Hello, World`» dans une zone aléatoire de la mémoire, bloquant probablement l’application ou à l’origine du système peut cesser de répondre ou  
   
--   `free()` tente de libérer un espace mémoire qui n'a jamais été alloué.  
+-   `free()`tente de libérer la mémoire qui n’a jamais été allouée.  
   
- Pour utiliser ASSERT correctement, l'exemple de code doit être remplacé par celui\-ci :  
+ Pour utiliser ASSERT correctement, l’exemple de code doit être modifié à ce qui suit :  
   
 ```  
 enum {  
@@ -70,7 +70,7 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );  
 ```  
   
- Sinon, vous pouvez utiliser plutôt VERIFY :  
+ Ou bien, vous pouvez utiliser plutôt VERIFY :  
   
 ```  
 enum {  
@@ -82,5 +82,5 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );  
 ```  
   
-## Voir aussi  
- [Résolution de problèmes liés à la version release](../../build/reference/fixing-release-build-problems.md)
+## <a name="see-also"></a>Voir aussi  
+ [Résolution de problèmes liés à la version Release](../../build/reference/fixing-release-build-problems.md)

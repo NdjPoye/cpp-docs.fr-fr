@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 83519f28361505b9c227c7db5522bfffcc5133a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d7c80606f72e8c9ebfbd14290de1128a982433a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unwind-helpers-for-masm"></a>Déroulement de l'assistance pour MASM
 Pour écrire des routines d’assembly correctes, il existe un jeu de pseudo-opérations utilisables en parallèle avec les instructions d’assembly réelles pour créer l’approprié .pdata et .xdata. Il existe également un ensemble de macros qui fournissent une utilisation simplifiée des pseudo-opérations pour leurs utilisations les plus courantes.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les rubriques suivantes sont dans cette section :  
   
 -   [Pseudo-opérations brutes](../build/raw-pseudo-operations.md)  

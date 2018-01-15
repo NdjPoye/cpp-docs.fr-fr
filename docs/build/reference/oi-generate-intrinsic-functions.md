@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a2dbbac624f02b60c35f9840da94d677b13c7f40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d0a24830dbc67466e52f3f3c488dda7ac5b4778d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (Générer des fonctions intrinsèques)
 Remplace certains appels de fonction avec des formes intrinsèques ou sinon spéciaux de la fonction permettant à votre application s’exécute plus rapidement.  
@@ -38,7 +39,7 @@ Remplace certains appels de fonction avec des formes intrinsèques ou sinon spé
 /Oi[-]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les programmes qui utilisent des fonctions intrinsèques sont plus rapides, car ils n’ont pas la surcharge d’appels de fonction, mais peuvent être plus volumineux en raison du code supplémentaire créé.  
   
  Consultez [intrinsèque](../../preprocessor/intrinsic.md) pour plus d’informations sur les fonctions possédant des formes intrinsèques.  

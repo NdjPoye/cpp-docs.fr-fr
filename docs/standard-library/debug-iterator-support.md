@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0c2f0153d216292169b72e3e75d5d40fb5f35cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea016877744bed8e91f8e7144560969b2dbca745
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 La bibliothèque Runtime Visual C++ détecte l’utilisation d’itérateurs incorrects, et effectue une assertion et affiche une boîte de dialogue au moment de l’exécution. Pour activer la prise en charge des itérateurs de débogage, vous devez utiliser les versions Debug de la bibliothèque C++ Standard et de la bibliothèque Runtime C pour compiler votre programme. Pour plus d’informations, consultez [Fonctionnalités de la bibliothèque CRT](../c-runtime-library/crt-library-features.md). Pour plus d’informations sur l’utilisation d’itérateurs vérifiés, consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md).  
@@ -196,7 +197,7 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Vue d’ensemble de la bibliothèque C++ Standard](../standard-library/cpp-standard-library-overview.md)
+[Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)
 
 
 

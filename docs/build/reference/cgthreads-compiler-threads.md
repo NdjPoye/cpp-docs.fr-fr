@@ -1,60 +1,61 @@
 ---
-title: "/CGTHREADS (threads du compilateur) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/CGTHREADS (option de l'éditeur de liens)"
-  - "CGTHREADS (option de l'éditeur de liens)"
-  - "-CGTHREADS (option de l'éditeur de liens)"
+title: -CGTHREADS (Threads du compilateur) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- /CGTHREADS linker option
+- -CGTHREADS linker option
+- CGTHREADS linker option
 ms.assetid: 4b52cfdb-3702-470b-9580-fabeb1417488
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 542e35ecbb5e56ae0d13861b9885936f3b47c9da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# /CGTHREADS (threads du compilateur)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cgthreads-compiler-threads"></a>/CGTHREADS (threads du compilateur)
 Définit le nombre de threads de cl.exe à utiliser pour l'optimisation et la génération de code quand la génération de code durant l'édition de liens est spécifiée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 /CGTHREADS:[1-8]  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>Arguments  
  nombre  
  Nombre maximal de threads utilisables par cl.exe, dans la plage de 1 à 8.  
   
-## Notes  
- L'option **\/CGTHREADS** spécifie le nombre maximal de threads que cl.exe utilise en parallèle pour les phases d'optimisation et de génération de code de la compilation, quand la génération de code durant l'édition de liens \([\/LTCG](../../build/reference/ltcg-link-time-code-generation.md)\) est spécifiée.  Par défaut, cl.exe utilise quatre threads, comme si **\/CGTHREADS:4** était spécifié.  Si un plus grand nombre de cœurs de processeur sont disponibles, une valeur `number` plus élevée peut améliorer les durées de génération.  
+## <a name="remarks"></a>Notes  
+ Le **/CGTHREADS** option spécifie le nombre maximal de threads que cl.exe utilise en parallèle pour les phases de l’optimisation et la génération de code de compilation, quand le moment de la liaison de génération de code ([LTCG](../../build/reference/ltcg-link-time-code-generation.md)) est spécifié. Par défaut, cl.exe utilise quatre threads, comme si **/CGTHREADS:4** ont été spécifiés. Si un plus grand nombre de cœurs de processeur sont disponibles, une valeur `number` plus élevée peut améliorer les durées de génération.  
   
- Vous pouvez spécifier plusieurs niveaux de parallélisme pour une build.  Le commutateur **\/maxcpucount** de msbuild.exe spécifie le nombre de processus MSBuild qui peuvent être exécutés en parallèle.  L'indicateur du compilateur [\/MP \(Générer avec plusieurs processus\)](../../build/reference/mp-build-with-multiple-processes.md) spécifie le nombre de processus cl.exe qui compilent simultanément les fichiers sources.  L'option de compilateur [\/cgthreads](../../build/reference/cgthreads-code-generation-threads.md) spécifie le nombre de threads utilisés par chaque processus cl.exe.  Le processeur ne pouvant pas exécuter simultanément plus de threads qu'il n'y a de cœurs de processeur, il est inutile de spécifier simultanément des valeurs plus élevées pour toutes ces options et cela peut même être contre\-productif.  Pour plus d'informations sur la création de projets en parallèle, consultez [Building Multiple Projects in Parallel](../Topic/Building%20Multiple%20Projects%20in%20Parallel%20with%20MSBuild.md).  
+ Vous pouvez spécifier plusieurs niveaux de parallélisme pour une build. Le commutateur de msbuild.exe **/maxcpucount** Spécifie le nombre de processus MSBuild qui peuvent être exécutés en parallèle. Le [/MP (générer avec plusieurs processus)](../../build/reference/mp-build-with-multiple-processes.md) indicateur de compilateur spécifie le nombre de processus cl.exe qui compilent les fichiers sources simultanément. Le [/cgthreads](../../build/reference/cgthreads-code-generation-threads.md) option du compilateur spécifie le nombre de threads utilisés par chaque processus cl.exe. Le processeur ne pouvant pas exécuter simultanément plus de threads qu'il n'y a de cœurs de processeur, il est inutile de spécifier simultanément des valeurs plus élevées pour toutes ces options et cela peut même être contre-productif. Pour plus d’informations sur la façon de créer des projets en parallèle, consultez [génération parallèle de plusieurs projets](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild).  
   
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, voir [Utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   
-2.  Sélectionnez le dossier **Propriétés de configuration**, **Éditeur de liens**.  
+2.  Sélectionnez le **propriétés de Configuration**, **l’éditeur de liens** dossier.  
   
-3.  Sélectionnez la page de propriétés **Ligne de commande**.  
+3.  Sélectionnez le **ligne de commande** page de propriétés.  
   
-4.  Modifiez la propriété **Options supplémentaires** pour inclure **\/CGTHREADS:**`number`, où `number` est une valeur comprise entre 1 et 8, puis choisissez **OK**.  
+4.  Modifier la **des Options supplémentaires** propriété à inclure **/CGTHREADS :**`number`, où `number` est une valeur comprise entre 1 et 8, puis choisissez **OK**.  
   
-### Pour définir cette option de l'éditeur de liens par programmation  
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   
 -   Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## Voir aussi  
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)   
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)   
+ [Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)

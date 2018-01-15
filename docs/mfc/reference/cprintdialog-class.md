@@ -51,11 +51,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b1994cfe1380e6ca0f010ac89ae6bb1b04f966ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 653cdc4580862288d98600603c1b45526ea38675
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cprintdialog-class"></a>Classe de CPrintDialog
 Encapsule les services fournis par la boîte de dialogue courante d'impression Windows.  
@@ -100,7 +101,7 @@ class CPrintDialog : public CCommonDialog
 |----------|-----------------|  
 |[CPrintDialog::m_pd](#m_pd)|Une structure utilisée pour personnaliser un `CPrintDialog` objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Boîtes de dialogue d’impression communes fournissent un moyen simple pour implémenter des boîtes de dialogue d’impression et de configuration de l’impression de manière cohérente avec les normes de Windows.  
   
 > [!NOTE]
@@ -145,7 +146,7 @@ class CPrintDialog : public CCommonDialog
   
  `CPrintDialog`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdlgs.h  
   
 ##  <a name="cprintdialog"></a>CPrintDialog::CPrintDialog  
@@ -168,7 +169,7 @@ CPrintDialog(
  `pParentWnd`  
  Pointeur vers la fenêtre parente ou propriétaire de la boîte de dialogue.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre construit uniquement l’objet. Utilisez le `DoModal` fonction membre pour afficher la boîte de dialogue.  
   
  Notez que lorsque vous appelez le constructeur avec `bPrintSetupOnly` la valeur **FALSE**, le **PD_RETURNDC** indicateur est automatiquement utilisé. Après avoir appelé `DoModal`, `GetDefaults`, ou `GetPrinterDC`, une contrôleur de domaine de l’imprimante sera retournée dans `m_pd.hDC`. Ce contrôleur de domaine doit être libérée avec un appel à [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) par l’appelant de `CPrintDialog`.  
@@ -186,7 +187,7 @@ HDC CreatePrinterDC();
 ### <a name="return-value"></a>Valeur de retour  
  Handle vers le contexte de l’imprimante qui vient d’être créé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ce contrôleur de domaine est supposé que le périphérique d’impression en cours et n’importe quel autre obtenu précédemment imprimante que contrôleurs de domaine doivent être supprimées par l’utilisateur. Cette fonction peut être appelée et le contrôleur de domaine qui en résulte est utilisé, sans jamais afficher la boîte de dialogue Imprimer.  
   
 ### <a name="example"></a>Exemple  
@@ -204,7 +205,7 @@ virtual INT_PTR DoModal();
   
  **IDOK** et **IDCANCEL** sont des constantes qui indiquent si l’utilisateur a sélectionné le bouton OK ou sur Annuler.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si vous souhaitez initialiser les différentes options de la boîte de dialogue d’impression en définissant les membres de la `m_pd` structure, vous devez le faire avant d’appeler `DoModal`, mais une fois que l’objet de la boîte de dialogue est construit.  
   
  Après avoir appelé `DoModal`, vous pouvez appeler des fonctions pour récupérer les paramètres ou les informations saisies par l’utilisateur dans la boîte de dialogue autres membres.  
@@ -224,7 +225,7 @@ int GetCopies() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de copies demandé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction après l’appel `DoModal` pour récupérer le nombre de copies demandé.  
   
 ### <a name="example"></a>Exemple  
@@ -240,7 +241,7 @@ BOOL GetDefaults();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la fonction a réussi ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les valeurs extraites sont placées dans le `m_pd` structure.  
   
  Dans certains cas, un appel à cette fonction appelle le [constructeur](#cprintdialog) pour `CPrintDialog` avec `bPrintSetupOnly` la valeur **FALSE**. Dans ce cas, un contrôleur de domaine de l’imprimante et **hDevNames** et **hDevMode** (deux poignées se trouve dans le `m_pd` membre de données) sont automatiquement alloués.  
@@ -262,7 +263,7 @@ CString GetDeviceName() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nom de l’imprimante actuellement sélectionnée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction après avoir appelé [DoModal](#domodal) pour récupérer le nom de l’imprimante actuellement sélectionnée, ou après l’appel [GetDefaults](#getdefaults) pour récupérer les valeurs par défaut de périphérique en cours de l’imprimante par défaut. Utilisez un pointeur vers le `CString` objet retourné par `GetDeviceName` comme valeur de `lpszDeviceName` dans un appel à [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
   
 ### <a name="example"></a>Exemple  
@@ -280,7 +281,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) structure de données qui contient des informations sur l’environnement d’un pilote d’impression et de l’initialisation des périphériques. Vous devez déverrouiller la mémoire consommée par cette structure avec Windows [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) (fonction), qui est décrit dans le SDK Windows.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction après avoir appelé [DoModal](#domodal) ou [GetDefaults](#getdefaults) pour récupérer des informations sur le périphérique d’impression.  
   
 ### <a name="example"></a>Exemple  
@@ -296,7 +297,7 @@ CString GetDriverName() const;
 ### <a name="return-value"></a>Valeur de retour  
  A `CString` en spécifiant le nom du pilote de définies par le système.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction après avoir appelé [DoModal](#domodal) ou [GetDefaults](#getdefaults) pour récupérer le nom du pilote de périphérique d’imprimante de définies par le système. Utilisez un pointeur vers le `CString` objet retourné par `GetDriverName` comme valeur de `lpszDriverName` dans un appel à [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
   
 ### <a name="example"></a>Exemple  
@@ -312,7 +313,7 @@ int GetFromPage() const;
 ### <a name="return-value"></a>Valeur de retour  
  Numéro de page de départ de la plage de pages à imprimer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction après l’appel `DoModal` pour récupérer le numéro de page départ dans la plage de pages à imprimer.  
   
 ### <a name="example"></a>Exemple  
@@ -328,7 +329,7 @@ CString GetPortName() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nom du port imprimante actuellement sélectionnée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction après avoir appelé [DoModal](#domodal) ou [GetDefaults](#getdefaults) pour récupérer le nom du port imprimante actuellement sélectionnée.  
   
 ### <a name="example"></a>Exemple  
@@ -344,7 +345,7 @@ HDC GetPrinterDC() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un handle vers le contexte de l’imprimante en cas de réussite ; dans le cas contraire **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si le `bPrintSetupOnly` paramètre de la `CPrintDialog` constructeur était **FALSE** (ce qui indique que la boîte de dialogue Imprimer s’affiche), puis `GetPrinterDC` retourne un handle vers le contexte de périphérique d’imprimante. Vous devez appeler les fenêtres [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) afin de supprimer le contexte de périphérique lorsque vous avez terminé de l’utiliser.  
   
 ### <a name="example"></a>Exemple  
@@ -360,7 +361,7 @@ int GetToPage() const;
 ### <a name="return-value"></a>Valeur de retour  
  Numéro de page de fin de la plage de pages à imprimer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction après l’appel `DoModal` pour récupérer le numéro de page Fin de la plage de pages à imprimer.  
   
 ### <a name="example"></a>Exemple  
@@ -373,7 +374,7 @@ int GetToPage() const;
 PRINTDLG& m_pd;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Après avoir construit un `CPrintDialog` de l’objet, vous pouvez utiliser `m_pd` pour définir les divers aspects de la boîte de dialogue avant d’appeler le [DoModal](#domodal) fonction membre. Pour plus d’informations sur la `m_pd` de la structure, consultez [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) dans le Kit de développement logiciel Windows.  
   
  Si vous modifiez le `m_pd` membre de données directement, remplace un comportement par défaut.  
@@ -391,7 +392,7 @@ BOOL PrintAll() const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si toutes les pages dans le document doivent être affichés ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction après l’appel `DoModal` pour déterminer s’il faut imprimer toutes les pages dans le document.  
   
 ### <a name="example"></a>Exemple  
@@ -407,7 +408,7 @@ BOOL PrintCollate() const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’utilisateur sélectionne la case à cocher dans la boîte de dialogue Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction après l’appel `DoModal` pour déterminer si l’imprimante doit collate imprimées toutes les copies du document.  
   
 ### <a name="example"></a>Exemple  
@@ -423,7 +424,7 @@ BOOL PrintRange() const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si seules une plage de pages dans le document doivent être imprimées ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction après l’appel `DoModal` pour déterminer s’il faut imprimer uniquement une plage de pages dans le document.  
   
 ### <a name="example"></a>Exemple  
@@ -439,7 +440,7 @@ BOOL PrintSelection() const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si seuls les éléments sélectionnés doivent être affichés ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction après l’appel `DoModal` pour déterminer s’il faut imprimer uniquement les éléments actuellement sélectionnés.  
   
 ### <a name="example"></a>Exemple  

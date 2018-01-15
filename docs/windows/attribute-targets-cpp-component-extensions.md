@@ -1,35 +1,36 @@
 ---
-title: "Cibles d’attribut (extensions du composant C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributs personnalisés, les cibles"
+title: Attribut cible (Extensions du composant C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bdf54706673a3679582b93448f420d4a63680dee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Cibles d’attribut (extensions du composant C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Spécificateurs de l’utilisation d’attributs vous permettent de spécifier les cibles d’attribut.  Chaque attribut est défini pour l’appliquer à certains éléments de langage. Par exemple, un attribut peut être défini pour s’appliquent uniquement aux classes et structures.  La liste suivante présente les éléments syntaxiques possibles sur lequel un attribut personnalisé peut être utilisé. Combinaisons de ces valeurs (à l’aide de la logique ou) peut être utilisé.  
+# <a name="attribute-targets-c-component-extensions"></a>Cibles d’attribut (extensions du composant C++)
+Spécificateurs de l’utilisation d’attributs vous permettent de spécifier les cibles d’attribut.  Chaque attribut est défini pour s’appliquer à certains éléments de langage. Par exemple, un attribut peut être défini pour s’appliquent uniquement aux classes et structs.  La liste suivante montre les éléments syntaxiques possibles sur lequel un attribut personnalisé peut être utilisé. Combinaisons de ces valeurs (à l’aide de la logique ou) peut être utilisé.  
   
- Pour spécifier l’attribut cible, pour passer un ou plusieurs <xref:System.AttributeTargets> énumérateurs à <xref:System.AttributeUsageAttribute> lors de la définition de l’attribut.  
+ Pour spécifier la cible d’attribut, pour passer un ou plusieurs <xref:System.AttributeTargets> les énumérateurs pour <xref:System.AttributeUsageAttribute> lors de la définition de l’attribut.  
   
  Voici une liste des cibles d’attribut valide :  
   
--   `All` (s’applique à toutes les constructions)  
+-   `All`(s’applique à toutes les constructions)  
   
     ```  
   
@@ -41,7 +42,7 @@ Spécificateurs de l’utilisation d’attributs vous permettent de spécifier l
   
     ```  
   
--   `Assembly` (s’applique à un assembly dans son ensemble)  
+-   `Assembly`(s’applique à un assembly dans son ensemble)  
   
     ```  
   
@@ -53,7 +54,7 @@ Spécificateurs de l’utilisation d’attributs vous permettent de spécifier l
   
     ```  
   
--   `Module` (s’applique à un module dans son ensemble)  
+-   `Module`(s’applique à un module dans son ensemble)  
   
     ```  
   
@@ -232,19 +233,19 @@ Spécificateurs de l’utilisation d’attributs vous permettent de spécifier l
   
     ```  
   
- En règle générale, un attribut précède directement l’élément de langage auquel il s’applique. Toutefois, dans certains cas, la position d’un attribut n’est pas suffisante pour déterminer la cible de l’attribut. Considérez cet exemple :  
+ En règle générale, un attribut précède directement l’élément de langage auquel elle s’applique. Toutefois, dans certains cas, la position d’un attribut n’est pas suffisante pour déterminer la destination de l’attribut. Considérez cet exemple :  
   
 ```  
 [Attr] int MyFn(double x)...  
 ```  
   
- Point de vue syntaxique, il n’existe aucun moyen de déterminer si l’attribut est destiné à appliquer à la méthode ou à la valeur de retour (dans ce cas, les valeurs par défaut à la méthode). Dans ce cas, un spécificateur d’utilisation de l’attribut peut être utilisé. Par exemple, pour appliquer l’attribut à la valeur de retour, utilisez le `returnvalue` spécificateur, comme suit :  
+ Point de vue syntaxique, il n’existe aucun moyen de savoir si l’attribut est destiné à appliquer à la méthode ou à la valeur de retour (dans ce cas, la valeur par défaut à la méthode). Dans ce cas, un spécificateur d’attribut d’utilisation peut être utilisé. Par exemple, pour appliquer l’attribut à la valeur de retour, utilisez le `returnvalue` spécificateur, comme suit :  
   
 ```  
 [returnvalue:Attr] int MyFn(double x)... // applies to return value  
 ```  
   
- Spécificateurs de l’utilisation d’attributs sont requis dans les situations suivantes :  
+ Spécificateurs de l’utilisation d’attribut sont requis dans les situations suivantes :  
   
 -   Pour spécifier un attribut de niveau assembly ou module.  
   
@@ -264,7 +265,7 @@ Spécificateurs de l’utilisation d’attributs vous permettent de spécifier l
     [MyAttr(123)] property int get_MyPropy() // default: property  
     ```  
   
--   Pour spécifier qu’un attribut s’applique à l’accesseur d’un événement, pas l’événement :  
+-   Pour spécifier qu’un attribut s’applique à accesseur d’un événement, pas l’événement :  
   
     ```  
     delegate void MyDel();  
@@ -275,7 +276,7 @@ Spécificateurs de l’utilisation d’attributs vous permettent de spécifier l
     }  
     ```  
   
- Un spécificateur d’utilisation de l’attribut s’applique uniquement à l’attribut qui suit immédiatement. C'est  
+ Un spécificateur d’utilisation de l’attribut s’applique uniquement à l’attribut qui suit immédiatement C'est  
   
 ```  
 [returnvalue:Attr1, Attr2]  

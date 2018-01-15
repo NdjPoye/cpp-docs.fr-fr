@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 30ced1bc649a8a6caed1cef4c77967abdd1e1868
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f89f247a726dd41eaba92e947002d7a28366edd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ompinitlock"></a>omp_init_lock
 Initialise un verrou simple.  
@@ -36,7 +37,7 @@ void omp_init_lock(
  `lock`  
  Une variable de type [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [3.2.1 fonctions omp_init_lock and omp_init_nest_lock fonctions](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
   
 ## <a name="example"></a>Exemple  

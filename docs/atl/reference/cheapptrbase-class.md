@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a9b99d487b75c0d51b9d526e848e823af787cc9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59520211ae577c4ca4358874ef1d8ff71de59921
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cheapptrbase-class"></a>Classe de CHeapPtrBase
 Cette classe constitue la base pour plusieurs classes de pointeur de segment de mémoire actives.  
@@ -82,10 +83,10 @@ class CHeapPtrBase
 |----------|-----------------|  
 |[CHeapPtrBase::m_pData](#m_pdata)|La variable de membre de données de pointeur.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe constitue la base pour plusieurs classes de pointeur de segment de mémoire actives. Les classes dérivées, par exemple, [CHeapPtr](../../atl/reference/cheapptr-class.md) et [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), ajouter leurs propres constructeurs et des opérateurs. Consultez ces classes pour les exemples d’implémentation.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcore.h  
   
 ##  <a name="allocatebytes"></a>CHeapPtrBase::AllocateBytes  
@@ -102,7 +103,7 @@ bool AllocateBytes(size_t nBytes) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true si la mémoire est correctement alloué, false dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans les versions debug, un échec d’assertion se produit si le [CHeapPtrBase::m_pData](#m_pdata) variable membre pointe actuellement à une valeur existante ; autrement dit, il n’est pas égal à NULL.  
   
 ##  <a name="attach"></a>CHeapPtrBase::Attach  
@@ -116,7 +117,7 @@ void Attach(T* pData) throw();
  `pData`  
  Le `CHeapPtrBase` objet prendra possession de ce pointeur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsqu’un `CHeapPtrBase` objet prend possession du pointeur, il la supprime automatiquement le pointeur et les données allouées lorsqu’il devient hors de portée.  
   
  Dans les versions debug, un échec d’assertion se produit si le [CHeapPtrBase::m_pData](#m_pdata) variable membre pointe actuellement à une valeur existante ; autrement dit, il n’est pas égal à NULL.  
@@ -128,7 +129,7 @@ void Attach(T* pData) throw();
 ~CHeapPtrBase() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère toutes les ressources attribuées.  
   
 ##  <a name="detach"></a>CHeapPtrBase::Detach  
@@ -141,7 +142,7 @@ T* Detach() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une copie du pointeur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère la propriété d’un pointeur, définit le [CHeapPtrBase::m_pData](#m_pdata) variable membre avec la valeur NULL et retourne une copie du pointeur.  
   
 ##  <a name="free"></a>CHeapPtrBase::Free  
@@ -151,7 +152,7 @@ T* Detach() throw();
 void Free() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’objet vers lequel pointe le `CHeapPtrBase` est libéré et la [CHeapPtrBase::m_pData](#m_pdata) variable membre a la valeur NULL.  
   
 ##  <a name="m_pdata"></a>CHeapPtrBase::m_pData  
@@ -161,7 +162,7 @@ void Free() throw();
 T* m_pData;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette variable membre conserve les informations de pointeur.  
   
 ##  <a name="operator_amp"></a>CHeapPtrBase::operator&amp;  
@@ -186,7 +187,7 @@ T* operator->() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de la [CHeapPtrBase::m_pData](#m_pdata) variable membre.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cet opérateur pour appeler une méthode dans une classe vers laquelle pointée le `CHeapPtrBase` objet. Dans les versions debug, un échec d’assertion se produit si le `CHeapPtrBase` pointe sur la valeur NULL.  
   
 ##  <a name="operator_t_star"></a>CHeapPtrBase::operator T *  
@@ -196,7 +197,7 @@ T* operator->() const throw();
 operator T*() const throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Retourne [CHeapPtrBase::m_pData](#m_pdata).  
   
 ##  <a name="reallocatebytes"></a>CHeapPtrBase::ReallocateBytes  

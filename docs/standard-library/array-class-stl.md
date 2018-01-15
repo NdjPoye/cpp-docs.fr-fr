@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -41,37 +40,7 @@ f1_keywords:
 - array/std::array::swap
 - array/std::array::operator=
 - array/std::array::operator[]
-- array/std::array::const_iterator
-- array/std::array::const_pointer
-- array/std::array::const_reference
-- array/std::array::const_reverse_iterator
-- array/std::array::difference_type
-- array/std::array::iterator
-- array/std::array::pointer
-- array/std::array::reference
-- array/std::array::reverse_iterator
-- array/std::array::size_type
-- array/std::array::value_type
-- array/std::array::assign
-- array/std::array::at
-- array/std::array::back
-- array/std::array::begin
-- array/std::array::cbegin
-- array/std::array::cend
-- array/std::array::crbegin
-- array/std::array::crend
-- array/std::array::data
-- array/std::array::empty
-- array/std::array::end
-- array/std::array::fill
-- array/std::array::front
-- array/std::array::max_size
-- array/std::array::rbegin
-- array/std::array::rend
-- array/std::array::size
-- array/std::array::swap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::array [C++]
 - std::array [C++], const_iterator
@@ -134,16 +103,16 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 864e155bf921bb273ad0e7eb9d2e014c01760543
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e5829e7b241fc4669e67f9200f2f3f0b2cf9f2c8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-class-c-standard-library"></a>array, classe (Bibliothèque C++ standard)
 Décrit un objet qui contrôle une séquence de longueur `N` constituée d'éléments de type `Ty`. La séquence est stockée comme tableau de `Ty`, contenu dans l'objet `array<Ty, N>`.  
@@ -218,7 +187,7 @@ array<int, 4> ai = { 1, 2, 3 };
   
  crée l'objet `ai` qui contient quatre valeurs entières, initialise les trois premiers éléments respectivement aux valeurs 1, 2 et 3, et initialise le quatrième élément à la valeur 0.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<array>  
   
  **Espace de noms :** std  
@@ -478,7 +447,7 @@ const_iterator cbegin() const noexcept;
 ### <a name="remarks"></a>Notes  
  Avec la valeur de retour `cbegin`, les éléments de la plage ne peuvent pas être modifiés.  
   
- Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, il est supposé que `Container` est un conteneur modifiable (non-`const`) de tout type, prenant en charge `begin()` et `cbegin()`.  
+ Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, `Container` est supposé être un conteneur modifiable (autre que `const`) de type indéfini prenant en charge `begin()` et `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -1677,5 +1646,4 @@ int main()
   
 ## <a name="see-also"></a>Voir aussi  
  [\<array>](../standard-library/array.md)
-
 

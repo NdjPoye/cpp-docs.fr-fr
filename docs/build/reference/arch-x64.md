@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 49da6dca3325836b10bf5e5848811be31ca60cca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 27a453601988c22ed03ae9cb267480d88d6a1cc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arch-x64"></a>/arch (x64)
 Spécifie l'architecture pour la génération de code sur x64. Consultez également [/arch (x86)](../../build/reference/arch-x86.md) et [/arch (ARM)](../../build/reference/arch-arm.md).  
@@ -35,7 +36,7 @@ Spécifie l'architecture pour la génération de code sur x64. Consultez égalem
  **/ arch : avx2**  
  Active l’utilisation des instructions Intel Advanced Vector Extensions 2.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **/ arch** uniquement affecte génération de code pour les fonctions natives. Lorsque vous utilisez [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) à compiler, **/arch** n’a aucun effet sur la génération du code pour les fonctions managées.  
   
  Le `__AVX__` symbole de préprocesseur est défini lorsque la **/arch : AVX** option du compilateur est spécifiée. Le `__AVX2__` symbole de préprocesseur est défini lorsque la **/arch : avx2** option du compilateur est spécifiée. Pour plus d'informations, consultez [Predefined Macros](../../preprocessor/predefined-macros.md). Le **/arch : avx2** option a été introduite dans Visual Studio 2013 Update 2, version 12.0.34567.1.  

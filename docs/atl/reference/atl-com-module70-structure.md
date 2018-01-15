@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a269820c5a0965553989bc57d7c239aa95e527ef
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f5d1e1d2716c5ab97c2b805a943ffe4587341dc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atlcommodule70-structure"></a>Structure de _ATL_COM_MODULE70
 Utilisé par le code relatif à COM dans ATL.  
@@ -57,10 +58,10 @@ struct _ATL_COM_MODULE70 {
  `m_csObjMap`  
  Section critique pour sérialiser l’accès pour les entrées de mappage d’objet. Utilisé en interne par ATL.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) est défini comme un typedef de `_ATL_COM_MODULE70`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,39 +1,42 @@
 ---
-title: "Attribute Requirements | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: "Configuration requise d’attribut | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
 ms.assetid: e42ca06f-5f3c-40b5-972a-39ecf522d227
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 99a4df4c92fca7ff55c5bf800938554052122c9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Attribute Requirements
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les spécifications répertoriées pour les attributs C\+\+ décrivent les types de projet, les paramètres de compilateur, et d'autres informations nécessaires pour qu'un attribut fonctionne.  les catégories des informations sont décrites ci\-dessous.  
+# <a name="attribute-requirements"></a>Exigences des attributs
+La configuration requise pour les attributs C++ décrire les types de projet, les paramètres de compilateur et les autres informations nécessaires pour un attribut à utiliser. Les catégories d’informations sont décrits ci-dessous.  
   
 > [!NOTE]
->  Utilisation des attributs d'une classe qui dérive d'une classe qui utilise également des attributs n'est pas pris en charge.  
+>  L’utilisation d’attributs sur une classe qui dérive d’une classe qui utilise des attributs n’est pas pris en charge.  
   
-## Header  
- Ce listes de champs les fichiers d'en\-tête qui doivent être inclus avant qu'un attribut ne soit utilisé.  
+## <a name="header"></a>Header  
+ Ce champ affiche les fichiers d’en-tête qui doivent être inclus avant un attribut peut être utilisé.  
   
-## Projet  
- Ce champ décrit les types qu'un attribut peut être utilisé.  
+## <a name="project"></a>Projet  
+ Ce champ décrit les types de projets dans lesquels un attribut peut être utilisé.  
   
-## Compilateur  
- Ce champ fournit les options du compilateur qui doivent être présentes pour que cet attribut est utilisée.  
+## <a name="compiler"></a>Compilateur  
+ Ce champ fournit les options du compilateur qui doivent être présentes pour cet attribut à utiliser.  
   
-## Voir aussi  
- [Attribute Contexts](../windows/attribute-contexts.md)   
- [Attributes by Group](../windows/attributes-by-group.md)
+## <a name="see-also"></a>Voir aussi  
+ [Contextes d’attribut](../windows/attribute-contexts.md)   
+ [Attributs par groupe](../windows/attributes-by-group.md)

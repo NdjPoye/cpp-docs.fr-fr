@@ -22,11 +22,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b70a8e3d644389bcfb21b276c5a3bcfad84891a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 111fb83ed0eaae936dfa38d7047b2a0c2fb2443b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="snap-in-object-macros"></a>Macros de l’objet du composant logiciel enfichable
 Ces macros fournissent la prise en charge pour les extensions du composant logiciel enfichable.  
@@ -42,7 +43,7 @@ Ces macros fournissent la prise en charge pour les extensions du composant logic
 |[SNAPINMENUID](#snapinmenuid)|Déclare l’ID du menu contextuel utilisé par l’objet.|  
 |[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Insère une barre d’outils dans le mappage de la barre d’outils de l’objet du composant logiciel enfichable.|  
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsnap.h 
    
 ##  <a name="begin_extension_snapin_nodeinfo_map"></a>BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP  
@@ -56,7 +57,7 @@ BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
  *classname*  
  [in] Le nom de la classe de données d’extension du composant logiciel enfichable.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Démarrer votre mappage d’extension du composant logiciel enfichable avec la `BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP` (macro), ajouter des entrées pour chacun de vos types de données d’extension du composant logiciel enfichable avec la [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) (macro) et effectuer un mappage avec le [END_ EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) (macro).  
   
 ### <a name="example"></a>Exemple  
@@ -83,7 +84,7 @@ BEGIN_SNAPINTOOLBARID_MAP(_class)
 END_EXTENSION_SNAPIN_NODEINFO_MAP()
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Démarrez votre mappage d’extension du composant logiciel enfichable avec la [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) (macro), ajouter des entrées pour chacun de vos types de données du composant logiciel enfichable d’extension avec la [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) (macro), effectuez le mappage avec le `END_EXTENSION_SNAPIN_NODEINFO_MAP` (macro).  
   
 ### <a name="example"></a>Exemple  
@@ -114,7 +115,7 @@ EXTENSION_SNAPIN_DATACLASS(dataClass )
  `dataClass`  
  [in] La classe de données de l’extension composant logiciel enfichable.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette classe doit également être consignée dans un mappage de classe de données de composant logiciel enfichable extension. Démarrez votre mappage de classe de données de composant logiciel enfichable extension avec le [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) (macro), ajouter des entrées pour chacun de vos types de données d’extension du composant logiciel enfichable avec la [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)(macro) et effectuer un mappage avec le [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) (macro).  
   
 ### <a name="example"></a>Exemple  
@@ -131,7 +132,7 @@ EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
  `dataClass`  
  [in] La classe de données de l’extension composant logiciel enfichable.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Démarrer votre mappage de classe de données de composant logiciel enfichable extension avec le [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) (macro), ajouter des entrées pour chacun de vos types de données d’extension du composant logiciel enfichable avec la `EXTENSION_SNAPIN_NODEINFO_ENTRY` (macro) et effectuer un mappage avec le [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) (macro).  
   
 ### <a name="example"></a>Exemple  
@@ -159,7 +160,7 @@ SNAPINTOOLBARID_ENTRY( id )
  `id`  
  [in] Identifie le contrôle de barre d’outils.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map) macro marque le début de la carte d’ID de barre d’outils ; le [END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map) macro marque la fin.  
   
 ### <a name="example"></a>Exemple  

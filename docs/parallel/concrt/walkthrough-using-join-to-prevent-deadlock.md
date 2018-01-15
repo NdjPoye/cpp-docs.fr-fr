@@ -1,155 +1,159 @@
 ---
-title: "Proc&#233;dure pas &#224; pas&#160;: utilisation de la classe join pour emp&#234;cher l’interblocage | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empêcher l’interblocage avec des jointures [Runtime d’accès concurrentiel]"
-  - "interblocage, empêcher [Runtime d’accès concurrentiel]"
-  - "jointures non gourmandes, exemple"
-  - "join, classe, exemple"
+title: "Procédure pas à pas : Utilisation join pour empêcher l’interblocage | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- preventing deadlock with joins [Concurrency Runtime]
+- deadlock, preventing [Concurrency Runtime]
+- non-greedy joins, example
+- join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 894ff7da95f09b1aedaa8fd9d1d9b44f77017a8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Proc&#233;dure pas &#224; pas&#160;: utilisation de la classe join pour emp&#234;cher l’interblocage
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cette rubrique utilise le problème du dîner de philosophes pour illustrer comment utiliser la classe [concurrency::join](../../parallel/concrt/reference/join-class.md) pour empêcher tout interblocage dans votre application.  Dans une application, l'*interblocage* se produit lorsque plusieurs processus détiennent chacun une ressource et attendent mutuellement qu'un autre processus libère une autre ressource.  
+# <a name="walkthrough-using-join-to-prevent-deadlock"></a>Procédure pas à pas : utilisation de la classe join pour empêcher l’interblocage
+Cette rubrique utilise le problème du dîner des philosophes pour illustrer comment utiliser la [concurrency::join](../../parallel/concrt/reference/join-class.md) classe pour empêcher tout interblocage dans votre application. Dans une application, *blocage* se produit lorsque deux ou plusieurs processus détiennent chacun une ressource et attendent mutuellement qu’un autre processus libère une autre ressource.  
   
- Le problème du dîner de philosophes est un exemple spécifique de l'ensemble général de problèmes qui peuvent se produire lorsqu'un jeu de ressources est partagé par plusieurs processus simultanés.  
+ Problème dîner des philosophes est un exemple spécifique de l’ensemble général de problèmes qui peuvent se produire lorsqu’un ensemble de ressources est partagé par plusieurs processus simultanés.  
   
-## Composants requis  
- Lisez les rubriques suivantes avant de démarrer cette procédure pas\-à\-pas :  
+## <a name="prerequisites"></a>Prérequis  
+ Lisez les rubriques suivantes avant de commencer cette procédure pas à pas :  
   
--   [Agents asynchrones](../../parallel/concrt/asynchronous-agents.md)  
+- [Agents asynchrones](../../parallel/concrt/asynchronous-agents.md)  
   
--   [Procédure pas à pas : création d’une application basée sur un agent](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)  
+- [Procédure pas à pas : création d’une application basée sur un agent](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)  
   
--   [Blocs de messages asynchrones](../../parallel/concrt/asynchronous-message-blocks.md)  
+- [Blocs de messages asynchrones](../../parallel/concrt/asynchronous-message-blocks.md)  
   
--   [Fonctions de passage de messages](../../parallel/concrt/message-passing-functions.md)  
+- [Fonctions de passage de messages](../../parallel/concrt/message-passing-functions.md)  
   
--   [Structures de données de synchronisation](../../parallel/concrt/synchronization-data-structures.md)  
+- [Structures de données de synchronisation](../../parallel/concrt/synchronization-data-structures.md)  
   
 ##  <a name="top"></a> Sections  
- Cette procédure pas\-à\-pas contient les sections suivantes :  
+ Cette procédure pas à pas contient les sections suivantes :  
   
--   [Le problème du dîner de philosophes](#problem)  
+- [Problème dîner des philosophes](#problem)  
   
--   [Une implémentation naïve](#deadlock)  
+- [Une implémentation Naïve](#deadlock)  
   
--   [Utilisation de la jointure pour empêcher l'interblocage](#solution)  
+- [À l’aide de la classe join pour empêcher l’interblocage](#solution)  
   
-##  <a name="problem"></a> Le problème du dîner de philosophes  
- Le problème du dîner de philosophes illustre comment l'interblocage se produit dans une application.  Dans ce problème, cinq philosophes sont assis à une table ronde.  Chaque philosophe pense et mange de manière alternée.  Chaque philosophe doit partager une baguette avec son voisin de gauche et une autre baguette avec son voisin de droite.  Voici une illustration.  
+##  <a name="problem"></a>Problème dîner des philosophes  
+ Problème dîner des philosophes illustre la façon dont le blocage se produit dans une application. Dans ce problème, cinq philosophes sont assis à une table ronde. Chaque philosophe alterne entre pense et mange. Chaque philosophe doit partager une baguette avec son voisin de gauche et une autre baguette avec son voisin de droite. L’illustration suivante montre cette mise en page.  
   
- ![Problème Dîner des philosophes](../../parallel/concrt/media/dining_philosophersproblem.png "Dining\_PhilosophersProblem")  
+ ![Le problème du dîner des philosophes repas](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")  
   
- Pour manger, un philosophe doit tenir deux baguettes.  Si chaque philosophe tient une seule baguette et en attend une autre, aucun philosophe ne peut manger et tous meurent de faim.  
+ Pour manger, un philosophe doit tenir deux baguettes. Si chaque philosophe tient une seule baguette et est en attente d’un autre, puis aucun philosophe ne peut manger et tous les priver de temps processeur.  
   
- \[[Premières](#top)\]  
+ [[Haut](#top)]  
   
-##  <a name="deadlock"></a> Une implémentation naïve  
- L'exemple suivant illustre une implémentation naïve du problème du dîner de philosophes.  La classe `philosopher`, qui dérive de [concurrency::agent](../../parallel/concrt/reference/agent-class.md), permet à chaque philosophe d'agir indépendamment.  L'exemple utilise un tableau partagé d'objets [concurrency::critical\_section](../../parallel/concrt/reference/critical-section-class.md) pour accorder à chaque objet `philosopher` un accès exclusif à une paire de baguettes.  
+##  <a name="deadlock"></a>Une implémentation Naïve  
+ L’exemple suivant montre une implémentation naïve de problème dîner des philosophes. Le `philosopher` (classe), qui dérive de [concurrency::agent](../../parallel/concrt/reference/agent-class.md), permet à chaque philosophe d’agir indépendamment. L’exemple utilise un tableau partagé de [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) objets pour permettre à chaque `philosopher` un accès exclusif à une paire de baguettes de l’objet.  
   
- Pour comparer l'implémentation à l'illustration, la classe `philosopher` représente un philosophe.  Une variable `int` représente chaque baguette.  Les objets `critical_section` servent de supports sur lesquels reposent les baguettes.  La méthode `run` simule la vie du philosophe.  La méthode `think` simule l'acte de penser et la méthode `eat` simule l'acte de manger.  
+ Pour l’implémentation à l’illustration, le `philosopher` classe représente un philosophe. Une `int` variable représente chaque baguette. Le `critical_section` objets servent de supports sur lesquels reposent les baguettes. Le `run` méthode simule la vie du philosophe. Le `think` méthode simule l’acte de penser et `eat` méthode simule l’acte de manger.  
   
- Un objet `philosopher` verrouille les deux objets `critical_section` pour simuler la suppression des baguettes des supports avant d'appeler la méthode `eat`.  Après l'appel à `eat`, l'objet `philosopher` repose les baguettes sur les supports en replaçant les objets `critical_section` à l'état déverrouillé.  
+ A `philosopher` objet verrouille les deux `critical_section` objets afin de simuler la suppression des baguettes des supports avant les appels du `eat` (méthode). Après l’appel à `eat`, le `philosopher` objet retourne baguettes détenteurs en définissant le `critical_section` sauvegarder des objets à l’état déverrouillé.  
   
- La méthode `pickup_chopsticks` illustre où l'interblocage peut se produire.  Si chaque objet `philosopher` accède à l'un des verrous, aucun objet `philosopher` ne peut continuer car l'autre verrou est contrôlé par un autre objet `philosopher`.  
+ Le `pickup_chopsticks` méthode illustre où interblocage peut se produire. Si chaque `philosopher` objet parvient à accéder à un des verrous, puis non `philosopher` objet peut continuer, car l’autre verrou est contrôlé par un autre `philosopher` objet.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Description  
+### <a name="description"></a>Description  
   
-### Code  
- [!code-cpp[concrt-philosophers-deadlock#1](../../parallel/concrt/codesnippet/CPP/walkthrough-using-join-to-prevent-deadlock_1.cpp)]  
+### <a name="code"></a>Code  
+ [!code-cpp[concrt-philosophers-deadlock#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_1.cpp)]  
   
-## Compilation du code  
- Copiez l'exemple de code et collez\-le dans un projet Visual Studio , ou collez\-le dans un fichier nommé `philosophers-deadlock.cpp` puis exécutez la commande suivante dans une fenêtre d'invite de commandes Visual Studio.  
+## <a name="compiling-the-code"></a>Compilation du code  
+ Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `philosophers-deadlock.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.  
   
- **cl.exe \/EHsc philosophers\-deadlock.cpp**  
+ **CL.exe /EHsc philosophes-Deadlock.cpp**  
   
- \[[Premières](#top)\]  
+ [[Haut](#top)]  
   
-##  <a name="solution"></a> Utilisation de la jointure pour empêcher l'interblocage  
- Cette section indique comment utiliser des tampons de messages et des fonctions de passage de messages pour éliminer tout risque d'interblocage.  
+##  <a name="solution"></a>À l’aide de la classe join pour empêcher l’interblocage  
+ Cette section montre comment utiliser des mémoires tampons des messages et des fonctions de passage de messages pour éliminer le risque d’interblocage.  
   
- Pour comparer cet exemple au précédent, la classe `philosopher` remplace chaque objet `critical_section` à l'aide d'un objet [concurrency::unbounded\_buffer](../Topic/unbounded_buffer%20Class.md) et d'un objet `join`.  L'objet `join` fait office d'arbitre qui fournit les baguettes au philosophe.  
+ Pour lier cet exemple au précédent, la `philosopher` classe remplace chaque `critical_section` objet à l’aide un [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objet et un `join` objet. Le `join` objet fait Office d’arbitre qui fournit les baguettes au philosophe.  
   
- Cet exemple utilise la classe `unbounded_buffer` car quand une cible reçoit un message d'un objet `unbounded_buffer`, le message est supprimé de la file d'attente de messages.  Cela active un objet `unbounded_buffer` qui contient un message pour indiquer que la baguette est disponible.  Un objet `unbounded_buffer` qui ne contient aucun message indique que la baguette est utilisée.  
+ Cet exemple utilise le `unbounded_buffer` , car quand une cible reçoit un message à partir de la classe une `unbounded_buffer` de l’objet, le message est supprimé de la file d’attente. Cela permet une `unbounded_buffer` objet qui conserve un message pour indiquer que la baguette est disponible. Un `unbounded_buffer` objet qui ne conserve aucun message indique que la baguette est utilisée.  
   
- Cet exemple utilise un objet `join` non gourmand car une jointure non gourmande accorde à chaque objet `philosopher` un accès aux deux baguettes uniquement lorsque les deux objets `unbounded_buffer` contiennent un message.  Une jointure gourmande n'empêcherait pas l'interblocage car elle accepte les messages dès qu'ils sont disponibles.  L'interblocage peut se produire si tous les objets `join` gourmands reçoivent l'un des messages mais attendent indéfiniment que l'autre soit disponible.  
+ Cet exemple utilise non gourmand `join` de l’objet, car une jointure non gourmande accorde à chacun `philosopher` objet d’accès aux deux baguettes uniquement lorsque les deux `unbounded_buffer` objets contiennent un message. Une jointure gourmande ne serait pas empêcher tout interblocage qu’une jointure gourmande accepte des messages dès qu’elles sont disponibles. Un interblocage peut se produire si tous les comportements gourmand `join` objets reçoivent l’un des messages mais attendent indéfiniment que l’autre soit disponible.  
   
- Pour plus d'informations sur les jointures gourmandes et non gourmandes et sur les différences entre les différents types de tampons de messages, consultez [Blocs de messages asynchrones](../../parallel/concrt/asynchronous-message-blocks.md).  
+ Pour plus d’informations sur les jointures non gourmandes et ainsi que les différences entre les différents types de mémoires tampons de messages, consultez [des blocs de messages asynchrones](../../parallel/concrt/asynchronous-message-blocks.md).  
   
-#### Pour empêcher l'interblocage dans cet exemple  
+#### <a name="to-prevent-deadlock-in-this-example"></a>Pour empêcher tout interblocage dans cet exemple  
   
-1.  Supprimez le code suivant de l'exemple.  
+1.  Supprimez le code suivant à partir de l’exemple.  
   
-     [!code-cpp[concrt-philosophers-deadlock#2](../../parallel/concrt/codesnippet/CPP/walkthrough-using-join-to-prevent-deadlock_2.cpp)]  
+ [!code-cpp[concrt-philosophers-deadlock#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_2.cpp)]  
   
-2.  Modifiez le type des membres de données `_right` et `_left` de la classe `philosopher` en `unbounded_buffer`.  
+2.  Modifier le type de la `_left` et `_right` membres de données de la `philosopher` classe `unbounded_buffer`.  
   
-     [!code-cpp[concrt-philosophers-join#2](../../parallel/concrt/codesnippet/CPP/walkthrough-using-join-to-prevent-deadlock_3.cpp)]  
+ [!code-cpp[concrt-philosophers-join#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_3.cpp)]  
   
-3.  Modifiez le constructeur `philosopher` de façon à prendre des objets `unbounded_buffer` comme paramètres.  
+3.  Modifier la `philosopher` constructeur prendre `unbounded_buffer` objets comme paramètres.  
   
-     [!code-cpp[concrt-philosophers-join#3](../../parallel/concrt/codesnippet/CPP/walkthrough-using-join-to-prevent-deadlock_4.cpp)]  
+ [!code-cpp[concrt-philosophers-join#3](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_4.cpp)]  
   
-4.  Modifiez la méthode `pickup_chopsticks` de façon à utiliser un objet `join` non gourmand pour recevoir des messages en provenance des tampons de messages pour les deux baguettes.  
+4.  Modifier la `pickup_chopsticks` méthode à utiliser non gourmand `join` objet pour recevoir des messages à partir des tampons de messages pour les deux baguettes.  
   
-     [!code-cpp[concrt-philosophers-join#4](../../parallel/concrt/codesnippet/CPP/walkthrough-using-join-to-prevent-deadlock_5.cpp)]  
+ [!code-cpp[concrt-philosophers-join#4](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_5.cpp)]  
   
-5.  Modifiez la méthode `putdown_chopsticks` de façon à libérer l'accès aux baguettes en envoyant un message aux tampons de messages pour les deux baguettes.  
+5.  Modifier la `putdown_chopsticks` méthode pour libérer l’accès aux baguettes en envoyant un message aux tampons de messages pour les deux baguettes.  
   
-     [!code-cpp[concrt-philosophers-join#5](../../parallel/concrt/codesnippet/CPP/walkthrough-using-join-to-prevent-deadlock_6.cpp)]  
+ [!code-cpp[concrt-philosophers-join#5](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_6.cpp)]  
   
-6.  Modifiez la méthode `run` de façon à stocker les résultats de la méthode `pickup_chopsticks` et à passer ces résultats à la méthode `putdown_chopsticks`.  
+6.  Modifier la `run` méthode pour stocker les résultats de la `pickup_chopsticks` (méthode) et à passer ces résultats à la `putdown_chopsticks` (méthode).  
   
-     [!code-cpp[concrt-philosophers-join#6](../../parallel/concrt/codesnippet/CPP/walkthrough-using-join-to-prevent-deadlock_7.cpp)]  
+ [!code-cpp[concrt-philosophers-join#6](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_7.cpp)]  
   
-7.  Modifiez la déclaration de la variable `chopsticks` dans la fonction `wmain` de sorte qu'elle soit un tableau d'objets `unbounded_buffer` contenant chacun un message.  
+7.  Modifiez la déclaration de la `chopsticks` variable dans le `wmain` fonction doit être un tableau de `unbounded_buffer` objets contenant chacun un message.  
   
-     [!code-cpp[concrt-philosophers-join#7](../../parallel/concrt/codesnippet/CPP/walkthrough-using-join-to-prevent-deadlock_8.cpp)]  
+ [!code-cpp[concrt-philosophers-join#7](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_8.cpp)]  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Description  
- Voici l'exemple complet qui utilise des objets `join` non gourmands pour éliminer le risque d'interblocage.  
+### <a name="description"></a>Description  
+ L’exemple suivant montre l’exemple complet qui utilise non gourmand `join` objets afin d’éliminer le risque d’interblocage.  
   
-### Code  
- [!code-cpp[concrt-philosophers-join#1](../../parallel/concrt/codesnippet/CPP/walkthrough-using-join-to-prevent-deadlock_9.cpp)]  
+### <a name="code"></a>Code  
+ [!code-cpp[concrt-philosophers-join#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_9.cpp)]  
   
-### Commentaires  
- Cet exemple génère la sortie suivante.  
+### <a name="comments"></a>Commentaires  
+ Cet exemple produit la sortie suivante.  
   
-  **Aristote a mangé 50 fois.**  
-**Descartes a mangé 50 fois.**  
-**les hobbes a mangé 50 fois.**  
-**Socrates a mangé 50 fois.**  
-**platon a mangé 50 fois.**   
-## Compilation du code  
- Copiez l'exemple de code et collez\-le dans un projet Visual Studio , ou collez\-le dans un fichier nommé `philosophers-join.cpp` puis exécutez la commande suivante dans une fenêtre d'invite de commandes Visual Studio.  
+```Output  
+aristotle ate 50 times.  
+descartes ate 50 times.  
+hobbes ate 50 times.  
+socrates ate 50 times.  
+plato ate 50 times.  
+```  
   
- **cl.exe \/EHsc philosophers\-join.cpp**  
+## <a name="compiling-the-code"></a>Compilation du code  
+ Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `philosophers-join.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.  
   
- \[[Premières](#top)\]  
+ **CL.exe /EHsc philosophes-JOIN.cpp**  
   
-## Voir aussi  
- [Procédures pas à pas relatives au runtime d'accès concurrentiel](../../parallel/concrt/concurrency-runtime-walkthroughs.md)   
- [Bibliothèque d'agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md)   
+ [[Haut](#top)]  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Procédures pas à pas Runtime d’accès concurrentiel](../../parallel/concrt/concurrency-runtime-walkthroughs.md)   
+ [Bibliothèque d’agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md)   
  [Agents asynchrones](../../parallel/concrt/asynchronous-agents.md)   
  [Blocs de messages asynchrones](../../parallel/concrt/asynchronous-message-blocks.md)   
  [Fonctions de passage de messages](../../parallel/concrt/message-passing-functions.md)   

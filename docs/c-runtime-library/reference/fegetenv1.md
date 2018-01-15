@@ -1,49 +1,49 @@
 ---
-title: "fegetenv1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fetegenv"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fegetenv"
-  - "fenv/fegetenv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fetegenv (fonction)"
+title: fegetenv1 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: fetegenv
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fegetenv
+- fenv/fegetenv
+dev_langs: C++
+helpviewer_keywords: fetegenv function
 ms.assetid: 68962421-6978-4b27-8e4c-ad1577830cf6
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3da1a5837a2c2e3a2cd1c7987363b251bc67b567
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# fegetenv
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Stocke l’environnement à virgule flottante en cours dans l’objet spécifié.  
+# <a name="fegetenv"></a>fegetenv
+Stocke l’environnement à virgule flottante actuel dans l’objet spécifié.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int fegetenv(  
@@ -52,26 +52,26 @@ int fegetenv(
   
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `penv`  
- Pointeur vers un `fenv_t` objet pour contenir les valeurs à virgule flottante environnement actuel.  
+ Pointeur désignant un objet `fenv_t` destiné à contenir les valeurs de l’environnement à virgule flottante actuel.  
   
-## Valeur de retour  
- Retourne 0 si l’environnement à virgule flottante a été stockée dans `penv`. Sinon, retourne une valeur différente de zéro.  
+## <a name="return-value"></a>Valeur de retour  
+ Retourne 0 si l’environnement à virgule flottante a été correctement stocké dans `penv`. Sinon, retourne une valeur différente de zéro.  
   
-## Notes  
- Le `fegetenv` fonction stocke l’environnement à virgule flottante dans l’objet désigné par `penv`. Flottante de l’environnement est le jeu d’indicateurs d’état et les modes de contrôle qui affectent les calculs à virgule flottante. Cela inclut le mode d’arrondi sens et les indicateurs d’état pour les exceptions de virgule flottante. Si `penv` ne pointe pas vers un `fenv_t` de l’objet, le comportement suivant n’est pas défini.  
+## <a name="remarks"></a>Notes  
+ La fonction `fegetenv` stocke l’environnement à virgule flottante actuel dans l’objet désigné par `penv`. L’environnement à virgule flottante rassemble les indicateurs d’état et les modes de contrôle qui affectent les calculs à virgule flottante. Cela inclut le mode de la direction de l’arrondi et les indicateurs d’état pour les exceptions de virgule flottante.  Si `penv` ne désigne pas un objet `fenv_t` valide, le comportement suivant n’est pas défini.  
   
- Pour utiliser cette fonction, vous devez désactiver les optimisations à virgule flottante qui peuvent empêcher l’accès à l’aide de la `#pragma fenv_access(on)` directive avant l’appel. Pour plus d'informations, consultez [fenv\_access](../../preprocessor/fenv-access.md).  
+ Pour utiliser cette fonction, vous devez désactiver les optimisations à virgule flottante qui peuvent empêcher l’accès à l’aide de la directive `#pragma fenv_access(on)` avant l’appel. Pour plus d'informations, consultez [fenv_access](../../preprocessor/fenv-access.md).  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-|Fonction|En\-tête C|En\-tête C\+\+|  
-|--------------|----------------|--------------------|  
-|`fegetenv`|\<fenv.h\>|\<cfenv\>|  
+|Fonction|En-tête C|En-tête C++|  
+|--------------|--------------|------------------|  
+|`fegetenv`|\<fenv.h>|\<cfenv>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [fesetenv](../../c-runtime-library/reference/fesetenv1.md)

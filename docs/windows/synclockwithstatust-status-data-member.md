@@ -1,44 +1,45 @@
 ---
-title: "SyncLockWithStatusT::status_, donn&#233;es de membre | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::status_"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "status_ (membre de données)"
+title: "Synclockwithstatust::Status, données de membre | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::status_
+dev_langs: C++
+helpviewer_keywords: status_ data member
 ms.assetid: 466fa336-b5ff-4d43-8efd-1e87e5fddf88
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 42c8d83e8520bb87c266c9e9705115aaba579563
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# SyncLockWithStatusT::status_, donn&#233;es de membre
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="synclockwithstatuststatus-data-member"></a>SyncLockWithStatusT::status_, données de membre
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 DWORD status_;  
 ```  
   
-## Notes  
- Contient le résultat de l'opération sous\-jacente d'attente après une opération de verrou sur un objet basé sur l'objet SyncLockWithStatusT actuel.  
+## <a name="remarks"></a>Notes  
+ Contient le résultat de l’objet sous-jacent attendre l’opération après une opération de verrouillage sur un objet basé sur l’objet SyncLockWithStatusT actuel.  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers::Details  
+ **Namespace :** Microsoft::WRL::Wrappers::Details  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SyncLockWithStatusT, classe](../windows/synclockwithstatust-class.md)

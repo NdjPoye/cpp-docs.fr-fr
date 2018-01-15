@@ -1,32 +1,33 @@
 ---
-title: "EnableIf, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::EnableIf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "EnableIf (structure)"
+title: EnableIf (Structure) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::EnableIf
+dev_langs: C++
+helpviewer_keywords: EnableIf structure
 ms.assetid: 7825b283-e6b2-4f39-a4b9-c03bcd431b8e
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e9da168cd0f715f3140a9e9c9a93d943bcee3d97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# EnableIf, structure
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="enableif-structure"></a>EnableIf (structure)
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template <  
@@ -41,31 +42,31 @@ template <
 struct EnableIf<true, T>;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
- Un type.  
+ Type.  
   
  `b`  
  Expression booléenne.  
   
-## Notes  
- Définit une donnée membre du type spécifié par le deuxième paramètre de modèle si le premier correspond à `true`.  
+## <a name="remarks"></a>Notes  
+ Définit un membre de données du type spécifié par le deuxième paramètre de modèle, si le premier paramètre de modèle a la valeur `true`.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Typedefs publics  
+### <a name="public-typedefs"></a>Typedefs publics  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|`type`|Si le paramètre de modèle `b` correspond à `true`, la spécialisation partielle définit la donnée membre `type` comme étant de type `T`.|  
+|`type`|Si le paramètre de modèle `b` prend la valeur de `true`, la spécialisation partielle définit le membre de données `type` être de type `T`.|  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `EnableIf`  
   
-## Configuration requise  
- **En\-tête:** internal.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** internal.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

@@ -1,111 +1,109 @@
 ---
-title: "Prise en charge des jeux de caract&#232;res Unicode et MBCS (Multibyte Character Set) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC [C++], prise en charge des jeux de caractères"
-  - "MBCS [C++], chaînes et prise en charge de MFC"
-  - "chaînes[C++], prise en charge de MBCS dans MFC"
-  - "jeux de caractères [C++], multioctets"
-  - "Unicode [C++], chaînes MFC"
-  - "Unicode [C++], objets de chaîne"
-  - "chaînes [C++], Unicode"
-  - "chaînes [C++], prise en charge des jeux de caractères"
-ms.assetid: 44b3193b-c92d-40c5-9fa8-5774da303cce
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+title: "Caractères Unicode et définir la prise en charge (MBCS) | Documents Microsoft"
+ms.custom: 
+ms.date: 1/09/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], character set support
+- MBCS [C++], strings and MFC support
+- strings [C++], MBCS support in MFC
+- character sets [C++], multibyte
+- Unicode [C++], MFC strings
+- Unicode [C++], string objects
+- strings [C++], Unicode
+- strings [C++], character set support
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: adbe6ca25afd31c0aba853fde8b503dc333f63f4
+ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/12/2018
 ---
-# Prise en charge des jeux de caract&#232;res Unicode et MBCS (Multibyte Character Set)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Prise en charge des jeux de caractères Unicode et MBCS (Multibyte Character Set)
 
-Certains langages, par exemple, japonais et chinois, ont des jeux de caractères de grande taille.  Pour prendre en charge la programmation pour ces marchés, la bibliothèque MFC \(Microsoft Foundation Class\) est activée pour deux gestions différentes des grands jeux de caractères :  
-  
--   [Unicode](#_core_mfc_support_for_unicode_strings)  
-  
--   [MBCS \(Jeux de Caractère Multi\-Octets\)](#_core_mfc_support_for_mbcs_strings)  
-  
- Vous devez utiliser Unicode pout tout nouveau développement.  
-  
-##  <a name="_core_mfc_support_for_unicode_strings"></a> Prise en charge MFC pour les chaînes Unicode  
- L'entière bibliothèque de classes est conditionnellement activée pour les caractères Unicode et les chaînes.  En particulier, la classe [CString](../atl-mfc-shared/reference/cstringt-class.md) est activée pour Unicode.  
-  
-|||||  
-|-|-|-|-|  
-|UAFXCW.LIB|UAFXCW.PDB|UAFXCWD.LIB|UAFXCWD.PDB|  
-|MFC*xx*U.LIB|MFC*xx*U.PDB|MFC*xx*U.DLL|MFC*xx*UD.LIB|  
-|MFC*xx*UD.PDB|MFC*xx*UD.DLL|MFCS*xx*U.LIB|MFCS*xx*U.PDB|  
-|MFCS*xx*UD.LIB|MFCS*xx*UD.PDB|MFCM*xx*U.LIB|MFCM*xx*U.PDB|  
-|MFCM*xx*U.DLL|MFCM*xx*UD.LIB|MFCM*xx*UD.PDB|MFCM*xx*UD.DLL|  
-  
- \(*xx* représente le numéro de version du fichier ; par exemple, « 80 " signifie la version 8,0.\)  
-  
- `CString` est basé sur le type de données `TCHAR`.  Si le symbole `_UNICODE` est défini pour une version de votre programme, `TCHAR` est défini comme type `wchar_t`, un type 16 bits d'encodage de caractères.  Sinon, `TCHAR` est défini comme `char`, l'encodage 8 bits normal.  Par conséquent, sous Unicode, `CString` est composé de caractères 16 bits.  Sans Unicode, il est constitué de caractères de type `char`.  
-  
- Pour terminer la programmation Unicode de votre application, vous devez aussi :  
-  
--   Utilisez cette macro `_T` pour coder de manière conditionnelle vos chaînes littérales telles qu'elles soient portables au format Unicode.  
-  
--   Lorsque vous passez vos chaînes, regardez bien si les arguments de fonction requièrent une longueur de caractères ou une longueur en octets.  La différence est importante si vous utilisez des chaînes Unicode.  
-  
--   Utilisez les versions portables d'utilisation de la gestion de fonctions du moteur d'éxécution C.  
-  
--   Utilisez les types de données suivantes pour les caractères et les pointeurs de caractères :  
-  
-    -   `TCHAR` Où vous utiliseriez `char`.  
-  
-    -   `LPTSTR` Où vous utiliseriez `char*`.  
-  
-    -   `LPCTSTR` Où vous utiliseriez `const char*`.  `CString` fournit l'opérateur `LPCTSTR` pour convertir entre `CString` et `LPCTSTR`.  
-  
- `CString` fournit également des constructeurs, des opérateurs d'assignation, et des opérateurs de comparaison sans Unicode.  
-  
- Pour plus d'informations sur la programmation Unicode, consultez [Rubriques Unicode](../mfc/unicode-in-mfc.md).  [Référence de la bibliothèque Runtime](../c-runtime-library/c-run-time-library-reference.md) définit les versions portables de toutes ses fonctions de gestion.  Consultez la catégorie [Internationalisation](../c-runtime-library/internationalization.md).  
-  
-##  <a name="_core_mfc_support_for_mbcs_strings"></a> Prise en charge MFC des chaînes MBCS  
-  
-> [!WARNING]
->  Les chaînes MBCS sont technologiquement héritée et ne doivent pas être utilisées dans de nouveaux projets.  Les informations suivantes sont fournies pour les scénarios dans lesquels vous devez conserver un code existant qui utilise MBCS et s'il n'est pas possible de mettre le code à niveau pour utiliser Unicode.  
-  
- La bibliothèque de classes est également activée pour les jeux de caractères multi\-octets, mais uniquement pour les jeux de caractères codés sur deux octets \(DBCS\).  
-  
-> [!IMPORTANT]
->  Dans [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] et versions ultérieures, les versions MBCS des DLL MFC sont disponibles comme complément libre à Visual Studio depuis le site de téléchargement MSDN.  Pour plus d’informations, consultez [Compléments des DLL MBCS et MFC](../mfc/mfc-mbcs-dll-add-on.md).  
-  
- Dans un jeu de caractères multi\-octets, la largeur d'un caractère peut être un ou deux octets.  S'il est large de deux octets, son premier octet est un « octet de tête » spécial qui est choisi depuis une plage spécifique, choisie selon la page de codes utilisée.  Ensemble, les octets de tête et « les octets de queue » spécifient un seul encodage de caractères.  
-  
- Si le symbole `_MBCS` est défini pour une version de votre programme, taper `TCHAR`, dans lequel `CString` est basé, correspond à `char`.  Il vous appartient de déterminer les octets dans `CString` sont des octets de tête et lesquels sont des octets de queue.  La bibliothèque Runtime C fournit des fonctions pour vous aider à déterminer ceci.  
-  
- Sous DBCS, une chaîne donnée peut contenir tous les caractères ANSI codés sur un octet, tous les caractères codés sur deux octets, ou une combinaison des deux.  Ces fonctionnalités requièrent une attention particulière pour les chaînes d'analyse.  Cela inclut des objets `CString`.  
-  
+Certaines langues, par exemple, le japonais et chinois, ont des jeux de caractères volumineux. Pour prendre en charge la programmation sur ces marchés, les MFC Microsoft Foundation Class Library () permet à deux approches différentes pour gérer de grands jeux de caractères :
+
+- [Unicode](#mfc-support-for-unicode-strings), `wchar_t` en fonction des caractères larges et les chaînes encodées au format UTF-16.
+
+- [Jeux de caractères multioctets (MBCS)](#mfc-support-for-mbcs-strings), `char` en fonction des caractères uniques ou sur deux octets et les chaînes codées dans un jeu de caractères de paramètres régionaux spécifiques.
+
+Microsoft a recommandé les bibliothèques MFC Unicode pour tout nouveau développement et les bibliothèques MBCS ont été déconseillés dans Visual Studio 2013 et Visual Studio 2015. Cela n'est plus le cas. Les avertissements de désapprobation MBCS ont été supprimés dans Visual Studio 2017.
+
+## <a name="mfc-support-for-unicode-strings"></a>Prise en charge MFC pour les chaînes Unicode
+
+La bibliothèque de classes MFC entière est conditionnellement activée pour les caractères Unicode et les chaînes stockées en caractères larges au format UTF-16. En particulier, la classe [CString](../atl-mfc-shared/reference/cstringt-class.md) prend en charge Unicode.
+
+Ces fichiers de bibliothèque, débogueur et DLL sont utilisés pour prendre en charge Unicode dans MFC :
+
+|||||
+|-|-|-|-|
+|UAFXCW. LIB|UAFXCW. PDB|UAFXCWD. LIB|UAFXCWD. PDB|
+|MFC*version*U.LIB|MFC*version*U.PDB|MFC*version*U.DLL|MFC*version*UD. LIB|
+|MFC*version*UD. PDB|MFC*version*UD. DLL|MFCS*version*U.LIB|MFCS*version*U.PDB|
+|MFCS*version*UD. LIB|MFCS*version*UD. PDB|MFCM*version*U.LIB|MFCM*version*U.PDB|
+|MFCM*version*U.DLL|MFCM*version*UD. LIB|MFCM*version*UD. PDB|MFCM*version*UD. DLL|
+
+(*version* représente le numéro de version du fichier ; par exemple, « 140 » signifie que la version 14.0.)
+
+`CString`est basé sur le `TCHAR` type de données. Si le symbole `_UNICODE` est défini pour une génération de votre programme, `TCHAR` est défini en tant que type `wchar_t`, un type de codage de caractères de 16 bits. Dans le cas contraire, `TCHAR` est défini comme `char`, l’encodage de caractères 8 bits normal. Par conséquent, sous Unicode, un `CString` est composé de caractères de 16 bits. Sans Unicode, il est composé de caractères de type `char`.
+
+Pour compléter la programmation Unicode de votre application, vous devez également :
+
+- Utilisez le `_T` macro conditionnellement code chaînes littérales portable au format Unicode.
+
+- Lorsque vous passez des chaînes, prêtez attention à déterminer si les arguments de fonction exigent une longueur en caractères ou une longueur en octets. La différence est importante si vous utilisez des chaînes Unicode.
+
+- Utilisez des versions portables des fonctions de gestion des chaînes du runtime C.
+
+- Pour les caractères et des pointeurs de caractères, utilisez les types de données suivants :
+
+   - Utilisez `TCHAR` où vous utiliseriez `char`.
+
+   - Utilisez `LPTSTR` où vous utiliseriez `char*`.
+
+   - Utilisez `LPCTSTR` où vous utiliseriez `const char*`. `CString`fournit l’opérateur `LPCTSTR` pour effectuer une conversion entre `CString` et `LPCTSTR`.
+
+`CString`fournit également des constructeurs, les opérateurs d’assignation et les opérateurs de comparaison compatibles Unicode.
+
+Le [Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md) définit les versions portables de toutes ses fonctions de gestion des chaînes. Pour plus d’informations, consultez la catégorie [internationalisation](../c-runtime-library/internationalization.md).
+
+## <a name="mfc-support-for-mbcs-strings"></a>Prise en charge MFC pour les chaînes MBCS
+
+La bibliothèque de classes est également activée pour les jeux de caractères multioctets, mais uniquement pour les caractères codés sur deux octets définit (DBCS).
+
+Dans un jeu de caractères multioctets, un caractère peut être un ou deux octets. S’il s’agit de deux octets, le premier octet est un « octet de tête » spécial qui est choisi à partir d’une plage particulière, en fonction du code page est en cours d’utilisation. Dans leur ensemble, le responsable et les « octets de queue » spécifient un encodage de caractères uniques.
+
+Si le symbole `_MBCS` est défini pour une génération de votre programme, type `TCHAR`, sur lequel `CString` est basé, mappe à `char`. Il vous incombe de déterminer les octets d’un `CString` octets de tête des octets de Queue. La bibliothèque Runtime C fournit des fonctions pour vous aider à déterminer.
+
+Sous DBCS, une chaîne donnée peut contenir tous les caractères de ANSI sur un octet, tous les caractères codés sur deux octets ou une combinaison des deux. Ces possibilités requièrent une attention particulière lors de l’analyse de chaînes. Cela inclut les `CString` objets.
+
 > [!NOTE]
->  La sérialisation de chaîne Unicode dans MFC peut lire à la fois les chaînes Unicode et les chaînes MBCS indépendamment de la version de l'application que vous exécutez.  Vos fichiers de données sont portables entre les versions Unicode et MBCS de votre programme.  
-  
- Les fonctions du membre `CString` utilisent des versions spéciales de « texte générique » des fonctions du moteur d'éxécution C qu'elles appellent, ou elles utilisent des fonctions Unicode en charge.  Par conséquent, par exemple, si une fonction `CString` appellerait généralement `strcmp`, elle appelle la fonction correspondante de texte générique `_tcscmp` à la place.  Selon la façon dont les symboles `_MBCS` et `_UNICODE` sont définis, `_tcscmp` mappe comme suit :  
-  
-|||  
-|-|-|  
-|`_MBCS` défini|`_mbscmp`|  
-|`_UNICODE` défini|`wcscmp`|  
-|Aucun symbole défini|`strcmp`|  
-  
+> Sérialisation des chaînes Unicode dans MFC peut lire des chaînes Unicode et MBCS, quelle que soit la version de l’application que vous exécutez. Les fichiers de données sont portables entre les versions Unicode et MBCS de votre programme.
+
+`CString`fonctions membres utilisent des versions « texte générique » spéciales des fonctions runtime C qu'ils appellent, ou les fonctions prenant en charge Unicode. Par conséquent, par exemple, si un `CString` fonction appelez généralement `strcmp`, il appelle la fonction de texte générique correspondante `_tcscmp` à la place. Selon la manière dont les symboles `_MBCS` et `_UNICODE` sont définies, `_tcscmp` mappe comme suit :
+
+|||
+|-|-|
+|`_MBCS`défini|`_mbscmp`|
+|`_UNICODE`défini|`wcscmp`|
+|Aucun symbole défini|`strcmp`|
+
 > [!NOTE]
->  Les symboles `_MBCS` et `_UNICODE` s'excluent mutuellement.  
-  
- Vos mappages de fonction de texte générique pour toutes les routines à l'exécution de gestion sont traités dans [Référence sur les bibliothèques Runtime C](../c-runtime-library/c-run-time-library-reference.md).  En particulier, consultez [Internationalisation](../c-runtime-library/internationalization.md).  
-  
- De même, les méthodes `CString` sont implémentées à l'aide des mappages « génériques » de type de données.  Pour activer MBCS et Unicode ensembles, MFC utilise `TCHAR` pour `char`, `LPTSTR` pour `char*`, et `LPCTSTR` pour `const char*`.  Ceux\-ci garantissent les mappages appropriés pour MBCS ou Unicode.  
-  
-## Voir aussi  
- [Chaînes](../atl-mfc-shared/strings-atl-mfc.md)   
- [Manipulation de chaînes](../c-runtime-library/string-manipulation-crt.md)
+> Les symboles `_MBCS` et `_UNICODE` s’excluent mutuellement.
+
+Mappages de fonction de texte générique pour toutes les routines de gestion des chaînes d’exécution sont décrites dans [C Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md). Pour obtenir la liste, consultez [internationalisation](../c-runtime-library/internationalization.md).
+
+De même, `CString` méthodes sont implémentées à l’aide de mappages de types de données génériques. Pour activer MBCS et Unicode, MFC utilise `TCHAR` pour `char` ou `wchar_t`, `LPTSTR` pour `char*` ou `wchar_t*`, et `LPCTSTR` pour `const char*` ou `const wchar_t*`. Cela permet de garantir les mappages requis pour MBCS ou Unicode.
+
+## <a name="see-also"></a>Voir aussi
+
+[Chaînes (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
+[Manipulation de chaînes](../c-runtime-library/string-manipulation-crt.md)  

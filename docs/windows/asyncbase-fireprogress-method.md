@@ -1,32 +1,33 @@
 ---
-title: "AsyncBase::FireProgress, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::FireProgress"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FireProgress (méthode)"
+title: "Asyncbase::fireprogress, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::FireProgress
+dev_langs: C++
+helpviewer_keywords: FireProgress method
 ms.assetid: 4512bef6-0ebc-4465-9b8a-4c9dfa82084c
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 358a85f6ec0a451534684f2201caffefb1c1ad1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# AsyncBase::FireProgress, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Appelle le gestionnaire d'événements de progression actuel.  
+# <a name="asyncbasefireprogress-method"></a>AsyncBase::FireProgress, méthode
+Appelle le Gestionnaire d’événements de progression actuel.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void FireProgress(  
@@ -34,17 +35,17 @@ void FireProgress(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `arg`  
- La méthode du gestionnaire d'événements à appeler.  
+ La méthode de gestionnaire d’événements à appeler.  
   
-## Remarques  
- `ProgressTraits` est dérivé de [ArgTraitsHelper, structure](../windows/argtraitshelper-structure.md).  
+## <a name="remarks"></a>Notes  
+ `ProgressTraits`est dérivé de [argtraitshelper, Structure](../windows/argtraitshelper-structure.md).  
   
-## Configuration requise  
- **En\-tête:** async.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** async.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [AsyncBase, classe](../windows/asyncbase-class.md)

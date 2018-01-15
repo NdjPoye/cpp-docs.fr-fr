@@ -54,11 +54,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f30f680449ee0eee1d25f1705d2c98adfe88c312
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1bb52d6a987289ed77d7b63a5497323ddad2b467
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fundamental-types--c"></a>Types fondamentaux (C++)
 En C++, les types fondamentaux sont divisés en trois catégories : intégral, virgule flottante et void. Les types intégraux sont capables de gérer les nombres entiers. Les types virgule flottante peuvent spécifier des valeurs pouvant avoir des parties fractionnaires.  
@@ -75,7 +76,7 @@ En C++, les types fondamentaux sont divisés en trois catégories : intégral, v
   
 ### <a name="fundamental-types-of-the-c-language"></a>Types fondamentaux du langage C++  
   
-|Catégorie|Type|Sommaire|  
+|Category|Type|Sommaire|  
 |--------------|----------|--------------|  
 |Intégral|`char`|Le type `char` est un type intégral qui contient généralement les membres du jeu de caractères d’exécution de base. Par défaut, il s’agit des caractères ASCII en Microsoft C++.<br /><br /> Le compilateur C++ traite les variables de type `char`, `signed` `char`et `unsigned` `char` comme ayant différents types. Les variables de type `char` sont promues en `int` , car elles sont de type `signed` `char` par défaut, sauf si l’option de compilation /J est utilisée. Dans ce cas, elles sont traitées comme type `unsigned` `char` et sont promues en `int` sans extension de signature.|  
 ||`bool`|Le type `bool` est un type intégral qui peut avoir l’une des deux valeurs `true` ou `false`. Sa taille n'est pas spécifiée.|  
@@ -95,11 +96,11 @@ En C++, les types fondamentaux sont divisés en trois catégories : intégral, v
   
 ### <a name="sizes-of-fundamental-types"></a>Tailles des types fondamentaux  
   
-|Type|Taille|  
+|Type|Size|  
 |----------|----------|  
 |`bool`, `char`, `unsigned char`, `signed char`, `__int8`|1 octet|  
 |`__int16`, `short`, `unsigned short`, `wchar_t`, `__wchar_t`|2 octets|  
-|`float`, `__int32`, `int`, `unsigned int`, `long`, `unsigned long`|4 octets|  
+|`float`, `__int32`, `int`, `unsigned int`, `long`, `unsigned long`|4 octets|  
 |`double`, `__int64`, `long double`, `long long`|8 octets|  
   
  **FIN de la section spécifique à Microsoft**  

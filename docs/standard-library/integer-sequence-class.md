@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,8 +13,7 @@ f1_keywords:
 - type_traits/std::integer_sequence
 - type_traits/std::make_integer_sequence
 - type_traits/std::index_sequence_for
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::index_sequence
 - std::make_index_sequence
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1765d6852248727e808cd9d8a98b56427abd6273
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e2502b627a40b40ee6942a24fdc1b8c0d16ecc31
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integersequence-class"></a>integer_sequence, classe
 Représente une séquence d'entiers. Peut servir à déduire et à développer des packs de paramètres dans les types variadiques tels que std::tuple\<T...> qui sont passés comme arguments à une fonction.  
@@ -128,12 +126,11 @@ int main()
   
   Pour créer un `index_sequence` pour un pack de paramètres, utilisez `index_sequence_for`\<T...>, qui est un alias pour `make_index_sequence`\<sizeof...(T)>  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  En-tête : <type_traits>  
   
  Espace de noms : std  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ellipses et modèles variadiques](../cpp/ellipses-and-variadic-templates.md)
-
 

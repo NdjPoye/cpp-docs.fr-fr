@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 30cb2b182d8047eb1b2a5eaa384b01c719799043
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a33a333cc9e70ee57cd1d5612e6de008d49b1d72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt;, opérateurs
  
@@ -66,7 +67,7 @@ basic_istream<Elem, Tr>& operator>>(
  Un caractère.  
   
  `Istr`  
- Flux.  
+ Un flux.  
   
  `str`  
  Chaîne.  
@@ -80,7 +81,7 @@ basic_istream<Elem, Tr>& operator>>(
 ### <a name="remarks"></a>Notes  
  La classe `basic_istream` définit également plusieurs opérateurs d’extraction. Pour plus d’informations, consultez [basic_istream::operator>>](../standard-library/basic-istream-class.md#op_gt_gt).  
   
- La fonction de modèle :  
+ La fonction de modèle  
   
 ```cpp  
 template <class Elem, class Tr>  
@@ -92,7 +93,7 @@ basic_istream<Elem, Tr>& operator>>(
   
  **Note de sécurité** La chaîne terminée par Null qui est extraite du flux d’entrée ne doit pas dépasser la taille de la mémoire tampon de destination `str`. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
- La fonction de modèle :  
+ La fonction de modèle  
   
 ```cpp  
 template <class Elem, class Tr>  
@@ -102,7 +103,7 @@ basic_istream<Elem, Tr>& operator>>(
   
  extrait un élément, si c’est possible, et le stocke dans `Ch`. Sinon, elle appelle **is**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). Dans tous les cas, elle retourne `Istr`.  
   
- La fonction de modèle :  
+ La fonction de modèle  
   
 ```cpp  
 template <class Tr>  
@@ -112,7 +113,7 @@ basic_istream<char, Tr>& operator>>(
   
  retourne `Istr` >> ( `char`**\***) `str`.  
   
- La fonction de modèle :  
+ La fonction de modèle  
   
 ```cpp  
 template <class Tr>  
@@ -122,7 +123,7 @@ basic_istream<char, Tr>& operator>>(
   
  retourne `Istr` >> ( **char&**) `Ch`.  
   
- La fonction de modèle :  
+ La fonction de modèle  
   
 ```cpp  
 template <class Tr>  
@@ -142,7 +143,7 @@ basic_istream<char, Tr>& operator>>(
   
  retourne `Istr` >> ( **char&**) `Ch`.  
   
- La fonction de modèle :  
+ La fonction de modèle  
   
 ```cpp  
 template <class Elem, class Tr, class Type>  

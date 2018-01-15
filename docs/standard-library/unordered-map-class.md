@@ -149,11 +149,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d37edf7f526104fa0bb9333daebeba975e4076d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fbb8b5b30f1666735fc4eebca0c1d0b335c1986b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorderedmap-class"></a>unordered_map, classe
 La classe de modèle décrit un objet qui contrôle une séquence de longueur variable constituée d'éléments de type `std::pair<const Key, Ty>`. La séquence est triée par ordre faible avec une fonction de hachage, qui partitionne la séquence en un ensemble trié de sous-séquences appelées compartiments. Dans chaque compartiment, une fonction de comparaison détermine si des paires d'éléments possèdent un ordre équivalent. Chaque élément stocke deux objets, une clé de tri et une valeur. La séquence est représentée de façon à permettre la recherche, l'insertion et la suppression d'un élément arbitraire à l'aide d'un certain nombre d'opérations qui peut être indépendant du nombre d'éléments de la séquence (temps constant), du moins lorsque les compartiments sont de longueur à peu près équivalente. Dans le pire des cas, lorsque tous les éléments se trouvent dans un compartiment, le nombre d'opérations est proportionnel au nombre d'éléments de la séquence (temps linéaire). De plus, l'insertion d'un élément n'entraîne pas la non validité des itérateurs, et la suppression d'un élément ne rend non valides que les itérateurs qui pointent vers l'élément supprimé.  
@@ -249,13 +250,13 @@ class unordered_map;
   
  L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un objet allocateur stocké de type [unordered_map::allocator_type](#allocator_type). Un tel objet allocateur doit avoir la même interface externe qu'un objet de classe de modèle `allocator`. Notez que l'objet allocateur stocké n'est pas copié lorsque l'objet conteneur est assigné.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<unordered_map>  
   
  **Espace de noms :** std  
   
 ##  <a name="allocator_type"></a>  unordered_map::allocator_type  
- Type d’un allocateur pour la gestion du stockage.  
+ Type d'un allocateur pour la gestion du stockage.  
   
 ```  
 typedef Alloc allocator_type;  
@@ -716,7 +717,7 @@ typedef T1 const_iterator;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type décrit un objet pouvant servir d'itérateur vers l'avant constant pour la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l'implémentation `T1`.  
+ Le type décrit un objet pouvant servir d'itérateur vers l'avant constant pour la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l’implémentation `T1`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -948,7 +949,7 @@ typedef T3 difference_type;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type d'entier signé décrit un objet qui peut représenter la différence entre les adresses de deux éléments quelconques dans la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l'implémentation `T3`.  
+ Le type d'entier signé décrit un objet qui peut représenter la différence entre les adresses de deux éléments quelconques dans la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l’implémentation `T3`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1025,7 +1026,7 @@ pair<iterator, bool>  emplace( Args&&... args);
  Pour obtenir un exemple de code, consultez [map::emplace](../standard-library/map-class.md#emplace).  
   
 ##  <a name="emplace_hint"></a>  unordered_map::emplace_hint  
- Insère un élément construit sur place (aucune opération de copie ni de déplacement n’est effectuée) avec un indicateur de positionnement.  
+ Insère un élément construit sur place (sans opération de copie ni de déplacement) avec un indicateur de positionnement.  
   
 ```  
 template <class... Args>  
@@ -1228,7 +1229,7 @@ size_type erase(const key_type& Key);
  Valeur de clé des éléments à supprimer.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pour les deux premières fonctions membres, un itérateur bidirectionnel qui désigne le premier élément restant après tous les éléments supprimés, ou un élément à la fin de la classe map si aucun élément de ce type n’existe.  
+ Pour les deux premières fonctions membres, itérateur bidirectionnel qui désigne le premier élément restant après que tous les éléments ont été supprimés ou élément à la fin de la classe map si aucun élément de ce type n’existe.  
   
  Pour la troisième fonction membre, retourne le nombre d’éléments qui ont été supprimés de la classe unordered_map.  
   
@@ -1743,7 +1744,7 @@ typedef T4 local_iterator;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type décrit un objet pouvant servir d'itérateur vers l'avant pour un compartiment. Il est décrit ici comme un synonyme du type défini par l'implémentation `T4`.  
+ Le type décrit un objet pouvant servir d'itérateur vers l'avant pour un compartiment. Il est décrit ici comme un synonyme du type défini par l’implémentation `T4`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2068,7 +2069,7 @@ Ty& operator[](Key&& keyval);
 ### <a name="return-value"></a>Valeur de retour  
  Référence à la valeur de données de l'élément inséré.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si la valeur de clé d’argument est introuvable, elle est insérée avec la valeur par défaut du type de données.  
   
  `operator[]` peut être utilisé pour insérer des éléments dans un objet map *m* en utilisant *m*[_ *Key*] = `DataValue` ; où `DataValue` est la valeur du `mapped_type` de l’élément avec une valeur de clé de \_ *Key*.  
@@ -2434,7 +2435,7 @@ typedef T2 size_type;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Le type d'entier non signé décrit un objet qui peut représenter la longueur de n'importe quelle séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l'implémentation `T2`.  
+ Le type d'entier non signé décrit un objet qui peut représenter la longueur de n'importe quelle séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l’implémentation `T2`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2793,6 +2794,6 @@ int main()
 ## <a name="see-also"></a>Voir aussi  
  [<unordered_map>](../standard-library/unordered-map.md)   
  [Conteneurs](../cpp/containers-modern-cpp.md)   
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
 

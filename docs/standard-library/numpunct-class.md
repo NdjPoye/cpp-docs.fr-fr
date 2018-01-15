@@ -41,11 +41,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 24ac78fad64877cb789451cd84db4ff5cd27142c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cd59fec5d8b5b2a6a05634242e0506688422f81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numpunct-class"></a>numpunct, classe
 Classe de modèle qui décrit un objet pouvant servir de facette locale pour décrire les séquences de type `CharType` utilisées pour représenter des informations sur la mise en forme et la ponctuation d'expressions numériques et booléennes.  
@@ -61,7 +62,7 @@ class numpunct : public locale::facet;
  `CharType`  
  Type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux spécifiques.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet statique possède une valeur stockée initiale de zéro. La première tentative d’accès à sa valeur stockée entraîne le stockage d’une valeur positive unique dans **id.**  
   
 ### <a name="constructors"></a>Constructeurs  
@@ -70,7 +71,7 @@ class numpunct : public locale::facet;
 |-|-|  
 |[numpunct](#numpunct)|Constructeur des objets de type `numpunct`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -92,7 +93,7 @@ class numpunct : public locale::facet;
 |[thousands_sep](#thousands_sep)|Retourne un élément spécifique aux paramètres régionaux devant être utilisé comme séparateur des milliers.|  
 |[truename](#truename)|Retourne une chaîne à utiliser comme représentation textuelle de la valeur `true`.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<locale>  
   
  **Espace de noms :** std  
@@ -279,7 +280,7 @@ string grouping() const;
 ### <a name="return-value"></a>Valeur de retour  
  Règle propre aux paramètres régionaux pour déterminer comment les chiffres sont regroupés à gauche de la virgule décimale.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction membre retourne [do_grouping](#do_grouping).  
   
 ### <a name="example"></a>Exemple  
@@ -343,7 +344,7 @@ explicit numpunct(size_t _Refs = 0);
 typedef basic_string<CharType, Traits, Allocator> string_type;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le type décrit une spécialisation de la classe de modèle [basic_string](../standard-library/basic-string-class.md) dont les objets peuvent stocker des copies des séquences de ponctuation.  
   
 ##  <a name="thousands_sep"></a>  numpunct::thousands_sep  

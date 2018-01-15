@@ -1,5 +1,3 @@
----
----
 # <a name="compiler-warning-level-1-c4055"></a>Avertissement du compilateur (niveau 1) C4055  
   
 'conversion' : du pointeur donnée 'type1' en pointeur fonction 'type2'  

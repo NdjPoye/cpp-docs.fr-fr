@@ -31,11 +31,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 69c70c42a2b4c83933464249a1096339cf1eb98f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f58b7ba7ae51c4db065cd7b30cc233128f7b7c68
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Échange de données de boîtes de dialogue pour CRecordView et CDaoRecordView
 Cette rubrique répertorie les fonctions DDX_Field utilisées pour échanger des données entre un [CRecordset](../../mfc/reference/crecordset-class.md) et un [CRecordView](../../mfc/reference/crecordview-class.md) formulaire ou un [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) et un [ CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) formulaire.  
@@ -89,7 +90,7 @@ void AFXAPI DDX_FieldCBIndex(
  `pRecordset`  
  Un pointeur vers le [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objet avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lors du déplacement des données à partir de l’ensemble d’enregistrements au contrôle, cette fonction affecte la sélection dans le contrôle en fonction de la valeur spécifiée dans *index*. Sur un transfert à partir de l’ensemble d’enregistrements pour le contrôle, si le champ de recordset est Null, MFC définit la valeur de l’index 0. Sur un transfert à partir du contrôle vers le recordset, si le contrôle est vide ou si aucun élément n’est sélectionné, le champ de jeu d’enregistrements est défini sur 0.  
   
  Utilisez la première version, si vous travaillez avec les classes ODBC. Utilisez la deuxième version si vous travaillez avec les classes DAO.  
@@ -99,7 +100,7 @@ void AFXAPI DDX_FieldCBIndex(
 ### <a name="example"></a>Exemple  
  Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. L’exemple serait similaire pour `DDX_FieldCBIndex`.  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdao.h  
 
 ##  <a name="ddx_fieldcbstring"></a>DDX_FieldCBString  
@@ -126,13 +127,13 @@ void AFXAPI DDX_FieldCBString(
  `nIDC`  
  L’ID d’un contrôle dans le [CRecordView](../../mfc/reference/crecordview-class.md) ou [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objet.  
   
- *value*  
+ *valeur*  
  Une référence à un membre de données de champ dans le type `CRecordset` ou `CDaoRecordset` objet.  
   
  `pRecordset`  
  Un pointeur vers le [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objet avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lors du déplacement des données à partir de l’ensemble d’enregistrements au contrôle, cette fonction affecte la sélection actuelle dans la première ligne qui commence par les caractères dans la chaîne spécifiée dans la zone de liste déroulante *valeur*. Sur un transfert à partir de l’ensemble d’enregistrements pour le contrôle, si le champ de recordset est Null, une sélection est supprimée de la zone de liste modifiable et le contrôle d’édition de la zone de liste déroulante est défini sur une valeur vide. Sur le transfert du contrôle de code vers le recordset, si le contrôle est vide, le champ de jeu d’enregistrements est défini avec la valeur Null si le champ autorise.  
   
  Utilisez la première version, si vous travaillez avec les classes ODBC. Utilisez la deuxième version si vous travaillez avec les classes DAO.  
@@ -142,7 +143,7 @@ void AFXAPI DDX_FieldCBString(
 ### <a name="example"></a>Exemple  
  Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. L’exemple inclut un appel à `DDX_FieldCBString`.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdao.h  
   
 ## <a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact  
@@ -169,13 +170,13 @@ void AFXAPI DDX_FieldCBStringExact(
  `nIDC`  
  L’ID d’un contrôle dans le [CRecordView](../../mfc/reference/crecordview-class.md) ou [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objet.  
   
- *value*  
+ *valeur*  
  Une référence à un membre de données de champ dans le type `CRecordset` ou `CDaoRecordset` objet.  
   
  `pRecordset`  
  Un pointeur vers le [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objet avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lors du déplacement des données à partir de l’ensemble d’enregistrements au contrôle, cette fonction affecte la sélection actuelle dans la première ligne qui correspond exactement à la chaîne spécifiée dans la zone de liste déroulante *valeur*. Sur un transfert à partir de l’ensemble d’enregistrements pour le contrôle, si le champ de recordset est NULL, une sélection est supprimée de la zone de liste déroulante et la zone d’édition de la zone de liste déroulante est définie sur une valeur vide. Sur un transfert à partir du contrôle vers le recordset, si le contrôle est vide, le champ de jeu d’enregistrements est défini avec la valeur NULL.  
   
  Utilisez la première version, si vous travaillez avec les classes ODBC. Utilisez la deuxième version si vous travaillez avec les classes DAO.  
@@ -185,7 +186,7 @@ void AFXAPI DDX_FieldCBStringExact(
 ### <a name="example"></a>Exemple  
  Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. Les appels à `DDX_FieldCBStringExact` serait similaire.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdao.h  
   
 ##  <a name="ddx_fieldcheck"></a>DDX_FieldCheck  
@@ -212,18 +213,18 @@ void AFXAPI DDX_FieldCheck(
  `nIDC`  
  L’ID de ressource du contrôle de case à cocher associé à la propriété du contrôle.  
   
- *value*  
+ *valeur*  
  Une référence à une variable membre de la boîte de dialogue, un mode formulaire ou un objet de vue de contrôle avec lequel les données sont échangées.  
   
  `pRecordset`  
  Un pointeur vers le [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objet avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque `DDX_FieldCheck` est appelée, *valeur* est défini sur l’état actuel du contrôle de case à cocher, ou l’état du contrôle a la valeur *valeur*, en fonction de la direction du transfert.  
   
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdao.h  
   
 ##  <a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex  
@@ -256,7 +257,7 @@ void AFXAPI DDX_FieldLBIndex(
  `pRecordset`  
  Un pointeur vers le [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objet avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lors du déplacement des données à partir de l’ensemble d’enregistrements au contrôle, cette fonction affecte la sélection dans le contrôle en fonction de la valeur spécifiée dans *index*. Sur un transfert à partir de l’ensemble d’enregistrements pour le contrôle, si le champ de recordset est Null, MFC définit la valeur de l’index 0. Sur un transfert à partir du contrôle vers le recordset, si le contrôle est vide, le champ de jeu d’enregistrements est défini sur 0.  
   
  Utilisez la première version, si vous travaillez avec les classes ODBC. Utilisez la deuxième version si vous travaillez avec les classes DAO.  
@@ -266,7 +267,7 @@ void AFXAPI DDX_FieldLBIndex(
 ### <a name="example"></a>Exemple  
  Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdao.h  
   
 ##  <a name="ddx_fieldlbstring"></a>DDX_FieldLBString  
@@ -293,13 +294,13 @@ void AFXAPI DDX_FieldLBString(
  `nIDC`  
  L’ID d’un contrôle dans le [CRecordView](../../mfc/reference/crecordview-class.md) ou [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objet.  
   
- *value*  
+ *valeur*  
  Une référence à un membre de données de champ dans le type `CRecordset` ou `CDaoRecordset` objet.  
   
  `pRecordset`  
  Un pointeur vers le [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objet avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans le sens inverse, cette fonction affecte la sélection actuelle dans la zone de liste à la première ligne qui commence par les caractères dans la chaîne spécifiée par *valeur*. Sur un transfert à partir de l’ensemble d’enregistrements pour le contrôle, si le champ de recordset est Null, une sélection à partir de la zone de liste est supprimée. Sur un transfert à partir du contrôle vers le recordset, si le contrôle est vide, le champ de jeu d’enregistrements est défini avec la valeur Null.  
   
  Utilisez la première version, si vous travaillez avec les classes ODBC. Utilisez la deuxième version si vous travaillez avec les classes DAO.  
@@ -309,7 +310,7 @@ void AFXAPI DDX_FieldLBString(
 ### <a name="example"></a>Exemple  
  Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. Les appels à `DDX_FieldLBString` serait similaire.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdao.h  
   
 ##  <a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact  
@@ -336,13 +337,13 @@ void AFXAPI DDX_FieldLBStringExact(
  `nIDC`  
  L’ID d’un contrôle dans le [CRecordView](../../mfc/reference/crecordview-class.md) ou [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objet.  
   
- *value*  
+ *valeur*  
  Une référence à un membre de données de champ dans le type `CRecordset` ou `CDaoRecordset` objet.  
   
  `pRecordset`  
  Un pointeur vers le [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objet avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans le sens inverse, cette fonction affecte la sélection actuelle dans la première ligne qui correspond exactement à la chaîne spécifiée dans la zone de liste *valeur*. Sur un transfert à partir de l’ensemble d’enregistrements pour le contrôle, si le champ de recordset est Null, une sélection à partir de la zone de liste est supprimée. Sur un transfert à partir du contrôle vers le recordset, si le contrôle est vide, le champ de jeu d’enregistrements est défini avec la valeur Null.  
   
  Utilisez la première version, si vous travaillez avec les classes ODBC. Utilisez la deuxième version si vous travaillez avec les classes DAO.  
@@ -352,7 +353,7 @@ void AFXAPI DDX_FieldLBStringExact(
 ### <a name="example"></a>Exemple  
  Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. Les appels à `DDX_FieldLBStringExact` serait similaire.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdao.h  
   
 ##  <a name="ddx_fieldradio"></a>DDX_FieldRadio  
@@ -379,13 +380,13 @@ void AFXAPI DDX_FieldRadio(
  `nIDC`  
  L’ID de la première dans un groupe (avec style **WS_GROUP**) des contrôles de bouton radio adjacents dans le [CRecordView](../../mfc/reference/crecordview-class.md) ou [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objet.  
   
- *value*  
+ *valeur*  
  Une référence à un membre de données de champ dans le type `CRecordset` ou `CDaoRecordset` objet.  
   
  `pRecordset`  
  Un pointeur vers le [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objet avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lors du transfert à partir du champ de jeu d’enregistrements à la vue, cette fonction est active le *nième* case d’option (base zéro) et désactive les autres boutons. Dans le sens inverse, cette fonction définit le champ de jeu d’enregistrements pour le nombre ordinal de la case d’option qui est actuellement activée (cochée). Sur un transfert à partir de l’ensemble d’enregistrements pour le contrôle, si le champ de recordset est Null, aucun bouton n’est sélectionné. Sur un transfert à partir du contrôle vers le recordset, si aucun contrôle n’est sélectionné, le champ de jeu d’enregistrements est défini avec la valeur Null si le champ qui le permet.  
   
  Utilisez la première version, si vous travaillez avec les classes ODBC. Utilisez la deuxième version si vous travaillez avec les classes DAO.  
@@ -395,7 +396,7 @@ void AFXAPI DDX_FieldRadio(
 ### <a name="example"></a>Exemple  
  Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. Les appels à `DDX_FieldRadio` serait similaire.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdao.h  
   
 ##  <a name="ddx_fieldscroll"></a>DDX_FieldScroll  
@@ -422,13 +423,13 @@ void AFXAPI DDX_FieldScroll(
  *nIDC\**  
  L’ID de la première dans un groupe (avec style **WS_GROUP**) des contrôles de bouton radio adjacents dans le [CRecordView](../../mfc/reference/crecordview-class.md) ou [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objet.  
   
- *value*  
+ *valeur*  
  Une référence à un membre de données de champ dans le type `CRecordset` ou `CDaoRecordset` objet.  
   
  `pRecordset`  
  Un pointeur vers le [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objet avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lors du déplacement des données à partir de l’ensemble d’enregistrements au contrôle, cette fonction affecte la valeur spécifiée dans la position de défilement du contrôle de barre de défilement *valeur*. Sur un transfert à partir de l’ensemble d’enregistrements pour le contrôle, si le champ de recordset est Null, le contrôle de barre de défilement est défini sur 0. Sur un transfert à partir du contrôle vers le recordset, si le contrôle est vide, la valeur du champ de jeu d’enregistrements est 0.  
   
  Utilisez la première version, si vous travaillez avec les classes ODBC. Utilisez la deuxième version si vous travaillez avec les classes DAO.  
@@ -438,7 +439,7 @@ void AFXAPI DDX_FieldScroll(
 ### <a name="example"></a>Exemple  
  Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. Les appels à `DDX_FieldScroll` serait similaire.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdao.h  
 
   ## <a name="nameddxfieldslidera--ddxfieldslider"></a>nom = « ddx_fieldslider » ></a> DDX_FieldSlider
@@ -465,13 +466,13 @@ void AFXAPI DDX_FieldSlider(
  `nIDC`  
  L’ID de ressource du contrôle slider.  
   
- *value*  
+ *valeur*  
  Une référence à la valeur à échanger. Ce paramètre contient ou sera utilisé pour définir la position de curseur de position actuelle du contrôle slider.  
   
  `pRecordset`  
  Un pointeur vers l’associée `CRecordset` ou `CDaoRecordset` objet avec lequel les données sont échangées.  
    
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lors du déplacement des données à partir de l’ensemble d’enregistrements pour le curseur, cette fonction affecte la valeur spécifiée dans la position du curseur *valeur*. Sur un transfert à partir de l’ensemble d’enregistrements pour le contrôle, si le champ de recordset est Null, la position du contrôle de curseur est définie sur 0. Sur le transfert du contrôle vers le recordset, si le contrôle est vide, la valeur du champ de recordset est 0.  
   
  `DDX_FieldSlider`ne pas échanger les informations de plage avec des contrôles slider capables de définir une plage plutôt que simplement une position.  
@@ -483,7 +484,7 @@ void AFXAPI DDX_FieldSlider(
 ### <a name="example"></a>Exemple  
  Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. Les appels à `DDX_FieldSlider` serait similaire.  
    
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdao.h  
    
 ### <a name="see-also"></a>Voir aussi  
@@ -609,13 +610,13 @@ void AFXAPI DDX_FieldText(
  `nIDC`  
  L’ID d’un contrôle dans le [CRecordView](../../mfc/reference/crecordview-class.md) ou [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objet.  
   
- *value*  
+ *valeur*  
  Une référence à un membre de données de champ dans le type `CRecordset` ou `CDaoRecordset` objet. Le type de données de valeur dépend des versions surchargées de `DDX_FieldText` vous utilisez.  
   
  `pRecordset`  
  Un pointeur vers le [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objet avec lequel les données sont échangées. Ce pointeur permet `DDX_FieldText` pour détecter et définir des valeurs Null.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objets, `DDX_FieldText` gère également le transfert [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), et [COleCurrency](../../mfc/reference/colecurrency-class.md) valeurs. Un contrôle de zone d’édition vide indique une valeur Null. Sur un transfert à partir de l’ensemble d’enregistrements pour le contrôle, si le champ de recordset est Null, la zone d’édition est définie sur une valeur vide. Sur un transfert à partir du contrôle vers le recordset, si le contrôle est vide, le champ de jeu d’enregistrements est défini avec la valeur Null.  
   
  Utilisez les versions avec [CRecordset](../../mfc/reference/crecordset-class.md) paramètres si vous travaillez avec les classes ODBC. Utilisez les versions avec [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) paramètres si vous travaillez avec les classes DAO.  
@@ -628,7 +629,7 @@ void AFXAPI DDX_FieldText(
  [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]  
 
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdao.h  
     
 ## <a name="see-also"></a>Voir aussi  

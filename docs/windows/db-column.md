@@ -15,11 +15,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8fda1cfd5b23ae94da6be070e59add2854fb2687
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5fe2d3c5edb4b90676c3880ae422c1fb507cd164
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dbcolumn"></a>db_column
 Lie une colonne spécifiée à une variable dans l’ensemble de lignes.  
@@ -62,7 +65,7 @@ Lie une colonne spécifiée à une variable dans l’ensemble de lignes.
  *longueur* (facultatif)  
  Une variable de membre utilisée pour contenir la taille de la colonne en octets.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **db_column** lie la colonne de table spécifié à une variable dans l’ensemble de lignes. Délimite les données membres qui peuvent être utilisées dans OLE DB `IAccessor`-en fonction de liaison. Cet attribut définit le mappage de colonnes normalement défini à l’aide de macros de consommateur OLE DB [BEGIN_COLUMN_MAP](../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../data/oledb/end-column-map.md), et [COLUMN_ENTRY](../data/oledb/column-entry.md). Ces manipulent OLE DB [structure DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) pour lier la colonne spécifiée. Chaque membre que vous marquez avec la **db_column** attribut occupera une entrée dans le mappage de colonne sous la forme d’une entrée de colonne. Par conséquent, vous appelez cet attribut sur lequel vous devez placer le mappage de colonnes, autrement dit, dans la classe de commande ou de table.  
   
  Utilisez **db_column** conjointement avec l’option le [db_table](../windows/db-table.md) ou [db_command](../windows/db-command.md) attributs.  
@@ -109,7 +112,7 @@ class CProducts {
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -117,8 +120,8 @@ class CProducts {
 |-|-|  
 |**S'applique à**|**classe**, `struct`, membre, méthode|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

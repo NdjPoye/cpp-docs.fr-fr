@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74b5badf3b65ecbc9842202bdc5bcfc31b5b189f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d43ed06797ed79942a43612ab4c9ae774c4fcf17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="maxis"></a>max_is
 Désigne la valeur maximale pour un index de tableau valide.  
@@ -37,10 +40,10 @@ Désigne la valeur maximale pour un index de tableau valide.
  *expression*  
  Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont autorisées.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **max_is** attribut C++ a les mêmes fonctionnalités que le [max_is](http://msdn.microsoft.com/library/windows/desktop/aa367074) attribut MIDL.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -48,7 +51,7 @@ Désigne la valeur maximale pour un index de tableau valide.
 |-|-|  
 |**S'applique à**|Champ `struct` ou **union**, paramètre de l’interface, méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
+|**Attributs requis**|Aucun.|  
 |**Attributs non valides**|**size_is**|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  

@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 03c88c5550bf5e7a54269a3ea521cd1767d50a7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb2fdb202c9f52b941fa20877c11a7f97e1b5c9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthroughs-mfc"></a>Procédures pas à pas (MFC)
 Cette section contient des articles qui vous guideront dans diverses tâches associées aux nouvelles fonctionnalités de la bibliothèque MFC.  

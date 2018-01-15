@@ -6,16 +6,43 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- valarray/std::operator!=
+- valarray/std::operator%
+- valarray/std::operator&amp;
+- valarray/std::operator&amp;&amp;
+- valarray/std::operator&gt;
+- valarray/std::operator&gt;&gt;
+- valarray/std::operator&gt;=
+- valarray/std::operator&lt;
+- valarray/std::operator&lt;&lt;
+- valarray/std::operator&lt;=
+- valarray/std::operator*
+- valarray/std::operator+
+- valarray/std::operator-
+- valarray/std::operator/
+- valarray/std::operator==
+- valarray/std::operator^
+- valarray/std::operator|
+- valarray/std::operator||
+dev_langs: C++
 ms.assetid: 8a53562c-90ab-4eb3-85d3-ada5259d90b0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: aa730db3fd5e9a3ea4919bb255d49532f7440981
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords:
+- std::operator!= (valarray), std::operator&amp; (valarray)
+- std::operator&amp;&amp; (valarray)
+- std::operator&gt; (valarray)
+- std::operator&gt;&gt; (valarray)
+- std::operator&gt;= (valarray)
+- std::operator&lt; (valarray)
+- std::operator&lt;&lt; (valarray)
+- std::operator&lt;= (valarray), std::operator== (valarray)
+ms.openlocfilehash: b422f33addb61eed4ce04eeef74a76a597f799ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt;, opérateurs
 ||||  
@@ -64,7 +91,7 @@ operator!=(
   
 - **false** si les éléments correspondants ne sont pas inégaux.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le premier opérateur de modèle retourne un objet de classe [valarray\<bool >](../standard-library/valarray-bool-class.md), chacun des dont les éléments `I` est `left[I] != right[I]`.  
   
  Le deuxième opérateur de modèle stocke dans l’élément `I` `left[I] != right`.  
@@ -231,8 +258,8 @@ operator&(
 ### <a name="return-value"></a>Valeur de retour  
  Un valarray dont les éléments sont la combinaison d’élément de l’opération AND au niveau du bit de `left` et `right`.  
   
-### <a name="remarks"></a>Remarques  
- Une opération de bits peut uniquement servir à manipuler des bits dans les types de données `char` et `int`, et leurs variantes, et non pas sur des types de données plus complexes **float**, **double**, **longdouble**, `void``bool` ou autres.  
+### <a name="remarks"></a>Notes  
+ Une opération de bits peut uniquement servir à manipuler des bits dans les types de données `char` et `int`, et leurs variantes, et non pas sur des types de données plus complexes **float**, **double**, **longdouble**, `void`, `bool` ou autres.  
   
  L’opérateur de bits **AND** a la même table de vérité que l’opérateur logique **AND**, mais il s’applique au type de données au niveau des bits individuels. L’opérateur [operator&&](../standard-library/valarray-operators.md#amp) s’applique au niveau d’un élément et compte toutes les valeurs différentes de zéro comme true : le résultat est un valarray de valeurs booléennes. L’opérateur de bits **ANDoperator&**, en revanche, peut fournir un valarray de valeurs autres que 0 et 1, selon le résultat de l’opération de bits.  
   
@@ -316,7 +343,7 @@ operator&&(
 ### <a name="return-value"></a>Valeur de retour  
  Un valarray dont les éléments sont de type booléen et la combinaison d’élément de la logique **AND** opération de `left` et `right`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’opérateur logique **ANDoperator&&** s’applique au niveau d’un élément et compte toutes les valeurs différentes de zéro comme true : le résultat est un valarray de valeurs booléennes. La version au niveau du bit de l’opérateur **AND**, [operator&,](../standard-library/valarray-operators.md#op_amp), en revanche, peut fournir un valarray de valeurs autres que 0 et 1, selon le résultat de l’opération de bits.  
   
 ### <a name="example"></a>Exemple  
@@ -1073,7 +1100,7 @@ operator-(
 ### <a name="return-value"></a>Valeur de retour  
  Un valarray dont les éléments sont la différence de `left` et `right`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Terminologie arithmétique utilisée pour décrire une soustraction :  
   
  différence = diminuende – diminuteur  
@@ -1158,7 +1185,7 @@ operator/(
 ### <a name="return-value"></a>Valeur de retour  
  Un valarray dont les éléments sont le quotient de `left` divisé par `right`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Terminologie arithmétique utilisée pour décrire une division :  
   
  quotient = dividende / diviseur  
@@ -1247,7 +1274,7 @@ operator==(
   
 - **false** si les éléments correspondants ne sont pas égaux.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le premier opérateur de modèle retourne un objet de classe [valarray\<bool >](../standard-library/valarray-bool-class.md), chacun des dont les éléments `I` est `left[I] == right[I]`. Le deuxième opérateur de modèle stocke dans l’élément `I` `left[I] == right`. Le troisième opérateur de modèle stocke dans l’élément `I` `left == right[I]`.  
   
 ### <a name="example"></a>Exemple  
@@ -1330,8 +1357,8 @@ operator^(
 ### <a name="return-value"></a>Valeur de retour  
  Un valarray dont les éléments sont la combinaison d’élément de l’opérateur de bits **XOR** opération de `left` et `right`.  
   
-### <a name="remarks"></a>Remarques  
- Une opération de bits peut uniquement servir à manipuler des bits dans les types de données `char` et `int`, et leurs variantes, et non pas sur des types de données plus complexes **float**, **double**, `long double`, `void``bool` ou autres.  
+### <a name="remarks"></a>Notes  
+ Une opération au niveau du bit utilisable uniquement pour manipuler les bits de `char` et `int` des types de données et de variantes et non sous **float**, **double**, `long double`, `void`, `bool` ou d’autres types de données plus complexes.  
   
  L’opération de bits `OR` ( **XOR**) exclusive a la sémantique suivante : étant donné les bits *b*1 et *b*2, *b*1 **XOR** *b*2 a la valeur **true** si exactement un des bits a la valeur true ; **false** si les deux bits ont la valeur false ou si les deux bits ont la valeur true.  
   
@@ -1419,7 +1446,7 @@ operator|(
 ### <a name="return-value"></a>Valeur de retour  
  Un valarray dont les éléments sont la combinaison d’élément de l’opérateur de bits `OR` opération de `left` et `right`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une opération de bits peut uniquement servir à manipuler des bits dans les types de données `char` et `int`, et leurs variantes, et non pas sur des types de données plus complexes **float**, **double**, **longdouble**, `void`, `bool` ou autres.  
   
  L’opérateur de bits OR a la même table de vérité que l’opérateur logique `OR`, mais il s’applique au type de données au niveau des bits individuels. Étant donné les bits *b*1 et *b*2, *b*1 `OR` *b*2 a la valeur **true** si au moins un des bits a la valeur true ou **false** si les deux bits ont la valeur false. L’opérateur logique `OR`[operator&#124;&#124;](../standard-library/valarray-operators.md#op_lor) s’applique au niveau d’un élément et compte toutes les valeurs différentes de zéro comme **true** : le résultat est un valarray de valeurs booléennes. L’opérateur de bits OR `operator|`, en revanche, peut fournir un valarray de valeurs autres que 0 et 1, selon le résultat de l’opération de bits.  
@@ -1508,8 +1535,8 @@ operator||(
 ### <a name="return-value"></a>Valeur de retour  
  Un valarray dont les éléments sont de type `bool` et sont une combinaison de l’opération OR logique d’élément par élément `left` et `right`.  
   
-### <a name="remarks"></a>Remarques  
- L’opérateur logique `OR``operator||` s’applique au niveau d’un élément et compte toutes les valeurs différentes de zéro comme **true** : le résultat est un valarray de valeurs booléennes. La version au niveau du bit de l’opérateur `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or), en revanche, peut fournir un valarray de valeurs autres que 0 et 1, selon le résultat de l’opération de bits.  
+### <a name="remarks"></a>Notes  
+ La logique `OR` `operator||` s’applique au niveau élément, en prenant en compte toutes les valeurs différentes de zéro en tant que **true**, et le résultat est un valarray de valeurs booléennes. La version au niveau du bit de l’opérateur `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or), en revanche, peut fournir un valarray de valeurs autres que 0 et 1, selon le résultat de l’opération de bits.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1564,5 +1591,4 @@ The element-by-element result of the logical OR operator|| is the
   
 ## <a name="see-also"></a>Voir aussi  
  [\<valarray>](../standard-library/valarray.md)
-
 

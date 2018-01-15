@@ -1,30 +1,31 @@
 ---
-title: "D&#233;passement de capacit&#233; du tampon | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dépassements de capacité du tampon (C++)"
-  - "mémoires tampons (C++), tailles de caractères"
-  - "MBCS (C++), dépassement de capacité du tampon"
+title: "Dépassements de mémoire tampon | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- buffers [C++], character sizes
+- buffer overflows [C++]
+- MBCS [C++], buffer overflow
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
-caps.latest.revision: 8
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4bfad181ee7c6b702af87bc8ff0a49ccfb42cb65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# D&#233;passement de capacit&#233; du tampon
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Les différentes tailles de caractères peuvent poser problème lorsque des caractères sont placés dans le tampon.  Dans le code suivant, les caractères sont copiés d'une chaîne `sz` dans un tampon `rgch` :  
+# <a name="buffer-overflow"></a>Dépassement de capacité du tampon
+Différentes tailles de caractères peut provoquer des problèmes lorsque vous placez des caractères dans une mémoire tampon. Prenons le code suivant, qui copie les caractères d’une chaîne, `sz`, dans une mémoire tampon, `rgch`:  
   
 ```  
 cb = 0;  
@@ -32,7 +33,7 @@ while( cb < sizeof( rgch ) )
     rgch[ cb++ ] = *sz++;  
 ```  
   
- La question qui se pose est la suivante : Le dernier octet copié est\-il un octet de tête ?  Le code suivant ne résout pas ce problème car il peut entraîner un dépassement de capacité du tampon :  
+ La question est : a été le dernier octet copié un octet de tête ? Les éléments suivants ne résout pas le problème, car il peut présenter un dépassement du tampon :  
   
 ```  
 cb = 0;  
@@ -44,7 +45,7 @@ while( cb < sizeof( rgch ) )
 }  
 ```  
   
- L'appel `_mbccpy` essaie de copier le caractère, qu'il soit codé sur un ou deux octets.  Mais il ne tient pas compte du fait que le dernier caractère copié ne tient pas dans le tampon si le caractère est codé sur deux octets.  La solution correcte est :  
+ Le `_mbccpy` appel tente d’obtenir le résultat correct, copier le caractère, s’il s’agit de 1 ou 2 octets. Mais il ne prend pas en compte que le dernier caractère copié répondent pas forcément à la mémoire tampon si le caractère est égale à 2 octets. La solution correcte est :  
   
 ```  
 cb = 0;  
@@ -56,11 +57,11 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }  
 ```  
   
- Ce code teste le dépassement de capacité du tampon dans un test de boucle, en utilisant `_mbclen` pour tester la taille du caractère en cours vers lequel pointe `sz`.  En appelant la fonction `_mbsnbcpy`, vous pouvez remplacer le code dans la boucle `while` par une seule ligne de code.  Par exemple :  
+ Ce code teste le dépassement de capacité de mémoire tampon possible dans la boucle de test, à l’aide de `_mbclen` pour tester la taille du caractère en cours vers lequel pointé `sz`. En effectuant un appel à la `_mbsnbcpy` (fonction), vous pouvez remplacer le code dans le `while` boucle avec une seule ligne de code. Exemple :  
   
 ```  
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Conseils de programmation MBCS](../text/mbcs-programming-tips.md)

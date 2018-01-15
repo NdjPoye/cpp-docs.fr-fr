@@ -28,7 +28,7 @@ f1_keywords:
 - AFXTEMPL/CArray::SetAt
 - AFXTEMPL/CArray::SetAtGrow
 - AFXTEMPL/CArray::SetSize
-dev_langs: C++
+dev_langs: CPP
 helpviewer_keywords:
 - CArray [MFC], CArray
 - CArray [MFC], Add
@@ -53,11 +53,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4087cfb584059923e4e05620c1f33d3cc11c3bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 85e7bf9518ad96e5a67f2d19d3729e5813d3f84d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="carray-class"></a>CArray (classe)
 Prend en charge les tableaux qui sont semblables aux tableaux C, mais peuvent réduire et dynamiquement en fonction des besoins de la croissance.  
@@ -112,7 +113,7 @@ class CArray : public CObject
 |----------|-----------------|  
 |[operator&#91;&#93;](#operator_at)|Définit ou obtient l'élément au niveau de l'index spécifié.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Index de tableau commencent toujours à la position 0. Vous pouvez décider de corriger la limite supérieure ou activer le tableau développer lorsque vous ajoutez des éléments au-delà d’actuel lié. Mémoire est allouée de façon contiguë à la limite supérieure, même si certains éléments sont null.  
   
 > [!NOTE]
@@ -136,7 +137,7 @@ class CArray : public CObject
   
  `CArray`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  `Header:`afxtempl.h  
   
 ##  <a name="add"></a>CArray::Add  
@@ -156,7 +157,7 @@ INT_PTR Add(ARG_TYPE newElement);
 ### <a name="return-value"></a>Valeur de retour  
  Index de l’élément ajouté.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si [SetSize](#setsize) a été utilisé avec un `nGrowBy` valeur supérieure à 1, puis de mémoire supplémentaire peut-être être alloué. Toutefois, la limite supérieure augmente de 1 uniquement.  
   
 ### <a name="example"></a>Exemple  
@@ -176,7 +177,7 @@ INT_PTR Append(const CArray& src);
 ### <a name="return-value"></a>Valeur de retour  
  L’index du premier élément ajouté.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les tableaux doivent être du même type.  
   
  Si nécessaire, **Append** peut allouer de mémoire supplémentaire pour prendre en compte les éléments ajoutés dans le tableau.  
@@ -191,7 +192,7 @@ INT_PTR Append(const CArray& src);
 CArray();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le module s’étend à un élément à la fois.  
   
 ### <a name="example"></a>Exemple  
@@ -208,7 +209,7 @@ void Copy(const CArray& src);
  *src*  
  Source des éléments à copier dans un tableau.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction membre pour remplacer les éléments d’un tableau avec les éléments d’un autre tableau.  
   
  **Copie** ne libère pas la mémoire ; Cependant, si nécessaire, **copie** peut allouer de mémoire supplémentaire pour prendre en compte les éléments copiés dans le tableau.  
@@ -231,7 +232,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à un élément de tableau.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il est utilisé pour implémenter l’opérateur d’assignation de gauche pour les tableaux.  
   
 ### <a name="example"></a>Exemple  
@@ -244,7 +245,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 void FreeExtra();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction a aucun effet sur la taille ou la limite supérieure du tableau.  
   
 ### <a name="example"></a>Exemple  
@@ -268,7 +269,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
 ### <a name="return-value"></a>Valeur de retour  
  L’élément de tableau actuellement à cet index.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En passant une valeur négative ou une valeur supérieure à la valeur retournée par `GetUpperBound` entraîne un échec d’assertion.  
   
 ### <a name="example"></a>Exemple  
@@ -284,7 +285,7 @@ INT_PTR GetCount() const;
 ### <a name="return-value"></a>Valeur de retour  
  Nombre d’éléments dans le tableau.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette méthode pour récupérer le nombre d’éléments dans le tableau. Étant donné que les index sont de base zéro, la taille est supérieure à l’index le plus élevé de 1. Appel de cette méthode génère le même résultat que la [CArray::GetSize](#getsize) (méthode).  
   
 ### <a name="example"></a>Exemple  
@@ -305,7 +306,7 @@ TYPE* GetData();
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un élément de tableau.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si aucun élément n’est disponible, `GetData` retourne une valeur null.  
   
  Lors de l’accès direct aux éléments d’un tableau, vous pouvez travailler plus rapidement, soyez prudent lors de l’appel `GetData`; des erreurs vous rendre directement affectent les éléments de votre tableau.  
@@ -320,7 +321,7 @@ TYPE* GetData();
 INT_PTR GetSize() const;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Étant donné que les index sont de base zéro, la taille est supérieure à l’index le plus élevé de 1. Appel de cette méthode génère le même résultat que la [CArray::GetCount](#getcount) (méthode).  
   
 ### <a name="example"></a>Exemple  
@@ -333,7 +334,7 @@ INT_PTR GetSize() const;
 INT_PTR GetUpperBound() const;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Étant donné que les index de tableau sont de base zéro, cette fonction retourne une valeur 1 moins `GetSize`.  
   
  La condition **() de GetUpperBound** = -1 indique que le tableau ne contient aucun élément.  
@@ -374,7 +375,7 @@ void InsertAt(
  `pNewArray`  
  Un autre tableau qui contient les éléments à ajouter à ce tableau.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans le processus, il se déplace (en augmentant l’index) l’élément existant à cet index et il se déplace tous les éléments au-dessus de lui.  
   
  La deuxième version insère tous les éléments d’une autre `CArray` collection, en commençant à la `nStartIndex` position.  
@@ -409,7 +410,7 @@ const TYPE& operator[](int_ptr nindex) const;
  `nIndex`  
  Index de l’élément auquel accéder.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le premier opérateur, est appelée pour les tableaux qui ne sont pas **const**, peut être utilisé sur la droite (r-value) ou sur la gauche (l-value) d’une instruction d’assignation. La seconde, appelée pour **const** tableaux, peut être utilisé uniquement sur la droite.  
   
  La version Debug de la bibliothèque déclare si l’indice (soit sur le côté gauche ou droit d’une instruction d’assignation) est hors limites.  
@@ -438,7 +439,7 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
  `nCount`  
  Nombre d’éléments dans le tableau ancien.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `pNewData`est toujours suffisamment grande pour contenir tous les `pData` éléments.  
   
  Le [CArray](../../mfc/reference/carray-class.md) implémentation utilise cette méthode pour copier les anciennes données à une nouvelle mémoire tampon lors de la baie doit augmenter ou réduire (lorsque [SetSize](#setsize) ou [FreeExtra](#freeextra) sont appelés). L’implémentation par défaut copie uniquement les données.  
@@ -452,7 +453,7 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si le tableau est déjà vide, la fonction continue à fonctionner.  
   
 ### <a name="example"></a>Exemple  
@@ -474,7 +475,7 @@ void RemoveAt(
  `nCount`  
  Nombre d'éléments à supprimer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Dans le processus, il se déplace vers le bas tous les éléments situés au-dessus du ou des éléments supprimés. Il décrémente la limite supérieure limite du tableau, mais ne libère pas de mémoire.  
   
  Si vous essayez de supprimer plus d’éléments contenus dans le tableau ci-dessus le point de suppression, la version Debug de la bibliothèque déclare.  
@@ -499,7 +500,7 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
  `newElement`  
  La nouvelle valeur d’élément doit être stocké à la position spécifiée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `SetAt`n’entraîne pas le tableau de croître. Utilisez [SetAtGrow](#setatgrow) si vous souhaitez que le tableau à croître automatiquement.  
   
  Vous devez vous assurer que votre valeur d’index représente une position valide dans le tableau. Si elle est hors limites, la version Debug de la bibliothèque déclare.  
@@ -524,7 +525,7 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
  `newElement`  
  L’élément à ajouter à ce tableau. A **NULL** la valeur est autorisée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le tableau est étendu automatiquement si nécessaire (autrement dit, la limite supérieure est ajustée pour prendre en compte le nouvel élément).  
   
 ### <a name="example"></a>Exemple  
@@ -546,7 +547,7 @@ void SetSize(
  `nGrowBy`  
  Le nombre minimal d’emplacements d’élément pour allouer si une augmentation de la taille n’est nécessaire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si la nouvelle taille est inférieure à l’ancienne taille, puis le tableau est tronqué et toute la mémoire inutilisée est libérée.  
   
  Utilisez cette fonction pour définir la taille de votre tableau avant de commencer à l’aide du tableau. Si vous n'utilisez pas `SetSize`, l'ajout d'éléments à votre tableau risque d'entraîner de fréquentes opérations de réallocation et de copie de ce dernier. Les opérations fréquentes de réallocation et de copie sont inefficaces et peuvent fragmenter la mémoire.  

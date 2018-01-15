@@ -1,39 +1,38 @@
 ---
-title: "Fichiers d&#39;entr&#233;e LIB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Lib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fichiers d'entrée, LIB"
+title: "Fichiers d’entrée LIB | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Lib
+dev_langs: C++
+helpviewer_keywords: input files, LIB
 ms.assetid: e1236f0d-cd90-446b-b900-f311f456085c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5fea7a8700eb2f5a5deee7afd05af8b0de0e4e71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Fichiers d&#39;entr&#233;e LIB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les fichiers d'entrée attendus par LIB dépendent du mode dans lequel celui\-ci est utilisé, comme le montre le tableau suivant.  
+# <a name="lib-input-files"></a>Fichiers d'entrée LIB
+Les fichiers d’entrée attendus par LIB dépendent du mode dans lequel il est utilisé, comme indiqué dans le tableau suivant.  
   
 |Mode|Entrée|  
-|----------|------------|  
-|Par défaut \(génération ou modification d'une bibliothèque\)|Fichiers objets \(.obj\) COFF, bibliothèques \(.lib\) COFF, fichiers objets \(.obj\) OMF \(Object Model Format\) 32 bits|  
-|Extraction d'un membre à l'aide de l'option \/EXTRACT|Bibliothèque \(.lib\) COFF|  
-|Génération d'un fichier d'exportation et d'une bibliothèque d'importation à l'aide de l'option \/DEF|Fichier de définition \(.def\) de module, fichiers objets \(.obj\) COFF, bibliothèques \(.lib\) COFF, fichiers objets \(.obj\) OMF 32 bits|  
+|----------|-----------|  
+|Par défaut (création ou modification d’une bibliothèque)|Objets (.obj) fichiers, COFF bibliothèques (.lib), fichiers objets (.obj) de Format OMF (Object Model) 32 bits|  
+|Extraction d’un membre avec /EXTRACT|Bibliothèque COFF (.lib)|  
+|Création d’une exportation de fichier et de bibliothèque avec /DEF d’importation|Fichier de définition de module (.def), fichiers objets (.obj) COFF, des bibliothèques (.lib) COFF, les fichiers objets (.obj) OMF 32 bits|  
   
 > [!NOTE]
->  Les bibliothèques OMF créées à l'aide de la version 16 bits de LIB ne peuvent pas être utilisées en tant qu'entrée dans la version 32 bits de LIB.  
+>  Bibliothèques OMF créés par la version 16 bits de LIB ne peut pas être utilisés comme entrée pour la version 32 bits de LIB.  
   
-## Voir aussi  
- [Vue d'ensemble de LIB](../../build/reference/overview-of-lib.md)
+## <a name="see-also"></a>Voir aussi  
+ [Vue d’ensemble de LIB](../../build/reference/overview-of-lib.md)

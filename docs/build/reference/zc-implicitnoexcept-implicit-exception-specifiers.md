@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 20789d226ace8ba41a9635f0039274b68d37922c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9af0a7a3a175699a4f4b738271fe0d4c5bbac4b2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept (spécificateurs d'exceptions implicites)
 Lorsque le **/Zc : implicitnoexcept** est spécifiée, le compilateur ajoute implicite [noexcept](../../cpp/noexcept-cpp.md) spécificateur d’exception pour les fonctions membres spéciales définies par le compilateur et destructeurs définis par l’utilisateur et annulateurs d’allocation. Par défaut, **/Zc : implicitnoexcept** est activé pour le rendre conforme à la norme C ++ 11 ISO. La désactivation de cette option désactive `noexcept` implicite sur les annulateurs d'allocation et les destructeurs définis par l'utilisateur et sur les fonctions membres spéciales définies par le compilateur.  
@@ -35,7 +36,7 @@ Lorsque le **/Zc : implicitnoexcept** est spécifiée, le compilateur ajoute im
   
 #### <a name="parameters"></a>Paramètres  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Par défaut et si **/Zc : implicitnoexcept** est spécifié, le compilateur suit la section 15.4 de la norme ISO C ++ 11 standard et ajoute implicitement un `noexcept` à chaque spécificateur d’exception déclarée implicitement ou explicitement par défaut fonction membre spéciale : le constructeur par défaut, le constructeur de copie, constructeur de déplacement, destructeur, opérateur d’assignation de copie ou opérateur d’assignation de déplacement et chaque fonction destructeur ou annulateur d’allocation défini par l’utilisateur. Un annulateur d'allocation défini par l'utilisateur possède un spécificateur d'exception `noexcept(true)` implicite. Pour les destructeurs définis par l'utilisateur, le spécificateur d'exception implicite est `noexcept(true)` à moins qu'une classe de base ou une classe membre contenue possède un destructeur qui n'est pas `noexcept(true)`. Pour les fonctions membres spéciales générées par le compilateur, si une fonction quelconque directement appelée par cette fonction est effectivement `noexcept(false)`, le spécificateur d'exception implicite est `noexcept(false)`. Sinon, le spécificateur d'exception implicite est `noexcept(true)`.  
   
  Le compilateur ne génère pas un spécificateur d'exception implicite pour les fonctions déclarées à l'aide de spécificateurs `noexcept` ou `throw` explicites ou d'un attribut `__declspec(nothrow)`.  

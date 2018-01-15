@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -38,35 +37,19 @@ f1_keywords:
 - ATLSECURITY/ATL::CSecurityDesc::SetOwner
 - ATLSECURITY/ATL::CSecurityDesc::SetSacl
 - ATLSECURITY/ATL::CSecurityDesc::ToString
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSecurityDesc class
+dev_langs: C++
+helpviewer_keywords: CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 334081ba67c3b034c4b8170b095fcd77d712dda6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b199565221173d7664600f2869e079c2f1c95aae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csecuritydesc-class"></a>Classe de CSecurityDesc
 Cette classe est un wrapper pour le **SECURITY_DESCRIPTOR** structure.  
@@ -106,7 +89,7 @@ class CSecurityDesc
 |[CSecurityDesc::IsDaclProtected](#isdaclprotected)|Détermine si la liste DACL est configurée pour empêcher toute modification.|  
 |[CSecurityDesc::IsGroupDefaulted](#isgroupdefaulted)|Détermine si l’identificateur de sécurité de groupe du descripteur de sécurité (SID) a été défini par défaut.|  
 |[CSecurityDesc::IsOwnerDefaulted](#isownerdefaulted)|Détermine si le SID du propriétaire du descripteur de sécurité a été défini par défaut.|  
-|[CSecurityDesc::IsSaclAutoInherited](#issaclautoinherited)|Détermine si la liste (SACL) est configuré pour prendre en charge la propagation automatique.|  
+|[CSecurityDesc::IsSaclAutoInherited](#issaclautoinherited)|Détermine si la liste SACL est configurée pour prendre en charge la propagation automatique.|  
 |[CSecurityDesc::IsSaclDefaulted](#issacldefaulted)|Détermine si le descripteur de sécurité est configuré avec une liste (SACL) par défaut.|  
 |[CSecurityDesc::IsSaclPresent](#issaclpresent)|Détermine si le descripteur de sécurité contient une liste (SACL).|  
 |[CSecurityDesc::IsSaclProtected](#issaclprotected)|Détermine si la liste SACL est configurée pour empêcher toute modification.|  
@@ -127,14 +110,14 @@ class CSecurityDesc
 |[SECURITY_DESCRIPTOR const de CSecurityDesc::operator *](#operator_const_security_descriptor__star)|Retourne un pointeur vers le **SECURITY_DESCRIPTOR** structure.|  
 |[CSecurityDesc::operator =](#operator_eq)|Opérateur d'assignation.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **SECURITY_DESCRIPTOR** structure contient les informations de sécurité associées à un objet. Applications utilisent cette structure pour définir et d’interroger l’état de sécurité d’un objet. Voir aussi [AtlGetSecurityDescriptor](security-global-functions.md#atlgetsecuritydescriptor).  
   
  Les applications ne doivent pas modifier le **SECURITY_DESCRIPTOR** structure directement et à la place doit utiliser les méthodes de classe fournis.  
   
- Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le Kit de développement logiciel Windows.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h  
   
 ##  <a name="csecuritydesc"></a>CSecurityDesc::CSecurityDesc  
@@ -150,7 +133,7 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
  `rhs`  
  Le `CSecurityDesc` objet ou **SECURITY_DESCRIPTOR** à attribuer à la nouvelle structure `CSecurityDesc` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `CSecurityDesc` objet peut éventuellement être créé à l’aide un **SECURITY_DESCRIPTOR** précédemment définie ou structure `CSecurityDesc` objet.  
   
 ##  <a name="dtor"></a>CSecurityDesc :: ~ CSecurityDesc  
@@ -160,7 +143,7 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 virtual ~CSecurityDesc() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le destructeur libère toutes les ressources attribuées.  
   
 ##  <a name="fromstring"></a>CSecurityDesc::FromString  
@@ -177,7 +160,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite. Lève une exception en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La chaîne peut être créée à l’aide de [CSecurityDesc::ToString](#tostring). Convertir le descripteur de sécurité dans une chaîne facilite stocker et transmettre.  
   
  Cette méthode est uniquement disponible avec Windows 2000 et versions ultérieures, car il appelle [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
@@ -196,7 +179,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true si la méthode réussit, false en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode est uniquement explicite lors de l’utilisation de Windows 2000 ou version ultérieure, car il appelle [GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647).  
   
 ##  <a name="getdacl"></a>CSecurityDesc::GetDacl  
@@ -333,7 +316,7 @@ bool IsDaclPresent() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true si le descripteur de sécurité contient une liste DACL.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si cet indicateur n’est pas défini, ou si cet indicateur est défini et que la liste DACL est NULL, le descripteur de sécurité autorise un accès complet à tout le monde.  
   
  Cet indicateur est utilisé pour contenir les informations de sécurité spécifiées par un appelant jusqu'à ce que le descripteur de sécurité est associé à un objet sécurisable. Une fois que le descripteur de sécurité est associé à un objet sécurisable, l’indicateur SE_DACL_PRESENT est toujours définie dans le contrôle de descripteur de sécurité.  
@@ -353,7 +336,7 @@ bool IsDaclProtected() const throw();
 ### <a name="remarks"></a>Notes  
  Pour définir cet indicateur, utilisez la [CSecurityDesc::SetDacl](#setdacl) (méthode).  
   
- Cette méthode est uniquement explicite pour Windows 2000 ou version ultérieure, seul Windows 2000 prend en charge la propagation automatique d’ACE pouvant être héritées.  
+ Cette méthode est uniquement explicite pour Windows 2000 ou version ultérieure, uniquement à Windows 2000 prend en charge la propagation automatique d’ACE pouvant être héritées.  
   
 ##  <a name="isgroupdefaulted"></a>CSecurityDesc::IsGroupDefaulted  
  Détermine si l’identificateur de sécurité de groupe du descripteur de sécurité (SID) a été défini par défaut.  
@@ -404,7 +387,7 @@ bool IsSaclDefaulted() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true si le descripteur de sécurité contient une liste (SACL), par défaut.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cet indicateur peut affecter la façon dont le système traite la liste SACL, en ce qui concerne l’héritage de contrôle d’accès (ACE) d’entrée. Le système ignore cet indicateur si l’indicateur SE_SACL_PRESENT n’est pas définie.  
   
  Pour définir cet indicateur, utilisez la [CSecurityDesc::SetSacl](#setsacl) (méthode).  
@@ -430,12 +413,12 @@ bool IsSaclProtected() const throw();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur true si la liste (SACL) est configuré pour empêcher le descripteur de sécurité d’être modifié par des entrées de contrôle d’accès pouvant être héritées (ACE). Sinon, retourne False.  
+ Retourne la valeur true si la liste SACL est configurée pour empêcher le descripteur de sécurité d’être modifié par des entrées de contrôle d’accès pouvant être héritées (ACE). Sinon, retourne False.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour définir cet indicateur, utilisez la [CSecurityDesc::SetSacl](#setsacl) (méthode).  
   
- Cette méthode est uniquement explicite pour Windows 2000 ou version ultérieure, seul Windows 2000 prend en charge la propagation automatique d’ACE pouvant être héritées.  
+ Cette méthode est uniquement explicite pour Windows 2000 ou version ultérieure, uniquement à Windows 2000 prend en charge la propagation automatique d’ACE pouvant être héritées.  
   
 ##  <a name="isselfrelative"></a>CSecurityDesc::IsSelfRelative  
  Détermine si le descripteur de sécurité est au format auto-relatif.  
@@ -457,7 +440,7 @@ bool MakeAbsolute() throw(...);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true si la méthode réussit, false dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Un descripteur de sécurité dans le format absolu contient des pointeurs vers les informations qu’il contient, plutôt que les informations de lui-même. Un descripteur de sécurité au format auto-relatif contient les informations contenues dans un bloc contigu de mémoire. Dans un descripteur de sécurité auto-relatif un **SECURITY_DESCRIPTOR** structure démarre toujours les informations, mais le descripteur de sécurité d’autres composants peuvent suivre la structure dans n’importe quel ordre. Au lieu d’utiliser des adresses mémoire, les composants du descripteur de sécurité auto-relatif sont identifiées par à partir du début du descripteur de sécurité. Ce format est utile lorsqu’un descripteur de sécurité doit être stocké sur un disque ou transmis au moyen d’un protocole de communication. Pour plus d’informations, consultez [absolu et les descripteurs de sécurité Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
   
 ##  <a name="makeselfrelative"></a>CSecurityDesc::MakeSelfRelative  
@@ -543,7 +526,7 @@ inline void SetDacl(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il existe une différence importante entre vide et une liste DACL qui n’existe pas. Lorsqu’une liste DACL est vide, il ne contient aucune entrée de contrôle d’accès et sans droits d’accès ont été explicitement accordées. Par conséquent, l’accès à l’objet est refusé implicitement. Lorsqu’un objet n’a aucune liste DACL, en revanche, aucune protection n’est assignée à l’objet, et toute demande d’accès est accordé.  
   
 ##  <a name="setgroup"></a>CSecurityDesc::SetGroup  
@@ -622,7 +605,7 @@ bool ToString(
   
  Le `si` paramètre peut contenir les indicateurs SECURITY_INFORMATION suivants :  
   
-|Valeur|Signification|  
+|Value|Signification|  
 |-----------|-------------|  
 |OWNER_SECURITY_INFORMATION|Inclure le propriétaire.|  
 |GROUP_SECURITY_INFORMATION|Inclure le groupe principal.|  
@@ -640,4 +623,3 @@ bool ToString(
  [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
  [Fonctions globales de sécurité](../../atl/reference/security-global-functions.md)
-

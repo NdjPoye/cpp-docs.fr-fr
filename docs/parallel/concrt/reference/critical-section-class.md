@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,35 +17,19 @@ f1_keywords:
 - CONCRT/concurrency::critical_section::try_lock
 - CONCRT/concurrency::critical_section::try_lock_for
 - CONCRT/concurrency::critical_section::unlock
-dev_langs:
-- C++
-helpviewer_keywords:
-- critical_section class
+dev_langs: C++
+helpviewer_keywords: critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 58821589a4b7596b80179a77dfd6a5772531f053
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5421cf47214d4ceeb7f8388835cb7a1cc57110ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="criticalsection-class"></a>critical_section, classe
 Mutex non réentrant qui a explicitement connaissance du runtime d'accès concurrentiel.  
@@ -91,10 +74,10 @@ class critical_section;
 ## <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [des Structures de données de synchronisation](../../../parallel/concrt/synchronization-data-structures.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `critical_section`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -115,8 +98,8 @@ critical_section();
 ~critical_section();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Il est probable que le verrou n’est plus maintenu lorsque le destructeur s’exécute. Autoriser la section critique détruire avec le verrou toujours détenus résultats un comportement non défini.  
+### <a name="remarks"></a>Notes  
+ Il est probable que le verrou n’est plus maintenu lorsque le destructeur s’exécute. Autoriser la section critique détruire avec le verrou maintenu toujours résultats un comportement non défini.  
   
 ##  <a name="lock"></a>verrou 
 
@@ -126,8 +109,8 @@ critical_section();
 void lock();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Il est souvent plus sécurisé d’utiliser la [scoped_lock](#critical_section__scoped_lock_class) construction pour acquérir et libérer un `critical_section` objet une exception sûre.  
+### <a name="remarks"></a>Notes  
+ Il est souvent plus sécurisé d’utiliser la [scoped_lock](#critical_section__scoped_lock_class) construction pour acquérir et libérer un `critical_section` objet dans une exception sûre.  
   
  Si le verrou est déjà contenu par le contexte d’appel, un [improper_lock](improper-lock-class.md) exception sera levée.  
   
@@ -142,8 +125,8 @@ native_handle_type native_handle();
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à la section critique.  
   
-### <a name="remarks"></a>Remarques  
- Un `critical_section` objet n’est pas associé à un handle natif de plateforme spécifique pour le système d’exploitation Windows. La méthode retourne simplement une référence à l’objet lui-même.  
+### <a name="remarks"></a>Notes  
+ A `critical_section` objet n’est pas associé à un handle natif de plateforme spécifique pour le système d’exploitation Windows. La méthode retourne simplement une référence à l’objet lui-même.  
   
 ##  <a name="critical_section__scoped_lock_class"></a>critical_section::scoped_lock, classe  
  Un wrapper RAII sécurisé pour un `critical_section` objet.  
@@ -166,7 +149,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
   
 ##  <a name="critical_section__scoped_lock_dtor"></a>scoped_lock :: ~ scoped_lock 
 
- Détruit une `scoped_lock` de l’objet et libère la section critique fournie dans son constructeur.  
+ Détruit un `scoped_lock` de l’objet et libère la section critique fournie dans son constructeur.  
   
 ```
 ~scoped_lock();
@@ -193,7 +176,7 @@ bool try_lock_for(unsigned int _Timeout);
   
 ### <a name="parameters"></a>Paramètres  
  `_Timeout`  
- Le nombre de millisecondes à attendre avant l’expiration du délai.  
+ Le nombre de millisecondes à attendre avant l’expiration.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Si le verrou a été acquis, la valeur `true`; sinon, la valeur `false`.  
@@ -209,4 +192,3 @@ void unlock();
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   
  [reader_writer_lock, classe](reader-writer-lock-class.md)
-

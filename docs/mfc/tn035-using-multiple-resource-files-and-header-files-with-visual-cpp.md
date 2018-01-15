@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c03c642dfc3524f69f4aa8d1a397f750b42db27
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8d641b94664292eac70e9eba40f994de26337e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035 : utilisation de plusieurs fichiers de ressources et fichiers d’en-tête avec Visual C++
 > [!NOTE]
@@ -115,7 +116,7 @@ RESOURCE.H     AFXRES.H
   
  Si vous utilisez des ressources mises en forme personnalisés, vous pouvez les ajouter à RES\MYAPP.RC2 et les modifier dans l'éditeur de texte Visual C++.  
   
- AFXRES.RC et AFXPRINT.RC contiennent les ressources standard requises par certaines fonctionnalités de l'infrastructure. Comme RES\MYAPP.RC2, ces deux fichiers de ressources fournis par l'infrastructure sont inclus (avec #include) à la fin de MYAPP.RC et ils sont spécifiés dans les directives de compilation de la boîte de dialogue Set Includes. Ainsi, vous ne visualisez pas ou ne modifiez pas directement ces ressources d'infrastructure pendant que vous modifiez MYAPP.RC dans Visual C++, mais elles sont compilées dans le fichier .RES binaire et le fichier .EXE final de l'application. Pour plus d’informations sur les ressources framework standard, y compris les procédures de modification, consultez [Note technique 23](../mfc/tn023-standard-mfc-resources.md).  
+ AFXRES.RC et AFXPRINT.RC contiennent les ressources standard requises par certaines fonctionnalités de l'infrastructure. Comme RES\MYAPP.RC2, ces deux fichiers de ressources fournis par l’infrastructure sont inclus (avec #include) à la fin de MYAPP.RC et ils sont spécifiés dans les directives au moment de la compilation de la boîte de dialogue Set Includes. Ainsi, vous ne visualisez pas ou ne modifiez pas directement ces ressources d'infrastructure pendant que vous modifiez MYAPP.RC dans Visual C++, mais elles sont compilées dans le fichier .RES binaire et le fichier .EXE final de l'application. Pour plus d’informations sur les ressources framework standard, y compris les procédures de modification, consultez [Note technique 23](../mfc/tn023-standard-mfc-resources.md).  
   
  AFXRES.H définit des symboles standard, par exemple `ID_FILE_NEW`, utilisés par l'infrastructure et spécifiquement dans AFXRES.RC. AFXRES.H inclut également WINRES.H, qui contient un sous-ensemble de WINDOWS.H requis par les fichiers .RC générés par Visual C++, ainsi que par AFXRES.RC. Les symboles définis dans AFXRES.H sont disponibles lorsque vous modifiez le fichier de ressources d'application (MYAPP.RC). Par exemple, `ID_FILE_NEW` est utilisé pour l'élément Nouveau du menu Fichier dans la ressource de menu de MYAPP.RC. Vous ne pouvez pas modifier ou supprimer ces symboles définis par l'infrastructure.  
   
@@ -179,7 +180,7 @@ RES\MYAPP1.RC2  AFXRES.RC     RES\MYAPP2.RC2
   
  Visual C++ et le compilateur de ressources prennent en charge plusieurs fichiers .RC dans le même projet via des instructions #include d'un fichier .RC dans un autre. L'imbrication multiple est autorisée. Il existe différentes raisons de fractionner les ressources de votre projet en plusieurs fichiers .RC :  
   
--   Il est plus facile de gérer un grand nombre de ressources entre plusieurs membres d'équipe de projet si vous fractionnez les ressources en plusieurs fichiers .RC. Si vous utilisez un package de gestion de contrôle de code source pour extraire les fichiers et archiver les modifications, le fractionnement des ressources en plusieurs fichiers .RC offre un contrôle plus fin de la gestion des modifications apportées aux ressources.  
+-   Il est plus facile de gérer un grand nombre de ressources entre plusieurs membres d’équipe de projet si vous fractionnez les ressources en plusieurs fichiers .RC. Si vous utilisez un package de gestion de contrôle de code source pour extraire les fichiers et archiver les modifications, le fractionnement des ressources en plusieurs fichiers .RC offre un contrôle plus fin de la gestion des modifications apportées aux ressources.  
   
 -   Si vous souhaitez utiliser des directives du préprocesseur, telles que #ifdef, #endif et #define, pour certaines parties de vos ressources, vous devez les isoler dans des ressources en lecture seule qui seront compilées par le compilateur de ressources.  
   
@@ -214,7 +215,7 @@ RESOURCE.H     AFXRES.H
     AFXPRINT.RC 
 ```  
   
- À l'aide de directives de compilation, vous pouvez organiser vos ressources modifiables et non modifiables dans Visual C++ en plusieurs fichiers .RC, où le MYAPP.RC « Maître » ne fait rien d'autre que d'inclure les autres fichiers .RC. Si vous utilisez un fichier .MAK de projet Visual C++, vous devez inclure le fichier .RC « Maître » dans le projet afin que toutes les ressources incluses soient compilées avec votre application.  
+ À l’aide de directives au moment de la compilation, vous pouvez organiser vos ressources modifiables et non modifiables dans Visual C++ en plusieurs fichiers .RC, où le MYAPP.RC « Maître » ne fait rien d’autre que d’inclure les autres fichiers .RC. Si vous utilisez un fichier .MAK de projet Visual C++, vous devez inclure le fichier .RC « Maître » dans le projet afin que toutes les ressources incluses soient compilées avec votre application.  
   
  **Mise en œuvre des fichiers de Visual C++ non modifiables**  
   
@@ -250,7 +251,7 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
   
  Le symbole ID_TOOLS_SPELL est conservé dans le fichier d'en-tête partagé, MYSHARED.H. Vous effectuez la maintenance manuelle de ce fichier d'en-tête partagé avec un éditeur de texte ; Visual C++ ne le modifie pas directement. Dans la ressource de deux fichiers MYSTRS. RC et MYMENUS. RC, vous spécifiez #include MYSHARED. H dans les Directives en lecture seule pour MYAPP. RC, à l’aide de la **Include des ressources** de commande, comme décrit précédemment.  
   
- Il est plus pratique d‘anticiper un symbole que vous partagerez avant de tenter de l‘utiliser pour identifier une ressource. Ajoutez le symbole au fichier d'en-tête partagé et, si vous n'avez pas encore inclus (avec #include) le fichier d'en-tête partagé dans les directives en lecture seule du fichier .RC, faites-le avant d'utiliser le symbole. Si vous ne prévoyez pas de partager le symbole de cette façon, vous devez déplacer manuellement (avec un éditeur de texte) l'instruction #define pour le symbole, par exemple de MYMENUS.H vers MYSHARED.H, avant de l'utiliser dans MYSTRS.RC.  
+ Il est plus pratique d‘anticiper un symbole que vous partagerez avant de tenter de l‘utiliser pour identifier une ressource. Ajoutez le symbole au fichier d'en-tête partagé et, si vous n'avez pas encore inclus (avec #include) le fichier d'en-tête partagé dans les directives en lecture seule du fichier .RC, faites-le avant d'utiliser le symbole. Si vous ne prévoyez pas de partager le symbole de cette façon, vous devez déplacer manuellement (avec un éditeur de texte) l‘instruction #define pour le symbole, par exemple de MYMENUS.H vers MYSHARED.H, avant de l‘utiliser dans MYSTRS.RC.  
   
  Lorsque vous gérez des symboles dans plusieurs fichiers .RC, vous devez également faire en sorte que Visual C++ évite d'assigner les mêmes valeurs numériques d'ID à des ressources distinctes (symboles). Pour tout fichier .RC donné, Visual C++ assigne façon incrémentielle des ID dans quatre domaines d'identification. Entre les sessions d'édition, Visual C++ assure le suivi du dernier ID qu'il a assigné dans chacun des domaines dans le fichier d'en-tête de symbole pour le fichier .RC. Voici quelles sont les valeurs d'APS_NEXT pour un fichier .RC vide (nouveau) :  
   

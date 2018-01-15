@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71e912d5043c1b908d875dca50af12e38fd05f64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3fa6b42dd4e00f3b5314806933d06b3c1534b4d7
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="using-c-amp-in-windows-store-apps"></a>Utilisation de C++ AMP dans les applications Windows Store
 Vous pouvez utiliser C++ AMP (C++ Accelerated Massive Parallelism) dans votre [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] application pour effectuer des calculs sur le processeur graphique (GPU) ou d’autres accélérateurs de calculs. Toutefois, C++ AMP ne fournissent des API pour travailler directement avec les types Windows Runtime, et le Windows Runtime ne fournit pas un wrapper pour C++ AMP. Lorsque vous utilisez des types Windows Runtime dans votre code, y compris celles que vous avez créé vous-même, vous devez convertir les types qui sont compatibles avec C++ AMP.  
@@ -119,8 +120,8 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer votre première application du Windows Store à l’aide de C++](http://go.microsoft.com/fwlink/p/linkid=249073)   
- [Création de composants Windows Runtime en C++](http://go.microsoft.com/fwlink/p/linkid=249076)
+ [Créer votre première application du Windows Store à l’aide de C++](http://go.microsoft.com/fwlink/p/?linkid=249073)   
+ [Création de composants Windows Runtime en C++](http://go.microsoft.com/fwlink/p/?linkid=249076)
 
 
 

@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 23c403d5e872818345b319ea6786da6b2f42fabc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 987f754ccdf03e5a252feae693a1f7718da1b353
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>Stockage et chargement de CObjects via une archive
 Stockage et chargement `CObject`via une archive nécessite un examen supplémentaire. Dans certains cas, vous devez appeler la `Serialize` fonction de l’objet, où le `CArchive` objet est un paramètre de la `Serialize` appel, au lieu d’utiliser le  **< \<**  ou  **>>**  opérateur de la `CArchive`. L’élément important à prendre en compte est que le `CArchive`  **>>**  opérateur constructions le `CObject` en mémoire selon `CRuntimeClass` précédemment écrites dans le fichier par l’archive de stockage des informations.  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,38 +17,22 @@ f1_keywords:
 - ATLBASE/ATL::CAtlModuleT::UnregisterAppId
 - ATLBASE/ATL::CAtlModuleT::UnregisterServer
 - ATLBASE/ATL::CAtlModuleT::UpdateRegistryAppId
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlModuleT class
+dev_langs: C++
+helpviewer_keywords: CAtlModuleT class
 ms.assetid: 9b74d02f-9117-47b1-a05e-c5945f83dd2b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 9c0c6a2302932df06db7166d83fe9a561dfe38ac
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a4f1ba8d59e85a480af38e5b9778fee0c714a0db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="catlmodulet-class"></a>CAtlModuleT (classe)
-Cette classe implémente un module d’ATL.  
+# <a name="catlmodulet-class"></a>Classe de CAtlModuleT
+Cette classe implémente un module ATL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -81,12 +64,12 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 |[CAtlModuleT::UnregisterServer](#unregisterserver)|Supprime le service à partir du Registre.|  
 |[CAtlModuleT::UpdateRegistryAppId](#updateregistryappid)|Met à jour les informations du fichier EXE dans le Registre.|  
   
-## <a name="remarks"></a>Remarques  
- `CAtlModuleT`, dérivé de [CAtlModule](../../atl/reference/catlmodule-class.md), implémente un fichier exécutable (EXE) ou un module de Service (EXE) ATL. Un module exécutable est un serveur local out-of-process, tandis qu’un module de Service est une application Windows qui s’exécute en arrière-plan au démarrage de Windows.  
+## <a name="remarks"></a>Notes  
+ `CAtlModuleT`, dérivé de [CAtlModule](../../atl/reference/catlmodule-class.md), implémente un fichier exécutable (EXE) ou un module de Service (EXE) ATL. Un module exécutable est un serveur local, out-of-process, tandis qu’un module de Service est une application Windows qui s’exécute en arrière-plan au démarrage de Windows.  
   
  `CAtlModuleT`prend en charge l’initialisation, l’inscription et la désinscription du module.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
 
   
@@ -94,7 +77,7 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
   
  `CAtlModuleT`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ##  <a name="catlmodulet"></a>CAtlModuleT::CAtlModuleT  
@@ -104,7 +87,7 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 CAtlModuleT() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appels [CAtlModuleT::InitLibId](#initlibid).  
   
 ##  <a name="initlibid"></a>CAtlModuleT::InitLibId  
@@ -114,8 +97,8 @@ CAtlModuleT() throw();
 static void InitLibId() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Appelée par le constructeur [CAtlModuleT::CAtlModuleT](#catlmodulet).  
+### <a name="remarks"></a>Notes  
+ Appelé par le constructeur [CAtlModuleT::CAtlModuleT](#catlmodulet).  
   
 ##  <a name="registerappid"></a>CAtlModuleT::RegisterAppId  
  Ajoute le fichier EXE dans le Registre.  
@@ -141,7 +124,7 @@ HRESULT RegisterServer(
  TRUE si la bibliothèque de types doit être enregistré. La valeur par défaut est FALSE.  
   
  `pCLSID`  
- Pointe vers le CLSID de l’objet à inscrire. Si NULL (valeur par défaut), tous les objets du mappage d’objets sera inscrit.  
+ Pointe vers le CLSID de l’objet à inscrire. Si NULL (la valeur par défaut), tous les objets du mappage d’objets sera inscrit.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
@@ -193,4 +176,3 @@ static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
  [Classe de CAtlModule](../../atl/reference/catlmodule-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
  [Module (Classes)](../../atl/atl-module-classes.md)
-

@@ -28,11 +28,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a7771afe4a93c6c4dafcd090276202732d1ad8b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ffc58ce0354b4a3226db82a95d5c0b4cc7bc09f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timer-class"></a>Classe timer
 Un bloc de messagerie `timer` est un `source_block` à cible unique, capable d'envoyer un message à sa cible après un délai spécifié ou à intervalles spécifiques.  
@@ -77,7 +78,7 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
 |[reserve_message](#reserve_message)|Réserve un message précédemment offert par ce `timer` bloc de messagerie. (Substitue [source_block::reserve_message](source-block-class.md#reserve_message).)|  
 |[resume_propagation](#resume_propagation)|Reprend la propagation après qu’une réservation a été libérée. (Substitue [source_block::resume_propagation](source-block-class.md#resume_propagation).)|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [des blocs de messages asynchrones](../../../parallel/concrt/asynchronous-message-blocks.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -87,7 +88,7 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
   
  `timer`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -122,7 +123,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le `message` que l’appelant possède désormais la propriété de l’objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Semblable à `accept`, mais est toujours précédé par un appel à `reserve`.  
   
 ##  <a name="link_target_notification"></a>link_target_notification 
@@ -180,7 +181,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si le message a été réservé avec succès, `false` dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Après avoir `reserve` est appelée, si elle retourne `true`, `consume` ou `release` doit être appelé pour accepter ou libérer la possession du message.  
   
 ##  <a name="resume_propagation"></a>resume_propagation 
@@ -252,7 +253,7 @@ timer(
  `_ScheduleGroup`  
  Le `ScheduleGroup` objet dans lequel la tâche de propagation du `timer` bloc de messagerie est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le runtime utilise le planificateur par défaut si vous ne spécifiez pas le `_Scheduler` ou `_ScheduleGroup` paramètres.  
   
 ##  <a name="dtor"></a>~ timer 

@@ -31,11 +31,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1c7b9e26013a505f5de137797964ed19376569a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efb042f87e10bec9fff53fcb1d22d56ed3c68ef3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colestreamfile-class"></a>Classe de COleStreamFile
 Représente un flux de données ( `IStream`) dans un fichier composé dans le cadre du stockage structuré OLE.  
@@ -65,7 +66,7 @@ class COleStreamFile : public CFile
 |[COleStreamFile::GetStream](#getstream)|Retourne le flux actuel.|  
 |[COleStreamFile::OpenStream](#openstream)|En toute sécurité ouvre un flux de données et l’associe à l’objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un `IStorage` objet doit exister pour que le flux de données peut être ouvert ou créé à moins qu’il s’agit d’un flux de mémoire.  
   
  `COleStreamFile`les objets sont manipulés exactement comme [CFile](../../mfc/reference/cfile-class.md) objets.  
@@ -81,7 +82,7 @@ class COleStreamFile : public CFile
   
  `COleStreamFile`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxole.h  
   
 ##  <a name="attach"></a>COleStreamFile::Attach  
@@ -95,7 +96,7 @@ void Attach(LPSTREAM lpStream);
  `lpStream`  
  Pointe vers le flux de données OLE ( `IStream`) à associer à l’objet. Ne peut pas être **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’objet ne doit pas déjà être associé à un flux OLE.  
   
  Pour plus d’informations, consultez [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) dans le Kit de développement logiciel Windows.  
@@ -111,7 +112,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
  `lpStream`  
  Pointeur vers le flux OLE à associer à l’objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si `lpStream` est **NULL**, l’objet n’est pas associé à un flux OLE, dans le cas contraire, l’objet est associé avec le flux OLE fourni.  
   
  Pour plus d’informations, consultez [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) dans le Kit de développement logiciel Windows.  
@@ -130,7 +131,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le flux est créé avec succès ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La mémoire est allouée par le sous-système OLE.  
   
  Pour plus d’informations, consultez [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) dans le Kit de développement logiciel Windows.  
@@ -162,7 +163,7 @@ BOOL CreateStream(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le flux est créé avec succès ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une exception de fichier sera levée si la fonction open échoue et `pError` n’est pas **NULL**.  
   
  Pour plus d’informations, consultez [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) dans le Kit de développement logiciel Windows.  
@@ -177,7 +178,7 @@ LPSTREAM Detach();
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le flux de données ( `IStream`) qui a été associé à l’objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le flux doit être fermé d’une autre façon avant la fin du programme.  
   
  Pour plus d’informations, consultez [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) dans le Kit de développement logiciel Windows.  
@@ -219,7 +220,7 @@ BOOL OpenStream(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le flux est ouvert avec succès ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Une exception de fichier sera levée si la fonction open échoue et `pError` n’est pas **NULL**.  
   
  Pour plus d’informations, consultez [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) dans le Kit de développement logiciel Windows.  

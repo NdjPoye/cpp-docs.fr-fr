@@ -1,52 +1,49 @@
 ---
-title: "rename_namespace | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "rename_namespace"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "rename_namespace (attribut)"
+title: rename_namespace | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: rename_namespace
+dev_langs: C++
+helpviewer_keywords: rename_namespace attribute
 ms.assetid: 45006d2b-36cd-4bec-98b9-3b8ec45299e3
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 856762f9582f4a91275c29d49c5065e8436cc719
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# rename_namespace
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Section spécifique à C\+\+**  
+# <a name="renamenamespace"></a>rename_namespace
+**Spécifique à C++**  
   
  Renomme l'espace de noms qui contient le contenu de la bibliothèque de types.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 rename_namespace("NewName")  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `NewName`  
  Nom du nouvel espace de noms.  
   
-## Notes  
- Il accepte un argument unique, *NewName*, qui spécifie le nouveau nom de l'espace de noms.  
+## <a name="remarks"></a>Notes  
+ Il accepte un argument unique, *NewName*, qui spécifie le nouveau nom de l’espace de noms.  
   
- Pour supprimer l'espace de noms, utilisez l'attribut [no\_namespace](../preprocessor/no-namespace.md) à la place.  
+ Pour supprimer l’espace de noms, utilisez la [no_namespace](../preprocessor/no-namespace.md) d’attribut à la place.  
   
- **FIN de la section spécifique à C\+\+**  
+ **FIN spécifique à C++**  
   
-## Voir aussi  
- [Attributs \#import](../preprocessor/hash-import-attributes-cpp.md)   
- [\#import, directive](../preprocessor/hash-import-directive-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [attributs #import](../preprocessor/hash-import-attributes-cpp.md)   
+ [#import (directive)](../preprocessor/hash-import-directive-cpp.md)

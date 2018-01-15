@@ -1,56 +1,56 @@
 ---
-title: "/WX (Traiter les avertissements de l&#39;&#201;diteur de liens comme des erreurs) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/WX"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/WX (option de l'éditeur de liens)"
-  - "WX (option de l'éditeur de liens)"
-  - "-WX (option de l'éditeur de liens)"
+title: "-WX (traiter les avertissements de l’éditeur de liens comme des erreurs) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /WX
+dev_langs: C++
+helpviewer_keywords:
+- /WX linker option
+- -WX linker option
+- WX linker option
 ms.assetid: e4ba97c7-93f7-43ae-a4bb-d866790926c9
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f46a83b794cf36f81d62740b667428956e60a846
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# /WX (Traiter les avertissements de l&#39;&#201;diteur de liens comme des erreurs)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="wx-treat-linker-warnings-as-errors"></a>/WX (Traiter les avertissements de l'Éditeur de liens comme des erreurs)
 ```  
 /WX[:NO]  
 ```  
   
-## Notes  
- L'option \/WX spécifie qu'aucun fichier de sortie n'est créé lorsque l'Éditeur de liens génère un avertissement.  
+## <a name="remarks"></a>Notes  
+ /WX ne provoque aucun fichier de sortie est généré si l’éditeur de liens génère un avertissement.  
   
- Cela est comparable à **\/WX** pour le compilateur \(voir [\/w, \/Wn, \/WX, \/Wall, \/wln, \/wdn, \/wen, \/won \(Niveau d'avertissement\)](../../build/reference/compiler-option-warning-level.md) pour plus d'informations\).  Toutefois, spécifier **\/WX** pour la compilation n'implique pas que **\/WX** soit également actif lors de la phase de liaison ; vous devez spécifier explicitement **\/WX** pour chaque outil.  
+ Cela revient à **/WX** pour le compilateur (voir [Wn, / W0, /W1, /W2, /W3, / W4, /w1, /w2, /w3, / W4, Wall, /wd, / nous, /wo, /WV., /Won (niveau d’avertissement)](../../build/reference/compiler-option-warning-level.md) pour plus d’informations). Toutefois, la spécification **/WX** pour la compilation n’implique pas que **/WX** sera également en vigueur pour la phase de liaison ; vous devez spécifier explicitement **/WX** pour chaque outil.  
   
- Par défaut, l'option **\/WX** n'est pas activée.  Pour traiter les avertissements de l'éditeur de liens comme des erreurs, spécifiez **\/WX**.  **\/WX:NO** équivaut à ne pas spécifier **\/WX**.  
+ Par défaut, **/WX** n’est pas en vigueur. Pour traiter les avertissements de l’éditeur de liens comme des erreurs, spécifiez **/WX**. **/WX:no** équivaut à ne pas spécifier **/WX**.  
   
-### Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio  
   
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet.  Pour plus d'informations, consultez [Définition des propriétés de projets Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Cliquez sur le dossier **Éditeur de liens**.  
+2.  Cliquez sur le **l’éditeur de liens** dossier.  
   
-3.  Cliquez sur la page de propriétés **Ligne de commande**.  
+3.  Cliquez sur la page de propriétés **Ligne de commande** .  
   
-4.  Tapez l'option dans la zone **Options supplémentaires**.  
+4.  Tapez l’option dans le **des Options supplémentaires** boîte.  
   
-### Pour définir cette option de l'éditeur de liens par programme  
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation  
   
 1.  Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)

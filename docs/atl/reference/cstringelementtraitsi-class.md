@@ -22,11 +22,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f2a2cbe93826ed2cad5d33d50df119d0ff5cb298
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7803d85c7adf346a06f87d35aba7f42e47f77b2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstringelementtraitsi-class"></a>Classe de CStringElementTraitsI
 Cette classe fournit des fonctions statiques relatives aux chaînes stockées dans les objets de classe de collection. Il est similaire à [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), mais effectue des comparaisons sans respecter la casse.  
@@ -59,7 +60,7 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 |[CStringElementTraitsI::CompareElementsOrdered](#compareelementsordered)|Appelez cette fonction statique pour comparer deux éléments de chaîne, en ignorant les différences de casse.|  
 |[CStringElementTraitsI::Hash](#hash)|Appelez cette fonction statique pour calculer une valeur de hachage pour l’élément de la chaîne donnée.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe fournit des fonctions statiques pour la comparaison de chaînes et pour la création d’une valeur de hachage. Ces fonctions sont utiles lors de l’utilisation d’une classe de collection pour stocker les données de type chaîne. Utilisez [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) lorsque les objets de chaîne sont avec agira en tant que références.  
   
  Pour plus d’informations, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
@@ -69,7 +70,7 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
   
  `CStringElementTraitsI`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcoll.h  
   
 ##  <a name="compareelements"></a>CStringElementTraitsI::CompareElements  
@@ -89,7 +90,7 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true si les éléments sont égaux, false dans le cas contraire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les comparaisons respectent la casse.  
   
 ##  <a name="compareelementsordered"></a>CStringElementTraitsI::CompareElementsOrdered  
@@ -110,7 +111,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
  Zéro si les chaînes sont identiques, < 0 si `str1` est inférieure à `str2`, ou 0 > Si `str1` est supérieur à `str2`. Le [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) méthode est utilisée pour effectuer des comparaisons.  
 
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les comparaisons respectent la casse.  
   
 ##  <a name="hash"></a>CStringElementTraitsI::Hash  

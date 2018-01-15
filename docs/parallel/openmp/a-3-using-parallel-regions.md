@@ -1,27 +1,27 @@
 ---
-title: "A.3   Using Parallel Regions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A 3 à l’aide de régions parallèles | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 575216a1-960a-47f7-9c82-7f660291fcfe
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: be3489e924dab7faa50d26c7cb89af67b4034ca5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# A.3   Using Parallel Regions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La directive d' `parallel` \([section 2,3](../../parallel/openmp/2-3-parallel-construct.md) à la page 8\) peut être utilisé dans des programmes parallèles de brut\-grain.  Dans l'exemple suivant, chaque thread dans une région parallèle décide à quelle partie du tableau globale `x` fonctionne, en fonction de le nombre de threads :  
+# <a name="a3---using-parallel-regions"></a>A.3   Utilisation des régions parallèles
+Le `parallel` directive ([Section 2.3](../../parallel/openmp/2-3-parallel-construct.md) page 8) peut être utilisé dans les programmes parallèles de granularité grossière. Dans l’exemple suivant, chaque thread dans la région parallèle décide quelle partie du tableau global `x` travailler, en fonction du nombre de threads :  
   
 ```  
 #pragma omp parallel shared(x, npoints) private(iam, np, ipoints)  

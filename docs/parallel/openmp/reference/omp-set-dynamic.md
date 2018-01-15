@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc9306a7babcd86c96995f4fd464ebd24b138c43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 13cb098170e46b8459821156aeb8be369bbc1ffa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ompsetdynamic"></a>omp_set_dynamic
 Indique que le nombre de threads disponibles dans une région parallèle suivante peut être ajusté par le temps d’exécution.  
@@ -32,13 +33,13 @@ void omp_set_dynamic(
 );  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  où,  
   
  `val`  
  Une valeur qui indique si le nombre de threads disponibles dans une région parallèle suivante peut être ajustée par le runtime.  Si elle est différente de zéro, que le runtime peut ajuster le nombre de threads, si zéro, le runtime s’ajustent pas dynamiquement le nombre de threads.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le nombre de threads ne dépassera jamais la valeur définie par [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) ou par [OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md).  
   
  Utilisez [omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md) pour afficher le paramètre actuel de `omp_set_dynamic`.  

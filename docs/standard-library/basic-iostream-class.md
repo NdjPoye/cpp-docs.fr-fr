@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 434ff6c2e3c65fae26492e85c63e94abc572f602
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d415afefbde1f3903450a7c5e9f8f14e5cb78a7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basiciostream-class"></a>basic_iostream, classe
 Classe de flux qui peut effectuer à la fois l'entrée et la sortie.  
@@ -62,7 +63,7 @@ public:
 |-|-|  
 |[operator=](#op_eq)|Assigne la valeur d'un objet `basic_iostream` spécifié à cet objet. Il s'agit d'une assignation de déplacement impliquant une `rvalue` qui ne laisse pas de copie.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<istream>  
   
  **Espace de noms :** std  
@@ -101,7 +102,7 @@ basic_iostream& operator=(basic_iostream&& right);
  `right`  
  Référence `rvalue` à un objet `basic_iostream` à partir duquel effectuer l'assignation.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’opérateur membre appelle `swap(right)`.  
   
 ##  <a name="swap"></a>  basic_iostream::swap  
@@ -115,11 +116,11 @@ void swap(basic_iostream& right);
  `right`  
  Objet `basic_iostream` à échanger.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction membre appelle `swap(right)`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream, programmation](../standard-library/iostream-programming.md)   
  [iostreams, conventions](../standard-library/iostreams-conventions.md)
 

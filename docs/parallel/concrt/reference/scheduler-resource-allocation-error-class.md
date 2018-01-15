@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 334712def2fbd458b648b02cbfab05e202cc0e1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 23f7dffed1ba92d83502c27837b33e0b076e7645
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error, classe
 Cette classe décrit une exception levée en raison d'un échec d'acquisition d'une ressource critique dans le runtime d'accès concurrentiel.  
@@ -48,7 +49,7 @@ class scheduler_resource_allocation_error : public std::exception;
 |----------|-----------------|  
 |[get_error_code](#get_error_code)|Retourne le code d’erreur qui a provoqué l’exception.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette exception est généralement levée lorsqu’un appel vers le système d’exploitation dans le Runtime d’accès concurrentiel échoue. Le code d’erreur qui serait normalement retourné à partir d’un appel à la méthode Win32 `GetLastError` est convertie en une valeur de type `HRESULT` et peut être récupéré à l’aide de la `get_error_code` (méthode).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -56,7 +57,7 @@ class scheduler_resource_allocation_error : public std::exception;
   
  `scheduler_resource_allocation_error`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  

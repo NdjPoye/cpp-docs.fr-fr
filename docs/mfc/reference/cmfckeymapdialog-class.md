@@ -37,11 +37,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 27278d64ab1aef17149a3b4c166cff9c302e29ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1965e5dd2d522175b3709449df9a0b8575e20c59
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfckeymapdialog-class"></a>Classe de CMFCKeyMapDialog
 La `CMFCKeyMapDialog` classe prend en charge un contrôle qui mappe des commandes à des touches du clavier.  
@@ -79,7 +80,7 @@ class CMFCKeyMapDialog : public CDialogEx
 |[CMFCKeyMapDialog::PrintKeyMap](#printkeymap)|Appelé par l’infrastructure lorsqu’un utilisateur clique sur le **impression** bouton.|  
 |[CMFCKeyMapDialog::SetColumnsWidth](#setcolumnswidth)|Appelé par l’infrastructure pour définir la largeur des colonnes dans le contrôle de liste interne qui prend en charge le contrôle de mappage du clavier.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la `CMFCKeyMapDialog` classe pour implémenter une boîte de dialogue de mappage de clavier redimensionnable. La boîte de dialogue utilise un contrôle list view pour afficher les raccourcis clavier et leurs commandes associées.  
   
  Pour utiliser le `CMFCKeyMapDialog` classe dans une application, passez un pointeur vers la fenêtre frame principale en tant que paramètre à la `CMFCKeyMapDialog` constructeur. Appelez ensuite la `DoModal` méthode pour démarrer une boîte de dialogue modale.  
@@ -97,7 +98,7 @@ class CMFCKeyMapDialog : public CDialogEx
   
  [CMFCKeyMapDialog](../../mfc/reference/cmfckeymapdialog-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxkeymapdialog.h  
   
 ##  <a name="cmfckeymapdialog"></a>CMFCKeyMapDialog::CMFCKeyMapDialog  
@@ -116,7 +117,7 @@ CMFCKeyMapDialog(
  [in] `bEnablePrint`  
  `TRUE`Si la liste des touches d’accès peut être imprimée ; dans le cas contraire, `FALSE`. La valeur par défaut est `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant montre comment construire un objet de la `CMFCKeyMapDialog` classe. Cet exemple fait partie de la [exemple de démonstration Visual Studio](../../visual-cpp-samples.md).  
@@ -133,7 +134,7 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>Valeur de retour  
  Un entier signé, tel que `IDOK` ou `IDCANCEL`, qui est passé à la [CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog) (méthode). La méthode, ferme à son tour, la boîte de dialogue. Pour plus d’informations, consultez [CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La boîte de dialogue de mappage de clavier permet de sélectionner et assigner des touches accélérateur pour différentes catégories de commandes. En outre, vous pouvez copier les touches accélérateur sélectionné et leur description dans le Presse-papiers.  
   
 ##  <a name="formatitem"></a>CMFCKeyMapDialog::FormatItem  
@@ -150,7 +151,7 @@ virtual CString FormatItem(int nItem) const;
 ### <a name="return-value"></a>Valeur de retour  
  A `CString` objet qui contient le texte de l’élément mis en forme.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="getcommandkeys"></a>CMFCKeyMapDialog::GetCommandKeys  
  Récupère une valeur de chaîne. La chaîne contient une liste des touches de raccourci qui sont associées à une commande spécifiée.  
@@ -166,7 +167,7 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ### <a name="return-value"></a>Valeur de retour  
  Un point-virgule (« ; ») liste des touches de raccourci associée à la commande spécifiée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="oninsertitem"></a>CMFCKeyMapDialog::OnInsertItem  
  Appelé par l’infrastructure avant un nouvel élément est inséré dans un contrôle de liste interne qui prend en charge le contrôle de mappage du clavier.  
@@ -184,7 +185,7 @@ virtual void OnInsertItem(
  [in] `nItem`  
  Index de base zéro qui spécifie l’emplacement où insérer le nouvel élément de mappage de clés dans le contrôle de liste interne.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="onprintheader"></a>CMFCKeyMapDialog::OnPrintHeader  
  Appelé par l’infrastructure pour imprimer l’en-tête pour le mappage du clavier sur une nouvelle page.  
@@ -209,7 +210,7 @@ virtual int OnPrintHeader(
 ### <a name="return-value"></a>Valeur de retour  
  En cas de réussite, la hauteur du texte imprimé. Pour plus d’informations, consultez la section de la valeur de retour de [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’infrastructure utilise cette méthode pour imprimer le mappage du clavier. Par défaut, cette méthode affiche le numéro de page, le nom de l’application et le titre de la boîte de dialogue.  
   
 ##  <a name="onprintitem"></a>CMFCKeyMapDialog::OnPrintItem  
@@ -243,7 +244,7 @@ virtual int OnPrintItem(
 ### <a name="return-value"></a>Valeur de retour  
  La hauteur de l’élément.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode pour imprimer un élément de boîte de dialogue mappage de clés. Par défaut, cette méthode affiche le nom de la commande de l’élément, les touches de raccourci et description de la commande.  
   
 ##  <a name="onsetcolumns"></a>CMFCKeyMapDialog::OnSetColumns  
@@ -253,7 +254,7 @@ virtual int OnPrintItem(
 virtual void OnSetColumns();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, cette méthode obtient les légendes pour les colonnes à partir de trois ressources. La légende de la colonne commande à partir de IDS_AFXBARRES_COMMAND, la légende de la colonne clé est de IDS_AFXBARRES_KEYS, et la légende de la colonne description à partir IDS_AFXBARRES_DESCRIPTION.  
   
 ##  <a name="printkeymap"></a>CMFCKeyMapDialog::PrintKeyMap  
@@ -263,7 +264,7 @@ virtual void OnSetColumns();
 virtual void PrintKeyMap();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `PrintKeyMap` méthode imprime le mappage de clés. Il lance un nouveau travail d’impression et appelle à plusieurs reprises la [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) et [CMFCKeyMapDialog::OnPrintItem](#onprintitem) méthodes jusqu'à ce que tous les mappages de clé sont imprimés.  
   
 ##  <a name="setcolumnswidth"></a>CMFCKeyMapDialog::SetColumnsWidth  
@@ -273,7 +274,7 @@ virtual void PrintKeyMap();
 virtual void SetColumnsWidth();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode définit les colonnes du contrôle de la liste interne de largeur de la valeur par défaut. Tout d’abord, la largeur de la colonne de touches de raccourci est calculée. Un tiers de la largeur restante est alloué à la colonne de la commande, puis les deux tiers restants est allouée à la colonne description.  
   
 ## <a name="see-also"></a>Voir aussi  

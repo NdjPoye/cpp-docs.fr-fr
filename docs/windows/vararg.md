@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 96689914ae299700f2640fa205cbad8887692454
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ee82536c4cb172fb825487c7780bafcc1f007a59
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vararg"></a>vararg
 Spécifie que la fonction accepte un nombre variable d’arguments.  
@@ -32,7 +35,7 @@ Spécifie que la fonction accepte un nombre variable d’arguments.
   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **vararg** attribut C++ a les mêmes fonctionnalités que le [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
@@ -52,7 +55,7 @@ __interface X : public IUnknown
 };  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -60,8 +63,8 @@ __interface X : public IUnknown
 |-|-|  
 |**S'applique à**|Méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

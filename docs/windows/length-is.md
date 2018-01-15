@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6051502e81593bdb13f32d7904f912cc6f294cef
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a40132e793bc444547eefefa70ed3b146cafadc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lengthis"></a>length_is
 Spécifie le nombre d’éléments de tableau doit être transmis.  
@@ -37,13 +40,13 @@ Spécifie le nombre d’éléments de tableau doit être transmis.
  *expression*  
  Une ou plusieurs expressions de langage C. Emplacements d’arguments vide sont autorisées.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **length_is** attribut C++ a les mêmes fonctionnalités que le [length_is](http://msdn.microsoft.com/library/windows/desktop/aa367068) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
  Consultez [first_is](../windows/first-is.md) pour obtenir un exemple montrant comment spécifier une section d’un tableau.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -51,8 +54,8 @@ Spécifie le nombre d’éléments de tableau doit être transmis.
 |-|-|  
 |**S'applique à**|Champ `struct` ou **union**, paramètre de l’interface, méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|None|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

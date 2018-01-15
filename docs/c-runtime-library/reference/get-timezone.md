@@ -34,11 +34,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 46181817aaf455ef777ba479a1bd2abe774ba792
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c83765da12b7e29d3e90037508a3cba4aa6d1ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gettimezone"></a>_get_timezone
 Récupère la différence en secondes entre le temps universel coordonné (UTC) et l’heure locale.  
@@ -62,15 +63,15 @@ Récupère la différence en secondes entre le temps universel coordonné (UTC) 
 ## <a name="remarks"></a>Notes  
  La fonction `_get_timezone` récupère la différence en secondes entre l’heure UTC et l’heure locale sous la forme d’un entier. La valeur par défaut est de 28 800 secondes, pour l’heure du Pacifique (huit heures après l’heure UTC).  
   
- Si `seconds` a la valeur `NULL`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, cette fonction affecte la valeur `errno` à `EINVAL` et retourne `EINVAL`.  
+ Si `seconds` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, cette fonction affecte la valeur `errno` à `EINVAL` et retourne `EINVAL`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_get_timezone`|\<time.h>|  
   
- Pour plus d’informations, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion du temps](../../c-runtime-library/time-management.md)   

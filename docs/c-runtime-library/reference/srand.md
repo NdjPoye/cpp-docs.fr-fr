@@ -1,15 +1,13 @@
 ---
 title: srand | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- srand
+apiname: srand
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,10 +21,8 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- srand
-dev_langs:
-- C++
+f1_keywords: srand
+dev_langs: C++
 helpviewer_keywords:
 - random starting point
 - random starting point, setting
@@ -37,61 +33,50 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.assetid: 7bf56dc5-5692-4182-a3c1-18af98d2dd1a
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: e86ea8aa561af584a6825d4225820aca7baeced2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 205dcb2ba7d61dff1286fd926e3f10cf2a162e9a
+ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="srand"></a>srand
-Définit la valeur initiale de départ pour le générateur de nombres pseudo-aléatoires.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void srand(  
-   unsigned int seed   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `seed`  
- Valeur initiale pour la génération de nombres pseudo-aléatoires  
-  
-## <a name="remarks"></a>Notes  
- La fonction `srand` définit le point de départ de la génération d’une série d’entiers pseudo-aléatoires dans le thread actif. Pour réinitialiser le générateur et créer la même séquence de résultats, appelez la fonction `srand` et réutilisez le même argument `seed`. Toute autre valeur pour `seed` attribue au générateur un autre point de départ dans la séquence pseudo-aléatoire. `rand` récupère les nombres pseudo-aléatoires qui sont générés. Le fait d’appeler `rand` avant `srand` a pour effet de générer la même séquence que si vous appelez `srand` en passant `seed` avec la valeur 1.  
-  
-## <a name="requirements"></a>Spécifications  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`srand`|\<stdlib.h>|  
-  
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
-  
-## <a name="example"></a>Exemple  
- Consultez l’exemple relatif à [rand](../../c-runtime-library/reference/rand.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
- [rand](../../c-runtime-library/reference/rand.md)
+
+Définit la valeur de départ de départ pour le Générateur de nombres pseudo-aléatoires utilisé par le `rand` (fonction).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+void srand(
+   unsigned int seed
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*valeur initiale*  
+Valeur initiale pour la génération de nombres pseudo-aléatoires
+
+## <a name="remarks"></a>Notes
+
+La fonction `srand` définit le point de départ de la génération d’une série d’entiers pseudo-aléatoires dans le thread actif. Pour réinitialiser le générateur pour créer la même séquence de résultats, appelez le `srand` de fonction et utilisent le même *seed* argument à nouveau. Toute autre valeur pour *seed* définit le Générateur à un autre point de départ de la séquence pseudo-aléatoire. `rand` récupère les nombres pseudo-aléatoires qui sont générés. Appel de `rand` avant tout appel à `srand` génère la même séquence que l’appel `srand` avec *seed* passé en tant que 1.
+
+## <a name="requirements"></a>Configuration requise
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|`srand`|\<stdlib.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.
+
+## <a name="example"></a>Exemple
+
+Consultez l’exemple relatif à [rand](../../c-runtime-library/reference/rand.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)  
+[rand](../../c-runtime-library/reference/rand.md)  

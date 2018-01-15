@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e68ca7ef9033e14b5463c4d2db11620a71e0d94e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6919f1e3670251b952ce797df5ad10b786b1bbd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="macros-cc"></a>Macros (C/C++)
 Prétraitement développe les macros dans toutes les lignes qui ne sont pas des directives de préprocesseur (les lignes qui n’ont pas un  **#**  comme premier caractère autre qu’un espace blanc) et dans les parties de certaines directives ne sont pas ignorés dans le cadre d’un compilation conditionnelle. Les directives de « compilation conditionnelle » vous permettent de supprimer la compilation des parties d'un fichier source en testant une expression constante ou un identificateur pour déterminer quels blocs de texte sont transmis au compilateur et quels blocs de texte sont supprimés du fichier source pendant le prétraitement.  

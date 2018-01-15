@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 506dac565ef30c44c553301c6669e416a7dd5f8a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 47fe8c0d7475c67228fd7335b1aa167ced237202
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cheapptr-class"></a>Classe de CHeapPtr
 Une classe de pointeur intelligent pour la gestion des pointeurs de segment de mémoire.  
@@ -67,7 +68,7 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 |----------|-----------------|  
 |[CHeapPtr::operator =](#operator_eq)|L’opérateur d’assignation.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CHeapPtr`est dérivé de [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) et par défaut utilise les routines CRT (dans [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) à allouer et libérer la mémoire. La classe [CHeapPtrList](../../atl/reference/cheapptrlist-class.md) peut être utilisé pour construire une liste de pointeurs de tas. Voir aussi [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), qui utilise les routines d’allocation de mémoire COM.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -75,7 +76,7 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
   
  `CHeapPtr`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcore.h  
   
 ##  <a name="allocate"></a>CHeapPtr::Allocate  
@@ -92,7 +93,7 @@ bool Allocate(size_t nElements = 1) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true si la mémoire a été allouée, false en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les routines d’allocateur permettent de réserver suffisamment de mémoire sur le tas pour stocker *nElement* les objets d’un type défini dans le constructeur.  
   
 ### <a name="example"></a>Exemple  
@@ -111,7 +112,7 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
  `p`  
  Un pointeur de segment de mémoire existant ou `CHeapPtr`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le pointeur du tas peut être éventuellement créé à l’aide d’un pointeur existant, ou un `CHeapPtr` objet. Dans ce cas, la nouvelle `CHeapPtr` objet assume la responsabilité de gérer les ressources et le nouveau pointeur.  
   
 ### <a name="example"></a>Exemple  

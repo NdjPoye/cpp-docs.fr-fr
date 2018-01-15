@@ -1,35 +1,35 @@
 ---
-title: "__vmx_vmread | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmread"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VMREAD, instruction"
-  - "__vmx_vmread, intrinsèque"
+title: __vmx_vmread | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmread
+dev_langs: C++
+helpviewer_keywords:
+- VMREAD instruction
+- __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f4bc649f35eb2e3d3ce203529bf4010a3d4f53fe
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
-# __vmx_vmread
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="vmxvmread"></a>__vmx_vmread
+**Section spécifique à Microsoft**  
   
- Lit un champ spécifié de la structure de contrôle actuelle d'ordinateur \(VMCS\) virtuel et le place à l'emplacement spécifié.  
+ Lit un champ spécifié à partir de la structure de contrôle de machine virtuelle actuelle (VMCS) et le place dans l’emplacement spécifié.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 unsigned char __vmx_vmread(  
@@ -38,34 +38,34 @@ unsigned char __vmx_vmread(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|\[in\] `Field`|Le champ de VMCS à lire.|  
-|\[in\] `FieldValue`|Pointeur vers l'emplacement pour stocker la valeur lue dans le champ de VMCS spécifié par le paramètre d' `Field` .|  
+|[in] `Field`|Le champ VMCS à lire.|  
+|[in] `FieldValue`|Un pointeur vers l’emplacement pour stocker la valeur de lecture à partir du champ VMCS spécifié par le `Field` paramètre.|  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
   
-|Valeur|Signification|  
-|------------|-------------------|  
-|0|l'opération réussie.|  
-|1|L'opération a échoué avec l'état étendu disponible dans `VM-instruction error field` du actuel VMCS.|  
-|2|L'opération a échoué sans état disponible.|  
+|Value|Signification|  
+|-----------|-------------|  
+|0|L’opération a réussi.|  
+|1|L’opération a échoué avec l’état étendu disponible dans le `VM-instruction error field` de la VMCS actuelle.|  
+|2|L’opération a échoué sans état disponible.|  
   
-## Notes  
- La fonction d' `__vmx_vmread` équivaut à l'instruction machine d' `VMREAD` .  la valeur du paramètre d' `Field` est un index encodé de champ qui est décrit dans la documentation d'Intel.  Pour plus d'informations, recherchez le document, « spécification technique de virtualisation Intel pour l'architecture de IA\-32 Intel, » le numéro de document C97063 \-002, [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) au site, consultent l'annexe C de ce document.  
+## <a name="remarks"></a>Notes  
+ Le `__vmx_vmread` fonction est équivalente à la `VMREAD` instruction machine. La valeur de le `Field` paramètre est un index de champ codée qui est décrite dans la documentation Intel. Pour plus d’informations, recherchez le document, « Intel virtualisation technique spécification pour l’Architecture IA-32 Intel, » document numéro est C97063-002, sur le [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) de site, puis consultez l’annexe C de ce document .  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__vmx_vmread`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## détail de FIN Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmwrite](../intrinsics/vmx-vmwrite.md)
+## <a name="see-also"></a>Voir aussi  
+ [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)   
+ [__vmx_vmwrite](../intrinsics/vmx-vmwrite.md)

@@ -1,91 +1,92 @@
 ---
-title: "Grammaire du pr&#233;processeur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "grammaire, préprocesseur"
-  - "préprocesseur"
-  - "préprocesseur, grammaire"
+title: "Syntaxe du préprocesseur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- preprocessor
+- grammar, preprocessor
+- preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 797d4bf4274a92ca4f265d01579698c0f9c6a4a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Grammaire du pr&#233;processeur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**\#define**  *identifier* *token\-string*opt  
+# <a name="preprocessor-grammar"></a>Syntaxe du préprocesseur
+**#define***identificateur* *chaîne de jeton*opt    
   
- *\#* **define**  *identifier*\[**\(** *identifier*opt**,** *...* **,** *identifier*opt **\)**\] *token\-string*opt  
+ *#***définir***identificateur*[**(** *identificateur*opt**,** *...*  **,** *identificateur*opt **)**] *chaîne de jeton*opt    
   
- **defined\(**  *identifier* **\)**  
+ **défini (***identificateur* **)**   
   
- **defined**  *identifier*  
+ **défini***identificateur*   
   
- `#include` **"***path\-spec***"**  
+ `#include`**»***spécification de chemin d’accès***»**  
   
- `#include` **\<***path\-spec***\>**  
+ `#include` **\<**  *spécification de chemin d’accès***>**  
   
- **\#line**  *digit\-sequence*  **"** *filename* **"** opt  
+ **#line***séquence de chiffres***»** *nom de fichier* **»**opt      
   
- *\#* **undef**  *identifier*  
+ *#***undef***identificateur*   
   
- **\#error**  *token\-string*  
+ **#error***chaîne de jeton*   
   
- **\#pragma**  *token\-string*  
+ **#pragma***chaîne de jeton*   
   
- *conditional*  :  
- *if\-part elif\-parts* opt *else\-part*opt *endif\-line*  
+ *conditionnel* :  
+ *If-partie elif-parties*opt*partie « else »*opt*endif en ligne*  
   
- *if\-part*  :  
- *if\-linetext*  
+ *If-partie* :  
+ *If-linetext*  
   
- *if\-line*  :  
- **\#if**  *constant\-expression*  
+ *If-ligne* :  
+ **#if***expression constante*   
   
- **\#ifdef**  *identifier*  
+ **#ifdef***identificateur*   
   
- **\#ifndef**  *identifier*  
+ **#ifndef***identificateur*   
   
- *elif\-parts*  :  
- *elif\-line text*  
+ *parties d’elif* :  
+ *texte de la ligne d’elif*  
   
- *elif\-parts elif\-line text*  
+ *texte de ligne elif elif-parties*  
   
- *elif\-line*  :  
- **\#elif**  *constant\-expression*  
+ *ligne elif* :  
+ **#elif***expression constante*   
   
- *else\-part*  :  
- *else\-linetext*  
+ *partie « else »* :  
+ *Else-linetext*  
   
- *else\-line*  :  
+ *ligne Else* :  
  `#else`  
   
- *endif\-line*  :  
+ *ligne endif* :  
  `#endif`  
   
- *digit\-sequence*  :  
+ *séquence de chiffres* :  
  *digit*  
   
- *digit\-sequence digit*  
+ *digit-sequence digit*  
   
- *digit*  : un des éléments suivants :  
+ *chiffre* : un des  
  **0 1 2 3 4 5 6 7 8 9**  
   
- *token\-string*  :  
+ *chaîne de jeton* :  
  Chaîne de jetons  
   
- *token*  :  
+ *jeton* :  
  *keyword*  
   
  *identifier*  
@@ -96,17 +97,17 @@ caps.handback.revision: 7
   
  `punctuator`  
   
- *filename*  :  
+ *nom de fichier* :  
  Nom de fichier du système d'exploitation conforme  
   
- *path\-spec*  :  
- Chemin d'accès de fichier conforme  
+ *spécification de chemin d’accès* :  
+ Chemin d’accès de fichier conforme  
   
- *text* :  
+ *texte* :  
  Toute séquence de texte  
   
 > [!NOTE]
->  Les éléments non terminaux suivants sont développés dans l'Annexe A, [Résumé de la grammaire](../misc/grammar-summary-cpp.md), *du Guide de référence du langage C\+\+* : `constant`, `constant`\-*expression*, *identifier*, *keyword*, `operator` et `punctuator`.  
+>  Les éléments non terminaux suivants sont développés dans les [Conventions lexicales](../cpp/lexical-conventions.md) section de la *référence du langage C++*: `constant`, `constant` - *expression* , *identificateur*, *mot clé*, `operator`, et `punctuator`.  
   
-## Voir aussi  
- [Résumé de la grammaire](../preprocessor/grammar-summary-c-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Résumé de la grammaire (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

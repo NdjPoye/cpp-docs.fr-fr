@@ -16,11 +16,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 86e856a47baa9df0da78e4db926ef64cd47284f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 23979709bcc43074d6db2f042fdde850f6894e73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-containers"></a>Conteneurs de la bibliothèque standard C++
 La Bibliothèque standard fournit divers conteneurs de type sécurisé pour stocker des collections d’objets connexes. Les conteneurs sont des modèles de classe. Quand vous déclarez une variable de conteneur, vous spécifiez le type des éléments que contiendra le conteneur. Vous pouvez construire des conteneurs avec des listes d'initialiseurs. Elles ont des fonctions membres pour ajouter et supprimer des éléments et exécuter d'autres opérations.  
@@ -159,7 +160,7 @@ int main()
  Certaines opérations sur les conteneurs peuvent également nécessiter un constructeur public par défaut et un opérateur d'équivalence public. Par exemple, les conteneurs associatifs non ordonnés nécessitent la prise en charge de l'égalité et du hachage.  
   
 ## <a name="accessing-container-elements"></a>Accès aux éléments de conteneurs  
- Les éléments des conteneurs sont accessibles à l'aide d'itérateurs. Pour plus d’informations, consultez [Itérateurs](../standard-library/iterators.md).  
+ Les éléments des conteneurs sont accessibles à l'aide d'itérateurs. Pour plus d'informations, consultez [Itérateurs](../standard-library/iterators.md).  
   
 > [!NOTE]
 >  Vous pouvez également utiliser des [boucles for basées sur une plage](../cpp/range-based-for-statement-cpp.md) pour itérer des collections de la bibliothèque standard C++.  

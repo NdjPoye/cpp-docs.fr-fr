@@ -49,11 +49,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 19ed15a5245712933ec43daabc5444160e5eeb95
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cac788f0e7f691f28a6751d15971f117d753428c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colepropertypage-class"></a>Classe de COlePropertyPage
 Utilisée pour afficher les propriétés d'un contrôle personnalisé dans une interface graphique, similaire à une boîte de dialogue.  
@@ -92,7 +93,7 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 |[COlePropertyPage::SetModifiedFlag](#setmodifiedflag)|Définit un indicateur qui indique si l’utilisateur a modifié la page de propriétés.|  
 |[COlePropertyPage::SetPageName](#setpagename)|Définit le nom de la page de propriétés (légende).|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Par exemple, une page de propriétés peut inclure un contrôle d’édition qui permet à l’utilisateur afficher et modifier la propriété de légende du contrôle.  
   
  Chaque propriété de contrôle personnalisé ou stock peut avoir un contrôle de boîte de dialogue qui permet à l’utilisateur du contrôle afficher la valeur actuelle de la propriété et de modifier cette valeur si nécessaire.  
@@ -110,7 +111,7 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
   
  `COlePropertyPage`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxctl.h  
   
 ##  <a name="colepropertypage"></a>COlePropertyPage::COlePropertyPage  
@@ -129,7 +130,7 @@ COlePropertyPage(
  *idCaption*  
  ID de ressource de la légende de la page propriété.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque vous implémentez une sous-classe de `COlePropertyPage`, constructeur de votre sous-classe doit utiliser le `COlePropertyPage` constructeur pour identifier la ressource de modèle de boîte de dialogue sur lequel la page de propriétés est basée et la ressource de chaîne qui contient sa légende.  
   
 ##  <a name="getcontrolstatus"></a>COlePropertyPage::GetControlStatus  
@@ -160,7 +161,7 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un tableau de `IDispatch` des pointeurs, qui sont utilisés pour accéder aux propriétés de chaque contrôle sur la page de propriétés. L’appelant ne doit pas libérer ces pointeurs d’interface.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Chaque objet de page de propriétés gère un tableau de pointeurs vers les `IDispatch` interfaces des objets en cours de modification par la page. Cette fonction affecte ses `pnObjects` argument au nombre d’éléments dans ce tableau et retourne un pointeur vers le premier élément du tableau.  
   
 ##  <a name="getpagesite"></a>COlePropertyPage::GetPageSite  
@@ -173,7 +174,7 @@ LPPROPERTYPAGESITE GetPageSite();
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers la page de propriétés `IPropertyPageSite` interface.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Contrôles et conteneurs coopèrent afin que les utilisateurs peuvent parcourir et modifier les propriétés du contrôle. Le contrôle fournit des pages de propriétés, chacun d’eux est un objet OLE qui permet à l’utilisateur de modifier un ensemble de propriétés. Le conteneur fournit un frame de propriété qui affiche les pages de propriétés. Pour chaque page, le frame de propriété fournit un site de la page, qui prend en charge la `IPropertyPageSite` interface.  
   
 ##  <a name="ignoreapply"></a>COlePropertyPage::IgnoreApply  
@@ -187,7 +188,7 @@ void IgnoreApply(UINT nID);
  `nID`  
  ID du contrôle doivent être ignorés.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Bouton Appliquer de la page propriété est activée uniquement lorsque les valeurs de propriété de contrôle de page ont été modifiées. Cette fonction permet de spécifier des contrôles qui ne provoquent pas le bouton Appliquer pour être activée que si leurs valeurs changent.  
   
 ##  <a name="ismodified"></a>COlePropertyPage::IsModified  
@@ -214,7 +215,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 ### <a name="return-value"></a>Valeur de retour  
  L’implémentation par défaut retourne **FALSE**. Remplacements de cette fonction doivent retourner **TRUE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous pouvez le remplacer pour définir le focus sur le contrôle approprié sur la page. L’implémentation par défaut n’exécute aucune opération et retourne **FALSE**.  
   
 ##  <a name="onhelp"></a>COlePropertyPage::OnHelp  
@@ -231,7 +232,7 @@ virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
 ### <a name="return-value"></a>Valeur de retour  
  L’implémentation par défaut retourne **FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Remplacer si votre page de propriétés doit effectuer une action spéciale lorsque l’utilisateur accède à l’aide. L’implémentation par défaut n’exécute aucune opération et retourne **FALSE**, qui indique à l’infrastructure d’appeler WinHelp.  
   
 ##  <a name="oninitdialog"></a>COlePropertyPage::OnInitDialog  
@@ -244,7 +245,7 @@ virtual BOOL OnInitDialog();
 ### <a name="return-value"></a>Valeur de retour  
  L’implémentation par défaut retourne **FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Remplacer si une action spéciale est nécessaire lors de l’initialisation de la boîte de dialogue. L’implémentation par défaut appelle `CDialog::OnInitDialog` et retourne **FALSE**.  
   
 ##  <a name="onobjectschanged"></a>COlePropertyPage::OnObjectsChanged  
@@ -254,7 +255,7 @@ virtual BOOL OnInitDialog();
 virtual void OnObjectsChanged();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque vous affichez les propriétés d’un contrôle OLE dans l’environnement de développement, une boîte de dialogue non modale est utilisée pour afficher ses pages de propriétés. Si un autre contrôle est sélectionné, un ensemble différent de pages de propriétés doit être affiché pour le nouvel ensemble de propriétés. L’infrastructure appelle cette fonction pour signaler à la page de propriété de la modification.  
   
  Remplacez cette fonction pour recevoir une notification de cette action et effectuer d’actions particulières.  
@@ -266,7 +267,7 @@ virtual void OnObjectsChanged();
 virtual void OnSetPageSite();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation par défaut charge légende de la page et tente de déterminer la taille de la page à partir de la ressource de boîte de dialogue. Remplacez cette fonction si votre page de propriétés requiert aucune action supplémentaire ; votre substitution doit appeler l’implémentation de classe de base.  
   
 ##  <a name="setcontrolstatus"></a>COlePropertyPage::SetControlStatus  
@@ -288,7 +289,7 @@ BOOL SetControlStatus(
 ### <a name="return-value"></a>Valeur de retour  
  **TRUE**, si le contrôle spécifié a été défini ; sinon **FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si l’état d’un contrôle de page de propriété est modifié lors de la page de propriétés est fermée ou choisissez le bouton Appliquer, la propriété du contrôle sera mis à jour avec la valeur appropriée.  
   
 ##  <a name="setdialogresource"></a>COlePropertyPage::SetDialogResource  

@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e9713ae95e5c47f67c09ecbfc571b118f6a9989f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 55255342f39ff80f5deb5378353529ef4d6934bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cprimitiveelementtraits-class"></a>Classe de CPrimitiveElementTraits
 Cette classe fournit des méthodes par défaut et des fonctions pour une classe de collection composée des types de données primitifs.  
@@ -48,7 +49,7 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 |[CPrimitiveElementTraits::INARGTYPE](#inargtype)|Le type de données à utiliser pour l’ajout d’éléments à l’objet de classe de collection.|  
 |[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collection.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe fournit les fonctions statiques par défaut et les méthodes pour déplacer, copier, comparaison et hachage des éléments de type de données primitif stockées dans un objet de classe de collection.  
   
  Pour plus d’informations, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
@@ -64,7 +65,7 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
   
  `CPrimitiveElementTraits`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcoll.h  
   
 ##  <a name="inargtype"></a>CPrimitiveElementTraits::INARGTYPE  

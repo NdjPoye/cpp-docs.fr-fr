@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- fwide
+apiname: fwide
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,23 +20,20 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords:
-- fwide
-dev_langs:
-- C++
-helpviewer_keywords:
-- fwide function
+f1_keywords: fwide
+dev_langs: C++
+helpviewer_keywords: fwide function
 ms.assetid: a4641f5b-d74f-4946-95d5-53a64610d28d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 79f972385f51bdf9fa04a1c368a991591659a7f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: f10bd98a6dedba2181aa1d5ebba60f64dda093be
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fwide"></a>fwide
 Non implémenté.  
@@ -65,10 +60,10 @@ int fwide(
 ## <a name="remarks"></a>Notes  
  La version actuelle de cette fonction n’est pas conforme à la norme.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête requis|  
 |--------------|---------------------|  
 |`fwide`|\<wchar.h>|  
   
- Pour plus d’informations, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+ Pour plus d'informations, voir [Compatibilité](../../c-runtime-library/compatibility.md).

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - expf
 - expl
 - exp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - exponential calculations
 - expf function
@@ -39,31 +37,16 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: bce9249134b9d0e3716d8b79a0bc0642c64fc5e6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0702b99990728bdb732654fdd1eacbefa373dda6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exp-expf-expl"></a>EXP, expf, expl
 Calcule la valeur exponentielle.  
@@ -97,23 +80,23 @@ long double expl(
   
 |Entrée|Exception SEH|Exception{b> <b}Matherr|  
 |-----------|-------------------|-----------------------|  
-|± Valeur NaN silencieuse, indéterminé|Aucune|_DOMAIN|  
+|± Valeur NaN silencieuse, indéterminé|Aucun.|_DOMAIN|  
 |Nombre infini de ±|INVALID|_DOMAIN|  
 |x ≥ 7,097827e+002|INEXACT+OVERFLOW|OVERFLOW|  
 |X ≤ -7,083964e+002|INEXACT+UNDERFLOW|UNDERFLOW|  
   
  Le `exp` possède une implémentation qui utilise des Extensions Streaming SIMD 2 (SSE2). Consultez [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  C++ autorise la surcharge, vous pouvez appeler des surcharges de `exp` qui prennent un **float** ou **long double** argument. Dans un programme C, `exp` accepte et retourne toujours un **double**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête C requis|En-tête C++ requis|  
 |--------------|---------------------|---|  
 |`exp`, `expf`|\<math.h>|\<cmath> ou \<math.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7213f6d784c0591531a3f6141aa34eb39122c30c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e5ea633ca0d6e9f654e5462f8cebded18d9b9f99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dual"></a>dual
 Place une interface dans le fichier .idl comme une interface double.  
@@ -32,7 +35,7 @@ Place une interface dans le fichier .idl comme une interface double.
   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Lorsque le **double** attribut C++ précède une interface, par conséquent, l’interface doit être placé dans le bloc de bibliothèque dans le fichier .idl généré.  
   
 ## <a name="example"></a>Exemple  
@@ -70,7 +73,7 @@ __interface IStatic : IDispatch
 [cpp_quote("#include file.h")];  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -78,7 +81,7 @@ __interface IStatic : IDispatch
 |-|-|  
 |**S'applique à**|`interface`|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
+|**Attributs requis**|Aucun.|  
 |**Attributs non valides**|**dispinterface**|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  

@@ -40,11 +40,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3e455fd53bcbf981cccd5b75b44738070eb614d0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 635338ed1cc314fda94be55c2802d9ec666b42f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filelength-filelengthi64"></a>_filelength, _filelengthi64
 Obtient la longueur d’un fichier.  
@@ -67,14 +68,14 @@ __int64 _filelengthi64(
 ## <a name="return-value"></a>Valeur de retour  
  `_filelength` et `_filelengthi64` retournent la longueur, en octets, du fichier cible associé à `fd`. Si `fd` n’est pas un descripteur de fichier valide, cette fonction appelle le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les deux fonctions retournent-1 L pour indiquer une erreur et définir `errno` à `EBADF`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête requis|  
 |--------------|---------------------|  
 |`_filelength`|\<io.h>|  
 |`_filelengthi64`|\<io.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple relatif à [_chsize](../../c-runtime-library/reference/chsize.md).  

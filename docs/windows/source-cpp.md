@@ -1,33 +1,33 @@
 ---
-title: "source (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.source"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "source attribute"
+title: source (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.source
+dev_langs: C++
+helpviewer_keywords: source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f4bfc79a76ece278c62b4895cdeb2e10d6df42aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# source (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-sur une classe, spécifie les interfaces sources de l'objet COM pour des points de connexion.  Sur une propriété ou une méthode, indique que le membre retourne un objet ou a VARIANT qui représentent une source d'événements.  
+# <a name="source-c"></a>source (C++)
+Sur une classe, spécifie les interfaces de source de l’objet COM pour les points de connexion. Sur une propriété ou une méthode, indique que le membre retourne un objet ou un VARIANT et qui est une source d’événements.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -36,16 +36,16 @@ sur une classe, spécifie les interfaces sources de l'objet COM pour des points 
 ) ]  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `interfaces`  
- Une ou plusieurs interfaces que vous spécifiez lorsque vous appliquez l'attribut source pour une classe.  Ce paramètre n'est pas utilisé lorsque la source est appliquée à une propriété ou une méthode.  
+ Une ou plusieurs interfaces que vous spécifiez lorsque vous appliquez la source de l’attribut à une classe. Ce paramètre n’est pas utilisé lors de la source est appliquée à une propriété ou méthode.  
   
-## Notes  
- L'attribut de **source** C\+\+ a les mêmes fonctionnalités que l'attribut de [source](http://msdn.microsoft.com/library/windows/desktop/aa367166) MIDL.  
+## <a name="remarks"></a>Notes  
+ Le **source** attribut C++ a les mêmes fonctionnalités que le [source](http://msdn.microsoft.com/library/windows/desktop/aa367166) attribut MIDL.  
   
- Vous pouvez utiliser l'attribut de [valeur par défaut](../windows/default-cpp.md) pour spécifier l'interface source par défaut pour un objet.  
+ Vous pouvez utiliser la [par défaut](../windows/default-cpp.md) attribut pour spécifier l’interface source par défaut pour un objet.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // cpp_attr_ref_source.cpp  
@@ -79,22 +79,21 @@ class NN : public b
 };  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**classe**, `struct`, `interface`|  
-|**reproductible**|Non|  
-|**attributs requis**|**coclasse** \(appliqué à la classe ou le struct\)|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|**classe**, `struct`,`interface`|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|**coclasse** (lorsqu’il est appliqué à la classe ou struct)|  
+|**Attributs non valides**|Aucun.|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs de classe](../windows/class-attributes.md)   
+ [Attributs de méthode](../windows/method-attributes.md)   
  [coclass](../windows/coclass.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

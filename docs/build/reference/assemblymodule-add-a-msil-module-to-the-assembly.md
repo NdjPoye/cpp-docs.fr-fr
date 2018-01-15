@@ -22,24 +22,25 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9709a98ee6528a2081f98351126cc84529b0733b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efe45bd6a3225f50e1f842c6d247aae9626302a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assemblymodule-add-a-msil-module-to-the-assembly"></a>/ASSEMBLYMODULE (Ajouter un module MSIL à l'assembly)
 ```  
 /ASSEMBLYMODULE:filename  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  où :  
   
  *filename*  
  Le module que vous souhaitez inclure dans cet assembly.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’option /ASSEMBLYMODULE vous permet de vous permet d’ajouter une référence de module à un assembly. Informations de type dans le module ne sera pas disponibles pour le programme d’assembly qui a ajouté la référence de module. Toutefois, les informations de type dans le module sera disponibles pour tous les programmes qui fait référence à l’assembly.  
   
  Utilisez [#using](../../preprocessor/hash-using-directive-cpp.md) pour ajouter une référence de module à un assembly et pour rendre les informations de type du module disponibles pour le programme d’assembly.  

@@ -1,44 +1,45 @@
 ---
-title: "ChainInterfaces::CastToUnknown, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::ChainInterfaces::CastToUnknown"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CastToUnknown (méthode)"
+title: "Chaininterfaces::casttounknown, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::ChainInterfaces::CastToUnknown
+dev_langs: C++
+helpviewer_keywords: CastToUnknown method
 ms.assetid: a6a58555-e5b0-4773-aba0-959d9d362c6b
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3f49ca9eb6218e5dce42be5d951d134ad74745e4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ChainInterfaces::CastToUnknown, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Caste le pointeur d'interface de type défini par le paramètre de modèle `I0` vers un pointeur sur IUnknown.  
+# <a name="chaininterfacescasttounknown-method"></a>ChainInterfaces::CastToUnknown, méthode
+Convertit le pointeur d’interface du type défini par le `I0` paramètre de modèle à un pointeur vers IUnknown.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 __forceinline IUnknown* CastToUnknown();  
 ```  
   
-## Valeur de retour  
- Un pointeur vers IUnknown.  
+## <a name="return-value"></a>Valeur de retour  
+ Pointeur vers IUnknown.  
   
-## Configuration requise  
- **En\-tête:** implements.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** implements.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ChainInterfaces, structure](../windows/chaininterfaces-structure.md)

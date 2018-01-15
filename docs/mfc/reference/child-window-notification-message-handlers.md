@@ -20,16 +20,17 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad91fe5a9f2afc89b642be642bf14eaed13e3009
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f56f02bd845efdeb59a2b68604098c637ccd45c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="child-window-notification-message-handlers"></a>Gestionnaires pour les messages de notification de fenêtre enfant
 Il existe cinq catégories de messages de notification de fenêtre enfant :  
   
-|Catégorie|Description|  
+|Category|Description|  
 |--------------|-----------------|  
 |[Gestionnaire de contrôles génériques](../../mfc/reference/generic-control-handler.md)|Gestionnaire de codes de notification de contrôle générique.|  
 |[Gestionnaires de bouton utilisateur](../../mfc/reference/user-button-handlers.md)|Gestionnaires pour les codes de notification de bouton utilisateur.|  

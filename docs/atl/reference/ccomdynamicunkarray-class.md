@@ -29,11 +29,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 51ad16bacf147e2bafc1cc2ad1a9bb835067ee40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5863c224ed47c70ce485bde3cd693c29afbfbc04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomdynamicunkarray-class"></a>Classe de CComDynamicUnkArray
 Cette classe stocke un tableau de **IUnknown** pointeurs.  
@@ -67,7 +68,7 @@ class CComDynamicUnkArray
 |[CComDynamicUnkArray::GetUnknown](#getunknown)|Appelez cette méthode pour obtenir le **IUnknown** pointeur associé à un cookie donné.|  
 |[CComDynamicUnkArray::Remove](#remove)|Appelez cette méthode pour supprimer un **IUnknown** pointeur à partir du tableau.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **CComDynamicUnkArray** contient un tableau alloué dynamiquement de **IUnknown** pointeurs, chaque point d’interface sur une connexion. **CComDynamicUnkArray** peut être utilisé en tant que paramètre à la [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) classe de modèle.  
   
  Le **CComDynamicUnkArray** méthodes [commencer](#begin) et [fin](#end) peut être utilisé pour parcourir tous les points de connexion (par exemple, lorsqu’un événement est déclenché).  
@@ -77,7 +78,7 @@ class CComDynamicUnkArray
 > [!NOTE]
 > **Remarque** la classe **CComDynamicUnkArray** est utilisé par le **ajouter une classe** Assistant lors de la création d’un contrôle qui a des Points de connexion. Si vous souhaitez spécifier le nombre de Points de connexion manuellement, modifiez la référence à partir de **CComDynamicUnkArray** à `CComUnkArray<`  *n*  `>`, où  *n*  est le nombre de points de connexion requises.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
   
 ##  <a name="add"></a>CComDynamicUnkArray::Add  
@@ -105,7 +106,7 @@ IUnknown**
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un **IUnknown** pointeur d’interface.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La collection contient des pointeurs aux interfaces stockées localement en tant que **IUnknown**. Vous effectuez un cast **IUnknown** de l’interface pour le type d’interface réelle, puis appelez par son biais. Vous n’avez pas besoin interroger tout d’abord pour l’interface.  
   
  Avant d’utiliser le **IUnknown** interface, vous devez vérifier qu’il n’est pas **NULL**.  
@@ -124,7 +125,7 @@ void clear();
 CComDynamicUnkArray();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Définit la taille de la collection à zéro et initialise les valeurs à **NULL**. Le destructeur libère de la collection, si nécessaire.  
   
 ##  <a name="dtor"></a>CComDynamicUnkArray :: ~ CComDynamicUnkArray  
@@ -134,7 +135,7 @@ CComDynamicUnkArray();
 ~CComDynamicUnkArray();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère les ressources allouées par le constructeur de classe.  
   
 ##  <a name="end"></a>CComDynamicUnkArray::end  
@@ -176,7 +177,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le cookie associé à la **IUnknown** pointeur, ou zéro si aucune correspondance **IUnknown** pointeur est trouvé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  S’il existe plus d’une instance du même **IUnknown** pointeur, cette fonction retourne le cookie pour le.  
   
 ##  <a name="getsize"></a>CComDynamicUnkArray::GetSize  

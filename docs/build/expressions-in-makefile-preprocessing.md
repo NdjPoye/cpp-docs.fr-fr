@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 32de1d1eb3262e1fca0a00048a61d3129347cb19
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7bea4f0c4fea2c2d04681674734bc989424c7951
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Expressions utilisées dans le prétraitement d'un makefile
 Le **! IF** ou **! Si** `constantexpression` se compose de constantes entières (notation décimale ou en langage C), les constantes de chaîne ou de commandes. Utilisez des parenthèses pour regrouper les expressions. Les expressions utiliser C-style entier long signé arithmétiques ; nombres se présentent sous forme de 32 bits de complément à 2 comprise entre - 2147483648 et 2147483647.  

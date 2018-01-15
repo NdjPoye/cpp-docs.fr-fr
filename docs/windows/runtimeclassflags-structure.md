@@ -1,32 +1,33 @@
 ---
-title: "RuntimeClassFlags, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClassFlags"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RuntimeClassFlags (structure)"
+title: RuntimeClassFlags (Structure) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClassFlags
+dev_langs: C++
+helpviewer_keywords: RuntimeClassFlags structure
 ms.assetid: 7098d605-bd14-4d51-82f4-3def8296a938
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 85eb42c537845d86ce8cf3b1f20db7e9eeffe76f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# RuntimeClassFlags, structure
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Contient le type pour une instance d'une [RuntimeClass](../windows/runtimeclass-class.md).  
+# <a name="runtimeclassflags-structure"></a>RuntimeClassFlags (structure)
+Contient le type d’une instance d’un [RuntimeClass](../windows/runtimeclass-class.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template <  
@@ -35,25 +36,25 @@ template <
 struct RuntimeClassFlags;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `flags`  
- Valeur [RuntimeClassType, énumération](../windows/runtimeclasstype-enumeration.md).  
+ A [runtimeclasstype, énumération](../windows/runtimeclasstype-enumeration.md) valeur.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constantes publiques  
+### <a name="public-constants"></a>Constantes publiques  
   
 |Name|Description|  
 |----------|-----------------|  
-|[RuntimeClassFlags::value, constante](../windows/runtimeclassflags-value-constant.md)|Contient une valeur de [RuntimeClassType, énumération](../windows/runtimeclasstype-enumeration.md).|  
+|[RuntimeClassFlags::value, constante](../windows/runtimeclassflags-value-constant.md)|Contient un [runtimeclasstype, énumération](../windows/runtimeclasstype-enumeration.md) valeur.|  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `RuntimeClassFlags`  
   
-## Configuration requise  
- **En\-tête:** implements.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** implements.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '&&'
-dev_langs:
-- C++
-helpviewer_keywords:
-- '&& rvalue reference declarator'
+f1_keywords: '&&'
+dev_langs: C++
+helpviewer_keywords: '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: f34c20b380fe1bef5e57de37b4e239e8ba4eadf9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e35d0efc92e011cfb4d93746efd1b03ac94a0779
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Déclarateur de référence rvalue :&amp;&amp;
 Contient une référence à une expression rvalue.  
@@ -36,7 +32,7 @@ Contient une référence à une expression rvalue.
 type-id && cast-expression  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les références rvalue vous permettent de différencier une lvalue d'une rvalue. Les références lvalue et rvalue sont syntaxiquement et sémantiquement semblables, mais elles suivent des règles quelque peu différentes. Pour plus d’informations sur les lvalues et rvalues, consultez [Lvalues et Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md). Pour plus d’informations sur les références lvalue, consultez [déclarateur de référence Lvalue : &](../cpp/lvalue-reference-declarator-amp.md).  
   
  Les sections suivantes décrivent comment les références rvalue prennent en charge l’implémentation de *la sémantique de déplacement* et *un transfert parfait*.  
@@ -64,9 +60,9 @@ int main()
   
  Avant Visual C++ 2010, chaque appel à `operator+` alloue et retourne une nouvelle valeur temporaire `string` objet (une rvalue). `operator+` ne peut pas ajouter une chaîne à une autre car il ne sait pas si les chaînes sources sont des lvalues ou des rvalues. Si les chaînes sources sont toutes les deux des lvalues, elles peuvent être référencées ailleurs dans le programme et ne doivent donc pas être modifiées. Si vous utilisez des références rvalue, `operator+` peut être modifié afin d'accepter des rvalues, qui ne peuvent pas être référencées ailleurs dans le programme. Par conséquent, `operator+` peut maintenant ajouter une chaîne à un autre. Cela peut réduire considérablement le nombre d'allocations dynamiques de la mémoire que la classe `string` doit exécuter. Pour plus d’informations sur la `string` de classe, consultez [basic_string, classe](../standard-library/basic-string-class.md).  
   
- La sémantique de déplacement est également utile lorsque le compilateur ne peut pas utiliser l'optimisation de la valeur de retour (RVO) ou l'optimisation de la valeur de retour nommée (NRVO). Dans ces cas-là, le compilateur appelle le constructeur de déplacement si le type le définit. Pour plus d’informations sur l’optimisation de valeur de retour nommée, consultez [l’optimisation de la valeur de retour nommée dans Visual C++ 2005](http://go.microsoft.com/fwlink/?LinkId=131571).  
+ La sémantique de déplacement est également utile lorsque le compilateur ne peut pas utiliser l'optimisation de la valeur de retour (RVO) ou l'optimisation de la valeur de retour nommée (NRVO). Dans ces cas-là, le compilateur appelle le constructeur de déplacement si le type le définit. Pour plus d’informations sur l’optimisation de valeur de retour nommée, consultez [l’optimisation de la valeur de retour nommée dans Visual C++ 2005](http://go.microsoft.com/fwlink/p/?linkid=131571).  
   
- Pour mieux comprendre la sémantique de déplacement, prenez comme exemple l'insertion d'un élément dans un objet `vector`. Si la capacité de l'objet `vector` est dépassée, l'objet `vector` doit réallouer de la mémoire pour ses éléments puis copier chaque élément vers un autre emplacement de mémoire pour libérer de l'espace pour l'élément inséré. Lorsqu'une opération d'insertion copie un élément, elle crée un nouvel élément, appelle le constructeur de copie pour copier les données de l'élément précédent dans le nouvel élément, puis supprime l'élément précédent. La sémantique de déplacement vous permet de déplacer directement des objets sans qu'il soit nécessaire d'exécuter des opérations d'allocation de mémoire et de copie coûteuses.  
+ Pour mieux comprendre la sémantique de déplacement, prenez comme exemple l'insertion d'un élément dans un objet `vector`. Si la capacité de l'objet `vector` est dépassée, l'objet `vector` doit réallouer de la mémoire pour ses éléments puis copier chaque élément vers un autre emplacement de mémoire pour libérer de l'espace pour l'élément inséré. Lorsqu’une opération d’insertion copie un élément, elle crée un nouvel élément, appelle le constructeur de copie pour copier les données de l’élément précédent dans le nouvel élément, puis détruit l’élément précédent. La sémantique de déplacement vous permet de déplacer directement des objets sans qu'il soit nécessaire d'exécuter des opérations d'allocation de mémoire et de copie coûteuses.  
   
  Pour tirer parti de la sémantique de déplacement dans l'exemple `vector`, vous pouvez écrire un constructeur de déplacement pour déplacer des données d'un objet vers un autre.  
   
@@ -398,7 +394,7 @@ print_type_and_value<string&>(string& t)
   
  Cette version de la fonction `print_type_and_value` transfère ensuite son paramètre à la version spécialisée appropriée de la méthode `S::print`.  
   
- Le tableau suivant résume les règles de réduction de référence pour la déduction du type d'argument template :  
+ Le tableau suivant résume les règles de réduction de référence pour la déduction du type d’argument template :  
   
 |||  
 |-|-|  
@@ -410,7 +406,7 @@ print_type_and_value<string&>(string& t)
   
  La déduction d’argument template est un élément important de l’implémentation du transfert parfait. La section Transfert parfait, présentée plus haut dans cette rubrique, décrit le transfert parfait plus en détail.  
   
-## <a name="summary"></a>Résumé  
+## <a name="summary"></a>Récapitulatif  
  Les références rvalue différencient les lvalues des rvalues. Elles peuvent vous aider à améliorer les performances de vos applications en évitant de faire appel à des allocations de la mémoire et des opérations de copie inutiles. Elles vous permettent également d'écrire une version d'une fonction qui accepte des arguments arbitraires et les transfère à une autre fonction comme si celle-ci avait été appelée directement.  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -419,4 +415,3 @@ print_type_and_value<string&>(string& t)
  [Lvalues et Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)   
  [Constructeurs de déplacement et opérateurs d’assignation de déplacement (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)   
  [Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)   
-

@@ -1,34 +1,35 @@
 ---
-title: "Donn&#233;es de d&#233;roulement pour la gestion des exceptions et la prise en charge du d&#233;bogueur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Données de déroulement pour la gestion des exceptions, la prise en charge du débogueur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 68f1e30d-9038-41af-a48f-02129bfe8928
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7e96ff2f4b69ee89dc22aaf3be8df19d2ec8f3cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Donn&#233;es de d&#233;roulement pour la gestion des exceptions et la prise en charge du d&#233;bogueur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cette section décrit les structures de données requises pour la gestion des exceptions et la prise en charge du débogage.  
+# <a name="unwind-data-for-exception-handling-debugger-support"></a>Données de déroulement pour la gestion des exceptions et la prise en charge du débogueur
+Cette section décrit les structures de données requis pour la gestion des exceptions et le support de débogage.  
   
--   [struct RUNTIME\_FUNCTION](../build/struct-runtime-function.md)  
+-   [RUNTIME_FUNCTION, struct](../build/struct-runtime-function.md)  
   
--   [struct UNWIND\_INFO](../build/struct-unwind-info.md)  
+-   [UNWIND_INFO, struct](../build/struct-unwind-info.md)  
   
--   [struct UNWIND\_CODE](../build/struct-unwind-code.md)  
+-   [UNWIND_CODE, struct](../build/struct-unwind-code.md)  
   
--   [Structures d'informations de déroulement chaînées](../build/chained-unwind-info-structures.md)  
+-   [Structures d’informations de déroulement chaînées](../build/chained-unwind-info-structures.md)  
   
-## Voir aussi  
- [Gestion des exceptions \(x64\)](../build/exception-handling-x64.md)
+## <a name="see-also"></a>Voir aussi  
+ [Gestion des exceptions (x64)](../build/exception-handling-x64.md)

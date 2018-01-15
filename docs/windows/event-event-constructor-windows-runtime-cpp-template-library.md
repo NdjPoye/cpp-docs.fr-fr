@@ -1,31 +1,32 @@
 ---
-title: "Event::Event, constructeur (biblioth&#232;que de mod&#232;les Windows Runtime C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Event::Event"
-dev_langs: 
-  - "C++"
+title: "Event::Event, constructeur (bibliothèque de Windows Runtime C++ modèle) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Event::Event
+dev_langs: C++
 ms.assetid: 21495297-9612-4095-9256-16e168cc0021
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 63ca4f15dbbdd7f2423b34c0b7313a05976bcf77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Event::Event, constructeur (biblioth&#232;que de mod&#232;les Windows Runtime C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="eventevent-constructor-windows-runtime-c-template-library"></a>Event::Event, constructeur (bibliothèque de modèles Windows Runtime C++)
 Initialise une nouvelle instance de la classe Event.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 explicit Event(  
@@ -36,14 +37,14 @@ WRL_NOTHROW Event(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `h`  
- Handle vers un événement.  Par défaut, `h` est initialisé avec la valeur `nullptr`.  
+ Handle vers un événement. Par défaut, `h` est initialisé avec la valeur `nullptr`.  
   
-## Configuration requise  
- **En\-tête :** corewrappers.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms :** Microsoft::WRL::Wrappers  
+ **Namespace :** Microsoft::WRL::Wrappers  
   
-## Voir aussi  
- [Event, classe \(bibliothèque de modèles Windows Runtime C\+\+\)](../windows/event-class-windows-runtime-cpp-template-library.md)
+## <a name="see-also"></a>Voir aussi  
+ [Event, classe (bibliothèque de modèles Windows Runtime C++)](../windows/event-class-windows-runtime-cpp-template-library.md)

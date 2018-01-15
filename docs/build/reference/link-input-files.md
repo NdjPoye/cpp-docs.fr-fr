@@ -24,11 +24,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e63407e0e3d71b13d3668b03d2d6b430ad50d36a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1d0cae9498d2c9b49e52cf56991d2425de39d7e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="link-input-files"></a>Fichiers d'entrée LINK
 Vous fournissez l’éditeur de liens des fichiers qui contiennent des objets, des bibliothèques standards, ressources, les définitions de module et d’importation d’entrée de commande. LIEN n’utilise pas les extensions de fichier à faire des hypothèses sur le contenu d’un fichier. Au lieu de cela, lien examine chaque fichier d’entrée pour déterminer quel type de fichier.  

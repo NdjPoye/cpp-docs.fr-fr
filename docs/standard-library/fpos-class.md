@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e12680b5e458a811377b2321169ec1a1cbfcc79e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0647a5d4a9720b5628d5d540f055013bd40b8b30
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fpos-class"></a>fpos, classe
 La classe de modèle décrit un objet qui peut stocker toutes les informations nécessaires à la restauration d'un indicateur de position de fichier arbitraire dans n'importe quel flux. Un objet de classe fpos\< **St**> stocke au moins deux objets membres :  
@@ -73,7 +74,7 @@ class fpos
 |[operator==](#op_eq_eq)|Teste l'égalité d'indicateurs de position de fichier.|  
 |[operator streamoff](#op_streamoff)|Convertit un objet de type `fpos` en objet de type `streamoff`.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<ios>  
   
  **Espace de noms :** std  
@@ -116,7 +117,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 ### <a name="return-value"></a>Valeur de retour  
  **true** si les indicateurs de position de fichier ne sont pas égaux, sinon **false**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction membre retourne `!(*this == right)`.  
   
 ### <a name="example"></a>Exemple  
@@ -247,7 +248,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 ### <a name="return-value"></a>Valeur de retour  
  La fonction membre retourne `fpos(*this) -= _Off`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour le positionnement dans un fichier, le résultat est généralement valide uniquement pour les flux binaires qui n’ont pas de codage dépendant de l’état.  
   
 ### <a name="example"></a>Exemple  
@@ -267,7 +268,7 @@ bool operator==(const fpos<Statetype>& right) const;
 ### <a name="return-value"></a>Valeur de retour  
  **true** si les indicateurs de position de fichier sont égaux, sinon **false**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction membre retourne `(streamoff)*this == (streamoff)right`.  
   
 ### <a name="example"></a>Exemple  
@@ -362,7 +363,7 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream, programmation](../standard-library/iostream-programming.md)   
  [iostreams, conventions](../standard-library/iostreams-conventions.md)
 

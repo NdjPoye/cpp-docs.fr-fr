@@ -1,96 +1,97 @@
 ---
-title: "Ex&#233;cution de LIB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLibrarianTool.TargetMachine"
-  - "Lib"
-  - "VC.Project.VCLibrarianTool.PrintProgress"
-  - "VC.Project.VCLibrarianTool.SuppressStartupBanner"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ (fichiers de commandes)"
-  - "/MACHINE (option de plate-forme cible)"
-  - "/NOLOGO (option du Gestionnaire de bibliothèque)"
-  - "/VERBOSE (option du Gestionnaire de bibliothèque)"
-  - "signe deux-points (fichiers de commandes)"
-  - "fichiers de commandes"
-  - "fichiers de commandes, LIB"
-  - "tiret (spécificateur d'option)"
-  - "spécificateur d'option à barre oblique"
-  - "LIB (C++), exécuter LIB"
-  - "MACHINE (option de plate-forme cible)"
-  - "-MACHINE (option de plate-forme cible)"
-  - "NOLOGO (option du Gestionnaire de bibliothèque)"
-  - "-NOLOGO (option du Gestionnaire de bibliothèque)"
-  - "point-virgule, fichiers de commandes"
-  - "barre oblique (/)"
-  - "VERBOSE (option du Gestionnaire de bibliothèque)"
-  - "-VERBOSE (option du Gestionnaire de bibliothèque)"
+title: "Exécuter LIB | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLibrarianTool.TargetMachine
+- Lib
+- VC.Project.VCLibrarianTool.PrintProgress
+- VC.Project.VCLibrarianTool.SuppressStartupBanner
+dev_langs: C++
+helpviewer_keywords:
+- -MACHINE target platform option
+- command files, LIB
+- MACHINE target platform option
+- colon command files
+- VERBOSE library manager option
+- /NOLOGO library manager option
+- dash option specifier
+- /MACHINE target platform option
+- forward slash option specifier
+- -NOLOGO library manager option
+- LIB [C++], running LIB
+- -VERBOSE library manager option
+- /VERBOSE library manager option
+- command files
+- NOLOGO library manager option
+- slash (/)
+- semicolon, command files
+- / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2a487bb6f6ffd740f6479916c5115bf95d568655
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Ex&#233;cution de LIB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Diverses options de ligne de commande permettent de gérer LIB.  
+# <a name="running-lib"></a>Exécution de LIB
+Différentes options de ligne de commande peuvent être utilisé pour contrôler LIB.  
   
-## Ligne de commande LIB  
- Pour exécuter LIB, tapez la commande `lib` suivie des noms des options et des fichiers correspondant à la tâche que vous cherchez à exécuter à l'aide de LIB.  LIB accepte également les entrées de ligne de commande effectuées dans les fichiers de commandes, qui sont décrites dans la section suivante.  LIB n'utilise pas de variable d'environnement.  
+## <a name="lib-command-line"></a>Ligne de commande LIB  
+ Pour exécuter LIB, tapez la commande `lib` suivi par les options et les noms de fichiers pour la tâche vous utilisez LIB à effectuer. LIB accepte également une entrée de ligne de commande dans des fichiers de commande, qui sont décrites dans la section suivante. LIB n’utilise pas une variable d’environnement.  
   
 > [!NOTE]
->  Si vous êtes familiarisé avec les outils LINK32.exe et LIB32.exe fournis dans le Kit de développement logiciel \(SDK\) Microsoft Win32 pour Windows NT, vous avez peut\-être déjà l'habitude d'utiliser la commande `link32 -lib` ou la commande `lib32` pour gérer les bibliothèques et créer des bibliothèques d'importation.  Veillez à modifier les makefiles et batch pour utiliser plutôt la commande `lib`.  
+>  Si vous êtes habitué à la LINK32.exe et LIB32.exe des outils fournis avec Microsoft Win32 logiciel Development Kit pour Windows NT, vous pouvez utilisez la commande `link32 -lib` ou de la commande `lib32` pour gérer les bibliothèques et création bibliothèques d’importation. Veillez à modifier les makefiles et batch pour utiliser le `lib` de commande à la place.  
   
-## Fichiers de commandes LIB  
- Vous pouvez passer des arguments de ligne de commande à LIB dans un fichier de commandes en utilisant la syntaxe suivante :  
+## <a name="lib-command-files"></a>Fichiers de commandes LIB  
+ Vous pouvez passer des arguments de ligne de commande à LIB dans un fichier de commandes à l’aide de la syntaxe suivante :  
   
 ```  
 LIB @commandfile  
 ```  
   
- Le fichier `commandfile` est un fichier texte.  Les espaces et les tabulations sont interdits entre le signe arobase \(@\) et le nom de fichier.  Il n'existe pas d'extension par défaut ; vous devez spécifier le nom de fichier complet, y compris l'extension éventuellement.  Les caractères génériques ne sont pas autorisés.  Vous pouvez spécifier un chemin absolu ou relatif avec le nom de fichier.  
+ Le fichier `commandfile` est un fichier texte. Aucun espace ou une tabulation n’est autorisée entre le signe arobase (@) et le nom de fichier. Il n’existe aucune extension par défaut ; Vous devez spécifier le nom de fichier complet, y compris toute extension. Impossible d’utiliser des caractères génériques. Vous pouvez spécifier un chemin d’accès absolu ou relatif avec le nom de fichier.  
   
- Dans le fichier de commandes, les arguments peuvent être séparés par des espaces ou des tabulations, comme c'est le cas sur la ligne de commande ; ils peuvent également être séparés par des caractères de saut de ligne.  Utilisez un point\-virgule \(;\) pour signaler un commentaire.  LIB ignore tout le texte compris entre le point\-virgule et la fin de la ligne.  
+ Dans le fichier de commandes, les arguments peuvent être séparés par des espaces ou des onglets, comme la ligne de commande ; ils peuvent également être séparées par des caractères de saut de ligne. Utilisez un point-virgule ( ;) pour marquer un commentaire. LIB ignore tout le texte compris entre le point-virgule à la fin de la ligne.  
   
- Vous pouvez spécifier tout ou partie de la ligne de commande dans un fichier de commandes, et vous pouvez utiliser plusieurs fichiers de commandes dans une commande LIB.  LIB accepte l'entrée du fichier de commandes comme si elle était spécifiée à cet emplacement sur la ligne de commande.  Les fichiers de commandes ne peuvent pas être imbriqués.  LIB reproduit par écho le contenu des fichiers de commandes quand l'option \/NOLOGO n'est pas utilisée.  
+ Vous pouvez spécifier tout ou partie de la ligne de commande dans un fichier de commandes, et vous pouvez utiliser plusieurs fichiers de commandes dans une commande LIB. LIB accepte l’entrée de fichier de commandes comme si elle était spécifiée à cet emplacement sur la ligne de commande. Fichiers de commandes ne peuvent pas être imbriquées. LIB reproduit en écho le contenu des fichiers de commandes, sauf si l’option /NOLOGO est utilisée.  
   
-## Utilisation des options LIB  
- Une option est constituée d'un spécificateur d'option, qui peut être un tiret \(–\) ou une barre oblique \(\/\) suivi\(e\) du nom de l'option.  Les noms des options ne peuvent pas être abrégés.  Certaines options acceptent un argument spécifié après le signe deux\-points \(:\).  Les espaces et les tabulations sont interdits dans la spécification d'une option.  Utilisez des espaces ou des tabulations pour séparer les spécifications des options sur la ligne de commande.  Les noms des options et leurs arguments \(mots clés ou noms de fichiers\) ne respectent pas la casse, mais les identificateurs utilisés comme arguments la respectent.  LIB traite les options dans l'ordre spécifié sur la ligne de commande et dans les fichiers de commandes.  Si une option est répétée avec différents arguments, le dernier argument traité est prioritaire.  
+## <a name="using-lib-options"></a>À l’aide des Options de LIB  
+ Une option se compose d’un spécificateur d’option, qui peut être un tiret (-) ou une barre oblique (/), suivie du nom de l’option. Noms d’options ne peuvent pas être abrégés. Certaines options acceptent un argument spécifié après le signe deux-points ( :). Aucun des espaces ou des tabulations ne sont autorisées dans une spécification de l’option. Utilisez un ou plusieurs espaces ou des tabulations pour séparer les spécifications des options sur la ligne de commande. Noms des options et leurs arguments de nom de fichier ou le mot clé ne sont pas respecter la casse, mais les identificateurs utilisés comme arguments respectent la casse. LIB traite les options dans l’ordre spécifié sur la ligne de commande et dans les fichiers de commandes. Si une option est répétée avec différents arguments, le dernier traitement est prioritaire.  
   
- Les options suivantes s'appliquent à tous les modes de LIB :  
+ Les options suivantes s’appliquent à tous les modes de LIB :  
   
- \/ERRORREPORT\[NONE &#124; PROMPT &#124; QUEUE &#124; SEND \]  
- Si lib.exe échoue au moment de l'exécution, vous pouvez utiliser \/ERRORREPORT pour envoyer des informations à Microsoft à propos de ces erreurs internes.  
+ / ERRORREPORT [NONE &#124; INVITE DE COMMANDES &#124; FILE D’ATTENTE &#124; ENVOI]  
+ Si lib.exe échoue au moment de l’exécution, vous pouvez utiliser /ERRORREPORT pour envoyer des informations à Microsoft à propos de ces erreurs internes.  
   
- Pour plus d'informations sur \/ERRORREPORT, consultez [\/errorReport \(Signaler les erreurs internes du compilateur\)](../../build/reference/errorreport-report-internal-compiler-errors.md).  
+ Pour plus d’informations sur/errorreport, consultez [/errorReport (signaler les erreurs du compilateur interne)](../../build/reference/errorreport-report-internal-compiler-errors.md).  
   
- \/LTCG  
- Entraîne la génération de la bibliothèque à l'aide de la génération du code au moment de la liaison.  Pour plus d'informations, consultez [\/LTCG](../../build/reference/ltcg-link-time-code-generation.md).  
+ /LTCG  
+ Provoque la bibliothèque à l’aide de la génération de code de l’édition de liens.  Pour plus d’informations, consultez [LTCG](../../build/reference/ltcg-link-time-code-generation.md).  
   
- \/MACHINE  
- Spécifie la plateforme cible du programme.  En règle générale, il n'est pas nécessaire de spécifier \/MACHINE.  LIB déduit le type d'ordinateur à partir des fichiers .obj.  Cependant, dans certaines circonstances, LIB ne peut pas déterminer le type d'ordinateur et émet un message d'erreur.  Si une telle erreur se produit, spécifiez \/MACHINE.  En mode \/EXTRACT, cette option est destinée à des fins de vérification uniquement.  Utilisez `lib /?` sur la ligne de commande pour afficher les types d'ordinateur disponibles.  
+ /MACHINE  
+ Spécifie la plateforme cible pour le programme. En règle générale, vous n’avez pas besoin de spécifier/de l’ordinateur. LIB déduit le type d’ordinateur à partir des fichiers .obj. Toutefois, dans certaines circonstances, LIB ne peut pas déterminer le type d’ordinateur et émet un message d’erreur. Si une telle erreur se produit, spécifiez/de l’ordinateur. En mode/Extract, cette option est pour la vérification uniquement. Utilisez `lib /?` à la ligne de commande pour voir les types d’ordinateurs disponibles.  
   
- \/NOLOGO  
- Supprime l'affichage du message de copyright et du numéro de version de LIB, et empêche la reproduction par écho des fichiers de commandes.  
+ /NOLOGO  
+ Supprime l’affichage de la LIB copyright message et numéro de version et empêche l’affichage des fichiers de commandes.  
   
- \/VERBOSE  
- Affiche des détails relatifs à la progression de la session, notamment les noms des fichiers .obj qui sont ajoutés.  Les informations sont envoyées vers la sortie standard et peuvent être redirigées vers un fichier.  
+ /VERBOSE  
+ Affiche des détails sur la progression de la session, y compris les noms des fichiers .obj ajoutés. Les informations sont envoyées vers la sortie standard et peuvent être redirigées vers un fichier.  
   
- \/WX\[:NO\]  
- Considère les avertissements comme des erreurs.  Pour plus d'informations, consultez [\/WX \(Traiter les avertissements de l'Éditeur de liens comme des erreurs\)](../../build/reference/wx-treat-linker-warnings-as-errors.md).  
+ /WX [ : NO]  
+ Considérer les avertissements comme des erreurs. Consultez [/WX (traiter les avertissements l’éditeur de liens comme des erreurs)](../../build/reference/wx-treat-linker-warnings-as-errors.md) pour plus d’informations.  
   
- D'autres options s'appliquent uniquement à des modes spécifiques de LIB.  Ces options sont traitées dans les sections décrivant chaque mode.  
+ Autres options s’appliquent uniquement aux modes spécifiques de LIB. Ces options sont décrites dans les sections décrivant chaque mode.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence LIB](../../build/reference/lib-reference.md)

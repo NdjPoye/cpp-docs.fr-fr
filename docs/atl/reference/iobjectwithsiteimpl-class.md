@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a591e7970aa21e6846700570cdf27cefececa1c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49574d31ef0c606528f29c0045506e5febe69b28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iobjectwithsiteimpl-class"></a>Classe d’IObjectWithSiteImpl de prendre facilement
 Cette classe fournit des méthodes permettant d’un objet communiquer avec son site.  
@@ -58,7 +59,7 @@ template <class T>
 |----------|-----------------|  
 |[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Gestion du site **IUnknown** pointeur.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) interface permet à un objet communiquer avec son site. Classe `IObjectWithSiteImpl` fournit une implémentation par défaut de cette interface et implémente **IUnknown** en envoyant des informations pour le vidage de builds périphérique en mode débogage.  
   
  `IObjectWithSiteImpl`Spécifie les deux méthodes. Le client appelle d’abord `SetSite`, en passant du site **IUnknown** pointeur. Ce pointeur est stocké dans l’objet et peuvent être récupéré ultérieurement via un appel à `GetSite`.  
@@ -70,7 +71,7 @@ template <class T>
   
  `IObjectWithSiteImpl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
   
 ##  <a name="getsite"></a>IObjectWithSiteImpl::GetSite  
@@ -82,7 +83,7 @@ STDMETHOD(GetSite)(
     void** ppvSite);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si le site prend en charge cette interface, le pointeur est retourné `ppvSite`. Dans le cas contraire, `ppvSite` a la valeur **NULL**.  
   
  Consultez [IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) dans le Kit de développement logiciel Windows.  
@@ -94,7 +95,7 @@ STDMETHOD(GetSite)(
 CComPtr<IUnknown> m_spUnkSite;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `m_spUnkSite`initialement reçoit ce pointeur via un appel à [SetSite](#setsite).  
   
 ##  <a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite  
@@ -118,7 +119,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 STDMETHOD(SetSite)(IUnknown* pUnkSite);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869) dans le Kit de développement logiciel Windows.  
   
 ## <a name="see-also"></a>Voir aussi  

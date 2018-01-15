@@ -20,14 +20,15 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e2b883e5f46e274c19b3e5c4ed3ae2698cef694e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c02d807f6b77ca7aa35ffe91b929122a3743be6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activex-controls-on-the-internet"></a>Contrôles ActiveX sur Internet
-Les contrôles ActiveX sont la version mise à jour de la spécification de contrôle OLE. Les contrôles sont une architecture primaire pour le développement de composants logiciels programmables qui peuvent être utilisés dans plusieurs conteneurs, y compris les navigateurs Web compatibles COM sur Internet. Un contrôle ActiveX peut être un contrôle Internet et peut ajouter ses fonctionnalités dans un document actif ou faire partie d'une page Web. Les contrôles sur une page Web peuvent communiquer entre eux à l'aide de scripts.  
+Les contrôles ActiveX sont la version mise à jour de la spécification de contrôle OLE. Les contrôles sont une architecture primaire pour le développement de composants logiciels programmables qui peuvent être utilisés dans plusieurs conteneurs, y compris les navigateurs Web compatibles COM sur Internet. Un contrôle ActiveX peut être un contrôle Internet et peut ajouter ses fonctionnalités dans un document actif ou faire partie d'une page Web. Les contrôles sur une page web peuvent communiquer entre eux à l’aide de scripts.  
   
  Les contrôles ActiveX ne sont pas limités à Internet. Un contrôle ActiveX peut également être utilisé dans n'importe quel conteneur, tant que le contrôle prend en charge les interfaces requises par ce conteneur.  
   
@@ -165,7 +166,7 @@ Les contrôles ActiveX sont la version mise à jour de la spécification de cont
   
  La technique de base utilisée dans ASYNDOWN consiste à définir une minuterie dans **CDataPathProperty::OnDataAvailable** pour indiquer lorsque les données sont disponibles. Si le message de la minuterie est accepté, l'application lit des blocs de 128 octets de données et remplit un contrôle d'édition. Si les données ne sont pas disponibles lorsque le message de la minuterie est traité, la minuterie est désactivée. `OnDataAvailable` démarre la minuterie si davantage de données arrivent ultérieurement.  
   
-## <a name="displaying-a-control-on-a-web-page"></a>Affichage d'un contrôle sur une page Web  
+## <a name="displaying-a-control-on-a-web-page"></a>Affichage d’un contrôle sur une page web  
  Voici un exemple de balise et d’attributs d’objet pour insérer un contrôle sur une page web.  
   
  `<OBJECT`  

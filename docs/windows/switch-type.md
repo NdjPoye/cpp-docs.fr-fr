@@ -1,32 +1,33 @@
 ---
-title: "switch_type | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.switch_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "switch_type attribute"
+title: switch_type | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.switch_type
+dev_langs: C++
+helpviewer_keywords: switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2b41a71483bc26d1a28476f24a47395ccd6b35d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# switch_type
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Identifie le type de la variable utilisée comme une union discriminante.  
+# <a name="switchtype"></a>switch_type
+Identifie le type de la variable utilisée en tant que l’union discriminante.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -36,14 +37,14 @@ type
   
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `type`  
- Le type de commutateur, peut être un entier, un caractère, un type Boolean, ou d'énumération.  
+ Le type de commutateur peut être un type entier, caractère, booléen ou d’énumération.  
   
-## Notes  
- L'attribut de **switch\_type** C\+\+ a les mêmes fonctionnalités que l'attribut de [switch\_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) MIDL.  
+## <a name="remarks"></a>Notes  
+ Le **switch_type** attribut C++ a les mêmes fonctionnalités que le [switch_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) attribut MIDL.  
   
- Les attributs C\+\+ ne prennent pas en charge [unions encapsulés](http://msdn.microsoft.com/library/windows/desktop/aa366811).  [Union de Nonencapsulated](http://msdn.microsoft.com/library/windows/desktop/aa367119) sont pris en charge uniquement sous la forme suivante :  
+ Attributs C++ ne gèrent pas [encapsulé unions](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Unions nonencapsulated](http://msdn.microsoft.com/library/windows/desktop/aa367119) sont pris en charge uniquement sous la forme suivante :  
   
 ```  
 // cpp_attr_ref_switch_type.cpp  
@@ -62,24 +63,23 @@ struct SizedValue2 {
 };  
 ```  
   
-## Exemple  
- Consultez l'exemple d' [événement](../windows/case-cpp.md) pour un usage d'exemple de **switch\_type**.  
+## <a name="example"></a>Exemple  
+ Consultez le [cas](../windows/case-cpp.md) exemple pour un exemple d’utilisation de **switch_type**.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
 |**S'applique à**|`typedef`|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union et Struct (attributs)](../windows/typedef-enum-union-and-struct-attributes.md)   
  [export](../windows/export.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

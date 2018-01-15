@@ -34,11 +34,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4373fc075e46110cbcef411b283b8566bf74508c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 78c48423be0bc642b96c7a46d75f101e183c73fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getprintfcountoutput"></a>_get_printf_count_output
 Indique si les fonctions de la famille [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) prennent en charge le format `%n`.  
@@ -55,13 +56,13 @@ int _get_printf_count_output();
 ## <a name="remarks"></a>Notes  
  Si `%n` n’est pas pris en charge (paramétrage par défaut), la présence de `%n` dans la chaîne de format d’une des fonctions `printf` entraîne l’appel du gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si `%n` prise en charge est activée (consultez [_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)) puis `%n` se comporteront comme décrit dans [syntaxe de spécification de Format : fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_get_printf_count_output`|\<stdio.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple relatif à [_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md).  

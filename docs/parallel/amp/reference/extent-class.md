@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,38 +15,22 @@ f1_keywords:
 - AMP/Concurrency::extent::size
 - AMP/Concurrency::extent::tile
 - AMP/Concurrency::extent::rank Constant
-dev_langs:
-- C++
-helpviewer_keywords:
-- extent structure
+dev_langs: C++
+helpviewer_keywords: extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 28c90118eeb83df75f19b49f47ac884bff111b8f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f93bcd69a6f0b05f9566fe3a2ffb6025729b63de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="extent-class-c-amp"></a>extent, classe (C++ AMP)
-Représente un vecteur de *N* valeurs entières qui spécifient les limites d’un *N*-espace tridimensionnel qui a une origine de 0. Les valeurs du vecteur sont triés du plus significatif au moins significatif.  
+Représente un vecteur de *N* valeurs entières qui spécifient les limites d’un *N*-dimensionnel espace qui a une origine égale à 0. Les valeurs dans le vecteur sont triés du plus significatif au moins significatif.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -60,7 +43,7 @@ class extent;
  `_Rank`  
  Le classement de la `extent` objet.  
 
- ## <a name="requirements"></a>Spécifications  
+ ## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp.h  
   
  **Espace de noms :** Concurrency  
@@ -78,8 +61,8 @@ class extent;
 |Nom|Description|  
 |----------|-----------------|  
 |[contient](#contains)|Vérifie que le texte spécifié `extent` objet a le rang spécifié.|  
-|[size](#size)|Retourne la taille totale linéaire de l’étendue (en unités d’éléments).|  
-|[Mosaïque](#tile)|Génère un `tiled_extent` objet avec les extensions de vignette donné par spécifié de dimensions.|  
+|[size](#size)|Retourne la taille totale linéaire de l’étendue (dans les unités d’éléments).|  
+|[Mosaïque](#tile)|Génère un `tiled_extent` objet avec les étendues de mosaïque donné par spécifié de dimensions.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
@@ -87,10 +70,10 @@ class extent;
 |----------|-----------------|  
 |[operator-](#operator_min)|Retourne un nouveau `extent` objet qui est créé en soustrayant la `index` éléments correspondant `extent` éléments.|  
 |[operator--](#operator_min_min)|Décrémente chaque élément de la `extent` objet.|  
-|[operator%=](#operator_mod_eq)|Calcule le modulo (reste) de chaque élément dans le `extent` de l’objet lorsque cet élément est divisé par un nombre.|  
+|[operator%=](#operator_mod_eq)|Calcule le modulo (reste) de chaque élément dans le `extent` lorsque cet élément est divisé par un numéro de l’objet.|  
 |[operator*=](#operator_star_eq)|Multiplie chaque élément de la `extent` objet par un nombre.|  
 |[operator/=](#operator_min_eq)|Divise chaque élément de la `extent` objet par un nombre.|  
-|[Extent::operator\[\]](#operator_at)|Retourne l’élément situé à l’index spécifié.|  
+|[Extent::operator\[\]](#operator_at)|Retourne l’élément qui est à l’index spécifié.|  
 |[operator+](#operator_add)|Retourne un nouveau `extent` objet qui est créé en ajoutant le correspondant `index` et `extent` éléments.|  
 |[operator++](#operator_add_add)|Incrémente chaque élément de la `extent` objet.|  
 |[operator+=](#operator_add_eq)|Ajoute le nombre spécifié pour chaque élément de la `extent` objet.|  
@@ -100,11 +83,11 @@ class extent;
   
 ### <a name="public-constants"></a>Constantes publiques  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[RANK (constante)](#rank)|Obtient le classement de la `extent` objet.|  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `extent`  
 
 
@@ -123,7 +106,7 @@ bool contains(const index<rank>& _Index) const restrict(amp,cpu);
  Le `index` valeur à tester.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si spécifié `index` valeur est contenue dans le `extent` objet ; sinon, `false`.  
+ `true`Si le texte spécifié `index` valeur est contenue dans le `extent` de l’objet ; sinon, `false`.  
   
 ##  <a name="ctor"></a>étendue 
 
@@ -154,19 +137,19 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
  La longueur de la dimension suivant-à-plus significatif.  
   
  `_I2`  
- La longueur de la dimension moins significative.  
+ La longueur de la dimension de poids faible.  
   
  `_Other`  
  Un `extent` objet sur lequel la nouvelle `extent` objet est basé.  
   
 ## <a name="remarks"></a>Notes  
- Le constructeur sans paramètre un `extent` objet ayant un rang de trois.  
+ Le constructeur sans paramètre initialise un `extent` objet ayant un rang de trois.  
   
- Si un tableau est utilisé pour construire un `extent` de l’objet, la longueur du tableau doit correspondre au rang de la `extent` objet.  
+ Si un tableau est utilisé pour construire un `extent` de l’objet, la longueur du tableau doit correspondre au rang de le `extent` objet.  
   
-##  <a name="operator_mod_eq"></a>opérateur % = 
+##  <a name="operator_mod_eq"></a>% de l’opérateur = 
 
-Calcule le modulo (reste) de chaque élément de l’extension' ' lorsque cet élément est divisé par un nombre.  
+Calcule le modulo (reste) de chaque élément dans la mesure' ' lorsque cet élément est divisé par un nombre.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -176,7 +159,7 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
   
 ### <a name="parameters"></a>Paramètres  
  `_Rhs`  
- Pour trouver le modulo de nombre.  
+ Nombre à trouver le modulo de.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Objet `extent`.  
@@ -210,7 +193,7 @@ extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
   
 ### <a name="parameters"></a>Paramètres  
  `_Rhs`  
- Le `index` objet qui contient les éléments à ajouter.  
+ Le `index` objet qui contienne les éléments à ajouter.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Nouvel objet `extent`.  
@@ -227,7 +210,7 @@ extent<_Rank> operator++(int)restrict(amp,cpu);
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pour l’opérateur de la `extent` objet (`*this`). Pour l’opérateur de suffixe, un nouveau `extent` objet.  
+ Pour l’opérateur de préfixe, la `extent` objet (`*this`). Pour l’opérateur de suffixe, un nouveau `extent` objet.  
   
 ##  <a name="operator_add_eq"></a>opérateur += 
 
@@ -250,7 +233,7 @@ extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
   
 ##  <a name="operator_min"></a>-(opérateur) 
 
-Crée un objet `extent` objet en soustrayant chaque élément spécifié `index` objet à partir de l’élément correspondant dans cette `extent` objet.  
+Crée un nouveau `extent` objet par la soustraction de chaque élément spécifié `index` objet à partir de l’élément correspondant dans cette `extent` objet.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -277,7 +260,7 @@ extent<_Rank> operator--(int)restrict(amp,cpu);
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pour l’opérateur de la `extent` objet (`*this`). Pour l’opérateur de suffixe, un nouveau `extent` objet.  
+ Pour l’opérateur de préfixe, la `extent` objet (`*this`). Pour l’opérateur de suffixe, un nouveau `extent` objet.  
   
 ##  <a name="operator_div_eq"></a>/ = (opérateur) 
 
@@ -291,7 +274,7 @@ extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
   
 ### <a name="parameters"></a>Paramètres  
  `_Rhs`  
- Le nombre à diviser par.  
+ Nombre à diviser par.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Objet `extent`.  
@@ -317,7 +300,7 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
   
 ##  <a name="operator_eq"></a>opérateur = 
 
-Copie le contenu d’un autre objet de « étendue » dans celle-ci.  
+Copie le contenu de l’objet d’un autre 'extension' dans celui-ci.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -327,13 +310,13 @@ extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
   
 ### <a name="parameters"></a>Paramètres  
  `_Other`  
- Le `extent` objet d’origine.  
+ Le `extent` objet à copier à partir de.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à ce `extent` objet.  
   
 ##  <a name="operator_at"></a>Extent::operator\[\] 
-Retourne l’élément situé à l’index spécifié.  
+Retourne l’élément qui est à l’index spécifié.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -344,7 +327,7 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
   
 ### <a name="parameters"></a>Paramètres  
  `_Index`  
- Nombre entier compris entre 0 et le rang moins 1.  
+ Entier compris entre 0 et le rang moins 1.  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’élément qui est à l’index spécifié.  
@@ -371,7 +354,7 @@ unsigned int size() const restrict(amp,cpu);
   
 ## <a name="tile"></a>Mosaïque 
 
-Produit un objet tiled_extent avec les dimensions de la mosaïque.
+Produit un objet tiled_extent avec les dimensions de la mosaïque spécifié.
 
 ```
 template <int _Dim0>
@@ -386,10 +369,9 @@ tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
 ### <a name="parameters"></a>Paramètres
 `_Dim0`Le composant plus significatif de l’étendue en mosaïque.
 `_Dim1`Le composant suivant-à-plus significatif de l’étendue en mosaïque.
-`_Dim2`Le composant moins important de l’étendue en mosaïque.
+`_Dim2`Le composant de poids faible de l’étendue en mosaïque.
 
 
   
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

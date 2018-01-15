@@ -57,11 +57,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f03e2c28612b3418c324c46ecfdf5342c90c30e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71d44aac1ca7a018be7be1b375dd92920af96dba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate (classe)
 Classe de base abstraite qui définit les fonctionnalités de base des modèles de document.  
@@ -104,7 +105,7 @@ class CDocTemplate : public CCmdTarget
 |[CDocTemplate::SetPreviewInfo](#setpreviewinfo)|Gestionnaire d’aperçus paramétrages en dehors du processus.|  
 |[CDocTemplate::SetServerInfo](#setserverinfo)|Détermine les ressources et les classes lorsque le document serveur est incorporé ou modifié sur place.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous créez généralement un ou plusieurs modèles de document dans l’implémentation de votre application `InitInstance` (fonction). Un modèle de document définit les relations entre les trois types de classes :  
   
 -   Une classe de document, vous dérivez de **CDocument**.  
@@ -134,7 +135,7 @@ class CDocTemplate : public CCmdTarget
   
  `CDocTemplate`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
 ##  <a name="adddocument"></a>CDocTemplate::AddDocument  
@@ -148,7 +149,7 @@ virtual void AddDocument(CDocument* pDoc);
  `pDoc`  
  Pointeur vers le document à ajouter.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les classes dérivées [CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md) et [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md) remplacent cette fonction. Si vous dérivez votre propre classe de modèle de document de `CDocTemplate`, votre classe dérivée doit remplacer cette fonction.  
   
 ##  <a name="cdoctemplate"></a>CDocTemplate::CDocTemplate  
@@ -189,7 +190,7 @@ CDocTemplate (
  `pViewClass`  
  Pointe vers le `CRuntimeClass` objet de la classe d’affichage. Cette classe est un `CView`-dérivée la classe que vous définissez pour afficher vos documents.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette fonction membre pour construire un `CDocTemplate` objet. Allouer dynamiquement un `CDocTemplate` de l’objet et le passer à [CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate) à partir de la `InitInstance` fonction membre de classe de votre application.  
   
 ##  <a name="closealldocuments"></a>CDocTemplate::CloseAllDocuments  
@@ -203,7 +204,7 @@ virtual void CloseAllDocuments(BOOL bEndSession);
  `bEndSession`  
  Spécifie si la session est en cours terminée. Il s’agit de **TRUE** si la session est terminée ; sinon **FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre est généralement utilisée en tant que partie de la commande de sortie de fichier. L’implémentation par défaut de cette fonction appelle le [CDocument::DeleteContents](../../mfc/reference/cdocument-class.md#deletecontents) fonction membre pour supprimer du document données, puis se ferme les fenêtres frame pour toutes les vues joint au document.  
   
  Remplacez cette fonction si vous souhaitez que l’utilisateur à effectuer un nettoyage spécial traitement avant la fermeture du document. Par exemple, si le document représente un enregistrement dans une base de données, vous souhaiterez substituer cette fonction pour fermer la base de données.  
@@ -237,7 +238,7 @@ virtual CFrameWnd* CreateNewFrame(
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers la fenêtre frame nouvellement créée, ou **NULL** si une erreur se produit.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `CreateNewFrame`utilise le `CRuntimeClass` objets passés au constructeur pour créer une nouvelle fenêtre frame avec une vue et le document joint. Si le `pDoc` paramètre est **NULL**, le framework génère un message de TRACE.  
   
  Le `pOther` paramètre est utilisé pour implémenter la commande nouvelle fenêtre. Il fournit une fenêtre frame sur lequel la nouvelle fenêtre de l’image de modèle. La nouvelle fenêtre frame est généralement créée invisible. Appelez cette fonction pour créer des fenêtres frame à l’extérieur de l’implémentation de fichier nouveau et ouvrir le fichier framework standard.  
@@ -265,7 +266,7 @@ CFrameWnd* CreateOleFrame(
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers une fenêtre frame en cas de réussite ; dans le cas contraire **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si `bCreateView` est égal à zéro, un cadre vide est créé.  
   
 ##  <a name="getdocstring"></a>CDocTemplate::GetDocString  
@@ -301,7 +302,7 @@ virtual BOOL GetDocString(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la sous-chaîne spécifiée a été trouvée ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction pour extraire une sous-chaîne spécifique qui décrit le type de document. La chaîne qui contient les sous-chaînes est stockée dans le modèle de document et est dérivée d’une chaîne dans le fichier de ressources pour l’application. L’infrastructure appelle cette fonction pour obtenir les chaînes dont il a besoin pour l’interface utilisateur de l’application. Si vous avez spécifié une extension de nom de fichier pour les documents de votre application, le framework appelle également cette fonction lors de l’ajout d’une entrée à la base de données d’inscription de Windows ; Cela permet aux documents à ouvrir à partir du Gestionnaire de fichiers Windows.  
   
  Appelez cette fonction uniquement si vous dérivez votre propre classe de `CDocTemplate`.  
@@ -316,7 +317,7 @@ virtual POSITION GetFirstDocPosition() const = 0;
 ### <a name="return-value"></a>Valeur de retour  
  A **POSITION** valeur qui peut être utilisé pour itérer via la liste des documents associés à ce modèle de document ; ou **NULL** si la liste est vide.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette fonction pour obtenir la position du premier document dans la liste des documents associés à ce modèle. Utilisez le **POSITION** valeur en tant qu’argument à [CDocTemplate::GetNextDoc](#getnextdoc) pour parcourir la liste des documents associés au modèle.  
   
  [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md) et [CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md) substituent cette fonction virtuelle pure. Toute classe que vous dérivez de `CDocTemplate` doit également substituer cette fonction.  
@@ -335,7 +336,7 @@ virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
  `rPos`  
  Une référence à un **POSITION** valeur retournée par un appel précédent à [GetFirstDocPosition](#getfirstdocposition) ou `GetNextDoc`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si l’élément récupéré est le dernier dans la liste, puis la nouvelle valeur de `rPos` a la valeur **NULL**.  
   
  Vous pouvez utiliser `GetNextDoc` dans une boucle itération vers l’avant, si vous établissez la position initiale avec un appel à [GetFirstDocPosition](#getfirstdocposition).  
@@ -362,7 +363,7 @@ virtual void InitialUpdateFrame(
  `bMakeVisible`  
  Indique si l’image doit être visible et actif.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez **IntitialUpdateFrame** après la création d’un nouveau frame avec `CreateNewFrame`. Appel de cette fonction entraîne les vues dans cette fenêtre frame pour recevoir leurs `OnInitialUpdate` appels. En outre, s’il n’est pas une vue active, la vue principale de la fenêtre frame devient active ; l’affichage principal est une vue avec l’ID enfant de **AFX_IDW_PANE_FIRST**. Enfin, la fenêtre frame est rendue visible si `bMakeVisible` est différente de zéro. Si `bMakeVisible` est égal à zéro, le focus actuel et l’état visible de la fenêtre frame reste inchangée.  
   
  Il n’est pas nécessaire d’appeler cette fonction lorsque vous utilisez l’implémentation de l’infrastructure du nouveau fichier et ouvrir le fichier.  
@@ -374,7 +375,7 @@ virtual void InitialUpdateFrame(
 virtual void LoadTemplate();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre est appelée par l’infrastructure pour charger les ressources pour une donnée `CDocTemplate` ou une classe dérivée. Normalement il est appelé pendant la construction, sauf lorsque le modèle est en cours de construction globalement. Dans ce cas, l’appel à `LoadTemplate` est différée jusqu'à ce que [CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate) est appelée.  
   
 ##  <a name="matchdoctype"></a>CDocTemplate::MatchDocType  
@@ -408,7 +409,7 @@ enum Confidence
     };  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette fonction pour déterminer le type de modèle de document à utiliser pour l’ouverture d’un fichier. Si votre application prend en charge plusieurs types de fichiers, par exemple, vous pouvez utiliser cette fonction pour déterminer lequel des modèles de document disponibles est approprié pour un fichier donné en appelant `MatchDocType` pour chaque modèle dans le désactiver et en choisissant un modèle en fonction de la valeur de confiance est retournée.  
   
  Si le fichier spécifié par `lpszPathName` est déjà ouvert, cette fonction retourne **CDocTemplate::yesAlreadyOpen** et de la copie du fichier **CDocument** objet dans l’objet à `rpDocMatch`.  
@@ -440,7 +441,7 @@ virtual CDocument* OpenDocumentFile(
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le document dont le fichier est nommé en `lpszPathName`; `NULL` en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ouvre le fichier dont le chemin est spécifié par `lpszPathName`. Si `lpszPathName` est `NULL`, un nouveau fichier qui contient un document de type associé à ce modèle est créé.  
   
 ##  <a name="removedocument"></a>CDocTemplate::RemoveDocument  
@@ -454,7 +455,7 @@ virtual void RemoveDocument(CDocument* pDoc);
  `pDoc`  
  Pointeur vers le document à supprimer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les classes dérivées `CMultiDocTemplate` et `CSingleDocTemplate` se substitue à cette fonction. Si vous dérivez votre propre classe de modèle de document de `CDocTemplate`, votre classe dérivée doit remplacer cette fonction.  
   
 ##  <a name="saveallmodified"></a>CDocTemplate::SaveAllModified  
@@ -478,7 +479,7 @@ void SetContainerInfo(UINT nIDOleInPlaceContainer);
  `nIDOleInPlaceContainer`  
  L’ID des ressources utilisées lorsqu’un objet incorporé est activé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction pour définir les ressources à utiliser lors de l’objet OLE est activé sur place. Ces ressources peuvent inclure des menus et des tables d’accélérateurs. Cette fonction est généralement appelée le [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) fonction de votre application.  
   
  Le menu associé `nIDOleInPlaceContainer` contient des séparateurs qui autorisent le menu de l’élément in situ activé à fusionner avec le menu de l’application conteneur. Pour plus d’informations sur la fusion de menus de conteneur et de serveur, consultez l’article [Menus et ressources (OLE)](../../mfc/menus-and-resources-ole.md).  
@@ -494,7 +495,7 @@ virtual void SetDefaultTitle(CDocument* pDocument) = 0;
  *pDocument*  
  Pointeur vers le document dont le titre doit être défini.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur le titre par défaut, consultez la description de **CDocTemplate::docName** dans [CDocTemplate::GetDocString](#getdocstring).  
   
 ##  <a name="setserverinfo"></a>CDocTemplate::SetServerInfo  
@@ -521,7 +522,7 @@ void SetServerInfo(
  *pOleViewClass*  
  Pointeur vers un `CRuntimeClass` structure contenant des informations de classe pour l’objet d’affichage créé en cas d’activation en place.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez cette fonction membre pour identifier les ressources qui seront utilisés par l’application serveur lorsque l’utilisateur demande l’activation d’un objet incorporé. Ces ressources sont constituées des menus et des tables d’accélérateurs. Cette fonction est généralement appelée le `InitInstance` de votre application.  
   
  Le menu associé `nIDOleInPlaceServer` contient des séparateurs qui autorisent le menu du serveur à fusionner avec le menu du conteneur. Pour plus d’informations sur la fusion de menus de conteneur et de serveur, consultez l’article [Menus et ressources (OLE)](../../mfc/menus-and-resources-ole.md).  
@@ -545,7 +546,7 @@ CFrameWnd* CreatePreviewFrame(
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur valide vers une `CFrameWnd` objet, ou `NULL` si la création échoue.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ##  <a name="setpreviewinfo"></a>CDocTemplate::SetPreviewInfo  
  Définit la sortie de gestionnaire d’aperçu de processus.  
@@ -567,7 +568,7 @@ void SetPreviewInfo(
  `pPreviewViewClass`  
  Spécifie un pointeur vers une structure d’informations de classe runtime de la vue Aperçu.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
  [CCmdTarget (classe)](../../mfc/reference/ccmdtarget-class.md)   

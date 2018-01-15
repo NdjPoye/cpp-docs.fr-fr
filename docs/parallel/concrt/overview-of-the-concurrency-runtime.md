@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 022d4576127d068ea31a215de1adbb6edffb2d75
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce1967b04770f53c2e1acbd49342f9080a7e3c12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Vue d'ensemble du runtime d'accès concurrentiel
 Ce document fournit une vue d'ensemble du runtime d'accès concurrentiel. Il décrit les avantages du runtime d'accès concurrentiel, quand l'utiliser et la façon dont ses composants interagissent entre eux et avec le système d'exploitation et les applications.  
@@ -44,7 +45,7 @@ Ce document fournit une vue d'ensemble du runtime d'accès concurrentiel. Il dé
 ##  <a name="runtime"></a>Pourquoi un Runtime d’accès concurrentiel est-il important ?  
  Un runtime d'accès concurrentiel fournit l'uniformité et la prévisibilité aux applications et à leurs composants qui s'exécutent simultanément. Voici deux exemples des avantages du Runtime d’accès concurrentiel : *planification de tâches coopérative* et *le blocage coopératif*.  
   
- Le runtime d’accès concurrentiel utilise un planificateur de tâches coopératif qui implémente un algorithme de vol de travail pour distribuer efficacement le travail entre les ressources informatiques. Par exemple, considérez une application qui a deux threads gérés par le même runtime. Si un thread termine sa tâche planifiée, il peut décharger du travail de l'autre thread. Ce mécanisme équilibre la charge de travail globale de l'application.  
+ Le runtime d’accès concurrentiel utilise un planificateur de tâches coopératif qui implémente un algorithme de vol de travail pour distribuer efficacement le travail entre les ressources informatiques. Par exemple, considérez une application qui a deux threads gérés par le même runtime. Si un thread termine sa tâche planifiée, il peut décharger du travail de l’autre thread. Ce mécanisme équilibre la charge de travail globale de l'application.  
   
  Le runtime d'accès concurrentiel fournit également des primitives de synchronisation qui utilisent le blocage coopératif pour synchroniser l'accès aux ressources. Par exemple, considérez une tâche qui doit avoir un accès exclusif à une ressource partagée. Par un blocage coopératif, le runtime peut utiliser le quantum restant pour effectuer une autre tâche, pendant que la première tâche attend la ressource. Ce mécanisme favorise l'utilisation maximale des ressources informatiques.  
   
@@ -123,7 +124,7 @@ Ce document fournit une vue d'ensemble du runtime d'accès concurrentiel. Il dé
 |Composant|Fichiers d'en-tête|  
 |---------------|------------------|  
 |Bibliothèque de modèles parallèles|ppl.h<br /><br /> concurrent_queue.h<br /><br /> concurrent_vector.h|  
-|Bibliothèque d'agents asynchrones|agents.h|  
+|bibliothèque d’agents asynchrones|agents.h|  
 |Planificateur de tâches|concrt.h|  
 |Gestionnaire des ressources|concrtrm.h|  
   

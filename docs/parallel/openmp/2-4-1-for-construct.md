@@ -1,143 +1,142 @@
 ---
-title: "2.4.1 for Construct | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.4.1 construction for | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 27d2cbce-786b-4819-91d3-d55b2cc57a5e
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dd861da77b549a73edf9aeface714b0066d88344
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# 2.4.1 for Construct
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La directive de **pour** identifie un élément itératif de partage de travail qui spécifie que les itérations de la boucle associée seront exécutées en parallèle.  Les itérations de la boucle de **pour** sont distribuées sur les threads qui existent déjà dans l'équipe exécutant l'élément parallèle auquel il est lié.  La syntaxe de l'élément de **pour** est la suivante :  
+# <a name="241-for-construct"></a>2.4.1 Construction for
+Le **pour** directive identifie une construction de partage de travail itérative qui spécifie que les itérations de la boucle associée seront exécutées en parallèle. Les itérations de la **pour** boucle sont réparties entre les threads qui existent déjà dans l’équipe de l’exécution de la construction parallèle auquel elle est liée. La syntaxe de la **pour** construction est comme suit :  
   
 ```  
-#pragma omp for [clause[[,] clause] ... ] new-line  
-   for-loop  
+#pragma omp for [clause[[,] clause] ... ] new-linefor-loop  
 ```  
   
- La clause est l'une des opérations suivantes :  
+ La clause est une des opérations suivantes :  
   
- *variable\-liste* **\)**de**privé \(**  
+ **privé (** *variable-list* **)**  
   
- *variable\-liste* **\)**de**firstprivate \(**  
+ **firstprivate (** *variable-list* **)**  
   
- *variable\-liste* **\)**d'**elle \(**  
+ **lastprivate (** *variable-list* **)**  
   
- *variable\-liste* **\)**de**Numéro de téléphone :** d'*opérateur de***réduction \(**  
+ **la réduction (** *opérateur* **:** *variable-list***)**  
   
- **dimensionné**  
+ **commandée**  
   
- *type*de**planifier \(**\[,\]**\)** *chunk\_size*  
+ **planification (** *type*[, *chunk_size*]**)**  
   
  **nowait**  
   
- Les restrictions directives d'emplacements de **pour** à la structure de **pour** correspondant bouclent.  spécifiquement, la boucle correspondante de **pour** doit avoir la forme canonique :  
+ Le **pour** directive impose des restrictions sur la structure correspondantes **pour** boucle. Plus précisément, correspondants **pour** boucle doit avoir la forme canonique :  
   
- *var b logique\-op*de**pour \(***init\-expr***;**; *augmentation\-expr***\)**  
+ **pour (** *init-expr* **;** *var du maître d’opérations logiques b*; *incr-expr***)**  
   
- *init\-expr*  
+ *Init-expr*  
  Une des valeurs suivantes :  
   
- *var* \= *livre*  
+ *var* = *équilibrage de charge*  
   
- *entier\-type var* \= *livre*  
+ *type d’entier var* = *équilibrage de charge*  
   
- *augmentation\-expr*  
+ *incr-expr*  
  Une des valeurs suivantes :  
   
- \+\+var  
+ ++*var*  
   
- *var* \+\+  
+ *var* ++  
   
- \-\- *var*  
+ -- *var*  
   
- *var* \-\-  
+ *var* --  
   
- *augmentation* *du var* \+\=  
+ *var* += *incrémentielle*  
   
- *var* \- \= *augmentez*  
+ *var* -= *incrémentielle*  
   
- *" var "* \= *" var "* \+ *accru*  
+ *var* = *var* + *incrémentielle*  
   
- *var* \= *accru* \+ *var*  
+ *var* = *incr* + *var*  
   
- *var* \= *var* \- *incr*  
+ *var* = *var* - *incrémentielle*  
   
  *var*  
- une variable d'entier signé.  Si cette variable devrait être partagée, il est implicitement rendue privée pour la durée de **pour**.  Cette variable ne doit pas être modifiée dans le corps de l'instruction de **pour** .  Sauf si la variable est **elle**spécifié, sa valeur après la boucle soit indéterminée.  
+ Une variable d’entier signé. Si cette variable serait partagée dans le cas contraire, il est implicitement rendu privé pour la durée de la **pour**.   Cette variable ne doit pas être modifiée dans le corps de la **pour** instruction. Sauf si la variable est spécifiée **lastprivate**, sa valeur après la boucle est indéterminée.  
   
- *logique\-op*  
+ *opération logique*  
  Une des valeurs suivantes :  
   
- \<  
+ <  
   
- \<\=  
+ \<=  
   
- \>  
+ >  
   
- \>\=  
+ \>=  
   
- *livre*, *b*, et *augmentation*  
- Expressions d'entiers invariantes de boucle.  Il n'existe aucune synchronisation pendant l'évaluation de ces expressions.  Par conséquent, tous les effets secondaires évalués produisent des résultats indéterminés.  
+ *équilibrage de charge*, *b*, et *incrémentielle*  
+ Expressions d’entiers invariant de boucle. Il n’existe aucune synchronisation pendant l’évaluation de ces expressions. Par conséquent, tous les effets évaluées donner des résultats indéterminés.  
   
- notez que la forme canonique permet le nombre d'itérations de boucle à calculer sur l'entrée à la boucle.  Ce calcul est exécuté avec les valeurs du type *de var*, après les promotions intégrales.  en particulier, si valeur de *b* \- *livre* \+ *accru* ne peut pas être représentée dans ce type, le résultat est indéterminé.  De plus, si *logique\-op* est \< ou \<\= ensuite *augmentation\-expr* doit provoquer *le var* à l'augmentation sur chaque itération de la boucle.  Si *logique\-op* est \> ou \>\= ensuite *augmentation\-expr* doit provoquer *le var* la baisse sur chaque itération de la boucle.  
+ Notez que la forme canonique autorise le nombre d’itérations de boucle doit être calculée sur ENTRÉE pour la boucle. Ce calcul est effectué avec des valeurs dans le type de *var*, après les promotions intégrales. En particulier, si la valeur de *b* - *lb* + *incr* ne peut pas être représenté dans la mesure où le type, le résultat est indéterminé. Plus, si *du maître d’opérations logiques* est < ou \<= puis *incr-expr* doivent entraîner *var* augmenter à chaque itération de la boucle.   Si *du maître d’opérations logiques* est > ou > = puis *incr-expr* doivent entraîner *var* à diminuer à chaque itération de la boucle.  
   
- La clause de **planification** spécifie comment les itérations de la boucle de **pour** sont divisées entre les threads de l'équipe.  L'exactitude d'un programme ne doit pas dépendre de quel thread effectue une itération particulière.  La valeur de *chunk\_size*, si elle est spécifiée, doit être une expression entière indifférente de boucle avec une valeur positive.  Il n'existe aucune synchronisation pendant l'évaluation de cette expression.  Par conséquent, tous les effets secondaires évalués produisent des résultats indéterminés.  *Le type* de planification peut avoir l'une des valeurs suivantes :  
+ Le **planification** spécifie comment les itérations de la **pour** boucle sont réparties entre les threads de l’équipe. L’exactitude d’un programme ne doit pas dépendre de thread qui exécute une itération particulière. La valeur de *chunk_size*, si spécifiée, doit être une expression d’entier invariant boucle avec une valeur positive. Il n’existe aucune synchronisation pendant l’évaluation de cette expression. Par conséquent, tous les effets évaluées donner des résultats indéterminés. La planification *type* peut prendre l’une des opérations suivantes :  
   
- Valeurs *de type* de clause de **planification** du TABLE 2\-1  
+ TABLEAU 2-1 **planification** clause *type* valeurs  
   
 |||  
 |-|-|  
-|static|Lorsque **planification \(statique,** *chunk\_size***\)** est spécifié, les itérations sont divisés en segments d'une taille spécifiée par *chunk\_size*.  Les segments sont statiquement assignés aux threads de l'équipe de façon circulaire dans l'ordre du nombre de threads.  Lorsque aucun *chunk\_size* est spécifié, l'espace d'itération est divisé en segments qui sont pas égales en taille, avec un segment assigné à chaque thread.|  
-|dynamic|Lorsque **planifier \(dynamique,** *chunk\_size***\)** est spécifié, les itérations sont divisés en une série de segments, chacun contenant *chunk\_size* des itérations.  Chaque segment est assigné à un thread qui attend une assignation.  Le thread exécute le segment des itérations et attendre son assignation suivante, jusqu'à ce que segment ne correspond pas à assigner.  Notez que le dernier segment à assigner peut contenir un plus petit nombre d'itérations.  Lorsque aucun *chunk\_size* est spécifié, il a la valeur par défaut 1.|  
-|guidée|Lorsque **planifier \(guidée,** *chunk\_size***\)** est spécifié, les itérations sont assignés aux threads dans les segments avec des tailles décroissant.  Lorsqu'un thread termine son segment assigné des itérations, il est dynamique assigné un autre segment, jusqu'à ce qu'aucun ne reste.  Pour *un chunk\_size* de 1, la taille de chaque segment est d'environ le nombre d'itérations non assignées divisées par le nombre de threads.  Ces tailles diminuent environ exponentiellement à 1.  Pour *un chunk\_size* avec la valeur *k* supérieure à 1, les tailles diminuent environ exponentiellement *à k*, mais que le dernier segment peut avoir moins de les itérations *de k* .  Lorsque aucun *chunk\_size* est spécifié, il a la valeur par défaut 1.|  
-|runtime|Lorsque **planifier \(runtime\)** est spécifié, la décision concernant la planification est différée jusqu ' à le moment de l'exécution.  *Le type* de planification et la taille de segments peuvent être choisis au moment de l'exécution en définissant la variable d'environnement **OMP\_SCHEDULE**.  Si cette variable d'environnement n'est pas définie, la planification résultant implémentation\-est défini.  Lorsque **planifier \(runtime\)** est spécifié, *chunk\_size* ne doit pas nécessairement être spécifié.|  
+|statique|Lorsque **planification (statique,** *chunk_size***)** est spécifié, les itérations sont divisées en segments d’une taille spécifiée par *chunk_size*. Les segments sont affectées de manière statique aux threads de l’équipe de manière alternée dans l’ordre le numéro de thread. Lorsqu’aucun *chunk_size* est spécifié, l’espace d’itération est divisé en blocs qui sont approximativement égales en taille, avec un seul bloc attribué à chaque thread.|  
+|dynamic|Lorsque **planification (dynamique,** *chunk_size***)** est spécifié, les itérations sont divisées en une série de segments, chacun contenant *chunk_size* itérations. Chaque segment est affecté à un thread est en attente d’une assignation. Le thread s’exécute le bloc d’itérations, puis attend pour l’attribution de son suivante, jusqu'à ce qu’aucun bloc ne reste affecté à le. Notez que le dernier segment à affecter peut avoir un plus petit nombre d’itérations. Lorsqu’aucun *chunk_size* est spécifié, la valeur par défaut est 1.|  
+|Interactive|Lorsque **planification (guidée,** *chunk_size***)** est spécifié, les itérations sont associées aux threads en prévoyant diminution de tailles. Lorsqu’un thread termine son bloc attribué d’itérations, il est attribué dynamiquement un autre segment, jusqu'à ce que ne reste aucun. Pour un *chunk_size* 1, la taille de chaque bloc est approximativement le nombre d’itérations non attribués divisé par le nombre de threads. Ces tailles diminuent environ exponentielle à 1. Pour un *chunk_size* avec la valeur *k* supérieur à 1, les tailles de diminuer environ exponentielle à *k*, sauf que le dernier segment peut avoir moins de  *k* itérations. Lorsqu’aucun *chunk_size* est spécifié, la valeur par défaut est 1.|  
+|runtime|Lorsque **Schedule (Runtime)** est spécifié, la décision en matière de planification est différée jusqu'à l’exécution. La planification *type* et la taille des blocs peut être choisie au moment de l’exécution en définissant la variable d’environnement **OMP_SCHEDULE**. Si cette variable d’environnement n’est pas définie, la planification qui en résulte est défini par l’implémentation. Lorsque **Schedule (Runtime)** est spécifié, *chunk_size* ne doit pas être spécifié.|  
   
- En l ' absence d'une clause définie explicitement de **planification** , **planification** par défaut implémentation\-est défini.  
+ En l’absence de définies explicitement **planification** clause, la valeur par défaut **planification** est défini par l’implémentation.  
   
- Un programme OpenMP\-conforme ne doit pas dépendre d'un calendrier particulier pour l'exécution correcte.  Un programme ne doit pas dépendre d' *un type* de planification se conformant précisément à la description données ci\-dessus, car il est possible d'avoir des modifications dans les implémentations du même *type* de planification entre différents compilateurs.  Les descriptions peuvent être utilisées pour sélectionner la planification qui est adapté à une situation particulière.  
+ Un programme compatible OpenMP ne doit pas dépendre une planification particulière pour une exécution correcte. Un programme ne doit pas compter sur une planification *type* conforme précisément à la description ci-dessus, car il est possible d’avoir des variations dans les implémentations de la même planification *type* sur différents compilateurs. Les descriptions permet de sélectionner le calendrier qui convient à une situation particulière.  
   
- la clause de **dimensionné** doit être présente où les directives de **dimensionné** les lient à l'élément de **pour** .  
+ Le **classés** clause doit être présent lorsque **classés** directives lier à la **pour** construire.  
   
- Il existe un cloisonnement implicite à la fin d'un élément de **pour** à moins qu'une clause de **nowait** soit spécifiée.  
+ Il existe une barrière implicite à la fin d’un **pour** construire, sauf si un **nowait** clause est spécifiée.  
   
- Les restrictions à la directive de **pour** sont les suivantes :  
+ Restrictions à le **pour** la directive sont les suivantes :  
   
--   la boucle de **pour** doit être un bloc structuré, et, en outre, son exécution ne doit pas être terminée par une instruction de **saut** .  
+-   Le **pour** boucle doit être un bloc structuré et, en outre, son exécution ne doit pas se terminer par un **saut** instruction.  
   
--   Les valeurs des expressions de contrôle de boucle de la boucle de **pour** associée à une directive de **pour** doivent être identiques de tous les threads dans l'équipe.  
+-   Les valeurs de la boucle contrôlent les expressions de la **pour** boucle associé à un **pour** la directive doit être identique pour tous les threads dans l’équipe.  
   
--   la variable d'itération de boucle de **pour** doit avoir un type d'entier signé.  
+-   Le **pour** variable d’itération de boucle doit avoir un type entier signé.  
   
--   Uniquement une clause unique de **planification** peut apparaître sur une directive de **pour** .  
+-   Un seul **planification** clause peut s’afficher dans un **pour** la directive.  
   
--   Uniquement une clause unique de **dimensionné** peut apparaître sur une directive de **pour** .  
+-   Un seul **classés** clause peut s’afficher dans un **pour** la directive.  
   
--   Uniquement une clause unique de **nowait** peut apparaître sur une directive de **pour** .  
+-   Un seul **nowait** clause peut s’afficher dans un **pour** la directive.  
   
--   Il n'est pas spécifié si ou la fréquence des effets secondaires dans les expressions *de chunk\_size*, *\#*, *de b*, ou *augmenter* se produisent.  
+-   Il s’agit d’if non spécifié ou de la fréquence à laquelle des effets dans n’importe quel côté la *chunk_size*, *lb*, *b*, ou *incr* expressions se produisent.  
   
--   La valeur de l'expression *de chunk\_size* doit être la même pour tous les threads de l'équipe.  
+-   La valeur de la *chunk_size* expression doit être identique pour tous les threads de l’équipe.  
   
-## Références croisées :  
+## <a name="cross-references"></a>Références externes :  
   
--   **privé**, **firstprivate**, **elle**, et les clauses de **réduction** , consultez [section 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) à la page 25.  
+-   **privé**, **firstprivate**, **lastprivate**, et **réduction** clauses, consultez [Section 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) page 25.  
   
--   La variable d'environnement**OMP\_SCHEDULE** , consultez [section 4,1](../../parallel/openmp/4-1-omp-schedule.md) à la page 48.  
+-   **OMP_SCHEDULE** voir variable d’environnement [Section 4.1](../../parallel/openmp/4-1-omp-schedule.md) page 48.  
   
--   l'élément de**dimensionné** , consultez [section 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) à la page 22.  
+-   **classés** construire, consultez [Section 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) à la page 22.  
   
--   [annexe D](../../parallel/openmp/d-using-the-schedule-clause.md), la page 93, fournit plus d'informations sur l'utilisation de la clause de planification.
+-   [Annexe D](../../parallel/openmp/d-using-the-schedule-clause.md), page 93, fournit plus d’informations sur l’utilisation de la clause schedule.

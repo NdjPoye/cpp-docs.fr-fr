@@ -47,11 +47,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4dff9255a8c4fa51aefed3bf92edfc8793b835a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f853939ae7960dd865f560d480366ff95a73a990
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory (classe)
 Implémente la fabrique de classes OLE, qui crée des objets OLE tels que des serveurs, des objets Automation et des documents.  
@@ -94,7 +95,7 @@ class COleObjectFactory : public CCmdTarget
 |[COleObjectFactory::VerifyLicenseKey](#verifylicensekey)|Vérifie que la clé incorporée dans le contrôle correspond à la clé incorporée dans le conteneur.|  
 |[COleObjectFactory::VerifyUserLicense](#verifyuserlicense)|Vérifie que le contrôle est concédé sous licence pour les utiliser au moment du design.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La `COleObjectFactory` classe possède des fonctions de membre pour effectuer les fonctions suivantes :  
   
 -   La gestion de l’inscription d’objets.  
@@ -114,7 +115,7 @@ class COleObjectFactory : public CCmdTarget
   
  `COleObjectFactory`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdisp.h  
   
 ##  <a name="coleobjectfactory"></a>COleObjectFactory::COleObjectFactory  
@@ -162,7 +163,7 @@ COleObjectFactory(
  `lpszProgID`  
  Pointeur vers une chaîne contenant un identificateur de programme verbaux, telle que « Microsoft Excel ».  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour utiliser l’objet, toutefois, vous devez l’inscrire.  
   
  Pour plus d’informations, consultez [clé CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) dans le Kit de développement logiciel Windows.  
@@ -177,7 +178,7 @@ REFCLSID GetClassID() const;
 ### <a name="return-value"></a>Valeur de retour  
  Référence à l’ID de classe OLE cette fabrique représente.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [clé CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getlicensekey"></a>COleObjectFactory::GetLicenseKey  
@@ -199,7 +200,7 @@ virtual BOOL GetLicenseKey(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la chaîne de clé de licence n’est pas **NULL**; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’implémentation par défaut de cette fonction retourne 0 et stocke rien dans le `BSTR`. Si vous utilisez MFC ActiveX ControlWizard pour créer votre projet, ControlWizard fournit un remplacement qui Récupère la clé de licence du contrôle.  
   
 ##  <a name="islicensevalid"></a>COleObjectFactory::IsLicenseValid  
@@ -232,7 +233,7 @@ virtual CCmdTarget* OnCreateObject();
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers l’objet créé. Il peut lever une exception de mémoire en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Remplacez cette fonction pour créer l’objet d’un élément autre que le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) passé au constructeur.  
   
 ##  <a name="register"></a>COleObjectFactory::Register  
@@ -245,7 +246,7 @@ virtual BOOL Register();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la fabrique est enregistrée avec succès ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction est généralement appelée par [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) lorsque l’application est lancée.  
   
 ##  <a name="registerall"></a>COleObjectFactory::RegisterAll  
@@ -258,7 +259,7 @@ static BOOL PASCAL RegisterAll();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si les fabriques sont enregistrés avec succès ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction est généralement appelée par [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) lorsque l’application est lancée.  
   
 ##  <a name="revoke"></a>COleObjectFactory::Revoke  
@@ -268,7 +269,7 @@ static BOOL PASCAL RegisterAll();
 void Revoke();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette fonction automatiquement avant l’arrêt de l’application. Si nécessaire, l’appeler à partir d’une substitution de [CWinApp::ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).  
   
 ##  <a name="revokeall"></a>COleObjectFactory::RevokeAll  
@@ -278,7 +279,7 @@ void Revoke();
 static void PASCAL RevokeAll();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette fonction automatiquement avant l’arrêt de l’application. Si nécessaire, l’appeler à partir d’une substitution de [CWinApp::ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).  
   
 ##  <a name="unregisterall"></a>COleObjectFactory::UnregisterAll  
@@ -306,7 +307,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
  `bRegister`  
  Détermine si la fabrique d’objet de la classe du contrôle doit être enregistré.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Procédez de la brèves discussions de deux formulaires pour cette fonction :  
   
 - **UpdateRegistry (** `lpszProgID` **)** enregistre cette fabrique d’objet du Registre du système OLE. Cette fonction est généralement appelée par [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) lorsque l’application est lancée.  
@@ -329,7 +330,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si les fabriques sont correctement mis à jour ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction est généralement appelée par [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) lorsque l’application est lancée.  
   
 ##  <a name="verifylicensekey"></a>COleObjectFactory::VerifyLicenseKey  
@@ -346,7 +347,7 @@ virtual BOOL VerifyLicenseKey(BSTR bstrKey);
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la licence d’exécution n’est valide. Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La version par défaut appelle [GetLicenseKey](#getlicensekey) pour obtenir une copie du contrôle de la chaîne de licence et la compare à la chaîne dans `bstrKey`. Si les deux chaînes sont identiques, la fonction retourne une valeur différente de zéro ; Sinon, elle retourne 0.  
   
  Vous pouvez substituer cette fonction pour fournir une vérification personnalisée de la licence.  

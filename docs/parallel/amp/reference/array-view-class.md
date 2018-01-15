@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,35 +29,19 @@ f1_keywords:
 - AMP/Concurrency::array_view::extent
 - AMP/Concurrency::array_view::source_accelerator_view
 - AMP/Concurrency::array_view::value_type
-dev_langs:
-- C++
-helpviewer_keywords:
-- array_view class
+dev_langs: C++
+helpviewer_keywords: array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: e921ae841aa1eade25fdf2ec272039cc41007a9e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 467d806203687610265d1b199e01295f93557081
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrayview-class"></a>array_view, classe
 Représente une vue à N dimensions sur les données contenues dans un autre conteneur.  
@@ -124,19 +107,19 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 ### <a name="public-constants"></a>Constantes publiques  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[RANK (constante)](#rank)|Stocke le rang de le `array_view` objet.|  
   
 ### <a name="data-members"></a>Membres de données  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[extent](#extent)|Obtient l'objet `extent` qui définit la forme de l'objet `array_view`.|  
 |[source_accelerator_view](#source_accelerator_view)|Obtient le [accelerator_view](accelerator-view-class.md) où la source de données de la `array_view` se trouve|  
 |[value_type](#value_type)|Le type de valeur de la `array_view` et le tableau lié.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `array_view` classe représente une vue dans les données contenues dans un [tableau](array-class.md) objet ou une sous-section d’une `array` objet.  
   
  Vous pouvez accéder à le `array_view` où la source de données se trouve (localement) ou sur un accélérateur différent ou un domaine de la cohérence de l’objet (à distance). Lorsque vous accédez à l’objet à distance, les vues sont copiés et mis en cache si nécessaire. Sauf pour les effets de la mise en cache automatique `array_view` objets dispose d’un profil de performances similaire à celle de `array` objets. Il existe une baisse des performances lorsque vous accédez aux données via des vues.  
@@ -145,7 +128,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 -   Une vue vers un pointeur de mémoire système est passée au moyen d’un [parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each) appel à un accélérateur et accessibles sur l’accélérateur.  
   
--   Une vue dans un tableau situé sur un accélérateur est passée au moyen d’un `parallel_for_each` appel à un autre accélérateur et il accessible.  
+-   Une vue dans un tableau situé sur un accélérateur est passée au moyen d’un `parallel_for_each` de l’appel à un autre accélérateur et est accessible en il.  
   
 -   Une vue dans un tableau situé sur un accélérateur est accessible sur l’UC.  
   
@@ -163,14 +146,14 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
  Des actions notifie le `array_view` de l’objet que la mémoire native sous-jacente est modifiée et que toutes les copies qui sont trouvent sur un accélérateur sont obsolètes. Si vous suivez ces instructions, les vues de pointeur sont identiques à ceux fournis pour les affichages de tableaux de données en parallèle.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `_Array_view_shape`  
   
  `_Array_view_base`  
   
  `array_view`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp.h  
   
  **Espace de noms :** Concurrency  
@@ -624,12 +607,12 @@ array_view<const _Value_type2, _Rank> reinterpret_as() const restrict(amp,cpu);
 ### <a name="return-value"></a>Valeur de retour  
  Un `array_view` objet ou une variable const `array_view` objet qui est basé sur ce `array_view`, avec le type d’élément converti à partir de `T` à `_Value_type2`, et le rang est réduite de *N* à 1.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il est parfois commode afficher un tableau multidimensionnel sous la forme d’un tableau unidimensionnel linéaire, qui peut avoir un type de valeur différente que le tableau source. Vous pouvez y parvenir sur un `array_view` à l’aide de cette méthode.  
   
 **Avertissement** Reinterpeting un objet array_view à l’aide d’un type valeur différent est une opération potentiellement dangereuse. Cette fonctionnalité doit être utilisée avec précaution.  
   
- Voici un exemple :  
+ Voici un exemple :  
   
 ```cpp  
 struct RGB { float r; float g; float b; };  
@@ -844,4 +827,3 @@ array_view<const value_type,_New_rank> view_as(
   
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

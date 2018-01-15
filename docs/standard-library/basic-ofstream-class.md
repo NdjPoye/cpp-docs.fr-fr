@@ -27,11 +27,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6fa5bdad26039217a52c480d747d3dac1ba2db5c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 235bf7fc118f8752adefc61f5ed18ea01caec727
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicofstream-class"></a>basic_ofstream, classe
 Décrit un objet qui contrôle l’insertion d’éléments et d’objets codés dans une mémoire tampon de flux de classe [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> avec des éléments de type `Elem`, dont les caractéristiques sont déterminées par la classe `Tr`.  
@@ -98,7 +99,7 @@ int main(int argc, char **argv)
 |-|-|  
 |[operator=](#op_eq)|Assigne le contenu de cet objet de flux. Il s'agit d'une assignation de déplacement impliquant une `rvalue reference` qui ne laisse pas de copie.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<fstream>  
   
  **Espace de noms :** std  
@@ -172,7 +173,7 @@ void close();
 ```  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre appelle [rdbuf](../standard-library/basic-ifstream-class.md#rdbuf)**->**[close](../standard-library/basic-filebuf-class.md#close).  
+ La fonction membre appelle [rdbuf](../standard-library/basic-ifstream-class.md#rdbuf)**->**[fermer](../standard-library/basic-filebuf-class.md#close).  
   
 ### <a name="example"></a>Exemple  
   Consultez [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pour obtenir un exemple qui utilise **close**.  
@@ -188,7 +189,7 @@ bool is_open() const;
  `true` si le fichier est ouvert, `false` dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre retourne [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).  
+ La fonction membre retourne [rdbuf](#rdbuf)  **->**  [is_open](../standard-library/basic-filebuf-class.md#is_open).  
   
 ### <a name="example"></a>Exemple  
   

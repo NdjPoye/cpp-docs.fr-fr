@@ -1,48 +1,49 @@
 ---
-title: "EventTargetArray::Length, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::EventTargetArray::Length"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Length (méthode)"
+title: "Eventtargetarray::Length, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::EventTargetArray::Length
+dev_langs: C++
+helpviewer_keywords: Length method
 ms.assetid: f8bd8d42-977b-4695-b07a-227a68be5259
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2f86e81bc091f884d5b169892852504b392effa1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# EventTargetArray::Length, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prend en charge l'infrastructure WRL et n'est pas destiné à être utilisé directement à partir de votre code.  
+# <a name="eventtargetarraylength-method"></a>EventTargetArray::Length, méthode
+Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 size_t Length();  
 ```  
   
-## Valeur de retour  
- Le nombre actuel d'éléments du tableau interne de gestionnaires d'événements.  
+## <a name="return-value"></a>Valeur de retour  
+ Le nombre actuel d’éléments dans le tableau interne de gestionnaires d’événements.  
   
-## Notes  
- Retourne le nombre actuel d'éléments du tableau interne de gestionnaires d'événements.  
+## <a name="remarks"></a>Notes  
+ Obtient le nombre actuel d’éléments dans le tableau interne de gestionnaires d’événements.  
   
-## Configuration requise  
- **En\-tête:** event.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** event.h  
   
- **Espace de noms:** Microsoft::WRL::Details  
+ **Namespace :** Microsoft::WRL::Details  
   
-## Voir aussi  
- [EventTargetArray, classe](../windows/eventtargetarray-class.md)   
+## <a name="see-also"></a>Voir aussi  
+ [EventTargetArray (classe)](../windows/eventtargetarray-class.md)   
  [Microsoft::WRL::Details, espace de noms](../windows/microsoft-wrl-details-namespace.md)

@@ -1,59 +1,60 @@
 ---
-title: "CriticalSectionTraits, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CriticalSectionTraits (structure)"
+title: CriticalSectionTraits (Structure) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits
+dev_langs: C++
+helpviewer_keywords: CriticalSectionTraits structure
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c24d8dea31a87094329276af3ebfaf9f06136adc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# CriticalSectionTraits, structure
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Spécialise un objet CriticalSection pour prendre en charge soit une section critique non valide, soit une fonction pour libérer une section critique.  
+# <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits (structure)
+Spécialise un objet CriticalSection pour prendre en charge une section critique non valide ou une fonction d’annulation d’une section critique.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 struct CriticalSectionTraits;  
 ```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Typedefs publics  
+### <a name="public-typedefs"></a>Typedefs publics  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|`Type`|Un `typedef` qui définit un pointeur vers une section critique.  `Type` est défini comme `typedef CRITICAL_SECTION* Type;`.|  
+|`Type`|Un `typedef` qui définit un pointeur vers une section critique. `Type`est défini en tant que `typedef CRITICAL_SECTION* Type;`.|  
   
-### Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|[CriticalSectionTraits::GetInvalidValue, méthode](../windows/criticalsectiontraits-getinvalidvalue-method.md)|Spécialise un modèle CriticalSection afin que le modèle soit toujours non valide.|  
-|[CriticalSectionTraits::Unlock, méthode](../windows/criticalsectiontraits-unlock-method.md)|Spécialise un modèle CriticalSection afin qu'il prenne en charge la libération de la propriété de l'objet de section critique spécifié.|  
+|[CriticalSectionTraits::GetInvalidValue, méthode](../windows/criticalsectiontraits-getinvalidvalue-method.md)|Spécialiser un modèle CriticalSection afin que le modèle est toujours non valide.|  
+|[CriticalSectionTraits::Unlock, méthode](../windows/criticalsectiontraits-unlock-method.md)|Spécialiser un modèle CriticalSection afin qu’il prend en charge la propriété de libération de l’objet spécifié de section critique.|  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CriticalSectionTraits`  
   
-## Configuration requise  
- **En\-tête:** corewrappers.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** corewrappers.h  
   
- **Espace de noms:** Microsoft::WRL::Wrappers::HandleTraits  
+ **Namespace :** Microsoft::WRL::Wrappers::HandleTraits  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL::Wrappers::HandleTraits, espace de noms](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

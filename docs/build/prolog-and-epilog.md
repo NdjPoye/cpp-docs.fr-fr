@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c382f3a35b87dd6eeb21975ef692afd4127816d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 700b467065d17a61dcfabf9dcaa6577a7ecffc11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prolog-and-epilog"></a>Prologue et épilogue
 Chaque fonction qui alloue de l’espace de pile, appelle d’autres fonctions, enregistre les registres non volatils ou utilise la gestion des exceptions doit posséder un prologue dont les limites d’adresse sont décrites dans les données de déroulement associées à l’entrée de table de fonctions respective (consultez [(X64) de la gestion des exceptions](../build/exception-handling-x64.md)). Le prologue enregistre argument registres leurs adresses de base si nécessaire, exécute un push de registres non volatils sur la pile, alloue la partie fixe de la pile pour les variables locales et les objets temporaires et établit éventuellement un pointeur de frame. Données de déroulement associées doivent décrire l’action du prologue et devez fournir les informations nécessaires pour annuler l’effet du code de prologue.  

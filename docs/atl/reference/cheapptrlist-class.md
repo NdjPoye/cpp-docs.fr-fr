@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 18d4847c53e7926abecba43dd55f44acd22ed2f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bda8c44142425e93792648cbbf07f5dd5e0bdb47
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cheapptrlist-class"></a>Classe de CHeapPtrList
 Cette classe fournit des méthodes utiles lors de la construction d’une liste de pointeurs de tas.  
@@ -54,7 +55,7 @@ class CHeapPtrList
 |----------|-----------------|  
 |[CHeapPtrList::CHeapPtrList](#cheapptrlist)|Constructeur.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe fournit un constructeur et dérive des méthodes à partir de [CAtlList](../../atl/reference/catllist-class.md) et [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) à l’aide de la création d’un objet de classe de collection stocker des pointeurs de segment de mémoire.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -62,7 +63,7 @@ class CHeapPtrList
   
  `CHeapPtrList`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcoll.h  
   
 ##  <a name="cheapptrlist"></a>CHeapPtrList::CHeapPtrList  
@@ -76,7 +77,7 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
  `nBlockSize`  
  La taille du bloc.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La taille de bloc est une mesure de la quantité de mémoire allouée lorsqu’un nouvel élément est requis. Tailles de bloc supérieures réduisent les appels aux routines d’allocation de mémoire, mais utilisent davantage de ressources.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,58 +1,57 @@
 ---
-title: "__ud2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__ud2"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "UD2, instruction"
-  - "__ud2, intrinsèque"
+title: __ud2 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __ud2
+dev_langs: C++
+helpviewer_keywords:
+- UD2 instruction
+- __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-caps.latest.revision: 7
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 54bcfa055ca30c61c7cf28abea9152acb7607b15
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
-# __ud2
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Spécifique à Microsoft**  
+# <a name="ud2"></a>__ud2
+**Section spécifique à Microsoft**  
   
  Génère une instruction non définie.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void __ud2();  
 ```  
   
-## Notes  
- Le processeur lève une exception non valide de l'opcode si vous exécutez une instruction non définie.  
+## <a name="remarks"></a>Notes  
+ Le processeur de déclenche une exception d’opération non valide si vous exécutez une instruction non définie.  
   
- La fonction d' `__ud2` équivaut à l'instruction machine d' `UD2` , et est uniquement disponible en mode noyau.  Pour plus d'informations, recherchez le document, « le manuel du développeur de logiciels d'architecture Intel, le volume 2 : référence de jeu d'instructions, » [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) au site.  
+ Le `__ud2` fonction est équivalente à la `UD2` instruction machine et est disponible uniquement en mode noyau. Pour plus d’informations, recherchez le document, « manuel du développeur du logiciel de l’Architecture Intel, Volume 2 : Instruction Set référence, » à la [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) site.  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
-|-----------------|------------------|  
+|---------------|------------------|  
 |`__ud2`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Fichier d'en\-tête** \<intrin.h\>  
+ **Fichier d’en-tête** \<intrin.h >  
   
-## détail de FIN Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Exemple  
- L'exemple suivant exécute une instruction non définie, qui déclenche une exception.  Le gestionnaire d'exceptions modifie le code de retour de zéro à un de.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant exécute une instruction non définie, ce qui lève une exception. Le Gestionnaire d’exceptions modifie ensuite le code de retour de zéro à un.  
   
 ```  
 // __ud2_intrinsic.cpp  
@@ -84,6 +83,11 @@ int main() {
 }  
 ```  
   
-  **avant \_\_ud2 \(\).  Le code de retour \= 0.  dans le gestionnaire d'exceptions.  après \_\_ud2 \(\).  Le code de retour \= 1.**    
-## Voir aussi  
- [compilateur, intrinsèques](../intrinsics/compiler-intrinsics.md)
+```Output  
+Before __ud2(). Return code = 0.  
+  In the exception handler.  
+After __ud2().  Return code = 1.  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [compilateur, fonctions intrinsèques](../intrinsics/compiler-intrinsics.md)

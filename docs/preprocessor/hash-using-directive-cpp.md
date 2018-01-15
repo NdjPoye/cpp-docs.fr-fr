@@ -1,90 +1,89 @@
 ---
-title: "#using, directive (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "friend_as_cpp"
-  - "#using"
-  - "friend_as"
-  - "#using_cpp"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "#using (directive)"
-  - "LIBPATH (variable d'environnement)"
-  - "préprocesseur, directives"
-  - "directive using (#using)"
+title: '#using, Directive (C + c++ / CLR) | Documents Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- friend_as_cpp
+- '#using'
+- friend_as
+- '#using_cpp'
+dev_langs: C++
+helpviewer_keywords:
+- using directive (#using)
+- '#using directive'
+- LIBPATH environment variable
+- preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-caps.latest.revision: 17
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a8a73eb8e9b5c3f3ba67e4466a6e7138010fd430
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# #using, directive (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Importe des métadonnées dans un programme compilé avec [\/clr](../build/reference/clr-common-language-runtime-compilation.md).  
+# <a name="using-directive-cclr"></a>#using, Directive (C + c++ / CLR)
+Importe des métadonnées dans un programme compilé avec [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 #using file [as_friend]  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `file`  
- Un MSIL .dll, .exe, .netmodule, ou .obj.  Par exemple :  
+ MSIL .dll, .exe, .netmodule ou .obj. Par exemple :  
   
  `#using <MyComponent.dll>`  
   
- as\_friend  
- Spécifie que tous les types de `file` sont accessibles.  Pour plus d'informations, consultez [Assemblys friend \(C\+\+\)](../dotnet/friend-assemblies-cpp.md).  
+ as_friend  
+ Spécifie que tous les types dans `file` sont accessibles.  Pour plus d’informations, consultez [assemblys Friend (C++)](../dotnet/friend-assemblies-cpp.md).  
   
-## Notes  
- `file` peut être un fichier Microsoft intermediate language \(MSIL\) que vous importez pour ses données managées et ses constructions gérées.  Si un fichier .dll contient un manifeste d'assembly, alors tous les .dll référencés dans le manifeste sont importés et l'assembly que vous générez listera *file* dans les métadonnées comme référence d'assembly.  
+## <a name="remarks"></a>Notes  
+ `file` peut être un fichier MSIL (Microsoft Intermediate Language) que vous importez pour ses données et constructions managées. Si un fichier .dll contient un manifeste d’assembly, puis toutes les DLL référencé dans le manifeste sont importés et répertorie l’assembly que vous générez *fichier* dans les métadonnées comme une référence d’assembly.  
   
- Si `file` ne contient pas d'assembly \(si `file` est un module\) et si vous n'envisagez pas d'utiliser des informations de type du module de l'application \(d'assembly\) actuelle , vous avez la possibilité de simplement indiquer que le module est une partie de l'assembly ; utilisez [\/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md).  Les types dans le module sont ensuite disponibles pour toute application qui a référencé l'assembly.  
+ Si `file` ne contient pas d’assembly (si `file` est un module) et si vous n’avez pas l’intention d’utiliser les informations de type à partir du module de l’application (assembly) actuelle, vous avez la possibilité d’indiquer simplement que le module fait partie de l’assembly ; utilisez [/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md). Les types du module sont ensuite accessibles à toute application qui a référencé l'assembly.  
   
- Au lieu d'utiliser `#using` il est possible d'utiliser l'option du compilateur [\/FU](../build/reference/fu-name-forced-hash-using-file.md).  
+ Une alternative à utiliser `#using` est la [/FU](../build/reference/fu-name-forced-hash-using-file.md) option du compilateur.  
   
- Des assemblys .exe passés à `#using` doivent être compilés avec **\/clr:safe** ou **\/clr:pure**, ou avec l'un des autres compilateurs Visual Studio \(Visual Basic ou Visual C\#, par exemple\).  Si vous essayez d'importer des métadonnées d'un assembly .exe compilé avec **\/clr**, cela provoquera une exception de chargement du fichier.  
+ les assemblys .exe passés à `#using` doit être compilée à l’aide d’un des compilateurs .NET de Visual Studio (Visual Basic ou Visual c#, par exemple).  Une tentative d’importation de métadonnées à partir d’un assembly .exe compilé avec **/CLR** entraîne une exception de chargement du fichier.  
   
 > [!NOTE]
->  Un composant qui est référencé avec `#using` peut être exécuté avec une version différente du fichier importé au moment de la compilation, causant une application cliente à donner des résultats inattendus.  
+>  Un composant référencé avec `#using` peut être exécuté avec une version différente du fichier importé au moment de la compilation, ce qui provoque des résultats inattendus d'une application cliente.  
   
- Pour qu'un compilateur reconnaisse un type dans un assembly \(pas un module\), il doit résoudre le type. Pour ce faire, vous pouvez par exemple définir une instance du type.  Le compilateur peut résoudre les noms de types d'un assembly de plusieurs autres façons : par exemple, lorsqu'un type est hérité d'un autre type d'un assembly, le nom du type est alors connu du compilateur.  
+ Pour que le compilateur de reconnaître un type dans un assembly (pas un module), il doit être forcé à résoudre le type, vous pouvez faire, par exemple, en définissant une instance du type. Autres façons de résoudre les noms de types dans un assembly pour le compilateur, par exemple, si vous héritez d’un type dans un assembly, le nom du type sera deviennent connu du compilateur.  
   
- Quand vous importez des métadonnées générées depuis du code source ayant utilisé [\_\_declspec \(thread\)](../cpp/thread.md), la sémantique de threads n'est pas persistante dans les métadonnées.  Par exemple, une variable déclarée avec **\_\_declspec\(thread\)**, compilée dans un programme qui est fait pour le Common Langage Runtime de .NET Framework, puis importée via `#using`, n'a plus la sémantique **\_\_declspec\(thread\)** sur la variable.  
+ Lors de l’importation de métadonnées générées à partir de code source utilisé [__declspec (thread)](../cpp/thread.md), la sémantique de thread n’est pas conservée dans les métadonnées. Par exemple, une variable déclarée avec **__declspec (thread)**, compilée dans un programme qui est générée pour le common language runtime du .NET Framework, puis importé `#using`, n’aura plus **__declspec () thread)** une sémantique de la variable.  
   
- Tous les types importés \(managé et natif\) dans un fichier référencé par `#using` sont disponibles, mais le compilateur traite les types natifs comme des déclarations et non pas comme des définitions.  
+ Tous les types importés (managés et natifs) dans un fichier référencé par `#using` sont disponibles, mais le compilateur traite les types natifs comme des déclarations, et non comme des définitions.  
   
- mscorlib.dll est automatiquement référencé en compilant avec **\/clr**.  
+ mscorlib.dll est automatiquement référencé lors de la compilation avec **/CLR**.  
   
- La variable d'environnement LIBPATH spécifie les répertoires qui seront fouillés lorsque le compilateur tente de résoudre des noms de fichiers passés à `#using`.  
+ La variable d'environnement LIBPATH spécifie les répertoires qui font l'objet d'une recherche lorsque le compilateur tente de résoudre les noms de fichier passés à `#using`.  
   
- Le compilateur recherchera les références sur le chemin suivant :  
+ Le compilateur recherche des références dans le chemin d'accès suivant :  
   
--   Un chemin d'accès spécifié dans l'instruction `#using`.  
+-   Chemin d'accès spécifié dans l'instruction `#using`.  
   
 -   Le répertoire actif.  
   
--   Le répertoire système .NET Framework.  
+-   Répertoire système du .NET Framework.  
   
--   Répertoires ajoutés avec l'option [\/AI](../build/reference/ai-specify-metadata-directories.md) du compilateur.  
+-   Répertoires ajoutés avec la [/AI](../build/reference/ai-specify-metadata-directories.md) option du compilateur.  
   
--   Répertoires sur la variable d'environnement LIBPATH.  
+-   Répertoires sur la variable d'environnement LIBPATH.  
   
-## Exemple  
- Si vous générez un assembly \(C\) et référencez un assembly \(B\) qui lui\-même référence un autre assembly \(A\), vous n'avez pas a faire référence à l'assembly A explicitement à moins que vous n'utilisiez un des types de A dans C.  
+## <a name="example"></a>Exemple  
+ Si vous générez un assembly (C) et référencez un assembly (B) qui lui-même référence un autre assembly (A), vous ne devrez pas référencer explicitement l'assembly A sauf si vous utilisez explicitement un des types de A dans C.  
   
 ```  
 // using_assembly_A.cpp  
@@ -92,7 +91,7 @@ Importe des métadonnées dans un programme compilé avec [\/clr](../build/refer
 public ref class A {};  
 ```  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // using_assembly_B.cpp  
@@ -106,8 +105,8 @@ public:
   
 ```  
   
-## Exemple  
- Dans l'exemple suivant, il n'y a aucune erreur du compilateur pour non\-référencement d'using\_assembly\_A.dll car le programme n'utilise aucun des types définis dans using\_assembly\_A.cpp.  
+## <a name="example"></a>Exemple  
+ Dans l'exemple suivant, aucune erreur du compilateur ne se produit pour absence de référencement d'using_assembly_A.dll, car le programme n'utilise aucun des types définis dans using_assembly_A.cpp.  
   
 ```  
 // using_assembly_C.cpp  
@@ -119,5 +118,5 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Directives de préprocesseur](../preprocessor/preprocessor-directives.md)

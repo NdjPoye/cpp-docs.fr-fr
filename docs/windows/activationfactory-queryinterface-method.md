@@ -1,33 +1,33 @@
 ---
-title: "ActivationFactory::QueryInterface, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ActivationFactory::QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "QueryInterface (méthode)"
+title: "Activationfactory::QueryInterface, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ActivationFactory::QueryInterface
+dev_langs: C++
+helpviewer_keywords: QueryInterface method
 ms.assetid: 2a9b71aa-61c0-43f7-aa35-00f0ee0af031
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: efd94727fb49d7673f8f16a6ee427640be79d6e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ActivationFactory::QueryInterface, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Récupère un pointeur vers l'interface spécifiée.  
+# <a name="activationfactoryqueryinterface-method"></a>ActivationFactory::QueryInterface, méthode
+Récupère un pointeur vers l’interface spécifiée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 STDMETHOD(  
@@ -35,20 +35,20 @@ STDMETHOD(
 )(REFIID riid, _Deref_out_ void **ppvObject);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `riid`  
- Un ID d'interface.  
+ ID d’interface.  
   
  `ppvObject`  
- Lorsque cet opération se termine, un pointeur vers l'interface spécifiée par le paramètre `riid`.  
+ Lorsque cette opération est terminée, un pointeur vers l’interface spécifiée par le paramètre `riid`.  
   
-## Valeur de retour  
- S\_OK si réussie; sinon, un HRESULT décrivant l'anomalie.  
+## <a name="return-value"></a>Valeur de retour  
+ S_OK en cas de succès. Sinon, valeur HRESULT qui décrit l’erreur.  
   
-## Configuration requise  
- **En\-tête:** module.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** module.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ActivationFactory, classe](../windows/activationfactory-class.md)

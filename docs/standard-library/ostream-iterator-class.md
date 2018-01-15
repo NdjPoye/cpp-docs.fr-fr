@@ -23,11 +23,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7a8454182c51120677f968483dc35c7da93c5e64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 83ec130d9a6273d56e107707b033968d96c0b778
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator, classe
 La classe de modèle ostream_iterator décrit un objet itérateur de sortie qui écrit les éléments consécutifs dans le flux de sortie avec l’**opérateur <<** d’extraction.  
@@ -57,7 +58,7 @@ class ostream_iterator
 |-|-|  
 |[ostream_iterator](#ostream_iterator)|Construit un `ostream_iterator` qui est initialisé et délimité en vue de son enregistrement dans le flux de sortie.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -73,7 +74,7 @@ class ostream_iterator
 |[operator++](#op_add_add)|Opérateur d'incrément non fonctionnel qui retourne un `ostream_iterator` au même objet qu'il a traité avant que l'opération n'ait été appelée.|  
 |[operator=](#op_eq)|Opérateur d’assignation utilisé pour implémenter l’expression d’itérateur de sortie * `i` = `x` en vue de l’écriture dans un flux de sortie.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<iterator>  
   
  **Espace de noms :** std  
@@ -402,7 +403,7 @@ by intOut are:
   
 ## <a name="see-also"></a>Voir aussi  
  [\<iterator>](../standard-library/iterator.md)   
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
 
 

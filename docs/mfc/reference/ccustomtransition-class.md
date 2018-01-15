@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,8 +19,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CCustomTransition::m_initialValue
 - AFXANIMATIONCONTROLLER/CCustomTransition::m_initialVelocity
 - AFXANIMATIONCONTROLLER/CCustomTransition::m_pInterpolator
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CCustomTransition [MFC], CCustomTransition
 - CCustomTransition [MFC], Create
@@ -33,16 +31,16 @@ helpviewer_keywords:
 - CCustomTransition [MFC], m_initialVelocity
 - CCustomTransition [MFC], m_pInterpolator
 ms.assetid: 5bd3f492-940f-4290-a38b-fa68eb8f8401
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b94fd32bd00a484c5f8e3ba9e86efc5a9637e4e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: d7db8c2dc1d78fae3aebdecaac689c14695a8acb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccustomtransition-class"></a>CCustomTransition, classe
 Implémente une transition personnalisée.  
@@ -71,7 +69,7 @@ class CCustomTransition : public CBaseTransition;
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CCustomTransition::m_bInitialValueSpecified](#m_binitialvaluespecified)|Spécifie si la valeur initiale a été spécifiée avec SetInitialValue.|  
 |[CCustomTransition::m_bInitialVelocitySpecified](#m_binitialvelocityspecified)|Spécifie si la rapidité initiale a été spécifiée avec SetInitialVelocity.|  
@@ -79,7 +77,7 @@ class CCustomTransition : public CBaseTransition;
 |[CCustomTransition::m_initialVelocity](#m_initialvelocity)|Stocke la rapidité initiale.|  
 |[CCustomTransition::m_pInterpolator](#m_pinterpolator)|Stocke un pointeur à un interpolateur personnalisé.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La classe CCustomTransitions permet aux développeurs d’implémenter des transitions personnalisées. Il est créé et utilisé comme une transition standard, mais son constructeur accepte comme paramètre un pointeur à un interpolateur personnalisé. Procédez comme suit pour utiliser les transitions personnalisées : 1. Dérivez une classe de CCustomInterpolator et implémentez au moins méthode InterpolateValue. 2. Assurez-vous que la durée de vie de l’objet de l’interpolateur personnalisé doit être supérieure à la durée d’animation où il est utilisé. 3. Instancier (utilisation de l’opérateur new) un objet CCustomTransition et passer un pointeur vers l’interpolateur personnalisé dans le constructeur. 4. Appelez CCustomTransition::SetInitialValue et CCustomTransition::SetInitialVelocity si ces paramètres sont requis pour l’interpolation personnalisée. 5. Passez le pointeur à une transition personnalisée à la méthode AddTransition de l’objet d’animation, dont la valeur doit être animée avec l’algorithme personnalisé. 6. Lorsque la valeur de l’objet d’animation doit changer l’API Windows Animation appelle InterpolateValue (et autres méthodes pertinentes) dans CCustomInterpolator.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -89,7 +87,7 @@ class CCustomTransition : public CBaseTransition;
   
  `CCustomTransition`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="ccustomtransition"></a>CCustomTransition::CCustomTransition  
@@ -118,7 +116,7 @@ virtual BOOL Create(
   
 ### <a name="return-value"></a>Valeur de retour  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode peut également définir la valeur initiale et la rapidité initiale à appliquer à une variable d’animation, qui est associée à cette transition. Pour cela, vous devez appeler SetInitialValue et SetInitialVelocity avant que l’infrastructure crée l’objet COM encapsulé transition (il se produit lorsque vous appelez CAnimationController::AnimateGroup).  
   
 ##  <a name="m_binitialvaluespecified"></a>CCustomTransition::m_bInitialValueSpecified  
@@ -178,4 +176,3 @@ void SetInitialVelocity(DOUBLE initialVelocity);
   
 ## <a name="see-also"></a>Voir aussi  
  [Classes](../../mfc/reference/mfc-classes.md)
-

@@ -1,32 +1,33 @@
 ---
-title: "FtmBase, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FtmBase (classe)"
+title: Ftmbase, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase
+dev_langs: C++
+helpviewer_keywords: FtmBase class
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f56321b71642f9d615c4d85fd66f878b19e44485
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# FtmBase, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Représente un objet de marshaler libre de threads.  
+# <a name="ftmbase-class"></a>FtmBase (classe)
+Représente un objet marshaler libre de threads.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -35,42 +36,42 @@ class FtmBase : public Microsoft::WRL::Implements<
    Microsoft::WRL::CloakedIid< IMarshal > >;  
 ```  
   
-## Remarques  
- Pour plus d'informations, consultez la rubrique « IMarshal » dans la sous\-rubrique « Interfaces COM » de la rubrique « Référence COM » dans la bibliothèque MSDN.  
+## <a name="remarks"></a>Notes  
+ Pour plus d’informations, consultez la rubrique « IMarshal » dans la sous-rubrique « Interfaces COM » de la rubrique « Référence COM » dans MSDN Library.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[FtmBase::FtmBase, constructeur](../windows/ftmbase-ftmbase-constructor.md)|Initialise une nouvelle instance de la classe FtmBase.|  
   
-### Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|[FtmBase::CreateGlobalInterfaceTable, méthode](../windows/ftmbase-createglobalinterfacetable-method.md)|Crée un tableau global d'interface \(GIT\).|  
-|[FtmBase::DisconnectObject, méthode](../windows/ftmbase-disconnectobject-method.md)|Libère de force toutes les connexions externes à un objet.  Le serveur de l'objet appelle l'implémentation de l'objet de cette méthode avant de s'arrêter.|  
-|[FtmBase::GetMarshalSizeMax, méthode](../windows/ftmbase-getmarshalsizemax-method.md)|Obtient la limite supérieure du nombre d'octets nécéssaires pour marshaler le pointeur d'interface spécifié sur l'objet spécifié.|  
-|[FtmBase::GetUnmarshalClass, méthode](../windows/ftmbase-getunmarshalclass-method.md)|Obtient le CLSID que COM utilise pour localiser la DLL contenant le code du proxy correspondant.  COM charge cette DLL pour créer une instance non initialisée du proxy.|  
-|[FtmBase::MarshalInterface, méthode](../windows/ftmbase-marshalinterface-method.md)|Écrit dans un flux les données requises pour initialiser un objet proxy dans un processus client.|  
-|[FtmBase::ReleaseMarshalData, méthode](../windows/ftmbase-releasemarshaldata-method.md)|Détruit un paquet de données marshalées.|  
-|[FtmBase::UnmarshalInterface, méthode](../windows/ftmbase-unmarshalinterface-method.md)|Initialise un proxy nouvellement créé et retourne un pointeur d'interface vers ce proxy.|  
+|[FtmBase::CreateGlobalInterfaceTable, méthode](../windows/ftmbase-createglobalinterfacetable-method.md)|Crée un tableau global d’interface (GIT).|  
+|[FtmBase::DisconnectObject, méthode](../windows/ftmbase-disconnectobject-method.md)|Force libère toutes les connexions externes à un objet. Serveur de l’objet appelle l’implémentation de l’objet de cette méthode avant d’arrêter.|  
+|[FtmBase::GetMarshalSizeMax, méthode](../windows/ftmbase-getmarshalsizemax-method.md)|Obtenir la limite supérieure du nombre d’octets nécessaire pour marshaler le pointeur d’interface spécifié sur l’objet spécifié.|  
+|[FtmBase::GetUnmarshalClass, méthode](../windows/ftmbase-getunmarshalclass-method.md)|Obtient le CLSID COM utilise pour rechercher la DLL qui contient le code pour le proxy correspondant. COM charge cette DLL pour créer une instance non initialisée du proxy.|  
+|[FtmBase::MarshalInterface, méthode](../windows/ftmbase-marshalinterface-method.md)|Écrit dans un flux les données requises pour initialiser l’objet proxy dans un processus client.|  
+|[FtmBase::ReleaseMarshalData, méthode](../windows/ftmbase-releasemarshaldata-method.md)|Détruit un paquet de données marshalé.|  
+|[FtmBase::UnmarshalInterface, méthode](../windows/ftmbase-unmarshalinterface-method.md)|Initialise un proxy nouvellement créé et retourne un pointeur d’interface au proxy.|  
   
-### Données membres publiques  
+### <a name="public-data-members"></a>Membres de données publics  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|[FtmBase::marshaller\_, données de membre](../windows/ftmbase-marshaller-data-member.md)|Contient une référence au marshaller libre de threads.|  
+|[FtmBase::marshaller_, données de membre](../windows/ftmbase-marshaller-data-member.md)|Contient une référence à FTM.|  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `FtmBase`  
   
-## Configuration requise  
- **En\-tête:** ftm.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** ftm.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)

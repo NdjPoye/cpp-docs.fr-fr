@@ -1,8 +1,8 @@
 ---
-title: "Étape 0 - prise en charge de l’installation de C++ dans Visual Studio | Documents Microsoft"
+title: Installer la prise en charge C++ dans Visual Studio | Documents Microsoft
 description: Installer la prise en charge de Visual Studio pour Visual C++
 ms.custom: mvc
-ms.date: 10/17/2017
+ms.date: 12/12/2017
 ms.topic: get-started-article
 ms.technology: devlang-C++
 ms.devlang: C++
@@ -11,17 +11,18 @@ ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 840f23d894e8aacc53a735fa8e1c25a671ed3a2a
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: b895569e5535fb05c1e2383df224f149815dd47f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installer la prise en charge C++ dans Visual Studio
 
 Si vous n’avez pas encore téléchargé et encore installé Visual Studio et les outils Visual C++, voici comment commencer.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 
 - Une connexion internet haut débit. Le programme d’installation de Visual Studio peut télécharger plusieurs gigaoctets de données.
 
@@ -39,13 +40,13 @@ Pour plus d’informations sur l’espace disque et la configuration requise du 
    > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&utm_source=docs&utm_medium=clickbutton">Installer Visual Studio 2017 Community</a>
 
    >[!Tip]
-   > L’édition Community est pour les développeurs individuels, apprentissage de la classe, de recherche académique et développement open source. Pour d’autres utilisations, installez <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Professional</a> ou <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Enterprise</a>.
+   > L’édition Community est destinée aux développeurs individuels, à l’apprentissage en classe, à la recherche académique et au développement open source. Pour les autres utilisations, installez <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Professional</a> ou <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Enterprise</a>.
 
 1. Recherchez le fichier de programme d’installation vous avez téléchargé et exécutez-le. Il peut s’afficher dans votre navigateur, ou il peut s’avérer dans votre dossier Téléchargements. Le programme d’installation a besoin de privilèges d’administrateur pour s’exécuter. Vous pouvez voir un **contrôle de compte d’utilisateur** boîte de dialogue vous demandant d’accorder l’autorisation pour le programme d’installation permettent d’apporter des modifications à votre système ; choisissez **Oui**. Si vous rencontrez des problèmes, recherchez le fichier téléchargé dans l’Explorateur de fichiers, avec le bouton droit sur l’icône de programme d’installation et choisissez **exécuter en tant qu’administrateur** dans le menu contextuel.
 
    ![Exécutez le programme d’installation de Visual Studio 2017](../build/media/vscpp-concierge-run-installer.gif "exécuter le programme d’installation de Visual Studio")
 
-1. Le programme d’installation vous propose une liste des charges de travail, qui sont des groupes d’options connexes pour les zones de développement spécifiques. Prise en charge de C++ fait désormais partie de charges de travail facultatives qui ne sont pas installés par défaut.
+1. Le programme d’installation vous présente une liste de charges de travail, qui sont des groupes d’options connexes pour des types de développement spécifiques. Prise en charge de C++ fait désormais partie de charges de travail facultatives qui ne sont pas installés par défaut.
 
    ![Développement de bureau avec C++](../build/media/desktop-development-with-cpp.png "bureau développement avec C++")
 
@@ -74,6 +75,6 @@ Lorsque Visual Studio est en cours d’exécution, vous êtes prêt à continuer
 ## <a name="next-steps"></a>Étapes suivantes
 
 > [!div class="nextstepaction"]
-> [Étape 1 : Créer un projet C++](vscpp-step-1-create.md)
+> [Créer un projet C++](vscpp-step-1-create.md)
 
 <iframe src="" height="0" width="0" frameborder="0" name="frameTarget" />

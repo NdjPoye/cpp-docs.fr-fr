@@ -16,11 +16,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ef1788f451597cdc8d3b512f5eede3c3d5abb382
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 214d8ca9c45a3657215833764268794b152bd337
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accelerator-type-property"></a>Type, propriété d'un accélérateur
 L’accélérateur **Type** propriété détermine si la combinaison de touches de raccourci associée à l’ID de l’accélérateur est une combinaison de touches virtuelle ou une valeur de clé ASCII/ANSI :  
@@ -32,7 +35,7 @@ L’accélérateur **Type** propriété détermine si la combinaison de touches 
     > [!NOTE]
     >  Si vous souhaitez entrer une valeur dans la table d’accélérateurs et ont la valeur soient traitées comme ASCII/ANSI, cliquez simplement sur le Type de l’écriture dans la table et sélectionnez ASCII dans la liste déroulante. Toutefois, si vous utilisez la **enfoncée suivante** commande (**modifier** menu) pour spécifier la clé, vous devez modifier le **Type** propriété de VIRTKEY en ASCII *avant* entrer le code de la clé.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

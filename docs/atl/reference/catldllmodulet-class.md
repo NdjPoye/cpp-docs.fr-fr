@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c178cb10c6f14d257e9c03b499ea8f2fa01eddf4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 650924898532e352df30d7e8173620b974f30138
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catldllmodulet-class"></a>Classe de CAtlDllModuleT
 Cette classe représente le module d’une DLL.  
@@ -64,7 +65,7 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 |[CAtlDllModuleT::DllUnregisterServer](#dllunregisterserver)|Supprime les entrées dans le Registre système pour les objets dans la DLL.|  
 |[CAtlDllModuleT::GetClassObject](#getclassobject)|Retourne une fabrique de classe. Appelé par [DllGetClassObject](#dllgetclassobject).|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CAtlDllModuleT`représente le module pour une bibliothèque de liens dynamiques (DLL) et fournit des fonctions utilisées par tous les projets DLL. Cette spécialisation de [CAtlModuleT](../../atl/reference/catlmodulet-class.md) classe inclut la prise en charge pour l’inscription.  
   
  Pour plus d’informations sur les modules dans les ATL, consultez [Module ATL, Classes](../../atl/atl-module-classes.md).  
@@ -78,7 +79,7 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
   
  `CAtlDllModuleT`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlbase.h  
   
 ##  <a name="catldllmodulet"></a>CAtlDllModuleT::CAtlDllModuleT  
@@ -145,7 +146,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne toujours la valeur TRUE.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La désactivation de la DLL_THREAD_ATTACH et DLL_THREAD_DETACH notification les appels peuvent être une optimisation utile pour les applications multithread qui ont de nombreuses DLL, qui fréquemment à créer et supprimer des threads, et dont les DLL n’avez pas besoin de ces notifications au niveau du thread de attachement/détachement.  
   
 ##  <a name="dllregisterserver"></a>CAtlDllModuleT::DllRegisterServer  
@@ -199,7 +200,7 @@ HRESULT GetClassObject(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode est appelée par [CAtlDllModuleT::DllGetClassObject](#dllgetclassobject) et est inclus pour la compatibilité descendante.  
   
 ## <a name="see-also"></a>Voir aussi  

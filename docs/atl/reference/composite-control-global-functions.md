@@ -28,11 +28,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6f9bd7613254bfd0fd4aaef239b5e848ae87b99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d5a062ea9477df9db026c75bc775df804ed86da4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="composite-control-global-functions"></a>Fonctions globales de contrôle composite
 Ces fonctions fournissent la prise en charge pour la création de boîtes de dialogue et de création, d’hébergement et de licences des contrôles ActiveX.  
@@ -56,7 +57,7 @@ Ces fonctions fournissent la prise en charge pour la création de boîtes de dia
 |[AtlAxWinTerm](#atlaxwinterm)|N’initialise pas le code d’hébergement pour les objets AxWin.|  
 |[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Retourne des informations sur l’interface source par défaut d’un objet.|  
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlhost.h  
 
 ##  <a name="atlaxdialogbox"></a>AtlAxDialogBox  
@@ -90,7 +91,7 @@ ATLAPI_(int) AtlAxDialogBox(
 ### <a name="return-value"></a>Valeur de retour  
  Une des valeurs HRESULT standards.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour utiliser **AtlAxDialogBox** avec un modèle de boîte de dialogue qui contient un contrôle ActiveX, spécifiez une valide **CLSID**, **APPID** ou la chaîne d’URL en tant que la *texte* champ le **contrôle** section de la ressource de boîte de dialogue, ainsi que « AtlAxWin80 » en tant que le *nom de la classe* champ sous la même section. Ce qui suit montre les valide **contrôle** section peut ressembler à :  
   
 ```  
@@ -133,7 +134,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 ### <a name="return-value"></a>Valeur de retour  
  Une des valeurs HRESULT standards.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La boîte de dialogue peut contenir des contrôles ActiveX.  
   
  Consultez [CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434) et [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) dans le Kit de développement logiciel Windows.  
@@ -179,7 +180,7 @@ ATLAPI AtlAxCreateControl(
 ### <a name="return-value"></a>Valeur de retour  
  Une des valeurs HRESULT standards.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction globale vous donne le même résultat que l’appel [AtlAxCreateControlEx](#atlaxcreatecontrolex)( `lpszName` **,** `hWnd` **,** `pStream` **, NULL, NULL, NULL, NULL** ) ;.  
   
  Pour créer un contrôle ActiveX sous licence, consultez [AtlAxCreateControlLic](#atlaxcreatecontrollic).  
@@ -236,7 +237,7 @@ ATLAPI AtlAxCreateControlEx(
 ### <a name="return-value"></a>Valeur de retour  
  Une des valeurs HRESULT standards.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `AtlAxCreateControlEx`est semblable à [AtlAxCreateControl](#atlaxcreatecontrol) mais permet également de recevoir un pointeur d’interface pour le contrôle qui vient d’être créé et configuré un récepteur d’événements pour recevoir les événements déclenchés par le contrôle.  
   
  Pour créer un contrôle ActiveX sous licence, consultez [AtlAxCreateControlLicEx](#atlaxcreatecontrollicex).  
@@ -344,7 +345,7 @@ ATLAPI AtlAxCreateControlLicEx(
 ### <a name="return-value"></a>Valeur de retour  
  Une des valeurs HRESULT standards.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `AtlAxCreateControlLicEx`est semblable à [AtlAxCreateControlLic](#atlaxcreatecontrollic) mais permet également de recevoir un pointeur d’interface pour le contrôle qui vient d’être créé et configuré un récepteur d’événements pour recevoir les événements déclenchés par le contrôle.  
   
 ### <a name="example"></a>Exemple  
@@ -373,7 +374,7 @@ ATLAPI AtlAxAttachControl(
 ### <a name="return-value"></a>Valeur de retour  
  Une des valeurs HRESULT standards.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez [AtlAxCreateControlEx](#atlaxcreatecontrolex) et [AtlAxCreateControl](#atlaxcreatecontrol) créer et attacher un contrôle simultanément.  
   
 > [!NOTE]
@@ -440,7 +441,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’initialisation du contrôle de code d’hébergement a réussi ; dans le cas contraire **FALSE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction doit être appelée avant d’utiliser le contrôle ATL API d’hébergement. Après un appel à cette fonction, le **« AtlAxWin »** classe de fenêtre peut être utilisée dans les appels à [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) ou [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680), comme décrit dans le Kit de développement logiciel Windows.  
 
 ##  <a name="atlaxwinterm"></a>AtlAxWinTerm  
@@ -453,7 +454,7 @@ inline BOOL AtlAxWinTerm();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne toujours **TRUE**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction appelle simplement [UnregisterClass](http://msdn.microsoft.com/library/windows/desktop/ms644899) comme décrit dans le Kit de développement logiciel Windows.  
   
  Appelez cette fonction pour nettoyer une fois que toutes les fenêtres hôtes existantes ont été détruits si vous avez appelé [AtlAxWinInit](#atlaxwininit) et vous n’avez plus besoin de créer des fenêtres de l’hôte. Si vous n’appelez pas cette fonction, la classe de fenêtre sera annulée automatiquement lorsque le processus se termine.  
@@ -489,7 +490,7 @@ ATLAPI AtlGetObjectSourceInterface(
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur HRESULT standard.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `AtlGetObjectSourceInterface`peut fournir vous avec l’ID de l’interface source par défaut, avec LIBID et majeures et les numéros de version mineure de la bibliothèque de types décrivant cette interface.  
   
 > [!NOTE]

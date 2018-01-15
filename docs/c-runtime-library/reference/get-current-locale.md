@@ -36,11 +36,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3af5897dbc723ecf4d2ee7d7f4766a32eb3127aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0ebee381e71e55f564d97dbf7ced6fe599de3728
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getcurrentlocale"></a>_get_current_locale
 Obtient un objet de paramètres régionaux qui représente les paramètres régionaux actuels.  
@@ -54,12 +55,12 @@ _locale_t _get_current_locale(void);
 ## <a name="return-value"></a>Valeur de retour  
  Objet de paramètres régionaux qui représente les paramètres régionaux actuels.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `_get_current_locale` fonction obtient actuellement défini les paramètres régionaux du thread et retourne un objet de paramètres régionaux qui représente les paramètres régionaux.  
   
  Le nom précédent de cette fonction, `__get_current_locale` (avec deux traits de soulignement de début), a été déconseillé.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

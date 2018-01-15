@@ -26,11 +26,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 718cb52bbc06645ec40fe5e35ba0a8cc55ff1778
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f8117c3ac56305637164886c6c27f7f20528d64a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt;, classe
 La classe `vector<bool>` est une spécialisation partielle de [vector](../standard-library/vector-class.md) pour les éléments de type `bool`. Elle possède un allocateur pour le type sous-jacent utilisé par la spécialisation, qui permet une optimisation de l'espace en stockant une valeur `bool` par bit.  
@@ -47,7 +48,7 @@ class vector<bool, Allocator>
   
  Les opérations qui gèrent le type `bool` correspondent aux valeurs du conteneur de stockage. `allocator_traits::construct` n'est pas utilisé pour créer ces valeurs.  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -72,7 +73,7 @@ class vector<bool, Allocator>
 |-|-|  
 |[vector\<bool>, classe de référence](#reference_class)|Classe qui sert de proxy pour simuler le comportement `bool&`, et dont les objets peuvent fournir des références aux éléments (bits uniques) au sein d'un objet `vector<bool>`.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête** : \<vector>  
   
  **Espace de noms :** std  
@@ -371,6 +372,6 @@ static void swap(
  Cette surcharge prend en charge les spécifications spéciales de proxy de `vector<bool>`. [vector](../standard-library/vector-class.md)::swap a les mêmes fonctionnalités que la surcharge à un seul argument de `vector<bool>::swap()`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
 

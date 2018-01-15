@@ -24,18 +24,19 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0932ba85a6570e83be655bb3f8f71bdf9726e88e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a8f1abc58f0c36f37307e1d8053e4dd8a4cac06a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (Génération de code durant l'édition de liens)
 ```  
 /LTCG[:INCREMENTAL|:NOSTATUS|:STATUS|:OFF|:PGINSTRUMENT|:PGOPTIMIZE|:PGUPDATE]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  :INCREMENTAL (facultatif)  
  Spécifie que l’éditeur de liens s’applique uniquement ensemble du programme optimisation ou lien de génération de code (LTCG) à l’ensemble des fichiers affectés par une modification, au lieu de l’ensemble du projet. Par défaut, cet indicateur n’est pas défini quand /LTCG est spécifié, et l’ensemble du projet est lié à l’aide d’optimisation de l’ensemble du programme.  
   

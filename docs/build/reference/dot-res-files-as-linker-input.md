@@ -1,33 +1,33 @@
 ---
-title: "Fichiers&#160;.res en tant qu&#39;entr&#233;e de l&#39;&#201;diteur de liens | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".res (fichiers en tant qu'entrée de l'éditeur de liens)"
-  - "liaison (C++), fichiers de ressources"
-  - "fichiers RES en tant qu'entrée dans l'éditeur de liens"
-  - "fichiers de ressources, lier"
+title: ". Fichiers res en tant qu’entrée de l’éditeur de liens | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- RES files as linker input
+- .res files as linker input
+- linking [C++], resource files
+- resource files, linking
 ms.assetid: 9c37ab00-97df-4d9a-91cd-6bf132970683
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3ac4dedc419c28b4e68d7dcc1772f176738580b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Fichiers&#160;.res en tant qu&#39;entr&#233;e de l&#39;&#201;diteur de liens
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Vous pouvez spécifier un fichier .res lors de la liaison d'un programme.  Ce fichier est créé par le compilateur de ressources \(RC\).  LINK convertit automatiquement les fichiers .res au format COFF.  L'outil CVTRES.exe doit se trouver dans le même répertoire que celui de LINK.exe ou dans un répertoire spécifié dans la variable d'environnement PATH.  
+# <a name="res-files-as-linker-input"></a>Fichiers .res en tant qu'entrée de l'Éditeur de liens
+Vous pouvez spécifier un fichier .res lors de la liaison d’un programme. Le fichier .res est créé par le compilateur de ressources (RC). LINK convertit automatiquement les fichiers .res au format COFF. L’outil CVTRES.exe doit être dans le même répertoire que celui de LINK.exe ou dans un répertoire spécifié dans la variable d’environnement PATH.  
   
-## Voir aussi  
- [Fichiers d'entrée LINK](../../build/reference/link-input-files.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)
+## <a name="see-also"></a>Voir aussi  
+ [Fichiers d’entrée LINK](../../build/reference/link-input-files.md)   
+ [Options de l’éditeur de liens](../../build/reference/linker-options.md)

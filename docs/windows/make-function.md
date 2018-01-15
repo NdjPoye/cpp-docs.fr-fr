@@ -1,32 +1,33 @@
 ---
-title: "Make, fonction | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Make"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Make (fonction)"
+title: Fonction | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Make
+dev_langs: C++
+helpviewer_keywords: Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: aac2a50e3c50941d607dea32c9f7c9eecde8e589
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Make, fonction
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Initialise la classe [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] spécifiée.  Utilisez cette fonction pour instancier un composant qui est défini dans le même module.  
+# <a name="make-function"></a>Make, fonction
+Initialise la classe Windows Runtime spécifiée. Utilisez cette fonction pour instancier un composant qui est défini dans le même module.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template <  
@@ -170,74 +171,74 @@ template <
 ComPtr<T> Make();  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
- Une classe spécifiée par l'utilisateur qui hérite de `WRL::RuntimeClass`.  
+ Une classe spécifiée par l’utilisateur qui hérite de `WRL::RuntimeClass`.  
   
  `TArg1`  
- Type de l'argument 1 passé à la classe d'exécution spécifiée.  
+ Type d’argument 1 qui est passé à la classe runtime spécifié.  
   
  `TArg2`  
- Type de l'argument 2 passé à la classe d'exécution spécifiée.  
+ Type d’argument 2 qui est passé à la classe runtime spécifié.  
   
  `TArg3`  
- Type de l'argument 3 passé à la classe d'exécution spécifiée.  
+ Type d’argument 3 est passée à la classe d’exécution spécifié.  
   
  `TArg4`  
- Type de l'argument 4 passé à la classe d'exécution spécifiée.  
+ Type d’argument 4 qui est passé à la classe runtime spécifié.  
   
  `TArg5`  
- Type de l'argument 5 passé à la classe d'exécution spécifiée.  
+ Type d’argument 5 est passé à la classe runtime spécifié.  
   
  `TArg6`  
- Type de l'argument 6 passé à la classe d'exécution spécifiée.  
+ Type d’argument 6 est passé à la classe runtime spécifié.  
   
  `TArg7`  
- Type de l'argument 7 passé à la classe d'exécution spécifiée.  
+ Type d’argument 7 est passé à la classe runtime spécifié.  
   
  `TArg8`  
- Type de l'argument 8 passé à la classe d'exécution spécifiée.  
+ Type d’argument 8 est passé à la classe runtime spécifié.  
   
  `TArg9`  
- Type de l'argument 9 passé à la classe d'exécution spécifiée.  
+ Type d’argument 9 est passé à la classe runtime spécifié.  
   
  `arg1`  
- L'argument 1 passé à la classe d'exécution spécifiée.  
+ Argument 1 qui est passé à la classe runtime spécifié.  
   
  `arg2`  
- L'argument 2 passé à la classe d'exécution spécifiée.  
+ Argument 2 qui est passé à la classe runtime spécifié.  
   
  `arg3`  
- L'argument 3 passé à la classe d'exécution spécifiée.  
+ Argument 3 qui est passé à la classe runtime spécifié.  
   
  `arg4`  
- L'argument 4 passé à la classe d'exécution spécifiée.  
+ Argument 4 qui est passé à la classe runtime spécifié.  
   
  `arg5`  
- L'argument 5 passé à la classe d'exécution spécifiée.  
+ Argument 5 qui est passé à la classe runtime spécifié.  
   
  `arg6`  
- L'argument 6 passé à la classe d'exécution spécifiée.  
+ Arguments 6 est passé à la classe runtime spécifié.  
   
  `arg7`  
- L'argument 7 passé à la classe d'exécution spécifiée.  
+ Argument 7 qui est passé à la classe runtime spécifié.  
   
  `arg8`  
- L'argument 8 passé à la classe d'exécution spécifiée.  
+ Argument 8 qui est passé à la classe runtime spécifié.  
   
  `arg9`  
- L'argument 9 passé à la classe d'exécution spécifiée.  
+ Argument 9 qui est passé à la classe runtime spécifié.  
   
-## Valeur de retour  
- Un Objet `ComPtr<T>` en cas de réussite ; sinon, `nullptr`.  
+## <a name="return-value"></a>Valeur de retour  
+ A `ComPtr<T>` objet en cas de réussite ; sinon, `nullptr`.  
   
-## Remarques  
- Consultez [Comment : instancier directement les composants WRL](../windows/how-to-instantiate-wrl-components-directly.md) pour connaître les différences entre ces fonctions et [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md), et pour un exemple.  
+## <a name="remarks"></a>Notes  
+ Consultez [Comment : instancier directement les composants de WRL](../windows/how-to-instantiate-wrl-components-directly.md) apprendre les différences entre cette fonction et [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)et pour obtenir un exemple.  
   
-## Configuration requise  
- **En\-tête :** implements.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** implements.h  
   
- **Espace de noms :** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - ATLCTL/ATL::CComControl::FireOnChanged
 - ATLCTL/ATL::CComControl::FireOnRequestEdit
 - ATLCTL/ATL::CComControl::MessageBox
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - control flags
 - CComControlBase class, CComControl class
@@ -28,32 +26,18 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 387d38f89e8d783c7ae85c2ab960d5e59c1c4009
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ae81e2b6beac11f94f8d117b004da2f8d0db8724
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="ccomcontrol-class"></a>CComControl (classe)
+# <a name="ccomcontrol-class"></a>Classe de CComControl
 Cette classe fournit des méthodes pour créer et gérer des contrôles ATL.  
   
 > [!IMPORTANT]
@@ -69,10 +53,10 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
   
 #### <a name="parameters"></a>Paramètres  
  `T`  
- La classe qui implémente le contrôle.  
+ La classe implémentant le contrôle.  
   
  *WinBase*  
- La classe de base qui implémente les fonctions de fenêtrage. Valeur par défaut est [CWindowImpl](../../atl/reference/cwindowimpl-class.md).  
+ La classe de base qui implémente des fonctions de fenêtrage. Valeur par défaut est [CWindowImpl](../../atl/reference/cwindowimpl-class.md).  
   
 ## <a name="members"></a>Membres  
   
@@ -89,24 +73,24 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 |[CComControl::ControlQueryInterface](#controlqueryinterface)|Récupère un pointeur vers l'interface demandée.|  
 |[CComControl::CreateControlWindow](#createcontrolwindow)|Crée une fenêtre pour le contrôle.|  
 |[CComControl::FireOnChanged](#fireonchanged)|Notifie le récepteur du conteneur qu’une propriété de contrôle a changé.|  
-|[CComControl::FireOnRequestEdit](#fireonrequestedit)|Notifie les récepteurs du conteneur qu’une propriété de contrôle est sur le point de modifier et que l’objet et demande le récepteur de la marche à suivre.|  
-|[CComControl::MessageBox](#messagebox)|Appelez cette méthode pour créer, afficher et utiliser une zone de message.|  
+|[CComControl::FireOnRequestEdit](#fireonrequestedit)|Notifie les récepteurs du conteneur qu’une propriété de contrôle est sur le point de modifier et que l’objet demande le récepteur de la marche à suivre.|  
+|[CComControl::MessageBox](#messagebox)|Appelez cette méthode pour créer, afficher et utiliser une boîte de message.|  
   
-## <a name="remarks"></a>Remarques  
- `CComControl`est un ensemble de fonctions d’assistance de contrôle pratique et les membres de données essentielles pour des contrôles ATL. Lorsque vous créez un contrôle standard ou un contrôle DHTML Edit à l’aide de l’Assistant contrôle ATL, l’Assistant dérivera automatiquement votre classe à partir de `CComControl`. `CComControl`dérive la plupart de ses méthodes à partir de [CComControlBase](../../atl/reference/ccomcontrolbase-class.md).  
+## <a name="remarks"></a>Notes  
+ `CComControl`est un ensemble de fonctions d’assistance de contrôle pratique et les membres de données essentielles pour les contrôles ATL. Lorsque vous créez un contrôle standard ou un contrôle DHTML à l’aide de l’Assistant contrôle ATL, l’Assistant dérivera automatiquement votre classe de `CComControl`. `CComControl`dérive la plupart de ses méthodes de [CComControlBase](../../atl/reference/ccomcontrolbase-class.md).  
   
  Pour plus d’informations sur la création d’un contrôle, consultez la [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md). Pour plus d’informations sur l’Assistant Projet ATL, consultez l’article [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md).  
   
- Pour une démonstration de `CComControl` méthodes et les membres de données, consultez la [CERC](../../visual-cpp-samples.md) exemple.  
+ Pour une démonstration de `CComControl` méthodes et les membres de données, consultez la [CIRC](../../visual-cpp-samples.md) exemple.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `WinBase`  
   
  [CComControlBase](../../atl/reference/ccomcontrolbase-class.md)  
   
  `CComControl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlctl.h  
   
 ##  <a name="ccomcontrol"></a>CComControl::CComControl  
@@ -116,8 +100,8 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 CComControl();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Appelle le [CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase) constructeur, en passant le `m_hWnd` membre de données héritées via [CWindowImpl](../../atl/reference/cwindowimpl-class.md).  
+### <a name="remarks"></a>Notes  
+ Appelle le [CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase) constructeur, en passant le `m_hWnd` membre de données héritée via [CWindowImpl](../../atl/reference/cwindowimpl-class.md).  
   
 ##  <a name="controlqueryinterface"></a>CComControl::ControlQueryInterface  
  Récupère un pointeur vers l'interface demandée.  
@@ -137,7 +121,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
  Gère seulement des interfaces dans la table de mappage COM.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_COM&#15;](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]  
   
 ##  <a name="createcontrolwindow"></a>CComControl::CreateControlWindow  
  Par défaut, crée une fenêtre pour le contrôle en appelant `CWindowImpl::Create`.  
@@ -148,16 +132,16 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
   
 ### <a name="parameters"></a>Paramètres  
  `hWndParent`  
- [in] Handle de la fenêtre parente ou propriétaire. Un handle de fenêtre valide doit être fourni. La fenêtre de contrôle se limite à la zone de la fenêtre parente.  
+ [in] Handle vers la fenêtre parente ou propriétaire. Un handle de fenêtre valide doit être fourni. La fenêtre de contrôle est limitée à la zone de sa fenêtre parente.  
   
  `rcPos`  
  [in] La taille initiale et la position de la fenêtre doit être créé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Substituez cette méthode si vous souhaitez effectuer une opération autre que de créer une fenêtre unique, par exemple, pour créer deux fenêtres, qui devient une barre d’outils pour votre contrôle.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_COM&#16;](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_COM#16](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]  
   
 ##  <a name="fireonchanged"></a>CComControl::FireOnChanged  
  Notifie le récepteur du conteneur qu’une propriété de contrôle a changé.  
@@ -174,15 +158,15 @@ HRESULT FireOnChanged(DISPID dispID);
  Une des valeurs HRESULT standards.  
   
 ### <a name="remarks"></a>Notes  
- Si votre classe de contrôle dérive [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), cette méthode appelle [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) pour notifier tous connectés `IPropertyNotifySink` interfaces que la propriété du contrôle spécifié a changé. Si votre classe de contrôle ne dérive pas de `IPropertyNotifySink`, cette méthode retourne `S_OK`. 
+ Si votre classe de contrôle dérive [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), cette méthode appelle [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) pour notifier tous connectés `IPropertyNotifySink` les interfaces que le contrôle spécifié propriété a changé. Si votre classe de contrôle ne dérive pas de `IPropertyNotifySink`, cette méthode retourne `S_OK`. 
   
  Cette méthode peut appeler, même si votre contrôle ne prend pas en charge les points de connexion.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_COM&#17;](../../atl/codesnippet/cpp/ccomcontrol-class_3.cpp)]  
+ [!code-cpp[NVC_ATL_COM#17](../../atl/codesnippet/cpp/ccomcontrol-class_3.cpp)]  
   
 ##  <a name="fireonrequestedit"></a>CComControl::FireOnRequestEdit  
- Notifie les récepteurs du conteneur qu’une propriété de contrôle est sur le point de modifier et que l’objet et demande le récepteur de la marche à suivre.  
+ Notifie les récepteurs du conteneur qu’une propriété de contrôle est sur le point de modifier et que l’objet demande le récepteur de la marche à suivre.  
   
 ```
 HRESULT FireOnRequestEdit(DISPID dispID);
@@ -195,17 +179,17 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 ### <a name="return-value"></a>Valeur de retour  
  Une des valeurs HRESULT standards.  
   
-### <a name="remarks"></a>Remarques  
- Si votre classe de contrôle dérive [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), cette méthode appelle [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) pour notifier tous connectés `IPropertyNotifySink` interfaces que la propriété du contrôle spécifié est sur le point de changer. Si votre classe de contrôle ne dérive pas de `IPropertyNotifySink`, cette méthode retourne `S_OK`.  
+### <a name="remarks"></a>Notes  
+ Si votre classe de contrôle dérive [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), cette méthode appelle [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) pour notifier tous connectés `IPropertyNotifySink` interfaces spécifié propriété du contrôle est sur le point de changer. Si votre classe de contrôle ne dérive pas de `IPropertyNotifySink`, cette méthode retourne `S_OK`.  
 
   
  Cette méthode peut appeler, même si votre contrôle ne prend pas en charge les points de connexion.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_COM&#18;](../../atl/codesnippet/cpp/ccomcontrol-class_4.cpp)]  
+ [!code-cpp[NVC_ATL_COM#18](../../atl/codesnippet/cpp/ccomcontrol-class_4.cpp)]  
   
 ##  <a name="messagebox"></a>CComControl::MessageBox  
- Appelez cette méthode pour créer, afficher et utiliser une zone de message.  
+ Appelez cette méthode pour créer, afficher et utiliser une boîte de message.  
   
 ```
 int MessageBox(
@@ -216,23 +200,22 @@ int MessageBox(
   
 ### <a name="parameters"></a>Paramètres  
  `lpszText`  
- Texte à afficher dans la boîte de message.  
+ Le texte à afficher dans la boîte de message.  
   
  `lpszCaption`  
- Le titre de la boîte de dialogue. Si NULL (valeur par défaut), le titre « Erreur » est utilisé.  
+ Le titre de la boîte de dialogue. Si NULL (la valeur par défaut), le titre « Error » est utilisé.  
   
  `nType`  
- Spécifie le contenu et le comportement de la boîte de dialogue. Consultez le [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) entrée dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] documentation pour obtenir la liste des différents les messages disponibles. La valeur par défaut fournit un simple **OK** bouton.  
+ Spécifie le contenu et le comportement de la boîte de dialogue. Consultez le [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) entrée dans la documentation du Kit de développement logiciel Windows pour obtenir la liste des zones de message différents disponibles. La valeur par défaut fournit un simple **OK** bouton.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne une valeur entière spécifiant l’une des valeurs d’élément de menu apparaît sous [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] documentation.  
+ Retourne une valeur entière spécifiant l’une des valeurs d’élément de menu répertoriés sous [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) dans la documentation du Kit de développement logiciel Windows.  
   
 ### <a name="remarks"></a>Notes  
- `MessageBox`est utile lors du développement et comme un moyen simple pour afficher une erreur ou un message d’avertissement à l’utilisateur.  
+ `MessageBox`est utile lors du développement et comme un moyen simple pour afficher un message d’erreur ou avertissement à l’utilisateur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [CWindowImpl (classe)](../../atl/reference/cwindowimpl-class.md)   
+ [Classe de CWindowImpl](../../atl/reference/cwindowimpl-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
  [Classe CComControlBase](../../atl/reference/ccomcontrolbase-class.md)   
- [Classe CComCompositeControl](../../atl/reference/ccomcompositecontrol-class.md)
-
+ [CComCompositeControl, classe](../../atl/reference/ccomcompositecontrol-class.md)

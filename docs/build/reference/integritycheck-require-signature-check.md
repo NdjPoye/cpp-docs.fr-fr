@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5623d822ed02439cdec5dd92cbb687eebad6acdf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7bf86676ecbc37e346f538d180612f21352fb48b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (Exiger la vérification de la signature)
 Spécifie que la signature numérique de l’image binaire doit être vérifiée au moment du chargement.  
@@ -26,7 +27,7 @@ Spécifie que la signature numérique de l’image binaire doit être vérifiée
 /INTEGRITYCHECK[:NO]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Par défaut, **/INTEGRITYCHECK** est désactivée.  
   
  Le **/INTEGRITYCHECK** jeux d’option, dans l’en-tête PE du fichier DLL ou du fichier exécutable, un indicateur pour le Gestionnaire de mémoire vérifier une signature numérique afin de charger l’image dans Windows. Cette option doit être définie pour les DLL 32 bits et 64 bits qui implémentent de code en mode noyau chargé par certaines fonctionnalités de Windows et sont recommandées pour tous les pilotes de périphériques sur Windows Vista, [!INCLUDE[win7](../../build/includes/win7_md.md)], [!INCLUDE[win8](../../build/reference/includes/win8_md.md)], [!INCLUDE[winsvr08](../../build/reference/includes/winsvr08_md.md)], et [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]. Les versions de Windows antérieures à Windows Vista ignorent cet indicateur. Pour plus d’informations, consultez [les fichiers forcé l’intégrité de signature de PE (Portable Executable)](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx).  

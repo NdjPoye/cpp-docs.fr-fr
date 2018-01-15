@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: ea4ac4e5f88df6d6e5de35377a4cf13f34abf900
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f1474f44b81a95c119a405dda8a91db62a08417
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="security-best-practices-for-c"></a>Meilleures pratiques de sécurité pour C++
 Cet article contient des informations sur les outils et les pratiques de sécurité. Leur utilisation n'immunise pas les applications contre les attaques, mais réduit la probabilité que ces attaques réussissent.  
@@ -30,22 +31,22 @@ Cet article contient des informations sur les outils et les pratiques de sécuri
 ## <a name="visual-c-security-features"></a>Fonctionnalités de sécurité de Visual C++  
  Ces fonctionnalités de sécurité sont intégrées dans le compilateur et l'éditeur de liens Visual C++ :  
   
- [/Guard (activer le contrôle de la protection du flux)](../build/reference/guard-enable-control-flow-guard.md)  
+ [/guard (Activer la protection du flux de contrôle)](../build/reference/guard-enable-control-flow-guard.md)  
  Indique au compilateur d'analyser le flux de contrôle pour rechercher les cibles d'appel indirectes au moment de la compilation, puis d'insérer du code afin de vérifier les cibles au moment de l'exécution.  
   
- [/GS (vérification de sécurité de mémoire tampon)](../build/reference/gs-buffer-security-check.md)  
+ [/GS (vérification de la sécurité des mémoires tampons)](../build/reference/gs-buffer-security-check.md)  
  Indique au compilateur d'insérer du code de détection de débordement dans les fonctions qui courent le risque d'être exploitées. Quand un débordement est détecté, l'exécution est arrêtée. Cette option est activée par défaut.  
   
- [/SAFESEH (Image a des gestionnaires d’exceptions sécurisés)](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
+ [/SAFESEH (L’image est dotée de gestionnaires d’exceptions sécurisés)](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
  Indique à l'éditeur de liens d'inclure dans l'image de sortie une table contenant l'adresse de chaque gestionnaire d'exceptions. Au moment de l'exécution, le système d'exploitation utilise cette table pour s'assurer que seuls les gestionnaires d'exceptions légitimes sont exécutés. Cela contribue à empêcher l'exécution de gestionnaires d'exceptions introduits par une attaque malveillante au moment de l'exécution. Cette option est désactivée par défaut.  
   
  [/ NXCOMPAT](../build/reference/nxcompat.md), [/NXCOMPAT (Compatible avec la prévention de l’exécution des données)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)  
  Ces options de l'éditeur de liens et du compilateur permettent la compatibilité avec la prévention de l'exécution des données (PED). PED protège l'UC contre l'exécution de pages ne contenant pas de code.  
   
- [/Analyze (analyse du Code)](../build/reference/analyze-code-analysis.md)  
+ [/analyze (Analyse de code)](../build/reference/analyze-code-analysis.md)  
  Cette option du compilateur active l'analyse du code, qui signale les problèmes de sécurité potentiels, tels que le dépassement de la mémoire tampon, la mémoire non initialisée, le déréférencement de pointeur null et les fuites de mémoire. Cette option est désactivée par défaut. Pour plus d’informations, consultez [analyse du Code pour C/C++ Overview](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).  
   
- [/DYNAMICBASE (utiliser espace randomisation du format adresse)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
+ [/DYNAMICBASE (Utiliser la randomisation du format d’espace d’adresse)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
  Cette option de l'éditeur de liens permet de générer une image exécutable qui peut être chargée à différents emplacements dans la mémoire au début de l'exécution. Cette option rend également l'emplacement de la pile en mémoire beaucoup moins prévisible.  
   
 ## <a name="security-enhanced-crt"></a>Sécurité CRT améliorée  
@@ -87,7 +88,7 @@ Cet article contient des informations sur les outils et les pratiques de sécuri
   s
 -   Identifier des problèmes potentiels de sécurité dans une application.  
   
- AppVerifier fait partie de l’Application Compatibility Toolkit, qui est disponible à partir de la [compatibilité des applications](http://go.microsoft.com/fwlink/?LinkId=91277) sur le site web TechNet.  
+ AppVerifier fait partie de l’Application Compatibility Toolkit, qui est disponible à partir de la [compatibilité des applications](http://go.microsoft.com/fwlink/p/?linkid=91277) sur le site web TechNet.  
   
 
 ## <a name="windows-user-accounts"></a>Comptes utilisateur Windows  

@@ -71,11 +71,12 @@ helpviewer_keywords:
 - std::atomic_store_explicit [C++]
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
-ms.openlocfilehash: 75dff27cd050ae1a218cb8d61abaffff05d38661
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 232333280ae44838b0afd41bf0e00255d8a78dc7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt;, fonctions
 ||||  
@@ -642,7 +643,7 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
   
 ### <a name="parameters"></a>Paramètres  
  `Flag`  
- Pointeur vers un objet `atomic_flag`.  
+ Pointeur vers un objet `atomic_flag` .  
   
 ##  <a name="atomic_flag_clear_explicit"></a>  atomic_flag_clear_explicit  
  Définit l’indicateur `bool` dans un objet [atomic_flag](../standard-library/atomic-flag-structure.md) avec la valeur `false`, en respectant les contraintes [memory_order](../standard-library/atomic-enums.md#memory_order_enum) spécifiées.  
@@ -654,7 +655,7 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
   
 ### <a name="parameters"></a>Paramètres  
  `Flag`  
- Pointeur vers un objet `atomic_flag`.  
+ Pointeur vers un objet `atomic_flag` .  
   
  `Order`  
  Une énumération [memory_order](../standard-library/atomic-enums.md#memory_order_enum).  
@@ -684,7 +685,7 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
   
 ### <a name="parameters"></a>Paramètres  
  `Flag`  
- Pointeur vers un objet `atomic_flag`.  
+ Pointeur vers un objet `atomic_flag` .  
   
  `Order`  
  Une énumération [memory_order](../standard-library/atomic-enums.md#memory_order_enum).  

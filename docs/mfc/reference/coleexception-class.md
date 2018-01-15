@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1a26ab8bb81487346908a4d1d7596ad33b5c3c31
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e895e893c6032a8f8d7db0549f872c82cd0d9b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coleexception-class"></a>Classe de COleException
 Représente une condition d'exception liée à une opération OLE.  
@@ -50,7 +51,7 @@ class COleException : public CException
 |----------|-----------------|  
 |[COleException::m_sc](#m_sc)|Contient le code d’état qui indique la raison de l’exception.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La `COleException` classe inclut une donnée membre publique qui contient le code d’état indiquant la raison de l’exception.  
   
  En règle générale, vous ne devez pas créer un `COleException` de l’objet directement ; au lieu de cela, vous devez appeler [AfxThrowOleException](exception-processing.md#afxthrowoleexception).  
@@ -64,7 +65,7 @@ class COleException : public CException
   
  `COleException`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxdisp.h  
   
 ##  <a name="m_sc"></a>COleException::m_sc  
@@ -74,7 +75,7 @@ class COleException : public CException
 SCODE m_sc;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Valeur de cette variable est définie par [AfxThrowOleException](exception-processing.md#afxthrowoleexception).  
   
  Pour plus d’informations sur `SCODE`, consultez [Structure of COM Error Codes](http://msdn.microsoft.com/library/windows/desktop/ms690088) dans le Kit de développement logiciel Windows.  
@@ -96,7 +97,7 @@ static SCODE PASCAL Process(const CException* pAnyException);
 ### <a name="return-value"></a>Valeur de retour  
  Un code d’état OLE.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 > [!NOTE]
 >  Cette fonction est **statique**.  

@@ -22,11 +22,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72595581e5054630e761f214c1a30c139fb7b69b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 243966ae5e8c7d0792f40206adc9d0ae3b2fb673
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Forcer la conformité à la portée de la boucle for)
 Permet d'implémenter un comportement C++ standard pour les boucles [for](../../cpp/for-statement-cpp.md) avec les extensions Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).  **/Zc:forScope** est activé par défaut.  
@@ -37,7 +38,7 @@ Permet d'implémenter un comportement C++ standard pour les boucles [for](../../
 /Zc:forScope[-]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’option **/Zc:forScope-** est déconseillée et sera supprimée dans une version ultérieure. L’utilisation de **/Zc:forScope-** génère l’avertissement D9035 de désapprobation.  
   
  Le comportement standard consiste à laisser l’initialiseur d’une boucle **for** sortir de la portée après la boucle **for** . Sous **/Zc:forScope-** et [/Ze](../../build/reference/za-ze-disable-language-extensions.md), l’initialiseur de la boucle **for** reste dans la portée jusqu’à la fin de la portée locale.  
@@ -81,4 +82,4 @@ int main() {
   
 ## <a name="see-also"></a>Voir aussi  
  [/Zc (conformité)](../../build/reference/zc-conformance.md)   
- [/ Za, /Ze (désactiver les Extensions de langage)](../../build/reference/za-ze-disable-language-extensions.md)
+ [/Za, /Ze (Désactiver les extensions de langage)](../../build/reference/za-ze-disable-language-extensions.md)

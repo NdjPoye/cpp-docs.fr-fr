@@ -25,11 +25,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5105a03b4db49eda1c2338cf85414c4bfc0c153d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c427dc034a37bf3b0686b0fd95e62c3b718fbaea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc (classe)
 Avec [CRichEditView](../../mfc/reference/cricheditview-class.md) et [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), fournit les fonctionnalités du contrôle RichEdit dans le contexte du document architecture vue de MFC.  
@@ -56,7 +57,7 @@ class CRichEditDoc : public COleServerDoc
 |----------|-----------------|  
 |[CRichEditDoc::m_bRTF](#m_brtf)|Indique si le flux d’e/s doit inclure la mise en forme.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un « contrôle RichEdit » est une fenêtre dans laquelle l’utilisateur peut entrer et modifier du texte. Le texte de caractère et de mise en forme peut être alloué et peut inclure des objets OLE incorporés. Les contrôles RichEdit fournissent une interface de programmation pour la mise en forme de texte. Toutefois, une application doit implémenter tous les composants d’interface utilisateur nécessaires pour effectuer les opérations de mise en forme disponibles à l’utilisateur.  
   
  `CRichEditView`conserve le texte et les caractéristiques de mise en forme du texte. `CRichEditDoc`gère la liste des éléments de clients qui se trouvent dans la vue. `CRichEditCntrItem`fournit l’accès côté conteneur pour les éléments clients OLE.  
@@ -80,7 +81,7 @@ class CRichEditDoc : public COleServerDoc
   
  `CRichEditDoc`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxrich.h  
   
 ##  <a name="createclientitem"></a>CRichEditDoc::CreateClientItem  
@@ -97,7 +98,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un nouveau [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) objet qui a été ajouté à ce document.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction n’effectue pas de toute initialisation d’OLE.  
   
  Pour plus d’informations, consultez la [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) structure dans le SDK Windows.  
@@ -116,7 +117,7 @@ int GetStreamFormat() const;
   
 - `SF_RTF`Indique que le contrôle d’édition enrichi ne conserve pas les informations de mise en forme.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La valeur de retour est basée sur le [m_bRTF](#m_brtf) membre de données. Cette fonction retourne `SF_RTF` si `m_bRTF` est **TRUE**; sinon, `SF_TEXT`.  
   
 ##  <a name="getview"></a>CRichEditDoc::GetView  
@@ -129,7 +130,7 @@ virtual CRichEditView* GetView() const;
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers le `CRichEditView` objet associé au document.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le texte et les informations de mise en forme sont contenus dans le `CRichEditView` objet. Le `CRichEditDoc` objet gère les éléments OLE pour la sérialisation. Il doit y avoir qu’un seul `CRichEditView` pour chaque `CRichEditDoc`.  
   
 ##  <a name="m_brtf"></a>CRichEditDoc::m_bRTF  

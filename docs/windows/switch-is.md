@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5f2f694c03e0aed3e5c5f5072a6fa73365de1fa7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: fcf2345774b6df2453dcc4be3c0022e61792b716
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="switchis"></a>switch_is
 Spécifie l’expression ou identificateur agissant comme l’union discriminante qui sélectionne le membre d’union.  
@@ -32,13 +35,13 @@ Spécifie l’expression ou identificateur agissant comme l’union discriminant
   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le **switch_is** attribut C++ a les mêmes fonctionnalités que le [switch_is](http://msdn.microsoft.com/library/windows/desktop/aa367275) attribut MIDL.  
   
 ## <a name="example"></a>Exemple  
  Consultez le [cas](../windows/case-cpp.md) exemple pour un exemple d’utilisation de **switch_is**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -46,8 +49,8 @@ Spécifie l’expression ou identificateur agissant comme l’union discriminant
 |-|-|  
 |**S'applique à**|`typedef`|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|Aucun|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

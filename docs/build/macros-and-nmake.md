@@ -1,44 +1,45 @@
 ---
-title: "NMAKE et les macros | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "macros, NMAKE"
-  - "NMAKE (macros)"
+title: NMAKE et les macros | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- NMAKE macros
+- macros, NMAKE
 ms.assetid: d424fd47-63eb-4982-9410-6f412730c265
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b2e1da7e1b8945043e3374b050186ece6526c82f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# NMAKE et les macros
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dans le makefile, les macros remplacent une chaîne particulière par une autre chaîne.  Les macros permettent de :  
+# <a name="macros-and-nmake"></a>NMAKE et les macros
+Macros remplacent une chaîne particulière dans le fichier Make par une autre chaîne. À l’aide de macros, vous pouvez :  
   
--   créer un makefile pouvant générer différents projets ;  
+-   Créer un makefile pouvant générer des projets différents.  
   
--   spécifier des options pour les commandes ;  
+-   Spécifiez les options pour les commandes.  
   
--   définir des variables d'environnement.  
+-   Définir des variables d’environnement.  
   
- Vous pouvez définir [vos propres macros](../build/defining-an-nmake-macro.md) ou utiliser les [macros prédéfinies](../build/special-nmake-macros.md) de NMAKE.  
+ Vous pouvez définir [vos propres macros](../build/defining-an-nmake-macro.md) ou utiliser de NMAKE [macros prédéfinies](../build/special-nmake-macros.md).  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
- [Définition d'une macro NMAKE](../build/defining-an-nmake-macro.md)  
+## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?  
+ [Définition d’une macro NMAKE](../build/defining-an-nmake-macro.md)  
   
- [Utilisation d'une macro NMAKE](../build/using-an-nmake-macro.md)  
+ [À l’aide d’une macro NMAKE](../build/using-an-nmake-macro.md)  
   
- [Macros spéciales de NMAKE](../build/special-nmake-macros.md)  
+ [Macros NMAKE spéciales](../build/special-nmake-macros.md)  
   
-## Voir aussi  
- [Référence NMAKE](../build/nmake-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [NMAKE, référence](../build/nmake-reference.md)

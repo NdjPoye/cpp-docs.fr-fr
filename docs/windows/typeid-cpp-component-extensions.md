@@ -1,65 +1,65 @@
 ---
-title: "typeid (Extensions de composant C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "typeid, mot clé [C++]"
+title: typeid (Extensions du composant C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-caps.latest.revision: 35
-caps.handback.revision: 33
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "35"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 20a3b1153bbb8a8502a54aa74998817abf191860
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# typeid (Extensions de composant C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Obtient une valeur indiquant le type d'un objet.  
+# <a name="typeid--c-component-extensions"></a>typeid (Extensions de composant C++)
+Obtient une valeur qui indique le type d’un objet.  
   
 > [!WARNING]
->  Cette rubrique fait référence à la version de composant d'extensions C\+\+ du typeid.  Pour obtenir la version ISO C\+\+ de ce mot clé, consultez [typeid, opérateur](../cpp/typeid-operator.md).  
+>  Cette rubrique fait référence à la version des Extensions du composant C++ de typeid. Pour la version de la norme ISO C++ de ce mot clé, consultez [typeid, opérateur](../cpp/typeid-operator.md).  
   
-## Tous les runtimes  
+## <a name="all-runtimes"></a>Tous les runtimes  
   
-### Syntaxe  
+### <a name="syntax"></a>Syntaxe  
   
 ```cpp  
-  
 T::typeid  
 ```  
   
-### Paramètres  
+### <a name="parameters"></a>Paramètres  
  *T*  
- Nom de type.  
+ Un nom de type.  
   
-## Windows Runtime  
+## <a name="windows-runtime"></a>Windows Runtime  
   
-### Syntaxe  
+### <a name="syntax"></a>Syntaxe  
   
 ```cpp  
 Platform::Type^ type = T::typeid;  
 ```  
   
-### Paramètres  
+### <a name="parameters"></a>Paramètres  
  `T`  
- Nom de type.  
+ Un nom de type.  
   
-### Remarques  
- Dans [!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)], le typeid retourne un [Platform::Type](../Topic/Platform::Type%20Class.md) qui est construit à partir d'informations de type runtime.  
+### <a name="remarks"></a>Notes  
+ Dans C + c++ / CX, retourne de typeid un [Platform::Type](../cppcx/platform-type-class.md) qui est construit à partir des informations de type de runtime.  
   
-### Configuration requise  
- Option du compilateur : **\/ZW**  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Syntaxe**  
   
 ```  
@@ -70,29 +70,27 @@ type::typeid
  **Paramètres**  
   
  *type*  
- Le nom d'un type \(déclarateur abstrait\) pour lequel vous souhaitez l'objet System::Type.  
+ Le nom d’un type (déclarateur abstrait) pour lequel vous souhaitez que l’objet de System::Type.  
   
  **Remarques**  
   
- `typeid` est utilisé pour obtenir le <xref:System.Type> d'un type au moment de la compilation.  
+ `typeid`Permet d’obtenir le <xref:System.Type> pour un type au moment de la compilation.  
   
- `typeid` est semblable à l'obtention du System::Type d'un type au moment de l'exécution à l'aide de <xref:System.Type.GetType%2A> ou de <xref:System.Object.GetType%2A>.  Toutefois, typeid accepte un seul nom de type en tant que paramètre.  Si vous voulez utiliser une instance de type pour obtenir son nom de System::Type, utilisez GetType.  
+ `typeid`est similaire à la mise en route le System::Type d’un type au moment de l’exécution à l’aide <xref:System.Type.GetType%2A> ou <xref:System.Object.GetType%2A>. Toutefois, les typeid accepte uniquement un nom de type en tant que paramètre.  Si vous souhaitez utiliser une instance d’un type pour obtenir son nom System::Type, utilisez GetType.  
   
- `typeid` doit pouvoir évaluer un nom de type \(type\) au moment de la compilation, alors que GetType évalue le type à retourner au moment de l'exécution.  
+ `typeid`doit être en mesure d’évaluer un nom de type (type) au moment de la compilation, GetType tandis que le type à retourner au moment de l’exécution.  
   
- `typeid` peut prendre un nom de type natif ou un alias Common Language Runtime du nom de type natif ; consultez [Équivalents .NET Framework des types natifs C\+\+](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) pour plus d'informations.  
+ `typeid`peut prendre un nom de type natif ou un alias de runtime langage commun pour le nom de type natif ; consultez [équivalents .NET Framework des Types natifs C++ (C + c++ / CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) pour plus d’informations.  
   
- `typeid` fonctionne également avec les types natifs, même s'il retournera toujours un System::Type.  Pour obtenir une structure type\_info, utilisez [typeid, opérateur](../cpp/typeid-operator.md).  
+ `typeid`fonctionne également avec les types natifs, bien qu’elle retourne toujours un System::Type.  Pour obtenir une structure type_info, utilisez [typeid, opérateur](../cpp/typeid-operator.md).  
   
- `typeid` succède à [\_\_typeof](../misc/typeof.md) dans la syntaxe **\/clr** précédente.  
+### <a name="requirements"></a>Configuration requise  
+ Option du compilateur : **/clr**  
   
-### Configuration requise  
- Option du compilateur : **\/clr**  
-  
-### Exemples  
+### <a name="examples"></a>Exemples  
  **Exemple**  
   
- L'exemple suivant compare le mot clé typeid au membre GetType\(\).  
+ L’exemple suivant compare le mot clé de typeid au membre GetType().  
   
 ```  
 // keyword__typeid.cpp  
@@ -119,11 +117,17 @@ int main() {
   
  **Sortie**  
   
-  **typeid et GetType ont retourné le même System::Type**  
-**G**  
- **System.Single\*** **Exemple**  
+```Output  
+typeid and GetType returned the same System::Type  
+G  
   
- L'exemple suivant indique qu'une variable de type System::Type peut être utilisée pour obtenir les attributs d'un type.  Il montre également que, pour certains types, vous devez créer un typedef pour utiliser `typeid`.  
+System.Single*  
+  
+```  
+  
+ **Exemple**  
+  
+ L’exemple suivant montre qu’une variable de type que System::type peut être utilisé pour obtenir les attributs d’un type.  Il montre également que pour certains types, vous devez créer un typedef pour utiliser `typeid`.  
   
 ```  
 // keyword__typeid_2.cpp  
@@ -179,13 +183,23 @@ int main() {
   
  **Sortie**  
   
-  **True**  
- **dans le constructeur AtClass2**  
- **dans le constructeur ^ de type AtClass**  
- **AtClass2**  
- **System.AttributeUsageAttribute**  
- **AtClass**  
- **int::typeid \!\= pointer\_to\_int::typeid, comme prévu**  
- **int::typeid \=\= handle\_to\_int::typeid, comme prévu**   
-## Voir aussi  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+True  
+  
+in AtClass2 constructor  
+  
+in AtClass Type ^ constructor  
+  
+AtClass2  
+  
+System.AttributeUsageAttribute  
+  
+AtClass  
+  
+int::typeid != pointer_to_int::typeid, as expected  
+  
+int::typeid == handle_to_int::typeid, as expected  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 79f6ca137c16100ac1d6b9bfa818f35d5ae21f14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 53350ed473226c86dd4fefa93cff376a371dedf7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-path-used-by-windows-to-locate-a-dll"></a>Chemin de recherche utilisé par Windows pour localiser une DLL
 Avec la liaison d’implicites et explicites, Windows recherche d’abord « DLL connues », telles que Kernel32.dll et User32.dll. Windows recherche ensuite les DLL dans l’ordre suivant :  

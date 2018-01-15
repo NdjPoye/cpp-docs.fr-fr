@@ -1,32 +1,31 @@
 ---
-title: "omp_init_nest_lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_init_nest_lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_init_nest_lock OpenMP function"
+title: omp_init_nest_lock | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_init_nest_lock
+dev_langs: C++
+helpviewer_keywords: omp_init_nest_lock OpenMP function
 ms.assetid: cf749ec5-de78-4186-9588-ac7c42b02463
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5e137206b794344cc466b5b746e04235bd2fbf73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# omp_init_nest_lock
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-initialise un verrou.  
+# <a name="ompinitnestlock"></a>omp_init_nest_lock
+Initialise un verrou.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void omp_init_nest_lock(  
@@ -34,18 +33,18 @@ void omp_init_nest_lock(
 );  
 ```  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  où,  
   
  `lock`  
- une variable de type [omp\_nest\_lock\_t](../../../parallel/openmp/reference/omp-nest-lock-t.md).  
+ Une variable de type [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md).  
   
-## Notes  
- le nombre initial d'imbrication est zéro.  
+## <a name="remarks"></a>Notes  
+ Le nombre initial d’imbrication est égale à zéro.  
   
- Pour plus d'informations, consultez [3.2.1 omp\_init\_lock and omp\_init\_nest\_lock Functions](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
+ Pour plus d’informations, consultez [3.2.1 fonctions omp_init_lock and omp_init_nest_lock fonctions](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // omp_init_nest_lock.cpp  
@@ -82,29 +81,32 @@ int main() {
 }  
 ```  
   
-  **Thread 0 \- démarrer la zone verrouillée imbriquée**  
-**thread 0 \- zone verrouillée imbriquée par fin**  
-**Thread 0 \- démarrer la zone verrouillée imbriquée**  
-**thread 0 \- zone verrouillée imbriquée par fin**  
-**Thread 3 \- démarrer la zone verrouillée imbriquée**  
-**thread 3 \- zone verrouillée imbriquée par fin**  
-**Thread 3 \- démarrer la zone verrouillée imbriquée**  
-**thread 3 \- zone verrouillée imbriquée par fin**  
-**Thread 3 \- démarrer la zone verrouillée imbriquée**  
-**thread 3 \- zone verrouillée imbriquée par fin**  
-**Thread 2 \- démarrer la zone verrouillée imbriquée**  
-**thread 2 \- zone verrouillée imbriquée par fin**  
-**Thread 2 \- démarrer la zone verrouillée imbriquée**  
-**thread 2 \- zone verrouillée imbriquée par fin**  
-**Thread 2 \- démarrer la zone verrouillée imbriquée**  
-**thread 2 \- zone verrouillée imbriquée par fin**  
-**Thread 1 \- démarrer la zone verrouillée imbriquée**  
-**thread 1 \- zone verrouillée imbriquée par fin**  
-**Thread 1 \- démarrer la zone verrouillée imbriquée**  
-**thread 1 \- zone verrouillée imbriquée par fin**  
-**Thread 1 \- démarrer la zone verrouillée imbriquée**  
-**thread 1 \- zone verrouillée imbriquée par fin**  
-**Thread 0 \- démarrer la zone verrouillée imbriquée**  
-**thread 0 \- zone verrouillée imbriquée par fin**   
-## Voir aussi  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+Thread 0 - starting nested locked region  
+Thread 0 - ending nested locked region  
+Thread 0 - starting nested locked region  
+Thread 0 - ending nested locked region  
+Thread 3 - starting nested locked region  
+Thread 3 - ending nested locked region  
+Thread 3 - starting nested locked region  
+Thread 3 - ending nested locked region  
+Thread 3 - starting nested locked region  
+Thread 3 - ending nested locked region  
+Thread 2 - starting nested locked region  
+Thread 2 - ending nested locked region  
+Thread 2 - starting nested locked region  
+Thread 2 - ending nested locked region  
+Thread 2 - starting nested locked region  
+Thread 2 - ending nested locked region  
+Thread 1 - starting nested locked region  
+Thread 1 - ending nested locked region  
+Thread 1 - starting nested locked region  
+Thread 1 - ending nested locked region  
+Thread 1 - starting nested locked region  
+Thread 1 - ending nested locked region  
+Thread 0 - starting nested locked region  
+Thread 0 - ending nested locked region  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Fonctions](../../../parallel/openmp/reference/openmp-functions.md)

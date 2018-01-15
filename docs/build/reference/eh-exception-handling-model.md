@@ -23,11 +23,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b0f4177ffb0db75eb18c39aa260f0b150da9b6f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c56020d5013e951d9d43ed799d34641d114d612
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Modèle de gestion des exceptions)
 Spécifie le type de gestion des exceptions utilisé par le compilateur, quand optimiser la vérification des exceptions, et si les objets C++ hors de portée doivent être détruits en raison d’une exception. Si **/EH** n’est pas spécifié, le compilateur intercepte les exceptions structurées asynchrones et les exceptions C++, mais ne détruit pas les objets C++ qui sont hors de portée en raison d’une exception asynchrone.  
@@ -53,7 +54,7 @@ Spécifie le type de gestion des exceptions utilisé par le compilateur, quand o
  **r**  
  Indique au compilateur de générer en permanence des vérifications d’arrêt au moment de l’exécution pour toutes les fonctions `noexcept` . Par défaut, les vérifications à l’exécution pour `noexcept` peuvent être optimisées, si le compilateur détermine que la fonction appelle uniquement des fonctions qui ne lèvent pas d’exceptions.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L'option de compilateur **/EHa** permet de prendre en charge la gestion des exceptions structurées asynchrones (SEH) avec la clause C++ native `catch(...)` . Pour implémenter la gestion des exceptions structurées sans spécifier **/EHa**, vous pouvez utiliser la syntaxe `__try`, `__except`et `__finally` . Bien que Windows et Visual C++ prennent en charge la gestion des exceptions structurées, nous vous recommandons fortement d'utiliser la gestion des exceptions C++ normalisée par l'ISO (**/EHs** ou **/EHsc**), car elle rend le code plus portable et plus flexible. Toutefois, dans le code existant ou pour certains genres de programmes, par exemple, dans le code compilé pour prendre en charge le common language runtime ([/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)), vous devrez toujours utiliser la gestion structurée des exceptions. Pour plus d'informations, consultez [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md).  
   
  Il peut s’avérer dangereux de spécifier **/EHa** et de tenter de gérer toutes les exceptions à l’aide de `catch(...)` . Dans la plupart des cas, les exceptions asynchrones sont irrécupérables et doivent être considérées comme telles. Si vous les interceptez sans les gérer, cela risque de provoquer une altération du processus et de générer des bogues difficiles à trouver et à résoudre.  

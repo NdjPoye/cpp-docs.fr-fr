@@ -1,43 +1,46 @@
 ---
-title: "R&#233;f&#233;rence WRL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "Référence WRL | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 5779dae8-8634-4c77-aa8b-9a348692a2bb
-caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d7bb80775b6da51c3b70597ce9ad6297cc3021df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# R&#233;f&#233;rence WRL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cette section contient des informations de référence pour le [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] \([!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\).  
+# <a name="wrl-reference"></a>Référence WRL
+Cette section contient des informations de référence pour la bibliothèque de modèles Windows Runtime C++ (WRL).  
   
 > [!NOTE]
->  Le [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] définit une fonctionnalité prenant en charge l'infrastructure [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] et n'étant pas destinée à être utilisée directement à partir de votre code.  Cette fonctionnalité est notée dans cette documentation.  
+>  La bibliothèque de modèles Windows Runtime C++ définit les fonctionnalités qui prend en charge l’infrastructure de la bibliothèque de modèles Windows Runtime C++ et ne sont pas destinée à être utilisée directement depuis votre code. Cette fonctionnalité est indiquée dans cette documentation.  
   
-## Dans cette section  
+## <a name="in-this-section"></a>Dans cette section  
  [Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)  
- Définit les types fondamentaux qui composent le [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)].  
+ Définit les types fondamentaux qui composent la bibliothèque de modèles Windows Runtime C++.  
   
  [Microsoft::WRL::Wrappers, espace de noms](../windows/microsoft-wrl-wrappers-namespace.md)  
- Définit les types d'encapsuleurs Resource Acquisition Is Initialization \(RAII\) qui simplifient la gestion de la durée de vie des objets, des chaînes et des handles.  
+ Définit les types de wrapper de l’initialisation d’est d’Acquisition de ressources (RAII) qui simplifient la gestion de la durée de vie des objets, les chaînes et les handles.  
   
  [Microsoft::WRL::Wrappers::HandleTraits, espace de noms](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)  
- Décrit les caractéristiques des types de ressource communs basés sur des handles.  
+ Décrit les caractéristiques de types courants de ressources basé sur le handle.  
   
  [Windows::Foundation, espace de noms](../windows/windows-foundation-namespace.md)  
- Active la fonctionnalité fondamentale [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], telle que la création d'objet et de fabrique.  
+ Active la fonctionnalité de Windows Runtime fondamentale, telles que la création d’objet et la fabrique.  
   
-## Rubriques connexes  
- [Bibliothèque de modèles Windows Runtime C\+\+ \(WRL\)](../windows/windows-runtime-cpp-template-library-wrl.md)  
- Présente [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)], une bibliothèque de modèles basée sur COM, fournissant un moyen bas niveau de créer et utiliser des composants [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].
+## <a name="related-sections"></a>Rubriques connexes  
+ [Bibliothèque de modèles Windows Runtime C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)  
+ Présente la bibliothèque de modèles Windows Runtime C++, une bibliothèque de modèles de basé sur COM qui fournit un moyen de bas niveau pour créer et utiliser des composants Windows Runtime.

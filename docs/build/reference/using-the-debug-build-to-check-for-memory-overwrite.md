@@ -1,42 +1,42 @@
 ---
-title: "Utilisation de la version debug pour v&#233;rifier les remplacements de m&#233;moire | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mémoire, remplacements"
+title: "À l’aide de la version Debug pour vérifier les remplacements de mémoire de | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: memory, overwrites
 ms.assetid: 1345eb4d-24ba-4595-b1cc-2da66986311e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f18a13992e41cd88bc8edec44f16b02da38ad10c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Utilisation de la version debug pour v&#233;rifier les remplacements de m&#233;moire
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Pour utiliser la version debug afin de vérifier les remplacements de mémoire, vous devez d'abord régénérer votre projet en vue de produire une version debug.  Ensuite, allez au début de la fonction `InitInstance` de votre application et ajoutez la ligne suivante :  
+# <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Utilisation de la version debug pour vérifier les remplacements de mémoire
+Pour utiliser la version debug pour vérifier les remplacements de mémoire, vous devez tout d’abord reconstruire votre projet pour le débogage. Ensuite, allez jusqu’au début de votre application `InitInstance` la fonction et ajoutez la ligne suivante :  
   
 ```  
 afxMemDF |= checkAlwaysMemDF;  
 ```  
   
- L'allocateur de mémoire debug place des octets de garde autour de toutes les allocations de mémoire.  Cependant, ces octets de garde ne servent à rien si vous ne vérifiez pas s'ils ont été modifiés \(ce qui indiquerait un remplacement de mémoire\).  Sinon, il s'agirait juste d'une mémoire tampon qui peut, en fait, vous permettre de vous en sortir avec un remplacement de mémoire.  
+ L’allocateur de mémoire debug place des octets de protection autour de toutes les allocations de mémoire. Toutefois, ces octets de garde n’est d’aucune utilité, sauf si vous vérifiez s’ils ont été modifiés (ce qui indiquerait un remplacement de mémoire). Dans le cas contraire, il fournit simplement une mémoire tampon qui peut, en fait, vous permettre de vous en sortir avec un remplacement de mémoire.  
   
- En activant `checkAlwaysMemDF`, vous forcerez les MFC à lancer un appel à la fonction `AfxCheckMemory` chaque fois qu'un appel est adressé à **new** ou à **delete**.  Si un remplacement de mémoire est détecté, un message TRACE similaire à celui\-ci apparaît :  
+ En activant le `checkAlwaysMemDF`, vous obligera MFC pour effectuer un appel à la `AfxCheckMemory` fonction chaque fois qu’un appel à **nouveau** ou **supprimer** est effectuée. Si un remplacement de mémoire a été détecté, il génère un message TRACE qui ressemble à ce qui suit :  
   
 ```  
 Damage Occurred! Block=0x5533  
 ```  
   
- Si vous obtenez l'un de ces messages, vous devez exécuter le code pas à pas afin de déterminer où les dommages se sont produits.  Pour identifier avec plus de précision l'emplacement où le remplacement de mémoire a eu lieu, vous pouvez adresser vous\-même des appels explicites à `AfxCheckMemory`.  Par exemple :  
+ Si vous voyez un de ces messages, vous devez parcourir votre code pour déterminer où l’erreur s’est produite. Pour identifier plus précisément où le remplacement de mémoire s’est produite, vous pouvez adresser des appels explicites à `AfxCheckMemory` vous-même. Exemple :  
   
 ```  
 ASSERT(AfxCheckMemory());  
@@ -44,9 +44,9 @@ ASSERT(AfxCheckMemory());
     ASSERT(AfxCheckMemory());  
 ```  
   
- Si la première instruction ASSERT réussit et que la seconde échoue, cela signifie que le remplacement de mémoire a dû se produire dans la fonction entre les deux appels.  
+ Si la première instruction ASSERT réussit et que la seconde échoue, cela signifie que le remplacement de mémoire doit s’être produite dans la fonction entre les deux appels.  
   
- Selon la nature de votre application, vous pouvez constater que `afxMemDF` entraîne une exécution trop lente de votre programme, même pour un test.  La variable `afxMemDF` fait correspondre un appel à `AfxCheckMemory` à chaque appel à new et delete.  En ce cas, vous devez distribuer vos propres appels à `AfxCheckMemory`\( \) comme indiqué ci\-dessus, et essayer de détecter le remplacement de mémoire de cette manière.  
+ Selon la nature de votre application, vous pouvez constater que `afxMemDF` entraîne l’exécution trop lente même pour un test de votre programme. Le `afxMemDF` provoque la variable `AfxCheckMemory` à pour chaque appel à new et delete. Dans ce cas, vous devez distribuer vos propres appels à `AfxCheckMemory`(), comme indiqué ci-dessus et essayer de détecter la mémoire remplacement de cette manière.  
   
-## Voir aussi  
- [Résolution de problèmes liés à la version release](../../build/reference/fixing-release-build-problems.md)
+## <a name="see-also"></a>Voir aussi  
+ [Résolution de problèmes liés à la version Release](../../build/reference/fixing-release-build-problems.md)

@@ -26,11 +26,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c3b7508bf3ff65e27cab3260577d2831de00eb2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69ccd08967d386780744fb85476033430127ba3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (Spécifier le type de fichier source)
 Le **/Tc** option spécifie que `filename` est un fichier source C, même si elle n’a pas d’extension .c. Le **/Tp** option spécifie que `filename` est un fichier source C++, même si elle n’a pas l’extension .cpp ou .cxx. Un espace entre l’option et `filename` est facultatif. Chaque option spécifie un fichier ; Pour spécifier des fichiers supplémentaires, répétez l’option.  
@@ -50,7 +51,7 @@ Le **/Tc** option spécifie que `filename` est un fichier source C, même si ell
  `filename`  
  Un fichier source C ou C++.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Par défaut, CL considère que les fichiers avec l’extension .c sont des fichiers sources C et les fichiers .cpp ou .cxx sont des fichiers sources C++.  
   
  Lorsque soit la **TC** ou **Tc** option est spécifiée, toute spécification de la [/Zc : (wchar_t est un Type natif)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) option est ignorée.  

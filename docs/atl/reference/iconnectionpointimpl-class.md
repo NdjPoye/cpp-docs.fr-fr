@@ -25,11 +25,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c3e51322b5ac94688e39c0b4ebad1649a5a25d4e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c49057153a23f0e17d09032df8781b64cef8677
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iconnectionpointimpl-class"></a>Classe de IConnectionPointImpl
 Cette classe implémente un point de connexion.  
@@ -69,7 +70,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 |----------|-----------------|  
 |[IConnectionPointImpl::m_vec](#m_vec)|Gère les connexions pour le point de connexion.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `IConnectionPointImpl`implémente un point de connexion, ce qui permet à un objet d’exposer une interface sortante au client. Le client implémente cette interface sur un objet appelé récepteur.  
   
  ATL utilise [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) pour implémenter l’objet connectable. Chaque point de connexion dans l’objet connectable représente une interface sortante, identifiée par `piid`. Classe *CDV* gère les connexions entre le point de connexion et un récepteur. Chaque connexion est identifiée par un « cookie ».  
@@ -81,7 +82,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
   
  `IConnectionPointImpl`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlcom.h  
   
 ##  <a name="advise"></a>IConnectionPointImpl::Advise  
@@ -93,7 +94,7 @@ STDMETHOD(Advise)(
     DWORD* pdwCookie);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez [Unadvise](#unadvise) pour mettre fin à l’appel de la connexion.  
   
  Consultez [IConnectionPoint::Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) dans le Kit de développement logiciel Windows.  
@@ -105,7 +106,7 @@ STDMETHOD(Advise)(
 STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IConnectionPoint::EnumConnections](http://msdn.microsoft.com/library/windows/desktop/ms680755) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getconnectioninterface"></a>IConnectionPointImpl::GetConnectionInterface  
@@ -115,7 +116,7 @@ STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
 STDMETHOD(GetConnectionInterface)(IID* piid2);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IConnectionPoint::GetConnectionInterface](http://msdn.microsoft.com/library/windows/desktop/ms693468) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="getconnectionpointcontainer"></a>IConnectionPointImpl::GetConnectionPointContainer  
@@ -125,7 +126,7 @@ STDMETHOD(GetConnectionInterface)(IID* piid2);
 STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IConnectionPoint::GetConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms679669) dans le Kit de développement logiciel Windows.  
   
 ##  <a name="m_vec"></a>IConnectionPointImpl::m_vec  
@@ -135,7 +136,7 @@ STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
 CDV m_vec;
 ```     
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, `m_vec` est de type [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md).  
   
 ##  <a name="unadvise"></a>IConnectionPointImpl::Unadvise  
@@ -145,7 +146,7 @@ CDV m_vec;
 STDMETHOD(Unadvise)(DWORD dwCookie);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [IConnectionPoint::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608) dans le Kit de développement logiciel Windows.  
   
 ## <a name="see-also"></a>Voir aussi  

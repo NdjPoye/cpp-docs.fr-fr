@@ -18,11 +18,12 @@ caps.latest.revision: "2"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7532f0ceb39db4ff2ff44a6cca9076034ece3114
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c069caca9831b841c3cb4be347331b58f538ba6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (options d'informations de débogage)
 L'option /DEBUGTYPE spécifie les types d'informations de débogage générées par l'option /DEBUG.  
@@ -43,7 +44,7 @@ L'option /DEBUGTYPE spécifie les types d'informations de débogage générées 
   
  Arguments à **/Debug.** peuvent être combinés dans n’importe quel ordre, en les séparant par une virgule. Le **/Debug.** option et ses arguments ne sont pas respecter la casse.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez le **/Debug.** option pour spécifier l’inclusion de réadressage table données ou .pdata et .xdata informations d’en-tête dans le flux de débogage. Par conséquent, l'éditeur de liens inclut des informations concernant le code en mode utilisateur qui est visible dans un débogueur du noyau lors de la séparation de code en mode noyau. Pour rendre les symboles de débogage disponibles quand **correction** est spécifié, incluez le **CV** argument.  
   
  Pour déboguer le code en mode utilisateur, qui est généralement utilisé pour les applications, les **/Debug.** option n’est pas nécessaire. Par défaut, les commutateurs de compilation qui spécifient le débogage de sortie ([/Z7, / Zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)) toutes les informations requièrent par Visual Studio du débogueur émettre. Utilisez **/DEBUGTYPE:PDATA** ou **/DEBUGTYPE : CV, PDATA, correction** pour déboguer le code qui combine des composants en mode utilisateur et en mode noyau, par exemple une application de configuration pour un pilote de périphérique. Pour plus d’informations sur les débogueurs en mode noyau, consultez [outils de débogage pour Windows (WinDbg, KD, CDB, NTSD)](http://go.microsoft.com/fwlink/p?LinkID=285651)  

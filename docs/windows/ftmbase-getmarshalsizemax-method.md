@@ -1,33 +1,33 @@
 ---
-title: "FtmBase::GetMarshalSizeMax, m&#233;thode | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase::GetMarshalSizeMax"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetMarshalSizeMax (méthode)"
+title: "Ftmbase::GetMarshalSizeMax, méthode | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase::GetMarshalSizeMax
+dev_langs: C++
+helpviewer_keywords: GetMarshalSizeMax method
 ms.assetid: b416b1bf-c73e-45d5-abb8-04921c1a0c94
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0d68889531c270db190f861eb20a34783b88987f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# FtmBase::GetMarshalSizeMax, m&#233;thode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Obtient la limite supérieure du nombre d'octets nécéssaires pour marshaler le pointeur d'interface spécifié sur l'objet spécifié.  
+# <a name="ftmbasegetmarshalsizemax-method"></a>FtmBase::GetMarshalSizeMax, méthode
+Obtenir la limite supérieure du nombre d’octets nécessaire pour marshaler le pointeur d’interface spécifié sur l’objet spécifié.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 STDMETHODIMP GetMarshalSizeMax(  
@@ -40,36 +40,36 @@ STDMETHODIMP GetMarshalSizeMax(
 ) override;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `riid`  
- Référence à l'identificateur de l'interface à marshaler.  
+ Référence à l’identificateur de l’interface pour être marshalés.  
   
  `pv`  
- Pointeur d'interface devant être marshalé; peut être NULL.  
+ Pointeur d’interface pour être marshalés ; peut être NULL.  
   
  `dwDestContext`  
- Contexte de destination où l'interface spécifiée doit être démarshalée.  
+ Contexte de destination où l’interface spécifiée doit être démarshalée.  
   
- Spécifiez une ou plusieurs valeurs d'énumération de MSHCTX.  
+ Spécifiez une ou plusieurs valeurs d’énumération MSHCTX.  
   
- Actuellement, la démarshalisation peut se produire soit dans un autre appartement du processus actuel \(MSHCTX\_INPROC\), soit dans un autre processus sur le même ordinateur que le processus actuel \(MSHCTX\_LOCAL\).  
+ Actuellement, unmarshaling peut se produire dans un autre cloisonnement du processus actuel (MSHCTX_INPROC) ou dans un autre processus sur le même ordinateur que le processus en cours (MSHCTX_LOCAL).  
   
  `pvDestContext`  
- Réservé à une utilisation ultérieure; doit être NULL.  
+ Réservé à un usage ultérieur ; doit être NULL.  
   
  `mshlflags`  
- Indicateur spécifiant si les données à marshaler doivent être transmises au processus client, le cas courant, ou être écrites dans un tableau global, où elles peuvent être récupérées par plusieurs clients.  Spécifie une ou plusieurs valeurs d'énumération de MSHLFLAGS.  
+ Indicateur qui indique si les données doivent être marshalées doit être transmis au processus client, le cas par défaut, ou écrites sur une table globale, où il peut être récupéré par plusieurs clients. Spécifiez une ou plusieurs valeurs d’énumération MSHLFLAGS.  
   
  `pSize`  
- Lorsque cette opération se termine, le pointeur vers la limite supérieure de la quantité de données à être écrite dans le flux de marshaling.  
+ Lorsque cette opération se termine, pointeur vers la limite supérieure de la quantité de données à écrire dans le flux de marshaling.  
   
-## Valeur de retour  
- S\_OK si l'opération a réussi; sinon, E\_FAIL ou E\_NOINTERFACE.  
+## <a name="return-value"></a>Valeur de retour  
+ S_OK en cas de réussite ; Sinon, E_FAIL ou sur E_NOINTERFACE.  
   
-## Configuration requise  
- **En\-tête:** ftm.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** ftm.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [FtmBase, classe](../windows/ftmbase-class.md)

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xlocmon/std::moneypunct_byname
-dev_langs:
-- C++
-helpviewer_keywords:
-- moneypunct_byname class
+f1_keywords: xlocmon/std::moneypunct_byname
+dev_langs: C++
+helpviewer_keywords: moneypunct_byname class
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fd5c4774da1ea1c0afc25e1538351dad4decbe6f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: b13028649eeccad5fbc832098a3b070bb81dad45
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moneypunctbyname-class"></a>moneypunct_byname, classe
 Classe de modèle dérivée qui décrit un objet pouvant servir de facette `moneypunct` de paramètres régionaux donnés, permettant ainsi la mise en forme de champs d’entrée ou de sortie monétaires.  
@@ -50,17 +46,16 @@ protected:
 };
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Son comportement est déterminé par les paramètres régionaux nommés `_Locname`. Chaque constructeur initialise son objet de base avec [moneypunct](../standard-library/moneypunct-class.md#moneypunct)\<CharType, Intl>( `_Refs`).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<locale>  
   
  **Espace de noms :** std  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

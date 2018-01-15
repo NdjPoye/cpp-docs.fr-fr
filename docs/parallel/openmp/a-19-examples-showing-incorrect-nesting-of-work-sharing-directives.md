@@ -1,29 +1,29 @@
 ---
-title: "A.19   Examples Showing Incorrect Nesting of Work-sharing Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Exemples A.19 montrant l’imbrication incorrecte de Directives de partage de travail | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 906e900d-9259-44d6-a095-c1ba9135d269
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8a3f8a4e1ca62a77c16dafedd0921ca842d7a048
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# A.19   Examples Showing Incorrect Nesting of Work-sharing Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Les exemples de cette section indiquent les règles directives d'imbrication.  Pour plus d'informations sur l'imbrication directive, consultez [section 2,9](../../parallel/openmp/2-9-directive-nesting.md) à la page 33.  
+# <a name="a19---examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19   Exemples illustrant l'imbrication incorrecte de directives de partage de travail
+Les exemples de cette section illustrent les règles d’imbrication de la directive. Pour plus d’informations sur l’imbrication de directive, consultez [Section 2.9](../../parallel/openmp/2-9-directive-nesting.md) sur la page 33.  
   
- L'exemple suivant n'est pas conforme parce que les directives internes et externes d' `for` sont imbriquées et les sont liés à la même directive d' `parallel` :  
+ L’exemple suivant n’est pas conforme, car la valeur interne et externe `for` directives sont imbriqués et les lier à la même `parallel` directive :  
   
 ```  
 void wrong1(int n)  
@@ -41,7 +41,7 @@ void wrong1(int n)
 }  
 ```  
   
- la version dynamiquement imbriquée suivante de l'exemple précédent est également non conforme :  
+ La version de l’exemple précédent dynamiquement imbriquée suivante est également non conforme :  
   
 ```  
 void wrong2(int n)  
@@ -64,7 +64,7 @@ void work1(int i, int n)
 }  
 ```  
   
- L'exemple suivant n'est pas conforme parce que les directives d' `for` et d' `single` sont imbriquées, et ils sont liés à la même zone parallèle :  
+ L’exemple suivant n’est pas conforme, car le `for` et `single` directives sont imbriqués, et ils sont liés à la même région parallèle :  
   
 ```  
 void wrong3(int n)  
@@ -81,7 +81,7 @@ void wrong3(int n)
 }  
 ```  
   
- L'exemple suivant n'est pas conforme parce qu'une directive d' `barrier` à l'intérieur de `for` peut provoquer l'interblocage :  
+ L’exemple suivant n’est pas conforme, car un `barrier` directive à l’intérieur d’un `for` peut entraîner un interblocage :  
   
 ```  
 void wrong4(int n)  
@@ -99,7 +99,7 @@ void wrong4(int n)
 }  
 ```  
   
- L'exemple suivant n'est pas conforme parce qu' `barrier` provoque l'interblocage lié au fait qu'un seul thread à la fois peut écrire la section critique :  
+ L’exemple suivant n’est pas conforme, car le `barrier` entraîne un blocage dû au fait que seul thread à la fois peut entrer dans la section critique :  
   
 ```  
 void wrong5()  
@@ -116,7 +116,7 @@ void wrong5()
 }  
 ```  
   
- L'exemple suivant n'est pas conforme parce qu' `barrier` provoque l'interblocage lié au fait qu'un seul thread s'exécute la section d' `single` :  
+ L’exemple suivant n’est pas conforme, car le `barrier` entraîne un blocage dû au fait que seul un thread s’exécute le `single` section :  
   
 ```  
 void wrong6()  

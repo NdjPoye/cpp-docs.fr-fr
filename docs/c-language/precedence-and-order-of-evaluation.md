@@ -18,36 +18,37 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38dfcb75db204a501cb3669a5ba292037d7b7759
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0baad2e1003898e84169e20d3c8a839b8865a7e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Priorité et ordre d'évaluation
 La priorité et l’associativité des opérateurs C affectent le regroupement et l’évaluation des opérandes dans les expressions. La priorité d'un opérateur est significative uniquement si d'autres opérateurs dotés d'une priorité supérieure ou inférieure sont présents. Les expressions avec des opérateurs de priorité supérieure sont évaluées en premier. La priorité peut également être décrite par le mot « liaison ». Les opérateurs dotés d'une priorité plus élevée sont considérés comme ayant une liaison plus stricte.  
   
  Le tableau ci-dessous résume la priorité et l'associativité (l'ordre dans lequel les opérandes sont évalués) des opérateurs C en les répertoriant par ordre de priorité, de la plus élevée à la plus basse. Lorsque plusieurs opérateurs apparaissent ensemble, ils ont une priorité égale et ils sont évalués en fonction de leur associativité. Les opérateurs figurant dans le tableau sont décrits dans les sections commençant par [Opérateurs suffixés](../c-language/postfix-operators.md). Le reste de cette section fournit des informations générales sur la priorité et l'associativité.  
   
-### <a name="precedence-and-associativity-of-c-operators"></a>Priorité et associativité des opérateurs C  
+## <a name="precedence-and-associativity-of-c-operators"></a>Priorité et associativité des opérateurs C  
   
-|Symbole1|Type d'opération|l'associativité|  
+|Symbole <sup>1</sup>|Type d'opération|l'associativité|  
 |-------------|-----------------------|-------------------|  
-|**[ ] ( ) . ->** suffixe `++` et suffixe **--**|Expression|De gauche à droite|  
-|préfixe `++` et préfixe **-- sizeof &   \*   + - ~ !**|Unaire|De droite à gauche|  
+|**\[ ] ( ) . ->**<br /><br />**++** **--** (suffixe)|Expression|De gauche à droite|  
+**sizeof & \* + - ~ !**<br /><br />**++ --** (préfixe)|Unaire|De droite à gauche|  
 |*casts de type*|Unaire|De droite à gauche|  
 |**\* / %**|Multiplication|De gauche à droite|  
 |**+ -**|Addition|De gauche à droite|  
-|**<\< >>**|Décalage au niveau du bit|De gauche à droite|  
+|**\<\< >>**|Décalage au niveau du bit|De gauche à droite|  
 |**\< > \<= >=**|Relation|De gauche à droite|  
 |**== !=**|Égalité|De gauche à droite|  
 |**&**|Opération de bits AND|De gauche à droite|  
 |**^**|Opération de bits OR exclusive|De gauche à droite|  
 |**&#124;**|Opération de bits OR inclusive|De gauche à droite|  
 |**&&**|AND logique|De gauche à droite|  
-|`&#124;&#124;`|OR logique|De gauche à droite|  
+|**&#124;&#124;**|OR logique|De gauche à droite|  
 |**? :**|Expression-conditionnelle|De droite à gauche|  
-|**= \*= /= %=**<br /><br /> **+= -= <\<= >>=&=**<br /><br /> **^= &#124;=**|Assignation2 simple et composée|De droite à gauche|  
+|**= \*= /= %=**<br /><br /> **+= -= \<\<= >>= &=**<br /><br /> **^= &#124;=**|Affectation simple et composée<sup>2</sup>|De droite à gauche|  
 |**,**|Évaluation séquentielle|De gauche à droite|  
   
  1. Les opérateurs sont répertoriés par ordre de priorité descendant. Si plusieurs opérateurs apparaissent sur la même ligne ou dans un groupe, ils ont la même priorité.  
@@ -60,22 +61,20 @@ La priorité et l’associativité des opérateurs C affectent le regroupement 
   
  Les opérateurs logiques garantissent également l’évaluation de leurs opérandes de gauche à droite. Toutefois, ils évaluent le plus petit nombre d'opérandes nécessaires pour déterminer le résultat de l'expression. Cela est appelé « évaluation de court-circuit ». Ainsi, certains opérandes de l'expression ne peuvent pas être évalués. Par exemple, dans l'expression  
   
-```  
-x && y++  
-```  
+`x && y++`  
   
  le second opérande, `y++`, est évaluée uniquement si `x` est vrai (valeur différente de zéro). Par conséquent, `y` n'est pas incrémenté si `x` a la valeur False (0).  
   
- **Exemples**  
+## <a name="examples"></a>Exemples
   
  La liste suivante montre comment le compilateur lie automatiquement plusieurs exemples d'expressions :  
-  
+
 |Expression|Liaison automatique|  
 |----------------|-----------------------|  
-|`a & b &#124;&#124; c`|`(a & b) &#124;&#124; c`|  
-|`a = b &#124;&#124; c`|`a = (b &#124;&#124; c)`|  
-|`q && r &#124;&#124; s--`|`(q && r) &#124;&#124; s--`|  
-  
+|a & b &#124;&#124; c|(a & b) &#124;&#124; c|  
+|a = b &#124;&#124; c|a = (b &#124;&#124; c)|  
+|q && r &#124;&#124; s--|(q && r) &#124;&#124; s--|  
+
  Dans la première expression, l'opérateur de bits AND (`&`) a une priorité plus élevée que l'opérateur OR logique (`||`), si bien que `a & b` forme le premier opérande de l'opération OR logique.  
   
  Dans la deuxième expression, l'opérateur OR logique (`||`) a une priorité plus élevée que l'opérateur d'assignation simple (`=`), afin qu'un `b || c` est regroupé comme opérande droit dans l'assignation. Notez que la valeur assignée à `a` est 0 ou 1.  
@@ -86,13 +85,11 @@ x && y++
   
 |Expression non conforme|Regroupement par défaut|  
 |------------------------|----------------------|  
-|`p == 0 ? p += 1: p += 2`|`( p == 0 ? p += 1 : p ) += 2`|  
+|p == 0 ? p += 1: p += 2|( p == 0 ? p += 1 : p ) += 2|  
   
  Dans cette expression, l'opérateur d'égalité (`==`) a la priorité la plus élevée, si bien que `p == 0` est regroupé comme opérande. L'opérateur d'expression conditionnelle (`? :`) possède la deuxième priorité la plus élevée. Son premier opérande est `p == 0` et son deuxième opérande est `p += 1`. Toutefois, le dernier opérande de l'opérateur d'expression conditionnelle est considéré comme étant `p` plutôt que `p += 2`, étant donné que cette occurrence de `p` se lie plus étroitement à l'opérateur d'expression conditionnelle qu'à l'opérateur d'assignation composée. Une erreur de syntaxe se produit car `+= 2` n'a pas d'opérande gauche. Vous devez utiliser des parenthèses pour éviter ce type d'erreurs et rédiger un code plus lisible. Par exemple, vous pouvez utiliser des parenthèses, comme indiqué ci-dessous, pour corriger et clarifier l'exemple précédent :  
   
-```  
-( p == 0 ) ? ( p += 1 ) : ( p += 2 )  
-```  
+`( p == 0 ) ? ( p += 1 ) : ( p += 2 )`  
   
 ## <a name="see-also"></a>Voir aussi  
  [Opérateurs C](../c-language/c-operators.md)

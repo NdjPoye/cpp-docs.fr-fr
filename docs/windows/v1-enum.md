@@ -1,32 +1,33 @@
 ---
-title: "v1_enum | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.v1_enum"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "v1_enum attribute"
+title: v1_enum | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.v1_enum
+dev_langs: C++
+helpviewer_keywords: v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6475f49653a38cd759b99379c3a9e56178364fdc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# v1_enum
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Règles que le type énuméré spécifié soit transmis comme une entité 32 bits plutôt que la valeur par défaut 16 bits.  
+# <a name="v1enum"></a>v1_enum
+Indique que le type énuméré spécifié être transmis en tant qu’une entité de 32 bits au lieu de la valeur par défaut de 16 bits.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -34,11 +35,11 @@ Règles que le type énuméré spécifié soit transmis comme une entité 32 bit
   
 ```  
   
-## Notes  
- L'attribut de **v1\_enum** C\+\+ a les mêmes fonctionnalités que l'attribut de [v1\_enum](http://msdn.microsoft.com/library/windows/desktop/aa367303) MIDL.  
+## <a name="remarks"></a>Notes  
+ Le **v1_enum** attribut C++ a les mêmes fonctionnalités que le [v1_enum](http://msdn.microsoft.com/library/windows/desktop/aa367303) attribut MIDL.  
   
-## Exemple  
- Le code suivant illustre une utilisation de **v1\_enum**:  
+## <a name="example"></a>Exemple  
+ Le code suivant illustre une utilisation de **v1_enum**:  
   
 ```  
 // cpp_attr_ref_v1_enum.cpp  
@@ -52,20 +53,19 @@ enum eList {
 };  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|type énuméré|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|Type énuméré|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs Typedef, Enum, Union et Struct](../windows/typedef-enum-union-and-struct-attributes.md)   

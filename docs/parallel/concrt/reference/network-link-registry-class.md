@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,35 +15,19 @@ f1_keywords:
 - AGENTS/concurrency::network_link_registry::contains
 - AGENTS/concurrency::network_link_registry::count
 - AGENTS/concurrency::network_link_registry::remove
-dev_langs:
-- C++
-helpviewer_keywords:
-- network_link_registry class
+dev_langs: C++
+helpviewer_keywords: network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 28c13f1e2bf80624da3a7aba441944c051790d27
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 116c36b5c0b990672a455e1419c92d60ec992845
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry, classe
 La classe de base abstraite `network_link_registry` gère les liens entre les blocs sources et cibles.  
@@ -58,7 +41,7 @@ class network_link_registry;
   
 #### <a name="parameters"></a>Paramètres  
  `_Block`  
- Le bloc type de données qui est stocké dans le `network_link_registry`.  
+ Le bloc type de données sont stockées dans le `network_link_registry`.  
   
 ## <a name="members"></a>Membres  
   
@@ -66,9 +49,9 @@ class network_link_registry;
   
 |Nom|Description|  
 |----------|-----------------|  
-|`const_pointer`|Type qui fournit un pointeur vers un `const` élément dans une `network_link_registry` objet.|  
+|`const_pointer`|Type qui fournit un pointeur vers un `const` élément dans un `network_link_registry` objet.|  
 |`const_reference`|Type qui fournit une référence à un `const` élément stocké dans un `network_link_registry` objet pour la lecture et exécution d’opérations const.|  
-|`iterator`|Type qui fournit un itérateur qui peut lire ou modifier tout élément dans un `network_link_registry` objet.|  
+|`iterator`|Un type qui fournit un itérateur qui peut lire ou modifier tout élément dans un `network_link_registry` objet.|  
 |`type`|Un type qui représente le type de bloc stocké dans le `network_link_registry` objet.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
@@ -77,17 +60,17 @@ class network_link_registry;
 |----------|-----------------|  
 |[add](#add)|En cas de substitution dans une classe dérivée, ajoute un lien vers le `network_link_registry` objet.|  
 |[begin](#begin)|En cas de substitution dans une classe dérivée, retourne un itérateur au premier élément dans le `network_link_registry` objet.|  
-|[contient](#contains)|En cas de substitution dans une classe dérivée, recherche les `network_link_registry` objet un bloc spécifié.|  
+|[contient](#contains)|En cas de substitution dans une classe dérivée, recherche la `network_link_registry` objet pour un bloc spécifié.|  
 |[count](#count)|En cas de substitution dans une classe dérivée, retourne le nombre d’éléments dans le `network_link_registry` objet.|  
-|[remove](#remove)|En cas de substitution dans une classe dérivée, supprime un bloc spécifié de le `network_link_registry` objet.|  
+|[remove](#remove)|En cas de substitution dans une classe dérivée, supprime un bloc spécifié à partir de la `network_link_registry` objet.|  
   
 ## <a name="remarks"></a>Notes  
  Le `network link registry` n’est pas sécurisé pour l’accès simultané.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `network_link_registry`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -113,14 +96,14 @@ virtual iterator begin() = 0;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un itérateur qui traite le premier élément de la `network_link_registry` objet.  
+ Un itérateur qui traite le premier élément dans le `network_link_registry` objet.  
   
 ### <a name="remarks"></a>Notes  
- L’état de fin de l’itérateur est indiqué par une `NULL` lien.  
+ L’état final de l’itérateur est indiqué par un `NULL` lien.  
   
 ##  <a name="contains"></a>contient 
 
- En cas de substitution dans une classe dérivée, recherche les `network_link_registry` objet un bloc spécifié.  
+ En cas de substitution dans une classe dérivée, recherche la `network_link_registry` objet pour un bloc spécifié.  
   
 ```
 virtual bool contains(_EType _Link) = 0;
@@ -146,7 +129,7 @@ virtual size_t count() = 0;
   
 ##  <a name="remove"></a>supprimer 
 
- En cas de substitution dans une classe dérivée, supprime un bloc spécifié de le `network_link_registry` objet.  
+ En cas de substitution dans une classe dérivée, supprime un bloc spécifié à partir de la `network_link_registry` objet.  
   
 ```
 virtual bool remove(_EType _Link) = 0;
@@ -154,7 +137,7 @@ virtual bool remove(_EType _Link) = 0;
   
 ### <a name="parameters"></a>Paramètres  
  `_Link`  
- Pointeur vers un bloc à supprimer, si trouvé.  
+ Un pointeur vers un bloc doit être supprimée, si trouvée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si le lien a été trouvé et supprimé, `false` dans le cas contraire.  
@@ -163,4 +146,3 @@ virtual bool remove(_EType _Link) = 0;
  [accès concurrentiel Namespace](concurrency-namespace.md)   
  [single_link_registry, classe](single-link-registry-class.md)   
  [multi_link_registry, classe](multi-link-registry-class.md)
-

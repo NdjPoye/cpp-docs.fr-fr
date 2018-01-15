@@ -1,32 +1,33 @@
 ---
-title: "db_source | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.db_source"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "db_source attribute"
+title: db_source | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.db_source
+dev_langs: C++
+helpviewer_keywords: db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 18c4a4af3f8df4e3af5f6aae8f6643db553c7373
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# db_source
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-crée une connexion à une source de données.  
+# <a name="dbsource"></a>db_source
+Crée une connexion à une source de données.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -37,31 +38,31 @@ crée une connexion à une source de données.
 ) ]  
 ```  
   
-#### Paramètres  
- *db\_source*  
- la chaîne de connexion utilisée pour se connecter à la source de données.  Pour le format de la chaîne de connexion, consultez [Chaînes de connexion et les liaisons de données](https://msdn.microsoft.com/en-us/library/ms718376.aspx) dans Microsoft Data Access Components \(MDAC\) SDK.  
+#### <a name="parameters"></a>Paramètres  
+ *db_source*  
+ La chaîne de connexion utilisée pour se connecter à la source de données. Pour le format de la chaîne de connexion, consultez [les chaînes de connexion et des liaisons de données](https://msdn.microsoft.com/en-us/library/ms718376.aspx) dans le Kit de développement logiciel Microsoft données Access Components (MDAC).  
   
- *nom* \(facultatif\)  
- Lorsque vous utilisez `db_source` sur une classe, *le nom* est une instance d'un objet source de données qui contient l'attribut d' `db_source` appliqué à elle \(voir l'exemple 1\).  Lorsque vous utilisez `db_source` inline dans une implémentation de méthode, *le nom* est une variable \(local à la méthode\) qui peut être utilisée pour accéder à la source de données \(voir l'exemple 2\).  vous passez ce *nom au* paramètre d' `source_name` de **db\_command** pour associer la source de données avec une commande.  
+ *name* (facultatif)  
+ Lorsque vous utilisez `db_source` sur une classe, *nom* est une instance d’un objet de source de données qui a le `db_source` attribut appliquée (voir l’exemple 1). Lorsque vous utilisez `db_source` inline dans une implémentation de méthode, *nom* est une variable (locale à la méthode) qui peut être utilisée pour accéder aux données source (voir l’exemple 2). Vous passez ce *nom* à la `source_name` paramètre de **db_command** pour associer la source de données avec une commande.  
   
- `hresult` \(facultatif\)  
- Identifie la variable qui recevra `HRESULT` de cette commande de base de données.  si la variable n'existe pas, elle sera automatiquement injectée par l'attribut.  
+ `hresult` (facultatif)  
+ Identifie la variable qui reçoit le `HRESULT` de cette commande de base de données. Si la variable n’existe pas, elle est injectée automatiquement par l’attribut.  
   
-## Notes  
- `db_source` crée [CDataSource](../data/oledb/cdatasource-class.md) et un objet de [CSession](../data/oledb/csession-class.md) , qui représentent ensemble une connexion à une source de données du consommateur OLE DB.  
+## <a name="remarks"></a>Notes  
+ `db_source`Crée un [CDataSource](../data/oledb/cdatasource-class.md) et un [CSession](../data/oledb/csession-class.md) objet, qui représentent une connexion à une source de données du consommateur OLE DB.  
   
- Lorsque vous utilisez `db_source` sur une classe, l'objet d' `CSession` devient un membre de la classe.  
+ Lorsque vous utilisez `db_source` sur une classe, le `CSession` objet devient un membre de la classe.  
   
- Lorsque vous utilisez `db_source` dans une méthode, le code injecté sera exécuté dans la portée de la méthode, et l'objet d' `CSession` est créé comme variable locale.  
+ Lorsque vous utilisez `db_source` dans une méthode, le code injecté sera exécuté dans la portée de la méthode et le `CSession` objet est créé en tant que variable locale.  
   
- `db_source` ajoute des propriétés de la source de données à une classe ou dans une méthode.  Il est utilisé avec **db\_command** \(qui accepte*le paramètre name* d' `db_source`comme paramètre d' `source_name` \).  
+ `db_source`Ajoute les propriétés de source de données à une classe ou d’une méthode. Il est utilisé conjointement avec **db_command** (qui prend la `db_source` *nom* paramètre en tant que son `source_name` paramètre).  
   
- Lorsque le fournisseur d'attributs du consommateur applique cet attribut à une classe, le compilateur renommera la classe au \_YourClassNameAccessor, où *YourClassName* est le nom que vous avez donné à la classe, et le compilateur crée également une classe appelée *YourClassName,* qui dérive de \_YourClassNameAccessor.  Dans l'Affichage de classes, vous verrez les deux classes.  
+ Lorsque le fournisseur de consommateur d’attribut s’applique à cet attribut à une classe, le compilateur attribue la classe à \_ *YourClassName*accesseur, où *YourClassName* est le nom que vous avez donné à la classe et le compilateur crée également une classe appelée *YourClassName*, lequel dérive \_ *YourClassName*accesseur.  Dans l’affichage de classes, vous verrez les deux classes.  
   
- Pour obtenir un exemple de cet attribut utilisé dans une application, consultez les exemples [AtlAgent](http://msdn.microsoft.com/fr-fr/52bef5da-c1a0-4223-b4e6-9e464b6db409) et [MultiRead](http://msdn.microsoft.com/fr-fr/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
+ Pour obtenir un exemple de cet attribut utilisé dans une application, consultez les exemples [AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409) et [MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
   
-## Exemple  
- Cet exemple appelle `db_source` sur une classe pour créer une connexion à la source de données `ds` utilisation de la base de données Northwind.  `ds` est un handle de la source de données, qui peut être utilisée en interne à la classe d' `CMyCommand` .  
+## <a name="example"></a>Exemple  
+ Cet exemple appelle `db_source` sur une classe pour créer une connexion à la source de données `ds` à l’aide de la base de données Northwind. `ds`est un handle pour la source de données, ce qui peut être utilisé en interne sur la `CMyCommand` classe.  
   
 ```  
 // db_source_1.cpp  
@@ -77,19 +78,18 @@ crée une connexion à une source de données.
 class CMyCommand {};  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**classe**, `struct`, membre, méthode, les variables locales|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|**class**, `struct`, member, method, local|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [OLE DB Consumer Attributes](../windows/ole-db-consumer-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Voir aussi  
+ [Attributs du consommateur OLE DB](../windows/ole-db-consumer-attributes.md)   

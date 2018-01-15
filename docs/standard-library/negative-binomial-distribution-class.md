@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::negative_binomial_distribution::param_type::p
 - random/std::negative_binomial_distribution::param_type::operator==
 - random/std::negative_binomial_distribution::param_type::operator!=
-- random/std::negative_binomial_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::negative_binomial_distribution [C++]
 - std::negative_binomial_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ea765a3a6f0b7d713b0807129d04cc9b8653951b
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 8146fd33f4a955404fbe06f8d977ff63d9bfef8d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution, classe
 Génère une distribution négative binomiale.  
@@ -105,7 +102,7 @@ The `operator()` member functions return the next generated value based on the U
   
 For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-For detailed information about the negative binomial distribution discrete probability function, see the Wolfram MathWorld article [Negative Binomial Distribution](http://go.microsoft.com/fwlink/LinkId=400516).  
+For detailed information about the negative binomial distribution discrete probability function, see the Wolfram MathWorld article [Negative Binomial Distribution](http://go.microsoft.com/fwlink/p/?linkid=400516).  
   
 ## Example  
   
@@ -226,7 +223,7 @@ Histogram for 100 samples:
     69 ::::  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
 **En-tête :** \<random>  
   
 **Espace de noms :** std  
@@ -275,11 +272,10 @@ Paramètre de distribution `p`.
 *right*  
 Structure `param_type` utilisée pour comparer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
 **Condition préalable :** `0.0 < k` et `0.0 < p ≤ 1.0`  
   
 Cette structure peut être passée au constructeur de classe de la distribution au moment de l'instanciation, à la fonction membre `param()` pour définir les paramètres stockés d'une distribution existante et à `operator()` pour une utilisation à la place des paramètres stockés.  
   
 ## <a name="see-also"></a>Voir aussi  
  [\<random>](../standard-library/random.md)
-

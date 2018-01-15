@@ -16,11 +16,14 @@ caps.latest.revision: "38"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 97de0b4dba9aa05e34c03077d22f42bb7a2266b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3af6bc41d353f82bb1f95c73f079e530da19dba0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Procédure pas à pas : création et utilisation d’une bibliothèque statique (C++)
 Cette procédure pas à pas montre comment créer une bibliothèque statique (fichier .lib) à utiliser avec des applications C++. L’utilisation d’une bibliothèque statique est un excellent moyen de réutiliser le code. Au lieu d'implémenter les mêmes routines dans chaque application qui requiert les fonctionnalités, vous les écrivez une fois pour toutes dans une bibliothèque statique et vous y faites référence dans les applications. Le code lié à partir d'une bibliothèque statique devient partie intégrante de votre application. Il n'est pas nécessaire d'installer un autre fichier pour utiliser le code.  
@@ -37,7 +40,7 @@ Cette procédure pas à pas montre comment créer une bibliothèque statique (fi
   
 -   [Exécution de l’application](#BKMK_RunApp)  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
  Une connaissance des notions de base du langage C++.  
   
 ##  <a name="BKMK_CreateLibProject"></a> Création d’un projet de bibliothèque statique  

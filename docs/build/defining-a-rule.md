@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7e720613dd4d918b2b697a6ff21a8950f0c5adc2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0d6ca616e3685db36d6d24b339a860eab4c6150
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defining-a-rule"></a>Définition d'une règle
 Le *fromext* représente l’extension d’un fichier dépendant, et *toext* représente l’extension d’un fichier cible.  
@@ -30,7 +31,7 @@ Le *fromext* représente l’extension d’un fichier dépendant, et *toext* rep
    commands  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les extensions ne respectent pas la casse. Les macros peuvent être appelées pour représenter *fromext* et *toext*; les macros sont développées pendant le prétraitement. Le point (.) précédent *fromext* doit apparaître au début de la ligne. Le signe deux-points ( :) est précédé de zéro ou plusieurs espaces ou des tabulations. Il peut être suivi que par des espaces ou onglets, un point-virgule ( ;) pour spécifier une commande, un signe dièse (#) pour spécifier un commentaire ou un caractère de saut de ligne. Aucuns autres espaces ne sont autorisés. Les commandes sont spécifiées comme dans les blocs de description.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?  

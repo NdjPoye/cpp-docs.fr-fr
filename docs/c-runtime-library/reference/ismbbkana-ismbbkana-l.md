@@ -39,11 +39,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5207b7479876cc88941397906646fbd08fa02b6c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f904d5f03d4c9e74123bc5be43f02178cb2e3d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbkana-ismbbkanal"></a>_ismbbkana, _ismbbkana_l
 Teste un symbole katakana, et est spécifique à la page de codes 932.  
@@ -68,16 +69,16 @@ int _ismbbkana_l(
  Paramètres régionaux à utiliser.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `_ismbbkana` retourne une valeur différente de zéro si l’entier `c` est un symbole katakana, ou 0 dans le cas contraire. `_ismbbkana` utilise les paramètres régionaux actifs pour les informations sur les caractères dépendants des paramètres régionaux. `_ismbbkana_l` est identique, à ceci près qu’il utilise l’objet de paramètres régionaux passé. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ `_ismbbkana` retourne une valeur différente de zéro si l’entier `c` est un symbole katakana, ou 0 dans le cas contraire. `_ismbbkana` utilise les paramètres régionaux actifs pour les informations sur les caractères dépendants des paramètres régionaux. `_ismbbkana_l` est identique, à ceci près qu’il utilise l’objet de paramètres régionaux passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_ismbbkana`|\<mbctype.h>|  
 |`_ismbbkana_l`|\<mbctype.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classification d’octet](../../c-runtime-library/byte-classification.md)   

@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 95bb322944b6a7c68c5b9abde53e67382fe73ced
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 705260547d5a42b463d61b79c38592874f9dfa19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventsource-class"></a>EventSource (classe)
 Représente un événement. Les fonctions membres EventSource ajouter, supprimer et appellent des gestionnaires d’événements.  
@@ -56,7 +59,7 @@ class EventSource;
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[EventSource::addRemoveLock_, données de membre](../windows/eventsource-addremovelock-data-member.md)|Synchronise l’accès à la [targets_](../windows/eventsource-targets-data-member.md) tableau lors de l’ajout, la suppression ou appeler des gestionnaires d’événements.|  
 |[EventSource::targets_, données de membre](../windows/eventsource-targets-data-member.md)|Tableau d’un ou plusieurs gestionnaires d’événements.|  
@@ -65,7 +68,7 @@ class EventSource;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `EventSource`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** event.h  
   
  **Espace de noms :** Microsoft::WRL  

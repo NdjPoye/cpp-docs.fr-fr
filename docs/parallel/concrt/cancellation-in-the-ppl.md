@@ -20,11 +20,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90edebe8e57e6720ad1cb7a83b59f478532c16c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 340942905ce252f7e4a40d8ae5366d5d154755d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancellation-in-the-ppl"></a>Annulation dans la bibliothèque de modèles parallèles
 Ce document explique le rôle de l’annulation dans la bibliothèque de modèles parallèles (PPL), comment annuler un travail parallèle et comment déterminer quand le travail parallèle est annulé.  
@@ -41,7 +42,7 @@ Ce document explique le rôle de l’annulation dans la bibliothèque de modèle
 
 -   Lorsque vous utilisez des jetons d’annulation, utilisez le [Concurrency::cancellation_token_source :: Cancel](reference/cancellation-token-source-class.md#cancel) méthode pour initier l’annulation et la [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) (fonction) pour répondre à annulation. Utilisez le [Concurrency::cancellation_token :: is_canceled](reference/cancellation-token-class.md#is_canceled) méthode permettant de vérifier si une autre tâche a demandé l’annulation.
   
--   L'annulation ne se produit pas immédiatement. Bien que tout nouveau travail ne soit pas démarré si une tâche ou un groupe de tâches sont annulés, un travail actif doit vérifier l'annulation et y répondre.  
+-   L'annulation ne se produit pas immédiatement. Bien que tout nouveau travail ne soit pas démarré si une tâche ou un groupe de tâches sont annulés, un travail actif doit vérifier l’annulation et y répondre.  
   
 -   Une continuation basée sur des valeurs hérite du jeton d'annulation de sa tâche antécédente. Une continuation basée sur des tâches n’hérite jamais du jeton de sa tâche antécédente.  
   
@@ -86,7 +87,7 @@ Ce document explique le rôle de l’annulation dans la bibliothèque de modèle
  Pour plus d’exemples d’annulation de tâches parallèles, consultez [procédure pas à pas : connexion à l’aide de tâches et les requêtes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [Comment : utiliser l’annulation pour rompre une boucle parallèle](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), et [Comment : utiliser Exceptions pour rompre une boucle parallèle](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).  
   
 ###  <a name="tokens"></a>À l’aide d’un jeton d’annulation pour annuler un travail parallèle  
- Les classes `task`, `task_group` et `structured_task_group` prennent en charge l'annulation via l'utilisation de jetons d'annulation. La bibliothèque de modèles parallèles définit la [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) et [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) classes à cet effet. Lorsque vous utilisez un jeton d'annulation pour annuler un travail, le runtime ne démarre pas le nouveau processus qui souscrit à ce jeton. Le travail qui est déjà actif peut utiliser le [is_canceled] ((.. /.. / parallel/concrt/reference/cancellation-token-class.md#is_canceled) fonction membre pour surveiller le jeton d’annulation et s’arrêter lorsqu’il peut.  
+ Les classes `task`, `task_group` et `structured_task_group` prennent en charge l'annulation via l'utilisation de jetons d'annulation. La bibliothèque de modèles parallèles définit la [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) et [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) classes à cet effet. Lorsque vous utilisez un jeton d'annulation pour annuler un travail, le runtime ne démarre pas le nouveau processus qui souscrit à ce jeton. Le travail qui est déjà actif peut utiliser le [is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) fonction membre pour surveiller le jeton d’annulation et s’arrêter lorsqu’il peut.  
   
 
  Pour initialiser l’annulation, appelez le [Concurrency::cancellation_token_source :: Cancel](reference/cancellation-token-source-class.md#cancel) (méthode). Vous répondez à l'annulation des façons suivantes :  

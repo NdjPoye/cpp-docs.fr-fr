@@ -1,32 +1,33 @@
 ---
-title: "bindable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.bindable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bindable attribute"
+title: "peut être liée | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.bindable
+dev_langs: C++
+helpviewer_keywords: bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5266bca832a128242bcbbc8904ad9650e4432fe2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# bindable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indique que la propriété prend en charge la liaison des données.  
+# <a name="bindable"></a>bindable
+Indique que la propriété prend en charge la liaison de données.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -34,19 +35,19 @@ Indique que la propriété prend en charge la liaison des données.
   
 ```  
   
-## Notes  
- L'attribut de **pouvant être liée** C\+\+ a les mêmes fonctionnalités que l'attribut de [pouvant être liée](http://msdn.microsoft.com/library/windows/desktop/aa366738) MIDL.  Vous pouvez l'utiliser sur les propriétés définies avec [propget](../windows/propget.md), [propput](../windows/propput.md), les attributs ou de [propputref](../windows/propputref.md) , ou vous pouvez définir manuellement une méthode pouvant être liée.  
+## <a name="remarks"></a>Notes  
+ Le **pouvant être liés** attribut C++ a les mêmes fonctionnalités que le [pouvant être liés](http://msdn.microsoft.com/library/windows/desktop/aa366738) attribut MIDL. Vous pouvez l’utiliser sur les propriétés définies avec la [propget](../windows/propget.md), [propput](../windows/propput.md), ou [propputref](../windows/propputref.md) attributs, ou vous pouvez définir manuellement une méthode pouvant être liée.  
   
- Les exemples suivants MFC illustrent l'utilisation de **pouvant être liée**:  
+ Les exemples MFC suivants illustrent l’utilisation de **pouvant être liés**:  
   
--   [Exemples : Contrôles ActiveX MFC](http://msdn.microsoft.com/fr-fr/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
+-   [Exemples de contrôles : Les contrôles ActiveX de basée sur MFC](http://msdn.microsoft.com/en-us/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
   
--   [CIRC, exemple : contrôle ActiveX](http://msdn.microsoft.com/fr-fr/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
+-   [CIRC, exemple : Contrôle ActiveX](http://msdn.microsoft.com/en-us/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
   
--   [TESTHELP, exemple : contrôle ActiveX contenant des info\-bulles et de l'aide](http://msdn.microsoft.com/fr-fr/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
+-   [TESTHELP, exemple : Contrôle ActiveX avec info-bulles et d’aide](http://msdn.microsoft.com/en-us/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
   
-## Exemple  
- Le code suivant montre comment vous pouvez utiliser **pouvant être liée** sur une propriété :  
+## <a name="example"></a>Exemple  
+ Le code suivant montre comment vous pouvez utiliser **pouvant être liés** sur une propriété :  
   
 ```  
 // cpp_attr_ref_bindable.cpp  
@@ -69,24 +70,23 @@ __interface IPropDemo : IDispatch {
 [ module(name="PropDemoLib", uuid="479B29E2-9A2C-11D0-B696-00A0C903487A", version="1.0", helpstring="property demo") ];  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Configuration requise  
   
-### contexte d'attribut  
+### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|méthode d'interface|  
-|**reproductible**|Non|  
-|**attributs requis**|Aucun|  
-|**attributs valides**|Aucun|  
+|**S'applique à**|Méthode d’interface|  
+|**Renouvelable**|Non|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
- Pour plus d'informations sur les contextes d'attribut, consultez [contextes d'attribut](../windows/attribute-contexts.md).  
+ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
-## Voir aussi  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Attributs IDL](../windows/idl-attributes.md)   
+ [Attributs de méthode](../windows/method-attributes.md)   
  [defaultbind](../windows/defaultbind.md)   
  [displaybind](../windows/displaybind.md)   
  [immediatebind](../windows/immediatebind.md)   
  [requestedit](../windows/requestedit.md)   
- [Attributes Samples](http://msdn.microsoft.com/fr-fr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

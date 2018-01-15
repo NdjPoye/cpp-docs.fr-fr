@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 620019d8a286fff472d6f4136bae3046556b367a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 02cfdd783a698a3397e84fa62b7252399570dc84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (Activer la fonction de raccordement _pexit)
 Appelle le `_pexit` fonction à la fin de chaque méthode ou fonction.  
@@ -34,7 +35,7 @@ Appelle le `_pexit` fonction à la fin de chaque méthode ou fonction.
 /GH  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `_pexit` (fonction) ne fait pas partie d’aucune bibliothèque et il vous incombe de fournir une définition pour `_pexit`.  
   
  Sauf si vous envisagez d’appeler explicitement `_pexit`, vous n’avez pas besoin de fournir un prototype. La fonction doit apparaître comme si elle avait le prototype suivant, et il doit distribuer le contenu de tous les registres à l’entrée et affiche le contenu non modifié à la sortie :  

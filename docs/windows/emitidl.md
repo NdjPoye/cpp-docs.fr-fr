@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 09174362718c8e8efd30f901394650fbbb5ebf63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 55fc74eef3d2ead7312f7dca46f20c3a1ed7ba91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="emitidl"></a>emitidl
 Spécifie si tous les attributs IDL suivantes sont traitées et placées dans le fichier .idl généré.  
@@ -49,14 +52,14 @@ Une de ces valeurs possibles : **true**, **false**, **forcé**, **restreint**, 
   
 -   Si *booléenne* est **false**, docobj.idl n’est pas importé dans le fichier .idl généré. Vous devez importer explicitement les fichiers .idl avec [importer](../windows/import.md).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
 Après le **emitidl** attribut C++ est rencontré dans un fichier de code source, les attributs de catégorie IDL sont placés dans le fichier .idl généré. S’il existe aucune **emitidl** attribut, les attributs IDL dans le fichier de code source s’affichent dans le fichier .idl généré.  
   
 Il est possible d’avoir plusieurs **emitidl** attributs dans un fichier de code source. Si `[emitidl(false)];` est rencontré dans un fichier sans une ultérieure `[emitidl(true)];`, pas d’attributs sont traitées dans le fichier .idl généré.  
   
 Chaque fois que le compilateur rencontre un nouveau fichier, **emitidl** a implicitement la valeur **true**.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -64,8 +67,8 @@ Chaque fois que le compilateur rencontre un nouveau fichier, **emitidl** a impli
 |-|-|  
 |**S'applique à**|N'importe où|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun|  
-|**Attributs non valides**|None|  
+|**Attributs requis**|Aucun.|  
+|**Attributs non valides**|Aucun.|  
   
 Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

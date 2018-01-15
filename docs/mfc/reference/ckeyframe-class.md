@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CKeyFrame::m_offset
 - AFXANIMATIONCONTROLLER/CKeyFrame::m_pExistingKeyFrame
 - AFXANIMATIONCONTROLLER/CKeyFrame::m_pTransition
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CKeyFrame [MFC], CKeyFrame
 - CKeyFrame [MFC], AddToStoryboard
@@ -35,16 +33,16 @@ helpviewer_keywords:
 - CKeyFrame [MFC], m_pExistingKeyFrame
 - CKeyFrame [MFC], m_pTransition
 ms.assetid: d050a562-20f6-4c65-8ce5-ccb3aef1a20e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 03cfc0766dd15a2762612cf5f41e72ffb1c1885f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 67121027293171c9692362fd148a8598f649cfe2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ckeyframe-class"></a>CKeyFrame, classe
 Représente une image clé de l'animation.  
@@ -76,13 +74,13 @@ class CKeyFrame : public CBaseKeyFrame;
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CKeyFrame::m_offset](#m_offset)|Spécifie le décalage de l’image clé à partir d’une image clé stockée dans m_pExistingKeyFrame.|  
 |[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Stocke un pointeur vers une image clé existante. Cette image clé est ajoutée au storyboard avec m_offset à l’image clé existante.|  
 |[CKeyFrame::m_pTransition](#m_ptransition)|Stocke un pointeur vers la transition qui commence à cette image clé.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette classe implémente une image clé de l’animation. Une image clé représente un moment dans une table de montage séquentiel et peut être utilisée pour indiquer les heures de début et de fin des transitions. Une image clé peut être basée sur les autres images clés et avoir un décalage (en secondes) à partir de celui-ci, ou peut être basée sur une transition et représente un moment dans l’heure de fin de cette transition.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -92,7 +90,7 @@ class CKeyFrame : public CBaseKeyFrame;
   
  [CKeyFrame](../../mfc/reference/ckeyframe-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxanimationcontroller.h  
   
 ##  <a name="addtostoryboard"></a>CKeyFrame::AddToStoryboard  
@@ -114,7 +112,7 @@ virtual BOOL AddToStoryboard(
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’image clé a été ajoutée avec succès.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode ajoute une image clé d’animation. Si elle dépend d’autres images clés ou de transition et que bDeepAdd a la valeur TRUE, cette méthode essaie d’ajouter de manière récursive.  
   
 ##  <a name="addtostoryboardaftertransition"></a>CKeyFrame::AddToStoryboardAfterTransition  
@@ -136,7 +134,7 @@ BOOL AddToStoryboardAfterTransition(
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’image clé a été ajoutée avec succès.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction est appelée par l’infrastructure pour ajouter une image clé au storyboard après la transition.  
   
 ##  <a name="addtostoryboardatoffset"></a>CKeyFrame::AddToStoryboardAtOffset  
@@ -158,7 +156,7 @@ virtual BOOL AddToStoryboardAtOffset(
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si l’image clé a été ajoutée avec succès.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction est appelée par l’infrastructure pour ajouter une image clé au storyboard à l’offset.  
   
 ##  <a name="ckeyframe"></a>CKeyFrame::CKeyFrame  
@@ -183,7 +181,7 @@ CKeyFrame(
  `offset`  
  Offset, en secondes, à partir de l’image clé spécifiée par pKeyframe.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les images clés construites représentent un moment dans le temps au sein d’une table de montage séquentiel lorsque la transition spécifiée se termine.  
   
 ##  <a name="getexistingkeyframe"></a>CKeyFrame::GetExistingKeyframe  
@@ -196,7 +194,7 @@ CBaseKeyFrame* GetExistingKeyframe();
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur valid vers l’image clé, ou NULL si cette image clé ne dépend pas d’autres images clés.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il s’agit d’un accesseur à un moment précis que dépend de cette image clé.  
   
 ##  <a name="getoffset"></a>CKeyFrame::GetOffset  
@@ -209,7 +207,7 @@ UI_ANIMATION_SECONDS GetOffset();
 ### <a name="return-value"></a>Valeur de retour  
  Un décalage en secondes à partir d’autres images clés.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode doit être appelée pour déterminer un offset en secondes à partir d’autres images clés.  
   
 ##  <a name="gettransition"></a>CKeyFrame::GetTransition  
@@ -222,7 +220,7 @@ CBaseTransition* GetTransition();
 ### <a name="return-value"></a>Valeur de retour  
  Obtenir un pointeur valide vers la transition, ou NULL si cette image clé ne dépendante pas de transition.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Il s’agit d’un accesseur à une transition dont dépend cette image clé.  
   
 ##  <a name="m_offset"></a>CKeyFrame::m_offset  
@@ -248,4 +246,3 @@ CBaseTransition* m_pTransition;
   
 ## <a name="see-also"></a>Voir aussi  
  [Classes](../../mfc/reference/mfc-classes.md)
-

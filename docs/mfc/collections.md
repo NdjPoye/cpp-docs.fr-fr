@@ -28,11 +28,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 88afc0f7ae61dcf822a84c514fbc98da2bf827c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e980f3f8fe86b621cb1494b08aec3fcdcb49f54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collections"></a>Collections
 La bibliothèque MFC fournit des classes de collection pour gérer des groupes d’objets. Ces classes sont de deux types :  
@@ -74,7 +75,7 @@ La bibliothèque MFC fournit des classes de collection pour gérer des groupes d
 |Collections de pointeurs vers des objets de n’importe quel type|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|  
   
 ##  <a name="_core_the_collection_classes_not_based_on_templates"></a>Les Classes de Collection non basées sur des modèles  
- Si votre application utilise déjà les classes MFC de collection qui ne se basent pas sur des modèles, vous pouvez continuer à les utiliser. Toutefois, pour les nouvelles collections, nous vous recommandons d'utiliser les classes basées sur des modèles. Le tableau suivant répertorie les classes de collection MFC qui ne sont pas basées sur des modèles.  
+ Si votre application utilise déjà les classes MFC de collection qui ne se basent pas sur des modèles, vous pouvez continuer à les utiliser. Toutefois, pour les nouvelles collections, nous vous recommandons d’utiliser les classes basées sur des modèles. Le tableau suivant répertorie les classes de collection MFC qui ne sont pas basées sur des modèles.  
   
 ### <a name="nontemplate-collection-classes"></a>Classes de collections non basées sur des modèles  
   

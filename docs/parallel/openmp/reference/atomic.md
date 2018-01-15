@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92804b2bdcc243bde6e536004cda73d7f5087b1d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e3d190504a0e4caab864c637d7053836b01f88f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atomic"></a>atomique
 Spécifie qu’un emplacement de mémoire qui sera mise à jour atomiquement.  
@@ -35,7 +36,7 @@ Spécifie qu’un emplacement de mémoire qui sera mise à jour atomiquement.
  `expression`  
  L’instruction contenant la valeur lvalue dont l’emplacement de mémoire que vous souhaitez protéger contre plusieurs écritures. Pour plus d’informations sur les formes expression juridique, consultez la spécification OpenMP.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `atomic` directive prend en charge aucune clauses OpenMP.  
   
  Pour plus d’informations, consultez [2.6.4 atomique construire](../../../parallel/openmp/2-6-4-atomic-construct.md).  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -25,35 +24,19 @@ f1_keywords:
 - ATLSECURITY/ATL::CSid::LoadAccount
 - ATLSECURITY/ATL::CSid::Sid
 - ATLSECURITY/ATL::CSid::SidNameUse
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSid class
+dev_langs: C++
+helpviewer_keywords: CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f1e731c82892c5622dcb437498d2d318086f66d8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3915206f0b05e33d5e13e41871a597ea7278ee8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csid-class"></a>Classe de CSid
 Cette classe est un wrapper pour un `SID` structure de (l’identificateur de sécurité).  
@@ -117,14 +100,14 @@ class CSid
 |[(opérateur)\<=](#operator_lt__eq)|Compare la valeur relative de deux objets de descripteur de sécurité.|  
 |[opérateur > =](#operator_gt__eq)|Compare la valeur relative de deux objets de descripteur de sécurité.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `SID` structure est une structure de longueur variable utilisée pour identifier les utilisateurs ou groupes.  
   
  Les applications ne doivent pas modifier le `SID` structure directement, mais plutôt utiliser les méthodes fournies dans cette classe wrapper. Voir aussi [AtlGetOwnerSid](security-global-functions.md#atlgetownersid), [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid), [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid), et [AtlSetOwnerSid](security-global-functions.md#atlsetownersid).  
   
- Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le Kit de développement logiciel Windows.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h  
   
 ##  <a name="accountname"></a>CSid::AccountName  
@@ -137,7 +120,7 @@ LPCTSTR AccountName() const throw(...);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le `LPCTSTR` pointant vers le nom du compte.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette méthode tente de trouver un nom pour le texte spécifié `SID` (identificateur de sécurité). Pour plus d’informations, consultez [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166).  
   
  Si aucun nom de compte pour le `SID` peut être trouvé, `AccountName` retourne une chaîne vide. Cela peut se produire si un délai d’expiration réseau empêche cette méthode à partir de la recherche du nom. Il se produit également pour les identificateurs de sécurité sans nom de compte correspondant, par exemple une ouverture de session `SID` qui identifie une ouverture de session.  
@@ -195,7 +178,7 @@ explicit CSid(
 virtual ~CSid() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le destructeur libère les ressources acquises par l’objet.  
   
 ##  <a name="csidarray"></a>CSid::CSidArray  
@@ -238,8 +221,8 @@ bool EqualPrefix(const CSid& rhs) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **true** en cas de réussite, **false** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
- Consultez [EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] pour plus d’informations.  
+### <a name="remarks"></a>Notes  
+ Consultez [EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621) dans le SDK Windows pour plus de détails.  
   
 ##  <a name="getlength"></a>CSid::GetLength  
  Retourne la longueur de la `CSid` objet.  
@@ -294,7 +277,7 @@ DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la sous-autorité référencée par *nSubAuthority.* La valeur de sous-autorité est un identificateur relatif (RID).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le *nSubAuthority* paramètre spécifie l’identifiant de l’élément de tableau sous-autorité la méthode retourne une valeur d’index. La méthode n’effectue aucun test de validation sur cette valeur. Une application peut appeler [CSid::GetSubAuthorityCount](#getsubauthoritycount) pour découvrir la plage de valeurs acceptables.  
   
 > [!NOTE]
@@ -325,7 +308,7 @@ bool IsValid() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **true** si le `CSid` objet est valide, **false** si ce n’est pas le cas. Il n’existe aucune information d’erreur étendue pour cette méthode ; n’appelez pas `GetLastError`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `IsValid` méthode valide le `CSid` objet en vérifiant que le numéro de révision est comprise dans une plage connue et que le nombre de sous-autorités est inférieur au nombre maximal.  
   
 ##  <a name="loadaccount"></a>CSid::LoadAccount  
@@ -493,7 +476,7 @@ bool operator>=(
 operator const SID *() const throw(...);
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Retourne l’adresse de le `SID` structure.  
   
 ##  <a name="sid"></a>CSid::Sid  
@@ -516,7 +499,7 @@ SID_NAME_USE SidNameUse() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur du membre de données qui stocke une valeur qui décrit l’état de la `CSid` objet.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |SidTypeUser|Indique un utilisateur `SID` (identificateur de sécurité).|  
 |SidTypeGroup|Indique un groupe `SID`.|  
@@ -528,7 +511,7 @@ SID_NAME_USE SidNameUse() const throw();
 |SidTypeUnknown|Indique un inconnu `SID` type.|  
 |SidTypeComputer|Indique un `SID` pour un ordinateur.|  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appelez [CSid::LoadAccount](#loadaccount) pour mettre à jour le `CSid` objet avant d’appeler `SidNameUse` pour renvoyer son état. `SidNameUse`ne modifie pas l’état de l’objet (en appelant **LookupAccountName** ou **LookupAccountSid**), mais renvoie uniquement l’état actuel.  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -536,4 +519,3 @@ SID_NAME_USE SidNameUse() const throw();
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
  [Fonctions de sécurité Global](../../atl/reference/security-global-functions.md)   
  [Opérateurs](../../atl/reference/atl-operators.md)
-

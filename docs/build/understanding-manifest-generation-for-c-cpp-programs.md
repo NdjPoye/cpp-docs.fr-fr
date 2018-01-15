@@ -1,34 +1,33 @@
 ---
-title: "Fonctionnement de la g&#233;n&#233;ration de manifestes pour les programmes&#160;C/C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "manifestes (C++)"
+title: "Présentation de génération de manifeste pour les programmes C/C++ | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: manifests [C++]
 ms.assetid: a1f24221-5b09-4824-be48-92eae5644b53
-caps.latest.revision: 12
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 848b4b449fa2c9c8930a616b70a5b61cb28d8fbf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# Fonctionnement de la g&#233;n&#233;ration de manifestes pour les programmes&#160;C/C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Un [manifeste](http://msdn.microsoft.com/library/aa375365) est un document XML qui peut être un fichier XML externe ou une ressource incorporée dans une application ou un assembly.  Le manifeste d'une [application isolée](http://msdn.microsoft.com/library/aa375190) sert à gérer les noms et les versions des assemblys côte à côte partagés auxquels l'application doit être liée au moment de l'exécution.  Le manifeste d'un [assembly côte à côte](_win32_side_by_side_assemblies) spécifie ses dépendances vis\-à\-vis des noms, des versions, des ressources et des autres assemblys.  
+# <a name="understanding-manifest-generation-for-cc-programs"></a>Fonctionnement de la génération de manifestes pour les programmes C/C++
+A [manifeste](http://msdn.microsoft.com/library/aa375365) est un document XML qui peut être un fichier XML externe ou une ressource incorporé dans une application ou un assembly. Le manifeste d’un [application isolée](http://msdn.microsoft.com/library/aa375190) est utilisé pour gérer les noms et les versions des assemblys côte à côte partagés auxquels l’application doit se lier au moment de l’exécution. Le manifeste d’un assembly côte à côte spécifie ses dépendances sur les noms, des versions, des ressources et des autres assemblys.  
   
- Il existe deux façons de créer un manifeste pour une application isolée ou un assembly côte à côte.  Tout d'abord, l'auteur de l'assembly peut créer manuellement un fichier manifeste conforme aux règles et aux obligations de dénomination.  En outre, si un programme dépend uniquement d'assemblys [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] tels que CRT, MFC, ATL, etc., un manifeste peut alors être généré automatiquement par l'éditeur de liens.  
+ Il existe deux façons de créer un manifeste pour une application isolée ou un assembly côte à côte. Tout d’abord, l’auteur de l’assembly peut créer manuellement un fichier manifeste en suivant les règles et les exigences d’affectation de noms. Vous pouvez également, si un programme dépend uniquement des assemblys Visual C++ telles que CRT, MFC, ATL ou d’autres, un manifeste peut être généré automatiquement par l’éditeur de liens.  
   
- Les en\-têtes de bibliothèques [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] contiennent des informations sur les assemblys et, lorsque les bibliothèques sont incluses dans le code d'application, ces informations sont utilisées par l'éditeur de liens pour former un manifeste pour le fichier binaire final.  L'éditeur de liens n'incorpore pas le fichier manifeste au fichier binaire et ne peut générer le manifeste que sous forme de fichier externe.  Un manifeste sous forme de fichier externe peut ne pas être utilisé dans tous les scénarios.  Par exemple, il est recommandé que les assemblys privés aient des manifestes incorporés.  Dans les générations de ligne de commande telles que celles qu'utilise nmake pour générer du code, un manifeste peut être incorporé à l'aide de l'outil de manifeste ; pour plus d'informations, consultez [Génération de manifeste au niveau de la ligne de commande](../build/manifest-generation-at-the-command-line.md).  Lors d'une construction dans [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)], il est possible d'incorporer un manifeste en définissant une propriété de l'outil de manifeste dans la boîte de dialogue **Propriétés du projet** ; consultez [Génération de manifeste dans Visual Studio](../build/manifest-generation-in-visual-studio.md).  
+ Les en-têtes des bibliothèques Visual C++ contiennent des informations de l’assembly, et lorsque les bibliothèques sont incluses dans le code d’application, ces informations d’assembly sont utilisées par l’éditeur de liens pour former un manifeste pour le fichier binaire final. L’éditeur de liens n’incorpore pas le fichier manifeste dans le fichier binaire et ne peut générer le manifeste comme un fichier externe. Ayant un manifeste pour un fichier externe peut ne pas fonctionne pour tous les scénarios. Par exemple, il est recommandé que les assemblys privés aient des manifestes incorporés. Dans les versions de ligne de commande telles que celles qui utilisent nmake pour générer le code, un manifeste peut être incorporé à l’aide de l’outil manifeste. Pour plus d’informations, consultez [génération de manifeste à la ligne de commande](../build/manifest-generation-at-the-command-line.md). Lors de la génération [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)], un manifeste peut être incorporé en définissant une propriété pour l’outil manifeste dans le **propriétés du projet** boîte de dialogue, consultez [génération de manifeste dans Visual Studio](../build/manifest-generation-in-visual-studio.md).  
   
-## Voir aussi  
- [Concepts d'applications isolées et d'assemblys côte à côte](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   
- [Génération d'applications isolées C\/C\+\+ et d'assemblys côte à côte](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+## <a name="see-also"></a>Voir aussi  
+ [Concepts d’Applications isolées et les assemblys côte à côte](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   
+ [Génération d’applications isolées et d’assemblys côte à côte C/C++](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

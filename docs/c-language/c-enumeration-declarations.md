@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 69b35d3007a26cd7ca605617b7441525f44ef3ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f4109bb9ed66a89765b6270fce6a3cd5821698a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-enumeration-declarations"></a>Déclarations d'énumération C
 Une énumération se compose d'un ensemble de constantes entières nommées. Une déclaration de type énumération indique le nom de la balise d'énumération (facultative) et définit l'ensemble des identificateurs d'entiers nommés (appelés « ensemble d'énumération », « constantes d'énumérateur », « énumérateurs » ou « membres »). Une variable avec type énumération stocke une des valeurs de l'ensemble d'énumération défini par ce type.  

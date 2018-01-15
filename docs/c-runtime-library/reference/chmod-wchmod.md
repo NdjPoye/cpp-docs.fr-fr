@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _chmod
 - _wchmod
 - wchmod
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _chmod function
 - wchmod function
@@ -38,30 +36,16 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: c0db1569ea6a90892b7eb3d0d8f08f3c9fcf7115
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5abc8e8952f19f3314608085af42ddfdfef87936
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chmod-wchmod"></a>_chmod, _wchmod
 Modifie les paramètres d’autorisation de fichier.  
@@ -90,7 +74,7 @@ int _wchmod(
 ## <a name="return-value"></a>Valeur de retour  
  Ces fonctions retournent 0 si le paramètre d’autorisation a été correctement modifié. Une valeur de retour de -1 indique un échec. Si le fichier spécifié est introuvable, `errno` est défini sur `ENOENT` ; si un paramètre n’est pas valide, `errno` est défini sur `EINVAL`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `_chmod` fonction modifie le paramètre d’autorisation du fichier spécifié par `filename`. Le paramètre d’autorisation contrôle l’accès en lecture et écriture au fichier. L’expression entière `pmode` contient l’une des constantes manifestes suivantes (ou les deux), définies dans SYS\Stat.h.  
   
  `_S_IWRITE`  
@@ -106,7 +90,7 @@ int _wchmod(
   
  `_wchmod` est une version à caractères larges de `_chmod` ; l'argument `filename` de `_wchmod` est une chaîne à caractères larges. Sinon, `_wchmod` et `_chmod` se comportent de la même façon.  
   
- Cette fonction valide ses paramètres. Si `pmode` n’est pas une combinaison de l’une des constantes manifestes ou incorpore un autre ensemble de constantes, la fonction les ignore simplement. Si `filename` a la valeur `NULL`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `errno` est défini sur `EINVAL` et la fonction retourne -1.  
+ Cette fonction valide ses paramètres. Si `pmode` n’est pas une combinaison de l’une des constantes manifestes ou incorpore un autre ensemble de constantes, la fonction les ignore simplement. Si `filename` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `errno` est défini sur `EINVAL` et la fonction retourne -1.  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
@@ -114,14 +98,14 @@ int _wchmod(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tchmod`|`_chmod`|`_chmod`|`_wchmod`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|En-tête facultatif|  
 |-------------|---------------------|---------------------|  
 |`_chmod`|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
 |`_wchmod`|\<io.h> ou \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
   
 ## <a name="example"></a>Exemple  
   

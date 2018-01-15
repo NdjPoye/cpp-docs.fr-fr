@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4a14a6366d1f8e6c5917835e750b5fddc45310d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d62a1bca258e0903ddd4e71b161d87d926588248
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrgetaddressof-method"></a>ComPtr::GetAddressOf, méthode
 Récupère l’adresse du membre de données [ptr_](../windows/comptr-ptr-data-member.md) qui contient un pointeur vers l’interface représentée par ce ComPtr.  
@@ -34,7 +37,7 @@ T** GetAddressOf();
 ## <a name="return-value"></a>Valeur de retour  
  L’adresse d’une variable.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** client.h  
   
  **Espace de noms :** Microsoft::WRL  

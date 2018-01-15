@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ceccc88737b90e8833c2a9e087dfa9540dfa13d0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea02b5b3bb1517623a0c3fc67a752d203f81c5a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-prototypes"></a>Prototypes de fonctions
 Une déclaration de fonction précède la définition de fonction et spécifie le nom, le type de retour, la classe de stockage et d’autres attributs d’une fonction. Pour être un prototype, la déclaration de fonction doit également établir des types et des identificateurs pour les arguments de la fonction.  

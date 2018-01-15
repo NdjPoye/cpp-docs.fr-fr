@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b59ad181ea39382a4f79b1af5e6f1d1dbc1ded62
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b26a1a17952693be9db6a80649aad2c40227d53e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>Déchargement explicite d'une DLL à chargement différé
 Le [/Delay](../../build/reference/delay-delay-load-import-settings.md): option de l’éditeur de liens unload vous permet de décharger une DLL à chargement différé. Par défaut, lorsque votre code décharge la DLL (à l’aide / Delay : Unload et **__FUnloadDelayLoadedDLL2**), les importations à chargement différé restent dans la table d’adresses d’importation (IAT). Toutefois, si vous utilisez/DELAY : Unload sur la ligne de commande de l’éditeur de liens, la fonction d’assistance prendra en charge le déchargement explicite de la DLL de la réinitialisation de la table IAT sous sa forme d’origine ; les pointeurs désormais non valides sont écrasées. La table IAT est un champ dans le [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) qui contient l’adresse d’une copie de l’IAT d’origine (s’il existe).  

@@ -19,11 +19,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd4d4f1b6132ed5e44134f502fe673030306b14b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0e485e1c689814e63c5a43edba2ded80967d576a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-or-deleting-a-string"></a>Ajout ou suppression d'une chaîne
 Vous pouvez insérer rapidement de nouvelles entrées dans la table de chaînes à l’aide de l’éditeur de chaînes. Nouvelles chaînes sont placées à la fin de la table et sont fournies à l’identificateur disponible suivant. Vous pouvez modifier ensuite les propriétés ID, Value ou Caption dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) en fonction des besoins.  
@@ -64,7 +67,7 @@ Vous pouvez insérer rapidement de nouvelles entrées dans la table de chaînes 
   
  Pour plus d’informations sur l’ajout de ressources aux projets managés (ceux qui ciblent le common language runtime), consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour obtenir des informations sur l’ajout de fichiers de ressources aux projets managés, l’accès aux ressources, l’affichage de ressources statiques et l’assignation de chaînes de ressources à des propriétés, et ceci manuellement, consultez [Procédure pas à pas : localisation des applications Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) et [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **Requirements**  
+ **Spécifications**  
   
  Win32  
   

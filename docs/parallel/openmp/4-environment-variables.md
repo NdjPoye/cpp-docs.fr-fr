@@ -1,45 +1,45 @@
 ---
-title: "4. Environment Variables | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "4. Variables d’environnement | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cef1bac78afbcc8b852c3bd42e0904e1963137c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# 4. Environment Variables
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ce chapitre des variables d'environnement décrit OpenMP C et C\+\+ API \(ou des mécanismes spécifiques à la plateforme équivalents\) qui contrôle l'exécution du code parallèle.  les noms des variables d'environnement doivent être majuscules.  Les valeurs assignées à ces derniers ne respectent pas la casse et peuvent posséder l'espace blanc de début et de fin.  Les modifications apportées aux valeurs une fois que le programme a démarré sont ignorées.  
+# <a name="4-environment-variables"></a>4. Environment Variables
+Ce chapitre décrit les variables d’environnement OpenMP C et C++ API (ou les mécanismes spécifiques à une plateforme équivalentes) qui contrôle l’exécution du code parallèle.  Les noms des variables d’environnement doivent être en majuscules. Les valeurs assignées à leur casse et peuvent avoir des espaces de début et de fin.  Modifications aux valeurs une fois que le programme a commencé sont ignorées.  
   
- Les variables d'environnement :  
+ Les variables d’environnement sont les suivantes :  
   
--   **OMP\_SCHEDULE** définit le type et la taille du segment d'exécution de planification.  
+-   **OMP_SCHEDULE** définit la taille de segment et de type de planification de l’exécution.  
   
--   **OMP\_NUM\_THREADS** définit le nombre de threads à utiliser pendant l'exécution.  
+-   **OMP_NUM_THREADS** définit le nombre de threads à utiliser lors de l’exécution.  
   
--   **OMP\_DYNAMIC** active ou désactive le réglage dynamique du nombre de threads.  
+-   **OMP_DYNAMIC** Active ou désactive l’ajustement dynamique du nombre de threads.  
   
--   **OMP\_NESTED** active ou désactive le parallélisme imbriqué.  
+-   **OMP_NESTED** Active ou désactive le parallélisme imbriqué.  
   
- Les exemples dans ce chapitre affichent uniquement comment ces variables peuvent être définies dans des environnements de shell UNIX C \(csh\).  Dans le shell de Korn et les environnements DOS les actions sont semblables, comme suit :  
+ Les exemples de ce chapitre montrent uniquement comment ces variables peuvent être définies dans les environnements Unix C shell (csh). Dans Korn shell et environnements de déni de service les actions sont similaires, comme suit :  
   
- csh :  
- setenv OMP\_SCHEDULE « dynamique »  
+ csh :  
+ setenv OMP_SCHEDULE « dynamique »  
   
- ksh :  
- exportation OMP\_SCHEDULE\= " dynamique »  
+ ksh :  
+ Exporter OMP_SCHEDULE = « dynamiques »  
   
- Arrière :  
- définissez OMP\_SCHEDULE\= " dynamique »
+ DÉNI DE SERVICE :  
+ définir OMP_SCHEDULE = « dynamiques »

@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b355431576a4662062a00ce2c4e44f3a0a52ffdc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96799bbd10d442c50d66ac4e84169864b9b989ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defining-an-nmake-macro"></a>Définition d'une macro NMAKE
 ## <a name="syntax"></a>Syntaxe  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/24/2017
 macroname=string  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le *nom_macro* est une combinaison de lettres, des chiffres et des traits de soulignement (_) jusqu'à 1 024 caractères et respecte la casse. Le *nom_macro* peut contenir une macro appelée. Si *nom_macro* se compose entièrement d’une macro appelée, la macro appelée ne peut pas être null ni non défini.  
   
  Le `string` peut être n’importe quelle séquence de zéro ou plusieurs caractères. Une chaîne nulle contient zéro caractères ou uniquement des espaces ou des tabulations. Le `string` peut contenir un appel de macro.  

@@ -17,11 +17,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 58b57183d7976d024a8a9d960f1f56ab438abff9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4f9ec5882cb1535f089250bc467c795263132d35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (optimisation pour les particularités d'architecture)
 **/ favor :** `option` génère le code qui est optimisé pour une architecture spécifique ou pour les caractéristiques des micro-architectures dans l’AMD et les architectures Intel.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
 /favor:{blend | ATOM | AMD64 | INTEL64}  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **/favor:Blend**  
  (x86 et x64) produit le code qui est optimisé pour les caractéristiques des micro-architectures dans l’AMD et les architectures Intel. Alors que **/favor:blend** ne peut pas fournir les meilleures performances possibles sur un processeur spécifique, il est conçu pour fournir les meilleures performances sur un large éventail de processeurs x86 et x64. Par défaut, **/favor:blend** est en vigueur.  
   

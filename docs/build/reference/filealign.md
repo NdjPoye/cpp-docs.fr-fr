@@ -14,11 +14,12 @@ ms.assetid: c1017a35-8d71-4ad9-934b-a3e3ea037fa0
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1f3c47b391235d5ffff8e6efbbf5f865df3bf885
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 753f6c5fade4211654246aec19af60c60706d7ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filealign-align-sections-in-files"></a>/ /FILEALIGN (alignement des sections dans les fichiers)
 
@@ -33,7 +34,7 @@ Le **/FILEALIGN** option de l’éditeur de liens vous permet de spécifier l’
 *size*  
 La taille d’alignement de section en octets, qui doit être une puissance de deux.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Le **/FILEALIGN** option entraîne l’éditeur de liens aligner chaque section dans le fichier de sortie sur une limite qui est un multiple de la *taille* valeur. Par défaut, l’éditeur de liens n’utilise pas une taille fixe d’alignement.
 

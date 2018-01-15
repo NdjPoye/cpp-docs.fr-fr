@@ -1,53 +1,54 @@
 ---
-title: "ModuleType, &#233;num&#233;ration | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ModuleType"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ModuleType (énumération)"
+title: "Moduletype (énumération) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ModuleType
+dev_langs: C++
+helpviewer_keywords: ModuleType enumeration
 ms.assetid: 61a763af-a5a4-451d-8b40-815af507fcde
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: dd68d911a3734510bfb35db4b3ee0c4b8e46a4a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
-# ModuleType, &#233;num&#233;ration
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Spécifie si un module doit prendre en charge un serveur in\-process ou un serveur out\-of\-process.  
+# <a name="moduletype-enumeration"></a>ModuleType (énumération)
+Spécifie si un module doit prendre en charge un serveur in-process ou un serveur out-of-process.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 enum ModuleType;  
 ```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Valeurs  
+### <a name="values"></a>Valeurs  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|`InProc`|Un serveur in\-process.|  
-|`OutOfProc`|Un serveur out\-of\-process.|  
-|`DisableCaching`|Désactive le mécanisme de mise en cache sur Module.|  
-|`InProcDisableCaching`|Combinaison de `InProc` et de `DisableCaching`.|  
-|`OutOfProcDisableCaching`|Combinaison de `OutOfProc` et de `DisableCaching`.|  
+|`InProc`|Un serveur in-process.|  
+|`OutOfProc`|Un serveur out-of-process.|  
+|`DisableCaching`|Désactiver le mécanisme de mise en cache sur le Module.|  
+|`InProcDisableCaching`|Combinaison de `InProc` et `DisableCaching`.|  
+|`OutOfProcDisableCaching`|Combinaison de `OutOfProc` et `DisableCaching`.|  
   
-## Configuration requise  
- **En\-tête:** module.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** module.h  
   
- **Espace de noms:** Microsoft::WRL  
+ **Espace de noms :** Microsoft::WRL  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)

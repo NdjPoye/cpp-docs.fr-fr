@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,22 +20,21 @@ f1_keywords:
 - AFXDISP/DDX_OCShortRO
 - AFXDISP/DDX_OCText
 - AFXDISP/DDX_OCTextRO
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ad97690ca948525e9a0920d087e4dfd617a11b4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 9c0629e57c518334b84ed3110e3dab14a5d259fc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Fonctions d'échange de données de boîtes de dialogue pour contrôles OLE
 Cette rubrique répertorie les fonctions DDX_OC utilisées pour échanger des données entre une propriété d’un contrôle OLE dans une boîte de dialogue, mode formulaire ou un objet de vue de contrôle et un membre de données de la boîte de dialogue, un mode formulaire ou un objet de vue de contrôle.  
@@ -79,13 +77,13 @@ void AFXAPI DDX_OCBool(
  `dispid`  
  ID de distribution d’une propriété du contrôle.  
   
- *value*  
+ *valeur*  
  Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête :** afxdisp.h  
   
 ##  <a name="ddx_ocboolro"></a>DDX_OCBoolRO  
@@ -109,13 +107,13 @@ void AFXAPI DDX_OCBoolRO(
  `dispid`  
  ID de distribution d’une propriété du contrôle.  
   
- *value*  
+ *valeur*  
  Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_occolor"></a>DDX_OCColor  
@@ -139,13 +137,13 @@ void AFXAPI DDX_OCColor(
  `dispid`  
  ID de distribution d’une propriété du contrôle.  
   
- *value*  
+ *valeur*  
  Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_occolorro"></a>DDX_OCColorRO  
@@ -169,13 +167,13 @@ void AFXAPI DDX_OCColorRO(
  `dispid`  
  ID de distribution d’une propriété du contrôle.  
   
- *value*  
+ *valeur*  
  Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_ocfloat"></a>DDX_OCFloat  
@@ -205,13 +203,13 @@ void AFXAPI DDX_OCFloat(
  `dispid`  
  ID de distribution d’une propriété du contrôle.  
   
- *value*  
+ *valeur*  
  Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_ocfloatro"></a>DDX_OCFloatRO  
@@ -241,13 +239,13 @@ void AFXAPI DDX_OCFloatRO(
  `dispid`  
  ID de distribution d’une propriété du contrôle.  
   
- *value*  
+ *valeur*  
  Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_ocint"></a>DDX_OCInt  
@@ -277,13 +275,13 @@ void AFXAPI DDX_OCInt(
  `dispid`  
  ID de distribution d’une propriété du contrôle.  
   
- *value*  
+ *valeur*  
  Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_ocintro"></a>DDX_OCIntRO  
@@ -313,13 +311,13 @@ void AFXAPI DDX_OCIntRO(
  `dispid`  
  ID de distribution d’une propriété du contrôle.  
   
- *value*  
+ *valeur*  
  Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_ocshort"></a>DDX_OCShort  
@@ -343,13 +341,13 @@ void AFXAPI DDX_OCShort(
  `dispid`  
  ID de distribution d’une propriété du contrôle.  
   
- *value*  
+ *valeur*  
  Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_ocshortro"></a>DDX_OCShortRO  
@@ -373,13 +371,13 @@ void AFXAPI DDX_OCShortRO(
  `dispid`  
  ID de distribution d’une propriété du contrôle.  
   
- *value*  
+ *valeur*  
  Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_octext"></a>DDX_OCText  
@@ -403,13 +401,13 @@ void AFXAPI DDX_OCText(
  `dispid`  
  ID de distribution d’une propriété du contrôle.  
   
- *value*  
+ *valeur*  
  Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h  
   
 ##  <a name="ddx_octextro"></a>DDX_OCTextRO  
@@ -433,15 +431,14 @@ void AFXAPI DDX_OCTextRO(
  `dispid`  
  ID de distribution d’une propriété du contrôle.  
   
- *value*  
+ *valeur*  
  Référence à une variable membre de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle avec lequel les données sont échangées.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
 
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
   **En-tête** afxdisp.h
     
 ## <a name="see-also"></a>Voir aussi  
  [Macros et objet Globals](../../mfc/reference/mfc-macros-and-globals.md)
-

@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8378c3acb691164641f788a87f740b0900f1bd6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7b709179cb5bc0fefa3f342374c792656fa1e934
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Procédure pas à pas : création d'un réseau de traitement d'image
 Ce document montre comment créer un réseau de blocs de messages asynchrones qui effectuent le traitement d’image.  
@@ -29,7 +30,7 @@ Ce document montre comment créer un réseau de blocs de messages asynchrones qu
   
  Un réseau qui est basé sur le flux de données crée un *pipeline* de tâches. Chaque étape du pipeline effectue simultanément une partie de la tâche globale. Ce processus s'apparente à une chaîne de montage en construction automobile. Comme chaque véhicule passe via la ligne de l’assembly, un poste assemble le châssis, un autre installe le moteur et ainsi de suite. En activant plusieurs véhicules d’être assemblés en même temps, la ligne de l’assembly fournit le débit plus élevé que celui des véhicules d’assemblage à la fois.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
  Lisez les documents suivants avant de commencer cette procédure pas à pas :  
   
 -   [Blocs de messages asynchrones](../../parallel/concrt/asynchronous-message-blocks.md)  

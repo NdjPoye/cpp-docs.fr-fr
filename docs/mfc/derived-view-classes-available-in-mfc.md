@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: da8136b8090004312ba4b9a91f25fc66461eb5d0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2426f3e547da6eaab6a4b38bb5199e87c93ef933
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>Classes d'affichage dérivées disponibles dans MFC
 Le tableau suivant montre les classes d’affichage de MFC et leurs relations entre eux. Les fonctionnalités de votre classe d’affichage dépendant de la classe de vue MFC à partir duquel il dérive.  

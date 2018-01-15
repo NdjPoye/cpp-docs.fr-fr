@@ -18,18 +18,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 02413122aeff2663a642764d13dc832a866f289e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b3f462297ce20f7eee97e7052b6eaa3bad4f4c76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="headers"></a>/HEADERS
 ```  
 /HEADERS  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette option affiche l’en-tête du fichier et l’en-tête de chaque section. Lorsqu’il est utilisé avec une bibliothèque, elle affiche l’en-tête de chaque objet membre.  
   
  Uniquement les **/HEADERS** (option DUMPBIN) est disponible pour les fichiers générés par le [/GL](../../build/reference/gl-whole-program-optimization.md) option du compilateur.  
