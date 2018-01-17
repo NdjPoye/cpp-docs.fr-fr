@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 72106bd363987d39fb11c9ec1a6d3fd0ceb5665d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 721dd39cf8cda6277eb129f259b7ede2d9f0da28
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Ouvrir les projets de dossier dans Visual C++
 Visual Studio 2017 introduit la fonctionnalité « Ouvrir le dossier », ce qui vous permet d’ouvrir un dossier de fichiers sources et immédiatement commencer à coder avec prise en charge IntelliSense, la navigation, la refactorisation, le débogage et ainsi de suite. Aucun fichier .sln ou .vcxproj n’est chargées ; Si nécessaire, vous pouvez spécifier des tâches personnalisées ainsi que générer et lancer des paramètres dans les fichiers .json simple. Géré par ouvrir le dossier, Visual C++ peut prennent désormais en charge non seulement des collections pertes de connexion de fichiers, mais également pratiquement n’importe quel système de génération, y compris CMake, Ninja, QMake (pour les projets de Qt), gyp, SCons, Gradle, Buck, vérifiez et bien plus encore. 
@@ -39,8 +39,8 @@ Vous pouvez personnaliser un projet d’ouvrir le dossier via trois fichiers JSO
 |||
 |-|-|
 |CppProperties.json|Spécifiez les informations de configuration personnalisée pour la navigation. Créer ce fichier, si nécessaire, dans votre dossier racine du projet.|
-|Launch.VS.JSON|Spécifiez les arguments de ligne de commande. Accessible via la **l’Explorateur de solutions** élément de menu contextuel **Debug et les paramètres de lancement**.|
-|Tasks.VS.JSON|Spécifiez les commandes de génération personnalisées et des commutateurs de compilation. Accessible via la **l’Explorateur de solutions** élément de menu contextuel **configurer les tâches**.|
+|launch.vs.json|Spécifiez les arguments de ligne de commande. Accessible via la **l’Explorateur de solutions** élément de menu contextuel **Debug et les paramètres de lancement**.|
+|tasks.vs.json|Spécifiez les commandes de génération personnalisées et des commutateurs de compilation. Accessible via la **l’Explorateur de solutions** élément de menu contextuel **configurer les tâches**.|
 
 ### <a name="configure-intellisense-with-cpppropertiesjson"></a>Configurer IntelliSense avec CppProperties.json
 IntelliSense et navigation comportement partiellement dépend de la configuration de build active, qui définit #include chemins d’accès, les commutateurs du compilateur et les autres paramètres. Par défaut, Visual Studio fournit des configurations Debug et Release. Pour certains projets, vous devrez créer une configuration personnalisée pour IntelliSense et les fonctionnalités de navigation entièrement comprendre votre code. Pour définir une nouvelle configuration, créez un fichier appelé CppProperties.json dans le dossier racine. Voici un exemple :
@@ -71,20 +71,131 @@ Une configuration peut avoir une des propriétés suivantes :
 |`forcedInclude`|en-tête d’être inclus automatiquement dans chaque unité de compilation (mappe à /FI pour MSVC ou - inclure pour clang)|
 |`undefines`|la liste des macros pour être non définie (qui correspond à /U de MSVC.)|
 |`intelliSenseMode`|le moteur IntelliSense à utiliser. Vous pouvez spécifier les variantes spécifiques d’architecture pour MSVC, gcc et Clang :
-- MSVC x x86 (valeur par défaut)
-- MSVC-x64
+- msvc-x86 (default)
+- msvc-x64
 - MSVC-arm
-- Windows-clang-x86
-- Windows-clang-x64
+- windows-clang-x86
+- windows-clang-x64
 - Windows-clang-arm
 - Linux-x64
 - Linux-x86
 - Linux-arm
 - gccarm
 
-Expansion variables d’environnement prend en charge CppProperties.json pour inclure des chemins d’accès et d’autres valeurs de propriété. La syntaxe est `${env.FOODIR}` pour développer une variable d’environnement `%FOODIR%`.
+#### <a name="environment-variables"></a>Variables d’environnement
+CppProperties.json prend en charge système expansion variables d’environnement pour inclure des chemins d’accès et d’autres valeurs de propriété. La syntaxe est `${env.FOODIR}` pour développer une variable d’environnement `%FOODIR%`. Les variables définies par le système suivantes sont également prises en charge :
 
-Vous avez également accès aux macros intégrées suivantes à l’intérieur de ce fichier :
+|Nom de variable|Description|  
+|-----------|-----------------|
+|vsdev|L’environnement de Visual Studio par défaut|
+|msvc_x86|Compiler pour x86 à l’aide de x86 outils|
+|msvc_arm|Compiler pour ARM, à l’aide de x86 outils|
+|msvc_arm64|Compiler pour ARM64 à l’aide de x86 outils|
+|msvc_x86_x64|Compiler pour AMD64 à l’aide de x86 outils|
+|msvc_x64_x64|Compiler pour AMD64 à l’aide d’outils 64 bits|
+|msvc_arm_x64|Compiler pour ARM, à l’aide d’outils 64 bits|
+|msvc_arm64_x64|Compiler pour ARM64 à l’aide d’outils 64 bits|
+
+Lorsque la charge de travail Linux est installé, les environnements suivants sont disponibles pour le ciblage à distance de Linux et WSL :
+
+|Nom de variable|Description|  
+|-----------|-----------------|
+|linux_x86|Cible x86 Linux à distance|
+|linux_x64|Cible x64 Linux à distance|
+|linux_arm|Cibler ARM Linux à distance|
+
+Vous pouvez définir les variables d’environnement personnalisées dans CppProperties.json globalement ou par configuration. L’exemple suivant montre comment par défaut et les variables d’environnement personnalisées peuvent être déclarés et utilisés. Global **environnements** propriété déclare une variable nommée **INCLUDE** qui peut être utilisé par n’importe quelle configuration :
+
+```json
+{
+  // The "environments" property is an array of key value pairs of the form
+  // { "EnvVar1": "Value1", "EnvVar2": "Value2" }
+  "environments": [
+    {
+      "INCLUDE": "${workspaceRoot}\\src\\includes"
+    }
+  ],
+ 
+  "configurations": [
+    {
+      "inheritEnvironments": [
+        // Inherit the MSVC 32-bit environment and toolchain.
+        "msvc_x86"
+      ],
+      "name": "x86",
+      "includePath": [
+        // Use the include path defined above.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x86"
+    },
+    {
+      "inheritEnvironments": [
+        // Inherit the MSVC 64-bit environment and toolchain.
+        "msvc_x64"
+      ],
+      "name": "x64",
+      "includePath": [
+        // Use the include path defined above.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x64"
+    }
+  ]
+}
+```
+Vous pouvez également définir un **environnements** propriété à l’intérieur d’une configuration, afin qu’elle s’applique uniquement à cette configuration et remplace toutes les variables globales du même nom. Dans l’exemple suivant, la x64 configuration définit un local **INCLUDE** variable qui remplace la valeur globale :
+
+```json
+{
+  "environments": [
+    {
+      "INCLUDE": "${workspaceRoot}\\src\\includes"
+    }
+  ],
+ 
+  "configurations": [
+    {
+      "inheritEnvironments": [
+        "msvc_x86"
+      ],
+      "name": "x86",
+      "includePath": [
+        // Use the include path defined in the global environments property.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x86"
+    },
+    {
+      "environments": [
+        {
+          // Append 64-bit specific include path to env.INCLUDE.
+          "INCLUDE": "${env.INCLUDE};${workspaceRoot}\\src\\includes64"
+        }
+      ],
+ 
+      "inheritEnvironments": [
+        "msvc_x64"
+      ],
+      "name": "x64",
+      "includePath": [
+        // Use the include path defined in the local environments property.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x64"
+    }
+  ]
+}
+```
+
+Tous les personnalisé et variables d’environnement par défaut sont également disponibles dans tasks.vs.json et launch.vs.json.
+
+#### <a name="macros"></a>Macros
+Vous avez accès aux macros intégrées suivantes à l’intérieur de CppProperties.json :
 |||
 |-|-|
 |`${workspaceRoot}`| le chemin complet vers le dossier de l’espace de travail|
@@ -138,7 +249,7 @@ Vous pouvez automatiser les scripts de compilation ou d’autres opérations ext
 
 ![Ouvrir le dossier configurer des tâches](media/open-folder-config-tasks.png)
 
-Cela crée (ou en ouvre) le `tasks.vs.json` fichier dans le dossier .vs Visual Studio crée dans votre dossier racine du projet. Vous pouvez définir n’importe quelle tâche arbitraire dans ce fichier et appelez-la à partir de la **l’Explorateur de solutions** menu contextuel. L’exemple suivant montre un fichier tasks.vs.json qui définit une seule tâche. `taskName`définit le nom qui apparaît dans le menu contextuel. `appliesTo`définit les fichiers de la commande peut être effectuée sur. Le `command` propriété fait référence à la variable d’environnement COMSPEC, qui identifie le chemin d’accès de la console (cmd.exe sur Windows). Le `args` propriété spécifie la ligne de commande à appeler. Le `${file}` macro extrait le fichier sélectionné dans **l’Explorateur de solutions**. L’exemple suivant affiche le nom de fichier du fichier .cpp actuellement sélectionné.
+Cela crée (ou en ouvre) le `tasks.vs.json` fichier dans le dossier .vs Visual Studio crée dans votre dossier racine du projet. Vous pouvez définir n’importe quelle tâche arbitraire dans ce fichier et appelez-la à partir de la **l’Explorateur de solutions** menu contextuel. L’exemple suivant montre un fichier tasks.vs.json qui définit une seule tâche. `taskName`définit le nom qui apparaît dans le menu contextuel. `appliesTo`définit les fichiers de la commande peut être effectuée sur. Le `command` propriété fait référence à la variable d’environnement COMSPEC, qui identifie le chemin d’accès de la console (cmd.exe sur Windows). Vous pouvez également référencer des variables d’environnement qui sont déclarées dans CppProperties.json ou CMakeSettings.json. Le `args` propriété spécifie la ligne de commande à appeler. Le `${file}` macro extrait le fichier sélectionné dans **l’Explorateur de solutions**. L’exemple suivant affiche le nom de fichier du fichier .cpp actuellement sélectionné.
 
 ```json
 {
@@ -155,6 +266,8 @@ Cela crée (ou en ouvre) le `tasks.vs.json` fichier dans le dossier .vs Visual S
 }
 ```
 Après avoir enregistré tasks.vs.json, vous pouvez avec le bouton droit n’importe quel fichier .cpp dans le dossier, choisissez **écho le nom de fichier** à partir du menu contextuel et affichent le nom de fichier dans la fenêtre Sortie.
+
+
 
 #### <a name="appliesto"></a>appliesTo
 Vous pouvez créer des tâches de tout fichier ou dossier en spécifiant son nom dans la `appliesTo` champ, par exemple `"appliesTo" : "hello.cpp"`. Les masques de fichiers suivants peuvent être utilisés comme valeurs :

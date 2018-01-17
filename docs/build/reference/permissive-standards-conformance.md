@@ -18,11 +18,11 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 90ff6d2be6174f32d7d93252ebd8b693b422076d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da744d2a037d865ddd0028e59ef3ba3c56d3bdd7
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="permissive--standards-conformance"></a>/ permissive-(conformité aux normes)
 
@@ -30,7 +30,7 @@ Spécifiez le mode de conformité aux normes pour le compilateur. Utilisez cette
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ permissive-**
+> **/permissive-**
 
 ## <a name="remarks"></a>Notes
 
@@ -42,7 +42,7 @@ Le **/ permissive-** option est compatible avec presque tous les fichiers d’en
 
 Le **/ permissive-** option définit la [/Zc : strictstrings](../../build/reference/zc-conformance.md) et [/Zc : rvaluecast](../../build/reference/zc-conformance.md) options comportement conforme. Leur valeur par défaut non conforme de comportement. Vous pouvez passer spécifique **/Zc** options après **/ permissive-** sur la ligne de commande pour remplacer ce comportement.
 
-Dans les versions du début du compilateur dans Visual Studio 2017 version 15.3, le **/ permissive-** option définit la **/Zc:ternary** option. Le compilateur implémente également plus de la configuration requise pour la recherche de nom en deux phases. Lorsque le **/ permissive-** option est définie, le compilateur analyse les définitions de modèle (fonction) et de la classe, identification des noms dépendants et indépendants utilisés dans les modèles. Dans cette version, l’analyse des dépendances uniquement nom est effectuée.
+Dans les versions du début du compilateur dans Visual Studio 2017 version 15.3, le **/ permissive-** option définit la [/Zc:ternary](../../build/reference/zc-ternary.md) option. Le compilateur implémente également plus de la configuration requise pour la recherche de nom en deux phases. Lorsque le **/ permissive-** option est définie, le compilateur analyse les définitions de modèle (fonction) et de la classe, identification des noms dépendants et indépendants utilisés dans les modèles. Dans cette version, l’analyse des dépendances uniquement nom est effectuée.
 
 Les extensions spécifiques à l’environnement et des zones de langue que la norme laisse jusqu'à l’implémentation ne sont pas affectés par **/ permissive-**. Par exemple, spécifique à Microsoft `__declspec`, convention d’appel et la gestion des mots clés et les directives pragma de compilateur spécifiques ou les attributs gestion structurée des exceptions ne sont pas signalés par le compilateur dans **/ permissive-** mode.
 
@@ -399,7 +399,7 @@ virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
 
 Pour résoudre ce problème, compiler des fichiers qui incluent omscript.h sans le **/ permissive-** option ou utilisez **/Zc:strictStrings-** à la place.
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l’environnement de développement Visual Studio
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
 Dans la version de Visual Studio 2017 15.5 et versions ultérieures, utilisez cette procédure :
 
