@@ -20,13 +20,17 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 106123557c4efab5ccddf9f1292570d36b0f8313
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a89795e19df46b3701cf8dcc7a402540f693db94
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="redistributing-visual-c-files"></a>Redistribution des fichiers Visual C++
+
+> [!NOTE]
+> Êtes-vous ici, car vous cherchez un téléchargement de l’un des fichiers exécutables Visual C++ ? Accédez à la [Microsoft](http://www.microsoft.com/) site Web et entrez **Visual C++ Redistributable** dans la zone de recherche. Téléchargez et installez le package redistribuable pour l’architecture de votre ordinateur (par exemple, x64 si vous exécutez Windows 64 bits) et de la version de Visual C++ dont vous avez besoin.   
+  
 Lorsque vous déployez une application, vous devez également déployer les fichiers qui sont requis pour sa prise en charge. Si l'un de ces fichiers est fourni par Microsoft, vérifiez si vous êtes autorisé à le redistribuer. Pour passer en revue les termes du contrat de licence de Visual Studio, consultez le lien de termes du contrat de licence dans la boîte de dialogue à propos de Microsoft Visual Studio dans l’IDE, ou télécharger le [termes du contrat de licence de logiciel Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=831114) fichier. Pour afficher la « liste REDIST » référencée dans la section « Code distribuable » des termes du contrat de licence logiciel Microsoft de certaines éditions de Visual Studio, consultez [Code distribuable pour Microsoft Visual Studio 2017 et Microsoft Visual Studio 2017 Kit de développement logiciel (inclut des utilitaires et des fichiers BuildServer)](http://go.microsoft.com/fwlink/p/?LinkId=823098), ou pour Visual Studio 2015, consultez [Code distribuable pour Microsoft Visual Studio 2015 et Microsoft Visual Studio 2015 SDK](http://go.microsoft.com/fwlink/p/?LinkId=523763). Pour plus d’informations sur les fichiers redistribuables, consultez [détermination des DLL à redistribuer](../ide/determining-which-dlls-to-redistribute.md) et [des exemples de déploiement](../ide/deployment-examples.md).  
   
  Pour déployer les fichiers redistribuables Visual C++, vous pouvez utiliser les Packages redistribuables Visual C++ (VCRedist\_x86.exe, VCRedist\_x64.exe ou VCRedist\_arm.exe) qui sont inclus dans Visual Studio. Dans Visual Studio 2017, vous pouvez trouver ces fichiers dans les fichiers de programme [(x86)]\\Microsoft Visual Studio\\2017\\_édition_\\VC\\Redist\\ MSVC\\_lib-version_ dossier, où _édition_ est installée, l’édition de Visual Studio et _lib-version_ est la version de la bibliothèques à redistribuer. Dans Visual Studio 2015, ces fichiers sont accessibles sous le répertoire d’installation de Visual Studio dans Program Files [(x 86)] \Microsoft Visual Studio *version*\VC\redist\\*paramètres régionaux* \\. Une autre option consiste à utiliser des modules de fusion redistribuables (fichiers .msm), qui, dans Visual Studio 2017 se trouvent dans les fichiers de programme [(x 86)]\\Microsoft Visual Studio\\2017\\_édition_ \\ VC\\Redist\\MSVC\\_lib-version_\\MergeModules\\ dossier. Dans Visual Studio 2015 ces se trouve dans Program Files [(x 86)] \Common Modules\\. Il est également possible d’installer directement les DLL Visual C++ redistribuables dans le *dossier local de l’application*, qui est le dossier qui contient votre fichier d’application exécutable. Pour des raisons liées à la maintenance, il est déconseillé d'utiliser cet emplacement d'installation.  

@@ -1,7 +1,7 @@
 ---
-title: "Spécifications d’exception (throw) (C++) | Documents Microsoft"
+title: "Spécifications d’exception (throw, noexcept) (C++) | Documents Microsoft"
 ms.custom: 
-ms.date: 01/12/2018
+ms.date: 01/18/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-language
@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: c93fdaa75155e6f0117ef1c30d4e093d5ca0e576
-ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
+ms.openlocfilehash: bd96f666c4733f1c9b1aff65705840a46729194c
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Spécifications d’exception (throw, noexcept) (C++)
 
 Spécifications d’exceptions sont une fonctionnalité du langage C++ qui indiquent l’intention du programmeur sur les types d’exception qui peuvent être propagées par une fonction. Vous pouvez spécifier qu’une fonction peut ou peut ne pas quitte par une exception à l’aide un *spécification d’exception*. Le compilateur peut utiliser ces informations pour optimiser les appels à la fonction, et la fonction d’échappement pour terminer le programme si une exception inattendue. 
 
-Avant C ++ 17 a deux types de spécification d’exception. Le *noexcept spécification* était nouvelle dans C ++ 11. Il spécifie si l’ensemble des exceptions potentielles qui échappent à la fonction est vide. Le *spécification d’exception dynamiques*, ou `throw(optional_type_list)` spécification, a été déconseillée dans C ++ 11 et supprimée dans C ++ 17, à l’exception de `throw()`, qui est un alias pour noexcept (true). Cette spécification d’exception a été conçue pour fournir des informations résumées concernant les exceptions pouvant être levées en dehors d’une fonction, mais dans la pratique, il a été trouvé pour poser des problèmes. La spécification d’exception dynamique un qui s’est révélée quelque peu utile a été l’inconditionnel `throw()` spécification. Par exemple, la déclaration de fonction :
+Avant C ++ 17 a deux types de spécification d’exception. Le *noexcept spécification* était nouvelle dans C ++ 11. Il spécifie si l’ensemble des exceptions potentielles qui échappent à la fonction est vide. Le *spécification d’exception dynamiques*, ou `throw(optional_type_list)` spécification, a été déconseillée dans C ++ 11 et supprimée dans C ++ 17, à l’exception de `throw()`, qui est un alias pour `noexcept(true)`. Cette spécification d’exception a été conçue pour fournir des informations résumées concernant les exceptions pouvant être levées en dehors d’une fonction, mais dans la pratique, il a été trouvé pour poser des problèmes. La spécification d’exception dynamique un qui s’est révélée quelque peu utile a été l’inconditionnel `throw()` spécification. Par exemple, la déclaration de fonction :
 
 ```cpp
 void MyFunction(int i) throw();
