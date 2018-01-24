@@ -116,7 +116,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2913](compiler-error-c2913.md)|spécialisation explicite ; '*déclaration*' n’est pas une spécialisation d’un modèle de classe|
 |[Erreur du compilateur C2914](compiler-error-c2914.md)|'*identificateur*' : Impossible de déduire l’argument de modèle/générique comme argument de fonction est ambigu|
 |C2915 d’erreur du compilateur|'*identificateur*' : '*type*' ne peut pas être utilisé directement sur la surface publiée d’un type WinRT. Utilisez ' Platform::Object ^' à la place pour passer ce type|
-|C2916 d’erreur du compilateur|'*identificateur*' : [FlagsAttribute] (uniquement) doit être spécifié que sur un enum public avec un 'unsigned int' type sous-jacent|
+|C2916 d’erreur du compilateur|'*identificateur*' : [FlagsAttribute] \(uniquement) doit être spécifié que sur un enum public avec un 'unsigned int' type sous-jacent|
 |[Erreur du compilateur C2917](compiler-error-c2917.md)|'*identificateur*' : paramètre de modèle non valide|
 |[Erreur du compilateur C2918](compiler-error-c2918.md)|'*identificateur*' : les propriétés indexées ne peut pas être utilisées sur la surface publiée d’un type WinRT|
 |[Erreur du compilateur C2919](compiler-error-c2919.md)|'*type*' : les opérateurs ne peut pas être utilisés sur la surface publiée d’un type WinRT|
