@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a4eccca9e7afd26684d5845d853b4be98001cf58
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.openlocfilehash: 6fecc7f821bec90321095130fb21147d7227685c
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ dans Visual Studio
 
@@ -32,7 +32,7 @@ Le langage de programmation et les outils de développement Visual Studio 2017 
 
 Ce contenu est destiné aux développeurs C++ qui écrivent des programmes.
 
-- Si vous recherchez un package redistribuable C++ et des composants d’exécution pour pouvoir exécuter un programme, accédez au [Centre de téléchargement Microsoft](http://www.microsoft.com/en-us/download/) et entrez **Visual C++** dans la zone de recherche.
+- Si vous recherchez un package redistribuable C++ particulier et des composants runtime pour pouvoir exécuter un programme, accédez au site web [Microsoft](http://www.microsoft.com/) et entrez **Visual C++ Redistributable** dans la zone de recherche. Téléchargez et installez le package redistribuable correspondant à l’architecture de votre ordinateur (par exemple, x64 si vous exécutez Windows 64 bits) et la version de Visual C++ dont vous avez besoin. 
 
 - Si vous recherchez une introduction aux concepts de base de la programmation en C++, accédez à l’un des nombreux sites web qui offrent ce contenu ou obtenez une copie de l’ouvrage [Programming -- Principles and Practice Using C++Programmation (deuxième édition)](http://stroustrup.com/Programming/) de l’inventeur du C++, Bjarne Stroustrup. Le contenu Visual C++ part du principe que vous avez déjà une connaissance de base de C++.
 
@@ -152,7 +152,7 @@ Cette section contient des liens vers des bibliothèques qui ne sont pas incluse
 [Boost](http://www.boost.org/)  
 Une bibliothèque populaire et largement utilisée.
 
-[Kit SDK REST C++](http://casablanca.codeplex.com).  
+[Kit de développement logiciel (SDK) REST C++](http://casablanca.codeplex.com).  
 Bibliothèque Microsoft pour communiquer avec les services web via HTTP.
 
 ## <a name="more-resources"></a>Autres ressources

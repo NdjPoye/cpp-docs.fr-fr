@@ -1,9 +1,6 @@
 ---
 title: "Guide pratique pour signaler un problème avec l’ensemble d’outils Visual C++ | Microsoft Docs"
-ms.custom: 
-ms.date: 1/03/2018
-ms.reviewer: 
-ms.suite: 
+ms.date: 1/11/2018
 ms.technology: cpp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,92 +9,79 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: b1a5cdb873d536702ecf8536d9a9e7c0205cc923
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.openlocfilehash: 697b5dc087aa61280922d5574001838ea5ff1dcb
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Guide pratique pour signaler un problème avec l’ensemble d’outils Visual C++
 
-Si vous rencontrez des problèmes avec le compilateur Visual C++, l’éditeur de liens ou d’autres outils, nous aimerions le savoir.
+Si vous rencontrez des problèmes avec le compilateur Visual C++, l’éditeur de liens ou autres outils et bibliothèques, nous aimerions les connaître.
 
-La meilleure façon de nous informer d’un problème consiste à nous envoyer un rapport qui inclut une description du problème que vous avez rencontré, des informations sur la façon dont vous créez votre programme et le code qui nous servira à reproduire le problème sur nos propres ordinateurs. Ces informations nous permettent de vérifier rapidement que le problème existe et qu’il n’est pas propre à votre environnement, de déterminer s’il affecte d’autres versions du compilateur et de diagnostiquer sa cause.
+La meilleure façon de nous informer d’un problème consiste à nous envoyer un rapport qui inclut une description du problème que vous avez rencontré, des informations sur la façon dont vous générez votre programme et une *reproduction* qui nous servira à reproduire le problème sur nos propres ordinateurs. Ces informations nous permettent de vérifier rapidement que le problème existe dans notre code et qu’il n’est pas propre à votre environnement, de déterminer s’il affecte d’autres versions du compilateur et de diagnostiquer sa cause.
 
 Dans ce document, vous obtiendrez plus d’informations sur les procédures suivantes
 
-- [Comment préparer votre rapport](#prepare) et les éléments essentiels à un bon rapport.
+- [Comment préparer votre rapport](#how-to-prepare-your-report) et les éléments essentiels à un bon rapport.
 
-- [Comment générer une reproduction](#generate) et les différents types de reproductions.
+- [Comment générer une reproduction](#how-to-generate-a-repro) et les différents types de reproductions.
 
-- [Modes d’envoi de votre rapport](#send) et leurs différences.
+- [Modes d’envoi de votre rapport](#ways-to-send-your-report) et leurs différences.
 
 Vos rapports sont importants pour nous ainsi que pour d’autres développeurs comme vous. Merci de nous aider à améliorer Visual C++ !
 
-## <a name="prepare"></a> Comment préparer votre rapport
+## <a name="how-to-prepare-your-report"></a>Comment préparer votre rapport
 
-Il est important de créer un rapport de qualité, car il est très difficile de reproduire le problème rencontré sur nos propres ordinateurs sans des informations complètes. Plus votre rapport est exhaustif, plus nous serons en mesure de recréer et diagnostiquer le problème efficacement.
+Il est important de créer un rapport de qualité, car il est très difficile de reproduire le problème rencontré sur nos propres ordinateurs sans informations complètes. Plus votre rapport est exhaustif, plus nous serons en mesure de recréer et diagnostiquer le problème efficacement.
 
 Au minimum, votre rapport doit contenir les éléments suivants :
 
-- Informations sur la version complète de l’ensemble d’outils que vous utilisez.
+- Informations complètes sur la version de l’ensemble d’outils que vous utilisez.
 
 - Ligne de commande cl.exe complète utilisée pour générer votre code.
 
 - Description détaillée du problème rencontré.
 
-- « Reproduction », code source qui illustre le problème.
+- Une reproduction est un exemple de code source simplifié et autonome qui illustre le problème.
 
-Poursuivez votre lecture pour en savoir plus sur les informations spécifiques dont nous avons besoin et l’endroit où vous pouvez les trouver.
+Poursuivez votre lecture pour en savoir plus sur les informations spécifiques dont nous avons besoin, l’endroit où vous pouvez les trouver et la façon de créer une bonne reproduction.
 
 ### <a name="the-toolset-version"></a>Version de l’ensemble d’outils
 
-Nous avons besoin des informations sur la version complète de l’ensemble d’outils que vous utilisez pour pouvoir tester votre reproduction avec le même ensemble d’outils sur nos ordinateurs. Si nous pouvons reproduire le problème, ces informations nous donnent également un point de départ pour rechercher si d’autres versions de l’ensemble d’outils présentent le même problème.
+Nous avons besoin d’informations complètes sur la version et l’architecture cible de l’ensemble d’outils qui entraînent le problème pour pouvoir tester votre reproduction avec le même ensemble d’outils sur nos ordinateurs. Si nous pouvons reproduire le problème, ces informations nous donnent également un point de départ pour rechercher si d’autres versions de l’ensemble d’outils présentent le même problème.
 
 #### <a name="to-report-the-full-version-of-the-compiler-youre-using"></a>Pour indiquer la version complète du compilateur que vous utilisez
 
-1. Appuyez sur la touche Windows de votre clavier et commencez à taper `Developer Command Prompt`.
+1. Ouvrez l’**invite de commandes développeur** qui correspond à l’architecture de configuration et à la version de Visual Studio utilisées pour générer votre projet. Par exemple, si vous générez vos projets en utilisant Visual Studio 2017 sur x64 pour des cibles x64, choisissez **Invite de commandes des outils natifs x64 pour VS 2017**. Pour plus d’informations, consultez [Raccourcis de l’invite de commandes développeur](build/building-on-the-command-line.md#developer-command-prompt-shortcuts).
 
-1. Choisissez la version **Invite de commandes développeur** qui correspond à la version de Visual Studio que vous utilisez quand elle apparaît dans la liste des correspondances.
-
-1. Dans la console **Invite de commandes développeur**, entrez la commande `cl /Bv /CLR`.
+1. Dans la fenêtre de console de l’invite de commandes développeur, entrez la commande **cl**.
 
 La sortie doit ressembler à ceci :
 
 ```Output
-C:\Compiler>cl /Bv /CLR
-Microsoft (R) C/C++ Optimizing Compiler Version 18.00.40209
-for Microsoft (R) .NET Framework version 4.00.30319.34014
+C:\Users\username\Source>cl
+Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x64
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
-Compiler Passes:
- C:\WinCComp\binaries.x86chk\bin\i386\cl.exe:        Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\c1.dll:        Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\c1xx.dll:      Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\c2.dll:        Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\link.exe:      Version 12.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\mspdb120.dll:  Version 12.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\1033\clui.dll: Version 18.00.40209.0
- Common Language Runtime:                            Version  4.00.30319.34014
-
-cl : Command line error D8003 : missing source filename
+usage: cl [ option... ] filename... [ /link linkoption... ]
 ```
 
 Copiez et collez l’intégralité de la sortie dans votre rapport.
 
 ### <a name="the-command-line"></a>Ligne de commande
 
-Nous avons besoin de la ligne de commande complète (cl.exe et ses arguments) utilisée pour générer votre code afin de pouvoir le générer exactement de la même façon sur nos ordinateurs. Ce point est important, car le problème que vous avez rencontré peut uniquement se produire lors de la génération avec un certain argument ou une certaine combinaison d’arguments.
+Nous avons besoin de la ligne de commande exacte (cl.exe et tous ses arguments) utilisée pour générer votre code afin de pouvoir le générer exactement de la même façon sur nos ordinateurs. Ce point est important, car le problème que vous avez rencontré peut uniquement se produire lors de la génération avec un certain argument ou une certaine combinaison d’arguments.
 
 L’endroit le plus approprié pour trouver ces informations se situe dans le journal de génération immédiatement après avoir rencontré le problème. Cela permet de garantir que la ligne de commande contient exactement les mêmes arguments pouvant contribuer au problème.
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>Pour signaler le contenu de la ligne de commande
 
-1. Recherchez le fichier **CL.command.1.tlog** et ouvrez-le. Par défaut, ce fichier se trouve dans \\...\Visual Studio *version*\Projects\\*NomSolution*\\*NomProjet*\Config\\*NomProjet*.tlog\CL.command.1.tlog.
+1. Recherchez le fichier **CL.command.1.tlog** et ouvrez-le. Par défaut, ce fichier se trouve dans votre dossier Documents dans \\Visual Studio *version*\\Projets\\*NomSolution*\\*NomProjet*\\*Configuration*\\*NomProjet*.tlog\\CL.command.1.tlog ou dans votre dossier Utilisateur sous \\Source\\Référentiels\\*NomSolution*\\*NomProjet*\\*Configuration*\\*NomProjet*.tlog\\CL.command.1.tlog. Il peut se trouver dans un autre emplacement si vous utilisez un autre système de build ou si vous avez changé l’emplacement par défaut de votre projet.
 
    Dans ce fichier, vous trouverez les noms des fichiers de code source suivis des arguments de ligne de commande utilisés pour les compiler, chacun sur une ligne distincte.
 
-1. Recherchez la ligne qui contient le nom du fichier de code source dans lequel le problème se produit ; la ligne en dessous contient la commande cl.exe correspondante et ses arguments.
+1. Recherchez la ligne qui contient le nom du fichier de code source dans lequel le problème se produit ; la ligne en dessous contient les arguments de la commande cl.exe correspondants.
 
 Copiez et collez l’intégralité de la ligne de commande dans votre rapport.
 
@@ -105,21 +89,40 @@ Copiez et collez l’intégralité de la ligne de commande dans votre rapport.
 
 Nous avons besoin d’une description détaillée du problème que vous avez rencontré pour pouvoir vérifier que nous constatons le même effet sur nos ordinateurs ; il nous est également parfois utile de savoir ce que vous tentiez d’effectuer et ce à quoi vous vous attendiez.
 
-Indiquez les messages d’erreur précis affichés par l’ensemble d’outils, une brève description de ce que vous tentiez d’effectuer pour nous aider à comprendre le code de reproduction ainsi que tous les autres détails qui peuvent nous aider à diagnostiquer le problème rencontré, comme les solutions de contournement que vous avez peut-être trouvées. Évitez de répéter des informations qui figurent ailleurs dans votre rapport.
+Fournissez les messages d’erreur exacts que vous recevez de l’ensemble d’outils ou le comportement d’exécution exact que vous voyez. Nous avons besoin de ces informations pour vérifier que nous avons correctement reproduit le problème. Incluez l’intégralité de la sortie du compilateur, pas juste le dernier message d’erreur. Nous devons voir tout ce qui a conduit au problème que vous signalez. Si vous pouvez dupliquer le problème avec le compilateur de ligne de commande, cette sortie du compilateur est préférable. En effet, l’IDE et autres systèmes de build peuvent filtrer les messages d’erreur que vous voyez ou capturer uniquement la première ligne d’un message d’erreur.
+
+Si le problème vient du compilateur qui accepte du code non valide et ne génère pas de diagnostic, notez ce point dans votre rapport.
+
+Pour signaler un problème de comportement d’exécution, ajoutez une copie exacte de ce que le programme envoie et de ce que vous vous attendez à voir. Dans l’idéal, c’est incorporé dans l’instruction de sortie elle-même, par exemple, `printf("This should be 5: %d\n", actual_result);`. Si votre programme plante ou se bloque, mentionnez-le également.
+
+Ajoutez tout autre détail susceptible de nous aider à diagnostiquer le problème que vous rencontrez, comme des solutions de contournement éventuellement trouvées. Évitez de répéter des informations qui figurent ailleurs dans votre rapport.
 
 ### <a name="the-repro"></a>Reproduction
 
-Nous avons besoin d’une *reproduction*, un exemple de code source autonome qui illustre le problème que vous avez rencontré, pour pouvoir reproduire l’erreur sur nos ordinateurs. Le type de problème que vous rencontrez détermine le type de reproduction à inclure dans votre rapport. Sans une reproduction appropriée, nous n’avons rien à examiner.
+Une reproduction est un exemple de code source complet et autonome qui reproduit le problème que vous avez rencontré (d’où son nom). Nous avons besoin d’une reproduction pour pouvoir reproduire l’erreur sur nos ordinateurs. Le code doit être suffisant en lui-même pour créer un exécutable simple qui se compile et s’exécute, ou qui aurait dû se compiler et s’exécuter si vous n’aviez pas rencontré de problème. Une reproduction n’est pas un extrait de code ; elle doit avoir des classes et des fonctions complètes et contenir toutes les directives #include, même pour les en-têtes standard.
 
-Des reproductions courtes et autonomes peuvent être incluses directement dans le texte de votre rapport, mais de plus grandes reproductions de code source doivent être jointes au rapport. Les reproductions qui ne peuvent pas être réduites à un fichier de code source unique doivent être empaquetées par la compression d’un répertoire contenant tous les fichiers dans un fichier .zip ou similaire et attachées au rapport. Tous les détails supplémentaires spécifiques au scénario doivent toujours être inclus dans le texte du rapport, jamais dans le code source.
+#### <a name="what-makes-a-good-repro"></a>Ce qui constitue une bonne reproduction
 
-Le meilleur type de reproduction que vous pouvez nous faire parvenir est une *reproduction minimale*. Il s’agit d’un fichier de code source unique et autonome (sans références aux en-têtes d’utilisateurs) qui contient juste suffisamment de code pour illustrer le problème. Si vous pouvez fournir une reproduction sous cette forme, joignez simplement le fichier de code source à votre rapport ; cela nous suffit.
+Une bonne reproduction est :
 
-Si vous ne pouvez pas réduire le problème à une reproduction minimale sans dépendances, reportez-vous aux sections suivantes pour déterminer le type de reproduction à inclure dans votre rapport.
+- **Minimale.** Les reproductions doivent être aussi courtes que possible tout en montrant exactement le problème rencontré. Les reproductions n’ont pas besoin d’être complexes ou réalistes. Il faut juste qu’elles affichent le code qui est conforme au standard ou à l’implémentation documentée du compilateur, ou dans le cas d’absence de diagnostic, le code qui n’est pas conforme. Les reproductions simples et directes qui contiennent juste assez de code pour illustrer le problème sont les meilleures. Si vous pouvez enlever ou simplifier du code tout en restant conforme et sans modifier le problème, n’hésitez pas. Vous n’avez pas besoin d’ajouter de contre-exemples de code qui fonctionnent. 
 
-#### <a name="frontend-parser-crash"></a>Blocage de serveur frontal (analyseur)
+- **Autonome.** Les reproductions doivent éviter les dépendances inutiles. Si vous pouvez reproduire le problème sans bibliothèques tierces, faites-le. Si vous pouvez reproduire le problème sans code de bibliothèque avec des instructions de sortie simples (par exemple, `puts("this shouldn't compile");`, `std::cout << value;` et `printf("%d\n", value);` sont OK), n’hésitez pas. Si l’exemple peut être condensé dans un seul fichier de code source, sans référence à aucun en-tête utilisateur, c’est parfait. Vous nous aiderez considérablement en réduisant la quantité de code que nous devons examiner comme facteur possible du problème.
 
-Les blocages de serveur frontal se produisent pendant la phase d’analyse du compilateur. En règle générale, le compilateur indique [Erreur irrécupérable C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) et fait référence au fichier de code source et au numéro de ligne où l’erreur s’est produite ; il mentionne souvent un fichier msc1.cpp, mais vous pouvez ignorer ce détail.
+- **À jour avec la dernière version du compilateur.** Les reproductions doivent utiliser la dernière mise à jour vers la dernière version de l’ensemble d’outils ou la préversion la plus récente de la prochaine mise à jour ou de la prochaine version majeure, si possible. Les problèmes que vous pouvez rencontrer dans des versions antérieures de l’ensemble d’outils ont très souvent été résolus dans les versions plus récentes. Les correctifs ne sont reportés que très rarement sur des versions antérieures.
+
+- **Comparée à d’autres compilateurs**, le cas échéant. Les reproductions qui impliquent du code C++ portable doivent vérifier le comportement par rapport à d’autres compilateurs si possible. Le standard finit toujours par déterminer si le programme est correct. Aucun compilateur n’est parfait, mais si Clang et GCC acceptent votre code sans diagnostic alors que MSVC non, vous voyez probablement un bogue dans notre compilateur. (Autres possibilités : des différences de comportement entre Unix et Windows ou différents niveaux d’implémentation de standards C++, etc.) En revanche, si tous les compilateurs rejettent votre code, c’est probablement que votre code est incorrect. Voir différents messages d’erreur peut vous aider à diagnostiquer le problème vous-même.
+
+   Vous pouvez trouver des listes de compilateurs en ligne pour tester votre code avec des [compilateurs C++ en ligne](https://isocpp.org/blog/2013/01/online-c-compilers) sur le site web C++ ISO ou cette [liste de compilateurs C++ en ligne](https://arnemertz.github.io/online-compilers/) organisée sur GitHub. Voici quelques exemples spécifiques : [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) et [Coliru](http://coliru.stacked-crooked.com/). 
+
+   > [!NOTE]
+   > Les sites web de compilateurs en ligne ne sont pas affiliés à Microsoft. De nombreux sites web de compilateurs en ligne sont gérés en tant que projets personnels et certains de ces sites ne seront peut-être pas disponibles lorsque vous lirez ceci, mais vous devriez en trouver d’autres que vous pourrez utiliser.
+
+Les problèmes dans le compilateur, l’éditeur de liens et les bibliothèques ont tendance à apparaître de manière spécifique. Le type de problème que vous rencontrez détermine le type de reproduction à inclure dans votre rapport. Sans une reproduction appropriée, nous n’avons rien à examiner. Voici quelques-uns des types de problèmes que vous pouvez voir et les instructions permettant de générer les types de reproductions que vous devez utiliser pour signaler chaque type de problème.
+ 
+#### <a name="frontend-parser-crash"></a>Blocage de backend (analyseur)
+
+Les blocages de backend se produisent pendant la phase d’analyse du compilateur. En règle générale, le compilateur indique [Erreur irrécupérable C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) et fait référence au fichier de code source et au numéro de ligne où l’erreur s’est produite ; il mentionne souvent un fichier msc1.cpp, mais vous pouvez ignorer ce détail.
 
 Pour ce type de blocage, fournissez une [reproduction prétraitée](#preprocessed-repros).
 
@@ -144,13 +147,13 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
     Help menu, or open the Technical Support help file for more information
 ```
 
-#### <a name="backend_crash"></a> Blocage de serveur principal (génération de code)
+#### <a name="backend-code-generation-crash"></a>Blocage du backend (génération de code)
 
-Les blocages de serveur principal se produisent pendant la phase de génération de code du compilateur. En règle générale, le compilateur indique [Erreur irrécupérable C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) et peut ne pas faire référence au fichier de code source ni au numéro de ligne associés au problème ; il mentionne souvent un fichier compiler\utc\src\p2\main.c, mais vous pouvez ignorer ce détail.
+Les blocages de backend se produisent pendant la phase de génération de code du compilateur. En règle générale, le compilateur indique [Erreur irrécupérable C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) et peut ne pas référencer le fichier de code source ni le numéro de ligne associés au problème ; il mentionne souvent le compilateur de fichiers\\utc\\src\\p2\\main.c, mais vous pouvez ignorer ce détail.
 
-Pour ce type de blocage, fournissez une [reproduction de lien](#link-repros) si vous utilisez la génération de code durant l’édition de liens (LTCG) ou une [reproduction prétraitée](#preprocessed-repros) dans le cas contraire. La génération LTCG est activée par l’argument de ligne de commande `/GL` sur cl.exe.
+Pour ce type de blocage, fournissez une [reproduction de lien](#link-repros) si vous utilisez la génération de code durant l’édition de liens (LTCG), activée par l’argument de ligne de commande **/GL** dans cl.exe. Sinon, fournissez une [reproduction prétraitée](#preprocessed-repros) à la place.
 
-Voici un exemple de sortie du compilateur pour ce type de blocage quand la génération LTCG n’est **pas** utilisée. Si la sortie du compilateur ressemble à ceci, vous devez fournir une [reproduction prétraitée](#preprocessed-repros).
+Voici un exemple de sortie du compilateur pour un blocage de backend quand la génération LTCG n’est pas utilisée. Si la sortie du compilateur ressemble à ceci, vous devez fournir une [reproduction prétraitée](#preprocessed-repros).
 
 ```Output
 repro.cpp
@@ -167,14 +170,14 @@ INTERNAL COMPILER ERROR in
     Help menu, or open the Technical Support help file for more information
 ```
 
-Si la ligne qui commence par **ERREUR INTERNE DU COMPILATEUR** mentionne link.exe plutôt que cl.exe, la génération LTCG a été activée et vous devez fournir une [reproduction de lien](#link-repros). Si le message d’erreur du compilateur n’indique pas clairement si la génération LTCG a été activée, vous devez peut-être examiner les arguments de ligne de commande que vous avez copiés à partir du journal de génération dans une étape précédente pour l’argument de ligne de commande `/GL`.
+Si la ligne qui commence par **ERREUR INTERNE DU COMPILATEUR** mentionne link.exe plutôt que cl.exe, la génération LTCG a été activée et vous devez fournir une [reproduction de lien](#link-repros). Si le message d’erreur du compilateur n’indique pas clairement si la génération LTCG a été activée, vous devez peut-être examiner les arguments de ligne de commande que vous avez copiés à partir du journal de génération dans une étape précédente pour l’argument de ligne de commande **/GL**.
 
 #### <a name="linker-crash"></a>Blocage d’éditeur de liens
 
 Les blocages d’éditeur de liens se produisent pendant la phase d’édition des liens, après l’exécution du compilateur. En règle générale, l’éditeur de liens indique [Erreur des outils Éditeur de liens LNK1000](error-messages/tool-errors/linker-tools-error-lnk1000.md).
 
 > [!NOTE]
-> Si la sortie mentionne C1001 ou implique la génération de code durant l’édition de liens, reportez-vous plutôt à [Blocage de serveur principal (génération de code)](#backend_crash) pour plus d’informations.
+> Si la sortie mentionne C1001 ou implique la génération de code durant l’édition de liens, reportez-vous plutôt à [Blocage de backend (génération de code)](#backend-code-generation-crash) pour plus d’informations.
 
 Pour ce type de blocage, fournissez une [reproduction de lien](#link-repros).
 
@@ -212,88 +215,80 @@ CONTEXT:
   Dr2    = 0000000000000000  Dr7    = 0000000000000000
 ```
 
-Si l’édition des liens incrémentielle est activée et que le blocage se produit seulement après l’édition initiale des liens (autrement dit, seulement après la première édition complète des liens sur laquelle l’édition des liens incrémentielle suivante est basée), fournissez également une copie des fichiers objet (.obj) et bibliothèque (.lib) correspondant aux fichiers sources qui ont été modifiés une fois l’édition initiale des liens terminée.
+Si l’édition des liens incrémentielle est activée et que le blocage se produit seulement après une édition initiale réussie des liens (autrement dit, seulement après la première édition complète des liens sur laquelle l’édition des liens incrémentielle suivante est basée), fournissez également une copie des fichiers objet (.obj) et bibliothèque (.lib) correspondant aux fichiers sources qui ont été modifiés une fois l’édition initiale des liens terminée.
 
 #### <a name="bad-code-generation"></a>Génération de code incorrect
 
-La génération de code incorrect est rare, mais se produit quand le compilateur génère par inadvertance du code incorrect qui entraîne le blocage de votre application au moment de l’exécution au lieu de détecter ce problème au moment de la compilation. Si vous pensez que le problème que vous rencontrez occasionne une génération de code incorrect, traitez votre rapport comme dans [Blocage de serveur principal (génération de code)](#backend_crash).
+La génération de code incorrect est rare, mais se produit quand le compilateur génère par inadvertance du code incorrect qui entraîne le blocage de votre application au moment de l’exécution au lieu de détecter ce problème au moment de la compilation. Si vous pensez que le problème que vous rencontrez occasionne une génération de code incorrect, traitez votre rapport comme dans [Blocage de backend (génération de code)](#backend-code-generation-crash).
 
-Pour ce type de blocage, fournissez une [reproduction de lien](#link-repros) si vous utilisez la génération de code durant l’édition de liens (LTCG) ou une [reproduction prétraitée](#preprocessed-repros) dans le cas contraire. La génération LTCG est activée par l’argument de ligne de commande `/GL` sur cl.exe.
+Pour ce type de blocage, fournissez une [reproduction de lien](#link-repros) si vous utilisez la génération de code durant l’édition de liens (LTCG), activée par l’argument de ligne de commande **/GL** dans cl.exe. Sinon, fournissez une [reproduction prétraitée](#preprocessed-repros).
 
-## <a name="generate"></a> Générer une reproduction
+## <a name="how-to-generate-a-repro"></a>Comment générer une reproduction
 
-Une reproduction est un exemple de code complet et autonome qui illustre le problème que vous signalez. Une reproduction **n’est pas** un extrait de code : ce doit être un exemple complet qui peut être généré et exécuté (ou qui devrait pouvoir l’être sans les erreurs produites par le problème que vous signalez). Elle doit contenir toutes les directives #include nécessaires, même pour les en-têtes standard.
-
-En outre, une bonne reproduction
-
-- **Est minimale.** Les reproductions doivent être aussi réduites que possible tout en illustrant toujours avec précision le problème rencontré. Elles ne doivent pas nécessairement être complexes ou réalistes : les reproductions simples et pertinentes sont préférables. Il n’est pas obligatoire d’y inclure des contre-exemples de code qui fonctionne, mais cela est possible à titre d’illustration ; seul l’exemple de code à l’origine du problème est nécessaire.
-
-- **Est autonome.** Les reproductions doivent éviter les dépendances inutiles. Si vous pouvez reproduire le problème sans bibliothèques tierces, faites-le. Si vous pouvez reproduire le problème sans aucun code de bibliothèque (`std::out`, `printf()` sont acceptés), faites-le. Vous nous aiderez considérablement en réduisant la quantité de code que nous devons examiner comme facteur possible du problème.
-
-- **Utilise la dernière version du compilateur.** Les reproductions doivent utiliser la dernière version de l’ensemble d’outils dès que possible. Des problèmes que vous pouvez toujours rencontrer dans des versions antérieures de l’ensemble d’outils ont très souvent été résolus dans les versions plus récentes.
-
-- **Est comparée à d’autres compilateurs**, le cas échéant. Les reproductions qui impliquent du code C++ portable doivent vérifier le comportement par rapport à d’autres compilateurs si possible.
-
-   Cette étape permet de déterminer si votre code est correct, comme quand MSVC est en désaccord avec Clang et GCC, ou incorrect, comme quand MSVC, Clang et GCC conviennent que votre code génère l’erreur.
+Pour nous aider à trouver la source du problème, une [bonne reproduction](#what-makes-a-good-repro) est indispensable. Avant de suivre les étapes décrites ci-dessous pour certains types de reproductions, essayez de condenser le code qui illustre le problème autant que possible. Essayez d’éliminer ou de minimiser les dépendances, les en-têtes nécessaires et les bibliothèques, et de limiter les options du compilateur et les définitions de préprocesseur utilisées, si possible.
 
 Vous trouverez ci-dessous des instructions pour générer les différents types de reproductions que vous utiliserez pour signaler différents types de problèmes.
 
 ### <a name="preprocessed-repros"></a>Reproductions prétraitées
 
-Une reproduction prétraitée est un fichier source unique qui illustre un problème et a été généré à partir de la sortie du préprocesseur C par le traitement du fichier source d’origine. Ce processus intègre les en-têtes Include pour supprimer les dépendances sur d’autres fichiers sources et d’en-tête, et résout également des macros, des valeurs #ifdef et d’autres commandes de préprocesseur qui pourraient dépendre de votre environnement local.
+Une *reproduction prétraitée* est un seul fichier source qui illustre un problème, généré à partir de la sortie du préprocesseur C en utilisant l’option du compilateur **/P** du fichier source de reproduction d’origine. Cela intègre les en-têtes inclus pour supprimer les dépendances sur d’autres fichiers sources et d’en-tête, et résout également des macros, des valeurs #ifdef et d’autres commandes de préprocesseur qui pourraient dépendre de votre environnement local.
 
 > [!NOTE]
-> Notez que les reproductions prétraitées sont moins pratiques pour les problèmes qui peuvent être le résultat de bogues dans notre implémentation de bibliothèque standard, car il est souvent utile de substituer notre dernière implémentation en cours pour voir si nous avons déjà résolu le problème. Dans ce cas, ne prétraitez pas la reproduction et, si vous ne pouvez pas réduire le problème à un fichier source unique, empaquetez votre code dans un fichier .zip ou similaire, ou envisagez d’utiliser une reproduction de projet IDE (consultez [Autres reproductions](#other-repros) ci-dessous).
+> Les reproductions prétraitées ne sont pas aussi utiles pour les problèmes qui peuvent être le résultat de bogues dans notre implémentation de bibliothèque standard, car nous voulons souvent substituer notre dernière implémentation en cours pour voir si nous avons déjà résolu le problème. Dans ce cas, ne prétraitez pas la reproduction et, si vous ne pouvez pas réduire le problème à un seul fichier source, empaquetez votre code dans un fichier .zip ou similaire, ou utilisez une reproduction de projet IDE. Pour plus d’informations, consultez [Autres reproductions](#other-repros).
 
 #### <a name="to-preprocess-a-source-code-file"></a>Pour prétraiter un fichier de code source
 
-1. Appuyez sur la touche Windows de votre clavier et commencez à taper `Developer Command Prompt`.
+1. Capturez les arguments de ligne de commande utilisés pour générer votre reproduction, comme décrit dans [Pour signaler le contenu de la ligne de commande](#to-report-the-contents-of-the-command-line).
 
-1. Choisissez la version **Invite de commandes développeur** qui correspond à la version de Visual Studio que vous utilisez quand elle apparaît dans la liste des correspondances.
+1. Ouvrez l’**invite de commandes développeur** qui correspond à l’architecture de configuration et à la version de Visual Studio utilisées pour générer votre projet.
 
-1. Dans la fenêtre de console **Invite de commandes développeur**, entrez la commande `cl /P argumentsfilename.cpp`.
+1. Accédez au répertoire qui contient votre projet de reproduction.
 
-Une fois que vous disposez du fichier prétraité (désormais filename.i), il est judicieux de vérifier que le problème se reproduit toujours avec le fichier prétraité. Vous pouvez utiliser l’argument de ligne de commande `/TP` pour indiquer à cl.exe d’ignorer l’étape de préprocesseur et de tenter de compiler comme d’habitude.
+1. Dans la fenêtre de console de l’invite de commandes développeur, entrez la commande **cl /P** *arguments* *filename.cpp*, où *arguments* est la liste des arguments capturés ci-dessus et *filename.cpp* est le nom du fichier source de votre reproduction. Cette commande réplique la ligne de commande utilisée pour la reproduction, mais arrête la compilation après le passage du préprocesseur, et génère en sortie le code source prétraité dans *filename*.i.
+
+Une fois que vous avez généré le fichier prétraité, il est judicieux de vérifier que le problème se reproduit toujours avec le fichier prétraité.
 
 #### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>Pour confirmer que l’erreur se reproduit toujours avec le fichier prétraité
 
-1. Appuyez sur la touche Windows de votre clavier et commencez à taper `Developer Command Prompt`.
-
-1. Choisissez la version **Invite de commandes développeur** qui correspond à la version de Visual Studio que vous utilisez quand elle apparaît dans la liste des correspondances.
-
-1. Dans la fenêtre de console **Invite de commandes développeur**, entrez la commande `cl arguments /TP filename.i`.
+1. Dans la fenêtre de console de l’invite de commandes développeur, entrez la commande **cl** *arguments* **/TP** *filename***.i** pour indiquer à cl.exe de compiler le fichier prétraité en fichier source C++, où *arguments* est la liste des arguments capturés ci-dessus, mais avec les arguments **/D** et **/I** supprimés (car ils ont déjà été inclus dans le fichier prétraité) ; et où *filename***.i** est le nom de votre fichier prétraité.
 
 1. Confirmez que le problème est reproduit.
 
-Enfin, joignez cette reproduction à votre rapport.
+Enfin, attachez la reproduction prétraitée *filename*.i à votre rapport.
 
 ### <a name="link-repros"></a>Reproductions de liens
 
-Une reproduction de lien est un répertoire unique contenant des artefacts de build qui illustrent collectivement un problème qui se produit durant l’édition de liens, par exemple un blocage de serveur principal impliquant la génération de code durant l’édition de liens (LTCG) ou un blocage d’éditeur de liens ; les artefacts de build inclus sont ceux qui sont nécessaires comme entrée de l’éditeur de liens pour que le problème puisse être reproduit. Les reproductions de lien peuvent être créées facilement en utilisant les fonctionnalités fournies par l’éditeur de liens.
+Une *reproduction de lien* est le contenu généré par l’éditeur de liens d’un répertoire spécifié par la variable d’environnement **link\_repro**. Elle contient les artefacts de build qui montrent collectivement un problème qui se produit au moment de la liaison, par exemple un blocage de backend qui implique la génération de code d’édition de liens (LTCG), ou un blocage de l’éditeur de liens. Ces artefacts de build sont ceux nécessaires comme entrée de l’éditeur de liens pour que le problème puisse être reproduit. Une reproduction de lien peut être créée facilement à l’aide de cette variable d’environnement pour activer la fonctionnalité de génération de reproduction intégrée de l’éditeur de liens.
 
 #### <a name="to-generate-a-link-repro"></a>Pour générer une reproduction de lien
 
-1. Ouvrez une invite de commandes et entrez la commande `mkdir directory` pour créer un répertoire pour la reproduction de lien.
+1. Capturez les arguments de ligne de commande utilisés pour générer votre reproduction, comme décrit dans [Pour signaler le contenu de la ligne de commande](#to-report-the-contents-of-the-command-line).
 
-1. Définissez la variable d’environnement link_repro sur le répertoire que vous venez de créer et entrez la commande `set link_repro=directory`.
+1. Ouvrez l’**invite de commandes développeur** qui correspond à l’architecture de configuration et à la version de Visual Studio utilisées pour générer votre projet.
 
-1. Si vous souhaitez effectuer la génération à partir de Visual Studio, lancez-le à partir de l’invite de commandes en entrant la commande `devenv`. Cela garantit que la valeur de la variable d’environnement link_repro est visible dans Visual Studio.
+1. Dans la fenêtre de console de l’invite de commandes développeur, accédez au répertoire qui contient votre projet de reproduction.
 
-1. Générez votre application et confirmez que le problème attendu s’est produit.
+1. Entrez **mkdir linkrepro** pour créer un répertoire dédié à la reproduction de lien.
 
-1. Fermez Visual Studio maintenant si vous l’avez lancé à l’étape 3.
+1. Entrez la commande **set link\_repro=linkrepro** pour définir la variable d’environnement **link\_repro** sur le répertoire que vous venez de créer.
 
-1. Effacez la variable d’environnement link_repro et entrez la commande `set link_repro=`
+1. Pour générer le projet de reproduction dans Visual Studio, dans la fenêtre de la console de l’invite de commandes développeur, entrez la commande **devenv**. Cela garantit que la valeur de la variable d’environnement **link\_repro** est visible dans Visual Studio. Pour générer le projet sur la ligne de commande, utilisez les arguments de ligne de commande capturés au-dessus pour dupliquer la build de reproduction.
 
-Enfin, empaquetez la reproduction en compressant l’ensemble du répertoire dans un fichier .zip ou similaire et attachez-la à votre rapport.
+1. Générez votre projet de reproduction et confirmez que le problème attendu s’est produit.
+
+1. Fermez Visual Studio si vous l’avez utilisé pour effectuer la build.
+
+1. Dans la fenêtre de la console de l’invite de commandes développeur, entrez la commande **set link\_repro=** pour effacer la variable d’environnement **link\_repro**.
+
+Enfin, empaquetez la reproduction en compressant l’ensemble du répertoire linkrepro dans un fichier .zip ou similaire et attachez-la à votre rapport.
 
 ### <a name="other-repros"></a>Autres reproductions
 
-Si vous ne pouvez pas réduire le problème à un fichier source unique ou une reproduction prétraitée et que le problème ne nécessite pas une reproduction de lien, nous pouvons examiner un projet IDE. Le code dans le projet doit toujours être minimal et tous les conseils de ce document s’appliquent encore.
+Si vous ne pouvez pas réduire le problème à un seul fichier source ou une reproduction prétraitée et que le problème ne nécessite pas une reproduction de lien, nous pouvons examiner un projet IDE. Toutes les instructions sur la création d’une bonne reproduction s’appliquent aussi : le code doit être minime et autonome, le problème doit se produire dans nos outils plus récent, et le cas échéant, le problème ne doit pas apparaître dans d’autres compilateurs.
 
 Créez votre reproduction comme un projet IDE minimal, puis empaquetez-la en compressant l’intégralité de la structure de répertoire dans un fichier .zip ou similaire et attachez-la à votre rapport.
 
-## <a name="send"></a> Modes d’envoi de votre rapport
+## <a name="ways-to-send-your-report"></a>Modes d’envoi de votre rapport
 
 Vous disposez de plusieurs moyens pour nous faire parvenir votre rapport. Vous pouvez utiliser les pages intégrées de Visual Studio [Outil Signaler un problème](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) ou [Communauté de développeurs Visual Studio](https://developercommunity.visualstudio.com/). Il est également possible d’envoyer un e-mail avec votre rapport, mais les deux premières méthodes sont préférables. Le choix dépend de la façon dont vous voulez communiquer avec les ingénieurs qui vont étudier votre rapport, et si vous voulez suivre sa progression ou le partager avec la communauté.
 
@@ -339,4 +334,3 @@ Source code and repro steps:
 
 > [!TIP]
 > Pour d’autres types de problèmes que vous pouvez rencontrer dans Visual Studio et qui ne sont pas liés à l’ensemble d’outils (par exemple, des problèmes d’interface utilisateur, des fonctionnalités IDE altérées ou des blocages d’ordre général), l’outil Signaler un problème peut s’avérer être un choix particulièrement judicieux en raison de ses fonctionnalités de capture d’écran et de sa capacité à enregistrer les actions de l’interface utilisateur qui aboutissent au problème que vous avez rencontré. Vous ne devez jamais signaler ces autres types d’erreurs en envoyant un e-mail à compilercrash@microsoft.com.
-
