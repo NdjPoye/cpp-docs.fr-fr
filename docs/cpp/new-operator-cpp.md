@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 98a6a535071246f75d877e7f63d3a0e9d86053be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68843f0619b5ebc057f83bdb4f49807a15fb86a1
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="new-operator-c"></a>new, opérateur (C++)
 Alloue de la mémoire pour un objet ou un tableau d’objets de *type-name* du magasin gratuit et retourne un pointeur différent de zéro, correctement typé vers l’objet.  
@@ -69,10 +69,10 @@ delete *p;
   
  La liste suivante décrit les éléments de la grammaire de **nouveau**:  
   
- *sélection élective*  
+ *placement*  
  Offre un moyen de passer des arguments supplémentaires si vous surchargez **nouveau**.  
   
- *nom de type*  
+ *type-name*  
  Spécifie le type à allouer ; il peut s'agir d'un type intégré ou d'un type défini par l'utilisateur. Si la spécification de type est compliquée, elle peut être placée entre parenthèses pour forcer l’ordre de liaison.  
   
  *initializer*  
@@ -238,7 +238,7 @@ int main()
  Lorsque le compilateur rencontre le **nouveau** opérateur pour allouer un objet de type `type`, il émet un appel à `type` **:: opérateur new (sizeof (** `type` **))**  ou, si non défini par l’utilisateur `operator new` est défini, **:: opérateur new (sizeof (** `type` **))**. Par conséquent, le **nouveau** opérateur peut allouer la quantité correcte de mémoire pour l’objet.  
   
 > [!NOTE]
->  L’argument `operator new` est de type **size_t**. Ce type est défini dans DIRECT.H, MALLOC.H, MEMORY.H, SEARCH.H, STDDEF.H, STDIO.H, STDLIB.H, STRING.H et TIME.H.  
+>  L’argument `operator new` est de type **size_t**. Ce type est défini dans \<direct.h >, \<malloc.h >, \<memory.h >, \<search.h >, \<stddef.h >, \<stdio.h >, \<stdlib.h >, \<string.h >, et \<time.h >.  
   
  Une option dans la grammaire autorise la spécification de *la sélection élective* (consultez la grammaire de [nouvel opérateur](../cpp/new-operator-cpp.md)). Le *la sélection élective* paramètre peut être utilisé uniquement pour les implémentations définies par l’utilisateur de `operator new`; il permet à des informations supplémentaires à passer au `operator new`. Une expression avec un *la sélection élective* champ comme `T *TObject = new ( 0x0040 ) T;` est traduite en `T *TObject = T::operator new( sizeof( T ), 0x0040 );` si la classe T comporte un opérateur membre new, sinon à `T *TObject = ::operator new( sizeof( T ), 0x0040 );`.  
   

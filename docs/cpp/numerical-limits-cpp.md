@@ -15,14 +15,14 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 496bbd686b0baaacda42de29c825c9539fb50371
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e531de79621eb3a010a41c7e5059dd5b76b2c2fc
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="numerical-limits-c"></a>Limites numériques (C++)
-Les deux fichiers include standard, LIMITS.H et FLOAT.H, définissent les limites numériques ou les valeurs minimales et maximales qu'une variable d'un type donné peut contenir. Ces valeurs minimales et maximales de sont garanties comme portables pour tout compilateur C++ qui utilise la même représentation des données qu’ANSI C. Les limites. H à inclure définit le [limites numériques pour les types intégraux](../cpp/integer-limits.md)et FLOAT. H définit les [limites numériques de type flottant](../cpp/floating-limits.md).  
+La norme deux fichiers include, \<limits.h > et \<float.h >, définissez les limites numériques ou les valeurs minimale et maximale pouvant être une variable d’un type donné. Ces valeurs minimales et maximales de sont garanties comme portables pour tout compilateur C++ qui utilise la même représentation des données qu’ANSI C. Le \<limits.h > inclure fichier définit les [limites numériques pour les types intégraux](../cpp/integer-limits.md), et \<float.h > définit le [limites numériques de type flottant](../cpp/floating-limits.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepts de base](../cpp/basic-concepts-cpp.md)

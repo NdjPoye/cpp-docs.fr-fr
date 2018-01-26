@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 47ee4686c5c0a239b868d6da9aaccc332def19dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53defbe6c686630791317fa20aca48414144eb91
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comerror-class"></a>_com_error, classe
 **Section spécifique à Microsoft**  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[opérateur =](../cpp/com-error-operator-equal.md)|Assigne un objet `_com_error` existant à un autre.|  
+|[operator =](../cpp/com-error-operator-equal.md)|Assigne un objet `_com_error` existant à un autre.|  
   
 ### <a name="extractor-functions"></a>Fonctions d’extraction  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[Message d’erreur](../cpp/com-error-errormessage.md)|Récupère le message de chaîne pour HRESULT est stockée dans le `_com_error` objet.|  
+|[ErrorMessage](../cpp/com-error-errormessage.md)|Récupère le message de chaîne pour HRESULT est stockée dans le `_com_error` objet.|  
   
 ### <a name="exepinfowcode-to-hresult-mappers"></a>ExepInfo.wCode à mappeurs de HRESULT  
   
@@ -73,10 +73,10 @@ ms.lasthandoff: 12/21/2017
 **FIN de la section spécifique à Microsoft**  
   
 ## <a name="requirements"></a>Configuration requise  
- **En-tête :** comdef.h  
+ **En-tête :** \<comdef.h >  
   
  `Lib:`comsuppw.lib ou comsuppwd.lib (consultez [/Zc : wchar_t (wchar_t est un Type natif)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) pour plus d’informations)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classes de prise en charge COM du compilateur](../cpp/compiler-com-support-classes.md)   
- [Interface IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)
+ [IErrorInfo Interface](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)

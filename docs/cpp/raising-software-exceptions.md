@@ -25,11 +25,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 98601b9d4293417d03dcdcc96b2ae0bb54defdc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4eb616945a831502077066bdf306bef306f543eb
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="raising-software-exceptions"></a>Déclenchement d'exceptions logicielles
 Certaines des sources les plus courantes d'erreurs de programme ne sont pas marquées en tant qu'exceptions par le système. Par exemple, si vous essayez d'allouer un bloc de mémoire mais que la mémoire disponible est insuffisante, la fonction runtime ou API ne déclenche pas d'exception mais retourne un code d'erreur.  
@@ -44,7 +44,7 @@ Certaines des sources les plus courantes d'erreurs de programme ne sont pas marq
   
 -   Utilisez les filtres de gestion des exceptions pour tester le code d'exception que vous avez défini.  
   
- Le fichier WINERROR.H indique le format des codes d'exception. Pour veiller à ne pas définir un code qui est en conflit avec un code d'exception existant, définissez le troisième bit le plus significatif à 1. Les quatre bits les plus significatifs doivent être définis comme indiqué dans le tableau suivant.  
+ Le \<winerror.h > fichier présente le format des codes d’exception. Pour veiller à ne pas définir un code qui est en conflit avec un code d'exception existant, définissez le troisième bit le plus significatif à 1. Les quatre bits les plus significatifs doivent être définis comme indiqué dans le tableau suivant.  
   
 |Bits|Paramètre binaire recommandé|Description|  
 |----------|--------------------------------|-----------------|  

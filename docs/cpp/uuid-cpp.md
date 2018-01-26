@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: ad4362b8e84d7ffb4bb090a4e513538cdb26ae25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c999b429cb789167eeb754b6f11a8b3d90c28642
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="uuid-c"></a>uuid (C++)
 **Section spécifique à Microsoft**  
@@ -33,9 +33,7 @@ ms.lasthandoff: 12/21/2017
   
 ```  
   
-__declspec( uuid("  
-ComObjectGUID  
-") ) declarator  
+__declspec( uuid("ComObjectGUID") ) declarator  
 ```  
   
 ## <a name="remarks"></a>Notes  
@@ -46,7 +44,7 @@ struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;
 struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;  
 ```  
   
- Cet attribut peut être appliqué dans une redéclaration. Cela permet de fournir les définitions des interfaces telles que les en-têtes système **IUnknown**et la redéclaration dans un autre en-tête (par exemple, COMDEF. H) pour fournir un GUID.  
+ Cet attribut peut être appliqué dans une redéclaration. Cela permet de fournir les définitions des interfaces telles que les en-têtes système **IUnknown**et la redéclaration dans un autre en-tête (tel que \<comdef.h >) pour fournir un GUID.  
   
  Le mot clé [__uuidof](../cpp/uuidof-operator.md) peuvent être appliquées pour récupérer le GUID constant attaché à un type défini par l’utilisateur.  
   

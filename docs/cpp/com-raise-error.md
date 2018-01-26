@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: cfb51d4188917ebcdbad2fead13a9792875d2f11
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71a4be4ebf6029d0573aee71d74bf9faa241319f
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comraiseerror"></a>_com_raise_error
 **Section spécifique à Microsoft**  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/21/2017
  **IErrorInfo** objet.  
   
 ## <a name="remarks"></a>Notes  
- `_com_raise_error`, définie dans comdef.h, peut être remplacée par une version de même nom et prototype écrite par l'utilisateur. Cette opération peut être effectuée si vous souhaitez utiliser `#import` mais pas la gestion des exceptions C++. Dans ce cas, une version utilisateur de **_com_raise_error** pouvez décider d’effectuer une `longjmp` ou afficher une boîte de message et s’arrêter. Toutefois, cette version utilisateur ne devrait pas être retournée, car le code de prise en charge COM du compilateur n'attend aucun retour de celle-ci.  
+ `_com_raise_error`, qui est défini dans \<comdef.h >, peut être remplacé par une version écrits par l’utilisateur du même nom et prototype. Cette opération peut être effectuée si vous souhaitez utiliser `#import` mais pas la gestion des exceptions C++. Dans ce cas, une version utilisateur de **_com_raise_error** pouvez décider d’effectuer une `longjmp` ou afficher une boîte de message et s’arrêter. Toutefois, cette version utilisateur ne devrait pas être retournée, car le code de prise en charge COM du compilateur n'attend aucun retour de celle-ci.  
   
  Vous pouvez également utiliser [_set_com_error_handler](../cpp/set-com-error-handler.md) pour remplacer la fonction de gestion des erreurs par défaut.  
   
@@ -60,7 +60,7 @@ void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
 **FIN de la section spécifique à Microsoft**  
   
 ## <a name="requirements"></a>Configuration requise  
- **En-tête :** comdef.h  
+ **En-tête :** \<comdef.h >  
   
  **Lib :** si le **wchar_t est un Type natif** option du compilateur est activé, utilisez comsuppw.lib ou comsuppwd.lib. Si **wchar_t est un Type natif** est désactivée, utilisez comsupp.lib. Pour plus d’informations, consultez [/Zc:wchar_t (wchar_t est un type natif)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   

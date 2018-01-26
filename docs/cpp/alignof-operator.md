@@ -24,11 +24,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 50a8d6e524847d46d62b5f1da134332f35edcf92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faceca31928d9c49f3c1cf5b933a65767ece7453
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alignof-operator"></a>__alignof, opérateur
 C++11 présente l'opérateur `alignof` qui retourne l'alignement, en octets, du type spécifié. Pour une portabilité maximale, vous devez utiliser l'opérateur alignof au lieu de l'opérateur __alignof spécifique à Microsoft.  
@@ -40,10 +40,7 @@ C++11 présente l'opérateur `alignof` qui retourne l'alignement, en octets, du 
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      __alignof(   
-   type    
-)  
+  __alignof( type )
 ```  
   
 ## <a name="remarks"></a>Notes  
@@ -51,13 +48,13 @@ C++11 présente l'opérateur `alignof` qui retourne l'alignement, en octets, du 
   
 |Expression|Value|  
 |----------------|-----------|  
-|**__alignof (char)**|1|  
-|**__alignof (short)**|2|  
-|**__alignof (int)**|4|  
-|**__alignof ( \__int64)**|8|  
-|**__alignof (float)**|4|  
-|**__alignof (double)**|8|  
-|**__alignof (char\* )**|4|  
+|**__alignof( char )**|1|  
+|**__alignof( short )**|2|  
+|**__alignof( int )**|4|  
+|**__alignof( \__int64 )**|8|  
+|**__alignof( float )**|4|  
+|**__alignof( double )**|8|  
+|**__alignof( char\* )**|4|  
   
  La valeur de `__alignof` est identique à la valeur de `sizeof` pour les types de base. Observons toutefois l'exemple suivant :  
   

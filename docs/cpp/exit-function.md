@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: b9e0d6a7f903d4af39698b2d98c005cbf64515eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ee6a34a70465904e6725f42e68eb4a00c03a1661
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="exit-function"></a>exit, fonction
-Le **quitter** fonction, déclarée dans le fichier include standard STDLIB. H, met fin à un programme C++.  
+Le **quitter** fonction, déclarée dans le fichier include standard \<stdlib.h >, met fin à un programme C++.  
   
  La valeur fournie comme argument à **quitter** est retournée au système d’exploitation en tant que code retour de code ou de sortie du programme. Par convention, un code de retour égal à zéro signifie que le programme s'est terminé correctement.  
   
 > [!NOTE]
->  Vous pouvez utiliser les constantes `EXIT_FAILURE` et `EXIT_SUCCESS`, définies dans STDLIB.H, pour indiquer le succès ou l'échec de votre programme.  
+>  Vous pouvez utiliser l’une des constantes `EXIT_FAILURE` et `EXIT_SUCCESS`, défini dans \<stdlib.h >, pour indiquer la réussite ou l’échec de votre programme.  
   
  Émettre un `return` instruction à partir de la **principal** fonction équivaut à appeler le **quitter** fonction avec la valeur de retour comme argument.  
   

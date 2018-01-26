@@ -21,11 +21,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a670d18ab64637b54b063cfeb38f8d0cd8fee5d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57a4d7e4019e742ff8adc50bb78a926dff34d55a
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="variantt-class"></a>_variant_t (classe)
 **Section spécifique à Microsoft**  
@@ -53,13 +53,13 @@ ms.lasthandoff: 12/21/2017
 |||  
 |-|-|  
 |[Opérateur =](../cpp/variant-t-operator-equal.md)|Assigne une nouvelle valeur à un objet `_variant_t` existant.|  
-|[opérateur ==, ! =](../cpp/variant-t-relational-operators.md)|Comparez deux objets `_variant_t` pour déterminer leur égalité ou inégalité.|  
-|[Extracteurs](../cpp/variant-t-extractors.md)|Extraire des données d’encapsulé **VARIANT** objet.|  
+|[operator ==, !=](../cpp/variant-t-relational-operators.md)|Comparez deux objets `_variant_t` pour déterminer leur égalité ou inégalité.|  
+|[Extractors](../cpp/variant-t-extractors.md)|Extraire des données d’encapsulé **VARIANT** objet.|  
   
 **FIN de la section spécifique à Microsoft**  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** comutil.h  
+## <a name="requirements"></a>Configuration requise  
+ **En-tête :** \<comutil.h >  
   
  **Lib :** comsuppw.lib ou comsuppwd.lib (consultez [/Zc : wchar_t (wchar_t est un Type natif)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) pour plus d’informations)  
   

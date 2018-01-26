@@ -24,11 +24,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 8d316505939b22149b53a1012113a7aba88e2dcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1096565843cfe150530a825254e9ad6c24b5ec8
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="additive-operators--and--"></a>Opérateurs additifs : + et -
 ## <a name="syntax"></a>Syntaxe  
@@ -55,21 +55,21 @@ expression - expression
   
 |Type|Signification|  
 |----------|-------------|  
-|*opérations arithmétiques*|Les types intégraux et flottants sont appelés collectivement des types « arithmétiques ».|  
-|*intégrale*|Les types char et int de toutes tailles (longs, courts) et les énumérations sont des types « intégraux ».|  
-|*scalaire*|Les opérandes scalaires sont des opérandes de type arithmétique ou pointeur.|  
+|*arithmetic*|Les types intégraux et flottants sont appelés collectivement des types « arithmétiques ».|  
+|*integral*|Les types char et int de toutes tailles (longs, courts) et les énumérations sont des types « intégraux ».|  
+|*scalar*|Les opérandes scalaires sont des opérandes de type arithmétique ou pointeur.|  
   
  Les combinaisons valides pour ces opérateurs sont les suivantes :  
   
- *arithmétique* + *arithmétique*  
+ *arithmetic* + *arithmetic*  
   
- *scalaire* + *intégrale*  
+ *scalar* + *integral*  
   
- *intégraux* + *scalaire*  
+ *integral* + *scalar*  
   
- *arithmétique* - *arithmétique*  
+ *arithmetic* - *arithmetic*  
   
- *scalaire* - *scalaire*  
+ *scalar* - *scalar*  
   
  Notez que l'addition et la soustraction ne sont pas des opérations équivalentes.  
   
@@ -116,9 +116,9 @@ for( int i = 0; i < 10; ++i )
 >  Le code du formulaire `pIntArray = pIntArray + 1` figure rarement dans les programmes C++. Pour effectuer un incrément, il est préférable d'opter pour les formulaires `pIntArray++` ou `pIntArray += 1`.  
   
 ## <a name="pointer-subtraction"></a>Soustraction de pointeur  
- Si les deux opérandes sont des pointeurs, le résultat de la soustraction est la différence (en éléments de tableau) entre les opérandes. L'expression de soustraction génère un résultat intégral signé de type ptrdiff_t (défini dans le fichier Include standard STDDEF.H).  
+ Si les deux opérandes sont des pointeurs, le résultat de la soustraction est la différence (en éléments de tableau) entre les opérandes. L’expression de soustraction génère un résultat intégral signé de type ptrdiff_t (défini dans le fichier include standard \<stddef.h >).  
   
- L'un des opérandes peut être de type intégral, à condition que ce soit le second opérande. Le résultat de la soustraction est du même type que le pointeur d'origine. La valeur de la soustraction est un pointeur vers la (*n* - *i*))-ième élément de tableau, où  *n*  est l’élément vers lequel pointe le pointeur d’origine et *i* la valeur intégrale du second opérande.  
+ L’un des opérandes peut être de type intégral, à condition que ce soit le second opérande. Le résultat de la soustraction est du même type que le pointeur d'origine. La valeur de la soustraction est un pointeur vers la (*n* - *i*))-ième élément de tableau, où  *n*  est l’élément vers lequel pointe le pointeur d’origine et *i* la valeur intégrale du second opérande.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions avec opérateurs binaires](../cpp/expressions-with-binary-operators.md)   

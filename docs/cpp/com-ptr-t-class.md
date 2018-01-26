@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 44179c3c34207b8f1bf3abbef2efd9505df47181
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9a17309ab08d50be1366b8db71798766b52baa9
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comptrt-class"></a>_com_ptr_t, classe
 **Section spécifique à Microsoft**  
@@ -60,14 +60,14 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[opérateur =](../cpp/com-ptr-t-operator-equal.md)|Assigne une nouvelle valeur à un objet `_com_ptr_t` existant.|  
-|[les opérateurs ==, ! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Comparer l’objet pointeur intelligent avec un autre pointeur intelligent, un pointeur d’interface brut ou **NULL**.|  
-|[Extracteurs](../cpp/com-ptr-t-extractors.md)|Récupérez le pointeur d'interface COM encapsulé.|  
+|[operator =](../cpp/com-ptr-t-operator-equal.md)|Assigne une nouvelle valeur à un objet `_com_ptr_t` existant.|  
+|[operators ==, !=, \<, >, \<=, >=](../cpp/com-ptr-t-relational-operators.md)|Comparer l’objet pointeur intelligent avec un autre pointeur intelligent, un pointeur d’interface brut ou **NULL**.|  
+|[Extractors](../cpp/com-ptr-t-extractors.md)|Récupérez le pointeur d'interface COM encapsulé.|  
   
 **FIN de la section spécifique à Microsoft**  
   
 ## <a name="requirements"></a>Configuration requise  
- **En-tête :** comip.h  
+ **En-tête :** \<comip.h >  
   
  **Lib :** comsuppw.lib ou comsuppwd.lib (consultez [/Zc : wchar_t (wchar_t est un Type natif)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) pour plus d’informations)  
   
