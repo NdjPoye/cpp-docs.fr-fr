@@ -4,28 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - delete_cpp
 - new
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - new keyword [C++], dynamic allocation of objects
 - nothrownew.obj
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a34d703783ce638991585b7e7a99b2015923182b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3af862988502ac0d1908c466aae5e62b753509c2
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="new-and-delete-operators"></a>Opérateurs new et delete
 
@@ -56,7 +59,7 @@ Les deux portées des fonctions `operator new` sont décrites dans le tableau su
 |**:: new, opérateur**|Global|  
 |*nom de la classe* **:: new, opérateur**|Classe|  
   
- Le premier argument de **new, opérateur** doit être de type **size_t** (un type défini dans STDDEF. (H) et le type de retour est toujours **void \*** .  
+ Le premier argument de **new, opérateur** doit être de type **size_t** (un type défini dans \<stddef.h >), et le type de retour est toujours **void \***.  
   
  Global **new, opérateur** fonction est appelée lorsque le **nouveau** opérateur est utilisé pour allouer des objets de types intégrés, définis par l’utilisateur du type de classe des objets qui ne contiennent pas **new, opérateur** fonctions et des tableaux de n’importe quel type. Lorsque le **nouvelle** opérateur est utilisé pour allouer des objets d’un type de classe où un **new, opérateur** est défini, la classe **new, opérateur** est appelée.  
   
