@@ -4,13 +4,15 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - LoadStdProfileSettings
 - EnableShellOpen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - files [MFC], most recently used
 - DragAcceptFiles method [MFC]
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - MFC, file operations
 - registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f8734bfd4e673e1298d6822bbd272e2d70ff7a81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 28a12d9553e1519c158c0a0e9d2fcec6365b65fe
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="special-cwinapp-services"></a>Services CWinApp spéciaux
 Outre la boucle de messages en cours d’exécution et de vous donner la possibilité d’initialiser l’application et nettoyer après cela, [CWinApp](../mfc/reference/cwinapp-class.md) fournit plusieurs autres services.  
@@ -60,9 +63,9 @@ Outre la boucle de messages en cours d’exécution et de vous donner la possibi
   
  Cette prise en charge d'inscription automatique dans `CWinApp` élimine le besoin de fournir un fichier .reg à votre application ou d'exécuter un travail d'installation particulier.  
   
- Si vous souhaitez initialiser GDI + pour votre application (en appelant [GdiplusStartup]--brokenlink--(_gdiplus_FUNC_GdiplusStartup_token_input_output_) dans votre [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) fonction), vous devez supprimer le thread d’arrière-plan GDI +.  
+ Si vous souhaitez initialiser GDI + pour votre application (en appelant [GdiplusStartup](https://msdn.microsoft.com/library/ms534077) dans votre [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) fonction), vous devez supprimer le thread d’arrière-plan GDI +.  
   
- Vous faire cela en définissant le **SuppressBackgroundThread** membre de la [structure GdiplusStartupInput]--brokenlink--(_gdiplus_STRUC_GdiplusStartupInput) **TRUE**. Lorsque la suppression GDI + arrière-plan thread, le **NotificationHook** et **NotificationUnhook** appels (voir [GdiplusStartupOutput]--brokenlink--(_gdiplus_STRUC_GdiplusStartupOutput)) doit être effectué juste avant d’entrer et de quitter la boucle de message de l’application. Par conséquent, un bon emplacement pour appeler **GdiplusStartup** et les fonctions de raccordement de notification dans une substitution de la fonction virtuelle [CWinApp::Run](../mfc/reference/cwinapp-class.md#run), comme indiqué ci-dessous :  
+ Vous faire cela en définissant le **SuppressBackgroundThread** membre de la [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067) structure **TRUE**. Lorsque la suppression GDI + arrière-plan thread, le **NotificationHook** et **NotificationUnhook** appels doivent être effectués uniquement avant entrer et de quitter la boucle de message de l’application. Pour plus d’informations sur ces appels, consultez [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068). Par conséquent, un bon emplacement pour appeler **GdiplusStartup** et les fonctions de raccordement de notification dans une substitution de la fonction virtuelle [CWinApp::Run](../mfc/reference/cwinapp-class.md#run), comme indiqué ci-dessous :  
   
  [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   

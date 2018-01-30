@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ATL, reference
 - ATL, about ATL
 ms.assetid: 291f38d1-d2de-4687-86a9-99b4fd35706c
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ffabd4c9ebb3f439fa1e1e70b06def3506b1227d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b55aef95cbe34dc51910035f4a731eed3a6a5679
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="atl-com-desktop-components"></a>Composants de bureau COM ATL
 La référence ATL documente la bibliothèque ATL (Active Template), un ensemble de classes C++ basées sur un modèle qui simplifient la programmation d’objets de modèle COM (Component Object). Pour tirer pleinement parti d’ATL, une connaissance pratique de COM est fortement recommandée.  
@@ -66,7 +69,3 @@ La référence ATL documente la bibliothèque ATL (Active Template), un ensemble
   
  [Modèles OLE DB](../data/oledb/ole-db-templates.md)  
  Fournit une documentation de référence pour les modèles de consommateur et de fournisseur OLE DB, un ensemble de classes de modèles qui implémentent de nombreuses interfaces OLE DB courantes.  
-  
- [Bibliothèques Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- Fournit des liens vers les différentes bibliothèques fournies avec Visual C++, notamment la bibliothèque ATL, MFC, les modèles OLE DB, la bibliothèque Runtime C et la bibliothèque C++ Standard.
-

@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: c.runtime
-dev_langs: C++
+f1_keywords:
+- c.runtime
+dev_langs:
+- C++
 helpviewer_keywords:
 - CRT
 - run-time libraries
 - CRT, reference
 ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9b393bc72bbc6722d353295dc244f75f504b9730
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7683dd8c6c896f972df3e47d5ba37a0f413724fa
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="c-run-time-library-reference"></a>Informations de référence sur la bibliothèque Runtime C
 La bibliothèque Microsoft Runtime fournit des routines de programmation pour le système d’exploitation Microsoft Windows. Ces routines automatisent de nombreuses tâches de programmation courantes qui ne sont pas fournies par les langages C et C++.  
@@ -62,11 +66,5 @@ La bibliothèque Microsoft Runtime fournit des routines de programmation pour le
  [DLL et comportement de la bibliothèque runtime Visual C++](../build/run-time-library-behavior.md)  
  Présente le code de démarrage et le point d’entrée utilisés pour une DLL.  
   
- [Bibliothèques Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- Fournit des liens vers les différentes bibliothèques fournies avec Visual C++, notamment la bibliothèque ATL, MFC, les modèles OLE DB, la bibliothèque Runtime C et la bibliothèque C++ Standard.  
-  
  [Débogage](/visualstudio/debugger/debugging-in-visual-studio)  
  Fournit des liens vers l'utilisation du débogueur Visual Studio pour corriger des erreurs de logique dans vos application ou procédures stockées.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les bibliothèques Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)

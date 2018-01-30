@@ -1,13 +1,15 @@
 ---
 title: Fonctions (C++) | Documents Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/25/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - defaults, arguments
 - function definitions
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5fa20f0a2236d6458490784d2fa0f1b53b13241
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88031e4f47bea363c441986c72d5f890c03447f7
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="functions-c"></a>Fonctions (C++)
 Une fonction est un bloc de code qui effectue une opération. Une fonction peut éventuellement définir les paramètres d'entrée qui permettent aux appelants de passer des arguments dans la fonction. Une fonction peut éventuellement retourner une valeur en tant que sortie. Les fonctions sont utiles pour encapsuler les opérations courantes dans un seul bloc réutilisable, idéalement avec un nom qui décrit clairement ce que fait la fonction. La fonction suivante accepte deux entiers à partir d’un appelant et retourne leur somme ; `a` et `b` sont *paramètres* de type `int`.  
@@ -50,6 +53,8 @@ int main()
  Il n’existe aucune limite pratique à la longueur de la fonction, mais une conception judicieuse s’adresse aux fonctions qui effectuent une seule tâche bien définie. Les algorithmes complexes doivent être divisés en fonctions plus simples à comprendre chaque fois que possible.  
   
  Les fonctions qui sont définies au niveau de la portée de classe sont appelées fonctions membres. En C++, contrairement à d'autres langages, une fonction peut également être définie au niveau de la portée d'espace de noms (y compris l'espace de noms global implicite). Ces fonctions sont appelées *fonctions libres* ou *fonctions non membres*; elles sont largement utilisées dans la bibliothèque Standard.  
+
+Les fonctions peuvent être *surchargé*, ce qui signifie que les différentes versions d’une fonction peut-être partager le même nom s’ils diffèrent par le nombre et/ou le type de paramètres formels. Pour plus d’informations, consultez [surcharge de fonction](../cpp/function-overloading.md).
   
 ## <a name="parts-of-a-function-declaration"></a>Éléments d'une déclaration de fonction  
  Une fonction minimale *déclaration* se compose d’un type de retour, nom de fonction et liste de paramètres (qui peut être vide), ainsi que les mots clés facultatifs qui fournissent des instructions supplémentaires au compilateur. L’exemple suivant est une déclaration de fonction :
@@ -127,7 +132,7 @@ int sum(int a, int b)
   
 7.  (Fonctions membres uniquement) `static` appliqué à une fonction membre signifie que la fonction n'est pas associée à des instances d'objet de la classe.  
   
-8.  (Fonctions membres Non statiques uniquement) Le qualificateur ref, ce qui indique au compilateur quelle surcharge d’une fonction choisir quand le paramètre d’objet implicite (* CE) est une référence rvalue ou une référence lvalue.  
+8.  (Fonctions membres Non statiques uniquement) Le qualificateur ref, ce qui indique au compilateur quelle surcharge d’une fonction choisir quand le paramètre d’objet implicite (* CE) est une référence rvalue ou une référence lvalue. Pour plus d’informations, consultez [surcharge de fonction](function-overloading.md#ref-qualifiers). 
   
  L'illustration suivante montre les parties d'une définition de fonction. La zone grisée est le corps de la fonction.  
   
@@ -373,7 +378,7 @@ int main()
 }
 ```
 
-4. Outre l’utilisation de la valeur de retour, vous pouvez « valeurs de retour » en définissant un nombre quelconque de paramètres à utiliser le passage par référence afin que la fonction peut modifier ou initialiser les valeurs des objets qui fournit de l’appelant. Pour plus d’informations, consultez [Arguments de fonction de Type référence](reference-type-function-arguments.md).
+4. Outre l’utilisation de la valeur de retour, vous pouvez « valeurs de retour » en définissant un nombre quelconque de paramètres à utiliser le passage par référence afin que la fonction peut modifier ou initialiser les valeurs des objets qui fournit de l’appelant. Pour plus d’informations, consultez [Arguments de fonction de Type référence](reference-type-function-arguments.md).  
   
 ## <a name="function-pointers"></a>Pointeurs fonction  
  C++ prend en charge les pointeurs de fonction de la même manière que le langage C. Toutefois, une alternative de type plus sécurisé consiste généralement à utiliser un objet de fonction.  

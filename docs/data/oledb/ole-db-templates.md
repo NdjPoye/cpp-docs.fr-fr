@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.templates.ole
-dev_langs: C++
-helpviewer_keywords: OLE DB templates
+f1_keywords:
+- vc.templates.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 40ada455ffa5318e280860504705e1f8fb5ea4b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3078fa97d298856e302b1f835fdbec2f3d489b63
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="ole-db-templates"></a>modèles OLE DB
 Les modèles OLE DB facilitent l’accès aux données OLE DB. Visual C++ fournit des classes de modèles qui implémentent de nombreuses interfaces OLE DB courantes. Vous pouvez utiliser les modèles de consommateur Visual C++ pour écrire une application de client (consommateur) OLE DB et les modèles du fournisseur pour écrire une application serveur (fournisseur).  
@@ -64,9 +68,6 @@ Les modèles OLE DB facilitent l’accès aux données OLE DB. Visual C++ fourni
   
  [Référence Active Template Library (ATL)](../../atl/atl-com-desktop-components.md)  
  Fournit les documents de référence pour l'ATL Library, un jeu de classes C++ basées sur modèle qui simplifient la programmation d'objets COM.  
-  
- [Bibliothèques Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- Fournit des liens vers les différentes bibliothèques fournies avec Visual C++, notamment la bibliothèque ATL, MFC, les modèles OLE DB, la bibliothèque Runtime C et la bibliothèque C++ Standard.  
   
  [Débogage](/visualstudio/debugger/debugging-in-visual-studio)  
  Fournit des liens vers l'utilisation du débogueur Visual Studio pour corriger des erreurs de logique dans vos application ou procédures stockées.

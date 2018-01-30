@@ -1,33 +1,38 @@
 ---
 title: Surcharge de fonction | Documents Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/25/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 785692992863e5a1cf3800f536d3f8fe3790b4a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="function-overloading"></a>Surcharge de fonction
-C++ permet la spécification de plusieurs fonctions du même nom dans la même portée. Ces fonctions s'appellent des fonctions surchargées et sont décrites en détail dans Surcharge. Les fonctions surchargées permettent aux programmeurs de fournir une sémantique différente pour une fonction, selon les types et le nombre des arguments.  
+C++ permet la spécification de plusieurs fonctions du même nom dans la même portée. Ils sont appelés *surchargé* fonctions. Les fonctions surchargées permettent de fournir une sémantique différente pour une fonction, selon les types et le nombre d’arguments. 
   
- Par exemple, un **imprimer** fonction qui accepte une chaîne (ou **char \*** ) argument effectue des tâches très différentes de celles qui prend un argument de type **double** . La surcharge permet une appellation uniforme et évite aux programmeurs de devoir inventer des noms, par exemple `print_sz` ou`print_d`. Le tableau suivant montre les parties qu'une déclaration de fonction C++ utilise pour différencier les groupes de fonctions portant le même nom dans la même portée.  
+ Par exemple, un **imprimer** fonction qui accepte un **std::string** argument peut effectuer des tâches très différentes de celles qui prend un argument de type **double**. La surcharge vous évite d’avoir à utiliser des noms tels que `print_string` ou `print_double`. Au moment de la compilation, le compilateur choisit à quelle surcharge à utiliser en fonction du type d’arguments passés par l’appelant.  Si vous appelez **print(42.0)** le **void impression (double d)** fonction sera appelée. Si vous appelez **(« hello world ») d’impression** le **void print(std::string)** surcharge sera appelée.
+
+Vous pouvez surcharger des fonctions membres et les fonctions non membres. Le tableau suivant montre les parties qu'une déclaration de fonction C++ utilise pour différencier les groupes de fonctions portant le même nom dans la même portée.  
   
 ### <a name="overloading-considerations"></a>Considérations en matière de surcharge  
   
@@ -39,9 +44,8 @@ C++ permet la spécification de plusieurs fonctions du même nom dans la même p
 |Présence ou absence de points de suspension|Oui|  
 |Utilisation de noms `typedef`|Non|  
 |Limites de tableau non spécifiées|Non|  
-|**const** ou `volatile` (voir ci-dessous)|Oui|  
-  
- Bien que les fonctions puissent être distinguées en fonction du type de retour, elles ne peuvent pas être surchargées sur cette base.  `Const`ou `volatile` sont uniquement utilisés comme base pour la surcharge s’ils sont utilisés dans une classe à appliquer à la **cela** pointeur pour la classe, pas le type de retour de la fonction.  La surcharge en d’autres termes, s’applique uniquement si le **const** ou `volatile` mot clé suit la liste d’arguments de la fonction dans la déclaration.  
+|**const** ou`volatile`|Oui, quand il est appliqué à la fonction entière|
+|[ref-qualifier](#ref-qualifier)|Oui|  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant illustre comment utiliser la surcharge.  
@@ -51,68 +55,71 @@ C++ permet la spécification de plusieurs fonctions du même nom dans la même p
 // compile with: /EHsc  
 #include <iostream>  
 #include <math.h>  
-  
+#include <string>
+
 // Prototype three print functions.  
-int print( char *s );                  // Print a string.  
-int print( double dvalue );            // Print a double.  
-int print( double dvalue, int prec );  // Print a double with a  
-//  given precision.  
-using namespace std;  
-int main( int argc, char *argv[] )  
-{  
-const double d = 893094.2987;  
-if( argc < 2 )  
-    {  
-// These calls to print invoke print( char *s ).  
-print( "This program requires one argument." );  
-print( "The argument specifies the number of" );  
-print( "digits precision for the second number" );  
-print( "printed." );  
-exit(0);  
-    }  
-  
-// Invoke print( double dvalue ).  
-print( d );  
-  
-// Invoke print( double dvalue, int prec ).  
-print( d, atoi( argv[1] ) );  
-}  
-  
+int print(std::string s);             // Print a string.  
+int print(double dvalue);            // Print a double.  
+int print(double dvalue, int prec);  // Print a double with a  
+                                     //  given precision.  
+using namespace std;
+int main(int argc, char *argv[])
+{
+    const double d = 893094.2987;
+    if (argc < 2)
+    {
+        // These calls to print invoke print( char *s ).  
+        print("This program requires one argument.");
+        print("The argument specifies the number of");
+        print("digits precision for the second number");
+        print("printed.");
+        exit(0);
+    }
+
+    // Invoke print( double dvalue ).  
+    print(d);
+
+    // Invoke print( double dvalue, int prec ).  
+    print(d, atoi(argv[1]));
+}
+
 // Print a string.  
-int print( char *s )  
-{  
-cout << s << endl;  
-return cout.good();  
-}  
-  
+int print(string s)
+{
+    cout << s << endl;
+    return cout.good();
+}
+
 // Print a double in default precision.  
-int print( double dvalue )  
-{  
-cout << dvalue << endl;  
-return cout.good();  
-}  
-  
-// Print a double in specified precision.  
+int print(double dvalue)
+{
+    cout << dvalue << endl;
+    return cout.good();
+}
+
+//  Print a double in specified precision.  
 //  Positive numbers for precision indicate how many digits  
 //  precision after the decimal point to show. Negative  
 //  numbers for precision indicate where to round the number  
 //  to the left of the decimal point.  
-int print( double dvalue, int prec )  
-{  
-// Use table-lookup for rounding/truncation.  
-static const double rgPow10[] = {   
-10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 10E0,  
-10E1,  10E2,  10E3,  10E4, 10E5,  10E6  
-    };  
-const int iPowZero = 6;  
-// If precision out of range, just print the number.  
-if( prec < -6 || prec > 7 )  
-return print( dvalue );  
-// Scale, truncate, then rescale.  
-dvalue = floor( dvalue / rgPow10[iPowZero - prec] ) *  
-rgPow10[iPowZero - prec];  
-cout << dvalue << endl;  
-return cout.good();  
+int print(double dvalue, int prec)
+{
+    // Use table-lookup for rounding/truncation.  
+    static const double rgPow10[] = {
+        10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 
+        10E0, 10E1,  10E2,  10E3,  10E4, 10E5,  10E6 };
+    const int iPowZero = 6;
+
+    // If precision out of range, just print the number.  
+    if (prec < -6 || prec > 7)
+    {
+        return print(dvalue);
+    }
+    // Scale, truncate, then rescale.  
+    dvalue = floor(dvalue / rgPow10[iPowZero - prec]) *
+        rgPow10[iPowZero - prec];
+    cout << dvalue << endl;
+    return cout.good();
 }  
 ```  
   
@@ -254,14 +261,14 @@ volatile Over&
   
 |Conversion depuis le type|Conversion vers le type|  
 |-----------------------|---------------------|  
-|*nom de type*|*nom de type***&**|  
-|*nom de type***&**|*nom de type*|  
-|*nom de type* **]**|*nom de type\**|  
-|*nom de type* **(** *-liste d’arguments* **)**|**(**  *\*-nom du type* **) (** *-liste d’arguments* **)**|  
-|*nom de type*|**const** *nom de type*|  
-|*nom de type*|`volatile`*nom de type*|  
-|*nom de type\**|**const** *nom de type\**|  
-|*nom de type\**|`volatile`*nom de type\**|  
+|*type-name*|*type-name* **&**|  
+|*type-name* **&**|*type-name*|  
+|*type-name* **[ ]**|*type-name\**|  
+|*type-name* **(** *argument-list* **)**|**(** *\*type-name* **) (** *argument-list* **)**|  
+|*type-name*|**const** *type-name*|  
+|*type-name*|`volatile` *type-name*|  
+|*type-name\**|**const** *type-name\**|  
+|*type-name\**|`volatile` *type-name\**|  
   
  La séquence dans laquelle les conversions sont tentées est la suivante :  
   
@@ -399,8 +406,47 @@ obj.name
 ```  
   
  L'opérande gauche des opérateurs (pointeur vers membre) `->*` et `.*` est traité de la même façon que les opérateurs (sélection de membres) `.` et `->` en ce qui concerne la correspondance d'arguments.  
+
+## <a name="ref-qualifiers"></a>Ces qualificateurs ref sur les fonctions membres  
+Ces qualificateurs REF permettent de surcharger une fonction membre après que l’objet vers lequel pointe `this` est une rvalue ou une lvalue.  Cette fonctionnalité peut être utilisée pour éviter les opérations de copie inutiles dans les scénarios où vous choisissez de ne pas fournir l’accès à un pointeur vers les données. Par exemple, supposons que la classe **C** initialise des données dans son constructeur et retourne une copie de ces données dans la fonction membre **get_data()**. Si un objet de type **C** est une rvalue est sur le point d’être détruit, le compilateur choisit le **get_data() & &** de surcharge, ce qui déplace les données au lieu de le copier. 
+
+```cpp
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+class C
+{
+
+public:
+    C() {/*expensive initialization*/}
+    vector<unsigned> get_data() & 
+    { 
+        cout << "lvalue\n";
+        return _data;
+    }
+    vector<unsigned> get_data() && 
+    {
+        cout << "rvalue\n";
+        return std::move(_data);
+    }
+    
+private:
+    vector<unsigned> _data;
+};
+
+int main()
+{
+    C c;
+    auto v = c.get_data(); // get a copy. prints "lvalue".
+    auto v2 = C().get_data(); // get the original. prints "rvalue"
+    return 0;
+}
+
+```
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions-on-overloading"></a>Restrictions concernant la surcharge  
  Plusieurs restrictions régissent un ensemble acceptable de fonctions surchargées :  
   
 -   Deux fonctions d’un ensemble de fonctions surchargées doivent avoir des listes d’arguments différentes.  
@@ -443,12 +489,15 @@ obj.name
     void Print( char szToPrint[][9][42] );  
     ```  
   
-## <a name="declaration-matching"></a>Correspondance de déclaration  
+## <a name="overloading-overriding-and-hiding"></a>La surcharge, substitution et masquage
+  
  Deux déclarations de fonction du même nom dans la même portée peuvent faire référence à la même fonction ou à deux fonctions distinctes qui sont surchargées. Si les listes d’arguments des déclarations contiennent des arguments de types équivalents (comme décrit dans la section précédente), les déclarations de fonction font référence à la même fonction. Sinon, elles font référence à deux fonctions différentes qui sont sélectionnées à l'aide de la surcharge.  
   
- La portée de classe est strictement observée ; par conséquent, une fonction déclarée dans une classe de base n'est pas dans la même portée qu'une fonction déclarée dans une classe dérivée. Si une fonction dans une classe dérivée est déclarée avec le même nom qu'une fonction dans la classe de base, la fonction de classe dérivée masque la fonction de classe de base au lieu de provoquer la surcharge.  
+ La portée de classe est strictement observée ; par conséquent, une fonction déclarée dans une classe de base n'est pas dans la même portée qu'une fonction déclarée dans une classe dérivée. Si une fonction dans une classe dérivée est déclarée avec le même nom qu’une fonction virtuelle dans la classe de base, la fonction de la classe dérivée *substitue* la fonction de la classe de base. Pour plus d’informations, consultez [fonctions virtuelles](../cpp/virtual-functions.md).
+
+Si la fonction de la classe de base n’est pas déclarée comme 'virtual', alors que la fonction de la classe dérivée est dite *masquer* il. Remplacement et le masquage sont distincts de la surcharge.  
   
- La portée de bloc est strictement observée ; par conséquent, une fonction déclarée dans la portée du fichier n'est pas dans la même portée qu'une fonction déclarée localement. Si une fonction déclarée localement a le même nom qu'une fonction déclarée avec portée de fichier, la fonction déclarée localement masque la fonction déclarée avec portée de fichier au lieu de provoquer la surcharge. Exemple :  
+ La portée de bloc est strictement observée ; par conséquent, une fonction déclarée dans la portée du fichier n’est pas dans la même portée qu’une fonction déclarée localement. Si une fonction déclarée localement a le même nom qu'une fonction déclarée avec portée de fichier, la fonction déclarée localement masque la fonction déclarée avec portée de fichier au lieu de provoquer la surcharge. Exemple :  
   
 ```  
 // declaration_matching1.cpp  
@@ -526,7 +575,10 @@ double Account::Deposit( double dAmount, char *szPassword )
    else  
       return 0.0;  
 }  
-```  
+```
+
+
+
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions (C++)](../cpp/functions-cpp.md)

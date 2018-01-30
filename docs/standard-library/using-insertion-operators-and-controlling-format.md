@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: insertion operators
+dev_langs:
+- C++
+helpviewer_keywords:
+- insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9af3a0fe28e0b5d26f17f16a6e217dce9fd82969
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2794da411458ccdf83725b80a6b5ba8371e53248
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Utilisation des opérateurs d'insertion et contrôle du format
 Cette rubrique montre comment contrôler le format et comment créer des opérateurs d'insertion pour vos propres classes. L’opérateur d’insertion (**<<**), qui préprogrammé pour tous les types de données C++ standard, envoie des octets à un objet de flux de sortie. Les opérateurs d’insertion fonctionnent avec des « manipulateurs » prédéfinis, qui sont des éléments qui modifient le format par défaut des arguments de type entier.  
@@ -213,11 +217,11 @@ std::cout <<extracted;   //   This
   
  Ce problème peut être contourné manuellement, mais pour rendre l'aller-retour de chaîne plus pratique, C++14 ajoute le manipulateur de flux `std::quoted` dans `<iomanip>`. Lors de l'insertion, `quoted()` entoure la chaîne avec un séparateur (guillemet double " par défaut) et lors de l'extraction il manipule le flux pour extraire tous les caractères jusqu'au séparateur final. Les guillemets incorporés sont précédés d’un caractère d’échappement (\\\\ par défaut).  
   
- Les délimiteurs sont présents uniquement dans l’objet de flux. Ils ne sont pas présents dans la chaîne extraite, mais ils le sont dans la chaîne retournée par [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str)().  
+ Les délimiteurs sont présents uniquement dans l’objet de flux de données. ils ne sont pas présents dans la chaîne extraite, mais ils sont présents dans la chaîne retournée par [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str).  
   
  Le comportement d'espace blanc des opérations d'insertion et d'extraction est indépendant de la façon dont la chaîne est représentée dans le code. L'opérateur quoted est donc utile que la chaîne d'entrée soit un littéral de chaîne brut ou une chaîne standard. La chaîne d'entrée, quel que soit son format, peut avoir des guillemets incorporés, des sauts de ligne, des tabulations, et ainsi de suite, qui seront tous conservés par le manipulateur quoted().  
   
- Pour plus d’informations et des exemples de code complets, consultez [quoted]--brokenlink--(../Topic/%3Cios%3E%20functions.md#quoted).  
+ Pour plus d’informations et des exemples de code complet, consultez [entre guillemets](../standard-library/iomanip-functions.md#quoted).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Flux de sortie](../standard-library/output-streams.md)   

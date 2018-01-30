@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6608b7499c18f1b740875c403e9cb8d55736c30d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5bc9d57f93b5d3ee537330ab16c2c9a02b6beead
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="algorithms"></a>Algorithmes
 Les algorithmes sont un élément fondamental de la bibliothèque C++ Standard. Ils ne fonctionnent pas avec des conteneurs proprement dits, mais plutôt avec des itérateurs. Par conséquent, le même algorithme peut être utilisé par la plupart des conteneurs de la bibliothèque C++ Standard (voire tous). Cette section traite des conventions et de la terminologie des algorithmes de la bibliothèque C++ Standard.  
@@ -56,7 +59,7 @@ Les algorithmes sont un élément fondamental de la bibliothèque C++ Standard. 
   
  Une séquence d’éléments désignée par des itérateurs dans la plage [`First`, `Last`) est une séquence ordonnée par operator**<** si, pour chaque *N* de la plage [0, `Last` - `First`) et pour chaque *M* de la plage (N, `Last` - `First`), le prédicat !(\*(`First` + *M*) < \*(*First* + *N*)) a la valeur true. (Notez que les éléments sont triés par ordre croissant). La fonction de prédicat **operator<**, ou tout remplacement, ne doit pas modifier l’un de ses opérandes. Elle doit générer le même résultat `bool` chaque fois qu'elle est évaluée et doit générer le même résultat si l'opérande est remplacé par une copie de l'un ou l'autre opérande. En outre, elle doit imposer un classement faible strict sur les opérandes qu’elle compare.  
   
- Une séquence d’éléments désignée par des itérateurs dans la plage [`First`, `Last`) est un tas ordonné par **operator<** si, pour chaque *N* de la plage [1, `Last` - `First`) le prédicat !(\*`First` < \*(`First` + *N*)) a la valeur true. (Le premier élément est le plus grand.) Sa structure interne est également connue uniquement pour les fonctions de modèle [make_heap](http://msdn.microsoft.com/Library/b09f795c-f368-4aa8-b57e-61ee6100ddc2), [pop_heap]--brokenlink--(../Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#pop_heap), and [push_heap]-brokenlink--(../Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#push_heap). Comme avec une séquence ordonnée, la fonction de prédicat **operator<**, ou tout remplacement, ne doit pas modifier l’un de ses opérandes et elle doit imposer un ordre faible strict sur les opérandes qu’elle compare. Elle doit générer le même résultat `bool` chaque fois qu'elle est évaluée et doit générer le même résultat si l'opérande est remplacé par une copie de l'un ou l'autre opérande.  
+ Une séquence d’éléments désignée par des itérateurs dans la plage [`First`, `Last`) est un tas ordonné par **operator<** si, pour chaque *N* de la plage [1, `Last` - `First`) le prédicat !(\*`First` < \*(`First` + *N*)) a la valeur true. (Le premier élément est le plus grand.) Sa structure interne est autrement connue uniquement des fonctions de modèle [make_heap](../standard-library/algorithm-functions.md#make_heap), [pop_heap](../standard-library/algorithm-functions.md#pop_heap), et [push_heap](../standard-library/algorithm-functions.md#push_heap). Comme avec une séquence ordonnée, la fonction de prédicat **operator<**, ou tout remplacement, ne doit pas modifier l’un de ses opérandes et elle doit imposer un ordre faible strict sur les opérandes qu’elle compare. Elle doit générer le même résultat `bool` chaque fois qu'elle est évaluée et doit générer le même résultat si l'opérande est remplacé par une copie de l'un ou l'autre opérande.  
   
  Les algorithmes de la bibliothèque C++ Standard se trouvent dans les fichiers d’en-tête [\<algorithm>](../standard-library/algorithm.md) et [\<numeric>](../standard-library/numeric.md).  
   

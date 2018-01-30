@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - AFXMOUSEMANAGER/CMouseManager::LoadState
 - AFXMOUSEMANAGER/CMouseManager::SaveState
 - AFXMOUSEMANAGER/CMouseManager::SetCommandForDblClk
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CMouseManager [MFC], AddView
 - CMouseManager [MFC], GetViewDblClickCommand
@@ -29,16 +31,17 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f50b74731089346a9675b5340ba0ea1a0b2879f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7d019bedd63e7b7700ec91309c9ccaa0a41bf1ed
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="cmousemanager-class"></a>Classe de CMouseManager
 Permet à un utilisateur d’associer différentes commandes à un particulier [CView](../../mfc/reference/cview-class.md) lorsque l’utilisateur double-clique dans cette vue de l’objet.  
@@ -77,7 +80,7 @@ class CMouseManager : public CObject
 ## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxmousemanager.h  
   
-##  <a name="addview"></a>CMouseManager::AddView  
+##  <a name="addview"></a>  CMouseManager::AddView  
  Inscrit un [CView](../../mfc/reference/cview-class.md) de l’objet avec la [CMouseManager classe](../../mfc/reference/cmousemanager-class.md) pour prendre en charge le comportement personnalisé de la souris.  
   
 ```  
@@ -124,7 +127,7 @@ BOOL AddView(
   
  [!code-cpp[NVC_MFC_StateCollection#4](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]  
   
-##  <a name="getviewdblclickcommand"></a>CMouseManager::GetViewDblClickCommand  
+##  <a name="getviewdblclickcommand"></a>  CMouseManager::GetViewDblClickCommand  
  Retourne la commande est exécutée lorsque l’utilisateur double-clique à l’intérieur de la vue fournie.  
   
 ```  
@@ -138,7 +141,7 @@ UINT GetViewDblClickCommand(int iId) const;
 ### <a name="return-value"></a>Valeur de retour  
  L’identificateur de commande si la vue est associée à une commande ; Sinon, 0.  
   
-##  <a name="getviewiconid"></a>CMouseManager::GetViewIconId  
+##  <a name="getviewiconid"></a>  CMouseManager::GetViewIconId  
  Récupère l’icône associée à un ID de la vue.  
   
 ```  
@@ -155,7 +158,7 @@ UINT GetViewIconId(int iViewId) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode échoue si la vue n’est pas tout d’abord enregistrée à l’aide de [CMouseManager::AddView](#addview).  
   
-##  <a name="getviewidbyname"></a>CMouseManager::GetViewIdByName  
+##  <a name="getviewidbyname"></a>  CMouseManager::GetViewIdByName  
  Récupère l’ID de la vue associée à un nom de la vue.  
   
 ```  
@@ -172,7 +175,7 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode effectue la recherche enregistrées à l’aide de vues [CMouseManager::AddView](#addview).  
   
-##  <a name="getviewnames"></a>CMouseManager::GetViewNames  
+##  <a name="getviewnames"></a>  CMouseManager::GetViewNames  
  Récupère une liste de tous les noms d’affichage inscrits.  
   
 ```  
@@ -186,7 +189,7 @@ void GetViewNames(CStringList& listOfNames) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode remplit le paramètre `listOfNames` avec les noms de tous les affichages inscrits à l’aide de [CMouseManager::AddView](#addview).  
   
-##  <a name="loadstate"></a>CMouseManager::LoadState  
+##  <a name="loadstate"></a>  CMouseManager::LoadState  
  Charge l’état de la [CMouseManager classe](../../mfc/reference/cmousemanager-class.md) à partir du Registre.  
   
 ```  
@@ -205,7 +208,7 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
   
  Dans la plupart des cas, il est inutile d’appeler cette fonction directement. Il est appelé dans le cadre du processus d’initialisation de l’espace de travail. Pour plus d’informations sur le processus d’initialisation de l’espace de travail, consultez [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate).  
   
-##  <a name="savestate"></a>CMouseManager::SaveState  
+##  <a name="savestate"></a>  CMouseManager::SaveState  
  Écrit l’état de la [CMouseManager classe](../../mfc/reference/cmousemanager-class.md) dans le Registre.  
   
 ```  
@@ -224,7 +227,7 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
   
  Dans la plupart des cas, il est inutile d’appeler cette fonction directement. Il est appelé dans le cadre du processus de sérialisation d’espace de travail. Pour plus d’informations sur le processus de sérialisation d’espace de travail, consultez [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).  
   
-##  <a name="setcommandfordblclk"></a>CMouseManager::SetCommandForDblClk  
+##  <a name="setcommandfordblclk"></a>  CMouseManager::SetCommandForDblClk  
  Associe une commande personnalisée à une vue qui est tout d’abord enregistrée avec le Gestionnaire de la souris.  
   
 ```  
@@ -241,7 +244,7 @@ void SetCommandForDblClk(
  Identificateur de commande.  
   
 ### <a name="remarks"></a>Notes  
- Pour associer une commande personnalisée à une vue, vous devez d’abord inscrire l’affichage à l’aide de [CMouseManager::AddView](#addview). Le `AddView` méthode requiert un identificateur d’affichage en tant que paramètre d’entrée. Une fois que vous enregistrez une vue, vous pouvez appeler `CMouseManager::SetCommandForDblClk` avec la même vue identificateur paramètre d’entrée que vous avez fournies à `AddView`. Par la suite, lorsque l’utilisateur double-clique sur la souris dans la vue inscrite, l’application exécute la commande indiquée par `uiCmd.` pour prendre en charge le comportement personnalisé de la souris, vous devez également personnaliser l’affichage inscrit auprès du Gestionnaire de la souris. Pour plus d’informations sur le comportement personnalisé de la souris, consultez [personnalisation du clavier et souris]--brokenlink--(.. / customization.md de la souris et de clavier).  
+ Pour associer une commande personnalisée à une vue, vous devez d’abord inscrire l’affichage à l’aide de [CMouseManager::AddView](#addview). Le `AddView` méthode requiert un identificateur d’affichage en tant que paramètre d’entrée. Une fois que vous enregistrez une vue, vous pouvez appeler `CMouseManager::SetCommandForDblClk` avec la même vue identificateur paramètre d’entrée que vous avez fournies à `AddView`. Par la suite, lorsque l’utilisateur double-clique sur la souris dans la vue inscrite, l’application exécute la commande indiquée par `uiCmd.` pour prendre en charge le comportement personnalisé de la souris, vous devez également personnaliser l’affichage inscrit auprès du Gestionnaire de la souris. Pour plus d’informations sur le comportement personnalisé de la souris, consultez [personnalisation du clavier et souris](../keyboard-and-mouse-customization.md).  
   
  Si `uiCmd` a la valeur 0, la vue spécifiée n’est plus associée avec une commande.  
   

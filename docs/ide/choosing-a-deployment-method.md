@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - redistributing DLLs
 - manifests [C++]
@@ -19,16 +21,17 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1c444b3319c60b80bdfdc14000a41d65869d0514
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4e4336f200f736ea7656af11c7c7c43ca32f27f9
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="choosing-a-deployment-method"></a>Choix d'une méthode de déploiement
 À moins que votre application Visual C++ est autonome et peut être déployée à l’aide d’une commande de copie, nous recommandons d’utiliser Windows Installer pour le déploiement. Windows Installer prend en charge l'installation, la réparation, et la désinstallation. Il prend également en charge la mise à jour atomique des fichiers, des dépendances et des entrées de registre de l'application.  
@@ -57,7 +60,5 @@ ms.lasthandoff: 01/03/2018
   
 ## <a name="see-also"></a>Voir aussi  
  [Déploiement d’Applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md)   
- [Pas dans la Build : choix d’une stratégie de déploiement](http://msdn.microsoft.com/en-us/ecd632d8-063c-4028-b785-81bba045107b)   
- [Vue d’ensemble du déploiement Windows Installer](http://msdn.microsoft.com/en-us/3ce4610a-b54f-404e-b650-42f4a55dfc3b)   
  [Sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)   
  [Exemples de déploiement](../ide/deployment-examples.md)
