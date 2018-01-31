@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: c.programs
-dev_langs: C++
+f1_keywords:
+- c.programs
+dev_langs:
+- C++
 helpviewer_keywords:
 - CRT, compatibility
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f14d330ada8f71cc3556b7151189968b43cff4ca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b2c7d2882017a624bb00f5a32f5d6da69ff61057
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="compatibility"></a>Compatibilité
 La bibliothèque UCRT (Universal C Run-Time) prend en charge la majeure partie de la bibliothèque standard C requise pour la conformité C++. Elle implémente la bibliothèque C99 (ISO/IEC 9899:1999), à l’exception des macros de type générique définies dans \<tgmath.h> et de la compatibilité de type stricte dans \<complex.h>. La bibliothèque UCRT implémente également une grande partie de la bibliothèque C POSIX.1 (ISO/IEC 9945-1:1996, l’API système de POSIX), mais elle n’est pas entièrement conforme aux normes POSIX spécifiques.  En outre, la bibliothèque UCRT implémente plusieurs fonctions spécifiques à Microsoft et des macros qui ne font pas partie d’un standard.  
@@ -34,7 +38,7 @@ La bibliothèque UCRT (Universal C Run-Time) prend en charge la majeure partie d
   
  Certaines fonctions de la bibliothèque C standard ont un historique d’utilisation non sécurisée, en raison de paramètres mal utilisés et de mémoires tampons non vérifiées. Ces fonctions sont souvent à l’origine de problèmes de sécurité dans le code. Microsoft a créé un ensemble de versions plus sécurisées de ces fonctions qui vérifient l’utilisation des paramètres et qui appellent le gestionnaire de paramètre non valide quand un problème est détecté à l’exécution.  Par défaut, le compilateur Visual C++ émet un avertissement quand une variante plus sécurisée d’une fonction déconseillée utilisée est disponible. Quand vous compilez votre code en C++, vous pouvez définir `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` sur 1 pour éliminer la plupart des avertissements. Ceci utilise des surcharges de modèle pour appeler les variantes plus sécurisées tout en conservant le code source portable. Pour supprimer l’avertissement, définissez `_CRT_SECURE_NO_WARNINGS` avant d’inclure des en-têtes dans le code qui utilise ces fonctions. Pour plus d'informations, consultez [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).  
   
- À l’exception de ce qui est indiqué dans la documentation pour des fonctions spécifiques, la bibliothèque UCRT est compatible avec l’API Windows.  Certaines fonctions ne sont pas prises en charge dans les applications du  Windows Store pour Windows 8 ni dans les applications Windows universelles sur Windows 10. Ces fonctions sont répertoriées dans [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx), qui énumère les fonctions non prises en charge par le [Windows Runtime](http://msdn.microsoft.com/en-us/9a1a18b8-9802-4ec5-b9de-0d2dfdf414e9).  
+ À l’exception de ce qui est indiqué dans la documentation pour des fonctions spécifiques, la bibliothèque UCRT est compatible avec l’API Windows.  Certaines fonctions ne sont pas prises en charge dans les applications du Windows Store pour Windows 8 ni dans les applications UWP sur Windows 10. Ces fonctions sont listées dans [Fonctions CRT non prises en charge dans les applications UWP](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md), qui énumère les fonctions non prises en charge par le Windows Runtime et [UWP](/uwp).  
   
 ## <a name="related-articles"></a>Articles connexes  
   
