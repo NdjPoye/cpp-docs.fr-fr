@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 01/18/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - exceptions [C++], exception specifications
 - throwing exceptions [C++], throw keyword
@@ -18,12 +20,13 @@ ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bd96f666c4733f1c9b1aff65705840a46729194c
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cbd45c8afed11f613722ecc7586436ff707042d7
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Spécifications d’exception (throw, noexcept) (C++)
 
@@ -34,24 +37,22 @@ Avant C ++ 17 a deux types de spécification d’exception. Le *noexcept spécif
 ```cpp
 void MyFunction(int i) throw();
 ```
-
- indique au compilateur que la fonction ne lève pas d'exception. Toutefois, dans **/std : c ++ 14** mode, cela peut entraîner un comportement indéfini si la fonction lève une exception. Par conséquent, nous vous recommandons d’utiliser le [noexcept](../cpp/noexcept-cpp.md) opérateur au lieu de celui illustré ci-dessus :
+indique au compilateur que la fonction ne lève pas d'exception. Toutefois, dans **/std : c ++ 14** mode, cela peut entraîner un comportement indéfini si la fonction lève une exception. Par conséquent, nous vous recommandons d’utiliser le [noexcept](../cpp/noexcept-cpp.md) opérateur au lieu de celui illustré ci-dessus :
 
 ```cpp
 void MyFunction(int i) noexcept;
 ```
-
-Le tableau suivant résume l'implémentation Visual C++ des spécifications d'exceptions :
+Le tableau suivant résume l’implémentation de Microsoft Visual C++ de spécifications d’exception :
 
 |Spécification d'exception|Signification|
 |-----------------------------|-------------|
 |`noexcept`<br>`noexcept(true)`<br>`throw()`|La fonction ne lève pas d'exception. Dans [/std : c ++ 14](../build/reference/std-specify-language-standard-version.md) mode (qui est la valeur par défaut), `noexcept` et `noexcept(true)` sont équivalents. Lorsqu’une exception est levée à partir d’une fonction qui est déclarée `noexcept` ou `noexcept(true)`, [std::terminate](../standard-library/exception-functions.md#terminate) est appelé. Lorsqu’une exception est levée à partir d’une fonction déclarée comme `throw()` dans **/std : c ++ 14** mode, le résultat est un comportement non défini. Aucune fonction spécifique n’est appelée. Il s’agit d’une divergence à partir de la norme C ++ 14, qui requiert que le compilateur à appeler [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br> **Visual Studio 2017 15,5 et versions ultérieures**: dans **/std : c ++ 17** mode, `noexcept`, `noexcept(true)`, et `throw()` sont toutes équivalentes. Dans **/std : c ++ 17** mode, `throw()` est un alias pour `noexcept(true)`. Dans **/std : c ++ 17** mode, lorsqu’une exception est levée à partir d’une fonction déclarée avec l’un de ces spécifications, [std::terminate](../standard-library/exception-functions.md#terminate) est appelé comme requis par la norme C ++ 17.|
 |`noexcept(false)`<br/>`throw(...)`<br/>Aucune spécification|La fonction peut lever une exception de n’importe quel type.|
-|`throw(type)`| (**C ++ 14 et versions antérieures**) la fonction peut lever une exception de type `type`. Le compilateur Microsoft C++ accepte la syntaxe, mais il l’interprète comme `noexcept(false)`. Dans **/std : c ++ 17** mode, le compilateur émet un avertissement C5040.|
+|`throw(type)`| (**C ++ 14 et versions antérieures**) la fonction peut lever une exception de type `type`. Le compilateur accepte la syntaxe, mais il l’interprète comme `noexcept(false)`. Dans **/std : c ++ 17** mode, le compilateur émet un avertissement C5040.|
 
- Si la gestion des exceptions sont utilisée dans une application, il doit être une fonction dans la pile des appels qui gère levée des exceptions avant de quitter l’étendue externe d’une fonction marquée `noexcept`, `noexcept(true)`, ou `throw()`. Si aucune fonction appelée entre celle qui lève une exception et celui qui gère l’exception sont spécifiés en tant que `noexcept`, `noexcept(true)` (ou `throw()` dans **/std : c ++ 17** mode), le programme se termine lorsque le fonction noexcept propage l’exception.
+Si la gestion des exceptions sont utilisée dans une application, il doit être une fonction dans la pile des appels qui gère levée des exceptions avant de quitter l’étendue externe d’une fonction marquée `noexcept`, `noexcept(true)`, ou `throw()`. Si aucune fonction appelée entre celle qui lève une exception et celui qui gère l’exception sont spécifiés en tant que `noexcept`, `noexcept(true)` (ou `throw()` dans **/std : c ++ 17** mode), le programme se termine lorsque le fonction noexcept propage l’exception.
 
- Le comportement d’exception d’une fonction dépend des facteurs suivants :
+Le comportement d’exception d’une fonction dépend des facteurs suivants :
 
 - Qui [mode de compilation standard de langage](../build/reference/std-specify-language-standard-version.md) est définie.
 - si vous compilez la fonction sous C ou C++ ;
@@ -60,9 +61,9 @@ Le tableau suivant résume l'implémentation Visual C++ des spécifications d'ex
 
 - si vous spécifiez de manière explicite la spécification d'exception.
 
- Les spécifications d'exceptions explicites ne sont pas autorisées sur les fonctions C. Une fonction C est supposée ne pas pour lever d’exceptions sous **/EHsc**et peut lever des exceptions structurées sous **/EHs**, **/EHa**, ou **/EHac**.
+Les spécifications d'exceptions explicites ne sont pas autorisées sur les fonctions C. Une fonction C est supposée ne pas pour lever d’exceptions sous **/EHsc**et peut lever des exceptions structurées sous **/EHs**, **/EHa**, ou **/EHac**.
 
- Le tableau suivant récapitule si une fonction C++ peut lever potentiellement sous différentes du compilateur exceptions options :
+Le tableau suivant récapitule si une fonction C++ peut lever potentiellement sous différentes du compilateur exceptions options :
 
 |Fonction|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
@@ -110,7 +111,7 @@ void __declspec(nothrow) f2(void) {
     }
 }
 
-// only valid if compiled without /EHc 
+// only valid if compiled without /EHc
 // /EHc means assume extern "C" functions don't throw exceptions
 extern "C" void f4(void);
 void f4(void) {
