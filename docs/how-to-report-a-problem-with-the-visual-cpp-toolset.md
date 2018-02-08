@@ -1,23 +1,26 @@
 ---
 title: "Guide pratique pour signaler un problème avec l’ensemble d’outils Visual C++ | Microsoft Docs"
 ms.date: 1/11/2018
-ms.technology: cpp
+ms.technology:
+- cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 697b5dc087aa61280922d5574001838ea5ff1dcb
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fd7ba80e60251c56fd28a1c380d395e686fc27a4
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Guide pratique pour signaler un problème avec l’ensemble d’outils Visual C++
 
-Si vous rencontrez des problèmes avec le compilateur Visual C++, l’éditeur de liens ou autres outils et bibliothèques, nous aimerions les connaître.
+Si vous rencontrez des problèmes avec le compilateur Microsoft Visual C++, l’éditeur de liens ou autres outils et bibliothèques, nous aimerions les connaître.
 
 La meilleure façon de nous informer d’un problème consiste à nous envoyer un rapport qui inclut une description du problème que vous avez rencontré, des informations sur la façon dont vous générez votre programme et une *reproduction* qui nous servira à reproduire le problème sur nos propres ordinateurs. Ces informations nous permettent de vérifier rapidement que le problème existe dans notre code et qu’il n’est pas propre à votre environnement, de déterminer s’il affecte d’autres versions du compilateur et de diagnostiquer sa cause.
 
@@ -37,7 +40,7 @@ Il est important de créer un rapport de qualité, car il est très difficile de
 
 Au minimum, votre rapport doit contenir les éléments suivants :
 
-- Informations complètes sur la version de l’ensemble d’outils que vous utilisez.
+- Informations sur la version complète de l’ensemble d’outils que vous utilisez.
 
 - Ligne de commande cl.exe complète utilisée pour générer votre code.
 
@@ -105,11 +108,11 @@ Une reproduction est un exemple de code source complet et autonome qui reproduit
 
 Une bonne reproduction est :
 
-- **Minimale.** Les reproductions doivent être aussi courtes que possible tout en montrant exactement le problème rencontré. Les reproductions n’ont pas besoin d’être complexes ou réalistes. Il faut juste qu’elles affichent le code qui est conforme au standard ou à l’implémentation documentée du compilateur, ou dans le cas d’absence de diagnostic, le code qui n’est pas conforme. Les reproductions simples et directes qui contiennent juste assez de code pour illustrer le problème sont les meilleures. Si vous pouvez enlever ou simplifier du code tout en restant conforme et sans modifier le problème, n’hésitez pas. Vous n’avez pas besoin d’ajouter de contre-exemples de code qui fonctionnent. 
+- **Est minimale.** Les reproductions doivent être aussi courtes que possible tout en montrant exactement le problème rencontré. Les reproductions n’ont pas besoin d’être complexes ou réalistes. Il faut juste qu’elles affichent le code qui est conforme au standard ou à l’implémentation documentée du compilateur, ou dans le cas d’absence de diagnostic, le code qui n’est pas conforme. Les reproductions simples et directes qui contiennent juste assez de code pour illustrer le problème sont les meilleures. Si vous pouvez enlever ou simplifier du code tout en restant conforme et sans modifier le problème, n’hésitez pas. Vous n’avez pas besoin d’ajouter de contre-exemples de code qui fonctionnent. 
 
-- **Autonome.** Les reproductions doivent éviter les dépendances inutiles. Si vous pouvez reproduire le problème sans bibliothèques tierces, faites-le. Si vous pouvez reproduire le problème sans code de bibliothèque avec des instructions de sortie simples (par exemple, `puts("this shouldn't compile");`, `std::cout << value;` et `printf("%d\n", value);` sont OK), n’hésitez pas. Si l’exemple peut être condensé dans un seul fichier de code source, sans référence à aucun en-tête utilisateur, c’est parfait. Vous nous aiderez considérablement en réduisant la quantité de code que nous devons examiner comme facteur possible du problème.
+- **Est autonome.** Les reproductions doivent éviter les dépendances inutiles. Si vous pouvez reproduire le problème sans bibliothèques tierces, faites-le. Si vous pouvez reproduire le problème sans code de bibliothèque avec des instructions de sortie simples (par exemple, `puts("this shouldn't compile");`, `std::cout << value;` et `printf("%d\n", value);` sont OK), n’hésitez pas. Si l’exemple peut être condensé dans un seul fichier de code source, sans référence à aucun en-tête utilisateur, c’est parfait. Vous nous aiderez considérablement en réduisant la quantité de code que nous devons examiner comme facteur possible du problème.
 
-- **À jour avec la dernière version du compilateur.** Les reproductions doivent utiliser la dernière mise à jour vers la dernière version de l’ensemble d’outils ou la préversion la plus récente de la prochaine mise à jour ou de la prochaine version majeure, si possible. Les problèmes que vous pouvez rencontrer dans des versions antérieures de l’ensemble d’outils ont très souvent été résolus dans les versions plus récentes. Les correctifs ne sont reportés que très rarement sur des versions antérieures.
+- **Utilise la dernière version du compilateur.** Les reproductions doivent utiliser la dernière mise à jour vers la dernière version de l’ensemble d’outils ou la préversion la plus récente de la prochaine mise à jour ou de la prochaine version majeure, si possible. Les problèmes que vous pouvez rencontrer dans des versions antérieures de l’ensemble d’outils ont très souvent été résolus dans les versions plus récentes. Les correctifs ne sont reportés que très rarement sur des versions antérieures.
 
 - **Comparée à d’autres compilateurs**, le cas échéant. Les reproductions qui impliquent du code C++ portable doivent vérifier le comportement par rapport à d’autres compilateurs si possible. Le standard finit toujours par déterminer si le programme est correct. Aucun compilateur n’est parfait, mais si Clang et GCC acceptent votre code sans diagnostic alors que MSVC non, vous voyez probablement un bogue dans notre compilateur. (Autres possibilités : des différences de comportement entre Unix et Windows ou différents niveaux d’implémentation de standards C++, etc.) En revanche, si tous les compilateurs rejettent votre code, c’est probablement que votre code est incorrect. Voir différents messages d’erreur peut vous aider à diagnostiquer le problème vous-même.
 
@@ -120,9 +123,9 @@ Une bonne reproduction est :
 
 Les problèmes dans le compilateur, l’éditeur de liens et les bibliothèques ont tendance à apparaître de manière spécifique. Le type de problème que vous rencontrez détermine le type de reproduction à inclure dans votre rapport. Sans une reproduction appropriée, nous n’avons rien à examiner. Voici quelques-uns des types de problèmes que vous pouvez voir et les instructions permettant de générer les types de reproductions que vous devez utiliser pour signaler chaque type de problème.
  
-#### <a name="frontend-parser-crash"></a>Blocage de backend (analyseur)
+#### <a name="frontend-parser-crash"></a>Blocage de serveur frontal (analyseur)
 
-Les blocages de backend se produisent pendant la phase d’analyse du compilateur. En règle générale, le compilateur indique [Erreur irrécupérable C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) et fait référence au fichier de code source et au numéro de ligne où l’erreur s’est produite ; il mentionne souvent un fichier msc1.cpp, mais vous pouvez ignorer ce détail.
+Les blocages de serveur frontal se produisent pendant la phase d’analyse du compilateur. En règle générale, le compilateur indique [Erreur irrécupérable C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) et fait référence au fichier de code source et au numéro de ligne où l’erreur s’est produite ; il mentionne souvent un fichier msc1.cpp, mais vous pouvez ignorer ce détail.
 
 Pour ce type de blocage, fournissez une [reproduction prétraitée](#preprocessed-repros).
 
@@ -149,7 +152,7 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
 
 #### <a name="backend-code-generation-crash"></a>Blocage du backend (génération de code)
 
-Les blocages de backend se produisent pendant la phase de génération de code du compilateur. En règle générale, le compilateur indique [Erreur irrécupérable C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) et peut ne pas référencer le fichier de code source ni le numéro de ligne associés au problème ; il mentionne souvent le compilateur de fichiers\\utc\\src\\p2\\main.c, mais vous pouvez ignorer ce détail.
+Les blocages de serveur principal se produisent pendant la phase de génération de code du compilateur. En règle générale, le compilateur indique [Erreur irrécupérable C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) et peut ne pas référencer le fichier de code source ni le numéro de ligne associés au problème ; il mentionne souvent le compilateur de fichiers\\utc\\src\\p2\\main.c, mais vous pouvez ignorer ce détail.
 
 Pour ce type de blocage, fournissez une [reproduction de lien](#link-repros) si vous utilisez la génération de code durant l’édition de liens (LTCG), activée par l’argument de ligne de commande **/GL** dans cl.exe. Sinon, fournissez une [reproduction prétraitée](#preprocessed-repros) à la place.
 
@@ -177,7 +180,7 @@ Si la ligne qui commence par **ERREUR INTERNE DU COMPILATEUR** mentionne link.ex
 Les blocages d’éditeur de liens se produisent pendant la phase d’édition des liens, après l’exécution du compilateur. En règle générale, l’éditeur de liens indique [Erreur des outils Éditeur de liens LNK1000](error-messages/tool-errors/linker-tools-error-lnk1000.md).
 
 > [!NOTE]
-> Si la sortie mentionne C1001 ou implique la génération de code durant l’édition de liens, reportez-vous plutôt à [Blocage de backend (génération de code)](#backend-code-generation-crash) pour plus d’informations.
+> Si la sortie mentionne C1001 ou implique la génération de code durant l’édition de liens, reportez-vous plutôt à [Blocage de serveur principal (génération de code)](#backend-code-generation-crash) pour plus d’informations.
 
 Pour ce type de blocage, fournissez une [reproduction de lien](#link-repros).
 
@@ -219,7 +222,7 @@ Si l’édition des liens incrémentielle est activée et que le blocage se prod
 
 #### <a name="bad-code-generation"></a>Génération de code incorrect
 
-La génération de code incorrect est rare, mais se produit quand le compilateur génère par inadvertance du code incorrect qui entraîne le blocage de votre application au moment de l’exécution au lieu de détecter ce problème au moment de la compilation. Si vous pensez que le problème que vous rencontrez occasionne une génération de code incorrect, traitez votre rapport comme dans [Blocage de backend (génération de code)](#backend-code-generation-crash).
+La génération de code incorrect est rare, mais se produit quand le compilateur génère par inadvertance du code incorrect qui entraîne le blocage de votre application au moment de l’exécution au lieu de détecter ce problème au moment de la compilation. Si vous pensez que le problème que vous rencontrez occasionne une génération de code incorrect, traitez votre rapport comme dans [Blocage de serveur principal (génération de code)](#backend-code-generation-crash).
 
 Pour ce type de blocage, fournissez une [reproduction de lien](#link-repros) si vous utilisez la génération de code durant l’édition de liens (LTCG), activée par l’argument de ligne de commande **/GL** dans cl.exe. Sinon, fournissez une [reproduction prétraitée](#preprocessed-repros).
 

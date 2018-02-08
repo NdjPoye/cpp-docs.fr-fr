@@ -7,16 +7,17 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3e19f72dac00d18af62e91b1466bc40f2148518e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e63945dc51fe55d81963790e7373a3d4dc9b0efe
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Mettre à niveau votre code vers le CRT universel
 
@@ -42,7 +43,7 @@ Quand vous mettez à jour vos projets Visual C++, si vous avez défini la propri
   
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>Déploiement et redistribution du CRT universel
   
-L’UCRT étant à présent un composant du système d’exploitation Microsoft Windows, il est inclus dans le cadre du système d’exploitation dans Windows 10 et est disponible par le biais de Windows Update pour les anciens systèmes d’exploitation allant de Windows Vista à Windows 8.1. Une version redistribuable est disponible pour Windows XP. En tant que composant du système d’exploitation, les mises à jour et maintenance de l’UCRT sont gérées par Windows Update indépendamment des versions du compilateur de Visual C++ et de Visual Studio. L’UCRT étant un composant Windows, nous vous recommandons vivement de déployer l’UCRT pour votre application de manière centralisée ; la sécurité s’en trouvera améliorée, les mises à jour simplifiées et la taille d’image réduite.  
+L’UCRT étant à présent un composant du système d’exploitation Microsoft Windows, il est inclus dans le cadre du système d’exploitation dans Windows 10 et est disponible par le biais de Windows Update pour les anciens systèmes d’exploitation allant de Windows Vista à Windows 8.1. Une version redistribuable est disponible pour Windows XP. En tant que composant du système d’exploitation, les mises à jour et maintenance de l’UCRT sont gérées par Windows Update indépendamment des versions du compilateur de Microsoft C++ et de Visual Studio. L’UCRT étant un composant Windows, nous vous recommandons vivement de déployer l’UCRT pour votre application de manière centralisée ; la sécurité s’en trouvera améliorée, les mises à jour simplifiées et la taille d’image réduite.  
   
 Vous pouvez utiliser l’UCRT sur n’importe quelle version de Windows prise en charge par Visual Studio 2015 ou Visual Studio 2017. Vous pouvez la redistribuer à l’aide d’un package vcredist pour les versions prises en charge de Windows distinctes de Windows 10. Les packages vcredist incluent les composants UCRT et les installent automatiquement sur les systèmes d’exploitation Windows qui en sont dépourvus par défaut. Pour plus d’informations, consultez [Redistribution des fichiers Visual C++](../ide/redistributing-visual-cpp-files.md).  
   

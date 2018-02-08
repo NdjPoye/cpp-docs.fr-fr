@@ -1,29 +1,32 @@
 ---
 title: "Conformité du langage Visual C++ | Microsoft Docs"
 ms.date: 11/15/2017
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fa79bfc63a3906b3f7eb698c3d44ee8136db2c14
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 49aabbcc746470815db40f15fa00774d5e05bfe5
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-language-conformance"></a>Conformité du langage Visual C++
 
-Cette rubrique récapitule la conformité aux normes de langage ISO C++03, C++11, C++14, C++17 et C++20 (ébauche) des fonctionnalités du compilateur et des fonctionnalités de la bibliothèque standard pour Visual C++ dans Visual Studio 2017 et versions antérieures. À chaque nom de fonctionnalité du compilateur et de la bibliothèque standard correspond un lien vers le document de proposition de norme ISO C++ qui décrit la fonctionnalité en question (sous réserve de disponibilité de ce document au moment de la publication). La colonne Prise en charge indique la première version de Visual Studio à prendre en charge la fonctionnalité.
+Cette rubrique récapitule la conformité aux normes de langage ISO C++03, C++11, C++14, C++17 et C++20 (ébauche) des fonctionnalités du compilateur et des fonctionnalités de la bibliothèque standard pour le compilateur C++ dans Visual Studio 2017 et versions antérieures. À chaque nom de fonctionnalité du compilateur et de la bibliothèque standard correspond un lien vers le document de proposition de norme ISO C++ qui décrit la fonctionnalité en question (sous réserve de disponibilité de ce document au moment de la publication). La colonne Prise en charge indique la première version de Visual Studio à prendre en charge la fonctionnalité.
 
-Pour plus d’informations sur les améliorations de la conformité et les autres changements dans Visual Studio 2017, consultez [Améliorations de la conformité de C++ dans Visual Studio 2017](cpp-conformance-improvements-2017.md) et [Nouveautés de Visual C++ dans Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md). Pour passer en revue les changements de conformité dans les versions antérieures, consultez [Historique des modifications de Visual C++](porting/visual-cpp-change-history-2003-2015.md) et [Nouveautés de Visual C++ entre 2003 et 2015](porting/visual-cpp-what-s-new-2003-through-2015.md). Pour connaître l’actualité de l’équipe C++, visitez le [blog de l’équipe Visual C++](https://blogs.msdn.microsoft.com/vcblog/).  
+Pour plus d’informations sur les améliorations de la conformité et les autres changements dans Visual Studio 2017, consultez [Améliorations de la conformité de C++ dans Visual Studio 2017](cpp-conformance-improvements-2017.md) et [Nouveautés de Visual C++ dans Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md). Pour passer en revue les changements de conformité dans les versions antérieures, consultez [Historique des modifications de Visual C++](porting/visual-cpp-change-history-2003-2015.md) et [Nouveautés de Visual C++ entre 2003 et 2015](porting/visual-cpp-what-s-new-2003-through-2015.md). Pour connaître l’actualité de l’équipe C++, visitez le [blog de l’équipe Visual C++](https://blogs.msdn.microsoft.com/vcblog/).
 
- > [!NOTE]
- > Aucune modification importante n’a été apportée au niveau des binaires entre Visual Studio 2015 et Visual Studio 2017.
+> [!NOTE]
+> Aucune modification importante n’a été apportée au niveau des binaires entre Visual Studio 2015 et Visual Studio 2017.
 
 ## <a name="compiler-features"></a>Fonctionnalités du compilateur
 

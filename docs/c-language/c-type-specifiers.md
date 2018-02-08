@@ -1,99 +1,94 @@
 ---
 title: "Spécificateurs de type C | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/29/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - type specifiers, C
 - specifiers, type
 ms.assetid: fbe13441-04c3-4829-b047-06d374adc2b6
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 28712275312bf653e082a9f8e32424f26534fb93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 00d91c2f790b93e70f21557d85f2cbb8216c8ed3
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="c-type-specifiers"></a>Spécificateurs de type C
-Les spécificateurs de type dans les déclarations définissent le type d'une variable ou d'une déclaration de fonction.  
-  
-## <a name="syntax"></a>Syntaxe  
- *type-specifier* :  
- **void**  
-  
- **char**  
-  
- **short**  
-  
- **int**  
-  
- **long**  
-  
- **float**  
-  
- **double**  
-  
- **signed**  
-  
- **unsigned**  
-  
- *struct-or-union-specifier*  
-  
- *enum-specifier*  
-  
- *typedef-name*  
-  
- Les types signed **char**, **signed int**, **signed short int** et **signed long int**, ainsi que leurs équivalents `unsigned` et `enum`, sont appelés types « intégraux ». Les spécificateurs de type **float**, **double** et `long double` sont appelés types « flottants » ou « à virgule flottante ». Vous pouvez utiliser n'importe quel spécificateur de type intégral ou à virgule flottante dans une variable ou une déclaration de fonction. Si aucun *type-specifier* n'est fourni dans une déclaration, `int` est utilisé par défaut.  
-  
- Les mots clés facultatifs **signed** et `unsigned` peuvent précéder ou suivre tout type intégral, à l'exception d' `enum`, et peuvent également être utilisés seuls comme spécificateurs de type, auquel cas ils sont compris respectivement comme **signed int** et `unsigned int`. S'il est utilisé seul, le mot clé `int` est supposé être **signed**. S'ils sont utilisés seuls, les mots clés **long** et **short** sont compris comme **long int** et `short int`.  
-  
- Les types énumération sont considérés comme des types de base. Les spécificateurs de type pour les types énumération sont traités dans [Déclarations d'énumération](../c-language/c-enumeration-declarations.md).  
-  
- Le mot clé `void` a trois utilisations : spécifier un type de retour de fonction, spécifier une liste de types d'arguments pour une fonction qui n'accepte pas d'argument et spécifier un pointeur vers un type non spécifié. Vous pouvez utiliser le type `void` pour déclarer des fonctions qui ne retournent aucune valeur ou pour déclarer un pointeur vers un type non spécifié. Pour plus d’informations sur `void` lorsqu’il apparaît seul entre les parenthèses qui suivent un nom de fonction, consultez [Arguments](../c-language/arguments.md).  
-  
- **Section spécifique à Microsoft**  
-  
- La vérification de type est maintenant conforme à la spécification ANSI, ce qui signifie que le type **short** et le type `int` sont des types distincts. Par exemple, voici une redéfinition dans le compilateur C Microsoft qui était acceptée par les versions précédentes du compilateur.  
-  
-```  
-int   myfunc();  
-short myfunc();  
-```  
-  
- Cet exemple suivant génère également un avertissement concernant l'indirection vers différents types :  
-  
-```  
-int *pi;  
-short *ps;  
-  
-ps = pi;  /* Now generates warning */  
-```  
-  
- Le compilateur C Microsoft génère également des avertissements pour les différences de signe. Exemple :  
-  
-```  
-signed int *pi;  
-unsigned int *pu  
-  
-pi = pu;  /* Now generates warning */  
-```  
-  
- Les expressions `void` de type sont évaluées quant à leurs effets secondaires. Vous ne pouvez en aucune manière utiliser la valeur (inexistante) d'une expression de type `void`, ni convertir une expression `void` (par conversion implicite ou explicite) en un type autre que `void`. Si vous utilisez une expression d'un autre type dans un contexte où une expression `void` est requise, sa valeur est ignorée.  
-  
- Pour être conforme à la spécification ANSI, **void\*\*** ne peut pas être utilisé comme **int\*\***. Seul **void\*** peut être utilisé comme pointeur vers un type non spécifié.  
-  
- **FIN de la section spécifique à Microsoft**  
-  
- Vous pouvez créer des spécificateurs de type supplémentaires avec des déclarations `typedef`, comme décrit dans [Déclarations typedef](../c-language/typedef-declarations.md). Pour plus d'informations sur la taille de chaque type, consultez [Stockage des types de base](../c-language/storage-of-basic-types.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Déclarations et types](../c-language/declarations-and-types.md)
+
+Les spécificateurs de type dans les déclarations définissent le type d'une variable ou d'une déclaration de fonction.
+
+## <a name="syntax"></a>Syntaxe
+
+*type-specifier* :  
+&nbsp;&nbsp;**void**  
+&nbsp;&nbsp;**char**  
+&nbsp;&nbsp;**short**  
+&nbsp;&nbsp;**int**  
+&nbsp;&nbsp;**long**  
+&nbsp;&nbsp;**float**  
+&nbsp;&nbsp;**double**  
+&nbsp;&nbsp;**signed**  
+&nbsp;&nbsp;**unsigned**  
+&nbsp;&nbsp;*struct-or-union-specifier*  
+&nbsp;&nbsp;*enum-specifier*  
+&nbsp;&nbsp;*typedef-name*  
+
+Les types **signed char**, **signed int**, **signed short int** et **signed long int**, ainsi que leurs équivalents **unsigned** et **enum**, sont appelés types *intégraux*. Les spécificateurs de type **float**, **double** et **long double** sont appelés types *flottants* ou *à virgule flottante*. Vous pouvez utiliser n'importe quel spécificateur de type intégral ou à virgule flottante dans une variable ou une déclaration de fonction. Si aucun *type-specifier* n’est fourni dans une déclaration, **int** est utilisé par défaut.
+
+Les mots clés facultatifs **signed** et **unsigned** peuvent précéder ou suivre tout type intégral, à l’exception **d’enum**, et peuvent également être utilisés seuls comme spécificateurs de type ; dans ce cas, ils sont compris respectivement comme **signed int** et **unsigned int**. S’il est utilisé seul, le mot clé **int** est supposé être **signed**. S’ils sont utilisés seuls, les mots clés **long** et **short** sont compris comme **long int** et **short int**.
+
+Les types énumération sont considérés comme des types de base. Les spécificateurs de type pour les types énumération sont traités dans [Déclarations d'énumération](../c-language/c-enumeration-declarations.md).
+
+Le mot clé **void** a trois utilisations : spécifier un type de retour de fonction, spécifier une liste de types d’arguments pour une fonction qui n’accepte pas d’argument et spécifier un pointeur vers un type non spécifié. Vous pouvez utiliser le type **void** pour déclarer des fonctions qui ne retournent aucune valeur ou pour déclarer un pointeur vers un type non spécifié. Pour plus d’informations sur **void** quand il apparaît seul entre les parenthèses qui suivent un nom de fonction, consultez [Arguments](../c-language/arguments.md).
+
+**Section spécifique à Microsoft**
+
+La vérification de type est maintenant conforme à la spécification ANSI, ce qui signifie que le type **short** et le type **int** sont des types distincts. Par exemple, voici une redéfinition dans le compilateur C Microsoft qui était acceptée par les versions précédentes du compilateur.
+
+```C
+int   myfunc();
+short myfunc();
+```
+
+Cet exemple suivant génère également un avertissement concernant l'indirection vers différents types :
+
+```C
+int *pi;
+short *ps;
+
+ps = pi;  /* Now generates warning */
+```
+
+Le compilateur C Microsoft génère également des avertissements pour les différences de signe. Exemple :
+
+```C
+signed int *pi;
+unsigned int *pu
+
+pi = pu;  /* Now generates warning */
+```
+
+Les expressions de type **void** sont évaluées quant à leurs effets secondaires. Vous ne pouvez en aucune manière utiliser la valeur (inexistante) d’une expression de type **void**, ni convertir une expression **void** (par conversion implicite ou explicite) en un type autre que **void**. Si vous utilisez une expression d’un autre type dans un contexte où une expression **void** est requise, sa valeur est ignorée.
+
+Pour être conforme à la spécification ANSI, **void\*\*** ne peut pas être utilisé comme **int\*\***. Seul **void\*** peut être utilisé comme pointeur vers un type non spécifié.
+
+**FIN de la section spécifique à Microsoft**
+
+Vous pouvez créer des spécificateurs de type supplémentaires avec des déclarations **typedef**, comme décrit dans [Déclarations typedef](../c-language/typedef-declarations.md). Pour plus d'informations sur la taille de chaque type, consultez [Stockage des types de base](../c-language/storage-of-basic-types.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Déclarations et types](../c-language/declarations-and-types.md)  

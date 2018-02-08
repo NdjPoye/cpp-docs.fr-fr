@@ -18,11 +18,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c401aa7a063ab7e76353a5781f008243204bc35
-ms.sourcegitcommit: b5ff17bcd5e5e02bc21717859165a6b819a0ab84
+ms.openlocfilehash: 4e730d7d47a8742d3c4f1f7c4636aabd8785cc93
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Nouveautés de Visual C++ entre 2003 et 2015
 
@@ -278,7 +278,7 @@ Dans Visual Studio 2015 et ultérieur, les améliorations continues de la confor
 
 - **Membres de données d’union**
 
-   Les membres de données d'unions ne peuvent plus posséder de types de référence. Il était possible de compiler le code suivant dans [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], mais il générait une erreur dans [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)].
+   Les membres de données d'unions ne peuvent plus posséder de types de référence. Il était possible de compiler le code suivant dans [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], mais il génèrait une erreur dans [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)].
 
    ```cpp
     union U1 {
@@ -337,7 +337,7 @@ Dans Visual Studio 2015 et ultérieur, les améliorations continues de la confor
     } u;
    ```
 
-- **Unions avec structs anonymes** Pour se conformer au standard, le comportement d’exécution a changé pour les membres de structures anonymes dans les unions. Le constructeur pour les membres de structure anonymes dans une union n'est plus implicitement appelé lors de la création d'une telle union.   De plus, le destructeur pour les membres de structure anonymes dans une union n'est plus implicitement appelé quand l'union passe hors de portée. Considérons le code suivant, dans lequel une union U contient une structure anonyme contenant un membre qui est une structure nommée S ayant un destructeur.
+- **Unions avec structs anonymes** Pour se conformer au standard, le comportement d’exécution a changé pour les membres de structures anonymes dans les unions. Le constructeur pour les membres de structure anonymes dans une union n'est plus implicitement appelé lors de la création d'une telle union.   De plus, le destructeur pour les membres de structure anonymes dans une union n'est plus implicitement appelé quand l'union passe hors de portée. Considérons le code suivant, dans lequel une union U contient une structure anonyme contenant un membre qui est une structure nommée S possèdant un destructeur.
 
    ```cpp
     #include <stdio.h>
@@ -832,7 +832,7 @@ Dans Visual Studio 2015 et ultérieur, les améliorations continues de la confor
 
 - **#pragma optimize() s’étend au-delà de la fin du fichier d’en-tête** (affecte uniquement /Wall /WX)
 
-   Les versions précédentes du compilateur ne détectaient pas les modifications apportées aux paramètres de l’indicateur d’optimisation qui échappent un fichier d’en-tête inclus dans une unité de traduction. Désormais, le compilateur détecte et informe le programmeur du code écrit de cette façon, et il émet un avertissement C4426 facultatif à l’emplacement du `#include`incriminé, si cette fonctionnalité est activée. Cet avertissement est émis uniquement si les modifications entrent en conflit avec les indicateurs d’optimisation définis par des arguments de ligne de commande au compilateur.
+   Les versions précédentes du compilateur ne détectaient pas les modifications apportées aux paramètres de l’indicateur d’optimisation qui échappent un fichier d’en-tête inclus dans une unité de traduction. Désormais, le compilateur détecte et informe le programmeur du code écrit de cette façon, et il émet un avertissement C4426 facultatif à l’emplacement du `#include`incriminé, si cette fonctionnalité est activée. Cet avertissement est émis uniquement si le modifications entrent en conflit avec les indicateurs d’optimisation définis par des arguments de ligne de commande au compilateur.
 
    ```Output
     warning C4426: optimization flags changed after including header, may be due to #pragma optimize()
@@ -1487,7 +1487,7 @@ Dans Visual Studio 2015 et ultérieur, les améliorations continues de la confor
 
 #### <a name="compiler"></a>Compilateur
 
-Le compilateur Microsoft C++ prend en charge les fonctionnalités de langage ISO C++11 suivantes :
+Le compilateur Microsoft Visual C++ prend en charge les fonctionnalités de langage ISO C++11 suivantes :
 
 - Arguments template par défaut pour les modèles de fonction.
 - Constructeurs effectuant une délégation
@@ -1504,8 +1504,8 @@ Le compilateur Microsoft C++ prend en charge les fonctionnalités de langage ISO
 - Littéraux composites.
 - Initialiseurs désignés.
 - Combinaison de déclarations et de code.
-- La conversion de littéraux de chaîne en valeurs modifiables peut être interdite en utilisant la nouvelle option de compilateur /Zc:strictStrings. En C++98, la conversion de littéraux de chaîne en char\* (et de littéraux de chaîne étendus en wchar_t\*) a été dépréciée. En C++11, la conversion a été entièrement supprimée. Bien que le compilateur puisse se conformer strictement à la norme, il propose à la place l’option /Zc:strictStrings qui vous permet de contrôler la conversion. L'option est désactivée par défaut. Notez que lorsque vous utilisez cette option en mode débogage, la bibliothèque STL n'est pas compilée.
-- Casts de références rvalue/lvalue. Avec les références rvalue, C++11 peut clairement distinguer les valeurs lvalue des valeurs rvalue. Auparavant, le compilateur Visual C++ ne fournissait pas cette distinction dans certains scénarios de cast spécifiques. Une nouvelle option de compilateur, /Zc:rvalueCast, a été ajoutée pour rendre le compilateur conforme au document de travail Langages C++ (consultez la section 5.4, [expr.cast]/1). Le comportement par défaut lorsque cette option n'est pas spécifiée est le même que dans Visual Studio 2012.
+- La conversion de littéraux de chaîne en valeurs modifiables peut être interdite en utilisant la nouvelle option de compilateur **/Zc:strictStrings**. En C++98, la conversion de littéraux de chaîne en char\* (et de littéraux de chaîne étendus en wchar_t\*) a été dépréciée. En C++11, la conversion a été entièrement supprimée. Bien que le compilateur puisse se conformer strictement à la norme, il propose à la place l’option **/Zc:strictStrings** qui vous permet de contrôler la conversion. L'option est désactivée par défaut. Notez que lorsque vous utilisez cette option en mode débogage, la bibliothèque STL n'est pas compilée.
+- Casts de références rvalue/lvalue. Avec les références rvalue, C++11 peut clairement distinguer les valeurs lvalue des valeurs rvalue. Auparavant, le compilateur ne fournissait pas cette distinction dans certains scénarios de transtypage spécifiques. Une nouvelle option de compilateur, **/Zc:rvalueCast**, a été ajoutée pour rendre le compilateur conforme au document de travail Langages C++ (consultez la section 5.4, [expr.cast]/1). Le comportement par défaut lorsque cette option n'est pas spécifiée est le même que dans Visual Studio 2012.
   - Remarque: Pour les fonctions utilisées par défaut, l’utilisation de =default pour demander constructeurs de déplacement membre à membre et des opérateurs d’assignation de déplacement n’est pas prise en charge.
 
 ### <a name="c99-libraries"></a>Bibliothèques C99
@@ -1621,7 +1621,7 @@ Cette prise en charge améliorée des normes ISO C/C++ peut nécessiter des modi
 
 #### <a name="other-c11-enhancements"></a>Autres améliorations C++11
 
-- Boucles range-based for. Vous pouvez écrire des boucles plus fiables, que vous pouvez utiliser avec des tableaux, des conteneurs STL et des collections Windows Runtime sous la forme for (for-range-declaration : expression). Fait partie de la prise en charge du langage Core.
+- Boucles range-based for. Vous pouvez écrire des boucles plus fiables, que vous pouvez utiliser avec des tableaux, des conteneurs STL et des collections Windows Runtime sous la forme for (for-range-declaration : expression). Fait partie de la prise en charge du langage principal.
 - Les expressions lambda sans état, qui sont des blocs de code commençant par une introduction d’expression lambda vide [] et ne capturant aucune variable locale, sont maintenant convertibles en pointeurs de fonction, comme l’exige la norme C++11.
 - Prise en charge des énumérations délimitées. La clé Enum de la classe enum C++ est désormais prise en charge. Le code suivant montre comment cette clé Enum diffère du comportement enum précédent.
 
@@ -1856,7 +1856,7 @@ L’ajout du type de données YMMWORD prend en charge les opérandes multimédia
 
 - Les applications peuvent être liées à des versions spécifiques des bibliothèques Visual C++. Parfois, une application dépend des mises à jour qui ont été effectuées aux bibliothèques Visual C++ après la mise sur le marché d’une version. Dans ce cas, l’exécution de l’application sur un ordinateur disposant de versions antérieures des bibliothèques permettre entraîner un comportement inattendu. Vous pouvez maintenant lier une application à une version spécifique des bibliothèques afin qu’elle ne soit pas exécutée sur un ordinateur disposant d’une version antérieure de celles-ci.
 
-#### <a name="stlclr-library"></a>Bibliothèque STL/CLR
+#### <a name="stlclr-library"></a>STL/CLR, bibliothèque
 
 - Visual C++ inclut désormais la bibliothèque STL/CLR. La bibliothèque STL/CLR est un package de la bibliothèque STL (Standard Template Library), partie de la bibliothèque C++ standard, à utiliser avec C++ et le CLR (Common Language Runtime) du .NET Framework. Avec STL/CLR, vous pouvez maintenant utiliser tous les conteneurs, itérateurs et algorithmes de la bibliothèque STL dans un environnement managé.
 
@@ -1867,7 +1867,7 @@ L’ajout du type de données YMMWORD prend en charge les opérandes multimédia
 - La nouvelle classe CPagerCtrl simplifie l’utilisation du contrôle pager Windows.
 - La nouvelle classe CSplitButton simplifie l’utilisation du contrôle Splitbutton Windows pour sélectionner une valeur par défaut ou une action facultative.
 
-#### <a name="c-support-library"></a>Bibliothèque de prise en charge C++
+#### <a name="c-support-library"></a>bibliothèque de prise en charge C++
 
 - C++ introduit la bibliothèque de marshaling. La bibliothèque de marshaling fournit un moyen simple et optimisé de marshaler des données entre des environnements natifs et managés. La bibliothèque est une alternative à des approches moins efficaces et plus complexes telles que l’utilisation de PInvoke. Pour plus d’informations, consultez Vue d’ensemble du marshaling dans C++.
 
