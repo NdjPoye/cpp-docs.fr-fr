@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - multiple language support [C++]
 - localization [C++], MFC resources
@@ -19,16 +21,17 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4ba1c8d52796ae9251a79df9600be80612db33e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc97e73998c581a40ed7d344b1ade5ca90b94ac2
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Ressources localisées dans des applications MFC : DLL satellites
 Version MFC 7.0 et versions ultérieure fournit la prise en charge améliorée pour les DLL satellites, une fonctionnalité qui vous aide à créer des applications localisées pour différentes langues. Un satellite DLL est un [DLL de ressource uniquement](../build/creating-a-resource-only-dll.md) qui contient les ressources localisées pour une langue particulière d’une application. Lorsque l’application commence à s’exécuter, MFC charge automatiquement la ressource localisée la plus appropriée pour l’environnement. Par exemple, vous pouvez avoir une application avec les ressources de langue anglaise avec deux DLL satellites, chacune contenant une traduction Français de vos ressources et l’autre contenant une traduction en allemand. Lorsque l’application est exécutée sur un système de langue anglaise, il utilise les ressources en anglais. Si vous exécutez sur un système Français, il utilise les ressources en Français ; Si vous exécutez sur un système en allemand, il utilise les ressources en allemand.  
@@ -37,11 +40,11 @@ Version MFC 7.0 et versions ultérieure fournit la prise en charge améliorée p
   
  MFC tente de charger la DLL de ressource pour chacune des langues suivantes dans l’ordre, l’arrêt lorsqu’il détecte une :  
   
-1.  (Windows 2000 ou version ultérieure uniquement) Par défaut langue d’interface utilisateur l’utilisateur actuel, tel que retourné par l’API Win32 GetUserDefaultUILanguage().  
+1. Par défaut langue d’interface utilisateur l’utilisateur actuel, tel que retourné par l’API Win32 GetUserDefaultUILanguage().  
   
-2.  (Windows 2000 ou version ultérieure uniquement) Langue d’interface utilisateur par défaut de l’utilisateur actuel, sans aucune sous-langue spécifique (c'est-à-dire, ENC [Canadian English] devient ENU [des États-Unis Anglais]).  
+2.  Langue d’interface utilisateur par défaut de l’utilisateur actuel, sans aucune sous-langue spécifique (c'est-à-dire, ENC [Canadian English] devient ENU [des États-Unis Anglais]).  
   
-3.  Langue d’interface utilisateur du système par défaut. Sur Windows 2000 ou version ultérieure, il est retourné par l’API GetSystemDefaultUILanguage(). Sur d’autres plateformes, il s’agit de la langue du système d’exploitation lui-même.  
+3.  La langue du système par défaut l’interface utilisateur, tel que retourné par l’API GetSystemDefaultUILanguage(). Sur d’autres plateformes, il s’agit de la langue du système d’exploitation lui-même.  
   
 4.  La langue du système par défaut l’interface utilisateur, sans aucune sous-langue spécifique.  
   
@@ -49,7 +52,7 @@ Version MFC 7.0 et versions ultérieure fournit la prise en charge améliorée p
   
  Si MFC ne trouve pas toutes les DLL satellites, il utilise les ressources contenues dans l’application elle-même.  
   
- Par exemple, supposons qu’une application LangExample.exe utilise MFC et est en cours d’exécution sur Windows 2000 plusieurs système avec une interface utilisateur ; la langue de l’interface utilisateur du système est ENU [des États-Unis Anglais] et la langue de l’interface utilisateur de l’utilisateur actuel a la valeur FRC [Français canadien]. MFC recherche les DLL suivantes dans l’ordre suivant :  
+ Par exemple, supposons qu’une application LangExample.exe utilise MFC et s’exécute sur un système d’interface utilisateur multiples ; la langue de l’interface utilisateur du système est ENU [des États-Unis Anglais] et la langue de l’interface utilisateur de l’utilisateur actuel a la valeur FRC [Français canadien]. MFC recherche les DLL suivantes dans l’ordre suivant :  
   
 1.  LangExampleFRC.dll (langue de l’interface utilisateur de l’utilisateur).  
   

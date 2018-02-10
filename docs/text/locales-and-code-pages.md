@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - locales [C++], about locales
 - locale IDs [C++]
@@ -22,16 +24,17 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8f1134d106949918c7e8984835b86bbc4c6062f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 54ab2f67a382da831ff4c1038f0269d0044f751f
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="locales-and-code-pages"></a>Paramètres régionaux et pages de codes
 Un ID de paramètres régionaux reflète les conventions et langue locales pour une région géographique spécifique. Une langue donnée peut être parlée dans plusieurs pays/région ; par exemple, le portugais est parlé au Brésil et Portugal. À l’inverse, un pays/région peut avoir plusieurs langues officiels. Par exemple, le Canada a deux langues : anglais et le Français. Par conséquent, le Canada a deux paramètres régionaux distincts : anglais (Canada) et en Français canadien. Certaines catégories dépendent des paramètres régionaux, notamment la mise en forme des dates et le format d'affichage des valeurs monétaires.  
@@ -44,7 +47,7 @@ Un ID de paramètres régionaux reflète les conventions et langue locales pour 
   
  Pour plus d’informations sur les pages de code, consultez [Code Pages](../c-runtime-library/code-pages.md).  
   
- La bibliothèque Runtime C possède deux types de pages de codes internes : paramètres régionaux et multioctets. Vous pouvez modifier la page de codes en cours pendant l’exécution du programme (consultez la documentation relative à la [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) et [_setmbcp](../c-runtime-library/reference/setmbcp.md) fonctions). En outre, la bibliothèque Runtime peut obtenir et utiliser la valeur de la page de codes du système d’exploitation. Dans Windows 2000, la page de codes du système d’exploitation est la page de codes « ANSI par défaut du système ». Cette page de codes est constante pour la durée de l’exécution du programme.  
+ La bibliothèque Runtime C possède deux types de pages de codes internes : paramètres régionaux et multioctets. Vous pouvez modifier la page de codes en cours pendant l’exécution du programme (consultez la documentation relative à la [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) et [_setmbcp](../c-runtime-library/reference/setmbcp.md) fonctions). En outre, la bibliothèque Runtime peut obtenir et utiliser la valeur de la page de codes du système d’exploitation est constante pour la durée de l’exécution du programme.  
   
  Lorsque la page de codes des paramètres régionaux change, le comportement de l’ensemble de dépendant des paramètres régionaux des fonctions change en fonction de la page de codes choisie. Par défaut, toutes les fonctions dépendant des paramètres régionaux commencent l’exécution avec une page de codes des paramètres régionaux unique pour les paramètres régionaux « C ». Vous pouvez modifier la page de codes des paramètres régionaux interne (ainsi que d’autres propriétés spécifiques aux paramètres régionaux) en appelant le `setlocale` (fonction). Un appel à `setlocale`(LC_ALL, « ») définit les paramètres régionaux à celle indiquée par le système d’exploitation.  
   

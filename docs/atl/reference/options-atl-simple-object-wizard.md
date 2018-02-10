@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: vc.codewiz.class.atl.simple.options
-dev_langs: C++
-helpviewer_keywords: ATL Simple Object Wizard, options
+f1_keywords:
+- vc.codewiz.class.atl.simple.options
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c57206cb5be251e609f14132b4f0913a22b31534
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 37341dc23f95e1863aeae4a1b57c01d24d6ad365
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="options-atl-simple-object-wizard"></a>Options, Assistant Objet simple ATL
 Utilisez cette page de l’Assistant objet Simple ATL pour une efficacité accrue et de prise en charge de l’erreur pour l’objet.  
@@ -35,10 +40,10 @@ Utilisez cette page de l’Assistant objet Simple ATL pour une efficacité accru
 |Option|Description|  
 |------------|-----------------|  
 |`Single`|Spécifie que l’objet s’exécute toujours dans le thread COM principal. Consultez [Single-Threaded cloisonnements](http://msdn.microsoft.com/library/windows/desktop/ms680112) et [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) pour plus d’informations.|  
-|**Cloisonnement**|Spécifie que l’objet utilise le modèle de thread cloisonné. Cloisonnement du thread équivalent au seul. Chaque objet d’un composant avec thread cloisonné est attribué un cloisonnement pour son thread, pour la durée de vie de l’objet. Toutefois, plusieurs threads peuvent être utilisés pour plusieurs objets. Chaque cloisonnement est lié à un thread spécifique et possède une pompe de messages Windows (par défaut).<br /><br /> Consultez [Single-Threaded cloisonnements](http://msdn.microsoft.com/library/windows/desktop/ms680112) pour plus d’informations.|  
-|**Les deux**|Spécifie que l’objet peut utiliser cloisonné ou libre de threads, selon le type d’un thread est créé.|  
-|**Gratuit**|Spécifie que l’objet utilise le modèle de thread libre. Ce qui équivaut à un modèle de cloisonnement multithread. Consultez [multithreads cloisonnés](http://msdn.microsoft.com/library/windows/desktop/ms693421) pour plus d’informations.|  
-|**Neutre** (Windows 2000 uniquement)|Spécifie que l’objet suit les indications des multithreads cloisonnés, mais il peut s’exécuter sur n’importe quel type de thread.|  
+|**Apartment**|Spécifie que l’objet utilise le modèle de thread cloisonné. Cloisonnement du thread équivalent au seul. Chaque objet d’un composant avec thread cloisonné est attribué un cloisonnement pour son thread, pour la durée de vie de l’objet. Toutefois, plusieurs threads peuvent être utilisés pour plusieurs objets. Chaque cloisonnement est lié à un thread spécifique et possède une pompe de messages Windows (par défaut).<br /><br /> Consultez [Single-Threaded cloisonnements](http://msdn.microsoft.com/library/windows/desktop/ms680112) pour plus d’informations.|  
+|**Both**|Spécifie que l’objet peut utiliser cloisonné ou libre de threads, selon le type d’un thread est créé.|  
+|**Free**|Spécifie que l’objet utilise le modèle de thread libre. Ce qui équivaut à un modèle de cloisonnement multithread. Consultez [multithreads cloisonnés](http://msdn.microsoft.com/library/windows/desktop/ms693421) pour plus d’informations.|  
+|**Neutral**|Spécifie que l’objet suit les indications des multithreads cloisonnés, mais il peut s’exécuter sur n’importe quel type de thread.|  
   
  **Aggregation**  
  Indique si l’objet utilise [agrégation](http://msdn.microsoft.com/library/windows/desktop/ms686558). L’objet d’agrégat choisit les interfaces à exposer aux clients et les interfaces sont exposées comme si l’objet d’agrégation les implémenter. Les clients de l’objet d’agrégat communiquent uniquement avec l’objet d’agrégation.  
@@ -54,10 +59,10 @@ Utilisez cette page de l’Assistant objet Simple ATL pour une efficacité accru
   
 |Option|Description|  
 |------------|-----------------|  
-|**Double**|Spécifie que l’objet prend en charge une interface double (sa table vtable a des fonctions d’interface personnalisée ainsi la liaison tardive `IDispatch` méthodes). Permet à la fois les clients COM et [contrôleurs Automation](../../mfc/automation-clients.md) pour accéder à l’objet. Valeur par défaut.|  
+|**Dual**|Spécifie que l’objet prend en charge une interface double (sa table vtable a des fonctions d’interface personnalisée ainsi la liaison tardive `IDispatch` méthodes). Permet à la fois les clients COM et [contrôleurs Automation](../../mfc/automation-clients.md) pour accéder à l’objet. Valeur par défaut.|  
 |**Personnalisé**|Spécifie que l’objet prend en charge une interface personnalisée (sa table vtable a des fonctions d’interface personnalisées). Une interface personnalisée peut être plus rapide qu’une interface double, en particulier les limites du processus.<br /><br /> -   **Compatible Automation** contrôleurs d’Automation de permet d’accéder à un objet qui possède la prise en charge de l’interface personnalisée.|  
   
- **Prise en charge**  
+ **Support**  
  Indique la prise en charge supplémentaire pour l’objet.  
   
 |Option|Description|  

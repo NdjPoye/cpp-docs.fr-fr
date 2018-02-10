@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,19 +17,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CDacl::GetAceCount
 - ATLSECURITY/ATL::CDacl::RemoveAce
 - ATLSECURITY/ATL::CDacl::RemoveAllAces
-dev_langs: C++
-helpviewer_keywords: CDacl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f57fc1bdd641fbc8e770ddc9b37480530034ba1d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5ac83d5c1f72bf1df20d41ec39b464ddb79e4f8e
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cdacl-class"></a>Classe de CDacl
 Cette classe est un wrapper pour une structure de la liste DACL (liste de contrôle d’accès discrétionnaire).  
@@ -49,7 +53,7 @@ class CDacl : public CAcl
 |Nom|Description|  
 |----------|-----------------|  
 |[CDacl::CDacl](#cdacl)|Constructeur.|  
-|[CDacl :: ~ CDacl](#dtor)|Destructeur.|  
+|[CDacl::~CDacl](#dtor)|Destructeur.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -84,7 +88,7 @@ class CDacl : public CAcl
 ## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h  
   
-##  <a name="addallowedace"></a>CDacl::AddAllowedAce  
+##  <a name="addallowedace"></a>  CDacl::AddAllowedAce  
  Ajoute un ACE autorisée (entrée de contrôle d’accès) pour le `CDacl` objet.  
   
 ```
@@ -123,12 +127,9 @@ bool AddAllowedAce(
 ### <a name="remarks"></a>Notes  
  A `CDacl` objet contient zéro ou plusieurs entrées (contrôle d’accès) qui identifient les utilisateurs et groupes qui peuvent accéder à l’objet. Cette méthode ajoute un ACE qui autorise l’accès à la `CDacl` objet.  
   
-> [!NOTE]
->  La deuxième forme de `AddAllowedAce` est uniquement disponible sur Windows 2000 et versions ultérieures.  
-  
  Consultez [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) pour obtenir une description des indicateurs différents qui peuvent être définies dans le `AceFlags` paramètre.  
   
-##  <a name="adddeniedace"></a>CDacl::AddDeniedAce  
+##  <a name="adddeniedace"></a>  CDacl::AddDeniedAce  
  Ajoute un ACE refusé (entrée de contrôle d’accès) pour le `CDacl` objet.  
   
 ```
@@ -167,12 +168,9 @@ bool AddDeniedAce(
 ### <a name="remarks"></a>Notes  
  A `CDacl` objet contient zéro ou plusieurs entrées (contrôle d’accès) qui identifient les utilisateurs et groupes qui peuvent accéder à l’objet. Cette méthode ajoute un ACE qui refuse l’accès à la `CDacl` objet.  
   
-> [!NOTE]
->  La deuxième forme de `AddDeniedAce` est uniquement disponible sur Windows 2000 et versions ultérieures.  
-  
  Consultez [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) pour obtenir une description des indicateurs différents qui peuvent être définies dans le `AceFlags` paramètre.  
   
-##  <a name="cdacl"></a>CDacl::CDacl  
+##  <a name="cdacl"></a>  CDacl::CDacl  
  Constructeur.  
   
 ```
@@ -187,7 +185,7 @@ CDacl () throw();
 ### <a name="remarks"></a>Notes  
  Le `CDacl` objet peut être éventuellement créé à l’aide d’un fichier **ACL** structure. Il est important de noter que seule une liste DACL (liste de contrôle d’accès discrétionnaire), et pas une liste (SACL) (liste de contrôle d’accès système), doit être passé en tant que ce paramètre. Dans les versions debug, en passant une liste (SACL) entraîne une assertion. Dans les versions release, en passant une liste (SACL) entraîne l’ACE (entrées de contrôle d’accès) dans la liste ACL est ignoré, et aucune erreur ne se produira.  
   
-##  <a name="dtor"></a>CDacl :: ~ CDacl  
+##  <a name="dtor"></a>  CDacl::~CDacl  
  Destructeur.  
   
 ```
@@ -197,7 +195,7 @@ CDacl () throw();
 ### <a name="remarks"></a>Notes  
  Le destructeur libère les ressources acquises par l’objet, y compris toutes les ACE (entrées de contrôle d’accès) à l’aide de [CDacl::RemoveAllAces](#removeallaces).  
   
-##  <a name="getacecount"></a>CDacl::GetAceCount  
+##  <a name="getacecount"></a>  CDacl::GetAceCount  
  Retourne le nombre d’ACE (entrées de contrôle d’accès) dans le `CDacl` objet.  
   
 ```
@@ -207,7 +205,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le nombre d’entrées contenues dans le `CDacl` objet.  
   
-##  <a name="operator_eq"></a>CDacl::operator =  
+##  <a name="operator_eq"></a>  CDacl::operator =  
  Opérateur d'assignation.  
   
 ```
@@ -224,7 +222,7 @@ CDacl& operator= (const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Notes  
  Vous devez vous assurer que vous passez une liste DACL (liste de contrôle d’accès discrétionnaire) uniquement à cette fonction. En passant une liste SACL (liste de contrôle d’accès système) pour cette fonction provoque une assertion dans les versions debug, mais n’entraînera aucune erreur dans les versions release.  
   
-##  <a name="removeace"></a>CDacl::RemoveAce  
+##  <a name="removeace"></a>  CDacl::RemoveAce  
  Supprime un ACE spécifique (entrée de contrôle d’accès) de la `CDacl` objet.  
   
 ```
@@ -238,7 +236,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>Notes  
  Cette méthode est dérivée de [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
   
-##  <a name="removeallaces"></a>CDacl::RemoveAllAces  
+##  <a name="removeallaces"></a>  CDacl::RemoveAllAces  
  Supprime tous les ACE (entrées de contrôle d’accès) contenues dans le `CDacl` objet.  
   
 ```

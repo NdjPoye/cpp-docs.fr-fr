@@ -4,13 +4,15 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /tsaware
 - VC.Project.VCLinkerTool.TerminalServerAware
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Terminal Server
 - /TSAWARE linker option
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4c6fb783f717f730945f8d34c8fe2a03f5e1f6d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2956bd2ed8aa0c36e730468a15856cecfaf7e23f
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Créer une application sensible à Terminal Server)
 ```  
@@ -43,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  Si vous utilisez /TSAWARE et que votre application utilise toujours les fichiers INI, les fichiers seront partagés par tous les utilisateurs du système. Si ce n’est acceptable, vous pouvez toujours lier votre application avec l’option /TSAWARE ; Sinon, vous devez utiliser/TSAWARE : no.  
   
- L’option /TSAWARE est activée par défaut pour Windows 2000 et versions ultérieures, pour Windows et les applications de console. Consultez [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) et [/VERSION](../../build/reference/version-version-information.md) pour plus d’informations.  
+ L’option /TSAWARE est activée par défaut pour les applications Windows et console. Consultez [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) et [/VERSION](../../build/reference/version-version-information.md) pour plus d’informations.  
   
  /TSAWARE n’est pas valide pour les pilotes, VXD ou DLL.  
   

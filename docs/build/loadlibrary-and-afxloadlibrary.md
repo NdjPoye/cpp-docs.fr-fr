@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: LoadLibrary
-dev_langs: C++
+f1_keywords:
+- LoadLibrary
+dev_langs:
+- C++
 helpviewer_keywords:
 - DLLs [C++], AfxLoadLibrary
 - DLLs [C++], LoadLibrary
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03fc696af7605f9937ecddf40a06a0c020aff82c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd24f125398cab606ca835094727a4a2819fb17e
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary et AfxLoadLibrary
 Traite l’appel [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (ou [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) pour une liaison explicite à une DLL. Si la fonction réussit, elle mappe la DLL spécifiée dans l’espace d’adressage du processus appelant et retourne un handle vers la DLL qui peut être utilisée avec d’autres fonctions pour une liaison explicite, par exemple, `GetProcAddress` et `FreeLibrary`.  
@@ -39,7 +43,7 @@ Traite l’appel [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) 
  Si Windows ne peut pas charger la DLL, le processus peut tenter une récupération à partir de l’erreur. Par exemple, le processus peut avertir l’utilisateur de l’erreur et demandez à l’utilisateur de spécifier un autre chemin d’accès à la DLL.  
   
 > [!IMPORTANT]
->  Si le code doit s’exécuter sous Windows NT 4, Windows 2000 ou Windows XP (avant SP1), veillez à spécifier le chemin d’accès complet de toutes les DLL. Sur ces systèmes d’exploitation, le répertoire actif est tout d’abord recherché lors du chargement de fichiers. Si vous ne sont pas éligibles le chemin d’accès du fichier, un fichier qui n’est pas celle prévue peut être chargé.  
+>  Veillez à spécifier le chemin d’accès complet de toutes les DLL. Le répertoire actif est tout d’abord recherché lors du chargement de fichiers. Si vous ne sont pas éligibles le chemin d’accès du fichier, un fichier qui n’est pas celle prévue peut être chargé.  
   
 ## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?  
   

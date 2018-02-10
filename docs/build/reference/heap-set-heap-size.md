@@ -4,30 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - VC.Project.VCLinkerTool.HeapCommitSize
 - /heap
 - VC.Project.VCLinkerTool.HeapReserveSize
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - -HEAP linker option
 - heap allocation, setting heap size
 - /HEAP linker option
 - HEAP linker option
 ms.assetid: a3f71927-7f1d-492c-9fdb-dfccb1a043da
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1ddbbeb373a5c1c9a7b5a14d124900782048fbeb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5dd4ba44a76fa7881ebee2ec2f472dad8675e2c8
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="heap-set-heap-size"></a>/HEAP (Définir la taille des tas)
 ```  
@@ -39,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  Le *réserver* argument spécifie l’allocation totale des tas dans la mémoire virtuelle. La taille de segment de mémoire par défaut est 1 Mo. L’éditeur de liens arrondit la valeur spécifiée aux plus proche de 4 octets.  
   
- Le paramètre facultatif `commit` argument est soumis à l’interprétation par le système d’exploitation. Dans Windows NT et Windows 2000, il spécifie la quantité de mémoire physique à allouer à la fois. Mémoire virtuelle dédiée, espace à réserver dans le fichier d’échange. Un degré plus élevé `commit` valeur fait gagner du temps quand l’application requiert davantage d’espace du tas, mais augmente les besoins en mémoire et éventuellement le temps de démarrage.  
+ Le paramètre facultatif `commit` argument spécifie la quantité de mémoire physique à allouer à la fois. Mémoire virtuelle dédiée, espace à réserver dans le fichier d’échange. Un degré plus élevé `commit` valeur fait gagner du temps quand l’application requiert davantage d’espace du tas, mais augmente les besoins en mémoire et éventuellement le temps de démarrage.  
   
  Spécifiez le *réserver* et `commit` les valeurs dans la notation décimale ou en langage C.  
   

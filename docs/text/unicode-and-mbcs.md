@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - MBCS [C++], Unicode
 - MFC [C++], character sets
@@ -19,26 +22,24 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - runtime [C++], language portability
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8e64edebc511445973a7fbb79f8fb8ccfd3f607b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9a841fc97715782c303065e37cbaeb8137cf0bc3
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="unicode-and-mbcs"></a>Unicode et MBCS
 La bibliothèque Microsoft Foundation Classes (MFC), la bibliothèque Runtime C pour Visual C++ et l’environnement de développement Visual C++ sont activées pour faciliter la programmation internationale. Ils fournissent :  
   
--   Prise en charge de la norme Unicode sous Windows 2000 (anciennement Windows NT). Unicode est la norme actuelle et doit être utilisé chaque fois que possible.  
+-   Prise en charge de la norme Unicode sous Windows. Unicode est la norme actuelle et doit être utilisé chaque fois que possible.  
   
      Unicode est un caractère de 16 bits de codage, permettant le codage pour toutes les langues. Tous les caractères ASCII sont inclus dans Unicode en tant que caractères élargis.  
-  
-    > [!NOTE]
-    >  La norme Unicode n’est pas pris en charge sur Windows 95, Windows 98 ou Windows Millennium Edition.  
   
 -   Prise en charge pour un formulaire de jeu de caractères multioctets (MBCS) appelé jeu de caractères de codés sur deux octets (DBCS) sur toutes les plateformes.  
   

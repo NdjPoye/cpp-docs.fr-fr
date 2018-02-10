@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - servers [MFC], initializing
 - initializing servers [MFC]
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c0b97a249246a9f7f9d47880f75bdce2ca643ae3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 636a0c2ff254957724511a067fa64533cb4837aa
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="registration"></a>Inscription
 Lorsqu'un utilisateur souhaite insérer un élément OLE dans une application OLE, OLE présente une liste des types d'objets dans le but d'en choisir un. OLE obtient la liste de la base de données d'inscription du système, qui contient les informations fournies par les applications serveur. Lorsqu'un serveur s'inscrit lui-même, les entrées qu'il place dans la base de données d'inscription du système (le Registre) décrivent chaque type d'objet qu'il fournit, les extensions de fichier, le chemin d'accès à lui-même, parmi d'autres informations.  
@@ -44,12 +47,12 @@ Lorsqu'un utilisateur souhaite insérer un élément OLE dans une application OL
 > [!NOTE]
 >  Les applications MFC générées par l'application Assistant s'inscrivent automatiquement elles-mêmes lorsqu'elles sont exécutées en tant qu'applications autonomes.  
   
- Si vous voulez enregistrer votre application pendant l'installation, utilisez le programme RegEdit.exe. (Sous Windows 95, Windows 98 et Windows ME, RegEdit se trouve dans le répertoire Windows. Sous Windows NT et Windows 2000, RegEdit se trouve dans le répertoire Windows System32.) Si vous incluez un programme d’installation avec votre application, ont le programme d’installation exécute « RegEdit /S *appname*.reg ». (L'indicateur /S indique l'opération silencieuse, c'est-à-dire qu'il n'affiche pas la boîte de dialogue qui signale la réussite de l'exécution de la commande.) Sinon, fournissez des instructions à l'utilisateur pour qu'il exécute le programme RegEdit manuellement.  
+ Si vous voulez enregistrer votre application pendant l'installation, utilisez le programme RegEdit.exe. Si vous incluez un programme d’installation avec votre application, ont le programme d’installation exécute « RegEdit /S *appname*.reg ». (L'indicateur /S indique l'opération silencieuse, c'est-à-dire qu'il n'affiche pas la boîte de dialogue qui signale la réussite de l'exécution de la commande.) Sinon, fournissez des instructions à l'utilisateur pour qu'il exécute le programme RegEdit manuellement.  
   
 > [!NOTE]
 >  Le fichier .reg créé par l'assistant Application n'inclut pas de chemin d'accès complet du fichier exécutable. Le programme d’installation doit modifier le fichier .reg pour inclure le chemin d’accès complet au fichier exécutable ou modifier la variable d’environnement PATH pour inclure le répertoire d’installation.  
   
- RegEdit fusionne le contenu du fichier texte .reg dans la base de données d'inscription. Pour vérifier la base de données ou la réparer, utilisez l'Éditeur du Registre. Faites attention à ne pas supprimer des entrées OLE essentielles. (Sous Windows 95, Windows 98 et Windows ME, l'Éditeur du Registre est RegEdit.exe. Sous Windows NT et Windows 2000, il s'agit de RegEdit32.exe.)  
+ RegEdit fusionne le contenu du fichier texte .reg dans la base de données d'inscription. Pour vérifier la base de données ou la réparer, utilisez l'Éditeur du Registre. Faites attention à ne pas supprimer des entrées OLE essentielles.  
   
 ##  <a name="_core_server_initialization"></a>Initialisation du serveur  
  Lorsque vous créez une application serveur avec l’assistant Application, l’assistant termine toutes les tâches d’initialisation automatiquement. Cette section explique ce que vous devez faire si vous écrivez une application serveur manuellement.  
@@ -66,7 +69,7 @@ Lorsqu'un utilisateur souhaite insérer un élément OLE dans une application OL
   
 ## <a name="see-also"></a>Voir aussi  
  [OLE](../mfc/ole-in-mfc.md)   
- [Serveurs](../mfc/servers.md)   
+ [Servers](../mfc/servers.md)   
  [CWinApp::RunAutomated](../mfc/reference/cwinapp-class.md#runautomated)   
  [CWinApp::RunEmbedded](../mfc/reference/cwinapp-class.md#runembedded)   
  [COleTemplateServer, classe](../mfc/reference/coletemplateserver-class.md)

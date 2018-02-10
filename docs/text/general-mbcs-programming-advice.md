@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - MBCS [C++], dialog box fonts
 - MS Shell Dlg
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8a09bfb9b30e279e8d0b7696055c1e54ac56bfae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b379c163963a9ae0dd0c59c7d0fc809fee4f46d0
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="general-mbcs-programming-advice"></a>Conseils généraux sur la programmation MBCS
 Utilisez les conseils suivants :  
@@ -39,7 +43,7 @@ Utilisez les conseils suivants :
   
 -   Lors de la conception des boîtes de dialogue, prévoyez environ 30 % espace supplémentaire à la fin des contrôles de texte statique pour la traduction de MBCS.  
   
--   Soyez prudent lors de la sélection de polices pour votre application, car certaines polices ne sont pas disponibles sur tous les systèmes. Par exemple, la version japonaise de Windows 2000 ne prend pas en charge la police Helvetica.  
+-   Soyez prudent lors de la sélection de polices pour votre application, car certaines polices ne sont pas disponibles sur tous les systèmes.  
   
 -   Lorsque vous sélectionnez la police des boîtes de dialogue, utilisez [MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112) au lieu de MS Sans Serif et Helvetica. MS Shell Dlg est remplacée par la police appropriée par le système avant de créer la boîte de dialogue. À l’aide de MS Shell Dlg permet de s’assurer que toutes les modifications dans le système d’exploitation pour agir sur cette police seront automatiquement disponibles. (MFC remplace MS Shell Dlg par DEFAULT_GUI_FONT ou la police système sur Windows 95, Windows 98 et Windows NT 4 car ces systèmes ne gèrent pas correctement MS Shell Dlg.)  
   

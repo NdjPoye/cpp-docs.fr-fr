@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - tools [C++], MBCS support
 - Asian languages [C++]
@@ -28,19 +31,20 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bdc00509d8660d8111ff1b966b7a881a153cb6c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 92d0b737c0cfb894f87da61519f30224f6a12fc1
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="mbcs-support-in-visual-c"></a>Prise en charge MBCS dans Visual C++
-Lorsque vous exécutez une version compatible MBCS du système d’exploitation Windows 2000 ou Windows XP, le système de développement Visual C++ (y compris l’éditeur de code source intégré, débogueur et les outils de ligne de commande) est MBCS, à l’exception de la fenêtre de la mémoire.  
+Lorsque vous exécutez sur une version MBCS de Windows, le système de développement Visual C++ (y compris les outils de l’éditeur, débogueur et ligne de commande de code source intégré) est MBCS, à l’exception de la fenêtre de la mémoire.  
   
  La fenêtre de mémoire n’interprète pas les octets de données en tant que caractères MBCS, même si elle peut les interpréter comme des caractères ANSI ou Unicode. Les caractères ANSI sont toujours 1 octet, la taille et les caractères Unicode sont de taille de 2 octets. Avec MBCS, les caractères peuvent être de taille de 1 ou 2 octets et leur interprétation dépend de la page de codes est en cours d’utilisation. Pour cette raison, il est difficile pour la fenêtre de la mémoire pour afficher des caractères MBCS de manière fiable. La fenêtre mémoire ne peut pas savoir quel octet correspond au début d’un caractère. Le développeur peut afficher les valeurs d’octets dans la fenêtre mémoire et recherchez la valeur dans les tables pour déterminer la représentation sous forme de caractères. Cela est possible, car le développeur sait l’adresse de départ d’une chaîne en fonction du code source.  
   

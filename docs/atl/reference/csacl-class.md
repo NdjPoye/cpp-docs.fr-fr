@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSacl::GetAceCount
 - ATLSECURITY/ATL::CSacl::RemoveAce
 - ATLSECURITY/ATL::CSacl::RemoveAllAces
-dev_langs: C++
-helpviewer_keywords: CSacl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 104c189b1f368b42ef1d93496629b4e142e1c938
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f4308211dd22c39311b4d767c4c4487d9bf23971
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csacl-class"></a>Classe de CSacl
 Cette classe est un wrapper pour une structure SACL (liste de contrôle d’accès système).  
@@ -48,7 +52,7 @@ class CSacl : public CAcl
 |Nom|Description|  
 |----------|-----------------|  
 |[CSacl::CSacl](#csacl)|Constructeur.|  
-|[CSacl :: ~ CSacl](#dtor)|Destructeur.|  
+|[CSacl::~CSacl](#dtor)|Destructeur.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -82,7 +86,7 @@ class CSacl : public CAcl
 ## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlsecurity.h  
   
-##  <a name="addauditace"></a>CSacl::AddAuditAce  
+##  <a name="addauditace"></a>  CSacl::AddAuditAce  
  Ajoute une entrée de contrôle d’accès (ACE) d’audit à le `CSacl` objet.  
   
 ```
@@ -129,11 +133,11 @@ bool AddAuditAce(
  Retourne **true** si l’ACE est ajoutée à la `CSacl` objet, **false** en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- A `CSacl` objet contient des entrées de contrôle d’accès (ACE) qui spécifient les types de tentatives d’accès qui génèrent des enregistrements d’audit dans le journal des événements de sécurité. Cette méthode ajoute ce type d’ACE pour le `CSacl` objet. La deuxième forme de `AddAuditAce` est uniquement disponible sur Windows 2000 et versions ultérieures.  
+ A `CSacl` objet contient des entrées de contrôle d’accès (ACE) qui spécifient les types de tentatives d’accès qui génèrent des enregistrements d’audit dans le journal des événements de sécurité. Cette méthode ajoute ce type d’ACE pour le `CSacl` objet.  
   
  Consultez [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) pour obtenir une description des indicateurs différents qui peuvent être définies dans le `AceFlags` paramètre.  
   
-##  <a name="csacl"></a>CSacl::CSacl  
+##  <a name="csacl"></a>  CSacl::CSacl  
  Constructeur.  
   
 ```
@@ -148,7 +152,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Notes  
  Le `CSacl` objet peut être éventuellement créé à l’aide d’un fichier **ACL** structure. Assurez-vous que ce paramètre est une liste de contrôle d’accès système (SACL) et non une liste de contrôle d’accès discrétionnaire (DACL). Dans les versions debug, si une liste DACL est fournie une assertion se produit. Dans les versions release, toutes les entrées dans une liste DACL sont ignorées.  
   
-##  <a name="dtor"></a>CSacl :: ~ CSacl  
+##  <a name="dtor"></a>  CSacl::~CSacl  
  Destructeur.  
   
 ```
@@ -158,7 +162,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Notes  
  Le destructeur libère les ressources acquises par l’objet, y compris toutes les entrées de contrôle d’accès (ACE).  
   
-##  <a name="getacecount"></a>CSacl::GetAceCount  
+##  <a name="getacecount"></a>  CSacl::GetAceCount  
  Retourne le nombre d’entrées de contrôle d’accès (ACE) dans le `CSacl` objet.  
   
 ```
@@ -168,7 +172,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le nombre d’entrées contenues dans le `CSacl` objet.  
   
-##  <a name="operator_eq"></a>CSacl::operator =  
+##  <a name="operator_eq"></a>  CSacl::operator =  
  Opérateur d'assignation.  
   
 ```
@@ -182,7 +186,7 @@ CSacl& operator=(const ACL& rhs) throw(...);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une référence à la mise à jour `CSacl` objet. Vérifiez que le **ACL** paramètre est en fait une liste de contrôle d’accès système (SACL) et non une liste de contrôle d’accès discrétionnaire (DACL). Dans les versions debug une assertion se produit et dans les versions release le **ACL** paramètre sera ignoré.  
   
-##  <a name="removeace"></a>CSacl::RemoveAce  
+##  <a name="removeace"></a>  CSacl::RemoveAce  
  Supprime un ACE spécifique (entrée de contrôle d’accès) de la **CSacl** objet.  
   
 ```
@@ -196,7 +200,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>Notes  
  Cette méthode est dérivée de [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
   
-##  <a name="removeallaces"></a>CSacl::RemoveAllAces  
+##  <a name="removeallaces"></a>  CSacl::RemoveAllAces  
  Supprime toutes les entrées de contrôle d’accès (ACE) contenues dans le `CSacl` objet.  
   
 ```
