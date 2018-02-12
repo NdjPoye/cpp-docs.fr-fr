@@ -1,28 +1,32 @@
 ---
 title: noalias | Documents Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/09/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: noalias_cpp
-dev_langs: C++
+f1_keywords:
+- noalias_cpp
+dev_langs:
+- C++
 helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 92e96ce931ea5bc44e03a5803865daa66f960e92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6fd57b10aba4298ff7facd725ab3ce1934ccf1ab
+ms.sourcegitcommit: f3c398b1c7dbf36ab71b5ca89d365b1913afa307
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="noalias"></a>noalias
 
@@ -32,13 +36,15 @@ ms.lasthandoff: 12/21/2017
 
 Si une fonction est annotée comme `noalias`, l'optimiseur peut supposer que, en plus des paramètres proprement dits, seuls les indirections de premier niveau des paramètres de pointeur sont référencées ou modifiées dans la fonction. L'état global visible est l'ensemble de toutes les données qui ne sont pas définies ou référencées en dehors de la portée de compilation, et leur adresse n'est pas prise. La portée de compilation est à tous les fichiers sources ([/LTCG (génération de Code d’édition de liens)](../build/reference/ltcg-link-time-code-generation.md) génère) ou un fichier source unique (non -**LTCG** build).
 
+Le `noalias` annotation s’applique uniquement dans le corps de la fonction annotée. Le marquage d’une fonction en tant que `__declspec(noalias)` n’affecte pas l’utilisation d’alias de pointeurs retourné par la fonction.
+
+Pour une autre annotation qui peut affecter les alias, consultez [__declspec (Restrict)](../cpp/restrict.md).
+
 ## <a name="example"></a>Exemple
 
-L'exemple suivant illustre l'utilisation de `__declspec(restrict)` et `__declspec(noalias)`. En règle générale, la mémoire retournée à partir de `malloc` est `restrict` , car les en-têtes CRT sont décorés correctement.
+L’exemple suivant illustre l’utilisation de `__declspec(noalias)`.
 
-Toutefois, dans cet exemple, les pointeurs `mempool` et `memptr` sont globaux afin que le compilateur ne dispose d’aucune assurance que la mémoire n’est pas soumis aux alias. Le fait de décorer les fonctions qui retournent des pointeurs avec `__declspec(restrict)` indique au compilateur que la mémoire vers laquelle pointe la valeur de retour n'a pas d'alias.
-
-Le fait de décorer la fonction dans l'exemple qui accède à la mémoire avec `__declspec(noalias)` indique au compilateur que cette fonction n'interfère pas avec l'état global, hormis par l'intermédiaire des pointeurs dans sa liste de paramètres.
+Lorsque la fonction `multiply` que les accès mémoire est annoté `__declspec(noalias)`, il indique au compilateur que cette fonction ne modifie pas l’état global, à l’exception à travers les pointeurs dans sa liste de paramètres.
 
 ```C
 // declspec_noalias.c
@@ -51,7 +57,7 @@ Le fait de décorer la fonction dans l'exemple qui accède à la mémoire avec `
 
 float * mempool, * memptr;
 
-__declspec(restrict) float * ma(int size)
+float * ma(int size)
 {
     float * retval;
     retval = memptr;
@@ -59,7 +65,7 @@ __declspec(restrict) float * ma(int size)
     return retval;
 }
 
-__declspec(restrict) float * init(int m, int n)
+float * init(int m, int n)
 {
     float * a;
     int i, j;
@@ -101,7 +107,7 @@ int main()
     a = init(M, N);
     b = init(N, P);
     c = init(M, P);
-
+ 
     multiply(a, b, c);
 }
 ```
@@ -109,4 +115,5 @@ int main()
 ## <a name="see-also"></a>Voir aussi
 
 [__declspec](../cpp/declspec.md)  
-[Mots clés](../cpp/keywords-cpp.md)
+[Mots clés](../cpp/keywords-cpp.md)  
+[__declspec(restrict)](../cpp/restrict.md)  
