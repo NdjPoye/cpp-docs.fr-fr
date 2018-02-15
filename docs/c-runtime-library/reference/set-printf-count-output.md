@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _set_printf_count_output
+ms.topic: reference
+apiname:
+- _set_printf_count_output
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,22 +26,24 @@ apitype: DLLExport
 f1_keywords:
 - set_printf_count_output
 - _set_printf_count_output
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - '%n format'
 - set_printf_count_output function
 - _set_printf_count_output function
 ms.assetid: d8259ec5-764e-42d0-9169-72172e95163b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 64110bb29551e4d99588a794080337284f5f2b6e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 279b14f0387348d322bbe09428af24daa5fd2f69
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
 Active ou désactive la prise en charge du format `%n` dans les fonctions de famille [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
@@ -56,13 +60,13 @@ int _set_printf_count_output(
  `enable`  
  Valeur différente de zéro pour activer la prise en charge de `%n`, 0 pour désactiver la prise en charge de `%n`.  
   
-## <a name="property-valuereturn-value"></a>Valeur de propriété/Valeur de retour  
+## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  État de la prise en charge de `%n` avant l’appel de cette fonction : valeur différente de zéro si la prise en charge de `%n` était activée, 0 si elle était désactivée.  
   
 ## <a name="remarks"></a>Notes  
  Pour des raisons de sécurité, la prise en charge du spécificateur de format `%n` est désactivée par défaut dans `printf` et toutes ses variantes. Si `%n` est rencontré dans une spécification de format `printf`, le comportement par défaut est d’appeler le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Appel de `_set_printf_count_output` avec un argument différent de zéro entraîne `printf`-fonctions de famille pour interpréter `%n` comme décrit dans [syntaxe de spécification de Format : fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

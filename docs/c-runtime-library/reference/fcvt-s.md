@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _fcvt_s
+ms.topic: reference
+apiname:
+- _fcvt_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,23 +26,25 @@ apitype: DLLExport
 f1_keywords:
 - fcvt_s
 - _fcvt_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fcvt_s function
 - converting floating point, to strings
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9bd77d18f63885aa29f49ce8bd497f935d292e0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ba668d9c5604ee07b2cafdc4a9b8f70ae1cc884e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fcvts"></a>_fcvt_s
 Convertir un nombre à virgule flottante en chaîne. Il s’agit d’une version de [_fcvt](../../c-runtime-library/reference/fcvt.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -110,7 +114,7 @@ errno_t _fcvt_s(
   
  Une mémoire tampon de longueur `_CVTBUFSIZE` est suffisante pour n’importe quelle valeur à virgule flottante.  
   
- La différence entre `_ecvt_s` et `_fcvt_s` réside dans l’interprétation du paramètre `count`. `_ecvt_s`interprète `count` comme le nombre total de chiffres dans la chaîne de sortie, et `_fcvt_s` interprète `count` en tant que le nombre de chiffres après la virgule décimale.  
+ La différence entre `_ecvt_s` et `_fcvt_s` réside dans l’interprétation du paramètre `count`. `_ecvt_s` interprète `count` comme le nombre total de chiffres dans la chaîne de sortie, et `_fcvt_s` interprète `count` en tant que le nombre de chiffres après la virgule décimale.  
   
  En C++, l’utilisation de cette fonction est simplifiée par une surcharge de modèle ; la surcharge peut déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   

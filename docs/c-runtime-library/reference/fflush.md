@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: fflush
+ms.topic: reference
+apiname:
+- fflush
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,23 +23,26 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: fflush
-dev_langs: C++
+f1_keywords:
+- fflush
+dev_langs:
+- C++
 helpviewer_keywords:
 - streams, flushing
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2692e06416da3b62e5f9e87b4c0827d3003253e8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 23d90b61862736fc97c18343fe82f8ccf3aa42b5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fflush"></a>fflush
 Vide un flux.  
@@ -52,7 +57,7 @@ int fflush(
   
 #### <a name="parameters"></a>Paramètres  
  `stream`  
- Pointeur vers la structure `FILE`.  
+ Pointeur vers la structure `FILE` .  
   
 ## <a name="return-value"></a>Valeur de retour  
  `fflush` retourne 0 si la mémoire tampon a été vidée correctement. La valeur 0 est également retournée si le flux spécifié n’a aucune mémoire tampon ou est ouvert en lecture seule. Une valeur de retour égale à `EOF` indique une erreur.  
@@ -71,7 +76,7 @@ int fflush(
   
  Cette fonction verrouille le thread appelant et est donc thread-safe. Pour une version sans verrouillage, voir `_fflush_nolock`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Fonction|En-tête requis|  
 |--------------|---------------------|  
