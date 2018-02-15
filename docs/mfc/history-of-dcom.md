@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Remote Automation, DCOM
 - DCOM, about DCOM
 - DCOM
 ms.assetid: c21aa0ea-1396-4b52-b77f-88fb0fdd2a5c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 6ef567c39c93c3d43fdfc0fa63886144b03cd474
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="history-of-dcom"></a>Historique de DCOM
 Lors de l’Automation a été introduite dans 1993 anticipée, il a été pouvant être utilisé qu’entre des applications en cours d’exécution sur le même ordinateur. Toutefois, car elle partageait les mêmes que le reste des OLE, c'est-à-dire, COM (Component Object Model), il a toujours été prévu qu’elle devient « distant » lorsque COM lui-même a été mis à jour pour inclure des fonctionnalités de communication à distance. Il est également prévu que la transition d’un fonctionnement local fonctionnement distribué nécessiterait peu ou aucune modification au code existant.  

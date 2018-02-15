@@ -1,29 +1,34 @@
 ---
-title: "BASE DE DONNÉES | Documents Microsoft"
+title: DB | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: DB
-dev_langs: C++
-helpviewer_keywords: DB directive
+ms.topic: reference
+f1_keywords:
+- DB
+dev_langs:
+- C++
+helpviewer_keywords:
+- DB directive
 ms.assetid: 0c69ccaa-043f-46e1-9f95-dc76d9bc87c8
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5b713851af8b6dc11ea458eba55369ac613dae79
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ddedce01fad8fd294e0b29fcc0008e8b18516cfd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="db"></a>DB
-Alloue et éventuellement Initialise un octet de stockage pour chaque `initializer`. `DB`est un synonyme de [octets](../../assembler/masm/byte-masm.md)  
+Alloue et éventuellement Initialise un octet de stockage pour chaque `initializer`. `DB` est un synonyme de [octets](../../assembler/masm/byte-masm.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,5 +41,5 @@ Alloue et éventuellement Initialise un octet de stockage pour chaque `initializ
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence des directives](../../assembler/masm/directives-reference.md)   
- [BASE DE DONNÉES](../../assembler/masm/db.md)   
+ [DB](../../assembler/masm/db.md)   
  [SBYTE](../../assembler/masm/sbyte-masm.md)
