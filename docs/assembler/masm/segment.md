@@ -1,26 +1,31 @@
 ---
-title: SEGMENT | Documents Microsoft
+title: SEGMENT | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: SEGMENT
-dev_langs: C++
-helpviewer_keywords: SEGMENT directive
+ms.topic: reference
+f1_keywords:
+- SEGMENT
+dev_langs:
+- C++
+helpviewer_keywords:
+- SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce18933c27a62b1a89551320f75df7e25a67ef03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 253c3b389bd0411e6b5096e914b6a844c8f40805
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="segment"></a>SEGMENT
 Définit un segment de programme appelé *nom* ayant les attributs de segment  
@@ -45,15 +50,15 @@ name ENDS
 |**DWORD**|Prochaine adresse disponible mot double (4 octets par mot double).|  
 |**PARA**|Adresse de paragraphe disponible suivant (16 octets par paragraphe).|  
 |**PAGE**|Adresse de page disponible suivant (256 octets par page).|  
-|**ALIGNER**(*n*)|Suivant disponible  *n* adresse des octets th. Pour plus d’informations, reportez-vous à la section Notes.|  
+|**ALIGN**(*n*)|Suivant disponible  *n* adresse des octets th. Pour plus d’informations, reportez-vous à la section Notes.|  
   
  Si ce paramètre n’est pas spécifié, **PARA** est utilisé par défaut.  
   
  *combine*  
- **PUBLIC**, **pile**, **commune**, **mémoire**, **à***adresse*, **Privé**  
+ **PUBLIC**, **pile**, **commune**, **mémoire**, **à *** adresse*, **privé**  
   
- *utiliser*  
- **USE16**, **USE32**, **PLAT**  
+ *use*  
+ **USE16**, **USE32**, **FLAT**  
   
  `characteristics`  
  **INFORMATIONS**, **lire**, **écrire**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, et **ignorer**  
@@ -66,7 +71,7 @@ name ENDS
  Non pris en charge avec **/omf**.  
   
  `class`  
- Indique comment les segments doivent être combinés et classés dans le fichier assemblé. Les valeurs courantes sont, `'DATA'`, `'CODE'`, `'CONST'` et`'STACK'`  
+ Indique comment les segments doivent être combinés et classés dans le fichier assemblé. Les valeurs courantes sont, `'DATA'`, `'CODE'`, `'CONST'` et `'STACK'`  
   
 ## <a name="remarks"></a>Notes  
  Pour `ALIGN(n)`, `n` peut être n’importe quel puissance de 2 à partir de 1 à 8192 ; pas pris en charge avec **/omf**.  

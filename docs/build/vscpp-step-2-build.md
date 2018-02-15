@@ -4,19 +4,22 @@ description: Installer la prise en charge de Visual Studio pour Visual C++
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: get-started-article
-ms.technology: devlang-C++
+ms.technology:
+- devlang-C++
 ms.devlang: C++
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5b9c250b102b7d8847e99b87139136bc7df808b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2bbc2db5a86d44d2beabe32e265e91ddb0c90787
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Générer et exécuter un projet d’application console C++
 
@@ -83,6 +86,8 @@ Si les soulignements ondulés rouges s’affichent sous n’importe où dans l�
 ### <a name="run-your-code-in-a-command-window-issues"></a>Exécuter votre code dans une fenêtre de commande problèmes
 
 Vous pouvez également accéder au dossier de débogage de solution sur la ligne de commande pour exécuter votre application. Vous ne pouvez pas exécuter votre application à partir d’autres annuaires sans spécifier le chemin d’accès à l’application. Toutefois, vous pouvez copier votre application vers un autre répertoire et exécutez-le à partir de là.
+
+Si vous ne voyez pas **copie comme chemin d’accès** dans le menu contextuel, fermer le menu, puis maintenez la touche MAJ enfoncée pendant que vous l’ouvrez à nouveau. Il s’agit simplement pour des raisons pratiques. Vous pouvez également copier le chemin d’accès au dossier à partir de la barre de recherche de l’Explorateur de fichiers et collez-la dans la **exécuter** boîte de dialogue, puis entrez le nom de votre fichier exécutable à la fin. Il est en tapant un peu de plus, mais elle a le même résultat.
 
 [Retour.](#run-your-code-in-a-command-window)
 

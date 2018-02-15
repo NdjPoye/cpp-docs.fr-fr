@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: f7b89478-1ab5-4995-8cde-a805f0462c45
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5e7f69c2ac2dbd8a0079d9160100077ccd35513e
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2eb6b395ec8f47e820cb3184c0d88b4c91e712eb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="arm-assembler-command-line-reference"></a>Référence de la ligne de commande de l'assembleur ARM
 Cet article fournit des informations de ligne de commande sur l’assembleur Microsoft ARM, *armasm*, qui compile le langage d’assembly ARMv7 Thumb dans l’implémentation Microsoft du fichier de Format COFF (Common Object). L’éditeur de liens peut lier le code COFF avec le code d’objet qui est généré par l’assembleur ARM ou par le compilateur C, ainsi que des bibliothèques d’objets qui sont créés par le Générateur de bibliothèques.  
@@ -35,25 +38,25 @@ armasm [[options]] -o objectfile sourcefile
   
 #### <a name="parameters"></a>Paramètres  
  `options`  
- -erreurs`filename`  
+ -erreurs `filename`  
  Rediriger les erreurs et messages d’avertissement `filename`.  
   
- -i`dir[;dir]`  
+ -i `dir[;dir]`  
  Ajoutez les répertoires spécifiés dans le chemin de recherche include.  
   
- -prédéfinir`directive`  
+ -prédéfinir `directive`  
  Spécification d’une directive de jeu de NŒUDSUNE, SETL ou les jeux de prédéfinir un symbole. Exemple : **armasm.exe-prédéfinir source.asm de « COUNT jeu de NŒUDSUNE 150 »**. Pour plus d’informations, consultez la [guide des outils assembleur ARM](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
  -nowarn  
  Désactiver tous les messages d’avertissement.  
   
- -Ignorer`warning`  
+ -Ignorer `warning`  
  Désactiver l’avertissement spécifié. Pour les valeurs possibles, consultez la section sur les avertissements.  
   
  -aide  
  Imprimer le message d’aide en ligne de commande.  
   
- -ordinateur`machine`  
+ -ordinateur `machine`  
  Spécifiez le type de machine à définir dans l’en-tête PE.  Les valeurs possibles de `machine` sont :  
 **ARM**: définit le type de machine à IMAGE_FILE_MACHINE_ARMNT. Il s'agit de la valeur par défaut.   
 **THUMB**: définit le type de machine à IMAGE_FILE_MACHINE_THUMB.  
@@ -61,7 +64,7 @@ armasm [[options]] -o objectfile sourcefile
  -oldit  
  Générer le style ARMv7 blocs de l’informatique.  Par défaut, compatible avec ARMv8 informatique blocs sont générés.  
   
- -via`filename`  
+ -via `filename`  
  Lire les arguments de ligne de commande supplémentaires à partir de `filename`.  
   
  -16  
@@ -73,7 +76,7 @@ armasm [[options]] -o objectfile sourcefile
  -g  
  Générer des informations de débogage.  
   
- -errorReport :`option`  
+ -errorReport : `option`  
  Spécifiez comment interne assembleur les erreurs sont signalées à Microsoft.  Les valeurs possibles de `option` sont :   
 **aucun**: ne pas envoyer de rapports.   
 **invite**, inviter l’utilisateur à envoyer des rapports immédiatement.   
@@ -90,7 +93,7 @@ armasm [[options]] -o objectfile sourcefile
   
  **armasm myasmcode.asm -o myasmcode.obj**  
   
- **CL myccode.c /link myasmcode.obj**  
+ **cl myccode.c /link myasmcode.obj**  
   
 ## <a name="see-also"></a>Voir aussi  
  [Messages de Diagnostic assembleur ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)   

@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::ATL_DRAWINFO
 - ATL_DRAWINFO
 - ATL.ATL_DRAWINFO
-dev_langs: C++
-helpviewer_keywords: ATL_DRAWINFO structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70ea9b2532b8ab63bc9c840e7e08790b3af57342
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7a10932fd43e89af6d98d3d931d43810c710000
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atldrawinfo-structure"></a>Structure ATL_DRAWINFO
 Contient des informations utilisées pour le rendu à différentes cibles, comme une imprimante, un métafichier ou un contrôle ActiveX.  
@@ -55,7 +59,7 @@ struct ATL_DRAWINFO {
  **dwDrawAspect**  
  Spécifie comment la cible doit être représenté. Représentations sous forme de peut inclure le contenu, une icône, une miniature ou un document imprimé. Pour obtenir la liste des valeurs possibles, consultez [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) et [DVASPECT2](http://msdn.microsoft.com/library/windows/desktop/ms688644).  
   
- **lIndex Valeur de type**  
+ **lindex**  
  Partie de la cible qui présente un intérêt pour l’opération de dessin. Son interprétation varie en fonction de la valeur dans la **dwDrawAspect** membre.  
   
  **ptd**  
