@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - clog
 - clogf
@@ -33,22 +33,24 @@ f1_keywords:
 - complex/clog
 - complex/clogf
 - complex/clogl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - clog function
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 09cc64d10c997702e4dde2cff2b40ee4568bf42e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 045eaee50f988e5712fd23845bd91db68c75ba65
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clog-clogf-clogl"></a>clog, clogf, clogl
 Récupère le logarithme népérien d’un nombre complexe, avec une coupure sur l’axe des réels négatifs.  
@@ -93,7 +95,7 @@ _Lcomplex clogl(
 ## <a name="remarks"></a>Notes  
  C++ autorisant la surcharge, vous pouvez appeler des surcharges de `clog` qui acceptent et retournent des valeurs `_Fcomplex` et `_Lcomplex`. Dans un programme C, `clog` accepte et retourne toujours une valeur `_Dcomplex` .  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête C|En-tête C++|  
 |-------------|--------------|------------------|  

@@ -4,14 +4,16 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /CLR
 - VC.Project.VCNMakeTool.CompileAsManaged
 - VC.Project.VCCLCompilerTool.CompileAsManaged
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - cl.exe compiler, common language runtime option
 - -clr compiler option [C++]
@@ -20,16 +22,17 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-caps.latest.revision: "72"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6a867203585a66bd07eb9f95e289557e82e0553a
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a754e6c2fd8c709fd0397a2c0f78a7385819c586
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Compilation pour le Common Language Runtime)
 Permet aux applications et aux composants d’utiliser les fonctionnalités du Common Language Runtime (CLR).  
@@ -54,17 +57,10 @@ Permet aux applications et aux composants d’utiliser les fonctionnalités du C
  [How to: Migrate to /clr](../../dotnet/how-to-migrate-to-clr.md).  
   
  **/clr:pure**  
- Produit un fichier de sortie MSIL (Microsoft Intermediate Language) uniquement qui n'a aucun code exécutable natif. Toutefois, il peut contenir des types natifs compilés en MSIL.  
-  
- Pour plus d’informations, consultez [Code pur et vérifiable (C + c++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
-  
  /clr:pure est déconseillé. Une prochaine version du compilateur risque de ne plus prendre en charge cette option. Nous vous recommandons de porter vers C# du code devant être écrit en MSIL pur.  
   
  **/clr:safe**  
- Produit un fichier de sortie vérifiable MSIL uniquement (sans code exécutable natif). **/clr:safe** permet les diagnostics de vérification ([Outil PEVerify (Peverify.exe)](/dotnet/framework/tools/peverify-exe-peverify-tool)).  
-  
-
- /clr:safe est déconseillé. Une prochaine version du compilateur risque de ne plus prendre en charge cette option. Nous vous recommandons de porter vers C# du code devant être écrit en MSIL pur et vérifiable.  
+ /clr:safe est déconseillé. Une prochaine version du compilateur risque de ne plus prendre en charge cette option. Nous vous recommandons de porter du code doit être MSIL sécurisé en c#. 
   
  **/clr:noAssembly**  
  Indique qu'un manifeste d'assembly ne doit pas être inséré dans le fichier de sortie. Par défaut, l’option **noAssembly** n’est pas activée.  
@@ -96,7 +92,7 @@ Permet aux applications et aux composants d’utiliser les fonctionnalités du C
   
  Par défaut, l’option **/clr** n’est pas activée. Quand l’option **/clr** est activée, **/MD** l’est également. Pour plus d’informations, consultez l’article [/MD, /MT, /LD (Utiliser la bibliothèque Runtime)](../../build/reference/md-mt-ld-use-run-time-library.md). **/MD** garantit que les versions multithreads dynamiquement liées des routines d’exécution sont sélectionnées à partir des fichiers d’en-tête standard (.h). Le multithreading est requis pour la programmation managée, car le garbage collector CLR exécute les finaliseurs dans un thread auxiliaire.  
   
- Si vous effectuez la compilation en utilisant **/c**, vous pouvez spécifier le type CLR (IJW, safe ou pure) du fichier de sortie résultant avec [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md).  
+ Si vous compilez à l’aide de **/c**, vous pouvez spécifier le type CLR du fichier de sortie résultant avec [CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md).  
   
  **/clr** implique **/EHa**et aucune autre option **/EH** n’est prise en charge pour **/clr**. Pour plus d’informations, consultez l’article [/EH (Modèle de gestion des exceptions)](../../build/reference/eh-exception-handling-model.md).  
   
@@ -109,23 +105,6 @@ Permet aux applications et aux composants d’utiliser les fonctionnalités du C
  Quand l’option **/clr** est utilisée, le symbole `_MANAGED` est défini à 1. Pour plus d'informations, consultez [Predefined Macros](../../preprocessor/predefined-macros.md).  
   
  Les variables globales dans un fichier objet natif sont initialisées en premier (pendant DllMain si le fichier exécutable est une DLL), puis les variables globales figurant dans la section managée sont initialisées (avant l'exécution de tout code managé). `#pragma`[init_seg](../../preprocessor/init-seg.md) affecte uniquement l’ordre d’initialisation dans les catégories managées et non managées.  
-  
- La compilation à l’aide de **/clr:safe** est analogue à la compilation à l’aide de [/platform:anycpu](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option) dans des langages tels que C#.  
-  
-## <a name="safe-and-pure-images"></a>Images safe et pure  
- Une image pure utilise une version CLR de la bibliothèque Runtime C (CRT). Toutefois, le CRT n’est pas vérifiable ; vous ne pouvez donc pas l’utiliser pour compiler à l’aide de **/clr:safe**. Pour plus d’informations, consultez [Fonctionnalités de la bibliothèque CRT](../../c-runtime-library/crt-library-features.md).  
-  
- Des exemples de code natif ne pouvant pas s'afficher dans une image pure incluent assembly inline, [setjmp](../../c-runtime-library/reference/setjmp.md)et [longjmp](../../c-runtime-library/reference/longjmp.md).  
-  
- Chaque point d'entrée d'une image pure ou safe est managé. Quand vous compilez à l’aide de **/clr**, le point d’entrée est natif. Pour plus d'informations, consultez [__clrcall](../../cpp/clrcall.md).  
-  
- Quand vous effectuez la compilation à l’aide de **/clr:safe**, par défaut, les variables sont [appdomain](../../cpp/appdomain.md) et ne peuvent pas être par processus. Pour **/clr:pure**, bien que **appdomain** soit utilisé par défaut, vous pouvez utiliser des variables par [processus](../../cpp/process.md) .  
-  
- Lors de l’exécution d’un fichier .exe 32 bits compilé à l’aide de **/clr** ou de **/clr:pure** sur un système d’exploitation 64 bits, l’application s’exécutera sous WOW64, ce qui permet à une application 32 bits de s’exécuter sur le CLR 32 bits d’un système d’exploitation 64 bits. Par défaut, un fichier .exe compilé à l’aide de **/clr:safe** est exécuté sur le CLR 64 bits d’un ordinateur qui exécute un système d’exploitation 64 bits. (Sur un système d'exploitation 32 bits, le même fichier .exe s'exécuterait sur le CLR 32 bits.) Toutefois, une application sécurisée pourrait charger un composant 32 bits. Dans ce cas, une image safe s'exécutant sous la prise en charge 64 bits d'un système d'exploitation échouera lors du chargement de l'application 32 bits (BadFormatException). Pour garantir qu'une image safe continuera de s'exécuter lors du chargement d'une image 32 bits sur un système d'exploitation 64 bits, vous devez utiliser [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md) pour modifier les métadonnées (.corflags) et les marquer pour qu'elles s'exécutent sous WOW64. La ligne de commande suivante en est un exemple : (Substituez votre propre symbole d'entrée.)  
-  
- **cl /clr:safe t.cpp /link /clrimagetype:pure /entry:?main@@$$HYMHXZ /subsystem:console**  
-  
- Pour plus d’informations sur l’obtention d’un nom décoré, consultez [Decorated Names](../../build/reference/decorated-names.md). Pour plus d’informations sur les cibles 64 bits, consultez [configurer Visual C++ pour 64 bits, x64 cibles](../../build/configuring-programs-for-64-bit-visual-cpp.md). Pour plus d’informations sur l’utilisation de code CLR pur, consultez [Comment : migrer vers/clr : pure (C + c++ / CLI)](../../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md) et [Code pur et vérifiable (C + c++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
   
 ## <a name="metadata-and-unnamed-classes"></a>Métadonnées et classes sans nom  
  Les classes sans nom apparaîtront dans les métadonnées nommées comme suit : `$UnnamedClass$`*crc-nom-fichier-actuel*`$`*index*`$`, où *index* est un compteur séquentiel des classes sans nom dans la compilation. Ainsi, l'exemple de code suivant génère une classe sans nom dans les métadonnées.  

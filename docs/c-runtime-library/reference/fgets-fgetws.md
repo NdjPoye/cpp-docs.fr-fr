@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fgets
 - fgetws
@@ -27,7 +28,8 @@ f1_keywords:
 - _fgetts
 - fgetws
 - fgets
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fgetts function
 - streams, getting strings from
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - fgetws function
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70cccdc8dea6abb032fbf6170ca84ad866ddd491
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9b09d22df6da016ed2cc751082d17ee7e2f68786
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 Obtiennent une chaîne à partir d’un flux.  
@@ -81,7 +84,7 @@ wchar_t *fgetws(
  Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Notes  
- La fonction `fgets` lit une chaîne à partir de l’argument `stream` d’entrée et la stocke dans `str`. `fgets`lit les caractères à partir de la position actuelle du flux, y compris le premier caractère de saut de ligne, à la fin du flux, ou jusqu'à ce que le nombre de caractères lus est égal à `n` - 1, selon ce qui se produit en premier. Le résultat stocké dans `str` est assorti d’un caractère null. Le caractère de saut de ligne, s’il est lu, est inclus dans la chaîne.  
+ La fonction `fgets` lit une chaîne à partir de l’argument `stream` d’entrée et la stocke dans `str`. `fgets` lit les caractères à partir de la position actuelle du flux, y compris le premier caractère de saut de ligne, à la fin du flux, ou jusqu'à ce que le nombre de caractères lus est égal à `n` - 1, selon ce qui se produit en premier. Le résultat stocké dans `str` est assorti d’un caractère null. Le caractère de saut de ligne, s’il est lu, est inclus dans la chaîne.  
   
  `fgetws` est une version à caractères larges de `fgets`.  
   

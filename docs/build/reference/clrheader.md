@@ -1,29 +1,33 @@
 ---
-title: -CLRHEADER | Documents Microsoft
+title: -CLRHEADER | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: /CLRHEADER
-dev_langs: C++
+f1_keywords:
+- /CLRHEADER
+dev_langs:
+- C++
 helpviewer_keywords:
 - -CLRHEADER dumpbin option
 - /CLRHEADER dumpbin option
 - CLRHEADER dumpbin option
 ms.assetid: cf73424f-4541-47e2-b94e-69b95266ef2a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d8ab1617cffd7560ab47d69f7304df0c76b661eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 73f68c4f73d132254ea64d4b3b3b9f787f3a4b82
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clrheader"></a>/CLRHEADER
 ```  
@@ -31,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>Notes  
- où :  
+ où :  
   
  `file`  
  Génération d’un fichier image avec [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  
@@ -45,13 +49,9 @@ ms.lasthandoff: 12/21/2017
   
 -   0--/clr (image peut contenir du code natif).  
   
--   1--/ CLR : safe (l’image est MSIL uniquement, capable de s’exécuter sur n’importe quelle plateforme CLR et peut être vérifiable).  
-  
--   3--/ CLR : pure (image est en MSIL uniquement, mais ne peut s’exécuter sur x86 plateformes).  
-  
  Vous pouvez également vérifier par programme si une image a été créée pour le common language runtime.  Pour plus d’informations, consultez [Comment : déterminer si une Image est Native ou CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md).  
   
- Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015.  
+ Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015 et sera supprimées dans une future version du compilateur. Le code qui doit être « pure » ou « sécurisée » doit être déplacée vers c#. 
   
 ## <a name="see-also"></a>Voir aussi  
  [DUMPBIN, options](../../build/reference/dumpbin-options.md)

@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: /bigobj
-dev_langs: C++
+f1_keywords:
+- /bigobj
+dev_langs:
+- C++
 helpviewer_keywords:
 - -bigobj compiler option [C++]
 - /bigobj compiler option [C++]
 - bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 384ec0de9e5cb1b3172b980bf7f412abe759ff91
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 178206536522630616bfae0506bfa3edec98068c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (Augmenter le nombre de sections dans le fichier .obj)
 **/bigobj** augmente le nombre de sections qu’un fichier objet peut contenir.  
@@ -37,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Notes  
  Par défaut, un fichier objet peut contenir jusqu'à 65 536 (2 ^ 16) sections adressables. C’est le cas quel plateforme cible est spécifiée. **/bigobj** augmente cette capacité d’adressage à 4 294 967 296 (2 ^ 32).  
   
- La plupart des modules ne génèrent jamais d’un fichier .obj qui contient plus de 65 536 sections. Toutefois, code généré par ordinateur ou le code qui fait un usage intensif de bibliothèques de modèles peut nécessiter des fichiers .obj pouvant contenir plus de sections. **/bigobj** est activée par défaut sur les projets du Windows Store, car le code XAML généré par l’ordinateur comprend un grand nombre d’en-têtes. Si vous désactivez cette option sur un projet d’application du Windows Store, vous êtes susceptible de rencontrer l’erreur du compilateur C1128.  
+ La plupart des modules ne génèrent jamais d’un fichier .obj qui contient plus de 65 536 sections. Toutefois, code généré par ordinateur ou le code qui fait un usage intensif de bibliothèques de modèles peut nécessiter des fichiers .obj pouvant contenir plus de sections. **/bigobj** est activée par défaut sur les projets de plateforme Windows universelle (UWP), car le code XAML généré par l’ordinateur comprend un grand nombre d’en-têtes. Si vous désactivez cette option sur un projet d’application UWP, vous êtes susceptible de rencontrer l’erreur du compilateur C1128.  
   
  Éditeurs de liens fournis avant Visual C++ 2005 ne peut pas lire les fichiers .obj qui ont été générés avec **/bigobj**.  
   

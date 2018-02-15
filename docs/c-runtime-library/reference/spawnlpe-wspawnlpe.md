@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _spawnlpe
 - _wspawnlpe
@@ -28,7 +29,8 @@ f1_keywords:
 - _wspawnlpe
 - _spawnlpe
 - wspawnlpe
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wspawnlpe function
 - wspawnlpe function
@@ -38,22 +40,23 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: e171ebfa-70e7-4c44-8331-2a291fc17bd6
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 46c3677ac1f00597d4ed435f919bde21b4904582
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9347be590b8e51fc4cf40fccbf2eab9941806ac1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="spawnlpe-wspawnlpe"></a>_spawnlpe, _wspawnlpe
 Crée et exécute un nouveau processus.  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [fonctions CRT non prises en charge dans les applications de plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -83,7 +86,7 @@ intptr_t _wspawnlpe(
  Mode d'exécution du processus appelant.  
   
  `cmdname`  
- Chemin d’accès du fichier à exécuter.  
+ Chemin d'accès du fichier à exécuter.  
   
  `arg0, arg1, ... argn`  
  Liste des pointeurs vers les arguments. L'argument `arg0` est généralement un pointeur vers `cmdname`. Les arguments `arg1` à `argn` sont des pointeurs vers les chaînes de caractères qui forment la nouvelle liste d'arguments. Après `argn`, il doit exister un pointeur `NULL` pour marquer la fin de la liste des arguments.  
@@ -101,7 +104,7 @@ intptr_t _wspawnlpe(
  Argument `mode` non valide.  
   
  `ENOENT`  
- Fichier ou chemin d’accès introuvable.  
+ Fichier ou chemin d'accès introuvable.  
   
  `ENOEXEC`  
  Le fichier spécifié n'est pas exécutable ou a un format de fichier exécutable non valide.  
@@ -116,7 +119,7 @@ intptr_t _wspawnlpe(
   
  Ces fonctions valident leurs paramètres. Si `cmdname` ou `arg0` est une chaîne vide ou un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Parameter Validation](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions définissent `errno` avec la valeur `EINVAL`et retournent -1. Aucun nouveau processus généré.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

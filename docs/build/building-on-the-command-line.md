@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c5780fb725ab9ccfbba189894c22c991c415f6c2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9f613c20e0cab45a8eaa802c4c7ba0c6ac391357
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Générer du code C/C++ sur la ligne de commande
 
@@ -82,7 +85,7 @@ Fichiers de commandes supplémentaires sont disponibles pour configurer des arch
 >   
 > Le fichier vcvarsall.bat varie également d'une version à l'autre. Si la version actuelle de Visual C++ est installée sur un ordinateur qui possède également une version antérieure de Visual C++, n’exécutez pas vcvarsall.bat ou un autre fichier de commandes à partir de versions différentes dans la même fenêtre d’invite de commandes.  
  
-La façon la plus simple pour spécifier une architecture de build particulière dans une fenêtre de commande existante est d’utiliser le fichier vcvarsall.bat. Vous pouvez utiliser vcvarsall.bat pour définir les variables d’environnement pour configurer la ligne de commande pour la compilation native de 32 bits ou 64 bits, ou pour une compilation croisée x86, x64 ou des processeurs ARM. pour cibler Windows Store, plateforme Windows universelle ou plateformes de bureau Windows ; Pour spécifier le Kit de développement logiciel Windows à utiliser ; et pour spécifier la version d’ensemble d’outils de plateforme. Si aucun argument n’est fourni, vcvarsall.bat configure les variables d’environnement pour utiliser le compilateur natif 32 bits actuel pour x86 cibles de bureau Windows. Toutefois, vous pouvez l’utiliser pour configurer un natifs ou croisés outils du compilateur. Si vous spécifiez une configuration de compilateur qui n’est pas installée ou n’est pas disponible sur l’architecture de votre ordinateur de build, un message d’erreur s’affiche. Ce tableau montre les arguments de l’architecture prise en charge :  
+La façon la plus simple pour spécifier une architecture de build particulière dans une fenêtre de commande existante est d’utiliser le fichier vcvarsall.bat. Vous pouvez utiliser vcvarsall.bat pour définir les variables d’environnement pour configurer la ligne de commande pour la compilation native de 32 bits ou 64 bits, ou pour une compilation croisée x86, x64 ou des processeurs ARM. pour cibler Microsoft Store, plateforme Windows universelle ou plateformes de bureau Windows ; Pour spécifier le Kit de développement logiciel Windows à utiliser ; et pour spécifier la version d’ensemble d’outils de plateforme. Si aucun argument n’est fourni, vcvarsall.bat configure les variables d’environnement pour utiliser le compilateur natif 32 bits actuel pour x86 cibles de bureau Windows. Toutefois, vous pouvez l’utiliser pour configurer un natifs ou croisés outils du compilateur. Si vous spécifiez une configuration de compilateur qui n’est pas installée ou n’est pas disponible sur l’architecture de votre ordinateur de build, un message d’erreur s’affiche. Ce tableau montre les arguments de l’architecture prise en charge :  
   
 |Argument d’architecture vcvarsall.bat|Compilateur|Architecture de l’ordinateur hôte|Architecture de sortie de génération|  
 |----------------------------|--------------|----------------------------------|-------------------------------|  
@@ -176,7 +179,7 @@ Fournit des liens vers des articles qui expliquent comment utiliser MSBuild.EXE.
   
 ## <a name="related-sections"></a>Rubriques connexes  
 
-[/ MD, / MT, /LD (utiliser la bibliothèque Runtime)](../build/reference/md-mt-ld-use-run-time-library.md)  
+[/MD, /MT, /LD (Utiliser la bibliothèque Runtime)](../build/reference/md-mt-ld-use-run-time-library.md)  
 Décrit comment utiliser ces options de compilateur pour utiliser une bibliothèque runtime Debug ou Release.  
   
 [Options du compilateur C/C++](../build/reference/compiler-options.md)  

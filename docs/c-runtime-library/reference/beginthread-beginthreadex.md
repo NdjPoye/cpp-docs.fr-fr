@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _beginthread
 - _beginthreadex
@@ -28,7 +29,8 @@ f1_keywords:
 - _beginthread
 - beginthreadex
 - _beginthreadex
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _beginthread function
 - threading [C++], creating threads
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 71d47e67d56da59093db99b5da28daa6f1c18db2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f39ca2a386e605911f01ffe40cf23032d7ca7cb0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 Crée un thread.  
@@ -98,7 +101,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
  Indicateurs qui contrôlent l'état initial d'un nouveau thread. Affectez `initflag` à la valeur `0` pour une exécution immédiate, ou `CREATE_SUSPENDED` pour créer le thread dans un état interrompu. Utilisez [ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx) pour exécuter le thread. Affectez à `initflag` l'indicateur `STACK_SIZE_PARAM_IS_A_RESERVATION` pour utiliser `stack_size` comme taille de réserve initiale de la pile en octets ; si cet indicateur n'est pas spécifié, `stack_size` spécifie la taille de validation.  
   
  `thrdaddr`  
- Pointe vers une variable 32 bits qui reçoit l'identificateur du thread. Si sa valeur est NULL, il n'est pas utilisé.  
+ Pointe vers une variable 32 bits qui reçoit l'identificateur du thread. Si sa valeur est NULL, il n'est pas utilisé.  
   
 ## <a name="return-value"></a>Valeur de retour  
  En cas de réussite, chacune de ces fonctions retourne un handle au nouveau thread. Toutefois, si le nouveau thread se ferme trop rapidement, `_beginthread` peut ne pas retourner un handle valide. (Consultez la discussion dans la section Notes.) En cas d'erreur, `_beginthread` retourne -1L. Par ailleurs, `errno` prend la valeur `EAGAIN` s'il y a trop de threads, la valeur `EINVAL` si l'argument n'est pas valide ou si la taille de la pile est incorrecte, ou la valeur `EACCES` si les ressources sont insuffisantes (par exemple la mémoire). En cas d'erreur, `_beginthreadex` retourne 0 et `errno` et `_doserrno` sont définis.  
@@ -141,7 +144,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
   
  Pour le code mixte et pure, `_beginthread` et `_beginthreadex` ont chacun deux surcharges. L'une accepte un pointeur de fonction à convention d'appel native, l'autre accepte un pointeur de fonction `__clrcall` . La première surcharge n'est pas sécurisée au niveau du domaine d'application et ne le sera jamais. Si vous écrivez du code mixte ou du code pure, vous devez vérifier que le nouveau thread accède au domaine d'application correct avant d'accéder à des ressources managées. Pour cela, vous pouvez par exemple utiliser la [fonction call_in_appdomain](../../dotnet/call-in-appdomain-function.md). La seconde surcharge est sécurisée au niveau du domaine d'application ; le nouveau thread finit toujours dans le domaine d'application de l'appelant de `_beginthread` ou `_beginthreadex`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

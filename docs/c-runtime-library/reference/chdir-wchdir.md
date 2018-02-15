@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wchdir
 - _chdir
@@ -29,7 +30,8 @@ f1_keywords:
 - _wchdir
 - _tchdir
 - wchdir
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _tchdir function
 - _chdir function
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6025a7a4f17d1dd461981db255340d3fe9d6c3d9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 37cb327b13fafafdb357a6a53f624c494ee317b6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
 Change le répertoire de travail actif.  
@@ -72,7 +75,7 @@ int _wchdir(
  Ces fonctions retournent la valeur 0 en cas de réussite. Une valeur de retour de -1 indique un échec. Si le chemin spécifié est introuvable, `errno` est défini sur `ENOENT`. Si `dirname` a la valeur NULL, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Parameter Validation](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `errno` est défini sur `EINVAL` et la fonction retourne -1.  
   
 ## <a name="remarks"></a>Notes  
- La fonction `_chdir` change le répertoire de travail actuel pour le répertoire spécifié par `dirname`. Le paramètre `dirname` doit faire référence à un répertoire existant. Cette fonction peut changer le répertoire de travail actuel sur n’importe quel lecteur. Si une nouvelle lettre de lecteur est spécifiée dans `dirname`, la lettre du lecteur par défaut est également changée. Par exemple, si A est la lettre de lecteur par défaut et \BIN le répertoire de travail actuel, l’appel suivant change le répertoire de travail actuel pour le lecteur C et établit C comme nouveau lecteur par défaut :  
+ La fonction `_chdir` change le répertoire de travail actuel pour le répertoire spécifié par `dirname`. Le paramètre `dirname` doit faire référence à un répertoire existant. Cette fonction peut changer le répertoire de travail actuel sur n’importe quel lecteur. Si une nouvelle lettre de lecteur est spécifiée dans `dirname`, la lettre du lecteur par défaut est également changée. Par exemple, si A est la lettre de lecteur par défaut et \BIN le répertoire de travail actuel, l’appel suivant change le répertoire de travail actuel pour le lecteur C et établit C comme nouveau lecteur par défaut :  
   
 ```  
 _chdir("c:\\temp");  
@@ -88,7 +91,7 @@ _chdir("c:\\temp");
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tchdir`|`_chdir`|`_chdir`|`_wchdir`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|En-tête facultatif|  
 |-------------|---------------------|---------------------|  

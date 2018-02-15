@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - asinh
 - asinhf
@@ -28,22 +29,24 @@ f1_keywords:
 - asinhf
 - asinhl
 - asinh
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - asinh function
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cd9e19a9729f53aae9f3a4fd32787a9ae02eae7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 563e8a87adc07707aa6eb9baaacb634321bd768e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 Calcule le sinus hyperbolique inverse.  
@@ -75,16 +78,16 @@ long double asinhl(
 ## <a name="return-value"></a>Valeur de retour  
  Les fonctions `asinh` retournent le sinus hyperbolique inverse (arc sinus hyperbolique) de `x`. Cette fonction est valide sur le domaine à virgule flottante. Si `x` est une valeur NaN silencieuse, est indéfini ou infini, la même valeur est retournée.  
   
-|Entrée|Exception SEH|Exception `_matherr`|  
+|Entrée|Exception SEH|`_matherr` |  
 |-----------|-------------------|--------------------------|  
 |± QNAN, IND, INF|aucun|aucun|  
   
 ## <a name="remarks"></a>Notes  
  Quand vous utilisez C++, vous pouvez appeler des surcharges d'`asinh` qui acceptent et retournent des valeurs `float` ou `long double`. Dans un programme C, `asinh` accepte et retourne toujours `double`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
-|Fonction|En-tête C|En-tête C++|  
+|Fonction|En-tête C|En-tête C++|  
 |--------------|--------------|------------------|  
 |`asinh`, `asinhf`, `asinhl`|\<math.h>|\<cmath>|  
   

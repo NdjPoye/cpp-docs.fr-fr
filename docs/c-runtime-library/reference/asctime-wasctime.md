@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wasctime
 - asctime
@@ -27,7 +28,8 @@ f1_keywords:
 - _tasctime
 - asctime
 - _wasctime
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - asctime function
 - tasctime function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 377b785b2803dc7cce09e55baeb31323bf83b4b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c89b43613e1eb82eb35876ea733e13c5d2995352
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="asctime-wasctime"></a>asctime, _wasctime
 Convertissent une structure de temps `tm` en une chaîne de caractères. Des versions plus sécurisées de ces fonctions sont disponibles. Consultez [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md).  
@@ -74,7 +77,7 @@ wchar_t *_wasctime(
   
  La fonction `asctime` convertit une valeur de temps stockée en tant que structure en une chaîne de caractères. La valeur `timeptr` est généralement obtenue à partir d’un appel à `gmtime` ou `localtime`, qui retournent un pointeur désignant une structure `tm`, définie dans TIME.H.  
   
-|Membre de timeptr|Valeur|  
+|Membre de timeptr|Value|  
 |--------------------|-----------|  
 |`tm_hour`|Heures écoulées depuis minuit (0-23)|  
 |`tm_isdst`|Positif si l’heure d’été est en vigueur ; 0 si l’heure d’été n’est pas appliquée ; négatif si l’état de l’heure d’été est inconnu. La bibliothèque runtime C suppose que les règles de calcul de l’heure d’été sont celles des États-Unis.|  
@@ -100,7 +103,7 @@ wchar_t *_wasctime(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tasctime`|`asctime`|`asctime`|`_wasctime`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

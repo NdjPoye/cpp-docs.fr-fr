@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _lsearch_s
+ms.topic: reference
+apiname:
+- _lsearch_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - _lsearch_s
 - lsearch_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - linear searching
 - values, searching for
@@ -34,16 +37,17 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a54af825a9b9b0f0ca36c2f733d5df85d808a13a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a680c990ec91edf225057ea729fd3343a57610d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="lsearchs"></a>_lsearch_s
 Effectue une recherche linéaire portant sur une valeur. Version de [_lsearch](../../c-runtime-library/reference/lsearch.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -89,10 +93,10 @@ void *_lsearch_s(
   
 |`key`|`base`|`compare`|`num`|`size`|`errno`|  
 |-----------|------------|---------------|-----------|------------|-------------|  
-|`NULL`|tous|tous|tous|tous|`EINVAL`|  
-|tous|`NULL`|tous|!= 0|tous|`EINVAL`|  
-|tous|tous|tous|tous|zéro|`EINVAL`|  
-|tous|tous|`NULL`|an|any|`EINVAL`|  
+|`NULL`|any|any|any|any|`EINVAL`|  
+|any|`NULL`|any|!= 0|any|`EINVAL`|  
+|any|any|any|any|zéro|`EINVAL`|  
+|any|any|`NULL`|an|any|`EINVAL`|  
   
 ## <a name="remarks"></a>Notes  
  La fonction `_lsearch_s` effectue une recherche linéaire portant sur la valeur `key` dans un tableau de `num` éléments, chacun d’une taille de `width` octets. Contrairement à `bsearch_s`, `_lsearch_s` ne nécessite pas que le tableau soit trié. Si `key` n’est pas trouvé, `_lsearch_s` l’ajoute à la fin du tableau et incrémente `num`.  
@@ -101,7 +105,7 @@ void *_lsearch_s(
   
  Le pointeur `context` peut être utile si la structure de données explorée fait partie d’un objet et que la fonction `compare` doit accéder aux membres de l’objet. Par exemple, le code dans la fonction `compare` peut effectuer un cast du pointeur void vers le type d’objet approprié et accéder aux membres de cet objet. L’ajout du pointeur `context` sécurise `_lsearch_s`, car un contexte supplémentaire peut être utilisé pour éviter les bogues de réentrance associés à l’utilisation de variables statiques et rendre les données accessibles à la fonction `compare`.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

@@ -5,17 +5,18 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-ms.workload: cplusplus
-ms.openlocfilehash: 51c76e48023363fc7737aa690351801eceb3abf6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88bae92c568285e44965d6bfaca399709105d323
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-http-utility-functions"></a>Fonctions utilitaires de HTTP ATL
 
@@ -32,10 +33,10 @@ Ces fonctions prennent en charge la manipulation d’URL.
 |[RGBToHtml](#rgbtohtml)|Convertit un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur en texte HTML correspondant à cette valeur de couleur.|
 |[SystemTimeToHttpDate](#systemtimetohttpdate)|Appelez cette fonction pour convertir une heure système en une chaîne au format approprié pour être utilisée dans les en-têtes HTTP.|
 
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atlutil.h  
 
-## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a> AtlCanonicalizeUrl
 Appelez cette fonction pour rendre canonique une URL, notamment afin de convertir les caractères et espaces non sécurisés en séquences d'échappement.  
   
 ```    
@@ -59,13 +60,13 @@ inline BOOL AtlCanonicalizeUrl(
  `dwFlags`  
  Indicateurs ATL_URL contrôler le comportement de cette fonction. 
 
-- `ATL_URL_BROWSER_MODE`Ne pas encoder ou décoder les caractères après « # » ou « ? » et ne supprime pas l’espace blanc de fin après « ? ». Si cette valeur n’est pas spécifiée, l’URL entière est encodée et espace blanc de fin est supprimé.
-- `ATL_URL_DECODE`Convertit toutes les séquences de XX % en caractères, y compris les séquences d’échappement, avant que l’URL est analysée.
-- `ATL_URL_ENCODE_PERCENT`Encode les signes de pourcentage rencontrés. Par défaut, les signes de pourcentage ne sont pas encodés.
-- `ATL_URL_ENCODE_SPACES_ONLY`Encode des espaces uniquement.
-- `ATL_URL_ESCAPE`Toutes les séquences d’échappement (% XX) convertit les caractères correspondants.
-- `ATL_URL_NO_ENCODE`Ne convertit pas les caractères non sécurisés en séquences d’échappement.
-- `ATL_URL_NO_META`Ne supprime pas les séquences de métadonnées (tel que «. « et ».. ») à partir de l’URL. 
+- `ATL_URL_BROWSER_MODE` Ne pas encoder ou décoder les caractères après « # » ou « ? » et ne supprime pas l’espace blanc de fin après « ? ». Si cette valeur n’est pas spécifiée, l’URL entière est encodée et espace blanc de fin est supprimé.
+- `ATL_URL_DECODE` Convertit toutes les séquences de XX % en caractères, y compris les séquences d’échappement, avant que l’URL est analysée.
+- `ATL_URL_ENCODE_PERCENT` Encode les signes de pourcentage rencontrés. Par défaut, les signes de pourcentage ne sont pas encodés.
+- `ATL_URL_ENCODE_SPACES_ONLY` Encode des espaces uniquement.
+- `ATL_URL_ESCAPE` Toutes les séquences d’échappement (% XX) convertit les caractères correspondants.
+- `ATL_URL_NO_ENCODE` Ne convertit pas les caractères non sécurisés en séquences d’échappement.
+- `ATL_URL_NO_META` Ne supprime pas les séquences de métadonnées (tel que «. « et ».. ») à partir de l’URL. 
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
@@ -76,7 +77,7 @@ inline BOOL AtlCanonicalizeUrl(
 ### <a name="see-also"></a>Voir aussi  
  [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
 
- ## <a name="atlcombineurl"></a>AtlCombineUrl
+ ## <a name="atlcombineurl"></a> AtlCombineUrl
  Appelez cette fonction pour associer une URL de base et une URL relative en une URL unique et canonique.  
   
 ```    
@@ -110,7 +111,7 @@ inline BOOL AtlCombineUrl(
 ### <a name="remarks"></a>Notes  
  Se comporte comme la version actuelle de [InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) mais ne nécessite ne pas de WinInet ou Internet Explorer soit installé.  
   
-## <a name="atlescapeurl"></a>AtlEscapeUrl
+## <a name="atlescapeurl"></a> AtlEscapeUrl
  Appelez cette fonction pour convertir tous les caractères non sécurisés en séquences d'échappement.  
   
 ```    
@@ -162,7 +163,7 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Le [ATL_URL_PORT](atl-typedefs.md#atl_url_port) associé au schéma spécifié ou ATL_URL_INVALID_PORT_NUMBER si le schéma n’est pas reconnu.  
 
-## <a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
  Appelez cette fonction pour déterminer si un caractère peut être utilisé de manière sécurisée dans une URL.  
   
 ```  
@@ -179,7 +180,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ### <a name="remarks"></a>Notes  
  Les caractères qui ne doivent pas être utilisées dans les URL peut être testés à l’aide de cette fonction et converti à l’aide [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
   
-## <a name="atlunescapeurl"></a>AtlUnescapeUrl
+## <a name="atlunescapeurl"></a> AtlUnescapeUrl
  Appelez cette fonction pour convertir les caractères ayant fait l'objet d'une séquence d'échappement vers leurs valeurs d'origine.  
   
 ```    
@@ -215,7 +216,7 @@ inline BOOL AtlUnescapeUrl(
 ### <a name="remarks"></a>Notes  
  Inverse le processus de conversion appliqué par [AtlEscapeUrl](#atlescapeurl).  
   
-## <a name="rgbtohtml"></a>RGBToHtml
+## <a name="rgbtohtml"></a> RGBToHtml
 Convertit un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valeur en texte HTML correspondant à cette valeur de couleur.  
   
 ```  
@@ -241,7 +242,7 @@ bool inline RGBToHtml(
 ### <a name="remarks"></a>Notes  
  Une valeur de couleur HTML est un signe dièse suivi d’une valeur hexadécimale à 6 chiffres pour chacun des composants rouges, verts et bleus de la couleur à l’aide de 2 chiffres (par exemple, est blanc #FFFFFF).  
   
-## <a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
 Appelez cette fonction pour convertir une heure système en une chaîne au format approprié pour être utilisée dans les en-têtes HTTP.  
   
 ```  

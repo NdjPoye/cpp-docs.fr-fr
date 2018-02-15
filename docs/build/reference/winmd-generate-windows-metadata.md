@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: VC.Project.VCLinkerTool.GenerateWindowsMetadata
-dev_langs: C++
+f1_keywords:
+- VC.Project.VCLinkerTool.GenerateWindowsMetadata
+dev_langs:
+- C++
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 903ab6875457aa8c069c47a2be7f8ff1f5c884a9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7517ec459677659067e80930ee48caccf84d52f3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (générer des métadonnées Windows)
 Active la génération d’un fichier de métadonnées Windows Runtime (.winmd).  
@@ -30,7 +34,7 @@ Active la génération d’un fichier de métadonnées Windows Runtime (.winmd).
   
 ## <a name="remarks"></a>Notes  
  /WINMD  
- La valeur par défaut [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] applications. L’éditeur de liens génère le fichier exécutable binaire et le fichier de métadonnées .winmd.  
+ Le paramètre par défaut pour les applications de plateforme Windows universelle. L’éditeur de liens génère le fichier exécutable binaire et le fichier de métadonnées .winmd.  
   
  /WINMD:NO  
  L’éditeur de liens génère le fichier exécutable binaire, mais pas un fichier .winmd.  

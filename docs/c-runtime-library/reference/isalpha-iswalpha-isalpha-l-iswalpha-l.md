@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswalpha
 - _iswalpha_l
@@ -33,7 +34,8 @@ f1_keywords:
 - iswalpha
 - _istalpha_l
 - _iswalpha_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _iswalpha_l function
 - _isalpha_l function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d7ef7443a37d8d68b40f47f3eacfee8bac2626a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 04f3d1720420ce7b32e9386ccd384de25c78ac79
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 Détermine si un entier représente un caractère alphabétique.  
@@ -86,7 +89,7 @@ int _iswalpha_l(
  Paramètres régionaux à utiliser à la place des paramètres régionaux actuels.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Chacune de ces routines retourne une valeur différente de zéro si `c` est une représentation particulière d’un caractère alphabétique. `isalpha`Retourne une valeur différente de zéro si `c` est inclus dans la plage A - Z ou a - z. `iswalpha` retourne une valeur différente de zéro uniquement pour les caractères larges pour lesquels `iswupper` ou `iswlower` est différent de zéro, autrement dit, pour tout caractère large appartenant à un jeu défini par l’implémentation pour lequel aucun des éléments `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` n’est différent de zéro. Chacune de ces routines retourne 0 si `c` ne répond pas à la condition de test.  
+ Chacune de ces routines retourne une valeur différente de zéro si `c` est une représentation particulière d’un caractère alphabétique. `isalpha` Retourne une valeur différente de zéro si `c` est inclus dans la plage A - Z ou a - z. `iswalpha` retourne une valeur différente de zéro uniquement pour les caractères larges pour lesquels `iswupper` ou `iswlower` est différent de zéro, autrement dit, pour tout caractère large appartenant à un jeu défini par l’implémentation pour lequel aucun des éléments `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` n’est différent de zéro. Chacune de ces routines retourne 0 si `c` ne répond pas à la condition de test.  
   
  Les versions de ces fonctions qui ont le suffixe `_l` utilisent à la place des paramètres régionaux actuels, les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   

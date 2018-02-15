@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _read
+ms.topic: reference
+apiname:
+- _read
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _read
-dev_langs: C++
+f1_keywords:
+- _read
+dev_langs:
+- C++
 helpviewer_keywords:
 - data [CRT]
 - _read function
@@ -31,16 +35,17 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0c55e2607a706648c818fc94e73197756470110c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0ad5b18300ec36cc55a6eb02476b454829193cd8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="read"></a>_read
 
@@ -58,7 +63,7 @@ int _read(
   
 ### <a name="parameters"></a>Paramètres  
 
-*FD*  
+*fd*  
 Descripteur de fichier faisant référence au fichier ouvert.  
   
 *buffer*  
@@ -69,7 +74,7 @@ Nombre maximal d’octets.
   
 ## <a name="return-value"></a>Valeur de retour  
 
-`_read`Retourne le nombre d’octets lus, qui peut être inférieur à *nombre* s’il y a moins de *nombre* octets restant dans le fichier, ou si le fichier a été ouvert en mode texte, auquel cas chaque retour chariot-ligne flux paire `\r\n` est remplacé par un caractère de saut de ligne unique `\n`. Seul le caractère de saut de ligne unique est comptabilisé dans la valeur de retour. Le remplacement n’a pas de conséquence sur le pointeur de fichier.  
+`_read` Retourne le nombre d’octets lus, qui peut être inférieur à *nombre* s’il y a moins de *nombre* octets restant dans le fichier, ou si le fichier a été ouvert en mode texte, auquel cas chaque retour chariot-ligne flux paire `\r\n` est remplacé par un caractère de saut de ligne unique `\n`. Seul le caractère de saut de ligne unique est comptabilisé dans la valeur de retour. Le remplacement n’a pas de conséquence sur le pointeur de fichier.  
   
 Si la fonction tente de lire à la fin du fichier, elle retourne 0. Si *fd* est non valide, le fichier n’est pas ouvert pour la lecture, ou le fichier est verrouillé, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, la fonction retourne -1 et définit `errno` avec la valeur `EBADF`.  
   

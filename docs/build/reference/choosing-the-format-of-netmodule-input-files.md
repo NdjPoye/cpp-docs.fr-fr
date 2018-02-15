@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a46c2fa9ce553948c03cd2ab6ad20001d0021bed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c6b83039a054e19e62cbbe87befbe08dd7997e51
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Choix du format des fichiers d'entrée .netmodule
 Un fichier .obj MSIL (compilé avec [/CLR](../../build/reference/clr-common-language-runtime-compilation.md)) peut également être utilisé comme un fichier .netmodule.  les fichiers .obj contiennent des métadonnées et des symboles natifs.  fichiers .netmodule contiennent uniquement des métadonnées.  
@@ -26,7 +29,7 @@ Un fichier .obj MSIL (compilé avec [/CLR](../../build/reference/clr-common-lang
  Vous pouvez passer un fichier .obj MSIL pour les autres compilateurs Visual Studio via l’option du compilateur /addmodule (mais n’oubliez pas que le fichier .obj devient partie intégrante de l’assembly résultant et doit être fourni avec l’assembly).  Par exemple, Visual c# et Visual Basic ont l’option du compilateur /addmodule.  
   
 > [!NOTE]
->  Dans la plupart des cas, vous devez passer à l’éditeur de liens le fichier .obj de la compilation qui a créé le module .net.  Une exception à cela est que si le fichier .netmodule a été créé avec [/CLR : pure](../../build/reference/clr-common-language-runtime-compilation.md).  Passage d’un fichier de module MSIL .dll ou .netmodule à l’éditeur de liens peut entraîner l’erreur LNK1107.  
+>  Dans la plupart des cas, vous devez passer à l’éditeur de liens le fichier .obj de la compilation qui a créé le module .net.  Passage d’un fichier de module MSIL .dll ou .netmodule à l’éditeur de liens peut entraîner l’erreur LNK1107.  
   
  les fichiers .obj, ainsi que leurs fichiers .h associés que vous pouvez référencer via #include dans la source, d’autoriser les applications C++ utilisent les types natifs dans le module, tandis que dans un fichier .netmodule, seuls les types managés peuvent être utilisés par une application C++.  Si vous tentez de passer un fichier .obj à #using, plus d’informations sur les types natifs pas seront disponibles. #include le fichier .h du fichier .obj à la place.  
   
@@ -41,8 +44,6 @@ Un fichier .obj MSIL (compilé avec [/CLR](../../build/reference/clr-common-lang
 -   Si vos modules sont utilisés pour générer une bibliothèque native (non managée), utilisez les fichiers .obj en tant qu’entrée de module dans l’éditeur de liens et générer un fichier de bibliothèque .lib.  
   
 -   Si vos modules sont utilisés pour générer une bibliothèque managée et si toutes les entrées de module dans l’éditeur de liens sont vérifiables (produites avec/clr : safe), utilisez les fichiers .obj en tant qu’entrée de module dans l’éditeur de liens et générer un fichier .dll (assembly) ou un fichier de bibliothèque .netmodule (module).  
-  
--   Si vos modules sont utilisés pour générer une bibliothèque managée et si toutes les entrées de module dans l’éditeur de liens sont produites avec **/CLR : pure** ou **/CLR : safe**, utilisez les fichiers .obj en tant qu’entrée de module dans l’éditeur de liens et générer un (.dll) assembly) ou .netmodule (module) si vous ne souhaitez pas exposer des types managés à partir de la bibliothèque. Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015. Si vous souhaitez exposer des types managés à partir de la bibliothèque et si vous souhaitez également les applications C++ utilisent les types natifs dans la bibliothèque, votre bibliothèque se compose des fichiers .obj pour les modules de composant de bibliothèques (vous souhaiterez également expédier les fichiers .h pour chaque module. afin qu’ils peuvent être référencées avec #include à partir de code source).  
   
 -   Si vos modules sont utilisés pour générer une bibliothèque managée, et si une ou plusieurs entrées de modules pour l’éditeur de liens sont produites avec /clr uniquement, utilisez les fichiers .obj en tant qu’entrée de module dans l’éditeur de liens et générez un fichier .dll (assembly).  Si vous souhaitez exposer des types managés à partir de la bibliothèque et si vous souhaitez également les applications C++ utilisent les types natifs dans la bibliothèque, votre bibliothèque se compose des fichiers .obj pour les modules de composant de bibliothèques (vous souhaiterez également expédier les fichiers .h pour chaque module. afin qu’ils peuvent être référencées avec #include à partir de code source).  
   

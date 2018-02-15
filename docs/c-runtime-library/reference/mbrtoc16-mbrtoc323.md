@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - mbrtoc16
 - mbrtoc32
@@ -30,21 +30,23 @@ f1_keywords:
 - mbrtoc32
 - uchar/mbrtoc16
 - uchar/mbrtoc32
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c24a7426c788ac7ecfc98f3e649397912960505a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7e686a39266587fdc214ddbb0757672a57b94314
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 Traduit le premier caractère multioctet dans une chaîne étroite en caractère équivalent UTF-16 ou UTF-32.  
@@ -84,7 +86,7 @@ size_t mbrtoc32(
 ## <a name="return-value"></a>Valeur de retour  
  En cas de réussite, retourne la valeur de la première de ces conditions qui s’applique, étant donné la valeur `state` actuelle :  
   
-|Valeur|Condition|  
+|Value|Condition|  
 |-----------|---------------|  
 |0|Les `max_bytes` (ou moins) caractères suivants convertis à partir de `source` correspondent au caractère large null, qui est la valeur stockée si `destination` n’est pas null.<br /><br /> `state` contient l’état de décalage initial.|  
 |Entre 1 et `max_bytes`, inclusif|La valeur retournée est le nombre d’octets de `source` qui terminent un caractère multioctet valide. Les caractères larges convertis sont stockés si `destination` n’est pas null.|  
@@ -97,11 +99,11 @@ size_t mbrtoc32(
   
  Si `source` est null, ces fonctions retournent l’équivalent d’un appel effectué à l’aide des arguments `NULL` pour `destination`, `""` pour `source`et `1` pour `max_bytes`. Les valeurs passées de `destination` et `max_bytes` sont ignorées.  
   
- Si `source` n’est pas null, la fonction commence au début de la chaîne et elle inspecte jusqu’à `max_bytes` octets pour déterminer le nombre d’octets nécessaires pour terminer le caractère multioctet suivant, y compris les séquences de décalage. Si les octets examinés contiennent un caractère multioctet valide et complet, la fonction convertit le caractère en caractères larges 16 bits ou 32 bits équivalents. Si `destination` n’est pas null, la fonction stocke le premier (et éventuellement unique) caractère résultant dans la destination. Si des caractères de sortie supplémentaires sont nécessaires, une valeur est définie dans `state`. Ainsi, les appels suivants à la fonction génèrent les caractères supplémentaires et retournent la valeur -3. Si aucun autre caractère de sortie n’est nécessaire, `state` est définie à l’état de décalage initial.  
+ Si `source` n’est pas null, la fonction commence au début de la chaîne et elle inspecte jusqu’à `max_bytes` octets pour déterminer le nombre d’octets nécessaires pour terminer le caractère multioctet suivant, y compris les séquences de décalage. Si les octets examinés contiennent un caractère multioctet valide et complet, la fonction convertit le caractère en caractères larges 16 bits ou 32 bits équivalents. Si `destination` n’est pas null, la fonction stocke le premier (et éventuellement unique) caractère résultant dans la destination. Si des caractères de sortie supplémentaires sont nécessaires, une valeur est définie dans `state`. Ainsi, les appels suivants à la fonction génèrent les caractères supplémentaires et retournent la valeur -3. Si aucun autre caractère de sortie n’est nécessaire, `state` est définie à l’état de décalage initial.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
-|Fonction|En-tête C|En-tête C++|  
+|Fonction|En-tête C|En-tête C++|  
 |--------------|--------------|------------------|  
 |`mbrtoc16`,                `mbrtoc32`|\<uchar.h>|\<cuchar>|  
   
