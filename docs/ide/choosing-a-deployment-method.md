@@ -27,11 +27,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e4336f200f736ea7656af11c7c7c43ca32f27f9
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 9b30bea93163549373759ea8980650717d49bbac
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="choosing-a-deployment-method"></a>Choix d'une méthode de déploiement
 À moins que votre application Visual C++ est autonome et peut être déployée à l’aide d’une commande de copie, nous recommandons d’utiliser Windows Installer pour le déploiement. Windows Installer prend en charge l'installation, la réparation, et la désinstallation. Il prend également en charge la mise à jour atomique des fichiers, des dépendances et des entrées de registre de l'application.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/29/2018
 ## <a name="redistributing-visual-c-libraries"></a>Redistribution des bibliothèques Visual C++  
  Dans vos déploiements, vous pouvez redistribuer n'importe quelle version d'une bibliothèque Visual C++ dont la redistribution est autorisée. Voici trois manières de les déployer :  
   
--   Déploiement centralisé à l’aide de packages redistribuables, qui installe les bibliothèques Visual C++ en tant que DLL partagées dans %windir%\system32\\. (L’installation dans ce dossier requiert des droits d’administrateur). Vous pouvez créer un script ou un programme d'installation qui exécute le package redistribuable avant d'installer l'application sur l'ordinateur cible. Il existe des packages redistribuables pour les plateformes x86, x64 et ARM (VCRedist_x86.exe, VCRedist_x64.exe, ou VCRedist_arm.exe). Visual Studio inclut ces packages dans % ProgramFiles% (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Vous pouvez également les télécharger à partir de la [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793). (Sur le centre de téléchargement, recherchez le « Package redistribuable Visual C++ *mise à jour et la version de Visual Studio*» qui correspond à votre application. Par exemple, si vous avez utilisé la mise à jour 4 de Visual Studio 2012 pour générer votre application, recherchez « Visual C++ Redistributable Package 2012 update 4 ».) Pour plus d’informations sur l’utilisation d’un package redistribuable, consultez [procédure pas à pas : déploiement d’un Visual C++ Application à l’aide du Package redistribuable Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).  
+-   Déploiement centralisé à l’aide de packages redistribuables, qui installe les bibliothèques Visual C++ en tant que DLL partagées dans %windir%\system32\\. (L’installation dans ce dossier requiert des droits d’administrateur). Vous pouvez créer un script ou un programme d'installation qui exécute le package redistribuable avant d'installer l'application sur l'ordinateur cible. Il existe des packages redistribuables pour les plateformes x86, x64 et ARM (VCRedist_x86.exe, VCRedist_x64.exe, ou VCRedist_arm.exe). Visual Studio inclut ces packages dans % ProgramFiles% (x86) %\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. Vous pouvez également les télécharger à partir de la [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793). (Utilisez la zone de recherche dans le centre de téléchargement pour rechercher le « Package redistribuable Visual C++ *mise à jour et la version de Visual Studio*» qui correspond à votre application. Par exemple, si vous avez utilisé Visual Studio 2015 update 3 pour générer votre application, puis recherchez « Visual C++ Redistributable Package 2015 update 3 ».) Pour plus d’informations sur l’utilisation d’un package redistribuable, consultez [procédure pas à pas : déploiement d’un Visual C++ Application à l’aide du Package redistribuable Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).  
   
 -   Déploiement centralisé à l’aide de modules de fusion, chacun installant une bibliothèque Visual C++ particulière en tant que DLL partagé dans %windir%\system32\\. (L’installation dans ce dossier requiert des droits d’administrateur). Les modules de fusion font partie des fichiers d’installation .msi de votre application. Les modules de fusion redistribuables Visual C++ sont inclus dans Visual Studio, dans \Program Files (x86) \Common Modules\\. Pour plus d’informations, consultez [redistribution à l’aide de Modules de fusion](../ide/redistributing-components-by-using-merge-modules.md).  
   

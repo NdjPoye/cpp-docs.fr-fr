@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - MFC, OLE and
 - OLE items
@@ -17,16 +19,17 @@ helpviewer_keywords:
 - applications [OLE], about OLE
 - OLE component object model (COM)
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 38b2f6c936ff314f56e4b1868837729ad00efce4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d13baf7960b329e56cfce24011f4c15599cdda8b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ole-in-mfc"></a>Intégration du format OLE au format MFC
 Ces articles expliquent les principes fondamentaux de la programmation OLE à l’aide de MFC. MFC fournit le moyen le plus simple pour écrire des programmes qui utilisent OLE :  
@@ -41,7 +44,7 @@ Ces articles expliquent les principes fondamentaux de la programmation OLE à l�
   
 -   Pour gérer les données d’état de MFC modules, y compris exportés des points d’entrée DLL (fonction), les points d’entrée interface OLE/COM et les points d’entrée de procédure de fenêtre.  
   
- Vous pouvez également utiliser [Automation](../mfc/automation.md) ou [Automation à distance](../mfc/remote-automation.md) pour utiliser un autre programme à partir de votre programme.  
+ Vous pouvez également utiliser [Automation](../mfc/automation.md).  
   
 > [!NOTE]
 >  Le terme QU'OLE indique les technologies associées à la liaison et incorporation, y compris les conteneurs OLE, les serveurs OLE, OLE (éléments), l’activation sur place (ou édition visuelle), dispositifs de suivi, glisser -déplacer et la fusion de menus. Le terme Active s’applique pour le modèle COM (Component Object) et les objets basés sur COM tels que les contrôles ActiveX. OLE Automation est désormais appelée Automation.  

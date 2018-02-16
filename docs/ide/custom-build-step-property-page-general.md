@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,21 +15,23 @@ f1_keywords:
 - VC.Project.VCCustomBuildStep.Outputs
 - VC.Project.VCCustomBuildStep.Message
 - VC.Project.VCCustomBuildStep.Command
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - project properties, custom build step
 - custom build step (general)
 ms.assetid: bd319741-0491-46c4-a428-7c61b4b46a02
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 63e599a2a24716de2de3e23cb3a7c2342b036b81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2e57d6cf00843cd6604ef269235602ea1b5b5e9b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="custom-build-step-property-page-general"></a>Étape de génération personnalisée, page de propriétés : général
 Pour chaque combinaison de configuration de projet et de plateforme cible dans votre projet, vous pouvez spécifier une étape personnalisée à effectuer lors de la génération du projet.  
@@ -42,7 +45,7 @@ Pour la version Linux de cette page, consultez [propriétés de l’étape gén�
  **Description**  
  Message qui s'affiche lors de l'exécution de l'étape de génération personnalisée.  
   
- **Sorties**  
+ **Outputs**  
  Fichier de sortie généré lors de l'étape de génération personnalisée. Ce paramètre est requis afin que les générations incrémentielles fonctionnent correctement.  
   
  **Dépendances supplémentaires**  
@@ -52,7 +55,7 @@ Pour la version Linux de cette page, consultez [propriétés de l’étape gén�
  Ces options définissent le moment de l'exécution de l'étape de génération personnalisée dans le processus de génération, par rapport aux cibles répertoriées. Les cibles le plus souvent répertoriées sont BuildGenerateSources, BuildCompile, et BuildLink, car elles constituent des étapes majeures dans le processus de génération. Les cibles souvent répertoriées sont Midl, CLCompile, et Link.  
   
  Considérer la sortie en tant que contenu  
- Cette option n'est significative que pour Windows Store ou les applications Windows Phone, qui incluent tous les fichiers de contenu du package .appx.  
+ Cette option est uniquement explicite pour les applications de plateforme Windows universelle ou Windows Phone, qui incluent tous les fichiers de contenu dans le package .appx.  
   
 ### <a name="to-specify-a-custom-build-step"></a>Pour spécifier une étape de génération personnalisée  
   

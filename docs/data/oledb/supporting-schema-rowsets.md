@@ -4,33 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - schema rowsets
 - OLE DB consumer templates, schema rowsets
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b981af06f48834eef59103b872b8b07e75cd0065
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39b969349ee09e5882677b701030ef9c0792522a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="supporting-schema-rowsets"></a>Prise en charge des ensembles de lignes de schéma
 Ensembles de lignes de schéma permettent aux consommateurs d’obtenir des informations sur une banque de données sans connaître sa structure sous-jacente, ou son schéma. Par exemple, un magasin de données peut avoir des tables organisés selon une hiérarchie définie par l’utilisateur, afin qu’il n’y aucun moyen pour vous assurer de la connaissance du schéma à l’exception de par sa lecture. (Un autre exemple, notez que les Assistants Visual C++ utilisent les ensembles de lignes de schéma pour générer des accesseurs pour le consommateur.) Pour permettre au consommateur pour ce faire, objet de session du fournisseur expose des méthodes sur le [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) interface. Dans les applications Visual C++, vous utilisez la [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) classe pour implémenter **IDBSchemaRowset**.  
   
- `IDBSchemaRowsetImpl`prend en charge les méthodes suivantes :  
+ `IDBSchemaRowsetImpl` prend en charge les méthodes suivantes :  
   
 -   [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) vérifie la validité des restrictions par rapport à un ensemble de lignes de schéma.  
   
@@ -57,11 +59,11 @@ Ensembles de lignes de schéma permettent aux consommateurs d’obtenir des info
   
 -   **C** *ShortName* **SessionColSchemaRowset** gère les demandes d’informations sur les colonnes (le **DBSCHEMA_COLUMNS** ensemble de lignes de schéma). L’Assistant fournit des exemples d’implémentation de ces classes, qui retournent des informations de schéma pour un fournisseur de déni de service.  
   
--   **C** *ShortName* **SessionPTSchemaRowset** gère les demandes d’informations de schéma sur le type de fournisseur (le **DBSCHEMA_PROVIDER_TYPES** ensemble de lignes du schéma). L’implémentation par défaut fournie par l’Assistant retourne `S_OK`.  
+-   **C** *ShortName* **SessionPTSchemaRowset** gère les demandes d’informations de schéma sur le type de fournisseur (le **DBSCHEMA_PROVIDER_TYPES** schéma ensemble de lignes). L’implémentation par défaut fournie par l’Assistant retourne `S_OK`.  
   
  Vous pouvez personnaliser ces classes pour gérer les informations de schéma appropriées à votre fournisseur :  
   
--   Dans **C***ShortName***SessionTRSchemaRowset**, vous devez renseigner les champs de catalogue, de table et de description (**trData.m_szType**, **trData.m_szTable**, et **trData.m_szDesc**). L’exemple générées par l’Assistant n'utilise qu’une seule ligne (table). Autres fournisseurs peuvent retourner plusieurs tables.  
+-   Dans **C***ShortName***SessionTRSchemaRowset**, vous devez renseigner les champs de catalogue, de table et de description (**trData.m_szType**, **trData.m_szTable** , et **trData.m_szDesc**). L’exemple générées par l’Assistant n'utilise qu’une seule ligne (table). Autres fournisseurs peuvent retourner plusieurs tables.  
   
 -   Dans **C***ShortName***SessionColSchemaRowset**, vous passez le nom de la table comme un **DBID**.  
   
@@ -105,7 +107,7 @@ class CUpdateSessionTRSchemaRowset :
 |-------------------------------|-----------------------|  
 |**TABLE_CATALOG**|0 x 1 (binaire 1)|  
 |**TABLE_SCHEMA**|0 x 2 (binaire 10)|  
-|**NOM_TABLE**|0 x 4 (binaire 100)|  
+|**TABLE_NAME**|0 x 4 (binaire 100)|  
 |**TABLE_TYPE**|0 x 8 (binaire 1000)|  
   
  Ensuite, notez qu’il existe un bit pour chaque restriction. Étant donné que vous souhaitez prendre en charge **TABLE_NAME** uniquement, vous devez retourner 0 x 4 dans la `rgRestrictions` élément. Si vous prenez en charge **TABLE_CATALOG** et **nom_table**, vous devez retourner 0 x 5 (binaire 101).  
@@ -216,7 +218,9 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 ```  
 // Bring over the data:  
 wcspy_s(trData.m_szType, OLESTR("TABLE"), 5);  
+
 wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);  
+
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());  
 ```  
   

@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords: R6019
-dev_langs: C++
-helpviewer_keywords: R6019
+f1_keywords:
+- R6019
+dev_langs:
+- C++
+helpviewer_keywords:
+- R6019
 ms.assetid: 8129923e-7db2-40ee-9602-def9365f8d28
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9c0e027907476eeacf10515556544160e402cd0e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e4ab7054bdce76aa1dd0b443993cfac8eeb8ecc7
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="c-runtime-error-r6019"></a>R6019 d’erreur d’exécution C
 Impossible d’ouvrir le périphérique de la console  
@@ -37,4 +42,4 @@ Impossible d’ouvrir le périphérique de la console
   
  **Informations pour les programmeurs**  
   
- Cette erreur se produit parce que l’application a appelé une fonction de la console, mais le système d’exploitation n’a pas accordé l’accès à la console. Sauf en mode débogage, fonctions de la console sont généralement pas autorisées dans les applications du Windows Store. Si votre application nécessite des privilèges d’administrateur pour exécuter, vérifiez qu’il est installé pour s’exécuter en tant qu’administrateur par défaut.
+ Cette erreur se produit parce que l’application a appelé une fonction de la console, mais le système d’exploitation n’a pas accordé l’accès à la console. Sauf en mode débogage, fonctions de la console sont généralement pas autorisées dans les applications Microsoft Store. Si votre application nécessite des privilèges d’administrateur pour exécuter, vérifiez qu’il est installé pour s’exécuter en tant qu’administrateur par défaut.

@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c505c44fe18f75eeb64c6b31ca222405f570761
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b5ff1f5bd36c2cf834375ac0999db835b731284
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Comment : terminer une opération asynchrone à l'aide de WRL
 Ce document montre comment utiliser la bibliothèque de modèles C++ (WRL) de Windows Runtime pour démarrer des opérations asynchrones et effectuer des actions lorsque les opérations se terminent.  
@@ -36,7 +38,7 @@ Ce document montre comment utiliser la bibliothèque de modèles C++ (WRL) de Wi
  Les étapes suivantes démarrer un minuteur asynchrone et attendez l’expiration du minuteur. L’exemple complet suit.  
   
 > [!WARNING]
->  Bien que vous utilisez généralement la bibliothèque de modèles Windows Runtime C++ dans une application de plateforme Windows universelle, cet exemple utilise une application console à titre d’illustration. Les fonctions telles que `wprintf_s` ne sont pas disponibles à partir d’une application de plateforme Windows universelle. Pour plus d’informations sur les types et les fonctions que vous pouvez utiliser dans une application de plateforme Windows universelle, consultez [fonctions CRT non prises en charge par /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) et [applications Win32 et COM pour le Windows Store](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Bien que vous utilisez généralement la bibliothèque de modèles Windows Runtime C++ dans une application de plateforme Windows universelle (UWP), cet exemple utilise une application console à titre d’illustration. Les fonctions telles que `wprintf_s` ne sont pas disponibles à partir d’une application UWP. Pour plus d’informations sur les types et les fonctions que vous pouvez utiliser dans une application UWP, consultez [fonctions CRT non prises en charge dans les applications de plateforme Windows universelle](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) et [Win32 et COM pour applications UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
   
 1.  Inclure (`#include`) les requis Windows Runtime, bibliothèque de modèles Windows Runtime C++ ou les en-têtes de la bibliothèque C++ Standard.  
   
@@ -78,7 +80,7 @@ Ce document montre comment utiliser la bibliothèque de modèles C++ (WRL) de Wi
 ### <a name="compiling-the-code"></a>Compilation du code  
  Pour compiler le code, copiez-le et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `wrl-consume-async.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.  
   
- **CL.exe wrl consommer async.cpp runtimeobject.lib**  
+ **cl.exe wrl-consume-async.cpp runtimeobject.lib**  
   
 ## <a name="example-working-with-a-background-thread"></a>Exemple : Utilisation avec un Thread d’arrière-plan  
  Les étapes suivantes démarrer un thread de travail et définissent l’action effectuée par ce thread. L’exemple complet suit.  
@@ -126,7 +128,7 @@ Ce document montre comment utiliser la bibliothèque de modèles C++ (WRL) de Wi
 ### <a name="compiling-the-code"></a>Compilation du code  
  Pour compiler le code, copiez-le et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `wrl-consume-asyncOp.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.  
   
- **CL.exe wrl consommer asyncOp.cpp runtimeobject.lib**  
+ **cl.exe wrl-consume-asyncOp.cpp runtimeobject.lib**  
   
 ## <a name="see-also"></a>Voir aussi  
  [Bibliothèque de modèles Windows Runtime C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

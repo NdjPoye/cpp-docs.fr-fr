@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/27/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2206151f68e02ebadbfab5785a7a1e90be67468
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.openlocfilehash: b204783e3b2c418e5e719ca5c6efcf9c2d31c6df
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Vue d'ensemble de la programmation Windows en C++
 
@@ -28,7 +30,7 @@ Vous pouvez utiliser Visual C++ pour écrire une large gamme de programmes qui s
 
 Il existe plusieurs grandes catégories d'applications Windows que vous pouvez développer avec Visual C++. Ces catégories ont des modèles de programmation différents ou des modèles d'application, ce qui signifie qu'elles utilisent différentes bibliothèques et API qui permettent d'accéder à la plateforme et fournissent une interface utilisateur.
 
-- [Applications Windows universelles](#BK_WindowsUniversal). La troisième catégorie d'applications Windows a été introduite avec Windows 8 et la prise en charge de cette catégorie continue dans Windows 10. Ces applications sont souvent appelées simplement « applications Windows » et elles incluent des applications mobiles et de bureau qui ciblent divers appareils. Vous pouvez écrire ces applications en C++/CX, un dialecte de C++ qui inclut la prise en charge du développement Windows Runtime, ou en C++ standard avec COM qui utilise la bibliothèque WRL (Windows Runtime Library). Ces applications ont été conçues initialement pour s'exécuter en mode plein écran, bien que les utilisateurs de Windows 10 aient la possibilité de les exécuter dans une fenêtre du bureau. Elles intègrent des fonctions tactiles, mais il est facile d'utiliser la souris pour les faire fonctionner si les utilisateurs le préfèrent ou en l'absence d'un écran tactile. Ces applications sont distribuées à partir du Windows Store, ce qui a conduit à les appeler « applications du Windows Store ».
+- [Applications Windows universelles](#BK_WindowsUniversal). La troisième catégorie d'applications Windows a été introduite avec Windows 8 et la prise en charge de cette catégorie continue dans Windows 10. Ces applications sont souvent appelées simplement « applications Windows » et elles incluent des applications mobiles et de bureau qui ciblent divers appareils. Vous pouvez écrire ces applications en C++/CX, un dialecte de C++ qui inclut la prise en charge du développement Windows Runtime, ou en C++ standard avec COM qui utilise la bibliothèque WRL (Windows Runtime Library). Ces applications ont été conçues initialement pour s'exécuter en mode plein écran, bien que les utilisateurs de Windows 10 aient la possibilité de les exécuter dans une fenêtre du bureau. Elles intègrent des fonctions tactiles, mais il est facile d'utiliser la souris pour les faire fonctionner si les utilisateurs le préfèrent ou en l'absence d'un écran tactile. Ces applications sont distribuées à partir du Store de Microsoft, ce qui a conduit à les appeler les applications « Store ».
 
 - [Applications et jeux de bureau, serveur et cloud](#BK_Native). Cette catégorie inclut les applications de bureau Windows, parfois appelées applications Win32 dans la mesure où ces applications utilisaient l'API Win32. Avant Windows 8, toutes les applications Windows figuraient dans cette catégorie. Les applications de cette catégorie peuvent utiliser MFC comme interface utilisateur et ATL pour interagir avec les composants Windows, qui sont en général des objets COM.
 
@@ -43,7 +45,7 @@ Il existe plusieurs grandes catégories d'applications Windows que vous pouvez d
 Avec Windows 10, les applications peuvent s'exécuter sur tous les appareils Windows 10, tels que les tablettes et les téléphones mobiles, ainsi que sur le bureau. Sur le bureau, elles peuvent s'exécuter sous la forme d'une fenêtre du bureau au lieu de toujours s'exécuter en mode plein écran. Ces applications peuvent également s'exécuter sur la Xbox et sur les appareils futurs.  Le modèle de programmation utilisé pour ces deux types d'applications est différent de celui utilisé pour les applications de bureau Win32. Ces applications Windows s'exécutent sur le Windows Runtime, qui fournit les éléments d'interface utilisateur, les services essentiels pour ces applications, ainsi qu'une interface pour les divers périphériques matériels pris en charge. Ces applications sont compilées en code natif et possèdent une interface utilisateur XAML, ou utilisent DirectX. Vous pouvez également écrire des composants Windows Runtime en code natif qui consomment les autres applications Windows, notamment les applications qui sont écrites en c#, Visual Basic ou JavaScript. Pour plus d’informations, consultez [créer une application « Hello world » de plateforme Windows universelle en C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp), [créer un jeu UWP simple avec DirectX](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game), et [des composants de création de Windows Runtime en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 > [!TIP]
-> Pour Windows 10, vous pouvez utiliser le convertisseur d’application de bureau pour empaqueter votre application de bureau existante pour le déploiement via le Windows Store. Pour plus d’informations, consultez [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) et [Déplacer votre application de bureau vers la plateforme universelle Windows (UWP) avec le pont du bureau](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
+> Pour Windows 10, vous pouvez utiliser le convertisseur d’application de bureau pour empaqueter votre application de bureau existante pour le déploiement via Microsoft Store. Pour plus d’informations, consultez [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) et [Déplacer votre application de bureau vers la plateforme universelle Windows (UWP) avec le pont du bureau](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
 
 Pour obtenir des exemples pour la plateforme Windows universelle, consultez les [exemples Windows universels sur GitHub](https://github.com/Microsoft/Windows-universal-samples)
 

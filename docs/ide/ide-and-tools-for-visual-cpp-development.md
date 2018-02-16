@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01d4898b2d67de4b23d31227e572c0f270aa6f37
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 0c0ae9514736b66be104198c95c3764772a87ef8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE et outils de développement Visual C++
 
@@ -115,7 +115,7 @@ Vous pouvez déboguer votre programme en appuyant sur **F5** lorsque la configur
 
 ## <a name="deploy-completed-applications"></a>Déployer des applications terminées
 
-Vous déployez une application de plateforme Windows universelle pour les clients via le Windows Store via le **projet** > **magasin** option de menu. Le déploiement de la bibliothèque CRT est géré automatiquement en arrière-plan. Pour plus d’informations, consultez [Vente d’applications](http://go.microsoft.com/fwlink/p/?LinkId=262280).
+Vous déployez une application de plateforme Windows universelle pour les clients via Microsoft Store via le **projet** > **magasin** option de menu. Le déploiement de la bibliothèque CRT est géré automatiquement en arrière-plan. Pour plus d’informations, consultez [Vente d’applications](http://go.microsoft.com/fwlink/p/?LinkId=262280).
 
 Quand vous déployez une application de bureau C++ native sur un autre ordinateur, vous devez installer l'application elle-même et tous les fichiers bibliothèques dont elle dépend. Il existe trois façons de déployer le runtime C++ universel (UCRT) avec une application : déploiement central, le déploiement local ou la liaison statique. Pour plus d’informations, consultez [déploiement des Applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md).
 

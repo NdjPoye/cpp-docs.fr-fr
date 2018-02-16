@@ -2,7 +2,7 @@
 # [Vue d’ensemble du runtime d’accès concurrentiel](overview-of-the-concurrency-runtime.md)
 # [Gestion des exceptions dans le runtime d’accès concurrentiel](exception-handling-in-the-concurrency-runtime.md)
 # [Outils de diagnostic parallèles (runtime d’accès concurrentiel)](parallel-diagnostic-tools-concurrency-runtime.md)
-# [Création d’opérations asynchrones en C++ pour les applications Windows Store](creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)
+# [Création d’opérations asynchrones dans C++ pour les applications UWP](creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)
 # [Comparaison du runtime d’accès concurrentiel aux autres modèles d’accès concurrentiel](comparing-the-concurrency-runtime-to-other-concurrency-models.md)
 ## [Migration d’OpenMP au runtime d’accès concurrentiel](migrating-from-openmp-to-the-concurrency-runtime.md)
 ### [Guide pratique pour convertir une boucle OpenMP parallèle pour utiliser le runtime d’accès concurrentiel](how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)

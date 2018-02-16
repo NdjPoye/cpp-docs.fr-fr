@@ -1,32 +1,57 @@
 ---
 title: Compilateur avertissement (niveau 1) C4305 | Documents Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/17/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords: C4305
-dev_langs: C++
-helpviewer_keywords: C4305
-ms.assetid: 56eecc21-2092-4e36-8017-0a8ca0ea0466
-caps.latest.revision: "6"
+f1_keywords:
+- C4305
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4305
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: df1626d188d1b8e00674d6af6ce604998d317b78
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8fe4b2b420c44584fdd5b4d48b4264bbc7a51bee
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compiler-warning-level-1-c4305"></a>Avertissement du compilateur (niveau 1) C4305
-'identificateur' : troncation de 'type1' en 'type2'  
-  
- L’identificateur est converti en un type plus petit, provoquant ainsi la perte d’informations.  
-  
- Si vous avez utilisé l’Assistant de Point de connexion ATL, consultez l’article de la Base de connaissances :  
-  
--   Q250847 : Point de connexion ATL Assistant Code généré pour l’événement avec l’Argument de type VARIANT donne C4305 avertissement
+
+> '*contexte*' : troncation de '*type1*'à'*type2*'  
+
+## <a name="remarks"></a>Notes
+
+Cet avertissement est émis lorsqu’une valeur est convertie en un type plus petit dans une initialisation ou comme un argument de constructeur, ce qui entraîne une perte d’informations.
+
+## <a name="example"></a>Exemple
+
+Cet exemple montre deux façons, vous pouvez voir cet avertissement :
+
+```cpp
+// C4305.cpp
+// Compile by using: cl /EHsc /W4 C4305.cpp
+
+struct item
+{
+    item(float) {}
+};
+
+int main()
+{
+    float f = 2.71828;          // C4305 'initializing'
+    item i(3.14159);            // C4305 'argument'
+    return static_cast<int>(f);
+}
+```
+
+Pour résoudre ce problème, initialiser à l’aide d’une valeur du type correct, ou utilisez un cast explicite en type correct. Par exemple, utiliser un **float** littéral comme 2.71828f au lieu d’un **double** (le type par défaut pour les littéraux à virgule flottante) pour initialiser un **float** variable, ou à passer à un constructeur qui accepte un **float** argument.

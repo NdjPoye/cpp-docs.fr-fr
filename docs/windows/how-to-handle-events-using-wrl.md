@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3341992ce2b10897fca165a787e568b5e0bc660
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f79d35267750c42466a0b2448f9b10c37fe81f05
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-handle-events-using-wrl"></a>Comment : gérer les événements à l'aide de WRL
 Ce document montre comment utiliser la bibliothèque de modèles C++ (WRL) de Windows Runtime pour s’abonner à et gérer les événements d’un objet Windows Runtime.  
@@ -31,7 +33,7 @@ Ce document montre comment utiliser la bibliothèque de modèles C++ (WRL) de Wi
  Les étapes suivantes démarrer un `ABI::Windows::System::Threading::IDeviceWatcher` de l’objet et utiliser des gestionnaires d’événements pour surveiller la progression. Le `IDeviceWatcher` interface vous permet d’énumérer les périphériques en mode asynchrone, ou en arrière-plan et de recevoir une notification lorsque des périphériques sont ajoutés, supprimés ou modifiés. Le [rappel](../windows/callback-function-windows-runtime-cpp-template-library.md) fonction est une partie importante de cet exemple, car il lui permet de spécifier les gestionnaires d’événements qui traitent les résultats de l’opération d’arrière-plan. L’exemple complet suit.  
   
 > [!WARNING]
->  Bien que vous utilisez généralement la bibliothèque de modèles Windows Runtime C++ dans une application de plateforme Windows universelle, cet exemple utilise une application console à titre d’illustration. Les fonctions telles que `wprintf_s` ne sont pas disponibles à partir d’une application de plateforme Windows universelle. Pour plus d’informations sur les types et les fonctions que vous pouvez utiliser dans une application de plateforme Windows universelle, consultez [fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) et [applications Win32 et COM pour le Windows Store](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Bien que vous utilisez généralement la bibliothèque de modèles Windows Runtime C++ dans une application de plateforme Windows universelle, cet exemple utilise une application console à titre d’illustration. Les fonctions telles que `wprintf_s` ne sont pas disponibles à partir d’une application de plateforme Windows universelle. Pour plus d’informations sur les types et les fonctions que vous pouvez utiliser dans une application de plateforme Windows universelle, consultez [fonctions CRT non prises en charge dans les applications de plateforme Windows universelle](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) et [Win32 et COM pour applications UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
   
 1.  Inclure (`#include`) les requis Windows Runtime, bibliothèque de modèles Windows Runtime C++ ou les en-têtes de la bibliothèque C++ Standard.  
   
@@ -94,7 +96,7 @@ Ce document montre comment utiliser la bibliothèque de modèles C++ (WRL) de Wi
 ## <a name="compiling-the-code"></a>Compilation du code  
  Pour compiler le code, copiez-le et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `wrl-consume-events.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.  
   
- **CL.exe wrl consommer events.cpp runtimeobject.lib**  
+ **cl.exe wrl-consume-events.cpp runtimeobject.lib**  
   
 ## <a name="see-also"></a>Voir aussi  
  [Bibliothèque de modèles Windows Runtime C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

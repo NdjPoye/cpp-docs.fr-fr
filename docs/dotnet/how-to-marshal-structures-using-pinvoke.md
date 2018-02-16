@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data marshaling [C++], structures
 - platform invoke [C++], structures
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5bfca720a97ac8462afa970e54f13e0bd74a7808
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2ebda5f17b94fa28a5eb5222ccc991119ec4f81a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Comment : marshaler des structures à l’aide de PInvoke
 Ce document explique comment les fonctions natives qui acceptent des chaînes de style C peuvent être appelées à partir de fonctions managées qui fournissent une instance de <xref:System.String> à l’aide de P/Invoke. Bien que nous vous recommandons d’utiliser les fonctionnalités d’interopérabilité C++ au lieu de P/Invoke, car P/Invoke fournit peu compilation rapport d’erreurs, n’est pas de type sécurisé et peut être fastidieux à implémenter, si l’API non managée est empaqueté en tant que DLL et le code source n’est pas disponible, P/Invoke est la seule option. Dans le cas contraire, consultez les documents suivants :  
@@ -48,8 +50,6 @@ Ce document explique comment les fonctions natives qui acceptent des chaînes de
   
 ## <a name="example"></a>Exemple  
  Le code suivant se compose d’une fonction non managée et un module managé. Le module non managé est une DLL qui définit une structure appelée Location et une fonction appelée GetDistance qui accepte deux instances de la structure de l’emplacement. Le deuxième module est une application de ligne de commande managée qui importe la fonction GetDistance, mais définit en un équivalent managé de la structure Location, MLocation. Dans la pratique du même nom serait probablement être utilisé pour les deux versions de la structure ; Toutefois, un autre nom est utilisé ici pour montrer que le prototype DllImport est défini en termes de la version managée.  
-  
- Le module managé est compilé avec/CLR, mais/CLR : pure fonctionne également. Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015.  
   
  Notez qu’aucune partie de la DLL est exposée au code managé à l’aide de traditionnel #include (directive). En fait, la DLL est accessible au moment de l’exécution pour les problèmes liés aux fonctions importées avec DllImport ne sont pas détectées au moment de la compilation.  
   

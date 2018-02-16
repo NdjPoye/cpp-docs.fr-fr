@@ -1,10 +1,11 @@
 ---
-title: IDBSchemaRowsetImpl::CreateSchemaRowset | Documents Microsoft
+title: IDBSchemaRowsetImpl::CreateSchemaRowset | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,42 +14,39 @@ f1_keywords:
 - CreateSchemaRowset
 - IDBSchemaRowsetImpl.CreateSchemaRowset
 - ATL.IDBSchemaRowsetImpl.CreateSchemaRowset
-dev_langs: C++
-helpviewer_keywords: CreateSchemaRowset method
+dev_langs:
+- C++
+helpviewer_keywords:
+- CreateSchemaRowset method
 ms.assetid: ad3e3e4d-45b9-461c-b7b8-3af6843631b1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 25d8149cb2e32505d87ef845b525684746d2b8da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4975f452844a9efc8002b661efa224bf7cac8a3f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="idbschemarowsetimplcreateschemarowset"></a>IDBSchemaRowsetImpl::CreateSchemaRowset
 Implémente une fonction du créateur d’objet COM pour l’objet spécifié par le paramètre de modèle.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
-      template < class   
-      SchemaRowsetClass  
-       >  
-HRESULT CreateSchemaRowset(  
-   IUnknown *pUnkOuter,  
+```cpp
+template template <class SchemaRowsetClass>  
+HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,  
    ULONG cRestrictions,  
    const VARIANT rgRestrictions[],  
    REFIID riid,  
    ULONG cPropertySets,  
    DBPROPSET rgPropertySets[],  
    IUnknown** ppRowset,  
-   SchemaRowsetClass*& pSchemaRowset   
-);  
+   SchemaRowsetClass*& pSchemaRowset);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -86,7 +84,7 @@ HRESULT CreateSchemaRowset(
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  
- [IDBSchemaRowsetImpl (classe)](../../data/oledb/idbschemarowsetimpl-class.md)   
+ [IDBSchemaRowsetImpl Class](../../data/oledb/idbschemarowsetimpl-class.md)   
  [Membres IDBSchemaRowsetImpl (classe)](http://msdn.microsoft.com/en-us/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
  [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)   
  [Classes de jeu de lignes du schéma et classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - blittable types [C++]
 - platform invoke [C++], implicit
@@ -27,18 +29,18 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3a5f6b6cd68906753bc4f9a5fbc1d9e00bad02f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78d104a41f052f994a19ebe359c8d3e557274783
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>Utilisation de l'interopérabilité C++ (PInvoke implicite)
 Contrairement à d’autres langages .NET, Visual C++ est prise en charge de l’interopérabilité qui autorise la présence de code managé et non managé dans la même application et également dans le même fichier (avec le [managé, non managé](../preprocessor/managed-unmanaged.md) pragmas). Cela permet aux développeurs de Visual C++ d’intégrer des fonctionnalités .NET dans les applications Visual C++ existantes sans perturber le reste de l’application.  
@@ -54,7 +56,7 @@ Contrairement à d’autres langages .NET, Visual C++ est prise en charge de l�
  Un PInvoke explicite est pris en charge par le .NET Framework et n’est disponible dans la plupart des langages .NET. Cependant, comme son nom l’indique, C++ Interop est spécifique à Visual C++.  
   
 ## <a name="c-interop"></a>Interopérabilité C++  
- Interopérabilité C++ est recommandée sur un PInvoke explicite, car il assure une meilleure sécurité de type, est généralement moins fastidieux à implémenter, est plus indulgent si l’API non managée est modifié et rend les améliorations des performances qui ne sont pas possibles avec explicite PInvoke. Toutefois, C++ Interop ne peut pas être utilisé si le code source non managé n’est pas disponible, ou lors de la compilation avec **/CLR : safe**. Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015. Pour plus d’informations, consultez [Code pur et vérifiable (C + c++ / CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).  
+ Interopérabilité C++ est recommandée sur un PInvoke explicite, car il assure une meilleure sécurité de type, est généralement moins fastidieux à implémenter, est plus indulgent si l’API non managée est modifié et rend les améliorations des performances qui ne sont pas possibles avec explicite PInvoke. Toutefois, l’interopérabilité C++ n’est pas possible si le code source non managé n’est pas disponible.  
   
 ## <a name="c-com-interop"></a>interopérabilité C++ COM  
  Les fonctionnalités d’interopérabilité prises en charge par Visual C++ procurent un avantage particulier par rapport aux autres langages .NET lorsqu’il s’agit de l’interopérabilité avec les composants COM. Au lieu d’être limité aux restrictions du .NET Framework [Tlbimp.exe (Type Library Importer)](/dotnet/framework/tools/tlbimp-exe-type-library-importer), telles que la prise en charge limitée pour les types de données et l’exposition obligatoire de chaque membre de chaque interface COM, C++ Interop autorise COM y accéder à des composants sera et ne nécessite pas d’assemblys d’interopérabilité distincts. Pour plus d’informations, consultez [à l’aide de COM à partir de .NET](http://msdn.microsoft.com/en-us/03976661-6278-4227-a6c1-3b3315502c15).  
