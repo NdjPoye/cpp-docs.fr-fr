@@ -4,47 +4,45 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ATL::CCommand
 - CCommand
 - ATL.CCommand
-dev_langs: C++
-helpviewer_keywords: CCommand class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CCommand class
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 82fb0dc84253fc5984f2ac9e52b96a27fb47e770
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ec786bff30745a986ecc643cd42f0d8975b0ccf
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ccommand-class"></a>CCommand, classe
 Fournit des méthodes pour définir et exécuter une commande.  
   
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-template <  
-   class TAccessor = CNoAccessor,  
-   template < typename T > class TRowset = CRowset,  
-   class TMultiple = CNoMultipleResults   
->  
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template <class TAccessor = CNoAccessor,  
+          template <typename T> class TRowset = CRowset,  
+          class TMultiple = CNoMultipleResults>  
 class CCommand :   
-   public CAccessorRowset <  
-      TAccessor,   
-      TRowset   
-   >,  
-   public CCommandBase,  
-   public TMultiple  
+           public CAccessorRowset <TAccessor, TRowset>,  
+           public CCommandBase,  
+           public TMultiple  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -71,13 +69,13 @@ class CCommand :
   
 |||  
 |-|-|  
-|[Créer](../../data/oledb/ccommand-create.md)|Crée une nouvelle commande pour la session spécifiée, puis définit le texte de commande.|  
+|[Create](../../data/oledb/ccommand-create.md)|Crée une nouvelle commande pour la session spécifiée, puis définit le texte de commande.|  
 |[CreateCommand](../../data/oledb/ccommand-createcommand.md)|Crée une nouvelle commande.|  
 |[GetParameterInfo](../../data/oledb/ccommand-getparameterinfo.md)|Obtient une liste de paramètres de la commande, leurs noms et leurs types.|  
-|[Préparer](../../data/oledb/ccommand-prepare.md)|Valide et optimise la commande actuelle.|  
+|[Prepare](../../data/oledb/ccommand-prepare.md)|Valide et optimise la commande actuelle.|  
 |[ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)|Libère l’accesseur de paramètre, si nécessaire, puis libère de la commande.|  
 |[SetParameterInfo](../../data/oledb/ccommand-setparameterinfo.md)|Spécifie le type natif de chaque paramètre de commande.|  
-|[Annulation de préparation](../../data/oledb/ccommand-unprepare.md)|Ignore le plan d’exécution de commande en cours.|  
+|[Unprepare](../../data/oledb/ccommand-unprepare.md)|Ignore le plan d’exécution de commande en cours.|  
   
 ## <a name="remarks"></a>Notes  
  Utilisez cette classe lorsque vous avez besoin effectuer une opération basée sur un paramètre ou exécuter une commande. Si vous devez simplement ouvrir un ensemble de lignes simple, utilisez [CTable](../../data/oledb/ctable-class.md) à la place.  
@@ -86,7 +84,7 @@ class CCommand :
   
  Notez que vous ne pouvez pas utiliser les procédures stockées avec le fournisseur OLE DB pour Jet car ce fournisseur ne prend pas en charge les procédures (seules des constantes sont autorisées dans les chaînes de requête).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

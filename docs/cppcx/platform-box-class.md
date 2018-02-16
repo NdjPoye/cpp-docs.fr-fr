@@ -7,20 +7,23 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: VCCORLIB/Platform::Box
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- VCCORLIB/Platform::Box
+dev_langs:
+- C++
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ac0940d9a7277b7b3f5b66e8d27750a593081471
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 813ba26333cb73212db966a0446d722eb4e0795d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformbox-class"></a>Platform::Box, classe
 Permet à un type valeur comme `Windows::Foundation::DateTime` ou à un type scalaire comme `int` d’être stocké dans un type `Platform::Object` . Vous n’avez généralement pas besoin d’utiliser `Box` explicitement, car le boxing s’effectue implicitement lors de la conversion d’un type valeur en `Object^`.  
@@ -44,7 +47,7 @@ ref class Box abstract;
 |[opérateur boîte&lt;T&gt;^](#box-t)|Permet les conversions par boxing d'une classe value `T` en `Box<T>`.|
 |[opérateur boîte&lt;volatile T&gt;^](#box-volatile-t)|Permet les conversions par boxing d'une classe value `volatile` `T` ou d'un type `enum` `T` en `Box<T>`.|
 |[Box::operator T](#t)|Permet les conversions par boxing d'une classe value `T` `enum` ou d'une classe `T` en `Box<T>`.| 
-## <a name="ctor"></a>Box::Box, constructeur
+## <a name="ctor"></a> Box::Box, constructeur
 Crée un `Box` qui peut encapsuler une valeur du type spécifié. | |[ Valeur de propriété](#value)| Retourne une valeur qui est encapsulée dans le `Box` objet. |  
 ### <a name="syntax"></a>Syntaxe  
   
@@ -57,7 +60,7 @@ Box(T valueArg);
  Le type de valeur boxed, par exemple, `int`, `bool`, `float64`, `DateTime`.  
   
 
-## <a name="box-const-t"></a>Box::operator Box&lt;const T&gt;^ (opérateur)
+## <a name="box-const-t"></a> Box::operator Box&lt;const T&gt;^ (opérateur)
 Permet les conversions par boxing d'une classe value `const` `T` ou d'une classe `enum` `T` en `Box<T>`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -73,7 +76,7 @@ operator Box<const T>^(const T valueType);
 ### <a name="return-value"></a>Valeur de retour  
  A `Platform::Box<T>^` instance qui représente la valeur d’origine convertie (boxed) dans une classe ref.  
   
-## <a name="box-const-volatile-t"></a>Box::operator Box&lt;const volatile T&gt;^ (opérateur)
+## <a name="box-const-volatile-t"></a> Box::operator Box&lt;const volatile T&gt;^ (opérateur)
 Permet les conversions par boxing d'une classe value `const volatile` `T` ou d'un type `enum` `T` en `Box<T>`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -89,7 +92,7 @@ operator Box<const volatile T>^(const volatile T valueType);
 ### <a name="return-value"></a>Valeur de retour  
  A `Platform::Box<T>^` instance qui représente la valeur d’origine convertie (boxed) dans une classe ref.  
   
-## <a name="box-t"></a>Box::operator Box&lt;T&gt;^ (opérateur)
+## <a name="box-t"></a> Box::operator Box&lt;T&gt;^ (opérateur)
 Permet les conversions par boxing d'une classe value `T` en `Box<T>`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -105,7 +108,7 @@ operator Box<const T>^(const T valueType);
 ### <a name="return-value"></a>Valeur de retour  
  A `Platform::Box<T>^` instance qui représente la valeur d’origine convertie (boxed) dans une classe ref.  
   
-## <a name="box-volatile-t"></a>Box::operator Box&lt;volatile T&gt;^ (opérateur)
+## <a name="box-volatile-t"></a> Box::operator Box&lt;volatile T&gt;^ (opérateur)
 Permet les conversions par boxing d'une classe value `volatile` `T` ou d'un type `enum` `T` en `Box<T>`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -121,7 +124,7 @@ operator Box<volatile T>^(volatile T valueType);
 ### <a name="return-value"></a>Valeur de retour  
  A `Platform::Box<T>^` instance qui représente la valeur d’origine convertie (boxed) dans une classe ref.  
   
-## <a name="t"></a>Box::operator T, opérateur
+## <a name="t"></a>  Box::operator T, opérateur
 Permet les conversions par boxing d'une classe value `T` `enum` ou d'une classe `T` en `Box<T>`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -138,7 +141,7 @@ operator Box<T>^(T valueType);
  A `Platform::Box<T>^` instance qui représente la valeur d’origine convertie (boxed) dans une classe ref.  
   
 
-## <a name="value"></a>Box::value, propriété
+## <a name="value"></a> Box::value, propriété
 Retourne la valeur qui est encapsulée dans l'objet `Box`.  
   
 ### <a name="syntax"></a>Syntaxe  

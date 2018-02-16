@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Object::Object
 - VCCORLIB/Platform::Object::Equals
@@ -14,22 +14,25 @@ f1_keywords:
 - VCCORLIB/Platform::Object::ReferenceEquals
 - VCCORLIB/Platform::ToString
 - VCCORLIB/Platform::GetType
-dev_langs: C++
-helpviewer_keywords: Object class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2ee718205aa235ee2d93183f131f06ba9f01e40e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aa882c22aab21fe82abb2884305bc314997f36a4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformobject-class"></a>Platform::Object, classe
-Fournit un comportement commun pour les classes ref et les structs ref dans les applications du Windows Store. Toute instance de classe ref ou de struct ref est implicitement convertible en objet Platform::Object^ et peut remplacer sa méthode ToString virtuelle.  
+Fournit un comportement commun pour les classes et structs ref dans les applications Windows Runtime. Toute instance de classe ref ou de struct ref est implicitement convertible en objet Platform::Object^ et peut remplacer sa méthode ToString virtuelle.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -66,7 +69,7 @@ public ref class Object : Object
  **Espace de noms :** Platform  
 
   
-## <a name="equals"></a>Object::Equals, méthode
+## <a name="equals"></a> Object::Equals, méthode
 Détermine si l'objet spécifié est identique à l'objet actuel.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -87,7 +90,7 @@ bool Equals(
   
 
 
-## <a name="gethashcode"></a>Object::GetHashCode, méthode
+## <a name="gethashcode"></a>  Object::GetHashCode Method
 Retourne la valeur d'identité `IUnknown`* pour cette instance s'il s'agit d'un objet COM ou une valeur de hachage calculée s'il ne s'agit d'un objet COM.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -104,7 +107,7 @@ public:int GetHashCode()
   
 
 
-## <a name="gettype"></a>Object::GetType, méthode
+## <a name="gettype"></a>  Object::GetType Method
 Retourne un [Platform::Type](../cppcx/platform-type-class.md) objet qui décrit le type d’exécution d’un objet.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -133,7 +136,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
  [Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)   
  (Type System) (.. /cppcx/type-System-c-CX.MD
   
-## <a name="ctor"></a>Object::Object, constructeur
+## <a name="ctor"></a>  Object::Object, constructeur
 Initialise une nouvelle instance de la classe Object.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -142,7 +145,7 @@ Initialise une nouvelle instance de la classe Object.
 public:Object()  
 ```  
 
-## <a name="referenceequals"></a>Object::ReferenceEquals, méthode
+## <a name="referenceequals"></a>  Object::ReferenceEquals, méthode
 Détermine si les instances Object spécifiées sont identiques.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -161,7 +164,7 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2)
 ### <a name="return-value"></a>Valeur de retour  
  `true` si les deux objets sont identiques ; sinon, `false`.  
  
-## <a name="tostring"></a>Object::ToString, méthode (C + c++ / CX)
+## <a name="tostring"></a>  Object::ToString, méthode (C + c++ / CX)
 Retourne une chaîne qui représente l'objet actuel.  
   
 ### <a name="syntax"></a>Syntaxe  

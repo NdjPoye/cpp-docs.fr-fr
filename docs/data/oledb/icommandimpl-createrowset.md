@@ -1,50 +1,49 @@
 ---
-title: ICommandImpl::CreateRowset | Documents Microsoft
+title: ICommandImpl::CreateRowset | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ICommandImpl::CreateRowset
 - ICommandImpl.CreateRowset
 - CreateRowset
-dev_langs: C++
-helpviewer_keywords: CreateRowset method
+dev_langs:
+- C++
+helpviewer_keywords:
+- CreateRowset method
 ms.assetid: a0890009-205e-4970-879f-01ed9d6a93f1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4fecb21b35e3941862cc38edc28a2b1e25ff6bcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45fcb53c6412f91c35ea26a5e7a732f5de2d3fcc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="icommandimplcreaterowset"></a>ICommandImpl::CreateRowset
 Appelé par [Execute](../../data/oledb/icommandimpl-execute.md) pour créer un ensemble de lignes unique.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
-      template <class   
-      RowsetClass  
+```cpp
+      template template <class RowsetClass  
       >  
-HRESULT CreateRowset(  
-   IUnknown* pUnkOuter,  
+HRESULT CreateRowset(IUnknown* pUnkOuter,  
    REFIID riid,  
    DBPARAMS* pParams,  
    DBROWCOUNT* pcRowsAffected,  
    IUnknown** ppRowset,  
-   RowsetClass*& pRowsetObj   
-);  
+   RowsetClass*& pRowsetObj);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -77,7 +76,7 @@ HRESULT CreateRowset(
   
  Consultez [ICommand::Execute](https://msdn.microsoft.com/en-us/library/ms718095.aspx) dans le *de référence du programmeur OLE DB.*  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

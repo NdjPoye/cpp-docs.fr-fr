@@ -6,23 +6,24 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 65d058780ee71731559733ac07eef3f614a47784
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 295b7810c562e141f1b2e22c993bcc7455c0f1d9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle
-Plusieurs fonctions CRT (C runtime) ne sont pas disponibles quand vous créez des applications pour la plateforme Windows universelle (UWP). Dans certains cas, les solutions de contournement sont disponibles :-par exemple, vous pouvez utiliser des API Win32 ou Windows Runtime. Toutefois, dans d’autres cas, les fonctions CRT sont exclues, car les fonctionnalités qui leur correspondent ou les API de prise en charge ne sont pas applicables aux applications UWP.  
+Plusieurs fonctions CRT (C runtime) ne sont pas disponibles quand vous créez des applications pour la plateforme Windows universelle (UWP). Dans certains cas, les solutions de contournement sont disponibles :-par exemple, vous pouvez utiliser des API Win32 ou Windows Runtime. Toutefois, dans d’autres cas, les fonctions CRT sont exclues, car les fonctionnalités qui leur correspondent ou les API de prise en charge ne sont pas applicables aux applications UWP. Pour rechercher une autre méthode qui est pris en charge pour le Windows Runtime, consultez [Alternatives aux API Windows dans les applications UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).  
   
- Le tableau suivant répertorie les fonctions CRT qui ne sont pas disponibles quand vous créez des applications UWP, et indique les éventuelles solutions de contournement applicables.  
+Le tableau suivant répertorie les fonctions CRT qui ne sont pas disponibles quand vous créez des applications UWP, et indique les éventuelles solutions de contournement applicables.  
   
 ## <a name="unsupported-crt-functions"></a>Fonctions CRT non prises en charge  
   
@@ -42,7 +43,7 @@ Plusieurs fonctions CRT (C runtime) ne sont pas disponibles quand vous créez de
 |_environ _putenv _putenv_s _searchenv _searchenv_s _dupenv_s _wputenv _wputenv_s _wsearchenv getenv getenv_s putenv _wdupenv_s _wenviron _wgetenv _wgetenv_s _wsearchenv_s tzset|Les variables d’environnement ne sont pas disponibles pour les applications UWP.|Aucune solution de contournement. Pour définir le fuseau horaire, utilisez _tzset.|  
 |_loaddll _getdllprocaddr _unloaddll|Il s’agit de fonctions obsolètes dans les versions précédentes de CRT. En outre, l’utilisateur ne peut pas charger les DLL, à l’exception de celles figurant dans le même package d’application.|Utilisez les API Win32 `LoadPackagedLibrary`, `GetProcAddress`et `FreeLibrary` pour charger et utiliser les DLL packagées.|  
 |_wexecl _wexecle _wexeclp _wexeclpe _wexecv _wexecve _wexecvp _wexecvpe _execl _execle _execlp _execlpe _execv _execve _execvp _execvpe _spawnl _spawnle _spawnlp _spawnlpe _spawnv _spawnve _spawnvp _spawnvpe _wspawnl _wspawnle _wspawnlp _wspawnlpe _wspawnv _wspawnve _wspawnvp _wspawnvpe _wsystem execl execle execlp execlpe execv execve execvp execvpe spawnl spawnle spawnlp spawnlpe spawnv spawnve spawnvp spawnvpe system|La fonctionnalité n’est pas disponible dans les applications UWP. Une application UWP ne peut pas appeler une autre application UWP ou une application de bureau.|Aucune solution de contournement.|  
-|_heapwalk _heapadd _heapchk _heapset _heapused|Ces fonctions sont généralement utilisées avec le tas. Toutefois, les API Win32 correspondantes ne sont pas prises en charge dans les applications UWP. De plus, les applications ne peuvent plus créer ou utiliser les tas privés.|Aucune solution de contournement. Toutefois, `_heapwalk` est disponible dans DEBUG CRT, à des fins de débogage uniquement. Ces fonctions ne peuvent pas être utilisées dans les applications téléchargées dans le Windows Store.|  
+|_heapwalk _heapadd _heapchk _heapset _heapused|Ces fonctions sont généralement utilisées avec le tas. Toutefois, les API Win32 correspondantes ne sont pas prises en charge dans les applications UWP. De plus, les applications ne peuvent plus créer ou utiliser les tas privés.|Aucune solution de contournement. Toutefois, `_heapwalk` est disponible dans DEBUG CRT, à des fins de débogage uniquement. Ils ne peut pas être utilisés dans les applications qui sont téléchargées au Microsoft Store.|  
   
  Les fonctions suivantes sont disponibles dans la bibliothèque CRT pour les applications UWP, mais doit être utilisées uniquement lorsque le Win32 correspondante ou APIs Windows Runtime ne peut pas être utilisés, par exemple, lorsque vous déplacez des bases de code volumineuses  
   

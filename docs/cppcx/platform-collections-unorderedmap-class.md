@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMap
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8b2266e43f3168fca823147f4c2c7e2c33513343
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 248b25e61af0ce766c81d480d7ebf39618a8dfec
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap, classe
 
@@ -102,7 +104,7 @@ Pour plus d’informations, consultez [Collections](../cppcx/collections-c-cx.md
 
 **Espace de noms :** Platform::Collections
 
-## <a name="clear"></a>Unorderedmap::Clear, méthode
+## <a name="clear"></a>  Unorderedmap::Clear, méthode
 
 Supprime toutes les paires clé-valeur de l'objet UnorderedMap actif.
 
@@ -112,7 +114,7 @@ Supprime toutes les paires clé-valeur de l'objet UnorderedMap actif.
 virtual void Clear();
 ```
 
-## <a name="first"></a>Unorderedmap::First, méthode
+## <a name="first"></a>  Unorderedmap::First, méthode
 
 Retourne un itérateur qui spécifie le premier [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) élément du mappage non trié.
 
@@ -132,7 +134,7 @@ Itérateur qui spécifie le premier élément de la carte.
 
 Un moyen pratique de contenir l’itérateur retourné par First() est d’assigner la valeur de retournée à une variable déclarée avec le **automatique** mot clé de déduction de type. Par exemple, `auto x = myUnorderedMap->First();`.
 
-## <a name="getview"></a>Unorderedmap::GetView, méthode
+## <a name="getview"></a>  Unorderedmap::GetView, méthode
 
 Retourne une vue en lecture seule de l’objet UnorderedMap actif ; Autrement dit, un [classe Platform::Collections :: unorderedmapview](../cppcx/platform-collections-unorderedmapview-class.md) qui implémente le [Windows::Foundation::Collections::IMapView::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) interface.
 
@@ -190,9 +192,9 @@ Partie de valeur de la paire clé-valeur. Le type de *valeur* est le nom de type
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true`Si la clé d’un élément existant dans le mappage actuel correspond à *clé* et la partie de la valeur de cet élément est définie sur *valeur*. `false`Si aucun élément existant dans le mappage actuel correspond à *clé* et *clé* et *valeur* paramètres sont transformés en paire clé-valeur, puis ajoutés à l’objet UnorderedMap actif.
+`true` Si la clé d’un élément existant dans le mappage actuel correspond à *clé* et la partie de la valeur de cet élément est définie sur *valeur*. `false` Si aucun élément existant dans le mappage actuel correspond à *clé* et *clé* et *valeur* paramètres sont transformés en paire clé-valeur, puis ajoutés à l’objet UnorderedMap actif.
 
-## <a name="lookup"></a>Unorderedmap::Lookup, méthode
+## <a name="lookup"></a>  Unorderedmap::Lookup, méthode
 
 Récupère la valeur du type V associé à la clé spécifiée de type K.
 
@@ -229,9 +231,9 @@ A [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windows/app
 
 ## <a name="net-framework-equivalent"></a>Équivalent .NET Framework
 
-Les applications du Windows Store que c# ou Visual Basic projet IMap\<K, V > comme IDictionary\<K, V >.
+Les applications Windows Runtime que c# ou Visual Basic projet IMap\<K, V > comme IDictionary\<K, V >.
 
-## <a name="remove"></a>Unorderedmap::Remove, méthode
+## <a name="remove"></a>  Unorderedmap::Remove, méthode
 
 Supprime la paire clé-valeur spécifiée de l'objet UnorderedMap.
 
@@ -247,7 +249,7 @@ virtual void Remove(
 *key*  
 Partie de clé de la paire clé-valeur. Le type de *clé* est le nom de type *K*.
 
-## <a name="size"></a>Unorderedmap::Size, méthode
+## <a name="size"></a>  Unorderedmap::Size, méthode
 
 Retourne le nombre de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) éléments de l’objet UnorderedMap.
 

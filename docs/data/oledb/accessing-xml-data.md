@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data access [C++], XML data
 - XML [C++], accessing data
@@ -16,18 +18,18 @@ helpviewer_keywords:
 - rowsets [C++], retrieving XML data
 - CStreamRowset class, retrieving XML data
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 654fab0aa5a5bf96e145f37ae4855f556f79bebf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9379abfd27f4dd8297864160f35367da0727935
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="accessing-xml-data"></a>Accès aux données XML
 Il existe deux méthodes distinctes pour la récupération des données XML à partir d’une source de données : un utilise [CStreamRowset](../../data/oledb/cstreamrowset-class.md) et l’autre utilise [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md).  
@@ -53,7 +55,7 @@ CCommand<CAccessor<CMyAccessor>, CStreamRowset> myCmd;
 CCommand<CNoAccessor, CStreamRowset> myCmd;  
 ```  
   
- Normalement, lorsque vous appelez `CCommand::Open` (vous spécifiez, par exemple, `CRowset` en tant que le `TRowset` classe), il obtient un `IRowset` pointeur. `ICommand::Execute`Retourne un `IRowset` pointeur, qui est stocké dans le `m_spRowset` membre de la `CRowset` objet. Les méthodes telles que `MoveFirst`, `MoveNext`, et `GetData` utilisent ce pointeur pour récupérer les données.  
+ Normalement, lorsque vous appelez `CCommand::Open` (vous spécifiez, par exemple, `CRowset` en tant que le `TRowset` classe), il obtient un `IRowset` pointeur. `ICommand::Execute` Retourne un `IRowset` pointeur, qui est stocké dans le `m_spRowset` membre de la `CRowset` objet. Les méthodes telles que `MoveFirst`, `MoveNext`, et `GetData` utilisent ce pointeur pour récupérer les données.  
   
  En revanche, lorsque vous appelez `CCommand::Open` (mais spécifier `CStreamRowset` comme le `TRowset` classe), `ICommand::Execute` retourne un `ISequentialStream` pointeur, qui est stocké dans le `m_spStream` membre de données de [CStreamRowset](../../data/oledb/cstreamrowset-class.md). Vous utilisez ensuite le `Read` méthode pour récupérer les données (chaîne Unicode) au format XML. Exemple :  
   
@@ -69,7 +71,7 @@ myCmd.m_spStream->Read()
 >  Prise en charge de XML à l’aide de `CStreamRowset` fonctionne uniquement avec SQL Server 2000 et exige que vous disposiez du fournisseur OLE DB pour SQL Server 2000 (installé avec MDAC).  
   
 ## <a name="retrieving-xml-data-using-cxmlaccessor"></a>La récupération des données XML à l’aide de CXMLAccessor  
- [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md) vous permet d’accéder aux données à partir d’une source de données comme données de chaîne lorsque vous n’avez aucune connaissance du schéma du magasin de données. `CXMLAccessor`fonctionne comme `CDynamicStringAccessorW` , sauf que la première convertit toutes les données accédées à partir du magasin de données au format XML (avec balises). Les noms de balises XML les noms de colonne du magasin de données aussi proche que possible.  
+ [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md) vous permet d’accéder aux données à partir d’une source de données comme données de chaîne lorsque vous n’avez aucune connaissance du schéma du magasin de données. `CXMLAccessor` fonctionne comme `CDynamicStringAccessorW` , sauf que la première convertit toutes les données accédées à partir du magasin de données au format XML (avec balises). Les noms de balises XML les noms de colonne du magasin de données aussi proche que possible.  
   
  Utilisez `CXMLAccessor` comme vous le feriez pour toute autre classe d’accesseur, en lui passant comme paramètre de modèle pour `CCommand` ou `CTable`:  
   
@@ -82,7 +84,8 @@ CTable<CXMLAccessor, CRowset> rs;
 ```  
 // Open data source, session, and rowset  
 hr = rs.MoveFirst();  
-while( SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )  
+
+while(SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )  
 {  
     CStringW strRowData;  
     myCmd.GetXMLRowData(strRowData);  

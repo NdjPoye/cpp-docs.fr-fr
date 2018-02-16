@@ -4,32 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: cmyproviderwindowsfile
-dev_langs: C++
+f1_keywords:
+- cmyproviderwindowsfile
+dev_langs:
+- C++
 helpviewer_keywords:
 - CMyProviderWindowsFile class
 - OLE DB providers, wizard-generated files
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fef6896df77ff3bcbf9251e2aabba0f810b7f4db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0ac247c418efa7800eeef469ecf54da75f5b15c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
-L’Assistant crée une classe pour contenir une ligne de données ; Dans ce cas, il est appelé `CMyProviderWindowsFile`. Le code suivant pour `CMyProviderWindowsFile` est généré par un Assistant et répertorie tous les fichiers dans un répertoire à l’aide de la **WIN32_FIND_DATA** structure. `CMyProviderWindowsFile`hérite de la **WIN32_FIND_DATA** structure :  
+L’Assistant crée une classe pour contenir une ligne de données ; Dans ce cas, il est appelé `CMyProviderWindowsFile`. Le code suivant pour `CMyProviderWindowsFile` est généré par un Assistant et répertorie tous les fichiers dans un répertoire à l’aide de la **WIN32_FIND_DATA** structure. `CMyProviderWindowsFile` hérite de la **WIN32_FIND_DATA** structure :  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   
@@ -47,11 +50,11 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- `CMyProviderWindowsFile`est appelé le [classe d’enregistrement utilisateur](../../data/oledb/user-record.md) car elle contient également un mappage décrivant les colonnes dans l’ensemble de lignes du fournisseur. Le mappage de colonnes du fournisseur contient une entrée pour chaque champ dans l’ensemble de lignes à l’aide de macros PROVIDER_COLUMN_ENTRY. Les macros de spécifient le nom de colonne ordinal et l’offset à une entrée de la structure. Dans le code ci-dessus, les entrées de colonnes du fournisseur contiennent des offsets dans le **WIN32_FIND_DATA** structure. Lorsque le consommateur appelle **IRowset::GetData**, les données sont transférées dans une mémoire tampon contiguë. Plutôt que d’effectuer d’effectuer l’opération arithmétique de pointeur, le mappage permet de spécifier un membre de données.  
+ `CMyProviderWindowsFile` est appelé le [classe d’enregistrement utilisateur](../../data/oledb/user-record.md) car elle contient également un mappage décrivant les colonnes dans l’ensemble de lignes du fournisseur. Le mappage de colonnes du fournisseur contient une entrée pour chaque champ dans l’ensemble de lignes à l’aide de macros PROVIDER_COLUMN_ENTRY. Les macros de spécifient le nom de colonne ordinal et l’offset à une entrée de la structure. Dans le code ci-dessus, les entrées de colonnes du fournisseur contiennent des offsets dans le **WIN32_FIND_DATA** structure. Lorsque le consommateur appelle **IRowset::GetData**, les données sont transférées dans une mémoire tampon contiguë. Plutôt que d’effectuer d’effectuer l’opération arithmétique de pointeur, le mappage permet de spécifier un membre de données.  
   
- Le `CMyProviderRowset` classe contient également le `Execute` (méthode). `Execute`est en fait, ce qui lit les données dans la source native. Le code suivant illustre la générées par l’Assistant `Execute` (méthode). La fonction utilise Win32 **FindFirstFile** et `FindNextFile` API pour extraire des informations sur les fichiers dans le répertoire et les placer dans des instances de la `CMyProviderWindowsFile` classe.  
+ Le `CMyProviderRowset` classe contient également le `Execute` (méthode). `Execute` est en fait, ce qui lit les données dans la source native. Le code suivant illustre la générées par l’Assistant `Execute` (méthode). La fonction utilise Win32 **FindFirstFile** et `FindNextFile` API pour extraire des informations sur les fichiers dans le répertoire et les placer dans des instances de la `CMyProviderWindowsFile` classe.  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   

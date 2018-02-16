@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _putw
+ms.topic: reference
+apiname:
+- _putw
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,23 +26,25 @@ apitype: DLLExport
 f1_keywords:
 - _putw
 - putw
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bca1143f123b0092266f7a314ac0c863779950ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d4c72da2b3002008d4f81fdac87f0a300dcdbc1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="putw"></a>_putw
 Écrit un entier dans un flux.  
@@ -70,7 +74,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Notes  
  La fonction `_putw` écrit une valeur binaire de type `int` à la position actuelle de *stream.* `_putw` n’affecte pas l’alignement des éléments du flux alignés ni ne présume aucun alignement spécial. `_putw` vise principalement à assurer la compatibilité avec les bibliothèques précédentes. Des problèmes de portabilité peuvent se présenter avec `_putw`, car la taille d’un `int` et l’ordre des octets au sein d’un `int` diffèrent d’un système à l’autre.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

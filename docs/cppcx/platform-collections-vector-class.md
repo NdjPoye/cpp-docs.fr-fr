@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
 - COLLECTION/Platform::Collections::Vector::Append
@@ -23,19 +23,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Vector::SetAt
 - COLLECTION/Platform::Collections::Vector::Size
 - COLLECTION/Platform::Collections::Vector::VectorChanged
-dev_langs: C++
-helpviewer_keywords: Vector Class (C++/Cx)
+dev_langs:
+- C++
+helpviewer_keywords:
+- Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8f77962a6ba1eeb86abf4d91b3a308b4fb0d65ef
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector, classe
 
@@ -117,7 +120,7 @@ Si vous tentez d’utiliser un **vecteur** type dans une valeur de retour public
 
 **Espace de noms :** Platform::Collections
 
-## <a name="append"></a>Vector::Append, méthode
+## <a name="append"></a>  Vector::Append, méthode
 
 Insère l'élément spécifié après le dernier élément du Vector actif.
 
@@ -132,7 +135,7 @@ virtual void Append(T item);
 *index*  
 Élément à insérer dans le Vector. Le type de *élément* est défini par le *T* typename.
 
-## <a name="clear"></a>Vector::Clear, méthode
+## <a name="clear"></a>  Vector::Clear, méthode
 
 Supprime tous les éléments du vecteur actuel.
 
@@ -142,7 +145,7 @@ Supprime tous les éléments du vecteur actuel.
 virtual void Clear();
 ```
 
-## <a name="first"></a>Vector::First (méthode)
+## <a name="first"></a>  Vector::First (méthode)
 
 Retourne un itérateur qui pointe vers le premier élément du Vector.
 
@@ -162,7 +165,7 @@ Un moyen pratique de contenir l’itérateur retourné par First() est d’assig
 
 Lorsque vous avez besoin d’une paire d’itérateurs à passer à une fonction STL, utilisez les fonctions libres [Windows::Foundation :: Collections :: begin](../cppcx/begin-function.md) et [Windows::Foundation](../cppcx/end-function.md)
 
-## <a name="getat"></a>Vector::GetAt (méthode)
+## <a name="getat"></a>  Vector::GetAt (méthode)
 
 Récupère l'élément de l'objet Vector actuel qui est identifié par l'index spécifié.
 
@@ -181,7 +184,7 @@ Entier non signé de base zéro qui spécifie un élément particulier dans l'ob
 
 L’élément spécifié par le *index* paramètre. Le type d’élément est défini par le *T* typename.
 
-## <a name="getmany"></a>Vector::GetMany (méthode)
+## <a name="getmany"></a>  Vector::GetMany (méthode)
 
 Récupère une séquence d'éléments du Vector actif en commençant à l'index spécifié et les copie dans le tableau alloué par l'appelant.
 
@@ -209,7 +212,7 @@ Le nombre d'éléments à récupérer.
 
 Cette fonction n'est pas destinée à être utilisée directement par le code client. Elle est utilisée en interne dans le [to_vector (fonction)](../cppcx/to-vector-function.md) pour permettre la conversion des instances Platform::Vector en instances std::vector.
 
-## <a name="getview"></a>Vector::GetView (méthode)
+## <a name="getview"></a>  Vector::GetView (méthode)
 
 Retourne une vue en lecture seule d'un Vector, c'est-à-dire un IVectorView.
 
@@ -223,7 +226,7 @@ Windows::Foundation::Collections::IVectorView<T>^ GetView();
 
 Objet IVectorView.
 
-## <a name="indexof"></a>Vector::IndexOf (méthode)
+## <a name="indexof"></a>  Vector::IndexOf (méthode)
 
 Recherche l'élément spécifié dans l'objet Vector actuel, et s'il existe, retourne l'index de l'élément.
 
@@ -251,7 +254,7 @@ Le *index* paramètre est 0 si l’élément est introuvable ou l’élément es
 
 IndexOf uses std::find_if pour trouver l'élément. Les types d'élément personnalisés doivent surcharger les opérateurs == et != afin d'autoriser les comparaisons d'égalité requises par find_if.
 
-##  <a name="insertat"></a>Vector::InsertAt, méthode
+##  <a name="insertat"></a>  Vector::InsertAt, méthode
 
 Insère l'élément spécifié dans le vecteur actuel après l'identification de l'élément par l'index spécifié.
 
@@ -269,7 +272,7 @@ Entier non signé de base zéro qui spécifie un élément particulier dans l'ob
 *item*  
 Un élément à insérer dans l’objet Vector après l’élément spécifié par *index*. Le type de *élément* est défini par le *T* typename.
 
-## <a name="removeat"></a>Vector::RemoveAt, méthode
+## <a name="removeat"></a>  Vector::RemoveAt, méthode
 
 Supprime l'élément identifié par l'index spécifié à partir du Vector actif.
 
@@ -284,7 +287,7 @@ virtual void RemoveAt(unsigned int index);
 *index*  
 Entier non signé de base zéro qui spécifie un élément particulier dans l'objet Vector.
 
-## <a name="removeatend"></a>Vector::removeatend, méthode
+## <a name="removeatend"></a>  Vector::removeatend, méthode
 
 Supprime l'élément à la fin du Vector actif.
 
@@ -294,7 +297,7 @@ Supprime l'élément à la fin du Vector actif.
 virtual void RemoveAtEnd();
 ```
 
-## <a name="replaceall"></a>Vector::ReplaceAll, méthode
+## <a name="replaceall"></a>  Vector::ReplaceAll, méthode
 
 Supprime les éléments du Vector actif et les insère depuis le tableau spécifié.
 
@@ -309,7 +312,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 *arr*  
 Un tableau d’objets dont le type est défini par le *T* typename.
 
-## <a name="setat"></a>Vector::SetAt, méthode
+## <a name="setat"></a>  Vector::SetAt, méthode
 
 Assigne la valeur spécifiée à l'élément du Vector actif identifié par l'index spécifié.
 
@@ -327,7 +330,7 @@ Entier non signé de base zéro qui spécifie un élément particulier dans l'ob
 *item*  
 Valeur à assigner à l’élément spécifié. Le type de *élément* est défini par le *T* typename.
 
-## <a name="size"></a>Vector::Size, méthode
+## <a name="size"></a>  Vector::Size, méthode
 
 Retourne le nombre d'éléments dans l'objet Vector actuel.
 

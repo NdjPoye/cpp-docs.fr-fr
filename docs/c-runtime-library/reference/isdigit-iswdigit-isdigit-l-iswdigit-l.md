@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _isdigit_l
 - iswdigit
@@ -32,7 +33,8 @@ f1_keywords:
 - isdigit
 - _istdigit
 - _istdigit_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - iswdigit function
 - iswdigit_l function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - _ismbcdigit_l function
 - _isdigit_l function
 ms.assetid: 350b0093-843a-47b0-954e-c1776e8a3853
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 84b2293114acd31d0baf1f3a595deba9247d6120
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 004186bc7ea74cb6ab2c39d25a9b3d3efeb556fe
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isdigit-iswdigit-isdigitl-iswdigitl"></a>isdigit, iswdigit, _isdigit_l, _iswdigit_l
 Détermine si un entier représente un caractère numérique décimal.  
@@ -86,7 +89,7 @@ int _iswdigit_l(
  Paramètres régionaux à utiliser.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Chacune de ces routines retourne une valeur différente de zéro si `c` est une représentation particulière d’un caractère numérique décimal. `isdigit`Retourne une valeur différente de zéro si `c` est un chiffre décimal (0 - 9). `iswdigit` retourne une valeur différente de zéro si `c` est un caractère large qui correspond à un caractère numérique décimal. Chacune de ces routines retourne 0 si `c` ne répond pas à la condition de test.  
+ Chacune de ces routines retourne une valeur différente de zéro si `c` est une représentation particulière d’un caractère numérique décimal. `isdigit` Retourne une valeur différente de zéro si `c` est un chiffre décimal (0 - 9). `iswdigit` retourne une valeur différente de zéro si `c` est un caractère large qui correspond à un caractère numérique décimal. Chacune de ces routines retourne 0 si `c` ne répond pas à la condition de test.  
   
  Pour leur comportement dépendant des paramètres régionaux, les versions de ces fonctions avec le suffixe `_l` utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   

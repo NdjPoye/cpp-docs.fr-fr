@@ -7,37 +7,36 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a68475447ed520298b0eab7949386c2e8d078ac6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7a64e1f35350968f16a24a46b8611820d68bf785
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="static-libraries-ccx"></a>Bibliothèques statiques (C++/CX)
-Une bibliothèque statique qui est utilisée dans une application de plateforme Windows universelle permettre contenir du code à la norme ISO C++, y compris les types STL et également les appels aux API Win32 qui ne sont pas exclus de la plateforme d’application de plateforme Windows universelle. Une bibliothèque statique consomme des composants Windows Runtime et peut créer des composants Windows Runtime avec certaines restrictions.  
+Une bibliothèque statique qui est utilisée dans une application de plateforme Windows universelle (UWP) peut contenir du code à la norme ISO C++, y compris les types STL et également les appels aux API Win32 qui ne sont pas exclus de la plateforme d’application Windows Runtime. Une bibliothèque statique consomme des composants Windows Runtime et peut créer des composants Windows Runtime avec certaines restrictions.  
   
 ## <a name="creating-static-libraries"></a>Création de bibliothèques statiques  
   
-#### <a name="to-create-a-static-library-for-use-in-a-universal-windows-platform-app"></a>Pour créer une bibliothèque statique pour une utilisation dans une application de plateforme Windows universelle  
+#### <a name="to-create-a-static-library-for-use-in-a-uwp-app"></a>Pour créer une bibliothèque statique pour une utilisation dans une application UWP  
   
-1.  Dans la barre de menus, choisissez **fichier** > **nouveau** > **projet** > **bibliothèque statique vide** Windows universel pour les applications de la plateforme.  
+1.  Dans la barre de menus, choisissez **Fichier** > **Nouveau** > **Projet**. Sous **Visual C++** > **Windows universel** choisissez **bibliothèque statique (Windows universel)**.  
   
-2.  Dans l' **Explorateur de solutions**, ouvrez le menu contextuel du projet et choisissez **Propriétés**. Dans le **propriétés** boîte de dialogue le **propriétés de Configuration** > **général** , définissez la prise en charge des applications de plateforme Windows universelle  **Oui**.  
+2.  Dans l' **Explorateur de solutions**, ouvrez le menu contextuel du projet et choisissez **Propriétés**. Dans le **propriétés** boîte de dialogue le **propriétés de Configuration** > **C/C++** , définissez **consommer l’Extension Windows Runtime** à **Oui (/ZW)**.  
   
-3.  Sur le **propriétés de Configuration** > **C/C++** , définissez **consommer** Windows Runtime **Extension** à **Oui (/ZW)**.  
+ Lorsque vous compilez une nouvelle bibliothèque statique, si vous effectuez un appel à une API Win32 qui est exclue pour les applications UWP, le compilateur déclenche l’erreur C3861 « Identificateur introuvable ». Pour rechercher une autre méthode qui est pris en charge pour le Windows Runtime, consultez [Alternatives aux API Windows dans les applications UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).  
   
- Lorsque vous compilez une nouvelle bibliothèque statique, si vous effectuez un appel à une API Win32 qui est exclue pour les applications de plateforme Windows universelle, le compilateur déclenche l’erreur C3861 « Identificateur introuvable ». Pour rechercher une autre méthode qui est pris en charge pour le Windows Runtime, consultez [Alternatives aux API Windows dans les applications du Windows Store](http://msdn.microsoft.com/en-us/75568012-61e0-41cc-a4df-c698f54f21ec).  
+ Si vous ajoutez un projet de bibliothèque statique C++ à une solution d’application UWP, vous devrez peut-être mettre à jour les paramètres de propriété du projet de bibliothèque afin que la propriété de prise en charge de plateforme Windows universelle est définie **Oui**. Sans ce paramètre, le code est généré et des liens, mais une erreur se produit lorsque vous essayez de vérifier l’application pour Microsoft Store. La bibliothèque statique doit être compilée avec les mêmes paramètres de compilateur que ceux du projet qui la consomme.  
   
- Si vous ajoutez un projet de bibliothèque statique C++ à une solution d’application de plateforme Windows universelle, vous devrez peut-être mettre à jour les paramètres de propriété du projet de bibliothèque afin que la propriété de prise en charge de plateforme Windows universelle est définie **Oui**. Sans ce paramètre, le code est généré et crée des liens, mais une erreur se produit lorsque vous essayez de vérifier l'application pour [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)]. La bibliothèque statique doit être compilée avec les mêmes paramètres de compilateur que ceux du projet qui la consomme.  
-  
- Si vous consommez une bibliothèque statique qui crée des classes `ref` publiques, des classes d'interface publiques ou des classes de valeur publiques, l'éditeur de liens déclenche l'avertissement suivant :  
+ Si vous consommez une bibliothèque statique qui crée des classes `ref` publiques, des classes d'interface publiques ou des classes de valeur publiques, l'éditeur de liens déclenche l'avertissement suivant :  
   
 > **avertissement LNK4264 :** archivage du fichier objet compilé avec /ZW dans une bibliothèque statique ; Notez que lors de la création des types Windows Runtime, il n'est pas recommandée pour créer un lien avec une bibliothèque statique qui contient des métadonnées Windows Runtime.  
   

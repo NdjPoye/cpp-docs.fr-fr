@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _iswalnum_l
 - _isalnum_l
@@ -32,7 +33,8 @@ f1_keywords:
 - _isalnum_l
 - isalnum
 - _istalnum
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _istalnum function
 - _ismbcalnum_l function
@@ -43,16 +45,17 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c0c5ee9588635a50ca618a39e919661f9df08a27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0f71ab6a960dbc92c4e6d8399e833f2ddf0e2ac1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
 Détermine si un entier représente un caractère alphanumérique.  
@@ -84,7 +87,7 @@ int _iswalnum_l(
  Paramètres régionaux à utiliser.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Chacune de ces routines retourne une valeur différente de zéro si `c` est une représentation particulière d’un caractère alphanumérique. `isalnum`Retourne une valeur différente de zéro si le paramètre `isalpha` ou `isdigit` est différent de zéro pour `c`, autrement dit, si `c` se trouve dans les plages A - Z, a - z ou 0 - 9. `iswalnum` retourne une valeur différente de zéro si `iswalpha` ou `iswdigit` est différent de zéro pour `c`. Chacune de ces routines retourne 0 si `c` ne répond pas à la condition de test.  
+ Chacune de ces routines retourne une valeur différente de zéro si `c` est une représentation particulière d’un caractère alphanumérique. `isalnum` Retourne une valeur différente de zéro si le paramètre `isalpha` ou `isdigit` est différent de zéro pour `c`, autrement dit, si `c` se trouve dans les plages A - Z, a - z ou 0 - 9. `iswalnum` retourne une valeur différente de zéro si `iswalpha` ou `iswdigit` est différent de zéro pour `c`. Chacune de ces routines retourne 0 si `c` ne répond pas à la condition de test.  
   
  Les versions de ces fonctions qui ont le suffixe `_l` utilisent à la place des paramètres régionaux actuels, les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
@@ -97,7 +100,7 @@ int _iswalnum_l(
 |`_istalnum`|`isalnum`|[_ismbcalnum](../../c-runtime-library/reference/ismbcalnum-functions.md)|`iswalnum`|  
 |`_istalnum_l`|`_isalnum_l`|`_ismbcalnum_l`|`_iswalnum_l`|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

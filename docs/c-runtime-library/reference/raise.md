@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 1/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: raise
+ms.topic: reference
+apiname:
+- raise
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: Raise
-dev_langs: C++
+f1_keywords:
+- Raise
+dev_langs:
+- C++
 helpviewer_keywords:
 - signals, sending to executing programs
 - raise function
@@ -31,12 +35,13 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1b7ec6c886c96bae93f511e54119500d58d6fea5
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5a116bfab72222bcf3ee3357c77759960f838cb9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="raise"></a>raise
 
@@ -66,7 +71,7 @@ En cas de réussite, **raise** retourne 0. Dans le cas contraire, une valeur dif
 
 La fonction **raise** envoie *sig* au programme en cours d’exécution. Si un appel précédent à **signal** a installé une fonction de gestion de signal pour *sig*, **raise** exécute cette fonction. Si aucune fonction de gestionnaire n’a été installée, l’action par défaut associée à la valeur de signal *sig* est effectuée, comme suit.
 
-|Signal|Signification|Default|
+|Signal|Signification|Par défaut|
 |------------|-------------|-------------|
 |`SIGABRT`|Arrêt anormal|Termine le programme appelant avec le code de sortie 3|
 |`SIGFPE`|Erreur de virgule flottante|Termine le programme appelant|
@@ -77,7 +82,7 @@ La fonction **raise** envoie *sig* au programme en cours d’exécution. Si un a
 
 Si l’argument n’est pas un signal valide tel que spécifié ci-dessus, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). S’il n’est pas géré, la fonction affecte à `errno` la valeur `EINVAL` et retourne une valeur différente de zéro.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

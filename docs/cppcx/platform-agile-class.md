@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
 - AGILE/Platform::Platform::Agile::Agile
@@ -14,19 +14,22 @@ f1_keywords:
 - AGILE/Platform::Platform::Agile::GetAddressOf
 - AGILE/Platform::Platform::Agile::GetAddressOfForInOut
 - AGILE/Platform::Platform::Agile::Release
-dev_langs: C++
-helpviewer_keywords: Platform::Agile
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 71498f2a075bed78fab2bb073e5c93c62936c29d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2c670ffc10858e709129caf9fabf80b656cbdb18
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformagile-class"></a>Platform::Agile, classe
 Représente un objet qui a MashalingBehavior=Standard en tant qu’objet agile, ce qui réduit considérablement les risques d’exception de thread d’exécution. `Agile<T>` permet à l’objet non agile d’appeler ou d’être appelé par le même thread ou un thread différent. Pour plus d’informations, consultez [thread et Marshaling](../cppcx/threading-and-marshaling-c-cx.md).  
@@ -86,7 +89,7 @@ class Agile;
   
  **En-tête :** agile.h  
 
-## <a name="ctor"></a>Agile::Agile, constructeur
+## <a name="ctor"></a>  Agile::Agile, constructeur
 Initialise une nouvelle instance de la classe Agile.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -113,7 +116,7 @@ Agile(Agile<T>&& object);
 ### <a name="remarks"></a>Notes  
  La première version de ce constructeur est le constructeur par défaut. La deuxième version initialise la classe d'instance Agile de l'objet spécifié par le paramètre `object`. La troisième version est le constructeur de copie. La quatrième version est le constructeur de déplacement. Ce constructeur ne peut pas lever d'exceptions.  
 
-## <a name="dtor"></a>Agile :: ~ Agile, destructeur
+## <a name="dtor"></a>  Agile :: ~ Agile, destructeur
 Détruit l'instance actuelle de la classe Agile.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -126,7 +129,7 @@ Détruit l'instance actuelle de la classe Agile.
 ### <a name="remarks"></a>Notes  
  Ce destructeur libère aussi l’objet représenté par l’objet Agile actuel.  
   
-## <a name="get"></a>Agile::Get, méthode
+## <a name="get"></a>   Agile::Get, méthode
 Retourne un handle vers l’objet représenté par l’objet Agile actif.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -142,7 +145,7 @@ Retourne un handle vers l’objet représenté par l’objet Agile actif.
   
  Le type de la valeur de retour est en réalité un type interne non divulgué. Un moyen pratique de contenir la valeur de retour consiste à affecter à une variable déclarée avec le **automatique** mot clé de déduction de type. Par exemple, `auto x = myAgileTvariable->Get();`.  
   
-## <a name="getaddressof"></a>Agile::getaddressof, méthode
+## <a name="getaddressof"></a>  Agile::getaddressof, méthode
 Réinitialise l’objet Agile actif, puis retourne l’adresse d’un handle vers un objet de type `T`.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -163,7 +166,7 @@ throw();
 ### <a name="remarks"></a>Notes  
  Cette opération libère la représentation actuelle d’un objet de type `T`, le cas échéant ; réinitialise les membres de données de l’objet Agile, acquiert le contexte de thread actuel et retourne l’adresse d’une variable handle-to-object qui peut représenter un objet non agile. Pour provoquer une instance de la classe Agile représente un objet, utilisez l’opérateur d’assignation ([Agile::operator =](#operator-assign)) pour assigner l’objet à l’instance de la classe Agile.  
 
-## <a name="getaddressofforinout"></a>Agile::getaddressofforinout, méthode
+## <a name="getaddressofforinout"></a>  Agile::getaddressofforinout, méthode
 Retourne l'adresse d'un handle vers l'objet représenté par l'objet Agile actif.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -184,7 +187,7 @@ T^* GetAddressOfForInOut()  throw();
 ### <a name="remarks"></a>Notes  
  Cette opération acquiert le contexte de thread actuel et retourne l'adresse d'un handle vers l'objet sous-jacent.  
 
-## <a name="release"></a>Agile::Release, méthode
+## <a name="release"></a>  Agile::Release, méthode
 Ignore l'objet et le contexte sous-jacent de l'objet Agile actif.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -198,7 +201,7 @@ void Release() throw();
 ### <a name="remarks"></a>Notes  
  L'objet et le contexte sous-jacent de l'objet Agile actif sont ignorés, s'ils existent, et la valeur de l'objet Agile est alors définie sur null.  
 
-## <a name="operator-arrow"></a>Agile::operator -&gt; (opérateur)
+## <a name="operator-arrow"></a>  Agile::operator-&gt; Operator
 Récupère un handle vers l’objet représenté par l’objet Agile actif.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -214,7 +217,7 @@ const throw();
   
  Cet opérateur retourne un type interne non divulgué. Un moyen pratique de contenir la valeur de retour consiste à affecter à une variable déclarée avec le **automatique** mot clé de déduction de type.  
 
-## <a name="operator-assign"></a>Agile::operator =, opérateur
+## <a name="operator-assign"></a>  Agile::operator= Operator
 Assigne l'objet spécifié à l'objet Agile actuel.  
   
 ## <a name="syntax"></a>Syntaxe  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsncpy_s_l
 - wcsncpy_s
@@ -35,7 +36,8 @@ f1_keywords:
 - _strncpy_s_l
 - wcsncpy_s
 - _tcsncpy_s_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wcsncpy_s_l function
 - _mbsnbcpy_s function
@@ -52,22 +54,23 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3d99dbf05d6ce70177b6ef3c5344e5f4059c0aac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b439ead7628366a358da5fadb354dbc9ca070074
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 Copie les caractères d’une chaîne dans une autre.  Ces versions de [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  `_mbsncpy_s` et `_mbsncpy_s_l` ne peuvent pas être utilisées dans les applications qui s'exécutent dans Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsncpy_s` et `_mbsncpy_s_l` ne peuvent pas être utilisées dans les applications qui s'exécutent dans Windows Runtime. Pour plus d’informations, consultez [fonctions CRT non prises en charge dans les applications de plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -175,10 +178,10 @@ errno_t _mbsncpy_s_l(
   
 |`strDest`|`numberOfElements`|`strSource`|Valeur de retour|Contenu de `strDest`|  
 |---------------|------------------------|-----------------|------------------|---------------------------|  
-|`NULL`|tous|tous|`EINVAL`|non modifié|  
-|tous|tous|`NULL`|`EINVAL`|`strDest`[0] a la valeur 0|  
-|indifférent|0|tous|`EINVAL`|non modifié|  
-|non `NULL`|trop petit|tous|`ERANGE`|`strDest`[0] a la valeur 0|  
+|`NULL`|any|any|`EINVAL`|non modifié|  
+|any|any|`NULL`|`EINVAL`|`strDest`[0] a la valeur 0|  
+|indifférent|0|any|`EINVAL`|non modifié|  
+|non `NULL`|trop petit|any|`ERANGE`|`strDest`[0] a la valeur 0|  
   
 ## <a name="remarks"></a>Notes  
  Ces fonctions essaient de copier les `D` premiers caractères de `strSource` dans `strDest`, `D` représentant la valeur la plus petite de `count` et la longueur de `strSource`. Si ces `D` caractères tiennent dans `strDest` (dont la taille est indiquée par `numberOfElements`) et s’il reste de l’espace pour un terminateur null, ces caractères sont copiés et un caractère null de fin est ajouté ; sinon, `strDest`[0] est défini avec le caractère null et le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  
@@ -223,7 +226,7 @@ errno_t _mbsncpy_s_l(
 > [!NOTE]
 >  Les fonctions _strncpy_s_l, `_wcsncpy_s_l` et `_mbsncpy_s_l` n’ont aucune dépendance vis-à-vis des paramètres régionaux ; elles sont uniquement fournies pour `_tcsncpy_s_l` et ne sont pas destinées à être appelées directement.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

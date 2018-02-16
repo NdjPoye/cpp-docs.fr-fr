@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OpenAll method
 - attribute-injected classes and methods
@@ -21,38 +23,39 @@ helpviewer_keywords:
 - OpenRowset method
 - GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2578de53cfab40ee779f0d0444b227b214e3caa9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d41ae6c6ca32819faa498d5a9b37ce4b4008a05
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="consumer-wizard-generated-methods"></a>Méthodes de consommateur générées par l'Assistant
 L’Assistant Consommateur OLE DB ATL et l’Assistant Application MFC génèrent certaines fonctions dont vous devez être conscient. Notez que certaines méthodes sont implémentées différemment dans les projets avec attributs, il y a quelques avertissements ; chaque cas sont couverte ci-après. Pour plus d’informations sur l’affichage de code injecté, consultez [Débogage de code injecté](/visualstudio/debugger/how-to-debug-injected-code).  
   
--   `OpenAll`Ouvre la source de données, les ensembles de lignes et Active les signets si elles sont disponibles.  
+-   `OpenAll` Ouvre la source de données, les ensembles de lignes et Active les signets si elles sont disponibles.  
   
--   `CloseAll`Ferme tous les jeux de lignes et libère toutes les exécutions de commande.  
+-   `CloseAll` Ferme tous les jeux de lignes et libère toutes les exécutions de commande.  
   
--   `OpenRowset`est appelée par OpenAll pour ouvrir l’ensemble de lignes ou des ensembles de lignes du consommateur.  
+-   `OpenRowset` est appelée par OpenAll pour ouvrir l’ensemble de lignes ou des ensembles de lignes du consommateur.  
   
--   `GetRowsetProperties`Récupère un pointeur vers le propriétés de jeu avec les propriétés peuvent être définies.  
+-   `GetRowsetProperties` Récupère un pointeur vers le propriétés de jeu avec les propriétés peuvent être définies.  
   
--   `OpenDataSource`Ouvre la source de données à l’aide de la chaîne d’initialisation que vous avez spécifié dans le **propriétés des liaisons de données** boîte de dialogue.  
+-   `OpenDataSource` Ouvre la source de données à l’aide de la chaîne d’initialisation que vous avez spécifié dans le **propriétés des liaisons de données** boîte de dialogue.  
   
--   `CloseDataSource`Ferme la source de données de manière appropriée.  
+-   `CloseDataSource` Ferme la source de données de manière appropriée.  
   
 ## <a name="openall-and-closeall"></a>OpenAll et CloseAll  
   
 ```  
 HRESULT OpenAll();   
+
 void CloseAll();  
 ```  
   
@@ -101,7 +104,7 @@ HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);  
 ```  
   
- **OpenAll** appelle cette méthode pour ouvrir les jeux de lignes dans le consommateur. En règle générale, vous n’avez pas besoin d’appeler `OpenRowset` , sauf si vous souhaitez travailler avec plusieurs sources de données/sessions/ensembles de lignes. `OpenRowset`est déclaré dans le fichier d’en-tête de classe commande ou de table :  
+ **OpenAll** appelle cette méthode pour ouvrir les jeux de lignes dans le consommateur. En règle générale, vous n’avez pas besoin d’appeler `OpenRowset` , sauf si vous souhaitez travailler avec plusieurs sources de données/sessions/ensembles de lignes. `OpenRowset` est déclaré dans le fichier d’en-tête de classe commande ou de table :  
   
 ```  
 // OLE DB Template version:  
@@ -141,7 +144,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
- Cette méthode récupère un pointeur vers le jeu de propriétés de l’ensemble de lignes ; Vous pouvez utiliser ce pointeur pour définir des propriétés telles que DBPROP_IRowsetChange. `GetRowsetProperties`est utilisé comme suit dans la classe d’enregistrement utilisateur. Vous pouvez modifier ce code pour définir les propriétés de l’ensemble de lignes supplémentaires :  
+ Cette méthode récupère un pointeur vers le jeu de propriétés de l’ensemble de lignes ; Vous pouvez utiliser ce pointeur pour définir des propriétés telles que DBPROP_IRowsetChange. `GetRowsetProperties` est utilisé comme suit dans la classe d’enregistrement utilisateur. Vous pouvez modifier ce code pour définir les propriétés de l’ensemble de lignes supplémentaires :  
   
 ```  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
@@ -160,6 +163,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
   
 ```  
 HRESULT OpenDataSource();   
+
 void CloseDataSource();  
 ```  
   

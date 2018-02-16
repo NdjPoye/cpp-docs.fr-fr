@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 10/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcstod
 - _wcstod_l
@@ -35,7 +36,8 @@ f1_keywords:
 - corecrt_wstdlib/wcstod
 - stdlib/_strtod_l
 - corecrt_wstdlib/_wcstod_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcstod_l function
 - tcstod_l function
@@ -49,16 +51,17 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1d46e6402efe69a9099d53d9d93b5b367f6dd18c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fe18737b52ba2b04e3ee09813c6b48b6ebdf0363
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -100,13 +103,13 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-`strtod`Retourne la valeur du nombre à virgule flottante, sauf lorsque la représentation sous forme de provoquerait un dépassement de capacité, dans ce cas, la fonction renvoie + et-`HUGE_VAL`. Le signe de `HUGE_VAL` correspond au signe de la valeur qui ne peut pas être représentée. `strtod` retourne 0 si aucune conversion ne peut être effectuée ou en cas de dépassement de capacité négatif.
+`strtod` Retourne la valeur du nombre à virgule flottante, sauf lorsque la représentation sous forme de provoquerait un dépassement de capacité, dans ce cas, la fonction renvoie + et-`HUGE_VAL`. Le signe de `HUGE_VAL` correspond au signe de la valeur qui ne peut pas être représentée. `strtod` retourne 0 si aucune conversion ne peut être effectuée ou en cas de dépassement de capacité négatif.
 
 `wcstod` retourne des valeurs de façon analogue à `strtod`. Pour les deux fonctions, `errno` prend la valeur `ERANGE` si un dépassement de capacité positif ou négatif se produit et le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Pour plus d’informations sur ce code de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Chaque fonction convertit la chaîne d’entrée *nptr* à un `double`. Le `strtod` fonction convertit *nptr* en valeur double précision. `strtod`arrête la lecture de la chaîne *nptr* au premier caractère qu’il ne peut pas identifier en tant que partie d’un nombre. Il peut s’agir du caractère Null de fin. `wcstod`est une version à caractères larges de `strtod`; sa *nptr* argument est une chaîne à caractères larges. Ces fonctions se comportent sinon de façon identique.
+Chaque fonction convertit la chaîne d’entrée *nptr* à un `double`. Le `strtod` fonction convertit *nptr* en valeur double précision. `strtod` arrête la lecture de la chaîne *nptr* au premier caractère qu’il ne peut pas identifier en tant que partie d’un nombre. Il peut s’agir du caractère Null de fin. `wcstod` est une version à caractères larges de `strtod`; sa *nptr* argument est une chaîne à caractères larges. Ces fonctions se comportent sinon de façon identique.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -119,18 +122,18 @@ Le `LC_NUMERIC` paramètre de catégorie de paramètres régionaux actuels déte
 
 Si *endptr* n’est pas `NULL`, un pointeur vers le caractère qui l’a arrêté l’analyse est stocké à l’emplacement vers lequel pointé *endptr*. Si aucune conversion ne peut être effectuée (aucun chiffre valide a été trouvé ou une base non valide a été spécifiée), la valeur de *nptr* est stocké à l’emplacement vers lequel pointé *endptr*.
 
-`strtod`attend *nptr* pour pointer vers une chaîne de l’une des formes suivantes :
+`strtod` attend *nptr* pour pointer vers une chaîne de l’une des formes suivantes :
 
-[*espace blanc*] [*signe*] {*chiffres* [*radix* *chiffres*] &#124; *radix* *chiffres*} [{**e** &#124; **E**} [*signe*] *chiffres*]  
+[*whitespace*] [*sign*] {*digits* [*radix* *digits*] &#124; *radix* *digits*} [{**e** &#124; **E**} [*sign*] *digits*]  
 [*espace blanc*] [*signe*] {**0 x** &#124; **0 X**} {*hexdigits* [*radix* *hexdigits*] &#124; *radix* *hexdigits*} [{**p** &#124; **P**} [*signe*] *hexdigits*]  
-[*espace blanc*] [*signe*] {**INF** &#124; **Infini**}  
-[*espace blanc*] [*signe*] **NAN** [*séquence*]
+[*whitespace*] [*sign*] {**INF** &#124; **INFINITY**}  
+[*whitespace*] [*sign*] **NAN** [*sequence*]
 
 L’interligne facultatif *espace blanc* peut contenir les caractères espace et la tabulation, qui sont ignorés ; *connexion* est plus (+) ou moins (-) ; *chiffres* sont un ou plusieurs chiffres décimaux ; *hexdigits* sont un ou plusieurs chiffres hexadécimaux ; *radix* est le caractère de point de base, un point (.) dans le paramètres régionaux « C » par défaut, ou les paramètres régionaux spécifiques valeur si les paramètres régionaux actuels sont différent ou lorsque *paramètres régionaux* est spécifié ; une *séquence* est une séquence d’alphanumériques ou traits de soulignement. Dans les formulaires nombres décimales et hexadécimales, si aucun chiffre ne s’affiche avant le caractère de point de base, au moins un doit apparaître après le caractère de point de base. Sous la forme décimale, les chiffres décimaux peuvent être suivies d’un exposant, qui se compose d’une lettre d’introduction (**e** ou **E**) et d’un entier signé si vous le souhaitez. Dans le format hexadécimal, les chiffres hexadécimaux peuvent être suivies d’un exposant, qui se compose d’une lettre d’introduction (**p** ou **P**) et éventuellement hexadécimal entier signé qui représente le exposant en tant qu’une puissance de 2. Sous une forme, si une partie exposant, ni un caractère de point de base s’affiche, un caractère de point de base est censé pour suivre le dernier chiffre dans la chaîne. La casse est ignorée dans les deux le **INF** et **NAN** forms. Le premier caractère qui ne tient pas un de ces formulaires s’arrête l’analyse.
 
 Les versions UCRT de ces fonctions ne prennent pas en charge la conversion de type Fortran (**d** ou **D**) lettres exposant. Cette extension non standard était prise en charge par les versions antérieures de la bibliothèque CRT et peut être une modification avec rupture pour votre code. Les versions de la bibliothèque UCRT prend en charge les chaînes hexadécimales et aller-retour de valeurs INF et NAN, qui n’étaient pas pris en charge dans les versions antérieures. Cela peut également entraîner des modifications avec rupture dans votre code. Par exemple, la chaîne « 0x1a » est interprétée par `strtod` comme 0.0 dans les versions précédentes, mais comme 26.0 dans la version de l’UCRT.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _isleadbyte_l
 - isleadbyte
@@ -27,7 +28,8 @@ f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
 - isleadbyte
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - lead bytes
 - _isleadbyte_l function
@@ -35,22 +37,23 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e783413e207ff63f2b93b31af53b0b0a44ff68f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 82c8f6eb81e96527c0955d9b19fd8ce931e8d7fe
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte, _isleadbyte_l
 Détermine si un caractère est l’octet de tête d’un caractère multioctet.  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez                  [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [fonctions CRT non prises en charge dans les applications de plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -71,7 +74,7 @@ int _isleadbyte_l(
  `isleadbyte` retourne une valeur différente de zéro si l’argument satisfait à la condition de test, ou 0 si ce n’est pas le cas. Dans les paramètres régionaux « C » et dans les paramètres régionaux SBCS (jeu de caractères codés sur un octet), `isleadbyte` retourne toujours 0.  
   
 ## <a name="remarks"></a>Notes  
- La macro `isleadbyte` retourne une valeur différente de zéro si son argument est le premier octet d’un caractère multioctet. `isleadbyte`produit un résultat significatif pour n’importe quel argument entier compris entre -1 (`EOF`) à `UCHAR_MAX` (0xFF), inclus.  
+ La macro `isleadbyte` retourne une valeur différente de zéro si son argument est le premier octet d’un caractère multioctet. `isleadbyte` produit un résultat significatif pour n’importe quel argument entier compris entre -1 (`EOF`) à `UCHAR_MAX` (0xFF), inclus.  
   
  Le type d’argument attendu de `isleadbyte` est `int`. Si un caractère signé est passé, le compilateur est susceptible de le convertir en un entier par extension de signe, aboutissant à des résultats imprévisibles.  
   
@@ -83,7 +86,7 @@ int _isleadbyte_l(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_istleadbyte`|Retourne toujours la valeur false|**_** `isleadbyte`|Retourne toujours la valeur false|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

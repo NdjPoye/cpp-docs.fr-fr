@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e36360279adf22857cfdb5b2f79ffdd7486ca008
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7e54d98ac4e1398753746dcac074de53ee2e7a0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="exceptions-ccx"></a>Exceptions (C++/CX)
 
@@ -27,7 +28,7 @@ Gestion des erreurs dans le langage c++ / CX est basée sur les exceptions. Au n
 
 Dans votre programme C++, vous pouvez lever et intercepter une exception qui provient d’une opération de Windows Runtime, une exception qui est dérivée de `std::exception`, ou un type défini par l’utilisateur. Vous devez lever une exception de Windows Runtime uniquement lorsqu’elle traversera la limite (ABI) de l’interface binaire d’application, par exemple, lorsque le code qui intercepte votre exception est écrit en JavaScript. Lorsqu’une exception de Windows Runtime C++ atteint la limite ABI, elle est convertie en un `Platform::FailureException` exception, ce qui représente un HRESULT E_FAIL. Pour plus d’informations sur l’ABI, consultez [création de composants Windows Runtime en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
-Vous pouvez déclarer [Platform::Exception](platform-exception-class.md) à l'aide de l'un des deux constructeurs qui acceptent soit un paramètre HRESULT, soit un paramètre HRESULT et un paramètre [Platform::String](platform-string-class.md)^ pouvant être passé via ABI à une application Windows Store qui le prend en charge. Vous pouvez aussi déclarer une exception à l'aide de l'une des deux surcharges de méthode [Exception::CreateException](platform-exception-class.md#createexception) qui acceptent un paramètre HRESULT ou un paramètre HRESULT et un paramètre `Platform::String^` .
+Vous pouvez déclarer un [Platform::Exception](platform-exception-class.md) à l’aide d’un des deux constructeurs qui acceptent un paramètre HRESULT ou un paramètre HRESULT et un [Platform::String](platform-string-class.md)^ paramètre qui peut être passé à travers le ABI à n’importe quelle application Windows Runtime qui prend en charge. Vous pouvez aussi déclarer une exception à l'aide de l'une des deux surcharges de méthode [Exception::CreateException](platform-exception-class.md#createexception) qui acceptent un paramètre HRESULT ou un paramètre HRESULT et un paramètre `Platform::String^` .
 
 ## <a name="standard-exceptions"></a>Exceptions standard
 

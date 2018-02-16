@@ -6,25 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
 - VCCORLIB/Platform::StringReference::Data
 - VCCORLIB/Platform::StringReference::Length
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3617f4e9209a9726fcf4801e803259ef921c7b60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c23960e392f39c44a57176e4afb81999783bad6c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference, classe
 Type d'optimisation que vous pouvez utiliser pour passer des données de type chaîne des paramètres d'entrée `Platform::String^` à d'autres méthodes avec un minimum d'opérations de copie.  
@@ -58,8 +60,8 @@ class StringReference
   
 |Nom|Description|  
 |----------|-----------------|  
-|[StringReference::operator =](#operator-assign)|Assigne une `StringReference` à une nouvelle instance de `StringReference` .|  
-|[Stringreference::operator](#operator-call)|Convertit une `StringReference` en une `Platform::String^`.|  
+|[StringReference::operator=](#operator-assign)|Assigne une `StringReference` à une nouvelle instance de `StringReference` .|  
+|[StringReference::operator()](#operator-call)|Convertit une `StringReference` en une `Platform::String^`.|  
   
 ### <a name="requirements"></a>Configuration requise  
  **Minimum pris en charge le client :** Windows 8  
@@ -70,7 +72,7 @@ class StringReference
   
  **En-tête :** vccorlib.h  
 
-## <a name="data"></a>Stringreference::Data, méthode
+## <a name="data"></a>  Stringreference::Data, méthode
 Retourne le contenu de ce `StringReference` sous forme de tableau de valeurs char16.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -84,7 +86,7 @@ const ::default::char16 * Data() const
   
 
 
-## <a name="gethstring"></a>Stringreference::gethstring, méthode
+## <a name="gethstring"></a>  Stringreference::gethstring, méthode
 Retourne le contenu de la chaîne en tant que `__abi_HSTRING`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -101,7 +103,7 @@ __abi_HSTRING GetHSTRING() const
   
 
 
-## <a name="getstring"></a>Stringreference::GetString, méthode
+## <a name="getstring"></a>  Stringreference::GetString, méthode
 Retourne le contenu de la chaîne en tant que `Platform::String^`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -114,7 +116,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 ### <a name="return-value"></a>Valeur de retour  
  `Platform::String^` contenant les données de type chaîne.  
 
-## <a name="length"></a>Stringreference::Length, méthode
+## <a name="length"></a>  Stringreference::Length, méthode
 Retourne le nombre de caractères de la chaîne.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -130,7 +132,7 @@ unsigned int Length() const
   
 
 
-## <a name="operator-assign"></a>StringReference::operator =, opérateur
+## <a name="operator-assign"></a>  StringReference::operator =, opérateur
 Assigne l'objet spécifié à l'objet `StringReference` actif.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -155,7 +157,7 @@ StringReference& operator=(const ::default::char16* __strArg);
   
 
 
-## <a name="operator-call"></a>Opérateur de Stringreference::operator
+## <a name="operator-call"></a>  StringReference::operator()  Operator
 Convertit un objet `StringReference` en un objet `Platform::String^`.  
   
 ### <a name="syntax"></a>Syntaxe  

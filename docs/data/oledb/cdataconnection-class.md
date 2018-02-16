@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ATL::CDataConnection
 - ATL.CDataConnection
 - CDataConnection
-dev_langs: C++
-helpviewer_keywords: CDataConnection class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDataConnection class
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 65e147366ecb7120a9dd2a98cde0c812d02582da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a891052b4fa92f6f642cdab89aadf444ec4d8475
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdataconnection-class"></a>CDataConnection, classe
 Gère la connexion avec la source de données.  
   
-## <a name="syntax"></a>Syntaxe  
-  
-```  
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 class CDataConnection  
 ```  
   
@@ -59,7 +62,7 @@ class CDataConnection
 |[opérateur CSession *](../../data/oledb/cdataconnection-operator-csession-star.md)|Retourne un pointeur vers la relation contenant-contenu `CSession` objet.|  
   
 ## <a name="remarks"></a>Notes  
- `CDataConnection`classe est utile pour la création de clients, car elle encapsule les objets nécessaires (source de données et session) et la partie du travail, que vous devez effectuer lors de la connexion à une source de données  
+ `CDataConnection` classe est utile pour la création de clients, car elle encapsule les objets nécessaires (source de données et session) et la partie du travail, que vous devez effectuer lors de la connexion à une source de données  
   
  Sans `CDataConnection`, vous devez créer un `CDataSource` de l’objet, appelez sa [OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md) (méthode), puis créez une instance d’un [CSession](../../data/oledb/csession-class.md) de l’objet, appelez sa [ Ouvrir](../../data/oledb/csession-open.md) (méthode), puis créer un [CCommand](../../data/oledb/ccommand-class.md) objet et appeler ses **ouvrir*** méthodes.  
   

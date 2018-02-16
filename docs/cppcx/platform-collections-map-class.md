@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
 - COLLECTION/Platform::Collections::Map::Clear
@@ -17,19 +17,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Map::Lookup
 - COLLECTION/Platform::Collections::Map::Remove
 - COLLECTION/Platform::Collections::Map::Size
-dev_langs: C++
-helpviewer_keywords: Map Class (C++/Cx)
+dev_langs:
+- C++
+helpviewer_keywords:
+- Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b58ba1d4407f719bc2f9f1e08715d7e53a11fb58
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e54750d02386795e46675b31a06a082bd35402f1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map, classe
 
@@ -115,7 +118,7 @@ Pour plus d’informations, consultez [Collections](../cppcx/collections-c-cx.md
 
 **Espace de noms :** Platform::Collections
 
-## <a name="clear"></a>Map::Clear, méthode
+## <a name="clear"></a>  Map::Clear, méthode
 
 Supprime toutes les paires clé-valeur de l'objet Map actuel.
 
@@ -125,7 +128,7 @@ Supprime toutes les paires clé-valeur de l'objet Map actuel.
 virtual void Clear();
 ```
 
-## <a name="first"></a>Map::First (méthode)
+## <a name="first"></a>  Map::First (méthode)
 
 Retourne un itérateur qui spécifie le premier élément de la carte ou `nullptr` si la carte est vide.
 
@@ -144,7 +147,7 @@ Itérateur qui spécifie le premier élément de la carte.
 
 Un moyen pratique de contenir l’itérateur retourné par First() est d’assigner la valeur de retournée à une variable déclarée avec le **automatique** mot clé de déduction de type. Par exemple, `auto x = myMap->First();`.
 
-## <a name="getview"></a>Map::GetView (méthode)
+## <a name="getview"></a>  Map::GetView (méthode)
 
 Retourne une vue en lecture seule de l’objet Map actuel. Autrement dit, un [classe Platform::Collections :: mapview](../cppcx/platform-collections-mapview-class.md), qui implémente le [Windows::Foundation::Collections::IMapView\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) interface.
 
@@ -177,7 +180,7 @@ Clé utilisée pour rechercher l’élément Map. Le type de *clé* est le nom d
 
 `true` si la clé est trouvée ; sinon, `false`.
 
-## <a name="insert"></a>Map::INSERT, méthode
+## <a name="insert"></a>  Map::INSERT, méthode
 
 Ajoute une paire clé-valeur spécifiée à l'objet Map actuel.
 
@@ -197,9 +200,9 @@ Partie de valeur de la paire clé-valeur. Le type de *valeur* est le nom de type
 
 ### <a name="return-value"></a>Valeur de retour
 
-`true`Si la clé d’un élément existant dans le mappage actuel correspond à *clé* et la partie de la valeur de cet élément est définie sur *valeur*. `false`Si aucun élément existant dans le mappage actuel correspond à *clé* et *clé* et *valeur* paramètres sont transformés en paire clé-valeur, puis ajoutés à l’objet Map actuel.
+`true` Si la clé d’un élément existant dans le mappage actuel correspond à *clé* et la partie de la valeur de cet élément est définie sur *valeur*. `false` Si aucun élément existant dans le mappage actuel correspond à *clé* et *clé* et *valeur* paramètres sont transformés en paire clé-valeur, puis ajoutés à l’objet Map actuel.
 
-## <a name="lookup"></a>Map::Lookup (méthode)
+## <a name="lookup"></a>  Map::Lookup (méthode)
 
 Récupère la valeur de type V associée à la clé spécifiée de type K si la clé existe.
 
@@ -272,9 +275,9 @@ A [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windows/app
 
 ## <a name="net-framework-equivalent"></a>Équivalent .NET Framework
 
-Les applications du Windows Store qui utilisent c# ou Visual Basic projet IMap\<K, V > comme IDictionary\<K, V >.
+Les applications Windows Runtime qui utilisent c# ou Visual Basic IMap projet\<K, V > comme IDictionary\<K, V >.
 
-## <a name="remove"></a>Map::Remove, méthode
+## <a name="remove"></a>  Map::Remove, méthode
 
 Supprime la paire clé-valeur spécifiée de l'objet Map actuel.
 
@@ -289,7 +292,7 @@ virtual void Remove(K key);
 *key*  
 Partie de clé de la paire clé-valeur. Le type de *clé* est le nom de type *K*.
 
-## <a name="size"></a>Map::Size, méthode
+## <a name="size"></a>  Map::Size, méthode
 
 Retourne le nombre de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) contenus dans le Map.
 

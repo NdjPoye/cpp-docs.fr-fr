@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::MapView::MapView
 - COLLECTION/Platform::Collections::MapView::First
@@ -14,19 +14,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::MapView::Lookup
 - COLLECTION/Platform::Collections::MapView::Size
 - COLLECTION/Platform::Collections::MapView::Split
-dev_langs: C++
-helpviewer_keywords: MapView Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: db25b79476490ccc6bfc3f68370f30b7e8f2afac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f55a980f0d4fcb6982adb4d40353a47ee2f4d120
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView, classe
 Représente une vue en lecture seule dans une *carte*, qui est une collection de paires clé/valeur.  
@@ -81,7 +84,7 @@ ref class MapView sealed;
  **Espace de noms :** Platform::Collections  
 
 
-## <a name="first"></a>MapView::First (méthode)
+## <a name="first"></a> MapView::First (méthode)
 Retourne un itérateur qui spécifie le premier élément de la vue de mappage.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -99,7 +102,7 @@ virtual Windows::Foundation::Collections::IIterator<
   
 
 
-## <a name="haskey"></a>MapView::HasKey (méthode)
+## <a name="haskey"></a>  MapView::HasKey (méthode)
 Détermine si le MapView actif contient la clé spécifiée.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -118,7 +121,7 @@ bool HasKey(K key);
   
 
 
-##  <a name="lookup"></a>MapView::Lookup (méthode)
+##  <a name="lookup"></a> MapView::Lookup (méthode)
 Récupère la valeur du type V associé à la clé spécifiée de type K.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -136,7 +139,7 @@ V Lookup(K key);
   
 
 
-##  <a name="ctor"></a>MapView::MapView (constructeur)
+##  <a name="ctor"></a> MapView::MapView (constructeur)
 Initialise une nouvelle instance de la classe MapView.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -179,7 +182,7 @@ MapView(
 
 
 
-##  <a name="size"></a>Mapview::Size, méthode
+##  <a name="size"></a> Mapview::Size, méthode
 Retourne le nombre d'éléments dans l'objet MapView actuel.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -194,7 +197,7 @@ virtual property unsigned int Size;
   
 
 
-##  <a name="split"></a>MapView::Split (méthode)
+##  <a name="split"></a> MapView::Split (méthode)
 Divise l'objet MapView actif en deux objets MapView. Cette méthode n'est pas opérationnelle.  
   
 ### <a name="syntax"></a>Syntaxe  

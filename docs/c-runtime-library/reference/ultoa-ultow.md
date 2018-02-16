@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ultoa
 - _ultow
@@ -29,7 +30,8 @@ f1_keywords:
 - _ultoa
 - _ultow
 - _ultot
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ultot function
 - converting integers
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _ultoa function
 - converting numbers, to strings
 ms.assetid: 7a472dc4-5652-4513-93c3-3358522c23be
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5e555275f4516d92318ec5cfffbca3472c2a5cf8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 94073b947848199bdc093f959ddceadcb1835f16
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ultoa-ultow"></a>_ultoa, _ultow
 Convertit un entier long non signé en chaîne. Il existe des versions plus sécurisées de ces fonctions. Consultez [_ultoa_s, _ultow_s](../../c-runtime-library/reference/ultoa-s-ultow-s.md).  
@@ -95,7 +98,7 @@ wchar_t *_ultow(
  Chacune de ces fonctions retourne un pointeur désignant `str`. Aucun retour d'erreur.  
   
 ## <a name="remarks"></a>Notes  
- La fonction `_ultoa` convertit `value` en chaîne de caractères se terminant par un caractère Null et stocke le résultat (jusqu’à 33 octets) dans `str`. Aucune vérification de dépassement de capacité n’est effectuée. `radix`Spécifie la base de `value`; `radix` doit être comprise entre 2-36. `_ultow` est une version à caractères larges de `_ultoa`.  
+ La fonction `_ultoa` convertit `value` en chaîne de caractères se terminant par un caractère Null et stocke le résultat (jusqu’à 33 octets) dans `str`. Aucune vérification de dépassement de capacité n’est effectuée. `radix` Spécifie la base de `value`; `radix` doit être comprise entre 2-36. `_ultow` est une version à caractères larges de `_ultoa`.  
   
 > [!IMPORTANT]
 >  Pour éviter les dépassements de mémoire tampon, vérifiez que la capacité de la mémoire tampon `str` est suffisante pour accueillir les chiffres convertis, plus le caractère Null de fin.  

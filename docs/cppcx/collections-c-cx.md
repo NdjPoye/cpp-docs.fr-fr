@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5c97a264488e8b382091b24cdef8faae4c7bbfc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3b4f98b17ceb7e7ccde15d2b7def17ee1e57b5ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="collections-ccx"></a>Collections (C++/CX)
 Dans C + c++ / programme CX, vous pouvez rendre utiliser librement les conteneurs de bibliothèque STL (Standard Template Library), ou tout autre type de collection défini par l’utilisateur. Toutefois, lorsque vous passez des collections dans les deux sens entre l’interface binaire d’application Windows Runtime (ABI), par exemple, pour un contrôle XAML ou à un client JavaScript, vous devez utiliser des types de collection Windows Runtime.  
@@ -64,7 +65,7 @@ Dans C + c++ / programme CX, vous pouvez rendre utiliser librement les conteneur
    
   
 ## <a name="vectorproxy-elements"></a>Éléments VectorProxy  
- [Platform::Collections :: vectoriterator](../cppcx/platform-collections-vectoriterator-class.md) et [Platform::Collections :: vectorviewiterator](../cppcx/platform-collections-vectorviewiterator-class.md) activer l’utilisation de `range for` boucles et des algorithmes comme [std::sort](../standard-library/algorithm-functions.md#sort) avec un [IVector\<T >](http://msdn.microsoft.com/en-us/library/windows/apps/br206631.aspx) conteneur. Toutefois, les éléments `IVector` ne sont pas accessibles par l’intermédiaire du déréférencement de pointeur C++. Ils sont accessibles uniquement avec les méthodes [GetAt](http://msdn.microsoft.com/library/windows/apps/br206634.aspx) et [SetAt](http://msdn.microsoft.com/library/windows/apps/br206642.aspx) . Par conséquent, ces itérateurs utilisent les classes proxy `Platform::Details::VectorProxy<T>` et `Platform::Details::ArrowProxy<T>` pour fournir l'accès aux différents éléments via les opérateurs `*`, `->`et `[]` , selon les exigences de STL. À proprement parler, avec un `IVector<Person^> vec`, le type de `*begin(vec)` est `VectorProxy<Person^>`. Toutefois, l'objet proxy est presque toujours transparent pour votre code. Ces objets proxy ne sont pas documentés car ils servent uniquement à un usage interne par les itérateurs, mais il est utile de savoir comment le mécanisme fonctionne.  
+ [Platform::Collections :: vectoriterator](../cppcx/platform-collections-vectoriterator-class.md) et [Platform::Collections :: vectorviewiterator](../cppcx/platform-collections-vectorviewiterator-class.md) activer l’utilisation de `range for` boucles et des algorithmes comme [std::sort](../standard-library/algorithm-functions.md#sort) avec un [ IVector\<T >](http://msdn.microsoft.com/en-us/library/windows/apps/br206631.aspx) conteneur. Toutefois, les éléments `IVector` ne sont pas accessibles par l’intermédiaire du déréférencement de pointeur C++. Ils sont accessibles uniquement avec les méthodes [GetAt](http://msdn.microsoft.com/library/windows/apps/br206634.aspx) et [SetAt](http://msdn.microsoft.com/library/windows/apps/br206642.aspx) . Par conséquent, ces itérateurs utilisent les classes proxy `Platform::Details::VectorProxy<T>` et `Platform::Details::ArrowProxy<T>` pour fournir l'accès aux différents éléments via les opérateurs `*`, `->`et `[]` , selon les exigences de STL. À proprement parler, avec un `IVector<Person^> vec`, le type de `*begin(vec)` est `VectorProxy<Person^>`. Toutefois, l'objet proxy est presque toujours transparent pour votre code. Ces objets proxy ne sont pas documentés car ils servent uniquement à un usage interne par les itérateurs, mais il est utile de savoir comment le mécanisme fonctionne.  
   
  Lorsque vous utilisez une boucle `range for` sur les conteneurs `IVector` , utilisez `auto&&` pour permettre à la variable d'itérateur d'effectuer une liaison correcte avec les éléments `VectorProxy` . Si vous utilisez `auto` ou `auto&`, l'avertissement de compilateur C4239 est déclenché et `VectoryProxy` est mentionné dans le texte d'avertissement.  
   
@@ -135,11 +136,11 @@ void FindButton(UIElementCollection^ col)
   
 |Iterators|Fonctions|  
 |---------------|---------------|  
-|[Platform::Collections :: vectoriterator\<T >](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (Stocke en interne [Windows::Foundation :: Collections :: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) et int.)|[commencer](../cppcx/begin-function.md)/ [fin](../cppcx/end-function.md)([Windows::Foundation :: Collections :: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
-|[Platform::Collections :: vectorviewiterator\<T >](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (Stocke en interne [IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^ et int.)|[commencer](../cppcx/begin-function.md)/ [fin](../cppcx/end-function.md) ([IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^)|  
-|[Platform::Collections :: inputiterator\<T >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Stocke en interne [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ et T.)|[commencer](../cppcx/begin-function.md)/ [fin](../cppcx/end-function.md) ([IIterable\<T >](http://msdn.microsoft.com/library/windows/apps/br226024.aspx))|  
-|[Platform::Collections :: inputiterator < IKeyValuePair\<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Stocke en interne [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ et T.)|[commencer](../cppcx/begin-function.md)/ [fin](../cppcx/end-function.md) ([IMap\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226042.aspx).|  
-|[Platform::Collections :: inputiterator < IKeyValuePair\<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Stocke en interne [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ et T.)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx))|  
+|[Platform::Collections::VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (Stocke en interne [Windows::Foundation :: Collections :: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) et int.)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md)([Windows::Foundation::Collections:: IVector\<T>](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
+|[Platform::Collections::VectorViewIterator\<T>](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (Stocke en interne [IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^ et int.)|[commencer](../cppcx/begin-function.md)/ [fin](../cppcx/end-function.md) ([IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^)|  
+|[Platform::Collections::InputIterator\<T>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Stocke en interne [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ et T.)|[commencer](../cppcx/begin-function.md)/ [fin](../cppcx/end-function.md) ([IIterable\<T >](http://msdn.microsoft.com/library/windows/apps/br226024.aspx))|  
+|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Stocke en interne [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ et T.)|[commencer](../cppcx/begin-function.md)/ [fin](../cppcx/end-function.md) ([IMap\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226042.aspx).|  
+|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Stocke en interne [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ et T.)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx))|  
   
 ### <a name="collection-change-events"></a>Événements de modification de collection  
  `Vector` et `Map` prennent en charge la liaison des données dans les collections XAML en implémentant des événements qui se produisent lorsqu'un objet de collection est changé ou réinitialisé, ou lorsque l'élément d'une collection est inséré, supprimé ou modifié. Vous pouvez écrire vos propres types qui prennent en charge la liaison de données, bien que vous ne puissiez pas hériter de `Map` ou de `Vector` car ces types sont verrouillés.  

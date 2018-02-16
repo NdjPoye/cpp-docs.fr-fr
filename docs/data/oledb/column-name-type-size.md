@@ -1,45 +1,40 @@
 ---
-title: COLUMN_NAME_TYPE_SIZE | Documents Microsoft
+title: COLUMN_NAME_TYPE_SIZE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: COLUMN_NAME_TYPE_SIZE
-dev_langs: C++
-helpviewer_keywords: COLUMN_NAME_TYPE_SIZE macro
+f1_keywords:
+- COLUMN_NAME_TYPE_SIZE
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_NAME_TYPE_SIZE macro
 ms.assetid: b10f8ef9-78ce-4ec9-b4cc-4278271a46dd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b18e79dd38c61ae6ddd25e697af04a5c25f014dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d771a505aeabbf7096ad4bdafa967025927fa8ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="columnnametypesize"></a>COLUMN_NAME_TYPE_SIZE
 Représente une liaison sur l’ensemble de lignes à la colonne dans l’ensemble de lignes. Semblable à [COLUMN_NAME](../../data/oledb/column-name.md), sauf que cette macro prend également le type de données et la taille.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
-COLUMN_NAME_TYPE_SIZE(  
-pszName  
-,   
-wType  
-,   
-nLength  
-,   
-data  
- )  
+```cpp
+COLUMN_NAME_TYPE_SIZE(pszName, wType, nLength, data)  
   
 ```  
   
@@ -59,7 +54,7 @@ data
 ## <a name="remarks"></a>Notes  
  Consultez [COLUMN_NAME](../../data/oledb/column-name.md) pour plus d’informations sur la **COLUMN_NAME_\***  macros sont utilisées.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -67,7 +62,7 @@ data
  [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
  [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
  [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
- [NOM_COLONNE](../../data/oledb/column-name.md)   
+ [COLUMN_NAME](../../data/oledb/column-name.md)   
  [COLUMN_NAME_EX](../../data/oledb/column-name-ex.md)   
  [COLUMN_NAME_LENGTH](../../data/oledb/column-name-length.md)   
  [COLUMN_NAME_LENGTH_STATUS](../../data/oledb/column-name-length-status.md)   

@@ -1,30 +1,33 @@
 ---
-title: "À l’aide de C++ AMP dans les applications du Windows Store | Documents Microsoft"
+title: "À l’aide de C++ AMP dans les applications UWP | Documents Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 39414e5b74dec15cade249bce1fb4ffe2f22edd0
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 481ea5918e7572375fdafd9ba489da34730fef84
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="using-c-amp-in-windows-store-apps"></a>Utilisation de C++ AMP dans les applications Windows Store
-Vous pouvez utiliser C++ AMP (C++ Accelerated Massive Parallelism) dans votre [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] application pour effectuer des calculs sur le processeur graphique (GPU) ou d’autres accélérateurs de calculs. Toutefois, C++ AMP ne fournissent des API pour travailler directement avec les types Windows Runtime, et le Windows Runtime ne fournit pas un wrapper pour C++ AMP. Lorsque vous utilisez des types Windows Runtime dans votre code, y compris celles que vous avez créé vous-même, vous devez convertir les types qui sont compatibles avec C++ AMP.  
+# <a name="using-c-amp-in-uwp-apps"></a>À l’aide de C++ AMP dans les applications UWP
+Vous pouvez utiliser C++ AMP (C++ Accelerated Massive Parallelism) dans votre application de plateforme Windows universelle (UWP) pour effectuer des calculs sur le processeur graphique (GPU) ou d’autres accélérateurs de calculs. Toutefois, C++ AMP ne fournissent des API pour travailler directement avec les types Windows Runtime, et le Windows Runtime ne fournit pas un wrapper pour C++ AMP. Lorsque vous utilisez des types Windows Runtime dans votre code, y compris celles que vous avez créé vous-même, vous devez convertir les types qui sont compatibles avec C++ AMP.  
   
 ## <a name="performance-considerations"></a>Considérations sur les performances  
- Si vous utilisez [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) pour créer votre [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] application, nous vous recommandons d’utiliser des types de données (POD) brut basés ancien avec stockage contigu, par exemple, `std::vector` ou tableaux de style C, pour les données qui seront utilisées avec C++ AMP. Cela peut vous aider à obtenir de meilleures performances qu’à l’aide des types non POD ou les conteneurs Windows RT, car aucun marshaling n’est nécessaire.  
+ Si vous utilisez [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) pour créer votre application de plateforme Windows universelle (UWP), nous vous recommandons d’utiliser des types de données (POD) brut basés ancien avec stockage contigu, par exemple, `std::vector` ou tableaux de style C, pour les données qui seront utilisées avec C++ AMP. Cela peut vous aider à obtenir de meilleures performances qu’à l’aide des types non POD ou les conteneurs Windows RT, car aucun marshaling n’est nécessaire.  
   
  Dans un noyau de C++ AMP, pour accéder aux données qui est stocké de cette façon, encapsulez simplement la `std::vector` ou tableau de stockage dans un `concurrency::array_view` , puis utilisez l’affichage de tableau dans un `concurrency::parallel_for_each` boucle :  
   
@@ -120,6 +123,6 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer votre première application du Windows Store à l’aide de C++](http://go.microsoft.com/fwlink/p/linkid=249073)   
+ [Créer votre première application de plateforme Windows universelle à l’aide de C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)   
  [Création de composants Windows Runtime en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
 

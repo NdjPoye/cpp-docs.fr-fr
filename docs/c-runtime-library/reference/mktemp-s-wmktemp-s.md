@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mktemp_s
 - _wmktemp_s
@@ -27,7 +28,8 @@ f1_keywords:
 - mktemp_s
 - _mktemp_s
 - _wmktemp_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _tmktemp_s function
 - mktemp_s function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9515212418b4bd4e8d9957254b2fafaf451a3adc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1289db9b04b9636680439980046fc9532181bd13
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mktemps-wmktemps"></a>_mktemp_s, _wmktemp_s
 Crée un nom de fichier unique. Ces versions de [_mktemp, _wmktemp](../../c-runtime-library/reference/mktemp-wmktemp.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -87,9 +90,9 @@ errno_t _wmktemp_s(
   
 |`template`|`sizeInChars`|**Valeur de retour**|**Nouvelle valeur dans le modèle**|  
 |----------------|-------------------|----------------------|-------------------------------|  
-|`NULL`|tous|`EINVAL`|`NULL`|  
-|Format incorrect (voir la section `Remarks` pour connaître le format correct)|tous|`EINVAL`|Chaîne vide|  
-|tous|<= nombre de X|`EINVAL`|Chaîne vide|  
+|`NULL`|any|`EINVAL`|`NULL`|  
+|Format incorrect (voir la section `Remarks` pour connaître le format correct)|any|`EINVAL`|Chaîne vide|  
+|any|<= nombre de X|`EINVAL`|Chaîne vide|  
   
  Si l’une des conditions d’erreur ci-dessus se produit, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `errno` est défini sur `EINVAL` et la fonction retourne `EINVAL`.  
   
@@ -132,7 +135,7 @@ fna12345
   
  En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -27,7 +28,8 @@ f1_keywords:
 - VC.Project.VCConfiguration.AppSupport
 - VC.Project.VCConfiguration.ToolFiles
 - VC.Project.VCConfiguration.useOfATL
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
@@ -35,12 +37,13 @@ helpviewer_keywords:
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bbe19414dbbe664f15ea2bbbc35a26827ac5b831
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 772192a4b367760e85bb1631f1ef7b50650af0c1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="general-property-page-project"></a>Général, page de propriétés (Projet)
 
@@ -149,7 +152,7 @@ Dans les projets managés, spécifie la version du .NET framework à cibler.
 Spécifie le [/GL](../build/reference/gl-whole-program-optimization.md) option du compilateur et [LTCG](../build/reference/ltcg-link-time-code-generation.md) option de l’éditeur de liens. Par défaut, il est désactivé pour les configurations Debug et activé pour les configurations de la vente au détail.
 
 **Prise en charge des applications du Windows Store**  
-Spécifie si ce projet prend en charge les applications du Windows Store. Pour plus d’informations, consultez [/ZW (Compilation Windows Runtime)](../build/reference/zw-windows-runtime-compilation.md)et le centre de développement Windows.
+Spécifie si ce projet prend en charge les applications Windows Runtime (plateforme Windows universelle). Pour plus d’informations, consultez [/ZW (Compilation Windows Runtime)](../build/reference/zw-windows-runtime-compilation.md)et le centre de développement Windows.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,10 +1,11 @@
 ---
-title: CDynamicParameterAccessor::SetParamString | Documents Microsoft
+title: CDynamicParameterAccessor::SetParamString | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,39 +14,35 @@ f1_keywords:
 - SetParamString
 - CDynamicParameterAccessor::SetParamString
 - CDynamicParameterAccessor.SetParamString
-dev_langs: C++
-helpviewer_keywords: SetParamString method
+dev_langs:
+- C++
+helpviewer_keywords:
+- SetParamString method
 ms.assetid: 77a38d23-7e33-4e5a-bda6-c12c4c3fe2e4
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 75d6e9887b609349a092bb67e55508ca1429387b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a0630f7ee591dccc5c9e3cb5b84ae5387bd4c9a2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdynamicparameteraccessorsetparamstring"></a>CDynamicParameterAccessor::SetParamString
 Définit les données de chaîne du paramètre spécifié stocké en mémoire tampon.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
-      bool SetParamString(   
-   DBORDINAL nParam,   
-   const CHAR* pString,   
-   DBSTATUS status = DBSTATUS_S_OK    
-) throw( );  
-bool SetParamString(   
-   DBORDINAL nParam,   
-   const WCHAR* pString,   
-   DBSTATUS status = DBSTATUS_S_OK    
-) throw( );  
+```
+bool SetParamString(DBORDINAL nParam,   
+   constCHAR* pString,   
+   DBSTATUS status = DBSTATUS_S_OK) throw();bool SetParamString(DBORDINAL nParam,   
+   constWCHAR* pString,   
+   DBSTATUS status = DBSTATUS_S_OK) throw();  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -61,7 +58,7 @@ bool SetParamString(
 ## <a name="remarks"></a>Notes  
  Retourne **true** en cas de réussite ou **false** en cas d’échec.  
   
- `SetParamString`échoue si vous essayez de définir une chaîne qui est supérieure à la taille maximale spécifiée pour `pString`.  
+ `SetParamString` échoue si vous essayez de définir une chaîne qui est supérieure à la taille maximale spécifiée pour `pString`.  
   
  Utilisez `SetParamString` pour définir les données de paramètre de chaîne dans la mémoire tampon. Utilisez [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) pour définir les données de paramètre de chaîne dans la mémoire tampon.  
   

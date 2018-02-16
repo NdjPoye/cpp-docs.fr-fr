@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
-dev_langs: C++
-helpviewer_keywords: BackInsertIterator Class
+ms.topic: reference
+f1_keywords:
+- COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 057aebfcba1936bc2a59fbb8b9fb51bff3197b6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 23c8b657a6cafb720cf0be07e2e67b5af0d7767d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator, classe
 Représente un itérateur qui ne remplace pas les éléments mais les insère dans le back end d'une collection séquentielle.  
@@ -65,7 +69,7 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
  **Espace de noms :** Platform::Collections  
   
 ---
-## <a name="ctor"></a>BackInsertIterator::BackInsertIterator (constructeur)
+## <a name="ctor"></a>  BackInsertIterator::BackInsertIterator Constructor
 Initialise une nouvelle instance de la classe `BackInsertIterator`.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -83,7 +87,7 @@ explicit BackInsertIterator(
 ### <a name="remarks"></a>Notes  
  Un `BackInsertIterator` insère des éléments après le dernier élément de l'objet spécifié par le paramètre `v`.  
  
-## <a name="operator-assign"></a>BackInsertIterator::operator = (opérateur)
+## <a name="operator-assign"></a>  BackInsertIterator::operator= Operator
 Ajoute l'objet spécifié à la fin de la collection séquentielle en cours.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -99,7 +103,7 @@ BackInsertIterator& operator=( const T& t);
 ### <a name="return-value"></a>Valeur de retour  
  Référence au BackInsertIterator actif.  
 
-## <a name="operator-dereference"></a>Opérateur de BackInsertIterator::operator
+## <a name="operator-dereference"></a>  BackInsertIterator::operator* Operator
 Extrait une référence au BackInsertIterator actif.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -114,7 +118,7 @@ BackInsertIterator& operator*();
 ### <a name="remarks"></a>Notes  
  Cet opérateur retourne une référence au BackInsertIterator actif, et non à un élément dans la collection actuelle.  
  
-## <a name="operator-increment"></a>BackInsertIterator::operator ++ (opérateur)
+## <a name="operator-increment"></a>  BackInsertIterator::operator++ Operator
 Retourne une référence au BackInsertIterator actif. L'itérateur est pas modifié.  
   
 ## <a name="syntax"></a>Syntaxe  
