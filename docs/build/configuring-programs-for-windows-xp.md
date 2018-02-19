@@ -17,18 +17,17 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02ddf1d602fa88caa3ab069e6f2304ccb066621a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 23e417d9ef316bf72c9606ce2525ff79587e7047
+ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configuration des programmes pour Windows XP
 
 Étant donné que Visual Studio prend en charge plusieurs ensembles d’outils de plateforme, vous pouvez cibler des systèmes d’exploitation et les bibliothèques runtime qui ne sont pas pris en charge par l’ensemble d’outils par défaut. Par exemple, en basculant l’ensemble d’outils de plateforme, vous pouvez utiliser C ++ 11, C ++ 14 et améliorations du langage C ++ 17 pris en charge par le compilateur Visual C++ dans Visual Studio pour créer des applications qui ciblent [!INCLUDE[winxp](../build/includes/winxp_md.md)] et [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Vous pouvez également utiliser des ensembles d’outils de plateforme plus anciens pour maintenir le code hérité compatible binaire et tirer parti des fonctionnalités plus récentes de l’IDE de Visual Studio.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Installer l’ensemble d’outils de plateforme Windows XP
-
 Pour obtenir les outils de plateforme et les composants à cibler [!INCLUDE[winxp](../build/includes/winxp_md.md)] et [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] dans Visual Studio 2017, exécutez le programme d’installation Visual Studio. Lorsque vous installez initialement Visual Studio ou lorsque vous choisissez **modifier** pour modifier une installation existante, assurez-vous que le **bureau développement avec C++** la charge de travail est sélectionné. Dans la liste des composants facultatifs pour cette charge de travail, choisissez **prise en charge de Windows XP pour C++**, puis choisissez **installer** ou **modifier**.
 
 ## <a name="windows-xp-targeting-experience"></a>Ciblage de Windows XP
@@ -65,7 +64,7 @@ En raison de différences de prise en charge de plateforme et de bibliothèque, 
 
 - **Fonctionnalités du langage C++**
 
-   Uniquement les fonctionnalités de langage C++ implémentées dans Visual Studio 2012 sont pris en charge dans les applications qui utilisent le v110\_ensemble d’outils de plateforme xp. Uniquement les fonctionnalités de langage C++ implémentées dans Visual Studio 2013 sont prises en charge dans les applications qui utilisent le v120\_ensemble d’outils de plateforme xp. Uniquement les fonctionnalités de langage C++ implémentées dans Visual Studio 2012 sont pris en charge dans les applications qui utilisent le v140\_ensemble d’outils de plateforme xp. Visual Studio utilise le compilateur correspondant lors de la génération à l’aide des ensembles d’outils de plateforme plus anciens. Utilisez l’ensemble d’outils de plateforme Windows XP plus récent pour tirer parti des fonctionnalités du langage C++ supplémentaires implémentées dans cette version du compilateur.
+   Uniquement les fonctionnalités de langage C++ implémentées dans Visual Studio 2012 sont pris en charge dans les applications qui utilisent le v110\_ensemble d’outils de plateforme xp. Uniquement les fonctionnalités de langage C++ implémentées dans Visual Studio 2013 sont prises en charge dans les applications qui utilisent le v120\_ensemble d’outils de plateforme xp. Uniquement les fonctionnalités de langage C++ implémentées dans Visual Studio 2015 sont pris en charge dans les applications qui utilisent le v140\_ensemble d’outils de plateforme xp. Visual Studio utilise le compilateur correspondant lors de la génération à l’aide des ensembles d’outils de plateforme plus anciens. Utilisez l’ensemble d’outils de plateforme Windows XP plus récent pour tirer parti des fonctionnalités du langage C++ supplémentaires implémentées dans cette version du compilateur.
 
 - **Débogage distant**
 
