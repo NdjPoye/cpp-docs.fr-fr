@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: c.runtime
-dev_langs: C++
+f1_keywords:
+- c.runtime
+dev_langs:
+- C++
 helpviewer_keywords:
 - MSVCR71.dll
 - libraries [C++], multithreaded
@@ -24,22 +27,23 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 50ca3fd6d60e7fecf84c81d14c859f5b2f51e120
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 104119afba696f51598af202c8eb7f1afe79aa93
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crt-library-features"></a>Fonctionnalités de la bibliothèque CRT
 Cette rubrique décrit les différents fichiers .lib qui composent les bibliothèques Runtime C, ainsi que les options de compilateur et les directives de préprocesseur qui y sont associées.  
   
 ## <a name="c-run-time-libraries-crt"></a>Bibliothèques runtime C (CRT)  
- La bibliothèque runtime C (CRT) est la partie de la bibliothèque C++ standard qui incorpore la bibliothèque ISO C99 standard. Les bibliothèques Visual C++ qui implémentent le CRT prennent en charge le développement du code natif. En outre, elles prennent en charge à la fois le code natif et managé mixte, et le code managé pur pour le développement .NET. Toutes les versions du CRT prennent en charge le développement multithread. La plupart des bibliothèques prennent en charge la liaison statique, pour lier la bibliothèque directement à votre code, ou la liaison dynamique pour permettre à votre code d’utiliser les fichiers DLL communs.  
+ La bibliothèque runtime C (CRT) est la partie de la bibliothèque C++ standard qui incorpore la bibliothèque ISO C99 standard. Les bibliothèques Visual C++ qui implémentent le CRT prennent en charge le développement du code natif ainsi que le code natif et managé mixte. Toutes les versions du CRT prennent en charge le développement multithread. La plupart des bibliothèques prennent en charge la liaison statique, pour lier la bibliothèque directement à votre code, ou la liaison dynamique pour permettre à votre code d’utiliser les fichiers DLL communs.  
   
  À compter de Visual Studio 2015, le CRT est refactorisé dans de nouveaux binaires. La bibliothèque Universal CRT (UCRT) contient les fonctions et variables globales exportées par la bibliothèque CRT C99 standard. UCRT est désormais un composant Windows fourni avec Windows 10. La bibliothèque statique, la bibliothèque d’importation de DLL et les fichiers d’en-tête UCRT se trouvent désormais dans le SDK Windows 10. Quand vous installez Visual C++, le programme d’installation de Visual Studio installe le sous-ensemble du SDK Windows 10 nécessaire à l’utilisation de l’UCRT. Vous pouvez utiliser l’UCRT sur n’importe quelle version de Windows prise en charge par Visual Studio 2015 et ultérieur. Vous pouvez la redistribuer à l’aide de vcredist pour les versions prises en charge de Windows distinctes de Windows 10. Pour plus d'informations, consultez [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).  
   
@@ -86,9 +90,7 @@ Cette rubrique décrit les différents fichiers .lib qui composent les biblioth�
   
  Si vous utilisez le commutateur **/clr** du compilateur, votre code sera lié à une bibliothèque statique, msvcmrt.lib. La bibliothèque statique fournit un proxy entre votre code géré et la bibliothèque CRT native. Vous ne pouvez pas utiliser la bibliothèque CRT liée statiquement (les options **/MT** ou **/MTd** ) avec **/clr**. Utilisez à la place les bibliothèques liées dynamiquement (**/MD** ou **/MDd**).  
   
- Si vous utilisez le commutateur **/clr:pure** du compilateur, votre code sera lié à la bibliothèque statique msvcurt.lib. Comme avec **/clr**, vous ne pouvez pas lier votre code avec la bibliothèque liée statiquement. Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées à compter de Visual Studio 2015.  
-  
- Pour plus d’informations sur l’utilisation de la bibliothèque CRT avec **/clr**, consultez [Assemblys mixtes (natif et managé)](../dotnet/mixed-native-and-managed-assemblies.md) ; pour **/clr:pure**, consultez [Code pur et vérifiable (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).  
+ Pour plus d’informations sur l’utilisation de CRT avec **/clr**, consultez [Assemblys mixtes (natif et managé)](../dotnet/mixed-native-and-managed-assemblies.md).  
   
  Pour créer une version Debug de votre application, vous devez définir l’indicateur [_DEBUG](../c-runtime-library/debug.md) et lier l’application à une version Debug de l’une de ces bibliothèques. Pour plus d'informations sur l'utilisation des versions Debug des fichiers de bibliothèques, consultez [Techniques de débogage de la bibliothèque CRT](/visualstudio/debugger/crt-debugging-techniques).  
   

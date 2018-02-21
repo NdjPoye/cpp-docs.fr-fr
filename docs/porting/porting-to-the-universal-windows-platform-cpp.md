@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e6dd42eae54f61d03d4d490a17cf1282e2d2e51f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2ece050614481bdc0adbe417448711376666b2b9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portage vers la plateforme Windows universelle (C++)
 Dans cette rubrique, vous trouverez des informations sur la façon de porter du code C++ existant vers la plateforme d’application Windows 10, la plateforme Windows universelle. Le terme *universel* signifie que votre code peut s'exécuter sur tout appareil équipé de Windows 10, notamment les ordinateurs de bureau, les téléphones, les tablettes et les appareils nouvelle génération qui exécutent Windows 10. Vous créez un seul projet et une interface utilisateur XAML unique qui fonctionne correctement sur n’importe quel appareil exécutant Windows 10. Vous pouvez utiliser les fonctionnalités de disposition dynamique de XAML pour permettre à l'interface utilisateur de l'application de s'adapter à différentes tailles d'affichage.  
@@ -73,7 +76,7 @@ Dans cette rubrique, vous trouverez des informations sur la façon de porter du 
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)  
     ```  
   
-     Ces instructions s’appliquent respectivement aux applications du Windows Store, aux applications du Windows Phone Store, aux deux ou bien aux applications de bureau Win32 classiques uniquement. Ces macros sont uniquement disponibles dans le Kit de développement logiciel (SDK) Windows 8.1 et versions ultérieures. Par conséquent, si votre code doit être compilé avec des versions antérieures du SDK Windows ou pour d’autres plateformes non-Windows, vous devez également vous préparer à l’éventualité qu’aucune de ces macros ne soit définie.  
+     Ces instructions s’appliquent respectivement aux applications UWP, aux applications du Windows Phone Store, aux deux ou bien aux applications de bureau Win32 classiques uniquement. Ces macros sont uniquement disponibles dans le Kit de développement logiciel (SDK) Windows 8.1 et versions ultérieures. Par conséquent, si votre code doit être compilé avec des versions antérieures du SDK Windows ou pour d’autres plateformes non-Windows, vous devez également vous préparer à l’éventualité qu’aucune de ces macros ne soit définie.  
   
 11. Exécutez et déboguez l’application sur un émulateur ou un appareil physique pour chaque type d’appareil pris en charge par votre application. Pour exécuter un émulateur, vous devez exécuter Visual Studio sur un ordinateur physique, et non sur un ordinateur virtuel.  
   
@@ -91,7 +94,7 @@ Dans cette rubrique, vous trouverez des informations sur la façon de porter du 
 4.  Générez le projet et résolvez toutes les erreurs dues à des modifications avec rupture entre les différentes versions du Kit de développement logiciel Windows (Kit SDK Windows).  
   
 ## <a name="troubleshooting"></a>Résolution des problèmes  
- Différentes erreurs peuvent survenir lors du processus de portage de code vers la plateforme Windows universelle. Voici quelques-uns des problèmes que vous pouvez rencontrer.  
+ Vous pouvez rencontrer différentes erreurs pendant le processus de déplacement de code vers la plateforme UWP. Voici quelques-uns des problèmes que vous pouvez rencontrer.  
   
  **Problèmes de configuration de projet**  
   
@@ -111,7 +114,7 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 <ApplicationTypeRevision>10.0</ApplicationTypeRevision>  
 ```  
   
- Si vous avez créé un nouveau projet pour la plateforme Windows universelle à l’aide de Visual Studio, cette erreur ne doit normalement pas s’afficher.  
+ Si vous avez créé un projet UWP à l’aide de Visual Studio, vous ne devez pas voir cette erreur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide du portage de Visual C++](../porting/porting-to-the-universal-windows-platform-cpp.md)   

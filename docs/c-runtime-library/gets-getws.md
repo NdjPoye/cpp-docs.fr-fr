@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -23,7 +24,8 @@ f1_keywords:
 - _getts
 - gets
 - _getws
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - getws function
 - getts function
@@ -34,16 +36,17 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6193445dace47b62cf8793d69ad45e0f73a2f10d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 01f26f8b9dbe75d37927c4d4f3055f04378ef4a1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="gets-getws"></a>gets, _getws
 Obtient une ligne du flux `stdin` Des versions plus sécurisées de ces fonctions sont disponibles. Consultez [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).  
@@ -52,7 +55,7 @@ Obtient une ligne du flux `stdin` Des versions plus sécurisées de ces fonction
 >  Ces fonctions sont obsolètes. Depuis Visual Studio 2015, elles ne sont pas disponibles dans la bibliothèque CRT. Les versions sécurisées de ces fonctions, gets_s et getws_s, sont toujours disponibles. Pour plus d’informations sur ces fonctions alternatives, consultez [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   

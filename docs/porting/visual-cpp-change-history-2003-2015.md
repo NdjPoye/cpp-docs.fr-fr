@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 271831fb4dd946739414fb40b00fadf83b5e0ed1
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c1541029a8164e1c70e5599f20512dbecde543dc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historique des modifications de Visual C++ entre 2003 et 2015
 
@@ -97,7 +97,7 @@ Quand vous effectuez une mise à niveau avec une nouvelle version de Visual Stud
   
 -   **new et delete** Dans les versions antérieures de la bibliothèque, les fonctions opérateur new et delete définies par l'implémentation étaient exportées à partir de la DLL de la bibliothèque runtime (par exemple, msvcr120.dll). Ces fonctions opérateur sont à présent toujours liées statiquement dans vos fichiers binaires, même si vous utilisez les DLL de la bibliothèque runtime.  
   
-     Il ne s’agit pas d’une modification avec rupture pour du code natif ou mixte (/clr). Toutefois, pour du code compilé en tant que [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), cette modification peut entraîner l’échec de la compilation de votre code. Si vous compilez du code en tant que /clr:pure, vous devrez peut-être ajouter #include \<new> ou #include \<new.h> pour contourner les erreurs de génération en raison de cette modification. Notez que /clr:pure est déprécié dans Visual Studio 2015 et qu’il sera peut-être supprimé dans les versions futures.  
+     Il ne s’agit pas d’une modification avec rupture pour du code natif ou mixte (/clr). Toutefois, pour du code compilé en tant que [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), cette modification peut entraîner l’échec de la compilation de votre code. Si vous compilez du code en tant que /clr:pure, vous devrez peut-être ajouter #include \<new> ou #include \<new.h> pour contourner les erreurs de génération en raison de cette modification. Notez que /clr:pure est déprécié dans Visual Studio 2015 et qu’il sera peut-être supprimé dans les versions futures. Le code qui doit être « pur » doit être déplacé vers C#.  
   
 #### <a name="processh"></a>\<process.h>  
   

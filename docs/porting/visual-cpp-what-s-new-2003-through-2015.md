@@ -18,11 +18,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e730d7d47a8742d3c4f1f7c4636aabd8785cc93
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: e0e5090bc914648e527f335b261ad7838ad3d0bc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Nouveautés de Visual C++ entre 2003 et 2015
 
@@ -1545,16 +1545,16 @@ Cette prise en charge améliorée des normes ISO C/C++ peut nécessiter des modi
 ### <a name="profile-guided-optimization-pgo-enhancements"></a>Améliorations de l’optimisation guidée par profil (PGO)
 
 - Améliorations des performances à partir d'une réduction du jeu de travail des applications optimisées à l'aide de l'optimisation guidée par profil.
-- Nouvelle optimisation guidée par profil (PGO) du développement d’applications du Windows Store.
+- Nouvelle optimisation guidée par profil (PGO) du développement d’applications Windows Runtime.
 
-### <a name="windows-store-app-development-support"></a>Prise en charge du développement d’applications du Windows Store
+### <a name="windows-runtime-app-development-support"></a>Prise en charge du développement d’applications Windows Runtime
 
-- **Prise en charge des types encadrés dans les structs de valeur.** Vous pouvez maintenant définir des types valeurs en utilisant des champs qui peuvent avoir la valeur null, par exemple IBox<int>^ par opposition à int. Cela signifie que les champs peuvent avoir une valeur ou être égaux à nullptr.
+- **Prise en charge des types encadrés dans les structs de valeur.** Vous pouvez maintenant définir des types valeur en utilisant des champs qui peuvent avoir la valeur null, par exemple, IBox\<int>^ par opposition à int. Cela signifie que les champs peuvent avoir une valeur ou être égaux à nullptr.
 - **Informations plus détaillées sur l’exception.** C++/CX prend en charge le nouveau modèle d'erreurs Windows qui permet de capturer et de propager des informations d'exception enrichies sur l'interface binaire d'application (ABI) ; cela inclut les piles d'appels et les chaînes de messages personnalisées.
 - **Object::ToString() est désormais virtuel.** Vous pouvez maintenant remplacer ToString dans les types de références Windows Runtime définis par l’utilisateur.
 - **Prise en charge des API dépréciées.** Les API Windows Runtime publiques peuvent maintenant être marquées comme déconseillées. Par ailleurs, vous pouvez leur affecter un message personnalisé qui s'affiche sous forme d'avertissement de build et propose éventuellement des conseils de migration.
 - **Améliorations du débogueur.** Prise en charge du débogage interop natif/JavaScript, diagnostic des exceptions Windows Runtime et débogage du code asynchrone (Windows Runtime et PPL).
-  - Remarque : Outre les fonctionnalités et améliorations propres à C++ décrites dans cette section, d’autres améliorations dans Visual Studio peuvent également vous aider à écrire de meilleures applications du Windows Store.
+  - Remarque : En plus des fonctionnalités et améliorations propres à C++ décrites dans cette section, d’autres améliorations dans Visual Studio peuvent également vous aider à écrire de meilleures applications Windows Runtime.
 
 ### <a name="diagnostics-enhancements"></a>Améliorations des diagnostics
 
@@ -1632,12 +1632,12 @@ func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
 func1(Element::Helium); // OK
    ```
 
-### <a name="windows-store-app-development-support"></a>Prise en charge du développement d’applications du Windows Store
+### <a name="windows-runtime-app-development-support"></a>Prise en charge du développement d’applications Windows Runtime
 
-- **Modèle d’interface utilisateur XAML native**. Pour les applications du Windows Store, vous pouvez utiliser le nouveau modèle d’interface utilisateur XAML native.
-- **Extensions de composant Visual C++**. Ces extensions simplifient la consommation d’objets Windows Runtime, qui sont indispensables pour les applications du Windows Store. Pour plus d’informations, consultez Feuille de route pour les applications du Windows Store en C++ et Informations de référence du langage Visual C++ (C++/CX).
-- **Jeux DirectX**. La nouvelle prise en charge de DirectX pour les applications du Windows Store vous permet de développer des jeux captivants.
-- **Interopérabilité XAML/DirectX**. Les applications du Windows Store qui utilisent aussi bien XAML et DirectX interagissent désormais efficacement.
+- **Modèle d’interface utilisateur XAML native**. Pour les applications Windows Runtime, vous pouvez utiliser le nouveau modèle d’interface utilisateur XAML native.
+- **Extensions de composant Visual C++**. Ces extensions simplifient la consommation d’objets Windows Runtime, qui sont indispensables pour les applications Windows Runtime. Pour plus d’informations, consultez [Feuille de route pour les applications Windows Runtime en C++](../windows/universal-windows-apps-cpp.md) et [Informations de référence du langage Visual C++ (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
+- **Jeux DirectX**. La nouvelle prise en charge de DirectX pour les applications Windows Runtime vous permet de développer des jeux captivants.
+- **Interopérabilité XAML/DirectX**. Les applications Windows Runtime qui utilisent aussi bien XAML et DirectX interagissent désormais efficacement.
 - **Développement de DLL de composant Windows Runtime**. Le développement de DLL de composant rend l’environnement Windows Runtime extensible.
 
 ### <a name="compiler-and-linker"></a>Compilateur et éditeur de liens
@@ -1941,7 +1941,7 @@ Des changements importants ont été apportés au compilateur dans cette version
 - Compilateurs croisés et natifs 64 bits.
 - L’option de compilateur /analyze (analyse du code d’entreprise) a été ajoutée.
 - L’option de compilateur /bigobj a été ajoutée.
-- /clr:pure, /clr:safe et /clr:oldSyntax ont été ajoutés.
+- /clr:pure, /clr:safe et /clr:oldSyntax ont été ajoutés. (Dépréciés plus tard dans Visual Studio 2015.)
 - Options de compilateur dépréciées : plusieurs options de compilateur ont été dépréciées dans cette version. Pour plus d’informations, consultez Options de compilateur dépréciées.
 - La double conversion de code (thunking) dans le code /clr est réduite. Pour plus d’informations, consultez Double conversion de code (thunking) (C++).
 - L’option /EH (Modèle de gestion des exceptions) ou /EHs ne peut plus être utilisée pour intercepter une exception levée par un élément autre qu’une clause throw. Utilisez /EHa.
