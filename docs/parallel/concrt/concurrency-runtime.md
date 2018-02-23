@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Concurrency Runtime, getting started
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e3adff365269ad9dae2d6b850470a869250e3dd8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3d7822c552345f9492dcca6822a133290c2a82be
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="concurrency-runtime"></a>Concurrency Runtime
 Le runtime d'accès concurrentiel pour C++ vous aide à écrire des applications parallèles fiables, évolutives et réactives. Il permet d'élever le niveau d'abstraction afin que vous n'ayez pas à gérer les détails de l'infrastructure liés à l'accès concurrentiel. Vous pouvez également l'utiliser pour spécifier les stratégies de planification qui répondent aux exigences de vos applications en matière de qualité de service. Utilisez ces ressources pour vous aider à vous familiariser avec le runtime d'accès concurrentiel.  
@@ -67,13 +70,13 @@ Le runtime d'accès concurrentiel pour C++ vous aide à écrire des applications
 |[Annulation dans la bibliothèque de modèles parallèles](cancellation-in-the-ppl.md)|Décrit le rôle de l'annulation dans la bibliothèque de modèles parallèles, en particulier comment initier des demandes d'annulation et y répondre.|  
 |[Guide pratique pour utiliser l’annulation pour rompre une boucle parallèle](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br /><br /> [Guide pratique pour utiliser la gestion des exceptions pour rompre une boucle parallèle](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Montre deux façons d'annuler du travail parallèle de données.|  
   
-## <a name="windows-store-apps"></a>Applications Windows Store  
+## <a name="universal-windows-platform-apps"></a>Applications de la plateforme Windows universelle  
   
 |||  
 |-|-|  
-|[Création d’opérations asynchrones en C++ pour les applications Windows Store](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Décrit certains des principaux points à garder à l'esprit quand vous utilisez le runtime d'accès concurrentiel pour effectuer les opérations asynchrones dans une application [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] .|  
-|[Procédure pas à pas : connexion à l’aide de tâches et de requêtes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Montre comment combiner les tâches de la bibliothèque de modèles parallèles avec les interfaces `IXMLHTTPRequest2` et `IXMLHTTPRequest2Callback` pour envoyer des requêtes HTTP GET et POST à un service web dans une application [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] .|  
-|[Exemples d’applications du Windows Store](http://code.msdn.microsoft.com/windowsapps)|Contient des exemples de code et des versions de démonstration d'applications téléchargeables pour [!INCLUDE[win8](../../build/reference/includes/win8_md.md)]. Les exemples C++ utilisent les caractéristiques du runtime d'accès concurrentiel comme les tâches PPL pour traiter les données en arrière plan et garder l'UX réactive.|  
+|[Création d’opérations asynchrones dans C++ pour les applications UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Décrit certains des points clés à prendre en compte lorsque vous utilisez le Runtime d’accès concurrentiel pour les opérations asynchrones dans une application UWP.|  
+|[Procédure pas à pas : connexion à l’aide de tâches et de requêtes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Montre comment combiner les tâches de bibliothèque de modèles parallèles avec le `IXMLHTTPRequest2` et `IXMLHTTPRequest2Callback` interfaces pour envoyer des demandes HTTP GET et POST à un service web dans une application UWP.|  
+|[Exemples d’applications Windows Runtime](http://code.msdn.microsoft.com/windowsapps)|Contient des exemples de code téléchargeable et démonstration des applications pour Windows 8.x. Les exemples C++ utilisent les caractéristiques du runtime d'accès concurrentiel comme les tâches PPL pour traiter les données en arrière plan et garder l'UX réactive.|  
   
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Programmation de flux de données dans la bibliothèque des agents asynchrones  
   
@@ -108,7 +111,7 @@ Le runtime d'accès concurrentiel pour C++ vous aide à écrire des applications
   
 |||  
 |-|-|  
-|[Modèles de programmation asynchrones et conseils dans Hilo (applications du Windows Store utilisant C++ et XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Découvrez comment nous avons utilisé le runtime d'accès concurrentiel pour implémenter des opérations asynchrones dans Hilo, une application [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] qui utilise C++ et XAML.|  
+|[Modèles de programmation asynchrones et conseils dans Hilo (applications du Windows Store utilisant C++ et XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Découvrez comment nous avons utilisé le Runtime d’accès concurrentiel pour implémenter des opérations asynchrones dans Hilo, une application Windows Runtime en C++ et XAML.|  
 |[Exemples de code pour le Runtime d’accès concurrentiel et la bibliothèque de modèles parallèles dans Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Donne des exemples d'applications et d'utilitaires qui montrent le runtime d'accès concurrentiel.|  
 |[Programmation parallèle dans le blog de Code natif](http://go.microsoft.com/fwlink/p/?linkid=183873)|Fournit des articles de blog détaillés supplémentaires sur la programmation parallèle dans le runtime d'accès concurrentiel.|  
 |[Calcul parallèle dans le forum C++ et le Code natif](http://go.microsoft.com/fwlink/p/?linkid=183874)|Vous permet de participer à des discussions de la communauté sur le runtime d'accès concurrentiel.|  

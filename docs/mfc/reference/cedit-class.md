@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -54,7 +55,8 @@ f1_keywords:
 - AFXWIN/CEdit::SetTabStops
 - AFXWIN/CEdit::ShowBalloonTip
 - AFXWIN/CEdit::Undo
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CEdit [MFC], CEdit
 - CEdit [MFC], CanUndo
@@ -101,16 +103,17 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4418f20b267218b761dd6637762df1b420e9ac6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3e14a675f3dac5f2431622f0dfd6002228abe4d2
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="cedit-class"></a>CEdit Class
 Fournit les fonctionnalités d'un contrôle d'édition Windows.  
@@ -129,7 +132,7 @@ class CEdit : public CWnd
 |----------|-----------------|  
 |[CEdit::CEdit](#cedit)|Construit un `CEdit` objet contrôle.|  
   
-### <a name="public-methods"></a>Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -184,19 +187,19 @@ class CEdit : public CWnd
   
  Construction peut être un processus en une étape dans une classe dérivée de `CEdit`. Écrire un constructeur pour la classe dérivée et appelez **créer** à partir de dans le constructeur.  
   
- `CEdit`hérite des fonctionnalités importantes de `CWnd`. Pour définir et récupérer le texte à partir d’un `CEdit` de l’objet, utilisez le `CWnd` fonctions membres [SetWindowText](cwnd-class.md#setwindowtext) et [GetWindowText](cwnd-class.md#getwindowtext), ou les obtenir tout le contenu d’une modification contrôle, même si elle est un contrôle multiligne. Les lignes de texte dans un contrôle multiligne sont séparés par des séquences de caractères '\r\n'. En outre, si un contrôle d’édition est multiligne, obtenir et définir une partie du texte du contrôle en appelant le `CEdit` fonctions membres [GetLine](#getline), [fonction membre SetSel](#setsel), [fonction membre GetSel](#getsel)et [ ReplaceSel](#replacesel).  
+ `CEdit` hérite des fonctionnalités importantes de `CWnd`. Pour définir et récupérer le texte à partir d’un `CEdit` de l’objet, utilisez le `CWnd` fonctions membres [SetWindowText](cwnd-class.md#setwindowtext) et [GetWindowText](cwnd-class.md#getwindowtext), ou les obtenir tout le contenu d’une modification contrôle, même si elle est un contrôle multiligne. Les lignes de texte dans un contrôle multiligne sont séparés par des séquences de caractères '\r\n'. En outre, si un contrôle d’édition est multiligne, obtenir et définir une partie du texte du contrôle en appelant le `CEdit` fonctions membres [GetLine](#getline), [fonction membre SetSel](#setsel), [fonction membre GetSel](#getsel)et [ ReplaceSel](#replacesel).  
   
  Si vous souhaitez traiter les messages de notification Windows envoyés par un contrôle d’édition à son parent (généralement une classe dérivée de `CDialog`), ajouter une fonction table des messages de membre des entrée et le Gestionnaire de messages à la classe parente pour chaque message.  
   
  Chaque entrée de table des messages prend la forme suivante :  
   
- **ON_**Notification **(** *id, memberFxn***)**  
+ **ON_**Notification **(** *id, memberFxn ***)**  
   
  où `id` Spécifie l’ID de fenêtre enfant du contrôle d’édition envoie la notification, et `memberFxn` est le nom de la fonction de membre parent que vous avez écrit pour gérer la notification.  
   
  Prototype de fonction du parent est la suivante :  
   
- **afx_msg** memberFxn void **() ;**  
+ **afx_msg** void memberFxn **( );**  
   
  Voici une liste d’éventuelles entrées de table des messages et une description des cas dans lequel ils sont envoyés au parent :  
   
@@ -239,10 +242,10 @@ class CEdit : public CWnd
   
  `CEdit`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** afxwin.h  
   
-##  <a name="canundo"></a>CEdit::CanUndo  
+##  <a name="canundo"></a>  CEdit::CanUndo  
  Appelez cette fonction pour déterminer si la dernière opération de modification peut être annulée.  
   
 ```  
@@ -258,7 +261,7 @@ BOOL CanUndo() const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CEdit::Undo](#undo).  
   
-##  <a name="cedit"></a>CEdit::CEdit  
+##  <a name="cedit"></a>  CEdit::CEdit  
  Construit un objet `CEdit`.  
   
 ```  
@@ -271,7 +274,7 @@ CEdit();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#1](../../mfc/reference/codesnippet/cpp/cedit-class_1.cpp)]  
   
-##  <a name="charfrompos"></a>CEdit::CharFromPos  
+##  <a name="charfrompos"></a>  CEdit::CharFromPos  
  Appelez cette fonction pour récupérer la ligne de base zéro et l’index de caractère du caractère le plus proche du point spécifié dans ce `CEdit` contrôle  
   
 ```  
@@ -295,7 +298,7 @@ int CharFromPos(CPoint pt) const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#3](../../mfc/reference/codesnippet/cpp/cedit-class_2.cpp)]  
   
-##  <a name="clear"></a>CEdit::Clear  
+##  <a name="clear"></a>  CEdit::Clear  
  Appelez cette fonction pour supprimer (clear) la sélection actuelle (le cas échéant) dans le contrôle d’édition.  
   
 ```  
@@ -312,7 +315,7 @@ void Clear();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#4](../../mfc/reference/codesnippet/cpp/cedit-class_3.cpp)]  
   
-##  <a name="copy"></a>CEdit::Copy  
+##  <a name="copy"></a>  CEdit::Copy  
  Appelez cette fonction pour copier de la sélection actuelle (le cas échéant) dans le contrôle d’édition dans le Presse-papiers dans **CF_TEXT** format.  
   
 ```  
@@ -325,7 +328,7 @@ void Copy();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#5](../../mfc/reference/codesnippet/cpp/cedit-class_4.cpp)]  
   
-##  <a name="create"></a>CEdit::Create  
+##  <a name="create"></a>  CEdit::Create  
  Crée le contrôle d’édition Windows et l’attache à le `CEdit` objet.  
   
 ```  
@@ -338,7 +341,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Paramètres  
  `dwStyle`  
- Spécifie le style du contrôle d’édition. Appliquer n’importe quelle combinaison de [modifier les styles](edit-styles.md) au contrôle.  
+ Spécifie le style du contrôle d’édition. Appliquer n’importe quelle combinaison de [modifier les styles](styles-used-by-mfc.md#edit-styles) au contrôle.  
   
  `rect`  
  Spécifie la taille et la position du contrôle d’édition. Peut être un `CRect` objet ou `RECT` structure.  
@@ -359,9 +362,9 @@ virtual BOOL Create(
   
  Ces messages sont gérées par défaut par le [OnNcCreate](cwnd-class.md#onnccreate), [OnNcCalcSize](cwnd-class.md#onnccalcsize), [OnCreate](cwnd-class.md#oncreate), et [OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo) fonctions membres dans la `CWnd` classe de base. Pour étendre le traitement du message par défaut, dérivez une classe de `CEdit`, ajouter une table des messages à la nouvelle classe et substituer les fonctions membres de gestionnaire de messages ci-dessus. Substituer `OnCreate`, par exemple, pour effectuer l’initialisation nécessaire pour la nouvelle classe.  
   
- Appliquez ce qui suit [styles de fenêtre](window-styles.md) à un contrôle d’édition.  
+ Appliquez ce qui suit [styles de fenêtre](styles-used-by-mfc.md#window-styles) à un contrôle d’édition.  
   
-- **WS_CHILD** toujours  
+- **WS_CHILD** Always  
   
 - **WS_VISIBLE** généralement  
   
@@ -374,7 +377,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#2](../../mfc/reference/codesnippet/cpp/cedit-class_5.cpp)]  
   
-##  <a name="cut"></a>CEdit::Cut  
+##  <a name="cut"></a>  CEdit::Cut  
  Appelez cette fonction pour supprimer (Couper) à la sélection actuelle (le cas échéant) dans le contrôle d’édition et de copier le texte supprimé dans le Presse-papiers dans **CF_TEXT** format.  
   
 ```  
@@ -391,7 +394,7 @@ void Cut();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#6](../../mfc/reference/codesnippet/cpp/cedit-class_6.cpp)]  
   
-##  <a name="emptyundobuffer"></a>CEdit::EmptyUndoBuffer  
+##  <a name="emptyundobuffer"></a>  CEdit::EmptyUndoBuffer  
  Appelez cette fonction pour réinitialiser (Effacer) de l’indicateur d’annulation d’un contrôle d’édition.  
   
 ```  
@@ -408,7 +411,7 @@ void EmptyUndoBuffer();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#7](../../mfc/reference/codesnippet/cpp/cedit-class_7.cpp)]  
   
-##  <a name="fmtlines"></a>CEdit::FmtLines  
+##  <a name="fmtlines"></a>  CEdit::FmtLines  
  Appelez cette fonction pour définir l’inclusion de caractères de saut de ligne conditionnel ou de désactiver au sein d’un contrôle d’édition de plusieurs lignes.  
   
 ```  
@@ -427,14 +430,14 @@ BOOL FmtLines(BOOL bAddEOL);
   
  Windows répondra uniquement si le `CEdit` l’objet est un contrôle d’édition de plusieurs lignes.  
   
- `FmtLines`affecte uniquement la mémoire tampon retournée par [GetHandle](#gethandle) et le texte retourné par [WM_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632627). Il n’a aucun impact sur l’affichage du texte dans le contrôle d’édition.  
+ `FmtLines` affecte uniquement la mémoire tampon retournée par [GetHandle](#gethandle) et le texte retourné par [WM_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632627). Il n’a aucun impact sur l’affichage du texte dans le contrôle d’édition.  
   
  Pour plus d’informations, consultez [EM_FMTLINES](http://msdn.microsoft.com/library/windows/desktop/bb761570) dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#8](../../mfc/reference/codesnippet/cpp/cedit-class_8.cpp)]  
   
-##  <a name="getcuebanner"></a>CEdit::GetCueBanner  
+##  <a name="getcuebanner"></a>  CEdit::GetCueBanner  
  Récupère le texte qui s’affiche en tant que l’indice de texte, ou Conseil, dans un contrôle d’édition lorsque le contrôle est vide.  
   
 ```  
@@ -460,7 +463,7 @@ CString GetCueBanner() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [EM_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb761572) message, ce qui est décrit dans le Kit de développement logiciel Windows. Pour plus d’informations, consultez la [Edit_GetCueBannerText](http://msdn.microsoft.com/library/windows/desktop/bb761695) (macro).  
   
-##  <a name="getfirstvisibleline"></a>CEdit::GetFirstVisibleLine  
+##  <a name="getfirstvisibleline"></a>  CEdit::GetFirstVisibleLine  
  Appelez cette fonction pour déterminer la ligne visible au premier plan dans un contrôle d’édition.  
   
 ```  
@@ -476,7 +479,7 @@ int GetFirstVisibleLine() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#9](../../mfc/reference/codesnippet/cpp/cedit-class_9.cpp)]  
   
-##  <a name="gethandle"></a>CEdit::GetHandle  
+##  <a name="gethandle"></a>  CEdit::GetHandle  
  Appelez cette fonction pour récupérer un handle de la mémoire actuellement allouée à un contrôle d’édition de plusieurs lignes.  
   
 ```  
@@ -501,7 +504,7 @@ HLOCAL GetHandle() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#10](../../mfc/reference/codesnippet/cpp/cedit-class_10.cpp)]  
   
-##  <a name="gethighlight"></a>CEdit::GetHighlight  
+##  <a name="gethighlight"></a>  CEdit::GetHighlight  
  Obtient les index des premier et derniers caractères dans une plage de texte qui est mis en surbrillance dans le contrôle d’édition actuel.  
   
 ```  
@@ -518,12 +521,12 @@ BOOL GetHighlight(
 |[out] `pichEnd`|Index de base zéro du dernier caractère de la plage de texte qui est mis en surbrillance.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
+ `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [EM_GETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761578) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
-##  <a name="getlimittext"></a>CEdit::GetLimitText  
+##  <a name="getlimittext"></a>  CEdit::GetLimitText  
  Appelez cette fonction membre pour obtenir la limite de texte pour ce `CEdit` objet.  
   
 ```  
@@ -544,7 +547,7 @@ UINT GetLimitText() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#11](../../mfc/reference/codesnippet/cpp/cedit-class_11.cpp)]  
   
-##  <a name="getline"></a>CEdit::GetLine  
+##  <a name="getline"></a>  CEdit::GetLine  
  Appelez cette fonction pour récupérer une ligne de texte à partir d’un contrôle d’édition et le place dans `lpszBuffer`.  
   
 ```  
@@ -566,7 +569,7 @@ int GetLine(
  Pointe vers la mémoire tampon qui reçoit une copie de la ligne. Le premier mot de la mémoire tampon doit spécifier le nombre maximal de caractères qui peuvent être copiés dans la mémoire tampon.  
   
  `nMaxLength`  
- Spécifie le nombre maximal d’octets pouvant être copiée dans la mémoire tampon. `GetLine`place cette valeur dans le premier mot de `lpszBuffer` avant l’appel à Windows.  
+ Spécifie le nombre maximal d’octets pouvant être copiée dans la mémoire tampon. `GetLine` place cette valeur dans le premier mot de `lpszBuffer` avant l’appel à Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’octets réellement copiés. La valeur de retour est 0 si le numéro de ligne spécifiée par `nIndex` est supérieur au nombre de lignes dans le contrôle d’édition.  
@@ -579,7 +582,7 @@ int GetLine(
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CEdit::GetLineCount](#getlinecount).  
   
-##  <a name="getlinecount"></a>CEdit::GetLineCount  
+##  <a name="getlinecount"></a>  CEdit::GetLineCount  
  Appelez cette fonction pour récupérer le nombre de lignes dans un contrôle d’édition de plusieurs lignes.  
   
 ```  
@@ -590,14 +593,14 @@ int GetLineCount() const;
  Contrôle d’édition un entier contenant le nombre de lignes dans plusieurs lignes. Si aucun texte n’a été entré dans le contrôle d’édition, la valeur de retour est 1.  
   
 ### <a name="remarks"></a>Notes  
- `GetLineCount`est traité uniquement par les contrôles d’édition de plusieurs lignes.  
+ `GetLineCount` est traité uniquement par les contrôles d’édition de plusieurs lignes.  
   
  Pour plus d’informations, consultez [EM_GETLINECOUNT](http://msdn.microsoft.com/library/windows/desktop/bb761586) dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#12](../../mfc/reference/codesnippet/cpp/cedit-class_12.cpp)]  
   
-##  <a name="getmargins"></a>CEdit::GetMargins  
+##  <a name="getmargins"></a>  CEdit::GetMargins  
  Appelez cette fonction membre pour récupérer les marges gauche et droite de ce contrôle d’édition.  
   
 ```  
@@ -618,7 +621,7 @@ DWORD GetMargins() const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).  
   
-##  <a name="getmodify"></a>CEdit::GetModify  
+##  <a name="getmodify"></a>  CEdit::GetModify  
  Appelez cette fonction pour déterminer si le contenu d’un contrôle d’édition a été modifié.  
   
 ```  
@@ -636,7 +639,7 @@ BOOL GetModify() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#13](../../mfc/reference/codesnippet/cpp/cedit-class_13.cpp)]  
   
-##  <a name="getpasswordchar"></a>CEdit::GetPasswordChar  
+##  <a name="getpasswordchar"></a>  CEdit::GetPasswordChar  
  Appelez cette fonction pour récupérer le caractère de mot de passe s’affiche dans un contrôle d’édition lorsque l’utilisateur entre du texte.  
   
 ```  
@@ -654,7 +657,7 @@ TCHAR GetPasswordChar() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#14](../../mfc/reference/codesnippet/cpp/cedit-class_14.cpp)]  
   
-##  <a name="getrect"></a>CEdit::GetRect  
+##  <a name="getrect"></a>  CEdit::GetRect  
  Appelez cette fonction pour obtenir le rectangle de mise en forme d’un contrôle d’édition.  
   
 ```  
@@ -675,7 +678,7 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CEdit::LimitText](#limittext).  
   
-##  <a name="getsel"></a>CEdit::GetSel  
+##  <a name="getsel"></a>  CEdit::GetSel  
  Appelez cette fonction pour obtenir de début et fin de positions de caractère de la sélection actuelle (le cas échéant) dans un contrôle d’édition, à l’aide de la valeur de retour ou les paramètres.  
   
 ```  
@@ -702,7 +705,7 @@ void GetSel(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#15](../../mfc/reference/codesnippet/cpp/cedit-class_15.cpp)]  
   
-##  <a name="hideballoontip"></a>CEdit::HideBalloonTip  
+##  <a name="hideballoontip"></a>  CEdit::HideBalloonTip  
  Masque les info-bulle associé au contrôle d’édition actuel.  
   
 ```  
@@ -710,12 +713,12 @@ BOOL HideBalloonTip();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
+ `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction envoie le [EM_HIDEBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb761604) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
-##  <a name="limittext"></a>CEdit::LimitText  
+##  <a name="limittext"></a>  CEdit::LimitText  
  Appelez cette fonction pour limiter la longueur du texte que l’utilisateur peut entrer dans un contrôle d’édition.  
   
 ```  
@@ -737,7 +740,7 @@ void LimitText(int nChars = 0);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#17](../../mfc/reference/codesnippet/cpp/cedit-class_16.cpp)]  
   
-##  <a name="linefromchar"></a>CEdit::LineFromChar  
+##  <a name="linefromchar"></a>  CEdit::LineFromChar  
  Appelez cette fonction pour récupérer le numéro de ligne de la ligne qui contient l’index de caractère spécifié.  
   
 ```  
@@ -761,7 +764,7 @@ int LineFromChar(int nIndex = -1) const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#18](../../mfc/reference/codesnippet/cpp/cedit-class_17.cpp)]  
   
-##  <a name="lineindex"></a>CEdit::LineIndex  
+##  <a name="lineindex"></a>  CEdit::LineIndex  
  Appelez cette fonction pour récupérer l’index de caractère d’une ligne dans un contrôle d’édition de plusieurs lignes.  
   
 ```  
@@ -785,7 +788,7 @@ int LineIndex(int nLine = -1) const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#19](../../mfc/reference/codesnippet/cpp/cedit-class_18.cpp)]  
   
-##  <a name="linelength"></a>CEdit::LineLength  
+##  <a name="linelength"></a>  CEdit::LineLength  
  Récupère la longueur d’une ligne dans un contrôle d’édition.  
   
 ```  
@@ -813,7 +816,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CEdit::LineIndex](#lineindex).  
   
-##  <a name="linescroll"></a>CEdit::LineScroll  
+##  <a name="linescroll"></a>  CEdit::LineScroll  
  Appelez cette fonction pour faire défiler le texte d’un contrôle d’édition de plusieurs lignes.  
   
 ```  
@@ -834,14 +837,14 @@ void LineScroll(
   
  Le contrôle d’édition ne défile pas verticalement au-delà de la dernière ligne du texte dans le contrôle d’édition. Si la ligne en cours ainsi que le nombre de lignes spécifié par `nLines` dépasse le nombre total de lignes dans le contrôle d’édition, la valeur est ajustée afin que la dernière ligne du contrôle d’édition est l’objet d’un défilement vers le haut de la fenêtre de contrôle d’édition.  
   
- `LineScroll`peut être utilisé pour faire défiler horizontalement au-delà du dernier caractère de n’importe quelle ligne.  
+ `LineScroll` peut être utilisé pour faire défiler horizontalement au-delà du dernier caractère de n’importe quelle ligne.  
   
  Pour plus d’informations, consultez [EM_LINESCROLL](http://msdn.microsoft.com/library/windows/desktop/bb761615) dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CEdit::GetFirstVisibleLine](#getfirstvisibleline).  
   
-##  <a name="paste"></a>CEdit::Paste  
+##  <a name="paste"></a>  CEdit::Paste  
  Appelez cette fonction pour insérer les données du Presse-papiers dans le `CEdit` au point d’insertion.  
   
 ```  
@@ -856,7 +859,7 @@ void Paste();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#20](../../mfc/reference/codesnippet/cpp/cedit-class_19.cpp)]  
   
-##  <a name="posfromchar"></a>CEdit::PosFromChar  
+##  <a name="posfromchar"></a>  CEdit::PosFromChar  
  Appelez cette fonction pour obtenir la position (angle supérieur gauche) d’un caractère donné dans cette `CEdit` objet.  
   
 ```  
@@ -881,7 +884,7 @@ CPoint PosFromChar(UINT nChar) const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CEdit::LineFromChar](#linefromchar).  
   
-##  <a name="replacesel"></a>CEdit::ReplaceSel  
+##  <a name="replacesel"></a>  CEdit::ReplaceSel  
  Appelez cette fonction pour remplacer la sélection actuelle dans un contrôle d’édition avec le texte spécifié par `lpszNewText`.  
   
 ```  
@@ -905,7 +908,7 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CEdit::LineIndex](#lineindex).  
   
-##  <a name="setcuebanner"></a>CEdit::SetCueBanner  
+##  <a name="setcuebanner"></a>  CEdit::SetCueBanner  
  Définit le texte qui s’affiche en tant que la pile de texte, ou Conseil, dans une modification de contrôle lorsque le contrôle est vide.  
   
 ```  
@@ -929,7 +932,7 @@ BOOL SetCueBanner(
  La valeur par défaut est `false`.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si la méthode a réussi ; dans le cas contraire `false`.  
+ `true` Si la méthode a réussi ; dans le cas contraire `false`.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [EM_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb761639) message, ce qui est décrit dans le Kit de développement logiciel Windows. Pour plus d’informations, consultez la [Edit_SetCueBannerTextFocused](http://msdn.microsoft.com/library/windows/desktop/bb761703) (macro).  
@@ -939,7 +942,7 @@ BOOL SetCueBanner(
   
  [!code-cpp[NVC_MFC_CEdit_s1#2](../../mfc/reference/codesnippet/cpp/cedit-class_20.cpp)]  
   
-##  <a name="sethandle"></a>CEdit::SetHandle  
+##  <a name="sethandle"></a>  CEdit::SetHandle  
  Appelez cette fonction pour définir le handle de la mémoire locale qui sera utilisée par un contrôle d’édition de plusieurs lignes.  
   
 ```  
@@ -957,7 +960,7 @@ void SetHandle(HLOCAL hBuffer);
   
  Avant qu’une application définit un nouveau handle de mémoire, elle doit utiliser le [GetHandle](#gethandle) fonction membre pour obtenir le handle de la mémoire tampon en cours et libérer la mémoire à l’aide du **LocalFree** fonction Windows.  
   
- `SetHandle`Efface la mémoire tampon d’annulation (le [CanUndo](#canundo) puis, fonction membre retourne 0) et l’indicateur de modification interne (la [GetModify](#getmodify) puis, fonction membre retourne 0). La fenêtre de contrôle d’édition est redessinée.  
+ `SetHandle` Efface la mémoire tampon d’annulation (le [CanUndo](#canundo) puis, fonction membre retourne 0) et l’indicateur de modification interne (la [GetModify](#getmodify) puis, fonction membre retourne 0). La fenêtre de contrôle d’édition est redessinée.  
   
  Vous pouvez utiliser cette fonction membre dans un contrôle d’édition de plusieurs lignes dans une boîte de dialogue uniquement si vous avez créé la boîte de dialogue avec le **DS_LOCALEDIT** style d’indicateur est défini.  
   
@@ -969,7 +972,7 @@ void SetHandle(HLOCAL hBuffer);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#22](../../mfc/reference/codesnippet/cpp/cedit-class_21.cpp)]  
   
-##  <a name="sethighlight"></a>CEdit::SetHighlight  
+##  <a name="sethighlight"></a>  CEdit::SetHighlight  
  Contrôle d’édition met en évidence une plage de texte qui s’affiche en cours.  
   
 ```  
@@ -988,7 +991,7 @@ void SetHighlight(
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [EM_SETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761643) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
-##  <a name="setlimittext"></a>CEdit::SetLimitText  
+##  <a name="setlimittext"></a>  CEdit::SetLimitText  
  Appelez cette fonction membre pour définir la limite de texte pour ce `CEdit` objet.  
   
 ```  
@@ -1011,7 +1014,7 @@ void SetLimitText(UINT nMax);
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).  
   
-##  <a name="setmargins"></a>CEdit::SetMargins  
+##  <a name="setmargins"></a>  CEdit::SetMargins  
  Appelez cette méthode pour définir les marges gauche et droite de ce contrôle d’édition.  
   
 ```  
@@ -1037,7 +1040,7 @@ void SetMargins(
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).  
   
-##  <a name="setmodify"></a>CEdit::SetModify  
+##  <a name="setmodify"></a>  CEdit::SetModify  
  Appelez cette fonction pour définir ou supprimer l’indicateur modifié pour un contrôle d’édition.  
   
 ```  
@@ -1056,7 +1059,7 @@ void SetModify(BOOL bModified = TRUE);
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CEdit::GetModify](#getmodify).  
   
-##  <a name="setpasswordchar"></a>CEdit::SetPasswordChar  
+##  <a name="setpasswordchar"></a>  CEdit::SetPasswordChar  
  Appelez cette fonction pour définir ou supprimer un caractère de mot de passe affiché dans un contrôle d’édition lorsque l’utilisateur tape du texte.  
   
 ```  
@@ -1064,7 +1067,7 @@ void SetPasswordChar(TCHAR ch);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *CH*  
+ *ch*  
  Spécifie le caractère à afficher à la place le caractère tapé par l’utilisateur. Si *ch* est 0, les caractères tapés par l’utilisateur sont affichés.  
   
 ### <a name="remarks"></a>Notes  
@@ -1074,14 +1077,14 @@ void SetPasswordChar(TCHAR ch);
   
  Lorsque le `SetPasswordChar` fonction membre est appelée, `CEdit` redessine tous les caractères visibles à l’aide du caractère spécifié par *ch*.  
   
- Si le contrôle d’édition est créé avec le [ES_PASSWORD](edit-styles.md) style, le caractère de mot de passe par défaut est défini à un astérisque (  **\*** ). Ce style est supprimé si `SetPasswordChar` est appelée avec *ch* définie sur 0.  
+ Si le contrôle d’édition est créé avec le [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) style, le caractère de mot de passe par défaut est défini à un astérisque (  **\*** ). Ce style est supprimé si `SetPasswordChar` est appelée avec *ch* définie sur 0.  
   
  Pour plus d’informations, consultez [EM_SETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761653) dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#16](../../mfc/reference/codesnippet/cpp/cedit-class_22.cpp)]  
   
-##  <a name="setreadonly"></a>CEdit::SetReadOnly  
+##  <a name="setreadonly"></a>  CEdit::SetReadOnly  
  Appelle cette fonction pour définir l’état en lecture seule d’un contrôle d’édition.  
   
 ```  
@@ -1096,14 +1099,14 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
  Différent de zéro si l’opération a réussi, ou 0 si une erreur se produit.  
   
 ### <a name="remarks"></a>Notes  
- Le paramètre actuel se trouve en testant la [ES_READONLY](edit-styles.md) indicateur dans la valeur de retour de [CWnd::GetStyle](cwnd-class.md#getstyle).  
+ Le paramètre actuel se trouve en testant la [ES_READONLY](styles-used-by-mfc.md#edit-styles) indicateur dans la valeur de retour de [CWnd::GetStyle](cwnd-class.md#getstyle).  
   
  Pour plus d’informations, consultez [EM_SETREADONLY](http://msdn.microsoft.com/library/windows/desktop/bb761655) dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#23](../../mfc/reference/codesnippet/cpp/cedit-class_23.cpp)]  
   
-##  <a name="setrect"></a>CEdit::SetRect  
+##  <a name="setrect"></a>  CEdit::SetRect  
  Appelez cette fonction pour définir les dimensions d’un rectangle à l’aide des coordonnées spécifiées.  
   
 ```  
@@ -1128,7 +1131,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CEdit#24](../../mfc/reference/codesnippet/cpp/cedit-class_24.cpp)]  
   
-##  <a name="setrectnp"></a>CEdit::SetRectNP  
+##  <a name="setrectnp"></a>  CEdit::SetRectNP  
  Appelez cette fonction pour définir le rectangle de mise en forme d’un contrôle d’édition de plusieurs lignes.  
   
 ```  
@@ -1142,7 +1145,7 @@ void SetRectNP(LPCRECT lpRect);
 ### <a name="remarks"></a>Notes  
  Le rectangle de mise en forme est le rectangle de limitation du texte, qui est indépendante de la taille de la fenêtre de contrôle d’édition.  
   
- `SetRectNP`est identique à la `SetRect` fonction membre, sauf que la fenêtre de contrôle d’édition n’est pas redessinée.  
+ `SetRectNP` est identique à la `SetRect` fonction membre, sauf que la fenêtre de contrôle d’édition n’est pas redessinée.  
   
  Lorsque le contrôle d’édition est créé, le rectangle de mise en forme est identique à la zone cliente de la fenêtre de contrôle d’édition. En appelant le `SetRectNP` fonction membre, une application peut faire le rectangle de mise en forme supérieure ou inférieure à la fenêtre de contrôle d’édition.  
   
@@ -1155,7 +1158,7 @@ void SetRectNP(LPCRECT lpRect);
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CEdit::SetRect](#setrect).  
   
-##  <a name="setsel"></a>CEdit::SetSel  
+##  <a name="setsel"></a>  CEdit::SetSel  
  Appelez cette fonction pour sélectionner une plage de caractères dans un contrôle d’édition.  
   
 ```  
@@ -1189,7 +1192,7 @@ void SetSel(
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CEdit::GetSel](#getsel).  
   
-##  <a name="settabstops"></a>CEdit::SetTabStops  
+##  <a name="settabstops"></a>  CEdit::SetTabStops  
  Appelez cette fonction pour définir les taquets de tabulation dans un contrôle d’édition de plusieurs lignes.  
   
 ```  
@@ -1222,14 +1225,14 @@ BOOL SetTabStops(
   
  Cette fonction membre est traitée uniquement par les contrôles d’édition de plusieurs lignes.  
   
- `SetTabStops`ne pas renouveler automatiquement la fenêtre d’édition. Si vous modifiez les taquets de tabulation du texte déjà dans le contrôle d’édition, appelez [CWnd::InvalidateRect](cwnd-class.md#invalidaterect) pour redessiner la fenêtre d’édition.  
+ `SetTabStops` ne pas renouveler automatiquement la fenêtre d’édition. Si vous modifiez les taquets de tabulation du texte déjà dans le contrôle d’édition, appelez [CWnd::InvalidateRect](cwnd-class.md#invalidaterect) pour redessiner la fenêtre d’édition.  
   
  Pour plus d’informations, consultez [EM_SETTABSTOPS](http://msdn.microsoft.com/library/windows/desktop/bb761663) et [GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) dans le Kit de développement logiciel Windows.  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CEditView::SetTabStops](ceditview-class.md#settabstops).  
   
-##  <a name="showballoontip"></a>CEdit::ShowBalloonTip  
+##  <a name="showballoontip"></a>  CEdit::ShowBalloonTip  
  Affiche une info-bulle qui est associée avec le contrôle d’édition actuel.  
   
 ```  
@@ -1252,7 +1255,7 @@ BOOL ShowBalloonTip(
 |[in] `ttiIcon`|Un `INT` qui spécifie le type d’icône à associer à l’info-bulle. La valeur par défaut est `TTI_NONE`. Pour plus d’informations, consultez la `ttiIcon` membre de la [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) structure.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
+ `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction envoie le [EM_SHOWBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb761668) message, ce qui est décrit dans le Kit de développement logiciel Windows. Pour plus d’informations, consultez la [Edit_ShowBalloonTip](http://msdn.microsoft.com/library/windows/desktop/bb761707) (macro).  
@@ -1267,7 +1270,7 @@ BOOL ShowBalloonTip(
   
  [!code-cpp[NVC_MFC_CEdit_s1#3](../../mfc/reference/codesnippet/cpp/cedit-class_26.cpp)]  
   
-##  <a name="undo"></a>CEdit::Undo  
+##  <a name="undo"></a>  CEdit::Undo  
  Appelez cette fonction pour annuler la dernière opération de contrôle d’édition.  
   
 ```  

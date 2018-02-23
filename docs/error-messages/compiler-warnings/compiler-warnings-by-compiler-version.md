@@ -18,15 +18,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 646b7cb89af74e38f70b4199b5beaa1f71b184e1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5f6ee65b1001f0cf651fcbbd68170484cd134aa4
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avertissements du compilateur par la version du compilateur
 
-Le compilateur peut supprimer les avertissements qui ont été introduites après une version que vous spécifiez à l’aide de la [/WV.](../../build/reference/compiler-option-warning-level.md) option du compilateur. Cela est utile pour la gestion de votre processus de génération lorsque vous introduire une nouvelle version de l’ensemble d’outils et que vous souhaitez supprimer temporairement de nouveaux avertissements. Cette option ne supprime pas les nouveaux messages d’erreur. Nous ne recommandons pas vous supprimez tous les nouveaux avertissements définitivement ! Nous vous recommandons de vous compilez toujours au niveau avertissement régulière la plus élevé, __/W4__et supprimer les __/WV.__ option dans votre build dès que possible.
+Le compilateur peut supprimer les avertissements qui ont été introduites après une version que vous spécifiez à l’aide de la [/WV.](../../build/reference/compiler-option-warning-level.md) option du compilateur. Cela est utile pour la gestion de votre processus de génération lorsque vous introduire une nouvelle version de l’ensemble d’outils et que vous souhaitez supprimer temporairement de nouveaux avertissements. Cette option ne supprime pas les nouveaux messages d’erreur. Nous ne recommandons pas vous supprimez tous les nouveaux avertissements définitivement ! Nous vous recommandons de vous compilez toujours au niveau avertissement régulière la plus élevé, __/W4__et supprimer les __/WV.__ option dans votre build dès que possible. 
 
 Ces versions du compilateur a introduit de nouveaux avertissements :
 
@@ -93,6 +93,7 @@ C5034|utilisation d’intrinsèques '*intrinsèque*' provoque la fonction *fonct
 C5035|l’utilisation de fonctionnalité '*fonctionnalité*' provoque la fonction *fonction* doit être compilé comme code de l’invité
 C5036|conversion de pointeur de fonction varargs lors de la compilation avec /hybrid:x86arm64 '*type1*'à'*type2*'
 C5037|'*fonction membre*' : une définition hors ligne d’un membre d’un modèle de classe ne peut pas avoir d’arguments par défaut
+C5038|données membres '*member1*'sera initialisé après le membre de données'*membre2*'
 
 ## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-191024903"></a>Avertissements introduits dans Visual C++ 2017 RTM (version du compilateur 19.10.24903)
 
@@ -153,12 +154,12 @@ C4458|déclaration de '*nom*' masque le membre de classe
 C4459|déclaration de '*nom*' masque la déclaration globale
 C4462|'*type*' : ne peut pas déterminer le GUID du type. Le programme risque d'échouer au moment de l'exécution.
 C4463|dépassement de capacité ; affectation *valeur* au champ de bits qui peut contenir uniquement des valeurs à partir de *valeur* à *valeur*
-C4473|'*description*' : pas assez d’arguments passés pour la chaîne de format
-C4474|'*description*' : trop d’arguments passés pour la chaîne de format
-C4475|'*description*' : modificateur de longueur '*modificateur*'ne peut pas être utilisé avec le caractère de champ de type'*caractère*' spécificateur de format
-C4476|'*description*' : caractère de champ de type inconnu '*caractère*' spécificateur de format
-C4477|'*description*' : chaîne de format '*chaîne*'requiert un argument de type'*type*», mais l’argument variadique *nombre* a le type '*type*'
-C4478|'*description*' : Impossible de mélanger des espaces réservés positionnels et non positionnels dans la même chaîne de format
+C4473|'*fonction*' : pas assez d’arguments passés pour la chaîne de format
+C4474|'*fonction*' : trop d’arguments passés pour la chaîne de format
+C4475|'*fonction*' : modificateur de longueur '*modificateur*'ne peut pas être utilisé avec le caractère de champ de type'*caractère*' spécificateur de format
+C4476|'*fonction*' : caractère de champ de type inconnu '*caractère*' spécificateur de format
+C4477|'*fonction*' : chaîne de format '*chaîne*'requiert un argument de type'*type*', mais l’argument variadique *nombre* a le type '*type*'
+C4478|'*fonction*' : Impossible de mélanger des espaces réservés positionnels et non positionnels dans la même chaîne de format
 C4494|'*type*' : ignoré __declspec (allocateur) car le type de retour de la fonction n’est pas un pointeur ou une référence
 C4495|extension non standard '__super' utilisée : Remplacez par le nom de la classe de base explicite
 C4496|extension non standard 'for each' utilisée : Remplacez par une instruction ranged-for

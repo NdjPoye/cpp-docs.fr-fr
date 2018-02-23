@@ -15,24 +15,29 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030b1da3688e2c0524256f5128d5bb15f69b5070
-ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
-ms.translationtype: MT
+ms.openlocfilehash: ca1fdff6f5be88d7562f1735ea31323ca5a70360
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avertissements du compilateur désactivés par défaut
 
-Le compilateur inclut les avertissements qui sont désactivés par défaut, car la plupart des développeurs ne souhaitez pas les voir. Toutefois, vous pouvez les activer à l'aide de l'une des options suivantes.
+Le compilateur inclut les avertissements qui sont désactivés par défaut, car vous ne souhaitez pas que la plupart des développeurs pour les afficher. Dans certains cas, ils représentent un choix de style alternatifs, sont des idiomes courants dans le code plus ancien ou bénéficier d’une extension Microsoft du langage. Dans d’autres cas, ils indiquent une zone où les programmeurs souvent des hypothèses incorrecte, ce qui peut entraîner un comportement inattendu ou non défini. Certains de ces avertissements peuvent être très bruyants dans les en-têtes de bibliothèque.
 
-**#pragma warning (valeur par défaut :** *numéro_avertissement* **)**  
-L’avertissement spécifié (*numéro_avertissement*) est activé au niveau de sa valeur par défaut. La documentation de l'avertissement contient le niveau par défaut de l'avertissement.
+Vous pouvez activer les avertissements relatifs à l’aide d’une des options suivantes :
 
-**#pragma warning (** *warning_level* **:** *numéro_avertissement* **)**  
-L’avertissement spécifié (*numéro_avertissement*) est activé au niveau spécifié (*warning_level*).
+- **#pragma warning (valeur par défaut :** *numéro_avertissement* **)**  
+   L’avertissement spécifié (*numéro_avertissement*) est activé au niveau de sa valeur par défaut. La documentation de l'avertissement contient le niveau par défaut de l'avertissement.
 
-[/Wall](../build/reference/compiler-option-warning-level.md)  
-**/ Mur** Active tous les avertissements qui sont désactivés par défaut.
+- **#pragma warning (** *warning_level* **:** *numéro_avertissement* **)**  
+   L’avertissement spécifié (*numéro_avertissement*) est activé au niveau spécifié (*warning_level*).
+
+- [/Wall](../build/reference/compiler-option-warning-level.md)  
+   **/ Mur** Active tous les avertissements qui sont désactivés par défaut. Si vous utilisez cette option, vous pouvez désactiver des avertissements individuels à l’aide de la [/wd](../build/reference/compiler-option-warning-level.md) option.
+
+- [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
+   Cela permet l’avertissement  *nnnn*  au niveau *l*.
 
 Les avertissements suivants sont désactivés par défaut.
 
@@ -131,6 +136,7 @@ Les avertissements suivants sont désactivés par défaut.
 |C5032 (niveau 4)|détecté #pragma warning (push) sans Warning (pop) correspondant #pragma|
 |C5035|l’utilisation de fonctionnalité '*fonctionnalité*' provoque la fonction *fonction* doit être compilé comme code de l’invité|
 |C5036 (niveau 1)|conversion de pointeur de fonction varargs lors de la compilation avec /hybrid:x86arm64 '*type1*'à'*type2*'|
+|[C5038](../error-messages/compiler-warnings/c5038.md)|données membres '*member1*'sera initialisé après le membre de données'*membre2*'|
 
 Ces avertissements sont désactivées, sauf si le [/ permissive-](../build/reference/permissive-standards-conformance.md) option du compilateur est définie :
 

@@ -2,7 +2,6 @@
 title: Thread et Marshaling (C + c++ / CX) | Documents Microsoft
 ms.custom: 
 ms.date: 12/30/2016
-ms.prod: windows-client-threshold
 ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +20,11 @@ ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d62da6fafccecc8099e3f9611946d1c89a40389
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9b1544f18d0d5206e178cf42705d9567fad2423c
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="threading-and-marshaling-ccx"></a>Thread et Marshaling (C++/CX)
 Dans la grande majorité des cas, les instances de classes Windows Runtime, telles que les objets C++ standards, accessible à partir de n’importe quel thread. Ce type de classe est appelé « agile ». Toutefois, un petit nombre de classes Windows Runtime qui sont fournis avec Windows est non agiles et doit être utilisé davantage comme des objets COM à des objets C++ standard. Vous n'avez pas besoin d'être un spécialiste en COM pour utiliser les classes non agiles, mais vous devez impérativement prendre en compte le modèle de thread de la classe et son comportement de marshaling. Cet article fournit des informations générales et des conseils pour les rares scénarios dans lesquels vous devez utiliser une instance d'une classe non agile.  

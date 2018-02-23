@@ -94,7 +94,6 @@ f1_keywords:
 - C5035
 - C5036
 - C5037
-- C5038
 - C5039
 - C5040
 - C5041
@@ -103,17 +102,16 @@ f1_keywords:
 - C5044
 dev_langs:
 - C++
-ms.assetid: c3182430-8b3b-4ab2-a532-5cd436707dc8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f31846158e8e1899c600ae7bf765d6594a8abca
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4ff52a747d15a3c223ef0510c9195b80c9f21647
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>C4800 des avertissements du compilateur via C5999
 
@@ -245,6 +243,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement C5035 du compilateur|l’utilisation de fonctionnalité '*fonctionnalité*' provoque la fonction *fonction* doit être compilé comme code de l’invité|
 |Avertissement du compilateur (niveau 1) C5036|conversion de pointeur de fonction varargs lors de la compilation avec /hybrid:x86arm64 '*type1*'à'*type2*'|
 |Avertissement du compilateur (erreur) C5037|'*fonction membre*' : une définition hors ligne d’un membre d’un modèle de classe ne peut pas avoir d’arguments par défaut|
+|[Avertissement C5038 du compilateur](c5038.md)|données membres '*member1*'sera initialisé après le membre de données'*membre2*'|
 |Avertissement C5039 du compilateur|'*fonction*' : pointeur ou référence à potentiellement lever fonction passé à la fonction extern C sous - /EHc. Un comportement non défini peut se produire si cette fonction lève une exception.|
 |Avertissement C5040 du compilateur|spécifications d’exception dynamiques sont valides uniquement dans C ++ 14 et les versions antérieures ; traitement en tant que noexcept (false)|
 |Avertissement C5041 du compilateur|'*définition*' : définition hors ligne pour les membres de données statiques constexpr n’est pas nécessaire et est déconseillée dans C ++ 17|

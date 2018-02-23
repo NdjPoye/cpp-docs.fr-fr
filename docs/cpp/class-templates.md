@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - classes [C++], operating on type
 - class templates
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a53ed733bc710aa66061c40587e79f41e553b260
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0b14b45752559c80f4aafb60aa4ba23cb0d51b91
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="class-templates"></a>Modèles de classe
 Cette rubrique décrit les règles qui sont propres aux modèles de classe C++.  
@@ -203,7 +206,7 @@ X<T>::Y<U>::~Y()
  Les classes locales ne doivent pas avoir de modèles membres.  
   
 ## <a name="template-friends"></a>Friends de modèle  
- Modèles de classe peuvent avoir [amis](http://msdn.microsoft.com/en-us/bf412640-d857-4acb-b2b5-513131cb9681). Une classe ou un modèle de classe, une fonction ou un modèle de fonction peuvent être des éléments friend d'une classe de modèle. Les éléments friend peuvent également être des spécialisations d'un modèle de classe ou de fonction, mais des spécialisations non partielles.  
+ Modèles de classe peuvent avoir [amis](friend-cpp.md). Une classe ou un modèle de classe, une fonction ou un modèle de fonction peuvent être des éléments friend d'une classe de modèle. Les éléments friend peuvent également être des spécialisations d'un modèle de classe ou de fonction, mais des spécialisations non partielles.  
   
  Dans l'exemple suivant, une fonction friend est définie en tant que modèle de fonction dans le modèle de classe. Ce code génère une version de la fonction friend pour chaque instanciation du modèle. Cette construction est utile si votre fonction friend dépend des mêmes paramètres de modèle que la classe.  
   
