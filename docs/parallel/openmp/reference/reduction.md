@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: reduction
-dev_langs: C++
-helpviewer_keywords: reduction OpenMP clause
+ms.topic: reference
+f1_keywords:
+- reduction
+dev_langs:
+- C++
+helpviewer_keywords:
+- reduction OpenMP clause
 ms.assetid: a2b051af-5a1b-4c00-9cc7-692bb43653fb
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 67e8b7740c4e346b3e6a0751376c4cecb3437e82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8f43ae9afac7bdbabe12b7532e2bbc7005fe59a0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="reduction"></a>reduction
 Spécifie qu’une ou plusieurs variables qui sont privés pour chaque thread font l’objet d’une opération de réduction à la fin de la région parallèle.  
@@ -41,7 +46,7 @@ reduction(operation:var)
  Variables de plus d’un sur laquelle effectuer la réduction scalaire. Si plusieurs variables est spécifié, séparez les noms de variables par des virgules.  
   
 ## <a name="remarks"></a>Notes  
- `reduction`s’applique aux directives suivantes :  
+ `reduction` s’applique aux directives suivantes :  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   

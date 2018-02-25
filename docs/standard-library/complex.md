@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <complex>
 - std::<complex>
-dev_langs: C++
-helpviewer_keywords: complex header
+dev_langs:
+- C++
+helpviewer_keywords:
+- complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 178318ba212665e9157d1c49289d3167056b0e83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e23707a342e666e49a15c47e0dc82c4e882176cd
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 Définit la classe de modèle de conteneur **complexes** et ses modèles de prise en charge.  
@@ -48,7 +52,7 @@ Définit la classe de modèle de conteneur **complexes** et ses modèles de pris
   
 -   L’inverse additif d’un nombre complexe (*un*, *b*) est (-*un*, -*b*) et l’inverse multiplicatif pour tous les nombres complexes à l’exception (0, 0) est  
   
-     (*un*/ (*un*<sup>2</sup> + *b*<sup>2</sup>), -*b*/ (*un*<sup>2</sup> + *b*<sup>2</sup>))  
+     (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))  
   
  En représentant un nombre complexe *z* = (*un*, *b*) sous la forme *z* = *un*  +  *bi*, où *i*<sup>2</sup> = -1, les règles pour l’algèbre de l’ensemble de nombres réels peut être appliquée à l’ensemble de nombres complexes et à leurs composants. Exemple :  
   
@@ -130,7 +134,7 @@ Définit la classe de modèle de conteneur **complexes** et ses modèles de pris
   
 |||  
 |-|-|  
-|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|Retourne :`complex<long double>{0.0L, static_cast<long double>(d)}`|  
+|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|Retourne : `complex<long double>{0.0L, static_cast<long double>(d)}`|  
 |`constexpr complex<double> operator""i(long double d)`<br /><br /> `constexpr complex<double> operator""i(unsigned long long d)`|Retourne : `complex<double>{0.0, static_cast<double>(d)}`.|  
 |`constexpr complex<float> operator""if(long double d)`<br /><br /> `constexpr complex<float> operator""if(unsigned long long d)`|Retourne : `complex<float>{0.0f, static_cast<float>(d)}`.|  
   

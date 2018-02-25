@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_ENTRY_MAP
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- COLUMN_ENTRY_MAP
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets [C++], accessors
 - COLUMN_ENTRY macro
@@ -21,23 +24,23 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8db24d5162aba3ba5f0f1e01b3b1da9c8d6ab99f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faead3ec85fc799abd26613979f7611c9159cc9b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="user-records"></a>Enregistrements utilisateur
 Pour utiliser un accesseur statique (autrement dit, un accesseur dérivé **CAccessor)**, le consommateur doit disposer d’un enregistrement d’utilisateur. L’enregistrement de l’utilisateur est une classe C++ qui contienne les éléments de données à l’entrée de handle ou de sortie. L’Assistant Consommateur OLE DB ATL génère un enregistrement d’utilisateur pour le consommateur. Vous pouvez ajouter des méthodes à l’enregistrement d’utilisateur pour les tâches facultatives telles que la gestion des commandes.  
   
- Le code suivant montre un exemple d’enregistrement qui gère les commandes. Dans l’enregistrement d’utilisateur, `BEGIN_COLUMN_MAP` représente un ensemble de lignes de données passée au consommateur d’un fournisseur. `BEGIN_PARAM_MAP`représente un ensemble de paramètres de commande. Cet exemple utilise un [CCommand](../../data/oledb/ccommand-class.md) classe pour gérer les paramètres de commande. Les membres de données dans les entrées de mappage représentent des offsets dans un bloc contigu de mémoire pour chaque instance de la classe. Le `COLUMN_ENTRY` macros correspondent à la `PROVIDER_COLUMN_ENTRY` macros côté fournisseur.  
+ Le code suivant montre un exemple d’enregistrement qui gère les commandes. Dans l’enregistrement d’utilisateur, `BEGIN_COLUMN_MAP` représente un ensemble de lignes de données passée au consommateur d’un fournisseur. `BEGIN_PARAM_MAP` représente un ensemble de paramètres de commande. Cet exemple utilise un [CCommand](../../data/oledb/ccommand-class.md) classe pour gérer les paramètres de commande. Les membres de données dans les entrées de mappage représentent des offsets dans un bloc contigu de mémoire pour chaque instance de la classe. Le `COLUMN_ENTRY` macros correspondent à la `PROVIDER_COLUMN_ENTRY` macros côté fournisseur.  
   
  Pour plus d’informations sur la **COLUMN_MAP** et **PARAM_MAP** macros, consultez [Macros pour les modèles du consommateur OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   

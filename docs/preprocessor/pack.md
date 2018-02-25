@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - pack_CPP
 - vc-pragma.pack
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f4a6dc351d0184d43a1cf79f1cec9e9bae33aecf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 15625977ab5dd0c20238f52e84f4ecea443d01ed
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="pack"></a>pack
 Spécifie l'alignement de compression pour des membres de structure, d'union et de classe.  
@@ -44,7 +47,7 @@ Spécifie l'alignement de compression pour des membres de structure, d'union et 
  **afficher** (facultatif)  
  Affiche la valeur d'octet actuelle pour l'alignement de compression. La valeur est affichée par un message d'avertissement.  
   
- **push** (facultatif)  
+ **Push** (facultatif)  
  La valeur actuelle de l'alignement de compression fait l'objet d'un push sur la pile interne du compilateur et `n` est affecté comme valeur actuelle de l'alignement de compression. Si `n` n'est pas spécifié, la valeur actuelle de l'alignement de compression fait l'objet d'un push.  
   
  **POP** (facultatif)  
@@ -56,7 +59,7 @@ Spécifie l'alignement de compression pour des membres de structure, d'union et 
  `n`(facultatif)  
  Spécifie la valeur, en octets, à utiliser pour la compression. Si l’option du compilateur [/Zp](../build/reference/zp-struct-member-alignment.md) n’est pas définie pour le module, la valeur par défaut `n` est 8. Les valeurs valides sont 1, 2, 4, 8 et 16. L'alignement d'un membre sera sur une limite qui est soit un multiple de `n`, soit un multiple de la taille du membre (selon celui qui est le plus petit).  
   
- `#pragma pack(pop, identifier, n)`n’est pas défini.  
+ `#pragma pack(pop, identifier, n)` n’est pas défini.  
   
  Pour plus d'informations sur la façon de modifier l'alignement, consultez les rubriques suivantes :  
   

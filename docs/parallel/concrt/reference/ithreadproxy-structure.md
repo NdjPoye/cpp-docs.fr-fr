@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IThreadProxy
 - CONCRTRM/concurrency::IThreadProxy
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchOut
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchTo
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::YieldToSystem
-dev_langs: C++
-helpviewer_keywords: IThreadProxy structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bc0808d7b6eae3db64695d2d3e0b40d092361a6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e96f02677e3a79d1a6e15b9b22b777ca794b516d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy, structure
 Abstraction d'un thread d'exécution. Selon la clé de stratégie `SchedulerType` du planificateur que vous créez, le gestionnaire des ressources vous accorde un proxy de thread assorti d'un thread Win32 standard ou d'un thread UMS (User-Mode Scheduling). Les threads UMS sont pris en charge sur les systèmes d'exploitation 64 bits avec Windows 7 et ses versions ultérieures.  
@@ -59,7 +63,7 @@ struct IThreadProxy;
   
  **Espace de noms :** concurrency  
   
-##  <a name="getid"></a>IThreadProxy::GetId, méthode  
+##  <a name="getid"></a>  IThreadProxy::GetId Method  
  Retourne un identificateur unique pour le proxy de thread.  
   
 ```
@@ -69,7 +73,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Un identificateur entier unique.  
   
-##  <a name="switchout"></a>IThreadProxy::SwitchOut, méthode  
+##  <a name="switchout"></a>  IThreadProxy::SwitchOut Method  
  Dissocie le contexte de la racine sous-jacente du processeur virtuel.  
   
 ```
@@ -89,11 +93,11 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
   
  Une racine de processeur virtuel réinitialisée n'est aucunement différente d'une racine de processeur virtuel toute neuve qui a été accordée à votre planificateur par le gestionnaire de ressources. Vous pouvez l'utiliser pour exécution en l'activant avec un contexte d'exécution en utilisant `IVirtualProcessorRoot::Activate`.  
   
- `SwitchOut`doit être appelée sur le `IThreadProxy` interface qui représente le thread en cours d’exécution ou les résultats ne sont pas définis.  
+ `SwitchOut` doit être appelée sur le `IThreadProxy` interface qui représente le thread en cours d’exécution ou les résultats ne sont pas définis.  
   
  Dans les bibliothèques et les en-têtes fournis avec Visual Studio 2010, cette méthode ne prenait pas de paramètre et ne réinitialisait pas la racine du processeur virtuel. Pour conserver l'ancien comportement, la valeur de paramètre par défaut de `Blocking` est fournie.  
   
-##  <a name="switchto"></a>IThreadProxy::SwitchTo, méthode  
+##  <a name="switchto"></a>  IThreadProxy::SwitchTo Method  
  Effectue un basculement de contexte coopératif à partir du contexte en cours d’exécution à un autre.  
   
 ```
@@ -118,9 +122,9 @@ virtual void SwitchTo(
   
  Utilisez la valeur `Nesting` lorsque vous souhaitez détacher temporairement ce proxy de thread de la racine de processeur virtuel qu’il est en cours d’exécution sur, et le planificateur il distribue le travail. Appel de `SwitchTo` avec le paramètre `switchState` la valeur `Nesting` entraîne le contexte d’exécution `pContext` pour démarrer l’exécution et en cours proxy de thread poursuite de l’exécution sans la nécessité d’une racine de processeur virtuel. Le proxy de thread est considéré comme ayant quitté le planificateur jusqu'à ce qu’il appelle le [IThreadProxy::SwitchOut](#switchout) méthode à un moment ultérieur dans le temps. Le `IThreadProxy::SwitchOut` méthode pourrait bloquer le proxy de thread jusqu'à ce qu’une racine de processeur virtuel est disponible pour le replanifier.  
   
- `SwitchTo`doit être appelée sur le `IThreadProxy` interface qui représente le thread en cours d’exécution ou les résultats ne sont pas définis. La fonction lève `invalid_argument` si le paramètre `pContext` a la valeur `NULL`.  
+ `SwitchTo` doit être appelée sur le `IThreadProxy` interface qui représente le thread en cours d’exécution ou les résultats ne sont pas définis. La fonction lève `invalid_argument` si le paramètre `pContext` a la valeur `NULL`.  
   
-##  <a name="yieldtosystem"></a>IThreadProxy::YieldToSystem, méthode  
+##  <a name="yieldtosystem"></a>  IThreadProxy::YieldToSystem Method  
  Oblige le thread appelant à céder l'exécution à un autre thread prêt à s'exécuter sur le processeur actuel. Le système d’exploitation sélectionne le thread suivant à exécuter.  
   
 ```
@@ -130,7 +134,7 @@ virtual void YieldToSystem() = 0;
 ### <a name="remarks"></a>Notes  
  Lorsqu’elle est appelée par un proxy de thread soutenu par un thread Windows standard, `YieldToSystem` se comporte exactement comme la fonction Windows `SwitchToThread`. Toutefois, lorsqu’elle est appelée à partir de l’utilisateur-mode Scheduling threads UMS, le `SwitchToThread` fonction délègue la tâche de choisir le prochain thread pour exécuter le Planificateur de mode utilisateur, pas le système d’exploitation. Pour obtenir l’effet souhaité du basculement vers un autre thread prêt dans le système, utilisez `YieldToSystem`.  
   
- `YieldToSystem`doit être appelée sur le `IThreadProxy` interface qui représente le thread en cours d’exécution ou les résultats ne sont pas définis.  
+ `YieldToSystem` doit être appelée sur le `IThreadProxy` interface qui représente le thread en cours d’exécution ou les résultats ne sont pas définis.  
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   

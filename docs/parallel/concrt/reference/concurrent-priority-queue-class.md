@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue
@@ -18,19 +19,22 @@ f1_keywords:
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::size
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::swap
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::try_pop
-dev_langs: C++
-helpviewer_keywords: concurrent_priority_queue class
+dev_langs:
+- C++
+helpviewer_keywords:
+- concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1796351dc594712ef69ec5562f85501b30997104
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 16a9114278cd9559a0a21191faeb87ee34b5a5df
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue, classe
 La classe `concurrent_priority_queue` est un conteneur qui permet à plusieurs threads d'appeler simultanément des méthodes Push et Pop sur des éléments. Les éléments sont dépilés dans l’ordre de priorité dans lequel la priorité est déterminée par un functor fourni comme argument de modèle.  
@@ -102,7 +106,7 @@ template <typename T,
   
  **Espace de noms :** concurrency  
   
-##  <a name="clear"></a>Effacer 
+##  <a name="clear"></a> Effacer 
 
  Efface tous les éléments dans l’ordre de priorité simultanée. Cette méthode n’est pas d’accès concurrentiel sécurisé.  
   
@@ -111,9 +115,9 @@ void clear();
 ```  
   
 ### <a name="remarks"></a>Notes  
- `clear`n’est pas d’accès concurrentiel sécurisé. Vous devez vous assurer qu’aucun autre thread n’est appel de méthodes sur la file d’attente de priorité simultanées lorsque vous appelez cette méthode. `clear`ne libère pas la mémoire.  
+ `clear` n’est pas d’accès concurrentiel sécurisé. Vous devez vous assurer qu’aucun autre thread n’est appel de méthodes sur la file d’attente de priorité simultanées lorsque vous appelez cette méthode. `clear` ne libère pas la mémoire.  
   
-##  <a name="ctor"></a>concurrent_priority_queue 
+##  <a name="ctor"></a> concurrent_priority_queue 
 
  Construit une file d’attente de priorité simultanées.  
   
@@ -177,7 +181,7 @@ concurrent_priority_queue(
   
  Les sixième et septième constructeurs spécifient un déplacement de la file d’attente de priorité `_Src`.  
   
-##  <a name="empty"></a>vide 
+##  <a name="empty"></a> vide 
 
  Vérifie si la file d’attente de priorité simultanées est vide au moment où cette méthode est appelée. Cette méthode est concurrentiel.  
   
@@ -186,9 +190,9 @@ bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si la file d’attente de priorité était vide au moment où la fonction a été appelée, `false` dans le cas contraire.  
+ `true` Si la file d’attente de priorité était vide au moment où la fonction a été appelée, `false` dans le cas contraire.  
   
-##  <a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a> get_allocator 
 
  Retourne une copie de l’allocateur utilisé pour construire la file d’attente de priorité simultanées. Cette méthode est concurrentiel.  
   
@@ -199,7 +203,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Valeur de retour  
  Une copie de l’allocateur utilisé pour construire le `concurrent_priority_queue` objet.  
   
-##  <a name="operator_eq"></a>opérateur = 
+##  <a name="operator_eq"></a> operator= 
 
  Assigne le contenu d’un autre `concurrent_priority_queue` objet à celui-ci. Cette méthode n’est pas d’accès concurrentiel sécurisé.  
   
@@ -216,7 +220,7 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à ce `concurrent_priority_queue` objet.  
   
-##  <a name="push"></a>push 
+##  <a name="push"></a> Push 
 
  Ajoute un élément à la file d’attente de priorité simultanées. Cette méthode est concurrentiel.  
   
@@ -230,7 +234,7 @@ void push(value_type&& _Elem);
  `_Elem`  
  L’élément à ajouter à la file d’attente de priorité simultanées.  
   
-##  <a name="size"></a>taille 
+##  <a name="size"></a> Taille 
 
  Retourne le nombre d’éléments dans la file d’attente de priorité simultanées. Cette méthode est concurrentiel.  
   
@@ -244,7 +248,7 @@ size_type size() const;
 ### <a name="remarks"></a>Notes  
  La taille retournée est garantie pour inclure tous les éléments ajoutés par les appels à la fonction `push`. Toutefois, il ne peut pas refléter les résultats d’opérations simultanées en attente.  
   
-##  <a name="swap"></a>swap 
+##  <a name="swap"></a> Swap 
 
  Échange le contenu de deux files d’attente simultanées. Cette méthode n’est pas d’accès concurrentiel sécurisé.  
   
@@ -256,7 +260,7 @@ void swap(concurrent_priority_queue& _Queue);
  `_Queue`  
  Le `concurrent_priority_queue` d’échange de contenu dont l’objet.  
   
-##  <a name="try_pop"></a>try_pop 
+##  <a name="try_pop"></a> try_pop 
 
  Supprime et retourne l’élément de priorité la plus élevée à partir de la file d’attente si la file d’attente est vide. Cette méthode est concurrentiel.  
   
@@ -269,7 +273,7 @@ bool try_pop(reference _Elem);
  Une référence à une variable qui contiendra l’élément de priorité la plus élevée, si la file d’attente est vide.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si une valeur a été dépilée, `false` dans le cas contraire.  
+ `true` Si une valeur a été dépilée, `false` dans le cas contraire.  
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   

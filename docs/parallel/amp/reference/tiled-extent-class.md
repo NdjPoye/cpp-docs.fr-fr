@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - tiled_extent
 - AMP/tiled_extent
@@ -18,18 +19,20 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim1
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8d2aa225c579eb5d9a1412218a287252c5f076dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8370dbd381fa7005ea619ddb63b21bd227f68153
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tiledextent-class"></a>tiled_extent, classe
 A `tiled_extent` objet est un `extent` objet d’un à trois dimensions qui divise l’espace d’étendue en une, deux ou les vignettes en trois dimensions.  
@@ -80,8 +83,8 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 |Nom|Description|  
 |----------|-----------------|  
 |[get_tile_extent](#get_tile_extent)|Retourne un `extent` objet qui capture les valeurs de la `tiled_extent` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.|  
-|[remplissage](#pad)|Retourne un nouveau `tiled_extent` objet avec les extensions modifiés des divisible par les dimensions de la mosaïque.|  
-|[tronquer](#truncate)|Retourne un nouveau `tiled_extent` objet avec les extensions ajustée vers le bas pour être divisible uniformément par les dimensions de la mosaïque.|  
+|[pad](#pad)|Retourne un nouveau `tiled_extent` objet avec les extensions modifiés des divisible par les dimensions de la mosaïque.|  
+|[truncate](#truncate)|Retourne un nouveau `tiled_extent` objet avec les extensions ajustée vers le bas pour être divisible uniformément par les dimensions de la mosaïque.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
@@ -94,9 +97,9 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 |Name|Description|  
 |----------|-----------------|  
-|[tile_dim0 (constante)](#tile_dim0)|Stocke la longueur de la dimension la plus importante.|  
-|[tile_dim1 (constante)](#tile_dim1)|Stocke la longueur de la dimension importante suivant au plus.|  
-|[tile_dim2 (constante)](#tile_dim2)|Stocke la longueur de la dimension de poids faible.|  
+|[tile_dim0 Constant](#tile_dim0)|Stocke la longueur de la dimension la plus importante.|  
+|[tile_dim1 Constant](#tile_dim1)|Stocke la longueur de la dimension importante suivant au plus.|  
+|[tile_dim2 Constant](#tile_dim2)|Stocke la longueur de la dimension de poids faible.|  
 
   
 ### <a name="public-data-members"></a>Membres de données publics  
@@ -115,7 +118,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
  **Espace de noms :** Concurrency  
 
-## <a name="ctor"></a> tiled_extent, constructeur  
+## <a name="ctor">tiled_extent, constructeur</a>  
 Initialise une nouvelle instance de la classe `tiled_extent`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -137,7 +140,7 @@ tiled_extent(
 
   
 
-## <a name="get_tile_extent"></a> get_tile_extent   
+## <a name="get_tile_extent"> </a>  get_tile_extent   
 Retourne un `extent` objet qui capture les valeurs de la `tiled_extent` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -150,7 +153,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
  Un `extent` objet qui capture les dimensions de ce `tiled_extent` instance.  
   
 
-## <a name="pad"></a> remplissage   
+## <a name="pad"> </a>  pad   
 Retourne un nouveau `tiled_extent` objet avec les extensions modifiés des divisible par les dimensions de la mosaïque.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -161,7 +164,7 @@ tiled_extent pad() const;
   
 ### <a name="return-value"></a>Valeur de retour  
  La nouvelle `tiled_extent` objet par valeur. 
-## <a name="truncate"></a> tronquer   
+## <a name="truncate"> </a>  Tronquer   
 Retourne un nouveau `tiled_extent` objet avec les extensions ajustée vers le bas pour être divisible uniformément par les dimensions de la mosaïque.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -173,7 +176,7 @@ tiled_extent truncate() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un nouveau `tiled_extent` objet avec les extensions ajustée vers le bas pour être divisible uniformément par les dimensions de la mosaïque.  
 
-## <a name="operator_eq"></a> opérateur =   
+## <a name="operator_eq"> </a>  operator=   
 Copie le contenu de l’objet `tiled_index` objet dans celui-ci.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -190,7 +193,7 @@ tiled_extent&  operator= (
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à ce `tiled_index` instance.  
 
-## <a name="tile_dim0"></a> tile_dim0   
+## <a name="tile_dim0"> </a>  tile_dim0   
 Stocke la longueur de la dimension la plus importante.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -199,7 +202,7 @@ Stocke la longueur de la dimension la plus importante.
 static const int tile_dim0 = _Dim0;  
 ```  
   
-## <a name="tile_dim1"></a> tile_dim1   
+## <a name="tile_dim1"> </a>  tile_dim1   
 Stocke la longueur de la dimension importante suivant au plus.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -207,7 +210,7 @@ Stocke la longueur de la dimension importante suivant au plus.
 ```  
 static const int tile_dim1 = _Dim1;  
 ```  
-## <a name="tile_dim2"></a> tile_dim2   
+## <a name="tile_dim2"> </a>  tile_dim2   
 Stocke la longueur de la dimension de poids faible.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -215,7 +218,7 @@ Stocke la longueur de la dimension de poids faible.
 ```  
 static const int tile_dim2 = _Dim2;  
 ```  
-## <a name="tile_extent"></a> tile_extent   
+## <a name="tile_extent"> </a>  tile_extent   
   Obtient un `extent` objet qui capture les valeurs de la `tiled_extent` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.  
   
 ### <a name="syntax"></a>Syntaxe  

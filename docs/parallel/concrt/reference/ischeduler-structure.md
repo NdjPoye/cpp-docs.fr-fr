@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IScheduler
 - CONCRTRM/concurrency::IScheduler
@@ -17,19 +18,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IScheduler::IScheduler::NotifyResourcesExternallyIdle
 - CONCRTRM/concurrency::IScheduler::IScheduler::RemoveVirtualProcessors
 - CONCRTRM/concurrency::IScheduler::IScheduler::Statistics
-dev_langs: C++
-helpviewer_keywords: IScheduler structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c639bd760b837923f3011e9209d923fef31f8aee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0a9a90a1d02090971ccb689204492b949f72323a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ischeduler-structure"></a>IScheduler, structure
 Interface avec une abstraction d'un planificateur de tâches. Le gestionnaire des ressources du runtime d'accès concurrentiel utilise cette interface pour communiquer avec les planificateurs de tâches.  
@@ -65,7 +69,7 @@ struct IScheduler;
   
  **Espace de noms :** concurrency  
   
-##  <a name="addvirtualprocessors"></a>IScheduler::AddVirtualProcessors, méthode  
+##  <a name="addvirtualprocessors"></a>  IScheduler::AddVirtualProcessors Method  
  Fournit un planificateur avec un ensemble de racines de processeur virtuel pour son utilisation. Chaque `IVirtualProcessorRoot` interface représente le droit d’exécuter un thread unique qui peut effectuer un travail pour le compte du planificateur.  
   
 ```
@@ -84,7 +88,7 @@ virtual void AddVirtualProcessors(
 ### <a name="remarks"></a>Notes  
  Le Gestionnaire de ressources appelle la `AddVirtualProcessor` méthode pour accorder un ensemble initial de racines de processeur virtuel à un planificateur. Il peut également appeler la méthode pour ajouter des racines de processeur virtuel au planificateur lorsqu’il redistribue les ressources entre les planificateurs.  
   
-##  <a name="getid"></a>IScheduler::GetId, méthode  
+##  <a name="getid"></a>  IScheduler::GetId, méthode  
  Retourne un identificateur unique pour le planificateur.  
   
 ```
@@ -99,7 +103,7 @@ virtual unsigned int GetId() const = 0;
   
  Un identificateur obtenu à partir d’une autre source peut entraîner un comportement non défini.  
   
-##  <a name="getpolicy"></a>IScheduler::GetPolicy, méthode  
+##  <a name="getpolicy"></a>  IScheduler::GetPolicy, méthode  
  Retourne une copie de la stratégie du planificateur. Pour plus d’informations sur les stratégies de planificateur, consultez [SchedulerPolicy](schedulerpolicy-class.md).  
   
 ```
@@ -109,7 +113,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Une copie de la stratégie du planificateur.  
   
-##  <a name="notifyresourcesexternallybusy"></a>IScheduler::NotifyResourcesExternallyBusy, méthode  
+##  <a name="notifyresourcesexternallybusy"></a>  IScheduler::NotifyResourcesExternallyBusy, méthode  
  Notifie ce planificateur que les threads matériels représentés par l’ensemble de racines de processeur virtuel dans le tableau `ppVirtualProcessorRoots` est maintenant utilisé par d’autres planificateurs.  
   
 ```
@@ -134,7 +138,7 @@ virtual void NotifyResourcesExternallyBusy(
   
  Un planificateur qualifié pour les notifications Obtient un jeu de notifications initiales lorsqu’il est créé, informant si les ressources qu’il vient d’assigner sont en externe occupé ou inactif.  
   
-##  <a name="notifyresourcesexternallyidle"></a>IScheduler::NotifyResourcesExternallyIdle, méthode  
+##  <a name="notifyresourcesexternallyidle"></a>  IScheduler::NotifyResourcesExternallyIdle, méthode  
  Notifie ce planificateur que les threads matériels représentés par l’ensemble de racines de processeur virtuel dans le tableau `ppVirtualProcessorRoots` ne sont pas utilisés par d’autres planificateurs.  
   
 ```
@@ -159,7 +163,7 @@ virtual void NotifyResourcesExternallyIdle(
   
  Un planificateur qualifié pour les notifications Obtient un jeu de notifications initiales lorsqu’il est créé, informant si les ressources qu’il vient d’assigner sont en externe occupé ou inactif.  
   
-##  <a name="removevirtualprocessors"></a>IScheduler::RemoveVirtualProcessors, méthode  
+##  <a name="removevirtualprocessors"></a>  IScheduler::RemoveVirtualProcessors Method  
  Lance la suppression des racines de processeur virtuel qui ont été précédemment alloué à ce planificateur.  
   
 ```
@@ -180,7 +184,7 @@ virtual void RemoveVirtualProcessors(
   
  Le paramètre `ppVirtualProcessorRoots` pointe vers un tableau d’interfaces. Dans le jeu de racines de processeur virtuel à supprimer, les racines n’ont jamais été activées peuvent être retournées immédiatement à l’aide du `Remove` (méthode). Les racines qui ont été activés et sont en cours d’exécution travailler, ou ont été désactivées et sont en attente d’un travail arrive, doivent être retournées de façon asynchrone. Le planificateur doit faire en sorte de supprimer la racine de processeur virtuel aussi rapidement que possible. Retarder la suppression de racines de processeur virtuel risque de surabonnement involontaire dans le planificateur.  
   
-##  <a name="statistics"></a>IScheduler::STATISTICS, méthode  
+##  <a name="statistics"></a>  IScheduler::STATISTICS, méthode  
  Fournit des informations relatives aux taux d’arrivée et l’achèvement de tâche et la modification de la longueur de file d’attente pour un planificateur.  
   
 ```

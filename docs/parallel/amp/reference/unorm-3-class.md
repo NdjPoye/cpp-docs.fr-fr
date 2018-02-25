@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::set_zy
 - amp_short_vectors/Concurrency::graphics::unorm_3::zxy
@@ -77,18 +78,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::set_y
 - amp_short_vectors/Concurrency::graphics::unorm_3::get_yz
 - amp_short_vectors/Concurrency::graphics::unorm_3::rbg
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4051b7f872803a8ef799178b7ad158e588da08bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6aeded2e1d503ae26091d53a0cd12e75648e4254
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorm3-class"></a>unorm_3, classe
 Représente un vecteur court de trois nombres normales non signés.  
@@ -111,13 +114,13 @@ class unorm_3;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[unorm_3 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
+|[unorm_3 Constructor](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
   
-### <a name="public-methods"></a>Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|unorm_3::get_X||  
+|unorm_3::get_x||  
 |unorm_3::get_xy||  
 |unorm_3::get_xyz||  
 |unorm_3::get_xz||  
@@ -138,7 +141,7 @@ class unorm_3;
 |Unorm_3::ref_x||  
 |Unorm_3::ref_y||  
 |Unorm_3::ref_z||  
-|unorm_3::set_X||  
+|unorm_3::set_x||  
 |unorm_3::set_xy||  
 |unorm_3::set_xyz||  
 |unorm_3::set_xz||  
@@ -159,16 +162,16 @@ class unorm_3;
 |Nom|Description|  
 |----------|-----------------|  
 |unorm_3::operator--||  
-|unorm_3::operator * =||  
-|/ = unorm_3::operator||  
-|unorm_3::operator ++||  
-|unorm_3::operator +=||  
-|unorm_3::operator =||  
-|unorm_3::operator =||  
+|unorm_3::operator*=||  
+|unorm_3::operator/=||  
+|unorm_3::operator++||  
+|unorm_3::operator+=||  
+|unorm_3::operator=||  
+|unorm_3::operator-=||  
   
 ### <a name="public-constants"></a>Constantes publiques  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[taille (constante)](#unorm_3__size)||  
   
@@ -177,45 +180,45 @@ class unorm_3;
 |Nom|Description|  
 |----------|-----------------|  
 |unorm_3::b||  
-|unorm_3::BG||  
-|unorm_3::BGR||  
+|unorm_3::bg||  
+|unorm_3::bgr||  
 |unorm_3::br||  
 |unorm_3::brg||  
 |unorm_3::g||  
-|unorm_3::GB||  
-|unorm_3::GBR||  
-|unorm_3::GR||  
+|unorm_3::gb||  
+|unorm_3::gbr||  
+|unorm_3::gr||  
 |unorm_3::grb||  
 |unorm_3::r||  
-|unorm_3::RB||  
+|unorm_3::rb||  
 |unorm_3::rbg||  
-|unorm_3::RG||  
-|unorm_3::RGB||  
+|unorm_3::rg||  
+|unorm_3::rgb||  
 |unorm_3::x||  
-|unorm_3::XY||  
-|unorm_3::XYZ||  
-|unorm_3::XZ||  
+|unorm_3::xy||  
+|unorm_3::xyz||  
+|unorm_3::xz||  
 |unorm_3::xzy||  
 |unorm_3::y||  
-|unorm_3::YX||  
+|unorm_3::yx||  
 |unorm_3::yxz||  
-|unorm_3::YZ||  
+|unorm_3::yz||  
 |unorm_3::yzx||  
 |unorm_3::z||  
-|unorm_3::ZX||  
+|unorm_3::zx||  
 |unorm_3::zxy||  
-|unorm_3::ZY||  
-|unorm_3::ZYX||  
+|unorm_3::zy||  
+|unorm_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `unorm_3`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp_short_vectors.h  
   
  **Namespace :** Concurrency::graphics  
   
-##  <a name="ctor"></a>unorm_3 
+##  <a name="ctor"></a> unorm_3 
 
  Par défaut constructeur initialise tous les éléments par 0.  
   
@@ -294,7 +297,7 @@ explicit inline unorm_3(
  `_Other`  
  Objet utilisé pour initialiser.  
   
-##  <a name="unorm_3__size"></a>taille 
+##  <a name="unorm_3__size"></a> Taille 
 
 ```  
 static const int size = 3;  

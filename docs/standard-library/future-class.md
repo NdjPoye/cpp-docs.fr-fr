@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::future
 - future/std::future::future
@@ -16,9 +17,10 @@ f1_keywords:
 - future/std::future::wait
 - future/std::future::wait_for
 - future/std::future::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 495e82c3-5341-4e37-87dd-b40107fbdfb6
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -31,12 +33,13 @@ helpviewer_keywords:
 - std::future [C++], wait
 - std::future [C++], wait_for
 - std::future [C++], wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: 1de870da42504494e672cff4272fd230d1346114
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f54b265e98d8375b20ca5b7cf484290083d1d59c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="future-class"></a>future, classe
 Décrit un *objet de retour asynchrone*.  
@@ -64,9 +67,9 @@ class future;
 |Nom|Description|  
 |----------|-----------------|  
 |[get](#get)|Récupère le résultat stocké dans l’état asynchrone associé.|  
-|[Partager](#share)|Convertit l’objet en `shared_future`.|  
-|[valide](#valid)|Spécifie si l’objet n’est pas vide.|  
-|[attente](#wait)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt.|  
+|[share](#share)|Convertit l’objet en `shared_future`.|  
+|[valid](#valid)|Spécifie si l’objet n’est pas vide.|  
+|[wait](#wait)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt.|  
 |[wait_for](#wait_for)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt ou que le délai spécifié soit écoulé.|  
 |[wait_until](#wait_until)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt ou jusqu’à un point spécifié dans le temps.|  
   

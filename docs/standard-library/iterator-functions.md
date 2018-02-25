@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xutility/std::advance
 - xutility/std::back_inserter
@@ -22,7 +22,7 @@ f1_keywords:
 - xutility/std::next
 - xutility/std::prev
 ms.assetid: 4a57c9a3-7e36-411f-8655-e0be2eec88e7
-caps.latest.revision: "16"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::advance [C++]
@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::make_unchecked_array_iterator [C++]
 - std::next [C++]
 - std::prev [C++]
-ms.openlocfilehash: 0474e52f9d5f0f68ec4a404ebe9c60d9e48f64d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 48b07418520402f4765c2f7cd3488dde112e192d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt;, fonctions
 ||||  
@@ -311,7 +311,7 @@ auto cbegin(const Container& cont)   `
 ### <a name="remarks"></a>Notes  
  Cette fonction est compatible avec tous les conteneurs de bibliothèque standard C++ et avec [initializer_list](../standard-library/initializer-list-class.md).  
   
- Vous pouvez utiliser cette fonction membre à la place de la fonction de modèle `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement au mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, il est supposé que `Container` est un conteneur modifiable (autre que `const`) ou un `initializer_list` de tout type prenant en charge `begin()` et `cbegin()`.  
+ Vous pouvez utiliser cette fonction membre à la place de la fonction de modèle `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, il est supposé que `Container` est un conteneur modifiable (autre que `const`) ou un `initializer_list` de tout type prenant en charge `begin()` et `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -535,7 +535,7 @@ inserter(
  `_Where`  
  Itérateur localisant le point d’insertion.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction de modèle retourne [insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)`<Container>(_Cont, _Where)`.  
   
 ### <a name="example"></a>Exemple  
@@ -688,7 +688,7 @@ make_move_iterator(const Iterator& _It);
  `_It`  
  Itérateur stocké dans le nouvel itérateur de déplacement.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction de modèle retourne `move_iterator` `<Iterator>(_It)`.  
   
 ##  <a name="make_unchecked_array_iterator"></a>  make_unchecked_array_iterator  

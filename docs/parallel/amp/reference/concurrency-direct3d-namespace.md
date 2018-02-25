@@ -4,28 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d
 - amprt/Concurrency::direct3d
 - amp_short_vectors/Concurrency::direct3d
 - amp_graphics/Concurrency::direct3d
 - amp_math/Concurrency::direct3d
-dev_langs: C++
-helpviewer_keywords: direct3d namespace
+dev_langs:
+- C++
+helpviewer_keywords:
+- direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 46b4962e30a6990f6de2c67437fc2af3989c2407
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 607a3f25c2dfea5eee833f3608021547d8cd7c44
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d, espace de noms
 Le `direct3d` espace de noms fournit des fonctions qui prennent en charge l’interopérabilité de D3D. Il permet d’utiliser les ressources D3D transparente pour le calcul dans le code AMP ainsi autoriser l’utilisation de ressources créées dans le code D3D, de gestion du matériel sans créer des copies redondantes intermédiaires. Vous pouvez accélérer les sections intensif du calcul de vos applications DirectX à l’aide de C++ AMP et utilisent l’API de D3D dans les données générées à partir des calculs de l’AMP progressivement.  
@@ -55,7 +59,7 @@ namespace direct3d;
 |Nom|Description|  
 |----------|-----------------|  
 |[abs](concurrency-direct3d-namespace-functions-amp.md#abs)|Retourne la valeur absolue de l’argument|  
-|[Clamp](concurrency-direct3d-namespace-functions-amp.md#clamp)|Surchargé. Crochets _X à la plage spécifiée de _Min et de _Max|  
+|[clamp](concurrency-direct3d-namespace-functions-amp.md#clamp)|Surchargé. Crochets _X à la plage spécifiée de _Min et de _Max|  
 |[countbits](concurrency-direct3d-namespace-functions-amp.md#countbits)|Compte le nombre de bits définis dans _X|  
 |[create_accelerator_view](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|Crée un [accelerator_view, classe](accelerator-view-class.md) d’un pointeur vers une interface de périphérique Direct3D|  
 |[d3d_access_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_lock)|Acquiert un verrou sur une accelerator_view afin d’exécuter des opérations D3D sur les ressources partagées avec l’accelerator_view en toute sécurité|  
@@ -64,20 +68,20 @@ namespace direct3d;
 |[firstbithigh](concurrency-direct3d-namespace-functions-amp.md#firstbithigh)|Obtient l’emplacement du premier bit ensemble dans _X, depuis le bit d’ordre le plus élevé et l’utilisation vers le bas|  
 |[firstbitlow](concurrency-direct3d-namespace-functions-amp.md#firstbitlow)|Obtient l’emplacement du premier bit ensemble dans _X, commençant par le bit d’ordre le plus bas et d’utilisation vers le haut|  
 |[get_buffer](concurrency-direct3d-namespace-functions-amp.md#get_buffer)|Obtenir l’interface de mémoire tampon D3D sous-jacent d’un tableau.|  
-|[Imax](concurrency-direct3d-namespace-functions-amp.md#imax)|Compare deux valeurs de retour de la valeur supérieure.|  
-|[Imin](concurrency-direct3d-namespace-functions-amp.md#imin)|Compare deux valeurs de retour de la valeur qui est plus petite.|  
+|[imax](concurrency-direct3d-namespace-functions-amp.md#imax)|Compare deux valeurs de retour de la valeur supérieure.|  
+|[imin](concurrency-direct3d-namespace-functions-amp.md#imin)|Compare deux valeurs de retour de la valeur qui est plus petite.|  
 |[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Retourne un indicateur booléen qui indique si l’option délai d’attente est désactivée pour l’accelerator_view spécifié.|  
-|[MAD](concurrency-direct3d-namespace-functions-amp.md#mad)|Surchargé. Effectue une opération de multiplication/ajouter arithmétique sur trois arguments : _X * _Y + _Z|  
+|[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|Surchargé. Effectue une opération de multiplication/ajouter arithmétique sur trois arguments : _X * _Y + _Z|  
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Créer un tableau à partir d’un pointeur d’interface de mémoire tampon D3D.|  
-|[bruit](concurrency-direct3d-namespace-functions-amp.md#noise)|Génère une valeur aléatoire à l’aide de l’algorithme de bruit Perlin|  
+|[noise](concurrency-direct3d-namespace-functions-amp.md#noise)|Génère une valeur aléatoire à l’aide de l’algorithme de bruit Perlin|  
 |[radians](concurrency-direct3d-namespace-functions-amp.md#radians)|Convertit les _X de degrés en radians|  
 |[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Calcule un réciproque rapide et approximative de l’argument|  
 |[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Inverse l’ordre des octets dans _X|  
-|[saturer](concurrency-direct3d-namespace-functions-amp.md#saturate)|Crochets _X dans la plage de 0 à 1|  
-|[connexion](concurrency-direct3d-namespace-functions-amp.md#sign)|Surchargé. Retourne le signe de l’argument|  
+|[saturate](concurrency-direct3d-namespace-functions-amp.md#saturate)|Crochets _X dans la plage de 0 à 1|  
+|[sign](concurrency-direct3d-namespace-functions-amp.md#sign)|Surchargé. Retourne le signe de l’argument|  
 |[smoothstep](concurrency-direct3d-namespace-functions-amp.md#smoothstep)|Retourne une interpolation Hermite lisse entre 0 et 1, si _X se trouve dans la plage [_Min, _Max].|  
-|[étape](concurrency-direct3d-namespace-functions-amp.md#step)|Compare deux valeurs de retour de 0 ou 1 selon la valeur est supérieure|  
-|[UMAX](concurrency-direct3d-namespace-functions-amp.md#umax)|Compare deux valeurs non signées, retournant la valeur supérieure.|  
+|[step](concurrency-direct3d-namespace-functions-amp.md#step)|Compare deux valeurs de retour de 0 ou 1 selon la valeur est supérieure|  
+|[umax](concurrency-direct3d-namespace-functions-amp.md#umax)|Compare deux valeurs non signées, retournant la valeur supérieure.|  
 |[umin](concurrency-direct3d-namespace-functions-amp.md#umin)|Compare deux valeurs non signées, retournant la valeur qui est plus petite.|  
 
 ## <a name="requirements"></a>Configuration requise  

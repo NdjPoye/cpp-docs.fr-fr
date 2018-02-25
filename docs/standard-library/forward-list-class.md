@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - forward_list/std::forward_list
 - forward_list/std::forward_list::allocator_type
@@ -46,7 +47,8 @@ f1_keywords:
 - forward_list/std::forward_list::splice_after
 - forward_list/std::forward_list::swap
 - forward_list/std::forward_list::unique
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::forward_list
 - std::forward_list::allocator_type
@@ -87,16 +89,17 @@ helpviewer_keywords:
 - std::forward_list::swap
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 36354e8b6e6e0c456334caed402a700129b32dae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c2861f4b51b5d1deefd1d4959343d16c2979b67d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="forwardlist-class"></a>forward_list, classe
 Décrit un objet qui contrôle une séquence de longueur variable constituée d'éléments. La séquence est stockée en tant que liste de nœuds à liaison unique, chacun contenant un membre de type `Type`.  
@@ -606,7 +609,7 @@ void merge(forward_list& right, Predicate comp);
 |`comp`|Objet de fonction de comparaison utilisé pour trier les éléments.|  
   
 ### <a name="remarks"></a>Notes  
- `forward_list::merge`Supprime les éléments de la `forward_list` `right`et les insère dans cette `forward_list`. Les deux séquences doivent être triées par le même prédicat, décrit ci-dessous. La séquence combinée est également ordonnée par cet objet de fonction de comparaison.  
+ `forward_list::merge` Supprime les éléments de la `forward_list` `right`et les insère dans cette `forward_list`. Les deux séquences doivent être triées par le même prédicat, décrit ci-dessous. La séquence combinée est également ordonnée par cet objet de fonction de comparaison.  
   
  Pour les itérateurs `Pi` et `Pj` désignant des éléments aux positions `i` et `j`, la première fonction membre impose l’ordre `!(*Pj < *Pi)` chaque fois que `i < j`. (Les éléments sont triés dans l’ordre `ascending`.) La deuxième fonction membre impose l’ordre `! comp(*Pj, *Pi)` chaque fois que `i < j`.  
   

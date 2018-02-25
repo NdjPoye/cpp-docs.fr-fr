@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - bitset/std::bitset
 - bitset/std::bitset::element_type
@@ -23,7 +24,8 @@ f1_keywords:
 - bitset/std::bitset::to_ullong
 - bitset/std::bitset::to_ulong
 - bitset/std::bitset::reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::bitset [C++]
 - std::bitset [C++], element_type
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f1bdd59695e7c1be32d65bcb9f49e01fa8903eaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: abc205a0de58430ea70d843dd73c4bf7f0caaea0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="bitset-class"></a>bitset, classe
 Décrit un type d'objet stockant une séquence composée d'un nombre fixe de bits qui offrent un moyen compact de conserver des indicateurs d'un ensemble d'éléments ou de conditions. La classe bitset prend en charge les opérations sur les objets de type bitset qui contiennent une collection de bits et qui fournissent un accès à délai constant à chaque bit.  
@@ -466,7 +469,7 @@ bitset\<N>& flip(size_t _Pos);
  Copie du bitset modifié pour lequel la fonction membre a été appelée.  
   
 ### <a name="remarks"></a>Notes  
- La deuxième fonction membre lève une exception [out_of_range](../standard-library/out-of-range-class.md) si la position spécifiée comme paramètre est supérieure à la taille *N* du **bitset\<***N***>** dont le bit a été inversé.  
+ La deuxième fonction membre lève un [out_of_range](../standard-library/out-of-range-class.md) exception si la position spécifiée en tant que paramètre est supérieure à la taille *N* de la **bitset\<***N***  >**  dont le bit a été inversé.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1173,7 +1176,7 @@ public:
  Référence au bit du bitset spécifié par la position de l’argument pour les première, deuxième et cinquième fonctions membres de référence de classe, et **true** ou **false**, pour refléter la valeur du bit modifié dans le bitset pour les troisième et quatrième fonctions membres de référence de classe.  
   
 ### <a name="remarks"></a>Notes  
- La classe `reference` existe uniquement dans une classe d’assistance pour le bitset `operator[]`. La classe membre décrit un objet qui peut accéder à un bit individuel d’un bitset. L’objet *b* est de type `bool`, les objets *x* et *y* sont de type **bitset\<***N***>**, et *i* et *j* sont des positions valides dans ce type d’objet. La notation *x [i]* référence le bit à la position *i* dans le bitset *x*. Les fonctions membres de la classe `reference` fournissent, dans l’ordre, les opérations suivantes :  
+ La classe `reference` existe uniquement dans une classe d’assistance pour le bitset `operator[]`. La classe membre décrit un objet qui peut accéder à un bit individuel d’un bitset. Laisser *b* être un objet de type `bool`, *x* et *y* les objets de type **bitset\<***N*** >** , et *i* et *j* positions valides au sein d’un tel objet. La notation *x [i]* référence le bit à la position *i* dans le bitset *x*. Les fonctions membres de la classe `reference` fournissent, dans l’ordre, les opérations suivantes :  
   
 |Opération|Définition|  
 |---------------|----------------|  

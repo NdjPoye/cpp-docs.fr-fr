@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 533142115a4811c0f03f585b995b83383a33d831
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2cd8fb90b7418b45f6bc011e8d4d0db6e04c08df
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-object-model"></a>Modèle objet OLE DB
 Le modèle objet OLE DB comprend les objets ou les composants suivants. Les quatre premiers objets ou composants répertoriés (les sources de données, les sessions, les commandes et ensembles de lignes) permettent de se connecter à une source de données et l’afficher. Le reste, à commencer par les accesseurs, se rapportent à l’utilisation avec les données lorsqu’elle est affichée.  
@@ -43,7 +45,7 @@ Le modèle objet OLE DB comprend les objets ou les composants suivants. Les quat
   
  Une commande est simplement un conteneur pour une commande de texte, qui est une chaîne (par exemple, une instruction SQL) passée à partir d’un consommateur à un objet de source de données pour l’exécution par le magasin de données du fournisseur sous-jacent. En règle générale, la commande de texte est une SQL **sélectionnez** instruction (dans ce cas, étant donné que SQL **sélectionnez** spécifie un ensemble de lignes, la commande crée automatiquement un ensemble de lignes).  
   
-## <a name="rowsets"></a>Ensembles de lignes  
+## <a name="rowsets"></a>Rowsets  
  Ensembles de lignes exposent les données sous forme de tableau. Un index est un cas spécial d’un ensemble de lignes. Vous pouvez créer des ensembles de lignes de la session ou de la commande.  
   
 ### <a name="schema-rowsets"></a>Jeux de lignes du schéma  
@@ -55,7 +57,7 @@ Le modèle objet OLE DB comprend les objets ou les composants suivants. Les quat
 ## <a name="accessors"></a>Accesseurs  
  Uniquement la OLE DB utilise le concept d’accesseur. Un accesseur décrit la façon dont les données sont stockées dans un consommateur. Il contient un jeu de liaisons (appelé un mappage de colonnes) entre les champs de l’ensemble de lignes (colonnes) et les membres de données que vous déclarez dans le consommateur.  
   
-##  <a name="vcconoledbcomponents_transactions"></a>Transactions  
+##  <a name="vcconoledbcomponents_transactions"></a> Transactions  
  Les objets de transaction sont utilisés lors de la validation ou l’abandon de transactions imbriquées à autre que le niveau le plus bas. Une transaction est une unité de travail indivisible définie par le test ACID. Les propriétés ACID :  
   
 -   Atomicité : ne peut pas être divisé en plus petites unités de travail.  

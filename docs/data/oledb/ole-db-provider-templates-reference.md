@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vc.templates.ole
-dev_langs: C++
-helpviewer_keywords: OLE DB provider templates
+ms.topic: reference
+f1_keywords:
+- vc.templates.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a68c3f0b161a21749ad49b1b89a1356b757d4b76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68c741f09772c881b42dc4e4cd17de31ed107f8c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-provider-templates-reference"></a>Référence des modèles du fournisseur OLE DB
 Les classes et interfaces pour les modèles du fournisseur OLE DB peuvent être regroupés dans les catégories suivantes. La documentation de référence comprend également des informations sur la [macros pour les modèles du fournisseur OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md).  
@@ -42,7 +46,7 @@ Les classes et interfaces pour les modèles du fournisseur OLE DB peuvent être 
  Fournit une implémentation d’ensemble de lignes OLE DB standard sans nécessiter l’héritage multiple de nombreuses interfaces d’implémentation. La seule méthode pour laquelle vous devez fournir l’implémentation est **Execute**.  
   
  [CSimpleRow](../../data/oledb/csimplerow-class.md)  
- Fournit une implémentation par défaut pour le handle de ligne, qui est utilisé dans la `IRowsetImpl` classe. Un handle de ligne est logiquement une balise unique pour une ligne de résultats. `IRowsetImpl`Crée un nouveau `CSimpleRow` pour chaque ligne demandée dans `IRowsetImpl::GetNextRows`.  
+ Fournit une implémentation par défaut pour le handle de ligne, qui est utilisé dans la `IRowsetImpl` classe. Un handle de ligne est logiquement une balise unique pour une ligne de résultats. `IRowsetImpl` Crée un nouveau `CSimpleRow` pour chaque ligne demandée dans `IRowsetImpl::GetNextRows`.  
   
  [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)  
  OLE DB requiert que les fournisseurs implémenter un **HACCESSOR**, qui est une balise à un tableau de **DBBINDING** structures. Fournit des **HACCESSOR**s qui sont des adresses de la **BindType** structures. Obligatoire sur les ensembles de lignes et de commandes.  
@@ -63,7 +67,7 @@ Les classes et interfaces pour les modèles du fournisseur OLE DB peuvent être 
  Implémente le OLE DB [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) interface, ce qui permet la mise à jour des valeurs de colonnes dans les lignes existantes, la suppression de lignes et l’insertion de nouvelles lignes.  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
- Cette classe hérite de [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) et remplacements [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl`exécute les mêmes fonctions que `IObjectWithSite` mais permet également de propriétés OLE DB **DBPROPCANSCROLLBACKWARDS** et **DBPROPCANFETCHBACKWARDS**.  
+ Cette classe hérite de [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) et remplacements [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` exécute les mêmes fonctions que `IObjectWithSite` mais permet également de propriétés OLE DB **DBPROPCANSCROLLBACKWARDS** et **DBPROPCANFETCHBACKWARDS**.  
   
  [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)  
  Implémente le **IRowsetIdentity** interface, ce qui vous permet de comparer si deux lignes de données sont identiques ou non.  
@@ -103,7 +107,7 @@ Les classes et interfaces pour les modèles du fournisseur OLE DB peuvent être 
  Crée et supprime la connexion avec le consommateur. Interface obligatoire sur une interface facultative sur les énumérateurs et les objets source de données.  
   
  [IDBPropertiesImpl](../../data/oledb/idbpropertiesimpl-class.md)  
- `IDBProperties`est une interface obligatoire pour les objets de source de données et une interface facultative pour les énumérateurs. Toutefois, si un énumérateur expose **IDBInitialize**, elle doit exposer `IDBProperties` (propriétés de la source de données).  
+ `IDBProperties` est une interface obligatoire pour les objets de source de données et une interface facultative pour les énumérateurs. Toutefois, si un énumérateur expose **IDBInitialize**, elle doit exposer `IDBProperties` (propriétés de la source de données).  
   
  [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)  
  Obtient un pointeur d’interface à l’objet de source de données. Interface obligatoire sur la session.  

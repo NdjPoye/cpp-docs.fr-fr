@@ -1,17 +1,19 @@
 ---
-title: __lzcnt16, __lzcnt, __lzcnt64 | Documents Microsoft
+title: __lzcnt16, __lzcnt, __lzcnt64 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - __lzcnt64
 - __lzcnt16
 - __lzcnt
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - __lzcnt intrinsic
 - lzcnt instruction
@@ -21,16 +23,17 @@ helpviewer_keywords:
 - lzcnt64 intrinsic
 - __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c5fcd699cd137e6adbb2cf08f5852970d009f745
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 85af6534ccf578bccabcd0f7b517234b2b560b6f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16, __lzcnt, __lzcnt64
 **Section spécifique à Microsoft**  
@@ -58,7 +61,7 @@ unsigned __int64 __lzcnt64(
 ## <a name="return-value"></a>Valeur de retour  
  Le nombre de zéros d’en-tête dans le `value` paramètre. Si `value` est égal à zéro, la valeur de retour est la taille de l’opérande d’entrée (16, 32 ou 64). Si le bit de poids de `value` est 1, la valeur de retour est égale à zéro.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |Intrinsèque|Architecture|  
 |---------------|------------------|  

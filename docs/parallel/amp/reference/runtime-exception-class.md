@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - runtime_exception
 - AMPRT/runtime_exception
 - AMPRT/Concurrency::runtime_exception
 - AMPRT/Concurrency::runtime_exception::get_error_code
-dev_langs: C++
-helpviewer_keywords: runtime_exception class
+dev_langs:
+- C++
+helpviewer_keywords:
+- runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 705949f118e85b6dfef2beeccb55fecd63a64882
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 678f0a93577a6e30afbc5e0c6d83aca6b6a7bedc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="runtimeexception-class"></a>runtime_exception (classe)
 Le type de base pour les exceptions dans la bibliothèque C++ Accelerated Massive Parallelism (AMP).  
@@ -41,8 +45,8 @@ class runtime_exception : public std::exception;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[runtime_exception, constructeur](#ctor)|Initialise une nouvelle instance de la classe `runtime_exception`.|  
-|[~ runtime_exception, destructeur](#dtor)|Détruit le `runtime_exception` objet.|  
+|[runtime_exception Constructor](#ctor)|Initialise une nouvelle instance de la classe `runtime_exception`.|  
+|[~runtime_exception Destructor](#dtor)|Détruit le `runtime_exception` objet.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -67,7 +71,7 @@ class runtime_exception : public std::exception;
   
  **Espace de noms :** Concurrency  
 
-## <a name="runtime_exception__ctor"></a>runtime_exception, constructeur  
+## <a name="runtime_exception__ctor"></a>  runtime_exception Constructor  
 Initialise une nouvelle instance de la classe.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -97,7 +101,7 @@ runtime_exception(
 ### <a name="return-value"></a>Valeur de retour  
  Objet `runtime_exception`.  
 
-## <a name="dtor"></a>~ runtime_exception, destructeur  
+## <a name="dtor"></a>  ~runtime_exception Destructor  
 Détruit l’objet.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -106,7 +110,7 @@ Détruit l’objet.
 virtual ~runtime_exception() throw();  
 ```  
   
-## <a name="runtime_exception__get_error_code"></a>get_error_code   
+## <a name="runtime_exception__get_error_code"></a>  get_error_code   
 Retourne le code d’erreur qui a provoqué l’exception.  
   
 ### <a name="syntax"></a>Syntaxe  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - AMP_MATH/Concurrency::acos
 - AMP_MATH/Concurrency::acosf
@@ -138,18 +139,20 @@ f1_keywords:
 - AMP_MATH/Concurrency::tgammaf
 - AMP_MATH/Concurrency::trunc
 - AMP_MATH/Concurrency::truncf
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: edcce2cd9f21766065cbc43f7059c638a302abd2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7016b2b9ff925164510644b743e0459a3011b5dc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math, espace de noms
 Les fonctions dans le `precise_math` espace de noms sont C99 conforme. À la fois simple précision et double précision versions de chaque fonction sont incluses. Par exemple, `acos` est la version double précision et `acosf` est la version simple précision. Ces fonctions, y compris les fonctions simple précision, nécessitent la prise en charge de double précision étendue sur l’accélérateur. Vous pouvez utiliser la [accelerator::supports_double_precision](accelerator-class.md#supports_double_precision) pour déterminer si vous pouvez exécuter ces fonctions sur un accélérateur spécifique. 
@@ -232,7 +235,7 @@ namespace precise_math;
 |[hypotf](concurrency-precise-math-namespace-functions.md#hypotf)|Calcule la racine carrée de la somme des carrés des _X et _Y|  
 |[ilogb](concurrency-precise-math-namespace-functions.md#ilogb)|Surchargé. Extraire l’exposant de _X comme une valeur int signée|  
 |[ilogbf](concurrency-precise-math-namespace-functions.md#ilogbf)|Extraire l’exposant de _X comme une valeur int signée|  
-|[isFinite](concurrency-precise-math-namespace-functions.md#isfinite)|Surchargé. Détermine si l’argument a une valeur finie|  
+|[isfinite](concurrency-precise-math-namespace-functions.md#isfinite)|Surchargé. Détermine si l’argument a une valeur finie|  
 |[isinf](concurrency-precise-math-namespace-functions.md#isinf)|Surchargé. Détermine si l’argument est un infini.|  
 |[isnan](concurrency-precise-math-namespace-functions.md#isnan)|Surchargé. Détermine si l’argument est une valeur NaN|  
 |[isnormal](concurrency-precise-math-namespace-functions.md#isnormal)|Surchargé. Détermine si l’argument est un vecteur normal|  

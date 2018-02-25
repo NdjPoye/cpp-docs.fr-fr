@@ -4,16 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocnum/std::num_put
 - locale/std::num_put::char_type
 - locale/std::num_put::iter_type
 - locale/std::num_put::do_put
 - locale/std::num_put::put
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::num_put [C++]
 - std::num_put [C++], char_type
@@ -21,16 +23,17 @@ helpviewer_keywords:
 - std::num_put [C++], do_put
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f93a5536b73c5d62a95ff076e40304204071d83f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f25ebb3cc763947ca0ee88d95d0b7a1d284d157f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="numput-class"></a>num_put, classe
 Classe de modèle qui décrit un objet pouvant servir de facette de paramètres régionaux pour contrôler les conversions de valeurs numériques en séquences de type `CharType`.  
@@ -59,7 +62,7 @@ class num_put : public locale::facet;
 |-|-|  
 |[num_put](#num_put)|Constructeur des objets de type `num_put`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -73,7 +76,7 @@ class num_put : public locale::facet;
 |[do_put](#do_put)|Fonction virtuelle qui est appelée pour convertir un nombre en une séquence de `CharType` qui représente le nombre au format de paramètres régionaux donnés.|  
 |[put](#put)|Convertit un nombre en une séquence de `CharType` qui représente le nombre au format de paramètres régionaux donnés.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<locale>  
   
  **Espace de noms :** std  
@@ -320,7 +323,7 @@ explicit num_put(size_t _Refs = 0);
   
 -   1 : la durée de vie de l’objet doit être gérée manuellement.  
   
--   \>1 : ces valeurs ne sont pas définis.  
+-   \> 1 : ces valeurs ne sont pas définis.  
   
  Aucun exemple direct n’est possible, car le destructeur est protégé.  
   

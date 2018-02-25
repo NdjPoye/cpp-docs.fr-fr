@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - call
 - AGENTS/concurrency::call
@@ -16,19 +17,22 @@ f1_keywords:
 - AGENTS/concurrency::call::propagate_message
 - AGENTS/concurrency::call::send_message
 - AGENTS/concurrency::call::supports_anonymous_source
-dev_langs: C++
-helpviewer_keywords: call class
+dev_langs:
+- C++
+helpviewer_keywords:
+- call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2d575aaa01a3668925c6a81eda7d8d99cc591180
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9a63873b7666e4f75ddd39fbf684ebb80c1f85e8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="call-class"></a>call, classe
 Un bloc de messagerie `call` est un `target_block` ordonné à plusieurs sources qui appelle une fonction spécifiée lors de la réception d'un message.  
@@ -53,7 +57,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[appel](#ctor)|Surchargé. Construit un `call` bloc de messagerie.|  
+|[call](#ctor)|Surchargé. Construit un `call` bloc de messagerie.|  
 |[~ call, destructeur](#dtor)|Détruit le `call` bloc de messagerie.|  
   
 ### <a name="protected-methods"></a>Méthodes protégées  
@@ -81,7 +85,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
  **Espace de noms :** concurrency  
   
-##  <a name="ctor"></a>appel 
+##  <a name="ctor"></a> Appel 
 
  Construit un `call` bloc de messagerie.  
   
@@ -132,7 +136,7 @@ call(
   
  Le type `filter_method` est un functor avec la signature `bool (T const &)` qui est appelé par ce `call` bloc de messagerie pour déterminer si elle doit accepter un message proposé.  
   
-##  <a name="dtor"></a>~ appeler 
+##  <a name="dtor"></a> ~ appeler 
 
  Détruit le `call` bloc de messagerie.  
   
@@ -140,7 +144,7 @@ call(
 ~call();
 ```  
   
-##  <a name="process_input_messages"></a>process_input_messages 
+##  <a name="process_input_messages"></a> process_input_messages 
 
  Exécute la fonction d’appel sur les messages d’entrée.  
   
@@ -151,7 +155,7 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 ### <a name="parameters"></a>Paramètres  
  `_PMessage`  
   
-##  <a name="process_message"></a>process_message 
+##  <a name="process_message"></a> process_message 
 
  Traite un message qui a été accepté par ce `call` bloc de messagerie.  
   
@@ -163,7 +167,7 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
  `_PMessage`  
  Pointeur vers le message qui doit être gérée.  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  Passe un message à partir de façon asynchrone un `ISource` à ce bloc `call` bloc de messagerie. Il est appelé par le `propagate` (méthode), lorsqu’elle est appelée par un bloc source.  
   
@@ -183,7 +187,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Valeur de retour  
  A [message_status](concurrency-namespace-enums.md) indication de ce que la cible décidé de faire avec le message.  
   
-##  <a name="send_message"></a>send_message 
+##  <a name="send_message"></a> send_message 
 
  Passe de façon synchrone un message à partir d’un `ISource` à ce bloc `call` bloc de messagerie. Il est appelé par le `send` (méthode), lorsqu’elle est appelée par un bloc source.  
   
@@ -203,7 +207,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>Valeur de retour  
  A [message_status](concurrency-namespace-enums.md) indication de ce que la cible décidé de faire avec le message.  
   
-##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 
  Remplace le `supports_anonymous_source` méthode pour indiquer que ce bloc peut accepter des messages offerts par une source qui n’est pas liée.  
   
@@ -212,7 +216,7 @@ virtual bool supports_anonymous_source();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Étant donné que le bloc de ne pas reporter des messages transmis.  
+ `true` Étant donné que le bloc de ne pas reporter des messages transmis.  
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   

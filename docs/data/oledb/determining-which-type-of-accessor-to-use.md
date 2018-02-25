@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets [C++], data types
 - accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cb2e18c8b0c5ab110b9818e46e7fc68c08656274
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28173b18e1f2ab6e7c916679d5fa5a27c08caaeb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Détermination du type d’accesseur à utiliser
 Vous pouvez déterminer les types de données sur un ensemble de lignes au moment de la compilation ou au moment de l’exécution.  
@@ -39,7 +41,7 @@ Vous pouvez déterminer les types de données sur un ensemble de lignes au momen
 |`CAccessor`|Créer un enregistrement d’utilisateur avec `COLUMN_ENTRY` macros. Les macros de lient un membre de données de cet enregistrement dans l’accesseur. Lors de la création de l’ensemble de lignes, colonnes ne peut pas être détachées.|Oui, en utilisant un **PARAM_MAP** entrée de macro. Une fois liée, ne peuvent pas être détachée.|Accesseur le plus rapide en raison de la petite quantité de code.|  
 |`CDynamicAccessor`|Automatique.|Non.|Cette option est utile si vous ne connaissez pas le type de données dans un ensemble de lignes.|  
 |`CDynamicParameterAccessor`|Automatique, mais peut être [substitution](../../data/oledb/overriding-a-dynamic-accessor.md).|Oui, si le fournisseur prend en charge `ICommandWithParameters`. Les paramètres liés automatiquement.|Plus lent que `CDynamicAccessor` mais utile pour l’appel des procédures stockées génériques.|  
-|**CDynamicStringAccessor [A, W]**|Automatique.|Non.|Récupère les données accédées à partir du magasin de données en tant que données de type chaîne.|  
+|**CDynamicStringAccessor[A,W]**|Automatique.|Non.|Récupère les données accédées à partir du magasin de données en tant que données de type chaîne.|  
 |`CManualAccessor`|À l’aide de manuel `AddBindEntry`.|Manuellement à l’aide de `AddParameterEntry`.|Très rapide. paramètres et les colonnes ne liées qu’une seule fois. Vous déterminez le type de données à utiliser. (Consultez [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) sample pour obtenir un exemple.) Nécessite plus de code que `CDynamicAccessor` ou `CAccessor`. Il est plus à l’appel direct d’OLE DB.|  
 |`CXMLAccessor`|Automatique.|Non.|Récupère les données accédées à partir du magasin de données en tant que données de type chaîne et met en forme les données XML.|  
   

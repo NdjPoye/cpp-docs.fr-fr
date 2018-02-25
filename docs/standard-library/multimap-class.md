@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - map/std::multimap
 - map/std::multimap::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - map/std::multimap::swap
 - map/std::multimap::upper_bound
 - map/std::multimap::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::multimap [C++]
 - std::multimap [C++], allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 18d648f632a28214779c9424971f65e535a5e210
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 554ea4bac3e374013a511b75f27158ad897195f7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="multimap-class"></a>multimap, classe
 La classe multimap de la bibliothèque standard C++ est utilisée pour le stockage et la récupération des données d’une collection dans laquelle chaque élément est une paire constituée d’une valeur de données et d’une clé de tri. La valeur de la clé n'a pas besoin d'être unique. En outre, elle est utilisée pour le tri automatique des données. La valeur d'un élément d'une classe multimap peut être modifiée directement, mais pas la valeur de clé qui lui est associée. Les valeurs de clés associées aux anciens éléments doivent être supprimées, et de nouvelles valeurs de clés doivent être associées aux nouveaux éléments insérés.  
@@ -391,7 +394,7 @@ typedef implementation-defined const_iterator;
 ### <a name="remarks"></a>Notes  
  Un type `const_iterator` ne peut pas être utilisé pour changer la valeur d'un élément.  
   
- Le `const_iterator` défini par le multimap pointe vers des objets de [value_type](#value_type), qui sont de type `pair`*\<***const Key**, **Type***>*. La valeur de la clé est disponible par l’intermédiaire du premier membre de la paire, et la valeur de l’élément mappé est disponible par l’intermédiaire du deuxième membre de la paire.  
+ Le `const_iterator` défini par les points multimap à des objets de [value_type](#value_type), qui sont de type `pair` * \< * **clé const**, **Type *** >*. La valeur de la clé est disponible par l’intermédiaire du premier membre de la paire, et la valeur de l’élément mappé est disponible par l’intermédiaire du deuxième membre de la paire.  
   
  Pour déréférencer un `const_iterator` `cIter` pointe sur un élément dans une classe multimap, utilisez le  **->**  opérateur.  
   
@@ -471,7 +474,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ### <a name="remarks"></a>Notes  
  Un type `const_reverse_iterator` ne peut pas changer la valeur d’un élément. Il sert à itérer le multimap dans l’ordre inverse.  
   
- Le `const_reverse_iterator` défini par le multimap pointe vers des objets de [value_type](#value_type), qui sont de type `pair`*\<***const Key**, **Type***>*. La valeur de la clé est disponible par l’intermédiaire du premier membre de la paire, et la valeur de l’élément mappé est disponible par l’intermédiaire du deuxième membre de la paire.  
+ Le `const_reverse_iterator` défini par les points multimap à des objets de [value_type](#value_type), qui sont de type `pair` * \< * **clé const**, **Type *** >*. La valeur de la clé est disponible par l’intermédiaire du premier membre de la paire, et la valeur de l’élément mappé est disponible par l’intermédiaire du deuxième membre de la paire.  
   
  Pour déréférencer un `const_reverse_iterator` `crIter` pointe sur un élément dans une classe multimap, utilisez le  **->**  opérateur.  
   
@@ -1298,7 +1301,7 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="remarks"></a>Notes  
- L’**iterator** défini par le multimap pointe vers des objets de [value_type](#value_type), qui sont de type `pair`*\<***const Key**, **Type***>*. La valeur de la clé est disponible par l’intermédiaire du premier membre de la paire, et la valeur de l’élément mappé est disponible par l’intermédiaire du deuxième membre de la paire.  
+ Le **itérateur** défini par les points multimap à des objets de [value_type](#value_type), qui sont de type `pair` * \< * **clé const**, **Type *** >*. La valeur de la clé est disponible par l’intermédiaire du premier membre de la paire, et la valeur de l’élément mappé est disponible par l’intermédiaire du deuxième membre de la paire.  
   
  Pour déréférencer un **iterator**`Iter` pointant vers un élément dans un multimap, utilisez l’opérateur **->**.  
   
@@ -2017,7 +2020,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="remarks"></a>Notes  
  Un type `reverse_iterator` sert à itérer le multimap dans l’ordre inverse.  
   
- Le `reverse_iterator` défini par le multimap pointe vers des objets de [value_type](#value_type), qui sont de type `pair`*\<***const Key**, **Type***>*. La valeur de la clé est disponible par l’intermédiaire du premier membre de la paire, et la valeur de l’élément mappé est disponible par l’intermédiaire du deuxième membre de la paire.  
+ Le `reverse_iterator` défini par les points multimap à des objets de [value_type](#value_type), qui sont de type `pair` * \< * **clé const**, **Type *** >*. La valeur de la clé est disponible par l’intermédiaire du premier membre de la paire, et la valeur de l’élément mappé est disponible par l’intermédiaire du deuxième membre de la paire.  
   
  Pour déréférencer un `reverse_iterator` `rIter` pointe sur un élément dans une classe multimap, utilisez l’opérateur ->.  
   

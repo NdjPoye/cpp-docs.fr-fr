@@ -1,29 +1,33 @@
 ---
-title: "&lt;paramètres régionaux&gt; | Documents Microsoft"
+title: '&lt;locale&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <locale>
 - locale/std::<locale>
 - std::<locale>
-dev_langs: C++
-helpviewer_keywords: locale header
+dev_langs:
+- C++
+helpviewer_keywords:
+- locale header
 ms.assetid: ca56f9d2-7128-44da-8df1-f4c78c17fbf2
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b2b617870bdeec43dcdc9bf5d9031c0c4d78d0aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6ac044246cf9dea3d5760d60453182b2ec5711d0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltlocalegt"></a>&lt;locale&gt;
 Définit les classes de modèle et les fonctions que les programmes C++ peuvent utiliser pour encapsuler et manipuler différentes conventions culturelles concernant la représentation et la mise en forme des données numériques, monétaires et de calendrier, y compris la prise en charge de l'internationalisation de la classification des caractères et du classement des chaînes.  
@@ -65,7 +69,7 @@ Définit les classes de modèle et les fonctions que les programmes C++ peuvent 
 |[collate](../standard-library/collate-class.md)|Classe de modèle d'assemblage fournissant une facette qui gère les conventions de tri de chaîne.|  
 |[collate_byname](../standard-library/collate-byname-class.md)|Classe de modèle dérivée qui décrit un objet susceptible de servir de facette d'assemblage de paramètres régionaux donnés, permettant ainsi la récupération d'informations spécifiques à une zone culturelle concernant les conventions de tri de chaîne.|  
 |[ctype](../standard-library/ctype-class.md)|Classe de modèle fournissant une facette utilisée pour la classification des caractères et la conversion entre majuscules et minuscules et entre le jeu de caractères natif et celui utilisé par les paramètres régionaux.|  
-|[CType\<char >](../standard-library/ctype-char-class.md)|Une classe qui est une spécialisation explicite de la classe de modèle **ctype\<CharType**> au type `char`, qui décrit un objet pouvant servir de facette de paramètres régionaux pour caractériser diverses propriétés d’un caractère de type `char`.|  
+|[ctype\<char>](../standard-library/ctype-char-class.md)|Une classe qui est une spécialisation explicite de la classe de modèle **ctype\<CharType**> au type `char`, qui décrit un objet pouvant servir de facette de paramètres régionaux pour caractériser diverses propriétés d’un caractère de type `char`.|  
 |[ctype_base](../standard-library/ctype-base-class.md)|Classe de base de la classe ctype utilisée pour définir des types énumération utilisés pour classifier ou tester les caractères, individuellement ou dans des plages entières.|  
 |[ctype_byname](../standard-library/ctype-byname-class.md)|Classe de modèle dérivée qui décrit un objet pouvant servir de facette ctype de paramètres régionaux donnés, permettant ainsi la classification des caractères et la conversion des caractères entre des jeux de caractères natifs, de casse ou de paramètres régionaux spécifiés.|  
 |[locale](../standard-library/locale-class.md)|Classe qui décrit un objet de paramètres régionaux encapsulant des informations spécifiques à la culture sous la forme d'un ensemble de facettes qui définissent collectivement un environnement localisé spécifique.|  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - unordered_map/std::unordered_map
 - unordered_map/std::unordered_map::allocator_type
@@ -54,7 +55,8 @@ f1_keywords:
 - unordered_map/std::unordered_map::swap
 - unordered_map/std::unordered_map::unordered_map
 - unordered_map/std::unordered_map::hash_function
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::unordered_map
 - std::unordered_map::allocator_type
@@ -145,16 +147,17 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fbb8b5b30f1666735fc4eebca0c1d0b335c1986b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: db73f5d2d064d96696d3d6e320855bb9d939af47
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorderedmap-class"></a>unordered_map, classe
 La classe de modèle décrit un objet qui contrôle une séquence de longueur variable constituée d'éléments de type `std::pair<const Key, Ty>`. La séquence est triée par ordre faible avec une fonction de hachage, qui partitionne la séquence en un ensemble trié de sous-séquences appelées compartiments. Dans chaque compartiment, une fonction de comparaison détermine si des paires d'éléments possèdent un ordre équivalent. Chaque élément stocke deux objets, une clé de tri et une valeur. La séquence est représentée de façon à permettre la recherche, l'insertion et la suppression d'un élément arbitraire à l'aide d'un certain nombre d'opérations qui peut être indépendant du nombre d'éléments de la séquence (temps constant), du moins lorsque les compartiments sont de longueur à peu près équivalente. Dans le pire des cas, lorsque tous les éléments se trouvent dans un compartiment, le nombre d'opérations est proportionnel au nombre d'éléments de la séquence (temps linéaire). De plus, l'insertion d'un élément n'entraîne pas la non validité des itérateurs, et la suppression d'un élément ne rend non valides que les itérateurs qui pointent vers l'élément supprimé.  
@@ -208,7 +211,7 @@ class unordered_map;
 |Fonction membre|Description|  
 |[at](#at)|Recherche un élément avec la clé spécifiée.|  
 |[begin](#begin)|Désigne le début de la séquence contrôlée.|  
-|[compartiment](#bucket)|Obtient le numéro du compartiment pour une valeur de clé.|  
+|[bucket](#bucket)|Obtient le numéro du compartiment pour une valeur de clé.|  
 |[bucket_count](#bucket_count)|Obtient le nombre de compartiments.|  
 |[bucket_size](#bucket_size)|Obtient la taille d'un compartiment.|  
 |[cbegin](#cbegin)|Désigne le début de la séquence contrôlée.|  
@@ -230,7 +233,7 @@ class unordered_map;
 |[max_bucket_count](#max_bucket_count)|Obtient le nombre maximal de compartiments.|  
 |[max_load_factor](#max_load_factor)|Obtient ou définit le nombre maximal d’éléments par compartiment.|  
 |[max_size](#max_size)|Obtient ou définit la taille maximale de la séquence contrôlée.|  
-|[rehash)](#rehash)|Régénère la table de hachage.|  
+|[rehash](#rehash)|Régénère la table de hachage.|  
 |[size](#size)|Compte le nombre d'éléments.|  
 |[swap](#swap)|Échange le contenu de deux conteneurs.|  
 |[unordered_map](#unordered_map)|Construit un objet conteneur.|  

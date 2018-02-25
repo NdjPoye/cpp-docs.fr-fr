@@ -1,32 +1,35 @@
 ---
-title: pointers_to_members | Documents Microsoft
+title: pointers_to_members | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - pointers_to_members_CPP
 - vc-pragma.pointers_to_members
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - class members, pointers to
 - pragmas, pointers_to_members
 - members, pointers to
 - pointers_to_members pragma
 ms.assetid: 8325428c-c90a-4aed-9e82-cb1dda23f4ca
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4e034a268a6ff3c3fc04da4e50a4477324ec1880
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4313aaa38d410b8e6f46594cd9ce11269b523073
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="pointerstomembers"></a>pointers_to_members
 **Spécifique à C++**  
@@ -54,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 |Argument|Commentaires|  
 |--------------|--------------|  
-|**héritage unique**|La représentation la plus générale est la fonction pointeur vers fonction membre héritage simple. Génère une erreur si le modèle d'héritage d'une définition de classe pour laquelle un pointeur vers un membre est déclaré est de type multiple ou virtuel.|  
+|**single_inheritance**|La représentation la plus générale est la fonction pointeur vers fonction membre héritage simple. Génère une erreur si le modèle d'héritage d'une définition de classe pour laquelle un pointeur vers un membre est déclaré est de type multiple ou virtuel.|  
 |**multiple_inheritance**|La représentation la plus générale est la fonction pointeur vers fonction membre héritage multiple. Génère une erreur si le modèle d'héritage d'une définition de classe pour laquelle un pointeur vers un membre est déclaré est de type virtuel.|  
 |**virtual_inheritance**|La représentation la plus générale est la fonction pointeur vers fonction membre héritage virtuel. Ne génère jamais d'erreur. Ceci est l’argument par défaut lorsque **#pragma pointers_to_members (full_generality) système** est utilisé.|  
   

@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - input stream objects
 - input streams, member functions
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3aa6fc5331340c110f2325762bbe46409d53d1b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 96927d7e1a6718f4663ca42248140ac5a7d8fe50
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="input-stream-member-functions"></a>Fonctions membres de flux d'entrée
 Les fonctions membres de flux d’entrée sont utilisées pour l’entrée de disque. Il s’agit des fonctions membres suivantes :  
@@ -52,7 +55,7 @@ if (ifile.fail())
 // The file does not exist ...  
 ```  
   
-##  <a name="vclrfthegetfunctionanchor12"></a>La méthode get
+##  <a name="vclrfthegetfunctionanchor12">La méthode get</a>
  La fonction membre **get** non mise en forme fonctionne comme l’opérateur  **>>** , à deux exceptions près. Tout d’abord, la fonction **get** inclut des espaces blancs, alors que l’extracteur exclut les espaces blancs quand l’indicateur **skipws** est défini (valeur par défaut). Ensuite, la fonction **get** est moins susceptible de provoquer le vidage d’un flux de sortie lié (`cout`, par exemple).  
   
  Une variation de la fonction **get** spécifie une adresse de mémoire tampon et le nombre maximal de caractères à lire. Ceci est utile pour limiter le nombre de caractères envoyés à une variable spécifique, comme le montre cet exemple :  
@@ -86,7 +89,7 @@ int main()
 1234  
 ```  
   
-##  <a name="vclrfthegetlinefunctionanchor13"></a>Le getline
+##  <a name="vclrfthegetlinefunctionanchor13">Le getline</a>
  La fonction membre **getline** est similaire à la fonction **get**. Toutes deux autorisent un troisième argument qui spécifie le caractère de fin pour l’entrée. La valeur par défaut est le caractère de saut de ligne. Ces deux fonctions réservent un caractère pour le caractère de fin obligatoire. Toutefois, **get** laisse le caractère de fin dans le flux, alors que **getline** le supprime.  
   
  L’exemple suivant spécifie un caractère de fin pour le flux d’entrée :  
@@ -112,7 +115,7 @@ int main( )
 test  
 ```  
   
-##  <a name="vclrfthereadfunctionanchor14"></a>La lecture
+##  <a name="vclrfthereadfunctionanchor14">La lecture</a>
  La fonction membre **read** lit les octets d’un fichier à la zone de mémoire spécifiée. L’argument de longueur détermine le nombre d’octets lus. Si vous n’incluez pas cet argument, la lecture s’arrête quand la fin du fichier physique est atteinte ou, dans le cas d’un fichier en mode texte, quand un caractère `EOF` incorporé est lu.  
   
  Cet exemple lit un enregistrement binaire à partir d’un fichier de paie dans une structure :  

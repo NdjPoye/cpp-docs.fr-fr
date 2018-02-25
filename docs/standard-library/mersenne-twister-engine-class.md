@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: random/std::mersenne_twister_engine
-dev_langs: C++
-helpviewer_keywords: mersenne_twister_engine class
+ms.topic: reference
+f1_keywords:
+- random/std::mersenne_twister_engine
+dev_langs:
+- C++
+helpviewer_keywords:
+- mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9db5fd19c480ac7dfa6f647a1e1bf4beec5609d1
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 15294f0372a21c3ce8efe1626c30d1a3d6db23be
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine, classe
 Génère une séquence aléatoire d'entiers de haute qualité selon l'algorithme twister de Mersenne.  
@@ -110,7 +115,7 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
 ## <a name="example"></a>Exemple  
  Pour obtenir un exemple de code, consultez [\<random>](../standard-library/random.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<random>  
   
  **Espace de noms :** std  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - unordered_set/std::unordered_multiset
 - unordered_set/std::unordered_multiset::allocator_type
@@ -53,7 +54,8 @@ f1_keywords:
 - unordered_set/std::unordered_multiset::unordered_multiset
 - unordered_set/std::unordered_multiset::operator=
 - unordered_set/std::unordered_multiset::hash_function
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::unordered_multiset
 - std::unordered_multiset::allocator_type
@@ -141,16 +143,17 @@ helpviewer_keywords:
 - std::unordered_multiset::size
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a958bf441809da24b317b777fd2f79946f3dc727
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ca20b6f1e0c9fe44d234c7622d780e34142f6b6f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset, classe
 La classe de modèle décrit un objet qui contrôle une séquence de longueur variable constituée d'éléments de type `const Key`. La séquence est triée par ordre faible avec une fonction de hachage, qui partitionne la séquence en un ensemble trié de sous-séquences appelées compartiments. Dans chaque compartiment, une fonction de comparaison détermine si des paires d'éléments possèdent un ordre équivalent. Chaque élément sert à la fois de clé de tri et de valeur. La séquence est représentée de façon à permettre la recherche, l'insertion et la suppression d'un élément arbitraire à l'aide d'un certain nombre d'opérations qui peut être indépendant du nombre d'éléments de la séquence (temps constant), du moins lorsque les compartiments sont de longueur à peu près équivalente. Dans le pire des cas, lorsque tous les éléments se trouvent dans un compartiment, le nombre d'opérations est proportionnel au nombre d'éléments de la séquence (temps linéaire). De plus, l'insertion d'un élément n'entraîne pas la non validité des itérateurs, et la suppression d'un élément ne rend non valides que les itérateurs qui pointent vers l'élément supprimé.  
@@ -200,7 +203,7 @@ class unordered_multiset;
 |-|-|  
 |Fonction membre|Description|  
 |[begin](#begin)|Désigne le début de la séquence contrôlée.|  
-|[compartiment](#bucket)|Obtient le numéro du compartiment pour une valeur de clé.|  
+|[bucket](#bucket)|Obtient le numéro du compartiment pour une valeur de clé.|  
 |[bucket_count](#bucket_count)|Obtient le nombre de compartiments.|  
 |[bucket_size](#bucket_size)|Obtient la taille d'un compartiment.|  
 |[cbegin](#cbegin)|Désigne le début de la séquence contrôlée.|  
@@ -222,10 +225,10 @@ class unordered_multiset;
 |[max_bucket_count](#max_bucket_count)|Obtient le nombre maximal de compartiments.|  
 |[max_load_factor](#max_load_factor)|Obtient ou définit le nombre maximal d’éléments par compartiment.|  
 |[max_size](#max_size)|Obtient ou définit la taille maximale de la séquence contrôlée.|  
-|[rehash)](#rehash)|Régénère la table de hachage.|  
+|[rehash](#rehash)|Régénère la table de hachage.|  
 |[size](#size)|Compte le nombre d'éléments.|  
 |[swap](#swap)|Échange le contenu de deux conteneurs.|  
-|[classe unordered_multiset](#unordered_multiset)|Construit un objet conteneur.|  
+|[unordered_multiset](#unordered_multiset)|Construit un objet conteneur.|  
   
 |||  
 |-|-|  

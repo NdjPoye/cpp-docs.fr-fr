@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_set/stdext::hash_set
 - hash_set/stdext::hash_set::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - hash_set/stdext::hash_set::swap
 - hash_set/stdext::hash_set::upper_bound
 - hash_set/stdext::hash_set::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::hash_set
 - stdext::hash_set::allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3dd9f781b39db5e8c9df5e70a4a291db44e61cbc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 964e11310c6ae6a815c0b2ee97825aa35a6ae4b1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hashset-class"></a>hash_set, classe
 > [!NOTE]
@@ -124,10 +127,10 @@ class hash_set
  Type de données de l'élément à stocker dans l'objet hash_set.  
   
  `Traits`  
- Type qui inclut les deux objets de fonction, un de comparaison de classes qui est un prédicat binaire capable de comparer deux valeurs d’éléments comme clés de tri pour déterminer leur ordre relatif, et une fonction de hachage qui est un prédicat unaire qui mappe les valeurs de clé des éléments à des entiers non signés de type **size_t**. Cet argument est facultatif et `hash_compare`*<Key,* **less***\<Key> >* est la valeur par défaut.  
+ Type qui inclut les deux objets de fonction, un de comparaison de classes qui est un prédicat binaire capable de comparer deux valeurs d’éléments comme clés de tri pour déterminer leur ordre relatif, et une fonction de hachage qui est un prédicat unaire qui mappe les valeurs de clé des éléments à des entiers non signés de type **size_t**. Cet argument est facultatif et le `hash_compare` *< clé,* **moins ***\<clé >>* est la valeur par défaut.  
   
  `Allocator`  
- Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la désallocation de mémoire de la classe hash_set. Cet argument est facultatif et sa valeur par défaut est **allocator***\<Key>*.  
+ Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la désallocation de mémoire de la classe hash_set. Cet argument est facultatif et la valeur par défaut est **allocateur ***\<clé >.*  
   
 ## <a name="remarks"></a>Notes  
  L'objet hash_set est :  

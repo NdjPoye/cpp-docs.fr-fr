@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xiosbase/std::defaultfloat
 - xiosbase/std::boolalpha
@@ -31,7 +31,7 @@ f1_keywords:
 - ios/std::unitbuf
 - ios/std::uppercase
 ms.assetid: 1382d53f-e531-4b41-adf6-6a1543512e51
-caps.latest.revision: "10"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::defaultfloat [C++]
@@ -57,11 +57,11 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: 621f659ec0a3896013d8b81526f9ec83561d76a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 60bb8bac5ca2f961d6d2977dc84d0844dfd54b8c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt;, fonctions
 ||||  
@@ -92,7 +92,7 @@ ios_base& boolalpha(ios_base& str);
 ### <a name="remarks"></a>Notes  
  Par défaut, les variables de type `bool` sont affichées comme 1 ou 0.  
   
- `boolalpha`appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`), puis retourne `str`.  
+ `boolalpha` appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`), puis retourne `str`.  
   
  [noboolalpha](../standard-library/ios-functions.md#noboolalpha) inverse l’effet de `boolalpha`.  
   
@@ -308,7 +308,7 @@ ios_base& left(ios_base& str);
 ### <a name="return-value"></a>Valeur de retour  
  Référence à l’objet à partir duquel _ *Str* est dérivé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::left`, **ios_base::adjustfield**), puis retourne `str`.  
   
 ### <a name="example"></a>Exemple  
@@ -350,7 +350,7 @@ ios_base& noboolalpha(ios_base& str);
 ### <a name="remarks"></a>Notes  
  Par défaut, `noboolalpha` est activé.  
   
- `noboolalpha`appelle `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`), puis retourne `str`.  
+ `noboolalpha` appelle `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`), puis retourne `str`.  
   
  [boolalpha](../standard-library/ios-functions.md#boolalpha) inverse l’effet de `noboolalpha`.  
   
@@ -515,7 +515,7 @@ ios_base& nouppercase(ios_base& str);
 ### <a name="return-value"></a>Valeur de retour  
  Référence à l’objet à partir duquel _ *Str* est dérivé.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le manipulateur appelle `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::uppercase`), puis retourne `str`.  
   
 ### <a name="example"></a>Exemple  
@@ -535,7 +535,7 @@ ios_base& oct(ios_base& str);
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à l’objet à partir de laquelle *str* est dérivée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par défaut, les variables de type entier sont affichées en notation de base 10. [dec](../standard-library/ios-functions.md#dec) et [hex](../standard-library/ios-functions.md#hex) modifient également le mode d’affichage des variables de type entier.  
   
  Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::oct`, `ios_base::basefield`), puis retourne `str`.  
@@ -557,7 +557,7 @@ ios_base& right(ios_base& str);
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à l’objet à partir de laquelle *str* est dérivée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  [left](../standard-library/ios-functions.md#left) modifie également la justification du texte.  
   
  Le manipulateur appelle `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::right`, `ios_base::adjustfield`), puis retourne `str`.  

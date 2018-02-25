@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xloctime/std::time_get
 - locale/std::time_get::char_type
@@ -25,7 +26,8 @@ f1_keywords:
 - locale/std::time_get::get_time
 - locale/std::time_get::get_weekday
 - locale/std::time_get::get_year
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::time_get [C++]
 - std::time_get [C++], char_type
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - std::time_get [C++], get_weekday
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2bc6d855b1ff1776cdbb1777a4250317accac68a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b1c682110c032150c8406d93c83b89efbc5bc802
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="timeget-class"></a>time_get, classe
 Cette classe de modèle décrit un objet pouvant servir de facette de paramètres régionaux pour contrôler les conversions de séquences de type `CharType` en valeurs temporelles.  
@@ -83,7 +86,7 @@ class time_get : public time_base;
 |-|-|  
 |[time_get](#time_get)|Constructeur des objets de type `time_get`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -109,7 +112,7 @@ class time_get : public time_base;
 |[get_weekday](#get_weekday)|Analyse une chaîne représentant le nom du jour de la semaine.|  
 |[get_year](#get_year)|Analyse une chaîne représentant le nom de l'année.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<locale>  
   
  **Espace de noms :** std  
@@ -991,7 +994,7 @@ explicit time_get(size_t refs = 0);
   
 -   1 : la durée de vie de l’objet doit être gérée manuellement.  
   
--   \>1 : ces valeurs ne sont pas définis.  
+-   \> 1 : ces valeurs ne sont pas définis.  
   
  Aucun exemple direct n’est possible, car le destructeur est protégé.  
   

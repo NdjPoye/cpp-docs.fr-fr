@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scheduler_ptr
 - PPLINTERFACE/concurrency::scheduler_ptr
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::scheduler_ptr
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bdb47301f890cc96d21bf797444c44b48da3761b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 257dcae6df4deb0a52f7dee4db98adba2b2b4f29
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr, Structure
 Représente un pointeur vers un planificateur. Cette classe a pour fonction de permettre la spécification d'une durée de vie partagée à l'aide de shared_ptr ou d'une référence simple à l'aide d'un pointeur brut.  
@@ -47,7 +50,7 @@ struct scheduler_ptr;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[scheduler_ptr::Get](#get)|Retourne le pointeur brut au planificateur|  
+|[scheduler_ptr::get](#get)|Retourne le pointeur brut au planificateur|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
@@ -64,7 +67,7 @@ struct scheduler_ptr;
   
  **Espace de noms :** concurrency  
   
-##  <a name="get"></a>scheduler_ptr::Get, méthode  
+##  <a name="get"></a>  scheduler_ptr::get Method  
  Retourne le pointeur brut au planificateur  
   
 ```
@@ -73,7 +76,7 @@ scheduler_interface* get() const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-##  <a name="operator_bool"></a>scheduler_ptr::operator bool   
+##  <a name="operator_bool"></a>  scheduler_ptr::operator bool   
  Teste si le pointeur du planificateur a une valeur non null  
   
 ''' bool() opérateur const ;
@@ -92,9 +95,9 @@ opérateur de scheduler_interface -> () const ;
  Creates a scheduler pointer from shared_ptr to scheduler  
   
 ```
-scheduler_ptr explicite (std::shared_ptr < scheduler_interface > du Planificateur) ;
+explicit scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);
 
-scheduler_ptr explicite (_In_opt_ scheduler_interface * pScheduler) ;
+explicit scheduler_ptr(_In_opt_ scheduler_interface* pScheduler);
 ```  
   
 ### Parameters  

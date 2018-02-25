@@ -4,16 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocnum/std::num_get
 - locale/std::num_get::char_type
 - locale/std::num_get::iter_type
 - locale/std::num_get::do_get
 - locale/std::num_get::get
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::num_get [C++]
 - std::num_get [C++], char_type
@@ -21,16 +23,17 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7437bfe26f95b57584f294a7280540014e4a1b85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 205bd19d1c051f00a90b45d42997a5d8a1d5eb0f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="numget-class"></a>num_get, classe
 Classe de modèle qui décrit un objet pouvant servir de facette de paramètres régionaux pour contrôler les conversions de séquences de type `CharType` en valeurs numériques.  
@@ -575,7 +578,7 @@ explicit num_get(size_t _Refs = 0);
   
 -   1 : la durée de vie de l’objet doit être gérée manuellement.  
   
--   \>1 : ces valeurs ne sont pas définis.  
+-   \> 1 : ces valeurs ne sont pas définis.  
   
  Aucun exemple direct n’est possible, car le destructeur est protégé.  
   

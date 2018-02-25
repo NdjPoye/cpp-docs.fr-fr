@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - unordered_set/std::unordered_set
 - unordered_set/std::unordered_set::allocator_type
@@ -53,7 +54,8 @@ f1_keywords:
 - unordered_set/std::unordered_set::unordered_set
 - unordered_set/std::unordered_set::operator=
 - unordered_set/std::unordered_set::hash_function
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::unordered_set
 - std::unordered_set::allocator_type
@@ -141,16 +143,17 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2ed62216483b23c75133759f0df39697e74e463a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 70b9f8541601cc2d91cf2e43fbb66110302488be
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorderedset-class"></a>unordered_set, classe
 La classe de modèle décrit un objet qui contrôle une séquence de longueur variable constituée d'éléments de type `const Key`. La séquence est triée par ordre faible avec une fonction de hachage, qui partitionne la séquence en un ensemble trié de sous-séquences appelées compartiments. Dans chaque compartiment, une fonction de comparaison détermine si des paires d'éléments possèdent un ordre équivalent. Chaque élément sert à la fois de clé de tri et de valeur. La séquence est représentée de façon à permettre la recherche, l'insertion et la suppression d'un élément arbitraire à l'aide d'un certain nombre d'opérations qui peut être indépendant du nombre d'éléments de la séquence (temps constant), du moins lorsque les compartiments sont de longueur à peu près équivalente. Dans le pire des cas, lorsque tous les éléments se trouvent dans un compartiment, le nombre d'opérations est proportionnel au nombre d'éléments de la séquence (temps linéaire). De plus, l'insertion d'un élément n'entraîne pas la non validité des itérateurs, et la suppression d'un élément ne rend non valides que les itérateurs qui pointent vers l'élément supprimé.  
@@ -201,7 +204,7 @@ class unordered_set;
 |-|-|  
 |Fonction membre|Description|  
 |[begin](#begin)|Désigne le début de la séquence contrôlée.|  
-|[compartiment](#bucket)|Obtient le numéro du compartiment pour une valeur de clé.|  
+|[bucket](#bucket)|Obtient le numéro du compartiment pour une valeur de clé.|  
 |[bucket_count](#bucket_count)|Obtient le nombre de compartiments.|  
 |[bucket_size](#bucket_size)|Obtient la taille d'un compartiment.|  
 |[cbegin](#cbegin)|Désigne le début de la séquence contrôlée.|  
@@ -223,7 +226,7 @@ class unordered_set;
 |[max_bucket_count](#max_bucket_count)|Obtient le nombre maximal de compartiments.|  
 |[max_load_factor](#max_load_factor)|Obtient ou définit le nombre maximal d’éléments par compartiment.|  
 |[max_size](#max_size)|Obtient ou définit la taille maximale de la séquence contrôlée.|  
-|[rehash)](#rehash)|Régénère la table de hachage.|  
+|[rehash](#rehash)|Régénère la table de hachage.|  
 |[size](#size)|Compte le nombre d'éléments.|  
 |[swap](#swap)|Échange le contenu de deux conteneurs.|  
 |[unordered_set](#unordered_set)|Construit un objet conteneur.|  

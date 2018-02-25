@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocnum/std::numpunct
 - xlocnum/std::numpunct::char_type
@@ -21,7 +22,8 @@ f1_keywords:
 - xlocnum/std::numpunct::grouping
 - xlocnum/std::numpunct::thousands_sep
 - xlocnum/std::numpunct::truename
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::numpunct [C++]
 - std::numpunct [C++], char_type
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7cd59fec5d8b5b2a6a05634242e0506688422f81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6c2613f3dd4aa03b591f1edcbb10576cd5e71fdc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="numpunct-class"></a>numpunct, classe
 Classe de modèle qui décrit un objet pouvant servir de facette locale pour décrire les séquences de type `CharType` utilisées pour représenter des informations sur la mise en forme et la ponctuation d'expressions numériques et booléennes.  
@@ -331,7 +334,7 @@ explicit numpunct(size_t _Refs = 0);
   
 -   1 : la durée de vie de l’objet doit être gérée manuellement.  
   
--   \>1 : ces valeurs ne sont pas définis.  
+-   \> 1 : ces valeurs ne sont pas définis.  
   
  Aucun exemple direct n’est possible, car le destructeur est protégé.  
   

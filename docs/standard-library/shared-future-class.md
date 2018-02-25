@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::shared_future
 - future/std::shared_future::shared_future
@@ -15,9 +16,10 @@ f1_keywords:
 - future/std::shared_future::wait
 - future/std::shared_future::wait_for
 - future/std::shared_future::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 454ebedd-f42b-405f-99a5-a25cc9ad7c90
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -29,12 +31,13 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: c6d7946de6440ad33c844e140ca7cbcc2199a0b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1d008142b78bc7901ef67f66f4327ad9229688bf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sharedfuture-class"></a>shared_future, classe
 Décrit un *objet retour asynchrone*. Contrairement à un objet [future](../standard-library/future-class.md), un *fournisseur asynchrone* peut être associé à un nombre quelconque d’objets `shared_future`.  
@@ -64,8 +67,8 @@ class shared_future;
 |Nom|Description|  
 |----------|-----------------|  
 |[get](#get)|Récupère le résultat qui est stocké dans l’*état asynchrone associé*.|  
-|[valide](#valid)|Spécifie si l’objet n’est pas vide.|  
-|[attente](#wait)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt.|  
+|[valid](#valid)|Spécifie si l’objet n’est pas vide.|  
+|[wait](#wait)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt.|  
 |[wait_for](#wait_for)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt ou que le délai spécifié soit écoulé.|  
 |[wait_until](#wait_until)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt ou jusqu’à un point spécifié dans le temps.|  
   
@@ -80,7 +83,7 @@ class shared_future;
   
  **Espace de noms :** std  
   
-##  <a name="get"></a>shared_future::Get
+##  <a name="get"></a>  shared_future::get
  Récupère le résultat qui est stocké dans l’*état asynchrone associé*.  
   
 ```
@@ -141,7 +144,7 @@ shared_future(const shared_future& Right);
   
  Le quatrième constructeur construit un objet `shared_future` qui a le même état asynchrone associé que `Right`.  
   
-##  <a name="valid"></a>shared_future::Valid
+##  <a name="valid"></a>  shared_future::valid
  Spécifie si l’objet a un *état asynchrone associé*.  
   
 ```
@@ -151,7 +154,7 @@ bool valid() noexcept;
 ### <a name="return-value"></a>Valeur de retour  
  `true` si l'objet possède un état asynchrone associé ; sinon, `false`.  
   
-##  <a name="wait"></a>shared_future::wait
+##  <a name="wait"></a>  shared_future::wait
  Bloque le thread actuel jusqu’à ce que *l’état asynchrone associé* soit *prêt*.  
   
 ```
@@ -161,7 +164,7 @@ void wait() const;
 ### <a name="remarks"></a>Notes  
  Un état asynchrone associé est prêt uniquement si son fournisseur asynchrone a stocké une valeur de retour ou une exception.  
   
-##  <a name="wait_for"></a>shared_future::wait_for
+##  <a name="wait_for"></a>  shared_future::wait_for
  Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit *prêt* ou que le temps spécifié soit écoulé.  
   
 ```
@@ -180,7 +183,7 @@ future_status wait_for(
 ### <a name="remarks"></a>Notes  
  Un état asynchrone associé est *prêt* uniquement si son fournisseur asynchrone a stocké une valeur de retour ou une exception.  
   
-##  <a name="wait_until"></a>shared_future::wait_until
+##  <a name="wait_until"></a>  shared_future::wait_until
  Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit *prêt* ou jusqu’à un point spécifié dans le temps.  
   
 ```

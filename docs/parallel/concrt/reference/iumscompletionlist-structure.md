@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IUMSCompletionList
 - CONCRTRM/concurrency::IUMSCompletionList
 - CONCRTRM/concurrency::IUMSCompletionList::IUMSCompletionList::GetUnblockNotifications
-dev_langs: C++
-helpviewer_keywords: IUMSCompletionList structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IUMSCompletionList structure
 ms.assetid: 81b5250e-3065-492c-b20d-2cdabf12271a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 50fd2381174e947e243ad6aa40516be5fd728902
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 378eccbc0e29a9356ffd89699039b9877c76c751
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList, structure
 Représente une liste de saisie semi-automatique UMS. Quand un thread UMS se bloque, le contexte de planification désigné du planificateur est distribué afin de déterminer les éléments à planifier sur la racine du processeur virtuel sous-jacent pendant que le thread d'origine est bloqué. Quand le thread d'origine se débloque, le système d'exploitation le met en attente dans la liste de saisie semi-automatique accessible via cette interface. Le planificateur peut interroger la liste de saisie semi-automatique à propos du contexte de planification désigné ou de tout autre emplacement qu'il recherche pour du travail.  
@@ -53,7 +57,7 @@ struct IUMSCompletionList;
   
  **Espace de noms :** concurrency  
   
-##  <a name="getunblocknotifications"></a>IUMSCompletionList::GetUnblockNotifications, méthode  
+##  <a name="getunblocknotifications"></a>  IUMSCompletionList::GetUnblockNotifications, méthode  
  Récupère une chaîne de `IUMSUnblockNotification` les interfaces qui représentent des contextes d’exécution dont le thread associé proxys ont été débloqués depuis la dernière exécution de cette méthode a été appelé.  
   
 ```

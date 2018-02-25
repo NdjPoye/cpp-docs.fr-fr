@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::duration
 - chrono/std::chrono::duration::duration
@@ -14,19 +15,22 @@ f1_keywords:
 - chrono/std::chrono::duration::max
 - chrono/std::chrono::duration::min
 - chrono/std::chrono::duration::zero
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-helpviewer_keywords: std::chrono [C++], duration
-ms.workload: cplusplus
-ms.openlocfilehash: e25b632554f56054793f60f3fe058791798894d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+helpviewer_keywords:
+- std::chrono [C++], duration
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 742c6acf9f404275fbf9c74a55abd661224d5bc6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="duration-class"></a>duration, classe
 Décrit un type contenant un *intervalle de temps*, qui est le temps écoulé entre deux points dans le temps.  
@@ -58,7 +62,7 @@ class duration <duration<Rep, Period1>, Period2>;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[durée](#duration)|Construit un objet `duration`.|  
+|[duration](#duration)|Construit un objet `duration`.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -67,7 +71,7 @@ class duration <duration<Rep, Period1>, Period2>;
 |[count](#count)|Retourne le nombre de battements d’horloge dans l’intervalle de temps.|  
 |[max](#max)|Static. Retourne la valeur maximale autorisée du paramètre de modèle `Ref`.|  
 |[min](#min)|Static. Retourne la valeur minimale autorisée du paramètre de modèle `Ref`.|  
-|[zéro](#zero)|Static. Retourne `Rep`(0).|  
+|[Zéro](#zero)|Static. Retourne `Rep`(0).|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   

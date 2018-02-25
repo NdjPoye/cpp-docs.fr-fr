@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - DispatchState
 - CONCRTRM/concurrency::DispatchState
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRTRM/concurrency::DispatchState::DispatchState::m_dispatchStateSize
 - CONCRTRM/concurrency::DispatchState::DispatchState::m_fIsPreviousContextAsynchronouslyBlocked
 - CONCRTRM/concurrency::DispatchState::DispatchState::m_reserved
-dev_langs: C++
-helpviewer_keywords: DispatchState structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- DispatchState structure
 ms.assetid: 8c52546e-1650-48a0-985f-7e4a0fc26a90
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d58fc12aa31c9d6a72acac6287a425044d42777c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 76deac0daa3a8bce2880b2cc9afda0faae263558
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="dispatchstate-structure"></a>DispatchState, structure
 La structure `DispatchState` est utilisée pour transférer l'état à la méthode `IExecutionContext::Dispatch`. Elle décrit les circonstances dans lesquelles la méthode `Dispatch` est appelée sur une interface `IExecutionContext`.  
@@ -61,28 +65,28 @@ struct DispatchState;
   
  **Espace de noms :** concurrency  
   
-##  <a name="ctor"></a>DispatchState::DispatchState, constructeur  
+##  <a name="ctor"></a>  DispatchState::DispatchState Constructor  
  Construit un nouveau `DispatchState` objet.  
   
 ```
 DispatchState();
 ```  
   
-##  <a name="m_dispatchstatesize"></a>Données membres DispatchState::m_dispatchStateSize  
+##  <a name="m_dispatchstatesize"></a>  DispatchState::m_dispatchStateSize Data Member  
  Taille de cette structure, qui est utilisée pour le contrôle de version.  
   
 ```
 unsigned long m_dispatchStateSize;
 ```  
   
-##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>Données membres DispatchState::m_fIsPreviousContextAsynchronouslyBlocked  
+##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>  DispatchState::m_fIsPreviousContextAsynchronouslyBlocked Data Member  
  Indique si ce contexte a entré le `Dispatch` méthode étant donné que le contexte précédent bloqué de façon asynchrone. Cela est utilisé uniquement sur le contexte de planification UMS et est défini sur la valeur `0` pour tous les autres contextes d’exécution.  
   
 ```
 unsigned int m_fIsPreviousContextAsynchronouslyBlocked : 1;
 ```  
   
-##  <a name="m_reserved"></a>Données membres DispatchState::m_reserved  
+##  <a name="m_reserved"></a>  DispatchState::m_reserved Data Member  
  Bits réservés pour le passage de futures informations.  
   
 ```

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IResourceManager
 - CONCRTRM/concurrency::IResourceManager
@@ -17,19 +18,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::Reference
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::RegisterScheduler
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::Release
-dev_langs: C++
-helpviewer_keywords: IResourceManager structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0a88cfafe9bbfdc04776050a0a956bf9a8b6766e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d309e057a8f829b11cc97ad60f3f5d56ff7ecaff
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager, structure
 Interface avec un gestionnaire des ressources du runtime d'accès concurrentiel. Il s'agit de l'interface par laquelle les planificateurs communiquent avec le gestionnaire des ressources.  
@@ -70,7 +74,7 @@ struct IResourceManager;
   
  **Espace de noms :** concurrency  
   
-##  <a name="createnodetopology"></a>IResourceManager::CreateNodeTopology, méthode  
+##  <a name="createnodetopology"></a>  IResourceManager::CreateNodeTopology Method  
  Actuellement en mode de débogage uniquement les versions du runtime, cette méthode est un crochet de test conçu pour faciliter le test du Gestionnaire de ressources sur divers topologies de matériel, sans nécessiter un matériel réel correspondant à la configuration. Avec les versions commerciales du runtime, cette méthode retournera sans exécuter d’action.  
   
 ```
@@ -99,7 +103,7 @@ virtual void CreateNodeTopology(
   
  [invalid_operation](invalid-operation-class.md) est levée si cette méthode est appelée lorsque d’autres planificateurs existent dans le processus.  
   
-##  <a name="getavailablenodecount"></a>IResourceManager::getavailablenodecount, méthode  
+##  <a name="getavailablenodecount"></a>  IResourceManager::GetAvailableNodeCount Method  
  Retourne le nombre de nœuds disponibles pour le Gestionnaire de ressources.  
   
 ```
@@ -109,7 +113,7 @@ virtual unsigned int GetAvailableNodeCount() const = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de nœuds disponibles pour le Gestionnaire de ressources.  
   
-##  <a name="getfirstnode"></a>IResourceManager::getfirstnode, méthode  
+##  <a name="getfirstnode"></a>  IResourceManager::getfirstnode, méthode  
  Retourne le premier nœud dans l’ordre d’énumération comme défini par le Gestionnaire de ressources.  
   
 ```
@@ -119,14 +123,14 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Le premier nœud dans l’ordre d’énumération comme défini par le Gestionnaire de ressources.  
   
-##  <a name="iresourcemanager__osversion"></a>IResourceManager::OSVersion, énumération  
+##  <a name="iresourcemanager__osversion"></a>  IResourceManager::OSVersion Enumeration  
  Type énuméré qui représente la version du système d'exploitation.  
   
 ```
 enum OSVersion;
 ```  
   
-##  <a name="reference"></a>IResourceManager::Reference, méthode  
+##  <a name="reference"></a>  IResourceManager::Reference, méthode  
  Incrémente le décompte de références sur l’instance du Gestionnaire de ressources.  
   
 ```
@@ -136,7 +140,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Le décompte de références résultant.  
   
-##  <a name="registerscheduler"></a>IResourceManager::RegisterScheduler, méthode  
+##  <a name="registerscheduler"></a>  IResourceManager::RegisterScheduler Method  
  Inscrit un planificateur avec le Gestionnaire de ressources. Une fois que le planificateur est inscrit, il doit communiquer avec le Gestionnaire de ressources à l’aide du `ISchedulerProxy` interface qui est retournée.  
   
 ```
@@ -160,7 +164,7 @@ virtual ISchedulerProxy *RegisterScheduler(
   
  La méthode lève un `invalid_argument` exception si le paramètre `pScheduler` a la valeur `NULL` ou si le paramètre `version` n’est pas une version valide pour l’interface de communication.  
   
-##  <a name="release"></a>IResourceManager::Release, méthode  
+##  <a name="release"></a>  IResourceManager::Release, méthode  
  Décrémente le décompte de références sur l’instance du Gestionnaire de ressources. Le Gestionnaire de ressources est détruit lorsque son décompte de références atteint `0`.  
   
 ```

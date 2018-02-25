@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - iterator/std::move_iterator
 - iterator/std::move_iterator::iterator_type
@@ -16,7 +17,8 @@ f1_keywords:
 - iterator/std::move_iterator::pointer
 - iterator/std::move_iterator::reference
 - iterator/std::move_iterator::base
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::move_iterator [C++]
 - std::move_iterator [C++], iterator_type
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 54691a7d25e9229143e17476d5e0e09c6732e69e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 55f3062c44b02741093402b4e40cad6c9036ccf3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="moveiterator-class"></a>move_iterator, classe
 Le modèle de classe `move_iterator` est un wrapper pour un itérateur. Le move_iterator fournit le même comportement que l'itérateur qu'il encapsule (ou stocke), à la différence près qu'il convertit l'opérateur de déréférence de l'itérateur stocké en une référence rvalue, convertissant ainsi une copie en déplacement. Pour plus d’informations sur les rvalues, consultez [Déclarateur de référence Rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
@@ -56,7 +59,7 @@ class move_iterator;
 |-|-|  
 |[move_iterator](#move_iterator)|Constructeur des objets de type `move_iterator`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -65,7 +68,7 @@ class move_iterator;
 |[value_type](#value_type)|Synonyme d'une expression `typename` plus longue du même nom, `value_type` décrit le type des éléments de l'itérateur.|  
 |[difference_type](#difference_type)|Synonyme d'une expression `typename` plus longue du même nom, `difference_type` décrit le type intégral requis pour exprimer des différences de valeur entre les éléments.|  
 |[pointer](#pointer)|Synonyme du paramètre de modèle `RandomIterator`.|  
-|[reference](#reference)|Synonyme de la référence `rvalue``value_type&&`.|  
+|[reference](#reference)|Synonyme de la référence `rvalue` `value_type&&`.|  
   
 ### <a name="member-functions"></a>Fonctions membres  
   
@@ -87,7 +90,7 @@ class move_iterator;
 |[move_iterator::operator+=](#op_add_eq)|Ajoute la valeur située à droite de l'itérateur stocké, et retourne `*this`.|  
 |[move_iterator::operator-=](#operator-_eq)|Soustrait la valeur située à droite de l'itérateur stocké, et retourne `*this`.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<iterator>  
   
  **Espace de noms :** std  

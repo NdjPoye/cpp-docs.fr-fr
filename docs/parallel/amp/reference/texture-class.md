@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - texture
 - AMP_GRAPHICS/texture
@@ -22,18 +23,20 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::associated_accelerator_view
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6131f2349a065052c9860038ca4b9f08de89f37d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 822797fb04104b28cf72f8d8ea4291a5ad283d20
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="texture-class"></a>texture, classe
 Une texture est un agrégat de données un `accelerator_view` dans le domaine de l’étendue. Il est une collection de variables, un pour chaque élément dans un domaine de l’étendue. Chaque variable contient une valeur correspondant à un type primitif C++ ( `unsigned int`, `int`, `float`, `double`), un type scalaire ( `norm`, ou `unorm`), ou un type de vecteur court.  
@@ -85,7 +88,7 @@ class texture;
 |Nom|Description|  
 |----------|-----------------|  
 |[operator()](#operator_call)|Retourne la valeur de l’élément spécifié par les paramètres.|  
-|[operator]](#operator_at)|Retourne l’élément qui est à l’index spécifié.|  
+|[operator[]](#operator_at)|Retourne l’élément qui est à l’index spécifié.|  
 |[operator=](#operator_eq)|Copie le texte spécifié [texture](texture-class.md) objet à celui-ci.|  
   
 ### <a name="public-constants"></a>Constantes publiques  
@@ -112,7 +115,7 @@ class texture;
   
  **Namespace :** Concurrency::graphics  
   
-##  <a name="dtor"></a>~ texture 
+##  <a name="dtor"></a> ~texture 
 
  Détruit le `texture` objet.  
   
@@ -120,7 +123,7 @@ class texture;
 ~texture() restrict(cpu);
 ```  
   
-##  <a name="associated_accelerator_view"></a>associated_accelerator_view 
+##  <a name="associated_accelerator_view"></a> associated_accelerator_view 
 
  Obtient le [accelerator_view](accelerator-view-class.md) qui est la cible par défaut pour cette texture doit être copié vers.  
   
@@ -128,7 +131,7 @@ class texture;
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;  
 ```  
   
-##  <a name="copy_to"></a>copy_to 
+##  <a name="copy_to"></a> copy_to 
 
  Copie le `texture` objet vers la destination, en effectuant une copie complète.  
   
@@ -147,7 +150,7 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
  `value_type`  
  Le type des éléments de la texture.  
   
-##  <a name="data"></a>données 
+##  <a name="data"></a> Données 
 
  Retourne un pointeur de l’UC pour les données brutes de cette texture.  
   
@@ -161,7 +164,7 @@ const void* data() const restrict(cpu);
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers les données brutes de la texture.  
   
-##  <a name="depth_pitch"></a>depth_pitch 
+##  <a name="depth_pitch"></a> depth_pitch 
 
  Obtient le nombre d’octets entre chaque secteur de profondeur dans une texture 3D intermédiaire sur l’UC.  
   
@@ -169,7 +172,7 @@ const void* data() const restrict(cpu);
 __declspec(property(get= get_depth_pitch)) unsigned int depth_pitch;  
 ```  
   
-##  <a name="get"></a>Télécharger 
+##  <a name="get"></a> Télécharger 
 
  Retourne la valeur de l’élément à l’index spécifié.  
   
@@ -184,7 +187,7 @@ const value_type get(const index<_Rank>& _Index) const restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur de l’élément à l’index spécifié.  
   
-##  <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view 
+##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view 
 
  Retourne l’accelerator_view qui est la cible par défaut pour cette texture doit être copié vers.  
   
@@ -195,7 +198,7 @@ Concurrency::accelerator_view get_associated_accelerator_view() const restrict(c
 ### <a name="return-value"></a>Valeur de retour  
  Le [accelerator_view](accelerator-view-class.md) qui est la cible par défaut pour cette texture doit être copié vers.  
   
-##  <a name="get_depth_pitch"></a>get_depth_pitch 
+##  <a name="get_depth_pitch"></a> get_depth_pitch 
 
  Retourne le nombre d’octets entre chaque secteur de profondeur dans 3D texture sur l’UC de mise en lots.  
   
@@ -206,7 +209,7 @@ unsigned int get_depth_pitch() const restrict(cpu);
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’octets entre chaque secteur de profondeur dans 3D texture sur l’UC de mise en lots.  
   
-##  <a name="get_row_pitch"></a>get_row_pitch 
+##  <a name="get_row_pitch"></a> get_row_pitch 
 
  Retourne le nombre d’octets entre chaque ligne dans une texture 2D de mise en lots, ou entre chaque ligne d’un secteur de profondeur de texture mise en lots en 3 dimensions.  
   
@@ -217,7 +220,7 @@ unsigned int get_row_pitch() const restrict(cpu);
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’octets entre chaque ligne dans une texture 2D de mise en lots, ou entre chaque ligne d’un secteur de profondeur de texture mise en lots en 3 dimensions.  
   
-##  <a name="operator_call"></a>operator() 
+##  <a name="operator_call"></a> operator() 
 
  Retourne la valeur de l’élément spécifié par les paramètres.  
   
@@ -260,7 +263,7 @@ const value_type operator() (
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de l’élément spécifié par les paramètres.  
   
-##  <a name="operator_at"></a>operator] 
+##  <a name="operator_at"></a> operator[] 
 
  Retourne l’élément qui est à l’index spécifié.  
   
@@ -281,7 +284,7 @@ const value_type operator[] (int _I0) const restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  L’élément qui est à l’index spécifié.  
   
-##  <a name="operator_eq"></a>opérateur = 
+##  <a name="operator_eq"></a> operator= 
 
  Copie le texte spécifié [texture](texture-class.md) objet à celui-ci.  
   
@@ -301,7 +304,7 @@ texture& operator= (
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à ce `texture` objet.  
   
-##  <a name="rank"></a>rang 
+##  <a name="rank"></a> Rang 
 
  Obtient le classement de la `texture` objet.  
   
@@ -309,7 +312,7 @@ texture& operator= (
 static const int rank = _Rank;  
 ```  
   
-##  <a name="row_pitch"></a>row_pitch 
+##  <a name="row_pitch"></a> row_pitch 
 
  Obtient le nombre d’octets entre chaque ligne dans un 2D ou 3D un intermédiaire texture sur l’UC.  
   
@@ -317,7 +320,7 @@ static const int rank = _Rank;
 __declspec(property(get= get_row_pitch)) unsigned int row_pitch;  
 ```  
   
-##  <a name="set"></a>ensemble 
+##  <a name="set"></a> Ensemble 
 
  Définit la valeur de l’élément à l’index spécifié.  
   
@@ -337,7 +340,7 @@ void set(
  `value`  
  Nouvelle valeur de l’élément.  
   
-##  <a name="ctor"></a>texture 
+##  <a name="ctor"></a> texture 
 
  Initialise une nouvelle instance de la classe `texture`.  
   

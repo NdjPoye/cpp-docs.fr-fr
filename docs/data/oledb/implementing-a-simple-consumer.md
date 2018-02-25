@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,11 +21,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9c09d663adcc9d5040164925cf04cb5886b4b80e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1ab109411117b99f816b094fca06ff08a4e7e3cb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="implementing-a-simple-consumer"></a>Implémentation d'un consommateur simple
 Les rubriques suivantes montrent comment modifier les fichiers créés par l’Assistant Application MFC et l’Assistant Consommateur OLE DB ATL pour créer un consommateur simple. Cet exemple comporte les parties suivantes :  

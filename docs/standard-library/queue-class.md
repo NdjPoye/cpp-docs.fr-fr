@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - queue/std::queue::container_type
 - queue/std::queue::size_type
@@ -17,7 +18,8 @@ f1_keywords:
 - queue/std::queue::pop
 - queue/std::queue::push
 - queue/std::queue::size
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::queue [C++], container_type
 - std::queue [C++], size_type
@@ -29,16 +31,17 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9161a04f9007f660df7ea7293426e9a90ada20c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e7f8fe2594dcfe3d0535bf02470e76e8356ab20e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="queue-class"></a>queue, classe
 Classe d’adaptateur de conteneur de modèle qui fournit une restriction de fonctionnalité pour un certain type de conteneur sous-jacent, limitant l’accès aux éléments à l’arrière ou à l’avant. Les éléments peuvent être ajoutés à l’arrière ou supprimés à l’avant, et être inspectés aux extrémités de l’objet queue.  
@@ -78,7 +81,7 @@ class queue
 |-|-|  
 |[queue](#queue)|Construit un objet `queue` qui est vide ou qui est une copie de l'objet conteneur de base.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -97,7 +100,7 @@ class queue
 |[push](#push)|Ajoute un élément à l’arrière de l’objet `queue`.|  
 |[size](#size)|Retourne le nombre d'éléments d'un `queue`.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** \<queue>  
   
  **Espace de noms :** std  

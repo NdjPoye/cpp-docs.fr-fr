@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CurrentScheduler
 - CONCRT/concurrency::CurrentScheduler
@@ -20,19 +21,22 @@ f1_keywords:
 - CONCRT/concurrency::CurrentScheduler::IsAvailableLocation
 - CONCRT/concurrency::CurrentScheduler::RegisterShutdownEvent
 - CONCRT/concurrency::CurrentScheduler::ScheduleTask
-dev_langs: C++
-helpviewer_keywords: CurrentScheduler class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 936904f19687463a9b5c51262c8e6f7a8b9fe5a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d973b9ad7c5c7f81b5db85b3f8c5ccc49b5049b0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler, classe
 Représente une abstraction pour le planificateur actuel associé au contexte d'appel.  
@@ -49,13 +53,13 @@ class CurrentScheduler;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Créer](#create)|Crée un nouveau planificateur dont le comportement est décrit par le `_Policy` paramètre et l’attache au contexte d’appel. Le planificateur créé récemment deviendra le planificateur actuel pour le contexte d’appel.|  
+|[Create](#create)|Crée un nouveau planificateur dont le comportement est décrit par le `_Policy` paramètre et l’attache au contexte d’appel. Le planificateur créé récemment deviendra le planificateur actuel pour le contexte d’appel.|  
 |[CreateScheduleGroup](#createschedulegroup)|Surchargé. Crée un nouveau groupe de planification dans le planificateur associé au contexte d’appel. La version qui prend le paramètre `_Placement` entraîne des tâches au sein du groupe de planification qui vient d’être créé pour être en faveur de l’exécution à l’emplacement spécifié par ce paramètre.|  
 |[Détacher](#detach)|Détache le planificateur actuel dans le contexte d’appel et restaure le planificateur précédemment associé comme planificateur actuel, s’il en existe. Une fois que cette méthode retourne le contexte d’appel est ensuite géré par le planificateur a été précédemment attaché au contexte à l’aide de la `CurrentScheduler::Create` ou `Scheduler::Attach` (méthode).|  
 |[Get](#get)|Retourne un pointeur vers le planificateur associé au contexte d’appel, également appelé le planificateur actuel.|  
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Retourne le nombre actuel de processeurs virtuels pour le planificateur associé au contexte d’appel.|  
 |[GetPolicy](#getpolicy)|Retourne une copie de la stratégie que le planificateur actuel a été créé.|  
-|[ID](#id)|Retourne un identificateur unique pour le planificateur actuel.|  
+|[Id](#id)|Retourne un identificateur unique pour le planificateur actuel.|  
 |[IsAvailableLocation](#isavailablelocation)|Détermine si un emplacement donné est disponible sur le planificateur actuel.|  
 |[RegisterShutdownEvent](#registershutdownevent)|Le handle d’événement Windows passé dans le `_ShutdownEvent` paramètre soit signalé lorsque le planificateur associé au contexte actuel s’arrête et détruit lui-même. Au moment de que l’événement est signalé, tout le travail qui a été planifié pour le planificateur est terminé. Plusieurs événements d’arrêt peuvent être inscrits via cette méthode.|  
 |[ScheduleTask](#scheduletask)|Surchargé. Planifie une tâche légère dans le planificateur associé au contexte d’appel. La tâche légère sera placée dans un groupe de planification déterminé par le runtime. La version qui prend le paramètre `_Placement` amène la tâche à être favorise l’exécution à l’emplacement spécifié.|  
@@ -66,12 +70,12 @@ class CurrentScheduler;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CurrentScheduler`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
   
-##  <a name="create"></a>Créer 
+##  <a name="create"></a> Créer 
 
  Crée un nouveau planificateur dont le comportement est décrit par le `_Policy` paramètre et l’attache au contexte d’appel. Le planificateur créé récemment deviendra le planificateur actuel pour le contexte d’appel.  
   
@@ -92,7 +96,7 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
   
  Cette méthode peut lever des exceptions, y compris les diverses [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md) et [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md).  
   
-##  <a name="createschedulegroup"></a>CreateScheduleGroup 
+##  <a name="createschedulegroup"></a> CreateScheduleGroup 
 
  Crée un nouveau groupe de planification dans le planificateur associé au contexte d’appel. La version qui prend le paramètre `_Placement` entraîne des tâches au sein du groupe de planification qui vient d’être créé pour être en faveur de l’exécution à l’emplacement spécifié par ce paramètre.  
   
@@ -116,7 +120,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
   
  Notez que si vous avez créé ce planificateur explicitement, vous devez libérer toutes les références pour planifier des groupes, avant de libérer votre référence sur le planificateur, en détachant le contexte actuel à partir de celui-ci.  
   
-##  <a name="detach"></a>Détacher 
+##  <a name="detach"></a> Detach 
 
  Détache le planificateur actuel dans le contexte d’appel et restaure le planificateur précédemment associé comme planificateur actuel, s’il en existe. Une fois que cette méthode retourne le contexte d’appel est ensuite géré par le planificateur a été précédemment attaché au contexte à l’aide de la `CurrentScheduler::Create` ou `Scheduler::Attach` (méthode).  
   
@@ -131,7 +135,7 @@ static void __cdecl Detach();
   
  Appel de cette méthode à partir d’un contexte qui est interne à et géré par un planificateur ou un contexte qui a été attaché à l’aide d’une méthode autre que le [Scheduler::Attach](scheduler-class.md#attach) ou [CurrentScheduler::Create](#create) méthodes, entraîne un [improper_scheduler_detach](improper-scheduler-detach-class.md) levée d’exception.  
   
-##  <a name="get"></a>Télécharger 
+##  <a name="get"></a> Get 
 
  Retourne un pointeur vers le planificateur associé au contexte d’appel, également appelé le planificateur actuel.  
   
@@ -145,7 +149,7 @@ static Scheduler* __cdecl Get();
 ### <a name="remarks"></a>Notes  
  Cette méthode entraîne la création du planificateur par défaut du processus et/ou son attachement au contexte d'appel s'il n'existe aucun planificateur actuellement associé au contexte d'appel. Aucune référence supplémentaire n’est placée sur le `Scheduler` objet retourné par cette méthode.  
   
-##  <a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
+##  <a name="getnumberofvirtualprocessors"></a> GetNumberOfVirtualProcessors 
 
  Retourne le nombre actuel de processeurs virtuels pour le planificateur associé au contexte d’appel.  
   
@@ -161,7 +165,7 @@ static unsigned int __cdecl GetNumberOfVirtualProcessors();
   
  La valeur de retour de cette méthode est un échantillonnage instantané du nombre de processeurs virtuels pour le planificateur associé au contexte d’appel. Cette valeur peut être obsolète au moment où qu'elle est retournée.  
   
-##  <a name="getpolicy"></a>GetPolicy 
+##  <a name="getpolicy"></a> GetPolicy 
 
  Retourne une copie de la stratégie que le planificateur actuel a été créé.  
   
@@ -175,7 +179,7 @@ static SchedulerPolicy __cdecl GetPolicy();
 ### <a name="remarks"></a>Notes  
  Cette méthode entraîne la création du planificateur par défaut du processus et/ou son attachement au contexte d'appel s'il n'existe aucun planificateur actuellement associé au contexte d'appel.  
   
-##  <a name="id"></a>ID 
+##  <a name="id"></a> Id 
 
  Retourne un identificateur unique pour le planificateur actuel.  
   
@@ -189,7 +193,7 @@ static unsigned int __cdecl Id();
 ### <a name="remarks"></a>Notes  
  Cette méthode n’entraîne pas de pièce jointe de planificateur si le contexte d’appel n’est pas déjà associé à un planificateur.  
   
-##  <a name="isavailablelocation"></a>IsAvailableLocation 
+##  <a name="isavailablelocation"></a> IsAvailableLocation 
 
  Détermine si un emplacement donné est disponible sur le planificateur actuel.  
   
@@ -209,7 +213,7 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
   
  Notez que la valeur de retour est un échantillonnage instantané si l’emplacement donné est disponible. En présence de plusieurs planificateurs, gestion des ressources dynamiques pour ajouter ou d’empiéter sur ressources à partir des planificateurs à tout moment. Le cas échéant, l’emplacement donné peut modifier la disponibilité.  
   
-##  <a name="registershutdownevent"></a>RegisterShutdownEvent 
+##  <a name="registershutdownevent"></a> RegisterShutdownEvent 
 
  Le handle d’événement Windows passé dans le `_ShutdownEvent` paramètre soit signalé lorsque le planificateur associé au contexte actuel s’arrête et détruit lui-même. Au moment de que l’événement est signalé, tout le travail qui a été planifié pour le planificateur est terminé. Plusieurs événements d’arrêt peuvent être inscrits via cette méthode.  
   
@@ -224,7 +228,7 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ### <a name="remarks"></a>Notes  
  S’il n’existe aucun planificateur associé au contexte d’appel, cette méthode entraîne un [scheduler_not_attached](scheduler-not-attached-class.md) levée d’exception.  
   
-##  <a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a> ScheduleTask 
 
  Planifie une tâche légère dans le planificateur associé au contexte d’appel. La tâche légère sera placée dans un groupe de planification déterminé par le runtime. La version qui prend le paramètre `_Placement` amène la tâche à être favorise l’exécution à l’emplacement spécifié.  
   

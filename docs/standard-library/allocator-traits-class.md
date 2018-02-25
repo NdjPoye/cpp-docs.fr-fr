@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::allocator_traits
 - memory/std::allocator_traits::propagate_on_container_move_assignment
@@ -26,9 +27,10 @@ f1_keywords:
 - memory/std::allocator_traits::destroy
 - memory/std::allocator_traits::max_size
 - memory/std::allocator_traits::select_on_container_copy_construction
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 612974b8-b5d4-4668-82fb-824bff6821d6
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -51,12 +53,13 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.workload: cplusplus
-ms.openlocfilehash: 7d96b4a03085a2a6486fa2f2fe0d7050323682c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d732b91a1c7a288cf22fea61e9565a794bb3380d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="allocatortraits-class"></a>allocator_traits, classe
 La classe de modèle décrit un objet qui complète un *type d’allocateur*. Un type d’allocateur est tout type qui décrit un objet allocateur utilisé pour la gestion de stockage alloué. Plus précisément, pour tout type d’allocateur `Alloc`, vous pouvez utiliser `allocator_traits<Alloc>` afin de déterminer toutes les informations nécessaires pour un conteneur compatible avec l’allocateur. Pour plus d’informations, consultez [allocator, classe](../standard-library/allocator-class.md).  
@@ -101,7 +104,7 @@ class allocator_traits;
   
  **Espace de noms :** std  
   
-##  <a name="allocate"></a>allocator_traits::Allocate
+##  <a name="allocate"></a>  allocator_traits::allocate
  Méthode statique qui alloue de la mémoire en utilisant le paramètre d’allocateur donné.  
   
 ```cpp  
@@ -128,7 +131,7 @@ static pointer allocate(Alloc& al, size_type count,
   
  La seconde méthode retourne `al.allocate(count, hint)`, si cette expression est correctement construite ; sinon, `al.allocate(count)`.  
   
-##  <a name="construct"></a>allocator_traits::Construct
+##  <a name="construct"></a>  allocator_traits::construct
  Méthode statique qui utilise un allocateur spécifié pour construire un objet.  
   
 ```cpp  
@@ -149,7 +152,7 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 ### <a name="remarks"></a>Notes  
  La fonction membre statique appelle `al.construct(ptr, args...)`, si cette expression est correctement construite ; sinon, elle retourne la valeur `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.  
   
-##  <a name="deallocate"></a>allocator_traits::DEALLOCATE
+##  <a name="deallocate"></a>  allocator_traits::deallocate
  Méthode statique qui utilise un allocateur spécifié pour désallouer un nombre spécifié d’objets.  
   
 ```cpp  
@@ -173,7 +176,7 @@ static void deallocate(Alloc al,
   
  Cette méthode ne lève aucune exception.  
   
-##  <a name="destroy"></a>allocator_traits::Destroy
+##  <a name="destroy"></a>  allocator_traits::destroy
  Méthode statique qui utilise un allocateur spécifié pour appeler le destructeur sur un objet sans désallouer sa mémoire.  
   
 ```cpp  
@@ -191,7 +194,7 @@ static void destroy(Alloc& al, Uty* ptr);
 ### <a name="remarks"></a>Notes  
  Cette méthode appelle `al.destroy(ptr)`, si cette expression est correctement construite ; sinon, elle retourne la valeur `ptr->~Uty()`.  
   
-##  <a name="max_size"></a>allocator_traits::max_size
+##  <a name="max_size"></a>  allocator_traits::max_size
  Méthode statique qui utilise un allocateur spécifié pour déterminer le nombre maximal d’objets pouvant être alloués.  
   
 ```cpp  
@@ -205,7 +208,7 @@ static size_type max_size(const Alloc& al);
 ### <a name="remarks"></a>Notes  
  Cette méthode retourne `al.max_size()`, si cette expression est correctement construite ; sinon, `numeric_limits<size_type>::max()`.  
   
-##  <a name="select_on_container_copy_construction"></a>allocator_traits::select_on_container_copy_construction
+##  <a name="select_on_container_copy_construction"></a>  allocator_traits::select_on_container_copy_construction
  Méthode statique qui appelle `select_on_container_copy_construction` sur l’allocateur spécifié.  
   
 ```cpp  

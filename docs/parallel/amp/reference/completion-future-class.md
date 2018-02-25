@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - completion_future
 - AMPRT/completion_future
@@ -18,18 +19,20 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait
 - AMPRT/Concurrency::completion_future::wait_for
 - AMPRT/Concurrency::completion_future::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 07e41d6bf03df1231249a9e2ea5e54e420c9840c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 24f7012f7fdd9aaeb2443665187aba4eef483e0f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="completionfuture-class"></a>completion_future, classe
 Représente une future qui correspond à une opération asynchrone de C++ AMP.  
@@ -54,10 +57,10 @@ class completion_future;
 |Nom|Description|  
 |----------|-----------------|  
 |[get](#get)|Attend que l’opération asynchrone terminée.|  
-|[puis](#then)|Remonte d’un objet de fonction de rappel pour le `completion_future` objet à exécuter lorsque l’opération asynchrone associée termine son exécution.|  
+|[then](#then)|Remonte d’un objet de fonction de rappel pour le `completion_future` objet à exécuter lorsque l’opération asynchrone associée termine son exécution.|  
 |[to_task](#to_task)|Retourne un `task` objet correspondant à l’opération asynchrone associée.|  
-|[valide](#valid)|Obtient une valeur booléenne qui indique si l’objet est associé à une opération asynchrone.|  
-|[attente](#wait)|Bloque jusqu'à ce que l’opération asynchrone terminée.|  
+|[valid](#valid)|Obtient une valeur booléenne qui indique si l’objet est associé à une opération asynchrone.|  
+|[wait](#wait)|Bloque jusqu'à ce que l’opération asynchrone terminée.|  
 |[wait_for](#wait_for)|Bloque jusqu'à ce que l’opération asynchrone terminée ou que la durée spécifiée par `_Rel_time` s’est écoulé.|  
 |[wait_until](#wait_until)|Bloque jusqu'à ce que l’opération asynchrone terminée ou jusqu'à ce que l’heure actuelle dépasse la valeur spécifiée par `_Abs_time`.|  
   
@@ -77,7 +80,7 @@ class completion_future;
  **Espace de noms :** concurrency  
 
 
-## <a name="ctor"></a>completion_future 
+## <a name="ctor"></a> completion_future 
 
 Initialise une nouvelle instance de la classe `completion_future`.  
   
@@ -105,7 +108,7 @@ completion_future(
 |`completion_future(const completion_future& _Other);`|Initialise une nouvelle instance de la `completion_future` classe par un constructeur de copie.|  
 |`completion_future(completion_future&& _Other);`|Initialise une nouvelle instance de la `completion_future` classe en déplaçant un constructeur.|  
   
-## <a name="get"></a>Télécharger 
+## <a name="get"></a> Télécharger 
 
 Attend que l’opération asynchrone terminée. Lève l’exception stockée si une s’est produite lors de l’opération asynchrone.  
   
@@ -115,7 +118,7 @@ Attend que l’opération asynchrone terminée. Lève l’exception stockée si 
 void get() const;  
 ```  
   
-## <a name="operator_shared_future"></a>opérateur std::shared_future<void> 
+## <a name="operator_shared_future"></a> opérateur std::shared_future<void> 
 
 Convertit implicitement la `completion_future` de l’objet à un `std::shared_future` objet.  
   
@@ -128,7 +131,7 @@ operator std::shared_future<void>() const;
 ### <a name="return-value"></a>Valeur de retour  
  Objet `std::shared_future`.  
   
-## <a name="operator_eq"></a>opérateur = 
+## <a name="operator_eq"></a> operator= 
 
 Copie le contenu de l’objet `completion_future` objet dans celui-ci.  
   
@@ -153,7 +156,7 @@ completion_future&  operator= (completion_future&& _Other );
 |`completion_future& operator=(const completion_future& _Other);`|Copie le contenu de l’objet `completion_future` objet dans celui-ci, à l’aide d’une copie complète.|  
 |`completion_future& operator=(completion_future&& _Other);`|Copie le contenu de l’objet `completion_future` objet dans celui-ci, à l’aide d’une assignation de déplacement.|  
   
-## <a name="then"></a>puis 
+## <a name="then"></a> puis 
 
 Remonte d’un objet de fonction de rappel pour le `completion_future` objet à exécuter lorsque l’opération asynchrone associée termine son exécution.  
   
@@ -171,7 +174,7 @@ void then(const _Functor & _Func ) const;
  `_Func`  
  L’objet de fonction de rappel.  
   
-## <a name="to_task"></a>to_task 
+## <a name="to_task"></a> to_task 
 
 Retourne un `task` objet correspondant à l’opération asynchrone associée.  
   
@@ -184,7 +187,7 @@ concurrency::task<void> to_task() const;
 ### <a name="return-value"></a>Valeur de retour  
  A `task` objet correspondant à l’opération asynchrone associée.  
   
-## <a name="valid"></a>valide 
+## <a name="valid"></a> valide 
 
 Obtient une valeur booléenne qui indique si l’objet est associé à une opération asynchrone.  
   
@@ -195,9 +198,9 @@ bool valid() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si l’objet est associé à une opération asynchrone ; dans le cas contraire, `false`.  
+ `true` Si l’objet est associé à une opération asynchrone ; dans le cas contraire, `false`.  
   
-## <a name="wait"></a>attente 
+## <a name="wait"></a> attente 
 
 Bloque jusqu'à ce que l’opération asynchrone terminée.  
   
@@ -207,7 +210,7 @@ Bloque jusqu'à ce que l’opération asynchrone terminée.
 void wait() const;  
 ```  
   
-## <a name="wait_for"></a>wait_for 
+## <a name="wait_for"></a> wait_for 
 
 Bloque jusqu'à ce que l’opération asynchrone terminée ou que la durée spécifiée par `_Rel_time` s’est écoulé.  
   
@@ -235,13 +238,13 @@ std::future_status::future_status wait_for(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne :  
   
--   `std::future_status::deferred`Si l’opération asynchrone associée n’est pas en cours d’exécution.  
+-   `std::future_status::deferred` Si l’opération asynchrone associée n’est pas en cours d’exécution.  
   
--   `std::future_status::ready`Si l’opération asynchrone associée est terminée.  
+-   `std::future_status::ready` Si l’opération asynchrone associée est terminée.  
   
--   `std::future_status::timeout`Si le laps de temps spécifié a expiré.  
+-   `std::future_status::timeout` Si le laps de temps spécifié a expiré.  
   
-## <a name="wait_until"></a>wait_until 
+## <a name="wait_until"></a> wait_until 
 
 Bloque jusqu'à ce que l’opération asynchrone terminée ou jusqu'à ce que l’heure actuelle dépasse la valeur spécifiée par `_Abs_time`.  
   
@@ -269,13 +272,13 @@ std::future_status::future_status wait_until(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne :  
   
-1.  `std::future_status::deferred`Si l’opération asynchrone associée n’est pas en cours d’exécution.  
+1.  `std::future_status::deferred` Si l’opération asynchrone associée n’est pas en cours d’exécution.  
   
-2.  `std::future_status::ready`Si l’opération asynchrone associée est terminée.  
+2.  `std::future_status::ready` Si l’opération asynchrone associée est terminée.  
   
-3.  `std::future_status::timeout`Si la période de temps spécifié a expiré.  
+3.  `std::future_status::timeout` Si la période de temps spécifié a expiré.  
   
-## <a name="dtor"></a>~ completion_future 
+## <a name="dtor"></a> ~completion_future 
 
 Détruit le `completion_future` objet.  
   

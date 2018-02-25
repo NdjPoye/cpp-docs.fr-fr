@@ -1,14 +1,17 @@
 ---
-title: '#<a name="import-directive-c--microsoft-docs"></a>Importer la Directive (C++) | Documents Microsoft'
+title: '#Importer la Directive (C++) | Documents Microsoft'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#import'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#import'
+dev_langs:
+- C++
 helpviewer_keywords:
 - .tlh files
 - '#import directive'
@@ -18,16 +21,17 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3d104f25dfc45a0d2b24650289b6ce49f8468c39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cbf8a35022638884733f5151fffb2a3a0a2946c3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="import-directive-c"></a>#import, directive (C++)
 **Spécifique à C++**  
@@ -88,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="remarks"></a>Notes  
   
-##  <a name="_predir_the_23import_directive_searchorderforfilename"></a>Ordre de recherche de nom de fichier  
+##  <a name="_predir_the_23import_directive_searchorderforfilename"></a> Ordre de recherche de nom de fichier  
  *nom de fichier* est éventuellement précédé d’une spécification de répertoire. Le nom de fichier doit désigner un fichier existant. La différence entre les deux formes de syntaxe provient de l'ordre dans lequel le préprocesseur recherche les fichiers de bibliothèque de type lorsque le chemin d'accès est spécifié de manière incomplète.  
   
 |Forme syntaxique|Action|  
@@ -96,7 +100,7 @@ ms.lasthandoff: 12/21/2017
 |Forme avec guillemets|Indique au préprocesseur de rechercher les fichiers bibliothèques de types dans le répertoire du fichier qui contient l'instruction `#import`, puis dans les répertoires des fichiers qui incluent (`#include`) ce fichier. Le préprocesseur explore ensuite les chemins d'accès spécifiés ci-dessous.|  
 |Forme avec crochets pointus|Indique au préprocesseur de rechercher les fichiers bibliothèques de types en utilisant les chemins d’accès suivants :<br /><br /> 1.  Le **chemin d’accès** liste du chemin d’accès de variable d’environnement<br />2.  Le **LIB** liste du chemin d’accès de variable d’environnement<br />3.  Le chemin d’accès spécifié par le /I (autres répertoires include) option du compilateur, mais le compilateur recherche une bibliothèque de types est référencée à partir d’une autre bibliothèque de types avec le [no_registry](../preprocessor/no-registry.md) attribut.|  
   
-##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a>En spécifiant l’ID de localisation et le numéro de Version  
+##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> En spécifiant l’ID de localisation et le numéro de Version  
  Lorsque vous spécifiez un progid, vous pouvez également spécifier l'ID de localisation et le numéro de version du progid. Exemple :  
   
 ```  
@@ -113,7 +117,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Si vous ne spécifiez pas de numéro de version, la version la plus récente est utilisée.  
   
-##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a>Fichiers d’en-tête créés par l’importation  
+##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a> Fichiers d’en-tête créés par l’importation  
  `#import` crée deux fichiers d'en-tête qui reconstruisent le contenu de la bibliothèque de types dans le code source C++. Le fichier d'en-tête principal est similaire à celui produit par le compilateur MIDL (Microsoft Interface Definition Langage), mais avec un code et des données supplémentaires générés par le compilateur. Le [fichier d’en-tête principal](#_predir_the_primary_type_library_header_file) a le même nom que la bibliothèque de types, plus un. Extension TLH. Le fichier d’en-tête secondaire possède le même nom de base que la bibliothèque de types, avec une extension .TLI. Il contient les implémentations des fonctions membres générées par le compilateur, et est inclus (`#include`) dans le fichier d'en-tête principal.  
   
  Si vous importez une propriété dispinterface qui utilise des paramètres byref, #import ne générera pas __declspec ([propriété](../cpp/property-cpp.md)) instruction pour la fonction.  
@@ -128,7 +132,7 @@ ms.lasthandoff: 12/21/2017
   
  La directive `#import` participe également à une régénération minimale et peut être placée dans un fichier d'en-tête précompilé. Consultez [création de fichiers d’en-tête précompilés](../build/reference/creating-precompiled-header-files.md) pour plus d’informations.  
   
-###  <a name="_predir_the_primary_type_library_header_file"></a>Fichier d’en-tête de bibliothèque de types principale  
+###  <a name="_predir_the_primary_type_library_header_file"></a> Fichier d’en-tête de bibliothèque de types principale  
  Le fichier d'en-tête principal de bibliothèque de types se compose de sept sections :  
   
 -   Zones fixes de titre : se composent des commentaires, de l'instruction `#include` pour COMDEF.H (qui définit des macros standard utilisées dans l'en-tête) et d'autres informations de configuration diverses.  
@@ -185,7 +189,7 @@ using namespace MyLib;
   
  Pour plus d'informations, consultez l'article de la Base de connaissances « Les méthodes de Wrapper #import peuvent provoquer une violation d'accès » (n° 242527) ou « Erreurs du compilateur lors de l'utilisation de #import avec XML » (n° 269194). Vous trouverez les articles de la Base de connaissances sur le support de MSDN Library ou à [Support technique de Microsoft](https://support.microsoft.com/).  
   
-##  <a name="_predir_the_23import_directive_import_attributes"></a>attributs #import  
+##  <a name="_predir_the_23import_directive_import_attributes"></a> attributs #import  
  `#import` peut éventuellement inclure un ou plusieurs attributs. Ces attributs demandent au compilateur de modifier le contenu des en-têtes de bibliothèque de types. Une barre oblique inverse (**\\**) symbole peut être utilisé pour inclure des lignes supplémentaires dans un seul `#import` instruction. Exemple :  
   
 ```  

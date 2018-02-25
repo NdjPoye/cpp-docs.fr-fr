@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IExecutionResource
 - CONCRTRM/concurrency::IExecutionResource
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetExecutionResourceId
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetNodeId
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::Remove
-dev_langs: C++
-helpviewer_keywords: IExecutionResource structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cd22fdb38b1828e1fa86ca79b9967a546ccb9456
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eb4ad0b6f9038d78ae94b5ab1dcb148ebd628edc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource, structure
 Abstraction d'un thread matériel.  
@@ -59,7 +63,7 @@ struct IExecutionResource;
   
  **Espace de noms :** concurrency  
   
-##  <a name="currentsubscriptionlevel"></a>IExecutionResource::CurrentSubscriptionLevel, méthode  
+##  <a name="currentsubscriptionlevel"></a>  IExecutionResource::CurrentSubscriptionLevel, méthode  
  Retourne le nombre de processeur virtuel activée racines et les threads externes actuellement associés au thread matériel sous-jacent de cette ressource d’exécution représente abonnés.  
   
 ```
@@ -78,7 +82,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
   
  Le Gestionnaire de ressources utilise les informations au niveau d’abonnement en tant qu’une des manières permettant de déterminer quand déplacer des ressources entre les planificateurs.  
   
-##  <a name="getexecutionresourceid"></a>IExecutionResource::GetExecutionResourceId, méthode  
+##  <a name="getexecutionresourceid"></a>  IExecutionResource::GetExecutionResourceId, méthode  
  Retourne un identificateur unique pour le thread matériel que représente cette ressource d’exécution.  
   
 ```
@@ -91,7 +95,7 @@ virtual unsigned int GetExecutionResourceId() const = 0;
 ### <a name="remarks"></a>Notes  
  Chaque thread matériel est assigné un identificateur unique par le Runtime d’accès concurrentiel. Si plusieurs ressources d’exécution sont matériel associé thread, ils auront le même identificateur de ressource d’exécution.  
   
-##  <a name="getnodeid"></a>IExecutionResource::GetNodeId, méthode  
+##  <a name="getnodeid"></a>  IExecutionResource::GetNodeId, méthode  
  Retourne un identificateur unique pour le nœud du processeur auquel appartient cette ressource d’exécution.  
   
 ```
@@ -106,7 +110,7 @@ virtual unsigned int GetNodeId() const = 0;
   
  Le nombre de nœuds peut être obtenu à partir de la fonction [GetProcessorNodeCount](concurrency-namespace-functions.md).  
   
-##  <a name="remove"></a>IExecutionResource::Remove, méthode  
+##  <a name="remove"></a>  IExecutionResource::Remove, méthode  
  Retourne cette ressource d’exécution pour le Gestionnaire de ressources.  
   
 ```
@@ -124,9 +128,9 @@ virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
   
  Racines de processeur virtuel, peuvent être retournées au Gestionnaire de ressources en appelant le `Remove` (méthode), car l’interface `IVirtualProcessorRoot` hérite le `IExecutionResource` interface. Vous devrez peut-être retourner une racine de processeur virtuel en réponse à un appel à la [IScheduler::RemoveVirtualProcessors](ischeduler-structure.md#removevirtualprocessors) (méthode), ou lorsque vous avez terminé avec une racine de processeur virtuel sursouscrite obtenue à partir de la [ ISchedulerProxy::CreateOversubscriber](ischedulerproxy-structure.md#createoversubscriber) (méthode). Pour les racines de processeur virtuel, il n’existe aucune restriction sur le thread peut appeler le `Remove` (méthode).  
   
- `invalid_argument`est levée si le paramètre `pScheduler` a la valeur `NULL`.  
+ `invalid_argument` est levée si le paramètre `pScheduler` a la valeur `NULL`.  
   
- `invalid_operation`est levée si le paramètre `pScheduler` est différent du planificateur que cette ressource d’exécution a été créée, ou, avec une ressource d’exécution autonome, si le thread actuel est différent du thread qui a créé l’abonnement de thread.  
+ `invalid_operation` est levée si le paramètre `pScheduler` est différent du planificateur que cette ressource d’exécution a été créée, ou, avec une ressource d’exécution autonome, si le thread actuel est différent du thread qui a créé l’abonnement de thread.  
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   

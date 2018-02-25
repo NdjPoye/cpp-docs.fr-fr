@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xcomplex/std::abs
 - xcomplex/std::acos
@@ -28,7 +28,7 @@ f1_keywords:
 - xcomplex/std::tan
 - xcomplex/std::tanh
 ms.assetid: 58b14e94-0e0c-493e-8237-8b4d685904a2
-caps.latest.revision: "14"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::abs [C++]
@@ -49,11 +49,11 @@ helpviewer_keywords:
 - std::sqrt [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 14fed0ac2d0714989e78459a74b48fd8173c7632
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: aee4e410bae6ea3fc3726ac29c250e2339e0fcb0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;complex&gt;, fonctions
 ||||  
@@ -163,7 +163,7 @@ Type arg(const complex<Type>& complexNum);
 ### <a name="return-value"></a>Valeur de retour  
  Argument du nombre complexe.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le *argument* est l’angle qu’avec l’axe réel positif dans le plan complexe vecteur complex. Pour un nombre complexe *a + bi*, l’argument est égal à arctan (*b / a*). L’angle a un sens positif quand il est mesuré dans le sens contraire des aiguilles d’une montre à partir de l’axe réel positif et un sens négatif quand il est mesuré dans le sens des aiguilles d’une montre. Les valeurs principales sont supérieures à - pi et inférieur à ou égales à + pi.  
   
 ### <a name="example"></a>Exemple  
@@ -246,7 +246,7 @@ complex<Type> conj(const complex<Type>& complexNum);
 ### <a name="return-value"></a>Valeur de retour  
  Conjugué complexe du nombre complexe d’entrée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le conjugué d’un nombre complexe *a + bi* est *a - bi*. Le produit d’un nombre complexe et son conjugué est la norme du nombre *a*2 + *b*2.  
   
 ### <a name="example"></a>Exemple  
@@ -821,7 +821,7 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 ### <a name="return-value"></a>Valeur de retour  
  Forme cartésienne du nombre complexe spécifiée en forme polaire.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La forme de polaire d’un nombre complexe fournit le modulo *r* et l’argument *p*, où ces paramètres sont liées aux composants cartésiens réelles et imaginaires *un* et *b* par les équations *un* = r \* cos *p* et *b* = *r* \* sin *p*.  
   
 ### <a name="example"></a>Exemple  

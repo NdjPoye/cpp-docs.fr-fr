@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - join
 - AGENTS/concurrency::join
@@ -19,19 +20,22 @@ f1_keywords:
 - AGENTS/concurrency::join::release_message
 - AGENTS/concurrency::join::reserve_message
 - AGENTS/concurrency::join::resume_propagation
-dev_langs: C++
-helpviewer_keywords: join class
+dev_langs:
+- C++
+helpviewer_keywords:
+- join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5166dd4d8c57d3d64fb9d794319b7f2b0398e3d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6ee69daa9ec5570d89d407c980e4ff20deca6360
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="join-class"></a>join, classe
 Un bloc de messagerie `join` est un `propagator_block` à cible unique, à sources multiples et ordonné qui combine des messages de type `T` en provenance de chacune de ses sources.  
@@ -50,7 +54,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
  Le type de charge utile des messages joints et propagés par le bloc.  
   
  `_Jtype`  
- Le genre de `join` bloc est `greedy` ou`non_greedy`  
+ Le genre de `join` bloc est `greedy` ou `non_greedy`  
   
 ## <a name="members"></a>Membres  
   
@@ -59,7 +63,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
 |Nom|Description|  
 |----------|-----------------|  
 |[join](#ctor)|Surchargé. Construit un `join` bloc de messagerie.|  
-|[~ join, destructeur](#dtor)|Détruit le `join` bloc.|  
+|[~join Destructor](#dtor)|Détruit le `join` bloc.|  
   
 ### <a name="protected-methods"></a>Méthodes protégées  
   
@@ -93,7 +97,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
   
  **Espace de noms :** concurrency  
   
-##  <a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a> accept_message 
 
  Accepte un message qui a été offert par ce `join` bloc de messagerie, transférer la propriété à l’appelant.  
   
@@ -108,7 +112,7 @@ virtual message<_OutputType>* accept_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le `message` que l’appelant possède désormais la propriété de l’objet.  
   
-##  <a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a> consume_message 
 
  Consomme un message précédemment offert par le `join` bloc de messagerie et réservé par la cible, en transférant la propriété à l’appelant.  
   
@@ -126,7 +130,7 @@ virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Notes  
  Semblable à `accept`, mais est toujours précédé par un appel à `reserve`.  
   
-##  <a name="ctor"></a>jointure 
+##  <a name="ctor"></a> Joindre 
 
  Construit un `join` bloc de messagerie.  
   
@@ -175,7 +179,7 @@ join(
   
  Le type `filter_method` est un functor avec la signature `bool (T const &)` qui est appelé par ce `join` bloc de messagerie pour déterminer si elle doit accepter un message proposé.  
   
-##  <a name="dtor"></a>~ join 
+##  <a name="dtor"></a> ~join 
 
  Détruit le `join` bloc.  
   
@@ -183,7 +187,7 @@ join(
 ~join();
 ```  
   
-##  <a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a> link_target_notification 
 
  Rappel qui notifie qu’une nouvelle cible a été liée à ce `join` bloc de messagerie.  
   
@@ -191,7 +195,7 @@ join(
 virtual void link_target_notification(_Inout_ ITarget<std::vector<T>> *);
 ```  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  Passe un message à partir de façon asynchrone un `ISource` à ce bloc `join` bloc de messagerie. Il est appelé par le `propagate` (méthode), lorsqu’elle est appelée par un bloc source.  
   
@@ -211,7 +215,7 @@ message_status propagate_message(
 ### <a name="return-value"></a>Valeur de retour  
  A [message_status](concurrency-namespace-enums.md) indication de ce que la cible décidé de faire avec le message.  
   
-##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
  Construit un message de sortie contenant un message d’entrée de chaque source lorsqu’ils ont tous propagé un message. Envoie ce message de sortie à chacune de ses cibles.  
   
@@ -219,7 +223,7 @@ message_status propagate_message(
 void propagate_to_any_targets(_Inout_opt_ message<_OutputType> *);
 ```  
   
-##  <a name="release_message"></a>release_message 
+##  <a name="release_message"></a> release_message 
 
  Libère une réservation de message précédente.  
   
@@ -231,7 +235,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  Le `runtime_object_identity` de la `message` de l’objet est libéré.  
   
-##  <a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a> reserve_message 
 
  Réserve un message précédemment offert par ce `join` bloc de messagerie.  
   
@@ -244,12 +248,12 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
  Le `runtime_object_identity` de le proposé `message` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si le message a été réservé avec succès, `false` dans le cas contraire.  
+ `true` Si le message a été réservé avec succès, `false` dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
  Après avoir `reserve` est appelée, si elle retourne `true`, `consume` ou `release` doit être appelé pour accepter ou libérer la possession du message.  
   
-##  <a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation 
 
  Reprend la propagation après qu’une réservation a été libérée.  
   

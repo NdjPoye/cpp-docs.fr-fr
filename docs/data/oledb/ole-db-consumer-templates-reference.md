@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-attr.db_param
 - vc-attr.db_column
@@ -15,21 +16,23 @@ f1_keywords:
 - vc-attr.db_table
 - vc.templates.ole
 - vc-attr.db_source
-dev_langs: C++
-helpviewer_keywords: OLE DB consumer templates, classes
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 681654f79f0cb3574b0893bb9f726bea78435e74
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29f833f6a598b9028506fb11d163be49212bd998
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Référence des modèles du consommateur OLE DB
 Modèles du consommateur OLE DB contient les classes suivantes. La documentation de référence inclut également des rubriques sur la [macros pour les modèles du consommateur OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
@@ -121,7 +124,7 @@ Modèles du consommateur OLE DB contient les classes suivantes. La documentation
  Utilisé comme argument de modèle pour les classes de modèle, telles que `CCommand` et `CTable`, qui prennent un argument de classe d’accesseur. Utilisez `CNoAccessor` si vous ne souhaitez pas la classe pour prendre en charge des paramètres ou des colonnes de sortie.  
   
  [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)  
- Utilisé comme argument de modèle pour la `CCommand` modèle lorsque vous souhaitez que la commande pour gérer un ensemble de lignes unique. `CNoMultipleResults`est la valeur par défaut pour l’argument de modèle.  
+ Utilisé comme argument de modèle pour la `CCommand` modèle lorsque vous souhaitez que la commande pour gérer un ensemble de lignes unique. `CNoMultipleResults` est la valeur par défaut pour l’argument de modèle.  
   
  [CNoRowset](../../data/oledb/cnorowset-class.md)  
  Utilisé comme argument template pour `CCommand` ou `CTable` si la commande ou table ne renvoie pas un ensemble de lignes.  

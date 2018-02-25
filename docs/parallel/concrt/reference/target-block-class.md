@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - target_block
 - AGENTS/concurrency::target_block
@@ -28,19 +29,22 @@ f1_keywords:
 - AGENTS/concurrency::target_block::unlink_source
 - AGENTS/concurrency::target_block::unlink_sources
 - AGENTS/concurrency::target_block::wait_for_async_sends
-dev_langs: C++
-helpviewer_keywords: target_block class
+dev_langs:
+- C++
+helpviewer_keywords:
+- target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 42bf40997bed7bcf7125397d4984b636f64f3a6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2827e7bbb9a2c23804d90ccb729e990b84f3a442
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="targetblock-class"></a>target_block, classe
 La classe `target_block` est une classe de base abstraite qui fournit une fonctionnalité de gestion des liens de base et une vérification des erreurs pour les blocs cibles uniquement.  
@@ -72,13 +76,13 @@ class target_block : public ITarget<typename _SourceLinkRegistry::type::source_t
 |Nom|Description|  
 |----------|-----------------|  
 |[target_block](#ctor)|Construit un objet `target_block`.|  
-|[~ target_block, destructeur](#dtor)|Détruit le `target_block` objet.|  
+|[~target_block Destructor](#dtor)|Détruit le `target_block` objet.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[propager](#propagate)|Passe un message de façon asynchrone à partir d’un bloc source à ce bloc cible.|  
+|[propagate](#propagate)|Passe un message de façon asynchrone à partir d’un bloc source à ce bloc cible.|  
 |[send](#send)|Passe de façon synchrone un message à partir d’un bloc source à ce bloc cible.|  
   
 ### <a name="protected-methods"></a>Méthodes protégées  
@@ -111,7 +115,7 @@ class target_block : public ITarget<typename _SourceLinkRegistry::type::source_t
   
  **Espace de noms :** concurrency  
   
-##  <a name="async_send"></a>async_send 
+##  <a name="async_send"></a> async_send 
 
  Envoie un message pour le traitement de façon asynchrone.  
   
@@ -123,7 +127,7 @@ void async_send(_Inout_opt_ message<_Source_type>* _PMessage);
  `_PMessage`  
  Pointeur vers le message envoyé.  
   
-##  <a name="decline_incoming_messages"></a>decline_incoming_messages 
+##  <a name="decline_incoming_messages"></a> decline_incoming_messages 
 
  Indique au bloc que les nouveaux messages doivent être refusées.  
   
@@ -134,7 +138,7 @@ void decline_incoming_messages();
 ### <a name="remarks"></a>Notes  
  Cette méthode est appelée par le destructeur pour vous assurer que les nouveaux messages sont refusés pendant que la destruction est en cours d’exécution.  
   
-##  <a name="enable_batched_processing"></a>enable_batched_processing 
+##  <a name="enable_batched_processing"></a> enable_batched_processing 
 
  Permet de traités par lot de traitement pour ce bloc.  
   
@@ -142,7 +146,7 @@ void decline_incoming_messages();
 void enable_batched_processing();
 ```  
   
-##  <a name="initialize_target"></a>initialize_target 
+##  <a name="initialize_target"></a> initialize_target 
 
  Initialise l’objet de base. Plus précisément, le `message_processor` objet doit être initialisé.  
   
@@ -159,7 +163,7 @@ void initialize_target(
  `_PScheduleGroup`  
  Le groupe de planification à utiliser pour la planification des tâches.  
   
-##  <a name="link_source"></a>link_source 
+##  <a name="link_source"></a> link_source 
 
  Lie un bloc source spécifié à ce `target_block` objet.  
   
@@ -174,7 +178,7 @@ virtual void link_source(_Inout_ ISource<_Source_type>* _PSource);
 ### <a name="remarks"></a>Notes  
  Cette fonction ne doit pas être appelée directement sur un `target_block` objet. Les blocs doivent être connectés à l’aide de la `link_target` méthode sur `ISource` blocs, qui appellent la `link_source` méthode sur la cible correspondante.  
   
-##  <a name="process_input_messages"></a>process_input_messages 
+##  <a name="process_input_messages"></a> process_input_messages 
 
  Traite les messages sont reçus en tant qu’entrées.  
   
@@ -185,7 +189,7 @@ virtual void process_input_messages(_Inout_ message<_Source_type>* _PMessage);
 ### <a name="parameters"></a>Paramètres  
  `_PMessage`  
   
-##  <a name="process_message"></a>process_message 
+##  <a name="process_message"></a> process_message 
 
  En cas de substitution dans une classe dérivée, traite un message qui a été accepté par ce `target_block` objet.  
   
@@ -193,7 +197,7 @@ virtual void process_input_messages(_Inout_ message<_Source_type>* _PMessage);
 virtual void process_message(message<_Source_type> *);
 ```  
   
-##  <a name="propagate"></a>propager 
+##  <a name="propagate"></a> propager 
 
  Passe un message de façon asynchrone à partir d’un bloc source à ce bloc cible.  
   
@@ -216,7 +220,7 @@ virtual message_status propagate(
 ### <a name="remarks"></a>Notes  
  La méthode lève un [invalid_argument](../../../standard-library/invalid-argument-class.md) exception si le `_PMessage` ou `_PSource` paramètre est `NULL`.  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  En cas de substitution dans une classe dérivée, cette méthode passe de façon asynchrone un message à partir d’un `ISource` à ce bloc `target_block` objet. Il est appelé par le `propagate` (méthode), lorsqu’elle est appelée par un bloc source.  
   
@@ -236,7 +240,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Valeur de retour  
  A [message_status](concurrency-namespace-enums.md) indication de ce que la cible décidé de faire avec le message.  
   
-##  <a name="register_filter"></a>register_filter 
+##  <a name="register_filter"></a> register_filter 
 
  Inscrit une méthode de filtre qui sera appelée sur chaque message reçu.  
   
@@ -248,7 +252,7 @@ void register_filter(filter_method const& _Filter);
  `_Filter`  
  La méthode de filtrage.  
   
-##  <a name="remove_sources"></a>remove_sources 
+##  <a name="remove_sources"></a> remove_sources 
 
  Dissocie toutes les sources après avoir attendu pour les opérations d’envoi asynchrones en attente se terminent.  
   
@@ -259,7 +263,7 @@ void remove_sources();
 ### <a name="remarks"></a>Notes  
  Tous les blocs cibles doivent appeler cette routine pour supprimer les sources dans leur destructeur.  
   
-##  <a name="send"></a>Envoyer 
+##  <a name="send"></a> Envoyer 
 
  Passe de façon synchrone un message à partir d’un bloc source à ce bloc cible.  
   
@@ -286,7 +290,7 @@ virtual message_status send(
   
  Lorsque `send` est retournée, le message a déjà été accepté et transféré dans le bloc cible, ou il a été refusé par la cible.  
   
-##  <a name="send_message"></a>send_message 
+##  <a name="send_message"></a> send_message 
 
  En cas de substitution dans une classe dérivée, cette méthode passe de façon synchrone un message à partir d’un `ISource` à ce bloc `target_block` objet. Il est appelé par le `send` (méthode), lorsqu’elle est appelée par un bloc source.  
   
@@ -302,7 +306,7 @@ virtual message_status send_message(
 ### <a name="remarks"></a>Notes  
  Par défaut, ce bloc retourne `declined` sauf substitution par une classe dérivée.  
   
-##  <a name="sync_send"></a>sync_send 
+##  <a name="sync_send"></a> sync_send 
 
  Envoyer un message pour le traitement de façon synchrone.  
   
@@ -314,7 +318,7 @@ void sync_send(_Inout_opt_ message<_Source_type>* _PMessage);
  `_PMessage`  
  Pointeur vers le message envoyé.  
   
-##  <a name="ctor"></a>target_block 
+##  <a name="ctor"></a> target_block 
 
  Construit un objet `target_block`.  
   
@@ -322,7 +326,7 @@ void sync_send(_Inout_opt_ message<_Source_type>* _PMessage);
 target_block();
 ```  
   
-##  <a name="dtor"></a>~ target_block 
+##  <a name="dtor"></a> ~target_block 
 
  Détruit le `target_block` objet.  
   
@@ -330,7 +334,7 @@ target_block();
 virtual ~target_block();
 ```  
   
-##  <a name="unlink_source"></a>unlink_source 
+##  <a name="unlink_source"></a> unlink_source 
 
  Dissocie un bloc source spécifié à partir de ce `target_block` objet.  
   
@@ -342,7 +346,7 @@ virtual void unlink_source(_Inout_ ISource<_Source_type>* _PSource);
  `_PSource`  
  Un pointeur vers le `ISource` bloc qui doit être supprimée.  
   
-##  <a name="unlink_sources"></a>unlink_sources 
+##  <a name="unlink_sources"></a> unlink_sources 
 
  Dissocie tous les blocs de code source à partir de ce `target_block` objet.  
   
@@ -350,7 +354,7 @@ virtual void unlink_source(_Inout_ ISource<_Source_type>* _PSource);
 virtual void unlink_sources();
 ```  
   
-##  <a name="wait_for_async_sends"></a>wait_for_async_sends 
+##  <a name="wait_for_async_sends"></a> wait_for_async_sends 
 
  Attend que toutes les propagations asynchrones soient terminées.  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_map/stdext::hash_map
 - hash_map/stdext::hash_map::allocator_type
@@ -50,7 +51,8 @@ f1_keywords:
 - hash_map/stdext::hash_map::swap
 - hash_map/stdext::hash_map::upper_bound
 - hash_map/stdext::hash_map::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::hash_map
 - stdext::hash_map::allocator_type
@@ -95,16 +97,17 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 056d517779ca085152fea081271757329f7f3be8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc280212a4d37147c8af9cd2921e12516c529d13
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hashmap-class"></a>hash_map, classe
 > [!NOTE]
@@ -518,7 +521,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>Notes  
  Un type `const_iterator` ne peut pas être utilisé pour changer la valeur d'un élément.  
   
- Le `const_iterator` défini par hash_map pointe vers des éléments qui sont des objets de [value_type](#value_type), qui est de type `pair`*\<***const Key, Type***>*, dont le premier membre est la clé de l’élément et dont le deuxième membre est la référence mappée détenue par l’élément.  
+ Le `const_iterator` défini par les points de hash_map à des éléments qui sont des objets de [value_type](#value_type), qui est de type `pair`  *\< ***clé const, tapez*** >* , dont le premier membre est la clé à l’élément et dont deuxième membre est la référence mappée détenue par l’élément.  
   
  Pour déréférencer un `const_iterator` `cIter` pointe sur un élément dans un objet hash_map, utilisez le  **->**  opérateur.  
   
@@ -2711,7 +2714,7 @@ typedef pair<const Key, Type> value_type;
 ```  
   
 ### <a name="remarks"></a>Notes  
- `value_type` est déclaré comme étant `pair` *\<***const**[key_type](#key_type), [mapped_type](#mapped_type)*>* et non `pair`**\<key_type, mapped_type>**, car les clés d’un conteneur associatif ne peuvent pas être modifiées à l’aide d’une référence ou d’un itérateur non constant.  
+ `value_type` est déclaré comme étant `pair`  *\< * **const**[key_type](#key_type), [mapped_type](#mapped_type)*> * et non `pair`  **\<key_type, mapped_type >** , car les clés d’un conteneur associatif ne peuvent pas être modifiées à l’aide d’un itérateur non constante ou une référence.  
   
   
 ### <a name="example"></a>Exemple  

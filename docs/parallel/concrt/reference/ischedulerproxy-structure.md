@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ISchedulerProxy
 - CONCRTRM/concurrency::ISchedulerProxy
@@ -16,19 +17,22 @@ f1_keywords:
 - CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::Shutdown
 - CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::SubscribeCurrentThread
 - CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::UnbindContext
-dev_langs: C++
-helpviewer_keywords: ISchedulerProxy structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b151e68c9cce0113c46f0eaffff8e19ed4d5c896
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9fa2a67b432fac1dc7ec685e6563acb87fd69087
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy, structure
 Interface par laquelle les planificateurs communiquent avec le gestionnaire des ressources du runtime d'accès concurrentiel pour négocier l'allocation des ressources.  
@@ -63,7 +67,7 @@ struct ISchedulerProxy;
   
  **Espace de noms :** concurrency  
   
-##  <a name="bindcontext"></a>ISchedulerProxy::BindContext, méthode  
+##  <a name="bindcontext"></a>  ISchedulerProxy::BindContext Method  
  Associe un contexte d’exécution à un proxy de thread, si elle ne l’est pas déjà.  
   
 ```
@@ -77,9 +81,9 @@ virtual void BindContext(_Inout_ IExecutionContext* pContext) = 0;
 ### <a name="remarks"></a>Notes  
  Normalement, le [IThreadProxy::SwitchTo](ithreadproxy-structure.md#switchto) méthode lie un proxy de thread à un contexte d’exécution à la demande. Il existe, toutefois, les cas où il est nécessaire de lier un contexte à l’avance pour vous assurer que le `SwitchTo` méthode bascule vers un contexte déjà lié. C’est le cas dans un contexte de planification comme elle ne peut pas appeler les méthodes qui allouent la mémoire UMS, et la liaison d’un proxy de thread peut impliquer l’allocation de mémoire si un proxy de thread n’est pas immédiatement disponible dans le pool libre de la fabrique de proxy de thread.  
   
- `invalid_argument`est levée si le paramètre `pContext` a la valeur `NULL`.  
+ `invalid_argument` est levée si le paramètre `pContext` a la valeur `NULL`.  
   
-##  <a name="createoversubscriber"></a>ISchedulerProxy::CreateOversubscriber, méthode  
+##  <a name="createoversubscriber"></a>  ISchedulerProxy::CreateOversubscriber Method  
  Crée une nouvelle racine de processeur virtuel sur le thread matériel associé à une ressource d’exécution existant.  
   
 ```
@@ -98,7 +102,7 @@ virtual IVirtualProcessorRoot* CreateOversubscriber(_Inout_ IExecutionResource* 
   
  Vous pouvez même sur-souscrire une racine de processeur virtuel existante, car le `IVirtualProcessorRoot` interface hérite de la `IExecutionResource` interface.  
   
-##  <a name="requestinitialvirtualprocessors"></a>ISchedulerProxy::RequestInitialVirtualProcessors, méthode  
+##  <a name="requestinitialvirtualprocessors"></a>  ISchedulerProxy::RequestInitialVirtualProcessors Method  
  Demande une allocation initiale de racines de processeur virtuel. Chaque racine de processeur virtuel représente la capacité à exécuter un thread qui peut effectuer un travail pour le planificateur.  
   
 ```
@@ -123,7 +127,7 @@ virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurr
   
  L’acte d’abonnement d’un thread augmente le niveau d’abonnement du thread matériel sous-jacent d’une unité. Niveau de l’abonnement est diminué d’une unité lorsque l’abonnement est terminé. Pour plus d’informations sur les niveaux d’abonnement, consultez [IExecutionResource::CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="shutdown"></a>ISchedulerProxy::Shutdown, méthode  
+##  <a name="shutdown"></a>  ISchedulerProxy::Shutdown Method  
  Notifie le Gestionnaire de ressources que le planificateur est en cours d’arrêt. Cela entraîne le Gestionnaire de ressources à récupérer immédiatement toutes les ressources accordées au planificateur.  
   
 ```
@@ -137,7 +141,7 @@ virtual void Shutdown() = 0;
   
  Il n’est pas nécessaire pour le Planificateur de retourner toutes les racines de processeur virtuel du Gestionnaire de ressources lui a accordées via des appels à la `Remove` méthode étant donné que toutes les racines de processeur virtuel seront affichera pour le Gestionnaire de ressources à l’arrêt.  
   
-##  <a name="subscribecurrentthread"></a>ISchedulerProxy::SubscribeCurrentThread, méthode  
+##  <a name="subscribecurrentthread"></a>  ISchedulerProxy::SubscribeCurrentThread Method  
  Inscrit le thread actuel avec le Gestionnaire de ressources, son association à ce planificateur.  
   
 ```
@@ -154,7 +158,7 @@ virtual IExecutionResource* SubscribeCurrentThread() = 0;
   
  L’acte d’abonnement d’un thread augmente le niveau d’abonnement du thread matériel sous-jacent d’une unité. Niveau de l’abonnement est diminué d’une unité lorsque l’abonnement est terminé. Pour plus d’informations sur les niveaux d’abonnement, consultez [IExecutionResource::CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="unbindcontext"></a>ISchedulerProxy::UnbindContext, méthode  
+##  <a name="unbindcontext"></a>  ISchedulerProxy::UnbindContext Method  
  Dissocie un proxy de thread du contexte d’exécution spécifié par le `pContext` paramètre et le retourne au pool libre de la fabrique de proxy de thread. Cette méthode peut uniquement être appelée sur un contexte d’exécution qui a été lié via la [ISchedulerProxy::BindContext](#bindcontext) (méthode) et n’a pas encore été démarré en étant le `pContext` paramètre d’une [IThreadProxy::SwitchTo ](ithreadproxy-structure.md#switchto) appel de méthode.  
   
 ```

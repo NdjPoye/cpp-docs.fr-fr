@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,11 +20,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b57c9e9a71e8a0b603207a095e2bede333ed6ed6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4e2d01fb6610f9b5e8f1d1298aaa49de6a83b561
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Lecture de chaînes dans le fournisseur OLE DB
 Le `RMyProviderRowset::Execute` fonction ouvre un fichier et lit les chaînes. Le consommateur passe le nom de fichier au fournisseur en appelant [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx). Le fournisseur reçoit le nom de fichier et le stocke dans la variable membre `m_szCommandText`. `Execute` lit le nom de fichier `m_szCommandText`. Si le nom de fichier n’est pas valide ou le fichier n’est pas disponible, `Execute` renvoie une erreur. Sinon, il ouvre le fichier et appelle `fgets` pour récupérer les chaînes. Pour chaque jeu de chaînes qu’il lit, `Execute` crée une instance de l’enregistrement utilisateur (`CAgentMan`) et le place dans un tableau.  

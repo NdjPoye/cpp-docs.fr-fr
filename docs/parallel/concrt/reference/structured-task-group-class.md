@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - structured_task_group
 - PPL/concurrency::structured_task_group
@@ -16,19 +17,22 @@ f1_keywords:
 - PPL/concurrency::structured_task_group::run
 - PPL/concurrency::structured_task_group::run_and_wait
 - PPL/concurrency::structured_task_group::wait
-dev_langs: C++
-helpviewer_keywords: structured_task_group class
+dev_langs:
+- C++
+helpviewer_keywords:
+- structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ae2e4648e94d05edc3ec787232bab7f1db8aea90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1f8d2b9cdc71b6e8a7a0fe9e3bf3d3d3306af1da
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group, classe
 La classe `structured_task_group` représente une collection très structurée de travail parallèle. Vous pouvez mettre en file d'attente des tâches parallèles individuelles dans un `structured_task_group` à l'aide d'objets `task_handle`, attendre qu'elles se terminent ou annuler le groupe de tâches avant la fin de leur exécution, ce qui annule toutes les tâches dont l'exécution n'a pas commencé.  
@@ -46,17 +50,17 @@ class structured_task_group;
 |Nom|Description|  
 |----------|-----------------|  
 |[structured_task_group](#ctor)|Surchargé. Construit un nouveau `structured_task_group` objet.|  
-|[~ structured_task_group, destructeur](#dtor)|Détruit un objet `structured_task_group`. Vous devez appeler la `wait` ou `run_and_wait` méthode sur l’objet avant l’exécution du destructeur, sauf si le destructeur s’exécute comme résultat de déroulement de pile en raison d’une exception.|  
+|[~structured_task_group Destructor](#dtor)|Détruit un objet `structured_task_group`. Vous devez appeler la `wait` ou `run_and_wait` méthode sur l’objet avant l’exécution du destructeur, sauf si le destructeur s’exécute comme résultat de déroulement de pile en raison d’une exception.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Annuler](#cancel)|Permet un meilleur effort pour annuler la sous-arborescence de travail rattachée à ce groupe de tâches. Chaque tâche planifiée sur le groupe de tâches sera annulée de manière transitive si possible.|  
+|[cancel](#cancel)|Permet un meilleur effort pour annuler la sous-arborescence de travail rattachée à ce groupe de tâches. Chaque tâche planifiée sur le groupe de tâches sera annulée de manière transitive si possible.|  
 |[is_canceling](#is_canceling)|Indique si le groupe de tâches est actuellement en cours d’annulation à l’appelant. Cela n’indique pas nécessairement que le `cancel` méthode a été appelée sur le `structured_task_group` objet (bien que ce cas la méthode retourne `true`). Il peut arriver que le `structured_task_group` objet s’exécute en ligne et un groupe de tâches supplémentaire en haut dans l’arborescence de travail a été annulé. Dans tels cas où l’exécution peut déterminer à l’avance que cette annulation passera via cet `structured_task_group` objet, `true` s’affichera également.|  
 |[run](#run)|Surchargé. Planifie une tâche sur le `structured_task_group` objet. L’appelant gère la durée de vie de la `task_handle` objet passé dans le `_Task_handle` paramètre. La version qui prend le paramètre `_Placement` amène la tâche à être favorise l’exécution à l’emplacement spécifié par ce paramètre.|  
 |[run_and_wait](#run_and_wait)|Surchargé. Planifie une tâche à exécuter inline dans le contexte d’appel avec l’assistance de la `structured_task_group` objet pour la prise en charge complète de l’annulation. Si un `task_handle` objet est passé en tant que paramètre à `run_and_wait`, l’appelant est chargé de gérer la durée de vie de la `task_handle` objet. La fonction attend ensuite que tout le travail sur le `structured_task_group` objet est terminée ou annulé.|  
-|[attente](#wait)|Attend que tout le travail sur la `structured_task_group` terminée ou est annulée.|  
+|[wait](#wait)|Attend que tout le travail sur la `structured_task_group` terminée ou est annulée.|  
   
 ## <a name="remarks"></a>Notes  
  Il existe plusieurs restrictions importantes mis l’utilisation d’un `structured_task_group` objet afin d’obtenir des performances :  
@@ -79,7 +83,7 @@ class structured_task_group;
   
  **Espace de noms :** concurrency  
   
-##  <a name="cancel"></a>Annuler 
+##  <a name="cancel"></a> Annuler 
 
  Permet un meilleur effort pour annuler la sous-arborescence de travail rattachée à ce groupe de tâches. Chaque tâche planifiée sur le groupe de tâches sera annulée de manière transitive si possible.  
   
@@ -90,7 +94,7 @@ void cancel();
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [annulation](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).  
   
-##  <a name="is_canceling"></a>is_canceling 
+##  <a name="is_canceling"></a> is_canceling 
 
  Indique si le groupe de tâches est actuellement en cours d’annulation à l’appelant. Cela n’indique pas nécessairement que le `cancel` méthode a été appelée sur le `structured_task_group` objet (bien que ce cas la méthode retourne `true`). Il peut arriver que le `structured_task_group` objet s’exécute en ligne et un groupe de tâches supplémentaire en haut dans l’arborescence de travail a été annulé. Dans tels cas où l’exécution peut déterminer à l’avance que cette annulation passera via cet `structured_task_group` objet, `true` s’affichera également.  
   
@@ -104,7 +108,7 @@ bool is_canceling();
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [annulation](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).  
   
-##  <a name="run"></a>exécuter 
+##  <a name="run"></a> Exécuter 
 
  Planifie une tâche sur le `structured_task_group` objet. L’appelant gère la durée de vie de la `task_handle` objet passé dans le `_Task_handle` paramètre. La version qui prend le paramètre `_Placement` amène la tâche à être favorise l’exécution à l’emplacement spécifié par ce paramètre.  
   
@@ -136,7 +140,7 @@ void run(
   
  Lève une [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) exception si la tâche gérer donné par le `_Task_handle` paramètre a déjà été planifié sur un objet de groupe de tâches via la `run` méthode et il n’y a eu aucun appel à soit le `wait` ou `run_and_wait` méthode sur ce groupe de tâches.  
   
-##  <a name="run_and_wait"></a>run_and_wait 
+##  <a name="run_and_wait"></a> run_and_wait 
 
  Planifie une tâche à exécuter inline dans le contexte d’appel avec l’assistance de la `structured_task_group` objet pour la prise en charge complète de l’annulation. Si un `task_handle` objet est passé en tant que paramètre à `run_and_wait`, l’appelant est chargé de gérer la durée de vie de la `task_handle` objet. La fonction attend ensuite que tout le travail sur le `structured_task_group` objet est terminée ou annulé.  
   
@@ -170,7 +174,7 @@ task_group_status run_and_wait(const _Function& _Func);
   
  Dans le chemin d’exécution non exceptionnel, vous avez une autorisation d’appeler cette méthode ou la `wait` méthode avant le destructeur de la `structured_task_group` s’exécute.  
   
-##  <a name="ctor"></a>structured_task_group 
+##  <a name="ctor"></a> structured_task_group 
 
  Construit un nouveau `structured_task_group` objet.  
   
@@ -187,7 +191,7 @@ structured_task_group(cancellation_token _CancellationToken);
 ### <a name="remarks"></a>Notes  
  Le constructeur qui accepte un jeton d’annulation crée un `structured_task_group` qui sera annulée lors de l’annulation de la source associée au jeton. En fournissant un jeton d’annulation explicite isole également ce groupe de tâches structurés de participer à une annulation implicite à partir d’un groupe parent avec un jeton différent ou aucun jeton.  
   
-##  <a name="dtor"></a>~ structured_task_group 
+##  <a name="dtor"></a> ~structured_task_group 
 
  Détruit un objet `structured_task_group`. Vous devez appeler la `wait` ou `run_and_wait` méthode sur l’objet avant l’exécution du destructeur, sauf si le destructeur s’exécute comme résultat de déroulement de pile en raison d’une exception.  
   
@@ -198,7 +202,7 @@ structured_task_group(cancellation_token _CancellationToken);
 ### <a name="remarks"></a>Notes  
  Si le destructeur s’exécute en tant que le résultat d’une exécution normale (par exemple, pas déroulement de pile en raison d’une exception) et ne le `wait` ni `run_and_wait` a été appelée, le destructeur peut lever une [missing_wait](missing-wait-class.md) exception.  
   
-##  <a name="wait"></a>attente 
+##  <a name="wait"></a> attente 
 
  Attend que tout le travail sur la `structured_task_group` terminée ou est annulée.  
   

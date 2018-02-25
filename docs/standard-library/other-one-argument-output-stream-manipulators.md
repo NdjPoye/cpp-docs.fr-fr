@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: output streams, one-argument manipulators
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- output streams, one-argument manipulators
 ms.assetid: e381dee8-6b16-4cef-805a-4a6a1d2b696b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 916a39d284666eebd3398423471991602509e9de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 55b70fd546dc2f3d5d0db6d8845864ef8b89cd8e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>Autres manipulateurs de flux de sortie à un argument
 L’exemple suivant utilise une classe `money`, qui est un type `long`. Le manipulateur `setpic` attache une chaîne « image » mise en forme à la classe qui peut être utilisée par l’opérateur d’insertion de flux surchargé de la classe `money`. La chaîne image est stockée comme variable statique dans la classe `money` au lieu d’être stockée comme membre d’une classe stream. Vous n’avez donc pas à dériver une nouvelle classe output stream.  

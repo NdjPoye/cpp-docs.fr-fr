@@ -5,23 +5,25 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::get_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 97f03dbf71c0f8b97b750532279e4cc76d01fb64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7628f5e0f91d1cf4064c0f802e242138acf9de3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Fonctions d’espace de noms Concurrency::Graphics::Direct3D
 ||||  
@@ -30,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 |[make_texture](#make_texture)|[msad4](#msad4)|  
 
  
-##  <a name="get_sampler"></a>get_sampler  
+##  <a name="get_sampler"></a>  get_sampler  
  Obtenir l’interface d’état D3D échantillonneur sur l’accélérateur donné afficher qui représente l’objet de l’échantillonneur spécifié.  
   
 ```  
@@ -49,7 +51,7 @@ IUnknown* get_sampler(
 ### <a name="return-value"></a>Valeur de retour  
  Le pointeur d’interface IUnknown correspondant à l’état de l’échantillonneur D3D qui représente l’échantillonneur donné.  
   
-##  <a name="get_texture"></a>get_texture  
+##  <a name="get_texture"></a>  get_texture  
  Obtient l’interface de texture Direct3D sous-jacent spécifié [texture](texture-class.md) objet.  
   
 ```  
@@ -92,7 +94,7 @@ _Ret_ IUnknown *get_texture(
 ### <a name="return-value"></a>Valeur de retour  
  Le pointeur d’interface IUnknown correspondant à la texture Direct3D sous-jacents de la texture.  
   
-##  <a name="make_sampler"></a>make_sampler  
+##  <a name="make_sampler"></a>  make_sampler  
  Créer un échantillon à partir d’un pointeur d’interface état D3D échantillonneur.  
   
 ```  
@@ -106,7 +108,7 @@ sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Un échantillon de représente l’état de l’échantillonneur D3D fourni.  
   
-##  <a name="make_texture"></a>make_texture  
+##  <a name="make_texture"></a>  make_texture  
  Crée un [texture](texture-class.md) objet en utilisant les paramètres spécifiés.  
   
 ```  
@@ -139,7 +141,7 @@ texture<value_type, _Rank> make_texture(
 ### <a name="return-value"></a>Valeur de retour  
  Une texture à l’aide de la texture D3D fournie.  
   
-##  <a name="msad4"></a>msad4  
+##  <a name="msad4"></a>  msad4  
  Compare une valeur de référence de 4 octets et une valeur de la source de 8 octets et accumule un vecteur de 4 sommes. Chaque somme correspond à la somme masquée des valeurs absolues des alignements d’octets différents entre la valeur de référence et la valeur de la source.  
   
 ```  
@@ -165,7 +167,7 @@ inline uint4 msad4(
 ## <a name="requirements"></a>Configuration requise  
  **En-tête :** amp_graphics.h  
   
- **Namespace :** Concurrency::graphics::direct3d 
+ **Namespace:** Concurrency::graphics::direct3d 
 
 ## <a name="see-also"></a>Voir aussi  
  [Concurrency::graphics::direct3d, espace de noms](concurrency-graphics-direct3d-namespace.md)

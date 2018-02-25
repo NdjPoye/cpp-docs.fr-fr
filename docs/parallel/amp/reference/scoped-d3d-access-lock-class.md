@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scoped_d3d_access_lock
 - AMPRT/scoped_d3d_access_lock
 - AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 37dadc932701354de317d253a39bd2f2ee71a495
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4a592249221129bce35f8592dcec56ff2379472d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock, classe
 Wrapper RAII de verrou sur un objet accelerator_view accès D3D.  
@@ -40,7 +43,7 @@ class scoped_d3d_access_lock;
 |Nom|Description|  
 |----------|-----------------|  
 |[scoped_d3d_access_lock constructeur](#ctor)|Surchargé. Construit un objet `scoped_d3d_access_lock`. Le verrou est libéré lorsque cet objet est hors de portée.|  
-|[~ scoped_d3d_access_lock destructeur](#dtor)|Libère le verrou d’accès D3D sur associé `accelerator_view` objet.|  
+|[~scoped_d3d_access_lock Destructor](#dtor)|Libère le verrou d’accès D3D sur associé `accelerator_view` objet.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
@@ -56,7 +59,7 @@ class scoped_d3d_access_lock;
   
  **Namespace :** concurrency::direct3d  
 
-##  <a name="ctor"></a>scoped_d3d_access_lock 
+##  <a name="ctor"></a> scoped_d3d_access_lock 
 
  Construit un objet `scoped_d3d_access_lock`. Le verrou est libéré lorsque cet objet est hors de portée.  
  
@@ -95,14 +98,14 @@ scoped_d3d_access_lock(// [3] move constructor
  Prend un verrou d’accès D3D existant d’une autre `scoped_d3d_access_lock` objet. Construction ne bloque pas.  
 
   
-##  <a name="dtor"></a>~ scoped_d3d_access_lock 
+##  <a name="dtor"></a> ~scoped_d3d_access_lock 
 
  Libère le verrou d’accès D3D sur associé `accelerator_view` objet.  
   
 ```  
 ~scoped_d3d_access_lock();
 ```  
-## <a name="operator_eq"></a>opérateur = 
+## <a name="operator_eq"></a> operator= 
 
 Prend possession du verrou d’un autre accès D3D `scoped_d3d_access_lock` objet libérer le verrou précédent.  
  

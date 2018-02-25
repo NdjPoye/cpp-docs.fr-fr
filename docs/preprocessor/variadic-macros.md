@@ -4,30 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bf4d669f1a716751d02e06c2c52de5df5128b1a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a0e3832ab334d31b50edbe0cc1fd5dccbffb61bf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="variadic-macros"></a>Macros Variadic
 Macros Variadic sont des macros de type fonction contenant un nombre variable d’arguments.  
   
 ## <a name="remarks"></a>Notes  
- Pour utiliser des macros variadiques, les points de suspension peut être spécifié comme argument formel final dans une définition de macro et l’identificateur de remplacement `__VA_ARGS__` peut être utilisée dans la définition d’insérer les arguments en trop.  `__VA_ARGS__`est remplacé par tous les arguments qui correspondent à des points de suspension, y compris des virgules entre eux.  
+ Pour utiliser des macros variadiques, les points de suspension peut être spécifié comme argument formel final dans une définition de macro et l’identificateur de remplacement `__VA_ARGS__` peut être utilisée dans la définition d’insérer les arguments en trop.  `__VA_ARGS__` est remplacé par tous les arguments qui correspondent à des points de suspension, y compris des virgules entre eux.  
   
  La norme du C indique qu’au moins un argument doit être transmis à la sélection, pour vous assurer que la macro n’est pas résolu en une expression avec une virgule de fin.  L’implémentation Visual C++ permettent de supprimer une virgule de fin si aucun argument pour les points de suspension.  
   

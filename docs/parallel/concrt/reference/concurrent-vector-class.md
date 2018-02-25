@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concurrent_vector
 - CONCURRENT_VECTOR/concurrency::concurrent_vector
@@ -36,19 +37,22 @@ f1_keywords:
 - CONCURRENT_VECTOR/concurrency::concurrent_vector::shrink_to_fit
 - CONCURRENT_VECTOR/concurrency::concurrent_vector::size
 - CONCURRENT_VECTOR/concurrency::concurrent_vector::swap
-dev_langs: C++
-helpviewer_keywords: concurrent_vector class
+dev_langs:
+- C++
+helpviewer_keywords:
+- concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1b765be1043ac69ed735eb91deaf9419bce7f017
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b1f196a4eaf8685a33b1ef4847e44f62015ed1ed
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrentvector-class"></a>Classe concurrent_vector
 La classe `concurrent_vector` est une classe de conteneur de séquence qui autorise un accès aléatoire à tout élément. Elle permet les opérations d'ajout d'accès concurrentiel sécurisé, d'accès à un élément, d'accès à un itérateur et de traversée d'itérateur.  
@@ -93,7 +97,7 @@ class concurrent_vector: protected details::_Allocator_base<T,
 |Nom|Description|  
 |----------|-----------------|  
 |[concurrent_vector](#ctor)|Surchargé. Construit un vecteur simultané.|  
-|[~ concurrent_vector, destructeur](#dtor)|Efface tous les éléments et détruit ce vecteur simultané.|  
+|[~concurrent_vector Destructor](#dtor)|Efface tous les éléments et détruit ce vecteur simultané.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -129,7 +133,7 @@ class concurrent_vector: protected details::_Allocator_base<T,
   
 |Nom|Description|  
 |----------|-----------------|  
-|[operator]](#operator_at)|Surchargé. Fournit l’accès à l’élément à l’index donné dans le vecteur simultané. Cette méthode est concurrentiel pour les opérations de lecture et également lors de l’augmentation du vecteur, tant que vous avez vérifié que la valeur `_Index` est inférieure à la taille du vecteur simultané.|  
+|[operator[]](#operator_at)|Surchargé. Fournit l’accès à l’élément à l’index donné dans le vecteur simultané. Cette méthode est concurrentiel pour les opérations de lecture et également lors de l’augmentation du vecteur, tant que vous avez vérifié que la valeur `_Index` est inférieure à la taille du vecteur simultané.|  
 |[operator=](#operator_eq)|Surchargé. Assigne le contenu d’un autre `concurrent_vector` objet à celui-ci. Cette méthode n’est pas d’accès concurrentiel sécurisé.|  
   
 ## <a name="remarks"></a>Notes  
@@ -147,7 +151,7 @@ class concurrent_vector: protected details::_Allocator_base<T,
   
  **Espace de noms :** concurrency  
   
-##  <a name="assign"></a>affecter 
+##  <a name="assign"></a> affecter 
 
  Efface les éléments du vecteur simultané et lui attribue `_N` copie de `_Item`, ou les valeurs spécifiées par la plage d’itérateurs [ `_Begin`, `_End`). Cette méthode n’est pas d’accès concurrentiel sécurisé.  
   
@@ -178,9 +182,9 @@ void assign(_InputIterator _Begin,
  Itérateur à située immédiatement après le dernier élément de la plage source.  
   
 ### <a name="remarks"></a>Notes  
- `assign`n’est pas d’accès concurrentiel sécurisé. Vous devez vous assurer qu’aucun autre thread n’est appel de méthodes sur le vecteur simultané lorsque vous appelez cette méthode.  
+ `assign` n’est pas d’accès concurrentiel sécurisé. Vous devez vous assurer qu’aucun autre thread n’est appel de méthodes sur le vecteur simultané lorsque vous appelez cette méthode.  
   
-##  <a name="at"></a>à 
+##  <a name="at"></a> à 
 
  Fournit l’accès à l’élément à l’index donné dans le vecteur simultané. Cette méthode est concurrentiel pour les opérations de lecture et également lors de l’augmentation du vecteur, tant que vous avez vérifié que la valeur `_Index` est inférieure à la taille du vecteur simultané.  
   
@@ -202,7 +206,7 @@ const_reference at(size_type _Index) const;
   
  La méthode lève `out_of_range` si `_Index` est supérieure ou égale à la taille du vecteur simultané, et `range_error` si l’index est pour une partie rompue du vecteur. Pour plus d’informations sur la façon dont un vecteur peut être endommagé, consultez [conteneurs et objets parallèles](../../../parallel/concrt/parallel-containers-and-objects.md).  
   
-##  <a name="back"></a>Précédent 
+##  <a name="back"></a> Précédent 
 
  Retourne une référence ou une `const` fait référence au dernier élément dans le vecteur simultané. Si le vecteur simultané est vide, la valeur de retour est non définie. Cette méthode est concurrentiel.  
   
@@ -215,7 +219,7 @@ const_reference back() const;
 ### <a name="return-value"></a>Valeur de retour  
  Une référence ou une `const` fait référence au dernier élément dans le vecteur simultané.  
   
-##  <a name="begin"></a>commencer 
+##  <a name="begin"></a> Commencer 
 
  Retourne un itérateur de type `iterator` ou `const_iterator` au début du vecteur simultané. Cette méthode est concurrentiel.  
   
@@ -228,7 +232,7 @@ const_iterator begin() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur de type `iterator` ou `const_iterator` au début du vecteur simultané.  
   
-##  <a name="capacity"></a>capacité 
+##  <a name="capacity"></a> Capacité 
 
  Retourne la taille maximale que peut atteindre le vecteur simultané sans avoir à allouer davantage de mémoire. Cette méthode est concurrentiel.  
   
@@ -242,7 +246,7 @@ size_type capacity() const;
 ### <a name="remarks"></a>Notes  
  Contrairement à une bibliothèque Standard C++ `vector`, un `concurrent_vector` objet ne déplace pas les éléments existants s’il alloue plus de mémoire.  
   
-##  <a name="cbegin"></a>cbegin 
+##  <a name="cbegin"></a> cbegin 
 
  Retourne un itérateur de type `const_iterator` au début du vecteur simultané. Cette méthode est concurrentiel.  
   
@@ -253,7 +257,7 @@ const_iterator cbegin() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur de type `const_iterator` au début du vecteur simultané.  
   
-##  <a name="cend"></a>cend 
+##  <a name="cend"></a> cend 
 
  Retourne un itérateur de type `const_iterator` à la fin du vecteur simultané. Cette méthode est concurrentiel.  
   
@@ -264,7 +268,7 @@ const_iterator cend() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur de type `const_iterator` à la fin du vecteur simultané.  
   
-##  <a name="clear"></a>Effacer 
+##  <a name="clear"></a> Effacer 
 
  Efface tous les éléments dans le vecteur simultané. Cette méthode n’est pas d’accès concurrentiel sécurisé.  
   
@@ -273,9 +277,9 @@ void clear();
 ```  
   
 ### <a name="remarks"></a>Notes  
- `clear`n’est pas d’accès concurrentiel sécurisé. Vous devez vous assurer qu’aucun autre thread n’est appel de méthodes sur le vecteur simultané lorsque vous appelez cette méthode. `clear`ne libère pas de tableaux internes. Pour libérer des tableaux internes, appelez la fonction `shrink_to_fit` après `clear`.  
+ `clear` n’est pas d’accès concurrentiel sécurisé. Vous devez vous assurer qu’aucun autre thread n’est appel de méthodes sur le vecteur simultané lorsque vous appelez cette méthode. `clear` ne libère pas de tableaux internes. Pour libérer des tableaux internes, appelez la fonction `shrink_to_fit` après `clear`.  
   
-##  <a name="ctor"></a>concurrent_vector 
+##  <a name="ctor"></a> concurrent_vector 
 
  Construit un vecteur simultané.  
   
@@ -349,7 +353,7 @@ concurrent_vector(_InputIterator _Begin,
   
  Le dernier constructeur spécifie les valeurs fournies par la plage d’itérateurs [ `_Begin`, `_End`).  
   
-##  <a name="dtor"></a>~ concurrent_vector 
+##  <a name="dtor"></a> ~concurrent_vector 
 
  Efface tous les éléments et détruit ce vecteur simultané.  
   
@@ -357,7 +361,7 @@ concurrent_vector(_InputIterator _Begin,
 ~concurrent_vector();
 ```  
   
-##  <a name="crbegin"></a>crbegin 
+##  <a name="crbegin"></a> crbegin 
 
  Retourne un itérateur de type `const_reverse_iterator` au début du vecteur simultané. Cette méthode est concurrentiel.  
   
@@ -368,7 +372,7 @@ const_reverse_iterator crbegin() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur de type `const_reverse_iterator` au début du vecteur simultané.  
   
-##  <a name="crend"></a>crend 
+##  <a name="crend"></a> crend 
 
  Retourne un itérateur de type `const_reverse_iterator` à la fin du vecteur simultané. Cette méthode est concurrentiel.  
   
@@ -379,7 +383,7 @@ const_reverse_iterator crend() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur de type `const_reverse_iterator` à la fin du vecteur simultané.  
   
-##  <a name="empty"></a>vide 
+##  <a name="empty"></a> vide 
 
  Teste si le vecteur simultané est vide au moment où cette méthode est appelée. Cette méthode est concurrentiel.  
   
@@ -388,9 +392,9 @@ bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si le vecteur était vide au moment où la fonction a été appelée, `false` dans le cas contraire.  
+ `true` Si le vecteur était vide au moment où la fonction a été appelée, `false` dans le cas contraire.  
   
-##  <a name="end"></a>fin 
+##  <a name="end"></a> Fin 
 
  Retourne un itérateur de type `iterator` ou `const_iterator` à la fin du vecteur simultané. Cette méthode est concurrentiel.  
   
@@ -403,7 +407,7 @@ const_iterator end() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur de type `iterator` ou `const_iterator` à la fin du vecteur simultané.  
   
-##  <a name="front"></a>premier plan 
+##  <a name="front"></a> Premier plan 
 
  Retourne une référence ou une `const` référence au premier élément dans le vecteur simultané. Si le vecteur simultané est vide, la valeur de retour est non définie. Cette méthode est concurrentiel.  
   
@@ -416,7 +420,7 @@ const_reference front() const;
 ### <a name="return-value"></a>Valeur de retour  
  Une référence ou une `const` référence au premier élément dans le vecteur simultané.  
   
-##  <a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a> get_allocator 
 
  Retourne une copie de l’allocateur utilisé pour construire le vecteur simultané. Cette méthode est concurrentiel.  
   
@@ -427,7 +431,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Valeur de retour  
  Une copie de l’allocateur utilisé pour construire le `concurrent_vector` objet.  
   
-##  <a name="grow_by"></a>grow_by 
+##  <a name="grow_by"></a> grow_by 
 
  Augmente ce vecteur simultané par `_Delta` éléments. Cette méthode est concurrentiel.  
   
@@ -453,7 +457,7 @@ iterator grow_by(
 ### <a name="remarks"></a>Notes  
  Si `_Item` n’est pas spécifié, les nouveaux éléments sont construits par défaut.  
   
-##  <a name="grow_to_at_least"></a>grow_to_at_least 
+##  <a name="grow_to_at_least"></a> grow_to_at_least 
 
  Augmente ce vecteur simultané jusqu'à ce qu’il comporte au moins `_N` éléments. Cette méthode est concurrentiel.  
   
@@ -468,7 +472,7 @@ iterator grow_to_at_least(size_type _N);
 ### <a name="return-value"></a>Valeur de retour  
  Itérateur qui pointe vers le début de la séquence ajoutée, ou l’élément à l’index `_N` si aucun élément ont été ajoutés.  
   
-##  <a name="max_size"></a>max_size 
+##  <a name="max_size"></a> max_size 
 
  Retourne le nombre maximal d’éléments que du vecteur simultané peut contenir. Cette méthode est concurrentiel.  
   
@@ -479,7 +483,7 @@ size_type max_size() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre maximal d’éléments de la `concurrent_vector` objet peut contenir.  
   
-##  <a name="operator_eq"></a>opérateur = 
+##  <a name="operator_eq"></a> operator= 
 
  Assigne le contenu d’un autre `concurrent_vector` objet à celui-ci. Cette méthode n’est pas d’accès concurrentiel sécurisé.  
   
@@ -505,7 +509,7 @@ concurrent_vector& operator= (
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à ce `concurrent_vector` objet.  
   
-##  <a name="operator_at"></a>operator] 
+##  <a name="operator_at"></a> operator[] 
 
  Fournit l’accès à l’élément à l’index donné dans le vecteur simultané. Cette méthode est concurrentiel pour les opérations de lecture et également lors de l’augmentation du vecteur, tant que vous avez vérifié que la valeur `_Index` est inférieure à la taille du vecteur simultané.  
   
@@ -527,7 +531,7 @@ const_reference operator[](size_type _index) const;
   
  Aucune vérification est effectuée pour vous assurer que des limites `_Index` est un index valide dans le vecteur simultané.  
   
-##  <a name="push_back"></a>push_back 
+##  <a name="push_back"></a> push_back 
 
  Ajoute l’élément donné à la fin du vecteur simultané. Cette méthode est concurrentiel.  
   
@@ -544,7 +548,7 @@ iterator push_back(T&& _Item);
 ### <a name="return-value"></a>Valeur de retour  
  Itérateur vers l’élément ajouté.  
   
-##  <a name="rbegin"></a>rbegin 
+##  <a name="rbegin"></a> rbegin 
 
  Retourne un itérateur de type `reverse_iterator` ou `const_reverse_iterator` au début du vecteur simultané. Cette méthode est concurrentiel.  
   
@@ -557,7 +561,7 @@ const_reverse_iterator rbegin() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur de type `reverse_iterator` ou `const_reverse_iterator` au début du vecteur simultané.  
   
-##  <a name="rend"></a>rend) 
+##  <a name="rend"></a> rend) 
 
  Retourne un itérateur de type `reverse_iterator` ou `const_reverse_iterator` à la fin du vecteur simultané. Cette méthode est concurrentiel.  
   
@@ -570,7 +574,7 @@ const_reverse_iterator rend() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur de type `reverse_iterator` ou `const_reverse_iterator` à la fin du vecteur simultané.  
   
-##  <a name="reserve"></a>réserve 
+##  <a name="reserve"></a> réserve 
 
  Alloue suffisamment d’espace pour augmenter le vecteur simultané à la taille `_N` sans avoir à allouer plus de mémoire ultérieurement. Cette méthode n’est pas d’accès concurrentiel sécurisé.  
   
@@ -583,9 +587,9 @@ void reserve(size_type _N);
  Le nombre d’éléments pour réserver de l’espace.  
   
 ### <a name="remarks"></a>Notes  
- `reserve`n’est pas d’accès concurrentiel sécurisé. Vous devez vous assurer qu’aucun autre thread n’est appel de méthodes sur le vecteur simultané lorsque vous appelez cette méthode. La capacité du vecteur simultané après que la méthode peut être plus grande que la réservation demandée.  
+ `reserve` n’est pas d’accès concurrentiel sécurisé. Vous devez vous assurer qu’aucun autre thread n’est appel de méthodes sur le vecteur simultané lorsque vous appelez cette méthode. La capacité du vecteur simultané après que la méthode peut être plus grande que la réservation demandée.  
   
-##  <a name="resize"></a>redimensionner 
+##  <a name="resize"></a> Redimensionner 
 
  Modifie la taille du vecteur simultané à la taille demandée, en supprimant ou en ajoutant des éléments selon les besoins. Cette méthode n’est pas d’accès concurrentiel sécurisé.  
   
@@ -608,9 +612,9 @@ void resize(
 ### <a name="remarks"></a>Notes  
  Si la taille du conteneur est inférieure à la taille demandée, les éléments sont ajoutés au vecteur jusqu'à ce qu’il atteigne la taille demandée. Si la taille du conteneur est supérieure à la taille demandée, les éléments le plus proche de la fin du conteneur sont supprimés jusqu'à ce que le conteneur atteigne la taille `_N`. Si la taille actuelle du conteneur est égale à la taille demandée, aucune action n'est effectuée.  
   
- `resize`n’est pas concurrence-safe. Vous devez vous assurer qu’aucun autre thread n’est appel de méthodes sur le vecteur simultané lorsque vous appelez cette méthode.  
+ `resize` n’est pas concurrence-safe. Vous devez vous assurer qu’aucun autre thread n’est appel de méthodes sur le vecteur simultané lorsque vous appelez cette méthode.  
   
-##  <a name="shrink_to_fit"></a>shrink_to_fit 
+##  <a name="shrink_to_fit"></a> shrink_to_fit 
 
  Compacte la représentation interne du vecteur simultané pour réduire la fragmentation et optimiser l’utilisation de mémoire. Cette méthode n’est pas d’accès concurrentiel sécurisé.  
   
@@ -619,9 +623,9 @@ void shrink_to_fit();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode en interne nouveau alloue des éléments du déplacement de mémoire, invalidant tous les itérateurs. `shrink_to_fit`n’est pas d’accès concurrentiel sécurisé. Vous devez vous assurer qu’aucun autre thread n’est appel de méthodes sur le vecteur simultané lorsque vous appelez cette fonction.  
+ Cette méthode en interne nouveau alloue des éléments du déplacement de mémoire, invalidant tous les itérateurs. `shrink_to_fit` n’est pas d’accès concurrentiel sécurisé. Vous devez vous assurer qu’aucun autre thread n’est appel de méthodes sur le vecteur simultané lorsque vous appelez cette fonction.  
   
-##  <a name="size"></a>taille 
+##  <a name="size"></a> Taille 
 
  Retourne le nombre d’éléments dans le vecteur simultané. Cette méthode est concurrentiel.  
   
@@ -635,7 +639,7 @@ size_type size() const;
 ### <a name="remarks"></a>Notes  
  La taille retournée est garantie pour inclure tous les éléments ajoutés par les appels à la fonction `push_back`, ou d’augmenter les opérations qui ont été effectuées avant d’appeler cette méthode. Toutefois, il peut également inclure des éléments qui sont alloués, mais toujours en cours d’élaboration par les appels simultanés aux méthodes de croissance.  
   
-##  <a name="swap"></a>swap 
+##  <a name="swap"></a> Swap 
 
  Échange le contenu de deux vecteurs simultanés. Cette méthode n’est pas d’accès concurrentiel sécurisé.  
   
