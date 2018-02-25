@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,11 +20,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 518cd5e67c734de48d7f021e558c7c4c3a718cdc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3d62f3e4fc3a12c1aeb58f4d6d42ded38d4dfe58
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Ajout d'une interface à votre fournisseur
 Déterminez l’objet auquel vous souhaitez ajouter l’interface (généralement, des objets data source, ensemble de lignes, commandes ou session créés par l’Assistant fournisseur OLE DB). Il est possible que l’objet que vous devez ajouter l’interface est par votre fournisseur ne prend pas en charge actuellement. Dans ce cas, exécutez l’Assistant fournisseur OLE DB ATL pour créer l’objet. Cliquez sur le projet dans l’affichage de classes, cliquez sur **ajouter une classe** à partir de la **ajouter** menu, puis sur **fournisseur OLE DB ATL**. Vous pouvez souhaiter placer le code d’interface dans un répertoire différent, puis copiez les fichiers à votre projet de fournisseur.  
