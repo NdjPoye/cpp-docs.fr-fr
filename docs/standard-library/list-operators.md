@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - list/std::operator!=
 - list/std::operator&gt;
@@ -13,9 +13,10 @@ f1_keywords:
 - list/std::operator&lt;
 - list/std::operator&lt;=
 - list/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 8103d8f2-c30f-49ad-ac50-b3ba6a907ebe
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (list)
@@ -24,11 +25,11 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: f3834fcb728d8faf0a2148a5a0c9449fef7e41c8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: a45d6e168378ea9a46d7dbaf926f431df0625f10
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltlistgt-operators"></a>&lt;list&gt;, opérateurs
 ||||  
@@ -55,7 +56,7 @@ bool operator!=(
 ### <a name="return-value"></a>Valeur de retour  
  **true** si les listes ne sont pas égales ; **false** si les listes sont égales.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La comparaison entre les objets de liste est basée sur une comparaison par paire de leurs éléments. Deux listes sont égales si elles ont le même nombre d'éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.  
   
 ### <a name="example"></a>Exemple  
@@ -102,7 +103,7 @@ bool operator<(
 ### <a name="return-value"></a>Valeur de retour  
  **true** si la liste située à gauche de l’opérateur est inférieure mais pas égale à la liste située à droite de l’opérateur. Sinon, **false**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La comparaison entre les objets de liste est basée sur une comparaison par paire de leurs éléments. La relation d'infériorité entre deux objets est basée sur une comparaison de la première paire d'éléments inégaux.  
   
 ### <a name="example"></a>Exemple  
@@ -153,7 +154,7 @@ bool operator<=(
 ### <a name="return-value"></a>Valeur de retour  
  **true** si la liste située à gauche de l’opérateur est inférieure ou égale à la liste située à droite de l’opérateur. Sinon, **false**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La comparaison entre les objets de liste est basée sur une comparaison par paire de leurs éléments. La relation d'infériorité ou d'égalité entre deux objets est basée sur une comparaison de la première paire d'éléments inégaux.  
   
 ### <a name="example"></a>Exemple  
@@ -204,7 +205,7 @@ bool operator==(
 ### <a name="return-value"></a>Valeur de retour  
  **true** si la liste située à gauche de l’opérateur est égale à la liste située à droite de l’opérateur. Sinon, **false**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La comparaison entre les objets de liste est basée sur une comparaison par paire de leurs éléments. Deux listes sont égales si elles ont le même nombre d'éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.  
   
 ### <a name="example"></a>Exemple  
@@ -251,7 +252,7 @@ bool operator>(
 ### <a name="return-value"></a>Valeur de retour  
  **true** si la liste située à gauche de l’opérateur est supérieure à la liste située à droite de l’opérateur. Sinon, **false**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La comparaison entre les objets de liste est basée sur une comparaison par paire de leurs éléments. La relation de supériorité entre deux objets est basée sur une comparaison de la première paire d'éléments inégaux.  
   
 ### <a name="example"></a>Exemple  
@@ -302,7 +303,7 @@ bool operator>=(
 ### <a name="return-value"></a>Valeur de retour  
  **true** si la liste située à gauche de l’opérateur est supérieure ou égale à la liste située à droite de l’opérateur. Sinon, **false**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La comparaison entre les objets de liste est basée sur une comparaison par paire de leurs éléments. La relation de supériorité ou d'égalité entre deux objets est basée sur une comparaison de la première paire d'éléments inégaux.  
   
 ### <a name="example"></a>Exemple  
